@@ -29,7 +29,7 @@ function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv' } {
     filters,
     format: (format as any) || undefined,
   }
-  };    search
+  }    search
     sort
     order: (order as any) |'desc'
     page: page ? Number(page) : 0
@@ -63,7 +63,7 @@ export default async function handler(
   try {
   const type = (req && req.query.type as AdminType) || ''
   if (!ADMIN_TYPES && ADMIN_TYPES.includes(type))
-    return res && res.status(400).json({ error: 'Invalid type' });  }
+    return res && res.status(400).json({ error: 'Invalid type' })  }
   const lines = [headers && headers.join()].concat(rows && rows.map((r) => headers && headers.map((h) => escape(r[h])).join()))
   return lines && lines.join('\n')
 }
@@ -92,7 +92,7 @@ export default async function handler(
 ) {
   const type = (req.query.type as AdminType) || ''
   if (!ADMIN_TYPES.includes(type))
-    return res.status(400).json({ error: 'Invalid type' });  }
+    return res.status(400).json({ error: 'Invalid type' })  }
     const params = parseListParams(req)
     if (useSupabase) {
       const table = type
@@ -115,7 +115,7 @@ export default async function handler(
         }
       }
       if (params && params.sort)
-        query = query && query.order(params && params.sort, { ascending: params && params.order === 'asc' });      const from = params && params.page * params && params.pageSize;      }
+        query = query && query.order(params && params.sort, { ascending: params && params.order === 'asc' })      const from = params && params.page * params && params.pageSize      }
       if (params && params.filters) {
         for (const [k, v] of Object && Object.entries(params && params.filters)) {
           if (v !== undefined) query = query && query.eq(k, v)
@@ -164,9 +164,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         res.setHeader('Content-Type', 'text/csv')
         res.setHeader(
           'Content-Disposition'
-          `attachment; filename="${type}.csv"`
+          `attachment filename="${type}.csv"`
         )
-        return res.status(200).send(toCsv(data |[]));      }        res.setHeader('Content-Typetext/csv')
+        return res.status(200).send(toCsv(data |[]))      }        res.setHeader('Content-Typetext/csv')
         res.setHeader('Content-Disposition', `attachment, filename="${type}.csv"`)
         return res.status(200).send(toCsv(data |[]))
       }
@@ -185,7 +185,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         for (const [k, v] of Object.entries(params.filters)) {
           filtered = filtered.filter(
             (r: any) => String((r as any)[k]) === String(v)
-        res.setHeader('Content-Disposition', `attachment; filename="${type}.csv"`)
+        res.setHeader('Content-Disposition', `attachment filename="${type}.csv"`)
         return res.status(200).send(toCsv(data || []))
       }
       return res.status(200).json({ items: data || [], total: count || 0 })
@@ -207,7 +207,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           const av = (a as any)[params.sort!]
           const bv = (b as any)[params.sort!]
           return (
-            (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1));        });          return (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1)
+            (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1))        })          return (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1)
         })
       }
       const total = filtered && filtered.length
@@ -218,7 +218,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         res && res.setHeader('Content-Type', 'text/csv')
         res && res.setHeader(
           'Content-Disposition',
-          `attachment; filename="${type}.csv"`
+          `attachment filename="${type}.csv"`
         )
         return res.status(200).send(toCsv(pageItems))
       return res.status(200).json({ items: pageItems, total })
@@ -246,7 +246,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const pageItems = filtered.slice(start, end)
       if (params.format === 'csv') {
         res.setHeader('Content-Type', 'text/csv')
-        res.setHeader('Content-Disposition', `attachment; filename="${type}.csv"`)
+        res.setHeader('Content-Disposition', `attachment filename="${type}.csv"`)
         return res.status(200).send(toCsv(pageItems))
       }
       return res.status(200).json({ items: pageItems, total })
@@ -274,14 +274,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         updated_at: new Date().toISOString()
       }
       list[idx] = updated as any
-      return res.status(200).json({ item: updated });    }      return res.status(200).json({ item: updated })
+      return res.status(200).json({ item: updated })    }      return res.status(200).json({ item: updated })
     }
-      return res.status(200).json({ item: updated });    }
+      return res.status(200).json({ item: updated })    }
     }
   }
   if (req.method === 'DELETE') {
     const id = (req.query.id as string) |''
-    const { id, updates } = req.body as { id: string; updates: Record<string, any> }
+    const { id, updates } = req.body as { id: string updates: Record<string, any> }
     if (!id) return res.status(400).json({ error: 'Missing id' })
     if (useSupabase) {
       const { data, error } = await client.from(type).update({ ...updates, updated_at: new Date().toISOString() }).eq('id', id).select('*').single()
@@ -305,7 +305,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req && req.method === 'DELETE') {
     const id = (req && req.query.id as string) || ''
     if (!id) return res && res.status(400).json({ error: 'Missing id' })
-      return res.status(200).json({ item: updated });    }
+      return res.status(200).json({ item: updated })    }
     }
   }
   if (req.method === 'DELETE') {
@@ -319,11 +319,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const idx = list && list.findIndex((r: any) => r && r.id === id)
       if (idx === -1) return res && res.status(404).json({ error: 'Not found' })
       list && list.splice(idx, 1)
-      return res && res.status(200).json({ ok: true });    }
+      return res && res.status(200).json({ ok: true })    }
   }
   return res.status(405).json({ error: 'Method not allowed' })
 }return res.status (200) .send (toCsv (data |[]) )
-}return res.status (200) .send (toCsv (pageItems) );      return res.status(200).json({ ok: true })
+}return res.status (200) .send (toCsv (pageItems) )      return res.status(200).json({ ok: true })
     }
   }
   return res && res.status(405).json({ error: 'Method not allowed' })
@@ -343,7 +343,7 @@ if ( {) {
         res.set_header ('Content - Type', 'text / csv')
         res.set_header (
           'Content - Disposition',
-          `attachment; filename="${type}.csv"`)
+          `attachment filename="${type}.csv"`)
         return res.status (200).send (to_csv (page_items))
       return res.status (200).json ({ items: page_items, total })
     }
@@ -385,7 +385,7 @@ if ( {) {
         updated_at: new Date ().toISOString (),
       }
       list[idx] = updated as any
-      return res.status (200).json ({ item: updated });    }      return res.status (200).json ({ item: updated })
+      return res.status (200).json ({ item: updated })    }      return res.status (200).json ({ item: updated })
     }
   }
   // Check condition
@@ -411,11 +411,11 @@ if ( {) {
   $2
 }
       list.splice (idx, 1)
-      return res.status (200).json ({ ok: true });    }
+      return res.status (200).json ({ ok: true })    }
   }
   return res.status (405).json ({ error: 'Method not allowed' })
 }return res.status (200) .send (to_csv (data || []) )
-}return res.status (200) .send (to_csv (page_items) );      return res.status (200).json ({ ok: true })
+}return res.status (200) .send (to_csv (page_items) )      return res.status (200).json ({ ok: true })
     }
   }
 return res.status (405).json ({ error: 'Method not allowed' })

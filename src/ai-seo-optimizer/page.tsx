@@ -1,38 +1,30 @@
 'use client'
-import React, { useState, useEffect } from 'react'
-import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Search as Find, BarChart as Analytics, TrendingUp as Growth, Target as Aim, Globe as World, FileText as Document, Eye as Visibility, Lightbulb as Ideas, Zap as Flash, Brain as Mind, Cpu as Processor, Shield as Protection, Users as Team, Award as Trophy, Lock as Secure, Database as Storage, Cloud as CloudStorage, Code as Programming, Smartphone as Mobile, Settings as Config, FileText as Content, Search as SEO, Bot as Robot, Palette as Colors, Camera as Photo, Music as Audio, Video as Movie, Gamepad2 as Gaming, ShoppingCart as Cart, CreditCard as Payment, Building as Office, Factory as Industrial, Car as Vehicle, Plane as Aircraft, Ship as Vessel, Train as Railway, Home as House, Heart as Love, Stethoscope as Medical, GraduationCap as Education, Briefcase as Business, Wrench as Tools, Hammer as Construction, Paintbrush as Art, Scissors as CutTool, BookOpen as Book, Calculator as Math, Calendar as Schedule, Clock3 as Time, Compass as Direction, Navigation as Nav, PieChart as Chart, TrendingDown as Decline, Activity as Stats } from 'lucide-react'
+import React, {useState, useEffect} from 'react'
+import {Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Search as Find, BarChart as Analytics, TrendingUp as Growth, Target as Aim, Globe as World, FileText as Document, Eye as Visibility, Lightbulb as Ideas, Zap as Flash, Brain as Mind, Cpu as Processor, Shield as Protection, Users as Team, Award as Trophy, Lock as Secure, Database as Storage, Cloud as CloudStorage, Code as Programming, Smartphone as Mobile, Settings as Config, FileText as Content, Search as SEO, Bot as Robot, Palette as Colors, Camera as Photo, Music as Audio, Video as Movie, Gamepad2 as Gaming, ShoppingCart as Cart, CreditCard as Payment, Building as Office, Factory as Industrial, Car as Vehicle, Plane as Aircraft, Ship as Vessel, Train as Railway, Home as House, Heart as Love, Stethoscope as Medical, GraduationCap as Education, Briefcase as Business, Wrench as Tools, Hammer as Construction, Paintbrush as Art, Scissors as CutTool, BookOpen as Book, Calculator as Math, Calendar as Schedule, Clock3 as Time, Compass as Direction, Navigation as Nav, PieChart as Chart, TrendingDown as Decline, Activity as Stats} from 'lucide-react'
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-const AISEOOptimizerPage: React.FC = () => {
-  const features = [
+const AISEOOptimizerPage: React.FC = () => {const features = [
     {
       icon: Search,
       title: 'SEO Analysis',
       description: 'Comprehensive SEO analysis and optimization',
-      benefits: ['Keyword research', 'On-page optimization', 'Technical SEO']
-    },
-    {
-      icon: Target,
+      benefits: ['Keyword research', 'On-page optimization', 'Technical SEO']},
+    {icon: Target,
       title: 'Content Optimization',
       description: 'AI-powered content optimization for search engines',
-      benefits: ['Content scoring', 'Keyword density', 'Readability']
-    },
-    {
-      icon: Zap,
+      benefits: ['Content scoring', 'Keyword density', 'Readability']},
+    {icon: Zap,
       title: 'Automated Optimization',
       description: 'Automated SEO improvements and monitoring',
-      benefits: ['Auto-optimization', 'Performance monitoring', 'Alert system']
-    },
-    {
-      icon: Settings,
+      benefits: ['Auto-optimization', 'Performance monitoring', 'Alert system']},
+    {icon: Settings,
       title: 'Ranking Tracking',
       description: 'Track and monitor search engine rankings',
-      benefits: ['Rank tracking', 'Competitor analysis', 'Performance reports']
-    }
+      benefits: ['Rank tracking', 'Competitor analysis', 'Performance reports']}
   ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       </div><main className="container mx-auto px-4 py-16 pt-24">
         </main><section className="text-center mb-16">
@@ -81,11 +73,13 @@ const AISEOOptimizerPage: React.FC = () => {
                       {benefit})})
       <Footer />
     </div>
-  )
+)
 }
 export default AISEOOptimizerPage</h2>
   </a>
   </a>
   </p>
   </h1>
-</div></div></div></p></h3></ul></li></main></section>
+</div>
+</div>
+</div></p></h3></ul></li></main></section>

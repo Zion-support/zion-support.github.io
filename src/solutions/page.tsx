@@ -1,12 +1,11 @@
 'use client'
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, {useState} from 'react'
+import {Link} from 'react-router-dom'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 'use client'
-import React, { useState } from 'react'
-const SolutionsPage: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('ai')
+import React, {useState} from 'react'
+const SolutionsPage: React.FC = () => {const [activeTab, setActiveTab] = useState('ai')
   const _solutionCategories = [
     {
       id: 'ai',
@@ -16,24 +15,21 @@ const SolutionsPage: React.FC = () => {
       bgColor: 'bg-purple-500/10',
       description:     ,
 $4},
-    {
-      id: 'it',
+    {id: 'it',
       name: 'IT Infrastructure',
       icon: Cloud,
       color: 'text-blue-400',
       bgColor: 'bg-blue-500/10',
       description:     ,
 $4},
-    {
-      id: 'security',
+    {id: 'security',
       name: 'Cybersecurity',
       icon: Shield,
       color: 'text-red-400',
       bgColor: 'bg-red-500/10',
       description:     ,
 $4},
-    {
-      id: 'automation',
+    {id: 'automation',
       name: 'Automation',
       icon: Zap,
       color: 'text-yellow-400',
@@ -41,8 +37,7 @@ $4},
       description:     ,
 $4}
   ]
-  const solutions = {
-    ai: [
+  const solutions = {ai: [
       {
         title: 'AI-Powered Analytics',
         description: 'Transform raw data into actionable insights with advanced AI analytics',
@@ -51,24 +46,21 @@ $4}
         icon: BarChart,
         color:       ,
 $4},
-      {
-        title: 'AI Marketing Automation',
+      {title: 'AI Marketing Automation',
         description: 'Revolutionize your marketing with AI-powered automation and personalization',
         features: ['Campaign Optimization', 'Customer Segmentation', 'Content Generation', 'Performance Tracking'],
         pricing: 'Starting at $199/month',
         icon: Target,
         color:       ,
 $4},
-      {
-        title: 'AI Customer Support',
+      {title: 'AI Customer Support',
         description: 'Enhance customer experience with intelligent AI-powered support systems',
         features: ['24/7 Chatbots', 'Sentiment Analysis', 'Automated Responses', 'Human Handoff'],
         pricing: 'Starting at $299/month',
         icon: Users,
         color:       ,
 $4},
-      {
-        title: 'AI Process Automation',
+      {title: 'AI Process Automation',
         description: 'Automate complex business processes with intelligent decision-making capabilities',
         features: ['Workflow Automation', 'Exception Handling', 'Process Optimization', 'Compliance Monitoring'],
         pricing: 'Starting at $399/month',
@@ -77,32 +69,28 @@ $4},
 $4}
     ],
     it: [
-      {
-        title: 'Cloud Migration',
+      {title: 'Cloud Migration',
         description: 'Seamlessly migrate your infrastructure to the cloud with zero downtime',
         features: ['AWS/Azure/GCP Migration', 'Data Migration', 'Application Modernization', '24/7 Support'],
         pricing: 'Starting at $1,299/month',
         icon: Cloud,
         color:       ,
 $4},
-      {
-        title: 'IT Infrastructure Management',
+      {title: 'IT Infrastructure Management',
         description: 'Comprehensive IT infrastructure management and optimization services',
         features: ['Server Management', 'Network Monitoring', 'Performance Optimization', 'Disaster Recovery'],
         pricing: 'Starting at $799/month',
         icon: Globe,
         color:       ,
 $4},
-      {
-        title: 'DevOps & CI/CD',
+      {title: 'DevOps & CI/CD',
         description: 'Streamline development workflows with automated testing and deployment',
         features: ['Automated Testing', 'Continuous Deployment', 'Infrastructure as Code', 'Monitoring & Alerting'],
         pricing: 'Starting at $599/month',
         icon: Zap,
         color:       ,
 $4},
-      {
-        title: 'Database Management',
+      {title: 'Database Management',
         description: 'Optimize and manage your databases with AI-powered performance tuning',
         features: ['Database Optimization', 'Performance Monitoring', 'Backup & Recovery', 'Security Hardening'],
         pricing: 'Starting at $399/month',
@@ -111,32 +99,28 @@ $4},
 $4}
     ],
     security: [
-      {
-        title: 'Cybersecurity Suite',
+      {title: 'Cybersecurity Suite',
         description: 'Comprehensive security solutions with threat detection and response',
         features: ['Threat Detection', 'Vulnerability Assessment', 'Incident Response', 'Compliance Management'],
         pricing: 'Starting at $799/month',
         icon: Shield,
         color:       ,
 $4},
-      {
-        title: 'AI Security Monitoring',
+      {title: 'AI Security Monitoring',
         description: 'Real-time security monitoring with AI-powered threat detection',
         features: ['Real-time Monitoring', 'AI Threat Detection', 'Automated Response', 'Security Analytics'],
         pricing: 'Starting at $299/month',
         icon: Brain,
         color:       ,
 $4},
-      {
-        title: 'Compliance Management',
+      {title: 'Compliance Management',
         description: 'Ensure regulatory compliance with automated compliance monitoring',
         features: ['GDPR Compliance', 'HIPAA Compliance', 'SOX Compliance', 'Audit Support'],
         pricing: 'Starting at $499/month',
         icon: CheckCircle,
         color:       ,
 $4},
-      {
-        title: 'Security Training',
+      {title: 'Security Training',
         description: 'Comprehensive security awareness training for your organization',
         features: ['Phishing Simulation', 'Security Awareness', 'Incident Response Training', 'Compliance Training'],
         pricing: 'Starting at $199/month',
@@ -145,32 +129,28 @@ $4},
 $4}
     ],
     automation: [
-      {
-        title: 'Business Process Automation',
+      {title: 'Business Process Automation',
         description: 'Automate complex business processes with intelligent workflow management',
         features: ['Workflow Design', 'Process Optimization', 'Exception Handling', 'Performance Analytics'],
         pricing: 'Starting at $399/month',
         icon: Zap,
         color:       ,
 $4},
-      {
-        title: 'IT Automation',
+      {title: 'IT Automation',
         description: 'Automate IT operations and reduce manual tasks with intelligent automation',
         features: ['Server Automation', 'Network Automation', 'Backup Automation', 'Monitoring Automation'],
         pricing: 'Starting at $299/month',
         icon: Cloud,
         color:       ,
 $4},
-      {
-        title: 'Marketing Automation',
+      {title: 'Marketing Automation',
         description: 'Automate marketing campaigns and customer engagement processes',
         features: ['Email Automation', 'Social Media Automation', 'Lead Nurturing', 'Campaign Management'],
         pricing: 'Starting at $199/month',
         icon: Target,
         color:       ,
 $4},
-      {
-        title: 'Data Automation',
+      {title: 'Data Automation',
         description: 'Automate data processing, analysis, and reporting workflows',
         features: ['Data Collection', 'Data Processing', 'Report Generation', 'Data Quality Management'],
         pricing: 'Starting at $249/month',
@@ -180,23 +160,19 @@ $4}
     ]
   }
   const benefits = [
-    {
-      icon: Star,
+    {icon: Star,
       title: 'Proven Results',
       description:     ,
 $4},
-    {
-      icon: Shield,
+    {icon: Shield,
       title: 'Enterprise Security',
       description:     ,
 $4},
-    {
-      icon: Globe,
+    {icon: Globe,
       title: 'Global Support',
       description:     ,
 $4},
-    {
-      icon: Users,
+    {icon: Users,
       title: 'Expert Team',
       description:     ,
 $4}
@@ -238,7 +214,7 @@ $4}
               <p className="text-gray-300 max-w-2xl mx-auto">
     </div>
 <div>Coming Soon</div>
-  )
+)
 }
   const [activeTab, setActiveTab] = useState('ai')
   const _solutionCategories = [
@@ -635,7 +611,9 @@ $4}
   n: 'Certified professionals with years of industry experience'
     }
   ]
-  return (<div>Coming Soon</div>)
+  return (
+<div>Coming Soon</div>
+)
   )
           <React.Fragment>
       <Navigation />
@@ -743,7 +721,7 @@ $4}
           <ArrowRight className="w-4 h-4 ml-1" /></ArrowRight>
                     </a>
                   </div>
-                </div>
+</div>
               ))}
           {/* Benefits Section */}
           <div className="mb-16">
@@ -832,9 +810,9 @@ $4}
 // Email Us;
           </a>
             </div>
-          </div>
-        </div>
-      </div>
+</div>
+</div>
+</div>
       <Footer />
     </React.Fragment>
     </div>
@@ -844,4 +822,12 @@ export default SolutionsPage</a>
   </a>
   </a>
   </a>
-</div></div></div></div></div></div></div></div></div></div></div></span></span></button></p></p></p></p></p></p></h2></h3></h3></h4></ul></ul></li>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div></div></span></span></button></p></p></p></p></p></p></h2></h3></h3></h4></ul></ul></li>

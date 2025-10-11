@@ -1,19 +1,17 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import {Helmet} from 'react-helmet-async'
 import {CheckCircle, Star, Users, TrendingUp, Clock, MessageSquare, Bot, Phone} from 'lucide-react'
-import { Bot, MessageSquare, Users, BarChart, TrendingUp, Clock, Star, CheckCircle } from 'lucide-react'
+import {Bot, MessageSquare, Users, BarChart, TrendingUp, Clock, Star, CheckCircle} from 'lucide-react'
 'use client'
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-const AICustomerSupportBotPage: React.FC = () => {
-  const features = [
+const AICustomerSupportBotPage: React.FC = () => {const features = [
     {
       icon: Bot,
       title: '24/7 AI Support',
       description: 'Round-the-clock customer support with intelligent AI chatbot capabilities',
-      benefits: ['90% response time reduction', 'Instant responses', 'Always available']
-    },
+      benefits: ['90% response time reduction', 'Instant responses', 'Always available']},
       icon: MessageSquare,
       title: 'Natural Language Processing',
       description: 'Advanced NLP for understanding and responding to customer queries naturally',
@@ -62,12 +60,12 @@ const AICustomerSupportBotPage: React.FC = () => {
         'API access',
         'Custom training'
   const stats = [
-    { icon: Users, value: '1,000+', label: 'Happy Customers' },
-    { icon: TrendingUp, value: '90%', label: 'Response Time Reduction' },
-    { icon: Clock, value: '45%', label: 'Satisfaction Increase' },
-    { icon: Star, value: '4.8/5', label: 'Customer Rating' }
+    {icon: Users, value: '1,000+', label: 'Happy Customers'},
+    {icon: TrendingUp, value: '90%', label: 'Response Time Reduction'},
+    {icon: Clock, value: '45%', label: 'Satisfaction Increase'},
+    {icon: Star, value: '4.8/5', label: 'Customer Rating'}
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Customer Support Bot | Zion Tech Group;
         <meta name="description" content="Enhance customer experience with our AI-powered support bot. 24/7 assistance, natural language processing, and seamless human handoff." />
@@ -140,9 +138,9 @@ const AICustomerSupportBotPage: React.FC = () => {
 }
 export default $1;
 'use client'
-import React, { useState, useEffect } from 'react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, BarChart, Calendar, Target, ArrowRight, Phone, Mail, MapPin, Brain, Cpu, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, MessageSquare, Headphones, Globe, Languages } from 'lucide-react'
+import React, {useState, useEffect} from 'react'
+import {Helmet} from 'react-helmet-async'
+import {CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, BarChart, Calendar, Target, ArrowRight, Phone, Mail, MapPin, Brain, Cpu, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, MessageSquare, Headphones, Globe, Languages} from 'lucide-react'
 export default AICustomerSupportBotPage</button>
   </button>
   </div>
@@ -152,13 +150,14 @@ export default AICustomerSupportBotPage</button>
   </li>
   </ul>
   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
   </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-</div></div></div></span></p></p></p></h1></h2></h2></h3></h3></ul></li>
+</div>
+</div>
+</div>
+</div>
+</div></div></span></p></p></p></h1></h2></h2></h3></h3></ul></li>

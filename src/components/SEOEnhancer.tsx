@@ -1,24 +1,19 @@
-import React, { ReactNode } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, {ReactNode} from 'react';
+import {Helmet} from 'react-helmet-async';
 
-interface SEOEnhancerProps {
-  title: string;
+interface SEOEnhancerProps {title: string;
   description: string;
   keywords: string[];
   noIndex?: boolean;
   structuredData?: any;
-  children?: ReactNode;
-}
+  children?: ReactNode;}
 
-const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
-  title,
+const SEOEnhancer: React.FC<SEOEnhancerProps> = ({title,
   description,
   keywords,
   noIndex = false,
   structuredData,
-  children;
-}) => {
-  const defaultStructuredData = {
+  children;}) => {const defaultStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
@@ -28,8 +23,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
-      "contactType": "customer service"
-    }
+      "contactType": "customer service"}
   };
 
   const finalStructuredData = structuredData || defaultStructuredData;
@@ -72,8 +66,8 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
 };
 
 export default SEOEnhancer;
-import React, { ReactNode } from 'react'
-import { Helmet } from 'react-helmet-async'
+import React, {ReactNode} from 'react'
+import {Helmet} from 'react-helmet-async'
 interface SEOEnhancerProps {/* TODO: Fix JSX expression */}
 }
 const,

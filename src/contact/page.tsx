@@ -1,13 +1,11 @@
 'use client'
-import React, { useState } from 'react'
+import React, {useState} from 'react'
 import {Phone, Mail, MapPin, Clock, Send, CheckCircle, Users, Award, TrendingUp, Shield} from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import React from 'react'
-const ContactPage: React.FC = () => {
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle, MessageSquare, Calendar, User, Building, Globe, Shield, Brain, Zap, Cloud, Database, Code, BarChart, Users, Award, Target, Star, TrendingUp, ArrowRight } from 'lucide-react'
-export default function ContactPage() {
-  const [formData, setFormData] = useState({
+const ContactPage: React.FC = () => {import { Phone, Mail, MapPin, Clock, Send, CheckCircle, MessageSquare, Calendar, User, Building, Globe, Shield, Brain, Zap, Cloud, Database, Code, BarChart, Users, Award, Target, Star, TrendingUp, ArrowRight} from 'lucide-react'
+export default function ContactPage() {const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
@@ -16,21 +14,15 @@ export default function ContactPage() {
     message:   ,
 $4})
   const [isSubmitted, setIsSubmitted] = useState(false)
-  const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    message: '',
+  const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {message: '',
     budget: '',
-    timeline: ''
-  })
+    timeline: ''})
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value;
-    })
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault(),
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {const { name, value} = e.target;
+    setFormData(prev => ({...prev,
+      [name]: value;})
+  const handleSubmit = (e: React.FormEvent) => {e.preventDefault(),
     // Here you would typically send the form data to your backend;
     // console.log('Form submitted:', formData)
     setIsSubmitted(true)
@@ -38,20 +30,16 @@ $4})
     setTimeout(() => {
       setIsSubmitted(false)
       setFormData({}, 3000)
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
+  const handleSubmit = async (e: React.FormEvent) => {e.preventDefault()
     setIsSubmitting(true),
     // Simulate form submission;
     await new Promise(resolve => setTimeout(resolve, 2000))
     setIsSubmitted(true)
-    setIsSubmitting(false)
-  }
-  const contactInfo = {
-    phone: '+1 (302) 464-0950',
+    setIsSubmitting(false)}
+  const contactInfo = {phone: '+1 (302) 464-0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown, DE 19709',
-    hours: 'Mon-Fri: 9AM-6PM EST'
-  }
+    hours: 'Mon-Fri: 9AM-6PM EST'}
   const services = [
     'AI Services',
     'IT Services',
@@ -65,12 +53,12 @@ $4})
     'Other'
   ]
   const achievements = [
-    { icon: Users, text: '100+ Happy Clients' },
-    { icon: Award, text: '50+ Successful Projects' },
-    { icon: TrendingUp, text: '300% Average ROI' },
-    { icon: Shield, text: '99.9% Uptime Guarantee' }
+    {icon: Users, text: '100+ Happy Clients'},
+    {icon: Award, text: '50+ Successful Projects'},
+    {icon: TrendingUp, text: '300% Average ROI'},
+    {icon: Shield, text: '99.9% Uptime Guarantee'}
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       </div>
 <div className="text-center">
         <h1 className="text-4xl font-bold text-white mb-4">Contact</h1>
@@ -78,7 +66,7 @@ $4})
         <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover: bg-cyan-600 transition-colors">
           Contact Us</span>
       </div>
-  )
+)
 export default ContactPage,
     'Quantum Computing',
     'Cybersecurity',
@@ -105,52 +93,37 @@ export default ContactPage,
     'Just exploring'
   ]
   const offices = [
-    {
-      city: 'Middletown, DE',
+    {city: 'Middletown, DE',
       address: '364 E Main St STE 1008, Middletown, DE 19709',
       phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
       hours: 'Mon-Fri: 9AM-6PM EST',
-      timezone: 'Eastern Time'
-    },
-    {
-      city: 'San Francisco, CA',
+      timezone: 'Eastern Time'},
+    {city: 'San Francisco, CA',
       address: '123 Tech Street, San Francisco, CA 94105',
       phone: '+1 (415) 555-0123',
       email: 'sf@ziontechgroup.com',
       hours: 'Mon-Fri: 9AM-6PM PST',
-      timezone: 'Pacific Time'
-    },
-    {
-      city: 'London, UK',
+      timezone: 'Pacific Time'},
+    {city: 'London, UK',
       address: '456 Innovation Lane, London EC1A 4HD',
       phone: '+44 20 7946 0958',
       email: 'london@ziontechgroup.com',
       hours: 'Mon-Fri: 9AM-6PM GMT',
-      timezone: 'Greenwich Mean Time'
-    }
+      timezone: 'Greenwich Mean Time'}
   ]
   const faqs = [
-    {
-      question: 'How quickly can you start my project?',
-      answer: 'We can typically begin most projects within 1-2 weeks of contract signing. For urgent projects, we offer expedited onboarding.'
-    },
-    {
-      question: 'Do you offer ongoing support?',
-      answer: 'Yes, we provide comprehensive support and maintenance packages for all our solutions, including 24/7 monitoring and updates.'
-    },
-    {
-      question: 'What industries do you serve?',
-      answer: 'We serve clients across healthcare, finance, manufacturing, retail, education, and government sectors.'
-    },
-    {
-      question: 'Do you work with small businesses?',
-      answer: 'Absolutely! We offer scalable solutions for businesses of all sizes, from startups to enterprise organizations.'
-    }
+    {question: 'How quickly can you start my project?',
+      answer: 'We can typically begin most projects within 1-2 weeks of contract signing. For urgent projects, we offer expedited onboarding.'},
+    {question: 'Do you offer ongoing support?',
+      answer: 'Yes, we provide comprehensive support and maintenance packages for all our solutions, including 24/7 monitoring and updates.'},
+    {question: 'What industries do you serve?',
+      answer: 'We serve clients across healthcare, finance, manufacturing, retail, education, and government sectors.'},
+    {question: 'Do you work with small businesses?',
+      answer: 'Absolutely! We offer scalable solutions for businesses of all sizes, from startups to enterprise organizations.'}
   ]
-  if (isSubmitted) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+  if (isSubmitted) {return (
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
         </div>
 <div className="max-w-2xl mx-auto text-center p-8">
           </div>
@@ -185,14 +158,14 @@ export default ContactPage,
               <ArrowRight className="w-5 h-5 mr-2" />
               Back to Home</span>
           </div>
-        </div>
-      </div>
-    )
-  }
+</div>
+</div>
+)}
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-      </div><section className="relative py-20 lg:py-32 overflow-hidden">
+      </div>
+<section className="relative py-20 lg:py-32 overflow-hidden">
         </section>
 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20">
         </div>
@@ -215,7 +188,8 @@ export default ContactPage,
                 <Mail className="w-5 h-5 text-purple-400" />
                 <span className="text-white font-medium">{contactInfo.email}
       {/* Contact Form & Info */}
-      </div><section className="py-20">
+      </div>
+<section className="py-20">
         </section>
 <div className="container mx-auto px-4">
           </div>
@@ -231,54 +205,46 @@ export default ContactPage,
 <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       Full Name *
-                    <input
-                      type="text"
+                    <input type="text"
                       name="name"
                       value={formData.name}
                       onChange={handleInputChange}
                       required;
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"
-                      placeholder="Your full name"
-                    />
+                      placeholder="Your full name" />
                   </div>
 <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       Email Address *
-                    <input
-                      type="email"
+                    <input type="email"
                       name="email"
                       value={formData.email}
                       onChange={handleInputChange}
                       required;
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"
-                      placeholder="your@email.com"
-                    />
+                      placeholder="your@email.com" />
                 </div>
 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   </div>
 <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       Company;
-                    <input
-                      type="text"
+                    <input type="text"
                       name="company"
                       value={formData.company}
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"
-                      placeholder="Your company name"
-                    />
+                      placeholder="Your company name" />
                   </div>
 <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       Phone Number;
-                    <input
-                      type="tel"
+                    <input type="tel"
                       name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"
-                      placeholder="+1 (555) 123-4567"
-                    />
+                      placeholder="+1 (555) 123-4567" />
                 </div>
 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   </div>
@@ -425,7 +391,8 @@ export default ContactPage,
                     <MessageSquare className="w-5 h-5 inline mr-2" />
                     Request Demo;
       {/* Global Offices */}
-      </div><section className="py-20 bg-slate-800/50">
+      </div>
+<section className="py-20 bg-slate-800/50">
         </section>
 <div className="container mx-auto px-4">
           </div>
@@ -461,7 +428,8 @@ export default ContactPage,
                   </div>
 <div className="text-cyan-400 text-sm font-medium">{office.timezone})
       {/* FAQ Section */}
-      </div><section className="py-20">
+      </div>
+<section className="py-20">
         </section>
 <div className="container mx-auto px-4">
           </div>
@@ -478,4 +446,66 @@ export default ContactPage,
                 </div>
 <div key={index} className="bg-slate-800/50 rounded-lg p-6">
                   <h3 className="text-xl font-bold text-white mb-3">{faq.question}
-                  <p className="text-gray-300">{faq.answer})})</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></a></p></p></p></p></p></p></p></h1></h1></h1></h2></h2></h2></h2></h3></h3></h3></h3></section></section></section></section>
+                  <p className="text-gray-300">{faq.answer})})</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div></span></span></span></span></span></span></span></span></span></span></span></span></span></a></p></p></p></p></p></p></p></h1></h1></h1></h2></h2></h2></h2></h3></h3></h3></h3></section></section></section></section>

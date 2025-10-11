@@ -1,7 +1,5 @@
 import React from 'react'
-interface PerformanceMetrics {
-    // TODO: Add content;
-  }
+interface PerformanceMetrics {// TODO: Add content;}
 }
   fc,
   p: number | null,
@@ -20,16 +18,12 @@ interface PerformanceMetrics {
     s,
   i: number | null,
 }
-interface PerformanceMonitorProps {
-    // TODO: Add content;
-  }
+interface PerformanceMonitorProps {// TODO: Add content;}
 }
 interface PerformanceProps {/* TODO: Fix JSX expression */}
 }
 const EnhancedPerformanceMonitor: React.FC,
-          <PerformanceMonitorProps> = ({
-    // TODO: Add content;
-  }
+          <PerformanceMonitorProps> = ({// TODO: Add content;}
 }
 //   onMetricsUpdate,
   enableReporting = true,
@@ -364,7 +358,9 @@ const reportMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
   }, [])
   if (!isVisible) return null;
   const performanceScore = calculatePerformanceScore(metrics)
-  return (<div>Coming Soon</div>)
+  return (
+<div>Coming Soon</div>
+)
   )
           <div className="fixed bottom-4 right-4 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg p-4 text-white text-xs z-50 max-w-sm"></div>"
       <div className="flex items-center justify-between mb-2"></div>"
@@ -419,10 +415,11 @@ const reportMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
       </div>"
       <div className="mt-2 text-gray-400 text-xs"></div>
 // Press Ctrl+Shift+P to toggle</div>
-    </div>
-  )
+</div>
+)
 }
 export default EnhancedPerformanceMonitor;"
   </PerformanceMetrics>
   </PerformanceMonitorProps>
-</div></div></span></span></span></span></span></span></span></span></span></span></span></span></button></h3>
+</div>
+</div></span></span></span></span></span></span></span></span></span></span></span></span></button></h3>

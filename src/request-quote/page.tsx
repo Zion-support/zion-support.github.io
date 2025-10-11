@@ -1,12 +1,11 @@
 'use client'
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, {useState} from 'react'
+import {Link} from 'react-router-dom'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 'use client'
-import React, { useState } from 'react'
-const RequestQuotePage: React.FC = () => {
-  const [formData, setFormData] = useState({
+import React, {useState} from 'react'
+const RequestQuotePage: React.FC = () => {const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
@@ -53,66 +52,52 @@ $4})
     '$500,000+',
     'To be discussed'
   ]
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value;
-    })
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {const { name, value} = e.target;
+    setFormData(prev => ({...prev,
+      [name]: value;})
+  const handleSubmit = async (e: React.FormEvent) => {e.preventDefault()
     setIsSubmitting(true),
     // Simulate form submission;
     await new Promise(resolve => setTimeout(resolve, 2000))
     setIsSubmitting(false)
-    setIsSubmitted(true)
-  }
+    setIsSubmitted(true)}
   const benefits = [
-    {
-      icon: Calculator,
+    {icon: Calculator,
       title: 'Free Quote',
       description:     ,
 $4},
-    {
-      icon: Clock,
+    {icon: Clock,
       title: 'Quick Response',
       description:     ,
 $4},
-    {
-      icon: CheckCircle,
+    {icon: CheckCircle,
       title: 'Transparent Pricing',
       description:     ,
 $4},
-    {
-      icon: Star,
+    {icon: Star,
       title: 'Expert Consultation',
       description:     ,
 $4}
   ]
   const whyChooseUs = [
-    {
-      icon: Users,
+    {icon: Users,
       title: '50+ Successful Projects',
       description:     ,
 $4},
-    {
-      icon: Award,
+    {icon: Award,
       title: '300% Average ROI',
       description:     ,
 $4},
-    {
-      icon: Clock,
+    {icon: Clock,
       title: '24/7 Support',
       description:     ,
 $4},
-    {
-      icon: Star,
+    {icon: Star,
       title: '99.9% Uptime',
       description:     ,
 $4}
   ]
-  if (isSubmitted) {
-    return (
+  if (isSubmitted) {return (
       <React.Fragment>
         <Navigation />
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -149,8 +134,8 @@ $4}
 <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white">3</div>
                     <span className="text-gray-300">Schedule a call to discuss your project</span>
                   </div>
-                </div>
-              </div>
+</div>
+</div>
 <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <$2 />
                   href="/contact"
@@ -164,13 +149,12 @@ $4}
                   Back to Home,
   
               </div>
-            </div>
-          </div>
-        </div>
+</div>
+</div>
+</div>
         <Footer />
       </React.Fragment>
-    )
-  }
+    )}
   return (
     <React.Fragment>
       <Navigation />
@@ -202,28 +186,24 @@ $4}
 <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
                         Full Name *
-                      <input
-                        type="text"
+                      <input type="text"
                         name="name"
                         value={formData.name}
                         onChange={handleInputChange}
                         required;
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-                        placeholder="Enter your full name"
-                      />
+                        placeholder="Enter your full name" />
                     </div>
 <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
                         Email Address *
-                      <input
-                        type="email"
+                      <input type="email"
                         name="email"
                         value={formData.email}
                         onChange={handleInputChange}
                         required;
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-                        placeholder="Enter your email"
-                      />
+                        placeholder="Enter your email" />
                   </div>
 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     </div>
@@ -231,29 +211,25 @@ $4}
                       <label className="block text-sm font-medium text-gray-300 mb-2">
                         Company Name,
   
-                      <input
-                        type="text"
+                      <input type="text"
                         name="company"
                         value={formData.company}
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-                        placeholder="Enter your company name"
-                      />
+                        placeholder="Enter your company name" />
                     </div>
 <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
                         Phone Number,
   
-                      <input
-                        type="tel"
+                      <input type="tel"
                         name="phone"
                         value={formData.phone}
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-                        placeholder="Enter your phone number"
-                      />
+                        placeholder="Enter your phone number" />
                     </div>
-                  </div>
+</div>
                   {/* Project Information */}
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
@@ -474,7 +450,7 @@ $4}
           <HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    const { name, value } = e.target;
+    const {name, value} = e.target;
     setFormData(prev => ({/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -584,7 +560,9 @@ $4}
   if (isSubmitted) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    return (<div>Coming Soon</div>)
+    return (
+<div>Coming Soon</div>
+)
   )
           <React.Fragment>
         <Navigation />
@@ -616,8 +594,8 @@ $4}
                     <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white">3</div>"
                     <span className="text-gray-300">Schedule a call to discuss your project</span>
                   </div>
-                </div>
-              </div>
+</div>
+</div>
 <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <$2 />
                   href="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
@@ -634,9 +612,9 @@ $4}
 // Back to Home;
           </a>
               </div>
-            </div>
-          </div>
-        </div>
+</div>
+</div>
+</div>
       </div>
       <Footer />
     </React.Fragment>
@@ -644,7 +622,9 @@ $4}
       </React.Fragment>
     ),
   }
-  return (<div>Coming Soon</div>)
+  return (
+<div>Coming Soon</div>
+)
   )
           <React.Fragment>
       <Navigation /></Navigation>"
@@ -676,24 +656,22 @@ $4}
 <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
 // Full Name *
-                      <input
-type="text" name="name"
+                      <input type="text" name="name"
                         value={formData.name}
                         onChange={handleInputChange}
 // required;
 className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your full name"
-//                       />
+// />
                     </div>
 <div></div>"
                       <label className="block text-sm font-medium text-gray-300 mb-2">
 // Email Address *
-                      <input
-type="email" name="email"
+                      <input type="email" name="email"
                         value={formData.email}
                         onChange={handleInputChange}
 // required;
 className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your email"
-//                       />
+// />
                   </div>"
                   < className="grid grid-cols-1,"$2 />
   md: grid-cols-2 gap-6"></div>
@@ -701,8 +679,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
                       <label className="block text-sm font-medium text-gray-300 mb-2"></label>
 // Company Name,
           </label>
-                      <input
-type="text" name="company"
+                      <input type="text" name="company"
                         value={formData.company}
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your company name"
@@ -711,8 +688,7 @@ type="text" name="company"
                       <label className="block text-sm font-medium text-gray-300 mb-2"></label>
 // Phone Number,
           </label>
-                      <input
-type="tel" name="phone"
+                      <input type="tel" name="phone"
                         value={formData.phone}
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your phone number"
@@ -836,7 +812,7 @@ type="submit" disabled={isSubmitting}
       </main>
       <Footer /></Footer>
     </div>
-  )
+)
 }
 export default RequestQuotePage</textarea>
   </textarea>
@@ -846,4 +822,27 @@ export default RequestQuotePage</textarea>
   </a>
   </a>
   </HTMLInputElement>
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></p></p></p></p></p></p></p></p></h2></h2></h3></h3></h3></h3></h4></h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div></span></span></span></span></span></span></p></p></p></p></p></p></p></p></h2></h2></h3></h3></h3></h3></h4></h4>

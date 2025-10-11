@@ -1,5 +1,4 @@
-const, PrivateExperimentsBlueprint202, 5: Rea, c, t.FC = () => {
-  return(<article, className="prose, pros, e-invert, ma, x-w-3xl, m, x-auto, p, y-10">)
+const, PrivateExperimentsBlueprint202, 5: Rea, c, t.FC = () => {return(<article, className="prose, pros, e-invert, ma, x-w-3xl, m, x-auto, p, y-10">)
 const, PrivateExperimentsBlueprint202, 5: Rea, c, t.FC = () => {
   return(<article, className="prose, pros, e-invert, ma, x-w-3xl, m, x-auto, p, y-10">"
       <h1>Private, Experiments, Blueprin;

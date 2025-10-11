@@ -1,8 +1,7 @@
 impo, r, t {/* TODO: Fix JSX expression */}
 } fr, o, m 'luci, d, e-rea, c, t'
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c'
-const AutonomousBusinessOperation, s = () => { 
-  return(<React.Fragment>
+impo, r, t {Helm, e, t} fr, o, m 'rea, c, t-helm, e, t-asy, n, c'
+const AutonomousBusinessOperation, s = () => {return(<React.Fragment>
       <Helm, e, t>
         <title>
           Autonomous, Business, Operations Platfo, r, m | 85% Cost, Reduction, in 90, Day, s | Zion, Tech, Group;
@@ -15,8 +14,9 @@ const AutonomousBusinessOperation, s = () => {
         <nk, re, l = 'canonic, a, l')$2 />
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/servic e s/autonomo u s-busine s s-operatio n s')
         />),
-      <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-9, 0, 0' > {/* Hero, Sect, i, o, n */ }
-        </div><section, classNam, e = 'relative, p, y-24, overflo, w-hidd, e, n'>
+      <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-9, 0, 0' > {/* Hero, Sect, i, o, n */}
+        </div>
+<section, classNam, e = 'relative, p, y-24, overflo, w-hidd, e, n'>
           </section>
 <div, className='absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-bl, u, e-6, 0, 0/20, t, o-purp, l, e-6, 0, 0/20' />
             </div>
@@ -68,7 +68,8 @@ const AutonomousBusinessOperation, s = () => {
 <div, classNam, e='flex, item, s-center, ga, p-2'>
                 <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-4, 0, 0' />
                 <span, classNam, e='fo, n, t-semibo, l, d'>99.97% Uptime, SL, A;
-        </div><section, classNam, e='container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
+        </div>
+<section, classNam, e='container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
           </section>
 <div, classNam, e='te, x, t-center, m, b-16'>
             <h2, classNam, e='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4'>
@@ -76,7 +77,8 @@ const AutonomousBusinessOperation, s = () => {
         {/* Trust, Indicat, o, r, s */}
               Wh, a, t's, Included, in Your, Platfor, m;
         {/* Trust, Indicat, o, r, s */}
-        </div><section, classNam, e = 'py-12, b, g-bla, c, k/20'>
+        </div>
+<section, classNam, e = 'py-12, b, g-bla, c, k/20'>
           </section>
 <div, className='container, m, x-auto, p, x-6'>
             </div>
@@ -98,8 +100,9 @@ const AutonomousBusinessOperation, s = () => {
                 <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-4, 0, 0' />
 const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
       </div>
-<div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-9, 0, 0' > {/* Hero, Sect, i, o, n */ }
-        </div><section, classNam, e = 'relative, p, y-24, overflo, w-hidd, e, n'>
+<div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-9, 0, 0' > {/* Hero, Sect, i, o, n */}
+        </div>
+<section, classNam, e = 'relative, p, y-24, overflo, w-hidd, e, n'>
           </section>
 <div, className='absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-bl, u, e-6, 0, 0/20, t, o-purp, l, e-6, 0, 0/20' />
             </div>
@@ -131,13 +134,15 @@ const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
 <div, classNam, e='flex, item, s-center, ga, p-2'>
                 <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-4, 0, 0' />
                 <span, classNam, e='fo, n, t-semibo, l, d'>99.97% Uptime, SL, A;
-        </div><section, classNam, e='container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
+        </div>
+<section, classNam, e='container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
           </section>
 <div, classNam, e='te, x, t-center, m, b-16'>
             <h2, classNam, e='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4'>
               Wh, a, t's, Included, in Your, Platfor, m;
         {/* Trust, Indicat, o, r, s */}
-        </div><section, classNam, e = 'py-12, b, g-bla, c, k/20'>
+        </div>
+<section, classNam, e = 'py-12, b, g-bla, c, k/20'>
           </section>
 <div, className='container, m, x-auto, p, x-6'>
             </div>
@@ -158,7 +163,8 @@ const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
 <div, className='flex, item, s-center, ga, p-2'>
                 <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-4, 0, 0' />
                 <span, className='fo, n, t-semibo, l, d'>99.97% Uptime, SL, A;
-        </div><section, className='container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
+        </div>
+<section, className='container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
           </section>
 <div, className='te, x, t-center, m, b-16'>
             <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4'>
@@ -210,7 +216,8 @@ const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
                 <DollarSign, classNam, e='w-8 h-8, tex, t-indi, g, o-3, 0, 0' />
                 <li, classNam, e='flex, item, s-start, ga, p-2'>
                   <CheckCircle, classNam, e='w-4 h-4, tex, t-indi, g, o-400, m, t-1, fle, x-shri, n, k-0' />
-        </div><section, classNam, e='container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
+        </div>
+<section, classNam, e='container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
           </section>
 <div, classNam, e='te, x, t-center, m, b-16'>
             <h2, classNam, e='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4'>
@@ -239,7 +246,8 @@ const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
                 AI, Decision, Engine;
                 <li, className='flex, item, s-start, ga, p-2'>
                   <CheckCircle, className='w-4 h-4, tex, t-purp, l, e-400, m, t-1, fle, x-shri, n, k-0' />
-        </div><section, className='container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
+        </div>
+<section, className='container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
           </section>
 <div, className='te, x, t-center, m, b-16'>
             <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4'>
@@ -291,7 +299,8 @@ const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
                 <DollarSign, classNam, e='w-8 h-8, tex, t-indi, g, o-3, 0, 0' />
                 <li, classNam, e='flex, item, s-start, ga, p-2'>
                   <CheckCircle, classNam, e='w-4 h-4, tex, t-indi, g, o-400, m, t-1, fle, x-shri, n, k-0' />
-        </div><section, classNam, e='container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
+        </div>
+<section, classNam, e='container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
           </section>
 <div, classNam, e='te, x, t-center, m, b-16'>
             <h2, classNam, e='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4'>
@@ -365,7 +374,8 @@ const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
                 ROI, Guarante, e;
                 <li, className='flex, item, s-start, ga, p-2'>
                   <CheckCircle, className='w-4 h-4, tex, t-indi, g, o-400, m, t-1, fle, x-shri, n, k-0' />
-        </div><section, className='container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
+        </div>
+<section, className='container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
           </section>
 <div, className='te, x, t-center, m, b-16'>
             <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4'>
@@ -380,7 +390,8 @@ const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
 <div, className='flex, item, s-center, ga, p-2, tex, t-gre, e, n-2, 0, 0'>
                       <CheckCircle, className='w-4 h-4, tex, t-gre, e, n-4, 0, 0' />
         {/* Pricing, Sect, i, o, n */}
-        </div><section, classNam, e = 'container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
+        </div>
+<section, classNam, e = 'container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
           </section>
 <div, className='te, x, t-center, m, b-16'>
             <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4'>
@@ -403,7 +414,8 @@ const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
                   <CheckCircle, classNam, e='w-5 h-5, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0' />
                 <li, classNam, e = 'flex, item, s-start, ga, p-2'>
                   <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' />
-        </div><section, classNam, e='container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
+        </div>
+<section, classNam, e='container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
           </section>
 <div, classNam, e='bg-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-emera, l, d-600, rounde, d-2x, l, p-12, tex, t-cent, e, r'>
             <h2, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-white, m, b-4'>
@@ -411,7 +423,8 @@ const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
                   <CheckCircle, className='w-5 h-5, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0' />
                 <li, classNam, e = 'flex, item, s-start, ga, p-2'>
                   <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' />
-        </div><section, className='container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
+        </div>
+<section, className='container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
           </section>
 <div, className='bg-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-emera, l, d-600, rounde, d-2x, l, p-12, tex, t-cent, e, r'>
             <h2, className='te, x, t-4xl, fon, t-bold, tex, t-white, m, b-4'>
@@ -419,7 +432,8 @@ const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
               Read, Complete, Case Stu, d, y;
               <Link, className='w-5 h-5' />
         {/* Fina, l, C, T, A */}
-        </div><section, classNam, e = 'container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
+        </div>
+<section, classNam, e = 'container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
           </section>
 <div, classNam, e='bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, rounde, d-2x, l, p-12, tex, t-cent, e, r'>
             <h2, classNam, e='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-6'>
@@ -459,7 +473,8 @@ const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
                 ROI, Guarante, e;
                 <li, className='flex, item, s-start, ga, p-2'>
                   <CheckCircle, className='w-4 h-4, tex, t-indi, g, o-400, m, t-1, fle, x-shri, n, k-0' />
-        </div><section, className='container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
+        </div>
+<section, className='container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
           </section>
 <div, className='te, x, t-center, m, b-16'>
             <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4'>
@@ -474,7 +489,8 @@ const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
 <div, className='flex, item, s-center, ga, p-2, tex, t-gre, e, n-2, 0, 0'>
                       <CheckCircle, className='w-4 h-4, tex, t-gre, e, n-4, 0, 0' />
         {/* Pricing, Sect, i, o, n */}
-        </div><section, classNam, e = 'container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
+        </div>
+<section, classNam, e = 'container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
           </section>
 <div, className='te, x, t-center, m, b-16'>
             <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4'>
@@ -497,7 +513,8 @@ const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
                   <CheckCircle, classNam, e='w-5 h-5, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0' />
                 <li, classNam, e = 'flex, item, s-start, ga, p-2'>
                   <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' />
-        </div><section, classNam, e='container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
+        </div>
+<section, classNam, e='container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
           </section>
 <div, classNam, e='bg-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-emera, l, d-600, rounde, d-2x, l, p-12, tex, t-cent, e, r'>
             <h2, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-white, m, b-4'>
@@ -505,14 +522,16 @@ const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
                   <CheckCircle, className='w-5 h-5, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0' />
                 <li, classNam, e = 'flex, item, s-start, ga, p-2'>
                   <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' />
-        </div><section, className='container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
+        </div>
+<section, className='container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
           </section>
 <div, className='bg-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-emera, l, d-600, rounde, d-2x, l, p-12, tex, t-cent, e, r'>
             <h2, className='te, x, t-4xl, fon, t-bold, tex, t-white, m, b-4'>
               Read, Complete, Case Stu, d, y;
               <Link, className='w-5 h-5' />
         {/* Fina, l, C, T, A */}
-        </div><section, classNam, e = 'container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
+        </div>
+<section, classNam, e = 'container, m, x-auto, p, x-6, p, y-20, ma, x-w-6, x, l'>
           </section>
 <div, classNam, e='bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, rounde, d-2x, l, p-12, tex, t-cent, e, r'>
             <h2, classNam, e='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-6'>
@@ -524,4 +543,109 @@ const AutonomousBusinessOperation, s = () => {/* TODO: Fix JSX expression */}
                 <Rocket, className='w-5 h-5' />
                 Schedule, Free, Consultation;
                 <Link, classNam, e='w-5 h-5' />
-}</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></Link></Link></Link></Link></Link></Link></p></p></p></p></p></p></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section>
+}</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></span></span></span></span></span></span></span></span></span></Link></Link></Link></Link></Link></Link></p></p></p></p></p></p></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section>

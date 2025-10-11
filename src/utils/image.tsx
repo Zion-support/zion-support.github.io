@@ -1,7 +1,6 @@
 'use client'
-import React, { useState, useCallback } from 'react'
-const Image: React.FC = () => {
-    interface ImageProps {
+import React, {useState, useCallback} from 'react'
+const Image: React.FC = () => {interface ImageProps {
   src: string;
   alt: string;
   width?: number;
@@ -15,10 +14,8 @@ const Image: React.FC = () => {
   sizes?: string;
   style?: React.CSSProperties;
   onLoad?: () => void,
-  onError?: () => void;
-  }
-export const Image: React.FC<ImageProps> = ({
-  src,
+  onError?: () => void;}
+export const Image: React.FC<ImageProps> = ({src,
   alt,
   width,
   height,
@@ -32,20 +29,14 @@ export const Image: React.FC<ImageProps> = ({
   style,
   onLoad,
   onError,
-  ...props;
-}) => {
-    const [, setIsLoaded] = useState(false)
+  ...props;}) => {const [, setIsLoaded] = useState(false)
   const [hasError, setHasError] = useState(false)
   const _handleLoad = useCallback(() => {
     setIsLoaded(true)
-    if (onLoad) onLoad()
-  }, [onLoad])
-  const handleError = useCallback(() => {
-    setHasError(true)
-    if (onError) onError()
-  }, [onError])
-  const imageStyle: React.CSSProperties = {
-    ...style,
+    if (onLoad) onLoad()}, [onLoad])
+  const handleError = useCallback(() => {setHasError(true)
+    if (onError) onError()}, [onError])
+  const imageStyle: React.CSSProperties = {...style,
     ...(fill && {
       position: 'absolute',
       top: 0,
@@ -54,8 +45,7 @@ export const Image: React.FC<ImageProps> = ({
       height: '100%',
       objectFit:     ,
 $4})
-  if (hasError) {
-    return (
+  if (hasError) {return (
       <$2 />
         className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={imageStyle}
@@ -65,8 +55,7 @@ $4})
     )
   }
   return (
-    <img
-      src={src}
+    <img src={src}
       alt={alt}
       width={width}
       height={height}
@@ -76,13 +65,12 @@ $4})
       loading={priority ? 'eager' : 'lazy'}
       onLoad={handleLoad}
       onError={handleError}
-      {...props}
-    />
+      {...props} />
   )
 }
 export default Image;
 'use client'
-import React, { useState, useCallback } from 'react'
+import React, {useState, useCallback} from 'react'
 const,
   Image: React.FC = () => {interface ImageProps {}
   // TOD,
@@ -104,9 +92,7 @@ const,
   onError?: () => void,
 }
 export const Image: React.FC,
-          <ImageProps> = ({
-    // TODO: Add content;
-  }
+          <ImageProps> = ({// TODO: Add content;}
 }
 //   src,
 //   alt,
@@ -123,9 +109,7 @@ quality = 75,
 //   onLoad,
 //   onError,
 //   ...props;
-}) => {
-    // TODO: Add content;
-  }
+}) => {// TODO: Add content;}
 }
   const [, setIsLoaded] = useState(false)
   const [hasError, setHasError] = useState(false)
@@ -160,7 +144,7 @@ quality = 75,
   O: Add content,}
 }
     return (
-          <div>Coming Soon;
+<div>Coming Soon;
   )
           </div>
 <div>
@@ -172,7 +156,8 @@ className={`bg-gray-200 flex items-center justify-center ${className}`}
     )
   }
   return (</div>
-<div>Coming Soon</div>)
+<div>Coming Soon</div>
+)
   )
           <img>
       src={src}
@@ -189,4 +174,5 @@ className={`bg-gray-200 flex items-center justify-center ${className}`}
 //     />
   )
 }
-export default Image;"`</div></div></span></span>
+export default Image;"`</div>
+</div></span></span>

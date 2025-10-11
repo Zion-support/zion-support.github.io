@@ -3,29 +3,22 @@ import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
-import { MessageCircle, Headphones, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star, ArrowRight, Phone, Mail } from 'lucide-react'
-const AICustomerSupportPage: React.FC = () => {
-  const features = [
+import {MessageCircle, Headphones, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star, ArrowRight, Phone, Mail} from 'lucide-react'
+const AICustomerSupportPage: React.FC = () => {const features = [
     {
       icon: MessageCircle
       title: '24/7 AI Chat Support',
       description: 'Intelligent chatbots that provide instant responses to customer queries with natural language understanding.',
-      benefits: ['Instant Response', 'Multi-language Support', 'Context Awareness', 'Escalation to Humans']
-    },
-    {
-      icon: Users
+      benefits: ['Instant Response', 'Multi-language Support', 'Context Awareness', 'Escalation to Humans']},
+    {icon: Users
       title: 'Smart Ticket Routing',
       description: 'AI-powered ticket classification and routing to the most appropriate support agent based on expertise and workload.',
-      benefits: ['Intelligent Routing', 'Priority Classification', 'Load Balancing', 'Expert Matching']
-    },
-    {
-      icon: Clock
+      benefits: ['Intelligent Routing', 'Priority Classification', 'Load Balancing', 'Expert Matching']},
+    {icon: Clock
       title: 'Predictive Analytics',
       description: 'Predict customer issues before they occur and proactively reach out with solutions.',
-      benefits: ['Issue Prediction', 'Proactive Support', 'Trend Analysis', 'Prevention Strategies']
-    },
-    {
-      icon: Shield
+      benefits: ['Issue Prediction', 'Proactive Support', 'Trend Analysis', 'Prevention Strategies']},
+    {icon: Shield
       title: 'Knowledge Base Integration',
       description: 'Seamlessly integrated knowledge base that provides accurate, up-to-date information to both AI and human agents.',
       benefits: ['Real-time Updates', 'Version Control', 'Search Optimization', 'Content Management']
@@ -159,8 +152,7 @@ const,
                       {stat.number}
                     </div>"
                     <div className="text-gray-300 font-medium">{stat.label})})
-const AICustomerSupportPage2: React.FC = () => {
-  return(</div>
+const AICustomerSupportPage2: React.FC = () => {return(</div>
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">)
       <Navigation />)
       </div><main className="pt-24 pb-16 px-4">)
@@ -175,7 +167,8 @@ const AICustomerSupportPage2: React.FC = () => {
         </main>
 <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
-          </div><section className="text-center mb-16">
+          </div>
+<section className="text-center mb-16">
             <h1 className="text-4xl sm: text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
               AI Customer Support</$1>,
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">,
@@ -222,7 +215,8 @@ const AICustomerSupportPage2: React.FC = () => {
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" /></CheckCircl>
                         {benefit})})
           {/* Pricing Section */}
-          </div><section className="mb-16">
+          </div>
+<section className="mb-16">
             <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">
               Pricing Plans</$1>,
             </section>
@@ -258,7 +252,8 @@ const AICustomerSupportPage2: React.FC = () => {
                     Get Started
               ))}
           {/* CTA Section */}
-          </div><section className="container mx-auto px-4 py-16 text-center">
+          </div>
+<section className="container mx-auto px-4 py-16 text-center">
             </section>
 <div className="cyber-card p-12 max-w-4xl mx-auto">
               <h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text">
@@ -291,4 +286,25 @@ const AICustomerSupportPage2: React.FC = () => {
               Transform your customer support with intelligent AI solutions that provide 24/7 assistance,
   )
 }
-export default AICustomerSupportPage</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></p></p></p></p></p></p></h1></h1></h1></h2></h2></h2></h2></h2></h2></h3></h3></ul></ul></li></li></main></main></main></main></main></section></section></section></section>
+export default AICustomerSupportPage</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div></span></p></p></p></p></p></p></h1></h1></h1></h2></h2></h2></h2></h2></h2></h3></h3></ul></ul></li></li></main></main></main></main></main></section></section></section></section>

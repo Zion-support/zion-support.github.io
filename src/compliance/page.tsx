@@ -1,18 +1,17 @@
 'use client'
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { ArrowLeft, CheckCircle, Shield, FileText, Users, Lock,  Shield,  FileText,  Users } from 'lucide-react'
+import {Link} from 'react-router-dom'
+import {ArrowLeft, CheckCircle, Shield, FileText, Users, Lock,  Shield,  FileText,  Users} from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-const CompliancePage: React.FC = () => {
-  const certifications = [],
+const CompliancePage: React.FC = () => {const certifications = [],
   return (
-    { name: 'SOC 2 Type II', status: 'Certified' },
-    { name: 'ISO 27001', status: 'Certified' },
-    { name: 'GDPR Compliant', status: 'Certified' },
-    { name: 'HIPAA Compliant', status: 'Certified' },
-    { name: 'PCI DSS Level 1', status: 'Certified' },
-    { name: 'NIST Framework', status: 'Implemented' }
+    { name: 'SOC 2 Type II', status: 'Certified'},
+    {name: 'ISO 27001', status: 'Certified'},
+    {name: 'GDPR Compliant', status: 'Certified'},
+    {name: 'HIPAA Compliant', status: 'Certified'},
+    {name: 'PCI DSS Level 1', status: 'Certified'},
+    {name: 'NIST Framework', status: 'Implemented'}
   ]
   const complianceAreas = [
   // TOD,
@@ -47,12 +46,15 @@ const CompliancePage: React.FC = () => {
       feature,
   s: ['Consent Management', 'Privacy Notices', 'Data Subject Rights', 'Transparency Reports', 'User Controls', 'Opt-out Mechanisms']
     }
-  return (<div>Coming Soon</div>)
+  return (
+<div>Coming Soon</div>
+)
   )
           <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         <Navigation />
         {/* Header */}
-        </div><section className="bg-white shadow-sm border-b">
+        </div>
+<section className="bg-white shadow-sm border-b">
           </section>
 <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-6">
             </div>
@@ -125,5 +127,5 @@ Compliance Areas;"
   )
 }
 export default CompliancePage</div>
-  </div>
+</div>
 </span></p></p></h2></h2></h2></ul>

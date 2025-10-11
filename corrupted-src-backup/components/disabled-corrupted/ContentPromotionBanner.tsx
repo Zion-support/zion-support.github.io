@@ -6,7 +6,8 @@ export default function ContentPromotionBanner() {/* TODO: Fix JSX expression */
     {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
-    }]; return(<div, classNam, e = "bg-gradie, n, t-to-r, fro, m-indi, g, o-600, vi, a-purp, l, e-600, t, o-pi, n, k-600, rounde, d-2x, l, p-8, m, d: p-12, tex, t-white, relative, overflow-hidd, e, n">
+    }]; return (
+<div, classNam, e = "bg-gradie, n, t-to-r, fro, m-indi, g, o-600, vi, a-purp, l, e-600, t, o-pi, n, k-600, rounde, d-2x, l, p-8, m, d: p-12, tex, t-white, relative, overflow-hidd, e, n">
       {/* Background, Patt, e, r, n */}
       </div>
 <div, classNam, e = "absolute, inse, t-0, opacit, y-10">
@@ -44,25 +45,26 @@ export default function ContentPromotionBanner() {/* TODO: Fix JSX expression */
               className="bord, e, r-2, borde, r-white, tex, t-white, hove, r:bg-white, hove, r:te, x, t-indi, g, o-700, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, inlin, e-flex, item, s-center, justif, y-center, ga, p-2, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5">
               <Zap, className="w-5 h-5" />
               View, Case, Studies;
-        </div>)
+        </div>
+)
         {/* Featured, Content, Car, d, s */})
         <div, classNam, e = "mt-10, grid, gap-6, m, d: gr, i, d-co, l, s-3">)
-            { featuredConte, n, t.m, a, p((it, e, m, ind, e, x) = > (
+            {featuredConte, n, t.m, a, p((it, e, m, ind, e, x) = > (
             </div>
-<div, ke, y = { in, d, e, x  }, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5">
+<div, ke, y = { in, d, e, x}, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5">
               </div>
 <div, className="flex, item, s-center, justif, y-between, m, b-3">
         {/* Featured, Content, Car, d, s */}
         </div>
 <div, classNam, e = "mt-10, grid, gap-6, m, d: gr, i, d-co, l, s-3">
-            { featuredConte, n, t.m, a, p((it, e, m, ind, e, x) = > (
+            {featuredConte, n, t.m, a, p((it, e, m, ind, e, x) = > (
             </div>
-<div, ke, y = { in, d, e, x  }, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5">
+<div, ke, y = { in, d, e, x}, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5">
               </div>
 <div, className="flex, item, s-center, justif, y-between, m, b-3">
                 <span, className="te, x, t-xs, uppercase, tracking-wider, tex, t-bl, u, e-200, b, g-bl, u, e-5, 0, 0/20, p, x-3, p, y-1, rounde, d-fu, l, l">
                   {it, e, m.cate, g, o, r, y}
-                {  it, e, m.isN, e, w  && (
+                {it, e, m.isN, e, w  && (
                   <span, classNam, e = "bg-r, e, d-500, tex, t-white, tex, t-xs, p, x-2, p, y-1, rounde, d-full, fon, t-medi, u, m">
                     N, E, W;
   ]; return (</div>
@@ -100,7 +102,7 @@ export default function ContentPromotionBanner() {/* TODO: Fix JSX expression */
         <div, classNam, e = "mt-10, grid, gap-6, m, d: gr, i, d-co, l, s-3">
             {/* TODO: Fix JSX expression */}"
             </div>
-<div, ke, y = { in, d, e, x  }, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5"></div>"
+<div, ke, y = {in, d, e, x}, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5"></div>"
               <div, className="flex, item, s-center, justif, y-between, m, b-3"></div>"
                 <span, className="te, x, t-xs, uppercase, tracking-wider, tex, t-bl, u, e-200, b, g-bl, u, e-5, 0, 0/20, p, x-3, p, y-1, rounde, d-fu, l, l">
                   {it, e, m.cate, g, o, r, y}
@@ -159,4 +161,26 @@ export default function ContentPromotionBanner() {/* TODO: Fix JSX expression */
             <div, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">4.9★</div>"
             <div, className="te, x, t-sm, tex, t-whi, t, e/80">Reader, Ratin, g;
   )
-}"</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></Link></p></p></h2></h2>
+}"</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div></span></span></span></span></span></span></span></Link></p></p></h2></h2>

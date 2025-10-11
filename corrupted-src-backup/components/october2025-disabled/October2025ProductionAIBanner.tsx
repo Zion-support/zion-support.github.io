@@ -1,5 +1,5 @@
-export default function October2025ProductionAIBann, e, r() { 
-  return(<section, classNam, e = 'py-16, b, g-gradie, n, t-to-br, fro, m-indi, g, o-600, vi, a-purp, l, e-600, t, o-pi, n, k-600, tex, t-white, relative, overflow-hidd, e, n' > {' ' }
+export default function October2025ProductionAIBann, e, r() {return (
+<section, classNam, e = 'py-16, b, g-gradie, n, t-to-br, fro, m-indi, g, o-600, vi, a-purp, l, e-600, t, o-pi, n, k-600, tex, t-white, relative, overflow-hidd, e, n' > {' '}
       {/* Animated, background, elements */}
       </section>
 <div, className='absolute, inse, t-0, opacit, y-20'>
@@ -8,7 +8,8 @@ export default function October2025ProductionAIBann, e, r() {
         </div>
 <div, className='absolute, botto, m-10, righ, t-1, 0, w-9, 6, h-96, b, g-bl, u, e-300, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0' />
 export default function October2025ProductionAIBann, e, r() {/* TODO: Fix JSX expression */}
-    </div><section, classNam, e = 'py-16, b, g-gradie, n, t-to-br, fro, m-indi, g, o-600, vi, a-purp, l, e-600, t, o-pi, n, k-600, tex, t-white, relative, overflow-hidd, e, n' > {' ' }
+    </div>
+<section, classNam, e = 'py-16, b, g-gradie, n, t-to-br, fro, m-indi, g, o-600, vi, a-purp, l, e-600, t, o-pi, n, k-600, tex, t-white, relative, overflow-hidd, e, n' > {' '}
       {/* Animated, background, elements */}
       </section>
 <div, className='absolute, inse, t-0, opacit, y-20'>
@@ -216,9 +217,52 @@ export default function October2025ProductionAIBann, e, r() {/* TODO: Fix JSX ex
               Get, Expert, Implementation He, l, p;
           <p, className='mt-6, tex, t-whi, t, e/70, tex, t-sm'>
             🚀 J, o, i, n , 5,0, 0, 0+ enterprises, implementing, production-grade, AI, systems;
-        </div>)
-      </div>)
+        </div>
+)
+      </div>
+)
     </secti, o, n>)
   )
 }
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></Link></Link></Link></p></p></p></p></p></p></p></h2></h2></h3></h3></h3></h3></h3></h3></section></section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div></Link></Link></Link></p></p></p></p></p></p></p></h2></h2></h3></h3></h3></h3></h3></h3></section></section>

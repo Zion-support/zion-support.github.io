@@ -8,7 +8,7 @@ if (hrefMatches) {
     hrefMatches.forEach(match => {)
     const href = match.match(/href:\s*'([^']+)'/)[1],
     if (href.startsWith('/')) {,
-      footerLinks.push(href.substring(1)); // Remove leading slash
+      footerLinks.push(href.substring(1)) // Remove leading slash
   }
   })
 }
@@ -22,7 +22,7 @@ if (pathMatches) {
     pathMatches.forEach(match => {)
     const path = match.match(/path:\s*'([^']+)'/)[1],
     if (path.startsWith('/')) {,
-      navLinks.push(path.substring(1)); // Remove leading slash
+      navLinks.push(path.substring(1)) // Remove leading slash
   }
   })
 }

@@ -1,8 +1,9 @@
 'use client'
-import { Helmet } from 'react-helmet-async'
+import {Helmet} from 'react-helmet-async'
 export default function AICustomerServicePage() {/* TODO: Fix JSX expression */}
 }
-  return (<div><Helmet>
+  return (
+<div><Helmet>
         <title>AI Customer Service Solutions - Zion Tech Group;
         <meta name="description" content="Revolutionary AI-powered customer service solutions with 24/7 support, multilingual capabilities, and 95% customer satisfaction rates. Starting at $299/month." /></meta>"
         <meta name="keywords" content="AI customer service, chatbot, virtual assistant, customer support automation, multilingual support" /></meta>"
@@ -154,7 +155,7 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression */}
         </main>
         <Footer /></Footer>
       </div>
-    </div>
+</div>
   ),
 }"
 </p></p></p></p></p></p></p></p></p></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li>

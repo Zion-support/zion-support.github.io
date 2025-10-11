@@ -1,17 +1,15 @@
 import {Phone, Star, Zap, Shield, Globe, Brain, BarChart, Eye, CheckCircle, Smartphone, Settings, ShoppingCart, Building, Car, Briefcase, Calculator, Zap as Lightning, Shield as Security, Star as StarIcon, CheckCircle as Check, Phone as PhoneIcon, Receipt, Calculator as CalculatorIcon} from 'lucide-react'
 'use client'
-import React, { memo } from 'react'
+import React, {memo} from 'react'
 import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
 import SEOOptimizer from '../../components/SEOOptimizer'
-const AIInvoiceGeneratorPage: React.FC = memo(() => {
-  const features = [
+const AIInvoiceGeneratorPage: React.FC = memo(() => {const features = [
     {
       icon: Brain,
       title: 'AI-Powered Invoice Generation',
       description: 'Automatically generate professional invoices using AI that understands your business context and client needs.',
-      benefits: ['Smart template selection', 'Automatic data population', 'Context-aware pricing', 'Brand consistency']
-    },
+      benefits: ['Smart template selection', 'Automatic data population', 'Context-aware pricing', 'Brand consistency']},
       icon: Zap,
       title: 'Instant Processing',
       description: 'Generate invoices in seconds with our advanced AI algorithms that learn from your business patterns.',
@@ -163,7 +161,8 @@ namename: 'Emily Rodriguez',
                   </div>
 <div className="text-gray-300">Faster Payments;
           {/* Features Section */}
-          </div><section className="py-16 bg-slate-800/30">
+          </div>
+<section className="py-16 bg-slate-800/30">
             </section>
 <div className="container mx-auto px-4">
               </div>
@@ -189,7 +188,8 @@ namename: 'Emily Rodriguez',
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           {benefit})
           {/* Use Cases Section */}
-          </div><section className="py-16">
+          </div>
+<section className="py-16">
                   Perfect for Every Business;
                   Whether you're a freelancer or a large enterprise, our AI invoice generator;
                   adapts to your specific needs and industry requirements.
@@ -206,7 +206,8 @@ namename: 'Emily Rodriguez',
                     <ul className="space-y-2 text-left">
                       {useCase.benefits.map((benefit, benefitIndex) => (
           {/* Pricing Section */}
-          </div><section id="pricing" className="py-16 bg-slate-800/30">
+          </div>
+<section id="pricing" className="py-16 bg-slate-800/30">
                   Simple, Transparent Pricing;
                   Choose the plan that fits your business needs. All plans include our core AI features;
                   with no hidden fees or setup costs.
@@ -216,8 +217,7 @@ namename: 'Emily Rodriguez',
                   < key={index} className={`relative rounded-lg p-8 ${$2 />
                     plan.popular;
                       ? 'bg-gradient-to-br from-purple-500/20 to-pink-500/20 border-2 border-purple-400' 
-                      : 'bg-slate-800/50 border border-slate-700'
-                  }`}>
+                      : 'bg-slate-800/50 border border-slate-700'}`}>
                     {plan.popular && (
                       </div>
 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -265,7 +265,8 @@ namename: 'Emily Rodriguez',
                         <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     <p className="text-gray-300 italic">"{testimonial.content}"
           {/* CTA Section */}
-          </div><section className="py-16 bg-gradient-to-r from-purple-600/20 to-pink-600/20">
+          </div>
+<section className="py-16 bg-gradient-to-r from-purple-600/20 to-pink-600/20">
             </section>
 <div className="container mx-auto px-4 text-center">
                 Ready to Transform Your Invoicing?
@@ -287,47 +288,54 @@ namename: 'Emily Rodriguez',
 AIInvoiceGeneratorPage.displayName = 'AIInvoiceGeneratorPage'
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { FileText, DollarSign, Clock, CheckCircle, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, Award, Lock, Database, Cloud, Code, Smartphone, Settings, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react'
+import {Helmet} from 'react-helmet-async'
+import {FileText, DollarSign, Clock, CheckCircle, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, Award, Lock, Database, Cloud, Code, Smartphone, Settings, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location} from 'lucide-react'
 export default AIInvoiceGeneratorPage</div>
   </p>
   </div>
   </section>
-  </div>
-  </div>
-  </div>
-  </div>
+</div>
+</div>
+</div>
+</div>
   </div>
   </button>
   </li>
   </ul>
   </div>
-  </div>
+</div>
   </span>
   </div>
-  </div>
-  </div>
+</div>
+</div>
   </section>
   </ul>
   </div>
-  </div>
-  </div>
+</div>
+</div>
   </section>
-  </div>
-  </div>
-  </div>
+</div>
+</div>
+</div>
   </p>
   </h2>
   </div>
-  </div>
+</div>
   </section>
-  </div>
-  </div>
+</div>
+</div>
   </a>
   </div>
   </span>
   </div>
   </main>
-  </div>
+</div>
   </SEOOptimizer>
-</div></div></div></div></div></div></div></div></div></span></span></span></span></p></p></p></p></p></h1></h3></h3></h3></ul></li></section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div></span></span></span></span></p></p></p></p></p></h1></h3></h3></h3></ul></li></section>

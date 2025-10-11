@@ -42,10 +42,10 @@ async function checkOpenPRs() {
       // Check if PR has merge conflicts
       prDetails.push({
         number: pr.number
-        title: pr.title;)
-        head: pr.head.ref;)
-        base: pr.base.ref;)
-        author: pr.user.login;)
+        title: pr.title)
+        head: pr.head.ref)
+        base: pr.base.ref)
+        author: pr.user.login)
         url: pr.html_url,)
         hasConflicts),
         mergeable: prDetail.mergeable),
@@ -76,4 +76,4 @@ checkOpenPRs().then(prs => {
   })
 checkOpenPRs().then(prs => {/* TODO: Fix JSX expression */})
 }).catch(error => {/* TODO: Fix JSX expression */})
-});`
+})`

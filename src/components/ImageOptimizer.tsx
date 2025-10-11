@@ -1,6 +1,5 @@
-import React, { useState, useRef, useEffect } from 'react'
-interface ImageOptimizerProps {
-    src: string;
+import React, {useState, useRef, useEffect} from 'react'
+interface ImageOptimizerProps {src: string;
   alt: string;
   className?: string;
   width?: number;
@@ -8,10 +7,8 @@ interface ImageOptimizerProps {
   priority?: boolean;
   placeholder?: string;
   onLoad?: () => void,
-  onError?: () => void;
-  }
-const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
-    ,
+  onError?: () => void;}
+const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
   src;
   alt,
   className = '',
@@ -20,9 +17,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   priority = false,
   placeholder,
   onLoad,
-  onError;
-  }) => {
-    const [isLoaded, setIsLoaded] = useState(false)
+  onError;}) => {const [isLoaded, setIsLoaded] = useState(false)
   const [isInView, setIsInView] = useState(priority)
   const [hasError, setHasError] = useState(false)
   const imgRef = useRef<HTMLImageElement>(null)</HTMLImageElement>useEffect</HTMLImageElement>(() => {
@@ -31,29 +26,19 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsInView(true)
-          observer.disconnect()
-  }
+          observer.disconnect()}
       },
-      {
-    rootMargin: '50px 0px',
-        threshold: 0.01;
-  }
+      {rootMargin: '50px 0px',
+        threshold: 0.01;}
     )
-    if (imgRef.current) {
-    observer.observe(imgRef.current)
-  }
+    if (imgRef.current) {observer.observe(imgRef.current)}
     return () => observer.disconnect()
   }, [priority])
-  const handleLoad = () => {
-    setIsLoaded(true)
-    onLoad?.()
-  }
-  const handleError = () => {
-    setHasError(true)
-    onError?.()
-  }
-  const generatePlaceholder = () => {
-    if (placeholder) return placeholder;
+  const handleLoad = () => {setIsLoaded(true)
+    onLoad?.()}
+  const handleError = () => {setHasError(true)
+    onError?.()}
+  const generatePlaceholder = () => {if (placeholder) return placeholder;
     const svg = `
       <svg width="${width || 400}" height="${height || 300}" xmlns="http: //www.w3.org/2000/svg">
         <rect width="100%" height="100%" fill="#1e293b"/>
@@ -69,41 +54,40 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
     ,
     return `data: image/svg+xml,base64,${btoa(svg)}`
   }
-  if (hasError) {
-    return(<$2 />
+  if (hasError) {return(<$2 />
         className={`bg-slate-800 flex items-center justify-center ${className}`}
-        style={{ width, height }}
+        style={{ width, height}}
       >
         <div className="text-gray-400 text-center">
           </div>
 <div className="text-4xl mb-2">⚠️
           </div>
-<div className="text-sm">Image failed to load</div>)
-        </div>)
-      </div>)
+<div className="text-sm">Image failed to load</div>
+)
+        </div>
+)
+      </div>
+)
     )
   }
   return(<$2 />
       ref={imgRef}
       className={`relative overflow-hidden ${className}`}
-      style={{ width, height }}
+      style={{ width, height}}
     >
       {/* Placeholder */})
       {!isLoaded && ()
         <img)
       {/* Placeholder */}
       {!isLoaded && (
-        <img
-          src={generatePlaceholder()}
+        <img src={generatePlaceholder()}
           alt=""
           className="absolute inset-0 w-full h-full object-cover animate-pulse"
-          style={{ filter: 'blur(1 px)' }}
-        />
+          style={{ filter: 'blur(1 px)'}} />
       )}
       {/* Actual Image */}
       {isInView && (
-        <img
-          src={src}
+        <img src={src}
           alt={alt}
           className={`w-full h-full object-cover transition-opacity duration-300 ${}
             isLoaded ? 'opacity-100' : 'opacity-0'}
@@ -112,10 +96,9 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
           decoding="async"
           onLoad={handleLoad}
           onError={handleError}
-          style={{ width, height }}
-        />
+          style={{ width, height}} />
       )}
     </div>
-  )
+)
 }
 export default ImageOptimizer</ImageOptimizerProps>

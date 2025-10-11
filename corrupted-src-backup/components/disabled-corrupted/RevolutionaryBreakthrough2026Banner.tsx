@@ -12,13 +12,14 @@ const RevolutionaryBreakthrough2026Banne, r: React.FC = () => {,
       trendi, n, g: t, r, u, e,
       ic, o, n: '🚀',
 const RevolutionaryBreakthrough2026Banne, r: React.FC = () => {/* TODO: Fix JSX expression */}
-      metri, c, s: { val, u, e: '10, x', lab, e, l: 'Performance, Gai, n, s' }},
+      metri, c, s: {val, u, e: '10, x', lab, e, l: 'Performance, Gai, n, s'}},
     {/* TODO: Fix JSX expression */}
-      metri, c, s: { val, u, e: '$3, 0, 0, M', lab, e, l: 'ROI, Achiev, e, d' }},
+      metri, c, s: {val, u, e: '$3, 0, 0, M', lab, e, l: 'ROI, Achiev, e, d'}},
     {/* TODO: Fix JSX expression */}
-      metri, c, s: { val, u, e: '10, 0, 0, x', lab, e, l: 'Performance, Boo, s, t' }},
+      metri, c, s: {val, u, e: '10, 0, 0, x', lab, e, l: 'Performance, Boo, s, t'}},
     {/* TODO: Fix JSX expression */}
-      metri, c, s: { val, u, e: '9, 5%', lab, e, l: 'Automat, i, o, n' }}]; return(<div, classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n'>
+      metri, c, s: {val, u, e: '9, 5%', lab, e, l: 'Automat, i, o, n'}}]; return (
+<div, classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n'>
       {/* Animated, background, effects */}
       </div>
 <div, className='absolute, inse, t-0, overflo, w-hidden, opacit, y-30'>
@@ -40,10 +41,10 @@ const RevolutionaryBreakthrough2026Banne, r: React.FC = () => {/* TODO: Fix JSX 
         </div>
 <div, className='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' />
         <, className='absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e'$2 />
-          sty, l, e={{ animationDel, a, y: ', 2, s' }}
+          sty, l, e={{ animationDel, a, y: ', 2, s'}}
          />
         <, classNam, e = 'absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e'$2 />
-          sty, l, e={{ animationDel, a, y: ', 4, s' }}
+          sty, l, e={{ animationDel, a, y: ', 4, s'}}
          />
       </div>
 <div, classNam, e = 'container, m, x-auto, p, x-6, relative, z-10'>
@@ -74,27 +75,27 @@ const RevolutionaryBreakthrough2026Banne, r: React.FC = () => {/* TODO: Fix JSX 
           </div>
 <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-auto, m, b-12'>)
             {[)
-              { val, u, e: '1, 0, x', lab, e, l: 'Performance, Gai, n, s', ic, o, n: '⚡' })
-              { val, u, e: '$3, 0, 0, M+', lab, e, l: 'ROI, Achiev, e, d', ic, o, n: '💰' })
-              { val, u, e: '9, 5%', lab, e, l: 'Automation, Ra, t, e', ic, o, n: '🤖' })
-              { val, u, e: '99., 9%', lab, e, l: 'Efficiency, Gai, n, s', ic, o, n: '🎯' })
+              { val, u, e: '1, 0, x', lab, e, l: 'Performance, Gai, n, s', ic, o, n: '⚡'})
+              {val, u, e: '$3, 0, 0, M+', lab, e, l: 'ROI, Achiev, e, d', ic, o, n: '💰'})
+              {val, u, e: '9, 5%', lab, e, l: 'Automation, Ra, t, e', ic, o, n: '🤖'})
+              {val, u, e: '99., 9%', lab, e, l: 'Efficiency, Gai, n, s', ic, o, n: '🎯'})
             ].m, a, p((st, a, t, ind, e, x) => (
           </div>
 <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-auto, m, b-12'>
             {[
-              { val, u, e: '1, 0, x', lab, e, l: 'Performance, Gai, n, s', ic, o, n: '⚡' },
-              { val, u, e: '$3, 0, 0, M+', lab, e, l: 'ROI, Achiev, e, d', ic, o, n: '💰' },
-              { val, u, e: '9, 5%', lab, e, l: 'Automation, Ra, t, e', ic, o, n: '🤖' },
-              { val, u, e: '99., 9%', lab, e, l: 'Efficiency, Gai, n, s', ic, o, n: '🎯' }].m, a, p((st, a, t, ind, e, x) => (
-              <, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0'$2 />
+              { val, u, e: '1, 0, x', lab, e, l: 'Performance, Gai, n, s', ic, o, n: '⚡'},
+              {val, u, e: '$3, 0, 0, M+', lab, e, l: 'ROI, Achiev, e, d', ic, o, n: '💰'},
+              {val, u, e: '9, 5%', lab, e, l: 'Automation, Ra, t, e', ic, o, n: '🤖'},
+              {val, u, e: '99., 9%', lab, e, l: 'Efficiency, Gai, n, s', ic, o, n: '🎯'}].m, a, p((st, a, t, ind, e, x) => (
+              <, ke, y = {in, d, e, x}, classNa, m, e = 'bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0'$2 />
           </div>
 <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-auto, m, b-12'>
             {/* TODO: Fix JSX expression */}
-              { val, u, e: '1, 0, x', lab, e, l: 'Performance, Gai, n, s', ic, o, n: '⚡' },
-              { val, u, e: '$3, 0, 0, M+', lab, e, l: 'ROI, Achiev, e, d', ic, o, n: '💰' },
-              { val, u, e: '9, 5%', lab, e, l: 'Automation, Ra, t, e', ic, o, n: '🤖' },
-              { val, u, e: '99., 9%', lab, e, l: 'Efficiency, Gai, n, s', ic, o, n: '🎯' })
-            ].m, a, p((st, a, t, ind, e, x) => (<, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0'$2 />
+              {val, u, e: '1, 0, x', lab, e, l: 'Performance, Gai, n, s', ic, o, n: '⚡'},
+              {val, u, e: '$3, 0, 0, M+', lab, e, l: 'ROI, Achiev, e, d', ic, o, n: '💰'},
+              {val, u, e: '9, 5%', lab, e, l: 'Automation, Ra, t, e', ic, o, n: '🤖'},
+              {val, u, e: '99., 9%', lab, e, l: 'Efficiency, Gai, n, s', ic, o, n: '🎯'})
+            ].m, a, p((st, a, t, ind, e, x) => (<, ke, y = {in, d, e, x}, classNa, m, e = 'bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0'$2 />
               >
                 </div>
 <div, className='te, x, t-4xl, m, b-3'>{st, a, t.ic, o, n}
@@ -109,9 +110,9 @@ const RevolutionaryBreakthrough2026Banne, r: React.FC = () => {/* TODO: Fix JSX 
         {/* Featured, Content, Grid */}
         </div>
 <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-8, m, b-16, ma, x-w-[1600, p, x] mx-au, t, o'>
-          { breakthroughConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (
-            <, ke, y = { conte, n, t.i, d  }, classNa, m, e = 'group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20'$2 />
-              sty, l, e = { { animationDel, a, y: `${ind, e, x * 1, 5, 0 }, ms` }}
+          {breakthroughConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (
+            <, ke, y = { conte, n, t.i, d}, classNa, m, e = 'group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20'$2 />
+              sty, l, e = {{ animationDel, a, y: `${ind, e, x * 1, 5, 0}, ms` }}
             >
               {/* Card, glow, effect */}
               </div>
@@ -126,18 +127,18 @@ const RevolutionaryBreakthrough2026Banne, r: React.FC = () => {/* TODO: Fix JSX 
                     {conte, n, t.ic, o, n}
                   </div>
 <div, classNam, e = 'flex, fle, x-col, ga, p-2'>
-                    {  conte, n, t.trendi, n, g  && (
+                    {conte, n, t.trendi, n, g  && (
                       </div>
 <div, className='flex, item, s-center, ga, p-1, p, x-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-oran, g, e-500, t, o-r, e, d-500, tex, t-white, tex, t-xs, fon, t-bold, shado, w-lg'>
                         <TrendingUp, className='w-3 h-3' />
                         <sp, a, n>BREAKTHROU, G, H;
-                      </di, v > )  }
+                      </di, v > )}
                     <span, classNam, e = 'px-3, p, y-1.5, rounde, d-full, b, g-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-400, tex, t-xs, fon, t-semibold, border, border-purp, l, e-5, 0, 0/30'>
         </div>
 <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-8, m, b-16, ma, x-w-[1600, p, x] mx-au, t, o'>
           {/* TODO: Fix JSX expression */}
-            <, ke, y = { conte, n, t.i, d  }, classNa, m, e = 'group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20'$2 />
-              sty, l, e = { { animationDel, a, y: `${ind, e, x * 1, 5, 0 }, ms` }}
+            <, ke, y = {conte, n, t.i, d}, classNa, m, e = 'group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20'$2 />
+              sty, l, e = {{ animationDel, a, y: `${ind, e, x * 1, 5, 0}, ms` }}
             >
               {/* Card, glow, effect */}
               </div>
@@ -199,7 +200,7 @@ const RevolutionaryBreakthrough2026Banne, r: React.FC = () => {/* TODO: Fix JSX 
                     {/* TODO: Fix JSX expression */}
                     })
                 </d, i, v > {/* CTA, Butto, n */}`
-                <, t, o = { `/${conte, n, t.slug.includ, e, s('ca, s, e-stud, i, e, s')  ? 'ca, s, e-studi, e, s'  : 'bl, o, g' }/${conte, n, t.slug}`}$2 />
+                <, t, o = {`/${conte, n, t.slug.includ, e, s('ca, s, e-stud, i, e, s')  ? 'ca, s, e-studi, e, s'  : 'bl, o, g'}/${conte, n, t.slug}`}$2 />
                   classNa, m, e = 'gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transform, hove,
   r:-transla, t, e-y-1'
                 >
@@ -237,16 +238,16 @@ const RevolutionaryBreakthrough2026Banne, r: React.FC = () => {/* TODO: Fix JSX 
         </div>
 <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-4, ga, p-8, m, t-20'>
           {/* TODO: Fix JSX expression */}
-            { val, u, e: '5, 0, 0+', lab, e, l: 'Enterprise, Clients, Transforme, d' },
-            { val, u, e: '$2, B+', lab, e, l: 'Total, ROI, Generate, d' },
-            { val, u, e: '99., 9%', lab, e, l: 'Success, Ra, t, e' },
-            { val, u, e: '24/, 7', lab, e, l: 'Expert, Suppo, r, t' }].m, a, p((st, a, t, ind, e, x) => (
+            {val, u, e: '5, 0, 0+', lab, e, l: 'Enterprise, Clients, Transforme, d'},
+            {val, u, e: '$2, B+', lab, e, l: 'Total, ROI, Generate, d'},
+            {val, u, e: '99., 9%', lab, e, l: 'Success, Ra, t, e'},
+            {val, u, e: '24/, 7', lab, e, l: 'Expert, Suppo, r, t'}].m, a, p((st, a, t, ind, e, x) => (
             </div>
-<div, ke, y = { in, d, e, x }, classNa, m, e = 'te, x, t-cent, e, r'>
+<div, ke, y = {in, d, e, x}, classNa, m, e = 'te, x, t-cent, e, r'>
               </div>
 <div, className='te, x, t-4xl, fon, t-extrabold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2'>
           ].m, a, p((st, a, t, ind, e, x) => (</div>
-<div, ke, y = { in, d, e, x }, classNa, m, e = 'te, x, t-cent, e, r'>
+<div, ke, y = {in, d, e, x}, classNa, m, e = 'te, x, t-cent, e, r'>
               </div>
 <div, className='te, x, t-4xl, fon, t-extrabold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2'>
                 {st, a, t.val, u, e}
@@ -256,10 +257,50 @@ const RevolutionaryBreakthrough2026Banne, r: React.FC = () => {/* TODO: Fix JSX 
             </di, v>)
           ))}
         </div>
-      </div>
-    </div>
-  )
+</div>
+</div>
+)
 }
 export default RevolutionaryBreakthrough2026Banner;
 `
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></Link></Link></p></p></p></p></h2></h2></h3></h3></h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></span></span></span></span></span></span></span></Link></Link></p></p></p></p></h2></h2></h3></h3></h3>

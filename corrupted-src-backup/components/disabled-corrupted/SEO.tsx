@@ -1,5 +1,5 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import {Helmet} from 'react-helmet-async'
 interface SEOProps {/* TODO: Fix JSX expression */}
 }
 const SEO: React.FC<SEOProps> = ({,
@@ -8,8 +8,7 @@ const SEO: React.FC<SEOProps> = ({,
   keywords = 'AI solutions, enterprise automation, artificial intelligence, machine learning, business transformation, technology consulting',
   image = '/og-image.jpg',
   url = 'https: //zion.app',
-  type = 'website'}) => {
-  return(<Helmet>
+  type = 'website'}) => {return(<Helmet>
       <title>{title}
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />

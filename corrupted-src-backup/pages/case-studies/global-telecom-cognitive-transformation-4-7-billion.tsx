@@ -1,14 +1,14 @@
 import React from 'react'
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c'
-impo, r, t { Awa, r, d } fr, o, m 'luci, d, e-rea, c, t'
-impo, r, t { Trending, U, p } fr, o, m 'luci, d, e-rea, c, t'
-impo, r, t { Use, r, s } fr, o, m 'luci, d, e-rea, c, t'
-impo, r, t { Z, a, p } fr, o, m 'luci, d, e-rea, c, t'
-impo, r, t { CheckCirc, l, e } fr, o, m 'luci, d, e-rea, c, t'
-impo, r, t { ArrowRig, h, t } fr, o, m 'luci, d, e-rea, c, t'
-impo, r, t { Bra, i, n } fr, o, m 'luci, d, e-rea, c, t'
-impo, r, t { Targ, e, t } fr, o, m 'luci, d, e-rea, c, t'
-const GlobalTelecomCognitiveTransformatio, n: React.FC = () => { ,
+impo, r, t {Helm, e, t} fr, o, m 'rea, c, t-helm, e, t-asy, n, c'
+impo, r, t {Awa, r, d} fr, o, m 'luci, d, e-rea, c, t'
+impo, r, t {Trending, U, p} fr, o, m 'luci, d, e-rea, c, t'
+impo, r, t {Use, r, s} fr, o, m 'luci, d, e-rea, c, t'
+impo, r, t {Z, a, p} fr, o, m 'luci, d, e-rea, c, t'
+impo, r, t {CheckCirc, l, e} fr, o, m 'luci, d, e-rea, c, t'
+impo, r, t {ArrowRig, h, t} fr, o, m 'luci, d, e-rea, c, t'
+impo, r, t {Bra, i, n} fr, o, m 'luci, d, e-rea, c, t'
+impo, r, t {Targ, e, t} fr, o, m 'luci, d, e-rea, c, t'
+const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {,
   return(<React.Fragment>,
       <Helm, e, t>
         <title>
@@ -23,7 +23,7 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => { ,
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/ca s e-studi e s/glob a l-telec o m-cogniti v e-transformati o n-4-7-billi o n')
         />),
       <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'>
-        <Head, e, r / > {/* Hero, Sect, i, o, n */ }
+        <Head, e, r / > {/* Hero, Sect, i, o, n */}
         </div>
 <div, classNam, e = 'relative, p, t-24, p, b-16, overflo, w-hidd, e, n'>
           </div>
@@ -43,7 +43,7 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => { ,
                 className='te, x, t-purp, l, e-300, hove, r: te, x, t-white, transitio, n-colo, r, s'
               >
 const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {/* TODO: Fix JSX expression */}
-        <Head, e, r / > {/* Hero, Sect, i, o, n */ }
+        <Head, e, r / > {/* Hero, Sect, i, o, n */}
         </div>
 <div, classNam, e = 'relative, p, t-24, p, b-16, overflo, w-hidd, e, n'>
           </div>
@@ -142,8 +142,8 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {/* TODO: Fix JSX
                         'Competitive, intelligence, analysis',
                         'Scenario, planning, and simulati, o, n'],
                       te, c, h: 'Natural, language, querie, s, Automated, insight, s, Causal, inferenc, e'}].m, a, p((solution, i, d, x) => (
-                    <, ke, y = { id, x }, classNa, m, e = 'bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/30, t, o-bl, u, e-9, 0, 0/30, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6'$2 />
-                  ].m, a, p((solution, i, d, x) => (<, ke, y = { id, x }, classNa, m, e = 'bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/30, t, o-bl, u, e-9, 0, 0/30, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6'$2 />
+                    <, ke, y = {id, x}, classNa, m, e = 'bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/30, t, o-bl, u, e-9, 0, 0/30, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6'$2 />
+                  ].m, a, p((solution, i, d, x) => (<, ke, y = {id, x}, classNa, m, e = 'bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/30, t, o-bl, u, e-9, 0, 0/30, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6'$2 />
                     >
                       <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, flex, items-center, ga, p-3'>
                         <span, className='te, x, t-3, x, l'>{solution.ic, o, n}
@@ -153,12 +153,12 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {/* TODO: Fix JSX
                         <p, className='te, x, t-sm, fon, t-semibold, tex, t-purp, l, e-300, m, b-2'>
                           Capabilities, Deploye, d: </p>,
                         <ul, className='spa, c, e-y-2'>
-                          { solution.featur, e, s.m, a, p((fea, t, u, r, e, i) = > (
+                          {solution.featur, e, s.m, a, p((fea, t, u, r, e, i) = > (
                         <p, className='te, x, t-sm, fon, t-semibold, tex, t-purp, l, e-300, m, b-2'>
                           Capabilities, Deploye, d:
                         <ul, className='spa, c, e-y-2'>
                           {/* TODO: Fix JSX expression */}
-                            <, ke, y = { , i  }, classNa, m, e = 'flex, item, s-start, ga, p-2, tex, t-purp, l, e-1, 0, 0'$2 />
+                            <, ke, y = {, i}, classNa, m, e = 'flex, item, s-start, ga, p-2, tex, t-purp, l, e-1, 0, 0'$2 />
                             >
                               <CheckCircle, classNam, e='w-4 h-4, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' />
                       </div>
@@ -313,4 +313,32 @@ const GlobalTelecomCognitiveTransformatio, n: React.FC = () => {/* TODO: Fix JSX
                 Schedule, Consultatio, n;
                 <Link, className='ml-2 w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
 })
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></Link></Link></Link></Link></Link></Link></Link></Link></p></p></p></p></p></p></h1></h1></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h3></h3></h3></h3></h3></h3></h3></h3></ul></ul></ul></ul></li></li></li></li></li></li></li></li></li></footer></footer></footer></footer></nav></nav>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></Link></Link></Link></Link></Link></Link></Link></Link></p></p></p></p></p></p></h1></h1></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h3></h3></h3></h3></h3></h3></h3></h3></ul></ul></ul></ul></li></li></li></li></li></li></li></li></li></footer></footer></footer></footer></nav></nav>

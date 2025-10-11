@@ -1,11 +1,10 @@
 import {ShoppingCart, Users, Wrench, Search, Filter, Star, Clock, CheckCircle, ArrowRight, Phone, Mail, Award} from 'lucide-react'
 'use client'
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, {useState} from 'react'
+import {Link} from 'react-router-dom'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-const MarketplacePage: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState('products')
+const MarketplacePage: React.FC = () => {const [activeCategory, setActiveCategory] = useState('products')
   const [searchTerm, setSearchTerm] = useState('')
   const categories = [
     {
@@ -114,8 +113,7 @@ $4}
       image: '⚛️',
       features: ['100 qubits', '24/7 access', 'API integration', 'Expert support'],
       vendor: 'QuantumCloud',
-  const getCurrentItems = () => {
-    switch (activeCategory) {
+  const getCurrentItems = () => {switch (activeCategory) {
       case 'products':
         return products;
       case 'talent':
@@ -123,8 +121,7 @@ $4}
       case 'equipment':
         return equipment;
       default:
-        return []
-  }
+        return []}
   const filteredItems = getCurrentItems().filter(item =>
     item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
     item.description.toLowerCase().includes(searchTerm.toLowerCase())
@@ -278,8 +275,7 @@ icon$5: Award,
 <div className="flex items-center justify-between text-sm">
                         <span className="text-gray-400">{item.experience} experience;
                         < className={`px-2 py-1 rounded text-xs ${$2 />
-                          item.available ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
-                        }`}>
+                          item.available ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'}`}>
                           {item.available ? 'Available' : 'Busy'}
                   {activeCategory === 'equipment' && (
                         <h4 className="text-sm font-semibold text-cyan-400 mb-2">Specifications:
@@ -443,34 +439,38 @@ export default MarketplacePage,
   </p>
   </h2>
   </div>
-  </div>
-  </div>
+</div>
+</div>
   </h2>
   </button>
   </span>
   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
   </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </button>
+</div>
+</div>
+</div>
+</div>
+</div>
   </div>
   </button>
   </div>
+  </button>
   </div>
-  </div>
-  </div>
-  </div>
-  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
   </h1>
   </div>
-  </div>
-</div></div></div></div></div></div></span></span></span></span></span></span></span></p></p></p></h2></h3></h3></h4></h4></h4></ul></li>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div></span></span></span></span></span></span></span></p></p></p></h2></h3></h3></h4></h4></h4></ul></li>

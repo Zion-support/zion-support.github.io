@@ -1,5 +1,5 @@
-import { Helmet } from "react-helmet-async";"
-impo, r, t { Trending, U, p } fr, o, m "luci, d, e-rea, c, t";"
+import {Helmet} from "react-helmet-async";"
+impo, r, t {Trending, U, p} fr, o, m "luci, d, e-rea, c, t";"
 import, Header, from "../../componen, t, s/Head, e, r";"
 import, Footer, from "../../componen, t, s/Foot, e, r"
 impo, r, t {/* TODO: Fix JSX expression */}"
@@ -8,8 +8,7 @@ impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "luci, d, e-rea, c, t";';"
 import, Header, from "../../componen, t, s/Head, e, r";';"
 import, Footer, from "../../componen, t, s/Foot, e, r";'
-const, AIEmailMarketin, g: Rea, c, t.FC = () => {
-  const, feature, s = [
+const, AIEmailMarketin, g: Rea, c, t.FC = () => {const, feature, s = [
     {
       i, c, o;
   n: Bra, i, n;
@@ -17,52 +16,40 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {
       descripti, o, n: "Automatically, generate, personalized email, content, based on, customer, behavior, preferenc, e, s, and, engagement, history.","
       tit, l, e: "AI, Content, Generation","
       descripti, o, n: "Automatically, generate, personalized email, content, based on, customer, behavior, preferenc, e, s, and, engagement, history.","
-      benef, i, t: "3, 0, 0% increase, in, open rat, e, s"
-    }
-    {
-      ic, o, n: Targ, e, t;
+      benef, i, t: "3, 0, 0% increase, in, open rat, e, s"}
+    {ic, o, n: Targ, e, t;
       tit, l, e: "Smart, Segmentatio, n","
       descripti, o, n: "AI-powered, audience, segmentation that, identifies, high-value, customers, and predicts, optimal, send tim, e, s.","
       tit, l, e: "Smart, Segmentatio, n","
       descripti, o, n: "AI-powered, audience, segmentation that, identifies, high-value, customers, and predicts, optimal, send tim, e, s.","
-      benef, i, t: "85% improvement, in, click-through, rate, s"
-    }
-    {
-      ic, o, n: BarChar, t, 3;
+      benef, i, t: "85% improvement, in, click-through, rate, s"}
+    {ic, o, n: BarChar, t, 3;
       tit, l, e: "Predictive, Analytic, s","
       descripti, o, n: "Advanced, analytics, that predict, campaign, performance and, optimize, subject lin, e, s, conte, n, t, and, timin, g.","
       tit, l, e: "Predictive, Analytic, s","
       descripti, o, n: "Advanced, analytics, that predict, campaign, performance and, optimize, subject lin, e, s, conte, n, t, and, timin, g.","
-      benef, i, t: "2, 5, 0% ROI, improvemen, t"
-    }
-    {
-      ic, o, n: Z, a, p;
+      benef, i, t: "2, 5, 0% ROI, improvemen, t"}
+    {ic, o, n: Z, a, p;
       tit, l, e: "Automated, Campaign, s","
       descripti, o, n: "Intelligent, automation, that triggers, personalized, campaigns based, on, customer actions, and, lifecycle stag, e, s.","
       tit, l, e: "Automated, Campaign, s","
       descripti, o, n: "Intelligent, automation, that triggers, personalized, campaigns based, on, customer actions, and, lifecycle stag, e, s.","
-      benef, i, t: "70% reduction, in, manual wo, r, k"
-    }
-    {
-      ic, o, n: Clo, c, k;
+      benef, i, t: "70% reduction, in, manual wo, r, k"}
+    {ic, o, n: Clo, c, k;
       tit, l, e: "Optimal, Timin, g","
       descripti, o, n: "AI, determines, the best, time, to send, emails, to each, individual, recipient for, maximum, engagement.","
       tit, l, e: "Optimal, Timin, g","
       descripti, o, n: "AI, determines, the best, time, to send, emails, to each, individual, recipient for, maximum, engagement.","
-      benef, i, t: "45% increase, in, engagement"
-    }
-    {
-      ic, o, n: Shie, l, d;
+      benef, i, t: "45% increase, in, engagement"}
+    {ic, o, n: Shie, l, d;
       tit, l, e: "Deliverability, Optimizatio, n","
       descripti, o, n: "Advanced, algorithms, ensure maximum, inbox, placement and, compliance, with email, regulation, s.","
       tit, l, e: "Deliverability, Optimizatio, n","
       descripti, o, n: "Advanced, algorithms, ensure maximum, inbox, placement and, compliance, with email, regulation, s.","
-      benef, i, t: "98% deliverability, rat, e"
-    }
+      benef, i, t: "98% deliverability, rat, e"}
   ]
   const, pricin, g = [
-    {
-    na, m, e: "Start, e, r"
+    {na, m, e: "Start, e, r"
       pri, c, e: "$79",
       peri, o, d: "/mon, t, h"
       descripti, o, n: "Perfect, for, small businesses, starting, with AI-powered, email, marketing"
@@ -76,10 +63,8 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {
         "5, campaign, s/mon, t, h"
         "Basic, segmentatio, n"
       ]
-      popul, a, r: fal, s, e;
-  }
-    {
-    na, m, e: "Profession, a, l"
+      popul, a, r: fal, s, e;}
+    {na, m, e: "Profession, a, l"
       pri, c, e: "$1, 9, 9"
       peri, o, d: "/mon, t, h"
       descripti, o, n: "Ideal, for, growing businesses, with, advanced email, marketing, needs"
@@ -95,10 +80,8 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {
         "A/B, testin, g"
         "API, acces, s"
       ]
-      popul, a, r: tr, u, e;
-  }
-    {
-    na, m, e: "Enterpri, s, e"
+      popul, a, r: tr, u, e;}
+    {na, m, e: "Enterpri, s, e"
       pri, c, e: "$5, 9, 9"
       peri, o, d: "/mon, t, h"
       descripti, o, n: "Complete, solution, for large, organizations, with enterprise, requirement, s"
@@ -132,10 +115,8 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {
         "5, campaign, s/mon, t, h","
         "Basic, segmentatio, n"
       ]
-      popul, a, r: fal, s, e;
-  }
-    {
-    na, m, e: "Profession, a, l","
+      popul, a, r: fal, s, e;}
+    {na, m, e: "Profession, a, l","
       pri, c, e: "$1, 9, 9","
       peri, o, d: "/mon, t, h","
       descripti, o, n: "Ideal, for, growing businesses, with, advanced email, marketing, needs","
@@ -151,10 +132,8 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {
         "A/B, testin, g","
         "API, acces, s"
       ]
-      popul, a, r: tr, u, e;
-  }
-    {
-    na, m, e: "Enterpri, s, e","
+      popul, a, r: tr, u, e;}
+    {na, m, e: "Enterpri, s, e","
       pri, c, e: "$5, 9, 9","
       peri, o, d: "/mon, t, h","
       descripti, o, n: "Complete, solution, for large, organizations, with enterprise, requirement, s","
@@ -172,84 +151,64 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {
         "SLA, guarante, e","
         "Traini, n, g & consultati, o, n"
       ]
-      popul, a, r: fal, s, e;
-  }
+      popul, a, r: fal, s, e;}
   ]
   const, testimonial, s = [
-    {
-      na, m, e: "Jennifer, Martine, z","
+    {na, m, e: "Jennifer, Martine, z","
       ro, l, e: "Marketing, Directo, r, E-Commerce, Platfor, m","
       conte, n, t: "AI, email, marketing increased, our, revenue by, 18, 0% in, just, 3 mont, h, s. The, personalized, content generation, and, optimal timing, features, were ga, m, e-changers, for, our busine, s, s.","
       na, m, e: "Jennifer, Martine, z","
       ro, l, e: "Marketing, Directo, r, E-Commerce, Platfor, m","
       conte, n, t: "AI, email, marketing increased, our, revenue by, 18, 0% in, just, 3 mont, h, s. The, personalized, content generation, and, optimal timing, features, were ga, m, e-changers, for, our busine, s, s.","
       rati, n, g: 5,
-      compa, n, y: "E-Commerce, Platfor, m"
-    }
-    {
-      na, m, e: "David, Che, n","
+      compa, n, y: "E-Commerce, Platfor, m"}
+    {na, m, e: "David, Che, n","
       ro, l, e: "VP, Marketin, g, SaaS, Startu, p","
       conte, n, t: "The, automated, segmentation and, predictive, analytics helped, us, achieve a, 1, 5% conversion, rate, improvement. ROI, increased, by 2, 5, 0% within, the, first quart, e, r.","
       na, m, e: "David, Che, n","
       ro, l, e: "VP, Marketin, g, SaaS, Startu, p","
       conte, n, t: "The, automated, segmentation and, predictive, analytics helped, us, achieve a, 1, 5% conversion, rate, improvement. ROI, increased, by 2, 5, 0% within, the, first quart, e, r.","
       rati, n, g: 5,
-      compa, n, y: "SaaS, Startu, p"
-    }
-    {
-      na, m, e: "Sarah, Johnso, n","
+      compa, n, y: "SaaS, Startu, p"}
+    {na, m, e: "Sarah, Johnso, n","
       ro, l, e: "Head, of, Growth, FinTe, c, h","
       conte, n, t: "Deliverability, optimization, and AI, content, generation reduced, our, unsubscribe rate, by, 60% while, increasing, engagement by, 8, 5%. The, platform, is incredibly, intuitiv, e.","
       na, m, e: "Sarah, Johnso, n","
       ro, l, e: "Head, of, Growth, FinTe, c, h","
       conte, n, t: "Deliverability, optimization, and AI, content, generation reduced, our, unsubscribe rate, by, 60% while, increasing, engagement by, 8, 5%. The, platform, is incredibly, intuitiv, e.","
       rati, n, g: 5,
-      compa, n, y: "FinTe, c, h"
-    }
+      compa, n, y: "FinTe, c, h"}
   ]
   const, useCase, s = [
-    {
-      tit, l, e: "E-Commer, c, e","
+    {tit, l, e: "E-Commer, c, e","
       ic, o, n: Glo, b, e;
       descripti, o, n: "Personalized, product, recommendations, abandoned, cart, recovery, and, pos, t-purchase, follo, w-u, p, s.","
-      benefi, t, s: ["40% increase, in, sales", "60% cart, recovery, rate", "35% customer, lifetime, value"]"
-    }
-    {
-      tit, l, e: "Sa, a, S & B, 2, B","
+      benefi, t, s: ["40% increase, in, sales", "60% cart, recovery, rate", "35% customer, lifetime, value"]"}
+    {tit, l, e: "Sa, a, S & B, 2, B","
       ic, o, n: Trending, U, p;
       descripti, o, n: "Lead, nurturin, g, customer, onboardin, g, feature, announcement, s, and, churn, prevention campaig, n, s.","
-      benefi, t, s: ["50% faster, onboardin, g", "30% reduction, in, churn", "45% increase, in, upgrades"]"
-    }
-    {
-      tit, l, e: "Healthca, r, e","
+      benefi, t, s: ["50% faster, onboardin, g", "30% reduction, in, churn", "45% increase, in, upgrades"]"}
+    {tit, l, e: "Healthca, r, e","
       ic, o, n: Use, r, s;
       descripti, o, n: "Patient, engagemen, t, appointment, reminder, s, health, tip, s, and, medication, compliance.","
-      benefi, t, s: ["70% appointment, complianc, e", "40% patient, engagemen, t", "25% readmission, reductio, n"]"
-    }
-    {
-    tit, l, e: "Educati, o, n","
+      benefi, t, s: ["70% appointment, complianc, e", "40% patient, engagemen, t", "25% readmission, reductio, n"]"}
+    {tit, l, e: "Educati, o, n","
       ic, o, n: Bra, i, n;
       descripti, o, n: "Student, engagemen, t, course, update, s, enrollment, campaign, s, and, alumni, communication.","
       benefi, t, s: ["55% enrollment, increas, e", "60% course, completio, n", "80% student, satisfactio, n"]"
       tit, l, e: "E-Commer, c, e","
       ic, o, n: Glo, b, e;
       descripti, o, n: "Personalized, product, recommendations, abandoned, cart, recovery, and, pos, t-purchase, follo, w-u, p, s.","
-      benefi, t, s: ["40% increase, in, sales", "60% cart, recovery, rate", "35% customer, lifetime, value"]"
-  }
-    {
-    tit, l, e: "Sa, a, S & B, 2, B","
+      benefi, t, s: ["40% increase, in, sales", "60% cart, recovery, rate", "35% customer, lifetime, value"]"}
+    {tit, l, e: "Sa, a, S & B, 2, B","
       ic, o, n: Trending, U, p;
       descripti, o, n: "Lead, nurturin, g, customer, onboardin, g, feature, announcement, s, and, churn, prevention campaig, n, s.","
-      benefi, t, s: ["50% faster, onboardin, g", "30% reduction, in, churn", "45% increase, in, upgrades"]"
-  }
-    {
-    tit, l, e: "Healthca, r, e","
+      benefi, t, s: ["50% faster, onboardin, g", "30% reduction, in, churn", "45% increase, in, upgrades"]"}
+    {tit, l, e: "Healthca, r, e","
       ic, o, n: Use, r, s;
       descripti, o, n: "Patient, engagemen, t, appointment, reminder, s, health, tip, s, and, medication, compliance.","
-      benefi, t, s: ["70% appointment, complianc, e", "40% patient, engagemen, t", "25% readmission, reductio, n"]"
-  }
-    {
-      tit, l, e: "Educati, o, n","
+      benefi, t, s: ["70% appointment, complianc, e", "40% patient, engagemen, t", "25% readmission, reductio, n"]"}
+    {tit, l, e: "Educati, o, n","
       ic, o, n: Bra, i, n;
       descripti, o, n: "Student, engagemen, t, course, update, s, enrollment, campaign, s, and, alumni, communication.","
       benefi, t, s: ["55% enrollment, increas, e", "60% course, completio, n", "80% student, satisfactio, n"]"
@@ -369,7 +328,7 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
 <div, className="te, x, t-cent, e, r">"
           </div>
 <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",</section>
-            </div>
+</div>
 <div, className="te, x, t-cent, e, r">"</div>
               <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">"
                 AI, Emai, l</h1> <span, className="bg-gradie, n, t-to-r, fro, m-emera, l, d-400, t, o-te, a, l-400, b, g-cl, i, p-text, tex, t-transpare, n, t">Marketi, n, g</sp, a, n>"</h1>
@@ -385,7 +344,8 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
   hr, e, f="/conta, c, t"
                   classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, b, g-emera, l, d-600, hov, e;
         {/* Hero, Sectio, n */}"
-        </div><section, className="bg-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-gre, e, n-800, t, o-te, a, l-900, tex, t-white, p, y-20"></section>"
+        </div>
+<section, className="bg-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-gre, e, n-800, t, o-te, a, l-900, tex, t-white, p, y-20"></section>"
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"$2 />
   g:px-8">""
             <div, className="te, x, t-cent, e, r"></div>"
@@ -397,7 +357,8 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                 3, 0, 0% increase, in, open rat, e, s, 85% improvement, in, CTR, and, 25, 0% ROI, improvemen, t.
               </p>"
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">""
-        </div><section, className="bg-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-gre, e, n-800, t, o-te, a, l-900, tex, t-white, p, y-20">";"
+        </div>
+<section, className="bg-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-gre, e, n-800, t, o-te, a, l-900, tex, t-white, p, y-20">";"
           </section>
 <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">","
             </div>
@@ -431,20 +392,22 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                   <Link, className="w-5 h-5, m, l-2  /></Link>"
                   <Link, className="w-5 h-5, m, l-2" />"
         {/* Key, Benefit, s */}
-        </div><section, className="py-16, b, g-gr, a, y-50">
+        </div>
+<section, className="py-16, b, g-gr, a, y-50">
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />
   g:px-8">",
             </section>
 <div, className="text-center mb-12">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-        </div><section, className="py-16, b, g-gr, a, y-50">"
+        </div>
+<section, className="py-16, b, g-gr, a, y-50">"
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />
   g: px-8">",
             </section>
 <div, className="text-center mb-12">"
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />
   g:px-8">"</section>
-            </div>
+</div>
 <div, className="text-center mb-12"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
         <section, className="py-16, b, g-gr, a, y-50">"
@@ -556,26 +519,28 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">98% Deliverabili, t, y</h3>";"
                 <p, className="te, x, t-gr, a, y-6, 0, 0">Advanced, inbox, placement optimizati, o, n</p>"
         {/* Use, Case, s */}
-        </div><section, className="py-20">
+        </div>
+<section, className="py-20">
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />
   g:px-8">",
             </section>
 <div, className="te, x, t-center, m, b-16">)
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">)
-        </div><section, className="py-20">";)
+        </div>
+<section, className="py-20">";)
           </section>
 <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",),
             </div>
 <div, className="te, x, t-center, m, b-16">"
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />
   g:px-8">"</section>
-            </div>
+</div>
 <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
         <section, className="py-20">"
           </section>
 <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",</section>
-            </div>
+</div>
 <div, className="te, x, t-center, m, b-16">"</div>
         {/* Use, Case, s */}"
         <section, className="py-20"></section>"
@@ -620,7 +585,7 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
               {useCas, e, s.m, a, p((useCa, s, e, ind, e, x) => {
                 const, Ico, n = useCa, s, e.ic, o, n;
                 return (
-                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
+<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
                     </div>
 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-emera, l, d-100, rounde, d-full, m, b-6">"
                       <Icon, className="w-8 h-8, tex, t-emera, l, d-6, 0, 0" />"
@@ -660,26 +625,28 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                           <span, className="te, x, t-gr, a, y-7, 0, 0">{benef, i, t}</sp, a, n>"</$1>)
                       ))})
         {/* Capabiliti, e, s */}
-        </div><section, className="py-20, b, g-gr, a, y-50">
+        </div>
+<section, className="py-20, b, g-gr, a, y-50">
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />
   g:px-8">",
             </section>
 <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-        </div><section, className="py-20, b, g-gr, a, y-50">"
+        </div>
+<section, className="py-20, b, g-gr, a, y-50">"
           </section>
 <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",
             </div>
 <div, className="te, x, t-center, m, b-16">"
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />
   g:px-8">"</section>
-            </div>
+</div>
 <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
         <section, className="py-20, b, g-gr, a, y-50">"
           </section>
 <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",</section>
-            </div>
+</div>
 <div, className="te, x, t-center, m, b-16">"</div>
         {/* Capabiliti, e, s */}"
         <section, className="py-20, b, g-gr, a, y-50"></section>"
@@ -718,20 +685,22 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                   <p, className="te, x, t-gr, a, y-6, 0, 0">{capabili, t, y.descripti, o, n}</p>"
               ))}
         {/* Featur, e, s */}
-        </div><section, className="py-20">
+        </div>
+<section, className="py-20">
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />
   g:px-8">",
             </section>
 <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-        </div><section, className="py-20">"
+        </div>
+<section, className="py-20">"
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />
   g: px-8">",
             </section>
 <div, className="te, x, t-center, m, b-16">"
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />
   g:px-8">"</section>
-            </div>
+</div>
 <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
         <section, className="py-20">"
@@ -788,7 +757,7 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
                 const, Ico, n = featu, r, e.ic, o, n;
                 return (
-                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
+<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
                     </div>
 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-emera, l, d-100, rounde, d-lg, m, b-4">"
                       <Icon, className="w-6 h-6, tex, t-emera, l, d-6, 0, 0" />"
@@ -828,26 +797,28 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                 )
               })
         {/* Prici, n, g */}
-        </div><section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">
+        </div>
+<section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />
   g:px-8">",
             </section>
 <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-        </div><section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">"
+        </div>
+<section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">"
           </section>
 <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",
             </div>
 <div, className="te, x, t-center, m, b-16">"
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />
   g:px-8">"</section>
-            </div>
+</div>
 <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
         <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">"
           </section>
 <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",</section>
-            </div>
+</div>
 <div, className="te, x, t-center, m, b-16">"</div>
         {/* Prici, n, g */}"
         <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50"></section>"
@@ -912,13 +883,11 @@ const, AIEmailMarketin, g: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                     ))}
                   <$2 />
   hr, e, f="/conta, c, t"
-                    classNa, m, e={
-    `w-full, block, text-center, p, y-3, p, x-6, rounde, d-lg, fon, t-semibold, transitio, n-colo, r, s ${`;`
+                    classNa, m, e={`w-full, block, text-center, p, y-3, p, x-6, rounde, d-lg, fon, t-semibold, transitio, n-colo, r, s ${`;`
 pl, a, n.popul, a, r;
 ? 'bg-emera, l, d-600, tex, t-white, hove, r: bg-emera, l, d-7, 0, 0'
 ? 'bg-emera, l, d-600, tex, t-white, hov, e;
-  r: bg-emera, l, d-7, 0, 0','
-  }
+  r: bg-emera, l, d-7, 0, 0','}
 : 'bg-gr, a, y-100, tex, t-gr, a, y-900, hove, r:bg-gr, a, y-2, 0, 0'}
                   <a></a>"
   hr, e, f="/conta, c, t"
@@ -944,26 +913,28 @@ pl, a, n.popul, a, r;
                 <Link, className="w-4 h-4, m, l-1  /></Link>"
                 <Link, className="w-4 h-4, m, l-1" />"
         {/* Testimonia, l, s */}
-        </div><section, className="py-20">
+        </div>
+<section, className="py-20">
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />
   g:px-8">",
             </section>
 <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-        </div><section, className="py-20">"
+        </div>
+<section, className="py-20">"
           </section>
 <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",
             </div>
 <div, className="te, x, t-center, m, b-16">"
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />
   g:px-8">"</section>
-            </div>
+</div>
 <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
         <section, className="py-20">"
           </section>
 <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",</section>
-            </div>
+</div>
 <div, className="te, x, t-center, m, b-16">"</div>
         {/* Testimonia, l, s */}"
         <section, className="py-20"></section>"
@@ -1019,7 +990,8 @@ pl, a, n.popul, a, r;
 <div, className="te, x, t-emera, l, d-600, tex, t-sm, fon, t-medi, u, m">{testimoni, a, l.compa, n, y}</d, i, v>"
               ))}
         {/* CTA, Sectio, n */}
-        </div><section, className="py-20, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-gre, e, n-800, t, o-te, a, l-900, tex, t-whi, t, e">
+        </div>
+<section, className="py-20, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-gre, e, n-800, t, o-te, a, l-900, tex, t-whi, t, e">
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />
   g:px-8, tex, t-cent, e, r">"
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6">
@@ -1030,7 +1002,8 @@ pl, a, n.popul, a, r;
           </section>
 <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, tex, t-cent, e, r">"
         {/* CTA, Sectio, n */}"
-        </div><section, className="py-20, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-gre, e, n-800, t, o-te, a, l-900, tex, t-whi, t, e"></section>"
+        </div>
+<section, className="py-20, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-gre, e, n-800, t, o-te, a, l-900, tex, t-whi, t, e"></section>"
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"$2 />
   g:px-8, tex, t-cent, e, r">""
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6"></h2>"
@@ -1087,4 +1060,104 @@ pl, a, n.popul, a, r;
 }
 export default AIEmailMarketing;
 }}}}"`
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></Link></Link></Link></p></p></p></p></p></p></p></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h3></ul></ul></ul></li></li></li></li></li></li></li></main></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></span></span></span></span></span></span></span></span></span></span></span></span></span></Link></Link></Link></p></p></p></p></p></p></p></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h3></ul></ul></ul></li></li></li></li></li></li></li></main></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section>

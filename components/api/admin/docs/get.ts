@@ -4,7 +4,7 @@ import path from 'path'
 const CONTENT_PATH = path && path.join(process && process.cwd(), 'data', 'docs', 'content && content.json');const CONTENT_PATH = path && path.join(process && process.cwd(), 'datadocscontent && datadocscontent.json')
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
-const CONTENT_PATH = path.join (process.cwd (), 'data', 'docs', 'content.json');const CONTENT_PATH = path.join (process.cwd (), 'datadocscontent.json')
+const CONTENT_PATH = path.join (process.cwd (), 'data', 'docs', 'content.json')const CONTENT_PATH = path.join (process.cwd (), 'datadocscontent.json')
 export default /**
  * handler - Function description
  */

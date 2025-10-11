@@ -1,12 +1,11 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { Button } from '../ui/button'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card'
-import { Badge } from '../ui/badge'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '../ui/tabs'
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../ui/accordion'
-import { 
-  Phone, 
+import React, {useState} from 'react'
+import {Link} from 'react-router-dom'
+import {Button} from '../ui/button'
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '../ui/card'
+import {Badge} from '../ui/badge'
+import {Tabs, TabsContent, TabsList, TabsTrigger} from '../ui/tabs'
+import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from '../ui/accordion'
+import {Phone, 
   Mail, 
   MapPin, 
   Globe, 
@@ -26,13 +25,11 @@ import {
   Users,
   CheckCircle,
   ArrowRight,
-  ExternalLink;
-} from 'lucide-react'
-import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices'
-import { comprehensiveServices, serviceCategories } from '@/data/comprehensiveServices'
-import { ENHANCED_SERVICES, SERVICE_CATEGORIES, SERVICE_FEATURES, MARKET_PRICING } from '@/data/enhancedServices'
-export default function EnhancedServicesShowcase() {
-  const [selectedCategory, setSelectedCategory] = useState('all')
+  ExternalLink;} from 'lucide-react'
+import {COMPREHENSIVE_SERVICES} from '@/data/comprehensiveServices'
+import {comprehensiveServices, serviceCategories} from '@/data/comprehensiveServices'
+import {ENHANCED_SERVICES, SERVICE_CATEGORIES, SERVICE_FEATURES, MARKET_PRICING} from '@/data/enhancedServices'
+export default function EnhancedServicesShowcase() {const [selectedCategory, setSelectedCategory] = useState('all')
   const filteredServices = selectedCategory === 'all' 
     ? comprehensiveServices;
     : comprehensiveServices.filter(service => service.category.toLowerCase().includes(selectedCategory.toLowerCase()))
@@ -41,7 +38,7 @@ export default function EnhancedServicesShowcase() {
         SERVICE_CATEGORIES.find(cat => cat.id === selectedCategory)?.services.includes(service)
       )
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
+<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
       {/* Hero Section */}
       </div>
 <div className="relative overflow-hidden">
@@ -90,8 +87,8 @@ export default function EnhancedServicesShowcase() {
               </CardContent>
             </Card>
           </div>
-        </div>
-      </div>
+</div>
+</div>
 
       {/* Services Overview */}
       <div className="container mx-auto px-4 py-16">
@@ -134,7 +131,7 @@ export default function EnhancedServicesShowcase() {
             <ServiceCard key={service.id} service={service} />
           ))}
         </div>
-      </div>
+</div>
 
       {/* Market Analysis Section */}
       <div className="bg-white/5 backdrop-blur-sm py-16">
@@ -173,8 +170,8 @@ export default function EnhancedServicesShowcase() {
               </Card>
             ))}
           </div>
-        </div>
-      </div>
+</div>
+</div>
 
       {/* Why Choose Us Section */}
       <div className="container mx-auto px-4 py-16">
@@ -218,7 +215,7 @@ export default function EnhancedServicesShowcase() {
             </CardContent>
           </Card>
         </div>
-      </div>
+</div>
 
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-16">
@@ -241,8 +238,8 @@ export default function EnhancedServicesShowcase() {
               Request a Quote;
             </Button>
           </div>
-        </div>
-      </div>
+</div>
+</div>
 
       {/* Footer */}
       <footer className="bg-zion-blue-dark py-12">
@@ -264,7 +261,7 @@ export default function EnhancedServicesShowcase() {
                 <p>kleber@ziontechgroup.com</p>
                 <p>364 E Main St STE 1008<br />Middletown DE 19709</p>
               </div>
-            </div>
+</div>
 <div>
               <h4 className="text-lg font-semibold text-white mb-4">Services</h4>
               </div>
@@ -274,7 +271,7 @@ export default function EnhancedServicesShowcase() {
                 <p>Cloud Services</p>
                 <p>Data Analytics</p>
               </div>
-            </div>
+</div>
 <div>
               <h4 className="text-lg font-semibold text-white mb-4">Connect</h4>
               </div>
@@ -288,20 +285,19 @@ export default function EnhancedServicesShowcase() {
                   View All Services;
                 </Button>
               </div>
-            </div>
-          </div>
+</div>
+</div>
 <div className="border-t border-zion-blue-light mt-8 pt-8 text-center text-zion-cyan-light">
             <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
           </div>
-        </div>
+</div>
       </footer>
     </div>
-  )
+)
 }
 
 // Service Card Component;
-function ServiceCard({ service }: { service: any }) {
-  const [showDetails, setShowDetails] = useState(false)
+function ServiceCard({service}: {service: any}) {const [showDetails, setShowDetails] = useState(false)
   return (
     <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 hover:border-zion-cyan/60 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20">
       <CardHeader>
@@ -334,7 +330,7 @@ function ServiceCard({ service }: { service: any }) {
               <span className="text-white">{service.rating}</span>
               <span className="text-zion-cyan-light">({service.reviewCount})</span>
             </div>
-          </div>
+</div>
 
           {/* AI Score */}
           <div className="flex items-center justify-between">
@@ -347,10 +343,10 @@ function ServiceCard({ service }: { service: any }) {
                   className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" 
                   style={{ width: `${service.aiScore}%` }}
                 ></div>
-              </div>
+</div>
               <span className="text-zion-cyan font-semibold">{service.aiScore}%</span>
             </div>
-          </div>
+</div>
 
           {/* Tags */}
           <div className="flex flex-wrap gap-2">
@@ -370,9 +366,7 @@ function ServiceCard({ service }: { service: any }) {
           {/* Action Buttons */}
           <div className="flex gap-2">
             <Button
-              className="flex-1 bg-zion-purple hover:bg-zion-purple-dark text-white"
-              onClick={() => setShowDetails(!showDetails)}
-            >
+              className="flex-1 bg-zion-purple hover:bg-zion-purple-dark text-white" onClick={$2}>
               {showDetails ? 'Hide Details' : 'View Details'}
             </Button>
             <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
@@ -405,7 +399,7 @@ function ServiceCard({ service }: { service: any }) {
                         <CheckCircle className="h-4 w-4 text-green-400" />
                         <span>Custom integration</span>
                       </div>
-                    </div>
+</div>
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="contact">
@@ -426,7 +420,7 @@ function ServiceCard({ service }: { service: any }) {
                           <Mail className="h-4 w-4 text-zion-cyan" />
                           <span>kleber@ziontechgroup.com</span>
                         </div>
-                      </div>
+</div>
                       <Button className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white">
                         Schedule Consultation;
                       </Button>

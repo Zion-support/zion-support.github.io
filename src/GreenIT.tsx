@@ -1,11 +1,10 @@
 
-import { SEO } from "@/components/SEO"
-import { GradientHeading } from "@/components/GradientHeading"
-import { Button } from "@/components/ui/button"
-import { Leaf, Server, Cloud } from "lucide-react"
-import { Link } from "react-router-dom"
-export default function GreenIT() {
-  return (
+import {SEO} from "@/components/SEO"
+import {GradientHeading} from "@/components/GradientHeading"
+import {Button} from "@/components/ui/button"
+import {Leaf, Server, Cloud} from "lucide-react"
+import {Link} from "react-router-dom"
+export default function GreenIT() {return (
     <></><SEO
         title="Green IT Solutions | Zion Tech Group"
         description="Sustainable technology solutions to reduce your carbon footprint and improve environmental impact"
@@ -107,8 +106,8 @@ export default function GreenIT() {
                   Invest in technology that aligns with evolving sustainability trends and regulations.
                 </p>
               </div>
-            </div>
-          </div>
+</div>
+</div>
 
           {/* Services Section */}
           <div className="mb-20">
@@ -146,8 +145,8 @@ export default function GreenIT() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                     </svg>
                   </div>
-                </div>
-              </div>
+</div>
+</div>
 
               {/* Service 2 */}
               <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8">
@@ -177,8 +176,8 @@ export default function GreenIT() {
                       Learn More;
                     </button>
                   </div>
-                </div>
-              </div>
+</div>
+</div>
 
               {/* Service 3 */}
               <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8">
@@ -207,9 +206,9 @@ export default function GreenIT() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                     </svg>
                   </div>
-                </div>
-              </div>
-            </div>
+</div>
+</div>
+</div>
           </div>
 
           {/* Case Study */}
@@ -238,23 +237,23 @@ export default function GreenIT() {
                       </div>
 <div className="text-3xl font-bold text-green-400">40%</div>
 <div className="text-zion-slate-light text-sm">Energy Reduction</div>
-                    </div>
+</div>
 <div className="text-center">
                       </div>
 <div className="text-3xl font-bold text-blue-400">$85K</div>
 <div className="text-zion-slate-light text-sm">Annual Savings</div>
-                    </div>
+</div>
 <div className="text-center">
                       </div>
 <div className="text-3xl font-bold text-yellow-400">60%</div>
 <div className="text-zion-slate-light text-sm">Carbon Footprint</div>
-                    </div>
+</div>
 <div className="text-center">
                       </div>
 <div className="text-3xl font-bold text-purple-400">12</div>
 <div className="text-zion-slate-light text-sm">Months ROI</div>
-                    </div>
-                  </div>
+</div>
+</div>
                   <button className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
                     Read Full Case Study;
                   </button>
@@ -269,13 +268,12 @@ export default function GreenIT() {
 <div className="mt-4 text-white font-semibold">
                     — Sarah Johnson, CTO at TechCorp;
                   </div>
-import { motion } from 'framer-motion'
-import { Leaf, Zap, Globe, Sun, Wind, Droplets, Recycle, TreePine } from 'lucide-react'
-import { Header } from "@/components/Header"
-import { Footer } from "@/components/Footer"
-import { SEO } from '@/components/SEO'
-const GreenIT = () => {
-  const greenSolutions = [
+import {motion} from 'framer-motion'
+import {Leaf, Zap, Globe, Sun, Wind, Droplets, Recycle, TreePine} from 'lucide-react'
+import {Header} from "@/components/Header"
+import {Footer} from "@/components/Footer"
+import {SEO} from '@/components/SEO'
+const GreenIT = () => {const greenSolutions = [
     {
       title: 'Energy-Efficient Infrastructure',
       description: 'Design and implement IT infrastructure that minimizes energy consumption',
@@ -285,10 +283,8 @@ const GreenIT = () => {
         'Energy-efficient hardware selection',
         'Smart power management systems',
         'Renewable energy integration'
-      ]
-    },
-    {
-      title: 'Cloud Optimization',
+      ]},
+    {title: 'Cloud Optimization',
       description: 'Optimize cloud resources to reduce carbon footprint and costs',
       icon: '☁️',
       features: [
@@ -296,10 +292,8 @@ const GreenIT = () => {
         'Resource optimization and scaling',
         'Carbon-aware workload scheduling',
         'Sustainable data center practices'
-      ]
-    },
-    {
-      title: 'Sustainable Software Development',
+      ]},
+    {title: 'Sustainable Software Development',
       description: 'Build applications with environmental impact in mind',
       icon: '💻',
       features: [
@@ -307,10 +301,8 @@ const GreenIT = () => {
         'Green hosting and deployment',
         'Sustainable development practices',
         'Environmental impact monitoring'
-      ]
-    },
-    {
-      title: 'Digital Transformation',
+      ]},
+    {title: 'Digital Transformation',
       description: 'Help businesses go paperless and reduce physical resource consumption',
       icon: '🔄',
       features: [
@@ -318,76 +310,58 @@ const GreenIT = () => {
         'Digital workflow automation',
         'Remote work infrastructure',
         'Sustainable business processes'
-      ]
-    }
+      ]}
   ]
   const environmentalBenefits = [
-    {
-      benefit: 'Reduced Carbon Footprint',
+    {benefit: 'Reduced Carbon Footprint',
       description: 'Lower energy consumption and greenhouse gas emissions',
       icon: '🌱',
-      impact: 'Up to 40% reduction in IT carbon emissions'
-    },
-    {
-      benefit: 'Energy Cost Savings',
+      impact: 'Up to 40% reduction in IT carbon emissions'},
+    {benefit: 'Energy Cost Savings',
       description: 'Lower electricity bills and operational costs',
       icon: '💰',
-      impact: '20-30% reduction in energy costs'
-    },
-    {
-      benefit: 'Resource Efficiency',
+      impact: '20-30% reduction in energy costs'},
+    {benefit: 'Resource Efficiency',
       description: 'Optimized use of computing resources and materials',
       icon: '♻️',
-      impact: 'Improved resource utilization by 25-35%'
-    },
-    {
-      benefit: 'Compliance & Certification',
+      impact: 'Improved resource utilization by 25-35%'},
+    {benefit: 'Compliance & Certification',
       description: 'Meet environmental standards and regulations',
       icon: '✅',
-      impact: 'Achieve green IT certifications and compliance'
-    }
+      impact: 'Achieve green IT certifications and compliance'}
   ]
   const greenPractices = [
-    {
-      category: 'Hardware Management',
+    {category: 'Hardware Management',
       practices: [
         'Energy Star certified equipment',
         'Hardware lifecycle optimization',
         'Responsible e-waste disposal',
         'Equipment refurbishment and reuse'
-      ]
-    },
-    {
-      category: 'Data Center Efficiency',
+      ]},
+    {category: 'Data Center Efficiency',
       practices: [
         'Cooling system optimization',
         'Efficient power distribution',
         'Heat recovery systems',
         'Renewable energy integration'
-      ]
-    },
-    {
-      category: 'Software Optimization',
+      ]},
+    {category: 'Software Optimization',
       practices: [
         'Efficient algorithms and code',
         'Resource usage monitoring',
         'Automated power management',
         'Green software development practices'
-      ]
-    },
-    {
-      category: 'Workplace Sustainability',
+      ]},
+    {category: 'Workplace Sustainability',
       practices: [
         'Remote work infrastructure',
         'Digital collaboration tools',
         'Paperless office solutions',
         'Sustainable procurement policies'
-      ]
-    }
+      ]}
   ]
   const caseStudies = [
-    {
-      company: 'TechCorp Solutions',
+    {company: 'TechCorp Solutions',
       industry: 'Software Development',
       challenge: 'High energy costs and carbon footprint from on-premise infrastructure',
       solution: 'Migrated to optimized cloud infrastructure with green hosting',
@@ -396,10 +370,8 @@ const GreenIT = () => {
         '30% decrease in operational costs',
         'Improved scalability and performance',
         'Achieved carbon-neutral status'
-      ]
-    },
-    {
-      company: 'Green Manufacturing Co.',
+      ]},
+    {company: 'Green Manufacturing Co.',
       industry: 'Manufacturing',
       challenge: 'Inefficient IT systems and paper-based processes',
       solution: 'Implemented digital transformation with sustainable IT practices',
@@ -408,10 +380,8 @@ const GreenIT = () => {
         '25% improvement in process efficiency',
         'Reduced carbon footprint by 35%',
         'Enhanced employee productivity'
-      ]
-    },
-    {
-      company: 'EcoRetail Inc.',
+      ]},
+    {company: 'EcoRetail Inc.',
       industry: 'Retail',
       challenge: 'Multiple data centers with high energy consumption',
       solution: 'Consolidated infrastructure and implemented green IT solutions',
@@ -420,35 +390,26 @@ const GreenIT = () => {
         '45% decrease in IT infrastructure costs',
         'Improved system reliability',
         'Enhanced sustainability credentials'
-      ]
-    }
+      ]}
   ]
   const greenCertifications = [
-    {
-      name: 'ISO 14001',
+    {name: 'ISO 14001',
       description: 'Environmental Management Systems',
-      icon: '🌍'
-    },
-    {
-      name: 'Energy Star',
+      icon: '🌍'},
+    {name: 'Energy Star',
       description: 'Energy Efficiency Certification',
-      icon: '⭐'
-    },
-    {
-      name: 'LEED',
+      icon: '⭐'},
+    {name: 'LEED',
       description: 'Leadership in Energy and Environmental Design',
-      icon: '🏗️'
-    },
-    {
-      name: 'Carbon Trust',
+      icon: '🏗️'},
+    {name: 'Carbon Trust',
       description: 'Carbon Reduction Certification',
       icon: '🌱'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { Link } from "react-router-dom"
-import { 
-  Leaf, 
+import { Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card"
+import {Button} from "@/components/ui/button"
+import {Badge} from "@/components/ui/badge"
+import {Link} from "react-router-dom"
+import {Leaf, 
   Zap, 
   Globe, 
   Recycle, 
@@ -459,119 +420,84 @@ import {
   Cloud,
   Server,
   Monitor,
-  Smartphone;
-} from "lucide-react"
-export default function GreenIT() {
-  const greenSolutions = [
+  Smartphone;} from "lucide-react"
+export default function GreenIT() {const greenSolutions = [
     {
       icon: <Cloud className="w-8 h-8 text-zion-cyan" />,
       title: "Cloud Optimization",
       description: "Reduce energy consumption through intelligent cloud resource management and server consolidation",
       benefits: ["Up to 40% energy savings", "Reduced carbon footprint", "Lower operational costs"],
-      features: ["Auto-scaling", "Resource monitoring", "Green hosting partners"]
-    },
-    {
-      icon: <Server className="w-8 h-8 text-zion-cyan" />,
+      features: ["Auto-scaling", "Resource monitoring", "Green hosting partners"]},
+    {icon: <Server className="w-8 h-8 text-zion-cyan" />,
       title: "Data Center Efficiency",
       description: "Implement energy-efficient data center solutions with advanced cooling and power management",
       benefits: ["PUE optimization", "Renewable energy integration", "Waste heat recovery"],
-      features: ["Liquid cooling", "Smart power distribution", "Energy monitoring"]
-    },
-    {
-      icon: <Monitor className="w-8 h-8 text-zion-cyan" />,
+      features: ["Liquid cooling", "Smart power distribution", "Energy monitoring"]},
+    {icon: <Monitor className="w-8 h-8 text-zion-cyan" />,
       title: "Hardware Lifecycle Management",
       description: "Extend device lifespan and implement responsible disposal and recycling programs",
       benefits: ["Reduced e-waste", "Cost savings", "Compliance with regulations"],
-      features: ["Asset tracking", "Refurbishment programs", "Certified recycling"]
-    },
-    {
-      icon: <Smartphone className="w-8 h-8 text-zion-cyan" />,
+      features: ["Asset tracking", "Refurbishment programs", "Certified recycling"]},
+    {icon: <Smartphone className="w-8 h-8 text-zion-cyan" />,
       title: "Mobile Device Management",
       description: "Optimize mobile device usage and implement power-saving policies",
       benefits: ["Extended battery life", "Reduced charging cycles", "Lower energy consumption"],
-      features: ["Power management", "App optimization", "Green charging solutions"]
-    },
-    {
-      icon: <Lightbulb className="w-8 h-8 text-zion-cyan" />,
+      features: ["Power management", "App optimization", "Green charging solutions"]},
+    {icon: <Lightbulb className="w-8 h-8 text-zion-cyan" />,
       title: "Smart Office Solutions",
       description: "Implement IoT-based lighting, HVAC, and energy management systems",
       benefits: ["Automated energy optimization", "Real-time monitoring", "Significant cost savings"],
-      features: ["Smart sensors", "Automated controls", "Energy analytics"]
-    },
-    {
-      icon: <Recycle className="w-8 h-8 text-zion-cyan" />,
+      features: ["Smart sensors", "Automated controls", "Energy analytics"]},
+    {icon: <Recycle className="w-8 h-8 text-zion-cyan" />,
       title: "Circular Economy Practices",
       description: "Adopt circular economy principles for IT equipment and materials",
       benefits: ["Resource conservation", "Waste reduction", "Sustainable supply chain"],
-      features: ["Equipment leasing", "Take-back programs", "Material recovery"]
-    }
+      features: ["Equipment leasing", "Take-back programs", "Material recovery"]}
   ]
   const renewableEnergy = [
-    {
-      icon: <Sun className="w-12 h-12 text-yellow-400" />,
+    {icon: <Sun className="w-12 h-12 text-yellow-400" />,
       title: "Solar Power",
       description: "Harness solar energy for data centers and office facilities",
       capacity: "500kW+",
-      savings: "60% energy costs"
-    },
-    {
-      icon: <Zap className="w-12 h-12 text-blue-400" />,
+      savings: "60% energy costs"},
+    {icon: <Zap className="w-12 h-12 text-blue-400" />,
       title: "Smart Grid",
       description: "Intelligent power distribution and management",
       capacity: "200kW+",
-      savings: "40% carbon reduction"
-    },
-    {
-      icon: <Leaf className="w-12 h-12 text-green-400" />,
+      savings: "40% carbon reduction"},
+    {icon: <Leaf className="w-12 h-12 text-green-400" />,
       title: "Green Infrastructure",
       description: "Eco-friendly data center and office solutions",
       capacity: "1MWh+",
-      savings: "30% peak demand"
-    }
+      savings: "30% peak demand"}
   ]
   const certifications = [
-    {
-      name: "ISO 14001",
+    {name: "ISO 14001",
       description: "Environmental Management Systems",
-      icon: <CheckCircle className="w-6 h-6 text-green-400" />
-    },
-    {
-      name: "Energy Star",
+      icon: <CheckCircle className="w-6 h-6 text-green-400" />},
+    {name: "Energy Star",
       description: "Energy Efficiency Certification",
-      icon: <CheckCircle className="w-6 h-6 text-blue-400" />
-    },
-    {
-      name: "LEED Certified",
+      icon: <CheckCircle className="w-6 h-6 text-blue-400" />},
+    {name: "LEED Certified",
       description: "Leadership in Energy and Environmental Design",
-      icon: <CheckCircle className="w-6 h-6 text-green-400" />
-    },
-    {
-      name: "Green Seal",
+      icon: <CheckCircle className="w-6 h-6 text-green-400" />},
+    {name: "Green Seal",
       description: "Environmental Standard Certification",
-      icon: <CheckCircle className="w-6 h-6 text-green-400" />
-    }
+      icon: <CheckCircle className="w-6 h-6 text-green-400" />}
   ]
   const impactMetrics = [
-    {
-      metric: "45%",
+    {metric: "45%",
       label: "Energy Reduction",
-      description: "Average energy savings across client implementations"
-    },
-    {
-      metric: "2.3M",
+      description: "Average energy savings across client implementations"},
+    {metric: "2.3M",
       label: "kWh Saved",
-      description: "Total energy savings for our clients annually"
-    },
-    {
-      metric: "1,200",
+      description: "Total energy savings for our clients annually"},
+    {metric: "1,200",
       label: "Tons CO2",
-      description: "Carbon emissions reduced through our solutions"
-    },
-    {
-      metric: "$850K",
+      description: "Carbon emissions reduced through our solutions"},
+    {metric: "$850K",
       label: "Cost Savings",
-      description: "Average annual savings for enterprise clients"
-    }
+      description: "Average annual savings for enterprise clients"}
   ]
   return (
     
@@ -614,16 +540,15 @@ export default function GreenIT() {
                       Explore Green IT Solutions;
                     </Button>
                   </div>
-                </div>
+</div>
 <div className="rounded-lg overflow-hidden">
                   <img loading="lazy" 
                     src="https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=800&h=600" 
                     alt="Green IT sustainability" 
-                    className="object-cover w-full h-full"
-                  />
+                    className="object-cover w-full h-full" />
                 </div>
-              </div>
-            </div>
+</div>
+</div>
 
             {/* Green Solutions */}
             <div className="mb-20">
@@ -654,7 +579,7 @@ export default function GreenIT() {
                   </div>
                 ))}
               </div>
-            </div>
+</div>
 
             {/* Environmental Benefits */}
             <div className="mb-20">
@@ -677,10 +602,10 @@ export default function GreenIT() {
                     <div className="text-green-400 font-medium text-sm">
                       {benefit.impact}
                     </div>
-                  </div>
+</div>
                 ))}
               </div>
-            </div>
+</div>
 
             {/* Green Practices */}
             <div className="mb-20">
@@ -706,7 +631,7 @@ export default function GreenIT() {
                   </div>
                 ))}
               </div>
-            </div>
+</div>
 
             {/* Case Studies */}
             <div className="mb-20">
@@ -734,7 +659,7 @@ export default function GreenIT() {
                           Green IT Success;
                         </span>
                       </div>
-                    </div>
+</div>
 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                       </div>
 <div>
@@ -758,11 +683,11 @@ export default function GreenIT() {
                           ))}
                         </ul>
                       </div>
-                    </div>
-                  </div>
+</div>
+</div>
                 ))}
               </div>
-            </div>
+</div>
 
             {/* Green Certifications */}
             <div className="mb-20">
@@ -785,7 +710,7 @@ export default function GreenIT() {
                   </div>
                 ))}
               </div>
-            </div>
+</div>
 
             {/* Call to Action */}
             <div className="max-w-4xl mx-auto">
@@ -813,9 +738,9 @@ export default function GreenIT() {
                     Get Green IT Quote;
                   </a>
                 </div>
-              </div>
-            </div>
-          </div>
+</div>
+</div>
+</div>
 
           {/* CTA Section */}
           <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark rounded-2xl p-8 text-center">
@@ -835,9 +760,11 @@ export default function GreenIT() {
                 Download Green IT Guide;
               </button>
             </div>
-          </div>
-        </div>
+</div>
+</div>
       </main>
-    
-  )
-}</div></div></div></div></div></p></p></p></p></p></p></p></p></p></main>
+)
+}</div>
+</div>
+</div>
+</div></div></p></p></p></p></p></p></p></p></p></main>

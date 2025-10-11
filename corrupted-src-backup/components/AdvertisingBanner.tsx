@@ -8,8 +8,7 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({,
   ctaUrl,
   imageUrl,
   backgroundColor = '#3 b82 f6',
-  textColor = '#ffffff'}) => {
-  return(<$2 />
+  textColor = '#ffffff'}) => {return(<$2 />
       className="advertising-banner"
       style={{
         backgroundColor,
@@ -47,9 +46,9 @@ const,
           />
       )}
       </div>
-<div className="banner-content" style={{ flex: 1 }}>
-        <h2 style={{ margin: '0 0 1rem 0', fontSize: '1.5rem' }}>{title}
-        <p style={{ margin: '0 0 1.5rem 0', fontSize: '1rem', opacity: 0.9 }}>{description}
+<div className="banner-content" style={{ flex: 1}}>
+        <h2 style={{ margin: '0 0 1rem 0', fontSize: '1.5rem'}}>{title}
+        <p style={{ margin: '0 0 1.5rem 0', fontSize: '1rem', opacity: 0.9}}>{description}
         <$2 />
           href={ctaUrl}
           style={{
@@ -85,8 +84,8 @@ const,
           {ctaText}
         </a>
       </div>
-    </div>
-  )
+</div>
+)
 }
 export default AdvertisingBanner;
 "

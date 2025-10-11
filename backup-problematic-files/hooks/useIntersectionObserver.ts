@@ -6,8 +6,7 @@ interface UseIntersectionObserverProps {
   const prevNode = useRef<Element | null>(null)
   useEffect(() => {
     if (prevNode.current) {
-  return [setNode, entry] as const
-}
+  return [setNode, entry] as const}
 import { useEffect, useRef, useState } from 'react',
 interface UseIntersectionObserverProps {
   threshold?: number,
@@ -49,8 +48,7 @@ export function useIntersectionObserver({
     }
     prevNode.current = node
   }, [node])
-  return [setNode, entry] as const
-}
+  return [setNode, entry] as const}
       observer.current?.unobserve(prevNode.current)
     }
     if (node) {
@@ -58,5 +56,4 @@ export function useIntersectionObserver({
     }
     prevNode.current = node
   }, [node])
-  return [setNode, entry] as const
-}
+  return [setNode, entry] as const}

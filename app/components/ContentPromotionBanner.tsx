@@ -2,35 +2,27 @@
 
 'use client'
 import React from 'react';
-const ContentPromotionBanner: React.FC = () => {
-  const features = [
+const ContentPromotionBanner: React.FC = () => {const features = [
     {
       icon: Zap,
       title: 'Lightning Fast',
-      description: 'Optimized for speed and performance'
-    },
-    {
-      icon: Shield,
+      description: 'Optimized for speed and performance'},
+    {icon: Shield,
       title: 'Secure & Reliable',
-      description: 'Enterprise-grade security and uptime'
-    },
-    {
-      icon: Star,
+      description: 'Enterprise-grade security and uptime'},
+    {icon: Star,
       title: 'Top Rated',
-      description: '5-star rated by our customers'
-    },
-    {
-      icon: Users,
+      description: '5-star rated by our customers'},
+    {icon: Users,
       title: 'Trusted by 1000+',
-      description: 'Companies worldwide'
-    }
+      description: 'Companies worldwide'}
   ]
 
   return (
-    <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-12 px-4">
+<div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-12 px-4">
       </div>
 <div className="max-w-7xl mx-auto">
-        </div>
+</div>
 <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Why Choose Zion Tech Group?
@@ -53,8 +45,8 @@ const ContentPromotionBanner: React.FC = () => {
           ))}
         </div>
 </div>
-    </div>
-  )
+</div>
+)
 }
 
 export default ContentPromotionBanner

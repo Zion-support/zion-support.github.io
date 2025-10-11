@@ -25,15 +25,11 @@ class ComprehensiveErrorBoundary extends Component;
   O: Add content,}
 }
   private maxRetries: number,
-  constructor(props: Props) {
-    // TODO: Add content;
-  }
+  constructor(props: Props) {// TODO: Add content;}
 }
-class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
-    constructor(props: ErrorBoundaryProps) {
+class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {constructor(props: ErrorBoundaryProps) {
     super(props),
-    this.state = {// TODO: Add content;
-  }
+    this.state = {// TODO: Add content;}
 }
   hasErro,
   r: false,
@@ -178,16 +174,20 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
       if (this.state.isRetrying) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-        return (<div>Coming Soon</div>)
+        return (
+<div>Coming Soon</div>
+)
   )
           <ModernLoadingSpinner>
             size="lg""
             text="Retrying..."
-            fullScreen={true}
+            fullScreen
 //           />
         )
       }
-      return (<div>Coming Soon</div>)
+      return (
+<div>Coming Soon</div>
+)
   )
         "
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"></div>"

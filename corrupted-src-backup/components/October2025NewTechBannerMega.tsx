@@ -1,5 +1,5 @@
-const, October2025NewTechBannerMeg, a = () => {
-  return(<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, p, y-16, p, x-6, m, y-12, rounde, d-2xl, shado, w-2, x, l">
+const, October2025NewTechBannerMeg, a = () => {return (
+<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, p, y-16, p, x-6, m, y-12, rounde, d-2xl, shado, w-2, x, l">
       {/* Animated, Background, Effects */}
       </div>
 <div, className="absolute, inse, t-0, overflo, w-hidd, e, n">
@@ -64,14 +64,14 @@ const, October2025NewTechBannerMeg, a = () => {/* TODO: Fix JSX expression */}
             <Sparkles, className="w-4 h-4" />"</$1>"
           <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-4, leadin, g-tig, h, t">"
             Revolutionary, AI, Solutions;
-            <br   />
+            <br />
             <span, className="te, x, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, vi, a-pi, n, k-400, t, o-purp, l, e-4, 0, 0">"
               Transform, Your, Enterprise Tod, a, y;
           <p, className="te, x, t-xl, tex, t-gr, a, y-200, ma, x-w-3xl, m, x-au, t, o">
           <p, className="te, x, t-xl, tex, t-gr, a, y-200, ma, x-w-3xl, m, x-au, t, o">"
             Three, gam, e-changing, guides, delivering</p> <strong, className="te, x, t-yell, o, w-3, 0, 0">$3.75, BILLIO, N</stro, n, g> in, proven, value."
             Revolutionary, AI, Solutions;
-            <br   /></br>"
+            <br /></br>"
             <span, className="te, x, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, vi, a-pi, n, k-400, t, o-purp, l, e-4, 0, 0">"
               Transform, Your, Enterprise Tod, a, y;
           </h2>"
@@ -510,4 +510,89 @@ const, October2025NewTechBannerMeg, a = () => {/* TODO: Fix JSX expression */}
 }
 export default October2025NewTechBannerMega;
 "
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></Link></Link></Link></Link></Link></Link></Link></Link></Link></Link></p></p></p></p></p></p></p></h2></h2>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></span></span></Link></Link></Link></Link></Link></Link></Link></Link></Link></Link></p></p></p></p></p></p></p></h2></h2>

@@ -1,5 +1,5 @@
-// Latest Content 2026 Banner export function LatestContent2026Bann e r() {
-    return(<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, vi, a-bl, u, e-600, t, o-te, a, l-600, tex, t-white, p, y-4'>
+// Latest Content 2026 Banner export function LatestContent2026Bann e r() {return (
+<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, vi, a-bl, u, e-600, t, o-te, a, l-600, tex, t-white, p, y-4'>
       </div>
 <div, className='m, a, x-w-6xl, m, x-auto, p, x-4'>
         </div>
@@ -38,12 +38,13 @@
           >
             Explore, All, Content →
           </Li, n, k>)
-        </div>)
-      </div>)
-    </d, i, v > )
-  }
-// AI Security Enterprise 2026 Banner export functio; n AISecurityEnterprise2026Banne r() {
-    return(<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-r, e, d-600, t, o-oran, g, e-600, tex, t-white, p, y-6'>
+        </div>
+)
+      </div>
+)
+    </d, i, v > )}
+// AI Security Enterprise 2026 Banner export functio; n AISecurityEnterprise2026Banne r() {return (
+<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-r, e, d-600, t, o-oran, g, e-600, tex, t-white, p, y-6'>
       </div>
 <div, className='m, a, x-w-6xl, m, x-auto, p, x-4'>
         </div>
@@ -76,13 +77,15 @@
               className='bord, e, r-2, borde, r-white, tex, t-white, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r:bg-white, hove, r:te, x, t-r, e, d-600, transitio, n-colo, r, s'
             >
               Read, Security, Guide;
-          </div>)
-        </div>)
-      </div>)
-    </d, i, v > )
-  }
-// AI Multimodal Enterprise 2026 Banner export functio; n AIMultimodalEnterprise2026Banne r() {
-    return(<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-indi, g, o-600, t, o-purp, l, e-600, tex, t-white, p, y-6'>
+          </div>
+)
+        </div>
+)
+      </div>
+)
+    </d, i, v > )}
+// AI Multimodal Enterprise 2026 Banner export functio; n AIMultimodalEnterprise2026Banne r() {return (
+<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-indi, g, o-600, t, o-purp, l, e-600, tex, t-white, p, y-6'>
       </div>
 <div, className='m, a, x-w-6xl, m, x-auto, p, x-4'>
         </div>
@@ -136,12 +139,13 @@
           >
             Explore, Multimodal, AI →
           </Li, n, k>)
-        </div>)
-      </div>)
-    </d, i, v > )
-  }
-// AI Sustainability Transformation Banner export function AISustainabilityTransformationBann e r() {
-    return(<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-te, a, l-600, tex, t-white, p, y-6'>
+        </div>
+)
+      </div>
+)
+    </d, i, v > )}
+// AI Sustainability Transformation Banner export function AISustainabilityTransformationBann e r() {return (
+<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-te, a, l-600, tex, t-white, p, y-6'>
       </div>
 <div, className='m, a, x-w-6xl, m, x-auto, p, x-4'>
         </div>
@@ -195,12 +199,13 @@
           >
             Read, Sustainability, Guide →
           </Li, n, k>)
-        </div>)
-      </div>)
-    </d, i, v > )
-  }
-// New Latest 2026 Content Banner export functio; n NewLatest2026ContentBanne r() {
-    return(<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-pi, n, k-600, vi, a-purp, l, e-600, t, o-indi, g, o-600, tex, t-white, p, y-6'>
+        </div>
+)
+      </div>
+)
+    </d, i, v > )}
+// New Latest 2026 Content Banner export functio; n NewLatest2026ContentBanne r() {return (
+<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-pi, n, k-600, vi, a-purp, l, e-600, t, o-indi, g, o-600, tex, t-white, p, y-6'>
       </div>
 <div, className='m, a, x-w-6xl, m, x-auto, p, x-4'>
         </div>
@@ -248,12 +253,13 @@
           >
             View, All, Latest Conte, n, t →
           </Li, n, k>)
-        </div>)
-      </div>)
-    </d, i, v > )
-  }
-// AI Autonomous Cloud Ops Banner export functio; n AIAutonomousCloudOpsBanne r() {
-    return(<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-cy, a, n-600, t, o-bl, u, e-600, tex, t-white, p, y-6'>
+        </div>
+)
+      </div>
+)
+    </d, i, v > )}
+// AI Autonomous Cloud Ops Banner export functio; n AIAutonomousCloudOpsBanne r() {return (
+<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-cy, a, n-600, t, o-bl, u, e-600, tex, t-white, p, y-6'>
       </div>
 <div, className='m, a, x-w-6xl, m, x-auto, p, x-4'>
         </div>
@@ -304,12 +310,13 @@
           >
             Read, Complete, Guide →
           </Li, n, k>)
-        </div>)
-      </div>)
-    </d, i, v > )
-  }
-// AI FinTech Transformation Banner export function AIFinTechTransformationBann e r() {
-    return(<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-emera, l, d-600, t, o-gre, e, n-600, tex, t-white, p, y-6'>
+        </div>
+)
+      </div>
+)
+    </d, i, v > )}
+// AI FinTech Transformation Banner export function AIFinTechTransformationBann e r() {return (
+<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-emera, l, d-600, t, o-gre, e, n-600, tex, t-white, p, y-6'>
       </div>
 <div, className='m, a, x-w-6xl, m, x-auto, p, x-4'>
         </div>
@@ -361,11 +368,10 @@
           ></Link>Read</Link>, FinTech, Guide →
           </Li, n, k>
         </div>
-      </div>
-    </d, i, v > )
-  }
-// AI Retail Automation Banner export function AIRetailAutomationBann e r() {
-    return(<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-oran, g, e-600, t, o-r, e, d-600, tex, t-white, p, y-6'>
+</div>
+    </d, i, v > )}
+// AI Retail Automation Banner export function AIRetailAutomationBann e r() {return (
+<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-oran, g, e-600, t, o-r, e, d-600, tex, t-white, p, y-6'>
       </div>
 <div, className='m, a, x-w-6xl, m, x-auto, p, x-4'>
         </div>
@@ -418,12 +424,13 @@
           >
             View, Case, Study →
           </Li, n, k>)
-        </div>)
-      </div>)
-    </d, i, v > )
-  }
-// Latest 2026 Content Banner export function Latest2026ContentBann e r() { 
-  return(<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-viol, e, t-600, vi, a-purp, l, e-600, t, o-fuchs, i, a-600, tex, t-white, p, y-6'>
+        </div>
+)
+      </div>
+)
+    </d, i, v > )}
+// Latest 2026 Content Banner export function Latest2026ContentBann e r() {return (
+<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-viol, e, t-600, vi, a-purp, l, e-600, t, o-fuchs, i, a-600, tex, t-white, p, y-6'>
       </div>
 <div, className='m, a, x-w-6xl, m, x-auto, p, x-4'>
         </div>
@@ -469,8 +476,10 @@
           >
             Explore, All, Content →
           </Li, n, k>)
-        </div>)
-      </div>)
+        </div>
+)
+      </div>
+)
     </d, i, v > )
 // Latest Content 2026 Banner export function LatestContent2026Bann e r() {/* TODO: Fix JSX expression */}
  }
@@ -490,4 +499,106 @@
  }
 // Latest 2026 Content Banner export function Latest2026ContentBann e r() {/* TODO: Fix JSX expression */}
  }
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></p></p></p></p></p></p></p></p></p></p></h2></h2></h2></h2></h2></h2></h2></h3></h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div></span></p></p></p></p></p></p></p></p></p></p></h2></h2></h2></h2></h2></h2></h2></h3></h3>

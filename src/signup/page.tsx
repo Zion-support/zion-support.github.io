@@ -1,11 +1,10 @@
 import {Eye, EyeOff, Mail, Lock, User, Building, Phone, CheckCircle, Shield, Award, Globe} from 'lucide-react'
 'use client'
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, {useState} from 'react'
+import {Link} from 'react-router-dom'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-const SignupPage: React.FC = () => {
-  const [formData, setFormData] = useState({
+const SignupPage: React.FC = () => {const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
     email: '',
@@ -14,25 +13,18 @@ const SignupPage: React.FC = () => {
     password: '',
     confirmPassword: '',
     agreeToTerms: false,
-    subscribeNewsletter: false;
-  })
+    subscribeNewsletter: false;})
   const [showPassword, setShowPassword] = useState(false)
   const [showConfirmPassword, setShowConfirmPassword] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value, type, checked } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: type === 'checkbox' ? checked : value;
-    })
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {const { name, value, type, checked} = e.target;
+    setFormData(prev => ({...prev,
+      [name]: type === 'checkbox' ? checked : value;})
+  const handleSubmit = async (e: React.FormEvent) => {e.preventDefault()
     if (formData.password !== formData.confirmPassword) {
       alert('Passwords do not match'),
-      return;
-  }
-    if (!formData.agreeToTerms) {
-      alert('Please agree to the terms and conditions')
+      return;}
+    if (!formData.agreeToTerms) {alert('Please agree to the terms and conditions')
     setIsLoading(true)
     // Simulate signup process;
     await new Promise(resolve => setTimeout(resolve, 2000))
@@ -62,7 +54,7 @@ $4]
   return (
     <React.Fragment>
     <div>Coming Soon</div>
-  )
+)
 }
   const [formData, setFormData] = useState({/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -91,7 +83,7 @@ $4]
   const [isLoading, setIsLoading] = useState(false)
 const handleInputChange = (e: React.ChangeEvent,)
           <HTMLInputElement>) => {/* TODO: Fix JSX expression */}
-    const { name, value, type, checked } = e.target;
+    const {name, value, type, checked} = e.target;
     setFormData(prev => ({/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -135,8 +127,7 @@ const handleInputChange = (e: React.ChangeEvent,)
 icon: Award,
       title: 'Proven Results',
       description: '300% average ROI and 95% process automation for our clients',
-const PagePage: React.FC = () => {
-  return (
+const PagePage: React.FC = () => {return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       </div>
@@ -163,15 +154,13 @@ const PagePage: React.FC = () => {
                     </div>
 <div className="relative">
                       <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                      <input
-                        type="text"
+                      <input type="text"
                         name="firstName"
                         value={formData.firstName}
                         onChange={handleInputChange}
                         required;
                         className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-                        placeholder="Enter your first name"
-                      />
+                        placeholder="Enter your first name" />
                       Last Name;
                         name="lastName"
                         value={formData.lastName}
@@ -235,13 +224,11 @@ const PagePage: React.FC = () => {
           </label>
                     <div className="relative">
                       <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                      <input
-type="text" name="firstName"
+                      <input type="text" name="firstName"
                         value={formData.firstName}
                         onChange={handleInputChange}
 // required;
-className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your first name"
-/>
+className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your first name" />
                       Last Name,
                         name="lastName" value={formData.lastName}
                         placeholder="Enter your last name" Email Address;
@@ -413,4 +400,29 @@ Join thousands of businesses already using our AI and IT solutions;
                   <div className="text-2xl font-bold text-white">Amazon;
       <Footer />
   )
-export default SignupPage</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></a></p></p></p></p></p></p></p></p></h1></h1></h2></h2></h3></h3>
+export default SignupPage</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></span></a></p></p></p></p></p></p></p></p></h1></h1></h2></h2></h3></h3>

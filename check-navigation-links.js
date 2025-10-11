@@ -60,9 +60,9 @@ console.log('\n=== NAVIGATION LINKS ===')
 allLinks.forEach(link => console.log(`✓ ${link}`))
 // Write results to a file
 fs.writeFileSync('/workspace/navigation-analysis.json', JSON.stringify({
-  totalLinks: allLinks.length;)
-  existingPages: existingPages.length;)
-  missingPages: missingPages.length;)
+  totalLinks: allLinks.length)
+  existingPages: existingPages.length)
+  missingPages: missingPages.length)
   missingPagesList: missingPages),
   allLinks: allLinks),
   existingPagesList: existingPages

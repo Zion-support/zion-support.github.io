@@ -1,13 +1,12 @@
-import { Component, ErrorInfo, ReactNode } from 'react'
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react'
+import {Component, ErrorInfo, ReactNode} from 'react'
+import {AlertTriangle, RefreshCw, Home} from 'lucide-react'
 interface Props {/* TODO: Fix JSX expression */}
 }
 interface State {/* TODO: Fix JSX expression */}
 }
-class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {,
+class ErrorBoundary extends Component<Props, State> {constructor(props: Props) {,
     super(props)
-    this.state = { hasError: false }
+    this.state = { hasError: false}
   }
   static getDerivedStateFromError(error: Error): State {,
     return {,
@@ -16,14 +15,12 @@ class ErrorBoundary extends Component<Props, State> {
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     }
   }
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    ,
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
 //     // Report error to analytics/monitoring service;
     this.reportError(error, errorInfo)
     // Call custom error handler if provided;
     if (this.props.onError) {
-      this.props.onError(error, errorInfo)
-  }
+      this.props.onError(error, errorInfo)}
   }
   private reportError = (error: Error, errorInfo: ErrorInfo) => {,
     // Report to external service (e.g., Sentry, LogRocket, etc.)
@@ -56,8 +53,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
   d: undefined })
   private handleGoHome = () => {/* TODO: Fix JSX expression */}
   }
-  render() {
-    if (this.state.hasError) {
+  render() {if (this.state.hasError) {
       return this.props.fallback || (
         <div className="min-h-screen flex items-center justify-center bg-gray-900">
           </div>
@@ -127,7 +123,8 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
               Or refresh the page,
             </button>
           </div>,
-        </div>)
+        </div>
+)
     }
     return this.props.children;
   }

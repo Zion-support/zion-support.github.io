@@ -26,7 +26,7 @@ async function analyzeWithGPT(
     return {
       riskLevel: heuristic as TrustScoreBreakdown['riskLevel']
       reasonSummary: 'Heuristic classification (no OpenAI key set).'
-    };  }import {  supabase   } from '../../../utils/supabase/client'
+    }  }import {  supabase   } from '../../../utils/supabase/client'
 import type { TrustMetricInputs, TrustScoreBreakdown  } from '../../../utils/types/trust'
 import {  supabase   } from '../../../utils/supabase/client'
 async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promise<{ riskLevel: TrustScoreBreakdown['riskLevel'], reasonSummary: string }> {
@@ -56,23 +56,22 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
         inputs = {        const { data } = await supabase && supabase.from('trust_inputs').select('*').eq('userId', userId).single()
         if (data) inputs = data && data.values as TrustMetricInputs
       } catch {}
-      if (!inputs) {
-        inputs = {
+      if (!inputs) {inputs = {
       let reasonSummary: string | undefined
       let riskLevelOverride: TrustScoreBreakdown['riskLevel'] | undefined
       if (analyze) {
         const analysis = await analyzeWithGPT(userId, inputs)
         reasonSummary = analysis && analysis.reasonSummary
-        riskLevelOverride = analysis && analysis.riskLevel;      }
+        riskLevelOverride = analysis && analysis.riskLevel}
       const breakdown = await computeTrustScore(inputs, { reasonSummary })
       const result: TrustScoreBreakdown = {
         ...breakdown,
         riskLevel: riskLevelOverride || breakdown && breakdown.riskLevel,
-      };        riskLevelOverride = analysis && analysis.riskLevel
+      }        riskLevelOverride = analysis && analysis.riskLevel
 import {  computeTrustScore   } from '../../../utils/trust/compute'
 import type { TrustMetricInputs, TrustScoreBreakdown  } from '../../../utils/types/trust'
 import {  supabase   } from '../../../utils/supabase/client'
-async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promise<{ riskLevel: TrustScoreBreakdown['riskLevel']; reasonSummary: string }> {
+async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promise<{ riskLevel: TrustScoreBreakdown['riskLevel'] reasonSummary: string }> {
   const apiKey = process.env.OPENAI_API_KEY
   if (!apiKey) {
     // Fallback heuristic
@@ -179,7 +178,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const breakdown = await computeTrustScore(inputs)
       try {
   res && res.setHeader('Allow', 'GET, POST')
-  return res && res.status(405).json({ error: 'Method not allowed' });      } catch {}
+  return res && res.status(405).json({ error: 'Method not allowed' })      } catch {}
       return res && res.status(200).json(breakdown)
     } catch (e: any) {
       return res && res.status(500).json({ error: e?.message || 'Failed to save trust inputs' })
@@ -214,7 +213,7 @@ function handler() {
   if ()) {
   $2
 }
-    return res.status (400).json ({ error: 'Invalid user_id' });  if () return res.status (400).json ({ error: 'Invalid user_id' })) {
+    return res.status (400).json ({ error: 'Invalid user_id' })  if () return res.status (400).json ({ error: 'Invalid user_id' })) {
   $2
 }
   // Check condition
@@ -271,7 +270,7 @@ if ( {) {
 }
         const analysis = await analyzeWithGPT (user_id, inputs)
         reason_summary = analysis.reason_summary
-        riskLevelOverride = analysis.risk_level;      }
+        riskLevelOverride = analysis.risk_level      }
       const breakdown = await computeTrustScore (inputs, { reason_summary })
       const result: TrustScoreBreakdown = {
         ...breakdown,
@@ -338,7 +337,7 @@ if ( {) {
     }
   }
   res.set_header ('Allow', 'GET, POST')
-  return res.status (405).json ({ error: 'Method not allowed' });      } catch {}
+  return res.status (405).json ({ error: 'Method not allowed' })      } catch {}
       return res.status (200).json (breakdown)
     } catch (e: any) {
       return res.status (500).json ({ error: e?.message || 'Failed to save trust inputs' })
@@ -348,7 +347,7 @@ if ( {) {
   return res.status (405).json ({ error: 'Method not allowed' })
 }
   res.setHeader('Allow', 'GET, POST')
-  return res.status(405).json({ error: 'Method not allowed' });      } catch {}
+  return res.status(405).json({ error: 'Method not allowed' })      } catch {}
       return res.status(200).json(breakdown)
     } catch (e: any) {
       return res.status(500).json({ error: e?.message |'Failed to save trust inputs' })

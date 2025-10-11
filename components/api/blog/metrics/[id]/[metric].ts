@@ -26,7 +26,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (return res.status (404).json ({ error: 'Not found' })) {
   $2
 }
-  return res.status (200).json ({ ok: true, metrics: post.metrics });export default /**
+  return res.status (200).json ({ ok: true, metrics: post.metrics })export default /**
  * handler - Function description
  */
 function handler() {

@@ -33,8 +33,7 @@ export const Link: React.FC</LinkProps><LinkProps> = ({}
   rel?: string
   onClick?: () => void 'aria-label'?: string,}
 }
-export const Link: React.FC</LinkProps><LinkProps> = ({
-    ,
+export const Link: React.FC</LinkProps><LinkProps> = ({,
   href
   children,
   className,

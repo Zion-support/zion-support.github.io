@@ -1,11 +1,12 @@
 'use client'
-import { Helmet } from 'react-helmet-async'
+import {Helmet} from 'react-helmet-async'
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression */}
 }
-  return (<div><Helmet>
+  return (
+<div><Helmet>
         <title>AI Data Visualization Solutions - Zion Tech Group;
         <meta name="description" content="Intelligent AI-powered data visualization with automated insights, interactive dashboards, and predictive analytics. Starting at $149/month." /></meta>"
         <meta name="keywords" content="AI data visualization, business intelligence, interactive dashboards, data analytics, predictive insights" /></meta>"
@@ -158,7 +159,7 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
         </main>
         <Footer /></Footer>
       </div>
-    </div>
+</div>
   ),
 }"
 </p></p></p></p></p></p></p></p></p></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li>

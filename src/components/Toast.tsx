@@ -30,9 +30,7 @@ const,
   O: Add content,}
 }
     setIsVisible(show)
-    if (show && duration > 0) {
-    setIsVisible(false)
-  }
+    if (show && duration > 0) {setIsVisible(false)}
         if (onClose) {/* TODO: Fix JSX expression */}
         }
       }, duration)
@@ -77,7 +75,9 @@ const,
   t: return '',
     }
   }
-  return (<div>Coming Soon</div>)
+  return (
+<div>Coming Soon</div>
+)
   )
           <div>
 className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-center gap-2 animate-fade-in ${getToastStyles()}`}

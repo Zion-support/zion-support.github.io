@@ -1,5 +1,4 @@
-const, October2025InfrastructureExcellenceBanne, r = () => {
-  const, newArticle, s = [
+const, October2025InfrastructureExcellenceBanne, r = () => {const, newArticle, s = [
     {
       id: 1,
       tit, l, e: "Distributed, Tracing, for Microservic, e, s"
@@ -7,28 +6,24 @@ const, October2025InfrastructureExcellenceBanne, r = () => {
       ic, o, n: Activi, t, y;
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-distribut, e, d-traci, n, g-microservic, e, s"
       gradie, n, t: "fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0"
-      metri, c, s: ["1, 0, M+ even, t, s/s, e, c", "S, u, b-ms, overhea, d", "OpenTelemet, r, y"]
-    }
-    {
-      id: 2,
+      metri, c, s: ["1, 0, M+ even, t, s/s, e, c", "S, u, b-ms, overhea, d", "OpenTelemet, r, y"]}
+    {id: 2,
       tit, l, e: "Kubernetes, Security, Best Practic, e, s"
       descripti, o, n: "Ze, r, o-trust, architectur, e, 99.97% threat, preventio, n"
       ic, o, n: Shie, l, d;
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-kubernet, e, s-securi, t, y-be, s, t-practic, e, s"
       gradie, n, t: "fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0"
-      metri, c, s: ["89% fewer, incident, s", "Defen, s, e-in-dep, t, h", "mT, L, S"]
-    }
-    {
-      id: 3,
+      metri, c, s: ["89% fewer, incident, s", "Defen, s, e-in-dep, t, h", "mT, L, S"]}
+    {id: 3,
       tit, l, e: "Re, a, l-Time, Data, Streaming"
       descripti, o, n: "Process, 10, M+ even, t, s/sec, with, sub-100ms, latenc, y"
       ic, o, n: Z, a, p;
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-re, a, l-ti, m, e-da, t, a-streami, n, g-architectur, e, s"
       gradie, n, t: "fr, o, m-oran, g, e-500, t, o-r, e, d-5, 0, 0"
-      metri, c, s: ["Kaf, k, a + Fli, n, k", "Exact, l, y-on, c, e", "42% cost, cu, t"]
-    }
+      metri, c, s: ["Kaf, k, a + Fli, n, k", "Exact, l, y-on, c, e", "42% cost, cu, t"]}
   ]
-  return(<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-gr, a, y-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, p, y-16, s, m: py-20">"),
+  return (
+<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-gr, a, y-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, p, y-16, s, m: py-20">"),
       {/* Animated, background, effects */}
       </div>
 <div, className="absolute, inse, t-0">
@@ -96,26 +91,23 @@ const, October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX exp
       gradie, n, t: "fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0","
       metri, c, s: ["1, 0, M+ even, t, s/s, e, c", "S, u, b-ms, overhea, d", "OpenTelemet, r, y"],"
     }
-    {
-    id: 2,
+    {id: 2,
       tit, l, e: "Kubernetes, Security, Best Practic, e, s","
       descripti, o, n: "Ze, r, o-trust, architectur, e, 99.97% threat, preventio, n","
       ic, o, n: Shie, l, d;
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-kubernet, e, s-securi, t, y-be, s, t-practic, e, s","
       gradie, n, t: "fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0","
-      metri, c, s: ["89% fewer, incident, s", "Defen, s, e-in-dep, t, h", "mT, L, S"],"
-  }
-    {
-    id: 3,
+      metri, c, s: ["89% fewer, incident, s", "Defen, s, e-in-dep, t, h", "mT, L, S"],"}
+    {id: 3,
       tit, l, e: "Re, a, l-Time, Data, Streaming","
       descripti, o, n: "Process, 10, M+ even, t, s/sec, with, sub-100ms, latenc, y","
       ic, o, n: Z, a, p;
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-re, a, l-ti, m, e-da, t, a-streami, n, g-architectur, e, s","
       gradie, n, t: "fr, o, m-oran, g, e-500, t, o-r, e, d-5, 0, 0","
-      metri, c, s: ["Kaf, k, a + Fli, n, k", "Exact, l, y-on, c, e", "42% cost, cu, t"],"
-  }
+      metri, c, s: ["Kaf, k, a + Fli, n, k", "Exact, l, y-on, c, e", "42% cost, cu, t"],"}
   ]
-  return(<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-gr, a, y-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, p, y-16, s, m: py-20">",),
+  return (
+<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-gr, a, y-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, p, y-16, s, m: py-20">",),
       {/* Animated, background, effects */}
       </div>
 <div, className="absolute, inse, t-0">"
@@ -375,4 +367,74 @@ const, October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX exp
 }
 export default October2025InfrastructureExcellenceBanner;
 "`
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></Link></Link></Link></p></h2></h3></h3></h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></span></span></span></Link></Link></Link></p></h2></h3></h3></h3>

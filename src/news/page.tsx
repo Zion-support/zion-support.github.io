@@ -1,11 +1,10 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
-import { Calendar, ArrowRight, TrendingUp, Users, Award, Globe, Zap, Brain, Shield, Code, BarChart, MessageSquare, Eye, Cpu, Target, Lock, BarChart3, FileText, Search, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Clock3, Compass, PieChart, TrendingDown, Activity } from 'lucide-react'
-const NewsPage: React.FC = () => {
-  const newsArticles = [
+import {Calendar, ArrowRight, TrendingUp, Users, Award, Globe, Zap, Brain, Shield, Code, BarChart, MessageSquare, Eye, Cpu, Target, Lock, BarChart3, FileText, Search, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Clock3, Compass, PieChart, TrendingDown, Activity} from 'lucide-react'
+const NewsPage: React.FC = () => {const newsArticles = [
     {
       id: 1,
       title: 'Zion Tech Group Launches Revolutionary AI Analytics Dashboard',
@@ -14,65 +13,54 @@ const NewsPage: React.FC = () => {
       category: 'Product Launch',
       image: '📊',
       featured: true,
-      readTime: '5 min read'
-    },
-    {
-      id: 2,
+      readTime: '5 min read'},
+    {id: 2,
       title: 'AI Enterprise Transformation: $50M Annual Savings Achieved',
       excerpt: 'Fortune 500 companies achieve unprecedented savings through our comprehensive AI transformation strategies.',
       date: '2025-01-25',
       category: 'Success Story',
       image: '💰',
       featured: true,
-      readTime: '8 min read'
-    },
-    {
-      id: 3,
+      readTime: '8 min read'},
+    {id: 3,
       title: 'Quantum Computing Breakthrough: Next-Gen Algorithms Ready',
       excerpt: 'Revolutionary quantum algorithms deliver exponential speedup for complex optimization problems.',
       date: '2025-01-22',
       category: 'Technology',
       image: '⚡',
       featured: false,
-      readTime: '6 min read'
-    },
-    {
-      id: 4,
+      readTime: '6 min read'},
+    {id: 4,
       title: 'Autonomous Systems Revolution: Self-Managing Infrastructure',
       excerpt: 'Self-healing systems and predictive maintenance transform enterprise operations with zero-downtime guarantees.',
       date: '2025-01-20',
       category: 'Innovation',
       image: '🤖',
       featured: false,
-      readTime: '7 min read'
-    },
-    {
-      id: 5,
+      readTime: '7 min read'},
+    {id: 5,
       title: 'AI Cybersecurity: 99.9% Threat Detection Rate Achieved',
       excerpt: 'Advanced AI-powered security solutions provide real-time threat detection and automated response.',
       date: '2025-01-18',
       category: 'Security',
       image: '🔒',
       featured: false,
-      readTime: '4 min read'
-    },
-    {
-      id: 6,
+      readTime: '4 min read'},
+    {id: 6,
       title: 'Micro SAAS Solutions: 12 New AI Tools Launched',
       excerpt: 'Comprehensive suite of AI-powered business tools now available for immediate deployment.',
       date: '2025-01-15',
       category: 'Product Launch',
       image: '🛠️',
       featured: false,
-      readTime: '5 min read'
-    }
+      readTime: '5 min read'}
   ]
   const categories = ['All', 'Product Launch', 'Success Story', 'Technology', 'Innovation', 'Security']
   const stats = [
-    { icon: Users, number: '100+', label: 'Happy Clients' },
-    { icon: Award, number: '50+', label: 'Awards Won' },
-    { icon: TrendingUp, number: '300%', label: 'Average ROI' },
-    { icon: Globe, number: '25+', label: 'Countries Served' }
+    {icon: Users, number: '100+', label: 'Happy Clients'},
+    {icon: Award, number: '50+', label: 'Awards Won'},
+    {icon: TrendingUp, number: '300%', label: 'Average ROI'},
+    {icon: Globe, number: '25+', label: 'Countries Served'}
   ]
   return (
     <React.Fragment>
@@ -108,7 +96,8 @@ const NewsPage: React.FC = () => {
                   </div>
 <div className="text-gray-300">{stat.label})
           {/* Featured Articles */}
-          </div><section className="mb-16">
+          </div>
+<section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Featured News;
             </section>
 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -131,8 +120,7 @@ const NewsPage: React.FC = () => {
                         {new Date(article.date).toLocaleDateString('en-US', { 
                           year: 'numeric', 
                           month: 'long', 
-                          day: 'numeric' 
-                        })
+                          day: 'numeric'})
                   <h3 className="text-2xl font-bold text-white mb-4 hover:text-cyan-400 transition-colors">
                     {article.title}
                   <p className="text-gray-300 mb-6 leading-relaxed">
@@ -144,7 +132,8 @@ const NewsPage: React.FC = () => {
                     <ArrowRight className="w-4 h-4 ml-2" />
               ))}
           {/* All Articles */}
-          </div><section className="mb-16">
+          </div>
+<section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Latest Updates;
             </section>
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -167,8 +156,7 @@ const NewsPage: React.FC = () => {
                         {new Date(article.date).toLocaleDateString('en-US', { 
                           month: 'short', 
                           day: 'numeric',
-                          year: 'numeric'
-                        })
+                          year: 'numeric'})
                   <h3 className="text-lg font-bold text-white mb-3 hover:text-cyan-400 transition-colors">
                     {article.title}
                   <p className="text-gray-300 text-sm mb-4 leading-relaxed">
@@ -180,7 +168,8 @@ const NewsPage: React.FC = () => {
                     <ArrowRight className="w-3 h-3 ml-1" />
               ))}
           {/* Newsletter Signup */}
-          </div><section className="text-center">
+          </div>
+<section className="text-center">
             </section>
 <div className="cyber-card p-12 max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-white mb-6 neon-text">
@@ -189,11 +178,9 @@ const NewsPage: React.FC = () => {
                 Subscribe to our newsletter for the latest AI insights and company updates;
               </div>
 <div className="flex flex-col sm: flex-row gap-4 justify-center max-w-md mx-auto">
-                <input
-                  type="email"
+                <input type="email"
                   placeholder="Enter your email"
-                  className="flex-1 px-4 py-3 bg-slate-800 text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-none"
-                />
+                  className="flex-1 px-4 py-3 bg-slate-800 text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-none" />
                 <button className="cyber-button px-8 py-3 font-semibold">
                   Subscribe,
   
@@ -213,4 +200,17 @@ export default NewsPage</button>
   </p>
   </h1>
   </SEOOptimizer>
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></a></a></p></p></p></p></h3></h3></main></section></section></section></section></section></article></article>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div></div></span></span></span></span></a></a></p></p></p></p></h3></h3></main></section></section></section></section></section></article></article>

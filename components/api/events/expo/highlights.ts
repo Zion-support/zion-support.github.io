@@ -7,7 +7,7 @@ import type { NextApiRequest, NextApiResponse  } from 'next'
     }
     const apiKey = process && process.env.OPENAI_API_KEY
     if (!apiKey) {
-      return res && res.status(200).json({ summary: baseSummary, provider: 'local' });    }      return res && res.status(200).json({ summary: baseSummary, provider: 'local' })
+      return res && res.status(200).json({ summary: baseSummary, provider: 'local' })    }      return res && res.status(200).json({ summary: baseSummary, provider: 'local' })
     }
     const { OpenAI } = await import('openai')
     const client = new OpenAI({ apiKey })
@@ -42,7 +42,7 @@ function handler() {
 if ( {) {
   $2
 }
-      return res.status (200).json ({ summary: base_summary, provider: 'local' });    }      return res.status (200).json ({ summary: base_summary, provider: 'local' })
+      return res.status (200).json ({ summary: base_summary, provider: 'local' })    }      return res.status (200).json ({ summary: base_summary, provider: 'local' })
     }
     const { OpenAI } = await import ('openai')
     const client = new OpenAI ({ api_key })

@@ -1,6 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { CheckCircle, Star, Phone } from 'lucide-react'
+import {Link} from 'react-router-dom'
+import {CheckCircle, Star, Phone} from 'lucide-react'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 interface ServicePageProps {/* TODO: Fix JSX expression */}
@@ -12,7 +12,7 @@ interface ServicePageProps {/* TODO: Fix JSX expression */}
   n: string,,
     ico,
   n: React.ComponentType,
-          <{ className?: string }>
+          <{className?: string}>
   service,
   s: Array<{/* TODO: Fix JSX expression */}
   s: string[],}
@@ -23,11 +23,11 @@ interface ServicePageProps {/* TODO: Fix JSX expression */}
   s: string[],
 }
 const,
-  ServicePage: React.FC<ServicePageProps> = ({ title, description, services, benefits }) => {/* TODO: Fix JSX expression */}
+  ServicePage: React.FC<ServicePageProps> = ({title, description, services, benefits}) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       </div><main className="container mx-auto px-4 py-16 pt-24">
         </main><section className="text-center mb-16">
@@ -92,7 +92,7 @@ Ready to Transform Your Business?"
       </main>
       <Footer /></Footer>
     </div>
-  )
+)
 }
 export default ServicePage</p>
   </h1>

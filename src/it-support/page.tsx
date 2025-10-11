@@ -1,37 +1,29 @@
 'use client'
 import React from 'react'
-import { ArrowRight, CheckCircle, Headphones, Clock, Shield, Zap, Brain, Target, Users, BarChart, Globe, Phone } from 'lucide-react'
+import {ArrowRight, CheckCircle, Headphones, Clock, Shield, Zap, Brain, Target, Users, BarChart, Globe, Phone} from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-const ITSupportPage: React.FC = () => {
-  const features = [
+const ITSupportPage: React.FC = () => {const features = [
     {
       icon: Headphones,
       title: '24/7 Support',
       description: 'Round-the-clock technical support and assistance',
-      benefits: ['24/7 availability', 'Fast response times', 'Expert technicians']
-    },
-    {
-      icon: Shield,
+      benefits: ['24/7 availability', 'Fast response times', 'Expert technicians']},
+    {icon: Shield,
       title: 'Security Support',
       description: 'Comprehensive security monitoring and incident response',
-      benefits: ['Threat monitoring', 'Incident response', 'Security updates']
-    },
-    {
-      icon: Zap,
+      benefits: ['Threat monitoring', 'Incident response', 'Security updates']},
+    {icon: Zap,
       title: 'Rapid Resolution',
       description: 'Quick problem identification and resolution',
-      benefits: ['Remote diagnostics', 'Proactive monitoring', 'Automated fixes']
-    },
-    {
-      icon: Settings,
+      benefits: ['Remote diagnostics', 'Proactive monitoring', 'Automated fixes']},
+    {icon: Settings,
       title: 'System Maintenance',
       description: 'Regular maintenance and optimization services',
-      benefits: ['Preventive maintenance', 'Performance tuning', 'Updates']
-    }
+      benefits: ['Preventive maintenance', 'Performance tuning', 'Updates']}
   ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       </div><main className="container mx-auto px-4 py-16 pt-24">
         </main><section className="text-center mb-16">
@@ -80,11 +72,13 @@ const ITSupportPage: React.FC = () => {
                       {benefit})})
       <Footer />
     </div>
-  )
+)
 }
 export default ITSupportPage</h2>
   </a>
   </a>
   </p>
   </h1>
-</div></div></div></p></h3></ul></li></main></section>
+</div>
+</div>
+</div></p></h3></ul></li></main></section>

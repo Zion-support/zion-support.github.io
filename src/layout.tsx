@@ -1,14 +1,10 @@
 import Analytics from './components/Analytics'
 import React from 'react'
-import { Link } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import Analytics from './components/Analytics'
-export default function RootLayout({
-  children}: {
-    children: React.ReactNode;
-  }) {
-  const structuredData = {
+export default function RootLayout({children}: {children: React.ReactNode;}) {const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'TechCompany',
     name: 'Zion Tech Group',
@@ -36,8 +32,7 @@ export default function RootLayout({
     sameAs: [
       'https://twitter.com/ziontechgroup',
       'https://linkedin.com/company/ziontechgroup',
-    address: {
-    '@type': 'PostalAddress',
+    address: {'@type': 'PostalAddress',
       streetAddress: '364 E Main St STE 1008',
       addressLocality: 'Middletown',
       addressRegion: 'DE',
@@ -54,23 +49,20 @@ export default function RootLayout({
     addressCountry: 'US',
     offers: [
   // TODO: Add items]
-      {// TODO: Add content;
-  }
+      {// TODO: Add content;}
 }
         '@type': 'Offer',
         category: 'AI Solutions',
         description: 'Enterprise AI solutions, digital transformation, and cloud services',
         price: '1500',
         priceCurrency: 'USD',
-        priceSpecification: {
-          '@type': 'PriceSpecification',
+        priceSpecification: {'@type': 'PriceSpecification',
           billingIncrement:         ,
 $4}
         category: 'Digital Transformation',
         description: 'Process automation, legacy system modernization, and workflow optimization',
         price: '2500',
-    serviceArea: {
-      '@type': 'GeoCircle',
+    serviceArea: {'@type': 'GeoCircle',
       geoMidpoint: {
         '@type': 'GeoCoordinates',
         latitude: '39.8283',
@@ -88,8 +80,7 @@ name$5: 'Digital Automation',
             description:             ,
 name$5: 'Cloud Infrastructure',
             description:       ,
-$4]
-  }
+$4]}
   return (
     <html lang='en'>
       <head>
@@ -158,7 +149,7 @@ $4]
         <meta name='twitter:creator' content='@ziontechgroup' />
         <script
           type='application/ld+json'
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData)}}
         />
       <body className='antialiased'>
         <ErrorBoundary>
@@ -170,16 +161,12 @@ $4]
     </html>
   )
 export default RootLayout;
-        priceSpecification: {
-    // TODO: Add content;
-  }
+        priceSpecification: {// TODO: Add content;}
 }
           '@type': 'PriceSpecification',
           billingIncrement: 'P1M'
         }
-  itemOffered: {
-    // TODO: Add content;
-  }
+  itemOffered: {// TODO: Add content;}
 }
             '@type': 'Service',
             name: 'AI Enterprise Transformation',

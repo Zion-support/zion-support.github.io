@@ -1,8 +1,8 @@
-impo, r, t { Glo, b, e, as, GlobeAltIc, o, n } fr, o, m "luci, d, e-rea, c, t"
+impo, r, t {Glo, b, e, as, GlobeAltIc, o, n} fr, o, m "luci, d, e-rea, c, t"
 impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "luci, d, e-rea, c, t";'
-const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {
-  return(<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-800, t, o-cy, a, n-900, p, y-16, p, x-6, rounde, d-3xl, shado, w-2xl, m, y-12, borde, r-4, borde, r-emera, l, d-4, 0, 0/50">"
+const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {return (
+<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-800, t, o-cy, a, n-900, p, y-16, p, x-6, rounde, d-3xl, shado, w-2xl, m, y-12, borde, r-4, borde, r-emera, l, d-4, 0, 0/50">"
       {/* Animated, Background, Elements */}
       </div>
 <div, className="absolute, inse, t-0, overflo, w-hidd, e, n">
@@ -13,31 +13,31 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {
 <div, className="absolute, inse, t-0, overflo, w-hidd, e, n"></div>
 <div, className="absolu, t, e -t, o, p-40 -rig, h, t-4, 0, w-9, 6, h-96, b, g-emera, l, d-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>
         </div>
-<div, className="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>
+<div, className="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s'}}></d, i, v>
         </div>
-<div, className="absolute, to, p-1/2, lef, t-1/2, transfor, m -transla, t, e-x-1/2 -transla, t, e-y-1/2 w-6, 4, h-64, b, g-te, a, l-5, 0, 0/10, rounde, d-full, blu, r-2xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>
+<div, className="absolute, to, p-1/2, lef, t-1/2, transfor, m -transla, t, e-x-1/2 -transla, t, e-y-1/2 w-6, 4, h-64, b, g-te, a, l-5, 0, 0/10, rounde, d-full, blu, r-2xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s'}}></d, i, v>
       </div>
 <div, className="absolute, inse, t-0, overflo, w-hidd, e, n">"</div>
 <div, className="absolu, t, e -t, o, p-40 -rig, h, t-4, 0, w-9, 6, h-96, b, g-emera, l, d-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>"
         </div>
-<div, className="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>'
+<div, className="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s'}}></d, i, v>'
 const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
       {/* Animated, Background, Elements */}"
       </div>
 <div, className="absolute, inse, t-0, overflo, w-hidd, e, n"></div>"
         <div, className="absolu, t, e -t, o, p-40 -rig, h, t-4, 0, w-9, 6, h-96, b, g-emera, l, d-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>"
         </div>
-<div, className="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>"
+<div, className="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s'}}></d, i, v>"
         </div>
-<div, className="absolute, to, p-1/2, lef, t-1/2, transfor, m -transla, t, e-x-1/2 -transla, t, e-y-1/2 w-6, 4, h-64, b, g-te, a, l-5, 0, 0/10, rounde, d-full, blu, r-2xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>"
+<div, className="absolute, to, p-1/2, lef, t-1/2, transfor, m -transla, t, e-x-1/2 -transla, t, e-y-1/2 w-6, 4, h-64, b, g-te, a, l-5, 0, 0/10, rounde, d-full, blu, r-2xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s'}}></d, i, v>"
       </div>
 <div, className="absolute, inse, t-0, overflo, w-hidd, e, n">";"
         </div>
 <div, className="absolu, t, e -t, o, p-40 -rig, h, t-4, 0, w-9, 6, h-96, b, g-emera, l, d-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>";"
         </div>
-<div, className="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>';"
+<div, className="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s'}}></d, i, v>';"
         </div>
-<div, className="absolute, to, p-1/2, lef, t-1/2, transfor, m -transla, t, e-x-1/2 -transla, t, e-y-1/2 w-6, 4, h-64, b, g-te, a, l-5, 0, 0/10, rounde, d-full, blu, r-2xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>'</$1>"
+<div, className="absolute, to, p-1/2, lef, t-1/2, transfor, m -transla, t, e-x-1/2 -transla, t, e-y-1/2 w-6, 4, h-64, b, g-te, a, l-5, 0, 0/10, rounde, d-full, blu, r-2xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s'}}></d, i, v>'</$1>"
       </div>
 <div, className="container, m, x-auto, relative, z-10">"
         {/* Breaking, News, Badge */}
@@ -538,11 +538,11 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
           <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r">Proven, Across, Industries</h3>"
           <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-5, ga, p-4">"
             {/* TODO: Fix JSX expression */}
-              { indust, r, y: 'Reta, i, l', val, u, e: '$4.2B', r, o, i: '2,8, 4, 7%' }
-              { indust, r, y: 'Manufacturi, n, g', val, u, e: '$2.7B', r, o, i: '2,1, 0, 0%' }
-              { indust, r, y: 'Phar, m, a', val, u, e: '$89, 0, M', r, o, i: '1,8, 0, 0%' }
-              { indust, r, y: 'Automoti, v, e', val, u, e: '$1.4 B', r, o, i: '2,4, 0, 0%' }
-              { indust, r, y: 'Fo, o, d & Bevera, g, e', val, u, e: '$67, 0, M', r, o, i: '1,6, 0, 0%' }
+              {indust, r, y: 'Reta, i, l', val, u, e: '$4.2B', r, o, i: '2,8, 4, 7%'}
+              {indust, r, y: 'Manufacturi, n, g', val, u, e: '$2.7B', r, o, i: '2,1, 0, 0%'}
+              {indust, r, y: 'Phar, m, a', val, u, e: '$89, 0, M', r, o, i: '1,8, 0, 0%'}
+              {indust, r, y: 'Automoti, v, e', val, u, e: '$1.4 B', r, o, i: '2,4, 0, 0%'}
+              {indust, r, y: 'Fo, o, d & Bevera, g, e', val, u, e: '$67, 0, M', r, o, i: '1,6, 0, 0%'}
             ].m, a, p((it, e, m, ind, e, x) => (
               <, ke, y={ind, e, x} classNa, m, e="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-4, border, border-emera, l, d-4, 0, 0/20, hove, r: bord, e, r-emera, l, d-4, 0, 0/50, transitio, n-all, hov, e$2 />
   r:sca, l, e-1, 0, 5">"
@@ -578,10 +578,10 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
 <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-5, ga, p-4">"
             {/* TODO: Fix JSX expression */}
   y: 'Reta, i, l', val, u, e: '$4.2B', r, o, i: '2,8, 4, 7%' },'
-              { indust, r, y: 'Manufacturi, n, g', val, u, e: '$2.7B', r, o, i: '2,1, 0, 0%' },'
-              { indust, r, y: 'Phar, m, a', val, u, e: '$89, 0, M', r, o, i: '1,8, 0, 0%' },'
-              { indust, r, y: 'Automoti, v, e', val, u, e: '$1.4B', r, o, i: '2,4, 0, 0%' },'
-              { indust, r, y: 'Fo, o, d & Bevera, g, e', val, u, e: '$67, 0, M', r, o, i: '1,6, 0, 0%' }'
+              {indust, r, y: 'Manufacturi, n, g', val, u, e: '$2.7B', r, o, i: '2,1, 0, 0%'},'
+              {indust, r, y: 'Phar, m, a', val, u, e: '$89, 0, M', r, o, i: '1,8, 0, 0%'},'
+              {indust, r, y: 'Automoti, v, e', val, u, e: '$1.4B', r, o, i: '2,4, 0, 0%'},'
+              {indust, r, y: 'Fo, o, d & Bevera, g, e', val, u, e: '$67, 0, M', r, o, i: '1,6, 0, 0%'}'
             ].m, a, p((it, e, m, ind, e, x) => (
               <, ke, y={ind, e, x} classNa, m, e="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-4, border, border-emera, l, d-4, 0, 0/20, hove, r: bord, e, r-emera, l, d-4, 0, 0/50, transitio, n-all, hov, e$2 />
   r:sca, l, e-1, 0, 5">"
@@ -592,7 +592,7 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
 <div, className="te, x, t-emera, l, d-300, fon, t-bold, tex, t-lg, m, b-1">{it, e, m.indust, r, y}</d, i, v>"
                 </div>
 <div, className="te, x, t-white, fon, t-extrabold, tex, t-xl, m, b-1">{it, e, m.val, u, e}</d, i, v>"
-              { indust, r, y: 'Fo, o, d & Bevera, g, e', val, u, e: '$67, 0, M', r, o, i: '1,6, 0, 0%' }';)
+              {indust, r, y: 'Fo, o, d & Bevera, g, e', val, u, e: '$67, 0, M', r, o, i: '1,6, 0, 0%'}';)
             ].m, a, p((it, e, m, ind, e, x) => ("
               <, ke, y={ind, e, x} classNa, m, e="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-4, border, border-emera, l, d-4, 0, 0/20, hove, r: bord, e, r-emera, l, d-4, 0, 0/50, transitio, n-all, hov, e,"$2 />
   r:sca, l, e-1, 0, 5">";"
@@ -823,4 +823,142 @@ const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => {/* TODO: 
 }
 export default October2025 SupplyChainRevolutionBanner;
 }"
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></Link></Link></Link></Link></Link></Link></Link></Link></Link></Link></h2></h2></h2></h3></h3></h3></h3></h4></h4></h4></ul></ul></ul></ul></ul></ul></li></li>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></Link></Link></Link></Link></Link></Link></Link></Link></Link></Link></h2></h2></h2></h3></h3></h3></h3></h4></h4></h4></ul></ul></ul></ul></ul></ul></li></li>

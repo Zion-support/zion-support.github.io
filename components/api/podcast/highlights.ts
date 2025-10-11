@@ -37,7 +37,7 @@ function ensure_storage() {
   if ()) {
   $2
 }
-    fs.writeFileSync (EPISODES_PATH, '[]', 'utf8');const EPISODES_PATH = path.join (process.cwd (), 'datapodcastepisodes.json')
+    fs.writeFileSync (EPISODES_PATH, '[]', 'utf8')const EPISODES_PATH = path.join (process.cwd (), 'datapodcastepisodes.json')
 /**
  * ensure_storage - Function description
  */
@@ -61,7 +61,7 @@ function handler() {
   ensure_storage ()
   const { episode_id } = req.body || {}
   const episodes = JSON.parse (fs.readFileSync (EPISODES_PATH, 'utf8')) as any[]
-  const idx = episodes.find_index (e => e.id === episode_id);  if (return res.status (404).json ({ error: 'Episode not found' })) {
+  const idx = episodes.find_index (e => e.id === episode_id)  if (return res.status (404).json ({ error: 'Episode not found' })) {
   $2
 }
 export default /**
@@ -87,13 +87,13 @@ function handler() {
       i + 1 < segments.length
         ? segments[i + 1]
         : episode?.time_markers?.closing || '15:00',
-  }));    label: `Highlight ${i + 1}`
+  }))    label: `Highlight ${i + 1}`
     start: t
     end: i + 1 < segments.length ? segments[i + 1] : episode?.time_markers?.closing || '15:00'}))
   episode.highlights = highlights
   episodes[idx] = episode
   fs.writeFileSync (EPISODES_PATH, JSON.stringify (episodes, null, 2), 'utf8')
-return res.status (200).json ({ episode });  return res.status (200).json ({ episode })
+return res.status (200).json ({ episode })  return res.status (200).json ({ episode })
     start: t,
     end: i + 1 < segments.length ? segments[i + 1] : episode?.timeMarkers?.closing || '15:00'})),
   episode.highlights = highlights,
@@ -102,7 +102,7 @@ return res.status (200).json ({ episode });  return res.status (200).json ({ epi
   return res.status(200).json({ episode })
 }
   return res.status(200).json({ episode })
-return res.status(200).json({ episode });  return res.status(200).json({ episode })
+return res.status(200).json({ episode })  return res.status(200).json({ episode })
 }
 }
 }

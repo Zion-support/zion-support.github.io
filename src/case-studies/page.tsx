@@ -1,8 +1,7 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ArrowLeft, TrendingUp, CheckCircle } from 'lucide-react'
-const CaseStudiesPage: React.FC = () => {
-  const caseStudies = [
+import {Helmet} from 'react-helmet-async'
+import {ArrowLeft, TrendingUp, CheckCircle} from 'lucide-react'
+const CaseStudiesPage: React.FC = () => {const caseStudies = [
     {
       id: 1,
       title: 'E-commerce Platform Transformation',
@@ -14,13 +13,11 @@ const CaseStudiesPage: React.FC = () => {
         roi: '340%',
         conversion: '+85%',
         costReduction: '-65%',
-        revenue: '+$2.3M'
-      },
+        revenue: '+$2.3M'},
       image: '🛒',
       description: 'Transformed a struggling e-commerce platform using AI-driven personalization and dynamic pricing strategies.'
     },
-    {
-      id: 2,
+    {id: 2,
       title: 'Financial Services Automation',
       company: 'FinTech Solutions',
       industry: 'Financial Services',
@@ -30,13 +27,11 @@ const CaseStudiesPage: React.FC = () => {
         roi: '280%',
         processingTime: '-80%',
         accuracy: '+95%',
-        costSavings: '$1.8M'
-      },
+        costSavings: '$1.8M'},
       image: '🏦',
       description: 'Automated complex financial processes using advanced AI algorithms for document processing and risk assessment.'
     },
-    {
-      id: 3,
+    {id: 3,
       title: 'Healthcare Data Analytics',
       company: 'MedTech Innovations',
       industry: 'Healthcare',
@@ -46,13 +41,11 @@ const CaseStudiesPage: React.FC = () => {
         roi: '420%',
         patientOutcomes: '+70%',
         efficiency: '+90%',
-        costSavings: '$3.2M'
-      },
+        costSavings: '$3.2M'},
       image: '🏥',
       description: 'Revolutionized healthcare data management with AI-driven analytics and predictive treatment models.'
     },
-    {
-      id: 4,
+    {id: 4,
       title: 'Manufacturing Optimization',
       company: 'AutoParts Manufacturing',
       industry: 'Manufacturing',
@@ -62,8 +55,7 @@ const CaseStudiesPage: React.FC = () => {
         roi: '310%',
         efficiency: '+75%',
         defects: '-90%',
-        downtime: '-85%'
-      },
+        downtime: '-85%'},
       image: '🏭',
       description: 'Optimized manufacturing processes using AI for predictive maintenance and automated quality control.'
     }
@@ -99,7 +91,8 @@ const CaseStudiesPage: React.FC = () => {
                 Discover how leading companies across industries have transformed their operations;
                 and achieved remarkable ROI with our cutting-edge AI technology.
         {/* Case Studies Grid */}
-        </div><section className="py-16">
+        </div>
+<section className="py-16">
           </section>
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             </div>
@@ -159,7 +152,8 @@ const CaseStudiesPage: React.FC = () => {
                         <span className="text-sm font-semibold">Verified Results;
               ))}
         {/* Stats Section */}
-        </div><section className="py-16 bg-white">
+        </div>
+<section className="py-16 bg-white">
           </section>
 <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             </div>
@@ -196,7 +190,8 @@ const CaseStudiesPage: React.FC = () => {
                 </div>
 <div className="text-gray-600">Cost Savings Generated;
         {/* CTA Section */}
-        </div><section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+        </div>
+<section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           </section>
 <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -216,9 +211,9 @@ const CaseStudiesPage: React.FC = () => {
                 className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
                 View Our Services;
             </div>
-          </div>
+</div>
         </section>
-      </div>
+</div>
     </React.Fragment>
   ),
 }
@@ -230,4 +225,32 @@ export default CaseStudiesPage</Link>
   </p>
   </h1>
   </Link>
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></p></p></p></p></p></p></h3></h4></h4></h4></section></section></section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div></div></span></p></p></p></p></p></p></h3></h4></h4></h4></section></section></section>

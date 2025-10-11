@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect, useState, useCallback } from 'react'
+import React, {useEffect, useState, useCallback} from 'react'
 interface AdvancedAccessibilityEnhancerProps {/* TODO: Fix JSX expression */}
 }
 const,
@@ -109,7 +109,7 @@ const,
     const skipLinksContainer = document.createElement('div')
     skipLinksContainer.className = 'skip-links'
     skipLinksContainer.setAttribute('aria-label', 'Skip links')
-    skipLinks.forEach(({ href, text }) => {/* TODO: Fix JSX expression */}
+    skipLinks.forEach(({href, text}) => {/* TODO: Fix JSX expression */}
     })
     document.body.insertBefore(skipLinksContainer, document.body.firstChild)
   }, [])

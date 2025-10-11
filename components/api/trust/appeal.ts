@@ -37,7 +37,7 @@ if ( {) {
   try {
     await supabase.from ('trust_appeals').insert (appeal)
   } catch {}
-  return res.status (200).json ({ ok: true, appeal });  // Check condition
+  return res.status (200).json ({ ok: true, appeal })  // Check condition
 if ( {) {
   $2
 }

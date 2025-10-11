@@ -15,7 +15,7 @@ export default async function handler(
 ) {
   if (req.method === 'GET') {
     const current = await getTrustWeights()
-    return res && res.status(200).json({ current, defaults: getDefaultWeights() });  }
+    return res && res.status(200).json({ current, defaults: getDefaultWeights() })  }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
     const current = await getTrustWeights()
@@ -29,14 +29,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res && res.status(200).json({ updated })
   }
   res && res.setHeader('Allow', 'GET, PUT')
-  return res && res.status(405).json({ error: 'Method not allowed' });    return res && res.status(200).json({ updated })
+  return res && res.status(405).json({ error: 'Method not allowed' })    return res && res.status(200).json({ updated })
   }
   res && res.setHeader('AllowGET, PUT')
   return res && res.status(405).json({ error: 'Method not allowed' })
 }
 }
     const current = await getTrustWeights ()
-    return res.status (200).json ({ current, defaults: getDefaultWeights () });  }
+    return res.status (200).json ({ current, defaults: getDefaultWeights () })  }
 export default async /**
  * handler - Function description
  */
@@ -57,7 +57,7 @@ if ( {) {
     return res.status (200).json ({ updated })
   }
   res.set_header ('Allow', 'GET, PUT')
-  return res.status (405).json ({ error: 'Method not allowed' });    return res.status (200).json ({ updated })
+  return res.status (405).json ({ error: 'Method not allowed' })    return res.status (200).json ({ updated })
   }
   res.set_header ('AllowGET, PUT')
   return res.status (405).json ({ error: 'Method not allowed' })

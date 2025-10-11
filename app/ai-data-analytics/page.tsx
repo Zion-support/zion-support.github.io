@@ -2,52 +2,38 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
+import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart} from 'lucide-react';
 
-const AiDataAnalyticsPage: React.FC = () => {
-  const features = [
+const AiDataAnalyticsPage: React.FC = () => {const features = [
     {
       icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: TrendingUp,
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']},
+    {icon: TrendingUp,
       title: 'Performance Optimization',
       description: 'AI-powered insights to optimize your business performance.',
-      benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']
-    },
-    {
-      icon: PieChart,
+      benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']},
+    {icon: PieChart,
       title: 'Data Visualization',
       description: 'Transform complex data into clear, actionable insights.',
-      benefits: ['Interactive charts', 'Custom reports', 'Data export', 'Visual storytelling']
-    },
-    {
-      icon: Target,
+      benefits: ['Interactive charts', 'Custom reports', 'Data export', 'Visual storytelling']},
+    {icon: Target,
       title: 'Predictive Modeling',
       description: 'Forecast future trends and outcomes with advanced statistical models',
-      details: ['Sales Forecasting', 'Demand Planning', 'Risk Assessment', 'Trend Analysis']
-    },
-    {
-      icon: Database,
+      details: ['Sales Forecasting', 'Demand Planning', 'Risk Assessment', 'Trend Analysis']},
+    {icon: Database,
       title: 'Data Integration',
       description: 'Connect and analyze data from multiple sources seamlessly',
-      details: ['API Integrations', 'Database Connections', 'File Uploads', 'Cloud Storage']
-    },
-    {
-      icon: Shield,
+      details: ['API Integrations', 'Database Connections', 'File Uploads', 'Cloud Storage']},
+    {icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with full compliance and data protection',
-      details: ['End-to-End Encryption', 'GDPR Compliance', 'SOC 2 Certified', 'Role-Based Access']
-    },
-    {
-      icon: Zap,
+      details: ['End-to-End Encryption', 'GDPR Compliance', 'SOC 2 Certified', 'Role-Based Access']},
+    {icon: Zap,
       title: 'Automated Reports',
       description: 'Generate comprehensive reports automatically on your schedule',
-      details: ['Scheduled Reports', 'Custom Templates', 'Email Delivery', 'PDF Export']
-    }
+      details: ['Scheduled Reports', 'Custom Templates', 'Email Delivery', 'PDF Export']}
   ]
 
 const benefits = [
@@ -58,17 +44,16 @@ const benefits = [
 'Real-time processing and analysis',
     'Seamless integration with existing systems'
   ]
-const PagePage: React.FC = () => {
-  return (
-<></>
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const PagePage: React.FC = () => {return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
         {/* Hero Section */}
-        </div><section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8">
+        </div>
+<section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Page
@@ -78,8 +63,7 @@ const PagePage: React.FC = () => {
               </p>
 
   const pricingPlans = [
-    {
-      name: 'Starter',
+    {name: 'Starter',
       price: '$199',
       period: '/month',
       description: 'Perfect for small teams',
@@ -91,10 +75,8 @@ const PagePage: React.FC = () => {
         'Email support',
         '1 user'
       ],
-      popular: false
-    },
-    {
-      name: 'Professional',
+      popular: false},
+    {name: 'Professional',
       price: '$499',
       period: '/month',
       description: 'Ideal for growing businesses',
@@ -107,10 +89,8 @@ const PagePage: React.FC = () => {
         '5 users',
         'API access'
       ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
+      popular: true},
+    {name: 'Enterprise',
       price: '$1,299',
       period: '/month',
       description: 'For large organizations',
@@ -124,72 +104,54 @@ const PagePage: React.FC = () => {
         'Custom integrations',
         'On-premise deployment'
       ],
-      popular: false
-    }
+      popular: false}
   ]
 
   const stats = [
-{ value: '40%', label: 'Faster Decision Making', icon: <Clock className="w-8 h-8 text-green-400" /&gt },
-    { value: '85%', label: 'Accuracy Improvement', icon: <Target className="w-8 h-8 text-blue-400" /&gt },
-    { value: '60%', label: 'Cost Reduction', icon: <DollarSign className="w-8 h-8 text-purple-400" /&gt },
-    { value: '99.9%', label: 'Uptime Guarantee', icon: <Shield className="w-8 h-8 text-cyan-400" /&gt }
+{value: '40%', label: 'Faster Decision Making', icon: <Clock className="w-8 h-8 text-green-400" /&gt},
+    {value: '85%', label: 'Accuracy Improvement', icon: <Target className="w-8 h-8 text-blue-400" /&gt},
+    {value: '60%', label: 'Cost Reduction', icon: <DollarSign className="w-8 h-8 text-purple-400" /&gt},
+    {value: '99.9%', label: 'Uptime Guarantee', icon: <Shield className="w-8 h-8 text-cyan-400" /&gt}
 
   ]
 
   const useCases = [
-    {
-      title: 'Sales Analytics',
+    {title: 'Sales Analytics',
       description: 'Track sales performance, identify top performers, and predict future revenue',
-icon: <TrendingUp className="w-8 h-8 text-green-400" /&gt
-
-    },
-    {
-      title: 'Customer Insights',
+icon: <TrendingUp className="w-8 h-8 text-green-400" /&gt},
+    {title: 'Customer Insights',
       description: 'Understand customer behavior, preferences, and lifetime value',
-icon: <Users className="w-8 h-8 text-blue-400" /&gt
-
-    },
-    {
-      title: 'Operational Efficiency',
+icon: <Users className="w-8 h-8 text-blue-400" /&gt},
+    {title: 'Operational Efficiency',
       description: 'Optimize processes, reduce waste, and improve productivity',
-icon: <Zap className="w-8 h-8 text-yellow-400" /&gt
-
-    },
-    {
-      title: 'Financial Forecasting',
+icon: <Zap className="w-8 h-8 text-yellow-400" /&gt},
+    {title: 'Financial Forecasting',
       description: 'Predict cash flow, budget planning, and financial performance',
-icon: <DollarSign className="w-8 h-8 text-purple-400" / & gt
-
-    }
+icon: <DollarSign className="w-8 h-8 text-purple-400" / & gt}
   ]
 
   const testimonials = [
-    {
-      name: 'David Kim',
+    {name: 'David Kim',
       role: 'Chief Data Officer, FinanceFlow',
       content: 'AI Data Analytics helped us identify $2M in cost savings opportunities within the first month.',
       rating: 5,
-      company: 'FinanceFlow'
-    },
-    {
-      name: 'Lisa Wang',
+      company: 'FinanceFlow'},
+    {name: 'Lisa Wang',
       role: 'VP Analytics, RetailMax',
       content: 'The predictive models are incredibly accurate. We can now forecast demand with 95% accuracy.',
       rating: 5,
-      company: 'RetailMax'
-    },
-    {
-      name: 'James Rodriguez',
+      company: 'RetailMax'},
+    {name: 'James Rodriguez',
       role: 'Head of BI, TechStart',
       content: 'Implementation was smooth and the insights are game-changing. ROI was achieved in 3 months.',
       rating: 5,
-      company: 'TechStart'
-    }
+      company: 'TechStart'}
   ]
 
   return (
 </div>
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+</div>
 <Navigation />
       
       <main className="pt-20">
@@ -213,16 +175,15 @@ icon: <DollarSign className="w-8 h-8 text-purple-400" / & gt
                 Learn More
               </button>
 </div>
-
-          </div>
-        </div>
+</div>
+</div>
       </section>
 
 {/* Content Section */}
         <section className="py-16 px-4 sm: px-6 lg:px-8">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Coming Soon
@@ -237,18 +198,18 @@ icon: <DollarSign className="w-8 h-8 text-purple-400" / & gt
                 </div>
               ))}
             </div>
-          </div>
+</div>
         </section>
 {/* Benefits Section */}
         </button><section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our AI Solutions ? </h2>
               <p className="text-xl text-gray-300">Transform your business with intelligent automation</p>
             </div>
-<div className="grid grid-cols-1 md : grid-cols-2 lg:grid-cols-3 gap-8">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 </div>
 <div key={index} className="flex items-start space-x-3">
@@ -265,7 +226,7 @@ icon: <DollarSign className="w-8 h-8 text-purple-400" / & gt
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         </section>
 <div className="max-w-7xl mx-auto">
-          </div>
+</div>
 <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               </div>
@@ -280,10 +241,10 @@ icon: <DollarSign className="w-8 h-8 text-purple-400" / & gt
 <div className="text-gray-300">
                   {stat.label}
                 </div>
-              </div>
+</div>
             ))}
 </div>
-        </div>
+</div>
       </section>
 
 {/* CTA Section */}
@@ -304,7 +265,7 @@ icon: <DollarSign className="w-8 h-8 text-purple-400" / & gt
                 Contact Sales
 </button>
             </div>
-          </div>
+</div>
         </section>
 </div>
       
@@ -321,7 +282,7 @@ icon: <DollarSign className="w-8 h-8 text-purple-400" / & gt
               </div>
             ))}
           </div>
-        </div>
+</div>
       </section>
 export default PagePage;
 

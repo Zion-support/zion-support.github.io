@@ -1,4 +1,4 @@
-import React, { Suspense, lazy, useEffect } from 'react'
+import React, {Suspense, lazy, useEffect} from 'react'
 import './index.css'
 // Lazy load pages for better performance;
 // const Home = lazy(() => import('./pages/Home'))
@@ -9,12 +9,11 @@ import './index.css'
 // const Team = lazy(() => import('./pages/Team'))
 // const Privacy = lazy(() => import('./pages/Privacy'))
 // const Terms = lazy(() => import('./pages/Terms'))
-function App() {
-  useEffect(() => {
+function App() {useEffect(() => {
     // Initialize basic optimizations;
     //     // Cleanup on unmount;
     return () => {
-      //       }
+      //}
   }, [])
   return(<ErrorBoundary>
       <div>
@@ -45,7 +44,8 @@ function App() {/* TODO: Fix JSX expression */}
             </Routes>)
           </Suspense>)
         </Router>)
-      </div>)
+      </div>
+)
     </ErrorBoundary>)
   )
 }
@@ -63,9 +63,8 @@ class ErrorBoundary extends React.Component<
   r: true }
   }
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {,
-    //     }
-  render() {
-    if (this.state.hasError) {
+    //}
+  render() {if (this.state.hasError) {
       return(this.props.fallback || ()
           <div className="min-h-screen flex items-center justify-center bg-gray-50">)
             </div>
@@ -80,7 +79,7 @@ class ErrorBoundary extends React.Component<
 <div className="text-center">
               <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong;
               <$2 />
-                onClick={() => this.setState({ hasError: false })
+                onClick={() => this.setState({ hasError: false})
                 className="bg-blue-600 text-white px-4 py-2 rounded hover: bg-blue-700"
   componentDidCatch(erro,
   r: Error, errorInf)
@@ -94,10 +93,13 @@ class ErrorBoundary extends React.Component<
                 Try again;
               </button>
             </div>
-          </div>)),
+</div>)),
     }
     return this.props.children;
   }
 }
 export default App;
-"</div></div></div></div></div></h1>
+"</div>
+</div>
+</div>
+</div></div></h1>

@@ -1,7 +1,5 @@
 import React from 'react'
-interface ResponsiveContainerProps {
-    // TODO: Add content;
-  }
+interface ResponsiveContainerProps {// TODO: Add content;}
 }
   childre,
   n: React.ReactNode;
@@ -79,17 +77,16 @@ const,
     return `${baseClasses} ${responsiveClasses}`.trim()
   }
   return (
-    <div className="responsivecontainer">
+<div className="responsivecontainer">
       {/* Component content */}
-    </div>)
+    </div>
+)
   )
 }
 // Hook for responsive values;
 export const useResponsiveValue = {}
           <T,>(value,
-  s: {
-    // sm?: T;
-  }
+  s: {// sm?: T;}
 // md?: T;
 // lg?: T;
 // xl?: T;

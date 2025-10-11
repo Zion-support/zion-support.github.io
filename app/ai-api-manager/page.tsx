@@ -2,34 +2,26 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
+import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart} from 'lucide-react';
 
-const AiApiManagerPage: React.FC = () => {
-  const features = [
+const AiApiManagerPage: React.FC = () => {const features = [
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart automation', 'Predictive analytics', 'Intelligent insights', 'Automated processes']
-    },
-    {
-      icon: BarChart,
+      benefits: ['Smart automation', 'Predictive analytics', 'Intelligent insights', 'Automated processes']},
+    {icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time monitoring', 'Performance metrics', 'Data visualization', 'Custom reports']
-    },
-    {
-      icon: Zap,
+      benefits: ['Real-time monitoring', 'Performance metrics', 'Data visualization', 'Custom reports']},
+    {icon: Zap,
       title: 'High Performance',
       description: 'Lightning-fast processing with optimized algorithms and infrastructure.',
-      benefits: ['Fast processing', 'Optimized algorithms', 'Scalable infrastructure', 'High availability']
-    },
-    {
-      icon: Shield,
+      benefits: ['Fast processing', 'Optimized algorithms', 'Scalable infrastructure', 'High availability']},
+    {icon: Shield,
       title: 'Secure  & Reliable',
       description: 'Enterprise-grade security and reliability for mission-critical applications.',
-      benefits: ['Data encryption', 'Access control', 'Audit logging', 'Compliance ready']
-    }
+      benefits: ['Data encryption', 'Access control', 'Audit logging', 'Compliance ready']}
   ]
 
 const benefits = [
@@ -40,18 +32,17 @@ const benefits = [
     '24/7 availability',
     'Expert support'
   ]
-const PagePage: React.FC = () => {
-  return (
-    <></>
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const PagePage: React.FC = () => {return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
 
         {/* Hero Section */}
-        </div><section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8">
+        </div>
+<section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Page
@@ -60,13 +51,13 @@ const PagePage: React.FC = () => {
                 Discover our comprehensive solutions designed to transform your business.
               </p>
             </div>
-          </div>
+</div>
         </section>
 {/* Content Section */}
         <section className="py-16 px-4 sm: px-6 lg:px-8">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Coming Soon
@@ -80,9 +71,9 @@ const PagePage: React.FC = () => {
 
               </button>
             </div>
-          </div>
+</div>
         </section>
-      </div>
+</div>
       
 <Helmet>
         <title>Page Title - Zion Tech Group</title>
@@ -97,7 +88,7 @@ const PagePage: React.FC = () => {
         </main><section className="relative py-20 px-4 sm: px-6 lg:px-8">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Page Title
@@ -114,15 +105,15 @@ const PagePage: React.FC = () => {
                   Learn More
                 </button>
               </div>
-            </div>
-          </div>
+</div>
+</div>
         </section>
 
         {/* Features Section */}
         <section className="py-20 px-4">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center mb-16">
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
                 Key Features
@@ -154,14 +145,14 @@ const PagePage: React.FC = () => {
                 </div>
 ))}
             </div>
-          </div>
+</div>
         </section>
 
         {/* Benefits Section */}
         <section className="py-20 px-4">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center mb-16">
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
                 Why Choose Our Solution ? </h2>
@@ -169,7 +160,7 @@ const PagePage: React.FC = () => {
                 Proven results that drive business growth
               </p>
             </div>
-<div className="grid grid-cols-1 md : grid-cols-2 lg:grid-cols-3 gap-8">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 </div>
 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
@@ -181,7 +172,7 @@ const PagePage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
+</div>
         </section>
 
         {/* CTA Section */}
@@ -205,8 +196,8 @@ const PagePage: React.FC = () => {
                   Learn More
                 </button>
               </div>
-            </div>
-          </div>
+</div>
+</div>
         </section>
       </main>
 

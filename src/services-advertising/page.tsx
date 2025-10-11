@@ -1,9 +1,11 @@
-import { Link } from 'react-router-dom'
-import { ArrowLeft, ArrowRight, Target, CheckCircle, Star } from 'lucide-react'
+import {Link} from 'react-router-dom'
+import {ArrowLeft, ArrowRight, Target, CheckCircle, Star} from 'lucide-react'
 export default function ServicesAdvertisingPage() {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-  return (<div>Coming Soon</div>)
+  return (
+<div>Coming Soon</div>
+)
   )
           <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Header */}"
@@ -16,9 +18,8 @@ export default function ServicesAdvertisingPage() {/* TODO: Fix JSX expression *
             <ArrowLeft className="w-4 h-4 mr-2" /></ArrowLeft>
 // Back to Home;
 import React from 'react',
-export default function ServicesAdvertisingPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+export default function ServicesAdvertisingPage() {return (
+<div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Header */}
       <header className="bg-white shadow-sm border-b">
         </div>
@@ -61,7 +62,8 @@ href="#services" className="border-2 border-white text-white hover:bg-white hove
                 View Our Services,
       </section>
       {/* Key Metrics */}"
-      </div><section className="py-16 bg-white"></section>"
+      </div>
+<section className="py-16 bg-white"></section>"
         < className="max-w-7xl mx-auto px-4,$2 />
   sm:px-6,"
   lg:px-8"></div>"
@@ -84,7 +86,8 @@ Our AI-powered advertising delivers measurable business impact,"
               <div className="text-4xl font-bold text-orange-600 mb-2">24/7</div>"
               <div className="text-gray-600">Campaign Optimization;
       {/* Services Section */}"
-      </div><section id="services" className="py-16 bg-gray-50">
+      </div>
+<section id="services" className="py-16 bg-gray-50">
 AI Advertising Solutions;
               Comprehensive AI-powered advertising services for maximum impact;"
           < className="grid grid-cols-1,$2 />
@@ -209,7 +212,8 @@ Transparent Pricing;
                   <span>White-label options;
                 Contact Sales;
       {/* CTA Section */}
-      </div><section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+      </div>
+<section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         </section>
 <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -225,9 +229,9 @@ export default ServicesAdvertisingPage</p>
   </h2>
   </div>
   </section>
-  </div>
-  </div>
-  </div>
+</div>
+</div>
+</div>
   </Link>
   </div>
   </Link>

@@ -106,7 +106,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       { tag: 'node' },
       { tag: 'ai' },
       { tag: 'react' },
-    ]).forEach(t => { tagCounts[t.tag] = (tagCounts[t.tag] || 0) + 1; })
+    ]).forEach(t => {tagCounts[t.tag] = (tagCounts[t.tag] || 0) + 1})
     res.status(200).json({
       profileViews,
       quoteInvites,

@@ -46,7 +46,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== 'GET') {
     return res.setHeader('Allow', 'GET').status(405).end('Method Not Allowed')
   }
-  const { slug, lang } = req.query as { slug: string; lang?: string }
+  const { slug, lang } = req.query as { slug: string lang?: string }
   try {
     if (hasSupabase) {
       const { data, error } = await supabaseClient.from('talent_profiles').select('*').eq('slug', slug).single()

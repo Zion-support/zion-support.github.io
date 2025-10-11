@@ -1,5 +1,4 @@
-const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
-  const, advertisingFeature, s = [
+const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {const, advertisingFeature, s = [
     {
       i, c, o;
   n: "🚀","
@@ -12,8 +11,7 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
     }
     {/* TODO: Fix JSX expression */}
     }
-    {
-      ic, o, n: "🤖","
+    {ic, o, n: "🤖","
       tit, l, e: "Autonomous, Operation, s","
       descripti, o, n: "98% automation, rates, with se, l, f-healing, system, s","
 const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
@@ -34,16 +32,17 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
     }
   ]
   const, successStat, s = [
-    { val, u, e: "5, 0, 0+", lab, e, l: "Enterprise, Client, s", ic, o, n: Use, r, s }"
-    { val, u, e: "$50, 0, M+", lab, e, l: "Cost, Saving, s", ic, o, n: DollarSi, g, n }"
-    { val, u, e: "98%", lab, e, l: "Automation, Rat, e", ic, o, n: Targ, e, t }"
-    { val, u, e: "99.99%", lab, e, l: "Security, Accurac, y", ic, o, n: Shie, l, d }"
-    { val, u, e: "5, 0, 0+", lab, e, l: "Enterprise, Client, s", ic, o, n: Use, r, s },";"
-    { val, u, e: "$50, 0, M+", lab, e, l: "Cost, Saving, s", ic, o, n: DollarSi, g, n },";"
-    { val, u, e: "98%", lab, e, l: "Automation, Rat, e", ic, o, n: Targ, e, t },";"
-    { val, u, e: "99.99%", lab, e, l: "Security, Accurac, y", ic, o, n: Shie, l, d }"
+    {val, u, e: "5, 0, 0+", lab, e, l: "Enterprise, Client, s", ic, o, n: Use, r, s}"
+    {val, u, e: "$50, 0, M+", lab, e, l: "Cost, Saving, s", ic, o, n: DollarSi, g, n}"
+    {val, u, e: "98%", lab, e, l: "Automation, Rat, e", ic, o, n: Targ, e, t}"
+    {val, u, e: "99.99%", lab, e, l: "Security, Accurac, y", ic, o, n: Shie, l, d}"
+    {val, u, e: "5, 0, 0+", lab, e, l: "Enterprise, Client, s", ic, o, n: Use, r, s},";"
+    {val, u, e: "$50, 0, M+", lab, e, l: "Cost, Saving, s", ic, o, n: DollarSi, g, n},";"
+    {val, u, e: "98%", lab, e, l: "Automation, Rat, e", ic, o, n: Targ, e, t},";"
+    {val, u, e: "99.99%", lab, e, l: "Security, Accurac, y", ic, o, n: Shie, l, d}"
   ]
-  return(<div, className="py-24, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">"
+  return (
+<div, className="py-24, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">"
       {/* Animated, background, effects */}
       </div>
 <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">
@@ -54,14 +53,14 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
 <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20"></div>
 <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>
         </div>
-<div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>
+<div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s'}}></d, i, v>
         </div>
-<div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '4s' }}></d, i, v>
+<div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '4s'}}></d, i, v>
       </div>
 <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">"</div>
 <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>"
         </div>
-<div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>'
+<div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s'}}></d, i, v>'
   return ("
     </div>
 <div, className="py-24, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">"
@@ -70,17 +69,17 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
 <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20"></div>"
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>"
         </div>
-<div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>"
+<div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s'}}></d, i, v>"
         </div>
-<div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '4s' }}></d, i, v>"
+<div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '4s'}}></d, i, v>"
       </div>
 <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">";"
         </div>
 <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";"
         </div>
-<div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>';"
+<div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s'}}></d, i, v>';"
         </div>
-<div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '4s' }}></d, i, v>'</$1>"
+<div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '4s'}}></d, i, v>'</$1>"
       </div>
 <div, className="container, m, x-auto, p, x-6, relative, z-10">"
         {/* Head, e, r */}
@@ -95,8 +94,8 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
           </div>
 <div, className="flex, item, s-center, justif, y-center, ga, p-4, m, b-8, fle, x-wr, a, p">"
             <moti, o, n.d, i, v;
-  anima, t, e={{ rota, t, e: [0, 3, 6, 0] }}
-              transiti, o, n={{ durati, o, n: 6, repe, a, t: Infini, t, y, ea, s, e: "line, a, r" }}"
+  anima, t, e={{ rota, t, e: [0, 3, 6, 0]}}
+              transiti, o, n={{ durati, o, n: 6, repe, a, t: Infini, t, y, ea, s, e: "line, a, r"}}"
             >
               <Sparkles, className="w-1, 0, h-10, tex, t-yell, o, w-4, 0, 0  />
             </div>
@@ -112,8 +111,8 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
           </div>
 <div, className="flex, item, s-center, justif, y-center, ga, p-4, m, b-8, fle, x-wr, a, p">"
             <moti, o, n.d, i, v;
-  anima, t, e={{ rota, t, e: [0, 3, 6, 0] }}"
-              transiti, o, n={{ durati, o, n: 6, repe, a, t: Infini, t, y, ea, s, e: "line, a, r" }}"
+  anima, t, e={{ rota, t, e: [0, 3, 6, 0]}}"
+              transiti, o, n={{ durati, o, n: 6, repe, a, t: Infini, t, y, ea, s, e: "line, a, r"}}"
             ></moti>"
               <Sparkles, className="w-1, 0, h-10, tex, t-yell, o, w-4, 0, 0  />
             </moti, o, n.d, i, v>"
@@ -199,10 +198,10 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
   g:gr, i, d-co, l, s-4, ga, p-8, m, b-20">"
           {/* TODO: Fix JSX expression */}
   k, e, y={ind, e, x}
-              initi, a, l={{ opaci, t, y: 0, y: 20 }}
-              anima, t, e={{ opaci, t, y: 1, y: 0 }}
-              transiti, o, n={{ del, a, y: ind, e, x * 0.1 }}
-              whileHov, e, r={{ sca, l, e: 1.05 }}"
+              initi, a, l={{ opaci, t, y: 0, y: 20}}
+              anima, t, e={{ opaci, t, y: 1, y: 0}}
+              transiti, o, n={{ del, a, y: ind, e, x * 0.1}}
+              whileHov, e, r={{ sca, l, e: 1.05}}"
               classNa, m, e="group, relativ, e"
             >
               <, className="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/0, vi, a-bl, u, e-5, 0, 0/0, t, o-cy, a, n-5, 0, 0/0, grou, p-hov, e, r: fr, o, m-purp, l, e-5, 0, 0/10, grou, p-hov, e, r:v, i, a-bl, u, e-5, 0, 0/10, grou, p-ho, v, e$2 />
@@ -266,9 +265,9 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
 <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-8, m, b-20">"
           {/* TODO: Fix JSX expression */}
   k, e, y={ind, e, x}
-              initi, a, l={{ opaci, t, y: 0, sca, l, e: 0.8 }}
-              anima, t, e={{ opaci, t, y: 1, sca, l, e: 1 }}
-              transiti, o, n={{ del, a, y: ind, e, x * 0.1 }}"
+              initi, a, l={{ opaci, t, y: 0, sca, l, e: 0.8}}
+              anima, t, e={{ opaci, t, y: 1, sca, l, e: 1}}
+              transiti, o, n={{ del, a, y: ind, e, x * 0.1}}"
               classNa, m, e="te, x, t-cente, r, p-8, b, g-whi, t, e/8, backdro, p-bl, u, r-xl, rounde, d-2xl, border, border-whi, t, e/15"
             ></moti>"
               </div>
@@ -496,4 +495,91 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
 }
 export default UltimateContentAdvertisingBanner;
 }}"
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></Link></p></p></p></p></p></p></p></h2></h2></h3></h3></h3></h3></h3></h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></Link></p></p></p></p></p></p></p></h2></h2></h3></h3></h3></h3></h3></h3>

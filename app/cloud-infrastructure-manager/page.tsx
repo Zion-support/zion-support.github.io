@@ -2,19 +2,18 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
+import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart} from 'lucide-react';
 
-const PagePage: React.FC = () => {
-  return (
-    <></>
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const PagePage: React.FC = () => {return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
         {/* Hero Section */}
-        </div><section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8">
+        </div>
+<section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Page
@@ -23,30 +22,22 @@ const PagePage: React.FC = () => {
                 Discover our comprehensive solutions designed to transform your business.
               </p>
 
-    {
-      icon: Brain,
+    {icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart automation', 'Predictive analytics', 'Intelligent insights', 'Automated processes']
-    },
-    {
-      icon: BarChart,
+      benefits: ['Smart automation', 'Predictive analytics', 'Intelligent insights', 'Automated processes']},
+    {icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time monitoring', 'Performance metrics', 'Data visualization', 'Custom reports']
-    },
-    {
-      icon: Zap,
+      benefits: ['Real-time monitoring', 'Performance metrics', 'Data visualization', 'Custom reports']},
+    {icon: Zap,
       title: 'High Performance',
       description: 'Lightning-fast processing with optimized algorithms and infrastructure.',
-      benefits: ['Fast processing', 'Optimized algorithms', 'Scalable infrastructure', 'High availability']
-    },
-    {
-      icon: Shield,
+      benefits: ['Fast processing', 'Optimized algorithms', 'Scalable infrastructure', 'High availability']},
+    {icon: Shield,
       title: 'Secure & Reliable',
       description: 'Enterprise-grade security and reliability for mission-critical applications.',
-      benefits: ['Data encryption', 'Access control', 'Audit logging', 'Compliance ready']
-    }
+      benefits: ['Data encryption', 'Access control', 'Audit logging', 'Compliance ready']}
   ]
 
   const benefits = [
@@ -72,7 +63,7 @@ const PagePage: React.FC = () => {
         </main><section className="relative py-20 px-4 sm: px-6 lg:px-8">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Page Title
@@ -89,14 +80,14 @@ const PagePage: React.FC = () => {
                   Learn More
                 </button>
               </div>
-            </div>
-          </div>
+</div>
+</div>
         </section>
 {/* Features Section */}
         <section className="py-20 px-4">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center mb-16">
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
                 Key Features
@@ -128,14 +119,14 @@ const PagePage: React.FC = () => {
                 </div>
               ))}
 </div>
-          </div>
+</div>
         </section>
 
 {/* Content Section */}
         <section className="py-16 px-4 sm: px-6 lg:px-8">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Coming Soon
@@ -148,14 +139,14 @@ const PagePage: React.FC = () => {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
             </div>
-          </div>
+</div>
         </section>
-      </div>
+</div>
       
 
               ))}
             </div>
-          </div>
+</div>
         </section>
 
         {/* CTA Section */}
@@ -170,7 +161,7 @@ const PagePage: React.FC = () => {
                 Contact our experts to discuss your requirements and get started today.
               </p>
               </div>
-<div className="flex flex-col sm : flex-row gap-4 justify-center">
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                   Contact Us
                 </button>
@@ -178,7 +169,7 @@ const PagePage: React.FC = () => {
                   Learn More
                 </button>
               </div>
-            </div>
+</div>
 </div>
 
         </section>

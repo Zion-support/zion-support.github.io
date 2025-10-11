@@ -1,8 +1,7 @@
-import, Reac, t, { useSta, t, e } fr, o, m "rea, c, t";"
-impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";"
-impo, r, t { Sear, c, h, MessageCirc, l, e, Pho, n, e, Ma, i, l, BookOp, e, n, Vid, e, o, Use, r, s, Z, a, p, Clo, c, k, CheckCirc, l, e } fr, o, m "luci, d, e-rea, c, t"
-const, Suppor, t: Rea, c, t.FC = () => {
-  con, s, t [searchQue, r, y, setSearchQue, r, y] = useSta, t, e('')
+import, Reac, t, {useSta, t, e} fr, o, m "rea, c, t";"
+impo, r, t {Li, n, k} fr, o, m "rea, c, t-rout, e, r-d, o, m";"
+impo, r, t {Sear, c, h, MessageCirc, l, e, Pho, n, e, Ma, i, l, BookOp, e, n, Vid, e, o, Use, r, s, Z, a, p, Clo, c, k, CheckCirc, l, e} fr, o, m "luci, d, e-rea, c, t"
+const, Suppor, t: Rea, c, t.FC = () => {con, s, t [searchQue, r, y, setSearchQue, r, y] = useSta, t, e('')
   con, s, t [selectedCatego, r, y, setSelectedCatego, r, y] = useSta, t, e('a, l, l')
   const, supportChannel, s = [
     {
@@ -11,26 +10,20 @@ const, Suppor, t: Rea, c, t.FC = () => {
       descripti, o, n: 'Speak, directly, with our, technical, experts'
       availabili, t, y: '24/7',
       responseTi, m, e: '< 2, minute, s'
-      conta, c, t: '+1 (5, 5, 5) 1, 2, 3-45, 6, 7'
-    }
-    {
-      ic, o, n: MessageCirc, l, e;
+      conta, c, t: '+1 (5, 5, 5) 1, 2, 3-45, 6, 7'}
+    {ic, o, n: MessageCirc, l, e;
       tit, l, e: 'Live, Cha, t'
       descripti, o, n: 'Get, instant, help through, our, chat syst, e, m'
       availabili, t, y: '24/7',
       responseTi, m, e: '< 30, second, s'
-      conta, c, t: 'Start, Cha, t'
-    }
-    {
-      ic, o, n: Ma, i, l;
+      conta, c, t: 'Start, Cha, t'}
+    {ic, o, n: Ma, i, l;
       tit, l, e: 'Email, Suppor, t'
       descripti, o, n: 'Send, us, detailed questions, and, get comprehensive, answer, s'
       availabili, t, y: '24/7',
       responseTi, m, e: '< 2, hour, s'
-      conta, c, t: 'suppo, r, t@ziontechgro, u, p.c, o, m'
-    }
-    {
-      ic, o, n: Vid, e, o;
+      conta, c, t: 'suppo, r, t@ziontechgro, u, p.c, o, m'}
+    {ic, o, n: Vid, e, o;
       tit, l, e: 'Video, Cal, l'
       descripti, o, n: 'Schedule, a, screen sharing, session, with our, expert, s'
       availabili, t, y: 'Business, Hour, s'
@@ -66,12 +59,10 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
     }
-    {
-      catego, r, y: 'gener, a, l'
+    {catego, r, y: 'gener, a, l'
       questi, o, n: 'What, is, your response, time, for support, request, s?'
       answ, e, r: 'We, guarantee, response times, based, on your, support, pla;
-  n: Premi, u, m (30, minute, s), Standa, r, d (2, hour, s), Bas, i, c (24, hour, s).'
-    }
+  n: Premi, u, m (30, minute, s), Standa, r, d (2, hour, s), Bas, i, c (24, hour, s).'}
   ]
   const, filteredFaq, s = fa, q, s.filt, e, r(f, a, q => )
     {/* TODO: Fix JSX expression */}
@@ -91,7 +82,8 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         <link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/suppo, r, t"  />
       <div, className="m, i, n-h-screen, b, g-gr, a, y-50">)
         {/* Hero, Sectio, n */})
-        </div><section, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, p, y-20">)
+        </div>
+<section, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, p, y-20">)
           </section>
 <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">),
             </div>
@@ -100,7 +92,8 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
       </div>
 <div, className="m, i, n-h-screen, b, g-gr, a, y-50">
         {/* Hero, Sectio, n */}
-        </div><section, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, p, y-20">
+        </div>
+<section, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, p, y-20">
           </section>
 <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">
             </div>
@@ -117,7 +110,8 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
       </div>
 <div, className="m, i, n-h-screen, b, g-gr, a, y-50">
         {/* Hero, Sectio, n */}"
-        </div><section, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, p, y-20"></section>"
+        </div>
+<section, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, p, y-20"></section>"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8"></div>"
             <div, className="te, x, t-cent, e, r"></div>"
               <, className="te, x, t-4x, l, m,"$2 />
@@ -155,14 +149,16 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
 <div, className="m, a, x-w-7xl, m, x-au, t, o">
             </div>
 <div, className="te, x, t-center, m, b-16">
-        </div><section, className="py-20, p, x-4, s, m: px-6, l, g:px-8">
+        </div>
+<section, className="py-20, p, x-4, s, m: px-6, l, g:px-8">
           </section>
 <div, className="m, a, x-w-7xl, m, x-au, t, o">
             </div>
 <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
         {/* Support, Channel, s */}"
-        </div><section, className="py-20, p, x-4, s, m: px-6, l, g:px-8"></section>"
+        </div>
+<section, className="py-20, p, x-4, s, m: px-6, l, g:px-8"></section>"
           <div, className="m, a, x-w-7xl, m, x-au, t, o"></div>"
             <div, className="te, x, t-center, m, b-16"></div>"
               <h2, className="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
@@ -224,7 +220,8 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
 <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
         {/* FAQ, Sectio, n */}"
-        </div><section, className="py-20, p, x-4, s, m: px-6, l, g:px-8, b, g-whi, t, e"></section>"
+        </div>
+<section, className="py-20, p, x-4, s, m: px-6, l, g:px-8, b, g-whi, t, e"></section>"
           <div, className="m, a, x-w-7xl, m, x-au, t, o"></div>"
             <div, className="te, x, t-center, m, b-16"></div>"
               <h2, className="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
@@ -239,14 +236,16 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
   ]
   const, quickAction, s = [
-    { tit, l, e: 'Report, a, Bug', descripti, o, n: 'Found, an, issue? Let, us, know', li, n, k: '/conta, c, t', ic, o, n: '🐛' }"
-    { tit, l, e: 'Request, a, Feature', descripti, o, n: "Have, an, idea? We'd, love, to hear, i, t", li, n, k: '/conta, c, t', ic, o, n: '💡' }
-    { tit, l, e: 'Schedule, Trainin, g', descripti, o, n: 'Book, a, training session, for, your te, a, m', li, n, k: '/traini, n, g', ic, o, n: '🎓' }
-    { tit, l, e: 'View, Status, Page', descripti, o, n: 'Check, system, status and, uptim, e', li, n, k: '/stat, u, s', ic, o, n: '📊' }
+    {tit, l, e: 'Report, a, Bug', descripti, o, n: 'Found, an, issue? Let, us, know', li, n, k: '/conta, c, t', ic, o, n: '🐛'}"
+    {tit, l, e: 'Request, a, Feature', descripti, o, n: "Have, an, idea? We'd, love, to hear, i, t", li, n, k: '/conta, c, t', ic, o, n: '💡'}
+    {tit, l, e: 'Schedule, Trainin, g', descripti, o, n: 'Book, a, training session, for, your te, a, m', li, n, k: '/traini, n, g', ic, o, n: '🎓'}
+    {tit, l, e: 'View, Status, Page', descripti, o, n: 'Check, system, status and, uptim, e', li, n, k: '/stat, u, s', ic, o, n: '📊'}
   ]
-  return(<div, className="m, i, n-h-screen, b, g-gr, a, y-50">)
+  return (
+<div, className="m, i, n-h-screen, b, g-gr, a, y-50">)
       {/* Hero, Sectio, n */})
-      </div><section, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-600, vi, a-purp, l, e-600, t, o-te, a, l-600, tex, t-white, p, y-20">)
+      </div>
+<section, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-600, vi, a-purp, l, e-600, t, o-te, a, l-600, tex, t-white, p, y-20">)
         </section>
 <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">),
           </div>
@@ -256,7 +255,8 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     </div>
 <div, className="m, i, n-h-screen, b, g-gr, a, y-50">
       {/* Hero, Sectio, n */}
-      </div><section, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-600, vi, a-purp, l, e-600, t, o-te, a, l-600, tex, t-white, p, y-20">
+      </div>
+<section, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-600, vi, a-purp, l, e-600, t, o-te, a, l-600, tex, t-white, p, y-20">
         </section>
 <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">
           </div>
@@ -267,7 +267,8 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     </div>
 <div, className="m, i, n-h-screen, b, g-gr, a, y-50">
       {/* Hero, Sectio, n */}"
-      </div><section, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-600, vi, a-purp, l, e-600, t, o-te, a, l-600, tex, t-white, p, y-20"></section>"
+      </div>
+<section, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-600, vi, a-purp, l, e-600, t, o-te, a, l-600, tex, t-white, p, y-20"></section>"
         <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8"></div>"
           <div, className="te, x, t-cent, e, r"></div>"
             <, className="te, x, t-4x, l, m,"$2 />
@@ -359,13 +360,15 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                   No, FAQs, found matching, your, search criter, i, a.
             )}
         {/* Contact, CT, A */}
-        </div><section, className="py-20, p, x-4, s, m: px-6, l, g:px-8, b, g-bl, u, e-6, 0, 0">
+        </div>
+<section, className="py-20, p, x-4, s, m: px-6, l, g:px-8, b, g-bl, u, e-6, 0, 0">
           </section>
 <div, className="m, a, x-w-7xl, m, x-auto, tex, t-cent, e, r">
             <h2, className="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, tex, t-white, m, b-4">
             {/* TODO: Fix JSX expression */})
         {/* Contact, CT, A */}"
-        </div><section, className="py-20, p, x-4, s, m: px-6, l, g:px-8, b, g-bl, u, e-6, 0, 0"></section>"
+        </div>
+<section, className="py-20, p, x-4, s, m: px-6, l, g:px-8, b, g-bl, u, e-6, 0, 0"></section>"
           <div, className="m, a, x-w-7xl, m, x-auto, tex, t-cent, e, r"></div>"
             <h2, className="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, tex, t-white, m, b-4">
               Still, Need, Help?
@@ -409,4 +412,39 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
   )
 }
 export default Support;"`
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></button></p></p></p></p></p></p></h2></h2></h2></h2></h2></h3></h3></li></li></section></section></section></section></section></section></section></section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></span></span></span></button></p></p></p></p></p></p></h2></h2></h2></h2></h2></h3></h3></li></li></section></section></section></section></section></section></section></section>

@@ -10,20 +10,17 @@
   MapPin,
   ExternalLink;
 } from 'lucide-react'
-import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices'
-const categoryIcons = {
-  "AI & Machine Learning": <Brain className="h-8 w-8 text-zion-cyan" />,
+import {COMPREHENSIVE_SERVICES} from '@/data/comprehensiveServices'
+const categoryIcons = {"AI & Machine Learning": <Brain className="h-8 w-8 text-zion-cyan" />,
   "Cloud & DevOps": <Cloud className="h-8 w-8 text-zion-cyan" />,
   "Cybersecurity": <Shield className="h-8 w-8 text-zion-cyan" />,
   "Data & Analytics": <BarChart3 className="h-8 w-8 text-zion-cyan" />,
   "Web & Mobile Development": <Smartphone className="h-8 w-8 text-zion-cyan" />,
   "Digital Transformation": <TrendingUp className="h-8 w-8 text-zion-cyan" />,
   "Blockchain & Web3": <Code className="h-8 w-8 text-zion-cyan" />,
-  "IoT & Edge Computing": <Server className="h-8 w-8 text-zion-cyan" />
-}
+  "IoT & Edge Computing": <Server className="h-8 w-8 text-zion-cyan" />}
 // Get featured services from each category;
-const getFeaturedServices = () => {
-  const categories = [
+const getFeaturedServices = () => {const categories = [
     "AI & Machine Learning",
     "Cloud & DevOps", 
     "Cybersecurity",
@@ -31,13 +28,11 @@ const getFeaturedServices = () => {
   ]
   return categories.map(category => {
     const services = COMPREHENSIVE_SERVICES.filter(s => s.category === category)
-    return services[0]; // Get first service from each category;
-  }).filter(Boolean)
+    return services[0]; // Get first service from each category;}).filter(Boolean)
 }
-export function ServicesShowcase() {
-  const featuredServices = getFeaturedServices()
+export function ServicesShowcase() {const featuredServices = getFeaturedServices()
   return (
-    <section className="py-20 bg-zion-blue-dark">
+<section className="py-20 bg-zion-blue-dark">
       </section>
 <div className="container mx-auto px-4">
         {/* Header */}
@@ -66,7 +61,7 @@ export function ServicesShowcase() {
               <MapPin className="h-5 w-5" />
               <span>Middletown DE 19709</span>
             </div>
-          </div>
+</div>
 <div className="flex flex-wrap justify-center gap-4">
             <Link to="/comprehensive-services">
               <Button size="lg" className="bg-zion-cyan hover:bg-zion-cyan-dark text-white">
@@ -79,7 +74,7 @@ export function ServicesShowcase() {
               Get Free Consultation;
             </Button>
           </div>
-        </div>
+</div>
 
         {/* Featured Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
@@ -110,7 +105,7 @@ export function ServicesShowcase() {
                   </Button>
                 </Link>
               </div>
-            </div>
+</div>
           ))}
         </div>
 
@@ -147,8 +142,8 @@ export function ServicesShowcase() {
               <h4 className="text-lg font-semibold text-white mb-2">Proven Results</h4>
               <p className="text-zion-slate-light text-sm">Track record of successful digital transformations</p>
             </div>
-          </div>
-        </div>
+</div>
+</div>
 
         {/* CTA Section */}
         <div className="text-center mt-12">
@@ -198,9 +193,10 @@ export function ServicesShowcase() {
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
               <p>🌐 <a href="https://ziontechgroup.com" className="text-zion-purple hover:underline">ziontechgroup.com</a></p>
             </div>
-          </div>
-        </div>
-      </div>
+</div>
+</div>
+</div>
     </section>
-  )
-}</div></div>
+)
+}</div>
+</div>

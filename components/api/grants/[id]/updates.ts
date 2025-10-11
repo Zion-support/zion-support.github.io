@@ -4,7 +4,7 @@ import path from 'path'
 import { v4, as, uuidv4  } from 'uuid'
 const GRANTS_DIR = path && path.join(process && process.cwd(), 'data', 'grants')
 function grantPath(id: string) {
-  return path && path.join(GRANTS_DIR, `${id}.json`);const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants')
+  return path && path.join(GRANTS_DIR, `${id}.json`)const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants')
 function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`)
 }
@@ -21,7 +21,7 @@ function writeGrant(record: GrantApplication) {
     grantPath(record && record.id),
     JSON && JSON.stringify(record, null, 2),
     'utf8'
-  );  return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication
+  )  return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication
 }
 function writeGrant(record: GrantApplication) {
   if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true })
@@ -62,7 +62,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res && res.status(201).json({ update })
   }
   res && res.setHeader('Allow', 'GET, POST')
-  res && res.status(405).end('Method Not Allowed');    existing && existing.updates = [...(existing && existing.updates || []), update]
+  res && res.status(405).end('Method Not Allowed')    existing && existing.updates = [...(existing && existing.updates || []), update]
     existing && existing.updatedAt = new Date().toISOString()
     writeGrant(existing)
     return res && res.status(201).json({ update })
@@ -90,7 +90,7 @@ function write_grant() {
   fs.writeFileSync (
     grant_path (record.id),
     JSON.stringify (record, null, 2),
-    'utf8');  return JSON.parse (fs.readFileSync (p, 'utf8')) as GrantApplication
+    'utf8')  return JSON.parse (fs.readFileSync (p, 'utf8')) as GrantApplication
 }
 /**
  * write_grant - Function description

@@ -1,81 +1,117 @@
 #!/usr/bin/env node
-import fs from 'fs'
-// List of files that need fixing based on the type check errors
-const filesToFix = [
-  '/workspace/app/blog/ai-2025-sept-30-operational-trust-scorecards-v3/page.tsx',
-  '/workspace/app/blog/ai-autonomous-business-systems-2026/page.tsx',
-  '/workspace/app/blog/ai-cost-optimization-breakthrough-2026/page.tsx',
-  '/workspace/app/blog/ai-enterprise-transformation-2025/page.tsx',
-  '/workspace/app/blog/ai-innovation-labs-product-development-2025/page.tsx',
-  '/workspace/app/guides/ai-2026-implementation-roadmap/page.tsx',
-  '/workspace/app/guides/ai-2027-implementation-roadmap/page.tsx',
-  '/workspace/app/offline/page.tsx',
-  '/workspace/app/page-minimal.tsx',
-  '/workspace/app/page-optimized.tsx',
-  '/workspace/app/privacy/page.tsx',
-  '/workspace/app/team/page.tsx',
-  '/workspace/app/terms/page.tsx']
-// // Function to process a single file
-function processFile(filePath) {
+
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+function fixJSXFragments(filePath) {
   try {
-    // Remove extra empty lines
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n')
-    // Fix JSX fragment issues - ensure proper opening and closing
-    if (content.includes('<>') && !content.includes('</>')) {
-      // Find the last closing div or main tag and add </> before it
-      for (let i = lines.length - 1; i >= 0; i--) {
-        if (
-          lines[i].trim().startsWith('</') &&
-          !lines[i].includes('') &&
-          !lines[i].includes('</Helmet>')
-        ) {
-          lastClosingTagIndex = i
-          break
-function processFile(filePath) {/* TODO: Fix JSX expression */}
-        }
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+    
+    // Fix malformed JSX fragments
+    const fixes = [
+      // Fix empty fragments followed by content
+      {
+        pattern: /<>\s*<\/>\s*<div/g,
+        replacement: '<div'
+      },
+      // Fix fragments with content but no closing
+      {
+        pattern: /<>\s*<div/g,
+        replacement: '<div'
+      },
+      // Fix fragments with content but malformed closing
+      {
+        pattern: /<>\s*([^<]+)\s*<\/>\s*<div/g,
+        replacement: '<div'
+      },
+      // Fix fragments with JSX content but malformed
+      {
+        pattern: /<>\s*<[^>]+>\s*<\/[^>]+>\s*<\/>\s*<div/g,
+        replacement: '<div'
+      },
+      // Fix fragments with multiple elements
+      {
+        pattern: /<>\s*<[^>]+>[\s\S]*?<\/[^>]+>\s*<\/>\s*<div/g,
+        replacement: '<div'
+      },
+      // Fix fragments with text content
+      {
+        pattern: /<>\s*[^<]+\s*<\/>\s*<div/g,
+        replacement: '<div'
+      },
+      // Fix fragments with comments
+      {
+        pattern: /<>\s*{\/\*[^*]*\*\/}\s*<\/>\s*<div/g,
+        replacement: '<div'
+      },
+      // Fix fragments with expressions
+      {
+        pattern: /<>\s*\{[^}]*\}\s*<\/>\s*<div/g,
+        replacement: '<div'
+      },
+      // Fix fragments with multiple lines
+      {
+        pattern: /<>\s*[\s\S]*?<\/>\s*<div/g,
+        replacement: '<div'
       }
-
-      if (lastClosingTagIndex !== -1) {/* TODO: Fix JSX expression */}
+    ];
+    
+    for (const fix of fixes) {
+      const newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
       }
     }
-
-    // Fix function declarations
-    content = content.replace(
-      /export default function (\w+)\(\) \{/,
-      'const $1: React.FC = () => {'
-    )
-    // Add proper export at the end
-    if (!content.includes('export default') && content.includes('const ')) {,
-      //       const componentName = content.match(/const (\w+): React\.FC/)?.[1];,
-      if (componentName) {,
-    content = content.replace()
-      /export default function (\w+)\(\) \{/* TODO: Fix JSX expression */}
-        content = content.replace(/^\s*}\s*$/, `  );\n};\n\nexport default ${componentName};`)
-        modified = true
-      }
+    
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed JSX fragments in: ${filePath}`);
+      return true;
     }
-
-    // Fix any remaining syntax issues
-    content = content.replace(/\{\s*title:\s*['"`][^'"`]*['"`]\s*,\s*description:\s*['"`][^'"`]*['"`]\s*,\s*type:\s*['"`][^'"`]*['"`]\s*,\s*url:\s*['"`][^'"`]*['"`]\s*\}/g)
-      ''
-    content = content.replace(/\{/* TODO: Fix JSX expression */}`
-  l:\s*['"`][^'"`]*['"`]\s*\}/g,
-      '')
-    )
-    if (modified) {/* TODO: Fix JSX expression */}
-    }
-
-    return false
-  } catch (error) {/* TODO: Fix JSX expression */}
+    return false;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-// Process all files
-filesToFix.forEach(file => {)
-  if (processFile(file)) {
-    fixedCount++
+function findReactFiles(dir) {
+  const files = [];
+  
+  function walkDir(currentPath) {
+    const items = fs.readdirSync(currentPath);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentPath, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        walkDir(fullPath);
+      } else if (stat.isFile() && /\.(tsx|jsx)$/.test(item)) {
+        files.push(fullPath);
+      }
+    }
   }
-filesToFix.forEach(file => {/* TODO: Fix JSX expression */}
-  })
-})
-// "`
+  
+  walkDir(dir);
+  return files;
+}
+
+// Main execution
+const files = findReactFiles('.');
+console.log(`Checking ${files.length} React files for JSX fragment issues`);
+
+let fixedCount = 0;
+for (const file of files) {
+  if (fixJSXFragments(file)) {
+    fixedCount++;
+  }
+}
+
+console.log(`Fixed JSX fragments in ${fixedCount} files`);

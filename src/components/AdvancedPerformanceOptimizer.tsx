@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect, useState, useCallback } from 'react'
+import React, {useEffect, useState, useCallback} from 'react'
 interface AdvancedPerformanceOptimizerProps {/* TODO: Fix JSX expression */}
 }
 const,

@@ -2,34 +2,26 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
+import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart} from 'lucide-react';
 
-const AiBlockchainAnalyticsPage: React.FC = () => {
-  const features = [
+const AiBlockchainAnalyticsPage: React.FC = () => {const features = [
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations for blockchain data.',
-      benefits: ['Pattern recognition', 'Anomaly detection', 'Predictive analytics', 'Smart recommendations']
-    },
-    {
-      icon: BarChart,
+      benefits: ['Pattern recognition', 'Anomaly detection', 'Predictive analytics', 'Smart recommendations']},
+    {icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization and reporting.',
-      benefits: ['Real-time monitoring', 'Custom dashboards', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: TrendingUp,
+      benefits: ['Real-time monitoring', 'Custom dashboards', 'Data visualization', 'Performance metrics']},
+    {icon: TrendingUp,
       title: 'Market Intelligence',
       description: 'Deep market analysis and trend identification for informed decision making.',
-      benefits: ['Market trends', 'Price analysis', 'Volume patterns', 'Trading insights']
-    },
-    {
-      icon: Shield,
+      benefits: ['Market trends', 'Price analysis', 'Volume patterns', 'Trading insights']},
+    {icon: Shield,
       title: 'Security Analytics',
       description: 'Advanced security monitoring and threat detection for blockchain networks.',
-      benefits: ['Threat detection', 'Risk assessment', 'Security monitoring', 'Compliance tracking']
-    }
+      benefits: ['Threat detection', 'Risk assessment', 'Security monitoring', 'Compliance tracking']}
   ]
 
   const benefits = [
@@ -40,17 +32,16 @@ const AiBlockchainAnalyticsPage: React.FC = () => {
     'Real-time processing and analysis',
     'Seamless integration with existing systems'
   ]
-const PagePage: React.FC = () => {
-  return (
-<></>
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const PagePage: React.FC = () => {return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
         {/* Hero Section */}
-        </div><section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8">
+        </div>
+<section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Page
@@ -60,11 +51,12 @@ const PagePage: React.FC = () => {
               </p>
 
         {/* Hero Section */}
-        </div><section className="relative py-20 px-4 overflow-hidden">
+        </div>
+<section className="relative py-20 px-4 overflow-hidden">
           </section>
 <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(139,92,246,0.3)_0%,transparent_50%)] animate-pulse" />
           </div>
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+<div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s'}} />
           </div>
 <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
@@ -83,14 +75,14 @@ const PagePage: React.FC = () => {
                 Learn More
               </button>
 </div>
-          </div>
+</div>
         </section>
 
 {/* Content Section */}
         <section className="py-16 px-4 sm: px-6 lg:px-8">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Coming Soon
@@ -110,7 +102,7 @@ const PagePage: React.FC = () => {
 </div>
               ))}
             </div>
-          </div>
+</div>
         </section>
 
         {/* Benefits Section */}
@@ -118,7 +110,7 @@ const PagePage: React.FC = () => {
 
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Why Choose Our Solution ? </h2>
@@ -126,7 +118,7 @@ const PagePage: React.FC = () => {
                 Proven results that drive business growth and efficiency through intelligent analytics
               </p>
             </div>
-<div className="grid grid-cols-1 md : grid-cols-2 lg:grid-cols-3 gap-8">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 </div>
 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
@@ -137,8 +129,11 @@ const PagePage: React.FC = () => {
                   <p className="text-gray-300">{benefit}</p>
 <section className="py-20 px-4"></section></section>
         </section>
-<div className="max-w-7xl mx-auto"></div></div>
-<div className="text-center mb-16"></div></div>
+<div className="max-w-7xl mx-auto">
+</div>
+</div>
+<div className="text-center mb-16"></div>
+</div>
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6"></h2></h2>
                 Why Choose Our Solution?
               </h2>
@@ -146,17 +141,20 @@ const PagePage: React.FC = () => {
                 Proven results that drive business growth and efficiency
               </p>
             </div>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div></div>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+</div>
               {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group"></div></div>
-<div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"></div></div>
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group"></div>
+</div>
+<div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"></div>
+</div>
                     <CheckCircle className="w-8 h-8 text-white" />
                   </div>
                   <p className="text-lg text-white font-medium"></p></p>{benefit}</p>
 </div>
               ))}
             </div>
-          </div>
+</div>
         </section>
 
         {/* CTA Section */}
@@ -178,7 +176,7 @@ const PagePage: React.FC = () => {
 </button>
 
             </div>
-          </div>
+</div>
 <section className="py-20 px-4"></section></section>
 </section>
 </div>

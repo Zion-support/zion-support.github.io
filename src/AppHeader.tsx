@@ -1,39 +1,36 @@
-import React, { useState } from 'react'
-import { Link, useRouter } from 'next/router'
-import { useSelector } from 'react-redux'
-import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, User, Bell, Search, ChevronDown } from 'lucide-react'
-import { cn } from '../lib/utils'
-import { RootState } from '../store'
-import { useAuth } from '../hooks/useAuth'
-import { useTranslation } from 'react-i18next'
-import { useIsMobile } from '../hooks/useIsMobile'
-import { useMessaging } from '../context/MessagingContext'
-const AppHeader = () => {
-  const router = useRouter()
+import React, {useState} from 'react'
+import {Link, useRouter} from 'next/router'
+import {useSelector} from 'react-redux'
+import {motion, AnimatePresence} from 'framer-motion'
+import {Menu, X, User, Bell, Search, ChevronDown} from 'lucide-react'
+import {cn} from '../lib/utils'
+import {RootState} from '../store'
+import {useAuth} from '../hooks/useAuth'
+import {useTranslation} from 'react-i18next'
+import {useIsMobile} from '../hooks/useIsMobile'
+import {useMessaging} from '../context/MessagingContext'
+const AppHeader = () => {const router = useRouter()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [loginOpen, setLoginOpen] = useState(false)
   const isMobile = useIsMobile()
-  const { t } = useTranslation()
-  const { user } = useAuth()
+  const { t} = useTranslation()
+  const {user} = useAuth()
   const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn)
-  const { unreadCount } = useMessaging()
+  const {unreadCount} = useMessaging()
   const showTagline = router.pathname === '/'
-  const openLoginModal = (returnToPath?: string) => {
-    setLoginOpen(true)
-  }
+  const openLoginModal = (returnToPath?: string) => {setLoginOpen(true)}
   const navigationItems = [
-    { name: 'Home', href: '/' },
-    { name: 'Services', href: '/pages/InnovativeServicesShowcase2025' },
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
+    {name: 'Home', href: '/'},
+    {name: 'Services', href: '/pages/InnovativeServicesShowcase2025'},
+    {name: 'About', href: '/about'},
+    {name: 'Contact', href: '/contact'},
   ]
   return (
     <></><$2 />
-        style={{ "--nav-height": "64px" } as React.CSSProperties}
+        style={{ "--nav-height": "64px"} as React.CSSProperties}
         className={cn(
           "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground",
-          { "bg-red-500": mobileMenuOpen })
+          { "bg-red-500": mobileMenuOpen})
       >
         <div className="container mx-auto px-4">
           </div>
@@ -107,16 +104,16 @@ const AppHeader = () => {
                 {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               </button>
             </div>
-          </div>
-        </div>
+</div>
+</div>
 
         {/* Mobile Navigation */}
         <AnimatePresence>
           {mobileMenuOpen && (
             <motion.div;
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
+              initial={{ opacity: 0, height: 0}}
+              animate={{ opacity: 1, height: 'auto'}}
+              exit={{ opacity: 0, height: 0}}
               className="md:hidden border-t border-border bg-background"
             >
               <div className="container mx-auto px-4 py-4">

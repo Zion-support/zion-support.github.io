@@ -1,20 +1,15 @@
-import, Reac, t, { useEffe, c, t, useSta, t, e } fr, o, m "rea, c, t"
+import, Reac, t, {useEffe, c, t, useSta, t, e} fr, o, m "rea, c, t"
 impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "w, e, b-vita, l, s"
-interface, PerformanceMetric, s {
-    c, l, s: numb, e, r | nu, l, l;
+interface, PerformanceMetric, s {c, l, s: numb, e, r | nu, l, l;
 f, i, d: numb, e, r | nu, l, l;
 f, c, p: numb, e, r | nu, l, l;
 l, c, p: numb, e, r | nu, l, l;
 tt, f, b: numb, e, r | nu, l, l;
 sc, o, r;
-  e: numb, e, r;
-  }
-const, PerformanceOptimize, r: Rea, c, t.FC<PerformanceOptimizerPro, p, s> = ({
-    isVisib, l, e;
-  onClo, s, e;
-  }) => {
-  con, s, t [optimizatio, n, s, setOptimizatio, n, s] = useSta, t, e({
+  e: numb, e, r;}
+const, PerformanceOptimize, r: Rea, c, t.FC<PerformanceOptimizerPro, p, s> = ({isVisib, l, e;
+  onClo, s, e;}) => {con, s, t [optimizatio, n, s, setOptimizatio, n, s] = useSta, t, e({
     imageOptimizati, o, n: tr, u, e;
     codeSplitti, n, g: tr, u, e;
     lazyLoadi, n, g: tr, u, e;
@@ -51,13 +46,18 @@ const, PerformanceOptimize, r: Rea, c, t.FC<PerformanceOptimizerPro, p, s> = ({/
 <div, classNam, e='flex, justif, y-between, item, s-cent, e, r'>
         <h2, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0'>
           Performance, Optimize, r</$1>)
-        <button, onClic, k = { onCl, o, s, e }, classNa, m, e = 'te, x, t-gr, a, y-400, hove, r: te, x, t-gr, a, y-6, 0, 0'>)
+        <button, onClic, k = {onCl, o, s, e}, classNa, m, e = 'te, x, t-gr, a, y-400, hove, r: te, x, t-gr, a, y-6, 0, 0'>)
           <X, classNam, e='h-6 w-6' />)
   ]; retu, r, n (</div></button><div, classNam, e = 'spa, c, e-y-6'>
       </div>
 <div, classNam, e='flex, justif, y-between, item, s-cent, e, r'>
         <h2, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0'>
           Performance, Optimize, r;
-        <button, onClic, k = { onCl, o, s, e }, classNa, m, e = 'te, x, t-gr, a, y-400, hove, r: te, x, t-gr, a, y-6, 0, 0'>
+        <button, onClic, k = {onCl, o, s, e}, classNa, m, e = 'te, x, t-gr, a, y-400, hove, r: te, x, t-gr, a, y-6, 0, 0'>
           <X, classNam, e='h-6 w-6' /></X>")
-</div></div></div></div></div></div></button></button></h2></h2>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></button></button></h2></h2>

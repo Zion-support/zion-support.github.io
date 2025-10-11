@@ -1,7 +1,6 @@
 import React from 'react'
 'use client'
-interface OptimizedLoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg'
+interface OptimizedLoadingSpinnerProps {size?: 'sm' | 'md' | 'lg'
   color?: 'primary' | 'secondary' | 'white'
   className?: string;
 'use client'
@@ -15,7 +14,7 @@ interface OptimizedLoadingSpinnerProps {/* TODO: Fix JSX expression */}
 const,
   OptimizedLoadingSpinner: React.FC,
           <OptimizedLoadingSpinnerProps> = memo()
-  ({ size = 'md', color = 'primary', className = '' }) => {/* TODO: Fix JSX expression */}
+  ({size = 'md', color = 'primary', className = ''}) => {/* TODO: Fix JSX expression */}
   m: 'w-4 h-4'}
       m,
   d: 'w-8 h-8',
@@ -32,7 +31,9 @@ const,
       whit,
   e: 'text-white'
     }
-    return (<div>Coming Soon</div>)
+    return (
+<div>Coming Soon</div>
+)
   )
           <div>
 className={`${sizeClasses[size]} ${colorClasses[color]} ${className}`}
@@ -67,13 +68,11 @@ className="opacity-75""
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner'
 export default OptimizedLoadingSpinner;
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
-  ({ size = 'md', color = 'primary', className = '' }) => {
-      sm: 'w-4 h-4',
+  ({size = 'md', color = 'primary', className = ''}) => {sm: 'w-4 h-4',
       md: 'w-8 h-8',
       lg:     ,
 $4}
-    const colorClasses = {
-      primary: 'text-cyan-400',
+    const colorClasses = {primary: 'text-cyan-400',
       secondary: 'text-purple-400',
       white:     ,
 $4}

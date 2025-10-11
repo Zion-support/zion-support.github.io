@@ -1,15 +1,16 @@
-const, October2025BreakthroughBanne, r = () => {
-  return(<section, className="relative, p, y-20, overflo, w-hidd, e, n">)
+const, October2025BreakthroughBanne, r = () => {return (
+<section, className="relative, p, y-20, overflo, w-hidd, e, n">)
       {/* Background, Effect, s */})
       </section>
 <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/20, vi, a-indi, g, o-9, 0, 0/20, t, o-emera, l, d-9, 0, 0/20  />)
       </div>
 <div, className="absolute, inse, t-0, b, g-[u, r, l('/gr, i, d.s, v, g')] opaci, t, y-10  />
   return (
-    </div><section, className="relative, p, y-20, overflo, w-hidd, e, n"></section>
+    </div>
+<section, className="relative, p, y-20, overflo, w-hidd, e, n"></section>
       {/* Background, Effect, s */}
       <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/20, vi, a-indi, g, o-9, 0, 0/20, t, o-emera, l, d-9, 0, 0/20  /></section>
-      </div>
+</div>
 <div, className="absolute, inse, t-0, b, g-[u, r, l('/gr, i, d.s, v, g')] opaci, t, y-10  /></div>
 <div, className="container, m, x-auto, p, x-6, relative, z-10">
         {/* Main, Banne, r */}
@@ -19,11 +20,12 @@ const, October2025BreakthroughBanne, r = () => {
 <div, className="flex, item, s-center, ga, p-3, m, b-6">
             <Sparkles, className="w-8 h-8, tex, t-purp, l, e-400, animat, e-pul, s, e  />
             <span, className="px-4, p, y-2, b, g-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-300, rounde, d-full, tex, t-sm, fon, t-bold, border, border-purp, l, e-4, 0, 0/30"></span>
-    </div><section, className="relative, p, y-20, overflo, w-hidd, e, n">"
+    </div>
+<section, className="relative, p, y-20, overflo, w-hidd, e, n">"
       {/* Background, Effect, s */}
       </section>
 <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/20, vi, a-indi, g, o-9, 0, 0/20, t, o-emera, l, d-9, 0, 0/20" />"</section>
-      </div>
+</div>
 <div, className="absolute, inse, t-0, b, g-[u, r, l('/gr, i, d.s, v, g')] opaci, t, y-10" />"</div>
 <div, className="container, m, x-auto, p, x-6, relative, z-10">"
         {/* Main, Banne, r */}</div>
@@ -379,4 +381,74 @@ const, October2025BreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
 }
 export default October2025BreakthroughBanner;
 "
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></Link></Link></Link></Link></p></p></p></p></p></p></h2></h3></h3></h3></h3></h3></h3></h3></h3></section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></span></span></span></span></span></span></span></span></span></span></span></span></Link></Link></Link></Link></p></p></p></p></p></p></h2></h3></h3></h3></h3></h3></h3></h3></h3></section>

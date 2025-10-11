@@ -14,12 +14,12 @@ function ensureStorage() {
     fs.writeFileSync(EPISODES_PATH, '[]', 'utf8')
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   ensureStorage()
-  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json')
+  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[]const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json')
 function ensureStorage() {
   const dir = path.dirname(EPISODES_PATH)
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true })
   if (!fs.existsSync(EPISODES_PATH))
-    fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');  if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
+    fs.writeFileSync(EPISODES_PATH, '[]', 'utf8')  if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   ensureStorage()
@@ -33,7 +33,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     summary: e.bestQuote |''
     audio: e.audio |{}
   }))
-  return res.status (200).json ({ episodes: simplified });  const simplified = episodes.map ((e) => ({
+  return res.status (200).json ({ episodes: simplified })  const simplified = episodes.map ((e) => ({
     id: e.id
     title: e.title
   ensureStorage(),
@@ -46,7 +46,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     summary: e && e.bestQuote || '',
     audio: e && e.audio || {},
   }))
-  return res && res.status(200).json({ episodes: simplified });  const simplified = episodes && episodes.map((e) => ({
+  return res && res.status(200).json({ episodes: simplified })  const simplified = episodes && episodes.map((e) => ({
     id: e && e.id
     title: e && e.title
     inviteeName: e && e.invitee?.name || 'Guest'

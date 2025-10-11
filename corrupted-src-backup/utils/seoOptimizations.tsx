@@ -2,7 +2,7 @@
  * SEO Optimization Utilities;
  * Comprehensive SEO enhancements for the Zion website;
  */
-import { Helmet } from 'react-helmet-async'
+import {Helmet} from 'react-helmet-async'
 // Meta tags utilities;
 export const seoUtils = {/* content */}
   // Generate structured data for organization;
@@ -303,15 +303,15 @@ export const performanceSEO = {/* content */}
 export const analyticsUtils = {/* content */}
   // Track page views;
   trackPageView: (url: string, title: string) => {/* content */}
-    if (typeof window !== 'undefined' && (window as typeof window & { gtag?: Function }).gtag) {/* content */}
-      (window as typeof window & { gtag: Function }).gtag('config', 'GA_MEASUREMENT_ID', {/* content */})
+    if (typeof window !== 'undefined' && (window as typeof window & {gtag?: Function}).gtag) {/* content */}
+      (window as typeof window & {gtag: Function}).gtag('config', 'GA_MEASUREMENT_ID', {/* content */})
         page_title: title),
         page_location: url,
   // Track page views,
   trackPageView: (ur,
   l: string, titl)
   e: string) => {/* content */}
-    if (typeof window !== 'undefined' && (window as typeof window & { gtag?: Function }).gtag) {/* content */}
+    if (typeof window !== 'undefined' && (window as typeof window & {gtag?: Function}).gtag) {/* content */}
       (window as typeof window & {/* TODO: Fix JSX expression */})
   g: Function }).gtag('config', 'GA_MEASUREMENT_ID', {/* content */}
         page_titl,
@@ -325,21 +325,21 @@ export const analyticsUtils = {/* content */}
   // Track custom events,
   trackEvent: (eventNam)
   e: string, parameters?: Record<string, unknown>) => {/* content */}
-    if (typeof window !== 'undefined' && (window as Window & { gtag?: Function }).gtag) {/* content */}
+    if (typeof window !== 'undefined' && (window as Window & {gtag?: Function}).gtag) {/* content */}
       (window as Window & {/* TODO: Fix JSX expression */})
   g: Function }).gtag('event', eventName, parameters)
     }
   },
   // Track conversion events;
   trackConversion: (conversionId: string, value?: number) => {/* content */}
-    if (typeof window !== 'undefined' && (window as typeof window & { gtag?: Function }).gtag) {/* content */}
-      (window as typeof window & { gtag: Function }).gtag('event', 'conversion', {/* content */})
+    if (typeof window !== 'undefined' && (window as typeof window & {gtag?: Function}).gtag) {/* content */}
+      (window as typeof window & {gtag: Function}).gtag('event', 'conversion', {/* content */})
         send_to: conversionId),
         value: value,
   // Track conversion events,
   trackConversion: (conversionI)
   d: string, value?: number) => {/* content */}
-    if (typeof window !== 'undefined' && (window as typeof window & { gtag?: Function }).gtag) {/* content */}
+    if (typeof window !== 'undefined' && (window as typeof window & {gtag?: Function}).gtag) {/* content */}
       (window as typeof window & {/* TODO: Fix JSX expression */})
   g: Function }).gtag('event', 'conversion', {/* content */}
         send_t,
@@ -353,7 +353,7 @@ export const coreWebVitals = {/* content */}
   // Track Core Web Vitals;
   trackCoreWebVitals: () => {/* content */}
     if (typeof window === 'undefined') return;
-    const trackMetric = (metric: { name: string; value: number; id: string, delta: number }) => {/* content */}
+    const trackMetric = (metric: {name: string; value: number; id: string, delta: number}) => {/* content */}
       analyticsUtils.trackEvent('core_web_vitals', {/* content */})
         metric_name: metric.name),
         metric_value: Math.round(metric.value),
@@ -376,7 +376,7 @@ export const coreWebVitals = {/* content */}
   a: metric.delta,
       })
     // Import and track web vitals;
-    import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {/* content */}
+    import('web-vitals').then(({onCLS, onFCP, onLCP, onTTFB}) => {/* content */}
       onCLS(trackMetric)
       // onFID(trackMetric); // onFID is deprecated in newer web-vitals versions;
       onFCP(trackMetric)
@@ -410,7 +410,8 @@ export const SEOComponent = ({/* content */}
 //   const fullTitle = title ? `${title} | ${siteName}` : siteName;`
 //   const fullUrl = url ? `${siteUrl}${url}` : siteUrl;`
 //   const fullImage = image ? `${siteUrl}${image}` : defaultImage;
-  return(<div> </div><Helmet>
+  return (
+<div> </div><Helmet>
       <title>{fullTitle}
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
@@ -427,7 +428,8 @@ export const SEOComponent = ({/* content */}
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={fullImage} />
-  return (<div> </div><Helmet>
+  return (
+<div> </div><Helmet>
       <title>{fullTitle}</title>"
       <meta name="description" content={description} /></meta>"
       <meta name="keywords" content={keywords} /></meta>"

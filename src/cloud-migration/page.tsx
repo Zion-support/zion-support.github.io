@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Cloud, Shield, Zap, Target, TrendingUp, CheckCircle, ArrowRight, Star, Award, Globe, Server, Database, Users, Clock, Phone } from 'lucide-react'
+import {Helmet} from 'react-helmet-async'
+import {Cloud, Shield, Zap, Target, TrendingUp, CheckCircle, ArrowRight, Star, Award, Globe, Server, Database, Users, Clock, Phone} from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const,
@@ -180,7 +180,8 @@ const,
   n: 'Scale resources up or down based on demand automatically.',
       percentag,
   e: 'Unlimited'
-  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return (
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Header */}"
       </div>
 <div className="relative overflow-hidden"></div>"
@@ -234,7 +235,8 @@ const,
       <main className="pt-24 pb-16 px-4"></main>"
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}"
-          </div><section className="text-center mb-16"></section>"
+          </div>
+<section className="text-center mb-16"></section>"
             < className="text-4xl,$2 />
   sm:text-5xl,"
   md: text-6xl font-bold text-white mb-6"></h1>
@@ -286,7 +288,8 @@ const,
                   <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>"
                   <p className="text-gray-300">{step.description}
           {/* CTA Section */}"
-          </div><section className="text-center"></section>"
+          </div>
+<section className="text-center"></section>"
             <h2 className="text-3xl font-bold text-white mb-6">
               Ready to Migrate to the Cloud?"
             <p className="text-xl text-gray-300 mb-8">
@@ -378,7 +381,8 @@ const,
                   {/* TODO: Fix JSX expression */}`
                 }`}>
 "
-      </div><section className="py-16 px-4 bg-gradient-to-r from-purple-600/20 to-blue-600/20"></section>"
+      </div>
+<section className="py-16 px-4 bg-gradient-to-r from-purple-600/20 to-blue-600/20"></section>"
         <div className="max-w-4xl mx-auto text-center"></div>"
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Migrate to the Cloud?
             Join hundreds of businesses that have successfully migrated to the cloud with our expert team."
@@ -397,4 +401,5 @@ const,
 }
 export default CloudMigrationPage;
 "`
-</div></div></button></p></p></p></p></p></p></p></p></p></p></p></h1></h2></h2></h2></h2></ul></li>
+</div>
+</div></button></p></p></p></p></p></p></p></p></p></p></p></h1></h2></h2></h2></h2></ul></li>

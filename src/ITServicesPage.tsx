@@ -1,7 +1,6 @@
-import React, { useState } from 'react'
-import { Search, Filter, Server, Cloud, Shield, Database, Network, Zap, Users, TrendingUp, BarChart3, MessageSquare, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Star, Clock, DollarSign, Globe, Bot, Cpu, Settings, Monitor, HardDrive, Wifi, Lock } from 'lucide-react'
-const ITServicesPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('')
+import React, {useState} from 'react'
+import {Search, Filter, Server, Cloud, Shield, Database, Network, Zap, Users, TrendingUp, BarChart3, MessageSquare, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Star, Clock, DollarSign, Globe, Bot, Cpu, Settings, Monitor, HardDrive, Wifi, Lock} from 'lucide-react'
+const ITServicesPage: React.FC = () => {const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState<string>('all')
   const [selectedPricing, setSelectedPricing] = useState<string>('all')
   // IT Services data;
@@ -31,10 +30,8 @@ import {
   Star, Clock, DollarSign, Phone, Mail, MapPin, ChevronRight, Settings,
   Cpu, Network, HardDrive, Router, Firewall, Backup, Recovery, Analytics,
   Automation, Integration, Migration, Optimization, Maintenance, Support,
-  X;
-} from 'lucide-react'
-const ITServicesPage: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all')
+  X;} from 'lucide-react'
+const ITServicesPage: React.FC = () => {const [selectedCategory, setSelectedCategory] = useState<string>('all')
   const [selectedService, setSelectedService] = useState<any>(null)
   const serviceCategories = [
     {
@@ -42,48 +39,36 @@ const ITServicesPage: React.FC = () => {
       name: 'Infrastructure & Cloud',
       icon: <Server className="w-6 h-6" />,
       description: 'Scalable cloud solutions and infrastructure management',
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      id: 'security',
+      color: 'from-blue-500 to-cyan-500'},
+    {id: 'security',
       name: 'Cybersecurity',
       icon: <Shield className="w-6 h-6" />,
       description: 'Advanced security and compliance solutions',
-      color: 'from-red-500 to-pink-500'
-    },
-    {
-      id: 'ai-ml',
+      color: 'from-red-500 to-pink-500'},
+    {id: 'ai-ml',
       name: 'AI & Machine Learning',
       icon: <Brain className="w-6 h-6" />,
       description: 'Intelligent automation and data insights',
-      color: 'from-purple-500 to-indigo-500'
-    },
-    {
-      id: 'devops',
+      color: 'from-purple-500 to-indigo-500'},
+    {id: 'devops',
       name: 'DevOps & Automation',
       icon: <Zap className="w-6 h-6" />,
       description: 'Streamlined development and deployment',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      id: 'data',
+      color: 'from-green-500 to-emerald-500'},
+    {id: 'data',
       name: 'Data & Analytics',
       icon: <Database className="w-6 h-6" />,
       description: 'Data management and business intelligence',
-      color: 'from-yellow-500 to-orange-500'
-    },
-    {
-      id: 'digital',
+      color: 'from-yellow-500 to-orange-500'},
+    {id: 'digital',
       name: 'Digital Transformation',
       icon: <Globe className="w-6 h-6" />,
       description: 'Modernize your business operations',
-      color: 'from-indigo-500 to-purple-500'
-    }
+      color: 'from-indigo-500 to-purple-500'}
   ]
   const itServices = [
     // Infrastructure & Cloud Services;
-    {
-      id: 1,
+    {id: 1,
       name: "Cloud Migration & Strategy",
       category: "infrastructure",
       description: "Comprehensive cloud migration planning and execution for enterprise applications",
@@ -110,11 +95,9 @@ const ITServicesPage: React.FC = () => {
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 2,
+    {id: 2,
       name: "Cybersecurity Defense Suite",
       category: "Security",
       subcategory: "Threat Protection",
@@ -156,11 +139,9 @@ const ITServicesPage: React.FC = () => {
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 3,
+    {id: 3,
       name: "Network Performance Monitor",
       category: "Networking",
       subcategory: "Performance Monitoring",
@@ -202,11 +183,9 @@ const ITServicesPage: React.FC = () => {
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 4,
+    {id: 4,
       name: "Data Backup & Recovery Pro",
       category: "Data Management",
       subcategory: "Backup & Recovery",
@@ -252,11 +231,9 @@ const ITServicesPage: React.FC = () => {
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 5,
+    {id: 5,
       name: "DevOps Automation Platform",
       category: "DevOps",
       subcategory: "Automation",
@@ -298,11 +275,9 @@ const ITServicesPage: React.FC = () => {
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 6,
+    {id: 6,
       name: "IT Asset Management System",
       category: "Asset Management",
       subcategory: "IT Inventory",
@@ -348,11 +323,9 @@ const ITServicesPage: React.FC = () => {
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 7,
+    {id: 7,
       name: "Help Desk & Support Platform",
       category: "Support Services",
       subcategory: "Help Desk",
@@ -394,13 +367,11 @@ const ITServicesPage: React.FC = () => {
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
 
     // DevOps Services;
-    {
-      id: 8,
+    {id: 8,
       name: "CI/CD Pipeline Setup",
       category: "devops",
       description: "Automated development and deployment pipelines",
@@ -427,11 +398,9 @@ const ITServicesPage: React.FC = () => {
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 8,
+    {id: 8,
       name: "Database Performance Optimizer",
       category: "Database",
       subcategory: "Performance",
@@ -474,13 +443,11 @@ const ITServicesPage: React.FC = () => {
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
 
     // Data Services;
-    {
-      id: 10,
+    {id: 10,
       name: "Data Architecture & Strategy",
       category: "data",
       description: "Comprehensive data strategy and architecture design",
@@ -507,11 +474,9 @@ const ITServicesPage: React.FC = () => {
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 11,
+    {id: 11,
       name: "Business Intelligence & Analytics",
       category: "data",
       description: "Data visualization and business intelligence solutions",
@@ -538,13 +503,11 @@ const ITServicesPage: React.FC = () => {
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
 
     // Digital Transformation;
-    {
-      id: 12,
+    {id: 12,
       name: "Digital Transformation Consulting",
       category: "digital",
       description: "Strategic guidance for digital business transformation",
@@ -571,22 +534,18 @@ const ITServicesPage: React.FC = () => {
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     }
   ]
   const categories = ['all', 'Cloud Services', 'Security', 'Networking', 'Data Management', 'DevOps', 'Asset Management', 'Support Services', 'Database']
   const pricingModels = ['all', 'Freemium', 'Subscription', 'One-time']
-  const filteredServices = itServices.filter(service => {
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const filteredServices = itServices.filter(service => {const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesPricing = selectedPricing === 'all' || service.pricing === selectedPricing;
-    return matchesSearch && matchesCategory && matchesPricing;
-  })
-  const formatPrice = (price: number, model: string) => {
-    switch (model) {
+    return matchesSearch && matchesCategory && matchesPricing;})
+  const formatPrice = (price: number, model: string) => {switch (model) {
       case 'monthly':
         return `$${price}/month`
       case 'yearly':
@@ -597,8 +556,7 @@ const ITServicesPage: React.FC = () => {
         return `$${price}`
     }
   }
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
+  const getCategoryIcon = (category: string) => {switch (category) {
       case 'Cloud Services': return <Cloud className="w-6 h-6" />
       case 'Security': return <Shield className="w-6 h-6" />
       case 'Networking': return <Network className="w-6 h-6" />
@@ -607,19 +565,16 @@ const ITServicesPage: React.FC = () => {
       case 'Asset Management': return <HardDrive className="w-6 h-6" />
       case 'Support Services': return <MessageSquare className="w-6 h-6" />
       case 'Database': return <Database className="w-6 h-6" />
-      default: return <Server className="w-6 h-6" />
-    }
+      default: return <Server className="w-6 h-6" />}
   }
-  const getPricingColor = (pricing: string) => {
-    switch (pricing) {
+  const getPricingColor = (pricing: string) => {switch (pricing) {
       case 'Freemium': return 'text-green-400'
       case 'Subscription': return 'text-blue-400'
       case 'One-time': return 'text-purple-400'
-      default: return 'text-gray-400'
-    }
+      default: return 'text-gray-400'}
   }
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       </div>
 <div className="container mx-auto px-4 py-8">
         {/* Header */}
@@ -634,16 +589,15 @@ const ITServicesPage: React.FC = () => {
 export default ITServicesPage;
 import React from 'react'
 import React from 'react'
-import { Header } from '@/components/Header'
-import { Footer } from '@/components/Footer'
-import { SEO } from '@/components/SEO'
+import {Header} from '@/components/Header'
+import {Footer} from '@/components/Footer'
+import {SEO} from '@/components/SEO'
 import React from 'react'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-import { Badge } from '@/components/ui/badge'
-import { Link } from 'react-router-dom'
-import { 
-  Cloud, 
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card'
+import {Button} from '@/components/ui/button'
+import {Badge} from '@/components/ui/badge'
+import {Link} from 'react-router-dom'
+import {Cloud, 
   Shield, 
   Server, 
   Database, 
@@ -663,149 +617,136 @@ import {
   Clock,
   CheckCircle,
   AlertTriangle,
-  TrendingUp;
-} from 'lucide-react'
-import { SEO } from '@/components/SEO'
+  TrendingUp;} from 'lucide-react'
+import {SEO} from '@/components/SEO'
 const IT_SERVICES = [
-  {
-    id: 'cloud-services',
+  {id: 'cloud-services',
     title: 'Cloud Infrastructure & Migration',
     description: 'Comprehensive cloud solutions including migration, optimization, and management',
     icon: <Cloud className="h-8 w-8 text-blue-500" />,
     features: ['AWS/Azure/GCP Migration', 'Cloud Architecture Design', 'Cost Optimization', '24/7 Monitoring'],
-    pricing: { starting: '$3,000', average: '$12,000', enterprise: '$40,000+' },
+    pricing: { starting: '$3,000', average: '$12,000', enterprise: '$40,000+'},
     category: 'Infrastructure',
     badge: 'Popular',
     link: '/services/cloud-services',
     benefits: ['Reduced Infrastructure Costs', 'Improved Scalability', 'Enhanced Security', 'Better Performance']
   },
-  {
-    id: 'cybersecurity',
+  {id: 'cybersecurity',
     title: 'Cybersecurity & Compliance',
     description: 'Advanced security solutions to protect your business from cyber threats',
     icon: <Shield className="h-8 w-8 text-red-500" />,
     features: ['Penetration Testing', 'Security Audits', 'Compliance Management', 'Incident Response'],
-    pricing: { starting: '$5,000', average: '$20,000', enterprise: '$60,000+' },
+    pricing: { starting: '$5,000', average: '$20,000', enterprise: '$60,000+'},
     category: 'Security',
     badge: 'Critical',
     link: '/services/cybersecurity',
     benefits: ['Protection Against Threats', 'Regulatory Compliance', 'Risk Mitigation', 'Business Continuity']
   },
-  {
-    id: 'network-infrastructure',
+  {id: 'network-infrastructure',
     title: 'Network Infrastructure',
     description: 'Design, implementation, and management of enterprise network solutions',
     icon: <Network className="h-8 w-8 text-green-500" />,
     features: ['Network Design', 'Wireless Solutions', 'VPN Setup', 'Performance Optimization'],
-    pricing: { starting: '$4,000', average: '$15,000', enterprise: '$50,000+' },
+    pricing: { starting: '$4,000', average: '$15,000', enterprise: '$50,000+'},
     category: 'Infrastructure',
     badge: 'Essential',
     link: '/services/network-infrastructure',
     benefits: ['Improved Connectivity', 'Enhanced Security', 'Better Performance', 'Scalable Solutions']
   },
-  {
-    id: 'data-management',
+  {id: 'data-management',
     title: 'Data Management & Analytics',
     description: 'Comprehensive data solutions including storage, backup, and business intelligence',
     icon: <Database className="h-8 w-8 text-purple-500" />,
     features: ['Data Backup & Recovery', 'Business Intelligence', 'Data Warehousing', 'Analytics Dashboards'],
-    pricing: { starting: '$3,500', average: '$14,000', enterprise: '$45,000+' },
+    pricing: { starting: '$3,500', average: '$14,000', enterprise: '$45,000+'},
     category: 'Data',
     badge: 'Trending',
     link: '/services/data-management',
     benefits: ['Data-Driven Decisions', 'Improved Efficiency', 'Better Customer Insights', 'Competitive Advantage']
   },
-  {
-    id: 'managed-it-services',
+  {id: 'managed-it-services',
     title: 'Managed IT Services',
     description: 'Complete IT management including monitoring, maintenance, and support',
     icon: <Monitor className="h-8 w-8 text-cyan-500" />,
     features: ['24/7 Monitoring', 'Proactive Maintenance', 'Help Desk Support', 'Performance Optimization'],
-    pricing: { starting: '$2,500', average: '$8,000', enterprise: '$25,000+' },
+    pricing: { starting: '$2,500', average: '$8,000', enterprise: '$25,000+'},
     category: 'Management',
     badge: 'Best Value',
     link: '/services/managed-it',
     benefits: ['Reduced Downtime', 'Lower IT Costs', 'Expert Support', 'Focus on Core Business']
   },
-  {
-    id: 'software-development',
+  {id: 'software-development',
     title: 'Custom Software Development',
     description: 'Tailored software solutions to meet your specific business requirements',
     icon: <Code className="h-8 w-8 text-orange-500" />,
     features: ['Custom Applications', 'Web Development', 'Mobile Apps', 'API Integration'],
-    pricing: { starting: '$8,000', average: '$25,000', enterprise: '$80,000+' },
+    pricing: { starting: '$8,000', average: '$25,000', enterprise: '$80,000+'},
     category: 'Development',
     badge: 'Premium',
     link: '/services/software-development',
     benefits: ['Tailored Solutions', 'Competitive Advantage', 'Process Automation', 'Improved Efficiency']
   },
-  {
-    id: 'disaster-recovery',
+  {id: 'disaster-recovery',
     title: 'Disaster Recovery & Business Continuity',
     description: 'Comprehensive backup and recovery solutions to ensure business continuity',
     icon: <AlertTriangle className="h-8 w-8 text-yellow-500" />,
     features: ['Backup Solutions', 'Recovery Planning', 'Testing & Validation', 'Documentation'],
-    pricing: { starting: '$4,500', average: '$18,000', enterprise: '$55,000+' },
+    pricing: { starting: '$4,500', average: '$18,000', enterprise: '$55,000+'},
     category: 'Recovery',
     badge: 'Critical',
     link: '/services/disaster-recovery',
     benefits: ['Business Continuity', 'Risk Mitigation', 'Compliance', 'Peace of Mind']
   },
-  {
-    id: 'virtualization',
+  {id: 'virtualization',
     title: 'Virtualization & Containerization',
     description: 'Modern virtualization solutions for improved resource utilization and management',
     icon: <Server className="h-8 w-8 text-indigo-500" />,
     features: ['VMware Solutions', 'Docker Containers', 'Resource Optimization', 'Management Tools'],
-    pricing: { starting: '$3,500', average: '$14,000', enterprise: '$45,000+' },
+    pricing: { starting: '$3,500', average: '$14,000', enterprise: '$45,000+'},
     category: 'Infrastructure',
     badge: 'Efficient',
     link: '/services/virtualization',
     benefits: ['Better Resource Utilization', 'Reduced Costs', 'Improved Scalability', 'Easier Management']
   },
-  {
-    id: 'mobile-device-management',
+  {id: 'mobile-device-management',
     title: 'Mobile Device Management',
     description: 'Comprehensive mobile device security and management solutions',
     icon: <Smartphone className="h-8 w-8 text-pink-500" />,
     features: ['Device Enrollment', 'Security Policies', 'App Management', 'Remote Wipe'],
-    pricing: { starting: '$2,000', average: '$6,000', enterprise: '$20,000+' },
+    pricing: { starting: '$2,000', average: '$6,000', enterprise: '$20,000+'},
     category: 'Management',
     badge: 'Modern',
     link: '/services/mobile-management',
     benefits: ['Enhanced Security', 'Better Control', 'Compliance', 'Improved Productivity']
   },
-  {
-    id: 'it-consulting',
+  {id: 'it-consulting',
     title: 'IT Strategy & Consulting',
     description: 'Strategic IT consulting to align technology with business objectives',
     icon: <Building className="h-8 w-8 text-gray-500" />,
     features: ['Technology Assessment', 'Strategic Planning', 'Vendor Selection', 'Implementation Guidance'],
-    pricing: { starting: '$150/hour', average: '$200/hour', enterprise: '$250/hour+' },
+    pricing: { starting: '$150/hour', average: '$200/hour', enterprise: '$250/hour+'},
     category: 'Consulting',
     badge: 'Strategic',
     link: '/services/it-consulting',
     benefits: ['Strategic Alignment', 'Cost Optimization', 'Risk Mitigation', 'Technology Roadmap']
   },
-  {
-    id: 'performance-monitoring',
+  {id: 'performance-monitoring',
     title: 'Performance Monitoring & Optimization',
     description: 'Advanced monitoring solutions to optimize system performance and user experience',
     icon: <BarChart3 className="h-8 w-8 text-teal-500" />,
     features: ['Real-time Monitoring', 'Performance Analytics', 'Alerting Systems', 'Optimization Reports'],
-    pricing: { starting: '$2,500', average: '$10,000', enterprise: '$30,000+' },
+    pricing: { starting: '$2,500', average: '$10,000', enterprise: '$30,000+'},
     category: 'Monitoring',
     badge: 'Proactive',
     link: '/services/performance-monitoring',
     benefits: ['Improved Performance', 'Proactive Issue Detection', 'Better User Experience', 'Reduced Downtime']
   },
-  {
-    id: 'compliance-auditing',
+  {id: 'compliance-auditing',
     title: 'Compliance & Auditing Services',
     description: 'Comprehensive compliance solutions for various industry standards and regulations',
     icon: <CheckCircle className="h-8 w-8 text-emerald-500" />,
     features: ['SOC 2 Compliance', 'GDPR Compliance', 'HIPAA Compliance', 'Regular Auditing'],
-    pricing: { starting: '$6,000', average: '$25,000', enterprise: '$70,000+' },
+    pricing: { starting: '$6,000', average: '$25,000', enterprise: '$70,000+'},
     category: 'Compliance',
     badge: 'Required',
     link: '/services/compliance-auditing',
@@ -813,40 +754,31 @@ const IT_SERVICES = [
   }
 ]
 const IT_SERVICE_CATEGORIES = [
-  { name: 'Infrastructure', count: 3, color: 'bg-blue-500' },
-  { name: 'Security', count: 2, color: 'bg-red-500' },
-  { name: 'Data', count: 1, color: 'bg-purple-500' },
-  { name: 'Management', count: 2, color: 'bg-cyan-500' },
-  { name: 'Development', count: 1, color: 'bg-orange-500' },
-  { name: 'Recovery', count: 1, color: 'bg-yellow-500' },
-  { name: 'Consulting', count: 1, color: 'bg-gray-500' },
-  { name: 'Monitoring', count: 1, color: 'bg-teal-500' },
-  { name: 'Compliance', count: 1, color: 'bg-emerald-500' }
+  {name: 'Infrastructure', count: 3, color: 'bg-blue-500'},
+  {name: 'Security', count: 2, color: 'bg-red-500'},
+  {name: 'Data', count: 1, color: 'bg-purple-500'},
+  {name: 'Management', count: 2, color: 'bg-cyan-500'},
+  {name: 'Development', count: 1, color: 'bg-orange-500'},
+  {name: 'Recovery', count: 1, color: 'bg-yellow-500'},
+  {name: 'Consulting', count: 1, color: 'bg-gray-500'},
+  {name: 'Monitoring', count: 1, color: 'bg-teal-500'},
+  {name: 'Compliance', count: 1, color: 'bg-emerald-500'}
 ]
 const SERVICE_BENEFITS = [
-  {
-    icon: <Zap className="h-12 w-12 text-zion-cyan" />,
+  {icon: <Zap className="h-12 w-12 text-zion-cyan" />,
     title: 'Increased Efficiency',
-    description: 'Streamline operations and improve productivity with optimized IT solutions'
-  },
-  {
-    icon: <Shield className="h-12 w-12 text-zion-purple" />,
+    description: 'Streamline operations and improve productivity with optimized IT solutions'},
+  {icon: <Shield className="h-12 w-12 text-zion-purple" />,
     title: 'Enhanced Security',
-    description: 'Protect your business with enterprise-grade security and compliance solutions'
-  },
-  {
-    icon: <TrendingUp className="h-12 w-12 text-zion-cyan" />,
+    description: 'Protect your business with enterprise-grade security and compliance solutions'},
+  {icon: <TrendingUp className="h-12 w-12 text-zion-cyan" />,
     title: 'Cost Optimization',
-    description: 'Reduce IT costs while improving performance and reliability'
-  },
-  {
-    icon: <Users className="h-12 w-12 text-zion-purple" />,
+    description: 'Reduce IT costs while improving performance and reliability'},
+  {icon: <Users className="h-12 w-12 text-zion-purple" />,
     title: 'Expert Support',
-    description: 'Access to certified IT professionals and 24/7 technical support'
-  }
+    description: 'Access to certified IT professionals and 24/7 technical support'}
 ]
-export default function ITServicesPage() {
-  return (
+export default function ITServicesPage() {return (
     </div>
 <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-slate to-zion-purple-dark">
       <SEO
@@ -867,11 +799,10 @@ export default function ITServicesPage() {
             IT Services & Solutions;
           </h1>
 import React from 'react'
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { 
-  Server, 
+import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card"
+import {Button} from "@/components/ui/button"
+import {Badge} from "@/components/ui/badge"
+import {Server, 
   Shield, 
   Cloud, 
   Database, 
@@ -891,11 +822,8 @@ import {
   Clock,
   CheckCircle,
   Star,
-  TrendingUp,
-
-} from "lucide-react"
-export default function ITServicesPage() {
-  const itServices = [
+  TrendingUp,} from "lucide-react"
+export default function ITServicesPage() {const itServices = [
     {
       id: "cloud-migration",
       title: "Cloud Migration & Strategy",
@@ -918,10 +846,8 @@ export default function ITServicesPage() {
       averagePrice: "$8,500 - $25,000",
       deliveryTime: "4-8 weeks",
       rating: 4.9,
-      reviewCount: 156;
-    },
-    {
-      id: "cybersecurity-audit",
+      reviewCount: 156;},
+    {id: "cybersecurity-audit",
       title: "Cybersecurity Assessment & Implementation",
       description: "Comprehensive security audits, penetration testing, and security infrastructure implementation.",
       icon: <Shield className="h-8 w-8 text-red-500" />,
@@ -942,10 +868,8 @@ export default function ITServicesPage() {
       averagePrice: "$6,500 - $18,000",
       deliveryTime: "3-6 weeks",
       rating: 4.8,
-      reviewCount: 203;
-    },
-    {
-      id: "network-infrastructure",
+      reviewCount: 203;},
+    {id: "network-infrastructure",
       title: "Network Infrastructure Design & Implementation",
       description: "Enterprise-grade network design, implementation, and optimization for businesses of all sizes.",
       icon: <Network className="h-8 w-8 text-green-500" />,
@@ -966,10 +890,8 @@ export default function ITServicesPage() {
       averagePrice: "$7,200 - $22,000",
       deliveryTime: "5-10 weeks",
       rating: 4.7,
-      reviewCount: 134;
-    },
-    {
-      id: "data-backup-recovery",
+      reviewCount: 134;},
+    {id: "data-backup-recovery",
       title: "Data Backup & Disaster Recovery",
       description: "Comprehensive backup solutions and disaster recovery planning to protect your critical business data.",
       icon: <Database className="h-8 w-8 text-purple-500" />,
@@ -990,10 +912,8 @@ export default function ITServicesPage() {
       averagePrice: "$4,200 - $12,000",
       deliveryTime: "2-4 weeks",
       rating: 4.9,
-      reviewCount: 187;
-    },
-    {
-      id: "it-consulting",
+      reviewCount: 187;},
+    {id: "it-consulting",
       title: "IT Strategy & Consulting",
       description: "Strategic IT consulting to align technology with business objectives and drive digital transformation.",
       icon: <BarChart3 className="h-8 w-8 text-orange-500" />,
@@ -1014,10 +934,8 @@ export default function ITServicesPage() {
       averagePrice: "$3,500 - $15,000",
       deliveryTime: "2-6 weeks",
       rating: 4.8,
-      reviewCount: 98;
-    },
-    {
-      id: "managed-it-services",
+      reviewCount: 98;},
+    {id: "managed-it-services",
       title: "Managed IT Services",
       description: "Comprehensive IT management including monitoring, maintenance, and support for your technology infrastructure.",
       icon: <Monitor className="h-8 w-8 text-cyan-500" />,
@@ -1038,10 +956,8 @@ export default function ITServicesPage() {
       averagePrice: "$2,800/month",
       deliveryTime: "Immediate",
       rating: 4.9,
-      reviewCount: 245;
-    },
-    {
-      id: "software-development",
+      reviewCount: 245;},
+    {id: "software-development",
       title: "Custom Software Development",
       description: "Tailored software solutions designed specifically for your business needs and workflows.",
       icon: <Code className="h-8 w-8 text-indigo-500" />,
@@ -1062,10 +978,8 @@ export default function ITServicesPage() {
       averagePrice: "$15,000 - $100,000+",
       deliveryTime: "8-20 weeks",
       rating: 4.8,
-      reviewCount: 167;
-    },
-    {
-      id: "mobile-app-development",
+      reviewCount: 167;},
+    {id: "mobile-app-development",
       title: "Mobile App Development",
       description: "Native and cross-platform mobile applications for iOS and Android devices.",
       icon: <Smartphone className="h-8 w-8 text-pink-500" />,
@@ -1086,10 +1000,8 @@ export default function ITServicesPage() {
       averagePrice: "$12,000 - $75,000",
       deliveryTime: "6-16 weeks",
       rating: 4.7,
-      reviewCount: 143;
-    },
-    {
-      id: "web-development",
+      reviewCount: 143;},
+    {id: "web-development",
       title: "Web Development & E-commerce",
       description: "Modern web applications, e-commerce platforms, and responsive websites that drive business growth.",
       icon: <Globe className="h-8 w-8 text-teal-500" />,
@@ -1110,10 +1022,8 @@ export default function ITServicesPage() {
       averagePrice: "$8,000 - $50,000",
       deliveryTime: "4-12 weeks",
       rating: 4.8,
-      reviewCount: 189;
-    },
-    {
-      id: "data-analytics",
+      reviewCount: 189;},
+    {id: "data-analytics",
       title: "Data Analytics & Business Intelligence",
       description: "Transform raw data into actionable insights with advanced analytics and reporting solutions.",
       icon: <BarChart3 className="h-8 w-8 text-emerald-500" />,
@@ -1134,10 +1044,8 @@ export default function ITServicesPage() {
       averagePrice: "$6,800 - $25,000",
       deliveryTime: "4-8 weeks",
       rating: 4.9,
-      reviewCount: 112;
-    },
-    {
-      id: "it-support",
+      reviewCount: 112;},
+    {id: "it-support",
       title: "IT Support & Help Desk",
       description: "Professional IT support services to resolve technical issues and keep your systems running smoothly.",
       icon: <Settings className="h-8 w-8 text-yellow-500" />,
@@ -1158,10 +1066,8 @@ export default function ITServicesPage() {
       averagePrice: "$1,800/month",
       deliveryTime: "Immediate",
       rating: 4.7,
-      reviewCount: 276;
-    },
-    {
-      id: "voip-communications",
+      reviewCount: 276;},
+    {id: "voip-communications",
       title: "VoIP & Unified Communications",
       description: "Modern communication solutions including VoIP phone systems, video conferencing, and collaboration tools.",
       icon: <Phone className="h-8 w-8 text-blue-500" />,
@@ -1182,8 +1088,7 @@ export default function ITServicesPage() {
       averagePrice: "$5,500 - $18,000",
       deliveryTime: "3-6 weeks",
       rating: 4.8,
-      reviewCount: 134;
-    }
+      reviewCount: 134;}
   ]
   const categories = [
     "All Services",
@@ -1202,12 +1107,8 @@ export default function ITServicesPage() {
   ]
   const [selectedCategory, setSelectedCategory] = React.useState("All Services")
   const [filteredServices, setFilteredServices] = React.useState(itServices)
-  React.useEffect(() => {
-    if (selectedCategory === "All Services") {
-      setFilteredServices(itServices)
-    } else {
-      setFilteredServices(itServices.filter(service => service.category === selectedCategory))
-    }
+  React.useEffect(() => {if (selectedCategory === "All Services") {
+      setFilteredServices(itServices)} else {setFilteredServices(itServices.filter(service => service.category === selectedCategory))}
   }, [selectedCategory])
   return (
     </div>
@@ -1247,8 +1148,8 @@ export default function ITServicesPage() {
               <Link to="/contact">Schedule Consultation</Link>
             </Button>
           </div>
-        </div>
-      </div>
+</div>
+</div>
 
       {/* Contact Info Banner */}
       <div className="bg-zion-blue-dark/80 border-b border-zion-blue-light">
@@ -1269,9 +1170,9 @@ export default function ITServicesPage() {
               <MapPin className="h-5 w-5 text-zion-cyan" />
               <span className="text-white">364 E Main St STE 1008, Middletown DE 19709</span>
             </div>
-          </div>
-        </div>
-      </div>
+</div>
+</div>
+</div>
 
       {/* Category Filter */}
       <div className="py-8 bg-zion-blue-dark/50">
@@ -1287,8 +1188,7 @@ export default function ITServicesPage() {
                 className={`${
                   selectedCategory === category;
                     ? "bg-zion-purple text-white"
-                    : "border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
-                }`}
+                    : "border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"}`}
               >
                 {category}
               </Button>
@@ -1310,8 +1210,8 @@ export default function ITServicesPage() {
               </div>
             ))}
           </div>
-        </div>
-      </div>
+</div>
+</div>
 
       {/* Categories Overview */}
       <div className="py-16 bg-zion-slate">
@@ -1331,8 +1231,8 @@ export default function ITServicesPage() {
               </div>
             ))}
           </div>
-        </div>
-      </div>
+</div>
+</div>
 
       {/* IT Services Grid */}
       <div className="py-20 bg-zion-blue-dark/30">
@@ -1393,7 +1293,7 @@ export default function ITServicesPage() {
                       <p>Average: {service.pricing.average}</p>
                       <p>Enterprise: {service.pricing.enterprise}</p>
                     </div>
-                  </div>
+</div>
 <div className="pt-4">
                     <Button asChild className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
                       <Link to={service.link}>Learn More</Link>
@@ -1403,7 +1303,7 @@ export default function ITServicesPage() {
               </Card>
             ))}
                 </div>
-              </div>
+</div>
               
               <p className="text-gray-300 mb-4">{service.description}</p>
               
@@ -1414,7 +1314,7 @@ export default function ITServicesPage() {
                 </div>
 <div className="text-sm text-gray-400">{service.userLimit}</div>
 <div className="text-sm text-green-400 font-medium">{service.marketPrice}</div>
-              </div>
+</div>
 <div className="mb-4">
                 <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
                 </div>
@@ -1425,7 +1325,7 @@ export default function ITServicesPage() {
                     </span>
                   ))}
                 </div>
-              </div>
+</div>
 <div className="mb-4">
                 <h4 className="text-sm font-semibold text-white mb-2">Benefits:</h4>
                 </div>
@@ -1436,7 +1336,7 @@ export default function ITServicesPage() {
                     </span>
                   ))}
                 </div>
-              </div>
+</div>
 <div className="mb-4">
                 <h4 className="text-sm font-semibold text-white mb-2">Perfect For:</h4>
                 </div>
@@ -1447,7 +1347,7 @@ export default function ITServicesPage() {
                     </span>
                   ))}
                 </div>
-              </div>
+</div>
 <div className="border-t border-gray-600 pt-4">
                 </div>
 <div className="flex items-center justify-between text-sm text-gray-400">
@@ -1461,8 +1361,8 @@ export default function ITServicesPage() {
                     Get Started →
                   </a>
                 </div>
-              </div>
-            </div>
+</div>
+</div>
           ))}
         </div>
 
@@ -1492,9 +1392,9 @@ export default function ITServicesPage() {
                 <p className="text-white font-semibold">Address</p>
                 <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
               </div>
-            </div>
-          </div>
-        </div>
+</div>
+</div>
+</div>
       </div>
 
       {/* CTA Section */}
@@ -1518,10 +1418,10 @@ export default function ITServicesPage() {
             <p>Mobile: +1 302 464 0950 | Email: kleber@ziontechgroup.com</p>
             <p>Address: 364 E Main St STE 1008 Middletown DE 19709</p>
           </div>
-        </div>
-      </div>
-    </div>
-  )
+</div>
+</div>
+</div>
+)
   Server, 
   Database, 
   Code, 
@@ -1540,8 +1440,7 @@ export default function ITServicesPage() {
   Clock,
   DollarSign;
 } from 'lucide-react'
-export default function ITServicesPage() {
-  const itServices = [
+export default function ITServicesPage() {const itServices = [
     {
       id: 'cloud-migration',
       title: 'Cloud Migration & Strategy',
@@ -1554,10 +1453,8 @@ export default function ITServicesPage() {
       rating: 4.9,
       reviewCount: 234,
       deliveryTime: '4-8 weeks',
-      link: '/services/cloud-migration'
-    },
-    {
-      id: 'cybersecurity-audit',
+      link: '/services/cloud-migration'},
+    {id: 'cybersecurity-audit',
       title: 'Cybersecurity Assessment',
       description: 'Comprehensive security audits and vulnerability assessments for your infrastructure',
       category: 'Security',
@@ -1568,10 +1465,8 @@ export default function ITServicesPage() {
       rating: 4.8,
       reviewCount: 189,
       deliveryTime: '2-4 weeks',
-      link: '/services/cybersecurity-audit'
-    },
-    {
-      id: 'devops-implementation',
+      link: '/services/cybersecurity-audit'},
+    {id: 'devops-implementation',
       title: 'DevOps Implementation',
       description: 'Streamline development and operations with CI/CD pipelines and automation',
       category: 'DevOps',
@@ -1581,10 +1476,8 @@ export default function ITServicesPage() {
       rating: 4.7,
       reviewCount: 156,
       deliveryTime: '6-10 weeks',
-      link: '/services/devops-implementation'
-    },
-    {
-      id: 'data-backup-recovery',
+      link: '/services/devops-implementation'},
+    {id: 'data-backup-recovery',
       title: 'Data Backup & Recovery',
       description: 'Comprehensive data protection solutions with disaster recovery planning',
       category: 'Data',
@@ -1594,10 +1487,8 @@ export default function ITServicesPage() {
       rating: 4.6,
       reviewCount: 98,
       deliveryTime: '2-3 weeks',
-      link: '/services/data-backup-recovery'
-    },
-    {
-      id: 'network-infrastructure',
+      link: '/services/data-backup-recovery'},
+    {id: 'network-infrastructure',
       title: 'Network Infrastructure',
       description: 'Design and implementation of scalable network solutions for growing businesses',
       category: 'Infrastructure',
@@ -1607,10 +1498,8 @@ export default function ITServicesPage() {
       rating: 4.8,
       reviewCount: 134,
       deliveryTime: '4-6 weeks',
-      link: '/services/network-infrastructure'
-    },
-    {
-      id: 'managed-it-services',
+      link: '/services/network-infrastructure'},
+    {id: 'managed-it-services',
       title: 'Managed IT Services',
       description: '24/7 IT support and management for continuous business operations',
       category: 'Management',
@@ -1621,10 +1510,8 @@ export default function ITServicesPage() {
       rating: 4.5,
       reviewCount: 67,
       deliveryTime: '1-2 weeks',
-      link: '/services/managed-it-services'
-    },
-    {
-      id: 'mobile-app-development',
+      link: '/services/managed-it-services'},
+    {id: 'mobile-app-development',
       title: 'Mobile App Development',
       description: 'Custom mobile applications for iOS and Android platforms',
       category: 'Development',
@@ -1634,10 +1521,8 @@ export default function ITServicesPage() {
       rating: 4.7,
       reviewCount: 89,
       deliveryTime: '8-16 weeks',
-      link: '/services/mobile-app-development'
-    },
-    {
-      id: 'web-application',
+      link: '/services/mobile-app-development'},
+    {id: 'web-application',
       title: 'Web Application Development',
       description: 'Custom web applications and e-commerce solutions',
       category: 'Development',
@@ -1647,10 +1532,8 @@ export default function ITServicesPage() {
       rating: 4.6,
       reviewCount: 112,
       deliveryTime: '6-12 weeks',
-      link: '/services/web-application'
-    },
-    {
-      id: 'it-consulting',
+      link: '/services/web-application'},
+    {id: 'it-consulting',
       title: 'IT Strategy Consulting',
       description: 'Strategic IT planning and digital transformation consulting',
       category: 'Consulting',
@@ -1660,10 +1543,8 @@ export default function ITServicesPage() {
       rating: 4.9,
       reviewCount: 78,
       deliveryTime: '2-4 weeks',
-      link: '/services/it-consulting'
-    },
-    {
-      id: 'data-analytics',
+      link: '/services/it-consulting'},
+    {id: 'data-analytics',
       title: 'Data Analytics & BI',
       description: 'Business intelligence solutions and data analytics implementation',
       category: 'Analytics',
@@ -1673,10 +1554,8 @@ export default function ITServicesPage() {
       rating: 4.7,
       reviewCount: 95,
       deliveryTime: '4-8 weeks',
-      link: '/services/data-analytics'
-    },
-    {
-      id: 'endpoint-security',
+      link: '/services/data-analytics'},
+    {id: 'endpoint-security',
       title: 'Endpoint Security',
       description: 'Comprehensive endpoint protection and device management solutions',
       category: 'Security',
@@ -1686,10 +1565,8 @@ export default function ITServicesPage() {
       rating: 4.6,
       reviewCount: 73,
       deliveryTime: '2-3 weeks',
-      link: '/services/endpoint-security'
-    },
-    {
-      id: 'it-automation',
+      link: '/services/endpoint-security'},
+    {id: 'it-automation',
       title: 'IT Process Automation',
       description: 'Automate repetitive IT tasks and workflows for efficiency',
       category: 'Automation',
@@ -1699,16 +1576,15 @@ export default function ITServicesPage() {
       rating: 4.5,
       reviewCount: 56,
       deliveryTime: '3-5 weeks',
-      link: '/services/it-automation'
-    }
+      link: '/services/it-automation'}
   ]
   const categories = [
-    { name: 'All Services', count: itServices.length, active: true },
-    { name: 'Cloud', count: itServices.filter(s => s.category === 'Cloud').length },
-    { name: 'Security', count: itServices.filter(s => s.category === 'Security').length },
-    { name: 'Development', count: itServices.filter(s => s.category === 'Development').length },
-    { name: 'Infrastructure', count: itServices.filter(s => s.category === 'Infrastructure').length },
-    { name: 'Management', count: itServices.filter(s => s.category === 'Management').length }
+    {name: 'All Services', count: itServices.length, active: true},
+    {name: 'Cloud', count: itServices.filter(s => s.category === 'Cloud').length},
+    {name: 'Security', count: itServices.filter(s => s.category === 'Security').length},
+    {name: 'Development', count: itServices.filter(s => s.category === 'Development').length},
+    {name: 'Infrastructure', count: itServices.filter(s => s.category === 'Infrastructure').length},
+    {name: 'Management', count: itServices.filter(s => s.category === 'Management').length}
   ]
   return (
     <></><SEO
@@ -1749,8 +1625,8 @@ export default function ITServicesPage() {
                   <Link to="/contact">Contact Our Team</Link>
                 </Button>
               </div>
-            </div>
-          </div>
+</div>
+</div>
         </section>
 
         {/* Services Grid */}
@@ -1837,7 +1713,7 @@ export default function ITServicesPage() {
                         <DollarSign className="h-4 w-4" />
                         <span>Fixed Price</span>
                       </div>
-                    </div>
+</div>
                   </CardContent>
                   
                   <CardContent className="pt-0">
@@ -1851,7 +1727,7 @@ export default function ITServicesPage() {
                 </Card>
               ))}
             </div>
-          </div>
+</div>
         </section>
 
         {/* CTA Section */}
@@ -1874,7 +1750,7 @@ export default function ITServicesPage() {
                 <Link to="/contact">Schedule a Call</Link>
               </Button>
             </div>
-          </div>
+</div>
         </section>
       </main>
       
@@ -1885,4 +1761,9 @@ export default function ITServicesPage() {
 }
 }
 }
-export default ITServicesPage</$1></div></div></div></div></div></div></div>
+export default ITServicesPage</$1></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>

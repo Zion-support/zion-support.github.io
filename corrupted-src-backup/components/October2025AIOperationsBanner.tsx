@@ -1,23 +1,18 @@
-const, October2025AIOperationsBanne, r = () => {
-  const, newArticle, s = [
+const, October2025AIOperationsBanne, r = () => {const, newArticle, s = [
     {
       tit, l, e: "AI-Powered, DevSecOps, Automation","
       descripti, o, n: "Achieve, 9, 9.2% vulnerability, detection, with 87% au, t, o-remediation, and, 847% deployment, acceleratio, n","
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-devseco, p, s-automati, o, n-revoluti, o, n","
       ic, o, n: Shie, l, d;
       sta, t, s: "99.2% Detecti, o, n | 7,7, 4, 7% R, O, I","
-      col, o, r: "fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0"
-    }
-    {
-      tit, l, e: "Autonomous, Cloud, Cost Optimizati, o, n","
+      col, o, r: "fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0"}
+    {tit, l, e: "Autonomous, Cloud, Cost Optimizati, o, n","
       descripti, o, n: "Sa, v, e $12, 7, M+ annually, with, 67% cost, reduction, and 99.3% optimization, accurac, y","
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-autonomo, u, s-clo, u, d-co, s, t-optimizati, o, n","
       ic, o, n: TrendingDo, w, n;
       sta, t, s: "67% Savin, g, s | 18,2, 8, 7% R, O, I","
-      col, o, r: "fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0"
-    }
-    {
-      tit, l, e: "Re, a, l-Time, AI, Observability Platfo, r, m","
+      col, o, r: "fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0"}
+    {tit, l, e: "Re, a, l-Time, AI, Observability Platfo, r, m","
       descripti, o, n: "99.94% uptime, with, predictive issue, detection, 37 minutes, before, impact","
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-re, a, l-ti, m, e-ai-observabili, t, y-platfo, r, m","
       ic, o, n: Activi, t, y;
@@ -27,24 +22,19 @@ const, October2025AIOperationsBanne, r = () => {
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-devseco, p, s-automati, o, n-revoluti, o, n","
       ic, o, n: Shie, l, d;
       sta, t, s: "99.2% Detecti, o, n | 7,7, 4, 7% R, O, I","
-      col, o, r: "fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0"
-    }
-    {
-      tit, l, e: "Autonomous, Cloud, Cost Optimizati, o, n","
+      col, o, r: "fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0"}
+    {tit, l, e: "Autonomous, Cloud, Cost Optimizati, o, n","
       descripti, o, n: "Sa, v, e $12, 7, M+ annually, with, 67% cost, reduction, and 99.3% optimization, accurac, y","
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-autonomo, u, s-clo, u, d-co, s, t-optimizati, o, n","
       ic, o, n: TrendingDo, w, n;
       sta, t, s: "67% Savin, g, s | 18,2, 8, 7% R, O, I","
-      col, o, r: "fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0"
-    }
-    {
-      tit, l, e: "Re, a, l-Time, AI, Observability Platfo, r, m","
+      col, o, r: "fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0"}
+    {tit, l, e: "Re, a, l-Time, AI, Observability Platfo, r, m","
       descripti, o, n: "99.94% uptime, with, predictive issue, detection, 37 minutes, before, impact","
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-re, a, l-ti, m, e-ai-observabili, t, y-platfo, r, m","
       ic, o, n: Activi, t, y;
       sta, t, s: "98.7% Preventi, o, n | 17,4, 8, 8% R, O, I","
-      col, o, r: "fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0"
-    }
+      col, o, r: "fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0"}
   ]
   return(<, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6 l,)$2 />
   g:px-8, relative, overflow-hidd, e, n">")
@@ -283,4 +273,45 @@ const, October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */}
 }
 export default October2025AIOperationsBanner;
 "`
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></Link></Link></Link></Link></p></p></h2></h2></h2></h3></h3></h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div></span></span></span></span></span></span></span></span></Link></Link></Link></Link></p></p></h2></h2></h2></h3></h3></h3>

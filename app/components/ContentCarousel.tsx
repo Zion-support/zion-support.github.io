@@ -2,19 +2,18 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
+import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart} from 'lucide-react';
 
-const ContentCarouselPage: React.FC = () => {
-  return (
-    <></>
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const ContentCarouselPage: React.FC = () => {return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
         {/* Hero Section */}
-        </div><section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8">
+        </div>
+<section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 ContentCarousel
@@ -23,14 +22,14 @@ const ContentCarouselPage: React.FC = () => {
                 Discover our comprehensive solutions designed to transform your business.
               </p>
             </div>
-          </div>
+</div>
         </section>
 
         {/* Content Section */}
         <section className="py-16 px-4 sm: px-6 lg:px-8">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Coming Soon
@@ -43,23 +42,20 @@ const ContentCarouselPage: React.FC = () => {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
             </div>
-          </div>
+</div>
         </section>
-import React, { useState, useEffect } from 'react'
-import { ChevronLeft, ChevronRight, CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react';
-import React, { useState, useEffect } from 'react'
-import { ChevronLeft, ChevronRight, CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp, Cloud } from 'lucide-react'
-interface Slide {
-  id: number
+import React, {useState, useEffect} from 'react'
+import {ChevronLeft, ChevronRight, CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp} from 'lucide-react';
+import React, {useState, useEffect} from 'react'
+import {ChevronLeft, ChevronRight, CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp, Cloud} from 'lucide-react'
+interface Slide {id: number
   icon: React.ComponentType<any>
   title: string
   description: string
   features: string[]
-  color: string
-}
+  color: string}
 
-const ContentCarousel: React.FC = () => {
-const [currentSlide, setCurrentSlide] = useState(0)
+const ContentCarousel: React.FC = () => {const [currentSlide, setCurrentSlide] = useState(0)
 const [currentSlide, setCurrentSlide] = useState(0)
 const slides: Slide[] = [
     {
@@ -75,14 +71,13 @@ description: 'Revolutionary artificial intelligence that transforms your busines
         'Automated Decision Making'
       ],
 stats: [
-        { value: '95%', label: 'Accuracy Rate' },
-        { value: '3x', label: 'Faster Processing' }
+        { value: '95%', label: 'Accuracy Rate'},
+        {value: '3x', label: 'Faster Processing'}
       ]
 
 color: 'from-purple-500 to-blue-600'
 },
-    {
-      id: 2,
+    {id: 2,
       title: 'Cloud Infrastructure',
       description: 'Scalable and secure cloud solutions that grow with your business needs.',
       features: [
@@ -92,10 +87,8 @@ color: 'from-purple-500 to-blue-600'
         'Cost optimization'
       ],
       icon: Cloud,
-      color: 'from-green-500 to-blue-600'
-    },
-    {
-      id: 3,
+      color: 'from-green-500 to-blue-600'},
+    {id: 3,
       title: 'AI Automation',
       description: 'Automate complex business processes with intelligent AI systems.',
       features: [
@@ -105,10 +98,8 @@ color: 'from-purple-500 to-blue-600'
         'Performance monitoring'
       ],
       icon: Zap,
-      color: 'from-orange-500 to-red-600'
-    },
-    {
-      id: 4,
+      color: 'from-orange-500 to-red-600'},
+    {id: 4,
       title: 'Cybersecurity Solutions',
       description: 'Protect your business with comprehensive AI-powered security solutions.',
       features: [
@@ -118,33 +109,25 @@ color: 'from-purple-500 to-blue-600'
         'Compliance management'
       ],
       icon: Shield,
-      color: 'from-red-500 to-pink-600'
-    }
+      color: 'from-red-500 to-pink-600'}
   ]
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length)
-    }, 5000)
+  useEffect(() => {const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length)}, 5000)
 
     return () => clearInterval(timer)
   }, [slides.length])
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length)
-  }
+  const nextSlide = () => {setCurrentSlide((prev) => (prev + 1) % slides.length)}
 
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
-  }
+  const prevSlide = () => {setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)}
 
   return (
-    <div className="relative w-full max-w-6xl mx-auto">
+<div className="relative w-full max-w-6xl mx-auto">
       </div>
 <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-sm border border-cyan-500/20">
         </div>
-<div
-          className="flex transition-transform duration-500 ease-in-out" 
+<div className="flex transition-transform duration-500 ease-in-out" 
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
         >
           {slides.map((slide) => (
@@ -170,8 +153,8 @@ color: 'from-purple-500 to-blue-600'
                     </div>
                   ))}
                 </div>
-              </div>
-            </div>
+</div>
+</div>
           ))}
         </div>
         
@@ -196,12 +179,11 @@ color: 'from-purple-500 to-blue-600'
               key={index}
               onClick={() => setCurrentSlide(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentSlide  ? 'bg-cyan-400 scale-125'  : 'bg-slate-600 hover:bg-slate-500'
-              }`}
+                index === currentSlide  ? 'bg-cyan-400 scale-125'  : 'bg-slate-600 hover:bg-slate-500'}`}
             />
           ))}
         </div>
-      </div>
+</div>
 
       {/* Additional Info */}
       </button><div className="mt-16 text-center">
@@ -212,23 +194,23 @@ color: 'from-purple-500 to-blue-600'
             </div>
 <div className="text-3xl font-bold text-white mb-2">500+</div>
 <div className="text-gray-300">Happy Clients</div>
-          </div>
+</div>
 <div className="text-center">
             </div>
 <div className="text-3xl font-bold text-white mb-2">99.9%</div>
 <div className="text-gray-300">Uptime</div>
-          </div>
+</div>
 <div className="text-center">
             </div>
 <div className="text-3xl font-bold text-white mb-2">24/7</div>
 <div className="text-gray-300">Support</div>
-          </div>
+</div>
 <div className="text-center">
             </div>
 <div className="text-3xl font-bold text-white mb-2">50+</div>
 <div className="text-gray-300">Countries</div>
-          </div>
-        </div>
+</div>
+</div>
 </div>
 <Footer />
     </>
@@ -236,9 +218,8 @@ color: 'from-purple-500 to-blue-600'
 }
 
 export default ContentCarouselPage
-
 </div>
-  )
+)
 }
 
 export default ContentCarousel

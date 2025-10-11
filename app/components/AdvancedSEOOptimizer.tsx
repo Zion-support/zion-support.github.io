@@ -1,23 +1,20 @@
 'use client';
 import React from 'react';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target } from 'lucide-react';
+import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target} from 'lucide-react';
 
 interface AdvancedSEOOptimizerProps {className?: string
   children?: React.ReactNode}
 
 const _trackPageView = (config: SEOData) => {,
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-    }
+    if (typeof window !== 'undefined' && 'gtag' in window) {}
   }
 
         const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-        if (_perfData && typeof window !== 'undefined' && 'gtag' in window) {
-          (window as unknown as {gtag: (command: string, action: string, parameters: Record<string, unknown>) => void}}).gtag('event', 'page_load_performance', {)
+        if (_perfData && typeof window !== 'undefined' && 'gtag' in window) {(window as unknown as {gtag: (command: string, action: string, parameters: Record<string, unknown>) => void}}).gtag('event', 'page_load_performance', {)
       window.addEventListener('load', () => {
         const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
         if (_perfData && typeof window !== 'undefined' && 'gtag' in window) {
-          (window as unknown as { gtag: (command: string, action: string, parameters: Record</string><string, unknown>) => void }).gtag('event', 'page_load_performance', {
-            event_category: 'Performance',
+          (window as unknown as { gtag: (command: string, action: string, parameters: Record</string><string, unknown>) => void}).gtag('event', 'page_load_performance', {event_category: 'Performance',
             event_label: 'Page Load',
             value: Math.round(_perfData.loadEventEnd - _perfData.fetchStart),})
       })
@@ -56,7 +53,7 @@ const _trackPageView = (config: SEOData) => {,
           fontSize: '12px',
           zIndex: 1000,
                 {recommendations.map((rec, index) => (
-                  </ul><li key={index}>{rec}</li>
+                  </ul><li key={$2}>{rec}</li>
           </div>
 <div>SEO Score: {seoScore}/100
           {recommendations.length > 0 && (
@@ -64,9 +61,9 @@ const _trackPageView = (config: SEOData) => {,
 <div>
               </div>
 <div>Recommendations:
-              <ul style={{ margin: '5px 0', paddingLeft: '15px' }}>
+              <ul style={{ margin: '5px 0', paddingLeft: '15px'}}>
                 {recommendations.map((rec, index) => (
-                  <li key={index}>{rec})})
+                  <li key={$2}>{rec})})
         </div>
 
       {/* Additional SEO Meta Tags */} <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview: -1" />,

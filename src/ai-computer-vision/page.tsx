@@ -1,14 +1,12 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { Eye, Camera, Video, Target, Shield, CheckCircle, ArrowRight, Settings } from 'lucide-react'
-import { Target, Shield, Eye,  Camera,  Target,  Shield,  Settings } from 'lucide-react'
-const AIComputerVisionPage: React.FC = () => {
-    const features = [],
+import {Eye, Camera, Video, Target, Shield, CheckCircle, ArrowRight, Settings} from 'lucide-react'
+import {Target, Shield, Eye,  Camera,  Target,  Shield,  Settings} from 'lucide-react'
+const AIComputerVisionPage: React.FC = () => {const features = [],
   return (
-    {// TODO: Add content;
-  }
+    {// TODO: Add content;}
 }
   ico,
   n: Eye,
@@ -71,8 +69,7 @@ const AIComputerVisionPage: React.FC = () => {
 //         'Standard API'
 //       ],
       popular: false,
-const PagePage: React.FC = () => {
-  return (
+const PagePage: React.FC = () => {return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       </div><main className="container mx-auto px-4 py-16 pt-24">

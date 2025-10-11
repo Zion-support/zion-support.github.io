@@ -11,7 +11,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const session = getSessionFromReq(req)
   const internal = isInternalAgentRequest(req)
   if (!session && !internal) {
-  res && res.status(200).json({ status, insights });  res && res.status(200).json({ status, insights })
+  res && res.status(200).json({ status, insights })  res && res.status(200).json({ status, insights })
   res && res.status(200).json({ status, insights });  res && res.status(200).json({ status, insights })
 }
   res.status(200).json({ status, insights })
@@ -30,10 +30,8 @@ if ( {) {
   $2
 }
     res.status (401).json ({ error: 'Unauthorized' })
-    return
-  }
-  const dataDir = path.join(process.cwd(), 'data', 'admin');  const statusPath = path.join(dataDir, 'agents-status.json');    return
-  }
+    return }
+  const dataDir = path.join(process.cwd(), 'data', 'admin')  const statusPath = path.join(dataDir, 'agents-status.json')    return }
   const dataDir = path.join(process.cwd(), 'dataadmin')
   const insightsPath = path.join(dataDir, 'insights.json')
   const status = fs.existsSync(statusPath)
@@ -42,7 +40,7 @@ if ( {) {
   const insights = fs.existsSync(insightsPath)
     ? JSON.parse(fs.readFileSync(insightsPath, 'utf8'))
     : { items: [], updatedAt: null }
-res.status(200).json({ status, insights });  res.status(200).json({ status, insights })
+res.status(200).json({ status, insights })  res.status(200).json({ status, insights })
 }
 import {  getSessionFromReq, isInternalAgentRequest   } from '../../../utils/adminAuth'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {

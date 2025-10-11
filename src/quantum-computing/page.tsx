@@ -1,10 +1,9 @@
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import {Helmet} from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-const QuantumComputingPage: React.FC = () => {
-    return (
+const QuantumComputingPage: React.FC = () => {return (
     <React.Fragment>
       <Helmet>
         <title>Quantum Computing Solutions - Zion Tech Group;
@@ -74,13 +73,12 @@ const QuantumComputingPage: React.FC = () => {
                 Schedule Consultation,
   
             </div>
-          </div>
-        </div>
+</div>
+</div>
       </main>
       <Footer />
     </React.Fragment>
-  )
-  }
+  )}
 export default QuantumComputingPage</a>
   </a>
   </li>
@@ -89,4 +87,9 @@ export default QuantumComputingPage</a>
   </li>
   </p>
   </h1>
-</div></div></div></div></div></div></p></p></p></p></h2></h2></h3></h4></h4></h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></p></p></p></p></h2></h2></h3></h4></h4></h4>

@@ -1,8 +1,7 @@
 import React from 'react'
 import {Share2, TrendingUp, Users, Calendar, BarChart, CheckCircle, ArrowRight, Star, MessageSquare} from 'lucide-react'
 import React from 'react'
-const AISocialMediaManagerPage: React.FC = () => {
-  const features = [
+const AISocialMediaManagerPage: React.FC = () => {const features = [
     {
       icon: Share2,
       title: 'AI Content Creation',
@@ -32,12 +31,12 @@ $4}
     'Boost brand awareness by 200%',
     'Improve content performance by 250%'
   const platforms = [
-    { name: 'Facebook', icon: '📘', color: 'text-blue-500' },
-    { name: 'Instagram', icon: '📷', color: 'text-pink-500' },
-    { name: 'Twitter', icon: '🐦', color: 'text-blue-400' },
-    { name: 'LinkedIn', icon: '💼', color: 'text-blue-600' },
-    { name: 'TikTok', icon: '🎵', color: 'text-black' },
-    { name: 'YouTube', icon: '📺', color: 'text-red-500' }
+    {name: 'Facebook', icon: '📘', color: 'text-blue-500'},
+    {name: 'Instagram', icon: '📷', color: 'text-pink-500'},
+    {name: 'Twitter', icon: '🐦', color: 'text-blue-400'},
+    {name: 'LinkedIn', icon: '💼', color: 'text-blue-600'},
+    {name: 'TikTok', icon: '🎵', color: 'text-black'},
+    {name: 'YouTube', icon: '📺', color: 'text-red-500'}
   const pricing = [
       name: 'Starter',
       price: '$29',
@@ -70,9 +69,10 @@ $4}
         '24/7 support',
         'White-label options'
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-      </div><section className="pt-24 pb-16 px-4">
+      </div>
+<section className="pt-24 pb-16 px-4">
         </section>
 <div className="container mx-auto max-w-6xl">
           </div>
@@ -113,7 +113,8 @@ $4}
                 <h3 className={`font-semibold ${platform.color}`}>
                   {platform.name})
       {/* Features Section */}
-      </div><section className="py-16 px-4">
+      </div>
+<section className="py-16 px-4">
               Powerful AI Features;
               Leverage cutting-edge AI technology to streamline your social media management;
           </section>
@@ -154,8 +155,7 @@ $4}
               < key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border transition-all duration-300 ${$2 />
                 plan.popular;
                   ? 'border-pink-400/60 ring-2 ring-pink-400/20' 
-                  : 'border-slate-700/50'
-              }`}>
+                  : 'border-slate-700/50'}`}>
                 {plan.popular && (
                   </div>
 <div className="bg-pink-500 text-slate-900 text-sm font-semibold px-3 py-1 rounded-full text-center mb-4">
@@ -177,7 +177,8 @@ $4}
                     : 'border-2 border-slate-600 text-white hover:border-pink-400 hover:text-pink-400'
                   {plan.popular ? 'Start Free Trial' : 'Get Started'}
       {/* CTA Section */}
-      </div><section className="py-16 px-4 bg-gradient-to-r from-pink-500/10 to-purple-500/10">
+      </div>
+<section className="py-16 px-4 bg-gradient-to-r from-pink-500/10 to-purple-500/10">
         </section>
 <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
@@ -188,32 +189,32 @@ $4}
   ),
 }
 'use client'
-import React, { useState, useEffect } from 'react'
-import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react'
+import React, {useState, useEffect} from 'react'
+import {Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location} from 'lucide-react'
 export default AISocialMediaManagerPage</p>
   </h2>
   </div>
   </section>
   </button>
   </div>
-  </div>
-  </div>
-  </div>
+</div>
+</div>
+</div>
   </button>
   </p>
   </h3>
   </div>
-  </div>
-  </div>
+</div>
+</div>
   </p>
   </h3>
   </div>
-  </div>
-  </div>
+</div>
+</div>
   </section>
-  </div>
-  </div>
-  </div>
+</div>
+</div>
+</div>
   </p>
   </h2>
   </section>
@@ -221,8 +222,8 @@ export default AISocialMediaManagerPage</p>
   </div>
   </h1>
   </div>
-  </div>
-  </div>
+</div>
+</div>
   </section>
-  </div>
+</div>
 </span></span></span></p></p></h3></h3></ul></li>

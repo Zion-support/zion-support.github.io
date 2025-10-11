@@ -1,7 +1,6 @@
-import { SEO } from "@/components/SEO"
-import { GradientHeading } from "@/components/GradientHeading"
-const Terms: React.FC = () => {
-  return (
+import {SEO} from "@/components/SEO"
+import {GradientHeading} from "@/components/GradientHeading"
+const Terms: React.FC = () => {return (
     
       <SEO
         title="Terms of Service"
@@ -20,7 +19,8 @@ const Terms: React.FC = () => {
               <p className="text-lg text-gray-600">Last updated: {new Date().toLocaleDateString()}</p>
             </div>
 <div className="prose prose-lg max-w-none">
-              </div><section className="mb-8">
+              </div>
+<section className="mb-8">
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">1. Acceptance of Terms</h2>
                 <p className="text-gray-700 mb-4">
                   By accessing and using the Zion Tech Group website and services, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.
@@ -221,16 +221,15 @@ const Terms: React.FC = () => {
                   If any provision of these Terms is held to be unenforceable or invalid, such provision will be changed and interpreted to accomplish the objectives of such provision to the greatest extent possible under applicable law, and the remaining provisions will continue in full force and effect.
                 </p>
               </section>
-            </div>
+</div>
 <div className="mt-12 pt-8 border-t border-gray-200 text-center">
               <p className="text-gray-600">
                 By using our services, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.
               </p>
             </div>
-          </div>
-        </div>
-      </div>
-    
-  )
+</div>
+</div>
+</div>
+)
 }
 export default Terms;

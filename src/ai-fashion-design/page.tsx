@@ -1,10 +1,9 @@
 import React from 'react'
-import { Palette, Camera, Download, Share, Star, CheckCircle, Zap, Clock, Users, Award, ArrowRight, Sparkles } from 'lucide-react'
+import {Palette, Camera, Download, Share, Star, CheckCircle, Zap, Clock, Users, Award, ArrowRight, Sparkles} from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
-const AIFashionDesignPage: React.FC = () => {
-  const features = [
+const AIFashionDesignPage: React.FC = () => {const features = [
     'Design Generation',
     'Trend Analysis',
     'Color Matching',
@@ -30,22 +29,17 @@ const AIFashionDesignPage: React.FC = () => {
       price: '$249',
       period: '/month',
       features: ['10 designs/month', 'Basic trends', 'Email support', 'Standard quality'],
-      popular: false;
-    },
-    {
-      name: 'Professional',
+      popular: false;},
+    {name: 'Professional',
       price: '$349',
       period: '/month',
       features: ['Unlimited designs', 'Advanced trends', '3D visualization', 'API access', 'Priority support'],
-      popular: true;
-    },
-    {
-      name: 'Enterprise',
+      popular: true;},
+    {name: 'Enterprise',
       price: '$699',
       period: '/month',
       features: ['Everything in Pro', 'Custom models', 'White-label', 'Dedicated support', 'Market intelligence'],
-      popular: false;
-    }
+      popular: false;}
   ]
   return (
     <React.Fragment>
@@ -83,7 +77,8 @@ const AIFashionDesignPage: React.FC = () => {
                   <Camera className="w-5 h-5" />
                   View Gallery;
           {/* Features Section */}
-          </div><section className="mb-16">
+          </div>
+<section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               AI Fashion Design Features;
             </section>
@@ -96,7 +91,8 @@ const AIFashionDesignPage: React.FC = () => {
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
                     <h3 className="text-lg font-semibold text-white">{feature})
           {/* Benefits Section */}
-          </div><section className="mb-16">
+          </div>
+<section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               Why Choose AI Fashion Designer?
             </section>
@@ -109,7 +105,8 @@ const AIFashionDesignPage: React.FC = () => {
                     <Zap className="w-8 h-8 text-white" />
                   <h3 className="text-lg font-semibold text-white mb-2">{benefit})
           {/* Pricing Section */}
-          </div><section className="mb-16">
+          </div>
+<section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               Simple, Transparent Pricing;
             </section>
@@ -141,13 +138,13 @@ const AIFashionDesignPage: React.FC = () => {
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
                       plan.popular;
                         ? 'cyber-button'
-                        : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
-                    }`}
+                        : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'}`}
                   >
                     Get Started;
               ))}
           {/* CTA Section */}
-          </div><section className="text-center mb-16">
+          </div>
+<section className="text-center mb-16">
             </section>
 <div className="cyber-card p-12 max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-white mb-4 neon-text">
@@ -180,4 +177,17 @@ export default AIFashionDesignPage</a>
   </h1>
   </div>
   </SEOOptimizer>
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></h2></h2></h3></h3></h3></ul></li></main></section></section></section></section></section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div></div></span></span></h2></h2></h3></h3></h3></ul></li></main></section></section></section></section></section>

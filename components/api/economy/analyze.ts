@@ -9,7 +9,7 @@ const completion = await client.chat.completions.create ({
   role: 'system', content: system
 }
 export type AnalyzeResponse = {
-  analysis: string;};import type { NextApiRequest, NextApiResponse  } from 'next'
+  analysis: string}import type { NextApiRequest, NextApiResponse  } from 'next'
 import OpenAI from 'openai'
 export type AnalyzeRequestBody = {
   operatorPrompt: string
@@ -20,7 +20,7 @@ export type AnalyzeResponse = {
   role: 'system', content: system 
 }
 export type AnalyzeResponse = {
-  analysis: string;};import type { NextApiRequest, NextApiResponse  } from 'next'
+  analysis: string}import type { NextApiRequest, NextApiResponse  } from 'next'
 import OpenAI from 'openai'
 export type AnalyzeRequestBody = {
   operatorPrompt: string,
@@ -38,14 +38,14 @@ export default async function handler(
   res: NextApiResponse<AnalyzeResponse | { error: string }>
 ) {
   if (req && req.method !== 'POST') {
-    return res && res.status(405).json({ error: 'Method not allowed' });  }
+    return res && res.status(405).json({ error: 'Method not allowed' })  }
   const { operatorPrompt, context } = (req && req.body || {}) as AnalyzeRequestBody
   if (!operatorPrompt || typeof operatorPrompt !== 'string') {
-    return res && res.status(400).json({ error: 'operatorPrompt is required' });  }    return res && res.status(405).json({ error: 'Method not allowed' })
+    return res && res.status(400).json({ error: 'operatorPrompt is required' })  }    return res && res.status(405).json({ error: 'Method not allowed' })
   }
   const { operatorPrompt, context } = (req && req.body || {}) as AnalyzeRequestBody
   if (!operatorPrompt || typeof operatorPrompt !== 'string') {
-    return res && res.status(400).json({ error: 'operatorPrompt is required' });    return res && res.status(400).json({ error: 'operatorPrompt is required' })
+    return res && res.status(400).json({ error: 'operatorPrompt is required' })    return res && res.status(400).json({ error: 'operatorPrompt is required' })
   }
   const apiKey = process && process.env.OPENAI_API_KEY
   if (!apiKey) {

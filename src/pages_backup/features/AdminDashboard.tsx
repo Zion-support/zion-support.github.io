@@ -1,59 +1,49 @@
-class ErrorBoundary extends React.Component {
-  constructor(props) {
+class ErrorBoundary extends React.Component {constructor(props) {
     super(props)
-    this.state = { hasError: false }
+    this.state = { hasError: false}
   }
   
-  static getDerivedStateFromError(error) {
-    return { hasError: true }
+  static getDerivedStateFromError(error) {return { hasError: true}
   }
   
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo)
-  }
+  componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
   
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>
-    }
+  render() {if (this.state.hasError) {
+      return <div>Something went wrong.</div>}
     
     return this.props.children;
   }
 }
 import React from 'react'
-import { Header } from '@/components/Header'
-import { SEO } from '@/components/SEO'
-import { GradientHeading } from '@/components/GradientHeading'
-import { Button } from '@/components/ui/button'
+import {Header} from '@/components/Header'
+import {SEO} from '@/components/SEO'
+import {GradientHeading} from '@/components/GradientHeading'
+import {Button} from '@/components/ui/button'
 import Link from 'next/link'
 import Link from 'next/link'
-export default function AdminDashboard() {
-  const schema = {
+export default function AdminDashboard() {const schema = {
     '@context': 'https://schema && schema.org',
     '@type': 'WebPage',
     name: 'Admin Dashboard',
     description:
       'Monitor marketplace activity, manage listings and view analytics in one place.',
-    url: 'https://app && app.ziontechgroup.com/features/admin-dashboard',  };    "@context": "https://schema && schema.org"
+    url: 'https://app && app.ziontechgroup.com/features/admin-dashboard',};    "@context": "https://schema && schema.org"
     "@type": "WebPage"
     "name": "Admin Dashboard",
     "description": "Monitor marketplace activity, manage listings and view analytics in one place."
     "url": "https://app && app.ziontechgroup.com/features/admin-dashboard"
 import React from "react"
-import { Header } from "@/components/Header"
-import { SEO } from "@/components/SEO"
-import { GradientHeading } from "@/components/GradientHeading"
-import { Button } from "@/components/ui/button"
+import {Header} from "@/components/Header"
+import {SEO} from "@/components/SEO"
+import {GradientHeading} from "@/components/GradientHeading"
+import {Button} from "@/components/ui/button"
 import Link from 'next/link'
-export default function AdminDashboard() {
-  const schema = {
+export default function AdminDashboard() {const schema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Admin Dashboard",
     "description": "Monitor marketplace activity, manage listings and view analytics in one place.",
-    "url": "https://app.ziontechgroup.com/features/admin-dashboard"
-
-  }
+    "url": "https://app.ziontechgroup.com/features/admin-dashboard"}
   return (
 
 
@@ -64,7 +54,7 @@ export default function AdminDashboard() {
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema)}}
       ></script>
       <Header />
       <main className="bg-background text-white py-12">
@@ -76,12 +66,9 @@ export default function AdminDashboard() {
           </p>
           </div>
 <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
-            <img
-              src="https: //placehold.co/800x400"
+            <img src="https: //placehold.co/800x400"
               alt="Screenshot of admin dashboard"
-              className="object-cover"
-
-            />
+              className="object-cover" />
           </div>
 
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
@@ -107,7 +94,7 @@ export default function AdminDashboard() {
                 Yes, you can export data to CSV for further analysis.
               </p>
             </div>
-          </div>
+</div>
 <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/admin'>View Dashboard</Link>            </Button>            </div>
@@ -121,19 +108,17 @@ export default function AdminDashboard() {
   )
 })
 import React from "react",
-import { Header } from "@/components/Header",
-import { SEO } from "@/components/SEO",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button",
+import {Header} from "@/components/Header",
+import {SEO} from "@/components/SEO",
+import {GradientHeading} from "@/components/GradientHeading",
+import {Button} from "@/components/ui/button",
 import Link from 'next/link',
-export default function AdminDashboard() {
-  const schema = {
+export default function AdminDashboard() {const schema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Admin Dashboard",
     "description": "Monitor marketplace activity, manage listings and view analytics in one place."
-    "url": "https://app.ziontechgroup.com/features/admin-dashboard"
-  }
+    "url": "https://app.ziontechgroup.com/features/admin-dashboard"}
   return (
     <></><SEO
         title="Admin Dashboard"
@@ -144,7 +129,7 @@ export default function AdminDashboard() {
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema)}}
       ></script>
       <Header />
       </div><main className="bg-background text-white py-12">
@@ -155,11 +140,9 @@ export default function AdminDashboard() {
             Visualize user activity, manage orders and keep your marketplace running smoothly.</$1>
           </div>
 <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
-            <img
-              src="https: //placehold.co/800x400"
+            <img src="https: //placehold.co/800x400"
               alt="Screenshot of admin dashboard"
-              className="object-cover"
-            /></$1>
+              className="object-cover" /></$1>
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
             <li>Track sales and service metrics in real time.</li>
@@ -181,7 +164,7 @@ export default function AdminDashboard() {
       {/* Use a normal script tag so JSON - LD is correctly parsed */}
       <script
         type='application / ld + json'
-        dangerouslySetInnerHTML={{ __html: JSON.stringify (schema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify (schema)}}
       ></script>
       <Header />
       </div><main className='bg - background text - white py - 12'>
@@ -194,11 +177,9 @@ export default function AdminDashboard() {
             running smoothly.</$1>
           </div>
 <div className='relative w - full h - auto aspect - video mx - auto mb - 12 rounded - lg shadow - xl overflow - hidden'>
-            <img
-              src='https://placehold.co / 800x400'
+            <img src='https://placehold.co / 800x400'
               alt='Screenshot of admin dashboard'
-              className='object - cover'
-            /></$1>
+              className='object - cover' /></$1>
           <h2 className='text - 2xl font - bold mb - 4'>Benefits &amp; Use Cases</h2>
           <ul className='list - disc list - inside space - y-2 mb - 8 text - zion - slate - light'>            <li > Track sales and service metrics in real time.</li>
             <li > Approve or remove listings with a few clicks.</li>
@@ -206,7 +187,7 @@ export default function AdminDashboard() {
       {/* Use a normal script tag so JSON - LD is correctly parsed */}
       <script
         type="application / ld + json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify (schema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify (schema)}}
       ></script>
       <Header />
       </div><main className="bg - background text - white py - 12">
@@ -217,11 +198,9 @@ export default function AdminDashboard() {
             Visualize user activity, manage orders and keep your marketplace running smoothly.</$1>
           </div>
 <div className="relative w - full h - auto aspect - video mx - auto mb - 12 rounded - lg shadow - xl overflow - hidden">
-            <img
-              src="https: //placehold.co / 800x400"
+            <img src="https: //placehold.co / 800x400"
               alt="Screenshot of admin dashboard"
-              className="object - cover"
-            /></$1>
+              className="object - cover" /></$1>
           <h2 className="text - 2xl font - bold mb - 4">Benefits &amp, Use Cases</h2>
           <ul className="list - disc list - inside space - y-2 mb - 8 text - zion - slate - light">
             <li > Track sales and service metrics in real time.</li>
@@ -248,4 +227,10 @@ export default function AdminDashboard() {
 
   )
 
-</div></div></div></div></div></div></div></div></main></main></main>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div></main></main></main>

@@ -76,7 +76,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 return res
     .setHeader('Allow', 'GET, POST')
     .status(405)
-    .end('Method Not Allowed');  return res && res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed')
+    .end('Method Not Allowed')  return res && res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed')
 }
         reviews_count: 0,
         created_at: new Date ().toISOString (),
@@ -160,7 +160,7 @@ if ( {) {
           translations.category[lang] = await translate_text (
             item.category,
             lang,
-            original_lang);        }          translations.category[lang] = await translate_text (item.category, lang, original_lang)
+            original_lang)        }          translations.category[lang] = await translate_text (item.category, lang, original_lang)
         }
       }
       item.original_language = original_lang
@@ -270,7 +270,7 @@ if ( {) {
             item.category
             lang
             originalLang
-          );        }          translations.category[lang] = await translateText(item.category, lang, originalLang)
+          )        }          translations.category[lang] = await translateText(item.category, lang, originalLang)
         }
       }
       item.originalLanguage = originalLang
@@ -316,9 +316,9 @@ if (throw error) {
 return res
     .set_header ('Allow', 'GET, POST')
     .status (405)
-    .end ('Method Not Allowed');  return res.set_header ('AllowGET, POST').status (405).end ('Method Not Allowed')
+    .end ('Method Not Allowed')  return res.set_header ('AllowGET, POST').status (405).end ('Method Not Allowed')
 }
-    .end('Method Not Allowed');  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed')
+    .end('Method Not Allowed')  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed')
 }
 }
           request_quote: item.requestQuote ?? null,

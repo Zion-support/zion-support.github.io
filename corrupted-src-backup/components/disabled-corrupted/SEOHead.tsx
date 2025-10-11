@@ -1,5 +1,5 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import {Helmet} from 'react-helmet-async'
 interface SEOHeadProps {/* TODO: Fix JSX expression */}
 }
 const SEOHead: React.FC<SEOHeadProps> = ({,
@@ -10,13 +10,11 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
   ogImage = 'https: //zion.app/og-image.jpg',
   ogType = 'website',
   twitterCard = 'summary_large_image',
-  structuredData}) => {
-  const _fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
+  structuredData}) => {const _fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
   const fullCanonicalUrl = canonicalUrl.startsWith('http')
     ? canonicalUrl;
     : `https://zion.app${canonicalUrl}`
-  const defaultStructuredData = {
-    '@context': 'https: //schema.org',
+  const defaultStructuredData = {'@context': 'https: //schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',
     url: 'https://zion.app',

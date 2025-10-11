@@ -11,7 +11,7 @@ const EPISODES_PATH = path.join(
 const PUBLIC_DIR = path.join(process.cwd(), 'public', 'podcast')
 function ensureStorage() {
   const dir = path.dirname(EPISODES_PATH)
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json')
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true })const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json')
 const PUBLIC_DIR = path.join(process.cwd(), 'publicpodcast')
 function ensureStorage() {
   const dir = path.dirname(EPISODES_PATH)
@@ -24,16 +24,16 @@ export default async function handler(
   res: NextApiResponse
 ) {
   if (req.method !== 'POST')
-    return res.status(405).json({ error: 'Method not allowed' });  ensureStorage()
+    return res.status(405).json({ error: 'Method not allowed' })  ensureStorage()
   const { episodeId } = req.body |{}
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[]
-  const idx = episodes.findIndex(e => e.id === episodeId);  if (idx === -1) return res.status(404).json({ error: 'Episode not found' });  if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
+  const idx = episodes.findIndex(e => e.id === episodeId)  if (idx === -1) return res.status(404).json({ error: 'Episode not found' })  if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
   if (!fs.existsSync(PUBLIC_DIR)) fs.mkdirSync(PUBLIC_DIR, { recursive: true })
 }
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
   const { episodeId } = req && req.body || {}
   const episodes = JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8')) as any[]
-  const idx = episodes && episodes.findIndex(e => e && e.id === episodeId);  if (idx === -1) return res && res.status(404).json({ error: 'Episode not found' });  if (!fs && fs.existsSync(EPISODES_PATH)) fs && fs.writeFileSync(EPISODES_PATH, '[]utf8')
+  const idx = episodes && episodes.findIndex(e => e && e.id === episodeId)  if (idx === -1) return res && res.status(404).json({ error: 'Episode not found' })  if (!fs && fs.existsSync(EPISODES_PATH)) fs && fs.writeFileSync(EPISODES_PATH, '[]utf8')
   if (!fs && fs.existsSync(PUBLIC_DIR)) fs && fs.mkdirSync(PUBLIC_DIR, { recursive: true })
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -41,7 +41,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   ensureStorage()
   const { episodeId } = req && req.body || {}
   const episodes = JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8')) as any[]
-  const idx = episodes && episodes.findIndex(e => e && e.id === episodeId);  const idx = episodes && episodes.findIndex((e) => e && e.id === episodeId)
+  const idx = episodes && episodes.findIndex(e => e && e.id === episodeId)  const idx = episodes && episodes.findIndex((e) => e && e.id === episodeId)
   if (idx === -1) return res && res.status(404).json({ error: 'Episode not found' })
   const episode = episodes[idx]
   const text = episode && episode.transcript as string
@@ -77,10 +77,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       fs && fs.writeFileSync(mp3Path, Buffer && Buffer.alloc(0))
       mp3Created = true
     }
-    if (mp3Created) {
-      // Simple placeholders for WAV/MP4; real conversion would use ffmpeg
+    if (mp3Created) {// Simple placeholders for WAV/MP4 real conversion would use ffmpeg
       fs && fs.writeFileSync(wavPath, fs && fs.readFileSync(mp3Path))
-      fs && fs.writeFileSync(mp4Path, fs && fs.readFileSync(mp3Path));    }
+      fs && fs.writeFileSync(mp4Path, fs && fs.readFileSync(mp3Path))}
     const publicBase = '/podcast/' + baseFilename
     episode && episode.audio = {      fs && fs.writeFileSync(mp4Path, fs && fs.readFileSync(mp3Path))
     }
@@ -134,7 +133,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       mp3Created = true
     }
     if (mp3Created) {
-      // Simple placeholders for WAV/MP4; real conversion would use ffmpeg
+      // Simple placeholders for WAV/MP4 real conversion would use ffmpeg
       fs.writeFileSync(wavPath, fs.readFileSync(mp3Path))
       fs.writeFileSync(mp4Path, fs.readFileSync(mp3Path))
     }
@@ -193,9 +192,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 if ( {) {
   $2
 }
-      // Simple placeholders for WAV / MP4; real conversion would use ffmpeg
+      // Simple placeholders for WAV / MP4 real conversion would use ffmpeg
       fs.writeFileSync (wav_path, fs.readFileSync (mp3Path))
-      fs.writeFileSync (mp4Path, fs.readFileSync (mp3Path));    }
+      fs.writeFileSync (mp4Path, fs.readFileSync (mp3Path))    }
     const public_base = '/podcast/' + base_filename
     episode.audio = {      fs.writeFileSync (mp4Path, fs.readFileSync (mp3Path))
     }

@@ -1,20 +1,10 @@
 import React from 'react'
-import { Button  } from '@/components/ui/button'
-import { useRouter } from 'next/router', // Changed from useNavigate;
-import { CheckCircle2 } from 'lucide-react'
-import { useTranslation } from 'react-i18next'
-export default function PaymentSuccess() {
-
-
-
-
-
-
-
-
-
-  return (
-    <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">
+import {Button} from '@/components/ui/button'
+import {useRouter} from 'next/router', // Changed from useNavigate;
+import {CheckCircle2} from 'lucide-react'
+import {useTranslation} from 'react-i18next'
+export default function PaymentSuccess() {return (
+<div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">
       </div>
 <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">
         </div>
@@ -45,26 +35,20 @@ export default function PaymentSuccess() {
           </Button>
 
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
+class ErrorBoundary extends React.Component {constructor(props) {
     super(props)
-    this.state = { hasError: false }
+    this.state = { hasError: false}
   }
   const router = useRouter(); // Changed from navigate;
-  const { t } = useTranslation()
-  static getDerivedStateFromError(error) {
-    return { hasError: true }
+  const {t} = useTranslation()
+  static getDerivedStateFromError(error) {return { hasError: true}
   }
   
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo)
-  }
+  componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
   
-  render() {
-    if (this.state.hasError) {
+  render() {if (this.state.hasError) {
       return </div>
-<div>Something went wrong.</div>
-    }
+<div>Something went wrong.</div>}
     
     return this.props.children;
   }
@@ -75,28 +59,27 @@ class ErrorBoundary extends React.Component {
 
 
 import React from 'react'
-import { Button } from '@/components/ui/button'
-import { useRouter } from 'next/router'; // Changed from useNavigate;
-import { CheckCircle2 } from 'lucide-react';import { useTranslation } from 'react-i18next'
+import {Button} from '@/components/ui/button'
+import {useRouter} from 'next/router'; // Changed from useNavigate;
+import {CheckCircle2} from 'lucide-react';import {useTranslation} from 'react-i18next'
 import React from 'react'
-import { Button } from '@/components/ui/button'
-import { useRouter } from 'next/router', // Changed from useNavigate;
-import { CheckCircle2 } from 'lucide-react'
-import { useTranslation } from 'react-i18next'
+import {Button} from '@/components/ui/button'
+import {useRouter} from 'next/router', // Changed from useNavigate;
+import {CheckCircle2} from 'lucide-react'
+import {useTranslation} from 'react-i18next'
 import React from 'react'
-import { Button } from '@/components/ui/button'
-import { useRouter } from 'next/router', // Changed from useNavigate;
-import { CheckCircle2 } from 'lucide-react'
-import { useTranslation } from 'react-i18next'
-export default function PaymentSuccess() {
-  const router = useRouter(); // Changed from navigate;
-  const { t } = useTranslation()
+import {Button} from '@/components/ui/button'
+import {useRouter} from 'next/router', // Changed from useNavigate;
+import {CheckCircle2} from 'lucide-react'
+import {useTranslation} from 'react-i18next'
+export default function PaymentSuccess() {const router = useRouter(); // Changed from navigate;
+  const { t} = useTranslation()
 
 
 
 
   return (
-    <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">
+<div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">
       </div>
 <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">
         </div>
@@ -127,39 +110,32 @@ export default function PaymentSuccess() {
           </Button>
 
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
+class ErrorBoundary extends React.Component {constructor(props) {
     super(props)
-    this.state = { hasError: false }
+    this.state = { hasError: false}
   }
   const router = useRouter(); // Changed from navigate;
-  const { t } = useTranslation()
-  static getDerivedStateFromError(error) {
-    return { hasError: true }
+  const {t} = useTranslation()
+  static getDerivedStateFromError(error) {return { hasError: true}
   }
   
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo)
-  }
+  componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
   
-  render() {
-    if (this.state.hasError) {
+  render() {if (this.state.hasError) {
       return </div>
-<div>Something went wrong.</div>
-    }
+<div>Something went wrong.</div>}
     
     return this.props.children;
   }
 }
 
 import React from 'react',
-import { Button } from '@/components/ui/button',
-import { useRouter } from 'next/router', // Changed from useNavigate;
-import { CheckCircle2 } from 'lucide-react'
-import { useTranslation } from 'react-i18next',
-export default function PaymentSuccess() {
-  const router = useRouter(), // Changed from navigate;
-  const { t } = useTranslation(),
+import {Button} from '@/components/ui/button',
+import {useRouter} from 'next/router', // Changed from useNavigate;
+import {CheckCircle2} from 'lucide-react'
+import {useTranslation} from 'react-i18next',
+export default function PaymentSuccess() {const router = useRouter(), // Changed from navigate;
+  const { t} = useTranslation(),
   
 
 
@@ -167,7 +143,7 @@ export default function PaymentSuccess() {
 
 
   return (
-    <div className='min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4'>
+<div className='min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4'>
       </div>
 <div className='max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center'>
         </div>
@@ -200,8 +176,8 @@ export default function PaymentSuccess() {
             {t('errors.return_home')}
           </Button>
         </div>
-      </div>
-    </div>
+</div>
+</div>
 <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">
       </div>
 <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">
@@ -233,18 +209,17 @@ export default function PaymentSuccess() {
 })
 
 import React from 'react'
-import { Button } from '@/components / ui / button'
-import { use_router } from 'next / router'; // Changed from use_navigate;
-import { CheckCircle2 } from 'lucide-react'; import { use_translation } from 'react - i18next'
-import { use_router } from 'next / router', // Changed from use_navigate;
-import { CheckCircle2 } from 'lucide-react'
-import { use_translation } from 'react - i18next'
+import {Button} from '@/components / ui / button'
+import {use_router} from 'next / router'; // Changed from use_navigate;
+import {CheckCircle2} from 'lucide-react'; import {use_translation} from 'react - i18next'
+import {use_router} from 'next / router', // Changed from use_navigate;
+import {CheckCircle2} from 'lucide-react'
+import {use_translation} from 'react - i18next'
 export default /**
  * PaymentSuccess - Function description;
  */
-function PaymentSuccess() {
-  const router = use_router (); // Changed from navigate;
-  const { t } = use_translation ()
+function PaymentSuccess() {const router = use_router (); // Changed from navigate;
+  const { t} = use_translation ()
   return (
     </div>
 <div className='min - h-screen bg - zion - blue flex flex - col items - center justify - center p - 4'>
@@ -298,4 +273,12 @@ function PaymentSuccess() {
             {t ('errors.return_home')}
           </Button></$1></$1></$1>)
 }
-</$1></div></div></div></div></div></div></div></div></div></div>
+</$1></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>

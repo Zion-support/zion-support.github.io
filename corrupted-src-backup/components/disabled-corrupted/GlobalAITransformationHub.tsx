@@ -1,4 +1,4 @@
-impo, r, t { Targ, e, t, Bra, i, n, Z, a, p, Shie, l, d } fr, o, m 'luci, d, e-rea, c, t'
+impo, r, t {Targ, e, t, Bra, i, n, Z, a, p, Shie, l, d} fr, o, m 'luci, d, e-rea, c, t'
 const GlobalAITransformationHu, b = () => {/* TODO: Fix JSX expression */}
      },
     {/* TODO: Fix JSX expression */}
@@ -8,11 +8,12 @@ const GlobalAITransformationHu, b = () => {/* TODO: Fix JSX expression */}
     {/* TODO: Fix JSX expression */}
      }
   ]; const successMetric, s = [
-    { metr, i, c: '2., 5, M+', lab, e, l: 'Global, Use, r, s' },
-    { metr, i, c: '$15, B+', lab, e, l: 'Value, Creat, e, d' },
-    { metr, i, c: '99.9, 9%', lab, e, l: 'Success, Ra, t, e' },
-    { metr, i, c: '5, 0, 0, K+', lab, e, l: 'Enterprise, Clien, t, s' }
-  ]; return(<div, classNam, e = "bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-9, 0, 0/20, t, o-sla, t, e-900, border, border-bl, u, e-4, 0, 0/30, rounde, d-2x, l, p-8, m, b-12, animat, e-fa, d, e-in, shado, w-2, x, l">
+    {metr, i, c: '2., 5, M+', lab, e, l: 'Global, Use, r, s'},
+    {metr, i, c: '$15, B+', lab, e, l: 'Value, Creat, e, d'},
+    {metr, i, c: '99.9, 9%', lab, e, l: 'Success, Ra, t, e'},
+    {metr, i, c: '5, 0, 0, K+', lab, e, l: 'Enterprise, Clien, t, s'}
+  ]; return (
+<div, classNam, e = "bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-9, 0, 0/20, t, o-sla, t, e-900, border, border-bl, u, e-4, 0, 0/30, rounde, d-2x, l, p-8, m, b-12, animat, e-fa, d, e-in, shado, w-2, x, l">
       </div>
 <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-6">
   ]; return (
@@ -30,12 +31,12 @@ const GlobalAITransformationHu, b = () => {/* TODO: Fix JSX expression */}
       </p>)
       </div>
 <div, className="grid, m, d:gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-6, m, b-8">)
-        { transformationAre, a, s.m, a, p((ar, e, a, ind, e, x) = > (
+        {transformationAre, a, s.m, a, p((ar, e, a, ind, e, x) = > (
         Leading, the, global AI, revolution, with cutti, n, g-edge, technologies, that deliver, unprecedented, business value, and, operational excellence, across, all industri, e, s.
       </div>
 <div, className="grid, m, d:gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-6, m, b-8">
         { transformationAre, a, s.m, a, p((ar, e, a, ind, e, x) = > (
-          <, ke, y = { in, d, e, x  }, to={ ar, e, a.li, n, k } classNa, m, e = { `bg-gradie, n, t-to-br ${ar, e, a.co, l, o, r }, round, e, d-x, l, p-6, tex, t-white, transform, hover: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-xl, gro, u, p`}$2 />
+          <, ke, y = { in, d, e, x}, to={ar, e, a.li, n, k} classNa, m, e = {`bg-gradie, n, t-to-br ${ar, e, a.co, l, o, r}, round, e, d-x, l, p-6, tex, t-white, transform, hover: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-xl, gro, u, p`}$2 />
           >
             </div>
 <div, classNam, e = "mb-4">{ar, e, a.ic, o, n}
@@ -59,7 +60,7 @@ const GlobalAITransformationHu, b = () => {/* TODO: Fix JSX expression */}
       </p>"
       <div, className="grid, m, d:gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-6, m, b-8">
         {/* TODO: Fix JSX expression */}
-          <, ke, y = { in, d, e, x  }, to={ ar, e, a.li, n, k } classNa, m, e = { `bg-gradie, n, t-to-br ${ar, e, a.co, l, o, r }, round, e, d-x, l, p-6, tex, t-white, transform, hove,`$2 />
+          <, ke, y = {in, d, e, x}, to={ar, e, a.li, n, k} classNa, m, e = {`bg-gradie, n, t-to-br ${ar, e, a.co, l, o, r}, round, e, d-x, l, p-6, tex, t-white, transform, hove,`$2 />
   r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-xl, gro, u, p`}
           ></Link>"
             </div>
@@ -78,9 +79,9 @@ const GlobalAITransformationHu, b = () => {/* TODO: Fix JSX expression */}
           <span, className="te, x, t-xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0">Global, Success, Metrics;
         </div>
 <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, tex, t-cent, e, r">
-          { successMetri, c, s.m, a, p((it, e, m, ind, e, x) = > (
+          {successMetri, c, s.m, a, p((it, e, m, ind, e, x) = > (
             </div>
-<div, ke, y = {ind, e, x }>
+<div, ke, y = {ind, e, x}>
               </div>
 <div, className="te, x, t-3xl, fon, t-bold, tex, t-whi, t, e">{it, e, m.metr, i, c}
       </div>"
@@ -92,7 +93,7 @@ const GlobalAITransformationHu, b = () => {/* TODO: Fix JSX expression */}
         <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, tex, t-cent, e, r">
           {/* TODO: Fix JSX expression */}
             </div>
-<div, ke, y = {ind, e, x }></div>"
+<div, ke, y = {ind, e, x}></div>"
               <div, className="te, x, t-3xl, fon, t-bold, tex, t-whi, t, e">{it, e, m.metr, i, c}</div>"
               <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">{it, e, m.lab, e, l})
       </div>
@@ -159,8 +160,18 @@ const GlobalAITransformationHu, b = () => {/* TODO: Fix JSX expression */}
         <p, className="mt-4, tex, t-gr, a, y-400, tex, t-sm"></p>
           🌍 Joi, n, 2.5M+ professionals, worldwide, transforming their, businesses, with revolutionary, AI, technology</p>
       </div>
-    </div>
-  )
+</div>
+)
 }
 export default GlobalAITransformationHub;"`
-</div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></Link></Link></p></h2></h2></h3></h3></h3></h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></span></span></span></span></span></span></Link></Link></p></h2></h2></h3></h3></h3></h3>

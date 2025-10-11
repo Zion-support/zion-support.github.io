@@ -2,19 +2,18 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
+import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart} from 'lucide-react';
 
-const PagePage: React.FC = () => {
-  return (
-    <></>
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const PagePage: React.FC = () => {return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
         {/* Hero Section */}
-        </div><section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8">
+        </div>
+<section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Page
@@ -35,7 +34,7 @@ const PagePage: React.FC = () => {
         </main><section className="relative py-20 px-4 sm: px-6 lg:px-8">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Page Title
@@ -53,14 +52,14 @@ const PagePage: React.FC = () => {
                 </button>
               </div>
 </div>
-          </div>
+</div>
         </section>
 
 {/* Content Section */}
         <section className="py-16 px-4 sm: px-6 lg:px-8">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Coming Soon
@@ -73,9 +72,9 @@ const PagePage: React.FC = () => {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
             </div>
-          </div>
+</div>
         </section>
-      </div>
+</div>
       
 
       <Footer />
@@ -88,10 +87,15 @@ export default PagePage;
 {/* Hero Section */}
               <p className="text-xl text-gray-300"></p></p>Section description</p>
             </div>
-          </div>
+</div>
         </section>
-<div className="max-w-7xl mx-auto"></div></div></div>
-<div className="text-center"></div></div></div>
+<div className="max-w-7xl mx-auto">
+</div>
+</div>
+</div>
+<div className="text-center"></div>
+</div>
+</div>
             <h1>
                 Page;
               </span>
@@ -103,8 +107,8 @@ export default PagePage;
                 Contact Sales
               </button>
             </div>
-          </div>
-        </div>
+</div>
+</div>
       </section>
             </h2>
             <p>Our page solutions deliver unmatched performance, security, and scalability.</p>
@@ -115,11 +119,13 @@ export default PagePage;
             </h2>
             <p>Contact our experts to discuss your page needs and get a customized solution.</p>
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div></div></div>,
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+</div>
+</div>,
               <button>
               </button>
             </div>
-          </div>
-        </div>
+</div>
+</div>
       </section>
-    </div>
+</div>

@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
-import { 
-  Check, 
+import React, {useState} from 'react'
+import {Check, 
   Star, 
   Zap, 
   Shield, 
@@ -19,10 +18,8 @@ import {
   Database,
   Cpu,
   Brain,
-  Rocket;
-} from 'lucide-react'
-const Pricing: React.FC = () => {
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('annual')
+  Rocket;} from 'lucide-react'
+const Pricing: React.FC = () => {const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('annual')
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null)
   const plans = [
     {
@@ -38,8 +35,7 @@ const Pricing: React.FC = () => {
       color: 'from-blue-500 to-cyan-500',
       price: {
         monthly: 99,
-        annual: 79;
-      },
+        annual: 79;},
       features: [
         'Up to 5 AI-powered workflows',
         'Basic automation templates',
@@ -58,8 +54,7 @@ const Pricing: React.FC = () => {
       icon: Rocket,
       popular: false;
     },
-    {
-      id: 'professional',
+    {id: 'professional',
       name: 'Professional',
       description: 'Ideal for growing businesses and teams',
       limitations: [
@@ -70,8 +65,7 @@ const Pricing: React.FC = () => {
       color: 'from-purple-500 to-pink-500',
       price: {
         monthly: 299,
-        annual: 239;
-      },
+        annual: 239;},
       features: [
         'Up to 25 AI-powered workflows',
         'Advanced automation templates',
@@ -94,8 +88,7 @@ const Pricing: React.FC = () => {
       icon: TrendingUp,
       popular: true;
     },
-    {
-      id: 'enterprise',
+    {id: 'enterprise',
       name: 'Enterprise',
       description: 'For large organizations with complex needs',
         '24/7 priority support',
@@ -107,9 +100,8 @@ const Pricing: React.FC = () => {
       limitations: [],
       color: 'from-orange-500 to-red-500',
 import React from 'react'
-import { Link } from 'react-router-dom'
-export default function Pricing() {
-  const pricingPlans = [
+import { Link} from 'react-router-dom'
+export default function Pricing() {const pricingPlans = [
     {
       name: 'Starter',
       price: '$999',
@@ -124,10 +116,8 @@ export default function Pricing() {
         'Basic Training'
       ],
       cta: 'Get Started',
-      popular: false;
-    },
-    {
-      name: 'Professional',
+      popular: false;},
+    {name: 'Professional',
       price: '$2,499',
       period: '/month',
       description: 'Ideal for growing companies with advanced needs',
@@ -142,10 +132,8 @@ export default function Pricing() {
         'API Access'
       ],
       cta: 'Start Free Trial',
-      popular: true;
-    },
-    {
-      name: 'Enterprise',
+      popular: true;},
+    {name: 'Enterprise',
       price: 'Custom',
       period: '',
       description: 'Tailored solutions for large organizations',
@@ -162,8 +150,7 @@ export default function Pricing() {
       cta: 'Contact Sales',
       price: {
         monthly: 999,
-        annual: 799;
-      },
+        annual: 799;},
       features: [
         'Unlimited AI-powered workflows',
         'Custom automation templates',
@@ -191,22 +178,21 @@ export default function Pricing() {
       popular: false;
     }
   ]
-import React, { useState } from 'react'
-import { Header } from '@/components/header/Header'
-import { Footer } from '@/components/Footer'
-import { SEO } from '@/components/SEO'
-import { Button } from '@/components/ui/Button'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
-import { Badge } from '@/components/ui/Badge'
-import { Check, Star, Zap, Shield, Users, Globe, Clock, MessageSquare } from 'lucide-react'
-export default function Pricing() {
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly')
+import React, {useState} from 'react'
+import {Header} from '@/components/header/Header'
+import {Footer} from '@/components/Footer'
+import {SEO} from '@/components/SEO'
+import {Button} from '@/components/ui/Button'
+import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/Card'
+import {Badge} from '@/components/ui/Badge'
+import {Check, Star, Zap, Shield, Users, Globe, Clock, MessageSquare} from 'lucide-react'
+export default function Pricing() {const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly')
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null)
   const plans = [
     {
       name: 'Starter',
       description: 'Perfect for small businesses and startups',
-      price: { monthly: 99, yearly: 990 },
+      price: { monthly: 99, yearly: 990},
       features: [
         'Basic IT Support',
         'Email & Phone Support',
@@ -221,100 +207,71 @@ export default function Pricing() {
     }
   ]
   const addOns = [
-    {
-      name: 'AI Model Training',
+    {name: 'AI Model Training',
       description: 'Custom AI model development and training',
-      price: { monthly: 500, annual: 400 },
+      price: { monthly: 500, annual: 400},
       icon: Brain;
     },
-    {
-      name: 'Advanced Security',
+    {name: 'Advanced Security',
       description: 'Enhanced security features and compliance',
-      price: { monthly: 300, annual: 250 },
+      price: { monthly: 300, annual: 250},
       icon: Shield;
     },
-    {
-      name: 'Priority Support',
+    {name: 'Priority Support',
       description: '24/7 priority support and dedicated team',
-      price: { monthly: 200, annual: 150 },
+      price: { monthly: 200, annual: 150},
       icon: Users;
     },
-    {
-      name: 'Custom Integrations',
+    {name: 'Custom Integrations',
       description: 'Custom API integrations and development',
-      price: { monthly: 400, annual: 350 },
+      price: { monthly: 400, annual: 350},
       icon: Zap;
     }
   ]
   const benefits = [
-    {
-      icon: Award,
+    {icon: Award,
       title: 'Industry Leading',
-      description: 'Recognized as top AI solutions provider'
-    },
-    {
-      icon: Globe,
+      description: 'Recognized as top AI solutions provider'},
+    {icon: Globe,
       title: 'Global Support',
-      description: '24/7 support across all time zones'
-    },
-    {
-      icon: Shield,
+      description: '24/7 support across all time zones'},
+    {icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security and compliance'
-    },
-    {
-      icon: Zap,
+      description: 'Bank-level security and compliance'},
+    {icon: Zap,
       title: 'Fast Implementation',
-      description: 'Get started in days, not months'
-    }
+      description: 'Get started in days, not months'}
   ]
   const faqs = [
-    {
-      question: 'Can I change my plan at any time?',
-      answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately.'
-    },
-    {
-      question: 'Is there a setup fee?',
-      answer: 'No setup fees for any of our plans. You only pay for the services you use.'
-    },
-    {
-      question: 'Do you offer custom pricing?',
-      answer: 'Yes, we offer custom pricing for enterprise clients with specific requirements.'
-    },
-    {
-      question: 'What payment methods do you accept?',
-      answer: 'We accept all major credit cards, PayPal, and bank transfers for annual plans.'
-    },
-    {
-      question: 'Is there a free trial available?',
-      answer: 'Yes, we offer a 14-day free trial for all plans with full access to features.'
-    },
-    {
-      question: 'Can I cancel my subscription?',
-      answer: 'Yes, you can cancel your subscription at any time with no penalties or fees.'
-    }
+    {question: 'Can I change my plan at any time?',
+      answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately.'},
+    {question: 'Is there a setup fee?',
+      answer: 'No setup fees for any of our plans. You only pay for the services you use.'},
+    {question: 'Do you offer custom pricing?',
+      answer: 'Yes, we offer custom pricing for enterprise clients with specific requirements.'},
+    {question: 'What payment methods do you accept?',
+      answer: 'We accept all major credit cards, PayPal, and bank transfers for annual plans.'},
+    {question: 'Is there a free trial available?',
+      answer: 'Yes, we offer a 14-day free trial for all plans with full access to features.'},
+    {question: 'Can I cancel my subscription?',
+      answer: 'Yes, you can cancel your subscription at any time with no penalties or fees.'}
   ]
-  const handlePlanSelect = (planId: string) => {
-    setSelectedPlan(planId)
-  }
-  const getCurrentPrice = (plan: any) => {
-    return billingCycle === 'annual' ? plan.price.annual : plan.price.monthly;
-  }
-  const getSavings = (plan: any) => {
-    if (billingCycle === 'annual') {
+  const handlePlanSelect = (planId: string) => {setSelectedPlan(planId)}
+  const getCurrentPrice = (plan: any) => {return billingCycle === 'annual' ? plan.price.annual : plan.price.monthly;}
+  const getSavings = (plan: any) => {if (billingCycle === 'annual') {
       const monthlyTotal = plan.price.monthly * 12;
       const annualTotal = plan.price.annual * 12;
-      return Math.round(((monthlyTotal - annualTotal) / monthlyTotal) * 100)
-    }
+      return Math.round(((monthlyTotal - annualTotal) / monthlyTotal) * 100)}
     return 0;
   }
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
+<div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
       {/* Hero Section */}
-      </div><section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      </div>
+<section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         </section>
 <div className="max-w-7xl mx-auto">
-          </div>
+</div>
 <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
               Transparent Pricing;
@@ -329,105 +286,71 @@ export default function Pricing() {
 <div className="flex items-center justify-center space-x-4 mb-8">
               <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>
   const addOns = [
-    {
-      name: 'AI Model Training',
+    {name: 'AI Model Training',
       description: 'Custom AI model training for your specific use case',
       price: {
         monthly: 199,
-        annual: 159;
-      },
+        annual: 159;},
       features: ['Custom model training', 'Domain-specific optimization', 'Performance monitoring', 'Model updates']
     },
-    {
-      name: 'Advanced Analytics',
+    {name: 'Advanced Analytics',
       description: 'Deep insights and predictive analytics',
       price: {
         monthly: 149,
-        annual: 119;
-      },
+        annual: 119;},
       features: ['Predictive analytics', 'Custom dashboards', 'Data export', 'Advanced reporting']
     },
-    {
-      name: 'Priority Support',
+    {name: 'Priority Support',
       description: '24/7 dedicated support with guaranteed response times',
       price: {
         monthly: 99,
-        annual: 79;
-      },
+        annual: 79;},
       features: ['24/7 phone support', 'Guaranteed 2-hour response', 'Dedicated support team', 'Priority ticket handling']
     },
-    {
-      name: 'Custom Integrations',
+    {name: 'Custom Integrations',
       description: 'Bespoke integrations with your existing systems',
       price: {
         monthly: 299,
-        annual: 239;
-      },
+        annual: 239;},
       features: ['Custom API development', 'System integration', 'Testing & validation', 'Ongoing maintenance']
     }
   ]
   const benefits = [
-    {
-      icon: Zap,
+    {icon: Zap,
       title: 'Fast Implementation',
-      description: 'Get started in minutes with our pre-built templates and intuitive interface'
-    },
-    {
-      icon: Shield,
+      description: 'Get started in minutes with our pre-built templates and intuitive interface'},
+    {icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with SOC2 compliance, encryption, and regular security audits'
-    },
-    {
-      icon: Users,
+      description: 'Bank-level security with SOC2 compliance, encryption, and regular security audits'},
+    {icon: Users,
       title: 'Scalable Solutions',
-      description: 'Grow from startup to enterprise with flexible plans that adapt to your needs'
-    },
-    {
-      icon: Globe,
+      description: 'Grow from startup to enterprise with flexible plans that adapt to your needs'},
+    {icon: Globe,
       title: 'Global Support',
-      description: '24/7 support across all time zones with dedicated success managers'
-    }
+      description: '24/7 support across all time zones with dedicated success managers'}
   ]
   const faqs = [
-    {
-      question: 'Can I change my plan at any time?',
-      answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we\'ll prorate any billing adjustments.'
-    },
-    {
-      question: 'Is there a free trial available?',
-      answer: 'Yes, we offer a 14-day free trial for all plans. No credit card required to start your trial.'
-    },
-    {
-      question: 'What payment methods do you accept?',
-      answer: 'We accept all major credit cards, PayPal, and wire transfers for annual plans. Enterprise customers can also pay via invoice.'
-    },
-    {
-      question: 'Do you offer discounts for nonprofits?',
-      answer: 'Yes, we offer special pricing for qualified nonprofits and educational institutions. Contact our sales team for details.'
-    },
-    {
-      question: 'Can I cancel my subscription?',
-      answer: 'Yes, you can cancel your subscription at any time. There are no long-term contracts or cancellation fees.'
-    },
-    {
-      question: 'What happens to my data if I cancel?',
-      answer: 'Your data is preserved for 30 days after cancellation. You can reactivate your account during this period to restore access.'
-    }
+    {question: 'Can I change my plan at any time?',
+      answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we\'ll prorate any billing adjustments.'},
+    {question: 'Is there a free trial available?',
+      answer: 'Yes, we offer a 14-day free trial for all plans. No credit card required to start your trial.'},
+    {question: 'What payment methods do you accept?',
+      answer: 'We accept all major credit cards, PayPal, and wire transfers for annual plans. Enterprise customers can also pay via invoice.'},
+    {question: 'Do you offer discounts for nonprofits?',
+      answer: 'Yes, we offer special pricing for qualified nonprofits and educational institutions. Contact our sales team for details.'},
+    {question: 'Can I cancel my subscription?',
+      answer: 'Yes, you can cancel your subscription at any time. There are no long-term contracts or cancellation fees.'},
+    {question: 'What happens to my data if I cancel?',
+      answer: 'Your data is preserved for 30 days after cancellation. You can reactivate your account during this period to restore access.'}
   ]
-  const handlePlanSelect = (planId: string) => {
-    setSelectedPlan(planId)
-  }
-  const formatPrice = (price: number) => {
-    return new Intl.NumberFormat('en-US', {
+  const handlePlanSelect = (planId: string) => {setSelectedPlan(planId)}
+  const formatPrice = (price: number) => {return new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: 'USD',
-      minimumFractionDigits: 0;
-    }).format(price)
+      minimumFractionDigits: 0;}).format(price)
   }
-  const getAnnualSavings = (monthlyPrice: number, annualPrice: number) => {
-    const savings = ((monthlyPrice * 12) - (annualPrice * 12)) / (monthlyPrice * 12) * 100;
-    return Math.round(savings)
-  }
+  const getAnnualSavings = (monthlyPrice: number, annualPrice: number) => {const savings = ((monthlyPrice * 12) - (annualPrice * 12)) / (monthlyPrice * 12) * 100;
+    return Math.round(savings)}
   return (
     </div>
 <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
@@ -456,13 +379,11 @@ export default function Pricing() {
               <$2 />
                 onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'annual' : 'monthly')}
                 className={`relative inline-flex h-8 w-16 items-center rounded-full transition-colors ${
-                  billingCycle === 'annual' ? 'bg-cyan-500' : 'bg-gray-600'
-                }`}
+                  billingCycle === 'annual' ? 'bg-cyan-500' : 'bg-gray-600'}`}
               >
                 <$2 />
                   className={`inline-block h-6 w-6 transform rounded-full bg-white transition-transform ${
-                    billingCycle === 'annual' ? 'translate-x-9' : 'translate-x-1'
-                  }`}
+                    billingCycle === 'annual' ? 'translate-x-9' : 'translate-x-1'}`}
                 />
               </button>
               <span className={`ml-4 text-sm ${billingCycle === 'annual' ? 'text-white' : 'text-gray-400'}`}>
@@ -474,9 +395,9 @@ export default function Pricing() {
                 )}
               </span>
             </div>
-          </div>
-        </div>
-      </div>
+</div>
+</div>
+</div>
 
       {/* Pricing Plans */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
@@ -493,8 +414,7 @@ export default function Pricing() {
                 className={`relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-8 border transition-all duration-300 hover:transform hover:scale-105 ${
                   plan.popular;
                     ? 'border-cyan-500 shadow-2xl shadow-cyan-500/20' 
-                    : 'border-gray-700 hover:border-cyan-500'
-                }`}
+                    : 'border-gray-700 hover:border-cyan-500'}`}
               >
                 {plan.popular && (
                   </div>
@@ -529,8 +449,7 @@ export default function Pricing() {
                     className={`w-full py-3 px-6 rounded-lg font-medium transition-all duration-200 ${
                       plan.popular;
                         ? 'bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white'
-                        : 'bg-gray-700 hover:bg-gray-600 text-white border border-gray-600 hover:border-cyan-500'
-                    }`}
+                        : 'bg-gray-700 hover:bg-gray-600 text-white border border-gray-600 hover:border-cyan-500'}`}
                   >
                     {selectedPlan === plan.id ? 'Current Plan' : 'Choose Plan'}
                   </button>
@@ -557,11 +476,11 @@ export default function Pricing() {
                     </>
                   )}
                 </div>
-              </div>
-            )
+</div>
+)
           })
         </div>
-      </div>
+</div>
 
       {/* Add-ons Section */}
       <div className="bg-gradient-to-r from-gray-800 to-gray-900 border-t border-gray-700">
@@ -594,8 +513,8 @@ export default function Pricing() {
                       {formatPrice(addon.price[billingCycle])}
                     </div>
 <div className="text-gray-400 text-sm">/month</div>
-                  </div>
-                </div>
+</div>
+</div>
 <div className="space-y-2 mb-6">
                   {addon.features.map((feature, featureIndex) => (
                     </div>
@@ -612,24 +531,22 @@ export default function Pricing() {
               </div>
             ))}
           </div>
-        </div>
-      </div>
+</div>
+</div>
 
       name: 'AI Services Package',
       description: 'Advanced AI and machine learning solutions',
-      price: { monthly: 199, yearly: 1990 },
+      price: {monthly: 199, yearly: 1990},
       features: ['Custom AI Models', 'Data Analytics', 'Process Automation']
     },
-    {
-      name: 'Cybersecurity Suite',
+    {name: 'Cybersecurity Suite',
       description: 'Comprehensive security and compliance solutions',
-      price: { monthly: 149, yearly: 1490 },
+      price: { monthly: 149, yearly: 1490},
       features: ['Threat Detection', 'Vulnerability Assessment', 'Compliance Reporting']
     },
-    {
-      name: 'Green IT Solutions',
+    {name: 'Green IT Solutions',
       description: 'Sustainable technology and energy optimization',
-      price: { monthly: 99, yearly: 990 },
+      price: { monthly: 99, yearly: 990},
       features: ['Energy Audits', 'Sustainable Hardware', 'Carbon Footprint Tracking']
     }
   ]
@@ -670,8 +587,7 @@ export default function Pricing() {
                   className={`px-6 py-3 rounded-lg font-medium transition-colors ${
                     billingCycle === 'monthly'
                       ? 'bg-white text-zion-blue shadow-sm'
-                      : 'text-gray-600 hover:text-gray-900'
-                  }`}
+                      : 'text-gray-600 hover:text-gray-900'}`}
                 >
                   Monthly Billing;
                 </button>
@@ -680,8 +596,7 @@ export default function Pricing() {
                   className={`px-6 py-3 rounded-lg font-medium transition-colors ${
                     billingCycle === 'yearly'
                       ? 'bg-white text-zion-blue shadow-sm'
-                      : 'text-gray-600 hover:text-gray-900'
-                  }`}
+                      : 'text-gray-600 hover:text-gray-900'}`}
                 >
                   Yearly Billing;
                   {billingCycle === 'yearly' && (
@@ -691,7 +606,7 @@ export default function Pricing() {
                   )}
                 </button>
               </div>
-            </div>
+</div>
 
             {/* Pricing Plans */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
@@ -699,8 +614,7 @@ export default function Pricing() {
                 <Card
                   key={index} 
                   className={`relative hover:shadow-xl transition-all duration-300 ${
-                    plan.popular ? 'ring-2 ring-zion-blue scale-105' : ''
-                  }`}
+                    plan.popular ? 'ring-2 ring-zion-blue scale-105' : ''}`}
                 >
                   {plan.popular && (
                     </div>
@@ -728,10 +642,10 @@ export default function Pricing() {
                 <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
                 <p className="text-gray-400 text-sm">{benefit.description}</p>
               </div>
-            )
+)
           })
         </div>
-      </div>
+</div>
 
       {/* FAQ Section */}
       <div className="bg-gradient-to-r from-gray-800 to-gray-900 border-t border-gray-700">
@@ -755,39 +669,32 @@ export default function Pricing() {
               </div>
             ))}
           </div>
-        </div>
-      </div>
+</div>
+</div>
 
   const addOns = [
-    {
-      name: 'AI Training & Workshops',
+    {name: 'AI Training & Workshops',
       price: '$299',
       period: '/session',
-      description: 'Custom AI training for your team'
-    },
-    {
-      name: 'Security Audit',
+      description: 'Custom AI training for your team'},
+    {name: 'Security Audit',
       price: '$1,499',
       period: '/audit',
-      description: 'Comprehensive security assessment'
-    },
-    {
-      name: 'Cloud Migration',
+      description: 'Comprehensive security assessment'},
+    {name: 'Cloud Migration',
       price: '$4,999',
       period: '/project',
-      description: 'Complete cloud infrastructure setup'
-    },
-    {
-      name: 'Custom Development',
+      description: 'Complete cloud infrastructure setup'},
+    {name: 'Custom Development',
       price: '$150',
       period: '/hour',
-      description: 'Tailored software development'
-    }
+      description: 'Tailored software development'}
   ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
+<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
-      </div><section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      </div>
+<section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         </section>
 <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
@@ -807,13 +714,11 @@ export default function Pricing() {
             <$2 />
               onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'annual' : 'monthly')}
               className={`relative w-16 h-8 rounded-full transition-colors duration-300 ${
-                billingCycle === 'annual' ? 'bg-blue-600' : 'bg-gray-600'
-              }`}
+                billingCycle === 'annual' ? 'bg-blue-600' : 'bg-gray-600'}`}
             >
               <$2 />
                 className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 ${
-                  billingCycle === 'annual' ? 'translate-x-8' : 'translate-x-1'
-                }`}
+                  billingCycle === 'annual' ? 'translate-x-8' : 'translate-x-1'}`}
               />
             </button>
             <span className={`text-lg ${billingCycle === 'annual' ? 'text-white' : 'text-gray-400'}`}>
@@ -825,14 +730,14 @@ export default function Pricing() {
               )}
             </span>
           </div>
-        </div>
+</div>
       </section>
 
       {/* Pricing Plans */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         </section>
 <div className="max-w-7xl mx-auto">
-          </div>
+</div>
 <div className="grid md:grid-cols-3 gap-8">
             {pricingPlans.map((plan) => (
               <$2 />
@@ -840,8 +745,7 @@ export default function Pricing() {
                 className={`relative rounded-2xl p-8 border transition-all duration-300 ${
                   plan.popular;
                     ? 'bg-white/10 border-purple-500/50 scale-105'
-                    : 'bg-white/5 border-white/10 hover:border-white/20'
-                }`}
+                    : 'bg-white/5 border-white/10 hover:border-white/20'}`}
               >
                 {plan.popular && (
                   </div>
@@ -889,22 +793,21 @@ export default function Pricing() {
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular;
                       ? 'bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700'
-                      : 'bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700'
-                  } text-white`}
+                      : 'bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700'} text-white`}
                 >
                   {selectedPlan === plan.id ? 'Selected' : 'Choose Plan'}
                 </button>
               </div>
             ))}
           </div>
-        </div>
+</div>
       </section>
 
       {/* Add-ons */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         </section>
 <div className="max-w-7xl mx-auto">
-          </div>
+</div>
 <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">Add-on Services</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -928,17 +831,17 @@ export default function Pricing() {
                   </div>
                   <span className="text-gray-400 text-sm">per month</span>
                 </div>
-              </div>
+</div>
             ))}
           </div>
-        </div>
+</div>
       </section>
 
       {/* Benefits */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         </section>
 <div className="max-w-7xl mx-auto">
-          </div>
+</div>
 <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">Why Choose Zion Tech Group?</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -958,7 +861,7 @@ export default function Pricing() {
               </div>
             ))}
           </div>
-        </div>
+</div>
       </section>
 
       {/* FAQ Section */}
@@ -981,7 +884,7 @@ export default function Pricing() {
               </div>
             ))}
           </div>
-        </div>
+</div>
       </section>
 
       {/* CTA Section */}
@@ -1033,7 +936,7 @@ export default function Pricing() {
             Questions? Our team is here to help you choose the right plan.
           </p>
         </div>
-      </div>
+</div>
 
       {/* CTA Section */}
       <div className="px-4 sm:px-6 lg:px-8 pb-16">
@@ -1095,8 +998,8 @@ export default function Pricing() {
               <p className="text-cyan-400 font-medium text-sm">{contactInfo.address}</p>
               <p className="text-gray-400 text-sm">Delaware, USA</p>
             </div>
-          </div>
-        </div>
+</div>
+</div>
 
         {/* FAQ Section */}
         <div className="bg-black/30 backdrop-blur-xl rounded-2xl p-8 border border-cyan-500/30 mb-20">
@@ -1133,7 +1036,7 @@ export default function Pricing() {
                   We provide comprehensive support including 24/7 technical assistance, onboarding, training, and ongoing consultation. Enterprise clients get dedicated account managers.
                 </p>
               </div>
-            </div>
+</div>
 <div className="space-y-6">
               </div>
 <div>
@@ -1160,9 +1063,9 @@ export default function Pricing() {
                   Security is our top priority. All solutions include enterprise-grade encryption, regular security audits, compliance certifications, and secure cloud hosting.
                 </p>
               </div>
-            </div>
-          </div>
-        </div>
+</div>
+</div>
+</div>
 
         {/* Final CTA */}
         <div className="text-center">
@@ -1184,11 +1087,14 @@ export default function Pricing() {
                 Schedule Demo;
               </button>
             </div>
-          </div>
-        </div>
-      </div>
-      </div>
-    </div>
-  )
+</div>
+</div>
+</div>
+</div>
+</div>
+)
 }
-export default Pricing</$1></div></div></div></div></div></span></p></main></section></section></section>
+export default Pricing</$1></div>
+</div>
+</div>
+</div></div></span></p></main></section></section></section>

@@ -2,19 +2,18 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
+import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart} from 'lucide-react';
 
-const PagePage: React.FC = () => {
-  return (
-<></>
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const PagePage: React.FC = () => {return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
         {/* Hero Section */}
-        </div><section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8">
+        </div>
+<section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Page
@@ -23,14 +22,14 @@ const PagePage: React.FC = () => {
                 Discover our comprehensive solutions designed to transform your business.
               </p>
             </div>
-          </div>
+</div>
         </section>
 
         {/* Content Section */}
         <section className="py-16 px-4 sm: px-6 lg:px-8">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Coming Soon
@@ -43,9 +42,9 @@ const PagePage: React.FC = () => {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
             </div>
-          </div>
+</div>
         </section>
-      </div>
+</div>
       
       <Footer />
     </>
@@ -62,8 +61,9 @@ export default PagePage;
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
-      </div><Helmet>
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+</div>
+</div><Helmet>
         </Helmet><title>Cloud Migration | Zion Tech Group</title>
         <meta name="description" content="Professional Cloud Migration services by Zion Tech Group. Advanced AI and IT solutions for your business." />
             Powered by cutting-edge AI technology and industry expertise.
@@ -74,46 +74,57 @@ export default PagePage;
       {/* Features Section */}
       <section className="py-20 px-4 sm: px-6 lg:px-8"></section></section>
         </section>
-<div className="max-w-7xl mx-auto"></div></div>
-<div className="text-center mb-16"></div></div>
+<div className="max-w-7xl mx-auto">
+</div>
+</div>
+<div className="text-center mb-16"></div>
+</div>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4"></h2></h2>,</h2>
               Why Choose Our Cloud Migration?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p></p>Our cloud migration solutions deliver unmatched performance, security, and scalability.</p>
             </p>
           </div>
-<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div></div>,</div>
+<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>
+</div>,</div>
             {features.map((feature, index) => (
-              <div key={index}className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300"></div></div>,</div>
-<div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div></div>
+              <div key={index}className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300"></div>
+</div>,</div>
+<div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
+</div>
                   <feature.icon className="h-6 w-6 text-white" />
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section></section>
         </section>< className="$2 />
           </div>
-<div className="text-center mb-16"></div></div>
-            </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2></h2>
+<div className="text-center mb-16"></div>
+</div>
+</div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2></h2>
               Why Choose Our Cloud Migration?
             <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p></p>
               Our cloud migration solutions deliver unmatched performance, security, and scalability.
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+</div>
             {features.map((feature, index) => (
               </div>
-<div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div></div>
-                </div>
-<div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div></div>
-                  </div><feature.icon className="h-6 w-6 text-white" />
+<div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div>
+</div>
+</div>
+<div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
+</div>
+</div><feature.icon className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3"></h3></h3>{feature.title}</h3>
                 <p className="text-gray-300"></p></p>{feature.description</p&gt}</p>
               </div>
-<div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div></div>
-<div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div></div>
+<div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div>
+</div>
+<div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
+</div>
                   <feature.icon className="h-6 w-6 text-white" />
 
   const pricingPlans = [
-    {
-      name: 'Assessment',
+    {name: 'Assessment',
       price: '$2,999',
       period: 'one-time',
       description: 'Comprehensive cloud readiness assessment',
@@ -125,10 +136,8 @@ export default PagePage;
         'Security assessment',
         'Recommendations'
       ],
-      popular: false
-    },
-    {
-      name: 'Standard Migration',
+      popular: false},
+    {name: 'Standard Migration',
       price: '$9,999',
       period: 'one-time',
       description: 'Complete migration for small to medium businesses',
@@ -140,10 +149,8 @@ export default PagePage;
         'Go-live support',
         '30 days support'
       ],
-      popular: true
-    },
-    {
-      name: 'Enterprise Migration',
+      popular: true},
+    {name: 'Enterprise Migration',
       price: 'Custom',
       period: 'quote',
       description: 'Large-scale enterprise migration',
@@ -155,77 +162,64 @@ export default PagePage;
         'SLA guarantee',
         'Ongoing optimization'
       ],
-      popular: false
-    }
+      popular: false}
   ]
 
   const stats = [
-    { value: '99.9%', label: 'Uptime Guarantee', icon: <Clock className="w-8 h-8 text-green-400" /&gt },
-    { value: '50%', label: 'Cost Reduction', icon: <BarChart className="w-8 h-8 text-blue-400" /&gt },
-    { value: '3x', label: 'Performance Improvement', icon: <Zap className="w-8 h-8 text-purple-400" /&gt },
-    { value: '24/7', label: 'Support Available', icon: <Users className="w-8 h-8 text-cyan-400" /&gt }
+    {value: '99.9%', label: 'Uptime Guarantee', icon: <Clock className="w-8 h-8 text-green-400" /&gt},
+    {value: '50%', label: 'Cost Reduction', icon: <BarChart className="w-8 h-8 text-blue-400" /&gt},
+    {value: '3x', label: 'Performance Improvement', icon: <Zap className="w-8 h-8 text-purple-400" /&gt},
+    {value: '24/7', label: 'Support Available', icon: <Users className="w-8 h-8 text-cyan-400" /&gt}
   ]
 
   const migrationSteps = [
-    {
-      step: '01',
+    {step: '01',
       title: 'Assessment & Planning',
-      description: 'Analyze current infrastructure and create detailed migration plan'
-    },
-    {
-      step: '02',
+      description: 'Analyze current infrastructure and create detailed migration plan'},
+    {step: '02',
       title: 'Environment Setup',
-      description: 'Configure cloud environment and security settings'
-    },
-    {
-      step: '03',
+      description: 'Configure cloud environment and security settings'},
+    {step: '03',
       title: 'Data Migration',
-      description: 'Transfer data and applications to cloud infrastructure'
-    },
-    {
-      step: '04',
+      description: 'Transfer data and applications to cloud infrastructure'},
+    {step: '04',
       title: 'Testing & Validation',
-      description: 'Comprehensive testing to ensure everything works perfectly'
-    },
-    {
-      step: '05',
+      description: 'Comprehensive testing to ensure everything works perfectly'},
+    {step: '05',
       title: 'Go-Live & Support',
-      description: 'Deploy to production with ongoing monitoring and support'
-    }
+      description: 'Deploy to production with ongoing monitoring and support'}
   ]
 
   const testimonials = [
-    {
-      name: 'Robert Kim',
+    {name: 'Robert Kim',
       role: 'CTO, FinanceFirst',
       content: 'Cloud migration reduced our infrastructure costs by 60% and improved performance by 300%.',
       rating: 5,
-      company: 'FinanceFirst'
-    },
-    {
-      name: 'Jennifer Martinez',
+      company: 'FinanceFirst'},
+    {name: 'Jennifer Martinez',
       role: 'IT Director, RetailMax',
       content: 'The migration was seamless with zero downtime. Our team was impressed with the professionalism.',
       rating: 5,
-      company: 'RetailMax'
-    },
-    {
-      name: 'David Chen',
+      company: 'RetailMax'},
+    {name: 'David Chen',
       role: 'CEO, TechStart',
       content: 'ROI was achieved in 6 months. The cloud infrastructure is more reliable than our on-premise setup.',
       rating: 5,
-      company: 'TechStart'
-    }
+      company: 'TechStart'}
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+</div>
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8"></section></section>
-<div className="max-w-7xl mx-auto"></div></div>
-<div className="text-center"></div></div>
+      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8"></section></section>
+<div className="max-w-7xl mx-auto">
+</div>
+</div>
+<div className="text-center"></div>
+</div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1></h1>
               <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"></span></span>Cloud Migration</span> Services
             </h1>
@@ -233,7 +227,8 @@ export default PagePage;
               Seamlessly migrate your infrastructure to the cloud with zero downtime. 
               Reduce costs by 50% and improve performance by 300%.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div></div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+</div>
               <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
                 Get Free Assessment
               </button>
@@ -241,43 +236,53 @@ export default PagePage;
                 Schedule Consultation
               </button>
             </div>
-          </div>
-        </div>
+</div>
+</div>
       </section>
 
       {/* Stats Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8"></section></section>
-<div className="max-w-7xl mx-auto"></div></div>
-<div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div></div>
+<div className="max-w-7xl mx-auto">
+</div>
+</div>
+<div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
+</div>
             {stats.map((stat, index) => (
-              <div key={index} className="text-center"></div></div>
-<div className="flex justify-center mb-4"></div></div>
+              <div key={index} className="text-center"></div>
+</div>
+<div className="flex justify-center mb-4"></div>
+</div>
                   {stat.icon}
                 </div>
-<div className="text-3xl md:text-4xl font-bold text-white mb-2"></div></div>
+<div className="text-3xl md:text-4xl font-bold text-white mb-2"></div>
+</div>
                   {stat.value}
                 </div>
-<div className="text-gray-300"></div></div>
+<div className="text-gray-300"></div>
+</div>
                   {stat.label}
                 </div>
-              </div>
+</div>
             ))}
           </div>
-        </div>
+</div>
   </button>
   </button>
   </h2>
   </section>
   </h1>
   </div>
-  </div>
+</div>
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"></section></section>
         </section>
 
       {/* Features Section */}
       <section className="py-16 px-4 sm: px-6 lg:px-8"></section></section>
-<div className="max-w-7xl mx-auto"></div></div>
-<div className="text-center mb-16"></div></div>
+<div className="max-w-7xl mx-auto">
+</div>
+</div>
+<div className="text-center mb-16"></div>
+</div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2></h2>
               Comprehensive Migration Services
             </h2>
@@ -285,11 +290,15 @@ export default PagePage;
               End-to-end cloud migration solutions tailored to your business needs.
             </p>
           </div>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div></div>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+</div>
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300"></div></div>
-<div className="flex items-center mb-4"></div></div>
-<div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mr-4"></div></div>
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300"></div>
+</div>
+<div className="flex items-center mb-4"></div>
+</div>
+<div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mr-4"></div>
+</div>
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white"></h3></h3>{feature.title}</h3>

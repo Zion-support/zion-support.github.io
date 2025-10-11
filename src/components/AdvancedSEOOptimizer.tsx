@@ -1,38 +1,29 @@
 'use client';
-import React, { useEffect, useCallback, useRef } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, {useEffect, useCallback, useRef} from 'react';
+import {Helmet} from 'react-helmet-async';
 
-interface SEOData {
-  title: string;
+interface SEOData {title: string;
   description: string;
   keywords: string[];
   canonicalUrl?: string;
   ogImage?: string;
   noIndex?: boolean;
-  structuredData?: any;
-}
+  structuredData?: any;}
 
-interface AdvancedSEOOptimizerProps {
-  seoData: SEOData;
-  children?: React.ReactNode;
-}
+interface AdvancedSEOOptimizerProps {seoData: SEOData;
+  children?: React.ReactNode;}
 
-const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
-  seoData,
-  children;
-}) => {
-  const {
+const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({seoData,
+  children;}) => {const {
     title,
     description,
     keywords,
     canonicalUrl,
     ogImage,
     noIndex = false,
-    structuredData;
-  } = seoData;
+    structuredData;} = seoData;
 
-  const baseStructuredData = {
-    "@context": "https://schema.org",
+  const baseStructuredData = {"@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
     "description": "Leading AI and IT solutions provider",
@@ -41,8 +32,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
-      "contactType": "customer service"
-    }
+      "contactType": "customer service"}
   };
 
   const finalStructuredData = structuredData || baseStructuredData;
@@ -84,8 +74,8 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
 
 export default AdvancedSEOOptimizer;
 'use client'
-import React, { useEffect, useCallback, useRef } from 'react'
-import { Helmet } from 'react-helmet-async'
+import React, {useEffect, useCallback, useRef} from 'react'
+import {Helmet} from 'react-helmet-async'
 interface SEOData {/* TODO: Fix JSX expression */}
 }
 interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */}

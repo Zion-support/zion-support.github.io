@@ -1,9 +1,8 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import {Helmet} from 'react-helmet-async'
 import {CheckCircle, Star, TrendingUp, Brain, Target, BarChart, Phone, Mail, MapPin} from 'lucide-react'
 import React from 'react'
-const AnalyticsToolsPage: React.FC = () => {
-  const analyticsTools = [
+const AnalyticsToolsPage: React.FC = () => {const analyticsTools = [
     {
       title: 'AI Business Intelligence',
       price: '$399/month',
@@ -58,12 +57,11 @@ icon$5: Brain,
       title: 'AI-Powered',
       description: 'Leverage advanced AI algorithms for deeper insights and automation'
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-import { Link } from 'react-router-dom'
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+import {Link} from 'react-router-dom'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-const PagePage: React.FC = () => {
-  return (
+const PagePage: React.FC = () => {return (
           </div>
 <div>Coming Soon;
   )
@@ -74,7 +72,8 @@ const PagePage: React.FC = () => {
         <meta name="description" content="AI-powered analytics tools for business intelligence, web analytics, marketing analytics, and more. Starting at $179/month." />
         <meta name="keywords" content="analytics tools, business intelligence, web analytics, marketing analytics, sales analytics, ai analytics" />
       {/* Hero Section */}
-      </div><section className="pt-24 pb-16 px-4">
+      </div>
+<section className="pt-24 pb-16 px-4">
         </section>
 <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl sm: text-5xl md:text-6xl font-bold text-white mb-6">
@@ -83,7 +82,8 @@ const PagePage: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your data into actionable insights with AI-powered analytics tools for business intelligence, marketing, and performance tracking.
       {/* Hero Section */}
-      </div><section className="pt-24 pb-16 px-4"></section>"
+      </div>
+<section className="pt-24 pb-16 px-4"></section>"
         <div className="max-w-7xl mx-auto text-center"></div>"
           < className="text-4xl,$2 />
   sm:text-5xl,"
@@ -127,7 +127,8 @@ const PagePage: React.FC = () => {
                 <MapPin className="w-5 h-5" />
                 <span className="text-white font-medium">Middletown, DE;
       {/* Analytics Tools Grid */}
-      </div><section className="py-16 px-4">
+      </div>
+<section className="py-16 px-4">
         </section>
 <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">
@@ -199,7 +200,8 @@ const PagePage: React.FC = () => {
                 <span className="text-white font-medium">Middletown, DE;
       {/* Analytics Tools Grid */}"
       <section className="py-16 px-4"></section>"
-        <div className="max-w-7xl mx-auto"></div>"
+        <div className="max-w-7xl mx-auto">
+</div>"
           < className="text-3xl,"$2 />
   md: text-4xl font-bold text-white text-center mb-12 neon-text"></h2>
 // Our Analytics Tools,
@@ -284,21 +286,33 @@ export default AnalyticsToolsPage</div>
   </h2>
   </div>
   </section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
   </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
   </p>
   </p>
   </div>
-  </div>
-  </div>
-</div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></p></p></p></h3></h3></h4></ul></li></section></section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></span></span></span></span></p></p></p></h3></h3></h4></ul></li></section></section>

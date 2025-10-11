@@ -1,24 +1,18 @@
 import React from 'react'
 'use client'
-interface ModernLoadingSpinnerProps {
-    size?: 'sm' | 'md' | 'lg' | 'xl'
+interface ModernLoadingSpinnerProps {size?: 'sm' | 'md' | 'lg' | 'xl'
   color?: 'primary' | 'secondary' | 'accent'
   text?: string;
-  fullScreen?: boolean;
-  }
-const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({
-  size = 'md',
+  fullScreen?: boolean;}
+const ModernLoadingSpinner: React.FC<ModernLoadingSpinnerProps> = ({size = 'md',
   color = 'primary',
   text = 'Loading...',
-  fullScreen = false;
-}) => {
-    sm: 'w-4 h-4',
+  fullScreen = false;}) => {sm: 'w-4 h-4',
     md: 'w-8 h-8',
     lg: 'w-12 h-12',
     xl:   ,
 $4}
-  const colorClasses = {
-    primary: 'text-cyan-400',
+  const colorClasses = {primary: 'text-cyan-400',
     secondary: 'text-purple-400',
     accent:   ,
 $4}
@@ -35,7 +29,7 @@ $4}
     ? 'fixed inset-0 bg-slate-900 bg-opacity-90 flex items-center justify-center z-50'
     : 'flex items-center justify-center p-4'
   return (
-    <div className={containerClasses} role="status" aria-label="Loading">
+<div className={containerClasses} role="status" aria-label="Loading">
       </div>
 <div className="flex flex-col items-center space-y-4">
         </div>
@@ -96,7 +90,8 @@ const,
 //     ? 'fixed inset-0 bg-slate-900 bg-opacity-90 flex items-center justify-center z-50'
     : 'flex items-center justify-center p-4'
   return (</div>
-<div>Coming Soon</div>)
+<div>Coming Soon</div>
+)
   )
           <div className={containerClasses} role="status" aria-label="Loading"></div>"
       <div className="flex flex-col items-center space-y-4"></div>"
@@ -109,10 +104,13 @@ const,
       </div>"
       <span className="sr-only">Loading content, please wait...</span>
     </div>
-  )
+)
 }
 export default ModernLoadingSpinner;
 export default ModernLoadingSpinner;"`
   </ModernLoadingSpinnerProps>
   </ModernLoadingSpinnerProps>
-</div></div></div></div></div></p></p>
+</div>
+</div>
+</div>
+</div></div></p></p>

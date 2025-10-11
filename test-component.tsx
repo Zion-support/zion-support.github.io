@@ -1,9 +1,10 @@
-const TestComponent = () => {
-  return(<div>)
+const TestComponent = () => {return (
+<div>)
       <h1>Test</h1>)
-    </div>)
+    </div>
+)
   return (
-    <div>
+<div>
       <h1>Test;
   )
 const TestComponent = () => {/* TODO: Fix JSX expression */}

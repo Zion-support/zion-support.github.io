@@ -1,9 +1,8 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-const Ai2026AutonomousAgentFactoriesPage: React.FC = () => {
-    return (
+const Ai2026AutonomousAgentFactoriesPage: React.FC = () => {return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       </div>
@@ -18,10 +17,9 @@ const Ai2026AutonomousAgentFactoriesPage: React.FC = () => {
             Contact Us,
   
         </div>
-      </div>
+</div>
       <Footer />
     </div>
-  )
-  }
+)}
 export default Ai2026AutonomousAgentFactoriesPage</Link>
 </p></h1>

@@ -1,10 +1,9 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, Star } from 'lucide-react'
-const ProductivityPage: React.FC = () => {
-  return (
+import {CheckCircle, Star} from 'lucide-react'
+const ProductivityPage: React.FC = () => {return (
     <div>
       <Navigation />
       </div><main className="container mx-auto px-4 py-16 pt-24">
@@ -38,9 +37,7 @@ const ProductivityPage: React.FC = () => {
         {categories.map(category => ()}"
           <section key={category} className="mb-16"></section>"
             <h3 className="text-2xl font-bold text-white mb-8 text-center neon-text">{category} Tools</h3>
-            <div>{
-    productivityTools;
-  }
+            <div>{productivityTools;}
                 .filter(tool => tool.category === category)
                 .map((tool, index) => ("
 </div>

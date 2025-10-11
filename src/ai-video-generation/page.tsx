@@ -1,10 +1,9 @@
 import React from 'react'
-import { Video, Play, Download, Share, Star, CheckCircle, Zap, Clock, Users, Award, ArrowRight, Sparkles } from 'lucide-react'
+import {Video, Play, Download, Share, Star, CheckCircle, Zap, Clock, Users, Award, ArrowRight, Sparkles} from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
-const AIVideoGenerationPage: React.FC = () => {
-  const features = [
+const AIVideoGenerationPage: React.FC = () => {const features = [
     'AI Video Creation',
     'Auto-editing',
     'Voice Synthesis',
@@ -30,22 +29,17 @@ const AIVideoGenerationPage: React.FC = () => {
       price: '$199',
       period: '/month',
       features: ['10 videos/month', 'HD quality', 'Basic templates', 'Email support'],
-      popular: false;
-    },
-    {
-      name: 'Professional',
+      popular: false;},
+    {name: 'Professional',
       price: '$399',
       period: '/month',
       features: ['Unlimited videos', '4K quality', 'Premium templates', 'Voice cloning', 'Priority support'],
-      popular: true;
-    },
-    {
-      name: 'Enterprise',
+      popular: true;},
+    {name: 'Enterprise',
       price: '$799',
       period: '/month',
       features: ['Everything in Pro', 'Custom templates', 'API access', 'Dedicated support', 'White-label'],
-      popular: false;
-    }
+      popular: false;}
   ]
   return (
     <React.Fragment>
@@ -86,7 +80,7 @@ const AIVideoGenerationPage: React.FC = () => {
                   Watch Demo,
   
               </div>
-            </div>
+</div>
           </section>
           {/* Features Section */}
           <section className="mb-16">
@@ -101,7 +95,8 @@ const AIVideoGenerationPage: React.FC = () => {
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
                     <h3 className="text-lg font-semibold text-white">{feature})
           {/* Benefits Section */}
-          </div><section className="mb-16">
+          </div>
+<section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               Why Choose AI Video Generator Pro?
             </section>
@@ -114,7 +109,8 @@ const AIVideoGenerationPage: React.FC = () => {
                     <Zap className="w-8 h-8 text-white" />
                   <h3 className="text-lg font-semibold text-white mb-2">{benefit})
           {/* Pricing Section */}
-          </div><section className="mb-16">
+          </div>
+<section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Simple, Transparent Pricing;
             </section>
 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -144,13 +140,13 @@ const AIVideoGenerationPage: React.FC = () => {
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
                       plan.popular;
                         ? 'cyber-button'
-                        : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
-                    }`}
+                        : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'}`}
                   >
                     Get Started;
               ))}
           {/* CTA Section */}
-          </div><section className="text-center mb-16">
+          </div>
+<section className="text-center mb-16">
             </section>
 <div className="cyber-card p-12 max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-white mb-4 neon-text">
@@ -170,7 +166,7 @@ const AIVideoGenerationPage: React.FC = () => {
                   <span>Call +1 302 464 0950</span>
                 </a>
               </div>
-            </div>
+</div>
           </section>
         </main>
         <Footer />
@@ -189,4 +185,12 @@ export default AIVideoGenerationPage</a>
   </h1>
   </div>
   </SEOOptimizer>
-</div></div></div></div></div></div></div></div></div></div></div></span></span></h2></h3></h3></h3></ul></li></section></section></section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div></div></span></span></h2></h3></h3></h3></ul></li></section></section></section>

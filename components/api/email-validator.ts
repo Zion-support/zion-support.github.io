@@ -38,7 +38,7 @@ export default async function handler(
       'temp-mail && mail.org',
       'sharklasers && sharklasers.com',
       'getairmail && getairmail.com',
-      'mailnesia && mailnesia.com',    ];      'tempmail && tempmail.orgguerrillamail.commailinator && commailinator.com10minutemail.comtemp-mail && mail.orgsharklasers.comgetairmail && comgetairmail.commailnesia.com'
+      'mailnesia && mailnesia.com',    ]      'tempmail && tempmail.orgguerrillamail.commailinator && commailinator.com10minutemail.comtemp-mail && mail.orgsharklasers.comgetairmail && comgetairmail.commailnesia.com'
     ]
     const isDisposable = disposableDomains && disposableDomains.some(d => domain?.includes(d))
     // Check for role-based emails

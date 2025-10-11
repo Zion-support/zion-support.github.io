@@ -2,18 +2,14 @@ import React from 'react'
       label: 'Countries Reached',
       description: 'Global presence and impact across diverse markets'
     },
-    {
-      number: '95%',
+    {number: '95%',
       label: 'Client Satisfaction',
-      description: 'Consistently exceeding client expectations and needs'
-    },
-    {
-      number: '100%',
+      description: 'Consistently exceeding client expectations and needs'},
+    {number: '100%',
       label: 'Carbon Neutral',
       description: 'Committed to sustainable technology development'
-import { Link } from 'react-router-dom'
-import { 
-  Target, 
+import { Link} from 'react-router-dom'
+import {Target, 
   Heart, 
   Users, 
   Globe, 
@@ -27,10 +23,8 @@ import {
   Building,
   Star,
   TrendingUp,
-  Eye;
-} from 'lucide-react'
-export default function Mission() {
-  const coreValues = [
+  Eye;} from 'lucide-react'
+export default function Mission() {const coreValues = [
     {
       title: "Innovation First",
       description: "We push the boundaries of what's possible with cutting-edge technology",
@@ -40,10 +34,8 @@ export default function Mission() {
         "Adoption of emerging technologies",
         "Creative problem-solving approaches",
         "Future-focused solutions"
-      ]
-    },
-    {
-      title: "Excellence",
+      ]},
+    {title: "Excellence",
       description: "We deliver the highest quality solutions and exceptional service",
       icon: Award,
       details: [
@@ -51,10 +43,8 @@ export default function Mission() {
         "Continuous improvement processes",
         "Attention to detail",
         "Customer satisfaction focus"
-      ]
-    },
-    {
-      title: "Collaboration",
+      ]},
+    {title: "Collaboration",
       description: "We work together to achieve extraordinary results for our clients",
       icon: Users,
       details: [
@@ -62,10 +52,8 @@ export default function Mission() {
         "Cross-functional expertise",
         "Client partnership approach",
         "Knowledge sharing culture"
-      ]
-    },
-    {
-      title: "Integrity",
+      ]},
+    {title: "Integrity",
       description: "We maintain the highest ethical standards in all our interactions",
       icon: Shield,
       details: [
@@ -73,12 +61,10 @@ export default function Mission() {
         "Ethical AI development",
         "Data privacy protection",
         "Trust-based relationships"
-      ]
-    }
+      ]}
   ]
   const missionPillars = [
-    {
-      title: "AI-Powered Transformation",
+    {title: "AI-Powered Transformation",
       description: "Leveraging artificial intelligence to revolutionize business operations and decision-making",
       icon: Brain,
       goals: [
@@ -87,10 +73,8 @@ export default function Mission() {
         "Create intelligent solutions that learn and adapt",
         "Bridge the gap between AI research and practical applications"
       ],
-      metrics: ["500+ AI implementations", "40% average efficiency improvement", "99.9% system reliability"]
-    },
-    {
-      title: "Quantum Computing Innovation",
+      metrics: ["500+ AI implementations", "40% average efficiency improvement", "99.9% system reliability"]},
+    {title: "Quantum Computing Innovation",
       description: "Pioneering quantum computing solutions for complex computational challenges",
       icon: Cpu,
       goals: [
@@ -99,10 +83,8 @@ export default function Mission() {
         "Develop quantum algorithms for real-world problems",
         "Establish quantum computing as a mainstream technology"
       ],
-      metrics: ["3 quantum research partnerships", "2 quantum patents filed", "10x computational speed improvement"]
-    },
-    {
-      title: "Cybersecurity Excellence",
+      metrics: ["3 quantum research partnerships", "2 quantum patents filed", "10x computational speed improvement"]},
+    {title: "Cybersecurity Excellence",
       description: "Protecting businesses from evolving threats with advanced security solutions",
       icon: Shield,
       goals: [
@@ -111,10 +93,8 @@ export default function Mission() {
         "Develop proactive threat detection",
         "Ensure business continuity and resilience"
       ],
-      metrics: ["Zero security breaches", "100% compliance success", "24/7 threat monitoring"]
-    },
-    {
-      title: "Global Impact",
+      metrics: ["Zero security breaches", "100% compliance success", "24/7 threat monitoring"]},
+    {title: "Global Impact",
       description: "Making technology accessible and beneficial to businesses worldwide",
       icon: Globe,
       goals: [
@@ -123,12 +103,10 @@ export default function Mission() {
         "Support sustainable technology development",
         "Contribute to digital inclusion initiatives"
       ],
-      metrics: ["25+ countries served", "10+ regional offices", "Multi-language support"]
-    }
+      metrics: ["25+ countries served", "10+ regional offices", "Multi-language support"]}
   ]
   const impactAreas = [
-    {
-      title: "Healthcare",
+    {title: "Healthcare",
       description: "Improving patient care and medical research through AI-powered solutions",
       icon: Heart,
       impact: [
@@ -136,10 +114,8 @@ export default function Mission() {
         "50% reduction in administrative burden",
         "Enhanced patient engagement and outcomes",
         "Accelerated drug discovery processes"
-      ]
-    },
-    {
-      title: "Manufacturing",
+      ]},
+    {title: "Manufacturing",
       description: "Revolutionizing production processes with intelligent automation and predictive analytics",
       icon: Building,
       impact: [
@@ -147,10 +123,8 @@ export default function Mission() {
         "60% reduction in downtime",
         "Real-time quality monitoring and control",
         "Sustainable manufacturing practices"
-      ]
-    },
-    {
-      title: "Financial Services",
+      ]},
+    {title: "Financial Services",
       description: "Enhancing security, compliance, and customer experience in financial operations",
       icon: TrendingUp,
       impact: [
@@ -158,10 +132,8 @@ export default function Mission() {
         "Real-time risk assessment and management",
         "Automated compliance monitoring",
         "Enhanced customer personalization"
-      ]
-    },
-    {
-      title: "Education",
+      ]},
+    {title: "Education",
       description: "Transforming learning experiences through personalized and adaptive technology",
       icon: Star,
       impact: [
@@ -169,47 +141,40 @@ export default function Mission() {
         "Adaptive content delivery",
         "Enhanced student engagement",
         "Improved learning outcomes"
-      ]
-    }
+      ]}
   ]
   const futureVision = [
-    {
-      year: "2025",
+    {year: "2025",
       title: "AI Democratization",
       description: "Making AI accessible to businesses of all sizes through simplified platforms and tools",
       milestones: [
         "Launch of AI marketplace platform",
         "1000+ AI implementations",
         "Partnership with 50+ technology providers"
-      ]
-    },
-    {
-      year: "2027",
+      ]},
+    {year: "2027",
       title: "Quantum Revolution",
       description: "Commercial quantum computing solutions for enterprise applications",
       milestones: [
         "First commercial quantum platform",
         "Quantum-safe security standards",
         "Industry-specific quantum solutions"
-      ]
-    },
-    {
-      year: "2030",
+      ]},
+    {year: "2030",
       title: "Autonomous Future",
       description: "Fully autonomous business operations powered by AI and quantum computing",
       milestones: [
         "Autonomous business platform launch",
         "Zero-touch business operations",
         "AI-human collaboration ecosystem"
-      ]
-    }
+      ]}
   ]
   return (
       {/* Mission Pillars */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         </section>
 <div className="max-w-7xl mx-auto">
-          </div>
+</div>
 <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
               Our Mission Pillars;
@@ -242,17 +207,17 @@ export default function Mission() {
                     ))}
                   </ul>
                 </div>
-              </div>
+</div>
             ))}
           </div>
-        </div>
+</div>
       </section>
 
       {/* Strategic Goals Timeline */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
         </section>
 <div className="max-w-7xl mx-auto">
-          </div>
+</div>
 <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
               Strategic Roadmap;
@@ -269,8 +234,7 @@ export default function Mission() {
 <div className="space-y-12">
               {strategicGoals.map((goal, index) => (
                 < key={index} className={`relative flex items-center ${$2 />
-                  index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
-                }`}>
+                  index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
                   {/* Timeline dot */}
                   </div>
 <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full border-4 border-gray-900"></div>
@@ -290,8 +254,8 @@ export default function Mission() {
                       <h3 className="text-xl font-semibold mb-2 text-white">{goal.title}</h3>
                       <p className="text-gray-400">{goal.description}</p>
                     </div>
-                  </div>
-                </div>
+</div>
+</div>
               ))}
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
@@ -326,9 +290,9 @@ export default function Mission() {
                 <Globe className="w-5 h-5 mr-2" />
                 <span>Global Impact</span>
               </div>
-            </div>
-          </div>
-        </div>
+</div>
+</div>
+</div>
       </div>
 
       {/* Core Values */}
@@ -360,7 +324,7 @@ export default function Mission() {
                   ))}
                 </ul>
               </div>
-            )
+)
           })
         </div>
 <div key={index} className="text-center">
@@ -419,13 +383,13 @@ export default function Mission() {
                         </span>
                       ))}
                     </div>
-                  </div>
-                </div>
-              )
+</div>
+</div>
+)
             })
           </div>
-        </div>
-      </div>
+</div>
+</div>
 
       {/* Impact Areas */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -455,10 +419,10 @@ export default function Mission() {
                   ))}
                 </ul>
               </div>
-            )
+)
           })
         </div>
-      </div>
+</div>
 
       {/* Future Vision */}
       <div className="bg-gradient-to-r from-gray-800 to-gray-900 border-t border-gray-700">
@@ -498,10 +462,9 @@ export default function Mission() {
               </div>
             ))}
           </div>
-        </div>
-      </div>
-
-      </div>
+</div>
+</div>
+</div>
       {/* Call to Action */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         </div>
@@ -530,9 +493,9 @@ export default function Mission() {
               Join Our Team;
             </Link>
           </div>
-        </div>
-      </div>
-    </div>
-  )
+</div>
+</div>
+</div>
+)
 }
 export default Mission</$1></div></p></section>

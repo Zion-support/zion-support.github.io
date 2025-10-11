@@ -1,9 +1,7 @@
 import React from 'react'
 // Mock the components that App depends on;
-jest.mock('../components/ErrorBoundary', () => {
-  return function MockErrorBoundary({ children }: { children: React.ReactNode }) {
-jest.mock('../components/ErrorBoundary', () => {/* TODO: Fix JSX expression */}
-  return function MockErrorBoundary({ children }: {/* TODO: Fix JSX expression */})
+jest.mock('../components/ErrorBoundary', () => {return function MockErrorBoundary({ children}: {children: React.ReactNode}) {jest.mock('../components/ErrorBoundary', () => {/* TODO: Fix JSX expression */}
+  return function MockErrorBoundary({children}: {/* TODO: Fix JSX expression */})
   n: React.ReactNode }) {/* TODO: Fix JSX expression */}
     return <div data-testid="error-boundary">{children}</div>
   }
@@ -19,8 +17,7 @@ jest.mock('../components/Loading', () => {/* TODO: Fix JSX expression */}
   }
 })
 // Mock the pages;
-jest.mock('../pages/Home', () => {
-  return function MockHome() {
+jest.mock('../pages/Home', () => {return function MockHome() {
 jest.mock('../pages/Home', () => {/* TODO: Fix JSX expression */}
 }"
     return <div data-testid="home-page">Home Page</div>

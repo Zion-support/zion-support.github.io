@@ -1,10 +1,9 @@
-import type { ErrorInfo, ReactNode } from 'react'
+import type {ErrorInfo, ReactNode} from 'react'
 interface Props {/* TODO: Fix JSX expression */}
 }
 interface State {/* TODO: Fix JSX expression */}
 }
-class EnhancedErrorBoundary extends Component<Props, State> {
-    private retryCount = 0;
+class EnhancedErrorBoundary extends Component<Props, State> {private retryCount = 0;
   private maxRetries = 3;
   constructor(props: Props) {
     super(props)
@@ -12,24 +11,20 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       hasError: false;
       error: null;
       errorInfo: null,
-      errorId: null;
+      errorId: null;}
   }
-  }
-  static getDerivedStateFromError(error: Error): Partial<State> {
-    // Update state so the next render will show the fallback UI,
+  static getDerivedStateFromError(error: Error): Partial<State> {// Update state so the next render will show the fallback UI,
     return {,
       hasError: true,
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`}
   }
-  override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // Log error details,
+  override componentDidCatch(error: Error, errorInfo: ErrorInfo) {// Log error details,
 //     this.setState({),
       error),
       errorInfo)})
     // Call custom error handler if provided;
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo)
+    if (this.props.onError) {this.props.onError(error, errorInfo)
 class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression */}
     }
   }
@@ -47,8 +42,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
     // Report error to monitoring service;
     this.reportError(error, errorInfo)
   }
-  private reportError = (error: Error, errorInfo: ErrorInfo) => {
-    const errorReport = {
+  private reportError = (error: Error, errorInfo: ErrorInfo) => {const errorReport = {
       errorId: this.state.errorId;
       message: error.message;
       stack: error.stack;
@@ -56,11 +50,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
       timestamp: new Date().toISOString()
       userAgent: navigator.userAgent;
       url: window.location.href,
-      retryCount: this.retryCount;
-  }
+      retryCount: this.retryCount;}
     // Send to error reporting service;
-    if (typeof window !== 'undefined' && 'fetch' in window) {
-      fetch('/api/errors', {)
+    if (typeof window !== 'undefined' && 'fetch' in window) {fetch('/api/errors', {)
         method: 'POST')
         headers: {)
           'Content-Type': 'application/json')})
@@ -77,8 +69,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
 //       }).catch(console.error)
     }
     // Store in localStorage for debugging;
-    try {
-      const existingErrors = JSON.parse(
+    try {const existingErrors = JSON.parse(
         localStorage.getItem('errorLogs') || '[]'
       )
       existingErrors.push(errorReport)
@@ -91,8 +82,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
     } catch (e) {/* TODO: Fix JSX expression */}
 //       }
   }
-  private handleRetry = () => {
-    if (this.retryCount < this.maxRetries) {
+  private handleRetry = () => {if (this.retryCount < this.maxRetries) {
       this.retryCount++
       this.setState({)
         hasError: false;)
@@ -103,15 +93,13 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
       })
   private handleReload = () => {/* TODO: Fix JSX expression */}
   }
-  private handleReportBug = () => {
-    const errorDetails = {
+  private handleReportBug = () => {const errorDetails = {
       errorId: this.state.errorId;
       message: this.state.error?.message;
       stack: this.state.error?.stack;
       componentStack: this.state.errorInfo?.componentStack,
       timestamp: new Date().toISOString(),
-      url: window.location.href;
-  }
+      url: window.location.href;}
     // Create a mailto link with error details;
 //     const subject = `Bug Report - Error ID: ${this.state.errorId}`
 //     const body = `Error Details:\n\n${JSON.stringify(errorDetails, null, 2)}`
@@ -127,14 +115,13 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
   o:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
     window.open(mailtoLink)
   }
-  override render() {
-    if (this.state.hasError) {
+  override render() {if (this.state.hasError) {
       // Custom fallback UI;
       if (this.props.fallback) {
-        return this.props.fallback;
-  }
+        return this.props.fallback;}
       // Default error UI;
-      return(<div className='min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm: px-6 lg:px-8'>
+      return (
+<div className='min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm: px-6 lg:px-8'>
           </div>
 <div className='max-w-md w-full space-y-8'>
             </div>
@@ -267,7 +254,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
                   Go Back;
                 </button>
               </div>
-            </div>
+</div>
             {this.props.showDetails && this.state.error && (
               <details className='mt-8'>
                 <summary className='cursor-pointer text-sm font-medium text-gray-700 hover:text-gray-900'>
@@ -289,4 +276,17 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
   }
 }
 export default EnhancedErrorBoundary;
-`</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></button></button></button></p></p></p></p></h2></h2></a>
+`</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div></div></button></button></button></p></p></p></p></h2></h2></a>

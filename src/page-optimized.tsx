@@ -1,5 +1,5 @@
 'use client'
-import React, { lazy } from 'react'
+import React, {lazy} from 'react'
 import SEOOptimizer from './components/SEOOptimizer'
 import AccessibilityEnhancer from './components/AccessibilityEnhancer'
 import PerformanceMonitor from './components/PerformanceMonitor'
@@ -8,29 +8,23 @@ const EmptyComponent = () => null;
 // Lazy load heavy components - these may not exist, so make them optional;
 const UnifiedBanner = lazy(() =>
   import('./components/NewestContent2025Banner').catch(() =>
-    import('./components/EmptyComponent').catch(() => ({ default: EmptyComponent })
+    import('./components/EmptyComponent').catch(() => ({default: EmptyComponent})
 //   )
 )
 const ContentPromotion = lazy(() =>
-  import('./components/UltimateBusinessIntelligence2025Banner').catch(() => {
-    // TODO: Add content;
-  }
+  import('./components/UltimateBusinessIntelligence2025Banner').catch(() => {// TODO: Add content;}
 }
-    return { default: EmptyComponent } as { default: React.ComponentType }
+    return {default: EmptyComponent} as {default: React.ComponentType}
   })
 const ContentShowcase = lazy(() =>
-  import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({
-    // TODO: Add content;
-  }
+  import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({// TODO: Add content;}
 }
   default: EmptyComponent,
   })
-export default function OptimizedHomePage() {
-    // TODO: Add content;
-  }
+export default function OptimizedHomePage() {// TODO: Add content;}
 }
   return (
-          <div>Coming Soon;
+<div>Coming Soon;
   )
           </div>
 <div className="min-h-screen bg-white">
@@ -76,5 +70,6 @@ View Success Stories;
   ),
 }
   </div>
-  </div>
-</div></div>
+</div>
+</div>
+</div>

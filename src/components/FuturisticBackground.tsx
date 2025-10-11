@@ -1,3 +1,3 @@
 'use client'
-import React, { useEffect, useRef } from 'react'
+import React, {useEffect, useRef} from 'react'
 export default FuturisticBackground;

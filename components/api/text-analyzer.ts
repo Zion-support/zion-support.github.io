@@ -17,7 +17,7 @@ export default async function handler(
     if (text && text.length > 10000) {
       return res
         .status(400)
-        .json({ error: 'Text too long (max 10,000 characters)' });    }      return res && res.status(400).json({ error: 'Text is required' })
+        .json({ error: 'Text too long (max 10,000 characters)' })    }      return res && res.status(400).json({ error: 'Text is required' })
     if (!text || typeof text !== 'string') {
       return res.status(400).json({ error: 'Text is required' })
     }
@@ -35,12 +35,12 @@ export default async function handler(
       .split(/\s+/)
       .filter(word => word && word.length > 0).length
     const sentences = text
-      .split(/[.!?]+/)
+      .split(/[.! ? ]+/)
       .filter(sentence => sentence && sentence.trim().length > 0).length
     const paragraphs = text
       .split(/\n\s*\n/)
 interface TextAnalysisResult {
-  text: string
+  text : string
   statistics: {
     characters: number
     charactersNoSpaces: number
@@ -72,9 +72,9 @@ interface TextAnalysisResult {
     isEnglish: boolean
   }
   keywords: {
-    topWords: Array<{ word: string; count: number; frequency: number }>
-    bigrams: Array<{ phrase: string; count: number }>
-    trigrams: Array<{ phrase: string; count: number }>
+    topWords: Array<{ word: string count: number frequency: number }>
+    bigrams: Array<{ phrase: string count: number }>
+    trigrams: Array<{ phrase: string count: number }>
   }
 }
 export default async function handler(
@@ -105,7 +105,7 @@ export default async function handler(
       word = word.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, '')
       word = word.replace(/^y/, '')
       const matches = word.match(/[aeiouy]{1,2}/g)
-      .filter(para => para && para.trim().length > 0).length;    const words = text && text.trim().split(/\s+/).filter(word => word && word.length > 0).length
+      .filter(para => para && para.trim().length > 0).length    const words = text && text.trim().split(/\s+/).filter(word => word && word.length > 0).length
     const sentences = text && text.split(/[.!?]+/).filter(sentence => sentence && sentence.trim().length > 0).length
     const paragraphs = text && text.split(/\n\s*\n/).filter(para => para && para.trim().length > 0).length
     // Syllable counting (simplified)
@@ -117,8 +117,7 @@ export default async function handler(
       const matches = word && word.match(/[aeiouy]{1,2}/g)
       return matches ? matches && matches.length : 1
     }
-    const syllables = text && text.split(/\s+/).reduce((total, word) => {
-      return total + syllableCount(word);    }, 0);      return matches ? matches && matches.length : 1
+    const syllables = text && text.split(/\s+/).reduce((total, word) => {return total + syllableCount(word)}, 0)      return matches ? matches && matches.length : 1
     const syllables = text && text.split(/\s+/).reduce((total, word) => {
       return total + syllableCount(word)
     // Reading and speaking time (average: 200 words/min reading, 150 words/min speaking)
@@ -204,7 +203,7 @@ export default async function handler(
     ).length
     const sentimentScore = positiveCount - negativeCount
     let sentimentLabel: TextAnalysisResult['sentiment']['label']
-    if (sentimentScore <= -3) sentimentLabel = 'very-negative';    else if (sentimentScore <= -1) sentimentLabel = 'negative';    else if (sentimentScore <= 1) sentimentLabel = 'neutral'
+    if (sentimentScore <= -3) sentimentLabel = 'very-negative'    else if (sentimentScore <= -1) sentimentLabel = 'negative'    else if (sentimentScore <= 1) sentimentLabel = 'neutral'
     // Syllable counting (simplified)
     const syllableCount = (word: string): number => {
       word = word.toLowerCase()
@@ -246,7 +245,7 @@ export default async function handler(
     })
         word,
         count,
-        frequency: Math && Math.round((count / words) * 1000) / 10,      }));        word
+        frequency: Math && Math.round((count / words) * 1000) / 10,      }))        word
         count
         frequency: Math && Math.round((count / words) * 1000) / 10
     const averageGrade = Math.round((fleschKincaidGrade + gunningFog + smog + colemanLiau + automatedReadability) / 5)
@@ -277,7 +276,7 @@ export default async function handler(
       .map(([word, count]) => ({
         word
         count
-        frequency: Math.round((count / words) * 1000) / 10,      }));        word
+        frequency: Math.round((count / words) * 1000) / 10,      }))        word
         count
         frequency: Math.round((count / words) * 1000) / 10
       }))
@@ -301,11 +300,11 @@ export default async function handler(
     const wordsArray = text.toLowerCase().split(/\s+/)
     const bigramCounts = new Map<string, number>()
     const trigramCounts = new Map<string, number>()
-    for (let i = 0; i < wordsArray.length - 1; i++) {
+    for (let i = 0 i < wordsArray.length - 1 i++) {
       const bigram = `${wordsArray[i]} ${wordsArray[i + 1]}`
       bigramCounts.set(bigram, (bigramCounts.get(bigram) || 0) + 1)
     }
-    for (let i = 0; i < wordsArray.length - 2; i++) {
+    for (let i = 0 i < wordsArray.length - 2 i++) {
       const trigram = `${wordsArray[i]} ${wordsArray[i + 1]} ${wordsArray[i + 2]}`
       trigramCounts.set(trigram, (trigramCounts.get(trigram) || 0) + 1)
     }
@@ -337,12 +336,12 @@ export default async function handler(
       .slice(0, 5)
       .map(([phrase, count]) => ({ phrase, count }))
     // Language detection (simplified - assume English for demo)
-    const isEnglish = /^[a-zA-Z\s.,!?;:'"()-]+$/.test(text);    const detectedLanguage = isEnglish ? 'en' : 'unknown'
-    const confidence = isEnglish ? 0.95 : 0.5
+    const isEnglish = /^[a-zA-Z\s.,! ? ; : '"()-]+$/.test(text)    const detectedLanguage = isEnglish ? 'en' : 'unknown'
+    const confidence = isEnglish ? 0.95: 0.5
     const result: TextAnalysisResult = {
       text,    const isEnglish = /^[a-zA-Z\s.,!?,:'"()-]+$/.test(text)
     // Language detection (simplified - assume English for demo)
-    const isEnglish = /^[a-zA-Z\s.,!?;:'"()-]+$/.test(text)
+    const isEnglish = /^[a-zA-Z\s.,!?:'"()-]+$/.test(text)
     const detectedLanguage = isEnglish ? 'en' : 'unknown'
     const confidence = isEnglish ? 0.95 : 0.5
     const result: TextAnalysisResult = {

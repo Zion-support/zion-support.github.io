@@ -1,34 +1,27 @@
 'use client'
-import React, { useState, useEffect } from 'react'
-import { Phone, Mail, ExternalLink, Star, CheckCircle, ArrowRight, Zap, Brain, Cloud, Rocket, TrendingUp, Users, Award, Shield, Clock, DollarSign, Target, BarChart, Sparkles } from 'lucide-react'
-import { services, serviceCategories, contactInfo } from '../data/services'
-interface ServiceCardProps {
-    service: typeof services[0],
-  index: number;
-  }
-const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
-    const [isHovered, setIsHovered] = useState(false)
+import React, {useState, useEffect} from 'react'
+import {Phone, Mail, ExternalLink, Star, CheckCircle, ArrowRight, Zap, Brain, Cloud, Rocket, TrendingUp, Users, Award, Shield, Clock, DollarSign, Target, BarChart, Sparkles} from 'lucide-react'
+import {services, serviceCategories, contactInfo} from '../data/services'
+interface ServiceCardProps {service: typeof services[0],
+  index: number;}
+const ServiceCard: React.FC<ServiceCardProps> = ({service, index}) => {const [isHovered, setIsHovered] = useState(false)
   const formatPrice = (pricing: typeof service.pricing) => {
     if (pricing.custom) {
-      return 'Custom Pricing'
-  }
+      return 'Custom Pricing'}
     return `$${pricing.starting.toLocaleString()}/${pricing.period === 'month' ? 'mo' : pricing.period === 'year' ? 'yr' : 'one-time'}`
   }
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
+  const getCategoryIcon = (category: string) => {switch (category) {
       case 'ai': return Brain;
       case 'micro-saas': return Zap;
       case 'it': return Cloud;
       case 'emerging-tech': return Rocket,
-      default: return Target;
-  }
+      default: return Target;}
   }
   const CategoryIcon = getCategoryIcon(service.category)
   return (
     <$2 />
       className={`quantum-card p-6 energy-pulse hover:scale-105 transition-all duration-500 ${
-        isHovered ? 'shadow-2xl' : 'shadow-lg'
-      }`}
+        isHovered ? 'shadow-2xl' : 'shadow-lg'}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       style={{
@@ -134,7 +127,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
             Demo,
   
         </div>
-      </div>
+</div>
       {/* Use Cases */}
       <div className="mt-4 pt-4 border-t border-slate-700">
         <h4 className="text-xs font-semibold text-gray-400 mb-2">Perfect For:
@@ -144,24 +137,20 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
             <span key={idx} className="text-xs bg-slate-700/50 text-gray-300 px-2 py-1 rounded">
               {useCase})
         </div>
-      </div>
-    </div>
-  )
+</div>
+</div>
+)
 }
-const EnhancedServicesShowcase: React.FC = () => {
-    const [selectedCategory, setSelectedCategory] = useState<string>('all')
+const EnhancedServicesShowcase: React.FC = () => {const [selectedCategory, setSelectedCategory] = useState<string>('all')
   const [filteredServices, setFilteredServices] = useState(services)
   useEffect(() => {
     if (selectedCategory === 'all') {
-      setFilteredServices(services)
-  } else {
-    setFilteredServices(services.filter(service => service.category === selectedCategory))
-  }
+      setFilteredServices(services)} else {setFilteredServices(services.filter(service => service.category === selectedCategory))}
   }, [selectedCategory])
   const popularServices = services.filter(service => service.popular)
   const newServices = services.filter(service => service.new)
   return (
-    <section className="py-16 px-4">
+<section className="py-16 px-4">
       </section>
 <div className="container mx-auto">
         {/* Header */}
@@ -212,8 +201,7 @@ const EnhancedServicesShowcase: React.FC = () => {
             className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
               selectedCategory === 'all'
                 ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
-                : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
-            }`}
+                : 'bg-slate-800 text-gray-300 hover:bg-slate-700'}`}
           >
             All Services;
           {serviceCategories.map((category) => (
@@ -223,8 +211,7 @@ const EnhancedServicesShowcase: React.FC = () => {
               className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${
                 selectedCategory === category.id;
                   ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
-                  : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
-              }`}
+                  : 'bg-slate-800 text-gray-300 hover:bg-slate-700'}`}
             >
               <span className="text-lg">{category.icon}
               <span>{category.name})
@@ -280,10 +267,10 @@ const EnhancedServicesShowcase: React.FC = () => {
               <Mail className="w-5 h-5 mr-2" />
               Get Free Consultation;
           </div>
-        </div>
-      </div>
+</div>
+</div>
     </section>
-  )
+)
 }
 export default EnhancedServicesShowcase</a>
   </h3>
@@ -300,4 +287,37 @@ export default EnhancedServicesShowcase</a>
   </span>
   </span>
   </ServiceCardProps>
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></p></p></p></h3></h3></h4></h4></li>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div></span></span></span></p></p></p></h3></h3></h4></h4></li>

@@ -1,102 +1,75 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
-import { Monitor, Shield, TrendingUp, Database, Network, ArrowRight, Cpu, HardDrive, Users, Globe, BarChart3, Zap, Target, Rocket, CheckCircle, Star, Lightbulb, Cloud, Settings, Brain, Server, Printer, Clock } from 'lucide-react'
+import {Link} from 'react-router-dom'
+import {motion} from 'framer-motion'
+import {Monitor, Shield, TrendingUp, Database, Network, ArrowRight, Cpu, HardDrive, Users, Globe, BarChart3, Zap, Target, Rocket, CheckCircle, Star, Lightbulb, Cloud, Settings, Brain, Server, Printer, Clock} from 'lucide-react'
 import SEOHead from '../components/SEOHead'
-import { Helmet } from 'react-helmet-async'
-const AIPoweredITAssetManagement = () => {
-    const features = [
+import {Helmet} from 'react-helmet-async'
+const AIPoweredITAssetManagement = () => {const features = [
         {
             icon: Monitor,
             title: "Real-time Asset Monitoring",
-            description: "Continuous monitoring of all IT assets with AI-powered anomaly detection and predictive maintenance."
-        },
-        {
-            icon: Shield,
+            description: "Continuous monitoring of all IT assets with AI-powered anomaly detection and predictive maintenance."},
+        {icon: Shield,
             title: "Intelligent Security",
-            description: "AI-driven threat detection and automated security response for all managed IT assets."
-        },
-        {
-            icon: TrendingUp,
+            description: "AI-driven threat detection and automated security response for all managed IT assets."},
+        {icon: TrendingUp,
             title: "Performance Analytics",
-            description: "Advanced analytics and reporting for asset performance optimization and capacity planning."
-        },
-        {
-            icon: Database,
+            description: "Advanced analytics and reporting for asset performance optimization and capacity planning."},
+        {icon: Database,
             title: "Centralized Management",
-            description: "Single platform for managing all IT assets across your entire infrastructure."
-        },
-        {
-            icon: Network,
+            description: "Single platform for managing all IT assets across your entire infrastructure."},
+        {icon: Network,
             title: "Network Optimization",
-            description: "AI-powered network performance optimization and bandwidth management."
-        },
-        {
-            icon: Target,
+            description: "AI-powered network performance optimization and bandwidth management."},
+        {icon: Target,
             title: "Predictive Maintenance",
-            description: "AI algorithms predict potential failures and maintenance needs before they impact operations."
-        }
+            description: "AI algorithms predict potential failures and maintenance needs before they impact operations."}
     ]
     const capabilities = [
-        {
-            icon: Cpu,
+        {icon: Cpu,
             title: "Intelligent Asset Discovery",
-            description: "AI-powered scanning and discovery of all IT assets across your infrastructure."
-        },
-        {
-            icon: Shield,
+            description: "AI-powered scanning and discovery of all IT assets across your infrastructure."},
+        {icon: Shield,
             title: "Security Monitoring",
-            description: "Continuous security assessment and threat detection for all managed assets."
-        },
-        {
-            icon: BarChart3,
+            description: "Continuous security assessment and threat detection for all managed assets."},
+        {icon: BarChart3,
             title: "Performance Analytics",
-            description: "Real-time performance monitoring and predictive maintenance insights."
-        },
-        {
-            icon: Database,
+            description: "Real-time performance monitoring and predictive maintenance insights."},
+        {icon: Database,
             title: "Centralized Management",
-            description: "Unified management across Windows, Linux, macOS, cloud platforms, and mobile devices."
-        }
+            description: "Unified management across Windows, Linux, macOS, cloud platforms, and mobile devices."}
     ]
     const benefits = [
-        {
-            icon: CheckCircle,
+        {icon: CheckCircle,
             title: "Reduced Downtime",
-            description: "Predictive maintenance reduces unplanned outages by up to 70%"
-        },
-        {
-            icon: TrendingUp,
+            description: "Predictive maintenance reduces unplanned outages by up to 70%"},
+        {icon: TrendingUp,
             title: "Cost Optimization",
-            description: "Identify underutilized assets and optimize resource allocation"
-        },
-        {
-            icon: Shield,
+            description: "Identify underutilized assets and optimize resource allocation"},
+        {icon: Shield,
             title: "Enhanced Security",
-            description: "Proactive threat detection and automated security responses"
-        },
-        {
-            icon: Users,
+            description: "Proactive threat detection and automated security responses"},
+        {icon: Users,
             title: "Improved Productivity",
-            description: "Streamlined asset management reduces administrative overhead"
-        }
+            description: "Streamlined asset management reduces administrative overhead"}
     ]
     return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+<div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
             <Helmet>
                 <title>AI-Powered IT Asset Management | Zion Tech Group</title>
                 <meta name="description" content="Revolutionary AI-powered IT asset management solution with intelligent discovery, real-time monitoring, and predictive maintenance capabilities." />
             </Helmet>
 
             {/* Hero Section */}
-            </div><section className="relative py-20 bg-gradient-to-r from-blue-600 to-purple-700 text-white overflow-hidden">
+            </div>
+<section className="relative py-20 bg-gradient-to-r from-blue-600 to-purple-700 text-white overflow-hidden">
                 </section>
 <div className="absolute inset-0 bg-black/20"></div>
 <div className="container mx-auto px-4 relative z-10">
                     <motion.div;
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
+                        initial={{ opacity: 0, y: 30}}
+                        animate={{ opacity: 1, y: 0}}
+                        transition={{ duration: 0.8}}
                         className="text-center max-w-4xl mx-auto"
                     >
                         <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -130,9 +103,9 @@ const AIPoweredITAssetManagement = () => {
                 </section>
 <div className="container mx-auto px-4">
                     <motion.div;
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
+                        initial={{ opacity: 0, y: 30}}
+                        whileInView={{ opacity: 1, y: 0}}
+                        transition={{ duration: 0.8}}
                         className="text-center mb-16"
                     >
                         <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -149,9 +122,9 @@ const AIPoweredITAssetManagement = () => {
                         {features.map((feature, index) => (
                             <motion.div;
                                 key={index}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.8, delay: index * 0.1 }}
+                                initial={{ opacity: 0, y: 30}}
+                                whileInView={{ opacity: 1, y: 0}}
+                                transition={{ duration: 0.8, delay: index * 0.1}}
                                 className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
                             >
                                 </div>
@@ -163,7 +136,7 @@ const AIPoweredITAssetManagement = () => {
                             </motion.div>
                         ))}
                     </div>
-                </div>
+</div>
             </section>
 
             {/* Capabilities Section */}
@@ -171,9 +144,9 @@ const AIPoweredITAssetManagement = () => {
                 </section>
 <div className="container mx-auto px-4">
                     <motion.div;
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
+                        initial={{ opacity: 0, y: 30}}
+                        whileInView={{ opacity: 1, y: 0}}
+                        transition={{ duration: 0.8}}
                         className="text-center mb-16"
                     >
                         <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -189,9 +162,9 @@ const AIPoweredITAssetManagement = () => {
                         {capabilities.map((capability, index) => (
                             <motion.div;
                                 key={index}
-                                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                transition={{ duration: 0.8, delay: index * 0.1 }}
+                                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30}}
+                                whileInView={{ opacity: 1, x: 0}}
+                                transition={{ duration: 0.8, delay: index * 0.1}}
                                 className="bg-white p-8 rounded-xl shadow-lg"
                             >
                                 </div>
@@ -204,11 +177,11 @@ const AIPoweredITAssetManagement = () => {
                                         <h3 className="text-xl font-semibold mb-2">{capability.title}</h3>
                                         <p className="text-gray-600">{capability.description}</p>
                                     </div>
-                                </div>
+</div>
                             </motion.div>
                         ))}
                     </div>
-                </div>
+</div>
             </section>
 
             {/* Benefits Section */}
@@ -216,9 +189,9 @@ const AIPoweredITAssetManagement = () => {
                 </section>
 <div className="container mx-auto px-4">
                     <motion.div;
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
+                        initial={{ opacity: 0, y: 30}}
+                        whileInView={{ opacity: 1, y: 0}}
+                        transition={{ duration: 0.8}}
                         className="text-center mb-16"
                     >
                         <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -234,9 +207,9 @@ const AIPoweredITAssetManagement = () => {
                         {benefits.map((benefit, index) => (
                             <motion.div;
                                 key={index}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.8, delay: index * 0.1 }}
+                                initial={{ opacity: 0, y: 30}}
+                                whileInView={{ opacity: 1, y: 0}}
+                                transition={{ duration: 0.8, delay: index * 0.1}}
                                 className="text-center"
                             >
                                 </div>
@@ -248,7 +221,7 @@ const AIPoweredITAssetManagement = () => {
                             </motion.div>
                         ))}
                     </div>
-                </div>
+</div>
             </section>
 
             {/* CTA Section */}
@@ -256,9 +229,9 @@ const AIPoweredITAssetManagement = () => {
                 </section>
 <div className="container mx-auto px-4 text-center">
                     <motion.div;
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
+                        initial={{ opacity: 0, y: 30}}
+                        whileInView={{ opacity: 1, y: 0}}
+                        transition={{ duration: 0.8}}
                         className="max-w-4xl mx-auto"
                     >
                         <h2 className="text-4xl font-bold mb-6">
@@ -286,7 +259,7 @@ const AIPoweredITAssetManagement = () => {
                     </motion.div>
                 </div>
             </section>
-        </div>
-    )
+</div>
+)
 }
 export default AIPoweredITAssetManagement;

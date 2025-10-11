@@ -1,7 +1,5 @@
 import React from 'react'
-interface SEOProps {
-    // TODO: Add content;
-  }
+interface SEOProps {// TODO: Add content;}
 }
   title?: string;
   description?: string;
@@ -22,12 +20,9 @@ interface SEOProps {
   tags?: string[]
 }
 const EnhancedSEO: React.FC,
-          <SEOProps> = ({
-    // TODO: Add content;
-  }
+          <SEOProps> = ({// TODO: Add content;}
 }
-const EnhancedSEO: React.FC<SEOProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
+const EnhancedSEO: React.FC<SEOProps> = ({title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.',
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services'],
 //   canonicalUrl,
@@ -43,9 +38,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
 //   publishedTime,
 //   modifiedTime,
 //   section,
-  tags = []}) => {
-    const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;
-  }
+  tags = []}) => {const fullDescription = description.length > 160 ? description.substring(0, 157) + '...' : description;}
   const keywordsString = Array.isArray(keywords) ? keywords.join(', ') : keywords;
   return (
     // Update meta description;

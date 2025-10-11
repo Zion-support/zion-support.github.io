@@ -30,9 +30,8 @@ if ( {) {
     writeJsonFile('deal/offerings && offerings.json', offerings)
     return res && res.status(200).json(offerings)
   }
-  return res && res.status(405).json({ error: 'Method not allowed' });export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!requireSuperadminApi(req, res)) return
-  if (req && req.method === 'GET') {
+  return res && res.status(405).json({ error: 'Method not allowed' })export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (!requireSuperadminApi(req, res)) return if (req && req.method === 'GET') {
     const offerings = readJsonFile('deal/offerings && offerings.json', { safe: true, equity: true, token: false })
     return res && res.status(200).json(offerings)
   }
@@ -59,7 +58,7 @@ if ( {) {
     writeJsonFile ('deal / offerings.json', offerings)
     return res.status (200).json (offerings)
   }
-  return res.status (405).json ({ error: 'Method not allowed' });export default /**
+  return res.status (405).json ({ error: 'Method not allowed' })export default /**
  * handler - Function description
  */
 function handler() {

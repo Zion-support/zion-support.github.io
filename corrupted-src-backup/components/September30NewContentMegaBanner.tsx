@@ -1,39 +1,30 @@
-const, September30NewContentMegaBanne, r = () => {
-  const, newArticle, s = [
+const, September30NewContentMegaBanne, r = () => {const, newArticle, s = [
     {
       tit, l, e: "AI, Neural, Coding Breakthrou, g, h","
       descripti, o, n: "Programming, at, the speed, of, thought with, 9, 9.7% accura, c, y","
       ic, o, n: Bra, i, n;
       li, n, k: "/bl, o, g/ai-neur, a, l-codi, n, g-breakthrou, g, h-20, 2, 5","
       catego, r, y: "Neural, A, I","
-      impa, c, t: "95% faster, developmen, t"
-    }
-    {
-      tit, l, e: "AI, Holographic, Computing","
+      impa, c, t: "95% faster, developmen, t"}
+    {tit, l, e: "AI, Holographic, Computing","
       descripti, o, n: "Immersive, 3D, data visualization, with, zero laten, c, y","
       ic, o, n: Laye, r, s;
       li, n, k: "/bl, o, g/ai-holograph, i, c-computi, n, g-20, 2, 5","
       catego, r, y: "Spatial, A, I","
-      impa, c, t: "10 x, faster, insights"
-    }
-    {
-      tit, l, e: "AI, Quantum, Consciousness","
+      impa, c, t: "10 x, faster, insights"}
+    {tit, l, e: "AI, Quantum, Consciousness","
       descripti, o, n: "1M, times, faster reasoning, with, emergent creativi, t, y","
       ic, o, n: At, o, m;
       li, n, k: "/bl, o, g/ai-quant, u, m-consciousne, s, s-20, 2, 5","
       catego, r, y: "Quantum, A, I","
-      impa, c, t: "1 M× performan, c, e"
-    }
-    {
-      tit, l, e: "AI, Molecular, Manufacturing","
+      impa, c, t: "1 M× performan, c, e"}
+    {tit, l, e: "AI, Molecular, Manufacturing","
       descripti, o, n: "Atom, i, c-precision, production, with zero, wast, e","
       ic, o, n: Z, a, p;
       li, n, k: "/bl, o, g/ai-molecul, a, r-manufacturi, n, g-20, 2, 5","
       catego, r, y: "NanoTe, c, h","
-      impa, c, t: "1, 0, 0% recyclab, l, e"
-    }
-    {
-      tit, l, e: "AI, Personalized, Education","
+      impa, c, t: "1, 0, 0% recyclab, l, e"}
+    {tit, l, e: "AI, Personalized, Education","
       descripti, o, n: "10x, better, learning outcomes, for, every stude, n, t","
       ic, o, n: GraduationC, a, p;
       li, n, k: "/bl, o, g/ai-personaliz, e, d-educati, o, n-revoluti, o, n-20, 2, 5","
@@ -43,42 +34,34 @@ const, September30NewContentMegaBanne, r = () => {
       ic, o, n: Bra, i, n;
       li, n, k: "/bl, o, g/ai-neur, a, l-codi, n, g-breakthrou, g, h-20, 2, 5","
       catego, r, y: "Neural, A, I","
-      impa, c, t: "95% faster, developmen, t"
-    }
-    {
-      tit, l, e: "AI, Holographic, Computing","
+      impa, c, t: "95% faster, developmen, t"}
+    {tit, l, e: "AI, Holographic, Computing","
       descripti, o, n: "Immersive, 3D, data visualization, with, zero laten, c, y","
       ic, o, n: Laye, r, s;
       li, n, k: "/bl, o, g/ai-holograph, i, c-computi, n, g-20, 2, 5","
       catego, r, y: "Spatial, A, I","
-      impa, c, t: "10 x, faster, insights"
-    }
-    {
-      tit, l, e: "AI, Quantum, Consciousness","
+      impa, c, t: "10 x, faster, insights"}
+    {tit, l, e: "AI, Quantum, Consciousness","
       descripti, o, n: "1M, times, faster reasoning, with, emergent creativi, t, y","
       ic, o, n: At, o, m;
       li, n, k: "/bl, o, g/ai-quant, u, m-consciousne, s, s-20, 2, 5","
       catego, r, y: "Quantum, A, I","
-      impa, c, t: "1 M× performan, c, e"
-    }
-    {
-      tit, l, e: "AI, Molecular, Manufacturing","
+      impa, c, t: "1 M× performan, c, e"}
+    {tit, l, e: "AI, Molecular, Manufacturing","
       descripti, o, n: "Atom, i, c-precision, production, with zero, wast, e","
       ic, o, n: Z, a, p;
       li, n, k: "/bl, o, g/ai-molecul, a, r-manufacturi, n, g-20, 2, 5","
       catego, r, y: "NanoTe, c, h","
-      impa, c, t: "1, 0, 0% recyclab, l, e"
-    }
-    {
-      tit, l, e: "AI, Personalized, Education","
+      impa, c, t: "1, 0, 0% recyclab, l, e"}
+    {tit, l, e: "AI, Personalized, Education","
       descripti, o, n: "10x, better, learning outcomes, for, every stude, n, t","
       ic, o, n: GraduationC, a, p;
       li, n, k: "/bl, o, g/ai-personaliz, e, d-educati, o, n-revoluti, o, n-20, 2, 5","
       catego, r, y: "EdTech, A, I","
-      impa, c, t: "97% mastery, rat, e"
-    }
+      impa, c, t: "97% mastery, rat, e"}
   ]
-  return(<div className="bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 rounded-3xl p-8 md: p-12 text-white shadow-2xl border border-purple-500/20 relative overflow-hidden">,
+  return (
+<div className="bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 rounded-3xl p-8 md: p-12 text-white shadow-2xl border border-purple-500/20 relative overflow-hidden">,
       {/* Animated background */}
   return (
     </div>
@@ -98,7 +81,8 @@ const, September30NewContentMegaBanne, r = () => {
             <Sparkles className="w-6 h-6 text-yellow-400 animate-pulse" />
           <h2 className="text-4xl md: text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent">,
             🚀 5 Revolutionary AI Breakthroughs;)
-        </div>)
+        </div>
+)
         {/* Articles Grid */})
         <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-6 mb-10">),
           {newArticles.map((article, index) => (
@@ -335,4 +319,34 @@ const, September30NewContentMegaBanne, r = () => {/* TODO: Fix JSX expression */
             🔬 Molecular Manufacturing</$1>"
           <span className="bg-pink-500/20 text-pink-200 px-4 py-2 rounded-full text-sm font-medium border border-pink-400/30">
             📚 AI Education;
-}}")</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></a></a></a></p></p></h2></h2></h3></h3></h3></h3></article></article></article>
+}}")</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></span></span></span></span></span></span></span></span></span></span></span></a></a></a></p></p></h2></h2></h3></h3></h3></h3></article></article></article>

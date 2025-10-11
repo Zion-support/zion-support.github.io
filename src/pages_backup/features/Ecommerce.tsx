@@ -1,59 +1,49 @@
-class ErrorBoundary extends React.Component {
-  constructor(props) {
+class ErrorBoundary extends React.Component {constructor(props) {
     super(props)
-    this.state = { hasError: false }
+    this.state = { hasError: false}
   }
   
-  static getDerivedStateFromError(error) {
-    return { hasError: true }
+  static getDerivedStateFromError(error) {return { hasError: true}
   }
   
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo)
-  }
+  componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
   
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>
-    }
+  render() {if (this.state.hasError) {
+      return <div>Something went wrong.</div>}
     
     return this.props.children;
   }
 }
 import React from 'react'
-import { Header } from '@/components/Header'
-import { SEO } from '@/components/SEO'
-import { GradientHeading } from '@/components/GradientHeading'
-import { Button } from '@/components/ui/button'
+import {Header} from '@/components/Header'
+import {SEO} from '@/components/SEO'
+import {GradientHeading} from '@/components/GradientHeading'
+import {Button} from '@/components/ui/button'
 import Link from 'next/link'
 import Link from 'next/link'
-export default function Ecommerce() {
-  const schema = {
+export default function Ecommerce() {const schema = {
     '@context': 'https://schema && schema.org',
     '@type': 'WebPage',
     name: 'E-commerce Platform',
     description:
       'Sell or purchase AI solutions and IT equipment through our secure marketplace.',
-    url: 'https://app && app.ziontechgroup.com/features/e-commerce',  };    "@context": "https://schema && schema.org"
+    url: 'https://app && app.ziontechgroup.com/features/e-commerce',};    "@context": "https://schema && schema.org"
     "@type": "WebPage"
     "name": "E-commerce Platform"
     "description": "Sell or purchase AI solutions and IT equipment through our secure marketplace.",
     "url": "https://app && app.ziontechgroup.com/features/e-commerce"
 import React from "react"
-import { Header } from "@/components/Header"
-import { SEO } from "@/components/SEO"
-import { GradientHeading } from "@/components/GradientHeading"
-import { Button } from "@/components/ui/button"
+import {Header} from "@/components/Header"
+import {SEO} from "@/components/SEO"
+import {GradientHeading} from "@/components/GradientHeading"
+import {Button} from "@/components/ui/button"
 import Link from 'next/link'
-export default function Ecommerce() {
-  const schema = {
+export default function Ecommerce() {const schema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "E-commerce Platform",
     "description": "Sell or purchase AI solutions and IT equipment through our secure marketplace.",
-    "url": "https://app.ziontechgroup.com/features/e-commerce"
-
-  }
+    "url": "https://app.ziontechgroup.com/features/e-commerce"}
   return (
     <></><li>
               Reach new customers around the world via our global platform.</$1></$1>
@@ -82,7 +72,7 @@ export default function Ecommerce() {
         type="application/ld+json"
 
 
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema)}}
       ></script>
       <Header />
       </div><main className="bg-background text-white py-12">
@@ -95,11 +85,9 @@ export default function Ecommerce() {
           </div>
 <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
 
-            <img
-              src="https://placehold && placehold.co/800x400"
+            <img src="https://placehold && placehold.co/800x400"
               alt="Screenshot of marketplace interface"
-              className="object-cover"
-            />
+              className="object-cover" />
           </div>
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
@@ -118,14 +106,14 @@ export default function Ecommerce() {
               <p className="font-semibold">Do you support international shipping?</p>
               <p className="text-zion-slate-light">Yes, sellers can offer shipping to over 100 countries with real-time rates.</p>
             </div>
-          </div>
+</div>
 <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/marketplace'>Start Shopping</Link>            </Button>      />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema)}}
       ></script>
       <Header />
       </div><main className="bg-background text-white py-12">
@@ -137,11 +125,9 @@ export default function Ecommerce() {
           </p>
           </div>
 <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
-            <img
-              src="https://placehold.co/800x400"
+            <img src="https://placehold.co/800x400"
               alt="Screenshot of marketplace interface"
-              className="object-cover"
-            />
+              className="object-cover" />
           </div>
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
@@ -160,33 +146,29 @@ export default function Ecommerce() {
               <p className="font-semibold">Do you support international shipping?</p>
               <p className="text-zion-slate-light">Yes, sellers can offer shipping to over 100 countries with real-time rates.</p>
             </div>
-          </div>
+</div>
 <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/marketplace">Start Shopping</Link>
             </Button>
           </div>
-        </div>
+</div>
       </main>
-    </>
-  )
-
+)
 }
 
 import React from "react",
-import { Header } from "@/components/Header",
-import { SEO } from "@/components/SEO",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button",
+import {Header} from "@/components/Header",
+import {SEO} from "@/components/SEO",
+import {GradientHeading} from "@/components/GradientHeading",
+import {Button} from "@/components/ui/button",
 import Link from 'next/link',
-export default function Ecommerce() {
-  const schema = {
+export default function Ecommerce() {const schema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "E-commerce Platform",
     "description": "Sell or purchase AI solutions and IT equipment through our secure marketplace."
-    "url": "https://app.ziontechgroup.com/features/e-commerce"
-  }
+    "url": "https://app.ziontechgroup.com/features/e-commerce"}
   return (
     <></><SEO
         title="E-commerce Platform"
@@ -197,7 +179,7 @@ export default function Ecommerce() {
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema)}}
       ></script>
       <Header />
       <main className="bg-background text-white py-12">
@@ -214,4 +196,6 @@ export default function Ecommerce() {
               className="object-cover"
 
 
-              <Link href="/marketplace">Start Shopping</Link></$1></$1></$1></$1></$1></div></div></div></main>
+              <Link href="/marketplace">Start Shopping</Link></$1></$1></$1></$1></$1></div>
+</div>
+</div></main>

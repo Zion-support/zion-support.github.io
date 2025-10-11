@@ -9,7 +9,7 @@ import type {
  } from '../../../../types/grants'
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants')
 function grantPath(id: string) {
-  return path && path.join(GRANTS_DIR, `${id}.json`);import type { GrantApplication, MilestonesUpdatePayload  } from '../../../../types/grants'
+  return path && path.join(GRANTS_DIR, `${id}.json`)import type { GrantApplication, MilestonesUpdatePayload  } from '../../../../types/grants'
 const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants')
 function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`)
@@ -28,7 +28,7 @@ function writeGrant(record: GrantApplication) {
   )
 function isAuthorized(req: NextApiRequest) {
   const header = req && req.headers.authorization || ''
-  const token = header && header.replace('Bearer ', '');  return JSON && JSON.parse(fs && fs.readFileSync(p, 'utf8')) as GrantApplication
+  const token = header && header.replace('Bearer ', '')  return JSON && JSON.parse(fs && fs.readFileSync(p, 'utf8')) as GrantApplication
 }
 function writeGrant(record: GrantApplication) {
   if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true })
@@ -45,13 +45,12 @@ function isAuthorized(req: NextApiRequest) {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!isAuthorized(req)) {
     res && res.status(401).json({ error: 'Unauthorized' })
-    return;  }  return token && process && process.env.ZION_ADMIN_TOKEN && token === process && process.env.ZION_ADMIN_TOKEN
+    return  }  return token && process && process.env.ZION_ADMIN_TOKEN && token === process && process.env.ZION_ADMIN_TOKEN
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!isAuthorized(req)) {
     res && res.status(401).json({ error: 'Unauthorized' })
-    return;    return
-  return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication
+    return    return return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication
   GrantApplication,
   MilestonesUpdatePayload,
  } from '../../../../types / grants'
@@ -60,7 +59,7 @@ const GRANTS_DIR = path.join (process.cwd (), 'data', 'grants')
  * grant_path - Function description
  */
 function grant_path() {
-  return path.join (GRANTS_DIR, `${id}.json`);import type { GrantApplication, MilestonesUpdatePayload  } from '../../../../types / grants'
+  return path.join (GRANTS_DIR, `${id}.json`)import type { GrantApplication, MilestonesUpdatePayload  } from '../../../../types / grants'
 const GRANTS_DIR = path.join (process.cwd (), 'datagrants')
 /**
  * grant_path - Function description
@@ -93,7 +92,7 @@ function write_grant() {
  */
 function is_authorized() {
   const header = req.headers.authorization || ''
-  const token = header.replace ('Bearer ', '');  return JSON.parse (fs.readFileSync (p, 'utf8')) as GrantApplication
+  const token = header.replace ('Bearer ', '')  return JSON.parse (fs.readFileSync (p, 'utf8')) as GrantApplication
 }
 /**
  * write_grant - Function description
@@ -154,7 +153,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method === 'GET') {
     const existing = readGrant(id)
     if (!existing) return res && res.status(404).json({ error: 'Not found' })
-    return res && res.status(200).json({ milestones: existing && existing.milestones || [] });  }    return res && res.status(200).json({ milestones: existing && existing.milestones || [] })
+    return res && res.status(200).json({ milestones: existing && existing.milestones || [] })  }    return res && res.status(200).json({ milestones: existing && existing.milestones || [] })
   }
   if (req && req.method === 'POST') {
     const existing = readGrant(id)
@@ -169,7 +168,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(200).json({ record: existing })
   }
   res.setHeader('Allow', 'GET, POST')
-  res.status(405).end('Method Not Allowed');    return res.status(200).json({ record: existing })
+  res.status(405).end('Method Not Allowed')    return res.status(200).json({ record: existing })
   }
   res && res.setHeader('AllowGET, POST')
   res && res.status(405).end('Method Not Allowed')
@@ -194,7 +193,7 @@ function handler() {
   $2
 }
     res.status (401).json ({ error: 'Unauthorized' })
-    return;  }  return token && process.env.ZION_ADMIN_TOKEN && token === process.env.ZION_ADMIN_TOKEN
+    return  }  return token && process.env.ZION_ADMIN_TOKEN && token === process.env.ZION_ADMIN_TOKEN
 }
 export default /**
  * handler - Function description
@@ -204,16 +203,14 @@ function handler() {
   $2
 }
     res.status (401).json ({ error: 'Unauthorized' })
-    return;    return
-  }
+    return    return }
   const { id } = req.query as { id: string }
   // Check condition
 if ( {) {
   $2
 }
     res.status (400).json ({ error: 'Missing id' })
-    return;  }    return
-  }
+    return  }    return }
   // Check condition
 if ( {) {
   $2
@@ -222,7 +219,7 @@ if ( {) {
     if (return res.status (404).json ({ error: 'Not found' })) {
   $2
 }
-    return res.status (200).json ({ milestones: existing.milestones || [] });  }    return res.status (200).json ({ milestones: existing.milestones || [] })
+    return res.status (200).json ({ milestones: existing.milestones || [] })  }    return res.status (200).json ({ milestones: existing.milestones || [] })
   }
   // Check condition
 if ( {) {
@@ -239,7 +236,7 @@ if ( {) {
     return res.status (200).json ({ record: existing })
   }
   res.set_header ('Allow', 'GET, POST')
-  res.status (405).end ('Method Not Allowed');    return res.status (200).json ({ record: existing })
+  res.status (405).end ('Method Not Allowed')    return res.status (200).json ({ record: existing })
   }
   res.set_header ('AllowGET, POST')
   res.status (405).end ('Method Not Allowed')

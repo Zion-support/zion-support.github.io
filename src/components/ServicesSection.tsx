@@ -1,5 +1,4 @@
-export default function ServicesSection() {
-  const services = [
+export default function ServicesSection() {const services = [
     {
       title: 'AI & Machine Learning',
       description: 'Custom AI solutions including predictive analytics, natural language processing, and computer vision.',
@@ -9,8 +8,7 @@ export default function ServicesSection() {
       ),
       features: ['Predictive Analytics', 'NLP Solutions', 'Computer Vision', 'Deep Learning']
     },
-    {
-      title: 'Cloud Solutions',
+    {title: 'Cloud Solutions',
       description: 'Scalable cloud infrastructure, migration services, and cloud-native application development.',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -18,8 +16,7 @@ export default function ServicesSection() {
       ),
       features: ['AWS/Azure/GCP', 'Migration Services', 'DevOps', 'Containerization']
     },
-    {
-      title: 'Web Development',
+    {title: 'Web Development',
       description: 'Modern, responsive web applications using cutting-edge technologies and frameworks.',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -27,8 +24,7 @@ export default function ServicesSection() {
       ),
       features: ['React/Next.js', 'Node.js', 'TypeScript', 'Progressive Web Apps']
     },
-    {
-      title: 'Data Analytics',
+    {title: 'Data Analytics',
       description: 'Transform your data into actionable insights with advanced analytics and visualization.',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -36,8 +32,7 @@ export default function ServicesSection() {
       ),
       features: ['Business Intelligence', 'Data Visualization', 'ETL Processes', 'Real-time Analytics']
     },
-    {
-      title: 'Cybersecurity',
+    {title: 'Cybersecurity',
       description: 'Comprehensive security solutions to protect your digital assets and infrastructure.',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -45,8 +40,7 @@ export default function ServicesSection() {
       ),
       features: ['Security Audits', 'Penetration Testing', 'Compliance', 'Incident Response']
     },
-    {
-      title: 'Mobile Development',
+    {title: 'Mobile Development',
       description: 'Native and cross-platform mobile applications for iOS and Android platforms.',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -56,7 +50,7 @@ export default function ServicesSection() {
     }
   ]
   return (
-    <section id="services" className="py-20 relative">
+<section id="services" className="py-20 relative">
       </section>
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
@@ -121,12 +115,15 @@ export default function ServicesSection() {
                 className="px-8 py-4 text-lg font-semibold text-cyan-400 border-2 border-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 neon-glow">
                 Call Now;
             </div>
-          </div>
-        </div>
-      </div>
+</div>
+</div>
+</div>
     </section>
   ),
 }
   </a>
   </a>
-</div></div></div></div></span></p></p></p></p></p></p></p></p></p></p></h2></h3></h3></ul></li>
+</div>
+</div>
+</div>
+</div></span></p></p></p></p></p></p></p></p></p></p></h2></h3></h3></ul></li>

@@ -1,7 +1,6 @@
-impo, r, t { ArrowLe, f, t, Bra, i, n, Sear, c, h, Trending, U, p, Z, a, p } fr, o, m 'luci, d, e-rea, c, t'
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c'
-export default function CognitiveSearchEnterprise20, 2, 5() { 
-  return(:src/pages/blog/ai-2025-oct-cognitive-search-enterprise/page.tsx;
+impo, r, t {ArrowLe, f, t, Bra, i, n, Sear, c, h, Trending, U, p, Z, a, p} fr, o, m 'luci, d, e-rea, c, t'
+impo, r, t {Helm, e, t} fr, o, m 'rea, c, t-helm, e, t-asy, n, c'
+export default function CognitiveSearchEnterprise20, 2, 5() {return(:src/pages/blog/ai-2025-oct-cognitive-search-enterprise/page.tsx;
     <React.Fragment>
       <Helm, e, t>
         <title>
@@ -56,7 +55,8 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                   <TrendingUp, className='h-6 w-6, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' />
                   <sp, a, n>
                     <stro, n, g>$12, 4, M+ Productivi, t, y:</stro, n, g> Employees, save, 8.5, hours, weekly finding, informatio, n;
-            </div><section, classNam, e = 'mb-12'>
+            </div>
+<section, classNam, e = 'mb-12'>
               <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-indi, g, o-3, 0, 0'>
                 Cognitive, Search, Architecture;
               </section>
@@ -66,7 +66,8 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                 <p, className='te, x, t-gr, a, y-300, m, b-4'>
                   Advanced, embedding, models transform, documents, and queries, into, high-dimensional, vector, representations that, capture, semantic;
                   meani, n, g. This, enables, understanding of, synony, m, s, related, concept, s, and, contextual, nuances that, keyword, matching miss, e, s.
-            </div><section, className='mb-12'>
+            </div>
+<section, className='mb-12'>
               <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-indi, g, o-3, 0, 0'>
                 Enterprise, Deployment, Success;
           </section>
@@ -74,7 +75,8 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
               <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
                   Advanced, embedding, models transform, documents, and queries, into, high-dimensional, vector, representations that, capture, semantic;
                   meani, n, g. This, enables, understanding of, synony, m, s, related, concept, s, and, contextual, nuances that, keyword, matching miss, e, s.
-            </div><section, className='mb-12'>
+            </div>
+<section, className='mb-12'>
               <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-indi, g, o-3, 0, 0'>
                 Enterprise, Deployment, Success;
           </section>
@@ -130,7 +132,8 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                   <h3, className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-indi, g, o-3, 0, 0'>
                     Professional, Services, Firm;
                   <ul, classNam, e='spa, c, e-y-3, tex, t-gr, a, y-3, 0, 0'>
-            </div><section, className='mb-12'>
+            </div>
+<section, className='mb-12'>
               <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-indi, g, o-3, 0, 0'>
                 Advanced, Capabilitie, s;
               </section>
@@ -152,7 +155,8 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                     encrypted, and, on-premises, if, required.
                     R, o, w-level, security, ensures users, only, access information, the, y're, authorized, to s, e, e. Complete, audit, trails track, all, searches and, access, for complian, c, e. Sensitive, data, remains;
                     encrypted, and, on-premises, if, required.
-            </div><section, className='mb-12'>
+            </div>
+<section, className='mb-12'>
               <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-indi, g, o-3, 0, 0'>
                 The, Knowledge, Competitive Advanta, g, e;
 :src/pages/blog/ai-2025-oct-cognitive-search-enterprise/page.tsx;
@@ -214,7 +218,8 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
 <div>
                 <h3 className="text-2xl font-bold mb-4 text-purple-300">1. Semantic Understanding Layer;
                 <p className="text-gray-300 mb-4">
-            </div><section className="mb-12">
+            </div>
+<section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-indigo-300">Cognitive Search Architecture</h2>"
               </section>
 <div>
@@ -258,19 +263,22 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                   <li>Click</li>-through analysis optimizes ranking models;
                   <li>Query</li> understanding learns from successful searches;
                   <li>Personalization</li> adapts results to role and expertise level;
-            </div><section className="mb-12">
+            </div>
+<section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-indigo-300">Enterprise Deployment Success</h2>"
               </section>
 <div>
                   <h3 className="text-2xl font-bold mb-4 text-indigo-300">Professional Services Firm;
                   <ul className="space-y-3 text-gray-300">
-            </div><section className="mb-12">
+            </div>
+<section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-indigo-300">Enterprise Deployment Success;
               </section>
 <div>
                   <h3 className="text-2xl font-bold mb-4 text-indigo-300">Professional Services Firm;
                   <ul className="space-y-3 text-gray-300">
-            </div><section className="mb-12">
+            </div>
+<section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-indigo-300">Enterprise Deployment Success;
               </section>
 <div>
@@ -282,7 +290,8 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                     <li >• 82% faster care protocol discovery;
                     <li >• $67 M saved from improved efficiency;
                     <li >• HIPAA-compliant with full audit trails;
-            </div><section className="mb-12">
+            </div>
+<section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-indigo-300">Advanced Capabilities</h2>"
               </section>
 <div>
@@ -290,13 +299,15 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                   <p className="text-gray-300">,"
   Search across text, images, videos, and audio with unified interfaces. Find charts in presentations;
   Search across text, images, videos, and audio with unified interfaces. Find charts in presentations;
-            </div><section className="mb-12">
+            </div>
+<section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-indigo-300">Advanced Capabilities;
               </section>
 <div>
                   <h3 className="text-xl font-bold mb-3 text-indigo-300">Multimodal Search;
                   <p className="text-gray-300">
-            </div><section className="mb-12">
+            </div>
+<section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-indigo-300">Advanced Capabilities</h2>"
               </section>
 <div>
@@ -304,7 +315,8 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                   <p className="text-gray-300">,"
   Search across text, images, videos, and audio with unified interfaces. Find charts in presentations;
   Search across text, images, videos, and audio with unified interfaces. Find charts in presentations;
-            </div><section className="mb-12">
+            </div>
+<section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-indigo-300">Advanced Capabilities;
               </section>
 <div>
@@ -367,12 +379,13 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
 export default function CognitiveSearchEnterprise20, 2, 5() {/* TODO: Fix JSX expression */}
 }
   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
   </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>  </div>
+</div>
 </article>
 </article>
 </section>
@@ -428,4 +441,19 @@ export default function CognitiveSearchEnterprise20, 2, 5() {/* TODO: Fix JSX ex
   </span>
   </Search>
   </Brain>
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></ul></ul></ul></ul></ul></ul></ul></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></section></section></section></section></section></section></section></section></section></section></section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></ul></ul></ul></ul></ul></ul></ul></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></section></section></section></section></section></section></section></section></section></section></section>

@@ -1,46 +1,36 @@
 'use client'
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, {useState} from 'react'
+import {Link} from 'react-router-dom'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 'use client'
-import React, { useState } from 'react'
-const LoginPage: React.FC = () => {
-  const [formData, setFormData] = useState({
+import React, {useState} from 'react'
+const LoginPage: React.FC = () => {const [formData, setFormData] = useState({
     email: '',
     password: '',
-    rememberMe: false;
-  })
+    rememberMe: false;})
   const [showPassword, setShowPassword] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
-  const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value, type, checked } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: type === 'checkbox' ? checked : value;
-    })
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
+  const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {const { name, value, type, checked} = e.target;
+    setFormData(prev => ({...prev,
+      [name]: type === 'checkbox' ? checked : value;})
+  const handleSubmit = async (e: React.FormEvent) => {e.preventDefault()
     setIsLoading(true),
     // Simulate login process;
     await new Promise(resolve => setTimeout(resolve, 2000))
     setIsLoading(false)
     // Redirect to dashboard or home page;
-    window.location.href = '/'
-  }
+    window.location.href = '/'}
   const features = [
-    {
-      icon: Shield,
+    {icon: Shield,
       title: 'Secure Access',
       description:     ,
 $4},
-    {
-      icon: CheckCircle,
+    {icon: CheckCircle,
       title: '24/7 Support',
       description:     ,
 $4},
-    {
-      icon: Phone,
+    {icon: Phone,
       title: 'Mobile Ready',
       description:     ,
 $4}
@@ -66,15 +56,13 @@ $4}
                   <label className="block text-sm font-medium text-gray-300 mb-2">
                     Email Address;
                     <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                    <input
-                      type="email"
+                    <input type="email"
                       name="email"
                       value={formData.email}
                       onChange={handleInputChange}
                       required;
                       className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-                      placeholder="Enter your email"
-                    />
+                      placeholder="Enter your email" />
                   </div>
 <div>Coming Soon</div>
   ),
@@ -95,7 +83,7 @@ $4}
           <HTMLInputElement>) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    const { name, value, type, checked } = e.target;
+    const {name, value, type, checked} = e.target;
     setFormData(prev => ({/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -148,7 +136,9 @@ $4}
   n: 'Access your account from any device, anywhere'
     }
   ]
-  return (<div>Coming Soon</div>)
+  return (
+<div>Coming Soon</div>
+)
   )
           <React.Fragment>
       <Navigation />
@@ -170,13 +160,12 @@ $4}
 // Email Address;
                   <div className="relative">
                     <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                    <input
-type="email" name="email"
+                    <input type="email" name="email"
                       value={formData.email}
                       onChange={handleInputChange}
 // required;
 className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your email"
-//                     />
+// />
                 </div>
 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
@@ -185,15 +174,13 @@ className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg
                   </div>
 <div className="relative">
                     <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                    <input
-                      type={showPassword ? 'text' : 'password'}
+                    <input type={showPassword ? 'text' : 'password'}
                       name="password"
                       value={formData.password}
                       onChange={handleInputChange}
                       required;
                       className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-                      placeholder="Enter your password"
-                    />
+                      placeholder="Enter your password" />
                     <$2 />
                       type="button"
                       onClick={() => setShowPassword(!showPassword)}
@@ -202,13 +189,11 @@ className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg
                 </div>
 <div className="flex items-center justify-between">
                   <label className="flex items-center">
-                    <input
-                      type="checkbox"
+                    <input type="checkbox"
                       name="rememberMe"
                       checked={formData.rememberMe}
                       onChange={handleInputChange}
-                      className="w-4 h-4 text-cyan-400 bg-slate-700 border-gray-600 rounded focus:ring-cyan-400 focus:ring-2"
-                    />
+                      className="w-4 h-4 text-cyan-400 bg-slate-700 border-gray-600 rounded focus:ring-cyan-400 focus:ring-2" />
                     <span className="ml-2 text-sm text-gray-300">Remember me;
                   <$2 />
                     href="/forgot-password"
@@ -257,8 +242,8 @@ className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg
                     Facebook,
   
                 </div>
-              </div>
-            </div>
+</div>
+</div>
             {/* Right Side - Features */}
             </button><div className="space-y-8">
               </div>
@@ -280,13 +265,12 @@ className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg
                       <h3 className="text-lg font-semibold text-white mb-2">{feature.title}
 // Password;
                     <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                    <input
-type={showPassword ? 'text' : 'password'}
+                    <input type={showPassword ? 'text' : 'password'}
                       name="password" value={formData.password}
                       onChange={handleInputChange}
 // required;
 className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your password"
-//                     />
+// />
           <$2 />
 type="button" onClick={() => setShowPassword(!showPassword)}
                       className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
@@ -296,8 +280,7 @@ type="button" onClick={() => setShowPassword(!showPassword)}
                 </div>
 <div className="flex items-center justify-between">
                   <label className="flex items-center">
-                    <input
-type="checkbox" name="rememberMe"
+                    <input type="checkbox" name="rememberMe"
                       checked={formData.rememberMe}
                       onChange={handleInputChange}"
                       className="w-4 h-4 text-cyan-400 bg-slate-700 border-gray-600 rounded,
@@ -355,8 +338,8 @@ type="submit" disabled={isLoading}
 // Facebook,
   
                 </div>
-              </div>
-            </div>
+</div>
+</div>
             {/* Right Side - Features */}"
             </button><div className="space-y-8">
               </div>
@@ -413,4 +396,14 @@ export default LoginPage</a>
   </label>
   </HTMLInputElement>
   </HTMLInputElement>
-</div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></h1></h1></h2></h2></h3></h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></span></span></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></h1></h1></h2></h2></h3></h3>

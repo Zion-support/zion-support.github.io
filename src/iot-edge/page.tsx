@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 }
@@ -145,11 +145,14 @@ titl,
     }
   ]
   const categories = [...new Set(iotServices.map(service => service.category))]
-  return (<div>Coming Soon</div>)
+  return (
+<div>Coming Soon</div>
+)
   )
           <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}"
-        </div><section className="relative overflow-hidden bg-gradient-to-r from-cyan-600 to-blue-700 text-white py-20"></section>"
+        </div>
+<section className="relative overflow-hidden bg-gradient-to-r from-cyan-600 to-blue-700 text-white py-20"></section>"
           <div className="absolute inset-0 bg-black opacity-20"></div>"
           < className="relative max-w-7xl mx-auto px-4,$2 />
   sm:px-6,"
@@ -213,9 +216,7 @@ Expert IoT engineers delivering scalable, secure, and intelligent connected solu
               < className="grid grid-cols-1,$2 />
   md:grid-cols-2,"
   lg:grid-cols-3 gap-8"></div>
-                {
-    iotServices;
-  }
+                {iotServices;}
                   .filter(service => service.category === category)
                   .map((service, index) => ()
                     "

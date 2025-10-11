@@ -16,14 +16,14 @@ function removeUnusedImports(filePath) {
       // If ESLint fails, try a simpler approach
 function removeUnusedImports(filePath) {/* TODO: Fix JSX expression */}
       execSync(`npx eslint "${filePath}" --fix --no-eslintrc --config '{"rules":{"@typescript-eslint/no-unused-vars":"error"},"parser":"@typescript-eslint/parser","parserOptions":{"ecmaVersion":2020,"sourceType":"module","ecmaFeatures":{"jsx":true}},"plugins":["@typescript-eslint"]}'`, {/* TODO: Fix JSX expression */})
-  o: 'pipe' });`
+  o: 'pipe' })`
       console.log(`✓ Fixed unused imports in ${filePath}`)
     } catch (error) {/* TODO: Fix JSX expression */}`
       console.log(`⚠ ESLint failed for ${filePath}, trying manual cleanup...`)
       // Remove unused imports manually (basic approach)
       const lines = content.split('\n')
       const newLines = lines.filter(line => {)
-        // Skip import lines that are likely unused;)
+        // Skip import lines that are likely unused)
         if (line.trim().startsWith('import') && line.includes('from')) {
           // Check if the import is actually used in the file
           const importName = line.match(/import\s*{([^}]+)}/)?.[1]?.split(',').map(s => s.trim())
@@ -84,4 +84,4 @@ for (const file of files) {/* TODO: Fix JSX expression */}`
   }
 }
 `
-console.log(`\n✅ Cleanup complete! Processed ${processed} files.`);"`
+console.log(`\n✅ Cleanup complete! Processed ${processed} files.`)"`

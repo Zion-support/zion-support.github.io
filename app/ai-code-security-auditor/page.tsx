@@ -2,39 +2,31 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
+import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart} from 'lucide-react';
 
-import { Helmet } from 'react-helmet-async';
+import {Helmet} from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings} from 'lucide-react';
 
-const AiCodeSecurityAuditorPage: React.FC = () => {
-  const features = [
+const AiCodeSecurityAuditorPage: React.FC = () => {const features = [
     {
       icon: Shield,
       title: 'Automated Security Scanning',
       description: 'AI-powered code analysis that identifies security vulnerabilities and potential threats.',
-      benefits: ['Vulnerability detection', 'Code quality analysis', 'Security recommendations', 'Automated reporting']
-    },
-    {
-      icon: Brain,
+      benefits: ['Vulnerability detection', 'Code quality analysis', 'Security recommendations', 'Automated reporting']},
+    {icon: Brain,
 title: 'Intelligent Analysis',
       description: 'Advanced AI algorithms that understand code patterns and detect complex security issues.',
-      benefits: ['Pattern recognition', 'Threat intelligence', 'Risk assessment', 'Predictive analysis']
-    },
-    {
-      icon: BarChart,
+      benefits: ['Pattern recognition', 'Threat intelligence', 'Risk assessment', 'Predictive analysis']},
+    {icon: BarChart,
       title: 'Comprehensive Reporting',
       description: 'Detailed security reports with actionable insights and remediation guidance.',
-      benefits: ['Detailed reports', 'Risk prioritization', 'Remediation steps', 'Compliance tracking']
-    },
-    {
-      icon: Zap,
+      benefits: ['Detailed reports', 'Risk prioritization', 'Remediation steps', 'Compliance tracking']},
+    {icon: Zap,
       title: 'Real-time Monitoring',
       description: 'Continuous monitoring of code changes and security posture.',
-      benefits: ['Real-time alerts', 'Change tracking', 'Continuous scanning', 'Instant notifications']
-    }
+      benefits: ['Real-time alerts', 'Change tracking', 'Continuous scanning', 'Instant notifications']}
   ]
 
   const benefits = [
@@ -45,17 +37,16 @@ title: 'Intelligent Analysis',
     'Real-time threat detection',
     'Comprehensive security coverage'
   ]
-const PagePage: React.FC = () => {
-  return (
-    <></>
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const PagePage: React.FC = () => {return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
         {/* Hero Section */}
-        </div><section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8">
+        </div>
+<section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Page
@@ -64,14 +55,14 @@ const PagePage: React.FC = () => {
                 Discover our comprehensive solutions designed to transform your business.
               </p>
             </div>
-          </div>
+</div>
         </section>
 
         {/* Content Section */}
         <section className="py-16 px-4 sm: px-6 lg:px-8">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Coming Soon
@@ -90,9 +81,9 @@ const PagePage: React.FC = () => {
                 View Demo
 </button>
             </div>
-          </div>
+</div>
         </section>
-      </div>
+</div>
       
 <Helmet>
         <title>AI Code Security Auditor - Zion Tech Group</title>
@@ -107,7 +98,7 @@ const PagePage: React.FC = () => {
         </main><section className="relative py-20 px-4 sm: px-6 lg:px-8">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 AI Code Security Auditor
@@ -124,15 +115,15 @@ const PagePage: React.FC = () => {
                   Learn More
                 </button>
               </div>
-            </div>
-          </div>
+</div>
+</div>
         </section>
 
         {/* Features Section */}
 <section className="py-20 px-4">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center mb-16">
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
                 Key Features
@@ -176,14 +167,14 @@ const PagePage: React.FC = () => {
 </div>
               ))}
             </div>
-          </div>
+</div>
         </section>
 
         {/* Benefits Section */}
 <section className="py-20 px-4">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center mb-16">
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
 
@@ -192,7 +183,7 @@ const PagePage: React.FC = () => {
                 Proven results that enhance your code security
               </p>
             </div>
-<div className="grid grid-cols-1 md : grid-cols-2 lg:grid-cols-3 gap-8">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 </div>
 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
@@ -203,10 +194,11 @@ const PagePage: React.FC = () => {
                   <p className="text-lg text-white font-medium">{benefit}</p>
 
                 </div>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div></div>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+</div>
               {benefits.map((benefit, index) =&gt (</div & gt))}
             </div>
-          </div>
+</div>
         </section>
 
         {/* CTA Section */}
@@ -248,7 +240,7 @@ const PagePage: React.FC = () => {
                 Contact Sales
               </button>
 </div>
-          </div>
+</div>
         </section>
       </main>
 
@@ -266,18 +258,21 @@ export default AiCodeSecurityAuditorPage;
           </div><h2 className="text-4xl font-bold text-white mb-6"></h2></h2>Ready to Get Started ? </h2>
           <p className="text-xl text-gray-300 mb-8"></p></p>
             Transform your business with our page solutions today;
-          <div className="flex flex-col sm : flex-row gap-4 justify-center"></div></div>
-            </div><button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+</div>
+</div><button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
               Start Free Trial
             <button className="border border-blue-400 text-blue-400 hover: bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300" /></button>
               Contact Sales
           </div>
-        </div>
+</div>
       </section>
-<div className="max-w-4xl mx-auto text-center"></div></div>
+<div className="max-w-4xl mx-auto text-center"></div>
+</div>
           <h2 className="text-4xl font-bold text-white mb-6"></h2></h2>Ready to Get Started?
           <p className="text-xl text-gray-300 mb-8"></p></p>Transform your business with our page solutions today
-          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div></div>
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+</div>
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>Start Free Trial
             <button className="border border-blue-400 text-blue-400 hover: bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"></button>Contact Sales
       <Footer />

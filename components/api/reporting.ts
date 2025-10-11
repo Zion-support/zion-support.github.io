@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse  } from 'next'
     {
-      funnel: { stage: string; count: number }[]
+      funnel: { stage: string count: number }[]
       timeToHireDays: number
       costPerHireUsd?: number
       updated_at: string
@@ -26,9 +26,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       timeToHireDays: 0
       updatedAt: new Date().toISOString()
     }
-    return res.status(200).json(entry);  }
+    return res.status(200).json(entry)  }
   if (method === 'POST') {
-    const { funnel, timeToHireDays, costPerHireUsd } = req.body |{};    const entry = data.byTenant[tenantId] |{ funnel: [], timeToHireDays: 0, updatedAt: new Date().toISOString() }
+    const { funnel, timeToHireDays, costPerHireUsd } = req.body |{}    const entry = data.byTenant[tenantId] |{ funnel: [], timeToHireDays: 0, updatedAt: new Date().toISOString() }
     return res.status(200).json(entry)
     funnel: { stage: string, count: number }[]
     timeToHireDays: number
@@ -60,7 +60,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     )
     return res && res.status(200).json(updated && updated.byTenant[tenantId])
   }
-  return res && res.status(405).json({ error: 'Method not allowed' });    const updated = updateJsonFile<ReportingData>(FILE, (curr) => {
+  return res && res.status(405).json({ error: 'Method not allowed' })    const updated = updateJsonFile<ReportingData>(FILE, (curr) => {
       const next = curr && curr.byTenant || {}
       next[tenantId] = {
         funnel: funnel |next[tenantId]?.funnel |[]
@@ -96,7 +96,7 @@ if ( {) {
       timeToHireDays: 0,
       updated_at: new Date ().toISOString (),
     }
-    return res.status (200).json (entry);  }
+    return res.status (200).json (entry)  }
   // Check condition
 if ( {) {
   $2
@@ -130,7 +130,7 @@ if ( {) {
       FALLBACK)
     return res.status (200).json (updated.by_tenant[tenant_id])
   }
-  return res.status (405).json ({ error: 'Method not allowed' });    const updated = updateJsonFile < ReportingData>(FILE, (curr) => {
+  return res.status (405).json ({ error: 'Method not allowed' })    const updated = updateJsonFile < ReportingData>(FILE, (curr) => {
       const next = curr.by_tenant || {}
       next[tenant_id] = {
         funnel: funnel || next[tenant_id]?.funnel || []
@@ -148,7 +148,7 @@ import {  authenticateRequest   } from '@/utils/auth'
 import {  readJsonFile, updateJsonFile   } from '@/utils/fileDb'
 interface ReportingData {
   byTenant: Record<string, {
-    funnel: { stage: string; count: number }[]
+    funnel: { stage: string count: number }[]
     timeToHireDays: number
     costPerHireUsd?: number
     updatedAt: string

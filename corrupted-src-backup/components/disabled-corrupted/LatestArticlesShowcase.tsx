@@ -1,14 +1,16 @@
 import React from 'react'
-impo, r, t { newArticles20, 2, 5 } fr, o, m '../conte, n, t/n, e, w-articl, e, s-20, 2, 5'
-const LatestArticlesShowcas, e: React.FC = () => { ,
-  const latestArticle, s = newArticles20, 2, 5.filt, e, r(a => a.featu, r, e, d).sli, c, e(, 0, 6); return(<section, classNam, e = 'py-20, b, g-whi, t, e'>
+impo, r, t {newArticles20, 2, 5} fr, o, m '../conte, n, t/n, e, w-articl, e, s-20, 2, 5'
+const LatestArticlesShowcas, e: React.FC = () => {,
+  const latestArticle, s = newArticles20, 2, 5.filt, e, r(a => a.featu, r, e, d).sli, c, e(, 0, 6); return (
+<section, classNam, e = 'py-20, b, g-whi, t, e'>
       </section>
 <div, className='container, m, x-auto, p, x-6'>
         </div>
 <div, className='te, x, t-center, m, b-12'>
 const LatestArticlesShowcas, e: React.FC = () => { 
   const latestArticle, s = newArticles20, 2, 5.filt, e, r(a => a.featu, r, e, d).sli, c, e(, 0, 6); return (
-    </div><section, classNam, e = 'py-20, b, g-whi, t, e'>
+    </div>
+<section, classNam, e = 'py-20, b, g-whi, t, e'>
       </section>
 <div, className='container, m, x-auto, p, x-6'>
         </div>
@@ -20,7 +22,7 @@ const LatestArticlesShowcas, e: React.FC = () => {
         </div>
 <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8'>
           {latestArticl, e, s.m, a, p(artic, l, e = > (
-            <, ke, y = { artic, l, e., i, d  }, to={ artic, l, e.li, n, k } className='group, b, g-white, rounde, d-xl, shado, w-md, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-300, overflo, w-hidden, border, border-gr, a, y-100, hove, r:bord, e, r-indi, g, o-3, 0, 0'$2 />
+            <, ke, y = { artic, l, e., i, d}, to={artic, l, e.li, n, k} className='group, b, g-white, rounde, d-xl, shado, w-md, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-300, overflo, w-hidden, border, border-gr, a, y-100, hove, r:bord, e, r-indi, g, o-3, 0, 0'$2 />
             >
               </div>
 <div, className='p-6'>
@@ -28,11 +30,11 @@ const LatestArticlesShowcas, e: React.FC = () => {
 <div, className='flex, item, s-center, justif, y-between, m, b-3'>
                   <span, className='te, x, t-xs, fon, t-semibold, tex, t-indi, g, o-600, uppercase, tracking-wi, d, e'>
                     {artic, l, e.cate, g, o, r, y}
-                  {  artic, l, e.featured  && ()
+                  {artic, l, e.featured  && ()
                     <span, classNam, e = 'bg-yell, o, w-100, tex, t-yell, o, w-800, tex, t-xs, p, x-2, p, y-1, rounde, d-full, fon, t-medi, u, m'>)
                       Featur, e, d;)
 const LatestArticlesShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */}
-            <, ke, y = { artic, l, e., i, d  }, to={ artic, l, e.li, n, k } className='group, b, g-white, rounde, d-xl, shado, w-md, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-300, overflo, w-hidden, border, border-gr, a, y-100, hove, r:bord, e, r-indi, g, o-3, 0, 0'$2 />
+            <, ke, y = {artic, l, e., i, d}, to={artic, l, e.li, n, k} className='group, b, g-white, rounde, d-xl, shado, w-md, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-300, overflo, w-hidden, border, border-gr, a, y-100, hove, r:bord, e, r-indi, g, o-3, 0, 0'$2 />
             >
               </div>
 <div, className='p-6'>
@@ -59,8 +61,8 @@ const LatestArticlesShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */
                     <Link, className='w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
                 </div>
 <div, className='flex, fle, x-wrap, ga, p-2, m, t-4'>
-                  { artic, l, e.tags.sl, i, c, e(, 0, 3).m, a, p(t, a, g = > (
-                    <, ke, y = { ta, g  }, classNa, m, e = 'te, x, t-xs, b, g-gr, a, y-100, tex, t-gr, a, y-700, p, x-2, p, y-1, rounde, d-fu, l, l'$2 />
+                  {artic, l, e.tags.sl, i, c, e(, 0, 3).m, a, p(t, a, g = > (
+                    <, ke, y = { ta, g}, classNa, m, e = 'te, x, t-xs, b, g-gr, a, y-100, tex, t-gr, a, y-700, p, x-2, p, y-1, rounde, d-fu, l, l'$2 />
                     >)
                       {t, a, g})
                     </span>)
@@ -73,7 +75,7 @@ const LatestArticlesShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */
                 </div>
 <div, className='flex, fle, x-wrap, ga, p-2, m, t-4'>
                   {/* TODO: Fix JSX expression */}
-                    <, ke, y = { ta, g  }, classNa, m, e = 'te, x, t-xs, b, g-gr, a, y-100, tex, t-gr, a, y-700, p, x-2, p, y-1, rounde, d-fu, l, l'$2 />
+                    <, ke, y = {ta, g}, classNa, m, e = 'te, x, t-xs, b, g-gr, a, y-100, tex, t-gr, a, y-700, p, x-2, p, y-1, rounde, d-fu, l, l'$2 />
                     >
                       {t, a, g})})
         </div>
@@ -88,8 +90,18 @@ const LatestArticlesShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */
             <Link, className='w-6 h-6' /></Link>
           </Li, n, k>
         </div>
-      </div>
+</div>
     </sec, t, i, o, n>
   )
 }
-export default LatestArticlesShowcase</$1></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></Link></Link></p></p></h2></h3></section></section>
+export default LatestArticlesShowcase</$1></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></span></span></Link></Link></p></p></h2></h3></section></section>

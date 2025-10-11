@@ -1,5 +1,5 @@
-export default function October2025SelfHealingSpotlightBann, e, r() { 
-  return(<div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, tex, t-white, p, y-12, p, x-4'>
+export default function October2025SelfHealingSpotlightBann, e, r() {return (
+<div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, tex, t-white, p, y-12, p, x-4'>
       </div>
 <div, className='m, a, x-w-6xl, m, x-au, t, o'>
         </div>
@@ -75,10 +75,30 @@ export default function October2025SelfHealingSpotlightBann, e, r() {
                 <li, className='flex, item, s-sta, r, t'>
                   <span, className='te, x, t-gre, e, n-400, m, r-3'></span>✓
                   <sp, a, n>Cro</n>, s, s-cloud, orchestration, and optimizati, o, n;
-          </div>)
-        </div>)
-      </div>)
+          </div>
+)
+        </div>
+)
+      </div>
+)
     </d, i, v > )
 export default function October2025SelfHealingSpotlightBann, e, r() {/* TODO: Fix JSX expression */}
  }
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></p></h3></h4></ul></li></li></li></li></li>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div></span></p></h3></h4></ul></li></li></li></li></li>

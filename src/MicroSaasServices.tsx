@@ -1,34 +1,34 @@
-import { Search, Filter, Star, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, Shield, Settings, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Globe, Bot, Cpu, Network, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, Building, Factory, Store, Car, Plane, Ship, Home, Hospital, Building2, GraduationCap, Calendar, FileText, BarChart3, Users as UsersIcon, CreditCard as CreditCardIcon, MessageSquare, Camera, Video, Music, BookOpen, Target, TrendingUp, PieChart, Activity, Zap as ZapIcon2, Rocket, Lock, Key, Brain as BrainIcon, Palette, Code, Server, Wifi, Smartphone, Tablet, Monitor, Printer, Scanner, Microphone, Headphones, Gamepad2, Watch, Thermometer, Lightbulb, Battery, Leaf as LeafIcon, Globe as GlobeIcon, Shield as ShieldIcon2, Zap as ZapIcon3, Database as DatabaseIcon2, Cloud as CloudIcon, Server as ServerIcon, Network as NetworkIcon, Lock as LockIcon, Key as KeyIcon, Brain as BrainIcon2, Palette as PaletteIcon, Code as CodeIcon, Server as ServerIcon2, Wifi as WifiIcon, Smartphone as SmartphoneIcon, Tablet as TabletIcon, Monitor as MonitorIcon, Printer as PrinterIcon, Scanner as ScannerIcon, Microphone as MicrophoneIcon, Headphones as HeadphonesIcon, Gamepad2 as Gamepad2Icon, Watch as WatchIcon, Thermometer as ThermometerIcon, Lightbulb as LightbulbIcon, Battery as BatteryIcon, Leaf as LeafIcon2, Globe as GlobeIcon2, Glasses, ArrowRight } from 'lucide-react'
-import React, { useState, useMemo } from 'react'
-import { motion } from 'framer-motion'
-import { Search, Filter, Star, TrendingUp, Zap, Shield, Brain, Code, BarChart3, Settings, Globe, Smartphone } from 'lucide-react'
-import { MICRO_SAAS_SERVICES, MicroSaasService } from '../data/microSaasServices'
-import { Badge } from '../components/ui/badge'
-import { Card } from '../components/ui/card'
-import { Button } from '../components/ui/button'
-import { Input } from '../components/ui/input'
-import { Select } from '../components/ui/select'
+import {Search, Filter, Star, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, Shield, Settings, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Globe, Bot, Cpu, Network, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, Building, Factory, Store, Car, Plane, Ship, Home, Hospital, Building2, GraduationCap, Calendar, FileText, BarChart3, Users as UsersIcon, CreditCard as CreditCardIcon, MessageSquare, Camera, Video, Music, BookOpen, Target, TrendingUp, PieChart, Activity, Zap as ZapIcon2, Rocket, Lock, Key, Brain as BrainIcon, Palette, Code, Server, Wifi, Smartphone, Tablet, Monitor, Printer, Scanner, Microphone, Headphones, Gamepad2, Watch, Thermometer, Lightbulb, Battery, Leaf as LeafIcon, Globe as GlobeIcon, Shield as ShieldIcon2, Zap as ZapIcon3, Database as DatabaseIcon2, Cloud as CloudIcon, Server as ServerIcon, Network as NetworkIcon, Lock as LockIcon, Key as KeyIcon, Brain as BrainIcon2, Palette as PaletteIcon, Code as CodeIcon, Server as ServerIcon2, Wifi as WifiIcon, Smartphone as SmartphoneIcon, Tablet as TabletIcon, Monitor as MonitorIcon, Printer as PrinterIcon, Scanner as ScannerIcon, Microphone as MicrophoneIcon, Headphones as HeadphonesIcon, Gamepad2 as Gamepad2Icon, Watch as WatchIcon, Thermometer as ThermometerIcon, Lightbulb as LightbulbIcon, Battery as BatteryIcon, Leaf as LeafIcon2, Globe as GlobeIcon2, Glasses, ArrowRight} from 'lucide-react'
+import React, {useState, useMemo} from 'react'
+import {motion} from 'framer-motion'
+import {Search, Filter, Star, TrendingUp, Zap, Shield, Brain, Code, BarChart3, Settings, Globe, Smartphone} from 'lucide-react'
+import {MICRO_SAAS_SERVICES, MicroSaasService} from '../data/microSaasServices'
+import {Badge} from '../components/ui/badge'
+import {Card} from '../components/ui/card'
+import {Button} from '../components/ui/button'
+import {Input} from '../components/ui/input'
+import {Select} from '../components/ui/select'
 import FuturisticAnimatedBackground from '../components/ui/FuturisticAnimatedBackground'
 import FuturisticNeonButton from '../components/ui/FuturisticNeonButton'
-import React, { useState, useMemo } from 'react'
-import { Header } from '@/components/Header'
-import { SEO } from '@/components/SEO'
-import { MICRO_SAAS_SERVICES, MicroSaasService, getServiceByCategory, getServiceBySubcategory } from '@/data/microSaasServices'
-import React, { useState } from 'react'
-import { Header } from '@/components/Header'
-import { Footer } from '@/components/Footer'
-import { SEO } from '@/components/SEO'
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import React, { useState, useMemo } from 'react'
-import { Header } from '@/components/Header'
-import { Footer } from '@/components/Footer'
-import { SEO } from '@/components/SEO'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { Input } from '@/components/ui/input'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
+import React, {useState, useMemo} from 'react'
+import {Header} from '@/components/Header'
+import {SEO} from '@/components/SEO'
+import {MICRO_SAAS_SERVICES, MicroSaasService, getServiceByCategory, getServiceBySubcategory} from '@/data/microSaasServices'
+import React, {useState} from 'react'
+import {Header} from '@/components/Header'
+import {Footer} from '@/components/Footer'
+import {SEO} from '@/components/SEO'
+import React, {useState} from 'react'
+import {Link} from 'react-router-dom'
+import React, {useState, useMemo} from 'react'
+import {Header} from '@/components/Header'
+import {Footer} from '@/components/Footer'
+import {SEO} from '@/components/SEO'
+import {Button} from '@/components/ui/button'
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card'
+import {Badge} from '@/components/ui/badge'
+import {Input} from '@/components/ui/input'
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from '@/components/ui/select'
       name: "AI CodeGen Pro",
       category: "Development",
       pricing: "Freemium",
@@ -40,14 +40,11 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
       benefits: ["Faster development", "Code quality improvement", "Reduced bugs", "Time savings"],
       targetAudience: ["Software developers", "Dev teams", "Startups", "Tech companies"],
       tags: ["AI Development", "Code Generation", "Code Review", "Automation", "Productivity"],
-      contactInfo: {
-        phone: "+1 302 464 0950",
+      contactInfo: {phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 17,
+    {id: 17,
       name: "Quantum Analytics",
       category: "Analytics",
       pricing: "Freemium",
@@ -62,11 +59,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 18,
+    {id: 18,
       name: "Blockchain Business Suite",
       category: "Blockchain",
       pricing: "Freemium",
@@ -81,11 +76,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 19,
+    {id: 19,
       name: "IoT Enterprise Hub",
       category: "IoT",
       pricing: "Freemium",
@@ -100,11 +93,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 20,
+    {id: 20,
       name: "AR/VR Studio Pro",
       category: "Immersive Tech",
       pricing: "Freemium",
@@ -119,11 +110,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 2,
+    {id: 2,
       name: "InvoiceGenius",
       category: "Finance",
       pricing: "Freemium",
@@ -138,11 +127,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 3,
+    {id: 3,
       name: "SocialSync Pro",
       category: "Marketing",
       pricing: "Freemium",
@@ -157,11 +144,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 4,
+    {id: 4,
       name: "CustomerFlow CRM",
       category: "CRM",
       pricing: "Freemium",
@@ -176,11 +161,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 5,
+    {id: 5,
       name: "DataViz Studio",
       category: "Analytics",
       pricing: "Freemium",
@@ -195,11 +178,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 6,
+    {id: 6,
       name: "ScheduleMaster",
       category: "Scheduling",
       pricing: "Freemium",
@@ -214,11 +195,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 7,
+    {id: 7,
       name: "ContentCraft AI",
       category: "Content",
       pricing: "Freemium",
@@ -233,11 +212,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 8,
+    {id: 8,
       name: "SecureVault",
       category: "Security",
       pricing: "Freemium",
@@ -252,11 +229,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 9,
+    {id: 9,
       name: "MediaHub Pro",
       category: "Media",
       pricing: "Freemium",
@@ -271,11 +246,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 10,
+    {id: 10,
       name: "LearnFlow LMS",
       category: "Education",
       pricing: "Freemium",
@@ -290,11 +263,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 11,
+    {id: 11,
       name: "EcoTrack Pro",
       category: "Sustainability",
       pricing: "Freemium",
@@ -309,11 +280,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 12,
+    {id: 12,
       name: "LegalAssist AI",
       category: "Legal",
       pricing: "Freemium",
@@ -328,11 +297,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 13,
+    {id: 13,
       name: "HealthTrack Plus",
       category: "Healthcare",
       pricing: "Freemium",
@@ -347,11 +314,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 14,
+    {id: 14,
       name: "EventMaster Pro",
       category: "Events",
       pricing: "Freemium",
@@ -366,11 +331,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 15,
+    {id: 15,
       name: "InventorySmart",
       category: "Inventory",
       pricing: "Freemium",
@@ -385,12 +348,10 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
     // NEW INNOVATIVE SERVICES;
-    {
-      id: 16,
+    {id: 16,
       name: "QuantumFlow AI",
       category: "AI & ML",
       pricing: "Premium",
@@ -405,11 +366,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 17,
+    {id: 17,
       name: "BlockChain Forge",
       category: "Blockchain",
       pricing: "Premium",
@@ -424,11 +383,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 18,
+    {id: 18,
       name: "IoT Nexus Hub",
       category: "IoT",
       pricing: "Premium",
@@ -443,11 +400,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 19,
+    {id: 19,
       name: "CyberShield Pro",
       category: "Cybersecurity",
       pricing: "Premium",
@@ -462,11 +417,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 20,
+    {id: 20,
       name: "DataFusion Studio",
       category: "Data Science",
       pricing: "Premium",
@@ -481,11 +434,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 21,
+    {id: 21,
     {
       id: 21,
       name: "Cybersecurity Shield",
@@ -513,11 +464,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 22,
+    {id: 22,
       name: "GreenTech Monitor",
       category: "Sustainability",
       pricing: "Freemium",
@@ -543,11 +492,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 23,
+    {id: 23,
       name: "VoiceAI Assistant",
       category: "AI",
       pricing: "Freemium",
@@ -573,11 +520,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 24,
+    {id: 24,
       name: "Quantum Finance Pro",
       category: "Finance",
       pricing: "Freemium",
@@ -603,11 +548,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 25,
+    {id: 25,
       name: "FinTech Suite Pro",
       category: "FinTech",
       pricing: "Premium",
@@ -622,11 +565,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 26,
+    {id: 26,
       name: "SmartCity Platform",
       category: "Smart Cities",
       pricing: "Enterprise",
@@ -641,11 +582,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 27,
+    {id: 27,
       name: "BioTech Analytics",
       category: "Biotechnology",
       pricing: "Enterprise",
@@ -660,11 +599,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 28,
+    {id: 28,
       name: "Quantum Security",
       category: "Quantum Security",
       pricing: "Enterprise",
@@ -679,11 +616,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 29,
+    {id: 29,
       name: "SpaceTech Analytics",
       category: "Space Technology",
       pricing: "Enterprise",
@@ -698,11 +633,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 30,
+    {id: 30,
       name: "Edge Computing Hub",
       category: "Infrastructure",
       pricing: "Freemium",
@@ -728,8 +661,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     }
   ]
   const categories = ['all', 'Productivity', 'Finance', 'Marketing', 'CRM', 'Analytics', 'Scheduling', 'Content', 'Security', 'Media', 'Education', 'Sustainability', 'Legal', 'Healthcare', 'Events', 'Inventory', 'AI & Marketing', 'Customer Success', 'Human Resources']
@@ -737,16 +669,14 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
   const pricingModels = ['all', 'Freemium', 'Subscription', 'One-time']
   const categories = ['all', 'Productivity', 'Finance', 'Marketing', 'CRM', 'Analytics', 'Scheduling', 'Content', 'Security', 'Media', 'Education', 'Sustainability', 'Legal', 'Healthcare', 'Events', 'Inventory', 'AI & ML', 'Blockchain', 'IoT', 'Cybersecurity', 'Data Science', 'Cloud Computing', 'DevOps', 'AR/VR', 'FinTech', 'Smart Cities', 'Biotechnology', 'Quantum Security', 'Space Technology', 'Neurotechnology']
   const pricingModels = ['all', 'Freemium', 'Premium', 'Enterprise']
-  const filteredServices = microSaasServices.filter(service => {
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-import { Badge } from '@/components/ui/badge'
-import { Input } from '@/components/ui/input'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { 
-  Search, 
+  const filteredServices = microSaasServices.filter(service => {const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+import { Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card'
+import {Button} from '@/components/ui/button'
+import {Badge} from '@/components/ui/badge'
+import {Input} from '@/components/ui/input'
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from '@/components/ui/select'
+import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs'
+import {Search, 
   Filter, 
   Star, 
   Clock, 
@@ -763,9 +693,8 @@ import {
   Cloud,
   Lock,
   Settings,
-  Link as LinkIcon;
-} from 'lucide-react'
-import { MICRO_SAAS_SERVICES, MicroSaasService, getServicesByCategory, getFeaturedServices, getPopularServices, getNewServices } from '@/data/microSaasServices'
+  Link as LinkIcon;} from 'lucide-react'
+import {MICRO_SAAS_SERVICES, MicroSaasService, getServicesByCategory, getFeaturedServices, getPopularServices, getNewServices} from '@/data/microSaasServices'
   ExternalLink, 
   Phone, 
   Mail, 
@@ -785,10 +714,9 @@ import { MICRO_SAAS_SERVICES, MicroSaasService, getServicesByCategory, getFeatur
   Zap as ZapIcon,
   BarChart3;
 } from 'lucide-react'
-import { MICRO_SAAS_SERVICES, MicroSaasService, getServicesByCategory } from '@/data/microSaasServices'
-import { Link } from 'react-router-dom'
-export default function MicroSaasServices() {
-  const [searchQuery, setSearchQuery] = useState('')
+import {MICRO_SAAS_SERVICES, MicroSaasService, getServicesByCategory} from '@/data/microSaasServices'
+import {Link} from 'react-router-dom'
+export default function MicroSaasServices() {const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState<string>('all')
   const [selectedPricing, setSelectedPricing] = useState<string>('all')
   const featuredServices = getFeaturedServices()
@@ -797,16 +725,10 @@ export default function MicroSaasServices() {
   const getPricingDisplay = (service: MicroSaasService) => {
     if (service.pricingModel === 'subscription') {
       return `$${service.monthlyPrice}/month`
-    } else if (service.pricingModel === 'one-time') {
-      return `$${service.price.toLocaleString()}`
-    } else if (service.pricingModel === 'usage-based') {
-      return 'Usage-based'
-    } else {
-      return 'Contact us'
-    }
+    } else if (service.pricingModel === 'one-time') {return `$${service.price.toLocaleString()}`
+    } else if (service.pricingModel === 'usage-based') {return 'Usage-based'} else {return 'Contact us'}
   }
-  const getCategoryIcon = (category: string) => {
-      case 'AI & ML': return <Brain className="w-6 h-6" />
+  const getCategoryIcon = (category: string) => {case 'AI & ML': return <Brain className="w-6 h-6" />
       case 'Blockchain': return <Lock className="w-6 h-6" />
       case 'IoT': return <Wifi className="w-6 h-6" />
       case 'Cybersecurity': return <ShieldIcon className="w-6 h-6" />
@@ -820,11 +742,9 @@ export default function MicroSaasServices() {
       case 'Quantum Security': return <Lock className="w-6 h-6" />
       case 'Space Technology': return <Rocket className="w-6 h-6" />
       case 'Neurotechnology': return <BrainIcon className="w-6 h-6" />
-      default: return <ZapIcon2 className="w-6 h-6" />
-    }
+      default: return <ZapIcon2 className="w-6 h-6" />}
   }
-  const getPricingColor = (pricing: string) => {
-    switch (pricing) {
+  const getPricingColor = (pricing: string) => {switch (pricing) {
       case 'Freemium': return 'text-green-400'
       case 'Premium': return 'text-blue-400'
       case 'Enterprise': return 'text-purple-400'
@@ -838,35 +758,27 @@ export default function MicroSaasServices() {
                            service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
       const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
       const matchesPrice = service.pricing.some(plan => plan.price <= priceRange)
-      return matchesSearch && matchesCategory && matchesPrice;
-    })
+      return matchesSearch && matchesCategory && matchesPrice;})
   const [sortBy, setSortBy] = useState<string>('rating')
   const categories = ['all', ...Array.from(new Set(MICRO_SAAS_SERVICES.map(service => service.category)))]
   const pricingModels = ['all', 'subscription', 'usage', 'one-time', 'enterprise']
-  const filteredServices = useMemo(() => {
-    let filtered = MICRO_SAAS_SERVICES;
+  const filteredServices = useMemo(() => {let filtered = MICRO_SAAS_SERVICES;
     // Filter by search query;
     if (searchQuery) {
       filtered = filtered.filter(service =>
         service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-      )
-    }
+      )}
 
     // Filter by category;
-    if (selectedCategory !== 'all') {
-      filtered = filtered.filter(service => service.category === selectedCategory)
-    }
+    if (selectedCategory !== 'all') {filtered = filtered.filter(service => service.category === selectedCategory)}
 
     // Filter by pricing model;
-    if (selectedPricing !== 'all') {
-      filtered = filtered.filter(service => service.price.pricingModel === selectedPricing)
-    }
+    if (selectedPricing !== 'all') {filtered = filtered.filter(service => service.price.pricingModel === selectedPricing)}
 
     // Sort services;
-    filtered.sort((a, b) => {
-      switch (sortBy) {
+    filtered.sort((a, b) => {switch (sortBy) {
         case 'rating':
           return b.rating - a.rating;
         case 'price':
@@ -876,8 +788,7 @@ export default function MicroSaasServices() {
         case 'name':
           return a.title.localeCompare(b.title)
         default:
-          return 0;
-      }
+          return 0;}
     })
     return filtered;
     const matchesPrice = selectedPriceRange === 'all' || 
@@ -887,8 +798,7 @@ export default function MicroSaasServices() {
       (selectedPriceRange === '1000+' && service.pricing.starter > 1000)
     return matchesSearch && matchesCategory && matchesPrice;
   })
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
+  const getCategoryIcon = (category: string) => {switch (category) {
       case 'AI': return <Brain className="w-6 h-6" />
       case 'IT': return <Database className="w-6 h-6" />
       case 'Development': return <Code className="w-6 h-6" />
@@ -897,11 +807,9 @@ export default function MicroSaasServices() {
       case 'Automation': return <Workflow className="w-6 h-6" />
       case 'Integration': return <LinkIcon className="w-6 h-6" />
       case 'Consulting': return <Users className="w-6 h-6" />
-      default: return <Sparkles className="w-6 h-6" />
-    }
+      default: return <Sparkles className="w-6 h-6" />}
   }
-  const getCategoryColor = (category: string) => {
-    switch (category) {
+  const getCategoryColor = (category: string) => {switch (category) {
       case 'AI': return 'from-purple-500 to-pink-500'
       case 'IT': return 'from-blue-500 to-cyan-500'
       case 'Development': return 'from-green-500 to-emerald-500'
@@ -910,11 +818,10 @@ export default function MicroSaasServices() {
       case 'Automation': return 'from-indigo-500 to-purple-500'
       case 'Integration': return 'from-teal-500 to-blue-500'
       case 'Consulting': return 'from-yellow-500 to-orange-500'
-      default: return 'from-gray-500 to-slate-500'
-    }
+      default: return 'from-gray-500 to-slate-500'}
   }
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-black to-zion-blue-dark relative overflow-hidden">
+<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-black to-zion-blue-dark relative overflow-hidden">
       {/* Animated Background */}
       </div>
 <div className="absolute inset-0 overflow-hidden">
@@ -922,7 +829,7 @@ export default function MicroSaasServices() {
 <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/5 via-zion-purple/5 to-zion-cyan/5 animate-pulse"></div>
 <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(0,229,255,0.1),transparent_50%)] animate-float"></div>
 <div className="absolute top-1/4 right-0 w-96 h-96 bg-[radial-gradient(circle,rgba(168,85,247,0.1),transparent_70%)] animate-float delay-1000"></div>
-      </div>
+</div>
 <div className="relative container mx-auto px-4 py-8">
         {/* Header */}
         </div>
@@ -934,7 +841,7 @@ export default function MicroSaasServices() {
               <Zap className="w-4 h-4" />
               Innovation at Scale;
             </div>
-          </div>
+</div>
           <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan bg-clip-text text-transparent mb-6 animate-neon-pulse">
             Micro SAAS Services;
           </h1>
@@ -965,9 +872,9 @@ export default function MicroSaasServices() {
         </div>
 <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-zion-cyan/5 via-transparent to-zion-purple/5 animate-pulse"></div>
 <div className="absolute top-1/4 left-1/4 w-40 h-40 bg-zion-cyan/10 rounded-full blur-3xl animate-float"></div>
-<div className="absolute bottom-1/4 right-1/4 w-32 h-32 bg-zion-purple/10 rounded-full blur-2xl animate-float" style={{ animationDelay: '2s' }}></div>
-<div className="absolute top-1/2 left-1/2 w-24 h-24 bg-zion-cyan/5 rounded-full blur-xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-      </div>
+<div className="absolute bottom-1/4 right-1/4 w-32 h-32 bg-zion-purple/10 rounded-full blur-2xl animate-float" style={{ animationDelay: '2s'}}></div>
+<div className="absolute top-1/2 left-1/2 w-24 h-24 bg-zion-cyan/5 rounded-full blur-xl animate-pulse" style={{ animationDelay: '1s'}}></div>
+</div>
 <div className="container mx-auto px-4 py-12 relative">
         {/* Header */}
         </div>
@@ -992,24 +899,24 @@ export default function MicroSaasServices() {
               </div>
 <div className="text-3xl font-bold text-zion-cyan mb-2">{microSaasServices.length}+</div>
 <div className="text-zion-slate-light text-sm">Services Available</div>
-            </div>
+</div>
 <div className="text-center">
               </div>
 <div className="text-3xl font-bold text-zion-purple mb-2">15+</div>
 <div className="text-zion-slate-light text-sm">Categories</div>
-            </div>
+</div>
 <div className="text-center">
               </div>
 <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
 <div className="text-zion-slate-light text-sm">Support</div>
-            </div>
+</div>
 <div className="text-center">
               </div>
 <div className="text-3xl font-bold text-blue-400 mb-2">99.9%</div>
 <div className="text-zion-slate-light text-sm">Uptime</div>
-            </div>
-          </div>
-        </div>
+</div>
+</div>
+</div>
 
         {/* Search and Filters */}
         <div className="mb-12 space-y-6">
@@ -1029,8 +936,8 @@ export default function MicroSaasServices() {
 <div className="text-xs text-zion-slate-light bg-zion-cyan/10 px-2 py-1 rounded-full border border-zion-cyan/20">
                 {filteredServices.length} services found;
               </div>
-            </div>
-          </div>
+</div>
+</div>
 <div className="flex flex-wrap justify-center gap-4">
             <select
               value={selectedCategory}
@@ -1060,14 +967,13 @@ export default function MicroSaasServices() {
               onClick={() => {
                 setSearchTerm('')
                 setSelectedCategory('all')
-                setSelectedPricing('all')
-              }}
+                setSelectedPricing('all')}}
               className="px-4 py-3 bg-zion-cyan/10 border border-zion-cyan/20 rounded-lg text-zion-cyan hover:bg-zion-cyan hover:text-black transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25"
             >
               Clear Filters;
             </button>
           </div>
-        </div>
+</div>
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -1085,7 +991,7 @@ export default function MicroSaasServices() {
 <div className="text-zion-cyan">
                       {getCategoryIcon(service.category)}
                     </div>
-                  </div>
+</div>
 <div>
                     <h3 className="text-xl font-bold text-white group-hover:text-zion-cyan transition-colors duration-300">
                       {service.name}
@@ -1112,7 +1018,7 @@ export default function MicroSaasServices() {
 <div className="text-zion-cyan group-hover:text-zion-cyan-light transition-colors">
                       {getCategoryIcon(service.category)}
                     </div>
-                  </div>
+</div>
 <div>
                     <h3 className="text-xl font-bold text-white group-hover:text-zion-cyan-light transition-colors mb-2">
                       {service.name}
@@ -1126,9 +1032,9 @@ export default function MicroSaasServices() {
                         {service.category}
                       </span>
                     </div>
-                  </div>
-                </div>
-              </div>
+</div>
+</div>
+</div>
               
               {/* Description */}
               <p className="text-zion-slate-light mb-6 leading-relaxed">{service.description}</p>
@@ -1140,7 +1046,7 @@ export default function MicroSaasServices() {
                   {formatPrice(service.price, service.pricingModel)}
                 </div>
 <div className="text-sm text-zion-slate-light">{service.userLimit}</div>
-              </div>
+</div>
 
               {/* Features */}
               <div className="mb-6">
@@ -1156,7 +1062,7 @@ export default function MicroSaasServices() {
                     </span>
                   ))}
                 </div>
-              </div>
+</div>
 
               {/* Target Audience */}
               <div className="mb-6">
@@ -1172,7 +1078,7 @@ export default function MicroSaasServices() {
                     </span>
                   ))}
                 </div>
-              </div>
+</div>
 
               {/* CTA */}
               <div className="border-t border-zion-cyan/20 pt-4">
@@ -1189,8 +1095,8 @@ export default function MicroSaasServices() {
                     <ArrowRight className="w-4 h-4" />
                   </a>
                 </div>
-              </div>
-            </div>
+</div>
+</div>
           ))}
         </div>
 
@@ -1334,7 +1240,7 @@ export default function MicroSaasServices() {
                   <p className="text-white font-semibold text-lg mb-2">Address</p>
                   <span className="text-zion-slate-light">364 E Main St STE 1008<br />Middletown DE 19709</span>
                 </div>
-              </div>
+</div>
               
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -1405,7 +1311,7 @@ export default function MicroSaasServices() {
 <div className="absolute top-0 left-0 w-72 h-72 bg-zion-purple/20 rounded-full filter blur-3xl animate-pulse"></div>
 <div className="absolute top-20 right-0 w-96 h-96 bg-zion-cyan/20 rounded-full filter blur-3xl animate-pulse delay-1000"></div>
 <div className="absolute bottom-0 left-1/4 w-80 h-80 bg-zion-purple-light/20 rounded-full filter blur-3xl animate-pulse delay-2000"></div>
-          </div>
+</div>
 <div className="relative container mx-auto px-4 text-center">
             </div>
 <div className="mb-8">
@@ -1446,7 +1352,7 @@ export default function MicroSaasServices() {
                 Contact Sales;
               </Button>
             </div>
-          </div>
+</div>
         </section>
 
         {/* Search and Filter Section */}
@@ -1491,20 +1397,17 @@ export default function MicroSaasServices() {
                   ))}
                 </SelectContent>
               </Select>
-    const icons: { [key: string]: React.ReactNode } = {
-      'AI Services': <Zap className="h-5 w-5" />,
+    const icons: {[key: string]: React.ReactNode} = {'AI Services': <Zap className="h-5 w-5" />,
       'IT Services': <Cloud className="h-5 w-5" />,
       'Micro SAAS': <Code className="h-5 w-5" />,
       'Development': <Code className="h-5 w-5" />,
       'Analytics': <BarChart3 className="h-5 w-5" />,
       'Security': <Shield className="h-5 w-5" />,
       'Automation': <Settings className="h-5 w-5" />,
-      'Integration': <LinkIcon className="h-5 w-5" />
-    }
+      'Integration': <LinkIcon className="h-5 w-5" />}
     return icons[category] || <Code className="h-5 w-5" />
   }, [searchQuery, selectedCategory, selectedPricing, sortBy])
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
+  const getCategoryIcon = (category: string) => {switch (category) {
       case 'AI Services':
         return <Brain className="w-6 h-6" />
       case 'IT Services':
@@ -1514,11 +1417,9 @@ export default function MicroSaasServices() {
       case 'Business Solutions':
         return <Settings className="w-6 h-6" />
       default:
-        return <Zap className="w-6 h-6" />
-    }
+        return <Zap className="w-6 h-6" />}
   }
-  const getPricingModelLabel = (model: string) => {
-    switch (model) {
+  const getPricingModelLabel = (model: string) => {switch (model) {
       case 'subscription':
         return 'Monthly/Yearly'
       case 'usage':
@@ -1528,11 +1429,9 @@ export default function MicroSaasServices() {
       case 'enterprise':
         return 'Custom pricing'
       default:
-        return model;
-    }
+        return model;}
   }
-  const getStatusBadge = (status: string) => {
-    switch (status) {
+  const getStatusBadge = (status: string) => {switch (status) {
       case 'live':
         return <Badge className="bg-green-500 hover:bg-green-600">Live</Badge>
       case 'beta':
@@ -1540,8 +1439,7 @@ export default function MicroSaasServices() {
       case 'coming-soon':
         return <Badge className="bg-yellow-500 hover:bg-yellow-600">Coming Soon</Badge>
       default:
-        return null;
-    }
+        return null;}
   }
   return (
     <></><SEO
@@ -1560,8 +1458,7 @@ export default function MicroSaasServices() {
           <$2 />
             className="absolute inset-0 opacity-30"
             style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-            }}
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`}}
           ></div>
 <div className="container mx-auto px-4 relative z-10">
             </div>
@@ -1588,8 +1485,8 @@ export default function MicroSaasServices() {
                   Contact Sales;
                 </Button>
               </div>
-            </div>
-          </div>
+</div>
+</div>
         </section>
 
         {/* Quick Stats */}
@@ -1603,24 +1500,24 @@ export default function MicroSaasServices() {
                 </div>
 <div className="text-3xl font-bold text-zion-cyan mb-2">25+</div>
 <div className="text-zion-slate-light">Micro SAAS Solutions</div>
-              </div>
+</div>
 <div>
                 </div>
 <div className="text-3xl font-bold text-zion-purple-light mb-2">500+</div>
 <div className="text-zion-slate-light">Happy Clients</div>
-              </div>
+</div>
 <div>
                 </div>
 <div className="text-3xl font-bold text-zion-cyan mb-2">99.9%</div>
 <div className="text-zion-slate-light">Uptime Guarantee</div>
-              </div>
+</div>
 <div>
                 </div>
 <div className="text-3xl font-bold text-zion-purple-light mb-2">24/7</div>
 <div className="text-zion-slate-light">Support Available</div>
-              </div>
-            </div>
-          </div>
+</div>
+</div>
+</div>
         </section>
 
         {/* Featured Services */}
@@ -1662,7 +1559,7 @@ export default function MicroSaasServices() {
 <div className="text-sm text-muted-foreground">
                         Market average: {service.marketPrice}
                       </div>
-                    </div>
+</div>
 <div className="space-y-2 mb-4">
                       <h4 className="font-semibold text-sm">Key Benefits:</h4>
                       <ul className="space-y-1">
@@ -1688,7 +1585,7 @@ export default function MicroSaasServices() {
                 </Card>
               ))}
             </div>
-          </div>
+</div>
         </section>
 
         {/* Search and Filters */}
@@ -1726,24 +1623,24 @@ export default function MicroSaasServices() {
                 </div>
 <div className="text-3xl md:text-4xl font-bold text-zion-cyan">{MICRO_SAAS_SERVICES.length}+</div>
 <div className="text-zion-slate-light">Services Available</div>
-              </div>
+</div>
 <div className="space-y-2">
                 </div>
 <div className="text-3xl md:text-4xl font-bold text-zion-purple-light">99.9%</div>
 <div className="text-zion-slate-light">Uptime Guarantee</div>
-              </div>
+</div>
 <div className="space-y-2">
                 </div>
 <div className="text-3xl md:text-4xl font-bold text-zion-cyan">24/7</div>
 <div className="text-zion-slate-light">Support Available</div>
-              </div>
+</div>
 <div className="space-y-2">
                 </div>
 <div className="text-3xl md:text-4xl font-bold text-zion-purple-light">1000+</div>
 <div className="text-zion-slate-light">Happy Customers</div>
-              </div>
-            </div>
-          </div>
+</div>
+</div>
+</div>
         </section>
 
         {/* Filters Section */}
@@ -1801,7 +1698,7 @@ export default function MicroSaasServices() {
                 </SelectContent>
               </Select>
             </div>
-          </div>
+</div>
         </section>
 <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark relative overflow-hidden">
       <FuturisticAnimatedBackground />
@@ -1809,31 +1706,31 @@ export default function MicroSaasServices() {
       {/* Header Section */}
       <motion.div;
         className="relative z-10 text-center py-20 px-4"
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
+        initial={{ opacity: 0, y: -50}}
+        animate={{ opacity: 1, y: 0}}
+        transition={{ duration: 0.8}}
       >
         <motion.h1;
           className="text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan bg-clip-text text-transparent"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          initial={{ opacity: 0, scale: 0.8}}
+          animate={{ opacity: 1, scale: 1}}
+          transition={{ duration: 0.8, delay: 0.2}}
         >
           Micro SAAS Solutions;
         </motion.h1>
         <motion.p;
           className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto leading-relaxed"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial={{ opacity: 0, y: 20}}
+          animate={{ opacity: 1, y: 0}}
+          transition={{ duration: 0.8, delay: 0.4}}
         >
           Discover innovative, intelligent, and diversified micro SAAS services designed to transform your business operations and drive growth;
         </motion.p>
         <motion.div;
           className="flex flex-wrap justify-center gap-4 text-zion-cyan"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          initial={{ opacity: 0}}
+          animate={{ opacity: 1}}
+          transition={{ duration: 0.8, delay: 0.6}}
         >
           </div>
 <div className="flex items-center gap-2">
@@ -1854,9 +1751,9 @@ export default function MicroSaasServices() {
       {/* Search and Filter Section */}
       <motion.div;
         className="relative z-10 max-w-6xl mx-auto px-4 mb-12"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.8 }}
+        initial={{ opacity: 0, y: 20}}
+        animate={{ opacity: 1, y: 0}}
+        transition={{ duration: 0.8, delay: 0.8}}
       >
         <Card className="bg-zion-blue-dark/50 backdrop-blur-lg border-zion-blue-light/30 p-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -1907,7 +1804,7 @@ export default function MicroSaasServices() {
                 className="w-full h-2 bg-zion-slate-dark rounded-lg appearance-none cursor-pointer slider"
               />
             </div>
-          </div>
+</div>
         </Card>
       </motion.div>
 
@@ -1927,7 +1824,7 @@ export default function MicroSaasServices() {
               <motion.div;
                 key={service.id}
                 variants={itemVariants}
-                whileHover={{ y: -10, scale: 1.02 }}
+                whileHover={{ y: -10, scale: 1.02}}
                 className="group"
               >
                 <Card className="bg-zion-blue-dark/30 backdrop-blur-lg border-zion-blue-light/20 hover:border-zion-cyan/50 transition-all duration-300 h-full overflow-hidden">
@@ -1974,8 +1871,8 @@ export default function MicroSaasServices() {
 <div className="text-xs text-zion-slate-light">
                         {service.pricing.length} pricing plans available;
                       </div>
-                    </div>
-                  </div>
+</div>
+</div>
 
                   {/* Features */}
                   <div className="p-6">
@@ -2010,7 +1907,7 @@ export default function MicroSaasServices() {
 <div className="text-sm text-zion-slate-light">
                         {service.benefits[0]} • {service.benefits[1]}
                       </div>
-                    </div>
+</div>
 
                     {/* Tags */}
                     <div className="flex flex-wrap gap-2 mb-6">
@@ -2042,7 +1939,7 @@ export default function MicroSaasServices() {
                         Call Now;
                       </Button>
                     </div>
-                  </div>
+</div>
                 </Card>
               </motion.div>
             )
@@ -2053,8 +1950,8 @@ export default function MicroSaasServices() {
         {filteredServices.length === 0 && (
           <motion.div;
             className="text-center py-20"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ opacity: 0}}
+            animate={{ opacity: 1}}
           >
             <div className="text-zion-slate-light text-lg mb-4">
               No services found matching your criteria;
@@ -2063,8 +1960,7 @@ export default function MicroSaasServices() {
               onClick={() => {
                 setSearchTerm('')
                 setSelectedCategory('all')
-                setPriceRange(10000)
-              }}
+                setPriceRange(10000)}}
               className="bg-zion-cyan hover:bg-zion-cyan-light text-white"
             >
               Clear Filters;
@@ -2076,9 +1972,9 @@ export default function MicroSaasServices() {
       {/* Contact CTA Section */}
       <motion.div;
         className="relative z-10 max-w-4xl mx-auto px-4 pb-20"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 1.2 }}
+        initial={{ opacity: 0, y: 20}}
+        animate={{ opacity: 1, y: 0}}
+        transition={{ duration: 0.8, delay: 1.2}}
       >
         <Card className="bg-gradient-to-r from-zion-blue-dark/50 to-zion-purple-dark/50 backdrop-blur-lg border-zion-cyan/30 p-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
@@ -2110,9 +2006,7 @@ export default function MicroSaasServices() {
           </div>
         </section>
       </main>
-
-    </>
-  )
+)
 }
 export default MicroSaasServices;
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -2152,7 +2046,7 @@ export default MicroSaasServices;
                 Schedule Demo;
               </Button>
             </div>
-          </div>
+</div>
         </section>
       </main>
 
@@ -2160,8 +2054,7 @@ export default MicroSaasServices;
     </>
   )
 }
-import { 
-  Bot, 
+import {Bot, 
   Shield, 
   BarChart3, 
   Zap, 
@@ -2173,14 +2066,12 @@ import {
   ExternalLink,
   Phone,
   Mail,
-  MapPin;
-} from 'lucide-react'
+  MapPin;} from 'lucide-react'
 import Cpu from 'lucide-react/dist/esm/icons/cpu'
 import Target from 'lucide-react/dist/esm/icons/target'
 import Palette from 'lucide-react/dist/esm/icons/palette'
-import { SEO } from '@/components/SEO'
-interface MicroSaasService {
-  id: string;
+import {SEO} from '@/components/SEO'
+interface MicroSaasService {id: string;
   title: string;
   description: string;
   category: string;
@@ -2192,12 +2083,10 @@ interface MicroSaasService {
   icon: React.ReactNode;
   tags: string[]
   rating: number;
-  reviewCount: number;
-}
+  reviewCount: number;}
 
 const MICRO_SAAS_SERVICES: MicroSaasService[] = [
-  {
-    id: "ai-content-generator",
+  {id: "ai-content-generator",
     title: "AI Content Generator Pro",
     description: "Advanced AI-powered content creation tool for blogs, social media, and marketing materials with SEO optimization.",
     category: "Content Creation",
@@ -2209,10 +2098,8 @@ const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     icon: <Bot className="h-8 w-8 text-zion-cyan" />,
     tags: ["AI", "Content", "Marketing", "SEO"],
     rating: 4.8,
-    reviewCount: 156;
-  },
-  {
-    id: "cybersecurity-monitor",
+    reviewCount: 156;},
+  {id: "cybersecurity-monitor",
     title: "Real-time Cybersecurity Monitor",
     description: "24/7 threat detection and response system with automated incident handling and compliance reporting.",
     category: "Security",
@@ -2224,10 +2111,8 @@ const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     icon: <Shield className="h-8 w-8 text-zion-purple" />,
     tags: ["Security", "Compliance", "Monitoring", "Automation"],
     rating: 4.9,
-    reviewCount: 89;
-  },
-  {
-    id: "data-analytics-platform",
+    reviewCount: 89;},
+  {id: "data-analytics-platform",
     title: "Business Intelligence Analytics",
     description: "Comprehensive data analytics platform with AI-powered insights and customizable dashboards for data-driven decisions.",
     category: "Analytics",
@@ -2239,10 +2124,8 @@ const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     icon: <BarChart3 className="h-8 w-8 text-zion-cyan" />,
     tags: ["Analytics", "BI", "AI", "Insights"],
     rating: 4.7,
-    reviewCount: 203;
-  },
-  {
-    id: "cloud-cost-optimizer",
+    reviewCount: 203;},
+  {id: "cloud-cost-optimizer",
     title: "Cloud Cost Optimization Suite",
     description: "Intelligent cloud resource management tool that reduces costs by up to 40% through automated optimization.",
     category: "Cloud Management",
@@ -2254,10 +2137,8 @@ const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     icon: <Shield className="h-8 w-8 text-zion-purple" />,
     tags: ["Cloud", "Cost", "Optimization", "AWS"],
     rating: 4.6,
-    reviewCount: 134;
-  },
-  {
-    id: "ai-customer-support",
+    reviewCount: 134;},
+  {id: "ai-customer-support",
     title: "AI Customer Support Assistant",
     description: "Intelligent chatbot system that handles customer inquiries 24/7 with human-like responses and seamless escalation.",
     category: "Customer Support",
@@ -2269,10 +2150,8 @@ const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     icon: <Bot className="h-8 w-8 text-zion-cyan" />,
     tags: ["AI", "Support", "Chatbot", "Customer Service"],
     rating: 4.8,
-    reviewCount: 178;
-  },
-  {
-    id: "code-quality-analyzer",
+    reviewCount: 178;},
+  {id: "code-quality-analyzer",
     title: "Code Quality & Security Analyzer",
     description: "Advanced static code analysis tool that detects bugs, security vulnerabilities, and code quality issues.",
     category: "Development",
@@ -2284,10 +2163,8 @@ const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     icon: <Shield className="h-8 w-8 text-zion-purple" />,
     tags: ["Development", "Code Quality", "Security", "Analysis"],
     rating: 4.7,
-    reviewCount: 95;
-  },
-  {
-    id: "api-gateway-manager",
+    reviewCount: 95;},
+  {id: "api-gateway-manager",
     title: "API Gateway & Management Platform",
     description: "Enterprise-grade API management solution with rate limiting, authentication, monitoring, and analytics.",
     category: "API Management",
@@ -2299,10 +2176,8 @@ const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     icon: <Shield className="h-8 w-8 text-zion-purple" />,
     tags: ["API", "Management", "Security", "Monitoring"],
     rating: 4.8,
-    reviewCount: 112;
-  },
-  {
-    id: "workflow-automation",
+    reviewCount: 112;},
+  {id: "workflow-automation",
     title: "Workflow Automation Platform",
     description: "No-code workflow automation tool that streamlines business processes and eliminates manual tasks.",
     category: "Automation",
@@ -2314,10 +2189,8 @@ const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     icon: <Zap className="h-8 w-8 text-zion-purple" />,
     tags: ["Automation", "Workflow", "No-code", "Integration"],
     rating: 4.6,
-    reviewCount: 167;
-  },
-  {
-    id: "performance-monitor",
+    reviewCount: 167;},
+  {id: "performance-monitor",
     title: "Application Performance Monitor",
     description: "Real-time performance monitoring and alerting system for web applications and microservices.",
     category: "Monitoring",
@@ -2329,10 +2202,8 @@ const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     icon: <Cpu className="h-8 w-8 text-zion-cyan" />,
     tags: ["Monitoring", "Performance", "APM", "Alerting"],
     rating: 4.7,
-    reviewCount: 143;
-  },
-  {
-    id: "data-backup-recovery",
+    reviewCount: 143;},
+  {id: "data-backup-recovery",
     title: "Automated Data Backup & Recovery",
     description: "Enterprise-grade backup solution with automated scheduling, encryption, and instant recovery capabilities.",
     category: "Data Protection",
@@ -2344,10 +2215,8 @@ const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     icon: <Shield className="h-8 w-8 text-zion-purple" />,
     tags: ["Backup", "Recovery", "Security", "Compliance"],
     rating: 4.9,
-    reviewCount: 201;
-  },
-  {
-    id: "mobile-app-analytics",
+    reviewCount: 201;},
+  {id: "mobile-app-analytics",
     title: "Mobile App Analytics & Insights",
     description: "Comprehensive mobile app analytics platform with user behavior tracking and performance optimization.",
     category: "Mobile Analytics",
@@ -2359,10 +2228,8 @@ const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     icon: <Bot className="h-8 w-8 text-zion-cyan" />,
     tags: ["Mobile", "Analytics", "User Behavior", "Performance"],
     rating: 4.6,
-    reviewCount: 156;
-  },
-  {
-    id: "seo-optimization-tool",
+    reviewCount: 156;},
+  {id: "seo-optimization-tool",
     title: "AI-Powered SEO Optimization",
     description: "Intelligent SEO tool that analyzes content, suggests improvements, and tracks search rankings automatically.",
     category: "SEO",
@@ -2374,21 +2241,19 @@ const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     icon: <Target className="h-8 w-8 text-zion-purple" />,
     tags: ["SEO", "AI", "Content", "Analytics"],
     rating: 4.8,
-    reviewCount: 189;
-  }
+    reviewCount: 189;}
 ]
 const categories = [
-  { name: "All Services", value: "all", icon: <Shield className="h-4 w-4" /> },
-  { name: "AI & Machine Learning", value: "ai", icon: <Bot className="h-4 w-4" /> },
-  { name: "Security", value: "security", icon: <Shield className="h-4 w-4" /> },
-  { name: "Analytics", value: "analytics", icon: <BarChart3 className="h-4 w-4" /> },
-  { name: "Cloud", value: "cloud", icon: <Shield className="h-4 w-4" /> },
-  { name: "Development", value: "development", icon: <Shield className="h-4 w-4" /> },
-  { name: "Automation", value: "automation", icon: <Zap className="h-4 w-4" /> },
-  { name: "Monitoring", value: "monitoring", icon: <Cpu className="h-4 w-4" /> }
+  {name: "All Services", value: "all", icon: <Shield className="h-4 w-4" />},
+  {name: "AI & Machine Learning", value: "ai", icon: <Bot className="h-4 w-4" />},
+  {name: "Security", value: "security", icon: <Shield className="h-4 w-4" />},
+  {name: "Analytics", value: "analytics", icon: <BarChart3 className="h-4 w-4" />},
+  {name: "Cloud", value: "cloud", icon: <Shield className="h-4 w-4" />},
+  {name: "Development", value: "development", icon: <Shield className="h-4 w-4" />},
+  {name: "Automation", value: "automation", icon: <Zap className="h-4 w-4" />},
+  {name: "Monitoring", value: "monitoring", icon: <Cpu className="h-4 w-4" />}
 ]
-export default function MicroSaasServices() {
-  const [selectedCategory, setSelectedCategory] = useState("all")
+export default function MicroSaasServices() {const [selectedCategory, setSelectedCategory] = useState("all")
   const [searchQuery, setSearchQuery] = useState("")
   const filteredServices = MICRO_SAAS_SERVICES.filter(service => {
     const matchesCategory = selectedCategory === "all" || 
@@ -2397,22 +2262,18 @@ export default function MicroSaasServices() {
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-    return matchesCategory && matchesSearch;
-  })
-import React, { useState } from 'react'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { 
-  MICRO_SAAS_SERVICES, 
+    return matchesCategory && matchesSearch;})
+import React, {useState} from 'react'
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card"
+import {Button} from "@/components/ui/button"
+import {Badge} from "@/components/ui/badge"
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs"
+import {MICRO_SAAS_SERVICES, 
   getServicesByCategory, 
   getFeaturedServices, 
   getNewServices,
-  type MicroSaasService;
-} from "@/data/microSaasServices"
-import { 
-  Star, 
+  type MicroSaasService;} from "@/data/microSaasServices"
+import {Star, 
   ExternalLink, 
   Play, 
   Shield, 
@@ -2426,37 +2287,30 @@ import {
   CheckCircle,
   ArrowRight,
   Globe,
-  Lock;
-} from "lucide-react"
-import { SEO } from "@/components/SEO"
-const categoryIcons = {
-  'AI': <Brain className="h-6 w-6" />,
+  Lock;} from "lucide-react"
+import {SEO} from "@/components/SEO"
+const categoryIcons = {'AI': <Brain className="h-6 w-6" />,
   'IT': <Building className="h-6 w-6" />,
   'Development': <Code className="h-6 w-6" />,
   'Analytics': <TrendingUp className="h-6 w-6" />,
   'Security': <Shield className="h-6 w-6" />,
   'Automation': <Zap className="h-6 w-6" />,
   'Integration': <Globe className="h-6 w-6" />,
-  'Consulting': <Users className="h-6 w-6" />
-}
-const statusColors = {
-  'Live': 'bg-green-500',
+  'Consulting': <Users className="h-6 w-6" />}
+const statusColors = {'Live': 'bg-green-500',
   'Beta': 'bg-yellow-500',
-  'Coming Soon': 'bg-blue-500'
-}
-export default function MicroSaasServices() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all')
+  'Coming Soon': 'bg-blue-500'}
+export default function MicroSaasServices() {const [selectedCategory, setSelectedCategory] = useState<string>('all')
   const [searchQuery, setSearchQuery] = useState('')
   const filteredServices = MICRO_SAAS_SERVICES.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.subcategory.toLowerCase().includes(searchQuery.toLowerCase())
-    return matchesCategory && matchesSearch;
-  })
+    return matchesCategory && matchesSearch;})
   const categories = ['all', ...Array.from(new Set(MICRO_SAAS_SERVICES.map(s => s.category)))]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-slate to-zion-blue-dark">
+<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-slate to-zion-blue-dark">
       <SEO
         title="Micro SAAS Services - Zion Tech Group" 
         description="Discover our comprehensive suite of micro SAAS services including AI solutions, IT services, development tools, and enterprise solutions."
@@ -2465,22 +2319,19 @@ export default function MicroSaasServices() {
       />
 
       {/* Hero Section */}
-import React, { useState } from 'react'
-import { DynamicListingPage } from "@/components/DynamicListingPage"
-import { TrustedBySection } from "@/components/TrustedBySection"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { 
-  MICRO_SAAS_SERVICES, 
+import React, {useState} from 'react'
+import {DynamicListingPage} from "@/components/DynamicListingPage"
+import {TrustedBySection} from "@/components/TrustedBySection"
+import {Button} from "@/components/ui/button"
+import {Badge} from "@/components/ui/badge"
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card"
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs"
+import {MICRO_SAAS_SERVICES, 
   MICRO_SAAS_CATEGORIES, 
   MICRO_SAAS_SUBCATEGORIES,
   PRICING_TIERS,
-  CONTACT_INFO;
-} from "@/data/microSaasServices"
-import { 
-  Brain, 
+  CONTACT_INFO;} from "@/data/microSaasServices"
+import {Brain, 
   Cloud, 
   Shield, 
   BarChart3, 
@@ -2499,40 +2350,29 @@ import {
   Zap,
   Users,
   Lock,
-  Clock;
-} from "lucide-react"
-import { Link } from "react-router-dom"
-const categoryIcons = {
-  'AI Business Solutions': Brain,
+  Clock;} from "lucide-react"
+import {Link} from "react-router-dom"
+const categoryIcons = {'AI Business Solutions': Brain,
   'IT Infrastructure': Cloud,
   'Data Analytics': BarChart3,
   'AI Development': Code,
   'FinTech': DollarSign,
   'HealthTech': Heart,
   'E-commerce': ShoppingCart,
-  'EdTech': GraduationCap;
-}
+  'EdTech': GraduationCap;}
 const benefits = [
-  {
-    icon: <Zap className="h-6 w-6" />,
+  {icon: <Zap className="h-6 w-6" />,
     title: "Immediate Deployment",
-    description: "All services are ready for immediate deployment with no setup delays"
-  },
-  {
-    icon: <Shield className="h-6 w-6" />,
+    description: "All services are ready for immediate deployment with no setup delays"},
+  {icon: <Shield className="h-6 w-6" />,
     title: "Enterprise Security",
-    description: "Bank-level security with SOC 2 compliance and 24/7 monitoring"
-  },
-  {
-    icon: <Users className="h-6 w-6" />,
+    description: "Bank-level security with SOC 2 compliance and 24/7 monitoring"},
+  {icon: <Users className="h-6 w-6" />,
     title: "Dedicated Support",
-    description: "24/7 technical support with dedicated account managers"
-  },
-  {
-    icon: <TrendingUp className="h-6 w-6" />,
+    description: "24/7 technical support with dedicated account managers"},
+  {icon: <TrendingUp className="h-6 w-6" />,
     title: "Proven ROI",
-    description: "Average 300% ROI within 6 months of implementation"
-  }
+    description: "Average 300% ROI within 6 months of implementation"}
 ]
 const features = [
   "AI-Powered Automation",
@@ -2544,8 +2384,7 @@ const features = [
   "White-label Solutions",
   "Comprehensive Documentation"
 ]
-export default function MicroSaasServices() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all')
+export default function MicroSaasServices() {const [selectedCategory, setSelectedCategory] = useState<string>('all')
   const filteredServices = selectedCategory === 'all' 
     ? MICRO_SAAS_SERVICES;
     : MICRO_SAAS_SERVICES.filter(service => 
@@ -2597,7 +2436,7 @@ export default function MicroSaasServices() {
               Schedule Consultation;
             </Button>
           </div>
-        </div>
+</div>
         
         {/* Animated background elements */}
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
@@ -2605,8 +2444,8 @@ export default function MicroSaasServices() {
 <div className="absolute top-20 left-10 w-32 h-32 bg-zion-cyan/20 rounded-full animate-pulse"></div>
 <div className="absolute top-40 right-20 w-24 h-24 bg-zion-purple/20 rounded-full animate-pulse delay-1000"></div>
 <div className="absolute bottom-20 left-1/4 w-20 h-20 bg-zion-blue/20 rounded-full animate-pulse delay-2000"></div>
-        </div>
-      </div>
+</div>
+</div>
 
       {/* Stats Section */}
       <div className="py-16 bg-white/5 backdrop-blur-sm">
@@ -2621,30 +2460,30 @@ export default function MicroSaasServices() {
                 {MICRO_SAAS_SERVICES.length}+
               </div>
 <div className="text-zion-slate-light">Services Available</div>
-            </div>
+</div>
 <div>
               </div>
 <div className="text-3xl md:text-4xl font-bold text-zion-purple mb-2">
                 99.9%
               </div>
 <div className="text-zion-slate-light">Uptime Guarantee</div>
-            </div>
+</div>
 <div>
               </div>
 <div className="text-3xl md:text-4xl font-bold text-zion-blue mb-2">
                 24/7;
               </div>
 <div className="text-zion-slate-light">Support Available</div>
-            </div>
+</div>
 <div>
               </div>
 <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">
                 500+
               </div>
 <div className="text-zion-slate-light">Integrations</div>
-            </div>
-          </div>
-        </div>
+</div>
+</div>
+</div>
       </div>
 
       {/* Main Content */}
@@ -2675,8 +2514,8 @@ export default function MicroSaasServices() {
                 </Button>
               ))}
             </div>
-          </div>
-        </div>
+</div>
+</div>
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -2689,7 +2528,7 @@ export default function MicroSaasServices() {
           <div className="text-center py-16">
             </div>
 <div className="text-zion-slate-light text-xl mb-4">No services found matching your criteria</div>
-            <Button onClick={() => { setSelectedCategory('all'); setSearchQuery(''); }}>
+            <Button onClick={() => { setSelectedCategory('all'); setSearchQuery('');}}>
               Clear Filters;
             </Button>
           </div>
@@ -2714,8 +2553,8 @@ export default function MicroSaasServices() {
               <FeaturedServiceCard key={service.id} service={service} />
             ))}
           </div>
-        </div>
-      </div>
+</div>
+</div>
 
       {/* New Services Section */}
       <div className="py-16 bg-gradient-to-r from-zion-blue-dark to-zion-slate">
@@ -2735,8 +2574,8 @@ export default function MicroSaasServices() {
               <NewServiceCard key={service.id} service={service} />
             ))}
           </div>
-        </div>
-      </div>
+</div>
+</div>
 
       {/* CTA Section */}
       <div className="py-20 bg-gradient-to-r from-zion-purple to-zion-blue">
@@ -2759,8 +2598,8 @@ export default function MicroSaasServices() {
               Contact Sales;
             </Button>
           </div>
-        </div>
-      </div>
+</div>
+</div>
       {/* Pricing Tiers */}
       <section className="py-20 bg-gray-50">
         </section>
@@ -2815,7 +2654,7 @@ export default function MicroSaasServices() {
               </Card>
             ))}
           </div>
-        </div>
+</div>
       </section>
 
       {/* Services by Category */}
@@ -2852,11 +2691,9 @@ export default function MicroSaasServices() {
                   <Card key={service.id} className="bg-zion-blue-dark border-zion-blue-light text-white hover:border-zion-purple/50 transition-all duration-300 hover:scale-105">
                     </div>
 <div className="relative">
-                      <img
-                        src={service.images[0]} 
+                      <img src={service.images[0]} 
                         alt={service.title}
-                        className="w-full h-48 object-cover rounded-t-lg"
-                      />
+                        className="w-full h-48 object-cover rounded-t-lg" />
                       <Badge className="absolute top-4 right-4 bg-zion-purple">
                         {service.category}
                       </Badge>
@@ -2909,11 +2746,9 @@ export default function MicroSaasServices() {
                   >
                     </div>
 <div className="relative overflow-hidden rounded-t-lg">
-                      <img
-                        src={service.image} 
+                      <img src={service.image} 
                         alt={service.title}
-                        className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
+                        className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" />
                       </div>
 <div className="absolute top-4 right-4 flex gap-2">
                         {getStatusBadge(service.status)}
@@ -2928,8 +2763,8 @@ export default function MicroSaasServices() {
                           <span className="font-semibold">{service.rating}</span>
                           <span className="text-sm text-gray-300">({service.reviewCount})</span>
                         </div>
-                      </div>
-                    </div>
+</div>
+</div>
                     
                     <CardHeader className="pb-3">
                       <div className="flex items-start justify-between">
@@ -2940,7 +2775,7 @@ export default function MicroSaasServices() {
                             {service.title}
                           </CardTitle>
                         </div>
-                      </div>
+</div>
                       <CardDescription className="text-zion-slate-light leading-relaxed">
                         {service.description}
                       </CardDescription>
@@ -2963,7 +2798,7 @@ export default function MicroSaasServices() {
 <div className="text-sm text-zion-slate-light">
                           {service.price.yearly && `${service.price.currency}${service.price.yearly}/year`}
                         </div>
-                      </div>
+</div>
 
                       {/* Key Features */}
                       <div>
@@ -2982,7 +2817,7 @@ export default function MicroSaasServices() {
                             </div>
                           ))}
                         </div>
-                      </div>
+</div>
 
                       {/* Tags */}
                       <div className="flex flex-wrap gap-2">
@@ -3025,8 +2860,8 @@ export default function MicroSaasServices() {
                               {service.contact.email}
                             </a>
                           </div>
-                        </div>
-                      </div>
+</div>
+</div>
                     </CardContent>
                   </Card>
                 ))}
@@ -3057,7 +2892,7 @@ export default function MicroSaasServices() {
                     <p className="font-medium">Phone</p>
                     <p className="text-gray-600">{CONTACT_INFO.mobile}</p>
                   </div>
-                </div>
+</div>
 <div className="flex items-center">
                   <Mail className="h-5 w-5 text-zion-purple mr-3" />
                   </div>
@@ -3065,7 +2900,7 @@ export default function MicroSaasServices() {
                     <p className="font-medium">Email</p>
                     <p className="text-gray-600">{CONTACT_INFO.email}</p>
                   </div>
-                </div>
+</div>
 <div className="flex items-center">
                   <MapPin className="h-5 w-5 text-zion-purple mr-3" />
                   </div>
@@ -3073,7 +2908,7 @@ export default function MicroSaasServices() {
                     <p className="font-medium">Address</p>
                     <p className="text-gray-600">{CONTACT_INFO.address}</p>
                   </div>
-                </div>
+</div>
 <div className="flex items-center">
                   <Globe className="h-5 w-5 text-zion-purple mr-3" />
                   </div>
@@ -3083,9 +2918,9 @@ export default function MicroSaasServices() {
                       {CONTACT_INFO.website}
                     </a>
                   </div>
-                </div>
-              </div>
-            </div>
+</div>
+</div>
+</div>
 <div>
               <h3 className="text-2xl font-bold text-zion-blue mb-6">Quick Actions</h3>
               </div>
@@ -3116,22 +2951,21 @@ export default function MicroSaasServices() {
                   <li>• Free Migration Support</li>
                 </ul>
               </div>
-            </div>
-          </div>
-        </div>
+</div>
+</div>
+</div>
       </section>
 
       {/* Trusted By Section */}
       <TrustedBySection />
     </div>
-  )
+)
 }
     </div>
-  )
+)
 }
 
-function ServiceCard({ service }: { service: MicroSaasService }) {
-  return (
+function ServiceCard({service}: {service: MicroSaasService}) {return (
     <Card className="group bg-white/5 backdrop-blur-sm border-zion-blue-light/20 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 overflow-hidden">
       <CardHeader className="pb-4">
         <div className="flex justify-between items-start mb-4">
@@ -3147,17 +2981,11 @@ function ServiceCard({ service }: { service: MicroSaasService }) {
               <Badge variant="outline" className="border-zion-purple text-zion-purple">
                 <Zap className="h-3 w-3 mr-1" />
                 White Label;
-function ServiceCard({ service }: { service: MicroSaasService }) {
-  const getPricingDisplay = (service: MicroSaasService) => {
+function ServiceCard({ service}: {service: MicroSaasService}) {const getPricingDisplay = (service: MicroSaasService) => {
     if (service.pricingModel === 'subscription') {
       return `$${service.monthlyPrice}/month`
-    } else if (service.pricingModel === 'one-time') {
-      return `$${service.price.toLocaleString()}`
-    } else if (service.pricingModel === 'usage-based') {
-      return 'Usage-based'
-    } else {
-      return 'Contact us'
-    }
+    } else if (service.pricingModel === 'one-time') {return `$${service.price.toLocaleString()}`
+    } else if (service.pricingModel === 'usage-based') {return 'Usage-based'} else {return 'Contact us'}
   }
   return (
     <Card className="group hover:shadow-xl transition-all duration-300 border-zion-blue-light/20 hover:border-zion-purple/50">
@@ -3183,7 +3011,7 @@ function ServiceCard({ service }: { service: MicroSaasService }) {
               </Badge>
             )}
           </div>
-        </div>
+</div>
         <CardTitle className="text-lg group-hover:text-zion-purple transition-colors">
           {service.title}
         </CardTitle>
@@ -3200,7 +3028,7 @@ function ServiceCard({ service }: { service: MicroSaasService }) {
 <div className="text-sm text-muted-foreground">
             Market: {service.marketPrice}
           </div>
-        </div>
+</div>
 <div className="space-y-2 mb-4">
           <h4 className="font-semibold text-sm">Key Features:</h4>
           <ul className="space-y-1">
@@ -3258,7 +3086,7 @@ function ServiceCard({ service }: { service: MicroSaasService }) {
                 Contact Sales Team;
               </Button>
             </div>
-          </div>
+</div>
         </section>
       </main>
       
@@ -3266,4 +3094,39 @@ function ServiceCard({ service }: { service: MicroSaasService }) {
     </>
   )
 }
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></Link></Link></section></section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></span></Link></Link></section></section>

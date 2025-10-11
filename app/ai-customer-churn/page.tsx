@@ -1,35 +1,27 @@
 'use client'
 import React from 'react';
-import {  Helmet  } from 'react-helmet-async';
+import {Helmet} from 'react-helmet-async';
   );
 };
 
-const AiCustomerChurnPage: React.FC = () => {
-  const features = [
+const AiCustomerChurnPage: React.FC = () => {const features = [
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart automation', 'Predictive analytics', 'Intelligent insights', 'Automated processes']
-    },
-    {
-      icon: BarChart,
+      benefits: ['Smart automation', 'Predictive analytics', 'Intelligent insights', 'Automated processes']},
+    {icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
-benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics'],
-    },
-    {
-      icon: Target,
+benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics'],},
+    {icon: Target,
       title: 'Precision Targeting',
       description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics'],
-    },
-    {
-      icon: TrendingUp,
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics'],},
+    {icon: TrendingUp,
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'],
-    }
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'],}
   ]
 
   const benefits = [
@@ -50,11 +42,12 @@ benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Perf
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-sky-900 to-slate-900">
         {/* Hero Section */}
-        </div><section className="py-20 px-4 relative overflow-hidden">
+        </div>
+<section className="py-20 px-4 relative overflow-hidden">
           </section>
 <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
           </div>
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+<div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s'}} />
           </div>
 <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md: text-7xl font-bold text-white mb-6">
@@ -72,14 +65,14 @@ benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Perf
                 Learn More
               </button>
             </div>
-          </div>
+</div>
         </section>
 
         {/* Features Section */}
         <section className="py-20 px-4">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300">Powerful AI capabilities for your business</p>
@@ -104,19 +97,19 @@ benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Perf
                 </div>
               ))}
             </div>
-          </div>
+</div>
         </section>
 
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Ai Customer Churn ? </h2>
               <p className="text-xl text-gray-300">Transform your business with intelligent automation</p>
             </div>
-<div className="grid grid-cols-1 md : grid-cols-2 lg:grid-cols-3 gap-8">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 </div>
 <div key={index} className="flex items-start space-x-4">
@@ -128,7 +121,7 @@ benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Perf
                 </div>
               ))}
             </div>
-          </div>
+</div>
         </section>
 
         {/* CTA Section */}
@@ -150,11 +143,10 @@ benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Perf
                 Contact Sales
               </button>
             </div>
-          </div>
+</div>
         </section>
-      </div>
-    </>
-  )
+</div>
+)
 }
 
       <Navigation />
@@ -164,7 +156,7 @@ benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Perf
         </main><section className="relative py-20 px-4 sm: px-6 lg:px-8">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Page Title
@@ -181,15 +173,15 @@ benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Perf
                   Learn More
                 </button>
               </div>
-            </div>
-          </div>
+</div>
+</div>
         </section>
 
         {/* Features Section */}
         <section className="py-20 px-4">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center mb-16">
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
                 Key Features
@@ -221,14 +213,14 @@ benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Perf
                 </div>
               ))}
             </div>
-          </div>
+</div>
         </section>
 
         {/* Benefits Section */}
         <section className="py-20 px-4">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center mb-16">
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
                 Why Choose Our Solution?
@@ -249,7 +241,7 @@ benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Perf
                 </div>
               ))}
             </div>
-          </div>
+</div>
         </section>
 
         {/* CTA Section */}
@@ -273,8 +265,8 @@ benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Perf
                   Learn More
                 </button>
               </div>
-            </div>
-          </div>
+</div>
+</div>
         </section>
       </main>
 

@@ -1,13 +1,11 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { Mic, Target, Zap, Settings, CheckCircle, Star,  Mic,  Target,  Settings } from 'lucide-react'
-const AIVoiceAssistantPage: React.FC = () => {
-    const features = [],
+import {Mic, Target, Zap, Settings, CheckCircle, Star,  Mic,  Target,  Settings} from 'lucide-react'
+const AIVoiceAssistantPage: React.FC = () => {const features = [],
   return (
-    {// TODO: Add content;
-  }
+    {// TODO: Add content;}
 }
   ico,
   n: Mic,
@@ -37,7 +35,7 @@ const AIVoiceAssistantPage: React.FC = () => {
     }
   ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       </div><main className="container mx-auto px-4 py-16 pt-24">
         </main><section className="text-center mb-16">
@@ -58,13 +56,15 @@ const AIVoiceAssistantPage: React.FC = () => {
 <Mic className="w-5 h-5" />
               +1 302 464 0950;
         </section>"
-        </div><section className="mb-16"></section>"
+        </div>
+<section className="mb-16"></section>"
           < className="text-3xl,"$2 />
   md:text-4xl font-bold text-white mb-12 text-center neon-text">
 // Voice Assistant Features</h2>"
           < className="grid grid-cols-1,$2 />
   md:grid-cols-2,"
-  lg:grid-cols-4 gap-8"></div>)
+  lg:grid-cols-4 gap-8"></div>
+)
             {features.map((feature, index) => ()}"
           < key={index} className="cyber-card p-6,"$2 />
   hover:scale-105 transition-all duration-300"></div>"
@@ -84,6 +84,6 @@ const AIVoiceAssistantPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  )
+)
 }
 export default AiVoiceAssistantPage</$1></p>

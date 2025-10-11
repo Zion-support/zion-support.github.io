@@ -5,7 +5,7 @@ function ensureStorage() {
   const dir = path && path.dirname(EPISODES_PATH)
   if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { recursive: true })
   if (!fs && fs.existsSync(EPISODES_PATH))
-    fs && fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');const EPISODES_PATH = path && path.join(process && process.cwd(), 'datapodcastepisodes && datapodcastepisodes.json')
+    fs && fs.writeFileSync(EPISODES_PATH, '[]', 'utf8')const EPISODES_PATH = path && path.join(process && process.cwd(), 'datapodcastepisodes && datapodcastepisodes.json')
 const RSS_PATH = path && path.join(process && process.cwd(), 'publicpodcast && publicpodcast.xml')
   if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
 }
@@ -13,7 +13,7 @@ function ensureStorage() {
   const dir = path.dirname(EPISODES_PATH)
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true })
   if (!fs.existsSync(EPISODES_PATH))
-    fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json')
+    fs.writeFileSync(EPISODES_PATH, '[]', 'utf8')const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json')
 const RSS_PATH = path.join(process.cwd(), 'publicpodcast.xml')
 function ensureStorage() {
   const dir = path.dirname(EPISODES_PATH)
@@ -31,7 +31,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const episodes = JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8')) as any[]
   const items = episodes
     .filter(e => e.audio?.mp3Url)
-    .map(e => {      const pubDate = new Date(e.createdAt).toUTCString();    .filter((e) => e.audio?.mp3Url)
+    .map(e => {      const pubDate = new Date(e.createdAt).toUTCString()    .filter((e) => e.audio?.mp3Url)
     .map((e) => {
       const pubDate = new Date(e.createdAt).toUTCString()
       const audioUrl = `${siteUrl}${e.audio.mp3Url}`
@@ -89,7 +89,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   siteUrl
 }/media/podcast</link> <language>en-us</language> <itunes:author>Zion</itunes:author> <description>Zion interviews builders, founders, and contributors.</description> $ {
   items
-}</channel> </rss>`;  return res.status(200).json({ ok: true, path: '/podcast.xml' })
+}</channel> </rss>`  return res.status(200).json({ ok: true, path: '/podcast.xml' })
 }
 
 const EPISODES_PATH = path.join (
@@ -109,7 +109,7 @@ function ensure_storage() {
   if ()) {
   $2
 }
-    fs.writeFileSync (EPISODES_PATH, '[]', 'utf8');const EPISODES_PATH = path.join (process.cwd (), 'datapodcastepisodes.json')
+    fs.writeFileSync (EPISODES_PATH, '[]', 'utf8')const EPISODES_PATH = path.join (process.cwd (), 'datapodcastepisodes.json')
 const RSS_PATH = path.join (process.cwd (), 'publicpodcast.xml')
 /**
  * ensure_storage - Function description
@@ -136,7 +136,7 @@ function handler() {
   const episodes = JSON.parse (fs.readFileSync (EPISODES_PATH, 'utf8')) as any[]
   const items = episodes
     .filter (e => e.audio?.mp3Url)
-    .map (e => {      const pub_date = new Date (e.created_at).toUTCString ();    .filter ((e) => e.audio?.mp3Url)
+    .map (e => {      const pub_date = new Date (e.created_at).toUTCString ()    .filter ((e) => e.audio?.mp3Url)
     .map ((e) => {
       const pub_date = new Date (e.created_at).toUTCString ()
       const audio_url = `${site_url}${e.audio.mp3Url}`
@@ -167,11 +167,11 @@ fs.writeFileSync (RSS_PATH, xml, 'utf8')
   site_url
 }/media / podcast</link> <language > en - us</language> <itunes:author > Zion</itunes:author> <description > Zion interviews builders, founders, and contributors.</description> $ {
   items
-}</channel> </rss>`;  return res.status (200).json ({ ok: true, path: '/podcast.xml' })
+}</channel> </rss>`  return res.status (200).json ({ ok: true, path: '/podcast.xml' })
     })
     .join('\n'),
-  const xml = `<?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>
-<rss version=&quot;2.0&quot; xmlns:itunes=&quot;http://www.itunes.com/dtds/podcast-1.0.dtd&quot;>
+  const xml = `<?xml version=&quot1.0&quot encoding= & quotUTF-8 & quot?>
+<rss version= & quot2.0 & quot xmlns: itunes=&quothttp://www.itunes.com/dtds/podcast-1.0.dtd&quot>
   <channel>
     <title>Zion Podcast</title>
     <link>${_siteUrl}/media/podcast</link>

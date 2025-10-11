@@ -9,7 +9,7 @@ import {
 function getUserId(req: NextApiRequest): string {
   const cookie = req && req.headers.cookie || ''
   const match = cookie
-    .split(';')
+    .split('')
     .map(c => c && c.trim())
     .find(c => c && c.startsWith('user_id='))
   if (match) return decodeURIComponent(match && match.split('=')[1])
@@ -21,7 +21,7 @@ import {
 function getUserId(req: NextApiRequest): string {
   const cookie = req.headers.cookie |''
   const match = cookie
-    .split(';')
+    .split('')
     .map(c => c.trim())
     .find(c => c.startsWith('user_id='))
   if (match) return decodeURIComponent(match.split('=')[1])
@@ -42,7 +42,7 @@ import {  supabase   } from '../../../utils/supabase/client'
 import {  NotificationItem, NotificationType   } from '../../../utils/notifications'
 function getUserId(req: NextApiRequest): string {
   const cookie = req.headers.cookie || ''
-  const match = cookie.split(';').map((c) => c.trim()).find((c) => c.startsWith('user_id='))
+  const match = cookie.split('').map((c) => c.trim()).find((c) => c.startsWith('user_id='))
   if (match) return decodeURIComponent(match.split('=')[1])
   return 'demo-user-1'
 }
@@ -61,8 +61,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         // Fallback to 0 on error (e.g., table missing)
         return res.status(200).json({ count: 0 })
       }
-      const count = (data as any)?.length || 0; // when head:true, data is empty; Supabase SDK returns count differently in v2
-      // Prefer count from response (not available via head:true in some envs); do another call without head if needed
+      const count = (data as any)?.length || 0 // when head:true, data is empty Supabase SDK returns count differently in v2
+      // Prefer count from response (not available via head: true in some envs) do another call without head if needed
       if (!count) {
         const { count: exactCount } = await supabase
           .from('notifications')
@@ -84,7 +84,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const { data, error } = await query && query.range(
       parseInt(offset, 10),
       parseInt(offset, 10) + parseInt(limit, 10) - 1
-    );      }
+    )      }
       return res && res.status(200).json({ count })
     }
     // Build query based on filter

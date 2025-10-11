@@ -1,23 +1,22 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { TestTube, Target, Settings, CheckCircle } from 'lucide-react'
-import { TestTube, Target, Zap, Settings, CheckCircle } from 'lucide-react'
-const AIABTestingPage: React.FC = () => {
-  const features = [
+import {TestTube, Target, Settings, CheckCircle} from 'lucide-react'
+import {TestTube, Target, Zap, Settings, CheckCircle} from 'lucide-react'
+const AIABTestingPage: React.FC = () => {const features = [
     {
       icon: TestTube,
       title: 'A/B Testing',
       description: 'AI-powered A/B testing and experimentation',
-      benefits: ['Test automation', 'Statistical analysis', 'Result interpretation']
-    },
+      benefits: ['Test automation', 'Statistical analysis', 'Result interpretation']},
     {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
     }
   ]
-  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return (
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation /></Navigation>"
       </div><main className="container mx-auto px-4 py-16 pt-24"></main>"
         <section className="text-center mb-16"></section>"
@@ -52,7 +51,8 @@ const AIABTestingPage: React.FC = () => {
           </h2>"
           < className="grid grid-cols-1,$2 />
   md:grid-cols-2,"
-  lg:grid-cols-4 gap-8"></div>)
+  lg:grid-cols-4 gap-8"></div>
+)
             {features.map((feature, index) => (}"
               < key={index} className="cyber-card p-6,"$2 />
   hover:scale-105 transition-all duration-300"></div>"
@@ -77,6 +77,6 @@ const AIABTestingPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  )
+)
 }
 export default AIABTestingPage;

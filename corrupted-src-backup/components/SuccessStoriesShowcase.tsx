@@ -1,5 +1,4 @@
-const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {
-  const, storie, s = [
+const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {const, storie, s = [
     {
       comp, a, n;
   y: "TechCorp, Internationa, l"
@@ -11,10 +10,8 @@ const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {
         "60% cost, reductio, n"
         "2 M, users, impacted"
       ]
-      col, o, r: "fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0"
-    }
-    {
-      compa, n, y: "Global, Manufacturing, Inc"
+      col, o, r: "fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0"}
+    {compa, n, y: "Global, Manufacturing, Inc"
       indust, r, y: "Manufacturi, n, g"
       ic, o, n: <Target, className="w-8 h-8" /></Target>resu</Target>, l, t: "85% Downtime, Reductio, n"
       descripti, o, n: "AI, predictive, maintenance transformed, operation, s, eliminating, unplanned, downtime and, reducing, costs."
@@ -23,10 +20,8 @@ const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {
         "40% lower, maintenance, costs"
         "99.9% uptime, achieve, d"
       ]
-      col, o, r: "fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0"
-    }
-    {
-      company: "FinanceFirst Bank"
+      col, o, r: "fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0"}
+    {company: "FinanceFirst Bank"
       industry: "Financial Services"
       icon: <Users className="w-8 h-8" />,
       result: "99.95% Fraud Detection",
@@ -108,4 +103,12 @@ key={index}
                   <Link className="w-4 h-4" />
             View All Success Stories;"
             <Link className="w-6 h-6" />
-}}}}"`</div></div></div></div></div></div></div></div></div></div></span></span></Link></Link></Link></Link></p></p></h3>
+}}}}"`</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div></span></span></Link></Link></Link></Link></p></p></h3>

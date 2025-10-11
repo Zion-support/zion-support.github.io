@@ -1,9 +1,8 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-const AgentReleaseRunbooksV22026Page: React.FC = () => {
-  return (
+const AgentReleaseRunbooksV22026Page: React.FC = () => {return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       </div><main className="container mx-auto px-4 py-16 pt-24">
@@ -23,7 +22,8 @@ const AgentReleaseRunbooksV22026Page: React.FC = () => {
 <div>
               <Clock />
               <span>18 min read;
-      </div><section className='py-16'>
+      </div>
+<section className='py-16'>
         </section>
 <div>
           <h2>Release Safety Model;
@@ -37,7 +37,8 @@ const AgentReleaseRunbooksV22026Page: React.FC = () => {
             <li>Attach canaries to product KPIs;
             <li>Stage rollout with blast-radius limits;
             <li>Automate rollback and postmortems;
-      </div><section className='py-12 bg-white'>
+      </div>
+<section className='py-12 bg-white'>
 </section>
 <div>
           </div>
@@ -58,7 +59,8 @@ const AgentReleaseRunbooksV22026Page: React.FC = () => {
 <div>Rollback;
             </div>
 <div className='text-slate-600'>One click, under 60s MTR;
-      </div><section className='py-16'>
+      </div>
+<section className='py-16'>
         </section>
 <div>
           </div>
@@ -75,7 +77,23 @@ const AgentReleaseRunbooksV22026Page: React.FC = () => {
 // >
 // Engage;
           <RefreshCw />
-      </section>)
-    </main>)
-}
-export default AgentReleaseRunbooksV22026Page</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></Link></p></p></p></h1></h2></h3></h3></ol></li></li></li></li></section></section></section>
+      </section>
+)
+    </main>
+)}
+export default AgentReleaseRunbooksV22026Page</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></span></span></Link></p></p></p></h1></h2></h3></h3></ol></li></li></li></li></section></section></section>

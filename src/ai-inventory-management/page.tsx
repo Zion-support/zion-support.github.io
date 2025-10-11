@@ -1,8 +1,9 @@
 'use client'
-import { Helmet } from 'react-helmet-async'
+import {Helmet} from 'react-helmet-async'
 export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression */}
 }
-  return (<div><Helmet>
+  return (
+<div><Helmet>
         <title>AI Inventory Management Solutions - Zion Tech Group;
         <meta name="description" content="Intelligent AI-powered inventory management with predictive analytics, automated reordering, and real-time optimization. Starting at $149/month." /></meta>"
         <meta name="keywords" content="AI inventory management, inventory optimization, supply chain management, predictive analytics, automated reordering" /></meta>"
@@ -180,7 +181,7 @@ export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression
         </main>
         <Footer /></Footer>
       </div>
-    </div>
+</div>
   ),
 }"
 </p></p></p></p></p></p></p></p></p></p></p></p></p></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li>

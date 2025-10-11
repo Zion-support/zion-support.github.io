@@ -1,39 +1,35 @@
-import React, { useState } from 'react'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { Input } from "@/components/ui/input"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import React, { useState } from 'react'
-import { ENHANCED_SERVICES, ENHANCED_SERVICE_CATEGORIES, SERVICE_PRICING_TIERS } from '@/data/enhancedServices'
-import React, { useState } from 'react'
-import { ENHANCED_SERVICES, SERVICE_CATEGORIES, EnhancedService } from '@/data/enhancedServices'
-import React, { useState } from 'react'
-import { ENHANCED_SERVICES, ENHANCED_SERVICE_CATEGORIES, SERVICE_PRICING_TIERS } from '@/data/enhancedServices'
-import { ProductListing } from '@/types/listings'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { Input } from '@/components/ui/input'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { 
-  ENHANCED_SERVICES, 
+import React, {useState} from 'react'
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card"
+import {Button} from "@/components/ui/button"
+import {Badge} from "@/components/ui/badge"
+import {Input} from "@/components/ui/input"
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select"
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs"
+import React, {useState} from 'react'
+import {ENHANCED_SERVICES, ENHANCED_SERVICE_CATEGORIES, SERVICE_PRICING_TIERS} from '@/data/enhancedServices'
+import React, {useState} from 'react'
+import {ENHANCED_SERVICES, SERVICE_CATEGORIES, EnhancedService} from '@/data/enhancedServices'
+import React, {useState} from 'react'
+import {ENHANCED_SERVICES, ENHANCED_SERVICE_CATEGORIES, SERVICE_PRICING_TIERS} from '@/data/enhancedServices'
+import {ProductListing} from '@/types/listings'
+import {Button} from '@/components/ui/button'
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card'
+import {Badge} from '@/components/ui/badge'
+import {Input} from '@/components/ui/input'
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from '@/components/ui/select'
+import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs'
+import {ENHANCED_SERVICES, 
   getServicesByCategory, 
   getPopularServices, 
   getNewServices, 
   getPremiumServices,
-  type EnhancedService;
-} from "@/data/enhancedServices"
-import { 
-  Search, 
+  type EnhancedService;} from "@/data/enhancedServices"
+import {Search, 
   Filter, 
   Star, 
   Clock, 
-import React, { useState, useEffect } from 'react'
-import { 
-  Search, Filter, Star, Clock, DollarSign, Users, Zap, Brain, Cloud, 
+import React, { useState, useEffect} from 'react'
+import {Search, Filter, Star, Clock, DollarSign, Users, Zap, Brain, Cloud, 
   Database, Shield, Settings, Eye, Leaf, CreditCard, Heart, Truck, 
   ShoppingCart, Phone, Mail, MapPin, Globe, Bot, Cpu, Network, 
   Building, Factory, Store, Car, Plane, Ship, Home, Hospital, 
@@ -41,11 +37,9 @@ import {
   MessageSquare, Camera, Video, Music, BookOpen, Target, TrendingUp, 
   PieChart, Activity, Package, Wifi, ArrowRight, CheckCircle, 
   Award, Rocket, Lightbulb, Shield as ShieldIcon, Zap as ZapIcon,
-  Brain as BrainIcon, Cloud as CloudIcon, Database as DatabaseIcon;
-} from 'lucide-react'
-import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES } from '../data/comprehensiveServices'
-const EnhancedServicesPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('')
+  Brain as BrainIcon, Cloud as CloudIcon, Database as DatabaseIcon;} from 'lucide-react'
+import {COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES} from '../data/comprehensiveServices'
+const EnhancedServicesPage: React.FC = () => {const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState<string>('all')
   const [selectedPricing, setSelectedPricing] = useState<string>('all')
   const [selectedSupport, setSelectedSupport] = useState<string>('all')
@@ -62,13 +56,10 @@ const EnhancedServicesPage: React.FC = () => {
                            (selectedPricingTier === 'smb' && (service.price || 0) > 299 && (service.price || 0) <= 799) ||
                            (selectedPricingTier === 'enterprise' && (service.price || 0) > 799 && (service.price || 0) <= 1999) ||
                            (selectedPricingTier === 'custom' && (service.price || 0) > 1999)
-    return matchesSearch && matchesCategory && matchesPricing;
-  })
-  const handleContact = (service: ProductListing) => {
-    setContactService(service)
-  }
+    return matchesSearch && matchesCategory && matchesPricing;})
+  const handleContact = (service: ProductListing) => {setContactService(service)}
   return (
-    <div className="min-h-screen bg-zion-blue">
+<div className="min-h-screen bg-zion-blue">
       <SEO
         title="Comprehensive Tech Services - Zion Tech Group" 
         description="Explore our complete range of AI, IT infrastructure, and micro SAAS services. From custom AI development to cybersecurity solutions, we have everything your business needs."
@@ -107,13 +98,13 @@ const EnhancedServicesPage: React.FC = () => {
                     <Mail className="h-5 w-5 mr-2" />
                     <span className="font-medium">kleber@ziontechgroup.com</span>
                   </div>
-                </div>
+</div>
 <div className="mt-3 text-sm text-zion-slate-light">
                   <MapPin className="h-4 w-4 inline mr-1" />
                   364 E Main St STE 1008, Middletown, DE 19709;
                 </div>
-              </div>
-            </div>
+</div>
+</div>
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesPricing = selectedPricingModel === 'all' || service.pricingModel === selectedPricingModel;
     const matchesSupport = selectedSupportLevel === 'all' || service.supportLevel === selectedSupportLevel;
@@ -125,8 +116,7 @@ const EnhancedServicesPage: React.FC = () => {
     const matchesSupport = selectedSupport === 'all' || service.supportLevel === selectedSupport;
     return matchesSearch && matchesCategory && matchesPricing && matchesSupport;
   })
-  const getCategoryIcon = (category: string) => {
-    switch (category.toLowerCase()) {
+  const getCategoryIcon = (category: string) => {switch (category.toLowerCase()) {
       case 'ai automation':
       case 'ai analytics':
       case 'ai marketing':
@@ -151,16 +141,13 @@ const EnhancedServicesPage: React.FC = () => {
       case 'fintech':
         return <DollarSign className="w-5 h-5" />
       default:
-        return <TrendingUp className="w-5 h-5" />
-    }
+        return <TrendingUp className="w-5 h-5" />}
   }
-  const getPriceColor = (price: number) => {
-    if (price <= 4999) return 'text-green-500'
+  const getPriceColor = (price: number) => {if (price <= 4999) return 'text-green-500'
     if (price <= 14999) return 'text-blue-500'
-    return 'text-purple-500'
-  }
+    return 'text-purple-500'}
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">
+<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">
       <SEO
         title="Enhanced IT & AI Services - ZionTech Group" 
         description="Discover our comprehensive range of innovative IT services, AI solutions, cybersecurity, cloud services, and cutting-edge technology solutions."
@@ -185,9 +172,7 @@ const EnhancedServicesPage: React.FC = () => {
 <div className="flex flex-wrap justify-center gap-4">
             <Button
               size="lg"
-              className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-              onClick={() => handleContact(ENHANCED_SERVICES[0])}
-            >
+              className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white" onClick={$2}>
               <span className="mr-2">{tab.icon}</span>
               {tab.label}
             </button>
@@ -231,8 +216,7 @@ const EnhancedServicesPage: React.FC = () => {
                 onChange={(e) => {
                   const [newSortBy, newSortOrder] = e.target.value.split('-')
                   setSortBy(newSortBy as any)
-                  setSortOrder(newSortOrder as any)
-                }}
+                  setSortOrder(newSortOrder as any)}}
                 className="w-full px-4 py-2 bg-gray-800/50 border border-gray-600 rounded-lg text-white focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/20"
               >
                 <option value="name-asc">Name A-Z</option>
@@ -243,8 +227,8 @@ const EnhancedServicesPage: React.FC = () => {
                 <option value="aiScore-desc">AI Score High-Low</option>
               </select>
             </div>
-          </div>
-        </div>
+</div>
+</div>
 
         {/* Services Grid */}
         <div className="grid-futuristic">
@@ -268,8 +252,8 @@ const EnhancedServicesPage: React.FC = () => {
 <div className="text-2xl font-bold text-gradient-primary">
                     {formatPrice(service.price, service.currency, service.pricingModel)}
                   </div>
-                </div>
-              </div>
+</div>
+</div>
 
               {/* Service Title and Category */}
               <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
@@ -290,28 +274,28 @@ const EnhancedServicesPage: React.FC = () => {
                     </div>
 <div className="text-lg font-bold text-cyan-400">{service.aiScore}</div>
 <div className="text-xs text-gray-400">AI Score</div>
-                  </div>
+</div>
                 )}
                 {service.rating && (
                   <div className="text-center">
                     </div>
 <div className="text-lg font-bold text-yellow-400">{service.rating}</div>
 <div className="text-xs text-gray-400">Rating</div>
-                  </div>
+</div>
                 )}
                 {service.marketSize && (
                   <div className="text-center">
                     </div>
 <div className="text-lg font-bold text-green-400">{service.marketSize}</div>
 <div className="text-xs text-gray-400">Market Size</div>
-                  </div>
+</div>
                 )}
                 {service.roi && (
                   <div className="text-center">
                     </div>
 <div className="text-lg font-bold text-purple-400">{service.roi}</div>
 <div className="text-xs text-gray-400">ROI</div>
-                  </div>
+</div>
                 )}
               </div>
 
@@ -349,13 +333,13 @@ const EnhancedServicesPage: React.FC = () => {
                     </div>
 <div>📧 {service.contactInfo.email}</div>
 <div>📱 {service.contactInfo.phone}</div>
-                  </div>
+</div>
                   <button className="btn-futuristic text-sm px-4 py-2">
                     Get Quote;
                   </button>
                 </div>
-              </div>
-            </div>
+</div>
+</div>
           ))}
         </div>
 
@@ -388,15 +372,15 @@ const EnhancedServicesPage: React.FC = () => {
               View Case Studies;
             </button>
           </div>
-        </div>
+</div>
 
         {/* Stats Section */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-12">
           {[
-            { number: '50+', label: 'AI Services', icon: '🤖' },
-            { number: '100+', label: 'Micro SAAS Solutions', icon: '💻' },
-            { number: '25+', label: 'IT Services', icon: '🔧' },
-            { number: '24/7', label: 'Support Available', icon: '🔄' }
+            { number: '50+', label: 'AI Services', icon: '🤖'},
+            {number: '100+', label: 'Micro SAAS Solutions', icon: '💻'},
+            {number: '25+', label: 'IT Services', icon: '🔧'},
+            {number: '24/7', label: 'Support Available', icon: '🔄'}
           ].map((stat, index) => (
             </div>
 <div key={index} className="card-futuristic text-center">
@@ -404,11 +388,9 @@ const EnhancedServicesPage: React.FC = () => {
 <div className="text-4xl mb-2">{stat.icon}</div>
 <div className="text-2xl font-bold text-gradient-primary mb-1">{stat.number}</div>
 <div className="text-gray-400">{stat.label}</div>
-            </div>
+</div>
           ))}
-  const getCategoryIcon = (category: string) => {
-    const iconMap: { [key: string]: React.ReactNode } = {
-      'AI Automation': <Brain className="w-5 h-5" />,
+  const getCategoryIcon = (category: string) => {const iconMap: { [key: string]: React.ReactNode} = {'AI Automation': <Brain className="w-5 h-5" />,
       'Content AI': <Zap className="w-5 h-5" />,
       'Predictive Analytics': <TrendingUp className="w-5 h-5" />,
       'Cybersecurity': <Shield className="w-5 h-5" />,
@@ -428,12 +410,11 @@ const EnhancedServicesPage: React.FC = () => {
       'System Modernization': <Zap className="w-5 h-5" />,
       'Healthcare AI': <Users className="w-5 h-5" />,
       'FinTech': <TrendingUp className="w-5 h-5" />,
-      'Retail AI': <Building className="w-5 h-5" />
-    }
+      'Retail AI': <Building className="w-5 h-5" />}
     return iconMap[category] || <Zap className="w-5 h-5" />
   }
   return (
-    <div className="min-h-screen bg-background">
+<div className="min-h-screen bg-background">
       <SEO
         title="Enterprise IT & AI Services - Zion Tech Group" 
         description="Comprehensive enterprise IT services, AI solutions, cybersecurity, cloud management, and digital transformation services. Expert consulting and implementation worldwide."
@@ -482,8 +463,8 @@ const EnhancedServicesPage: React.FC = () => {
               Call +1 302 464 0950;
             </Button>
           </div>
-        </div>
-      </div>
+</div>
+</div>
 
       {/* Contact Information */}
       <div className="bg-zion-blue-dark py-8 border-b border-zion-blue-light">
@@ -504,8 +485,7 @@ const EnhancedServicesPage: React.FC = () => {
               <MapPin className="w-5 h-5" />
               <span>364 E Main St STE 1008, Middletown DE 19709</span>
   // Sort services;
-  const sortedServices = [...filteredServices].sort((a, b) => {
-    switch (sortBy) {
+  const sortedServices = [...filteredServices].sort((a, b) => {switch (sortBy) {
       case 'price-low':
         return a.price - b.price;
       case 'price-high':
@@ -515,11 +495,9 @@ const EnhancedServicesPage: React.FC = () => {
       case 'category':
         return a.category.localeCompare(b.category)
       default:
-        return 0;
-    }
+        return 0;}
   })
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
+  const getCategoryIcon = (category: string) => {switch (category) {
       case 'AI & Machine Learning':
         return <BrainIcon className="w-6 h-6 text-blue-500" />
       case 'Cybersecurity':
@@ -535,24 +513,21 @@ const EnhancedServicesPage: React.FC = () => {
       case 'Data & Analytics':
         return <DatabaseIcon className="w-6 h-6 text-indigo-500" />
       default:
-        return <Settings className="w-6 h-6 text-gray-400" />
-    }
+        return <Settings className="w-6 h-6 text-gray-400" />}
   }
-  const getPricingBadge = (price: number) => {
-    if (price < 1000) return { text: 'Budget', color: 'bg-green-100 text-green-800' }
-    if (price < 3000) return { text: 'Mid-Range', color: 'bg-yellow-100 text-yellow-800' }
-    return { text: 'Enterprise', color: 'bg-purple-100 text-purple-800' }
+  const getPricingBadge = (price: number) => {if (price < 1000) return { text: 'Budget', color: 'bg-green-100 text-green-800'}
+    if (price < 3000) return {text: 'Mid-Range', color: 'bg-yellow-100 text-yellow-800'}
+    return {text: 'Enterprise', color: 'bg-purple-100 text-purple-800'}
   }
-  const getSupportBadge = (support: string) => {
-    switch (support) {
+  const getSupportBadge = (support: string) => {switch (support) {
       case 'basic':
-        return { text: 'Basic', color: 'bg-gray-100 text-gray-800' }
+        return { text: 'Basic', color: 'bg-gray-100 text-gray-800'}
       case 'premium':
-        return { text: 'Premium', color: 'bg-blue-100 text-blue-800' }
+        return {text: 'Premium', color: 'bg-blue-100 text-blue-800'}
       case 'enterprise':
-        return { text: 'Enterprise', color: 'bg-purple-100 text-purple-800' }
+        return {text: 'Enterprise', color: 'bg-purple-100 text-purple-800'}
       default:
-        return { text: 'Standard', color: 'bg-gray-100 text-gray-800' }
+        return {text: 'Standard', color: 'bg-gray-100 text-gray-800'}
   Users, 
   Zap, 
   TrendingUp, 
@@ -572,9 +547,8 @@ const EnhancedServicesPage: React.FC = () => {
   DollarSign,
   Calendar;
 } from "lucide-react"
-import { SimpleFuturisticBackground } from "@/components/ui/FuturisticBackground"
-export default function EnhancedServicesPage() {
-  const [searchQuery, setSearchQuery] = useState('')
+import {SimpleFuturisticBackground} from "@/components/ui/FuturisticBackground"
+export default function EnhancedServicesPage() {const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState<string>('all')
   const [selectedPricing, setSelectedPricing] = useState<string>('all')
   const [sortBy, setSortBy] = useState<string>('popularity')
@@ -582,54 +556,47 @@ export default function EnhancedServicesPage() {
   const newServices = getNewServices()
   const premiumServices = getPremiumServices()
   const categories = [
-    { id: 'all', label: 'All Services', icon: <Zap className="h-4 w-4" /> },
-    { id: 'AI', label: 'AI Services', icon: <Brain className="h-4 w-4" /> },
-    { id: 'IT', label: 'IT Services', icon: <Settings className="h-4 w-4" /> },
-    { id: 'SAAS', label: 'SAAS Solutions', icon: <Cloud className="h-4 w-4" /> },
-    { id: 'Development', label: 'Development', icon: <Code className="h-4 w-4" /> },
-    { id: 'Consulting', label: 'Consulting', icon: <Users className="h-4 w-4" /> },
-    { id: 'Automation', label: 'Automation', icon: <TrendingUp className="h-4 w-4" /> },
-    { id: 'Integration', label: 'Integration', icon: <BarChart3 className="h-4 w-4" /> }
+    { id: 'all', label: 'All Services', icon: <Zap className="h-4 w-4" />},
+    {id: 'AI', label: 'AI Services', icon: <Brain className="h-4 w-4" />},
+    {id: 'IT', label: 'IT Services', icon: <Settings className="h-4 w-4" />},
+    {id: 'SAAS', label: 'SAAS Solutions', icon: <Cloud className="h-4 w-4" />},
+    {id: 'Development', label: 'Development', icon: <Code className="h-4 w-4" />},
+    {id: 'Consulting', label: 'Consulting', icon: <Users className="h-4 w-4" />},
+    {id: 'Automation', label: 'Automation', icon: <TrendingUp className="h-4 w-4" />},
+    {id: 'Integration', label: 'Integration', icon: <BarChart3 className="h-4 w-4" />}
   ]
   const pricingModels = [
-    { id: 'all', label: 'All Pricing' },
-    { id: 'hourly', label: 'Hourly' },
-    { id: 'monthly', label: 'Monthly' },
-    { id: 'project', label: 'Project-based' },
-    { id: 'subscription', label: 'Subscription' }
+    {id: 'all', label: 'All Pricing'},
+    {id: 'hourly', label: 'Hourly'},
+    {id: 'monthly', label: 'Monthly'},
+    {id: 'project', label: 'Project-based'},
+    {id: 'subscription', label: 'Subscription'}
   ]
   const sortOptions = [
-    { id: 'popularity', label: 'Most Popular' },
-    { id: 'rating', label: 'Highest Rated' },
-    { id: 'price-low', label: 'Price: Low to High' },
-    { id: 'price-high', label: 'Price: High to Low' },
-    { id: 'newest', label: 'Newest First' }
+    {id: 'popularity', label: 'Most Popular'},
+    {id: 'rating', label: 'Highest Rated'},
+    {id: 'price-low', label: 'Price: Low to High'},
+    {id: 'price-high', label: 'Price: High to Low'},
+    {id: 'newest', label: 'Newest First'}
   ]
-  const getFilteredServices = () => {
-    let filtered = ENHANCED_SERVICES;
+  const getFilteredServices = () => {let filtered = ENHANCED_SERVICES;
     // Category filter;
     if (selectedCategory !== 'all') {
-      filtered = filtered.filter(service => service.category === selectedCategory)
-    }
+      filtered = filtered.filter(service => service.category === selectedCategory)}
 
     // Pricing filter;
-    if (selectedPricing !== 'all') {
-      filtered = filtered.filter(service => service.price.pricingModel === selectedPricing)
-    }
+    if (selectedPricing !== 'all') {filtered = filtered.filter(service => service.price.pricingModel === selectedPricing)}
 
     // Search filter;
-    if (searchQuery) {
-      const query = searchQuery.toLowerCase()
+    if (searchQuery) {const query = searchQuery.toLowerCase()
       filtered = filtered.filter(service => 
         service.title.toLowerCase().includes(query) ||
         service.description.toLowerCase().includes(query) ||
         service.tags.some(tag => tag.toLowerCase().includes(query))
-      )
-    }
+      )}
 
     // Sorting;
-    switch (sortBy) {
-      case 'rating':
+    switch (sortBy) {case 'rating':
         filtered.sort((a, b) => b.rating - a.rating)
         break;
       case 'price-low':
@@ -642,24 +609,18 @@ export default function EnhancedServicesPage() {
         filtered.sort((a, b) => new Date(b.createdAt || Date.now()).getTime() - new Date(a.createdAt || Date.now()).getTime())
         break;
       default: // popularity;
-        filtered.sort((a, b) => (b.reviewCount || 0) - (a.reviewCount || 0))
-    }
+        filtered.sort((a, b) => (b.reviewCount || 0) - (a.reviewCount || 0))}
 
     return filtered;
   }
-  const formatPrice = (service: EnhancedService) => {
-    const { min, max, currency, pricingModel } = service.price;
-    if (pricingModel === 'hourly') {
-      return `${currency}${min}-${max}/hour`
-    } else if (pricingModel === 'monthly') {
-      return `${currency}${min}-${max}/month`
-    } else if (pricingModel === 'project') {
-      return `${currency}${min.toLocaleString()}-${max.toLocaleString()}`
+  const formatPrice = (service: EnhancedService) => {const { min, max, currency, pricingModel} = service.price;
+    if (pricingModel === 'hourly') {return `${currency}${min}-${max}/hour`
+    } else if (pricingModel === 'monthly') {return `${currency}${min}-${max}/month`
+    } else if (pricingModel === 'project') {return `${currency}${min.toLocaleString()}-${max.toLocaleString()}`
     }
     return `${currency}${min}-${max}`
   }
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
+  const getCategoryIcon = (category: string) => {switch (category) {
       case 'AI': return <Brain className="h-5 w-5 text-purple-400" />
       case 'IT': return <Settings className="h-5 w-5 text-blue-400" />
       case 'SAAS': return <Cloud className="h-5 w-5 text-cyan-400" />
@@ -667,8 +628,7 @@ export default function EnhancedServicesPage() {
       case 'Consulting': return <Users className="h-5 w-5 text-orange-400" />
       case 'Automation': return <TrendingUp className="h-5 w-5 text-pink-400" />
       case 'Integration': return <BarChart3 className="h-5 w-5 text-yellow-400" />
-      default: return <Zap className="h-5 w-5 text-gray-400" />
-    }
+      default: return <Zap className="h-5 w-5 text-gray-400" />}
   }
   const filteredServices = getFilteredServices()
   return (
@@ -706,8 +666,8 @@ export default function EnhancedServicesPage() {
                   </div>
 <div className="text-sm text-zion-slate-light">Phone</div>
 <div className="text-white font-semibold">+1 302 464 0950</div>
-                </div>
-              </div>
+</div>
+</div>
 <div className="flex items-center justify-center gap-3">
                 <Mail className="h-5 w-5 text-zion-cyan" />
                 </div>
@@ -715,8 +675,8 @@ export default function EnhancedServicesPage() {
                   </div>
 <div className="text-sm text-zion-slate-light">Email</div>
 <div className="text-white font-semibold">kleber@ziontechgroup.com</div>
-                </div>
-              </div>
+</div>
+</div>
 <div className="flex items-center justify-center gap-3">
                 <MapPin className="h-5 w-5 text-zion-cyan" />
                 </div>
@@ -724,9 +684,9 @@ export default function EnhancedServicesPage() {
                   </div>
 <div className="text-sm text-zion-slate-light">Address</div>
 <div className="text-white font-semibold">364 E Main St STE 1008, Middletown DE 19709</div>
-                </div>
-              </div>
-            </div>
+</div>
+</div>
+</div>
           </div>
 
           {/* Featured Services Tabs */}
@@ -846,8 +806,8 @@ export default function EnhancedServicesPage() {
                       </SelectContent>
                     </Select>
                   </div>
-                </div>
-              </div>
+</div>
+</div>
 
               {/* Results Count */}
               <div className="mb-6">
@@ -872,8 +832,7 @@ export default function EnhancedServicesPage() {
                       setSearchQuery('')
                       setSelectedCategory('all')
                       setSelectedPricing('all')
-                      setSortBy('popularity')
-                    }}
+                      setSortBy('popularity')}}
                     variant="outline"
                     className="border-zion-purple/30 text-zion-cyan hover:bg-zion-purple/10 hover:border-zion-purple/50"
                   >
@@ -899,48 +858,37 @@ export default function EnhancedServicesPage() {
 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
                   size="lg" 
-                  className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white gap-3"
-                  onClick={() => window.open('https://ziontechgroup.com/contact', '_blank')}
-                >
+                  className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white gap-3" onClick={$2}>
                   <ExternalLink className="h-4 w-4" />
                   Contact Our Team;
                 </Button>
                 <Button
                   size="lg" 
                   variant="outline" 
-                  className="border-zion-purple/30 text-zion-cyan hover:bg-zion-purple/10 hover:border-zion-purple/50 gap-3"
-                  onClick={() => window.open('https://ziontechgroup.com/demo', '_blank')}
-                >
+                  className="border-zion-purple/30 text-zion-cyan hover:bg-zion-purple/10 hover:border-zion-purple/50 gap-3" onClick={$2}>
                   <Play className="h-4 w-4" />
                   Schedule Demo;
                 </Button>
               </div>
-            </div>
-          </div>
-        </div>
+</div>
+</div>
+</div>
       </div>
     </SimpleFuturisticBackground>
   )
 }
 
-interface ServiceCardProps {
-  service: EnhancedService;
-}
+interface ServiceCardProps {service: EnhancedService;}
 
-function ServiceCard({ service }: ServiceCardProps) {
-  const formatPrice = (service: EnhancedService) => {
-    const { min, max, currency, pricingModel } = service.price;
-    if (pricingModel === 'hourly') {
-      return `${currency}${min}-${max}/hour`
-    } else if (pricingModel === 'monthly') {
-      return `${currency}${min}-${max}/month`
-    } else if (pricingModel === 'project') {
-      return `${currency}${min.toLocaleString()}-${max.toLocaleString()}`
+function ServiceCard({service}: ServiceCardProps) {const formatPrice = (service: EnhancedService) => {
+    const { min, max, currency, pricingModel} = service.price;
+    if (pricingModel === 'hourly') {return `${currency}${min}-${max}/hour`
+    } else if (pricingModel === 'monthly') {return `${currency}${min}-${max}/month`
+    } else if (pricingModel === 'project') {return `${currency}${min.toLocaleString()}-${max.toLocaleString()}`
     }
     return `${currency}${min}-${max}`
   }
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
+  const getCategoryIcon = (category: string) => {switch (category) {
       case 'AI': return <Brain className="h-5 w-5 text-purple-400" />
       case 'IT': return <Settings className="h-5 w-5 text-blue-400" />
       case 'SAAS': return <Cloud className="h-5 w-5 text-cyan-400" />
@@ -948,11 +896,10 @@ function ServiceCard({ service }: ServiceCardProps) {
       case 'Consulting': return <Users className="h-5 w-5 text-orange-400" />
       case 'Automation': return <TrendingUp className="h-5 w-5 text-pink-400" />
       case 'Integration': return <BarChart3 className="h-5 w-5 text-yellow-400" />
-      default: return <Zap className="h-5 w-5 text-gray-400" />
-    }
+      default: return <Zap className="h-5 w-5 text-gray-400" />}
   }
   return (
-      <div className="bg-zion-blue py-8">
+<div className="bg-zion-blue py-8">
         </div>
 <div className="container mx-auto px-4">
           </div>
@@ -1031,7 +978,7 @@ function ServiceCard({ service }: ServiceCardProps) {
               <h3 className="text-xl font-semibold text-zion-blue mb-2">Expert Team</h3>
               <p className="text-zion-slate">Certified professionals with deep industry expertise</p>
             </div>
-          </div>
+</div>
 
           {filteredServices.length === 0 && (
             <div className="text-center py-16">
@@ -1040,14 +987,13 @@ function ServiceCard({ service }: ServiceCardProps) {
               <Button onClick={() => {
                 setSearchTerm('')
                 setSelectedCategory('all')
-                setPriceRange('all')
-              }}>
+                setPriceRange('all')}}>
                 Clear Filters;
               </Button>
             </div>
           )}
         </div>
-      </div>
+</div>
 
       {/* CTA Section */}
         {filteredServices.length === 0 && (
@@ -1058,8 +1004,7 @@ function ServiceCard({ service }: ServiceCardProps) {
               setSearchTerm('')
               setSelectedCategory('all')
               setSelectedPricingModel('all')
-              setSelectedSupportLevel('all')
-            }}>
+              setSelectedSupportLevel('all')}}>
               Clear Filters;
             </Button>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -1134,7 +1079,7 @@ function ServiceCard({ service }: ServiceCardProps) {
               {sortedServices.length} services found;
             </span>
           </div>
-        </div>
+</div>
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -1159,14 +1104,14 @@ function ServiceCard({ service }: ServiceCardProps) {
                         </h3>
                         <p className="text-sm text-gray-500">{service.category}</p>
                       </div>
-                    </div>
+</div>
 <div className="flex flex-col items-end gap-2">
                       <span className="text-2xl font-bold text-blue-600">
                         ${service.price.toLocaleString()}
                       </span>
                       <span className="text-sm text-gray-500">per {service.pricingModel}</span>
                     </div>
-                  </div>
+</div>
                   
                   <p className="text-gray-600 mb-4 line-clamp-3">
                     {service.description}
@@ -1196,8 +1141,8 @@ function ServiceCard({ service }: ServiceCardProps) {
                       <span className="text-gray-600">Our Price:</span>
                       <span className="font-bold text-green-600">${service.price.toLocaleString()}/{service.pricingModel}</span>
                     </div>
-                  </div>
-                </div>
+</div>
+</div>
 
                 {/* Service Features */}
                 <div className="p-6">
@@ -1262,8 +1207,8 @@ function ServiceCard({ service }: ServiceCardProps) {
                           <Mail className="w-4 h-4" />
                           <span>{service.contactInfo.email}</span>
                         </div>
-                      </div>
-                    </div>
+</div>
+</div>
 <div className="flex gap-3">
                       <$2 />
                         href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.title}`}
@@ -1282,10 +1227,10 @@ function ServiceCard({ service }: ServiceCardProps) {
                         Learn More;
                       </a>
                     </div>
-                  </div>
-                </div>
-              </div>
-            )
+</div>
+</div>
+</div>
+)
           })
         </div>
 
@@ -1352,7 +1297,7 @@ function ServiceCard({ service }: ServiceCardProps) {
                 <p className="text-gray-300">364 E Main St STE 1008</p>
                 <p className="text-gray-300">Middletown, DE 19709</p>
               </div>
-            </div>
+</div>
 <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <$2 />
                 href="https://ziontechgroup.com"
@@ -1371,11 +1316,11 @@ function ServiceCard({ service }: ServiceCardProps) {
                 Schedule Consultation;
               </a>
             </div>
-          </div>
-        </div>
-      </div>
+</div>
+</div>
+</div>
     </div>
-  )
+)
 }
 }
 }
@@ -1383,11 +1328,9 @@ function ServiceCard({ service }: ServiceCardProps) {
 export default EnhancedServicesPage;
     <Card className="group overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-zion-purple/20 hover:border-zion-purple/50 bg-zion-blue-dark/30 border border-zion-blue-light/20 backdrop-blur-sm">
       <div className="relative">
-        <img
-          src={service.image} 
+        <img src={service.image} 
           alt={service.title}
-          className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
-        />
+          className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105" />
         </div>
 <div className="absolute top-4 left-4 flex gap-2">
           {service.isPopular && (
@@ -1412,7 +1355,7 @@ export default EnhancedServicesPage;
 <div className="absolute top-4 right-4">
           {getCategoryIcon(service.category)}
         </div>
-      </div>
+</div>
 
       <CardHeader className="pb-3">
         <div className="flex items-start justify-between mb-2">
@@ -1437,7 +1380,7 @@ export default EnhancedServicesPage;
             <span className="text-sm text-white">{service.rating}</span>
             <span className="text-xs text-zion-slate-light">({service.reviewCount})</span>
           </div>
-        </div>
+</div>
 
         {/* Market Price Comparison */}
         <div className="text-xs text-zion-slate-light bg-zion-blue-dark/50 rounded px-2 py-1">
@@ -1467,9 +1410,7 @@ export default EnhancedServicesPage;
         <div className="flex gap-2 pt-2">
           <Button
             size="sm" 
-            className="flex-1 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white gap-2"
-            onClick={() => window.open(service.contactLink, '_blank')}
-          >
+            className="flex-1 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white gap-2" onClick={$2}>
             <ExternalLink className="h-3 w-3" />
             Get Quote;
           </Button>
@@ -1477,9 +1418,7 @@ export default EnhancedServicesPage;
             <Button
               size="sm" 
               variant="outline" 
-              className="border-zion-purple/30 text-zion-cyan hover:bg-zion-purple/10 hover:border-zion-purple/50 gap-2"
-              onClick={() => window.open(service.demoLink, '_blank')}
-            >
+              className="border-zion-purple/30 text-zion-cyan hover:bg-zion-purple/10 hover:border-zion-purple/50 gap-2" onClick={$2}>
               <Play className="h-3 w-3" />
               Demo;
             </Button>
@@ -1489,4 +1428,20 @@ export default EnhancedServicesPage;
     </Card>
   )
 }
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></main></section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div></main></section>

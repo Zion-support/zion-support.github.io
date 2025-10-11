@@ -1,7 +1,5 @@
 import React from 'react'
-interface AccessibilitySettings {
-    // TODO: Add content;
-  }
+interface AccessibilitySettings {// TODO: Add content;}
 }
   highContras,
   t: boolean,
@@ -310,7 +308,9 @@ const toggleHighContrast = () => {/* TODO: Fix JSX expression */}
   if (!isVisible) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    return (<div>Coming Soon</div>)
+    return (
+<div>Coming Soon</div>
+)
   )
           <button></button>"
         onClick={() => setIsVisible(true)} className="fixed bottom-4 left-4 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg p-3 text-white,"
@@ -340,7 +340,8 @@ const toggleHighContrast = () => {/* TODO: Fix JSX expression */}
 // >
               {settings.highContrast ?}"
           <Eye className="w-4 h-4" /> : <EyeOff className="w-4 h-4" />}
-            </button></div>)
+            </button></div>
+)
         )}"
 <div className="flex items-center justify-between"><span className="text-sm">Large Text</span><button></button>`
             onClick={toggleLargeText} className={`flex items-center px-3 py-1 rounded ${}
@@ -358,7 +359,8 @@ const toggleHighContrast = () => {/* TODO: Fix JSX expression */}
 // >
               {settings.reducedMotion ?}"
           <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
-            </button></div>)
+            </button></div>
+)
         )}
         {enableScreenReader && (}"
 <div className="flex items-center justify-between"><span className="text-sm">Screen Reader</span><button></button>`
@@ -366,7 +368,8 @@ const toggleHighContrast = () => {/* TODO: Fix JSX expression */}
                 settings.screenReader ? 'bg-cyan-600 text-white' : 'bg-gray-700 text-gray-300'`
               }`}
               aria-pressed={settings.screenReader}"
-            ><Eye className="w-4 h-4" /></button></div>)
+            ><Eye className="w-4 h-4" /></button></div>
+)
         )}"
         <div className="flex items-center justify-between"><span className="text-sm">Focus Indicators</span><button></button>`
             onClick={toggleFocusVisible} className={`flex items-center px-3 py-1 rounded ${}
@@ -400,20 +403,21 @@ onClick={resetSettings} className="w-full mt-4 px-3 py-2 bg-red-600,"
         >
           Reset Settings;"
         </button></div>
-<div className="mt-4 text-xs text-gray-400"><p>Press Alt + A to toggle this panel</p><p>Press Alt + Shift + Tab to skip to main content</p></div></div>
+<div className="mt-4 text-xs text-gray-400"><p>Press Alt + A to toggle this panel</p><p>Press Alt + Shift + Tab to skip to main content</p></div>
+</div>
   ),
 }
 export default EnhancedAccessibility;"`
   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
   </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
+</div>
+</div>
+</div>
   </div>
   </AccessibilitySettings>
   </AccessibilityProps>

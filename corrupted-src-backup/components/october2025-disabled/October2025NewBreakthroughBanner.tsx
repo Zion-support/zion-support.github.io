@@ -4,7 +4,8 @@ impo, r, t {/* TODO: Fix JSX expression */}
 } fr, o, m '../conte, n, t/octob, e, r-20, 2, 5-n, e, w-breakthrou, g, h-conte, n, t'
 const October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
    }
-  return(<div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, p, y-20, p, x-4, relative, overflow-hidd, e, n'>
+  return (
+<div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, p, y-20, p, x-4, relative, overflow-hidd, e, n'>
       {/* Animated, background, effects */}
       </div>
 <div, className='absolute, inse, t-0, opacit, y-30'>
@@ -26,10 +27,10 @@ const October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */
         </div>
 <div, className='absolute, to, p-10, lef, t-1, 0, w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e' />
         <, className='absolute, to, p-1/2, righ, t-1, 0, w-9, 6, h-96, b, g-pi, n, k-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e'$2 />
-          sty, l, e={{ animationDel, a, y: ', 1, s' }}
+          sty, l, e={{ animationDel, a, y: ', 1, s'}}
          />
         <, classNam, e = 'absolute, botto, m-10, lef, t-1/3 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e'$2 />
-          sty, l, e={{ animationDel, a, y: ', 2, s' }}
+          sty, l, e={{ animationDel, a, y: ', 2, s'}}
          />
       </div>
 <div, classNam, e = 'm, a, x-w-7xl, m, x-auto, relative, z-10'>
@@ -66,13 +67,13 @@ const October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */
         {/* Content, Card, s */}
         </div>
 <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12'>
-          { octoberNewBreakthroughConte, n, t.m, a, p(conte, n, t = > {
+          {octoberNewBreakthroughConte, n, t.m, a, p(conte, n, t = > {
             const Ico, n = iconM, a, p[conte, n, t.ic, o, n] || Bra, i, n; return (
-              <, ke, y = { conte, n, t., i, d  }, to = {`/bl, o, g/${conte, n, t.slug}`}$2 />
+              <, ke, y = { conte, n, t., i, d}, to = {`/bl, o, g/${conte, n, t.slug}`}$2 />
                 className='group, b, g-gradie, n, t-to-br, fro, m-whi, t, e/10, t, o-whi, t, e/5, backdro, p-bl, u, r-xl, border, border-whi, t, e/20, rounde, d-2x, l, p-8, hove, r: fr, o, m-whi, t, e/20, hove, r:to-whi, t, e/10, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-5, 0, 0'
               >
                 </div>
-<div, className='flex, item, s-start, ga, p-4, m, b-6' ></div> <, classNam, e = { `bg-gradie, n, t-to-br ${conte, n, t.grad, i, e, n, t }, p-4, rounde, d-xl, shado, w-lg`}$2 />
+<div, className='flex, item, s-start, ga, p-4, m, b-6' ></div> <, classNam, e = {`bg-gradie, n, t-to-br ${conte, n, t.grad, i, e, n, t}, p-4, rounde, d-xl, shado, w-lg`}$2 />
                   >
                     <Icon, classNam, e = 'w-8 h-8, tex, t-whi, t, e' />
                   <div, className='fl, e, x-1'>
@@ -81,11 +82,11 @@ const October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */
         </div>
 <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12'>
           {/* TODO: Fix JSX expression */}
-              <, ke, y = { conte, n, t., i, d  }, to = {`/bl, o, g/${conte, n, t.slug}`}$2 />
+              <, ke, y = {conte, n, t., i, d}, to = {`/bl, o, g/${conte, n, t.slug}`}$2 />
                 className='group, b, g-gradie, n, t-to-br, fro, m-whi, t, e/10, t, o-whi, t, e/5, backdro, p-bl, u, r-xl, border, border-whi, t, e/20, rounde, d-2x, l, p-8, hove, r: fr, o, m-whi, t, e/20, hove, r:to-whi, t, e/10, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-5, 0, 0'
               ></Link>`
                 </div>
-<div, className='flex, item, s-start, ga, p-4, m, b-6' > <, classNam, e = { `bg-gradie, n, t-to-br ${conte, n, t.grad, i, e, n, t }, p-4, rounde, d-xl, shado, w-lg`}$2 />
+<div, className='flex, item, s-start, ga, p-4, m, b-6' > <, classNam, e = {`bg-gradie, n, t-to-br ${conte, n, t.grad, i, e, n, t}, p-4, rounde, d-xl, shado, w-lg`}$2 />
                   >
                     <Icon, classNam, e = 'w-8 h-8, tex, t-whi, t, e' />
                   </div>
@@ -101,10 +102,10 @@ const October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */
                 {/* Key, Metric, s */})
                 </div>
 <div, className='grid, gri, d-co, l, s-2, ga, p-3, m, b-6'>)
-                  { Obje, c, t.entri, e, s(conte, n, t.metr, i, c, s)
+                  {Obje, c, t.entri, e, s(conte, n, t.metr, i, c, s)
                     .sli, c, e(0, 4)
                     .m, a, p(([k, e, y, val, u, e]) = > (
-                      <, ke, y = { ke, y  }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, border, border-whi, t, e/10'$2 />
+                      <, ke, y = { ke, y}, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, border, border-whi, t, e/10'$2 />
                       >
                         </div>
 <div, className='te, x, t-2xl, fon, t-extrabold, tex, t-white, m, b-1'>
@@ -112,18 +113,19 @@ const October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */
                 </div>
 <div, className='grid, gri, d-co, l, s-2, ga, p-3, m, b-6'>
                   {/* TODO: Fix JSX expression */}
-                      <, ke, y = { ke, y  }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, border, border-whi, t, e/10'$2 />
+                      <, ke, y = {ke, y}, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, border, border-whi, t, e/10'$2 />
                       >
                         </div>
 <div, className='te, x, t-2xl, fon, t-extrabold, tex, t-white, m, b-1'>
                           {val, u, e}
                         </div>
-<div, className='te, x, t-xs, tex, t-purp, l, e-300, capitalize, font-medi, u, m'></div>)
+<div, className='te, x, t-xs, tex, t-purp, l, e-300, capitalize, font-medi, u, m'></div>
+)
                           {k, e, y.repla, c, e(/([A-, Z])/g, ' $1').tr, i, m()})
                 {/* Highligh, t, s */}
                 <ul, classNam, e = 'spa, c, e-y-3, m, b-6'>
                   {/* TODO: Fix JSX expression */}
-                    <, ke, y = { id, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2, tex, t-xs, tex, t-purp, l, e-2, 0, 0'$2 />
+                    <, ke, y = {id, x}, classNa, m, e = 'flex, item, s-start, ga, p-2, tex, t-xs, tex, t-purp, l, e-2, 0, 0'$2 />
                     >
                       <TrendingUp, className='w-4 h-4, tex, t-gre, e, n-400, m, t-0.5, fle, x-shri, n, k-0' />
                       <span, className='leadi, n, g-relax, e, d'>{highlig, h, t})
@@ -257,7 +259,7 @@ const October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */
 <div, className='mt-12, tex, t-cent, e, r'>
           </div>
 <div, className='inli, n, e-flex, fle, x-wrap, ga, p-3, justif, y-cent, e, r'>
-            { [
+            {[
               'AI, Agen, t, s',
               'Memory, System, s',
               'FinO, p, s',
@@ -267,22 +269,72 @@ const October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */
               'N, L, P',
               'Enterprise, Automatio, n',
               'Cloud, Managemen, t'].m, a, p(t, a, g = > (
-              <, ke, y = { ta, g  }, classNa, m, e = 'bg-whi, t, e/10, backdro, p-bl, u, r-sm, border, border-whi, t, e/20, tex, t-purp, l, e-200, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, hove, r: bg-whi, t, e/20, transitio, n-colo, r, s'$2 />
+              <, ke, y = { ta, g}, classNa, m, e = 'bg-whi, t, e/10, backdro, p-bl, u, r-sm, border, border-whi, t, e/20, tex, t-purp, l, e-200, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, hove, r: bg-whi, t, e/20, transitio, n-colo, r, s'$2 />
               >)
                 {t, a, g})
               </sp, a, n>)
           </div>
 <div, className='inli, n, e-flex, fle, x-wrap, ga, p-3, justif, y-cent, e, r'>
             {/* TODO: Fix JSX expression */}
-              <, ke, y = { ta, g  }, classNa, m, e = 'bg-whi, t, e/10, backdro, p-bl, u, r-sm, border, border-whi, t, e/20, tex, t-purp, l, e-200, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, hove, r: bg-whi, t, e/20, transitio, n-colo, r, s'$2 />
+              <, ke, y = {ta, g}, classNa, m, e = 'bg-whi, t, e/10, backdro, p-bl, u, r-sm, border, border-whi, t, e/20, tex, t-purp, l, e-200, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, hove, r: bg-whi, t, e/20, transitio, n-colo, r, s'$2 />
               >
                 {t, a, g})
           </div>
-        </div>
-      </div>
-    </div>
-  )
+</div>
+</div>
+</div>
+)
 }
 export default October2025NewBreakthroughBanner;
 `
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></Link></Link></Link></Link></Link></p></p></h2></h2></h3></h3></h3></ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></span></span></span></span></span></Link></Link></Link></Link></Link></p></p></h2></h2></h3></h3></h3></ul>

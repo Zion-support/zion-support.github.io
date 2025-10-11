@@ -1,11 +1,10 @@
 import React from 'react'
-import { motion } from 'framer-motion'
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Link } from "react-router-dom"
-import { 
-  Bot, 
+import {motion} from 'framer-motion'
+import {Button} from "@/components/ui/button"
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card"
+import {Badge} from "@/components/ui/badge"
+import {Link} from "react-router-dom"
+import {Bot, 
   Shield, 
   TrendingUp, 
   Code, 
@@ -15,11 +14,9 @@ import {
   ArrowRight,
   Star,
   Users,
-  Globe;
-} from "lucide-react"
-import { getFeaturedServices } from "@/data/microSaasServices"
-export function MicroSaasShowcase() {
-  const featuredServices = getFeaturedServices().slice(0, 6)
+  Globe;} from "lucide-react"
+import {getFeaturedServices} from "@/data/microSaasServices"
+export function MicroSaasShowcase() {const featuredServices = getFeaturedServices().slice(0, 6)
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case "AI Services":
@@ -39,11 +36,9 @@ export function MicroSaasShowcase() {
       case "Automation":
         return <Zap className="w-8 h-8" />
       default:
-        return <TrendingUp className="w-8 h-8" />
-    }
+        return <TrendingUp className="w-8 h-8" />}
   }
-  const getCategoryColor = (category: string) => {
-    switch (category) {
+  const getCategoryColor = (category: string) => {switch (category) {
       case "AI Services":
         return "from-purple-500 to-indigo-600"
       case "IT Services":
@@ -61,11 +56,10 @@ export function MicroSaasShowcase() {
       case "Automation":
         return "from-yellow-500 to-orange-600"
       default:
-        return "from-gray-500 to-slate-600"
-    }
+        return "from-gray-500 to-slate-600"}
   }
   return (
-    <section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light relative overflow-hidden">
+<section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light relative overflow-hidden">
       {/* Background effects */}
       </section>
 <div className="absolute inset-0">
@@ -73,13 +67,13 @@ export function MicroSaasShowcase() {
 <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-zion-purple/10 via-transparent to-zion-cyan/10"></div>
 <div className="absolute top-20 right-20 w-96 h-96 bg-zion-purple/5 rounded-full filter blur-3xl"></div>
 <div className="absolute bottom-20 left-20 w-80 h-80 bg-zion-cyan/5 rounded-full filter blur-3xl"></div>
-      </div>
+</div>
 <div className="container relative z-10 mx-auto px-4">
         {/* Header */}
         <motion.div;
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0, y: 30}}
+          whileInView={{ opacity: 1, y: 0}}
+          transition={{ duration: 0.8}}
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -120,8 +114,8 @@ export function MicroSaasShowcase() {
                 <span className="text-zion-slate-light text-sm">Email</span>
                 <span className="text-white font-semibold">kleber@ziontechgroup.com</span>
               </div>
-            </div>
-          </div>
+</div>
+</div>
         </motion.div>
 
         {/* Services Grid */}
@@ -129,9 +123,9 @@ export function MicroSaasShowcase() {
           {featuredServices.map((service, index) => (
             <motion.div;
               key={service.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
+              transition={{ duration: 0.6, delay: index * 0.1}}
             >
               <Card className="h-full bg-white/10 backdrop-blur-md border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105 group cursor-pointer">
                 <CardHeader className="pb-4">
@@ -144,8 +138,7 @@ export function MicroSaasShowcase() {
                         className={`w-4 h-4 ${
                           i < Math.floor(service.rating)
                             ? 'text-yellow-400 fill-current'
-                            : 'text-zion-slate-light'
-                        }`}
+                            : 'text-zion-slate-light'}`}
                       />
                     ))}
                   </div>
@@ -165,11 +158,9 @@ export function MicroSaasShowcase() {
             >
               </div>
 <div className="relative">
-                <img
-                  src={service.image} 
+                <img src={service.image} 
                   alt={service.title}
-                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
 <div className="absolute top-3 left-3">
                   {categoryIcons[service.category as keyof typeof categoryIcons]}
@@ -178,7 +169,7 @@ export function MicroSaasShowcase() {
                   <Star className="h-3 w-3 fill-yellow-400 text-yellow-400" />
                   <span className="text-xs font-medium">{service.rating}</span>
                 </div>
-              </div>
+</div>
 
               <CardHeader className="pb-3">
                 <CardTitle className="text-lg group-hover:text-zion-cyan transition-colors line-clamp-2">
@@ -259,7 +250,7 @@ export function MicroSaasShowcase() {
                       </div>
                     ))}
                   </div>
-                </div>
+</div>
               </CardContent>
               </div>
             </Card>
@@ -315,9 +306,9 @@ export function MicroSaasShowcase() {
                 Contact Sales;
               </Button>
             </div>
-          </div>
-        </div>
-      </div>
+</div>
+</div>
+</div>
         {/* CTA Section */}
         <div className="text-center">
           </div>
@@ -359,21 +350,18 @@ export function MicroSaasShowcase() {
                 <CheckCircle className="h-4 w-4 text-zion-cyan" />
                 <span>Enterprise Security</span>
               </div>
-            </div>
-          </div>
-        </div>
+</div>
+</div>
+</div>
       </div>
 
       <style>{`
         @keyframes fadeInUp {
           from {
             opacity: 0;
-            transform: translateY(30px)
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0)
-          }
+            transform: translateY(30px)}
+          to {opacity: 1;
+            transform: translateY(0)}
         }
       `}</style>
                     <Badge className="bg-zion-cyan text-zion-blue-dark">
@@ -409,7 +397,7 @@ export function MicroSaasShowcase() {
                       <Star className="w-4 h-4 text-yellow-400 fill-current" />
                       <span className="text-white">{service.rating}</span>
                     </div>
-                  </div>
+</div>
                   
                   {/* AI Score */}
                   <div className="flex items-center justify-between">
@@ -446,9 +434,9 @@ export function MicroSaasShowcase() {
 
         {/* CTA Section */}
         <motion.div;
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0, y: 30}}
+          whileInView={{ opacity: 1, y: 0}}
+          transition={{ duration: 0.8}}
           className="text-center"
         >
           <div className="bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 backdrop-blur-md rounded-2xl p-8 border border-white/20">
@@ -475,15 +463,13 @@ export function MicroSaasShowcase() {
               <Button
                 size="lg" 
                 variant="outline" 
-                className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark"
-                onClick={() => window.open(`mailto:kleber@ziontechgroup.com?subject=Business Consultation Request`)}
-              >
+                className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark" onClick={$2}>
                 Get Free Consultation;
               </Button>
             </div>
-          </div>
+</div>
         </motion.div>
       </div>
     </section>
-  )
+)
 }

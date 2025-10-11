@@ -1,12 +1,11 @@
-import { Link } from 'react-router-dom'
-import { Star, Phone } from 'lucide-react'
+import {Link} from 'react-router-dom'
+import {Star, Phone} from 'lucide-react'
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-const ApiDocs: React.FC = () => {
-    return (
+const ApiDocs: React.FC = () => {return (
     <div>Coming Soon</div>
-  )
+)
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation /></Navigation>"
       </div><main className="pt-20"></main>"
@@ -35,6 +34,5 @@ const ApiDocs: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  )
-  }
+)}
 export default ApiDocsPage;

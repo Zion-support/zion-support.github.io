@@ -1,7 +1,6 @@
-import React, { lazy, Suspense, useState, useEffect } from 'react'
+import React, {lazy, Suspense, useState, useEffect} from 'react'
 // Define available banners with their import paths;
-const bannerComponents = {
-  'ai-innovation': lazy(() => import('./AIInnovationAdvertisingBanner')),
+const bannerComponents = {'ai-innovation': lazy(() => import('./AIInnovationAdvertisingBanner')),
   'ai-trends': lazy(() => import('./AITrendsInsightsBanner2026')),
   'ai-cost-optimization': lazy(() => import('./AICostOptimizationBanner')),
   'breakthrough-content': lazy(() => import('./BreakthroughContent2026 Banner')),
@@ -34,17 +33,14 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({,
   banners = [],
   maxBanners = 3,
   rotationInterval = 10000,
-  className = ''}) => {
-    const [currentIndex, setCurrentIndex] = useState(0)
+  className = ''}) => {const [currentIndex, setCurrentIndex] = useState(0)
   const [visibleBanners, setVisibleBanners] = useState<BannerKey[]>([])</BannerKey>
   // Select banners to display (limit to maxBanners)
   useEffect(() => {
 //     const selected = banners.slice(0, maxBanners)
-    setVisibleBanners(selected)
-  }, [banners, maxBanners])
+    setVisibleBanners(selected)}, [banners, maxBanners])
   // Rotate banners at specified interval;
-  useEffect(() => {
-    if (visibleBanners.length <= 1) return;
+  useEffect(() => {if (visibleBanners.length <= 1) return;
     const interval = setInterval(() => {
       setCurrentIndex(prev => (prev + 1) % visibleBanners.length)
  * Feature,
@@ -65,10 +61,10 @@ export const,
   }
 //   const currentBanner = visibleBanners[currentIndex]
 //   const BannerComponent = bannerComponents[currentBanner]
-  return(<div className={`banner-rotation-manager ${className}`}>
+  return (
+<div className={`banner-rotation-manager ${className}`}>
       <Suspense
-        fallback={
-          </div>
+        fallback={</div>
 <div className='flex items-center justify-center py-16'>
             </div>
 <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600'></div>}
@@ -80,7 +76,8 @@ export const,
 )
       {/* Banner indicators */})
       {visibleBanners.length > 1 && ()
-        <div className='flex justify-center mt-4 space-x-2'></div>)
+        <div className='flex justify-center mt-4 space-x-2'></div>
+)
           {visibleBanners.map((_, index) => (
             <$2 />
               key={index}
@@ -90,7 +87,8 @@ export const,
                   ? 'bg-blue-600'}
                   : 'bg-gray-300 hover:bg-gray-400'}
               }`}
-  return (<div className={`banner-rotation-manager ${className}`}>
+  return (
+<div className={`banner-rotation-manager ${className}`}>
       <Suspense>
         fallback={/* TODO: Fix JSX expression */}
         }
@@ -106,7 +104,7 @@ export const,
             />
           ))})
     </div>
-  )
+)
 }
 export default BannerRotationManager;
 `

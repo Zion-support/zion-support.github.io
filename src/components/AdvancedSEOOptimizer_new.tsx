@@ -1,6 +1,6 @@
 'use client'
-import React, { useEffect, useCallback, useRef } from 'react'
-import { Helmet } from 'react-helmet-async'
+import React, {useEffect, useCallback, useRef} from 'react'
+import {Helmet} from 'react-helmet-async'
 interface SEOData {/* TODO: Fix JSX expression */}
 }
 interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */}

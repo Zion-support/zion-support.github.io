@@ -1,12 +1,8 @@
 impo, r, t {/* TODO: Fix JSX expression */}
 } fr, o, m 'luci, d, e-rea, c, t'
-interface October2025AIRevolutionBannerProp, s {
-    classNa, m, e ?  : string;
-  }
+interface October2025AIRevolutionBannerProp, s {classNa, m, e ?  : string;}
 export default function October2025AIRevolutionBann, e, r({)
-  classNa, m, e = '')
-}: October2025AIRevolutionBannerPro, p, s) {
-  return(<, classNam, e = {`bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, vi, a-indi, g, o-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, borde, r-y, borde, r-purp, l, e-5, 0, 0/30 ${classNa, m, e}`}$2 />
+  classNa, m, e = '')}: October2025AIRevolutionBannerPro, p, s) {return(<, classNam, e = {`bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, vi, a-indi, g, o-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, borde, r-y, borde, r-purp, l, e-5, 0, 0/30 ${classNa, m, e}`}$2 />
     >
   return (
     <, classNam, e = {`bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, vi, a-indi, g, o-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, borde, r-y, borde, r-purp, l, e-5, 0, 0/30 ${classNa, m, e}`}$2 />
@@ -201,4 +197,42 @@ export default function October2025AIRevolutionBann, e, r({/* TODO: Fix JSX expr
             <Link, className='w-5 h-5' />
   )
 }
-`</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></Link></Link></Link></Link></p></p></p></p></p></p></h2></h3></h3></h3></h3></h3></h3>
+`</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div></div></span></span></span></span></span></span></span></span></Link></Link></Link></Link></p></p></p></p></p></p></h2></h3></h3></h3></h3></h3></h3>

@@ -1,13 +1,13 @@
 import React from 'react'
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c'
-impo, r, t { Bra, i, n } fr, o, m 'luci, d, e-rea, c, t'
-impo, r, t { Sparkl, e, s } fr, o, m 'luci, d, e-rea, c, t'
-impo, r, t { Trending, U, p } fr, o, m 'luci, d, e-rea, c, t'
-impo, r, t { CheckCirc, l, e } fr, o, m 'luci, d, e-rea, c, t'
-impo, r, t { ArrowRig, h, t } fr, o, m 'luci, d, e-rea, c, t'
-impo, r, t { Awa, r, d } fr, o, m 'luci, d, e-rea, c, t'
-impo, r, t { Lightbu, l, b } fr, o, m 'luci, d, e-rea, c, t'
-const CognitiveComputingTransformatio, n: React.FC = () => { ,
+impo, r, t {Helm, e, t} fr, o, m 'rea, c, t-helm, e, t-asy, n, c'
+impo, r, t {Bra, i, n} fr, o, m 'luci, d, e-rea, c, t'
+impo, r, t {Sparkl, e, s} fr, o, m 'luci, d, e-rea, c, t'
+impo, r, t {Trending, U, p} fr, o, m 'luci, d, e-rea, c, t'
+impo, r, t {CheckCirc, l, e} fr, o, m 'luci, d, e-rea, c, t'
+impo, r, t {ArrowRig, h, t} fr, o, m 'luci, d, e-rea, c, t'
+impo, r, t {Awa, r, d} fr, o, m 'luci, d, e-rea, c, t'
+impo, r, t {Lightbu, l, b} fr, o, m 'luci, d, e-rea, c, t'
+const CognitiveComputingTransformatio, n: React.FC = () => {,
   return(<React.Fragment>,
       <Helm, e, t>
         <title>
@@ -22,7 +22,7 @@ const CognitiveComputingTransformatio, n: React.FC = () => { ,
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-cogniti v e-computi n g-enterpri s e-transformati o n')
         />),
       <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'>
-        <Head, e, r / > {/* Hero, Sect, i, o, n */ }
+        <Head, e, r / > {/* Hero, Sect, i, o, n */}
         </div>
 <div, classNam, e = 'relative, p, t-24, p, b-16, overflo, w-hidd, e, n'>
           </div>
@@ -42,7 +42,7 @@ const CognitiveComputingTransformatio, n: React.FC = () => { ,
                 className='te, x, t-purp, l, e-300, hove, r: te, x, t-white, transitio, n-colo, r, s'
               >
 const CognitiveComputingTransformatio, n: React.FC = () => {/* TODO: Fix JSX expression */}
-        <Head, e, r / > {/* Hero, Sect, i, o, n */ }
+        <Head, e, r / > {/* Hero, Sect, i, o, n */}
         </div>
 <div, classNam, e = 'relative, p, t-24, p, b-16, overflo, w-hidd, e, n'>
           </div>
@@ -158,8 +158,8 @@ const CognitiveComputingTransformatio, n: React.FC = () => {/* TODO: Fix JSX exp
                         'Confidence, scoring, for recommendatio, n, s',
                         'Audit, trails, for complian, c, e',
                         'Hum, a, n-interpretable, explanation, s']}].m, a, p((capabili, t, y, i, d, x) => (
-                    <, ke, y = { id, x }, classNa, m, e = 'bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/30, t, o-bl, u, e-9, 0, 0/30, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-a, l, l'$2 />
-                  ].m, a, p((capabili, t, y, i, d, x) => (<, ke, y = { id, x }, classNa, m, e = 'bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/30, t, o-bl, u, e-9, 0, 0/30, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-a, l, l'$2 />
+                    <, ke, y = {id, x}, classNa, m, e = 'bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/30, t, o-bl, u, e-9, 0, 0/30, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-a, l, l'$2 />
+                  ].m, a, p((capabili, t, y, i, d, x) => (<, ke, y = {id, x}, classNa, m, e = 'bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/30, t, o-bl, u, e-9, 0, 0/30, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-a, l, l'$2 />
                     >
                       <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4, flex, items-center, ga, p-3'>
                         <span, className='te, x, t-3, x, l'>{capabili, t, y.ic, o, n}
@@ -168,12 +168,12 @@ const CognitiveComputingTransformatio, n: React.FC = () => {/* TODO: Fix JSX exp
                   <TrendingUp, className='w-8 h-8, tex, t-gre, e, n-4, 0, 0' />
                   <TrendingUp, className='w-8 h-8, tex, t-gre, e, n-4, 0, 0' />
                   Enterprise, Application, s;
-                    <, ke, y = { id, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, border, border-whi, t, e/10, rounde, d-x, l, p-6, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-a, l, l'$2 />
+                    <, ke, y = {id, x}, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, border, border-whi, t, e/10, rounde, d-x, l, p-6, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-a, l, l'$2 />
                     >
                       </div>
 <div, classNam, e='flex, item, s-start, justif, y-between, m, b-4'>
                         <Award, classNam, e='w-8 h-8, tex, t-yell, o, w-4, 0, 0' />
-                    <, ke, y = { id, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, border, border-whi, t, e/10, rounde, d-x, l, p-6, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-a, l, l'$2 />
+                    <, ke, y = {id, x}, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, border, border-whi, t, e/10, rounde, d-x, l, p-6, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-a, l, l'$2 />
                     >
                       </div>
 <div, className='flex, item, s-start, justif, y-between, m, b-4'>
@@ -182,7 +182,7 @@ const CognitiveComputingTransformatio, n: React.FC = () => {/* TODO: Fix JSX exp
                             {a, p, p.t, i, t, l, e}
                           <p, classNam, e = 'te, x, t-sm, tex, t-purp, l, e-3, 0, 0'>
                         <Award, classNam, e='w-8 h-8, tex, t-yell, o, w-4, 0, 0' />
-                    <, ke, y = { id, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, border, border-whi, t, e/10, rounde, d-x, l, p-6, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-a, l, l'$2 />
+                    <, ke, y = {id, x}, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, border, border-whi, t, e/10, rounde, d-x, l, p-6, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-a, l, l'$2 />
                     >
                       </div>
 <div, className='flex, item, s-start, justif, y-between, m, b-4'>
@@ -194,15 +194,15 @@ const CognitiveComputingTransformatio, n: React.FC = () => {/* TODO: Fix JSX exp
                         <Award, className='w-8 h-8, tex, t-yell, o, w-4, 0, 0' />
                       </div>
 <div, className='grid, gri, d-co, l, s-2, ga, p-3'>
-                        { Obje, c, t.entri, e, s(a, p, p.imp, a, c, t).m, a, p(([k, e, y, val, u, e], i) = > (
-                          <, ke, y = { , i  }, classNa, m, e = 'bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/20, t, o-emera, l, d-9, 0, 0/20, border, border-gre, e, n-5, 0, 0/30, rounde, d-l, g, p-3'$2 />
+                        {Obje, c, t.entri, e, s(a, p, p.imp, a, c, t).m, a, p(([k, e, y, val, u, e], i) = > (
+                          <, ke, y = { , i}, classNa, m, e = 'bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/20, t, o-emera, l, d-9, 0, 0/20, border, border-gre, e, n-5, 0, 0/30, rounde, d-l, g, p-3'$2 />
                           >
                             </div>
 <div, className='te, x, t-xs, tex, t-purp, l, e-300, m, b-1, capitaliz, e'>
                       </div>
 <div, className='grid, gri, d-co, l, s-2, ga, p-3'>
                         {/* TODO: Fix JSX expression */}
-                          <, ke, y = { , i  }, classNa, m, e = 'bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/20, t, o-emera, l, d-9, 0, 0/20, border, border-gre, e, n-5, 0, 0/30, rounde, d-l, g, p-3'$2 />
+                          <, ke, y = {, i}, classNa, m, e = 'bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/20, t, o-emera, l, d-9, 0, 0/20, border, border-gre, e, n-5, 0, 0/30, rounde, d-l, g, p-3'$2 />
                           >
                             </div>
 <div, className='te, x, t-xs, tex, t-purp, l, e-300, m, b-1, capitaliz, e'>
@@ -302,4 +302,40 @@ const CognitiveComputingTransformatio, n: React.FC = () => {/* TODO: Fix JSX exp
                 <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r:te, x, t-purp, l, e-300, transitio, n-colo, r, s'>
                   Fortune, 20, Teleco,
   m: $4.7B, Cognitive, Transformation;)
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></span></Link></Link></Link></Link></p></p></p></p></p></p></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></ul></li></li></li></li></li></li></li></li></li></li></nav></nav>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div></span></span></span></span></span></span></span></span></span></span></span></span></span></span></Link></Link></Link></Link></p></p></p></p></p></p></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></ul></li></li></li></li></li></li></li></li></li></li></nav></nav>

@@ -1,37 +1,29 @@
 'use client'
 import React from 'react'
-import { Palette, Brain, FileText, ArrowRight, CheckCircle, Star, Users, Shield, Clock, Zap } from 'lucide-react'
+import {Palette, Brain, FileText, ArrowRight, CheckCircle, Star, Users, Shield, Clock, Zap} from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-const AIContentStudioPage: React.FC = () => {
-  const features = [
+const AIContentStudioPage: React.FC = () => {const features = [
     {
       icon: FileText,
       title: 'Content Creation',
       description: 'AI-powered content generation and optimization',
-      benefits: ['Auto content', 'SEO optimization', 'Multi-format support']
-    },
-    {
-      icon: Target,
+      benefits: ['Auto content', 'SEO optimization', 'Multi-format support']},
+    {icon: Target,
       title: 'Content Strategy',
       description: 'Intelligent content planning and strategy',
-      benefits: ['Content planning', 'Audience targeting', 'Performance tracking']
-    },
-    {
-      icon: Zap,
+      benefits: ['Content planning', 'Audience targeting', 'Performance tracking']},
+    {icon: Zap,
       title: 'Automated Publishing',
       description: 'Automated content publishing and distribution',
-      benefits: ['Multi-platform publishing', 'Scheduling', 'Distribution']
-    },
-    {
-      icon: Settings,
+      benefits: ['Multi-platform publishing', 'Scheduling', 'Distribution']},
+    {icon: Settings,
       title: 'Content Analytics',
       description: 'Comprehensive content performance analytics',
-      benefits: ['Performance metrics', 'Engagement tracking', 'ROI analysis']
-    }
+      benefits: ['Performance metrics', 'Engagement tracking', 'ROI analysis']}
   ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       </div><main className="container mx-auto px-4 py-16 pt-24">
         </main><section className="text-center mb-16">
@@ -80,11 +72,13 @@ const AIContentStudioPage: React.FC = () => {
                       {benefit})})
       <Footer />
     </div>
-  )
+)
 }
 export default AIContentStudioPage</h2>
   </a>
   </a>
   </p>
   </h1>
-</div></div></div></p></h3></ul></li></main></section>
+</div>
+</div>
+</div></p></h3></ul></li></main></section>

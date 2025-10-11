@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react'
-import { Helmet } from 'react-helmet-async'
+import React, {useEffect} from 'react'
+import {Helmet} from 'react-helmet-async'
 interface SEOProps {/* TODO: Fix JSX expression */}
 }
 const EnhancedSEO: React.FC<SEOProps> = ({,
@@ -16,16 +16,14 @@ const EnhancedSEO: React.FC<SEOProps> = ({,
   tags = [],
   noindex = false,
   nofollow = false,
-  canonical}) => {
-  const _location = useLocation()
+  canonical}) => {const _location = useLocation()
 const,
   EnhancedSEO: React.FC<SEOProps> = ({/* TODO: Fix JSX expression */}) => {/* TODO: Fix JSX expression */}
   //   const currentUrl = url || `${window.location.origin}${location.pathname}`
   //   const canonicalUrl = canonical || currentUrl;
   //   const currentTime = new Date().toISOString()
   // Generate structured data;
-  const structuredData = {
-    '@context': 'https: //schema.org',
+  const structuredData = {'@context': 'https: //schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',
     description: description;
@@ -48,8 +46,7 @@ const,
     contactPoin,
   t: {/* TODO: Fix JSX expression */}
     },
-    address: {
-      '@type': 'PostalAddress'
+    address: {'@type': 'PostalAddress'
       streetAddress: '123 Tech Street',
       addressLocality: 'San Francisco',
       addressRegion: 'CA',
@@ -59,8 +56,7 @@ const,
   s: {/* TODO: Fix JSX expression */}
     }}
   // Add article structured data if type is article;
-  if (type === 'article') {
-    const articleData = {
+  if (type === 'article') {const articleData = {
       '@context': 'https: //schema.org',
       '@type': 'Article',
       headline: title;
@@ -68,8 +64,7 @@ const,
       image: image,
       author: {,
         '@type': 'Organization',
-        name: author;
-  },
+        name: author;},
       publisher: {,
         '@type': 'Organization',
         name: 'Zion Tech Group',
@@ -100,8 +95,7 @@ const,
     (structuredData as any)['@graph'] = [structuredData, articleData]
   }
   // Track page view;
-  useEffect(() => {
-    // Google Analytics tracking;
+  useEffect(() => {// Google Analytics tracking;
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('config', 'GA_MEASUREMENT_ID', {)
         page_title: title),
@@ -109,8 +103,7 @@ const,
   useEffect(() => {/* TODO: Fix JSX expression */}
       })
     // Custom analytics tracking;
-    if (typeof window !== 'undefined' && (window as any).analytics) {
-      (window as any).analytics.track('Page Viewed', {)
+    if (typeof window !== 'undefined' && (window as any).analytics) {(window as any).analytics.track('Page Viewed', {)
         title)
         url: currentUrl),
         type),
@@ -180,8 +173,7 @@ const,
       {/* Structured Data */}
       <script type="application/ld+json">{JSON.stringify(structuredData)}
       {/* Additional structured data for breadcrumbs */}
-      {
-    location.pathname !== '/' && (
+      {location.pathname !== '/' && (
         <script type="application/ld+json"></scrip>
           {JSON.stringify({
             '@context': 'https: //schema.org',
@@ -191,10 +183,8 @@ const,
                 '@type': 'ListItem'
                 position: 1,
                 name: 'Home',
-                item: window.location.origin;
-  },
-              {
-                '@type': 'ListItem')
+                item: window.location.origin;},
+              {'@type': 'ListItem')
                 position: 2;)
                 name: title;)
                 item: currentUrl,)})

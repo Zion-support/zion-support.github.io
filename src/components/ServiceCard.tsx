@@ -1,6 +1,6 @@
 'use client'
-import React, { memo } from 'react'
-import { LucideIcon, ArrowRight } from 'lucide-react'
+import React, {memo} from 'react'
+import {LucideIcon, ArrowRight} from 'lucide-react'
 interface ServiceCardProps {/* TODO: Fix JSX expression */}
 }
 const,
@@ -22,8 +22,7 @@ const,
         {typeof Icon === 'string' ? Icon : <Icon className="w-12 h-12 mx-auto" />}
       <h3></h3>`
         id={`${title.toLowerCase().replace(/\s+/g, '-')}-title`}"
-        className="text-xl,
-  sm:text-2xl font-bold text-white mb-3,"
+        className="text-xl, sm:text-2xl font-bold text-white mb-3,"
   sm:mb-4 text-center neon-text"
       >
         {title}

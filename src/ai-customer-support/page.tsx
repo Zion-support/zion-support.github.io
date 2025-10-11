@@ -1,7 +1,6 @@
 'use client'
 import React from 'react'
-const AICustomerSupportPage: React.FC = () => {
-    return (
+const AICustomerSupportPage: React.FC = () => {return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       </div>
 <div className="text-center">
@@ -11,12 +10,12 @@ const AICustomerSupportPage: React.FC = () => {
           Contact Us,
   
       </div>
-    </div>
-  )
-  }
-import { MessageCircle, Headphones, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star, ArrowRight, Phone, Mail } from 'lucide-react'
+</div>
+)}
+import {MessageCircle, Headphones, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star, ArrowRight, Phone, Mail} from 'lucide-react'
 export default AICustomerSupportPage;
 }
-import { MessageCircle, Headphones, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star, ArrowRight, Phone, Mail } from 'lucide-react'
+import {MessageCircle, Headphones, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star, ArrowRight, Phone, Mail} from 'lucide-react'
 export default AICustomerSupportPage;
-}</div></div></a></p></h1>
+}</div>
+</div></a></p></h1>

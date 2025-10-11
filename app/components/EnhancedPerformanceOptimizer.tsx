@@ -1,23 +1,18 @@
 'use client';
-import React, { useEffect } from 'react';
+import React, {useEffect} from 'react';
 
-const EnhancedPerformanceOptimizer: React.FC = () => {
-  useEffect(() => {
+const EnhancedPerformanceOptimizer: React.FC = () => {useEffect(() => {
     // Performance optimization code
     const optimizeImages = () => {
       const images = document.querySelectorAll('img')
       images.forEach(img => {
         if (!img.loading) {
-          img.loading = 'lazy'
-        }
-        if (!img.decoding) {
-          img.decoding = 'async'
-        }
+          img.loading = 'lazy'}
+        if (!img.decoding) {img.decoding = 'async'}
       })
     }
 
-    const preloadCriticalResources = () => {
-      const criticalResources = [
+    const preloadCriticalResources = () => {const criticalResources = [
         '/fonts/inter.woff2',
         '/css/critical.css'
       ]
@@ -28,30 +23,25 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
         link.href = resource
         link.as = resource.endsWith('.woff2') ? 'font' : 'style'
         if (resource.endsWith('.woff2')) {
-          link.crossOrigin = 'anonymous'
-        }
+          link.crossOrigin = 'anonymous'}
         document.head.appendChild(link)
       })
     }
 
-    const optimizeAnimations = () => {
-      // Reduce motion for users who prefer it
+    const optimizeAnimations = () => {// Reduce motion for users who prefer it
       if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         document.documentElement.style.setProperty('--animation-duration', '0.01ms')
-        document.documentElement.style.setProperty('--animation-iteration-count', '1')
-      }
+        document.documentElement.style.setProperty('--animation-iteration-count', '1')}
     }
 
-    const setupIntersectionObserver = () => {
-      const observer = new IntersectionObserver(
+    const setupIntersectionObserver = () => {const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach(entry => {
             if (entry.isIntersecting) {
-              entry.target.classList.add('animate-in')
-            }
+              entry.target.classList.add('animate-in')}
           })
         },
-        { threshold: 0.1 }
+        {threshold: 0.1}
       )
 
       const elements = document.querySelectorAll('[data-animate]')

@@ -1,38 +1,30 @@
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, BarChart3, Brain, Target, Zap, Shield, Clock, Users, Star, ArrowRight, Database, Cpu, Eye, Globe, Lock } from 'lucide-react'
+import {Helmet} from 'react-helmet-async'
+import {CheckCircle, TrendingUp, Phone, Mail, MapPin, BarChart3, Brain, Target, Zap, Shield, Clock, Users, Star, ArrowRight, Database, Cpu, Eye, Globe, Lock} from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-const AIPredictiveAnalyticsPage: React.FC = () => {
-  const features = [
+const AIPredictiveAnalyticsPage: React.FC = () => {const features = [
     {
       icon: TrendingUp,
       title: 'Predictive Modeling',
       description: 'AI-powered predictive modeling and forecasting',
-      benefits: ['Trend prediction', 'Forecasting', 'Risk assessment']
-    },
-    {
-      icon: Target,
+      benefits: ['Trend prediction', 'Forecasting', 'Risk assessment']},
+    {icon: Target,
       title: 'Data Analysis',
       description: 'Advanced data analysis and pattern recognition',
-      benefits: ['Pattern detection', 'Anomaly detection', 'Insight generation']
-    },
-    {
-      icon: Zap,
+      benefits: ['Pattern detection', 'Anomaly detection', 'Insight generation']},
+    {icon: Zap,
       title: 'Automated Insights',
       description: 'Intelligent insight generation and recommendations',
-      benefits: ['Auto insights', 'Recommendations', 'Action suggestions']
-    },
-    {
-      icon: Settings,
+      benefits: ['Auto insights', 'Recommendations', 'Action suggestions']},
+    {icon: Settings,
       title: 'Custom Models',
       description: 'Custom predictive models and algorithms',
-      benefits: ['Model customization', 'Algorithm tuning', 'Performance optimization']
-    }
+      benefits: ['Model customization', 'Algorithm tuning', 'Performance optimization']}
   ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       </div><main className="container mx-auto px-4 py-16 pt-24">
         </main><section className="text-center mb-16">
@@ -79,11 +71,13 @@ const AIPredictiveAnalyticsPage: React.FC = () => {
                       {benefit})})
       <Footer />
     </div>
-  )
+)
 }
 export default AIPredictiveAnalyticsPage</h2>
   </a>
   </a>
   </p>
   </h1>
-</div></div></div></p></p></h3></ul></li></main></section>
+</div>
+</div>
+</div></p></p></h3></ul></li></main></section>

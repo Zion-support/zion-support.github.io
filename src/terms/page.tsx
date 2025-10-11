@@ -1,39 +1,27 @@
 'use client'
 import React from 'react'
-import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe, User, Mail, Phone, Calendar, Lock, Database, Server, Key } from 'lucide-react'
-export default function TermsPage() {
-  const lastUpdated = 'January 1, 2024'
+import {FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe, User, Mail, Phone, Calendar, Lock, Database, Server, Key} from 'lucide-react'
+export default function TermsPage() {const lastUpdated = 'January 1, 2024'
   const sections = [
     {
       title: 'Acceptance of Terms',
       icon: CheckCircle,
-      content: 'By accessing and using our website and services, you accept and agree to be bound by the terms and provision of this agreement.'
-    },
-    {
-      title: 'Use License',
+      content: 'By accessing and using our website and services, you accept and agree to be bound by the terms and provision of this agreement.'},
+    {title: 'Use License',
       icon: Key,
-      content: 'Permission is granted to temporarily download one copy of the materials on our website for personal, non-commercial transitory viewing only.'
-    },
-    {
-      title: 'Service Availability',
+      content: 'Permission is granted to temporarily download one copy of the materials on our website for personal, non-commercial transitory viewing only.'},
+    {title: 'Service Availability',
       icon: Server,
-      content: 'We strive to maintain 99.9% uptime for our services, but we do not guarantee uninterrupted access and reserve the right to modify or discontinue services.'
-    },
-    {
-      title: 'User Responsibilities',
+      content: 'We strive to maintain 99.9% uptime for our services, but we do not guarantee uninterrupted access and reserve the right to modify or discontinue services.'},
+    {title: 'User Responsibilities',
       icon: User,
-      content: 'Users are responsible for maintaining the confidentiality of their account information and for all activities that occur under their account.'
-    },
-    {
-      title: 'Intellectual Property',
+      content: 'Users are responsible for maintaining the confidentiality of their account information and for all activities that occur under their account.'},
+    {title: 'Intellectual Property',
       icon: FileText,
-      content: 'All content, trademarks, and intellectual property on our website are owned by Zion Tech Group and protected by applicable copyright and trademark laws.'
-    },
-    {
-      title: 'Limitation of Liability',
+      content: 'All content, trademarks, and intellectual property on our website are owned by Zion Tech Group and protected by applicable copyright and trademark laws.'},
+    {title: 'Limitation of Liability',
       icon: Shield,
-      content: 'In no event shall Zion Tech Group be liable for any damages arising out of the use or inability to use our services.'
-    }
+      content: 'In no event shall Zion Tech Group be liable for any damages arising out of the use or inability to use our services.'}
   ]
   const prohibitedUses = [
     'Violating any applicable laws or regulations',
@@ -46,35 +34,28 @@ export default function TermsPage() {
     'Engaging in any form of harassment or abuse'
   ]
   const serviceLevels = [
-    {
-      service: 'AI Services',
+    {service: 'AI Services',
       uptime: '99.9%',
       support: '24/7',
-      response: '1 hour'
-    },
-    {
-      service: 'IT Infrastructure',
+      response: '1 hour'},
+    {service: 'IT Infrastructure',
       uptime: '99.95%',
       support: '24/7',
-      response: '30 minutes'
-    },
-    {
-      service: 'Cloud Services',
+      response: '30 minutes'},
+    {service: 'Cloud Services',
       uptime: '99.9%',
       support: '24/7',
-      response: '1 hour'
-    },
-    {
-      service: 'Support Services',
+      response: '1 hour'},
+    {service: 'Support Services',
       uptime: 'N/A',
       support: 'Business Hours',
-      response: '4 hours'
-    }
+      response: '4 hours'}
   ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-      </div><section className="relative py-20 lg: py-32 overflow-hidden">
+      </div>
+<section className="relative py-20 lg: py-32 overflow-hidden">
         </section>
 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
 <div className="container mx-auto px-4 relative z-10">
@@ -100,7 +81,8 @@ export default function TermsPage() {
                 <CheckCircle className="w-5 h-5 text-green-400" />
                 <span className="text-white font-medium">Transparent;
       {/* Last Updated */}
-      </div><section className="py-8">
+      </div>
+<section className="py-8">
         </section>
 <div className="container mx-auto px-4">
           </div>
@@ -112,7 +94,8 @@ export default function TermsPage() {
               <p className="text-sm text-gray-400 mt-2">
                 These terms may be updated from time to time. Continued use of our services constitutes acceptance of any changes.
       {/* Key Terms */}
-      </div><section className="py-20">
+      </div>
+<section className="py-20">
         </section>
 <div className="container mx-auto px-4">
           </div>
@@ -125,7 +108,8 @@ export default function TermsPage() {
 <div key={index} className="bg-slate-800/50 rounded-lg p-6">
                   </div>
 <div className="flex items-center space-x-3 mb-4">
-                    </div><section.icon className="w-8 h-8 text-cyan-400" />
+                    </div>
+<section.icon className="w-8 h-8 text-cyan-400" />
                     <h3 className="text-xl font-bold text-white">{section.title}
                   <p className="text-gray-300 text-sm">{section.content})
       {/* Prohibited Uses */}
@@ -145,7 +129,8 @@ export default function TermsPage() {
                   <AlertTriangle className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />
                   <span className="text-gray-300">{use})
       {/* Service Level Agreements */}
-      </div><section className="py-20">
+      </div>
+<section className="py-20">
         </section>
 <div className="container mx-auto px-4">
           </div>
@@ -168,7 +153,8 @@ export default function TermsPage() {
                       <td className="px-6 py-4 text-purple-400">{level.support}
                       <td className="px-6 py-4 text-green-400">{level.response})
       {/* Payment Terms */}
-      </div><section className="py-20 bg-slate-800/50">
+      </div>
+<section className="py-20 bg-slate-800/50">
         </section>
 <div className="container mx-auto px-4">
           </div>
@@ -194,7 +180,8 @@ export default function TermsPage() {
                 <p className="text-gray-300">
                   Late payments may result in service suspension. A late fee of 1.5% per month may be applied to overdue accounts.
       {/* Termination */}
-      </div><section className="py-20">
+      </div>
+<section className="py-20">
         </section>
 <div className="container mx-auto px-4">
           </div>
@@ -221,7 +208,8 @@ export default function TermsPage() {
                   Upon termination, your right to use our services ceases immediately. 
                   We will retain your data for 90 days after termination for recovery purposes.
       {/* Governing Law */}
-      </div><section className="py-20 bg-slate-800/50">
+      </div>
+<section className="py-20 bg-slate-800/50">
         </section>
 <div className="container mx-auto px-4">
           </div>
@@ -245,7 +233,8 @@ export default function TermsPage() {
                 <FileText className="w-5 h-5 text-cyan-400" />
                 <span className="text-white">English Language;
       {/* Contact Information */}
-      </div><section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
+      </div>
+<section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
         </section>
 <div className="container mx-auto px-4">
           </div>
@@ -273,11 +262,46 @@ export default function TermsPage() {
               <Mail className="w-5 h-5 mr-2" />
               Contact Us;
           </div>
-        </div>
+</div>
       </section>
-    </div>
+</div>
   ),
 }
   </a>
   </h1>
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></p></p></p></p></p></p></p></p></p></p></p></p></p></h2></h2></h2></h2></h2></h2></h2></h3></h3></h3></h3></h3></h3></h3></section></section></section></section></section></section></section></section></section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></span></span></span></span></span></span></span></span></span></span></p></p></p></p></p></p></p></p></p></p></p></p></p></h2></h2></h2></h2></h2></h2></h2></h3></h3></h3></h3></h3></h3></h3></section></section></section></section></section></section></section></section></section>

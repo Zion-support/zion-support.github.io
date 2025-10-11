@@ -44,7 +44,7 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
   let generated: any = null
   try {
     const apiKey = process.env.OPENAI_API_KEY
-    let content: string;    if (apiKey) {      const openai = new OpenAI({ apiKey })
+    let content: string    if (apiKey) {      const openai = new OpenAI({ apiKey })
       const completion = await openai.chat.completions.create({
         model: process.env.ZION_GPT_MODEL |'gpt-4o-mini'
         messages: [
@@ -131,7 +131,7 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
     if (!generated |!generated.title |!generated.transcript) {
       return res
         .status(500)
-        .json({ error: 'Failed to generate structured content' });    }
+        .json({ error: 'Failed to generate structured content' })    }
     const episodes = readEpisodes()
     const episode = {      return res.status(500).json({ error: 'Failed to generate structured content' })
     }

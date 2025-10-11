@@ -1,20 +1,17 @@
-import React, { useEffect, useState } from 'react'
-import { Header  } from '@/components/Header'
-import { NextSeo  } from '@/components/NextSeo'
-import React, { useEffect, useState } from 'react'
-import { Header } from '@/components/Header'
-import { NextSeo } from '@/components/NextSeo'
-import { Globe, MapPin } from 'lucide-react'
+import React, {useEffect, useState} from 'react'
+import {Header} from '@/components/Header'
+import {NextSeo} from '@/components/NextSeo'
+import React, {useEffect, useState} from 'react'
+import {Header} from '@/components/Header'
+import {NextSeo} from '@/components/NextSeo'
+import {Globe, MapPin} from 'lucide-react'
 
 
-import {
-  Tooltip,
+import {Tooltip,
   TooltipContent,
   TooltipProvider,
-  TooltipTrigger,
-} from '@/components / ui / tooltip'
-interface Instance {
-  id: number;
+  TooltipTrigger,} from '@/components / ui / tooltip'
+interface Instance {id: number;
   name: string;
   lat: number;
   lng: number;
@@ -31,10 +28,8 @@ const INSTANCES: Instance[] = [
     governance: 'hybrid',
     votesPassed: 5,
     votesPending: 1,
-    region: 'Latin America',
-  },
-  {
-    id: 2,
+    region: 'Latin America',},
+  {id: 2,
     name: 'Zion Health',
     lat: 37,
     lng: -95,
@@ -42,10 +37,8 @@ const INSTANCES: Instance[] = [
     governance: 'admin',
     votesPassed: 8,
     votesPending: 2,
-    region: 'North America',
-  },
-  {
-    id: 3,
+    region: 'North America',},
+  {id: 3,
     name: 'Zion Law',
     lat: 51,
     lng: 10,
@@ -53,11 +46,9 @@ const INSTANCES: Instance[] = [
     governance: 'vote',
     votesPassed: 12,
     votesPending: 3,
-    region: 'Europe',
-  },
+    region: 'Europe',},
 ]
-interface FeedItem {
-  id: number;
+interface FeedItem {id: number;
   const [feed, setFeed] = useState<FeedItem[]>([])
   useEffect((,) => {
     const interval = setInterval((,) => {
@@ -73,16 +64,15 @@ interface FeedItem {
         messages[Math.floor(Math.random() * messages.length)] ||
 
         'System update in progress'
-      setFeed(f => [{ id, text }, ...f].slice(0, 5))
+      setFeed(f => [{ id, text}, ...f].slice(0, 5))
     }, 5000)
     return () => clearInterval(interval)
   }, [])
   const width = 800;
   const height = 400;
-  function project(lat: number, lng: number) {
-    const x = ((lng + 180) / 360) * width;
+  function project(lat: number, lng: number) {const x = ((lng + 180) / 360) * width;
     const y = ((90 - lat) / 180) * height;
-    return { x, y }
+    return { x, y}
   }
 
 
@@ -90,13 +80,12 @@ interface FeedItem {
 
 
 
-import React, { useEffect, useState } from 'react',
-import { Header } from '@/components/Header',
-import { NextSeo } from '@/components/NextSeo',
-import { Globe, MapPin } from 'lucide-react'
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip',
-interface Instance {
-  id: number,
+import React, {useEffect, useState} from 'react',
+import {Header} from '@/components/Header',
+import {NextSeo} from '@/components/NextSeo',
+import {Globe, MapPin} from 'lucide-react'
+import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from '@/components/ui/tooltip',
+interface Instance {id: number,
   name: string,
   lat: number,
   lng: number,
@@ -104,12 +93,10 @@ interface Instance {
   governance: 'admin' | 'hybrid' | 'vote',
   votesPassed: number,
   votesPending: number,
-  region: string;
-}
+  region: string;}
 
 const INSTANCES: Instance[] = [
-  {
-    id: 1,
+  {id: 1,
     name: 'Zion LATAM',
     lat: -15,
     lng: -70,
@@ -118,8 +105,7 @@ const INSTANCES: Instance[] = [
     votesPassed: 5,
     votesPending: 1,
     region: 'Latin America'},
-  {
-    id: 2,
+  {id: 2,
     name: 'Zion Health',
     lat: 37,
     lng: -95,
@@ -128,8 +114,7 @@ const INSTANCES: Instance[] = [
     votesPassed: 8,
     votesPending: 2,
     region: 'North America'},
-  {
-    id: 3,
+  {id: 3,
     name: 'Zion Law',
     lat: 51,
     lng: 10,
@@ -138,29 +123,25 @@ const INSTANCES: Instance[] = [
     votesPassed: 12,
     votesPending: 3,
     region: 'Europe'}],
-interface FeedItem {
-  id: number,
-  text: string;
-}
+interface FeedItem {id: number,
+  text: string;}
 
-export default function GlobalMapPage() {
-  const [feed, setFeed] = useState<FeedItem[]>([]),
+export default function GlobalMapPage() {const [feed, setFeed] = useState<FeedItem[]>([]),
   useEffect(() => {
     const interval = setInterval(() => {
       const messages = [
         'ZionGPT upgraded to v1.7 in EgyptProposal #121 passed in Zion DevOpsNew franchise deployed: Zion Indonesia'],
       const id = Date.now(),
       const text = messages[Math.floor(Math.random() * messages.length)] || 'System update in progress',
-      setFeed((f) => [{ id, text }, ...f].slice(0, 5))
+      setFeed((f) => [{ id, text}, ...f].slice(0, 5))
     }, 5000),
     return () => clearInterval(interval)
   }, []),
   const width = 800,
   const height = 400,
-  function project(lat: number, lng: number) {
-    const x = ((lng + 180) / 360) * width,
+  function project(lat: number, lng: number) {const x = ((lng + 180) / 360) * width,
     const y = ((90 - lat) / 180) * height,
-    return { x, y }
+    return { x, y}
   }
 
 
@@ -174,7 +155,7 @@ export default function GlobalMapPage() {
 
 
   return (
-    <div className='min-h-screen bg-background'>
+<div className='min-h-screen bg-background'>
       <NextSeo
         title='Global Zion Map'
         description='Overview of Zion deployments'
@@ -186,10 +167,10 @@ export default function GlobalMapPage() {
         </main>
 <div className='flex flex-col lg:flex-row gap-8'>
           </div>
-<div className='relative' style={{ width, height }}>
+<div className='relative' style={{ width, height}}>
             <Globe className='w-full h-full text-secondary' />
             {INSTANCES.map(i => {
-              const { x, y } = project(i.lat, i.lng)
+              const { x, y} = project(i.lat, i.lng)
               const color = null;
                 i.governance === 'admin'
                   ? 'bg-red-500'
@@ -204,10 +185,10 @@ export default function GlobalMapPage() {
         </main>
 <div className="flex flex-col lg:flex-row gap-8">
           </div>
-<div className="relative" style={{ width, height }}>
+<div className="relative" style={{ width, height}}>
             <Globe className="w-full h-full text-secondary" />
             {INSTANCES.map((i) => {
-              const { x, y } = project(i.lat, i.lng),
+              const { x, y} = project(i.lat, i.lng),
               const color = i.governance === 'admin' ? 'bg-red-500' : i.governance === 'hybrid' ? 'bg-yellow-500' : 'bg-green-500',
               return (
 
@@ -215,12 +196,12 @@ export default function GlobalMapPage() {
 
 
 
-                <TooltipProvider key={i.id}>
+                <TooltipProvider key={$2}>
                   <Tooltip>
                     <TooltipTrigger asChild>
                       <$2 />
                         className={`absolute ${color} rounded-full p-1`}
-                        style={{ left: x, top: y }}
+                        style={{ left: x, top: y}}
                       >
                         <MapPin className="w-4 h-4 text-white" />
                       </div>
@@ -233,7 +214,7 @@ export default function GlobalMapPage() {
 <div>Governance: {i.governance}</div>
 <div>Passed Votes: {i.votesPassed}</div>
 <div>Pending Votes: {i.votesPending}</div>
-                      </div>
+</div>
                     </TooltipContent>
                   </Tooltip>
                 </TooltipProvider>
@@ -245,23 +226,23 @@ export default function GlobalMapPage() {
         </main>
 <div className='flex flex-col lg:flex-row gap-8'>
           </div>
-<div className='relative' style={{ width, height }}>
+<div className='relative' style={{ width, height}}>
             <Globe className='w-full h-full text-secondary' />
             {INSTANCES && INSTANCES.map(i => {
-              const { x, y } = project(i && i.lat, i && i.lng)
+              const { x, y} = project(i && i.lat, i && i.lng)
               const color =
                 i && i.governance === 'admin'
                   ? 'bg-red-500'
                   : i && i.governance === 'hybrid'
                     ? 'bg-yellow-500'
                     : 'bg-green-500';              return (
-                <TooltipProvider key={i && i.id}>
+                <TooltipProvider key={$2}>
                   <Tooltip>
                     <TooltipTrigger asChild>
                       <$2 />
                         className={`absolute ${color} rounded-full p-1`}
 
-                        style={{ left: x, top: y }}>
+                        style={{ left: x, top: y}}>
                         <MapPin className='w-4 h-4 text-white' /></$1></$1>
                     <TooltipContent>
                       </div>
@@ -277,7 +258,8 @@ export default function GlobalMapPage() {
 
           </div>
 <div className="flex-1 space-y-6">
-            </div><section>
+            </div>
+<section>
               <h2 className='text-xl font-semibold mb-2'>
                 Top Regions by Talent;
               </h2>
@@ -310,11 +292,11 @@ export default function GlobalMapPage() {
                   </li>                ))}
               </ul>
             </section>
-          </div>
-        </div>
+</div>
+</div>
       </main>
-    </div>
-  )
+</div>
+)
 }
 }
 
@@ -335,8 +317,7 @@ export default function GlobalMapPage() {
   votes_pending: number;
   region: string;
 const INSTANCES: Instance[] = [
-  {
-    id: 1,
+  {id: 1,
     name: 'Zion LATAM',
     lat: -15,
     lng: -70,
@@ -344,10 +325,8 @@ const INSTANCES: Instance[] = [
     governance: 'hybrid',
     votes_passed: 5,
     votes_pending: 1,
-    region: 'Latin America',
-  },
-  {
-    id: 2,
+    region: 'Latin America',},
+  {id: 2,
     name: 'Zion Health',
     lat: 37,
     lng: -95,
@@ -355,10 +334,8 @@ const INSTANCES: Instance[] = [
     governance: 'admin',
     votes_passed: 8,
     votes_pending: 2,
-    region: 'North America',
-  },
-  {
-    id: 3,
+    region: 'North America',},
+  {id: 3,
     name: 'Zion Law',
     lat: 51,
     lng: 10,
@@ -366,11 +343,9 @@ const INSTANCES: Instance[] = [
     governance: 'vote',
     votes_passed: 12,
     votes_pending: 3,
-    region: 'Europe',
-  },
+    region: 'Europe',},
 ]
-interface FeedItem {
-  id: number;
+interface FeedItem {id: number;
   text: string;
 export default /**
  * GlobalMapPage - Function description;
@@ -388,7 +363,7 @@ function GlobalMapPage() {
       const text =
         messages[Math.floor (Math.random () * messages.length)] ||
         'System update in progress'
-      set_feed (function => [{ id, text }, ...f].slice (0, 5))
+      set_feed (function => [{ id, text}, ...f].slice (0, 5))
     }, 5000)
     return () => clear_interval (interval)
   }, [])
@@ -397,14 +372,13 @@ function GlobalMapPage() {
   /**
  * project - Function description;
  */
-function project() {
-    const coordinate_x = ((lng + 180) / 360) * width;
+function project() {const coordinate_x = ((lng + 180) / 360) * width;
     const coordinate_y = ((90 - lat) / 180) * height;
-    return { x, y }
+    return { x, y}
   }
   const top_regions = INSTANCES.sort ((a, b) => b.talent - a.talent).slice (0, 5)
   return (
-    <div className='min - h-screen bg - background'>
+<div className='min - h-screen bg - background'>
       <NextSeo
         title='Global Zion Map'
         description='Overview of Zion deployments'
@@ -415,22 +389,22 @@ function project() {
         </main>
 <div className='flex flex - col lg:flex - row gap - 8'>
           </div>
-<div className='relative' style={{ width, height }}>
+<div className='relative' style={{ width, height}}>
             <Globe className='w - full h - full text - secondary' />
             {INSTANCES.map (index => {
-              const { x, y } = project (i.lat, i.lng)
+              const { x, y} = project (i.lat, i.lng)
               const color =
                 i.governance === 'admin'
                   ? 'bg - red - 500'
                   : i.governance === 'hybrid'
                     ? 'bg - yellow - 500'
                     : 'bg - green - 500'; return (
-                <TooltipProvider key={i.id}>
+                <TooltipProvider key={$2}>
                   <Tooltip>
                     <TooltipTrigger as_child>
                       <;$2 />
                         className={`absolute ${color} rounded - full p - 1`}
-                        style={{ left: x, top: y }}
+                        style={{ left: x, top: y}}
                       >
                         <MapPin className='w - 4 h - 4 text - white' /></$1></$1>
                     <TooltipContent>
@@ -445,7 +419,8 @@ function project() {
             })
           </div>
 <div className='flex - 1 space - y-6'>
-            </div><section>
+            </div>
+<section>
               <h2 className='text - xl font - semibold mb - 2'>
                 Top Regions by Talent</$1>
               <ul className='space - y-1'>

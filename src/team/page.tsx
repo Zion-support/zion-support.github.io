@@ -1,10 +1,9 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { Users, Award, Brain, Shield, Linkedin, Mail, Github, Twitter } from 'lucide-react'
+import {Link} from 'react-router-dom'
+import {Users, Award, Brain, Shield, Linkedin, Mail, Github, Twitter} from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-const TeamPage: React.FC = () => {
-  const teamMembers = [
+const TeamPage: React.FC = () => {const teamMembers = [
     {
       name: 'Kleber Santos',
       role: 'CEO & Founder',
@@ -12,87 +11,69 @@ const TeamPage: React.FC = () => {
       image: '/api/placeholder/300/300',
       linkedin: 'https://linkedin.com/in/kleber-santos',
       email: 'kleber@ziontechgroup.com',
-      expertise: ['AI Strategy', 'Leadership', 'Innovation']
-    },
-    {
-      name: 'Dr. Sarah Chen',
+      expertise: ['AI Strategy', 'Leadership', 'Innovation']},
+    {name: 'Dr. Sarah Chen',
       role: 'Chief AI Officer',
       bio: 'PhD in Machine Learning, leading our AI research and development initiatives',
       image: '/api/placeholder/300/300',
       linkedin: 'https://linkedin.com/in/sarah-chen-ai',
       email: 'sarah@ziontechgroup.com',
-      expertise: ['Machine Learning', 'Deep Learning', 'Research']
-    },
-    {
-      name: 'Dr. Emily Watson',
+      expertise: ['Machine Learning', 'Deep Learning', 'Research']},
+    {name: 'Dr. Emily Watson',
       role: 'Head of Data Science',
       bio: 'Data science expert specializing in predictive analytics and business intelligence',
       image: '/api/placeholder/300/300',
       linkedin: 'https://linkedin.com/in/emily-watson-data',
       email: 'emily@ziontechgroup.com',
-      expertise: ['Data Science', 'Analytics', 'Statistics']
-    },
-    {
-      name: 'Lisa Thompson',
+      expertise: ['Data Science', 'Analytics', 'Statistics']},
+    {name: 'Lisa Thompson',
       role: 'Head of Client Success',
       bio: 'Client success specialist ensuring exceptional customer experience and satisfaction',
       image: '/api/placeholder/300/300',
       linkedin: 'https://linkedin.com/in/lisa-thompson-success',
       email: 'lisa@ziontechgroup.com',
-      expertise: ['Client Relations', 'Project Management', 'Customer Success']
-    },
-    {
-      name: 'Michael Rodriguez',
+      expertise: ['Client Relations', 'Project Management', 'Customer Success']},
+    {name: 'Michael Rodriguez',
       role: 'Lead Software Engineer',
       bio: 'Full-stack developer with expertise in scalable cloud architectures and microservices',
       image: '/api/placeholder/300/300',
       linkedin: 'https://linkedin.com/in/michael-rodriguez-dev',
       email: 'michael@ziontechgroup.com',
-      expertise: ['Software Engineering', 'Cloud Architecture', 'DevOps']
-    },
-    {
-      name: 'Dr. James Park',
+      expertise: ['Software Engineering', 'Cloud Architecture', 'DevOps']},
+    {name: 'Dr. James Park',
       role: 'Head of Cybersecurity',
       bio: 'Cybersecurity expert with 12+ years protecting enterprise systems and data',
       image: '/api/placeholder/300/300',
       linkedin: 'https://linkedin.com/in/james-park-security',
       email: 'james@ziontechgroup.com',
-      expertise: ['Cybersecurity', 'Risk Assessment', 'Compliance']
-    }
+      expertise: ['Cybersecurity', 'Risk Assessment', 'Compliance']}
   ]
   const stats = [
-    { icon: Users, label: 'Team Members', value: '50+' },
-    { icon: Award, label: 'Awards Won', value: '25+' },
-    { icon: Brain, label: 'Years Experience', value: '15+' },
-    { icon: Shield, label: 'Client Satisfaction', value: '99%' }
+    {icon: Users, label: 'Team Members', value: '50+'},
+    {icon: Award, label: 'Awards Won', value: '25+'},
+    {icon: Brain, label: 'Years Experience', value: '15+'},
+    {icon: Shield, label: 'Client Satisfaction', value: '99%'}
   ]
   const values = [
-    {
-      title: 'Innovation',
+    {title: 'Innovation',
       description: 'We constantly push the boundaries of what\'s possible with AI and technology.',
-      icon: Brain;
-    },
-    {
-      title: 'Excellence',
+      icon: Brain;},
+    {title: 'Excellence',
       description: 'We strive for the highest quality in everything we do, from code to customer service.',
-      icon: Award;
-    },
-    {
-      title: 'Collaboration',
+      icon: Award;},
+    {title: 'Collaboration',
       description: 'We believe in the power of teamwork and diverse perspectives to solve complex problems.',
-      icon: Users;
-    },
-    {
-      title: 'Security',
+      icon: Users;},
+    {title: 'Security',
       description: 'We prioritize the security and privacy of our clients\' data and systems.',
-      icon: Shield;
-    }
+      icon: Shield;}
   ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       {/* Hero Section */}
-      </div><section className="relative py-20 px-4">
+      </div>
+<section className="relative py-20 px-4">
         </section>
 <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -100,7 +81,8 @@ const TeamPage: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             The brilliant minds behind our innovative AI and IT solutions. We're passionate about technology and dedicated to your success.
       {/* Stats Section */}
-      </div><section className="py-16 bg-white">
+      </div>
+<section className="py-16 bg-white">
         </section>
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           </div>
@@ -116,7 +98,8 @@ const TeamPage: React.FC = () => {
                 </div>
 <div className="text-gray-600 font-medium">{stat.label})
       {/* Team Members */}
-      </div><section className="py-20 bg-gray-50">
+      </div>
+<section className="py-20 bg-gray-50">
         </section>
 <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           </div>
@@ -163,7 +146,8 @@ const TeamPage: React.FC = () => {
                       <Mail className="w-5 h-5" />
             ))}
       {/* Values Section */}
-      </div><section className="py-20 bg-white">
+      </div>
+<section className="py-20 bg-white">
         </section>
 <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           </div>
@@ -184,7 +168,8 @@ const TeamPage: React.FC = () => {
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{value.title}
                 <p className="text-gray-600">{value.description})
       {/* CTA Section */}
-      </div><section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
+      </div>
+<section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
         </section>
 <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -202,7 +187,7 @@ const TeamPage: React.FC = () => {
               className="bg-transparent text-white px-8 py-4 rounded-lg text-lg font-semibold border-2 border-white hover:bg-white hover:text-cyan-600 transition-all duration-300">
               Get in Touch;
           </div>
-        </div>
+</div>
       </section>
       <Footer />
     </div>
@@ -215,4 +200,20 @@ export default TeamPage</Link>
   </h2>
   </p>
   </h2>
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></p></p></p></p></p></h1></h3></h3></h4></section></section></section></section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div></span></span></p></p></p></p></p></h1></h3></h3></h4></section></section></section></section>

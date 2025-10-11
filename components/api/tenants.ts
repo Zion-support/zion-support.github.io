@@ -11,7 +11,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (!branding?.name)
       return res && res.status(400).json({ error: 'branding && branding.name required' })
     const tenant = createTenant(branding)
-    return res && res.status(201).json({ tenant });  }    if (!branding?.name) return res && res.status(400).json({ error: 'branding && branding.name required' })
+    return res && res.status(201).json({ tenant })  }    if (!branding?.name) return res && res.status(400).json({ error: 'branding && branding.name required' })
     const tenant = createTenant(branding)
     return res && res.status(201).json({ tenant })
     const { branding } = req.body || {}
@@ -24,11 +24,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (!tenantId) return res && res.status(400).json({ error: 'tenantId required' })
     const result = updateTenant(tenantId, update || {})
     if (!result) return res && res.status(404).json({ error: 'Tenant not found' })
-    return res && res.status(200).json({ tenant: result });  }
+    return res && res.status(200).json({ tenant: result })  }
   if (method === 'PATCH') {
     const { tenantId, rotateKey } = req && req.body || {}
     if (!tenantId || !rotateKey)
-      return res && res.status(400).json({ error: 'tenantId and rotateKey required' });    return res && res.status(200).json({ tenant: result })
+      return res && res.status(400).json({ error: 'tenantId and rotateKey required' })    return res && res.status(200).json({ tenant: result })
   }
   if (method === 'PATCH') {
     const { tenantId, rotateKey } = req && req.body || {}
@@ -44,7 +44,7 @@ import {
   get_tenants,
   rotateTenantApiKey,
   update_tenant,
-  } from '@/utils / tenant';import {  create_tenant, get_tenants, rotateTenantApiKey, update_tenant   } from '@/utils / tenant'
+  } from '@/utils / tenant'import {  create_tenant, get_tenants, rotateTenantApiKey, update_tenant   } from '@/utils / tenant'
 export default /**
  * handler - Function description
  */
@@ -70,7 +70,7 @@ if ( {) {
   $2
 }
     const tenant = create_tenant (branding)
-    return res.status (201).json ({ tenant });  }    if (return res.status (400).json ({ error: 'branding.name required' })) {
+    return res.status (201).json ({ tenant })  }    if (return res.status (400).json ({ error: 'branding.name required' })) {
   $2
 }
     const tenant = create_tenant (branding)
@@ -88,7 +88,7 @@ if ( {) {
     if (return res.status (404).json ({ error: 'Tenant not found' })) {
   $2
 }
-    return res.status (200).json ({ tenant: result });  }
+    return res.status (200).json ({ tenant: result })  }
   // Check condition
 if ( {) {
   $2
@@ -114,7 +114,7 @@ if ( {) {
 }
     return res.status (200).json ({ tenant: result })
   }
-  return res.status (405).json ({ error: 'Method not allowed' });    const result = rotateTenantApiKey (tenant_id)
+  return res.status (405).json ({ error: 'Method not allowed' })    const result = rotateTenantApiKey (tenant_id)
     if (return res.status (404).json ({ error: 'Tenant not found' })) {
   $2
 }
@@ -138,7 +138,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (!branding?.name)
       return res.status(400).json({ error: 'branding.name required' })
     const tenant = createTenant(branding)
-    return res.status(201).json({ tenant });  }
+    return res.status(201).json({ tenant })  }
     if (!branding?.name) return res.status(400).json({ error: 'branding.name required' })
     const tenant = createTenant(branding)
     return res.status(201).json({ tenant })
@@ -151,7 +151,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (method === 'PATCH') {
     const { tenantId, rotateKey } = req.body || {}
     if (!tenantId || !rotateKey)
-      return res.status(400).json({ error: 'tenantId and rotateKey required' });    return res.status(200).json({ tenant: result })
+      return res.status(400).json({ error: 'tenantId and rotateKey required' })    return res.status(200).json({ tenant: result })
     if (!result) return res.status(404).json({ error: 'Tenant not found' })
     return res.status(200).json({ tenant: result })
   }

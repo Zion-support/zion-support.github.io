@@ -1,37 +1,29 @@
 'use client'
 import React from 'react'
-import { Database, Shield, Zap, ArrowRight, CheckCircle, Star, Users, Clock, Settings, TrendingUp } from 'lucide-react'
+import {Database, Shield, Zap, ArrowRight, CheckCircle, Star, Users, Clock, Settings, TrendingUp} from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-const DatabaseManagementPage: React.FC = () => {
-  const features = [
+const DatabaseManagementPage: React.FC = () => {const features = [
     {
       icon: Database,
       title: 'Database Administration',
       description: 'Comprehensive database management and optimization',
-      benefits: ['Performance tuning', 'Backup & recovery', 'Security hardening']
-    },
-    {
-      icon: Shield,
+      benefits: ['Performance tuning', 'Backup & recovery', 'Security hardening']},
+    {icon: Shield,
       title: 'Data Security',
       description: 'Enterprise-grade security for your data assets',
-      benefits: ['Encryption', 'Access control', 'Audit logging']
-    },
-    {
-      icon: BarChart,
+      benefits: ['Encryption', 'Access control', 'Audit logging']},
+    {icon: BarChart,
       title: 'Performance Monitoring',
       description: 'Real-time monitoring and performance optimization',
-      benefits: ['Query optimization', 'Resource monitoring', 'Alerting']
-    },
-    {
-      icon: Settings,
+      benefits: ['Query optimization', 'Resource monitoring', 'Alerting']},
+    {icon: Settings,
       title: 'Automated Maintenance',
       description: 'Automated database maintenance and updates',
-      benefits: ['Automated backups', 'Patch management', 'Health checks']
-    }
+      benefits: ['Automated backups', 'Patch management', 'Health checks']}
   ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       </div><main className="container mx-auto px-4 py-16 pt-24">
         </main><section className="text-center mb-16">
@@ -53,7 +45,8 @@ const DatabaseManagementPage: React.FC = () => {
               className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
               <Database className="w-5 h-5" />
               +1 302 464 0950;
-        </div><section className="mb-16">
+        </div>
+<section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
             Database Services;
           </section>
@@ -75,11 +68,14 @@ const DatabaseManagementPage: React.FC = () => {
                       {benefit})})
       <Footer />
     </div>
-  )
+)
 }
 export default DatabaseManagementPage</h2>
   </a>
   </a>
   </p>
   </h1>
-</div></div></div></div></p></p></h3></ul></li></main></section></section>
+</div>
+</div>
+</div>
+</div></p></p></h3></ul></li></main></section></section>

@@ -1,7 +1,7 @@
-impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";"
-impo, r, t { octoberUltimateEnterpriseConte, n, t } fr, o, m "../conte, n, t/octob, e, r-20, 2, 5-ultima, t, e-enterpri, s, e-conte, n, t"
-const October2025UltimateEnterpriseBanne, r = () => { 
-  con, s, t [multiCloudConte, n, t, conversationalAIConte, n, t] = octoberUltimateEnterpriseConte, n, t; return(<div, classNam, e = "relative, p, y-16, p, x-4, s, m: px-6, l, g:px-8, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, overflo, w-hidd, e, n"  > {/* Animated, Backgro, u, n, d */ }
+impo, r, t {Li, n, k} fr, o, m "rea, c, t-rout, e, r-d, o, m";"
+impo, r, t {octoberUltimateEnterpriseConte, n, t} fr, o, m "../conte, n, t/octob, e, r-20, 2, 5-ultima, t, e-enterpri, s, e-conte, n, t"
+const October2025UltimateEnterpriseBanne, r = () => {con, s, t [multiCloudConte, n, t, conversationalAIConte, n, t] = octoberUltimateEnterpriseConte, n, t; return (
+<div, classNam, e = "relative, p, y-16, p, x-4, s, m: px-6, l, g:px-8, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, overflo, w-hidd, e, n"  > {/* Animated, Backgro, u, n, d */}
       </div>
 <div, classNam, e = "absolute, inse, t-0, opacit, y-20">
         </div>
@@ -10,7 +10,7 @@ const October2025UltimateEnterpriseBanne, r = () => {
 <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-10, 0, 0" />
   con, s, t [multiCloudConte, n, t, conversationalAIConte, n, t] = octoberUltimateEnterpriseConte, n, t; return (
     </div>
-<div, classNam, e = "relative, p, y-16, p, x-4, s, m: px-6, l, g:px-8, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, overflo, w-hidd, e, n"  > {/* Animated, Backgro, u, n, d */ }
+<div, classNam, e = "relative, p, y-16, p, x-4, s, m: px-6, l, g:px-8, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, overflo, w-hidd, e, n"  > {/* Animated, Backgro, u, n, d */}
       </div>
 <div, classNam, e = "absolute, inse, t-0, opacit, y-20">
         </div>
@@ -68,7 +68,7 @@ const October2025UltimateEnterpriseBanne, r = () => {
                 <p, classNam, e = "te, x, t-gr, a, y-300, tex, t-lg, leadin, g-relaxed, m, b-4">
 const October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expression */}"
     </div>
-<div, classNam, e = "relative, p, y-16, p, x-4, s, m: px-6, l, g:px-8, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, overflo, w-hidd, e, n"  > {/* Animated, Backgro, u, n, d */ }"
+<div, classNam, e = "relative, p, y-16, p, x-4, s, m: px-6, l, g:px-8, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, overflo, w-hidd, e, n"  > {/* Animated, Backgro, u, n, d */}"
       </div>
 <div, classNam, e = "absolute, inse, t-0, opacit, y-20"></div>"
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" /></div>"
@@ -143,9 +143,9 @@ const October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expression
             {/* Key, Highlig, h, t, s */}
             </div>
 <div, classNam, e = "spa, c, e-y-2, m, b-6">
-              { multiCloudConte, n, t.highligh, t, s.sli, c, e(, 0, 4).m, a, p((highlig, h, t, ind, e, x) = > (
+              {multiCloudConte, n, t.highligh, t, s.sli, c, e(, 0, 4).m, a, p((highlig, h, t, ind, e, x) = > (
                 </div>
-<div, ke, y = { in, d, e, x  }, classNa, m, e = "flex, item, s-start, ga, p-3, tex, t-gr, a, y-2, 0, 0">
+<div, ke, y = { in, d, e, x}, classNa, m, e = "flex, item, s-start, ga, p-3, tex, t-gr, a, y-2, 0, 0">
                   <CheckCircle, className="w-5 h-5, tex, t-cy, a, n-400, fle, x-shri, n, k-0, m, t-0.5" />
             {/* Metrics, Gri, d */}"
             </div>
@@ -170,11 +170,11 @@ const October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expression
 <div, classNam, e = "spa, c, e-y-2, m, b-6">
               {/* TODO: Fix JSX expression */}"
                 </div>
-<div, ke, y = { in, d, e, x  }, classNa, m, e = "flex, item, s-start, ga, p-3, tex, t-gr, a, y-2, 0, 0"></div>"
+<div, ke, y = {in, d, e, x}, classNa, m, e = "flex, item, s-start, ga, p-3, tex, t-gr, a, y-2, 0, 0"></div>"
                   <CheckCircle, className="w-5 h-5, tex, t-cy, a, n-400, fle, x-shri, n, k-0, m, t-0.5" /></CheckCircle>"
                   <span, className="te, x, t-sm, leadin, g-relax, e, d">{highlig, h, t})
             {/* CTA, Butto, n */}"
-            <, t, o = { multiCloudConte, n, t.c, t, a.l, i, n, k }, classNa, m, e = "flex, item, s-center, justif, y-center, ga, p-2 w-full, p, y-4, p, x-6, b, g-gradie, n, t-to-r, fro, m-cy, a, n-600, t, o-bl, u, e-600, hove, r: fr, o, m-cy, a, n-500, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hove,"$2 />
+            <, t, o = {multiCloudConte, n, t.c, t, a.l, i, n, k}, classNa, m, e = "flex, item, s-center, justif, y-center, ga, p-2 w-full, p, y-4, p, x-6, b, g-gradie, n, t-to-r, fro, m-cy, a, n-600, t, o-bl, u, e-600, hove, r: fr, o, m-cy, a, n-500, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hove,"$2 />
   r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-cy, a, n-5, 0, 0/50, grou, p"
             ></Link>"
               <span, className="te, x, t-lg">{multiCloudConte, n, t.c, t, a.te, x, t}</sp, a, n>"
@@ -247,9 +247,9 @@ const October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expression
             {/* Key, Highlig, h, t, s */}
             </div>
 <div, classNam, e = "spa, c, e-y-2, m, b-6">
-              { conversationalAIConte, n, t.highligh, t, s.sli, c, e(, 0, 4).m, a, p((highlig, h, t, ind, e, x) = > (
+              {conversationalAIConte, n, t.highligh, t, s.sli, c, e(, 0, 4).m, a, p((highlig, h, t, ind, e, x) = > (
                 </div>
-<div, ke, y = { in, d, e, x  }, classNa, m, e = "flex, item, s-start, ga, p-3, tex, t-gr, a, y-2, 0, 0">
+<div, ke, y = { in, d, e, x}, classNa, m, e = "flex, item, s-start, ga, p-3, tex, t-gr, a, y-2, 0, 0">
                   <CheckCircle, className="w-5 h-5, tex, t-purp, l, e-400, fle, x-shri, n, k-0, m, t-0.5" />
             {/* Metrics, Gri, d */}"
             </div>
@@ -274,11 +274,11 @@ const October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expression
 <div, classNam, e = "spa, c, e-y-2, m, b-6">
               {/* TODO: Fix JSX expression */}"
                 </div>
-<div, ke, y = { in, d, e, x  }, classNa, m, e = "flex, item, s-start, ga, p-3, tex, t-gr, a, y-2, 0, 0"></div>"
+<div, ke, y = {in, d, e, x}, classNa, m, e = "flex, item, s-start, ga, p-3, tex, t-gr, a, y-2, 0, 0"></div>"
                   <CheckCircle, className="w-5 h-5, tex, t-purp, l, e-400, fle, x-shri, n, k-0, m, t-0.5" /></CheckCircle>"
                   <span, className="te, x, t-sm, leadin, g-relax, e, d">{highlig, h, t})
             {/* CTA, Butto, n */}"
-            <, t, o = { conversationalAIConte, n, t.c, t, a.l, i, n, k }, classNa, m, e = "flex, item, s-center, justif, y-center, ga, p-2 w-full, p, y-4, p, x-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-500, hove, r:to-pi, n, k-500, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hove,"$2 />
+            <, t, o = {conversationalAIConte, n, t.c, t, a.l, i, n, k}, classNa, m, e = "flex, item, s-center, justif, y-center, ga, p-2 w-full, p, y-4, p, x-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-500, hove, r:to-pi, n, k-500, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hove,"$2 />
   r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, grou, p"
             ></Link>"
               <span, className="te, x, t-lg">{conversationalAIConte, n, t.c, t, a.te, x, t}</sp, a, n>"
@@ -382,11 +382,68 @@ const October2025UltimateEnterpriseBanne, r = () => {/* TODO: Fix JSX expression
             ></Link>
               Explore, All, Insights</Li, n, k>
           </div>
-        </div>
-      </div>
-    </div>
-  )
+</div>
+</div>
+</div>
+)
 }
 export default October2025UltimateEnterpriseBanner;
 "
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p></p></p></p></p></p></h3></h3></h3></h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p></p></p></p></p></p></h3></h3></h3></h3>

@@ -1,7 +1,6 @@
 import React from 'react'
-import Reac, t, { useState } fr, o, m 'rea, c, t'
-interface NewContentPromoBannerProp, s {
-  varia, n, t?: 'in, f, o' | 'premi, u, m' | 'succe, s, s' | 'warni, n, g'
+import Reac, t, {useState} fr, o, m 'rea, c, t'
+interface NewContentPromoBannerProp, s {varia, n, t?: 'in, f, o' | 'premi, u, m' | 'succe, s, s' | 'warni, n, g'
   classNa, m, e ?  : string;
 interface NewContentPromoBannerProp, s {/* TODO: Fix JSX expression */}
  }
@@ -32,7 +31,8 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* T
     {/* TODO: Fix JSX expression */}
     }
   ]; if (isDismiss, e, d) return, nul, l;
-  return(<div, classNam, e = {`${varian, t, s[varia, n, t]} ${classNa, m, e} relative, overflo, w-hidd, e, n`}>
+  return (
+<div, classNam, e = {`${varian, t, s[varia, n, t]} ${classNa, m, e} relative, overflo, w-hidd, e, n`}>
       {/* Animated, background, elements */}
       </div>
 <div, className="absolute, inse, t-0, opacit, y-10">
@@ -72,10 +72,10 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* T
             {/* Featured, content, grid */}
             </div>
 <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-3, m, b-4">
-              { featuredConte, n, t.m, a, p((it, e, m, ind, e, x) = > {
-                const Ico, n = it, e, m.ic, o, n; return(<, ke, y = { in, d, e, x  }, to={ it, e, m.li, n, k } className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, grou, p"$2 />
+              {featuredConte, n, t.m, a, p((it, e, m, ind, e, x) = > {
+                const Ico, n = it, e, m.ic, o, n; return(<, ke, y = { in, d, e, x}, to={it, e, m.li, n, k} className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, grou, p"$2 />
                 const Ico, n = it, e, m.ic, o, n; return (
-                  <Link, ke, y = { in, d, e, x  }, to={ it, e, m.li, n, k } className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, grou, p">
+                  <Link, ke, y = {in, d, e, x}, to={it, e, m.li, n, k} className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, grou, p">
                     </div>
 <div, className="flex, item, s-center, ga, p-2, m, b-2">
                       <Icon, className="w-4 h-4, tex, t-whi, t, e/80" />
@@ -104,7 +104,7 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* T
             {/* Featured, content, grid */}"
             <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-3, m, b-4">
               {/* TODO: Fix JSX expression */}"
-                  <Link, ke, y = { in, d, e, x  }, to={ it, e, m.li, n, k } className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, grou, p"></Link>"
+                  <Link, ke, y = {in, d, e, x}, to={it, e, m.li, n, k} className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, grou, p"></Link>"
                     </div>
 <div, className="flex, item, s-center, ga, p-2, m, b-2"></div>"
                       <Icon, className="w-4 h-4, tex, t-whi, t, e/80" /></Icon>"
@@ -176,14 +176,27 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* T
                 <span, className="fo, n, t-semibo, l, d">50+
                 <sp, a, n>Expert, Insight, s;
           {/* Dismiss, butto, n */}"
-          <button, onCli, c, k = {  () = > setIsDismiss, e, d(tr, u, e)  }, classNa, m, e = "ml-4 p-2, hove, r: bg-whi, t, e/10, rounde, d-full, transitio, n-colo, r, s"
+          <button, onCli, c, k = {() = > setIsDismiss, e, d(tr, u, e)}, classNa, m, e = "ml-4 p-2, hove, r: bg-whi, t, e/10, rounde, d-full, transitio, n-colo, r, s"
           >"
             <X, className="w-5 h-5" /></X>
           </button>
         </div>
-      </div>
-    </div>
-  )
+</div>
+</div>
+)
 }
 export default React.me, m, o(NewContentPromoBann, e, r);"`
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></p></p></p></h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div></div></span></span></span></span></p></p></p></h3>

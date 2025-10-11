@@ -1,13 +1,11 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { BarChart, Target, Zap, Settings, CheckCircle, Star,  BarChart,  Target,  Settings } from 'lucide-react'
-const AIPerformanceTrackerPage: React.FC = () => {
-    const features = [],
+import {BarChart, Target, Zap, Settings, CheckCircle, Star,  BarChart,  Target,  Settings} from 'lucide-react'
+const AIPerformanceTrackerPage: React.FC = () => {const features = [],
   return (
-    {// TODO: Add content;
-  }
+    {// TODO: Add content;}
 }
   ico,
   n: BarChart,
@@ -37,7 +35,7 @@ const AIPerformanceTrackerPage: React.FC = () => {
     }
   ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       </div><main className="container mx-auto px-4 py-16 pt-24">
         </main><section className="text-center mb-16">
@@ -69,7 +67,8 @@ const AIPerformanceTrackerPage: React.FC = () => {
           </h2>"
           < className="grid grid-cols-1,$2 />
   md:grid-cols-2,"
-  lg:grid-cols-4 gap-8"></div>)
+  lg:grid-cols-4 gap-8"></div>
+)
             {features.map((feature, index) => ()}"
           < key={index} className="cyber-card p-6,"$2 />
   hover:scale-105 transition-all duration-300"></div>"
@@ -89,6 +88,6 @@ const AIPerformanceTrackerPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  )
+)
 }
 export default AiPerformanceTrackerPage;

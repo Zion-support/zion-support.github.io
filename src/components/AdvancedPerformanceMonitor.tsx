@@ -16,16 +16,12 @@ interface PerformanceMetrics {/* TODO: Fix JSX expression */}
     memor,
   y: number | null,
 }
-interface PerformanceMonitorProps {
-    // TODO: Add content;
-  }
+interface PerformanceMonitorProps {// TODO: Add content;}
 }
 interface PerformanceProps {/* TODO: Fix JSX expression */}
 }
 const AdvancedPerformanceMonitor: React.FC,
-          <PerformanceMonitorProps> = ({
-    // TODO: Add content;
-  }
+          <PerformanceMonitorProps> = ({// TODO: Add content;}
 }
 //   onMetricsUpdate,
   enableRealTimeMonitoring = true;)
@@ -222,7 +218,7 @@ const memory =
         .then(webVitals => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-          const { onCLS, onFCP, onLCP, onTTFB } = webVitals;)
+          const {onCLS, onFCP, onLCP, onTTFB} = webVitals;)
           if (onCLS) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -343,7 +339,9 @@ const getPerformanceRecommendations = useCallback(() => {/* TODO: Fix JSX expres
   if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    return (<div>Coming Soon</div>)
+    return (
+<div>Coming Soon</div>
+)
   )
           <div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50'>
         <h3 className='font-semibold text-sm mb-2'>Performance Monitor;
@@ -369,9 +367,7 @@ const getPerformanceRecommendations = useCallback(() => {/* TODO: Fix JSX expres
 <div>
             Memor,
   y:{' '}
-            {
-    metrics.memory;
-  }`
+            {metrics.memory;}`
               ? `${(metrics.memory / 1024 / 1024).toFixed(1)}MB`
               : 'N/A'}
         {_recommendations.length > 0 && ()}
@@ -382,11 +378,17 @@ const getPerformanceRecommendations = useCallback(() => {/* TODO: Fix JSX expres
   s:
             <ul className='text-xs text-red-600'>
 {recommendations.map((rec, index) => (}
-                <li key={index}>• {rec}</li>)
+                <li key={$2}>• {rec}</li>)
               ))})
   return null;
 }
 export default AdvancedPerformanceMonitor;`
   </PerformanceMetrics>
   </PerformanceMonitorProps>
-</div></div></div></div></div></div></div></div></h3></h4></ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div></h3></h4></ul>

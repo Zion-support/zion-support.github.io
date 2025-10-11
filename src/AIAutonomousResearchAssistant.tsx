@@ -1,92 +1,69 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
-import { Brain, Search, FileText, TrendingUp, Users, Globe, ArrowRight, CheckCircle, Star, Lightbulb, Target, Zap } from 'lucide-react'
+import {Link} from 'react-router-dom'
+import {motion} from 'framer-motion'
+import {Brain, Search, FileText, TrendingUp, Users, Globe, ArrowRight, CheckCircle, Star, Lightbulb, Target, Zap} from 'lucide-react'
 import SEOHead from '../components/SEOHead'
-import { Helmet } from 'react-helmet-async'
-const AIAutonomousResearchAssistant = () => {
-    const features = [
+import {Helmet} from 'react-helmet-async'
+const AIAutonomousResearchAssistant = () => {const features = [
         {
             icon: Brain,
             title: "Intelligent Research",
-            description: "AI-powered research capabilities that automatically gather, analyze, and synthesize information from multiple sources."
-        },
-        {
-            icon: Search,
+            description: "AI-powered research capabilities that automatically gather, analyze, and synthesize information from multiple sources."},
+        {icon: Search,
             title: "Advanced Search",
-            description: "Deep search across academic papers, industry reports, and real-time data sources with natural language queries."
-        },
-        {
-            icon: FileText,
+            description: "Deep search across academic papers, industry reports, and real-time data sources with natural language queries."},
+        {icon: FileText,
             title: "Report Generation",
-            description: "Automatically generate comprehensive research reports with citations, analysis, and actionable insights."
-        },
-        {
-            icon: TrendingUp,
+            description: "Automatically generate comprehensive research reports with citations, analysis, and actionable insights."},
+        {icon: TrendingUp,
             title: "Trend Analysis",
-            description: "Identify emerging trends and patterns across industries with predictive analytics and market intelligence."
-        }
+            description: "Identify emerging trends and patterns across industries with predictive analytics and market intelligence."}
     ]
     const capabilities = [
-        {
-            icon: Users,
+        {icon: Users,
             title: "Multi-Domain Expertise",
-            description: "Research across technology, healthcare, finance, and other industries with specialized knowledge."
-        },
-        {
-            icon: Globe,
+            description: "Research across technology, healthcare, finance, and other industries with specialized knowledge."},
+        {icon: Globe,
             title: "Global Data Access",
-            description: "Access to international databases, research institutions, and real-time global information sources."
-        },
-        {
-            icon: Target,
+            description: "Access to international databases, research institutions, and real-time global information sources."},
+        {icon: Target,
             title: "Precision Research",
-            description: "Targeted research with high accuracy and relevance to your specific requirements and objectives."
-        },
-        {
-            icon: Zap,
+            description: "Targeted research with high accuracy and relevance to your specific requirements and objectives."},
+        {icon: Zap,
             title: "Real-time Updates",
-            description: "Continuous monitoring and updates on research topics with automated alerts and notifications."
-        }
+            description: "Continuous monitoring and updates on research topics with automated alerts and notifications."}
     ]
     const benefits = [
-        {
-            icon: CheckCircle,
+        {icon: CheckCircle,
             title: "Time Savings",
-            description: "Reduce research time by up to 80% with automated data collection and analysis"
-        },
-        {
-            icon: Star,
+            description: "Reduce research time by up to 80% with automated data collection and analysis"},
+        {icon: Star,
             title: "Higher Accuracy",
-            description: "AI-powered validation ensures high-quality, accurate research results"
-        },
-        {
-            icon: Lightbulb,
+            description: "AI-powered validation ensures high-quality, accurate research results"},
+        {icon: Lightbulb,
             title: "Actionable Insights",
-            description: "Transform raw data into strategic insights and recommendations"
-        },
-        {
-            icon: TrendingUp,
+            description: "Transform raw data into strategic insights and recommendations"},
+        {icon: TrendingUp,
             title: "Competitive Advantage",
-            description: "Stay ahead with cutting-edge research and market intelligence"
-        }
+            description: "Stay ahead with cutting-edge research and market intelligence"}
     ]
     return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+<div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
             <Helmet>
                 <title>AI Autonomous Research Assistant | Zion Tech Group</title>
                 <meta name="description" content="Revolutionary AI-powered research assistant with intelligent data collection, analysis, and report generation capabilities." />
             </Helmet>
 
             {/* Hero Section */}
-            </div><section className="relative py-20 bg-gradient-to-r from-purple-600 to-blue-700 text-white overflow-hidden">
+            </div>
+<section className="relative py-20 bg-gradient-to-r from-purple-600 to-blue-700 text-white overflow-hidden">
                 </section>
 <div className="absolute inset-0 bg-black/20"></div>
 <div className="container mx-auto px-4 relative z-10">
                     <motion.div;
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
+                        initial={{ opacity: 0, y: 30}}
+                        animate={{ opacity: 1, y: 0}}
+                        transition={{ duration: 0.8}}
                         className="text-center max-w-4xl mx-auto"
                     >
                         <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -120,9 +97,9 @@ const AIAutonomousResearchAssistant = () => {
                 </section>
 <div className="container mx-auto px-4">
                     <motion.div;
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
+                        initial={{ opacity: 0, y: 30}}
+                        whileInView={{ opacity: 1, y: 0}}
+                        transition={{ duration: 0.8}}
                         className="text-center mb-16"
                     >
                         <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -139,9 +116,9 @@ const AIAutonomousResearchAssistant = () => {
                         {features.map((feature, index) => (
                             <motion.div;
                                 key={index}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.8, delay: index * 0.1 }}
+                                initial={{ opacity: 0, y: 30}}
+                                whileInView={{ opacity: 1, y: 0}}
+                                transition={{ duration: 0.8, delay: index * 0.1}}
                                 className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
                             >
                                 </div>
@@ -153,7 +130,7 @@ const AIAutonomousResearchAssistant = () => {
                             </motion.div>
                         ))}
                     </div>
-                </div>
+</div>
             </section>
 
             {/* Capabilities Section */}
@@ -161,9 +138,9 @@ const AIAutonomousResearchAssistant = () => {
                 </section>
 <div className="container mx-auto px-4">
                     <motion.div;
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
+                        initial={{ opacity: 0, y: 30}}
+                        whileInView={{ opacity: 1, y: 0}}
+                        transition={{ duration: 0.8}}
                         className="text-center mb-16"
                     >
                         <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -179,9 +156,9 @@ const AIAutonomousResearchAssistant = () => {
                         {capabilities.map((capability, index) => (
                             <motion.div;
                                 key={index}
-                                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                transition={{ duration: 0.8, delay: index * 0.1 }}
+                                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30}}
+                                whileInView={{ opacity: 1, x: 0}}
+                                transition={{ duration: 0.8, delay: index * 0.1}}
                                 className="bg-white p-8 rounded-xl shadow-lg"
                             >
                                 </div>
@@ -194,11 +171,11 @@ const AIAutonomousResearchAssistant = () => {
                                         <h3 className="text-xl font-semibold mb-2">{capability.title}</h3>
                                         <p className="text-gray-600">{capability.description}</p>
                                     </div>
-                                </div>
+</div>
                             </motion.div>
                         ))}
                     </div>
-                </div>
+</div>
             </section>
 
             {/* Benefits Section */}
@@ -206,9 +183,9 @@ const AIAutonomousResearchAssistant = () => {
                 </section>
 <div className="container mx-auto px-4">
                     <motion.div;
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
+                        initial={{ opacity: 0, y: 30}}
+                        whileInView={{ opacity: 1, y: 0}}
+                        transition={{ duration: 0.8}}
                         className="text-center mb-16"
                     >
                         <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -224,9 +201,9 @@ const AIAutonomousResearchAssistant = () => {
                         {benefits.map((benefit, index) => (
                             <motion.div;
                                 key={index}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.8, delay: index * 0.1 }}
+                                initial={{ opacity: 0, y: 30}}
+                                whileInView={{ opacity: 1, y: 0}}
+                                transition={{ duration: 0.8, delay: index * 0.1}}
                                 className="text-center"
                             >
                                 </div>
@@ -238,7 +215,7 @@ const AIAutonomousResearchAssistant = () => {
                             </motion.div>
                         ))}
                     </div>
-                </div>
+</div>
             </section>
 
             {/* CTA Section */}
@@ -246,9 +223,9 @@ const AIAutonomousResearchAssistant = () => {
                 </section>
 <div className="container mx-auto px-4 text-center">
                     <motion.div;
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
+                        initial={{ opacity: 0, y: 30}}
+                        whileInView={{ opacity: 1, y: 0}}
+                        transition={{ duration: 0.8}}
                         className="max-w-4xl mx-auto"
                     >
                         <h2 className="text-4xl font-bold mb-6">
@@ -276,7 +253,7 @@ const AIAutonomousResearchAssistant = () => {
                     </motion.div>
                 </div>
             </section>
-        </div>
-    )
+</div>
+)
 }
 export default AIAutonomousResearchAssistant;

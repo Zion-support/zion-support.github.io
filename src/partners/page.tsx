@@ -1,11 +1,10 @@
 import {Building, Handshake, Award, Users, Globe, Star, CheckCircle, Phone, Mail} from 'lucide-react'
 'use client'
 import React from 'react'
-import { Link } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-const PartnersPage: React.FC = () => {
-  const partnerTypes = [
+const PartnersPage: React.FC = () => {const partnerTypes = [
     {
       title: 'Technology Partners',
       description: 'Leading technology companies that provide the foundation for our solutions',
@@ -13,12 +12,12 @@ const PartnersPage: React.FC = () => {
       color: 'text-blue-400',
       bgColor: 'bg-blue-500/10',
       partners: [
-        { name: 'Microsoft', description: 'Azure Cloud Services & AI Platform', logo: '🏢' },
-        { name: 'Amazon Web Services', description: 'Cloud Infrastructure & AI Services', logo: '☁️' },
-        { name: 'Google Cloud', description: 'AI/ML Platform & Analytics', logo: '🔍' },
-        { name: 'IBM', description: 'Watson AI & Enterprise Solutions', logo: '🤖' },
-        { name: 'NVIDIA', description: 'GPU Computing & AI Hardware', logo: '🎮' },
-        { name: 'Intel', description: 'AI Processors & Edge Computing', logo: '💻' }
+        { name: 'Microsoft', description: 'Azure Cloud Services & AI Platform', logo: '🏢'},
+        {name: 'Amazon Web Services', description: 'Cloud Infrastructure & AI Services', logo: '☁️'},
+        {name: 'Google Cloud', description: 'AI/ML Platform & Analytics', logo: '🔍'},
+        {name: 'IBM', description: 'Watson AI & Enterprise Solutions', logo: '🤖'},
+        {name: 'NVIDIA', description: 'GPU Computing & AI Hardware', logo: '🎮'},
+        {name: 'Intel', description: 'AI Processors & Edge Computing', logo: '💻'}
       ]
     },
       title: 'Solution Partners',
@@ -26,23 +25,23 @@ const PartnersPage: React.FC = () => {
       icon: Handshake,
       color: 'text-green-400',
       bgColor: 'bg-green-500/10',
-        { name: 'Salesforce', description: 'CRM & Customer Experience Platform', logo: '☁️' },
-        { name: 'ServiceNow', description: 'IT Service Management & Automation', logo: '⚙️' },
-        { name: 'Splunk', description: 'Data Analytics & Security Monitoring', logo: '📊' },
-        { name: 'Tableau', description: 'Business Intelligence & Visualization', logo: '📈' },
-        { name: 'Workday', description: 'HR & Financial Management', logo: '👥' },
-        { name: 'Zendesk', description: 'Customer Support & Engagement', logo: '🎧' }
+        {name: 'Salesforce', description: 'CRM & Customer Experience Platform', logo: '☁️'},
+        {name: 'ServiceNow', description: 'IT Service Management & Automation', logo: '⚙️'},
+        {name: 'Splunk', description: 'Data Analytics & Security Monitoring', logo: '📊'},
+        {name: 'Tableau', description: 'Business Intelligence & Visualization', logo: '📈'},
+        {name: 'Workday', description: 'HR & Financial Management', logo: '👥'},
+        {name: 'Zendesk', description: 'Customer Support & Engagement', logo: '🎧'}
       title: 'Integration Partners',
       description: 'Partners that help us integrate with existing enterprise systems',
       icon: Award,
       color: 'text-purple-400',
       bgColor: 'bg-purple-500/10',
-        { name: 'Dell Technologies', description: 'Infrastructure & Storage Solutions', logo: '💾' },
-        { name: 'Cisco', description: 'Networking & Security Infrastructure', logo: '🌐' },
-        { name: 'VMware', description: 'Virtualization & Cloud Management', logo: '🖥️' },
-        { name: 'Red Hat', description: 'Open Source Solutions & Support', logo: '🎩' },
-        { name: 'Oracle', description: 'Database & Enterprise Applications', logo: '🗄️' },
-        { name: 'SAP', description: 'Enterprise Resource Planning', logo: '📋' }
+        {name: 'Dell Technologies', description: 'Infrastructure & Storage Solutions', logo: '💾'},
+        {name: 'Cisco', description: 'Networking & Security Infrastructure', logo: '🌐'},
+        {name: 'VMware', description: 'Virtualization & Cloud Management', logo: '🖥️'},
+        {name: 'Red Hat', description: 'Open Source Solutions & Support', logo: '🎩'},
+        {name: 'Oracle', description: 'Database & Enterprise Applications', logo: '🗄️'},
+        {name: 'SAP', description: 'Enterprise Resource Planning', logo: '📋'}
     }
   ]
   const benefits = [
@@ -93,9 +92,7 @@ namename: 'Channel Partners',
       bgColor: 'bg-orange-500/10'
   const partnerTypes = [],
   return (
-    {
-    // TODO: Add content;
-  }
+    {// TODO: Add content;}
 }
   titl,
   e: 'Technology Partners',
@@ -175,8 +172,7 @@ namename: 'Channel Partners',
 icon: Globe,
       title: 'Global Reach',
       description: 'Access to worldwide markets and customers through our partner network',
-const PagePage: React.FC = () => {
-  return (
+const PagePage: React.FC = () => {return (
     <React.Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -356,19 +352,22 @@ const PagePage: React.FC = () => {
 }
 export default PartnersPage</a>
   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
   </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-</div></div></div></div></div></span></span></p></p></p></p></p></p></p></p></p></h2></h2></h2></h2></h3></h3></h3></ul></ul></li>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div></span></span></p></p></p></p></p></p></p></p></p></h2></h2></h2></h2></h3></h3></h3></ul></ul></li>

@@ -11,7 +11,7 @@ export function middleware(request: NextRequest) {
     // Prevent XSS attacks
     'X-Content-Type-Options': 'nosniff',
     'X-Frame-Options': 'DENY',
-    'X-XSS-Protection': '1; mode=block',
+    'X-XSS-Protection': '1 mode=block',
     
     // Content Security Policy
     'Content-Security-Policy': [
@@ -25,7 +25,7 @@ export function middleware(request: NextRequest) {
       "frame-ancestors 'none'",
       "base-uri 'self'",
       "form-action 'self'",
-      "upgrade-insecure-requests"].join('; '),
+      "upgrade-insecure-requests"].join(' '),
     
     // Force HTTPS
     'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload',

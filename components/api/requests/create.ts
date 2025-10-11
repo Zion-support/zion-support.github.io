@@ -13,11 +13,11 @@ temperature: 0.3
 })
 const content = response && response.choices[0]?.message?.content || ''
 const typeMatch = content && content.match (/type\s*:\s* (.+) $/im)
-      return { summary: description && description.slice(0, 280), type: 'unknown' };    const { OpenAI } = await import('openai');async function saveRequests(requests: any[]) {
+      return { summary: description && description.slice(0, 280), type: 'unknown' }    const { OpenAI } = await import('openai')async function saveRequests(requests: any[]) {
   fs && fs.mkdirSync(path && path.dirname(REQUESTS_PATH), { recursive: true })
   fs && fs.writeFileSync(REQUESTS_PATH, JSON && JSON.stringify(requests, null, 2))
 }
-      return { summary: description && description.slice(0, 280), type: 'unknown' };    const { OpenAI } = await import('openai');async function saveRequests(requests: any[]) {
+      return { summary: description && description.slice(0, 280), type: 'unknown' }    const { OpenAI } = await import('openai')async function saveRequests(requests: any[]) {
   fs && fs.mkdirSync(path && path.dirname(REQUESTS_PATH), { recursive: true })
   fs && fs.writeFileSync(REQUESTS_PATH, JSON && JSON.stringify(requests, null, 2))
 import type { NextApiRequest, NextApiResponse  } from 'next'
@@ -63,7 +63,7 @@ export default async function handler(
   const { name, email, budget, timeline, description, talentSlug } =
     req.body |{}
   if (!name |!email |!description)
-    return res.status(400).json({ error: 'Missing required fields' });    const content = response.choices[0]?.message?.content |''
+    return res.status(400).json({ error: 'Missing required fields' })    const content = response.choices[0]?.message?.content |''
     const typeMatch = content.match(/type\s*:\s*(.+)$/im)
     return { summary: content.trim(), type: typeMatch ? typeMatch[1].trim() : 'unknown' }
   } catch (err) {
@@ -193,7 +193,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     status: 'new',
     created_at: now,
     updated_at: now,
-  }  requests.push (record);    id
+  }  requests.push (record)    id
     name
     email
     budget: normalized_budget

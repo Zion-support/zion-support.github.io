@@ -1,10 +1,9 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import {Helmet} from 'react-helmet-async'
 import Navigation from '../components/Navigation'
-import { Brain, BarChart, Target, TrendingUp, FileText, Zap, Shield, CheckCircle } from 'lucide-react'
+import {Brain, BarChart, Target, TrendingUp, FileText, Zap, Shield, CheckCircle} from 'lucide-react'
 
-const LandingPageBuilderPage: React.FC = () => {
-  const features = [
+const LandingPageBuilderPage: React.FC = () => {const features = [
     {
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -52,11 +51,12 @@ const LandingPageBuilderPage: React.FC = () => {
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-sky-900 to-slate-900">
         {/* Hero Section */}
-        </div><section className="py-20 px-4 relative overflow-hidden">
+        </div>
+<section className="py-20 px-4 relative overflow-hidden">
           </section>
 <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
           </div>
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+<div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s'}} />
           </div>
 <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md: text-7xl font-bold text-white mb-6">
@@ -80,7 +80,7 @@ const LandingPageBuilderPage: React.FC = () => {
         </main><section className="relative py-20 px-4 sm: px-6 lg:px-8">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Page Title
@@ -98,14 +98,14 @@ const LandingPageBuilderPage: React.FC = () => {
                 </button>
               </div>
 </div>
-          </div>
+</div>
         </section>
 
         {/* Features Section */}
         <section className="py-20 px-4">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center mb-16">
 <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300">Powerful AI capabilities for your business</p>
@@ -132,14 +132,14 @@ const LandingPageBuilderPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
+</div>
         </section>
 
         {/* Benefits Section */}
 <section className="py-20 px-4 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Landing Page Builder?</h2>
               <p className="text-xl text-gray-300">Transform your business with intelligent automation</p>
@@ -157,7 +157,7 @@ const LandingPageBuilderPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
+</div>
         </section>
 
         {/* CTA Section */}
@@ -179,11 +179,10 @@ const LandingPageBuilderPage: React.FC = () => {
                 Contact Sales
               </button>
             </div>
-          </div>
+</div>
         </section>
-      </div>
-    </>
-  )
+</div>
+)
 }
 
 export default LandingPageBuilderPage

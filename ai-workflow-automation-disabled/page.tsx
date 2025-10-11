@@ -3,29 +3,22 @@ import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
-import { Workflow, Zap, Brain, BarChart, Clock, Shield, Users, CheckCircle, Phone, Mail, ArrowRight, Settings, Database, Globe } from 'lucide-react'
-const AIWorkflowAutomationPage: React.FC = () => {
-  const features = [
+import {Workflow, Zap, Brain, BarChart, Clock, Shield, Users, CheckCircle, Phone, Mail, ArrowRight, Settings, Database, Globe} from 'lucide-react'
+const AIWorkflowAutomationPage: React.FC = () => {const features = [
     {
       icon: Zap
       title: 'Intelligent Process Automation',
       description: 'AI-powered automation that learns from your workflows and optimizes them continuously.',
-      benefits: ['Process Learning', 'Automatic Optimization', 'Exception Handling', 'Performance Monitoring']
-    },
-    {
-      icon: Settings
+      benefits: ['Process Learning', 'Automatic Optimization', 'Exception Handling', 'Performance Monitoring']},
+    {icon: Settings
       title: 'Workflow Designer',
       description: 'Visual workflow designer that allows you to create complex automation workflows without coding.',
-      benefits: ['Drag & Drop Interface', 'Visual Logic Builder', 'Template Library', 'Testing Tools']
-    },
-    {
-      icon: Clock
+      benefits: ['Drag & Drop Interface', 'Visual Logic Builder', 'Template Library', 'Testing Tools']},
+    {icon: Clock
       title: 'Real-time Monitoring',
       description: 'Monitor your automated workflows in real-time with detailed analytics and performance metrics.',
-      benefits: ['Live Monitoring', 'Performance Metrics', 'Error Tracking', 'Alert System']
-    },
-    {
-      icon: Users
+      benefits: ['Live Monitoring', 'Performance Metrics', 'Error Tracking', 'Alert System']},
+    {icon: Users
       title: 'Team Collaboration',
       description: 'Collaborate with your team on workflow design and management with role-based access control.',
       benefits: ['Role-based Access', 'Team Collaboration', 'Version Control', 'Approval Workflows']
@@ -58,26 +51,18 @@ const,
   l: 'Processing' }
   ]
   const useCases = [
-    {
-      title: 'Customer Onboarding',
+    {title: 'Customer Onboarding',
       description: 'Automate the entire customer onboarding process from signup to first value delivery with personalized workflows.',
-      icon: Users
-    },
-    {
-      title: 'Invoice Processing',
+      icon: Users},
+    {title: 'Invoice Processing',
       description: 'Automatically process invoices, validate data, route for approval, and update accounting systems.',
-      icon: Database
-    },
-    {
-      title: 'Lead Management',
+      icon: Database},
+    {title: 'Lead Management',
       description: 'Automate lead scoring, assignment, follow-up sequences, and CRM updates based on lead behavior.',
-      icon: Globe
-    },
-    {
-      title: 'Employee Onboarding',
+      icon: Globe},
+    {title: 'Employee Onboarding',
       description: 'Streamline new hire processes with automated document collection, system access, and training assignments.',
-      icon: Settings
-    }
+      icon: Settings}
   ]
   return(<React.Fragment>
       <SEOOptimizer
@@ -195,8 +180,7 @@ const,
                       {stat.number}
                     </div>"
                     <div className="text-gray-300 font-medium">{stat.label})})
-const AIWorkflowAutomationPage = () => {
-  return(</div>
+const AIWorkflowAutomationPage = () => {return(</div>
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
   return (
     </div>
@@ -206,7 +190,8 @@ const AIWorkflowAutomationPage = () => {
         </main>
 <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
-          </div><section className="text-center mb-16">
+          </div>
+<section className="text-center mb-16">
             <h1 className="text-4xl sm: text-5xl md:text-6xl font-bold text-white mb-6 neon-text">)
               AI Workflow Automation)
             </h1>)
@@ -255,7 +240,8 @@ const AIWorkflowAutomationPage = () => {
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" /></CheckCircl>
                         {benefit})})
           {/* Use Cases Section */}
-          </div><section className="container mx-auto px-4 py-16">
+          </div>
+<section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">
               Automate Any Business Process</h2>,
             </section>
@@ -275,7 +261,8 @@ const AIWorkflowAutomationPage = () => {
                   <h3 className="text-xl font-bold text-white mb-3">{useCase.title}
                   <p className="text-gray-300">{useCase.description})
           {/* Pricing Section */}
-          </div><section className="mb-16">
+          </div>
+<section className="mb-16">
             <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">
               Pricing Plans</h2>,
             </section>
@@ -307,7 +294,8 @@ const AIWorkflowAutomationPage = () => {
                     Get Started
               ))}
           {/* CTA Section */}
-          </div><section className="text-center bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-8 cyber-card"></sectio>
+          </div>
+<section className="text-center bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-8 cyber-card"></sectio>
             <h2 className="text-3 xl font-bold text-white mb-4"></h2></<<<h>Ready</h></<<h>to</h> Automate Your Workflows?
             <p className="text-xl text-purple-100 mb-8">
               Contact us today to learn how AI workflow automation can transform your business processes.
@@ -326,5 +314,28 @@ const AIWorkflowAutomationPage = () => {
                 Email Us
         <Footer />
       </div>,
-    </div>)
-}</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></p></p></p></p></p></h1></h2></h2></h2></h3></h3></h3></ul></ul></li></li></main></main></main></main></section></section></section></section></section></section>
+    </div>
+)
+}</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div></span></span></p></p></p></p></p></h1></h2></h2></h2></h3></h3></h3></ul></ul></li></li></main></main></main></main></section></section></section></section></section></section>

@@ -1,8 +1,8 @@
-impo, r, t { FileTe, x, t } fr, o, m 'luci, d, e-rea, c, t'
-impo, r, t { FileTe, x, t } fr, o, m 'luci, d, e-rea, c, t'
-impo, r, t { FileTe, x, t } fr, o, m 'luci, d, e-rea, c, t'
-const October2025DocumentAutomationBanne, r = () => { 
-  return(<div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, borde, r-y, borde, r-indi, g, o-5, 0, 0/30, overflo, w-hidd, e, n' > {' ' }
+impo, r, t {FileTe, x, t} fr, o, m 'luci, d, e-rea, c, t'
+impo, r, t {FileTe, x, t} fr, o, m 'luci, d, e-rea, c, t'
+impo, r, t {FileTe, x, t} fr, o, m 'luci, d, e-rea, c, t'
+const October2025DocumentAutomationBanne, r = () => {return (
+<div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, borde, r-y, borde, r-indi, g, o-5, 0, 0/30, overflo, w-hidd, e, n' > {' '}
       {/* Animated, background, elements */}
       </div>
 <div, className='absolute, inse, t-0, opacit, y-10'>
@@ -10,14 +10,14 @@ const October2025DocumentAutomationBanne, r = () => {
 <div, className='absolute, to, p-0, righ, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e' />
   return (
     </div>
-<div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, borde, r-y, borde, r-indi, g, o-5, 0, 0/30, overflo, w-hidd, e, n' > {' ' }
+<div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, borde, r-y, borde, r-indi, g, o-5, 0, 0/30, overflo, w-hidd, e, n' > {' '}
       {/* Animated, background, elements */}
       </div>
 <div, className='absolute, inse, t-0, opacit, y-10'>
         </div>
 <div, className='absolute, to, p-0, righ, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e' />
         <, className='absolute, botto, m-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e'$2 />
-          sty, l, e={{ animationDel, a, y: '1., 5, s' }}
+          sty, l, e={{ animationDel, a, y: '1., 5, s'}}
         / />
       </div>
 <div, classNam, e = 'relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, y-8'>
@@ -31,14 +31,14 @@ const October2025DocumentAutomationBanne, r = () => {
             <FileText, classNam, e = 'w-4 h-4, m, l-2' />
 const October2025DocumentAutomationBanne, r = () => {/* TODO: Fix JSX expression */}
     </div>
-<div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, borde, r-y, borde, r-indi, g, o-5, 0, 0/30, overflo, w-hidd, e, n' > {' ' }
+<div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, borde, r-y, borde, r-indi, g, o-5, 0, 0/30, overflo, w-hidd, e, n' > {' '}
       {/* Animated, background, elements */}
       </div>
 <div, className='absolute, inse, t-0, opacit, y-10'>
         </div>
 <div, className='absolute, to, p-0, righ, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e' />
         <, className='absolute, botto, m-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e'$2 />
-          sty, l, e={{ animationDel, a, y: '1., 5, s' }}
+          sty, l, e={{ animationDel, a, y: '1., 5, s'}}
         / />
       </div>
 <div, classNam, e = 'relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, y-8'>
@@ -429,9 +429,99 @@ const October2025DocumentAutomationBanne, r = () => {/* TODO: Fix JSX expression
               <Link, className='w-5 h-5, m, l-2' /></Link>
             </Li, n, k>
           </div>
-        </div>
-      </div>
-    </div>
-  )
+</div>
+</div>
+</div>
+)
 }
-export default October2025 DocumentAutomationBanner</$1></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></Link></Link></Link></Link></Link></Link></p></p></p></p></p></p></p></p></p></h2></h2></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3>
+export default October2025 DocumentAutomationBanner</$1></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></span></span></Link></Link></Link></Link></Link></Link></p></p></p></p></p></p></p></p></p></h2></h2></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3>

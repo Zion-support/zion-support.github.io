@@ -1,12 +1,11 @@
-import { Helmet } from "react-helmet-async"
+import {Helmet} from "react-helmet-async"
 impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "luci, d, e-rea, c, t"
 impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "rea, c, t-helm, e, t-asy, n, c";'
 impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "luci, d, e-rea, c, t";'
-const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {
-  return(<React.Fragment>
+const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {return(<React.Fragment>
       <Helmet>
         <title>Smart, Appointment, Scheduler - Zion, Tech, Group;
         <meta name="descripti, o, n" content="Healthca, r, e-focused, SaaS, for online, appointment, s, virtual, consultation, s, patient, data, management, and, automated, reminders." />
@@ -91,7 +90,8 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
                 >
                   Email, U, s;
           {/* Featur, e, s */}
-          </div><section, className="mb-16">
+          </div>
+<section, className="mb-16">
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-center, tex, t-gr, a, y-900, m, b-12">Key, Feature, s;
             <, className="grid, m, d: gr, i, d-co, l, s-2 l$2 />
   g:gr, i, d-co, l, s-3, ga, p-8">"
@@ -100,7 +100,8 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
                 </div>
 <div, className="bg-gre, e, n-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">
                   <Calendar, className="w-6 h-6, tex, t-gre, e, n-6, 0, 0  />
-          </div><section, className="mb-16">"
+          </div>
+<section, className="mb-16">"
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-center, tex, t-gr, a, y-900, m, b-12">Key, Feature, s</h2>"
             <, className="grid, m, d: gr, i, d-co, l, s-2 l$2 />
   g:gr, i, d-co, l, s-3, ga, p-8">"
@@ -115,7 +116,8 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
                 </div>
 <div, className="bg-gre, e, n-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">
                   <Calendar, className="w-6 h-6, tex, t-gre, e, n-6, 0, 0  />
-          </div><section, className="mb-16">"
+          </div>
+<section, className="mb-16">"
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-center, tex, t-gr, a, y-900, m, b-12">Key, Feature, s</h2>"
             <, className="grid, m, d: gr, i, d-co, l, s-2 l$2 />
   g:gr, i, d-co, l, s-3, ga, p-8">"
@@ -124,7 +126,8 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
                 </div>
 <div, className="bg-gre, e, n-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">"
           {/* Featur, e, s */}"
-          </div><section, className="mb-16"></section>"
+          </div>
+<section, className="mb-16"></section>"
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-center, tex, t-gr, a, y-900, m, b-12">Key, Feature, s</h2>"
             <, className="grid, m, d: gr, i, d-co, l, s-2 l,"$2 />
   g:gr, i, d-co, l, s-3, ga, p-8">""
@@ -243,7 +246,8 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">HIPAA, Complianc, e</h3>";"
                 <p, className="te, x, t-gr, a, y-6, 0, 0">Full, HIPAA, compliance with, encrypted, data transmission, and, storage.</p>"
           {/* Prici, n, g */}
-          </div><section, className="mb-16">
+          </div>
+<section, className="mb-16">
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-center, tex, t-gr, a, y-900, m, b-12">Pricing, Plan, s;
             </section>
 <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">"
@@ -256,7 +260,8 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
                   <li, className="flex, item, s-center, tex, t-gr, a, y-6, 0, 0">
                     <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3  />
           {/* Prici, n, g */}"
-          </div><section, className="mb-16"></section>"
+          </div>
+<section, className="mb-16"></section>"
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-center, tex, t-gr, a, y-900, m, b-12">Pricing, Plan, s</h2>"
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">""
               </div>
@@ -275,7 +280,8 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
                     Basic, telemedicin, e;
                   <li, className="flex, item, s-center, tex, t-gr, a, y-6, 0, 0">
                     <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3  />
-          </div><section, className="mb-16">"
+          </div>
+<section, className="mb-16">"
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-center, tex, t-gr, a, y-900, m, b-12">Pricing, Plan, s</h2>"
             </section>
 <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">"
@@ -288,7 +294,8 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
                   <li, className="flex, item, s-center, tex, t-gr, a, y-6, 0, 0">"</$1>"
                   <li, className="flex, item, s-center, tex, t-gr, a, y-6, 0, 0"></li>"
                     <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3  /></CheckCircle>"
-          </div><section, className="mb-16">";"
+          </div>
+<section, className="mb-16">";"
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-center, tex, t-gr, a, y-900, m, b-12">Pricing, Plan, s</h2>";"
             </section>
 <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";"
@@ -439,7 +446,8 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
                 >
                   Contact, Sale, s;
           {/* Contact, Sectio, n */}
-          </div><section, className="bg-white, rounde, d-xl, shado, w-l, g, p-8">"
+          </div>
+<section, className="bg-white, rounde, d-xl, shado, w-l, g, p-8">"
             </section>
 <div, className="te, x, t-cent, e, r">"
               <h2, className="te, x, t-3xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">Ready, to, Modernize Your, Practic, e?</h2>"
@@ -459,7 +467,8 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
   hr, e, f="te;
   l: +130246409, 5, 0" 
           {/* Contact, Sectio, n */}"
-          </div><section, className="bg-white, rounde, d-xl, shado, w-l, g, p-8">";"
+          </div>
+<section, className="bg-white, rounde, d-xl, shado, w-l, g, p-8">";"
             </section>
 <div, className="te, x, t-cent, e, r">";"
               <h2, className="te, x, t-3xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">Ready, to, Modernize Your, Practic, e?</h2>";"
@@ -492,4 +501,77 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
   )
 }
 export default SmartAppointmentScheduler;"
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></p></p></p></p></p></h1></h1></h1></h2></h2></h3></h3></ul></ul></ul></ul></ul></ul></ul></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></section></section></section></section></section></section></section></section></section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div></div></span></span></span></p></p></p></p></p></h1></h1></h1></h2></h2></h3></h3></ul></ul></ul></ul></ul></ul></ul></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></section></section></section></section></section></section></section></section></section>

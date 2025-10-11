@@ -1,6 +1,6 @@
 'use client'
-import React, { Component, ErrorInfo, ReactNode } from 'react'
-import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react'
+import React, {Component, ErrorInfo, ReactNode} from 'react'
+import {AlertTriangle, RefreshCw, Home, Mail} from 'lucide-react'
 interface Props {/* TODO: Fix JSX expression */}
 }
 interface State {/* TODO: Fix JSX expression */}
@@ -28,7 +28,8 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
   }
   render() {/* TODO: Fix JSX expression */}
       }
-      return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"></div>"
+      return (
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"></div>"
           <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-lg p-8 text-center border border-white/20"></div>"
             <div className="mb-6"></div>"
               <AlertTriangle className="w-16 h-16 text-red-400 mx-auto mb-4" /></AlertTriangle>"
@@ -97,12 +98,13 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
                 </a>
               </p>
             </div>
-          </div>
-        </div>
+</div>
+</div>
       ),
     }
     return this.props.children;
   }
 }
 export default ErrorBoundary;"
-</div></div></button></button>
+</div>
+</div></button></button>

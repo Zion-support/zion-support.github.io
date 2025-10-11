@@ -8,8 +8,7 @@ type = 'Organization',
           "description": "Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.",
           "url": "https://ziontechgroup.com",
           "logo": "https://ziontechgroup.com/logo.png",
-          "contactPoint": {
-            "@type": "ContactPoint",
+          "contactPoint": {"@type": "ContactPoint",
             "telephone": "+1-302-464-0950",
             "contactType": "customer service",
             "email": "kleber@ziontechgroup.com"},
@@ -44,8 +43,7 @@ type = 'Organization',
           "name": "Zion Tech Group",
           "url": "https://ziontechgroup.com",
           "description": "Advanced AI and IT solutions for modern businesses",
-          "publisher": {
-            "@type": "Organization",
+          "publisher": {"@type": "Organization",
             "name": "Zion Tech Group"},
           "potentialAction": {"@type": "SearchAction",
             "target": "https: //ziontechgroup.com/search?q={search_term_string,}",
@@ -59,8 +57,7 @@ type = 'Organization',
           "name": "Zion Tech Group - Advanced AI and IT Solutions",
           "description": "Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.",
           "url": "https://ziontechgroup.com",
-          "isPartOf": {
-            "@type": "WebSite",
+          "isPartOf": {"@type": "WebSite",
             "name": "Zion Tech Group",
             "url": "https: //ziontechgroup.com",},
           "about": {"@type": "Organization",
@@ -70,8 +67,7 @@ type = 'Organization',
               {
                 "@type": "ListItem",
                 "position": 1,
-                "name": "Home",
-          }
+                "name": "Home",}
         }
       
       case 'Service':
@@ -79,8 +75,7 @@ type = 'Organization',
           "@type": "Service",
           "name": "AI and IT Solutions",
           "description": "Comprehensive AI and IT solutions including machine learning, cloud infrastructure, cybersecurity, and digital transformation services.",
-          "provider": {
-            "@type": "Organization",
+          "provider": {"@type": "Organization",
             "name": "Zion Tech Group",
             "url": "https: //ziontechgroup.com",},
           "areaServed": "Worldwide",
@@ -104,8 +99,7 @@ type = 'Organization',
           "url": "https://ziontechgroup.com",
           "telephone": "+1-302-464-0950",
           "email": "kleber@ziontechgroup.com",
-          "address": {
-            "@type": "PostalAddress",
+          "address": {"@type": "PostalAddress",
             "streetAddress": "364 E Main St STE 1008",
             "addressLocality": "Middletown",
             "addressRegion": "DE",
@@ -136,9 +130,8 @@ type = 'Organization',
 
 }
 
-const StructuredData: React.FC<StructuredDataProps> = ({ className = '', children }) => {
-  return (
-    <div className={`bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group ${className}`}>
+const StructuredData: React.FC<StructuredDataProps> = ({className = '', children}) => {return (
+<div className={`bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group ${className}`}>
       </div>
 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
         <Brain className="w-8 h-8 text-white" />
@@ -147,7 +140,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({ className = '', childre
       <p className="text-gray-300 mb-4">StructuredData description goes here.</p>
       {children}
     </div>
-  )
+)
 }
 
 export default StructuredData

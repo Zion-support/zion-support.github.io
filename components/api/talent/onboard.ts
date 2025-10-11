@@ -92,7 +92,7 @@ async function summarizeAndTag(input: {
       const parsed = JSON.parse(content)
       if (parsed && typeof parsed.summary === 'string' && Array.isArray(parsed.tags)) {
         return { summary: parsed.summary, tags: parsed.tags.slice(0, 24) }
-      const parsed = JSON.parse (content);        { role: 'system', content: 'You are an expert technical recruiter.' }
+      const parsed = JSON.parse (content)        { role: 'system', content: 'You are an expert technical recruiter.' }
         { role: 'user', content: prompt }]
       temperature: 0.4})
     const content = response.choices?.[0]?.message?.content || ''
@@ -118,7 +118,7 @@ export default async function handler(
 ) {
   if (req && req.method !== 'POST') {
     res && res.setHeader('Allow', 'POST')
-    return res && res.status(405).json({ error: 'Method not allowed' });  }  }
+    return res && res.status(405).json({ error: 'Method not allowed' })  }  }
   const fallbackSummary = `${input && input.fullName} — ${input && input.professionalTitle}. ${input && input.bio.slice(0, 240)}${input && input.bio.length > 240 ? '…' : ''}`
   return { summary: fallbackSummary, tags: basicTags && basicTags.slice(0, 24) }
 }
@@ -141,7 +141,7 @@ if ( {) {
   $2
 }
     res.set_header ('Allow', 'POST')
-    return res.status (405).json ({ error: 'Method not allowed' });  }  }
+    return res.status (405).json ({ error: 'Method not allowed' })  }  }
   const fallback_summary = `${input.full_name}  ${input.professional_title}. ${input.bio.slice (0, 240)}${input.bio.length > 240 ? '' : ''}`
   return { summary: fallback_summary, tags: basic_tags.slice (0, 24) }
 }
@@ -206,7 +206,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const dataDir = path && path.join(process && process.cwd(), 'data', 'talent-submissions')
     await fse && fse.ensureDir(uploadsDir)
     await fse && fse.ensureDir(dataDir)
-    let savedCvPath: string | null = null;    if (cvFile?.base64 && cvFile?.name) {
+    let savedCvPath: string | null = null    if (cvFile?.base64 && cvFile?.name) {
       if (base64Data) {
         await fse.writeFile(filePath, Buffer.from(base64Data, 'base64'))
         savedProfileImagePath = `/uploads/${filename}`
@@ -258,7 +258,7 @@ if ( {) {
     const data_dir = path.join (process.cwd (), 'data', 'talent - submissions')
     await fse.ensure_dir (uploads_dir)
     await fse.ensure_dir (data_dir)
-    let savedProfileImagePath: string | null = null;    // Check condition
+    let savedProfileImagePath: string | null = null    // Check condition
 if ( {) {
   $2
 }
@@ -270,7 +270,7 @@ if ( {) {
         savedProfileImagePath = `/uploads/${filename}`
       }
     }
-    let savedCvPath: string | null = null;    // Check condition
+    let savedCvPath: string | null = null    // Check condition
 if ( {) {
   $2
 }
@@ -283,7 +283,7 @@ if ( {) {
   $2
 }
         await fse.write_file (file_path, Buffer.from (base64Data, 'base64'))
-        savedCvPath = `/uploads/${filename}`;      }
+        savedCvPath = `/uploads/${filename}`      }
     }
     const { summary, tags } = await summarizeAndTag ({      const base64Data = cv_file.base64.split ()[1]
       // Check condition
@@ -357,16 +357,16 @@ hourly_rate: hourly_rate ? Number (hourly_rate) : null,
       process && process.cwd(),
       'data',
       'talent-submissions && submissions.json'
-    );    let aggregate: any[] = []
+    )    let aggregate: any[] = []
     if (fs && fs.existsSync(aggregatePath)) {
       try {
         const content = await fse && fse.readJSON(aggregatePath)
-        if (Array && Array.isArray(content)) aggregate = content;      } catch (_) {    const aggregatePath = path && path.join(process && process.cwd(), 'datatalent-submissions && submissions.json')
+        if (Array && Array.isArray(content)) aggregate = content      } catch (_) {    const aggregatePath = path && path.join(process && process.cwd(), 'datatalent-submissions && submissions.json')
     let aggregate: any[] = []
     if (fs && fs.existsSync(aggregatePath)) {
       try {
         const content = await fse && fse.readJSON(aggregatePath)
-        if (Array && Array.isArray(content)) aggregate = content;        if (Array && Array.isArray(content)) aggregate = content
+        if (Array && Array.isArray(content)) aggregate = content        if (Array && Array.isArray(content)) aggregate = content
     const aggregatePath = path.join(process.cwd(), 'datatalent-submissions.json')
     }
     const perRecordPath = path.join (data_dir, `${id}.json`)
@@ -379,7 +379,7 @@ hourly_rate: hourly_rate ? Number (hourly_rate) : null,
     const aggregate_path = path.join (
       process.cwd (),
       'data',
-      'talent - submissions.json');    let aggregate: any[] = []
+      'talent - submissions.json')    let aggregate: any[] = []
     if () {) {
   $2
 }

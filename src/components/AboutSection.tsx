@@ -1,30 +1,26 @@
 import React from 'react'
-export default function AboutSection() {
-  const stats = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '50+', label: 'Happy Clients' },
-    { number: '5+', label: 'Years Experience' },
-    { number: '99%', label: 'Success Rate' }
+export default function AboutSection() {const stats = [
+    { number: '500+', label: 'Projects Completed'},
+    {number: '50+', label: 'Happy Clients'},
+    {number: '5+', label: 'Years Experience'},
+    {number: '99%', label: 'Success Rate'}
   ]
   const values = [
-    {
-      title: 'Innovation First',
+    {title: 'Innovation First',
       description: 'We stay at the forefront of technology, constantly exploring new AI and IT solutions.',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
       )
     },
-    {
-      title: 'Client Success',
+    {title: 'Client Success',
       description: 'Your success is our mission. We build long-term partnerships based on trust and results.',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
       )
     },
-    {
-      title: 'Quality Excellence',
+    {title: 'Quality Excellence',
       description: 'We deliver exceptional quality in every project, ensuring robust and scalable solutions.',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -33,7 +29,7 @@ export default function AboutSection() {
     }
   ]
   return (
-    <section id="about" className="py-20 relative">
+<section id="about" className="py-20 relative">
       </section>
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
@@ -110,7 +106,7 @@ export default function AboutSection() {
                     </div>
 <div className="w-24 bg-gray-700 rounded-full h-2">
                       </div>
-<div className="bg-gradient-to-r from-cyan-400 to-purple-500 h-2 rounded-full" style={{ width: '95%' }}>
+<div className="bg-gradient-to-r from-cyan-400 to-purple-500 h-2 rounded-full" style={{ width: '95%'}}>
                 ))}
         {/* Values Section */}
         </div>
@@ -164,9 +160,9 @@ export default function AboutSection() {
               <h4 className="text-lg font-semibold text-white mb-2">IT Consultants</h4>
               <p className="text-gray-400 text-sm">Cloud & Infrastructure Experts</p>
             </div>
-          </div>
-        </div>
-      </div>
+</div>
+</div>
+</div>
     </section>
   ),
 }
@@ -174,4 +170,22 @@ export default function AboutSection() {
   </h3>
   </h3>
   </h3>
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></p></p></p></p></p></p></p></p></p></p></p></p></p></h2></h3></h4></h4></h4></ul></li></li></li></li>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div></div></span></span></span></span></span></span></span></span></p></p></p></p></p></p></p></p></p></p></p></p></p></h2></h3></h4></h4></h4></ul></li></li></li></li>

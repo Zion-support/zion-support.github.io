@@ -1,74 +1,41 @@
 'use client'
-import React, { useEffect, useState } from 'react'
+import React, {useState, useEffect} from 'react'
 
-interface AccessibilitySettings {
-  highContrast: boolean
-  fontSize: number
-  reducedMotion: boolean
-}
+interface EnhancedAccessibilityProps {children: React.ReactNode}
 
-const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [settings, setSettings] = useState<AccessibilitySettings>({
-    highContrast: false,
-    fontSize: 16,
-    reducedMotion: false
-  })
+const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({children}) => {const [isHighContrast, setIsHighContrast] = useState(false)
+  const [isLargeText, setIsLargeText] = useState(false)
+  const [isReducedMotion, setIsReducedMotion] = useState(false)
+  const [isKeyboardNavigation, setIsKeyboardNavigation] = useState(false)
 
   useEffect(() => {
-    // Load saved settings from localStorage
-    const savedSettings = localStorage.getItem('accessibility-settings')
-    if (savedSettings) {
-      setSettings(JSON.parse(savedSettings))
-    }
+    // Apply accessibility settings
+    if (isHighContrast) {
+      document.documentElement.classList.add('high-contrast')} else {document.documentElement.classList.remove('high-contrast')}
 
-    // Apply settings
-    applySettings(settings)
-  }, [settings])
+    if (isLargeText) {document.documentElement.classList.add('large-text')} else {document.documentElement.classList.remove('large-text')}
 
-  const applySettings = (newSettings: AccessibilitySettings) => {
-    const root = document.documentElement
-    // Apply high contrast
-    if (newSettings.highContrast) {
-      root.classList.add('high-contrast')
-    } else {
-      root.classList.remove('high-contrast')
-    }
+    if (isReducedMotion) {document.documentElement.style.setProperty('--animation-duration', '0.01ms')
+      document.documentElement.style.setProperty('--animation-iteration-count', '1')} else {document.documentElement.style.removeProperty('--animation-duration')
+      document.documentElement.style.removeProperty('--animation-iteration-count')}
 
-    // Apply font size
-    root.style.fontSize = `${newSettings.fontSize}px`
-
-    // Apply reduced motion
-    if (newSettings.reducedMotion) {
-      root.style.setProperty('--animation-duration', '0.01ms')
-      root.style.setProperty('--animation-iteration-count', '1')
-    } else {
-      root.style.removeProperty('--animation-duration')
-      root.style.removeProperty('--animation-iteration-count')
-    }
-  }
-
-  const updateSettings = (newSettings: Partial<AccessibilitySettings>) => {
-    const updatedSettings = { ...settings, ...newSettings }
-    setSettings(updatedSettings)
-    localStorage.setItem('accessibility-settings', JSON.stringify(updatedSettings))
-  }
+    if (isKeyboardNavigation) {document.documentElement.classList.add('keyboard-navigation')} else {document.documentElement.classList.remove('keyboard-navigation')}
+  }, [isHighContrast, isLargeText, isReducedMotion, isKeyboardNavigation])
 
   return (
-    <div className="accessibility-enhanced">
+<div className="accessibility-enhanced">
       {children}
       
       {/* Accessibility Controls */}
-      </div>
-<div className="fixed bottom-4 right-4 z-50">
-        </div>
-<div className="bg-white rounded-lg shadow-lg p-4 space-y-2">
+      <div className="fixed bottom-4 right-4 z-50">
+        <div className="bg-white rounded-lg shadow-lg p-4 space-y-2">
           <h3 className="text-sm font-semibold text-gray-900">Accessibility</h3>
           
           <label className="flex items-center space-x-2">
             <input
               type="checkbox"
-              checked={settings.highContrast}
-              onChange={(e) => updateSettings({ highContrast: e.target.checked })
+              checked={isHighContrast}
+              onChange={(e) => setIsHighContrast(e.target.checked)}
               className="rounded"
             />
             <span className="text-sm text-gray-700">High Contrast</span>
@@ -77,31 +44,36 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
           <label className="flex items-center space-x-2">
             <input
               type="checkbox"
-              checked={settings.reducedMotion}
-              onChange={(e) => updateSettings({ reducedMotion: e.target.checked })
+              checked={isLargeText}
+              onChange={(e) => setIsLargeText(e.target.checked)}
               className="rounded"
             />
-            <span className="text-sm text-gray-700">Reduce Motion</span>
+            <span className="text-sm text-gray-700">Large Text</span>
           </label>
           
-          </div>
-<div className="space-y-1">
-            <label className="text-sm text-gray-700">Font Size</label>
+          <label className="flex items-center space-x-2">
             <input
-              type="range"
-              min="12"
-              max="24"
-              value={settings.fontSize}
-              onChange={(e) => updateSettings({ fontSize: parseInt(e.target.value) })
-              className="w-full"
+              type="checkbox"
+              checked={isReducedMotion}
+              onChange={(e) => setIsReducedMotion(e.target.checked)}
+              className="rounded"
             />
-            </div>
-<div className="text-xs text-gray-500 text-center">{settings.fontSize}px</div>
-          </div>
+            <span className="text-sm text-gray-700">Reduced Motion</span>
+          </label>
+          
+          <label className="flex items-center space-x-2">
+            <input
+              type="checkbox"
+              checked={isKeyboardNavigation}
+              onChange={(e) => setIsKeyboardNavigation(e.target.checked)}
+              className="rounded"
+            />
+            <span className="text-sm text-gray-700">Keyboard Navigation</span>
+          </label>
         </div>
-      </div>
-    </div>
-  )
+</div>
+</div>
+)
 }
 
 export default EnhancedAccessibility

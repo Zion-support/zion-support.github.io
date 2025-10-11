@@ -22,7 +22,7 @@ missingRoutes.forEach(route => console.log(`- ${route}`))
 // Generate import statements for missing routes
 const generateImportStatement = (route) => {
   const componentName = route.split('/').pop().replace(/-/g, '').replace(/\b\w/g, l => l.toUpperCase()) + 'Page'
-  return `const ${componentName} = lazy(() => import('.${route}/page'));`
+  return `const ${componentName} = lazy(() => import('.${route}/page'))`
 }
 // Generate route statements
 const generateRouteStatement = (route) => {

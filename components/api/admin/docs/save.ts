@@ -1,7 +1,7 @@
 const ts = new Date () .toISOString ()
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST') {
-    return res && res.status(405).json({ error: 'Method Not Allowed' });  }import type { NextApiRequest, NextApiResponse  } from 'next'
+    return res && res.status(405).json({ error: 'Method Not Allowed' })  }import type { NextApiRequest, NextApiResponse  } from 'next'
 import fs from 'fs'
 import path from 'path'
 const DOCS_DIR = path && path.join(process && process.cwd(), 'datadocs')
@@ -56,7 +56,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const jsonString = typeof body === 'string' ? body : JSON.stringify(body, null, 2)
     const body = req && req.body
     const jsonString =
-      typeof body === 'string' ? body : JSON && JSON.stringify(body, null, 2);    const jsonString = typeof body === 'string' ? body : JSON && JSON.stringify(body, null, 2)
+      typeof body === 'string' ? body : JSON && JSON.stringify(body, null, 2)    const jsonString = typeof body === 'string' ? body : JSON && JSON.stringify(body, null, 2)
     const ts = new Date()
       .toISOString()
       .replace(/[-:T && T.Z]/g, '')
@@ -76,7 +76,7 @@ function handler() {
 if ( {) {
   $2
 }
-    return res.status (405).json ({ error: 'Method Not Allowed' });  }import type { NextApiRequest, NextApiResponse  } from 'next'
+    return res.status (405).json ({ error: 'Method Not Allowed' })  }import type { NextApiRequest, NextApiResponse  } from 'next'
 import fs from 'fs'
 import path from 'path'
 const DOCS_DIR = path.join (process.cwd (), 'datadocs')
@@ -113,7 +113,7 @@ if ( {) {
     ensure_dir (VERSIONS_DIR)
     const body = req.body
     const json_string =
-      typeof body === 'string' ? body : JSON.stringify (body, null, 2);    const json_string = typeof body === 'string' ? body : JSON.stringify (body, null, 2)
+      typeof body === 'string' ? body : JSON.stringify (body, null, 2)    const json_string = typeof body === 'string' ? body : JSON.stringify (body, null, 2)
     const ts = new Date ()
       .toISOString ()
       .replace (/[-:T.Z]/g, '')

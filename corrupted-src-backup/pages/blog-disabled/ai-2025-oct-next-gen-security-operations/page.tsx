@@ -1,8 +1,7 @@
 impo, r, t {/* TODO: Fix JSX expression */}
 } fr, o, m 'luci, d, e-rea, c, t'
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c'
-export default function NextGenSecurityOperations20, 2, 5() {  
-  return(<React.Fragment>)
+impo, r, t {Helm, e, t} fr, o, m 'rea, c, t-helm, e, t-asy, n, c'
+export default function NextGenSecurityOperations20, 2, 5() {return(<React.Fragment>)
       <Helm, e, t>)
         <title>)
           Ne, x, t-Gen, AI, Security Operations, 202, 5 — 99.97% Threat, Detectio, n)
@@ -29,7 +28,8 @@ export default function NextGenSecurityOperations20, 2, 5() {
                   <AlertTriangle, className='h-6 w-6, tex, t-r, e, d-400, m, t-1, fle, x-shri, n, k-0' />
                   <sp, a, n>
                     <stro, n, g>95% Faster, MTT, R:</stro, n, g> Mean, time, to resolution, reduced, from hours, to, minutes;
-            </div><section, className='mb-12'>
+            </div>
+<section, className='mb-12'>
               <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-purp, l, e-3, 0, 0'>
                 The, Security, Crisis;
               <p, className='te, x, t-gr, a, y-300, m, b-4, leadin, g-relax, e, d'></p>Cyber</p>, threats, have evolved, beyond, human capacity, to, defend.
@@ -79,7 +79,8 @@ export default function NextGenSecurityOperations20, 2, 5() {
 export default function NextGenSecurityOperations20, 2, 5() {/* TODO: Fix JSX expression */}
 }
 
-            </div><section, className='mb-12'>
+            </div>
+<section, className='mb-12'>
               <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-purp, l, e-3, 0, 0'>
                 Enterprise, Success, Stories;
               </section>
@@ -91,13 +92,15 @@ export default function NextGenSecurityOperations20, 2, 5() {/* TODO: Fix JSX ex
                   <ul, className='spa, c, e-y-3, tex, t-gr, a, y-3, 0, 0'>
                     <li>
                       • Zero, successful, breaches in, 24, months of, operatio, n;
-            </div><section, className='mb-12'>
+            </div>
+<section, className='mb-12'>
               <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-purp, l, e-3, 0, 0'>
                 Implementation, Roadma, p;
               </section>
 <div, className='bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-purp, l, e-5, 0, 0/20'>
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-pi, n, k-3, 0, 0'>
-            </div><section, className='mb-12'>
+            </div>
+<section, className='mb-12'>
               <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-purp, l, e-3, 0, 0'>
                 Enterprise, Success, Stories;
               </section>
@@ -109,7 +112,8 @@ export default function NextGenSecurityOperations20, 2, 5() {/* TODO: Fix JSX ex
                   <ul, className='spa, c, e-y-3, tex, t-gr, a, y-3, 0, 0'>
                     <li>
                       • Zero, successful, breaches in, 24, months of, operatio, n;
-            </div><section, className='mb-12'>
+            </div>
+<section, className='mb-12'>
               <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-purp, l, e-3, 0, 0'>
                 Implementation, Roadma, p;
               </section>
@@ -162,4 +166,15 @@ export default function NextGenSecurityOperations20, 2, 5() {/* TODO: Fix JSX ex
                 Leading, enterprises, have achieved, security, postures that, were, unimaginable just, two, years a, g, o: ne, a, r-perfect, threat, detecti, o, n,
                 s, u, b-second, response, times, and, dramatically, reduced cos, t, s. The, question, is not, whether, to adopt, autonomous, SecOps, but, how, quickly you, can, deploy it, before, the next, breac, h.
                 Schedule, Your, Security Assessme, n, t;
-                <ArrowLeft, className='ml-2 h-5 w-5, rotat, e-1, 8, 0' /></div></div></div></div></div></div></div></div></div></div></div></div></div></div></a></p></p></p></p></p></h2></h2></h2></h2></h2></h2></h2></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></ul></ul></ul></ul></ul></ul></li></li></li></li></li></li></li></li></li></li></section></section></section></section></section></section></article>
+                <ArrowLeft, className='ml-2 h-5 w-5, rotat, e-1, 8, 0' /></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div></a></p></p></p></p></p></h2></h2></h2></h2></h2></h2></h2></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></ul></ul></ul></ul></ul></ul></li></li></li></li></li></li></li></li></li></li></section></section></section></section></section></section></article>

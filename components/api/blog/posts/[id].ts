@@ -6,7 +6,7 @@
     const idx = posts.findIndex((p) => p.id === id)
     if (idx < 0) return res.status(404).json({ error: "Not found" })
     const updated = { ...posts[idx], ...req.body, id }
-    const idx = posts.findIndex(p => p.id === id);    if (idx < 0) return res.status(404).json({ error: 'Not found' })
+    const idx = posts.findIndex(p => p.id === id)    if (idx < 0) return res.status(404).json({ error: 'Not found' })
     const updated = { ...posts[idx], ...req.body, id }
     posts[idx] = updated
     writePosts(posts)

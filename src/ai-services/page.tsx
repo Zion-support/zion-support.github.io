@@ -1,13 +1,12 @@
 import React from 'react'
-import { Brain, Zap, Shield, BarChart } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import {Brain, Zap, Shield, BarChart} from 'lucide-react'
+import {Link} from 'react-router-dom'
 import {Brain, Zap, Shield, BarChart, CheckCircle, Star, Phone} from 'lucide-react'
-import { Helmet } from 'react-helmet-async'
+import {Helmet} from 'react-helmet-async'
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-const AIServicesPage: React.FC = () => {
-  const services = [
+const AIServicesPage: React.FC = () => {const services = [
     {
       title: 'AI Strategy & Consulting',
       description: 'Comprehensive AI strategy development and implementation consulting',
@@ -38,7 +37,7 @@ $4}
     '50% Cost Reduction',
     '99.9% Uptime Guarantee'
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Services | Zion Tech Group;
         <meta name="description" content="Advanced AI services solutions by Zion Tech Group." />
@@ -62,22 +61,17 @@ $4}
 }
 export default $1;
 'use client'
-import React, { useState, useEffect } from 'react'
-import { Helmet } from 'react-helmet-async'
-import { 
-  Brain, Zap, Shield, TrendingUp, CheckCircle, ArrowRight, Star, 
+import React, {useState, useEffect} from 'react'
+import {Helmet} from 'react-helmet-async'
+import {Brain, Zap, Shield, TrendingUp, CheckCircle, ArrowRight, Star, 
   Phone, Mail, MapPin, Clock, Users, Award, Target, BarChart,
-  Cpu, Database, Globe, Lock, Sparkles, Code, Eye, MessageSquare;
-} from 'lucide-react'
-export default function AIServicesPage() {
-    const [activeTab, setActiveTab] = useState('overview')
+  Cpu, Database, Globe, Lock, Sparkles, Code, Eye, MessageSquare;} from 'lucide-react'
+export default function AIServicesPage() {const [activeTab, setActiveTab] = useState('overview')
   const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {
-    setIsVisible(true)
-  }, [])
+    setIsVisible(true)}, [])
   const aiServices = [
-    {
-      id: 'ai-automation',
+    {id: 'ai-automation',
       title: 'AI Process Automation',
       description: 'Intelligent automation solutions that reduce manual work by 80% and increase efficiency by 300%',
       features: [
@@ -89,16 +83,15 @@ export default function AIServicesPage() {
         'Performance monitoring & analytics'
       ],
       pricing: {
-        starter: { price: '$2,500', period: '/month', features: ['Up to 10 workflows', 'Basic analytics', 'Email support'] },
-        professional: { price: '$7,500', period: '/month', features: ['Unlimited workflows', 'Advanced analytics', 'Priority support', 'Custom integrations'] },
-        enterprise: { price: '$15,000', period: '/month', features: ['Everything in Pro', 'Dedicated support', 'Custom development', 'SLA guarantee'] }
+        starter: { price: '$2,500', period: '/month', features: ['Up to 10 workflows', 'Basic analytics', 'Email support']},
+        professional: {price: '$7,500', period: '/month', features: ['Unlimited workflows', 'Advanced analytics', 'Priority support', 'Custom integrations']},
+        enterprise: {price: '$15,000', period: '/month', features: ['Everything in Pro', 'Dedicated support', 'Custom development', 'SLA guarantee']}
       },
       icon: Zap,
       color: 'from-cyan-500 to-blue-600',
       popular: true;
     },
-    {
-      id: 'ai-analytics',
+    {id: 'ai-analytics',
       title: 'AI-Powered Business Intelligence',
       description: 'Advanced analytics platform that provides actionable insights and predictive analytics for data-driven decisions',
       features: [
@@ -110,16 +103,15 @@ export default function AIServicesPage() {
         'Automated reporting'
       ],
       pricing: {
-        starter: { price: '$3,000', period: '/month', features: ['Up to 5 data sources', 'Basic dashboards', 'Standard reports'] },
-        professional: { price: '$8,500', period: '/month', features: ['Unlimited data sources', 'Advanced dashboards', 'Custom models', 'API access'] },
-        enterprise: { price: '$18,000', period: '/month', features: ['Everything in Pro', 'Real-time processing', 'Dedicated analyst', 'Custom integrations'] }
+        starter: { price: '$3,000', period: '/month', features: ['Up to 5 data sources', 'Basic dashboards', 'Standard reports']},
+        professional: {price: '$8,500', period: '/month', features: ['Unlimited data sources', 'Advanced dashboards', 'Custom models', 'API access']},
+        enterprise: {price: '$18,000', period: '/month', features: ['Everything in Pro', 'Real-time processing', 'Dedicated analyst', 'Custom integrations']}
       },
       icon: BarChart,
       color: 'from-purple-500 to-pink-600',
       popular: false;
     },
-    {
-      id: 'ai-customer-support',
+    {id: 'ai-customer-support',
       title: 'AI Customer Support Platform',
       description: '24/7 intelligent customer support with multilingual capabilities and 95% resolution rate',
       features: [
@@ -131,16 +123,15 @@ export default function AIServicesPage() {
         'Performance analytics'
       ],
       pricing: {
-        starter: { price: '$1,500', period: '/month', features: ['Up to 1,000 conversations', 'Basic AI responses', 'Email support'] },
-        professional: { price: '$4,500', period: '/month', features: ['Up to 10,000 conversations', 'Advanced AI', 'Multi-channel support', 'Analytics dashboard'] },
-        enterprise: { price: '$12,000', period: '/month', features: ['Unlimited conversations', 'Custom AI training', 'Dedicated support', 'SLA guarantee'] }
+        starter: { price: '$1,500', period: '/month', features: ['Up to 1,000 conversations', 'Basic AI responses', 'Email support']},
+        professional: {price: '$4,500', period: '/month', features: ['Up to 10,000 conversations', 'Advanced AI', 'Multi-channel support', 'Analytics dashboard']},
+        enterprise: {price: '$12,000', period: '/month', features: ['Unlimited conversations', 'Custom AI training', 'Dedicated support', 'SLA guarantee']}
       },
       icon: MessageSquare,
       color: 'from-green-500 to-emerald-600',
       popular: true;
     },
-    {
-      id: 'ai-content-generation',
+    {id: 'ai-content-generation',
       title: 'AI Content Generation Suite',
       description: 'Complete content creation platform with AI writing, image generation, and video production capabilities',
       features: [
@@ -152,16 +143,15 @@ export default function AIServicesPage() {
         'Content scheduling & publishing'
       ],
       pricing: {
-        starter: { price: '$2,000', period: '/month', features: ['Up to 100 pieces/month', 'Basic AI writing', 'Stock images'] },
-        professional: { price: '$6,000', period: '/month', features: ['Up to 1,000 pieces/month', 'Advanced AI', 'Custom images', 'Video generation'] },
-        enterprise: { price: '$15,000', period: '/month', features: ['Unlimited content', 'Custom AI models', 'Dedicated team', 'White-label solution'] }
+        starter: { price: '$2,000', period: '/month', features: ['Up to 100 pieces/month', 'Basic AI writing', 'Stock images']},
+        professional: {price: '$6,000', period: '/month', features: ['Up to 1,000 pieces/month', 'Advanced AI', 'Custom images', 'Video generation']},
+        enterprise: {price: '$15,000', period: '/month', features: ['Unlimited content', 'Custom AI models', 'Dedicated team', 'White-label solution']}
       },
       icon: Code,
       color: 'from-orange-500 to-red-600',
       popular: false;
     },
-    {
-      id: 'ai-cybersecurity',
+    {id: 'ai-cybersecurity',
       title: 'AI Cybersecurity Solutions',
       description: 'Advanced threat detection and prevention system with 99.8% accuracy in identifying security threats',
       features: [
@@ -173,16 +163,15 @@ export default function AIServicesPage() {
         'Security analytics dashboard'
       ],
       pricing: {
-        starter: { price: '$4,000', period: '/month', features: ['Basic threat detection', 'Email security', 'Standard monitoring'] },
-        professional: { price: '$10,000', period: '/month', features: ['Advanced threat detection', 'Network security', 'Compliance tools', '24/7 monitoring'] },
-        enterprise: { price: '$25,000', period: '/month', features: ['Complete security suite', 'Custom solutions', 'Dedicated team', 'SLA guarantee'] }
+        starter: { price: '$4,000', period: '/month', features: ['Basic threat detection', 'Email security', 'Standard monitoring']},
+        professional: {price: '$10,000', period: '/month', features: ['Advanced threat detection', 'Network security', 'Compliance tools', '24/7 monitoring']},
+        enterprise: {price: '$25,000', period: '/month', features: ['Complete security suite', 'Custom solutions', 'Dedicated team', 'SLA guarantee']}
       },
       icon: Shield,
       color: 'from-red-500 to-pink-600',
       popular: true;
     },
-    {
-      id: 'ai-ml-platform',
+    {id: 'ai-ml-platform',
       title: 'AI/ML Development Platform',
       description: 'Complete machine learning platform for building, training, and deploying custom AI models',
       features: [
@@ -194,9 +183,9 @@ export default function AIServicesPage() {
         'Performance monitoring'
       ],
       pricing: {
-        starter: { price: '$3,500', period: '/month', features: ['Basic ML tools', 'Pre-trained models', 'Community support'] },
-        professional: { price: '$9,000', period: '/month', features: ['Advanced ML tools', 'Custom training', 'Priority support', 'API access'] },
-        enterprise: { price: '$20,000', period: '/month', features: ['Complete platform', 'Dedicated resources', 'Custom development', 'SLA guarantee'] }
+        starter: { price: '$3,500', period: '/month', features: ['Basic ML tools', 'Pre-trained models', 'Community support']},
+        professional: {price: '$9,000', period: '/month', features: ['Advanced ML tools', 'Custom training', 'Priority support', 'API access']},
+        enterprise: {price: '$20,000', period: '/month', features: ['Complete platform', 'Dedicated resources', 'Custom development', 'SLA guarantee']}
       },
       icon: Cpu,
       color: 'from-indigo-500 to-purple-600',
@@ -204,10 +193,10 @@ export default function AIServicesPage() {
     }
   ]
   const stats = [
-    { icon: Users, value: '500+', label: 'AI Models Deployed', color: 'text-cyan-400' },
-    { icon: TrendingUp, value: '300%', label: 'Average ROI', color: 'text-green-400' },
-    { icon: Clock, value: '24/7', label: 'AI Monitoring', color: 'text-blue-400' },
-    { icon: Award, value: '99.9%', label: 'Uptime Guarantee', color: 'text-purple-400' }
+    {icon: Users, value: '500+', label: 'AI Models Deployed', color: 'text-cyan-400'},
+    {icon: TrendingUp, value: '300%', label: 'Average ROI', color: 'text-green-400'},
+    {icon: Clock, value: '24/7', label: 'AI Monitoring', color: 'text-blue-400'},
+    {icon: Award, value: '99.9%', label: 'Uptime Guarantee', color: 'text-purple-400'}
   ]
   return (
     <React.Fragment>
@@ -221,7 +210,8 @@ export default function AIServicesPage() {
         <meta property="og:url" content="https://ziontechgroup.com/ai-services" />
       </div></button><div className="min-h-screen bg-slate-900 cyber-grid">
         {/* Hero Section */}
-        </div><section className="relative py-20 lg:py-32 overflow-hidden">
+        </div>
+<section className="relative py-20 lg:py-32 overflow-hidden">
           </section>
 <div className="container mx-auto px-4">
             </div>
@@ -246,8 +236,8 @@ export default function AIServicesPage() {
                   Get Quote,
   
               </div>
-            </div>
-          </div>
+</div>
+</div>
         </section>
         {/* Stats Section */}
         <section className="py-16 bg-gradient-to-r from-slate-800/50 to-slate-900/50">
@@ -266,7 +256,8 @@ export default function AIServicesPage() {
                   </div>
 <div className="text-gray-300">{stat.label})
         {/* Services Section */}
-        </div><section className="py-20">
+        </div>
+<section className="py-20">
           </section>
 <div className="container mx-auto px-4">
             </div>
@@ -329,7 +320,7 @@ export default function AIServicesPage() {
                       Learn More,
   
                   </div>
-                </div>
+</div>
               ))}
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
@@ -352,9 +343,9 @@ export default function AIServicesPage() {
                 <Mail className="w-5 h-5 mr-2" />
                 Email Us;
             </div>
-          </div>
+</div>
         </section>
-      </div>
+</div>
     </React.Fragment>
   ),
 }
@@ -368,7 +359,23 @@ export default function AIServicesPage() {
   </button>
   </button>
   </div>
-  </div>
-  </div>
-  </div>
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></p></p></p></h1></h1></h2></h2></h3></h4></h4></ul></li></section></section>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></span></span></p></p></p></h1></h1></h2></h2></h3></h4></h4></ul></li></section></section>

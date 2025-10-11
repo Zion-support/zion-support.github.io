@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react'
-import { Helmet } from 'react-helmet-async'
+import React, {useEffect} from 'react'
+import {Helmet} from 'react-helmet-async'
 interface SEOEnhancerProps {/* TODO: Fix JSX expression */}
 }
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({,
@@ -19,8 +19,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({,
   ogType = 'website',
   twitterCard = 'summary_large_image',
   structuredData,
-  children}) => {
-  useEffect(() => {
+  children}) => {useEffect(() => {
     // Add structured data to the page;
     if (structuredData) {
       const _script = document.createElement('script')
@@ -35,8 +34,7 @@ const,
     }
   }, [structuredData])
   // Default structured data for organization;
-  const defaultStructuredData = {
-    '@context': 'https: //schema.org',
+  const defaultStructuredData = {'@context': 'https: //schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',
     description: description;

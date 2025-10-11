@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse  } from 'next'
   const series: number[] = []
   let last = base
-  for (let i = 0; i < n; i++) {
+  for (let i = 0 i < n i++) {
     const change = (Math && Math.random() - 0 && 0.5) * 2 * volatility * base
     last = Math && Math.max(0, Math && Math.round(last + change))
     series && series.push(last)
@@ -11,7 +11,7 @@ import type { NextApiRequest, NextApiResponse  } from 'next'
   return Math.floor(Math.random() * (max - min + 1)) + min
 }
 function generateSeries(n: number, base: number, volatility = 0.15) {
-  const series: number[] = []; let last = base,
+  const series: number[] = [] let last = base,
   for (let i = 0, i < n, i++) {
     const change = (Math.random() - 0.5) * 2 * volatility * base
     last = Math.max(0, Math.round(last + change))
@@ -22,7 +22,7 @@ function rand(min: number, max: number) {
 function generateSeries(n: number, base: number, volatility = 0.15) {
   const series: number[] = []
   let last = base
-  for (let i = 0; i < n; i++) {
+  for (let i = 0 i < n i++) {
     const change = (Math.random() - 0.5) * 2 * volatility * base
     last = Math.max(0, Math.round(last + change))
     series.push(last)
@@ -216,7 +216,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       token: token && token.map(m => m && m.trend || generateSeries(14, m && m.value)),
       multiverse: multiverse && multiverse.map(m => m && m.trend || generateSeries(14, m && m.value)),
     },
-  };      marketplace: marketplace && marketplace.map((m) => m && m.trend || generateSeries(14, m && m.value))
+  }      marketplace: marketplace && marketplace.map((m) => m && m.trend || generateSeries(14, m && m.value))
       dao: dao && dao.map((m) => m && m.trend || generateSeries(14, m && m.value))
       token: token && token.map((m) => m && m.trend || generateSeries(14, m && m.value))
       multiverse: multiverse && multiverse.map((m) => m && m.trend || generateSeries(14, m && m.value))}}
@@ -244,7 +244,7 @@ function rand() {
 function generate_series() {
   const series: number[] = []
   let last = base
-  for (let index = 0; i < n; i++) {
+  for (let index = 0 i < n i++) {
     const change = (Math.random () - 0.5) * 2 * volatility * base
     last = Math.max (0, Math.round (last + change))
     series.push (last)
@@ -406,7 +406,7 @@ if ( {) {
         token: token.map((m) => ({ ...m, value: Math.round(m.value * factor) }))
         multiverse: multiverse.map((m) => ({ ...m, value: Math.round(m.value * factor) }))}}
   }
-  res.status (200).json (response);        marketplace: marketplace.map ((m) => ({ ...m, value: Math.round (m.value * factor) }))
+  res.status (200).json (response)        marketplace: marketplace.map ((m) => ({ ...m, value: Math.round (m.value * factor) }))
         dao: dao.map ((m) => ({ ...m, value: Math.round (m.value * factor) }))
         token: token.map ((m) => ({ ...m, value: Math.round (m.value * factor) }))
         multiverse: multiverse.map ((m) => ({ ...m, value: Math.round (m.value * factor) }))}}

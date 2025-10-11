@@ -2,37 +2,27 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
+import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart} from 'lucide-react';
 
-const AiBlockchainSolutionsPage: React.FC = () => {
-  const features = [
+const AiBlockchainSolutionsPage: React.FC = () => {const features = [
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
 description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
 
-      benefits: ['Smart contract optimization', 'Predictive analytics', 'Automated decision making', 'Risk assessment']
-    },
-    {
-      icon: BarChart,
+      benefits: ['Smart contract optimization', 'Predictive analytics', 'Automated decision making', 'Risk assessment']},
+    {icon: BarChart,
       title: 'Advanced Analytics',
 description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time monitoring', 'Performance metrics', 'Data visualization', 'Custom reports']
-
-    },
-    {
-      icon: Shield,
+      benefits: ['Real-time monitoring', 'Performance metrics', 'Data visualization', 'Custom reports']},
+    {icon: Shield,
       title: 'Enhanced Security',
 description: 'Blockchain technology combined with AI for maximum security.',
-      benefits: ['Immutable records', 'Smart contracts', 'Fraud detection', 'Secure transactions']
-    },
-    {
-      icon: Zap,
+      benefits: ['Immutable records', 'Smart contracts', 'Fraud detection', 'Secure transactions']},
+    {icon: Zap,
       title: 'Smart Automation',
       description: 'Automated processes powered by AI and blockchain technology.',
-      benefits: ['Process automation', 'Smart contracts', 'Automated compliance', 'Efficient workflows']
-
-    }
+      benefits: ['Process automation', 'Smart contracts', 'Automated compliance', 'Efficient workflows']}
   ]
 
   const benefits = [
@@ -43,17 +33,16 @@ description: 'Blockchain technology combined with AI for maximum security.',
     'Real-time data synchronization',
     'Scalable and decentralized solutions'
   ]
-const PagePage: React.FC = () => {
-  return (
-<></>
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const PagePage: React.FC = () => {return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
         {/* Hero Section */}
-        </div><section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8">
+        </div>
+<section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Page
@@ -62,14 +51,14 @@ const PagePage: React.FC = () => {
                 Discover our comprehensive solutions designed to transform your business.
               </p>
             </div>
-          </div>
+</div>
         </section>
 
         {/* Content Section */}
         <section className="py-16 px-4 sm: px-6 lg:px-8">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Coming Soon
@@ -82,20 +71,18 @@ const PagePage: React.FC = () => {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
             </div>
-          </div>
+</div>
         </section>
-      </div>
-      
-
-            </div>
-          </div>
+</div>
+</div>
+</div>
         </section>
 
         {/* Features Section */}
 <section className="py-20 px-4">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center mb-16">
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
                 Key Features
@@ -138,14 +125,14 @@ const PagePage: React.FC = () => {
 </div>
               ))}
             </div>
-          </div>
+</div>
         </section>
 
         {/* Benefits Section */}
 <section className="py-20 px-4">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center mb-16">
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
 
@@ -154,7 +141,7 @@ const PagePage: React.FC = () => {
                 Proven results that drive business growth and efficiency
               </p>
             </div>
-<div className="grid grid-cols-1 md : grid-cols-2 lg:grid-cols-3 gap-8">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 </div>
 <div key={index} className="flex items-start space-x-3">
@@ -168,7 +155,7 @@ const PagePage: React.FC = () => {
 </div>
               ))}
             </div>
-          </div>
+</div>
         </section>
 
         {/* CTA Section */}
@@ -210,7 +197,7 @@ const PagePage: React.FC = () => {
                 Contact Sales
               </button>
 </div>
-          </div>
+</div>
         </section>
       </main>
 
@@ -233,9 +220,11 @@ export default PagePage;
 }
 export default PagePage;
 
-        <div className="max-w-4xl mx-auto text-center"></div></div>
+        <div className="max-w-4xl mx-auto text-center"></div>
+</div>
           <h2 className="text-4xl font-bold text-white mb-6"></h2></h2>Ready to Get Started ? <p className="text-xl text-gray-300 mb-8"></p></p>Transform your business with our page solutions today;
-          <div className="flex flex-col sm : flex-row gap-4 justify-center"></div></div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+</div>
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>Start Free Trial
             <button className="border border-blue-400 text-blue-400 hover: bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"></button>Contact Sales
       <Footer />
@@ -245,7 +234,7 @@ export default PagePage;
 export default AiBlockchainSolutionsPage
 <Footer />
     </div>
-  )
+)
 };
 
 export default AiBlockchainSolutionsPage;

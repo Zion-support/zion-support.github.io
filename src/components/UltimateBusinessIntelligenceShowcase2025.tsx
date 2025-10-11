@@ -1,9 +1,8 @@
 'use client'
-import React, { useState } from 'react'
+import React, {useState} from 'react'
         return (
-import { Link } from 'react-router-dom'
-const _UltimateBusinessIntelligenceShowcase2025 = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all')
+import {Link} from 'react-router-dom'
+const _UltimateBusinessIntelligenceShowcase2025 = () => {const [selectedCategory, setSelectedCategory] = useState('all')
   const content = [
     {
       id: 'ultimate-business-intelligence-revolution',
@@ -46,10 +45,10 @@ readingTimereadingTime: '45 min read',
     }
   ]
   const categories = [
-    { id: 'all', name: 'All Content' },
-    { id: 'blog', name: 'Blog Posts' },
-    { id: 'case-study', name: 'Case Studies' },
-    { id: 'resource', name: 'Resources' }
+    {id: 'all', name: 'All Content'},
+    {id: 'blog', name: 'Blog Posts'},
+    {id: 'case-study', name: 'Case Studies'},
+    {id: 'resource', name: 'Resources'}
   const filteredContent = selectedCategory === 'all' 
     ? content;
     : content.filter(item => item.category === selectedCategory)
@@ -61,10 +60,10 @@ readingTimereadingTime: '45 min read',
 <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse">
         <$2 />
           className="absolute top-3/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"
-          style={{ animationDelay: '2s' }}
+          style={{ animationDelay: '2s'}}
         >
           className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"
-          style={{ animationDelay: '1s' }}
+          style={{ animationDelay: '1s'}}
         {/* Header */}
             <span className="text-2xl">🚀</span>
             <span className="text-yellow-400 font-bold text-lg">ULTIMATE BUSINESS INTELLIGENCE 2025</span>
@@ -81,8 +80,7 @@ readingTimereadingTime: '45 min read',
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                 selectedCategory === category.id;
                   ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg'
-                  : 'bg-white/10 text-gray-300 hover:bg-white/20'
-              }`}
+                  : 'bg-white/10 text-gray-300 hover:bg-white/20'}`}
             >
               {category.name})
         {/* Content Grid */}
@@ -132,11 +130,12 @@ readingTimereadingTime: '45 min read',
                   />
                 to="/services"
                 className="inline-flex items-center px-12 py-6 border-2 border-blue-400 text-blue-300 font-bold text-xl rounded-2xl hover: bg-blue-400/10 transition-all duration-300">Learn More</Link>
-    </section>)
+    </section>
+)
 export default UltimateBusinessIntelligenceShowcase2025;
 'use client',
-import React, { useState } from 'react'
-        return (import { Link } from 'react-router-dom';)
+import React, {useState} from 'react'
+        return (import {Link} from 'react-router-dom';)
 const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -252,7 +251,13 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
                 className="inline-flex items-center px-12 py-6 border-2 border-blue-400 text-blue-300 font-bold text-xl rounded-2xl,"
   hover: bg-blue-400/10 transition-all duration-300"
 >Learn More</Link>
-    </section>)
+    </section>
+)
 export default UltimateBusinessIntelligenceShowcase2025,
   </path>
-</div></div></div></div></div></div></div></span></span></span></span></span></span></a></p></p></p></p></h3></h3></h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div></span></span></span></span></span></span></a></p></p></p></p></h3></h3></h3>

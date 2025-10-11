@@ -1,21 +1,19 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import {Helmet} from 'react-helmet-async'
 import {CheckCircle, Star, Users, TrendingUp, Clock, BarChart, Target, Phone} from 'lucide-react'
-import { BarChart, Target, TrendingUp, Users, Clock, Star } from 'lucide-react'
+import {BarChart, Target, TrendingUp, Users, Clock, Star} from 'lucide-react'
 'use client'
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-const AIProjectManagerPage: React.FC = () => {
-  const _features = [
+const AIProjectManagerPage: React.FC = () => {const _features = [
 const AiProjectManagerPage: React.FC = () => {
   const features = [
     {
       icon: BarChart,
       title: 'AI-Powered Planning',
       description: 'Intelligent project planning with predictive analytics and resource optimization',
-      benefits: ['40% faster planning', '85% accuracy in timelines', 'Smart resource allocation']
-    },
+      benefits: ['40% faster planning', '85% accuracy in timelines', 'Smart resource allocation']},
       icon: Target,
       title: 'Smart Task Management',
       description: 'Automated task assignment and priority management based on AI insights',
@@ -64,12 +62,12 @@ const AiProjectManagerPage: React.FC = () => {
         'White-label options',
         'API access'
   const stats = [
-    { icon: Users, value: '500+', label: 'Active Teams' },
-    { icon: TrendingUp, value: '40%', label: 'Productivity Increase' },
-    { icon: Clock, value: '70%', label: 'Time Saved' },
-    { icon: Star, value: '4.9/5', label: 'User Rating' }
+    {icon: Users, value: '500+', label: 'Active Teams'},
+    {icon: TrendingUp, value: '40%', label: 'Productivity Increase'},
+    {icon: Clock, value: '70%', label: 'Time Saved'},
+    {icon: Star, value: '4.9/5', label: 'User Rating'}
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Project Manager | Zion Tech Group;
         <meta name="description" content="Advanced AI project management solutions by Zion Tech Group." />
@@ -93,12 +91,12 @@ const AiProjectManagerPage: React.FC = () => {
 }
 export default $1;
 'use client'
-import React, { useState, useEffect } from 'react'
-import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react'
+import React, {useState, useEffect} from 'react'
+import {Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location} from 'lucide-react'
 export default AIProjectManagerPage</button>
   </button>
   </div>
-  </div>
-  </div>
-  </div>
+</div>
+</div>
+</div>
 </h1>

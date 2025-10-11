@@ -109,8 +109,8 @@ import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import Analytics from './components/Analytics';
 import SecurityEnhancer from './components/SecurityEnhancer';
-import { initializePerformanceOptimizations } from './utils/performanceOptimizations';
-import { microSaasServices, aiServices, itServices, specializedServices } from '../data/2025-comprehensive-real-services-enhanced';
+import {initializePerformanceOptimizations} from './utils/performanceOptimizations';
+import {microSaasServices, aiServices, itServices, specializedServices} from '../data/2025-comprehensive-real-services-enhanced';
 
 // Dynamically import heavy components for better performance;
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
@@ -125,22 +125,19 @@ const ContentNewsletterSignup = lazy(() => import('./components/ContentNewslette
   const [isLoaded, setIsLoaded] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {
-    setIsLoaded(true);
+  useEffect(() => {setIsLoaded(true);
     const timer = setTimeout(() => setIsVisible(true), 100);
     preloadComponents();
     
     // Initialize performance optimizations;
     initializePerformanceOptimizations();
     
-    return () => clearTimeout(timer);
-  }, []);
+    return () => clearTimeout(timer);}, []);
 
   }, []);
 
   // Enhanced Micro SAAS Services with real functionality and pricing;
-  const microSAASServices = microSaasServices.map(service => ({
-    title: service.name,
+  const microSAASServices = microSaasServices.map(service => ({title: service.name,
     description: service.description,
     icon: service.icon,
     price: `$${service.pricing.starter.price}/month`,
@@ -154,8 +151,7 @@ const ContentNewsletterSignup = lazy(() => import('./components/ContentNewslette
   });
 
   // Enhanced AI Services with real capabilities and market pricing;
-  const aiServicesData = aiServices.map(service => ({
-    title: service.name,
+  const aiServicesData = aiServices.map(service => ({title: service.name,
     description: service.description,
     icon: Brain, // Default icon, can be customized per service;
     price: `$${service.pricing.starter.price.toLocaleString()}/month`,
@@ -168,8 +164,7 @@ const ContentNewsletterSignup = lazy(() => import('./components/ContentNewslette
   });
 
   // Enhanced IT Services with comprehensive capabilities;
-  const itServicesData = itServices.map(service => ({
-    title: service.name,
+  const itServicesData = itServices.map(service => ({title: service.name,
     description: service.description,
     icon: Cloud, // Default icon, can be customized per service;
     price: `$${service.pricing.starter.price.toLocaleString()}/month`,
@@ -182,8 +177,7 @@ const ContentNewsletterSignup = lazy(() => import('./components/ContentNewslette
   });
 
   // Specialized Services;
-  const specializedServicesData = specializedServices.map(service => ({
-    title: service.name,
+  const specializedServicesData = specializedServices.map(service => ({title: service.name,
     description: service.description,
     icon: BarChart, // Default icon, can be customized per service;
     price: `$${service.pricing.starter.price.toLocaleString()}/month`,
@@ -196,7 +190,7 @@ const ContentNewsletterSignup = lazy(() => import('./components/ContentNewslette
   });
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Performance Optimizer */}
       <PerformanceOptimizer />
       
@@ -228,16 +222,15 @@ const ContentNewsletterSignup = lazy(() => import('./components/ContentNewslette
                 
                     </span>
                   </div>
-                </div>
+</div>
                 
                   </ul>
                 </div>
                 
                   </ul>
                 </div>
-                
-          </div>
-        </div>
+</div>
+</div>
       </section>
 
             <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -250,16 +243,15 @@ const ContentNewsletterSignup = lazy(() => import('./components/ContentNewslette
                 
                     </span>
                   </div>
-                </div>
+</div>
                 
                   </ul>
                 </div>
                 
                   </ul>
                 </div>
-                
-          </div>
-        </div>
+</div>
+</div>
       </section>
 
             <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
@@ -272,16 +264,15 @@ const ContentNewsletterSignup = lazy(() => import('./components/ContentNewslette
                 
                     </span>
                   </div>
-                </div>
+</div>
                 
                   </ul>
                 </div>
                 
                   </ul>
                 </div>
-                
-          </div>
-        </div>
+</div>
+</div>
       </section>
 
             <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
@@ -298,16 +289,15 @@ const ContentNewsletterSignup = lazy(() => import('./components/ContentNewslette
                 
                     </span>
                   </div>
-                </div>
+</div>
                 
                   </ul>
                 </div>
                 
                   </ul>
                 </div>
-                
-          </div>
-        </div>
+</div>
+</div>
       </section>
 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             </div>

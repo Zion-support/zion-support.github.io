@@ -31,13 +31,10 @@ interface MicroSAASCardProps {/* TODO: Fix JSX expression */}
   }
 }
 const MicroSAASCard: React.FC,
-          <MicroSAASCardProps> = ({ service }) => {
-    // TODO: Add content;
-  }
+          <MicroSAASCardProps> = ({service}) => {// TODO: Add content;}
 }
-const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
-  return (
-          <div>Coming Soon;
+const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {return (
+<div>Coming Soon;
   )
           </div>
 <div className={`cyber-card p-6 hover:scale-105 transition-all duration-300 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
@@ -99,9 +96,9 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
           </a>"
           <p className="text-xs text-gray-400 mt-2 text-center">{service.contactInfo}</p>
         </div>
-      </div>
-    </div>
-  )
+</div>
+</div>
+)
 }
 export default MicroSAASCard;"`
   </MicroSAASCardProps>

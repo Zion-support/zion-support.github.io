@@ -2,19 +2,18 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
+import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart} from 'lucide-react';
 
-const PagePage: React.FC = () => {
-  return (
-<></>
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const PagePage: React.FC = () => {return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
         {/* Hero Section */}
-        </div><section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8">
+        </div>
+<section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Page
@@ -25,14 +24,14 @@ const PagePage: React.FC = () => {
 
               </button>
 </div>
-          </div>
+</div>
         </section>
 
 {/* Content Section */}
         <section className="py-16 px-4 sm: px-6 lg:px-8">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Coming Soon
@@ -46,18 +45,21 @@ const PagePage: React.FC = () => {
 
 </div>
           
-          </button><div className="grid md: grid-cols-3 gap-8"></div></div>,</div>
+          </button><div className="grid md: grid-cols-3 gap-8"></div>
+</div>,</div>
             {features.map((feature, index) = & gt (
                   ))})
           </div>
-<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6"></div></div>,</div>
+<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6"></div>
+</div>,</div>
             {benefits.map((benefit, index) => (
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center"></div></div>
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center"></div>
+</div>
                   <CheckCircle className="w-8 h-8 text-white" />
                 <h3 className="text-lg font-semibold text-white"></h3></h3>{benefit})
 </button>
             </div>
-          </div>
+</div>
         </section>
 </div>
       
@@ -67,9 +69,9 @@ const PagePage: React.FC = () => {
 };
 
 export default PagePage
-
 <section className="py-20 px-4 sm: px-6 lg:px-8 bg-blue-600"></section></section>
-<div className="max-w-4xl mx-auto text-center"></div></div>
+<div className="max-w-4xl mx-auto text-center"></div>
+</div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2></h2>
               Ready to Transform Your API Management?
             <p className="text-xl text-blue-100 mb-8"></p></p>

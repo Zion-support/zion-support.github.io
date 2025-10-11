@@ -1,52 +1,35 @@
-import { Phone, ShieldCheck, Clock } from 'lucide-react'
-export default function ITSupportPage() {
-  const benefits = [
+import {Phone, ShieldCheck, Clock} from 'lucide-react'
+export default function ITSupportPage() {const benefits = [
     {import React from "react"
-import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate"
+import { ServiceLandingTemplate} from "@/components/services/ServiceLandingTemplate"
 
 
 
 
 
-    {
-      name: 'Lisa Wong'
+    {name: 'Lisa Wong'
       role: 'Operations Manager'
       text: "Zion's support team resolved our network outage within hours and saved us from a major downtime."
-      avatar: '/placeholder.svg'
-    }
-    {
-
-
-
-
-
-
-
-
-
-export default function ITSupportPage() {
+      avatar: '/placeholder.svg'}
+    {export default function ITSupportPage() {
   const benefits = [
     {
       title: "24/7 Assistance",
       description: "Our experts are available around the clock to keep your systems running.",
       icon: <Clock className="h-8 w-8" />},
-    {
-      title: "Certified Professionals",
+    {title: "Certified Professionals",
       description: "Work with seasoned technicians experienced in modern IT infrastructures.",
       icon: <ShieldCheck className="h-8 w-8" />},
-    {
-      title: "Multi-Channel Support",
+    {title: "Multi-Channel Support",
       description: "Get help via phone, chat, or onsite visits tailored to your needs.",
       icon: <Phone className="h-8 w-8" />}],
 
   const testimonials = [
-    {
-      name: "Lisa Wong",
+    {name: "Lisa Wong",
       role: "Operations Manager",
       text: "Zion's support team resolved our network outage within hours and saved us from a major downtime.",
       avatar: "/placeholder.svg"},
-    {
-      name: "Carlos Diaz",
+    {name: "Carlos Diaz",
       role: "IT Lead",
       text: "Professional and responsive. Their technicians feel like an extension of our own team.",
 
@@ -55,35 +38,29 @@ export default function ITSupportPage() {
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { hasError: false }
+    this.state = { hasError: false}
   }
   
-  static getDerivedStateFromError(error) {
-    return { hasError: true }
+  static getDerivedStateFromError(error) {return { hasError: true}
   }
   
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo)
-  }
+  componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
   
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>
-    }
+  render() {if (this.state.hasError) {
+      return <div>Something went wrong.</div>}
     
     return this.props.children;
   }
 }
 import React from 'react'
-import { ServiceLandingTemplate } from '@/components/services/ServiceLandingTemplate'
-import { Phone, ShieldCheck, Clock } from 'lucide-react'
-export default function ITSupportPage() {
-  const benefits = [
+import {ServiceLandingTemplate} from '@/components/services/ServiceLandingTemplate'
+import {Phone, ShieldCheck, Clock} from 'lucide-react'
+export default function ITSupportPage() {const benefits = [
     {import React from "react"
-import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate"
-import { Phone, ShieldCheck, Clock } from 'lucide-react'
+import { ServiceLandingTemplate} from "@/components/services/ServiceLandingTemplate"
+import {Phone, ShieldCheck, Clock} from 'lucide-react'
 import React from "react"
-import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate"
+import {ServiceLandingTemplate} from "@/components/services/ServiceLandingTemplate"
 
 
 
@@ -117,42 +94,32 @@ import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemp
     />
   )
 import React from "react",
-import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",
-import { Phone, ShieldCheck, Clock } from 'lucide-react'
-export default function ITSupportPage() {
-  const benefits = [
+import {ServiceLandingTemplate} from "@/components/services/ServiceLandingTemplate",
+import {Phone, ShieldCheck, Clock} from 'lucide-react'
+export default function ITSupportPage() {const benefits = [
     {
       title: '24/7 Assistance',
       description:
         'Our experts are available around the clock to keep your systems running.',
-      icon: <Clock className='h-8 w-8' />,
-    },
-    {
-      title: 'Certified Professionals',
+      icon: <Clock className='h-8 w-8' />,},
+    {title: 'Certified Professionals',
       description:
         'Work with seasoned technicians experienced in modern IT infrastructures.',
-      icon: <ShieldCheck className='h-8 w-8' />,
-    },
-    {
-      title: 'Multi-Channel Support',
+      icon: <ShieldCheck className='h-8 w-8' />,},
+    {title: 'Multi-Channel Support',
       description:
         'Get help via phone, chat, or onsite visits tailored to your needs.',
-      icon: <Phone className='h-8 w-8' />,
-    },
+      icon: <Phone className='h-8 w-8' />,},
   ]
   const testimonials = [
-    {
-      name: 'Lisa Wong',
+    {name: 'Lisa Wong',
       role: 'Operations Manager',
       text: "Zion's support team resolved our network outage within hours and saved us from a major downtime.",
-      avatar: '/placeholder && placeholder.svg',
-    },
-    {
-      name: 'Carlos Diaz',
+      avatar: '/placeholder && placeholder.svg',},
+    {name: 'Carlos Diaz',
       role: 'IT Lead',
       text: 'Professional and responsive. Their technicians feel like an extension of our own team.',
-      avatar: '/placeholder && placeholder.svg',
-    },
+      avatar: '/placeholder && placeholder.svg',},
   ]
     return (
 

@@ -1,51 +1,40 @@
-class ErrorBoundary extends React.Component {
-  constructor(props) {
+class ErrorBoundary extends React.Component {constructor(props) {
     super(props)
-    this.state = { hasError: false }
+    this.state = { hasError: false}
   }
   
-  static getDerivedStateFromError(error) {
-    return { hasError: true }
+  static getDerivedStateFromError(error) {return { hasError: true}
   }
   
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo)
-  }
+  componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
   
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>
-    }
+  render() {if (this.state.hasError) {
+      return <div>Something went wrong.</div>}
     
     return this.props.children;
   }
 }
 import React from 'react'
-import { Header } from '@/components/Header'
-import { SEO } from '@/components/SEO'
-import { useWhitelabel } from '@/context/WhitelabelContext'
-import {
-  Card,
+import {Header} from '@/components/Header'
+import {SEO} from '@/components/SEO'
+import {useWhitelabel} from '@/context/WhitelabelContext'
+import {Card,
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
-} from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-import {
-  ArrowRight,
+  CardTitle,} from '@/components/ui/card'
+import {Button} from '@/components/ui/button'
+import {ArrowRight,
   Briefcase,
   PenTool,
   BarChart3,
   Users,
   Shield,
-  Globe,
-} from 'lucide-react'
-import { useAuth } from '@/hooks/useAuth'
+  Globe,} from 'lucide-react'
+import {useAuth} from '@/hooks/useAuth'
 import Link from 'next/link'
-export default function ZionHireAI() {
-  const { isWhitelabel, brandName, primaryColor } = useWhitelabel()
-  const { isAuthenticated } = useAuth()
+export default function ZionHireAI() {const { isWhitelabel, brandName, primaryColor} = useWhitelabel()
+  const {isAuthenticated} = useAuth()
   return (
 
     <></><SEO
@@ -55,17 +44,15 @@ export default function ZionHireAI() {
       <Header />
       <main className='flex-1'>
 import React from 'react'
-import { Header } from '@/components / Header'
-import { SEO } from '@/components / SEO'
-import { use_whitelabel } from '@/context / WhitelabelContext'
-import {
-  Card,
+import {Header} from '@/components / Header'
+import {SEO} from '@/components / SEO'
+import {use_whitelabel} from '@/context / WhitelabelContext'
+import {Card,
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
-} from '@/components / ui / card'
-import { Button } from '@/components / ui / button'
+  CardTitle,} from '@/components / ui / card'
+import {Button} from '@/components / ui / button'
   ArrowRight,
   Briefcase,
   PenTool,
@@ -74,14 +61,13 @@ import { Button } from '@/components / ui / button'
   Shield,
   Globe,
 } from 'lucide-react'
-import { use_auth } from '@/hooks / use_auth'
+import {use_auth} from '@/hooks / use_auth'
 import Link from 'next / link'
 export default /**
  * ZionHireAI - Function description;
  */
-function ZionHireAI() {
-  const { is_whitelabel, brand_name, primary_color } = use_whitelabel ()
-  const { is_authenticated } = use_auth ()
+function ZionHireAI() {const { is_whitelabel, brand_name, primary_color} = use_whitelabel ()
+  const {is_authenticated} = use_auth ()
   return (
     <></><SEO
         title='Zion Hire AI - White - labeled AI Recruiting Assistant'
@@ -92,8 +78,7 @@ function ZionHireAI() {
         {/* Hero Section */}
         <;$2 />
           className='relative bg - gradient - to - br from - zion - blue to - zion - blue - dark py - 16 md:py - 24'
-          style={
-            primary_color;
+          style={primary_color;
               ? {
                   backgroundImage: `linear-gradient(to bottom right, ${primaryColor}, rgba(25, 33, 52, 1))`
                 }
@@ -132,30 +117,28 @@ function ZionHireAI() {
               </div>
 <div className='relative hidden md:block'>
 import React from "react"
-import { Header } from "@/components/Header"
-import { SEO } from "@/components/SEO"
-import { useWhitelabel } from "@/context/WhitelabelContext"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { ArrowRight, Briefcase, PenTool, BarChart3, Users, Shield, Globe } from 'lucide-react'
-import { useAuth } from "@/hooks/useAuth",
+import {Header} from "@/components/Header"
+import {SEO} from "@/components/SEO"
+import {useWhitelabel} from "@/context/WhitelabelContext"
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card"
+import {Button} from "@/components/ui/button"
+import {ArrowRight, Briefcase, PenTool, BarChart3, Users, Shield, Globe} from 'lucide-react'
+import {useAuth} from "@/hooks/useAuth",
 import Link from "next/link",
-export default function ZionHireAI() {
-  const { isWhitelabel, brandName, primaryColor } = useWhitelabel(),
-  const { isAuthenticated } = useAuth(),
+export default function ZionHireAI() {const { isWhitelabel, brandName, primaryColor} = useWhitelabel(),
+  const {isAuthenticated} = useAuth(),
   
 import React from "react",
-import { Header } from "@/components/Header",
-import { SEO } from "@/components/SEO",
-import { useWhitelabel } from "@/context/WhitelabelContext",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { ArrowRight, Briefcase, PenTool, BarChart3, Users, Shield, Globe } from 'lucide-react'
-import { useAuth } from "@/hooks/useAuth",
+import {Header} from "@/components/Header",
+import {SEO} from "@/components/SEO",
+import {useWhitelabel} from "@/context/WhitelabelContext",
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card",
+import {Button} from "@/components/ui/button",
+import {ArrowRight, Briefcase, PenTool, BarChart3, Users, Shield, Globe} from 'lucide-react'
+import {useAuth} from "@/hooks/useAuth",
 import Link from "next/link",
-export default function ZionHireAI() {
-  const { isWhitelabel, brandName, primaryColor } = useWhitelabel(),
-  const { isAuthenticated } = useAuth(),
+export default function ZionHireAI() {const { isWhitelabel, brandName, primaryColor} = useWhitelabel(),
+  const {isAuthenticated} = useAuth(),
   
 
 
@@ -174,8 +157,7 @@ export default function ZionHireAI() {
 
         <$2 />
           className='relative bg-gradient-to-br from-zion-blue to-zion-blue-dark py-16 md:py-24'
-          style={
-            primaryColor;
+          style={primaryColor;
               ? {
                   backgroundImage: `linear-gradient(to bottom right, ${primaryColor}, rgba(25, 33, 52, 1))`
                 }
@@ -223,16 +205,15 @@ export default function ZionHireAI() {
                     <Link href='/enterprise/demo'>Request Demo</Link>
                   </Button>
                 </div>
-              </div>
+</div>
 <div className='relative hidden md:block'>
                 </div>
 <div className='absolute -top-8 -left-8 w-72 h-72 bg-zion-purple/20 rounded-full filter blur-3xl'></div>
-                <img
-                  src='https://placehold.co/600x400/192134/9b87f5?text=Zion+Hire+AI'
+                <img src='https://placehold.co/600x400/192134/9b87f5?text=Zion+Hire+AI'
 
                   alt='Zion Hire AI Dashboard'
                   className='relative z-10 rounded-lg shadow-xl'
-                  loading='lazy'                />                  src="https://placehold.co/600x400/192134/9b87f5?text=Zion+Hire+AI"
+                  loading='lazy' />                  src="https://placehold.co/600x400/192134/9b87f5?text=Zion+Hire+AI"
                   alt="Zion Hire AI Dashboard"
                   className="relative z-10 rounded-lg shadow-xl"
                   loading="lazy"
@@ -241,8 +222,8 @@ export default function ZionHireAI() {
 
 
               </div>
-            </div>
-          </div>
+</div>
+</div>
         </section>
 
         {/* Features Section */}
@@ -557,7 +538,7 @@ export default function ZionHireAI() {
                 </CardContent>
               </Card>
             </div>
-          </div>
+</div>
         </section>
 
         {/* CTA Section */}
@@ -572,7 +553,8 @@ export default function ZionHireAI() {
               Join leading companies using Zion Hire AI to find better talent;
               faster, reduce time-to-hire, and improve candidate experience.
 
-        </div><section className="bg-zion-blue-dark py-16">
+        </div>
+<section className="bg-zion-blue-dark py-16">
           </section>
 <div className="container mx-auto px-4 md:px-6 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">Ready to transform your hiring process?</h2>
@@ -609,25 +591,23 @@ export default function ZionHireAI() {
           </div>
         </section>
       </main>
-    </>
-  )
+)
 }</$1>
     </>
 
   )
 }
 import React from "react",
-import { Header } from "@/components/Header",
-import { SEO } from "@/components/SEO",
-import { useWhitelabel } from "@/context/WhitelabelContext",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { ArrowRight, Briefcase, PenTool, BarChart3, Users, Shield, Globe } from 'lucide-react'
-import { useAuth } from "@/hooks/useAuth",
+import {Header} from "@/components/Header",
+import {SEO} from "@/components/SEO",
+import {useWhitelabel} from "@/context/WhitelabelContext",
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card",
+import {Button} from "@/components/ui/button",
+import {ArrowRight, Briefcase, PenTool, BarChart3, Users, Shield, Globe} from 'lucide-react'
+import {useAuth} from "@/hooks/useAuth",
 import Link from "next/link",
-export default function ZionHireAI() {
-  const { isWhitelabel, brandName, primaryColor } = useWhitelabel(),
-  const { isAuthenticated } = useAuth(),
+export default function ZionHireAI() {const { isWhitelabel, brandName, primaryColor} = useWhitelabel(),
+  const {isAuthenticated} = useAuth(),
   return (
     <></><SEO
         title="Zion Hire AI - White-labeled AI Recruiting Assistant"
@@ -673,12 +653,10 @@ export default function ZionHireAI() {
 <div className="relative hidden md:block">
                 </div>
 <div className="absolute -top-8 -left-8 w-72 h-72 bg-zion-purple/20 rounded-full filter blur-3xl"></div>
-                <img
-                  src="https://placehold.co/600x400/192134/9b87f5?text=Zion+Hire+AI"
+                <img src="https://placehold.co/600x400/192134/9b87f5?text=Zion+Hire+AI"
                   alt="Zion Hire AI Dashboard"
                   className="relative z-10 rounded-lg shadow-xl"
-                  loading="lazy"
-                /></$1></$1></$1></$1>
+                  loading="lazy" /></$1></$1></$1></$1>
         {/* Features Section */}
         <section className="py-16 bg-background">
           </section>
@@ -794,7 +772,8 @@ export default function ZionHireAI() {
                       <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Access</span>
                       <span>Team roles & permissions</span></$1></$1></$1></$1></$1></$1></$1>
         {/* CTA Section */}
-        </div><section className="bg-zion-blue-dark py-16">
+        </div>
+<section className="bg-zion-blue-dark py-16">
           </section>
 <div className="container mx-auto px-4 md:px-6 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">Ready to transform your hiring process?</h2>
@@ -813,11 +792,10 @@ export default function ZionHireAI() {
               <Link href="/enterprise/demo">
                 </div>
 <div className='absolute -top - 8 -left - 8 w - 72 h - 72 bg - zion - purple / 20 rounded - full filter blur - 3xl'></div>
-                <img
-                  src='https://placehold.co / 600x400 / 192134 / 9b87f5?text = Zion + Hire + AI'
+                <img src='https://placehold.co / 600x400 / 192134 / 9b87f5?text = Zion + Hire + AI'
                   alt='Zion Hire AI Dashboard'
                   className='relative z - 10 rounded - lg shadow - xl'
-                  loading='lazy'                />                  src="https://placehold.co / 600x400 / 192134 / 9b87f5?text = Zion + Hire + AI"
+                  loading='lazy' />                  src="https://placehold.co / 600x400 / 192134 / 9b87f5?text = Zion + Hire + AI"
                   alt="Zion Hire AI Dashboard"
                   className="relative z - 10 rounded - lg shadow - xl"
                   loading="lazy"</$1></$1></$1></$1>
@@ -1025,7 +1003,8 @@ export default function ZionHireAI() {
                       <span className="bg - blue - 100 text - blue - 800 text - xs font - medium mr - 2 px - 2 py - 0.5 rounded">Access</span>
                       <span > Team roles & permissions</span></$1></$1></$1></$1></$1></$1></$1>
         {/* CTA Section */}
-        </div><section className='bg - zion - blue - dark py - 16'>
+        </div>
+<section className='bg - zion - blue - dark py - 16'>
           </section>
 <div className='container mx - auto px - 4 md:px - 6 text - center'>
             <h2 className='text - 3xl font - bold text - white mb - 4'>
@@ -1055,4 +1034,5 @@ export default function ZionHireAI() {
     </>)
 }
 
-</div></div></ul></ul></ul></li></li></li></li></li></li></li></li></li></li></li></li></main>
+</div>
+</div></ul></ul></ul></li></li></li></li></li></li></li></li></li></li></li></li></main>

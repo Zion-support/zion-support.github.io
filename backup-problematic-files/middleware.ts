@@ -8,7 +8,7 @@ import type { NextRequest } from "next/server"
   // CSP header
   response.headers.set(
     'Content-Security-Policy',
-    "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;"
+    "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: font-src 'self' data:; connect-src 'self' https: "
   )
   // Permissions Policy
   response.headers.set(
@@ -46,7 +46,7 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
   // CSP header
   response.headers.set(
     'Content-Security-Policy',
-    "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;"
+    "default-src 'self' script-src 'self' 'unsafe-eval' 'unsafe-inline' style-src 'self' 'unsafe-inline'; img-src 'self' data: https: font-src 'self' data:; connect-src 'self' https: "
   )
   return response
   return response
@@ -59,7 +59,7 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
   // CSP header
   response.headers.set(
     'Content-Security-Policy',
-    "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;"
+    "default-src 'self' script-src 'self' 'unsafe-eval' 'unsafe-inline' style-src 'self' 'unsafe-inline'; img-src 'self' data: https: font-src 'self' data:; connect-src 'self' https:"
   )
   return response
 return response

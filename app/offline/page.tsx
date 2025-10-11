@@ -2,19 +2,18 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
+import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart} from 'lucide-react';
 
-const PagePage: React.FC = () => {
-  return (
-    <></>
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const PagePage: React.FC = () => {return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
         {/* Hero Section */}
-        </div><section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8">
+        </div>
+<section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Page
@@ -27,14 +26,20 @@ const PagePage: React.FC = () => {
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
-      {/* Hero Section */} </div><section className="py-20 px-4"></section></section>
-<div className="max-w-7xl mx-auto"></div></div>
-<div className="text-center mb-16"></div></div>
+      {/* Hero Section */} </div>
+<section className="py-20 px-4"></section></section>
+<div className="max-w-7xl mx-auto">
+</div>
+</div>
+<div className="text-center mb-16"></div>
+</div>
               <h2 className="text-4xl font-bold text-white mb-4"></h2></h2>Section Title</h2>
 'use client'
 import React from 'react'
-import {  Helmet  } from 'react-helmet-async'return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div></div>
+import {Helmet} from 'react-helmet-async'return (
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+</div>
+</div>
       <Helmet>
         </Helmet><title>Page  | Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
@@ -43,14 +48,14 @@ import {  Helmet  } from 'react-helmet-async'return (
       {/* Hero Section */}
               <p className="text-xl text-gray-300"></p></p>Section description</p>
 </div>
-          </div>
+</div>
         </section>
 
 {/* Content Section */}
         <section className="py-16 px-4 sm: px-6 lg:px-8">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Coming Soon
@@ -63,9 +68,9 @@ import {  Helmet  } from 'react-helmet-async'return (
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
             </div>
-          </div>
+</div>
         </section>
-      </div>
+</div>
       
 
       <Footer />
@@ -74,4 +79,3 @@ import {  Helmet  } from 'react-helmet-async'return (
 };
 
 export default PagePage
-

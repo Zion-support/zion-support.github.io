@@ -1,8 +1,7 @@
 'use client'
-import React, { memo } from 'react'
-import { Link } from 'react-router-dom'
-import { 
-  Phone, 
+import React, {memo} from 'react'
+import {Link} from 'react-router-dom'
+import {Phone, 
   Mail, 
   MapPin, 
   Clock, 
@@ -34,11 +33,9 @@ import {
   Eye, 
   Wifi, 
   MessageSquare, 
-  ShoppingCart
-} from 'lucide-react'
+  ShoppingCart} from 'lucide-react'
 
-const Footer: React.FC = () => {
-  return (
+const Footer: React.FC = () => {return (
     <footer className="bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
@@ -85,7 +82,7 @@ const Footer: React.FC = () => {
                 </svg>
               </a>
             </div>
-          </div>
+</div>
 
           {/* Services */}
           <div>
@@ -182,7 +179,7 @@ const Footer: React.FC = () => {
               </li>
             </ul>
           </div>
-        </div>
+</div>
 
         {/* Contact Info */}
         <div className="border-t border-gray-700 mt-12 pt-8">
@@ -193,23 +190,23 @@ const Footer: React.FC = () => {
                 <p className="text-sm text-gray-400">Phone</p>
                 <p className="text-white">+1 (555) 123-4567</p>
               </div>
-            </div>
+</div>
 <div className="flex items-center space-x-3">
               <Mail className="w-5 h-5 text-blue-400" />
               <div>
                 <p className="text-sm text-gray-400">Email</p>
                 <p className="text-white">info@ziontechgroup.com</p>
               </div>
-            </div>
+</div>
 <div className="flex items-center space-x-3">
               <MapPin className="w-5 h-5 text-blue-400" />
               <div>
                 <p className="text-sm text-gray-400">Address</p>
                 <p className="text-white">123 Tech Street, Innovation City</p>
               </div>
-            </div>
-          </div>
-        </div>
+</div>
+</div>
+</div>
 <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
@@ -223,9 +220,9 @@ const Footer: React.FC = () => {
                 Terms of Service
               </Link>
             </div>
-          </div>
-        </div>
-      </div>
+</div>
+</div>
+</div>
     </footer>
   )
 }

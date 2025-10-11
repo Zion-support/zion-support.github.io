@@ -4,8 +4,7 @@ interface LoadingProps {/* TODO: Fix JSX expression */}
 const EnhancedLoading: React.FC<LoadingProps> = ({,
   message = 'Loading...',
   size = 'md',
-  variant = 'spinner'}) => {
-  const sizeClasses = {
+  variant = 'spinner'}) => {const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
     lg: 'w-12 h-12'}
@@ -48,18 +47,18 @@ const,
   )
 `
   const renderPulse = () => (</div>
-<div className={`bg-blue-600 rounded-full animate-pulse ${sizeClasses[size]}`} /></div>)
+<div className={`bg-blue-600 rounded-full animate-pulse ${sizeClasses[size]}`} /></div>
+)
   )
-  const renderLoader = () => {
-    switch (variant) {
+  const renderLoader = () => {switch (variant) {
       case 'dots':
         return renderDots()
       case 'pulse':
         return renderPulse()
-      default: return renderSpinner()
+      default: return renderSpinner()}
   }
-  }
-  return(<div className="flex flex-col items-center justify-center p-8">)
+  return (
+<div className="flex flex-col items-center justify-center p-8">)
   return (
     </div>
 <div className="flex flex-col items-center justify-center p-8">
@@ -74,10 +73,13 @@ const,
       <div className="mb-4">{renderLoader()}</div>"
       <p className="text-gray-600 text-sm font-medium">{message}</p>
     </div>
-  )
+)
 }
 export default EnhancedLoading;
 "`
   </LoadingProps>
   </LoadingProps>
-</div></div></div></div>
+</div>
+</div>
+</div>
+</div>

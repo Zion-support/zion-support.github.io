@@ -1,22 +1,21 @@
-import React, { useState } from 'react'
-import React, { useState } from 'react'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
-import { 
-  Brain, 
+import React, {useState} from 'react'
+import React, {useState} from 'react'
+import {Button} from '@/components/ui/button'
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card'
+import {Badge} from '@/components/ui/badge'
+import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs'
+import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from '@/components/ui/accordion'
+import {Brain, 
   Zap, 
   TrendingUp, 
   Shield, 
   Users, 
   BarChart3, 
   Network, 
-import { Search, Filter, Star, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, Shield, Settings, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Globe, Bot, Cpu, Network, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, ArrowRight, CheckCircle, ExternalLink, Sparkles, Rocket, TrendingUp, BarChart3, Target, Users as UsersIcon, Brain as BrainIcon, MessageSquare } from 'lucide-react'
-import { enhancedAIServices2025 } from '@/data/comprehensiveServices2025'
-import { Search, Filter, Star, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, Shield, Settings, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Globe, Bot, Cpu, Network, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, ArrowRight, CheckCircle, TrendingUp, BarChart3, Target, Rocket, Lock, Sparkles, Layers, Code, Database as DatabaseIcon2, Globe2, Shield as ShieldIcon2, Zap as ZapIcon2, Brain as BrainIcon, Cpu as CpuIcon, Cloud as CloudIcon, Database as DatabaseIcon3, Shield as ShieldIcon3, Zap as ZapIcon3, MessageSquare, Atom } from 'lucide-react'
-import { motion } from 'framer-motion'
+import { Search, Filter, Star, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, Shield, Settings, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Globe, Bot, Cpu, Network, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, ArrowRight, CheckCircle, ExternalLink, Sparkles, Rocket, TrendingUp, BarChart3, Target, Users as UsersIcon, Brain as BrainIcon, MessageSquare} from 'lucide-react'
+import {enhancedAIServices2025} from '@/data/comprehensiveServices2025'
+import {Search, Filter, Star, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, Shield, Settings, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Globe, Bot, Cpu, Network, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, ArrowRight, CheckCircle, TrendingUp, BarChart3, Target, Rocket, Lock, Sparkles, Layers, Code, Database as DatabaseIcon2, Globe2, Shield as ShieldIcon2, Zap as ZapIcon2, Brain as BrainIcon, Cpu as CpuIcon, Cloud as CloudIcon, Database as DatabaseIcon3, Shield as ShieldIcon3, Zap as ZapIcon3, MessageSquare, Atom} from 'lucide-react'
+import {motion} from 'framer-motion'
 const AI_SERVICES = COMPREHENSIVE_SERVICES.filter(service => 
   service.category.includes('AI') || 
   service.category.includes('Machine Learning') || 
@@ -37,17 +36,16 @@ const AI_SERVICES = COMPREHENSIVE_SERVICES.filter(service =>
   DollarSign,
   PieChart;
 } from 'lucide-react'
-import { ENHANCED_SERVICES } from '@/data/enhancedServices'
+import {ENHANCED_SERVICES} from '@/data/enhancedServices'
 // Filter AI services;
 const AI_SERVICES = ENHANCED_SERVICES.filter(service => 
   service.category.includes('AI') || 
   service.category.includes('Machine Learning') ||
   service.category.includes('Automation')
 )
-export default function AIServicesPage() {
-  const [selectedTab, setSelectedTab] = useState('overview')
+export default function AIServicesPage() {const [selectedTab, setSelectedTab] = useState('overview')
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
+<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
       {/* Hero Section */}
       </div>
 <div className="relative overflow-hidden">
@@ -80,10 +78,9 @@ export default function AIServicesPage() {
             </Button>
           </div>
 import React from 'react'
-import { motion } from 'framer-motion'
-import { Brain, Cpu, Shield, Zap, Cloud, Rocket, Target, Users, Award, Globe } from 'lucide-react'
-const AIServicesPage = () => {
-  const aiServices = [
+import {motion} from 'framer-motion'
+import {Brain, Cpu, Shield, Zap, Cloud, Rocket, Target, Users, Award, Globe} from 'lucide-react'
+const AIServicesPage = () => {const aiServices = [
     {
       category: 'AI Business Intelligence',
       services: [
@@ -93,20 +90,16 @@ const AIServicesPage = () => {
           features: ['Real-time analytics', 'Predictive insights', 'Custom dashboards', 'Automated reporting'],
           icon: Brain,
           color: 'from-purple-500 to-pink-500',
-          link: '/ai-business-intelligence'
-        },
-        {
-          title: 'AI Business Intelligence Pro',
+          link: '/ai-business-intelligence'},
+        {title: 'AI Business Intelligence Pro',
           description: 'Enterprise-grade AI BI solution with advanced machine learning and predictive analytics.',
           features: ['ML-powered forecasting', 'Advanced segmentation', 'ROI optimization', 'Competitive analysis'],
           icon: Target,
           color: 'from-blue-500 to-cyan-500',
-          link: '/ai-business-intelligence-pro'
-        }
+          link: '/ai-business-intelligence-pro'}
       ]
     },
-    {
-      category: 'AI Content & Marketing',
+    {category: 'AI Content & Marketing',
       services: [
         {
           title: 'AI Content Generation',
@@ -114,20 +107,16 @@ const AIServicesPage = () => {
           features: ['Blog posts', 'Social media content', 'Email campaigns', 'Product descriptions'],
           icon: Zap,
           color: 'from-yellow-500 to-orange-500',
-          link: '/ai-content-generation'
-        },
-        {
-          title: 'AI Content Marketing Automation',
+          link: '/ai-content-generation'},
+        {title: 'AI Content Marketing Automation',
           description: 'End-to-end content marketing automation with AI-powered personalization and optimization.',
           features: ['Content planning', 'Automated publishing', 'Performance tracking', 'Audience insights'],
           icon: Rocket,
           color: 'from-green-500 to-emerald-500',
-          link: '/ai-content-marketing-automation'
-        }
+          link: '/ai-content-marketing-automation'}
       ]
     },
-    {
-      category: 'AI Development & Code',
+    {category: 'AI Development & Code',
       services: [
         {
           title: 'AI Code Generation Enterprise',
@@ -135,30 +124,25 @@ const AIServicesPage = () => {
           features: ['Multi-language support', 'Code review', 'Documentation generation', 'Testing automation'],
           icon: Cpu,
           color: 'from-indigo-500 to-purple-500',
-          link: '/ai-code-generation-enterprise'
-        },
-        {
-          title: 'AI Code Review Copilot',
+          link: '/ai-code-generation-enterprise'},
+        {title: 'AI Code Review Copilot',
           description: 'AI-powered code review assistant that identifies issues and suggests improvements.',
           features: ['Security scanning', 'Performance optimization', 'Best practices', 'Learning recommendations'],
           icon: Shield,
           color: 'from-red-500 to-pink-500',
-          link: '/ai-code-review-copilot'
-        }
+          link: '/ai-code-review-copilot'}
       ]
   // Enhanced AI Service data with more innovative services;
   const aiServices = [
-    {
-      id: 1,
+    {id: 1,
       name: "AI-Powered Business Intelligence",
       category: "Business Intelligence",
       description: "Advanced analytics and business intelligence powered by machine learning algorithms for data-driven decision making",
       price: 2500,
       pricingModel: "monthly",
       aiScore: 95,
-import { Search, Filter, Brain, Zap, Shield, Database, Users, TrendingUp, BarChart3, MessageSquare, Camera, Video, FileText, Target, Globe, Bot, Cpu, Network, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Star, Clock, DollarSign } from 'lucide-react'
-const AIServicesPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('')
+import { Search, Filter, Brain, Zap, Shield, Database, Users, TrendingUp, BarChart3, MessageSquare, Camera, Video, FileText, Target, Globe, Bot, Cpu, Network, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Star, Clock, DollarSign} from 'lucide-react'
+const AIServicesPage: React.FC = () => {const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState<string>('all')
   const [selectedPricing, setSelectedPricing] = useState<string>('all')
   // AI Services data;
@@ -186,11 +170,9 @@ const AIServicesPage: React.FC = () => {
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 7,
+    {id: 7,
       name: "AI-Powered Customer Service Automation",
       category: "Customer Service",
       description: "Intelligent customer service automation with natural language processing and sentiment analysis",
@@ -204,11 +186,9 @@ const AIServicesPage: React.FC = () => {
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 8,
+    {id: 8,
       name: "AI-Powered Marketing Optimization",
       category: "Marketing AI",
       description: "Intelligent marketing optimization using AI to improve campaigns, targeting, and ROI",
@@ -222,11 +202,9 @@ const AIServicesPage: React.FC = () => {
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 9,
+    {id: 9,
       name: "AI-Powered Fraud Detection",
       category: "Security AI",
       description: "Advanced fraud detection systems using machine learning to identify and prevent fraudulent activities",
@@ -240,11 +218,9 @@ const AIServicesPage: React.FC = () => {
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 10,
+    {id: 10,
       name: "AI-Powered Supply Chain Optimization",
       category: "Supply Chain AI",
       description: "Intelligent supply chain optimization using AI to improve efficiency and reduce costs",
@@ -258,11 +234,9 @@ const AIServicesPage: React.FC = () => {
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     }
-    {
-      id: 2,
+    {id: 2,
       name: "AI Customer Support Bot",
       category: "Customer Service",
       pricing: "Freemium",
@@ -280,11 +254,9 @@ const AIServicesPage: React.FC = () => {
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 3,
+    {id: 3,
       name: "AI Sales Predictor",
       category: "Sales Intelligence",
       pricing: "Freemium",
@@ -302,19 +274,16 @@ const AIServicesPage: React.FC = () => {
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-  // Use the enhanced AI services data;
+    {// Use the enhanced AI services data;
   const aiServices = enhancedAIServices2025;
   const categories = ['all', ...Array.from(new Set(aiServices.map(service => service.category)))]
       id: 4,
 import React from 'react'
-import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
-import { 
-  Brain, 
+import { motion} from 'framer-motion'
+import {Link} from 'react-router-dom'
+import {Brain, 
   Zap, 
   Shield, 
   Users, 
@@ -325,19 +294,15 @@ import {
   ArrowRight,
   Target,
   Rocket,
-  Globe;
-} from 'lucide-react'
-const AIServicesPage = () => {
-  const aiServices = [
+  Globe;} from 'lucide-react'
+const AIServicesPage = () => {const aiServices = [
     {
       icon: Brain,
       title: 'AI-Powered Business Intelligence',
       description: 'Transform your data into actionable insights with advanced AI analytics and predictive modeling.',
       features: ['Predictive Analytics', 'Real-time Dashboards', 'Custom AI Models', 'Data Visualization'],
-      link: '/ai-business-intelligence'
-    },
-    {
-      icon: Zap,
+      link: '/ai-business-intelligence'},
+    {icon: Zap,
       title: 'Machine Learning Solutions',
       description: 'Custom ML models designed to solve your specific business challenges and automate complex processes.',
       features: ['Custom Model Development', 'Model Training & Optimization', 'API Integration', 'Performance Monitoring'],
@@ -366,11 +331,9 @@ const AIServicesPage = () => {
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 5,
+    {id: 5,
       name: "AI Data Analyzer Pro",
       category: "Data Analytics",
       pricing: "Freemium",
@@ -388,32 +351,24 @@ const AIServicesPage = () => {
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      icon: Shield,
+    {icon: Shield,
       title: 'AI Security & Compliance',
       description: 'Protect your business with AI-driven security solutions and automated compliance monitoring.',
       features: ['Threat Detection', 'Compliance Automation', 'Risk Assessment', 'Security Analytics'],
-      link: '/ai-security-compliance'
-    },
-    {
-      icon: Users,
+      link: '/ai-security-compliance'},
+    {icon: Users,
       title: 'AI-Powered Customer Experience',
       description: 'Enhance customer engagement with intelligent chatbots, personalization, and predictive customer service.',
       features: ['Smart Chatbots', 'Personalization Engine', 'Customer Analytics', 'Predictive Support'],
-      link: '/ai-customer-experience'
-    },
-    {
-      icon: Cpu,
+      link: '/ai-customer-experience'},
+    {icon: Cpu,
       title: 'AI Process Automation',
       description: 'Streamline operations with intelligent automation that learns and improves over time.',
       features: ['Workflow Automation', 'Document Processing', 'Intelligent Routing', 'Process Optimization'],
-      link: '/ai-process-automation'
-    },
-    {
-      features: ["Natural conversations", "Multi-language support", "Integration APIs", "Analytics dashboard", "Custom training", "Voice interface"],
+      link: '/ai-process-automation'},
+    {features: ["Natural conversations", "Multi-language support", "Integration APIs", "Analytics dashboard", "Custom training", "Voice interface"],
       benefits: ["24/7 availability", "Cost reduction", "Improved customer satisfaction", "Scalable support", "Consistent service", "Quick responses"],
       useCases: ["Customer support", "Sales assistance", "Appointment booking", "Information retrieval", "Order tracking", "Technical support"],
       tags: ["Chatbot", "Virtual Assistant", "Conversational AI", "Customer Service", "NLP"],
@@ -423,11 +378,9 @@ const AIServicesPage = () => {
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 7,
+    {id: 7,
       name: "Quantum Machine Learning",
       category: "Quantum AI",
       description: "Revolutionary quantum machine learning platform that combines quantum computing with AI for exponential speedup",
@@ -444,11 +397,9 @@ const AIServicesPage = () => {
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 8,
+    {id: 8,
       name: "Edge AI Computing Platform",
       category: "Edge AI",
       description: "Distributed AI computing platform that brings machine learning to edge devices for real-time processing",
@@ -465,11 +416,9 @@ const AIServicesPage = () => {
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 9,
+    {id: 9,
       name: "AI-Powered Cybersecurity",
       category: "AI Security",
       description: "Advanced AI cybersecurity platform that detects and prevents threats in real-time using behavioral analysis",
@@ -486,11 +435,9 @@ const AIServicesPage = () => {
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 10,
+    {id: 10,
       name: "AI-Powered Healthcare Analytics",
       category: "Healthcare AI",
       description: "Advanced healthcare analytics platform that uses AI to improve patient outcomes and optimize operations",
@@ -507,11 +454,9 @@ const AIServicesPage = () => {
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 11,
+    {id: 11,
       name: "AI-Powered Financial Services",
       category: "FinTech AI",
       description: "Intelligent financial services platform that uses AI for risk assessment, fraud detection, and personalized banking",
@@ -528,11 +473,9 @@ const AIServicesPage = () => {
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 12,
+    {id: 12,
       name: "AI-Powered Supply Chain",
       category: "Supply Chain AI",
       description: "Intelligent supply chain platform that uses AI to optimize inventory, predict demand, and streamline logistics",
@@ -549,8 +492,7 @@ const AIServicesPage = () => {
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     }
   ]
   const categories = ['all', 'Business Intelligence', 'Language AI', 'Visual AI', 'Predictive AI', 'Process Automation', 'Conversational AI', 'Quantum AI', 'Edge AI', 'AI Security', 'Healthcare AI', 'FinTech AI', 'Supply Chain AI']
@@ -568,14 +510,11 @@ const AIServicesPage = () => {
       marketPrice: "$75/month (Industry average: $140/month)",
       roi: "400% ROI within 6 months",
       implementationTime: "1-2 weeks",
-      contactInfo: {
-        phone: "+1 302 464 0950",
+      contactInfo: {phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 7,
+    {id: 7,
       name: "AI Security Monitor",
       category: "Cybersecurity",
       pricing: "Freemium",
@@ -593,11 +532,9 @@ const AIServicesPage = () => {
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     },
-    {
-      id: 8,
+    {id: 8,
       name: "AI Marketing Optimizer",
       category: "Marketing",
       pricing: "Freemium",
@@ -615,23 +552,19 @@ const AIServicesPage = () => {
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
+        website: "https://ziontechgroup.com"}
     }
   ]
   const categories = ['all', 'Content Generation', 'Customer Service', 'Sales Intelligence', 'Computer Vision', 'Data Analytics', 'Process Automation', 'Cybersecurity', 'Marketing']
   const pricingModels = ['all', 'Freemium', 'Subscription', 'One-time']
   const categories = ['all', 'Business Intelligence', 'Language AI', 'Visual AI', 'Predictive AI', 'Process Automation', 'Conversational AI', 'Customer Service', 'Marketing AI', 'Security AI', 'Supply Chain AI']
-  const filteredServices = aiServices.filter(service => {
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const filteredServices = aiServices.filter(service => {const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesPricing = selectedPricing === 'all' || service.pricing === selectedPricing;
-    return matchesSearch && matchesCategory && matchesPricing;
-  })
-  const formatPrice = (price: number, model: string) => {
-    switch (model) {
+    return matchesSearch && matchesCategory && matchesPricing;})
+  const formatPrice = (price: number, model: string) => {switch (model) {
       case 'monthly':
         return `$${price}/month`
       case 'yearly':
@@ -647,26 +580,18 @@ const AIServicesPage = () => {
     }
   ]
   const benefits = [
-    {
-      icon: TrendingUp,
+    {icon: TrendingUp,
       title: 'Increased Efficiency',
-      description: 'Automate repetitive tasks and optimize processes to save time and reduce costs.'
-    },
-    {
-      icon: Target,
+      description: 'Automate repetitive tasks and optimize processes to save time and reduce costs.'},
+    {icon: Target,
       title: 'Better Decision Making',
-      description: 'Leverage data-driven insights to make informed decisions and predict future trends.'
-    },
-    {
-      icon: Shield,
+      description: 'Leverage data-driven insights to make informed decisions and predict future trends.'},
+    {icon: Shield,
       title: 'Enhanced Security',
-      description: 'Protect your business with AI-powered threat detection and security monitoring.'
-    },
-    {
-      icon: Users,
+      description: 'Protect your business with AI-powered threat detection and security monitoring.'},
+    {icon: Users,
       title: 'Improved Customer Experience',
-      description: 'Deliver personalized experiences and faster, more accurate customer service.'
-    }
+      description: 'Deliver personalized experiences and faster, more accurate customer service.'}
   ]
   const industries = [
     'Healthcare & Life Sciences',
@@ -678,14 +603,11 @@ const AIServicesPage = () => {
     'Energy & Utilities',
     'Media & Entertainment'
   ]
-  const getAIScoreColor = (score: number) => {
-    if (score >= 95) return 'text-emerald-400'
+  const getAIScoreColor = (score: number) => {if (score >= 95) return 'text-emerald-400'
     if (score >= 90) return 'text-green-400'
     if (score >= 85) return 'text-yellow-400'
-    return 'text-red-400'
-  }
-  const getInnovationLevelColor = (level: string) => {
-    switch (level) {
+    return 'text-red-400'}
+  const getInnovationLevelColor = (level: string) => {switch (level) {
       case 'Revolutionary': return 'text-purple-400 bg-purple-400/20'
       case 'Cutting-edge': return 'text-blue-400 bg-blue-400/20'
       case 'Advanced': return 'text-green-400 bg-green-400/20'
@@ -693,8 +615,7 @@ const AIServicesPage = () => {
         return `$${price}`
     }
   }
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
+  const getCategoryIcon = (category: string) => {switch (category) {
       case 'Content Generation': return <FileText className="w-6 h-6" />
       case 'Customer Service': return <MessageSquare className="w-6 h-6" />
       case 'Sales Intelligence': return <TrendingUp className="w-6 h-6" />
@@ -703,62 +624,51 @@ const AIServicesPage = () => {
       case 'Process Automation': return <Zap className="w-6 h-6" />
       case 'Cybersecurity': return <Shield className="w-6 h-6" />
       case 'Marketing': return <Target className="w-6 h-6" />
-      default: return <Brain className="w-6 h-6" />
-    }
+      default: return <Brain className="w-6 h-6" />}
   }
-  const getPricingColor = (pricing: string) => {
-    switch (pricing) {
+  const getPricingColor = (pricing: string) => {switch (pricing) {
       case 'Freemium': return 'text-green-400'
       case 'Subscription': return 'text-blue-400'
       case 'One-time': return 'text-purple-400'
-      default: return 'text-gray-400'
-    }
+      default: return 'text-gray-400'}
   }
 import React from 'react'
-import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
-import { Brain, Zap, Cpu, Shield, Users, TrendingUp, ArrowRight, CheckCircle, Star, Globe, Lock, Rocket } from 'lucide-react'
-import { SEO } from '@/components/SEO'
+import {motion} from 'framer-motion'
+import {Link} from 'react-router-dom'
+import {Brain, Zap, Cpu, Shield, Users, TrendingUp, ArrowRight, CheckCircle, Star, Globe, Lock, Rocket} from 'lucide-react'
+import {SEO} from '@/components/SEO'
 const aiServices = [
-  {
-    title: "AI-Powered Business Intelligence",
+  {title: "AI-Powered Business Intelligence",
     description: "Transform raw data into actionable insights with our advanced AI analytics platform.",
     icon: Brain,
     features: ["Predictive Analytics", "Real-time Dashboards", "Custom ML Models", "Data Visualization"],
     price: "From $2,500/month",
-    color: "from-purple-500 to-pink-500"
-  },
-  {
-    title: "Natural Language Processing",
+    color: "from-purple-500 to-pink-500"},
+  {title: "Natural Language Processing",
     description: "Build intelligent chatbots and language understanding systems for your business.",
     icon: Cpu,
     features: ["Chatbot Development", "Sentiment Analysis", "Text Classification", "Language Translation"],
     price: "From $1,800/month",
-    color: "from-blue-500 to-cyan-500"
-  },
-  {
-    title: "Computer Vision Solutions",
+    color: "from-blue-500 to-cyan-500"},
+  {title: "Computer Vision Solutions",
     description: "Implement advanced image and video analysis for automation and quality control.",
     icon: Shield,
     features: ["Object Detection", "Image Classification", "Video Analytics", "Quality Assurance"],
     price: "From $3,200/month",
-    color: "from-green-500 to-emerald-500"
-  },
-  {
-    title: "Predictive Maintenance",
+    color: "from-green-500 to-emerald-500"},
+  {title: "Predictive Maintenance",
     description: "Prevent equipment failures and optimize maintenance schedules with AI predictions.",
     icon: TrendingUp,
     features: ["Failure Prediction", "Maintenance Optimization", "Performance Monitoring", "Cost Reduction"],
     price: "From $2,800/month",
     color: "from-orange-500 to-red-500"
 import React from 'react'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { Link } from "react-router-dom"
-import { SEO } from "@/components/SEO"
-import { 
-  Brain, 
+import { Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card"
+import {Button} from "@/components/ui/button"
+import {Badge} from "@/components/ui/badge"
+import {Link} from "react-router-dom"
+import {SEO} from "@/components/SEO"
+import {Brain, 
 
           {/* AI Stats */}
           <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
@@ -767,24 +677,24 @@ import {
               </div>
 <div className="text-3xl font-bold text-zion-cyan mb-2">95%</div>
 <div className="text-zion-cyan-light">Accuracy Rate</div>
-            </div>
+</div>
 <div className="text-center">
               </div>
 <div className="text-3xl font-bold text-zion-cyan mb-2">24/7</div>
 <div className="text-zion-cyan-light">Operation</div>
-            </div>
+</div>
 <div className="text-center">
               </div>
 <div className="text-3xl font-bold text-zion-cyan mb-2">80%</div>
 <div className="text-zion-cyan-light">Cost Reduction</div>
-            </div>
+</div>
 <div className="text-center">
               </div>
 <div className="text-3xl font-bold text-zion-cyan mb-2">300%</div>
 <div className="text-zion-cyan-light">ROI Average</div>
-            </div>
-          </div>
-        </div>
+</div>
+</div>
+</div>
       </div>
 
       {/* Main Content */}
@@ -815,7 +725,7 @@ import {
 <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full filter blur-3xl animate-pulse"></div>
 <div className="absolute top-40 right-20 w-96 h-96 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full filter blur-3xl animate-pulse delay-1000"></div>
 <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-gradient-to-r from-pink-400 to-purple-500 rounded-full filter blur-3xl animate-pulse delay-2000"></div>
-      </div>
+</div>
 
       {/* Enhanced Hero Section */}
       <div className="bg-gradient-to-r from-purple-600 to-blue-600 py-24 relative overflow-hidden">
@@ -823,7 +733,7 @@ import {
 <div className="absolute inset-0 opacity-20">
           </div>
 <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-blue-400"></div>
-        </div>
+</div>
 <div className="container mx-auto px-4 text-center relative z-10">
           </div>
 <div className="inline-flex items-center gap-3 mb-6">
@@ -859,17 +769,17 @@ import {
               </div>
 <div className="text-3xl md:text-4xl font-bold text-white mb-2">{aiServices.length}+</div>
 <div className="text-purple-100 text-sm">AI Services</div>
-            </div>
+</div>
 <div className="text-center">
               </div>
 <div className="text-3xl md:text-4xl font-bold text-white mb-2">95%+</div>
 <div className="text-purple-100 text-sm">Accuracy</div>
-            </div>
+</div>
 <div className="text-center">
               </div>
 <div className="text-3xl md:text-4xl font-bold text-white mb-2">24/7</div>
 <div className="text-purple-100 text-sm">AI Monitoring</div>
-            </div>
+</div>
 <div className="text-center">
               </div>
 <div className="text-3xl md:text-4xl font-bold text-white mb-2">99%</div>
@@ -908,7 +818,7 @@ import {
         </div>
 <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-blue-600/20 to-purple-600/20 animate-pulse"></div>
 <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
-      </div>
+</div>
 
       {/* Hero Section */}
       <div className="relative z-10 bg-gradient-to-r from-purple-600/90 to-blue-600/90 py-20 backdrop-blur-sm">
@@ -921,12 +831,11 @@ import {
         description="Transform your business with cutting-edge AI solutions including predictive analytics, natural language processing, and computer vision."
         keywords="AI, machine learning, predictive analytics, NLP, computer vision, business intelligence"
 import React from 'react'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-import { Badge } from '@/components/ui/badge'
-import { Link } from 'react-router-dom'
-import { 
-  Brain, 
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card'
+import {Button} from '@/components/ui/button'
+import {Badge} from '@/components/ui/badge'
+import {Link} from 'react-router-dom'
+import {Brain, 
   Bot, 
   BarChart3, 
   Code, 
@@ -943,11 +852,9 @@ import {
   Clock,
   Users,
   TrendingUp,
-  CheckCircle;
-} from "lucide-react"
+  CheckCircle;} from "lucide-react"
 const AI_SERVICES = [
-  {
-    id: "ai-content-generation",
+  {id: "ai-content-generation",
     title: "AI Content Generation",
     description: "Generate high-quality, SEO-optimized content for blogs, social media, and marketing campaigns.",
     features: [
@@ -961,16 +868,14 @@ const AI_SERVICES = [
     pricing: {
       starter: "$99/month",
       professional: "$299/month",
-      enterprise: "$999/month"
-    },
+      enterprise: "$999/month"},
     icon: <MessageSquare className="h-8 w-8" />,
     category: "Content Creation",
     rating: 4.9,
     reviewCount: 1247,
     badge: "Most Popular"
   },
-  {
-    id: "ai-data-analytics",
+  {id: "ai-data-analytics",
     title: "AI Data Analytics Platform",
     description: "Advanced analytics and insights powered by machine learning for business intelligence.",
     features: [
@@ -984,16 +889,14 @@ const AI_SERVICES = [
     pricing: {
       starter: "$199/month",
       professional: "$499/month",
-      enterprise: "$1499/month"
-    },
+      enterprise: "$1499/month"},
     icon: <BarChart3 className="h-8 w-8" />,
     category: "Analytics",
     rating: 4.8,
     reviewCount: 892,
     badge: "Trending"
   },
-  {
-    id: "ai-automation-hub",
+  {id: "ai-automation-hub",
     title: "AI Automation Hub",
     description: "Automate repetitive tasks and workflows with intelligent AI-powered automation.",
     features: [
@@ -1007,16 +910,14 @@ const AI_SERVICES = [
     pricing: {
       starter: "$149/month",
       professional: "$399/month",
-      enterprise: "$1199/month"
-    },
+      enterprise: "$1199/month"},
     icon: <Zap className="h-8 w-8" />,
     category: "Automation",
     rating: 4.7,
     reviewCount: 756,
     badge: "New"
   },
-  {
-    id: "ai-image-generation",
+  {id: "ai-image-generation",
     title: "AI Image Generation Studio",
     description: "Create stunning visuals, graphics, and artwork using advanced AI image generation.",
     features: [
@@ -1030,16 +931,14 @@ const AI_SERVICES = [
     pricing: {
       starter: "$79/month",
       professional: "$199/month",
-      enterprise: "$599/month"
-    },
+      enterprise: "$599/month"},
     icon: <Image className="h-8 w-8" />,
     category: "Creative",
     rating: 4.9,
     reviewCount: 1103,
     badge: "Featured"
   },
-  {
-    id: "ai-code-assistant",
+  {id: "ai-code-assistant",
     title: "AI Code Assistant Pro",
     description: "Intelligent coding assistance with code generation, debugging, and optimization.",
     features: [
@@ -1053,16 +952,14 @@ const AI_SERVICES = [
     pricing: {
       starter: "$129/month",
       professional: "$349/month",
-      enterprise: "$899/month"
-    },
+      enterprise: "$899/month"},
     icon: <Code className="h-8 w-8" />,
     category: "Development",
     rating: 4.8,
     reviewCount: 634,
     badge: "Developer Choice"
   },
-  {
-    id: "ai-security-suite",
+  {id: "ai-security-suite",
     title: "AI Security Suite",
     description: "Advanced cybersecurity powered by artificial intelligence for threat detection and prevention.",
     features: [
@@ -1076,16 +973,14 @@ const AI_SERVICES = [
     pricing: {
       starter: "$299/month",
       professional: "$699/month",
-      enterprise: "$1999/month"
-    },
+      enterprise: "$1999/month"},
     icon: <Shield className="h-8 w-8" />,
     category: "Security",
     rating: 4.9,
     reviewCount: 445,
     badge: "Enterprise"
   },
-  {
-    id: "ai-chatbot-platform",
+  {id: "ai-chatbot-platform",
     title: "AI Chatbot Platform",
     description: "Build intelligent conversational AI chatbots for customer service and engagement.",
     features: [
@@ -1099,16 +994,14 @@ const AI_SERVICES = [
     pricing: {
       starter: "$89/month",
       professional: "$249/month",
-      enterprise: "$799/month"
-    },
+      enterprise: "$799/month"},
     icon: <MessageSquare className="h-8 w-8" />,
     category: "Communication",
     rating: 4.7,
     reviewCount: 567,
     badge: "Customer Favorite"
   },
-  {
-    id: "ai-market-research",
+  {id: "ai-market-research",
     title: "AI Market Research Platform",
     description: "Comprehensive market analysis and competitive intelligence powered by AI.",
     features: [
@@ -1122,8 +1015,7 @@ const AI_SERVICES = [
     pricing: {
       starter: "$179/month",
       professional: "$449/month",
-      enterprise: "$1299/month"
-    },
+      enterprise: "$1299/month"},
     icon: <TrendingUp className="h-8 w-8" />,
     category: "Research",
     rating: 4.8,
@@ -1132,29 +1024,20 @@ const AI_SERVICES = [
   }
 ]
 const BENEFITS = [
-  {
-    title: "Cost Effective",
+  {title: "Cost Effective",
     description: "Reduce operational costs by up to 60% with AI automation",
-    icon: <CheckCircle className="h-6 w-6 text-green-500" />
-  },
-  {
-    title: "24/7 Availability",
+    icon: <CheckCircle className="h-6 w-6 text-green-500" />},
+  {title: "24/7 Availability",
     description: "AI services work around the clock without breaks or downtime",
-    icon: <Clock className="h-6 w-6 text-blue-500" />
-  },
-  {
-    title: "Scalable Solutions",
+    icon: <Clock className="h-6 w-6 text-blue-500" />},
+  {title: "Scalable Solutions",
     description: "Grow your business with flexible, scalable AI solutions",
-    icon: <TrendingUp className="h-6 w-6 text-purple-500" />
-  },
-  {
-    title: "Expert Support",
+    icon: <TrendingUp className="h-6 w-6 text-purple-500" />},
+  {title: "Expert Support",
     description: "Access to AI specialists and technical support team",
-    icon: <Users className="h-6 w-6 text-cyan-500" />
-  }
+    icon: <Users className="h-6 w-6 text-cyan-500" />}
 ]
-export default function AIServicesPage() {
-  return (
+export default function AIServicesPage() {return (
     </div>
 <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-slate to-zion-blue">
       <SEO
@@ -1165,7 +1048,8 @@ export default function AIServicesPage() {
       />
 
       {/* Hero Section */}
-      </div><section className="pt-24 pb-16 relative overflow-hidden">
+      </div>
+<section className="pt-24 pb-16 relative overflow-hidden">
         </section>
 <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 animate-pulse"></div>
 <div className="container mx-auto px-4 relative z-10">
@@ -1186,7 +1070,7 @@ export default function AIServicesPage() {
               <div className="absolute right-4 top-1/2 transform -translate-y-1/2">
                 <Sparkles className="w-5 h-5 text-purple-400 animate-pulse" />
               </div>
-            </div>
+</div>
 
             {/* Enhanced Category Filter */}
             <div className="relative">
@@ -1244,9 +1128,9 @@ export default function AIServicesPage() {
           {filteredServices.map((service, index) => (
             <motion.div;
               key={service.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              initial={{ opacity: 0, y: 20}}
+              animate={{ opacity: 1, y: 0}}
+              transition={{ duration: 0.6, delay: index * 0.1}}
               className="group bg-slate-800/80 backdrop-blur-sm rounded-xl border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20"
             >
               </div>
@@ -1269,8 +1153,8 @@ export default function AIServicesPage() {
                           {service.innovationLevel}
                         </span>
                       </div>
-                    </div>
-                  </div>
+</div>
+</div>
 <div className="text-right">
                     <span className="text-3xl font-bold text-purple-400 group-hover:text-purple-300 transition-colors duration-300">
                       {formatPrice(service.price, service.pricingModel)}
@@ -1280,8 +1164,8 @@ export default function AIServicesPage() {
                       <Brain className="w-4 h-4" />
                       AI Score: {service.aiScore}%
                     </div>
-                  </div>
-                </div>
+</div>
+</div>
                 
                 <p className="text-slate-300 mb-4 leading-relaxed">{service.description}</p>
                 
@@ -1331,7 +1215,7 @@ export default function AIServicesPage() {
               ))}
             </select>
           </div>
-        </div>
+</div>
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -1357,9 +1241,9 @@ export default function AIServicesPage() {
                         {service.category}
                       </span>
                     </div>
-                  </div>
-                </div>
-              </div>
+</div>
+</div>
+</div>
               
               <p className="text-gray-300 mb-4">{service.description}</p>
               
@@ -1370,14 +1254,14 @@ export default function AIServicesPage() {
                 </div>
 <div className="text-sm text-gray-400">{service.userLimit}</div>
 <div className="text-sm text-green-400 font-medium">{service.marketPrice}</div>
-              </div>
+</div>
 
       {/* Services Grid */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <motion.div;
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0, y: 20}}
+          whileInView={{ opacity: 1, y: 0}}
+          transition={{ duration: 0.8}}
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
@@ -1395,9 +1279,9 @@ export default function AIServicesPage() {
             return (
               <motion.div;
                 key={service.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
+                transition={{ duration: 0.6, delay: index * 0.1}}
                 className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300"
               >
                 </div>
@@ -1460,11 +1344,12 @@ export default function AIServicesPage() {
                     </span>
                   ))}
       {/* Benefits Section */}
-      </div><section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+      </div>
+<section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <motion.div;
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0, y: 20}}
+          whileInView={{ opacity: 1, y: 0}}
+          transition={{ duration: 0.8}}
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
@@ -1482,9 +1367,9 @@ export default function AIServicesPage() {
             return (
               <motion.div;
                 key={benefit.title}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20}}
+                whileInView={{ opacity: 1, x: 0}}
+                transition={{ duration: 0.6, delay: index * 0.1}}
                 className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300"
               >
                 </div>
@@ -1497,7 +1382,7 @@ export default function AIServicesPage() {
                     <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
                     <p className="text-zion-slate-light leading-relaxed">{benefit.description}</p>
                   </div>
-                </div>
+</div>
               </motion.div>
             )
           })
@@ -1522,7 +1407,7 @@ export default function AIServicesPage() {
                     </span>
                   ))}
                 </div>
-              </div>
+</div>
 <div className="mb-4">
                 <h4 className="text-sm font-semibold text-white mb-2">Perfect For:</h4>
                 </div>
@@ -1533,7 +1418,7 @@ export default function AIServicesPage() {
                     </span>
                   ))}
                 </div>
-              </div>
+</div>
 <div className="border-t border-gray-600 pt-4">
                 </div>
 <div className="flex items-center justify-between text-sm text-gray-400">
@@ -1547,7 +1432,7 @@ export default function AIServicesPage() {
                     Get Started →
                   </a>
                 </div>
-              </div>
+</div>
           <TabsContent value="overview" className="space-y-12">
             <div className="text-center">
               <h2 className="text-4xl font-bold text-white mb-6">Why AI Matters for Your Business</h2>
@@ -1613,8 +1498,8 @@ export default function AIServicesPage() {
                   <h4 className="font-semibold text-white mb-2">Natural Language Processing</h4>
                   <p className="text-sm text-zion-cyan-light">Understand and process human language</p>
                 </div>
-              </div>
-            </div>
+</div>
+</div>
           </TabsContent>
 
           {/* Services Tab */}
@@ -1700,7 +1585,7 @@ export default function AIServicesPage() {
                   "5 hours of consultation",
                   "Email support"
                 ]}
-                popular={false}
+                
               />
               <PricingCard
                 title="Professional AI Suite"
@@ -1714,7 +1599,7 @@ export default function AIServicesPage() {
                   "Priority support",
                   "Training & documentation"
                 ]}
-                popular={true}
+                popular
               />
               <PricingCard
                 title="Enterprise AI Platform"
@@ -1729,7 +1614,7 @@ export default function AIServicesPage() {
                   "Custom training programs",
                   "Ongoing optimization"
                 ]}
-                popular={false}
+                
               />
             </div>
 
@@ -1760,8 +1645,8 @@ export default function AIServicesPage() {
                       <span className="text-zion-cyan-light">Time Savings:</span>
                       <span className="text-white font-semibold">40-60%</span>
                     </div>
-                  </div>
-                </div>
+</div>
+</div>
 <div>
                   <h4 className="text-xl font-semibold text-white mb-4">Expected Returns</h4>
                   </div>
@@ -1783,9 +1668,9 @@ export default function AIServicesPage() {
                       <span className="text-zion-cyan-light">Competitive Advantage:</span>
                       <span className="text-white font-semibold">Significant</span>
                     </div>
-                  </div>
-                </div>
-              </div>
+</div>
+</div>
+</div>
             </div>
           </TabsContent>
         </Tabs>
@@ -1803,11 +1688,12 @@ export default function AIServicesPage() {
           </h2>
           <p className="text-xl text-zion-cyan-light mb-8 max-w-3xl mx-auto">
       {/* Testimonials */}
-      </div><section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+      </div>
+<section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <motion.div;
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0, y: 20}}
+          whileInView={{ opacity: 1, y: 0}}
+          transition={{ duration: 0.8}}
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
@@ -1823,9 +1709,9 @@ export default function AIServicesPage() {
           {testimonials.map((testimonial, index) => (
             <motion.div;
               key={testimonial.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
+              transition={{ duration: 0.6, delay: index * 0.1}}
               className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300"
             >
               </div>
@@ -1841,7 +1727,7 @@ export default function AIServicesPage() {
                 </div>
 <div className="font-semibold text-white">{testimonial.name}</div>
 <div className="text-zion-cyan text-sm">{testimonial.role}</div>
-              </div>
+</div>
             </motion.div>
           ))}
         </div>
@@ -1852,9 +1738,9 @@ export default function AIServicesPage() {
         </section>
 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
+            transition={{ duration: 0.8}}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold mb-6">
@@ -1875,9 +1761,9 @@ export default function AIServicesPage() {
               return (
                 <motion.div;
                   key={benefit.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={{ opacity: 0, y: 30}}
+                  whileInView={{ opacity: 1, y: 0}}
+                  transition={{ duration: 0.6, delay: index * 0.1}}
                   className="text-center p-6 rounded-2xl bg-zion-blue-dark/50 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300"
                 >
                   </div>
@@ -1895,7 +1781,7 @@ export default function AIServicesPage() {
 <div className="absolute inset-0 opacity-5">
           </div>
 <div className="absolute inset-0 bg-gradient-to-br from-purple-400 via-blue-400 to-pink-400"></div>
-        </div>
+</div>
 <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 flex items-center justify-center gap-3">
             <Brain className="w-8 h-8 text-purple-400" />
@@ -1933,7 +1819,7 @@ export default function AIServicesPage() {
               <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
               <p className="text-slate-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
             </div>
-          </div>
+</div>
 <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <$2 />
               href="https://ziontechgroup.com" 
@@ -1952,13 +1838,14 @@ export default function AIServicesPage() {
               Contact Us;
             </a>
       {/* AI Services Grid */}
-      </div><section className="py-20">
+      </div>
+<section className="py-20">
         </section>
 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
+            transition={{ duration: 0.8}}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold mb-6">
@@ -1979,9 +1866,9 @@ export default function AIServicesPage() {
               return (
                 <motion.div;
                   key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial={{ opacity: 0, y: 30}}
+                  whileInView={{ opacity: 1, y: 0}}
+                  transition={{ duration: 0.8, delay: index * 0.1}}
                   className="group p-6 rounded-2xl border border-zion-cyan/20 hover:border-zion-cyan/40 hover:bg-zion-blue-light/10 transition-all duration-300"
                 >
                   </div>
@@ -2018,10 +1905,10 @@ export default function AIServicesPage() {
         </div>
 <div className="container mx-auto px-4 text-center">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 20}}
+            whileInView={{ opacity: 1, y: 0}}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
               Ready to Harness AI Power?
@@ -2057,15 +1944,15 @@ export default function AIServicesPage() {
                 <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
                 <p className="text-slate-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
               </div>
-            </div>
+</div>
 <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.a;
                 href="https://ziontechgroup.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 group"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05}}
+                whileTap={{ scale: 0.95}}
               >
                 Visit Our Website;
                 <Globe className="w-5 h-5 group-hover:rotate-12 transition-transform" />
@@ -2073,8 +1960,8 @@ export default function AIServicesPage() {
               <motion.a;
                 href="mailto:kleber@ziontechgroup.com?subject=AI Services Inquiry"
                 className="inline-flex items-center gap-2 px-8 py-4 border border-purple-500 text-purple-400 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300 group"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05}}
+                whileTap={{ scale: 0.95}}
               >
                 Get Free Consultation;
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -2089,9 +1976,9 @@ export default function AIServicesPage() {
         </section>
 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
+            transition={{ duration: 0.8}}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold mb-6">
@@ -2112,9 +1999,9 @@ export default function AIServicesPage() {
               return (
                 <motion.div;
                   key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  initial={{ opacity: 0, y: 30}}
+                  whileInView={{ opacity: 1, y: 0}}
+                  transition={{ duration: 0.8, delay: index * 0.1}}
                   className="text-center p-6 rounded-2xl hover:bg-zion-blue-light/10 transition-all duration-300"
                 >
                   </div>
@@ -2154,9 +2041,9 @@ export default function AIServicesPage() {
                 <p className="text-white font-semibold">Address</p>
                 <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
               </div>
-            </div>
-          </div>
-        </div>
+</div>
+</div>
+</div>
       </section>
 
       {/* Industries Section */}
@@ -2164,9 +2051,9 @@ export default function AIServicesPage() {
         </section>
 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
+            transition={{ duration: 0.8}}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold mb-6">
@@ -2185,9 +2072,9 @@ export default function AIServicesPage() {
             {industries.map((industry, index) => (
               <motion.div;
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.05 }}
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
+                transition={{ duration: 0.6, delay: index * 0.05}}
                 className="p-4 rounded-xl border border-zion-cyan/20 hover:border-zion-cyan/40 hover:bg-zion-blue-light/10 transition-all duration-300 text-center"
               >
                 <span className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300">
@@ -2196,7 +2083,7 @@ export default function AIServicesPage() {
               </motion.div>
             ))}
           </div>
-        </div>
+</div>
       </section>
 
       {/* AI Implementation Process */}
@@ -2204,9 +2091,9 @@ export default function AIServicesPage() {
         </section>
 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
+            transition={{ duration: 0.8}}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold mb-6">
@@ -2227,29 +2114,22 @@ export default function AIServicesPage() {
               {
                 step: '01',
                 title: 'Discovery & Assessment',
-                description: 'Understand your business needs and assess AI opportunities.'
-              },
-              {
-                step: '02',
+                description: 'Understand your business needs and assess AI opportunities.'},
+              {step: '02',
                 title: 'Strategy & Planning',
-                description: 'Develop a comprehensive AI strategy and implementation roadmap.'
-              },
-              {
-                step: '03',
+                description: 'Develop a comprehensive AI strategy and implementation roadmap.'},
+              {step: '03',
                 title: 'Development & Testing',
-                description: 'Build and rigorously test AI models and solutions.'
-              },
-              {
-                step: '04',
+                description: 'Build and rigorously test AI models and solutions.'},
+              {step: '04',
                 title: 'Deployment & Optimization',
-                description: 'Deploy solutions and continuously optimize for performance.'
-              }
+                description: 'Deploy solutions and continuously optimize for performance.'}
             ].map((phase, index) => (
               <motion.div;
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                initial={{ opacity: 0, y: 30}}
+                whileInView={{ opacity: 1, y: 0}}
+                transition={{ duration: 0.8, delay: index * 0.1}}
                 className="text-center"
               >
                 </div>
@@ -2261,34 +2141,28 @@ export default function AIServicesPage() {
               </motion.div>
             ))}
           </div>
-        </div>
+</div>
       </section>
 
     title: "Cost Efficiency",
     description: "Reduce operational costs by up to 40% through intelligent automation and optimization",
     icon: <TrendingUp className="h-6 w-6" />
   },
-  {
-    title: "24/7 Availability",
+  {title: "24/7 Availability",
     description: "AI services never sleep, providing round-the-clock support and monitoring",
-    icon: <Globe className="h-6 w-6" />
-  },
-  {
-    title: "Scalability",
+    icon: <Globe className="h-6 w-6" />},
+  {title: "Scalability",
     description: "Easily scale your AI capabilities as your business grows without additional infrastructure",
-    icon: <Users className="h-6 w-6" />
-  },
-  {
-    title: "Continuous Learning",
+    icon: <Users className="h-6 w-6" />},
+  {title: "Continuous Learning",
     description: "AI models continuously improve and adapt to your specific business needs and data",
-    icon: <Brain className="h-6 w-6" />
-  }
+    icon: <Brain className="h-6 w-6" />}
 ]
-export default function AIServicesPage() {
-  return (
-    <div className="min-h-screen bg-background">
+export default function AIServicesPage() {return (
+<div className="min-h-screen bg-background">
       {/* Hero Section */}
-      </div><section className="bg-gradient-to-br from-zion-blue via-zion-purple to-zion-blue-dark py-20">
+      </div>
+<section className="bg-gradient-to-br from-zion-blue via-zion-purple to-zion-blue-dark py-20">
         </section>
 <div className="container mx-auto px-4 text-center">
           </div>
@@ -2312,8 +2186,8 @@ export default function AIServicesPage() {
                 View Demo;
               </Button>
             </div>
-          </div>
-        </div>
+</div>
+</div>
       </section>
 
       {/* Services Grid */}
@@ -2344,7 +2218,7 @@ export default function AIServicesPage() {
                       <span className="text-sm font-medium">{service.rating}</span>
                       <span className="text-xs">({service.reviewCount})</span>
                     </div>
-                  </div>
+</div>
                   
                   <CardTitle className="text-xl text-zion-blue mb-2">{service.title}</CardTitle>
                   <CardDescription className="text-zion-slate-light line-clamp-2">
@@ -2371,7 +2245,7 @@ export default function AIServicesPage() {
                         <div className="text-xs text-zion-slate-light">per month</div>
                       )}
                     </div>
-                  </div>
+</div>
 
                   {/* AI Score */}
                   <div className="flex items-center justify-between">
@@ -2398,7 +2272,7 @@ export default function AIServicesPage() {
                         </Badge>
                       )}
                     </div>
-                  </div>
+</div>
 
                   {/* Benefits */}
                   <div>
@@ -2413,7 +2287,7 @@ export default function AIServicesPage() {
                         </div>
                       ))}
                     </div>
-                  </div>
+</div>
 
                   {/* Use Cases */}
                   <div>
@@ -2426,7 +2300,7 @@ export default function AIServicesPage() {
                         </Badge>
                       ))}
                     </div>
-                  </div>
+</div>
 
                   {/* Target Audience */}
                   <div>
@@ -2439,7 +2313,7 @@ export default function AIServicesPage() {
                         </Badge>
                       ))}
                     </div>
-                  </div>
+</div>
 
                   {/* Action Buttons */}
                   <div className="flex flex-col gap-2 pt-4">
@@ -2473,7 +2347,7 @@ export default function AIServicesPage() {
                         </Button>
                       </Link>
                     </div>
-                  </div>
+</div>
 
                   {/* Additional Info */}
                   <div className="pt-4 border-t border-zion-blue-light">
@@ -2505,7 +2379,7 @@ export default function AIServicesPage() {
                         </div>
                       )}
                     </div>
-                  </div>
+</div>
                 </CardContent>
               </Card>
             ))}
@@ -2515,9 +2389,9 @@ export default function AIServicesPage() {
         </section>
 <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
+            transition={{ duration: 0.8}}
           >
             <h2 className="text-4xl font-bold mb-6">
               Ready to Harness the Power of AI?
@@ -2556,8 +2430,8 @@ export default function AIServicesPage() {
               Schedule Demo;
             </Button>
           </div>
-        </div>
-      </div>
+</div>
+</div>
 
       {/* Contact Section */}
       <div className="bg-zion-blue-dark py-16">
@@ -2590,16 +2464,15 @@ export default function AIServicesPage() {
               <p className="text-zion-cyan-light">364 E Main St STE 1008</p>
               <p className="text-sm text-zion-cyan-light">Middletown DE 19709</p>
             </div>
-          </div>
-        </div>
-      </div>
+</div>
+</div>
+</div>
     </div>
-  )
+)
 }
 
 // AI Service Card Component;
-function AIServiceCard({ service }: { service: any }) {
-  return (
+function AIServiceCard({service}: {service: any}) {return (
     <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 hover:border-zion-cyan/60 transition-all duration-300">
       <CardHeader>
         <div className="flex items-start justify-between mb-2">
@@ -2630,7 +2503,7 @@ function AIServiceCard({ service }: { service: any }) {
               <span className="text-white">{service.rating}</span>
               <span className="text-zion-cyan-light">({service.reviewCount})</span>
             </div>
-          </div>
+</div>
 <div className="flex items-center justify-between">
             <span className="text-zion-cyan-light">AI Score:</span>
             </div>
@@ -2641,10 +2514,10 @@ function AIServiceCard({ service }: { service: any }) {
                   className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" 
                   style={{ width: `${service.aiScore}%` }}
                 ></div>
-              </div>
+</div>
               <span className="text-zion-cyan font-semibold">{service.aiScore}%</span>
             </div>
-          </div>
+</div>
 <div className="flex flex-wrap gap-2">
             {service.tags.slice(0, 3).map((tag: string) => (
               <Badge key={tag} variant="outline" className="text-xs border-zion-cyan/30 text-zion-cyan-light">
@@ -2663,13 +2536,10 @@ function AIServiceCard({ service }: { service: any }) {
 }
 
 // Use Case Card Component;
-function UseCaseCard({ icon, title, description, examples }: { 
-  icon: React.ReactNode, 
+function UseCaseCard({icon, title, description, examples}: {icon: React.ReactNode, 
   title: string, 
   description: string, 
-  examples: string[] 
-}) {
-  return (
+  examples: string[]}) {return (
     <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 hover:border-zion-cyan/60 transition-all duration-300">
       <CardHeader className="text-center">
         <div className="mx-auto mb-4 text-zion-cyan">
@@ -2697,14 +2567,11 @@ function UseCaseCard({ icon, title, description, examples }: {
 }
 
 // Pricing Card Component;
-function PricingCard({ title, price, description, features, popular }: {
-  title: string;
+function PricingCard({title, price, description, features, popular}: {title: string;
   price: string;
   description: string;
   features: string[]
-  popular: boolean;
-}) {
-  return (
+  popular: boolean;}) {return (
     <Card className={`relative ${popular ? 'border-zion-cyan border-2' : 'border-zion-cyan/30'} bg-white/10 backdrop-blur-sm hover:border-zion-cyan/60 transition-all duration-300`}>
       {popular && (
         <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
@@ -2735,9 +2602,9 @@ function PricingCard({ title, price, description, features, popular }: {
       {/* CTA Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <motion.div;
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0, y: 20}}
+          whileInView={{ opacity: 1, y: 0}}
+          transition={{ duration: 0.8}}
           className="text-center"
         >
           </section>
@@ -2765,11 +2632,11 @@ function PricingCard({ title, price, description, features, popular }: {
                 Get Free Consultation;
               </Link>
             </div>
-          </div>
+</div>
         </motion.div>
       </section>
-    </div>
-  )
+</div>
+)
       <section className="py-16 bg-zion-blue">
         </section>
 <div className="container mx-auto px-4 text-center">
@@ -2807,8 +2674,7 @@ function PricingCard({ title, price, description, features, popular }: {
               <Button onClick={() => {
                 setSearchQuery('')
                 setSelectedSubcategory('all')
-                setPriceRange('all')
-              }}>
+                setPriceRange('all')}}>
                 Clear Filters;
               </Button>
             </div>
@@ -2883,7 +2749,7 @@ function PricingCard({ title, price, description, features, popular }: {
               </CardContent>
             </Card>
           </div>
-        </div>
+</div>
       </section>
 
       {/* Why AI with Zion */}
@@ -2959,8 +2825,8 @@ function PricingCard({ title, price, description, features, popular }: {
                 Always up-to-date with the latest AI research and technology breakthroughs;
               </p>
             </div>
-          </div>
-        </div>
+</div>
+</div>
       </section>
 
       {/* Call to Action */}
@@ -2993,12 +2859,11 @@ function PricingCard({ title, price, description, features, popular }: {
               </Button>
             </a>
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { Button } from '@/components/ui/button'
-import { TrustedBySection } from '@/components/TrustedBySection'
-import { QuoteFormSection } from '@/components/QuoteFormSection'
-import { 
-  Brain, 
+import {Link} from 'react-router-dom'
+import {Button} from '@/components/ui/button'
+import {TrustedBySection} from '@/components/TrustedBySection'
+import {QuoteFormSection} from '@/components/QuoteFormSection'
+import {Brain, 
   Bot, 
   Zap, 
   Shield, 
@@ -3010,11 +2875,9 @@ import {
   CheckCircle,
   Star,
   Clock,
-  DollarSign;
-} from 'lucide-react'
+  DollarSign;} from 'lucide-react'
 const aiServices = [
-  {
-    id: 1,
+  {id: 1,
     title: "AI-Powered Customer Support Automation",
     description: "Transform your customer service with intelligent chatbots and automated support systems that provide 24/7 assistance.",
     features: [
@@ -3034,10 +2897,8 @@ const aiServices = [
       "Improve customer satisfaction scores",
       "24/7 availability without additional staff",
       "Scalable support during peak periods"
-    ]
-  },
-  {
-    id: 2,
+    ]},
+  {id: 2,
     title: "AI-Powered Content Generation",
     description: "Create high-quality, engaging content automatically for marketing, documentation, and creative projects.",
     features: [
@@ -3057,10 +2918,8 @@ const aiServices = [
       "Consistent brand messaging",
       "SEO optimization built-in",
       "Cost-effective content strategy"
-    ]
-  },
-  {
-    id: 3,
+    ]},
+  {id: 3,
     title: "AI-Powered Predictive Analytics",
     description: "Leverage machine learning to predict trends, optimize decisions, and reduce business risks.",
     features: [
@@ -3080,10 +2939,8 @@ const aiServices = [
       "Reduce operational risks",
       "Identify new business opportunities",
       "Optimize resource allocation"
-    ]
-  },
-  {
-    id: 4,
+    ]},
+  {id: 4,
     title: "AI-Powered Business Process Automation",
     description: "Streamline operations with intelligent automation that learns and improves over time.",
     features: [
@@ -3103,10 +2960,8 @@ const aiServices = [
       "Improve process accuracy",
       "Faster processing times",
       "Cost savings and efficiency gains"
-    ]
-  },
-  {
-    id: 5,
+    ]},
+  {id: 5,
     title: "AI Ethics & Governance Framework",
     description: "Ensure responsible AI implementation with comprehensive ethics policies and governance structures.",
     features: [
@@ -3126,10 +2981,8 @@ const aiServices = [
       "Ensure regulatory compliance",
       "Mitigate AI risks and biases",
       "Future-proof your AI strategy"
-    ]
-  },
-  {
-    id: 6,
+    ]},
+  {id: 6,
     title: "AI Strategy & Implementation Consulting",
     description: "Strategic guidance to help businesses leverage AI for competitive advantage and growth.",
     features: [
@@ -3149,8 +3002,7 @@ const aiServices = [
       "Maximize ROI on AI investments",
       "Competitive advantage through AI",
       "Risk mitigation and success planning"
-    ]
-  }
+    ]}
 ]
 const aiTechnologies = [
   "Machine Learning & Deep Learning",
@@ -3172,11 +3024,10 @@ const industries = [
   "Media & Entertainment",
   "Government & Public Sector"
 ]
-export default function AIServicesPage() {
-  return (
+export default function AIServicesPage() {return (
     <>
       {/* Hero Section */}
-      </div></><section className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">
+      </div><section className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">
         </section>
 <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -3204,7 +3055,7 @@ export default function AIServicesPage() {
               </Button>
             </Link>
           </div>
-        </div>
+</div>
       </section>
 
       {/* AI Services Grid */}
@@ -3233,11 +3084,11 @@ export default function AIServicesPage() {
 <div className="text-white">
                       {service.icon}
                     </div>
-                  </div>
+</div>
 <div>
                     <span className="text-zion-cyan text-sm font-medium">{service.category}</span>
                   </div>
-                </div>
+</div>
                 
                 <h3 className="text-white text-xl font-bold mb-3">{service.title}</h3>
                 <p className="text-zion-slate-light mb-4">{service.description}</p>
@@ -3265,8 +3116,8 @@ export default function AIServicesPage() {
                       <Clock className="w-4 h-4 mr-1" />
                       <span>{service.duration}</span>
                     </div>
-                  </div>
-                </div>
+</div>
+</div>
                 
                 <Link to="/request-quote">
                   <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
@@ -3276,7 +3127,7 @@ export default function AIServicesPage() {
               </div>
             ))}
           </div>
-        </div>
+</div>
       </section>
 
       {/* AI Technologies */}
@@ -3305,7 +3156,7 @@ export default function AIServicesPage() {
               </div>
             ))}
           </div>
-        </div>
+</div>
       </section>
 
       {/* Industries We Serve */}
@@ -3334,7 +3185,7 @@ export default function AIServicesPage() {
               </div>
             ))}
           </div>
-        </div>
+</div>
       </section>
 
       {/* Why Choose ZionTech for AI */}
@@ -3386,8 +3237,8 @@ export default function AIServicesPage() {
                 to get your AI solution running quickly.
               </p>
             </div>
-          </div>
-        </div>
+</div>
+</div>
       </section>
 
       {/* Pricing Information */}
@@ -3465,8 +3316,8 @@ export default function AIServicesPage() {
                 </Button>
               </Link>
             </div>
-          </div>
-        </div>
+</div>
+</div>
       </section>
 
       {/* Contact Information */}
@@ -3515,7 +3366,7 @@ export default function AIServicesPage() {
                 kleber@ziontechgroup.com;
               </p>
             </div>
-          </div>
+</div>
 <div className="flex flex-wrap justify-center gap-4">
             <Link to="/request-quote">
               <Button size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-3">
@@ -3528,21 +3379,20 @@ export default function AIServicesPage() {
               </Button>
             </Link>
           </div>
-        </div>
+</div>
       </section>
 
       <TrustedBySection />
 import React from 'react'
 import React from 'react'
-import { Header } from '@/components/Header'
-import { Footer } from '@/components/Footer'
-import { SEO } from '@/components/SEO'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-import { Badge } from '@/components/ui/badge'
-import { Link } from 'react-router-dom'
-import { 
-  Brain, 
+import {Header} from '@/components/Header'
+import {Footer} from '@/components/Footer'
+import {SEO} from '@/components/SEO'
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card'
+import {Button} from '@/components/ui/button'
+import {Badge} from '@/components/ui/badge'
+import {Link} from 'react-router-dom'
+import {Brain, 
   Database, 
       <div className="relative overflow-hidden bg-gradient-to-r from-zion-blue-dark to-zion-purple-dark py-20">
         </div>
@@ -3571,11 +3421,8 @@ import {
   Phone,
   Settings,
   BarChart,
-  Smartphone,
-
-} from "lucide-react"
-export default function AIServicesPage() {
-  const aiServices = [
+  Smartphone,} from "lucide-react"
+export default function AIServicesPage() {const aiServices = [
     {
       id: "ai-chatbot",
       title: "AI Chatbot Development",
@@ -3594,10 +3441,8 @@ export default function AIServicesPage() {
       category: "Conversational AI",
       badge: "Popular",
       link: "https://ziontechgroup.com/ai-chatbot",
-      details: "Transform customer interactions with intelligent chatbots that understand context, handle complex queries, and provide 24/7 support. Our solutions integrate seamlessly with your existing systems and can be trained on your specific domain knowledge."
-    },
-    {
-      id: "ai-content-generation",
+      details: "Transform customer interactions with intelligent chatbots that understand context, handle complex queries, and provide 24/7 support. Our solutions integrate seamlessly with your existing systems and can be trained on your specific domain knowledge."},
+    {id: "ai-content-generation",
       title: "AI Content Generation Suite",
       description: "Generate high-quality articles, marketing copy, and creative content using advanced language models.",
       icon: <FileText className="h-8 w-8 text-green-500" />,
@@ -3614,10 +3459,8 @@ export default function AIServicesPage() {
       category: "Content AI",
       badge: "New",
       link: "https://ziontechgroup.com/ai-content",
-      details: "Create engaging, SEO-optimized content at scale. Our AI understands your brand voice and generates content that resonates with your audience while maintaining high quality and originality."
-    },
-    {
-      id: "ai-image-generation",
+      details: "Create engaging, SEO-optimized content at scale. Our AI understands your brand voice and generates content that resonates with your audience while maintaining high quality and originality."},
+    {id: "ai-image-generation",
       title: "AI Image Generation Platform",
       description: "Create stunning visuals, logos, and graphics using state-of-the-art image generation AI models.",
       icon: <BarChart className="h-8 w-8 text-purple-500" />,
@@ -3634,10 +3477,8 @@ export default function AIServicesPage() {
       category: "Visual AI",
       badge: "Featured",
       link: "https://ziontechgroup.com/ai-images",
-      details: "Generate professional-quality images for marketing, branding, and creative projects. Our platform supports multiple styles and can maintain brand consistency across all generated visuals."
-    },
-    {
-      id: "ai-video-editing",
+      details: "Generate professional-quality images for marketing, branding, and creative projects. Our platform supports multiple styles and can maintain brand consistency across all generated visuals."},
+    {id: "ai-video-editing",
       title: "AI Video Editing & Enhancement",
       description: "Automated video editing, enhancement, and post-production using artificial intelligence.",
       icon: <Video className="h-8 w-8 text-red-500" />,
@@ -3654,10 +3495,8 @@ export default function AIServicesPage() {
       category: "Video AI",
       badge: "Premium",
       link: "https://ziontechgroup.com/ai-video",
-      details: "Streamline your video production workflow with AI-powered editing tools. Automatically enhance quality, remove backgrounds, and apply professional-grade effects in minutes instead of hours."
-    },
-    {
-      id: "ai-data-analytics",
+      details: "Streamline your video production workflow with AI-powered editing tools. Automatically enhance quality, remove backgrounds, and apply professional-grade effects in minutes instead of hours."},
+    {id: "ai-data-analytics",
       title: "AI-Powered Data Analytics",
       description: "Advanced analytics and insights using machine learning to uncover patterns and trends in your data.",
       icon: <BarChart3 className="h-8 w-8 text-orange-500" />,
@@ -3674,10 +3513,8 @@ export default function AIServicesPage() {
       category: "Analytics AI",
       badge: "Enterprise",
       link: "https://ziontechgroup.com/ai-analytics",
-      details: "Transform raw data into actionable insights with our AI analytics platform. Predict trends, identify opportunities, and make data-driven decisions with confidence."
-    },
-    {
-      id: "ai-cybersecurity",
+      details: "Transform raw data into actionable insights with our AI analytics platform. Predict trends, identify opportunities, and make data-driven decisions with confidence."},
+    {id: "ai-cybersecurity",
       title: "AI Cybersecurity Protection",
       description: "Intelligent threat detection and prevention using machine learning algorithms.",
       icon: <Shield className="h-8 w-8 text-cyan-500" />,
@@ -3694,10 +3531,8 @@ export default function AIServicesPage() {
       category: "Security AI",
       badge: "Critical",
       link: "https://ziontechgroup.com/ai-security",
-      details: "Protect your digital assets with AI-powered cybersecurity that learns from threats and adapts to new attack vectors. Our system provides comprehensive protection with minimal false positives."
-    },
-    {
-      id: "ai-process-automation",
+      details: "Protect your digital assets with AI-powered cybersecurity that learns from threats and adapts to new attack vectors. Our system provides comprehensive protection with minimal false positives."},
+    {id: "ai-process-automation",
       title: "AI Process Automation",
       description: "Automate complex business processes using intelligent workflow automation and decision-making AI.",
       icon: <Zap className="h-8 w-8 text-yellow-500" />,
@@ -3714,10 +3549,8 @@ export default function AIServicesPage() {
       category: "Automation AI",
       badge: "Efficient",
       link: "https://ziontechgroup.com/ai-automation",
-      details: "Streamline operations and reduce manual work with intelligent process automation. Our AI understands your business logic and can make complex decisions automatically."
-    },
-    {
-      id: "ai-customer-insights",
+      details: "Streamline operations and reduce manual work with intelligent process automation. Our AI understands your business logic and can make complex decisions automatically."},
+    {id: "ai-customer-insights",
       title: "AI Customer Insights Platform",
       description: "Deep customer understanding through AI-powered analysis of behavior, preferences, and sentiment.",
       icon: <Users className="h-8 w-8 text-pink-500" />,
@@ -3734,10 +3567,8 @@ export default function AIServicesPage() {
       category: "Customer AI",
       badge: "Insightful",
       link: "https://ziontechgroup.com/ai-insights",
-      details: "Understand your customers like never before with AI-powered insights. Predict behavior, personalize experiences, and increase customer lifetime value through intelligent analysis."
-    },
-    {
-      id: "ai-search-optimization",
+      details: "Understand your customers like never before with AI-powered insights. Predict behavior, personalize experiences, and increase customer lifetime value through intelligent analysis."},
+    {id: "ai-search-optimization",
       title: "AI Search & Discovery Engine",
       description: "Intelligent search functionality with semantic understanding and personalized recommendations.",
       icon: <Search className="h-8 w-8 text-indigo-500" />,
@@ -3754,10 +3585,8 @@ export default function AIServicesPage() {
       category: "Search AI",
       badge: "Smart",
       link: "https://ziontechgroup.com/ai-search",
-      details: "Enhance user experience with intelligent search that understands intent and context. Our AI delivers relevant results faster and helps users discover content they didn't know existed."
-    },
-    {
-      id: "ai-translation",
+      details: "Enhance user experience with intelligent search that understands intent and context. Our AI delivers relevant results faster and helps users discover content they didn't know existed."},
+    {id: "ai-translation",
       title: "AI Translation & Localization",
       description: "Accurate, context-aware translation services supporting 100+ languages with cultural adaptation.",
       icon: <Globe className="h-8 w-8 text-teal-500" />,
@@ -3774,10 +3603,8 @@ export default function AIServicesPage() {
       category: "Language AI",
       badge: "Global",
       link: "https://ziontechgroup.com/ai-translation",
-      details: "Break language barriers with AI-powered translation that understands context and cultural nuances. Perfect for global businesses, content creators, and international communication."
-    },
-    {
-      id: "ai-code-generation",
+      details: "Break language barriers with AI-powered translation that understands context and cultural nuances. Perfect for global businesses, content creators, and international communication."},
+    {id: "ai-code-generation",
       title: "AI Code Generation & Review",
       description: "Generate, review, and optimize code using advanced AI models trained on millions of repositories.",
       icon: <Code className="h-8 w-8 text-emerald-500" />,
@@ -3794,10 +3621,8 @@ export default function AIServicesPage() {
       category: "Development AI",
       badge: "Developer",
       link: "https://ziontechgroup.com/ai-code",
-      details: "Accelerate development with AI that writes, reviews, and optimizes code. Our platform supports multiple programming languages and integrates with your existing development workflow."
-    },
-    {
-      id: "ai-predictive-maintenance",
+      details: "Accelerate development with AI that writes, reviews, and optimizes code. Our platform supports multiple programming languages and integrates with your existing development workflow."},
+    {id: "ai-predictive-maintenance",
       title: "AI Predictive Maintenance",
       description: "Predict equipment failures and optimize maintenance schedules using IoT data and machine learning.",
       icon: <Settings className="h-8 w-8 text-gray-500" />,
@@ -3814,8 +3639,7 @@ export default function AIServicesPage() {
       category: "IoT AI",
       badge: "Industrial",
       link: "https://ziontechgroup.com/ai-maintenance",
-      details: "Reduce downtime and maintenance costs with AI-powered predictive maintenance. Monitor equipment health in real-time and schedule maintenance only when needed."
-    }
+      details: "Reduce downtime and maintenance costs with AI-powered predictive maintenance. Monitor equipment health in real-time and schedule maintenance only when needed."}
   ]
   const categories = [
     "All Services",
@@ -3834,12 +3658,8 @@ export default function AIServicesPage() {
   ]
   const [selectedCategory, setSelectedCategory] = React.useState("All Services")
   const [filteredServices, setFilteredServices] = React.useState(aiServices)
-  React.useEffect(() => {
-    if (selectedCategory === "All Services") {
-      setFilteredServices(aiServices)
-    } else {
-      setFilteredServices(aiServices.filter(service => service.category === selectedCategory))
-    }
+  React.useEffect(() => {if (selectedCategory === "All Services") {
+      setFilteredServices(aiServices)} else {setFilteredServices(aiServices.filter(service => service.category === selectedCategory))}
   }, [selectedCategory])
   return (
     </div>
@@ -3856,7 +3676,7 @@ export default function AIServicesPage() {
 <div className="p-4 bg-zion-cyan/20 rounded-full">
               <Brain className="h-16 w-16 text-zion-cyan" />
             </div>
-          </div>
+</div>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
             AI Services & Solutions;
           </h1>
@@ -3885,12 +3705,11 @@ export default function AIServicesPage() {
               <Link to="/contact">Consult with Experts</Link>
             </Button>
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { 
-  Brain, 
+import {Link} from 'react-router-dom'
+import {Button} from "@/components/ui/button"
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card"
+import {Badge} from "@/components/ui/badge"
+import {Brain, 
   Zap, 
     Circle,
   BarChart3, 
@@ -3912,11 +3731,9 @@ import {
   Eye,
   MessageSquare,
   Bot,
-  Network;
-} from "lucide-react"
-import { AI_SERVICES } from "@/data/expandedServices"
-const AIServicesPage = () => {
-  return (
+  Network;} from "lucide-react"
+import {AI_SERVICES} from "@/data/expandedServices"
+const AIServicesPage = () => {return (
     </div>
 <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Hero Section */}
@@ -3949,9 +3766,9 @@ const AIServicesPage = () => {
                 </Button>
               </Link>
             </div>
-          </div>
-        </div>
-      </div>
+</div>
+</div>
+</div>
 <div className="py-8 bg-zion-blue-dark/50">
         </div>
 <div className="container mx-auto px-4">
@@ -3965,8 +3782,7 @@ const AIServicesPage = () => {
                 className={`${
                   selectedCategory === category;
                     ? "bg-zion-purple text-white"
-                    : "border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
-                }`}
+                    : "border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"}`}
               >
                 {category}
               </Button>
@@ -4018,7 +3834,7 @@ const AIServicesPage = () => {
             </CardContent>
           </Card>
         </div>
-      </div>
+</div>
 
       {/* Main Content Tabs */}
       <div className="container mx-auto px-4 py-16">
@@ -4062,7 +3878,7 @@ const AIServicesPage = () => {
                       <h3 className="font-semibold text-white">Process Automation</h3>
                       <p className="text-zion-cyan-light">Streamline operations and reduce manual tasks by up to 80%</p>
                     </div>
-                  </div>
+</div>
 <div className="flex items-start gap-3">
                     <CheckCircle className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
                     </div>
@@ -4070,7 +3886,7 @@ const AIServicesPage = () => {
                       <h3 className="font-semibold text-white">Predictive Analytics</h3>
                       <p className="text-zion-cyan-light">Make data-driven decisions with advanced forecasting capabilities</p>
                     </div>
-                  </div>
+</div>
 <div className="flex items-start gap-3">
                     <CheckCircle className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
                     </div>
@@ -4078,8 +3894,8 @@ const AIServicesPage = () => {
                       <h3 className="font-semibold text-white">Customer Intelligence</h3>
                       <p className="text-zion-cyan-light">Understand customer behavior and preferences in real-time</p>
                     </div>
-                  </div>
-                </div>
+</div>
+</div>
                 <p className="text-zion-cyan font-medium">{category.name}</p>
               </div>
 <div className="relative">
@@ -4095,11 +3911,11 @@ const AIServicesPage = () => {
                         </div>
 <div className="w-24 bg-zion-blue-light rounded-full h-2">
                           </div>
-<div className="bg-zion-cyan h-2 rounded-full" style={{ width: '95%' }}></div>
-                        </div>
+<div className="bg-zion-cyan h-2 rounded-full" style={{ width: '95%'}}></div>
+</div>
                         <span className="text-zion-cyan font-semibold">95%</span>
                       </div>
-                    </div>
+</div>
 <div className="flex items-center justify-between">
                       <span className="text-zion-cyan-light">Natural Language Processing</span>
                       </div>
@@ -4107,11 +3923,11 @@ const AIServicesPage = () => {
                         </div>
 <div className="w-24 bg-zion-blue-light rounded-full h-2">
                           </div>
-<div className="bg-zion-cyan h-2 rounded-full" style={{ width: '88%' }}></div>
-                        </div>
+<div className="bg-zion-cyan h-2 rounded-full" style={{ width: '88%'}}></div>
+</div>
                         <span className="text-zion-cyan font-semibold">88%</span>
                       </div>
-                    </div>
+</div>
 <div className="flex items-center justify-between">
                       <span className="text-zion-cyan-light">Computer Vision</span>
                       </div>
@@ -4119,11 +3935,11 @@ const AIServicesPage = () => {
                         </div>
 <div className="w-24 bg-zion-blue-light rounded-full h-2">
                           </div>
-<div className="bg-zion-cyan h-2 rounded-full" style={{ width: '92%' }}></div>
-                        </div>
+<div className="bg-zion-cyan h-2 rounded-full" style={{ width: '92%'}}></div>
+</div>
                         <span className="text-zion-cyan font-semibold">92%</span>
                       </div>
-                    </div>
+</div>
 <div className="flex items-center justify-between">
                       <span className="text-zion-cyan-light">Predictive Analytics</span>
                       </div>
@@ -4131,15 +3947,15 @@ const AIServicesPage = () => {
                         </div>
 <div className="w-24 bg-zion-blue-light rounded-full h-2">
                           </div>
-<div className="bg-zion-cyan h-2 rounded-full" style={{ width: '90%' }}></div>
-                        </div>
+<div className="bg-zion-cyan h-2 rounded-full" style={{ width: '90%'}}></div>
+</div>
                         <span className="text-zion-cyan font-semibold">90%</span>
                       </div>
-                    </div>
-                  </div>
+</div>
+</div>
                 </Card>
               </div>
-            </div>
+</div>
           </TabsContent>
 
           {/* AI Services Tab */}
@@ -4249,7 +4065,7 @@ const AIServicesPage = () => {
                   "Email support",
                   "Monthly maintenance"
                 ]}
-                popular={false}
+                
               />
               <PricingCard
                 title="Professional AI"
@@ -4263,7 +4079,7 @@ const AIServicesPage = () => {
                   "Weekly maintenance",
                   "Performance optimization"
                 ]}
-                popular={true}
+                popular
               />
               <PricingCard
                 title="Enterprise AI"
@@ -4277,7 +4093,7 @@ const AIServicesPage = () => {
                   "Continuous optimization",
                   "Scalability planning"
                 ]}
-                popular={false}
+                
               />
             </div>
           </TabsContent>
@@ -4305,8 +4121,8 @@ const AIServicesPage = () => {
               Request AI Demo;
             </Button>
           </div>
-        </div>
-      </div>
+</div>
+</div>
 
       {/* AI Services Grid */}
       <div className="py-20 bg-zion-slate">
@@ -4394,8 +4210,8 @@ const AIServicesPage = () => {
                         <span className="text-zion-slate-light">Enterprise:</span>
                         <span className="text-zion-cyan font-semibold">{service.pricing.enterprise}</span>
                       </div>
-                    </div>
-                  </div>
+</div>
+</div>
 <div className="pt-4">
                     <Button asChild className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
                       <Link to={service.link}>Learn More</Link>
@@ -4423,7 +4239,7 @@ const AIServicesPage = () => {
                 <MapPin className="h-4 w-4 text-blue-600" />
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
-            </div>
+</div>
 <div className="flex items-center gap-2">
               <Globe className="h-4 w-4 text-blue-600" />
               <$2 />
@@ -4435,9 +4251,9 @@ const AIServicesPage = () => {
                 ziontechgroup.com;
               </a>
             </div>
-          </div>
-        </div>
-      </div>
+</div>
+</div>
+</div>
 
       {/* AI Capabilities Overview */}
       <div className="py-16 bg-white">
@@ -4486,9 +4302,9 @@ const AIServicesPage = () => {
               <h3 className="text-xl font-semibold mb-2">Process Automation</h3>
               <p className="text-gray-600">AI-powered workflow automation, RPA integration, and intelligent process optimization</p>
             </div>
-          </div>
-        </div>
-      </div>
+</div>
+</div>
+</div>
 
       {/* AI Services Grid */}
       <div className="py-16 bg-gray-50">
@@ -4508,11 +4324,9 @@ const AIServicesPage = () => {
               <Card key={service.id} className="hover:shadow-xl transition-all duration-300 border-2 hover:border-blue-500/20">
                 </div>
 <div className="relative">
-                  <img
-                    src={service.images[0]} 
+                  <img src={service.images[0]} 
                     alt={service.title}
-                    className="w-full h-64 object-cover rounded-t-lg"
-                  />
+                    className="w-full h-64 object-cover rounded-t-lg" />
                   {service.featured && (
                     <Badge className="absolute top-4 right-4 bg-blue-600 text-white">
                       Featured;
@@ -4530,7 +4344,7 @@ const AIServicesPage = () => {
                       <span>{service.rating}</span>
                       <span className="text-gray-400">({service.reviewCount})</span>
                     </div>
-                  </div>
+</div>
                   <CardTitle className="text-xl leading-tight">{service.title}</CardTitle>
                   <CardDescription className="text-base leading-relaxed">
                     {service.description}
@@ -4546,7 +4360,7 @@ const AIServicesPage = () => {
                       <Clock className="h-4 w-4" />
                       <span>{service.availability}</span>
                     </div>
-                  </div>
+</div>
 <div className="flex flex-wrap gap-2 mb-4">
                     {service.tags.map((tag) => (
                       <Badge key={tag} variant="secondary" className="text-xs">
@@ -4570,7 +4384,7 @@ const AIServicesPage = () => {
               </Card>
             ))}
           </div>
-        </div>
+</div>
       </section>
 
       {/* Benefits Section */}
@@ -4603,7 +4417,7 @@ const AIServicesPage = () => {
               </div>
             ))}
           </div>
-        </div>
+</div>
       </section>
 <div className="py-20 bg-gradient-to-r from-zion-purple-dark to-zion-blue-dark">
         </div>
@@ -4688,9 +4502,9 @@ const AIServicesPage = () => {
               <h3 className="text-xl font-semibold mb-3 text-gray-900">Innovation Leadership</h3>
               <p className="text-gray-600">Stay ahead of competitors with cutting-edge AI technologies and solutions</p>
             </div>
-          </div>
-        </div>
-      </div>
+</div>
+</div>
+</div>
 
       {/* AI Implementation Process */}
       <div className="py-16 bg-gray-50">
@@ -4739,9 +4553,9 @@ const AIServicesPage = () => {
               <h3 className="text-xl font-semibold mb-2">Deployment & Optimization</h3>
               <p className="text-gray-600">Deploy to production, monitor performance, and continuously optimize</p>
             </div>
-          </div>
-        </div>
-      </div>
+</div>
+</div>
+</div>
 
       {/* AI Use Cases */}
       <div className="py-16 bg-white">
@@ -4908,8 +4722,8 @@ const AIServicesPage = () => {
               </CardContent>
             </Card>
           </div>
-        </div>
-      </div>
+</div>
+</div>
 
       {/* Call to Action */}
       <div className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
@@ -4936,8 +4750,8 @@ const AIServicesPage = () => {
               </Button>
             </Link>
           </div>
-        </div>
-      </div>
+</div>
+</div>
 
       {/* Footer Contact */}
       <div className="bg-gray-900 text-white py-12">
@@ -4958,7 +4772,7 @@ const AIServicesPage = () => {
                   <Globe className="h-6 w-6" />
                 </a>
               </div>
-            </div>
+</div>
 <div>
               <h3 className="text-xl font-semibold mb-6 text-blue-400">Contact Information</h3>
               </div>
@@ -4976,16 +4790,16 @@ const AIServicesPage = () => {
                   <MapPin className="h-5 w-5 text-blue-400" />
                   <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
                 </div>
-              </div>
-            </div>
-          </div>
+</div>
+</div>
+</div>
 <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
             <p>&copy; 2024 ZionTech Group. All rights reserved. | <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">ziontechgroup.com</a></p>
           </div>
-        </div>
+</div>
       </section>
-    </div>
-  )
+</div>
+)
   Code, 
   BarChart3, 
   Shield, 
@@ -5005,8 +4819,7 @@ const AIServicesPage = () => {
   CheckCircle,
   Star;
 } from 'lucide-react'
-export default function AIServicesPage() {
-  const aiServices = [
+export default function AIServicesPage() {const aiServices = [
     {
       id: 'ai-development',
       title: 'AI Development & Integration',
@@ -5018,10 +4831,8 @@ export default function AIServicesPage() {
       badge: 'Popular',
       rating: 4.9,
       reviewCount: 156,
-      link: '/services/ai-development'
-    },
-    {
-      id: 'machine-learning',
+      link: '/services/ai-development'},
+    {id: 'machine-learning',
       title: 'Machine Learning Solutions',
       description: 'End-to-end machine learning pipeline development and deployment',
       category: 'ML/AI',
@@ -5031,10 +4842,8 @@ export default function AIServicesPage() {
       badge: 'Featured',
       rating: 4.8,
       reviewCount: 89,
-      link: '/services/machine-learning'
-    },
-    {
-      id: 'data-science',
+      link: '/services/machine-learning'},
+    {id: 'data-science',
       title: 'Data Science & Analytics',
       description: 'Transform raw data into actionable business insights with advanced analytics',
       category: 'Analytics',
@@ -5043,10 +4852,8 @@ export default function AIServicesPage() {
       icon: <BarChart3 className="h-8 w-8 text-zion-blue" />,
       rating: 4.7,
       reviewCount: 134,
-      link: '/services/data-science'
-    },
-    {
-      id: 'nlp-processing',
+      link: '/services/data-science'},
+    {id: 'nlp-processing',
       title: 'Natural Language Processing',
       description: 'Advanced text analysis, sentiment analysis, and language understanding systems',
       category: 'NLP',
@@ -5055,10 +4862,8 @@ export default function AIServicesPage() {
       icon: <MessageSquare className="h-8 w-8 text-emerald-500" />,
       rating: 4.6,
       reviewCount: 67,
-      link: '/services/nlp-processing'
-    },
-    {
-      id: 'computer-vision',
+      link: '/services/nlp-processing'},
+    {id: 'computer-vision',
       title: 'Computer Vision Solutions',
       description: 'Image and video analysis, object detection, and visual AI applications',
       category: 'Vision',
@@ -5067,10 +4872,8 @@ export default function AIServicesPage() {
       icon: <Eye className="h-8 w-8 text-amber-500" />,
       rating: 4.8,
       reviewCount: 92,
-      link: '/services/computer-vision'
-    },
-    {
-      id: 'ai-automation',
+      link: '/services/computer-vision'},
+    {id: 'ai-automation',
       title: 'AI Process Automation',
       description: 'Intelligent automation solutions to streamline business processes',
       category: 'Automation',
@@ -5080,10 +4883,8 @@ export default function AIServicesPage() {
       badge: 'New',
       rating: 4.5,
       reviewCount: 45,
-      link: '/services/ai-automation'
-    },
-    {
-      id: 'ai-consulting',
+      link: '/services/ai-automation'},
+    {id: 'ai-consulting',
       title: 'AI Strategy Consulting',
       description: 'Strategic guidance for AI adoption and digital transformation',
       category: 'Consulting',
@@ -5092,10 +4893,8 @@ export default function AIServicesPage() {
       icon: <Users className="h-8 w-8 text-indigo-500" />,
       rating: 4.9,
       reviewCount: 78,
-      link: '/services/ai-consulting'
-    },
-    {
-      id: 'ai-security',
+      link: '/services/ai-consulting'},
+    {id: 'ai-security',
       title: 'AI-Powered Cybersecurity',
       description: 'Advanced threat detection and security automation using artificial intelligence',
       category: 'Security',
@@ -5104,10 +4903,8 @@ export default function AIServicesPage() {
       icon: <Shield className="h-8 w-8 text-red-500" />,
       rating: 4.7,
       reviewCount: 112,
-      link: '/services/ai-security'
-    },
-    {
-      id: 'ai-chatbots',
+      link: '/services/ai-security'},
+    {id: 'ai-chatbots',
       title: 'AI Chatbot Development',
       description: 'Intelligent conversational AI for customer service and support',
       category: 'Chatbots',
@@ -5116,10 +4913,8 @@ export default function AIServicesPage() {
       icon: <MessageSquare className="h-8 w-8 text-green-500" />,
       rating: 4.6,
       reviewCount: 89,
-      link: '/services/ai-chatbots'
-    },
-    {
-      id: 'ai-content-generation',
+      link: '/services/ai-chatbots'},
+    {id: 'ai-content-generation',
       title: 'AI Content Generation',
       description: 'Automated content creation for marketing, documentation, and creative projects',
       category: 'Content',
@@ -5128,10 +4923,8 @@ export default function AIServicesPage() {
       icon: <FileText className="h-8 w-8 text-purple-500" />,
       rating: 4.4,
       reviewCount: 56,
-      link: '/services/ai-content-generation'
-    },
-    {
-      id: 'ai-voice-assistants',
+      link: '/services/ai-content-generation'},
+    {id: 'ai-voice-assistants',
       title: 'Voice AI & Speech Recognition',
       description: 'Voice-enabled AI solutions for hands-free interaction and accessibility',
       category: 'Voice',
@@ -5140,10 +4933,8 @@ export default function AIServicesPage() {
       icon: <Mic className="h-8 w-8 text-blue-500" />,
       rating: 4.5,
       reviewCount: 43,
-      link: '/services/ai-voice-assistants'
-    },
-    {
-      id: 'ai-iot-solutions',
+      link: '/services/ai-voice-assistants'},
+    {id: 'ai-iot-solutions',
       title: 'AI IoT Solutions',
       description: 'Intelligent Internet of Things solutions with AI-powered analytics',
       category: 'IoT',
@@ -5152,16 +4943,15 @@ export default function AIServicesPage() {
       icon: <Network className="h-8 w-8 text-cyan-500" />,
       rating: 4.6,
       reviewCount: 38,
-      link: '/services/ai-iot-solutions'
-    }
+      link: '/services/ai-iot-solutions'}
   ]
   const categories = [
-    { name: 'All Services', count: aiServices.length, active: true },
-    { name: 'Development', count: aiServices.filter(s => s.category === 'Development').length },
-    { name: 'ML/AI', count: aiServices.filter(s => s.category === 'ML/AI').length },
-    { name: 'Analytics', count: aiServices.filter(s => s.category === 'Analytics').length },
-    { name: 'Consulting', count: aiServices.filter(s => s.category === 'Consulting').length },
-    { name: 'Security', count: aiServices.filter(s => s.category === 'Security').length }
+    {name: 'All Services', count: aiServices.length, active: true},
+    {name: 'Development', count: aiServices.filter(s => s.category === 'Development').length},
+    {name: 'ML/AI', count: aiServices.filter(s => s.category === 'ML/AI').length},
+    {name: 'Analytics', count: aiServices.filter(s => s.category === 'Analytics').length},
+    {name: 'Consulting', count: aiServices.filter(s => s.category === 'Consulting').length},
+    {name: 'Security', count: aiServices.filter(s => s.category === 'Security').length}
   ]
   return (
     <></><SEO
@@ -5202,8 +4992,8 @@ export default function AIServicesPage() {
                   <Link to="/contact">Contact Our Team</Link>
                 </Button>
               </div>
-            </div>
-          </div>
+</div>
+</div>
         </section>
 
         {/* Services Grid */}
@@ -5293,7 +5083,7 @@ export default function AIServicesPage() {
                 </Card>
               ))}
             </div>
-          </div>
+</div>
         </section>
 
         {/* CTA Section */}
@@ -5316,7 +5106,7 @@ export default function AIServicesPage() {
                 <Link to="/contact">Schedule a Call</Link>
               </Button>
             </div>
-          </div>
+</div>
         </section>
       </main>
       
@@ -5330,4 +5120,50 @@ export default function AIServicesPage() {
 }
 export default AIServicesPage;
 }
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div></span></p>

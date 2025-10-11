@@ -2,35 +2,26 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
+import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart} from 'lucide-react';
 
-const AiAutonomousSystemsPage: React.FC = () => {
-  const features = [
+const AiAutonomousSystemsPage: React.FC = () => {const features = [
     {
       icon: Brain,
       title: 'Smart Manufacturing',
       description: 'Autonomous robots and systems for industrial automation and production.',
-      benefits: ['Automated production lines', 'Quality control systems', 'Predictive maintenance', 'Real-time monitoring']
-    },
-    {
-      icon: Factory,
+      benefits: ['Automated production lines', 'Quality control systems', 'Predictive maintenance', 'Real-time monitoring']},
+    {icon: Factory,
       title: 'Healthcare Systems',
       description: 'Autonomous medical devices and systems for patient care and treatment.',
-      benefits: ['Surgical robots', 'Diagnostic systems', 'Patient monitoring', 'Treatment automation']
-    },
-    {
-      icon: Stethoscope,
+      benefits: ['Surgical robots', 'Diagnostic systems', 'Patient monitoring', 'Treatment automation']},
+    {icon: Stethoscope,
       title: 'Smart Cities',
       description: 'Autonomous infrastructure systems for urban management and optimization.',
-      benefits: ['Traffic management', 'Energy optimization', 'Waste management', 'Public safety']
-    },
-    {
-      icon: Building,
+      benefits: ['Traffic management', 'Energy optimization', 'Waste management', 'Public safety']},
+    {icon: Building,
       title: 'Transportation',
 description: 'Self-driving vehicles and autonomous transportation systems.',
-      benefits: ['Autonomous vehicles', 'Fleet management', 'Route optimization', 'Safety systems']
-
-    }
+      benefits: ['Autonomous vehicles', 'Fleet management', 'Route optimization', 'Safety systems']}
   ]
 
   const benefits = [
@@ -59,18 +50,17 @@ const benefits = [
     'Scalable solutions',
     'Real-time monitoring and control'
   ];
-const PagePage: React.FC = () => {
-  return (
-<></>
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const PagePage: React.FC = () => {return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
 
         {/* Hero Section */}
-        </div><section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8">
+        </div>
+<section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Page
@@ -79,14 +69,14 @@ const PagePage: React.FC = () => {
                 Discover our comprehensive solutions designed to transform your business.
               </p>
             </div>
-          </div>
+</div>
         </section>
 
         {/* Content Section */}
         <section className="py-16 px-4 sm: px-6 lg:px-8">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Coming Soon
@@ -99,9 +89,9 @@ const PagePage: React.FC = () => {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
             </div>
-          </div>
+</div>
         </section>
-      </div>
+</div>
       
 <Helmet>
         <title>AI Autonomous Systems - Zion Tech Group</title>
@@ -116,7 +106,7 @@ const PagePage: React.FC = () => {
         </main><section className="relative py-20 px-4 sm: px-6 lg:px-8">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 AI Autonomous Systems
@@ -134,7 +124,7 @@ const PagePage: React.FC = () => {
                 </button>
               </div>
 return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Autonomous Systems - Zion Tech Group</title>
         <meta name="description" content="Build intelligent autonomous systems with our AI solutions. Self-driving vehicles, smart manufacturing, and autonomous infrastructure for the future." />
@@ -164,14 +154,14 @@ return (
                 Learn More
               </button>
 </div>
-          </div>
+</div>
         </section>
 
         {/* Features Section */}
 <section className="py-20 px-4">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center mb-16">
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
 
@@ -214,14 +204,14 @@ return (
 </div>
               ))}
             </div>
-          </div>
+</div>
         </section>
 
         {/* Benefits Section */}
 <section className="py-20 px-4">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center mb-16">
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
 
@@ -230,7 +220,7 @@ return (
                 Proven results that drive business growth and efficiency
               </p>
             </div>
-<div className="grid grid-cols-1 md : grid-cols-2 lg:grid-cols-3 gap-8">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 </div>
 <div key={index} className="flex items-start space-x-3">
@@ -244,7 +234,7 @@ return (
 </div>
               ))}
             </div>
-          </div>
+</div>
         </section>
 
         {/* CTA Section */}
@@ -286,7 +276,7 @@ return (
                 Contact Sales
               </button>
 </div>
-          </div>
+</div>
         </section>
       </main>
 
@@ -309,9 +299,11 @@ export default PagePage;
 }
 export default PagePage;
 
-        <div className="max-w-4xl mx-auto text-center"></div></div>
+        <div className="max-w-4xl mx-auto text-center"></div>
+</div>
           <h2 className="text-4xl font-bold text-white mb-6"></h2></h2>Ready to Get Started ? <p className="text-xl text-gray-300 mb-8"></p></p>Transform your business with our page solutions today;
-          <div className="flex flex-col sm : flex-row gap-4 justify-center"></div></div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+</div>
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>Start Free Trial
             <button className="border border-blue-400 text-blue-400 hover: bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"></button>Contact Sales
       <Footer />
@@ -321,7 +313,7 @@ export default PagePage;
 export default AiAutonomousSystemsPage
 <Footer />
     </div>
-  )
+)
 };
 
 export default AiAutonomousSystemsPage;

@@ -2,34 +2,26 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
+import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart} from 'lucide-react';
 
-const Ai3dGenerationPage: React.FC = () => {
-  const features = [
+const Ai3dGenerationPage: React.FC = () => {const features = [
     {
       icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: TrendingUp,
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']},
+    {icon: TrendingUp,
       title: 'Performance Optimization',
       description: 'AI-powered insights to optimize your business performance.',
-      benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']
-    },
-    {
-      icon: PieChart,
+      benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']},
+    {icon: PieChart,
       title: 'Data Visualization',
       description: 'Transform complex data into clear, actionable insights.',
-      benefits: ['Interactive charts', 'Custom reports', 'Data export', 'Visual storytelling']
-    },
-    {
-      icon: Target,
+      benefits: ['Interactive charts', 'Custom reports', 'Data export', 'Visual storytelling']},
+    {icon: Target,
       title: 'Precision Targeting',
       description: 'Target specific goals and objectives with precision.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    }
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']}
   ]
 
   const benefits = [
@@ -40,17 +32,16 @@ const Ai3dGenerationPage: React.FC = () => {
     'Real-time processing and analysis',
     'Seamless integration with existing systems'
   ];
-const PagePage: React.FC = () => {
-  return (
-<></>
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const PagePage: React.FC = () => {return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
         {/* Hero Section */}
-        </div><section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8">
+        </div>
+<section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Page
@@ -74,13 +65,13 @@ const PagePage: React.FC = () => {
                 Learn More
               </button>
 </div>
-          </div>
+</div>
         </section>
 {/* Content Section */}
         <section className="py-16 px-4 sm: px-6 lg:px-8">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Coming Soon
@@ -95,18 +86,18 @@ const PagePage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
+</div>
         </section>
 {/* Benefits Section */}
         </button><section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our AI Solutions ? </h2>
               <p className="text-xl text-gray-300">Transform your business with intelligent automation</p>
             </div>
-<div className="grid grid-cols-1 md : grid-cols-2 lg:grid-cols-3 gap-8">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
               {benefits.map((benefit, index) => (
                 </div>
@@ -120,7 +111,7 @@ const PagePage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
+</div>
         </section>
 {/* CTA Section */}
         <section className="py-20 px-4 sm: px-6 lg:px-8">
@@ -141,7 +132,7 @@ const PagePage: React.FC = () => {
 </button>
 
             </div>
-          </div>
+</div>
         </section>
 </div>
       

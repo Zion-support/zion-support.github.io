@@ -1,7 +1,7 @@
 'use client';
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import React, {useState} from 'react';
+import {Link} from 'react-router-dom';
+import {Menu, X, ChevronDown} from 'lucide-react';
 
 const Navigation: React.FC = () => {const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string  | null>(null);
@@ -9,9 +9,7 @@ const Navigation: React.FC = () => {const [isMenuOpen, setIsMenuOpen] = useState
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)};
 
-  const toggleDropdown = (dropdown: string) => {
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
-  }
+  const toggleDropdown = (dropdown: string) => {setActiveDropdown(activeDropdown === dropdown ? null : dropdown)}
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur-sm border-b border-white/10">
@@ -96,7 +94,7 @@ const Navigation: React.FC = () => {const [isMenuOpen, setIsMenuOpen] = useState
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
-        </div>
+</div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
@@ -127,7 +125,7 @@ const Navigation: React.FC = () => {const [isMenuOpen, setIsMenuOpen] = useState
                 Get Started
               </Link>
             </div>
-          </div>
+</div>
         )}
       </div>
     </nav>

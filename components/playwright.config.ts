@@ -29,14 +29,14 @@ reporter: [ ['list'], ['json', {
   ...devices['Desktop Safari'] 
 }, // 
 }
-// ] });    ['list'],    ['json', { outputFile: playwright-logs/test-results && results.json' }],    ['html', { outputFolder: playwright-logs/html-report', open: never' }]]
+// ] })    ['list'],    ['json', { outputFile: playwright-logs/test-results && results.json' }],    ['html', { outputFolder: playwright-logs/html-report', open: never' }]]
   // Configure the web server to be started by Playwright
   webServer: {
     command: npm run dev',    url: http://localhost:3000',    reuseExistingServer: !process && process.env.CI, // Reuse server locally, start fresh in CI
   ...devices['Desktop Safari']
 }, //
 }
-// ] });    ['list'],    ['json', { outputFile: playwright-logs/test-results.json' }],    ['html', { outputFolder: playwright-logs/html-report', open: never' }]]
+// ] })    ['list'],    ['json', { outputFile: playwright-logs/test-results.json' }],    ['html', { outputFolder: playwright-logs/html-report', open: never' }]]
   // Configure the web server to be started by Playwright
   webServer: {
     command: npm run dev',    url: http://localhost:3000',    reuseExistingServer: !process.env.CI, // Reuse server locally, start fresh in CI
@@ -69,7 +69,7 @@ reporter: [ ['list'], ['json', {
   ...devices['Desktop Safari']
 }, //
 }
-// ] });    ['list'],    ['json', { output_file: playwright - logs / test - results.json' }],    ['html', { output_folder: playwright - logs / html - report', open: never' }]]
+// ] })    ['list'],    ['json', { output_file: playwright - logs / test - results.json' }],    ['html', { output_folder: playwright - logs / html - report', open: never' }]]
   // Configure the web server to be started by Playwright
   web_server: {
     command: npm run dev',    url: http://localhost:3000',    reuseExistingServer: !process.env.CI, // Reuse server locally, start fresh in CI
@@ -84,7 +84,7 @@ reporter: [ ['list'], ['json', {
   //   {
   //     name: webkit',  //     use: { ...devices['Desktop Safari'] },  //   }
   // ]
-import {  defineConfig   } from @playwright/test';
+import {  defineConfig   } from @playwright/test'
 default defineConfig({
   testDir: tests/e2e',  use: {
     baseURL: http://localhost:3000',    // Ensures that the trace viewer assets are downloaded, useful for debugging.

@@ -1,187 +1,142 @@
 } from 'lucide-react'
-import { use_auth } from '@/hooks / use_auth'
-import { use_points } from '@/hooks / use_points'
-import {
-
-
-
-
-
-  Card;
+import {use_auth} from '@/hooks / use_auth'
+import {use_points} from '@/hooks / use_points'
+import {Card;
   CardContent;
   CardDescription;
   CardHeader;
-  CardTitle;
-} from '@/components/ui/card';import { Button } from '@/components/ui/button';import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react'
+  CardTitle;} from '@/components/ui/card';import {Button} from '@/components/ui/button';import {Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History} from 'lucide-react'
 
-import {
-  Gift,
+import {Gift,
   Star,
   Users,
   ShoppingBag,
   MessageSquare,
   TrendingUp,
-  History,
-} from 'lucide-react'
-import { useAuth } from '@/hooks/useAuth'
-import { usePoints } from '@/hooks/usePoints'
-import {
-  Card,
+  History,} from 'lucide-react'
+import {useAuth} from '@/hooks/useAuth'
+import {usePoints} from '@/hooks/usePoints'
+import {Card,
   CardContent,
   Card,
   CardContent,
 
   CardDescription,
   CardHeader;
-  CardTitle;
-} from '@/components/ui/card';import { Button } from '@/components/ui/button';import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react'
-import { useAuth } from '@/hooks/useAuth'
-import { usePoints } from '@/hooks/usePoints'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react'
-import { useAuth } from '@/hooks/useAuth'
-import { usePoints } from '@/hooks/usePoints'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react'
-import { useAuth } from '@/hooks/useAuth'
-import { usePoints } from '@/hooks/usePoints'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-import { Badge } from '@/components/ui/badge'
-import { ScrollArea } from '@/components/ui/scroll-area'
-import { formatDistanceToNow } from 'date-fns'
+  CardTitle;} from '@/components/ui/card';import {Button} from '@/components/ui/button';import {Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History} from 'lucide-react'
+import {useAuth} from '@/hooks/useAuth'
+import {usePoints} from '@/hooks/usePoints'
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card'
+import {Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History} from 'lucide-react'
+import {useAuth} from '@/hooks/useAuth'
+import {usePoints} from '@/hooks/usePoints'
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card'
+import {Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History} from 'lucide-react'
+import {useAuth} from '@/hooks/useAuth'
+import {usePoints} from '@/hooks/usePoints'
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card'
+import {Button} from '@/components/ui/button'
+import {Badge} from '@/components/ui/badge'
+import {ScrollArea} from '@/components/ui/scroll-area'
+import {formatDistanceToNow} from 'date-fns'
 import Link from 'next/link'
-import { LoginModal } from '@/components/auth/LoginModal'
-  const { isAuthenticated, user } = useAuth()
-  const { ledger, balance, loading, fetchLedger } = usePoints()
+import {LoginModal} from '@/components/auth/LoginModal'
+  const {isAuthenticated, user} = useAuth()
+  const {ledger, balance, loading, fetchLedger} = usePoints()
   const [loginOpen, setLoginOpen] = useState(false)
   const [redeeming, setRedeeming] = useState(false)
-  async function handleRedeem(): any (reward: {
-    id: string;
+  async function handleRedeem(): any (reward: {id: string;
     cost: number;
-    title: string;
-  }) {    if (!user?.id) return;  async function handleRedeem(reward: { id: string, cost: number, title: string }) {
-
-
-
-export default function PointsPage() { const { isAuthenticated, user  } = useAuth(),
-  const { ledger, balance, loading, fetchLedger  } = usePoints(),
+    title: string;}) {if (!user?.id) return;  async function handleRedeem(reward: { id: string, cost: number, title: string}) {export default function PointsPage() { const { isAuthenticated, user} = useAuth(),
+  const {ledger, balance, loading, fetchLedger} = usePoints(),
   const [ loginOpen, setLoginOpen ] = useState(false),
   const [ redeeming, setRedeeming ] = useState(false),
 
 
-  async function handleRedeem(reward: { id: string, cost: number, title: string }) {
-    if (!user?.id) return;
+  async function handleRedeem(reward: {id: string, cost: number, title: string}) {if (!user?.id) return;
     setRedeeming(true)
     try {
       await fetch('/api/points/redeem', {
 
         method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
+        headers: { 'Content-Type': 'application/json'}
 
-        body: JSON.stringify({
-          userId: user.id;
+        body: JSON.stringify({userId: user.id;
           cost: reward.cost;
-          reward: reward.title;
-        })
+          reward: reward.title;})
       await fetchLedger()
-    } finally {
-      setRedeeming(false);    }      })
+    } finally {setRedeeming(false);}      })
       await fetchLedger()
-    } finally {
-      setRedeeming(false)
-import React, { useState } from 'react',
-import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react'
-import { use_auth } from '@/hooks / use_auth'
-import { use_points } from '@/hooks / use_points'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card'
-import { Button } from '@/components / ui / button'
-import { Badge } from '@/components / ui / badge'
-import { ScrollArea } from '@/components / ui / scroll - area'
-import { formatDistanceToNow } from 'date - fns'
+    } finally {setRedeeming(false)
+import React, { useState} from 'react',
+import {Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History} from 'lucide-react'
+import {use_auth} from '@/hooks / use_auth'
+import {use_points} from '@/hooks / use_points'
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components / ui / card'
+import {Button} from '@/components / ui / button'
+import {Badge} from '@/components / ui / badge'
+import {ScrollArea} from '@/components / ui / scroll - area'
+import {formatDistanceToNow} from 'date - fns'
 import Link from 'next / link'
-import { LoginModal } from '@/components / auth / LoginModal'
+import {LoginModal} from '@/components / auth / LoginModal'
 export default /**
  * PointsPage - Function description;
  */
-function PointsPage() {
-  const { is_authenticated, user } = use_auth ()
-  const { ledger, balance, loading, fetch_ledger } = use_points ()
+function PointsPage() {const { is_authenticated, user} = use_auth ()
+  const {ledger, balance, loading, fetch_ledger} = use_points ()
   const [login_open, setLoginOpen] = useState (false)
   const [redeeming, set_redeeming] = useState (false)
   async /**
  * handle_redeem - Function description;
  */
-function handle_redeem() {    // Check condition;
+function handle_redeem() {// Check condition;
 if (return) {
-  $2;
-}  async /**
+  $2;}  async /**
  * handle_redeem - Function description;
  */
-function handle_redeem() {
-    // Check condition;
+function handle_redeem() {// Check condition;
 if (return) {
-  $2;
-}
+  $2;}
     set_redeeming (true)
-    try {
-      await fetch ('/api / points / redeem', {
+    try {await fetch ('/api / points / redeem', {
         method: 'POST',
-        headers: { 'Content - Type': 'application / json' },
-        body: JSON.stringify ({
-          user_id: user.id,
+        headers: { 'Content - Type': 'application / json'},
+        body: JSON.stringify ({user_id: user.id,
           cost: reward.cost,
-          reward: reward.title,
-        }),
+          reward: reward.title,}),
 
       })
       await fetchLedger()
-    } finally {
-
-  }) {    if (!user?.id) return;  async function handleRedeem(): any (reward: { id: string, cost: number, title: string }) {
-    if (!user?.id) return;
+    } finally {}) {if (!user?.id) return;  async function handleRedeem(): any (reward: { id: string, cost: number, title: string}) {if (!user?.id) return;
     setRedeeming(true)
     try {
       await fetch('/api/points/redeem', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ userId: user.id, cost: reward.cost, reward: reward.title }),
+        headers: { 'Content-Type': 'application/json'},
+        body: JSON.stringify({userId: user.id, cost: reward.cost, reward: reward.title}),
       await fetchLedger()
-    } finally {
-      setRedeeming(false);    }      })
+    } finally {setRedeeming(false);}      })
       await fetchLedger()
-    } finally {
-      setRedeeming(false)
+    } finally {setRedeeming(false)
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ userId: user.id, cost: reward.cost, reward: reward.title })
+        headers: { 'Content-Type': 'application/json'},
+        body: JSON.stringify({userId: user.id, cost: reward.cost, reward: reward.title})
       await fetchLedger()
-    } finally {
-      setRedeeming(false)
-
-
-
-
-    }
+    } finally {setRedeeming(false)}
   }
 
 
       set_redeeming (false);    }      })
       await fetch_ledger ()
-    } finally {
-      set_redeeming (false)
-    }
+    } finally {set_redeeming (false)}
   }
   const earning_opportunities = [
-    {
-
-      icon: <Users className='h - 5 w - 5' />,
+    {icon: <Users className='h - 5 w - 5' />,
 
       title: 'Sign Up & Profile Setup',
       description: 'Complete your profile and verify your email',
       points: '50 pts',
-      action: is_authenticated ? '✓ Completed' : 'Get Started',
-    },
+      action: is_authenticated ? '✓ Completed' : 'Get Started',},
 
       icon: <ShoppingBag className='h - 5 w - 5' />,
 
@@ -217,16 +172,12 @@ if (return) {
       action: 'Browse Marketplace'
     }
 
-    {
-
-      icon: <MessageSquare className='h - 5 w - 5' />,
+    {icon: <MessageSquare className='h - 5 w - 5' />,
       title: 'Community Engagement',
       description: 'Post in the community or comment on discussions',
       points: '25 pts per post',
-      action: 'Join Community',
-    },
-    {
-      icon: <Users className='h - 5 w - 5' />,
+      action: 'Join Community',},
+    {icon: <Users className='h - 5 w - 5' />,
 
       title: 'Refer Friends',
       description: 'Invite friends to join Zion marketplace',
@@ -240,23 +191,14 @@ if (return) {
       title: "Sign Up & Profile Setup",
       description: "Complete your profile and verify your email",
       points: "50 pts",
-      action: isAuthenticated ? "✓ Completed" : "Get Started"
-
-
-
-
-
-    },
-    {
-      icon: <ShoppingBag className="h-5 w-5" />,
+      action: isAuthenticated ? "✓ Completed" : "Get Started"},
+    {icon: <ShoppingBag className="h-5 w-5" />,
       title: "First Purchase",
       description: "Make your first purchase on the marketplace",
       points: "100 pts",
-      action: "Browse Marketplace"
-
-    },  ]
+      action: "Browse Marketplace"},  ]
   const upcoming_rewards = [
-    { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },      title: "Refer Friends",
+    {id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount'},      title: "Refer Friends",
 
       description: "Invite friends to join Zion marketplace",
       points: "200 pts per referral",
@@ -271,175 +213,131 @@ if (return) {
     },  ]
   const upcomingRewards = [
 
-    {
-      id: 'premium1'
+    {id: 'premium1'
       title: 'Premium Features (1 month)'
       cost: 1000;
-      category: 'Subscription'
-    }
-    {
-      id: 'swag'
+      category: 'Subscription'}
+    {id: 'swag'
       title: 'Zion Swag Pack'
       cost: 1500;
-      category: 'Merchandise'
-    }
-    {
-
-      id: 'coupon25'
+      category: 'Merchandise'}
+    {id: 'coupon25'
       title: '$25 Off Coupon'
       cost: 2000;
-      category: 'Discount'
-    }
-    { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' }
+      category: 'Discount'}
+    {id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service'}
 
 
 
   const earningOpportunities = [
-    {
-      icon: <Users className='h-5 w-5' />,
+    {icon: <Users className='h-5 w-5' />,
       title: 'Sign Up & Profile Setup',
       description: 'Complete your profile and verify your email',
       points: '50 pts',
-      action: isAuthenticated ? '✓ Completed' : 'Get Started',
-    },
+      action: isAuthenticated ? '✓ Completed' : 'Get Started',},
       icon: <ShoppingBag className='h-5 w-5' />,
       title: 'First Purchase',
       description: 'Make your first purchase on the marketplace',
       points: '100 pts',
       action: 'Browse Marketplace',
     },
-    {
-      icon: <MessageSquare className='h-5 w-5' />,
+    {icon: <MessageSquare className='h-5 w-5' />,
       title: 'Community Engagement',
       description: 'Post in the community or comment on discussions',
       points: '25 pts per post',
-      action: 'Join Community',
-    },
-    {
-      icon: <Users className='h-5 w-5' />,
+      action: 'Join Community',},
+    {icon: <Users className='h-5 w-5' />,
       title: 'Refer Friends',
       description: 'Invite friends to join Zion marketplace',
       points: '200 pts per referral',
-      action: 'Share Referral Link',
-    },
-    {
-      icon: <ShoppingBag className="h-5 w-5" />,
+      action: 'Share Referral Link',},
+    {icon: <ShoppingBag className="h-5 w-5" />,
       title: "First Purchase",
       description: "Make your first purchase on the marketplace",
       points: "100 pts",
-      action: "Browse Marketplace"
-    },
-    {
-
-    {
+      action: "Browse Marketplace"},
+    {{
       id: 'premium1',
       title: 'Premium Features (1 month)',
       cost: 1000,
-      category: 'Subscription',
-    },
-    {
-      id: 'swag',
+      category: 'Subscription',},
+    {id: 'swag',
       title: 'Zion Swag Pack',
       cost: 1500,
-      category: 'Merchandise',
-    },
-    {
-      id: 'coupon25',
+      category: 'Merchandise',},
+    {id: 'coupon25',
       title: '$25 Off Coupon',
       cost: 2000,
-      category: 'Discount',
+      category: 'Discount',},
+    {id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service'},
     },
-    { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' },
-    },
-    {
-      icon: <ShoppingBag className="h-5 w-5" />,
+    {icon: <ShoppingBag className="h-5 w-5" />,
       title: "First Purchase",
       description: "Make your first purchase on the marketplace",
       points: "100 pts",
-      action: "Browse Marketplace"
-    },
-    {
-      icon: <Users className='h-5 w-5' />,
+      action: "Browse Marketplace"},
+    {icon: <Users className='h-5 w-5' />,
       title: 'Refer Friends',
       description: 'Invite friends to join Zion marketplace',
       points: '200 pts per referral',
-      action: 'Share Referral Link',
-
-    },  ]
+      action: 'Share Referral Link',},  ]
   const upcomingRewards = [
-    { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },      title: "Refer Friends",
+    {id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount'},      title: "Refer Friends",
       icon: <MessageSquare className="h-5 w-5" />,
       title: "Community Engagement",
       description: "Post in the community or comment on discussions",
       points: "25 pts per post",
       action: "Join Community"
     },
-    {
-      icon: <Users className="h-5 w-5" />,
+    {icon: <Users className="h-5 w-5" />,
       title: "Refer Friends",
       description: "Invite friends to join Zion marketplace",
       points: "200 pts per referral",
-      action: "Share Referral Link"
-    }
+      action: "Share Referral Link"}
 
   ],
   const upcomingRewards = [
-    { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },
-    {
-      id: 'premium1',
+    {id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount'},
+    {id: 'premium1',
       title: 'Premium Features (1 month)',
       cost: 1000,
-      category: 'Subscription',
-    },
-    {
-      id: 'swag',
+      category: 'Subscription',},
+    {id: 'swag',
       title: 'Zion Swag Pack',
       cost: 1500,
-      category: 'Merchandise',
-    },
-    {
-      id: 'coupon25',
+      category: 'Merchandise',},
+    {id: 'coupon25',
       title: '$25 Off Coupon',
       cost: 2000,
-      category: 'Discount',
+      category: 'Discount',},
+    {id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service'},
     },
-    { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' },
-    },
-    {
-
-
-
-      icon: <ShoppingBag className="h-5 w-5" />,
+    {icon: <ShoppingBag className="h-5 w-5" />,
       title: "First Purchase",
       description: "Make your first purchase on the marketplace",
       points: "100 pts",
-      action: "Browse Marketplace"
-    },
-    {
-      icon: <Users className='h-5 w-5' />,
+      action: "Browse Marketplace"},
+    {icon: <Users className='h-5 w-5' />,
       title: 'Refer Friends',
       description: 'Invite friends to join Zion marketplace',
       points: '200 pts per referral',
-      action: 'Share Referral Link',
-    },  ]
+      action: 'Share Referral Link',},  ]
   const upcomingRewards = [
-    { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },      title: "Refer Friends",
+    {id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount'},      title: "Refer Friends",
       icon: <MessageSquare className="h-5 w-5" />,
       title: "Community Engagement",
       description: "Post in the community or comment on discussions",
       points: "25 pts per post",
       action: "Join Community"
     },
-    {
-      icon: <Users className="h-5 w-5" />,
+    {icon: <Users className="h-5 w-5" />,
       title: "Refer Friends",
 
 
 
       description: "Invite friends to join Zion marketplace",
       points: "200 pts per referral",
-      action: "Share Referral Link"
-    }
+      action: "Share Referral Link"}
 
 
 
@@ -449,17 +347,14 @@ if (return) {
 
 
 
-  if (!isAuthenticated) {
-    return (
+  if (!isAuthenticated) {return (
 
-    { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },
-
+    { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount'},
 
 
 
-  if (!isAuthenticated) {
-    return (
-      <></><></>
+
+  if (!isAuthenticated) {return (
 <div className="container py-10 max-w-4xl">
           </div>
 <div className="text-center mb-8">
@@ -594,7 +489,7 @@ if (return) {
               <p className="text-muted-foreground mb-4">
                 Our full rewards system is launching soon! Sign up now to start earning points immediately.
               </p>
-              <Button onClick={() => setLoginOpen(true)}>
+              <Button onClick={$2}>
                 Create Account;
               </Button>
             </CardContent>
@@ -605,8 +500,7 @@ if (return) {
         </div>
         <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
       </>
-      <></>
-<div className='container py-10 max-w-4xl'>
+      <div className='container py-10 max-w-4xl'>
           </div>
 <div className='text-center mb-8'>
             <Gift className='h-16 w-16 text-primary mx-auto mb-4' />
@@ -649,7 +543,8 @@ if (return) {
 <div className="flex-1">
                       <h4 className="font-medium">{opportunity && opportunity.title}</h4>
                       <p className="text-sm text-muted-foreground">{opportunity && opportunity.description}</p></$1>
-                    <Badge variant='secondary'>{opportunity && opportunity.points}</Badge>                  </div>                    </div>
+                    <Badge variant='secondary'>{opportunity && opportunity.points}</Badge>                  </div>
+</div>
                     <Badge variant="secondary">{opportunity && opportunity.points}</Badge></$1>
                 ))}
               </CardContent></$1>
@@ -688,20 +583,21 @@ if (return) {
               <p className='text-muted-foreground mb-4'>
                 Our full rewards system is launching soon! Sign up now to start;
                 earning points immediately.</$1>
-              <Button onClick={() => setLoginOpen(true)}>Create Account</Button>            </CardContent>          <Card className="text-center">
+              <Button onClick={$2}>Create Account</Button>            </CardContent>          <Card className="text-center">
             <CardContent className="pt-6">
               <Star className="h-12 w-12 text-primary mx-auto mb-4" />
               <h3 className="text-2xl font-bold mb-2">Coming Soon</h3>
               <p className="text-muted-foreground mb-4">
                 Our full rewards system is launching soon! Sign up now to start earning points immediately.</$1>
-              <Button onClick={() => setLoginOpen(true)}></$1>                  </div>
+              <Button onClick={$2}></$1>                  </div>
 <div key={index} className="flex items - start gap - 3 p - 3 rounded - lg border">
                     </div>
 <div className="text - primary mt - 1">{opportunity.icon}</div>
 <div className="flex - 1">
                       <h4 className="font - medium">{opportunity.title}</h4>
                       <p className="text - sm text - muted - foreground">{opportunity.description}</p></$1>
-                    <Badge variant='secondary'>{opportunity.points}</Badge>                  </div>                    </div>
+                    <Badge variant='secondary'>{opportunity.points}</Badge>                  </div>
+</div>
                     <Badge variant="secondary">{opportunity.points}</Badge></$1>))}
               </CardContent></$1>
             <Card>
@@ -807,7 +703,7 @@ if (return) {
                   <Badge variant="secondary" className="mb-1">{opportunity.points}</Badge>
                   <p className="text-xs text-muted-foreground">{opportunity.action}</p>
                 </div>
-              </div>
+</div>
             ))}
           </CardContent>
         </Card>
@@ -894,7 +790,8 @@ if (return) {
                   </Badge>
                   <p className='text-xs text-muted-foreground'>
                     {opportunity && opportunity.action}
-                  </p>                </div>                </div>
+                  </p>                </div>
+</div>
 <div className="text-right">
                   <Badge variant="secondary" className="mb-1">{opportunity && opportunity.points}</Badge>
                   <p className="text-xs text-muted-foreground">{opportunity && opportunity.action}</p></$1></$1>
@@ -1021,7 +918,7 @@ if (return) {
 
                       <p className="font-medium capitalize">{entry.reason || 'adjustment'}</p>
                       <p className="text-xs text-muted-foreground">
-                        {formatDistanceToNow(new Date(entry.created_at), { addSuffix: true })
+                        {formatDistanceToNow(new Date(entry.created_at), { addSuffix: true})
                       </p>
                     </div>
                     <Badge
@@ -1112,17 +1009,14 @@ if (return) {
                       </p>
                       <p className='text - xs text - muted - foreground'>
                         {formatDistanceToNow (new Date (entry.created_at), {
-                          add_suffix: true,
-                        })
+                          add_suffix: true,})
                       </p></$1>
                     <Badge
                       variant='outline'
-                      className={
-                        entry.delta >= 0;
+                      className={entry.delta >= 0;
                           ? 'bg - green - 100 text - green - 800'
-                          : 'bg - red - 100 text - red - 800'
-                      }                      variant="outline"
-                      class_name = {entry.delta >= 0 ? 'bg - green - 100 text - green - 800' : 'bg - red - 100 text - red - 800', }
+                          : 'bg - red - 100 text - red - 800'}                      variant="outline"
+                      class_name = {entry.delta >= 0 ? 'bg - green - 100 text - green - 800' : 'bg - red - 100 text - red - 800',}
                     >
                       {entry.delta >= 0 ? '+' : ''}                      {entry.delta} pts                    </Badge></$1>))}
               </div></$1>)}
@@ -1149,7 +1043,9 @@ if (return) {
               <Link href='/community'>Join Community</Link>            </Button></$1></$1></$1>
   )
 })
-    </div>)
+    </div>
+)
 })
-    </div>)
+    </div>
+)
 }

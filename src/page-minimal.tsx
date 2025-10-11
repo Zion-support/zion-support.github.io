@@ -1,14 +1,11 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { Phone, CheckCircle, Star, ArrowRight } from 'lucide-react'
+import {Link} from 'react-router-dom'
+import {Phone, CheckCircle, Star, ArrowRight} from 'lucide-react'
 // eslint-disable-next-line react-refresh/only-export-components;
-export const metadata = {
-  title: 'Zion Tech Group - Advanced AI and IT Solutions',
-  description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.'
-}
-export default function HomePage() {
-  return (
-          <div>Coming Soon;
+export const metadata = {title: 'Zion Tech Group - Advanced AI and IT Solutions',
+  description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.'}
+export default function HomePage() {return (
+<div>Coming Soon;
   )
           </div>
 <div className="min-h-screen bg-white">
@@ -59,7 +56,8 @@ Home;
           </a>
         </section>
         {/* Features Section */}
-        </div><section className="py-20 bg-gray-50">
+        </div>
+<section className="py-20 bg-gray-50">
             </section>
 <div className="text-center mb-16">
               <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">
@@ -89,7 +87,8 @@ Expert Team;
                   Fast Implementation,
                   Get your AI solutions up and running quickly with our streamlined implementation process.
         {/* CTA Section */}
-        </div><section className="py-20 bg-blue-600 text-white">
+        </div>
+<section className="py-20 bg-blue-600 text-white">
             <h2 className="text-3xl md: text-4xl font-bold mb-6">
 Ready to Transform Your Business?
             <p className="text-xl mb-8 text-blue-100">
@@ -118,29 +117,30 @@ Ready to Transform Your Business?
 }
   </p>
   </div>
-  </div>
+</div>
   </p>
   </div>
   </p>
   </h2>
   </section>
-  </div>
-  </div>
+</div>
+</div>
   </p>
   </div>
-  </div>
-  </div>
+</div>
+</div>
   </p>
   </div>
   </section>
   </Link>
   </div>
-  </div>
+</div>
   </Link>
   </Link>
   </Link>
   </Link>
   </div>
-  </div>
-  </div>
-</div></div></Link></Link></h2></h3></main>
+</div>
+</div>
+</div>
+</div></Link></Link></h2></h3></main>

@@ -1,10 +1,9 @@
 import React from 'react'
-import { Heart, Play, Download, Share, Star, CheckCircle, Zap, Clock, Users, Award, ArrowRight, Sparkles } from 'lucide-react'
+import {Heart, Play, Download, Share, Star, CheckCircle, Zap, Clock, Users, Award, ArrowRight, Sparkles} from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
-const AIFitnessCoachPage: React.FC = () => {
-  const features = [
+const AIFitnessCoachPage: React.FC = () => {const features = [
     'Personalized Plans',
     'Progress Tracking',
     'Nutrition Analysis',
@@ -30,22 +29,17 @@ const AIFitnessCoachPage: React.FC = () => {
       price: '$99',
       period: '/month',
       features: ['Basic plans', 'Progress tracking', 'Email support', 'Mobile app'],
-      popular: false;
-    },
-    {
-      name: 'Premium',
+      popular: false;},
+    {name: 'Premium',
       price: '$149',
       period: '/month',
       features: ['Personalized plans', 'Nutrition analysis', 'Video workouts', 'Wearable sync', 'Priority support'],
-      popular: true;
-    },
-    {
-      name: 'Pro',
+      popular: true;},
+    {name: 'Pro',
       price: '$249',
       period: '/month',
       features: ['Everything in Premium', '1-on-1 coaching', 'Custom programs', 'Advanced analytics', 'Dedicated support'],
-      popular: false;
-    }
+      popular: false;}
   ]
   return (
     <React.Fragment>
@@ -85,7 +79,7 @@ const AIFitnessCoachPage: React.FC = () => {
                   Watch Demo,
   
               </div>
-            </div>
+</div>
           </section>
           {/* Features Section */}
           <section className="mb-16">
@@ -100,7 +94,8 @@ const AIFitnessCoachPage: React.FC = () => {
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
                     <h3 className="text-lg font-semibold text-white">{feature})
           {/* Benefits Section */}
-          </div><section className="mb-16">
+          </div>
+<section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
               Why Choose AI Fitness Coach?
             </section>
@@ -113,7 +108,8 @@ const AIFitnessCoachPage: React.FC = () => {
                     <Zap className="w-8 h-8 text-white" />
                   <h3 className="text-lg font-semibold text-white mb-2">{benefit})
           {/* Pricing Section */}
-          </div><section className="mb-16">
+          </div>
+<section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Simple, Transparent Pricing;
             </section>
 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -143,13 +139,13 @@ const AIFitnessCoachPage: React.FC = () => {
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
                       plan.popular;
                         ? 'cyber-button'
-                        : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
-                    }`}
+                        : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'}`}
                   >
                     Get Started;
               ))}
           {/* CTA Section */}
-          </div><section className="text-center mb-16">
+          </div>
+<section className="text-center mb-16">
             </section>
 <div className="cyber-card p-12 max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-white mb-4 neon-text">
@@ -169,7 +165,7 @@ const AIFitnessCoachPage: React.FC = () => {
                   <span>Call +1 302 464 0950</span>
                 </a>
               </div>
-            </div>
+</div>
           </section>
         </main>
         <Footer />
@@ -188,4 +184,12 @@ export default AIFitnessCoachPage</a>
   </h1>
   </div>
   </SEOOptimizer>
-</div></div></div></div></div></div></div></div></div></div></div></span></span></h2></h3></h3></h3></ul></li></section></section></section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div></div></span></span></h2></h3></h3></h3></ul></li></section></section></section>

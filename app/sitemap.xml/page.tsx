@@ -1,9 +1,8 @@
 'use client'
 import React from 'react';
-import {  Helmet  } from 'react-helmet-async';
+import {Helmet} from 'react-helmet-async';
 
-const SitemapXMLPage: React.FC = () => {
-  return(<&gt
+const SitemapXMLPage: React.FC = () => {return(<&gt
       <Helmet & gt
         <title & gtSitemap  | Zion Tech Group</title & gt
         <meta name="description" content="Complete sitemap of all pages and services available on Zion Tech Group website." /&gt
@@ -33,8 +32,7 @@ const SitemapXMLPage: React.FC = () => {
           </div & gt
         </div & gt
       </div & gt
-    </ & gt)
-}
+    </ & gt)}
 
 export default SitemapXMLPage
 </div>

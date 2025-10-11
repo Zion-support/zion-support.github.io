@@ -1,7 +1,7 @@
 'use client';
-import React, { memo } from 'react';
-import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe, Facebook, Twitter, Linkedin, Instagram, Youtube, Github, MessageSquare, Star, TrendingUp, CheckCircle } from 'lucide-react';
+import React, {memo} from 'react';
+import {Link} from 'react-router-dom';
+import {Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe, Facebook, Twitter, Linkedin, Instagram, Youtube, Github, MessageSquare, Star, TrendingUp, CheckCircle} from 'lucide-react';
 
   ];
 
@@ -32,7 +32,7 @@ import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Clou
             </p>
 
             </div>
-          </div>
+</div>
 
                   <Link
                     to={service.url}
@@ -69,15 +69,15 @@ import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Clou
 
             </h4>
                 </div>
-              </div>
-            </div>
-          </div>
+</div>
+</div>
+</div>
         </div>
 <div className="text-white font-medium">{contactInfo.hours}</div>
 <div className="text-gray-400 text-sm">Business hours</div>
-              </div>
-            </div>
-          </div>
+</div>
+</div>
+</div>
         </div>
 
                   <Link
@@ -96,9 +96,9 @@ import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Clou
           </div>
               </button>
             </div>
-          </div>
-        </div>
-      </div>
+</div>
+</div>
+</div>
 
               <Link to="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
                 Privacy Policy;

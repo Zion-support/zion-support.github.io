@@ -1,9 +1,8 @@
 'use client'
 import React from 'react'
 import {Calendar, Users, Zap, Brain, Shield, CheckCircle, Star, Phone, Target} from 'lucide-react'
-import { Link } from 'react-router-dom'
-const AISchedulerPage: React.FC = () => {
-  const features = [
+import {Link} from 'react-router-dom'
+const AISchedulerPage: React.FC = () => {const features = [
     {
       icon: Calendar,
       title: 'Smart Scheduling',
@@ -70,14 +69,14 @@ $4}
         'SSO integration',
         'Custom workflows'
   const integrations = [
-    { name: 'Google Calendar', icon: '📅', description: 'Seamless Google integration' },
-    { name: 'Outlook', icon: '📧', description: 'Microsoft Office 365' },
-    { name: 'Zoom', icon: '🎥', description: 'Video conferencing' },
-    { name: 'Slack', icon: '💬', description: 'Team communication' },
-    { name: 'Teams', icon: '👥', description: 'Microsoft Teams' },
-    { name: 'Calendly', icon: '⏰', description: 'Scheduling platform' },
-    { name: 'Salesforce', icon: '💼', description: 'CRM integration' },
-    { name: 'HubSpot', icon: '🎯', description: 'Marketing automation' }
+    {name: 'Google Calendar', icon: '📅', description: 'Seamless Google integration'},
+    {name: 'Outlook', icon: '📧', description: 'Microsoft Office 365'},
+    {name: 'Zoom', icon: '🎥', description: 'Video conferencing'},
+    {name: 'Slack', icon: '💬', description: 'Team communication'},
+    {name: 'Teams', icon: '👥', description: 'Microsoft Teams'},
+    {name: 'Calendly', icon: '⏰', description: 'Scheduling platform'},
+    {name: 'Salesforce', icon: '💼', description: 'CRM integration'},
+    {name: 'HubSpot', icon: '🎯', description: 'Marketing automation'}
   const testimonials = [
       name: 'Jennifer Lee',
       company: 'TechStart',
@@ -93,9 +92,10 @@ $4}
       role: 'Project Manager',
       content: 'Client meetings are now perfectly coordinated. Our client satisfaction scores improved by 35%.',
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-      </div><section className="container mx-auto px-4 py-16 pt-24">
+      </div>
+<section className="container mx-auto px-4 py-16 pt-24">
         </section>
 <div className="text-center mb-16">
           </div>
@@ -152,7 +152,8 @@ $4}
             </div>
 <div className="text-gray-300 text-sm">Scheduling guaranteed;
         {/* Features Section */}
-        </div><section className="mb-16">
+        </div>
+<section className="mb-16">
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center">
             Smart Scheduling Features,
   
@@ -185,8 +186,7 @@ $4}
               < key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${$2 />
                 plan.popular;
                   ? 'border-cyan-400 scale-105' 
-                  : 'border-slate-700 hover:border-cyan-500/50'
-              }`}>
+                  : 'border-slate-700 hover:border-cyan-500/50'}`}>
                 {plan.popular && (
                   </div>
 <div className="bg-cyan-400 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold text-center mb-4">
@@ -231,7 +231,8 @@ $4}
                   </div>
 <div className="text-gray-400 text-sm">{testimonial.company}
         {/* CTA Section */}
-        </div><section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-12 border border-cyan-500/20">
+        </div>
+<section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-12 border border-cyan-500/20">
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
             Ready to Master Your Schedule?
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -240,26 +241,26 @@ $4}
   ),
 }
 export default AISchedulerPage;
-import { ArrowRight, CheckCircle, Calendar, Clock, Users, Zap, Brain, Target, Shield, Globe, Phone, Mail } from 'lucide-react'
+import {ArrowRight, CheckCircle, Calendar, Clock, Users, Zap, Brain, Target, Shield, Globe, Phone, Mail} from 'lucide-react'
 export default AISchedulerPage</p>
   </h2>
   </section>
-  </div>
-  </div>
-  </div>
-  </div>
+</div>
+</div>
+</div>
+</div>
   </button>
   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
   </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
+</div>
   </h2>
   </div>
-  </div>
+</div>
   </Link>
   </a>
   </div>
@@ -268,5 +269,20 @@ export default AISchedulerPage</p>
   </h1>
   </div>
   </section>
-  </div>
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></p></p></p></p></h3></h3></h3></section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></span></span></p></p></p></p></h3></h3></h3></section>

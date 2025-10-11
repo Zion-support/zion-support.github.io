@@ -1,7 +1,6 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-export default function CaseStudy(): React.JSX.Element {
-  return(<React.Fragment>
+import {Helmet} from 'react-helmet-async'
+export default function CaseStudy(): React.JSX.Element {return(<React.Fragment>
       <Header />
       <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 text-white">
         <Helmet>
@@ -23,7 +22,7 @@ export default function CaseStudy(): React.JSX.Element {
               <span>•</span>
               <span>2025-01-01</span>
             </div>
-          </div>
+</div>
 <div className="prose prose-lg prose-invert max-w-none"></div>
 <div className="text-gray-200 leading-relaxed"></div>
               <h2>Introduction</h2>
@@ -86,7 +85,7 @@ export default function CaseStudy(): React.JSX.Element {/* TODO: Fix JSX express
                     LinkedIn;
                   </a>
                 </div>
-              </div>
+</div>
               <,$2 />
                 href="/"
                 className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
@@ -98,9 +97,19 @@ export default function CaseStudy(): React.JSX.Element {/* TODO: Fix JSX express
                 Back to Home,
               </a>
             </div>
-          </div>
-        </div>
-      </div>,
+</div>
+</div>
+</div>,
     </React.Fragment>)
 }
-"`</div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></a></p></p></p></h1></h2></h2></h3>
+"`</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></span></span></span></a></p></p></p></h1></h2></h2></h3>

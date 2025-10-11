@@ -1,17 +1,12 @@
 'use client'
-import React, { Component, ErrorInfo, ReactNode } from 'react'
-interface ErrorBoundaryState {
-    hasError: boolean;
+import React, {Component, ErrorInfo, ReactNode} from 'react'
+interface ErrorBoundaryState {hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null,
-  errorId: string | null;
-  }
-interface ErrorBoundaryProps {
-    children: ReactNode,
-  fallback?: ReactNode;
-  }
-interface ErrorReport {
-    errorId: string | null;
+  errorId: string | null;}
+interface ErrorBoundaryProps {children: ReactNode,
+  fallback?: ReactNode;}
+interface ErrorReport {errorId: string | null;
   error: Error;
   errorInfo: ErrorInfo;
   errorMessage: string;
@@ -20,42 +15,32 @@ interface ErrorReport {
   errorBoundary: string;
   errorTimestamp: string;
   errorUserAgent: string | null,
-  errorUrl: string | null;
-  }
-class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
-  constructor(props: ErrorBoundaryProps) {
+  errorUrl: string | null;}
+class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {constructor(props: ErrorBoundaryProps) {
     super(props),
     this.state = {
       hasError: false,
       error: null,
       errorInfo: null,
-      errorId: null;
-    }
+      errorId: null;}
   }
-  static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
-    return {
+  static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {return {
       hasError: true,
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     }
   }
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {this.setState({
       error,
       errorInfo,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     })
     // Log error to console in development;
-    if (process.env.NODE_ENV === 'development') {
-    console.error('Error caught by boundary:', error, errorInfo)
-  }
+    if (process.env.NODE_ENV === 'development') {console.error('Error caught by boundary:', error, errorInfo)}
     // Send error report in production;
-    if (process.env.NODE_ENV === 'production') {
-    this.reportError(error, errorInfo)
+    if (process.env.NODE_ENV === 'production') {this.reportError(error, errorInfo)}
   }
-  }
-  private reportError = async (error: Error, errorInfo: ErrorInfo) => {
-    try {
+  private reportError = async (error: Error, errorInfo: ErrorInfo) => {try {
       const errorReport: ErrorReport = {
         errorId: this.state.errorId,
         error,
@@ -66,38 +51,27 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
         errorBoundary: 'AdvancedErrorBoundary',
         errorTimestamp: new Date().toISOString(),
         errorUserAgent: typeof window !== 'undefined' ? window.navigator.userAgent : null,
-        errorUrl: typeof window !== 'undefined' ? window.location.href : null;
-      }
+        errorUrl: typeof window !== 'undefined' ? window.location.href : null;}
       // Send to error reporting service;
-      await fetch('/api/error-report', {
-        method: 'POST',
+      await fetch('/api/error-report', {method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-        },
+          'Content-Type': 'application/json',},
         body: JSON.stringify(errorReport),
-      }) catch (reportError) {
-    console.error('Failed to report error:', reportError)
+      }) catch (reportError) {console.error('Failed to report error:', reportError)}
   }
-  }
-  private handleRetry = () => {
-    this.setState({
+  private handleRetry = () => {this.setState({
       hasError: false,
       error: null,
       errorInfo: null,
-      errorId: null;
-    })
-  private handleReload = () => {
-    if (typeof window !== 'undefined') {
-      window.location.reload()
+      errorId: null;})
+  private handleReload = () => {if (typeof window !== 'undefined') {
+      window.location.reload()}
   }
-  }
-  render() {
-    if (this.state.hasError) {
+  render() {if (this.state.hasError) {
       if (this.props.fallback) {
-        return this.props.fallback;
-  }
+        return this.props.fallback;}
       return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+<div className="min-h-screen flex items-center justify-center bg-gray-50">
           </div>
 <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
             </div>
@@ -137,4 +111,9 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
     return this.props.children;
   }
 }
-export default AdvancedErrorBoundary</div></div></div></div></div></div></div></p></p></p></p></h3></h4>
+export default AdvancedErrorBoundary</div>
+</div>
+</div>
+</div>
+</div>
+</div></div></p></p></p></p></h3></h4>

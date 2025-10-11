@@ -1,16 +1,14 @@
 import React from 'react'
-import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
-import { Link } from 'react-router-dom'
-import { SEO } from '../../components/SEO'
-import { Link } from 'react-router-dom'
-import { 
-  Scale, 
+import {motion} from 'framer-motion'
+import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
+import {SEO} from '../../components/SEO'
+import {Link} from 'react-router-dom'
+import {Scale, 
   FileText, 
   Search, 
-import { Link } from 'react-router-dom'
-import { 
-  Shield, 
+import { Link} from 'react-router-dom'
+import {Shield, 
   FileText, 
   Brain, 
   Zap, 
@@ -50,42 +48,29 @@ import {
   DollarSign,
   TrendingUp,
   UserCheck,
-  Zap;
-} from 'lucide-react'
-export default function AILegalTech() {
-  const features = [
+  Zap;} from 'lucide-react'
+export default function AILegalTech() {const features = [
     {
       icon: Brain,
       title: "AI-Powered Contract Analysis",
-      description: "Intelligent contract review and analysis using advanced natural language processing."
-    },
-    {
-      icon: SearchIcon,
+      description: "Intelligent contract review and analysis using advanced natural language processing."},
+    {icon: SearchIcon,
       title: "Legal Research Automation",
-      description: "Automated legal research with AI-powered case law and precedent analysis."
-    },
-    {
-      icon: FileCheck,
+      description: "Automated legal research with AI-powered case law and precedent analysis."},
+    {icon: FileCheck,
       title: "Document Review & Due Diligence",
-      description: "Efficient document review and due diligence processes with AI accuracy."
-    },
-    {
-      icon: Zap,
+      description: "Efficient document review and due diligence processes with AI accuracy."},
+    {icon: Zap,
       title: "Automated Legal Workflows",
-      description: "Streamlined legal processes with intelligent automation and workflow optimization."
-    },
-    {
-      icon: BarChart3,
+      description: "Streamlined legal processes with intelligent automation and workflow optimization."},
+    {icon: BarChart3,
       title: "Predictive Legal Analytics",
-      description: "Data-driven insights to predict case outcomes and optimize legal strategies."
-    },
-    {
-      icon: Clock,
+      description: "Data-driven insights to predict case outcomes and optimize legal strategies."},
+    {icon: Clock,
       title: "Compliance Monitoring",
       description: "Real-time compliance monitoring and automated regulatory updates."
-import { Link } from 'react-router-dom'
-import { 
-  Shield, 
+import { Link} from 'react-router-dom'
+import {Shield, 
   Brain, 
   FileText, 
   Zap, 
@@ -106,10 +91,8 @@ import {
   Network,
   Calendar,
   DollarSign,
-  Target;
-} from 'lucide-react'
-const AILegalTech: React.FC = () => {
-  const features = [
+  Target;} from 'lucide-react'
+const AILegalTech: React.FC = () => {const features = [
     {
       icon: Brain,
       title: "AI-Powered Document Analysis",
@@ -125,17 +108,13 @@ const AILegalTech: React.FC = () => {
   Target,
   TrendingUp,
   Lock,
-  Gavel;
-} from 'lucide-react'
-const AILegalTech = () => {
-  const features = [
+  Gavel;} from 'lucide-react'
+const AILegalTech = () => {const features = [
     {
       icon: Brain,
       title: "AI-Powered Document Review",
-      description: "Advanced AI algorithms that automatically analyze legal documents, contracts, and case files for key information and risks."
-    },
-    {
-      icon: Search,
+      description: "Advanced AI algorithms that automatically analyze legal documents, contracts, and case files for key information and risks."},
+    {icon: Search,
       title: "Intelligent Legal Research",
   Shield, 
   Zap, 
@@ -152,10 +131,8 @@ const AILegalTech = () => {
   Building,
   DollarSign,
   Heart,
-  Home;
-} from 'lucide-react'
-export default function AILegalTech() {
-  const services = [
+  Home;} from 'lucide-react'
+export default function AILegalTech() {const services = [
     {
       title: 'AI-Powered Contract Analysis',
       description: 'Intelligent contract review and analysis using natural language processing and machine learning algorithms.',
@@ -168,10 +145,8 @@ export default function AILegalTech() {
         'Contract summarization',
         'Version control and tracking'
       ],
-      price: 'Starting at $4,999/month'
-    },
-    {
-      title: 'Legal Research Automation',
+      price: 'Starting at $4,999/month'},
+    {title: 'Legal Research Automation',
       description: 'AI-driven legal research platform that accelerates case law analysis and precedent discovery.',
       icon: Search,
       features: [
@@ -182,10 +157,8 @@ export default function AILegalTech() {
         'Research summarization',
         'Multi-jurisdiction support'
       ],
-      price: 'Starting at $3,499/month'
-    },
-    {
-      title: 'Compliance & Risk Management',
+      price: 'Starting at $3,499/month'},
+    {title: 'Compliance & Risk Management',
       description: 'Automated compliance monitoring and risk assessment for regulatory requirements across industries.',
       icon: Shield,
       features: [
@@ -196,10 +169,8 @@ export default function AILegalTech() {
         'Compliance reporting',
         'Real-time alerts'
       ],
-      price: 'Starting at $2,999/month'
-    },
-    {
-      title: 'Document Generation & Management',
+      price: 'Starting at $2,999/month'},
+    {title: 'Document Generation & Management',
       description: 'Intelligent legal document creation and management with automated templates and workflows.',
       icon: Zap,
       features: [
@@ -210,95 +181,64 @@ export default function AILegalTech() {
         'Version control',
         'Electronic signatures'
       ],
-      price: 'Starting at $2,499/month'
-    }
+      price: 'Starting at $2,499/month'}
   ]
   const legalTechFeatures = [
-    {
-      title: 'Contract Intelligence',
+    {title: 'Contract Intelligence',
       description: 'AI-powered contract analysis and risk assessment',
       icon: FileText,
-      benefits: ['Risk identification', 'Compliance checking', 'Clause analysis', 'Automated review']
-    },
-    {
-      title: 'Legal Research AI',
+      benefits: ['Risk identification', 'Compliance checking', 'Clause analysis', 'Automated review']},
+    {title: 'Legal Research AI',
       description: 'Intelligent legal research and precedent discovery',
       icon: Search,
-      benefits: ['Case law analysis', 'Precedent identification', 'Research automation', 'Citation tracking']
-    },
-    {
-      title: 'Compliance Automation',
+      benefits: ['Case law analysis', 'Precedent identification', 'Research automation', 'Citation tracking']},
+    {title: 'Compliance Automation',
       description: 'Automated regulatory compliance and risk management',
       icon: Shield,
-      benefits: ['Regulatory monitoring', 'Risk assessment', 'Policy management', 'Audit trails']
-    },
-    {
-      title: 'Document Automation',
+      benefits: ['Regulatory monitoring', 'Risk assessment', 'Policy management', 'Audit trails']},
+    {title: 'Document Automation',
       description: 'Intelligent document generation and management',
       icon: Zap,
       benefits: ['Template automation', 'Workflow management', 'Collaboration tools', 'Version control']
       icon: Scale,
       title: "Contract Analysis",
-      description: "AI-powered contract review that identifies risks, obligations, and opportunities in legal documents."
-    },
-    {
-      icon: FileText,
+      description: "AI-powered contract review that identifies risks, obligations, and opportunities in legal documents."},
+    {icon: FileText,
       title: "Document Generation",
-      description: "Automated creation of legal documents, contracts, and agreements with customizable templates."
-    },
-    {
-      icon: Search,
+      description: "Automated creation of legal documents, contracts, and agreements with customizable templates."},
+    {icon: Search,
       title: "Legal Research",
-      description: "Intelligent search through case law, statutes, and legal precedents with relevance scoring."
-    },
-    {
-      icon: Brain,
+      description: "Intelligent search through case law, statutes, and legal precedents with relevance scoring."},
+    {icon: Brain,
       title: "Risk Assessment",
       description: "Machine learning models that predict legal risks and compliance issues before they arise."
-      description: "AI-driven legal research tools that quickly find relevant case law, statutes, and precedents across multiple jurisdictions."
-    },
-    {
-      icon: FileText,
+      description: "AI-driven legal research tools that quickly find relevant case law, statutes, and precedents across multiple jurisdictions."},
+    {icon: FileText,
       title: "Contract Analysis & Generation",
-      description: "Automated contract review, risk assessment, and intelligent contract generation with customizable templates."
-    },
-    {
-      icon: Shield,
+      description: "Automated contract review, risk assessment, and intelligent contract generation with customizable templates."},
+    {icon: Shield,
       title: "Compliance Monitoring",
-      description: "Real-time compliance tracking and automated alerts for regulatory changes and compliance requirements."
-    },
-    {
-      icon: Zap,
+      description: "Real-time compliance tracking and automated alerts for regulatory changes and compliance requirements."},
+    {icon: Zap,
       title: "Legal Process Automation",
-      description: "Streamline repetitive legal tasks, document workflows, and case management processes with AI automation."
-    },
-    {
-      icon: Lock,
+      description: "Streamline repetitive legal tasks, document workflows, and case management processes with AI automation."},
+    {icon: Lock,
       title: "Secure Document Management",
-      description: "Enterprise-grade security with encryption, access controls, and audit trails for sensitive legal documents."
-    }
+      description: "Enterprise-grade security with encryption, access controls, and audit trails for sensitive legal documents."}
   ]
   const useCases = [
-    {
-      title: "Contract Management",
+    {title: "Contract Management",
       description: "Automate contract lifecycle management from creation to renewal with AI-powered risk assessment.",
-      icon: FileText;
-    },
-    {
-      title: "Due Diligence",
+      icon: FileText;},
+    {title: "Due Diligence",
       description: "Accelerate due diligence processes with AI-powered document analysis and risk identification.",
-      icon: Search;
-    },
-    {
-      title: "Legal Research",
+      icon: Search;},
+    {title: "Legal Research",
       description: "Reduce research time with AI tools that quickly find relevant legal precedents and case law.",
-      icon: Brain;
-    },
-    {
-      title: "Compliance & Risk",
+      icon: Brain;},
+    {title: "Compliance & Risk",
       description: "Monitor regulatory changes and identify compliance risks with automated AI systems.",
-      icon: Shield;
-    }
+      icon: Shield;}
   ]
   const benefits = [
     "Reduce legal document review time by 80%",
@@ -309,20 +249,13 @@ export default function AILegalTech() {
     "Better risk management and mitigation"
   ]
   const solutions = [
-    {
-      title: "Contract Management",
-      description: "End-to-end contract lifecycle management with AI assistance"
-    },
-    {
-      title: "Legal Research",
-      description: "Automated case law research and precedent analysis"
-    },
-    {
-      title: "Compliance Automation",
-      description: "Regulatory compliance monitoring and reporting"
-    },
-    {
-      title: "Risk Assessment",
+    {title: "Contract Management",
+      description: "End-to-end contract lifecycle management with AI assistance"},
+    {title: "Legal Research",
+      description: "Automated case law research and precedent analysis"},
+    {title: "Compliance Automation",
+      description: "Regulatory compliance monitoring and reporting"},
+    {title: "Risk Assessment",
       description: "AI-powered legal risk analysis and mitigation"
   Brain, 
   Shield, 
@@ -337,90 +270,61 @@ export default function AILegalTech() {
   Target,
   Building,
   Home,
-  Lightbulb;
-} from 'lucide-react'
-export default function AILegalTech() {
-  const features = [
+  Lightbulb;} from 'lucide-react'
+export default function AILegalTech() {const features = [
     {
       title: "AI Contract Analysis",
       description: "Intelligent contract review and analysis using advanced NLP and legal AI",
       icon: FileText,
-      benefits: ["90% faster review", "Risk identification", "Compliance checking", "Automated summaries"]
-    },
-    {
-      title: "Legal Research Automation",
+      benefits: ["90% faster review", "Risk identification", "Compliance checking", "Automated summaries"]},
+    {title: "Legal Research Automation",
       description: "AI-powered legal research that finds relevant cases, statutes, and precedents",
       icon: Search,
-      benefits: ["Instant case law search", "Precedent analysis", "Citation tracking", "Research summaries"]
-    },
-    {
-      title: "Document Generation",
+      benefits: ["Instant case law search", "Precedent analysis", "Citation tracking", "Research summaries"]},
+    {title: "Document Generation",
       description: "Automated legal document creation with customizable templates and AI assistance",
       icon: BookOpen,
-      benefits: ["Template library", "Custom clauses", "Legal compliance", "Version control"]
-    },
-    {
-      title: "Compliance Monitoring",
+      benefits: ["Template library", "Custom clauses", "Legal compliance", "Version control"]},
+    {title: "Compliance Monitoring",
       description: "Real-time regulatory compliance monitoring and automated reporting",
       icon: Shield,
-      benefits: ["Regulatory updates", "Compliance alerts", "Automated reporting", "Risk assessment"]
-    },
-    {
-      title: "Predictive Analytics",
+      benefits: ["Regulatory updates", "Compliance alerts", "Automated reporting", "Risk assessment"]},
+    {title: "Predictive Analytics",
       description: "AI-powered case outcome prediction and litigation risk assessment",
       icon: Brain,
-      benefits: ["Case outcome prediction", "Risk scoring", "Settlement recommendations", "Cost forecasting"]
-    },
-    {
-      title: "Client Portal & Communication",
+      benefits: ["Case outcome prediction", "Risk scoring", "Settlement recommendations", "Cost forecasting"]},
+    {title: "Client Portal & Communication",
       description: "Secure client communication and document sharing platform",
       icon: Users,
-      benefits: ["Secure messaging", "Document sharing", "Progress tracking", "Client collaboration"]
-    }
+      benefits: ["Secure messaging", "Document sharing", "Progress tracking", "Client collaboration"]}
   ]
   const practiceAreas = [
-    {
-      title: 'Time Savings',
+    {title: 'Time Savings',
       description: 'Reduce legal research and document review time by up to 80%',
-      icon: Clock;
-    },
-    {
-      title: 'Cost Reduction',
+      icon: Clock;},
+    {title: 'Cost Reduction',
       description: 'Lower legal costs through automation and efficiency gains',
-      icon: TrendingUp;
-    },
-    {
-      title: 'Risk Mitigation',
+      icon: TrendingUp;},
+    {title: 'Risk Mitigation',
       description: 'Identify and mitigate legal risks with AI-powered analysis',
-      icon: Shield;
-    },
-    {
-      title: 'Improved Accuracy',
+      icon: Shield;},
+    {title: 'Improved Accuracy',
       description: 'Enhance accuracy and consistency in legal work',
-      icon: CheckCircle;
-    }
+      icon: CheckCircle;}
   ]
   const industries = [
-    {
-      title: 'Corporate Law',
+    {title: 'Corporate Law',
       description: 'Contract management, compliance, and corporate governance',
-      icon: Building;
-    },
-    {
-      title: 'Financial Services',
+      icon: Building;},
+    {title: 'Financial Services',
       description: 'Regulatory compliance, risk management, and contract analysis',
-      icon: DollarSign;
-    },
-    {
-      title: 'Healthcare',
+      icon: DollarSign;},
+    {title: 'Healthcare',
       description: 'HIPAA compliance, medical contracts, and regulatory adherence',
-      icon: Heart;
-    },
-    {
-      title: 'Real Estate',
+      icon: Heart;},
+    {title: 'Real Estate',
       description: 'Property contracts, lease agreements, and compliance',
-      icon: Home;
-    }
+      icon: Home;}
     "Reduce legal document review time by 70-90%",
     "Improve contract accuracy and risk identification",
     "Accelerate due diligence processes",
@@ -429,7 +333,7 @@ export default function AILegalTech() {
     "Improve client service and response times"
   ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
+<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
     "Reduce legal research time by 70%",
     "Improve contract review accuracy by 90%",
@@ -439,8 +343,7 @@ export default function AILegalTech() {
     "Enhance risk assessment and compliance"
   ]
   const pricingPlans = [
-    {
-      name: "Starter",
+    {name: "Starter",
       price: "$499",
       period: "/month",
       description: "Perfect for small law firms",
@@ -451,10 +354,8 @@ export default function AILegalTech() {
         "Basic compliance monitoring",
         "Up to 100 documents/month",
         "Email support"
-      ]
-    },
-    {
-      name: "Professional",
+      ]},
+    {name: "Professional",
       price: "$999",
       period: "/month",
       description: "Ideal for growing practices",
@@ -467,23 +368,16 @@ export default function AILegalTech() {
     {
       title: "Reduce Review Time",
       value: "80%",
-      description: "Faster document analysis and contract review processes"
-    },
-    {
-      title: "Improve Accuracy",
+      description: "Faster document analysis and contract review processes"},
+    {title: "Improve Accuracy",
       value: "95%",
-      description: "Higher accuracy in legal research and document analysis"
-    },
-    {
-      title: "Lower Costs",
+      description: "Higher accuracy in legal research and document analysis"},
+    {title: "Lower Costs",
       value: "60%",
-      description: "Reduced legal research and document review costs"
-    },
-    {
-      title: "Increase Efficiency",
+      description: "Reduced legal research and document review costs"},
+    {title: "Increase Efficiency",
       value: "3x",
-      description: "Faster case preparation and legal strategy development"
-    }
+      description: "Faster case preparation and legal strategy development"}
     "Reduce legal document review time by 60-80% with AI analysis",
     "Cut legal research costs by 40-60% through automation",
     "Improve contract accuracy by 85-95% with AI validation",
@@ -492,30 +386,21 @@ export default function AILegalTech() {
     "Achieve 99%+ accuracy in legal document processing"
   ]
   const useCases = [
-    {
-      industry: "Corporate Law",
+    {industry: "Corporate Law",
       description: "Contract review, M&A due diligence, and corporate governance compliance",
-      metrics: ["Contract Review Speed", "Risk Detection Rate", "Compliance Score"]
-    },
-    {
-      industry: "Litigation",
+      metrics: ["Contract Review Speed", "Risk Detection Rate", "Compliance Score"]},
+    {industry: "Litigation",
       description: "E-discovery, case research, and evidence analysis",
-      metrics: ["Document Review Speed", "Evidence Discovery Rate", "Case Success Rate"]
-    },
-    {
-      industry: "Real Estate",
+      metrics: ["Document Review Speed", "Evidence Discovery Rate", "Case Success Rate"]},
+    {industry: "Real Estate",
       description: "Lease agreement analysis, title review, and regulatory compliance",
-      metrics: ["Agreement Review Speed", "Risk Assessment", "Compliance Rate"]
-    },
-    {
-      industry: "Healthcare",
+      metrics: ["Agreement Review Speed", "Risk Assessment", "Compliance Rate"]},
+    {industry: "Healthcare",
       description: "Regulatory compliance, patient consent, and medical malpractice defense",
-      metrics: ["Compliance Rate", "Risk Assessment", "Document Accuracy"]
-    }
+      metrics: ["Compliance Rate", "Risk Assessment", "Document Accuracy"]}
   ]
   const pricing = [
-    {
-      name: "Starter",
+    {name: "Starter",
       price: "$3,000",
       period: "/month",
       description: "Perfect for small law firms starting with AI legal tech",
@@ -525,10 +410,8 @@ export default function AILegalTech() {
         "Document generation",
         "Legal research tools",
         "Email support"
-      ]
-    },
-    {
-      name: "Professional",
+      ]},
+    {name: "Professional",
       price: "$8,000",
       period: "/month",
       description: "Ideal for growing law firms with advanced legal tech needs",
@@ -544,30 +427,22 @@ export default function AILegalTech() {
       name: "Corporate Law",
       description: "AI-powered contract management and corporate compliance",
       icon: Building,
-      tools: ["Contract analysis", "M&A due diligence", "Corporate governance", "Regulatory compliance"]
-    },
-    {
-      name: "Litigation",
+      tools: ["Contract analysis", "M&A due diligence", "Corporate governance", "Regulatory compliance"]},
+    {name: "Litigation",
       description: "AI-assisted case preparation and outcome prediction",
       icon: Scale,
-      tools: ["Case research", "Evidence analysis", "Outcome prediction", "Cost forecasting"]
-    },
-    {
-      name: "Real Estate",
+      tools: ["Case research", "Evidence analysis", "Outcome prediction", "Cost forecasting"]},
+    {name: "Real Estate",
       description: "Automated real estate transaction management and compliance",
       icon: Home,
-      tools: ["Title research", "Contract review", "Compliance checking", "Transaction management"]
-    },
-    {
-      name: "Intellectual Property",
+      tools: ["Title research", "Contract review", "Compliance checking", "Transaction management"]},
+    {name: "Intellectual Property",
       description: "AI-powered IP research and patent analysis",
       icon: Lightbulb,
-      tools: ["Patent search", "Trademark analysis", "IP monitoring", "Infringement detection"]
-    }
+      tools: ["Patent search", "Trademark analysis", "IP monitoring", "Infringement detection"]}
   ]
   const pricingPlans = [
-    {
-      name: "Solo Practitioner",
+    {name: "Solo Practitioner",
       price: "$199/month",
       description: "Perfect for individual lawyers and small practices",
       features: [
@@ -579,10 +454,8 @@ export default function AILegalTech() {
         "Mobile app access"
       ],
       cta: "Start Free Trial",
-      popular: false;
-    },
-    {
-      name: "Law Firm",
+      popular: false;},
+    {name: "Law Firm",
       price: "$599/month",
       description: "Ideal for growing law firms with multiple attorneys",
       features: [
@@ -596,10 +469,8 @@ export default function AILegalTech() {
         "Integration support"
       ],
       cta: "Start Free Trial",
-      popular: true;
-    },
-    {
-      name: "Enterprise",
+      popular: true;},
+    {name: "Enterprise",
       price: "Custom",
       period: "",
       description: "Tailored solutions for large law firms and corporate legal departments",
@@ -610,8 +481,7 @@ export default function AILegalTech() {
         "Dedicated support",
         "Advanced security",
         "API access"
-      ]
-    }
+      ]}
   ]
       description: "Comprehensive solution for large legal organizations",
       features: [
@@ -642,51 +512,36 @@ export default function AILegalTech() {
     }
   ]
   const successMetrics = [
-    {
-      metric: "90%",
+    {metric: "90%",
       description: "Faster document review",
-      detail: "AI-powered analysis and automation"
-    },
-    {
-      metric: "75%",
+      detail: "AI-powered analysis and automation"},
+    {metric: "75%",
       description: "Reduction in research time",
-      detail: "Intelligent legal research tools"
-    },
-    {
-      metric: "60%",
+      detail: "Intelligent legal research tools"},
+    {metric: "60%",
       description: "Lower operational costs",
-      detail: "Automated workflows and processes"
-    },
-    {
-      metric: "95%",
+      detail: "Automated workflows and processes"},
+    {metric: "95%",
       description: "Compliance accuracy",
-      detail: "AI-powered compliance monitoring"
-    }
+      detail: "AI-powered compliance monitoring"}
   ]
   const useCases = [
-    {
-      scenario: "Contract Review",
+    {scenario: "Contract Review",
       description: "Automated contract analysis with risk identification and compliance checking",
-      benefits: ["Faster review process", "Risk mitigation", "Compliance assurance", "Cost savings"]
-    },
-    {
-      scenario: "Legal Research",
+      benefits: ["Faster review process", "Risk mitigation", "Compliance assurance", "Cost savings"]},
+    {scenario: "Legal Research",
       description: "AI-powered case law research with precedent analysis and citation tracking",
-      benefits: ["Instant results", "Comprehensive coverage", "Precedent analysis", "Time savings"]
-    },
-    {
-      scenario: "Compliance Monitoring",
+      benefits: ["Instant results", "Comprehensive coverage", "Precedent analysis", "Time savings"]},
+    {scenario: "Compliance Monitoring",
       description: "Real-time regulatory updates and automated compliance reporting",
-      benefits: ["Proactive compliance", "Risk reduction", "Automated reporting", "Regulatory awareness"]
-    },
-    {
-      scenario: "Document Generation",
+      benefits: ["Proactive compliance", "Risk reduction", "Automated reporting", "Regulatory awareness"]},
+    {scenario: "Document Generation",
       description: "Automated legal document creation with customizable templates",
-      benefits: ["Consistent quality", "Time savings", "Template library", "Customization options"]
-    }
+      benefits: ["Consistent quality", "Time savings", "Template library", "Customization options"]}
   ]
   return (
-      </div><section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      </div>
+<section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         </section>
 <div className="max-w-7xl mx-auto text-center">
           </div>
@@ -732,7 +587,7 @@ export default function AILegalTech() {
                 Schedule Demo;
               </Link>
             </div>
-          </div>
+</div>
           
           {/* Key Metrics */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-16">
@@ -741,23 +596,23 @@ export default function AILegalTech() {
               </div>
 <div className="text-3xl font-bold text-green-400 mb-2">80%</div>
 <div className="text-gray-400">Faster Review Time</div>
-            </div>
+</div>
 <div className="text-center">
               </div>
 <div className="text-3xl font-bold text-emerald-400 mb-2">95%</div>
 <div className="text-gray-400">Improved Accuracy</div>
-            </div>
+</div>
 <div className="text-center">
               </div>
 <div className="text-3xl font-bold text-blue-400 mb-2">60%</div>
 <div className="text-gray-400">Cost Reduction</div>
-            </div>
+</div>
 <div className="text-center">
               </div>
 <div className="text-3xl font-bold text-purple-400 mb-2">3x</div>
 <div className="text-gray-400">Efficiency Boost</div>
-            </div>
-          </div>
+</div>
+</div>
 <div className="min-h-screen bg-gradient-to-br from-black via-indigo-900 to-purple-900">
       <SEO
         title="AI Legal Tech Platform - Zion Tech Group" 
@@ -767,13 +622,14 @@ export default function AILegalTech() {
       />
 
       {/* Hero Section with Futuristic Background */}
-      </div><section className="relative overflow-hidden">
+      </div>
+<section className="relative overflow-hidden">
         </section>
 <div className="absolute inset-0">
           </div>
 <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/20 via-purple-600/20 to-blue-500/20"></div>
 <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(99,102,241,0.1),transparent_50%)]"></div>
-        </div>
+</div>
 <div className="relative z-10 container mx-auto px-4 py-24 text-center">
           </div>
 <div className="mb-8">
@@ -782,7 +638,7 @@ export default function AILegalTech() {
               <Scale className="w-4 h-4 mr-2" />
               AI-Powered Legal Technology;
             </div>
-          </div>
+</div>
           
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-blue-400 bg-clip-text text-transparent">
@@ -816,27 +672,27 @@ export default function AILegalTech() {
               </div>
 <div className="text-3xl font-bold text-indigo-400 mb-2">90%</div>
 <div className="text-gray-400 text-sm">Faster Review</div>
-            </div>
+</div>
 <div className="text-center">
               </div>
 <div className="text-3xl font-bold text-purple-400 mb-2">75%</div>
 <div className="text-gray-400 text-sm">Research Time</div>
-            </div>
+</div>
 <div className="text-center">
               </div>
 <div className="text-3xl font-bold text-blue-400 mb-2">60%</div>
 <div className="text-gray-400 text-sm">Cost Reduction</div>
-            </div>
+</div>
 <div className="text-center">
               </div>
 <div className="text-3xl font-bold text-cyan-400 mb-2">95%</div>
 <div className="text-gray-400 text-sm">Compliance Accuracy</div>
-            </div>
-          </div>
+</div>
+</div>
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         </section>
 <div className="max-w-7xl mx-auto">
-          </div>
+</div>
 <div className="text-center">
             </div>
 <div className="flex items-center justify-center mb-6">
@@ -859,8 +715,8 @@ export default function AILegalTech() {
                 Watch Demo;
               </button>
             </div>
-          </div>
-        </div>
+</div>
+</div>
         
         {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -868,15 +724,15 @@ export default function AILegalTech() {
 <div className="absolute top-20 left-10 w-2 h-2 bg-amber-400 rounded-full animate-ping"></div>
 <div className="absolute top-40 right-20 w-3 h-3 bg-orange-400 rounded-full animate-pulse"></div>
 <div className="absolute bottom-20 left-1/4 w-1 h-1 bg-amber-400 rounded-full animate-bounce"></div>
-        </div>
+</div>
       </section>
 
       {/* Features Section */}
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 20}}
+            whileInView={{ opacity: 1, y: 0}}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -892,10 +748,10 @@ export default function AILegalTech() {
             {features.map((feature, index) => (
               <motion.div;
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
+                transition={{ duration: 0.8, delay: index * 0.1}}
+                viewport={{ once: true}}
                 className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500 transition-all duration-300"
               >
                 </div>
@@ -912,7 +768,8 @@ export default function AILegalTech() {
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Our AI legal technology platform combines cutting-edge artificial intelligence;
               with proven legal expertise to deliver exceptional results.
-      </div><section className="py-20 bg-black/50">
+      </div>
+<section className="py-20 bg-black/50">
         </section>
 <div className="container mx-auto px-4">
           </div>
@@ -946,9 +803,9 @@ export default function AILegalTech() {
                 View Success Stories;
               </Link>
             </div>
-          </div>
-        </div>
-      </div>
+</div>
+</div>
+</div>
 
       {/* Services Section */}
       <div className="py-20 bg-black/20">
@@ -985,14 +842,14 @@ export default function AILegalTech() {
               </div>
             ))}
           </div>
-        </div>
+</div>
       </section>
 
       {/* Services Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         </section>
 <div className="max-w-7xl mx-auto">
-          </div>
+</div>
 <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Comprehensive Legal Technology Solutions;
@@ -1023,7 +880,7 @@ export default function AILegalTech() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         </section>
 <div className="max-w-7xl mx-auto">
-          </div>
+</div>
 <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Intelligent Legal Technology Features;
@@ -1045,17 +902,17 @@ export default function AILegalTech() {
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
-              )
+)
             })
           </div>
-        </div>
+</div>
       </section>
 
       {/* Use Cases Section */})
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
         </section>
 <div className="max-w-7xl mx-auto">
-          </div>
+</div>
 <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Legal Technology Use Cases;
@@ -1080,19 +937,19 @@ export default function AILegalTech() {
                       <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
                       <p className="text-gray-300">{useCase.description}</p>
                     </div>
-                  </div>
-                </div>
-              )
+</div>
+</div>
+)
             })
           </div>
-        </div>
+</div>
       </section>
 
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         </section>
 <div className="max-w-7xl mx-auto">
-          </div>
+</div>
 <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Why Choose AI Legal Technology?
@@ -1121,8 +978,8 @@ export default function AILegalTech() {
                 </div>
               ))}
             </div>
-          </div>
-        </div>
+</div>
+</div>
       </section>
 
       {/* Practice Areas Section */}
@@ -1130,10 +987,10 @@ export default function AILegalTech() {
         </section>
 <div className="max-w-7xl mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 20}}
+            whileInView={{ opacity: 1, y: 0}}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -1149,20 +1006,21 @@ export default function AILegalTech() {
             {practiceAreas.map((area, index) => (
               <motion.div;
                 key={area}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
+                transition={{ duration: 0.8, delay: index * 0.1}}
+                viewport={{ once: true}}
                 className="bg-gray-800/50 border border-gray-700 rounded-lg p-6 text-center hover:border-cyan-500 transition-all duration-300"
               >
                 <Gavel className="w-8 h-8 text-cyan-500 mx-auto mb-3" />
                 <h3 className="font-semibold">{area}</h3>
               </motion.div>
       {/* Use Cases Section */}
-      </div><section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-blue-900/50">
+      </div>
+<section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-blue-900/50">
         </section>
 <div className="max-w-7xl mx-auto">
-          </div>
+</div>
 <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Perfect For Every Legal Need;
@@ -1170,7 +1028,8 @@ export default function AILegalTech() {
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Our AI legal technology platform adapts to your specific practice area and requirements.
       {/* Practice Areas Section */}
-      </div><section className="py-20 bg-indigo-900/30">
+      </div>
+<section className="py-20 bg-indigo-900/30">
         </section>
 <div className="container mx-auto px-4">
           </div>
@@ -1206,7 +1065,7 @@ export default function AILegalTech() {
               </div>
             ))}
           </div>
-        </div>
+</div>
       </section>
 
       {/* Use Cases Section */}
@@ -1224,10 +1083,11 @@ export default function AILegalTech() {
           </div>
 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
-      </div><section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+      </div>
+<section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         </section>
 <div className="max-w-7xl mx-auto">
-          </div>
+</div>
 <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Measurable Results;
@@ -1255,10 +1115,11 @@ export default function AILegalTech() {
                     </li>
                   ))}
                 </ul>
-      </div><section className="py-20 px-4 sm:px-6 lg:px-8">
+      </div>
+<section className="py-20 px-4 sm:px-6 lg:px-8">
         </section>
 <div className="max-w-7xl mx-auto">
-          </div>
+</div>
 <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose AI Legal Tech?
@@ -1276,7 +1137,7 @@ export default function AILegalTech() {
               </div>
             ))}
           </div>
-        </div>
+</div>
       </section>
 
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -1291,13 +1152,13 @@ export default function AILegalTech() {
               < key={index} className={`relative bg-gray-800/50 rounded-xl p-8 border transition-all duration-300 ${$2 />
                 plan.popular;
                   ? 'border-green-500/50 scale-105' 
-                  : 'border-gray-700 hover:border-gray-600'
-              }`}>
+                  : 'border-gray-700 hover:border-gray-600'}`}>
                 {plan.popular && (
                   </div>
 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-medium">
-      </div><section className="py-20 bg-black/50">
+      </div>
+<section className="py-20 bg-black/50">
         </section>
 <div className="container mx-auto px-4">
           </div>
@@ -1314,8 +1175,7 @@ export default function AILegalTech() {
               < key={index} className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${$2 />
                 plan.popular;
                   ? 'border-indigo-500/50 shadow-2xl shadow-indigo-500/25' 
-                  : 'border-gray-700/50 hover:border-indigo-500/50'
-              }`}>
+                  : 'border-gray-700/50 hover:border-indigo-500/50'}`}>
                 {plan.popular && (
                   </div>
 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -1348,8 +1208,7 @@ export default function AILegalTech() {
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
                     plan.popular;
                       ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white hover:from-green-600 hover:to-emerald-600'
-                      : 'border border-gray-600 text-gray-300 hover:text-white hover:border-gray-500'
-                  }`}
+                      : 'border border-gray-600 text-gray-300 hover:text-white hover:border-gray-500'}`}
                 >
                   Get Started;
                   <ArrowRight className="ml-2 w-4 h-4" />
@@ -1358,14 +1217,13 @@ export default function AILegalTech() {
                 < className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${$2 />
                   plan.popular;
                     ? 'bg-gradient-to-r from-indigo-500 to-purple-500 text-white hover:scale-105'
-                    : 'bg-gray-700 text-white hover:bg-gray-600'
-                }`}>
+                    : 'bg-gray-700 text-white hover:bg-gray-600'}`}>
                   {plan.cta}
                 </button>
               </div>
             ))}
           </div>
-        </div>
+</div>
       </section>
 
       {/* CTA Section */}
@@ -1373,10 +1231,10 @@ export default function AILegalTech() {
         </section>
 <div className="max-w-4xl mx-auto text-center">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 20}}
+            whileInView={{ opacity: 1, y: 0}}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Transform Your Legal Practice?
@@ -1403,7 +1261,8 @@ export default function AILegalTech() {
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             Join thousands of legal professionals who have already revolutionized their practice with AI technology.
-      </div><section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-500/10 to-emerald-500/10">
+      </div>
+<section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-500/10 to-emerald-500/10">
       {/* CTA Section */}
       </section><section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-amber-500/10 to-orange-500/10">
         </section>
@@ -1427,7 +1286,7 @@ export default function AILegalTech() {
                       <h3 className="text-2xl font-bold text-white">{service.title}</h3>
                       <p className="text-gray-400">{service.price}</p>
                     </div>
-                  </div>
+</div>
                   
                   <p className="text-gray-300 mb-6">{service.description}</p>
                   
@@ -1447,11 +1306,11 @@ export default function AILegalTech() {
                     Learn More;
                   </Link>
                 </div>
-              )
+)
             })
           </div>
-        </div>
-      </div>
+</div>
+</div>
 
       {/* Legal Tech Features Section */}
       <div className="py-20">
@@ -1480,7 +1339,7 @@ export default function AILegalTech() {
                       <h3 className="text-2xl font-bold text-white">{feature.title}</h3>
                       <p className="text-gray-300">{feature.description}</p>
                     </div>
-                  </div>
+</div>
                   
                   <ul className="space-y-3">
                     {feature.benefits.map((benefit, benefitIndex) => (
@@ -1491,11 +1350,11 @@ export default function AILegalTech() {
                     ))}
                   </ul>
                 </div>
-              )
+)
             })
           </div>
-        </div>
-      </div>
+</div>
+</div>
 
       {/* Industries Section */}
       <div className="py-20 bg-black/20">
@@ -1521,11 +1380,11 @@ export default function AILegalTech() {
                   <h3 className="text-xl font-bold mb-3 text-white">{industry.title}</h3>
                   <p className="text-gray-300">{industry.description}</p>
                 </div>
-              )
+)
             })
           </div>
-        </div>
-      </div>
+</div>
+</div>
 
       {/* Benefits Section */}
       <div className="py-20">
@@ -1551,11 +1410,11 @@ export default function AILegalTech() {
                   <h3 className="text-xl font-bold mb-3 text-white">{benefit.title}</h3>
                   <p className="text-gray-300">{benefit.description}</p>
                 </div>
-              )
+)
             })
           </div>
-        </div>
-      </div>
+</div>
+</div>
 
       {/* CTA Section */}
       <div className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
@@ -1578,7 +1437,7 @@ export default function AILegalTech() {
 <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center">
               <Scale className="w-10 h-10 text-white" />
             </div>
-          </div>
+</div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             AI Legal Tech;
           </h1>
@@ -1636,14 +1495,14 @@ export default function AILegalTech() {
               Schedule Demo;
             </button>
           </div>
-        </div>
+</div>
       </section>
 
       {/* Navigation Links */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         </section>
 <div className="max-w-7xl mx-auto">
-          </div>
+</div>
 <div className="text-center mb-12">
             <h3 className="text-2xl font-bold text-white mb-4">Explore More Services</h3>
             <p className="text-gray-300">Discover our complete range of AI and technology solutions</p>
@@ -1661,7 +1520,7 @@ export default function AILegalTech() {
                   </div>
                   <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-amber-400 transition-colors" />
                 </div>
-              </div>
+</div>
             </Link>
             
             <Link to="/services/ai-marketing-automation" className="group">
@@ -1675,7 +1534,7 @@ export default function AILegalTech() {
                   </div>
                   <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-amber-400 transition-colors" />
                 </div>
-              </div>
+</div>
             </Link>
             
             <Link to="/services/ai-hr-recruitment" className="group">
@@ -1689,13 +1548,13 @@ export default function AILegalTech() {
                   </div>
                   <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-amber-400 transition-colors" />
                 </div>
-              </div>
+</div>
             </Link>
           </div>
-        </div>
+</div>
       </section>
-    </div>
-  )
+</div>
+)
 }
 export default AILegalTech;
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
@@ -1719,7 +1578,7 @@ export default AILegalTech;
               Request Demo;
             </Link>
           </div>
-        </div>
+</div>
 
         {/* Features Grid */}
         <div className="mb-20">
@@ -1740,10 +1599,10 @@ export default AILegalTech;
                   <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                   <p className="text-zion-slate-light">{feature.description}</p>
                 </div>
-              )
+)
             })
           </div>
-        </div>
+</div>
 
         {/* Benefits Section */}
         <div className="mb-20">
@@ -1762,8 +1621,8 @@ export default AILegalTech;
                 </div>
               ))}
             </div>
-          </div>
-        </div>
+</div>
+</div>
 
         {/* Use Cases */}
         <div className="mb-20">
@@ -1789,10 +1648,10 @@ export default AILegalTech;
                     </div>
                   ))}
                 </div>
-              </div>
+</div>
             ))}
           </div>
-        </div>
+</div>
 
         {/* Pricing */}
         <div className="mb-20">
@@ -1803,8 +1662,7 @@ export default AILegalTech;
 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
               < key={index} className={`relative bg-zion-blue-dark/50 backdrop-blur-sm border rounded-2xl p-6 ${$2 />
-                plan.popular ? 'border-zion-cyan shadow-lg shadow-zion-cyan/25' : 'border-zion-cyan/20'
-              }`}>
+                plan.popular ? 'border-zion-cyan shadow-lg shadow-zion-cyan/25' : 'border-zion-cyan/20'}`}>
                 {plan.popular && (
                   </div>
 <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
@@ -1835,15 +1693,14 @@ export default AILegalTech;
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular;
                       ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover:from-zion-cyan-light hover:to-zion-purple-light'
-                      : 'bg-transparent border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white'
-                  }`}
+                      : 'bg-transparent border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white'}`}
                 >
                   Get Started;
                 </Link>
               </div>
             ))}
           </div>
-        </div>
+</div>
 
         {/* CTA Section */}
         <div className="text-center">
@@ -1871,14 +1728,29 @@ export default AILegalTech;
                 Schedule Consultation;
               </Link>
             </div>
-          </div>
-        </div>
-      </div>
+</div>
+</div>
+</div>
     </div>
-  )
+)
 }
 }
 }
 export default AILegalTech;
 }
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></a></p></p></p></p></p></p></li></section></section></section></section></section></section></section></section></section></section></section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></span></a></p></p></p></p></p></p></li></section></section></section></section></section></section></section></section></section></section></section>

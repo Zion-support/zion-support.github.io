@@ -1,9 +1,8 @@
 'use client'
 import React from 'react'
 import {CheckSquare, Users, Zap, Brain, Target, BarChart, CheckCircle, Star, Phone} from 'lucide-react'
-import { Link } from 'react-router-dom'
-const TaskManagerProPage: React.FC = () => {
-  const features = [
+import {Link} from 'react-router-dom'
+const TaskManagerProPage: React.FC = () => {const features = [
     {
       icon: CheckSquare,
       title: 'AI Task Prioritization',
@@ -70,14 +69,14 @@ $4}
         'Unlimited data retention',
         'Custom compliance'
   const integrations = [
-    { name: 'Slack', icon: '💬', description: 'Team communication' },
-    { name: 'Microsoft Teams', icon: '👥', description: 'Collaboration platform' },
-    { name: 'Google Workspace', icon: '📧', description: 'Productivity suite' },
-    { name: 'Jira', icon: '🎯', description: 'Project management' },
-    { name: 'Asana', icon: '📋', description: 'Task management' },
-    { name: 'Trello', icon: '📌', description: 'Visual boards' },
-    { name: 'Notion', icon: '📝', description: 'Documentation' },
-    { name: 'GitHub', icon: '💻', description: 'Development workflow' }
+    {name: 'Slack', icon: '💬', description: 'Team communication'},
+    {name: 'Microsoft Teams', icon: '👥', description: 'Collaboration platform'},
+    {name: 'Google Workspace', icon: '📧', description: 'Productivity suite'},
+    {name: 'Jira', icon: '🎯', description: 'Project management'},
+    {name: 'Asana', icon: '📋', description: 'Task management'},
+    {name: 'Trello', icon: '📌', description: 'Visual boards'},
+    {name: 'Notion', icon: '📝', description: 'Documentation'},
+    {name: 'GitHub', icon: '💻', description: 'Development workflow'}
   const testimonials = [
       name: 'Rachel Green',
       company: 'Marketing Agency',
@@ -93,9 +92,10 @@ $4}
       role: 'Operations Director',
       content: 'The automation features saved us 15 hours per week. We can now focus on high-value work.',
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-      </div><section className="container mx-auto px-4 py-16 pt-24">
+      </div>
+<section className="container mx-auto px-4 py-16 pt-24">
         </section>
 <div className="text-center mb-16">
           </div>
@@ -152,7 +152,8 @@ $4}
             </div>
 <div className="text-gray-300 text-sm">With smart tracking;
         {/* Features Section */}
-        </div><section className="mb-16">
+        </div>
+<section className="mb-16">
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center">
             Powerful Task Management Features,
   
@@ -185,8 +186,7 @@ $4}
               < key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${$2 />
                 plan.popular;
                   ? 'border-cyan-400 scale-105' 
-                  : 'border-slate-700 hover:border-cyan-500/50'
-              }`}>
+                  : 'border-slate-700 hover:border-cyan-500/50'}`}>
                 {plan.popular && (
                   </div>
 <div className="bg-cyan-400 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold text-center mb-4">
@@ -231,17 +231,16 @@ $4}
                   </div>
 <div className="text-gray-400 text-sm">{testimonial.company}
         {/* CTA Section */}
-        </div><section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-12 border border-cyan-500/20">
+        </div>
+<section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-12 border border-cyan-500/20">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Supercharge Your Productivity?
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
             Join thousands of professionals using Task Manager Pro to achieve more, 
-import { Link } from 'react-router-dom'
-const TaskManagerProPage: React.FC = () => {
-    const features = [],
+import {Link} from 'react-router-dom'
+const TaskManagerProPage: React.FC = () => {const features = [],
   return (
-    {// TODO: Add content;
-  }
+    {// TODO: Add content;}
 }
   ico,
   n: CheckSquare,
@@ -258,15 +257,15 @@ const TaskManagerProPage: React.FC = () => {
       benefit: 'Improve team efficiency by 60%',
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-const PagePage: React.FC = () => {
-  return (
+const PagePage: React.FC = () => {return (
           </section>
 <div>Coming Soon;
   )
           </div>
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-      </div><section className="container mx-auto px-4 py-16 pt-24"></section>"
+      </div>
+<section className="container mx-auto px-4 py-16 pt-24"></section>"
         <div className="text-center mb-16"></div>"
           <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full mb-6"></div>"
             <CheckSquare className="w-10 h-10 text-white" />
@@ -313,7 +312,8 @@ Start Free Trial,
             <div className="text-white font-semibold mb-2">Goal Achievement</div>"
             <div className="text-gray-300 text-sm">With smart tracking;
         {/* Features Section */}"
-        </div><section className="mb-16"></section>"
+        </div>
+<section className="mb-16"></section>"
           < className="text-3xl,"$2 />
   md: text-4xl font-bold text-white mb-12 text-center"></h2>
 // Powerful Task Management Features,
@@ -393,7 +393,8 @@ Most Popular;
                   <div className="text-cyan-400 text-sm">{testimonial.role}</div>"
                   <div className="text-gray-400 text-sm">{testimonial.company}
 {/* CTA Section */}"
-        </div><section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-12 border border-cyan-500/20"></section>"
+        </div>
+<section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-12 border border-cyan-500/20"></section>"
           < className="text-3xl,"$2 />
   md:text-4xl font-bold text-white mb-6">
             Ready to Supercharge Your Productivity?"
@@ -403,22 +404,22 @@ Most Popular;
   )
 }
 export default TaskManagerProPage</div>
-  </div>
-  </div>
-  </div>
+</div>
+</div>
+</div>
   </div>
   </button>
   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
   </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
+</div>
   </h2>
   </div>
-  </div>
+</div>
   </Link>
   </a>
   </div>
@@ -426,5 +427,23 @@ export default TaskManagerProPage</div>
   </p>
   </div>
   </section>
-  </div>
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></p></p></p></p></p></p></h3></h3></h3></section></section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></span></span></p></p></p></p></p></p></h3></h3></h3></section></section>

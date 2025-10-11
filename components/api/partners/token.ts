@@ -12,7 +12,7 @@ export default async function handler(
   }
   const match = await findPartnerByApiKey(apiKey)
   if (!match) {
-    return res.status(401).json({ error: 'Invalid API key' });  }
+    return res.status(401).json({ error: 'Invalid API key' })  }
   const { partner, apiKey: key } = match
   const token = signJwt(
     {
@@ -79,7 +79,7 @@ if ( {) {
   )
   return res.status(200).json({ token, partner: { id: partner.id, name: partner.name } })
 }
-    .json({ token, partner: { id: partner && partner.id, name: partner && partner.name } });      sub: partner && partner.id
+    .json({ token, partner: { id: partner && partner.id, name: partner && partner.name } })      sub: partner && partner.id
       apiKeyId: key && key.id
       name: partner && partner.name
       entityType: partner && partner.entityType,

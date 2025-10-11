@@ -1,16 +1,13 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import { ChevronRight, Home } from 'lucide-react';
+import {ChevronRight, Home} from 'lucide-react';
 
-const Breadcrumb: React.FC = () => {
-  const pathSegments = typeof window !== 'undefined' ? window.location.pathname.split('/').filter(segment => segment !== '') : []
+const Breadcrumb: React.FC = () => {const pathSegments = typeof window !== 'undefined' ? window.location.pathname.split('/').filter(segment => segment !== '') : []
   const breadcrumbItems = [
-    { label: 'Home', href: '/' },
-    ...pathSegments.map(segment => ({
-      label: segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' '),
-      href: null
-    }))
+    { label: 'Home', href: '/'},
+    ...pathSegments.map(segment => ({label: segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' '),
+      href: null}))
   ]
 
   return (
@@ -44,4 +41,3 @@ const Breadcrumb: React.FC = () => {
 }
 
 export default Breadcrumb
-

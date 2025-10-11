@@ -3,8 +3,7 @@ import {BarChart, TrendingUp, Target, Zap, Brain, CheckCircle, Phone, Mail, Star
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-const AIAnalyticsPage: React.FC = () => {
-  const features = [
+const AIAnalyticsPage: React.FC = () => {const features = [
     {
       icon: Brain,
       title: 'Predictive Analytics',
@@ -14,19 +13,16 @@ const AIAnalyticsPage: React.FC = () => {
         'Real-time data processing',
         'Automated trend detection',
         'Custom prediction models'
-      ]
-    },
+      ]},
       icon: BarChart,
       title: 'Real-time Dashboards',
       description: 'Interactive dashboards that provide instant insights into your business performance',
-import { Link } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-const AIAnalyticsPage: React.FC = () => {
-    const features = [],
+const AIAnalyticsPage: React.FC = () => {const features = [],
   return (
-    {// TODO: Add content;
-  }
+    {// TODO: Add content;}
 }
   ico,
   n: Brain,
@@ -223,7 +219,8 @@ icon$5: Award,
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
 // Key Features</$1>"
             < className="grid grid-cols-1,"$2 />
-  md:grid-cols-2 gap-8"></div>)
+  md:grid-cols-2 gap-8"></div>
+)
               {features.map((feature, index) => ()}"
           < key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50,"$2 />
   hover:border-cyan-400/50 transition-all duration-300"></div>"
@@ -278,8 +275,7 @@ icon$5: Award,
                     className={`w-full block text-center py-3 px-4 rounded-lg font-medium transition-all duration-300 ${
                       tier.popular;
                         ? 'bg-cyan-400 text-slate-900 hover:bg-cyan-300'
-                        : 'bg-slate-700 text-white hover:bg-slate-600'
-                    }`}
+                        : 'bg-slate-700 text-white hover:bg-slate-600'}`}
                   >
                     Get Started</$1> (
                 </div>
@@ -392,31 +388,31 @@ export default AiAnalyticsPage</div>
   </p>
   </h2>
   </div>
-  </div>
-  </div>
+</div>
+</div>
   </a>
   </li>
   </ul>
   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
   </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
+</div>
+</div>
   </p>
   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
   </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </span></span></span></span></span></span></span></span></span></p></p></p></p></p></p></p></p></h1></h2></h2></h2></h3></h3></h3></h3></ul></ul></ul></li></li>

@@ -13,7 +13,7 @@ import path from 'path'
       name: path && path.basename(targetPath),
     })
     res && res.status(200).json({ ok: true })
-  });    appendAuditLog({ type: 'file_upload', section, name: path && path.basename(targetPath) })
+  })    appendAuditLog({ type: 'file_upload', section, name: path && path.basename(targetPath) })
     res && res.status(200).json({ ok: true })
   })
 import { appendAuditLog, resolveDataPath  } from '../../../../utils / api / storage'
@@ -54,7 +54,7 @@ function handler() {
       name: path.basename (target_path),
     })
     res.status (200).json ({ ok: true })
-  });    appendAuditLog ({ type: 'file_upload', section, name: path.basename (target_path) })
+  })    appendAuditLog ({ type: 'file_upload', section, name: path.basename (target_path) })
     res.status (200).json ({ ok: true })
   })
 }

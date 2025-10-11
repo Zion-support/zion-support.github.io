@@ -32,7 +32,7 @@ export default async function handler(
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST')
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 405)
-    return res.status(405).json({ error: 'Method Not Allowed' });  }
+    return res.status(405).json({ error: 'Method Not Allowed' })  }
   const { studentEmail, grantCode, courseId } = req.body |{}
   if (!studentEmail |!grantCode |!courseId) {
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400)
@@ -81,7 +81,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   records && records.push(record)
   await fs && fs.writeJSON(REDEMPTIONS_FILE, records, { spaces: 2 })
   await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 201)
-  return res && res.status(201).json({ id: record && record.id, redeemedAt: now });  return res && res.status(201).json({ id: record && record.id, redeemedAt: now })
+  return res && res.status(201).json({ id: record && record.id, redeemedAt: now })  return res && res.status(201).json({ id: record && record.id, redeemedAt: now })
   authenticate_request,
   enforceRateLimit,
   record_request,
@@ -116,7 +116,7 @@ if ( {) {
 }
     res.set_header ('Allow', 'POST')
     await record_request (req, res, auth.partner, auth.api_key, started, 405)
-    return res.status (405).json ({ error: 'Method Not Allowed' });  }
+    return res.status (405).json ({ error: 'Method Not Allowed' })  }
   const { student_email, grant_code, course_id } = req.body || {}
   // Check condition
 if ( {) {
@@ -173,7 +173,7 @@ redeemed_at: now,
   records.push (record)
   await fs.writeJSON (REDEMPTIONS_FILE, records, { spaces: 2 })
   await record_request (req, res, auth.partner, auth.api_key, started, 201)
-  return res.status (201).json ({ id: record.id, redeemed_at: now });  return res.status (201).json ({ id: record.id, redeemed_at: now })
+  return res.status (201).json ({ id: record.id, redeemed_at: now })  return res.status (201).json ({ id: record.id, redeemed_at: now })
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const started = Date.now()
   const auth = await authenticateRequest(req)

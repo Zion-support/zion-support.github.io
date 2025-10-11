@@ -20,7 +20,7 @@ createdAt: now,
   records && records.push(record)
   await fs && fs.writeJSON(TALENTS_FILE, records, { spaces: 2 })
   await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 201)
-  return res && res.status(201).json({ id: record && record.id });  return res && res.status(201).json({ id: record && record.id })
+  return res && res.status(201).json({ id: record && record.id })  return res && res.status(201).json({ id: record && record.id })
 }
 import type { NextApiRequest, NextApiResponse  } from "next"
 import fs from "fs-extra"
@@ -78,7 +78,7 @@ created_at: now,
   records.push (record)
   await fs.writeJSON (TALENTS_FILE, records, { spaces: 2 })
   await record_request (req, res, auth.partner, auth.api_key, started, 201)
-  return res.status (201).json ({ id: record.id });  return res.status (201).json ({ id: record.id })
+  return res.status (201).json ({ id: record.id })  return res.status (201).json ({ id: record.id })
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const started = Date.now()
   const auth = await authenticateRequest(req)

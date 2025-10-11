@@ -1,11 +1,10 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { Code, Zap, BarChart, Target, Users, TrendingUp } from 'lucide-react'
-const DeveloperToolsPage: React.FC = () => {
-  const _devTools = [
+import {Code, Zap, BarChart, Target, Users, TrendingUp} from 'lucide-react'
+const DeveloperToolsPage: React.FC = () => {const _devTools = [
     {
       title: 'AI Code Generator',
       description: 'Generate high-quality code using advanced AI models',
@@ -14,40 +13,35 @@ const DeveloperToolsPage: React.FC = () => {
       benefits: ['Increase Productivity by 60%', 'Reduce Coding Time by 50%', 'Improve Code Quality', 'Learn Best Practices'],
       price:     ,
 $4},
-    {
-      title: 'API Testing Suite',
+    {title: 'API Testing Suite',
       description: 'Comprehensive API testing and monitoring tools',
       icon: Zap,
       features: ['Automated Testing', 'Performance Monitoring', 'Load Testing', 'API Documentation'],
       benefits: ['Ensure API Reliability', 'Reduce Testing Time by 70%', 'Improve Performance', 'Prevent Downtime'],
       price:     ,
 $4},
-    {
-      title: 'Database Management Tool',
+    {title: 'Database Management Tool',
       description: 'Advanced database administration and optimization',
       icon: BarChart,
       features: ['Query Optimization', 'Performance Monitoring', 'Backup Management', 'Schema Design'],
       benefits: ['Improve Database Performance', 'Reduce Query Time by 80%', 'Automate Backups', 'Prevent Data Loss'],
       price:     ,
 $4},
-    {
-      title: 'DevOps Automation',
+    {title: 'DevOps Automation',
       description: 'Streamline development and deployment processes',
       icon: Target,
       features: ['CI/CD Pipelines', 'Container Management', 'Monitoring', 'Deployment Automation'],
       benefits: ['Faster Deployments', 'Reduce Errors by 90%', 'Improve Collaboration', 'Scale Efficiently'],
       price:     ,
 $4},
-    {
-      title: 'Code Review Assistant',
+    {title: 'Code Review Assistant',
       description: 'AI-powered code review and quality assurance',
       icon: Users,
       features: ['Automated Reviews', 'Security Scanning', 'Code Standards', 'Team Collaboration'],
       benefits: ['Improve Code Quality', 'Catch Bugs Early', 'Enforce Standards', 'Reduce Review Time'],
       price:     ,
 $4},
-    {
-      title: 'Performance Profiler',
+    {title: 'Performance Profiler',
       description: 'Advanced application performance monitoring and optimization',
       icon: TrendingUp,
       features: ['Real-time Monitoring', 'Performance Analysis', 'Bottleneck Detection', 'Optimization Suggestions'],
@@ -64,7 +58,8 @@ $4}
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         {/* Hero Section */}
-        </div><section className="pt-24 pb-16 px-4">
+        </div>
+<section className="pt-24 pb-16 px-4">
           </section>
 <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl sm: text-5xl md:text-6xl font-bold text-white mb-6">
@@ -220,7 +215,9 @@ $4}
   e: 'Starting at $179/month'
     }
   ]
-  return (<div>Coming Soon</div>)
+  return (
+<div>Coming Soon</div>
+)
   )
           <React.Fragment>
       <Helmet>
@@ -231,7 +228,8 @@ $4}
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         {/* Hero Section */}"
-        </div><section className="pt-24 pb-16 px-4"></section>"
+        </div>
+<section className="pt-24 pb-16 px-4"></section>"
           <div className="max-w-7xl mx-auto text-center"></div>"
             < className="text-4xl,$2 />
   sm:text-5xl,"
@@ -306,8 +304,10 @@ $4}
                         <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
         {/* Tools Grid */}"
-        </div><section className="py-16 px-4"></section>"
-          <div className="max-w-7xl mx-auto"></div>"
+        </div>
+<section className="py-16 px-4"></section>"
+          <div className="max-w-7xl mx-auto">
+</div>"
             <h2 className="text-3xl font-bold text-white text-center mb-12">
 // Our Developer Tools</$1>"
             < className="grid grid-cols-1,$2 />
@@ -368,7 +368,7 @@ $4}
 //                       Get Started Now,
           </a>
                   </div>
-                </div>
+</div>
               ))}
         {/* CTA Section */}
         <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
@@ -391,7 +391,7 @@ $4}
                 Email Us,
   
             </div>
-          </div>
+</div>
         </section>
         <Footer />
         {/* CTA Section */}"
@@ -415,7 +415,7 @@ $4}
 //                 Email Us;
           </a>
             </div>
-          </div>
+</div>
         </section>
       </main>
       <Footer /></Footer>
@@ -424,4 +424,19 @@ $4}
 }
 export default DeveloperToolsPage</a>
   </a>
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></p></p></h2></h2></h2></h3></h4></h4></ul></ul></ul></ul></li></li></section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></span></span></span></span></span></p></p></h2></h2></h2></h3></h4></h4></ul></ul></ul></ul></li></li></section>

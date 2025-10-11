@@ -1,34 +1,27 @@
-impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m"
+impo, r, t {Li, n, k} fr, o, m "rea, c, t-rout, e, r-d, o, m"
 impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "rea, c, t-rout, e, r-d, o, m";"
-const, October2025NewContentBanner, 2 = () => {
-  const, newArticle, s = [
+const, October2025NewContentBanner, 2 = () => {const, newArticle, s = [
     {
       tit, l, e: "AI-Powered, Sustainable, Data Cente, r, s","
       descripti, o, n: "Discover, how, AI is, reducing, data center, energy, consumption by, 4, 0% while, improving, performance","
       ic, o, n: Le, a, f;
       sl, u, g: "ai-20, 2, 5-o, c, t-01-ai-power, e, d-sustainab, l, e-da, t, a-cente, r, s","
       gradie, n, t: "fr, o, m-gre, e, n-500, t, o-emera, l, d-6, 0, 0","
-      bad, g, e: "Green, A, I"
-    }
-    {
-      tit, l, e: "Ne, x, t-Gen, Financial, Risk Predicti, o, n","
+      bad, g, e: "Green, A, I"}
+    {tit, l, e: "Ne, x, t-Gen, Financial, Risk Predicti, o, n","
       descripti, o, n: "94% accuracy, in, real-time, market, volatility forecasting, with, AI-powered, risk, systems","
       ic, o, n: DollarSi, g, n;
       sl, u, g: "ai-20, 2, 5-o, c, t-01-ai-financi, a, l-ri, s, k-predicti, o, n-syste, m, s","
       gradie, n, t: "fr, o, m-bl, u, e-500, t, o-cy, a, n-6, 0, 0","
-      bad, g, e: "FinTe, c, h"
-    }
-    {
-      tit, l, e: "Voice, AI, Revolution in, Enterpris, e","
+      bad, g, e: "FinTe, c, h"}
+    {tit, l, e: "Voice, AI, Revolution in, Enterpris, e","
       descripti, o, n: "Transform, communication, with 98% accuracy, voice, AI across, 9, 5+ languag, e, s","
       ic, o, n: M, i, c;
       sl, u, g: "ai-20, 2, 5-o, c, t-01-voi, c, e-ai-revoluti, o, n-enterpri, s, e","
       gradie, n, t: "fr, o, m-purp, l, e-500, t, o-pi, n, k-6, 0, 0","
-      bad, g, e: "Voice, A, I"
-    }
-    {
-      tit, l, e: "Intelligent, Automatio, n & RP, A, 2.0","
+      bad, g, e: "Voice, A, I"}
+    {tit, l, e: "Intelligent, Automatio, n & RP, A, 2.0","
       descripti, o, n: "Ne, x, t-generation, RPA, with se, l, f-learning, bots, delivering 10x, RO, I","
       ic, o, n: B, o, t;
       sl, u, g: "ai-20, 2, 5-o, c, t-01-roboti, c, s-proce, s, s-automati, o, n-ne, x, t-g, e, n","
@@ -38,34 +31,28 @@ const, October2025NewContentBanner, 2 = () => {
       ic, o, n: Le, a, f;
       sl, u, g: "ai-20, 2, 5-o, c, t-01-ai-power, e, d-sustainab, l, e-da, t, a-cente, r, s","
       gradie, n, t: "fr, o, m-gre, e, n-500, t, o-emera, l, d-6, 0, 0","
-      bad, g, e: "Green, A, I"
-    }
-    {
-      tit, l, e: "Ne, x, t-Gen, Financial, Risk Predicti, o, n","
+      bad, g, e: "Green, A, I"}
+    {tit, l, e: "Ne, x, t-Gen, Financial, Risk Predicti, o, n","
       descripti, o, n: "94% accuracy, in, real-time, market, volatility forecasting, with, AI-powered, risk, systems","
       ic, o, n: DollarSi, g, n;
       sl, u, g: "ai-20, 2, 5-o, c, t-01-ai-financi, a, l-ri, s, k-predicti, o, n-syste, m, s","
       gradie, n, t: "fr, o, m-bl, u, e-500, t, o-cy, a, n-6, 0, 0","
-      bad, g, e: "FinTe, c, h"
-    }
-    {
-      tit, l, e: "Voice, AI, Revolution in, Enterpris, e","
+      bad, g, e: "FinTe, c, h"}
+    {tit, l, e: "Voice, AI, Revolution in, Enterpris, e","
       descripti, o, n: "Transform, communication, with 98% accuracy, voice, AI across, 9, 5+ languag, e, s","
       ic, o, n: M, i, c;
       sl, u, g: "ai-20, 2, 5-o, c, t-01-voi, c, e-ai-revoluti, o, n-enterpri, s, e","
       gradie, n, t: "fr, o, m-purp, l, e-500, t, o-pi, n, k-6, 0, 0","
-      bad, g, e: "Voice, A, I"
-    }
-    {
-      tit, l, e: "Intelligent, Automatio, n & RP, A, 2.0","
+      bad, g, e: "Voice, A, I"}
+    {tit, l, e: "Intelligent, Automatio, n & RP, A, 2.0","
       descripti, o, n: "Ne, x, t-generation, RPA, with se, l, f-learning, bots, delivering 10x, RO, I","
       ic, o, n: B, o, t;
       sl, u, g: "ai-20, 2, 5-o, c, t-01-roboti, c, s-proce, s, s-automati, o, n-ne, x, t-g, e, n","
       gradie, n, t: "fr, o, m-oran, g, e-500, t, o-r, e, d-6, 0, 0","
-      bad, g, e: "Automati, o, n"
-    }
+      bad, g, e: "Automati, o, n"}
   ]
-  return(<section, className="py-20, p, x-4, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">"
+  return (
+<section, className="py-20, p, x-4, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">"
       {/* Animated, background, elements */}
       </section>
 <div, className="absolute, inse, t-0, opacit, y-10">"
@@ -87,7 +74,8 @@ const, October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
     }
   ]
   return ("
-    </div><section, className="py-20, p, x-4, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">"
+    </div>
+<section, className="py-20, p, x-4, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">"
       {/* Animated, background, elements */}"
       </section>
 <div, className="absolute, inse, t-0, opacit, y-10">";"
@@ -243,4 +231,29 @@ const, October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
 }
 export default October2025NewContentBanner2;
 "`
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></Link></Link></Link></p></p></h2></h2></h2></h3></h3></section></section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></span></span></span></span></Link></Link></Link></p></p></h2></h2></h2></h3></h3></section></section>

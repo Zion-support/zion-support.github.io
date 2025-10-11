@@ -1,10 +1,9 @@
 import {Leaf, Recycle, Zap, Globe, Target, CheckCircle, ArrowRight, Phone, Mail, Award, Users, TrendingUp} from 'lucide-react'
 'use client'
-import React, { useState } from 'react'
+import React, {useState} from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-const GreenITPage: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('solutions')
+const GreenITPage: React.FC = () => {const [activeTab, setActiveTab] = useState('solutions')
   const tabs = [
     {
       id: 'solutions',
@@ -330,15 +329,13 @@ valuevalue: '100%',
   ),
 }
 export default GreenITPage;
-import { Link } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-const GreenITPage: React.FC = () => {
-    return (
+const GreenITPage: React.FC = () => {return (
     </div>
 <div>Coming Soon</div>
-  )
-  }
+)}
   const [activeTab, setActiveTab] = useState('solutions')
 const tabs = [
     {/* TODO: Fix JSX expression */}
@@ -574,7 +571,9 @@ const tabs = [
         'Enhanced brand reputation'
       ico,
   n: Building,
-  return (<div>Coming Soon</div>)
+  return (
+<div>Coming Soon</div>
+)
   )
           <React.Fragment>
       <Navigation />
@@ -673,7 +672,8 @@ Learn More,
           {activeTab === 'benefits' && (}
 Benefits of Green IT;"
               < className="grid grid-cols-1,"$2 />
-  md:grid-cols-2 gap-8"></div>)
+  md:grid-cols-2 gap-8"></div>
+)
                 {benefits.map((benefit, index) => ()}"
           <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50"></div>"
                       <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4"></div>"
@@ -689,7 +689,8 @@ Benefits of Green IT;"
                 Our Certifications;"
               < className="grid grid-cols-1,$2 />
   md:grid-cols-2,"
-  lg:grid-cols-4 gap-6"></div>)
+  lg:grid-cols-4 gap-6"></div>
+)
                 {certifications.map((cert, index) => ()}"
           <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 text-center"></div>`
                     <div className={`w-16 h-16 ${cert.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}></div>`
@@ -737,34 +738,41 @@ Benefits of Green IT;"
   ),
 }
 export default GreenItPage</div>
-  </div>
-  </div>
-  </div>
+</div>
+</div>
+</div>
   </div>
   </li>
   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
   </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
   </h2>
   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
   </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-</div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></button></p></p></p></p></p></p></p></p></h2></h2></h2></h3></h3></h3></h3></h4></h4></h4></h4></ul></ul></ul></li></li></li></li>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div></span></span></span></span></span></span></span></button></p></p></p></p></p></p></p></p></h2></h2></h2></h3></h3></h3></h3></h4></h4></h4></h4></ul></ul></ul></li></li></li></li>

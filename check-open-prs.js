@@ -12,7 +12,7 @@ const options = {
 // const req = https.get(options, res => {
 )
   res.on('data', chunk => {)
-    data += chunk;)
+    data += chunk)
 const options = {/* TODO: Fix JSX expression */}
   }}
 // const req = https.get(options, res => {/* TODO: Fix JSX expression */})

@@ -1,92 +1,65 @@
-interface ServiceStatus {
-
-  name: string;
+interface ServiceStatus {name: string;
   status: 'operational' | 'degraded' | 'outage' | 'maintenance'
   description: string;
-  lastChecked: string;
-}
+  lastChecked: string;}
 
 
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
+class ErrorBoundary extends React.Component {constructor(props) {
     super(props)
-    this.state = { hasError: false }
+    this.state = { hasError: false}
 
 
 const FALLBACK_SERVICES: ServiceStatus[] = [
-  {
-    name: "Marketplace API",
+  {name: "Marketplace API",
     status: "operational",
     description: "Product listings and search functionality",
-    lastChecked: new Date().toISOString()
-  },
-  {
-    name: "Authentication Service", 
+    lastChecked: new Date().toISOString()},
+  {name: "Authentication Service", 
     status: "operational",
     description: "User login and registration",
-    lastChecked: new Date().toISOString()
-  },
-  {
-    name: "Payment Processing",
+    lastChecked: new Date().toISOString()},
+  {name: "Payment Processing",
     status: "operational", 
     description: "Checkout and payment handling",
-    lastChecked: new Date().toISOString()
-  },
-  {
-    name: "Talent Directory",
+    lastChecked: new Date().toISOString()},
+  {name: "Talent Directory",
     status: "operational",
     description: "AI talent profiles and matching",
-    lastChecked: new Date().toISOString()
-
+    lastChecked: new Date().toISOString()}
+  
+  static getDerivedStateFromError(error) {return { hasError: true}
   }
   
-  static getDerivedStateFromError(error) {
-    return { hasError: true }
-  }
+  componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
   
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo)
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>
-    }
+  render() {if (this.state.hasError) {
+      return <div>Something went wrong.</div>}
     
     return this.props.children;
   }
 })
 
 const FALLBACK_SERVICES: ServiceStatus[] = [
-  {
-    name: "Marketplace API",
+  {name: "Marketplace API",
     status: "operational",
     description: "Product listings and search functionality",
-    lastChecked: new Date().toISOString()
-  },
-  {
-    name: "Authentication Service", 
+    lastChecked: new Date().toISOString()},
+  {name: "Authentication Service", 
     status: "operational",
     description: "User login and registration",
-    lastChecked: new Date().toISOString()
-  },
-  {
-    name: "Payment Processing",
+    lastChecked: new Date().toISOString()},
+  {name: "Payment Processing",
     status: "operational", 
     description: "Checkout and payment handling",
-    lastChecked: new Date().toISOString()
-  },
-  {
-    name: "Talent Directory",
+    lastChecked: new Date().toISOString()},
+  {name: "Talent Directory",
     status: "operational",
     description: "AI talent profiles and matching",
-    lastChecked: new Date().toISOString()
-  }
+    lastChecked: new Date().toISOString()}
 ],
 
-export default function Status() {
-  const [externalStatusLoaded, setExternalStatusLoaded] = useState(false),
+export default function Status() {const [externalStatusLoaded, setExternalStatusLoaded] = useState(false),
   const [showFallback, setShowFallback] = useState(false),
   const [uptime, setUptime] = useState<number | null>(null),
   const statusUrl = process.env.NEXT_PUBLIC_STATUS_PAGE_URL || "https: //status.ziontechgroup.com",
@@ -96,48 +69,37 @@ export default function Status() {
     const timeout = setTimeout(() => {
       if (!externalStatusLoaded) {
         setShowFallback(true)
-import { SEO } from "@/components/SEO",
-import { useState, useEffect } from "react",
-import { AlertCircle, CheckCircle, Clock, ExternalLink } from 'lucide-react'
-import { Button } from "@/components/ui/button",
+import { SEO} from "@/components/SEO",
+import {useState, useEffect} from "react",
+import {AlertCircle, CheckCircle, Clock, ExternalLink} from 'lucide-react'
+import {Button} from "@/components/ui/button",
 import Link from "next/link",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { logWarn } from '@/utils/productionLogger',
-interface ServiceStatus {
-  name: string,
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card",
+import {logWarn} from '@/utils/productionLogger',
+interface ServiceStatus {name: string,
   status: 'operational' | 'degraded' | 'outage' | 'maintenance',
   description: string,
-  lastChecked: string;
-}
+  lastChecked: string;}
 
 const FALLBACK_SERVICES: ServiceStatus[] = [
-  {
-    name: "Marketplace API",
+  {name: "Marketplace API",
     status: "operational",
     description: "Product listings and search functionality",
-    lastChecked: new Date().toISOString()
-  },
-  {
-    name: "Authentication Service",
+    lastChecked: new Date().toISOString()},
+  {name: "Authentication Service",
     status: "operational",
     description: "User login and registration",
-    lastChecked: new Date().toISOString()
-  },
-  {
-    name: "Payment Processing",
+    lastChecked: new Date().toISOString()},
+  {name: "Payment Processing",
     status: "operational",
     description: "Checkout and payment handling",
-    lastChecked: new Date().toISOString()
-  },
-  {
-    name: "Talent Directory",
+    lastChecked: new Date().toISOString()},
+  {name: "Talent Directory",
     status: "operational",
     description: "AI talent profiles and matching",
-    lastChecked: new Date().toISOString()
-  }
+    lastChecked: new Date().toISOString()}
 ],
-export default function Status() {
-  const [externalStatusLoaded, setExternalStatusLoaded] = useState(false),
+export default function Status() {const [externalStatusLoaded, setExternalStatusLoaded] = useState(false),
   const [showFallback, setShowFallback] = useState(false),
   const [uptime, setUptime] = useState<number | null>(null),
   const statusUrl = process.env.NEXT_PUBLIC_STATUS_PAGE_URL || "https: //status.ziontechgroup.com",
@@ -145,27 +107,22 @@ export default function Status() {
     // Try to load external status page, fallback after timeout;
     const timeout = setTimeout(() => {
       if (!externalStatusLoaded) {
-        setShowFallback(true)
-      }
+        setShowFallback(true)}
     }, 5000), // 5 second timeout;
     return () => clearTimeout(timeout)
   }, [externalStatusLoaded]),
-  useEffect(() => {
-    async function fetchUptime() {
+  useEffect(() => {async function fetchUptime() {
       try {
         const res = await fetch('/api/health'),
         if (!res.ok) return,
         const data = await res.json(),
         if (typeof data.uptime === 'number') {
-          setUptime(data.uptime)
-        }
-      } catch (err) {
-        logWarn('Failed to fetch uptime', { data: err })
+          setUptime(data.uptime)}
+      } catch (err) {logWarn('Failed to fetch uptime', { data: err})
     fetchUptime()
   }, []),
 
-  const getStatusIcon = (status: ServiceStatus['status']) => {
-    switch (status) {
+  const getStatusIcon = (status: ServiceStatus['status']) => {switch (status) {
       case 'operational':
         return <CheckCircle className="h-5 w-5 text-green-500" />,
       case 'degraded':
@@ -176,10 +133,8 @@ export default function Status() {
         return <Clock className="h-5 w-5 text-blue-500" />,
       default:
         return <AlertCircle className="h-5 w-5 text-gray-500" />
-    fetchUptime()
-  }, []),
-  const getStatusIcon = (status: ServiceStatus['status']) => {
-    switch (status) {
+    fetchUptime()}, []),
+  const getStatusIcon = (status: ServiceStatus['status']) => {switch (status) {
       case 'operational':
         return <CheckCircle className="h-5 w-5 text-green-500" />,
       case 'degraded':
@@ -190,11 +145,9 @@ export default function Status() {
         return <Clock className="h-5 w-5 text-blue-500" />,
       default:
         return <AlertCircle className="h-5 w-5 text-gray-500" />}
-import React, { useState, useEffect } from 'react'; import { motion  } from 'framer-motion'; import { SEO } from '../components/SEO'; import {CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Globe, Zap, RefreshCw, TrendingUp, BarChart3, Calendar, AlertCircle, Info, ExternalLink } from 'lucide-react'; export default function Status() { const [lastUpdated, setLastUpdated] = useState(new Date()); const [isRefreshing, setIsRefreshing] = useState(false)
-}
+import React, {useState, useEffect} from 'react'; import {motion} from 'framer-motion'; import {SEO} from '../components/SEO'; import {CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Globe, Zap, RefreshCw, TrendingUp, BarChart3, Calendar, AlertCircle, Info, ExternalLink} from 'lucide-react'; export default function Status() {const [lastUpdated, setLastUpdated] = useState(new Date()); const [isRefreshing, setIsRefreshing] = useState(false)}
 
-  const formatUptime = (seconds: number) => {
-    const days = Math.floor(seconds / 86400),
+  const formatUptime = (seconds: number) => {const days = Math.floor(seconds / 86400),
     const hours = Math.floor((seconds % 86400) / 3600),
     const minutes = Math.floor((seconds % 3600) / 60),
     const parts: string[] = [],
@@ -261,8 +214,7 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
           )}
 
           {showFallback && (
-            <></>
-<div className="mb-8">
+            <div className="mb-8">
                 <Card className="bg-zion-blue-dark border-zion-blue-light">
                   <CardHeader>
                     <CardTitle className="text-white">Service Status Overview</CardTitle>
@@ -282,7 +234,7 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
                             <h3 className="font-medium text-white">{service.name}</h3>
                             <p className="text-sm text-zion-slate-light">{service.description}</p>
                           </div>
-                        </div>
+</div>
 <div className="text-right">
                           </div>
 <div className={`font-medium ${getStatusColor(service.status)}`}>
@@ -315,7 +267,6 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
                   </Link>
                 </Button>
               </div>
-            </>
           )}
 
           <div className="mt-12 text-center">
@@ -349,28 +300,24 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
               </CardContent>
             </Card>
           </div>
-        </div>
+</div>
       </main>
-    </>
-  )
+)
 }
 
-import { log_warn } from '@/utils / production_logger'
-interface ServiceStatus {
-  name: string,
+import {log_warn} from '@/utils / production_logger'
+interface ServiceStatus {name: string,
   status: 'operational' | 'degraded' | 'outage' | 'maintenance',
   description: string,
-  last_checked: string;
-}
+  last_checked: string;}
         return <CheckCircle className="h - 5 w - 5 text - green - 500" />
         return <Clock className="h - 5 w - 5 text - blue - 500" />
       default:
         return <AlertCircle className="h - 5 w - 5 text - gray - 500" />}
-import React, { useState, useEffect } from 'react'; import { motion  } from 'framer-motion'; import { SEO } from '../components / SEO'; import {CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Globe, Zap, RefreshCw, TrendingUp, BarChart3, Calendar, AlertCircle, Info, ExternalLink } from 'lucide-react'; export default /**
+import React, {useState, useEffect} from 'react'; import {motion} from 'framer-motion'; import {SEO} from '../components / SEO'; import {CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Globe, Zap, RefreshCw, TrendingUp, BarChart3, Calendar, AlertCircle, Info, ExternalLink} from 'lucide-react'; export default /**
  * Status - Function description;
  */
-function Status() { const [last_updated, setLastUpdated] = useState (new Date ()); const [is_refreshing, setIsRefreshing] = useState (false)
-})
+function Status() {const [last_updated, setLastUpdated] = useState (new Date ()); const [is_refreshing, setIsRefreshing] = useState (false)})
 
 
 

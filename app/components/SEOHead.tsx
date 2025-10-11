@@ -1,7 +1,7 @@
 const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '')
 const defaultStructuredData = {"@context": "https: //schema.org",
 import React from 'react'
-import {  Helmet  } from 'react-helmet-async'interface SEOHeadProps {title?: string
+import {  Helmet} from 'react-helmet-async'interface SEOHeadProps {title?: string
   description?: string
   keywords?: string
   canonical?: string
@@ -14,8 +14,7 @@ const SEOHead: React.FC<SEOHeadProps> = ()
 }) => {}
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
   const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '')
-const defaultStructuredData = {
-    "@context": "https: //schema.org",
+const defaultStructuredData = {"@context": "https: //schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
     "url": "https: //ziontechgroup.com",
@@ -33,8 +32,7 @@ const defaultStructuredData = {
       "contactType": "customer service",
       "https: //www.linkedin.com/company/zion-tech-group",
       "https: //twitter.com/ziontechgroup",
-    ],
-  }
+    ],}
       <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       <meta name="description" content="AI-powered solution" />
@@ -57,8 +55,7 @@ const defaultStructuredData = {
 interface SEOHeadProps {className?: string
   children?: React.ReactNode}
 
-const SEOHead: React.FC<SEOHeadProps> = ({ className = '', children }) => {
-  return (
+const SEOHead: React.FC<SEOHeadProps> = ({className = '', children}) => {return (
 <Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}

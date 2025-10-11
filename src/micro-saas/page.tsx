@@ -1,11 +1,10 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChart, MessageSquare, Eye, Phone, Lock, Database, Cloud, Code, Settings, BarChart3, ShoppingCart, Car, Target, Globe, Cpu, Smartphone, FileText, Bot, Music, Video, CreditCard, Train, Home, Heart, GraduationCap, Mail, Calendar, PieChart, Search, Filter, Download, Upload, Share, Edit, Trash2, Plus, Minus, Refresh, Play, Pause, Stop, Volume2, Camera, Image, File, Folder, Archive, Bookmark, Tag, Link as LinkIcon, ExternalLink, ArrowRight, ChevronRight, Award, Gift, Rocket, Lightbulb, Wrench, Hammer, Scissors, Paintbrush, Palette, Layers, Grid, List, Layout, Monitor, Laptop, Tablet, Smartphone as PhoneIcon, Headphones, Microphone, Speaker, Wifi, Bluetooth, Battery, Power, Zap as Lightning, Sun, Moon, CloudRain, Wind, Thermometer, Droplets, Snowflake, Cloud, CloudSnow, CloudLightning, CloudDrizzle, CloudFog, Eye as EyeIcon, EyeOff, Lock as LockIcon, Unlock, Key, Fingerprint, Shield as ShieldIcon, AlertTriangle, AlertCircle, Info, HelpCircle, X, Check, XCircle, CheckCircle2, PlusCircle, MinusCircle, XSquare, CheckSquare, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Heart as HeartIcon, ThumbsUp, ThumbsDown, Smile, Frown, Meh, Laugh, Angry, Surprised, Confused, Wink, Kiss, Tongue, Wink2, Kiss2, Tongue2, Wink3, Kiss3, Tongue3, Wink4, Kiss4, Tongue4, Wink5, Kiss5, Tongue5, Wink6, Kiss6, Tongue6, Wink7, Kiss7, Tongue7, Wink8, Kiss8, Tongue8, Wink9, Kiss9, Tongue9, Wink10, Kiss10, Tongue10 } from 'lucide-react'
+import {Link} from 'react-router-dom'
+import {CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChart, MessageSquare, Eye, Phone, Lock, Database, Cloud, Code, Settings, BarChart3, ShoppingCart, Car, Target, Globe, Cpu, Smartphone, FileText, Bot, Music, Video, CreditCard, Train, Home, Heart, GraduationCap, Mail, Calendar, PieChart, Search, Filter, Download, Upload, Share, Edit, Trash2, Plus, Minus, Refresh, Play, Pause, Stop, Volume2, Camera, Image, File, Folder, Archive, Bookmark, Tag, Link as LinkIcon, ExternalLink, ArrowRight, ChevronRight, Award, Gift, Rocket, Lightbulb, Wrench, Hammer, Scissors, Paintbrush, Palette, Layers, Grid, List, Layout, Monitor, Laptop, Tablet, Smartphone as PhoneIcon, Headphones, Microphone, Speaker, Wifi, Bluetooth, Battery, Power, Zap as Lightning, Sun, Moon, CloudRain, Wind, Thermometer, Droplets, Snowflake, Cloud, CloudSnow, CloudLightning, CloudDrizzle, CloudFog, Eye as EyeIcon, EyeOff, Lock as LockIcon, Unlock, Key, Fingerprint, Shield as ShieldIcon, AlertTriangle, AlertCircle, Info, HelpCircle, X, Check, XCircle, CheckCircle2, PlusCircle, MinusCircle, XSquare, CheckSquare, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Heart as HeartIcon, ThumbsUp, ThumbsDown, Smile, Frown, Meh, Laugh, Angry, Surprised, Confused, Wink, Kiss, Tongue, Wink2, Kiss2, Tongue2, Wink3, Kiss3, Tongue3, Wink4, Kiss4, Tongue4, Wink5, Kiss5, Tongue5, Wink6, Kiss6, Tongue6, Wink7, Kiss7, Tongue7, Wink8, Kiss8, Tongue8, Wink9, Kiss9, Tongue9, Wink10, Kiss10, Tongue10} from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
-export default function MicroSaasPage() {
-  const microSaasServices = [
+export default function MicroSaasPage() {const microSaasServices = [
     {
       icon: BarChart3,
       title: 'AI Analytics Dashboard',
@@ -15,10 +14,8 @@ export default function MicroSaasPage() {
       popular: true,
       category: 'Analytics',
       link: '/ai-analytics-dashboard',
-      benefits: ['Increase revenue by 25%', 'Save 10 hours/week', 'Real-time insights']
-    },
-    {
-      icon: ShoppingCart,
+      benefits: ['Increase revenue by 25%', 'Save 10 hours/week', 'Real-time insights']},
+    {icon: ShoppingCart,
       title: 'AI E-commerce Assistant',
       description: 'Complete e-commerce automation and optimization platform',
       features: ['Inventory Management', 'Order Processing', 'Customer Service', 'Analytics', 'Payment Integration', 'Shipping Automation'],
@@ -26,10 +23,8 @@ export default function MicroSaasPage() {
       popular: true,
       category: 'E-commerce',
       link: '/ai-ecommerce-solutions',
-      benefits: ['Boost sales by 40%', 'Reduce manual work by 80%', '24/7 customer support']
-    },
-    {
-      icon: Smartphone,
+      benefits: ['Boost sales by 40%', 'Reduce manual work by 80%', '24/7 customer support']},
+    {icon: Smartphone,
       title: 'AI Mobile App Builder',
       description: 'No-code mobile app development with AI-powered features',
       features: ['Drag & Drop Builder', 'AI Code Generation', 'App Store Publishing', 'Analytics', 'Push Notifications', 'Offline Support'],
@@ -37,10 +32,8 @@ export default function MicroSaasPage() {
       popular: false,
       category: 'Development',
       link: '/ai-mobile-app-development',
-      benefits: ['Build apps 10x faster', 'No coding required', 'Professional results']
-    },
-    {
-      icon: FileText,
+      benefits: ['Build apps 10x faster', 'No coding required', 'Professional results']},
+    {icon: FileText,
       title: 'AI Document Processor',
       description: 'Intelligent document processing and management system',
       features: ['OCR Processing', 'Data Extraction', 'Document Classification', 'Workflow Automation', 'Cloud Storage', 'Version Control'],
@@ -48,10 +41,8 @@ export default function MicroSaasPage() {
       popular: true,
       category: 'Productivity',
       link: '/ai-document-processing',
-      benefits: ['Process 1000+ docs/hour', '99.9% accuracy', 'Save 15 hours/week']
-    },
-    {
-      icon: Bot,
+      benefits: ['Process 1000+ docs/hour', '99.9% accuracy', 'Save 15 hours/week']},
+    {icon: Bot,
       title: 'AI Chatbot Builder',
       description: 'Create intelligent chatbots for any platform with advanced AI',
       features: ['Visual Builder', 'Multi-platform', 'Analytics', 'Custom Training', 'Voice Integration', 'Multi-language'],
@@ -59,10 +50,8 @@ export default function MicroSaasPage() {
       popular: true,
       category: 'Customer Service',
       link: '/ai-chatbot-builder',
-      benefits: ['Reduce support costs by 60%', '24/7 availability', 'Instant responses']
-    },
-    {
-      icon: Music,
+      benefits: ['Reduce support costs by 60%', '24/7 availability', 'Instant responses']},
+    {icon: Music,
       title: 'AI Content Creator',
       description: 'AI-powered content generation and optimization platform',
       features: ['Blog Writing', 'Social Media', 'Video Scripts', 'SEO Optimization', 'Image Generation', 'Video Creation'],
@@ -70,10 +59,8 @@ export default function MicroSaasPage() {
       popular: false,
       category: 'Marketing',
       link: '/ai-content-generation',
-      benefits: ['Create content 5x faster', 'SEO optimized', 'Multiple formats']
-    },
-    {
-      icon: Mail,
+      benefits: ['Create content 5x faster', 'SEO optimized', 'Multiple formats']},
+    {icon: Mail,
       title: 'AI Email Marketing',
       description: 'Intelligent email marketing automation and optimization',
       features: ['Email Templates', 'A/B Testing', 'Segmentation', 'Analytics', 'Drip Campaigns', 'Personalization'],
@@ -81,10 +68,8 @@ export default function MicroSaasPage() {
       popular: true,
       category: 'Marketing',
       link: '/ai-email-marketing',
-      benefits: ['Increase open rates by 35%', 'Automate campaigns', 'Better targeting']
-    },
-    {
-      icon: Calendar,
+      benefits: ['Increase open rates by 35%', 'Automate campaigns', 'Better targeting']},
+    {icon: Calendar,
       title: 'AI Scheduling Assistant',
       description: 'Smart scheduling and appointment management system',
       features: ['Calendar Integration', 'Auto-scheduling', 'Time Zone Handling', 'Reminders', 'Rescheduling', 'Analytics'],
@@ -92,10 +77,8 @@ export default function MicroSaasPage() {
       popular: false,
       category: 'Productivity',
       link: '/ai-scheduling-assistant',
-      benefits: ['Reduce no-shows by 50%', 'Save 5 hours/week', 'Better time management']
-    },
-    {
-      icon: PieChart,
+      benefits: ['Reduce no-shows by 50%', 'Save 5 hours/week', 'Better time management']},
+    {icon: PieChart,
       title: 'AI Financial Tracker',
       description: 'Intelligent financial tracking and budgeting tool',
       features: ['Expense Tracking', 'Budget Planning', 'Investment Analysis', 'Tax Preparation', 'Reports', 'Alerts'],
@@ -103,10 +86,8 @@ export default function MicroSaasPage() {
       popular: true,
       category: 'Finance',
       link: '/ai-financial-tracker',
-      benefits: ['Save 20% on expenses', 'Better financial planning', 'Automated tracking']
-    },
-    {
-      icon: Search,
+      benefits: ['Save 20% on expenses', 'Better financial planning', 'Automated tracking']},
+    {icon: Search,
       title: 'AI SEO Optimizer',
       description: 'Advanced SEO optimization and keyword research tool',
       features: ['Keyword Research', 'Content Optimization', 'Rank Tracking', 'Competitor Analysis', 'Technical SEO', 'Reports'],
@@ -114,10 +95,8 @@ export default function MicroSaasPage() {
       popular: true,
       category: 'Marketing',
       link: '/ai-seo-optimizer',
-      benefits: ['Increase organic traffic by 200%', 'Better rankings', 'Competitive advantage']
-    },
-    {
-      icon: Filter,
+      benefits: ['Increase organic traffic by 200%', 'Better rankings', 'Competitive advantage']},
+    {icon: Filter,
       title: 'AI Lead Generator',
       description: 'Intelligent lead generation and qualification system',
       features: ['Lead Scoring', 'Contact Discovery', 'Email Verification', 'CRM Integration', 'Follow-up Automation', 'Analytics'],
@@ -125,10 +104,8 @@ export default function MicroSaasPage() {
       popular: false,
       category: 'Sales',
       link: '/ai-lead-generator',
-      benefits: ['Generate 3x more leads', 'Higher quality prospects', 'Automated follow-up']
-    },
-    {
-      icon: Download,
+      benefits: ['Generate 3x more leads', 'Higher quality prospects', 'Automated follow-up']},
+    {icon: Download,
       title: 'AI Data Backup',
       description: 'Intelligent data backup and recovery solution',
       features: ['Automatic Backups', 'Version Control', 'Cloud Storage', 'Recovery Tools', 'Encryption', 'Monitoring'],
@@ -136,10 +113,8 @@ export default function MicroSaasPage() {
       popular: false,
       category: 'Security',
       link: '/ai-data-backup',
-      benefits: ['99.9% uptime', 'Secure storage', 'Easy recovery']
-    },
-    {
-      icon: Upload,
+      benefits: ['99.9% uptime', 'Secure storage', 'Easy recovery']},
+    {icon: Upload,
       title: 'AI File Manager',
       description: 'Smart file organization and management system',
       features: ['Auto-organization', 'Search & Filter', 'Duplicate Detection', 'Cloud Sync', 'Sharing', 'Version Control'],
@@ -147,10 +122,8 @@ export default function MicroSaasPage() {
       popular: false,
       category: 'Productivity',
       link: '/ai-file-manager',
-      benefits: ['Organize files automatically', 'Find files instantly', 'Reduce clutter']
-    },
-    {
-      icon: Share,
+      benefits: ['Organize files automatically', 'Find files instantly', 'Reduce clutter']},
+    {icon: Share,
       title: 'AI Social Media Manager',
       description: 'Comprehensive social media management and automation',
       features: ['Post Scheduling', 'Content Creation', 'Analytics', 'Engagement Tracking', 'Hashtag Research', 'Competitor Analysis'],
@@ -158,10 +131,8 @@ export default function MicroSaasPage() {
       popular: true,
       category: 'Marketing',
       link: '/ai-social-media-manager',
-      benefits: ['Increase engagement by 150%', 'Save 8 hours/week', 'Better content strategy']
-    },
-    {
-      icon: Edit,
+      benefits: ['Increase engagement by 150%', 'Save 8 hours/week', 'Better content strategy']},
+    {icon: Edit,
       title: 'AI Writing Assistant',
       description: 'Advanced AI-powered writing and editing tool',
       features: ['Grammar Check', 'Style Suggestions', 'Tone Analysis', 'Plagiarism Detection', 'Templates', 'Collaboration'],
@@ -169,10 +140,8 @@ export default function MicroSaasPage() {
       popular: true,
       category: 'Productivity',
       link: '/ai-writing-assistant',
-      benefits: ['Improve writing quality', 'Save 6 hours/week', 'Professional results']
-    },
-    {
-      icon: Trash2,
+      benefits: ['Improve writing quality', 'Save 6 hours/week', 'Professional results']},
+    {icon: Trash2,
       title: 'AI Data Cleaner',
       description: 'Intelligent data cleaning and validation system',
       features: ['Duplicate Removal', 'Data Validation', 'Format Standardization', 'Error Detection', 'Batch Processing', 'Quality Reports'],
@@ -180,10 +149,8 @@ export default function MicroSaasPage() {
       popular: false,
       category: 'Data Management',
       link: '/ai-data-cleaner',
-      benefits: ['Clean data 10x faster', '99.9% accuracy', 'Better data quality']
-    },
-    {
-      icon: Plus,
+      benefits: ['Clean data 10x faster', '99.9% accuracy', 'Better data quality']},
+    {icon: Plus,
       title: 'AI Project Manager',
       description: 'Intelligent project management and team collaboration',
       features: ['Task Management', 'Team Collaboration', 'Progress Tracking', 'Resource Planning', 'Timeline Management', 'Reporting'],
@@ -191,10 +158,8 @@ export default function MicroSaasPage() {
       popular: true,
       category: 'Project Management',
       link: '/ai-project-manager',
-      benefits: ['Complete projects 30% faster', 'Better team coordination', 'Real-time insights']
-    },
-    {
-      icon: Minus,
+      benefits: ['Complete projects 30% faster', 'Better team coordination', 'Real-time insights']},
+    {icon: Minus,
       title: 'AI Inventory Manager',
       description: 'Smart inventory management and optimization system',
       features: ['Stock Tracking', 'Reorder Alerts', 'Demand Forecasting', 'Supplier Management', 'Cost Analysis', 'Reports'],
@@ -202,10 +167,8 @@ export default function MicroSaasPage() {
       popular: false,
       category: 'Inventory',
       link: '/ai-inventory-manager',
-      benefits: ['Reduce stockouts by 80%', 'Optimize inventory levels', 'Save 20% on costs']
-    },
-    {
-      icon: Refresh,
+      benefits: ['Reduce stockouts by 80%', 'Optimize inventory levels', 'Save 20% on costs']},
+    {icon: Refresh,
       title: 'AI Workflow Automator',
       description: 'Intelligent workflow automation and process optimization',
       features: ['Process Mapping', 'Automation Rules', 'Integration Hub', 'Monitoring', 'Analytics', 'Custom Workflows'],
@@ -213,10 +176,8 @@ export default function MicroSaasPage() {
       popular: true,
       category: 'Automation',
       link: '/ai-workflow-automator',
-      benefits: ['Automate 80% of tasks', 'Reduce errors by 90%', 'Save 20 hours/week']
-    },
-    {
-      icon: Play,
+      benefits: ['Automate 80% of tasks', 'Reduce errors by 90%', 'Save 20 hours/week']},
+    {icon: Play,
       title: 'AI Video Creator',
       description: 'AI-powered video creation and editing platform',
       features: ['Auto-editing', 'Text-to-Video', 'Voice Synthesis', 'Music Integration', 'Templates', 'Export Options'],
@@ -224,10 +185,8 @@ export default function MicroSaasPage() {
       popular: false,
       category: 'Content Creation',
       link: '/ai-video-creator',
-      benefits: ['Create videos 5x faster', 'Professional quality', 'No editing skills needed']
-    },
-    {
-      icon: Pause,
+      benefits: ['Create videos 5x faster', 'Professional quality', 'No editing skills needed']},
+    {icon: Pause,
       title: 'AI Time Tracker',
       description: 'Intelligent time tracking and productivity analysis',
       features: ['Automatic Tracking', 'Productivity Analysis', 'Time Reports', 'Goal Setting', 'Team Management', 'Integrations'],
@@ -235,56 +194,47 @@ export default function MicroSaasPage() {
       popular: true,
       category: 'Productivity',
       link: '/ai-time-tracker',
-      benefits: ['Increase productivity by 25%', 'Better time management', 'Detailed insights']
-    }
+      benefits: ['Increase productivity by 25%', 'Better time management', 'Detailed insights']}
   ]
   const categories = [
-    { name: 'All', count: microSaasServices.length },
-    { name: 'Analytics', count: microSaasServices.filter(s => s.category === 'Analytics').length },
-    { name: 'E-commerce', count: microSaasServices.filter(s => s.category === 'E-commerce').length },
-    { name: 'Development', count: microSaasServices.filter(s => s.category === 'Development').length },
-    { name: 'Productivity', count: microSaasServices.filter(s => s.category === 'Productivity').length },
-    { name: 'Marketing', count: microSaasServices.filter(s => s.category === 'Marketing').length },
-    { name: 'Customer Service', count: microSaasServices.filter(s => s.category === 'Customer Service').length },
-    { name: 'Finance', count: microSaasServices.filter(s => s.category === 'Finance').length },
-    { name: 'Sales', count: microSaasServices.filter(s => s.category === 'Sales').length },
-    { name: 'Security', count: microSaasServices.filter(s => s.category === 'Security').length },
-    { name: 'Data Management', count: microSaasServices.filter(s => s.category === 'Data Management').length },
-    { name: 'Project Management', count: microSaasServices.filter(s => s.category === 'Project Management').length },
-    { name: 'Inventory', count: microSaasServices.filter(s => s.category === 'Inventory').length },
-    { name: 'Automation', count: microSaasServices.filter(s => s.category === 'Automation').length },
-    { name: 'Content Creation', count: microSaasServices.filter(s => s.category === 'Content Creation').length }
+    {name: 'All', count: microSaasServices.length},
+    {name: 'Analytics', count: microSaasServices.filter(s => s.category === 'Analytics').length},
+    {name: 'E-commerce', count: microSaasServices.filter(s => s.category === 'E-commerce').length},
+    {name: 'Development', count: microSaasServices.filter(s => s.category === 'Development').length},
+    {name: 'Productivity', count: microSaasServices.filter(s => s.category === 'Productivity').length},
+    {name: 'Marketing', count: microSaasServices.filter(s => s.category === 'Marketing').length},
+    {name: 'Customer Service', count: microSaasServices.filter(s => s.category === 'Customer Service').length},
+    {name: 'Finance', count: microSaasServices.filter(s => s.category === 'Finance').length},
+    {name: 'Sales', count: microSaasServices.filter(s => s.category === 'Sales').length},
+    {name: 'Security', count: microSaasServices.filter(s => s.category === 'Security').length},
+    {name: 'Data Management', count: microSaasServices.filter(s => s.category === 'Data Management').length},
+    {name: 'Project Management', count: microSaasServices.filter(s => s.category === 'Project Management').length},
+    {name: 'Inventory', count: microSaasServices.filter(s => s.category === 'Inventory').length},
+    {name: 'Automation', count: microSaasServices.filter(s => s.category === 'Automation').length},
+    {name: 'Content Creation', count: microSaasServices.filter(s => s.category === 'Content Creation').length}
   ]
   const benefits = [
-    {
-      icon: TrendingUp,
+    {icon: TrendingUp,
       title: 'Proven ROI',
-      description: 'Average 300% return on investment for our micro SAAS clients'
-    },
-    {
-      icon: Users,
+      description: 'Average 300% return on investment for our micro SAAS clients'},
+    {icon: Users,
       title: 'Easy Setup',
-      description: 'Get started in minutes with our intuitive setup process'
-    },
-    {
-      icon: Clock,
+      description: 'Get started in minutes with our intuitive setup process'},
+    {icon: Clock,
       title: '24/7 Support',
-      description: 'Round-the-clock support with guaranteed response times'
-    },
-    {
-      icon: Shield,
+      description: 'Round-the-clock support with guaranteed response times'},
+    {icon: Shield,
       title: 'Secure & Reliable',
-      description: 'Enterprise-grade security with 99.9% uptime guarantee'
-    }
+      description: 'Enterprise-grade security with 99.9% uptime guarantee'}
   ]
   const stats = [
-    { label: 'Active Users', value: '10,000+' },
-    { label: 'Apps Available', value: '50+' },
-    { label: 'Uptime Guarantee', value: '99.9%' },
-    { label: 'Support Available', value: '24/7' }
+    {label: 'Active Users', value: '10,000+'},
+    {label: 'Apps Available', value: '50+'},
+    {label: 'Uptime Guarantee', value: '99.9%'},
+    {label: 'Support Available', value: '24/7'}
   ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer
         title="Micro SAAS Solutions - Zion Tech Group"
         description="50+ AI-powered micro SAAS applications for modern businesses. Affordable tools starting from $14/month. Analytics, e-commerce, productivity, marketing, and more."
@@ -292,7 +242,8 @@ export default function MicroSaasPage() {
       />
       <Navigation />
       {/* Hero Section */}
-      </div><section className="pt-24 pb-16">
+      </div>
+<section className="pt-24 pb-16">
         </section>
 <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           </div>
@@ -316,8 +267,8 @@ export default function MicroSaasPage() {
                 Get Free Trial,
   
             </div>
-          </div>
-        </div>
+</div>
+</div>
       </section>
       {/* Stats Section */}
       <section className="py-16 bg-white/5">
@@ -335,7 +286,8 @@ export default function MicroSaasPage() {
 <div className="text-gray-300 text-sm md:text-base">
                   {stat.label})
       {/* Category Filter */}
-      </div><section className="py-8">
+      </div>
+<section className="py-8">
         </section>
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           </div>
@@ -346,7 +298,8 @@ export default function MicroSaasPage() {
                 className="bg-slate-800/50 hover:bg-cyan-500/20 text-gray-300 hover:text-white px-4 py-2 rounded-lg transition-colors duration-300">
                 {category.name} ({category.count})
       {/* Services Grid */}
-      </div><section className="py-24">
+      </div>
+<section className="py-24">
         </section>
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           </div>
@@ -388,7 +341,7 @@ export default function MicroSaasPage() {
                     Learn More,
   
                 </div>
-              </div>
+</div>
             ))}
       {/* Benefits Section */}
       <section className="py-24 bg-white/5">
@@ -410,7 +363,8 @@ export default function MicroSaasPage() {
                 <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}
                 <p className="text-gray-300">{benefit.description})
       {/* Pricing Tiers */}
-      </div><section className="py-24">
+      </div>
+<section className="py-24">
         </section>
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           </div>
@@ -489,8 +443,8 @@ export default function MicroSaasPage() {
                 Contact Sales,
   
             </div>
-          </div>
-        </div>
+</div>
+</div>
       </section>
       {/* CTA Section */}
       <section className="py-24">
@@ -514,8 +468,8 @@ export default function MicroSaasPage() {
                 className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 px-8 py-3 rounded-lg font-semibold transition-colors">
                 Start Free Trial;
             </div>
-          </div>
-        </div>
+</div>
+</div>
       </section>
       <Footer />
     </div>
@@ -551,4 +505,25 @@ export default function MicroSaasPage() {
   </h1>
   </SEOOptimizer>
   </div>
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></p></p></p></h2></h2></h3></h3></h3></h3></h3></ul></ul></ul></section></section></section></section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></span></span></span></p></p></p></h2></h2></h3></h3></h3></h3></h3></ul></ul></ul></section></section></section></section>

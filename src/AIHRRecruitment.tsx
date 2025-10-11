@@ -1,14 +1,12 @@
 import React from 'react'
-import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
-import { Link } from 'react-router-dom'
-import { 
-  Users, 
+import {motion} from 'framer-motion'
+import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
+import {Users, 
   Search, 
   Target, 
-import { Link } from 'react-router-dom'
-import { 
-  Users, 
+import { Link} from 'react-router-dom'
+import {Users, 
   Target, 
   Brain, 
   Zap, 
@@ -34,16 +32,13 @@ import {
   Lock,
   Database,
   Code,
-  GraduationCap;
-} from 'lucide-react'
-import { Link } from 'react-router-dom'
-import { Brain, Users, Target, BarChart3, Zap, Shield, ArrowRight, CheckCircle, TrendingUp, UserCheck } from 'lucide-react'
-export default function AIHRRecruitment() {
-  const features = [
+  GraduationCap;} from 'lucide-react'
+import {Link} from 'react-router-dom'
+import {Brain, Users, Target, BarChart3, Zap, Shield, ArrowRight, CheckCircle, TrendingUp, UserCheck} from 'lucide-react'
+export default function AIHRRecruitment() {const features = [
     {
-import { Link } from 'react-router-dom'
-import { 
-  Users, 
+import { Link} from 'react-router-dom'
+import {Users, 
   Brain, 
   Target, 
   Zap, 
@@ -65,90 +60,62 @@ import {
   GraduationCap,
   Heart,
   DollarSign,
-  Graph;
-} from 'lucide-react'
-const AIHRRecruitment: React.FC = () => {
-  const features = [
+  Graph;} from 'lucide-react'
+const AIHRRecruitment: React.FC = () => {const features = [
     {
       icon: Brain,
       title: "AI-Powered Candidate Matching",
       description: "Advanced algorithms that analyze skills, experience, and cultural fit to find the perfect candidates for your organization.",
-      benefits: ["Skill-based matching", "Cultural fit analysis", "Predictive success modeling"]
-    },
-    {
-      icon: Target,
+      benefits: ["Skill-based matching", "Cultural fit analysis", "Predictive success modeling"]},
+    {icon: Target,
       title: "Intelligent Sourcing",
       description: "Automated talent discovery across multiple platforms and databases to identify passive candidates and expand your talent pool.",
-      benefits: ["Multi-platform sourcing", "Passive candidate discovery", "Talent pipeline building"]
-    },
-    {
-      icon: BarChart3,
+      benefits: ["Multi-platform sourcing", "Passive candidate discovery", "Talent pipeline building"]},
+    {icon: BarChart3,
       title: "Predictive Analytics",
       description: "Data-driven insights that forecast hiring success, employee retention, and workforce planning needs.",
-      benefits: ["Hiring success prediction", "Retention forecasting", "Workforce planning"]
-    },
-    {
-      icon: Zap,
+      benefits: ["Hiring success prediction", "Retention forecasting", "Workforce planning"]},
+    {icon: Zap,
       title: "Automated Screening",
-      description: "Intelligent pre-screening to save time and improve quality"
-    },
-    {
-      icon: Shield,
+      description: "Intelligent pre-screening to save time and improve quality"},
+    {icon: Shield,
       title: "Bias-Free Hiring",
       description: "AI algorithms designed to eliminate unconscious bias in recruitment"
       icon: Brain,
       title: "AI-Powered Candidate Matching",
-      description: "Advanced algorithms that analyze skills, experience, and cultural fit to find the perfect candidates."
-    },
-    {
-      icon: Target,
+      description: "Advanced algorithms that analyze skills, experience, and cultural fit to find the perfect candidates."},
+    {icon: Target,
       title: "Intelligent Job Posting Optimization",
-      description: "AI-driven job descriptions that attract the right candidates and improve application quality."
-    },
-    {
-      icon: BarChart3,
+      description: "AI-driven job descriptions that attract the right candidates and improve application quality."},
+    {icon: BarChart3,
       title: "Predictive Hiring Analytics",
-      description: "Data-driven insights to predict candidate success and optimize hiring decisions."
-    },
-    {
-      icon: Zap,
+      description: "Data-driven insights to predict candidate success and optimize hiring decisions."},
+    {icon: Zap,
       title: "Automated Screening & Assessment",
-      description: "Intelligent screening processes that save time and identify top talent efficiently."
-    },
-    {
-      icon: Users,
+      description: "Intelligent screening processes that save time and identify top talent efficiently."},
+    {icon: Users,
       title: "Cultural Fit Analysis",
-      description: "AI-powered assessment of candidate alignment with company values and culture."
-    },
-    {
-      icon: Clock,
+      description: "AI-powered assessment of candidate alignment with company values and culture."},
+    {icon: Clock,
       title: "Streamlined Onboarding",
       description: "Automated onboarding workflows that ensure smooth transitions for new hires."
       description: "Intelligent resume parsing and initial screening that saves time and ensures consistent evaluation criteria.",
-      benefits: ["Resume parsing", "Automated screening", "Bias reduction"]
-    }
+      benefits: ["Resume parsing", "Automated screening", "Bias reduction"]}
   ]
   const services = [
-    {
-      title: "Talent Acquisition",
+    {title: "Talent Acquisition",
       description: "End-to-end recruitment process automation from job posting to candidate onboarding.",
       icon: UserPlus,
-      features: ["Job posting optimization", "Candidate sourcing", "Interview scheduling", "Offer management"]
-    },
-    {
-      title: "Employee Retention",
+      features: ["Job posting optimization", "Candidate sourcing", "Interview scheduling", "Offer management"]},
+    {title: "Employee Retention",
       description: "AI-driven insights to improve employee satisfaction and reduce turnover rates.",
       icon: Heart,
-      features: ["Satisfaction monitoring", "Retention prediction", "Engagement strategies", "Exit interview analysis"]
-    },
-    {
-      title: "Performance Management",
+      features: ["Satisfaction monitoring", "Retention prediction", "Engagement strategies", "Exit interview analysis"]},
+    {title: "Performance Management",
       description: "Continuous performance tracking and development planning powered by AI analytics.",
       icon: TrendingUp,
-      features: ["Goal tracking", "Performance analytics", "Development planning", "Feedback systems"]
-    },
-    {
-      title: "Workforce Planning",
+      features: ["Goal tracking", "Performance analytics", "Development planning", "Feedback systems"]},
+    {title: "Workforce Planning",
       description: "Strategic workforce planning using predictive analytics and market intelligence.",
       icon: Graph,
       features: ["Demand forecasting", "Skill gap analysis", "Succession planning", "Market intelligence"]
@@ -163,10 +130,8 @@ const AIHRRecruitment: React.FC = () => {
   Briefcase,
   Award,
   Shield,
-  TrendingUp;
-} from 'lucide-react'
-export default function AIHRRecruitment() {
-  const services = [
+  TrendingUp;} from 'lucide-react'
+export default function AIHRRecruitment() {const services = [
     {
       title: 'AI-Powered Talent Acquisition',
       description: 'Intelligent recruitment platform that automates candidate sourcing, screening, and matching using advanced AI algorithms.',
@@ -179,10 +144,8 @@ export default function AIHRRecruitment() {
         'Diversity and inclusion tracking',
         'Compliance monitoring'
       ],
-      price: 'Starting at $3,999/month'
-    },
-    {
-      title: 'Intelligent Candidate Assessment',
+      price: 'Starting at $3,999/month'},
+    {title: 'Intelligent Candidate Assessment',
       description: 'Advanced assessment tools that evaluate candidates using AI-driven behavioral analysis and skill testing.',
       icon: Target,
       features: [
@@ -193,10 +156,8 @@ export default function AIHRRecruitment() {
         'Video interview analysis',
         'Predictive performance modeling'
       ],
-      price: 'Starting at $2,499/month'
-    },
-    {
-      title: 'HR Process Automation',
+      price: 'Starting at $2,499/month'},
+    {title: 'HR Process Automation',
       description: 'Streamlined HR operations with AI-powered automation for onboarding, performance management, and employee engagement.',
       icon: Zap,
       features: [
@@ -207,10 +168,8 @@ export default function AIHRRecruitment() {
         'Compliance documentation',
         'HR analytics dashboard'
       ],
-      price: 'Starting at $1,999/month'
-    },
-    {
-      title: 'Employee Development & Training',
+      price: 'Starting at $1,999/month'},
+    {title: 'Employee Development & Training',
       description: 'AI-driven learning platforms that personalize training programs and track employee development progress.',
       icon: TrendingUp,
       features: [
@@ -221,59 +180,41 @@ export default function AIHRRecruitment() {
         'Certification management',
         'Learning analytics'
       ],
-      price: 'Starting at $2,999/month'
-    }
+      price: 'Starting at $2,999/month'}
   ]
   const recruitmentFeatures = [
-    {
-      title: 'Smart Sourcing',
+    {title: 'Smart Sourcing',
       description: 'AI-powered candidate discovery across multiple platforms and databases',
       icon: Search,
-      benefits: ['Passive candidate identification', 'Skills-based matching', 'Market intelligence', 'Competitive analysis']
-    },
-    {
-      title: 'Automated Screening',
+      benefits: ['Passive candidate identification', 'Skills-based matching', 'Market intelligence', 'Competitive analysis']},
+    {title: 'Automated Screening',
       description: 'Intelligent filtering and ranking of candidates based on job requirements',
       icon: Target,
-      benefits: ['Resume parsing', 'Keyword matching', 'Experience validation', 'Cultural fit assessment']
-    },
-    {
-      title: 'Interview Automation',
+      benefits: ['Resume parsing', 'Keyword matching', 'Experience validation', 'Cultural fit assessment']},
+    {title: 'Interview Automation',
       description: 'AI-driven interview scheduling, conducting, and evaluation',
       icon: MessageSquare,
-      benefits: ['Automated scheduling', 'Video interview analysis', 'Response evaluation', 'Candidate scoring']
-    },
-    {
-      title: 'Predictive Analytics',
+      benefits: ['Automated scheduling', 'Video interview analysis', 'Response evaluation', 'Candidate scoring']},
+    {title: 'Predictive Analytics',
       description: 'Data-driven insights for hiring decisions and candidate success prediction',
       icon: BarChart3,
       benefits: ['Success probability scoring', 'Retention prediction', 'Performance forecasting', 'Hiring ROI analysis']
       icon: Brain,
       title: 'AI-Powered Candidate Matching',
-      description: 'Advanced algorithms that match candidates to job requirements with 95% accuracy.'
-    },
-    {
-      icon: Users,
+      description: 'Advanced algorithms that match candidates to job requirements with 95% accuracy.'},
+    {icon: Users,
       title: 'Intelligent Talent Pool',
-      description: 'Build and maintain a dynamic talent pool with AI-driven candidate engagement.'
-    },
-    {
-      icon: Target,
+      description: 'Build and maintain a dynamic talent pool with AI-driven candidate engagement.'},
+    {icon: Target,
       title: 'Predictive Hiring Analytics',
-      description: 'Forecast hiring needs and identify the best candidates for future positions.'
-    },
-    {
-      icon: BarChart3,
+      description: 'Forecast hiring needs and identify the best candidates for future positions.'},
+    {icon: BarChart3,
       title: 'Performance Prediction',
-      description: 'AI models that predict candidate success and cultural fit within your organization.'
-    },
-    {
-      icon: Zap,
+      description: 'AI models that predict candidate success and cultural fit within your organization.'},
+    {icon: Zap,
       title: 'Automated Screening',
-      description: 'Automate initial candidate screening and assessment processes.'
-    },
-    {
-      icon: Shield,
+      description: 'Automate initial candidate screening and assessment processes.'},
+    {icon: Shield,
       title: 'Bias-Free Hiring',
       description: 'Ensure fair and unbiased hiring decisions with AI-powered diversity analytics.'
   Brain, 
@@ -285,9 +226,8 @@ export default function AIHRRecruitment() {
   DollarSign,
   TrendingUp,
   UserCheck;
-import { SEO } from '../../components/SEO'
-import { 
-  Users, 
+import { SEO} from '../../components/SEO'
+import {Users, 
   Search, 
   Brain, 
   Target, 
@@ -301,12 +241,9 @@ import {
   MessageSquare,
   CheckCircle,
   BarChart3,
-  Award;
-} from 'lucide-react'
-export default function AIHRRecruitment() {
-  const features = [
-    {
-    }
+  Award;} from 'lucide-react'
+export default function AIHRRecruitment() {const features = [
+    {}
   ]
   const benefits = [
     "Reduce time-to-hire by 60-80%",
@@ -317,82 +254,55 @@ export default function AIHRRecruitment() {
     "Better candidate experience"
   ]
   const solutions = [
-    {
-      title: "Talent Acquisition",
-      description: "End-to-end recruitment automation from sourcing to onboarding"
-    },
-    {
-      title: "Candidate Assessment",
-      description: "AI-powered skills testing and personality evaluation"
-    },
-    {
-      title: "Interview Management",
-      description: "Automated scheduling and structured interview processes"
-    },
-    {
-      title: "Employee Retention",
+    {title: "Talent Acquisition",
+      description: "End-to-end recruitment automation from sourcing to onboarding"},
+    {title: "Candidate Assessment",
+      description: "AI-powered skills testing and personality evaluation"},
+    {title: "Interview Management",
+      description: "Automated scheduling and structured interview processes"},
+    {title: "Employee Retention",
       description: "Predictive analytics for employee satisfaction and retention"
       title: "AI-Powered Candidate Screening",
       description: "Intelligent resume parsing and candidate matching using advanced NLP and ML algorithms",
       icon: Search,
-      benefits: ["90% faster screening", "Bias-free evaluation", "Skills-based matching", "Cultural fit analysis"]
-    },
-    {
-      title: "Predictive Hiring Analytics",
+      benefits: ["90% faster screening", "Bias-free evaluation", "Skills-based matching", "Cultural fit analysis"]},
+    {title: "Predictive Hiring Analytics",
       description: "Data-driven insights to predict candidate success and optimize hiring decisions",
       icon: Brain,
-      benefits: ["Success probability scoring", "Retention prediction", "Performance forecasting", "Risk assessment"]
-    },
-    {
-      title: "Automated Interview Scheduling",
+      benefits: ["Success probability scoring", "Retention prediction", "Performance forecasting", "Risk assessment"]},
+    {title: "Automated Interview Scheduling",
       description: "Smart scheduling system that coordinates interviews across multiple stakeholders",
       icon: Clock,
-      benefits: ["Automated coordination", "Calendar integration", "Reminder system", "Rescheduling handling"]
-    },
-    {
-      title: "Video Interview Analysis",
+      benefits: ["Automated coordination", "Calendar integration", "Reminder system", "Rescheduling handling"]},
+    {title: "Video Interview Analysis",
       description: "AI-powered video interview assessment with facial expression and sentiment analysis",
       icon: Video,
-      benefits: ["Emotional intelligence scoring", "Communication skills assessment", "Cultural fit evaluation", "Bias detection"]
-    },
-    {
-      title: "Talent Pipeline Management",
+      benefits: ["Emotional intelligence scoring", "Communication skills assessment", "Cultural fit evaluation", "Bias detection"]},
+    {title: "Talent Pipeline Management",
       description: "Intelligent candidate relationship management with automated follow-ups and engagement",
       icon: Users,
-      benefits: ["Automated nurturing", "Engagement scoring", "Pipeline analytics", "Talent rediscovery"]
-    },
-    {
-      title: "Compliance & Diversity Monitoring",
+      benefits: ["Automated nurturing", "Engagement scoring", "Pipeline analytics", "Talent rediscovery"]},
+    {title: "Compliance & Diversity Monitoring",
       description: "Ensure fair hiring practices and regulatory compliance with AI-powered monitoring",
       icon: Shield,
-      benefits: ["Bias detection", "Compliance reporting", "Diversity analytics", "Audit trails"]
-    }
+      benefits: ["Bias detection", "Compliance reporting", "Diversity analytics", "Audit trails"]}
   ]
   const recruitmentStages = [
-    {
-      stage: "Sourcing & Attraction",
+    {stage: "Sourcing & Attraction",
       description: "AI-powered job posting optimization and candidate attraction",
-      tools: ["Smart job descriptions", "Targeted advertising", "Passive candidate outreach", "Employer branding"]
-    },
-    {
-      stage: "Screening & Assessment",
+      tools: ["Smart job descriptions", "Targeted advertising", "Passive candidate outreach", "Employer branding"]},
+    {stage: "Screening & Assessment",
       description: "Automated candidate evaluation and skills assessment",
-      tools: ["Resume parsing", "Skills testing", "Cultural fit assessment", "Background verification"]
-    },
-    {
-      stage: "Interview & Selection",
+      tools: ["Resume parsing", "Skills testing", "Cultural fit assessment", "Background verification"]},
+    {stage: "Interview & Selection",
       description: "Intelligent interview process with AI-powered insights",
-      tools: ["Video interviews", "Structured questions", "Performance scoring", "Decision support"]
-    },
-    {
-      stage: "Onboarding & Retention",
+      tools: ["Video interviews", "Structured questions", "Performance scoring", "Decision support"]},
+    {stage: "Onboarding & Retention",
       description: "Automated onboarding and employee retention monitoring",
-      tools: ["Onboarding automation", "Performance tracking", "Engagement monitoring", "Retention analytics"]
-    }
+      tools: ["Onboarding automation", "Performance tracking", "Engagement monitoring", "Retention analytics"]}
   ]
   const pricingPlans = [
-    {
-      name: "Starter",
+    {name: "Starter",
       price: "$299/month",
       description: "Perfect for small businesses with basic hiring needs",
       features: [
@@ -404,10 +314,8 @@ export default function AIHRRecruitment() {
         "Mobile app access"
       ],
       cta: "Start Free Trial",
-      popular: false;
-    },
-    {
-      name: "Professional",
+      popular: false;},
+    {name: "Professional",
       price: "$799/month",
       description: "Ideal for growing companies with advanced recruitment needs",
       features: [
@@ -421,10 +329,8 @@ export default function AIHRRecruitment() {
         "Integration support"
       ],
       cta: "Start Free Trial",
-      popular: true;
-    },
-    {
-      name: "Enterprise",
+      popular: true;},
+    {name: "Enterprise",
       price: "$1,999/month",
       description: "For large organizations requiring enterprise-grade HR solutions",
       features: [
@@ -440,30 +346,21 @@ export default function AIHRRecruitment() {
         "Compliance consulting"
       ],
       cta: "Contact Sales",
-      popular: false;
-    }
+      popular: false;}
   ]
   const successMetrics = [
-    {
-      metric: "60%",
+    {metric: "60%",
       description: "Faster time-to-hire",
-      detail: "AI-powered screening and matching"
-    },
-    {
-      metric: "45%",
+      detail: "AI-powered screening and matching"},
+    {metric: "45%",
       description: "Reduction in hiring costs",
-      detail: "Automated processes and better matching"
-    },
-    {
-      metric: "3.2x",
+      detail: "Automated processes and better matching"},
+    {metric: "3.2x",
       description: "Better candidate quality",
-      detail: "AI-powered assessment and prediction"
-    },
-    {
-      metric: "85%",
+      detail: "AI-powered assessment and prediction"},
+    {metric: "85%",
       description: "Improved retention rates",
-      detail: "Better cultural fit and performance prediction"
-    }
+      detail: "Better cultural fit and performance prediction"}
   ]
   const industries = [
     "Reduce time-to-hire by 60%",
@@ -474,30 +371,21 @@ export default function AIHRRecruitment() {
     "Enhance diversity and inclusion"
   ]
   const pricingPlans = [
-    {
-      title: "Reduce Time-to-Hire",
+    {title: "Reduce Time-to-Hire",
       value: "60%",
-      description: "Faster candidate identification and screening processes"
-    },
-    {
-      title: "Improve Quality of Hire",
+      description: "Faster candidate identification and screening processes"},
+    {title: "Improve Quality of Hire",
       value: "45%",
-      description: "Better candidate matching and cultural fit assessment"
-    },
-    {
-      title: "Lower Recruitment Costs",
+      description: "Better candidate matching and cultural fit assessment"},
+    {title: "Lower Recruitment Costs",
       value: "35%",
-      description: "Reduced manual processes and improved efficiency"
-    },
-    {
-      title: "Increase Retention",
+      description: "Reduced manual processes and improved efficiency"},
+    {title: "Increase Retention",
       value: "40%",
-      description: "Better candidate selection and cultural alignment"
-    }
+      description: "Better candidate selection and cultural alignment"}
   ]
   const pricing = [
-    {
-      name: "Starter",
+    {name: "Starter",
       price: "$399",
       period: "/month",
       description: "Perfect for small businesses with basic HR needs",
@@ -508,10 +396,8 @@ export default function AIHRRecruitment() {
         "Standard reporting",
         "Email support"
       ],
-      popular: false;
-    },
-    {
-      name: "Professional",
+      popular: false;},
+    {name: "Professional",
       price: "$799",
       period: "/month",
       description: "Ideal for growing companies with comprehensive HR requirements",
@@ -523,15 +409,12 @@ export default function AIHRRecruitment() {
         "Performance management",
         "Priority support"
       ],
-      popular: true;
-    },
-    {
-      name: "Enterprise",
+      popular: true;},
+    {name: "Enterprise",
       price: "$1,599",
       period: "/month",
-import { Link } from 'react-router-dom'
-import { 
-  Users, 
+import { Link} from 'react-router-dom'
+import {Users, 
   Target, 
   Brain, 
   BarChart3, 
@@ -552,9 +435,8 @@ import {
   LineChart,
   Building,
   GraduationCap;
-import { Link } from 'react-router-dom'
-import { 
-  Users, 
+import { Link} from 'react-router-dom'
+import {Users, 
   Search, 
   Briefcase, 
   Target, 
@@ -567,17 +449,13 @@ import {
   MessageSquare,
   FileText,
   Clock,
-  Award;
-} from 'lucide-react'
-const AIHRRecruitment = () => {
-  const features = [
+  Award;} from 'lucide-react'
+const AIHRRecruitment = () => {const features = [
     {
       icon: Brain,
       title: "AI-Powered Candidate Matching",
-      description: "Advanced algorithms that automatically match candidates to job requirements based on skills, experience, and cultural fit."
-    },
-    {
-      icon: Search,
+      description: "Advanced algorithms that automatically match candidates to job requirements based on skills, experience, and cultural fit."},
+    {icon: Search,
       title: "Intelligent Talent Sourcing",
     'Reduce time-to-hire by 60-80% with AI automation',
     'Improve candidate quality by 40-60%',
@@ -591,32 +469,22 @@ const AIHRRecruitment = () => {
     "Increase diversity by 35-45% with bias-free screening",
     "Enhance candidate experience with 24/7 engagement",
     "Achieve 90%+ candidate satisfaction scores"
-      description: "Automated candidate discovery across multiple platforms with AI-driven outreach and engagement strategies."
-    },
-    {
-      icon: MessageSquare,
+      description: "Automated candidate discovery across multiple platforms with AI-driven outreach and engagement strategies."},
+    {icon: MessageSquare,
       title: "Smart Interview Automation",
-      description: "AI-powered interview scheduling, question generation, and candidate assessment tools."
-    },
-    {
-      icon: FileText,
+      description: "AI-powered interview scheduling, question generation, and candidate assessment tools."},
+    {icon: FileText,
       title: "Resume Parsing & Analysis",
-      description: "Automated resume screening with intelligent extraction of skills, experience, and qualifications."
-    },
-    {
-      icon: Shield,
+      description: "Automated resume screening with intelligent extraction of skills, experience, and qualifications."},
+    {icon: Shield,
       title: "Bias-Free Hiring",
-      description: "AI algorithms designed to eliminate unconscious bias and ensure fair, objective candidate evaluation."
-    },
-    {
-      icon: Zap,
+      description: "AI algorithms designed to eliminate unconscious bias and ensure fair, objective candidate evaluation."},
+    {icon: Zap,
       title: "Predictive Performance Analytics",
-      description: "Data-driven insights to predict candidate success and optimize hiring decisions."
-    }
+      description: "Data-driven insights to predict candidate success and optimize hiring decisions."}
   ]
   const useCases = [
-    {
-      description: "Complete HR solution for large organizations",
+    {description: "Complete HR solution for large organizations",
       features: [
         "Custom AI models",
         "Full HR suite integration",
@@ -630,29 +498,22 @@ const AIHRRecruitment = () => {
       name: "Technology",
       description: "AI-powered technical assessment and skills matching",
       icon: Brain,
-      benefits: ["Technical skills testing", "Code review automation", "Project portfolio analysis"]
-    },
-    {
-      name: "Healthcare",
+      benefits: ["Technical skills testing", "Code review automation", "Project portfolio analysis"]},
+    {name: "Healthcare",
       description: "Compliance-focused hiring with credential verification",
       icon: Shield,
-      benefits: ["License verification", "Compliance monitoring", "Clinical skills assessment"]
-    },
-    {
-      name: "Finance",
+      benefits: ["License verification", "Compliance monitoring", "Clinical skills assessment"]},
+    {name: "Finance",
       description: "Risk assessment and regulatory compliance monitoring",
       icon: BarChart3,
-      benefits: ["Background screening", "Compliance checks", "Risk assessment"]
-    },
-    {
-      name: "Manufacturing",
+      benefits: ["Background screening", "Compliance checks", "Risk assessment"]},
+    {name: "Manufacturing",
       description: "Skills-based hiring with safety compliance focus",
       icon: Award,
-      benefits: ["Safety training verification", "Skills assessment", "Performance tracking"]
-    }
+      benefits: ["Safety training verification", "Skills assessment", "Performance tracking"]}
   ]
   return (
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+<section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         </section>
 <div className="max-w-7xl mx-auto text-center">
           </div>
@@ -669,84 +530,57 @@ const AIHRRecruitment = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Transform your human resources and recruitment processes with AI-powered automation. 
               Find the best talent faster, reduce costs, and build stronger teams with intelligent insights.
-    {
-      title: 'Faster Hiring',
+    {title: 'Faster Hiring',
       description: 'Reduce time-to-hire by up to 60% with AI-powered automation',
-      icon: Zap;
-    },
-    {
-      title: 'Better Quality Hires',
+      icon: Zap;},
+    {title: 'Better Quality Hires',
       description: 'Improve candidate quality and retention with predictive analytics',
-      icon: Star;
-    },
-    {
-      title: 'Cost Reduction',
+      icon: Star;},
+    {title: 'Cost Reduction',
       description: 'Lower recruitment costs through automation and efficiency gains',
-      icon: TrendingUp;
-    },
-    {
-      title: 'Improved Diversity',
+      icon: TrendingUp;},
+    {title: 'Improved Diversity',
       description: 'Enhance diversity and inclusion with unbiased AI algorithms',
       icon: Users;
       industry: "Technology",
       title: "Technical Talent Acquisition",
       description: "AI-powered screening for technical roles with skill assessment and cultural fit analysis",
-      metrics: ["60% faster hiring", "40% better quality hires", "30% cost reduction"]
-    },
-    {
-      industry: "Healthcare",
+      metrics: ["60% faster hiring", "40% better quality hires", "30% cost reduction"]},
+    {industry: "Healthcare",
       title: "Clinical Staff Recruitment",
       description: "Intelligent matching of healthcare professionals with specific clinical requirements",
-      metrics: ["50% faster placement", "35% retention improvement", "45% compliance accuracy"]
-    },
-    {
-      industry: "Finance",
+      metrics: ["50% faster placement", "35% retention improvement", "45% compliance accuracy"]},
+    {industry: "Finance",
       title: "Compliance-Focused Hiring",
       description: "Regulatory compliance verification and background screening automation",
-      metrics: ["90% compliance accuracy", "70% faster screening", "Zero compliance violations"]
-    },
-    {
-      industry: "Manufacturing",
+      metrics: ["90% compliance accuracy", "70% faster screening", "Zero compliance violations"]},
+    {industry: "Manufacturing",
       title: "Skills-Based Matching",
       description: "AI-driven matching of technical skills with manufacturing requirements",
-      metrics: ["55% better skill matching", "40% training reduction", "25% productivity increase"]
-    }
+      metrics: ["55% better skill matching", "40% training reduction", "25% productivity increase"]}
   ]
   const technologies = [
-    {
-      name: "Machine Learning",
+    {name: "Machine Learning",
       description: "Advanced ML algorithms for candidate assessment and prediction",
-      icon: Brain;
-    },
-    {
-      name: "Natural Language Processing",
+      icon: Brain;},
+    {name: "Natural Language Processing",
       description: "AI-powered text analysis for resume parsing and communication",
-      icon: Eye;
-    },
-    {
-      name: "Predictive Analytics",
+      icon: Eye;},
+    {name: "Predictive Analytics",
       description: "Data-driven forecasting for hiring success and retention",
-      icon: LineChart;
-    },
-    {
-      name: "Automation Engine",
+      icon: LineChart;},
+    {name: "Automation Engine",
       description: "Intelligent workflow automation for recruitment processes",
-      icon: Zap;
-    },
-    {
-      name: "Talent Analytics",
+      icon: Zap;},
+    {name: "Talent Analytics",
       description: "Comprehensive workforce analytics and insights",
-      icon: BarChart3;
-    },
-    {
-      name: "Compliance Engine",
+      icon: BarChart3;},
+    {name: "Compliance Engine",
       description: "Built-in compliance and bias detection features",
-      icon: Shield;
-    }
+      icon: Shield;}
   ]
   const pricingTiers = [
-    {
-      name: "Starter",
+    {name: "Starter",
       price: "$2,499",
       period: "/month",
       description: "Perfect for small businesses starting with AI recruitment",
@@ -757,10 +591,8 @@ const AIHRRecruitment = () => {
         "Standard reporting",
         "Email support"
       ],
-      popular: false;
-    },
-    {
-      name: "Professional",
+      popular: false;},
+    {name: "Professional",
       price: "$5,999",
       period: "/month",
       description: "Advanced AI recruitment for growing businesses",
@@ -774,27 +606,19 @@ const AIHRRecruitment = () => {
         "Automated communication"
       industry: "Technology",
       description: "Technical skill assessment, coding challenges, and culture fit evaluation",
-      metrics: ["Time-to-Hire", "Quality of Hire", "Retention Rate"]
-    },
-    {
-      industry: "Healthcare",
+      metrics: ["Time-to-Hire", "Quality of Hire", "Retention Rate"]},
+    {industry: "Healthcare",
       description: "Clinical competency verification, license validation, and patient safety assessment",
-      metrics: ["Credential Verification", "Clinical Skills", "Patient Outcomes"]
-    },
-    {
-      industry: "Finance",
+      metrics: ["Credential Verification", "Clinical Skills", "Patient Outcomes"]},
+    {industry: "Finance",
       description: "Regulatory compliance, background checks, and risk assessment",
-      metrics: ["Compliance Rate", "Background Check Speed", "Risk Score"]
-    },
-    {
-      industry: "Manufacturing",
+      metrics: ["Compliance Rate", "Background Check Speed", "Risk Score"]},
+    {industry: "Manufacturing",
       description: "Safety training verification, skill assessment, and operational readiness",
-      metrics: ["Safety Score", "Skill Proficiency", "Training Completion"]
-    }
+      metrics: ["Safety Score", "Skill Proficiency", "Training Completion"]}
   ]
   const pricing = [
-    {
-      name: "Starter",
+    {name: "Starter",
       price: "$2,000",
       period: "/month",
       description: "Perfect for small companies starting with AI recruitment",
@@ -804,10 +628,8 @@ const AIHRRecruitment = () => {
         "Resume parsing",
         "Interview scheduling",
         "Email support"
-      ]
-    },
-    {
-      name: "Professional",
+      ]},
+    {name: "Professional",
       price: "$6,000",
       period: "/month",
       description: "Ideal for growing companies with advanced recruitment needs",
@@ -819,28 +641,20 @@ const AIHRRecruitment = () => {
         "Priority support",
         "Custom integrations"
       ],
-      popular: true;
-    },
-    {
-      name: "Enterprise",
+      popular: true;},
+    {name: "Enterprise",
       price: "Custom",
       period: "",
       title: 'Recruitment',
       description: 'AI-powered candidate sourcing, screening, and matching for all positions.',
-      icon: '🎯'
-    },
-    {
-      title: 'Employee Onboarding',
+      icon: '🎯'},
+    {title: 'Employee Onboarding',
       description: 'Automated onboarding processes with personalized learning paths.',
-      icon: '🚀'
-    },
-    {
-      title: 'Performance Management',
+      icon: '🚀'},
+    {title: 'Performance Management',
       description: 'Continuous performance monitoring and development recommendations.',
-      icon: '📊'
-    },
-    {
-      title: 'Talent Development',
+      icon: '📊'},
+    {title: 'Talent Development',
       description: 'AI-driven career path planning and skill development programs.',
       icon: '📈'
       description: "Tailored solutions for large organizations with complex hiring requirements",
@@ -851,11 +665,10 @@ const AIHRRecruitment = () => {
         "Dedicated support",
         "Advanced security",
         "API access"
-      ]
-    }
+      ]}
   ]
   return (
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/50 to-purple-900/50"></div>
+<div className="absolute inset-0 bg-gradient-to-r from-blue-900/50 to-purple-900/50"></div>
 <div className="relative z-10 container mx-auto px-4 py-24">
           </div>
 <div className="text-center max-w-4xl mx-auto">
@@ -888,7 +701,7 @@ const AIHRRecruitment = () => {
                 Schedule Demo;
               </Link>
             </div>
-          </div>
+</div>
           
           {/* Key Metrics */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-16">
@@ -897,23 +710,23 @@ const AIHRRecruitment = () => {
               </div>
 <div className="text-3xl font-bold text-blue-400 mb-2">60%</div>
 <div className="text-gray-400">Faster Hiring</div>
-            </div>
+</div>
 <div className="text-center">
               </div>
 <div className="text-3xl font-bold text-cyan-400 mb-2">45%</div>
 <div className="text-gray-400">Better Hires</div>
-            </div>
+</div>
 <div className="text-center">
               </div>
 <div className="text-3xl font-bold text-green-400 mb-2">35%</div>
 <div className="text-gray-400">Cost Reduction</div>
-            </div>
+</div>
 <div className="text-center">
               </div>
 <div className="text-3xl font-bold text-purple-400 mb-2">40%</div>
 <div className="text-gray-400">Higher Retention</div>
-            </div>
-          </div>
+</div>
+</div>
 <div className="min-h-screen bg-gradient-to-br from-black via-green-900 to-blue-900">
       <SEO
         title="AI HR & Recruitment Platform - Zion Tech Group" 
@@ -923,13 +736,14 @@ const AIHRRecruitment = () => {
       />
 
       {/* Hero Section with Futuristic Background */}
-      </div><section className="relative overflow-hidden">
+      </div>
+<section className="relative overflow-hidden">
         </section>
 <div className="absolute inset-0">
           </div>
 <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 via-blue-600/20 to-cyan-500/20"></div>
 <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(34,197,94,0.1),transparent_50%)]"></div>
-        </div>
+</div>
 <div className="relative z-10 container mx-auto px-4 py-24 text-center">
           </div>
 <div className="mb-8">
@@ -938,7 +752,7 @@ const AIHRRecruitment = () => {
               <Users className="w-4 h-4 mr-2" />
               AI-Powered HR & Recruitment;
             </div>
-          </div>
+</div>
           
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="bg-gradient-to-r from-green-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
@@ -972,42 +786,36 @@ const AIHRRecruitment = () => {
               </div>
 <div className="text-3xl font-bold text-green-400 mb-2">60%</div>
 <div className="text-gray-400 text-sm">Faster Hiring</div>
-            </div>
+</div>
 <div className="text-center">
               </div>
 <div className="text-3xl font-bold text-blue-400 mb-2">45%</div>
 <div className="text-gray-400 text-sm">Cost Reduction</div>
-            </div>
+</div>
 <div className="text-center">
               </div>
 <div className="text-3xl font-bold text-cyan-400 mb-2">3.2x</div>
 <div className="text-gray-400 text-sm">Better Candidates</div>
-            </div>
+</div>
 <div className="text-center">
               </div>
 <div className="text-3xl font-bold text-emerald-400 mb-2">85%</div>
 <div className="text-gray-400 text-sm">Retention Rate</div>
-            </div>
-          </div>
+</div>
+</div>
       title: "High-Volume Recruitment",
       description: "Handle thousands of applications efficiently with AI-powered screening and ranking.",
       icon: Users;
     },
-    {
-      title: "Technical Hiring",
+    {title: "Technical Hiring",
       description: "Assess technical skills through AI-powered coding challenges and technical interviews.",
-      icon: Briefcase;
-    },
-    {
-      title: "Cultural Fit Assessment",
+      icon: Briefcase;},
+    {title: "Cultural Fit Assessment",
       description: "Evaluate candidate alignment with company values and team dynamics.",
-      icon: Target;
-    },
-    {
-      title: "Employee Retention",
+      icon: Target;},
+    {title: "Employee Retention",
       description: "Predict turnover risk and identify factors that contribute to employee satisfaction.",
-      icon: TrendingUp;
-    }
+      icon: TrendingUp;}
   ]
   const benefits = [
     "Reduce time-to-hire by 60-80%",
@@ -1018,12 +826,13 @@ const AIHRRecruitment = () => {
     "Better employee retention rates"
   ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
+<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
-      </div><section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      </div>
+<section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         </section>
 <div className="max-w-7xl mx-auto">
-          </div>
+</div>
 <div className="text-center">
             </div>
 <div className="flex items-center justify-center mb-6">
@@ -1046,8 +855,8 @@ const AIHRRecruitment = () => {
                 Watch Demo;
               </button>
             </div>
-          </div>
-        </div>
+</div>
+</div>
         
         {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -1055,15 +864,15 @@ const AIHRRecruitment = () => {
 <div className="absolute top-20 left-10 w-2 h-2 bg-green-400 rounded-full animate-ping"></div>
 <div className="absolute top-40 right-20 w-3 h-3 bg-teal-400 rounded-full animate-pulse"></div>
 <div className="absolute bottom-20 left-1/4 w-1 h-1 bg-green-400 rounded-full animate-bounce"></div>
-        </div>
+</div>
       </section>
 
       {/* Features Section */}
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 20}}
+            whileInView={{ opacity: 1, y: 0}}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -1079,10 +888,10 @@ const AIHRRecruitment = () => {
             {features.map((feature, index) => (
               <motion.div;
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
+                transition={{ duration: 0.8, delay: index * 0.1}}
+                viewport={{ once: true}}
                 className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500 transition-all duration-300"
               >
                 </div>
@@ -1099,7 +908,8 @@ const AIHRRecruitment = () => {
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Our AI recruitment platform combines cutting-edge technology with proven HR practices;
               to deliver exceptional hiring results.
-      </div><section className="py-20 bg-black/50">
+      </div>
+<section className="py-20 bg-black/50">
         </section>
 <div className="container mx-auto px-4">
           </div>
@@ -1110,10 +920,11 @@ const AIHRRecruitment = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our comprehensive AI platform covers every aspect of the recruitment process, 
               from sourcing to onboarding.
-      </div><section className="py-20 px-4 sm:px-6 lg:px-8">
+      </div>
+<section className="py-20 px-4 sm:px-6 lg:px-8">
         </section>
 <div className="max-w-7xl mx-auto">
-          </div>
+</div>
 <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Intelligent HR & Recruitment Features;
@@ -1149,9 +960,9 @@ const AIHRRecruitment = () => {
                 Watch Demo;
               </button>
             </div>
-          </div>
-        </div>
-      </div>
+</div>
+</div>
+</div>
 
       {/* Key Benefits */}
       <div className="container mx-auto px-4 py-16">
@@ -1203,14 +1014,14 @@ const AIHRRecruitment = () => {
               </div>
             ))}
           </div>
-        </div>
+</div>
       </section>
 
       {/* Services Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         </section>
 <div className="max-w-7xl mx-auto">
-          </div>
+</div>
 <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Comprehensive HR Solutions;
@@ -1270,17 +1081,17 @@ const AIHRRecruitment = () => {
               </div>
             ))}
           </div>
-        </div>
+</div>
       </section>
 
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         </section>
 <div className="max-w-7xl mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 20}}
+            whileInView={{ opacity: 1, y: 0}}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -1294,10 +1105,10 @@ const AIHRRecruitment = () => {
           </div>
 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <motion.div;
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, x: -20}}
+              whileInView={{ opacity: 1, x: 0}}
+              transition={{ duration: 0.8}}
+              viewport={{ once: true}}
             >
               <h3 className="text-2xl font-semibold mb-6">Key Benefits</h3>
               </div>
@@ -1313,10 +1124,10 @@ const AIHRRecruitment = () => {
             </motion.div>
 
             <motion.div;
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, x: 20}}
+              whileInView={{ opacity: 1, x: 0}}
+              transition={{ duration: 0.8}}
+              viewport={{ once: true}}
             >
               <h3 className="text-2xl font-semibold mb-6">Solutions</h3>
               <div className="space-y-4">
@@ -1332,7 +1143,7 @@ const AIHRRecruitment = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         </section>
 <div className="max-w-7xl mx-auto">
-          </div>
+</div>
 <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Why Choose AI HR & Recruitment?
@@ -1340,7 +1151,8 @@ const AIHRRecruitment = () => {
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Experience unprecedented efficiency and success in your hiring process.
       {/* Industry Solutions Section */}
-      </div><section className="py-20 bg-black/50">
+      </div>
+<section className="py-20 bg-black/50">
         </section>
 <div className="container mx-auto px-4">
           </div>
@@ -1376,7 +1188,7 @@ const AIHRRecruitment = () => {
               </div>
             ))}
           </div>
-        </div>
+</div>
       </section>
 
       {/* Industries Section */}
@@ -1384,10 +1196,10 @@ const AIHRRecruitment = () => {
         </section>
 <div className="max-w-7xl mx-auto">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 20}}
+            whileInView={{ opacity: 1, y: 0}}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -1403,20 +1215,21 @@ const AIHRRecruitment = () => {
             {industries.map((industry, index) => (
               <motion.div;
                 key={industry}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
+                transition={{ duration: 0.8, delay: index * 0.1}}
+                viewport={{ once: true}}
                 className="bg-gray-800/50 border border-gray-700 rounded-lg p-6 text-center hover:border-cyan-500 transition-all duration-300"
               >
                 <Briefcase className="w-8 h-8 text-cyan-500 mx-auto mb-3" />
                 <h3 className="font-semibold">{industry}</h3>
               </motion.div>
       {/* Use Cases Section */}
-      </div><section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-blue-900/50">
+      </div>
+<section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-blue-900/50">
         </section>
 <div className="max-w-7xl mx-auto">
-          </div>
+</div>
 <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Perfect For Every Hiring Need;
@@ -1440,7 +1253,7 @@ const AIHRRecruitment = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         </section>
 <div className="max-w-7xl mx-auto">
-          </div>
+</div>
 <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Measurable Results;
@@ -1478,17 +1291,17 @@ const AIHRRecruitment = () => {
 <div className="text-4xl font-bold text-green-400 mb-2">{metric.metric}</div>
 <div className="text-white font-semibold mb-2">{metric.description}</div>
 <div className="text-gray-400 text-sm">{metric.detail}</div>
-              </div>
+</div>
             ))}
           </div>
-        </div>
+</div>
       </section>
 
       {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         </section>
 <div className="max-w-7xl mx-auto">
-          </div>
+</div>
 <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Choose Your Plan;
@@ -1502,13 +1315,13 @@ const AIHRRecruitment = () => {
               < key={index} className={`relative bg-gray-800/50 rounded-xl p-8 border transition-all duration-300 ${$2 />
                 plan.popular;
                   ? 'border-blue-500/50 scale-105' 
-                  : 'border-gray-700 hover:border-gray-600'
-              }`}>
+                  : 'border-gray-700 hover:border-gray-600'}`}>
                 {plan.popular && (
                   </div>
 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-2 rounded-full text-sm font-medium">
-      </div><section className="py-20 bg-black/50">
+      </div>
+<section className="py-20 bg-black/50">
         </section>
 <div className="container mx-auto px-4">
           </div>
@@ -1525,8 +1338,7 @@ const AIHRRecruitment = () => {
               < key={index} className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${$2 />
                 plan.popular;
                   ? 'border-green-500/50 shadow-2xl shadow-green-500/25' 
-                  : 'border-gray-700/50 hover:border-green-500/50'
-              }`}>
+                  : 'border-gray-700/50 hover:border-green-500/50'}`}>
                 {plan.popular && (
                   </div>
 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -1559,8 +1371,7 @@ const AIHRRecruitment = () => {
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
                     plan.popular;
                       ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white hover:from-blue-600 hover:to-cyan-600'
-                      : 'border border-gray-600 text-gray-300 hover:text-white hover:border-gray-500'
-                  }`}
+                      : 'border border-gray-600 text-gray-300 hover:text-white hover:border-gray-500'}`}
                 >
                   Get Started;
                   <ArrowRight className="ml-2 w-4 h-4" />
@@ -1569,14 +1380,13 @@ const AIHRRecruitment = () => {
                 < className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${$2 />
                   plan.popular;
                     ? 'bg-gradient-to-r from-green-500 to-blue-500 text-white hover:scale-105'
-                    : 'bg-gray-700 text-white hover:bg-gray-600'
-                }`}>
+                    : 'bg-gray-700 text-white hover:bg-gray-600'}`}>
                   {plan.cta}
                 </button>
               </div>
             ))}
           </div>
-        </div>
+</div>
       </section>
 
       {/* CTA Section */}
@@ -1584,10 +1394,10 @@ const AIHRRecruitment = () => {
         </section>
 <div className="max-w-4xl mx-auto text-center">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 20}}
+            whileInView={{ opacity: 1, y: 0}}
+            transition={{ duration: 0.8}}
+            viewport={{ once: true}}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Revolutionize Your HR?
@@ -1614,7 +1424,8 @@ const AIHRRecruitment = () => {
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             Join thousands of companies that have already revolutionized their recruitment with AI automation.
-      </div><section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-500/10 to-cyan-500/10">
+      </div>
+<section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-500/10 to-cyan-500/10">
         </section>
 <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -1638,7 +1449,7 @@ const AIHRRecruitment = () => {
                       <h3 className="text-2xl font-bold text-white">{service.title}</h3>
                       <p className="text-gray-400">{service.price}</p>
                     </div>
-                  </div>
+</div>
                   
                   <p className="text-gray-300 mb-6">{service.description}</p>
                   
@@ -1658,11 +1469,11 @@ const AIHRRecruitment = () => {
                     Learn More;
                   </Link>
                 </div>
-              )
+)
             })
           </div>
-        </div>
-      </div>
+</div>
+</div>
 
       {/* Recruitment Features Section */}
       <div className="py-20">
@@ -1691,7 +1502,7 @@ const AIHRRecruitment = () => {
                       <h3 className="text-2xl font-bold text-white">{feature.title}</h3>
                       <p className="text-gray-300">{feature.description}</p>
                     </div>
-                  </div>
+</div>
                   
                   <ul className="space-y-3">
                     {feature.benefits.map((benefit, benefitIndex) => (
@@ -1704,7 +1515,7 @@ const AIHRRecruitment = () => {
             {features.map((feature, index) => {
               const Icon = feature.icon;
               return (
-                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-green-400/50 transition-all duration-300 hover:transform hover:scale-105">
+<div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-green-400/50 transition-all duration-300 hover:transform hover:scale-105">
                   </div>
 <div className="w-16 h-16 bg-gradient-to-br from-green-500/20 to-teal-500/20 rounded-xl flex items-center justify-center mb-6">
                     <Icon className="w-8 h-8 text-green-400" />
@@ -1712,15 +1523,15 @@ const AIHRRecruitment = () => {
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
-              )
+)
             })
           </div>
-        </div>
-              </div>
-            )
+</div>
+</div>
+)
           })
         </div>
-      </div>
+</div>
 
       {/* Use Cases */}
       <div className="container mx-auto px-4 py-16">
@@ -1754,10 +1565,10 @@ const AIHRRecruitment = () => {
                   </div>
                 ))}
               </div>
-            </div>
+</div>
           ))}
         </div>
-      </div>
+</div>
 
       {/* Technologies */}
       <div className="container mx-auto px-4 py-16">
@@ -1783,10 +1594,10 @@ const AIHRRecruitment = () => {
                 <h3 className="text-xl font-semibold mb-3 text-white">{tech.name}</h3>
                 <p className="text-gray-300">{tech.description}</p>
               </div>
-            )
+)
           })
         </div>
-      </div>
+</div>
 
       {/* Pricing */}
       <div className="container mx-auto px-4 py-16">
@@ -1804,8 +1615,7 @@ const AIHRRecruitment = () => {
             < key={index} className={`relative bg-gray-800/50 rounded-2xl p-8 border ${$2 />
               tier.popular;
                 ? 'border-cyan-500 shadow-lg shadow-cyan-500/20' 
-                : 'border-gray-700/50'
-            }`}>
+                : 'border-gray-700/50'}`}>
               {tier.popular && (
                 </div>
 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -1839,15 +1649,14 @@ const AIHRRecruitment = () => {
                 className={`w-full py-3 px-6 rounded-full font-semibold text-center transition-all duration-300 ${
                   tier.popular;
                     ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600'
-                    : 'border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white'
-                }`}
+                    : 'border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white'}`}
               >
                 Get Started;
               </Link>
             </div>
           ))}
         </div>
-      </div>
+</div>
 
       {/* CTA Section */}
       <div className="container mx-auto px-4 py-16">
@@ -1869,7 +1678,7 @@ const AIHRRecruitment = () => {
 <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-2xl flex items-center justify-center">
               <UserCheck className="w-10 h-10 text-white" />
             </div>
-          </div>
+</div>
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
             AI HR & Recruitment;
           </h1>
@@ -1888,7 +1697,7 @@ const AIHRRecruitment = () => {
 <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center">
               <Users className="w-10 h-10 text-white" />
             </div>
-          </div>
+</div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             AI HR & Recruitment;
           </h1>
@@ -1936,10 +1745,10 @@ const AIHRRecruitment = () => {
               Need enterprise pricing? <a href="/contact" className="text-green-400 hover:text-green-300 underline">Contact our sales team</a>
             </p>
           </div>
-        </div>
+</div>
       </section>
-    </div>
-  )
+</div>
+)
 }
 export default AIHRRecruitment;
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
@@ -1979,14 +1788,14 @@ export default AIHRRecruitment;
               Request Demo;
             </Link>
           </div>
-        </div>
+</div>
       </section>
 
       {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
         </section>
 <div className="max-w-7xl mx-auto">
-          </div>
+</div>
 <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               HR & Recruitment Use Cases;
@@ -2011,19 +1820,19 @@ export default AIHRRecruitment;
                       <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
                       <p className="text-gray-300">{useCase.description}</p>
                     </div>
-                  </div>
-                </div>
-              )
+</div>
+</div>
+)
             })
           </div>
-        </div>
+</div>
       </section>
 
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         </section>
 <div className="max-w-7xl mx-auto">
-          </div>
+</div>
 <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose AI HR & Recruitment?
@@ -2041,7 +1850,7 @@ export default AIHRRecruitment;
               </div>
             ))}
           </div>
-        </div>
+</div>
 
         {/* Features Grid */}
         <div className="mb-20">
@@ -2062,10 +1871,10 @@ export default AIHRRecruitment;
                   <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                   <p className="text-zion-slate-light">{feature.description}</p>
                 </div>
-              )
+)
             })
           </div>
-        </div>
+</div>
 
         {/* Benefits Section */}
         <div className="mb-20">
@@ -2084,8 +1893,8 @@ export default AIHRRecruitment;
                 </div>
               ))}
             </div>
-          </div>
-        </div>
+</div>
+</div>
 
         {/* Use Cases */}
         <div className="mb-20">
@@ -2111,10 +1920,10 @@ export default AIHRRecruitment;
                     </div>
                   ))}
                 </div>
-              </div>
+</div>
             ))}
           </div>
-        </div>
+</div>
 
         {/* Pricing */}
         <div className="mb-20">
@@ -2125,8 +1934,7 @@ export default AIHRRecruitment;
 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
               < key={index} className={`relative bg-zion-blue-dark/50 backdrop-blur-sm border rounded-2xl p-6 ${$2 />
-                plan.popular ? 'border-zion-cyan shadow-lg shadow-zion-cyan/25' : 'border-zion-cyan/20'
-              }`}>
+                plan.popular ? 'border-zion-cyan shadow-lg shadow-zion-cyan/25' : 'border-zion-cyan/20'}`}>
                 {plan.popular && (
                   </div>
 <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
@@ -2157,15 +1965,14 @@ export default AIHRRecruitment;
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular;
                       ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover:from-zion-cyan-light hover:to-zion-purple-light'
-                      : 'bg-transparent border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white'
-                  }`}
+                      : 'bg-transparent border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white'}`}
                 >
                   Get Started;
                 </Link>
               </div>
             ))}
           </div>
-        </div>
+</div>
 
         {/* CTA Section */}
         <div className="text-center">
@@ -2193,11 +2000,11 @@ export default AIHRRecruitment;
                 Schedule Consultation;
               </Link>
             </div>
-          </div>
-        </div>
-      </div>
+</div>
+</div>
+</div>
     </div>
-  )
+)
 }
 export default AIHRRecruitment;
 }
@@ -2224,14 +2031,14 @@ export default AIHRRecruitment;
               Schedule Demo;
             </button>
           </div>
-        </div>
+</div>
       </section>
 
       {/* Navigation Links */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         </section>
 <div className="max-w-7xl mx-auto">
-          </div>
+</div>
 <div className="text-center mb-12">
             <h3 className="text-2xl font-bold text-white mb-4">Explore More Services</h3>
             <p className="text-gray-300">Discover our complete range of AI and technology solutions</p>
@@ -2249,7 +2056,7 @@ export default AIHRRecruitment;
                   </div>
                   <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-green-400 transition-colors" />
                 </div>
-              </div>
+</div>
             </Link>
             
             <Link to="/services/ai-marketing-automation" className="group">
@@ -2263,7 +2070,7 @@ export default AIHRRecruitment;
                   </div>
                   <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-green-400 transition-colors" />
                 </div>
-              </div>
+</div>
             </Link>
             
             <Link to="/services/ai-legal-tech" className="group">
@@ -2277,14 +2084,32 @@ export default AIHRRecruitment;
                   </div>
                   <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-green-400 transition-colors" />
                 </div>
-              </div>
+</div>
             </Link>
           </div>
-        </div>
+</div>
       </section>
-    </div>
-  )
+</div>
+)
 }
 export default AIHRRecruitment;
 }
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></p></p></p></p></p></p></p></p></p></ul></ul></li></li></li></section></section></section></section></section></section></section></section></section></section></section></section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div></div></span></p></p></p></p></p></p></p></p></p></ul></ul></li></li></li></section></section></section></section></section></section></section></section></section></section></section></section>

@@ -1,8 +1,8 @@
-import { Link } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       </div><main className="container mx-auto px-4 py-16 pt-24">
         </main><section className="text-center mb-16">
@@ -25,7 +25,8 @@ import Footer from '../components/Footer'
 // >
 //               Get Free Demo;
         {/* Features Section */}"
-        </div><section className="mb-16"></section>"
+        </div>
+<section className="mb-16"></section>"
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
 // Key Features</h2>"
           < className="grid grid-cols-1,$2 />

@@ -1,8 +1,7 @@
 import React from 'react'
-import React, { useState } from 'react'
-import { motion } from 'framer-motion'
-import { 
-  Users, 
+import React, {useState} from 'react'
+import {motion} from 'framer-motion'
+import {Users, 
   Award, 
   Globe, 
   Zap, 
@@ -12,9 +11,8 @@ import {
   Rocket,
   Star,
   CheckCircle;
-import { Link } from 'react-router-dom'
-import { 
-  Linkedin, 
+import { Link} from 'react-router-dom'
+import {Linkedin, 
   Twitter, 
   Mail, 
   Globe, 
@@ -25,119 +23,93 @@ import {
   Cpu,
   Rocket,
   Building,
-  Zap;
-} from 'lucide-react'
-export default function Team() {
-  const [selectedDepartment, setSelectedDepartment] = useState('all')
+  Zap;} from 'lucide-react'
+export default function Team() {const [selectedDepartment, setSelectedDepartment] = useState('all')
   const [selectedLocation, setSelectedLocation] = useState('all')
   const departments = [
-    { id: 'all', name: 'All Departments', count: 45 },
-    { id: 'leadership', name: 'Leadership', count: 8 },
-    { id: 'engineering', name: 'Engineering', count: 18 },
-    { id: 'ai-research', name: 'AI Research', count: 12 },
-    { id: 'sales', name: 'Sales & Business', count: 7 }
+    { id: 'all', name: 'All Departments', count: 45},
+    {id: 'leadership', name: 'Leadership', count: 8},
+    {id: 'engineering', name: 'Engineering', count: 18},
+    {id: 'ai-research', name: 'AI Research', count: 12},
+    {id: 'sales', name: 'Sales & Business', count: 7}
   ]
   const locations = [
-    { id: 'all', name: 'All Locations', count: 45 },
-    { id: 'middletown', name: 'Middletown, DE', count: 25 },
-    { id: 'remote', name: 'Remote', count: 15 },
-    { id: 'amsterdam', name: 'Amsterdam, NL', count: 5 }
+    {id: 'all', name: 'All Locations', count: 45},
+    {id: 'middletown', name: 'Middletown, DE', count: 25},
+    {id: 'remote', name: 'Remote', count: 15},
+    {id: 'amsterdam', name: 'Amsterdam, NL', count: 5}
   ]
   const teamMembers = [
-    {
-import React from 'react'
-import { SEO } from '@/components/SEO'
-import { Link } from 'react-router-dom'
-export default function Team() {
-  const leadership = [
+    {import React from 'react'
+import { SEO} from '@/components/SEO'
+import {Link} from 'react-router-dom'
+export default function Team() {const leadership = [
     {
       name: 'Kleber Santos',
       role: 'Founder & CEO',
       bio: 'Visionary leader with over 15 years of experience in AI and quantum computing. Former CTO at major tech companies.',
       image: '/images/team/kleber-santos.jpg',
       linkedin: 'https://linkedin.com/in/kleber-santos',
-      twitter: 'https://twitter.com/kleber_santos'
-    },
-    {
-      name: 'Dr. Sarah Chen',
+      twitter: 'https://twitter.com/kleber_santos'},
+    {name: 'Dr. Sarah Chen',
       role: 'Chief Executive Officer',
       bio: 'Visionary leader with 15+ years of experience in AI and quantum computing. Former research director at leading tech institutions.',
       expertise: ['AI Strategy', 'Quantum Computing', 'Business Innovation'],
       avatar: 'SC',
       linkedin: '#',
-      achievements: ['PhD Computer Science', '20+ Patents', 'Forbes 30 Under 30']
-    },
-    {
-      name: 'Michael Rodriguez',
+      achievements: ['PhD Computer Science', '20+ Patents', 'Forbes 30 Under 30']},
+    {name: 'Michael Rodriguez',
       role: 'Chief Technology Officer',
       bio: 'Technology innovator specializing in autonomous systems and enterprise architecture. Led digital transformation for Fortune 500 companies.',
       expertise: ['Autonomous Systems', 'Enterprise Architecture', 'Digital Transformation'],
       avatar: 'MR',
       linkedin: '#',
-      achievements: ['MSc Engineering', '15+ Years Experience', 'Industry Speaker']
-    },
-    {
-      name: 'Dr. James Kim',
+      achievements: ['MSc Engineering', '15+ Years Experience', 'Industry Speaker']},
+    {name: 'Dr. James Kim',
       role: 'Chief Innovation Officer',
       bio: 'Research pioneer in emerging technologies. Leading our quantum computing and blockchain initiatives with breakthrough innovations.',
       expertise: ['Quantum Computing', 'Blockchain', 'Emerging Tech'],
       avatar: 'JK',
       linkedin: '#',
-      achievements: ['PhD Physics', 'Research Papers', 'Innovation Awards']
-    },
-    {
-      name: 'Emily Watson',
+      achievements: ['PhD Physics', 'Research Papers', 'Innovation Awards']},
+    {name: 'Emily Watson',
       role: 'Chief Operations Officer',
       bio: 'Operations expert with deep experience in scaling technology companies. Ensures seamless delivery of our global services.',
       expertise: ['Operations Management', 'Global Scaling', 'Service Delivery'],
       avatar: 'EW',
       linkedin: '#',
-      achievements: ['MBA Business', '10+ Years Operations', 'Process Optimization']
-    }
+      achievements: ['MBA Business', '10+ Years Operations', 'Process Optimization']}
   ]
   const departmentHeads = [
-    {
-      name: 'Alex Thompson',
+    {name: 'Alex Thompson',
       role: 'Head of AI Solutions',
       department: 'AI & Machine Learning',
       bio: 'Leading our AI initiatives with expertise in deep learning and neural networks.',
-      avatar: 'AT'
-    },
-    {
-      name: 'Dr. Lisa Park',
+      avatar: 'AT'},
+    {name: 'Dr. Lisa Park',
       role: 'Head of Cybersecurity',
       department: 'Security & Compliance',
       bio: 'Cybersecurity expert with certifications in CISSP, CISM, and extensive threat intelligence experience.',
-      avatar: 'LP'
-    },
-    {
-      name: 'David Chen',
+      avatar: 'LP'},
+    {name: 'David Chen',
       role: 'Head of Cloud Architecture',
       department: 'Cloud & DevOps',
       bio: 'Cloud specialist with expertise in multi-cloud strategies and DevOps automation.',
-      avatar: 'DC'
-    },
-    {
-      name: 'Maria Garcia',
+      avatar: 'DC'},
+    {name: 'Maria Garcia',
       role: 'Head of Digital Transformation',
       department: 'Business Solutions',
       bio: 'Digital transformation consultant helping businesses navigate technological change.',
-      avatar: 'MG'
-    }
+      avatar: 'MG'}
   ]
   const companyStats = [
-    {
-      number: '50+',
+    {number: '50+',
       label: 'Team Members',
-      description: 'Diverse professionals from around the world'
-    },
-    {
-      number: '25+',
+      description: 'Diverse professionals from around the world'},
+    {number: '25+',
       label: 'Countries',
-      description: 'Global team with local expertise'
-    },
-    {
-      name: 'Client Success',
+      description: 'Global team with local expertise'},
+    {name: 'Client Success',
       icon: Users,
       color: 'from-orange-500 to-yellow-500',
       description: 'Ensuring client success and project delivery',
@@ -155,10 +127,8 @@ export default function Team() {
       email: "sarah.chen@ziontechgroup.com",
       image: "/images/team/sarah-chen.jpg",
       achievements: ["Top 100 AI Leaders 2024", "MIT Technology Review Innovator", "Published 50+ Research Papers"],
-      featured: true;
-    },
-    {
-      id: 2,
+      featured: true;},
+    {id: 2,
       name: "James Wilson",
       role: "Chief Technology Officer",
       department: "Technology",
@@ -171,10 +141,8 @@ export default function Team() {
       email: "james.wilson@ziontechgroup.com",
       image: "/images/team/james-wilson.jpg",
       achievements: ["AWS Community Builder", "Cybersecurity Expert", "Cloud Architecture Specialist"],
-      featured: true;
-    },
-    {
-      id: 3,
+      featured: true;},
+    {id: 3,
       name: "Dr. Michael Rodriguez",
       role: "Chief Research Officer",
       department: "Research & Development",
@@ -187,10 +155,8 @@ export default function Team() {
       email: "michael.rodriguez@ziontechgroup.com",
       image: "/images/team/michael-rodriguez.jpg",
       achievements: ["Nobel Prize Nominee 2023", "Caltech Distinguished Alumnus", "100+ Scientific Publications"],
-      featured: true;
-    },
-    {
-      id: 4,
+      featured: true;},
+    {id: 4,
       name: "Lisa Thompson",
       role: "Chief Operations Officer",
       department: "Operations",
@@ -203,10 +169,8 @@ export default function Team() {
       email: "lisa.thompson@ziontechgroup.com",
       image: "/images/team/lisa-thompson.jpg",
       achievements: ["Fortune 500 Executive", "Operational Excellence Award", "Leadership Excellence"],
-      featured: false;
-    },
-    {
-      id: 5,
+      featured: false;},
+    {id: 5,
       name: "Alex Kim",
       role: "VP of Engineering",
       department: "Engineering",
@@ -219,10 +183,8 @@ export default function Team() {
       email: "alex.kim@ziontechgroup.com",
       image: "/images/team/alex-kim.jpg",
       achievements: ["Google Engineering Award", "Open Source Contributor", "Technical Leadership"],
-      featured: false;
-    },
-    {
-      id: 6,
+      featured: false;},
+    {id: 6,
       name: "Dr. Emily Johnson",
       role: "VP of Healthcare Solutions",
       department: "Industry Solutions",
@@ -235,10 +197,8 @@ export default function Team() {
       email: "emily.johnson@ziontechgroup.com",
       image: "/images/team/emily-johnson.jpg",
       achievements: ["Healthcare Innovation Award", "Medical Technology Pioneer", "Regulatory Expert"],
-      featured: false;
-    },
-    {
-      id: 7,
+      featured: false;},
+    {id: 7,
       name: "David Park",
       role: "VP of Emerging Technologies",
       department: "Innovation",
@@ -251,10 +211,8 @@ export default function Team() {
       email: "david.park@ziontechgroup.com",
       image: "/images/team/david-park.jpg",
       achievements: ["Innovation Award", "Patent Holder", "Technology Evangelist"],
-      featured: false;
-    },
-    {
-      id: 8,
+      featured: false;},
+    {id: 8,
       name: "Rachel Martinez",
       role: "VP of Customer Success",
       department: "Customer Experience",
@@ -267,29 +225,24 @@ export default function Team() {
       email: "rachel.martinez@ziontechgroup.com",
       image: "/images/team/rachel-martinez.jpg",
       achievements: ["Customer Success Excellence", "Client Satisfaction Award", "Team Leadership"],
-      featured: false;
-    }
+      featured: false;}
   ]
   const departments = [
-    {
-  const advisors = [
+    {const advisors = [
     {
       name: 'Dr. James Wilson',
       role: 'AI Ethics Advisor',
       bio: 'Leading researcher in AI ethics and responsible technology development.',
       image: '/images/team/james-wilson.jpg',
-      linkedin: 'https://linkedin.com/in/james-wilson'
-    },
-    {
-      name: 'Elena Petrova',
+      linkedin: 'https://linkedin.com/in/james-wilson'},
+    {name: 'Elena Petrova',
       role: 'Quantum Computing Advisor',
       bio: 'Former research director at leading quantum computing labs.',
       image: '/images/team/elena-petrova.jpg',
-      linkedin: 'https://linkedin.com/in/elena-petrova'
-    }
+      linkedin: 'https://linkedin.com/in/elena-petrova'}
   ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
+<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
       <SEO
         title="Our Team - Zion Tech Group" 
         description="Meet the exceptional team of innovators, engineers, and industry experts driving Zion Tech Group's mission to revolutionize technology."
@@ -298,7 +251,8 @@ export default function Team() {
       />
 
       {/* Hero Section */}
-      </div><section className="relative py-20 px-4 sm:px-6 lg:px-8">
+      </div>
+<section className="relative py-20 px-4 sm:px-6 lg:px-8">
         </section>
 <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
 <div className="relative z-10 max-w-7xl mx-auto text-center">
@@ -324,45 +278,45 @@ export default function Team() {
               Join Our Team;
             </a>
           </div>
-        </div>
+</div>
       </section>
 
       {/* Team Stats */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         </section>
 <div className="max-w-7xl mx-auto">
-          </div>
+</div>
 <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             </div>
 <div>
               </div>
 <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">50+</div>
 <div className="text-gray-400">Team Members</div>
-            </div>
+</div>
 <div>
               </div>
 <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">15+</div>
 <div className="text-gray-400">Years Experience</div>
-            </div>
+</div>
 <div>
               </div>
 <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">25+</div>
 <div className="text-gray-400">Countries Served</div>
-            </div>
+</div>
 <div>
               </div>
 <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">500+</div>
 <div className="text-gray-400">Projects Delivered</div>
-            </div>
-          </div>
-        </div>
+</div>
+</div>
+</div>
       </section>
 
       {/* Leadership Team */}
       <section id="team" className="py-20 px-4 sm:px-6 lg:px-8">
         </section>
 <div className="max-w-7xl mx-auto">
-          </div>
+</div>
 <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
               Leadership Team;
@@ -374,48 +328,34 @@ export default function Team() {
       description: "Strategic vision and company direction",
       memberCount: 1;
     },
-    {
-      name: "Technology",
+    {name: "Technology",
       icon: Cpu,
       description: "Core technology development and architecture",
-      memberCount: 1;
-    },
-    {
-      name: "Research & Development",
+      memberCount: 1;},
+    {name: "Research & Development",
       icon: Brain,
       description: "Innovation and scientific advancement",
-      memberCount: 1;
-    },
-    {
-      name: "Operations",
+      memberCount: 1;},
+    {name: "Operations",
       icon: Zap,
       description: "Business operations and process optimization",
-      memberCount: 1;
-    },
-    {
-      name: "Engineering",
+      memberCount: 1;},
+    {name: "Engineering",
       icon: Shield,
       description: "Software development and quality assurance",
-      memberCount: 1;
-    },
-    {
-      name: "Industry Solutions",
+      memberCount: 1;},
+    {name: "Industry Solutions",
       icon: Users,
       description: "Industry-specific solutions and expertise",
-      memberCount: 1;
-    },
-    {
-      name: "Innovation",
+      memberCount: 1;},
+    {name: "Innovation",
       icon: Rocket,
       description: "Emerging technologies and future solutions",
-      memberCount: 1;
-    },
-    {
-      name: "Customer Experience",
+      memberCount: 1;},
+    {name: "Customer Experience",
       icon: Award,
       description: "Customer success and satisfaction",
-      memberCount: 1;
-    }
+      memberCount: 1;}
   ]
   const featuredMembers = teamMembers.filter(member => member.featured)
   const regularMembers = teamMembers.filter(member => !member.featured)
@@ -453,9 +393,9 @@ export default function Team() {
                 <Brain className="w-5 h-5 mr-2" />
                 <span>Innovation Leaders</span>
               </div>
-            </div>
-          </div>
-        </div>
+</div>
+</div>
+</div>
       </div>
 
       {/* Department Overview */}
@@ -478,10 +418,10 @@ export default function Team() {
                 <p className="text-gray-400 text-sm mb-3">{dept.description}</p>
                 <span className="text-cyan-400 text-sm font-medium">{dept.memberCount} member</span>
               </div>
-            )
+)
           })
         </div>
-      </div>
+</div>
 
       {/* Featured Team Members */}
       {featuredMembers.length > 0 && (
@@ -526,7 +466,7 @@ export default function Team() {
                         </span>
                       ))}
                     </div>
-                  </div>
+</div>
 <div className="mb-6">
                     <h4 className="text-sm font-semibold text-cyan-400 mb-3">Achievements</h4>
                     <ul className="space-y-1">
@@ -570,11 +510,11 @@ export default function Team() {
                       </a>
                     )}
                   </div>
-                </div>
-              </div>
+</div>
+</div>
             ))}
           </div>
-        </div>
+</div>
       )}
 
       {/* All Team Members */}
@@ -619,7 +559,7 @@ export default function Team() {
                       </span>
                     ))}
                   </div>
-                </div>
+</div>
                 
       id: 1,
       name: "Dr. Kleber Santos",
@@ -643,8 +583,7 @@ export default function Team() {
         "Speaker at major tech conferences"
       ]
     },
-    {
-      id: 2,
+    {id: 2,
       name: "Dr. Sarah Chen",
       title: "Chief Technology Officer",
       department: "leadership",
@@ -664,10 +603,8 @@ export default function Team() {
         "100+ AI system deployments",
         "15 patents in AI technology",
         "IEEE Fellow"
-      ]
-    },
-    {
-      id: 3,
+      ]},
+    {id: 3,
       name: "Michael Rodriguez",
       title: "Chief Research Officer",
       department: "ai-research",
@@ -687,10 +624,8 @@ export default function Team() {
         "Published in Nature & Science",
         "Collaboration with CERN",
         "Nobel Prize nominee 2023"
-      ]
-    },
-    {
-      id: 4,
+      ]},
+    {id: 4,
       name: "Alex Thompson",
       title: "Chief Security Officer",
       department: "leadership",
@@ -710,10 +645,8 @@ export default function Team() {
         "SOC2 compliance automation expert",
         "Zero security breaches in 5 years",
         "CISSP, CISM certified"
-      ]
-    },
-    {
-      id: 5,
+      ]},
+    {id: 5,
       name: "Jennifer Lee",
       title: "VP of Engineering",
       department: "engineering",
@@ -733,10 +666,8 @@ export default function Team() {
         "Managed 100+ engineering team",
         "Reduced development time by 40%",
         "Former Google Engineering Manager"
-      ]
-    },
-    {
-      id: 6,
+      ]},
+    {id: 6,
       name: "David Kim",
       title: "Senior AI Research Scientist",
       department: "ai-research",
@@ -756,10 +687,8 @@ export default function Team() {
         "Published 20+ research papers",
         "AI optimization breakthroughs",
         "Former Tesla AI researcher"
-      ]
-    },
-    {
-      id: 7,
+      ]},
+    {id: 7,
       name: "Emily Watson",
       title: "VP of Business Development",
       department: "sales",
@@ -779,10 +708,8 @@ export default function Team() {
         "$50M+ in new business",
         "100+ strategic partnerships",
         "Former McKinsey consultant"
-      ]
-    },
-    {
-      id: 8,
+      ]},
+    {id: 8,
       name: "Robert Chen",
       title: "Lead Quantum Engineer",
       department: "engineering",
@@ -802,20 +729,18 @@ export default function Team() {
         "Hardware integration expert",
         "3 quantum computing patents",
         "Former IBM Quantum researcher"
-      ]
-    }
+      ]}
   ]
-  const filteredTeam = teamMembers.filter(member => {
-    const matchesDepartment = selectedDepartment === 'all' || member.department === selectedDepartment;
+  const filteredTeam = teamMembers.filter(member => {const matchesDepartment = selectedDepartment === 'all' || member.department === selectedDepartment;
     const matchesLocation = selectedLocation === 'all' || member.location === selectedLocation;
-    return matchesDepartment && matchesLocation;
-  })
+    return matchesDepartment && matchesLocation;})
   const featuredMembers = filteredTeam.filter(member => member.featured)
   const regularMembers = filteredTeam.filter(member => !member.featured)
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
+<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
-      </div><section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      </div>
+<section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         </section>
 <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
@@ -832,7 +757,7 @@ export default function Team() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         </section>
 <div className="max-w-7xl mx-auto">
-          </div>
+</div>
 <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {companyStats.map((stat, index) => (
               </div>
@@ -844,14 +769,14 @@ export default function Team() {
               </div>
             ))}
           </div>
-        </div>
+</div>
       </section>
 
       {/* Leadership Team */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         </section>
 <div className="max-w-7xl mx-auto">
-          </div>
+</div>
 <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">Leadership Team</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -884,7 +809,7 @@ export default function Team() {
                           </span>
                         ))}
                       </div>
-                    </div>
+</div>
 <div className="mb-4">
                       <h4 className="text-sm font-semibold text-gray-400 mb-2">Achievements:</h4>
                       </div>
@@ -895,7 +820,7 @@ export default function Team() {
                           </span>
                         ))}
                       </div>
-                    </div>
+</div>
 <div className="min-h-screen bg-background">
       <SEO
         title="Our Team - Zion Tech Group" 
@@ -983,10 +908,10 @@ export default function Team() {
                 <p className="text-cyan-400 text-xs mb-3">{head.department}</p>
                 <p className="text-gray-300 text-sm">{head.bio}</p>
               </div>
-            </div>
+</div>
           ))}
         </div>
-      </div>
+</div>
 
 
         {/* Join Our Team */}
@@ -1040,10 +965,23 @@ export default function Team() {
                 Contact Us;
               </Link>
             </div>
-          </div>
-        </div>
-      </div>
+</div>
+</div>
+</div>
     </div>
-  )
+)
 }
-export default Team</$1></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></p></p></section></section>
+export default Team</$1></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div></div></p></p></section></section>

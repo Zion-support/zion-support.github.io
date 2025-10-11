@@ -1,6 +1,6 @@
 'use client';
-import React, { Suspense, lazy, useEffect, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, {Suspense, lazy, useEffect, useState} from 'react';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import LoadingSpinner from './components/LoadingSpinner';
@@ -55,27 +55,21 @@ const PrivacyPage = lazy(() => import('./privacy/page'));
 const TermsPage = lazy(() => import('./terms/page'));
 const CookiesPage = lazy(() => import('./cookies/page'));
 
-const App: React.FC = () => {
-  const [isInitialized, setIsInitialized] = useState(false);
+const App: React.FC = () => {const [isInitialized, setIsInitialized] = useState(false);
 
   useEffect(() => {
     // Initialize app;
     const initApp = async () => {
       try {
         // Add any initialization logic here;
-        setIsInitialized(true);
-      } catch (error) {
-        console.error('Failed to initialize app:', error);
-        setIsInitialized(true); // Still show the app even if initialization fails;
-      }
+        setIsInitialized(true);} catch (error) {console.error('Failed to initialize app:', error);
+        setIsInitialized(true); // Still show the app even if initialization fails;}
     };
 
     initApp();
   }, []);
 
-  if (!isInitialized) {
-    return <LoadingSpinner />;
-  }
+  if (!isInitialized) {return <LoadingSpinner />;}
 
   return (
     <ErrorBoundary>
@@ -162,7 +156,7 @@ const NotFoundPage: React.FC = () => (
         Go Home;
       </a>
     </div>
-  </div>
+</div>
 );
 
 export default App;

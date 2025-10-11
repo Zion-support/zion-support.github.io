@@ -1,8 +1,7 @@
-import { SEO } from '@/components/SEO'
-import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
-export default function Cookies() {
-  return (
+import {SEO} from '@/components/SEO'
+import {Helmet} from 'react-helmet-async'
+import {Link} from 'react-router-dom'
+export default function Cookies() {return (
     <></><SEO
         title="Cookie Policy - Zion Tech Group"
         description="Learn about how Zion Tech Group uses cookies and similar technologies to enhance your browsing experience."
@@ -11,25 +10,26 @@ export default function Cookies() {
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
         {/* Hero Section */}
-        </div><section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        </div>
+<section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           </section>
 <div className="absolute inset-0 overflow-hidden">
             </div>
 <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
 <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl"></div>
-          </div>
+</div>
           
           <motion.div;
             className="max-w-7xl mx-auto text-center relative z-10"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 30}}
+            animate={{ opacity: 1, y: 0}}
+            transition={{ duration: 0.8}}
           >
             <motion.h1;
               className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial={{ opacity: 0, y: 30}}
+              animate={{ opacity: 1, y: 0}}
+              transition={{ duration: 0.8, delay: 0.2}}
             >
               Cookie;
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
@@ -39,9 +39,9 @@ export default function Cookies() {
             
             <motion.p;
               className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              initial={{ opacity: 0, y: 30}}
+              animate={{ opacity: 1, y: 0}}
+              transition={{ duration: 0.8, delay: 0.4}}
             >
               Learn about how we use cookies and similar technologies to enhance your browsing experience;
               and provide personalized services on our website.
@@ -49,9 +49,9 @@ export default function Cookies() {
             
             <motion.div;
               className="text-sm text-gray-400"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
+              initial={{ opacity: 0, y: 30}}
+              animate={{ opacity: 1, y: 0}}
+              transition={{ duration: 0.8, delay: 0.6}}
             >
               Last updated: January 2025;
             </motion.div>
@@ -64,10 +64,10 @@ export default function Cookies() {
 <div className="max-w-7xl mx-auto">
             <motion.div;
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
+              viewport={{ once: true}}
+              transition={{ duration: 0.8}}
             >
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
                 What Are Cookies?
@@ -79,10 +79,10 @@ export default function Cookies() {
             
             <motion.div;
               className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
+              viewport={{ once: true}}
+              transition={{ duration: 0.8}}
             >
               </div>
 <div>
@@ -103,7 +103,7 @@ export default function Cookies() {
                     "persistent cookies" (which remain on your device for a set period of time).
                   </p>
                 </div>
-              </div>
+</div>
 <div className="text-center">
                 </div>
 <div className="text-8xl mb-4">🍪</div>
@@ -119,10 +119,10 @@ export default function Cookies() {
 <div className="max-w-7xl mx-auto">
             <motion.div;
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
+              viewport={{ once: true}}
+              transition={{ duration: 0.8}}
             >
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
                 Types of Cookies We Use;
@@ -137,14 +137,14 @@ export default function Cookies() {
               variants={staggerContainer}
               initial="initial"
               whileInView="animate"
-              viewport={{ once: true }}
+              viewport={{ once: true}}
             >
               {cookieTypes.map((type, index) => (
                 <motion.div;
                   key={index}
                   className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:bg-white/15"
                   variants={fadeInUp}
-                  whileHover={{ scale: 1.02 }}
+                  whileHover={{ scale: 1.02}}
                 >
                   <h3 className="text-xl font-semibold text-white mb-3">{type.name}</h3>
                   <p className="text-gray-300 mb-4 leading-relaxed">{type.description}</p>
@@ -361,24 +361,23 @@ export default function Cookies() {
                     <strong>Address:</strong> 364 E Main St STE 1008, Middletown, DE 19709;
                   </p>
                 </div>
-              </div>
-            </div>
-          </div>
-import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
-import { Cookie, Shield, Settings, Eye, Database, Globe } from 'lucide-react'
-import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
-import { Shield, Lock, Eye, CheckCircle } from 'lucide-react'
-export default function Cookies() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+</div>
+</div>
+</div>
+import {Link} from 'react-router-dom'
+import {motion} from 'framer-motion'
+import {Cookie, Shield, Settings, Eye, Database, Globe} from 'lucide-react'
+import {Link} from 'react-router-dom'
+import {motion} from 'framer-motion'
+import {Shield, Lock, Eye, CheckCircle} from 'lucide-react'
+export default function Cookies() {return (
+<div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       </div>
 <div className="max-w-4xl mx-auto px-4 py-12">
         {/* Header */}
         <motion.div;
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20}}
+          animate={{ opacity: 1, y: 0}}
           className="text-center mb-12"
         >
           </div>
@@ -387,7 +386,7 @@ export default function Cookies() {
 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full flex items-center justify-center">
               <Shield className="w-8 h-8 text-white" />
             </div>
-          </div>
+</div>
           <h1 className="text-4xl font-bold text-white mb-4">Cookie Policy</h1>
           <p className="text-xl text-gray-300">
             Learn how we use cookies and similar technologies to enhance your experience.
@@ -396,9 +395,9 @@ export default function Cookies() {
 
         {/* Last Updated */}
         <motion.div;
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
+          initial={{ opacity: 0, y: 20}}
+          animate={{ opacity: 1, y: 0}}
+          transition={{ delay: 0.1}}
           className="bg-white/10 backdrop-blur-md rounded-lg p-6 mb-8"
         >
           <div className="flex items-center text-cyan-400 mb-2">
@@ -412,9 +411,9 @@ export default function Cookies() {
         <div className="space-y-8">
           {/* What Are Cookies */}
           <motion.section;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
+            initial={{ opacity: 0, y: 20}}
+            animate={{ opacity: 1, y: 0}}
+            transition={{ delay: 0.2}}
             className="bg-white/10 backdrop-blur-md rounded-lg p-6"
           >
             <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
@@ -437,9 +436,9 @@ export default function Cookies() {
 
           {/* How We Use Cookies */}
           <motion.section;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
+            initial={{ opacity: 0, y: 20}}
+            animate={{ opacity: 1, y: 0}}
+            transition={{ delay: 0.3}}
             className="bg-white/10 backdrop-blur-md rounded-lg p-6"
           >
             <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
@@ -460,9 +459,9 @@ export default function Cookies() {
 
           {/* Types of Cookies We Use */}
           <motion.section;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
+            initial={{ opacity: 0, y: 20}}
+            animate={{ opacity: 1, y: 0}}
+            transition={{ delay: 0.4}}
             className="bg-white/10 backdrop-blur-md rounded-lg p-6"
           >
             <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
@@ -492,14 +491,14 @@ export default function Cookies() {
                   and social media platforms.
                 </p>
               </div>
-            </div>
+</div>
           </motion.section>
 
           {/* Specific Cookies */}
           <motion.section;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
+            initial={{ opacity: 0, y: 20}}
+            animate={{ opacity: 1, y: 0}}
+            transition={{ delay: 0.5}}
             className="bg-white/10 backdrop-blur-md rounded-lg p-6"
           >
             <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
@@ -526,15 +525,15 @@ export default function Cookies() {
                   <h3 className="text-lg font-semibold text-cyan-400 mb-2">Marketing Cookies</h3>
                   <p className="text-sm">Used to track visitors across websites for marketing purposes.</p>
                 </div>
-              </div>
-            </div>
+</div>
+</div>
           </motion.section>
 
           {/* Managing Cookies */}
           <motion.section;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
+            initial={{ opacity: 0, y: 20}}
+            animate={{ opacity: 1, y: 0}}
+            transition={{ delay: 0.5}}
             className="bg-white/10 backdrop-blur-md rounded-lg p-6"
           >
             <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
@@ -559,9 +558,9 @@ export default function Cookies() {
 
           {/* Contact Information */}
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
+            initial={{ opacity: 0, y: 20}}
+            animate={{ opacity: 1, y: 0}}
+            transition={{ delay: 0.6}}
             className="text-center"
           >
             <h2 className="text-2xl font-bold text-white mb-4">Questions About Cookies?</h2>
@@ -586,14 +585,14 @@ export default function Cookies() {
               variants={staggerContainer}
               initial="initial"
               whileInView="animate"
-              viewport={{ once: true }}
+              viewport={{ once: true}}
             >
               {cookieManagement.map((item, index) => (
                 <motion.div;
                   key={index}
                   className="text-center p-6 bg-white/10 backdrop-blur-lg rounded-xl border border-white/20 hover:border-white/40 transition-all duration-300"
                   variants={fadeInUp}
-                  whileHover={{ scale: 1.02 }}
+                  whileHover={{ scale: 1.02}}
                 >
                   <h3 className="text-xl font-semibold text-white mb-3">{item.title}</h3>
                   <p className="text-gray-300 mb-4 leading-relaxed">{item.description}</p>
@@ -634,17 +633,16 @@ export default function Cookies() {
                 periodically for any changes.
               </p>
             </div>
-          </div>
-        </div>
+</div>
+</div>
       </main>
       <Footer />
     </>
 import React from 'react'
-import { SEO } from '@/components/SEO'
-import { Link } from 'react-router-dom'
-export default function Cookies() {
-  return (
-    <div className="min-h-screen bg-background">
+import {SEO} from '@/components/SEO'
+import {Link} from 'react-router-dom'
+export default function Cookies() {return (
+<div className="min-h-screen bg-background">
       <SEO
         title="Cookie Policy - Zion Tech Group" 
         description="Learn about how Zion Tech Group uses cookies and similar technologies on our website"
@@ -684,7 +682,7 @@ export default function Cookies() {
               but they may contain information about your device and how you interact with our website.
             </p>
           </div>
-        </div>
+</div>
 
         {/* Types of Cookies We Use */}
         <div className="mb-16">
@@ -765,8 +763,8 @@ export default function Cookies() {
                 <li>• Cross-site tracking</li>
               </ul>
             </div>
-          </div>
-        </div>
+</div>
+</div>
 
         {/* How We Use Cookies */}
         <div className="mb-16">
@@ -794,9 +792,9 @@ export default function Cookies() {
                   <li>• Measure the effectiveness of our content</li>
                 </ul>
               </div>
-            </div>
-          </div>
-        </div>
+</div>
+</div>
+</div>
 
         {/* Third-Party Cookies */}
         <div className="mb-16">
@@ -840,9 +838,9 @@ export default function Cookies() {
                 <h4 className="text-white font-semibold mb-2">Customer Support</h4>
                 <p className="text-gray-300 text-sm">Intercom, Zendesk</p>
               </div>
-            </div>
-          </div>
-        </div>
+</div>
+</div>
+</div>
 
         {/* Managing Cookies */}
         <div className="mb-16">
@@ -874,9 +872,9 @@ export default function Cookies() {
                   link in the footer of our website.
                 </p>
               </div>
-            </div>
-          </div>
-        </div>
+</div>
+</div>
+</div>
 
         {/* Updates to Policy */}
         <div className="mb-16">
@@ -892,7 +890,7 @@ export default function Cookies() {
               website and updating the "Last updated" date at the top of this page.
             </p>
           </div>
-        </div>
+</div>
 
         {/* Contact Information */}
         <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
@@ -900,28 +898,28 @@ export default function Cookies() {
 <div className="max-w-4xl mx-auto text-center px-4">
             <motion.h2;
               className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
+              viewport={{ once: true}}
+              transition={{ duration: 0.8}}
             >
               Questions About Cookies?
             </motion.h2>
             <motion.p;
               className="text-xl text-gray-300 mb-8 leading-relaxed"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
+              viewport={{ once: true}}
+              transition={{ duration: 0.8, delay: 0.2}}
             >
               If you have any questions about our use of cookies or would like to manage your preferences, 
               please don't hesitate to contact us.
             </motion.p>
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
+              viewport={{ once: true}}
+              transition={{ duration: 0.8, delay: 0.4}}
             >
               <$2 />
                 href="mailto:privacy@ziontechgroup.com"
@@ -935,78 +933,60 @@ export default function Cookies() {
             </motion.div>
           </div>
         </section>
-      </div>
-    </div>
+</div>
+</div>
 import React from 'react'
-import { SEO } from '@/components/SEO'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Shield, CircleDot, Settings, Eye, Lock } from 'lucide-react'
-import { Link } from 'react-router-dom'
-export default function Cookies() {
-  const cookieTypes = [
+import {SEO} from '@/components/SEO'
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card'
+import {Shield, CircleDot, Settings, Eye, Lock} from 'lucide-react'
+import {Link} from 'react-router-dom'
+export default function Cookies() {const cookieTypes = [
     {
       title: 'Essential Cookies',
       icon: Shield,
       description: 'These cookies are necessary for the website to function properly.',
       examples: ['Authentication cookies', 'Security cookies', 'Session management'],
-      necessary: true;
-    },
-    {
-      title: 'Performance Cookies',
+      necessary: true;},
+    {title: 'Performance Cookies',
       icon: Settings,
       description: 'These cookies help us understand how visitors interact with our website.',
       examples: ['Analytics cookies', 'Performance monitoring', 'Error tracking'],
-      necessary: false;
-    },
-    {
-      title: 'Functional Cookies',
+      necessary: false;},
+    {title: 'Functional Cookies',
       icon: Eye,
       description: 'These cookies enable enhanced functionality and personalization.',
       examples: ['Language preferences', 'User settings', 'Feature preferences'],
-      necessary: false;
-    },
-    {
-      title: 'Marketing Cookies',
+      necessary: false;},
+    {title: 'Marketing Cookies',
       icon: CircleDot,
       description: 'These cookies are used to deliver relevant advertisements.',
       examples: ['Advertising cookies', 'Social media cookies', 'Tracking cookies'],
-      necessary: false;
-    }
+      necessary: false;}
   ]
   const cookieTable = [
-    {
-      name: 'session_id',
+    {name: 'session_id',
       purpose: 'Maintains your session while using the website',
       duration: 'Session',
-      type: 'Essential'
-    },
-    {
-      name: 'auth_token',
+      type: 'Essential'},
+    {name: 'auth_token',
       purpose: 'Keeps you logged in securely',
       duration: '30 days',
-      type: 'Essential'
-    },
-    {
-      name: '_ga',
+      type: 'Essential'},
+    {name: '_ga',
       purpose: 'Google Analytics - tracks website usage',
       duration: '2 years',
-      type: 'Performance'
-    },
-    {
-      name: '_fbp',
+      type: 'Performance'},
+    {name: '_fbp',
       purpose: 'Facebook Pixel - tracks conversions',
       duration: '3 months',
-      type: 'Marketing'
-    },
-    {
-      name: 'language',
+      type: 'Marketing'},
+    {name: 'language',
       purpose: 'Remembers your language preference',
       duration: '1 year',
-      type: 'Functional'
-    }
+      type: 'Functional'}
   ]
   return (
-    <div className="min-h-screen bg-background">
+<div className="min-h-screen bg-background">
       <SEO
         title="Cookie Policy | Zion Tech Group" 
         description="Learn about how Zion Tech Group uses cookies and similar technologies to improve your experience on our website."
@@ -1029,7 +1009,7 @@ export default function Cookies() {
             to recognize you when you visit our website and how we use them to improve your experience.
           </p>
           <p className="text-zion-slate-light mt-4">
-            Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
+            Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric'})
           </p>
         </div>
 
@@ -1091,7 +1071,7 @@ export default function Cookies() {
               )
             })
           </div>
-        </div>
+</div>
 
         {/* Cookie Table */}
         <Card className="mb-8 border-zion-blue-light">
@@ -1122,8 +1102,7 @@ export default function Cookies() {
                         < className={`px-2 py-1 rounded-full text-xs ${$2 />
                           cookie.type === 'Essential' 
                             ? 'bg-zion-purple text-white' 
-                            : 'bg-zion-blue-light text-zion-slate-light'
-                        }`}>
+                            : 'bg-zion-blue-light text-zion-slate-light'}`}>
                           {cookie.type}
                         </span>
                       </td>
@@ -1164,7 +1143,7 @@ export default function Cookies() {
                   you can choose which types of cookies to accept.
                 </p>
               </div>
-            </div>
+</div>
           </CardContent>
         </Card>
 
@@ -1217,7 +1196,12 @@ export default function Cookies() {
           </CardContent>
         </Card>
       </div>
-    </div>
-  )
+</div>
+)
 }
-export default Cookies</$1></div></div></div></div></div></div></p></p></p></p></p></p></p></p></p></p></section>
+export default Cookies</$1></div>
+</div>
+</div>
+</div>
+</div>
+</div></p></p></p></p></p></p></p></p></p></p></section>

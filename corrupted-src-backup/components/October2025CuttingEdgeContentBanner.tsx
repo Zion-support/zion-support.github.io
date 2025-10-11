@@ -1,4 +1,4 @@
-impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m"
+impo, r, t {Li, n, k} fr, o, m "rea, c, t-rout, e, r-d, o, m"
 impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "rea, c, t-rout, e, r-d, o, m";'
 const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expression */}
@@ -12,7 +12,8 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
     {/* TODO: Fix JSX expression */}
     }
   ]
-  return(<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, borde, r-y, borde, r-purp, l, e-5, 0, 0/20">"
+  return (
+<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, borde, r-y, borde, r-purp, l, e-5, 0, 0/20">"
       {/* Animated, background, effect */}
       </div>
 <div, className="absolute, inse, t-0, opacit, y-20">"
@@ -251,24 +252,13 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
           <p, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">";"
             💡 <span, className="te, x, t-gr, a, y-300, fon, t-semibo, l, d">Join, 5, 0,0, 0, 0+ AI, leader, s</sp, a, n> who, get, weekly insights, on, enterprise AI, implementatio, n"
       <sty, l, e>{/* TODO: Fix JSX expression */}
-          0%, 1, 0, 0% {
-    transfo, r, m: transla, t, e(0, 0) sca, l, e(1)
-  }
-          33% {
-    transfo, r, m: transla, t, e(30, p, x, -50, p, x) sca, l, e(1.1)
-  }
-          66% {
-    transfo, r, m: transla, t, e(-20, p, x, 20, p, x) sca, l, e(0.9)
-  }
+          0%, 1, 0, 0% {transfo, r, m: transla, t, e(0, 0) sca, l, e(1)}
+          33% {transfo, r, m: transla, t, e(30, p, x, -50, p, x) sca, l, e(1.1)}
+          66% {transfo, r, m: transla, t, e(-20, p, x, 20, p, x) sca, l, e(0.9)}
         }
-        .anima, t, e-bl, o, b {
-    animati, o, n: blob, 7s, infinite;
-  }
-        .animati, o, n-del, a, y-20, 0, 0 {
-    animati, o, n-del, a, y: 2 s;
-  }
-        .animati, o, n-del, a, y-40, 0, 0 {
-          animati, o, n-del, a, y: 4s,
+        .anima, t, e-bl, o, b {animati, o, n: blob, 7s, infinite;}
+        .animati, o, n-del, a, y-20, 0, 0 {animati, o, n-del, a, y: 2 s;}
+        .animati, o, n-del, a, y-40, 0, 0 {animati, o, n-del, a, y: 4s,
           animati, o, n: blob, 7s, infinite;
         .anima, t, e-bl, o, b {/* TODO: Fix JSX expression */}
         }
@@ -286,4 +276,44 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
 }
 export default October2025CuttingEdgeContentBanner;
 "`
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></Link></Link></Link></Link></Link></Link></p></p></p></p></h2></h2></h2>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></Link></Link></Link></Link></Link></Link></p></p></p></p></h2></h2></h2>

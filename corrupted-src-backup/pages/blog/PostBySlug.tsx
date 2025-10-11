@@ -1,10 +1,9 @@
 import React from 'react'
 export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expression */}
-  const { slug } = useParams()
+  const {slug} = useParams()
   // Mock data - in a real app, this would come from an API or CMS;
   const latestArticles = [
-    {
-      slug: 'ai-autonomous-workflows-2026',
+    {slug: 'ai-autonomous-workflows-2026',
       title: 'AI Autonomous Workflows 2026',
       description:,
         'Transform operations with 95% automation, 400% ROI, and seamless multi-system orchestration',
@@ -17,8 +16,7 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
     {/* TODO: Fix JSX expression */}
     }]
   const blogPosts = [
-    {
-      slug: 'enterprise-ai-transformation-roadmap-2026',
+    {slug: 'enterprise-ai-transformation-roadmap-2026',
       title: 'Enterprise AI Transformation Roadmap 2026',
       description:,
         'Complete implementation guide delivering 300% ROI, 85% automation, and digital transformation',
@@ -26,16 +24,14 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
       date: '2026-01-10',
       readTime: '12 min read',
       author: 'Zion Tech Group Team'},
-    {
-      slug: 'quantum-computing-business-applications-2026'
+    {slug: 'quantum-computing-business-applications-2026'
       title: 'Quantum Computing Business Applications 2026'
       description: 'Revolutionary quantum solutions delivering 2000x speed improvements and breakthrough capabilities',
       category: 'Quantum Technology',
       date: '2026-01-08',
       readTime: '10 min read',
       author: 'Zion Tech Group Team'},
-    {
-      slug: 'ai-cybersecurity-autonomous-defense-2026',
+    {slug: 'ai-cybersecurity-autonomous-defense-2026',
       title: 'AI Cybersecurity Autonomous Defense 2026',
       description:,
         'Next-gen AI security with 99.9% threat detection, autonomous response, and zero-trust architecture',
@@ -50,8 +46,7 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
     {/* TODO: Fix JSX expression */}
     }]
   const featuredPosts = [
-    {
-      slug: 'autonomous-enterprise-operations-2026',
+    {slug: 'autonomous-enterprise-operations-2026',
       title: 'Autonomous Enterprise Operations 2026',
       description:,
         'Self-healing infrastructure, autonomous decision-making, and 99.9% uptime achievement',
@@ -59,8 +54,7 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
       date: '2026-01-12',
       readTime: '11 min read',
       author: 'Zion Tech Group Team'},
-    {
-      slug: 'ai-powered-business-intelligence-2026',
+    {slug: 'ai-powered-business-intelligence-2026',
       title: 'AI-Powered Business Intelligence 2026',
       description:,
         'Advanced analytics, predictive insights, and real-time decision support systems',
@@ -68,8 +62,7 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
       date: '2026-01-07',
       readTime: '7 min read',
       author: 'Zion Tech Group Team'},
-    {
-      slug: 'quantum-neural-networks-breakthrough-2026'
+    {slug: 'quantum-neural-networks-breakthrough-2026'
       title: 'Quantum Neural Networks Breakthrough 2026'
       description: 'Revolutionary quantum-enhanced AI delivering unprecedented computational power',
       category: 'AI Research',
@@ -85,8 +78,8 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
   // Find the current post;
   const currentPost = [...latestArticles, ...blogPosts, ...featuredPosts].find(post => post.slug === slug;)
   )
-  if (!currentPost) {
-    return(<div className="min-h-screen bg-gray-50">
+  if (!currentPost) {return (
+<div className="min-h-screen bg-gray-50">
     return (
       </div>
 <div className="min-h-screen bg-gray-50">
@@ -101,11 +94,13 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
             className="bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors">
             Back to Blog,)
           </a>)
-        </div>)
-      </div>)
-    )
-  }
-  return(<div className="min-h-screen bg-gray-50">
+        </div>
+)
+      </div>
+)
+    )}
+  return (
+<div className="min-h-screen bg-gray-50">
   return (
     </div>
 <div className="min-h-screen bg-gray-50">
@@ -262,6 +257,27 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
   hover:text-blue-800 transition-colors"
                   >
                     Read More →
-                </div>)
+                </div>
+)
               ))})
-"`</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></p></p></p></p></p></p></p></p></p></p></p></h1></h2></h2></h2></h2></h2></h2></h2></h3></ul></li></li></li></li>
+"`</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></span></span></span></span></span></span></span></span></span></p></p></p></p></p></p></p></p></p></p></p></h1></h2></h2></h2></h2></h2></h2></h2></h3></ul></li></li></li></li>

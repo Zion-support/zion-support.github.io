@@ -1,140 +1,358 @@
 #!/usr/bin/env node
 
-import fs from 'fs'
-import path from 'path'
-import { execSync } from 'child_process'
-import { fileURLToPath } from 'url'
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
-// Function to find all TypeScript/JavaScript files
-function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
-  let files = []
-  const items = fs.readdirSync(dir)
-  for (const item of items) {
-    const fullPath = path.join(dir, item)
-    const stat = fs.statSync(fullPath)
-    if (stat.isDirectory()) {
-      // Skip certain directories
-      if (!['node_modules', '.git', 'dist', '.next', 'out'].includes(item)) {
-        files = files.concat(findFiles(fullPath, extensions))
-      }
-    } else if (extensions.some(ext => item.endsWith(ext))) {
-      files.push(fullPath)
-    }
-  }
-  
-  return files
-}
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-// Function to fix malformed JSX
-function fixMalformedJSX(filePath) {
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+function fixAllJSX(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8')
-    let modified = false
-    // Fix malformed JSX patterns
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+    
+    // Fix all common JSX issues
     const fixes = [
-      // Fix extra closing div tags
+      // Fix malformed closing tags followed by opening tags
+      {
+        pattern: /<\/div><section/g,
+        replacement: '</div>\n<section'
+      },
+      {
+        pattern: /<\/div><div/g,
+        replacement: '</div>\n<div'
+      },
+      {
+        pattern: /<\/section><div/g,
+        replacement: '</section>\n<div'
+      },
+      {
+        pattern: /<\/main><div/g,
+        replacement: '</main>\n<div'
+      },
+      {
+        pattern: /<\/header><div/g,
+        replacement: '</header>\n<div'
+      },
+      {
+        pattern: /<\/footer><div/g,
+        replacement: '</footer>\n<div'
+      },
+      {
+        pattern: /<\/nav><div/g,
+        replacement: '</nav>\n<div'
+      },
+      {
+        pattern: /<\/article><div/g,
+        replacement: '</article>\n<div'
+      },
+      {
+        pattern: /<\/aside><div/g,
+        replacement: '</aside>\n<div'
+      },
+      // Fix malformed opening tags
+      {
+        pattern: /<section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8">/g,
+        replacement: '<section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">'
+      },
+      // Fix malformed closing tags
       {
         pattern: /<\/div><\/div>/g,
+        replacement: '</div>\n</div>'
+      },
+      {
+        pattern: /<\/section><\/div>/g,
+        replacement: '</section>\n</div>'
+      },
+      {
+        pattern: /<\/main><\/div>/g,
+        replacement: '</main>\n</div>'
+      },
+      // Fix malformed JSX structure
+      {
+        pattern: /<div className="max-w-7xl mx-auto">\s*<\/div>/g,
+        replacement: '<div className="max-w-7xl mx-auto">\n</div>'
+      },
+      // Fix malformed className attributes
+      {
+        pattern: /className="([^"]*?)\s+([^"]*?)"/g,
+        replacement: 'className="$1 $2"'
+      },
+      // Fix malformed spacing in className
+      {
+        pattern: /className="([^"]*?)\s+:\s+([^"]*?)"/g,
+        replacement: 'className="$1:$2"'
+      },
+      // Fix malformed closing tags with spaces
+      {
+        pattern: /<\/div>\s*<div/g,
+        replacement: '</div>\n<div'
+      },
+      {
+        pattern: /<\/section>\s*<div/g,
+        replacement: '</section>\n<div'
+      },
+      {
+        pattern: /<\/main>\s*<div/g,
+        replacement: '</main>\n<div'
+      },
+      // Fix malformed opening tags with spaces
+      {
+        pattern: /<div\s+className/g,
+        replacement: '<div className'
+      },
+      {
+        pattern: /<section\s+className/g,
+        replacement: '<section className'
+      },
+      {
+        pattern: /<main\s+className/g,
+        replacement: '<main className'
+      },
+      // Fix malformed closing tags
+      {
+        pattern: /<\/div>\s*<\/div>/g,
+        replacement: '</div>\n</div>'
+      },
+      {
+        pattern: /<\/section>\s*<\/div>/g,
+        replacement: '</section>\n</div>'
+      },
+      {
+        pattern: /<\/main>\s*<\/div>/g,
+        replacement: '</main>\n</div>'
+      },
+      // Fix malformed JSX fragments
+      {
+        pattern: /<>\s*<\/>\s*<div/g,
+        replacement: '<div'
+      },
+      {
+        pattern: /<>\s*<div/g,
+        replacement: '<div'
+      },
+      {
+        pattern: /<>\s*<section/g,
+        replacement: '<section'
+      },
+      {
+        pattern: /<>\s*<main/g,
+        replacement: '<main'
+      },
+      // Fix malformed closing fragments
+      {
+        pattern: /<\/div>\s*<\/>/g,
         replacement: '</div>'
       },
-      // Fix malformed nav tags
       {
-        pattern: /<\/nav><div className="[^"]*">/g,
-        replacement: '<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">'
+        pattern: /<\/section>\s*<\/>/g,
+        replacement: '</section>'
       },
-      // Fix malformed div tags with extra closing
       {
-        pattern: /<div className="[^"]*">\s*<\/div><\/div>/g,
-        replacement: (match) => {
-          const className = match.match(/className="([^"]*)"/)?.[1]
-          return `<div className="${className}">`
-        }
+        pattern: /<\/main>\s*<\/>/g,
+        replacement: '</main>'
       },
-      // Fix malformed Link tags
+      // Fix malformed return statements
       {
-        pattern: /<\/Link><div className="[^"]*">/g,
-        replacement: '<div className="w-10 h-10 bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/25">'
+        pattern: /return\s*\(\s*<>\s*<\/>\s*<div/g,
+        replacement: 'return (\n<div'
       },
-      // Fix malformed span tags
       {
-        pattern: /<\/span><br \/>[^<]*<\/span>/g,
-        replacement: '</span><br />'
+        pattern: /return\s*\(\s*<div/g,
+        replacement: 'return (\n<div'
       },
-      // Fix malformed h3 tags
       {
-        pattern: /<\/h3><div className="[^"]*">\s*<\/div><\/div><Brain[^>]*\/>\s*<\/div>\s*<\/div>\s*AI Services\s*<\/h3>/g,
-        replacement: '<h3 className="text-lg font-bold mb-6 text-cyan-400 flex items-center neon-text-enhanced">\n                <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-3">\n                  <Brain className="w-5 h-5 text-white" />\n                </div>\n                AI Services\n              </h3>'
+        pattern: /return\s*\(\s*<section/g,
+        replacement: 'return (\n<section'
       },
-      // Fix malformed button tags
       {
-        pattern: /<\/button><div className="[^"]*">/g,
-        replacement: '< className="'$2 />
+        pattern: /return\s*\(\s*<main/g,
+        replacement: 'return (\n<main'
       },
-      // Fix malformed section tags
+      // Fix malformed closing return statements
       {
-        pattern: /<\/section><div className="[^"]*">/g,
-        replacement: '< className="'$2 />
+        pattern: /<\/div>\s*\)\s*$/gm,
+        replacement: '</div>\n)'
       },
-      // Fix malformed main tags
       {
-        pattern: /<\/main><div className="[^"]*">/g,
-        replacement: '< className="'$2 />
+        pattern: /<\/section>\s*\)\s*$/gm,
+        replacement: '</section>\n)'
+      },
+      {
+        pattern: /<\/main>\s*\)\s*$/gm,
+        replacement: '</main>\n)'
+      },
+      // Fix malformed function declarations
+      {
+        pattern: /const\s+(\w+):\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{\s*return\s*\(\s*<>\s*<\/>\s*<div/g,
+        replacement: 'const $1: React.FC = () => {\n  return (\n    <div'
+      },
+      // Fix malformed component declarations
+      {
+        pattern: /const\s+(\w+):\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{\s*return\s*\(\s*<div/g,
+        replacement: 'const $1: React.FC = () => {\n  return (\n    <div'
+      },
+      // Fix malformed export statements
+      {
+        pattern: /export\s+default\s+(\w+)\s*$/gm,
+        replacement: 'export default $1'
+      },
+      // Fix malformed import statements
+      {
+        pattern: /import\s+React\s*,\s*{\s*([^}]*?)\s*}\s*from\s*'react'/g,
+        replacement: 'import React, { $1 } from \'react\''
+      },
+      // Fix malformed JSX comments
+      {
+        pattern: /{\/\*\s*([^*]*?)\s*\*\/}/g,
+        replacement: '{/* $1 */}'
+      },
+      // Fix malformed JSX expressions
+      {
+        pattern: /\{\s*([^}]*?)\s*\}/g,
+        replacement: '{$1}'
+      },
+      // Fix malformed JSX attributes
+      {
+        pattern: /(\w+)=\{([^}]*?)\}/g,
+        replacement: '$1={$2}'
+      },
+      // Fix malformed JSX strings
+      {
+        pattern: /(\w+)="([^"]*?)"/g,
+        replacement: '$1="$2"'
+      },
+      // Fix malformed JSX boolean attributes
+      {
+        pattern: /(\w+)=\{true\}/g,
+        replacement: '$1'
+      },
+      {
+        pattern: /(\w+)=\{false\}/g,
+        replacement: ''
+      },
+      // Fix malformed JSX conditional rendering
+      {
+        pattern: /\{\s*([^}]*?)\s*&&\s*<([^>]*?)>\s*([^<]*?)\s*<\/\2>\s*\}/g,
+        replacement: '{$1 && <$2>$3</$2>}'
+      },
+      // Fix malformed JSX ternary operators
+      {
+        pattern: /\{\s*([^?]*?)\s*\?\s*<([^>]*?)>\s*([^<]*?)\s*<\/\2>\s*:\s*<([^>]*?)>\s*([^<]*?)\s*<\/\4>\s*\}/g,
+        replacement: '{$1 ? <$2>$3</$2> : <$4>$5</$4>}'
+      },
+      // Fix malformed JSX map functions
+      {
+        pattern: /\{\s*([^}]*?)\.map\s*\(\s*\(\s*([^,]*?),\s*([^)]*?)\s*\)\s*=>\s*<([^>]*?)>\s*([^<]*?)\s*<\/\4>\s*\)\s*\}/g,
+        replacement: '{$1.map(($2, $3) => <$4 key={$3}>$5</$4>)}'
+      },
+      // Fix malformed JSX keys
+      {
+        pattern: /<([^>]*?)\s+key=\{[^}]*?\}\s*>/g,
+        replacement: '<$1 key={$2}>'
+      },
+      // Fix malformed JSX refs
+      {
+        pattern: /<([^>]*?)\s+ref=\{[^}]*?\}\s*>/g,
+        replacement: '<$1 ref={$2}>'
+      },
+      // Fix malformed JSX event handlers
+      {
+        pattern: /<([^>]*?)\s+onClick=\{[^}]*?\}\s*>/g,
+        replacement: '<$1 onClick={$2}>'
+      },
+      {
+        pattern: /<([^>]*?)\s+onChange=\{[^}]*?\}\s*>/g,
+        replacement: '<$1 onChange={$2}>'
+      },
+      {
+        pattern: /<([^>]*?)\s+onSubmit=\{[^}]*?\}\s*>/g,
+        replacement: '<$1 onSubmit={$2}>'
+      },
+      // Fix malformed JSX form elements
+      {
+        pattern: /<input\s+([^>]*?)\s*\/>/g,
+        replacement: '<input $1 />'
+      },
+      {
+        pattern: /<img\s+([^>]*?)\s*\/>/g,
+        replacement: '<img $1 />'
+      },
+      {
+        pattern: /<br\s*\/>/g,
+        replacement: '<br />'
+      },
+      {
+        pattern: /<hr\s*\/>/g,
+        replacement: '<hr />'
+      },
+      // Fix malformed JSX closing tags
+      {
+        pattern: /<\/div>\s*<\/div>\s*<\/div>/g,
+        replacement: '</div>\n</div>\n</div>'
+      },
+      {
+        pattern: /<\/section>\s*<\/div>\s*<\/div>/g,
+        replacement: '</section>\n</div>\n</div>'
+      },
+      {
+        pattern: /<\/main>\s*<\/div>\s*<\/div>/g,
+        replacement: '</main>\n</div>\n</div>'
       }
-    ]
+    ];
+    
     for (const fix of fixes) {
-      if (typeof fix.replacement === 'function') {
-        const newContent = content.replace(fix.pattern, fix.replacement)
-        if (newContent !== content) {
-          content = newContent
-          modified = true
-        }
-      } else {
-        const newContent = content.replace(fix.pattern, fix.replacement)
-        if (newContent !== content) {
-          content = newContent
-          modified = true
-        }
+      const newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
       }
     }
     
     if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8')
-      console.log(`Fixed malformed JSX in: ${filePath}`)
-      return true
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed JSX issues in: ${filePath}`);
+      return true;
     }
-    
-    return false
+    return false;
   } catch (error) {
-    console.error(`Error fixing malformed JSX in ${filePath}:`, error.message)
-    return false
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
+}
+
+function findReactFiles(dir) {
+  const files = [];
+  
+  function walkDir(currentPath) {
+    const items = fs.readdirSync(currentPath);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentPath, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        walkDir(fullPath);
+      } else if (stat.isFile() && /\.(tsx|jsx)$/.test(item)) {
+        files.push(fullPath);
+      }
+    }
+  }
+  
+  walkDir(dir);
+  return files;
 }
 
 // Main execution
-console.log('Starting malformed JSX fixes...')
-const appDir = path.join(__dirname, 'app')
-const files = findFiles(appDir)
-let fixedCount = 0
-let errorCount = 0
+const files = findReactFiles('.');
+console.log(`Checking ${files.length} React files for JSX issues`);
+
+let fixedCount = 0;
 for (const file of files) {
-  try {
-    if (fixMalformedJSX(file)) {
-      fixedCount++
-    }
-  } catch (error) {
-    console.error(`Failed to process ${file}:`, error.message)
-    errorCount++
+  if (fixAllJSX(file)) {
+    fixedCount++;
   }
 }
 
-console.log(`\nFixed ${fixedCount} files`)
-console.log(`Errors: ${errorCount} files`)
-// Try building again
-console.log('\nTrying build again...')
-try {
-  execSync('pnpm run build:no-check', { stdio: 'inherit' })
-  console.log('Build successful!')
-} catch (error) {
-  console.log('Build still has issues, continuing with merge...')
-}</div></div></div></div></div></div></div></div></div>
+console.log(`Fixed JSX issues in ${fixedCount} files`);

@@ -1,56 +1,42 @@
 import React from 'react';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Star, Zap, Shield, Clock, Users, Award, ArrowRight, Cube, Palette, Camera, Layers } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
+import {CheckCircle, TrendingUp, Phone, Mail, MapPin, Star, Zap, Shield, Clock, Users, Award, ArrowRight, Cube, Palette, Camera, Layers} from 'lucide-react';
+import {Helmet} from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AI3DGenerationPage: React.FC = () => {
-  const industries = [
+const AI3DGenerationPage: React.FC = () => {const industries = [
     {
       title: 'Architecture & Real Estate',
       description: 'Create 3D visualizations and virtual tours',
       icon: Building,
-      features: ['3D building models', 'Virtual walkthroughs', 'Interior design', 'Landscape visualization']
-    },
-    {
-      title: 'Gaming & Entertainment',
+      features: ['3D building models', 'Virtual walkthroughs', 'Interior design', 'Landscape visualization']},
+    {title: 'Gaming & Entertainment',
       description: 'Generate game assets and characters',
       icon: Gamepad2,
-      features: ['Character models', 'Environment assets', 'Animation sequences', 'Texture generation']
-    },
-    {
-      title: 'Manufacturing & Product Design',
+      features: ['Character models', 'Environment assets', 'Animation sequences', 'Texture generation']},
+    {title: 'Manufacturing & Product Design',
       description: 'Prototype and visualize products',
       icon: Wrench,
-      features: ['Product prototypes', 'Assembly visualization', 'Material testing', 'Quality inspection']
-    },
-    {
-      title: 'Healthcare & Medical',
+      features: ['Product prototypes', 'Assembly visualization', 'Material testing', 'Quality inspection']},
+    {title: 'Healthcare & Medical',
       description: 'Create medical models and simulations',
       icon: Stethoscope,
-      features: ['Anatomical models', 'Surgical planning', 'Medical training', 'Prosthetic design']
-    }
+      features: ['Anatomical models', 'Surgical planning', 'Medical training', 'Prosthetic design']}
   ];
 
   const features = [
-    {
-      icon: Cube,
+    {icon: Cube,
       title: 'AI-Powered 3D Modeling',
       description: 'Generate complex 3D models from text descriptions or 2D images',
-      benefits: ['90% faster modeling', 'Unlimited creativity', 'Consistent quality', 'Cost effective']
-    },
-    {
-      icon: Palette,
+      benefits: ['90% faster modeling', 'Unlimited creativity', 'Consistent quality', 'Cost effective']},
+    {icon: Palette,
       title: 'Advanced Texturing',
       description: 'Create realistic textures and materials automatically',
-      benefits: ['Photorealistic results', 'Material variety', 'Lighting optimization', 'Seamless integration']
-    },
-    {
-      icon: Camera,
+      benefits: ['Photorealistic results', 'Material variety', 'Lighting optimization', 'Seamless integration']},
+    {icon: Camera,
       title: 'Rendering & Animation',
       description: 'Produce high-quality renders and smooth animations',
-      benefits: ['Professional quality', 'Real-time preview', 'Batch processing', 'Custom styles']
-    }
+      benefits: ['Professional quality', 'Real-time preview', 'Batch processing', 'Custom styles']}
   ];
 
   const benefits = [
@@ -74,7 +60,7 @@ const AI3DGenerationPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI 3D Generation - Advanced 3D Content Creation | Zion Tech Group</title>
         <meta name="description" content="Transform your ideas into stunning 3D models with our AI-powered 3D generation technology. Create professional 3D content 80% faster." />
@@ -88,7 +74,8 @@ const AI3DGenerationPage: React.FC = () => {
         </main>
 <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
-          </div><section className="text-center mb-16">
+          </div>
+<section className="text-center mb-16">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
               AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">3D Generation</span>
             </h1>
@@ -212,7 +199,7 @@ const AI3DGenerationPage: React.FC = () => {
               </a>
             </div>
           </section>
-        </div>
+</div>
       </main>
       
       <Footer />

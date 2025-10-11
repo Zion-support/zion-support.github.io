@@ -2,19 +2,18 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
+import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart} from 'lucide-react';
 
-const PagePage: React.FC = () => {
-  return (
-    <></>
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const PagePage: React.FC = () => {return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
         {/* Hero Section */}
-        </div><section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8">
+        </div>
+<section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Page
@@ -23,14 +22,14 @@ const PagePage: React.FC = () => {
                 Discover our comprehensive solutions designed to transform your business.
               </p>
             </div>
-          </div>
+</div>
         </section>
 
         {/* Content Section */}
         <section className="py-16 px-4 sm: px-6 lg:px-8">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Coming Soon
@@ -49,11 +48,13 @@ const PagePage: React.FC = () => {
       </Helmet>
               <p className="text-xl text-gray-300"></p></p>Section description</p>
             </div>
-          </div>
+</div>
         </section>
           </button><div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
 <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} /></div>
-<div className="relative max-w-7xl mx-auto text-center"></div></div></div>
+<div className="relative max-w-7xl mx-auto text-center"></div>
+</div>
+</div>
             <h1>Ai Insurance</h1>
             </h1>
                 Get Started;
@@ -62,7 +63,7 @@ const PagePage: React.FC = () => {
                 View Demo,
 </button>
             </div>
-          </div>
+</div>
         </section>
 </div>
       
@@ -77,7 +78,7 @@ export default PagePage;
         <section className="py-20 px-4 sm: px-6 lg:px-8">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Powerful Features</h2>
               <p className="text-xl text-gray-300">Everything you need to succeed with AI</p>
@@ -103,18 +104,18 @@ export default PagePage;
                 </div>
               ))}
             </div>
-          </div>
+</div>
         </section>
 {/* Benefits Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our AI Solutions ? </h2>
               <p className="text-xl text-gray-300">Transform your business with intelligent automation</p>
             </div>
-<div className="grid grid-cols-1 md : grid-cols-2 lg:grid-cols-3 gap-8">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 </div>
 <div key={index} className="flex items-start space-x-3">
@@ -127,7 +128,7 @@ export default PagePage;
                 </div>
               ))}
             </div>
-          </div>
+</div>
         </section>
 {/* CTA Section */}
         <section className="py-20 px-4 sm: px-6 lg:px-8">
@@ -148,13 +149,13 @@ export default PagePage;
               </button>
 
             </div>
-          </div>
+</div>
         </section>
       </main>
 
       <Footer />
     </div>
-  )
+)
 }
 
 export default AiInsurancePage;

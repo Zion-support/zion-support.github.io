@@ -4,8 +4,7 @@ import path from 'path'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST') {
     res && res.status(405).json({ error: 'Method Not Allowed' })
-    return
-  }
+    return }
   if (!isInternalAgentRequest(req)) {
     res && res.status(401).json({ error: 'Unauthorized' })
     return
@@ -39,11 +38,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     updatedAt: new Date().toISOString(),
   }
   fs && fs.writeFileSync(statusPath, JSON && JSON.stringify(merged, null, 2))
-  res && res.status(200).json({ ok: true });export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res && res.status(200).json({ ok: true })export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST') {
     res && res.status(405).json({ error: 'Method Not Allowed' })
-    return
-  }
+    return }
   if (!isInternalAgentRequest(req)) {
     res && res.status(401).json({ error: 'Unauthorized' })
     return
@@ -89,7 +87,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     updated_at: new Date ().toISOString (),
   }
   fs.writeFileSync (status_path, JSON.stringify (merged, null, 2))
-  res.status (200).json ({ ok: true });export default /**
+  res.status (200).json ({ ok: true })export default /**
  * handler - Function description
  */
 function handler() {

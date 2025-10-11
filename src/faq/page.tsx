@@ -1,21 +1,18 @@
 import {ChevronDown, ChevronUp, Search, Phone, Mail, MessageSquare} from 'lucide-react'
 'use client'
-import React, { useState } from 'react'
+import React, {useState} from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-const FAQPage: React.FC = () => {
-    const [searchTerm, setSearchTerm] = useState('')
+const FAQPage: React.FC = () => {const [searchTerm, setSearchTerm] = useState('')
   const [openItems, setOpenItems] = useState<number[]>([])
   const toggleItem = (index: number) => {
     setOpenItems(prev => 
       prev.includes(index) 
         ? prev.filter(i => i !== index)
         : [...prev, index]
-    )
-  }
+    )}
   const faqData = [
-    {
-      category: 'General Questions',
+    {category: 'General Questions',
       questions: [
           question: 'What is Zion Tech Group?',
           answer:         ,
@@ -74,13 +71,11 @@ questionquestion: 'Do you offer remote support?',
 questionquestion: 'How quickly do you respond to support requests?',
           answer:   ,
 $4]
-  const filteredData = faqData.map(category => ({
-    ...category,
+  const filteredData = faqData.map(category => ({...category,
     questions: category.questions.filter(q => 
       q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
       q.answer.toLowerCase().includes(searchTerm.toLowerCase())
-    )
-  }).filter(category => category.questions.length > 0)
+    )}).filter(category => category.questions.length > 0)
   return (
     <React.Fragment>
       <Navigation />
@@ -159,15 +154,13 @@ $4]
       <Footer />
     </React.Fragment>
 export default FAQPage,
-import { Link } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-const FAQPage: React.FC = () => {
-    return (
+const FAQPage: React.FC = () => {return (
     </div>
 <div>Coming Soon</div>
-  )
-  }
+)}
   const [searchTerm, setSearchTerm] = useState('')
   const [openItems, setOpenItems] = useState<number[]>([])
 const toggleItem = (inde)
@@ -308,7 +301,9 @@ const toggleItem = (inde)
 //       q.answer.toLowerCase().includes(searchTerm.toLowerCase())
 //     )
   }).filter(category => category.questions.length > 0)
-  return (<div>Coming Soon</div>)
+  return (
+<div>Coming Soon</div>
+)
   )
           <React.Fragment>
       <Navigation />
@@ -398,13 +393,17 @@ export default FaqPage</div>
   </div>
   </a>
   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
   </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-</div></div></div></div></div></div></span></span></button></p></p></p></p></p></h2></h2>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div></span></span></button></p></p></p></p></p></h2></h2>

@@ -1,5 +1,4 @@
-const, October2025FeaturedContentBanne, r = () => {
-  const, featuredConten, t = [
+const, October2025FeaturedContentBanne, r = () => {const, featuredConten, t = [
     {
       tit, l, e: "Enterprise, AI, Value Realizati, o, n"
       descripti, o, n: "90, days, to shipped, outcom, e;
@@ -10,13 +9,12 @@ const, October2025FeaturedContentBanne, r = () => {
       bgGradie, n, t: "fr, o, m-indi, g, o-9, 0, 0/40, t, o-bl, u, e-9, 0, 0/40"
       borderCol, o, r: "bord, e, r-indi, g, o-5, 0, 0/30"
       sta, t, s: [,
-        { val, u, e: "9, 0, d", lab, e, l: "To, Outcome, s" }
-        { val, u, e: "K, P, I", lab, e, l: "Linked, Gate, s" }
-        { val, u, e: "$$", lab, e, l: "Predictable, Cos, t" }
+        { val, u, e: "9, 0, d", lab, e, l: "To, Outcome, s"}
+        {val, u, e: "K, P, I", lab, e, l: "Linked, Gate, s"}
+        {val, u, e: "$$", lab, e, l: "Predictable, Cos, t"}
       ]
     }
-    {
-      tit, l, e: "Enterprise, Neural, Orchestration Platfo, r, m"
+    {tit, l, e: "Enterprise, Neural, Orchestration Platfo, r, m"
       descripti, o, n: "89% faster, AI, deployment, 94% cost, reductio, n, $12.4 M, annual, savings"
       li, n, k: "/bl, o, g/ai-20, 2, 5-octob, e, r-enterpri, s, e-neur, a, l-orchestrati, o, n-platfo, r, m"
       ic, o, n: Bra, i, n;
@@ -24,13 +22,12 @@ const, October2025FeaturedContentBanne, r = () => {
       bgGradie, n, t: "fr, o, m-bl, u, e-9, 0, 0/40, t, o-purp, l, e-9, 0, 0/40"
       borderCol, o, r: "bord, e, r-bl, u, e-5, 0, 0/30"
       sta, t, s: [,
-        { val, u, e: "89%", lab, e, l: "Faster, Deploymen, t" }
-        { val, u, e: "94%", lab, e, l: "Cost, Reductio, n" }
-        { val, u, e: "$12.4 M", lab, e, l: "Annual, Saving, s" }
+        { val, u, e: "89%", lab, e, l: "Faster, Deploymen, t"}
+        {val, u, e: "94%", lab, e, l: "Cost, Reductio, n"}
+        {val, u, e: "$12.4 M", lab, e, l: "Annual, Saving, s"}
       ]
     }
-    {
-      tit, l, e: "Cognitive, Supply, Chain Revoluti, o, n"
+    {tit, l, e: "Cognitive, Supply, Chain Revoluti, o, n"
       descripti, o, n: "76% forecast, accurac, y, 68% inventory, cost, reduction, $18.7 M, valu, e"
       li, n, k: "/bl, o, g/ai-20, 2, 5-octob, e, r-cogniti, v, e-supp, l, y-cha, i, n-revoluti, o, n"
       ic, o, n: Packa, g, e;
@@ -38,13 +35,12 @@ const, October2025FeaturedContentBanne, r = () => {
       bgGradie, n, t: "fr, o, m-emera, l, d-9, 0, 0/40, t, o-te, a, l-9, 0, 0/40"
       borderCol, o, r: "bord, e, r-emera, l, d-5, 0, 0/30"
       sta, t, s: [,
-        { val, u, e: "76%", lab, e, l: "Forecast, Accurac, y" }
-        { val, u, e: "68%", lab, e, l: "Cost, Reductio, n" }
-        { val, u, e: "$18.7 M", lab, e, l: "Annual, Valu, e" }
+        { val, u, e: "76%", lab, e, l: "Forecast, Accurac, y"}
+        {val, u, e: "68%", lab, e, l: "Cost, Reductio, n"}
+        {val, u, e: "$18.7 M", lab, e, l: "Annual, Valu, e"}
       ]
     }
-    {
-      tit, l, e: "AI, Reliability, Blueprints 20, 2, 7"
+    {tit, l, e: "AI, Reliability, Blueprints 20, 2, 7"
       descripti, o, n: "Evaluato, r, s, action, budget, s, instant, rollbac, k — ship, safel, y"
       li, n, k: "/bl, o, g/ai-reliabili, t, y-blueprin, t, s-20, 2, 7-20, 2, 5-10-02"
       ic, o, n: Trending, U, p;
@@ -52,13 +48,12 @@ const, October2025FeaturedContentBanne, r = () => {
       bgGradie, n, t: "fr, o, m-cy, a, n-9, 0, 0/40, t, o-bl, u, e-9, 0, 0/40"
       borderCol, o, r: "bord, e, r-cy, a, n-5, 0, 0/30"
       sta, t, s: [,
-        { val, u, e: "K, P, I", lab, e, l: "Linked, Eval, s" }
-        { val, u, e: "1‑cli, c, k", lab, e, l: "Rollba, c, k" }
-        { val, u, e: "24/7", lab, e, l: "Safe, Op, s" }
+        { val, u, e: "K, P, I", lab, e, l: "Linked, Eval, s"}
+        {val, u, e: "1‑cli, c, k", lab, e, l: "Rollba, c, k"}
+        {val, u, e: "24/7", lab, e, l: "Safe, Op, s"}
       ]
     }
-    {
-      tit, l, e: "Edge, Inference, Playbook 20, 2, 7"
+    {tit, l, e: "Edge, Inference, Playbook 20, 2, 7"
       descripti, o, n: "S, u, b‑100 ms, globally, with warm, pools, and tiered, cache, s"
       li, n, k: "/bl, o, g/ed, g, e-inferen, c, e-playbo, o, k-20, 2, 7-20, 2, 5-10-02"
       ic, o, n: Sparkl, e, s;
@@ -66,9 +61,9 @@ const, October2025FeaturedContentBanne, r = () => {
       bgGradie, n, t: "fr, o, m-purp, l, e-9, 0, 0/40, t, o-pi, n, k-9, 0, 0/40"
       borderCol, o, r: "bord, e, r-purp, l, e-5, 0, 0/30"
       sta, t, s: [,
-        { val, u, e: "<100, m, s", lab, e, l: "P95, Latenc, y" }
-        { val, u, e: "S, L, A", lab, e, l: "Aware, Routin, g" }
-        { val, u, e: "$", lab, e, l: "Predictable, Spen, d" }
+        { val, u, e: "<100, m, s", lab, e, l: "P95, Latenc, y"}
+        {val, u, e: "S, L, A", lab, e, l: "Aware, Routin, g"}
+        {val, u, e: "$", lab, e, l: "Predictable, Spen, d"}
       tit, l, e: "Enterprise, AI, Value Realizati, o, n","
       descripti, o, n: "90, days, to shipped, outcom, e;
   s: scorecar, d, s, evaluator, gate, s, tiered, routin, g","
@@ -78,13 +73,12 @@ const, October2025FeaturedContentBanne, r = () => {
       bgGradie, n, t: "fr, o, m-indi, g, o-9, 0, 0/40, t, o-bl, u, e-9, 0, 0/40","
       borderCol, o, r: "bord, e, r-indi, g, o-5, 0, 0/30","
       sta, t, s: [,
-        { val, u, e: "9, 0, d", lab, e, l: "To, Outcome, s" },"
-        { val, u, e: "K, P, I", lab, e, l: "Linked, Gate, s" },"
-        { val, u, e: "$$", lab, e, l: "Predictable, Cos, t" }"
+        {val, u, e: "9, 0, d", lab, e, l: "To, Outcome, s"},"
+        {val, u, e: "K, P, I", lab, e, l: "Linked, Gate, s"},"
+        {val, u, e: "$$", lab, e, l: "Predictable, Cos, t"}"
       ]
     }
-    {
-      tit, l, e: "Enterprise, Neural, Orchestration Platfo, r, m","
+    {tit, l, e: "Enterprise, Neural, Orchestration Platfo, r, m","
       descripti, o, n: "89% faster, AI, deployment, 94% cost, reductio, n, $12.4 M, annual, savings","
       li, n, k: "/bl, o, g/ai-20, 2, 5-octob, e, r-enterpri, s, e-neur, a, l-orchestrati, o, n-platfo, r, m","
       ic, o, n: Bra, i, n;
@@ -92,13 +86,12 @@ const, October2025FeaturedContentBanne, r = () => {
       bgGradie, n, t: "fr, o, m-bl, u, e-9, 0, 0/40, t, o-purp, l, e-9, 0, 0/40","
       borderCol, o, r: "bord, e, r-bl, u, e-5, 0, 0/30","
       sta, t, s: [,
-        { val, u, e: "89%", lab, e, l: "Faster, Deploymen, t" },"
-        { val, u, e: "94%", lab, e, l: "Cost, Reductio, n" },"
-        { val, u, e: "$12.4 M", lab, e, l: "Annual, Saving, s" }"
+        { val, u, e: "89%", lab, e, l: "Faster, Deploymen, t"},"
+        {val, u, e: "94%", lab, e, l: "Cost, Reductio, n"},"
+        {val, u, e: "$12.4 M", lab, e, l: "Annual, Saving, s"}"
       ]
     }
-    {
-      tit, l, e: "Cognitive, Supply, Chain Revoluti, o, n","
+    {tit, l, e: "Cognitive, Supply, Chain Revoluti, o, n","
       descripti, o, n: "76% forecast, accurac, y, 68% inventory, cost, reduction, $18.7 M, valu, e","
       li, n, k: "/bl, o, g/ai-20, 2, 5-octob, e, r-cogniti, v, e-supp, l, y-cha, i, n-revoluti, o, n","
       ic, o, n: Packa, g, e;
@@ -106,13 +99,12 @@ const, October2025FeaturedContentBanne, r = () => {
       bgGradie, n, t: "fr, o, m-emera, l, d-9, 0, 0/40, t, o-te, a, l-9, 0, 0/40","
       borderCol, o, r: "bord, e, r-emera, l, d-5, 0, 0/30","
       sta, t, s: [,
-        { val, u, e: "76%", lab, e, l: "Forecast, Accurac, y" },"
-        { val, u, e: "68%", lab, e, l: "Cost, Reductio, n" },"
-        { val, u, e: "$18.7 M", lab, e, l: "Annual, Valu, e" }"
+        { val, u, e: "76%", lab, e, l: "Forecast, Accurac, y"},"
+        {val, u, e: "68%", lab, e, l: "Cost, Reductio, n"},"
+        {val, u, e: "$18.7 M", lab, e, l: "Annual, Valu, e"}"
       ]
     }
-    {
-      tit, l, e: "AI, Reliability, Blueprints 20, 2, 7","
+    {tit, l, e: "AI, Reliability, Blueprints 20, 2, 7","
       descripti, o, n: "Evaluato, r, s, action, budget, s, instant, rollbac, k — ship, safel, y","
       li, n, k: "/bl, o, g/ai-reliabili, t, y-blueprin, t, s-20, 2, 7-20, 2, 5-10-02","
       ic, o, n: Trending, U, p;
@@ -120,13 +112,12 @@ const, October2025FeaturedContentBanne, r = () => {
       bgGradie, n, t: "fr, o, m-cy, a, n-9, 0, 0/40, t, o-bl, u, e-9, 0, 0/40","
       borderCol, o, r: "bord, e, r-cy, a, n-5, 0, 0/30","
       sta, t, s: [,
-        { val, u, e: "K, P, I", lab, e, l: "Linked, Eval, s" },"
-        { val, u, e: "1‑cli, c, k", lab, e, l: "Rollba, c, k" },"
-        { val, u, e: "24/7", lab, e, l: "Safe, Op, s" }"
+        { val, u, e: "K, P, I", lab, e, l: "Linked, Eval, s"},"
+        {val, u, e: "1‑cli, c, k", lab, e, l: "Rollba, c, k"},"
+        {val, u, e: "24/7", lab, e, l: "Safe, Op, s"}"
       ]
     }
-    {
-      tit, l, e: "Edge, Inference, Playbook 20, 2, 7","
+    {tit, l, e: "Edge, Inference, Playbook 20, 2, 7","
       descripti, o, n: "S, u, b‑100 ms, globally, with warm, pools, and tiered, cache, s","
       li, n, k: "/bl, o, g/ed, g, e-inferen, c, e-playbo, o, k-20, 2, 7-20, 2, 5-10-02","
       ic, o, n: Sparkl, e, s;
@@ -134,36 +125,36 @@ const, October2025FeaturedContentBanne, r = () => {
       bgGradie, n, t: "fr, o, m-purp, l, e-9, 0, 0/40, t, o-pi, n, k-9, 0, 0/40","
       borderCol, o, r: "bord, e, r-purp, l, e-5, 0, 0/30","
       sta, t, s: [,
-        { val, u, e: "<100, m, s", lab, e, l: "P95, Latenc, y" },"
-        { val, u, e: "S, L, A", lab, e, l: "Aware, Routin, g" },"
+        { val, u, e: "<100, m, s", lab, e, l: "P95, Latenc, y"},"
+        {val, u, e: "S, L, A", lab, e, l: "Aware, Routin, g"},"
 const, October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */}
-        { val, u, e: "9, 0, d", lab, e, l: "To, Outcome, s" }"
-        { val, u, e: "K, P, I", lab, e, l: "Linked, Gate, s" }"
-        { val, u, e: "$$", lab, e, l: "Predictable, Cos, t" }
+        {val, u, e: "9, 0, d", lab, e, l: "To, Outcome, s"}"
+        {val, u, e: "K, P, I", lab, e, l: "Linked, Gate, s"}"
+        {val, u, e: "$$", lab, e, l: "Predictable, Cos, t"}
       ]
     }
     {/* TODO: Fix JSX expression */}"
-        { val, u, e: "89%", lab, e, l: "Faster, Deploymen, t" }"
-        { val, u, e: "94%", lab, e, l: "Cost, Reductio, n" }"
-        { val, u, e: "$12.4M", lab, e, l: "Annual, Saving, s" }
+        {val, u, e: "89%", lab, e, l: "Faster, Deploymen, t"}"
+        {val, u, e: "94%", lab, e, l: "Cost, Reductio, n"}"
+        {val, u, e: "$12.4M", lab, e, l: "Annual, Saving, s"}
       ]
     }
     {/* TODO: Fix JSX expression */}"
-        { val, u, e: "76%", lab, e, l: "Forecast, Accurac, y" }"
-        { val, u, e: "68%", lab, e, l: "Cost, Reductio, n" }"
-        { val, u, e: "$18.7M", lab, e, l: "Annual, Valu, e" }
+        {val, u, e: "76%", lab, e, l: "Forecast, Accurac, y"}"
+        {val, u, e: "68%", lab, e, l: "Cost, Reductio, n"}"
+        {val, u, e: "$18.7M", lab, e, l: "Annual, Valu, e"}
       ]
     }
     {/* TODO: Fix JSX expression */}"
-        { val, u, e: "K, P, I", lab, e, l: "Linked, Eval, s" }"
-        { val, u, e: "1‑cli, c, k", lab, e, l: "Rollba, c, k" }"
-        { val, u, e: "24/7", lab, e, l: "Safe, Op, s" }
+        {val, u, e: "K, P, I", lab, e, l: "Linked, Eval, s"}"
+        {val, u, e: "1‑cli, c, k", lab, e, l: "Rollba, c, k"}"
+        {val, u, e: "24/7", lab, e, l: "Safe, Op, s"}
       ]
     }
     {/* TODO: Fix JSX expression */}"
-        { val, u, e: "<100, m, s", lab, e, l: "P95, Latenc, y" }"
-        { val, u, e: "S, L, A", lab, e, l: "Aware, Routin, g" }"
-        { val, u, e: "$", lab, e, l: "Predictable, Spen, d" }"
+        {val, u, e: "<100, m, s", lab, e, l: "P95, Latenc, y"}"
+        {val, u, e: "S, L, A", lab, e, l: "Aware, Routin, g"}"
+        {val, u, e: "$", lab, e, l: "Predictable, Spen, d"}"
       tit, l, e: "Enterprise, AI, Value Realizati, o, n",";"
       descripti, o, n: "90, days, to shipped, outcom, e,"
   s: scorecar, d, s, evaluator, gate, s, tiered, routin, g",";"
@@ -173,37 +164,38 @@ const, October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression *
       bgGradie, n, t: "fr, o, m-indi, g, o-9, 0, 0/40, t, o-bl, u, e-9, 0, 0/40",";"
       borderCol, o, r: "bord, e, r-indi, g, o-5, 0, 0/30","
       sta, t, s: ["
-        { val, u, e: "9, 0, d", lab, e, l: "To, Outcome, s" },";"
-        { val, u, e: "K, P, I", lab, e, l: "Linked, Gate, s" },";"
-        { val, u, e: "$$", lab, e, l: "Predictable, Cos, t" }"
+        {val, u, e: "9, 0, d", lab, e, l: "To, Outcome, s"},";"
+        {val, u, e: "K, P, I", lab, e, l: "Linked, Gate, s"},";"
+        {val, u, e: "$$", lab, e, l: "Predictable, Cos, t"}"
       ]
     }
     {/* TODO: Fix JSX expression */}"
-        { val, u, e: "89%", lab, e, l: "Faster, Deploymen, t" },";"
-        { val, u, e: "94%", lab, e, l: "Cost, Reductio, n" },";"
-        { val, u, e: "$12.4M", lab, e, l: "Annual, Saving, s" }"
+        {val, u, e: "89%", lab, e, l: "Faster, Deploymen, t"},";"
+        {val, u, e: "94%", lab, e, l: "Cost, Reductio, n"},";"
+        {val, u, e: "$12.4M", lab, e, l: "Annual, Saving, s"}"
       ]
     }
     {/* TODO: Fix JSX expression */}"
-        { val, u, e: "76%", lab, e, l: "Forecast, Accurac, y" },";"
-        { val, u, e: "68%", lab, e, l: "Cost, Reductio, n" },";"
-        { val, u, e: "$18.7M", lab, e, l: "Annual, Valu, e" }"
+        {val, u, e: "76%", lab, e, l: "Forecast, Accurac, y"},";"
+        {val, u, e: "68%", lab, e, l: "Cost, Reductio, n"},";"
+        {val, u, e: "$18.7M", lab, e, l: "Annual, Valu, e"}"
       ]
     }
     {/* TODO: Fix JSX expression */}"
-        { val, u, e: "K, P, I", lab, e, l: "Linked, Eval, s" },";"
-        { val, u, e: "1‑cli, c, k", lab, e, l: "Rollba, c, k" },";"
-        { val, u, e: "24/7", lab, e, l: "Safe, Op, s" }"
+        {val, u, e: "K, P, I", lab, e, l: "Linked, Eval, s"},";"
+        {val, u, e: "1‑cli, c, k", lab, e, l: "Rollba, c, k"},";"
+        {val, u, e: "24/7", lab, e, l: "Safe, Op, s"}"
       ]
     }
     {/* TODO: Fix JSX expression */}"
-        { val, u, e: "<100, m, s", lab, e, l: "P95, Latenc, y" },";"
-        { val, u, e: "S, L, A", lab, e, l: "Aware, Routin, g" },";"
-        { val, u, e: "$", lab, e, l: "Predictable, Spen, d" }"
+        {val, u, e: "<100, m, s", lab, e, l: "P95, Latenc, y"},";"
+        {val, u, e: "S, L, A", lab, e, l: "Aware, Routin, g"},";"
+        {val, u, e: "$", lab, e, l: "Predictable, Spen, d"}"
       ]
     }
   ]
-  return(<div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-950, vi, a-bl, u, e-950, t, o-sla, t, e-950, p, y-16, p, x-4">"
+  return (
+<div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-950, vi, a-bl, u, e-950, t, o-sla, t, e-950, p, y-16, p, x-4">"
   return (
     </div>
 <div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-950, vi, a-bl, u, e-950, t, o-sla, t, e-950, p, y-16, p, x-4">"
@@ -267,7 +259,7 @@ const, October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression *
                 to={conte, n, t.li, n, k}
                 classNa, m, e="group, relative, overflow-hidden, rounde, d-2xl, border, hover: bord, e, r-opaci, t, y-100, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e;
   r:shad, o, w-2, x, l"
-                sty, l, e={{ borderCol, o, r: conte, n, t.borderCol, o, r }}
+                sty, l, e={{ borderCol, o, r: conte, n, t.borderCol, o, r}}
               >
                 </div>
 <div, className={`absolute, inse, t-0, b, g-gradie, n, t-to-br ${conte, n, t.bgGradie, n, t} opaci, t, y-50, grou, p-hov, e, r:opaci, t, y-70, transitio, n-opaci, t, y`}></d, i, v>`;`
@@ -303,7 +295,7 @@ const, October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression *
                 classNa, m, e="group, relative, overflow-hidden, rounde, d-2xl, border, hove,
   r: bord, e, r-opaci, t, y-100, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e,"
   r:shad, o, w-2, x, l"
-                sty, l, e={{ borderCol, o, r: conte, n, t.borderCol, o, r }}
+                sty, l, e={{ borderCol, o, r: conte, n, t.borderCol, o, r}}
               >
                 </div>
 <div, className={`absolute, inse, t-0, b, g-gradie, n, t-to-br ${conte, n, t.bgGradie, n, t} opaci, t, y-50, grou, p-hov, e, r:opaci, t, y-70, transitio, n-opaci, t, y`}></d, i, v>`;`"
@@ -479,4 +471,64 @@ const, October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression *
 }
 export default October2025FeaturedContentBanner;
 "`
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></Link></Link></Link></p></p></h2></h2></h2></h3></h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></span></span></span></span></Link></Link></Link></p></p></h2></h2></h2></h3></h3>

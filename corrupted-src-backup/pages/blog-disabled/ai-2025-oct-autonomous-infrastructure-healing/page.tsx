@@ -1,7 +1,6 @@
-impo, r, t { ArrowLe, f, t, Serv, e, r, Shie, l, d, Trending, U, p, Z, a, p } fr, o, m 'luci, d, e-rea, c, t'
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c'
-export default function AutonomousInfrastructureHealing20, 2, 5() {  
-  return(:src/pages/blog/ai-2025-oct-autonomous-infrastructure-healing/page.tsx;
+impo, r, t {ArrowLe, f, t, Serv, e, r, Shie, l, d, Trending, U, p, Z, a, p} fr, o, m 'luci, d, e-rea, c, t'
+impo, r, t {Helm, e, t} fr, o, m 'rea, c, t-helm, e, t-asy, n, c'
+export default function AutonomousInfrastructureHealing20, 2, 5() {return(:src/pages/blog/ai-2025-oct-autonomous-infrastructure-healing/page.tsx;
     <React.Fragment>
       <Helm, e, t>
         <title>
@@ -56,7 +55,8 @@ export default function AutonomousInfrastructureHealing20, 2, 5() {
                   <TrendingUp, className='h-6 w-6, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0' />
                   <sp, a, n>
                     <stro, n, g>$6, 7, M+ Annual, Saving, s:</stro, n, g> Reduce, operational, costs by, 7, 8% through, automatio, n;
-            </div><section, classNam, e = 'mb-12'>
+            </div>
+<section, classNam, e = 'mb-12'>
               <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-purp, l, e-3, 0, 0'>
                 Architectu, r, e: Intelligent, Healing, Systems;
               </section>
@@ -168,7 +168,8 @@ export default function AutonomousInfrastructureHealing20, 2, 5() {
                   <span></span><strong>Sub-Second Response: </strong> AI detects and remediates issues in under 850ms average</span>,
                 <li className="flex items-start gap-3">
                   <TrendingUp className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0" />
-            </div><section className="mb-12">
+            </div>
+<section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-purple-300">The Infrastructure Reliability Crisis;
               <p className="text-gray-300 mb-4 leading-relaxed">
             </section><section className="mb-12">
@@ -193,7 +194,8 @@ export default function AutonomousInfrastructureHealing20, 2, 5() {
                     Global, Financial, Services;
                   <ul, classNam, e='spa, c, e-y-3, tex, t-gr, a, y-3, 0, 0'>
                     <li>• 99.99% uptime, acro, s, s , 4,500, service, s;
-            </div><section, className='mb-12'>
+            </div>
+<section, className='mb-12'>
               <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-purp, l, e-3, 0, 0'>
                 Implementation, Roadma, p;
               </section>
@@ -220,7 +222,8 @@ export default function AutonomousInfrastructureHealing20, 2, 5() {
                   <p, classNam, e = 'te, x, t-gr, a, y-3, 0, 0'>
                     Enable, full, autonomous healing, with, confidence threshol, d, s.
                     Train, ML, models on, historical, incidents. Continuously, improve, playbooks based, on, remediation outcom, e, s.
-            </div><section, className='mb-12'>
+            </div>
+<section, className='mb-12'>
               <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-purp, l, e-3, 0, 0'>
                 The, Reliability, Advantage;
               <p, className='te, x, t-gr, a, y-300, m, b-4, leadin, g-relax, e, d'>
@@ -274,15 +277,15 @@ export default function AutonomousInfrastructureHealing20, 2, 5() {
 export default function AutonomousInfrastructureHealing20, 2, 5() {/* TODO: Fix JSX expression */}
 }
   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
   </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>  </div>
+</div>
+</div>
+</div>  </div>
 </article>
 </article>
 </section>
@@ -347,4 +350,10 @@ export default function AutonomousInfrastructureHealing20, 2, 5() {/* TODO: Fix 
   </span>
   </span>
   </Server>
-</div></div></div></div></div></div></div></div></p></p></p></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h3></h3></h3></h3></h3></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div></p></p></p></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h3></h3></h3></h3></h3></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li>

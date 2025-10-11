@@ -1,10 +1,9 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { MapPin, Clock, Users, Briefcase, ArrowRight, CheckCircle, Star, Heart, Zap, Shield } from 'lucide-react'
+import {Link} from 'react-router-dom'
+import {MapPin, Clock, Users, Briefcase, ArrowRight, CheckCircle, Star, Heart, Zap, Shield} from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-const CareersPage: React.FC = () => {
-  const openPositions = [
+const CareersPage: React.FC = () => {const openPositions = [
     {
       id: 'senior-ai-engineer',
       title: 'Senior AI Engineer',
@@ -20,10 +19,8 @@ const CareersPage: React.FC = () => {
         'Experience with cloud platforms (AWS, Azure, GCP)',
         'Strong problem-solving and communication skills'
       ],
-      benefits: ['Competitive salary', 'Stock options', 'Health insurance', 'Flexible work hours', 'Professional development budget']
-    },
-    {
-      id: 'full-stack-developer',
+      benefits: ['Competitive salary', 'Stock options', 'Health insurance', 'Flexible work hours', 'Professional development budget']},
+    {id: 'full-stack-developer',
       title: 'Full-Stack Developer',
       department: 'Engineering',
       location: 'Remote / San Francisco, CA',
@@ -37,10 +34,8 @@ const CareersPage: React.FC = () => {
         'Knowledge of cloud services and DevOps practices',
         'Strong attention to detail and code quality'
       ],
-      benefits: ['Competitive salary', 'Health insurance', '401k matching', 'Remote work options', 'Learning budget']
-    },
-    {
-      id: 'data-scientist',
+      benefits: ['Competitive salary', 'Health insurance', '401k matching', 'Remote work options', 'Learning budget']},
+    {id: 'data-scientist',
       title: 'Data Scientist',
       department: 'Data Science',
       location: 'Remote / Boston, MA',
@@ -54,10 +49,8 @@ const CareersPage: React.FC = () => {
         'Experience with big data tools (Spark, Hadoop)',
         'Strong analytical and communication skills'
       ],
-      benefits: ['Competitive salary', 'Stock options', 'Health insurance', 'Flexible schedule', 'Research opportunities']
-    },
-    {
-      id: 'cybersecurity-specialist',
+      benefits: ['Competitive salary', 'Stock options', 'Health insurance', 'Flexible schedule', 'Research opportunities']},
+    {id: 'cybersecurity-specialist',
       title: 'Cybersecurity Specialist',
       department: 'Security',
       location: 'Remote / Washington, DC',
@@ -71,10 +64,8 @@ const CareersPage: React.FC = () => {
         'Experience with SIEM, EDR, and security frameworks',
         'Knowledge of compliance standards (SOC 2, ISO 27001)'
       ],
-      benefits: ['Competitive salary', 'Health insurance', 'Security training budget', 'Certification support', 'Flexible work']
-    },
-    {
-      id: 'product-manager',
+      benefits: ['Competitive salary', 'Health insurance', 'Security training budget', 'Certification support', 'Flexible work']},
+    {id: 'product-manager',
       title: 'Product Manager',
       department: 'Product',
       location: 'Remote / Austin, TX',
@@ -88,10 +79,8 @@ const CareersPage: React.FC = () => {
         'Strong analytical and strategic thinking skills',
         'Excellent communication and leadership abilities'
       ],
-      benefits: ['Competitive salary', 'Stock options', 'Health insurance', 'Product conference budget', 'Leadership development']
-    },
-    {
-      id: 'sales-engineer',
+      benefits: ['Competitive salary', 'Stock options', 'Health insurance', 'Product conference budget', 'Leadership development']},
+    {id: 'sales-engineer',
       title: 'Sales Engineer',
       department: 'Sales',
       location: 'Remote / Chicago, IL',
@@ -105,30 +94,21 @@ const CareersPage: React.FC = () => {
         'Excellent presentation and communication skills',
         'Ability to travel to client sites (25% travel)'
       ],
-      benefits: ['Competitive salary + commission', 'Health insurance', 'Travel budget', 'Sales training', 'Performance bonuses']
-    }
+      benefits: ['Competitive salary + commission', 'Health insurance', 'Travel budget', 'Sales training', 'Performance bonuses']}
   ]
   const benefits = [
-    {
-      icon: Heart,
+    {icon: Heart,
       title: 'Health & Wellness',
-      description: 'Comprehensive health insurance, dental, vision, and mental health support'
-    },
-    {
-      icon: Zap,
+      description: 'Comprehensive health insurance, dental, vision, and mental health support'},
+    {icon: Zap,
       title: 'Learning & Growth',
-      description: 'Professional development budget, conference attendance, and skill development programs'
-    },
-    {
-      icon: Shield,
+      description: 'Professional development budget, conference attendance, and skill development programs'},
+    {icon: Shield,
       title: 'Work-Life Balance',
-      description: 'Flexible work hours, remote work options, and unlimited PTO'
-    },
-    {
-      icon: Star,
+      description: 'Flexible work hours, remote work options, and unlimited PTO'},
+    {icon: Star,
       title: 'Recognition',
-      description: 'Performance bonuses, stock options, and recognition programs'
-    }
+      description: 'Performance bonuses, stock options, and recognition programs'}
   ]
   const culture = [
     'Innovation-driven environment where creativity is encouraged',
@@ -139,10 +119,11 @@ const CareersPage: React.FC = () => {
     'Open communication and transparent leadership'
   ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       {/* Hero Section */}
-      </div><section className="relative py-20 px-4">
+      </div>
+<section className="relative py-20 px-4">
         </section>
 <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
@@ -162,7 +143,7 @@ const CareersPage: React.FC = () => {
               Contact Us,
   
           </div>
-        </div>
+</div>
       </section>
       {/* Why Work With Us */}
       <section className="py-20 bg-white">
@@ -187,7 +168,8 @@ const CareersPage: React.FC = () => {
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}
                 <p className="text-gray-600">{benefit.description})
       {/* Company Culture */}
-      </div><section className="py-20 bg-gray-50">
+      </div>
+<section className="py-20 bg-gray-50">
         </section>
 <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           </div>
@@ -236,7 +218,8 @@ const CareersPage: React.FC = () => {
                   </div>
 <div className="text-gray-600">Satisfaction;
       {/* Open Positions */}
-      </div><section id="open-positions" className="py-20 bg-white">
+      </div>
+<section id="open-positions" className="py-20 bg-white">
         </section>
 <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           </div>
@@ -296,7 +279,8 @@ const CareersPage: React.FC = () => {
                             <CheckCircle className="w-4 h-4 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
                             {benefit})})
       {/* CTA Section */}
-      </div><section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
+      </div>
+<section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
         </section>
 <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -314,7 +298,7 @@ const CareersPage: React.FC = () => {
               className="bg-transparent text-white px-8 py-4 rounded-lg text-lg font-semibold border-2 border-white hover:bg-white hover:text-cyan-600 transition-all duration-300">
               Meet Our Team;
           </div>
-        </div>
+</div>
       </section>
       <Footer />
     </div>
@@ -328,4 +312,29 @@ export default CareersPage</Link>
   </p>
   </Link>
   </Link>
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></p></p></p></p></p></h2></h3></h3></h3></h4></h4></ul></ul></ul></li></li></li></section></section></section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></span></span></span></span></span></p></p></p></p></p></h2></h3></h3></h3></h4></h4></ul></ul></ul></li></li></li></section></section></section>

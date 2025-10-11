@@ -1,27 +1,23 @@
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Target, Users, BarChart, Shield, Zap, Clock, Award, ArrowRight, Brain, Cloud, Code, Database, Globe, Smartphone, Lock, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react'
+import {Helmet} from 'react-helmet-async'
+import {CheckCircle, TrendingUp, Phone, Mail, MapPin, Target, Users, BarChart, Shield, Zap, Clock, Award, ArrowRight, Brain, Cloud, Code, Database, Globe, Smartphone, Lock, Star, Settings, Calendar, CheckSquare, FileText} from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-const ITConsultingPage: React.FC = () => {
-  const consultingServices = [
+const ITConsultingPage: React.FC = () => {const consultingServices = [
     {
       title: 'Digital Transformation',
       description: 'Comprehensive digital transformation strategies to modernize your business operations.',
       icon: Brain,
       features: ['Technology Assessment', 'Digital Strategy Planning', 'Process Optimization', 'Change Management'],
       benefits: ['Increased Efficiency', 'Cost Reduction', 'Better Customer Experience', 'Competitive Advantage'],
-      price: 'Starting at $5,000/month'
-    },
-    {
-      title: 'Cloud Migration',
+      price: 'Starting at $5,000/month'},
+    {title: 'Cloud Migration',
       description: 'Seamless migration to cloud platforms with minimal downtime and maximum security.',
       icon: Cloud,
       features: ['Cloud Architecture Design', 'Data Migration', 'Security Implementation', 'Performance Optimization'],
       benefits: ['Scalability', 'Cost Savings', 'Enhanced Security', 'Improved Performance'],
-      price: 'Starting at $3,500/month'
-    }
+      price: 'Starting at $3,500/month'}
   ]
   return (<React.Fragment>
       <Helmet>
@@ -32,7 +28,8 @@ const ITConsultingPage: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         <Navigation /></Navigation>"
         </div><main className="pt-24 pb-16 px-4"></main>"
-          <div className="max-w-7xl mx-auto"></div>"
+          <div className="max-w-7xl mx-auto">
+</div>"
             <div className="text-center mb-16"></div>"
               < className="text-4xl,"$2 />
   md: text-6xl font-bold text-gray-900 mb-6"></h1>
@@ -84,8 +81,8 @@ const ITConsultingPage: React.FC = () => {
                         Get Started,
   
                     </div>
-                  </div>
-                </div>
+</div>
+</div>
               ))}
           {/* CTA Section */}
           </button><section className="py-16 px-4 sm: px-6 lg:px-8 bg-gray-50">
@@ -103,7 +100,7 @@ const ITConsultingPage: React.FC = () => {
                   <Mail className="w-5 h-5 inline mr-2" />
                   Email Us;
               </div>
-            </div>
+</div>
           </section>
         </main>
         <Footer />
@@ -114,4 +111,7 @@ const ITConsultingPage: React.FC = () => {
 export default ITConsultingPage</button>
   </button>
   </button>
-</div></div></div></div></p></p></h2></h3></h4></h4></h4></ul></ul></ul></li></li>
+</div>
+</div>
+</div>
+</div></p></p></h2></h3></h4></h4></h4></ul></ul></ul></li></li>

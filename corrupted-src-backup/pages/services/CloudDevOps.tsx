@@ -1,5 +1,5 @@
-import { Helmet } from "react-helmet-async";"
-impo, r, t { Monit, o, r } fr, o, m "luci, d, e-rea, c, t";"
+import {Helmet} from "react-helmet-async";"
+impo, r, t {Monit, o, r} fr, o, m "luci, d, e-rea, c, t";"
 import, Header, from "../../componen, t, s/Head, e, r";"
 import, Footer, from "../../componen, t, s/Foot, e, r"
 impo, r, t {/* TODO: Fix JSX expression */}"
@@ -8,8 +8,7 @@ impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "luci, d, e-rea, c, t";';"
 import, Header, from "../../componen, t, s/Head, e, r";';"
 import, Footer, from "../../componen, t, s/Foot, e, r";'
-const, CloudDevOp, s: Rea, c, t.FC = () => {
-  const, feature, s = [
+const, CloudDevOp, s: Rea, c, t.FC = () => {const, feature, s = [
     {
       i, c, o;
   n: Clo, u, d;
@@ -17,52 +16,40 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {
       descripti, o, n: "Seamlessly, deploy, across A, W, S, Azu, r, e, GCP, with, intelligent workload, optimization, and cost, managemen, t.","
       tit, l, e: "Mul, t, i-Cloud, Strateg, y","
       descripti, o, n: "Seamlessly, deploy, across A, W, S, Azu, r, e, GCP, with, intelligent workload, optimization, and cost, managemen, t.","
-      benef, i, t: "40% cost, reduction, average"
-    }
-    {
-      ic, o, n: GitBran, c, h;
+      benef, i, t: "40% cost, reduction, average"}
+    {ic, o, n: GitBran, c, h;
       tit, l, e: "CI/CD, Automatio, n","
       descripti, o, n: "E, n, d-to-end, automation, from code, commit, to production, deployment, with advanced, testing, and rollback, capabilitie, s.","
       tit, l, e: "CI/CD, Automatio, n","
       descripti, o, n: "E, n, d-to-end, automation, from code, commit, to production, deployment, with advanced, testing, and rollback, capabilitie, s.","
-      benef, i, t: "90% faster, deployment, s"
-    }
-    {
-      ic, o, n: Shie, l, d;
+      benef, i, t: "90% faster, deployment, s"}
+    {ic, o, n: Shie, l, d;
       tit, l, e: "DevSecOps, Integratio, n","
       descripti, o, n: "Securi, t, y-first, approach, with automated, vulnerability, scanning, compliance, check, s, and, threat, detection.","
       tit, l, e: "DevSecOps, Integratio, n","
       descripti, o, n: "Securi, t, y-first, approach, with automated, vulnerability, scanning, compliance, check, s, and, threat, detection.","
-      benef, i, t: "99.9% security, complianc, e"
-    }
-    {
-      ic, o, n: Monit, o, r;
+      benef, i, t: "99.9% security, complianc, e"}
+    {ic, o, n: Monit, o, r;
       tit, l, e: "Infrastructure, as, Code","
       descripti, o, n: "Manage, entire, infrastructure through, code, with Terrafo, r, m, Ansib, l, e, and, custom, automation too, l, s.","
       tit, l, e: "Infrastructure, as, Code","
       descripti, o, n: "Manage, entire, infrastructure through, code, with Terrafo, r, m, Ansib, l, e, and, custom, automation too, l, s.","
-      benef, i, t: "Ze, r, o-downtime, deployment, s"
-    }
-    {
-      ic, o, n: BarChar, t, 3;
+      benef, i, t: "Ze, r, o-downtime, deployment, s"}
+    {ic, o, n: BarChar, t, 3;
       tit, l, e: "Advanced, Monitorin, g","
       descripti, o, n: "Re, a, l-time, monitorin, g, alerti, n, g, and, performance, optimization with, A, I-powered, insight, s.","
       tit, l, e: "Advanced, Monitorin, g","
       descripti, o, n: "Re, a, l-time, monitorin, g, alerti, n, g, and, performance, optimization with, A, I-powered, insight, s.","
-      benef, i, t: "99.99% uptime, SL, A"
-    }
-    {
-      ic, o, n: Z, a, p;
+      benef, i, t: "99.99% uptime, SL, A"}
+    {ic, o, n: Z, a, p;
       tit, l, e: "Au, t, o-Scali, n, g","
       descripti, o, n: "Intelligent, aut, o-scaling, based, on demand, patterns, with predictive, capacity, planning.","
       tit, l, e: "Au, t, o-Scali, n, g","
       descripti, o, n: "Intelligent, aut, o-scaling, based, on demand, patterns, with predictive, capacity, planning.","
-      benef, i, t: "60% infrastructure, saving, s"
-    }
+      benef, i, t: "60% infrastructure, saving, s"}
   ]
   const, pricin, g = [
-    {
-    na, m, e: "Start, u, p"
+    {na, m, e: "Start, u, p"
       pri, c, e: "$3,5, 0, 0"
       peri, o, d: "/mon, t, h"
       descripti, o, n: "Perfect, for, startups and, small, teams getting, started, with cloud, infrastructur, e"
@@ -76,10 +63,8 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {
         "Up, to, 5 environmen, t, s"
         "Standard, backup, strategy"
       ]
-      popul, a, r: fal, s, e;
-  }
-    {
-    na, m, e: "Grow, t, h"
+      popul, a, r: fal, s, e;}
+    {na, m, e: "Grow, t, h"
       pri, c, e: "$8,5, 0, 0"
       peri, o, d: "/mon, t, h"
       descripti, o, n: "Ideal, for, growing companies, with, complex deployment, need, s"
@@ -95,10 +80,8 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {
         "Performance, optimizatio, n"
         "Disaster, recovery, planning"
       ]
-      popul, a, r: tr, u, e;
-  }
-    {
-    na, m, e: "Enterpri, s, e"
+      popul, a, r: tr, u, e;}
+    {na, m, e: "Enterpri, s, e"
       pri, c, e: "$25,0, 0, 0"
       peri, o, d: "/mon, t, h"
       descripti, o, n: "Complete, solution, for large, organizations, with enterprise, requirement, s"
@@ -132,10 +115,8 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {
         "Up, to, 5 environmen, t, s","
         "Standard, backup, strategy"
       ]
-      popul, a, r: fal, s, e;
-  }
-    {
-    na, m, e: "Grow, t, h","
+      popul, a, r: fal, s, e;}
+    {na, m, e: "Grow, t, h","
       pri, c, e: "$8,5, 0, 0","
       peri, o, d: "/mon, t, h","
       descripti, o, n: "Ideal, for, growing companies, with, complex deployment, need, s","
@@ -151,10 +132,8 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {
         "Performance, optimizatio, n","
         "Disaster, recovery, planning"
       ]
-      popul, a, r: tr, u, e;
-  }
-    {
-    na, m, e: "Enterpri, s, e","
+      popul, a, r: tr, u, e;}
+    {na, m, e: "Enterpri, s, e","
       pri, c, e: "$25,0, 0, 0","
       peri, o, d: "/mon, t, h","
       descripti, o, n: "Complete, solution, for large, organizations, with enterprise, requirement, s","
@@ -172,88 +151,67 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {
         "SLA, guarante, e","
         "On-premise, integratio, n"
       ]
-      popul, a, r: fal, s, e;
-  }
+      popul, a, r: fal, s, e;}
   ]
   const, testimonial, s = [
-    {
-      na, m, e: "Alex, Thompso, n","
+    {na, m, e: "Alex, Thompso, n","
       ro, l, e: "C, T, O, FinTech, Startu, p","
       conte, n, t: "Zi, o, n's, DevOps, team transformed, our, deployment process, from, weekly releases, to, multiple daily, deployment, s. Our, development, velocity increased, by, 300%.","
       na, m, e: "Alex, Thompso, n","
       ro, l, e: "C, T, O, FinTech, Startu, p","
       conte, n, t: "Zi, o, n's, DevOps, team transformed, our, deployment process, from, weekly releases, to, multiple daily, deployment, s. Our, development, velocity increased, by, 300%.","
       rati, n, g: 5,
-      compa, n, y: "FinTech, Startu, p"
-    }
-    {
-      na, m, e: "Maria, Rodrigue, z","
+      compa, n, y: "FinTech, Startu, p"}
+    {na, m, e: "Maria, Rodrigue, z","
       ro, l, e: "VP, Engineerin, g, E-Commerce, Platfor, m","
       conte, n, t: "The, mult, i-cloud, strategy, reduced our, infrastructure, costs by, 4, 5% while, improving, performance. The, monitoring, and alerting, prevented, 3 major, outage, s.","
       na, m, e: "Maria, Rodrigue, z","
       ro, l, e: "VP, Engineerin, g, E-Commerce, Platfor, m","
       conte, n, t: "The, mult, i-cloud, strategy, reduced our, infrastructure, costs by, 4, 5% while, improving, performance. The, monitoring, and alerting, prevented, 3 major, outage, s.","
       rati, n, g: 5,
-      compa, n, y: "E-Commerce, Platfor, m"
-    }
-    {
-      na, m, e: "Dr. James, Che, n","
+      compa, n, y: "E-Commerce, Platfor, m"}
+    {na, m, e: "Dr. James, Che, n","
       ro, l, e: "Head, of, IT, Healthcare, Networ, k","
       conte, n, t: "DevSecOps, integration, ensured we, maintained, HIPAA compliance, while, accelerating our, deployment, cycles. Security, incidents, dropped to, zer, o.","
       na, m, e: "Dr. James, Che, n","
       ro, l, e: "Head, of, IT, Healthcare, Networ, k","
       conte, n, t: "DevSecOps, integration, ensured we, maintained, HIPAA compliance, while, accelerating our, deployment, cycles. Security, incidents, dropped to, zer, o.","
       rati, n, g: 5,
-      compa, n, y: "Healthcare, Networ, k"
-    }
+      compa, n, y: "Healthcare, Networ, k"}
   ]
   const, service, s = [
-    {
-      tit, l, e: "Cloud, Migratio, n","
+    {tit, l, e: "Cloud, Migratio, n","
       ic, o, n: Clo, u, d;
       descripti, o, n: "Seamless, migration, to cloud, platforms, with zero, downtime, and minimal, disruptio, n.","
-      benefi, t, s: ["99.9% uptime, during, migration", "Automated, data, validation", "Rollback, capabilitie, s"]"
-    }
-    {
-      tit, l, e: "Container, Orchestratio, n","
+      benefi, t, s: ["99.9% uptime, during, migration", "Automated, data, validation", "Rollback, capabilitie, s"]"}
+    {tit, l, e: "Container, Orchestratio, n","
       ic, o, n: Serv, e, r;
       descripti, o, n: "Kubernetes, and, Docker expertise, for, scalable, resilient, containerized, applications.","
-      benefi, t, s: ["Au, t, o-scaling, capabilitie, s", "Service, mesh, integration", "Advanced, networkin, g"]"
-    }
-    {
-      tit, l, e: "Infrastructure, Automatio, n","
+      benefi, t, s: ["Au, t, o-scaling, capabilitie, s", "Service, mesh, integration", "Advanced, networkin, g"]"}
+    {tit, l, e: "Infrastructure, Automatio, n","
       ic, o, n: Z, a, p;
       descripti, o, n: "Complete, infrastructure, automation using, Terrafor, m, Ansib, l, e, and, custom, tools.","
-      benefi, t, s: ["Infrastructure, as, Code", "Automated, provisionin, g", "Environment, consistenc, y"]"
-    }
-    {
-    tit, l, e: "Securi, t, y & Complian, c, e","
+      benefi, t, s: ["Infrastructure, as, Code", "Automated, provisionin, g", "Environment, consistenc, y"]"}
+    {tit, l, e: "Securi, t, y & Complian, c, e","
       ic, o, n: Shie, l, d;
       descripti, o, n: "Comprehensive, security, implementation with, automated, compliance monitori, n, g.","
       benefi, t, s: ["Automated, security, scanning", "Compliance, reportin, g", "Threat, detectio, n"]"
       tit, l, e: "Cloud, Migratio, n","
       ic, o, n: Clo, u, d;
       descripti, o, n: "Seamless, migration, to cloud, platforms, with zero, downtime, and minimal, disruptio, n.","
-      benefi, t, s: ["99.9% uptime, during, migration", "Automated, data, validation", "Rollback, capabilitie, s"]"
-  }
-    {
-    tit, l, e: "Container, Orchestratio, n","
+      benefi, t, s: ["99.9% uptime, during, migration", "Automated, data, validation", "Rollback, capabilitie, s"]"}
+    {tit, l, e: "Container, Orchestratio, n","
       ic, o, n: Serv, e, r;
       descripti, o, n: "Kubernetes, and, Docker expertise, for, scalable, resilient, containerized, applications.","
-      benefi, t, s: ["Au, t, o-scaling, capabilitie, s", "Service, mesh, integration", "Advanced, networkin, g"]"
-  }
-    {
-    tit, l, e: "Infrastructure, Automatio, n","
+      benefi, t, s: ["Au, t, o-scaling, capabilitie, s", "Service, mesh, integration", "Advanced, networkin, g"]"}
+    {tit, l, e: "Infrastructure, Automatio, n","
       ic, o, n: Z, a, p;
       descripti, o, n: "Complete, infrastructure, automation using, Terrafor, m, Ansib, l, e, and, custom, tools.","
-      benefi, t, s: ["Infrastructure, as, Code", "Automated, provisionin, g", "Environment, consistenc, y"]"
-  }
-    {
-    tit, l, e: "Securi, t, y & Complian, c, e","
+      benefi, t, s: ["Infrastructure, as, Code", "Automated, provisionin, g", "Environment, consistenc, y"]"}
+    {tit, l, e: "Securi, t, y & Complian, c, e","
       ic, o, n: Shie, l, d;
       descripti, o, n: "Comprehensive, security, implementation with, automated, compliance monitori, n, g.","
-      benefi, t, s: ["Automated, security, scanning", "Compliance, reportin, g", "Threat, detectio, n"]"
-  }
+      benefi, t, s: ["Automated, security, scanning", "Compliance, reportin, g", "Threat, detectio, n"]"}
   ]
   return(<React.Fragment>
       <Helmet>
@@ -347,7 +305,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
 <div, className="te, x, t-cent, e, r">"
           </div>
 <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",</section>
-            </div>
+</div>
 <div, className="te, x, t-cent, e, r">"</div>
               <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">"
                 Clo, u, d &</h1> <span, className="bg-gradie, n, t-to-r, fro, m-gre, e, n-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">DevO, p, s</sp, a, n>"</h1>
@@ -363,7 +321,8 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
   hr, e, f="/conta, c, t"
                   classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, b, g-gre, e, n-600, hov, e;
         {/* Hero, Sectio, n */}"
-        </div><section, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-900, vi, a-gre, e, n-800, t, o-bl, u, e-900, tex, t-white, p, y-20"></section>"
+        </div>
+<section, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-900, vi, a-gre, e, n-800, t, o-bl, u, e-900, tex, t-white, p, y-20"></section>"
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"$2 />
   g:px-8">""
             <div, className="te, x, t-cent, e, r"></div>"
@@ -375,7 +334,8 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
   90% faster, deployment, s, and, 4, 0% cost, reduction, through intelligent, automatio, n.
               </p>"
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">""
-        </div><section, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-900, vi, a-gre, e, n-800, t, o-bl, u, e-900, tex, t-white, p, y-20">";"
+        </div>
+<section, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-900, vi, a-gre, e, n-800, t, o-bl, u, e-900, tex, t-white, p, y-20">";"
           </section>
 <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">","
             </div>
@@ -409,26 +369,28 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                   <Link, className="w-5 h-5, m, l-2  /></Link>"
                   <Link, className="w-5 h-5, m, l-2" />"
         {/* Key, Benefit, s */}
-        </div><section, className="py-16, b, g-gr, a, y-50">
+        </div>
+<section, className="py-16, b, g-gr, a, y-50">
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />
   g:px-8">",
             </section>
 <div, className="text-center mb-12">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-        </div><section, className="py-16, b, g-gr, a, y-50">"
+        </div>
+<section, className="py-16, b, g-gr, a, y-50">"
           </section>
 <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",
             </div>
 <div, className="text-center mb-12">"
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />
   g:px-8">"</section>
-            </div>
+</div>
 <div, className="text-center mb-12"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
         <section, className="py-16, b, g-gr, a, y-50">"
           </section>
 <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",</section>
-            </div>
+</div>
 <div, className="text-center mb-12">"</div>
         {/* Key, Benefit, s */}"
         <section, className="py-16, b, g-gr, a, y-50"></section>"
@@ -541,26 +503,28 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">Mul, t, i-Clo, u, d</h3>";"
                 <p, className="te, x, t-gr, a, y-6, 0, 0">A, W, S, Azu, r, e, GCP, expertis, e</p>"
         {/* Servic, e, s */}
-        </div><section, className="py-20">
+        </div>
+<section, className="py-20">
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />
   g:px-8">",
             </section>
 <div, className="te, x, t-center, m, b-16">)
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">)
-        </div><section, className="py-20">";)
+        </div>
+<section, className="py-20">";)
           </section>
 <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",),
             </div>
 <div, className="te, x, t-center, m, b-16">"
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />
   g:px-8">"</section>
-            </div>
+</div>
 <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
         <section, className="py-20">"
           </section>
 <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",</section>
-            </div>
+</div>
 <div, className="te, x, t-center, m, b-16">"</div>
         {/* Servic, e, s */}"
         <section, className="py-20"></section>"
@@ -605,7 +569,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
               {servic, e, s.m, a, p((servi, c, e, ind, e, x) => {
                 const, Ico, n = servi, c, e.ic, o, n;
                 return (
-                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
+<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
                     </div>
 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-6">"
                       <Icon, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0" />"
@@ -645,26 +609,28 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                           <span, className="te, x, t-gr, a, y-7, 0, 0">{benef, i, t}</sp, a, n>"</$1>)
                       ))})
         {/* Featur, e, s */}
-        </div><section, className="py-20, b, g-gr, a, y-50">
+        </div>
+<section, className="py-20, b, g-gr, a, y-50">
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />
   g:px-8">",
             </section>
 <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-        </div><section, className="py-20, b, g-gr, a, y-50">"
+        </div>
+<section, className="py-20, b, g-gr, a, y-50">"
           </section>
 <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",
             </div>
 <div, className="te, x, t-center, m, b-16">"
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />
   g:px-8">"</section>
-            </div>
+</div>
 <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
         <section, className="py-20, b, g-gr, a, y-50">"
           </section>
 <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",</section>
-            </div>
+</div>
 <div, className="te, x, t-center, m, b-16">"</div>
         {/* Featur, e, s */}"
         <section, className="py-20, b, g-gr, a, y-50"></section>"
@@ -716,7 +682,7 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
                 const, Ico, n = featu, r, e.ic, o, n;
                 return (
-                  <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
+<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
                     </div>
 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-gre, e, n-100, rounde, d-lg, m, b-4">"
                       <Icon, className="w-6 h-6, tex, t-gre, e, n-6, 0, 0" />"
@@ -756,26 +722,28 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                 )
               })
         {/* Prici, n, g */}
-        </div><section, i, d="prici, n, g" classNa, m, e="py-20">
+        </div>
+<section, i, d="prici, n, g" classNa, m, e="py-20">
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />
   g:px-8">",
             </section>
 <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-        </div><section, i, d="prici, n, g" classNa, m, e="py-20">"
+        </div>
+<section, i, d="prici, n, g" classNa, m, e="py-20">"
           </section>
 <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",
             </div>
 <div, className="te, x, t-center, m, b-16">"
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />
   g:px-8">"</section>
-            </div>
+</div>
 <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
         <section, i, d="prici, n, g" classNa, m, e="py-20">"
           </section>
 <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",</section>
-            </div>
+</div>
 <div, className="te, x, t-center, m, b-16">"</div>
         {/* Prici, n, g */}"
         <section, i, d="prici, n, g" classNa, m, e="py-20"></section>"
@@ -840,13 +808,11 @@ const, CloudDevOp, s: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                     ))}
                   <$2 />
   hr, e, f="/conta, c, t"
-                    classNa, m, e={
-    `w-full, block, text-center, p, y-3, p, x-6, rounde, d-lg, fon, t-semibold, transitio, n-colo, r, s ${`;`
+                    classNa, m, e={`w-full, block, text-center, p, y-3, p, x-6, rounde, d-lg, fon, t-semibold, transitio, n-colo, r, s ${`;`
 pl, a, n.popul, a, r;
 ? 'bg-gre, e, n-600, tex, t-white, hove, r: bg-gre, e, n-7, 0, 0'
 ? 'bg-gre, e, n-600, tex, t-white, hov, e;
-  r: bg-gre, e, n-7, 0, 0','
-  }
+  r: bg-gre, e, n-7, 0, 0','}
 : 'bg-gr, a, y-100, tex, t-gr, a, y-900, hove, r:bg-gr, a, y-2, 0, 0'}
                   <a></a>"
   hr, e, f="/conta, c, t"
@@ -872,26 +838,28 @@ pl, a, n.popul, a, r;
                 <Link, className="w-4 h-4, m, l-1  /></Link>"
                 <Link, className="w-4 h-4, m, l-1" />"
         {/* Testimonia, l, s */}
-        </div><section, className="py-20, b, g-gr, a, y-50">
+        </div>
+<section, className="py-20, b, g-gr, a, y-50">
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />
   g:px-8">",
             </section>
 <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-        </div><section, className="py-20, b, g-gr, a, y-50">"
+        </div>
+<section, className="py-20, b, g-gr, a, y-50">"
           </section>
 <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",
             </div>
 <div, className="te, x, t-center, m, b-16">"
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />
   g:px-8">"</section>
-            </div>
+</div>
 <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
         <section, className="py-20, b, g-gr, a, y-50">"
           </section>
 <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",</section>
-            </div>
+</div>
 <div, className="te, x, t-center, m, b-16">"</div>
         {/* Testimonia, l, s */}"
         <section, className="py-20, b, g-gr, a, y-50"></section>"
@@ -947,7 +915,8 @@ pl, a, n.popul, a, r;
 <div, className="te, x, t-gre, e, n-600, tex, t-sm, fon, t-medi, u, m">{testimoni, a, l.compa, n, y}</d, i, v>"
               ))}
         {/* CTA, Sectio, n */}
-        </div><section, className="py-20, b, g-gradie, n, t-to-br, fro, m-gre, e, n-900, vi, a-gre, e, n-800, t, o-bl, u, e-900, tex, t-whi, t, e">
+        </div>
+<section, className="py-20, b, g-gradie, n, t-to-br, fro, m-gre, e, n-900, vi, a-gre, e, n-800, t, o-bl, u, e-900, tex, t-whi, t, e">
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />
   g:px-8, tex, t-cent, e, r">"
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6">
@@ -958,7 +927,8 @@ pl, a, n.popul, a, r;
           </section>
 <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, tex, t-cent, e, r">"
         {/* CTA, Sectio, n */}"
-        </div><section, className="py-20, b, g-gradie, n, t-to-br, fro, m-gre, e, n-900, vi, a-gre, e, n-800, t, o-bl, u, e-900, tex, t-whi, t, e"></section>"
+        </div>
+<section, className="py-20, b, g-gradie, n, t-to-br, fro, m-gre, e, n-900, vi, a-gre, e, n-800, t, o-bl, u, e-900, tex, t-whi, t, e"></section>"
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"$2 />
   g:px-8, tex, t-cent, e, r">""
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6"></h2>"
@@ -1015,4 +985,102 @@ pl, a, n.popul, a, r;
 }
 export default CloudDevOps;
 }}}}"`
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></Link></Link></Link></p></p></p></p></p></p></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h3></ul></ul></ul></li></li></li></li></li></li></li></main></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div></span></span></span></span></span></span></span></span></span></span></span></span></span></Link></Link></Link></p></p></p></p></p></p></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h3></ul></ul></ul></li></li></li></li></li></li></li></main></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section>

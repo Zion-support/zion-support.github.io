@@ -2,35 +2,26 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
+import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart} from 'lucide-react';
 
-const AiComputerVisionPage: React.FC = () => {
-  const features = [
+const AiComputerVisionPage: React.FC = () => {const features = [
     {
       icon: Eye,
       title: 'Object Detection',
       description: 'Advanced AI algorithms for real-time object detection and recognition.',
-      benefits: ['Real-time detection', 'High accuracy', 'Multiple object types', 'Custom models']
-    },
-    {
-      icon: Camera,
+      benefits: ['Real-time detection', 'High accuracy', 'Multiple object types', 'Custom models']},
+    {icon: Camera,
       title: 'Image Analysis',
       description: 'Comprehensive image analysis and processing capabilities.',
-      benefits: ['Image classification', 'Feature extraction', 'Pattern recognition', 'Quality assessment']
-    },
-    {
-      icon: Brain,
+      benefits: ['Image classification', 'Feature extraction', 'Pattern recognition', 'Quality assessment']},
+    {icon: Brain,
       title: 'AI-Powered Intelligence',
 description: 'Machine learning models that continuously improve accuracy.',
-      benefits: ['Deep learning', 'Neural networks', 'Continuous learning', 'Adaptive algorithms']
-
-    },
-    {
-      icon: BarChart,
+      benefits: ['Deep learning', 'Neural networks', 'Continuous learning', 'Adaptive algorithms']},
+    {icon: BarChart,
       title: 'Analytics Dashboard',
 description: 'Real-time analytics and insights from visual data.',
-      benefits: ['Real-time metrics', 'Data visualization', 'Performance tracking', 'Custom reports']
-    }
+      benefits: ['Real-time metrics', 'Data visualization', 'Performance tracking', 'Custom reports']}
   ]
 
 const benefits = [
@@ -41,17 +32,16 @@ const benefits = [
     'Integration with existing systems',
     'Cost-effective implementation'
   ];
-const PagePage: React.FC = () => {
-  return (
-    <></>
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const PagePage: React.FC = () => {return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
         {/* Hero Section */}
-        </div><section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8">
+        </div>
+<section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Page
@@ -61,14 +51,14 @@ const PagePage: React.FC = () => {
               </p>
 
             </div>
-          </div>
+</div>
         </section>
 
 {/* Content Section */}
         <section className="py-16 px-4 sm: px-6 lg:px-8">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Coming Soon
@@ -90,12 +80,10 @@ const PagePage: React.FC = () => {
                 View Demo
 </button>
             </div>
-          </div>
+</div>
         </section>
 </div>
-      
-
-            </div>
+</div>
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 </div>
@@ -129,14 +117,14 @@ const PagePage: React.FC = () => {
 </div>
               ))}
             </div>
-          </div>
+</div>
         </section>
 
         {/* Benefits Section */}
 <section className="py-20 px-4">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center mb-16">
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
 
@@ -145,7 +133,7 @@ const PagePage: React.FC = () => {
                 Proven results that enhance your visual capabilities
               </p>
             </div>
-<div className="grid grid-cols-1 md : grid-cols-2 lg:grid-cols-3 gap-8">
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 </div>
 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
@@ -158,7 +146,7 @@ const PagePage: React.FC = () => {
 <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Computer Vision?</h2>
               <p className="text-xl text-gray-300">Transform your visual processing with intelligent automation</p>
@@ -175,7 +163,7 @@ const PagePage: React.FC = () => {
 </div>
               ))}
             </div>
-          </div>
+</div>
         </section>
 
         {/* CTA Section */}
@@ -217,7 +205,7 @@ const PagePage: React.FC = () => {
                 Contact Sales
               </button>
 </div>
-          </div>
+</div>
         </section>
       </main>
 
@@ -235,18 +223,21 @@ export default AiComputerVisionPage;
           </div><h2 className="text-4xl font-bold text-white mb-6"></h2></h2>Ready to Get Started ? </h2>
           <p className="text-xl text-gray-300 mb-8"></p></p>
             Transform your business with our page solutions today;
-          <div className="flex flex-col sm : flex-row gap-4 justify-center"></div></div>
-            </div><button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+</div>
+</div><button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
               Start Free Trial
             <button className="border border-blue-400 text-blue-400 hover: bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300" /></button>
               Contact Sales
           </div>
-        </div>
+</div>
       </section>
-<div className="max-w-4xl mx-auto text-center"></div></div>
+<div className="max-w-4xl mx-auto text-center"></div>
+</div>
           <h2 className="text-4xl font-bold text-white mb-6"></h2></h2>Ready to Get Started?
           <p className="text-xl text-gray-300 mb-8"></p></p>Transform your business with our page solutions today
-          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div></div>
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+</div>
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>Start Free Trial
             <button className="border border-blue-400 text-blue-400 hover: bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"></button>Contact Sales
       <Footer />

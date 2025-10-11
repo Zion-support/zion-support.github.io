@@ -1,12 +1,11 @@
 'use client'
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, {useState} from 'react'
+import {Link} from 'react-router-dom'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 'use client'
-import React, { useState } from 'react'
-const ResearchDevelopmentPage: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('ai')
+import React, {useState} from 'react'
+const ResearchDevelopmentPage: React.FC = () => {const [activeTab, setActiveTab] = useState('ai')
   const _researchAreas = [
     {
       id: 'ai',
@@ -16,24 +15,21 @@ const ResearchDevelopmentPage: React.FC = () => {
       bgColor: 'bg-purple-500/10',
       description:     ,
 $4},
-    {
-      id: 'quantum',
+    {id: 'quantum',
       name: 'Quantum Computing',
       icon: Atom,
       color: 'text-blue-400',
       bgColor: 'bg-blue-500/10',
       description:     ,
 $4},
-    {
-      id: 'autonomous',
+    {id: 'autonomous',
       name: 'Autonomous Systems',
       icon: Rocket,
       color: 'text-green-400',
       bgColor: 'bg-green-500/10',
       description:     ,
 $4},
-    {
-      id: 'emerging',
+    {id: 'emerging',
       name: 'Emerging Technologies',
       icon: Lightbulb,
       color: 'text-yellow-400',
@@ -41,8 +37,7 @@ $4},
       description:     ,
 $4}
   ]
-  const researchProjects = {
-    ai: [
+  const researchProjects = {ai: [
       {
         title: 'Consensus Intelligence Framework',
         description: 'Developing a novel AI framework that enables multiple AI systems to reach consensus on complex decisions',
@@ -58,8 +53,7 @@ $4}
         icon: Brain,
         color:       ,
 $4},
-      {
-        title: 'Autonomous Business Intelligence',
+      {title: 'Autonomous Business Intelligence',
         description: 'Creating self-managing business intelligence systems that adapt and optimize without human intervention',
         status: 'Completed',
         timeline: '2024-2025',
@@ -73,8 +67,7 @@ $4},
         icon: Target,
         color:       ,
 $4},
-      {
-        title: 'Neural Architecture Search for Enterprise',
+      {title: 'Neural Architecture Search for Enterprise',
         description: 'Developing automated neural architecture search specifically optimized for enterprise applications',
         status: 'In Progress',
         timeline: '2025-2027',
@@ -90,8 +83,7 @@ $4},
 $4}
     ],
     quantum: [
-      {
-        title: 'Quantum Machine Learning Algorithms',
+      {title: 'Quantum Machine Learning Algorithms',
         description: 'Developing quantum algorithms for machine learning that leverage quantum advantage',
         status: 'In Progress',
         timeline: '2025-2028',
@@ -105,8 +97,7 @@ $4}
         icon: Atom,
         color:       ,
 $4},
-      {
-        title: 'Quantum Error Correction for Business Applications',
+      {title: 'Quantum Error Correction for Business Applications',
         description: 'Researching practical quantum error correction methods for commercial quantum computing',
         status: 'Planning',
         timeline: '2026-2029',
@@ -122,8 +113,7 @@ $4},
 $4}
     ],
     autonomous: [
-      {
-        title: 'Autonomous Enterprise Operations',
+      {title: 'Autonomous Enterprise Operations',
         description: 'Developing fully autonomous systems for enterprise operations and decision-making',
         status: 'In Progress',
         timeline: '2025-2027',
@@ -137,8 +127,7 @@ $4}
         icon: Rocket,
         color:       ,
 $4},
-      {
-        title: 'Multi-Agent Coordination Systems',
+      {title: 'Multi-Agent Coordination Systems',
         description: 'Researching coordination mechanisms for multiple autonomous agents in complex environments',
         status: 'Completed',
         timeline: '2023-2024',
@@ -154,8 +143,7 @@ $4},
 $4}
     ],
     emerging: [
-      {
-        title: 'Neuromorphic Computing for AI',
+      {title: 'Neuromorphic Computing for AI',
         description: 'Exploring brain-inspired computing architectures for more efficient AI processing',
         status: 'In Progress',
         timeline: '2025-2028',
@@ -169,8 +157,7 @@ $4}
         icon: Lightbulb,
         color:       ,
 $4},
-      {
-        title: 'Edge AI for IoT Systems',
+      {title: 'Edge AI for IoT Systems',
         description: 'Developing ultra-efficient AI systems for edge computing and IoT applications',
         status: 'Completed',
         timeline: '2024-2025',
@@ -187,32 +174,28 @@ $4}
     ]
   }
   const publications = [
-    {
-      title: 'Consensus Intelligence: A Framework for Multi-Agent Decision Making',
+    {title: 'Consensus Intelligence: A Framework for Multi-Agent Decision Making',
       authors: 'Dr. Sarah Chen, Dr. Michael Rodriguez, et al.',
       journal: 'Nature Machine Intelligence',
       year: '2025',
       impact: 'High',
       link:     ,
 $4},
-    {
-      title: 'Autonomous Business Process Optimization Using Reinforcement Learning',
+    {title: 'Autonomous Business Process Optimization Using Reinforcement Learning',
       authors: 'Dr. James Wilson, Dr. Lisa Park, et al.',
       journal: 'Journal of Artificial Intelligence Research',
       year: '2025',
       impact: 'High',
       link:     ,
 $4},
-    {
-      title: 'Quantum Machine Learning for Financial Risk Assessment',
+    {title: 'Quantum Machine Learning for Financial Risk Assessment',
       authors: 'Dr. Alex Kumar, Dr. Maria Santos, et al.',
       journal: 'Quantum Information Processing',
       year: '2024',
       impact: 'Medium',
       link:     ,
 $4},
-    {
-      title: 'Multi-Agent Coordination in Distributed Systems',
+    {title: 'Multi-Agent Coordination in Distributed Systems',
       authors: 'Dr. Robert Kim, Dr. Jennifer Lee, et al.',
       journal: 'Nature Communications',
       year: '2024',
@@ -221,23 +204,19 @@ $4},
 $4}
   ]
   const achievements = [
-    {
-      icon: Award,
+    {icon: Award,
       title: '50+ Research Papers',
       description:     ,
 $4},
-    {
-      icon: Users,
+    {icon: Users,
       title: '100+ Researchers',
       description:     ,
 $4},
-    {
-      icon: Target,
+    {icon: Target,
       title: '15+ Patents',
       description:     ,
 $4},
-    {
-      icon: Globe,
+    {icon: Globe,
       title: 'Global Collaborations',
       description:     ,
 $4}
@@ -279,7 +258,7 @@ $4}
               <p className="text-gray-300 max-w-2xl mx-auto">
     </div>
 <div>Coming Soon</div>
-  )
+)
 }
   const [activeTab, setActiveTab] = useState('ai')
   const _researchAreas = [
@@ -742,7 +721,9 @@ $4}
   n: 'Partnerships with leading universities and research institutions'
     }
   ]
-  return (<div>Coming Soon</div>)
+  return (
+<div>Coming Soon</div>
+)
   )
           <React.Fragment>
       <Navigation />
@@ -808,8 +789,7 @@ $4}
 <div className="text-sm text-gray-400 mb-1">Status;
                       < className={`text-sm font-medium ${$2 />
                         project.status === 'Completed' ? 'text-green-400' : 
-                        project.status === 'In Progress' ? 'text-blue-400' : 'text-yellow-400'
-                      }`}>
+                        project.status === 'In Progress' ? 'text-blue-400' : 'text-yellow-400'}`}>
                         {project.status}
                     </div>
 <div>
@@ -907,8 +887,7 @@ $4}
                         <span>•
                         <span>{pub.year}
                         < className={`px-2 py-1 rounded text-xs ${$2 />
-                          pub.impact === 'High' ? 'bg-green-500/20 text-green-400' : 'bg-blue-500/20 text-blue-400'
-                        }`}>{pub.impact} Impact;
+                          pub.impact === 'High' ? 'bg-green-500/20 text-green-400' : 'bg-blue-500/20 text-blue-400'}`}>{pub.impact} Impact;
                       <$2 />
                         href={pub.link}
                         className="text-cyan-400 hover:text-cyan-300 text-sm font-medium">
@@ -945,7 +924,7 @@ $4}
 //                         Read Paper,
           </a>
                     </div>
-                  </div>
+</div>
                 ))}
           {/* Achievements */}
           <div className="mb-16">
@@ -1030,9 +1009,9 @@ $4}
 // Email Us;
           </a>
             </div>
-          </div>
-        </div>
-      </div>
+</div>
+</div>
+</div>
       <Footer />
     </React.Fragment>
     </div>
@@ -1041,4 +1020,32 @@ $4}
 export default ResearchDevelopmentPage</a>
   </a>
   </a>
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></button></p></p></p></p></p></p></p></p></h2></h2></h2></h2></h2></h2></h3></h3></h3></ul></ul></li>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div></span></span></span></span></span></span></span></span></button></p></p></p></p></p></p></p></p></h2></h2></h2></h2></h2></h2></h3></h3></h3></ul></ul></li>

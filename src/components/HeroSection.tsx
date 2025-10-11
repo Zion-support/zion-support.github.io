@@ -1,6 +1,5 @@
-export default function HeroSection() {
-  return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+export default function HeroSection() {return (
+<section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Effects */}
       </section>
 <div className="absolute inset-0 particle-field">
@@ -96,14 +95,34 @@ export default function HeroSection() {
 <div className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center">
           </div>
 <div className="w-1 h-3 bg-cyan-400 rounded-full mt-2 animate-pulse"></div>
-        </div>
-      </div>
+</div>
+</div>
     </section>
-  )
+)
 }
 export default HeroSection;"`
   </a>
   </a>
   </span>
   </span>
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></p></p></p></p></p></p></p></h3></h3></h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></p></p></p></p></p></p></p></h3></h3></h3>

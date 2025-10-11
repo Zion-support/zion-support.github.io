@@ -45,7 +45,7 @@ Style: - Use bullets and short paragraphs
 Frequently asked questions to use as hints (do not claim as absolute truth if uncertain):
 1) What is Zion?  → A marketplace to find and integrate AI models and services.
 2) How do I list my AI model or service?  → Create a vendor account, submit product details, pricing, and docs for review.
-3) How does pricing work?  → Vendors set pricing; users may pay per-call, per-seat, or subscription. Zion may add marketplace fees.
+3) How does pricing work?  → Vendors set pricing users may pay per-call, per-seat, or subscription. Zion may add marketplace fees.
 4) How do I integrate APIs?  → Each product page includes API docs and keys—follow Quickstart steps or SDKs when available.
 5) How do I get support?  → Use in-app support, contact the vendor, or reach Zion’s support channel.
 Style:
@@ -59,7 +59,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(405).json({ error: 'Method Not Allowed' })
   }
   try {
-    const { messages } = req.body as { messages?: Array<{ role: 'user' | 'assistant' | 'system'; content: string }> }
+    const { messages } = req.body as { messages?: Array<{ role: 'user' | 'assistant' | 'system' content: string }> }
     const preparedMessages = [
       { role: 'system' as const, content: SYSTEM_PROMPT },
       ...(messages || []).slice(-20)

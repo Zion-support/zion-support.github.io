@@ -1,9 +1,8 @@
 'use client';
 import React from 'react';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
+import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart} from 'lucide-react';
 
-const HomePage: React.FC = () => {
-  return (
+const HomePage: React.FC = () => {return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
@@ -24,8 +23,8 @@ const HomePage: React.FC = () => {
                 Learn More
               </button>
             </div>
-          </div>
-        </div>
+</div>
+</div>
       </section>
 
       {/* Features Section */}
@@ -67,8 +66,8 @@ const HomePage: React.FC = () => {
                 Scalable cloud solutions that optimize performance and reduce operational costs.
               </p>
             </div>
-          </div>
-        </div>
+</div>
+</div>
       </section>
 
       {/* CTA Section */}
@@ -86,8 +85,8 @@ const HomePage: React.FC = () => {
           </button>
         </div>
       </section>
-    </div>
-  )
+</div>
+)
 }
 
 export default HomePage

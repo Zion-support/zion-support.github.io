@@ -1,13 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChart, MessageSquare, Eye, Phone, Lock, Database, Cloud, Code, Settings, BarChart3, ShoppingCart, Car, Target, Globe, Cpu, Smartphone, FileText, Bot, Music, Video, CreditCard, Train, Home, Heart, GraduationCap } from 'lucide-react';
+import {Link} from 'react-router-dom';
+import {CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChart, MessageSquare, Eye, Phone, Lock, Database, Cloud, Code, Settings, BarChart3, ShoppingCart, Car, Target, Globe, Cpu, Smartphone, FileText, Bot, Music, Video, CreditCard, Train, Home, Heart, GraduationCap} from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-import { microSaasServices, aiServices, itServices, specializedServices } from '../data/2025-comprehensive-real-services-enhanced';
+import {microSaasServices, aiServices, itServices, specializedServices} from '../data/2025-comprehensive-real-services-enhanced';
 
-const ServicesPage: React.FC = () => {
-  const aiServicesData = aiServices.map(service => ({
+const ServicesPage: React.FC = () => {const aiServicesData = aiServices.map(service => ({
     icon: Brain,
     title: service.name,
     description: service.description,
@@ -17,8 +16,7 @@ const ServicesPage: React.FC = () => {
     link: service.website.replace('https://ziontechgroup.com', '')
   });
 
-  const itServicesData = itServices.map(service => ({
-    icon: Database,
+  const itServicesData = itServices.map(service => ({icon: Database,
     title: service.name,
     description: service.description,
     features: service.features.slice(0, 4),
@@ -27,8 +25,7 @@ const ServicesPage: React.FC = () => {
     link: service.website.replace('https://ziontechgroup.com', '')
   });
 
-  const microSaasServicesData = microSaasServices.map(service => ({
-    icon: BarChart3,
+  const microSaasServicesData = microSaasServices.map(service => ({icon: BarChart3,
     title: service.name,
     description: service.description,
     features: service.features.slice(0, 4),
@@ -53,7 +50,7 @@ const ServicesPage: React.FC = () => {
                 Get Free Consultation;
               </Link>
           </div>
-        </div>
+</div>
       </section>
 
               AI Services;
@@ -70,10 +67,10 @@ const ServicesPage: React.FC = () => {
                     Learn More;
                   </Link>
                 </div>
-              </div>
+</div>
             ))}
           </div>
-        </div>
+</div>
       </section>
 
             </h2>
@@ -89,10 +86,10 @@ const ServicesPage: React.FC = () => {
                     Learn More;
                   </Link>
                 </div>
-              </div>
+</div>
             ))}
           </div>
-        </div>
+</div>
       </section>
 
               Micro SAAS Solutions;
@@ -106,16 +103,16 @@ const ServicesPage: React.FC = () => {
                     Learn More;
                   </Link>
                 </div>
-              </div>
+</div>
             ))}
           </div>
-        </div>
+</div>
       </section>
 
               We deliver exceptional results with proven expertise and cutting-edge technology;
             </p>
           </div>
-        </div>
+</div>
       </section>
 
               </a>

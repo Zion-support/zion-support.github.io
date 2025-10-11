@@ -1,11 +1,10 @@
 import {HelpCircle, Search, Phone, Mail, MessageSquare, BookOpen, Video, Download, CheckCircle, ArrowRight, Users} from 'lucide-react'
 'use client'
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, {useState} from 'react'
+import {Link} from 'react-router-dom'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-const HelpPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('')
+const HelpPage: React.FC = () => {const [searchTerm, setSearchTerm] = useState('')
   const [activeCategory, setActiveCategory] = useState('getting-started')
   const categories = [
     {
@@ -32,8 +31,7 @@ idid: 'technical',
       bgColor:     ,
 $4}
   ]
-  const helpArticles = {
-    'getting-started': [
+  const helpArticles = {'getting-started': [
         title: 'How to Get Started with AI Services',
         description: 'Complete guide to setting up your AI services and making the most of our platform',
         category: 'Getting Started',
@@ -87,8 +85,7 @@ titletitle: 'Security Best Practices',
         description: 'Build custom integrations with our platform using webhooks and APIs',
         readTime: '12 min read',
         title: 'Monitoring and Logging',
-        description: 'Set up monitoring and logging for your AI services and applications']
-  }
+        description: 'Set up monitoring and logging for your AI services and applications']}
   const resources = [
       title: 'Video Tutorials',
       description: 'Step-by-step video guides for all our services',
@@ -134,8 +131,7 @@ questionquestion: 'Can I integrate your services with my existing systems?',
       answer:       ,
 questionquestion: 'Is there a free trial available?',
       answer: 'Yes, we offer a 14-day free trial for most of our services. This allows you to test our platform and see how it fits your business needs before committing to a paid plan.'
-  const getCurrentArticles = () => {
-    return helpArticles[activeCategory as keyof typeof helpArticles] || []
+  const getCurrentArticles = () => {return helpArticles[activeCategory as keyof typeof helpArticles] || []
   const filteredArticles = getCurrentArticles().filter(article =>
     article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
     article.description.toLowerCase().includes(searchTerm.toLowerCase())
@@ -209,8 +205,7 @@ questionquestion: 'Is there a free trial available?',
                     < className={`px-2 py-1 rounded text-xs ${$2 />
                       article.difficulty === 'Beginner' ? 'bg-green-500/20 text-green-400' :
                       article.difficulty === 'Intermediate' ? 'bg-yellow-500/20 text-yellow-400' :
-                      'bg-red-500/20 text-red-400'
-                    }`}>
+                      'bg-red-500/20 text-red-400'}`}>
                       {article.difficulty}
                   <button className="w-full text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors flex items-center justify-center">
                     Read Article;
@@ -392,30 +387,33 @@ export default HelpPage,
   </p>
   </h2>
   </div>
-  </div>
-  </div>
-  </div>
+</div>
+</div>
+</div>
   </button>
   </div>
-  </div>
-  </div>
-  </div>
+</div>
+</div>
+</div>
   </div>
   </h2>
   </button>
   </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
   </h2>
   </div>
-  </div>
-  </div>
-  </div>
+</div>
+</div>
+</div>
   </div>
   </h1>
   </div>
-  </div>
-</div></div></div></div></span></span></a></p></p></p></p></p></h3></h3></h3></h3></article>
+</div>
+</div>
+</div>
+</div>
+</div></span></span></a></p></p></p></p></p></h3></h3></h3></h3></article>

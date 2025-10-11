@@ -85,10 +85,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         !payload && payload.timeline
       ) {
         res && res.status(400).json({ error: 'Missing required fields' })
-        return;      }      if (!payload || !payload && payload.projectName || !payload && payload.teamInfo || !payload && payload.proposalSummary || !payload && payload.timeline) {
+        return      }      if (!payload || !payload && payload.projectName || !payload && payload.teamInfo || !payload && payload.proposalSummary || !payload && payload.timeline) {
         res && res.status(400).json({ error: 'Missing required fields' })
-        return
-  CreateGrantPayload,
+        return CreateGrantPayload,
   GrantApplication,
  } from '../../../types / grants'
 const GRANTS_DIR = path.join (process.cwd (), 'data', 'grants')
@@ -154,11 +153,10 @@ if ( {) {
         (program ? g.program === program : true))
     })
     res.status (200).json ({ items: list })
-    return;  }      )
+    return  }      )
     })
     res.status (200).json ({ items: list })
-    return
-  // Check condition
+    return // Check condition
 if ( {) {
   $2
 }
@@ -169,13 +167,12 @@ if ( {) {
   $2
 }
         res.status (400).json ({ error: 'Missing required fields' })
-        return;      }      // Check condition
+        return      }      // Check condition
 if ( {) {
   $2
 }
         res.status (400).json ({ error: 'Missing required fields' })
-        return
-      }
+        return }
       ensure_dir ()
       const id = uuidv4 ()
       const now = new Date ().toISOString ()
@@ -266,17 +263,16 @@ if ( {) {
     return
   }
   res.set_header ('Allow', 'GET, POST')
-  res.status (405).end ('Method Not Allowed');    } catch (e: any) {
+  res.status (405).end ('Method Not Allowed')    } catch (e: any) {
       res.status (500).json ({ error: e?.message || 'Failed to create grant' })
     }
-    return
-  }
+    return }
   res.set_header ('AllowGET, POST')
   res.status (405).end ('Method Not Allowed')
 }
   res.setHeader('Allow', 'GET, POST')
   res.status(405).end('Method Not Allowed')
-  res.status(405).end('Method Not Allowed');    } catch (e: any) {
+  res.status(405).end('Method Not Allowed')    } catch (e: any) {
       res.status(500).json({ error: e?.message || 'Failed to create grant' })
     }
     return

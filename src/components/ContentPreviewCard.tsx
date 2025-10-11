@@ -1,7 +1,5 @@
 import React from 'react'
-interface ContentPreviewCardProps {
-    // TODO: Add content;
-  }
+interface ContentPreviewCardProps {// TODO: Add content;}
 }
   i,
   d: string,
@@ -74,7 +72,9 @@ const,
     }
     return colors[category] || colors.default;
   }
-  return (<div>Coming Soon</div>)
+  return (
+<div>Coming Soon</div>
+)
   )
           <rticle className={/* TODO: Fix JSX expression */}$2 />
   hover:-translate-y-1 ${}
@@ -153,7 +153,7 @@ const,
             </svg>
           </Link>
         </div>
-      </div>
+</div>
     </article>
   )
 }

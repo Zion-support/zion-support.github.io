@@ -1,5 +1,5 @@
-export, default, function October2025NewContentAdvertisingBann, e, r(): vo, i, d {
-  return(<section, className="relative, p, y-20, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, overflo, w-hidd, e, n">";)
+export, default, function October2025NewContentAdvertisingBann, e, r(): vo, i, d {return (
+<section, className="relative, p, y-20, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, overflo, w-hidd, e, n">";)
       {/* Animated, Background, Elements */})
       </section>
 <div, className="absolute, inse, t-0">)
@@ -16,7 +16,8 @@ export, default, function October2025NewContentAdvertisingBann, e, r(): vo, i, d
         </div>
 <div, className="absolute, to, p-1/4, righ, t-1/4 w-9, 6, h-96, b, g-yell, o, w-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" />"
   return (
-    </div><section, className="relative, p, y-20, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, overflo, w-hidd, e, n">"
+    </div>
+<section, className="relative, p, y-20, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, overflo, w-hidd, e, n">"
       {/* Animated, Background, Elements */}
       </section>
 <div, className="absolute, inse, t-0">
@@ -307,4 +308,79 @@ export, default, function October2025NewContentAdvertisingBann, e, r(): vo, i, d
   )
 }
 "
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></Link></Link></p></p></p></p></h2></h2></h2></h3></h3></h3></section></section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></span></span></span></span></span></span></Link></Link></p></p></p></p></h2></h2></h2></h3></h3></h3></section></section>

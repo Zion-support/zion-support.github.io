@@ -1,8 +1,9 @@
-import { Link } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 export default function AIAutonomousBusinessSystems2026() {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-  return (<div>
+  return (
+<div>
             < href="/blog" className="text-indigo-600,"$2 />
   hover:text-indigo-700 flex items-center mb-4">← Back to Blog;
           </div>"
@@ -88,6 +89,7 @@ export default function AIAutonomousBusinessSystems2026() {/* TODO: Fix JSX expr
                 <$2 />
                   href="/contact" className="inline-block bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors">Get Automation Assessment;
                   href="/services" className="inline-block bg-white text-purple-600 px-6 py-3 rounded-lg border-2 border-purple-600 hover:bg-purple-50 transition-colors">Explore AI Services;
-    </div>)
+    </div>
+)
 }
 export default AiAutonomousBusinessSystems2026Page</p></p></p></p></h2></h2></h3></h3></ul></li></li></li></li></li></li></li></li></li></li></li></li></li>

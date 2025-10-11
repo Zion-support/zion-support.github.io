@@ -1,151 +1,122 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, {useState} from 'react'
+import {Link} from 'react-router-dom'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
-import { Search, BookOpen, Code, Zap, Brain, Shield, Database, Cloud, Settings, BarChart, MessageSquare, Eye, Cpu, Target, Lock, BarChart3, FileText, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity, CheckCircle, ArrowRight, ExternalLink, Download, Play, Users, Award, Globe } from 'lucide-react'
-const DocsPage: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('')
+import {Search, BookOpen, Code, Zap, Brain, Shield, Database, Cloud, Settings, BarChart, MessageSquare, Eye, Cpu, Target, Lock, BarChart3, FileText, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity, CheckCircle, ArrowRight, ExternalLink, Download, Play, Users, Award, Globe} from 'lucide-react'
+const DocsPage: React.FC = () => {const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
   const docCategories = [
-    { id: 'all', name: 'All Documentation', icon: BookOpen, count: 45 },
-    { id: 'getting-started', name: 'Getting Started', icon: Zap, count: 8 },
-    { id: 'ai-services', name: 'AI Services', icon: Brain, count: 12 },
-    { id: 'api', name: 'API Reference', icon: Code, count: 15 },
-    { id: 'integration', name: 'Integration', icon: Settings, count: 6 },
-    { id: 'troubleshooting', name: 'Troubleshooting', icon: Shield, count: 4 }
+    { id: 'all', name: 'All Documentation', icon: BookOpen, count: 45},
+    {id: 'getting-started', name: 'Getting Started', icon: Zap, count: 8},
+    {id: 'ai-services', name: 'AI Services', icon: Brain, count: 12},
+    {id: 'api', name: 'API Reference', icon: Code, count: 15},
+    {id: 'integration', name: 'Integration', icon: Settings, count: 6},
+    {id: 'troubleshooting', name: 'Troubleshooting', icon: Shield, count: 4}
   ]
   const documentation = [
-    {
-      id: 1,
+    {id: 1,
       title: 'Quick Start Guide',
       description: 'Get up and running with Zion Tech Group services in minutes',
       category: 'getting-started',
       difficulty: 'Beginner',
       readTime: '10 min',
       icon: Zap,
-      content: 'Learn how to set up your account, configure your first AI service, and start getting results immediately.'
-    },
-    {
-      id: 2,
+      content: 'Learn how to set up your account, configure your first AI service, and start getting results immediately.'},
+    {id: 2,
       title: 'AI Project Manager API',
       description: 'Complete API reference for AI Project Manager service',
       category: 'api',
       difficulty: 'Intermediate',
       readTime: '25 min',
       icon: Code,
-      content: 'Detailed API documentation including endpoints, parameters, authentication, and code examples.'
-    },
-    {
-      id: 3,
+      content: 'Detailed API documentation including endpoints, parameters, authentication, and code examples.'},
+    {id: 3,
       title: 'Machine Learning Integration',
       description: 'Integrate our ML services with your existing applications',
       category: 'integration',
       difficulty: 'Advanced',
       readTime: '45 min',
       icon: Brain,
-      content: 'Step-by-step guide to integrating our machine learning capabilities into your business processes.'
-    },
-    {
-      id: 4,
+      content: 'Step-by-step guide to integrating our machine learning capabilities into your business processes.'},
+    {id: 4,
       title: 'AI Analytics Dashboard Setup',
       description: 'Configure and customize your analytics dashboard',
       category: 'ai-services',
       difficulty: 'Intermediate',
       readTime: '20 min',
       icon: BarChart,
-      content: 'Learn how to set up dashboards, configure data sources, and create custom visualizations.'
-    },
-    {
-      id: 5,
+      content: 'Learn how to set up dashboards, configure data sources, and create custom visualizations.'},
+    {id: 5,
       title: 'Authentication & Security',
       description: 'Secure your API access and data transmission',
       category: 'api',
       difficulty: 'Intermediate',
       readTime: '15 min',
       icon: Shield,
-      content: 'Best practices for API authentication, security headers, and data protection.'
-    },
-    {
-      id: 6,
+      content: 'Best practices for API authentication, security headers, and data protection.'},
+    {id: 6,
       title: 'Troubleshooting Common Issues',
       description: 'Solutions to frequently encountered problems',
       category: 'troubleshooting',
       difficulty: 'Beginner',
       readTime: '12 min',
       icon: Settings,
-      content: 'Common issues and their solutions, including error codes and debugging tips.'
-    },
-    {
-      id: 7,
+      content: 'Common issues and their solutions, including error codes and debugging tips.'},
+    {id: 7,
       title: 'AI Content Generation API',
       description: 'Generate high-quality content using our AI API',
       category: 'api',
       difficulty: 'Intermediate',
       readTime: '30 min',
       icon: FileText,
-      content: 'Complete guide to using our content generation API for blogs, social media, and marketing materials.'
-    },
-    {
-      id: 8,
+      content: 'Complete guide to using our content generation API for blogs, social media, and marketing materials.'},
+    {id: 8,
       title: 'Webhook Configuration',
       description: 'Set up real-time notifications and data sync',
       category: 'integration',
       difficulty: 'Advanced',
       readTime: '35 min',
       icon: MessageSquare,
-      content: 'Configure webhooks to receive real-time updates and synchronize data across your systems.'
-    },
-    {
-      id: 9,
+      content: 'Configure webhooks to receive real-time updates and synchronize data across your systems.'},
+    {id: 9,
       title: 'AI Customer Support Bot Setup',
       description: 'Deploy and configure your AI-powered support bot',
       category: 'ai-services',
       difficulty: 'Intermediate',
       readTime: '25 min',
       icon: Bot,
-      content: 'Complete setup guide for deploying intelligent customer support bots on your website.'
-    },
-    {
-      id: 10,
+      content: 'Complete setup guide for deploying intelligent customer support bots on your website.'},
+    {id: 10,
       title: 'Performance Optimization',
       description: 'Optimize your AI service performance and reduce costs',
       category: 'troubleshooting',
       difficulty: 'Advanced',
       readTime: '40 min',
       icon: Zap,
-      content: 'Advanced techniques for optimizing API calls, reducing latency, and minimizing costs.'
-    }
+      content: 'Advanced techniques for optimizing API calls, reducing latency, and minimizing costs.'}
   ]
   const quickLinks = [
-    {
-      title: 'API Reference',
+    {title: 'API Reference',
       description: 'Complete API documentation',
       icon: Code,
       link: '/api-docs',
-      color: 'text-blue-400'
-    },
-    {
-      title: 'SDK Downloads',
+      color: 'text-blue-400'},
+    {title: 'SDK Downloads',
       description: 'Client libraries and tools',
       icon: Download,
       link: '/downloads',
-      color: 'text-green-400'
-    },
-    {
-      title: 'Video Tutorials',
+      color: 'text-green-400'},
+    {title: 'Video Tutorials',
       description: 'Step-by-step video guides',
       icon: Play,
       link: '/tutorials',
-      color: 'text-purple-400'
-    },
-    {
-      title: 'Community Forum',
+      color: 'text-purple-400'},
+    {title: 'Community Forum',
       description: 'Connect with other developers',
       icon: Users,
       link: '/community',
-      color: 'text-cyan-400'
-    }
+      color: 'text-cyan-400'}
   ]
   const filteredDocs = selectedCategory === 'all' 
     ? documentation;
@@ -157,13 +128,11 @@ const DocsPage: React.FC = () => {
         doc.content.toLowerCase().includes(searchQuery.toLowerCase())
       )
     : filteredDocs;
-  const getDifficultyColor = (difficulty: string) => {
-    switch (difficulty) {
+  const getDifficultyColor = (difficulty: string) => {switch (difficulty) {
       case 'Beginner': return 'text-green-400 bg-green-500/20'
       case 'Intermediate': return 'text-yellow-400 bg-yellow-500/20'
       case 'Advanced': return 'text-red-400 bg-red-500/20',
-      default: return 'text-gray-400 bg-gray-500/20'
-  }
+      default: return 'text-gray-400 bg-gray-500/20'}
   }
   return (
     <React.Fragment>
@@ -201,7 +170,8 @@ const DocsPage: React.FC = () => {
                   className="w-full pl-12 pr-4 py-4 bg-slate-800 text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-none"
                 />
           {/* Quick Links */}
-          </div><section className="mb-16">
+          </div>
+<section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Quick Links;
             </section>
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -215,7 +185,8 @@ const DocsPage: React.FC = () => {
                     {link.title}
                   <p className="text-gray-300">{link.description})
           {/* Categories */}
-          </div><section className="mb-16">
+          </div>
+<section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Browse by Category;
             </section>
 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
@@ -226,8 +197,7 @@ const DocsPage: React.FC = () => {
                   className={`p-4 rounded-lg text-center transition-all duration-300 ${
                     selectedCategory === category.id;
                       ? 'bg-cyan-500 text-slate-900'
-                      : 'bg-slate-800 text-white hover:bg-slate-700'
-                  }`}
+                      : 'bg-slate-800 text-white hover:bg-slate-700'}`}
                 >
                   <category.icon className="w-6 h-6 mx-auto mb-2" />
                   </div>
@@ -236,7 +206,8 @@ const DocsPage: React.FC = () => {
 <div className="text-xs opacity-75">{category.count} docs;
               ))}
           {/* Documentation List */}
-          </div><section className="mb-16">
+          </div>
+<section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Documentation;
             </section>
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -269,7 +240,8 @@ const DocsPage: React.FC = () => {
                     <span className="text-gray-500 text-xs">
                       {doc.category})
           {/* Getting Started CTA */}
-          </div><section className="text-center">
+          </div>
+<section className="text-center">
             </section>
 <div className="cyber-card p-12 max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-white mb-6 neon-text">
@@ -290,7 +262,7 @@ const DocsPage: React.FC = () => {
                   <Play className="w-5 h-5 mr-2" />
                   Request Demo;
               </div>
-            </div>
+</div>
           </section>
         </main>
         <Footer />
@@ -307,4 +279,14 @@ export default DocsPage</Link>
   </p>
   </h1>
   </SEOOptimizer>
-</div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></p></p></p></p></h3></h3></li></section></section></section></section></section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></span></span></span></p></p></p></p></h3></h3></li></section></section></section></section></section>

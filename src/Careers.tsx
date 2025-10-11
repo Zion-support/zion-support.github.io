@@ -1,56 +1,43 @@
 import React from 'react'
-import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
-import { SEO } from "@/components/SEO"
-import { GradientHeading } from "@/components/GradientHeading"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-export default function Careers() {
-  const [activeDepartment, setActiveDepartment] = useState('all')
+import {motion} from 'framer-motion'
+import {Link} from 'react-router-dom'
+import {SEO} from "@/components/SEO"
+import {GradientHeading} from "@/components/GradientHeading"
+import {Button} from "@/components/ui/button"
+import {Card, CardContent} from "@/components/ui/card"
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs"
+export default function Careers() {const [activeDepartment, setActiveDepartment] = useState('all')
   const departments = [
     {
       id: 'all',
       name: 'All Departments',
       icon: Users,
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      id: 'ai-research',
+      color: 'from-purple-500 to-pink-500'},
+    {id: 'ai-research',
       name: 'AI & Research',
       icon: Brain,
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      id: 'engineering',
+      color: 'from-purple-500 to-pink-500'},
+    {id: 'engineering',
       name: 'Engineering',
       icon: Code,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      id: 'cybersecurity',
+      color: 'from-blue-500 to-cyan-500'},
+    {id: 'cybersecurity',
       name: 'Cybersecurity',
       icon: Shield,
-      color: 'from-red-500 to-pink-500'
-    },
-    {
-      id: 'quantum',
+      color: 'from-red-500 to-pink-500'},
+    {id: 'quantum',
       name: 'Quantum Technology',
       icon: Cpu,
-      color: 'from-indigo-500 to-purple-500'
-    },
-    {
-      id: 'cloud',
+      color: 'from-indigo-500 to-purple-500'},
+    {id: 'cloud',
       name: 'Cloud & Infrastructure',
       icon: Cloud,
-      color: 'from-green-500 to-emerald-500'
-    }
-import { Link } from 'react-router-dom'
-import { Link } from 'react-router-dom'
-import React, { useState } from 'react'
-import { motion } from 'framer-motion'
-import { 
-  Briefcase, 
+      color: 'from-green-500 to-emerald-500'}
+import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
+import React, {useState} from 'react'
+import {motion} from 'framer-motion'
+import {Briefcase, 
   Users, 
   Heart, 
   Zap, 
@@ -90,37 +77,34 @@ import {
   CheckCircle,
   Code,
   Settings,
-  Eye;
-} from 'lucide-react'
-export default function Careers() {
-  const [searchQuery, setSearchQuery] = useState('')
+  Eye;} from 'lucide-react'
+export default function Careers() {const [searchQuery, setSearchQuery] = useState('')
   const [selectedDepartment, setSelectedDepartment] = useState('all')
   const [selectedLocation, setSelectedLocation] = useState('all')
   const [selectedType, setSelectedType] = useState('all')
   const departments = [
-    { id: 'all', name: 'All Departments', count: 24, icon: Building2 },
-    { id: 'engineering', name: 'Engineering', count: 12, icon: Code },
-    { id: 'ai-ml', name: 'AI & Machine Learning', count: 6, icon: Brain },
-    { id: 'cybersecurity', name: 'Cybersecurity', count: 4, icon: Shield },
-    { id: 'quantum', name: 'Quantum Technology', count: 3, icon: Zap },
-    { id: 'sales', name: 'Sales & Business Development', count: 5, icon: Target },
-    { id: 'marketing', name: 'Marketing', count: 3, icon: Lightbulb },
-    { id: 'operations', name: 'Operations', count: 2, icon: Settings }
+    { id: 'all', name: 'All Departments', count: 24, icon: Building2},
+    {id: 'engineering', name: 'Engineering', count: 12, icon: Code},
+    {id: 'ai-ml', name: 'AI & Machine Learning', count: 6, icon: Brain},
+    {id: 'cybersecurity', name: 'Cybersecurity', count: 4, icon: Shield},
+    {id: 'quantum', name: 'Quantum Technology', count: 3, icon: Zap},
+    {id: 'sales', name: 'Sales & Business Development', count: 5, icon: Target},
+    {id: 'marketing', name: 'Marketing', count: 3, icon: Lightbulb},
+    {id: 'operations', name: 'Operations', count: 2, icon: Settings}
   ]
   const locations = [
-    { id: 'all', name: 'All Locations', count: 24 },
-    { id: 'remote', name: 'Remote', count: 18 },
-    { id: 'middletown-de', name: 'Middletown, DE', count: 4 },
-    { id: 'new-york', name: 'New York, NY', count: 2 }
+    {id: 'all', name: 'All Locations', count: 24},
+    {id: 'remote', name: 'Remote', count: 18},
+    {id: 'middletown-de', name: 'Middletown, DE', count: 4},
+    {id: 'new-york', name: 'New York, NY', count: 2}
   ]
   const jobTypes = [
-    { id: 'all', name: 'All Types', count: 24 },
-    { id: 'full-time', name: 'Full-time', count: 20 },
-    { id: 'part-time', name: 'Part-time', count: 2 },
-    { id: 'contract', name: 'Contract', count: 2 }
-import { motion } from 'framer-motion'
-import { 
-  Briefcase, 
+    {id: 'all', name: 'All Types', count: 24},
+    {id: 'full-time', name: 'Full-time', count: 20},
+    {id: 'part-time', name: 'Part-time', count: 2},
+    {id: 'contract', name: 'Contract', count: 2}
+import {motion} from 'framer-motion'
+import {Briefcase, 
   Users, 
   Award, 
   MapPin, 
@@ -138,35 +122,32 @@ import {
   CheckCircle,
   Globe,
   Heart,
-  Zap;
-} from 'lucide-react'
-export default function Careers() {
-  const [searchQuery, setSearchQuery] = useState('')
+  Zap;} from 'lucide-react'
+export default function Careers() {const [searchQuery, setSearchQuery] = useState('')
   const [selectedDepartment, setSelectedDepartment] = useState('all')
   const [selectedLocation, setSelectedLocation] = useState('all')
   const [selectedType, setSelectedType] = useState('all')
   const departments = [
-    { id: 'all', name: 'All Departments', count: 23 },
-    { id: 'engineering', name: 'Engineering', count: 12 },
-    { id: 'ai-research', name: 'AI Research', count: 6 },
-    { id: 'sales', name: 'Sales & Business', count: 3 },
-    { id: 'marketing', name: 'Marketing', count: 2 }
+    { id: 'all', name: 'All Departments', count: 23},
+    {id: 'engineering', name: 'Engineering', count: 12},
+    {id: 'ai-research', name: 'AI Research', count: 6},
+    {id: 'sales', name: 'Sales & Business', count: 3},
+    {id: 'marketing', name: 'Marketing', count: 2}
   ]
   const locations = [
-    { id: 'all', name: 'All Locations', count: 23 },
-    { id: 'middletown', name: 'Middletown, DE', count: 15 },
-    { id: 'remote', name: 'Remote', count: 6 },
-    { id: 'amsterdam', name: 'Amsterdam, NL', count: 2 }
+    {id: 'all', name: 'All Locations', count: 23},
+    {id: 'middletown', name: 'Middletown, DE', count: 15},
+    {id: 'remote', name: 'Remote', count: 6},
+    {id: 'amsterdam', name: 'Amsterdam, NL', count: 2}
   ]
   const jobTypes = [
-    { id: 'all', name: 'All Types', count: 23 },
-    { id: 'full-time', name: 'Full Time', count: 18 },
-    { id: 'part-time', name: 'Part Time', count: 3 },
-    { id: 'contract', name: 'Contract', count: 2 }
+    {id: 'all', name: 'All Types', count: 23},
+    {id: 'full-time', name: 'Full Time', count: 18},
+    {id: 'part-time', name: 'Part Time', count: 3},
+    {id: 'contract', name: 'Contract', count: 2}
   ]
   const openPositions = [
-    {
-      id: 1,
+    {id: 1,
       title: "Senior AI Engineer",
       department: "ai",
       location: "Remote / Middletown, DE",
@@ -186,10 +167,8 @@ export default function Careers() {
         "Health, dental, and vision insurance",
         "Professional development budget"
       ],
-      urgent: true;
-    },
-    {
-      id: 2,
+      urgent: true;},
+    {id: 2,
       title: "Cybersecurity Specialist",
       department: "security",
       location: "Middletown, DE",
@@ -209,10 +188,8 @@ export default function Careers() {
         "Training and certification support",
         "Career growth opportunities"
       ],
-      urgent: false;
-    },
-    {
-  Award, 
+      urgent: false;},
+    {Award, 
   GraduationCap,
   Clock,
   MapPin,
@@ -221,28 +198,25 @@ export default function Careers() {
   ArrowRight,
   Send,
   Star,
-  TrendingUp;
-} from 'lucide-react'
-import { Badge } from '../components/ui/badge'
-import { Card } from '../components/ui/card'
-import { Button } from '../components/ui/button'
-import { Input } from '../components/ui/input'
-import { Textarea } from '../components/ui/textarea'
+  TrendingUp;} from 'lucide-react'
+import {Badge} from '../components/ui/badge'
+import {Card} from '../components/ui/card'
+import {Button} from '../components/ui/button'
+import {Input} from '../components/ui/input'
+import {Textarea} from '../components/ui/textarea'
 import FuturisticNeonButton from '../components/ui/FuturisticNeonButton'
 import FuturisticAnimatedBackground from '../components/ui/FuturisticAnimatedBackground'
-import { SEO } from '../components/SEO'
-const Careers: React.FC = () => {
-  const [selectedDepartment, setSelectedDepartment] = useState<string>('all')
+import {SEO} from '../components/SEO'
+const Careers: React.FC = () => {const [selectedDepartment, setSelectedDepartment] = useState<string>('all')
   const [isApplying, setIsApplying] = useState<string | null>(null)
   const departments = [
-    { id: 'all', name: 'All Departments', color: 'from-zion-cyan to-zion-blue' },
-    { id: 'engineering', name: 'Engineering', color: 'from-purple-500 to-pink-500' },
-    { id: 'ai', name: 'AI & ML', color: 'from-blue-500 to-cyan-500' },
-    { id: 'design', name: 'Design', color: 'from-green-500 to-emerald-500' },
-    { id: 'sales', name: 'Sales & Marketing', color: 'from-yellow-500 to-orange-500' },
-    { id: 'operations', name: 'Operations', color: 'from-red-500 to-pink-500' }
-import { 
-  MapPin, 
+    { id: 'all', name: 'All Departments', color: 'from-zion-cyan to-zion-blue'},
+    {id: 'engineering', name: 'Engineering', color: 'from-purple-500 to-pink-500'},
+    {id: 'ai', name: 'AI & ML', color: 'from-blue-500 to-cyan-500'},
+    {id: 'design', name: 'Design', color: 'from-green-500 to-emerald-500'},
+    {id: 'sales', name: 'Sales & Marketing', color: 'from-yellow-500 to-orange-500'},
+    {id: 'operations', name: 'Operations', color: 'from-red-500 to-pink-500'}
+import {MapPin, 
   Clock, 
   Users, 
   Building, 
@@ -257,10 +231,8 @@ import {
   Linkedin,
   ExternalLink,
   Filter,
-  Search;
-} from 'lucide-react'
-export default function Careers() {
-  const [searchTerm, setSearchTerm] = useState('')
+  Search;} from 'lucide-react'
+export default function Careers() {const [searchTerm, setSearchTerm] = useState('')
   const [selectedDepartment, setSelectedDepartment] = useState('All')
   const [selectedLocation, setSelectedLocation] = useState('All')
   const departments = [
@@ -312,10 +284,8 @@ export default function Careers() {
       ],
       icon: Brain,
       urgent: true,
-      postedDate: "2024-12-15"
-    },
-    {
-      id: 2,
+      postedDate: "2024-12-15"},
+    {id: 2,
       title: "Quantum Computing Engineer",
       department: "Quantum Technology",
       location: "Remote",
@@ -343,10 +313,8 @@ export default function Careers() {
       ],
       icon: Atom,
       urgent: false,
-      postedDate: "2024-12-12"
-    },
-    {
-      id: 3,
+      postedDate: "2024-12-12"},
+    {id: 3,
       title: "Cybersecurity Architect",
       department: "Cybersecurity",
       location: "Middletown, DE",
@@ -374,10 +342,8 @@ export default function Careers() {
       ],
       icon: Shield,
       urgent: true,
-      postedDate: "2024-12-10"
-    },
-    {
-      id: 4,
+      postedDate: "2024-12-10"},
+    {id: 4,
       title: "DevOps Engineer",
       department: "Cloud & DevOps",
       location: "Remote",
@@ -405,10 +371,8 @@ export default function Careers() {
       ],
       icon: Cloud,
       urgent: false,
-      postedDate: "2024-12-08"
-    },
-    {
-      id: 5,
+      postedDate: "2024-12-08"},
+    {id: 5,
       title: "Full Stack Software Engineer",
       department: "Software Engineering",
       location: "New York, NY",
@@ -436,10 +400,8 @@ export default function Careers() {
       ],
       icon: Code,
       urgent: false,
-      postedDate: "2024-12-05"
-    },
-    {
-      id: 6,
+      postedDate: "2024-12-05"},
+    {id: 6,
       title: "AI Product Manager",
       department: "AI & Machine Learning",
       location: "Remote",
@@ -488,10 +450,8 @@ export default function Careers() {
         "Health benefits",
         "Professional development"
       ],
-      urgent: false;
-    },
-    {
-      id: 4,
+      urgent: false;},
+    {id: 4,
       title: "Full Stack Developer",
       department: "engineering",
       location: "Hybrid (Middletown, DE)",
@@ -511,30 +471,21 @@ export default function Careers() {
         "Health benefits",
         "Learning and development"
       ],
-      urgent: false;
-    }
+      urgent: false;}
   ]
   const companyValues = [
-    {
-      title: "Innovation First",
+    {title: "Innovation First",
       description: "We push boundaries and embrace cutting-edge technologies",
-      icon: Zap;
-    },
-    {
-      title: "People Matter",
+      icon: Zap;},
+    {title: "People Matter",
       description: "Our team is our greatest asset and we invest in their growth",
-      icon: Heart;
-    },
-    {
-      title: "Global Impact",
+      icon: Heart;},
+    {title: "Global Impact",
       description: "We solve problems that affect businesses worldwide",
-      icon: Globe;
-    },
-    {
-      title: "Continuous Learning",
+      icon: Globe;},
+    {title: "Continuous Learning",
       description: "We foster a culture of curiosity and skill development",
-      icon: BookOpen;
-    }
+      icon: BookOpen;}
   ]
       id: 1,
       title: "Senior AI Research Engineer",
@@ -568,8 +519,7 @@ export default function Careers() {
       urgent: true,
       postedDate: "2025-01-15"
     },
-    {
-      id: 2,
+    {id: 2,
       title: "Quantum Software Engineer",
       department: "quantum",
       location: "remote",
@@ -599,10 +549,8 @@ export default function Careers() {
       ],
       salary: "$120,000 - $160,000",
       urgent: false,
-      postedDate: "2025-01-12"
-    },
-    {
-      id: 3,
+      postedDate: "2025-01-12"},
+    {id: 3,
       title: "Cybersecurity Architect",
       department: "cybersecurity",
       location: "remote",
@@ -632,10 +580,8 @@ export default function Careers() {
       ],
       salary: "$140,000 - $180,000",
       urgent: true,
-      postedDate: "2025-01-10"
-    },
-    {
-      id: 4,
+      postedDate: "2025-01-10"},
+    {id: 4,
       title: "Full Stack Developer",
       department: "engineering",
       location: "remote",
@@ -665,10 +611,8 @@ export default function Careers() {
       ],
       salary: "$90,000 - $130,000",
       urgent: false,
-      postedDate: "2025-01-08"
-    },
-    {
-      id: 5,
+      postedDate: "2025-01-08"},
+    {id: 5,
       title: "DevOps Engineer",
       department: "engineering",
       location: "remote",
@@ -698,10 +642,8 @@ export default function Careers() {
       ],
       salary: "$100,000 - $140,000",
       urgent: false,
-      postedDate: "2025-01-05"
-    },
-    {
-      id: 6,
+      postedDate: "2025-01-05"},
+    {id: 6,
       title: "Business Development Manager",
       department: "sales",
       location: "remote",
@@ -731,37 +673,28 @@ export default function Careers() {
       ],
       salary: "$80,000 - $120,000 + commission",
       urgent: false,
-      postedDate: "2025-01-03"
-    }
+      postedDate: "2025-01-03"}
   ]
   const companyValues = [
-    {
-      title: "Innovation First",
+    {title: "Innovation First",
       description: "We push boundaries and embrace cutting-edge technologies",
       icon: Rocket,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Excellence",
+      color: "from-blue-500 to-cyan-500"},
+    {title: "Excellence",
       description: "We strive for the highest quality in everything we do",
       icon: Star,
-      color: "from-yellow-500 to-orange-500"
-    },
-    {
-      title: "Collaboration",
+      color: "from-yellow-500 to-orange-500"},
+    {title: "Collaboration",
       description: "We believe in the power of diverse teams working together",
       icon: Users2,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Continuous Learning",
+      color: "from-green-500 to-emerald-500"},
+    {title: "Continuous Learning",
       description: "We invest in growth and development at every level",
       icon: BookOpen,
       color: "from-purple-500 to-pink-500"
 import React from 'react'
-import { Link } from 'react-router-dom'
-export default function Careers() {
-  const openPositions = [
+import { Link} from 'react-router-dom'
+export default function Careers() {const openPositions = [
     {
       title: 'Senior AI Engineer',
       department: 'AI & Machine Learning',
@@ -769,57 +702,45 @@ export default function Careers() {
       type: 'Full-time',
       experience: '5+ years',
       description: 'Lead the development of cutting-edge AI solutions and autonomous systems.',
-      skills: ['Python', 'TensorFlow', 'PyTorch', 'MLOps', 'Cloud Platforms']
-    },
-    {
-      title: 'Cybersecurity Specialist',
+      skills: ['Python', 'TensorFlow', 'PyTorch', 'MLOps', 'Cloud Platforms']},
+    {title: 'Cybersecurity Specialist',
       department: 'Security',
       location: 'Remote / Middletown, DE',
       type: 'Full-time',
       experience: '3+ years',
       description: 'Protect our clients with advanced cybersecurity solutions and quantum-safe security.',
-      skills: ['Network Security', 'Penetration Testing', 'Compliance', 'Incident Response']
-    },
-    {
-      title: 'Full-Stack Developer',
+      skills: ['Network Security', 'Penetration Testing', 'Compliance', 'Incident Response']},
+    {title: 'Full-Stack Developer',
       department: 'Engineering',
       location: 'Remote / Middletown, DE',
       type: 'Full-time',
       experience: '3+ years',
       description: 'Build scalable web applications and microservices for our clients.',
-      skills: ['React', 'Node.js', 'Python', 'AWS', 'Docker']
-    },
-    {
-      title: 'Quantum Computing Researcher',
+      skills: ['React', 'Node.js', 'Python', 'AWS', 'Docker']},
+    {title: 'Quantum Computing Researcher',
       department: 'R&D',
       location: 'Remote / Middletown, DE',
       type: 'Full-time',
       experience: 'PhD or 5+ years',
       description: 'Pioneer quantum computing solutions and quantum-safe cryptography.',
-      skills: ['Quantum Algorithms', 'Qiskit', 'Quantum Cryptography', 'Research']
-    },
-    {
-      title: 'DevOps Engineer',
+      skills: ['Quantum Algorithms', 'Qiskit', 'Quantum Cryptography', 'Research']},
+    {title: 'DevOps Engineer',
       department: 'Infrastructure',
       location: 'Remote / Middletown, DE',
       type: 'Full-time',
       experience: '3+ years',
       description: 'Automate and optimize our cloud infrastructure and deployment pipelines.',
-      skills: ['AWS', 'Kubernetes', 'Terraform', 'CI/CD', 'Monitoring']
-    },
-    {
-      title: 'AI Solutions Architect',
+      skills: ['AWS', 'Kubernetes', 'Terraform', 'CI/CD', 'Monitoring']},
+    {title: 'AI Solutions Architect',
       department: 'Solutions',
       location: 'Remote / Middletown, DE',
       type: 'Full-time',
       experience: '7+ years',
       description: 'Design and implement AI solutions for enterprise clients.',
-      skills: ['Solution Architecture', 'AI/ML', 'Enterprise Integration', 'Consulting']
-    }
+      skills: ['Solution Architecture', 'AI/ML', 'Enterprise Integration', 'Consulting']}
   ]
   const benefits = [
-    {
-      salary: '$90,000 - $140,000',
+    {salary: '$90,000 - $140,000',
       description: 'Build scalable web applications and contribute to our technology platform.',
       requirements: [
         'Strong proficiency in React, Node.js, and TypeScript',
@@ -834,10 +755,8 @@ export default function Careers() {
         'Latest tools and technology',
         'Collaborative team culture',
         'Career advancement paths'
-      ]
-    },
-    {
-      id: 'ui-ux-designer',
+      ]},
+    {id: 'ui-ux-designer',
       title: 'Senior UI/UX Designer',
       department: 'design',
       location: 'Remote / Middletown, DE',
@@ -858,10 +777,8 @@ export default function Careers() {
         'Collaboration with cross-functional teams',
         'Professional development opportunities',
         'Competitive compensation package'
-      ]
-    },
-    {
-      id: 'sales-director',
+      ]},
+    {id: 'sales-director',
       title: 'Sales Director',
       department: 'sales',
       location: 'Remote / Middletown, DE',
@@ -882,25 +799,20 @@ export default function Careers() {
         'High-growth company environment',
         'Competitive base salary',
         'Performance-based bonuses'
-      ]
-    }
+      ]}
   ]
-  const filteredPositions = openPositions.filter(position => {
-    const matchesDepartment = selectedDepartment === 'all' || position.department === selectedDepartment;
+  const filteredPositions = openPositions.filter(position => {const matchesDepartment = selectedDepartment === 'all' || position.department === selectedDepartment;
     const matchesLocation = selectedLocation === 'all' || position.location === selectedLocation;
     const matchesType = selectedType === 'all' || position.type === selectedType;
     const matchesSearch = searchQuery === '' || 
       position.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       position.description.toLowerCase().includes(searchQuery.toLowerCase())
-    return matchesDepartment && matchesLocation && matchesType && matchesSearch;
-  })
+    return matchesDepartment && matchesLocation && matchesType && matchesSearch;})
   const featuredPositions = filteredPositions.filter(position => position.featured)
   const regularPositions = filteredPositions.filter(position => !position.featured)
-  const filteredJobs = jobOpenings.filter(job => {
-    const matchesDepartment = selectedDepartment === 'All' || job.department === selectedDepartment;
+  const filteredJobs = jobOpenings.filter(job => {const matchesDepartment = selectedDepartment === 'All' || job.department === selectedDepartment;
     const matchesLocation = selectedLocation === 'All' || job.location === selectedLocation;
-    return matchesDepartment && matchesLocation;
-  })
+    return matchesDepartment && matchesLocation;})
     <div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-slate">
       {/* Hero Section */}
       </div>
@@ -933,17 +845,19 @@ export default function Careers() {
                 <Star className="h-5 w-5" />
                 <span className="text-white">Competitive Benefits</span>
               </div>
-            </div>
+</div>
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
+<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
-      </div><section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      </div>
+<section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         </section>
 <div className="max-w-7xl mx-auto text-center">
     </div>
 <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900">
       {/* Hero Section */}
-      </div><section className="relative pt-32 pb-20 overflow-hidden">
+      </div>
+<section className="relative pt-32 pb-20 overflow-hidden">
         </section>
 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
 <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
@@ -988,9 +902,9 @@ export default function Careers() {
               </Link>
             </div>
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20}}
+            animate={{ opacity: 1, y: 0}}
+            transition={{ duration: 0.6}}
           >
             <div className="inline-flex items-center px-4 py-2 bg-cyan-500/20 border border-cyan-500/50 rounded-full text-cyan-400 text-sm font-medium mb-6">
               <Briefcase className="w-4 h-4 mr-2" />
@@ -1016,7 +930,7 @@ export default function Careers() {
                   className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20"
                 />
               </div>
-            </div>
+</div>
           </motion.div>
         </div>
       </section>
@@ -1025,7 +939,7 @@ export default function Careers() {
       <section className="pb-12 px-4 sm:px-6 lg:px-8">
         </section>
 <div className="max-w-7xl mx-auto">
-          </div>
+</div>
 <div className="flex flex-col lg:flex-row gap-6 items-start lg:items-center justify-between">
             {/* Departments */}
             </div>
@@ -1037,8 +951,7 @@ export default function Careers() {
                   className={`flex items-center px-4 py-2 rounded-lg border transition-all duration-300 ${
                     selectedDepartment === dept.id;
                       ? 'bg-cyan-500/20 border-cyan-500/50 text-cyan-400'
-                      : 'bg-gray-800/50 border-gray-700/50 text-gray-300 hover:border-cyan-500/30'
-                  }`}
+                      : 'bg-gray-800/50 border-gray-700/50 text-gray-300 hover:border-cyan-500/30'}`}
                 >
                   {dept.name}
                   <span className="ml-2 px-2 py-1 bg-gray-700/50 rounded-full text-xs">
@@ -1057,8 +970,7 @@ export default function Careers() {
                   className={`px-3 py-1 rounded-full text-sm border transition-all duration-300 ${
                     selectedLocation === location.id;
                       ? 'bg-cyan-500/20 border-cyan-500/50 text-cyan-400'
-                      : 'bg-gray-800/50 border-gray-700/50 text-gray-300 hover:border-cyan-500/30'
-                  }`}
+                      : 'bg-gray-800/50 border-gray-700/50 text-gray-300 hover:border-cyan-500/30'}`}
                 >
                   {location.name}
                   <span className="ml-1 text-xs opacity-75">({location.count})</span>
@@ -1071,17 +983,15 @@ export default function Careers() {
                   className={`px-3 py-1 rounded-full text-sm border transition-all duration-300 ${
                     selectedType === type.id;
                       ? 'bg-cyan-500/20 border-cyan-500/50 text-cyan-400'
-                      : 'bg-gray-800/50 border-gray-700/50 text-gray-300 hover:border-cyan-500/30'
-                  }`}
+                      : 'bg-gray-800/50 border-gray-700/50 text-gray-300 hover:border-cyan-500/30'}`}
                 >
                   {type.name}
                   <span className="ml-1 text-xs opacity-75">({type.count})</span>
                 </button>
               ))}
             </div>
-import { Link } from 'react-router-dom'
-import { 
-  Users, 
+import {Link} from 'react-router-dom'
+import {Users, 
   Zap, 
   Globe, 
   Heart, 
@@ -1093,10 +1003,8 @@ import {
   DollarSign,
   Send,
   CheckCircle,
-  AlertCircle;
-} from 'lucide-react'
-const Careers = () => {
-  const [selectedDepartment, setSelectedDepartment] = useState<string>('all')
+  AlertCircle;} from 'lucide-react'
+const Careers = () => {const [selectedDepartment, setSelectedDepartment] = useState<string>('all')
   const [searchTerm, setSearchTerm] = useState<string>('')
   const departments = [
     'all',
@@ -1131,10 +1039,8 @@ const Careers = () => {
         'Health, dental, and vision insurance',
         'Professional development budget',
         'Unlimited PTO'
-      ]
-    },
-    {
-      id: 2,
+      ]},
+    {id: 2,
       title: 'AI/ML Engineer',
       department: 'AI & ML',
       location: 'Remote / Middletown, DE',
@@ -1155,10 +1061,8 @@ const Careers = () => {
         'Conference attendance and research opportunities',
         'Health, dental, and vision insurance',
         'Flexible work arrangements'
-      ]
-    },
-    {
-      id: 3,
+      ]},
+    {id: 3,
       title: 'UX/UI Designer',
       department: 'Design',
       location: 'Remote / Middletown, DE',
@@ -1179,10 +1083,8 @@ const Careers = () => {
         'Creative freedom and ownership',
         'Health, dental, and vision insurance',
         'Professional development opportunities'
-      ]
-    },
-    {
-      id: 4,
+      ]},
+    {id: 4,
       title: 'DevOps Engineer',
       department: 'Engineering',
       location: 'Remote / Middletown, DE',
@@ -1203,10 +1105,8 @@ const Careers = () => {
         'Flexible remote work options',
         'Health, dental, and vision insurance',
         'Professional development budget'
-      ]
-    },
-    {
-      id: 5,
+      ]},
+    {id: 5,
       title: 'Product Manager',
       department: 'Product',
       location: 'Remote / Middletown, DE',
@@ -1227,29 +1127,21 @@ const Careers = () => {
         'Customer interaction and market research',
         'Health, dental, and vision insurance',
         'Professional development opportunities'
-      ]
-    }
+      ]}
   ]
-  const filteredJobs = jobListings.filter(job => {
-    const matchesDepartment = selectedDepartment === 'all' || job.department === selectedDepartment;
+  const filteredJobs = jobListings.filter(job => {const matchesDepartment = selectedDepartment === 'all' || job.department === selectedDepartment;
     const matchesSearch = job.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          job.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          job.department.toLowerCase().includes(searchTerm.toLowerCase())
-    return matchesDepartment && matchesSearch;
-  })
+    return matchesDepartment && matchesSearch;})
   const companyValues = [
-    {
-      icon: Zap,
+    {icon: Zap,
       title: 'Innovation First',
-      description: 'We constantly push boundaries and explore new technologies to solve complex problems.'
-    },
-    {
-      icon: Users,
+      description: 'We constantly push boundaries and explore new technologies to solve complex problems.'},
+    {icon: Users,
       title: 'Collaboration',
-      description: 'Great ideas come from diverse teams working together towards common goals.'
-    },
-    {
-      icon: Heart,
+      description: 'Great ideas come from diverse teams working together towards common goals.'},
+    {icon: Heart,
       title: 'Customer Focus',
       description: 'Everything we do is driven by our commitment to customer success.'
   const filteredJobs = selectedDepartment === 'all' 
@@ -1260,16 +1152,12 @@ const Careers = () => {
       icon: Heart,
       title: 'People First',
       description: 'We believe our team is our greatest asset and invest in their growth and well-being.',
-      color: 'from-red-500 to-pink-500'
-    },
-    {
-      icon: Zap,
+      color: 'from-red-500 to-pink-500'},
+    {icon: Zap,
       title: 'Innovation Driven',
       description: 'We constantly push boundaries and embrace new technologies to solve complex problems.',
-      color: 'from-yellow-500 to-orange-500'
-    },
-    {
-      icon: Globe,
+      color: 'from-yellow-500 to-orange-500'},
+    {icon: Globe,
       title: 'Global Impact',
       id: 1,
       title: "Senior AI Engineer",
@@ -1297,10 +1185,8 @@ const Careers = () => {
         "Health, dental, and vision insurance"
       ],
       featured: true,
-      postedDate: "2025-01-20"
-    },
-    {
-      id: 2,
+      postedDate: "2025-01-20"},
+    {id: 2,
       title: "Quantum Computing Researcher",
       department: "AI & Research",
       location: "Silicon Valley, CA",
@@ -1326,10 +1212,8 @@ const Careers = () => {
         "Comprehensive benefits package"
       ],
       featured: true,
-      postedDate: "2025-01-18"
-    },
-    {
-      id: 3,
+      postedDate: "2025-01-18"},
+    {id: 3,
       title: "Senior Full-Stack Developer",
       department: "Engineering",
       location: "Remote",
@@ -1355,10 +1239,8 @@ const Careers = () => {
         "Health and wellness benefits"
       ],
       featured: false,
-      postedDate: "2025-01-15"
-    },
-    {
-      id: 4,
+      postedDate: "2025-01-15"},
+    {id: 4,
       title: "Cybersecurity Engineer",
       department: "Engineering",
       location: "Middletown, DE",
@@ -1384,10 +1266,8 @@ const Careers = () => {
         "Comprehensive benefits package"
       ],
       featured: false,
-      postedDate: "2025-01-12"
-    },
-    {
-      id: 5,
+      postedDate: "2025-01-12"},
+    {id: 5,
       title: "Business Development Manager",
       department: "Sales & Business Development",
       location: "New York, NY",
@@ -1413,10 +1293,8 @@ const Careers = () => {
         "Health and wellness benefits"
       ],
       featured: false,
-      postedDate: "2025-01-10"
-    },
-    {
-      id: 6,
+      postedDate: "2025-01-10"},
+    {id: 6,
       title: "Product Marketing Manager",
       department: "Marketing",
       location: "Remote",
@@ -1442,10 +1320,8 @@ const Careers = () => {
         "Professional development opportunities"
       ],
       featured: false,
-      postedDate: "2025-01-08"
-    },
-    {
-      id: 7,
+      postedDate: "2025-01-08"},
+    {id: 7,
       title: "Customer Success Manager",
       department: "Customer Success",
       location: "Austin, TX",
@@ -1471,10 +1347,8 @@ const Careers = () => {
         "Professional development opportunities"
       ],
       featured: false,
-      postedDate: "2025-01-05"
-    },
-    {
-      id: 8,
+      postedDate: "2025-01-05"},
+    {id: 8,
       title: "DevOps Engineer",
       department: "Engineering",
       location: "Seattle, WA",
@@ -1500,82 +1374,57 @@ const Careers = () => {
         "Comprehensive benefits package"
       ],
       featured: false,
-      postedDate: "2025-01-03"
-    }
+      postedDate: "2025-01-03"}
   ]
-  const filteredJobs = jobOpenings.filter(job => {
-    const matchesSearch = job.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const filteredJobs = jobOpenings.filter(job => {const matchesSearch = job.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          job.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          job.department.toLowerCase().includes(searchTerm.toLowerCase())
     const matchesDepartment = selectedDepartment === 'All' || job.department === selectedDepartment;
     const matchesLocation = selectedLocation === 'All' || job.location === selectedLocation;
-    return matchesSearch && matchesDepartment && matchesLocation;
-  })
+    return matchesSearch && matchesDepartment && matchesLocation;})
   const featuredJobs = filteredJobs.filter(job => job.featured)
   const regularJobs = filteredJobs.filter(job => !job.featured)
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString)
+  const formatDate = (dateString: string) => {const date = new Date(dateString)
     return date.toLocaleDateString('en-US', { 
       year: 'numeric', 
       month: 'long', 
-      day: 'numeric' 
-    })
+      day: 'numeric'})
   const companyValues = [
-    {
-      title: "Innovation First",
+    {title: "Innovation First",
       description: "We push the boundaries of what's possible with cutting-edge technology",
-      icon: Rocket;
-    },
-    {
-      title: "Excellence",
+      icon: Rocket;},
+    {title: "Excellence",
       description: "We deliver the highest quality solutions and exceptional service",
-      icon: Award;
-    },
-    {
-      title: "Collaboration",
+      icon: Award;},
+    {title: "Collaboration",
       description: "We work together to achieve extraordinary results for our clients",
-      icon: Users;
-    },
-    {
-      title: "Integrity",
+      icon: Users;},
+    {title: "Integrity",
       description: "We maintain the highest ethical standards in all our interactions",
-      icon: Shield;
-    }
+      icon: Shield;}
   ]
   const benefits = [
-    {
-      icon: '🚀',
+    {icon: '🚀',
       title: 'Innovation First',
-      description: 'Work on cutting-edge AI and quantum technologies'
-    },
-    {
-      icon: '🌍',
+      description: 'Work on cutting-edge AI and quantum technologies'},
+    {icon: '🌍',
       title: 'Remote First',
-      description: 'Work from anywhere with flexible schedules'
-    },
-    {
-      icon: '📚',
+      description: 'Work from anywhere with flexible schedules'},
+    {icon: '📚',
       title: 'Continuous Learning',
-      description: 'Access to courses, conferences, and training programs'
-    },
-    {
-      icon: '💼',
+      description: 'Access to courses, conferences, and training programs'},
+    {icon: '💼',
       title: 'Career Growth',
-      description: 'Clear career paths and advancement opportunities'
-    },
-    {
-      icon: '🏥',
+      description: 'Clear career paths and advancement opportunities'},
+    {icon: '🏥',
       title: 'Health & Wellness',
-      description: 'Comprehensive health insurance and wellness programs'
-    },
-    {
-      icon: '💰',
+      description: 'Comprehensive health insurance and wellness programs'},
+    {icon: '💰',
       title: 'Competitive Pay',
       description: 'Above-market salaries with equity options'
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { 
-  Users, 
+import { Link} from 'react-router-dom'
+import {Users, 
   Briefcase, 
   MapPin, 
   Clock, 
@@ -1588,10 +1437,8 @@ import {
   Target,
   TrendingUp,
   Award,
-  Lightbulb;
-} from 'lucide-react'
-const Careers = () => {
-  const openPositions = [
+  Lightbulb;} from 'lucide-react'
+const Careers = () => {const openPositions = [
     {
       title: "Senior AI Engineer",
       department: "Artificial Intelligence",
@@ -1599,120 +1446,85 @@ const Careers = () => {
       type: "Full-time",
       experience: "5+ years",
       description: "Lead development of cutting-edge AI solutions and machine learning models for enterprise clients.",
-      skills: ["Python", "TensorFlow", "PyTorch", "MLOps", "Cloud Platforms"]
-    },
-    {
-      title: "Cloud Solutions Architect",
+      skills: ["Python", "TensorFlow", "PyTorch", "MLOps", "Cloud Platforms"]},
+    {title: "Cloud Solutions Architect",
       department: "Cloud & DevOps",
       location: "Remote / Wilmington, DE",
       type: "Full-time",
       experience: "7+ years",
       description: "Design and implement scalable cloud infrastructure solutions for enterprise applications.",
-      skills: ["AWS", "Azure", "Kubernetes", "Terraform", "CI/CD"]
-    },
-    {
-      title: "Cybersecurity Specialist",
+      skills: ["AWS", "Azure", "Kubernetes", "Terraform", "CI/CD"]},
+    {title: "Cybersecurity Specialist",
       department: "Security",
       location: "Remote / Wilmington, DE",
       type: "Full-time",
       experience: "4+ years",
       description: "Protect client systems and data through advanced security measures and threat detection.",
-      skills: ["Penetration Testing", "SIEM", "Compliance", "Incident Response"]
-    },
-    {
-      title: "Full Stack Developer",
+      skills: ["Penetration Testing", "SIEM", "Compliance", "Incident Response"]},
+    {title: "Full Stack Developer",
       department: "Web Development",
       location: "Remote / Wilmington, DE",
       type: "Full-time",
       experience: "3+ years",
       description: "Build modern, responsive web applications using cutting-edge technologies.",
-      skills: ["React", "Node.js", "TypeScript", "PostgreSQL", "Docker"]
-    },
-    {
-      title: "Data Scientist",
+      skills: ["React", "Node.js", "TypeScript", "PostgreSQL", "Docker"]},
+    {title: "Data Scientist",
       department: "Data Analytics",
       location: "Remote / Wilmington, DE",
       type: "Full-time",
       experience: "4+ years",
       description: "Transform raw data into actionable insights for business decision-making.",
-      skills: ["Python", "R", "SQL", "Tableau", "Machine Learning"]
-    },
-    {
-      title: "DevOps Engineer",
+      skills: ["Python", "R", "SQL", "Tableau", "Machine Learning"]},
+    {title: "DevOps Engineer",
       department: "Cloud & DevOps",
       location: "Remote / Wilmington, DE",
       type: "Full-time",
       experience: "3+ years",
       description: "Automate and optimize development and deployment processes.",
-      skills: ["Docker", "Kubernetes", "Jenkins", "Ansible", "Monitoring"]
-    }
+      skills: ["Docker", "Kubernetes", "Jenkins", "Ansible", "Monitoring"]}
   ]
   const benefits = [
-    {
-      icon: "🏠",
+    {icon: "🏠",
       title: "Remote First",
-      description: "Work from anywhere with flexible remote work options"
-    },
-    {
-      icon: "💰",
+      description: "Work from anywhere with flexible remote work options"},
+    {icon: "💰",
       title: "Competitive Salary",
-      description: "Attractive compensation packages with equity options"
-    },
-    {
-      icon: "🏥",
+      description: "Attractive compensation packages with equity options"},
+    {icon: "🏥",
       title: "Health Benefits",
-      description: "Comprehensive health, dental, and vision coverage"
-    },
-    {
-      icon: "📚",
+      description: "Comprehensive health, dental, and vision coverage"},
+    {icon: "📚",
       title: "Learning & Development",
-      description: "Continuous learning opportunities and skill development"
-    },
-    {
-      icon: "🎯",
+      description: "Continuous learning opportunities and skill development"},
+    {icon: "🎯",
       title: "Career Growth",
-      description: "Clear career progression paths and mentorship"
-    },
-    {
-      icon: "🎉",
+      description: "Clear career progression paths and mentorship"},
+    {icon: "🎉",
       title: "Team Events",
-      description: "Regular team building and social activities"
-    }
+      description: "Regular team building and social activities"}
   ]
   const values = [
-    {
-      icon: "🚀",
+    {icon: "🚀",
       title: "Innovation",
-      description: "We push boundaries and embrace new technologies"
-    },
-    {
-      icon: "🤝",
+      description: "We push boundaries and embrace new technologies"},
+    {icon: "🤝",
       title: "Collaboration",
-      description: "Teamwork and knowledge sharing drive our success"
-    },
-    {
-      icon: "💡",
+      description: "Teamwork and knowledge sharing drive our success"},
+    {icon: "💡",
       title: "Excellence",
       description: "We strive for quality in everything we do"
       title: "Competitive Compensation",
       description: "Attractive salary packages with equity options",
-      icon: Award;
-    },
-    {
-      title: "Flexible Work",
+      icon: Award;},
+    {title: "Flexible Work",
       description: "Remote and hybrid work options for work-life balance",
-      icon: Globe;
-    },
-    {
-      title: "Professional Growth",
+      icon: Globe;},
+    {title: "Professional Growth",
       description: "Continuous learning and career development opportunities",
-      icon: Brain;
-    },
-    {
-      title: "Health & Wellness",
+      icon: Brain;},
+    {title: "Health & Wellness",
       description: "Comprehensive health, dental, and vision coverage",
-      icon: Shield;
-    }
+      icon: Shield;}
   ]
   return (
     <></><SEO
@@ -1752,15 +1564,15 @@ const Careers = () => {
                 Contact Us;
               </Link>
             </div>
-          </div>
-        </div>
+</div>
+</div>
       </section>
 
       {/* Company Values */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
         </section>
 <div className="max-w-7xl mx-auto">
-          </div>
+</div>
 <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Our Values;
@@ -1790,14 +1602,14 @@ const Careers = () => {
               Submit Application;
             </button>
           </div>
-        </div>
-      </div>
+</div>
+</div>
 
       {/* Values Section */}
       <div className="px-4 sm:px-6 lg:px-8 pb-16">
         </div>
 <div className="max-w-7xl mx-auto">
-          </div>
+</div>
 <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Our Values;
@@ -1815,7 +1627,7 @@ const Careers = () => {
               </div>
             ))}
           </div>
-        </div>
+</div>
       {/* Benefits Section */}
       <div className="container mx-auto px-4 py-16">
         </div>
@@ -1831,7 +1643,7 @@ const Careers = () => {
       <section id="openings" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
         </section>
 <div className="max-w-7xl mx-auto">
-          </div>
+</div>
 <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Open Positions;
@@ -1850,8 +1662,7 @@ const Careers = () => {
                 className={`flex items-center space-x-2 px-4 py-2 rounded-lg border transition-all duration-200 ${
                   selectedDepartment === dept.id;
                     ? 'border-purple-500 bg-purple-500/20 text-purple-400'
-                    : 'border-gray-700 text-gray-300 hover:border-purple-500/50 hover:text-purple-400'
-                }`}
+                    : 'border-gray-700 text-gray-300 hover:border-purple-500/50 hover:text-purple-400'}`}
               >
                 <dept.icon className="w-4 h-4" />
                 <span>{dept.name}</span>
@@ -1883,10 +1694,9 @@ const Careers = () => {
               <img loading="lazy" 
                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&h=600" 
                 alt="Team collaboration" 
-                className="object-cover w-full h-full"
-              />
+                className="object-cover w-full h-full" />
             </div>
-          </div>
+</div>
 <div className="space-y-6">
             {filteredJobs.map((job) => (
               </div>
@@ -1926,8 +1736,8 @@ const Careers = () => {
                         <DollarSign className="w-4 h-4" />
                         <span>{job.salary}</span>
                       </div>
-                    </div>
-                  </div>
+</div>
+</div>
                   <$2 />
                     to={`/careers/${job.id}`}
                     className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200 flex items-center justify-center space-x-2"
@@ -1951,7 +1761,8 @@ const Careers = () => {
                         </li>
                       ))}
                     </ul>
-      </div><section className="py-20 bg-black/20">
+      </div>
+<section className="py-20 bg-black/20">
         </section>
 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           </div>
@@ -1978,7 +1789,7 @@ const Careers = () => {
               </div>
             ))}
           </div>
-        </div>
+</div>
       </section>
 
       {/* Benefits Section */}
@@ -2042,7 +1853,7 @@ const Careers = () => {
               </div>
             ))}
           </div>
-        </div>
+</div>
       </section>
 
       {/* Featured Positions */}
@@ -2050,7 +1861,7 @@ const Careers = () => {
         <section className="pb-20 px-4 sm:px-6 lg:px-8">
           </section>
 <div className="max-w-7xl mx-auto">
-            </div>
+</div>
 <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-white mb-4">Featured Positions</h2>
               <p className="text-gray-300">High-priority roles with immediate openings</p>
@@ -2059,9 +1870,9 @@ const Careers = () => {
               {featuredPositions.map((position, index) => (
                 <motion.div;
                   key={position.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  initial={{ opacity: 0, y: 20}}
+                  animate={{ opacity: 1, y: 0}}
+                  transition={{ duration: 0.6, delay: index * 0.1}}
                   className="bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 overflow-hidden hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
                 >
                   </div>
@@ -2101,8 +1912,8 @@ const Careers = () => {
                           <Users className="w-4 h-4" />
                           {position.applications} applications;
                         </div>
-                      </div>
-                    </div>
+</div>
+</div>
 <div className="mb-4">
                       <h4 className="font-semibold text-gray-300 mb-2">Key Requirements:</h4>
                       <ul className="space-y-1">
@@ -2110,7 +1921,8 @@ const Careers = () => {
                           <li key={idx} className="flex items-center text-sm text-gray-400">
                             <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
       {/* Benefits */}
-      </div><section className="py-20 bg-white">
+      </div>
+<section className="py-20 bg-white">
         </section>
 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           </div>
@@ -2143,7 +1955,7 @@ const Careers = () => {
       <div className="px-4 sm:px-6 lg:px-8 pb-16">
         </div>
 <div className="max-w-7xl mx-auto">
-          </div>
+</div>
 <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Work With Us;
@@ -2163,7 +1975,7 @@ const Careers = () => {
               </div>
             ))}
           </div>
-        </div>
+</div>
 <div>
                       <h4 className="font-semibold text-zion-blue-dark mb-2">Benefits:</h4>
                       <ul className="space-y-1">
@@ -2176,8 +1988,8 @@ const Careers = () => {
                         ))}
                       </ul>
                     </div>
-                  </div>
-                </div>
+</div>
+</div>
               ))
             )}
     <div className="min-h-screen bg-background">
@@ -2189,7 +2001,8 @@ const Careers = () => {
       />
 
       {/* Hero Section */}
-      </div><section className="relative bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple py-20">
+      </div>
+<section className="relative bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple py-20">
         </section>
 <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -2229,16 +2042,15 @@ const Careers = () => {
               </Card>
             ))}
           </div>
-        </div>
+</div>
       </section>
-
-      </div>
+</div>
 
       {/* Open Positions */}
       <div className="px-4 sm:px-6 lg:px-8 pb-16">
         </div>
 <div className="max-w-7xl mx-auto">
-          </div>
+</div>
 <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Open Positions;
@@ -2259,10 +2071,11 @@ const Careers = () => {
     </div>
 <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
-      </div><section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      </div>
+<section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         </section>
 <div className="max-w-7xl mx-auto">
-          </div>
+</div>
 <div className="text-center">
             </div>
 <div className="flex items-center justify-center mb-6">
@@ -2285,8 +2098,8 @@ const Careers = () => {
                 Learn About Culture;
               </button>
             </div>
-          </div>
-        </div>
+</div>
+</div>
         
         {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -2294,14 +2107,14 @@ const Careers = () => {
 <div className="absolute top-20 left-10 w-2 h-2 bg-blue-400 rounded-full animate-ping"></div>
 <div className="absolute top-40 right-20 w-3 h-3 bg-purple-400 rounded-full animate-pulse"></div>
 <div className="absolute bottom-20 left-1/4 w-1 h-1 bg-blue-400 rounded-full animate-bounce"></div>
-        </div>
+</div>
       </section>
 
       {/* Values Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         </section>
 <div className="max-w-7xl mx-auto">
-          </div>
+</div>
 <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Our Values & Culture;
@@ -2319,14 +2132,14 @@ const Careers = () => {
               </div>
             ))}
           </div>
-        </div>
+</div>
       </section>
 
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
         </section>
 <div className="max-w-7xl mx-auto">
-          </div>
+</div>
 <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Work With Us?
@@ -2348,17 +2161,17 @@ const Careers = () => {
                   <h3 className="text-xl font-semibold text-white mb-4">{benefit.title}</h3>
                   <p className="text-gray-300">{benefit.description}</p>
                 </div>
-              )
+)
             })
           </div>
-        </div>
+</div>
       </section>
 
       {/* Open Positions Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         </section>
 <div className="max-w-7xl mx-auto">
-          </div>
+</div>
 <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Open Positions;
@@ -2394,8 +2207,8 @@ const Careers = () => {
                       <Clock className="w-4 h-4 text-blue-400" />
                       <span>{position.experience}</span>
                     </div>
-                  </div>
-                </div>
+</div>
+</div>
                 
                     <h4 className="font-semibold mb-3 text-purple-400">Benefits</h4>
                     <ul className="space-y-2">
@@ -2412,13 +2225,14 @@ const Careers = () => {
       />
 
       {/* Hero Section */}
-      </div><section className="relative pt-32 pb-20 overflow-hidden">
+      </div>
+<section className="relative pt-32 pb-20 overflow-hidden">
         </section>
 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20}}
+            animate={{ opacity: 1, y: 0}}
+            transition={{ duration: 0.8}}
             className="text-center"
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
@@ -2451,11 +2265,9 @@ const Careers = () => {
       description: 'Our solutions help businesses worldwide transform and succeed in the digital age.',
       color: 'from-blue-500 to-cyan-500'
     },
-    {
-      icon: "🌱",
+    {icon: "🌱",
       title: "Growth",
-      description: "Continuous learning and personal development"
-    }
+      description: "Continuous learning and personal development"}
   ]
   return (
     <></><SEO
@@ -2466,25 +2278,26 @@ const Careers = () => {
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
         {/* Hero Section */}
-        </div><section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        </div>
+<section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           </section>
 <div className="absolute inset-0 overflow-hidden">
             </div>
 <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
 <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl"></div>
-          </div>
+</div>
           
           <motion.div;
             className="max-w-7xl mx-auto text-center relative z-10"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 30}}
+            animate={{ opacity: 1, y: 0}}
+            transition={{ duration: 0.8}}
           >
             <motion.h1;
               className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial={{ opacity: 0, y: 30}}
+              animate={{ opacity: 1, y: 0}}
+              transition={{ duration: 0.8, delay: 0.2}}
             >
               Join Our;
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
@@ -2494,9 +2307,9 @@ const Careers = () => {
             
             <motion.p;
               className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              initial={{ opacity: 0, y: 30}}
+              animate={{ opacity: 1, y: 0}}
+              transition={{ duration: 0.8, delay: 0.4}}
             >
               Be part of a team that's revolutionizing technology and shaping the future. 
               We're looking for passionate individuals who want to make a real impact.
@@ -2504,9 +2317,9 @@ const Careers = () => {
             
             <motion.div;
               className="flex flex-col sm:flex-row gap-4 justify-center"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
+              initial={{ opacity: 0, y: 30}}
+              animate={{ opacity: 1, y: 0}}
+              transition={{ duration: 0.8, delay: 0.6}}
             >
               <$2 />
                 href="#open-positions"
@@ -2533,10 +2346,10 @@ const Careers = () => {
 <div className="max-w-7xl mx-auto">
             <motion.div;
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
+              viewport={{ once: true}}
+              transition={{ duration: 0.8}}
             >
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
                 Why Work With Zion Tech Group?
@@ -2551,14 +2364,14 @@ const Careers = () => {
               variants={staggerContainer}
               initial="initial"
               whileInView="animate"
-              viewport={{ once: true }}
+              viewport={{ once: true}}
             >
               {values.map((value, index) => (
                 <motion.div;
                   key={index}
                   className="text-center p-6 bg-white/10 backdrop-blur-lg rounded-xl border border-white/20"
                   variants={fadeInUp}
-                  whileHover={{ scale: 1.02 }}
+                  whileHover={{ scale: 1.02}}
                 >
                   </div>
 <div className="text-5xl mb-4">{value.icon}</div>
@@ -2576,10 +2389,10 @@ const Careers = () => {
 <div className="max-w-7xl mx-auto">
             <motion.div;
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
+              viewport={{ once: true}}
+              transition={{ duration: 0.8}}
             >
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
                 Benefits & Perks;
@@ -2594,14 +2407,14 @@ const Careers = () => {
               variants={staggerContainer}
               initial="initial"
               whileInView="animate"
-              viewport={{ once: true }}
+              viewport={{ once: true}}
             >
               {benefits.map((benefit, index) => (
                 <motion.div;
                   key={index}
                   className="text-center p-6 bg-white/10 backdrop-blur-lg rounded-xl border border-white/20 hover:border-white/40 transition-all duration-300"
                   variants={fadeInUp}
-                  whileHover={{ scale: 1.02 }}
+                  whileHover={{ scale: 1.02}}
                 >
                   </div>
 <div className="text-5xl mb-4">{benefit.icon}</div>
@@ -2619,10 +2432,10 @@ const Careers = () => {
 <div className="max-w-7xl mx-auto">
             <motion.div;
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
+              viewport={{ once: true}}
+              transition={{ duration: 0.8}}
             >
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
                 Open Positions;
@@ -2637,14 +2450,14 @@ const Careers = () => {
               variants={staggerContainer}
               initial="initial"
               whileInView="animate"
-              viewport={{ once: true }}
+              viewport={{ once: true}}
             >
               {openPositions.map((position, index) => (
                 <motion.div;
                   key={index}
                   className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:bg-white/15"
                   variants={fadeInUp}
-                  whileHover={{ scale: 1.02 }}
+                  whileHover={{ scale: 1.02}}
                 >
                   </div>
 <div className="flex justify-between items-start mb-4">
@@ -2690,7 +2503,7 @@ const Careers = () => {
                         </span>
                       ))}
                     </div>
-                  </div>
+</div>
                   
                   <$2 />
                     href={`mailto:careers@ziontechgroup.com?subject=Application for ${position.title}`}
@@ -2713,28 +2526,28 @@ const Careers = () => {
 <div className="max-w-4xl mx-auto text-center px-4">
             <motion.h2;
               className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
+              viewport={{ once: true}}
+              transition={{ duration: 0.8}}
             >
               Don't See Your Perfect Role?
             </motion.h2>
             <motion.p;
               className="text-xl text-gray-300 mb-8 leading-relaxed"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
+              viewport={{ once: true}}
+              transition={{ duration: 0.8, delay: 0.2}}
             >
               We're always looking for talented individuals to join our team. 
               Send us your resume and let's discuss how you can contribute to our mission.
             </motion.p>
             <motion.div;
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
+              viewport={{ once: true}}
+              transition={{ duration: 0.8, delay: 0.4}}
             >
               <$2 />
                 href="mailto:careers@ziontechgroup.com?subject=General Application"
@@ -2748,9 +2561,8 @@ const Careers = () => {
             </motion.div>
           </div>
         </section>
-      </div>
-    </>
-  )
+</div>
+)
 }
             {openPositions.map((position, index) => (
               <div key={index} className="p-6 rounded-xl border border-gray-700 bg-gray-800/30 hover:border-cyan-400/50 transition-all duration-300">
@@ -2774,7 +2586,7 @@ const Careers = () => {
                         {position.experience}
                       </span>
                     </div>
-                  </div>
+</div>
                   <button className="lg:ml-4 px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-medium hover:from-cyan-400 hover:to-blue-400 transition-all duration-300">
                     Apply Now;
                   </button>
@@ -2850,8 +2662,8 @@ const Careers = () => {
                     ))}
                   </select>
                 </div>
-              </div>
-            </div>
+</div>
+</div>
 <div className="flex items-center justify-center space-x-8 text-gray-400">
               </div>
 <div className="flex items-center">
@@ -2866,9 +2678,9 @@ const Careers = () => {
                 <Users className="w-5 h-5 mr-2" />
                 <span>Growing Team</span>
               </div>
-            </div>
-          </div>
-        </div>
+</div>
+</div>
+</div>
       </div>
 
       {/* Featured Jobs */}
@@ -2916,7 +2728,7 @@ const Careers = () => {
                       <Users className="w-4 h-4 mr-2" />
                       {job.experience}
                     </div>
-                  </div>
+</div>
 <div className="mb-6">
                     <h4 className="text-sm font-semibold text-cyan-400 mb-3">Key Requirements</h4>
                     <ul className="space-y-1">
@@ -2935,10 +2747,10 @@ const Careers = () => {
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
                   </button>
                 </div>
-              </div>
+</div>
             ))}
           </div>
-        </div>
+</div>
       )}
 
       {/* All Job Openings */}
@@ -2980,7 +2792,7 @@ const Careers = () => {
                     <Clock className="w-4 h-4 mr-2" />
                     {job.type}
                   </div>
-                </div>
+</div>
 <div className="mb-6">
                   <h4 className="text-xs font-semibold text-cyan-400 mb-2">Requirements</h4>
                   </div>
@@ -2994,17 +2806,17 @@ const Careers = () => {
                       </span>
                     ))}
                   </div>
-                </div>
+</div>
                 
                 <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium py-3 px-4 rounded-lg transition-all duration-200 flex items-center justify-center group">
                   Apply Now;
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
                 </button>
               </div>
-            </div>
+</div>
           ))}
         </div>
-      </div>
+</div>
 
       {/* Company Values */}
       <div className="bg-gradient-to-r from-gray-800 to-gray-900 border-t border-gray-700">
@@ -3027,11 +2839,11 @@ const Careers = () => {
                   <h3 className="text-xl font-semibold text-white mb-3">{value.title}</h3>
                   <p className="text-gray-300">{value.description}</p>
                 </div>
-              )
+)
             })
           </div>
-        </div>
-      </div>
+</div>
+</div>
 
       {/* Benefits */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -3068,7 +2880,7 @@ const Careers = () => {
             )
           })
         </div>
-      </div>
+</div>
 
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-gray-800 to-gray-900 border-t border-gray-700">
@@ -3099,9 +2911,9 @@ const Careers = () => {
                 Contact Us;
               </Link>
             </div>
-          </div>
-        </div>
-      </div>
+</div>
+</div>
+</div>
       {/* Open Positions */}
       <section id="open-positions" className="py-20">
         </section>
@@ -3145,7 +2957,7 @@ const Careers = () => {
                           {position.salary}
                         </span>
                       </div>
-                    </div>
+</div>
                     <Button asChild className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue-dark">
                       <a href={`mailto:careers@ziontechgroup.com?subject=Application for ${position.title}`}>
                         Apply Now;
@@ -3167,7 +2979,7 @@ const Careers = () => {
               </Card>
             ))}
           </div>
-        </div>
+</div>
       </section>
 
       {/* Application Process */}
@@ -3218,8 +3030,8 @@ const Careers = () => {
                 Welcome to the Zion Tech Group team!
               </p>
             </div>
-          </div>
-        </div>
+</div>
+</div>
       </section>
 
       {/* CTA Section */}
@@ -3244,7 +3056,7 @@ const Careers = () => {
               <Link to="/contact">Get in Touch</Link>
             </Button>
           </div>
-        </div>
+</div>
 export default Careers;
 export default Careers;
 export default Careers;
@@ -3280,8 +3092,8 @@ export default Careers;
               <h3 className="text-xl font-semibold mb-3">Offer</h3>
               <p className="text-zion-slate-light">Welcome to the Zion Tech Group family!</p>
             </div>
-          </div>
-        </div>
+</div>
+</div>
       </section>
 
       {/* CTA Section */}
@@ -3305,11 +3117,38 @@ export default Careers;
               </button>
             </Link>
           </div>
-        </div>
+</div>
       </section>
-    </div>
+</div>
       </main>
-    
-  )
+)
 }
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></p></p></p></p></p></p></p></ul></ul></li></li></section></section></section></section></section></section></section></section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div></p></p></p></p></p></p></p></ul></ul></li></li></section></section></section></section></section></section></section></section>

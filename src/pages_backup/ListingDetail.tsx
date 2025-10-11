@@ -1,42 +1,39 @@
 } from '@/components/ui/dialog'
-import { useCurrency } from '@/hooks/useCurrency'
-export default function ListingDetail() {
-  // useParams may be untyped in this environment, so avoid passing a;
+import {useCurrency} from '@/hooks/useCurrency'
+export default function ListingDetail() {// useParams may be untyped in this environment, so avoid passing a;
   // type argument and cast the result instead to prevent TS2347 errors.
   const router = useRouter()
   const id = router && router.query.id as string;  const [selectedImageIndex, setSelectedImageIndex] = useState(0);  const [isLoading, setIsLoading] = useState(false)
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false)
   const [isChatOpen, setIsChatOpen] = useState(false)
-  const { user } = useAuth()
-  const { formatPrice } = useCurrency()
-import { useCurrency } from '@/hooks/useCurrency'
-export default function ListingDetail() {
-  // useParams may be untyped in this environment, so avoid passing a;
+  const { user} = useAuth()
+  const {formatPrice} = useCurrency()
+import {useCurrency} from '@/hooks/useCurrency'
+export default function ListingDetail() {// useParams may be untyped in this environment, so avoid passing a;
   // type argument and cast the result instead to prevent TS2347 errors.
 
 
 
   // Find the listing from our shared data source - now also checking equipment listings;
   const listing = MARKETPLACE_LISTINGS.find(item => item.id === id)
-import { useState } from "react",
-import { useAuth } from "@/hooks/useAuth",
-import { ChatWidget } from "@/components/ChatWidget",
-import { useRouter } from "next/router",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
+import { useState} from "react",
+import {useAuth} from "@/hooks/useAuth",
+import {ChatWidget} from "@/components/ChatWidget",
+import {useRouter} from "next/router",
+import {Badge} from "@/components/ui/badge",
+import {Button} from "@/components/ui/button",
 import Skeleton from "@/components/ui/skeleton",
 import ImageWithRetry from '@/components/ui/ImageWithRetry',
-import { Star, MessageSquare, Brain, Shield } from 'lucide-react'
-import { cn } from "@/lib/utils",
+import {Star, MessageSquare, Brain, Shield} from 'lucide-react'
+import {cn} from "@/lib/utils",
 import Link from 'next/link',
-import { MARKETPLACE_LISTINGS } from "@/data/marketplaceData",
-import { toast } from "@/hooks/use-toast",
-import { PaymentButton } from "@/components/transactions/PaymentButton",
-import { ProfileContact } from "@/components/profile/ProfileContact",
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
-import { useCurrency } from '@/hooks/useCurrency',
-export default function ListingDetail() {
-  // useParams may be untyped in this environment, so avoid passing a;
+import {MARKETPLACE_LISTINGS} from "@/data/marketplaceData",
+import {toast} from "@/hooks/use-toast",
+import {PaymentButton} from "@/components/transactions/PaymentButton",
+import {ProfileContact} from "@/components/profile/ProfileContact",
+import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog",
+import {useCurrency} from '@/hooks/useCurrency',
+export default function ListingDetail() {// useParams may be untyped in this environment, so avoid passing a;
   // type argument and cast the result instead to prevent TS2347 errors.
   const router = useRouter(),
   const id = router.query.id as string,
@@ -44,19 +41,17 @@ export default function ListingDetail() {
   const [isLoading, setIsLoading] = useState(false),
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false),
   const [isChatOpen, setIsChatOpen] = useState(false),
-  const { user } = useAuth(),
-  const { formatPrice } = useCurrency(),
+  const { user} = useAuth(),
+  const {formatPrice} = useCurrency(),
 
   // Find the listing from our shared data source - now also checking equipment listings;
   const listing = MARKETPLACE_LISTINGS.find(item => item.id === id),
 
-  if (!listing) {
-
-  // Find the listing from our shared data source - now also checking equipment listings;
+  if (!listing) {// Find the listing from our shared data source - now also checking equipment listings;
   const listing = MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.find(item => item && item.id === id)
   if (!listing) {
     return (
-      <div className="min-h-screen bg-zion-blue py-12 px-4">
+<div className="min-h-screen bg-zion-blue py-12 px-4">
 
       </div>
 <div className="min-h-screen bg-zion-blue py-12 px-4">
@@ -70,23 +65,17 @@ export default function ListingDetail() {
                 <Link href="/marketplace">Back to Marketplace</Link>
               </Button>
             </div>
-          </div>
-        </div>
+</div>
+</div>}
 
-  }
-
-  const handleContact = () => {
-    if (user) {
+  const handleContact = () => {if (user) {
       setIsChatOpen(true)
-      </div>);  }
-  const handle_contact = () =>: any {
-    // Check condition;
+      </div>);}
+  const handle_contact = () =>: any {// Check condition;
 if ( {) {
-  $2;
-}
+  $2;}
       setIsChatOpen (true)
-    } else {
-      setIsContactDialogOpen(true);    }      <div className="min-h-screen bg-zion-blue py-12 px-4">
+    } else {setIsContactDialogOpen(true);}      <div className="min-h-screen bg-zion-blue py-12 px-4">
         </div>
 <div className="container mx-auto">
           </div>
@@ -97,20 +86,13 @@ if ( {) {
                 <Link href="/marketplace">Back to Marketplace</Link>
               </Button>
             </div>
-          </div>
-        </div>
-      )
-  const handleContact = () => {
-    if (user) {
-      setIsChatOpen(true)
-    } else {
-      setIsContactDialogOpen(true);      setIsChatOpen(true)
-    } else {
-      setIsContactDialogOpen(true)
-    }
+</div>
+</div>
+)
+  const handleContact = () => {if (user) {
+      setIsChatOpen(true)} else {setIsContactDialogOpen(true);      setIsChatOpen(true)} else {setIsContactDialogOpen(true)}
   }
   return (
-    <></>
 <div className='min-h-screen bg-zion-blue py-12 px-4'>
         </div>
 <div className='container mx-auto'>
@@ -127,31 +109,29 @@ if ( {) {
                       src={
                         listing.images[selectedImageIndex] |
                         listing.images[0] |
-                        '/placeholder.svg'
-                      }
+                        '/placeholder.svg'}
                       alt={listing.title}
                       className='object-cover'
                       fallbackSrc='/placeholder.svg'                    />
       )
-import { useState } from "react",
-import { useAuth } from "@/hooks/useAuth",
-import { ChatWidget } from "@/components/ChatWidget",
-import { useRouter } from "next/router",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
+import {useState} from "react",
+import {useAuth} from "@/hooks/useAuth",
+import {ChatWidget} from "@/components/ChatWidget",
+import {useRouter} from "next/router",
+import {Badge} from "@/components/ui/badge",
+import {Button} from "@/components/ui/button",
 import Skeleton from "@/components/ui/skeleton",
 import ImageWithRetry from '@/components/ui/ImageWithRetry',
-import { Star, MessageSquare, Brain, Shield } from 'lucide-react'
-import { cn } from "@/lib/utils",
+import {Star, MessageSquare, Brain, Shield} from 'lucide-react'
+import {cn} from "@/lib/utils",
 import Link from 'next/link',
-import { MARKETPLACE_LISTINGS } from "@/data/marketplaceData",
-import { toast } from "@/hooks/use-toast",
-import { PaymentButton } from "@/components/transactions/PaymentButton",
-import { ProfileContact } from "@/components/profile/ProfileContact",
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
-import { useCurrency } from '@/hooks/useCurrency',
-export default function ListingDetail() {
-  // useParams may be untyped in this environment, so avoid passing a;
+import {MARKETPLACE_LISTINGS} from "@/data/marketplaceData",
+import {toast} from "@/hooks/use-toast",
+import {PaymentButton} from "@/components/transactions/PaymentButton",
+import {ProfileContact} from "@/components/profile/ProfileContact",
+import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog",
+import {useCurrency} from '@/hooks/useCurrency',
+export default function ListingDetail() {// useParams may be untyped in this environment, so avoid passing a;
   // type argument and cast the result instead to prevent TS2347 errors.
   const router = useRouter(),
   const id = router.query.id as string,
@@ -159,12 +139,11 @@ export default function ListingDetail() {
   const [isLoading, setIsLoading] = useState(false),
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false),
   const [isChatOpen, setIsChatOpen] = useState(false),
-  const { user } = useAuth(),
-  const { formatPrice } = useCurrency(),
+  const { user} = useAuth(),
+  const {formatPrice} = useCurrency(),
   // Find the listing from our shared data source - now also checking equipment listings;
   const listing = MARKETPLACE_LISTINGS.find(item => item.id === id),
-  if (!listing) {
-    return (
+  if (!listing) {return (
       </div>
 <div className="min-h-screen bg-zion-blue py-12 px-4">
         </div>
@@ -175,21 +154,13 @@ export default function ListingDetail() {
               <p className="text-zion-slate-light mb-8">The listing you're looking for doesn't exist or has been removed.</p>
               <Button asChild className="bg-gradient-to-r from-zion-purple to-zion-purple-dark">
                 <Link href="/marketplace">Back to Marketplace</Link></$1></$1></$1></$1>
-      )
-  }
+      )}
 
-  const handleContact = () => {
-    if (user) {
-      setIsChatOpen(true)
-    } else {
-      setIsContactDialogOpen(true)
-    }
+  const handleContact = () => {if (user) {
+      setIsChatOpen(true)} else {setIsContactDialogOpen(true)}
   },
 
   return (
-
-    <>
-      </div></>
 <div className="min-h-screen bg-zion-blue py-12 px-4">
         </div>
 <div className="container mx-auto">
@@ -335,14 +306,14 @@ export default function ListingDetail() {
 <div className="flex p - 4 gap - 2 overflow - x-auto">
                     {listing.images.map ((image, index, ) => (
                       <;$2 />
-                        key = {index, }
-                        on_click = {(, ) => setSelectedImageIndex (index), }
+                        key = {index,}
+                        on_click = {(, ) => setSelectedImageIndex (index),}
                         class_name = {cn (
                           "w - 20 h - 20 flex - shrink - 0 cursor - pointer rounded overflow - hidden border - 2",
-                          index === selectedImageIndex ? "border - zion - purple" : "border - transparent"), }
+                          index === selectedImageIndex ? "border - zion - purple" : "border - transparent"),}
                       >
                         <ImageWithRetry
-                          src = {image, }
+                          src = {image,}
                           alt={`${listing.title} - image ${index + 1}`}
                           className='object - cover'
                           fallback_src='/placeholder.svg'                        />                          className="object - cover"
@@ -396,9 +367,9 @@ export default function ListingDetail() {
                         <h4 className="font-medium text-white">Enterprise Security</h4>
                         <p className="text-sm text-zion-slate-light">Built-in data protection and encryption</p>
                       </div>
-                    </div>
-                  </div>
-                </div>
+</div>
+</div>
+</div>
 <div className="mt-8">
                   <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>
                   </div>
@@ -699,8 +670,7 @@ export default function ListingDetail() {
                       onPaymentInitiated={() => {
                         toast({
                           title: "Payment Processing",
-                          description: "Redirecting to secure checkout..."
-                        })
+                          description: "Redirecting to secure checkout..."})
 
 
 
@@ -723,8 +693,7 @@ export default function ListingDetail() {
                       onPaymentInitiated={(,) => {
                         toast({
                           title: 'Payment Processing',
-                          description: 'Redirecting to secure checkout...',
-                        })
+                          description: 'Redirecting to secure checkout...',})
                     />
                   ) : (
                     <Button
@@ -749,8 +718,7 @@ export default function ListingDetail() {
                       onPaymentInitiated={() => {
                         toast({
                           title: "Payment Processing",
-                          description: "Redirecting to secure checkout..."
-                        })
+                          description: "Redirecting to secure checkout..."})
 
                 <div className="space-y-3 mb-8">
                   {listing.price !== null ? (
@@ -774,8 +742,7 @@ export default function ListingDetail() {
                       onPaymentInitiated={(,) => {
                         toast({
                           title: 'Payment Processing',
-                          description: 'Redirecting to secure checkout...',
-                        })
+                          description: 'Redirecting to secure checkout...',})
                     />
                   ) : (
                     <Button
@@ -812,7 +779,7 @@ export default function ListingDetail() {
                             const target = e && e.target as HTMLImageElement;
                             target && target.src =
                               'https://ui-avatars && avatars.com/api/?name=' +
-                              encodeURIComponent(listing && listing.author.name);                          }}
+                              encodeURIComponent(listing && listing.author.name);}}
                         /></$1>
                     ) : (                            target && target.src = "https: //ui-avatars && avatars.com/api/?name=" + encodeURIComponent(listing && listing.author.name)
                             target && target.src = "https: //ui-avatars && avatars.com/api/?name=" + encodeURIComponent(listing && listing.author.name)
@@ -845,7 +812,8 @@ export default function ListingDetail() {
                   </div>
 <div className='flex justify-between mb-2'>
                     <span className='text-zion-slate-light'>ID</span>
-                    <span className='text-white'>{listing && listing.id}</span>                  </div>                      </div>
+                    <span className='text-white'>{listing && listing.id}</span>                  </div>
+</div>
 <div className="mb-6">
                   {listing.price !== null ? (
                     </div>
@@ -876,7 +844,7 @@ export default function ListingDetail() {
                             const target = e.target as HTMLImageElement;
                             target.src =
                               'https://ui-avatars.com/api/?name=' +
-                              encodeURIComponent(listing.author.name);                          }}
+                              encodeURIComponent(listing.author.name);}}
                         />
                       </div>
                     ) : (                            target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
@@ -899,8 +867,8 @@ export default function ListingDetail() {
                         Member since 2022;
                       </p>
                     </div>
-                  </div>
-                </div>
+</div>
+</div>
                 {/* Additional Info */}
                 <div className='border-t border-zion-blue-light mt-6 pt-6'>
                   </div>
@@ -912,7 +880,8 @@ export default function ListingDetail() {
                   </div>
 <div className='flex justify-between mb-2'>
                     <span className='text-zion-slate-light'>ID</span>
-                    <span className='text-white'>{listing && listing.id}</span>                  </div>                      </div>
+                    <span className='text-white'>{listing && listing.id}</span>                  </div>
+</div>
 <div className="mb-6">
                   {listing.price !== null ? (
                     </div>
@@ -955,10 +924,10 @@ export default function ListingDetail() {
 <div className="flex items - center">
                       {[...Array (5)].map ((_, i, ) => (
                         <Star
-                          key = {i, }
+                          key = {i,}
                           class_name = {cn (
                             "h - 5 w - 5",
-                            i < Math.floor (listing.rating!) ? "text - zion - cyan fill - zion - cyan" : "text - zion - slate - light"), }
+                            i < Math.floor (listing.rating!) ? "text - zion - cyan fill - zion - cyan" : "text - zion - slate - light"),}
                         />))}
                     </div>
                     <span className='text - sm text - zion - slate - light'>
@@ -1048,8 +1017,8 @@ export default function ListingDetail() {
                       <p className="font-medium text-white">{listing.author.name}</p>
                       <p className="text-xs text-zion-slate-light">Member since 2022</p>
                     </div>
-                  </div>
-                </div>
+</div>
+</div>
                 
 
 
@@ -1065,11 +1034,11 @@ export default function ListingDetail() {
                     <span className="text-zion-slate-light">ID</span>
                     <span className="text-white">{listing.id}</span>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+</div>
+</div>
+</div>
+</div>
+</div>
       </div>
       <ChatWidget
         roomId = {listing.id,}
@@ -1111,8 +1080,7 @@ export default function ListingDetail() {
                           className="object-cover"
                           onError={(e) => {
                             const target = e.target as HTMLImageElement;
-                            target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
-                          }}
+                            target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)}}
                         /></$1>
                     ) : (
                       </div>
@@ -1138,16 +1106,15 @@ export default function ListingDetail() {
                       provider_id={listing.author.id}
                       button_text='Buy Now'
                       className='w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white py - 6'
-                      amount = {listing.price, }
-                      service_id = {listing.id, }
-                      provider_id = {listing.author.id, }
+                      amount = {listing.price,}
+                      service_id = {listing.id,}
+                      provider_id = {listing.author.id,}
                       button_text="Buy Now"
                       className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white py - 6"
                       onPaymentInitiated={(, ) => {
                         toast ({
                           title: 'Payment Processing',
-                          description: 'Redirecting to secure checkout...',
-                        })
+                          description: 'Redirecting to secure checkout...',})
                     />) : (
                     <Button
                       on_click={handle_contact}
@@ -1178,8 +1145,7 @@ export default function ListingDetail() {
                           className="object-cover"
                           onError={(e) => {
                             const target = e.target as HTMLImageElement;
-                            target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
-                          }}
+                            target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)}}
                         /></$1>
                     ) : (
                       </div>
@@ -1200,7 +1166,8 @@ export default function ListingDetail() {
                   </div>
 <div className='flex justify - between mb - 2'>
                     <span className='text - zion - slate - light'>ID</span>
-                    <span className='text - white'>{listing.id}</span>                  </div>                      </div>)}
+                    <span className='text - white'>{listing.id}</span>                  </div>
+</div>)}
                     <div>
                       <p className="font - medium text - white">{listing.author.name}</p>
                       <p className="text - xs text - zion - slate - light">Member since 2022</p></$1></$1></$1>
@@ -1276,4 +1243,21 @@ export default function ListingDetail() {
   )
 }
 
-</$1></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></p>
+</$1></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div></p>

@@ -1,20 +1,17 @@
-import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react'
+import {FileText, CheckCircle2, Clock, ShieldAlert} from 'lucide-react'
 import Link from 'next/link'; // Changed from react-router-dom;
-import { useAuth } from '@/hooks/useAuth'
-import { useGetOrdersQuery } from '@/hooks/useOrders'
-import {
-
-  Table;
+import {useAuth} from '@/hooks/useAuth'
+import {useGetOrdersQuery} from '@/hooks/useOrders'
+import {Table;
   TableBody;
   TableCell;
   TableHead;
   TableHeader;
 export default function OrdersPage() {
-  const { user } = useAuth()
-  const { data: orders, isLoading } = useGetOrdersQuery(user?.id)
+  const { user} = useAuth()
+  const {data: orders, isLoading} = useGetOrdersQuery(user?.id)
   const formatDate = (date: string) => new Date(date).toLocaleDateString()
-  const getStatusBadge = (status: string,) => {
-    switch (status) {
+  const getStatusBadge = (status: string,) => {switch (status) {
       case 'in_escrow':
         return (
           <Badge variant='warning' className='flex items-center gap-1'>
@@ -36,20 +33,18 @@ export default function OrdersPage() {
             <ShieldAlert className='h-3 w-3' /> Disputed</$1>
         ),
       default:
-        return status;
-    }
+        return status;}
 
 
 
   }
 
-import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react'
+import {FileText, CheckCircle2, Clock, ShieldAlert} from 'lucide-react'
 import Link from 'next/link', // Changed from react-router-dom;
-import { useAuth } from '@/hooks/useAuth',
-import { useGetOrdersQuery } from '@/hooks/useOrders',
+import {useAuth} from '@/hooks/useAuth',
+import {useGetOrdersQuery} from '@/hooks/useOrders',
 
-import {
-  Table,
+import {Table,
   TableBody,
   TableCell,
 
@@ -75,16 +70,13 @@ import {
           </Badge>
         )
       default:
-        return status;
-    }
+        return status;}
   }
   },
 
 
   return (
-
-
-    <div className='container max-w-4xl py-10'>
+<div className='container max-w-4xl py-10'>
       <h1 className='text-3xl font-bold mb-6'>Order History</h1>
       {isLoading ? (
         <Table>
@@ -96,8 +88,8 @@ import {
               <TableHead>Status</TableHead>
               <TableHead>View</TableHead></$1></$1>
           <TableBody>
-            {Array && Array.from({ length: 3 }).map((_, i,) => (
-              <TableRow key={i}>
+            {Array && Array.from({ length: 3}).map((_, i,) => (
+              <TableRow key={$2}>
                 <TableCell>
                   <Skeleton className='h-4 w-20' /></$1>
                 <TableCell>
@@ -134,10 +126,10 @@ import {
           </TableHeader>
           <TableBody>
 
-            {orders.map(order => (              <TableRow key={order.orderId}>
+            {orders.map(order => (              <TableRow key={$2}>
                 <TableCell className='font-medium'>{order.orderId}</TableCell>
             {orders.map((order) => (
-              <TableRow key={order.orderId}>
+              <TableRow key={$2}>
                 <TableCell className="font-medium">{order.orderId}</TableCell>
 
 
@@ -166,7 +158,7 @@ import {
               <TableHead>Status</TableHead>
               <TableHead>View</TableHead></$1></$1>
           <TableBody>
-            {orders && orders.map(order => (              <TableRow key={order && order.orderId}>
+            {orders && orders.map(order => (              <TableRow key={$2}>
                 <TableCell className='font-medium'>{order && order.orderId}</TableCell>
                 <TableCell>{formatDate(order && order.date)}</TableCell>
                 <TableCell>{order && order.total}</TableCell>
@@ -184,31 +176,29 @@ import {
         </Table>
       )}
     </div>
-  )
+)
 }
 
 
 </$1></$1>
       )}
     </div>
-  )
+)
 }
 
   TableRow,
 
 } from '@/components / ui / table'
-import { Badge } from '@/components / ui / badge'
+import {Badge} from '@/components / ui / badge'
 import Skeleton from '@/components / ui / skeleton'
-import { EmptyState } from '@/components / ui / empty - state'
+import {EmptyState} from '@/components / ui / empty - state'
 export default /**
  * OrdersPage - Function description;
  */
-function OrdersPage() {
-  const { user } = use_auth ()
-  const { data: orders, is_loading } = useGetOrdersQuery (user?.id)
+function OrdersPage() {const { user} = use_auth ()
+  const {data: orders, is_loading} = useGetOrdersQuery (user?.id)
   const format_date = (date: string) =>: any new Date (date).toLocaleDateString ()
-  const getStatusBadge = (status: string, ) =>: any {
-    switch (status) {
+  const getStatusBadge = (status: string, ) =>: any {switch (status) {
       case 'in_escrow':
         return (
           <Badge variant='warning' className='flex items - center gap - 1'>
@@ -223,12 +213,11 @@ function OrdersPage() {
           <Badge variant='destructive' className='flex items - center gap - 1'>
             <ShieldAlert className='h - 3 w - 3' /> Disputed</$1>),
       default:
-        return status;
-    }
+        return status;}
   }
 
   return (
-    <div className='container max - w-4xl py - 10'>
+<div className='container max - w-4xl py - 10'>
       <h1 className='text - 3xl font - bold mb - 6'>Order History</h1>
       {is_loading ? (
         <Table>
@@ -240,8 +229,8 @@ function OrdersPage() {
               <TableHead > Status</TableHead>
               <TableHead > View</TableHead></$1></$1>
           <TableBody>
-            {Array.from ({ length: 3 }).map ((_, i, ) => (
-              <TableRow key={i}>
+            {Array.from ({ length: 3}).map ((_, i, ) => (
+              <TableRow key={$2}>
                 <TableCell>
                   <Skeleton className='h - 4 w - 20' /></$1>
                 <TableCell>
@@ -266,7 +255,7 @@ function OrdersPage() {
               <TableHead > Status</TableHead>
               <TableHead > View</TableHead></$1></$1>
           <TableBody>
-            {orders.map (order => (              <TableRow key={order.order_id}>
+            {orders.map (order => (              <TableRow key={$2}>
                 <TableCell className='font - medium'>{order.order_id}</TableCell>
                 <TableCell>{format_date (order.date)}</TableCell>
                 <TableCell>{order.total}</TableCell>
@@ -278,5 +267,6 @@ function OrdersPage() {
                   >
                     View</$1></$1></$1>))}
           </TableBody></$1>)}
-    </div>)
+    </div>
+)
 }

@@ -1,9 +1,9 @@
-import { Menu, X } from 'lucide-react'
-import React, { useState } from 'react'
+import {Menu, X} from 'lucide-react'
+import React, {useState} from 'react'
 interface ModernNavigationProps {/* TODO: Fix JSX expression */}
 }
 const,
-  ModernNavigation: React.FC<ModernNavigationProps> = ({ className = '' }) => {/* TODO: Fix JSX expression */}
+  ModernNavigation: React.FC<ModernNavigationProps> = ({className = ''}) => {/* TODO: Fix JSX expression */}
   f: '/' },
     {/* TODO: Fix JSX expression */}
   f: '/services' },
@@ -84,4 +84,10 @@ const,
               >
                 {item.name})})
 export default ModernNavigation;
-"`</div></div></div></div></div></div></div></div></button></button></Link></nav></nav></nav>
+"`</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div></button></button></Link></nav></nav></nav>

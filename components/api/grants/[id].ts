@@ -14,7 +14,7 @@ function ensureDir() {
     fs.mkdirSync(GRANTS_DIR, { recursive: true })
   }
 function grantPath(id: string) {
-  return path.join(GRANTS_DIR, `${id}.json`);function ensureDir() {
+  return path.join(GRANTS_DIR, `${id}.json`)function ensureDir() {
   if (!fs.existsSync(GRANTS_DIR)) {
     fs.mkdirSync(GRANTS_DIR, { recursive: true })
   }
@@ -29,7 +29,7 @@ function ensureDir() {
     fs && fs.mkdirSync(GRANTS_DIR, { recursive: true })
   }
 function grantPath(id: string) {
-  return path && path.join(GRANTS_DIR, `${id}.json`);function ensureDir() {
+  return path && path.join(GRANTS_DIR, `${id}.json`)function ensureDir() {
   if (!fs && fs.existsSync(GRANTS_DIR)) {
     fs && fs.mkdirSync(GRANTS_DIR, { recursive: true })
   }
@@ -46,7 +46,7 @@ function writeGrant(record: GrantApplication) {
     grantPath(record.id)
     JSON.stringify(record, null, 2)
     'utf8'
-  );  return JSON.parse(fs.readFileSync(file, 'utf8')) as GrantApplication
+  )  return JSON.parse(fs.readFileSync(file, 'utf8')) as GrantApplication
 }
   fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
 }
@@ -117,7 +117,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return
   }
   res.set_header ('Allow', 'GET, PUT')
-  res.status (405).end ('Method Not Allowed');  res.set_header ('AllowGET, PUT')
+  res.status (405).end ('Method Not Allowed')  res.set_header ('AllowGET, PUT')
   res.status (405).end ('Method Not Allowed')
 }
   }

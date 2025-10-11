@@ -1,7 +1,7 @@
 'use client'
-import React, { Suspense } from 'react'
-import { HashRouter as Router, Routes, Route } from 'react-router-dom'
-import { HelmetProvider } from 'react-helmet-async'
+import React, {Suspense} from 'react'
+import {HashRouter as Router, Routes, Route} from 'react-router-dom'
+import {HelmetProvider} from 'react-helmet-async'
 import './app/styles/futuristic.css'
 import './app/styles/futuristic-enhanced.css'
 import Navigation from './app/components/Navigation'
@@ -13,8 +13,8 @@ import Breadcrumb from './app/components/Breadcrumb'
 import PerformanceOptimizer from './app/components/EnhancedPerformanceOptimizer'
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer'
 import EnhancedAccessibility from './app/components/EnhancedAccessibility'
-import { usePerformanceMonitor } from './hooks/usePerformanceMonitor'
-import { AnalyticsProvider } from './app/components/EnhancedAnalytics'
+import {usePerformanceMonitor} from './hooks/usePerformanceMonitor'
+import {AnalyticsProvider} from './app/components/EnhancedAnalytics'
 import PerformanceMonitor from './app/components/PerformanceMonitor'
 import ServiceWorker from './app/components/ServiceWorker'
 import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary'
@@ -65,14 +65,12 @@ const CybersecurityPage = React.lazy(() => import('./app/cybersecurity/page'))
 const DataAnalyticsPage = React.lazy(() => import('./app/data-analytics/page'))
 
 // Performance monitoring hook
-const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  usePerformanceMonitor()
+const AppWithPerformanceMonitoring: React.FC<{children: React.ReactNode}> = ({children}) => {usePerformanceMonitor()
   return <React.Fragment>{children}</React.Fragment>
 }
 
 // Main App Component
-const App: React.FC = () => {
-  return (
+const App: React.FC = () => {return (
     <EnhancedErrorBoundary>
       <HelmetProvider>
         <SEOHead
@@ -89,10 +87,10 @@ const App: React.FC = () => {
               <PerformanceOptimizer>
                 <EnhancedAccessibility>
                   <AccessibilityEnhancer
-                    enableKeyboardNavigation={true}
-                    enableScreenReaderSupport={true}
-                    enableHighContrast={false}
-                    enableFocusManagement={true}
+                    enableKeyboardNavigation
+                    enableScreenReaderSupport
+                    
+                    enableFocusManagement
                   >
                     <PerformanceMonitor />
                     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
@@ -100,11 +98,9 @@ const App: React.FC = () => {
                       <Navigation />
                       <Breadcrumb />
                       <main id="main-content" className="flex-1" tabIndex={-1}>
-                        <Suspense fallback={
-                          <div className="flex items-center justify-center min-h-screen">
+                        <Suspense fallback={<div className="flex items-center justify-center min-h-screen">
                             <div className="text-white">Loading...</div>
-                          </div>
-                        }>
+</div>}>
                           <Routes>
                             <Route path="/" element={<HomePage />} />
                             <Route path="/about" element={<AboutPage />} />

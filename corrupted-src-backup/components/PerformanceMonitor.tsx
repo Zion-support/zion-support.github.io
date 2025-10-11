@@ -1,33 +1,27 @@
 :src/components/PerformanceMonitor.tsx;
-import React, { useEffect, useState } from 'react'
+import React, {useEffect, useState} from 'react'
 interface PerformanceMonitorProps {/* TODO: Fix JSX expression */}
 }
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
-    ,
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({,
   children;
   enableReporting = true,
-  enableLongTaskMonitoring = true;
-  }) => {
-  const [metrics, setMetrics] = useState<WebVitalsMetrics>({})
+  enableLongTaskMonitoring = true;}) => {const [metrics, setMetrics] = useState<WebVitalsMetrics>({})
   const [, setLongTasks] = useState<PerformanceEntry[]>([])
-  useEffect(() => {
-    // Initialize performance monitoring;
+  useEffect(() => {// Initialize performance monitoring;
     // Add critical resource hints manually;
     if (typeof document !== 'undefined') {
       const hints = [
-        { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
-        { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
-        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' }
+        { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com'},
+        {rel: 'dns-prefetch', href: 'https://fonts.gstatic.com'},
+        {rel: 'preconnect', href: 'https://fonts.googleapis.com'},
+        {rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous'}
       ]
-      hints.forEach(hint => {
-    )
+      hints.forEach(hint => {)
         const _link = document.createElement('link')
         link.rel = hint.rel;
         link.href = hint.href;
         if (hint.crossOrigin) {
-          link.crossOrigin = hint.crossOrigin;
-  }
+          link.crossOrigin = hint.crossOrigin;}
 const,
   PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({/* TODO: Fix JSX expression */}) => {/* TODO: Fix JSX expression */}
   const [metrics, setMetrics] = useState<WebVitalsMetrics>({})
@@ -51,8 +45,7 @@ const,
       }
     }
     // Monitor long tasks if enabled;
-    if (enableLongTaskMonitoring) {
-      const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntryList) => {,
+    if (enableLongTaskMonitoring) {const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntryList) => {,
         setLongTasks(prev => [...prev, ...entries])
     if (enableLongTaskMonitoring) {/* TODO: Fix JSX expression */}
 //         })
@@ -62,16 +55,14 @@ const,
     }
   }, [enableReporting, enableLongTaskMonitoring])
   // Monitor Web Vitals using Performance Observer;
-  useEffect(() => {
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
+  useEffect(() => {if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
     const observer = new PerformanceObserver((list) => {
       const _entries = list.getEntries()
       entries.forEach((entry) => {
         if (entry.entryType === 'largest-contentful-paint') {
 //           const lcp = entry.startTime;
-          setMetrics(prev => ({ ...prev, LCP: lcp })
-          if (enableReporting) {
-            performanceOptimizer.reportWebVitals({ LCP: lcp })
+          setMetrics(prev => ({ ...prev, LCP: lcp})
+          if (enableReporting) {performanceOptimizer.reportWebVitals({ LCP: lcp})
   useEffect(() => {/* TODO: Fix JSX expression */}
   P: lcp })
           if (enableReporting) {/* TODO: Fix JSX expression */}
@@ -100,22 +91,19 @@ const,
 //       }
   }, [metrics])
   return <React.Fragment>{children}
-import React, { useEffect, useState, useCallback } from 'react'
+import React, {useEffect, useState, useCallback} from 'react'
 interface PerformanceMonitorProps {/* TODO: Fix JSX expression */}
 }
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
-    ,
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({,
   enabled = true;
   budget = {,
     maxBundleSize: 500, // 500KB;
     maxImageSize: 100, // 100KB;
     maxFirstLoad: 3000, // 3 seconds;
-    maxInteractive: 2000 // 2 seconds;
-  },
+    maxInteractive: 2000 // 2 seconds;},
   onMetricsUpdate,
   onBudgetViolation;
-}) => {
-const,
+}) => {const,
   PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({/* TODO: Fix JSX expression */}
   },
   onMetricsUpdate,
@@ -127,7 +115,7 @@ const,
   s: string[] }>({/* TODO: Fix JSX expression */})
   s: [] })
   const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
-      setMetrics(prev => ({ ...prev, ...newMetrics })
+      setMetrics(prev => ({...prev, ...newMetrics})
       onMetricsUpdate?.(newMetrics)
       // Check performance budget;
       const _budgetCheck = performanceOptimizer.checkPerformanceBudget(budget)
@@ -136,13 +124,12 @@ const,
       }
     }
   }, [budget, onMetricsUpdate, onBudgetViolation])
-  useEffect(() => {
-    if (!enabled) return;
+  useEffect(() => {if (!enabled) return;
     // Initial metrics;
     updateMetrics()
     // Monitor long tasks;
     const longTaskObserver = performanceOptimizer.monitorLongTasks((entries) => {
-//       })
+//})
     // Monitor Web Vitals;
     const reportVitals = (newMetrics: WebVitalsMetrics) => {,
   useEffect(() => {/* TODO: Fix JSX expression */}
@@ -150,17 +137,16 @@ const,
     // Monitor Web Vitals;
     const reportVitals = (newMetric)
   s: WebVitalsMetrics) => {/* TODO: Fix JSX expression */}
-      setMetrics(prev => ({ ...prev, ...newMetrics })
+      setMetrics(prev => ({...prev, ...newMetrics})
       performanceOptimizer.reportWebVitals(newMetrics)
     }
     // Set up performance monitoring;
-    if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
+    if ('PerformanceObserver' in window) {const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
           if (entry.entryType === 'paint') {
             const _paintEntry = entry as PerformancePaintTiming;
             if (paintEntry.name === 'first-contentful-paint') {
-              reportVitals({ FCP: paintEntry.startTime })
+              reportVitals({ FCP: paintEntry.startTime})
     if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
   P: paintEntry.startTime })
           if (entry.entryType === 'largest-contentful-paint') {/* TODO: Fix JSX expression */}
@@ -175,7 +161,8 @@ const,
     }
   }, [enabled, updateMetrics])
   if (!enabled) return null;
-  return(<div className="performance-monitor">)
+  return (
+<div className="performance-monitor">)
       {/* Toggle button */})
       <;)$2 />
   return (
@@ -252,8 +239,7 @@ const,
       {/* Performance panel */}
       {/* TODO: Fix JSX expression */}
               onClick={() => setIsVisible(false)}"
-              className="text-gray-500,
-  hover:text-gray-700,
+              className="text-gray-500, hover:text-gray-700,
   dark:text-gray-400,
   dark:hove,"
   r:text-gray-200""
@@ -312,7 +298,7 @@ const,
               <span className={`text-sm font-bold ${budgetStatus.passed ? 'text-green-600' : 'text-red-600'}`}>
                 {budgetStatus.passed ? '✓ PASSED' : '✗ FAILED'}
             {/* TODO: Fix JSX expression */}
-                  <div key={index}>• {violation})})
+                  <div key={$2}>• {violation})})
           {/* Connection Quality */}
           </div>
 <div className="border-t pt-3 mt-3">
@@ -353,7 +339,7 @@ const,
               <span className="ml-2 text-blue-600">
                 {performanceOptimizer.shouldUseWebP() ? 'YES' : 'NO'})
     </div>
-  )
+)
 }
 export default PerformanceMonitor;
 }"`
@@ -364,4 +350,22 @@ export default PerformanceMonitor;
   </PerformanceMonitorProps>
   </WebVitalsMetrics>
   </PerformanceMonitorProps>
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div></div></span></span></span></span></span></span></span></span></span></span></span></span></h3>

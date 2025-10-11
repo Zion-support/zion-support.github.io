@@ -1,9 +1,8 @@
 import React from 'react'
 import {BarChart, Target, Zap, Brain, Shield, CheckCircle, Star, Phone, Mail, MapPin, Users} from 'lucide-react'
-import { Link } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import React from 'react'
-const SmartAnalyticsPage: React.FC = () => {
-  const features = [
+const SmartAnalyticsPage: React.FC = () => {const features = [
     {
       icon: BarChart,
       title: 'Real-time Dashboards',
@@ -68,11 +67,12 @@ $4}
         'White-label options',
         'SLA guarantee'
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       </div>
 <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
-        </div><section className="text-center mb-16">
+        </div>
+<section className="text-center mb-16">
           <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
             Smart Analytics;
           <p className="text-xl md:text-2xl text-cyan-400 mb-8 max-w-4xl mx-auto">
@@ -115,8 +115,7 @@ $4}
               <$2 />
                 key={index}
                 className={`bg-white/10 backdrop-blur-sm rounded-lg p-8 border ${
-                  plan.popular ? 'border-cyan-500' : 'border-gray-600'
-                } relative`}
+                  plan.popular ? 'border-cyan-500' : 'border-gray-600'} relative`}
                 {plan.popular && (
                   </div>
 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -136,17 +135,15 @@ $4}
                   className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${
                     plan.popular;
                       ? 'bg-cyan-600 text-white hover:bg-cyan-700'
-                      : 'bg-gray-600 text-white hover:bg-gray-700'
-                  }`}
+                      : 'bg-gray-600 text-white hover:bg-gray-700'}`}
                   Get Started;
         {/* CTA Section */}
-        </div><section className="text-center bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12">
-import { Link } from 'react-router-dom'
-const SmartAnalyticsPage: React.FC = () => {
-    const features = [],
+        </div>
+<section className="text-center bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12">
+import {Link} from 'react-router-dom'
+const SmartAnalyticsPage: React.FC = () => {const features = [],
   return (
-    {// TODO: Add content;
-  }
+    {// TODO: Add content;}
 }
   ico,
   n: BarChart,
@@ -163,8 +160,7 @@ const SmartAnalyticsPage: React.FC = () => {
       benefit: 'Discover hidden opportunities',
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-const PagePage: React.FC = () => {
-  return (
+const PagePage: React.FC = () => {return (
     </section>
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -181,8 +177,7 @@ const PagePage: React.FC = () => {
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with data encryption, access controls, and compliance with industry standards.',
-      benefit: '100% data protection'
-    }
+      benefit: '100% data protection'}
   ]
   const pricingPlans = [
       nam,
@@ -256,8 +251,8 @@ export default SmartAnalyticsPage</a>
   </a>
   </a>
   </div>
-  </div>
-  </div>
+</div>
+</div>
   </section>
   </p>
   </h2>
@@ -265,12 +260,12 @@ export default SmartAnalyticsPage</a>
   </p>
   </h1>
   </section>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
   </div>
   </h2>
   </section>
@@ -279,5 +274,5 @@ export default SmartAnalyticsPage</a>
   </p>
   </h1>
   </div>
-  </div>
+</div>
 </div></span></span></span></span></p></p></p></h3></h3></ul></ul></li></main></section>

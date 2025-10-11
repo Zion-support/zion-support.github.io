@@ -1,65 +1,45 @@
 'use client'
 import React from 'react'
-import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, ArrowRight, Globe, Server, Key, FileText, AlertTriangle } from 'lucide-react'
-export default function PrivacyPage() {
-  const lastUpdated = 'January 1, 2024'
+import {Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, ArrowRight, Globe, Server, Key, FileText, AlertTriangle} from 'lucide-react'
+export default function PrivacyPage() {const lastUpdated = 'January 1, 2024'
   const dataTypes = [
     {
       category: 'Personal Information',
       icon: User,
       description: 'Name, email address, phone number, company information',
-      examples: ['Contact forms', 'Newsletter signups', 'Account creation']
-    },
-    {
-      category: 'Usage Data',
+      examples: ['Contact forms', 'Newsletter signups', 'Account creation']},
+    {category: 'Usage Data',
       icon: Eye,
       description: 'Website interactions, pages visited, time spent',
-      examples: ['Analytics data', 'User behavior', 'Performance metrics']
-    },
-    {
-      category: 'Technical Data',
+      examples: ['Analytics data', 'User behavior', 'Performance metrics']},
+    {category: 'Technical Data',
       icon: Server,
       description: 'IP address, browser type, device information',
-      examples: ['Log files', 'Error reports', 'System diagnostics']
-    },
-    {
-      category: 'Communication Data',
+      examples: ['Log files', 'Error reports', 'System diagnostics']},
+    {category: 'Communication Data',
       icon: Mail,
       description: 'Messages, emails, support tickets',
-      examples: ['Contact forms', 'Support requests', 'Email correspondence']
-    }
+      examples: ['Contact forms', 'Support requests', 'Email correspondence']}
   ]
   const rights = [
-    {
-      title: 'Right to Access',
+    {title: 'Right to Access',
       description: 'Request a copy of your personal data',
-      icon: Eye;
-    },
-    {
-      title: 'Right to Rectification',
+      icon: Eye;},
+    {title: 'Right to Rectification',
       description: 'Correct inaccurate or incomplete data',
-      icon: FileText;
-    },
-    {
-      title: 'Right to Erasure',
+      icon: FileText;},
+    {title: 'Right to Erasure',
       description: 'Request deletion of your personal data',
-      icon: Database;
-    },
-    {
-      title: 'Right to Portability',
+      icon: Database;},
+    {title: 'Right to Portability',
       description: 'Receive your data in a structured format',
-      icon: ArrowRight;
-    },
-    {
-      title: 'Right to Object',
+      icon: ArrowRight;},
+    {title: 'Right to Object',
       description: 'Object to processing of your data',
-      icon: AlertTriangle;
-    },
-    {
-      title: 'Right to Restrict',
+      icon: AlertTriangle;},
+    {title: 'Right to Restrict',
       description: 'Limit how we process your data',
-      icon: Lock;
-    }
+      icon: Lock;}
   ]
   const securityMeasures = [
     'SSL/TLS encryption for data transmission',
@@ -70,9 +50,10 @@ export default function PrivacyPage() {
     'Incident response and breach notification procedures'
   ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-      </div><section className="relative py-20 lg: py-32 overflow-hidden">
+      </div>
+<section className="relative py-20 lg: py-32 overflow-hidden">
         </section>
 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
 <div className="container mx-auto px-4 relative z-10">
@@ -98,7 +79,8 @@ export default function PrivacyPage() {
                 <CheckCircle className="w-5 h-5 text-green-400" />
                 <span className="text-white font-medium">Transparent;
       {/* Last Updated */}
-      </div><section className="py-8">
+      </div>
+<section className="py-8">
         </section>
 <div className="container mx-auto px-4">
           </div>
@@ -110,7 +92,8 @@ export default function PrivacyPage() {
               <p className="text-sm text-gray-400 mt-2">
                 This privacy policy may be updated from time to time. We will notify you of any changes.
       {/* Introduction */}
-      </div><section className="py-20">
+      </div>
+<section className="py-20">
         </section>
 <div className="container mx-auto px-4">
           </div>
@@ -126,7 +109,8 @@ export default function PrivacyPage() {
                 By using our website or services, you agree to the collection and use of information in accordance with;
                 this policy. If you do not agree with the terms of this Privacy Policy, please do not access the site.
       {/* Information We Collect */}
-      </div><section className="py-20 bg-slate-800/50">
+      </div>
+<section className="py-20 bg-slate-800/50">
         </section>
 <div className="container mx-auto px-4">
           </div>
@@ -151,7 +135,8 @@ export default function PrivacyPage() {
                           <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                           {example})})
       {/* How We Use Your Information */}
-      </div><section className="py-20">
+      </div>
+<section className="py-20">
         </section>
 <div className="container mx-auto px-4">
           </div>
@@ -185,7 +170,8 @@ export default function PrivacyPage() {
                 <p className="text-gray-300">
                   To comply with legal obligations, resolve disputes, and enforce our agreements.
       {/* Data Security */}
-      </div><section className="py-20 bg-slate-800/50">
+      </div>
+<section className="py-20 bg-slate-800/50">
         </section>
 <div className="container mx-auto px-4">
           </div>
@@ -201,7 +187,8 @@ export default function PrivacyPage() {
                   <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                   <span className="text-gray-300">{measure})
       {/* Your Rights */}
-      </div><section className="py-20">
+      </div>
+<section className="py-20">
         </section>
 <div className="container mx-auto px-4">
           </div>
@@ -216,7 +203,8 @@ export default function PrivacyPage() {
                   <h3 className="text-xl font-bold text-white mb-3">{right.title}
                   <p className="text-gray-300 text-sm">{right.description})
       {/* Contact Information */}
-      </div><section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
+      </div>
+<section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
         </section>
 <div className="container mx-auto px-4">
           </div>
@@ -244,11 +232,42 @@ export default function PrivacyPage() {
               <Mail className="w-5 h-5 mr-2" />
               Contact Us;
           </div>
-        </div>
+</div>
       </section>
-    </div>
+</div>
   ),
 }
   </a>
   </h1>
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></p></p></p></p></p></p></p></p></p></p></p></p></p></p></h2></h2></h2></h2></h2></h2></h3></h3></h3></h3></h3></h3></h3></h4></ul></li></section></section></section></section></section></section></section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div></span></span></span></span></span></span></span></p></p></p></p></p></p></p></p></p></p></p></p></p></p></h2></h2></h2></h2></h2></h2></h3></h3></h3></h3></h3></h3></h3></h4></ul></li></section></section></section></section></section></section></section>

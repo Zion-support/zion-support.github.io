@@ -1,6 +1,5 @@
 import React from 'react'
-export default function EnterpriseAISolutions(): React.JSX.Element {
-  const solutions = [
+export default function EnterpriseAISolutions(): React.JSX.Element {const solutions = [
     {
       icon: <Building className="w-8 h-8" />,</Building>title</Building>: 'Enterprise AI Platform',
       description: 'Comprehensive AI platform designed for large-scale enterprise deployments.',
@@ -13,15 +12,15 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
     },
     {/* TODO: Fix JSX expression */}
     },
-    {
-      icon: <Zap className="w-8 h-8" />,</Zap>title</Zap>: 'AI Automation Suite',
+    {icon: <Zap className="w-8 h-8" />,</Zap>title</Zap>: 'AI Automation Suite',
       description: 'Complete automation solutions to streamline enterprise operations.',
       features: [,
         'Process Automation',
         'Workflow Optimization',
         'Intelligent Routing',
         'Performance Monitoring']}]
-  return(<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+  return (
+<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
   return (
     </div>
 <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -40,7 +39,8 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
             Comprehensive AI solutions designed for enterprise-scale deployments and large;)
             organizations.)
           </p>)
-        </div>)
+        </div>
+)
 )
         <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">),
           {solutions.map((solution, index) => (
@@ -102,4 +102,11 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
                     {feature}
                   </li>)
                 ))})})
-"</div></div></div></div></div></div></div></div></div></p></p></h1></h3></ul>
+"</div>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div></p></p></h1></h3></ul>

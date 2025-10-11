@@ -1,21 +1,17 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-interface SEOHeadProps {
-    title?: string;
+import {Helmet} from 'react-helmet-async'
+interface SEOHeadProps {title?: string;
   description?: string;
   keywords?: string;
   image?: string;
   url?: string;
-  type?: string;
-  }
+  type?: string;}
 const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadProps> = "Zion Tech Group - AI-Powered Enterprise Solutions",
   description = "Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.",
   keywords = "AI solutions, enterprise AI, quantum computing, digital transformation, machine learning, automation, cybersecurity, cloud computing, IT services, Zion Tech Group",
   image = "https://ziontechgroup.com/og-image.png",
   url = "https://ziontechgroup.com",
-  type = "website"
-}) => {
-  const structuredData = {
+  type = "website"}) => {const structuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
@@ -28,14 +24,11 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadP
       "addressLocality": "Middletown",
       "addressRegion": "DE",
       "postalCode": "19709",
-      "addressCountry": "US"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
+      "addressCountry": "US"},
+    "contactPoint": {"@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
       "contactType": "customer service",
-      "email": "kleber@ziontechgroup.com"
-    },
+      "email": "kleber@ziontechgroup.com"},
     "sameAs": [
       "https://linkedin.com/company/zion-tech-group",
       "https://twitter.com/ziontechgroup",
