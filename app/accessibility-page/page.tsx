@@ -109,7 +109,7 @@ const AccessibilityPage: React.FC = () => {
         <section className="pt-20 pb-16 px-4">
           <div className="container mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Accessibility</span> First
+              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Accessibility</span> First</h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               We believe technology should be accessible to everyone. Our commitment to inclusive design ensures that our solutions work for all users.
             </p>
@@ -127,7 +127,7 @@ Accessibility Features
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                  <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
+                  <IconComponent className="w-12 h-12 text-purple-400 mb-4" />
                   <h3 className="text-xl font-semibold text-white mb-3">
                     {feature.title}
                   </h3>
@@ -231,9 +231,9 @@ Let's work together to create inclusive digital experiences that work for everyo
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
                 Start Your Accessibility Journey
                 <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
                 Schedule Consultation
-              </button>
               </button></div></section>
       </main>
       <Footer />

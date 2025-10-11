@@ -86,15 +86,13 @@ const PagePage: React.FC = () => {
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="flex items-center mb-4">
-                    <feature.icon className="h-8 w-8 text-blue-600 mr-3" />
+                    <IconComponent className="h-8 w-8 text-blue-600 mr-3" />
                     <h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3>
                   </div>
                   <p className="text-gray-600 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                        {benefit}
+                      <li key={idx} className="flex items-center text-sm text-gray-600"><CheckCircle className="w-4 h-4 text-green-400 mr-2" />{benefit}
                       </li>
                     ))}
                   </ul>

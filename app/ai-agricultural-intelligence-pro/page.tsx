@@ -65,7 +65,7 @@ return (
         <section className="pt-20 pb-16 px-4">
           <div className="container mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              AI <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">Agricultural Intelligence Pro</span>
+              AI <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">Agricultural Intelligence Pro</span></h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Transform your farming operations with AI-powered precision agriculture. Monitor crops, optimize yields, and maximize profits with cutting-edge technology.
             </p>
@@ -73,9 +73,9 @@ return (
               <button className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Start Free Trial
                 <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-all duration-300">
                 Schedule Demo
-              </button>
               </button></div></section>
 
         {/* Features Section */}
@@ -194,10 +194,10 @@ return (
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
                 Start Free Trial
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
               <button className="border border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-400 hover:text-white transition-all duration-300">
                 Contact Sales
-              </button>
               </button></div></section>
       </main>
 

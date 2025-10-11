@@ -130,24 +130,24 @@ const AI3DGenerationPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">3D Generation</span>
+                AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">3D Generation</span></h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Revolutionary AI-powered 3D model generation and design automation solutions
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center">
                   Start Creating
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
+                  <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
                   View Gallery
-                </button>
                 </button></div></section>
         {/* Features Section */}
       <Footer />
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                  <feature.icon className="w-12 h-12 text-purple-400 mb-4">
+                  <IconComponent className="w-12 h-12 text-purple-400 mb-4">
                   <h3 className="text-xl font-semibold text-white mb-3">
                   <p className="text-gray-300 mb-4">
                   <ul className="space-y-2">

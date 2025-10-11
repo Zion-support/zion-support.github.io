@@ -49,7 +49,7 @@ const AiApiManagementPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">API Management</span>
+                AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">API Management</span></h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Streamline your API operations with intelligent management solutions
               </p>
@@ -75,7 +75,7 @@ const AiApiManagementPage: React.FC = () => {
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                   <div className="flex items-center mb-4">
-                    <feature.icon className="h-8 w-8 text-blue-600 mr-3">
+                    <IconComponent className="h-8 w-8 text-blue-600 mr-3">
                     <h3 className="text-xl font-semibold text-gray-900">
                   </div>
       <Footer />

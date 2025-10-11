@@ -68,7 +68,7 @@ Discover our comprehensive page solutions designed to transform your business wi
               {features.map((feature), index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
                   <div className="text-cyan-400 mb-4">
-                    <feature.icon className="h-8 w-8" />
+                    <IconComponent className="h-8 w-8" />
       <Footer />
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>

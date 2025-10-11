@@ -129,7 +129,7 @@ const AIAccountingAssistantPage: React.FC = () => {
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
                   AI Accounting Assistant
-                </span>
+                </span></h1>
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
                 Transform your accounting processes with our intelligent AI assistant. Automate bookkeeping, gain insights, and ensure compliance with ease.
@@ -137,17 +137,17 @@ const AIAccountingAssistantPage: React.FC = () => {
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center">
                   Start Free Trial
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                <button className="border border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300">
+                  <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300">
                   Watch Demo
-                </button>
                 </button></div></section>
         {/* Features Section */}
       <Footer />
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                  <feature.icon className="w-12 h-12 text-purple-400 mb-4">
+                  <IconComponent className="w-12 h-12 text-purple-400 mb-4">
                   <h3 className="text-xl font-semibold text-white mb-3">
                   <p className="text-gray-300 mb-4">
                   <ul className="space-y-2">

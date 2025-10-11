@@ -69,7 +69,7 @@ const AboutPage: React.FC = () => {
         <section className="pt-20 pb-16 px-4">
           <div className="container mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              About <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Zion Tech Group</span>
+              About <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Zion Tech Group</span></h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               We are a team of passionate technologists dedicated to transforming businesses through innovative AI and technology solutions.
             </p>
@@ -92,14 +92,13 @@ const AboutPage: React.FC = () => {
                       <IconComponent className="w-8 h-8 text-white" />
                     </div>
                     <h3 className="text-2xl font-semibold text-white mb-4">{feature.title}</h3>
-                  <div key={index} className="text-center">
-                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                      <Icon className="w-8 h-8 text-white" />
-                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                     <p className="text-gray-300">{feature.description}</p>
+                  </div>
                 );
               })}
-              })}</div></section>
+            </div>
+          </div>
+        </section>
         {/* Values Section */}
         <section className="py-20 px-4 bg-white/5">
           <div className="container mx-auto">
@@ -199,9 +198,9 @@ const AboutPage: React.FC = () => {
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
                 Contact Us
-              </button>
               </button></div></section>
       </main>
       <Footer />
