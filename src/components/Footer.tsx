@@ -209,14 +209,16 @@ const Footer: React.FC = memo(() => {
                   View All IT Services →
                 </Link>
               </li>
-              <Link
-                to="/micro-saas"
-                className="text-cyan-400 hover:text-cyan-300 text-sm font-medium flex items-center group"
-              >
-                View All Solutions
-                <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
-              </Link>
-            </div>
+              <li>
+                <Link
+                  to="/micro-saas"
+                  className="text-cyan-400 hover:text-cyan-300 text-sm font-medium flex items-center group"
+                >
+                  View All Solutions
+                  <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
+                </Link>
+              </li>
+            </ul>
           </div>
 
           {/* AI & IT Services */}
