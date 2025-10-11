@@ -3,19 +3,21 @@ import React from 'react'
 import Link from 'next/link'
 import { ChevronRight, Home } from 'lucide-react'
 
-const Breadcrumb: React.FC = () => {
-  const pathSegments = typeof window !== 'undefined' ? window.location.pathname.split('/').filter(segment => segment !== '') : [];
+interface BreadcrumbItem {
+  label: string;
+  href?: string;
+}
+
+interface BreadcrumbProps {
+  items?: BreadcrumbItem[];
+}
+
+const Breadcrumb: React.FC<BreadcrumbProps> = ({ items = [] }) => {
+  const pathSegments = typeof window !== 'undefined' ? location.pathname.split('/').filter(segment => segment !== '') : [];
   const breadcrumbItems = [
     { label: 'Home', href: '/' },
-    ...pathSegments.map(segment => ({
-      label: segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' '),
-      href: null
-    }))
-<<<<<<< HEAD
-  ];
-=======
+    ...items
   ]
->>>>>>> cursor/analyze-improve-and-deploy-application-6b65
 
   return (
     <nav className="bg-slate-800/50 backdrop-blur-sm border-b border-cyan-500/20" aria-label="Breadcrumb">

@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
@@ -35,18 +35,45 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Services */}
+          {/* AI Services */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-cyan-400">Services</h3>
+            <h3 className="text-lg font-semibold text-cyan-400">AI Services</h3>
             <ul className="space-y-2">
               <li>
                 <Link href="/ai-services" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
-                  AI Services
+                  AI Solutions
                 </Link>
               </li>
               <li>
+                <Link href="/ai-analytics" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                  AI Analytics
+                </Link>
+              </li>
+              <li>
+                <Link href="/ai-automation" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                  AI Automation
+                </Link>
+              </li>
+              <li>
+                <Link href="/ai-chatbot-builder" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                  Chatbot Builder
+                </Link>
+              </li>
+              <li>
+                <Link href="/ai-cybersecurity" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                  AI Cybersecurity
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* IT Services */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold text-cyan-400">IT Services</h3>
+            <ul className="space-y-2">
+              <li>
                 <Link href="/it-services" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
-                  IT Services
+                  IT Solutions
                 </Link>
               </li>
               <li>
@@ -55,13 +82,18 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/cybersecurity" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                <Link href="/cybersecurity-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
                   Cybersecurity
                 </Link>
               </li>
               <li>
-                <Link href="/data-analytics" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
-                  Data Analytics
+                <Link href="/web-development" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                  Web Development
+                </Link>
+              </li>
+              <li>
+                <Link href="/mobile-development" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                  Mobile Development
                 </Link>
               </li>
             </ul>

@@ -45,11 +45,23 @@ const AiAnalyticsPage = React.lazy(() => import('./app/ai-analytics/page'))
 const AiAutomationPage = React.lazy(() => import('./app/ai-automation/page'))
 const AiChatbotBuilderPage = React.lazy(() => import('./app/ai-chatbot-builder/page'))
 const AiCybersecurityPage = React.lazy(() => import('./app/ai-cybersecurity/page'))
+const AiMobileBuilderPage = React.lazy(() => import('./app/ai-mobile-builder/page'))
+const AiLeadScoringPage = React.lazy(() => import('./app/ai-lead-scoring/page'))
+const AiEcommerceAssistantPage = React.lazy(() => import('./app/ai-ecommerce-assistant/page'))
+const AiSecurityMonitorPage = React.lazy(() => import('./app/ai-security-monitor/page'))
+const AiFinancialPlannerPage = React.lazy(() => import('./app/ai-financial-planner/page'))
+const AiHealthTrackerPage = React.lazy(() => import('./app/ai-health-tracker/page'))
+const AiLearningPlatformPage = React.lazy(() => import('./app/ai-learning-platform/page'))
 // IT Service Pages
 const CloudInfrastructurePage = React.lazy(() => import('./app/cloud-infrastructure/page'))
 const CybersecuritySolutionsPage = React.lazy(() => import('./app/cybersecurity-solutions/page'))
 const WebDevelopmentPage = React.lazy(() => import('./app/web-development/page'))
 const MobileDevelopmentPage = React.lazy(() => import('./app/mobile-development/page'))
+const MobileAppDevelopmentPage = React.lazy(() => import('./app/mobile-app-development/page'))
+const SystemAdministrationPage = React.lazy(() => import('./app/system-administration/page'))
+const ItInfrastructureDesignPage = React.lazy(() => import('./app/it-infrastructure-design/page'))
+const ItProjectManagementPage = React.lazy(() => import('./app/it-project-management/page'))
+const EnterpriseSolutionsPage = React.lazy(() => import('./app/enterprise-solutions/page'))
 // Company Pages
 const TeamPage = React.lazy(() => import('./app/team/page'))
 // Performance monitoring hook
@@ -104,12 +116,24 @@ const App: React.FC = () => {
                             <Route path="/ai-automation" element={<AiAutomationPage />} />
                             <Route path="/ai-chatbot-builder" element={<AiChatbotBuilderPage />} />
                             <Route path="/ai-cybersecurity" element={<AiCybersecurityPage />} />
+                            <Route path="/ai-mobile-builder" element={<AiMobileBuilderPage />} />
+                            <Route path="/ai-lead-scoring" element={<AiLeadScoringPage />} />
+                            <Route path="/ai-ecommerce-assistant" element={<AiEcommerceAssistantPage />} />
+                            <Route path="/ai-security-monitor" element={<AiSecurityMonitorPage />} />
+                            <Route path="/ai-financial-planner" element={<AiFinancialPlannerPage />} />
+                            <Route path="/ai-health-tracker" element={<AiHealthTrackerPage />} />
+                            <Route path="/ai-learning-platform" element={<AiLearningPlatformPage />} />
                             
                             {/* IT Service Pages */}
                             <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
                             <Route path="/cybersecurity-solutions" element={<CybersecuritySolutionsPage />} />
                             <Route path="/web-development" element={<WebDevelopmentPage />} />
                             <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
+                            <Route path="/mobile-app-development" element={<MobileAppDevelopmentPage />} />
+                            <Route path="/system-administration" element={<SystemAdministrationPage />} />
+                            <Route path="/it-infrastructure-design" element={<ItInfrastructureDesignPage />} />
+                            <Route path="/it-project-management" element={<ItProjectManagementPage />} />
+                            <Route path="/enterprise-solutions" element={<EnterpriseSolutionsPage />} />
                             
                             {/* Company Pages */}
                             <Route path="/team" element={<TeamPage />} />
