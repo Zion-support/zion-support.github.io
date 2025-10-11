@@ -7,69 +7,159 @@ const MicroSAASServicesPage: React.FC = () => {
   const microSAAS = [
     {
       icon: <Zap className="w-8 h-8 text-blue-500" />,
-      title: 'AI Task Manager',
-      description: 'Intelligent task management with AI-powered prioritization, scheduling, and productivity insights.',
-      features: ['AI task prioritization', 'Smart scheduling', 'Productivity analytics', 'Team collaboration'],
-      pricing: '$19/month',
+      title: 'AI Task Manager Pro',
+      description: 'Intelligent task management with AI-powered prioritization, smart scheduling, and productivity insights for teams and individuals.',
+      features: ['AI task prioritization', 'Smart scheduling & time blocking', 'Productivity analytics & insights', 'Team collaboration tools', 'Project tracking', 'Deadline management'],
+      pricing: '$29/month',
       link: '/ai-task-manager',
       popular: true,
-      users: '1,200+',
-      rating: '4.9'
+      users: '2,500+',
+      rating: '4.9',
+      category: 'Productivity',
+      freeTrial: '14 days'
     },
     {
       icon: <DollarSign className="w-8 h-8 text-green-500" />,
-      title: 'AI Expense Tracker',
-      description: 'Automated expense tracking with receipt scanning, categorization, and financial insights.',
-      features: ['Receipt scanning', 'Auto categorization', 'Budget tracking', 'Financial reports'],
-      pricing: '$15/month',
+      title: 'AI Expense Tracker Plus',
+      description: 'Advanced expense tracking with receipt scanning, AI categorization, budget management, and comprehensive financial insights.',
+      features: ['Receipt scanning & OCR', 'AI-powered categorization', 'Budget tracking & alerts', 'Financial reports & analytics', 'Tax preparation support', 'Multi-currency support'],
+      pricing: '$19/month',
       link: '/ai-expense-tracker',
       popular: true,
-      users: '850+',
-      rating: '4.8'
+      users: '1,800+',
+      rating: '4.8',
+      category: 'Finance',
+      freeTrial: '7 days'
     },
     {
       icon: <Shield className="w-8 h-8 text-red-500" />,
-      title: 'AI Password Manager',
-      description: 'Secure password management with AI-powered security recommendations and breach monitoring.',
-      features: ['Secure storage', 'AI security audit', 'Breach monitoring', 'Multi-device sync'],
-      pricing: '$12/month',
+      title: 'AI Password Vault',
+      description: 'Enterprise-grade password management with AI security recommendations, breach monitoring, and advanced encryption.',
+      features: ['Secure password storage', 'AI security audit', 'Breach monitoring & alerts', 'Multi-device sync', '2FA integration', 'Password sharing'],
+      pricing: '$15/month',
       link: '/ai-password-manager',
       popular: false,
-      users: '650+',
-      rating: '4.7'
+      users: '1,200+',
+      rating: '4.7',
+      category: 'Security',
+      freeTrial: '30 days'
     },
     {
       icon: <Clock className="w-8 h-8 text-purple-500" />,
-      title: 'AI Invoice Generator',
-      description: 'Automated invoice generation with AI-powered templates, payment tracking, and client management.',
-      features: ['Auto invoice generation', 'Payment tracking', 'Client management', 'Tax calculations'],
-      pricing: '$25/month',
+      title: 'AI Invoice Generator Pro',
+      description: 'Professional invoice generation with AI templates, automated payment tracking, client management, and tax calculations.',
+      features: ['AI-powered templates', 'Automated invoice generation', 'Payment tracking & reminders', 'Client management CRM', 'Tax calculations', 'Multi-currency billing'],
+      pricing: '$35/month',
       link: '/ai-invoice-generator',
       popular: true,
-      users: '980+',
-      rating: '4.9'
+      users: '2,100+',
+      rating: '4.9',
+      category: 'Business',
+      freeTrial: '14 days'
     },
     {
       icon: <Users className="w-8 h-8 text-orange-500" />,
-      title: 'AI Health Tracker',
-      description: 'Personal health monitoring with AI insights, goal tracking, and wellness recommendations.',
-      features: ['Health monitoring', 'AI insights', 'Goal tracking', 'Wellness recommendations'],
-      pricing: '$18/month',
+      title: 'AI Health Companion',
+      description: 'Comprehensive health monitoring with AI insights, goal tracking, wellness recommendations, and medical data integration.',
+      features: ['Health metrics tracking', 'AI health insights', 'Goal setting & tracking', 'Wellness recommendations', 'Medical data integration', 'Health reports'],
+      pricing: '$24/month',
       link: '/ai-health-tracker',
       popular: false,
-      users: '720+',
-      rating: '4.6'
+      users: '950+',
+      rating: '4.6',
+      category: 'Health',
+      freeTrial: '7 days'
     },
     {
       icon: <Clock className="w-8 h-8 text-indigo-500" />,
-      title: 'AI Smart Calendar',
-      description: 'Intelligent calendar management with AI scheduling, meeting optimization, and time blocking.',
-      features: ['AI scheduling', 'Meeting optimization', 'Time blocking', 'Integration sync'],
-      pricing: '$22/month',
+      title: 'AI Smart Calendar Pro',
+      description: 'Intelligent calendar management with AI scheduling, meeting optimization, time blocking, and productivity analytics.',
+      features: ['AI scheduling assistant', 'Meeting optimization', 'Time blocking & focus mode', 'Calendar integration', 'Productivity analytics', 'Team scheduling'],
+      pricing: '$27/month',
       link: '/ai-smart-calendar',
       popular: true,
+      users: '1,600+',
+      rating: '4.8',
+      category: 'Productivity',
+      freeTrial: '14 days'
+    },
+    {
+      icon: <DollarSign className="w-8 h-8 text-teal-500" />,
+      title: 'AI Budget Planner',
+      description: 'Smart budget planning with AI recommendations, spending analysis, and financial goal tracking for personal and business use.',
+      features: ['AI budget recommendations', 'Spending analysis & insights', 'Financial goal tracking', 'Bill reminders & alerts', 'Investment tracking', 'Financial forecasting'],
+      pricing: '$22/month',
+      link: '/ai-budget-planner',
+      popular: false,
+      users: '1,300+',
+      rating: '4.7',
+      category: 'Finance',
+      freeTrial: '14 days'
+    },
+    {
+      icon: <Users className="w-8 h-8 text-pink-500" />,
+      title: 'AI Customer Support Bot',
+      description: 'Intelligent customer support automation with AI chatbots, ticket management, and customer satisfaction tracking.',
+      features: ['AI chatbot builder', 'Ticket management system', 'Customer satisfaction tracking', 'Multi-channel support', 'Knowledge base integration', 'Analytics dashboard'],
+      pricing: '$45/month',
+      link: '/ai-customer-support-bot',
+      popular: true,
+      users: '1,400+',
+      rating: '4.8',
+      category: 'Customer Service',
+      freeTrial: '14 days'
+    },
+    {
+      icon: <Zap className="w-8 h-8 text-yellow-500" />,
+      title: 'AI Email Assistant',
+      description: 'Smart email management with AI-powered responses, scheduling, categorization, and productivity optimization.',
+      features: ['AI email responses', 'Smart scheduling', 'Email categorization', 'Priority management', 'Template suggestions', 'Follow-up reminders'],
+      pricing: '$18/month',
+      link: '/ai-email-assistant',
+      popular: false,
       users: '1,100+',
-      rating: '4.8'
+      rating: '4.6',
+      category: 'Communication',
+      freeTrial: '7 days'
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-cyan-500" />,
+      title: 'AI Document Manager',
+      description: 'Intelligent document management with AI-powered organization, search, and collaboration features for teams.',
+      features: ['AI document organization', 'Smart search & tagging', 'Version control', 'Team collaboration', 'Document templates', 'Cloud storage integration'],
+      pricing: '$32/month',
+      link: '/ai-document-manager',
+      popular: false,
+      users: '800+',
+      rating: '4.5',
+      category: 'Document Management',
+      freeTrial: '14 days'
+    },
+    {
+      icon: <Users className="w-8 h-8 text-emerald-500" />,
+      title: 'AI Social Media Manager',
+      description: 'Comprehensive social media management with AI content creation, scheduling, analytics, and engagement optimization.',
+      features: ['AI content creation', 'Post scheduling & automation', 'Engagement analytics', 'Hashtag optimization', 'Multi-platform management', 'Performance tracking'],
+      pricing: '$39/month',
+      link: '/ai-social-media-manager',
+      popular: true,
+      users: '1,700+',
+      rating: '4.8',
+      category: 'Marketing',
+      freeTrial: '14 days'
+    },
+    {
+      icon: <Clock className="w-8 h-8 text-rose-500" />,
+      title: 'AI Time Tracker',
+      description: 'Advanced time tracking with AI insights, project billing, productivity analysis, and automated reporting.',
+      features: ['Automatic time tracking', 'AI productivity insights', 'Project billing & invoicing', 'Productivity analysis', 'Team time tracking', 'Detailed reporting'],
+      pricing: '$21/month',
+      link: '/ai-time-tracker',
+      popular: false,
+      users: '1,000+',
+      rating: '4.7',
+      category: 'Time Management',
+      freeTrial: '7 days'
     }
   ];
 
@@ -196,17 +286,27 @@ const MicroSAASServicesPage: React.FC = () => {
                     </span>
                   </div>
                 )}
-                <div className="mb-4">{app.icon}</div>
+                <div className="mb-6">{app.icon}</div>
+                <div className="mb-2">
+                  <span className="bg-blue-500/20 text-blue-300 text-xs px-2 py-1 rounded-full">
+                    {app.category}
+                  </span>
+                </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{app.title}</h3>
                 <p className="text-gray-300 mb-6">{app.description}</p>
-                <ul className="space-y-2 mb-6">
-                  {app.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+                
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-white mb-3">Key Features:</h4>
+                  <ul className="space-y-2">
+                    {app.features.slice(0, 4).map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
                 <div className="mb-6">
                   <div className="flex justify-between items-center mb-2">
                     <span className="text-2xl font-bold text-white">{app.pricing}</span>
@@ -215,13 +315,17 @@ const MicroSAASServicesPage: React.FC = () => {
                       <span className="text-sm text-gray-300">{app.rating}</span>
                     </div>
                   </div>
-                  <div className="text-sm text-gray-400">{app.users} active users</div>
+                  <div className="flex justify-between items-center text-sm text-gray-400">
+                    <span>{app.users} users</span>
+                    <span className="text-green-400 font-semibold">{app.freeTrial} free trial</span>
+                  </div>
                 </div>
+                
                 <Link 
                   to={app.link}
                   className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
                 >
-                  Try Free
+                  Start Free Trial
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
               </div>
