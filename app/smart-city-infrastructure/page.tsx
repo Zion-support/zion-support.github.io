@@ -1,6 +1,5 @@
-'use client';
-import React from 'react';
-    <>
+'use client'
+import React from 'react'
       <Helmet>
         <title>Page Title - Zion Tech Group</title>
         <meta name="description" content="Description of the page and its benefits." />
@@ -71,6 +70,8 @@ import React from 'react';
         </section>
       <Footer />
     </>
-  );
-};
-
+  )
+}
+      </Footer>
+    </ArrowRight>
+  </Navigation>

@@ -1,5 +1,5 @@
-'use client';
-import React from 'react';
+'use client'
+import React from 'react'
             </div>
           </div>
         </section>
@@ -58,6 +58,7 @@ import React from 'react';
         </section>
       <Footer />
     </>
-  );
-};
-
+  )
+}
+    </Footer>
+  </CheckCircle>

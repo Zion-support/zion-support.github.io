@@ -1,10 +1,9 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
+'use client'
+import React from 'react'
+import {Helmet} from 'react-helmet-async'
+import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -13,8 +12,7 @@ const PagePage: React.FC = () => {
       description: 'Target specific goals and objectives with precision.',
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     }
-  ];
-
+  ]
   const benefits = [
     'Increase efficiency by up to 80%',
     'Reduce costs by 30% with automation',
@@ -22,11 +20,10 @@ const PagePage: React.FC = () => {
     'Scale operations without proportional staff increases',
     'Real-time processing and analysis',
     'Seamless integration with existing systems'
-  ];
-
+  ]
   return (
     <>
-      <Helmet>
+<Helmet>
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Advanced page solutions powered by artificial intelligence and cutting-edge technology." />
         <meta name="keywords" content="AI, page, artificial intelligence, business solutions, automation" />
@@ -78,7 +75,9 @@ const PagePage: React.FC = () => {
                         <CheckCircle className="h-4 w-4 text-cyan-400 mr-2 flex-shrink-0" />
                         {benefit}
                       </li>
-                    ))}
+                    )
+    </>
+  )
                   </ul>
                 </div>
               ))}
@@ -128,6 +127,11 @@ const PagePage: React.FC = () => {
       
       <Footer />
     </>
-  );
-};
-
+  )
+}
+            </Footer>
+          </ArrowRight>
+        </Zap>
+      </CheckCircle>
+    </ArrowRight>
+  </Navigation>

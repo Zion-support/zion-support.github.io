@@ -1,5 +1,5 @@
-'use client';
-import React from 'react';
+'use client'
+import React from 'react'
                 </button>
               </div>
             </div>
@@ -14,6 +14,6 @@ import React from 'react';
         </section>
       <Footer />
     </>
-  );
-};
-
+  )
+}
+  </Footer>

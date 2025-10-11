@@ -1,15 +1,13 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+'use client'
+import React from 'react'
+import {Helmet} from 'react-helmet-async'
     }
-  ];
-
+  ]
   const benefits = [
-  ];
-
+  ]
   return (
     <>
-      <Helmet>
+<Helmet>
       </Helmet>
       <Navigation />
       
@@ -26,7 +24,9 @@ import { Helmet } from 'react-helmet-async';
 
         {/* Benefits Section */}
                 </div>
-              ))}
+              )
+    </>
+  )
             </div>
           </div>
         </section>
@@ -40,6 +40,7 @@ import { Helmet } from 'react-helmet-async';
       
       <Footer />
     </>
-  );
-};
-
+  )
+}
+    </Footer>
+  </Navigation>

@@ -1,6 +1,5 @@
-'use client';
-import React from 'react';
-
+'use client'
+import React from 'react'
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -9,26 +8,19 @@ const PagePage: React.FC = () => {
       description: 'Advanced artificial intelligence technology to transform your business operations.',
       benefits: ['Machine learning', 'Natural language processing', 'Predictive analytics', 'Automated insights']
     },
-    {
-      icon: BarChart,
+    {icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: TrendingUp,
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']},
+    {icon: TrendingUp,
       title: 'Performance Optimization',
       description: 'AI-powered insights to optimize your business performance.',
-      benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']
-    },
-    {
-      icon: Target,
+      benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']},
+    {icon: Target,
       title: 'Precision Targeting',
       description: 'Target specific goals and objectives with precision.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    }
-  ];
-
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']}
+  ]
   const benefits = [
     'Increase efficiency by up to 80%',
     'Reduce costs by 30% with automation',
@@ -36,11 +28,10 @@ const PagePage: React.FC = () => {
     'Scale operations without proportional staff increases',
     'Real-time processing and analysis',
     'Seamless integration with existing systems'
-  ];
-
+  ]
   return (
     <>
-      <Helmet>
+<Helmet>
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Advanced page solutions powered by artificial intelligence and cutting-edge technology." />
         <meta name="keywords" content="AI, page, artificial intelligence, business solutions, automation" />
@@ -92,7 +83,9 @@ const PagePage: React.FC = () => {
                         <CheckCircle className="h-4 w-4 text-cyan-400 mr-2 flex-shrink-0" />
                         {benefit}
                       </li>
-                    ))}
+                    )
+    </>
+  )
                   </ul>
                 </div>
               ))}
@@ -123,7 +116,12 @@ const PagePage: React.FC = () => {
         {/* CTA Section */}
       <Footer />
     </>
-  );
-};
-
-export default PagePage;
+  )
+}
+export default PagePage
+            </Footer>
+          </Zap>
+        </CheckCircle>
+      </ArrowRight>
+    </div>
+  </Navigation>

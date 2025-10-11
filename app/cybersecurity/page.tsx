@@ -9,6 +9,6 @@
         </section>
       <Footer />
     </>
-  );
-};
-
+  )
+}
+  </Footer>

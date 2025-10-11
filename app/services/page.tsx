@@ -1,39 +1,31 @@
-
+import React from 'react'
 const ServicesPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
+  const [searchTerm, setSearchTerm] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState('all')
   const services = [
     {
       id: 1,
       title: 'AI Solutions',
     },
-    {
-      id: 2,
-      title: 'Cloud Services',
-    }
-  ];
-
+    {id: 2,
+      title: 'Cloud Services',}
+  ]
   const categories = [
-    { value: 'all', label: 'All Services' },
-    { value: 'ai', label: 'AI Solutions' },
-    { value: 'cloud', label: 'Cloud Services' },
-    { value: 'data', label: 'Data Analytics' },
-    { value: 'security', label: 'Cybersecurity' },
-    { value: 'mobile', label: 'Mobile Development' },
-    { value: 'web', label: 'Web Development' }
-  ];
-
-  const filteredServices = services.filter(service => {
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
-
+    {value: 'all', label: 'All Services'},
+    {value: 'ai', label: 'AI Solutions'},
+    {value: 'cloud', label: 'Cloud Services'},
+    {value: 'data', label: 'Data Analytics'},
+    {value: 'security', label: 'Cybersecurity'},
+    {value: 'mobile', label: 'Mobile Development'},
+    {value: 'web', label: 'Web Development'}
+  ]
+  const filteredServices = services.filter(service => {const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase())
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
+    return matchesSearch && matchesCategory;})
   return (
     <>
-      <Helmet>
+<Helmet>
         <title>Services - Zion Tech Group | AI and IT Solutions</title>
         <meta name="description" content="Discover our comprehensive range of AI and IT services designed to transform your business. From AI solutions to cloud services and data analytics." />
         <meta name="keywords" content="AI services, IT services, cloud services, data analytics, cybersecurity, Zion Tech Group" />
@@ -78,7 +70,8 @@ const ServicesPage: React.FC = () => {
       
       <Footer />
     </>
+    </>
   );
-};
-
-export default ServicesPage;
+export default ServicesPage
+    </Footer>
+  </Navigation>

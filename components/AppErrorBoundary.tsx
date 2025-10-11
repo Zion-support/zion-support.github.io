@@ -1,9 +1,7 @@
-import React, { Component, type ErrorInfo, type ReactNode  } from 'react'
-interface ErrorFallbackProps {
-    error: Error,
-  resetError: () => void
-  }
-function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
+import React, {Component, type ErrorInfo, type ReactNode} from 'react'
+interface ErrorFallbackProps {error: Error,
+  resetError: () => void}
+function ErrorFallback({error, resetError}: ErrorFallbackProps) {
   return ()
             onClick={() => window?.location.reload()}
             className="bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium hover: bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500">
@@ -13,13 +11,9 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
     </div>
   ),
 }
-interface AppErrorBoundaryProps {
-    children: ReactNode
-  }
-interface AppErrorBoundaryState {
-    hasError: boolean,
-  error: Error | undefined
-  }
+interface AppErrorBoundaryProps {children: ReactNode}
+interface AppErrorBoundaryState {hasError: boolean,
+  error: Error | undefined}
 export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorBoundaryState> {
   constructor(props: AppErrorBoundaryProps) {
     super(props),

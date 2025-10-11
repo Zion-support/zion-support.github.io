@@ -7,26 +7,19 @@ const SystemAdministrationPage: React.FC = () => {
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
-    {
-      icon: TrendingUp,
+    {icon: TrendingUp,
       title: 'Performance Optimization',
       description: 'AI-powered insights to optimize your business performance.',
-      benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']
-    },
-    {
-      icon: PieChart,
+      benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']},
+    {icon: PieChart,
       title: 'Data Visualization',
       description: 'Transform complex data into clear, actionable insights.',
-      benefits: ['Interactive charts', 'Custom reports', 'Data export', 'Visual storytelling']
-    },
-    {
-      icon: Target,
+      benefits: ['Interactive charts', 'Custom reports', 'Data export', 'Visual storytelling']},
+    {icon: Target,
       title: 'Precision Targeting',
       description: 'Target specific goals and objectives with precision.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    }
-  ];
-
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']}
+  ]
   const benefits = [
     'Increase efficiency by up to 80%',
     'Reduce costs by 30% with automation',
@@ -34,10 +27,10 @@ const SystemAdministrationPage: React.FC = () => {
     'Scale operations without proportional staff increases',
     'Real-time processing and analysis',
     'Seamless integration with existing systems'
-  ];
-
+  ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       
             </div>
@@ -49,7 +42,9 @@ const SystemAdministrationPage: React.FC = () => {
                 This page is under development. Please check back soon for updates.
               </p>
                 </div>
-              ))}
+              )
+    </>
+  )
             </div>
           </div>
         </section>
@@ -66,7 +61,7 @@ const SystemAdministrationPage: React.FC = () => {
             </div>
           </div>
         </section>
-  );
-};
-
-export default SystemAdministrationPage;
+  )
+}
+export default SystemAdministrationPage
+  </Navigation>

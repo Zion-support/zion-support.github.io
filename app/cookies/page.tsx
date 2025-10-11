@@ -1,9 +1,8 @@
-'use client';
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { Cookie, Settings, Shield, Eye } from 'lucide-react';
-
+'use client'
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import {Cookie, Settings, Shield, Eye} from 'lucide-react'
 const CookiesPage: React.FC = () => {
   const cookieTypes = [
     {
@@ -12,28 +11,22 @@ const CookiesPage: React.FC = () => {
       description: 'These cookies are necessary for the website to function properly and cannot be disabled.',
       examples: ['Session management', 'Security', 'Load balancing']
     },
-    {
-      icon: Settings,
+    {icon: Settings,
       title: 'Functional Cookies',
       description: 'These cookies enable enhanced functionality and personalization.',
-      examples: ['Language preferences', 'User settings', 'Remember me']
-    },
-    {
-      icon: Eye,
+      examples: ['Language preferences', 'User settings', 'Remember me']},
+    {icon: Eye,
       title: 'Analytics Cookies',
       description: 'These cookies help us understand how visitors interact with our website.',
-      examples: ['Page views', 'User behavior', 'Performance metrics']
-    },
-    {
-      icon: Shield,
+      examples: ['Page views', 'User behavior', 'Performance metrics']},
+    {icon: Shield,
       title: 'Marketing Cookies',
       description: 'These cookies are used to deliver relevant advertisements and track campaign performance.',
-      examples: ['Ad targeting', 'Campaign tracking', 'Conversion tracking']
-    }
-  ];
-
+      examples: ['Ad targeting', 'Campaign tracking', 'Conversion tracking']}
+  ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       
       <main className="pt-20">
@@ -64,7 +57,9 @@ const CookiesPage: React.FC = () => {
                   <ul className="text-sm text-gray-400 space-y-1">
                     {type.examples.map((example, exampleIndex) => (
                       <li key={exampleIndex}>• {example}</li>
-                    ))}
+                    )
+    </>
+  )
                   </ul>
                 </div>
               ))}
@@ -146,7 +141,8 @@ const CookiesPage: React.FC = () => {
       
       <Footer />
     </div>
-  );
-};
-
-export default CookiesPage;
+  )
+}
+export default CookiesPage
+    </Footer>
+  </Navigation>

@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Check, Star, ArrowRight, Zap, Shield, Users } from 'lucide-react'
+import React, {useState} from 'react'
+import {Helmet} from 'react-helmet-async'
+import {Check, Star, ArrowRight, Zap, Shield, Users} from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
@@ -18,18 +18,14 @@ const PricingPage: React.FC = () => {
       popular: false,
       icon: Zap
     },
-    {
-      name: 'Professional',
+    {name: 'Professional',
       ],
       popular: true,
-      icon: Star
-    },
-    {
-      name: 'Enterprise',
+      icon: Star},
+    {name: 'Enterprise',
       ],
       popular: false,
-      icon: Shield
-    }
+      icon: Shield}
   ]
 
   const addOns = [
@@ -56,30 +52,22 @@ const PricingPage: React.FC = () => {
   ]
 
   const addOns = [
-    {
-      name: 'AI Chatbot',
+    {name: 'AI Chatbot',
       price: '$500/month',
-      description: 'Intelligent customer support chatbot'
-    },
-    {
-      name: 'Data Analytics Pro',
+      description: 'Intelligent customer support chatbot'},
+    {name: 'Data Analytics Pro',
       price: '$800/month',
-      description: 'Advanced business intelligence dashboard'
-    },
-    {
-      name: 'Cybersecurity Suite',
+      description: 'Advanced business intelligence dashboard'},
+    {name: 'Cybersecurity Suite',
       price: '$1,200/month',
-      description: 'Comprehensive security monitoring'
-    },
-    {
-      name: 'Custom Development',
+      description: 'Comprehensive security monitoring'},
+    {name: 'Custom Development',
       price: '$150/hour',
-      description: 'Tailored solutions for your business'
-    }
-  ];
-
+      description: 'Tailored solutions for your business'}
+  ]
   return (
-            </p>
+    <>
+</p>
             
             {/* Billing Toggle */}
             <div className="flex items-center justify-center mb-12">
@@ -87,7 +75,9 @@ const PricingPage: React.FC = () => {
                 Monthly
               </span>
               <button
-                onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
+                onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly'
+    </>
+  )
                 className="mx-4 relative inline-flex h-6 w-11 items-center rounded-full bg-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-900"
               >
                 <span
@@ -189,3 +179,5 @@ const PricingPage: React.FC = () => {
   )
 }
 
+
+  </Footer>

@@ -1,6 +1,6 @@
-import { Menu, X } from 'lucide-react'
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import {Menu, X} from 'lucide-react'
+import React, {useState} from 'react'
+import {Link} from 'react-router-dom'
 
 const EnhancedHeader: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -10,7 +10,8 @@ const EnhancedHeader: React.FC = () => {
   }
 
   return (
-    <header className="bg-slate-900/95 backdrop-blur-sm border-b border-cyan-500/20 fixed w-full top-0 z-50">
+    <>
+<header className="bg-slate-900/95 backdrop-blur-sm border-b border-cyan-500/20 fixed w-full top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -64,10 +65,12 @@ const EnhancedHeader: React.FC = () => {
               </Link>
             </nav>
           </div>
-        )}
+    </>
+  )
       </div>
     </header>
-  )
-}
+  )}
 
 export default EnhancedHeader
+    </Menu>
+  </X>

@@ -1,10 +1,9 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { Brain, BarChart, CheckCircle, ArrowRight, Zap, Shield, Target } from 'lucide-react';
-
+'use client'
+import React from 'react'
+import {Helmet} from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import {Brain, BarChart, CheckCircle, ArrowRight, Zap, Shield, Target} from 'lucide-react'
 const PerformanceOptimizationPage: React.FC = () => {
   const features = [
     {
@@ -13,26 +12,19 @@ const PerformanceOptimizationPage: React.FC = () => {
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
       benefits: ['Smart automation', 'Predictive analytics', 'Intelligent insights', 'Automated processes']
     },
-    {
-      icon: BarChart,
+    {icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time monitoring', 'Performance metrics', 'Data visualization', 'Custom reports']
-    },
-    {
-      icon: Zap,
+      benefits: ['Real-time monitoring', 'Performance metrics', 'Data visualization', 'Custom reports']},
+    {icon: Zap,
       title: 'High Performance',
       description: 'Lightning-fast processing with optimized algorithms and infrastructure.',
-      benefits: ['Fast processing', 'Optimized algorithms', 'Scalable infrastructure', 'High availability']
-    },
-    {
-      icon: Shield,
+      benefits: ['Fast processing', 'Optimized algorithms', 'Scalable infrastructure', 'High availability']},
+    {icon: Shield,
       title: 'Secure & Reliable',
       description: 'Enterprise-grade security and reliability for mission-critical applications.',
-      benefits: ['Data encryption', 'Access control', 'Audit logging', 'Compliance ready']
-    }
-  ];
-
+      benefits: ['Data encryption', 'Access control', 'Audit logging', 'Compliance ready']}
+  ]
   const benefits = [
     'Enhanced productivity and efficiency',
     'Reduced operational costs',
@@ -40,11 +32,10 @@ const PerformanceOptimizationPage: React.FC = () => {
     'Scalable solutions',
     '24/7 availability',
     'Expert support'
-  ];
-
+  ]
   return (
     <>
-      <Helmet>
+<Helmet>
         <title>Page Title - Zion Tech Group</title>
         <meta name="description" content="Description of the page and its benefits." />
         <meta name="keywords" content="relevant, keywords, for, seo" />
@@ -102,7 +93,9 @@ const PerformanceOptimizationPage: React.FC = () => {
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                           {benefit}
                         </li>
-                      ))}
+                      )
+    </>
+  )
                     </ul>
                   )}
                 </div>
@@ -161,7 +154,10 @@ const PerformanceOptimizationPage: React.FC = () => {
 
       <Footer />
     </>
-  );
-};
-
-export default PerformanceOptimizationPage;
+  )
+}
+export default PerformanceOptimizationPage
+        </Footer>
+      </CheckCircle>
+    </CheckCircle>
+  </Navigation>
