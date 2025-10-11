@@ -1,13 +1,5 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-099c
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
 import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone } from 'lucide-react'
 
 export default function Navigation() {
@@ -15,11 +7,6 @@ export default function Navigation() {
   const [isServicesOpen, setIsServicesOpen] = useState(false)
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone, Brain, Cpu, Server, Wifi } from 'lucide-react'
-=======
-import { Menu, X, ChevronDown, Cloud, Code, Smartphone, Brain, Cpu, Wifi } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-e951
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
