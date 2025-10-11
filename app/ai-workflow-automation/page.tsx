@@ -2,8 +2,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, CheckCircle } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Navigation from '../../components/Navigation';
+import Footer from '../../components/Footer';
 
 const AiWorkflowAutomationPage: React.FC = () => {
   const features = [

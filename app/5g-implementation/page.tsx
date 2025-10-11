@@ -2,8 +2,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Wifi, BarChart, CheckCircle, Brain, Target, Zap, Shield } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Navigation from '../../components/Navigation';
+import Footer from '../../components/Footer';
 
 export default function FiveGImplementationPage() {
   const features = [
