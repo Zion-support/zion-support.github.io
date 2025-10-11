@@ -50,7 +50,7 @@
   return tags;
 }
 // SEO Config interface;
-interface SEOConfig {title: string,}
+interface SEOConfig title: string,}
     }]
   return tags
 }
@@ -72,8 +72,7 @@ interface SEOConfig {title: string,}
   author: string,
 }
 // Default SEO config
-const defaultSEOConfig: SEOConfig = {
-    title: 'Zion Holdings',
+const defaultSEOConfig: SEOConfig = title: 'Zion Holdings',
     description: 'Leading provider of AI-powered business solutions',
     keywords: [],
 // Default SEO config
@@ -412,7 +411,7 @@ Sitemap: ${this.config.canonicalUrl,}/sitemap.xml`;
     }
   }
   // Get current SEO data;
-  getCurrentSEO() {}if (typeof document === 'undefined') return {}}return {title: document.title,}
+  getCurrentSEO() {}if (typeof document === 'undefined') return {}}return title: document.title,}
       description: document.querySelector('meta[name="description"]')?.getAttribute('content') || '',}return {}}title: document.title,
       description: ;,
   // Generate robots.txt
@@ -440,8 +439,7 @@ Sitemap: ${this.config.canonicalUrl,}/sitemap.xml`;
   // Get current SEO data
   getCurrentSEO() {}
     if (typeof document === 'undefined') return {}
-    return {
-    title: document.title,
+    return title: document.title,
       description: document.querySelector('meta[name="description"]')?.getAttribute('content') || '',
   }
     return {}

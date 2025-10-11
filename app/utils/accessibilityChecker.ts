@@ -5,20 +5,16 @@ import React from 'react'
 import {  Helmet  } from 'react-helmet-async'import {  CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe   } from 'lucide-react'
 const AccessibilityCheckerPage: React.FC = () => {
   const features = [
-    {
-      icon: Brain,
+    icon: Brain,
       title: 'AI-Powered Solutions',
     },
-    {
-      icon: Zap,
+    icon: Zap,
       title: 'High Performance',
     },
-    {
-      icon: Shield,
+    icon: Shield,
       title: 'Enterprise Security',
     },
-    {
-      icon: Globe,
+    icon: Globe,
       title: 'Global Reach',
   const benefits = [
     'Advanced AI technology integration',

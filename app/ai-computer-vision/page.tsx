@@ -7,8 +7,7 @@ import Footer from '../components/Footer';
 
 const PagePage: React.FC = () => {
   const features = [
-    {
-      icon: Brain,
+    icon: Brain,
     }
   ];
 

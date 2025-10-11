@@ -7,11 +7,9 @@ import Footer from '../components/Footer';
 
 const PagePage: React.FC = () => {
   const features = [
-    {
-      icon: Brain,
+    icon: Brain,
     },
-    {
-      icon: BarChart,
+    icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
     }

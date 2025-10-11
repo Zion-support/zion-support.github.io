@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 export default function RootLayout({
   children,
 }: {
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-cd37
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from './components/Navigation';
@@ -17,15 +14,6 @@ interface RootLayoutProps {
 const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
   return (
     <html lang="en">
-<<<<<<< HEAD
-      <body className={inter.className}>
-        {children}
-      </body>
-    </html>
-  );
-}
-}
-=======
       <head>
         <Helmet>
           <title>Zion Tech Group - AI & IT Solutions</title>
@@ -47,4 +35,6 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
 };
 
 export default RootLayout;
->>>>>>> cursor/fix-errors-and-merge-to-main-cd37
+
+}
+)

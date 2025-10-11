@@ -106,3 +106,6 @@ const BlogPage: React.FC = () => {
           </div>
         </section>
 
+
+}
+)

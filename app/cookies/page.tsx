@@ -6,26 +6,22 @@ import { Cookie, Settings, Shield, Eye } from 'lucide-react';
 
 const CookiesPage: React.FC = () => {
   const cookieTypes = [
-    {
-      icon: Cookie,
+    icon: Cookie,
       title: 'Essential Cookies',
       description: 'These cookies are necessary for the website to function properly and cannot be disabled.',
       examples: ['Session management', 'Security', 'Load balancing']
     },
-    {
-      icon: Settings,
+    icon: Settings,
       title: 'Functional Cookies',
       description: 'These cookies enable enhanced functionality and personalization.',
       examples: ['Language preferences', 'User settings', 'Remember me']
     },
-    {
-      icon: Eye,
+    icon: Eye,
       title: 'Analytics Cookies',
       description: 'These cookies help us understand how visitors interact with our website.',
       examples: ['Page views', 'User behavior', 'Performance metrics']
     },
-    {
-      icon: Shield,
+    icon: Shield,
       title: 'Marketing Cookies',
       description: 'These cookies are used to deliver relevant advertisements and track campaign performance.',
       examples: ['Ad targeting', 'Campaign tracking', 'Conversion tracking']

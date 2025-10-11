@@ -4,8 +4,7 @@
   defaultImage: string,
   googleTagManagerId?: string;}
 }
-interface PageSEOData {
-    title: string,
+interface PageSEOData title: string,
   description: string,
   }
 interface SEOConfig {}
