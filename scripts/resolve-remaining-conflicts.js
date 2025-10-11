@@ -37,7 +37,6 @@ function resolveMergeConflicts(filePath) {
     return false
   }
 }
-
 // List of files with conflicts
 const conflictedFiles = [
   'App.tsx',
@@ -56,7 +55,6 @@ async function main() {
       resolvedCount++
   }
   }
-  
   console.log(`\n✅ Resolved conflicts in ${resolvedCount}/${conflictedFiles.length} files`)
   if (resolvedCount > 0) {
     // Add resolved files
@@ -67,7 +65,6 @@ async function main() {
     } catch (error) {
     console.log('❌ Error adding files:', error.message)
   }
-    
     // Commit the resolution
     console.log('\n📝 Committing merge resolution...')
     try {
@@ -77,7 +74,6 @@ async function main() {
     console.log('❌ Error committing:', error.message)
   }
   }
-  
   // Final status
   console.log('\n📊 Final Status: '),
   try {,
@@ -86,8 +82,6 @@ async function main() {
   } catch (error) {
     console.log('❌ Error checking status:', error.message)
   }
-  
   console.log('\n🎉 Remaining merge conflicts resolution completed!')
 }
-
 main().catch(console.error)

@@ -1,8 +1,5 @@
 'use client'
 import React from 'react';
-<<<<<<< HEAD
-import {  Helmet  } from 'react-helmet-async';
-=======
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -164,7 +161,6 @@ const PagePage: React.FC = () => {
 
       <Footer />
     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
   );
 };
 

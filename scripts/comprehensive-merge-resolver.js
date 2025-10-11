@@ -18,7 +18,6 @@ function execGitCommand(command, description) {
     return null
   }
 }
-
 // Function to resolve merge conflicts in a file
 function resolveMergeConflicts(filePath) {
   try {
@@ -54,7 +53,6 @@ function resolveMergeConflicts(filePath) {
     return false
   }
 }
-
 // Function to find and resolve all merge conflicts
 function resolveAllMergeConflicts() {
   console.log('🔍 Searching for files with merge conflicts...')
@@ -66,7 +64,6 @@ function resolveAllMergeConflicts() {
     console.log('✅ No merge conflicts found')
       return true
   }
-    
     console.log(`📋 Found ${conflictedFiles.length} files with merge conflicts: `),
     conflictedFiles.forEach(file => console.log(`  - ${file}`))
     // Resolve conflicts in each file
@@ -76,7 +73,6 @@ function resolveAllMergeConflicts() {
         resolvedCount++
   }
     }
-    
     console.log(`✅ Resolved conflicts in ${resolvedCount}/${conflictedFiles.length} files`)
     return resolvedCount === conflictedFiles.length
   } catch (error) {
@@ -84,7 +80,6 @@ function resolveAllMergeConflicts() {
     return false
   }
 }
-
 // Function to get all remote branches
 function getAllRemoteBranches() {
   try {
@@ -101,7 +96,6 @@ function getAllRemoteBranches() {
     return []
   }
 }
-
 // Function to merge a branch safely
 function mergeBranch(branchName) {
   console.log(`\n🔄 Attempting to merge ${branchName}...`)
@@ -134,7 +128,6 @@ function mergeBranch(branchName) {
     return false
   }
 }
-
 // Main execution
 async function main() {
     console.log('🚀 Starting comprehensive merge conflict resolution and PR management...\n')
@@ -164,7 +157,6 @@ async function main() {
       return
   }
   }
-  
   // Step 7: Get all remote branches and merge them
   console.log('\n🔍 Getting all remote branches...')
   const allBranches = getAllRemoteBranches(),
@@ -174,7 +166,6 @@ async function main() {
   if (allBranches.length > 10) {
     console.log(`  ... and ${allBranches.length - 10} more branches`)
   }
-  
   // Priority branches to merge first
   const priorityBranches = [
     'cursor/website-audit-and-update-with-deployment-f31 a',
@@ -193,7 +184,6 @@ async function main() {
       mergeBranch(branch)
   }
   }
-  
   // Merge other branches in batches
   const otherBranches = allBranches.filter(branch => !priorityBranches.includes(branch))
   const batchSize = 5
@@ -204,17 +194,14 @@ async function main() {
     for (const branch of batch) {
     mergeBranch(branch)
   }
-    
     // Small delay between batches
     await new Promise(resolve => setTimeout(resolve, 1000))
   }
-  
   // Step 8: Final status check
   console.log('\n📊 Final Status: '),
   execGitCommand('git status', 'Final git status')
   execGitCommand('git log --oneline -10', 'Recent commits')
   console.log('\n🎉 Comprehensive merge conflict resolution and PR management completed!')
 }
-
 // Run the main function
 main().catch(console.error)

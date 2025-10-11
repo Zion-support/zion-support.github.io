@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-'use client';
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
-=======
-    {
+{
       icon: CheckCircle,
       text: "Weekly industry insights"
     },
@@ -29,7 +21,6 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Tar
         <meta name="description" content="Professional ContentNewsletterSignup services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="ContentNewsletterSignup, AI solutions, IT services, Zion Tech Group, contentnewslettersignup" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8"></section></section>
         <div className="max-w-7xl mx-auto"></div></div>
@@ -57,7 +48,6 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Tar
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section></section>
         <div className="max-w-7xl mx-auto"></div></div>
@@ -69,7 +59,6 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Tar
               Our contentnewslettersignup solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div></div>
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div></div>
@@ -83,7 +72,6 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Tar
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"></section></section>
         <div className="max-w-7xl mx-auto"></div></div>
@@ -95,7 +83,6 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Tar
               Experience the power of our contentnewslettersignup solutions for your business.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div></div>
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3"></div></div>
@@ -106,7 +93,6 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Tar
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section></section>
         <div className="max-w-4xl mx-auto text-center"></div></div>
@@ -137,11 +123,9 @@ const ContentNewsletterSignup: React.FC = () => {,
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubscribed, setIsSubscribed] = useState(false);
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
     // Simulate API call
     setTimeout(() => {
       setIsSubmitting(false);
@@ -149,7 +133,6 @@ const ContentNewsletterSignup: React.FC = () => {,
       setEmail('');
     }, 1000);
   };
-
   if (isSubscribed) {
     return (
       <div className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-600 to-purple-600">
@@ -171,14 +154,11 @@ const ContentNewsletterSignup: React.FC = () => {,
       </div>
     );
   }
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
-
 const ContentNewsletterSignupPage: React.FC = () => {
   return (
     <>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
-        
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -192,7 +172,6 @@ const ContentNewsletterSignupPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Content Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -211,43 +190,7 @@ const ContentNewsletterSignupPage: React.FC = () => {
           </div>
         </section>
       </div>
-      
       <Footer />
     </>
   );
 };
-
-<<<<<<< HEAD
-export default ContentNewsletterSignupPage;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-=======
-        </div>
-        <h3 className="text-2xl font-bold text-white mb-2"></h3></h3>Stay Updated</h3>
-        <p className="text-gray-300"></p></p>Get the latest insights on AI, IT, and technology trends delivered to your inbox.</p>
-        </p>
-      </div>
-
-            type="email"
-            value={email}onChange={(e) =&gt; setEmail(e.target.value)}placeholder="Enter your email address"
-            required;
-            className="flex-1 px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent",
-          />
-            ) : (
-              'Subscribe'
-            )} </button>
-        </div>
-        
-          <div className="text-gray-400"></div></div>Subscribers</div>
-        </div>
-        <div className="text-sm"></div></div>
-          </div><div className="text-2xl font-bold text-purple-400"></div></div>Weekly</div>
-          <div className="text-gray-400"></div></div>Updates</div>
-        </div>
-        <div className="text-sm"></div></div>
-          </div><div className="text-2xl font-bold text-green-400"></div></div>Free</div>
-          <div className="text-gray-400"></div></div>Forever</div>
-        </div>
-      </div>
-    </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd

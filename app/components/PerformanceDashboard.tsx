@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-'use client';
-import React from 'react';
-<<<<<<< HEAD
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
-
-const PerformanceDashboardPage: React.FC = () => {
-=======
-  useEffect(() => {
+useEffect(() => {
     const updateMetrics = () => {
       const navigation = performance.getEntriesByType()
       )[0] as PerformanceNavigationTiming
@@ -128,12 +118,10 @@ const PerformanceDashboardPage: React.FC = () => {
     if (value <= thresholds.warning) return 'text-yellow-400'
     return 'text-red-400'
   }
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
   return (
     <>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
-        
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -147,7 +135,6 @@ const PerformanceDashboardPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Content Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -166,33 +153,8 @@ const PerformanceDashboardPage: React.FC = () => {
           </div>
         </section>
       </div>
-      
       <Footer />
     </>
   );
 };
-
 export default PerformanceDashboardPage;
-=======
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target } from 'lucide-react';
-
-interface PerformanceDashboardProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({ className = '', children }) => {
-  return (
-    <div className={`bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group ${className}`}>
-      <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-        <Brain className="w-8 h-8 text-white" />
-      </div>
-      <h3 className="text-xl font-bold text-white mb-4">PerformanceDashboard Title</h3>
-      <p className="text-gray-300 mb-4">PerformanceDashboard description goes here.</p>
-      {children}
-    </div>
-  );
-};
-
-export default PerformanceDashboard;
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7

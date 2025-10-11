@@ -9,7 +9,6 @@ function resolveConflicts(filePath) {
     if (!content.includes('') && !content.includes('') && !content.includes('>>>>>>>')) {
       return false; // No conflicts
   }
-
     console.log(`🔧 Resolving conflicts in ${filePath}...`)
     // Split by conflict markers and keep the incoming version (after )
     const lines = content.split('\n')
@@ -21,21 +20,17 @@ function resolveConflicts(filePath) {
         skipUntilNextMarker = true
         continue
   }
-      
       if (line.includes('')) {
     skipUntilNextMarker = false
         continue
   }
-      
       if (line.includes('>>>>>>>')) {
     continue
   }
-      
       if (!skipUntilNextMarker) {
     resolvedLines.push(line)
   }
     }
-    
     // Write the resolved content
     writeFileSync(filePath, resolvedLines.join('\n'))
     console.log(`✅ Resolved conflicts in ${filePath}`)
@@ -45,7 +40,6 @@ function resolveConflicts(filePath) {
     return false
   }
 }
-
 function mergeBranch(branchName) {
   try {
     console.log(`\n🔄 Attempting to merge ${branchName}...`)
@@ -68,7 +62,6 @@ function mergeBranch(branchName) {
   }
         }
       }
-
       console.log(`✅ Resolved conflicts in ${resolvedCount} files`)
       // Add all resolved files
       execSync('git add .', { stdio: 'inherit' })
@@ -82,7 +75,6 @@ function mergeBranch(branchName) {
     }
   }
 }
-
 try {
   // List of branches to merge (most recent first)
   const branchesToMerge = [
@@ -102,7 +94,6 @@ try {
         console.log(`⏭️  Branch ${branch} has no unique commits, skipping...`)
         continue
       }
-
       console.log(`📝 Unique commits in ${branch}:`)
       console.log(uniqueCommits.split('\n').slice(0, 2).join('\n'))
       if (mergeBranch(branch)) {
@@ -110,13 +101,11 @@ try {
   } else {
     failedCount++
   }
-
     } catch (error) {
       console.log(`❌ Error processing ${branch}: ${error.message}`)
       failedCount++
     }
   }
-
   console.log(`\n📊 Merge Summary: `),
   console.log(`✅ Successfully merged: ${mergedCount} branches`)
   console.log(`❌ Failed to merge: ${failedCount} branches`)

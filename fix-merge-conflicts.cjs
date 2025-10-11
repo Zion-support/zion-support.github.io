@@ -3,69 +3,35 @@
 const fs = require('fs');
 const path = require('path');
 
-// Function to resolve merge conflicts by choosing the appropriate version
-function resolveMergeConflicts(content) {
-  const lines = content.split('\n');
-  const resolved = [];
-  let i = 0;
-  
-  while (i < lines.length) {
-    const line = lines[i];
-    
-    if (line.startsWith('<<<<<<< HEAD')) {
-      // Skip the HEAD marker
-      i++;
-      
-      // Collect HEAD content until we hit =======
-      const headContent = [];
-      while (i < lines.length && !lines[i].startsWith('=======')) {
-        headContent.push(lines[i]);
-        i++;
-      }
-      
-      // Skip the ======= marker
-      if (i < lines.length) i++;
-      
-      // Skip the other branch content until we hit >>>>>>>
-      while (i < lines.length && !lines[i].startsWith('>>>>>>>')) {
-        i++;
-      }
-      
-      // Skip the >>>>>>> marker
-      if (i < lines.length) i++;
-      
-      // Use HEAD content (usually the more recent/stable version)
-      resolved.push(...headContent);
-    } else {
-      resolved.push(line);
-      i++;
-    }
-  }
-  
-  return resolved.join('\n');
-}
-
-// Function to process a single file
-function processFile(filePath) {
+function fixMergeConflicts(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
+    let content = fs.readFileSync(filePath, 'utf8');
     
-    if (content.includes('<<<<<<< HEAD')) {
-      console.log(`Processing: ${filePath}`);
-      const resolved = resolveMergeConflicts(content);
-      fs.writeFileSync(filePath, resolved);
-      console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-    return false;
+    // Pattern to match merge conflicts
+    const conflictPattern = /<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)>>>>>>> [^\n]+/g;
+    
+    // Replace conflicts with the version after =======
+    content = content.replace(conflictPattern, (match, afterEquals) => {
+      return afterEquals.trim();
+    });
+    
+    // Remove any remaining conflict markers
+    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+    content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '');
+    
+    // Clean up extra whitespace
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+    
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed merge conflicts in: ${filePath}`);
+    return true;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Function to find all files with merge conflicts
-function findConflictedFiles(dir) {
+function findAndFixConflicts(dir) {
   const files = [];
   
   function walkDir(currentPath) {
@@ -78,31 +44,31 @@ function findConflictedFiles(dir) {
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
         walkDir(fullPath);
       } else if (stat.isFile() && /\.(tsx?|jsx?)$/.test(item)) {
-        try {
-          const content = fs.readFileSync(fullPath, 'utf8');
-          if (content.includes('<<<<<<< HEAD')) {
-            files.push(fullPath);
-          }
-        } catch (error) {
-          // Skip files that can't be read
-        }
+        files.push(fullPath);
       }
     }
   }
   
   walkDir(dir);
-  return files;
-}
-
-// Main execution
-const conflictedFiles = findConflictedFiles('.');
-console.log(`Found ${conflictedFiles.length} files with merge conflicts`);
-
-let fixedCount = 0;
-for (const file of conflictedFiles) {
-  if (processFile(file)) {
-    fixedCount++;
+  
+  let fixedCount = 0;
+  for (const file of files) {
+    try {
+      const content = fs.readFileSync(file, 'utf8');
+      if (content.includes('<<<<<<< HEAD')) {
+        if (fixMergeConflicts(file)) {
+          fixedCount++;
+        }
+      }
+    } catch (error) {
+      // Skip files that can't be read
+    }
   }
+  
+  console.log(`Fixed merge conflicts in ${fixedCount} files`);
 }
 
-console.log(`Fixed ${fixedCount} files`);
+// Start fixing conflicts
+console.log('Starting merge conflict resolution...');
+findAndFixConflicts('.');
+console.log('Merge conflict resolution complete!');

@@ -1,146 +1,34 @@
-<<<<<<< HEAD
-'use client';
-import React from 'react';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
-=======
 'use client'
-import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react'
+import React from 'react'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
-import PerformanceOptimizer from './components/EnhancedPerformanceOptimizer'
-import SEOOptimizer from './components/SEOOptimizer'
-import AccessibilityEnhancer from './components/AccessibilityEnhancer'
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Clock, 
-  ArrowRight, 
-  Star, 
-  CheckCircle, 
-  Zap, 
-  Shield, 
-  Brain, 
-  Cloud, 
-  Code, 
-  BarChart, 
-  Users, 
-  Sparkles, 
-  Cpu, 
-  Target, 
-  Globe, 
-  Database, 
-  Smartphone, 
-  Lock, 
-  TrendingUp, 
-  Settings, 
-  Calendar, 
-  CheckSquare, 
-  FileText, 
-  DollarSign, 
-  Award, 
-  Rocket, 
-  Layers, 
-  Workflow, 
-  BarChart3, 
-  MessageSquare, 
-  Headphones, 
-  Monitor, 
-  HardDrive, 
-  Wifi, 
-  Printer, 
-  Router, 
-  Package, 
-  Heart, 
-  Eye, 
-  Mic 
-} from 'lucide-react'
-
-// Dynamically import heavy components for better performance
-const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'))
-const ContentCarousel = lazy(() => import('./components/ContentCarousel'))
-const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'))
-const ContentStatistics = lazy(() => import('./components/ContentStatistics'))
-const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'))
-
-// Preload critical components
-const preloadComponents = () => {
-  if (typeof window !== 'undefined') {
-    // Preload critical components after initial render
-    setTimeout(() => {
-      import('./components/ContentPromotionBanner')
-      import('./components/ContentCarousel')
-    }, 100)
-  }
-}
-
-// Loading skeleton component
-const ServiceCardSkeleton: React.FC = memo(() => (
-  <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
-    <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
-    <div className="h-4 bg-gray-200 rounded mb-2"></div>
-    <div className="h-4 bg-gray-200 rounded w-5/6"></div>
-  </div>
-))
-ServiceCardSkeleton.displayName = 'ServiceCardSkeleton'
+import { Brain, Cloud, Code, Shield, CheckCircle, Users, Award, ArrowRight } from 'lucide-react'
 
 const HomePage: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false)
-
-  useEffect(() => {
-    // Simulate loading time for better UX
-    const timer = setTimeout(() => {
-      setIsLoaded(true)
-      preloadComponents()
-    }, 100)
-
-    return () => clearTimeout(timer)
-  }, [])
-
   const services = [
     {
       icon: Brain,
       title: 'AI Solutions',
       description: 'Advanced artificial intelligence services including machine learning, natural language processing, and computer vision.',
-      features: ['Machine Learning', 'NLP', 'Computer Vision', 'Predictive Analytics'],
-      href: '/ai-services'
+      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
     },
     {
       icon: Cloud,
-      title: 'Cloud Infrastructure',
-      description: 'Scalable cloud solutions with AWS, Azure, and Google Cloud Platform integration.',
-      features: ['AWS Migration', 'Azure Solutions', 'GCP Integration', 'DevOps'],
-      href: '/cloud-infrastructure'
+      title: 'Cloud Services',
+      description: 'Scalable cloud infrastructure and deployment solutions for modern applications.',
+      features: ['AWS Integration', 'Azure Solutions', 'Google Cloud', 'DevOps Automation']
+    },
+    {
+      icon: Code,
+      title: 'Custom Development',
+      description: 'Tailored software solutions built to meet your specific business requirements.',
+      features: ['Web Applications', 'Mobile Apps', 'API Development', 'Database Design']
     },
     {
       icon: Shield,
       title: 'Cybersecurity',
       description: 'Comprehensive security solutions to protect your digital assets and data.',
-      features: ['Security Audits', 'Penetration Testing', 'Compliance', 'Incident Response'],
-      href: '/cybersecurity'
-    },
-    {
-      icon: BarChart,
-      title: 'Data Analytics',
-      description: 'Transform your data into actionable insights with our advanced analytics solutions.',
-      features: ['Business Intelligence', 'Data Visualization', 'Predictive Modeling', 'Real-time Analytics'],
-      href: '/data-analytics'
-    },
-    {
-      icon: Code,
-      title: 'Web Development',
-      description: 'Modern, responsive web applications built with the latest technologies.',
-      features: ['React/Next.js', 'Node.js', 'TypeScript', 'Progressive Web Apps'],
-      href: '/web-development'
-    },
-    {
-      icon: Smartphone,
-      title: 'Mobile Development',
-      description: 'Native and cross-platform mobile applications for iOS and Android.',
-      features: ['React Native', 'Flutter', 'iOS Development', 'Android Development'],
-      href: '/mobile-development'
+      features: ['Security Audits', 'Penetration Testing', 'Compliance', 'Incident Response']
     }
   ]
 
@@ -150,74 +38,77 @@ const HomePage: React.FC = () => {
     { label: 'Years Experience', value: '10+', icon: Award },
     { label: 'Team Members', value: '50+', icon: Users }
   ]
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
 
-const PagePage: React.FC = () => {
   return (
-    <>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-        
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Page
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Discover our comprehensive solutions designed to transform your business.
-              </p>
-            </div>
-          </div>
-        </section>
-
-<<<<<<< HEAD
-        {/* Content Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Coming Soon
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                This page is under development. Please check back soon for updates.
-              </p>
-              <button className="cyber-button">
-                Learn More
-                <ArrowRight className="w-5 h-5 ml-2" />
-=======
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-700">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto">
-              Let's discuss how our AI and IT solutions can help you achieve your goals and drive innovation.
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
+      
+      {/* Hero Section */}
+      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Zion Tech Group
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Leading the future of AI and IT solutions. We help businesses transform their digital presence with cutting-edge technology and innovative development services.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300">
-                Get Free Consultation
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
+                Get Started
+                <ArrowRight className="w-5 h-5 ml-2" />
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300">
+              <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300">
                 View Our Work
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
               </button>
             </div>
           </div>
-        </section>
-<<<<<<< HEAD
-      </div>
-      
-      <Footer />
-    </>
-  );
-};
+        </div>
+      </section>
 
-export default PagePage;
-=======
-      </main>
+      {/* Services Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Our Services</h2>
+            <p className="text-xl text-gray-300">
+              Comprehensive technology solutions designed to accelerate your business growth
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {services.map((service, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-purple-400/50 transition-all duration-300">
+                <service.icon className="w-12 h-12 text-purple-400 mb-4" />
+                <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
+                <p className="text-gray-300 mb-6">{service.description}</p>
+                <ul className="space-y-2">
+                  {service.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <stat.icon className="w-12 h-12 text-purple-400 mx-auto mb-4" />
+                <div className="text-4xl font-bold text-white mb-2">{stat.value}</div>
+                <div className="text-gray-300">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <Footer />
     </div>
@@ -225,4 +116,3 @@ export default PagePage;
 }
 
 export default HomePage
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd

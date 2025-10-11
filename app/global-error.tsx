@@ -1,15 +1,4 @@
-<<<<<<< HEAD
-'use client';
-<<<<<<< HEAD
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
-
-const GlobalErrorPage: React.FC = () => {
-  return (
-=======
-  const features = [
+const features = [
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -25,7 +14,6 @@ const GlobalErrorPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section></section>
         </section>
@@ -38,7 +26,6 @@ const GlobalErrorPage: React.FC = () => {
               Our global error solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div></div>
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div></div>
@@ -52,7 +39,6 @@ const GlobalErrorPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"></section></section>
         </section>
@@ -65,7 +51,6 @@ const GlobalErrorPage: React.FC = () => {
               Experience the power of our global error solutions for your business.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div></div>
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3"></div></div>
@@ -76,7 +61,6 @@ const GlobalErrorPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section></section>
         </section>
@@ -98,11 +82,9 @@ const GlobalErrorPage: React.FC = () => {
                 Email Us
               </button>
         <title>Global Error - Zion Tech Group</title>
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
     <>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
-        
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -116,7 +98,6 @@ const GlobalErrorPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Content Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -135,39 +116,8 @@ const GlobalErrorPage: React.FC = () => {
           </div>
         </section>
       </div>
-      
       <Footer />
     </>
   );
 };
-
 export default GlobalErrorPage;
-=======
-
-export default function GlobalError({
-  error,
-  reset,
-}: {
-  error: Error & { digest?: string };
-  reset: () => void;
-}) {
-  return (
-    <html>
-      <body>
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-          <div className="text-center">
-            <h2 className="text-4xl font-bold text-white mb-4">Something went wrong!</h2>
-            <p className="text-gray-300 mb-8">We encountered a global error. Please try again.</p>
-            <button
-              onClick={reset}
-              className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
-            >
-              Try again
-            </button>
-          </div>
-        </div>
-      </body>
-    </html>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7

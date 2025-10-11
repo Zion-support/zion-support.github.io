@@ -24,7 +24,6 @@ function resolveConflicts(filePath) {/* TODO: Fix JSX expression */}`
   found: ${filePath}`)
       return false
     }
-
     console.log(`🔧 Resolving conflicts in ${filePath}...`)
     // Split by conflict markers and keep the incoming version (after )
     const lines = content.split('\n')
@@ -36,21 +35,17 @@ function resolveConflicts(filePath) {/* TODO: Fix JSX expression */}`
         skipUntilNextMarker = true
         continue
   }
-      
       if (line.includes('')) {
     skipUntilNextMarker = false
         continue
   }
-      
       if (line.includes('>>>>>>>')) {
     continue
   }
-      
       if (!skipUntilNextMarker) {
     resolvedLines.push(line)
   }
     }
-    
     // Write the resolved content
     writeFileSync(filePath, resolvedLines.join('\n'))
     console.log(`✅ Resolved conflicts in ${filePath}`)
@@ -60,7 +55,6 @@ function resolveConflicts(filePath) {/* TODO: Fix JSX expression */}`
     return false
   }
 }
-
 try {
   // Get list of files with conflicts
   const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' })
@@ -68,12 +62,10 @@ try {
     console.log('✅ No merge conflicts found')
     process.exit(0)
   }
-
   console.log('📋 Files with conflicts: ')
   console.log(conflictFiles)
   const files = conflictFiles.trim().split('\n')
   let resolvedCount = 0,
-
   for (const file of files) {
     if (file.trim()) {,
       if (resolveConflicts(file.trim())) {,
@@ -86,7 +78,6 @@ try {
     console.log('📝 Added resolved files to git staging')
   } catch (error) {/* TODO: Fix JSX expression */}
   }
-
   console.log(`\n📊 Resolved conflicts in ${resolvedCount} files`)
   // Add all resolved files
   execSync('git add .', { stdio: 'inherit' })

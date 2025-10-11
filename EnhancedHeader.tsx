@@ -1,14 +1,11 @@
 import { Menu, X } from 'lucide-react'
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-
 const EnhancedHeader: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
   }
-
   return (
     <header className="bg-slate-900/95 backdrop-blur-sm border-b border-cyan-500/20 fixed w-full top-0 z-50">
       <div className="container mx-auto px-4">
@@ -20,15 +17,6 @@ const EnhancedHeader: React.FC = () => {
             </div>
             <span className="text-white font-bold text-xl">Zion Tech Group</span>
           </Link>
-<<<<<<< HEAD
-<<<<<<< HEAD
-          
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-
-=======
-          
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors">
@@ -44,15 +32,6 @@ const EnhancedHeader: React.FC = () => {
               Contact
             </Link>
           </nav>
-<<<<<<< HEAD
-<<<<<<< HEAD
-          
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-
-=======
-          
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
@@ -61,15 +40,6 @@ const EnhancedHeader: React.FC = () => {
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-
-=======
-        
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-cyan-500/20">
@@ -93,5 +63,4 @@ const EnhancedHeader: React.FC = () => {
     </header>
   )
 }
-
 export default EnhancedHeader

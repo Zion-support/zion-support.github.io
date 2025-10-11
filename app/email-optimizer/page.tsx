@@ -1,17 +1,9 @@
-<<<<<<< HEAD
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import Navigation from '../components/Navigation'
-import { Brain, BarChart, Target, TrendingUp, FileText, Zap, Shield, CheckCircle } from 'lucide-react'
-=======
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Brain, BarChart, CheckCircle, ArrowRight, Zap, Shield, Target } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-
 const EmailOptimizerPage: React.FC = () => {
   const features = [
     {
@@ -19,9 +11,7 @@ const EmailOptimizerPage: React.FC = () => {
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
     'Scalable and flexible solutions',
-<<<<<<< HEAD
-=======
-      icon: Brain,
+icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
       benefits: ['Smart automation', 'Predictive analytics', 'Intelligent insights', 'Automated processes']
@@ -45,8 +35,6 @@ const EmailOptimizerPage: React.FC = () => {
       benefits: ['Data encryption', 'Access control', 'Audit logging', 'Compliance ready']
     }
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-
   const benefits = [
     'Enhanced productivity and efficiency',
     'Reduced operational costs',
@@ -55,7 +43,6 @@ const EmailOptimizerPage: React.FC = () => {
     '24/7 availability',
     'Expert support'
   ];
-
   return (
     <>
       <Helmet>
@@ -63,22 +50,14 @@ const EmailOptimizerPage: React.FC = () => {
         <meta name="description" content="Description of the page and its benefits." />
         <meta name="keywords" content="relevant, keywords, for, seo" />
       </Helmet>
-
-<<<<<<< HEAD
-=======
-
-    '24/7 technical support',
-
+'24/7 technical support',
     'Easy integration with existing systems',
-
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
     'Cost-effective pricing plans',
           </div&gt;
         </div&gt;
               </div&gt;
     'Proven track record of success'
   ]
-
   const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
@@ -86,7 +65,6 @@ const EmailOptimizerPage: React.FC = () => {
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ]
-
   return (
     <>
       <Helmet>
@@ -95,7 +73,6 @@ const EmailOptimizerPage: React.FC = () => {
         <meta name="keywords" content="AI, email, optimizer, automation, artificial intelligence, business solutions" />
       </Helmet>
       <Navigation />
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-sky-900 to-slate-900">
         {/* Hero Section */}
         <section className="py-20 px-4 relative overflow-hidden">
@@ -115,55 +92,20 @@ const EmailOptimizerPage: React.FC = () => {
               <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
                 Learn More
               </button>
-=======
-      <Navigation />
-
-      <main className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Page Title
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Description of the page and its benefits for your business.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Get Started
-                </button>
-                <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
-                </button>
-              </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-<<<<<<< HEAD
-              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <p className="text-xl text-gray-300">Powerful AI capabilities for your business</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
-                  <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-=======
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+<h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Key Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Advanced technology that drives results
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
@@ -171,16 +113,11 @@ const EmailOptimizerPage: React.FC = () => {
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   {feature.benefits && (
                     <ul className="space-y-2">
                       {feature.benefits.map((benefit, idx) => (
-<<<<<<< HEAD
-                        <li key={idx} className="flex items-center text-sm text-gray-300">
-=======
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
+<li key={idx} className="flex items-center text-sm text-gray-400">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                           {benefit}
                         </li>
@@ -192,24 +129,8 @@ const EmailOptimizerPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
-<<<<<<< HEAD
-        <section className="py-20 px-4 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Email Optimizer?</h2>
-              <p className="text-xl text-gray-300">Transform your business with intelligent automation</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <Zap className="w-6 h-6 text-cyan-400" />
-                  </div>
-                  <p className="text-gray-300">{benefit}</p>
-=======
-        <section className="py-20 px-4">
+<section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -219,7 +140,6 @@ const EmailOptimizerPage: React.FC = () => {
                 Proven results that drive business growth
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
@@ -227,41 +147,15 @@ const EmailOptimizerPage: React.FC = () => {
                     <CheckCircle className="w-8 h-8 text-white" />
                   </div>
                   <p className="text-lg text-white font-medium">{benefit}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
                 </div>
               ))}
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
-<<<<<<< HEAD
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Get started with our Email Optimizer and experience the future of intelligent automation.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
-                Start Free Trial
-              </button>
-              <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-                Contact Sales
-              </button>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-  )
-}
-
-export default EmailOptimizerPage
-=======
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
+<div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Get Started?
               </h2>
@@ -280,11 +174,8 @@ export default EmailOptimizerPage
           </div>
         </section>
       </main>
-
       <Footer />
     </>
   );
 };
-
 export default EmailOptimizerPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7

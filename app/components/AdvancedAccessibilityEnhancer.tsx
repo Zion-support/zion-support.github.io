@@ -1,14 +1,5 @@
-<<<<<<< HEAD
-'use client';
-import React from 'react';
-<<<<<<< HEAD
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
-=======
-    }
+}
   ];
-
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -19,14 +10,11 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Tar
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
-
 const AdvancedAccessibilityEnhancerPage: React.FC = () => {
   return (
     <>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
-        
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -40,7 +28,6 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Content Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -59,22 +46,16 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
           </div>
         </section>
       </div>
-      
       <Footer />
     </>
   );
 };
-
 export default AdvancedAccessibilityEnhancerPage;
-<<<<<<< HEAD
-=======
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target } from 'lucide-react';
-
 interface AdvancedAccessibilityEnhancerProps {
   className?: string;
   children?: React.ReactNode;
 }
-
 const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps> = ({ className = '', children }) => {
   return (
     <div className={`bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group ${className}`}>
@@ -85,31 +66,3 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
       <p className="text-gray-300 mb-4">AdvancedAccessibilityEnhancer description goes here.</p>
       {children}
     </div>
-=======
-    setIsReducedMotion(mediaQuery.matches)
-    // Check for high contrast preference;
-    const highContrastQuery = window.matchMedia('(prefers-contrast: high)'),
-    setIsHighContrast(highContrastQuery.matches),
-    // Apply accessibility enhancements
-    document.documentElement.setAttribute('data-accessibility-enhanced', 'true')
-    if (isHighContrast) {
-      document.documentElement.classList.add('high-contrast')}if (isReducedMotion) {document.documentElement.classList.add('reduced-motion')}// Add keyboard navigation support;
-    const handleKeyDown = (event: KeyboardEvent) => {,
-    if (event.key === 'Tab') {
-    return () => {
-    document.removeEventListener('keydown', handleKeyDown)
-      document.removeEventListener('mousedown', handleMouseDown)
-  }
-  }, [isHighContrast, isReducedMotion])
-  const toggleHighContrast = () => {
-    setIsHighContrast(!isHighContrast)
-    document.documentElement.classList.toggle('high-contrast')
-  }
-  const changeFontSize = (size: string) => {
-    setFontSize(size),
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
-  );
-};
-
-export default AdvancedAccessibilityEnhancer;
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7

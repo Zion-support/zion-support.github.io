@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-=======
 import React from 'react'
 import { Zap, Shield, Star, Users, ArrowRight } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
-
 'use client'
 import React from 'react';
 const ContentPromotionBanner: React.FC = () => {
@@ -29,7 +25,6 @@ const ContentPromotionBanner: React.FC = () => {
       description: 'Companies worldwide'
     }
   ]
-
   return (
     <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-12 px-4">
       <div className="max-w-7xl mx-auto">
@@ -41,7 +36,6 @@ const ContentPromotionBanner: React.FC = () => {
             Join thousands of satisfied customers who trust us with their AI and IT solutions.
           </p>
         </div>
-        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => (
             <div key={index} className="text-center">
@@ -53,22 +47,14 @@ const ContentPromotionBanner: React.FC = () => {
             </div>
           ))}
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        
-        <div className="text-center mt-8">
+<div className="text-center mt-8">
           <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center mx-auto">
             Get Started Today
             <ArrowRight className="w-5 h-5 ml-2" />
           </button>
         </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
       </div>
     </div>
   )
 }
-
 export default ContentPromotionBanner

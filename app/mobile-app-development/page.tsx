@@ -1,34 +1,7 @@
-<<<<<<< HEAD
-'use client';
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-<<<<<<< HEAD
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
-
-const PagePage: React.FC = () => {
-  return (
-    <>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-        
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Page
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Discover our comprehensive solutions designed to transform your business.
-              </p>
-=======
 import { BarChart, TrendingUp, PieChart, ArrowRight, CheckCircle, Zap, Shield, Target } from 'lucide-react';
 =======
 import React from 'react'
 import {  Helmet  } from 'react-helmet-async'import {  Smartphone, Code, Zap, Shield, Globe, ArrowRight, CheckCircle, Star, Users, Clock, DollarSign   } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
-
 const MobileAppDevelopmentPage: React.FC = () => {
   const features = [
     {
@@ -56,7 +29,6 @@ const MobileAppDevelopmentPage: React.FC = () => {
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     }
   ];
-
   const benefits = [
     'Increase efficiency by up to 80%',
     'Reduce costs by 30% with automation',
@@ -65,33 +37,10 @@ const MobileAppDevelopmentPage: React.FC = () => {
     'Real-time processing and analysis',
     'Seamless integration with existing systems'
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
-<<<<<<< HEAD
-      <main className="pt-20">
-        {/* Hero Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
-              Mobile App Development
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced AI-powered solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-                Learn More
-              </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-=======
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8"></section></section>
           <div className="max-w-7xl mx-auto"></div></div>
@@ -116,37 +65,20 @@ const MobileAppDevelopmentPage: React.FC = () => {
                   View Portfolio
                 </button>
               </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
             </div>
           </div>
         </section>
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-        {/* Content Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Coming Soon
-=======
-        {/* Features Section */}
+{/* Features Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8"></section></section>
           <div className="max-w-7xl mx-auto"></div></div>
             <div className="text-center mb-16"></div></div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2></h2>
                 Our Services
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 This page is under development. Please check back soon for updates.
               </p>
-<<<<<<< HEAD
-              <button className="cyber-button">
-                Learn More
-                <ArrowRight className="w-5 h-5 ml-2" />
-=======
-        {/* Features Section */}
+{/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -171,7 +103,6 @@ const MobileAppDevelopmentPage: React.FC = () => {
                   </ul>
 =======
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div></div>
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300"></div></div>
@@ -179,30 +110,13 @@ const MobileAppDevelopmentPage: React.FC = () => {
                     <CheckCircle className="w-6 h-6 text-green-400 mr-3" />
                     <h3 className="text-xl font-bold text-white"></h3></h3>{feature}</h3>
                   </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
                 </div>
               ))}
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
-<<<<<<< HEAD
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our AI Solutions?</h2>
-              <p className="text-xl text-gray-300">Transform your business with intelligent automation</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-3">
-                  <div className="flex-shrink-0">
-                    <Zap className="h-6 w-6 text-cyan-400" />
-                  </div>
-                  <p className="text-gray-300">{benefit}</p>
-=======
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5"></section></section>
+<section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5"></section></section>
           <div className="max-w-7xl mx-auto"></div></div>
             <div className="text-center mb-16"></div></div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2></h2>
@@ -212,7 +126,6 @@ const MobileAppDevelopmentPage: React.FC = () => {
                 Professional mobile solutions with proven results
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div></div>
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-4"></div></div>
@@ -227,7 +140,6 @@ const MobileAppDevelopmentPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8"></section></section>
           <div className="max-w-7xl mx-auto"></div></div>
@@ -239,7 +151,6 @@ const MobileAppDevelopmentPage: React.FC = () => {
                 Choose the package that fits your needs
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div></div>
               {pricing.map((plan, index) => (
                 <div key={index} className="{`bg-white/10" backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}></div></div>
@@ -270,31 +181,13 @@ const MobileAppDevelopmentPage: React.FC = () => {
                   }`}></button>
                     Get Started
                   </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
                 </div>
               ))}
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
-<<<<<<< HEAD
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI-powered solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
-                Start Free Trial
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-                Contact Sales
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-=======
-        <section className="py-16 px-4 sm:px-6 lg:px-8"></section></section>
+<section className="py-16 px-4 sm:px-6 lg:px-8"></section></section>
           <div className="max-w-4xl mx-auto text-center"></div></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2></h2>
               Ready to Build Your Mobile App?
@@ -308,23 +201,13 @@ const MobileAppDevelopmentPage: React.FC = () => {
               </button>
               <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-4 px-8 rounded-lg transition-all duration-300"></button>
                 Contact Us
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
               </button>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-      </div>
-      
-      <Footer />
-    </>
-=======
-      </main>
-
+</main>
       <Footer />
     </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
   );
 };
-
 export default MobileAppDevelopmentPage;

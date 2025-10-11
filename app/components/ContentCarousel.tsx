@@ -1,21 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-'use client';
-<<<<<<< HEAD
-=======
 import {  Cloud, Zap, Shield, ChevronLeft, ChevronRight  } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
-
 const ContentCarouselPage: React.FC = () => {
   return (
     <>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
-        
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -29,7 +21,6 @@ const ContentCarouselPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Content Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -47,14 +38,6 @@ const ContentCarouselPage: React.FC = () => {
             </div>
           </div>
         </section>
-=======
-import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react';
-=======
-import React, { useState, useEffect } from 'react'
-import { ChevronLeft, ChevronRight, CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp, Cloud } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
-
 interface Slide {
   id: number
   icon: React.ComponentType<any>
@@ -63,43 +46,21 @@ interface Slide {
   features: string[]
   color: string
 }
-
-<<<<<<< HEAD
-const ContentCarousel: React.FC = () => {
-<<<<<<< HEAD
-=======
 const ContentCarousel: React.FC = () => {,
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
   const [currentSlide, setCurrentSlide] = useState(0);
-=======
-  const [currentSlide, setCurrentSlide] = useState(0)
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
-
   const slides: Slide[] = [
     {
       id: 1,
       icon: Brain,
-<<<<<<< HEAD
-      title: 'AI-Powered Solutions',
-<<<<<<< HEAD
-      description: 'Revolutionary artificial intelligence that transforms your business operations and drives growth.',
-=======
-      title: 'AI Solutions',
+title: 'AI Solutions',
       description: 'Cutting-edge artificial intelligence solutions that transform your business operations.',
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
       features: [
         'Machine Learning Integration',
         'Natural Language Processing',
         'Predictive Analytics',
         'Automated Decision Making'
       ],
-<<<<<<< HEAD
-      stats: [
-        { value: '95%', label: 'Accuracy Rate' },
-        { value: '3x', label: 'Faster Processing' }
-      ]
-=======
-      description: 'Transform your business with cutting-edge artificial intelligence',
+description: 'Transform your business with cutting-edge artificial intelligence',
       icon: Zap,
       stats: '300% efficiency boost'
     },
@@ -116,19 +77,16 @@ const ContentCarousel: React.FC = () => {,
       stats: '500+ projects completed'
     }
   ];
-
   useEffect(() => {const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);}, 5000);
       color: 'from-red-500 to-pink-600'
     }
-
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 5000);
     return () => clearInterval(timer);
   }, [slides.length]);
-
   return (
     <div className="relative w-full max-w-4xl mx-auto"></div></div>
       </div><div className="relative overflow-hidden rounded-2xl"></div></div>
@@ -150,7 +108,6 @@ const ContentCarousel: React.FC = () => {,
                     </div>
                   </div>
                 </div>
-                
                 <div className="grid grid-cols-2 gap-4"></div></div>
                   {slide.features.map((feature, index) => (
                     </div><div key={index} className="flex items-center space-x-2"></div></div>
@@ -168,11 +125,9 @@ const ContentCarousel: React.FC = () => {,
   const nextSlide = () => {
     setCurrentSlide((prev) =&gt; (prev + 1) % slides.length);
   };
-
   const prevSlide = () => {
     setCurrentSlide((prev) =&gt; (prev - 1 + slides.length) % slides.length);
   };
-
   return (
     <div className="relative w-full max-w-6xl mx-auto"></div></div>
       <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-sm border border-cyan-500/20"></div></div>
@@ -200,7 +155,6 @@ const ContentCarousel: React.FC = () => {,
             </div>
           ))}
         </div>
-        
         {/* Navigation buttons */}
         <button
           onClick={prevSlide}
@@ -214,7 +168,6 @@ const ContentCarousel: React.FC = () => {,
         ></button>
           <ChevronRight className="w-6 h-6" />
         </button>
-        
         {/* Dots indicator */}
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2"></div></div>
           {slides.map((_, index) => (
@@ -229,10 +182,6 @@ const ContentCarousel: React.FC = () => {,
         </div>
       </div>
     </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
-=======
-      color: 'from-purple-500 to-blue-600'
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
     },
     {
       id: 2,
@@ -274,23 +223,18 @@ const ContentCarousel: React.FC = () => {,
       color: 'from-red-500 to-pink-600'
     }
   ]
-
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length)
     }, 5000)
-
     return () => clearInterval(timer)
   }, [slides.length])
-
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length)
   }
-
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
   }
-
   return (
     <div className="relative w-full max-w-6xl mx-auto">
       <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-sm border border-cyan-500/20">
@@ -321,7 +265,6 @@ const ContentCarousel: React.FC = () => {,
             </div>
           ))}
         </div>
-        
         {/* Navigation buttons */}
         <button
           onClick={prevSlide}
@@ -335,7 +278,6 @@ const ContentCarousel: React.FC = () => {,
         >
           <ChevronRight className="w-6 h-6" />
         </button>
-        
         {/* Dots indicator */}
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
           {slides.map((_, index) => (
@@ -349,7 +291,6 @@ const ContentCarousel: React.FC = () => {,
           ))}
         </div>
       </div>
-
       {/* Additional Info */}
       <div className="mt-16 text-center">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -370,27 +311,5 @@ const ContentCarousel: React.FC = () => {,
             <div className="text-gray-300">Countries</div>
           </div>
         </div>
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
       </div>
-<<<<<<< HEAD
-      
-      <Footer />
-    </>
-  );
-};
-
-<<<<<<< HEAD
-export default ContentCarouselPage;
-=======
 export default ContentCarousel;
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-=======
-    </div>
-  )
-}
-
-export default ContentCarousel
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
