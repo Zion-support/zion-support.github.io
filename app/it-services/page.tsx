@@ -564,6 +564,840 @@ const ItServicesPage: React.FC = () => {
       category: 'Metaverse',
       popular: true,
       icon: Globe
+    },
+    
+    // Additional Advanced IT Services
+    {
+      id: 'quantum-infrastructure',
+      name: 'Quantum Infrastructure Setup',
+      description: 'Complete quantum computing infrastructure implementation and management services',
+      price: '$50,000/project',
+      marketPrice: '$100000-500000/project',
+      features: [
+        'Quantum Hardware Installation',
+        'Quantum Software Integration',
+        'Quantum Network Setup',
+        'Quantum Security Implementation',
+        'Quantum Algorithm Development',
+        'Quantum Performance Optimization',
+        'Quantum Maintenance',
+        'Quantum Training'
+      ],
+      benefits: [
+        'Exponential computing power',
+        'Revolutionary problem solving',
+        'Future-proof technology',
+        'Competitive advantage'
+      ],
+      category: 'Quantum Technology',
+      popular: true,
+      icon: Cpu
+    },
+    {
+      id: 'holographic-systems',
+      name: 'Holographic Display Systems',
+      description: 'Advanced holographic display and interaction systems for immersive business applications',
+      price: '$15,000/project',
+      marketPrice: '$30000-150000/project',
+      features: [
+        'Holographic Display Setup',
+        '3D Content Creation',
+        'Gesture Recognition',
+        'Spatial Computing',
+        'AR/VR Integration',
+        'Real-time Rendering',
+        'Multi-user Collaboration',
+        'Custom Applications'
+      ],
+      benefits: [
+        'Immersive user experience',
+        'Enhanced productivity',
+        'Cutting-edge technology',
+        'Competitive differentiation'
+      ],
+      category: 'Holographic Technology',
+      popular: true,
+      icon: Eye
+    },
+    {
+      id: 'ai-infrastructure-pro',
+      name: 'AI Infrastructure Pro',
+      description: 'Specialized AI infrastructure with advanced GPU clusters and ML operations',
+      price: '$8,000/month',
+      marketPrice: '$15000-60000/month',
+      features: [
+        'Advanced GPU Clusters',
+        'MLOps Pipeline Setup',
+        'AI Model Deployment',
+        'Distributed Training',
+        'Model Monitoring',
+        'Auto-scaling AI Services',
+        'Edge AI Integration',
+        'Performance Optimization'
+      ],
+      benefits: [
+        'Optimized AI performance',
+        'Scalable ML operations',
+        'Cost-effective training',
+        'Production-ready AI'
+      ],
+      category: 'AI Infrastructure',
+      popular: true,
+      icon: Brain
+    },
+    {
+      id: 'zero-trust-security-pro',
+      name: 'Zero-Trust Security Pro',
+      description: 'Advanced zero-trust security architecture with AI-powered threat protection',
+      price: '$5,000/month',
+      marketPrice: '$10000-40000/month',
+      features: [
+        'Zero-Trust Implementation',
+        'AI Threat Detection',
+        'Identity & Access Management',
+        'Micro-segmentation',
+        'Continuous Monitoring',
+        'Behavioral Analytics',
+        'Automated Response',
+        'Compliance Management'
+      ],
+      benefits: [
+        'Enhanced security posture',
+        'Reduced attack surface',
+        'Continuous monitoring',
+        'Compliance assurance'
+      ],
+      category: 'Security',
+      popular: true,
+      icon: Shield
+    },
+    {
+      id: 'blockchain-enterprise',
+      name: 'Blockchain Enterprise Solutions',
+      description: 'Comprehensive blockchain infrastructure with enterprise-grade security and scalability',
+      price: '$25,000/project',
+      marketPrice: '$50000-300000/project',
+      features: [
+        'Enterprise Blockchain Setup',
+        'Smart Contract Development',
+        'DeFi Platform Creation',
+        'NFT Marketplace Development',
+        'Cryptocurrency Integration',
+        'Web3 Application Development',
+        'Blockchain Security Auditing',
+        'Token Economics Design'
+      ],
+      benefits: [
+        'Decentralized solutions',
+        'Enhanced security',
+        'Transparent operations',
+        'Future-ready technology'
+      ],
+      category: 'Blockchain',
+      popular: true,
+      icon: Shield
+    },
+    {
+      id: 'edge-computing-pro',
+      name: 'Edge Computing Pro',
+      description: 'Advanced edge computing infrastructure for ultra-low latency applications',
+      price: '$12,000/month',
+      marketPrice: '$25000-100000/month',
+      features: [
+        'Edge Server Deployment',
+        'Real-time Processing',
+        'IoT Device Management',
+        'Content Delivery Optimization',
+        'Latency Reduction',
+        'Bandwidth Optimization',
+        'Edge Security',
+        'Monitoring & Analytics'
+      ],
+      benefits: [
+        'Ultra-low latency',
+        'Improved performance',
+        'Cost optimization',
+        'Real-time processing'
+      ],
+      category: 'Edge Computing',
+      popular: true,
+      icon: Cpu
+    },
+    {
+      id: '5g-enterprise',
+      name: '5G Enterprise Solutions',
+      description: 'Complete 5G network implementation for enterprise environments with advanced features',
+      price: '$35,000/project',
+      marketPrice: '$70000-300000/project',
+      features: [
+        '5G Network Architecture',
+        'Small Cell Deployment',
+        'Network Slicing',
+        'Edge Computing Integration',
+        'IoT Connectivity',
+        'Performance Optimization',
+        'Security Implementation',
+        'Compliance Management'
+      ],
+      benefits: [
+        'Ultra-fast connectivity',
+        'Low latency applications',
+        'Massive IoT support',
+        'Future-proof infrastructure'
+      ],
+      category: '5G Technology',
+      popular: true,
+      icon: Wifi
+    },
+    {
+      id: 'iot-platform-pro',
+      name: 'IoT Platform Pro',
+      description: 'Comprehensive IoT platform with advanced analytics and device management',
+      price: '$6,000/month',
+      marketPrice: '$12000-50000/month',
+      features: [
+        'IoT Device Connectivity',
+        'Real-time Data Processing',
+        'Device Management Platform',
+        'Predictive Maintenance',
+        'Edge Analytics',
+        'Security Management',
+        'Scalable Architecture',
+        'Integration Capabilities'
+      ],
+      benefits: [
+        'Connected operations',
+        'Real-time insights',
+        'Predictive maintenance',
+        'Operational efficiency'
+      ],
+      category: 'IoT',
+      popular: true,
+      icon: Wifi
+    },
+    {
+      id: 'cyber-defense-matrix-pro',
+      name: 'Cyber Defense Matrix Pro',
+      description: 'Next-generation cybersecurity platform with AI-powered threat detection and response',
+      price: '$8,000/month',
+      marketPrice: '$15000-60000/month',
+      features: [
+        'AI Threat Detection',
+        'Behavioral Analytics',
+        'Automated Response',
+        'Zero-trust Architecture',
+        'Threat Hunting',
+        'Incident Response Automation',
+        'Security Orchestration',
+        'Compliance Monitoring'
+      ],
+      benefits: [
+        'Advanced threat protection',
+        'Automated response',
+        'Reduced security incidents',
+        'Compliance assurance'
+      ],
+      category: 'Security',
+      popular: true,
+      icon: Shield
+    },
+    {
+      id: 'digital-twin-enterprise',
+      name: 'Digital Twin Enterprise',
+      description: 'Advanced digital twin platform for enterprise asset monitoring and optimization',
+      price: '$15,000/month',
+      marketPrice: '$30000-120000/month',
+      features: [
+        '3D Asset Modeling',
+        'Real-time Monitoring',
+        'Predictive Analytics',
+        'Simulation Capabilities',
+        'Performance Optimization',
+        'Maintenance Scheduling',
+        'Data Integration',
+        'Visualization Dashboard'
+      ],
+      benefits: [
+        'Asset optimization',
+        'Predictive maintenance',
+        'Cost reduction',
+        'Performance insights'
+      ],
+      category: 'Digital Twin',
+      popular: true,
+      icon: Monitor
+    },
+    {
+      id: 'metaverse-enterprise',
+      name: 'Metaverse Enterprise Platform',
+      description: 'Complete enterprise metaverse platform with advanced collaboration and business features',
+      price: '$50,000/project',
+      marketPrice: '$100000-500000/project',
+      features: [
+        'Virtual Office Spaces',
+        'Avatar Systems',
+        'Virtual Economy',
+        'Business Collaboration Tools',
+        'AR/VR Integration',
+        '3D Asset Creation',
+        'Multi-platform Support',
+        'Blockchain Integration'
+      ],
+      benefits: [
+        'Immersive collaboration',
+        'New business models',
+        'Enhanced engagement',
+        'Innovation leadership'
+      ],
+      category: 'Metaverse',
+      popular: true,
+      icon: Globe
+    },
+    {
+      id: 'quantum-ready-infrastructure-pro',
+      name: 'Quantum-Ready Infrastructure Pro',
+      description: 'Future-proof IT infrastructure designed for quantum computing integration and hybrid systems',
+      price: '$40,000/project',
+      marketPrice: '$80000-400000/project',
+      features: [
+        'Quantum-Safe Cryptography',
+        'Post-Quantum Security',
+        'Quantum Network Preparation',
+        'Hybrid Classical-Quantum Systems',
+        'Quantum Algorithm Optimization',
+        'Future-Proof Architecture',
+        'Advanced Encryption',
+        'Quantum Key Distribution'
+      ],
+      benefits: [
+        'Future-proof security',
+        'Quantum advantage',
+        'Advanced cryptography',
+        'Technology leadership'
+      ],
+      category: 'Quantum Technology',
+      popular: true,
+      icon: Cpu
+    },
+    {
+      id: 'ai-infrastructure-enterprise',
+      name: 'AI Infrastructure Enterprise',
+      description: 'Enterprise-grade AI infrastructure with advanced GPU clusters and ML operations',
+      price: '$15,000/month',
+      marketPrice: '$30000-120000/month',
+      features: [
+        'Enterprise GPU Clusters',
+        'Advanced MLOps',
+        'AI Model Deployment',
+        'Distributed Training',
+        'Model Monitoring',
+        'Auto-scaling AI Services',
+        'Edge AI Integration',
+        'Performance Optimization'
+      ],
+      benefits: [
+        'Enterprise AI performance',
+        'Scalable ML operations',
+        'Cost-effective training',
+        'Production-ready AI'
+      ],
+      category: 'AI Infrastructure',
+      popular: true,
+      icon: Brain
+    },
+    {
+      id: 'zero-trust-enterprise',
+      name: 'Zero-Trust Enterprise',
+      description: 'Enterprise zero-trust security architecture with advanced threat protection and compliance',
+      price: '$10,000/month',
+      marketPrice: '$20000-80000/month',
+      features: [
+        'Enterprise Zero-Trust',
+        'AI Threat Detection',
+        'Identity & Access Management',
+        'Micro-segmentation',
+        'Continuous Monitoring',
+        'Behavioral Analytics',
+        'Automated Response',
+        'Compliance Management'
+      ],
+      benefits: [
+        'Enterprise security posture',
+        'Reduced attack surface',
+        'Continuous monitoring',
+        'Compliance assurance'
+      ],
+      category: 'Security',
+      popular: true,
+      icon: Shield
+    },
+    {
+      id: 'blockchain-enterprise-pro',
+      name: 'Blockchain Enterprise Pro',
+      description: 'Advanced blockchain infrastructure with enterprise-grade security, scalability, and compliance',
+      price: '$40,000/project',
+      marketPrice: '$80000-400000/project',
+      features: [
+        'Enterprise Blockchain Setup',
+        'Advanced Smart Contracts',
+        'DeFi Platform Creation',
+        'NFT Marketplace Development',
+        'Cryptocurrency Integration',
+        'Web3 Application Development',
+        'Blockchain Security Auditing',
+        'Token Economics Design'
+      ],
+      benefits: [
+        'Enterprise blockchain solutions',
+        'Enhanced security',
+        'Transparent operations',
+        'Future-ready technology'
+      ],
+      category: 'Blockchain',
+      popular: true,
+      icon: Shield
+    },
+    {
+      id: 'edge-computing-enterprise',
+      name: 'Edge Computing Enterprise',
+      description: 'Enterprise edge computing infrastructure for ultra-low latency and high-performance applications',
+      price: '$20,000/month',
+      marketPrice: '$40000-200000/month',
+      features: [
+        'Enterprise Edge Servers',
+        'Real-time Processing',
+        'IoT Device Management',
+        'Content Delivery Optimization',
+        'Latency Reduction',
+        'Bandwidth Optimization',
+        'Edge Security',
+        'Monitoring & Analytics'
+      ],
+      benefits: [
+        'Ultra-low latency',
+        'Enterprise performance',
+        'Cost optimization',
+        'Real-time processing'
+      ],
+      category: 'Edge Computing',
+      popular: true,
+      icon: Cpu
+    },
+    {
+      id: '5g-enterprise-pro',
+      name: '5G Enterprise Pro',
+      description: 'Advanced 5G network implementation for enterprise environments with cutting-edge features',
+      price: '$60,000/project',
+      marketPrice: '$120000-600000/project',
+      features: [
+        'Advanced 5G Architecture',
+        'Small Cell Deployment',
+        'Network Slicing',
+        'Edge Computing Integration',
+        'IoT Connectivity',
+        'Performance Optimization',
+        'Security Implementation',
+        'Compliance Management'
+      ],
+      benefits: [
+        'Ultra-fast connectivity',
+        'Low latency applications',
+        'Massive IoT support',
+        'Future-proof infrastructure'
+      ],
+      category: '5G Technology',
+      popular: true,
+      icon: Wifi
+    },
+    {
+      id: 'iot-platform-enterprise',
+      name: 'IoT Platform Enterprise',
+      description: 'Enterprise IoT platform with advanced analytics, device management, and security',
+      price: '$12,000/month',
+      marketPrice: '$25000-100000/month',
+      features: [
+        'Enterprise IoT Connectivity',
+        'Real-time Data Processing',
+        'Device Management Platform',
+        'Predictive Maintenance',
+        'Edge Analytics',
+        'Security Management',
+        'Scalable Architecture',
+        'Integration Capabilities'
+      ],
+      benefits: [
+        'Enterprise connected operations',
+        'Real-time insights',
+        'Predictive maintenance',
+        'Operational efficiency'
+      ],
+      category: 'IoT',
+      popular: true,
+      icon: Wifi
+    },
+    {
+      id: 'cyber-defense-enterprise',
+      name: 'Cyber Defense Enterprise',
+      description: 'Enterprise cybersecurity platform with AI-powered threat detection and automated response',
+      price: '$15,000/month',
+      marketPrice: '$30000-120000/month',
+      features: [
+        'Enterprise AI Threat Detection',
+        'Behavioral Analytics',
+        'Automated Response',
+        'Zero-trust Architecture',
+        'Threat Hunting',
+        'Incident Response Automation',
+        'Security Orchestration',
+        'Compliance Monitoring'
+      ],
+      benefits: [
+        'Enterprise threat protection',
+        'Automated response',
+        'Reduced security incidents',
+        'Compliance assurance'
+      ],
+      category: 'Security',
+      popular: true,
+      icon: Shield
+    },
+    {
+      id: 'digital-twin-enterprise-pro',
+      name: 'Digital Twin Enterprise Pro',
+      description: 'Advanced enterprise digital twin platform with AI-powered monitoring and optimization',
+      price: '$25,000/month',
+      marketPrice: '$50000-200000/month',
+      features: [
+        'Advanced 3D Asset Modeling',
+        'Real-time Monitoring',
+        'AI Predictive Analytics',
+        'Simulation Capabilities',
+        'Performance Optimization',
+        'Maintenance Scheduling',
+        'Data Integration',
+        'Visualization Dashboard'
+      ],
+      benefits: [
+        'Advanced asset optimization',
+        'AI-powered maintenance',
+        'Cost reduction',
+        'Performance insights'
+      ],
+      category: 'Digital Twin',
+      popular: true,
+      icon: Monitor
+    },
+    {
+      id: 'metaverse-enterprise-pro',
+      name: 'Metaverse Enterprise Pro',
+      description: 'Complete enterprise metaverse platform with advanced AI-powered collaboration and business features',
+      price: '$100,000/project',
+      marketPrice: '$200000-1000000/project',
+      features: [
+        'AI-Powered Virtual Offices',
+        'Advanced Avatar Systems',
+        'Virtual Economy',
+        'AI Business Collaboration',
+        'AR/VR Integration',
+        '3D Asset Creation',
+        'Multi-platform Support',
+        'Blockchain Integration'
+      ],
+      benefits: [
+        'AI-powered collaboration',
+        'Advanced business models',
+        'Enhanced engagement',
+        'Innovation leadership'
+      ],
+      category: 'Metaverse',
+      popular: true,
+      icon: Globe
+    },
+    {
+      id: 'quantum-infrastructure-enterprise',
+      name: 'Quantum Infrastructure Enterprise',
+      description: 'Enterprise quantum computing infrastructure with advanced security and hybrid systems',
+      price: '$100,000/project',
+      marketPrice: '$200000-1000000/project',
+      features: [
+        'Enterprise Quantum Hardware',
+        'Quantum Software Integration',
+        'Quantum Network Setup',
+        'Quantum Security Implementation',
+        'Quantum Algorithm Development',
+        'Quantum Performance Optimization',
+        'Quantum Maintenance',
+        'Quantum Training'
+      ],
+      benefits: [
+        'Enterprise quantum computing',
+        'Revolutionary problem solving',
+        'Future-proof technology',
+        'Competitive advantage'
+      ],
+      category: 'Quantum Technology',
+      popular: true,
+      icon: Cpu
+    },
+    {
+      id: 'holographic-enterprise',
+      name: 'Holographic Enterprise Systems',
+      description: 'Enterprise holographic display and interaction systems for immersive business applications',
+      price: '$75,000/project',
+      marketPrice: '$150000-750000/project',
+      features: [
+        'Enterprise Holographic Displays',
+        '3D Content Creation',
+        'Gesture Recognition',
+        'Spatial Computing',
+        'AR/VR Integration',
+        'Real-time Rendering',
+        'Multi-user Collaboration',
+        'Custom Applications'
+      ],
+      benefits: [
+        'Enterprise immersive experience',
+        'Enhanced productivity',
+        'Cutting-edge technology',
+        'Competitive differentiation'
+      ],
+      category: 'Holographic Technology',
+      popular: true,
+      icon: Eye
+    },
+    {
+      id: 'ai-infrastructure-ultra',
+      name: 'AI Infrastructure Ultra',
+      description: 'Ultra-advanced AI infrastructure with cutting-edge GPU clusters and ML operations',
+      price: '$25,000/month',
+      marketPrice: '$50000-200000/month',
+      features: [
+        'Ultra-Advanced GPU Clusters',
+        'Advanced MLOps',
+        'AI Model Deployment',
+        'Distributed Training',
+        'Model Monitoring',
+        'Auto-scaling AI Services',
+        'Edge AI Integration',
+        'Performance Optimization'
+      ],
+      benefits: [
+        'Ultra-advanced AI performance',
+        'Scalable ML operations',
+        'Cost-effective training',
+        'Production-ready AI'
+      ],
+      category: 'AI Infrastructure',
+      popular: true,
+      icon: Brain
+    },
+    {
+      id: 'zero-trust-ultra',
+      name: 'Zero-Trust Ultra',
+      description: 'Ultra-advanced zero-trust security architecture with AI-powered threat protection',
+      price: '$20,000/month',
+      marketPrice: '$40000-160000/month',
+      features: [
+        'Ultra-Advanced Zero-Trust',
+        'AI Threat Detection',
+        'Identity & Access Management',
+        'Micro-segmentation',
+        'Continuous Monitoring',
+        'Behavioral Analytics',
+        'Automated Response',
+        'Compliance Management'
+      ],
+      benefits: [
+        'Ultra-advanced security posture',
+        'Reduced attack surface',
+        'Continuous monitoring',
+        'Compliance assurance'
+      ],
+      category: 'Security',
+      popular: true,
+      icon: Shield
+    },
+    {
+      id: 'blockchain-ultra',
+      name: 'Blockchain Ultra',
+      description: 'Ultra-advanced blockchain infrastructure with enterprise-grade security and scalability',
+      price: '$75,000/project',
+      marketPrice: '$150000-750000/project',
+      features: [
+        'Ultra-Advanced Blockchain Setup',
+        'Advanced Smart Contracts',
+        'DeFi Platform Creation',
+        'NFT Marketplace Development',
+        'Cryptocurrency Integration',
+        'Web3 Application Development',
+        'Blockchain Security Auditing',
+        'Token Economics Design'
+      ],
+      benefits: [
+        'Ultra-advanced blockchain solutions',
+        'Enhanced security',
+        'Transparent operations',
+        'Future-ready technology'
+      ],
+      category: 'Blockchain',
+      popular: true,
+      icon: Shield
+    },
+    {
+      id: 'edge-computing-ultra',
+      name: 'Edge Computing Ultra',
+      description: 'Ultra-advanced edge computing infrastructure for ultra-low latency applications',
+      price: '$30,000/month',
+      marketPrice: '$60000-300000/month',
+      features: [
+        'Ultra-Advanced Edge Servers',
+        'Real-time Processing',
+        'IoT Device Management',
+        'Content Delivery Optimization',
+        'Latency Reduction',
+        'Bandwidth Optimization',
+        'Edge Security',
+        'Monitoring & Analytics'
+      ],
+      benefits: [
+        'Ultra-low latency',
+        'Ultra-advanced performance',
+        'Cost optimization',
+        'Real-time processing'
+      ],
+      category: 'Edge Computing',
+      popular: true,
+      icon: Cpu
+    },
+    {
+      id: '5g-ultra',
+      name: '5G Ultra',
+      description: 'Ultra-advanced 5G network implementation with cutting-edge features and capabilities',
+      price: '$100,000/project',
+      marketPrice: '$200000-1000000/project',
+      features: [
+        'Ultra-Advanced 5G Architecture',
+        'Small Cell Deployment',
+        'Network Slicing',
+        'Edge Computing Integration',
+        'IoT Connectivity',
+        'Performance Optimization',
+        'Security Implementation',
+        'Compliance Management'
+      ],
+      benefits: [
+        'Ultra-fast connectivity',
+        'Low latency applications',
+        'Massive IoT support',
+        'Future-proof infrastructure'
+      ],
+      category: '5G Technology',
+      popular: true,
+      icon: Wifi
+    },
+    {
+      id: 'iot-platform-ultra',
+      name: 'IoT Platform Ultra',
+      description: 'Ultra-advanced IoT platform with cutting-edge analytics and device management',
+      price: '$20,000/month',
+      marketPrice: '$40000-200000/month',
+      features: [
+        'Ultra-Advanced IoT Connectivity',
+        'Real-time Data Processing',
+        'Device Management Platform',
+        'Predictive Maintenance',
+        'Edge Analytics',
+        'Security Management',
+        'Scalable Architecture',
+        'Integration Capabilities'
+      ],
+      benefits: [
+        'Ultra-advanced connected operations',
+        'Real-time insights',
+        'Predictive maintenance',
+        'Operational efficiency'
+      ],
+      category: 'IoT',
+      popular: true,
+      icon: Wifi
+    },
+    {
+      id: 'cyber-defense-ultra',
+      name: 'Cyber Defense Ultra',
+      description: 'Ultra-advanced cybersecurity platform with AI-powered threat detection and response',
+      price: '$25,000/month',
+      marketPrice: '$50000-200000/month',
+      features: [
+        'Ultra-Advanced AI Threat Detection',
+        'Behavioral Analytics',
+        'Automated Response',
+        'Zero-trust Architecture',
+        'Threat Hunting',
+        'Incident Response Automation',
+        'Security Orchestration',
+        'Compliance Monitoring'
+      ],
+      benefits: [
+        'Ultra-advanced threat protection',
+        'Automated response',
+        'Reduced security incidents',
+        'Compliance assurance'
+      ],
+      category: 'Security',
+      popular: true,
+      icon: Shield
+    },
+    {
+      id: 'digital-twin-ultra',
+      name: 'Digital Twin Ultra',
+      description: 'Ultra-advanced digital twin platform with AI-powered monitoring and optimization',
+      price: '$40,000/month',
+      marketPrice: '$80000-400000/month',
+      features: [
+        'Ultra-Advanced 3D Asset Modeling',
+        'Real-time Monitoring',
+        'AI Predictive Analytics',
+        'Simulation Capabilities',
+        'Performance Optimization',
+        'Maintenance Scheduling',
+        'Data Integration',
+        'Visualization Dashboard'
+      ],
+      benefits: [
+        'Ultra-advanced asset optimization',
+        'AI-powered maintenance',
+        'Cost reduction',
+        'Performance insights'
+      ],
+      category: 'Digital Twin',
+      popular: true,
+      icon: Monitor
+    },
+    {
+      id: 'metaverse-ultra',
+      name: 'Metaverse Ultra',
+      description: 'Ultra-advanced metaverse platform with cutting-edge AI-powered collaboration and business features',
+      price: '$200,000/project',
+      marketPrice: '$400000-2000000/project',
+      features: [
+        'Ultra-Advanced AI Virtual Offices',
+        'Advanced Avatar Systems',
+        'Virtual Economy',
+        'AI Business Collaboration',
+        'AR/VR Integration',
+        '3D Asset Creation',
+        'Multi-platform Support',
+        'Blockchain Integration'
+      ],
+      benefits: [
+        'Ultra-advanced AI collaboration',
+        'Advanced business models',
+        'Enhanced engagement',
+        'Innovation leadership'
+      ],
+      category: 'Metaverse',
+      popular: true,
+      icon: Globe
     }
   ];
 
@@ -587,7 +1421,8 @@ const ItServicesPage: React.FC = () => {
     { id: 'AI Infrastructure', name: 'AI Infrastructure', count: services.filter(s => s.category === 'AI Infrastructure').length },
     { id: 'IoT', name: 'IoT', count: services.filter(s => s.category === 'IoT').length },
     { id: 'Digital Twin', name: 'Digital Twin', count: services.filter(s => s.category === 'Digital Twin').length },
-    { id: 'Metaverse', name: 'Metaverse', count: services.filter(s => s.category === 'Metaverse').length }
+    { id: 'Metaverse', name: 'Metaverse', count: services.filter(s => s.category === 'Metaverse').length },
+    { id: 'Holographic Technology', name: 'Holographic Technology', count: services.filter(s => s.category === 'Holographic Technology').length }
   ];
 
   const filteredServices = services.filter(service => {

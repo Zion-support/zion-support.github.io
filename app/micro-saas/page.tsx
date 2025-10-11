@@ -48,319 +48,370 @@ import Footer from '../components/Footer';
 const MicroSaasPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-<<<<<<< HEAD
-  const products = [
-    {
-      title: 'Zion Analytics Pro',
-=======
   const services = [
     {
       id: 'zion-analytics-pro',
       name: 'Zion Analytics Pro',
->>>>>>> origin/main
       description: 'Advanced real-time business intelligence and analytics platform with AI-powered insights and predictive modeling.',
       price: '$89/month',
       marketPrice: '$150-500/month',
-<<<<<<< HEAD
-      benefits: ['Data-driven decision making', 'Real-time insights', 'Custom dashboards', 'Automated reporting'],
-      icon: BarChart,
+      features: ['Real-time data visualization', 'AI-powered predictive analytics'],
+      benefits: ['Data-driven decision making', 'Real-time insights'],
       category: 'Analytics',
-      popular: true
+      popular: true,
+      icon: BarChart3,
+      link: 'https://analytics.ziontechgroup.com'
     },
     {
-      title: 'Zion Chat AI',
+      id: 'zion-chat-ai',
+      name: 'Zion Chat AI',
       description: 'Next-generation AI customer support platform with advanced NLP, sentiment analysis, and multi-channel support.',
       features: ['GPT-4 Powered AI', 'Multi-channel Support', 'Advanced Sentiment Analysis', 'Automated Ticket Routing', 'Live Agent Handoff', 'Multi-language Support'],
       price: '$149/month',
       marketPrice: '$300-800/month',
       benefits: ['24/7 customer support', 'Reduced response time', 'Improved customer satisfaction', 'Lead generation'],
-      icon: MessageCircle,
       category: 'Customer Service',
-      popular: true
+      popular: true,
+      icon: MessageCircle,
+      link: 'https://chat.ziontechgroup.com'
     },
     {
-      title: 'Zion Security Shield',
+      id: 'zion-security-shield',
+      name: 'Zion Security Shield',
       description: 'Comprehensive cybersecurity monitoring and threat detection platform for small to medium businesses.',
       features: ['Real-time Threat Monitoring', 'Vulnerability Scanning', 'Incident Response', 'Security Analytics', 'Compliance Reporting', 'Employee Training'],
       price: '$199/month',
       marketPrice: '$400-1200/month',
       benefits: ['Enhanced security posture', 'Reduced risk exposure', 'Compliance assurance', 'Peace of mind'],
-      icon: Shield,
       category: 'Security',
-      popular: true
+      popular: true,
+      icon: Shield,
+      link: 'https://security.ziontechgroup.com'
     },
     {
-      title: 'Zion Cloud Vault',
+      id: 'zion-cloud-vault',
+      name: 'Zion Cloud Vault',
       description: 'Secure cloud backup and disaster recovery solution with automated data protection and cross-platform sync.',
       features: ['Automated Backups', 'Cross-platform Sync', 'Version Control', 'Disaster Recovery', 'Data Encryption', 'Compliance Support'],
       price: '$79/month',
       marketPrice: '$150-400/month',
       benefits: ['Data protection', 'Business continuity', 'Cost-effective storage', 'Easy recovery'],
-      icon: Database,
       category: 'Storage',
-      popular: false
+      popular: true,
+      icon: Database,
+      link: 'https://vault.ziontechgroup.com'
     },
     {
-      title: 'Zion Content Studio',
+      id: 'zion-content-studio',
+      name: 'Zion Content Studio',
       description: 'AI-powered content creation and management platform for blogs, social media, and marketing materials.',
       features: ['AI Content Generation', 'SEO Optimization', 'Multi-platform Publishing', 'Content Calendar', 'Brand Voice Customization', 'Performance Analytics'],
       price: '$129/month',
       marketPrice: '$250-600/month',
       benefits: ['Save 80% content creation time', 'Consistent brand voice', 'SEO optimization', 'Multi-platform publishing'],
-      icon: FileText,
       category: 'Content',
-      popular: true
+      popular: true,
+      icon: FileText,
+      link: 'https://content.ziontechgroup.com'
     },
     {
-      title: 'Zion CRM Intelligence',
+      id: 'zion-crm-intelligence',
+      name: 'Zion CRM Intelligence',
       description: 'AI-enhanced customer relationship management with predictive analytics and automation capabilities.',
       features: ['AI-powered Lead Scoring', 'Automated Follow-ups', 'Predictive Analytics', 'Sales Forecasting', 'Customer Segmentation', 'Integration Hub'],
       price: '$179/month',
       marketPrice: '$300-800/month',
       benefits: ['Improved sales performance', 'Better customer relationships', 'Automated processes', 'Data-driven insights'],
-      icon: Users,
       category: 'CRM',
-      popular: true
+      popular: true,
+      icon: Users,
+      link: 'https://crm.ziontechgroup.com'
     },
     {
-      title: 'Zion Data Sync',
+      id: 'zion-data-sync',
+      name: 'Zion Data Sync',
       description: 'Intelligent data integration and synchronization platform for seamless data flow across systems.',
       features: ['Real-time Data Sync', 'Multi-source Integration', 'Data Transformation', 'Error Handling', 'Monitoring Dashboard', 'API Management'],
       price: '$149/month',
       marketPrice: '$250-700/month',
       benefits: ['Unified data view', 'Reduced manual work', 'Improved accuracy', 'Real-time updates'],
-      icon: Database,
       category: 'Data',
-      popular: false
+      popular: true,
+      icon: Database,
+      link: 'https://sync.ziontechgroup.com'
     },
     {
-      title: 'Zion Lead Magnet',
+      id: 'zion-lead-magnet',
+      name: 'Zion Lead Magnet',
       description: 'Advanced lead generation and qualification platform with AI-powered prospect scoring and nurturing.',
       features: ['AI-powered Lead Scoring', 'Multi-channel Lead Capture', 'Automated Lead Nurturing', 'CRM Integration', 'Advanced Analytics', 'A/B Testing'],
       price: '$99/month',
       marketPrice: '$200-600/month',
       benefits: ['Increase qualified leads by 300%', 'Automated lead nurturing', 'Better conversion rates', 'ROI optimization'],
-      icon: Target,
       category: 'Marketing',
-      popular: true
+      popular: true,
+      icon: Target,
+      link: 'https://leads.ziontechgroup.com'
     },
     {
-      title: 'Zion Project Master',
+      id: 'zion-project-master',
+      name: 'Zion Project Master',
       description: 'AI-powered project management and team collaboration platform with intelligent task allocation.',
       features: ['AI Task Allocation', 'Resource Planning', 'Progress Tracking', 'Team Collaboration', 'Time Tracking', 'Performance Analytics'],
       price: '$99/month',
       marketPrice: '$200-500/month',
       benefits: ['Improved project success', 'Better resource utilization', 'Enhanced collaboration', 'Automated workflows'],
-      icon: Calendar,
       category: 'Project Management',
-      popular: false
+      popular: true,
+      icon: CheckSquare,
+      link: 'https://projects.ziontechgroup.com'
     },
     {
-      title: 'Zion Email Automation',
+      id: 'zion-email-automation',
+      name: 'Zion Email Automation',
       description: 'Advanced email marketing automation platform with AI-powered personalization and optimization.',
       features: ['AI Personalization', 'Automated Campaigns', 'A/B Testing', 'Behavioral Triggers', 'Analytics Dashboard', 'Template Library'],
       price: '$89/month',
       marketPrice: '$150-400/month',
       benefits: ['Higher open rates', 'Better engagement', 'Automated campaigns', 'Improved ROI'],
-      icon: Mail,
       category: 'Marketing',
-      popular: true
+      popular: true,
+      icon: Mail,
+      link: 'https://email.ziontechgroup.com'
     },
     {
-      title: 'Zion Inventory Smart',
+      id: 'zion-inventory-smart',
+      name: 'Zion Inventory Smart',
       description: 'Intelligent inventory management system with demand forecasting and automated reordering.',
       features: ['Demand Forecasting', 'Automated Reordering', 'Multi-location Management', 'Supplier Integration', 'Cost Optimization', 'Analytics Dashboard'],
       price: '$159/month',
       marketPrice: '$300-800/month',
       benefits: ['Reduced stockouts', 'Lower inventory costs', 'Improved cash flow', 'Better supplier relationships'],
-      icon: Package,
       category: 'Inventory',
-      popular: false
+      popular: true,
+      icon: Package,
+      link: 'https://inventory.ziontechgroup.com'
     },
     {
-      title: 'Zion Workflow Automation',
+      id: 'zion-workflow-automation',
+      name: 'Zion Workflow Automation',
       description: 'No-code workflow automation platform for streamlining business processes and increasing efficiency.',
       features: ['Visual Workflow Builder', 'API Integrations', 'Conditional Logic', 'Task Automation', 'Approval Workflows', 'Performance Monitoring'],
       price: '$119/month',
       marketPrice: '$200-600/month',
       benefits: ['Process efficiency', 'Reduced errors', 'Cost savings', 'Scalable automation'],
-      icon: Settings,
       category: 'Automation',
-      popular: true
+      popular: true,
+      icon: Settings,
+      link: 'https://workflow.ziontechgroup.com'
     },
     {
-      title: 'Zion Performance Monitor',
+      id: 'zion-performance-monitor',
+      name: 'Zion Performance Monitor',
       description: 'Comprehensive application and infrastructure monitoring with AI-powered alerting and optimization.',
       features: ['Real-time Monitoring', 'AI-powered Alerts', 'Performance Analytics', 'Uptime Tracking', 'Error Tracking', 'Capacity Planning'],
       price: '$139/month',
       marketPrice: '$250-700/month',
       benefits: ['Improved uptime', 'Faster issue resolution', 'Better performance', 'Proactive monitoring'],
-      icon: Monitor,
       category: 'Monitoring',
-      popular: false
+      popular: true,
+      icon: Monitor,
+      link: 'https://monitor.ziontechgroup.com'
     },
     {
-      title: 'Zion Compliance Manager',
+      id: 'zion-compliance-manager',
+      name: 'Zion Compliance Manager',
       description: 'Automated compliance management platform for various industry standards and regulations.',
       features: ['Compliance Tracking', 'Automated Reporting', 'Document Management', 'Audit Trail', 'Risk Assessment', 'Training Management'],
       price: '$199/month',
       marketPrice: '$400-1000/month',
       benefits: ['Reduced compliance risk', 'Automated reporting', 'Better documentation', 'Cost savings'],
-      icon: CheckCircle,
       category: 'Compliance',
-      popular: false
+      popular: false,
+      icon: CheckCircle,
+      link: 'https://compliance.ziontechgroup.com'
     },
     {
-      title: 'Zion Social Scheduler',
+      id: 'zion-social-scheduler',
+      name: 'Zion Social Scheduler',
       description: 'AI-powered social media management platform with content scheduling and performance analytics.',
       features: ['AI Content Suggestions', 'Multi-platform Scheduling', 'Performance Analytics', 'Engagement Tracking', 'Hashtag Optimization', 'Competitor Analysis'],
       price: '$79/month',
       marketPrice: '$150-400/month',
       benefits: ['Increased engagement', 'Time savings', 'Better content strategy', 'Improved reach'],
-      icon: Globe,
       category: 'Social Media',
-      popular: true
+      popular: true,
+      icon: Globe,
+      link: 'https://social.ziontechgroup.com'
     },
     {
-      title: 'Zion AI Video Editor',
+      id: 'zion-ai-video-editor',
+      name: 'Zion AI Video Editor',
       description: 'AI-powered video editing platform with automated editing, transcription, and optimization.',
       features: ['AI Auto-editing', 'Voice Transcription', 'Subtitle Generation', 'Thumbnail Creation', 'Multi-format Export', 'Cloud Storage'],
       price: '$99/month',
       marketPrice: '$200-500/month',
       benefits: ['Faster video production', 'Professional quality', 'Automated processes', 'Cost-effective editing'],
-      icon: Eye,
       category: 'Video',
-      popular: false
+      popular: true,
+      icon: Eye,
+      link: 'https://video.ziontechgroup.com'
     },
     {
-      title: 'Zion AI Translator Pro',
+      id: 'zion-ai-translator-pro',
+      name: 'Zion AI Translator Pro',
       description: 'Advanced translation platform with AI-powered language detection and context-aware translation.',
       features: ['Real-time Translation', 'Document Translation', 'Voice Translation', 'Context Awareness', 'Quality Scoring', 'API Integration'],
       price: '$69/month',
       marketPrice: '$120-300/month',
       benefits: ['Global communication', 'Accurate translations', 'Time savings', 'Cost-effective solution'],
-      icon: Globe,
       category: 'Translation',
-      popular: false
+      popular: true,
+      icon: Globe,
+      link: 'https://translate.ziontechgroup.com'
     },
     {
-      title: 'Zion AI Code Reviewer',
+      id: 'zion-ai-code-reviewer',
+      name: 'Zion AI Code Reviewer',
       description: 'Intelligent code review platform with automated analysis, suggestions, and security scanning.',
       features: ['Automated Code Review', 'Security Scanning', 'Performance Analysis', 'Best Practice Suggestions', 'Team Collaboration', 'Integration Support'],
       price: '$149/month',
       marketPrice: '$250-600/month',
       benefits: ['Improved code quality', 'Faster reviews', 'Better security', 'Team learning'],
-      icon: Code,
       category: 'Development',
-      popular: true
+      popular: true,
+      icon: Code,
+      link: 'https://code.ziontechgroup.com'
     },
     {
-      title: 'Zion Customer Insights Pro',
+      id: 'zion-customer-insights-pro',
+      name: 'Zion Customer Insights Pro',
       description: 'Advanced customer analytics platform with AI-powered insights and behavioral analysis.',
       features: ['Customer Segmentation', 'Behavioral Analysis', 'Predictive Analytics', 'Churn Prediction', 'Personalization Engine', 'ROI Tracking'],
       price: '$189/month',
       marketPrice: '$350-800/month',
       benefits: ['Better customer understanding', 'Improved retention', 'Personalized experiences', 'Data-driven decisions'],
-      icon: Users,
       category: 'Analytics',
-      popular: true
+      popular: true,
+      icon: Users,
+      link: 'https://insights.ziontechgroup.com'
     },
     {
-      title: 'Zion AI Email Assistant',
+      id: 'zion-ai-email-assistant',
+      name: 'Zion AI Email Assistant',
       description: 'Intelligent email management platform with AI-powered sorting, responses, and scheduling.',
       features: ['Smart Email Sorting', 'AI Response Suggestions', 'Email Scheduling', 'Priority Detection', 'Spam Filtering', 'Analytics Dashboard'],
       price: '$59/month',
       marketPrice: '$100-250/month',
       benefits: ['Improved productivity', 'Better email management', 'Time savings', 'Reduced email stress'],
+      category: 'Email',
+      popular: true,
       icon: Mail,
-      category: 'Productivity',
-      popular: false
+      link: 'https://email-assistant.ziontechgroup.com'
     },
     {
-      title: 'Zion AI Meeting Assistant',
+      id: 'zion-ai-meeting-assistant',
+      name: 'Zion AI Meeting Assistant',
       description: 'AI-powered meeting management with transcription, action items, and follow-up automation.',
       features: ['Meeting Transcription', 'Action Item Extraction', 'Follow-up Automation', 'Meeting Analytics', 'Integration Support', 'Voice Recognition'],
       price: '$89/month',
       marketPrice: '$150-400/month',
       benefits: ['Better meeting outcomes', 'Automated follow-ups', 'Improved productivity', 'Better documentation'],
-      icon: Calendar,
       category: 'Productivity',
-      popular: true
+      popular: true,
+      icon: Calendar,
+      link: 'https://meetings.ziontechgroup.com'
     },
     {
-      title: 'Zion AI SEO Optimizer',
+      id: 'zion-ai-seo-optimizer',
+      name: 'Zion AI SEO Optimizer',
       description: 'Comprehensive SEO optimization platform with AI-powered content analysis and ranking improvements.',
       features: ['Content Analysis', 'Keyword Optimization', 'Ranking Tracking', 'Competitor Analysis', 'Technical SEO', 'Performance Monitoring'],
       price: '$129/month',
       marketPrice: '$250-600/month',
       benefits: ['Improved search rankings', 'Better organic traffic', 'Content optimization', 'Competitive advantage'],
-      icon: Target,
       category: 'SEO',
-      popular: true
+      popular: true,
+      icon: Target,
+      link: 'https://seo.ziontechgroup.com'
     },
     {
-      title: 'Zion AI Data Cleaner',
+      id: 'zion-ai-data-cleaner',
+      name: 'Zion AI Data Cleaner',
       description: 'Intelligent data cleaning and validation platform with automated quality assurance.',
       features: ['Automated Data Cleaning', 'Duplicate Detection', 'Data Validation', 'Quality Scoring', 'Error Correction', 'Data Enrichment'],
       price: '$79/month',
       marketPrice: '$150-400/month',
       benefits: ['Improved data quality', 'Reduced manual work', 'Better insights', 'Cost savings'],
-      icon: Database,
       category: 'Data',
-      popular: false
+      popular: true,
+      icon: Database,
+      link: 'https://data-cleaner.ziontechgroup.com'
     },
     {
-      title: 'Zion AI Contract Analyzer',
+      id: 'zion-ai-contract-analyzer',
+      name: 'Zion AI Contract Analyzer',
       description: 'AI-powered contract analysis platform with risk assessment and compliance checking.',
       features: ['Contract Analysis', 'Risk Assessment', 'Compliance Checking', 'Clause Extraction', 'Automated Summaries', 'Version Comparison'],
       price: '$199/month',
       marketPrice: '$400-1000/month',
       benefits: ['Faster contract review', 'Reduced risk', 'Better compliance', 'Time savings'],
-      icon: FileText,
       category: 'Legal',
-      popular: false
+      popular: true,
+      icon: FileText,
+      link: 'https://contracts.ziontechgroup.com'
     },
     {
-      title: 'Zion AI Survey Builder',
+      id: 'zion-ai-survey-builder',
+      name: 'Zion AI Survey Builder',
       description: 'Intelligent survey creation platform with AI-powered question suggestions and analytics.',
       features: ['AI Question Suggestions', 'Multi-format Surveys', 'Real-time Analytics', 'Response Analysis', 'Automated Reports', 'Integration Support'],
       price: '$69/month',
       marketPrice: '$120-300/month',
       benefits: ['Better survey design', 'Improved response rates', 'Automated analysis', 'Actionable insights'],
-      icon: CheckCircle,
       category: 'Research',
-      popular: false
+      popular: true,
+      icon: BarChart3,
+      link: 'https://surveys.ziontechgroup.com'
     },
     {
-      title: 'Zion AI Accounting Assistant',
+      id: 'zion-ai-accounting-assistant',
+      name: 'Zion AI Accounting Assistant',
       description: 'AI-powered accounting platform with automated bookkeeping and financial analysis.',
       features: ['Automated Bookkeeping', 'Expense Categorization', 'Financial Analysis', 'Tax Preparation', 'Invoice Processing', 'Compliance Reporting'],
       price: '$149/month',
       marketPrice: '$250-600/month',
       benefits: ['Reduced accounting costs', 'Improved accuracy', 'Better financial insights', 'Time savings'],
-      icon: DollarSign,
       category: 'Accounting',
-      popular: true
+      popular: true,
+      icon: DollarSign,
+      link: 'https://accounting.ziontechgroup.com'
     },
     {
-      title: 'Zion AI Recruitment Pro',
+      id: 'zion-ai-recruitment-pro',
+      name: 'Zion AI Recruitment Pro',
       description: 'Intelligent recruitment platform with AI-powered candidate screening and matching.',
       features: ['AI Candidate Screening', 'Resume Analysis', 'Skill Matching', 'Interview Scheduling', 'Background Checks', 'Analytics Dashboard'],
       price: '$179/month',
       marketPrice: '$300-800/month',
       benefits: ['Faster hiring process', 'Better candidate matches', 'Reduced bias', 'Improved efficiency'],
-      icon: Users,
       category: 'HR',
-      popular: true
+      popular: true,
+      icon: Users,
+      link: 'https://recruitment.ziontechgroup.com'
     },
     {
-      title: 'Zion AI Content Moderation',
+      id: 'zion-ai-content-moderation',
+      name: 'Zion AI Content Moderation',
       description: 'AI-powered content moderation platform with automated filtering and compliance management.',
       features: ['Automated Content Filtering', 'Sentiment Analysis', 'Compliance Checking', 'Real-time Monitoring', 'Custom Rules', 'Analytics Dashboard'],
       price: '$159/month',
       marketPrice: '$300-700/month',
       benefits: ['Reduced moderation costs', 'Consistent enforcement', 'Better user experience', 'Compliance assurance'],
+      category: 'Content Moderation',
+      popular: true,
       icon: Shield,
+      link: 'https://moderation.ziontechgroup.com'
       category: 'Moderation',
       popular: false
     },
