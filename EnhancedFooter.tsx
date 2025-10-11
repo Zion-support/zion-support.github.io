@@ -139,10 +139,6 @@ const EnhancedFooter: React.FC = () => {
               <MapPin className="w-5 h-5 text-blue-400" />
               <div>
                 <p className="text-sm text-gray-400">Address</p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
                 <p className="text-white">123 Tech Street, Silicon Valley, CA 94000</p>
               </div>
             </div>
@@ -152,14 +148,9 @@ const EnhancedFooter: React.FC = () => {
             <p className="text-gray-400 text-sm">
               © {currentYear} Zion Tech Group. All rights reserved.
             </p>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
                 <p className="text-white">123 Tech Street, Innovation City</p>
               </div>
             </div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
           </div>
         
         <div className="border-t border-gray-700 mt-8 pt-8">
