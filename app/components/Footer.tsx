@@ -1,10 +1,9 @@
-<<<<<<< HEAD
 'use client';
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users, ArrowRight, Shield, BarChart, Settings, Globe, Database, Smartphone, Lock, TrendingUp, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Award, Rocket, Layers, Workflow, BarChart3, MessageSquare, Headphones, Monitor, HardDrive, Wifi, Printer, Router, Package } from 'lucide-react';
 
-const Footer: React.FC = memo(() => {
+const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
   
   const aiServices = [
@@ -142,14 +141,14 @@ const Footer: React.FC = memo(() => {
     { name: 'Consultation', url: '/consultation' },
     { name: 'Custom Development', url: '/custom-software' }
   ]
-=======
-'use client'
-import React from 'react'
-import Link from 'next/link'
-import { Brain, Mail, Phone, MapPin, ArrowRight } from 'lucide-react'
->>>>>>> origin/main
 
-const Footer: React.FC = () => {
+  const newServices = [
+    { name: 'AI Climate Solutions Pro', url: '/ai-climate-solutions-pro', description: 'Climate intelligence & sustainability' },
+    { name: 'AI Drug Discovery Pro', url: '/ai-drug-discovery-pro', description: 'Pharmaceutical AI research' },
+    { name: 'Enterprise Cloud Solutions', url: '/enterprise-cloud-solutions', description: 'Comprehensive cloud transformation' },
+    { name: 'AI Enterprise Automation Suite', url: '/ai-enterprise-automation-suite', description: 'Complete AI automation platform' }
+  ]
+
   return (
     <footer className="bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -186,33 +185,33 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold text-cyan-400">Services</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/services" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                <Link to="/services" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
                   All Services
                 </Link>
               </li>
               <li>
-                <Link href="/ai-services" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                <Link to="/ai-services" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
                   AI Services
                 </Link>
               </li>
               <li>
-                <Link href="/it-services" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                <Link to="/it-services" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
                   IT Services
                 </Link>
               </li>
               <li>
-                <Link href="/cybersecurity" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
-                  Cybersecurity
+                <Link to="/micro-saas" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                  Micro SAAS
                 </Link>
               </li>
               <li>
-                <Link href="/data-analytics" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
-                  Data Analytics
+                <Link to="/ai-climate-solutions-pro" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                  Climate Solutions Pro
                 </Link>
               </li>
               <li>
-                <Link href="/cloud-infrastructure" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
-                  Cloud Infrastructure
+                <Link to="/ai-drug-discovery-pro" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                  Drug Discovery Pro
                 </Link>
               </li>
             </ul>
@@ -223,27 +222,27 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold text-cyan-400">Company</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/careers" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                <Link to="/careers" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
                   Careers
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                <Link to="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
                   Blog
                 </Link>
               </li>
               <li>
-                <Link href="/case-studies" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                <Link to="/case-studies" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
                   Case Studies
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
                   Contact
                 </Link>
               </li>
@@ -255,27 +254,27 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold text-cyan-400">Resources</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                <Link to="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
                   Blog
                 </Link>
               </li>
               <li>
-                <Link href="/case-studies" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                <Link to="/case-studies" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
                   Case Studies
                 </Link>
               </li>
               <li>
-                <Link href="/tutorials" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                <Link to="/tutorials" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
                   Tutorials
                 </Link>
               </li>
               <li>
-                <Link href="/support" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                <Link to="/support" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
                   Support
                 </Link>
               </li>
               <li>
-                <Link href="/demo" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                <Link to="/demo" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
                   Demo
                 </Link>
               </li>
@@ -288,19 +287,23 @@ const Footer: React.FC = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-cyan-400" />
-                <span className="text-gray-300 text-sm">info@ziontechgroup.com</span>
+                <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 text-sm hover:text-cyan-400 transition-colors">
+                  kleber@ziontechgroup.com
+                </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-4 h-4 text-cyan-400" />
-                <span className="text-gray-300 text-sm">+1 (555) 123-4567</span>
+                <a href="tel:+13024640950" className="text-gray-300 text-sm hover:text-cyan-400 transition-colors">
+                  +1 (302) 464-0950
+                </a>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-4 h-4 text-cyan-400" />
-                <span className="text-gray-300 text-sm">San Francisco, CA</span>
+                <span className="text-gray-300 text-sm">364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
             </div>
             <Link 
-              href="/consultation" 
+              to="/consultation" 
               className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105"
             >
               <span>Get Started</span>
@@ -316,13 +319,13 @@ const Footer: React.FC = () => {
               © 2024 Zion Tech Group. All rights reserved.
             </div>
             <div className="flex space-x-6">
-              <Link href="/privacy" className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 text-sm">
+              <Link to="/privacy" className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 text-sm">
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 text-sm">
+              <Link to="/terms" className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 text-sm">
                 Terms of Service
               </Link>
-              <Link href="/cookies" className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 text-sm">
+              <Link to="/cookies" className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 text-sm">
                 Cookie Policy
               </Link>
             </div>
@@ -333,4 +336,4 @@ const Footer: React.FC = () => {
   );
 };
 
-export default Footer
+export default Footer;

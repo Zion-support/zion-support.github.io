@@ -110,7 +110,6 @@ const PricingPage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gray-50">
       <Helmet>
         <title>Pricing - Zion Tech Group | Transparent AI & IT Pricing</title>
@@ -282,97 +281,3 @@ const PricingPage: React.FC = () => {
 };
 
 export default PricingPage;
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Transparent <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Pricing</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Choose the perfect plan for your business needs. All plans include our core AI and IT services.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
-              <div
-                key={index}
-                className={`relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 ${
-                  plan.popular ? 'ring-2 ring-purple-400 scale-105' : ''
-                }`}
-              >
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-1 rounded-full text-sm font-medium flex items-center">
-                      <Star className="w-4 h-4 mr-1" />
-                      Most Popular
-                    </div>
-                  </div>
-                )}
-                
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <p className="text-gray-300 mb-4">{plan.description}</p>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-5xl font-bold text-cyan-400">{plan.price}</span>
-                    <span className="text-gray-300 ml-1">{plan.period}</span>
-                  </div>
-                </div>
-
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center">
-                      <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      <span className="text-gray-300">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <button
-                  className={`w-full py-3 px-6 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 ${
-                    plan.popular
-                      ? 'bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white'
-                      : 'bg-white/20 hover:bg-white/30 text-white border border-white/30'
-                  }`}
-                >
-                  Get Started
-                </button>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
-            Need a Custom Solution?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            We understand that every business is unique. Contact us to discuss your specific requirements and get a tailored quote.
-          </p>
-          <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 flex items-center mx-auto">
-            <Zap className="w-5 h-5 mr-2" />
-            Contact Sales
-          </button>
-        </div>
-      </section>
-
-      <Footer />
-    </div>
-  )
-}
-
-export default PricingPage
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe

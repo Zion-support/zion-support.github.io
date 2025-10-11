@@ -55,6 +55,13 @@ const TeamPage = React.lazy(() => import('./app/team/page'))
 // Additional Service Pages
 const CybersecurityPage = React.lazy(() => import('./app/cybersecurity/page'))
 const DataAnalyticsPage = React.lazy(() => import('./app/data-analytics/page'))
+// New AI Service Pages
+const AiClimateSolutionsProPage = React.lazy(() => import('./app/ai-climate-solutions-pro/page'))
+const AiDrugDiscoveryProPage = React.lazy(() => import('./app/ai-drug-discovery-pro/page'))
+// New IT Service Pages
+const EnterpriseCloudSolutionsPage = React.lazy(() => import('./app/enterprise-cloud-solutions/page'))
+// New Micro SAAS Pages
+const AiEnterpriseAutomationSuitePage = React.lazy(() => import('./app/ai-enterprise-automation-suite/page'))
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   usePerformanceMonitor()
@@ -120,6 +127,16 @@ const App: React.FC = () => {
                             {/* Additional Service Pages */}
                             <Route path="/cybersecurity" element={<CybersecurityPage />} />
                             <Route path="/data-analytics" element={<DataAnalyticsPage />} />
+                            
+                            {/* New AI Service Pages */}
+                            <Route path="/ai-climate-solutions-pro" element={<AiClimateSolutionsProPage />} />
+                            <Route path="/ai-drug-discovery-pro" element={<AiDrugDiscoveryProPage />} />
+                            
+                            {/* New IT Service Pages */}
+                            <Route path="/enterprise-cloud-solutions" element={<EnterpriseCloudSolutionsPage />} />
+                            
+                            {/* New Micro SAAS Pages */}
+                            <Route path="/ai-enterprise-automation-suite" element={<AiEnterpriseAutomationSuitePage />} />
                           </Routes>
                         </Suspense>
                       </main>

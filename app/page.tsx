@@ -448,20 +448,24 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       popular: false
     },
     {
-description: 'Modern web applications with responsive design, SEO optimization, and performance tuning Native and cross-platform mobile applications for iOS and Android with modern frameworks',
-      price: '$3,500/project',
-      marketPrice: '$5000-25000/project',
-      features: ['React/Next.js development', 'Responsive design', 'SEO optimization', 'Performance optimization', 'E-commerce solutions', 'CMS integration', 'Native iOS & Android development', 'Cross-platform solutions (React Native', 'Flutter)', 'UI/UX design', 'App store optimization', 'Push notifications', 'Offline functionality'],
-      benefits: ['Modern web presence', 'Better user experience', 'SEO optimization', 'Mobile responsiveness', 'Native performance', 'Cross-platform compatibility', 'Modern UI/UX', 'App store success'],
-      category: 'Mobile Development',
+      icon: Code,
+      title: 'Web Development',
+      description: 'Modern web applications with responsive design, SEO optimization, and performance tuning',
+      price: '$2,500/project',
+      marketPrice: '$4000-20000/project',
+      features: ['React/Next.js development', 'Responsive design', 'SEO optimization', 'Performance optimization', 'E-commerce solutions', 'CMS integration'],
+      benefits: ['Modern web presence', 'Better user experience', 'SEO optimization', 'Mobile responsiveness'],
+      category: 'Web Development',
       popular: true
     },
     {
-description: 'Custom API development, third-party integrations, and microservices architecture Modern web applications and e-commerce platforms with advanced features and optimization',
+      icon: Code,
+      title: 'API Development',
+      description: 'Custom API development, third-party integrations, and microservices architecture',
       price: '$1,500/month',
       marketPrice: '$2500-8000/month',
-      features: ['RESTful API development', 'GraphQL APIs', 'Third-party integrations', 'Microservices architecture', 'API documentation', 'Rate limiting & security', 'Responsive web design', 'E-commerce platforms', 'Progressive Web Apps (PWA)', 'SEO optimization', 'Performance optimization', 'Payment integration'],
-      benefits: ['Seamless integrations', 'Scalable architecture', 'Better performance', 'Developer-friendly APIs', 'Modern web presence', 'Mobile-first design', 'SEO optimization', 'Fast loading times'],
+      features: ['RESTful API development', 'GraphQL APIs', 'Third-party integrations', 'Microservices architecture', 'API documentation', 'Rate limiting & security'],
+      benefits: ['Seamless integrations', 'Scalable architecture', 'Better performance', 'Developer-friendly APIs'],
       category: 'API Development',
       popular: false
     },
