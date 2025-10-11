@@ -1,8 +1,8 @@
-<<<<<<< HEAD
-'use client';
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+'use client'
+import React, { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 import { 
   Brain, 
   Cloud, 
@@ -13,34 +13,10 @@ import {
   Zap, 
   Globe,
   CheckCircle,
-  ArrowRight
-} from 'lucide-react';
-=======
-import React from 'react';
-
-const ServicesPage: React.FC = () => {
-  return (
-    <div className="min-h-screen pt-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Our <span className="text-cyan-400">Services</span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Comprehensive AI and IT solutions to transform your business.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-};
-=======
-'use client'
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { Brain, Cloud, Shield, Code, BarChart, Zap, CheckCircle, ArrowRight } from 'lucide-react'
->>>>>>> origin/main
+  ArrowRight,
+  Search,
+  Filter
+} from 'lucide-react'
 
 const ServicesPage: React.FC = () => {
   const services = [
