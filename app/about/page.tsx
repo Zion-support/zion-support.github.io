@@ -1,3 +1,8 @@
+'use client'
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { Target, Users, Award, CheckCircle, ArrowRight } from 'lucide-react'
 
 const AboutPage: React.FC = () => {
   const values = [
@@ -37,7 +42,6 @@ const AboutPage: React.FC = () => {
   ]
 
   return (
-};
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       
@@ -64,34 +68,35 @@ const AboutPage: React.FC = () => {
                 Our Mission
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                To democratize access to cutting-edge AI and IT solutions, empowering businesses of all sizes to thrive in the digital age.
+                To democratize access to cutting-edge AI technology and help businesses of all sizes 
+                leverage the power of artificial intelligence to drive growth, efficiency, and innovation.
               </p>
               <p className="text-lg text-gray-300 mb-8">
-                We believe technology should be accessible, understandable, and transformative. Our team works tirelessly to create solutions that not only meet today's needs but anticipate tomorrow's challenges.
+                We believe that every business, regardless of size, should have access to the same 
+                powerful AI tools that are transforming industries worldwide.
               </p>
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 flex items-center">
-                Learn More
-                <ArrowRight className="w-5 h-5 ml-2" />
+              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
+                Learn More About Our Solutions
               </button>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
               <h3 className="text-2xl font-bold text-white mb-6">Our Impact</h3>
-              <div className="grid grid-cols-2 gap-6">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">500+</div>
-                  <div className="text-gray-300">Projects Completed</div>
+              <div className="space-y-4">
+                <div className="flex items-center">
+                  <CheckCircle className="w-6 h-6 text-cyan-400 mr-3" />
+                  <span className="text-gray-300">300+ Projects Delivered</span>
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">50+</div>
-                  <div className="text-gray-300">Team Members</div>
+                <div className="flex items-center">
+                  <CheckCircle className="w-6 h-6 text-cyan-400 mr-3" />
+                  <span className="text-gray-300">50+ Happy Clients</span>
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">99%</div>
-                  <div className="text-gray-300">Client Satisfaction</div>
+                <div className="flex items-center">
+                  <CheckCircle className="w-6 h-6 text-cyan-400 mr-3" />
+                  <span className="text-gray-300">99.9% Uptime Guarantee</span>
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">24/7</div>
-                  <div className="text-gray-300">Support Available</div>
+                <div className="flex items-center">
+                  <CheckCircle className="w-6 h-6 text-cyan-400 mr-3" />
+                  <span className="text-gray-300">24/7 Expert Support</span>
                 </div>
               </div>
             </div>
@@ -100,24 +105,23 @@ const AboutPage: React.FC = () => {
       </section>
 
       {/* Values Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Our Values
             </h2>
-            <p className="text-xl text-gray-300">
-              The principles that guide everything we do.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              The principles that guide everything we do
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {values.map((value, index) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6">
                   <value.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4">{value.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">{value.title}</h3>
                 <p className="text-gray-300">{value.description}</p>
               </div>
             ))}
@@ -132,19 +136,16 @@ const AboutPage: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Meet Our Team
             </h2>
-            <p className="text-xl text-gray-300">
-              The talented individuals behind our success.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              The talented individuals behind our success
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {team.map((member, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center">
-                <div className="w-20 h-20 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-10 h-10 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">{member.name}</h3>
-                <p className="text-cyan-400 mb-4">{member.role}</p>
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
+                <div className="w-20 h-20 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full mx-auto mb-4"></div>
+                <h3 className="text-xl font-semibold text-white mb-2">{member.name}</h3>
+                <p className="text-cyan-400 mb-3">{member.role}</p>
                 <p className="text-gray-300">{member.description}</p>
               </div>
             ))}
@@ -153,22 +154,17 @@ const AboutPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Work With Us?
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-xl text-cyan-100 mb-8">
             Let's discuss how we can help transform your business with our AI and IT solutions.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105">
-              Get Started
-            </button>
-            <button className="border border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-medium transition-all duration-300">
-              Contact Us
-            </button>
-          </div>
+          <button className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            Get Started Today
+          </button>
         </div>
       </section>
 

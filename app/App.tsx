@@ -1,22 +1,77 @@
+import React, { Suspense } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
+import { ErrorBoundary } from 'react-error-boundary';
+
+// Components
+import PerformanceMonitor from './components/PerformanceMonitor';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import AppLoadingSpinner from './components/AppLoadingSpinner';
+
+// Pages
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
+import ServicesPage from './pages/ServicesPage';
+import PricingPage from './pages/PricingPage';
+import CaseStudiesPage from './pages/CaseStudiesPage';
+import BlogPage from './pages/BlogPage';
+import TeamPage from './pages/TeamPage';
+import CareersPage from './pages/CareersPage';
+import PrivacyPage from './pages/PrivacyPage';
+import TermsPage from './pages/TermsPage';
+import CookiesPage from './pages/CookiesPage';
+
+// AI Services Pages
+import AiServicesPage from './pages/ai-services/AiServicesPage';
+import AiMarketingPage from './pages/ai-services/AiMarketingPage';
+import AiAutomationPage from './pages/ai-services/AiAutomationPage';
+import AiHealthcarePage from './pages/ai-services/AiHealthcarePage';
+import AiFintechPage from './pages/ai-services/AiFintechPage';
+import AiContentGenerationPage from './pages/ai-services/AiContentGenerationPage';
+import AiDataAnalyticsPage from './pages/ai-services/AiDataAnalyticsPage';
+import AiCybersecurityPage from './pages/ai-services/AiCybersecurityPage';
+import AiWorkflowAutomationPage from './pages/ai-services/AiWorkflowAutomationPage';
+import AiCustomerSupportPage from './pages/ai-services/AiCustomerSupportPage';
+import AiSalesAutomationPage from './pages/ai-services/AiSalesAutomationPage';
+import AiDataVisualizationPage from './pages/ai-services/AiDataVisualizationPage';
+
+// IT Services Pages
+import ItServicesPage from './pages/it-services/ItServicesPage';
+import ItInfrastructurePage from './pages/it-services/ItInfrastructurePage';
+import ItSupportPage from './pages/it-services/ItSupportPage';
+import CloudInfrastructurePage from './pages/it-services/CloudInfrastructurePage';
+import CybersecurityPage from './pages/it-services/CybersecurityPage';
+
+// Emerging Technologies Pages
+import BlockchainPage from './pages/emerging-technologies/BlockchainPage';
+import QuantumComputingPage from './pages/emerging-technologies/QuantumComputingPage';
+import IoTEdgeComputingPage from './pages/emerging-technologies/IoTEdgeComputingPage';
+import ARVRSolutionsPage from './pages/emerging-technologies/ARVRSolutionsPage';
+import AutonomousSystemsPage from './pages/emerging-technologies/AutonomousSystemsPage';
+
+// Micro SaaS Pages
+import MicroSaasPage from './pages/micro-saas/MicroSaasPage';
+
+// Support Pages
+import DocsPage from './pages/support/DocsPage';
+import ApiDocsPage from './pages/support/ApiDocsPage';
+import SupportPage from './pages/support/SupportPage';
+import StatusPage from './pages/support/StatusPage';
+import ConsultationPage from './pages/support/ConsultationPage';
+
+const App: React.FC = () => {
+  return (
+    <ErrorBoundary>
+      <HelmetProvider>
+        <BrowserRouter>
+          <div className="App">
             <PerformanceMonitor />
             <AccessibilityEnhancer />
             <Suspense fallback={<AppLoadingSpinner />}>
               <Routes>
                 {/* Main Pages */}
                 <Route path="/" element={<HomePage />} />
-const App: React.FC = () => {
-    return (
-    <ErrorBoundary>
-      </ErrorBoundary><HelmetProvider>
-        </HelmetProvider><BrowserRouter>
-          </BrowserRouter><div className="App">
-            </div><PerformanceMonitor>
-              </PerformanceMonitor><AccessibilityEnhancer />
-            </PerformanceMonitor>
-            <Suspense fallback={<AppLoadingSpinner />}>
-              <Routes>
-                {/* Main Pages */}
-                </Routes><Route path="/" element={<HomePage />} />
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/contact" element={<ContactPage />} />
                 <Route path="/services" element={<ServicesPage />} />
@@ -28,6 +83,7 @@ const App: React.FC = () => {
                 <Route path="/privacy" element={<PrivacyPage />} />
                 <Route path="/terms" element={<TermsPage />} />
                 <Route path="/cookies" element={<CookiesPage />} />
+                
                 {/* AI Services */}
                 <Route path="/ai-services" element={<AiServicesPage />} />
                 <Route path="/ai-marketing" element={<AiMarketingPage />} />
@@ -42,27 +98,13 @@ const App: React.FC = () => {
                 <Route path="/ai-sales-automation" element={<AiSalesAutomationPage />} />
                 <Route path="/ai-data-visualization" element={<AiDataVisualizationPage />} />
 
-                {/* Additional AI Services */}
-                <Route path="/ai-analytics" element={<AiAnalyticsPage />} />
-                <Route path="/ai-chatbot-builder" element={<AiChatbotBuilderPage />} />
-                <Route path="/ai-crm" element={<AiCrmPage />} />
-                <Route path="/ai-computer-vision" element={<AiComputerVisionPage />} />
-                <Route path="/ai-document-processing" element={<AiDocumentProcessingPage />} />
-                <Route path="/ai-predictive-analytics" element={<AiPredictiveAnalyticsPage />} />
-                <Route path="/ai-edge-computing" element={<AiEdgeComputingPage />} />
-                <Route path="/ai-voice-assistant" element={<AiVoiceAssistantPage />} />
-                <Route path="/ai-recommendation-engine" element={<AiRecommendationEnginePage />} />
-                <Route path="/ai-hr" element={<AiHrPage />} />
-                <Route path="/ai-ecommerce-solutions" element={<AiEcommerceSolutionsPage />} />
-                <Route path="/ai-financial-services" element={<AiFinancialServicesPage />} />
-                <Route path="/ai-voice-solutions" element={<AiVoiceSolutionsPage />} />
-                <Route path="/ai-hr-solutions" element={<AiHrSolutionsPage />} />
                 {/* IT Services */}
                 <Route path="/it-services" element={<ItServicesPage />} />
                 <Route path="/it-infrastructure" element={<ItInfrastructurePage />} />
                 <Route path="/it-support" element={<ItSupportPage />} />
                 <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
                 <Route path="/cybersecurity" element={<CybersecurityPage />} />
+
                 {/* Emerging Technologies */}
                 <Route path="/blockchain" element={<BlockchainPage />} />
                 <Route path="/quantum-computing" element={<QuantumComputingPage />} />
@@ -85,9 +127,7 @@ const App: React.FC = () => {
         </BrowserRouter>
       </HelmetProvider>
     </ErrorBoundary>
-  )
-}
-export default App
-  )
-}
-export default App</div>
+  );
+};
+
+export default App;
