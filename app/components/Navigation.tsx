@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react'
-import Link from 'next/link'
+import { Link } from 'react-router-dom'
 import { Brain, ChevronDown, Menu, X, ArrowRight } from 'lucide-react'
 
 const Navigation: React.FC = () => {
@@ -35,10 +35,10 @@ const Navigation: React.FC = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            <Link href="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Home
             </Link>
-            <Link href="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               About
             </Link>
             <div className="relative group">
@@ -46,37 +46,82 @@ const Navigation: React.FC = () => {
                 Services
                 <ChevronDown className="w-4 h-4 ml-1" />
               </button>
-              <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+              <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                <div className="py-4">
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <h3 className="text-sm font-semibold text-cyan-400 mb-2 px-4">AI Services</h3>
+                      <Link to="/ai-services" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors duration-200">
+                        AI Solutions
+                      </Link>
+                      <Link to="/ai-analytics" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors duration-200">
+                        AI Analytics
+                      </Link>
+                      <Link to="/ai-automation" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors duration-200">
+                        AI Automation
+                      </Link>
+                      <Link to="/ai-chatbot-builder" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors duration-200">
+                        Chatbot Builder
+                      </Link>
+                    </div>
+                    <div>
+                      <h3 className="text-sm font-semibold text-cyan-400 mb-2 px-4">IT Services</h3>
+                      <Link to="/it-services" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors duration-200">
+                        IT Solutions
+                      </Link>
+                      <Link to="/cloud-infrastructure" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors duration-200">
+                        Cloud Infrastructure
+                      </Link>
+                      <Link to="/web-development" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors duration-200">
+                        Web Development
+                      </Link>
+                      <Link to="/mobile-development" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors duration-200">
+                        Mobile Development
+                      </Link>
+                    </div>
+                  </div>
+                  <div className="border-t border-gray-600 mt-4 pt-4">
+                    <Link to="/services" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors duration-200 font-medium">
+                      View All Services
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="relative group">
+              <button className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium flex items-center">
+                Resources
+                <ChevronDown className="w-4 h-4 ml-1" />
+              </button>
+              <div className="absolute top-full left-0 mt-2 w-48 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                 <div className="py-2">
-                  <Link href="/services" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors duration-200">
-                    All Services
+                  <Link to="/blog" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors duration-200">
+                    Blog
                   </Link>
-                  <Link href="/ai-services" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors duration-200">
-                    AI Services
+                  <Link to="/case-studies" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors duration-200">
+                    Case Studies
                   </Link>
-                  <Link href="/it-services" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors duration-200">
-                    IT Services
+                  <Link to="/tutorials" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors duration-200">
+                    Tutorials
                   </Link>
-                  <Link href="/cybersecurity" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors duration-200">
-                    Cybersecurity
-                  </Link>
-                  <Link href="/data-analytics" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors duration-200">
-                    Data Analytics
+                  <Link to="/support" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-colors duration-200">
+                    Support
                   </Link>
                 </div>
               </div>
             </div>
-            <Link href="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Blog
+            <Link to="/pricing" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+              Pricing
             </Link>
-            <Link href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Contact
             </Link>
             <Link 
-              href="/consultation" 
-              className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105"
+              to="/consultation" 
+              className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 flex items-center"
             >
               Get Started
+              <ArrowRight className="w-4 h-4 ml-1" />
             </Link>
           </div>
 
@@ -96,70 +141,108 @@ const Navigation: React.FC = () => {
           <div className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/95 backdrop-blur-md rounded-lg mt-2">
               <Link 
-                href="/" 
+                to="/" 
                 className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
                 onClick={toggleMenu}
               >
                 Home
               </Link>
               <Link 
-                href="/about" 
+                to="/about" 
                 className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
                 onClick={toggleMenu}
               >
                 About
               </Link>
+              <div className="px-3 py-2">
+                <div className="text-sm font-semibold text-cyan-400 mb-2">Services</div>
+                <div className="pl-4 space-y-1">
+                  <Link 
+                    to="/services" 
+                    className="block py-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+                    onClick={toggleMenu}
+                  >
+                    All Services
+                  </Link>
+                  <Link 
+                    to="/ai-services" 
+                    className="block py-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+                    onClick={toggleMenu}
+                  >
+                    AI Services
+                  </Link>
+                  <Link 
+                    to="/it-services" 
+                    className="block py-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+                    onClick={toggleMenu}
+                  >
+                    IT Services
+                  </Link>
+                  <Link 
+                    to="/cloud-infrastructure" 
+                    className="block py-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+                    onClick={toggleMenu}
+                  >
+                    Cloud Infrastructure
+                  </Link>
+                  <Link 
+                    to="/cybersecurity" 
+                    className="block py-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+                    onClick={toggleMenu}
+                  >
+                    Cybersecurity
+                  </Link>
+                </div>
+              </div>
+              <div className="px-3 py-2">
+                <div className="text-sm font-semibold text-cyan-400 mb-2">Resources</div>
+                <div className="pl-4 space-y-1">
+                  <Link 
+                    to="/blog" 
+                    className="block py-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+                    onClick={toggleMenu}
+                  >
+                    Blog
+                  </Link>
+                  <Link 
+                    to="/case-studies" 
+                    className="block py-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+                    onClick={toggleMenu}
+                  >
+                    Case Studies
+                  </Link>
+                  <Link 
+                    to="/tutorials" 
+                    className="block py-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+                    onClick={toggleMenu}
+                  >
+                    Tutorials
+                  </Link>
+                  <Link 
+                    to="/support" 
+                    className="block py-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+                    onClick={toggleMenu}
+                  >
+                    Support
+                  </Link>
+                </div>
+              </div>
               <Link 
-                href="/services" 
+                to="/pricing" 
                 className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
                 onClick={toggleMenu}
               >
-                All Services
+                Pricing
               </Link>
               <Link 
-                href="/ai-services" 
-                className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
-                onClick={toggleMenu}
-              >
-                AI Services
-              </Link>
-              <Link 
-                href="/it-services" 
-                className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
-                onClick={toggleMenu}
-              >
-                IT Services
-              </Link>
-              <Link 
-                href="/cybersecurity" 
-                className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
-                onClick={toggleMenu}
-              >
-                Cybersecurity
-              </Link>
-              <Link 
-                href="/data-analytics" 
-                className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
-                onClick={toggleMenu}
-              >
-                Data Analytics
-              </Link>
-              <Link 
-                href="/blog" 
-                className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
-                onClick={toggleMenu}
-              >
-                Blog
-              </Link>
-              <Link 
-                href="/contact" 
+                to="/contact" 
                 className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
                 onClick={toggleMenu}
               >
                 Contact
               </Link>
               <Link 
-                href="/consultation" 
+                to="/consultation" 
                 className="block px-3 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white rounded-lg font-medium transition-all duration-300 text-center"
                 onClick={toggleMenu}
               >
