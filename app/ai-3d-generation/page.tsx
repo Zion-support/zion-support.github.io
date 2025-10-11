@@ -15,6 +15,8 @@ const PagePage: React.FC = () => {
       title: 'Rapid Prototyping',
       description: 'Generate high-quality 3D prototypes in minutes instead of hours.',
       benefits: ['Fast iteration cycles', 'Multiple design options', 'Automated optimization', 'Quality validation']
+    },
+    {
       icon: Cube,
       title: '3D Model Generation',
       description: 'Create stunning 3D models from text descriptions using advanced AI algorithms.',
@@ -33,9 +35,12 @@ const PagePage: React.FC = () => {
       benefits: ['Fast iteration', 'Design variations', 'Automated optimization', 'Quick feedback']
     },
     {
+      icon: Cube,
       title: 'Precision Modeling',
       description: 'Achieve precise 3D models with AI-assisted modeling tools.',
       benefits: ['Exact measurements', 'Geometric accuracy', 'Professional quality', 'Industry standards']
+    },
+    {
       icon: Cube,
       title: '3D Model Generation',
       description: 'AI-powered 3D model creation from text descriptions or 2D images.',

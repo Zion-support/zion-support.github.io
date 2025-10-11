@@ -1,10 +1,10 @@
-import fs from 'fs'
-import path from 'path'
+// import fs from 'fs'
+// import path from 'path'
 
 // Simple wrapper function to replace withSentry
-const withSentry = (handler) => handler
-const dir = path.join(process.cwd(), 'data')
-const file = path.join(dir, 'onsite-requests.json')
+// const withSentry = (handler) => handler
+// const dir = path.join(process.cwd(), 'data')
+// const file = path.join(dir, 'onsite-requests.json')
 
 export default function handler(req, res) {
   if (req.method !== 'POST') {
@@ -24,17 +24,17 @@ export default function handler(req, res) {
       return
     }
 
-    const request = {
-      id: Date.now().toString(),
-      name,
-      email,
-      phone,
-      company: company || 'Not specified',
-      message: message || 'No message provided',
-      preferredDate: preferredDate || 'Not specified',
-      serviceType: serviceType || 'General consultation',
-      timestamp: new Date().toISOString()
-    }
+    // const request = {
+    //   id: Date.now().toString(),
+    //   name,
+    //   email,
+    //   phone,
+    //   company: company || 'Not specified',
+    //   message: message || 'No message provided',
+    //   preferredDate: preferredDate || 'Not specified',
+    //   serviceType: serviceType || 'General consultation',
+    //   timestamp: new Date().toISOString()
+    // }
 
     res.setHeader('Content-Type', 'application/json')
     res.end(JSON.stringify({ 
