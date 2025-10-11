@@ -1,27 +1,35 @@
-<<<<<<< HEAD
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
-'use client'
-import React from 'react'
-import { CheckCircle, ArrowRight, Zap, Shield, Star, Users } from 'lucide-react'
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
-const ContentPromotionBanner: React.FC = () => {
-import { Zap, Shield, Star, Users, ArrowRight } from 'lucide-react';
+const ComponentsPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Components - Zion AI | AI & IT Solutions</title>
+        <meta name="description" content="Discover our components services and solutions." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Navigation />
+        
+        <main className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Components
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Coming soon - We're working on this page.
+            </p>
+          </div>
+        </main>
 
-const ContentPromotionBanner: React.FC = () => {
->>>>>>> main
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-          </div>
-        </div>
-    }
-              </div>
-            ))}
-          </div>
-        </div>
->>>>>>> main
+        <Footer />
       </div>
-    </div>
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-635f
+    </>
+  );
+};
+
+export default ComponentsPage;

@@ -11,146 +11,138 @@ const AIAnalyticsPage: React.FC = () => {
       icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-    }
-  ];
-
-  const benefits = [
-      description: 'Monitor your business metrics in real-time with customizable, interactive dashboards.',
-      benefits: ['Live data updates', 'Custom widgets', 'Interactive charts', 'Mobile responsive']},
-    {icon: TrendingUp,
-      title: 'Performance Optimization',
-      description: 'Optimize your business performance with AI-driven recommendations and insights.',
-      benefits: ['Performance tracking', 'Optimization suggestions', 'ROI analysis', 'Growth strategies']},
-    {icon: Zap,
-      title: 'Fast Processing',
-      description: 'Process large datasets in seconds with our optimized AI analytics engine.',
-      benefits: ['High-speed processing', 'Scalable infrastructure', 'Real-time analysis', 'Batch processing']},
-    {icon: Eye,
-      title: 'Visual Analytics',
-      description: 'Transform complex data into intuitive visualizations and interactive charts.',
-      benefits: ['Interactive charts', 'Custom visualizations', 'Data storytelling', 'Export capabilities']},
-    {icon: Shield,
-      title: 'Data Security',
-      description: 'Enterprise-grade security to protect your sensitive business data and analytics.',
-  ];
-      benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
-    },
-  ];];];
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology';
-  ];
-
-return (
-    <>
-  </>
-      <Helmet>
-        <title>Ai Analytics - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered ai analytics solution for modern businesses." />
-        <meta name="keywords" content="AI ai analytics, artificial intelligence, ai analytics, AI solutions, intelligent automation" />
-  const useCases = [
-      icon: '💰'
     },
     {
-      title: 'Operations Optimization',
-      description: 'Optimize business processes and resource allocation',
-      icon: '⚙️'
+      icon: BarChart,
+      title: 'Real-time Dashboards',
+      description: 'Monitor your business metrics in real-time with customizable, interactive dashboards.',
+    },
+    {
+      icon: TrendingUp,
+      title: 'Performance Optimization',
+      description: 'Optimize your business performance with AI-driven recommendations and insights.',
+    },
+    {
+      icon: Zap,
+      title: 'Fast Processing',
+      description: 'Process large datasets quickly with our high-performance analytics engine.',
     }
   ];
 
-    {title: 'Business Intelligence',
-      description: 'Transform raw data into actionable business insights',
-      icon: '📊',},
-    {title: 'Marketing Analytics',
-      description: 'Optimize marketing campaigns with AI-powered insights',
-      icon: '📈',},
-    {title: 'Financial Analysis',
-      description: 'Monitor financial performance and identify trends',
-      icon: '💰',},
-    {title: 'Customer Analytics',
-      description: 'Understand customer behavior and preferences',
-      icon: '👥',},
-    {title: 'Operations Monitoring',
-      description: 'Track operational metrics and optimize processes',
-      icon: '⚙️',},
-    {title: 'Risk Management',
-      description: 'Identify and mitigate business risks proactively',
+  const benefits = [
+    'Real-time data processing and analysis',
+    'Customizable dashboard and reporting',
+    'AI-powered predictive analytics',
+    'Automated insights and recommendations',
+    'Scalable cloud infrastructure',
+    '24/7 monitoring and alerting'
+  ];
+
   return (
     <>
       <Helmet>
-        <title>AI Analytics - Zion Tech Group</title>
+        <title>AI Analytics - Zion AI | Advanced Business Intelligence</title>
+        <meta name="description" content="Transform your data into actionable insights with our AI-powered analytics platform. Real-time dashboards, predictive analytics, and intelligent recommendations." />
+        <meta name="keywords" content="AI analytics, business intelligence, data analysis, predictive analytics, real-time dashboards" />
       </Helmet>
-      <Navigation />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Navigation />
+        
+        {/* Hero Section */}
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AI Analytics
+              <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                That Drives Decisions
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your data into actionable insights with our AI-powered analytics platform. 
+              Get real-time dashboards, predictive analytics, and intelligent recommendations.
+            </p>
+          </div>
+        </section>
+
+        {/* Features Grid */}
+        <section className="pb-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => {
+                const IconComponent = feature.icon;
+                return (
+                  <div
+                    key={index}
+                    className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-gray-600 hover:border-cyan-400 transition-all duration-300 group"
+                  >
+                    <div className="flex items-center space-x-4 mb-6">
+                      <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
+                        <IconComponent className="w-6 h-6 text-white" />
+                      </div>
+                      <h3 className="text-xl font-bold text-white">{feature.title}</h3>
+                    </div>
+                    
+                    <p className="text-gray-300 leading-relaxed">
+                      {feature.description}
+                    </p>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </section>
 
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <h1 className="text-4xl md: text-6xl font-bold text-gray-900 mb-6">,</h1>
-                AI Analytics;
-  </
-              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">Transform your business with intelligent analytics powered by cutting-edge AI technology.</p>
-              </p>
-              </div>
-            ))}
-          </div>
-
-  );
-}
-      </main>
-    </>
-  );
-}
-      </main>
-    </>
-  );
-}
-        {/* Features Section */}
-        <section className="py-20 px-4 sm: px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">,</h2>
-                Powerful AI Analytics Features,
-  </
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">Discover how our AI analytics platform can revolutionize your business intelligence.</p>
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,</div>
-              {features.map((feature, index) => (
-                <div key={index}className="bg-white p-6 rounded-xl shadow-lg hover: shadow-xl transition-shadow">,</div>
-                  <div className="flex items-center mb-4">
-                    <feature.icon className="h-8 w-8 text-blue-600 mr-3" />
-                    <h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3>
-                  </div>
-                  <p className="text-gray-600 mb-4">{feature.description</p>}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex}className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
-                        {benefit} </li>
-                    ))}
-                  </ul>
+        {/* Benefits Section */}
+        <section className="pb-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-white text-center mb-12">
+              Why Choose Our AI Analytics?
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start space-x-3">
+                  <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />
+                  <span className="text-gray-300">{benefit}</span>
                 </div>
               ))}
             </div>
           </div>
         </section>
-        {/* CTA Section */} <section className="py-20 px-4 sm: px-6 lg:px-8 bg-blue-600">,</section>
+
+        {/* CTA Section */}
+        <section className="pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">,</h2>
-              Ready to Transform Your Analytics?
+            <h2 className="text-3xl font-bold text-white mb-6">
+              Ready to Transform Your Data?
             </h2>
-            <p className="text-xl text-blue-100 mb-8">Join thousands of businesses already using our AI analytics platform.</p>
+            <p className="text-xl text-gray-300 mb-8">
+              Start making data-driven decisions with our AI analytics platform. 
+              Get insights that matter for your business growth.
             </p>
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover: bg-gray-100 transition-colors font-semibold">,</button>
-              Start Your Free Trial;
-  </
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-medium rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 flex items-center justify-center space-x-2"
+              >
+                <span>Get Started</span>
+                <Zap className="w-5 h-5" />
+              </a>
+              <a
+                href="/demo"
+                className="px-8 py-4 bg-white/10 text-white border border-gray-600 font-medium rounded-lg hover:bg-white/20 transition-all duration-200"
+              >
+                View Demo
+              </a>
+            </div>
           </div>
         </section>
-      </main>
-      <Footer />
+
+        <Footer />
+      </div>
     </>
+  );
+};
+
+export default AIAnalyticsPage;

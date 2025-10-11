@@ -1,109 +1,35 @@
-<<<<<<< HEAD
-  if (!context) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider')}return context;
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
-import React, { createContext, useContext, useEffect, ReactNode } from 'react';
-
-interface AnalyticsContextType {
-  trackEvent: (eventName: string, parameters?: Record<string, any>) => void;
-  trackPageView: (pageName: string, pagePath: string) => void;
-}
-'use client'
-import React, { createContext, useContext, useEffect, ReactNode } from 'react'
-interface AnalyticsContextType {
-    trackEvent: (eventName: string, parameters?: Record<string, any>) => void
-  trackPageView: (pageName: string, pagePath: string) => void
-  }
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
-
-const AnalyticsContext = createContext</string><AnalyticsContextType | undefined>(undefined)
-export const useAnalytics = () => {
-}
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
-
-    if (typeof window === 'undefined') return;
-
-    }
-  }
-
-        page_title: pageName,
-        page_location: window.location.origin + pagePath,})
-    }
-
-    // Console logging for development;
-    if (process.env.NODE_ENV === 'development') {console.log('Page View:', pageName, pagePath)}}
-  const trackPageView = (pageName: string) => {
-    if (!isInitialized) return
-
-    // Track page view
-    if (typeof window !== 'undefined') {
-      console.log('Page View:', pageName)
+const ComponentsPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Components - Zion AI | AI & IT Solutions</title>
+        <meta name="description" content="Discover our components services and solutions." />
+      </Helmet>
       
-      // Example: Send to Google Analytics
-      // gtag('config', 'GA_MEASUREMENT_ID', {
-      //   page_title: pageName,
-      //   page_location: window.location.href
-      // })
-    }
-  }
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Navigation />
+        
+        <main className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Components
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Coming soon - We're working on this page.
+            </p>
+          </div>
+        </main>
 
-      // Custom analytics tracking
-      if (enableDebug) {
-        console.log('Analytics Event:', eventName, parameters);
-      }
-
-      // Send to custom analytics endpoint
-      fetch('/api/analytics/event', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          event: eventName,
-          parameters,
-          timestamp: new Date().toISOString(),
-          url: window.location.href,
-          userAgent: navigator.userAgent
-        })
-      }).catch(error => {
-        if (enableDebug) {
-          console.error('Analytics tracking error:', error);
-        }
-      });
-
-    } catch (error) {
-      if (enableDebug) {
-        console.error('Analytics error:', error);
-      }
-    }
-  };
-
-  const trackPageView = (pageName: string, pagePath: string) => {
-
-  const value: AnalyticsContextType = {,
-    trackEvent,
+        <Footer />
+      </div>
+    </>
   );
 };
 
-export { AnalyticsProvider };
-export default AnalyticsProvider;
-
-// Extend Window interface for gtag
-declare global {
-  interface Window {
-    gtag: (...args: any[]) => void;
-    dataLayer: any[];
-  }
-}
-  )
-}
-
-export default undefined
-  )
-}
-
-export default AnalyticsProvider
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-635f
+export default ComponentsPage;
