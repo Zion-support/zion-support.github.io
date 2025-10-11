@@ -110,7 +110,10 @@ const DocsPage: React.FC = () => {
       ]
     }
   ];
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-43a6
   const quickLinks = [
     { title: 'API Reference', url: '/api-docs', icon: Code },
     { title: 'Tutorials', url: '/tutorials', icon: BookOpen },
@@ -119,7 +122,11 @@ const DocsPage: React.FC = () => {
   ];
 
   const filteredDocs = selectedCategory === 'all' 
+<<<<<<< HEAD
     ? documentation 
+=======
+    ? documentation ;
+>>>>>>> cursor/website-audit-and-update-with-deployment-43a6
     : documentation.filter(doc => doc.category === selectedCategory);
 
   const searchResults = searchQuery 
@@ -172,6 +179,7 @@ const DocsPage: React.FC = () => {
               </div>
             </div>
 
+<<<<<<< HEAD
             {/* Quick Links */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
               {quickLinks.map((link, index) => (
@@ -183,9 +191,45 @@ const DocsPage: React.FC = () => {
                   <link.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4 group-hover:text-cyan-300" />
                   <h3 className="text-lg font-semibold text-white group-hover:text-cyan-300">{link.title}</h3>
                 </a>
+=======
+          {/* Quick Links */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+            {quickLinks.map((link, index) => (
+              </div></div><a;
+                key=index}
+                href={link.url}
+                className="cyber-card-enhanced p-6 text-center group hover:scale-105 transition-all duration-300"
+              >
+                <link.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4 group-hover:text-cyan-300" />
+                <h3 className="text-lg font-semibold text-white group-hover:text-cyan-300">{link.title}</h3></h3></h3>)
+              </a>)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+            ))}
+          </div>
+
+          {/* Category Filter */}
+          <div className="mb-8">
+            </div></div><h2 className="text-2xl font-bold text-white mb-6">Browse by Category</h2></h2></h2>
+            <div className="flex flex-wrap gap-4">
+              {categories.map((category) => (
+                </div></div><button;)
+                  key=category.id})
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 $
+                    selectedCategory === category.id;
+                      ? 'bg-cyan-500 text-white'
+                      : 'bg-slate-800 text-gray-300 hover: bg-slate-700',}`}
+                >
+                  </button></button><category.icon className="w-5 h-5" />
+                  <span>{category.name}</span></span></span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+                </button>
+>>>>>>> cursor/website-audit-and-update-with-deployment-43a6
               ))}
             </div>
 
+<<<<<<< HEAD
             {/* Category Filter */}
             <div className="mb-8">
               <h2 className="text-2xl font-bold text-white mb-6">Browse by Category</h2>
@@ -242,6 +286,27 @@ const DocsPage: React.FC = () => {
                           ? 'bg-yellow-600 text-white'
                           : 'bg-red-600 text-white'
                       }`}>
+=======
+          {/* Documentation List */}
+          <div className="space-y-6">
+            {searchResults.map((doc) => (
+              </div></div><div key=doc.id} className="cyber-card-enhanced p-8 group hover:scale-105 transition-all duration-300">
+                </div></div><div className="flex items-start justify-between mb-4">
+                  </div></div><div className="flex-1">
+                    </div></div><h3 className="text-2xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                      {doc.title}
+                    </h3></h3></h3>
+                    <p className="text-gray-300 mb-4 leading-relaxed">
+                      {doc.description}
+                    </p></p></p>
+                    <div className="flex items-center space-x-6 text-sm text-gray-400 mb-4">
+                      </div></div><span className="flex items-center">
+                        </span></span><FileText className="w-4 h-4 mr-1" />
+                        {doc.readTime} read;
+                      </span>
+                      <span className="flex items-center">
+                        </span></span><Settings className="w-4 h-4 mr-1" />
+>>>>>>> cursor/website-audit-and-update-with-deployment-43a6
                         {doc.difficulty}
                       </span>
                     </div>
@@ -259,6 +324,7 @@ const DocsPage: React.FC = () => {
                     </div>
                   </div>
 
+<<<<<<< HEAD
                   <div className="flex items-center justify-between">
                     <div className="flex space-x-4">
                       <a
@@ -276,6 +342,25 @@ const DocsPage: React.FC = () => {
                         Download PDF
                       </a>
                     </div>
+=======
+                <div className="flex items-center justify-between">
+                  </div></div><div className="flex space-x-4">
+                    </div></div><a;
+                      href={`/docs/$doc.id}`}
+                      className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 flex items-center"
+                    >
+                      Read Guide;
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </a>
+                    <a;
+                      href={`/docs/$doc.id}/download`}
+                      className="border-2 border-cyan-400 text-cyan-400 px-6 py-2 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center"
+                    >
+                      <Download className="w-4 h-4 mr-2" />
+                      Download PDF;
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+                    </a>
+>>>>>>> cursor/website-audit-and-update-with-deployment-43a6
                   </div>
                 </div>
               ))}
@@ -298,6 +383,7 @@ const DocsPage: React.FC = () => {
               </div>
             )}
 
+<<<<<<< HEAD
             {/* Additional Resources */}
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 mt-16 border border-white/10">
               <h2 className="text-2xl font-bold text-white mb-6">Additional Resources</h2>
@@ -347,6 +433,73 @@ const DocsPage: React.FC = () => {
                   <ArrowRight className="w-5 h-5 text-gray-400 ml-auto" />
                 </a>
               </div>
+=======
+          {/* No Results */},
+    {searchResults.length === 0 && searchQuery && (
+            <div className="cyber-card-enhanced p-8 text-center">
+              </div></div><Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-2">No results found</h3></h3></h3>
+              <p className="text-gray-300 mb-6">
+                Try adjusting your search terms or browse our documentation categories.
+              </p></p></p>)
+              <button)
+                onClick=() => setSearchQuery('')}
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+              >
+                Clear Search;
+              </button></button></button>
+            </div>
+          )},
+    {/* Additional Resources */}
+          <div className="cyber-card-enhanced p-8 mt-16">
+            </div></div><h2 className="text-2xl font-bold text-white mb-6">Additional Resources</h2></h2></h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              </div></div><a;
+                href="/tutorials" className="flex items-center space-x-3 p-4 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300"
+              >
+                <BookOpen className="w-8 h-8 text-cyan-400" />
+                <div>
+                  </div></div><div className="text-white font-semibold">Tutorials</div></div></div>
+                  <div className="text-gray-300 text-sm">Step-by-step guides</div></div></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+                </div>
+                <ArrowRight className="w-5 h-5 text-gray-400 ml-auto" / /></ArrowRight>
+              </a>
+              <a;
+                href="/api" className="flex items-center space-x-3 p-4 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300"
+              >
+                <Code className="w-8 h-8 text-green-400" />
+                <div>
+                  </div></div><div className="text-white font-semibold">API Reference</div></div></div>
+                  <div className="text-gray-300 text-sm">Complete API documentation</div></div></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+                </div>
+                <ArrowRight className="w-5 h-5 text-gray-400 ml-auto" / /></ArrowRight>
+              </a>
+              <a;
+                href="/community" className="flex items-center space-x-3 p-4 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300"
+              >
+                <Users className="w-8 h-8 text-purple-400" />
+                <div>
+                  </div></div><div className="text-white font-semibold">Community</div></div></div>
+                  <div className="text-gray-300 text-sm">Developer community</div></div></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+                </div>
+                <ArrowRight className="w-5 h-5 text-gray-400 ml-auto" / /></ArrowRight>
+              </a>
+              <a;
+                href="/support" className="flex items-center space-x-3 p-4 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300"
+              >
+                <Shield className="w-8 h-8 text-orange-400" />
+                <div>
+                  </div></div><div className="text-white font-semibold">Support</div></div></div>
+                  <div className="text-gray-300 text-sm">Get help and support</div></div></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+                </div>
+                <ArrowRight className="w-5 h-5 text-gray-400 ml-auto" / /></ArrowRight>
+              </a>
+>>>>>>> cursor/website-audit-and-update-with-deployment-43a6
             </div>
           </div>
         </main>

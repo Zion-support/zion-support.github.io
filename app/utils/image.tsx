@@ -31,9 +31,6 @@ interface ImageProps {}
   onLoad?: () => void;
   onError?: () => void;}
 }
-<<<<<<< HEAD
-export const Image: React.FC<ImageProps>= ()
-=======
 export const Image: React.FC<ImageProps>= ({}
 export const Image: React.FC<ImageProps> = ({}
   src,
@@ -68,10 +65,6 @@ export const Image: React.FC<ImageProps> = ({
     if (onError) onError();}
   }, [onError]);
   const imageStyle: React.CSSProperties = {
-<<<<<<< HEAD
-    ...style
-    ...()
-=======
     ...style;
     ...(fill && 
       position: 'absolute',
@@ -88,13 +81,6 @@ export const Image: React.FC<ImageProps> = ({
   }
   if (hasError) {
     </ImageProps>
-<<<<<<< HEAD
-    return ()
-  if (hasError) {}
-    return ()
-  if (hasError) {}
-    return()
-=======
     return (</ImageProps>)
   })
   if (hasError) {}
@@ -116,10 +102,6 @@ export const,)
   const,
   imageStyle: React.CSSProperties = {/* TODO: Fix JSX expression */,}})
   }
-<<<<<<< HEAD
-  if (hasError) {/* TODO: Fix JSX expression */,}className={`bg-gray-200 flex items-center justify-center ${className}`}
-        style={imageStyle}{...props})
-=======
   if (hasError) {/* TODO: Fix JSX expression */}
         className={`bg-gray-200 flex items-center justify-center $className}`}
         style={imageStyle},
@@ -130,22 +112,10 @@ export const,)
     ),
         {...props}
       ></div>
-<<<<<<< HEAD
-        <span className="text-gray-500 text-sm" /><span className="sr-only">Screen reader: </span>Failed to load image</span>
-      </div>
-    ),
-  }
-  return()
-=======
         <span className="text-gray-500 text-sm"></span></span></span><span className="sr-only">Screen reader: </span></span></span>Failed to load image</span>
       </div>
     ),
   }
-<<<<<<< HEAD
-  return(<img;)
-  return(<img />)
-      src={src}alt={alt}width={width}height={height}className={className}style={imageStyle}sizes={sizes}loading={priority ? 'eager' : 'lazy'}onLoad={handleLoad}onError={handleError}{...props}
-=======
   return(<img;
   return (<img />
       src={src}

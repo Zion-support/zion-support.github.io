@@ -1,18 +1,9 @@
 'use client';
 
 import React from 'react';
-<<<<<<< HEAD
-import {Zap, Shield, Star, Users, ArrowRight}}from 'lucide-react';
-
-const ContentPromotionBanner: React.FC = () => {,
-=======
 import { CheckCircle, ArrowRight, Zap, Shield, Star, Users } from 'lucide-react';
 
 const ContentPromotionBanner: React.FC = () => {
-<<<<<<< HEAD
-  const features = const features = const features = [
-    {
-=======
   const features = [
     
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
@@ -34,24 +25,6 @@ const ContentPromotionBanner: React.FC = () => {
       title: 'Expert Support',
       description: '24/7 support from our team of AI and IT specialists.',
       icon: Users;
-<<<<<<< HEAD
-    };
-  ];
-  const benefits = const benefits = const benefits = [
-    'Easy integration with existing systems',;
-    'Cost-effective pricing plans',;
-    'Proven track record of success';
-  ];
-
-  return() {features.map((feature, index) => ()
-        ))}
-      </div>
-
-      <div className="text-center" /></div>
-        <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 inline-flex items-center" /></button>
-          Get Started Now
-          <ArrowRight className="w-5 h-5 ml-2" / /></ArrowRight>
-=======
     }
   ];];];
   const benefits = [
@@ -87,7 +60,6 @@ const ContentPromotionBanner: React.FC = () => {
           </button></button><ArrowRight className="w-5 h-5 ml-2" />
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
         </button>
->>>>>>> origin/main
       </div>
     </div>
   );

@@ -5,14 +5,6 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 const AiHealthcareSolutionsPage: React.FC = () => {
-<<<<<<< HEAD
-    const features = const features = const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',;
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',;
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'];
-=======
     const features = [
     
       icon: Brain,
@@ -46,33 +38,10 @@ const benefits = const benefits = const benefits = [
     'Improve decision-making with AI insights',;
     'Scale operations without proportional staff increases',;
     'Gain competitive advantage with advanced technology';
-<<<<<<< HEAD
-  ]
-return(<>)
-      <Helmet />
-=======
   ];
-<<<<<<< HEAD
-return ()
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" / / /></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} / / /></div>
-          <div className="relative max-w-7xl mx-auto text-center" / /></div>
-            <h1></h1>
-              Ai Healthcare Solutions
-            </h1>
-            <p></p>
-              Advanced AI-powered ai healthcare solutions solution for modern businesses.
-            </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center" / /></div>
-              <button></button>
-                Get Started
-              </button>
-              <button></button>
-=======
 return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>Ai Healthcare Solutions - Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
@@ -109,28 +78,6 @@ return (
           </div>
         </section>
         {/* Features Section */}
-<<<<<<< HEAD
-        <section className="py-20 px-4" /></section>
-          <div className="max-w-7xl mx-auto" /></div>
-            <div className="text-center mb-16" /></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-        </section>
-          <div className="max-w-7xl mx-auto" / /></div>
-            <div className="text-center mb-16" / /></div>
-              <h2></h2>
-                Key Features
-              </h2>
-              <p></p>
-                Advanced AI technology that drives results
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" / /></div>
-              {features.map((feature, index) => ()
-                      {feature.benefits.map((benefit, idx) => ()
-=======
         <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">
@@ -176,27 +123,6 @@ return (
           </div>
         </section>
         {/* Benefits Section */}
-<<<<<<< HEAD
-        <section className="py-20 px-4" /></section>
-          <div className="max-w-7xl mx-auto" /></div>
-            <div className="text-center mb-16" /></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-        </section>
-          <div className="max-w-7xl mx-auto" / /></div>
-            <div className="text-center mb-16" / /></div>
-              <h2></h2>
-                Why Choose Our Solution?
-              </h2>
-              <p></p>
-                Proven results that drive business growth and efficiency
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" / /></div>
-              {benefits.map((benefit, index) => ()
-=======
         <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">
@@ -227,31 +153,6 @@ return (
           </div>
         </section>
         {/* CTA Section */}
-<<<<<<< HEAD
-        <section className="py-20 px-4" /></section>
-          <div className="max-w-7xl mx-auto" /></div>
-            <div className="text-center mb-16" /></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-        </section>
-          <div className="max-w-4xl mx-auto text-center" / /></div>
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12" / /></div>
-              <h2></h2>
-                Ready to Get Started?
-              </h2>
-              <p></p>
-                Contact our experts to discuss your requirements and get started today.
-              </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center" / /></div>
-                <button></button>
-                  Contact Us
-                </button>
-                <button></button>
-                  Learn More
-                </button>
-=======
         <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">

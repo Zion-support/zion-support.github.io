@@ -8,13 +8,6 @@ interface SEOOptimizerProps {
   structuredData?: object;
 }
 
-<<<<<<< HEAD
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ()
-}) => {
-  const keywordsString = keywords.join(', ');
-
-  return ()
-=======
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   title,
   description,

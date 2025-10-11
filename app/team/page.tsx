@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import { Users, Award, Code, Brain, Cloud, Shield, Mail, Phone, MapPin, Linkedin, Github, Twitter } from 'lucide-react';
 
 const TeamPage: React.FC = () => {
+<<<<<<< HEAD
   const teamMembers = [
     {
       name: 'Dr. Kleber Santos',
@@ -100,6 +101,9 @@ const TeamPage: React.FC = () => {
   ];
 
   return (
+=======
+    return (
+>>>>>>> cursor/website-audit-and-update-with-deployment-43a6
     <>
       <Helmet>
         <title>Our Team - Zion Tech Group | Meet the Experts</title>

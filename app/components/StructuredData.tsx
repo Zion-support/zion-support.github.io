@@ -6,9 +6,6 @@ interface StructuredDataProps {
   data?: Record<string, unknown>;
 }
 
-<<<<<<< HEAD
-const StructuredData: React.FC<StructuredDataProps> = ()
-=======
 const StructuredData: React.FC<StructuredDataProps> = ({ 
   type = 'Organization', )
   data )
@@ -89,13 +86,9 @@ const StructuredData: React.FC<StructuredDataProps> = ({
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-<<<<<<< HEAD
-                "item": "https: //ziontechgroup.com",}]
-=======
                 "item": "https://ziontechgroup.com"
               }
   ]
->>>>>>> origin/main
           }
         }
       
@@ -158,12 +151,6 @@ const StructuredData: React.FC<StructuredDataProps> = ({
 ;
   const structuredData = data || getDefaultData();
 
-<<<<<<< HEAD
-  return ()
-        __html: JSON.stringify(structuredData, null, 2)
-      }}
-    /></script>
-=======
   return (
     <script;
       type="application/ld+json")

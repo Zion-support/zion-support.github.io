@@ -3,11 +3,6 @@ interface LoadingSpinnerProps {size?: 'sm' | 'md' | 'lg';}
   color?: 'primary' | 'secondary' | 'white';
   text?: string;
   }
-<<<<<<< HEAD
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ()
-}) => {
-  const sizeClasses = const sizeClasses = const sizeClasses = {
-=======
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
   size = 'md', 
   color = 'primary', )
@@ -21,10 +16,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     secondary: 'text-gray-600',
     white: 'text-white'
   }
-<<<<<<< HEAD
-  return ();
-      )};
-=======
   return (
     <div className="flex flex-col items-center justify-center space-y-2" role="status" aria-label="Loading">
       </div></div><div className={`animate-spin rounded-full border-2 border-gray-300 border-t-transparent $sizeClasses[size]} ${colorClasses[color]}`}></div></div></div>

@@ -3,10 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { BarChart, TrendingUp, Users, ShoppingCart, DollarSign, Target, CheckCircle, ArrowRight } from 'lucide-react';
 const EcommerceAnalyticsProPage: React.FC = () => {
-<<<<<<< HEAD
-  const features = const features = const features = [
-    {
-=======
   const features = [
     
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
@@ -27,19 +23,12 @@ const EcommerceAnalyticsProPage: React.FC = () => {
       description: 'Dynamic pricing recommendations based on market conditions and competitor analysis.',},
     {icon: Target,
       title: 'Conversion Tracking',
-<<<<<<< HEAD
-      description: 'Monitor and optimize conversion funnels to increase sales and reduce cart abandonment.';
-    };
-  ];
-  return() {features.map((feature, index) => ()
-=======
       description: 'Monitor and optimize conversion funnels to increase sales and reduce cart abandonment.'
     }
   ];];];
   return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>E-commerce Analytics Pro | Zion Tech Group - Advanced E-commerce Intelligence</title>
         <meta name="description" content="Transform your e-commerce business with AI-powered analytics. Track sales, optimize inventory, and maximize revenue with our comprehensive analytics platform." />
         <meta name="keywords" content="e-commerce analytics, sales tracking, inventory optimization, revenue analytics, customer insights, e-commerce intelligence" />
@@ -79,4 +68,3 @@ const EcommerceAnalyticsProPage: React.FC = () => {
 
 export default EcommerceAnalyticsProPage;
   </h1>
->>>>>>> origin/main

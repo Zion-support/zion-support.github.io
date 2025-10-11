@@ -17,16 +17,11 @@ const benefits = const benefits = const benefits = [
     'Cost-effective pricing plans',;
 ;
     'Proven track record of success';
-<<<<<<< HEAD
-  ];
-return ()
-=======
   ];];];
 return (
             </h1>
             <p>
               Transform your business with our advanced page solutions.;
->>>>>>> origin/main
               Powered by cutting-edge AI technology and industry expertise.
             </p></p></p>
                 </div>

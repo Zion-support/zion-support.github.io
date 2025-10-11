@@ -3,9 +3,6 @@ import React from 'react';
 import {Helmet}}from 'react-helmet-async';
 import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
 ]
-<<<<<<< HEAD
-return ()
-=======
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div></div>
       <Helmet>
@@ -25,12 +22,6 @@ return (
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-            <h2></h2>
-              Key Benefits
-            </h2>
-            <p></p>
-=======
             <h2>
               Key Benefits;
             </h2></h2></h2>
@@ -41,10 +32,6 @@ return (
           </div>
             <h2></h2>
               Ready to Get Started?
-<<<<<<< HEAD
-            </h2>
-            <p></p>
-=======
             </h2></h2></h2>
             <p>
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6

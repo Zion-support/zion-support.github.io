@@ -2,12 +2,6 @@ import React from 'react';
 import {Helmet}}from 'react-helmet-async';
 
 const CybersecuritySolutionsPage: React.FC = () => {
-<<<<<<< HEAD
-  return ()
-                24/7 security operations center (SOC) monitoring and incident response.
-              </p>
-              <ul className="text-sm text-gray-400 space-y-2" /></ul>
-=======
   return (
     <>
       <Helmet>
@@ -69,14 +63,6 @@ const CybersecuritySolutionsPage: React.FC = () => {
               </ul>
             </div>
 
-<<<<<<< HEAD
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20" /></div>
-              <h3 className="text-2xl font-bold text-cyan-400 mb-4">Compliance Management</h3>
-              <p className="text-gray-300 mb-4" /></p>
-                Ensure compliance with industry regulations and security standards.
-              </p>
-              <ul className="text-sm text-gray-400 space-y-2" /></ul>
-=======
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
               </div></div><h3 className="text-2xl font-bold text-cyan-400 mb-4">Compliance Management</h3></h3></h3>
               <p className="text-gray-300 mb-4">
@@ -91,14 +77,6 @@ const CybersecuritySolutionsPage: React.FC = () => {
               </ul>
             </div>
 
-<<<<<<< HEAD
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20" /></div>
-              <h3 className="text-2xl font-bold text-cyan-400 mb-4">Data Protection</h3>
-              <p className="text-gray-300 mb-4" /></p>
-                Advanced data protection and encryption solutions for sensitive information.
-              </p>
-              <ul className="text-sm text-gray-400 space-y-2" /></ul>
-=======
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
               </div></div><h3 className="text-2xl font-bold text-cyan-400 mb-4">Data Protection</h3></h3></h3>
               <p className="text-gray-300 mb-4">
@@ -113,14 +91,6 @@ const CybersecuritySolutionsPage: React.FC = () => {
               </ul>
             </div>
 
-<<<<<<< HEAD
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20" /></div>
-              <h3 className="text-2xl font-bold text-cyan-400 mb-4">Security Training</h3>
-              <p className="text-gray-300 mb-4" /></p>
-                Comprehensive security awareness training for your employees.
-              </p>
-              <ul className="text-sm text-gray-400 space-y-2" /></ul>
-=======
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
               </div></div><h3 className="text-2xl font-bold text-cyan-400 mb-4">Security Training</h3></h3></h3>
               <p className="text-gray-300 mb-4">
@@ -136,12 +106,6 @@ const CybersecuritySolutionsPage: React.FC = () => {
             </div>
           </div>
 
-<<<<<<< HEAD
-          <div className="text-center" /></div>
-            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105" /></button>
-              Secure Your Organization
-            </button>
-=======
           <div className="text-center">
             </div></div><button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
               Secure Your Organization;

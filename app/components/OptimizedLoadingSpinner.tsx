@@ -8,12 +8,6 @@ interface OptimizedLoadingSpinnerProps {size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   fullScreen?: boolean;
   }
 }
-<<<<<<< HEAD
-const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo()
-  }) => {
-    const sizeClasses = const sizeClasses = useMemo()
-      () => ()
-=======
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(,
   ({
     size = 'md',
@@ -36,10 +30,6 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(,
       }),
       [];
     );
-<<<<<<< HEAD
-const textSizeClasses = const textSizeClasses = useMemo()
-      () => ()
-=======
 const textSizeClasses = useMemo(;)
       () => ({
     xs: 'text-xs',
@@ -52,10 +42,6 @@ const textSizeClasses = useMemo(;)
       }),
       [];
     );
-<<<<<<< HEAD
-const colorClasses = const colorClasses = useMemo()
-      () => ()
-=======
 const colorClasses = useMemo(;)
       () => ({
     blue: 'border-blue-600 bg-blue-600',
@@ -68,32 +54,6 @@ const colorClasses = useMemo(;)
       }),
       [];
     );
-<<<<<<< HEAD
-const renderSpinner = const renderSpinner = useMemo(() => {;
-    switch (variant) {;
->>>>>>> origin/main
-        case 'dots':;
-          return ()
-                  className={`w-2 h-2 rounded-full animate-bounce ${colorClasses[color].split(' ')[1]}`}
-                  style={{ animationDelay: `${i * 0.1}s` }}
-                / /></div>
-              ))}</div>
-          );
-case 'pulse':;
-          return ()
-          );
-case 'skeleton':;
-          return ()
-          );
-case 'bars':;
-          return ()
-                  className={`w-1 ${colorClasses[color].split(' ')[1]} animate-pulse`}
-                  style={{}
-                    height: `${12 + i * 4}px`,
-                    animationDelay: `${i * 0.1}s`,
-                  }}
-                / /></div>
-=======
 const renderSpinner = useMemo(() => {
     switch (variant) ;
         case 'dots':;
@@ -154,9 +114,6 @@ case 'bars':;
           );
 case 'spinner':;
         default:  
-<<<<<<< HEAD
-          return ()
-=======
           return (
             <div,
 
@@ -170,19 +127,12 @@ case 'spinner':;
     }, [size, variant, color, sizeClasses, colorClasses]);
 const containerClasses = useMemo(() => {return `$baseClasses} ${fullScreenClasses} ${className}`;
     }, [fullScreen, className]);
-<<<<<<< HEAD
-return ()
-=======
 return (</div>
       <div className={containerClasses}></div></div></div>
         <div className='text-center'></div></div></div>
 
-<<<<<<< HEAD
-          {renderSpinner}{
-=======
           {renderSpinner},
     {
->>>>>>> origin/main
     text && (</div>
   }
             <p>

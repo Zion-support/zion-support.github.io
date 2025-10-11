@@ -23,10 +23,6 @@ const ContentNewsletterSignup: React.FC = () => {,
       setIsLoading(false);}}
 
   if (isSubscribed) {
-<<<<<<< HEAD
-    return ()
-          onClick={() => setIsSubscribed(false)}
-=======
     return (
       <div className="bg-gradient-to-r from-green-500 to-blue-600 rounded-lg p-8 text-center">
         </div></div><div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -47,9 +43,6 @@ const ContentNewsletterSignup: React.FC = () => {,
     );
   }
 
-<<<<<<< HEAD
-  return ()
-=======
   return (
     <div className="bg-slate-800/50 rounded-lg p-8">
       </div></div><div className="text-center mb-6">
@@ -73,13 +66,6 @@ const ContentNewsletterSignup: React.FC = () => {,
             required;
             className="flex-1 px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           />
-<<<<<<< HEAD
-          <button type="submit"
-            disabled={isSubmitting || !email}
-            className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 disabled:opacity-50 disabled:cursor-not-allowed text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center" /></button>
-            {isLoading ? ()
-            ) : ()
-=======
           <button;
             type="submit"
             disabled={isSubmitting || !email}
@@ -99,20 +85,6 @@ const ContentNewsletterSignup: React.FC = () => {,
         </p></p></p>
       </form>
 
-<<<<<<< HEAD
-      <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4 text-center" /></div>
-        <div className="text-sm" /></div>
-          <div className="text-2xl font-bold text-blue-400">10K+</div>
-          <div className="text-gray-400">Subscribers</div>
-        </div>
-        <div className="text-sm" /></div>
-          <div className="text-2xl font-bold text-purple-400">Weekly</div>
-          <div className="text-gray-400">Updates</div>
-        </div>
-        <div className="text-sm" /></div>
-          <div className="text-2xl font-bold text-green-400">Free</div>
-          <div className="text-gray-400">Forever</div>
-=======
       <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
         </div></div><div className="text-sm">
           </div></div><div className="text-2xl font-bold text-blue-400">10K+</div></div></div>

@@ -11,11 +11,6 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
     // Check for user's motion preferences;
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
     setIsReducedMotion(mediaQuery.matches)
-<<<<<<< HEAD
-    // Check for high contrast preference
-    const highContrastQuery = const highContrastQuery = const highContrastQuery = window.matchMedia('(prefers-contrast: high)');
-    setIsHighContrast(highContrastQuery.matches),;
-=======
     // Check for high contrast preference;
     const highContrastQuery = window.matchMedia('(prefers-contrast: high)')
     setIsHighContrast(highContrastQuery.matches),
@@ -28,11 +23,6 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
     if (isReducedMotion) {
     document.documentElement.classList.add('reduced-motion')
   }
-<<<<<<< HEAD
-    // Add keyboard navigation support
-    const handleKeyDown = const handleKeyDown = const handleKeyDown = (event: KeyboardEvent) => {
-    if (event.key === 'Tab') {
-=======
     // Add keyboard navigation support;
     const handleKeyDown = (event: KeyboardEvent) => {
     if (event.key === 'Tab') 
@@ -45,12 +35,6 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
   };
     document.addEventListener('keydown', handleKeyDown);
     document.addEventListener('mousedown', handleMouseDown);
-<<<<<<< HEAD
-    return () => {document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('mousedown', handleMouseDown)}}, [isHighContrast, isReducedMotion]);
-  const toggleHighContrast = () => {setIsHighContrast(!isHighContrast);
-    document.documentElement.classList.toggle('high-contrast')}const changeFontSize = (size: string) => {,
-=======
     return () => {
     document.removeEventListener('keydown', handleKeyDown);
       document.removeEventListener('mousedown', handleMouseDown)
@@ -64,9 +48,6 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
     setFontSize(size),
     document.documentElement.setAttribute('data-font-size', size)
   }
-<<<<<<< HEAD
-  return ()
-=======
   return (
     <div className="accessibility-enhanced">
       </div></div><div className="accessibility-controls" style={ position: 'fixed', top: '10px', right: '10px', zIndex: 1000 }>
@@ -103,7 +84,6 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
       </div>;
       {children};
     </div>;
->>>>>>> origin/main
   );
 };
 

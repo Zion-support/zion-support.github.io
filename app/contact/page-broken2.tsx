@@ -16,9 +16,6 @@ import {Phone,}
   }
 } from 'lucide-react'
 const ContactPage: React.FC = () => {
-<<<<<<< HEAD
-    const [formData, setFormData] = useState()
-=======
     const [formData, setFormData] = useState(
     name: '',
     email: '',
@@ -36,9 +33,6 @@ const [isSubmitting, setIsSubmitting] = useState(false);
 const handleInputChange = const handleInputChange = const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {};
 ;
     const { name, value } = e.target;
-<<<<<<< HEAD
-    setFormData()
-=======
     setFormData(prev => ({
     ...prev,
       [name]: value;)
@@ -46,11 +40,7 @@ const handleInputChange = const handleInputChange = const handleInputChange = us
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     }));
   }, []);
-<<<<<<< HEAD
-const handleSubmit = async (e: React.FormEvent) => {,
-=======
 const handleSubmit = async (e: React.FormEvent) => {;
->>>>>>> origin/main
     e.preventDefault();
     setIsSubmitting(true)
     setSubmitStatus('idle')
@@ -59,9 +49,6 @@ try
 
       await new Promise(resolve => setTimeout(resolve, 1000));
       setSubmitStatus('success');
-<<<<<<< HEAD
-      setFormData()
-=======
       setFormData(
         name: '',
         email: '',
@@ -120,74 +107,13 @@ const contactInfo = const contactInfo = const contactInfo = [
       icon: Clock,
       title: 'Business Hours',
       details: 'Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM',
-<<<<<<< HEAD
-      description: 'Eastern Time',}}
-  ]
-return(<>)
-      <Helmet />
-=======
       description: 'Eastern Time'
   };
     };
   ];
-<<<<<<< HEAD
-return ()
-              )},
-    {
-    submitStatus === 'error' && ()
-              )}
-<form></form>
-                <div className="grid grid-cols-1 md: grid-cols-2 gap-6" / /></div>
-                  <div / /></div>
-                    <label></label>
-                      Full Name *
-                    </label>
-                    <div className="relative" / /></div>
-                      <User></User>
-                      <input / /></input>
-                  </div>
-                  <div / /></div>
-                    <label></label>
-                      Email Address *
-                    </label>
-                    <div className="relative" / /></div>
-                      <Mail></Mail>
-                      <input / /></input>
-                  </div>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6" / /></div>
-                  <div / /></div>
-                    <label></label>
-                      Company
-                    </label>
-                    <div className="relative" / /></div>
-                      <Building></Building>
-                      <input / /></input>
-                  </div>
-                  <div / /></div>
-                    <label></label>
-                      Phone Number
-                    </label>
-                    <div className="relative" / /></div>
-                      <Phone></Phone>
-                      <input / /></input>
-                  </div>
-                </div>
-                <div / /></div>
-                  <label></label>
-                    Service Interest,
-                  </label>
-                  <div className="relative" / /></div>
-                    <Globe></Globe>
-                    <select></select>
-                      <option value="">Select a service</option>
-                      {
-    services.map((service) => ()
-=======
 return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>Contact Us - Zion Tech Group | Get in Touch</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
@@ -281,15 +207,6 @@ return (
                     </select>
                   </div>
                 </div>
-<<<<<<< HEAD
-                <div / /></div>
-                  <label></label>
-                    Message *
-                  </label>
-                  <div className="relative" / /></div>
-                    <MessageCircle></MessageCircle>
-                    <textarea / /></textarea>
-=======
                 <div />
                   </div></div><label>
                     Message *
@@ -301,10 +218,6 @@ return (
                 </div>
                 <button></button>
                   {
-<<<<<<< HEAD
-    isSubmitting ? ()
-                  ) : ()
-=======
     isSubmitting ? (;
                     </button></button><>
                       <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div></div></div>
@@ -322,12 +235,6 @@ return (
               </form>
             </div>
             {/* Contact Information */}
-<<<<<<< HEAD
-            <div className="space-y-8" / /></div>
-              <div / /></div>
-                <h2 className="text-3xl font-bold text-white mb-6">Contact Information</h2>
-                <p></p>
-=======
             <div className="space-y-8"></div></div></div>
               <div />
                 </div></div><h2 className="text-3xl font-bold text-white mb-6">Contact Information</h2></h2></h2>
@@ -338,12 +245,6 @@ return (
                 </p></p></p>
               </div>
               {/* Contact Information */}
-<<<<<<< HEAD
-              <div className="space-y-8" / /></div>
-                <div / /></div>
-                  <h2 className="text-3xl font-bold text-white mb-6">Get in Touch</h2>
-                  <p></p>
-=======
               <div className="space-y-8"></div></div></div>
                 <div />
                   </div></div><h2 className="text-3xl font-bold text-white mb-6">Get in Touch</h2></h2></h2>
@@ -352,20 +253,6 @@ return (
                     We're here to help you transform your business with cutting-edge AI and technology solutions.
                   </p></p></p>
                 </div>
-<<<<<<< HEAD
-                <div className="space-y-6" / /></div>
-                  <div className="flex items-center" / /></div>
-                    <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mr-4" / /></div>
-                      <Phone / /></Phone>
-                    <div / /></div>
-<h3></h3>
-                        {info.title}
-                      </h3>
-                      <p></p>
-                        {info.details}
-                      </p>
-                      <p></p>
-=======
                 <div className="space-y-6"></div></div></div>
                   <div className="flex items-center"></div></div></div>
                     <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mr-4"></div></div></div>
@@ -385,30 +272,6 @@ return (
                       </p></p></p>
                     </div>
                   </div>
-<<<<<<< HEAD
-                  <div className="flex items-center" / /></div>
-                    <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mr-4" / /></div>
-                      <Mail / /></Mail>
-                    <div / /></div>
-                      <h3 className="text-lg font-semibold text-white">Email</h3>
-                      <p className="text-gray-300">info@ziontechgroup.com</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center" / /></div>
-                    <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mr-4" / /></div>
-                      <MapPin / /></MapPin>
-                    <div / /></div>
-                      <h3 className="text-lg font-semibold text-white">Address</h3>
-                      <p className="text-gray-300">123 Tech Street<br />San Francisco, CA 94105</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center" / /></div>
-                    <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mr-4" / /></div>
-                      <Clock / /></Clock>
-                    <div / /></div>
-                      <h3 className="text-lg font-semibold text-white">Business Hours</h3>
-                      <p className="text-gray-300">Mon - Fri: 9:00 AM - 6:00 PM<br />Sat: 10:00 AM - 4:00 PM</p>
-=======
                   <div className="flex items-center"></div></div></div>
                     <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mr-4"></div></div></div>
                       <Mail />

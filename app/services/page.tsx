@@ -154,6 +154,529 @@ const ServicesPage: React.FC = () => {
       price: 'Starting at $129/month',
       marketPrice: '$250-600/month',
       benefits: ['Save 80% content creation time', 'Consistent brand voice', 'SEO optimization', 'Multi-platform publishing']
+<<<<<<< HEAD
+=======
+    },
+    {
+      icon: Users,
+      title: 'Zion CRM Intelligence',
+      description: 'AI-enhanced customer relationship management with predictive analytics and automation.',
+      category: 'saas',
+      features: ['AI-powered Lead Scoring', 'Automated Follow-ups', 'Predictive Analytics', 'Sales Forecasting', 'Customer Segmentation', 'Integration Hub'],
+      price: 'Starting at $179/month',
+      marketPrice: '$300-800/month',
+      benefits: ['Improved sales performance', 'Better customer relationships', 'Automated processes', 'Data-driven insights']
+    },
+    {
+      icon: Database,
+      title: 'Zion Data Sync',
+      description: 'Intelligent data integration and synchronization platform for seamless data flow across systems.',
+      category: 'saas',
+      features: ['Real-time Data Sync', 'Multi-source Integration', 'Data Transformation', 'Error Handling', 'Monitoring Dashboard', 'API Management'],
+      price: 'Starting at $149/month',
+      marketPrice: '$250-700/month',
+      benefits: ['Unified data view', 'Reduced manual work', 'Improved accuracy', 'Real-time updates']
+    },
+    {
+      icon: Calendar,
+      title: 'Zion Project Master',
+      description: 'AI-powered project management and team collaboration platform with intelligent task allocation.',
+      category: 'saas',
+      features: ['AI Task Allocation', 'Resource Planning', 'Progress Tracking', 'Team Collaboration', 'Time Tracking', 'Performance Analytics'],
+      price: 'Starting at $99/month',
+      marketPrice: '$200-500/month',
+      benefits: ['Improved project success', 'Better resource utilization', 'Enhanced collaboration', 'Automated workflows']
+    },
+    {
+      icon: Mail,
+      title: 'Zion Email Automation',
+      description: 'Advanced email marketing automation platform with AI-powered personalization and optimization.',
+      category: 'saas',
+      features: ['AI Personalization', 'Automated Campaigns', 'A/B Testing', 'Behavioral Triggers', 'Analytics Dashboard', 'Template Library'],
+      price: 'Starting at $89/month',
+      marketPrice: '$150-400/month',
+      benefits: ['Higher open rates', 'Better engagement', 'Automated campaigns', 'Improved ROI']
+    },
+    {
+      icon: Package,
+      title: 'Zion Inventory Smart',
+      description: 'Intelligent inventory management system with demand forecasting and automated reordering.',
+      category: 'saas',
+      features: ['Demand Forecasting', 'Automated Reordering', 'Multi-location Management', 'Supplier Integration', 'Cost Optimization', 'Analytics Dashboard'],
+      price: 'Starting at $159/month',
+      marketPrice: '$300-800/month',
+      benefits: ['Reduced stockouts', 'Lower inventory costs', 'Improved cash flow', 'Better supplier relationships']
+    },
+    {
+      icon: Settings,
+      title: 'Zion Workflow Automation',
+      description: 'No-code workflow automation platform for streamlining business processes and increasing efficiency.',
+      category: 'saas',
+      features: ['Visual Workflow Builder', 'API Integrations', 'Conditional Logic', 'Task Automation', 'Approval Workflows', 'Performance Monitoring'],
+      price: 'Starting at $119/month',
+      marketPrice: '$200-600/month',
+      benefits: ['Process efficiency', 'Reduced errors', 'Cost savings', 'Scalable automation']
+    },
+    {
+      icon: Monitor,
+      title: 'Zion Performance Monitor',
+      description: 'Comprehensive application and infrastructure monitoring with AI-powered alerting and optimization.',
+      category: 'saas',
+      features: ['Real-time Monitoring', 'AI-powered Alerts', 'Performance Analytics', 'Uptime Tracking', 'Error Tracking', 'Capacity Planning'],
+      price: 'Starting at $139/month',
+      marketPrice: '$250-700/month',
+      benefits: ['Improved uptime', 'Faster issue resolution', 'Better performance', 'Proactive monitoring']
+    },
+    {
+      icon: CheckSquare,
+      title: 'Zion Compliance Manager',
+      description: 'Automated compliance management platform for various industry standards and regulations.',
+      category: 'saas',
+      features: ['Compliance Tracking', 'Automated Reporting', 'Document Management', 'Audit Trail', 'Risk Assessment', 'Training Management'],
+      price: 'Starting at $199/month',
+      marketPrice: '$400-1000/month',
+      benefits: ['Reduced compliance risk', 'Automated reporting', 'Better documentation', 'Cost savings']
+    },
+    {
+      icon: Globe,
+      title: 'Zion Social Scheduler',
+      description: 'AI-powered social media management platform with content scheduling and performance analytics.',
+      category: 'saas',
+      features: ['AI Content Suggestions', 'Multi-platform Scheduling', 'Performance Analytics', 'Engagement Tracking', 'Hashtag Optimization', 'Competitor Analysis'],
+      price: 'Starting at $79/month',
+      marketPrice: '$150-400/month',
+      benefits: ['Increased engagement', 'Time savings', 'Better content strategy', 'Improved reach']
+    },
+    {
+      icon: Eye,
+      title: 'Zion AI Video Editor',
+      description: 'AI-powered video editing platform with automated editing, transcription, and optimization.',
+      category: 'saas',
+      features: ['AI Auto-editing', 'Voice Transcription', 'Subtitle Generation', 'Thumbnail Creation', 'Multi-format Export', 'Cloud Storage'],
+      price: 'Starting at $99/month',
+      marketPrice: '$200-500/month',
+      benefits: ['Faster video production', 'Professional quality', 'Automated processes', 'Cost-effective editing']
+    },
+    {
+      icon: Globe,
+      title: 'Zion AI Translator Pro',
+      description: 'Advanced translation platform with AI-powered language detection and context-aware translation.',
+      category: 'saas',
+      features: ['Real-time Translation', 'Document Translation', 'Voice Translation', 'Context Awareness', 'Quality Scoring', 'API Integration'],
+      price: 'Starting at $69/month',
+      marketPrice: '$120-300/month',
+      benefits: ['Global communication', 'Accurate translations', 'Time savings', 'Cost-effective solution']
+    },
+    {
+      icon: Code,
+      title: 'Zion AI Code Reviewer',
+      description: 'Intelligent code review platform with automated analysis, suggestions, and security scanning.',
+      category: 'saas',
+      features: ['Automated Code Review', 'Security Scanning', 'Performance Analysis', 'Best Practice Suggestions', 'Team Collaboration', 'Integration Support'],
+      price: 'Starting at $149/month',
+      marketPrice: '$250-600/month',
+      benefits: ['Improved code quality', 'Faster reviews', 'Better security', 'Team learning']
+    },
+    {
+      icon: Users,
+      title: 'Zion Customer Insights Pro',
+      description: 'Advanced customer analytics platform with AI-powered insights and behavioral analysis.',
+      category: 'saas',
+      features: ['Customer Segmentation', 'Behavioral Analysis', 'Predictive Analytics', 'Churn Prediction', 'Personalization Engine', 'ROI Tracking'],
+      price: 'Starting at $189/month',
+      marketPrice: '$350-800/month',
+      benefits: ['Better customer understanding', 'Improved retention', 'Personalized experiences', 'Data-driven decisions']
+    },
+    {
+      icon: Mail,
+      title: 'Zion AI Email Assistant',
+      description: 'Intelligent email management platform with AI-powered sorting, responses, and scheduling.',
+      category: 'saas',
+      features: ['Smart Email Sorting', 'AI Response Suggestions', 'Email Scheduling', 'Priority Detection', 'Spam Filtering', 'Analytics Dashboard'],
+      price: 'Starting at $59/month',
+      marketPrice: '$100-250/month',
+      benefits: ['Improved productivity', 'Better email management', 'Time savings', 'Reduced email stress']
+    },
+    {
+      icon: Calendar,
+      title: 'Zion AI Meeting Assistant',
+      description: 'AI-powered meeting management with transcription, action items, and follow-up automation.',
+      category: 'saas',
+      features: ['Meeting Transcription', 'Action Item Extraction', 'Follow-up Automation', 'Meeting Analytics', 'Integration Support', 'Voice Recognition'],
+      price: 'Starting at $89/month',
+      marketPrice: '$150-400/month',
+      benefits: ['Better meeting outcomes', 'Automated follow-ups', 'Improved productivity', 'Better documentation']
+    },
+    {
+      icon: Target,
+      title: 'Zion AI SEO Optimizer',
+      description: 'Comprehensive SEO optimization platform with AI-powered content analysis and ranking improvements.',
+      category: 'saas',
+      features: ['Content Analysis', 'Keyword Optimization', 'Ranking Tracking', 'Competitor Analysis', 'Technical SEO', 'Performance Monitoring'],
+      price: 'Starting at $129/month',
+      marketPrice: '$250-600/month',
+      benefits: ['Improved search rankings', 'Better organic traffic', 'Content optimization', 'Competitive advantage']
+    },
+    {
+      icon: Database,
+      title: 'Zion AI Data Cleaner',
+      description: 'Intelligent data cleaning and validation platform with automated quality assurance.',
+      category: 'saas',
+      features: ['Automated Data Cleaning', 'Duplicate Detection', 'Data Validation', 'Quality Scoring', 'Error Correction', 'Data Enrichment'],
+      price: 'Starting at $79/month',
+      marketPrice: '$150-400/month',
+      benefits: ['Improved data quality', 'Reduced manual work', 'Better insights', 'Cost savings']
+    },
+    {
+      icon: FileText,
+      title: 'Zion AI Contract Analyzer',
+      description: 'AI-powered contract analysis platform with risk assessment and compliance checking.',
+      category: 'saas',
+      features: ['Contract Analysis', 'Risk Assessment', 'Compliance Checking', 'Clause Extraction', 'Automated Summaries', 'Version Comparison'],
+      price: 'Starting at $199/month',
+      marketPrice: '$400-1000/month',
+      benefits: ['Faster contract review', 'Reduced risk', 'Better compliance', 'Time savings']
+    },
+    {
+      icon: CheckSquare,
+      title: 'Zion AI Survey Builder',
+      description: 'Intelligent survey creation platform with AI-powered question suggestions and analytics.',
+      category: 'saas',
+      features: ['AI Question Suggestions', 'Multi-format Surveys', 'Real-time Analytics', 'Response Analysis', 'Automated Reports', 'Integration Support'],
+      price: 'Starting at $69/month',
+      marketPrice: '$120-300/month',
+      benefits: ['Better survey design', 'Improved response rates', 'Automated analysis', 'Actionable insights']
+    },
+    {
+      icon: DollarSign,
+      title: 'Zion AI Accounting Assistant',
+      description: 'AI-powered accounting platform with automated bookkeeping and financial analysis.',
+      category: 'saas',
+      features: ['Automated Bookkeeping', 'Expense Categorization', 'Financial Analysis', 'Tax Preparation', 'Invoice Processing', 'Compliance Reporting'],
+      price: 'Starting at $149/month',
+      marketPrice: '$250-600/month',
+      benefits: ['Reduced accounting costs', 'Improved accuracy', 'Better financial insights', 'Time savings']
+    },
+    {
+      icon: Users,
+      title: 'Zion AI Recruitment Pro',
+      description: 'Intelligent recruitment platform with AI-powered candidate screening and matching.',
+      category: 'saas',
+      features: ['AI Candidate Screening', 'Resume Analysis', 'Skill Matching', 'Interview Scheduling', 'Background Checks', 'Analytics Dashboard'],
+      price: 'Starting at $179/month',
+      marketPrice: '$300-800/month',
+      benefits: ['Faster hiring process', 'Better candidate matches', 'Reduced bias', 'Improved efficiency']
+    },
+    {
+      icon: Shield,
+      title: 'Zion AI Content Moderation',
+      description: 'AI-powered content moderation platform with automated filtering and compliance management.',
+      category: 'saas',
+      features: ['Automated Content Filtering', 'Sentiment Analysis', 'Compliance Checking', 'Real-time Monitoring', 'Custom Rules', 'Analytics Dashboard'],
+      price: 'Starting at $159/month',
+      marketPrice: '$300-700/month',
+      benefits: ['Reduced moderation costs', 'Consistent enforcement', 'Better user experience', 'Compliance assurance']
+    },
+    {
+      icon: Settings,
+      title: 'Zion AI Predictive Maintenance',
+      description: 'Intelligent maintenance platform with AI-powered equipment monitoring and failure prediction.',
+      category: 'saas',
+      features: ['Equipment Monitoring', 'Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization', 'Performance Analytics', 'Alert System'],
+      price: 'Starting at $199/month',
+      marketPrice: '$400-1000/month',
+      benefits: ['Reduced downtime', 'Lower maintenance costs', 'Extended equipment life', 'Better planning']
+    },
+    {
+      icon: Zap,
+      title: 'Zion AI Energy Manager',
+      description: 'AI-powered energy management platform for optimizing consumption and reducing costs.',
+      category: 'saas',
+      features: ['Energy Monitoring', 'Consumption Analysis', 'Cost Optimization', 'Predictive Analytics', 'Automated Controls', 'Sustainability Reporting'],
+      price: 'Starting at $129/month',
+      marketPrice: '$250-600/month',
+      benefits: ['Reduced energy costs', 'Better sustainability', 'Automated optimization', 'Environmental impact']
+    },
+    {
+      icon: Package,
+      title: 'Zion AI Supply Chain Optimizer',
+      description: 'Intelligent supply chain management platform with AI-powered optimization and forecasting.',
+      category: 'saas',
+      features: ['Demand Forecasting', 'Inventory Optimization', 'Supplier Management', 'Risk Assessment', 'Cost Analysis', 'Performance Tracking'],
+      price: 'Starting at $219/month',
+      marketPrice: '$400-1000/month',
+      benefits: ['Reduced costs', 'Better inventory management', 'Improved efficiency', 'Risk mitigation']
+    },
+    {
+      icon: Shield,
+      title: 'Zion AI Fraud Detector',
+      description: 'Advanced fraud detection platform with real-time monitoring and prevention capabilities.',
+      category: 'saas',
+      features: ['Real-time Monitoring', 'Behavioral Analysis', 'Risk Scoring', 'Automated Alerts', 'Machine Learning', 'Compliance Support'],
+      price: 'Starting at $249/month',
+      marketPrice: '$500-1500/month',
+      benefits: ['Reduced fraud losses', 'Real-time protection', 'Better accuracy', 'Compliance ready']
+    },
+    {
+      icon: MessageSquare,
+      title: 'Zion AI Customer Service Pro',
+      description: 'Advanced customer service platform with AI-powered automation and human handoff.',
+      category: 'saas',
+      features: ['AI Chatbots', 'Sentiment Analysis', 'Ticket Routing', 'Knowledge Base', 'Live Agent Handoff', 'Performance Analytics'],
+      price: 'Starting at $189/month',
+      marketPrice: '$350-800/month',
+      benefits: ['Improved customer satisfaction', 'Reduced response times', '24/7 availability', 'Cost savings']
+    },
+    {
+      icon: Target,
+      title: 'Zion AI Marketing Automation',
+      description: 'Comprehensive marketing automation platform with AI-powered personalization and optimization.',
+      category: 'saas',
+      features: ['Campaign Automation', 'Personalization Engine', 'Lead Scoring', 'A/B Testing', 'Analytics Dashboard', 'Multi-channel Support'],
+      price: 'Starting at $159/month',
+      marketPrice: '$300-700/month',
+      benefits: ['Higher conversion rates', 'Better personalization', 'Automated optimization', 'Improved ROI']
+    },
+    {
+      icon: FileText,
+      title: 'Zion AI Document AI',
+      description: 'Intelligent document processing platform with AI-powered extraction and analysis.',
+      category: 'saas',
+      features: ['Document OCR', 'Data Extraction', 'Form Processing', 'Document Classification', 'Search & Retrieval', 'Integration APIs'],
+      price: 'Starting at $139/month',
+      marketPrice: '$250-600/month',
+      benefits: ['Faster document processing', 'Reduced manual work', 'Better accuracy', 'Cost savings']
+    },
+    {
+      icon: Brain,
+      title: 'Zion AI Quantum Analytics',
+      description: 'Revolutionary quantum-powered analytics platform for complex data analysis and optimization.',
+      category: 'saas',
+      features: ['Quantum Data Processing', 'Complex Optimization', 'Advanced Pattern Recognition', 'Real-time Insights', 'Quantum Machine Learning'],
+      price: 'Starting at $299/month',
+      marketPrice: '$500-2000/month',
+      benefits: ['Exponential processing speed', 'Complex problem solving', 'Advanced analytics', 'Future-proof technology']
+    },
+    {
+      icon: Eye,
+      title: 'Zion AI Holographic Workspace',
+      description: 'Immersive 3D workspace platform with AI-powered collaboration and visualization tools.',
+      category: 'saas',
+      features: ['3D Virtual Workspace', 'AI Collaboration Tools', 'Holographic Presentations', 'Spatial Computing', 'Real-time Rendering'],
+      price: 'Starting at $199/month',
+      marketPrice: '$350-1200/month',
+      benefits: ['Immersive collaboration', 'Enhanced productivity', 'Cutting-edge interface', 'Remote work revolution']
+    },
+    {
+      icon: Cpu,
+      title: 'Zion AI Edge Intelligence',
+      description: 'Distributed AI platform for edge computing with real-time processing and decision making.',
+      category: 'saas',
+      features: ['Edge AI Processing', 'Real-time Analytics', 'Offline Intelligence', 'Distributed Learning', 'Low Latency Response'],
+      price: 'Starting at $149/month',
+      marketPrice: '$250-800/month',
+      benefits: ['Ultra-low latency', 'Reduced bandwidth costs', 'Enhanced privacy', 'Real-time processing']
+    },
+    {
+      icon: Shield,
+      title: 'Zion AI Quantum Security',
+      description: 'Next-generation quantum-resistant security platform for future-proof protection.',
+      category: 'saas',
+      features: ['Quantum Encryption', 'Post-Quantum Security', 'Advanced Threat Detection', 'Zero-Trust Architecture', 'Quantum Key Distribution'],
+      price: 'Starting at $179/month',
+      marketPrice: '$300-1000/month',
+      benefits: ['Quantum-resistant security', 'Future-proof protection', 'Advanced threat detection', 'Military-grade encryption']
+    },
+    {
+      icon: Database,
+      title: 'Zion AI Neural Database Pro',
+      description: 'Self-optimizing database platform with AI-powered performance tuning and predictive analytics.',
+      category: 'saas',
+      features: ['Self-Optimizing Queries', 'Predictive Indexing', 'Automatic Scaling', 'Neural Optimization', 'Intelligent Caching'],
+      price: 'Starting at $129/month',
+      marketPrice: '$200-600/month',
+      benefits: ['Self-optimizing performance', 'Reduced maintenance', 'Intelligent scaling', 'Predictive optimization']
+    },
+    {
+      icon: Zap,
+      title: 'Zion AI Energy Optimizer',
+      description: 'AI-powered energy management platform for reducing costs and improving sustainability.',
+      category: 'saas',
+      features: ['Energy Monitoring', 'Cost Optimization', 'Predictive Analytics', 'Automated Controls', 'Sustainability Reporting'],
+      price: 'Starting at $99/month',
+      marketPrice: '$150-500/month',
+      benefits: ['Reduced energy costs', 'Better sustainability', 'Automated optimization', 'Environmental impact']
+    },
+    {
+      icon: Target,
+      title: 'Zion AI Supply Chain Intelligence',
+      description: 'Advanced supply chain optimization platform with AI-powered forecasting and risk management.',
+      category: 'saas',
+      features: ['Demand Forecasting', 'Risk Assessment', 'Supplier Optimization', 'Cost Analysis', 'Performance Tracking'],
+      price: 'Starting at $219/month',
+      marketPrice: '$400-1200/month',
+      benefits: ['Reduced costs', 'Better inventory management', 'Improved efficiency', 'Risk mitigation']
+    },
+    {
+      icon: Users,
+      title: 'Zion AI Talent Intelligence',
+      description: 'AI-powered talent acquisition and management platform with advanced matching algorithms.',
+      category: 'saas',
+      features: ['AI Candidate Matching', 'Skills Assessment', 'Performance Prediction', 'Retention Analytics', 'Diversity Optimization'],
+      price: 'Starting at $189/month',
+      marketPrice: '$300-800/month',
+      benefits: ['Better talent matches', 'Reduced hiring time', 'Improved retention', 'Diversity optimization']
+    },
+    {
+      icon: Globe,
+      title: 'Zion AI Global Translator',
+      description: 'Advanced translation platform with AI-powered context understanding and cultural adaptation.',
+      category: 'saas',
+      features: ['Context-Aware Translation', 'Cultural Adaptation', 'Real-time Translation', 'Voice Translation', 'Document Processing'],
+      price: 'Starting at $79/month',
+      marketPrice: '$120-400/month',
+      benefits: ['Accurate translations', 'Cultural sensitivity', 'Real-time processing', 'Global communication']
+    },
+    {
+      icon: FileText,
+      title: 'Zion AI Legal Assistant',
+      description: 'AI-powered legal document analysis and contract management platform.',
+      category: 'saas',
+      features: ['Contract Analysis', 'Legal Document Review', 'Compliance Checking', 'Risk Assessment', 'Automated Summaries'],
+      price: 'Starting at $249/month',
+      marketPrice: '$400-1200/month',
+      benefits: ['Faster legal reviews', 'Reduced legal costs', 'Better compliance', 'Risk mitigation']
+    },
+    {
+      icon: Heart,
+      title: 'Zion AI Health Monitor',
+      description: 'AI-powered health monitoring and wellness platform with predictive health analytics.',
+      category: 'saas',
+      features: ['Health Monitoring', 'Predictive Analytics', 'Wellness Tracking', 'Risk Assessment', 'Personalized Recommendations'],
+      price: 'Starting at $159/month',
+      marketPrice: '$250-700/month',
+      benefits: ['Better health outcomes', 'Preventive care', 'Personalized insights', 'Cost savings']
+    },
+    {
+      icon: BarChart3,
+      title: 'Zion AI Market Intelligence',
+      description: 'Advanced market analysis platform with AI-powered insights and trend prediction.',
+      category: 'saas',
+      features: ['Market Analysis', 'Trend Prediction', 'Competitor Intelligence', 'Risk Assessment', 'Investment Insights'],
+      price: 'Starting at $199/month',
+      marketPrice: '$350-1000/month',
+      benefits: ['Better market insights', 'Improved decision making', 'Risk mitigation', 'Competitive advantage']
+    },
+    {
+      icon: Settings,
+      title: 'Zion AI Process Optimizer',
+      description: 'Intelligent process optimization platform with AI-powered workflow analysis and improvement.',
+      category: 'saas',
+      features: ['Process Mining', 'Workflow Optimization', 'Bottleneck Detection', 'Automated Improvements', 'Performance Analytics'],
+      price: 'Starting at $139/month',
+      marketPrice: '$250-600/month',
+      benefits: ['Process efficiency', 'Cost reduction', 'Automated optimization', 'Better performance']
+    },
+    {
+      icon: Monitor,
+      title: 'Zion AI Infrastructure Monitor',
+      description: 'Advanced infrastructure monitoring platform with AI-powered anomaly detection and optimization.',
+      category: 'saas',
+      features: ['Real-time Monitoring', 'Anomaly Detection', 'Predictive Maintenance', 'Performance Optimization', 'Automated Alerts'],
+      price: 'Starting at $119/month',
+      marketPrice: '$200-500/month',
+      benefits: ['Improved uptime', 'Faster issue resolution', 'Proactive maintenance', 'Cost optimization']
+    },
+    {
+      icon: Cpu,
+      title: 'Quantum Computing Infrastructure',
+      description: 'Revolutionary quantum computing infrastructure setup and management for advanced computational needs.',
+      category: 'it',
+      features: ['Quantum Hardware Setup', 'Quantum Software Integration', 'Quantum Algorithm Development', 'Quantum Security Implementation', 'Quantum Performance Optimization'],
+      price: 'Starting at $5,000/month',
+      marketPrice: '$10000-50000/month',
+      benefits: ['Exponential processing power', 'Revolutionary problem solving', 'Future-proof technology', 'Competitive advantage']
+    },
+    {
+      icon: Eye,
+      title: 'Holographic Technology Solutions',
+      description: 'Advanced holographic display and interaction systems for immersive business applications.',
+      category: 'it',
+      features: ['Holographic Display Setup', '3D Content Creation', 'Gesture Recognition Systems', 'Spatial Computing Integration', 'AR/VR Implementation'],
+      price: 'Starting at $3,500/month',
+      marketPrice: '$6000-25000/month',
+      benefits: ['Immersive user experience', 'Enhanced productivity', 'Cutting-edge technology', 'Competitive differentiation']
+    },
+    {
+      icon: Brain,
+      title: 'AI Infrastructure & MLOps',
+      description: 'Complete AI infrastructure setup with machine learning operations and model deployment.',
+      category: 'it',
+      features: ['AI Model Deployment', 'MLOps Pipeline Setup', 'GPU Infrastructure', 'Model Monitoring', 'Auto-scaling AI Services'],
+      price: 'Starting at $2,800/month',
+      marketPrice: '$4500-15000/month',
+      benefits: ['Scalable AI infrastructure', 'Automated ML operations', 'High-performance computing', 'Cost-effective AI deployment']
+    },
+    {
+      icon: Shield,
+      title: 'Zero-Trust Security Architecture',
+      description: 'Comprehensive zero-trust security implementation with advanced threat protection and monitoring.',
+      category: 'it',
+      features: ['Zero-Trust Implementation', 'Identity & Access Management', 'Micro-segmentation', 'Continuous Monitoring', 'Threat Intelligence'],
+      price: 'Starting at $2,200/month',
+      marketPrice: '$3500-12000/month',
+      benefits: ['Enhanced security posture', 'Reduced attack surface', 'Continuous monitoring', 'Compliance assurance']
+    },
+    {
+      icon: Database,
+      title: 'Blockchain & Web3 Infrastructure',
+      description: 'Complete blockchain infrastructure setup with smart contracts and decentralized applications.',
+      category: 'it',
+      features: ['Blockchain Network Setup', 'Smart Contract Development', 'DeFi Integration', 'NFT Platform Development', 'Web3 Security'],
+      price: 'Starting at $3,200/month',
+      marketPrice: '$5000-20000/month',
+      benefits: ['Decentralized solutions', 'Enhanced security', 'Transparent operations', 'Future-proof technology']
+    },
+    {
+      icon: Globe,
+      title: 'Edge Computing Solutions',
+      description: 'Distributed edge computing infrastructure for low-latency applications and IoT integration.',
+      category: 'it',
+      features: ['Edge Server Deployment', 'IoT Integration', 'Real-time Processing', 'Distributed Architecture', 'Edge Security'],
+      price: 'Starting at $1,800/month',
+      marketPrice: '$3000-10000/month',
+      benefits: ['Ultra-low latency', 'Reduced bandwidth costs', 'Enhanced privacy', 'Real-time processing']
+    },
+    {
+      icon: Zap,
+      title: '5G Network Implementation',
+      description: 'Complete 5G network infrastructure setup and optimization for high-speed connectivity.',
+      category: 'it',
+      features: ['5G Network Design', 'Infrastructure Deployment', 'Performance Optimization', 'Security Implementation', 'IoT Integration'],
+      price: 'Starting at $4,500/month',
+      marketPrice: '$8000-30000/month',
+      benefits: ['Ultra-fast connectivity', 'Low latency', 'Massive IoT support', 'Enhanced mobile experience']
+    },
+    {
+      icon: Monitor,
+      title: 'Advanced Monitoring & Observability',
+      description: 'Comprehensive monitoring and observability platform with AI-powered insights and automation.',
+      category: 'it',
+      features: ['Full-Stack Monitoring', 'AI-Powered Analytics', 'Automated Alerting', 'Performance Optimization', 'Predictive Maintenance'],
+      price: 'Starting at $1,500/month',
+      marketPrice: '$2500-8000/month',
+      benefits: ['Proactive issue detection', 'Improved uptime', 'Better performance', 'Reduced downtime']
+    },
+    {
+      icon: Settings,
+      title: 'Hyperautomation Solutions',
+      description: 'End-to-end hyperautomation implementation with AI, RPA, and process intelligence.',
+      category: 'it',
+      features: ['RPA Implementation', 'Process Mining', 'AI Integration', 'Workflow Automation', 'Intelligent Document Processing'],
+      price: 'Starting at $2,500/month',
+      marketPrice: '$4000-15000/month',
+      benefits: ['Complete process automation', 'Reduced manual work', 'Improved efficiency', 'Cost savings']
+>>>>>>> cursor/website-audit-and-update-with-deployment-43a6
     }
   ];
 
@@ -174,15 +697,29 @@ const ServicesPage: React.FC = () => {
   return (
     <>
       <Helmet>
+<<<<<<< HEAD
         <title>Services - Zion Tech Group | AI, IT & Micro SaaS Solutions</title>
         <meta name="description" content="Comprehensive AI services, IT solutions, and Micro SaaS tools. From quantum computing to cloud migration, we provide cutting-edge technology solutions for modern businesses." />
         <meta name="keywords" content="AI services, IT services, micro saas, cloud migration, cybersecurity, quantum computing, blockchain, business automation" />
         <link rel="canonical" href="https://ziontechgroup.com/services" />
+=======
+        <title>Our Services - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Comprehensive AI and IT services including chatbots, analytics, cloud migration, cybersecurity, and custom software development." />
+        <meta name="keywords" content="AI services, IT services, cloud migration, cybersecurity, software development, micro saas" />
+        <meta property="og:title" content="Our Services - Zion Tech Group" />
+        <meta property="og:description" content="Comprehensive AI and IT solutions for your business" />
+        <meta property="og:type" content="website" />
+>>>>>>> cursor/website-audit-and-update-with-deployment-43a6
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
+<<<<<<< HEAD
         <main className="pt-20">
+=======
+        
+        <main className="container mx-auto px-4 py-16 pt-24">
+>>>>>>> cursor/website-audit-and-update-with-deployment-43a6
           {/* Hero Section */}
           <section className="py-20 px-4">
             <div className="max-w-7xl mx-auto text-center">

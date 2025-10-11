@@ -1,10 +1,6 @@
 import React from 'react';
 import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe } from 'lucide-react';
 const EnhancedServicesShowcase: React.FC = () => {
-<<<<<<< HEAD
-    const services = const services = const services = [
-    {
-=======
     const features = [
     
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
@@ -37,20 +33,7 @@ const EnhancedServicesShowcase: React.FC = () => {
       icon: Zap,
       color: 'text-yellow-400',
       features: ['Workflow Automation', 'Process Optimization', 'Smart Scheduling', 'Task Management'],
-<<<<<<< HEAD
-      stats: '95% Efficiency',}}
-  ]
-return(<section className="py-20 px-4">)</section>
-=======
       stats: '95% Efficiency'
-<<<<<<< HEAD
-  };
-    };
-  ];
-return ()
-    services.map((service, index) => ()
-    service.features.map((feature, featureIndex) => ()
-=======
   }
     }
   ];];];
@@ -103,10 +86,6 @@ return (
             </div>
           ))}
         </div>
-<<<<<<< HEAD
-        <div className="text-center mt-12" / /></div>
-          <a></a>
-=======
         <div className="text-center mt-12"></div></div></div>
           <a>
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6

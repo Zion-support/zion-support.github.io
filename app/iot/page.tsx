@@ -2,10 +2,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Wifi, Shield, Zap, Target, BarChart, Cpu, Sparkles } from 'lucide-react';
 const IoTPage: React.FC = () => {
-<<<<<<< HEAD
-    const iotServices = const iotServices = const iotServices = [
-    {
-=======
     const features = [
     
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
@@ -14,11 +10,6 @@ const IoTPage: React.FC = () => {
       icon: '📱',
       price: 'Starting at $2,500/month',
       features: ['Device provisioning', 'Remote monitoring', 'Firmware updates', 'Device analytics', 'Alert management'],
-<<<<<<< HEAD
-      benefits: ['Reduce device downtime by 60%', 'Improve operational efficiency', 'Lower maintenance costs'],
-      marketPrice: '$4,000-15,000/month',;
-      category: 'Device Management',;
-=======
       benefits: [''Reduce device downtime by 60%', 'Improve operational efficiency', 'Lower maintenance costs''],
       marketPrice: '$4,000-15,000/month',
       category: 'Device Management',
@@ -144,29 +135,14 @@ const IoTPage: React.FC = () => {
       benefits: [''Gain actionable insights', 'Improve decision making', 'Optimize operations''],
       marketPrice: '$8,000-35,000/month',
       category: 'Analytics',
-<<<<<<< HEAD
-      technologies: ['Apache Kafka', 'Apache Spark', 'InfluxDB', 'Grafana', 'Machine Learning']}}
-  ]
-const categories = [...new Set(iotServices.map(service => service.category))]
-return(<>)
-      <Helmet />
-=======
       technologies: ['Apache Kafka', 'Apache Spark', 'InfluxDB', 'Grafana', 'Machine Learning']
   }
     }
   ];
 const categories = [...new Set(iotServices.map(service => service.category))];
-<<<<<<< HEAD
-return ()
-                  Specialized {category.toLowerCase()} solutions powered by IoT technology
-                </p>
-              </div>
-              <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8" / /></div>
-=======
 return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>IoT Services - Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
@@ -248,15 +224,10 @@ return (
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-        {/* Services by Category */}{
-    categories.map(category => ()}
-=======
         {/* Services by Category */},
     {
     categories.map(category => (
   }
->>>>>>> origin/main
           <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">
@@ -279,10 +250,6 @@ return (
                 {
     iotServices;
                   .filter(service => service.category === category),
-<<<<<<< HEAD
-                  .map((service, index) => ()
-    service.features.map((feature, featureIndex) => ()
-=======
                   .map((service, index) => (</div>
   }
                     <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"></div></div></div>
@@ -314,13 +281,6 @@ return (
 
                         </ul>
                       </div>
-<<<<<<< HEAD
-                      <div className="mb-4" / /></div>
-                        <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
-                        <div className="flex flex-wrap gap-2" / /></div>
-                          {
-    service.technologies.map((tech, techIndex) => ()
-=======
                       <div className="mb-4"></div></div></div>
                         <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
                         <div className="flex flex-wrap gap-2"></div></div></div>
@@ -336,17 +296,11 @@ return (
 
                         </div>
                       </div>
-<<<<<<< HEAD
-                      <div className="mb-6" / /></div>
-=======
                       <div className="mb-6"></div></div></div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                         <h4 className="font-semibold text-gray-900 mb-2">Business Benefits:</h4>
                         <ul></ul>
                           {
-<<<<<<< HEAD
-    service.benefits.map((benefit, benefitIndex) => ()
-=======
     service.benefits.map((benefit, benefitIndex) => (
   }
                             <li>
@@ -359,11 +313,6 @@ return (
 
                         </ul>
                       </div>
-<<<<<<< HEAD
-                      <button></button>
-                        Get IoT Quote
-                      </button>
-=======
                       <button>
                         Get IoT Quote;
                       </button></button></button>
@@ -374,28 +323,8 @@ return (
               </div>
             </div>
           </section>
-<<<<<<< HEAD
-        ))}
-{/* IoT Capabilities Showcase */} <section className="py-20 px-4">
-=======
         ))},
     {/* IoT Capabilities Showcase */}
-<<<<<<< HEAD
-        <section className="py-20 px-4" /></section>
-          <div className="max-w-7xl mx-auto" /></div>
-            <div className="text-center mb-16" /></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-        </section>
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8" / /></div>
-            <div className="text-center mb-12" / /></div>
-              <h2></h2>
-                Our IoT Capabilities
-              </h2>
-              <p></p>
-=======
         <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">
@@ -414,38 +343,6 @@ return (
                 Comprehensive IoT technologies and methodologies for connected solutions,
               </p></p></p>
             </div>
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" / /></div>
-              <div className="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg" / /></div>
-                <Wifi></Wifi>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Connectivity</h3>
-                <p className="text-gray-600">Multi-protocol connectivity including WiFi, LoRaWAN, NB-IoT, and 5G</p>
-              </div>
-              <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-cyan-100 rounded-lg" / /></div>
-                <Shield></Shield>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Security</h3>
-                <p className="text-gray-600">End-to-end security with device authentication and data encryption</p>
-              </div>
-              <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-violet-100 rounded-lg" / /></div>
-                <Cpu></Cpu>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Edge Computing</h3>
-                <p className="text-gray-600">Low-latency processing and real-time decision making at the edge</p>
-              </div>
-              <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-amber-100 rounded-lg" / /></div>
-                <Target></Target>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Device Management</h3>
-                <p className="text-gray-600">Comprehensive device lifecycle management and monitoring</p>
-              </div>
-              <div className="text-center p-6 bg-gradient-to-br from-pink-50 to-rose-100 rounded-lg" / /></div>
-                <Sparkles></Sparkles>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">AI Analytics</h3>
-                <p className="text-gray-600">Machine learning and AI for predictive analytics and insights</p>
-              </div>
-              <div className="text-center p-6 bg-gradient-to-br from-indigo-50 to-blue-100 rounded-lg" / /></div>
-                <BarChart></BarChart>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Data Visualization</h3>
-                <p className="text-gray-600">Real-time dashboards and analytics for IoT data insights</p>
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div></div></div>
               <div className="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg"></div></div></div>
                 <Wifi>
@@ -482,26 +379,6 @@ return (
           </div>
         </section>
         {/* Contact Section */}
-<<<<<<< HEAD
-        <section className="py-20 px-4" /></section>
-          <div className="max-w-7xl mx-auto" /></div>
-            <div className="text-center mb-16" /></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-        </section>
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center" / /></div>
-            <h2></h2>
-              Ready to Connect Your World?
-            </h2>
-            <p></p>
-              Contact our IoT experts for a free consultation and custom IoT strategy development
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center" / /></div>
-              <a></a>
-                📞 +1 302 464 0950
-=======
         <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">
@@ -526,10 +403,6 @@ return (
                 ✉️ kleber@ziontechgroup.com,
               </a>
             </div>
-<<<<<<< HEAD
-            <div className="mt-8 text-sm text-green-200" / /></div>
-              <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-=======
             <div className="mt-8 text-sm text-green-200"></div></div></div>
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p></p></p>
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6

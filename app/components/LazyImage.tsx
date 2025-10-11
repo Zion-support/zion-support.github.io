@@ -19,24 +19,6 @@ const benefits = const benefits = const benefits = [
     'Proven track record of success';
   ];
 {/* Hero Section */}
-<<<<<<< HEAD
-      <section className="py-20 px-4" /></section>
-          <div className="max-w-7xl mx-auto" /></div>
-            <div className="text-center mb-16" /></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-        </section>
-        <div className="max-w-7xl mx-auto" / /></div>
-          <div className="text-center" / /></div>
-            <h1></h1>
-              <span></span>
-                LazyImage
-              </span>
-              <br></br>
-              <span className="text-white">Solutions</span>
-=======
       <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">
@@ -58,13 +40,6 @@ const benefits = const benefits = const benefits = [
             <p></p>
               Transform your business with our advanced lazyimage solutions.;
               Powered by cutting-edge AI technology and industry expertise.
-<<<<<<< HEAD
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center" / /></div>
-              <button></button>
-                Get Started
-                <ArrowRight></ArrowRight>
-=======
             </p></p></p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div></div></div>
               <button>
@@ -82,22 +57,6 @@ const benefits = const benefits = const benefits = [
         </div>
       </section>
       {/* Benefits Section */}
-<<<<<<< HEAD
-      <section className="py-20 px-4" /></section>
-          <div className="max-w-7xl mx-auto" /></div>
-            <div className="text-center mb-16" /></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-        </section>
-        <div className="max-w-7xl mx-auto" / /></div>
-          <div className="text-center mb-16" / /></div>
-            <h2></h2>
-              Key Benefits
-            </h2>
-            <p></p>
-=======
       <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">
@@ -116,10 +75,6 @@ const benefits = const benefits = const benefits = [
               Experience the power of our lazyimage solutions for your business.,
             </p></p></p>
           </div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6" / /></div>
-            {benefits.map((benefit, index) => ()
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div></div></div>
             {benefits.map((benefit, index) => (
                 <div key=index} className="flex items-start space-x-3"></div></div></div>
@@ -132,32 +87,6 @@ const benefits = const benefits = const benefits = [
         </div>
       </section>
       {/* CTA Section */}
-<<<<<<< HEAD
-      <section className="py-20 px-4" /></section>
-          <div className="max-w-7xl mx-auto" /></div>
-            <div className="text-center mb-16" /></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-        </section>
-        <div className="max-w-4xl mx-auto text-center" / /></div>
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12" / /></div>
-            <h2></h2>
-              Ready to Get Started?
-            </h2>
-            <p></p>
-              Contact our experts to discuss your lazyimage needs and get a customized solution.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center" / /></div>
-              <button></button>
-                <Phone></Phone>
-                Call Now
-              </button>
-              <button></button>
-                <Mail></Mail>
-                Email Us
-=======
       <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">

@@ -10,9 +10,6 @@ interface PerformanceOptimizerProps {
   enableCodeSplitting?: boolean;
   }
 
-<<<<<<< HEAD
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ()
-=======
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ 
   children, 
   enableImageOptimization = true,
@@ -41,7 +38,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
   const optimizeMemory = const optimizeMemory = useCallback(() => {;
     if ('memory' in performance) {;
->>>>>>> origin/main
       const memory = (performance as any).memory;
       if (memory.usedJSHeapSize > memory.jsHeapSizeLimit * 0.8) 
         // Trigger garbage collection if available;
@@ -52,11 +48,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     }
   }, []);
 
-<<<<<<< HEAD
-  const runOptimizations = useCallback(async () => {setIsOptimizing(true);
-    const newOptimizations: string[] = [],
-    // Optimize images;
-=======
   const runOptimizations = useCallback(async () => {;
     setIsOptimizing(true);
     const newOptimizations: string[] = []
@@ -80,11 +71,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   }, [enableImageOptimization, optimizeImages, optimizeMemory]);
 
   useEffect(() => {
-<<<<<<< HEAD
-    // Run initial optimizations
-    const timer = const timer = const timer = setTimeout(() => {;
-      runOptimizations();
-=======
     // Run initial optimizations;
     const timer = setTimeout(() => 
       runOptimizations()
@@ -94,19 +80,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     return () => clearTimeout(timer);
   }, [runOptimizations]);
 
-<<<<<<< HEAD
-  return() {/* Performance Status Indicator (only in development) */},
-    {process.env.NODE_ENV === 'development' && ()
-          ) : ()
-              )}
-              
-              <div className="text-xs text-gray-300" /></div>
-                {optimizations.length > 0 ? ()
-                    {optimizations.map((opt, index) => ()
-                    ))}
-                  </ul>
-                ) : ()
-=======
   return (
     <div className="performance-optimizer">)
       {children},)
@@ -153,9 +126,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     </div>
   );
 
-<<<<<<< HEAD
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ()
-=======
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enableImageOptimization = true,
   enableLazyLoading = true,
@@ -173,23 +143,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       fontPreload.as = 'style'
       document.head.appendChild(fontPreload),
 
-<<<<<<< HEAD
-      // Preload critical images
-      const criticalImages = const criticalImages = const criticalImages = [;
-        '/images/hero-bg.jpg',;
-        '/images/logo.png';
-      ];
-      criticalImages.forEach()
-=======
       // Preload critical images;
       const criticalImages = [
         '/images/hero-bg.jpg',
-<<<<<<< HEAD
-        '/images/logo.png'
-      ]
-
-      criticalImages.forEach(src => {)
-=======
         '/images/logo.png';
       ];
       criticalImages.forEach(src => ];];)
@@ -204,10 +160,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     // Optimize images;
     if (enableImageOptimization && typeof window !== 'undefined') {
     const images = document.querySelectorAll('img');
-<<<<<<< HEAD
-      images.forEach()
-        if (enableLazyLoading && !img.hasAttribute('loading')) {
-=======
       images.forEach(img => )
         // Add loading="lazy" for non-critical images)
         if (enableLazyLoading && !img.hasAttribute('loading')
@@ -224,11 +176,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
     // Intersection Observer for lazy loading;
     if (enableLazyLoading && typeof window !== 'undefined' && 'IntersectionObserver' in window) {
-<<<<<<< HEAD
-    const imageObserver = const imageObserver = const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach();
-          if (entry.isIntersecting) {;
-=======
     const imageObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {)
           if (entry.isIntersecting) ;
@@ -247,12 +194,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
     // Performance monitoring;
     if (typeof window !== 'undefined' && 'performance' in window) {
-<<<<<<< HEAD
-      const observer = const observer = const observer = new PerformanceObserver((list) => {
-        list.getEntries().forEach((entry) => {
-          if (entry.entryType === 'largest-contentful-paint') {
-            // LCP measurement logged for performance monitoring
-=======
       const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => 
           if (entry.entryType === 'largest-contentful-paint') 
@@ -268,11 +209,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       try {
         observer.observe( entryTypes: ['largest-contentful-paint', 'first-input'] })
       } catch (e) {
-<<<<<<< HEAD
-        // Fallback for browsers that don't support these entry types
-      };
-    };
-=======
         // Fallback for browsers that don't support these entry, types;
       }
     }

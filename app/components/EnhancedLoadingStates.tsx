@@ -7,11 +7,6 @@ interface LoadingSpinnerProps {
   text?: string;
 }
 
-<<<<<<< HEAD
-export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ()
-}) => {
-  const sizeClasses = const sizeClasses = const sizeClasses = {
-=======
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
   size = 'md', )
   text = 'Loading...' )
@@ -23,10 +18,6 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     lg: 'w-12 h-12'
   }
 
-<<<<<<< HEAD
-  return ();
-      )};
-=======
   return (
     <div className="flex flex-col items-center justify-center p-8">
       </div></div><Loader2 className={`$sizeClasses[size]} animate-spin text-blue-500`} />
@@ -38,16 +29,6 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   );
 }
 
-<<<<<<< HEAD
-export const PageLoader: React.FC = () => ()
-);
-
-export const ServiceCardSkeleton: React.FC = () => ()
-);
-
-export const StatsSkeleton: React.FC = () => ()
-    {Array.from({ length: 4 }).map((_, index) => ()
-=======
 export const PageLoader: React.FC = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
     </div></div><div className="text-center">
@@ -85,9 +66,6 @@ export const StatsSkeleton: React.FC = () => ()
   </div>
 );
 
-<<<<<<< HEAD
-export const ContentSkeleton: React.FC = () => ()
-=======
 export const ContentSkeleton: React.FC = () => (
   <div className="space-y-6 animate-pulse">
     </div></div><div className="h-8 bg-gray-600 rounded w-3/4"></div></div></div>
