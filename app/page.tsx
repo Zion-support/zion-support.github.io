@@ -55,6 +55,7 @@ const HomePage: React.FC = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  return (
     <>
       <Helmet>
         <title>Zion Tech Group - Advanced AI and IT Solutions</title>
