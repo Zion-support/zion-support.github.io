@@ -1,126 +1,129 @@
-trackAnalytics?: boolean
-  }
+import { useState, useEffect, useCallback } from 'react';
+
+interface PerformanceMetrics {
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
+  fps: number;
 }
-export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions = {}) 
-  }
-  } = _options;const _renderCountRef = useRef<number>(0)
-useEffect(() => 
-      analytics.trackCustomEvent('Component', 'Mounted', component)}}
-return () => 
-  }
-    }
-return (
-    <>
-      ) => 
-          )}}
-      }
-// Track component unmount;
-      if (trackAnalytics) {analytics.trackCustomEvent('Component', 'Unmounted', component)}}
-    }
-  }, [component, trackAnalytics, trackPerformance]);
-// Track render performance;
-  useEffect(() => 
-      )}}
+
+interface UseEnhancedPerformanceReturn {
+  metrics: PerformanceMetrics;
+  isOptimized: boolean;
+  optimize: () => void;
+  reset: () => void;
+}
+
+export const useEnhancedPerformance = (): UseEnhancedPerformanceReturn => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    fps: 0,
   });
-    if (trackErrors) 
-        });
-      },
-    [component, trackErrors]
-              duration > 1000 ? 'slow' : 'fast';
-            );
-  )
-const trackUserAction = useCallback(
-    (action: string, metadata?: Record</string><string, unknown>) => 
-  }
-      },
-    [component, trackAnalytics]
-  )
-const measureOperation = useCallback()
-    (operationName: string) => {}
-      const _markName = `${component}-${operationName}`
-      const _startTime = performance.now()
-return 
-          }
-return duration
-        },
-      },
-    [component, trackPerformance]
-return 
-  }
-  }
-}
-export default useEnhancedPerformance</string>
-/**
- * Enhanced Performance Hook
- * Combines performance monitoring, error tracking, and analytics
- */
-import {  useEffect, useCallback, useRef  } from 'react'
-import {  errorTracker  } from '../utils/enhancedErrorTracking'import {  analytics   } from '../utils/enhancedAnalytics'
-export interface UseEnhancedPerformanceOptions 
-  trackAnalytics?: boolean;}
-}
 
-export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions = {}) 
-    trackAnalytics = true,;}
-  } = _options;const _renderCountRef = useRef<number>(0)
-  useEffect(() => 
-      analytics.trackCustomEvent('Component', 'Mounted', component);}
-    }
+  const [isOptimized, setIsOptimized] = useState(false);
 
-    return () => 
-          );}
-        }
+  const measurePerformance = useCallback(() => {
+    if (typeof window === 'undefined') return;
+
+    const startTime = performance.now();
+    
+    // Measure load time
+    const loadTime = performance.timing?.loadEventEnd 
+      ? performance.timing.loadEventEnd - performance.timing.navigationStart 
+      : 0;
+
+    // Measure render time
+    const renderTime = performance.now() - startTime;
+
+    // Measure memory usage (if available)
+    const memoryUsage = (performance as any).memory?.usedJSHeapSize || 0;
+
+    // Measure FPS (simplified)
+    let fps = 0;
+    let lastTime = performance.now();
+    let frameCount = 0;
+
+    const measureFPS = () => {
+      frameCount++;
+      const currentTime = performance.now();
+      
+      if (currentTime - lastTime >= 1000) {
+        fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
+        frameCount = 0;
+        lastTime = currentTime;
       }
-
-      // Track component unmount
-      if (trackAnalytics) 
-        analytics.trackCustomEvent('Component', 'Unmounted', component);}
+      
+      if (fps === 0) {
+        requestAnimationFrame(measureFPS);
       }
-    }
-  }, [component, trackAnalytics, trackPerformance])
-  // Track render performance
-  useEffect(() => 
-      );}
-    }
-  });
-  const trackError = useCallback(
-    (error: Error, context?: Record<string, unknown>) => 
-          ...context,;}
-        });
-      }
-    },
-    [component, trackErrors]
-  )
-  const trackUserAction = useCallback(
-    (action: string, metadata?: Record<string, unknown>) => 
-        analytics.trackCustomEvent('User Action', action, component, undefined, metadata);}
-      }
-    },
-    [component, trackAnalytics]
-  )
-  const measureOperation = useCallback(
-    (operationName: string) => {}
-      const _markName = `${component}-${operationName}`
-      const _startTime = performance.now()
-      return 
-            analytics.trackPerformance(;}
-              `${component}-${operationName}`,
-              duration,
-              duration > 1000 ? 'slow' : 'fast'
-            )
-          }
+    };
 
-          return duration
-        },
+    measureFPS();
+
+    setMetrics({
+      loadTime,
+      renderTime,
+      memoryUsage,
+      fps,
+    });
+  }, []);
+
+  const optimize = useCallback(() => {
+    // Implement performance optimizations
+    if (typeof window === 'undefined') return;
+
+    // Enable hardware acceleration
+    document.body.style.transform = 'translateZ(0)';
+    
+    // Optimize images
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+      if (!img.loading) {
+        img.loading = 'lazy';
       }
-    },
-    [component, trackPerformance]
-  )
-  return 
-    measureOperation,;}
-  }
-}
+    });
 
-export default useEnhancedPerformance
+    // Preload critical resources
+    const criticalResources = [
+      '/fonts/inter.woff2',
+      '/css/critical.css',
+    ];
 
-</>
+    criticalResources.forEach(resource => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource;
+      link.as = resource.endsWith('.css') ? 'style' : 'font';
+      document.head.appendChild(link);
+    });
+
+    setIsOptimized(true);
+  }, []);
+
+  const reset = useCallback(() => {
+    setMetrics({
+      loadTime: 0,
+      renderTime: 0,
+      memoryUsage: 0,
+      fps: 0,
+    });
+    setIsOptimized(false);
+  }, []);
+
+  useEffect(() => {
+    measurePerformance();
+    
+    const interval = setInterval(measurePerformance, 5000);
+    
+    return () => clearInterval(interval);
+  }, [measurePerformance]);
+
+  return {
+    metrics,
+    isOptimized,
+    optimize,
+    reset,
+  };
+};

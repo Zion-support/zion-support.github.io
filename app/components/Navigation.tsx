@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
 const Navigation: React.FC = () => {

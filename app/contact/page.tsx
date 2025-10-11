@@ -1,346 +1,213 @@
-import React;, {useState} from 'react'
-import { Helmet } from 'react-helmet-async'
-import {Phone;, Mail, MapPin, Clock, Send} from 'lucide-react'
+'use client';
+import React from 'react';
+import {Helmet} from 'react-helmet-async';
+import {ArrowRight, CheckCircle, Target, BarChart, Zap, Shield, Brain, Eye, Hand, Users} from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const ContactPage: React.FC = () => 
-message: ''} });
-const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => 
-setFormData({} ...formData},
-      [e.target.name]: e.target.value
-    });
-  }
 
-const handleSubmit = (e: React.FormEvent) => 
-console.log('Form submitte, d:', formData);} }
+const ContactPage: React.FC = () => {
+  const features = [
+    {
+      icon: Zap,
+      title: 'Advanced Technology',
+      description: 'Cutting-edge solutions powered by the latest technology and innovation.'
+    },
+    {
+      icon: Shield,
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security and reliability for your peace of mind.'
+    },
+    {
+      icon: Target,
+      title: 'Focused Solutions',
+      description: 'Tailored solutions designed specifically for your business needs.'
+    },
+    {
+      icon: BarChart,
+      title: 'Performance Analytics',
+      description: 'Comprehensive analytics and insights to optimize your operations.'
+    }
+  ];
 
-const contactInfo = [
-    
-description: 'Mon-Fri 9AM-6PM EST'} ,
-    
-description: 'We\'ll respond within 24 hours'} ,
-    
-description: 'Visit our headquarters'} ,
-    
-    9: 00 AM - , 6:00 PM EST'} ]
-const services = [
-    'AI Solutions',
-    'Cloud Infrastructure',
-    'Cybersecurity',
-    'Data Analytics',
-    'Web Development',
-    'Mobile Development',
-    'IT Consulting',
-    'Other'
-  ]
-return (
-    <>
+  const services = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Leverage artificial intelligence to automate and optimize your processes.'
+    },
+    {
+      icon: Eye,
+      title: 'Visual Intelligence',
+      description: 'Advanced visual processing and analysis capabilities for better insights.'
+    },
+    {
+      icon: Hand,
+      title: 'Custom Development',
+      description: 'Bespoke solutions tailored to your specific requirements and goals.'
+    },
+    {
+      icon: Users,
+      title: 'Team Collaboration',
+      description: 'Enhanced collaboration tools to improve team productivity and efficiency.'
+    }
+  ];
 
+  const benefits = [
+    {
+      icon: CheckCircle,
+      title: 'Proven Results',
+      description: 'Track record of delivering successful projects and satisfied clients.'
+    },
+    {
+      icon: ArrowRight,
+      title: 'Scalable Solutions',
+      description: 'Solutions that grow with your business and adapt to changing needs.'
+    },
+    {
+      icon: Shield,
+      title: '24/7 Support',
+      description: 'Round-the-clock support to ensure your systems run smoothly.'
+    },
+    {
+      icon: Target,
+      title: 'ROI Focused',
+      description: 'Solutions designed to deliver measurable return on investment.'
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gray-50">
       <Helmet>
-        <title>AI Analytics - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
-        <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
+        <title>Contact - Zion Tech Group</title>
+        <meta name="description" content="Professional contact solutions by Zion Tech Group. Expert services and cutting-edge technology." />
       </Helmet>
+      
       <Navigation />
+      
+      <main className="pt-16">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              Contact
+              <span className="block text-blue-600">Solutions</span>
+            </h1>
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              Professional contact services designed to help your business succeed. 
+              We provide expert solutions tailored to your specific needs and goals.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                Get Started
+              </button>
+              <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Contact Us - Zion Tech Group | AI & IT Solutions</title>
-        <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact our team for consultations, support, and project inquiries." />
-        <meta name="keywords" content="contact, support, consultation, AI solutions, IT services, get in touch" />
-      </Helmet>
-
-      <Navigation />
-
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-Ready to transform your business? Let's discuss how our AI and IT solutions can help you achieve your goals.
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Our Features
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Comprehensive features designed to meet your business requirements.
               </p>
             </div>
-
-      <Footer />
-    </>
-          </div>
-
-      <Footer />
-    </>
-        </section>
-
-        {/* Contact Info Section */}
-        <section className="py-16 px-4 sm: px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className=">
-    ,>
-    d: grid-cols-2 l, g:grid-cols-4 gap-8">
-              
-}
-                  <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                      <Icon className="w-6 h-6 text-white">
-                    </div>
-
-      <Footer />
-    </>
-                    <h3 className="text-lg font-semibold text-white mb-2">{info.title}</h3>
-                    <p className="text-cyan-400 mb-2">{info.value}</p>
-                    <p className="text-gray-300 text-sm">{info.description}</p>
-                  </div>
-
-      <Footer />
-    </>
-                )
-              })}
-            </div>
-
-      <Footer />
-    </>
-          </div>
-
-      <Footer />
-    </>
-        </section>
-
-        {/* Contact Form Section */}
-        <section className=">
-    g: px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 l, g:grid-cols-2 gap-12">
-              <div>
-                <h2 className="text-3xl font-bold text-white mb-6">
-Send us a Message
-                </h2>
-                <p className="text-lg text-gray-300 mb-8">
-Fill out the form below and we'll get back to you as soon as possible. We're here to help you succeed.
-                </p>
-
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-Full Name *
-                      </label>
-                      <input
-type="text"
-id="name"
-name="name"
-value={formData.name} onChange={handleChange} required
-className=">
-    s: ring-cyan-500 focu, s:border-transparent">
-placeholder="Your full name"
-                      />
-  </input>
-                    </div>
-
-      <Footer />
-    </>
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-Email Address *
-                      </label>
-                      <input
-type="email"
-id="email"
-name="email"
-value={formData.email} onChange={handleChange} required
-className=">
-    s: border-transparent">
-placeholder="your@email.com"
-                      />
-  </input>
-                    </div>
-
-      <Footer />
-    </>
-                  </div>
-
-      <Footer />
-    </>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
-Company
-                      </label>
-                      <input
-type="text"
-id="company"
-name="company"
-value={formData.company} onChange={handleChange} className=">
-    s: ring-cyan-500 focu, s:border-transparent">
-placeholder="Your company name"
-                      />
-  </input>
-                    </div>
-
-      <Footer />
-    </>
-                    <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
-Phone Number
-                      </label>
-                      <input
-type="tel"
-id="phone"
-name="phone"
-value={formData.phone} onChange={handleChange} className=">
-    s: ring-cyan-500 focu, s:border-transparent">
-placeholder="+1 (555) 123-4567"
-                      />
-  </input>
-                    </div>
-
-      <Footer />
-    </>
-                  </div>
-
-      <Footer />
-    </>
-                  <div>
-                    <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
-Service Interest
-                    </label>
-                    <select
-id="service"
-name="service"
-value={formData.service} onChange={handleChange} className=">
-    s: ring-cyan-500 focu, s:border-transparent">
-                    >
-                      <option value=""
-                      
-                        <option key={index} value={service}>{service}</option>
-                      ))}
-                    </select>
-                  </div>
-
-      <Footer />
-    </>
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-Message *
-                    </label>
-                    <textarea
-id="message"
-name="message"
-value={formData.message} onChange={handleChange} required>
-rows={6} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
-placeholder="Tell us about your project or requirements..."
-                    />
-  </textarea>
-                  </div>
-
-      <Footer />
-    </>
-                  <button;
-type="submit";>
-className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
-                  >;
-Send Message
-                    <Send className="ml-2 w-5 h-5" />
-                  </button>
-                </form>
-              </div>
-
-      <Footer />
-    </>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-                <h3 className="text-2xl font-bold text-white mb-6">;
-Why Choose Us?
-                </h3>
-                <div className="space-y-6">
-                  <div className="flex items-start">
-                    <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                      <span className="text-white font-bold">
-                    </div>
-      <Footer />
-    </>
-                    <div>
-                      <h4 className="text-lg font-semibold text-white mb-2">
-                      <p className="text-gray-300">
-                    </div>
-
-      <Footer />
-    </>
-                  </div>
-
-      <Footer />
-    </>
-                  <div className="flex items-start">
-                    <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                      <span className="text-white font-bold">2</span>
-                    </div>
-
-      <Footer />
-    </>
-                    <div>
-                      <h4 className="text-lg font-semibold text-white mb-2">
-                      <p className="text-gray-300">
-                    </div>
-
-      <Footer />
-    </>
-                  </div>
-
-      <Footer />
-    </>
-                  <div className="flex items-start">
-                    <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                      <span className="text-white font-bold">3</span>
-                    </div>
-
-      <Footer />
-    </>
-                    <div>
-                      <h4 className="text-lg font-semibold text-white mb-2">
-                      <p className="text-gray-300">
-                    </div>
-
-      <Footer />
-    </>
-                  </div>
-
-      <Footer />
-    </>
-                  <div className="flex items-start">
-                    <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                      <span className="text-white font-bold">4</span>
-                    </div>
-
-      <Footer />
-    </>
-                    <div>
-                      <h4 className="text-lg font-semibold text-white mb-2">
-                      <p className="text-gray-300">
-                    </div>
-
-      <Footer />
-    </>
-                  </div>
-
-      <Footer />
-    </>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="text-center p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
+                  <feature.icon className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
+                  <p className="text-gray-600">{feature.description}</p>
                 </div>
-
-      <Footer />
-    </>
-              </div>
-
-      <Footer />
-    </>
+              ))}
             </div>
-
-      <Footer />
-    </>
           </div>
-
-      <Footer />
-    </>
         </section>
-      </div>
 
-      <Footer />
-    </>
-      <Footer />
-    </>
-  )
-}
-
-export default ContactPage
+        {/* Services Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Our Services
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Professional services to help you achieve your business objectives.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {services.map((service, index) => (
+                <div key={index} className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                  <service.icon className="w-12 h-12 text-blue-600 mb-4" />
+                  <h3 className="text-2xl font-semibold text-gray-900 mb-4">{service.title}</h3>
+                  <p className="text-gray-600 mb-6">{service.description}</p>
+                  <button className="text-blue-600 font-semibold hover:text-blue-700 flex items-center">
+                    Learn More <ArrowRight className="w-4 h-4 ml-2" />
+                  </button>
+                </div>
+              ))}
+            </div>
           </div>
-</p></p></p></p>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Why Choose Us
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                We deliver exceptional value through our expertise and commitment to excellence.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start space-x-4">
+                  <benefit.icon className="w-8 h-8 text-blue-600 mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{benefit.title}</h3>
+                    <p className="text-gray-600">{benefit.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-blue-600">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8">
+              Contact us today to discuss your contact requirements and how we can help.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                Contact Us
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                View Portfolio
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </div>
+  );
+};
+
+export default ContactPage;

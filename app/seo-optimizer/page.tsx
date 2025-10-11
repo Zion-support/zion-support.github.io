@@ -1,143 +1,213 @@
-import React from 'react'
-const SeoOptimizerPage: React.FC = () => 
-    {} 'Advanced AI technology integration'},
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-const benefits = [
-    'Enhanced productivity and efficiency',
-    'Reduced operational costs',
-    'Improved decision making',
-    'Scalable solutions',
-    '24/7 availability',
-    'Expert support'
-  ]
+'use client';
+import React from 'react';
+import {Helmet} from 'react-helmet-async';
+import {ArrowRight, CheckCircle, Target, BarChart, Zap, Shield, Brain, Eye, Hand, Users} from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
-return (
-    <>
+const SeoOptimizerPage: React.FC = () => {
+  const features = [
+    {
+      icon: Zap,
+      title: 'Advanced Technology',
+      description: 'Cutting-edge solutions powered by the latest technology and innovation.'
+    },
+    {
+      icon: Shield,
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security and reliability for your peace of mind.'
+    },
+    {
+      icon: Target,
+      title: 'Focused Solutions',
+      description: 'Tailored solutions designed specifically for your business needs.'
+    },
+    {
+      icon: BarChart,
+      title: 'Performance Analytics',
+      description: 'Comprehensive analytics and insights to optimize your operations.'
+    }
+  ];
 
-      <Helmet>
-        <title>AI Analytics - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
-        <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
-      </Helmet>
-      <Navigation />
+  const services = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Leverage artificial intelligence to automate and optimize your processes.'
+    },
+    {
+      icon: Eye,
+      title: 'Visual Intelligence',
+      description: 'Advanced visual processing and analysis capabilities for better insights.'
+    },
+    {
+      icon: Hand,
+      title: 'Custom Development',
+      description: 'Bespoke solutions tailored to your specific requirements and goals.'
+    },
+    {
+      icon: Users,
+      title: 'Team Collaboration',
+      description: 'Enhanced collaboration tools to improve team productivity and efficiency.'
+    }
+  ];
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Page Title - Zion Tech Group</title>
-        <meta name="description" content="Description of the page and its benefits."
-        <meta name="keywords" content="relevant, keywords, for, seo"
-      </Helmet />
+  const benefits = [
+    {
+      icon: CheckCircle,
+      title: 'Proven Results',
+      description: 'Track record of delivering successful projects and satisfied clients.'
+    },
+    {
+      icon: ArrowRight,
+      title: 'Scalable Solutions',
+      description: 'Solutions that grow with your business and adapt to changing needs.'
+    },
+    {
+      icon: Shield,
+      title: '24/7 Support',
+      description: 'Round-the-clock support to ensure your systems run smoothly.'
+    },
+    {
+      icon: Target,
+      title: 'ROI Focused',
+      description: 'Solutions designed to deliver measurable return on investment.'
+    }
+  ];
 
-    'Cost-effective pricing plans',
-          </div&gt
-        </div&gt
-              </div&gt
-    'Proven track record of success'
-  ]
-const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ]
-return (
-      <Helmet>
-        <title>AI Analytics - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
-        <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
-      </Helmet>
-      <Navigation />
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return (
+    <div className="min-h-screen bg-gray-50">
       <Helmet>
         <title>Seo Optimizer - Zion Tech Group</title>
-        <meta name="description" content="AI-powered seo optimizer solution for intelligent automation and optimization" />
-        <meta name="keywords" content="AI, seo, optimizer, automation, artificial intelligence, business solutions" />
+        <meta name="description" content="Professional seo optimizer solutions by Zion Tech Group. Expert services and cutting-edge technology." />
       </Helmet>
-
+      
       <Navigation />
-
+      
+      <main className="pt-16">
         {/* Hero Section */}
-        <section className="py-20 px-4 relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse">
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md: text-7xl font-bold text-white mb-6">
-Seo Optimizer
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              Seo Optimizer
+              <span className="block text-blue-600">Solutions</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-AI-powered seo optimizer solution for intelligent automation and optimization
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              Professional seo optimizer services designed to help your business succeed. 
+              We provide expert solutions tailored to your specific needs and goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
-Get Started
+              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                Get Started
               </button>
-              <button className=">
-    ,>
-    r: bg-cyan-400 hove, r:text-white transition-all duration-300">
-Learn More
+              <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+                Learn More
               </button>
             </div>
-
-      <Footer />
-    </>
           </div>
-
-      <Footer />
-    </>
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-                  <p className="text-gray-300 mb-4">
-                  
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Our Features
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Comprehensive features designed to meet your business requirements.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="text-center p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
+                  <feature.icon className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
+                  <p className="text-gray-600">{feature.description}</p>
                 </div>
-
-      <Footer />
-    </>
               ))}
             </div>
-
-      <Footer />
-    </>
           </div>
+        </section>
 
-      <Footer />
-    </>
+        {/* Services Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Our Services
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Professional services to help you achieve your business objectives.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {services.map((service, index) => (
+                <div key={index} className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                  <service.icon className="w-12 h-12 text-blue-600 mb-4" />
+                  <h3 className="text-2xl font-semibold text-gray-900 mb-4">{service.title}</h3>
+                  <p className="text-gray-600 mb-6">{service.description}</p>
+                  <button className="text-blue-600 font-semibold hover:text-blue-700 flex items-center">
+                    Learn More <ArrowRight className="w-4 h-4 ml-2" />
+                  </button>
+                </div>
+              ))}
+            </div>
+          </div>
         </section>
 
         {/* Benefits Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Why Choose Us
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                We deliver exceptional value through our expertise and commitment to excellence.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start space-x-4">
+                  <benefit.icon className="w-8 h-8 text-blue-600 mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{benefit.title}</h3>
+                    <p className="text-gray-600">{benefit.description}</p>
+                  </div>
                 </div>
-
-      <Footer />
-    </>
               ))}
             </div>
-
-      <Footer />
-    </>
           </div>
-
-      <Footer />
-    </>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-blue-600">
           <div className="max-w-4xl mx-auto text-center">
-  </div>
-
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8">
+              Contact us today to discuss your seo optimizer requirements and how we can help.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                Contact Us
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                View Portfolio
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      
       <Footer />
-    </>
-</Helmet>
-</p>
+    </div>
+  );
+};
+
+export default SeoOptimizerPage;
