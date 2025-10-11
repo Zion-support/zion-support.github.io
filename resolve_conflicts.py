@@ -6,31 +6,29 @@ import subprocess
 def resolve_merge_conflicts(file_path):
     """Resolve merge conflicts in a file by keeping the latest version"""
     try:
-        result = subprocess.run(['git', 'grep', '-l', '<<<<<<< HEAD'], 
+        result = subprocess.run(['git', 'grep', '-l', ''], 
                               capture_output=True, text=True, cwd='/workspace')
         if result.returncode != 0:
             print("No merge conflicts found")
             return
         
         # Check if file has merge conflicts
-        if '<<<<<<< HEAD' not in content:
+        if '' not in content:
             return False
         
         # Remove all merge conflict markers and keep the latest version
-        # Pattern 1: Remove everything from <<<<<<< HEAD to ======= (keep nothing from HEAD)
-        content = re.sub(r'<<<<<<< HEAD.*?=======\s*\n', '', content, flags=re.DOTALL)
+        # Pattern 1: Remove everything from  to  (keep nothing from HEAD)
+        content = re.sub(r'.*?\s*\n', '', content, flags=re.DOTALL)
         
-        # Pattern 2: Remove everything from ======= to >>>>>>> (keep the latest version)
-        content = re.sub(r'=======.*?>>>>>>>.*?\n', '', content, flags=re.DOTALL)
+        # Pattern 2: Remove everything from  to         content = re.sub(r'.*?>>>>>>>.*?\n', '', content, flags=re.DOTALL)
         
-        # Pattern 3: Remove any remaining <<<<<<< HEAD lines
-        content = re.sub(r'^<<<<<<< HEAD.*?\n', '', content, flags=re.MULTILINE)
+        # Pattern 3: Remove any remaining  lines
+        content = re.sub(r'^.*?\n', '', content, flags=re.MULTILINE)
         
-        # Pattern 4: Remove any remaining ======= lines
-        content = re.sub(r'^=======.*?\n', '', content, flags=re.MULTILINE)
+        # Pattern 4: Remove any remaining  lines
+        content = re.sub(r'^.*?\n', '', content, flags=re.MULTILINE)
         
-        # Pattern 5: Remove any remaining >>>>>>> lines
-        content = re.sub(r'^>>>>>>>.*?\n', '', content, flags=re.MULTILINE)
+        # Pattern 5: Remove any remaining         content = re.sub(r'^>>>>>>>.*?\n', '', content, flags=re.MULTILINE)
         
         # Clean up multiple empty lines
         content = re.sub(r'\n\s*\n\s*\n', '\n\n', content)
@@ -73,7 +71,7 @@ def main():
             try:
                 with open(file_path, 'r', encoding='utf-8') as f:
                     content = f.read()
-                    if '<<<<<<< HEAD' in content:
+                    if '' in content:
                         files_with_conflicts.append(file_path)
             except:
                 continue
@@ -94,7 +92,7 @@ def main():
         try:
             with open(file_path, 'r', encoding='utf-8') as f:
                 content = f.read()
-                if '<<<<<<< HEAD' in content:
+                if '' in content:
                     remaining_conflicts.append(file_path)
         except:
             continue

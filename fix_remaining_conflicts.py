@@ -14,8 +14,7 @@ def clean_conflicts_in_file(file_path):
         
         original_content = content
         
-        # Remove all conflict markers and keep the content after =======
-        # Pattern 1:  ... 
+        # Remove all conflict markers and keep the content after         # Pattern 1:  ... 
         content = re.sub(r'\n(.*?)\n
         
         # Pattern 2: Remove any remaining conflict markers
@@ -102,7 +101,7 @@ def main():
             try:
                 with open(file_path, 'r', encoding='utf-8') as f:
                     content = f.read()
-                if '<<<<<<< HEAD' in content or '=======' in content or '>>>>>>>' in content:
+                if '' in content or '' in content or '>>>>>>>' in content:
                     remaining_conflicts.append(file_path)
             except:
                 pass

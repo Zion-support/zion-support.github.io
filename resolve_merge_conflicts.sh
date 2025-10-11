@@ -17,8 +17,7 @@ resolve_conflicts() {
     # If that doesn't work, use sed to remove conflict markers and keep HEAD content
     if grep -q "/d' "$file"
         sed -i '/
-        sed -i '/>>>>>>> cursor/d' "$file"
-    fi
+        sed -i '/    fi
 }
 
 # List of critical files to fix

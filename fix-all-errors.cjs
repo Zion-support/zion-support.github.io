@@ -203,7 +203,7 @@ function hasSyntaxErrors(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');
     // Check for common syntax error patterns
     return content.includes('<<<<<<<') || 
-           content.includes('=======') || 
+           content.includes('') || 
            content.includes('>>>>>>>') ||
            content.includes('error TS') ||
            content.includes('Unexpected token') ||

@@ -27,8 +27,8 @@ function fixAllConflicts(filePath) {
     let modified = false;
     
     // Remove all merge conflict markers and origin/ references
-    if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>') || content.includes('origin/')) {
-      content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>>[^\n]*/g, '');
+    if (content.includes('') || content.includes('') || content.includes('>>>>>>>') || content.includes('origin/')) {
+      content = content.replace(/[\s\S]*?[\s\S]*?>>>>>>>[^\n]*/g, '');
       content = content.replace(/origin\/[a-zA-Z0-9-]+/g, '');
       modified = true;
     }

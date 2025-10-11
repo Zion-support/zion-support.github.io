@@ -2,7 +2,6 @@
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 import type { NextApiRequest, NextApiResponse } from "next";
 import OpenAI from "openai";
 const client = process && process.env.OPENAI_API_KEY
@@ -262,7 +261,6 @@ function fallbackMarkdown(input: any): string {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 

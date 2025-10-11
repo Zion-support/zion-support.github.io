@@ -14,23 +14,21 @@ def fix_merge_conflicts(file_path):
             content = f.read()
         
         # Skip if no merge conflicts
-        if '<<<<<<< HEAD' not in content:
+        if '' not in content:
             return False
         
         print(f"Fixing merge conflicts in: {file_path}")
         
         # Remove merge conflict markers and keep the HEAD version
         # Pattern to match merge conflicts and keep the HEAD part
-        pattern = r'<<<<<<< HEAD\n(.*?)\n=======.*?\n>>>>>>> [^\n]*\n?'
-        
+        pattern = r'\n(.*?)\n.*?\n        
         # Replace merge conflicts with HEAD content
         new_content = re.sub(pattern, r'\1\n', content, flags=re.DOTALL)
         
         # Clean up any remaining merge conflict markers
-        new_content = re.sub(r'<<<<<<< HEAD\n?', '', new_content)
-        new_content = re.sub(r'=======\n?', '', new_content)
-        new_content = re.sub(r'>>>>>>> [^\n]*\n?', '', new_content)
-        
+        new_content = re.sub(r'\n?', '', new_content)
+        new_content = re.sub(r'\n?', '', new_content)
+        new_content = re.sub(r'        
         # Clean up extra whitespace
         new_content = re.sub(r'\n\s*\n\s*\n', '\n\n', new_content)
         

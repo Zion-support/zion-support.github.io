@@ -15,7 +15,7 @@ const resolveConflicts = (filePath) => {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Pattern to match merge conflicts
-    const conflictPattern = /<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)
+    const conflictPattern = /[\s\S]*?([\s\S]*?)
     
     let resolvedContent = content.replace(conflictPattern, (match, newerContent) => {
       console.log(`  ✅ Resolving conflict in ${filePath}`);

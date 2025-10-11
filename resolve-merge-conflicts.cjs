@@ -11,8 +11,7 @@ function resolveMergeConflicts(filePath) {
     let originalContent = content;
     
     // Pattern to match merge conflict markers
-    const conflictPattern = /<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+/g;
-    
+    const conflictPattern = /\n([\s\S]*?)\n\n([\s\S]*?)\n    
     let hasConflicts = false;
     let resolvedContent = content.replace(conflictPattern, (match, headContent, otherContent) => {
       hasConflicts = true;
@@ -33,10 +32,9 @@ function resolveMergeConflicts(filePath) {
     });
     
     // Additional cleanup for common merge conflict artifacts
-    resolvedContent = resolvedContent.replace(/^<<<<<<< HEAD\n/gm, '');
-    resolvedContent = resolvedContent.replace(/^=======\n/gm, '');
-    resolvedContent = resolvedContent.replace(/^>>>>>>> [^\n]+\n/gm, '');
-    
+    resolvedContent = resolvedContent.replace(/^\n/gm, '');
+    resolvedContent = resolvedContent.replace(/^\n/gm, '');
+    resolvedContent = resolvedContent.replace(/^    
     // Clean up empty lines and whitespace
     resolvedContent = resolvedContent.replace(/\n\s*\n\s*\n/g, '\n\n');
     
@@ -56,7 +54,7 @@ function resolveMergeConflicts(filePath) {
 // Function to find all files with merge conflicts
 function findFilesWithConflicts() {
   try {
-    const result = execSync('find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | grep -v node_modules | xargs grep -l "<<<<<<< HEAD"', { 
+    const result = execSync('find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | grep -v node_modules | xargs grep -l ""', { 
       encoding: 'utf8',
       cwd: process.cwd()
     });

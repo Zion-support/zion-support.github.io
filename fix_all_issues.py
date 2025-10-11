@@ -24,8 +24,8 @@ def fix_file_issues(file_path):
         
         # Remove remaining merge conflict markers
         content = re.sub(r' cursor/[a-zA-Z0-9-]+', '', content)
-        content = re.sub(r'=======.*?>>>>>>>.*?', '', content, flags=re.DOTALL)
-        content = re.sub(r'<<<<<<< HEAD.*?=======', '', content, flags=re.DOTALL)
+        content = re.sub(r'.*?>>>>>>>.*?', '', content, flags=re.DOTALL)
+        content = re.sub(r'.*?', '', content, flags=re.DOTALL)
         
         # Add 'use client' directive if file uses React hooks and doesn't have it
         if ('useState' in content or 'useEffect' in content or 'useRouter' in content) and "'use client';" not in content:

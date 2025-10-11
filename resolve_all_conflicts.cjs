@@ -7,22 +7,18 @@ function resolveConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
-    if (!content.includes('<<<<<<< HEAD') && !content.includes('=======') && !content.includes('>>>>>>>')) {
+    if (!content.includes('') && !content.includes('') && !content.includes('>>>>>>>')) {
       return false; // No conflicts
     }
     
     console.log(`Resolving conflicts in: ${filePath}`);
     
-    // Remove all merge conflict markers and keep the content after =======
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======\s*\n?/g, '');
-    content = content.replace(/>>>>>>> [^\n]*\n?/g, '');
-    
+    // Remove all merge conflict markers and keep the content after     content = content.replace(/[\s\S]*?\s*\n?/g, '');
+    content = content.replace(/    
     // Clean up any remaining conflict markers
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]*\n?/g, '');
-    content = content.replace(/<<<<<<< HEAD\s*\n?/g, '');
-    content = content.replace(/=======\s*\n?/g, '');
-    content = content.replace(/>>>>>>> [^\n]*\n?/g, '');
-    
+    content = content.replace(/[\s\S]*?    content = content.replace(/\s*\n?/g, '');
+    content = content.replace(/\s*\n?/g, '');
+    content = content.replace(/    
     // Write the cleaned content back
     fs.writeFileSync(filePath, content, 'utf8');
     return true;
@@ -54,7 +50,7 @@ function findConflictFiles(dir) {
         if (['.ts', '.tsx', '.js', '.jsx', '.css', '.json', '.md'].includes(ext)) {
           try {
             const content = fs.readFileSync(fullPath, 'utf8');
-            if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
+            if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
               conflictFiles.push(fullPath);
             }
           } catch (error) {

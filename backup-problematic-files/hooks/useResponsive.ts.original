@@ -24,7 +24,6 @@ import { useState, useEffect } from 'react';
 :backup-problematic-files/hooks/useResponsive.ts
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
   'resize', updateDimensions)}, []);
@@ -111,8 +110,5 @@ main:hooks/useResponsive.ts
 
 
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/hooks/useResponsive.ts
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 

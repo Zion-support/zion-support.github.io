@@ -48,9 +48,8 @@ async function fixMergeConflicts() {
         // Remove merge conflict markers
         const originalLength = content.length;
         content = content.replace(/^<<<<<<< .*$/gm, '');
-        content = content.replace(/^=======$/gm, '');
-        content = content.replace(/^>>>>>>> .*$/gm, '');
-        
+        content = content.replace(/^$/gm, '');
+        content = content.replace(/^        
         if (content.length !== originalLength) {
           fs.writeFileSync(file, content, 'utf8');
           console.log(`✓ Fixed merge conflicts in ${file}`);

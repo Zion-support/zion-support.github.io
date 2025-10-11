@@ -2,85 +2,55 @@
 
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
-// Function to resolve merge conflicts by choosing the appropriate version
-function resolveMergeConflicts(content) {
-  const lines = content.split('\n');
-  const resolved = [];
-  let i = 0;
-  
-  while (i < lines.length) {
-    const line = lines[i];
-    
-    if (line.startsWith('<<<<<<< HEAD')) {
-      // Skip the HEAD marker
-      i++;
-      
-      // Collect HEAD content until we hit =======
-      const headContent = [];
-      while (i < lines.length && !lines[i].startsWith('=======')) {
-        headContent.push(lines[i]);
-        i++;
-      }
-      
-      // Skip the ======= marker
-      if (i < lines.length) i++;
-      
-      // Skip the other branch content until we hit >>>>>>>
-      while (i < lines.length && !lines[i].startsWith('>>>>>>>')) {
-        i++;
-      }
-      
-      // Skip the >>>>>>> marker
-      if (i < lines.length) i++;
-      
-      // Use HEAD content (usually the more recent/stable version)
-      resolved.push(...headContent);
-    } else {
-      resolved.push(line);
-      i++;
-    }
-  }
-  
-  return resolved.join('\n');
-}
-
-// Function to process a single file
-function processFile(filePath) {
+// Function to resolve merge conflicts in a file
+function resolveMergeConflicts(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
+    let content = fs.readFileSync(filePath, 'utf8');
     
-    if (content.includes('<<<<<<< HEAD')) {
-      console.log(`Processing: ${filePath}`);
-      const resolved = resolveMergeConflicts(content);
-      fs.writeFileSync(filePath, resolved);
-      console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-    return false;
+    // Pattern to match merge conflict markers
+    const conflictPattern = /\n([\s\S]*?)\n\n([\s\S]*?)\n    
+    // Replace conflicts by choosing the HEAD version (first option)
+    content = content.replace(conflictPattern, (match, headContent, otherContent) => {
+      // Clean up the head content
+      return headContent.trim();
+    });
+    
+    // Remove any remaining conflict markers
+    content = content.replace(/\n?/g, '');
+    content = content.replace(/\n?/g, '');
+    content = content.replace(/    
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed conflicts in: ${filePath}`);
+    return true;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
 // Function to find all files with merge conflicts
-function findConflictedFiles(dir) {
+function findFilesWithConflicts(dir) {
   const files = [];
   
-  function walkDir(currentPath) {
-    const items = fs.readdirSync(currentPath);
+  function searchDirectory(currentDir) {
+    const items = fs.readdirSync(currentDir);
     
     for (const item of items) {
-      const fullPath = path.join(currentPath, item);
+      const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
       
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        walkDir(fullPath);
-      } else if (stat.isFile() && /\.(tsx?|jsx?)$/.test(item)) {
+      if (stat.isDirectory()) {
+        // Skip node_modules, .git, and other irrelevant directories
+        if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
+          searchDirectory(fullPath);
+        }
+      } else if (stat.isFile()) {
+        // Check if file has merge conflict markers
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
-          if (content.includes('<<<<<<< HEAD')) {
+          if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
             files.push(fullPath);
           }
         } catch (error) {
@@ -90,19 +60,34 @@ function findConflictedFiles(dir) {
     }
   }
   
-  walkDir(dir);
+  searchDirectory(dir);
   return files;
 }
 
 // Main execution
-const conflictedFiles = findConflictedFiles('.');
+console.log('Starting merge conflict resolution...');
+
+const workspaceDir = process.cwd();
+const conflictedFiles = findFilesWithConflicts(workspaceDir);
+
 console.log(`Found ${conflictedFiles.length} files with merge conflicts`);
 
 let fixedCount = 0;
 for (const file of conflictedFiles) {
-  if (processFile(file)) {
+  if (resolveMergeConflicts(file)) {
     fixedCount++;
   }
 }
 
-console.log(`Fixed ${fixedCount} files`);
+console.log(`Successfully fixed conflicts in ${fixedCount} files`);
+
+// Run type check to see if we fixed the main issues
+console.log('\nRunning type check...');
+try {
+  execSync('npm run type-check', { stdio: 'inherit' });
+  console.log('Type check passed!');
+} catch (error) {
+  console.log('Type check still has errors, but conflicts are resolved');
+}
+
+console.log('Merge conflict resolution complete!');

@@ -1,13 +1,10 @@
 export interface ComprehensiveService {
-=======
 export interface ComprehensiveService {
-=======
 export interface ComprehensiveService {
   id: string;
   title: string;
   description: string;
   category: string;
-=======
   subcategory: string;
   price: number;
   currency: string;
@@ -16,8 +13,6 @@ export interface ComprehensiveService {
   useCases: string[];
   targetAudience: string[];
   tags: string[];
-=======
-=======
   subcategory: string;
   price: number;
   currency: string;
@@ -27,7 +22,6 @@ export interface ComprehensiveService {
   useCases: string[];
   marketPrice: string;
   contactLink: string;
-=======
   subcategory: string;
   price: number;
   currency: string;
@@ -212,7 +206,6 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     category: "Blockchain & Web3",
     subcategory: "Smart Contracts",
     price: 2500,
-=======
 export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
   // AI & Machine Learning Services
   {
@@ -368,7 +361,6 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     estimatedDelivery: "4-6 weeks",
     supportLevel: "enterprise",
     marketPrice: "$2,000 - $8,000/month",
-=======
       "Quantum circuit simulator",
       "Algorithm optimization tools",
       "Performance benchmarking",
@@ -628,7 +620,6 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     rating: 4.8,
     reviewCount: 134,
     estimatedDelivery: "6-8 weeks",
-=======
   {
     id: "iot-predictive-maintenance-platform",
     title: "IoT Predictive Maintenance Platform",
@@ -1121,7 +1112,6 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       "HR departments"
     ],
     tags: ["Blockchain", "Identity Verification", "Web3", "Security", "Privacy"],
-=======
       "Entrepreneurs",
       "COOs",
       "Business consultants"
@@ -2235,7 +2225,6 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     }
-=======
   }
 ];
 
@@ -2246,7 +2235,6 @@ export const serviceCategories = [
     description: "Artificial Intelligence and Machine Learning solutions",
     icon: "🤖",
     count: 3
-=======
 import { ProductListing } from "@/types/listings";
 
 export interface ServiceCategory {
@@ -2316,11 +2304,9 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
   }
 ];
 
-=======
 import { ProductListing } from "@/types/listings";
 
 export const COMPREHENSIVE_SERVICES: ProductListing[] = [
-=======
   supportLevel: 'basic' | 'premium' | 'enterprise';
 }
 
@@ -2335,11 +2321,9 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     price: 2500,
     currency: "$",
     tags: ["AI Chatbot", "GPT-4", "Customer Service", "Automation"],
-=======
 import { ProductListing } from "@/types/listings";
 
 // Comprehensive Micro SAAS Services & Solutions
-=======
 import { ProductListing } from "@/types/listings";
 
 // Comprehensive Micro SAAS Services and Solutions
@@ -2349,7 +2333,6 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     id: "ai-chatbot-enterprise",
     title: "Enterprise AI Chatbot Platform",
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
-=======
     description: "Custom AI chatbot solution for enterprise customer service, sales, and support. Features multi-language support, sentiment analysis, and seamless CRM integration. Includes training data preparation and ongoing optimization.",
     category: "AI & Machine Learning",
     subcategory: "Chatbots & Conversational AI",
@@ -2365,13 +2348,11 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     images: ["https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z",
     rating: 4.9,
-=======
       avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
     },
     images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z",
     rating: 4.9,
-=======
     reviewCount: 156,
     featured: true,
     location: "Global",
@@ -2391,8 +2372,6 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
       name: "Zion Tech Group",
       id: "zion-tech-group",
       email: "kleber@ziontechgroup.com",
-=======
-=======
     id: "ai-content-generation-suite",
     title: "AI Content Generation Suite Pro",
     description: "Complete AI-powered content creation platform for blogs, social media, marketing copy, and technical documentation. Features SEO optimization, brand voice consistency, and plagiarism detection. Includes 50,000 words/month and API access.",
@@ -2461,9 +2440,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     availability: "Immediate"
   },
   {
-=======
     reviewCount: 234,
-=======
     reviewCount: 89,
     location: "Global",
     availability: "Immediate",
@@ -2482,7 +2459,6 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
       name: "Zion Tech Group",
       id: "zion-tech-group",
       email: "kleber@ziontechgroup.com",
-=======
     },
     images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-25T09:15:00.000Z",
@@ -2577,7 +2553,6 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     reviewCount: 156,
     estimatedDelivery: "1-2 weeks",
     supportLevel: "premium"
-=======
       "Multi-language support (up to 10 languages)",
       "CRM integration (Salesforce, HubSpot, Zendesk)",
       "Sentiment analysis and emotion detection",
@@ -2713,7 +2688,6 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "4-5 Weeks",
     aiScore: 93
-=======
     id: "aws-cost-optimization",
     title: "AWS Cost Optimization & Management",
     description: "Comprehensive AWS cost analysis, optimization strategies, and ongoing monitoring to reduce cloud spending by 30-50%.",
@@ -2902,7 +2876,6 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     reviewCount: 245,
     estimatedDelivery: "1-2 weeks",
     supportLevel: "premium"
-=======
     id: "ai-data-analytics-platform",
     title: "AI-Powered Business Analytics Platform",
     description: "Advanced analytics solution with predictive modeling, automated insights, and interactive dashboards. Features real-time data processing, anomaly detection, and automated reporting. Integrates with major databases and cloud platforms.",
@@ -2945,7 +2918,6 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "3-4 Weeks",
     aiScore: 95
-=======
     id: "ai-customer-intelligence",
     title: "AI Customer Intelligence Hub",
     description: "Comprehensive customer analytics platform powered by AI. Tracks customer behavior, predicts churn, and provides actionable insights. Includes sentiment analysis, customer journey mapping, and personalized recommendations.",
@@ -3111,7 +3083,6 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     },
     images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-28T10:30:00.000Z",
-=======
     id: "cloud-migration-consulting",
     title: "Cloud Migration & Optimization Consulting",
     description: "End-to-end cloud migration services for AWS, Azure, and Google Cloud. Includes architecture design, cost optimization, security implementation, and performance tuning. 24/7 monitoring and support included.",
@@ -3277,7 +3248,6 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     createdAt: "2024-02-05T13:20:00.000Z",
     rating: 4.9,
     reviewCount: 98,
-=======
     aiScore: 88
   },
   {
@@ -3391,7 +3361,6 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "4-5 Weeks",
     aiScore: 86
-=======
     id: "multi-cloud-orchestrator",
     title: "Multi-Cloud Orchestration Platform",
     description: "Unified management platform for AWS, Azure, Google Cloud, and private clouds. Features cost optimization, automated scaling, and centralized monitoring. Reduce cloud costs by 25-40%.",
@@ -3502,7 +3471,6 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "4-5 Weeks",
     aiScore: 93
-=======
     description: "Convert your existing website into a powerful Progressive Web App with offline capabilities and native app-like experience.",
     category: "Web & Mobile Development",
     subcategory: "Progressive Web Apps",
@@ -3602,7 +3570,6 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     description: "Comprehensive digital transformation consulting to modernize your business processes, technology stack, and customer experience.",
     category: "Digital Transformation",
     subcategory: "Strategy & Consulting",
-=======
     id: "cloud-devops-001",
     title: "Multi-Cloud Migration & Optimization",
     description: "End-to-end cloud migration services with cost optimization, security implementation, and performance tuning across AWS, Azure, and Google Cloud platforms.",
@@ -3995,7 +3962,6 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "12-16 Weeks",
     aiScore: 91
-=======
       "Data ingestion from multiple sources",
       "Real-time and batch processing",
       "Data warehouse and data lake setup",
@@ -4156,7 +4122,6 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "3-4 Weeks",
     aiScore: 90
-=======
     id: "blockchain-web3-001",
     title: "Smart Contract Development & Audit",
     description: "Secure smart contract development for DeFi, NFTs, and blockchain applications with comprehensive security auditing and testing.",
@@ -4819,7 +4784,6 @@ export const CONTACT_INFO = {
     price: 4200,
     currency: "$",
     tags: ["CRM", "Workflow Automation", "Lead Scoring", "Sales Automation", "Marketing Integration"],
-=======
     },
     images: ["https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-02-25T14:45:00.000Z",
@@ -5117,7 +5081,6 @@ export const PRICING_TIERS = {
   "professional": { min: 2000, max: 4999, label: "Professional Solutions" },
   "enterprise": { min: 5000, max: 15000, label: "Enterprise Solutions" }
 };
-=======
     description: "Secure smart contract development for DeFi, NFTs, and blockchain applications with comprehensive security auditing.",
     category: "Blockchain & Web3",
     subcategory: "Smart Contracts",
@@ -5434,7 +5397,6 @@ export const SERVICE_SUBCATEGORIES = {
     "Extended Reality (XR)"
   ]
 };
-=======
     description: "Develop comprehensive disaster recovery and business continuity plans. Includes risk assessment, recovery procedures, testing protocols, and ongoing maintenance. Features cloud-based backup solutions and failover systems.",
     category: "Managed IT Services",
     subcategory: "Disaster Recovery",
@@ -5539,7 +5501,6 @@ export const SERVICES_BY_PRICE = {
   midRange: COMPREHENSIVE_SERVICES.filter(s => s.price && s.price >= 5000 && s.price < 15000),
   enterprise: COMPREHENSIVE_SERVICES.filter(s => s.price && s.price >= 15000)
 };
-=======
   { id: "ai-ml", name: "AI & Machine Learning", description: "Artificial intelligence and machine learning solutions" },
   { id: "cloud-devops", name: "Cloud & DevOps", description: "Cloud infrastructure and development operations" },
   { id: "cybersecurity", name: "Cybersecurity", description: "Security solutions and protection services" },
@@ -5576,11 +5537,8 @@ export const SUBSCRIPTION_TIERS = [
 ];
   website: "https://ziontechgroup.com"
 };
-=======
-=======
   website: "https://ziontechgroup.com"
 };
-=======
   "Process Automation",
   "Governance",
   "Quantum Computing",
@@ -5612,6 +5570,5 @@ export const SUBSCRIPTION_TIERS = [
   "Digital Assets",
   "Penetration Testing"
 ];
-=======
   "Process Automation"
 ];

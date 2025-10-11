@@ -3,7 +3,7 @@
 echo "Starting comprehensive merge conflict resolution..."
 
 # Find all files with merge conflicts
-files_with_conflicts=$(find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null || true)
+files_with_conflicts=$(find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | xargs grep -l "" 2>/dev/null || true)
 
 echo "Found $(echo "$files_with_conflicts" | wc -l) files with merge conflicts"
 
@@ -16,16 +16,14 @@ fix_merge_conflicts() {
     cp "$file" "$file.backup"
     
     # Remove all merge conflict markers and keep only the content between HEAD markers
-    sed -i '/<<<<<<< HEAD/,/=======/!d' "$file"
-    sed -i '/<<<<<<< HEAD/d' "$file"
-    sed -i '/=======/d' "$file"
-    sed -i '/>>>>>>> /d' "$file"
-    
+    sed -i '//,//!d' "$file"
+    sed -i '//d' "$file"
+    sed -i '//d' "$file"
+    sed -i '/    
     # Clean up any remaining conflict markers
     sed -i '/^<<<<<<< /d' "$file"
-    sed -i '/^=======/d' "$file"
-    sed -i '/^>>>>>>> /d' "$file"
-    
+    sed -i '/^/d' "$file"
+    sed -i '/^    
     # Remove any syntax errors that might have been introduced
     sed -i 's/,,/,/g' "$file"
     sed -i 's/return(\([^)]*\))/return (\1)/g' "$file"

@@ -509,7 +509,6 @@ export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution[] = [
 ];
 
 export default innovativeMicroSaasSolutions2025;
-=======
 export const innovativeMicroSaasSolutions2025 = [
   {
     id: 'ai-powered-customer-feedback-analyzer',
@@ -777,4 +776,3 @@ export const innovativeMicroSaasSolutions2025 = [
     compliance: ['CAN-SPAM', 'GDPR', 'CCPA', 'Email marketing regulations']
   }
 ];
->>>>>>> origin/auto/autonomy-17186719616

@@ -37,9 +37,8 @@ if (fs.existsSync(tailwindConfigPath)) {
     let content = fs.readFileSync(tailwindConfigPath, 'utf8');
     // Remove merge conflict markers
     content = content.replace(/^<<<<<<< .*$/gm, '');
-    content = content.replace(/^=======$/gm, '');
-    content = content.replace(/^>>>>>>> .*$/gm, '');
-    fs.writeFileSync(tailwindConfigPath, content, 'utf8');
+    content = content.replace(/^$/gm, '');
+    content = content.replace(/^    fs.writeFileSync(tailwindConfigPath, content, 'utf8');
     console.log('✓ Fixed zion-website/tailwind.config.js merge conflicts');
   } catch (e) {
     console.log('✗ Error fixing tailwind.config.js:', e.message);

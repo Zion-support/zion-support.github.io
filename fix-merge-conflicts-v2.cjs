@@ -23,15 +23,14 @@ function resolveMergeConflicts(filePath) {
         modified = true;
         i++; // Skip the <<<<<<< line
         
-        // Collect HEAD content until we hit =======
-        let headContent = [];
-        while (i < lines.length && !lines[i].startsWith('=======')) {
+        // Collect HEAD content until we hit         let headContent = [];
+        while (i < lines.length && !lines[i].startsWith('')) {
           headContent.push(lines[i]);
           i++;
         }
         
-        // Skip the ======= line
-        if (i < lines.length && lines[i].startsWith('=======')) {
+        // Skip the  line
+        if (i < lines.length && lines[i].startsWith('')) {
           i++;
         }
         
@@ -40,8 +39,7 @@ function resolveMergeConflicts(filePath) {
           i++;
         }
         
-        // Skip the >>>>>>> line
-        if (i < lines.length && lines[i].startsWith('>>>>>>>')) {
+        // Skip the         if (i < lines.length && lines[i].startsWith('>>>>>>>')) {
           i++;
         }
         

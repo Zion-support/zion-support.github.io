@@ -64,10 +64,9 @@ def fix_syntax_errors(file_path):
         content = re.sub(r'(\w+)\s*{\s*([^}]*?)\s*(?=\s*[}\n])', r'\1 {\2}', content)
         
         # 10. Fix merge conflict markers that might have been missed
-        content = re.sub(r'<<<<<<< HEAD\n?', '', content)
-        content = re.sub(r'=======\n?', '', content)
-        content = re.sub(r'>>>>>>> [^\n]*\n?', '', content)
-        
+        content = re.sub(r'\n?', '', content)
+        content = re.sub(r'\n?', '', content)
+        content = re.sub(r'        
         # 11. Fix missing semicolons after statements
         content = re.sub(r'(\w+)\s*$', r'\1;', content, flags=re.MULTILINE)
         

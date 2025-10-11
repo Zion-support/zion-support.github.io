@@ -16,7 +16,7 @@ for file in $conflict_files; do
         # Create a backup
         cp "$file" "${file}.backup"
         
-        # Use sed to resolve conflicts by keeping the main branch version (after =======)
+        # Use sed to resolve conflicts by keeping the main branch version (after )
         # and removing conflict markers
         sed -i '/^/d; /^
         
