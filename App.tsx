@@ -12,6 +12,8 @@ import ITServicesPage from './app/it-services/page'
 import MicroSAASServicesPage from './app/micro-saas-services/page'
 import CloudServicesPage from './app/cloud-services/page'
 import DigitalTransformationPage from './app/digital-transformation/page'
+import AIContentGeneratorPage from './app/ai-content-generator/page'
+import CyberSecuritySuitePage from './app/cybersecurity-suite/page'
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
           <Route path="/cloud-services" element={<CloudServicesPage />} />
           <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
           <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
+          <Route path="/ai-content-generator" element={<AIContentGeneratorPage />} />
+          <Route path="/cybersecurity-suite" element={<CyberSecuritySuitePage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
         <Footer />
