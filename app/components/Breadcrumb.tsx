@@ -3,22 +3,8 @@ import React from 'react'
 import Link from 'next/link'
 import { ChevronRight, Home } from 'lucide-react'
 
-<<<<<<< HEAD
-interface BreadcrumbItem {
-  label: string;
-  href?: string;
-}
-
-interface BreadcrumbProps {
-  items?: BreadcrumbItem[];
-}
-
-const Breadcrumb: React.FC<BreadcrumbProps> = ({ items = [] }) => {
-  const pathSegments = typeof window !== 'undefined' ? location.pathname.split('/').filter(segment => segment !== '') : [];
-=======
 const Breadcrumb: React.FC = () => {
   const pathSegments = typeof window !== 'undefined' ? window.location.pathname.split('/').filter(segment => segment !== '') : [];
->>>>>>> cursor/website-audit-and-update-with-deployment-3bf1
   const breadcrumbItems = [
     { label: 'Home', href: '/' },
     ...pathSegments.map(segment => ({
@@ -55,7 +41,7 @@ const Breadcrumb: React.FC = () => {
         </ol>
       </div>
     </nav>
-  );
-};
+  )
+}
 
-export default Breadcrumb;
+export default Breadcrumb

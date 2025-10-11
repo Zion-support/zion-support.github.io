@@ -9,7 +9,11 @@ function resolveMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8')
     // Check if file has merge conflicts
+<<<<<<< HEAD
+    if (!content.includes('') && !content.includes('>>>>>>>')) {
+=======
     if (!content.includes('') && !content.includes('') && !content.includes('>>>>>>>')) {
+>>>>>>> origin/main
       return false; // No conflicts
     }
     
@@ -23,6 +27,14 @@ function resolveMergeConflicts(filePath) {
     let separatorFound = false
     let branchContent = []
     for (let i = 0; i < lines.length; i++) {
+<<<<<<< HEAD
+      const line = lines[i];
+      
+      if (line.startsWith('')) {
+        separatorFound = true;
+        conflictType = 'separator';
+        continue;
+=======
       const line = lines[i]
       if (line.startsWith('')) {
         inConflict = true
@@ -37,6 +49,7 @@ function resolveMergeConflicts(filePath) {
         separatorFound = true
         conflictType = 'separator'
         continue
+>>>>>>> origin/main
       }
       
       if (line.startsWith('>>>>>>>')) {
@@ -96,9 +109,15 @@ function findFilesWithConflicts(dir) {
         traverse(fullPath)
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
         try {
+<<<<<<< HEAD
+          const content = fs.readFileSync(fullPath, 'utf8');
+          if (content.includes('') || content.includes('>>>>>>>')) {
+            files.push(fullPath);
+=======
           const content = fs.readFileSync(fullPath, 'utf8')
           if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
             files.push(fullPath)
+>>>>>>> origin/main
           }
         } catch (error) {
           // Skip files that can't be read

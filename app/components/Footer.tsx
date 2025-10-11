@@ -35,45 +35,18 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* AI Services */}
+          {/* Services */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-cyan-400">AI Services</h3>
+            <h3 className="text-lg font-semibold text-cyan-400">Services</h3>
             <ul className="space-y-2">
               <li>
                 <Link href="/ai-services" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
-                  AI Solutions
+                  AI Services
                 </Link>
               </li>
-              <li>
-                <Link href="/ai-analytics" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
-                  AI Analytics
-                </Link>
-              </li>
-              <li>
-                <Link href="/ai-automation" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
-                  AI Automation
-                </Link>
-              </li>
-              <li>
-                <Link href="/ai-chatbot-builder" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
-                  Chatbot Builder
-                </Link>
-              </li>
-              <li>
-                <Link href="/ai-cybersecurity" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
-                  AI Cybersecurity
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* IT Services */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-cyan-400">IT Services</h3>
-            <ul className="space-y-2">
               <li>
                 <Link href="/it-services" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
-                  IT Solutions
+                  IT Services
                 </Link>
               </li>
               <li>
@@ -82,18 +55,13 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/cybersecurity-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                <Link href="/cybersecurity" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
                   Cybersecurity
                 </Link>
               </li>
               <li>
-                <Link href="/web-development" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
-                  Web Development
-                </Link>
-              </li>
-              <li>
-                <Link href="/mobile-development" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
-                  Mobile Development
+                <Link href="/data-analytics" className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                  Data Analytics
                 </Link>
               </li>
               <li>
@@ -232,10 +200,6 @@ const Footer: React.FC = () => {
       </div>
     </footer>
   );
-<<<<<<< HEAD
-};
-=======
 }
->>>>>>> cursor/website-audit-and-update-with-deployment-3bf1
 
-export default Footer;
+export default Footer

@@ -101,7 +101,12 @@ const EnhancedFooter: React.FC = () => {
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-300 text-sm">
+<<<<<<< HEAD
+              &copy; {new Date().getFullYear()} Zion Tech Group. All rights reserved.
+            </p>
+=======
               &copy; {currentYear} Zion Tech Group. All rights reserved.
+>>>>>>> origin/main
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link to="/legal/privacy">
                 <span className="text-gray-400 hover:text-white text-sm transition-colors">

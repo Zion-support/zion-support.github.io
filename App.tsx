@@ -1,6 +1,6 @@
 'use client'
 import React, { Suspense } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import './app/styles/futuristic.css'
 import './app/styles/futuristic-enhanced.css'
@@ -45,25 +45,21 @@ const AiAnalyticsPage = React.lazy(() => import('./app/ai-analytics/page'))
 const AiAutomationPage = React.lazy(() => import('./app/ai-automation/page'))
 const AiChatbotBuilderPage = React.lazy(() => import('./app/ai-chatbot-builder/page'))
 const AiCybersecurityPage = React.lazy(() => import('./app/ai-cybersecurity/page'))
-const AiMobileBuilderPage = React.lazy(() => import('./app/ai-mobile-builder/page'))
-const AiLeadScoringPage = React.lazy(() => import('./app/ai-lead-scoring/page'))
-const AiEcommerceAssistantPage = React.lazy(() => import('./app/ai-ecommerce-assistant/page'))
-const AiSecurityMonitorPage = React.lazy(() => import('./app/ai-security-monitor/page'))
-const AiFinancialPlannerPage = React.lazy(() => import('./app/ai-financial-planner/page'))
-const AiHealthTrackerPage = React.lazy(() => import('./app/ai-health-tracker/page'))
-const AiLearningPlatformPage = React.lazy(() => import('./app/ai-learning-platform/page'))
+const AiCustomerSupportPage = React.lazy(() => import('./app/ai-customer-support/page'))
+const AiDataAnalyticsPage = React.lazy(() => import('./app/ai-data-analytics/page'))
+const AiWorkflowAutomationPage = React.lazy(() => import('./app/ai-workflow-automation/page'))
+const AiContentGeneratorPage = React.lazy(() => import('./app/ai-content-generator/page'))
 // IT Service Pages
 const CloudInfrastructurePage = React.lazy(() => import('./app/cloud-infrastructure/page'))
 const CybersecuritySolutionsPage = React.lazy(() => import('./app/cybersecurity-solutions/page'))
 const WebDevelopmentPage = React.lazy(() => import('./app/web-development/page'))
 const MobileDevelopmentPage = React.lazy(() => import('./app/mobile-development/page'))
-const MobileAppDevelopmentPage = React.lazy(() => import('./app/mobile-app-development/page'))
-const SystemAdministrationPage = React.lazy(() => import('./app/system-administration/page'))
-const ItInfrastructureDesignPage = React.lazy(() => import('./app/it-infrastructure-design/page'))
-const ItProjectManagementPage = React.lazy(() => import('./app/it-project-management/page'))
-const EnterpriseSolutionsPage = React.lazy(() => import('./app/enterprise-solutions/page'))
+const CloudMigrationPage = React.lazy(() => import('./app/cloud-migration/page'))
 // Company Pages
 const TeamPage = React.lazy(() => import('./app/team/page'))
+// Additional Service Pages
+const CybersecurityPage = React.lazy(() => import('./app/cybersecurity/page'))
+const DataAnalyticsPage = React.lazy(() => import('./app/data-analytics/page'))
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   usePerformanceMonitor()
@@ -74,7 +70,12 @@ const App: React.FC = () => {
   return (
     <EnhancedErrorBoundary>
       <HelmetProvider>
-        <SEOHead />
+        <SEOHead 
+          title="Zion Tech Group - AI & IT Solutions"
+          description="Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
+          keywords={['AI solutions', 'IT services', 'quantum computing', 'digital transformation', 'enterprise software', 'automation', 'machine learning']}
+          canonicalUrl="https://ziontechgroup.com"
+        />
         <SkipLink />
         <ServiceWorker />
         <Router>
@@ -82,7 +83,12 @@ const App: React.FC = () => {
             <AnalyticsProvider>
               <PerformanceOptimizer>
                 <EnhancedAccessibility>
-                  <AccessibilityEnhancer>
+                  <AccessibilityEnhancer
+                    enableKeyboardNavigation={true}
+                    enableScreenReaderSupport={true}
+                    enableHighContrast={false}
+                    enableFocusManagement={true}
+                  >
                     <PerformanceMonitor />
                     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
                       <FuturisticBackground />
@@ -116,27 +122,24 @@ const App: React.FC = () => {
                             <Route path="/ai-automation" element={<AiAutomationPage />} />
                             <Route path="/ai-chatbot-builder" element={<AiChatbotBuilderPage />} />
                             <Route path="/ai-cybersecurity" element={<AiCybersecurityPage />} />
-                            <Route path="/ai-mobile-builder" element={<AiMobileBuilderPage />} />
-                            <Route path="/ai-lead-scoring" element={<AiLeadScoringPage />} />
-                            <Route path="/ai-ecommerce-assistant" element={<AiEcommerceAssistantPage />} />
-                            <Route path="/ai-security-monitor" element={<AiSecurityMonitorPage />} />
-                            <Route path="/ai-financial-planner" element={<AiFinancialPlannerPage />} />
-                            <Route path="/ai-health-tracker" element={<AiHealthTrackerPage />} />
-                            <Route path="/ai-learning-platform" element={<AiLearningPlatformPage />} />
+                            <Route path="/ai-customer-support" element={<AiCustomerSupportPage />} />
+                            <Route path="/ai-data-analytics" element={<AiDataAnalyticsPage />} />
+                            <Route path="/ai-workflow-automation" element={<AiWorkflowAutomationPage />} />
+                            <Route path="/ai-content-generator" element={<AiContentGeneratorPage />} />
                             
                             {/* IT Service Pages */}
                             <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
                             <Route path="/cybersecurity-solutions" element={<CybersecuritySolutionsPage />} />
                             <Route path="/web-development" element={<WebDevelopmentPage />} />
                             <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
-                            <Route path="/mobile-app-development" element={<MobileAppDevelopmentPage />} />
-                            <Route path="/system-administration" element={<SystemAdministrationPage />} />
-                            <Route path="/it-infrastructure-design" element={<ItInfrastructureDesignPage />} />
-                            <Route path="/it-project-management" element={<ItProjectManagementPage />} />
-                            <Route path="/enterprise-solutions" element={<EnterpriseSolutionsPage />} />
+                            <Route path="/cloud-migration" element={<CloudMigrationPage />} />
                             
                             {/* Company Pages */}
                             <Route path="/team" element={<TeamPage />} />
+                            
+                            {/* Additional Service Pages */}
+                            <Route path="/cybersecurity" element={<CybersecurityPage />} />
+                            <Route path="/data-analytics" element={<DataAnalyticsPage />} />
                           </Routes>
                         </Suspense>
                       </main>

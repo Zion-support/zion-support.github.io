@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+'use client';
+import React from 'react';
+import { Users, CheckCircle, Star, Shield, Award, Target, Globe, Brain, Cloud, Code, BarChart, TrendingUp, Phone, Mail, MapPin, Clock, ArrowRight, Zap, Cpu, Database, Lock, Smartphone, Settings, Calendar, FileText, MessageSquare, Star as StarIcon, Award as AwardIcon, Shield as ShieldIcon, Users as UsersIcon } from 'lucide-react';
+
+const AboutPage: React.FC = () => {
+=======
 'use client'
 import React from 'react'
 import { Brain, Shield, Target, Users } from 'lucide-react'
@@ -54,6 +61,7 @@ const AboutPage: React.FC = () => {
             We are a leading technology company specializing in AI and IT solutions that transform businesses and drive innovation.
 import { Users, CheckCircle, Star, Shield, Award, Target, Globe, Brain, Cloud, Code, BarChart, TrendingUp, Phone, Mail, MapPin, Clock, ArrowRight, Zap, Cpu, Database, Lock, Smartphone, Settings, Calendar, FileText, MessageSquare, Star as StarIcon, Award as AwardIcon, Shield as ShieldIcon, Users as UsersIcon } from 'lucide-react'
 export default function AboutPage() {
+>>>>>>> origin/main
   const teamMembers = [
     {
       name: 'Kleber Santos',
@@ -289,8 +297,13 @@ export default function AboutPage() {
   
             </div>
           </div>
+<<<<<<< HEAD
+        </div>
+      </section>
+=======
         </section>
       </div>
+>>>>>>> origin/main
       {/* Stats Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -476,6 +489,12 @@ export default function AboutPage() {
         </div>
       </section>
     </div>
+<<<<<<< HEAD
+  );
+};
+
+export default AboutPage;
+=======
   ),
 }
   </a>
@@ -508,3 +527,4 @@ export default function AboutPage() {
   </div>
   </div>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></h1></h1></h2></h2></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></section></section></section></section></section></section></section></section></section></section>
+>>>>>>> origin/main
