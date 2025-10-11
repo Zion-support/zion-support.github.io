@@ -107,10 +107,7 @@ return (
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4"
                       <Icon className="w-6 h-6 text-white"
                     </div>
-<<<<<<< HEAD
-=======
       
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
       <Footer />
     </>
                     <h3 className="text-lg font-semibold text-white mb-2">{info.title}</h3>

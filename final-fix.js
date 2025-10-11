@@ -9,7 +9,6 @@ function fixObjectSyntax(content) {
   
   // Fix malformed object properties with missing commas
   fixed = fixed.replace(/(\w+):\s*(\w+)\s*\n\s*(\w+):/g, '$1: $2,\n    $3:');
-  
   // Fix missing closing braces and commas in objects
   fixed = fixed.replace(/(\w+):\s*([^}]+)\s*}\s*,/g, (match, key, value) => {
     const trimmedValue = value.trim();
@@ -18,15 +17,12 @@ function fixObjectSyntax(content) {
     }
     return match;
   });
-  
   // Fix missing semicolons after array declarations
   fixed = fixed.replace(/(\w+)\s*\]\s*$/gm, '$1];');
-  
   // Fix missing closing braces in JSX
   fixed = fixed.replace(/(<div[^>]*className="[^"]*"[^>]*)\s*$/gm, '$1>');
   fixed = fixed.replace(/(<main[^>]*className="[^"]*"[^>]*)\s*$/gm, '$1>');
   fixed = fixed.replace(/(<section[^>]*className="[^"]*"[^>]*)\s*$/gm, '$1>');
-  
   return fixed;
 }
 
@@ -36,18 +32,14 @@ function fixMergeConflicts(content) {
   
   // Remove merge conflict markers and keep HEAD version
   fixed = fixed
-    .replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [^\n]+\n/g, '$1')
-    .replace(/<<<<<<< HEAD\n([\s\S]*?)>>>>>>> [^\n]+\n/g, '$1');
-  
+    .replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)    .replace(/<<<<<<< HEAD\n([\s\S]*?)  
   // Remove duplicate Helmet tags
   fixed = fixed.replace(/<Helmet>[\s\S]*?<\/Helmet>\s*<Helmet>[\s\S]*?<\/Helmet>/g, (match) => {
     const firstHelmet = match.match(/<Helmet>[\s\S]*?<\/Helmet>/)[0];
     return firstHelmet;
   });
-  
   // Remove duplicate Navigation components
   fixed = fixed.replace(/<Navigation \/>\s*<Navigation \/>/g, '<Navigation />');
-  
   return fixed;
 }
 
@@ -62,14 +54,11 @@ function fixSpecificIssues(content) {
     }
     return match;
   });
-  
   // Fix malformed icon properties
   fixed = fixed.replace(/ico,\s*n:/g, 'icon:');
-  
   // Fix missing semicolons
   fixed = fixed.replace(/(\w+)\s*\n\s*const/g, '$1;\n  const');
   fixed = fixed.replace(/(\w+)\s*\n\s*return/g, '$1;\n  return');
-  
   return fixed;
 }
 
@@ -77,7 +66,6 @@ function fixSpecificIssues(content) {
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    
     let fixed = content;
     let hasChanges = false;
     
@@ -112,7 +100,6 @@ function processFile(filePath) {
 // Main function
 async function main() {
   console.log('Starting final comprehensive fixes...\n');
-  
   // Find all TypeScript and TSX files
   const patterns = [
     'app/**/*.tsx',
@@ -122,13 +109,11 @@ async function main() {
     'components/**/*.tsx',
     'components/**/*.ts'
   ];
-  
   let totalFiles = 0;
   let fixedFiles = 0;
   
   for (const pattern of patterns) {
     const files = await glob(pattern, { cwd: process.cwd() });
-    
     for (const file of files) {
       totalFiles++;
       if (processFile(file)) {

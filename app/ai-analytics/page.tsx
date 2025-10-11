@@ -32,7 +32,6 @@ const AiAnalyticsPage: React.FC = () => {
     'Real-time processing and analysis',
     'Seamless integration with existing systems'
   ];
-
   return (
     <>
       <Helmet>
@@ -143,10 +142,7 @@ const AiAnalyticsPage: React.FC = () => {
                     <CheckCircle className="h-6 w-6 text-green-500 mr-3"
                     <span className="text-lg font-medium text-gray-900"
                   </div>
-<<<<<<< HEAD
-=======
       
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
       <Footer />
     </>
                   <p className="text-gray-300">{benefit}</p>
@@ -199,5 +195,4 @@ const AiAnalyticsPage: React.FC = () => {
     </>
   );
 };
-
 export default AiAnalyticsPage;

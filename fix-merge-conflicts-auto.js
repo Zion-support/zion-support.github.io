@@ -6,7 +6,6 @@ import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
 // Function to resolve merge conflicts by keeping HEAD version
 function resolveMergeConflicts(content) {
   const lines = content.split('\n');
@@ -16,7 +15,6 @@ function resolveMergeConflicts(content) {
   
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
-    
     if (line.startsWith('<<<<<<< HEAD')) {
       inConflict = true;
       conflictType = 'head';
@@ -48,7 +46,6 @@ function resolveMergeConflicts(content) {
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    
     if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
       console.log(`Processing: ${filePath}`);
       const resolvedContent = resolveMergeConflicts(content);
@@ -66,14 +63,11 @@ function processFile(filePath) {
 // Function to find all files with merge conflicts
 function findFilesWithConflicts(dir) {
   const files = [];
-  
   function traverse(currentDir) {
     const items = fs.readdirSync(currentDir);
-    
     for (const item of items) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
-      
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
         traverse(fullPath);
       } else if (stat.isFile() && /\.(tsx?|jsx?)$/.test(item)) {
@@ -96,9 +90,7 @@ function findFilesWithConflicts(dir) {
 // Main execution
 console.log('🔍 Finding files with merge conflicts...');
 const filesWithConflicts = findFilesWithConflicts(process.cwd());
-
 console.log(`Found ${filesWithConflicts.length} files with merge conflicts`);
-
 let processedCount = 0;
 let errorCount = 0;
 
@@ -113,7 +105,6 @@ for (const filePath of filesWithConflicts) {
 console.log(`\n📊 Summary:`);
 console.log(`✓ Successfully processed: ${processedCount} files`);
 console.log(`✗ Errors: ${errorCount} files`);
-
 if (processedCount > 0) {
   console.log('\n🎉 Merge conflicts resolved! You can now run your build and lint commands.');
 }

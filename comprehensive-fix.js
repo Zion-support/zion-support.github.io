@@ -12,7 +12,6 @@ function fixJSXSyntax(content) {
   fixed = fixed.replace(/(<div[^>]*className="[^"]*"[^>]*)\s*$/gm, '$1>');
   fixed = fixed.replace(/(<main[^>]*className="[^"]*"[^>]*)\s*$/gm, '$1>');
   fixed = fixed.replace(/(<section[^>]*className="[^"]*"[^>]*)\s*$/gm, '$1>');
-  
   // Fix missing closing parentheses in function calls
   fixed = fixed.replace(/(\w+)\s*$/gm, (match, func) => {
     if (func.match(/^(div|section|main|header|footer|button|span|h1|h2|h3|p)$/)) {
@@ -20,17 +19,13 @@ function fixJSXSyntax(content) {
     }
     return match;
   });
-  
   // Fix missing semicolons
   fixed = fixed.replace(/(\w+)\s*\n\s*const/g, '$1;\n  const');
   fixed = fixed.replace(/(\w+)\s*\n\s*return/g, '$1;\n  return');
-  
   // Fix missing commas in object properties
   fixed = fixed.replace(/(\w+):\s*(\w+)\s*\n\s*(\w+):/g, '$1: $2,\n    $3:');
-  
   // Fix malformed icon properties
   fixed = fixed.replace(/ico,\s*n:/g, 'icon:');
-  
   // Fix missing closing tags
   fixed = fixed.replace(/(<[^>]+>)\s*$/gm, (match) => {
     if (match.includes('className=') && !match.includes('>')) {
@@ -38,7 +33,6 @@ function fixJSXSyntax(content) {
     }
     return match;
   });
-  
   return fixed;
 }
 
@@ -48,18 +42,14 @@ function fixMergeConflicts(content) {
   
   // Remove merge conflict markers and keep HEAD version
   fixed = fixed
-    .replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [^\n]+\n/g, '$1')
-    .replace(/<<<<<<< HEAD\n([\s\S]*?)>>>>>>> [^\n]+\n/g, '$1');
-  
+    .replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)    .replace(/<<<<<<< HEAD\n([\s\S]*?)  
   // Remove duplicate Helmet tags
   fixed = fixed.replace(/<Helmet>[\s\S]*?<\/Helmet>\s*<Helmet>[\s\S]*?<\/Helmet>/g, (match) => {
     const firstHelmet = match.match(/<Helmet>[\s\S]*?<\/Helmet>/)[0];
     return firstHelmet;
   });
-  
   // Remove duplicate Navigation components
   fixed = fixed.replace(/<Navigation \/>\s*<Navigation \/>/g, '<Navigation />');
-  
   return fixed;
 }
 
@@ -79,7 +69,6 @@ function fixSpecificFile(filePath, content) {
       /<div className="min-h-screen bg-gray-50"\s*<Helmet>/g,
       '<div className="min-h-screen bg-gray-50">\n      <Helmet>'
     );
-    
     // Remove duplicate Helmet and Navigation
     fixed = fixed.replace(
       /<Helmet>[\s\S]*?<\/Helmet>\s*<Navigation \/>\s*<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">\s*<Helmet>[\s\S]*?<\/Helmet>\s*<Navigation \/>/g,
@@ -94,7 +83,6 @@ function fixSpecificFile(filePath, content) {
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    
     let fixed = content;
     let hasChanges = false;
     
@@ -114,7 +102,6 @@ function processFile(filePath) {
     
     // Fix specific file issues
     fixed = fixSpecificFile(filePath, fixed);
-    
     if (hasChanges || fixed !== content) {
       fs.writeFileSync(filePath, fixed, 'utf8');
       console.log(`✓ Fixed: ${filePath}`);
@@ -131,7 +118,6 @@ function processFile(filePath) {
 // Main function
 async function main() {
   console.log('Starting comprehensive merge conflict and syntax error fixes...\n');
-  
   // Find all TypeScript and TSX files
   const patterns = [
     'app/**/*.tsx',
@@ -141,13 +127,11 @@ async function main() {
     'components/**/*.tsx',
     'components/**/*.ts'
   ];
-  
   let totalFiles = 0;
   let fixedFiles = 0;
   
   for (const pattern of patterns) {
     const files = await glob(pattern, { cwd: process.cwd() });
-    
     for (const file of files) {
       totalFiles++;
       if (processFile(file)) {

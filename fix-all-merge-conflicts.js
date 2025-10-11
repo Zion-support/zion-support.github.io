@@ -1,6 +1,5 @@
     if (!content.includes('') && !content.includes('>>>>>>>')) {
       const line = lines[i];
-      
       if (line.startsWith('')) {
         separatorFound = true;
         conflictType = 'separator';
