@@ -1,6 +1,4 @@
-import { Metadata } from 'next'
-
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
   description: 'Leading provider of AI-powered solutions, cloud architecture, and cutting-edge technology services for businesses worldwide.',
   keywords: [

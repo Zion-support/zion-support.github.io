@@ -1,13 +1,22 @@
 import React from 'react';
 import { CheckCircle, ArrowRight, Star, Users, Award, MapPin, Clock, Briefcase, Target, Lightbulb } from 'lucide-react';
-
-=======
-import { Star, Users, Award, MapPin, Clock, Briefcase, CheckCircle, ArrowRight, Target, Lightbulb } from 'lucide-react';
-
-=======
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+
+interface JobPosition {
+  id: string;
+  title: string;
+  department: string;
+  location: string;
+  type: string;
+  experience: string;
+  description: string;
+  requirements: string[];
+  benefits: string[];
+  posted: string;
+  featured: boolean;
+}
 
 const CareersPage: React.FC = () => {
   const jobPositions: JobPosition[] = [
@@ -72,47 +81,15 @@ const CareersPage: React.FC = () => {
       title: 'Growth',
       description: 'We invest in our team members\' professional and personal growth.',
       icon: Target
-
     }
   ];
 
   return (
     <>
       <Helmet>
-<title>Careers | Zion Tech Group</title>
-=======
-<title>Careers | Zion Tech Group</title>
+        <title>Careers | Zion Tech Group</title>
         <meta name="description" content="Join Zion Tech Group and be part of our innovative AI and IT solutions team. Explore career opportunities and grow with us." />
         <meta name="keywords" content="careers, jobs, AI engineer, IT jobs, Zion Tech Group" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Join Our
-              <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
-                Team
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Be part of the future of AI and technology. Join Zion Tech Group and help us build innovative solutions that change the world.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
-                View Open Positions
-                <ArrowRight className="inline-block ml-2 w-5 h-5" />
-              </button>
-              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-=======
-        <title>Careers | Zion Tech Group</title>
-        <meta name="description" content="Join Zion Tech Group and build the future of AI and IT solutions. Explore career opportunities with us." />
-        <meta name="keywords" content="careers, jobs, AI engineer, cloud architect, frontend developer, Zion Tech Group" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
@@ -130,7 +107,7 @@ const CareersPage: React.FC = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Build the future of AI and IT solutions with Zion Tech Group. Join our team of innovators and make a difference.
+              Be part of the future of AI and technology. Join Zion Tech Group and help us build innovative solutions that change the world.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">
@@ -138,22 +115,17 @@ const CareersPage: React.FC = () => {
                 <ArrowRight className="inline-block ml-2 w-5 h-5" />
               </button>
               <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-
                 Learn About Us
               </button>
             </div>
           </div>
-=======
         </section>
-=======
-</section>
-
 
         {/* Company Values Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-<h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Our Values
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -163,7 +135,7 @@ const CareersPage: React.FC = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
               {companyValues.map((value, index) => (
-<div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">
                   <value.icon className="w-12 h-12 text-blue-400 mx-auto mb-4" />
                   <h3 className="text-xl font-semibold text-white mb-4">{value.title}</h3>
                   <p className="text-gray-300">{value.description}</p>
@@ -227,23 +199,17 @@ const CareersPage: React.FC = () => {
                       Apply Now
                     </button>
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-4">{value.title}</h3>
-                  <p className="text-gray-300">{value.description}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-=======
         {/* CTA Section */}
-=======
-{/* CTA Section */}
-
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
-<h2 className="text-4xl font-bold text-white mb-4">Ready to Join Our Team?</h2>
+              <h2 className="text-4xl font-bold text-white mb-4">Ready to Join Our Team?</h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
                 Don't see a position that matches your skills? We're always looking for talented individuals to join our team.
               </p>
@@ -261,32 +227,6 @@ const CareersPage: React.FC = () => {
 
         <Footer />
       </div>
-=======
-const CareersPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Careers - Zion Tech Group</title>
-        <meta name="description" content="Join our team and build the future of technology." />
-      </Helmet>
-      <Navigation />
-      <main className="min-h-screen bg-gradient-to-br from-gray-50 to-green-50">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Careers
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Join our team and build the future of technology.
-            </p>
-          </div>
-          
-          <div className="text-center">
-            <p className="text-gray-600">Career opportunities coming soon...</p>
-          </div>
-        </div>
-      </main>
-      <Footer />
     </>
   );
 };

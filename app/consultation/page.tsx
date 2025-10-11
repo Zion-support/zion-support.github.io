@@ -1,19 +1,10 @@
-import { CheckCircle, ArrowRight, Users, Clock, Star, Zap, Target } from 'lucide-react';
-
-=======
-import React, { useState } from 'react';
-import { CheckCircle, ArrowRight, Clock, Star, Phone, Mail, MapPin } from 'lucide-react';
-
-=======
 import React from 'react';
+import { CheckCircle, ArrowRight, Users, Clock, Star, Zap, Target, Phone, Mail, MapPin } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-interface ConsultationPackage {
-=======
 interface ConsultationService {
-
   id: string;
   name: string;
   description: string;
@@ -24,9 +15,7 @@ interface ConsultationService {
 }
 
 const ConsultationPage: React.FC = () => {
-const consultationServices: ConsultationService[] = [
-=======
-
+  const consultationServices: ConsultationService[] = [
     {
       id: 'strategy',
       name: 'IT Strategy Consultation',
@@ -53,40 +42,21 @@ const consultationServices: ConsultationService[] = [
         'Migration strategy development',
         'Cost optimization analysis',
         'Security and compliance review',
-'Implementation roadmap'
-=======
         'Implementation roadmap'
-
-=======
-'Implementation roadmap'
-
       ],
       popular: false
     },
     {
       id: 'ai',
       name: 'AI Implementation Consultation',
-description: 'Strategic guidance on implementing AI solutions to enhance your business operations.',
-=======
       description: 'Strategic guidance on implementing AI solutions to enhance your business operations.',
-
-=======
-description: 'Strategic guidance on implementing AI solutions to enhance your business operations.',
-
       duration: '4-6 hours',
       price: '$1000',
       features: [
         'AI opportunity assessment',
         'Use case identification',
-'Technology stack selection',
-=======
-'Technology stack selection',
+        'Technology stack selection',
         'ROI analysis and planning',
-        'Implementation strategy'
-      ],
-=======
-        'Technology selection',
-        'ROI analysis',
         'Implementation strategy'
       ],
       popular: true
@@ -134,27 +104,11 @@ description: 'Strategic guidance on implementing AI solutions to enhance your bu
         'Tool and platform selection',
         'Implementation roadmap'
       ],
-
       popular: false
     }
   ];
 
-const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-=======
-const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
-  };
-const benefits = [
+  const benefits = [
     {
       title: 'Expert Guidance',
       description: 'Get advice from experienced professionals with deep industry knowledge.',
@@ -176,31 +130,21 @@ const benefits = [
       icon: Zap
     }
   ];
-=======
-const ConsultationPage: React.FC = () => {
+
   return (
     <>
       <Helmet>
-return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
         <title>Consultation | Zion Tech Group</title>
-        <meta name="description" content="Professional IT consultation services by Zion Tech Group. Expert guidance for your digital transformation journey." />
-        <meta name="keywords" content="IT consultation, digital transformation, cloud migration, AI implementation, Zion Tech Group" />
-      </Helmet>
-<title>Consultation Services | Zion Tech Group</title>
         <meta name="description" content="Professional IT consultation services by Zion Tech Group. Expert guidance for your digital transformation journey." />
         <meta name="keywords" content="IT consultation, technology consulting, digital transformation, AI consultation, cloud migration, Zion Tech Group" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-=======
-
         <Navigation />
 
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
@@ -210,7 +154,7 @@ return (
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-Get expert guidance for your digital transformation journey. Professional IT consultation services by Zion Tech Group.
+              Get expert guidance for your digital transformation journey. Professional IT consultation services by Zion Tech Group.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">
@@ -224,7 +168,7 @@ Get expert guidance for your digital transformation journey. Professional IT con
           </div>
         </section>
 
-{/* Benefits Section */}
+        {/* Benefits Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -269,7 +213,7 @@ Get expert guidance for your digital transformation journey. Professional IT con
                       <span className="text-yellow-400 font-semibold">Most Popular</span>
                     </div>
                   )}
-<h3 className="text-2xl font-bold text-white mb-4">{service.name}</h3>
+                  <h3 className="text-2xl font-bold text-white mb-4">{service.name}</h3>
                   <p className="text-gray-300 mb-6">{service.description}</p>
                   
                   <div className="mb-6">
@@ -282,17 +226,6 @@ Get expert guidance for your digital transformation journey. Professional IT con
                       <span className="text-2xl font-bold text-blue-400">{service.price}</span>
                     </div>
                     
-                    <ul className="space-y-3">
-                      {pkg.features.map((feature, index) => (
-                        <li key={index} className="flex items-center text-gray-300">
-                          <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-<div className="mb-6">
                     <h4 className="text-white font-semibold mb-3">What's Included:</h4>
                     <ul className="space-y-2">
                       {service.features.map((feature, index) => (
@@ -313,7 +246,7 @@ Get expert guidance for your digital transformation journey. Professional IT con
           </div>
         </section>
 
-{/* CTA Section */}
+        {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
@@ -327,10 +260,8 @@ Get expert guidance for your digital transformation journey. Professional IT con
                 </button>
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
                   Learn More
-=======
-
                 </button>
-              </form>
+              </div>
             </div>
           </div>
         </section>
@@ -372,33 +303,9 @@ Get expert guidance for your digital transformation journey. Professional IT con
             </div>
           </div>
         </section>
-<Footer />
-      </div>
-    </>
-=======
 
-=======
-        <title>Consultation - Zion Tech Group</title>
-        <meta name="description" content="Get expert consultation for your technology needs." />
-      </Helmet>
-      <Navigation />
-      <main className="min-h-screen bg-gradient-to-br from-gray-50 to-orange-50">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Consultation
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Get expert consultation for your technology needs.
-            </p>
-          </div>
-          
-          <div className="text-center">
-            <p className="text-gray-600">Consultation services coming soon...</p>
-          </div>
-        </div>
-      </main>
-      <Footer />
+        <Footer />
+      </div>
     </>
   );
 };

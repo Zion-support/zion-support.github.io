@@ -1,5 +1,3 @@
-=======
-
 declare global {
   namespace NodeJS {
     interface ProcessEnv {
@@ -12,6 +10,7 @@ declare global {
     }
   }
 }
+
 declare module 'next' {
   interface NextRequest {
     user?: {
@@ -20,7 +19,8 @@ declare module 'next' {
       name: string
     }
   }
-=======
+}
+
 declare module '*.svg' {
   const content: React.FunctionComponent<React.SVGAttributes<SVGElement>>;
   export default content;

@@ -3,8 +3,6 @@
  * Provides comprehensive accessibility improvements for web applications
  */
 
-export interface AccessibilityConfig {
-=======
 // Accessibility Enhancement Utilities
 export interface AccessibilityOptions {
   enableKeyboardNavigation: boolean;
@@ -47,7 +45,6 @@ export class AccessibilityEnhancer {
     }
   }
 
-=======
   private addKeyboardNavigation(element: HTMLElement): void {
     element.setAttribute('tabindex', '0');
   }
