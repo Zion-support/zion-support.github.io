@@ -1,8 +1,7 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import {
-    Shield,
+import {Helmet}}from 'react-helmet-async';
+import {Shield,}
   Search,
   AlertTriangle,
   CheckCircle,
@@ -54,6 +53,10 @@ const PenetrationTestingPage: React.FC = () => {
     {
       icon: Zap,
       title: 'Expert Security Analysis',
+<<<<<<< HEAD
+      description: 'Professional security experts conduct thorough testing using industry-standard methodologies.',}}
+  ]
+=======
       description: 'Professional security experts conduct thorough testing using industry-standard methodologies.'
   };
     };
@@ -78,6 +81,7 @@ return ()
 return (
     <>
       <Helmet>
+>>>>>>> origin/main
         <title>Penetration Testing Services - Zion Tech Group | Security Assessment</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />

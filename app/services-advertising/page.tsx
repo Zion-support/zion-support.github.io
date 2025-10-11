@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import {Helmet}}from 'react-helmet-async';
+import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
 }
   ]
 const benefits = const benefits = const benefits = [
@@ -26,6 +26,7 @@ return (
             </h1>
             <p>
               Transform your business with our advanced page solutions.;
+>>>>>>> origin/main
               Powered by cutting-edge AI technology and industry expertise.
             </p></p></p>
                 </div>
@@ -38,16 +39,14 @@ return (
         </div>
       </section>
 
-      {/* Benefits Section */}
-              </div>
+      {/* Benefits Section */} </div>
             ))}
 
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-          </div>
+      {/* CTA Section */} </div>
         </div>
       </section>
     </div>

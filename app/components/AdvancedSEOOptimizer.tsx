@@ -1,9 +1,8 @@
 'use client';
-import React, { useEffect, useState, useCallback } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, {useEffect, useState, useCallback}from 'react';
+import {Helmet}}from 'react-helmet-async';
 
-interface SEOOptimizerProps {
-  title?: string;
+interface SEOOptimizerProps {title?: string;}
   description?: string;
   keywords?: string;
   canonicalUrl?: string;
@@ -34,7 +33,7 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
     if (typeof window === 'undefined') return;
 
     let score = 0;
-    const newRecommendations: string[] = []
+    const newRecommendations: string[] = [],
 
     // Check title length;
     if (title.length >= 30 && title.length <= 60) 
@@ -83,19 +82,11 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
     // Check for internal links;
     const internalLinks = document.querySelectorAll('a[href^="/"], a[href^="./"]');
-    if (internalLinks.length > 0) {
-      score += 10;
-    } else {
-      newRecommendations.push('Add internal links for better SEO');
-    }
-
-    setSeoScore(score);
+    if (internalLinks.length > 0) {score += 10;}else {newRecommendations.push('Add internal links for better SEO');}}setSeoScore(score);
     setRecommendations(newRecommendations);
   }, [title, description, keywords]);
 
-  useEffect(() => {
-    analyzeSEO();
-  }, [analyzeSEO]);
+  useEffect(() => {analyzeSEO();}, [analyzeSEO]);
 
 <<<<<<< HEAD
   const generateStructuredData = const generateStructuredData = const generateStructuredData = () => {
@@ -144,6 +135,7 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
   const _trackPerformanceMetrics = () => {;
     if (typeof window !== 'undefined' && 'performance' in window) {;
       window.addEventListener('load', () => {;
+>>>>>>> origin/main
         const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
 <<<<<<< HEAD
         if (_perfData && typeof window !== 'undefined' && 'gtag' in window) {
@@ -167,6 +159,22 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
     <>
       <Helmet>
         <title>{title}</title>
+<<<<<<< HEAD
+        <meta name="description" content={description}/>
+        <meta name="keywords" content={keywords}/>
+        {canonicalUrl && <link rel="canonical" href={canonicalUrl}/>}
+        
+        {/* Open Graph */} <meta property="og: title" content={title,}/>
+        <meta property="og: description" content={description,}/>
+        <meta property="og: image" content={ogImage,}/>
+        <meta property="og: type" content="website" />,
+        {canonicalUrl && <meta property="og: url" content={canonicalUrl,}/>}
+        
+        {/* Twitter Card */} <meta name="twitter: card" content={twitterCard,}/>
+        <meta name="twitter: title" content={title,}/>
+        <meta name="twitter: description" content={description,}/>
+        <meta name="twitter: image" content={ogImage,}/>
+=======
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
         {canonicalUrl && <link rel="canonical" href=canonicalUrl} />},
@@ -181,6 +189,7 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={ogImage} />
+>>>>>>> origin/main
         
         {/* Structured Data */})
         <script type="application/ld+json">)
@@ -189,6 +198,9 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
         </script>
       </Helmet>
       
+<<<<<<< HEAD
+      {children}{process.env.NODE_ENV === 'development' && (
+=======
       {children},
 <<<<<<< HEAD
     {process.env.NODE_ENV === 'development' && ()
@@ -226,6 +238,16 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
             </div>
           )}
         </div>
+<<<<<<< HEAD
+      )}
+
+      {/* Twitter Card Tags */} <meta name="twitter: card" content="summary_large_image" />,
+      <meta name="twitter: title" content={title,}/>
+      <meta name="twitter: description" content={description,}/>
+      <meta name="twitter: image" content={ogImage,}/>
+      <meta name="twitter: site" content="@ziontechgroup" />,
+      <meta name="twitter: creator" content="@ziontechgroup" />,
+=======
       )},
     {/* Twitter Card Tags */}
       <meta name="twitter:card" content="summary_large_image" / /></meta>
@@ -265,9 +287,9 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <script type="application/ld+json" /></script>
         {JSON.stringify(generateStructuredData())}
       </script>
+>>>>>>> origin/main
     </Helmet>
-    {children}
-  </>
+    {children} </>
   );
 };
 

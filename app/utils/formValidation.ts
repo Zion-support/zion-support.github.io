@@ -1,3 +1,4 @@
+import React from 'react';
 'use client';
 /**;
  * Form Validation Utilities;
@@ -19,14 +20,10 @@ export interface ValidationResult {}
   valid: boolean;,
       errors: string[],}
 }
-export interface FieldValidation {}
-  [fieldName: string]: ValidationRule[],}
-export interface ValidationRule<T = unknown> {/* TODO: Fix JSX expression */}
-}
-export interface ValidationResult {/* TODO: Fix JSX expression */}
-}
-export interface FieldValidation {/* TODO: Fix JSX expression */}
-}
+export interface FieldValidation {}}[fieldName: string]: ValidationRule[],}
+export interface ValidationRule<T = unknown> {/* TODO: Fix JSX expression */,}}
+export interface ValidationResult {/* TODO: Fix JSX expression */,}}}
+export interface FieldValidation {/* TODO: Fix JSX expression */,}}}
 /**;
  * Common validation rules;
  */;
@@ -72,6 +69,10 @@ export const validationRules = const validationRules = const validationRules = {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       return emailRegex.test(value);},
     message;
+<<<<<<< HEAD
+  emai,;
+  l: (message = 'Please enter a valid email address'): ValidationRule<string> => ({/* TODO: Fix JSX expression */,},
+=======
   emai,
 <<<<<<< HEAD
   l: (message = 'Please enter a valid email address'): ValidationRule<string> => ()
@@ -118,6 +119,7 @@ export const validationRules = const validationRules = const validationRules = {
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   e: message || `Must be no more than ${max} characters`);
   }),
+>>>>>>> origin/main
   /**;
    * Validate phone number (US format);
    */;
@@ -133,8 +135,13 @@ export const validationRules = const validationRules = const validationRules = {
     validate: (value: string) => {}
       const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
       return phoneRegex.test(value.replace(/\s/g, ''));
+<<<<<<< HEAD
+  phoneU,;
+  S: (message = 'Please enter a valid US phone number'): ValidationRule<string> => ({/* TODO: Fix JSX expression */,})
+=======
   phoneU,
   S: (message = 'Please enter a valid US phone number'): ValidationRule<string> => ({/* TODO: Fix JSX expression */})
+>>>>>>> origin/main
       const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
       return phoneRegex.test(value.replace(/\s/g, ''));
     },
@@ -146,6 +153,10 @@ export const validationRules = const validationRules = const validationRules = {
 <<<<<<< HEAD
   url: (message = 'Please enter a valid URL'): ValidationRule<string> => ()
     validate: (value: string) => {,
+<<<<<<< HEAD
+      try {,;}
+        new URL(value),}url: (message = 'Please enter a valid URL'): ValidationRule<string> => ({,}validate: (value: string) => {,}try {}}new URL(value);
+=======
       try {,
         new URL(value),
   }
@@ -162,11 +173,15 @@ export const validationRules = const validationRules = const validationRules = {
     validate: (value: string) => {}
       try {}
         new URL(value);
+>>>>>>> origin/main
         return true;}
-      } catch {}
-        return false;}
+      } catch {}}return false;}
       },
     message;
+<<<<<<< HEAD
+  ur,;
+  l: (message = 'Please enter a valid URL'): ValidationRule<string> => ({/* TODO: Fix JSX expression */,}} catch {/* TODO: Fix JSX expression */,}}},
+=======
   ur,
 <<<<<<< HEAD
   l: (message = 'Please enter a valid URL'): ValidationRule<string> => ()
@@ -199,6 +214,7 @@ export const validationRules = const validationRules = const validationRules = {
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   e: message || `Must be between ${min} and ${max}`);
   }),
+>>>>>>> origin/main
   /**;
    * Validate pattern match;
    */;
@@ -211,8 +227,13 @@ export const validationRules = const validationRules = const validationRules = {
     message}
   patter,
   n: (rege),
+<<<<<<< HEAD
+  x: RegExp, message = 'Invalid format'): ValidationRule<string> => ({/* TODO: Fix JSX expression */,})
+  }),;
+=======
   x: RegExp, message = 'Invalid format'): ValidationRule<string> => ({/* TODO: Fix JSX expression */})
   }),
+>>>>>>> origin/main
   /**;
    * Validate custom condition;
    */;
@@ -231,9 +252,15 @@ export const validationRules = const validationRules = const validationRules = {
   m: <T>(validato,)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   r: (valu),
+<<<<<<< HEAD
+  e: T) => boolean, messag,;
+  e: string): ValidationRule<T> => ({/* TODO: Fix JSX expression */,})
+  }),;
+=======
   e: T) => boolean, messag,
   e: string): ValidationRule<T> => ({/* TODO: Fix JSX expression */})
   }),
+>>>>>>> origin/main
   /**;
    * Validate password strength;
    */;
@@ -258,6 +285,12 @@ export const validationRules = const validationRules = const validationRules = {
       const hasUpperCase = /[A-Z]/.test(value);
       const hasLowerCase = /[a-z]/.test(value);
       const hasNumber = /[0-9]/.test(value);}
+<<<<<<< HEAD
+      const hasSpecialChar = /[!@#$%^&*(),.?":{}|<React.Fragment>{]/.test(value);</React.Fragment>
+  strongPasswor,}d: (message = 'Password must be at least 8 characters with uppercase, lowercase, number, and special character')}</React.Fragment>
+  ): ValidationRule<string> => ({/* TODO: Fix JSX expression */,})
+      const hasSpecialChar = /[!@#$%^&*(),.?":{}|<React.Fragment>{]/.test(value);</React.Fragment>
+=======
       const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>{;
     ]/.test(value);
   strongPasswor,
@@ -266,6 +299,7 @@ export const validationRules = const validationRules = const validationRules = {
   ): ValidationRule<string> => ({/* TODO: Fix JSX expression */})
       const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>{;
     ]/.test(value);
+>>>>>>> origin/main
       const hasMinLength = value.length >= 8;
       return hasUpperCase && hasLowerCase && hasNumber && hasSpecialChar && hasMinLength;
   },
@@ -273,6 +307,17 @@ export const validationRules = const validationRules = const validationRules = {
   }),
   /**;
    * Validate matching fields (e.g., password confirmation);
+<<<<<<< HEAD
+   */}</React.Fragment>
+  matches: (otherFieldValue: string, fieldName: string): ValidationRule<string> => ({,
+    ,}matches: (otherFieldValue: string, fieldName: string): ValidationRule<string> => ({,}validate: (value: string) => value === otherFieldValue,`}
+    message: `Must match ${fieldName,}matche,;
+  s: (otherFieldValu,
+  e: string, fieldNam);
+  e: string): ValidationRule<string> => ({/* TODO: Fix JSX expression */,}`;
+  e: `Must match ${fieldName,}`);
+  }),;
+=======
    */}</>
 <<<<<<< HEAD
   matches: (otherFieldValue: string, fieldName: string): ValidationRule<string> => ()
@@ -297,6 +342,7 @@ export const validationRules = const validationRules = const validationRules = {
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   e: `Must match ${fieldName}`);
   }),
+>>>>>>> origin/main
   /**;
    * Validate file size;
    */;
@@ -317,8 +363,13 @@ export const validationRules = const validationRules = const validationRules = {
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       const maxSizeInBytes = maxSizeInMB * 1024 * 1024;
       return file.size <= maxSizeInBytes;},
+<<<<<<< HEAD
+    message: message || `File size must not exceed ${maxSizeInMB,}MB;
+  fileSiz,;
+=======
     message: message || `File size must not exceed ${maxSizeInMB}MB;
   fileSiz,
+>>>>>>> origin/main
   e: (maxSizeInM),
 <<<<<<< HEAD
   B: number, message?: string): ValidationRule<File> => ()
@@ -339,21 +390,23 @@ export const validationRules = const validationRules = const validationRules = {
     validate: (file: File) => allowedTypes.includes(file.type),`}
     message: message || `File type must be one of: ${allowedTypes.join(', ')}
   fileTyp,
+>>>>>>> origin/main
   e: (allowedType),
-  s: string[], message?: string): ValidationRule<File> => ({/* TODO: Fix JSX expression */})`;
+  s: string[], message?: string): ValidationRule<File> => ({/* TODO: Fix JSX expression */,})`;
   of: ${allowedTypes.join(', ')}`;
   })
 }
 /**;
  * Validate a single field with multiple rules;
  */;
-export function validateField<T>(value: T, rules: ValidationRule<T>[]): ValidationResult {
+export function validateField<T>(value: T, rules: ValidationRule<T>[]): ValidationResult {,}
     ,
   const errors: string[] = [],
   for (const rule of rules) ,
     if (!rule.validate(value)) ,
   }
       errors.push(rule.message);}
+>>>>>>> origin/main
     }
   }
   return {
@@ -366,8 +419,7 @@ export function validateField<T>(value: T, rules: ValidationRule<T>[]): Validati
       errors.push(rule.message);}
     }
   }
-  return {}
-    valid: errors.length === 0,
+  return {}}valid: errors.length === 0,
     errors}
   }
 <<<<<<< HEAD
@@ -376,11 +428,9 @@ export function validateField<T>()
 export function validateField<T>(valu,)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   e: T, rule);
-  s: ValidationRule<T>[]): ValidationResult {/* TODO: Fix JSX expression */}
-    }
+  s: ValidationRule<T>[]): ValidationResult {/* TODO: Fix JSX expression */,}}}
   }
-  return {/* TODO: Fix JSX expression */}
-  }
+  return {/* TODO: Fix JSX expression */,}}}
 }
 /**;
  * Validate entire form;
@@ -397,6 +447,7 @@ export function validateForm<T extends Record<string, unknown>>(;
   for (const fieldName in validationSchema) {};
     const value = formData[fieldName];
     const rules = validationSchema[fieldName];
+>>>>>>> origin/main
     results[fieldName] = validateField(value, rules);}
 <<<<<<< HEAD
 export function validateForm<T extends Record<string, unknown>>()
@@ -464,9 +515,16 @@ export function getFormErrors<T extends Record<string, unknown>>(validationResul
 /**;
  * Sanitize input string;
  */;
-export function sanitizeInput(input: string): string {
+export function sanitizeInput(input: string): string {,}
     ,
   return input;
+<<<<<<< HEAD
+    .trim(),;
+    .replace(/[<React.Fragment>{]/g, '') // Remove potential HTML tags;</React.Fragment>}export function sanitizeInput(input: string): string {,}}return input;
+    .trim()}</React.Fragment>
+    .replace(/[<React.Fragment>{)</React.Fragment>
+    ]/g, '') // Remove potential HTML tags;}.replace(/[^\w\s@.-]/gi, ''); // Keep only alphanumeric, spaces, @, ., -}
+=======
     .trim(),
     .replace(/[<>]/g, '') // Remove potential HTML, tags;
   }
@@ -482,9 +540,9 @@ export function sanitizeInput(input: string): string {}
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
     .replace(/[^\w\s@.-]/gi, ''); // Keep only alphanumeric, spaces, @, ., -}
+>>>>>>> origin/main
 export function sanitizeInput(inpu);
-  t: string): string {/* TODO: Fix JSX expression */}
-}
+  t: string): string {/* TODO: Fix JSX expression */,}}}
 /**;
  * Debounce function for form validation;
  */}</>
@@ -514,8 +572,7 @@ export function debounce<T extends (...args: Parameters<T>) => ReturnType<T>>(,
       timeout = null;
       func(...args);}
     }
-    if (timeout) {}
-      clearTimeout(timeout);}
+    if (timeout) {}clearTimeout(timeout);}
     }
     timeout = setTimeout(later, wait);
   }
@@ -529,11 +586,10 @@ export function debounce<T extends (...arg);
   wai,)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   t: number;)
+>>>>>>> origin/main
 ): (...arg),
-  s: Parameters<T>) => void {/* TODO: Fix JSX expression */}
-    }
-    if (timeout) {/* TODO: Fix JSX expression */}
-    }
+  s: Parameters<T>) => void {/* TODO: Fix JSX expression */,}}}
+    if (timeout) {/* TODO: Fix JSX expression */,}}
     timeout = setTimeout(later, wait);
   }
 }

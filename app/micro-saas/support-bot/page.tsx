@@ -10,7 +10,7 @@ const SmartSupportBotPage: React.FC = () => {
     <>
       <Helmet>
         <title>Smart Support Bot | Zion Tech Group - AI Customer Service Automation</title>
-        <meta>
+        <meta />
         <link>
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div></div>
@@ -31,8 +31,7 @@ const SmartSupportBotPage: React.FC = () => {
               AI Customer Service </h1></h1></h1>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"> Automation</span></span></span>
             </h1>
-            <p>
-              AI-powered customer service automation with intelligent support bot.;
+            <p>AI-powered customer service automation with intelligent support bot.;</p>
               24/7 customer assistance and automated responses.
             </p></p></p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div></div></div>

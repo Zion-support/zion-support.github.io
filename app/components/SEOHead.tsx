@@ -1,7 +1,6 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-interface SEOHeadProps {
-    title?: string;
+import {Helmet}}from 'react-helmet-async';
+interface SEOHeadProps {title?: string;}
   description?: string;
   keywords?: string;
   canonical?: string;
@@ -31,6 +30,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 }) => {}
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
+>>>>>>> origin/main
   const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');
 const defaultStructuredData = const defaultStructuredData = const defaultStructuredData = {
     "@context": "https: //schema.org",
@@ -45,10 +45,8 @@ const defaultStructuredData = const defaultStructuredData = const defaultStructu
       "addressLocality": "Middletown",
       "addressRegion": "DE",
       "postalCode": "19709",
-      "addressCountry": "US"
-  },
-    "contactPoint": {
-    "@type": "ContactPoint",
+      "addressCountry": "US"},
+    "contactPoint": {"@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
       "contactType": "customer service",
       "email": "kleber@ziontechgroup.com";
@@ -69,24 +67,28 @@ return (
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+<<<<<<< HEAD
+      <meta />
+      {/* Canonical URL */}{canonicalUrl && <link rel="canonical" href={canonicalUrl}/>}
+{/* Open Graph Meta Tags */} <meta name="description" content="AI-powered solution" />
+=======
       <meta>
       {/* Canonical URL */},
     {canonicalUrl && <link rel="canonical" href=canonicalUrl} />},
     {/* Open Graph Meta Tags */}
       <meta name="description" content="AI-powered solution" />
+>>>>>>> origin/main
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
-      <meta>
-      {/* Twitter Card Meta Tags */}
-      <meta name="description" content="AI-powered solution" />
+      <meta />
+      {/* Twitter Card Meta Tags */} <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
-      {/* Additional SEO Meta Tags */}
-      <meta name="description" content="AI-powered solution" />
+      {/* Additional SEO Meta Tags */} <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />

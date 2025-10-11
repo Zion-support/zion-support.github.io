@@ -83,9 +83,9 @@ const PerformanceMonitor: React.FC = () => {
       } catch (e) {;
         console.warn('Performance Observer not supported:', e);
       }
+    });
 
-      return () => observer.disconnect();
-    }
+    observer.observe({ entryTypes: ['measure', 'navigation'] });
 
     // Show performance panel after 3 seconds
     const timer = setTimeout(() => setIsVisible(true), 3000);

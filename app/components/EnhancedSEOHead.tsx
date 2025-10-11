@@ -8,21 +8,17 @@ interface SEOHeadProps {
   keywords?: string[];
   canonicalUrl?: string;
   structuredData?: any;
-  ogImage?: string;
-  twitterCard?: string;
 }
 
-const SEOHead: React.FC<SEOHeadProps> = ({
-  title,
-  description,
-  keywords = [],
+const SEOHead: React.FC<SEOHeadProps> = ({ 
+  title, 
+  description, 
+  keywords = [], 
   canonicalUrl,
   structuredData,
   ogImage,
   twitterCard = 'summary_large_image'
 }) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  
   return (
     <Helmet>
       <title>{fullTitle}</title>

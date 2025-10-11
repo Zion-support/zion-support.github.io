@@ -45,6 +45,12 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
   };
     document.addEventListener('keydown', handleKeyDown);
     document.addEventListener('mousedown', handleMouseDown);
+<<<<<<< HEAD
+    return () => {document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('mousedown', handleMouseDown)}}, [isHighContrast, isReducedMotion]);
+  const toggleHighContrast = () => {setIsHighContrast(!isHighContrast);
+    document.documentElement.classList.toggle('high-contrast')}const changeFontSize = (size: string) => {,
+=======
     return () => {
     document.removeEventListener('keydown', handleKeyDown);
       document.removeEventListener('mousedown', handleMouseDown)
@@ -97,6 +103,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
       </div>;
       {children};
     </div>;
+>>>>>>> origin/main
   );
 };
 

@@ -1,9 +1,9 @@
 'use client';
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Rocket, Globe, Target, BarChart, Shield, Clock, Users, ArrowRight, Star, TrendingUp, Lock, FileText, DollarSign, CheckCircle, Phone, Mail, MapPin, Database, Settings, Calendar, Award, Eye, MessageSquare, CheckSquare, Cpu, Brain, Zap } from 'lucide-react';
+import React, {useState, useEffect}from 'react';
+import {Helmet}}from 'react-helmet-async';
+import {Rocket, Globe, Target, BarChart, Shield, Clock, Users, ArrowRight, Star, TrendingUp, Lock, FileText, DollarSign, CheckCircle, Phone, Mail, MapPin, Database, Settings, Calendar, Award, Eye, MessageSquare, CheckSquare, Cpu, Brain, Zap}}from 'lucide-react';
 
-const AISpaceMissionOptimizer: React.FC = () => {
+const AISpaceMissionOptimizer: React.FC = () => {,
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => 
@@ -25,6 +25,7 @@ const AISpaceMissionOptimizer: React.FC = () => {
     },
     {
       icon: Target,
+>>>>>>> origin/main
       title: 'Payload Optimization',
       description: 'Intelligent payload configuration and resource allocation for maximum mission value',
       benefits: [''Optimal payload distribution', 'Resource efficiency', 'Mission success maximization'']
@@ -48,7 +49,7 @@ const AISpaceMissionOptimizer: React.FC = () => {
       price: '$4,999',
       period: '/month',
       description: 'Perfect for small satellite missions and research projects',
-      features: [
+      features: [,
         'Basic trajectory optimization',
         'Single mission planning',
         'Standard risk assessment',
@@ -63,7 +64,7 @@ const AISpaceMissionOptimizer: React.FC = () => {
       price: '$12,999',
       period: '/month',
       description: 'Ideal for commercial space missions and satellite constellations',
-      features: [
+      features: [,
         'Advanced trajectory optimization',
         'Multi-mission coordination',
         'Comprehensive risk analysis',
@@ -80,7 +81,7 @@ const AISpaceMissionOptimizer: React.FC = () => {
       price: '$49,999',
       period: '/month',
       description: 'For large-scale space programs and interplanetary missions',
-      features: [
+      features: [,
         'Full mission optimization suite',
         'Interplanetary mission planning',
         'Advanced AI algorithms',
@@ -104,22 +105,16 @@ const AISpaceMissionOptimizer: React.FC = () => {
       title: 'Satellite Constellation Management',
       description: 'Optimize satellite constellation deployment and maintenance operations',
       icon: Globe,
-      results: '40% reduction in operational costs'
-    },
-    {
-      title: 'Mars Mission Planning',
+      results: '40% reduction in operational costs',},
+    {title: 'Mars Mission Planning',
       description: 'Comprehensive mission planning for Mars exploration and colonization',
       icon: Rocket,
-      results: 'Optimized Mars mission trajectories'
-    },
-    {
-      title: 'Space Station Operations',
+      results: 'Optimized Mars mission trajectories',},
+    {title: 'Space Station Operations',
       description: 'Optimize space station operations and supply missions',
       icon: Target,
-      results: '25% improvement in efficiency'
-    },
-    {
-      title: 'Deep Space Exploration',
+      results: '25% improvement in efficiency',},
+    {title: 'Deep Space Exploration',
       description: 'Mission planning for deep space exploration and scientific missions',
       icon: Eye,
 <<<<<<< HEAD
@@ -145,14 +140,15 @@ const AISpaceMissionOptimizer: React.FC = () => {
   return (
     <>
       <Helmet>
+>>>>>>> origin/main
         <title>AI Space Mission Optimizer - Advanced Space Mission Planning | Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered space mission optimization for trajectory planning, payload optimization, and risk assessment. Advanced space mission planning solutions." />
         <meta name="keywords" content="space mission optimization, trajectory planning, satellite management, space exploration, mission planning, space AI, aerospace technology" />
-        <meta property="og:title" content="AI Space Mission Optimizer - Advanced Space Mission Planning" />
+        <meta property="og: title" content="AI Space Mission Optimizer - Advanced Space Mission Planning" />,
         <meta property="og:description" content="Revolutionary AI-powered space mission optimization for trajectory planning, payload optimization, and risk assessment." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-space-mission-optimizer" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-space-mission-optimizer" />
+        <meta property="og: type" content="website" />,
+        <meta property="og: url" content="https://ziontechgroup.com/ai-space-mission-optimizer" />,
+        <link rel="canonical" href="https: //ziontechgroup.com/ai-space-mission-optimizer" />,
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">

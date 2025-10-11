@@ -12,20 +12,14 @@ const AnalyticsToolsPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       icon: Brain,
       title: 'AI-Powered Analytics',
-      description: 'Advanced AI technology to transform your data analysis and business intelligence'
-    },
-    {
-      icon: Zap,
+      description: 'Advanced AI technology to transform your data analysis and business intelligence',},
+    {icon: Zap,
       title: 'Real-Time Processing',
-      description: 'Lightning-fast data processing and real-time analytics for optimal insights'
-    },
-    {
-      icon: Shield,
+      description: 'Lightning-fast data processing and real-time analytics for optimal insights',},
+    {icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards for your data'
-    },
-    {
-      icon: Globe,
+      description: 'Bank-level security with encryption and compliance standards for your data',},
+    {icon: Globe,
       title: 'Global Scalability',
       description: 'Worldwide deployment and support for international business analytics';
     };
@@ -60,9 +54,17 @@ const AnalyticsToolsPage: React.FC = () => {
         <meta name="description" content="Professional Analytics Tools services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="analytics tools, AI solutions, IT services, Zion Tech Group, data analytics" />
       </Helmet>
+<<<<<<< HEAD
+<div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">Analytics Tools;</h1>
+  </
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your business with our advanced analytics tools.</p>
+=======
 
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced analytics tools. 
+>>>>>>> origin/main
             Powered by cutting-edge AI technology and industry expertise.
           </p></p></p>
       </section>
@@ -164,6 +166,7 @@ const AnalyticsToolsPage: React.FC = () => {
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
               </button></button><Mail className="mr-2 h-5 w-5" />
 
+>>>>>>> origin/main
           </div>
         </div>
         <div className="text-center">

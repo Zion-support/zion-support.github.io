@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import {Helmet}}from 'react-helmet-async';
+import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
 
 const SEOEnhancer: React.FC = () => {
 <<<<<<< HEAD
@@ -13,20 +13,14 @@ const SEOEnhancer: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       icon: Brain,
       title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: Zap,
+      description: 'Advanced AI technology to transform your business operations and improve efficiency',},
+    {icon: Zap,
       title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
+      description: 'Lightning-fast processing and real-time analytics for optimal results',},
+    {icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
+      description: 'Bank-level security with encryption and compliance standards',},
+    {icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses';
     };
@@ -62,8 +56,7 @@ const SEOEnhancer: React.FC = () => {
               <br />
               <span className="text-white">Solutions</span></span></span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced seoenhancer solutions. 
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your business with our advanced seoenhancer solutions.</p>
               Powered by cutting-edge AI technology and industry expertise.
             </p></p></p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

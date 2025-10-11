@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import {Helmet}}from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Zap, DollarSign, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
@@ -71,6 +71,10 @@ const services = const services = const services = [
     {
       icon: '🔒',
       title: 'Security Services',
+<<<<<<< HEAD
+      description: 'Cybersecurity and data protection solutions',}}
+  ]
+=======
       description: 'Cybersecurity and data protection solutions'
   };
     };
@@ -102,6 +106,7 @@ return ()
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900"></div></div></div>
       <Helmet>
+>>>>>>> origin/main
         <title>Financial IT Solutions | Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />

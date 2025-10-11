@@ -1,7 +1,24 @@
 'use client';
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, {useState}from 'react';
+import {Helmet}}from 'react-helmet-async';
 
+<<<<<<< HEAD
+const PartnersPage: React.FC = () => {,
+  const partners = [
+import {ExternalLink, Award, Handshake, Users, Star, CheckCircle, ArrowRight}}from 'lucide-react';
+
+interface Partner {id: string;,}
+  name: string;,
+  logo: string;,
+  description: string;,
+  category: string;,
+  website: string;,
+  tier: 'preferred' | 'certified' | 'strategic';,}const PartnersPage: React.FC = () => {,
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedTier, setSelectedTier] = useState('all');
+
+  const partners: Partner[] = [,
+=======
 const PartnersPage: React.FC = () => {
   const partners = [;
 import  ExternalLink, Award, Handshake, Users, Star, CheckCircle, ArrowRight } from 'lucide-react';
@@ -33,19 +50,42 @@ const PartnersPage: React.FC = () => {
   const partners: Partner[] = [,
       id: '1',
       name: 'Microsoft',
-      logo: '/images/partners/microsoft.png',
-    },
-    {
-      id: '2',
+      logo: '/images/partners/microsoft.png',},
+    {id: '2',
       name: 'Amazon Web Services',
-      logo: '/images/partners/aws.png',
-    }
-    'Access to cutting-edge technology',
+      logo: '/images/partners/aws.png',}'Access to cutting-edge technology',
     'Joint go-to-market opportunities',
     'Technical support and training',
     'Co-innovation projects',
     'Global reach and scalability',
     'Certified expertise and solutions'
+<<<<<<< HEAD
+  ];
+  const benefits = [
+    {title: 'Certified Expertise',
+      description: 'Our team holds certifications from leading technology partners',
+      icon: CheckCircle;,},
+    {title: 'Priority Support',
+      description: 'Get priority access to partner resources and support channels',
+      icon: CheckCircle;,},
+    {title: 'Latest Technology',
+      description: 'Access to cutting-edge tools and early release features',
+      icon: CheckCircle;,},
+    {title: 'Cost Optimization',
+      description: 'Leverage partner pricing and volume discounts for your projects',
+      icon: CheckCircle;,}];
+  const categories = ['All', 'Cloud & AI', 'Hardware & AI', 'Business Software', 'IT Management']
+
+  return(<>)
+      <Helmet />
+        <title>Partners | Zion Tech Group</title>
+        <meta name="description" content="Learn about our technology partnerships and how they benefit our clients with certified expertise and priority support." />
+        <meta name="keywords" content="partners, technology partnerships, Microsoft, AWS, Google Cloud, NVIDIA, certified expertise" />
+      </Helmet>
+
+      <Navigation />
+      
+=======
 
   ];
 
@@ -93,7 +133,7 @@ const PartnersPage: React.FC = () => {
               ))}
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">,</div>
               {partners.map((partner, index) => (
                 </div></div><div key=index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300">
                   </div></div><div className="aspect-video bg-white/10 rounded-xl mb-4 flex items-center justify-center">
@@ -126,6 +166,7 @@ const PartnersPage: React.FC = () => {
     switch (tier) {;
 =======
   const filteredPartners = partners.filter(partner => {;
+>>>>>>> origin/main
     const matchesCategory = selectedCategory === 'all' || partner.category === selectedCategory;
     const matchesTier = selectedTier === 'all' || partner.tier === selectedTier;)
     return matchesCategory && matchesTier;)
@@ -140,10 +181,7 @@ const PartnersPage: React.FC = () => {
         return 'from-blue-500 to-purple-600';
       case 'certified':
         return 'from-green-500 to-blue-600';
-      default:
-        return 'from-gray-500 to-gray-600';
-    }
-  };
+      default: return 'from-gray-500 to-gray-600';,}};
 
 <<<<<<< HEAD
   const getTierIcon = const getTierIcon = const getTierIcon = (tier: string) => {;
@@ -158,10 +196,7 @@ const PartnersPage: React.FC = () => {
         return <Award className="w-4 h-4" />;
       case 'certified':
         return <CheckCircle className="w-4 h-4" />;
-      default:
-        return <Handshake className="w-4 h-4" />;
-    }
-  };
+      default: return <Handshake className="w-4 h-4" />;,}};
 
 <<<<<<< HEAD
   return ()
@@ -184,8 +219,7 @@ const PartnersPage: React.FC = () => {
           </div></div><h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
             Our </h1></h1><span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Partners</span></span></span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            We work with industry leaders to deliver the best AI and IT solutions. 
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">We work with industry leaders to deliver the best AI and IT solutions.</p>
             Our strategic partnerships enable us to provide comprehensive, cutting-edge technology.
           </p></p></p>
         </div>
@@ -552,7 +586,10 @@ const PartnersPage: React.FC = () => {
         </div>
       </section>
     </div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/main
   );
 };
 

@@ -1,11 +1,10 @@
 'use client';
-import React, { useState, useEffect } from 'react';
-import { CheckCircle, XCircle, AlertTriangle, Clock, RefreshCw, Globe, Server, Database, Cloud, Shield, Zap, Activity, TrendingUp, Users, Eye, BarChart } from 'lucide-react';
+import React, {useState, useEffect}from 'react';
+import {CheckCircle, XCircle, AlertTriangle, Clock, RefreshCw, Globe, Server, Database, Cloud, Shield, Zap, Activity, TrendingUp, Users, Eye, BarChart}}from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-export default function StatusPage() {
-    const [lastUpdated, setLastUpdated] = useState(new Date());
+export default function StatusPage() {const [lastUpdated, setLastUpdated] = useState(new Date());
   const [isRefreshing, setIsRefreshing] = useState(false);
 <<<<<<< HEAD
 const refreshStatus = const refreshStatus = async () => {;
@@ -27,46 +26,40 @@ const services = const services = const services = [
       uptime: '99.9%',
       responseTime: '45ms',
       lastIncident: '2024-01-15',
-      description: 'Core API endpoints and authentication'
-  },
-    {
-    name: 'AI Services',
+      description: 'Core API endpoints and authentication',},
+    {name: 'AI Services',
       status: 'operational',
       uptime: '99.8%',
       responseTime: '120ms',
       lastIncident: '2024-01-10',
-      description: 'Machine learning and AI processing'
-  },
-    {
-    name: 'Cloud Infrastructure',
+      description: 'Machine learning and AI processing',},
+    {name: 'Cloud Infrastructure',
       status: 'operational',
       uptime: '99.95%',
       responseTime: '25ms',
       lastIncident: '2024-01-05',
-      description: 'Cloud hosting and storage services'
-  },
-    {
-    name: 'Database',
+      description: 'Cloud hosting and storage services',},
+    {name: 'Database',
       status: 'operational',
       uptime: '99.9%',
       responseTime: '15ms',
       lastIncident: '2024-01-12',
-      description: 'Primary and backup databases'
-  },
-    {
-    name: 'CDN',
+      description: 'Primary and backup databases',},
+    {name: 'CDN',
       status: 'operational',
       uptime: '99.99%',
       responseTime: '8ms',
       lastIncident: '2024-01-08',
-      description: 'Content delivery network'
-  },
-    {
-    name: 'Monitoring',
+      description: 'Content delivery network',},
+    {name: 'Monitoring',
       status: 'operational',
       uptime: '100%',
       responseTime: '5ms',
       lastIncident: 'Never',
+<<<<<<< HEAD
+      description: 'System monitoring and alerts',}}
+  ]
+=======
       description: 'System monitoring and alerts'
   };
     };
@@ -84,12 +77,17 @@ const incidents = const incidents = const incidents = [
   },
     {
     id: 2,
+>>>>>>> origin/main
       title: 'Database Connection Issues',
       status: 'resolved',
       severity: 'major',
       startTime: '2024-01-12T14:20:00Z',
       endTime: '2024-01-12T16:30:00Z',
       description: 'Intermittent database connection issues affecting some user operations.',
+<<<<<<< HEAD
+      affectedServices: ['Database', 'API Services']}}
+  ]
+=======
       affectedServices: ['Database', 'API Services']
   }
     }

@@ -1,6 +1,11 @@
 'use client';
 
 import React from 'react';
+<<<<<<< HEAD
+import {Zap, Shield, Star, Users, ArrowRight}}from 'lucide-react';
+
+const ContentPromotionBanner: React.FC = () => {,
+=======
 import { CheckCircle, ArrowRight, Zap, Shield, Star, Users } from 'lucide-react';
 
 const ContentPromotionBanner: React.FC = () => {
@@ -82,6 +87,7 @@ const ContentPromotionBanner: React.FC = () => {
           </button></button><ArrowRight className="w-5 h-5 ml-2" />
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
         </button>
+>>>>>>> origin/main
       </div>
     </div>
   );

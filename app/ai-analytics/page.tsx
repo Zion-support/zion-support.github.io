@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import {Helmet}}from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
@@ -23,6 +23,7 @@ const AiAnalyticsPage: React.FC = () => {
     },
     {
       icon: BarChart,
+>>>>>>> origin/main
       description: 'Monitor your business metrics in real-time with customizable, interactive dashboards.',
       benefits: [''Live data updates', 'Custom widgets', 'Interactive charts', 'Mobile responsive'']
     },
@@ -62,30 +63,20 @@ const AiAnalyticsPage: React.FC = () => {
     {
       title: 'Business Intelligence',
       description: 'Transform raw data into actionable business insights',
-      icon: '📊'
-    },
-    {
-      title: 'Marketing Analytics',
+      icon: '📊',},
+    {title: 'Marketing Analytics',
       description: 'Optimize marketing campaigns with AI-powered insights',
-      icon: '📈'
-    },
-    {
-      title: 'Financial Analysis',
+      icon: '📈',},
+    {title: 'Financial Analysis',
       description: 'Monitor financial performance and identify trends',
-      icon: '💰'
-    },
-    {
-      title: 'Customer Analytics',
+      icon: '💰',},
+    {title: 'Customer Analytics',
       description: 'Understand customer behavior and preferences',
-      icon: '👥'
-    },
-    {
-      title: 'Operations Monitoring',
+      icon: '👥',},
+    {title: 'Operations Monitoring',
       description: 'Track operational metrics and optimize processes',
-      icon: '⚙️'
-    },
-    {
-      title: 'Risk Management',
+      icon: '⚙️',},
+    {title: 'Risk Management',
       description: 'Identify and mitigate business risks proactively',
 <<<<<<< HEAD
       icon: '🛡️';
@@ -99,6 +90,7 @@ const AiAnalyticsPage: React.FC = () => {
   return (
     <>
       <Helmet>
+>>>>>>> origin/main
         <title>AI Analytics - Zion Tech Group</title>
         <meta name="keywords" content="AI analytics, artificial intelligence, data analytics, AI solutions, intelligent automation" />
       </Helmet>

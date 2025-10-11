@@ -14,6 +14,7 @@ const CloudInfrastructurePage: React.FC = () => {
     
     }
   ];];];
+>>>>>>> origin/main
   const benefits = [
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     '24/7 technical support',
@@ -32,6 +33,7 @@ const CloudInfrastructurePage: React.FC = () => {
 
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced cloud infrastructure solutions. 
+>>>>>>> origin/main
             Powered by cutting-edge AI technology and industry expertise.
           </p></p></p>
       {/* Features Section */}

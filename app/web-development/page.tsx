@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Code, Smartphone, Globe, Database, Shield, BarChart, Users, CheckCircle, ArrowRight, Cloud, Phone } from 'lucide-react';
+import {Code, Smartphone, Globe, Database, Shield, BarChart, Users, CheckCircle, ArrowRight, Cloud, Phone}}from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
@@ -20,24 +20,23 @@ const process = const process = const process = [
     step: '01',
       title: 'Discovery & Planning',
       description: 'We analyze your requirements and create a detailed project plan',
-      icon: BarChart,
-  },
-    {
-    step: '02',
+      icon: BarChart,},
+    {step: '02',
       title: 'Design & Prototyping',
       description: 'Create wireframes and prototypes to visualize your solution',
-      icon: Code,
-  },
-    {
-    step: '03',
+      icon: Code,},
+    {step: '03',
       title: 'Development',
       description: 'Build your web application using modern technologies and best practices',
-      icon: Globe,
-  },
-    {
-    step: '04',
+      icon: Globe,},
+    {step: '04',
       title: 'Testing & Launch',
       description: 'Thorough testing and deployment with ongoing support',
+<<<<<<< HEAD
+      icon: Shield,}}
+  ]
+return(<>)
+=======
       icon: Shield,
   };
     };
@@ -50,6 +49,7 @@ const WebDevelopmentPage: React.FC = () => {
 =======
 return (
     <>
+>>>>>>> origin/main
       <SEOOptimizer;
         title="Web Development Services - Zion Tech Group";
         description="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern technologies and best practices.";)
@@ -160,6 +160,10 @@ const WebDevelopmentPage: React.FC = () => {
         enableHighContrast={true}
         enableFocusManagement={true}
       />
+      <PerformanceOptimizer;
+        enableImageOptimization={true}enableLazyLoading={true}enableCodeSplitting={true}enablePrefetching={true}/>
+      <AccessibilityEnhancer;
+        enableKeyboardNavigation={true}enableScreenReaderSupport={true}enableHighContrast={true}enableFocusManagement={true}/>
       <SecurityEnhancer>
       <Analytics>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div></div>
@@ -191,7 +195,7 @@ const WebDevelopmentPage: React.FC = () => {
             <h1>
               Web Development Services</h1></h1></h1>
             </h1>,
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">,
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">,</p>
               Build modern, scalable, and high-performance web applications with our expert development team.;
               From frontend to backend, we deliver solutions that drive business growth.
             </p></p></p>
@@ -201,10 +205,10 @@ const WebDevelopmentPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div></div></section>
               <a;
                 href="/contact";
-                className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300";
+                className="cyber-button px-8 py-4 text-lg font-semibold hover: scale-105 transition-all duration-300";,
               >Start Your Project<a;
-                href="tel:+13024640950";
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300";
+                href="tel: +13024640950";,
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover: bg-cyan-400 hover:text-slate-900 transition-all duration-300";,
               >Call +1 302 464 0950</a>
               >
                 Start Your Project;
@@ -215,10 +219,15 @@ const WebDevelopmentPage: React.FC = () => {
               </a>
             </div>,
           </section>,
+<<<<<<< HEAD
+,;
+          {/* Services Grid */}/>
+=======
 ,
           {/* Services Grid */}
 
       />
+>>>>>>> origin/main
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         </div></div><Navigation />
         <main className="container mx-auto px-4 py-16 pt-24">
@@ -262,6 +271,7 @@ const WebDevelopmentPage: React.FC = () => {
           <section className="mb-20" /></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text" /></h2>
               Our Web Development Services
+>>>>>>> origin/main
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" /></div>
               {webServices.map((service, index) => ()
@@ -397,11 +407,11 @@ const WebDevelopmentPage: React.FC = () => {
                   )}
 <a;
                     href="/contact";
-                    className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 hover: scale-105 cyber-button";
+                    className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 hover: scale-105 cyber-button";,
                   >Get Started</a>
                   </a>
                 </div>
-                    className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 hover: scale-105 cyber-button"
+                    className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 hover: scale-105 cyber-button",
                   >
                     Get Started,
                   </a>,
@@ -533,10 +543,10 @@ const WebDevelopmentPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                 <a;
                   href="/contact";
-                  className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300";
+                  className="cyber-button px-8 py-4 text-lg font-semibold hover: scale-105 transition-all duration-300";,
                 >Start Your Project<a;
-                  href="tel:+13024640950";
-                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300";
+                  href="tel: +13024640950";,
+                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover: bg-cyan-400 hover:text-slate-900 transition-all duration-300";,
                 >Call +1 302 464 0950</a>
                 >
                   Start Your Project;

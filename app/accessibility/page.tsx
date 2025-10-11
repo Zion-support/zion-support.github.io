@@ -21,6 +21,7 @@ const AccessibilityPage: React.FC = () => {
     },
     {
       icon: MousePointer,
+>>>>>>> origin/main
       title: 'Motor Accessibility',
       description: 'Keyboard navigation and alternative input methods for users with motor impairments.',
       benefits: [''Keyboard navigation', 'Voice commands', 'Switch control', 'Customizable controls'']
@@ -54,20 +55,14 @@ const standards = const standards = const standards = [
     {
       name: 'WCAG 2.1 AA',
       description: 'Web Content Accessibility Guidelines 2.1 Level AA compliance',
-      status: 'Fully Compliant'
-    },
-    {
-      name: 'Section 508',
+      status: 'Fully Compliant',},
+    {name: 'Section 508',
       description: 'US federal accessibility standards for electronic and information technology',
-      status: 'Fully Compliant'
-    },
-    {
-      name: 'ADA',
+      status: 'Fully Compliant',},
+    {name: 'ADA',
       description: 'Americans with Disabilities Act compliance for digital accessibility',
-      status: 'Fully Compliant'
-    },
-    {
-      name: 'EN 301 549',
+      status: 'Fully Compliant',},
+    {name: 'EN 301 549',
       description: 'European accessibility standard for ICT products and services',
       status: 'Fully Compliant';
     };
@@ -83,6 +78,7 @@ const standards = const standards = const standards = [
   return (
     <>
       <Helmet>
+>>>>>>> origin/main
         <title>Accessibility Solutions - Zion Tech Group | Inclusive Digital Experiences</title>
         <meta name="description" content="Creating inclusive digital experiences that work for everyone. Our accessibility solutions ensure your applications are usable by people of all abilities and comply with international standards." />
         <meta name="keywords" content="accessibility, inclusive design, WCAG compliance, screen reader, keyboard navigation, digital accessibility" />

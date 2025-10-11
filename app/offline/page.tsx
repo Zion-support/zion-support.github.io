@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import {Helmet}}from 'react-helmet-async';
 
 <<<<<<< HEAD
   return ()
@@ -30,8 +30,7 @@ import { Helmet } from 'react-helmet-async';
               <br>
               <span className="text-white">Solutions</span></span></span>
             </h1>
-            <p>
-              Transform your business with our advanced page solutions.;
+            <p>Transform your business with our advanced page solutions.;</p>
               Powered by cutting-edge AI technology and industry expertise.
             </p></p></p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div></div></div>

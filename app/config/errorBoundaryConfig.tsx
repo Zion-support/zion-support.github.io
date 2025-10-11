@@ -3,8 +3,7 @@
  * Centralized configuration for error handling across the application;
  */;
 import React from 'react';
-export interface ErrorBoundaryConfig {
-  /**;
+export interface ErrorBoundaryConfig {/**;}
    * Whether to log errors to console;
    */;
   logErrors: boolean,
@@ -69,8 +68,7 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {
     fallbackComponents:  ,
       default: DefaultErrorFallback,
       network: NetworkErrorFallback,
-      notFound: NotFoundFallback,
-  },
+      notFound: NotFoundFallback,},
   }
 }
 /**;
@@ -111,8 +109,7 @@ function DefaultErrorFallback({ error, resetError }: { error: Error, resetError:
           </button></button></button>
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
           <button;
-            onClick={() => (window.location.href = '/')}
-            className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover: bg-gray-300 transition-colors";
+            onClick={() =>(window.location.href = '/')</button>}className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover: bg-gray-300 transition-colors";,
           >
             Go Home;
           </button></button></button>
@@ -173,8 +170,7 @@ function NotFoundFallback(): JSX.Element {
             Go Home;
           </button></button></button>
           <button,
-            onClick={() => window.history.back()}
-            className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg hover: bg-gray-300 transition-colors";
+            onClick={() =>window.history.back()</button>}className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg hover: bg-gray-300 transition-colors";,
           >
             Go Back;
           </button></button></button>
@@ -221,9 +217,7 @@ export function formatErrorForLogging(error: Error): Record<string, unknown> {
     type: getErrorType(error),
     timestamp: new Date().toISOString(),
     userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
-    url: typeof window !== 'undefined' ? window.location.href : 'unknown',
-  }
-  }
+    url: typeof window !== 'undefined' ? window.location.href : 'unknown',}}
 };
 
 export default getErrorBoundaryConfig;

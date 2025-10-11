@@ -12,20 +12,14 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       icon: Shield,
       title: 'Secure Blockchain Integration',
-      description: 'Advanced blockchain technology integration with enterprise-grade security'
-    },
-    {
-      icon: Zap,
+      description: 'Advanced blockchain technology integration with enterprise-grade security',},
+    {icon: Zap,
       title: 'High Performance',
-      description: 'Lightning-fast blockchain transactions and smart contract execution'
-    },
-    {
-      icon: Brain,
+      description: 'Lightning-fast blockchain transactions and smart contract execution',},
+    {icon: Brain,
       title: 'AI-Powered Solutions',
-      description: 'Intelligent blockchain solutions powered by advanced AI technology'
-    },
-    {
-      icon: Globe,
+      description: 'Intelligent blockchain solutions powered by advanced AI technology',},
+    {icon: Globe,
       title: 'Multi-Chain Support',
       description: 'Support for multiple blockchain networks and protocols';
     };
@@ -51,6 +45,7 @@ const BlockchainIntegrationServicesPage: React.FC = () => {
 
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced blockchain integration solutions. 
+>>>>>>> origin/main
             Powered by cutting-edge AI technology and industry expertise.
           </p></p></p>
       {/* Features Section */}

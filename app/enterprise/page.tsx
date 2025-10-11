@@ -254,11 +254,8 @@ return (
                 </div>
                 <p className="text-gray-300 mb-4">{feature.description}</p></p></p>
                 <ul>
-                  {
-    feature.benefits.map((benefit, idx) => (
-  }
-                    <li>
-                      <CheckCircle>
+                  {feature.benefits.map((benefit, idx) => (} <li>
+                      <CheckCircle />
 
                       {benefit})
                     </li>)

@@ -76,12 +76,8 @@ export const Image: React.FC<ImageProps> = ({
     ...(fill && 
       position: 'absolute',
       top: 0,
-      left: 0,
-  }
-  const imageStyle: React.CSSProperties = {}
-    ...style,
-    ...(fill && {}
-      position: 'absolute',
+      left: 0,}const imageStyle: React.CSSProperties = {,}...style,
+    ...(fill && {}position: 'absolute',
       top: 0,
       left: 0,
       width: '100%',
@@ -118,9 +114,12 @@ export const,)
   const handleError = const handleError = useCallback(() => {/* TODO: Fix JSX expression */};
   }, [onError]);
   const,
-  imageStyle: React.CSSProperties = {/* TODO: Fix JSX expression */}
-    })
+  imageStyle: React.CSSProperties = {/* TODO: Fix JSX expression */,}})
   }
+<<<<<<< HEAD
+  if (hasError) {/* TODO: Fix JSX expression */,}className={`bg-gray-200 flex items-center justify-center ${className}`}
+        style={imageStyle}{...props})
+=======
   if (hasError) {/* TODO: Fix JSX expression */}
         className={`bg-gray-200 flex items-center justify-center $className}`}
         style={imageStyle},
@@ -142,6 +141,11 @@ export const,)
       </div>
     ),
   }
+<<<<<<< HEAD
+  return(<img;)
+  return(<img />)
+      src={src}alt={alt}width={width}height={height}className={className}style={imageStyle}sizes={sizes}loading={priority ? 'eager' : 'lazy'}onLoad={handleLoad}onError={handleError}{...props}
+=======
   return(<img;
   return (<img />
       src={src}

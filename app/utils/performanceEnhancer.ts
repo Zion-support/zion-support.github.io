@@ -51,8 +51,7 @@ export const throttle = <T extends (...args: unknown[]) => unknown>(,
   }
 }
 // Performance monitoring utilities;
-export class PerformanceMonitor {
-    private static instance: PerformanceMonitor,
+export class PerformanceMonitor {private static instance: PerformanceMonitor,}
   private metrics: Map<string, number> = new Map();
   private observers: PerformanceObserver[] = [],
   static getInstance(): PerformanceMonitor ,
@@ -61,16 +60,15 @@ export class PerformanceMonitor {
   }
 export class PerformanceMonitor {}
   private static instance: PerformanceMonitor,
+>>>>>>> origin/main
   private metrics: Map<string, number> = new Map();
   private observers: PerformanceObserver[] = [],
-  static getInstance(): PerformanceMonitor {}
-    if (!PerformanceMonitor.instance) {}
-      PerformanceMonitor.instance = new PerformanceMonitor();
+  static getInstance(): PerformanceMonitor {}}if (!PerformanceMonitor.instance) {}PerformanceMonitor.instance = new PerformanceMonitor();
     }
     return PerformanceMonitor.instance;
   }
   // Track component render time;
-  trackRender(componentName: string, renderTime: number) {
+  trackRender(componentName: string, renderTime: number) {,
     ,
   // Track component render, time;
   }
@@ -80,7 +78,7 @@ export class PerformanceMonitor {}
       }
   }
   // Track memory usage;
-  trackMemory(componentName: string) {
+  trackMemory(componentName: string) {,
     ,
     if ('memory' in performance) ,
   // Track memory, usage;
@@ -98,9 +96,9 @@ export const debounce = <T extends (...arg);
   wai,)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   t: number;)
+>>>>>>> origin/main
 ): ((...arg),
-  s: Parameters<T>) => void) => {/* TODO: Fix JSX expression */}
-  }
+  s: Parameters<T>) => void) => {/* TODO: Fix JSX expression */,}}
 }
 // Throttle function for performance optimization;
 export const throttle = <T extends (...arg);
@@ -112,14 +110,13 @@ export const throttle = <T extends (...arg);
   limi,)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   t: number;)
+>>>>>>> origin/main
 ): ((...arg),
-  s: Parameters<T>) => void) => {/* TODO: Fix JSX expression */}
-    }
+  s: Parameters<T>) => void) => {/* TODO: Fix JSX expression */,}}
   }
 }
 // Performance monitoring utilities;
-export class PerformanceMonitor {/* TODO: Fix JSX expression */}
-    }
+export class PerformanceMonitor {/* TODO: Fix JSX expression */,}}}
     return PerformanceMonitor.instance;
   }
   // Track component render time;
@@ -129,31 +126,23 @@ export class PerformanceMonitor {/* TODO: Fix JSX expression */}
   trackRender(componentNam,)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   e: string, renderTim);
-  e: number) {/* TODO: Fix JSX expression */}
-    this.metrics.set(`${componentName}_render`, renderTime);
-if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}`;
+  e: number) {/* TODO: Fix JSX expression */,}this.metrics.set(`${componentName)}_render`, renderTime);
+if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */,}`;
       }ms`);
 }
   }
   // Track memory usage;
   trackMemory(componentNam);
-  e: string) {/* TODO: Fix JSX expression */}
-  e: number } }).memory;
-      if (memory) {/* TODO: Fix JSX expression */}`;
-        this.metrics.set(`${componentName}_memory`, memory.usedJSHeapSize);
+  e: string) {/* TODO: Fix JSX expression */,}e: number ,} }).memory;
+      if (memory) {/* TODO: Fix JSX expression */,}`;
+        this.metrics.set(`${componentName)}_memory`, memory.usedJSHeapSize);
       }
     }
   }
   // Get performance metrics;
-  getMetrics() {
-    return Object.fromEntries(this.metrics)
-  }
-  }
+  getMetrics() {return Object.fromEntries(this.metrics)}}
   // Clear metrics;
-  clearMetrics() {
-    this.metrics.clear()
-  }
-  }
+  clearMetrics() {this.metrics.clear()}}
   // Monitor long tasks;
   startLongTaskMonitoring() {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)
@@ -163,14 +152,18 @@ if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}`
   getMetrics() {/* TODO: Fix JSX expression */}
   }
   // Clear metrics;
-  clearMetrics() {/* TODO: Fix JSX expression */}
-  }
+  clearMetrics() {/* TODO: Fix JSX expression */,}}
   // Monitor long tasks;
+<<<<<<< HEAD
+  startLongTaskMonitoring() {/* TODO: Fix JSX expression */,}}
+const observer = new PerformanceObserver((list) => {list.getEntries().forEach((entry) => {
+=======
   startLongTaskMonitoring() {/* TODO: Fix JSX expression */}
     }
 <<<<<<< HEAD
 const observer = const observer = new PerformanceObserver((list) => {;
     list.getEntries().forEach((entry) => {;
+>>>>>>> origin/main
         if (entry.duration > 50) { // Tasks longer than 50ms;
   // Get performance metrics
 =======
@@ -184,13 +177,10 @@ const observer = new PerformanceObserver((list) => {
     return Object.fromEntries(this.metrics);
   }
   // Clear metrics;
-  clearMetrics() {}
-    this.metrics.clear();
+  clearMetrics() {}this.metrics.clear();
   }
   // Monitor long tasks;
-  startLongTaskMonitoring() {}
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {}
-      return;
+  startLongTaskMonitoring() {}if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {}return;
     }
 <<<<<<< HEAD
     const observer = const observer = const observer = new PerformanceObserver((list) => {}
@@ -203,7 +193,7 @@ const observer = new PerformanceObserver((list) => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
           }ms`);
         }
-observer.observe({ entryTypes: ['longtask'] })
+observer.observe({entryTypes: ['longtask'] ,)})
     this.observers.push(observer);
   }
   // Cleanup observers;
@@ -228,21 +218,21 @@ export const usePerformanceMonitor = (;) => {
 export const usePerformanceMonitor = const usePerformanceMonitor = (componentName: string) => {};
   const renderStartTime = useRef<number>(0);
   const monitor = PerformanceMonitor.getInstance();
-  useEffect(() => {}
-    renderStartTime.current = performance.now();
-    return () => {
-    ,
-  }
-    return () => {}
-      const renderTime = performance.now() - renderStartTime.current;
+  useEffect(() => {}renderStartTime.current = performance.now();
+    return () => {,}return () => {}const renderTime = performance.now() - renderStartTime.current;
       monitor.trackRender(componentName, renderTime);
       monitor.trackMemory(componentName);
     }
   }, [componentName, monitor]);
+<<<<<<< HEAD
+  return {}}trackRender: (fn: () => void) => {,}const start = performance.now();
+      fn();,;
+=======
   return {}
     trackRender: (fn: () => void) => {}
       const start = performance.now();
       fn();,
+>>>>>>> origin/main
       const duration = performance.now() - start;
         if (entry.duration > 50) {
     // Tasks longer than, 50ms;
@@ -250,21 +240,19 @@ export const usePerformanceMonitor = const usePerformanceMonitor = (componentNam
         }
       })
     })
-    observer.observe({/* TODO: Fix JSX expression */})
-  s: ['longtask'] })
+    observer.observe({/* TODO: Fix JSX expression */,)})
+  s: ['longtask'] ,})
     this.observers.push(observer);
   }
   // Cleanup observers;
-  cleanup() {/* TODO: Fix JSX expression */}
-  }
+  cleanup() {/* TODO: Fix JSX expression */,}}
 }
 // React hook for performance monitoring;
 export const usePerformanceMonitor = (componentNam);
-  e: string) => {/* TODO: Fix JSX expression */}
-    }
+  e: string) => {/* TODO: Fix JSX expression */,}}
   }, [componentName, monitor]);
-  return {/* TODO: Fix JSX expression */}`;
-      monitor.trackRender(`${componentName}_function`, duration);
+  return {/* TODO: Fix JSX expression */,}}`;
+      monitor.trackRender(`${componentName)}_function`, duration);
     }
   }
 }
@@ -310,11 +298,11 @@ export const preloadCriticalResources = const preloadCriticalResources = () => {
     '/css/critical.css'];
   criticalResources.forEach((resource) => {}];
     const link = document.createElement('link');
+>>>>>>> origin/main
     link.rel = 'preload';
     link.href = resource;
     link.as = resource.endsWith('.woff2') ? 'font' : 'style';
-    if (resource.endsWith('.woff2')) {}
-      link.crossOrigin = 'anonymous';
+    if (resource.endsWith('.woff2')) {}link.crossOrigin = 'anonymous';
 // Preload critical resources;
 export const preloadCriticalResources = const preloadCriticalResources = const preloadCriticalResources = () => {/* TODO: Fix JSX expression */};
     };
@@ -325,6 +313,12 @@ export const preloadCriticalResources = const preloadCriticalResources = const p
 export const optimizeScrollPerformance = const optimizeScrollPerformance = ();
   if (typeof window === 'undefined') return;
   let ticking = false;
+<<<<<<< HEAD
+  const updateScrollPosition = () => {// Update scroll position indicators;) => {
+  return($3;)
+  )}// Optimize scroll performance;}
+export const optimizeScrollPerformance = () => {}if (typeof window === 'undefined') return;
+=======
   const updateScrollPosition = () => {;
     // Update scroll position indicators;) => {
   return ()
@@ -332,6 +326,7 @@ export const optimizeScrollPerformance = const optimizeScrollPerformance = ();
 =======
 export const optimizeScrollPerformance = (;)
   if (typeof window === 'undefined') return;
+>>>>>>> origin/main
   let ticking = false;
   const updateScrollPosition = () => {;
     // Update scroll position indicators;) => 
@@ -346,7 +341,7 @@ export const optimizeScrollPerformance = const optimizeScrollPerformance = () =>
   const updateScrollPosition = const updateScrollPosition = () => {};
     // Update scroll position indicators;
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    document.documentElement.style.setProperty('--scroll-top', `${scrollTop}px`);
+    document.documentElement.style.setProperty('--scroll-top', `${scrollTop)}px`);
     ticking = false;
   }
   const requestTick = const requestTick = const requestTick = () => {};
@@ -375,9 +370,9 @@ export const optimizeScrollPerformance = const optimizeScrollPerformance = () =>
   // Track Core Web Vitals;}
   const trackCLS = const trackCLS = () => {};
     let clsValue = 0;
+>>>>>>> origin/main
     let clsEntries: PerformanceEntry[] = [],
-    interface LayoutShiftEntry extends PerformanceEntry {}
-      hadRecentInput?: boolean;
+    interface LayoutShiftEntry extends PerformanceEntry {}}hadRecentInput?: boolean;
       value: number,
     }
     const observer = const observer = const observer = new PerformanceObserver((list) => {};
@@ -388,9 +383,8 @@ export const optimizeScrollPerformance = const optimizeScrollPerformance = () =>
           clsValue += layoutEntry.value;
         }
       }
-observer.observe({ entryTypes: ['layout-shift'] })
-    return () => {}
-      observer.disconnect();
+observer.observe({entryTypes: ['layout-shift'] ,)})
+    return () => {}observer.disconnect();
       return clsValue;
     }
   }
@@ -411,16 +405,15 @@ observer.observe({ entryTypes: ['largest-contentful-paint'] });
       for (const entry of list.getEntries()) {};
         const fidEntry = entry as FirstInputEntry;
         const fid = fidEntry.processingStart - entry.startTime;
-        if (process.env['NODE_ENV'] === 'development') {}
-          }
+        if (process.env['NODE_ENV'] === 'development') {}}
       }
-observer.observe({ entryTypes: ['first-input'] })
+observer.observe({entryTypes: ['first-input'] ,)})
     return () => observer.disconnect();
   }
-  window.addEventListener('scroll', requestTick, { passive: true })
+  window.addEventListener('scroll', requestTick, {passive: true ,)})
 // Optimize scroll performance;
-export const optimizeScrollPerformance = () => {/* TODO: Fix JSX expression */}`;
-    document.documentElement.style.setProperty('--scroll-top', `${scrollTop}px`);
+export const optimizeScrollPerformance = () => {/* TODO: Fix JSX expression */,}`;
+    document.documentElement.style.setProperty('--scroll-top', `${scrollTop)}px`);
     ticking = false;
   }
   const requestTick = const requestTick = const requestTick = () => {/* TODO: Fix JSX expression */}
@@ -433,13 +426,11 @@ export const optimizeScrollPerformance = () => {/* TODO: Fix JSX expression */}`
         }
       }
     })
-    observer.observe({/* TODO: Fix JSX expression */})
-  s: ['layout-shift'] })
-    return () => {/* TODO: Fix JSX expression */}
-    }
+    observer.observe({/* TODO: Fix JSX expression */,)})
+  s: ['layout-shift'] ,})
+    return () => {/* TODO: Fix JSX expression */,}}
   }
-  const trackLCP = () => {/* TODO: Fix JSX expression */}
-          }
+  const trackLCP = () => {/* TODO: Fix JSX expression */,}}
       }
     })
     observer.observe({/* TODO: Fix JSX expression */});
@@ -456,14 +447,13 @@ export const optimizeScrollPerformance = () => {/* TODO: Fix JSX expression */}`
   s: ['first-input'] });
     return () => observer.disconnect();
   }
-  window.addEventListener('scroll', requestTick, {/* TODO: Fix JSX expression */})
-  e: true })
+  window.addEventListener('scroll', requestTick, {/* TODO: Fix JSX expression */,)})
+  e: true ,})
   // Start tracking;
   const cleanupCLS = trackCLS();
   const cleanupLCP = trackLCP();
   const cleanupFID = trackFID();
-  return () => {}
-    cleanupCLS();
+  return () => {}cleanupCLS();
     cleanupLCP();
     cleanupFID();
   }
@@ -543,17 +533,23 @@ export const collectPerformanceMetrics = const collectPerformanceMetrics = () =>
   if (typeof window === 'undefined') return null;
   const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
   const paint = performance.getEntriesByType('paint');
-  return {}
-    navigation: {}
-// domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+  return {}}navigation: {,}// domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
 // loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
 // totalTime: navigation.loadEventEnd - navigation.fetchStart,
+<<<<<<< HEAD
+    },;
+    paint: {,}firstPaint: paint.find((entry) => entry.name === 'first-paint')?.startTime || 0,
+      firstContentfulPaint: paint.find((entry) => entry.name === 'first-contentful-paint')?.startTime || 0,
+    },;
+    memory: getMemoryUsage(),}
+=======
     },
     paint: {}
       firstPaint: paint.find((entry) => entry.name === 'first-paint')?.startTime || 0,
       firstContentfulPaint: paint.find((entry) => entry.name === 'first-contentful-paint')?.startTime || 0,
     },
     memory: getMemoryUsage()}
+>>>>>>> origin/main
 }
 // Initialize performance enhancements;
 export const initializePerformanceEnhancements = (;) => {
@@ -575,9 +571,7 @@ export const initializePerformanceEnhancements = const initializePerformanceEnha
   optimizeScrollPerformance();
   // Collect performance metrics;
   const metrics = collectPerformanceMetrics();
-  if (metrics && (process.env['NODE_ENV'] === 'development' || import.meta.env.DEV)) {}
-  return () => {/* TODO: Fix JSX expression */}
-  }
+  if (metrics && (process.env['NODE_ENV'] === 'development' || import.meta.env.DEV)) {}return () => {/* TODO: Fix JSX expression */,}}
 }
 // Memory usage monitoring;
 export const getMemoryUsage = const getMemoryUsage = const getMemoryUsage = () => {/* TODO: Fix JSX expression */}
@@ -592,6 +586,7 @@ export const collectPerformanceMetrics = const collectPerformanceMetrics = const
     pain,
   t: {/* TODO: Fix JSX expression */},
     memor,
+>>>>>>> origin/main
   y: getMemoryUsage(),
   };
 };
@@ -599,3 +594,4 @@ export const collectPerformanceMetrics = const collectPerformanceMetrics = const
 export const initializePerformanceEnhancements = const initializePerformanceEnhancements = const initializePerformanceEnhancements = () => {/* TODO: Fix JSX expression */};
     };
 }`;
+>>>>>>> origin/main

@@ -1,8 +1,7 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import {
-    CheckSquare,
+import {Helmet}}from 'react-helmet-async';
+import {CheckSquare,}
   Users,
   CheckCircle,
   BarChart,
@@ -53,6 +52,10 @@ const ProjectManagementProPage: React.FC = () => {
     {
       icon: Zap,
       title: 'Automation',
+<<<<<<< HEAD
+      description: 'Automate repetitive tasks and workflows to improve efficiency and productivity.',}}
+  ]
+=======
       description: 'Automate repetitive tasks and workflows to improve efficiency and productivity.'
   };
     };
@@ -77,6 +80,7 @@ return ()
 return (
     <>
       <Helmet>
+>>>>>>> origin/main
         <title>Project Management Pro - Zion Tech Group | Project Management Platform</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />

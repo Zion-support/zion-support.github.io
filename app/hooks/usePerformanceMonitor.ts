@@ -1,8 +1,9 @@
 'use client';
-import { useEffect } from 'react';
+import {useEffect}}from 'react';
 
 export const usePerformanceMonitor = const usePerformanceMonitor = () => {;
   useEffect(() => {;
+>>>>>>> origin/main
     if (typeof window === 'undefined') return;
 
 <<<<<<< HEAD
@@ -19,9 +20,7 @@ export const usePerformanceMonitor = const usePerformanceMonitor = () => {;
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         if (navigation) 
           const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
-          console.log('Page load time:', loadTime);
-        }
-      }
+          console.log('Page load time:', loadTime);}}
     }
 
     // Run monitoring after page load;
@@ -36,3 +35,4 @@ export const usePerformanceMonitor = const usePerformanceMonitor = () => {;
     }
   }, []);
 }
+>>>>>>> origin/main

@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import {Helmet}}from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -21,6 +21,7 @@ const AIContentWriterPage: React.FC = () => {
     },
     {
       title: 'Content Optimization',
+>>>>>>> origin/main
       description: 'Automatically optimize content for SEO, readability, and engagement with intelligent suggestions.',
       benefits: [''SEO optimization', 'Readability scoring', 'Engagement metrics', 'A/B testing'']
     },

@@ -1,9 +1,9 @@
 'use client';
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Brain, Zap, Eye, Mic, Target, BarChart, Shield, Clock, Users, ArrowRight, Star, TrendingUp, Lock, FileText, DollarSign, CheckCircle, Phone, Mail, MapPin, Globe, Database, Settings, Calendar, Award, Rocket, MessageSquare, CheckSquare, Cpu } from 'lucide-react';
+import React, {useState, useEffect}from 'react';
+import {Helmet}}from 'react-helmet-async';
+import {Brain, Zap, Eye, Mic, Target, BarChart, Shield, Clock, Users, ArrowRight, Star, TrendingUp, Lock, FileText, DollarSign, CheckCircle, Phone, Mail, MapPin, Globe, Database, Settings, Calendar, Award, Rocket, MessageSquare, CheckSquare, Cpu}}from 'lucide-react';
 
-const AINeuralInterface: React.FC = () => {
+const AINeuralInterface: React.FC = () => {,
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => 
@@ -25,6 +25,7 @@ const AINeuralInterface: React.FC = () => {
     },
     {
       icon: Eye,
+>>>>>>> origin/main
       title: 'Visual Cortex Interface',
       description: 'Direct interface with visual cortex for enhanced vision and augmented reality',
       benefits: [''Enhanced visual processing', 'AR/VR integration', 'Visual pattern recognition'']
@@ -48,7 +49,7 @@ const AINeuralInterface: React.FC = () => {
       price: '$2,999',
       period: '/month',
       description: 'Perfect for academic research and medical studies',
-      features: [
+      features: [,
         'Basic neural signal processing',
         'Standard interface protocols',
         'Research data export',
@@ -63,7 +64,7 @@ const AINeuralInterface: React.FC = () => {
       price: '$7,999',
       period: '/month',
       description: 'Ideal for medical applications and clinical trials',
-      features: [
+      features: [,
         'Advanced neural processing',
         'Medical-grade interfaces',
         'Real-time monitoring',
@@ -80,7 +81,7 @@ const AINeuralInterface: React.FC = () => {
       price: '$19,999',
       period: '/month',
       description: 'For large-scale neural interface deployments',
-      features: [
+      features: [,
         'Full neural interface suite',
         'Custom interface development',
         '24/7 dedicated support',
@@ -104,22 +105,16 @@ const AINeuralInterface: React.FC = () => {
       title: 'Medical Rehabilitation',
       description: 'Neural interfaces for stroke recovery and motor function restoration',
       icon: Brain,
-      results: '85% improvement in motor function'
-    },
-    {
-      title: 'Prosthetic Control',
+      results: '85% improvement in motor function',},
+    {title: 'Prosthetic Control',
       description: 'Advanced prosthetic control using neural signals for natural movement',
       icon: Target,
-      results: 'Natural prosthetic control'
-    },
-    {
-      title: 'Cognitive Enhancement',
+      results: 'Natural prosthetic control',},
+    {title: 'Cognitive Enhancement',
       description: 'Neural interfaces for memory enhancement and cognitive augmentation',
       icon: Zap,
-      results: '40% cognitive improvement'
-    },
-    {
-      title: 'Communication Aid',
+      results: '40% cognitive improvement',},
+    {title: 'Communication Aid',
       description: 'Neural interfaces for communication assistance in locked-in syndrome',
       icon: MessageSquare,
 <<<<<<< HEAD
@@ -145,14 +140,15 @@ const AINeuralInterface: React.FC = () => {
   return (
     <>
       <Helmet>
+>>>>>>> origin/main
         <title>AI Neural Interface - Advanced Brain-Computer Interface | Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered neural interface technology for medical rehabilitation, prosthetic control, and cognitive enhancement. Advanced brain-computer interface solutions." />
         <meta name="keywords" content="neural interface, brain-computer interface, BCI, neural signal processing, prosthetic control, medical AI, cognitive enhancement" />
-        <meta property="og:title" content="AI Neural Interface - Advanced Brain-Computer Interface" />
+        <meta property="og: title" content="AI Neural Interface - Advanced Brain-Computer Interface" />,
         <meta property="og:description" content="Revolutionary AI-powered neural interface technology for medical rehabilitation, prosthetic control, and cognitive enhancement." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-neural-interface" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-neural-interface" />
+        <meta property="og: type" content="website" />,
+        <meta property="og: url" content="https://ziontechgroup.com/ai-neural-interface" />,
+        <link rel="canonical" href="https: //ziontechgroup.com/ai-neural-interface" />,
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">

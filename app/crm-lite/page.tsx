@@ -14,6 +14,7 @@ const benefits = const benefits = const benefits = [
     }
     }
   ];];];
+>>>>>>> origin/main
 const benefits = [
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     'Advanced AI technology integration',
@@ -34,6 +35,7 @@ return ()
 =======
 return (
           </div>
+>>>>>>> origin/main
         </div>
       </section>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3></h3></h3>

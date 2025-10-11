@@ -12,6 +12,10 @@ const CloudMigrationPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       icon: Shield,
       title: 'Secure Cloud Migration',
+<<<<<<< HEAD
+      description: 'Safe and secure migration of your applications and data to the cloud',},
+    {}];
+=======
       description: 'Safe and secure migration of your applications and data to the cloud'
     },
     {;
@@ -38,6 +42,7 @@ const CloudMigrationPage: React.FC = () => {
 
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced cloud migration solutions. 
+>>>>>>> origin/main
             Powered by cutting-edge AI technology and industry expertise.
           </p></p></p>
       {/* Features Section */}

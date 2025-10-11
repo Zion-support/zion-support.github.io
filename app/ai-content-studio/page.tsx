@@ -1,14 +1,13 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import {Helmet}}from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
       benefits: [''Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'']
     },
-    {
-      icon: BarChart,
+    {icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: [''Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics'']
@@ -32,6 +31,7 @@ import Footer from '../components/Footer';
   return (
     <>
       <Helmet>
+>>>>>>> origin/main
         <title>AI Content Studio - Zion Tech Group</title>
         <meta name="description" content="Professional content studio powered by AI technology." />
         <meta name="keywords" content="AI content studio, artificial intelligence, content creation, AI solutions, intelligent design" />
@@ -237,3 +237,22 @@ import Footer from '../components/Footer';
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+      <Footer />
+    </React.Fragment>
+  ),
+};
+
+export default AiContentStudioPage;
+  </button>
+  </button>
+  </p>
+  </p>
+  </button>
+  </h2>
+  </button>
+  </button>
+  </h1>
+  </main>
+=======
+>>>>>>> origin/main

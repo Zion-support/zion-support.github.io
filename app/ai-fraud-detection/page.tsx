@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Shield, AlertTriangle, Eye, Zap, BarChart, Lock, Users, TrendingDown, Phone } from 'lucide-react';
+import {Helmet}}from 'react-helmet-async';
+import {Shield, AlertTriangle, Eye, Zap, BarChart, Lock, Users, TrendingDown, Phone}}from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
@@ -47,6 +47,11 @@ const benefits = const benefits = const benefits = [
     'Improve decision-making with AI insights',;
     'Scale operations without proportional staff increases',;
     'Gain competitive advantage with advanced technology';
+<<<<<<< HEAD
+  ]
+return(<>)
+      <Helmet />
+=======
   ];
 <<<<<<< HEAD
 return ()
@@ -68,6 +73,7 @@ return ()
 return (
     <>
       <Helmet>
+>>>>>>> origin/main
         <title>Ai Fraud Detection - Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />

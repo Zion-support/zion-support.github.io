@@ -32,9 +32,7 @@ export interface AppConfig {
   security: {,
       enableCSP: boolean,
     enableHSTS: boolean,
-    enableXSSProtection: boolean,
-  }
-  }
+    enableXSSProtection: boolean,}}
 }
 const config: AppConfig = {,
       app:  ,
@@ -63,14 +61,13 @@ const config: AppConfig = {,
   security: {,
       enableCSP: true,
     enableHSTS: true,
-    enableXSSProtection: true,
-  },
+    enableXSSProtection: true,},
 }
 /**;
  * Get configuration value by key path;
  * @example getConfig('app.name') => 'Zion Tech Group';
  */;
-export function getConfig<T = unknown>(keyPath: string): T {
+export function getConfig<T = unknown>(keyPath: string): T {,}
     let value: unknown = config,
 for (const key of keys) 
     if (value && typeof value === 'object' && key in value) 
@@ -85,10 +82,8 @@ return value as T;
 /**;
  * Check if a feature is enabled;
  */;
-export function isFeatureEnabled(feature: keyof AppConfig['features']): boolean {
-    return config.features[feature]
-  }
-}
+export function isFeatureEnabled(feature: keyof AppConfig['features']): boolean {,}
+    return config.features[feature]}}
 /**;
  * Get current environment;
  */;
@@ -99,15 +94,9 @@ export function getEnvironment(): string {
 /**;
  * Check if running in production;
  */;
-export function isProduction(): boolean {
-    return config.app.environment === 'production'
-  }
-}
+export function isProduction(): boolean {return config.app.environment === 'production'}}}
 /**;
  * Check if running in development;
  */;
-export function isDevelopment(): boolean {
-    return config.app.environment === 'development'
-  }
-}
+export function isDevelopment(): boolean {return config.app.environment === 'development'}}}
 export default config;

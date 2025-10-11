@@ -1,7 +1,6 @@
 'use client';
-import React, { Suspense, lazy } from 'react';
-interface AnalyticsProps {
-    enableGoogleAnalytics?: boolean;
+import React, {Suspense, lazy}from 'react';
+interface AnalyticsProps {enableGoogleAnalytics?: boolean;}
   enablePerformanceMonitoring?: boolean;
   enableErrorTracking?: boolean;
   enableUserBehaviorTracking?: boolean;
@@ -44,7 +43,7 @@ const initializeGoogleAnalytics = (;
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     const script = document.createElement('script');
     script.async = true;
-    script.src = 'https: //www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';
+    script.src = 'https: //www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';,
     document.head.appendChild(script)
 // Initialize gtag;
     (window as any).dataLayer = (window as any).dataLayer || [],
@@ -103,10 +102,11 @@ const initializePerformanceMonitoring = (;)
               trackEvent('web_vitals', 'CLS', (entry as any).value)
   }
             }
+>>>>>>> origin/main
           }
         }
       })
-observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] })
+observer.observe({entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'])})
 // Monitor page load time;
       window.addEventListener('load', () => {
     const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -203,14 +203,10 @@ const initializeUserBehaviorTracking = (;
 // Track time on page;
 
     const startTime = Date.now();
-    window.addEventListener('beforeunload', () => {
-    const timeOnPage = Math.round((Date.now() - startTime) / 1000);
-      trackEvent('engagement', 'time_on_page', timeOnPage)
-  }
-    })
+    window.addEventListener('beforeunload', () => {const timeOnPage = Math.round((Date.now() - startTime) / 1000);
+      trackEvent('engagement', 'time_on_page', timeOnPage)}})
 // Track clicks on important elements;
-    document.addEventListener('click', (event) => {
-    const target = event.target as HTMLElement;
+    document.addEventListener('click', (event) => {const target = event.target as HTMLElement;
       const tagName = target.tagName.toLowerCase();
 if (tagName === 'a') 
 
@@ -285,6 +281,10 @@ declare global {
 
 export default Analytics;
 // Analytics Provider for context;
+<<<<<<< HEAD
+export const AnalyticsProvider: React.FC<{children: React.ReactNode ,}> = ({children}) => {return(<>)
+      <Analytics />}{children}
+=======
 export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 <<<<<<< HEAD
     return ()

@@ -1,9 +1,9 @@
 'use client';
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Users, MessageCircle, Calendar, Star, ArrowRight, ExternalLink, Mail, Phone, MapPin, Clock, CheckCircle, Award, TrendingUp, Heart } from 'lucide-react';
+import React, {useState}from 'react';
+import {Helmet}}from 'react-helmet-async';
+import {Users, MessageCircle, Calendar, Star, ArrowRight, ExternalLink, Mail, Phone, MapPin, Clock, CheckCircle, Award, TrendingUp, Heart}}from 'lucide-react';
 
-const CommunityPage: React.FC = () => {
+const CommunityPage: React.FC = () => {,
   const [activeTab, setActiveTab] = useState('overview');
 
 <<<<<<< HEAD
@@ -25,6 +25,7 @@ const CommunityPage: React.FC = () => {
     {
       icon: Star, value: '4.9', label: 'Average Rating' }
   ];];];
+>>>>>>> origin/main
   const events = [
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     {
@@ -33,18 +34,14 @@ const CommunityPage: React.FC = () => {
       time: '2:00 PM EST',
       type: 'Workshop',
       attendees: 150,
-      description: 'Learn advanced AI development techniques and best practices'
-    },
-    {
-      title: 'Cloud Infrastructure Meetup',
+      description: 'Learn advanced AI development techniques and best practices',},
+    {title: 'Cloud Infrastructure Meetup',
       date: '2024-02-20',
       time: '6:00 PM EST',
       type: 'Meetup',
       attendees: 75,
-      description: 'Discuss cloud architecture and deployment strategies'
-    },
-    {
-      title: 'SaaS Business Growth Panel',
+      description: 'Discuss cloud architecture and deployment strategies',},
+    {title: 'SaaS Business Growth Panel',
       date: '2024-02-25',
       time: '3:00 PM EST',
       type: 'Panel',
@@ -83,25 +80,20 @@ const CommunityPage: React.FC = () => {
 =======
     }
   ];];];
+>>>>>>> origin/main
   const benefits = [
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     {
       icon: Users,
       title: 'Network with Peers',
-      description: 'Connect with like-minded developers and entrepreneurs'
-    },
-    {
-      icon: MessageCircle,
+      description: 'Connect with like-minded developers and entrepreneurs',},
+    {icon: MessageCircle,
       title: 'Expert Support',
-      description: 'Get help from our team of experts and community members'
-    },
-    {
-      icon: Calendar,
+      description: 'Get help from our team of experts and community members',},
+    {icon: Calendar,
       title: 'Exclusive Events',
-      description: 'Access to workshops, webinars, and networking events'
-    },
-    {
-      icon: Award,
+      description: 'Access to workshops, webinars, and networking events'},
+    {icon: Award,
       title: 'Recognition',
       description: 'Showcase your projects and get community recognition';
     };
@@ -112,10 +104,11 @@ const CommunityPage: React.FC = () => {
   return (
     <>
       <Helmet>
+>>>>>>> origin/main
         <title>Community - Zion Tech Group</title>
         <meta name="description" content="Join the Zion Tech Group community. Connect with developers, entrepreneurs, and tech enthusiasts. Learn, share, and grow together." />
         <meta name="keywords" content="community, developers, tech community, networking, events, forums, AI community" />
-        <link rel="canonical" href="https://ziontechgroup.com/community" />
+        <link rel="canonical" href="https: //ziontechgroup.com/community" />,
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -130,8 +123,7 @@ const CommunityPage: React.FC = () => {
                 Community;
               </h1></h1></h1>
             </div>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Join our vibrant community of developers, entrepreneurs, and tech enthusiasts. 
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Join our vibrant community of developers, entrepreneurs, and tech enthusiasts.</p>
               Connect, learn, and grow together.
             </p></p></p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -189,8 +181,7 @@ const CommunityPage: React.FC = () => {
                   className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 $
                     activeTab === tab.id;
                       ? 'bg-cyan-500 text-white'
-                      : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
-                  }`}
+                      : 'bg-slate-800 text-gray-300 hover: bg-slate-700',}`}
                 >
                   {tab.name}
                 </button></button></button>
@@ -198,6 +189,9 @@ const CommunityPage: React.FC = () => {
             </div>
           </div>
 
+<<<<<<< HEAD
+          {/* Overview Tab */}{activeTab === 'overview' && (
+=======
           {/* Overview Tab */},
 <<<<<<< HEAD
     {activeTab === 'overview' && ()
@@ -207,6 +201,7 @@ const CommunityPage: React.FC = () => {
                   {events.map((event, index) => ()
 =======
     {activeTab === 'overview' && (
+>>>>>>> origin/main
             <div className="space-y-12">
               </div></div><div className="cyber-card-enhanced p-8">
                 </div></div><h2 className="text-2xl font-bold text-white mb-6">Welcome to Our Community</h2></h2></h2>
@@ -265,6 +260,7 @@ const CommunityPage: React.FC = () => {
           )},
     {/* Events Tab */},
     {activeTab === 'events' && (
+>>>>>>> origin/main
             <div className="space-y-8">
               </div></div><div className="cyber-card-enhanced p-8">
                 </div></div><h2 className="text-2xl font-bold text-white mb-6">Upcoming Events</h2></h2></h2>)
@@ -308,6 +304,11 @@ const CommunityPage: React.FC = () => {
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
+          )}
+
+          {/* Forums Tab */}{activeTab === 'forums' && (
+=======
           )},
     {/* Forums Tab */},
 <<<<<<< HEAD
@@ -315,6 +316,7 @@ const CommunityPage: React.FC = () => {
                   {forums.map((forum, index) => ()
 =======
     {activeTab === 'forums' && (
+>>>>>>> origin/main
             <div className="space-y-8">
               </div></div><div className="cyber-card-enhanced p-8">
                 </div></div><h2 className="text-2xl font-bold text-white mb-6">Community Forums</h2></h2></h2>)
@@ -347,6 +349,11 @@ const CommunityPage: React.FC = () => {
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
+          )}
+
+          {/* Benefits Tab */}{activeTab === 'benefits' && (
+=======
           )},
     {/* Benefits Tab */},
 <<<<<<< HEAD
@@ -354,6 +361,7 @@ const CommunityPage: React.FC = () => {
                   {benefits.map((benefit, index) => ()
 =======
     {activeTab === 'benefits' && (
+>>>>>>> origin/main
             <div className="space-y-8">
               </div></div><div className="cyber-card-enhanced p-8">
                 </div></div><h2 className="text-2xl font-bold text-white mb-6">Community Benefits</h2></h2></h2>)
@@ -375,6 +383,11 @@ const CommunityPage: React.FC = () => {
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
+          )}
+
+          {/* Join Community CTA */} <div id="join" className="cyber-card-enhanced p-8 mt-16 text-center">
+=======
           )},
     {/* Join Community CTA */}
 <<<<<<< HEAD

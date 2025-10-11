@@ -8,34 +8,24 @@ const FiveGImplementationPage: React.FC = () => {
       icon: Wifi,
       title: '5G Network Design',
       description: 'Complete 5G network design and implementation with optimal coverage and performance.',
-      benefits: ['Network planning', 'Coverage optimization', 'Performance tuning']
-    },
-    {
-      icon: Zap,
+      benefits: ['Network planning', 'Coverage optimization', 'Performance tuning']},
+    {icon: Zap,
       title: 'Ultra-Low Latency',
       description: 'Ultra-low latency 5G networks for real-time applications and mission-critical operations.',
-      benefits: ['< 1 ms latency', 'Real-time apps', 'Mission critical']
-    },
-    {
-      icon: Clock,
+      benefits: ['< 1 ms latency', 'Real-time apps', 'Mission critical']},
+    {icon: Clock,
       title: '24/7 Network Monitoring',
       description: 'Continuous monitoring of 5G network performance with real-time analytics and alerts.',
-      benefits: ['Network monitoring', 'Performance analytics', 'Proactive maintenance']
-    },
-    {
-      icon: Users,
+      benefits: ['Network monitoring', 'Performance analytics', 'Proactive maintenance']},
+    {icon: Users,
       title: 'Scalable Infrastructure',
       description: 'Scalable 5G infrastructure that grows with your business needs and user demands.',
-      benefits: ['Auto-scaling', 'Capacity planning', 'Future-proof design']
-    },
-    {
-      icon: Shield,
+      benefits: ['Auto-scaling', 'Capacity planning', 'Future-proof design']},
+    {icon: Shield,
       title: 'Enhanced Security',
       description: 'Advanced encryption and security protocols for enterprise-grade protection',
-      benefits: ['End-to-end encryption', 'Security protocols', 'Threat detection']
-    },
-    {
-      icon: BarChart,
+      benefits: ['End-to-end encryption', 'Security protocols', 'Threat detection']},
+    {icon: BarChart,
       title: 'Performance Analytics',
       description: 'Advanced analytics and reporting for 5G network performance and optimization.',
 <<<<<<< HEAD
@@ -55,6 +45,7 @@ const FiveGImplementationPage: React.FC = () => {
   return (
     <>
       <Helmet>
+>>>>>>> origin/main
         <title>5G Network Implementation - Zion Tech Group | AI & IT Solutions</title>
         <meta name="description" content="Complete 5G network implementation services with ultra-low latency, high-speed connectivity, and advanced features for modern applications and IoT ecosystems." />
         <meta name="keywords" content="5G implementation, network design, ultra-low latency, IoT connectivity, wireless infrastructure" />

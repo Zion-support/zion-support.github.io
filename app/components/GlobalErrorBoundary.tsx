@@ -21,6 +21,7 @@ return() {features.map((feature, index) => ()
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div></div>
       <Helmet>
+>>>>>>> origin/main
         <title>GlobalErrorBoundary | Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />

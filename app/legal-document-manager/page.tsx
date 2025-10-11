@@ -31,6 +31,7 @@ const LegalDocumentManagerPage: React.FC = () => {
   return (
     <>
       <Helmet>
+>>>>>>> origin/main
         <title>Legal Document Manager | Zion Tech Group - Intelligent Legal Document Management</title>
         <meta name="description" content="Streamline legal document management with AI-powered tools. Organize, search, and analyze legal documents efficiently." />
         <meta name="keywords" content="legal document management, contract analysis, legal software, compliance tracking, legal AI" />

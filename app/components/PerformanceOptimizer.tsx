@@ -1,6 +1,6 @@
 'use client';
-import React, { useEffect, useState, useCallback } from 'react';
-import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react';
+import React, {useEffect, useState, useCallback}from 'react';
+import {Settings, Zap, CheckCircle, AlertTriangle}}from 'lucide-react';
 
 interface PerformanceOptimizerProps {
     children: React.ReactNode;
@@ -41,6 +41,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
   const optimizeMemory = const optimizeMemory = useCallback(() => {;
     if ('memory' in performance) {;
+>>>>>>> origin/main
       const memory = (performance as any).memory;
       if (memory.usedJSHeapSize > memory.jsHeapSizeLimit * 0.8) 
         // Trigger garbage collection if available;
@@ -51,6 +52,11 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     }
   }, []);
 
+<<<<<<< HEAD
+  const runOptimizations = useCallback(async () => {setIsOptimizing(true);
+    const newOptimizations: string[] = [],
+    // Optimize images;
+=======
   const runOptimizations = useCallback(async () => {;
     setIsOptimizing(true);
     const newOptimizations: string[] = []
@@ -67,7 +73,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     // Calculate performance score;
     const score = Math.floor(Math.random() * 30) + 70; // Simulate score between 70-100;
     setPerformanceScore(score);
-    newOptimizations.push(`Performance score: ${score}/100`);
+    newOptimizations.push(`Performance score: ${score,)}/100`);
 
     setOptimizations(newOptimizations);
     setIsOptimizing(false);
@@ -163,7 +169,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       // Preload critical fonts;
       const fontPreload = document.createElement('link');
       fontPreload.rel = 'preload';
-      fontPreload.href = 'https: //fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'
+      fontPreload.href = 'https: //fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
       fontPreload.as = 'style'
       document.head.appendChild(fontPreload),
 
@@ -178,6 +184,12 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       // Preload critical images;
       const criticalImages = [
         '/images/hero-bg.jpg',
+<<<<<<< HEAD
+        '/images/logo.png'
+      ]
+
+      criticalImages.forEach(src => {)
+=======
         '/images/logo.png';
       ];
       criticalImages.forEach(src => ];];)
@@ -186,8 +198,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         link.rel = 'preload';
         link.href = src;
         link.as = 'image';
-        document.head.appendChild(link)
-  })
+        document.head.appendChild(link)})
     }
 
     // Optimize images;
@@ -226,9 +237,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
             if (img.dataset.src) 
               img.src = img.dataset.src;
               img.removeAttribute('data-src');
-              observer.unobserve(img)
-  }
-          }
+              observer.unobserve(img)}}
         })
       })
 

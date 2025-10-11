@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import {Helmet}}from 'react-helmet-async';
+import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
 }
   ]
 const benefits = const benefits = const benefits = [
@@ -24,6 +24,7 @@ return() {features.map((feature, index) => ()
   ];];];
 return (
         </div>
+>>>>>>> origin/main
       </section>
       {/* Features Section */}
       <section className="py-20 px-4">

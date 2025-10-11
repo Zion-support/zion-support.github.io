@@ -12,20 +12,14 @@ const CompliancePage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       icon: FileCheck,
       title: 'Compliance Management',
-      description: 'Comprehensive compliance management solutions for various industry standards'
-    },
-    {
-      icon: Lock,
+      description: 'Comprehensive compliance management solutions for various industry standards',},
+    {icon: Lock,
       title: 'Security Compliance',
-      description: 'Ensure your systems meet the highest security and compliance standards'
-    },
-    {
-      icon: Award,
+      description: 'Ensure your systems meet the highest security and compliance standards',},
+    {icon: Award,
       title: 'Certification Support',
-      description: 'Get support for achieving and maintaining industry certifications'
-    },
-    {
-      icon: Shield,
+      description: 'Get support for achieving and maintaining industry certifications',},
+    {icon: Shield,
       title: 'Audit Readiness',
       description: 'Stay audit-ready with continuous compliance monitoring and reporting';
     };

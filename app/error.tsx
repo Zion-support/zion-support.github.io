@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import {Helmet}}from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
@@ -23,6 +23,7 @@ const ErrorPage: React.FC = () => {
     },
     {
       icon: BarChart,
+>>>>>>> origin/main
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: [''Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics'']
@@ -47,6 +48,7 @@ const ErrorPage: React.FC = () => {
   return (
     <>
       <Helmet>
+>>>>>>> origin/main
         <title>Error - Zion Tech Group</title>
         <meta name="description" content="Error page." />
         <meta name="keywords" content="error, AI solutions, IT services, business transformation" />

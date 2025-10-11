@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import {Helmet}}from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
@@ -23,6 +23,7 @@ const AiCodeSecurityAuditorPage: React.FC = () => {
     },
     {
       icon: BarChart,
+>>>>>>> origin/main
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: [''Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics'']
@@ -47,6 +48,7 @@ const AiCodeSecurityAuditorPage: React.FC = () => {
   return (
     <>
       <Helmet>
+>>>>>>> origin/main
         <title>AI Code Security Auditor - Zion Tech Group</title>
         <meta name="description" content="Advanced code security auditing powered by AI technology." />
         <meta name="keywords" content="AI code security, artificial intelligence, security auditing, AI solutions, intelligent security" />
@@ -252,3 +254,22 @@ const AiCodeSecurityAuditorPage: React.FC = () => {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+      <Footer />
+    </React.Fragment>
+  ),
+};
+
+export default AiCodeSecurityAuditorPage;
+  </button>
+  </button>
+  </p>
+  </p>
+  </button>
+  </h2>
+  </button>
+  </button>
+  </h1>
+  </main>
+=======
+>>>>>>> origin/main

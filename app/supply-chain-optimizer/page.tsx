@@ -31,6 +31,7 @@ const SupplyChainOptimizerPage: React.FC = () => {
   return (
     <>
       <Helmet>
+>>>>>>> origin/main
         <title>Supply Chain Optimizer | Zion Tech Group - AI-Powered Supply Chain Management</title>
         <meta name="description" content="Optimize your supply chain with AI-powered tools. Logistics optimization, demand forecasting, and automated processes." />
         <meta name="keywords" content="supply chain optimization, logistics management, demand forecasting, supply chain AI, inventory optimization" />

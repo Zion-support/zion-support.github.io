@@ -12,34 +12,22 @@ const BusinessAppsPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       icon: Smartphone,
       title: 'Mobile Apps',
-      description: 'Custom mobile applications for iOS and Android platforms'
-    },
-    {
-      icon: Monitor,
+      description: 'Custom mobile applications for iOS and Android platforms',},
+    {icon: Monitor,
       title: 'Web Applications',
-      description: 'Responsive web applications with modern UI/UX design'
-    },
-    {
-      icon: Cloud,
+      description: 'Responsive web applications with modern UI/UX design',},
+    {icon: Cloud,
       title: 'Cloud Integration',
-      description: 'Seamless cloud integration and deployment solutions'
-    },
-    {
-      icon: Brain,
-      description: 'Advanced AI technology to transform your business applications and improve efficiency'
-    },
-    {
-      icon: Zap,
+      description: 'Seamless cloud integration and deployment solutions',},
+    {icon: Brain,
+      description: 'Advanced AI technology to transform your business applications and improve efficiency',},
+    {icon: Zap,
       title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal business results'
-    },
-    {
-      icon: Shield,
+      description: 'Lightning-fast processing and real-time analytics for optimal business results',},
+    {icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards for your business data'
-    },
-    {
-      icon: Globe,
+      description: 'Bank-level security with encryption and compliance standards for your business data',},
+    {icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international business applications';
     };
@@ -179,6 +167,7 @@ const BusinessAppsPage: React.FC = () => {
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
               </button></button><Mail className="mr-2 h-5 w-5" />
 
+>>>>>>> origin/main
           </div>
         </div>
         <div className="text-center">

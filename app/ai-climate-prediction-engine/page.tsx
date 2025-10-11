@@ -1,9 +1,9 @@
 'use client';
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Globe, BarChart, Shield, Clock, Users, ArrowRight, Star, TrendingUp, Lock, FileText, DollarSign, CheckCircle, Phone, Mail, MapPin, Database, Settings, Calendar, Award, Eye, MessageSquare, CheckSquare, Cpu, Brain, Zap, Target, Thermometer, Wind, Droplets } from 'lucide-react';
+import React, {useState, useEffect}from 'react';
+import {Helmet}}from 'react-helmet-async';
+import {Globe, BarChart, Shield, Clock, Users, ArrowRight, Star, TrendingUp, Lock, FileText, DollarSign, CheckCircle, Phone, Mail, MapPin, Database, Settings, Calendar, Award, Eye, MessageSquare, CheckSquare, Cpu, Brain, Zap, Target, Thermometer, Wind, Droplets}}from 'lucide-react';
 
-const AIClimatePredictionEngine: React.FC = () => {
+const AIClimatePredictionEngine: React.FC = () => {,
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => 
@@ -25,6 +25,7 @@ const AIClimatePredictionEngine: React.FC = () => {
     },
     {
       icon: BarChart,
+>>>>>>> origin/main
       title: 'Extreme Weather Prediction',
       description: 'AI-powered prediction of extreme weather events and natural disasters',
       benefits: [''Early warning systems', 'Disaster preparedness', 'Risk assessment'']
@@ -48,7 +49,7 @@ const AIClimatePredictionEngine: React.FC = () => {
       price: '$299',
       period: '/month',
       description: 'Perfect for small businesses and research institutions',
-      features: [
+      features: [,
         'Basic climate predictions',
         '7-day weather forecasts',
         'Email alerts',
@@ -63,7 +64,7 @@ const AIClimatePredictionEngine: React.FC = () => {
       price: '$799',
       period: '/month',
       description: 'Ideal for government agencies and large organizations',
-      features: [
+      features: [,
         'Advanced climate modeling',
         '30-day predictions',
         'Real-time monitoring',
@@ -80,7 +81,7 @@ const AIClimatePredictionEngine: React.FC = () => {
       price: '$2,499',
       period: '/month',
       description: 'For large-scale climate research and policy making',
-      features: [
+      features: [,
         'Full climate prediction suite',
         'Long-term projections',
         '24/7 dedicated support',
@@ -104,22 +105,16 @@ const AIClimatePredictionEngine: React.FC = () => {
       title: 'Agricultural Planning',
       description: 'Climate predictions for crop planning and agricultural optimization',
       icon: Globe,
-      results: '25% increase in crop yields'
-    },
-    {
-      title: 'Disaster Preparedness',
+      results: '25% increase in crop yields',},
+    {title: 'Disaster Preparedness',
       description: 'Early warning systems for natural disasters and extreme weather events',
       icon: Shield,
-      results: '60% reduction in disaster impact'
-    },
-    {
-      title: 'Energy Management',
+      results: '60% reduction in disaster impact',},
+    {title: 'Energy Management',
       description: 'Climate predictions for renewable energy planning and grid management',
       icon: Zap,
-      results: '30% improvement in energy efficiency'
-    },
-    {
-      title: 'Urban Planning',
+      results: '30% improvement in energy efficiency',},
+    {title: 'Urban Planning',
       description: 'Climate data for sustainable urban development and infrastructure planning',
       icon: Target,
 <<<<<<< HEAD
@@ -145,14 +140,15 @@ const AIClimatePredictionEngine: React.FC = () => {
   return (
     <>
       <Helmet>
+>>>>>>> origin/main
         <title>AI Climate Prediction Engine - Advanced Climate Forecasting | Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered climate prediction engine with 95% accuracy for weather forecasting, extreme weather prediction, and climate risk assessment." />
         <meta name="keywords" content="climate prediction, weather forecasting, climate modeling, extreme weather, climate risk, environmental AI, climate data" />
-        <meta property="og:title" content="AI Climate Prediction Engine - Advanced Climate Forecasting" />
+        <meta property="og: title" content="AI Climate Prediction Engine - Advanced Climate Forecasting" />,
         <meta property="og:description" content="Revolutionary AI-powered climate prediction engine with 95% accuracy for weather forecasting, extreme weather prediction, and climate risk assessment." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-climate-prediction-engine" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-climate-prediction-engine" />
+        <meta property="og: type" content="website" />,
+        <meta property="og: url" content="https://ziontechgroup.com/ai-climate-prediction-engine" />,
+        <link rel="canonical" href="https: //ziontechgroup.com/ai-climate-prediction-engine" />,
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900 text-white">

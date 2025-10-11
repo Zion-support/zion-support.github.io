@@ -1,8 +1,7 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import {
-    Zap,
+import {Helmet}}from 'react-helmet-async';
+import {Zap,}
   Settings,
   CheckCircle,
   BarChart,
@@ -53,6 +52,10 @@ const ProcessAutomationPage: React.FC = () => {
     {
       icon: BarChart,
       title: 'Performance Monitoring',
+<<<<<<< HEAD
+      description: 'Track and optimize your automated processes with real-time analytics and reporting.',}}
+  ]
+=======
       description: 'Track and optimize your automated processes with real-time analytics and reporting.'
   };
     };
@@ -77,6 +80,7 @@ return ()
 return (
     <>
       <Helmet>
+>>>>>>> origin/main
         <title>Process Automation Services - Zion Tech Group | Workflow Automation</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />

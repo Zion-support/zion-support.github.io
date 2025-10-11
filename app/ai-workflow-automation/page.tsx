@@ -1,8 +1,13 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import {Helmet}}from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+<<<<<<< HEAD
+import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';
+const AiWorkflowAutomationPage: React.FC = () => {,
+    const features = [
+=======
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
 const AiWorkflowAutomationPage: React.FC = () => {
@@ -79,6 +84,7 @@ const AiWorkflowAutomationPage: React.FC = () => {
                   Learn More;
                 </button></button></button>
 
+>>>>>>> origin/main
               </div>
             </div>
           </div>

@@ -1,5 +1,5 @@
 'use client';
-import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
+import React, {useCallback, useState, useEffect, Suspense, lazy, memo}from 'react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import PerformanceOptimizer from './components/EnhancedPerformanceOptimizer';
@@ -8,7 +8,7 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
 import StructuredData from './components/StructuredData';
 
-import { Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
+import {Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText}}from 'lucide-react';
 
 <<<<<<< HEAD
 // Loading skeleton component
@@ -26,7 +26,7 @@ const ServiceCardSkeleton: React.FC = memo(() => (
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton',
 
-const HomePage: React.FC = () => {
+const HomePage: React.FC = () => {,
     const [isLoaded, setIsLoaded] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -34,8 +34,7 @@ const HomePage: React.FC = () => {
     setIsLoaded(true);
     // Trigger visibility animation;
     const timer = setTimeout(() => setIsVisible(true), 100);
-    return () => clearTimeout(timer)
-  }, []);
+    return () => clearTimeout(timer)}, []);
 
 <<<<<<< HEAD
   // Analytics tracking for phone clicks - optimized
@@ -71,6 +70,7 @@ const HomePage: React.FC = () => {
     },
     {
       icon: Cloud,
+>>>>>>> origin/main
       title: 'Cloud Infrastructure',
       description: 'Scalable and secure cloud solutions that grow with your business needs.',
       benefits: [''AWS/Azure/GCP', 'Container Orchestration', 'Auto-scaling', 'Disaster Recovery'']
@@ -110,16 +110,21 @@ const HomePage: React.FC = () => {
     },
     {
       icon: Cloud,
+>>>>>>> origin/main
       title: 'IT Services',
       description: 'Complete IT infrastructure and cloud solutions to modernize your business operations.',
       href: '/it-services',
-      features: ['Cloud Migration', 'Infrastructure Management', 'DevOps', 'Monitoring']
-    },
-    {
-      icon: Cpu,
+      features: ['Cloud Migration', 'Infrastructure Management', 'DevOps', 'Monitoring']},
+    {icon: Cpu,
       title: 'Micro SaaS',
       description: 'Specialized software-as-a-service solutions designed for specific business needs.',
       href: '/micro-saas',
+<<<<<<< HEAD
+      features: ['Custom SaaS', 'API Integration', 'Scalable Solutions', 'Maintenance']}]
+
+  return(<React.Fragment>)</React.Fragment>
+      <SEOOptimizer;
+=======
       features: ['Custom SaaS', 'API Integration', 'Scalable Solutions', 'Maintenance']
     }
   ];
@@ -144,7 +149,7 @@ const HomePage: React.FC = () => {
           foundingDate: '2020',
           numberOfEmployees: '50-100',
           industry: 'Technology',
-          services: [
+          services: [,
             'AI Solutions',
             'Quantum Computing',
             'Autonomous Systems',
@@ -158,9 +163,8 @@ const HomePage: React.FC = () => {
             telephone: '+1-302-464-0950',
             contactType: 'Customer Service',
             areaServed: 'US',
-            availableLanguage: 'en'
-          },
-          address: {
+            availableLanguage: 'en',},
+          address: {,
             '@type': 'PostalAddress',
             streetAddress: '364 E Main St STE 1008',
             addressLocality: 'Middletown',
@@ -213,7 +217,7 @@ const HomePage: React.FC = () => {
                       for the Future;
                     </span></span></span>
                   </h1>
-                  <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+                  <p className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">,</p>
                     Transform your business with cutting-edge artificial intelligence, quantum computing, 
                     and autonomous systems. We deliver enterprise-grade solutions that drive innovation and growth.
                   </p></p></p>
@@ -276,13 +280,12 @@ const HomePage: React.FC = () => {
                 </div>
               </div>
 
-const HomePage: React.FC = memo(() => {
+const HomePage: React.FC = memo(() => {,
     const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => 
     preloadComponents();
-    setIsLoaded(true)
-  }, []);
+    setIsLoaded(true)}, []);
 
   const features = const features = const features = [
     {
@@ -299,6 +302,7 @@ const HomePage: React.FC = memo(() => {
     },
     {
       icon: Cloud,
+>>>>>>> origin/main
       title: 'Cloud Infrastructure',
       description: 'Scalable and secure cloud solutions that grow with your business needs.',
       benefits: [''AWS/Azure/GCP', 'Container Orchestration', 'Auto-scaling', 'Disaster Recovery'']
@@ -380,6 +384,10 @@ const HomePage: React.FC = memo(() => {
             </div></div></section>
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 
+<<<<<<< HEAD
+            {/* Services Section */} <section className="py-20 bg-slate-800/50 backdrop-blur-sm">
+              <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,</div>
+=======
       </main>
     </>
   );

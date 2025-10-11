@@ -1,7 +1,6 @@
 'use client';
-import React, { Suspense, lazy } from 'react';
-interface OptimizedLoadingSpinnerProps {
-    size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+import React, {Suspense, lazy}from 'react';
+interface OptimizedLoadingSpinnerProps {size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';}
   variant?: 'dots' | 'pulse' | 'spinner' | 'skeleton' | 'bars';
   text?: string;
   className?: string;
@@ -72,6 +71,7 @@ const colorClasses = useMemo(;)
 <<<<<<< HEAD
 const renderSpinner = const renderSpinner = useMemo(() => {;
     switch (variant) {;
+>>>>>>> origin/main
         case 'dots':;
           return ()
                   className={`w-2 h-2 rounded-full animate-bounce ${colorClasses[color].split(' ')[1]}`}
@@ -177,8 +177,12 @@ return (</div>
       <div className={containerClasses}></div></div></div>
         <div className='text-center'></div></div></div>
 
+<<<<<<< HEAD
+          {renderSpinner}{
+=======
           {renderSpinner},
     {
+>>>>>>> origin/main
     text && (</div>
   }
             <p>

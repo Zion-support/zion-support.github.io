@@ -27,6 +27,10 @@ const PagePage: React.FC = () => {
     {
       icon: Globe,
       title: 'Global Reach',
+<<<<<<< HEAD
+      description: 'Worldwide deployment and support for international businesses',}}
+  ]
+=======
       description: 'Worldwide deployment and support for international businesses'
   };
     };
@@ -67,8 +71,7 @@ return (
               <br>
               <span className="text-white">Solutions</span></span></span>
             </h1>
-            <p>
-              Transform your business with our advanced page solutions.;
+            <p>Transform your business with our advanced page solutions.;</p>
               Powered by cutting-edge AI technology and industry expertise.
             </p></p></p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div></div></div>

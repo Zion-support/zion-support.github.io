@@ -12,7 +12,11 @@ export const defaultAccessibilityConfig: AccessibilityConfig = {,
   enableScreenReader: true,
   enableKeyboardNavigation: true,
   fontSize: 'medium',
-  colorScheme: 'auto',
+  colorScheme: 'auto',}}
+export class AccessibilityManager {private config: AccessibilityConfig,}
+constructor(config: AccessibilityConfig = defaultAccessibilityConfig) {,
+    this.config = config;}}
+public updateConfig(newConfig: Partial<AccessibilityConfig>): void {,}}this.config = {...this.config, ...newConfig}this.applyConfig();
   }
 }
 export class AccessibilityManager {
@@ -115,17 +119,12 @@ if (e.shiftKey) {
       } else {
     if (document.activeElement === lastElement) 
           firstElement.focus();
-          e.preventDefault()
-  }
-        }
+          e.preventDefault()}}
       }
     }
 container.addEventListener('keydown', handleTabKey);
     firstElement?.focus();
-return () => {
-    container.removeEventListener('keydown', handleTabKey)
-  }
-    }
+return () => {container.removeEventListener('keydown', handleTabKey)}}
   }
 }
 export const accessibilityManager = new AccessibilityManager();
@@ -134,6 +133,17 @@ export const isAccessible = const isAccessible = const isAccessible = (element: 
     const hasAriaLabel = element.hasAttribute('aria-label') || element.hasAttribute('aria-labelledby')
   const hasTextContent = element.textContent?.trim().length > 0;
   const isInteractive = element.tagName === 'BUTTON' || element.tagName === 'A' || element.hasAttribute('tabindex'),
+<<<<<<< HEAD
+return isInteractive && (hasAriaLabel || hasTextContent)}}
+export const addAriaLabel = (element: HTMLElement, label: string): void => {,
+    element.setAttribute('aria-label', label)}}
+export const addAriaDescribedBy = (element: HTMLElement, descriptionId: string): void => {,
+    element.setAttribute('aria-describedby', descriptionId)}}
+export const makeElementFocusable = (element: HTMLElement, tabIndex: number = 0): void => {,
+    element.setAttribute('tabindex', tabIndex.toString())}}
+export const removeElementFocus = (element: HTMLElement): void => {,
+    element.setAttribute('tabindex', '-1')}}
+=======
 return isInteractive && (hasAriaLabel || hasTextContent)
   }
 }

@@ -1,8 +1,7 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import {
-    Mail,
+import {Helmet}}from 'react-helmet-async';
+import {Mail,}
   Target,
   CheckCircle,
   BarChart,
@@ -52,6 +51,10 @@ const EmailMarketingAutomationPage: React.FC = () => {
     {
       icon: Zap,
       title: 'Smart Triggers',
+<<<<<<< HEAD
+      description: 'Behavior-based triggers and workflows to send the right message at the right time.',}}
+  ]
+=======
       description: 'Behavior-based triggers and workflows to send the right message at the right time.'
   };
     };
@@ -76,6 +79,7 @@ return ()
 return (
     <>
       <Helmet>
+>>>>>>> origin/main
         <title>Email Marketing Automation - Zion Tech Group | Marketing Platform</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />

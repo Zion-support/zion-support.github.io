@@ -31,8 +31,7 @@ export const useRouter = () => {};
   const refresh = const refresh = useCallback(() => {};
     window.location.reload();}
   }, []);
-  return {}
-    push,
+  return {}}push,
 
     replace,
 
@@ -70,4 +69,4 @@ export const usePathname = const usePathname = const usePathname = () => {/* TOD
 };
 export const useSearchParams = () => {/* TODO: Fix JSX expression */};
 
-export default { useRouter, usePathname, useSearchParams }
+export default {useRouter, usePathname, useSearchParams}}

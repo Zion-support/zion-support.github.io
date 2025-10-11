@@ -1,9 +1,9 @@
 'use client';
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Shield, Zap, Eye, Target, BarChart, Lock, Clock, Users, ArrowRight, Star, TrendingUp, FileText, DollarSign, CheckCircle, Phone, Mail, MapPin, Database, Settings, Calendar, Award, MessageSquare, CheckSquare, Cpu, Brain, Globe, AlertTriangle, Activity } from 'lucide-react';
+import React, {useState, useEffect}from 'react';
+import {Helmet}}from 'react-helmet-async';
+import {Shield, Zap, Eye, Target, BarChart, Lock, Clock, Users, ArrowRight, Star, TrendingUp, FileText, DollarSign, CheckCircle, Phone, Mail, MapPin, Database, Settings, Calendar, Award, MessageSquare, CheckSquare, Cpu, Brain, Globe, AlertTriangle, Activity}}from 'lucide-react';
 
-const AICyberDefenseMatrix: React.FC = () => {
+const AICyberDefenseMatrix: React.FC = () => {,
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => 
@@ -25,6 +25,7 @@ const AICyberDefenseMatrix: React.FC = () => {
     },
     {
       icon: Zap,
+>>>>>>> origin/main
       title: 'Zero-Trust Architecture',
       description: 'Comprehensive zero-trust security framework with continuous verification',
       benefits: [''Continuous verification', 'Identity-based access', 'Micro-segmentation'']
@@ -48,7 +49,7 @@ const AICyberDefenseMatrix: React.FC = () => {
       price: '$499',
       period: '/month',
       description: 'Perfect for small businesses and startups',
-      features: [
+      features: [,
         'Basic threat detection',
         'Email security',
         'Firewall management',
@@ -63,7 +64,7 @@ const AICyberDefenseMatrix: React.FC = () => {
       price: '$1,299',
       period: '/month',
       description: 'Ideal for mid-size companies and enterprises',
-      features: [
+      features: [,
         'Advanced threat detection',
         'Zero-trust architecture',
         'Behavioral analytics',
@@ -80,7 +81,7 @@ const AICyberDefenseMatrix: React.FC = () => {
       price: '$3,999',
       period: '/month',
       description: 'For large organizations and critical infrastructure',
-      features: [
+      features: [,
         'Full cyber defense suite',
         'Custom security policies',
         '24/7 dedicated support',
@@ -104,22 +105,16 @@ const AICyberDefenseMatrix: React.FC = () => {
       title: 'Financial Services',
       description: 'Advanced cyber defense for banks and financial institutions',
       icon: DollarSign,
-      results: '99.9% security uptime'
-    },
-    {
-      title: 'Healthcare Protection',
+      results: '99.9% security uptime',},
+    {title: 'Healthcare Protection',
       description: 'HIPAA-compliant cyber defense for healthcare organizations',
       icon: Shield,
-      results: 'Zero data breaches'
-    },
-    {
-      title: 'Government Security',
+      results: 'Zero data breaches',},
+    {title: 'Government Security',
       description: 'National-level cyber defense for government agencies',
       icon: Globe,
-      results: 'Enhanced national security'
-    },
-    {
-      title: 'Critical Infrastructure',
+      results: 'Enhanced national security',},
+    {title: 'Critical Infrastructure',
       description: 'Industrial cyber defense for power grids and utilities',
       icon: Zap,
 <<<<<<< HEAD
@@ -145,14 +140,15 @@ const AICyberDefenseMatrix: React.FC = () => {
   return (
     <>
       <Helmet>
+>>>>>>> origin/main
         <title>AI Cyber Defense Matrix - Advanced Cybersecurity Platform | Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered cyber defense platform with 99.9% threat detection, zero-trust architecture, and automated incident response for enterprise security." />
         <meta name="keywords" content="cyber defense, cybersecurity, threat detection, zero-trust, incident response, security AI, enterprise security, cyber protection" />
-        <meta property="og:title" content="AI Cyber Defense Matrix - Advanced Cybersecurity Platform" />
+        <meta property="og: title" content="AI Cyber Defense Matrix - Advanced Cybersecurity Platform" />,
         <meta property="og:description" content="Revolutionary AI-powered cyber defense platform with 99.9% threat detection, zero-trust architecture, and automated incident response." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-cyber-defense-matrix" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-cyber-defense-matrix" />
+        <meta property="og: type" content="website" />,
+        <meta property="og: url" content="https://ziontechgroup.com/ai-cyber-defense-matrix" />,
+        <link rel="canonical" href="https: //ziontechgroup.com/ai-cyber-defense-matrix" />,
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 text-white">

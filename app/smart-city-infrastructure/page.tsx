@@ -1,12 +1,12 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import {Helmet}}from 'react-helmet-async';
 
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Building, Wifi, Cpu, Database } from 'lucide-react';
+import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Building, Wifi, Cpu, Database}}from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const SmartCityInfrastructurePage: React.FC = () => {
+const SmartCityInfrastructurePage: React.FC = () => {,
 
 <<<<<<< HEAD
   const features = const features = const features = [
@@ -18,20 +18,20 @@ const SmartCityInfrastructurePage: React.FC = () => {
       icon: Brain,
       title: 'AI-Powered Solutions',
 
-      description: 'Advanced AI technology to transform your city infrastructure and improve efficiency'
-
-    },
-    {
-      icon: Zap,
+      description: 'Advanced AI technology to transform your city infrastructure and improve efficiency',},
+    {icon: Zap,
       title: 'High Performance',
 
-      description: 'Lightning-fast processing and real-time analytics for optimal city management'
-
-    },
-    {
-      icon: Shield,
+      description: 'Lightning-fast processing and real-time analytics for optimal city management',},
+    {icon: Shield,
       title: 'Enterprise Security',
 
+<<<<<<< HEAD
+      description: 'Bank-level security with advanced encryption and compliance standards',},
+    {icon: Globe,
+      title: 'Global Reach',
+const PagePage: React.FC = () => {,
+=======
       description: 'Bank-level security with advanced encryption and compliance standards'
 
     },
@@ -47,6 +47,7 @@ const PagePage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',];];
 const PagePage: React.FC = () => {
+>>>>>>> origin/main
   const features = [
     
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
@@ -83,23 +84,25 @@ const PagePage: React.FC = () => {
     },
     {
       icon: Wifi,
+>>>>>>> origin/main
       title: 'IoT Networks',
       description: 'Comprehensive IoT infrastructure for city-wide connectivity',
-      features: ['Sensor networks', 'Data collection', 'Real-time monitoring', 'Edge computing']
-    },
-    {
-      icon: Cpu,
+      features: ['Sensor networks', 'Data collection', 'Real-time monitoring', 'Edge computing']},
+    {icon: Cpu,
       title: 'Data Analytics',
       description: 'Advanced analytics platform for city data processing',
-      features: ['Real-time insights', 'Predictive modeling', 'Traffic optimization', 'Resource management']
-    },
-    {
-      icon: Database,
+      features: ['Real-time insights', 'Predictive modeling', 'Traffic optimization', 'Resource management']},
+    {icon: Database,
       title: 'Digital Infrastructure',
       description: 'Robust digital infrastructure for smart city operations',
+<<<<<<< HEAD
+      features: ['Cloud platforms', 'Data storage', 'API management', 'Security protocols']}]
+
+=======
       features: ['Cloud platforms', 'Data storage', 'API management', 'Security protocols']
     }
   ]
+>>>>>>> origin/main
           </div>
         </div>
       </section>
@@ -223,6 +226,7 @@ export default PagePage;
   return (
     <>
       <Helmet>
+>>>>>>> origin/main
         <title>Smart City Infrastructure - Zion Tech Group</title>
         <meta name="description" content="Advanced smart city infrastructure solutions including IoT networks, data analytics, and digital transformation for modern cities." />
         <meta name="keywords" content="smart city, infrastructure, IoT, data analytics, digital transformation, urban planning" />
@@ -241,8 +245,7 @@ export default PagePage;
                 <br />
                 <span className="text-white">Infrastructure</span></span></span>
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform your city with our advanced smart infrastructure solutions.
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your city with our advanced smart infrastructure solutions.</p>
                 Powered by cutting-edge AI technology and industry expertise.
               </p></p></p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -1,9 +1,9 @@
 'use client';
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package } from 'lucide-react';
+import React, {useState, useEffect}from 'react';
+import {Link}}from 'react-router-dom';
+import {ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package}}from 'lucide-react';
 
-const Navigation: React.FC = () => {
+const Navigation: React.FC = () => {,
     const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [aiServicesOpen, setAiServicesOpen] = useState(false);
@@ -30,11 +30,8 @@ const Navigation: React.FC = () => {
     window.addEventListener('resize', handleResize);
     window.addEventListener('scroll', handleScroll);
 
-    return () => {
-    window.removeEventListener('resize', handleResize);
-      window.removeEventListener('scroll', handleScroll)
-  }
-  }, []);
+    return () => {window.removeEventListener('resize', handleResize);
+      window.removeEventListener('scroll', handleScroll)}}, []);
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const toggleServices = () => setServicesOpen(!servicesOpen);
@@ -42,8 +39,12 @@ const Navigation: React.FC = () => {
   const toggleItServices = () => setItServicesOpen(!itServicesOpen);
   const toggleMicroSaas = () => setMicroSaasOpen(!microSaasOpen);
 
+<<<<<<< HEAD
+  const closeAllMenus = () => {setServicesOpen(false);
+=======
   const closeAllMenus = () => {;
     setServicesOpen(false);
+>>>>>>> origin/main
     setAiServicesOpen(false);
     setItServicesOpen(false);
     setMicroSaasOpen(false);
@@ -378,6 +379,9 @@ const Navigation: React.FC = () => {
           </div>
         </div>
 
+<<<<<<< HEAD
+        {/* Mobile Navigation */}{isOpen && (
+=======
         {/* Mobile Navigation */},
 <<<<<<< HEAD
     {isOpen && ()
@@ -388,6 +392,7 @@ const Navigation: React.FC = () => {
                       onClick={closeAllMenus} /></Link>
 =======
     {isOpen && (
+>>>>>>> origin/main
 
           <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20">
             </div></div><div className="pt-4 space-y-4">

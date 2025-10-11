@@ -1,9 +1,9 @@
 'use client';
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Shield, CheckCircle, AlertTriangle, Code, DollarSign, Clock, Users, Zap, Brain, ArrowRight, Star, TrendingUp, Lock, FileText, BarChart, Target, Award, Rocket, Globe, Database, Cpu, Eye, MessageSquare, Settings, Calendar, CheckSquare, Phone, Mail, MapPin } from 'lucide-react';
+import React, {useState, useEffect}from 'react';
+import {Helmet}}from 'react-helmet-async';
+import {Shield, CheckCircle, AlertTriangle, Code, DollarSign, Clock, Users, Zap, Brain, ArrowRight, Star, TrendingUp, Lock, FileText, BarChart, Target, Award, Rocket, Globe, Database, Cpu, Eye, MessageSquare, Settings, Calendar, CheckSquare, Phone, Mail, MapPin}}from 'lucide-react';
 
-const AISmartContractAuditor: React.FC = () => {
+const AISmartContractAuditor: React.FC = () => {,
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => 
@@ -25,6 +25,7 @@ const AISmartContractAuditor: React.FC = () => {
     },
     {
       icon: Code,
+>>>>>>> origin/main
       title: 'Code Quality Assessment',
       description: 'Comprehensive code review with best practices compliance and optimization suggestions',
       benefits: [''Gas optimization recommendations', 'Code complexity analysis', 'Best practices compliance'']
@@ -48,7 +49,7 @@ const AISmartContractAuditor: React.FC = () => {
       price: '$299',
       period: '/month',
       description: 'Perfect for small projects and individual developers',
-      features: [
+      features: [,
         'Up to 5 smart contracts per month',
         'Basic security analysis',
         'Code quality assessment',
@@ -63,7 +64,7 @@ const AISmartContractAuditor: React.FC = () => {
       price: '$799',
       period: '/month',
       description: 'Ideal for growing DeFi projects and development teams',
-      features: [
+      features: [,
         'Up to 25 smart contracts per month',
         'Advanced security analysis',
         'Gas optimization recommendations',
@@ -80,7 +81,7 @@ const AISmartContractAuditor: React.FC = () => {
       price: '$1,999',
       period: '/month',
       description: 'For large-scale projects and enterprise clients',
-      features: [
+      features: [,
         'Unlimited smart contracts',
         'Comprehensive security analysis',
         'Custom ML model training',
@@ -104,22 +105,16 @@ const AISmartContractAuditor: React.FC = () => {
       title: 'DeFi Protocol Audits',
       description: 'Comprehensive security analysis for decentralized finance protocols',
       icon: DollarSign,
-      results: 'Reduced security incidents by 95%'
-    },
-    {
-      title: 'NFT Marketplace Security',
+      results: 'Reduced security incidents by 95%',},
+    {title: 'NFT Marketplace Security',
       description: 'Smart contract auditing for NFT platforms and marketplaces',
       icon: Image,
-      results: 'Zero critical vulnerabilities found'
-    },
-    {
-      title: 'Token Launch Security',
+      results: 'Zero critical vulnerabilities found',},
+    {title: 'Token Launch Security',
       description: 'Pre-launch security audits for new token contracts',
       icon: Rocket,
-      results: '100% successful token launches'
-    },
-    {
-      title: 'Cross-Chain Bridge Audits',
+      results: '100% successful token launches',},
+    {title: 'Cross-Chain Bridge Audits',
       description: 'Security analysis for cross-chain bridge implementations',
       icon: Globe,
 <<<<<<< HEAD
@@ -145,14 +140,15 @@ const AISmartContractAuditor: React.FC = () => {
   return (
     <>
       <Helmet>
+>>>>>>> origin/main
         <title>AI Smart Contract Auditor - Automated Security Analysis | Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered smart contract auditing with automated security analysis, vulnerability detection, and risk assessment. Secure your blockchain projects with our cutting-edge technology." />
         <meta name="keywords" content="smart contract audit, blockchain security, AI auditing, DeFi security, smart contract analysis, vulnerability detection" />
-        <meta property="og:title" content="AI Smart Contract Auditor - Automated Security Analysis" />
+        <meta property="og: title" content="AI Smart Contract Auditor - Automated Security Analysis" />,
         <meta property="og:description" content="Advanced AI-powered smart contract auditing with automated security analysis, vulnerability detection, and risk assessment." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-smart-contract-auditor" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-smart-contract-auditor" />
+        <meta property="og: type" content="website" />,
+        <meta property="og: url" content="https://ziontechgroup.com/ai-smart-contract-auditor" />,
+        <link rel="canonical" href="https: //ziontechgroup.com/ai-smart-contract-auditor" />,
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">

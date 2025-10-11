@@ -1,11 +1,10 @@
 'use client';
-import React, { useState } from 'react';
-import { Search, Code, Key, Zap, ArrowRight, Copy, Check, Globe, Brain, Cloud, Shield, Settings, Users, Database, Eye, Sparkles, BookOpen, FileText, Download } from 'lucide-react';
+import React, {useState}from 'react';
+import {Search, Code, Key, Zap, ArrowRight, Copy, Check, Globe, Brain, Cloud, Shield, Settings, Users, Database, Eye, Sparkles, BookOpen, FileText, Download}}from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-export default function APIDocsPage() {
-    const [copiedCode, setCopiedCode] = useState<string | null>(null);
+export default function APIDocsPage() {const [copiedCode, setCopiedCode] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
 <<<<<<< HEAD
   const copyToClipboard = const copyToClipboard = const copyToClipboard = (code: string, id: string) => {
@@ -14,11 +13,8 @@ export default function APIDocsPage() {
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     navigator.clipboard.writeText(code)
     setCopiedCode(id),
-    setTimeout(() => setCopiedCode(null), 2000)
-  }
-  const apiEndpoints = [
-    {
-      title: 'AI Services',
+    setTimeout(() => setCopiedCode(null), 2000)}const apiEndpoints = [
+    {title: 'AI Services',
       description: 'Artificial Intelligence and Machine Learning APIs',
       icon: Brain,
       endpoints: [,
@@ -38,9 +34,9 @@ export default function APIDocsPage() {
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     "features": ["sentiment", "entities", "key_phrases"];
   }'`
+>>>>>>> origin/main
         },
-        {
-          name: 'Image Recognition',
+        {name: 'Image Recognition',
           method: 'POST',
           path: '/api/ai/image-recognition',
           description: 'Identify objects, faces, and scenes in images',
@@ -49,16 +45,14 @@ export default function APIDocsPage() {
   -H "Content-Type: application/json" \\
   -d '
     "image_url": "https://example.com/image.jpg",
-    "features": ["objects", "faces", "text"]
-  }'`
+    "features": ["objects", "faces", "text"]}'`
         }
   ]
     },
-    {
-      title: 'Cloud Services',
+    {title: 'Cloud Services',
       description: 'Cloud infrastructure and deployment APIs',
       icon: Cloud,
-      endpoints: [
+      endpoints: [,
         {
           name: 'Deploy Application',
           method: 'POST',
@@ -79,8 +73,7 @@ export default function APIDocsPage() {
         }
   ]
     },
-    {
-      title: 'Data Analytics',
+    {title: 'Data Analytics',
       description: 'Data processing and analytics APIs',
       icon: Database,
       endpoints: [,
@@ -94,10 +87,12 @@ export default function APIDocsPage() {
   -d '
     "dataset_id": "dataset_123",
     "operations": ["aggregate", "filter", "transform"],
-    "output_format": "json"
-  }'`
+    "output_format": "json"}'`
         }
   ]
+<<<<<<< HEAD
+  const filteredEndpoints = apiEndpoints.map(category => ({)
+=======
     }
 <<<<<<< HEAD
   ];
@@ -137,9 +132,17 @@ export default function APIDocsPage() {
       />
       <Navigation />
       {/* Hero Section */}
+<<<<<<< HEAD
+<section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl font-bold text-white mb-6">API Documentation;</h1>
+  </
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Complete API documentation for Zion Tech Group's AI and IT solutions.</p>
+=======
 
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Complete API documentation for Zion Tech Group's AI and IT solutions. 
+>>>>>>> origin/main
             Explore endpoints, authentication, and integration guides.
           </p></p></p>
             <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">

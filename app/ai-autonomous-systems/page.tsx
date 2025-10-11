@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import {Helmet}}from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
@@ -23,6 +23,7 @@ const AiAutonomousSystemsPage: React.FC = () => {
     },
     {
       icon: BarChart,
+>>>>>>> origin/main
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: [''Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics'']
@@ -47,6 +48,7 @@ const AiAutonomousSystemsPage: React.FC = () => {
   return (
     <>
       <Helmet>
+>>>>>>> origin/main
         <title>AI Autonomous Systems - Zion Tech Group</title>
         <meta name="description" content="Cutting-edge autonomous systems powered by advanced AI technology." />
         <meta name="keywords" content="AI autonomous systems, artificial intelligence, autonomous technology, AI solutions, intelligent automation" />
@@ -255,3 +257,19 @@ const AiAutonomousSystemsPage: React.FC = () => {
       <Footer / /></Footer>
     </div>
   ),
+<<<<<<< HEAD
+};
+
+export default PagePage;
+  </button>
+  </button>
+  </p>
+  </p>
+  </button>
+  </h2>
+  </button>
+  </button>
+  </h1>
+  </main>
+=======
+>>>>>>> origin/main

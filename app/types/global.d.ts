@@ -1,10 +1,9 @@
+import React from 'react';
 // Global type definitions for the application;
 declare global {
     interface Window;
     gtag?: (...args: any[]) => void,
-    dataLayer?: any[]
-  }
-  }
+    dataLayer?: any[]}}
 }
 // Environment variables;
 declare namespace NodeJS {
@@ -85,3 +84,4 @@ export interface AnalyticsEvent {
   }
 }
 export {}
+>>>>>>> origin/main

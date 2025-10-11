@@ -1,14 +1,9 @@
 'use client';
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home, Phone } from 'lucide-react';
+import React, {Component, ErrorInfo, ReactNode}from 'react';
+import {AlertTriangle, RefreshCw, Home, Phone}}from 'lucide-react';
 
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-}
-
-interface State {
-  hasError: boolean;
+interface Props {children: ReactNode;,}
+  fallback?: ReactNode;}interface State {hasError: boolean;,}
   error?: Error;
   errorInfo?: ErrorInfo;
 }
@@ -29,7 +24,7 @@ class ErrorBoundary extends Component<Props, State> {
       // In production, you would send this to an error reporting service;
       // Example: errorReportingService.captureException(error,  extra: errorInfo })
     }
-    this.setState({ error, errorInfo })
+    this.setState({error, errorInfo)})
   }
 
   handleReload = () => {
@@ -73,6 +68,9 @@ class ErrorBoundary extends Component<Props, State> {
                 <summary className="text-sm text-gray-400 cursor-pointer mb-2">)
                   Error Details (Development)
                 </summary>
+<<<<<<< HEAD
+                <pre className="text-xs text-red-400 bg-slate-900/50 p-3 rounded overflow-auto">{this.state.error.toString()</p>}{this.state.errorInfo?.componentStack}
+=======
                 <pre className="text-xs text-red-400 bg-slate-900/50 p-3 rounded overflow-auto">
                   this.state.error.toString()},
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6

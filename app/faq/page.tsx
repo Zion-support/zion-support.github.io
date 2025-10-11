@@ -1,8 +1,8 @@
 'use client';
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ChevronDown, ChevronUp } from 'lucide-react';
-const FAQPage: React.FC = () => {
+import React, {useState}from 'react';
+import {Helmet}}from 'react-helmet-async';
+import {ChevronDown, ChevronUp}}from 'lucide-react';
+const FAQPage: React.FC = () => {,
   const [openItems, setOpenItems] = useState<number[]>([]);
 <<<<<<< HEAD
   const toggleItem = const toggleItem = const toggleItem = (index: number) => {
@@ -69,6 +69,7 @@ const FAQPage: React.FC = () => {
   return (
     <>
       <Helmet>
+>>>>>>> origin/main
         <title>FAQ - Zion Tech Group | Frequently Asked Questions</title>
         <meta name="description" content="Find answers to frequently asked questions about our AI and IT services, pricing, implementation, and support." />
         <meta name="keywords" content="FAQ, frequently asked questions, AI services, IT services, support, pricing" />

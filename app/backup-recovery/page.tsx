@@ -14,6 +14,7 @@ const BackupRecoveryPage: React.FC = () => {
     
     }
   ];];];
+>>>>>>> origin/main
   const benefits = [
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     'Enterprise-grade security and compliance',
@@ -34,6 +35,7 @@ const BackupRecoveryPage: React.FC = () => {
 
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced backup and recovery solutions. 
+>>>>>>> origin/main
             Powered by cutting-edge AI technology and industry expertise.
           </p></p></p>
       </section>
@@ -147,6 +149,7 @@ const BackupRecoveryPage: React.FC = () => {
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
               </button></button><Mail className="mr-2 h-5 w-5" />
 
+>>>>>>> origin/main
           </div>
         </div>
         <div className="text-center">

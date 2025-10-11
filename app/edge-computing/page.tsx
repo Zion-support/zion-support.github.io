@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import {Helmet}}from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Zap, Cpu, Globe, Shield, ArrowRight, Cloud, Database, Wifi, Server } from 'lucide-react';
@@ -71,6 +71,10 @@ const services = const services = const services = [
     {
       icon: '📱',
       title: 'Mobile Edge',
+<<<<<<< HEAD
+      description: 'Mobile edge computing for 5G and mobile applications',}}
+  ]
+=======
       description: 'Mobile edge computing for 5G and mobile applications'
   };
     };
@@ -116,6 +120,12 @@ const useCases = const useCases = const useCases = [
     {
       title: 'Gaming',
       description: 'Cloud gaming with minimal latency',
+<<<<<<< HEAD
+      icon: '🎮',}}
+  ]
+return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900"></div>)
+      <Helmet />
+=======
       icon: '🎮'
   };
     };
@@ -134,6 +144,7 @@ return ()
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900"></div></div></div>
       <Helmet>
+>>>>>>> origin/main
         <title>Edge Computing Solutions | Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />

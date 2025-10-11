@@ -27,6 +27,10 @@ const FuturisticHeroPage: React.FC = () => {
     {
       icon: Globe,
       title: 'Global Reach',
+<<<<<<< HEAD
+      description: 'Worldwide deployment and support for international businesses',}}
+  ]
+=======
       description: 'Worldwide deployment and support for international businesses'
   };
     };

@@ -34,10 +34,7 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {
       cspMeta.content = "default-src 'self'; script-src 'self', 'unsafe-inline'; style-src 'self', 'unsafe-inline';";
       document.head.appendChild(cspMeta);
 // Disable right-click context menu;
-      document.addEventListener('contextmenu', (e) => {
-    e.preventDefault()
-  }
-      })
+      document.addEventListener('contextmenu', (e) => {e.preventDefault()}})
 // Disable F12 and other dev tools shortcuts;
       document.addEventListener('keydown', (e) => {
     if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')
@@ -48,7 +45,7 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {
     }
 enhanceSecurity();
   }, []);
-return <>{children}</>
+return <React.Fragment>{children</React.Fragment>}</React.Fragment>
 };
 
 export default SecurityEnhancer;

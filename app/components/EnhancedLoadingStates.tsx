@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Loader2, Brain, Cloud, Shield, Code } from 'lucide-react';
+import {Loader2, Brain, Cloud, Shield, Code}}from 'lucide-react';
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
@@ -60,7 +60,7 @@ export const PageLoader: React.FC = () => (
   </div>)
 );
 
-export const ServiceCardSkeleton: React.FC = () => (
+export const ServiceCardSkeleton: React.FC = () => (,
   <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 animate-pulse">
     </div></div><div className="w-16 h-16 bg-gray-600 rounded-2xl mb-6"></div></div></div>
     <div className="h-6 bg-gray-600 rounded mb-4"></div></div></div>

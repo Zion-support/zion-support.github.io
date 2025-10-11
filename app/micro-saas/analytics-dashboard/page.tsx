@@ -36,6 +36,10 @@ const AIAnalyticsDashboardPage: React.FC = () => {
     {
       icon: Target,
       title: 'Goal Tracking',
+<<<<<<< HEAD
+      description: 'Monitor KPIs and business objectives with automated alerts.',}}
+  ]
+=======
       description: 'Monitor KPIs and business objectives with automated alerts.'
   };
     };
@@ -68,6 +72,7 @@ return ()
 return (
     <>
       <Helmet>
+>>>>>>> origin/main
         <title>AI Analytics Dashboard | Zion Tech Group - Real-time Business Intelligence</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
@@ -93,8 +98,7 @@ return (
                 Real-time Business </h1></h1></h1>
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"> Intelligence</span></span></span>
               </h1>
-              <p>
-                Transform your data into actionable insights with our AI-powered analytics dashboard.;
+              <p>Transform your data into actionable insights with our AI-powered analytics dashboard.;</p>
                 Get real-time visualization, predictive analytics, and custom reporting in one powerful platform.
               </p></p></p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center"></div></div></div>

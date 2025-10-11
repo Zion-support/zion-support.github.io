@@ -64,8 +64,7 @@ return (
         </div>
       </section>
 
-      {/* CTA Section */}
-          </div>
+      {/* CTA Section */} </div>
         </div>
       </section>
     </div>

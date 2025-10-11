@@ -341,7 +341,7 @@ const BlogPage: React.FC = () => {
         
         <Footer />
       </div>
-    </>
+    </div>
   );
 };
 

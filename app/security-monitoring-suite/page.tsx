@@ -1,8 +1,7 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import {
-    Shield,
+import {Helmet}}from 'react-helmet-async';
+import {Shield,}
   Eye,
   AlertTriangle,
   CheckCircle,
@@ -54,6 +53,10 @@ const SecurityMonitoringSuitePage: React.FC = () => {
     {
       icon: Zap,
       title: 'Automated Response',
+<<<<<<< HEAD
+      description: 'Automated incident response and threat mitigation to protect your systems 24/7.',}}
+  ]
+=======
       description: 'Automated incident response and threat mitigation to protect your systems 24/7.'
   };
     };
@@ -78,6 +81,7 @@ return ()
 return (
     <>
       <Helmet>
+>>>>>>> origin/main
         <title>Security Monitoring Suite - Zion Tech Group | Cybersecurity Platform</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />

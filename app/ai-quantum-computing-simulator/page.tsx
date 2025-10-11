@@ -1,9 +1,9 @@
 'use client';
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Cpu, Zap, Brain, Target, BarChart, Shield, Clock, Users, ArrowRight, Star, TrendingUp, Lock, FileText, DollarSign, CheckCircle, Phone, Mail, MapPin, Globe, Database, Settings, Calendar, Award, Rocket, Eye, MessageSquare, CheckSquare } from 'lucide-react';
+import React, {useState, useEffect}from 'react';
+import {Helmet}}from 'react-helmet-async';
+import {Cpu, Zap, Brain, Target, BarChart, Shield, Clock, Users, ArrowRight, Star, TrendingUp, Lock, FileText, DollarSign, CheckCircle, Phone, Mail, MapPin, Globe, Database, Settings, Calendar, Award, Rocket, Eye, MessageSquare, CheckSquare}}from 'lucide-react';
 
-const AIQuantumComputingSimulator: React.FC = () => {
+const AIQuantumComputingSimulator: React.FC = () => {,
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => 
@@ -25,6 +25,7 @@ const AIQuantumComputingSimulator: React.FC = () => {
     },
     {
       icon: Brain,
+>>>>>>> origin/main
       title: 'AI-Powered Optimization',
       description: 'Machine learning algorithms optimize quantum circuits for maximum efficiency and accuracy',
       benefits: [''Automated circuit optimization', 'Error correction suggestions', 'Performance prediction'']
@@ -48,7 +49,7 @@ const AIQuantumComputingSimulator: React.FC = () => {
       price: '$199',
       period: '/month',
       description: 'Perfect for academic research and small quantum projects',
-      features: [
+      features: [,
         'Up to 20 qubit simulation',
         'Basic quantum gates',
         'Standard visualization',
@@ -63,7 +64,7 @@ const AIQuantumComputingSimulator: React.FC = () => {
       price: '$499',
       period: '/month',
       description: 'Ideal for quantum software development and testing',
-      features: [
+      features: [,
         'Up to 35 qubit simulation',
         'Advanced quantum gates',
         '3D visualization suite',
@@ -80,7 +81,7 @@ const AIQuantumComputingSimulator: React.FC = () => {
       price: '$1,299',
       period: '/month',
       description: 'For large-scale quantum computing research and development',
-      features: [
+      features: [,
         'Up to 50 qubit simulation',
         'All quantum gates',
         'Advanced visualization',
@@ -104,22 +105,16 @@ const AIQuantumComputingSimulator: React.FC = () => {
       title: 'Quantum Algorithm Development',
       description: 'Develop and test quantum algorithms for optimization, cryptography, and machine learning',
       icon: Brain,
-      results: '50% faster algorithm development'
-    },
-    {
-      title: 'Quantum Machine Learning',
+      results: '50% faster algorithm development',},
+    {title: 'Quantum Machine Learning',
       description: 'Simulate quantum machine learning models and quantum neural networks',
       icon: Target,
-      results: 'Advanced quantum ML capabilities'
-    },
-    {
-      title: 'Cryptography Research',
+      results: 'Advanced quantum ML capabilities',},
+    {title: 'Cryptography Research',
       description: 'Test quantum cryptographic protocols and post-quantum security',
       icon: Lock,
-      results: 'Enhanced security analysis'
-    },
-    {
-      title: 'Quantum Chemistry',
+      results: 'Enhanced security analysis',},
+    {title: 'Quantum Chemistry',
       description: 'Simulate molecular systems and quantum chemical reactions',
       icon: Zap,
 <<<<<<< HEAD
@@ -145,14 +140,15 @@ const AIQuantumComputingSimulator: React.FC = () => {
   return (
     <>
       <Helmet>
+>>>>>>> origin/main
         <title>AI Quantum Computing Simulator - Advanced Quantum Simulation | Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered quantum computing simulator with up to 50 qubit simulation, quantum circuit optimization, and 3D visualization. Perfect for research and development." />
         <meta name="keywords" content="quantum computing simulator, quantum circuits, quantum algorithms, quantum machine learning, quantum simulation, quantum development" />
-        <meta property="og:title" content="AI Quantum Computing Simulator - Advanced Quantum Simulation" />
+        <meta property="og: title" content="AI Quantum Computing Simulator - Advanced Quantum Simulation" />,
         <meta property="og:description" content="Advanced AI-powered quantum computing simulator with up to 50 qubit simulation, quantum circuit optimization, and 3D visualization." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-quantum-computing-simulator" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-quantum-computing-simulator" />
+        <meta property="og: type" content="website" />,
+        <meta property="og: url" content="https://ziontechgroup.com/ai-quantum-computing-simulator" />,
+        <link rel="canonical" href="https: //ziontechgroup.com/ai-quantum-computing-simulator" />,
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">

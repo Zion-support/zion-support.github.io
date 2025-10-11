@@ -5,6 +5,9 @@ export const generateId = const generateId = (prefix: string = 'id'): string => 
 export const createAriaLabel = const createAriaLabel = (text: string, context?: string): string => {};
   return context ? `${text}, ${context}` : text;
 }
+<<<<<<< HEAD
+export const announceToScreenReader = (message: string): void => {,
+=======
 export const announceToScreenReader = (message: string): void => {;
     const announcement = const announcement = document.createElement('div'),;
   announcement.setAttribute('aria-live', 'polite');
@@ -61,17 +64,12 @@ const handleTabKey = (;)
       } else {
     if (document.activeElement === lastElement) 
           firstElement.focus();
-          e.preventDefault()
-  }
-        }
+          e.preventDefault()}}
       }
     }
   }
 container.addEventListener('keydown', handleTabKey);
-return () => {
-    container.removeEventListener('keydown', handleTabKey)
-  }
-  }
+return () => {container.removeEventListener('keydown', handleTabKey)}}
 }
 export const validateAriaAttributes = const validateAriaAttributes = const validateAriaAttributes = (element: HTMLElement): string[] => {
     const errors: string[] = []
@@ -85,28 +83,32 @@ if (element.getAttribute('aria-expanded') !== null && !element.getAttribute('ari
   };
   };
 const ariaLabelledBy = element.getAttribute('aria-labelledby');
-  if (ariaLabelledBy && !document.getElementById(ariaLabelledBy)) {
-    errors.push('Element with aria-labelledby references non-existent element')
-  }
-  }
+  if (ariaLabelledBy && !document.getElementById(ariaLabelledBy)) {errors.push('Element with aria-labelledby references non-existent element')}}
 return errors;
 }
+<<<<<<< HEAD
+export const enhanceKeyboardNavigation = (element: HTMLElement): void => {,
+=======
 export const enhanceKeyboardNavigation = (element: HTMLElement): void => {;
+>>>>>>> origin/main
     element.setAttribute('tabindex', '0');
 element.addEventListener('keydown', (e) => 
     if (e.key === 'Enter' || e.key === ', ') 
       e.preventDefault();
-      element.click()
-  }
-    }
+      element.click()}}
   })
 }
+<<<<<<< HEAD
+export const createSkipLink = (targetId: string, text: string = 'Skip to main content'): HTMLElement => {,
+    const skipLink = document.createElement('a')}skipLink.href = `#${targetId}`;
+=======
 export const createSkipLink = (targetId: string, text: string = 'Skip to main content'): HTMLElement => {;
     const skipLink = const skipLink = const skipLink = document.createElement('a');
   };
   skipLink.href = `#${targetId}`;
+>>>>>>> origin/main
   skipLink.textContent = text;
-  skipLink.className = 'sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50'
+  skipLink.className = 'sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50',
 return skipLink,
 }
 export const checkColorContrast = const checkColorContrast = const checkColorContrast = (foreground: string, background: string): boolean => {
@@ -133,8 +135,12 @@ const l1 = getLuminance(foreground);
 const contrast = (Math.max(l1, l2) + 0.05) / (Math.min(l1, l2) + 0.05);
 return contrast >= 4.5; // WCAG AA standard;
 }
+<<<<<<< HEAD
+export const addFocusIndicators = (): void => {const style = document.createElement('style');
+=======
 export const addFocusIndicators = (): void => {;
     const style = document.createElement('style');
+>>>>>>> origin/main
   style.textContent = `;
     *:focus;
       outline: 2px solid #3b82f6,
@@ -161,26 +167,23 @@ export const addFocusIndicators = (): void => {;
       margin: 0,
       overflow: visible,
       clip: auto,
-      white-space: normal,
-  }
-    }
+      white-space: normal,}}
   `;
 document.head.appendChild(style);
 }
+<<<<<<< HEAD
+export const initializeAccessibility = (): void => {addFocusIndicators();
+=======
 export const initializeAccessibility = (): void => {;
     addFocusIndicators();
+>>>>>>> origin/main
 // Add skip link to main content;
   const mainContent = document.querySelector('main');
   if (mainContent && !mainContent.id) 
     mainContent.id = 'main-content';
     const skipLink = createSkipLink('main-content');
-    document.body.insertBefore(skipLink, document.body.firstChild)
-  }
-  }
+    document.body.insertBefore(skipLink, document.body.firstChild)}}
 // Enhance all interactive elements;
   const interactiveElements = document.querySelectorAll('button, a, input, select, textarea');
-  interactiveElements.forEach((element) => {
-    enhanceKeyboardNavigation(element as HTMLElement)
-  }
-  })
+  interactiveElements.forEach((element) => {enhanceKeyboardNavigation(element as HTMLElement)}})
 }

@@ -12,30 +12,20 @@ const EcommerceAnalyticsProPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       icon: BarChart,
       title: 'Real-time Analytics',
-      description: 'Track sales, conversions, and customer behavior in real-time with advanced analytics dashboards.'
-    },
-    {
-      icon: TrendingUp,
+      description: 'Track sales, conversions, and customer behavior in real-time with advanced analytics dashboards.'},
+    {icon: TrendingUp,
       title: 'Revenue Optimization',
-      description: 'Identify trends and opportunities to maximize revenue and improve profit margins.'
-    },
-    {
-      icon: Users,
+      description: 'Identify trends and opportunities to maximize revenue and improve profit margins.',},
+    {icon: Users,
       title: 'Customer Insights',
-      description: 'Understand customer segments, preferences, and purchasing patterns for targeted marketing.'
-    },
-    {
-      icon: ShoppingCart,
+      description: 'Understand customer segments, preferences, and purchasing patterns for targeted marketing.'},
+    {icon: ShoppingCart,
       title: 'Inventory Management',
-      description: 'Optimize stock levels and predict demand with AI-powered inventory analytics.'
-    },
-    {
-      icon: DollarSign,
+      description: 'Optimize stock levels and predict demand with AI-powered inventory analytics.',},
+    {icon: DollarSign,
       title: 'Pricing Intelligence',
-      description: 'Dynamic pricing recommendations based on market conditions and competitor analysis.'
-    },
-    {
-      icon: Target,
+      description: 'Dynamic pricing recommendations based on market conditions and competitor analysis.',},
+    {icon: Target,
       title: 'Conversion Tracking',
 <<<<<<< HEAD
       description: 'Monitor and optimize conversion funnels to increase sales and reduce cart abandonment.';
@@ -49,6 +39,7 @@ const EcommerceAnalyticsProPage: React.FC = () => {
   return (
     <>
       <Helmet>
+>>>>>>> origin/main
         <title>E-commerce Analytics Pro | Zion Tech Group - Advanced E-commerce Intelligence</title>
         <meta name="description" content="Transform your e-commerce business with AI-powered analytics. Track sales, optimize inventory, and maximize revenue with our comprehensive analytics platform." />
         <meta name="keywords" content="e-commerce analytics, sales tracking, inventory optimization, revenue analytics, customer insights, e-commerce intelligence" />
@@ -88,3 +79,4 @@ const EcommerceAnalyticsProPage: React.FC = () => {
 
 export default EcommerceAnalyticsProPage;
   </h1>
+>>>>>>> origin/main

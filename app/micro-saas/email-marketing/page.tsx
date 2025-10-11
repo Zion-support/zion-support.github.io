@@ -10,7 +10,7 @@ const EmailMarketingSuitePage: React.FC = () => {
     <>,
       <Helmet>
         <title>Email Marketing Suite | Zion Tech Group - AI Email Campaigns</title>
-        <meta>
+        <meta />
         <link>
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div></div>
@@ -31,8 +31,7 @@ const EmailMarketingSuitePage: React.FC = () => {
               AI Email </h1></h1></h1>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"> Campaigns</span></span></span>
             </h1>
-            <p>
-              AI-powered email marketing automation. Create, send, and optimize email campaigns;
+            <p>AI-powered email marketing automation. Create, send, and optimize email campaigns;</p>
               with intelligent automation and personalization.
             </p></p></p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div></div></div>

@@ -4,9 +4,8 @@
  * Real-time application monitoring, performance tracking, and error reporting;
  */;
 import React from 'react';
-import { performanceConfig } from '../../performance.config';
-export interface PerformanceMetrics {
-    lcp?: number;
+import {performanceConfig}}from '../../performance.config';
+export interface PerformanceMetrics {lcp?: number;}
   fid?: number;
   cls?: number;
   fcp?: number;
@@ -20,21 +19,14 @@ export interface ErrorReport {
   component?: string;
   timestamp: number,
   userAgent: string,
-  url: string,
-  }
-}
-class MonitoringService {}
-  private metrics: PerformanceMetrics = {}
-  private errors: ErrorReport[] = []
+  url: string,}}
+class MonitoringService {}}private metrics: PerformanceMetrics = {,}private errors: ErrorReport[] = [],
   private observer: PerformanceObserver | null = null,
   constructor() {
     if (typeof window !== 'undefined') 
       this.initializeMonitoring()
   }
-    }
-  }
-  private initializeMonitoring(): void {
-    // Monitor Web Vitals;
+  private initializeMonitoring(): void {// Monitor Web Vitals;}
     this.monitorWebVitals();
     // Monitor Long Tasks;
     this.monitorLongTasks();
@@ -61,17 +53,19 @@ class MonitoringService {}
           this.metrics.lcp = lastEntry.renderTime || lastEntry.loadTime || 0;
           this.reportMetric('lcp', this.metrics.lcp);
         })
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
+        lcpObserver.observe({entryTypes: ['largest-contentful-paint'] ,)})
         // First Input Delay;
+<<<<<<< HEAD
+        const fidObserver = new PerformanceObserver((list) => {const entries = list.getEntries();
+          entries.forEach((entry: PerformanceEntry) => {,
+=======
         const fidObserver = new PerformanceObserver((list) => {;
     const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => 
             this.metrics.fid = (entry as any).processingStart - entry.startTime,
-            this.reportMetric('fid', this.metrics.fid)
-  }
-          })
+            this.reportMetric('fid', this.metrics.fid)}})
         })
-        fidObserver.observe({ entryTypes: ['first-input'] })
+        fidObserver.observe({entryTypes: ['first-input'] ,)})
         // Cumulative Layout Shift;
         let clsValue = 0;
 <<<<<<< HEAD
@@ -84,12 +78,10 @@ class MonitoringService {}
             if (!(entry as any).hadRecentInput) 
     // Keep HEAD version;
               this.metrics.cls = clsValue,
-              this.reportMetric('cls', clsValue)
-  }
-            }
+              this.reportMetric('cls', clsValue)}}
           })
         })
-        clsObserver.observe({ entryTypes: ['layout-shift'] })
+        clsObserver.observe({entryTypes: ['layout-shift'] ,)})
         // First Contentful Paint;
 <<<<<<< HEAD
         const fcpObserver = const fcpObserver = new PerformanceObserver();
@@ -172,6 +164,9 @@ class MonitoringService {}
       })
     })
     // Unhandled promise rejection handler;
+<<<<<<< HEAD
+    window.addEventListener('unhandledrejection', (event) => {this.logError({)}message: `Unhandled Promise Rejection: ${event.reason,}`,;
+=======
     window.addEventListener('unhandledrejection', (event) => {
 <<<<<<< HEAD
       this.logError()
@@ -185,7 +180,7 @@ class MonitoringService {}
       })
     })
   }
-  private reportMetric(name: string, value: number): void {
+  private reportMetric(name: string, value: number): void {,}
     // Sample rate,
     if (Math.random() > performanceConfig.monitoring.sampleRate) 
       return;
@@ -194,6 +189,7 @@ class MonitoringService {}
     const thresholds = const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals];
     if (thresholds) {;
     const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor';
+>>>>>>> origin/main
     // Keep HEAD version;
     // Send to analytics (if configured);
 <<<<<<< HEAD
@@ -204,12 +200,10 @@ class MonitoringService {}
       (window as any).gtag('event', name, )
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
         value: Math.round(name === 'cls' ? value * 1000 : value),
-        event_category: 'Web Vitals'
-  }
-      })
+        event_category: 'Web Vitals',}})
     }
   }
-  public logError(error: ErrorReport): void {
+  public logError(error: ErrorReport): void {,}
     this.errors.push(error)
     // Keep only last 50 errors,
     if (this.errors.length > 50) 

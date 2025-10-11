@@ -46,8 +46,9 @@ return() {features.map((feature, index) => ()
 return (
     <>
       <Helmet>
+>>>>>>> origin/main
         <title>Blockchain & Web3 Solutions - Zion Tech Group</title>
-        <meta>
+        <meta />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900"></div></div></div>
         <div className="container mx-auto px-4 py-16"></div></div></div>

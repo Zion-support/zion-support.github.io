@@ -21,6 +21,10 @@ const features = const features = const features = [
     {
       icon: Globe,
       title: 'Global Reach',
+<<<<<<< HEAD
+      description: 'Worldwide deployment and support for international businesses',}}
+  ]
+=======
       description: 'Worldwide deployment and support for international businesses'
   };
     };
@@ -45,6 +49,7 @@ return ()
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div></div>
       <Helmet>
+>>>>>>> origin/main
         <title>Page | Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
@@ -61,8 +66,7 @@ return (
           </div>
         </div>
       </section>
-      {/* Features Section */}
-            </p>
+      {/* Features Section */} </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div></div></div>)
               </div>)

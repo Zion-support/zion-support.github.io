@@ -12,20 +12,14 @@ const BlockchainPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       icon: Shield,
       title: 'Secure Blockchain Solutions',
-      description: 'Advanced blockchain technology with enterprise-grade security and compliance'
-    },
-    {
-      icon: Zap,
+      description: 'Advanced blockchain technology with enterprise-grade security and compliance',},
+    {icon: Zap,
       title: 'High Performance',
-      description: 'Lightning-fast blockchain transactions and smart contract execution'
-    },
-    {
-      icon: Brain,
+      description: 'Lightning-fast blockchain transactions and smart contract execution',},
+    {icon: Brain,
       title: 'AI-Powered Solutions',
-      description: 'Intelligent blockchain solutions powered by advanced AI technology'
-    },
-    {
-      icon: Globe,
+      description: 'Intelligent blockchain solutions powered by advanced AI technology',},
+    {icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide blockchain deployment and support for international businesses';
     };
@@ -153,6 +147,11 @@ const BlockchainPage: React.FC = () => {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+        {/* Services by Category */}{categories.map(category => ()
+          <section key={category}className="py-16 bg-gray-50">
+            <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,</div>
+=======
         {/* Services by Category */},
 <<<<<<< HEAD
     {categories.map()
@@ -248,6 +247,11 @@ const BlockchainPage: React.FC = () => {
               </div>
             </div>
           </section>
+<<<<<<< HEAD
+        ))}
+        {/* Blockchain Capabilities Showcase */} <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,</div>
+=======
         ))},
     {/* Blockchain Capabilities Showcase */}
 <<<<<<< HEAD

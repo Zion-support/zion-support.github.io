@@ -38,17 +38,14 @@ useEffect(() => {
 
       const style = document.createElement('style');
       style.textContent = `;
-        *:focus {
-    outline: 2px solid #06b6d4,
-          outline-offset: 2px,
-  }
-        }
+        *:focus {outline: 2px solid #06b6d4,}
+          outline-offset: 2px,}}
       `;
       document.head.appendChild(style);
     }
 enhanceUX();
   }, []);
-return <>{children}</>
+return <React.Fragment>{children</React.Fragment>}</React.Fragment>
 };
 
 export default UserExperienceEnhancer;

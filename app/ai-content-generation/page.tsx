@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import {Helmet}}from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
@@ -23,6 +23,7 @@ const AiContentGenerationPage: React.FC = () => {
     },
     {
       icon: BarChart,
+>>>>>>> origin/main
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: [''Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics'']
@@ -47,6 +48,7 @@ const AiContentGenerationPage: React.FC = () => {
   return (
     <>
       <Helmet>
+>>>>>>> origin/main
         <title>AI Content Generation - Zion Tech Group</title>
         <meta name="description" content="Advanced content generation powered by AI technology." />
         <meta name="keywords" content="AI content generation, artificial intelligence, content creation, AI solutions, intelligent writing" />
@@ -252,3 +254,22 @@ const AiContentGenerationPage: React.FC = () => {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+      <Footer />
+    </React.Fragment>
+  ),
+};
+
+export default AiContentGenerationPage;
+  </button>
+  </button>
+  </p>
+  </p>
+  </button>
+  </h2>
+  </button>
+  </button>
+  </h1>
+  </main>
+=======
+>>>>>>> origin/main

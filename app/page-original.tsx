@@ -1,8 +1,8 @@
 'use client';
 import React from 'react';
 'use client';
-import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
-import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import React, {useCallback, useState, useEffect, Suspense, lazy, memo}from 'react';
+import {Phone, Mail, MapPin, Clock}}from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
@@ -53,7 +53,7 @@ const ServiceCardSkeleton: React.FC = memo(() => (
 )
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton',
-const HomePage: React.FC = memo(() => {
+const HomePage: React.FC = memo(() => {,
     const [isLoaded, setIsLoaded] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 useEffect(() => 
@@ -63,9 +63,7 @@ useEffect(() =>
     const timer = setTimeout(() => setIsVisible(true), 100);
     // Preload components;
     preloadComponents();
-    return () => clearTimeout(timer)
-  }
-  }, []);
+    return () => clearTimeout(timer)}}, []);
   // Analytics tracking for phone clicks - optimized;
 <<<<<<< HEAD
   const handlePhoneClick = const handlePhoneClick = const handlePhoneClick = useCallback(() => {
@@ -88,8 +86,7 @@ useEffect(() =>
     }
   }, []);
 
-  return (
-    <>
+  return(<>)
       <SEOOptimizer>
       <PerformanceOptimizer>
       <AccessibilityEnhancer>

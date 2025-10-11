@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import {Helmet}}from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
@@ -23,6 +23,7 @@ const AiCrmAssistantPage: React.FC = () => {
     },
     {
       icon: BarChart,
+>>>>>>> origin/main
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: [''Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics'']
@@ -47,6 +48,7 @@ const AiCrmAssistantPage: React.FC = () => {
   return (
     <>
       <Helmet>
+>>>>>>> origin/main
         <meta name="description" content="Intelligent CRM assistant powered by AI technology." />
         <meta name="keywords" content="AI CRM assistant, artificial intelligence, customer relationship management, AI solutions, intelligent CRM" />
       </Helmet>
@@ -251,3 +253,22 @@ const AiCrmAssistantPage: React.FC = () => {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+      <Footer />
+    </React.Fragment>
+  ),
+};
+
+export default AiCrmAssistantPage;
+  </button>
+  </button>
+  </p>
+  </p>
+  </button>
+  </h2>
+  </button>
+  </button>
+  </h1>
+  </main>
+=======
+>>>>>>> origin/main

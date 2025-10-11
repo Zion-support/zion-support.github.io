@@ -12,20 +12,14 @@ const ARVRPlatformPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       icon: Brain,
       title: 'AI-Powered AR/VR',
-      description: 'Advanced AI technology to create immersive augmented and virtual reality experiences'
-    },
-    {
-      icon: Zap,
+      description: 'Advanced AI technology to create immersive augmented and virtual reality experiences',},
+    {icon: Zap,
       title: 'Real-Time Rendering',
-      description: 'Lightning-fast 3D rendering and real-time interaction for optimal user experience'
-    },
-    {
-      icon: Shield,
+      description: 'Lightning-fast 3D rendering and real-time interaction for optimal user experience',},
+    {icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards for your AR/VR data'
-    },
-    {
-      icon: Globe,
+      description: 'Bank-level security with encryption and compliance standards for your AR/VR data',},
+    {icon: Globe,
       title: 'Cross-Platform Support',
       description: 'Deploy across multiple devices and platforms for maximum reach and accessibility';
     };
@@ -60,8 +54,7 @@ const ARVRPlatformPage: React.FC = () => {
               <br />
               <span className="text-white">Solutions</span></span></span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced AR/VR platform solutions. 
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your business with our advanced AR/VR platform solutions.</p>
               Powered by cutting-edge AI technology and industry expertise.
             </p></p></p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -69,7 +62,7 @@ const ARVRPlatformPage: React.FC = () => {
                 Get Started;
                 </button></button><ArrowRight className="ml-2 h-5 w-5" />
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-gray-900 transition-all duration-300">,</button>
                 Learn More,
   </button></button></
             </div>

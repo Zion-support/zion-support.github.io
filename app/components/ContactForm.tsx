@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
+import React, {useState}from 'react';
+import {Mail, Phone, MapPin, Send, CheckCircle, AlertCircle}}from 'lucide-react';
 
-interface FormData {
-  name: string,
+interface FormData {name: string,}
   email: string,
   company: string,
   phone: string,
@@ -40,6 +39,11 @@ interface FormStatus {
     message: '')
   })
 
+<<<<<<< HEAD
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {,
+    const {name, value}}= e.target;
+    setFormData(prev => ({)
+=======
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
     const  name, value } = e.target;
     setFormData(prev => ({
@@ -49,7 +53,11 @@ interface FormStatus {
     }));
   }
 
+<<<<<<< HEAD
+  const handleSubmit = async (e: React.FormEvent) => {,
+=======
   const handleSubmit = async (e: React.FormEvent) => {;
+>>>>>>> origin/main
     e.preventDefault();
     setStatus( type: 'loading', message: 'Sending message...' })
 

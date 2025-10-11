@@ -1,10 +1,9 @@
 'use client';
 import React from 'react';
 'use client';
-import React, { useState, useCallback } from 'react';
-import { Helmet } from 'react-helmet-async';
-import {
-    Phone,
+import React, {useState, useCallback}from 'react';
+import {Helmet}}from 'react-helmet-async';
+import {Phone,}
   Mail,
 
   MapPin,
@@ -47,7 +46,11 @@ const handleInputChange = const handleInputChange = const handleInputChange = us
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     }));
   }, []);
+<<<<<<< HEAD
+const handleSubmit = async (e: React.FormEvent) => {,
+=======
 const handleSubmit = async (e: React.FormEvent) => {;
+>>>>>>> origin/main
     e.preventDefault();
     setIsSubmitting(true)
     setSubmitStatus('idle')
@@ -117,6 +120,12 @@ const contactInfo = const contactInfo = const contactInfo = [
       icon: Clock,
       title: 'Business Hours',
       details: 'Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM',
+<<<<<<< HEAD
+      description: 'Eastern Time',}}
+  ]
+return(<>)
+      <Helmet />
+=======
       description: 'Eastern Time'
   };
     };
@@ -178,6 +187,7 @@ return ()
 return (
     <>
       <Helmet>
+>>>>>>> origin/main
         <title>Contact Us - Zion Tech Group | Get in Touch</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
@@ -192,8 +202,7 @@ return (
                 {', '}Touch;
               </span></span></span>
             </h1>
-            <p>
-              Ready to transform your business? Let's discuss your project and explore;
+            <p>Ready to transform your business? Let's discuss your project and explore;</p>
               how our AI and IT solutions can help you achieve your goals.
             </p></p></p>
           </div>
@@ -262,10 +271,7 @@ return (
                     <Globe>
                     <select>
                       <option value="">Select a service</option>
-                      {
-    services.map((service) => (
-  }
-                        <option>
+                      {services.map((service) => (} <option>
 
                           {service})
                         </option>)

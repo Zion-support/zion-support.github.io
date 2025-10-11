@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import {Helmet}}from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
@@ -23,6 +23,7 @@ const AiBlockchainAnalyticsPage: React.FC = () => {
     },
     {
       icon: BarChart,
+>>>>>>> origin/main
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: [''Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics'']
@@ -47,6 +48,7 @@ const AiBlockchainAnalyticsPage: React.FC = () => {
   return (
     <>
       <Helmet>
+>>>>>>> origin/main
         <meta name="description" content="Advanced blockchain analytics powered by AI for comprehensive insights." />
         <meta name="keywords" content="AI blockchain analytics, artificial intelligence, blockchain technology, AI solutions, crypto analytics" />
       </Helmet>
@@ -254,3 +256,19 @@ const AiBlockchainAnalyticsPage: React.FC = () => {
       <Footer / /></Footer>
     </div>
   ),
+<<<<<<< HEAD
+};
+
+export default PagePage;
+  </button>
+  </button>
+  </p>
+  </p>
+  </button>
+  </h2>
+  </button>
+  </button>
+  </h1>
+  </main>
+=======
+>>>>>>> origin/main

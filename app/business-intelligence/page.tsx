@@ -14,6 +14,7 @@ const BusinessIntelligencePage: React.FC = () => {
     
     }
   ];];];
+>>>>>>> origin/main
   const benefits = [
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     'Advanced AI technology integration',

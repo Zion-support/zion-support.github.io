@@ -1,8 +1,7 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import {
-    BarChart,
+import {Helmet}}from 'react-helmet-async';
+import {BarChart,}
   TrendingUp,
   Database,
   CheckCircle,
@@ -53,6 +52,10 @@ const DataAnalyticsPage: React.FC = () => {
     {
       icon: TrendingUp,
       title: 'Predictive Analytics',
+<<<<<<< HEAD
+      description: 'Forecast future trends and make data-driven decisions with predictive modeling.',}}
+  ]
+=======
       description: 'Forecast future trends and make data-driven decisions with predictive modeling.'
   };
     };
@@ -77,6 +80,7 @@ return ()
 return (
     <>
       <Helmet>
+>>>>>>> origin/main
         <title>Data Analytics Services - Zion Tech Group | Business Intelligence</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />

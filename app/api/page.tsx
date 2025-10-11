@@ -1,13 +1,13 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Code, Database, Zap, Shield, Globe, Cpu, BarChart, Users, Settings, ArrowRight, CheckCircle, Star, ExternalLink } from 'lucide-react';
+import {Helmet}}from 'react-helmet-async';
+import {Code, Database, Zap, Shield, Globe, Cpu, BarChart, Users, Settings, ArrowRight, CheckCircle, Star, ExternalLink}}from 'lucide-react';
 
 const ApiPage: React.FC = () => {
   const apiEndpoints = const apiEndpoints = const apiEndpoints = [
     {
       category: 'AI Services',
-      endpoints: [
+      endpoints: [,
         {
           method: 'POST',
           path: '/api/ai/chat',
@@ -26,8 +26,7 @@ const ApiPage: React.FC = () => {
             }
           }
         },
-        {
-          method: 'POST',
+        {method: 'POST',
           path: '/api/ai/analyze',
           description: 'Data analysis and insights',
           parameters: ['data', 'analysis_type', 'options'],
@@ -44,8 +43,7 @@ const ApiPage: React.FC = () => {
             }
           }
         },
-        {
-          method: 'POST',
+        {method: 'POST',
           path: '/api/ai/generate-content',
           description: 'AI content generation',
           parameters: ['prompt', 'type', 'length', 'style'],
@@ -65,9 +63,8 @@ const ApiPage: React.FC = () => {
         };
       ];
     },
-    {
-      category: 'IT Services',
-      endpoints: [
+    {category: 'IT Services',
+      endpoints: [,
         {
           method: 'GET',
           path: '/api/infrastructure/status',
@@ -78,12 +75,9 @@ const ApiPage: React.FC = () => {
             response: {,
       status: "healthy",
               uptime: "99.9%",
-              last_check: "2024-01-15T10:30:00Z"
-            }
-          }
+              last_check: "2024-01-15T10:30:00Z",}}
         },
-        {
-          method: 'POST',
+        {method: 'POST',
           path: '/api/security/scan',
           description: 'Security vulnerability scan',
           parameters: ['target', 'scan_type', 'options'],
@@ -96,15 +90,12 @@ const ApiPage: React.FC = () => {
             response: {,
       vulnerabilities: [],
               score: 95,
-              recommendations: ["Keep SSL certificates updated"]
-            }
-          }
+              recommendations: ["Keep SSL certificates updated"],}}
         }
   ]
     },
-    {
-      category: 'Micro SaaS',
-      endpoints: [
+    {category: 'Micro SaaS',
+      endpoints: [,
         {
           method: 'GET',
           path: '/api/analytics/dashboard',
@@ -123,8 +114,7 @@ const ApiPage: React.FC = () => {
             }
           }
         },
-        {
-          method: 'POST',
+        {method: 'POST',
           path: '/api/email/send',
           description: 'Send transactional emails',
           parameters: ['to', 'template', 'data'],
@@ -137,9 +127,7 @@ const ApiPage: React.FC = () => {
             response: {,
       message_id: "msg_123456",
               status: "sent",
-              delivery_time: "2024-01-15T10:30:15Z"
-            }
-          }
+              delivery_time: "2024-01-15T10:30:15Z",}}
         }
   ]
     }
@@ -149,16 +137,12 @@ const ApiPage: React.FC = () => {
       name: 'API Key',
       description: 'Simple API key authentication',
       example: 'Authorization: Bearer sk-1234567890abcdef',
-      security: 'High'
-    },
-    {
-      name: 'OAuth 2.0',
+      security: 'High',},
+    {name: 'OAuth 2.0',
       description: 'Industry-standard OAuth 2.0 flow',
       example: 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...',
-      security: 'Very High'
-    },
-    {
-      name: 'JWT Token',
+      security: 'Very High',},
+    {name: 'JWT Token',
       description: 'JSON Web Token authentication',
       example: 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...',
       security: 'High';
@@ -178,10 +162,11 @@ const ApiPage: React.FC = () => {
   return (
     <>
       <Helmet>
+>>>>>>> origin/main
         <title>API Reference - Zion Tech Group</title>
         <meta name="description" content="Complete API reference for Zion Tech Group's AI, IT, and Micro SaaS services. Get started with our comprehensive API documentation." />
         <meta name="keywords" content="API, documentation, AI API, IT services API, micro SaaS API, developer tools" />
-        <link rel="canonical" href="https://ziontechgroup.com/api" />
+        <link rel="canonical" href="https: //ziontechgroup.com/api" />,
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

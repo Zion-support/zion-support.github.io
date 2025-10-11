@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+  private observers: PerformanceObserver[] = [],
+constructor() {this.initializeMetrics()}}
+private initializeMetrics(): void {if (typeof window === 'undefined' || !('performance' in window)) return;}
+=======
 private observers: PerformanceObserver[] = [],
 constructor() {
     this.initializeMetrics()
@@ -5,6 +10,7 @@ constructor() {
   }
 private initializeMetrics(): void {
     if (typeof window === 'undefined' || !('performance' in window)) return;
+>>>>>>> origin/main
 // Measure page load time;
     window.addEventListener('load', () => 
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -27,7 +33,7 @@ private measureCoreWebVitals(): void {
 // Cumulative Layout Shift;
     this.observeCLS();
   }
-private observePaint(type: string, callback: (entry: PerformanceEntry) => void): void {
+private observePaint(type: string, callback: (entry: PerformanceEntry) => void): void {,}
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return,
 try {
 <<<<<<< HEAD
@@ -46,9 +52,12 @@ try {
       });
       observer.observe({ entryTypes: ['paint'] });
       this.observers.push(observer);
-    } catch (error) {
-    console.warn('PerformanceObserver not supported:', error)
+    } catch (error) {console.warn('PerformanceObserver not supported:', error)}}
   }
+<<<<<<< HEAD
+private observeLCP(): void {if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;}
+try {const observer = new PerformanceObserver((list) => {}
+=======
     }
   }
 private observeLCP(): void {
@@ -67,8 +76,7 @@ try
       });
       observer.observe({ entryTypes: ['largest-contentful-paint'] });
       this.observers.push(observer);
-    } catch (error) {
-    console.warn('LCP observer not supported:', error)
+    } catch (error) {console.warn('LCP observer not supported:', error)}}
   }
     }
   }
@@ -89,8 +97,7 @@ try {
       });
       observer.observe({ entryTypes: ['first-input'] });
       this.observers.push(observer);
-    } catch (error) {
-    console.warn('FID observer not supported:', error)
+    } catch (error) {console.warn('FID observer not supported:', error)}}
   }
     }
   }
@@ -114,10 +121,9 @@ try {
         };
         this.metrics.cumulativeLayoutShift = clsValue;
       })
-      observer.observe({ entryTypes: ['layout-shift'] })
+      observer.observe({entryTypes: ['layout-shift'] ,)})
       this.observers.push(observer);
-    } catch (error) {
-    console.warn('CLS observer not supported:', error)
+    } catch (error) {console.warn('CLS observer not supported:', error)}}
   }
     }
   }
@@ -201,9 +207,7 @@ export const debounce = <T extends (...args: any[]) => any>(,
     let timeout: NodeJS.Timeout;
 return ((...args: Parameters<T>) => 
     clearTimeout(timeout),
-    timeout = setTimeout(() => func(...args), wait)
-  }
-  }) as T;
+    timeout = setTimeout(() => func(...args), wait)}}) as T;
 }
 <<<<<<< HEAD
 export const throttle = const throttle = const throttle = <T extends (...args: any[]) => any>()
@@ -246,7 +250,12 @@ export const preloadImage = (src: string): Promise<void> => {;
   }
   })
 }
+<<<<<<< HEAD
+export const preloadImages = (srcs: string[]): Promise<void[]> => {,
+    return Promise.all(srcs.map(preloadImage))}}
+=======
 export const preloadImages = (srcs: string[]): Promise<void[]> => {;
     return Promise.all(srcs.map(preloadImage)
   }
 }
+>>>>>>> origin/main

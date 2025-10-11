@@ -2,11 +2,10 @@
  * Enhanced Performance Hook;
  * Combines performance monitoring, error tracking, and analytics;
  */;
-import { useEffect, useCallback, useRef } from 'react';
-import { errorTracker } from '../utils/enhancedErrorTracking';
-import { analytics } from '../utils/enhancedAnalytics';
-export interface UseEnhancedPerformanceOptions {
-    component?: string;
+import {useEffect, useCallback, useRef}}from 'react';
+import {errorTracker}}from '../utils/enhancedErrorTracking';
+import {analytics}}from '../utils/enhancedAnalytics';
+export interface UseEnhancedPerformanceOptions {component?: string;}
   trackErrors?: boolean;
   trackPerformance?: boolean;
   trackAnalytics?: boolean;
@@ -22,6 +21,7 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
   } = _options;const _renderCountRef = useRef<number>(0);
 useEffect(() => {
     mountTimeRef.current = performance.now();
+>>>>>>> origin/main
     renderCountRef.current = 0;
 // Track component mount;
     if (trackAnalytics) 
@@ -43,15 +43,10 @@ return () => {
             component,)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
             Math.round(duration);
-          )
-  }
-        }
+          )}}
       }
 // Track component unmount;
-      if (trackAnalytics) {
-    analytics.trackCustomEvent('Component', 'Unmounted', component)
-  }
-      }
+      if (trackAnalytics) {analytics.trackCustomEvent('Component', 'Unmounted', component)}}
     }
   }, [component, trackAnalytics, trackPerformance]);
 // Track render performance;
@@ -87,6 +82,7 @@ const trackError = useCallback(;)
   })
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
         })
+>>>>>>> origin/main
       },
     [component, trackErrors];
   );
@@ -134,11 +130,17 @@ return duration;
       },
     [component, trackPerformance]
   );
+<<<<<<< HEAD
+return {trackError,;}
+    trackUserAction,;
+    measureOperation,}}
+=======
 return {
     trackError,
     trackUserAction,
     measureOperation,
   }
   }
+>>>>>>> origin/main
 }
 export default useEnhancedPerformance;
