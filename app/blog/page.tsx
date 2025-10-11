@@ -1,24 +1,10 @@
-<<<<<<< HEAD
 'use client';
 
-import React, { useState, useEffect, useMemo } from 'react';
-import { Helmet } from 'react-helmet-async';
-'use client';
-
-import React, { useState, useEffect, useMemo } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Search, Calendar, User, Clock, ArrowRight, Tag } from 'lucide-react';
-
-=======
-import { Search, Calendar, User, Clock, ArrowRight } from 'lucide-react';
-
-=======
 import React, { useState, useEffect } from 'react';
 import { Calendar, Clock, User, Tag, ArrowRight, Search } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
->>>>>>> cursor/fix-errors-and-merge-to-main-529a
 
 interface BlogPost {
   id: string;
@@ -28,115 +14,60 @@ interface BlogPost {
   author: string;
   date: string;
   readTime: string;
-  category: string;
   tags: string[];
   image: string;
-  featured: boolean;
 }
 
-<<<<<<< HEAD
-=======
-const blogPosts: BlogPost[] = [
-  {
-    id: '1',
-    title: 'The Future of AI in Enterprise Solutions',
-    excerpt: 'Exploring how artificial intelligence is transforming enterprise operations and what businesses need to know.',
-    content: 'Full article content here...',
-    author: 'Dr. Sarah Johnson',
-    date: '2024-01-15',
-    readTime: '5 min read',
-    category: 'AI',
-    tags: ['AI', 'Enterprise', 'Technology'],
-    image: '/api/placeholder/400/200',
-    featured: true
-  },
-  {
-    id: '2',
-    title: 'Cloud Computing Best Practices for 2024',
-    excerpt: 'Essential strategies for optimizing cloud infrastructure and maximizing ROI in the modern digital landscape.',
-    content: 'Full article content here...',
-    author: 'Michael Chen',
-    date: '2024-01-12',
-    readTime: '7 min read',
-    category: 'Cloud',
-    tags: ['Cloud', 'Infrastructure', 'Best Practices'],
-    image: '/api/placeholder/400/200',
-    featured: false
-  },
-  {
-    id: '3',
-    title: 'Cybersecurity Trends Every Business Should Know',
-    excerpt: 'Stay ahead of emerging threats with our comprehensive guide to cybersecurity trends and best practices.',
-    content: 'Full article content here...',
-    author: 'Lisa Rodriguez',
-    date: '2024-01-10',
-    readTime: '6 min read',
-    category: 'Security',
-    tags: ['Cybersecurity', 'Security', 'Business'],
-    image: '/api/placeholder/400/200',
-    featured: true
-  }
-];
->>>>>>> cursor/fix-errors-and-merge-to-main-529a
-
 const BlogPage: React.FC = () => {
+  const [posts, setPosts] = useState<BlogPost[]>([]);
+  const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>([]);
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [filteredPosts, setFilteredPosts] = useState(blogPosts);
-
-<<<<<<< HEAD
-=======
-  const blogPosts: BlogPost[] = useMemo(() => [
-=======
-const blogPosts: BlogPost[] = useMemo(() => [
-
-    {
-      id: '1',
-      title: 'The Future of AI in Enterprise Solutions',
-      excerpt: 'Exploring how artificial intelligence is transforming enterprise operations and what businesses need to know.',
-      content: 'Full article content here...',
-      author: 'Dr. Sarah Johnson',
-      date: '2024-01-15',
-      readTime: '5 min read',
-      category: 'AI',
-      tags: ['AI', 'Enterprise', 'Technology'],
-      image: '/api/placeholder/400/200',
-      featured: true
-    },
-    {
-      id: '2',
-      title: 'Cloud Migration Best Practices',
-      excerpt: 'A comprehensive guide to migrating your infrastructure to the cloud successfully.',
-      content: 'Full article content here...',
-      author: 'Mike Chen',
-      date: '2024-01-10',
-      readTime: '7 min read',
-      category: 'Cloud',
-      tags: ['Cloud', 'Migration', 'Infrastructure'],
-      image: '/api/placeholder/400/200',
-      featured: false
-    },
-    {
-      id: '3',
-      title: 'Cybersecurity Trends for 2024',
-      excerpt: 'The latest cybersecurity threats and how to protect your organization.',
-      content: 'Full article content here...',
-      author: 'Alex Rodriguez',
-      date: '2024-01-05',
-      readTime: '6 min read',
-      category: 'Security',
-      tags: ['Cybersecurity', 'Security', 'Trends'],
-      image: '/api/placeholder/400/200',
-      featured: true
-    }
-  ], []);
-  const categories = ['all', 'AI', 'Cloud', 'Security', 'Development', 'DevOps'];
-=======
-  const categories = ['All', 'AI', 'Cloud', 'Security', 'Development'];
->>>>>>> cursor/fix-errors-and-merge-to-main-529a
+  const [selectedTag, setSelectedTag] = useState('');
 
   useEffect(() => {
-    let filtered = blogPosts;
+    // Sample blog posts data
+    const samplePosts: BlogPost[] = [
+      {
+        id: '1',
+        title: 'The Future of AI in Business',
+        excerpt: 'Exploring how artificial intelligence is transforming modern business operations.',
+        content: 'Full article content here...',
+        author: 'John Doe',
+        date: '2024-01-15',
+        readTime: '5 min read',
+        tags: ['AI', 'Business', 'Technology'],
+        image: '/api/placeholder/600/300'
+      },
+      {
+        id: '2',
+        title: 'Cloud Computing Best Practices',
+        excerpt: 'Essential strategies for successful cloud migration and management.',
+        content: 'Full article content here...',
+        author: 'Jane Smith',
+        date: '2024-01-10',
+        readTime: '7 min read',
+        tags: ['Cloud', 'DevOps', 'Infrastructure'],
+        image: '/api/placeholder/600/300'
+      },
+      {
+        id: '3',
+        title: 'Cybersecurity Trends 2024',
+        excerpt: 'Latest cybersecurity trends and how to protect your business.',
+        content: 'Full article content here...',
+        author: 'Mike Johnson',
+        date: '2024-01-05',
+        readTime: '6 min read',
+        tags: ['Security', 'Cybersecurity', 'Trends'],
+        image: '/api/placeholder/600/300'
+      }
+    ];
+    
+    setPosts(samplePosts);
+    setFilteredPosts(samplePosts);
+  }, []);
+
+  useEffect(() => {
+    let filtered = posts;
 
     if (searchTerm) {
       filtered = filtered.filter(post =>
@@ -146,163 +77,132 @@ const blogPosts: BlogPost[] = useMemo(() => [
       );
     }
 
-    if (selectedCategory !== 'All') {
-      filtered = filtered.filter(post => post.category === selectedCategory);
+    if (selectedTag) {
+      filtered = filtered.filter(post =>
+        post.tags.some(tag => tag.toLowerCase() === selectedTag.toLowerCase())
+      );
     }
 
     setFilteredPosts(filtered);
-  }, [searchTerm, selectedCategory]);
+  }, [posts, searchTerm, selectedTag]);
 
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+  const allTags = Array.from(new Set(posts.flatMap(post => post.tags)));
 
-const BlogPage: React.FC = () => {
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
         <title>Blog - Zion Tech Group</title>
-        <meta name="description" content="Latest insights and updates from Zion Tech Group." />
+        <meta name="description" content="Latest insights and articles on technology, AI, and business solutions." />
       </Helmet>
       <Navigation />
-      <main className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+      <main className="min-h-screen bg-gray-50">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Blog
+              Our Blog
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Latest insights and updates from Zion Tech Group.
+              Stay updated with the latest insights, trends, and innovations in technology and business.
             </p>
           </div>
-          
-          <div className="text-center">
-            <p className="text-gray-600">Blog posts coming soon...</p>
-          </div>
-        </div>
-      </main>
-      <Footer />
-=======
-        <title>Blog | Zion Tech Group</title>
-        <meta name="description" content="Latest insights and articles on AI, cloud computing, cybersecurity, and technology trends from Zion Tech Group." />
-        <meta name="keywords" content="tech blog, AI articles, cloud computing, cybersecurity, technology insights" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-        <Navigation />
 
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Tech
-              <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
-                Insights
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Stay updated with the latest trends, insights, and innovations in AI, cloud computing, and technology.
-            </p>
-          </div>
-        </section>
-
-        {/* Search and Filter Section */}
-        <section className="py-12 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="flex flex-col md:flex-row gap-4 mb-8">
-              <div className="relative flex-1">
+          {/* Search and Filter */}
+          <div className="mb-12">
+            <div className="max-w-2xl mx-auto mb-8">
+              <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="text"
                   placeholder="Search articles..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </div>
-              <div className="flex gap-2">
-                {categories.map((category) => (
-                  <button
-                    key={category}
-                    onClick={() => setSelectedCategory(category)}
-                    className={`px-4 py-2 rounded-lg transition-all duration-300 ${
-                      selectedCategory === category
-                        ? 'bg-blue-500 text-white'
-                        : 'bg-white/10 text-gray-300 hover:bg-white/20'
-                    }`}
-                  >
-                    {category}
-                  </button>
-                ))}
-              </div>
             </div>
-          </div>
-        </section>
 
-        {/* Blog Posts Section */}
-        <section className="py-12 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredPosts.map((post) => (
-                <article key={post.id} className="bg-white/10 backdrop-blur-lg rounded-2xl overflow-hidden border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <div className="aspect-video bg-gradient-to-br from-blue-500 to-purple-600 relative">
-                    <img
-                      src={post.image}
-                      alt={post.title}
-                      className="w-full h-full object-cover"
-                    />
-                    {post.featured && (
-                      <div className="absolute top-4 left-4 bg-yellow-500 text-black px-2 py-1 rounded-full text-sm font-semibold">
-                        Featured
-                      </div>
-                    )}
-                  </div>
-                  <div className="p-6">
-                    <div className="flex items-center gap-4 text-sm text-gray-400 mb-3">
-                      <span className="flex items-center gap-1">
-                        <Calendar className="w-4 h-4" />
-                        {post.date}
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <Clock className="w-4 h-4" />
-                        {post.readTime}
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <User className="w-4 h-4" />
-                        {post.author}
-                      </span>
-                    </div>
-                    <h3 className="text-xl font-semibold text-white mb-3 line-clamp-2">
-                      {post.title}
-                    </h3>
-                    <p className="text-gray-300 mb-4 line-clamp-3">
-                      {post.excerpt}
-                    </p>
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-2">
-                        <Tag className="w-4 h-4 text-blue-400" />
-                        <span className="text-sm text-blue-400">{post.category}</span>
-                      </div>
-                      <button className="flex items-center gap-1 text-blue-400 hover:text-blue-300 transition-colors">
-                        Read More
-                        <ArrowRight className="w-4 h-4" />
-                      </button>
-                    </div>
-                  </div>
-                </article>
+            <div className="flex flex-wrap justify-center gap-2">
+              <button
+                onClick={() => setSelectedTag('')}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                  selectedTag === '' 
+                    ? 'bg-blue-600 text-white' 
+                    : 'bg-white text-gray-600 hover:bg-gray-100'
+                }`}
+              >
+                All
+              </button>
+              {allTags.map(tag => (
+                <button
+                  key={tag}
+                  onClick={() => setSelectedTag(tag)}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                    selectedTag === tag 
+                      ? 'bg-blue-600 text-white' 
+                      : 'bg-white text-gray-600 hover:bg-gray-100'
+                  }`}
+                >
+                  {tag}
+                </button>
               ))}
             </div>
           </div>
-        </section>
 
-        <Footer />
-      </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-529a
+          {/* Blog Posts Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredPosts.map(post => (
+              <article key={post.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                <div className="h-48 bg-gray-200">
+                  <img 
+                    src={post.image} 
+                    alt={post.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <div className="flex items-center text-sm text-gray-500 mb-3">
+                    <User className="w-4 h-4 mr-1" />
+                    <span className="mr-4">{post.author}</span>
+                    <Calendar className="w-4 h-4 mr-1" />
+                    <span className="mr-4">{new Date(post.date).toLocaleDateString()}</span>
+                    <Clock className="w-4 h-4 mr-1" />
+                    <span>{post.readTime}</span>
+                  </div>
+                  
+                  <h2 className="text-xl font-semibold text-gray-900 mb-3 line-clamp-2">
+                    {post.title}
+                  </h2>
+                  
+                  <p className="text-gray-600 mb-4 line-clamp-3">
+                    {post.excerpt}
+                  </p>
+                  
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {post.tags.map(tag => (
+                      <span key={tag} className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                        <Tag className="w-3 h-3 mr-1" />
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  
+                  <button className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                    Read More
+                    <ArrowRight className="w-4 h-4 ml-1" />
+                  </button>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          {filteredPosts.length === 0 && (
+            <div className="text-center py-12">
+              <p className="text-gray-500 text-lg">No articles found matching your criteria.</p>
+            </div>
+          )}
+        </div>
+      </main>
+      <Footer />
     </>
   );
 };

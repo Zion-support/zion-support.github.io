@@ -1,42 +1,52 @@
 #!/usr/bin/env python3
 """
-Script to automatically resolve merge conflicts by choosing the newer version
-(after ======= marker) and removing conflict markers.
+Script to automatically resolve merge conflicts by keeping the latest version
 """
-
 import os
 import re
 import glob
 
 def fix_merge_conflicts(file_path):
-    """Fix merge conflicts in a single file."""
+    """Fix merge conflicts in a single file"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # Check if file has merge conflicts
-        if '<<<<<<< HEAD' not in content:
+        # Pattern to match merge conflict markers
+        conflict_pattern = r'<<<<<<< HEAD.*?=======.*?=======.*?>>>>>>> cursor/fix-errors-and-merge-to-main-529a'
+        
+        # Find all conflicts
+        conflicts = re.findall(conflict_pattern, content, re.DOTALL)
+        
+        if not conflicts:
             return False
         
-        # Pattern to match merge conflict blocks
-        conflict_pattern = r'<<<<<<< HEAD.*?=======(.*?)>>>>>>> [^\n]+'
-        
-        # Replace conflicts with the newer version (after =======)
+        # For each conflict, keep the latest version (after the last =======)
         def replace_conflict(match):
-            newer_content = match.group(1)
-            # Clean up any remaining conflict markers
-            newer_content = re.sub(r'<<<<<<< HEAD.*?=======', '', newer_content, flags=re.DOTALL)
-            newer_content = re.sub(r'>>>>>>> [^\n]+', '', newer_content)
-            return newer_content.strip()
+            conflict_text = match.group(0)
+            # Split by ======= and take the last part (after the last =======)
+            parts = conflict_text.split('=======')
+            if len(parts) >= 2:
+                # Take the last part and remove the >>>>>>> line
+                last_part = parts[-1]
+                # Remove the >>>>>>> line
+                lines = last_part.split('\n')
+                # Find the line with >>>>>>>
+                for i, line in enumerate(lines):
+                    if '>>>>>>>' in line:
+                        # Keep everything before this line
+                        return '\n'.join(lines[:i])
+                return last_part
+            return conflict_text
         
-        # Apply the replacement
+        # Replace all conflicts
         new_content = re.sub(conflict_pattern, replace_conflict, content, flags=re.DOTALL)
         
-        # Clean up any remaining conflict markers
-        new_content = re.sub(r'<<<<<<< HEAD.*?=======', '', new_content, flags=re.DOTALL)
-        new_content = re.sub(r'>>>>>>> [^\n]+', '', new_content)
+        # Also handle simple conflicts without multiple ======= markers
+        simple_conflict_pattern = r'<<<<<<< HEAD.*?=======.*?>>>>>>> cursor/fix-errors-and-merge-to-main-529a'
+        new_content = re.sub(simple_conflict_pattern, replace_conflict, new_content, flags=re.DOTALL)
         
-        # Write the cleaned content back
+        # Write the fixed content back
         with open(file_path, 'w', encoding='utf-8') as f:
             f.write(new_content)
         
@@ -48,26 +58,21 @@ def fix_merge_conflicts(file_path):
         return False
 
 def main():
-    """Main function to process all files with merge conflicts."""
-    # Get all TypeScript/JavaScript files in the app directory
-    patterns = [
-        'app/**/*.tsx',
-        'app/**/*.ts',
-        'app/**/*.js',
-        'app/**/*.jsx'
-    ]
+    """Main function to process all files with merge conflicts"""
+    # Get all TypeScript/TSX files in the app directory
+    pattern = "app/**/*.{ts,tsx}"
+    files = glob.glob(pattern, recursive=True)
     
-    files_processed = 0
-    files_fixed = 0
+    fixed_count = 0
+    total_files = len(files)
     
-    for pattern in patterns:
-        for file_path in glob.glob(pattern, recursive=True):
-            files_processed += 1
-            if fix_merge_conflicts(file_path):
-                files_fixed += 1
+    print(f"Processing {total_files} files...")
     
-    print(f"\nProcessed {files_processed} files")
-    print(f"Fixed merge conflicts in {files_fixed} files")
+    for file_path in files:
+        if fix_merge_conflicts(file_path):
+            fixed_count += 1
+    
+    print(f"Fixed merge conflicts in {fixed_count} files out of {total_files}")
 
 if __name__ == "__main__":
     main()
