@@ -1,0 +1,55 @@
+{
+  "timestamp": "2025-10-11T01:19:45.661Z",
+  "pages": [
+    {
+      "file": "index.html",
+      "issues": [
+        {
+          "type": "warning",
+          "message": "Missing H1 tag"
+        },
+        {
+          "type": "warning",
+          "message": "Script tags found in head - consider moving to bottom of body"
+        }
+      ],
+      "score": 90
+    },
+    {
+      "file": "stats.html",
+      "issues": [
+        {
+          "type": "critical",
+          "message": "Missing meta description"
+        },
+        {
+          "type": "critical",
+          "message": "Missing Open Graph title"
+        },
+        {
+          "type": "critical",
+          "message": "Missing Open Graph description"
+        },
+        {
+          "type": "critical",
+          "message": "Missing Open Graph image"
+        },
+        {
+          "type": "critical",
+          "message": "Missing Twitter Card"
+        },
+        {
+          "type": "warning",
+          "message": "Missing H1 tag"
+        }
+      ],
+      "score": 70
+    }
+  ],
+  "summary": {
+    "totalPages": 2,
+    "totalIssues": 8,
+    "criticalIssues": 5,
+    "warnings": 3
+  }
+}
