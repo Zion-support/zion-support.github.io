@@ -1,82 +1,30 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-<<<<<<< HEAD
-const ServiceCardSkeletonPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-    }
-  ];
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
-  );
-};
-=======
-;
-const ServiceCardSkeletonPage: React.FC = () => {;
-  const features = [;
-    {;
-      icon: Brain,;
-      title: 'AI-Powered Solutions',;
-      description: 'Advanced AI technology to transform your business operations and improve efficiency';}
-    },;
-    {;
-      icon: Zap,;
-      title: 'High Performance',;
-      description: 'Lightning-fast processing and real-time analytics for optimal results';}
-    },;
-    {;
-      icon: Shield,;
-      title: 'Enterprise Security',;
-      description: 'Bank-level security with encryption and compliance standards';}
-    },;
-    {;
-      icon: Globe,;
-      title: 'Global Reach',;
-      description: 'Worldwide deployment and support for international businesses';}
-    }
-  ];
-;
-  const benefits = [;
-    'Advanced AI technology integration',;
-    'Real-time processing and analytics',;
-    'Enterprise-grade security and compliance',;
-    'Scalable and flexible solutions',;
-    '24/7 technical support',;
-    'Easy integration with existing systems',;
-    'Cost-effective pricing plans',;
-    'Proven track record of success';
-  ];
-;
-  );
-};
-;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-export default ServiceCardSkeletonPage;
+'use client'
+import React from 'react'
+
+const ServiceCardSkeleton: React.FC = () => {
+  return (
+    <div className="cyber-card p-6 animate-pulse">
+      <div className="flex items-center mb-4">
+        <div className="w-8 h-8 bg-slate-700 rounded mr-3"></div>
+        <div className="h-4 bg-slate-700 rounded w-20"></div>
+      </div>
+      
+      <div className="h-6 bg-slate-700 rounded mb-3"></div>
+      <div className="h-4 bg-slate-700 rounded mb-4"></div>
+      <div className="h-4 bg-slate-700 rounded mb-4 w-3/4"></div>
+      
+      <div className="space-y-2 mb-6">
+        <div className="h-4 bg-slate-700 rounded"></div>
+        <div className="h-4 bg-slate-700 rounded"></div>
+        <div className="h-4 bg-slate-700 rounded w-2/3"></div>
+      </div>
+      
+      <div className="flex items-center justify-between">
+        <div className="h-6 bg-slate-700 rounded w-24"></div>
+        <div className="h-8 bg-slate-700 rounded w-20"></div>
+      </div>
+    </div>
+  )
+}
+
+export default ServiceCardSkeleton

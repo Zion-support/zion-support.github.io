@@ -1,6 +1,6 @@
-'use client';
-import React from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react';
+'use client'
+import React from 'react'
+import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react'
 const ContentPromotionBanner: React.FC = () => {
   const features = [
     {
@@ -23,7 +23,7 @@ const ContentPromotionBanner: React.FC = () => {
       title: 'Global Reach',
       description: 'Worldwide deployment with local support and compliance'
     }
-  ];
+  ]
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -33,7 +33,7 @@ const ContentPromotionBanner: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ];
+  ]
   const stats = [
     {
       icon: Users,
@@ -53,14 +53,10 @@ const ContentPromotionBanner: React.FC = () => {
       label: 'Rating',
       description: 'Highly rated by clients'
     }
-  ];
+  ]
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
 <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
-=======
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
       <div className="max-w-7xl mx-auto">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -73,15 +69,14 @@ const ContentPromotionBanner: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
               <Zap className="w-5 h-5" />
-              Get Started Today;
+              Get Started Today
   </
             <button className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
               <ArrowRight className="w-5 h-5" />
-              Learn More;
+              Learn More
   </
           </div>
         </div>
-<<<<<<< HEAD
         {/* Stats Section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {stats.map((stat, index) => (
@@ -122,12 +117,10 @@ const ContentPromotionBanner: React.FC = () => {
           </div>
           <div className="text-center mt-8">
             <button className="bg-white text-purple-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
-              Get Started Today;
+              Get Started Today
   </
           </div>
         </div>
-=======
-=======
     <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-2xl p-8 mb-16">
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold text-white mb-4">Transform Your Business Today</h2>
@@ -135,9 +128,7 @@ const ContentPromotionBanner: React.FC = () => {
           Join thousands of businesses already using our AI and IT solutions
         </p>
       </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
         {/* Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {features.map((feature, index) => (
@@ -150,7 +141,6 @@ const ContentPromotionBanner: React.FC = () => {
             </div>
           ))}
         </div>
-<<<<<<< HEAD
         {/* Benefits Section */}
         <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 mb-16">
           <div className="text-center mb-8">
@@ -160,9 +150,7 @@ const ContentPromotionBanner: React.FC = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-=======
 
-<<<<<<< HEAD
         {/* Stats Section */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {stats.map((stat, index) => (
@@ -181,7 +169,6 @@ const ContentPromotionBanner: React.FC = () => {
         <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-8">Why Choose Our Solutions?</h2>
           <div className="grid md:grid-cols-2 gap-4">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center gap-3">
                 <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
@@ -192,7 +179,6 @@ const ContentPromotionBanner: React.FC = () => {
         </div>
         {/* CTA Section */}
         <div className="text-center">
-<<<<<<< HEAD
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-12">
             <h2 className="text-3xl font-bold text-white mb-4">
               Ready to Transform Your Business?
@@ -206,10 +192,9 @@ const ContentPromotionBanner: React.FC = () => {
                 <span>Start Free Trial</span>
               </button>
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
-                Schedule Demo;
+                Schedule Demo
   </
             </div>
-=======
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Join thousands of satisfied customers and transform your business today.
@@ -222,21 +207,17 @@ const ContentPromotionBanner: React.FC = () => {
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
               Schedule Demo
             </button>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
           </div>
         </div>
-=======
       <div className="text-center">
         <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 inline-flex items-center">
           Get Started Now
           <ArrowRight className="w-5 h-5 ml-2" />
         </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-d277
       </div>
     </div>
-  );
-};
-export default ContentPromotionBanner;
+  )}
+export default ContentPromotionBanner
   </button>
   </button>
   </button>

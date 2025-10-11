@@ -1,107 +1,86 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
 
-// Function to resolve merge conflicts by choosing the HEAD version
-function resolveMergeConflicts(content) {
-  const lines = content.split('\n');
-  const resolvedLines = [];
-  let inConflict = false;
-  let conflictType = null;
-
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
-    
-    if (line.startsWith('<<<<<<< HEAD')) {
-      inConflict = true;
-      conflictType = 'head';
-      continue;
-    }
-    
-    if (line.startsWith('=======')) {
-      conflictType = 'separator';
-      continue;
-    }
-    
-    if (line.startsWith('>>>>>>>')) {
-      inConflict = false;
-      conflictType = null;
-      continue;
-    }
-    
-    if (inConflict && conflictType === 'head') {
-      resolvedLines.push(line);
-    } else if (!inConflict) {
-      resolvedLines.push(line);
-    }
-  }
+// Function to recursively find all files with merge conflicts
+function findFilesWithConflicts(dir, fileList = []) {
+  const files = fs.readdirSync(dir);
   
-  return resolvedLines.join('\n');
-}
-
-// Function to fix common syntax errors
-function fixSyntaxErrors(content) {
-  // Remove any remaining merge conflict markers
-  content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-  content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '');
-  
-  return content;
-}
-
-// Function to process a single file
-function processFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
+  files.forEach(file => {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
     
-    // Check if file has merge conflicts
-    if (content.includes('<<<<<<< HEAD')) {
-      console.log(`Processing file: ${filePath}`);
-      
-      let resolvedContent = resolveMergeConflicts(content);
-      resolvedContent = fixSyntaxErrors(resolvedContent);
-      
-      // Write the resolved content back
-      fs.writeFileSync(filePath, resolvedContent, 'utf8');
-      console.log(`✓ Fixed merge conflicts in: ${filePath}`);
-    }
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-  }
-}
-
-// Function to find all TypeScript/TSX files with merge conflicts
-function findFilesWithConflicts(dir) {
-  const files = [];
-  
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
-    
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath);
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts'))) {
-        const content = fs.readFileSync(fullPath, 'utf8');
-        if (content.includes('<<<<<<< HEAD')) {
-          files.push(fullPath);
-        }
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+      findFilesWithConflicts(filePath, fileList);
+    } else if (stat.isFile() && (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js') || file.endsWith('.jsx'))) {
+      const content = fs.readFileSync(filePath, 'utf8');
+      if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
+        fileList.push(filePath);
       }
     }
-  }
+  });
   
-  traverse(dir);
-  return files;
+  return fileList;
+}
+
+// Function to fix merge conflicts in a file
+function fixMergeConflicts(filePath) {
+  console.log(`Fixing merge conflicts in: ${filePath}`);
+  
+  let content = fs.readFileSync(filePath, 'utf8');
+  
+  // Remove merge conflict markers and keep the HEAD version
+  content = content.replace(/<<<<<<< HEAD\n?/g, '');
+  content = content.replace(/=======\n?/g, '');
+  content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
+  
+  // Clean up any remaining syntax issues
+  content = content.replace(/;\s*;\s*/g, ';');
+  content = content.replace(/\(\s*;\s*/g, '(');
+  content = content.replace(/;\s*\)/g, ')');
+  content = content.replace(/{\s*;\s*/g, '{');
+  content = content.replace(/;\s*}/g, '}');
+  content = content.replace(/<\s*;\s*/g, '<');
+  content = content.replace(/;\s*>/g, '>');
+  content = content.replace(/\/\*\s*;\s*/g, '/*');
+  content = content.replace(/;\s*\*\//g, '*/');
+  
+  // Fix JSX syntax issues
+  content = content.replace(/<\s*;\s*([^>]+)\s*;\s*>/g, '<$1>');
+  content = content.replace(/<\s*;\s*([^>]+)\s*;\s*\/>/g, '<$1 />');
+  
+  // Remove extra semicolons at the end of lines
+  content = content.replace(/;\s*$/gm, '');
+  
+  // Fix duplicate React imports
+  content = content.replace(/import React from 'react';\s*import React, {[^}]+} from 'react';/g, (match) => {
+    const secondImport = match.match(/import React, {[^}]+} from 'react';/);
+    return secondImport ? secondImport[0] : match;
+  });
+  
+  fs.writeFileSync(filePath, content);
 }
 
 // Main execution
-console.log('🔍 Searching for files with merge conflicts...');
-const filesWithConflicts = findFilesWithConflicts('./app');
-
-console.log(`Found ${filesWithConflicts.length} files with merge conflicts`);
-
-filesWithConflicts.forEach(file => {
-  processFile(file);
-});
-
-console.log('✅ Merge conflict resolution complete!');
+try {
+  console.log('Searching for files with merge conflicts...');
+  const conflictedFiles = findFilesWithConflicts('.');
+  
+  console.log(`Found ${conflictedFiles.length} files with merge conflicts:`);
+  conflictedFiles.forEach(file => console.log(`  - ${file}`));
+  
+  if (conflictedFiles.length === 0) {
+    console.log('No merge conflicts found!');
+    process.exit(0);
+  }
+  
+  console.log('\nFixing merge conflicts...');
+  conflictedFiles.forEach(fixMergeConflicts);
+  
+  console.log('\nAll merge conflicts have been fixed!');
+  
+} catch (error) {
+  console.error('Error fixing merge conflicts:', error.message);
+  process.exit(1);
+}

@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 const Next.dPage: React.FC = () => {
   const features = [
     {
@@ -30,8 +24,7 @@ const Next.dPage: React.FC = () => {
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
     }
-  ];
-
+  ]
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -41,8 +34,7 @@ const Next.dPage: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -96,165 +88,130 @@ const Next.dPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
-
-export default Next.dPage;
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-581e
+  )}
+export default Next.dPage
 // Type definitions for Next.js compatibility in Vite
 export interface Metadata {
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  authors?: Array<{ name: string; url?: string }> | string[];
-  creator?: string;
-  publisher?: string;
+  title?: string
+  description?: string
+  keywords?: string[]
+  authors?: Array<{ name: string; url?: string }> | string[]
+  creator?: string
+  publisher?: string
   formatDetection?: {
-    email?: boolean;
-    address?: boolean;
-    telephone?: boolean;
-  };
-  metadataBase?: URL;
+    email?: boolean
+    address?: boolean
+    telephone?: boolean}
+  metadataBase?: URL
   alternates?: {
-    canonical?: string;
-    languages?: Record<string, string>;
-  };
+    canonical?: string
+    languages?: Record<string, string>}
   openGraph?: {
-    title?: string;
-    description?: string;
-    url?: string;
-    siteName?: string;
+    title?: string
+    description?: string
+    url?: string
+    siteName?: string
     images?: Array<{
       url: string,
-      width?: number;
-      height?: number;
-      alt?: string;
-    }>;
-    locale?: string;
-    type?: string;
-    authors?: Array<{ name: string; url?: string }> | string[];
-    publishedTime?: string;
-  };
+      width?: number
+      height?: number
+      alt?: string}>
+    locale?: string
+    type?: string
+    authors?: Array<{ name: string; url?: string }> | string[]
+    publishedTime?: string}
   twitter?: {
-    card?: 'summary' | 'summary_large_image' | 'app' | 'player';
-    site?: string;
-    creator?: string;
-    title?: string;
-    description?: string;
-    images?: string[];
-  };
+    card?: 'summary' | 'summary_large_image' | 'app' | 'player'
+    site?: string
+    creator?: string
+    title?: string
+    description?: string
+    images?: string[]}
   robots?: {
-    index?: boolean;
-    follow?: boolean;
+    index?: boolean
+    follow?: boolean
     googleBot?: {
-      index?: boolean;
-      follow?: boolean;
-      'max-video-preview'?: number;
-      'max-image-preview'?: 'none' | 'standard' | 'large';
-      'max-snippet'?: number;
-    };
-  };
+      index?: boolean
+      follow?: boolean
+      'max-video-preview'?: number
+      'max-image-preview'?: 'none' | 'standard' | 'large'
+      'max-snippet'?: number}}
   verification?: {
-    google?: string;
-    yandex?: string;
-    yahoo?: string;
-    other?: Record<string, string>;
-  };
-}
+    google?: string
+    yandex?: string
+    yahoo?: string
+    other?: Record<string, string>}}
 
 export interface MetadataRoute {
   url: string,
-  lastModified?: string | Date;
-  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
-  priority?: number;
-}
+  lastModified?: string | Date
+  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
+  priority?: number}
 
 export interface MetadataRouteSitemap extends MetadataRoute {
   url: string,
-  lastModified?: string | Date;
-  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
-  priority?: number;
-}
+  lastModified?: string | Date
+  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
+  priority?: number}
 
 // Custom Next.js types
 export interface NextPageProps {
-  params: { [key: string]: string };
-  searchParams: { [key: string]: string | string[] | undefined };
-}
+  params: { [key: string]: string }
+  searchParams: { [key: string]: string | string[] | undefined }}
 
 // API route types
 export interface ApiRouteHandler {
-  (req: Request): Promise<Response>;
-}
+  (req: Request): Promise<Response>}
 
 // Server components types
 export interface ServerComponentProps {
-  params: { [key: string]: string };
-  searchParams: { [key: string]: string | string[] | undefined };
-}
+  params: { [key: string]: string }
+  searchParams: { [key: string]: string | string[] | undefined }}
 
 // Client components types
 export interface ClientComponentProps {
-  children?: React.ReactNode;
-  className?: string;
-}
+  children?: React.ReactNode
+  className?: string}
 
 // Route handlers
 export interface RouteHandler {
-  GET?: (req: Request) => Promise<Response>;
-  POST?: (req: Request) => Promise<Response>;
-  PUT?: (req: Request) => Promise<Response>;
-  DELETE?: (req: Request) => Promise<Response>;
-  PATCH?: (req: Request) => Promise<Response>;
-}
+  GET?: (req: Request) => Promise<Response>
+  POST?: (req: Request) => Promise<Response>
+  PUT?: (req: Request) => Promise<Response>
+  DELETE?: (req: Request) => Promise<Response>
+  PATCH?: (req: Request) => Promise<Response>}
 
 // Dynamic route types
 export interface DynamicRoute {
-  params: { [key: string]: string };
-}
+  params: { [key: string]: string }}
 
 // Static generation types
 export interface StaticProps {
-  props: { [key: string]: any };
-  revalidate?: number;
-  notFound?: boolean;
-}
+  props: { [key: string]: any }
+  revalidate?: number
+  notFound?: boolean}
 
 // ISR types
 export interface ISRConfig {
-  revalidate: number;
-  tags?: string[];
-}
+  revalidate: number
+  tags?: string[]}
 
 // Edge runtime types
 export interface EdgeRuntime {
-  runtime: 'edge';
-}
+  runtime: 'edge'}
 
 // Node.js runtime types
 export interface NodeRuntime {
-  runtime: 'nodejs';
-}
+  runtime: 'nodejs'}
 
 // Extend Next.js types
 declare module 'next' {
   interface NextApiRequest {
     user?: {
-      id: string;
-      email: string;
-      name?: string;
-    };
-  }
+      id: string
+      email: string
+      name?: string}}
 }
 
-<<<<<<< HEAD
-export {};
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
-=======
-export {};
->>>>>>> cursor/fix-errors-and-merge-to-main-581e
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+export {}
+export {}
