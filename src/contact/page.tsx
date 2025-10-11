@@ -225,7 +225,7 @@ value={formData.name}
                       onChange={handleInputChange}
                       required;
 className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors";
-placeholder="Your full name"
+placeholder="Your full name">
                     />
   </input>
                   <div>
@@ -238,7 +238,7 @@ value={formData.email}
                       onChange={handleInputChange}
                       required;
 className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors";
-placeholder="your@email.com"
+placeholder="your@email.com">
                     />
   </input>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -251,7 +251,7 @@ name="company";
 value={formData.company}
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors";
-placeholder="Your company name"
+placeholder="Your company name">
                     />
   </input>
                   <div>
@@ -263,7 +263,7 @@ name="phone";
 value={formData.phone}
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors";
-placeholder="+1 (555) 123-4567"
+placeholder="+1 (555) 123-4567">
                     />
   </input>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -273,7 +273,7 @@ Service Interest
                     <select;
 name="service";
 value={formData.service}
-                      onChange={handleInputChange}
+                      onChange={handleInputChange}>
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors">
   </select>
                       <option value="">Select a service
@@ -286,7 +286,7 @@ Budget Range
                     <select;
 name="budget";
 value={formData.budget}
-                      onChange={handleInputChange}
+                      onChange={handleInputChange}>
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors">
   </select>
                       <option value="">Select budget range
@@ -299,7 +299,7 @@ Timeline
                   <select;
 name="timeline";
 value={formData.timeline}
-                    onChange={handleInputChange}
+                    onChange={handleInputChange}>
                     className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors">
   </select>
                     <option value="">Select timeline
@@ -316,7 +316,7 @@ value={formData.message}
                     required;
 rows={5}
                     className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors resize-none";
-placeholder="Tell us about your project, goals, and any specific requirements..."
+placeholder="Tell us about your project, goals, and any specific requirements...">
                   />
   </textarea>
                 <$2 />;

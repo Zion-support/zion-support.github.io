@@ -874,13 +874,13 @@ efficiency, and competitive advantage in the digital age.
             <div className="flex flex-wrap justify-center gap-4">
               <$2 />;
 to="/contact";
-className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
+className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300">
               >;
 Get Started
               </Link>
               <$2 />;
 to="/request-quote";
-className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan rounded-xl font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300"
+className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan rounded-xl font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300">
               >;
 Request Quote
               </Link>
@@ -1161,7 +1161,7 @@ AI Services Hub
             </div>
           </motion.div>
         </div>;
-className="w-full pl-10 pr-4 py-3 bg-slate-700/80 border border-slate-600/50 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all duration-300"
+className="w-full pl-10 pr-4 py-3 bg-slate-700/80 border border-slate-600/50 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all duration-300">
               />
               <div className="absolute right-4 top-1/2 transform -translate-y-1/2">
                 <Sparkles className="w-5 h-5 text-purple-400 animate-pulse" />
@@ -1171,9 +1171,9 @@ className="w-full pl-10 pr-4 py-3 bg-slate-700/80 border border-slate-600/50 rou
             {/* Enhanced Category Filter */}
             <div className="relative">
               <select;
-value={selectedCategory}
+value={selectedCategory}>
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-4 py-3 bg-slate-700/80 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all duration-300"
+                className="w-full px-4 py-3 bg-slate-700/80 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all duration-300">
               >
                 {categories.map(category => ()
                   <option key={category} value={category} className="bg-slate-800 text-white">
@@ -1184,7 +1184,7 @@ value={selectedCategory}
               <div className="absolute right-4 top-1/2 transform -translate-y-1/2">
                 <Brain className="w-5 h-5 text-purple-400" />
               </div>;
-className="text-center"
+className="text-center">
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">;
 AI & Machine Learning
@@ -1199,14 +1199,14 @@ From predictive analytics to computer vision, we deliver AI that drives real bus
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <$2 />;
 to="/contact";
-className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-lg font-semibold hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center gap-2 justify-center"
+className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-lg font-semibold hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center gap-2 justify-center">
               >;
 Get Started
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <$2 />;
 to="/request-quote";
-className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-lg text-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center gap-2 justify-center"
+className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-lg text-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center gap-2 justify-center">
               >;
 Request Quote
                 <CheckCircle className="w-5 h-5" />
@@ -1225,7 +1225,7 @@ key={service.id}
               initial={{ opacity: 0}}, y: 20 }}
               animate={{ opacity: 1}}, y: 0 }}
               transition={{ duration: 0.6}}, delay: index * 0.1 }}
-              className="group bg-slate-800/80 backdrop-blur-sm rounded-xl border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20"
+              className="group bg-slate-800/80 backdrop-blur-sm rounded-xl border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20">
             >
               <div className="p-6">
                 <div className="flex items-center justify-between mb-4">
@@ -1271,18 +1271,18 @@ AI Score: {service.aiScore}%
             <input;
 type="text";
 placeholder="Search AI services...";
-value={searchTerm}
+value={searchTerm}>
               onChange={(e) =>
   </input> setSearchTerm(e.target.value)}
-              className="w-full pl-10 pr-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+              className="w-full pl-10 pr-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent">
             />
           </div>
 
           <div className="flex flex-wrap gap-4">
             <select;
-value={selectedCategory}
+value={selectedCategory}>
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="px-4 py-2 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+              className="px-4 py-2 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500">
             >
               {categories.map(category => ()
                 <option key={category} value={category} className="bg-gray-800 text-white">
@@ -1292,9 +1292,9 @@ value={selectedCategory}
             </select>
 
             <select;
-value={selectedPricing}
+value={selectedPricing}>
               onChange={(e) => setSelectedPricing(e.target.value)}
-              className="px-4 py-2 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+              className="px-4 py-2 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500">
             >
               {pricingModels.map(pricing => ()
                 <option key={pricing} value={pricing} className="bg-gray-800 text-white">
@@ -1344,7 +1344,7 @@ value={selectedPricing}
 initial={{ opacity: 0}}, y: 20 }}
           whileInView={{ opacity: 1}}, y: 0 }}
           transition={{ duration: 0.8}}}
-          className="text-center mb-16"
+          className="text-center mb-16">
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">;
 Our AI Services
@@ -1364,7 +1364,7 @@ key={service.title}
                 initial={{ opacity: 0}}, y: 20 }}
                 whileInView={{ opacity: 1}}, y: 0 }}
                 transition={{ duration: 0.6}}, delay: index * 0.1 }}
-                className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300"
+                className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300">
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${service.color}} rounded-2xl mb-6 flex items-center justify-center text-white`}>
                   <IconComponent className="w-8 h-8" />
@@ -1401,7 +1401,7 @@ Use Cases:
                   <span className="text-zion-cyan font-semibold">{service.price}</span>
                   <$2 />;
 to="/contact";
-className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors duration-300"
+className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors duration-300">
                   >;
 Learn More
                   </Link>
@@ -1428,7 +1428,7 @@ Learn More
 initial={{ opacity: 0}}, y: 20 }}
           whileInView={{ opacity: 1}}, y: 0 }}
           transition={{ duration: 0.8}}}
-          className="text-center mb-16"
+          className="text-center mb-16">
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">;
 Why Choose Our AI Services?
@@ -1448,7 +1448,7 @@ key={benefit.title}
                 initial={{ opacity: 0}}, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1}}, x: 0 }}
                 transition={{ duration: 0.6}}, delay: index * 0.1 }}
-                className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300"
+                className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300">
               >
                 <div className="flex items-start gap-4">
                   <div className={`p-3 bg-zion-purple/20 rounded-lg ${benefit.color}}`}>
@@ -1763,7 +1763,7 @@ Ready to Harness the Power of AI?
 initial={{ opacity: 0}}, y: 20 }}
           whileInView={{ opacity: 1}}, y: 0 }}
           transition={{ duration: 0.8}}}
-          className="text-center mb-16"
+          className="text-center mb-16">
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">;
 What Our Clients Say
@@ -1780,7 +1780,7 @@ key={testimonial.name}
               initial={{ opacity: 0}}, y: 20 }}
               whileInView={{ opacity: 1}}, y: 0 }}
               transition={{ duration: 0.6}}, delay: index * 0.1 }}
-              className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300"
+              className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300">
             >
               <div className="flex gap-1 mb-4">
                 {[...Array(testimonial.rating)].map((_), i) => (
@@ -1806,7 +1806,7 @@ key={testimonial.name}
 initial={{ opacity: 0}}, y: 30 }}
             whileInView={{ opacity: 1}}, y: 0 }}
             transition={{ duration: 0.8}}}
-            className="text-center mb-16"
+            className="text-center mb-16">
           >
             <h2 className="text-4xl font-bold mb-6">;
 Why Choose Our{' '}
@@ -1829,7 +1829,7 @@ key={benefit.title}
                   initial={{ opacity: 0}}, y: 30 }}
                   whileInView={{ opacity: 1}}, y: 0 }}
                   transition={{ duration: 0.6}}, delay: index * 0.1 }}
-                  className="text-center p-6 rounded-2xl bg-zion-blue-dark/50 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300"
+                  className="text-center p-6 rounded-2xl bg-zion-blue-dark/50 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300">
                 >
                   <div className={`w-16 h-16 bg-gradient-to-br ${benefit.color}} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
                     <IconComponent className="w-8 h-8 text-white" />
@@ -1853,7 +1853,7 @@ Ready to Harness AI Power?
           <div className="mb-8">
             <$2 />;
 href="/comprehensive-services";
-className="inline-block bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 mb-4"
+className="inline-block bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 mb-4">
             >;
 Explore Our Complete Service Portfolio →
             </a>
@@ -1885,14 +1885,14 @@ Explore Our Complete Service Portfolio →
 href="https://ziontechgroup.com";
 target="_blank";
 rel="noopener noreferrer";
-className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 group"
+className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 group">
             >;
 Visit Our Website
               <ExternalLink className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
             </a>
             <$2 />;
 href={`mailto:${aiServices[0].contactInfo.email}}?subject=AI Services Inquiry`}
-              className="inline-flex items-center gap-2 px-8 py-4 border border-purple-400 text-purple-400 rounded-xl font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
+              className="inline-flex items-center gap-2 px-8 py-4 border border-purple-400 text-purple-400 rounded-xl font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300">
             >
               <Mail className="w-5 h-5" />;
 Contact Us
@@ -1904,7 +1904,7 @@ Contact Us
 initial={{ opacity: 0}}, y: 30 }}
             whileInView={{ opacity: 1}}, y: 0 }}
             transition={{ duration: 0.8}}}
-            className="text-center mb-16"
+            className="text-center mb-16">
           >
             <h2 className="text-4xl font-bold mb-6">;
 Our{' '}
@@ -1927,7 +1927,7 @@ key={index}
                   initial={{ opacity: 0}}, y: 30 }}
                   whileInView={{ opacity: 1}}, y: 0 }}
                   transition={{ duration: 0.8}}, delay: index * 0.1 }}
-                  className="group p-6 rounded-2xl border border-zion-cyan/20 hover:border-zion-cyan/40 hover:bg-zion-blue-light/10 transition-all duration-300"
+                  className="group p-6 rounded-2xl border border-zion-cyan/20 hover:border-zion-cyan/40 hover:bg-zion-blue-light/10 transition-all duration-300">
                 >
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     <IconComponent className="w-8 h-8 text-white" />
@@ -1949,7 +1949,7 @@ key={index}
 
                   <$2 />;
 to={service.link}
-                    className="inline-flex items-center text-zion-cyan hover:text-zion-purple transition-colors duration-300 group/link"
+                    className="inline-flex items-center text-zion-cyan hover:text-zion-purple transition-colors duration-300 group/link">
                   >;
 Learn More
                     <ArrowRight className="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform duration-300" />
@@ -2030,7 +2030,7 @@ Get Free Consultation
 initial={{ opacity: 0}}, y: 30 }}
             whileInView={{ opacity: 1}}, y: 0 }}
             transition={{ duration: 0.8}}}
-            className="text-center mb-16"
+            className="text-center mb-16">
           >
             <h2 className="text-4xl font-bold mb-6">;
 Why Choose{' '}
@@ -2053,7 +2053,7 @@ key={index}
                   initial={{ opacity: 0}}, y: 30 }}
                   whileInView={{ opacity: 1}}, y: 0 }}
                   transition={{ duration: 0.8}}, delay: index * 0.1 }}
-                  className="text-center p-6 rounded-2xl hover:bg-zion-blue-light/10 transition-all duration-300"
+                  className="text-center p-6 rounded-2xl hover:bg-zion-blue-light/10 transition-all duration-300">
                 >
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <IconComponent className="w-8 h-8 text-white" />
@@ -2101,7 +2101,7 @@ Our AI solutions are designed to scale with your business and provide measurable
 initial={{ opacity: 0}}, y: 30 }}
             whileInView={{ opacity: 1}}, y: 0 }}
             transition={{ duration: 0.8}}}
-            className="text-center mb-16"
+            className="text-center mb-16">
           >
             <h2 className="text-4xl font-bold mb-6">;
 Industries We{' '}
@@ -2121,7 +2121,7 @@ key={index}
                 initial={{ opacity: 0}}, y: 20 }}
                 whileInView={{ opacity: 1}}, y: 0 }}
                 transition={{ duration: 0.6}}, delay: index * 0.05 }}
-                className="p-4 rounded-xl border border-zion-cyan/20 hover:border-zion-cyan/40 hover:bg-zion-blue-light/10 transition-all duration-300 text-center"
+                className="p-4 rounded-xl border border-zion-cyan/20 hover:border-zion-cyan/40 hover:bg-zion-blue-light/10 transition-all duration-300 text-center">
               >
                 <span className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300">
                   {industry}
@@ -2139,7 +2139,7 @@ key={index}
 initial={{ opacity: 0}}, y: 30 }}
             whileInView={{ opacity: 1}}, y: 0 }}
             transition={{ duration: 0.8}}}
-            className="text-center mb-16"
+            className="text-center mb-16">
           >
             <h2 className="text-4xl font-bold mb-6">;
 Our{' '}
@@ -2181,7 +2181,7 @@ key={index}
                 initial={{ opacity: 0}}, y: 30 }}
                 whileInView={{ opacity: 1}}, y: 0 }}
                 transition={{ duration: 0.8}}, delay: index * 0.1 }}
-                className="text-center"
+                className="text-center">
               >
                 <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
                   {phase.step}
@@ -2373,7 +2373,7 @@ Learn More
 href={service.website} ;
 target="_blank";
 rel="noopener noreferrer";
-className="flex-1"
+className="flex-1">
                         >
                           <Button variant="outline" className="w-full border-zion-blue-light text-zion-cyan hover:bg-zion-blue-light/10">
                             <ExternalLink className="w-4 h-4 mr-2" />;
@@ -2442,13 +2442,13 @@ improve efficiency, and create new opportunities for growth.
             <div className="flex flex-wrap justify-center gap-4">
               <$2 />;
 to="/contact";
-className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
+className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300">
               >;
 Start Your AI Journey
               </Link>
               <$2 />;
 to="/request-quote";
-className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan rounded-xl font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300"
+className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan rounded-xl font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300">
               >;
 Get a Custom Quote
               </Link>
@@ -2644,7 +2644,7 @@ Get Started
 initial={{ opacity: 0}}, y: 20 }}
           whileInView={{ opacity: 1}}, y: 0 }}
           transition={{ duration: 0.8}}}
-          className="text-center"
+          className="text-center">
         >
           <div className="bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-cyan/20 border border-zion-cyan/30 rounded-2xl p-12 backdrop-blur-md">
             <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">;
@@ -2656,14 +2656,14 @@ Join hundreds of companies that have already revolutionized their operations wit
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <$2 />;
 to="/contact";
-className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-lg font-semibold hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center gap-2 justify-center"
+className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-lg font-semibold hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center gap-2 justify-center">
               >;
 Start Your AI Journey
                 <Rocket className="w-5 h-5" />
               </Link>
               <$2 />;
 to="/request-quote";
-className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-lg text-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center gap-2 justify-center"
+className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-lg text-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center gap-2 justify-center">
               >
                 <CheckCircle className="w-5 h-5" />;
 Get Free Consultation
@@ -4251,7 +4251,7 @@ className={`h-4 w-4 ${i < Math.floor(service.rating) ? 'text-yellow-400 fill-cur
 href="https://ziontechgroup.com";
 target="_blank";
 rel="noopener noreferrer";
-className="text-blue-600 hover:underline font-medium"
+className="text-blue-600 hover:underline font-medium">
               >;
 ziontechgroup.com
               </a>
@@ -4326,8 +4326,8 @@ Comprehensive AI solutions designed to drive innovation and competitive advantag
                 <div className="relative">
                   <img;
 src={service.images[0]} ;
-alt={service.title}
-                    className="w-full h-64 object-cover rounded-t-lg"
+alt={service.title}>
+                    className="w-full h-64 object-cover rounded-t-lg">
                   />
                   {service.featured && (
                     <Badge className="absolute top-4 right-4 bg-blue-600 text-white">;

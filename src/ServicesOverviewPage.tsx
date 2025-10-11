@@ -441,7 +441,7 @@ export default function ServicesOverviewPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg"
-                className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg px-8 py-4"
+                className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg px-8 py-4">
                 asChild
               >
                 <a href="mailto:kleber@ziontechgroup.com">
@@ -452,7 +452,7 @@ export default function ServicesOverviewPage() {
               <Button 
                 size="lg"
                 variant="outline" 
-                className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 text-lg px-8 py-4"
+                className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 text-lg px-8 py-4">
                 asChild
               >
                 <a href="tel:+13024640950">
@@ -544,7 +544,7 @@ export default function ServicesOverviewPage() {
                     </div>
 
                     <Button 
-                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
+                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
                       asChild
                     >
                       <a href={`/comprehensive-services?category=${category.id}`}>
@@ -640,7 +640,7 @@ export default function ServicesOverviewPage() {
                   </ul>
 
                   <Button 
-                    className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
+                    className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
                     asChild
                   >
                     <a href="mailto:kleber@ziontechgroup.com?subject=Pricing Inquiry">
@@ -729,7 +729,7 @@ export default function ServicesOverviewPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Button 
                 size="lg"
-                className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg px-8 py-4"
+                className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg px-8 py-4">
                 asChild
               >
                 <a href="mailto:kleber@ziontechgroup.com">
@@ -740,7 +740,7 @@ export default function ServicesOverviewPage() {
               <Button 
                 size="lg"
                 variant="outline" 
-                className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 text-lg px-8 py-4"
+                className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 text-lg px-8 py-4">
                 asChild
               >
                 <a href="tel:+13024640950">
@@ -915,7 +915,7 @@ export default function ServicesOverviewPage() {
                   <TabsTrigger
                     key={category}
                     value={category.toLowerCase().replace(/\s+/g, '-').replace(/&/g, '')}
-                    className="flex flex-col items-center gap-2 p-4 data-[state=active]:bg-zion-blue data-[state=active]:text-white"
+                    className="flex flex-col items-center gap-2 p-4 data-[state=active]:bg-zion-blue data-[state=active]:text-white">
                   >
                     <Icon className="h-6 w-6" />
                     <span className="text-xs text-center">{category}</span>
@@ -932,7 +932,7 @@ export default function ServicesOverviewPage() {
                 <TabsContent
                   key={category}
                   value={category.toLowerCase().replace(/\s+/g, '-').replace(/&/g, '')}
-                  className="space-y-8"
+                  className="space-y-8">
                 >
                   {/* Category Header */}
                   <div className={`bg-gradient-to-r ${gradient} text-white rounded-2xl p-8 text-center`}>

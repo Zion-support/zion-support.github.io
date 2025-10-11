@@ -1012,10 +1012,10 @@ Affordable, focused software solutions designed specifically for small businesse
             <input;
 type="text";
 placeholder="Search micro SAAS services by name, features, or category...";
-value={searchTerm}
+value={searchTerm}>
               onChange={(e) =>
   </input> setSearchTerm(e.target.value)}
-              className="w-full pl-12 pr-4 py-4 bg-black/40 backdrop-blur-sm border border-zion-cyan/20 rounded-xl text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan/50 transition-all duration-300"
+              className="w-full pl-12 pr-4 py-4 bg-black/40 backdrop-blur-sm border border-zion-cyan/20 rounded-xl text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan/50 transition-all duration-300">
             />
             <div className="absolute right-4 top-1/2 transform -translate-y-1/2">
               <div className="text-xs text-zion-slate-light bg-zion-cyan/10 px-2 py-1 rounded-full border border-zion-cyan/20">
@@ -1026,9 +1026,9 @@ value={searchTerm}
 
           <div className="flex flex-wrap justify-center gap-4">
             <select;
-value={selectedCategory}
+value={selectedCategory}>
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="px-4 py-3 bg-black/40 backdrop-blur-sm border border-zion-cyan/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan/50 transition-all duration-300 hover:border-zion-cyan/40"
+              className="px-4 py-3 bg-black/40 backdrop-blur-sm border border-zion-cyan/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan/50 transition-all duration-300 hover:border-zion-cyan/40">
             >
               {categories.map(category => ()
                 <option key={category} value={category} className="bg-black text-white">
@@ -1038,9 +1038,9 @@ value={selectedCategory}
             </select>
 
             <select;
-value={selectedPricing}
+value={selectedPricing}>
               onChange={(e) => setSelectedPricing(e.target.value)}
-              className="px-4 py-3 bg-black/40 backdrop-blur-sm border border-zion-cyan/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan/50 transition-all duration-300 hover:border-zion-cyan/40"
+              className="px-4 py-3 bg-black/40 backdrop-blur-sm border border-zion-cyan/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan/50 transition-all duration-300 hover:border-zion-cyan/40">
             >
               {pricingModels.map(pricing => ()
                 <option key={pricing} value={pricing} className="bg-black text-white">
@@ -1055,7 +1055,7 @@ setSearchTerm('');
 setSelectedCategory('all');
 }
 setSelectedPricing('all')}}
-              className="px-4 py-3 bg-zion-cyan/10 border border-zion-cyan/20 rounded-lg text-zion-cyan hover:bg-zion-cyan hover:text-black transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25"
+              className="px-4 py-3 bg-zion-cyan/10 border border-zion-cyan/20 rounded-lg text-zion-cyan hover:bg-zion-cyan hover:text-black transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25">
             >;
 Clear Filters
             </button>
@@ -1180,7 +1180,7 @@ Our micro SAAS solutions are designed to grow with your business needs and provi
             <div className="mb-6">
               <$2 />;
 href="/comprehensive-services";
-className="inline-block bg-gradient-to-r from-green-600 to-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 mb-4"
+className="inline-block bg-gradient-to-r from-green-600 to-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 mb-4">
               >;
 Explore Our Full Service Portfolio →
               </a>
@@ -1299,7 +1299,7 @@ Our micro SAAS solutions are designed to grow with your business needs.
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <$2 />;
 href={`mailto:${microSaasServices[0].contactInfo.email}}`}
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-black font-bold rounded-xl hover:from-zion-cyan-light hover:to-zion-purple-light transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/25 transform hover:scale-105"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-black font-bold rounded-xl hover:from-zion-cyan-light hover:to-zion-purple-light transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/25 transform hover:scale-105">
                 >
                   <Mail className="w-5 h-5" />;
 Request Demo
@@ -1307,7 +1307,7 @@ Request Demo
 
                 <$2 />;
 href={`tel:${microSaasServices[0].contactInfo.phone}}`}
-                  className="inline-flex items-center gap-2 px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-bold rounded-xl hover:bg-zion-cyan hover:text-black transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25"
+                  className="inline-flex items-center gap-2 px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-bold rounded-xl hover:bg-zion-cyan hover:text-black transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25">
                 >
                   <Phone className="w-5 h-5" />;
 Call Now
@@ -1386,7 +1386,7 @@ that drives real business value.
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button;
 size="lg";
-className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-3 text-lg"
+className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-3 text-lg">
               >
                 <Zap className="w-5 h-5 mr-2" />;
 Explore Services
@@ -1394,7 +1394,7 @@ Explore Services
               <Button;
 variant="outline";
 size="lg";
-className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-3 text-lg"
+className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-3 text-lg">
               >
                 <Phone className="w-5 h-5 mr-2" />;
 Contact Sales
@@ -1413,7 +1413,7 @@ Contact Sales
 placeholder="Search services...";
 value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="pl-10 bg-zion-blue-dark border-zion-blue-light text-white placeholder-zion-slate-light focus:border-zion-cyan"
+                  className="pl-10 bg-zion-blue-dark border-zion-blue-light text-white placeholder-zion-slate-light focus:border-zion-cyan">
                 />
               </div>
 
@@ -1535,7 +1535,7 @@ Explore Services
                 <Button;
 variant="outline";
 size="lg";
-className="border-white text-white hover:bg-white/10 px-8 py-3"
+className="border-white text-white hover:bg-white/10 px-8 py-3">
                 >
                   <Phone className="w-5 h-5 mr-2" />;
 Contact Sales
@@ -1645,7 +1645,7 @@ Get Started
 placeholder="Search services, features, or benefits...";
 value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    className="pl-10 bg-white/10 border-zion-purple/20 text-white placeholder:text-zion-slate-light"
+                    className="pl-10 bg-white/10 border-zion-purple/20 text-white placeholder:text-zion-slate-light">
                   />
                 </div>
                 <Select value={selectedCategory} onValueChange={setSelectedCategory}>
@@ -1689,7 +1689,7 @@ value={searchQuery}
 placeholder="Search services...";
 value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    className="pl-10 bg-zion-blue-dark border-zion-blue-light text-white placeholder:text-zion-slate-light"
+                    className="pl-10 bg-zion-blue-dark border-zion-blue-light text-white placeholder:text-zion-slate-light">
                   />
                 </div>
                 <Select value={selectedCategory} onValueChange={setSelectedCategory}>
@@ -1796,7 +1796,7 @@ type="text";
 placeholder="Search services...";
 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-10 bg-zion-slate-dark/50 border-zion-blue-light/30 text-white placeholder-zion-slate-light focus:border-zion-cyan"
+                className="pl-10 bg-zion-slate-dark/50 border-zion-blue-light/30 text-white placeholder-zion-slate-light focus:border-zion-cyan">
               />
             </div>
 
@@ -1829,10 +1829,10 @@ type="range";
 min="0";
 max="10000";
 step="100";
-value={priceRange}
+value={priceRange}>
                 onChange={(e) =>
   </input> setPriceRange(Number(e.target.value))}
-                className="w-full h-2 bg-zion-slate-dark rounded-lg appearance-none cursor-pointer slider"
+                className="w-full h-2 bg-zion-slate-dark rounded-lg appearance-none cursor-pointer slider">
               />
             </div>
           </div>
@@ -1857,7 +1857,7 @@ return (;
 key={service.id}
                 variants={itemVariants}
                 whileHover={{ y: -10}}, scale: 1.02 }}
-                className="group"
+                className="group">
               >
                 <Card className="bg-zion-blue-dark/30 backdrop-blur-lg border-zion-blue-light/20 hover:border-zion-cyan/50 transition-all duration-300 h-full overflow-hidden">
                   {/* Service Header */}
@@ -1938,7 +1938,7 @@ Benefits
                         <Badge;
 key={index} ;
 variant="outline";
-className="text-xs border-zion-slate-light/30 text-zion-slate-light hover:border-zion-cyan/50 hover:text-zion-cyan transition-colors"
+className="text-xs border-zion-slate-light/30 text-zion-slate-light hover:border-zion-cyan/50 hover:text-zion-cyan transition-colors">
                         >
                           {tag}
                         </Badge>
@@ -1949,7 +1949,7 @@ className="text-xs border-zion-slate-light/30 text-zion-slate-light hover:border
                     <div className="flex gap-3">
                       <FuturisticNeonButton;
 onClick={() => window.location.href = `mailto:${service.contactInfo.email}}?subject=Inquiry about ${service.title}`}
-                        className="flex-1"
+                        className="flex-1">
                       >;
 Get Quote
                       </FuturisticNeonButton>
@@ -1957,7 +1957,7 @@ Get Quote
 variant="outline";
 size="sm";
 onClick={() => window.location.href = `tel:${service.contactInfo.phone}}`}
-                        className="border-zion-blue-light/30 text-zion-cyan hover:bg-zion-cyan/10 hover:border-zion-cyan"
+                        className="border-zion-blue-light/30 text-zion-cyan hover:bg-zion-cyan/10 hover:border-zion-cyan">
                       >;
 Call Now
                       </Button>
@@ -1985,7 +1985,7 @@ setSearchTerm('');
 setSelectedCategory('all');
 }
 setPriceRange(10000)}}
-              className="bg-zion-cyan hover:bg-zion-cyan-light text-white"
+              className="bg-zion-cyan hover:bg-zion-cyan-light text-white">
             >;
 Clear Filters
             </Button>
@@ -2019,7 +2019,7 @@ Schedule Consultation
 variant="outline";
 size="lg";
 onClick={() => window.location.href = 'tel:+13024640950'}
-              className="border-zion-cyan/50 text-zion-cyan hover:bg-zion-cyan/10 hover:border-zion-cyan"
+              className="border-zion-cyan/50 text-zion-cyan hover:bg-zion-cyan/10 hover:border-zion-cyan">
             >;
 Call +1 (302) 464-0950
             </Button>
@@ -2038,7 +2038,7 @@ export default MicroSaasServices
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button;
 size="lg";
-className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-3 text-lg"
+className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-3 text-lg">
                 >
                   <Phone className="w-5 h-5 mr-2" />;
 Schedule a Call
@@ -2046,7 +2046,7 @@ Schedule a Call
                 <Button;
 variant="outline";
 size="lg";
-className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-3 text-lg"
+className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-3 text-lg">
                 >
                   <Mail className="w-5 h-5 mr-2" />;
 Request Demo
@@ -2557,10 +2557,10 @@ Schedule Consultation
             <input;
 type="text";
 placeholder="Search services...";
-value={searchQuery}
+value={searchQuery}>
               onChange={(e) =>
   </input> setSearchQuery(e.target.value)}
-              className="flex-1 px-4 py-3 bg-white/10 border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+              className="flex-1 px-4 py-3 bg-white/10 border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan">
             />
             <div className="flex gap-2">
               {categories.map(category => ()
@@ -2745,8 +2745,8 @@ return (;
                     <div className="relative">
                       <img;
 src={service.images[0]} ;
-alt={service.title}
-                        className="w-full h-48 object-cover rounded-t-lg"
+alt={service.title}>
+                        className="w-full h-48 object-cover rounded-t-lg">
                       />
                       <Badge className="absolute top-4 right-4 bg-zion-purple">
                         {service.category}
@@ -2791,13 +2791,13 @@ Learn More
                 {filteredServices.map((service) => (
                   <Card;
 key={service.id} ;
-className="group bg-zion-blue-dark border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-purple/20"
+className="group bg-zion-blue-dark border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-purple/20">
                   >
                     <div className="relative overflow-hidden rounded-t-lg">
                       <img;
 src={service.image} ;
-alt={service.title}
-                        className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+alt={service.title}>
+                        className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
                       />
                       <div className="absolute top-4 right-4 flex gap-2">
                         {getStatusBadge(service.status)}

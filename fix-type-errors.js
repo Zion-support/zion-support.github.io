@@ -60,7 +60,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     if (content.includes('next/image')) {
       // Replace Next.js Image with regular img tag
       content = content.replace(/import Image from 'next\/image';/g, '')
-      content = content.replace(/<Image/g, '<img')
+      content = content.replace(/<Image/g, '<img')>
       content = content.replace(/<\/Image>/g, '</img>')
       content = content.replace(/src={/g, 'src={')
       content = content.replace(/alt={/g, 'alt={')

@@ -222,7 +222,7 @@ Four core pillars that guide our mission and drive our impact across the technol
             {missionPillars.map((pillar), index) => (
               <$2 />;
 key={index}
-                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-8 hover:border-cyan-500/50 transition-all duration-300 group"
+                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-8 hover:border-cyan-500/50 transition-all duration-300 group">
               >
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${pillar.color}} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <pillar.icon className="w-8 h-8 text-white" />
@@ -331,7 +331,7 @@ return (;
               <$2 />;
 }
 key={index}
-                className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
+                className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500">
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Icon className="w-8 h-8 text-white" />
@@ -367,7 +367,7 @@ return (;
                 <$2 />;
 }
 key={index}
-                  className="bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300 border border-gray-600 hover:border-cyan-500"
+                  className="bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300 border border-gray-600 hover:border-cyan-500">
                 >
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mr-4">
@@ -396,7 +396,7 @@ key={index}
                       {pillar.metrics.map((metric), idx) => (
                         <$2 />;
 key={idx}
-                          className="px-3 py-1 bg-gray-600 text-gray-300 text-xs rounded-full"
+                          className="px-3 py-1 bg-gray-600 text-gray-300 text-xs rounded-full">
                         >
                           {metric}
                         </span>
@@ -420,7 +420,7 @@ return (;
               <$2 />;
 }
 key={index}
-                className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
+                className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500">
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Icon className="w-8 h-8 text-white" />
@@ -450,7 +450,7 @@ key={index}
             {futureVision.map((vision), index) => (
               <$2 />;
 key={index}
-                className="bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300 border border-gray-600 hover:border-cyan-500"
+                className="bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300 border border-gray-600 hover:border-cyan-500">
               >
                 <div className="text-center mb-6">
                   <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -494,14 +494,14 @@ to be part of our journey to democratize technology and create positive global i
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <$2 />;
 to="/contact";
-className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium rounded-lg transition-all duration-200 transform hover:scale-105"
+className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium rounded-lg transition-all duration-200 transform hover:scale-105">
             >;
 Get Started Today
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
             <$2 />;
 to="/careers";
-className="inline-flex items-center justify-center px-8 py-4 border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-medium rounded-lg transition-all duration-200"
+className="inline-flex items-center justify-center px-8 py-4 border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-medium rounded-lg transition-all duration-200">
             >;
 Join Our Team
             </Link>

@@ -446,7 +446,7 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
             className="group bg-gradient-to-br from-cyan-600 to-blue-600,
   hover:from-cyan-500,
   hover:to-blue-500 text-white rounded-xl p-6 transition-all duration-300 transform,
-  hover:scale-105,"
+  hover:scale-105,">
   hover:shadow-2xl"
           >"
             <div className="flex items-center justify-between mb-3"></div>"
@@ -463,7 +463,7 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
             className="group bg-gradient-to-br from-blue-600 to-purple-600,
   hover:from-blue-500,
   hover:to-purple-500 text-white rounded-xl p-6 transition-all duration-300 transform,
-  hover:scale-105,"
+  hover:scale-105,">
   hover:shadow-2xl"
           >"
             <div className="flex items-center justify-between mb-3"></div>"
@@ -480,7 +480,7 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
             className="group bg-gradient-to-br from-purple-600 to-pink-600,
   hover:from-purple-500,
   hover:to-pink-500 text-white rounded-xl p-6 transition-all duration-300 transform,
-  hover:scale-105,"
+  hover:scale-105,">
   hover:shadow-2xl"
           >"
             <div className="flex items-center justify-between mb-3"></div>"
@@ -504,7 +504,7 @@ const October2025AutonomousInfrastructureBanner = () => {/* TODO: Fix JSX expres
             <Link></Link>"
               to="/contact""
               className="inline-flex items-center gap-2 bg-white text-cyan-600 px-8 py-4 rounded-xl font-bold text-lg,
-  hover:bg-gray-100 transition-colors transform,"
+  hover:bg-gray-100 transition-colors transform,">
   hover: scale-105"
             >
               Request Free Assessment,"

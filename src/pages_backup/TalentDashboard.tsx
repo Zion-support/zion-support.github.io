@@ -146,7 +146,7 @@ function TalentDashboardContent() {
                         <img
                           src={user.avatarUrl}
                           alt={user.displayName |'User'}
-                          loading='lazy'
+                          loading='lazy'>
                         />
 
                       ) : (
@@ -357,7 +357,7 @@ function TalentDashboardContent() {
                         <img
                           src={user.avatar_url}
                           alt={user.display_name || 'User'}
-                          loading='lazy'
+                          loading='lazy'>
                         />) : (
                         <div className='flex h - full w - full items - center justify - center bg - muted text - lg font - medium uppercase'>
                           {user?.display_name?.char_at (0) || 'U'}

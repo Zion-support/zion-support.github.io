@@ -48,7 +48,11 @@ function fixMergeConflicts(content) {
 
   // Remove merge conflict markers and keep HEAD version
   fixed = fixed
+<<<<<<< HEAD
     .replace(/    .replace(/  
+=======
+    .replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)    .replace(/<<<<<<< HEAD\n([\s\S]*?)  
+>>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
   // Remove duplicate Helmet tags
   fixed = fixed.replace(/<Helmet>[\s\S]*?<\/Helmet>\s*<Helmet>[\s\S]*?<\/Helmet>/g, (match) => {
     const firstHelmet = match.match(/<Helmet>[\s\S]*?<\/Helmet>/)[0];

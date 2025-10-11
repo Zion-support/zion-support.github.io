@@ -58,10 +58,10 @@ readingTimereadingTime: '45 min read',
       <div>
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse">
         <$2 />
-          className="absolute top-3/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"
+          className="absolute top-3/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse">
           style={{ animationDelay: '2s' }}
         >
-          className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"
+          className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse">
           style={{ animationDelay: '1s' }}
         {/* Header */}
             <span className="text-2xl">🚀</span>
@@ -106,12 +106,12 @@ readingTimereadingTime: '45 min read',
                 {item.tags.slice(0, 3).map((tag, index) => (
                   <$2 />
                     key={index}
-                    className="px-3 py-1 bg-white/10 text-gray-300 text-xs rounded-full"
+                    className="px-3 py-1 bg-white/10 text-gray-300 text-xs rounded-full">
                     {tag}
               {/* CTA */}
               <$2 />
                 href={item.url}
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 w-full justify-center"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 w-full justify-center">
                 Read {item.readingTime}
                 <span className="text-lg">→
         {/* Call to Action */}
@@ -222,7 +222,7 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
                 {item.tags.slice(0, 3).map((tag, index) => ()}
           <span>
                     key={index}"
-                    className="px-3 py-1 bg-white/10 text-gray-300 text-xs rounded-full"
+                    className="px-3 py-1 bg-white/10 text-gray-300 text-xs rounded-full">
                 Read {item.readingTime}"
                 <span className="text-lg">
         {/* Call to Action */}"
@@ -232,7 +232,7 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
                 to="/contact""
                 className="inline-flex items-center px-12 py-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-xl rounded-2xl,
   hover:from-blue-700,
-  hover:to-indigo-700 transition-all duration-300 transform,"
+  hover:to-indigo-700 transition-all duration-300 transform,">
   hover:scale-105 shadow-2xl""
               >Start Your Transformation<svg className="ml-3 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path></path>"
@@ -243,7 +243,7 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
 // />
           </svg>"
                 to="/services""
-                className="inline-flex items-center px-12 py-6 border-2 border-blue-400 text-blue-300 font-bold text-xl rounded-2xl,"
+                className="inline-flex items-center px-12 py-6 border-2 border-blue-400 text-blue-300 font-bold text-xl rounded-2xl,">
   hover: bg-blue-400/10 transition-all duration-300"
 >Learn More</Link>
     </section>)

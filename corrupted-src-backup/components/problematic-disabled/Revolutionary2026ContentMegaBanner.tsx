@@ -264,7 +264,7 @@ const Revolutionary2026ContentMegaBanne, r: React.FC = () => {/* TODO: Fix JSX e
                   <sp, a, n>Explore, Breakthroug, h
                   <Link, className="w-4 h-4, grou, p-hov, e, r/b, t, n:transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0" />
                 <, hre, f = {`/bl, o, g/${conte, n, t.slug}`}"$2 />
-                  className="gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transform, hove,"
+                  className="gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transform, hove,">
   r:-transla, t, e-y-1"
                 ></a>"
                   <div, className="w-4 h-4, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, rounde, d-fu, l, l" />

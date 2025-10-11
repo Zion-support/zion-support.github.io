@@ -1429,7 +1429,7 @@ export default function ITServicesPage() {
                   <span>Start your free trial today</span>
                   <$2 />
                     href={service.contactInfo.website}
-                    className="text-blue-400 hover:text-blue-300 transition-colors"
+                    className="text-blue-400 hover:text-blue-300 transition-colors">
                     target="_blank"
                     rel="noopener noreferrer"
                   >

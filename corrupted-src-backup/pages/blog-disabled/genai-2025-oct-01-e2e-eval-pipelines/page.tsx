@@ -64,12 +64,12 @@ export default function BlogPost(): React.JSX.Element {
                     href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-white bg-opacity-20 hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
+                    className="bg-white bg-opacity-20 hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors">
 export default function BlogPost(): React.JSX.Element {/* TODO: Fix JSX expression */}
   s://twitter.com/intent/tweet?text=${encodeURIComponent('Genai 2025 Oct 01 E2e Eval Pipelines')}&url=${encodeURIComponent(window.location.href)}`}
                     target="_blank""
                     rel="noopener noreferrer""
-                    className="bg-white bg-opacity-20,"
+                    className="bg-white bg-opacity-20,">
   hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
                   >
                     Twitter,
@@ -79,7 +79,7 @@ export default function BlogPost(): React.JSX.Element {/* TODO: Fix JSX expressi
   s://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`}"
                     target="_blank""
                     rel="noopener noreferrer""
-                    className="bg-white bg-opacity-20,"
+                    className="bg-white bg-opacity-20,">
   hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
                   >
                     LinkedIn
@@ -88,10 +88,10 @@ export default function BlogPost(): React.JSX.Element {/* TODO: Fix JSX expressi
               </div>
               <,$2 />
                 href="/blog"
-                className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               <a></a>"
                 href="/blog""
-                className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold,"
+                className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold,">
   hover: bg-gray-100 transition-colors"
               >
                 Back to Blog,

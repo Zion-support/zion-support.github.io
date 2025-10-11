@@ -389,7 +389,7 @@ setLoginOpen(true)};                    }}
                   </Link>
                   <$2 />;
 href="/signup";
-className="text-sm hover:text-primary whitespace-nowrap"
+className="text-sm hover:text-primary whitespace-nowrap">
                   >
                     {t('auth.signup')}
                   </Link>

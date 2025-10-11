@@ -156,7 +156,7 @@ const, October2025UltimateBreakthroughBanne, r = () => {/* TODO: Fix JSX express
   r: g, a, p-2, transitio, n-a, l, l">""
               Explore, Technolog, y <Link, className="w-4 h-4, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>""
             <div, className="flex, item, s-center, tex, t-purp, l, e-300, tex, t-sm, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, transitio, n-a, l, l">";"
-              Explore, Technolog, y <ArrowRight, className="w-4 h-4, m, l-1, grou, p-ho, v, e,"
+              Explore, Technolog, y <ArrowRight, className="w-4 h-4, m, l-1, grou, p-ho, v, e,">
   r: transla, t, e-x-1, transitio, n-transfo, r, m" />"
           {/* Featur, e, 2 */}
           <Li, n, k
@@ -205,7 +205,7 @@ const, October2025UltimateBreakthroughBanne, r = () => {/* TODO: Fix JSX express
             <div, className="flex, item, s-center, tex, t-bl, u, e-300, tex, t-sm, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, transitio, n-a, l, l">""
               Discover, Innovatio, n <Link, className="w-4 h-4, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>""
             <div, className="flex, item, s-center, tex, t-bl, u, e-300, tex, t-sm, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, transitio, n-a, l, l">";"
-              Discover, Innovatio, n <ArrowRight, className="w-4 h-4, m, l-1, grou, p-ho, v, e,"
+              Discover, Innovatio, n <ArrowRight, className="w-4 h-4, m, l-1, grou, p-ho, v, e,">
   r: transla, t, e-x-1, transitio, n-transfo, r, m" />"
           {/* Featur, e, 3 */}
           <Li, n, k
@@ -252,7 +252,7 @@ const, October2025UltimateBreakthroughBanne, r = () => {/* TODO: Fix JSX express
   r: g, a, p-2, transitio, n-a, l, l">""
               Learn, Mor, e <Link, className="w-4 h-4, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>""
             <div, className="flex, item, s-center, tex, t-indi, g, o-300, tex, t-sm, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, transitio, n-a, l, l">";"
-              Learn, Mor, e <ArrowRight, className="w-4 h-4, m, l-1, grou, p-ho, v, e,"
+              Learn, Mor, e <ArrowRight, className="w-4 h-4, m, l-1, grou, p-ho, v, e,">
   r: transla, t, e-x-1, transitio, n-transfo, r, m" />"
           {/* Featur, e, 4 */}
           <Li, n, k
@@ -301,7 +301,7 @@ const, October2025UltimateBreakthroughBanne, r = () => {/* TODO: Fix JSX express
             <div, className="flex, item, s-center, tex, t-cy, a, n-300, tex, t-sm, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, transitio, n-a, l, l">""
               Read, Guid, e <Link, className="w-4 h-4, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>""
             <div, className="flex, item, s-center, tex, t-cy, a, n-300, tex, t-sm, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, transitio, n-a, l, l">";"
-              Read, Guid, e <ArrowRight, className="w-4 h-4, m, l-1, grou, p-ho, v, e,"
+              Read, Guid, e <ArrowRight, className="w-4 h-4, m, l-1, grou, p-ho, v, e,">
   r: transla, t, e-x-1, transitio, n-transfo, r, m" />"
           {/* Featur, e, 5 */}
           <Li, n, k
@@ -370,7 +370,7 @@ const, October2025UltimateBreakthroughBanne, r = () => {/* TODO: Fix JSX express
   r: g, a, p-2, transitio, n-a, l, l">""
               View, Solutio, n <Link, className="w-4 h-4, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>""
             <div, className="flex, item, s-center, tex, t-r, e, d-300, tex, t-sm, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, transitio, n-a, l, l">";"
-              View, Solutio, n <ArrowRight, className="w-4 h-4, m, l-1, grou, p-ho, v, e,"
+              View, Solutio, n <ArrowRight, className="w-4 h-4, m, l-1, grou, p-ho, v, e,">
   r: transla, t, e-x-1, transitio, n-transfo, r, m" />"
           {/* CTA, Car, d */}"
           <, className="group, relative, bg-gradie, n, t-to-br, fro, m-yell, o, w-5, 0, 0/10, t, o-oran, g, e-5, 0, 0/10, backdro, p-bl, u, r-sm, borde, r-2, borde, r-yell, o, w-4, 0, 0/50, rounde, d-x, l, p-6, hove, r: bord, e, r-yell, o, w-400, hove, r:shad, o, w-lg, hov, e,"$2 />

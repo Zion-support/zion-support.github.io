@@ -205,7 +205,7 @@ const,
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>"
                 href="/demo""
-                className="cyber-button-outline inline-flex items-center justify-center px-8 py-4 text-lg font-semibold"
+                className="cyber-button-outline inline-flex items-center justify-center px-8 py-4 text-lg font-semibold">
                 Free Assessment,
       {/* Features Section */}"
       <div className="py-20 bg-slate-800/50"></div>"
@@ -241,12 +241,12 @@ const,
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
               Seamlessly migrate your applications and data to the cloud with our expert migration services,
               <a></a>"
-                className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold,"
+                className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold,">
   hover: bg-blue-700 transition-colors inline-flex items-center"
                 Get Started,
               </a>"
                 className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold,
-  hover:bg-blue-600,"
+  hover:bg-blue-600,">
   hover: text-white transition-all duration-300 inline-flex items-center"
                 View Demo
           </section>
@@ -337,9 +337,9 @@ const,
                 Get a free assessment of your current infrastructure and migration readiness. 
                 Our experts will provide a detailed migration plan and cost estimate."
               <div className="space-y-4"></div>"
-                  className="cyber-button w-full inline-flex items-center justify-center py-3"
+                  className="cyber-button w-full inline-flex items-center justify-center py-3">
                   Get Free Assessment;"
-                  className="cyber-button-outline w-full inline-flex items-center justify-center py-3"
+                  className="cyber-button-outline w-full inline-flex items-center justify-center py-3">
                   Schedule Consultation;"
       <div className="py-20"></div>"
         <div className="container mx-auto px-4 text-center"></div>"

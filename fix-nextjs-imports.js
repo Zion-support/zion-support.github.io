@@ -114,7 +114,7 @@ const replacements = [
 // Function to process a single file
 function processFile(filePath) {
   try {
-    // Apply replacements
+    // Apply replacements>
     replacements.forEach(({ from, to, context }) => {
       if (context) {
         // Context-specific replacement

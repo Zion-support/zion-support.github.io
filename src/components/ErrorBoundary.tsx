@@ -49,7 +49,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
             <div className="space-y-3">
               <button>
                 onClick={this.handleRetry}"
-                className="w-full bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold,"
+                className="w-full bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold,">
   hover: bg-cyan-700 transition-colors flex items-center justify-center gap-2"
               >"
                 <RefreshCw className="w-4 h-4" /></RefreshCw>
@@ -57,7 +57,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
               </button>
               <button></button>
                 onClick={this.handleReload}"
-                className="w-full bg-gray-600 text-white px-6 py-3 rounded-lg font-semibold,"
+                className="w-full bg-gray-600 text-white px-6 py-3 rounded-lg font-semibold,">
   hover: bg-gray-700 transition-colors flex items-center justify-center gap-2"
               >"
                 <RefreshCw className="w-4 h-4" /></RefreshCw>
@@ -65,7 +65,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
               </button>
               <a></a>"
                 href="/""
-                className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold,"
+                className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold,">
   hover: bg-indigo-700 transition-colors flex items-center justify-center gap-2"
               >"
                 <Home className="w-4 h-4" /></Home>
@@ -75,7 +75,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
                 href="mailt,"
   o:support@ziontechgroup.com?subject=Error Report""
                 className="w-full border border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold,
-  hover:bg-cyan-400,"
+  hover:bg-cyan-400,">
   hover: text-slate-900 transition-colors flex items-center justify-center gap-2"
               >"
                 <Mail className="w-4 h-4" /></Mail>
@@ -88,14 +88,14 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
   team:</p>"
               <p className="mt-1"></p>"
                 < href="mailt,"$2 />
-  o:support@ziontechgroup.com" className="text-cyan-400,"
+  o:support@ziontechgroup.com" className="text-cyan-400,">
   hover: text-cyan-300"></a>
                   support@ziontechgroup.com,
                 </a>
               </p>"
               <p className="mt-1"></p>"
                 < href="te,"$2 />
-  l:+13024640950" className="text-cyan-400,"
+  l:+13024640950" className="text-cyan-400,">
   hover: text-cyan-300"></a>
                   (302) 464-0950
                 </a>

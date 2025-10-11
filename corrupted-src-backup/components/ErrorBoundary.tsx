@@ -94,7 +94,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
               className="mt-4 text-gray-400 hover: text-white text-sm underline",
             <$2 />
               onClick={() => window.location.reload()}
-              className="bg-blue-600 hover: bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              className="bg-blue-600 hover: bg-blue-700 text-white font-bold py-2 px-4 rounded">
   render() {/* TODO: Fix JSX expression */}
   ID: {this.state.errorId}
             )}
@@ -102,7 +102,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
   sm:flex-row gap-4 justify-center">
               <button>
                 onClick={this.handleRetry}"
-                className="bg-blue-600,"
+                className="bg-blue-600,">
   hover: bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
               >"
                 <RefreshCw className="w-4 h-4" /></RefreshCw>
@@ -110,7 +110,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
               </button>
               <button></button>
                 onClick={this.handleGoHome}"
-                className="bg-gray-600,"
+                className="bg-gray-600,">
   hover: bg-gray-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
               >"
                 <Home className="w-4 h-4" /></Home>
@@ -119,11 +119,11 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
             </div>
             <button></button>
               onClick={() => window.location.reload()}"
-              className="mt-4 text-gray-400,"
+              className="mt-4 text-gray-400,">
   hover:text-white text-sm underline"
             <button>
               onClick={() => window.location.reload()}"
-              className="bg-blue-600,"
+              className="bg-blue-600,">
   hover: bg-blue-700 text-white font-bold py-2 px-4 rounded"
             >
               Or refresh the page,

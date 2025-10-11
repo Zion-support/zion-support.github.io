@@ -76,14 +76,14 @@ class ErrorBoundary extends React.Component<
               <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong
               <$2 />
                 onClick={() => this.setState({ hasError: false })}
-                className="bg-blue-600 text-white px-4 py-2 rounded hover: bg-blue-700"
+                className="bg-blue-600 text-white px-4 py-2 rounded hover: bg-blue-700">
   componentDidCatch(erro,
   r: Error, errorInf)
   o: React.ErrorInfo) {/* TODO: Fix JSX expression */}
     //     }
   render() {/* TODO: Fix JSX expression */}
   r: false })}"
-                className="bg-blue-600 text-white px-4 py-2 rounded,"
+                className="bg-blue-600 text-white px-4 py-2 rounded,">
   hover: bg-blue-700"
               >
                 Try again

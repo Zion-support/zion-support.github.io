@@ -368,7 +368,7 @@ return (;
         <motion.div;
 initial={{ opacity: 0}}, y: 20 }}
           animate={{ opacity: 1}}, y: 0 }}
-          className="text-center mb-12"
+          className="text-center mb-12">
         >
           <div className="flex justify-center mb-4">
             <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full flex items-center justify-center">
@@ -386,7 +386,7 @@ Learn how we use cookies and similar technologies to enhance your experience.
 initial={{ opacity: 0}}, y: 20 }}
           animate={{ opacity: 1}}, y: 0 }}
           transition={{ delay: 0.1}}}
-          className="bg-white/10 backdrop-blur-md rounded-lg p-6 mb-8"
+          className="bg-white/10 backdrop-blur-md rounded-lg p-6 mb-8">
         >
           <div className="flex items-center text-cyan-400 mb-2">
             <Lock className="w-5 h-5 mr-2" />
@@ -402,7 +402,7 @@ initial={{ opacity: 0}}, y: 20 }}
 initial={{ opacity: 0}}, y: 20 }}
             animate={{ opacity: 1}}, y: 0 }}
             transition={{ delay: 0.2}}}
-            className="bg-white/10 backdrop-blur-md rounded-lg p-6"
+            className="bg-white/10 backdrop-blur-md rounded-lg p-6">
           >
             <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
               <Shield className="w-6 h-6 mr-3 text-cyan-400" />;
@@ -426,7 +426,7 @@ provide you with a better experience by understanding how you use our website.
 initial={{ opacity: 0}}, y: 20 }}
             animate={{ opacity: 1}}, y: 0 }}
             transition={{ delay: 0.3}}}
-            className="bg-white/10 backdrop-blur-md rounded-lg p-6"
+            className="bg-white/10 backdrop-blur-md rounded-lg p-6">
           >
             <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
               <Eye className="w-6 h-6 mr-3 text-cyan-400" />;
@@ -449,7 +449,7 @@ How We Use Cookies
 initial={{ opacity: 0}}, y: 20 }}
             animate={{ opacity: 1}}, y: 0 }}
             transition={{ delay: 0.4}}}
-            className="bg-white/10 backdrop-blur-md rounded-lg p-6"
+            className="bg-white/10 backdrop-blur-md rounded-lg p-6">
           >
             <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
               <CheckCircle className="w-6 h-6 mr-3 text-cyan-400" />;
@@ -485,7 +485,7 @@ and social media platforms.
 initial={{ opacity: 0}}, y: 20 }}
             animate={{ opacity: 1}}, y: 0 }}
             transition={{ delay: 0.5}}}
-            className="bg-white/10 backdrop-blur-md rounded-lg p-6"
+            className="bg-white/10 backdrop-blur-md rounded-lg p-6">
           >
             <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
               <Lock className="w-6 h-6 mr-3 text-cyan-400" />;
@@ -518,7 +518,7 @@ Specific Cookies We Use
 initial={{ opacity: 0}}, y: 20 }}
             animate={{ opacity: 1}}, y: 0 }}
             transition={{ delay: 0.5}}}
-            className="bg-white/10 backdrop-blur-md rounded-lg p-6"
+            className="bg-white/10 backdrop-blur-md rounded-lg p-6">
           >
             <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
               <Shield className="w-6 h-6 mr-3 text-cyan-400" />;
@@ -545,7 +545,7 @@ You can control and manage cookies through your browser settings. Most browsers 
 initial={{ opacity: 0}}, y: 20 }}
             animate={{ opacity: 1}}, y: 0 }}
             transition={{ delay: 0.6}}}
-            className="text-center"
+            className="text-center">
           >
             <h2 className="text-2xl font-bold text-white mb-4">Questions About Cookies?</h2>
             <p className="text-gray-300 mb-6">;
@@ -554,7 +554,7 @@ please don't hesitate to contact us.
             </p>
             <$2 />;
 to="/contact";
-className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-400 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-500 hover:to-purple-700 transition-all duration-200"
+className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-400 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-500 hover:to-purple-700 transition-all duration-200">
             >
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">;
 Managing Your Cookie Preferences
@@ -896,7 +896,7 @@ initial={{ opacity: 0}}, y: 30 }}
             >
               <$2 />;
 href="mailto:privacy@ziontechgroup.com";
-className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25"
+className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">
               >;
 Contact Privacy Team
                 <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1167,13 +1167,13 @@ If you have any questions about our use of cookies, please contact us.
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <$2 />;
 to="/contact";
-className="inline-flex items-center justify-center px-6 py-3 bg-zion-purple text-white font-medium rounded-lg hover:bg-zion-purple/90 transition-colors"
+className="inline-flex items-center justify-center px-6 py-3 bg-zion-purple text-white font-medium rounded-lg hover:bg-zion-purple/90 transition-colors">
               >;
 Contact Us
               </Link>
               <$2 />;
 href="mailto:privacy@ziontechgroup.com";
-className="inline-flex items-center justify-center px-6 py-3 border border-zion-blue-light text-white font-medium rounded-lg hover:bg-zion-blue-light/20 transition-colors"
+className="inline-flex items-center justify-center px-6 py-3 border border-zion-blue-light text-white font-medium rounded-lg hover:bg-zion-blue-light/20 transition-colors">
               >;
 Email Privacy Team
               </a>

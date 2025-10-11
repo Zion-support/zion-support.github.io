@@ -4,9 +4,19 @@ import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
 
+<<<<<<< HEAD
 // Function to recursively find all files with merge conflicts
 function findFilesWithConflicts(dir, fileList = []) {
   const files = fs.readdirSync(dir);
+=======
+// Function to fix merge conflicts by keeping the HEAD version
+function fixMergeConflicts(content) {
+  // Remove merge conflict markers and keep HEAD version
+  let fixed = content
+    .replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)    .replace(/<<<<<<< HEAD\n([\s\S]*?)  
+  return fixed;
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
 
   files.forEach(file => {
     const filePath = path.join(dir, file);

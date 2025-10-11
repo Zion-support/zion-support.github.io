@@ -117,13 +117,13 @@ export default function CaseStudy() {
           </Breadcrumb>
           <Button
             variant="outline"
-            className="mb-8 border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
+            className="mb-8 border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white">
             asChild
           >
 
             <Link href='/case-studies'>
               <ArrowLeft className='mr-2 h-4 w-4' /> Back to Case Studies            </Link>            variant="outline"
-            className="mb-8 border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
+            className="mb-8 border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white">
             asChild
           >
             <Link href="/case-studies">
@@ -138,8 +138,8 @@ export default function CaseStudy() {
             alt={`${study.company} logo`}
 
             className='h-12 mb-4'
-            loading='lazy'
-            className="h-12 mb-4"
+            loading='lazy'>
+            className="h-12 mb-4">
             loading="lazy"
 
           />
@@ -164,7 +164,7 @@ export default function CaseStudy() {
             </Button>
           )}
           <$2 />
-            className="prose prose-invert"
+            className="prose prose-invert">
             dangerouslySetInnerHTML={{ __html: study.content }}
           />
 
@@ -173,7 +173,7 @@ export default function CaseStudy() {
 
             dangerouslySetInnerHTML={{ __html: study && study.content }}
           />
-          <p className='mt-8 text-white font-semibold'>            — {study && study.author}, {study && study.role}            className="prose prose-invert"
+          <p className='mt-8 text-white font-semibold'>            — {study && study.author}, {study && study.role}            className="prose prose-invert">
             dangerouslySetInnerHTML={{ __html: study && study.content }}
           />
           <p className="mt-8 text-white font-semibold"></$1></$1></$1>
@@ -271,7 +271,7 @@ if ( {) {
           >
             <Link href='/case - studies'>
               <ArrowLeft className='mr - 2 h - 4 w - 4' /> Back to Case Studies            </Link>            variant="outline"
-            className="mb - 8 border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white"
+            className="mb - 8 border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white">
             as_child
           >
             <Link href="/case - studies">
@@ -280,7 +280,7 @@ if ( {) {
             src = {study.company_logo, }
             alt={`${study.company} logo`}
             className='h - 12 mb - 4'
-            loading='lazy'
+            loading='lazy'>
           />
           <h1 className='text - 3xl font - bold text - white mb - 4'>{study.title}</h1>
           <p className='text - zion - slate - light mb - 8'>{study.excerpt}</p>
@@ -297,7 +297,7 @@ if ( {) {
             className='prose prose - invert'
             dangerouslySetInnerHTML={{ __html: study.content }}
           />
-          <p className='mt - 8 text - white font - semibold'>            — {study.author}, {study.role}            className="prose prose - invert"
+          <p className='mt - 8 text - white font - semibold'>            — {study.author}, {study.role}            className="prose prose - invert">
             dangerouslySetInnerHTML={{ __html: study.content }}
           />
           <p className="mt - 8 text - white font - semibold"></$1></$1></$1>

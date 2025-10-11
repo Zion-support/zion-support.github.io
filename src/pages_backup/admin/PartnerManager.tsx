@@ -697,7 +697,7 @@ return (;
 icon={<Users className="h-8 w-8" />}
           title="No Partners Found";
 description="There are no partner applications to display.";
-className="border-none bg-transparent text-center"
+className="border-none bg-transparent text-center">
         />
       </div>
     )
@@ -738,7 +738,7 @@ return (;
 variant="ghost";
 size="sm";
 onClick={() => onUpdateStatus(partner.id}, 'rejected')}
-                      className="text-red-500 hover:text-red-600 hover:bg-red-900/20"
+                      className="text-red-500 hover:text-red-600 hover:bg-red-900/20">
                     >
                       <X className="h-4 w-4" />
                       <span className="sr-only">Reject</span>
@@ -747,7 +747,7 @@ onClick={() => onUpdateStatus(partner.id}, 'rejected')}
 variant="ghost";
 size="sm";
 onClick={() => onUpdateStatus(partner.id, 'approved')}
-                      className="text-green-500 hover:text-green-600 hover:bg-green-900/20"
+                      className="text-green-500 hover:text-green-600 hover:bg-green-900/20">
                     >
                       <Check className="h-4 w-4" />
                       <span className="sr-only">Approve</span>
@@ -759,7 +759,7 @@ onClick={() => onUpdateStatus(partner.id, 'approved')}
 variant="ghost";
 size="sm";
 onClick={() => onOpenSettings(partner)}
-                  className="text-zion-slate-light hover:text-white"
+                  className="text-zion-slate-light hover:text-white">
                 >
                   <Settings className="h-4 w-4" />
                   <span className="sr-only">Settings</span>

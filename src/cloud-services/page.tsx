@@ -84,12 +84,12 @@ const CloudServicesPage: React.FC = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <$2 />
-              href="tel:+13024640950" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
+              href="tel:+13024640950" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all">
 // >
 //               Get Started Today
           </a>
             <$2 />
-              href="/contact" className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all"
+              href="/contact" className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all">
 // >
 //               Learn More,
           </a>
@@ -136,12 +136,12 @@ const CloudServicesPage: React.FC = () => {
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <$2 />
-              href="tel:+13024640950" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
+              href="tel:+13024640950" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all">
 // >
 //               Call (302) 464-0950
           </a>
             <$2 />
-              href="/contact" className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all"
+              href="/contact" className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all">
 // >
 //               Get Free Consultation
           </a>

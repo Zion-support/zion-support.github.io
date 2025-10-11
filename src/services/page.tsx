@@ -48,7 +48,7 @@ const ServicesPage: React.FC = () => {
               </a>
               <Link
                 to="/contact"
-                className="border border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+                className="border border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors">
               >
                 Get Free Consultation
               </Link>
@@ -65,7 +65,7 @@ const ServicesPage: React.FC = () => {
                       Most Popular
                     </span>
                   </div>
-                    className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors inline-block"
+                    className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors inline-block">
                   >
                     Learn More
                   </Link>
@@ -84,7 +84,7 @@ const ServicesPage: React.FC = () => {
                       Most Popular
                     </span>
                   </div>
-                    className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors inline-block"
+                    className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors inline-block">
                   >
                     Learn More
                   </Link>
@@ -101,7 +101,7 @@ const ServicesPage: React.FC = () => {
                       Most Popular
                     </span>
                   </div>
-                    className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors inline-block"
+                    className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors inline-block">
                   >
                     Learn More
                   </Link>

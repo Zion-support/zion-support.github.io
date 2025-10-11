@@ -141,7 +141,7 @@ useEffect((),) => {
               <Button;
 }
 onClick={startVideoCall}
-                className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light"
+                className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light">
               >
                 <Video className="h-4 w-4" />;
 Start Call
@@ -305,7 +305,7 @@ Messages</$1>
             {active_conversation && (
               <Button;
 on_click={startVideoCall}, }
-                className="flex items - center gap - 2 bg - zion - purple hover:bg - zion - purple - light"
+                className="flex items - center gap - 2 bg - zion - purple hover:bg - zion - purple - light">
               >
                 <Video className="h - 4 w - 4" />;
 Start Call</$1>)}

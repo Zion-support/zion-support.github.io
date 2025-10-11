@@ -6,7 +6,7 @@ interface SkipLinkProps {
 const SkipLink: React.FC<SkipLinkProps> = ({ to, children }) => {</SkipLinkProps>return</SkipLinkProps> (
     <$2 />
       href={to}
-      className="skip-link"
+      className="skip-link">
       style={{
         position: 'absolute',
         top: '-40 px',

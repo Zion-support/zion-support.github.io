@@ -562,7 +562,7 @@ const EnterpriseAutomation202, 5 = () => {/* TODO: Fix JSX expression */}
   className= "border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-400 hover:text-white transition-colors,
                   <div></div>"
                     to="/contact""
-  className="bg-emerald-500 text-white px-8 py-4 rounded-lg font-semibold,"
+  className="bg-emerald-500 text-white px-8 py-4 rounded-lg font-semibold,">
   hover:bg-emerald-600 transition-colors inline-flex items-center justify-center gap-2""
                     >""
                       Start Your Transformation""
@@ -572,14 +572,14 @@ const EnterpriseAutomation202, 5 = () => {/* TODO: Fix JSX expression */}
                     </Link>"
                     <Link to="/case-studies>""
   className="border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg font-semibold,
-  hover:bg-emerald-400,"
+  hover:bg-emerald-400,">
   hover:text-white transition-colors>""
               <section className="text-center">
                 <div></div>"
                   < className="flex flex-col,"$2 />
   sm:flex-row gap-4 justify-center"></div>"
                     to="/contact""
-  className="bg-emerald-500 text-white px-8 py-4 rounded-lg font-semibold,"
+  className="bg-emerald-500 text-white px-8 py-4 rounded-lg font-semibold,">
   hover: bg-emerald-600 transition-colors inline-flex items-center justify-center gap-2""
                     >""
                       Start Your Transformation""

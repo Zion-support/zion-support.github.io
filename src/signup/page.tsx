@@ -168,7 +168,7 @@ value={formData.firstName}
                         onChange={handleInputChange}
                         required;
 className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20";
-placeholder="Enter your first name"
+placeholder="Enter your first name">
                       />
   </input>;
 Last Name;
@@ -237,7 +237,7 @@ type="text" name="firstName";
 value={formData.firstName}
                         onChange={handleInputChange}
 // required;
-className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your first name"
+className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your first name">
 />
   </input>;
 Last Name,;
@@ -260,7 +260,7 @@ type={showPassword ? 'text' : 'password'}
                       className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Create a password"
                     <$2 />;
 type="button" onClick={() => setShowPassword(!showPassword)}
-                      className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
+                      className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors">
 // >
                       {showPassword ?}"
           <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
@@ -273,7 +273,7 @@ type={showConfirmPassword ? 'text' : 'password'}
                   <label className="flex items-start">;
 type="checkbox" name="agreeToTerms";
 checked={formData.agreeToTerms}
-                      className="w-4 h-4 text-cyan-400 bg-slate-700 border-gray-600 rounded focus:ring-cyan-400 focus:ring-2 mt-1"
+                      className="w-4 h-4 text-cyan-400 bg-slate-700 border-gray-600 rounded focus:ring-cyan-400 focus:ring-2 mt-1">
                     <span className="ml-2 text-sm text-gray-300">;
 I agree to the{' '}
                       <a href="/terms" className="text-cyan-400 hover: text-cyan-300">;
@@ -289,7 +289,7 @@ checked={formData.subscribeNewsletter}
                       Subscribe to our newsletter for updates and tips;
 type="submit";
 disabled={isLoading}
-                  className="w-full cyber-button py-3 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full cyber-button py-3 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed">
                   {isLoading ? (
                     <div className="flex items-center justify-center">
                       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2">;
@@ -342,7 +342,7 @@ hover: text-cyan-300"></a>
 name="subscribeNewsletter" checked={formData.subscribeNewsletter}
                       Subscribe to our newsletter for updates and tips;
 type="submit" disabled={isLoading}
-                  className="w-full cyber-button py-3 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full cyber-button py-3 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed">
                   {isLoading ? ()}
           <div className="flex items-center justify-center">
                       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2">;

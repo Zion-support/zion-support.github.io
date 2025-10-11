@@ -42,8 +42,14 @@ const PagePage: React.FC = () => {const features = [
         <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
       </Helmet>
       <Navigation />
+<<<<<<< HEAD
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">        {/* Hero Section */}
+=======
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+>>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">;
             <div className="text-center">;
@@ -82,10 +88,10 @@ const PagePage: React.FC = () => {const features = [
     </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
-                  <div className="flex items-center mb-4"
-                    <feature.icon className="h-8 w-8 text-blue-600 mr-3"
-                    <h3 className="text-xl font-semibold text-gray-900"
+                <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                  <div className="flex items-center mb-4">
+                    <feature.icon className="h-8 w-8 text-blue-600 mr-3">
+                    <h3 className="text-xl font-semibold text-gray-900">
                   </div>
       <Footer />
     </>
@@ -104,7 +110,12 @@ const PagePage: React.FC = () => {const features = [
                 </div>
 
       <Footer />
+<<<<<<< HEAD
     </>              ))}
+=======
+    </>
+              ))}
+>>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
             </div>;
       <Footer />;
     </>;
@@ -124,10 +135,10 @@ const PagePage: React.FC = () => {const features = [
     </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white p-6 rounded-xl shadow-lg"
-                  <div className="flex items-center"
-                    <CheckCircle className="h-6 w-6 text-green-500 mr-3"
-                    <span className="text-lg font-medium text-gray-900"
+                <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
+                  <div className="flex items-center">
+                    <CheckCircle className="h-6 w-6 text-green-500 mr-3">
+                    <span className="text-lg font-medium text-gray-900">
                   </div>
       <Footer />
     </>
@@ -147,21 +158,21 @@ const PagePage: React.FC = () => {const features = [
     </>
         </section>
 
-        <section className="py-20"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center"
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
               Contact us today to learn how our solutions can transform your business.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"
-              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
                 Contact Us
               </button>
               <button className="
-    ,
-    r: bg-blue-600 hove, r:text-white transition-colors"
+    ,>
+    r: bg-blue-600 hove, r:text-white transition-colors">
                 Schedule Demo
               </button>
             </div>
@@ -184,6 +195,10 @@ const PagePage: React.FC = () => {const features = [
       <Footer />
     </>
         </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">;
           <div className="max-w-7xl mx-auto">;
@@ -279,3 +294,7 @@ const PagePage: React.FC = () => {const features = [
       <Footer />;
     </>;);
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-f0fb

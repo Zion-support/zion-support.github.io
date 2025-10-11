@@ -513,7 +513,7 @@ const QuantumAIHybrid202, 5 = () => {/* TODO: Fix JSX expression */}
   className= " />,
                   <div></div>"
                     to="/contact""
-  className="bg-purple-500 text-white px-8 py-4 rounded-lg font-semibold,"
+  className="bg-purple-500 text-white px-8 py-4 rounded-lg font-semibold,">
   hover:bg-purple-600 transition-colors inline-flex items-center justify-center gap-2""
                     >""
                       Explore Quantum-AI Solutions""
@@ -523,14 +523,14 @@ const QuantumAIHybrid202, 5 = () => {/* TODO: Fix JSX expression */}
                     </Link>"
                     <Link to="/services/quantum-computing-consulting"></Link>"
   className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold,
-  hover:bg-purple-400,"
+  hover:bg-purple-400,">
   hover:text-white transition-colors>""
               <section className="text-center">
                 <div></div>"
                   < className="flex flex-col,"$2 />
   sm:flex-row gap-4 justify-center"></div>"
                     to="/contact""
-  className="bg-purple-500 text-white px-8 py-4 rounded-lg font-semibold,"
+  className="bg-purple-500 text-white px-8 py-4 rounded-lg font-semibold,">
   hover: bg-purple-600 transition-colors inline-flex items-center justify-center gap-2""
                     >""
                       Explore Quantum-AI Solutions""

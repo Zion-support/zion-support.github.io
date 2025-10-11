@@ -181,7 +181,7 @@ const, October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
                   <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>""
                 <div, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">"
                   <sp, a, n>Read, Articl, e</sp, a, n>"
-                  <ArrowRight, className="w-5 h-5, grou, p-ho, v, e,"
+                  <ArrowRight, className="w-5 h-5, grou, p-ho, v, e,">
   r: transla, t, e-x-1, transitio, n-transfo, r, m" />"
                 {/* Hover, Gradient, Effect */}`
                 <div, className={`absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.gradie, n, t} opaci, t, y-0, grou, p-hov, e, r:opaci, t, y-5, rounde, d-2xl, transitio, n-opacity, duratio, n-3, 0, 0`}></d, i, v>`;`

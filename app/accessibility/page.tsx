@@ -44,6 +44,10 @@ const AccessibilityPage: React.FC = () => {
       benefits: ['Optimized loading', 'Efficient rendering', 'Minimal overhead', 'Fast interactions']
     }
   ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
   const services = [
     {
       title: 'Accessibility Audits',
@@ -70,12 +74,20 @@ const AccessibilityPage: React.FC = () => {
       benefits: ['Team training', 'Best practices', 'Tool training', 'Compliance education']
     }
   ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
   const standards = [
     'WCAG 2.1 AA Compliance',
     'Section 508 Compliance',
     'ADA Compliance',
     'EN 301 549 Compliance'
   ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
   const benefits = [
     {
       title: 'Legal Compliance',
@@ -98,6 +110,10 @@ const AccessibilityPage: React.FC = () => {
       icon: BarChart
     }
   ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
@@ -125,7 +141,12 @@ const AccessibilityPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+<<<<<<< HEAD
                 Accessibility Features              </h2>
+=======
+                Accessibility Features
+              </h2>
+>>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our accessibility solutions cover all aspects of digital inclusion, ensuring your products work for everyone.
               </p>
@@ -208,12 +229,22 @@ const AccessibilityPage: React.FC = () => {
                     {standard}
                   </h3>
                 </div>
+<<<<<<< HEAD
               ))}            </div>
+=======
+              ))}
+            </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
           </div>
         </section>
 
         {/* Benefits Section */}
+<<<<<<< HEAD
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">          <div className="max-w-7xl mx-auto">
+=======
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+>>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Why Accessibility Matters
@@ -231,19 +262,34 @@ const AccessibilityPage: React.FC = () => {
                   </h3>
                   <p className="text-gray-300">
                     {benefit.description}
+<<<<<<< HEAD
                   </p>                </div>
+=======
+                  </p>
+                </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
               ))}
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-blue-600">          <div className="max-w-4xl mx-auto text-center">
+=======
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-blue-600">
+          <div className="max-w-4xl mx-auto text-center">
+>>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Make Your Products Accessible?
             </h2>
             <p className="text-xl text-gray-100 mb-8">
+<<<<<<< HEAD
               Let's work together to create inclusive digital experiences that work for everyone.            </p>
+=======
+              Let's work together to create inclusive digital experiences that work for everyone.
+            </p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
                 Start Your Accessibility Journey
@@ -262,4 +308,8 @@ const AccessibilityPage: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default AccessibilityPage;
+=======
+export default AccessibilityPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f0fb

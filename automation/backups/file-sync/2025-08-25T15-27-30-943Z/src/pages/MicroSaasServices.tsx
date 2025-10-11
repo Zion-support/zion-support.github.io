@@ -638,7 +638,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
             <Search className="text-left" />
             <input
               type="text"
-  const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];"
+  const _pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];">
     <div className="text-left">
       {/* Animated Background */}"
       <div className="text-left"></div>"
@@ -681,15 +681,15 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
               placeholder="Search for innovative micro SAAS solutions..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}"
-              className="text-left"
+              className="text-left">
             />
             <div className="text-left">
               <div className="text-left">
                 {filteredServices.length} services found
           <div className="text-left">
-            <select
+            <select>
           <div className="text-left">
-            <select
+            <select>
             />"
             <div className="text-left"></div>"
               <div className="text-left">
@@ -800,7 +800,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
                   <span className="text-left">Ready to transform your business?</span><
                   <$2 />
                     href={service.contactInfo.website}
-                    className="text-left"
+                    className="text-left">
                     target="_blank"
                     rel="noopener noreferrer"
                   >

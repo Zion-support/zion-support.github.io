@@ -77,7 +77,7 @@ $4});
       loading={priority ? 'eager' : 'lazy'}
       onLoad={handleLoad}
       onError={handleError}
-      {...props}
+      {...props}>
     />
   )
 }

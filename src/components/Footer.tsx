@@ -35,11 +35,11 @@ import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Clou
 
                   <Link 
                     to={service.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center">
                   >
                 <Link 
                   to="/ai-services"
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
+                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium">
                 >
                   View All AI Services →
                 </Link>
@@ -49,15 +49,15 @@ import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Clou
 
                   <Link 
                     to={service.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center">
                   >
                 <Link 
                   to="/it-services"
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
+                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium">
                 >
                 <Link
                 to="/micro-saas"
-                className="text-cyan-400 hover:text-cyan-300 text-sm font-medium flex items-center group"
+                className="text-cyan-400 hover:text-cyan-300 text-sm font-medium flex items-center group">
               >
                 View All Solutions
                 <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
@@ -82,11 +82,11 @@ import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Clou
 
                   <Link 
                     to={link.url}
-                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
+                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">
                   >
                   <Link 
                     to={link.url}
-                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
+                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">
                   >
               <li><Link to="/services" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">All Services</Link></li>
               <li><Link to="/pricing" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Pricing</Link></li>

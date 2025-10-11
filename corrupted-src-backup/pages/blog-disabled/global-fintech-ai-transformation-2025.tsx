@@ -58,12 +58,12 @@ export default function CaseStudy(): React.JSX.Element {
                     href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-white bg-opacity-20 hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
+                    className="bg-white bg-opacity-20 hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors">
 export default function CaseStudy(): React.JSX.Element {/* TODO: Fix JSX expression */}
   s://twitter.com/intent/tweet?text=${encodeURIComponent('Global Fintech AI Transformation 2025')}&url=${encodeURIComponent(window.location.href)}`}
                     target="_blank""
                     rel="noopener noreferrer""
-                    className="bg-white bg-opacity-20,"
+                    className="bg-white bg-opacity-20,">
   hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
                   >
                     Twitter,
@@ -73,7 +73,7 @@ export default function CaseStudy(): React.JSX.Element {/* TODO: Fix JSX express
   s://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`}"
                     target="_blank""
                     rel="noopener noreferrer""
-                    className="bg-white bg-opacity-20,"
+                    className="bg-white bg-opacity-20,">
   hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
                   >
                     LinkedIn
@@ -82,10 +82,10 @@ export default function CaseStudy(): React.JSX.Element {/* TODO: Fix JSX express
               </div>
               <,$2 />
                 href="/"
-                className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               <a></a>"
                 href="/""
-                className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold,"
+                className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold,">
   hover: bg-gray-100 transition-colors"
               >
                 Back to Home,

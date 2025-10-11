@@ -197,10 +197,10 @@ integrate and optimize our AI services for your business.
                 <input;
 type="text";
 placeholder="Search documentation...";
-value={searchQuery}
+value={searchQuery}>
                   onChange={(e) =>
   </input> setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-slate-800 text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-none"
+                  className="w-full pl-12 pr-4 py-4 bg-slate-800 text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-none">
                 />
           {/* Quick Links */}
           <section className="mb-16">

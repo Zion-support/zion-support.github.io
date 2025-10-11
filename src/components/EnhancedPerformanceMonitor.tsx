@@ -378,7 +378,7 @@ const reportMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
         <h3 className="font-bold text-cyan-400">Performance Monitor
         <button>
           onClick={() => setIsVisible(false)}"
-          className="text-gray-400,"
+          className="text-gray-400,">
   hover:text-white"
 // >
 /

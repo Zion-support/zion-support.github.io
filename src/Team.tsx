@@ -313,13 +313,13 @@ cybersecurity, quantum computing, and digital transformation.
           <div className="flex flex-wrap justify-center gap-4">
             <$2 />;
 href="#team";
-className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
+className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200">
             >;
 View Team
             </a>
             <$2 />;
 href="/careers";
-className="px-8 py-3 border border-cyan-500 text-cyan-400 font-medium rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
+className="px-8 py-3 border border-cyan-500 text-cyan-400 font-medium rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200">
             >;
 Join Our Team
             </a>
@@ -453,7 +453,7 @@ return (;
               <$2 />;
 }
 key={index}
-                className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 text-center hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
+                className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 text-center hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500">
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Icon className="w-8 h-8 text-white" />
@@ -475,7 +475,7 @@ key={index}
             {featuredMembers.map((member) => (
               <$2 />;
 key={member.id}
-                className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
+                className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500">
               >
                 <div className="p-6">
                   {/* Member Image Placeholder */}
@@ -501,7 +501,7 @@ key={member.id}
                       {member.expertise.slice(0, 3).map((skill), index) => (
                         <$2 />;
 key={index}
-                          className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded"
+                          className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">
                         >
                           {skill}
                         </span>
@@ -528,7 +528,7 @@ key={index}
 href={member.linkedin}
                         target="_blank";
 rel="noopener noreferrer";
-className="text-gray-400 hover:text-cyan-400 transition-colors duration-200"
+className="text-gray-400 hover:text-cyan-400 transition-colors duration-200">
                       >
                         <Linkedin className="w-5 h-5" />
                       </a>
@@ -538,7 +538,7 @@ className="text-gray-400 hover:text-cyan-400 transition-colors duration-200"
 href={member.twitter}
                         target="_blank";
 rel="noopener noreferrer";
-className="text-gray-400 hover:text-cyan-400 transition-colors duration-200"
+className="text-gray-400 hover:text-cyan-400 transition-colors duration-200">
                       >
                         <Twitter className="w-5 h-5" />
                       </a>
@@ -546,7 +546,7 @@ className="text-gray-400 hover:text-cyan-400 transition-colors duration-200"
                     {member.email && (
                       <$2 />;
 href={`mailto:${member.email}}`}
-                        className="text-gray-400 hover:text-cyan-400 transition-colors duration-200"
+                        className="text-gray-400 hover:text-cyan-400 transition-colors duration-200">
                       >
                         <Mail className="w-5 h-5" />
                       </a>
@@ -566,7 +566,7 @@ href={`mailto:${member.email}}`}
           {regularMembers.map((member) => (
             <$2 />;
 key={member.id}
-              className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
+              className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500">
             >
               <div className="p-6">
                 {/* Member Image Placeholder */}
@@ -592,7 +592,7 @@ key={member.id}
                     {member.expertise.slice(0, 2).map((skill), index) => (
                       <$2 />;
 key={index}
-                        className="px-1 py-1 bg-gray-700 text-gray-300 text-xs rounded text-center"
+                        className="px-1 py-1 bg-gray-700 text-gray-300 text-xs rounded text-center">
                       >
                         {skill}
                       </span>
@@ -914,7 +914,7 @@ rel="noopener noreferrer"
             {departments.map((dept), index) => (
               <$2 />;
 key={index}
-                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300 group"
+                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300 group">
               >
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${dept.color}} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   <dept.icon className="w-8 h-8 text-white" />
@@ -924,7 +924,7 @@ key={index}
                 <div className="flex items-center justify-between">
                   <span className="text-cyan-400 font-medium">{dept.memberCount} members</span>
                   <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-cyan-400 transition-colors duration-200" />;
-className="text-gray-400 hover:text-cyan-400 transition-colors duration-200"
+className="text-gray-400 hover:text-cyan-400 transition-colors duration-200">
                     >
                       <Linkedin className="w-4 h-4" />
                     </a>
@@ -932,7 +932,7 @@ className="text-gray-400 hover:text-cyan-400 transition-colors duration-200"
                   {member.email && (
                     <$2 />;
 href={`mailto:${member.email}}`}
-                      className="text-gray-400 hover:text-cyan-400 transition-colors duration-200"
+                      className="text-gray-400 hover:text-cyan-400 transition-colors duration-200">
                     >
                       <Mail className="w-4 h-4" />
                     </a>
@@ -960,13 +960,13 @@ of AI and quantum computing solutions.
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <$2 />;
 to="/careers";
-className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 font-medium text-lg"
+className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 font-medium text-lg">
               >;
 View Open Positions
               </Link>
               <$2 />;
 to="/contact";
-className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg hover:bg-cyan-500/10 transition-all duration-300 font-medium text-lg"
+className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg hover:bg-cyan-500/10 transition-all duration-300 font-medium text-lg">
       {/* Join Our Team CTA */}
       <div className="bg-gradient-to-r from-gray-800 to-gray-900 border-t border-gray-700">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -982,13 +982,13 @@ our mission to transform businesses through cutting-edge solutions.
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <$2 />;
 to="/careers";
-className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium rounded-lg transition-all duration-200 transform hover:scale-105"
+className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium rounded-lg transition-all duration-200 transform hover:scale-105">
               >;
 View Open Positions
               </Link>
               <$2 />;
 to="/contact";
-className="inline-flex items-center justify-center px-8 py-4 border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-medium rounded-lg transition-all duration-200"
+className="inline-flex items-center justify-center px-8 py-4 border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-medium rounded-lg transition-all duration-200">
               >;
 Contact Us
               </Link>

@@ -213,7 +213,7 @@ classNa, m, e="bg-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-600,
                   <Sparkles, classNam, e="w-5 h-5" />
                   <Link, classNam, e="w-5 h-5" />
               <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, ma, x-w-md, m, x-au, t, o">
-                <input, typ, e="ema, i, l"
+                <input, typ, e="ema, i, l">
                   <Link, classNam, e="w-5 h-5" />
   </input>
 }}
@@ -259,7 +259,7 @@ classNa, m, e="bg-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-600,
                   <Sparkles, classNam, e="w-5 h-5" /></Sparkles>"
                   <Link, classNam, e="w-5 h-5" /></Link>"
               <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, ma, x-w-md, m, x-au, t, o"></div>"
-                <input, typ, e="ema, i, l""
+                <input, typ, e="ema, i, l"">
                   <Link, classNam, e="w-5 h-5" />
   </input>
 }}")`

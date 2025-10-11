@@ -48,14 +48,14 @@ const PagePage: React.FC = () => {const features = [
       
       <Navigation />
       
-      <main className="pt-16"
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"
-            <div className="text-center"
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"
+      <main className="pt-16">
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Page Page
               </h1>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto"
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
                 Transform your business with our cutting-edge AI and IT solutions designed for the modern enterprise.
               </p>
           </div>
@@ -76,15 +76,11 @@ const PagePage: React.FC = () => {const features = [
     </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
-                  <div className="flex items-center mb-4"
-                    <feature.icon className="h-8 w-8 text-blue-600 mr-3"
-                    <h3 className="text-xl font-semibold text-gray-900"
+                <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                  <div className="flex items-center mb-4">
+                    <feature.icon className="h-8 w-8 text-blue-600 mr-3">
+                    <h3 className="text-xl font-semibold text-gray-900">
                   </div>
-<<<<<<< HEAD
-=======
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
       <Footer />
     </>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -126,15 +122,11 @@ const PagePage: React.FC = () => {const features = [
     </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white p-6 rounded-xl shadow-lg"
-                  <div className="flex items-center"
-                    <CheckCircle className="h-6 w-6 text-green-500 mr-3"
-                    <span className="text-lg font-medium text-gray-900"
+                <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
+                  <div className="flex items-center">
+                    <CheckCircle className="h-6 w-6 text-green-500 mr-3">
+                    <span className="text-lg font-medium text-gray-900">
                   </div>
-<<<<<<< HEAD
-=======
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
       <Footer />
     </>
                   <p className="text-gray-300">{benefit}</p>

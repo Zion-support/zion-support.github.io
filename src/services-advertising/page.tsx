@@ -52,11 +52,11 @@ AI-Powered Advertising Solutions,"
               methodology has helped 500+ businesses increase their advertising effectiveness while reducing costs.
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <$2 />
-                href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
+                href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center">
 // >
 //                 Start Free Consultation
           <ArrowRight className="w-4 h-4 ml-2" />
-href="#services" className="border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
+href="#services" className="border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
                 View Our Services,
       </section>
       {/* Key Metrics */}"
@@ -213,7 +213,7 @@ Ready to Transform Your Advertising?
           <p className="text-xl mb-8 text-blue-100">
             Get a free AI advertising assessment and discover how we can boost your ROI by 300%
               className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center" Get Free Assessment
-              href="/case-studies" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
+              href="/case-studies" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
               View Success Stories
   ),
 }

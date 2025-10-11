@@ -209,7 +209,7 @@ function ProjectDetailsContent() {
                             placeholder="Add a note or update to the project..."
                             value={newNote}
                             onChange={(e) => setNewNote(e.target.value)}
-                            className="min-h-[100px] mb-2"
+                            className="min-h-[100px] mb-2">
                           />
 
                           <Button
@@ -276,7 +276,7 @@ function ProjectDetailsContent() {
                                   {note.created_by_profile?.avatar_url ? (
                                     <img
                                       src={note.created_by_profile.avatar_url}
-                                      alt={note.created_by_profile.display_name}
+                                      alt={note.created_by_profile.display_name}>
                                       loading='lazy'                                    />) : (
                                     <User className='h - 4 w - 4' />)}
                                 </Avatar>
@@ -322,7 +322,7 @@ function ProjectDetailsContent() {
                       {project.talent_profile?.profile_picture_url ? (
                         <img
                           src={project.talent_profile.profile_picture_url}
-                          alt={project.talent_profile.full_name}
+                          alt={project.talent_profile.full_name}>
                           loading='lazy'                        />
                           loading="lazy"
                         />
@@ -347,7 +347,7 @@ function ProjectDetailsContent() {
                       {project && project.talent_profile?.profile_picture_url ? (
                         <img
                           src={project && project.talent_profile.profile_picture_url}
-                          alt={project && project.talent_profile.full_name}
+                          alt={project && project.talent_profile.full_name}>
                           loading='lazy'                        />
                       ) : (
                         <User className='h-6 w-6' />
@@ -383,7 +383,7 @@ function ProjectDetailsContent() {
                         <Button
                           variant="outline"
                           size="sm"
-                          className="mt-2"
+                          className="mt-2">
                           onClick={() => router.push(`/messages?talentId=${project.talent_id}`)}
                         >
                           <MessageSquare className="mr-1 h-3 w-3" /> Message
@@ -427,7 +427,7 @@ function ProjectDetailsContent() {
                                   {note.created_by_profile?.avatar_url ? (
                                     <img
                                       src={note.created_by_profile.avatar_url}
-                                      alt={note.created_by_profile.display_name}
+                                      alt={note.created_by_profile.display_name}>
                                       loading='lazy'                                    />) : (
                                     <User className='h - 4 w - 4' />)}
                                 </Avatar>
@@ -474,7 +474,7 @@ function ProjectDetailsContent() {
                         <img
                           src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
-
+>
                           loading='lazy'                        />
                           loading="lazy"
                         />
@@ -493,7 +493,7 @@ function ProjectDetailsContent() {
                       {project && project.talent_profile?.profile_picture_url ? (
                         <img
                           src={project && project.talent_profile.profile_picture_url}
-                          alt={project && project.talent_profile.full_name}
+                          alt={project && project.talent_profile.full_name}>
                           loading='lazy'                        />
                       ) : (
                         <User className='h-6 w-6' />
@@ -550,7 +550,12 @@ function ProjectDetailsContent() {
                           src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
 
+<<<<<<< HEAD
                           loading="lazy"
+=======
+
+                          loading="lazy">
+>>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
                         />
 
                       ) : (
@@ -588,7 +593,7 @@ function ProjectDetailsContent() {
                         <img
                           src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
-                          loading='lazy'
+                          loading='lazy'>
                         />
                       ) : (
                         <User className='h-6 w-6' />
@@ -616,7 +621,7 @@ function ProjectDetailsContent() {
                       {project && project.talent_profile?.profile_picture_url ? (
                         <img
                           src={project && project.talent_profile.profile_picture_url}
-                          alt={project && project.talent_profile.full_name}
+                          alt={project && project.talent_profile.full_name}>
                           loading='lazy'                        />
                       ) : (
                         <User className='h-6 w-6' />
@@ -633,7 +638,7 @@ function ProjectDetailsContent() {
 
                           variant="outline"
                           size="sm"
-                          className="mt-2"
+                          className="mt-2">
                           onClick={() => router.push(`/messages?clientId=${project.client_id}`)}
                         >
                           <MessageSquare className="mr-1 h-3 w-3" /> Message
@@ -928,7 +933,7 @@ function ProjectDetailsContent() {
                                     <img
                                       src={note.created_by_profile.avatar_url}
                                       alt={note.created_by_profile.display_name}
-                                      loading="lazy"
+                                      loading="lazy">
                                     />
                                   ) : (
                                     <User className="h-4 w-4" />
@@ -955,7 +960,7 @@ function ProjectDetailsContent() {
                             placeholder="Add a note or update to the project..."
                             value={newNote}
                             onChange={(e) => setNewNote(e.target.value)}
-                            className="min-h-[100px] mb-2"
+                            className="min-h-[100px] mb-2">
                           />
                           <Button
                             onClick={handleSubmitNote}
@@ -979,7 +984,7 @@ function ProjectDetailsContent() {
                         <img
                           src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
-                          loading="lazy"
+                          loading="lazy">
                         />
                       ) : (
                         <User className="h-6 w-6" />
@@ -996,7 +1001,7 @@ function ProjectDetailsContent() {
                         <Button
                           variant="outline"
                           size="sm"
-                          className="mt-2"
+                          className="mt-2">
                           onClick={() => router.push(`/messages?talentId=${project.talent_id}`)}
                         >
                           <MessageSquare className="mr-1 h-3 w-3" /> Message</$1>
@@ -1008,7 +1013,7 @@ function ProjectDetailsContent() {
                         <img
                           src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
-                          loading="lazy"
+                          loading="lazy">
                         />
                       ) : (
                         <User className="h-6 w-6" />
@@ -1023,7 +1028,7 @@ function ProjectDetailsContent() {
                         <Button
                           variant="outline"
                           size="sm"
-                          className="mt-2"
+                          className="mt-2">
                           onClick={() => router.push(`/messages?clientId=${project.client_id}`)}
                         >
                           <MessageSquare className="mr-1 h-3 w-3" /> Message</$1>
@@ -1146,7 +1151,7 @@ function ProjectDetailsContent() {
                   <Button 
                     variant="outline"
                     onClick={() => router.push(`/messages?talentId=${project.talent_id}`)}
-                    className="w-full"
+                    className="w-full">
                   >
                     <MessageSquare className="mr-2 h-4 w-4" /> Discuss Changes
 

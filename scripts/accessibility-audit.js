@@ -244,7 +244,7 @@ Skip to main content
 id="email";
 type="email";
 required;
-aria-describedby="email-error"
+aria-describedby="email-error">
     />
   </input>
     <div id="email-error" role="alert" aria-live="polite">
@@ -253,7 +253,7 @@ aria-describedby="email-error"
 <img;
 src="chart.png";
 alt="Sales chart showing 25% increase in Q3 2024";
-role="img"
+role="img">
 />
 // 9. Color contrast considerations
 // Ensure sufficient contrast ratios: // - Normal text: 4.5:1

@@ -23,7 +23,7 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
         <div className="absolute inset-0"></div>"
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse">
           <div></div>"
-            className="absolute top-3/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"
+            className="absolute top-3/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse">
             style={/* TODO: Fix JSX expression */}
   y: '2s' }}
           >
@@ -44,12 +44,12 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <$2 />
                 href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
               >
                 Get Enterprise Demo
               <$2 />
                 href="/services"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
         </div>"
         <div className="relative z-10 container mx-auto px-4 py-24"></div>"
           <div className="text-center"></div>"
@@ -74,14 +74,14 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
                 href="/contact""
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold,
   hover:from-cyan-600,
-  hover:to-blue-700 transition-all duration-300 transform,"
+  hover:to-blue-700 transition-all duration-300 transform,">
   hover:scale-105"
               >
                 Get Enterprise Demo
               <Link></Link>"
                 href="/services""
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold,
-  hover:bg-cyan-400,"
+  hover:bg-cyan-400,">
   hover:text-slate-900 transition-all duration-300"
               >
                 View All Services
@@ -211,12 +211,12 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <$2 />
                 href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
               >
                 Schedule Enterprise Demo
               <$2 />
                 href="/services"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
       {/* CTA Section */}"
       <section className="py-20"></section>"
         <div className="container mx-auto px-4 text-center"></div>"
@@ -234,14 +234,14 @@ export default function EnterprisePage() {/* TODO: Fix JSX expression */}
                 href="/contact""
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold,
   hover:from-cyan-600,
-  hover:to-blue-700 transition-all duration-300 transform,"
+  hover:to-blue-700 transition-all duration-300 transform,">
   hover:scale-105"
               >
                 Schedule Enterprise Demo
               <Link></Link>"
                 href="/services""
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold,
-  hover:bg-cyan-400,"
+  hover:bg-cyan-400,">
   hover:text-slate-900 transition-all duration-300"
               >
                 Explore Solutions

@@ -234,7 +234,7 @@ const EnhancedServicesShowcase: React.FC = () => {
               Call {contactInfo.phone}
             <$2 />
               href={`mailto:${contactInfo.email}?subject=Free Consultation Request`}
-              className="cyber-button inline-flex items-center justify-center px-8 py-3"
+              className="cyber-button inline-flex items-center justify-center px-8 py-3">
               style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
             >
               <Mail className="w-5 h-5 mr-2" />

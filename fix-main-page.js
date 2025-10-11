@@ -15,7 +15,7 @@ function fixMainPage() {
     content = content.replace(/<div([^>]*?)\s*\/>\s*\n\s*<ul/g, '<div$1>\n<')$2 />
     content = content.replace(/<div([^>]*?)\s*\/>\s*\n\s*<li/g, '<div$1>\n<')$2 />
     content = content.replace(/<div([^>]*?)\s*\/>\s*\n\s*<a/g, '<div$1>\n<')$2 />
-    content = content.replace(/<div([^>]*?)\s*\/>\s*\n\s*<img/g, '<div$1>\n<img')
+    content = content.replace(/<div([^>]*?)\s*\/>\s*\n\s*<img/g, '<div$1>\n<img')>
     content = content.replace(/<div([^>]*?)\s*\/>\s*\n\s*<svg/g, '<div$1>\n<svg')
     // Fix map function syntax issues
     content = content.replace(/map\(([^)]*)\)\s*=>\s*\(\s*<\/div>/g, 'map($1) => (')

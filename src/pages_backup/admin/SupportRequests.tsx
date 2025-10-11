@@ -374,7 +374,7 @@ export default function SupportRequests() {
                   placeholder="Search by ID, user or issue..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="pl-10"
+                  className="pl-10">
                 />
               </div>
 
@@ -560,7 +560,7 @@ export default function SupportRequests() {
                   placeholder="Search by ID, user or issue..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="pl-10"
+                  className="pl-10">
                 /></$1>
               <Select
                 value={status_filter || ''}

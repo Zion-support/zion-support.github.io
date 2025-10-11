@@ -92,8 +92,8 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
       {!isLoaded && (
         <img
           src={generatePlaceholder()}
-          alt=""
-          className="absolute inset-0 w-full h-full object-cover animate-pulse"
+          alt="">
+          className="absolute inset-0 w-full h-full object-cover animate-pulse">
           style={{ filter: 'blur(1 px)' }}
         />
       )}
@@ -109,7 +109,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
           decoding="async"
           onLoad={handleLoad}
           onError={handleError}
-          style={{ width, height }}
+          style={{ width, height }}>
         />
       )}
     </div>

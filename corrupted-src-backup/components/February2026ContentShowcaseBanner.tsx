@@ -135,7 +135,7 @@ const, February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression 
     {/* TODO: Fix JSX expression */}
     }
   ]
-  return ("
+  return (">
     <div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-indi, g, o-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n">"
       {/* Animated, background, effects */}"
       <div, classNam, e="absolute, inse, t-0, overflo, w-hidden, opacit, y-20"></div>"
@@ -177,7 +177,7 @@ const, February2026ContentShowcaseBanne, r = () => {/* TODO: Fix JSX expression 
               <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, ma, x-w-md, m, x-au, t, o"></div>"
                 <input, typ, e="ema, i, l""
                     placehold, e, r="Enter, your, email""
-                    classNa, m, e="fl, e, x-1, p, x-6, p, y-4, rounde, d-xl, b, g-whi, t, e/10, border, border-whi, t, e/20, tex, t-white, placeholde, r-gr, a, y-400, focu, s:outli, n, e-none, focu, s:bord, e, r-emera, l, d-500, focu, s:bg-whi, t, e/20, transitio, n-all, duratio, n-3, 0, 0"
+                    classNa, m, e="fl, e, x-1, p, x-6, p, y-4, rounde, d-xl, b, g-whi, t, e/10, border, border-whi, t, e/20, tex, t-white, placeholde, r-gr, a, y-400, focu, s:outli, n, e-none, focu, s:bord, e, r-emera, l, d-500, focu, s:bg-whi, t, e/20, transitio, n-all, duratio, n-3, 0, 0">
                   /></input>"
                 <button, classNam, e="bg-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-bl, u, e-600, hove, r:fr, o, m-emera, l, d-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-emera, l, d-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2">
                   <sp, a, n>Subscri, b, e</sp, a, n>"

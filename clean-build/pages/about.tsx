@@ -325,7 +325,7 @@ className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gr
 Get In Touch
               <$2 />;
 href="/services";
-className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
         {/* CTA Section */}"
         <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white"></section>"
           <div className="container mx-auto px-4 text-center"></div>"

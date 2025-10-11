@@ -197,7 +197,7 @@ value={formData.name}
                         onChange={handleInputChange}
                         required;
 className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20";
-placeholder="Enter your full name"
+placeholder="Enter your full name">
                       />
   </input>
                     <div>
@@ -210,7 +210,7 @@ value={formData.email}
                         onChange={handleInputChange}
                         required;
 className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20";
-placeholder="Enter your email"
+placeholder="Enter your email">
                       />
   </input>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -224,7 +224,7 @@ name="company";
 value={formData.company}
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20";
-placeholder="Enter your company name"
+placeholder="Enter your company name">
                       />
   </input>
                     </div>
@@ -238,7 +238,7 @@ name="phone";
 value={formData.phone}
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20";
-placeholder="Enter your phone number"
+placeholder="Enter your phone number">
                       />
   </input>
                     </div>
@@ -251,7 +251,7 @@ Service Type *
 name="serviceType";
 value={formData.serviceType}
                       onChange={handleInputChange}
-                      required;
+                      required;>
 className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20">
                       <option value="">Select a service type
                       {serviceTypes.map((type), index) => (
@@ -267,7 +267,7 @@ Project Size,
                       <select;
 name="projectSize";
 value={formData.projectSize}
-                        onChange={handleInputChange}
+                        onChange={handleInputChange}>
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20">
   </select>
                         <option value="">Select project size</option>
@@ -298,7 +298,7 @@ value={formData.description}
                       required;
 rows={4}
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20";
-placeholder="Describe your project requirements and goals..."
+placeholder="Describe your project requirements and goals...">
                     />
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">;
@@ -310,7 +310,7 @@ value={formData.requirements}
                       onChange={handleInputChange}
                       rows={3}
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20";
-placeholder="Any specific technical requirements, integrations, or constraints..."
+placeholder="Any specific technical requirements, integrations, or constraints...">
                     />
                   </div>
                   <$2 />;
@@ -597,14 +597,14 @@ Thank you for your interest in our services. We've received your quote request
               </div>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <$2 />;
-href="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
+href="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
 // >
           "
           <Phone className="w-5 h-5 mr-2" /></Phone>
 // Contact Us
           </a>
                 <$2 />;
-href="/" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+href="/" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center">
 // >
           "
           <ArrowRight className="w-4 h-4 mr-2" /></ArrowRight>
@@ -653,7 +653,7 @@ type="text" name="name";
 value={formData.name}
                         onChange={handleInputChange}
 // required;
-className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your full name"
+className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your full name">
 //                       />
   </input>
                     <div></div>"
@@ -664,7 +664,7 @@ type="email" name="email";
 value={formData.email}
                         onChange={handleInputChange}
 // required;
-className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your email"
+className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your email">
 //                       />
   </input>
                   </div>"
@@ -678,7 +678,7 @@ md: grid-cols-2 gap-6"></div>
 type="text" name="company";
 value={formData.company}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your company name"
+                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your company name">
 // />
   </input>
                     <div></div>"
@@ -689,7 +689,7 @@ value={formData.company}
 type="tel" name="phone";
 value={formData.phone}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your phone number"
+                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your phone number">
 // />
   </input>
                   {/* Project Information */}
@@ -699,8 +699,8 @@ value={formData.phone}
                     <select;
 name="serviceType" value={formData.serviceType}
                       onChange={handleInputChange}
-// required;
-className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+// required;>
+className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20">
 //                     >
   </select>
           "
@@ -717,8 +717,8 @@ md: grid-cols-2 gap-6"></div>
           </label>
                       <select;
 name="projectSize" value={formData.projectSize}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+                        onChange={handleInputChange}>
+                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20">
 // >
   </select>
           "
@@ -739,8 +739,8 @@ name="projectSize" value={formData.projectSize}
 // Budget Range
                     <select;
 name="budget" value={formData.budget}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+                      onChange={handleInputChange}>
+                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20">
 // >
   </select>
           "
@@ -756,7 +756,7 @@ name="description" value={formData.description}
                       onChange={handleInputChange}
 // required;
 rows={4}
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Describe your project requirements and goals..."
+                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Describe your project requirements and goals...">
 //                     />
                   <div></div>"
                     <label className="block text-sm font-medium text-gray-300 mb-2"></label>
@@ -766,11 +766,11 @@ rows={4}
 name="requirements" value={formData.requirements}
                       onChange={handleInputChange}
                       rows={3}
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Any specific technical requirements, integrations, or constraints..."
+                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Any specific technical requirements, integrations, or constraints...">
 // />
                   <$2 />;
 type="submit" disabled={isSubmitting}
-                    className="w-full cyber-button py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full cyber-button py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed">
 // >
                     {isSubmitting ? ()}"
           <div className="flex items-center justify-center"></div>"

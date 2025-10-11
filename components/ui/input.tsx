@@ -12,7 +12,7 @@ type={type}
 className
         )}
         ref={ref}
-        {...props}
+        {...props}>
       />
   </input>
     )

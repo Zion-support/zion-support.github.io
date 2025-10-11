@@ -239,7 +239,7 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
                   <iframe
                     src={statusUrl}
                     title="Zion Status Page"
-                    className="w-full border-0 rounded"
+                    className="w-full border-0 rounded">
                     height="600"
                     onLoad={() => setExternalStatusLoaded(true)}
                     onError={() => setShowFallback(true)}
@@ -248,7 +248,7 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
                     <Button
                       variant="outline"
                       onClick={() => setShowFallback(true)}
-                      className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10"
+                      className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10">
                     >
                       View Simplified Status
                     </Button>
@@ -297,13 +297,13 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
                 <Button
                   variant="outline"
                   asChild
-                  className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10"
+                  className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10">
                 >
                   <$2 />
                     href={statusUrl} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2"
+                    className="flex items-center gap-2">
                   >
                     <ExternalLink className="h-4 w-4" />
                     Visit Full Status Page
@@ -326,14 +326,14 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
                   <Button
                     variant="outline"
                     asChild
-                    className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10"
+                    className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10">
                   >
                     <Link href="/contact">Contact Support</Link>
                   </Button>
                   <Button
                     variant="outline"
                     asChild
-                    className="text-zion-purple border-zion-purple hover:bg-zion-purple/10"
+                    className="text-zion-purple border-zion-purple hover:bg-zion-purple/10">
                   >
                     <a href="https://twitter.com/ZionTechGroup" target="_blank" rel="noopener noreferrer">
                       @ZionTechGroup

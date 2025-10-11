@@ -71,6 +71,7 @@ return (
       </Helmet>
 
       <Navigation />
+<<<<<<< HEAD
 
       <main className="pt-16"
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700"
@@ -79,8 +80,18 @@ return (
             <div className="text-center"
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"
 Get in <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"
+=======
+      
+      <main className="pt-16">
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700">
+          <div className=">
+    g: px-8">
+            <div className="text-center">
+              <h1 className="text-4xl m, d:text-6xl font-bold text-white mb-6">
+Get in <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+>>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
 Ready to transform your business? Let's discuss how our AI and IT solutions can help you achieve your goals.
               </p>
             </div>
@@ -94,20 +105,23 @@ Ready to transform your business? Let's discuss how our AI and IT solutions can 
         </section>
 
         {/* Contact Info Section */}
-        <section className="py-16 px-4 sm: px-6 lg:px-8"
-          <div className="max-w-7xl mx-auto"
+        <section className="py-16 px-4 sm: px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
             <div className="
-    ,
-    d: grid-cols-2 l, g:grid-cols-4 gap-8"
+    ,>
+    d: grid-cols-2 l, g:grid-cols-4 gap-8">
               {contactInfo.map((info), index) => {
 const Icon = info.icon;
 return (
 }
-                  <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center"
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4"
-                      <Icon className="w-6 h-6 text-white"
+                  <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
+                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                      <Icon className="w-6 h-6 text-white">
                     </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
       <Footer />
     </>
                     <h3 className="text-lg font-semibold text-white mb-2">{info.title}</h3>
@@ -130,22 +144,28 @@ return (
         </section>
 
         {/* Contact Form Section */}
-        <section className="
-    g: px-8"
-          <div className="max-w-7xl mx-auto"
-            <div className="grid grid-cols-1 l, g:grid-cols-2 gap-12"
+        <section className=">
+    g: px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 l, g:grid-cols-2 gap-12">
               <div>
-                <h2 className="text-3xl font-bold text-white mb-6"
+                <h2 className="text-3xl font-bold text-white mb-6">
 Send us a Message
                 </h2>
-                <p className="text-lg text-gray-300 mb-8"
+                <p className="text-lg text-gray-300 mb-8">
 Fill out the form below and we'll get back to you as soon as possible. We're here to help you succeed.
                 </p>
+<<<<<<< HEAD
 
                 <form onSubmit={handleSubmit} className="space-y-6"
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6"
+=======
+                
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+>>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2"
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
 Full Name *
                       </label>
                       <input
@@ -153,8 +173,8 @@ type="text"
 id="name"
 name="name"
 value={formData.name} onChange={handleChange} required
-className="
-    s: ring-cyan-500 focu, s:border-transparent"
+className=">
+    s: ring-cyan-500 focu, s:border-transparent">
 placeholder="Your full name"
                       />
   </input>
@@ -163,7 +183,7 @@ placeholder="Your full name"
       <Footer />
     </>
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2"
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
 Email Address *
                       </label>
                       <input
@@ -171,8 +191,8 @@ type="email"
 id="email"
 name="email"
 value={formData.email} onChange={handleChange} required
-className="
-    s: border-transparent"
+className=">
+    s: border-transparent">
 placeholder="your@email.com"
                       />
   </input>
@@ -186,15 +206,15 @@ placeholder="your@email.com"
     </>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2"
+                      <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
 Company
                       </label>
                       <input
 type="text"
 id="company"
 name="company"
-value={formData.company} onChange={handleChange} className="
-    s: ring-cyan-500 focu, s:border-transparent"
+value={formData.company} onChange={handleChange} className=">
+    s: ring-cyan-500 focu, s:border-transparent">
 placeholder="Your company name"
                       />
   </input>
@@ -203,15 +223,15 @@ placeholder="Your company name"
       <Footer />
     </>
                     <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2"
+                      <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
 Phone Number
                       </label>
                       <input
 type="tel"
 id="phone"
 name="phone"
-value={formData.phone} onChange={handleChange} className="
-    s: ring-cyan-500 focu, s:border-transparent"
+value={formData.phone} onChange={handleChange} className=">
+    s: ring-cyan-500 focu, s:border-transparent">
 placeholder="+1 (555) 123-4567"
                       />
   </input>
@@ -224,14 +244,14 @@ placeholder="+1 (555) 123-4567"
       <Footer />
     </>
                   <div>
-                    <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2"
+                    <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
 Service Interest
                     </label>
                     <select
 id="service"
 name="service"
-value={formData.service} onChange={handleChange} className="
-    s: ring-cyan-500 focu, s:border-transparent"
+value={formData.service} onChange={handleChange} className=">
+    s: ring-cyan-500 focu, s:border-transparent">
                     >
                       <option value=""
                       {services.map((service), index) => (
@@ -243,14 +263,14 @@ value={formData.service} onChange={handleChange} className="
       <Footer />
     </>
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2"
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
 Message *
                     </label>
                     <textarea
 id="message"
 name="message"
-value={formData.message} onChange={handleChange} required
-rows={6} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+value={formData.message} onChange={handleChange} required>
+rows={6} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
 placeholder="Tell us about your project or requirements..."
                     />
   </textarea>
@@ -259,8 +279,8 @@ placeholder="Tell us about your project or requirements..."
       <Footer />
     </>
                   <button;
-type="submit";
-className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
+type="submit";>
+className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
                   >;
 Send Message
                     <Send className="ml-2 w-5 h-5" />
@@ -274,16 +294,16 @@ Send Message
                 <h3 className="text-2xl font-bold text-white mb-6">;
 Why Choose Us?
                 </h3>
-                <div className="space-y-6"
-                  <div className="flex items-start"
-                    <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0"
-                      <span className="text-white font-bold"
+                <div className="space-y-6">
+                  <div className="flex items-start">
+                    <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                      <span className="text-white font-bold">
                     </div>
       <Footer />
     </>
                     <div>
-                      <h4 className="text-lg font-semibold text-white mb-2"
-                      <p className="text-gray-300"
+                      <h4 className="text-lg font-semibold text-white mb-2">
+                      <p className="text-gray-300">
                     </div>
 
       <Footer />
@@ -300,8 +320,8 @@ Why Choose Us?
       <Footer />
     </>
                     <div>
-                      <h4 className="text-lg font-semibold text-white mb-2"
-                      <p className="text-gray-300"
+                      <h4 className="text-lg font-semibold text-white mb-2">
+                      <p className="text-gray-300">
                     </div>
 
       <Footer />
@@ -318,8 +338,8 @@ Why Choose Us?
       <Footer />
     </>
                     <div>
-                      <h4 className="text-lg font-semibold text-white mb-2"
-                      <p className="text-gray-300"
+                      <h4 className="text-lg font-semibold text-white mb-2">
+                      <p className="text-gray-300">
                     </div>
 
       <Footer />
@@ -336,8 +356,8 @@ Why Choose Us?
       <Footer />
     </>
                     <div>
-                      <h4 className="text-lg font-semibold text-white mb-2"
-                      <p className="text-gray-300"
+                      <h4 className="text-lg font-semibold text-white mb-2">
+                      <p className="text-gray-300">
                     </div>
 
       <Footer />

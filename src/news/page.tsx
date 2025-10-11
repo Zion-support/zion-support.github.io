@@ -176,8 +176,8 @@ Subscribe to our newsletter for the latest AI insights and company updates
               <div className="flex flex-col sm: flex-row gap-4 justify-center max-w-md mx-auto">
                 <input;
 type="email";
-placeholder="Enter your email";
-className="flex-1 px-4 py-3 bg-slate-800 text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-none"
+placeholder="Enter your email";>
+className="flex-1 px-4 py-3 bg-slate-800 text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-none">
                 />
   </input>
                 <button className="cyber-button px-8 py-3 font-semibold">;

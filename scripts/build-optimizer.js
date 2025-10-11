@@ -100,7 +100,7 @@ class BuildOptimizer {
   }
 
   async optimizeCSS() {
-    console.log('🎨 Optimizing CSS...')
+    console.log('🎨 Optimizing CSS...')>
     const cssFiles = this.getFilesRecursively(this.distPath).filter(file =>)
       file.endsWith('.css')
     )

@@ -290,7 +290,7 @@ defa, u, l
               <Icon, className="w-6 h-6, tex, t-zi, o, n-cyan, grou, p-hov, e, r: sca, l, e-110, transitio, n-transfo, r, m/>""
           <div, className="flex, item, s-start, ga, p-4">";"
             <div, className="bg-zi, o, n-bl, u, e/2, 0, p-3, rounde, d-lg, grou, p-hov, e, r: bg-zi, o, n-bl, u, e/30, transitio, n-colo, r, s">";"
-              <Icon, className="w-6 h-6, tex, t-zi, o, n-cyan, grou, p-ho, v, e,"
+              <Icon, className="w-6 h-6, tex, t-zi, o, n-cyan, grou, p-ho, v, e,">
   r: sca, l, e-110, transitio, n-transfo, r, m" />"</$1>"
             <div, className="fl, e, x-1">";"
               <div, className="flex, item, s-center, ga, p-2, m, b-1">";"

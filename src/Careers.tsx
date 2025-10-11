@@ -965,24 +965,24 @@ Help us build solutions that will shape the future of business and technology.
               <input;
 type="text";
 placeholder="Search for jobs, departments, or skills...";
-value={searchQuery}
+value={searchQuery}>
                 onChange={(e) =>
   </input> setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
               />
             </div>
 
             <div className="flex flex-wrap justify-center gap-4">
               <$2 />;
 to="/contact";
-className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
               >;
 Apply Now
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <$2 />;
 to="/about";
-className="inline-flex items-center px-8 py-4 border-2 border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
+className="inline-flex items-center px-8 py-4 border-2 border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300">
               >;
 Learn About Us
               </Link>
@@ -1010,10 +1010,10 @@ Join our team of innovators, researchers, and technology leaders who are shaping
                 <input;
 type="text";
 placeholder="Search for positions, skills, or keywords...";
-value={searchQuery}
+value={searchQuery}>
                   onChange={(e) =>
   </input> setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20"
+                  className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20">
                 />
               </div>
             </div>
@@ -1739,13 +1739,13 @@ problem-solvers, and visionaries transforming businesses worldwide.
             <div className="flex flex-wrap justify-center gap-4">
               <$2 />;
 href="#open-positions";
-className="inline-flex items-center px-8 py-3 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan-light transition-colors"
+className="inline-flex items-center px-8 py-3 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan-light transition-colors">
               >;
 View Open Positions
               </a>
               <$2 />;
 to="/contact";
-className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-zion-blue-dark transition-colors"
+className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-zion-blue-dark transition-colors">
               >;
 Contact Us
               </Link>
@@ -1868,8 +1868,8 @@ remote-first environment with a mission-driven team, we'd love to meet you.
             <div className="rounded-lg overflow-hidden">
               <img loading="lazy";
 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&h=600";
-alt="Team collaboration";
-className="object-cover w-full h-full"
+alt="Team collaboration";>
+className="object-cover w-full h-full">
               />
             </div>
           </div>
@@ -1912,7 +1912,7 @@ Urgent
                   </div>
                   <$2 />;
 to={`/careers/${job.id}}`}
-                    className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200 flex items-center justify-center space-x-2"
+                    className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200 flex items-center justify-center space-x-2">
                   >
                     <span>Apply Now</span>
                     <ArrowRight className="w-4 h-4" />
@@ -1947,7 +1947,7 @@ The principles that guide everything we do
             {companyValues.map((value), index) => (
               <$2 />;
 key={index}
-                className="text-center p-6 bg-gray-800/50 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 hover:bg-gray-800/70"
+                className="text-center p-6 bg-gray-800/50 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 hover:bg-gray-800/70">
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${value.color}} rounded-xl flex items-center justify-center mx-auto mb-4`}>
                   <value.icon className="w-8 h-8 text-white" />
@@ -1976,7 +1976,7 @@ We invest in our people because they're our greatest asset
             {benefits.map((category), index) => (
               <$2 />;
 key={index}
-                className="bg-gray-800/50 rounded-xl border border-gray-700 p-6"
+                className="bg-gray-800/50 rounded-xl border border-gray-700 p-6">
               >
                 <h3 className="text-xl font-semibold text-white mb-4">{category.category}</h3>
                 <div className="space-y-3">
@@ -2033,7 +2033,7 @@ key={position.id}
                   initial={{ opacity: 0}}, y: 20 }}
                   animate={{ opacity: 1}}, y: 0 }}
                   transition={{ duration: 0.6}}, delay: index * 0.1 }}
-                  className="bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 overflow-hidden hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
+                  className="bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 overflow-hidden hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
                 >
                   <div className="h-48 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center">
                     <Briefcase className="w-16 h-16 text-cyan-400" />
@@ -2360,7 +2360,7 @@ canonical="https://ziontechgroup.com/careers"
 initial={{ opacity: 0}}, y: 20 }}
             animate={{ opacity: 1}}, y: 0 }}
             transition={{ duration: 0.8}}}
-            className="text-center"
+            className="text-center">
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">;
 Join Our
@@ -2375,14 +2375,14 @@ learn from experts, and grow your career with us.
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <$2 />;
 href="#open-positions";
-className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-lg font-semibold hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center gap-2 justify-center"
+className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-lg font-semibold hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center gap-2 justify-center">
               >;
 View Open Positions
                 <ArrowRight className="w-5 h-5" />
               </a>
               <$2 />;
 to="/contact";
-className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-lg text-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center gap-2 justify-center"
+className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-lg text-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center gap-2 justify-center">
               >;
 Contact Us
                 <Mail className="w-5 h-5" />
@@ -2449,7 +2449,7 @@ initial={{ opacity: 0}}, y: 30 }}
             >
               <$2 />;
 href="#open-positions";
-className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25"
+className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">
               >;
 View Open Positions
                 <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -2459,7 +2459,7 @@ View Open Positions
               </a>
               <$2 />;
 href="mailto:careers@ziontechgroup.com";
-className="inline-flex items-center px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 hover:border-gray-500 transition-all duration-300 transform hover:scale-105"
+className="inline-flex items-center px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 hover:border-gray-500 transition-all duration-300 transform hover:scale-105">
               >;
 Contact HR
               </a>
@@ -2622,7 +2622,7 @@ variants={fadeInUp}
                       {position.skills.map((skill), skillIndex) => (
                         <$2 />;
 key={skillIndex}
-                          className="px-3 py-1 bg-blue-600/20 text-blue-300 text-sm rounded-full border border-blue-600/30"
+                          className="px-3 py-1 bg-blue-600/20 text-blue-300 text-sm rounded-full border border-blue-600/30">
                         >
                           {skill}
                         </span>
@@ -2632,7 +2632,7 @@ key={skillIndex}
 
                   <$2 />;
 href={`mailto:careers@ziontechgroup.com?subject=Application for ${position.title}}`}
-                    className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
+                    className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105">
                   >;
 Apply Now
                     <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -2675,7 +2675,7 @@ initial={{ opacity: 0}}, y: 30 }}
             >
               <$2 />;
 href="mailto:careers@ziontechgroup.com?subject=General Application";
-className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25"
+className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">
               >;
 Send Your Resume
                 <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -2747,10 +2747,10 @@ through cutting-edge AI solutions.
                 <input;
 type="text";
 placeholder="Search jobs, departments, or keywords...";
-value={searchTerm}
+value={searchTerm}>
                   onChange={(e) =>
   </input> setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
                 />
               </div>
 
@@ -2758,9 +2758,9 @@ value={searchTerm}
                 <div className="flex items-center gap-2">
                   <Filter className="w-4 h-4 text-gray-400" />
                   <select;
-value={selectedDepartment}
+value={selectedDepartment}>
                     onChange={(e) => setSelectedDepartment(e.target.value)}
-                    className="px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                    className="px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500">
                   >
                     {departments.map((dept) => (
                       <option key={dept} value={dept}>{dept}</option>
@@ -2771,9 +2771,9 @@ value={selectedDepartment}
                 <div className="flex items-center gap-2">
                   <MapPin className="w-4 h-4 text-gray-400" />
                   <select;
-value={selectedLocation}
+value={selectedLocation}>
                     onChange={(e) => setSelectedLocation(e.target.value)}
-                    className="px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                    className="px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500">
                   >
                     {locations.map((location) => (
                       <option key={location} value={location}>{location}</option>
@@ -2809,7 +2809,7 @@ value={selectedLocation}
             {featuredJobs.map((job) => (
               <$2 />;
 key={job.id}
-                className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
+                className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500">
               >
                 <div className="p-6">
                   <div className="flex items-center gap-2 mb-4">
@@ -2876,7 +2876,7 @@ All Open Positions
           {regularJobs.map((job) => (
             <$2 />;
 key={job.id}
-              className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
+              className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500">
             >
               <div className="p-6">
                 <div className="flex items-center gap-2 mb-4">
@@ -2910,7 +2910,7 @@ key={job.id}
                     {job.requirements.slice(0, 2).map((req), index) => (
                       <$2 />;
 key={index}
-                        className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded text-center"
+                        className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded text-center">
                       >
                         {req.split(' ').slice(0, 3).join(' ')}...
                       </span>
@@ -2939,7 +2939,7 @@ return (;
                 <$2 />;
 }
 key={index}
-                  className="text-center"
+                  className="text-center">
                 >
                   <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                     <Icon className="w-10 h-10 text-white" />
@@ -2963,7 +2963,7 @@ return (;
               <$2 />;
 }
 key={index}
-                className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 text-center hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
+                className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 text-center hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500">
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Icon className="w-8 h-8 text-white" />
@@ -3002,14 +3002,14 @@ let's discuss how you can contribute to our mission.
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <$2 />;
 href="mailto:careers@ziontechgroup.com";
-className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium rounded-lg transition-all duration-200 transform hover:scale-105"
+className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium rounded-lg transition-all duration-200 transform hover:scale-105">
               >;
 Send Your Resume
                 <Mail className="w-5 h-5 ml-2" />
               </a>
               <$2 />;
 to="/contact";
-className="inline-flex items-center justify-center px-8 py-4 border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-medium rounded-lg transition-all duration-200"
+className="inline-flex items-center justify-center px-8 py-4 border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-medium rounded-lg transition-all duration-200">
               >;
 Contact Us
               </Link>

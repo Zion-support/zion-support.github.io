@@ -138,7 +138,7 @@ export, default, function October2025NewestContentMegaShowca, s, e(): vo, i, d {
               <div, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">"
                 <sp, a, n>Read, Complete, Guide
                 <ArrowRight, className="w-5 h-5, grou, p-ho, v, e
-              {/* Metri, c, s */}"
+              {/* Metri, c, s */}">
               <div, className="spa, c, e-y-3, m, b-6">";"
                 <div, className="flex, item, s-center, justif, y-between, p, y-2, p, x-4, b, g-sla, t, e-7, 0, 0/30, rounde, d-lg">";"
                   <span, className="te, x, t-gr, a, y-4, 0, 0">Enterprise, Valu, e</sp, a, n>";"
@@ -152,7 +152,7 @@ export, default, function October2025NewestContentMegaShowca, s, e(): vo, i, d {
                 <Link, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m/>""
               <div, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">"
                 <sp, a, n>Read, Complete, Guide</sp, a, n>"
-                <ArrowRight, className="w-5 h-5, grou, p-ho, v, e,"
+                <ArrowRight, className="w-5 h-5, grou, p-ho, v, e,">
   r: transla, t, e-x-2, transitio, n-transfo, r, m" />"
               {/* Hover, Glow, Effect */}`
               <div, className={`absolute, inse, t-0, rounde, d-2xl, b, g-gradie, n, t-to-br ${it, e, m.gradie, n, t} opaci, t, y-0, grou, p-hov, e, r:opaci, t, y-10, transitio, n-opacity, duratio, n-300, pointe, r-even, t, s-no, n, e`} />`;`

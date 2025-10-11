@@ -130,7 +130,7 @@ const,
       {/* Skip to main content link */}
       <$2 />
         href="#main-content"
-        className="skip-link"
+        className="skip-link">
         onClick={e => {
           e.preventDefault()
           const _main = document.querySelector('main') || document.querySelector('#main-content')
@@ -140,9 +140,15 @@ const,
       {/* Skip to main content link */}
       <a></a>"
         href="#main-content""
+<<<<<<< HEAD
         className="skip-link"
         onClick={/* TODO: Fix JSX expression */});
   r: 'smooth' });
+=======
+        className="skip-link">
+        onClick={/* TODO: Fix JSX expression */})
+  r: 'smooth' })
+>>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
           }
         }}
       >
@@ -153,7 +159,7 @@ const,
       <div className="accessibility-controls" role="toolbar" aria-label="Accessibility controls">
         <$2 />
           onClick={() => setIsHighContrast(!isHighContrast)}
-          className="accessibility-toggle"
+          className="accessibility-toggle">
       {/* Accessibility controls */}"
       <div className="accessibility-controls" role="toolbar" aria-label="Accessibility controls">
         <button>
@@ -164,7 +170,7 @@ const,
           {isHighContrast ? '🔆' : '🌙'} High Contrast
         <$2 />
           onClick={() => setIsReducedMotion(!isReducedMotion)}
-          className="accessibility-toggle"
+          className="accessibility-toggle">
         <button>
           onClick={() => setIsReducedMotion(!isReducedMotion)}"
           className="accessibility-toggle"`

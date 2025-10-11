@@ -72,7 +72,7 @@ value={formData.email}
                       onChange={handleInputChange}
                       required;
 className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20";
-placeholder="Enter your email"
+placeholder="Enter your email">
                     />
   </input>
                   </div>
@@ -176,7 +176,7 @@ type="email" name="email";
 value={formData.email}
                       onChange={handleInputChange}
 // required;
-className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your email"
+className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your email">
 //                     />
   </input>
                 <div>
@@ -192,7 +192,7 @@ value={formData.password}
                       onChange={handleInputChange}
                       required;
 className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20";
-placeholder="Enter your password"
+placeholder="Enter your password">
                     />
   </input>
                     <$2 />;
@@ -206,8 +206,8 @@ onClick={() => setShowPassword(!showPassword)}
 type="checkbox";
 name="rememberMe";
 checked={formData.rememberMe}
-                      onChange={handleInputChange}
-                      className="w-4 h-4 text-cyan-400 bg-slate-700 border-gray-600 rounded focus:ring-cyan-400 focus:ring-2"
+                      onChange={handleInputChange}>
+                      className="w-4 h-4 text-cyan-400 bg-slate-700 border-gray-600 rounded focus:ring-cyan-400 focus:ring-2">
                     />
   </input>
                     <span className="ml-2 text-sm text-gray-300">Remember me
@@ -278,12 +278,12 @@ type={showPassword ? 'text' : 'password'}
                       name="password" value={formData.password}
                       onChange={handleInputChange}
 // required;
-className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your password"
+className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your password">
 //                     />
   </input>
           <$2 />;
 type="button" onClick={() => setShowPassword(!showPassword)}
-                      className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
+                      className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors">
 // >
                       {showPassword ?}"
           <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
@@ -295,18 +295,18 @@ checked={formData.rememberMe}
                       onChange={handleInputChange}";
 className="w-4 h-4 text-cyan-400 bg-slate-700 border-gray-600 rounded,;,
 focus:ring-cyan-400,";,
-focus:ring-2"
+focus:ring-2">
 // />
   </input>
           "
           <span className="ml-2 text-sm text-gray-300">Remember me
                   <$2 />;
-href="/forgot-password" className="text-sm text-cyan-400 hover:text-cyan-300 transition-colors"
+href="/forgot-password" className="text-sm text-cyan-400 hover:text-cyan-300 transition-colors">
 // >
 //                     Forgot password?
                 <$2 />;
 type="submit" disabled={isLoading}
-                  className="w-full cyber-button py-3 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full cyber-button py-3 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed">
 // >
                   {isLoading ? ()}"
           <div className="flex items-center justify-center"></div>"
@@ -319,7 +319,7 @@ type="submit" disabled={isLoading}
                 <p className="text-gray-300">;
 Don't have an account?{' '}
                   <$2 />;
-href="/signup" className="text-cyan-400 hover: text-cyan-300 font-medium transition-colors"
+href="/signup" className="text-cyan-400 hover: text-cyan-300 font-medium transition-colors">
 // >
 //                     Sign up here
           </a>
@@ -387,7 +387,7 @@ Create your account
 // Join thousands of businesses already using our AI and IT solutions
 //                   to transform their operations.
                 <$2 />;
-href="/signup" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
+href="/signup" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors">
 // >
 //                   Create your account;"
           <ArrowRight className="w-4 h-4 ml-1" />

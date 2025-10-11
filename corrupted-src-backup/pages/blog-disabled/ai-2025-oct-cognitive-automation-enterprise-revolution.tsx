@@ -64,7 +64,7 @@ const,
   CognitiveAutomationEnterpriseRevolution: () => {/* TODO: Fix JSX expression */}
           {/* Back Link */}
           <Link to="/blog"></Link>"
-  className="inline-flex items-center text-zion-cyan,"
+  className="inline-flex items-center text-zion-cyan,">
   hover:text-zion-blue-light mb-8 transition-colors">"
             <ArrowLeft className="w-4 h-4 mr-2 "></ArrowLeft>"
             <ArrowLeft className="w-4 h-4 mr-2" /></ArrowLeft>"

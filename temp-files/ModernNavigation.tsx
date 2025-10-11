@@ -42,7 +42,7 @@ const,
             {/* TODO: Fix JSX expression */}
                 key={item.name}
                 href={item.href}"
-                className="text-gray-700,"
+                className="text-gray-700,">
   hover:text-blue-600 transition-colors"
               >
                 {item.name}
@@ -51,7 +51,7 @@ const,
           {/* Mobile Menu Button */}
           <button onClick={() => setIsOpen(!isOpen)} className="md: hidden text-gray-700">,
           {/* Mobile Menu Button */}"
-          <button onClick={() => setIsOpen(!isOpen)} className="m,"
+          <button onClick={() => setIsOpen(!isOpen)} className="m,">
   d:hidden text-gray-700">"
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         {/* Mobile Navigation */}
@@ -67,11 +67,11 @@ const,
               <$2 />
                 key={item.name}
                 href={item.href}
-                className="block text-gray-700 hover:text-blue-600 py-2"
+                className="block text-gray-700 hover:text-blue-600 py-2">
         {/* TODO: Fix JSX expression */}
                 key={item.name}
                 href={item.href}"
-                className="block text-gray-700,"
+                className="block text-gray-700,">
   hover:text-blue-600 py-2"
                 onClick={() => setIsOpen(false)}
               >

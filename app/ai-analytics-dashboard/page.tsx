@@ -4,6 +4,10 @@ import { Helmet } from 'react-helmet-async';
 import { BarChart, TrendingUp, PieChart, Target, CheckCircle, ArrowRight } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
 const AnalyticsDashboardPage: React.FC = () => {
   const features = [
     {
@@ -116,12 +120,23 @@ const AnalyticsDashboardPage: React.FC = () => {
     <div className="min-h-screen bg-gray-50">
       <Helmet>
         <title>AI Analytics Dashboard - Zion Tech Group</title>
+<<<<<<< HEAD
         <meta name="description" content="Advanced AI-powered analytics dashboard for comprehensive business intelligence and data visualization." />      </Helmet>
 
       <Navigation />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}>        <section className="pt-20 pb-16 px-4">
+=======
+        <meta name="description" content="Advanced AI-powered analytics dashboard for comprehensive business intelligence and data visualization." />
+      </Helmet>
+      
+      <Navigation />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="pt-20 pb-16 px-4">
+>>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
           <div className="container mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               AI <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Analytics Dashboard</span>
@@ -187,7 +202,11 @@ const AnalyticsDashboardPage: React.FC = () => {
                 Comprehensive analytics solutions for your business
               </p>
             </div>
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
       <Footer />
     </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -196,9 +215,16 @@ const AnalyticsDashboardPage: React.FC = () => {
                   <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
                   <span className="text-gray-300 text-lg">{benefit}</span>
                 </div>
+<<<<<<< HEAD
 
       <Footer />
     </>              ))}
+=======
+      
+      <Footer />
+    </>
+              ))}
+>>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
             </div>
           </div>
         </section>
@@ -210,10 +236,15 @@ const AnalyticsDashboardPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Start analyzing your data with our AI-powered analytics dashboard today.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
 Start Free Trial>
+<<<<<<< HEAD
                 <ArrowRight className="ml-2 h-5 w-5">              </button>
+=======
+                <ArrowRight className="ml-2 h-5 w-5">
+              </button>
+>>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
               <button className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300">
                 Contact Sales
               </button>

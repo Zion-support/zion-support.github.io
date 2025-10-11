@@ -95,8 +95,8 @@ export default function SearchFeature() {
 
             <img
               src="https: //placehold && placehold.co/800x400"
-              alt="Screenshot of search results"
-              className="object-cover"
+              alt="Screenshot of search results">
+              className="object-cover">
             />
           </div>
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
@@ -135,8 +135,8 @@ export default function SearchFeature() {
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
             <img
               src="https: //placehold.co/800x400"
-              alt="Screenshot of search results"
-              className="object-cover"
+              alt="Screenshot of search results">
+              className="object-cover">
             />
           </div>
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
@@ -207,5 +207,10 @@ export default function SearchFeature() {
               src="https: //placehold && placehold.co/800x400"
               alt="Screenshot of search results"
               className="object-cover"
+<<<<<<< HEAD
 
+=======
+>
+>
+>>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
               <Link href="/search">Try Search</Link></$1></$1></$1></$1></$1></div></main>

@@ -1466,10 +1466,10 @@ and get support when you need it most.
                 <input;
 type="text";
 placeholder="Search for help articles, tutorials, and more...";
-value={searchQuery}
+value={searchQuery}>
                   onChange={(e) =>
   </input> setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  className="w-full pl-12 pr-4 py-4 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
                 />
                 <button className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-md hover:from-cyan-400 hover:to-blue-500 transition-all duration-200">;
 Search
@@ -1575,7 +1575,7 @@ value={searchQuery}
 placeholder="Search for help articles, guides, and solutions...";
 value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
                 />
               </div>;,
 title: 'Live Chat',;,
@@ -1848,7 +1848,7 @@ icon: Book,;,
 action: "Browse Docs",;,
 available: "Always Available"
     }
-  ];
+  ];>
 const filteredFAQs = faqs.filter(faq =>;
   </input> 
     (activeCategory === 'all' || faq.category === activeCategory) &&
@@ -1957,8 +1957,8 @@ Find answers to your questions and learn how to make the most of our platform
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
               <input;
 type="text";
-placeholder="Search for help articles, guides, and FAQs...";
-className="w-full pl-10 pr-4 py-3 bg-zion-blue-dark border border-zion-purple/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+placeholder="Search for help articles, guides, and FAQs...";>
+className="w-full pl-10 pr-4 py-3 bg-zion-blue-dark border border-zion-purple/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent">
               />
   </input>
             </div>
@@ -1994,10 +1994,10 @@ Get the help you need with our comprehensive support resources, documentation, a
                   <input;
 type="text";
 placeholder="Search for help articles, FAQs, or topics...";
-value={searchQuery}
+value={searchQuery}>
                     onChange={(e) =>
   </input> setSearchQuery(e.target.value)}
-                    className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
+                    className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20">
                   />
                 </div>
               </div>
@@ -2018,7 +2018,7 @@ Choose the support option that works best for you.
             {supportOptions.map((option), index) => (
               <$2 />;
 key={index}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105"
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105">
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${option.color}} rounded-lg flex items-center justify-center mb-4 mx-auto`}>
                   <option.icon className="w-8 h-8 text-white" />
@@ -2049,7 +2049,7 @@ key={index}
                     </div>
                     <$2 />;
 onClick={() => toggleCategory(key)}
-                      className="text-gray-300 hover:text-cyan-400 transition-colors"
+                      className="text-gray-300 hover:text-cyan-400 transition-colors">
                     >
                       {expandedCategories.includes(key) ? (
                         <ChevronDown className="w-5 h-5" />
@@ -2064,7 +2064,7 @@ onClick={() => toggleCategory(key)}
                         <$2 />;
 key={index}
                           to={article.href}
-                          className="block text-gray-300 hover:text-cyan-400 transition-colors py-2 px-3 rounded-lg hover:bg-white/10"
+                          className="block text-gray-300 hover:text-cyan-400 transition-colors py-2 px-3 rounded-lg hover:bg-white/10">
                         >
                           <FileText className="w-5 h-5 text-cyan-400 mr-3" />
                           <span className="text-gray-300 hover:text-white transition-colors duration-300">
@@ -2073,7 +2073,7 @@ key={index}
                         </Link>
                       ))}
                     </div>;
-className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20"
+className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20">
                 />
               </div>
             </div>
@@ -2120,7 +2120,7 @@ return (;
               <$2 />;
 }
 key={category.id}
-                className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-8 border border-gray-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105"
+                className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-8 border border-gray-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105">
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${category.color}} rounded-xl flex items-center justify-center mb-6`}>
                   <Icon className="w-8 h-8 text-white" />
@@ -2156,7 +2156,7 @@ Most viewed and helpful articles from our knowledge base
             {filteredArticles.map((article) => (
               <$2 />;
 key={article.id}
-                className="bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl p-6 border border-gray-600 hover:border-cyan-500 transition-all duration-300"
+                className="bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl p-6 border border-gray-600 hover:border-cyan-500 transition-all duration-300">
               >
                 <div className="flex items-center justify-between mb-3">
                   <span className="text-sm text-cyan-400 font-medium">{article.category}</span>
@@ -2204,11 +2204,11 @@ Quick answers to the most common questions
           {faqs.map((faq) => (
             <$2 />;
 key={faq.id}
-              className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl border border-gray-700 overflow-hidden"
+              className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl border border-gray-700 overflow-hidden">
             >
               <$2 />;
 onClick={() => toggleFaq(faq.id)}
-                className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-700/50 transition-colors duration-200"
+                className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-700/50 transition-colors duration-200">
               >
                 <h3 className="text-lg font-semibold text-white">{faq.question}</h3>
                 {expandedFaqs.has(faq.id) ? (
@@ -2245,7 +2245,7 @@ return (;
                 <$2 />;
 }
 key={index}
-                  className="bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl p-6 border border-gray-600 hover:border-cyan-500 transition-all duration-300 text-center"
+                  className="bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl p-6 border border-gray-600 hover:border-cyan-500 transition-all duration-300 text-center">
                 >
                   <div className={`w-16 h-16 bg-gradient-to-r ${channel.color}} rounded-xl flex items-center justify-center mx-auto mb-4`}>
                     <Icon className="w-8 h-8 text-white" />
@@ -2290,7 +2290,7 @@ Get Support
             {supportChannels.map((channel) => (
               <$2 />;
 key={channel.title}
-                className="text-center p-8 bg-gray-800/50 border border-gray-700 rounded-xl hover:border-cyan-500/50 transition-all duration-200"
+                className="text-center p-8 bg-gray-800/50 border border-gray-700 rounded-xl hover:border-cyan-500/50 transition-all duration-200">
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${channel.color}} rounded-full flex items-center justify-center mx-auto mb-6`}>
                   <channel.icon className="w-8 h-8 text-white" />
@@ -2334,24 +2334,24 @@ initial={{ opacity: 0}}, y: 20 }}
               <input;
 type="text";
 placeholder="Search for help articles, guides, and solutions...";
-value={searchQuery}
+value={searchQuery}>
                 onChange={(e) =>
   </input> setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
               />
             </div>
 
             <div className="flex flex-wrap justify-center gap-4">
               <$2 />;
 to="/contact";
-className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
               >;
 Contact Support
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <$2 />;
 to="/services";
-className="inline-flex items-center px-8 py-4 border-2 border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
+className="inline-flex items-center px-8 py-4 border-2 border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300">
               >;
 Explore Services
               </Link>
@@ -2361,10 +2361,10 @@ Explore Services
               <input;
 type="text";
 placeholder="Search for help topics...";
-value={searchQuery}
+value={searchQuery}>
                 onChange={(e) =>
   </input> setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300"
+                className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300">
               />
             </div>
           </motion.div>
@@ -2412,7 +2412,7 @@ Choose the support channel that works best for you
             {supportChannels.map((channel), index) => (
               <$2 />;
 key={index}
-                className="bg-gray-800/50 rounded-xl border border-gray-700 p-6 hover:border-cyan-500/50 transition-all duration-300 hover:bg-gray-800/70"
+                className="bg-gray-800/50 rounded-xl border border-gray-700 p-6 hover:border-cyan-500/50 transition-all duration-300 hover:bg-gray-800/70">
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${channel.color}} rounded-xl flex items-center justify-center mb-4`}>
                   <channel.icon className="w-8 h-8 text-white" />
@@ -2478,7 +2478,7 @@ key={categoryIndex}
                 initial={{ opacity: 0}}, y: 20 }}
                 whileInView={{ opacity: 1}}, y: 0 }}
                 transition={{ duration: 0.6}}, delay: categoryIndex * 0.1 }}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700"
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700">
               >
                 <div className="flex items-center mb-6">
                   <category.icon className="w-8 h-8 text-cyan-400 mr-3" />
@@ -2537,7 +2537,7 @@ Popular Articles
               {popularArticles.map((article), index) => (
                 <$2 />;
 key={index}
-                  className="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg p-6 hover:border-cyan-400/50 transition-all duration-300 cursor-pointer"
+                  className="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg p-6 hover:border-cyan-400/50 transition-all duration-300 cursor-pointer">
                 >
                   <div className="flex items-start justify-between mb-4">
                     <span className="text-sm text-cyan-400 bg-cyan-400/10 px-3 py-1 rounded-full">
@@ -2606,7 +2606,7 @@ return (;
               <div key={category.id} className="bg-gray-800/50 rounded-2xl border border-gray-700/50">
                 <$2 />;
 onClick={() => setExpandedCategory(isExpanded ? null : category.id)}
-                  className="w-full p-6 text-left hover:bg-gray-700/50 transition-colors duration-300 rounded-t-2xl"
+                  className="w-full p-6 text-left hover:bg-gray-700/50 transition-colors duration-300 rounded-t-2xl">
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center">
@@ -2633,7 +2633,7 @@ onClick={() => setExpandedCategory(isExpanded ? null : category.id)}
                         <$2 />;
 key={index}
                           to={article.path}
-                          className="flex items-center p-3 rounded-lg hover:bg-gray-700/50 transition-colors duration-300 group"
+                          className="flex items-center p-3 rounded-lg hover:bg-gray-700/50 transition-colors duration-300 group">
                         >
                           <FileText className="w-5 h-5 text-cyan-400 mr-3" />
                           <span className="text-gray-300 group-hover:text-white transition-colors duration-300">
@@ -2662,7 +2662,7 @@ Popular Articles
               <$2 />;
 key={index}
                 to={article.path}
-                className="bg-gray-800/30 rounded-lg p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300 group"
+                className="bg-gray-800/30 rounded-lg p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300 group">
               >
                 <div className="flex items-start justify-between">
                   <div>
@@ -2676,7 +2676,7 @@ key={index}
               </Link>
             ))}
             viewport={{ once: true}}}
-            className="text-center mb-16"
+            className="text-center mb-16">
           >
             <h2 className="text-4xl font-bold text-white mb-4">Get Support</h2>
             <p className="text-xl text-gray-300">Multiple ways to get the help you need, when you need it</p>
@@ -2690,7 +2690,7 @@ key={channel.title}
                 whileInView={{ opacity: 1}}, y: 0 }}
                 transition={{ duration: 0.6}}, delay: index * 0.1 }}
                 viewport={{ once: true}}}
-                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-cyan-500/50 transition-all duration-300"
+                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-cyan-500/50 transition-all duration-300">
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${channel.color}} rounded-lg flex items-center justify-center mb-4 mx-auto`}>
                   <channel.icon className="w-8 h-8 text-white" />
@@ -2729,7 +2729,7 @@ Join Community
             {faqs.map((faq), index) => (
               <$2 />;
 key={index}
-                className="bg-gray-800/50 rounded-xl border border-gray-700 overflow-hidden"
+                className="bg-gray-800/50 rounded-xl border border-gray-700 overflow-hidden">
               >
                 <$2 />;
 className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-800/70 transition-colors duration-300";
@@ -2823,7 +2823,7 @@ activeCategory === category.id ? 'border-cyan-500/50 bg-cyan-500/10' : ''}`}
             ))}
           </div>
         </section>;
-className="block p-4 bg-gray-700/30 rounded-lg hover:bg-gray-600/30 transition-colors"
+className="block p-4 bg-gray-700/30 rounded-lg hover:bg-gray-600/30 transition-colors">
                         >
                           <h4 className="text-white font-medium mb-1">{article.title}</h4>
                           <p className="text-gray-400 text-sm">{article.description}</p>
@@ -2905,7 +2905,7 @@ return (;
               <div key={faq.id} className="bg-gray-800/50 rounded-2xl border border-gray-700/50">
                 <$2 />;
 onClick={() => setExpandedFAQ(isExpanded ? null : faq.id)}
-                  className="w-full p-6 text-left hover:bg-gray-700/50 transition-colors duration-300 rounded-t-2xl"
+                  className="w-full p-6 text-left hover:bg-gray-700/50 transition-colors duration-300 rounded-t-2xl">
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex-1">
@@ -2948,7 +2948,7 @@ return (;
 }
 key={index}
                 to={resource.link}
-                className="bg-gray-800/50 rounded-2xl p-6 text-center hover:bg-gray-700/50 transition-all duration-300 border border-gray-700/50 hover:border-cyan-500/50 group"
+                className="bg-gray-800/50 rounded-2xl p-6 text-center hover:bg-gray-700/50 transition-all duration-300 border border-gray-700/50 hover:border-cyan-500/50 group">
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Icon className="w-8 h-8 text-white" />
@@ -2979,7 +2979,7 @@ Get in touch with us for personalized assistance.
 to="/contact";
 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105";
 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105";
-className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
+className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105">
             >;
 Find answers to common questions, access helpful resources, and get the support you need.;
 Our team is here to help you succeed with our technology solutions.
@@ -2995,11 +2995,11 @@ Contact Support Team
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>;
 to="/services";
-className="px-8 py-4 bg-gray-800/50 hover:bg-gray-700/70 text-white font-semibold rounded-lg border border-gray-700 hover:border-cyan-500 transition-all duration-300"
+className="px-8 py-4 bg-gray-800/50 hover:bg-gray-700/70 text-white font-semibold rounded-lg border border-gray-700 hover:border-cyan-500 transition-all duration-300">
             >
               <BookOpen className="w-5 h-5 mr-2" />;
 View Documentation;
-className="inline-flex items-center px-8 py-4 border-2 border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
+className="inline-flex items-center px-8 py-4 border-2 border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300">
             >;
 Explore Our Services
             </Link>
@@ -3025,7 +3025,7 @@ with any questions or technical issues.
       <section className="pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.h2;
-className="text-3xl font-bold text-white text-center mb-12"
+className="text-3xl font-bold text-white text-center mb-12">
             ))}
           </div>
         </div>
@@ -3103,7 +3103,7 @@ initial={{ opacity: 0}}, y: 20 }}
               >
                 <$2 />;
 onClick={() => toggleCategory(item.id.toString())}
-                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-700/30 transition-colors duration-200"
+                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-700/30 transition-colors duration-200">
                 >
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">
@@ -3115,7 +3115,7 @@ onClick={() => toggleCategory(item.id.toString())}
                         {item.tags.map((tag), index) => (
                           <$2 />;
 key={index}
-                            className="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full"
+                            className="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full">
                           >
                             {tag}
                           </span>
@@ -3140,7 +3140,7 @@ key={index}
             <$2 />;
 key={link.title}
               to={link.href}
-              className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 group"
+              className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 group">
             >
               <div className="flex items-center mb-4">
                 <div className="p-2 bg-blue-100 rounded-lg mr-3">
@@ -3162,14 +3162,14 @@ key={link.title}
             <div key={category.title} className="bg-white rounded-xl shadow-lg overflow-hidden">
               <$2 />;
 onClick={() => toggleCategory(category.title)}
-                className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
+                className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200">
               >;
 Contact Support
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <$2 />;
 to="/services";
-className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
+className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300">
               >;
 Explore Services;
 import React from 'react';;
@@ -3281,7 +3281,7 @@ answer: 'You can reach us through the contact form, email us at support@ziontech
       </div>
             <$2 />;
 href="tel:+13024640950";
-className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-white transition-all duration-300"
+className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-white transition-all duration-300">
             >;
 Call Now
             </a>
@@ -3306,7 +3306,7 @@ export default HelpCenter
               <$2 />;
 key={index}
                 to={article.path}
-                className="group bg-white/5 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 transform hover:scale-105"
+                className="group bg-white/5 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 transform hover:scale-105">
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <FileText className="w-6 h-6 text-white" />
@@ -3337,13 +3337,13 @@ Can't find what you're looking for? Our support team is here to help you with an
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <$2 />;
 to="/contact";
-className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
+className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200">
             >;
 Contact Support
             </Link>
             <$2 />;
 href="mailto:support@ziontechgroup.com";
-className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200"
+className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200">
             >;
 Email Support
             </a>
@@ -3413,7 +3413,7 @@ Schedule a Call
                   <h3 className="text-lg font-semibold text-white mb-3">{article}</h3>
                   <$2 />;
 to={`/help/${article.toLowerCase().replace(/\s+/g}}, '-')}`}
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
+                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors">
                   >;
 Read Article
                     <ArrowRight className="w-4 h-4 ml-2" />
@@ -3450,7 +3450,7 @@ Start Chat
                 <p className="text-gray-300 text-sm mb-4">Send us a detailed message</p>
                 <$2 />;
 to="/contact";
-className="bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors inline-block"
+className="bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors inline-block">
                 >;
 Send Email
                 </Link>
@@ -3463,7 +3463,7 @@ Send Email
                 <p className="text-gray-300 text-sm mb-4">Call us directly for urgent issues</p>
                 <$2 />;
 href="tel:+13024640950";
-className="bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors inline-block"
+className="bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors inline-block">
                 >;
 Call Now
                 </a>
@@ -3613,8 +3613,8 @@ Find answers to common questions and get the support you need to make the most o
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-5 w-5" />
             <input;
 type="text";
-placeholder="Search for help articles, FAQs, or topics...";
-className="w-full pl-10 pr-4 py-3 bg-zion-blue-dark border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent"
+placeholder="Search for help articles, FAQs, or topics...";>
+className="w-full pl-10 pr-4 py-3 bg-zion-blue-dark border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent">
             />
   </input>
           </div>
@@ -3690,14 +3690,14 @@ Can't find what you're looking for? Our support team is here to help.
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <$2 />;
 to="/contact";
-className="inline-flex items-center justify-center px-6 py-3 bg-zion-purple text-white font-medium rounded-lg hover:bg-zion-purple/90 transition-colors"
+className="inline-flex items-center justify-center px-6 py-3 bg-zion-purple text-white font-medium rounded-lg hover:bg-zion-purple/90 transition-colors">
                 >
                   <MessageCircle className="h-5 w-5 mr-2" />;
 Contact Support
                 </Link>
                 <$2 />;
 href="mailto:support@ziontechgroup.com";
-className="inline-flex items-center justify-center px-6 py-3 border border-zion-blue-light text-white font-medium rounded-lg hover:bg-zion-blue-light/20 transition-colors"
+className="inline-flex items-center justify-center px-6 py-3 border border-zion-blue-light text-white font-medium rounded-lg hover:bg-zion-blue-light/20 transition-colors">
                 >
                   <Mail className="h-5 w-5 mr-2" />;
 Email Support

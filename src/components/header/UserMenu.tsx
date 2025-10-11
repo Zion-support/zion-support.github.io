@@ -7,7 +7,7 @@ export function UserMenu() {
     <div className="flex items-center gap-2">
       <$2 />
         to="/login"
-        className="flex items-center gap-2 px-4 py-2 text-white hover:text-zion-cyan transition-colors"
+        className="flex items-center gap-2 px-4 py-2 text-white hover:text-zion-cyan transition-colors">
       >
         <LogIn className="w-4 h-4" />
         <span className="hidden sm:inline">Login</span>
@@ -56,7 +56,7 @@ export const UserMenu: React.FC = () => {
     <div className="relative">
       <$2 />
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-100 transition-colors"
+        className="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-100 transition-colors">
       >
         <Avatar className="w-8 h-8">
           <AvatarImage src="/default-avatar.png" alt={user?.name || 'User'} />
@@ -87,14 +87,14 @@ export const UserMenu: React.FC = () => {
 
           <$2 />
             onClick={handleSignOut}
-            className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center space-x-2"
+            className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center space-x-2">
           >
             <Settings className="w-4 h-4 mr-3" />
             Dashboard
           </Link>
           <$2 />
             onClick={handleLogout}
-            className="flex items-center w-full px-4 py-2 text-zion-slate-light hover:bg-zion-blue hover:text-white transition-colors"
+            className="flex items-center w-full px-4 py-2 text-zion-slate-light hover:bg-zion-blue hover:text-white transition-colors">
           >
             <LogOut className="w-4 h-4 mr-3" />
             Sign Out

@@ -15,12 +15,12 @@ import Footer from '../components/Footer'
             This page is under development. Please check back soon for updates.
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center mb-12">
             <$2 />
-              href="tel:+13024640950" className="cyber-button w-full sm:w-auto text-center"
+              href="tel:+13024640950" className="cyber-button w-full sm:w-auto text-center">
 // >,
  Cal)
   l: (302) 464-0950
             <$2 />
-              href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
+              href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">
 // >
 //               Get Free Demo
         {/* Features Section */}"
@@ -128,12 +128,12 @@ import Footer from '../components/Footer'
 //             can revolutionize your business communication.
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
             <$2 />
-              href="tel:+13024640950" className="cyber-button w-full sm:w-auto text-center"
+              href="tel:+13024640950" className="cyber-button w-full sm:w-auto text-center">
 // >,
  Cal,
   l: (302) 464-0950
             <$2 />
-              href="mailto:kleber@ziontechgroup.com" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300"
+              href="mailto:kleber@ziontechgroup.com" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300">
 // >
 //                Email Us</a>
           </div>

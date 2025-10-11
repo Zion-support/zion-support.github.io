@@ -138,7 +138,7 @@ value={formData.name}
                     onChange={handleChange}
                     required;
 className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300";
-placeholder="Your full name"
+placeholder="Your full name">
                   />
   </input>
                 <div>
@@ -152,7 +152,7 @@ value={formData.email}
                     onChange={handleChange}
                     required;
 className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300";
-placeholder="your@email.com"
+placeholder="your@email.com">
                   />
   </input>
               <div>
@@ -165,7 +165,7 @@ name="company";
 value={formData.company}
                   onChange={handleChange}
                   className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300";
-placeholder="Your company name"
+placeholder="Your company name">
                 />
   </input>
               <div>
@@ -175,7 +175,7 @@ Service Interested In
 id="service";
 name="service";
 value={formData.service}
-                  onChange={handleChange}
+                  onChange={handleChange}>
                   className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300">
   </select>
                   <option value="">Select a service
@@ -194,7 +194,7 @@ value={formData.message}
                   required;
 rows={6}
                   className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300 resize-none";
-placeholder="Tell us about your project..."
+placeholder="Tell us about your project...">
                 />
               <$2 />;
 type="submit";

@@ -24,7 +24,7 @@ AI ROI Calculator
 Current Annual Cost ($)
                 <input;
 type='number';
-value={currentCost}
+value={currentCost}>
                   onChange={e =>
   </input> setCurrentCost(Number(e.target.value))}
                   className='w-full px-4 py-2 border border-gray-300 rounded-lg,;,

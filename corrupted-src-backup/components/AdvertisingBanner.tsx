@@ -10,7 +10,7 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({,
   backgroundColor = '#3 b82 f6',
   textColor = '#ffffff'}) => {
   return(<$2 />
-      className="advertising-banner"
+      className="advertising-banner">
       style={{
         backgroundColor,
         color: textColor,
@@ -25,7 +25,7 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({,
       {imageUrl && (
         <div className="banner-image">
           <img
-      {imageUrl && (
+      {imageUrl && (>
         <div className="banner-image">
           <img
             src={imageUrl}
@@ -34,8 +34,13 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({,
               width: '200px',
               height: 'auto')}
               borderRadius: '0.25rem')}
+<<<<<<< HEAD
 const,
   AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({/* TODO: Fix JSX expression */});
+=======
+const,>
+  AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({/* TODO: Fix JSX expression */})
+>>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
 }) => {/* TODO: Fix JSX expression */}
       }}
     >

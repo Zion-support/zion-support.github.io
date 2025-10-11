@@ -136,7 +136,7 @@ export default function ServiceDetailPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <$2 />
                 to="/contact"
-                className="inline-flex items-center gap-2 bg-zion-gold text-zion-blue-dark px-8 py-4 rounded-lg font-semibold hover:bg-zion-gold-light transition-colors"
+                className="inline-flex items-center gap-2 bg-zion-gold text-zion-blue-dark px-8 py-4 rounded-lg font-semibold hover:bg-zion-gold-light transition-colors">
               >
                 <Phone className="w-5 h-5" />
                 Get Started
@@ -144,7 +144,7 @@ export default function ServiceDetailPage() {
               </Link>
               <$2 />
                 to="/pricing"
-                className="inline-flex items-center gap-2 border-2 border-zion-gold text-zion-gold px-8 py-4 rounded-lg font-semibold hover:bg-zion-gold hover:text-zion-blue-dark transition-colors"
+                className="inline-flex items-center gap-2 border-2 border-zion-gold text-zion-gold px-8 py-4 rounded-lg font-semibold hover:bg-zion-gold hover:text-zion-blue-dark transition-colors">
               >
                 View Pricing
               </Link>
@@ -212,9 +212,9 @@ export default function ServiceDetailPage() {
                       Select Tier
                     </label>
                     <select
-                      value={selectedTier}
+                      value={selectedTier}>
                       onChange={(e) => setSelectedTier(e.target.value)}
-                      className="w-full bg-zion-blue/30 border border-zion-blue/50 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-zion-gold"
+                      className="w-full bg-zion-blue/30 border border-zion-blue/50 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-zion-gold">
                     >
                       {Object.keys(service.pricing).map((tier) => (
                         <option key={tier} value={tier} className="bg-zion-blue-dark text-white">
@@ -246,7 +246,7 @@ export default function ServiceDetailPage() {
 
                   <$2 />
                     to="/contact"
-                    className="w-full bg-zion-gold text-zion-blue-dark py-3 rounded-lg font-semibold text-center block hover:bg-zion-gold-light transition-colors"
+                    className="w-full bg-zion-gold text-zion-blue-dark py-3 rounded-lg font-semibold text-center block hover:bg-zion-gold-light transition-colors">
                   >
                     Get Started
                   </Link>
@@ -284,7 +284,7 @@ export default function ServiceDetailPage() {
                     {service.tags.map((tag: string, index: number) => (
                       <$2 />
                         key={index}
-                        className="bg-zion-gold/20 text-zion-gold px-3 py-1 rounded-full text-sm"
+                        className="bg-zion-gold/20 text-zion-gold px-3 py-1 rounded-full text-sm">
                       >
                         {tag}
                       </span>

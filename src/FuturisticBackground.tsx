@@ -277,7 +277,7 @@ export function FuturisticBackground({
     <div className={`fixed inset-0 pointer-events-none z-0 ${className}`}>
       <canvas
         ref={canvasRef}
-        className="w-full h-full"
+        className="w-full h-full">
         style={{
           background: 'radial-gradient(ellipse at center, rgba(23, 45, 103, 0.3) 0%, rgba(0, 0, 0, 0.8) 100%)'
         }}
@@ -427,7 +427,7 @@ export function FuturisticBackground({
     <div className={`relative ${className}`}>
       <canvas
         ref={canvasRef}
-        className="absolute inset-0 w-full h-full pointer-events-none"
+        className="absolute inset-0 w-full h-full pointer-events-none">
         style={{ zIndex: 0 }}
       />
       <div className="relative z-10">

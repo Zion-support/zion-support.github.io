@@ -53,8 +53,14 @@ return (
         <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
       </Helmet>
       <Navigation />
+<<<<<<< HEAD
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">      <Helmet>
+=======
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+>>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
         <title>AI Agricultural Intelligence Pro - Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered agricultural intelligence platform for precision farming, crop monitoring, and yield optimization." />
         <meta name="keywords" content="AI agriculture, precision farming, crop monitoring, agricultural intelligence, smart farming" />
@@ -173,7 +179,7 @@ return (
                 <div key={index} className={`bg-white/10 backdrop-blur-lg rounded-xl p-8 border transition-all duration-300 ${
                   tier.name === 'Professional' 
                     ? 'border-green-400/50 scale-105' 
-                    : 'border-white/20 hover:border-green-400/50'
+                    : 'border-white/20 hover:border-green-400/50'>
                 }`}>
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
@@ -196,7 +202,7 @@ return (
                   <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     tier.name === 'Professional'
                       ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white hover:from-green-700 hover:to-blue-700'
-                      : 'border border-white text-white hover:bg-white hover:text-green-600'
+                      : 'border border-white text-white hover:bg-white hover:text-green-600'>
                   }`}>
                     {tier.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
                   </button>

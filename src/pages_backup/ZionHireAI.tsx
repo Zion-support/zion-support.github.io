@@ -219,7 +219,7 @@ asChild
                 <img;
 src='https://placehold.co/600x400/192134/9b87f5?text=Zion+Hire+AI';
 alt='Zion Hire AI Dashboard';
-className='relative z-10 rounded-lg shadow-xl';
+className='relative z-10 rounded-lg shadow-xl';>
 loading='lazy'                />                  src="https://placehold.co/600x400/192134/9b87f5?text=Zion+Hire+AI";
 alt="Zion Hire AI Dashboard";
 className="relative z-10 rounded-lg shadow-xl";
@@ -612,7 +612,7 @@ Request Demo</$1></$1></$1></$1>
 src="https://placehold.co/600x400/192134/9b87f5?text=Zion+Hire+AI";
 alt="Zion Hire AI Dashboard";
 className="relative z-10 rounded-lg shadow-xl";
-loading="lazy"
+loading="lazy">
                 /></$1></$1></$1></$1>
         {/* Features Section */}
         <section className="py-16 bg-background">
@@ -746,7 +746,7 @@ asChild>
                 <img;
 src='https://placehold.co / 600x400 / 192134 / 9b87f5?text = Zion + Hire + AI';
 alt='Zion Hire AI Dashboard';
-className='relative z - 10 rounded - lg shadow - xl';
+className='relative z - 10 rounded - lg shadow - xl';>
 loading='lazy'                />                  src="https://placehold.co / 600x400 / 192134 / 9b87f5?text = Zion + Hire + AI";
 alt="Zion Hire AI Dashboard";
 className="relative z - 10 rounded - lg shadow - xl";
