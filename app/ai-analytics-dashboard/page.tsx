@@ -61,7 +61,7 @@ const AnalyticsDashboardPage: React.FC = () => {
       <Navigation />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}>
+        {/* Hero Section */}
         <section className="pt-20 pb-16 px-4">
           <div className="container mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
