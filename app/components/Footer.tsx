@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
@@ -58,29 +58,113 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Services */}
+          {/* AI Services */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Services</h3>
+            <h3 className="text-lg font-semibold">AI Services</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/ai-services" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  AI Solutions
+                  All AI Services
                 </Link>
               </li>
               <li>
-                <Link to="/5g-implementation" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  5G Implementation
+                <Link to="/ai-content-generator" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  AI Content Generator
                 </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  Cloud Services
-                </a>
+                <Link to="/ai-chatbot-builder" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  AI Chatbot Builder
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  Digital Transformation
-                </a>
+                <Link to="/ai-analytics-dashboard" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  AI Analytics Dashboard
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-email-assistant" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  AI Email Assistant
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-voice-assistant" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  AI Voice Assistant
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* IT Services */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">IT Services</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/it-services" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  All IT Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/cloud-migration" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  Cloud Migration
+                </Link>
+              </li>
+              <li>
+                <Link to="/cybersecurity-solutions" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  Cybersecurity
+                </Link>
+              </li>
+              <li>
+                <Link to="/devops-cicd" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  DevOps & CI/CD
+                </Link>
+              </li>
+              <li>
+                <Link to="/data-analytics" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  Data Analytics
+                </Link>
+              </li>
+              <li>
+                <Link to="/mobile-development" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  Mobile Development
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Micro SAAS */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">Micro SAAS</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/micro-saas-services" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  All Micro SAAS
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-task-manager" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  AI Task Manager
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-expense-tracker" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  AI Expense Tracker
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-password-manager" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  AI Password Manager
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-invoice-generator" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  AI Invoice Generator
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-health-tracker" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  AI Health Tracker
+                </Link>
               </li>
             </ul>
           </div>
@@ -91,15 +175,15 @@ export default function Footer() {
             <div className="space-y-2">
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-gray-400" />
-                <span className="text-gray-400 text-sm">info@ziontechgroup.com</span>
+                <span className="text-gray-400 text-sm">kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-gray-400" />
-                <span className="text-gray-400 text-sm">+1 (555) 123-4567</span>
+                <span className="text-gray-400 text-sm">+1 302 464 0950</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="w-4 h-4 text-gray-400" />
-                <span className="text-gray-400 text-sm">San Francisco, CA</span>
+                <span className="text-gray-400 text-sm">364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
             </div>
           </div>
