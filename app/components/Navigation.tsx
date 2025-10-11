@@ -1,30 +1,10 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-099c
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone } from 'lucide-react'
-
-export default function Navigation() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [isServicesOpen, setIsServicesOpen] = useState(false)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone, Brain, Cpu, Server, Wifi } from 'lucide-react'
+import { Menu, X, ChevronDown, Brain, Cloud, Shield, Globe, Database, Code, Smartphone, Cpu, Server, Wifi } from 'lucide-react'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-59b6
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-099c
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
   
   const toggleMenu = () => {
     setIsOpen(!isOpen)
