@@ -27,6 +27,16 @@ const ItProjectManagementPage: React.FC = () => {
 
   return (
     <>
+'use client'
+import React from 'react'
+import {Helmet} from 'react-helmet-async'
+import {ArrowRight} from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const ItProjectManagementPage: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>IT Project Management - Zion Tech Group</title>
         <meta name="description" content="Professional IT project management services and solutions." />
@@ -86,6 +96,7 @@ const ItProjectManagementPage: React.FC = () => {
       
       <Footer />
     </>
+    </div>
   );
 };
 

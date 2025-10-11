@@ -4,6 +4,36 @@ import Link from 'next/link';
 import { Github, Linkedin, Twitter } from 'lucide-react';
 
 export default function Footer() {
+  // const services = [
+  //   { name: 'AI Solutions', href: '/services/ai' },
+  //   { name: 'Cloud Architecture', href: '/services/cloud' },
+  //   { name: 'Web Development', href: '/services/web' },
+  //   { name: 'Mobile Apps', href: '/services/mobile' },
+  //   { name: 'Data Analytics', href: '/services/analytics' },
+  //   { name: 'DevOps', href: '/services/devops' },
+  // ];
+
+  // const products = [
+  //   { name: 'AI Platform', href: '/products/ai-platform' },
+  //   { name: 'Cloud Suite', href: '/products/cloud-suite' },
+  //   { name: 'Analytics Dashboard', href: '/products/analytics' },
+  //   { name: 'Mobile SDK', href: '/products/mobile-sdk' },
+  // ];
+
+  // const company = [
+  //   { name: 'About Us', href: '/about' },
+  //   { name: 'Careers', href: '/careers' },
+  //   { name: 'Blog', href: '/blog' },
+  //   { name: 'Press', href: '/press' },
+  // ];
+
+  // Support links for future use
+  // const supportLinks = [
+  //   { name: 'Help Center', href: '/help' },
+  //   { name: 'Documentation', href: '/docs' },
+  //   { name: 'API Reference', href: '/api' },
+  //   { name: 'Status', href: '/status' },
+  // ];
   return (
     <footer className="bg-white/5 backdrop-blur-lg border-t border-white/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
