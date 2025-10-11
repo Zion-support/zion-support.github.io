@@ -119,7 +119,7 @@ const FuturisticHeroPage: React.FC = () => {const features = [
             <p className="text-xl text-purple-100 mb-8">
               Contact our experts to discuss your futuristichero needs and get a customized solution.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
                 <Phone className="mr-2 h-5 w-5" />
                 Call Now
@@ -128,4 +128,12 @@ const FuturisticHeroPage: React.FC = () => {const features = [
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us
               </button>
-            </div>)};export default FuturisticHeroPage
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  )
+}
+
+export default FuturisticHeroPage

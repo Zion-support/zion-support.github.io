@@ -76,7 +76,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
             onClick={() => setIsSubscribed(false)}
             className="text-white underline hover:text-blue-200 transition-colors">
             Subscribe another email
-  </
+          </button>
         </div>
       </div>
     )}
@@ -108,10 +108,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
                   Email Address
-  </
-          </div>
-
-          <form onSubmit={handleSubmit} className="mb-12">
+                </label>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <div className="relative flex-1">
                 <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
