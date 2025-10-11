@@ -3,16 +3,15 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  Heart, 
+  DollarSign, 
   Brain, 
-  Activity, 
   Shield, 
+  TrendingUp, 
   CheckCircle, 
   ArrowRight, 
   Star,
   Clock,
   Users,
-  TrendingUp,
   Zap,
   Target,
   FileText,
@@ -24,218 +23,222 @@ import {
   Globe,
   Phone,
   Mail,
-  MapPin
+  MapPin,
+  CreditCard,
+  PieChart,
+  Activity,
+  Lock
 } from 'lucide-react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 
-const AiHealthcareSolutionsPage: React.FC = () => {
+const AiFintechSolutionsPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const services = [
     {
-      id: 'ai-medical-imaging',
-      name: 'AI Medical Imaging Analysis',
-      description: 'Advanced AI-powered medical image analysis for radiology, pathology, and diagnostic imaging with 99.7% accuracy',
-      price: '$2,999/month',
-      marketPrice: '$5000-15000/month',
-      features: [
-        'Radiology image analysis (X-ray, MRI, CT, Ultrasound)',
-        'Pathology slide analysis and cancer detection',
-        '3D medical image reconstruction',
-        'Automated report generation',
-        'Integration with PACS systems',
-        'Real-time diagnostic assistance'
-      ],
-      benefits: [
-        'Reduce diagnostic time by 80%',
-        'Improve accuracy by 40%',
-        '24/7 diagnostic support',
-        'Reduce radiologist workload'
-      ],
-      category: 'Diagnostics',
-      popular: true,
-      icon: Eye
-    },
-    {
-      id: 'ai-drug-discovery',
-      name: 'AI Drug Discovery Platform',
-      description: 'Revolutionary AI platform for drug discovery, molecular design, and pharmaceutical research',
-      price: '$4,999/month',
-      marketPrice: '$10000-50000/month',
-      features: [
-        'Molecular structure prediction',
-        'Drug-target interaction analysis',
-        'Side effect prediction',
-        'Clinical trial optimization',
-        'Patent analysis and IP protection',
-        'Regulatory compliance assistance'
-      ],
-      benefits: [
-        'Reduce drug discovery time by 60%',
-        'Lower R&D costs by 50%',
-        'Increase success rates by 35%',
-        'Accelerate time to market'
-      ],
-      category: 'Research',
-      popular: true,
-      icon: Cpu
-    },
-    {
-      id: 'ai-patient-monitoring',
-      name: 'AI Patient Monitoring System',
-      description: 'Real-time patient monitoring with predictive analytics and early warning systems',
+      id: 'ai-fraud-detection',
+      name: 'AI Fraud Detection System',
+      description: 'Advanced AI-powered fraud detection and prevention system with real-time monitoring and 99.9% accuracy',
       price: '$1,999/month',
-      marketPrice: '$3000-12000/month',
+      marketPrice: '$4000-15000/month',
       features: [
-        'Continuous vital signs monitoring',
-        'Predictive health deterioration alerts',
-        'Fall detection and prevention',
-        'Medication adherence tracking',
-        'Remote patient monitoring',
-        'Integration with EHR systems'
+        'Real-time transaction monitoring',
+        'Behavioral pattern analysis',
+        'Machine learning fraud models',
+        'Cross-channel fraud detection',
+        'Automated risk scoring',
+        'Regulatory compliance reporting'
       ],
       benefits: [
-        'Reduce hospital readmissions by 45%',
-        'Improve patient outcomes by 60%',
-        'Enable proactive care',
-        'Reduce healthcare costs'
+        'Reduce fraud losses by 85%',
+        'Decrease false positives by 60%',
+        'Real-time threat detection',
+        'Compliance with PCI DSS'
       ],
-      category: 'Monitoring',
+      category: 'Security',
       popular: true,
-      icon: Activity
+      icon: Shield
     },
     {
-      id: 'ai-clinical-decision-support',
-      name: 'AI Clinical Decision Support',
-      description: 'Intelligent clinical decision support system providing evidence-based recommendations',
+      id: 'ai-trading-algorithms',
+      name: 'AI Trading Algorithms',
+      description: 'Sophisticated AI trading algorithms for algorithmic trading, portfolio optimization, and market analysis',
+      price: '$3,999/month',
+      marketPrice: '$8000-30000/month',
+      features: [
+        'Algorithmic trading strategies',
+        'Portfolio optimization',
+        'Market sentiment analysis',
+        'Risk management algorithms',
+        'Backtesting and simulation',
+        'Real-time market data processing'
+      ],
+      benefits: [
+        'Increase trading returns by 40%',
+        'Reduce risk exposure by 50%',
+        '24/7 automated trading',
+        'Data-driven investment decisions'
+      ],
+      category: 'Trading',
+      popular: true,
+      icon: TrendingUp
+    },
+    {
+      id: 'ai-credit-scoring',
+      name: 'AI Credit Scoring Platform',
+      description: 'Advanced AI credit scoring system using alternative data and machine learning for accurate risk assessment',
       price: '$2,499/month',
-      marketPrice: '$4000-18000/month',
+      marketPrice: '$5000-20000/month',
       features: [
-        'Evidence-based treatment recommendations',
-        'Drug interaction checking',
-        'Clinical guideline compliance',
-        'Risk stratification algorithms',
-        'Treatment outcome prediction',
-        'Integration with clinical workflows'
+        'Alternative data analysis',
+        'Machine learning credit models',
+        'Real-time credit decisions',
+        'Risk segmentation',
+        'Regulatory compliance',
+        'API integration capabilities'
       ],
       benefits: [
-        'Improve treatment accuracy by 55%',
-        'Reduce medical errors by 70%',
-        'Enhance clinical efficiency',
-        'Improve patient safety'
+        'Improve approval rates by 35%',
+        'Reduce default rates by 45%',
+        'Faster credit decisions',
+        'Better risk assessment'
       ],
-      category: 'Clinical Support',
-      popular: false,
-      icon: Brain
-    },
-    {
-      id: 'ai-mental-health',
-      name: 'AI Mental Health Assistant',
-      description: 'AI-powered mental health assessment, therapy support, and wellness monitoring',
-      price: '$1,499/month',
-      marketPrice: '$2500-8000/month',
-      features: [
-        'Mental health screening and assessment',
-        'Personalized therapy recommendations',
-        'Mood tracking and analysis',
-        'Crisis intervention support',
-        'Therapist matching algorithms',
-        'Privacy-compliant data handling'
-      ],
-      benefits: [
-        'Increase access to mental health care',
-        'Reduce stigma through anonymity',
-        'Provide 24/7 support',
-        'Improve treatment outcomes'
-      ],
-      category: 'Mental Health',
-      popular: true,
-      icon: Heart
-    },
-    {
-      id: 'ai-genomics-analysis',
-      name: 'AI Genomics Analysis Platform',
-      description: 'Advanced AI platform for genomic analysis, personalized medicine, and genetic counseling',
-      price: '$3,499/month',
-      marketPrice: '$6000-25000/month',
-      features: [
-        'Genome sequencing analysis',
-        'Genetic variant interpretation',
-        'Pharmacogenomics recommendations',
-        'Disease risk assessment',
-        'Personalized treatment plans',
-        'Genetic counseling support'
-      ],
-      benefits: [
-        'Enable personalized medicine',
-        'Improve treatment efficacy',
-        'Reduce adverse drug reactions',
-        'Advance precision healthcare'
-      ],
-      category: 'Genomics',
-      popular: false,
-      icon: Database
-    },
-    {
-      id: 'ai-surgical-assistance',
-      name: 'AI Surgical Assistance System',
-      description: 'AI-powered surgical planning, guidance, and robotic assistance for complex procedures',
-      price: '$5,999/month',
-      marketPrice: '$12000-40000/month',
-      features: [
-        '3D surgical planning and simulation',
-        'Real-time surgical guidance',
-        'Robotic surgery assistance',
-        'Complication prediction',
-        'Surgical skill assessment',
-        'Integration with surgical robots'
-      ],
-      benefits: [
-        'Improve surgical precision by 65%',
-        'Reduce complications by 50%',
-        'Enable complex procedures',
-        'Enhance surgeon training'
-      ],
-      category: 'Surgery',
+      category: 'Lending',
       popular: true,
       icon: Target
     },
     {
-      id: 'ai-healthcare-analytics',
-      name: 'AI Healthcare Analytics Suite',
-      description: 'Comprehensive healthcare analytics platform for population health and operational insights',
-      price: '$2,199/month',
-      marketPrice: '$4000-15000/month',
+      id: 'ai-wealth-management',
+      name: 'AI Wealth Management',
+      description: 'Intelligent wealth management platform with robo-advisory services and personalized investment strategies',
+      price: '$1,999/month',
+      marketPrice: '$4000-18000/month',
       features: [
-        'Population health analytics',
-        'Healthcare cost optimization',
-        'Quality metrics tracking',
-        'Predictive modeling',
-        'Resource utilization analysis',
-        'Regulatory reporting automation'
+        'Robo-advisory services',
+        'Personalized investment strategies',
+        'Risk profiling and assessment',
+        'Tax optimization strategies',
+        'Goal-based investing',
+        'Client portfolio management'
       ],
       benefits: [
-        'Improve population health outcomes',
-        'Reduce healthcare costs by 30%',
-        'Optimize resource allocation',
-        'Ensure regulatory compliance'
+        'Lower management fees by 70%',
+        'Personalized investment advice',
+        'Automated rebalancing',
+        'Better client outcomes'
+      ],
+      category: 'Wealth Management',
+      popular: false,
+      icon: PieChart
+    },
+    {
+      id: 'ai-insurance-underwriting',
+      name: 'AI Insurance Underwriting',
+      description: 'AI-powered insurance underwriting platform for automated risk assessment and policy pricing',
+      price: '$2,999/month',
+      marketPrice: '$6000-25000/month',
+      features: [
+        'Automated risk assessment',
+        'Dynamic pricing models',
+        'Claims prediction algorithms',
+        'Customer segmentation',
+        'Regulatory compliance',
+        'Integration with insurance systems'
+      ],
+      benefits: [
+        'Reduce underwriting time by 80%',
+        'Improve pricing accuracy by 50%',
+        'Lower operational costs',
+        'Better risk assessment'
+      ],
+      category: 'Insurance',
+      popular: true,
+      icon: FileText
+    },
+    {
+      id: 'ai-payment-processing',
+      name: 'AI Payment Processing',
+      description: 'Intelligent payment processing system with fraud detection, optimization, and analytics',
+      price: '$1,499/month',
+      marketPrice: '$3000-12000/month',
+      features: [
+        'Payment optimization',
+        'Fraud detection and prevention',
+        'Transaction analytics',
+        'Multi-currency support',
+        'Payment method optimization',
+        'Real-time processing'
+      ],
+      benefits: [
+        'Increase payment success rates by 25%',
+        'Reduce processing costs by 30%',
+        'Better fraud protection',
+        'Enhanced user experience'
+      ],
+      category: 'Payments',
+      popular: true,
+      icon: CreditCard
+    },
+    {
+      id: 'ai-regulatory-compliance',
+      name: 'AI Regulatory Compliance',
+      description: 'AI-powered regulatory compliance platform for automated monitoring and reporting',
+      price: '$2,199/month',
+      marketPrice: '$4500-18000/month',
+      features: [
+        'Automated compliance monitoring',
+        'Regulatory reporting automation',
+        'Risk assessment and management',
+        'Audit trail generation',
+        'Policy management',
+        'Integration with regulatory systems'
+      ],
+      benefits: [
+        'Reduce compliance costs by 60%',
+        'Improve accuracy by 90%',
+        'Automated reporting',
+        'Better risk management'
+      ],
+      category: 'Compliance',
+      popular: false,
+      icon: Lock
+    },
+    {
+      id: 'ai-customer-insights',
+      name: 'AI Customer Insights Platform',
+      description: 'Advanced customer analytics and insights platform for financial services',
+      price: '$1,799/month',
+      marketPrice: '$3500-15000/month',
+      features: [
+        'Customer behavior analysis',
+        'Churn prediction and prevention',
+        'Personalized product recommendations',
+        'Customer lifetime value prediction',
+        'Sentiment analysis',
+        'Cross-selling optimization'
+      ],
+      benefits: [
+        'Increase customer retention by 40%',
+        'Boost cross-selling by 55%',
+        'Better customer understanding',
+        'Improved customer experience'
       ],
       category: 'Analytics',
-      popular: false,
+      popular: true,
       icon: BarChart
     }
   ];
 
   const categories = [
     { id: 'all', name: 'All Services', count: services.length },
-    { id: 'Diagnostics', name: 'Diagnostics', count: services.filter(s => s.category === 'Diagnostics').length },
-    { id: 'Research', name: 'Research', count: services.filter(s => s.category === 'Research').length },
-    { id: 'Monitoring', name: 'Monitoring', count: services.filter(s => s.category === 'Monitoring').length },
-    { id: 'Clinical Support', name: 'Clinical Support', count: services.filter(s => s.category === 'Clinical Support').length },
-    { id: 'Mental Health', name: 'Mental Health', count: services.filter(s => s.category === 'Mental Health').length },
-    { id: 'Genomics', name: 'Genomics', count: services.filter(s => s.category === 'Genomics').length },
-    { id: 'Surgery', name: 'Surgery', count: services.filter(s => s.category === 'Surgery').length },
+    { id: 'Security', name: 'Security', count: services.filter(s => s.category === 'Security').length },
+    { id: 'Trading', name: 'Trading', count: services.filter(s => s.category === 'Trading').length },
+    { id: 'Lending', name: 'Lending', count: services.filter(s => s.category === 'Lending').length },
+    { id: 'Wealth Management', name: 'Wealth Management', count: services.filter(s => s.category === 'Wealth Management').length },
+    { id: 'Insurance', name: 'Insurance', count: services.filter(s => s.category === 'Insurance').length },
+    { id: 'Payments', name: 'Payments', count: services.filter(s => s.category === 'Payments').length },
+    { id: 'Compliance', name: 'Compliance', count: services.filter(s => s.category === 'Compliance').length },
     { id: 'Analytics', name: 'Analytics', count: services.filter(s => s.category === 'Analytics').length }
   ];
 
@@ -246,9 +249,9 @@ const AiHealthcareSolutionsPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>AI Healthcare Solutions - Zion Tech Group | Advanced Medical AI Technology</title>
-        <meta name="description" content="Revolutionary AI healthcare solutions including medical imaging, drug discovery, patient monitoring, and clinical decision support. Transform healthcare with cutting-edge AI technology." />
-        <meta name="keywords" content="AI healthcare, medical AI, healthcare technology, medical imaging AI, drug discovery AI, patient monitoring, clinical decision support, healthcare analytics" />
+        <title>AI Fintech Solutions - Zion Tech Group | Advanced Financial AI Technology</title>
+        <meta name="description" content="Revolutionary AI fintech solutions including fraud detection, algorithmic trading, credit scoring, and wealth management. Transform financial services with cutting-edge AI technology." />
+        <meta name="keywords" content="AI fintech, financial AI, fintech technology, fraud detection AI, algorithmic trading, credit scoring AI, wealth management AI, financial analytics" />
       </Helmet>
       
       <Navigation />
@@ -259,34 +262,34 @@ const AiHealthcareSolutionsPage: React.FC = () => {
           <div className="text-center mb-16 py-20">
             <div className="mb-6">
               <span className="inline-block px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-4">
-                🏥 Trusted by 200+ Healthcare Organizations
+                💰 Trusted by 150+ Financial Institutions
               </span>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent leading-tight">
-              AI Healthcare Solutions
+              AI Fintech Solutions
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Transform healthcare delivery with cutting-edge AI technology. From medical imaging to drug discovery, 
-              we provide comprehensive AI solutions that improve patient outcomes and reduce costs.
+              Revolutionize financial services with cutting-edge AI technology. From fraud detection to algorithmic trading, 
+              we provide comprehensive AI solutions that enhance security, efficiency, and customer experience.
             </p>
             
             {/* Key Benefits */}
             <div className="flex flex-wrap justify-center gap-6 mb-8 text-sm text-gray-300">
               <div className="flex items-center">
                 <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
-                <span>FDA Compliant Solutions</span>
+                <span>PCI DSS Compliant</span>
               </div>
               <div className="flex items-center">
                 <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
-                <span>HIPAA Certified</span>
+                <span>Bank-Grade Security</span>
               </div>
               <div className="flex items-center">
                 <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
-                <span>24/7 Support</span>
+                <span>Real-Time Processing</span>
               </div>
               <div className="flex items-center">
                 <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
-                <span>Clinical Validation</span>
+                <span>Regulatory Compliance</span>
               </div>
             </div>
             
@@ -403,10 +406,10 @@ const AiHealthcareSolutionsPage: React.FC = () => {
           <div className="text-center bg-gradient-to-r from-slate-800/50 to-purple-900/50 rounded-3xl p-12 border border-cyan-500/20 mb-16">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Transform Healthcare with AI?
+                Ready to Transform Financial Services with AI?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Join 200+ healthcare organizations that have already transformed their operations with our AI solutions. 
+                Join 150+ financial institutions that have already transformed their operations with our AI solutions. 
                 Get started with a free consultation today.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -426,7 +429,7 @@ const AiHealthcareSolutionsPage: React.FC = () => {
                 </a>
               </div>
               <div className="text-sm text-gray-400">
-                <p>✓ Free consultation • ✓ HIPAA compliant • ✓ Clinical validation • ✓ 24/7 support</p>
+                <p>✓ Free consultation • ✓ PCI DSS compliant • ✓ Bank-grade security • ✓ 24/7 support</p>
               </div>
             </div>
           </div>
@@ -438,4 +441,4 @@ const AiHealthcareSolutionsPage: React.FC = () => {
   );
 };
 
-export default AiHealthcareSolutionsPage;
+export default AiFintechSolutionsPage;

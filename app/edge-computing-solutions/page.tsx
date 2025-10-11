@@ -4,8 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
   Cpu, 
-  Brain, 
-  Navigation, 
+  Zap, 
   Shield, 
   CheckCircle, 
   ArrowRight, 
@@ -13,7 +12,6 @@ import {
   Clock,
   Users,
   TrendingUp,
-  Zap,
   Target,
   FileText,
   BarChart,
@@ -26,222 +24,222 @@ import {
   MapPin,
   Activity,
   Lock,
-  Car,
-  Plane,
-  Ship,
-  Truck
+  Smartphone,
+  Monitor,
+  Server,
+  Wifi
 } from 'lucide-react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 
-const AiAutonomousSystemsPage: React.FC = () => {
+const EdgeComputingSolutionsPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const services = [
     {
-      id: 'ai-autonomous-vehicles',
-      name: 'AI Autonomous Vehicles',
-      description: 'Advanced autonomous vehicle systems with Level 5 autonomy, real-time decision making, and safety-first design',
-      price: '$4,999/month',
-      marketPrice: '$10000-50000/month',
+      id: 'edge-infrastructure',
+      name: 'Edge Infrastructure Deployment',
+      description: 'Comprehensive edge computing infrastructure deployment with micro data centers and edge servers',
+      price: '$12,999/month',
+      marketPrice: '$25000-80000/month',
       features: [
-        'Level 5 autonomous driving',
-        'Real-time obstacle detection',
-        'Predictive maintenance',
-        'Fleet management optimization',
-        'Safety monitoring systems',
-        'Regulatory compliance'
+        'Micro data center deployment',
+        'Edge server configuration',
+        'Network connectivity setup',
+        'Power and cooling systems',
+        'Security implementation',
+        'Monitoring and management'
       ],
       benefits: [
-        'Reduce accidents by 90%',
-        'Lower transportation costs by 60%',
-        'Improve fuel efficiency by 40%',
-        'Enable 24/7 operations'
+        'Reduce latency by 90%',
+        'Improve performance by 70%',
+        'Lower bandwidth costs by 60%',
+        'Enable real-time processing'
       ],
-      category: 'Transportation',
+      category: 'Infrastructure',
       popular: true,
-      icon: Car
+      icon: Server
     },
     {
-      id: 'ai-robotic-systems',
-      name: 'AI Robotic Systems',
-      description: 'Intelligent robotic systems for manufacturing, healthcare, and service industries with advanced AI capabilities',
-      price: '$3,999/month',
-      marketPrice: '$8000-30000/month',
+      id: 'edge-ai-processing',
+      name: 'Edge AI Processing',
+      description: 'Advanced edge AI processing solutions for real-time machine learning and inference at the edge',
+      price: '$8,999/month',
+      marketPrice: '$15000-50000/month',
       features: [
-        'Advanced robotic control',
-        'Machine learning adaptation',
-        'Human-robot collaboration',
-        'Predictive maintenance',
-        'Quality control automation',
-        'Flexible manufacturing'
+        'Edge AI model deployment',
+        'Real-time inference processing',
+        'Model optimization for edge',
+        'Distributed AI training',
+        'Edge-to-cloud synchronization',
+        'AI workload management'
       ],
       benefits: [
-        'Increase productivity by 70%',
-        'Reduce operational costs by 50%',
-        'Improve quality consistency',
-        'Enable flexible production'
+        'Enable real-time AI decisions',
+        'Reduce cloud processing costs',
+        'Improve data privacy',
+        'Lower latency for AI applications'
       ],
-      category: 'Manufacturing',
+      category: 'AI Processing',
       popular: true,
       icon: Cpu
     },
     {
-      id: 'ai-drones',
-      name: 'AI Autonomous Drones',
-      description: 'Intelligent drone systems for delivery, surveillance, inspection, and emergency response with autonomous navigation',
-      price: '$2,499/month',
-      marketPrice: '$5000-20000/month',
+      id: 'edge-iot-platform',
+      name: 'Edge IoT Platform',
+      description: 'Comprehensive edge IoT platform for device management, data processing, and real-time analytics',
+      price: '$6,999/month',
+      marketPrice: '$12000-40000/month',
       features: [
-        'Autonomous flight planning',
-        'Obstacle avoidance systems',
-        'Payload optimization',
-        'Weather adaptation',
-        'Battery management',
-        'Regulatory compliance'
+        'IoT device connectivity',
+        'Edge data processing',
+        'Real-time analytics',
+        'Device management',
+        'Data filtering and aggregation',
+        'Cloud integration'
       ],
       benefits: [
-        'Reduce delivery time by 80%',
-        'Lower operational costs by 60%',
-        'Enable remote operations',
-        'Improve safety standards'
+        'Process data locally',
+        'Reduce data transmission costs',
+        'Enable real-time insights',
+        'Improve device reliability'
       ],
-      category: 'Aerial Systems',
+      category: 'IoT Platform',
       popular: true,
-      icon: Plane
-    },
-    {
-      id: 'ai-maritime-systems',
-      name: 'AI Maritime Systems',
-      description: 'Autonomous maritime systems for shipping, port operations, and ocean monitoring with advanced navigation',
-      price: '$3,499/month',
-      marketPrice: '$7000-25000/month',
-      features: [
-        'Autonomous navigation',
-        'Collision avoidance',
-        'Weather routing optimization',
-        'Cargo management',
-        'Port automation',
-        'Environmental monitoring'
-      ],
-      benefits: [
-        'Reduce shipping costs by 45%',
-        'Improve safety by 80%',
-        'Optimize fuel consumption',
-        'Enable remote operations'
-      ],
-      category: 'Maritime',
-      popular: false,
-      icon: Ship
-    },
-    {
-      id: 'ai-logistics-automation',
-      name: 'AI Logistics Automation',
-      description: 'Intelligent logistics systems for warehouse automation, supply chain optimization, and last-mile delivery',
-      price: '$2,999/month',
-      marketPrice: '$6000-25000/month',
-      features: [
-        'Warehouse automation',
-        'Route optimization',
-        'Inventory management',
-        'Predictive analytics',
-        'Real-time tracking',
-        'Demand forecasting'
-      ],
-      benefits: [
-        'Increase efficiency by 65%',
-        'Reduce delivery time by 50%',
-        'Lower logistics costs by 40%',
-        'Improve customer satisfaction'
-      ],
-      category: 'Logistics',
-      popular: true,
-      icon: Truck
-    },
-    {
-      id: 'ai-smart-cities',
-      name: 'AI Smart City Systems',
-      description: 'Comprehensive smart city infrastructure with autonomous traffic management, energy optimization, and public services',
-      price: '$5,999/month',
-      marketPrice: '$12000-50000/month',
-      features: [
-        'Autonomous traffic management',
-        'Smart energy grids',
-        'Environmental monitoring',
-        'Public safety systems',
-        'Infrastructure maintenance',
-        'Citizen services automation'
-      ],
-      benefits: [
-        'Reduce traffic congestion by 50%',
-        'Lower energy consumption by 35%',
-        'Improve public safety by 60%',
-        'Enhance citizen services'
-      ],
-      category: 'Smart Cities',
-      popular: true,
-      icon: Globe
-    },
-    {
-      id: 'ai-industrial-automation',
-      name: 'AI Industrial Automation',
-      description: 'Advanced industrial automation systems with predictive maintenance, quality control, and process optimization',
-      price: '$2,199/month',
-      marketPrice: '$4500-18000/month',
-      features: [
-        'Predictive maintenance',
-        'Quality control automation',
-        'Process optimization',
-        'Energy management',
-        'Safety monitoring',
-        'Production planning'
-      ],
-      benefits: [
-        'Reduce downtime by 70%',
-        'Improve quality by 45%',
-        'Lower maintenance costs by 50%',
-        'Increase production efficiency'
-      ],
-      category: 'Industrial',
-      popular: false,
       icon: Activity
     },
     {
-      id: 'ai-security-systems',
-      name: 'AI Autonomous Security',
-      description: 'Intelligent security systems with autonomous monitoring, threat detection, and response capabilities',
-      price: '$1,799/month',
-      marketPrice: '$3500-15000/month',
+      id: 'edge-content-delivery',
+      name: 'Edge Content Delivery',
+      description: 'Advanced edge content delivery network (CDN) for faster content distribution and improved user experience',
+      price: '$4,999/month',
+      marketPrice: '$8000-25000/month',
       features: [
-        'Autonomous threat detection',
-        'Intelligent surveillance',
-        'Automated response systems',
-        'Access control management',
-        'Incident analysis',
-        'Integration with security networks'
+        'Edge CDN deployment',
+        'Content caching optimization',
+        'Global content distribution',
+        'Video streaming optimization',
+        'Dynamic content acceleration',
+        'Performance monitoring'
       ],
       benefits: [
-        'Improve security by 80%',
-        'Reduce false alarms by 60%',
-        'Enable 24/7 monitoring',
-        'Lower security costs'
+        'Improve content delivery speed by 80%',
+        'Reduce bandwidth costs by 50%',
+        'Enhance user experience',
+        'Scale content delivery globally'
+      ],
+      category: 'Content Delivery',
+      popular: false,
+      icon: Globe
+    },
+    {
+      id: 'edge-security',
+      name: 'Edge Security Solutions',
+      description: 'Comprehensive edge security solutions including threat detection, data protection, and access control',
+      price: '$7,999/month',
+      marketPrice: '$15000-45000/month',
+      features: [
+        'Edge threat detection',
+        'Data encryption at edge',
+        'Access control and authentication',
+        'Security monitoring',
+        'Incident response automation',
+        'Compliance management'
+      ],
+      benefits: [
+        'Enhance security at edge',
+        'Protect sensitive data',
+        'Reduce security risks',
+        'Ensure compliance'
       ],
       category: 'Security',
       popular: true,
       icon: Shield
+    },
+    {
+      id: 'edge-analytics',
+      name: 'Edge Analytics Platform',
+      description: 'Real-time edge analytics platform for data processing, insights generation, and decision making',
+      price: '$5,999/month',
+      marketPrice: '$10000-35000/month',
+      features: [
+        'Real-time data processing',
+        'Edge analytics algorithms',
+        'Predictive analytics',
+        'Anomaly detection',
+        'Data visualization',
+        'Automated reporting'
+      ],
+      benefits: [
+        'Enable real-time insights',
+        'Reduce data processing latency',
+        'Improve decision making',
+        'Lower cloud processing costs'
+      ],
+      category: 'Analytics',
+      popular: true,
+      icon: BarChart
+    },
+    {
+      id: 'edge-5g-integration',
+      name: 'Edge 5G Integration',
+      description: 'Edge computing integration with 5G networks for ultra-low latency applications and enhanced connectivity',
+      price: '$9,999/month',
+      marketPrice: '$20000-60000/month',
+      features: [
+        '5G edge infrastructure',
+        'Ultra-low latency applications',
+        'Network slicing optimization',
+        'Mobile edge computing',
+        '5G core integration',
+        'Performance optimization'
+      ],
+      benefits: [
+        'Enable ultra-low latency',
+        'Leverage 5G capabilities',
+        'Improve application performance',
+        'Support new use cases'
+      ],
+      category: '5G Integration',
+      popular: true,
+      icon: Wifi
+    },
+    {
+      id: 'edge-hybrid-cloud',
+      name: 'Edge Hybrid Cloud',
+      description: 'Hybrid cloud-edge architecture for seamless data and application management across edge and cloud environments',
+      price: '$11,999/month',
+      marketPrice: '$25000-70000/month',
+      features: [
+        'Hybrid cloud-edge architecture',
+        'Data synchronization',
+        'Application portability',
+        'Workload orchestration',
+        'Resource optimization',
+        'Unified management'
+      ],
+      benefits: [
+        'Optimize resource utilization',
+        'Enable flexible deployment',
+        'Improve scalability',
+        'Reduce operational complexity'
+      ],
+      category: 'Hybrid Cloud',
+      popular: false,
+      icon: Database
     }
   ];
 
   const categories = [
     { id: 'all', name: 'All Services', count: services.length },
-    { id: 'Transportation', name: 'Transportation', count: services.filter(s => s.category === 'Transportation').length },
-    { id: 'Manufacturing', name: 'Manufacturing', count: services.filter(s => s.category === 'Manufacturing').length },
-    { id: 'Aerial Systems', name: 'Aerial Systems', count: services.filter(s => s.category === 'Aerial Systems').length },
-    { id: 'Maritime', name: 'Maritime', count: services.filter(s => s.category === 'Maritime').length },
-    { id: 'Logistics', name: 'Logistics', count: services.filter(s => s.category === 'Logistics').length },
-    { id: 'Smart Cities', name: 'Smart Cities', count: services.filter(s => s.category === 'Smart Cities').length },
-    { id: 'Industrial', name: 'Industrial', count: services.filter(s => s.category === 'Industrial').length },
-    { id: 'Security', name: 'Security', count: services.filter(s => s.category === 'Security').length }
+    { id: 'Infrastructure', name: 'Infrastructure', count: services.filter(s => s.category === 'Infrastructure').length },
+    { id: 'AI Processing', name: 'AI Processing', count: services.filter(s => s.category === 'AI Processing').length },
+    { id: 'IoT Platform', name: 'IoT Platform', count: services.filter(s => s.category === 'IoT Platform').length },
+    { id: 'Content Delivery', name: 'Content Delivery', count: services.filter(s => s.category === 'Content Delivery').length },
+    { id: 'Security', name: 'Security', count: services.filter(s => s.category === 'Security').length },
+    { id: 'Analytics', name: 'Analytics', count: services.filter(s => s.category === 'Analytics').length },
+    { id: '5G Integration', name: '5G Integration', count: services.filter(s => s.category === '5G Integration').length },
+    { id: 'Hybrid Cloud', name: 'Hybrid Cloud', count: services.filter(s => s.category === 'Hybrid Cloud').length }
   ];
 
   const filteredServices = services.filter(service => 
@@ -251,9 +249,9 @@ const AiAutonomousSystemsPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>AI Autonomous Systems - Zion Tech Group | Advanced Autonomous AI Technology</title>
-        <meta name="description" content="Revolutionary AI autonomous systems including autonomous vehicles, robotics, drones, and smart city solutions. Transform operations with cutting-edge autonomous AI technology." />
-        <meta name="keywords" content="AI autonomous systems, autonomous vehicles, robotics AI, autonomous drones, smart cities, industrial automation, autonomous logistics, AI robotics" />
+        <title>Edge Computing Solutions - Zion Tech Group | Advanced Edge Computing Technology</title>
+        <meta name="description" content="Comprehensive edge computing solutions including infrastructure deployment, AI processing, IoT platforms, and content delivery. Transform your business with cutting-edge edge computing technology." />
+        <meta name="keywords" content="edge computing, edge infrastructure, edge AI, edge IoT, edge analytics, edge security, 5G edge, hybrid cloud edge" />
       </Helmet>
       
       <Navigation />
@@ -264,34 +262,34 @@ const AiAutonomousSystemsPage: React.FC = () => {
           <div className="text-center mb-16 py-20">
             <div className="mb-6">
               <span className="inline-block px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full text-purple-400 text-sm font-medium mb-4">
-                🤖 Trusted by 200+ Organizations
+                ⚡ Trusted by 150+ Organizations
               </span>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-cyan-400 to-pink-400 bg-clip-text text-transparent leading-tight">
-              AI Autonomous Systems
+              Edge Computing Solutions
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Revolutionize operations with cutting-edge autonomous AI systems. From autonomous vehicles to smart cities, 
-              we provide comprehensive AI solutions that enable fully autonomous operations.
+              Bring computing power closer to your data and users with cutting-edge edge computing solutions. 
+              From AI processing to IoT platforms, we provide comprehensive edge solutions that enable real-time processing and ultra-low latency.
             </p>
             
             {/* Key Benefits */}
             <div className="flex flex-wrap justify-center gap-6 mb-8 text-sm text-gray-300">
               <div className="flex items-center">
                 <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
-                <span>Level 5 Autonomy</span>
+                <span>Ultra-Low Latency</span>
               </div>
               <div className="flex items-center">
                 <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
-                <span>Real-Time Decision Making</span>
+                <span>Real-Time Processing</span>
               </div>
               <div className="flex items-center">
                 <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
-                <span>Safety-First Design</span>
+                <span>Data Privacy</span>
               </div>
               <div className="flex items-center">
                 <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
-                <span>Regulatory Compliance</span>
+                <span>Cost Optimization</span>
               </div>
             </div>
             
@@ -408,10 +406,10 @@ const AiAutonomousSystemsPage: React.FC = () => {
           <div className="text-center bg-gradient-to-r from-slate-800/50 to-purple-900/50 rounded-3xl p-12 border border-purple-500/20 mb-16">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Deploy Autonomous AI Systems?
+                Ready to Deploy Edge Computing?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Join 200+ organizations that have already transformed their operations with our autonomous AI solutions. 
+                Join 150+ organizations that have already transformed their operations with our edge computing solutions. 
                 Get started with a free consultation today.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -431,7 +429,7 @@ const AiAutonomousSystemsPage: React.FC = () => {
                 </a>
               </div>
               <div className="text-sm text-gray-400">
-                <p>✓ Free consultation • ✓ Level 5 autonomy • ✓ Safety-first design • ✓ 24/7 support</p>
+                <p>✓ Free consultation • ✓ Ultra-low latency • ✓ Real-time processing • ✓ 24/7 support</p>
               </div>
             </div>
           </div>
@@ -443,4 +441,4 @@ const AiAutonomousSystemsPage: React.FC = () => {
   );
 };
 
-export default AiAutonomousSystemsPage;
+export default EdgeComputingSolutionsPage;

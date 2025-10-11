@@ -47,12 +47,18 @@ const AiAnalyticsPage = React.lazy(() => import('./app/ai-analytics/page'));
 const AiAutomationPage = React.lazy(() => import('./app/ai-automation/page'));
 const AiChatbotBuilderPage = React.lazy(() => import('./app/ai-chatbot-builder/page'));
 const AiCybersecurityPage = React.lazy(() => import('./app/ai-cybersecurity/page'));
+const AiHealthcareSolutionsPage = React.lazy(() => import('./app/ai-healthcare-solutions/page'));
+const AiFintechSolutionsPage = React.lazy(() => import('./app/ai-fintech-solutions/page'));
+const AiClimateSolutionsPage = React.lazy(() => import('./app/ai-climate-solutions/page'));
+const AiAutonomousSystemsPage = React.lazy(() => import('./app/ai-autonomous-systems/page'));
 
 // IT Service Pages
 const CloudInfrastructurePage = React.lazy(() => import('./app/cloud-infrastructure/page'));
 const CybersecuritySolutionsPage = React.lazy(() => import('./app/cybersecurity-solutions/page'));
 const WebDevelopmentPage = React.lazy(() => import('./app/web-development/page'));
 const MobileDevelopmentPage = React.lazy(() => import('./app/mobile-development/page'));
+const FiveGImplementationPage = React.lazy(() => import('./app/5g-implementation/page'));
+const EdgeComputingSolutionsPage = React.lazy(() => import('./app/edge-computing-solutions/page'));
 
 // Company Pages
 const TeamPage = React.lazy(() => import('./app/team/page'));
@@ -110,12 +116,18 @@ const App: React.FC = () => {
                             <Route path="/ai-automation" element={<AiAutomationPage />} />
                             <Route path="/ai-chatbot-builder" element={<AiChatbotBuilderPage />} />
                             <Route path="/ai-cybersecurity" element={<AiCybersecurityPage />} />
+                            <Route path="/ai-healthcare-solutions" element={<AiHealthcareSolutionsPage />} />
+                            <Route path="/ai-fintech-solutions" element={<AiFintechSolutionsPage />} />
+                            <Route path="/ai-climate-solutions" element={<AiClimateSolutionsPage />} />
+                            <Route path="/ai-autonomous-systems" element={<AiAutonomousSystemsPage />} />
                             
                             {/* IT Service Pages */}
                             <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
                             <Route path="/cybersecurity-solutions" element={<CybersecuritySolutionsPage />} />
                             <Route path="/web-development" element={<WebDevelopmentPage />} />
                             <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
+                            <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
+                            <Route path="/edge-computing-solutions" element={<EdgeComputingSolutionsPage />} />
                             
                             {/* Company Pages */}
                             <Route path="/team" element={<TeamPage />} />
