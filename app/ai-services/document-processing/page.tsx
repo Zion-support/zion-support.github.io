@@ -1,216 +1,386 @@
+<<<<<<< HEAD
+'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { FileText, Brain, Zap, Shield, CheckCircle, ArrowRight, Star, Award, Clock, Target } from 'lucide-react';
-
-const AIDocumentProcessingPage: React.FC = () => {
-  const features = [
-    {
-      icon: FileText,
-      title: 'Multi-Format Support',
-      description: 'Process PDFs, Word docs, images, and scanned documents with 99.9% accuracy.'
-    },
+import {Helmet}}from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';
+const AIServicesPagePage: React.FC = () => {,
+=======
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
+const AIServicesPagePage: React.FC = () => {
+>>>>>>> origin/main
+    const features = [
     {
       icon: Brain,
-      title: 'Intelligent Extraction',
-      description: 'AI-powered data extraction from complex documents and forms automatically.'
-    },
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+<<<<<<< HEAD
+<<<<<<< HEAD
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},
+    {icon: BarChart,
+=======
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'];
+=======
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'],
+>>>>>>> origin/main
+  },
     {
-      icon: Zap,
-      title: 'Real-time Processing',
-      description: 'Process thousands of documents in seconds with our high-performance AI engine.'
-    },
+    icon: BarChart,
+>>>>>>> origin/main
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+<<<<<<< HEAD
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']},
+    {icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']},
+    {icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+<<<<<<< HEAD
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']}]
+=======
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+  },
+  ];];
+>>>>>>> origin/main
+=======
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics'],
+  },
     {
-      icon: Shield,
-      title: 'Secure Processing',
-      description: 'Enterprise-grade security with encryption and compliance standards.'
-    },
+    icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics'],
+  },
     {
-      icon: Target,
-      title: 'Smart Classification',
-      description: 'Automatically categorize and route documents based on content and context.'
-    },
-    {
-      icon: Clock,
-      title: '24/7 Automation',
-      description: 'Continuous document processing without manual intervention or downtime.'
-    }
+    icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'],
+  }
+    ]
+>>>>>>> origin/main
+const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+<<<<<<< HEAD
+    'Gain competitive advantage with advanced technology';
+<<<<<<< HEAD
+  ]
+return(<>)
+      <Helmet />
+=======
   ];
-
-  const benefits = [
-    '95% reduction in manual document processing time',
-    '99.9% accuracy in data extraction',
-    'Support for 50+ document formats',
-    'Real-time processing and validation',
-    'Automated workflow integration',
-    'Compliance with industry standards'
-  ];
-
-  const documentTypes = [
-    'Invoices & Receipts',
-    'Contracts & Agreements',
-    'Forms & Applications',
-    'Medical Records',
-    'Legal Documents',
-    'Financial Statements',
-    'Insurance Claims',
-    'Tax Documents',
-    'HR Documents',
-    'Technical Manuals'
-  ];
-
-  return (
+return (
+    <>
+  </>
+      <Helmet>
+>>>>>>> origin/main
+        <title>AI Services - Zion Tech Group</title>
+=======
+    'Gain competitive advantage with advanced technology'
+  ]
+return (
     <>
       <Helmet>
-        <title>AI Document Processing | Zion Tech Group - Intelligent Document Analysis</title>
-        <meta name="description" content="Automate document processing with AI-powered solutions. Extract data, classify documents, and streamline workflows with 99.9% accuracy." />
-        <meta name="keywords" content="AI document processing, document automation, data extraction, OCR, document analysis, Zion Tech Group" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-services/document-processing" />
+        </Helmet><title>AI Services - Zion Tech Group</title>
+>>>>>>> origin/main
+        <meta name="description" content="AI-powered solution" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}</div>
-        <section className="pt-24 pb-16 px-4">
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <div className="inline-flex items-center space-x-2 bg-purple-500/20 text-purple-400 px-4 py-2 rounded-full text-sm font-medium mb-6"></div>
-                <FileText className="w-4 h-4" />
-                <span>AI Document Processing</span>
-              </div>
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text">
-                Intelligent Document </h1>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400"> Analysis</span>
-              </h1>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Transform your document workflows with AI-powered processing that extracts, classifies, and analyzes 
-                documents with unprecedented accuracy and speed.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-                <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2">
-                  <span>Start Processing</span>
-                  <ArrowRight className="w-5 h-5" />
-                </button>
-                <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all">
-                  View Demo
-                </button>
-              </div>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+<<<<<<< HEAD
+        {/* Hero Section */} <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
+        {/* Hero Section */}
+<<<<<<< HEAD
+        <section className="relative py-20 px-4 overflow-hidden">
+        </section>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              AI Services
+=======
+        <section className="py-20 px-4">
+          </section>< className="$2 />
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> origin/main
+              <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
         </section>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} /></div>
+          <div className="relative max-w-7xl mx-auto text-center"></div>
+            <h1>AI Services;</h1>
+>>>>>>> origin/main
+            </h1>
+<<<<<<< HEAD
+            <p>Advanced AI-powered ai services service for modern businesses.</p>
+            </p>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
+              <button>Get Started;</button>
+              </button>
+              <button>View Demo,</button>
+=======
+            <p></p>
+              Advanced AI-powered ai services service for modern businesses.
+            </p>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center" / /></div>
+              <button></button>
+                Get Started
+              </button>
+              <button></button>
+                View Demo,
+>>>>>>> origin/main
+              </button>
+            </div>
+          </div>
+        </section>
+<<<<<<< HEAD
 
         {/* Features Section */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Advanced AI Capabilities</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI document processing platform handles complex documents with ease
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (</div>
-                <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-lg p-6 border border-slate-700/50 hover:border-cyan-400/50 transition-all group"></div>
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform"></div>
-                    <feature.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
-                </div>
-              ))}
+        <section className="py-20 px-4">
+        </section>
+=======
+<<<<<<< HEAD
+        {/* Features Section */} <section className="py-20 px-4">
+>>>>>>> origin/main
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">AI Services
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Advanced AI-powered ai services service for modern businesses.
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Get Started
+              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">View Demo
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          </section>< className="$2 />
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> origin/main
+              <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
+              <h2>Key Features;</h2>
+              </h2>
+              <p>Advanced AI technology that drives results;</p>
+=======
+          <div className="max-w-7xl mx-auto" / /></div>
+            <div className="text-center mb-16" / /></div>
+              <h2></h2>
+                Key Features
+              </h2>
+              <p></p>
+                Advanced AI technology that drives results
+>>>>>>> origin/main
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,
+              {features.map((feature, index) => (
+                <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>,
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>,
+                    <feature />
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+<<<<<<< HEAD
+                  <p className="text-gray-300 mb-4">{feature.description</p>}</p>
+                  {feature.benefits && (;
+                    <ul>
+                      {feature.benefits.map((benefit, idx) => (} <li>
+                          <CheckCircle />
+=======
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {
+    feature.benefits && (
+                    <ul>
+                      {feature.benefits.map((benefit, idx) => (
+  }
+                        </ul><li>
+                          </li><CheckCircle>
+>>>>>>> origin/main
 
-        {/* Document Types Section */}
-        <section className="py-16 px-4 bg-slate-800/30">
+                          {benefit} </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+
+            </div>
+          </div>
+        </section>
+<<<<<<< HEAD
+        {/* Benefits Section */} <section className="py-20 px-4">
+=======
+>>>>>>> origin/main
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Key Features
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Advanced AI technology that drives results
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}
+                  <p className="text-gray-300 mb-4">{feature.description}
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                          {benefit}
+                      ))}
+<<<<<<< HEAD
+                    </ul>
+                  </div>
+=======
+                  )}
+              ))}
+        {/* Benefits Section */}
+        <section className="py-20 px-4">
+          </section>< className="$2 />
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
+<<<<<<< HEAD
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Supported Document Types</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Process virtually any document format with our comprehensive AI solution
+              <h2>Why Choose Our Solution?</h2>
+              </h2>
+              <p>Proven results that drive business growth and efficiency;</p>
               </p>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-              {documentTypes.map((type, index) => (</div>
-                <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-lg p-4 border border-slate-700/50 hover:border-purple-400/50 transition-all text-center"></div>
-                  <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-3"></div>
-                    <FileText className="w-4 h-4 text-white" />
-                  </div>
-                  <span className="text-white text-sm font-medium">{type}</span>
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>,
+              {benefits.map((benefit, index) => (
+                <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>,
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>,
+                    <CheckCircle />
+                  <p className="text-lg text-white font-medium">{benefit</p>}</p>
+>>>>>>> origin/main
                 </div>
               ))}
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 
         {/* Benefits Section */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our AI Solution</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the power of intelligent document processing
+        <section className="py-20 px-4">
+        </section>
+=======
+        {/* CTA Section */} <section className="py-20 px-4">
+>>>>>>> origin/main
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
+          <div className="max-w-7xl mx-auto" / /></div>
+            <div className="text-center mb-16" / /></div>
+              <h2></h2>
+                Why Choose Our Solution?
+              </h2>
+              <p></p>
+                Proven results that drive business growth and efficiency
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
-              <div className="space-y-6">
-                {benefits.map((benefit, index) => (</div>
-                  <div key={index} className="flex items-start space-x-3"></div>
-                    <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
-                    <span className="text-gray-300 text-lg">{benefit}</span>
-                  </div>
-                ))}
-              </div>
-              <div className="bg-gradient-to-br from-purple-600/20 to-cyan-600/20 rounded-lg p-8 border border-purple-500/30"></div>
-                <h3 className="text-2xl font-bold text-white mb-4">Performance Metrics</h3>
-                <div className="space-y-4"></div>
-                  <div className="flex justify-between items-center"></div>
-                    <span className="text-gray-300">Processing Speed</span>
-                    <span className="text-cyan-400 font-bold">1000+ docs/min</span>
-                  </div>
-                  <div className="flex justify-between items-center"></div>
-                    <span className="text-gray-300">Accuracy Rate</span>
-                    <span className="text-green-400 font-bold">99.9%</span>
-                  </div>
-                  <div className="flex justify-between items-center"></div>
-                    <span className="text-gray-300">Uptime</span>
-                    <span className="text-blue-400 font-bold">99.99%</span>
-                  </div>
-                  <div className="flex justify-between items-center"></div>
-                    <span className="text-gray-300">Cost Savings</span>
-                    <span className="text-purple-400 font-bold">85%</span>
-                  </div>
-                </div>
-              </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" / /></div>
+              {benefits.map((benefit, index) => ()
+              ))}
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          </section>< className="$2 />
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> origin/main
+              <p className="text-xl text-gray-300">Section description</p>
             </div>
-          </div>
+          ))
         </section>
+<<<<<<< HEAD
 
         {/* CTA Section */}
-        <section className="py-16 px-4">
+        <section className="py-20 px-4">
+        </section>
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+=======
+<<<<<<< HEAD
           <div className="max-w-4xl mx-auto text-center"></div>
-            <div className="bg-gradient-to-r from-purple-600/20 to-cyan-600/20 rounded-2xl p-12 border border-purple-500/30"></div>
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Ready to Automate Your Document Processing?
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12"></div>
+              <h2>Ready to Get Started?</h2>
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Join thousands of businesses already using our AI document processing solutions 
-                to streamline their workflows and reduce costs.
+              <p>Contact our experts to discuss your requirements and get started today.</p>
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-                <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2">
-                  <span>Start Free Trial</span>
-                  <ArrowRight className="w-5 h-5" />
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
+                <button>Contact Us;</button>
                 </button>
-                <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all">
-                  Schedule Demo
+                <button>Learn More;</button>
+=======
+          <div className="max-w-4xl mx-auto text-center" / /></div>
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12" / /></div>
+              <h2></h2>
+>>>>>>> origin/main
+                Ready to Get Started?
+              </h2>
+              <p></p>
+                Contact our experts to discuss your requirements and get started today.
+              </p>
+              <div className="flex flex-col sm: flex-row gap-4 justify-center" / /></div>
+                <button></button>
+                  Contact Us
+                </button>
+                <button></button>
+                  Learn More
+>>>>>>> origin/main
                 </button>
               </div>
             </div>
-          </div>
+          ))
         </section>
       </div>
-    </>
+<<<<<<< HEAD
+      <Footer />
+
   );
 };
 
-export default AIDocumentProcessingPage;
+export default AIServicesPagePage;
+=======
+      <Footer></Footer>
+    </>
+  ),
+}
+export default AIServicesPagePage</$1></h3>
+>>>>>>> origin/main

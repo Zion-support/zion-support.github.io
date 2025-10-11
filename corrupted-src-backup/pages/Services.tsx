@@ -1,3 +1,2 @@
-import React from 'react';
-
-export default Services;
+import React from 'react'
+export default Services

@@ -26,31 +26,31 @@
     "baseUrl": ".",
     "paths": {
       "@/*": [
-        "src/*"
+        "./app/*"
       ],
       "@/components/*": [
-        "src/components/*"
+        "./app/components/*"
       ],
       "@/pages/*": [
-        "src/pages/*"
+        "./app/*"
       ],
       "@/utils/*": [
-        "src/utils/*"
+        "./utils/*"
       ],
       "@/types/*": [
-        "src/types/*"
+        "./types/*"
       ],
       "@/hooks/*": [
-        "src/hooks/*"
+        "./hooks/*"
       ],
       "@/config/*": [
-        "src/config/*"
+        "./config/*"
       ],
       "@/data/*": [
-        "src/data/*"
+        "./data/*"
       ],
       "@/content/*": [
-        "src/content/*"
+        "./content/*"
       ]
     },
     "incremental": true,
@@ -74,14 +74,21 @@
     "tsBuildInfoFile": ".next/cache/tsconfig.tsbuildinfo"
   },
   "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
+    "app/**/*.ts",
+    "app/**/*.tsx",
     "App.tsx",
     "api/**/*.js",
     "api/**/*.ts",
-    "app/**/*.ts",
-    "app/**/*.tsx",
-    ".next/types/**/*.ts"
+    "utils/**/*.ts",
+    "utils/**/*.tsx",
+    "types/**/*.ts",
+    "hooks/**/*.ts",
+    "hooks/**/*.tsx",
+    "config/**/*.ts",
+    "data/**/*.ts",
+    "content/**/*.ts",
+    "content/**/*.tsx",
+    "vite.config.ts"
   ],
   "exclude": [
     "node_modules",

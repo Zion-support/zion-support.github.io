@@ -1,9 +1,7 @@
-import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import React, { useEffect } from 'react'
+import { Helmet } from 'react-helmet-async'
 interface SEOEnhancerProps {/* TODO: Fix JSX expression */}
 }
-
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({,
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services. Discover cutting-edge technology solutions for modern businesses.',
@@ -23,29 +21,27 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({,
   structuredData,
   children}) => {
   useEffect(() => {
-    // Add structured data to the page;
+    // Add structured data to the page
     if (structuredData) {
-      const _script = document.createElement('script');
-      script.type = 'application/ld+json';
-      script.text = JSON.stringify(structuredData);
-      document.head.appendChild(script);
-
+      const _script = document.createElement('script')
+      script.type = 'application/ld+json'
+      script.text = JSON.stringify(structuredData)
+      document.head.appendChild(script)
       return () => {
-        document.head.removeChild(script);
+        document.head.removeChild(script)
 const,
   SEOEnhancer: React.FC<SEOEnhancerProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-      };
+      }
     }
-  }, [structuredData]);
-
-  // Default structured data for organization;
+  }, [structuredData])
+  // Default structured data for organization
   const defaultStructuredData = {
     '@context': 'https: //schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',
-    description: description;
-    url: canonicalUrl || window.location.origin;
+    description: description
+    url: canonicalUrl || window.location.origin,
     logo: `${window.location.origin}/logo.png`,
     sameAs: ['https://linkedin.com/company/zion-tech-group', 'https: //twitter.com/ziontechgroup']
     contactPoint: {,
@@ -61,11 +57,9 @@ const,
   s://twitter.com/ziontechgroup'],
     contactPoin,
   t: {/* TODO: Fix JSX expression */}
-    }};
-
-  //   const finalStructuredData = structuredData || defaultStructuredData;
-
-  return(<>)
+    }}
+  //   const finalStructuredData = structuredData || defaultStructuredData
+  return(<React.Fragment>)
       <Helmet>)
         {/* Basic Meta Tags */})
         <title>{title}</title>)
@@ -75,8 +69,7 @@ const,
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         {/* Canonical URL */}
-        {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}</link>
-
+        {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
         {/* Open Graph Meta Tags */}
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
@@ -117,18 +110,17 @@ const,
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
         {/* Structured Data */}
-  return (<>
-      <Helmet></Helmet>
+  return (<React.Fragment>
+      <Helmet>
         {/* Basic Meta Tags */}
-        <title>{title}</title>
+        <title>{title}
         <meta name="description" content={description} /></meta>")
         <meta name="keywords" content={keywords.join(', ')} /></meta>"
         <meta name="author" content="Zion Tech Group" /></meta>"
         <meta name="robots" content="index, follow" /></meta>"
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" /></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         {/* Canonical URL */}"
         {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-
         {/* Open Graph Meta Tags */}"
         <meta property="o,"
   g:title" content={title} /></meta>"
@@ -143,7 +135,7 @@ const,
         <meta property="o,"
   g:site_name" content="Zion Tech Group" /></meta>"
         <meta property="o,"
-  g:locale" content="en_US" /></meta>
+  g:locale" content="en_US" />
         {/* Twitter Card Meta Tags */}"
         <meta name="twitte,"
   r:card" content={twitterCard} /></meta>"
@@ -156,37 +148,37 @@ const,
         <meta name="twitte,"
   r:site" content="@ziontechgroup" /></meta>"
         <meta name="twitte,"
-  r:creator" content="@ziontechgroup" /></meta>
+  r:creator" content="@ziontechgroup" />
         {/* Additional SEO Meta Tags */}"
         <meta name="theme-color" content="#1e40af" /></meta>"
         <meta name="msapplication-TileColor" content="#1e40af" /></meta>"
         <meta name="apple-mobile-web-app-capable" content="yes" /></meta>"
         <meta name="apple-mobile-web-app-status-bar-style" content="default" /></meta>"
-        <meta name="apple-mobile-web-app-title" content="Zion Tech Group" /></meta>
+        <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
         {/* Language and Region */}"
         <meta httpEquiv="content-language" content="en-US" /></meta>"
         <meta name="geo.region" content="US" /></meta>"
-        <meta name="geo.placename" content="United States" /></meta>
+        <meta name="geo.placename" content="United States" />
         {/* Performance Hints */}"
         <link rel="dns-prefetch" href="//fonts.googleapis.com" /></link>"
         <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" /></link>"
-        <link rel="preconnect" href="http,"
+        <nk rel="preconnect" href="http,"$2 />
   s://fonts.googleapis.com" /></link>"
-        <link rel="preconnect" href="http,"
-  s://fonts.gstatic.com" crossOrigin="anonymous" /></link>
+        <nk rel="preconnect" href="http,"$2 />
+  s://fonts.gstatic.com" crossOrigin="anonymous" />
         {/* Favicon and Icons */}"
         <link rel="icon" type="image/x-icon" href="/favicon.ico" /></link>"
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" /></link>"
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" /></link>"
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" /></link>"
-        <link rel="manifest" href="/site.webmanifest" /></link>
+        <link rel="manifest" href="/site.webmanifest" />
         {/* Structured Data */}"
-        <script type="application/ld+json">{JSON.stringify(finalStructuredData)}</script>
-      </Helmet>
+        <script type="application/ld+json">{JSON.stringify(finalStructuredData)}
       {children}
-    
-  );
-};
-
-export default SEOEnhancer;
+  )
+}
+export default SEOEnhancer
 "`
+  </SEOEnhancerProps>
+  </SEOEnhancerProps>
+</li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li>

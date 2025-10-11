@@ -1,31 +1,63 @@
-import { useEffect } from 'react';
+<<<<<<< HEAD
+'use client';
+import {useEffect}}from 'react';
 
+<<<<<<< HEAD
+export const usePerformanceMonitor = () => {useEffect(() => {
+=======
+export const usePerformanceMonitor = () => {
+  useEffect(() => {;
+>>>>>>> origin/main
+    if (typeof window === 'undefined') return;
+
+    // Monitor Core Web Vitals;
+=======
+'use client'
+import { useEffect } from 'react'
 export const usePerformanceMonitor = () => {
   useEffect(() => {
-    // Performance monitoring logic
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      // Monitor Core Web Vitals
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'largest-contentful-paint') {
-            console.log('LCP:', entry.startTime);
-          } else if (entry.entryType === 'first-input') {
-            const fid = (entry as any).processingStart - entry.startTime;
-            console.log('FID:', fid);
-          } else if (entry.entryType === 'layout-shift') {
-            if (!(entry as any).hadRecentInput) {
-              console.log('CLS:', (entry as any).value);
-            }
-          }
+    if (typeof window === 'undefined') return
+    // Monitor Core Web Vitals
+>>>>>>> origin/main
+    const monitorWebVitals = () => {
+<<<<<<< HEAD
+      // This is a simplified version - in production you'd use the web-vitals library;
+      if ('performance' in window) {
+=======
+      // This is a simplified version - in production you'd use the web-vitals library
+<<<<<<< HEAD
+      if ('performance' in window) {;
+>>>>>>> origin/main
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        if (navigation) {
+          const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
+          console.log('Page load time:', loadTime);}}
+=======
+      if ('performance' in window) {
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+        if (navigation) {
+          const loadTime = navigation.loadEventEnd - navigation.loadEventStart
+          console.log('Page load time:', loadTime)
         }
-      });
-
-      try {
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
-      } catch (e) {
-        // Fallback for browsers that don't support all entry types
-        console.log('Performance monitoring not fully supported');
       }
+>>>>>>> origin/main
     }
-  }, []);
-};
+
+<<<<<<< HEAD
+    // Run monitoring after page load;
+    if (document.readyState === 'complete') {monitorWebVitals();}else {window.addEventListener('load', monitorWebVitals);}}return () => {window.removeEventListener('load', monitorWebVitals);}}, []);
+}
+=======
+    // Run monitoring after page load
+    if (document.readyState === 'complete') {
+      monitorWebVitals()
+    } else {
+      window.addEventListener('load', monitorWebVitals)
+    }
+
+    return () => {
+      window.removeEventListener('load', monitorWebVitals)
+    }
+  }, [])
+}
+>>>>>>> origin/main

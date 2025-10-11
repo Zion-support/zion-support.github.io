@@ -14,11 +14,29 @@ module.exports = {
     '^@/content/(.*)$': '<rootDir>/content/$1'
   },
   transform: {
+<<<<<<< HEAD
     '^.+\\.(ts|tsx)$': ['ts-jest', {
       tsconfig: 'tsconfig.json',
       useESM: true
     }],
     '^.+\\.(js|jsx)$': 'babel-jest'
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
+    '^.+\\.(ts|tsx|js|jsx)$': ['babel-jest', {
+      presets: [
+        ['@babel/preset-env', { targets: { node: 'current' } }],
+        ['@babel/preset-react', { runtime: 'automatic' }],
+        '@babel/preset-typescript'
+      ]
+    }]
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
+>>>>>>> origin/main
   },
   testMatch: [
     '<rootDir>/__tests__/**/*.(ts|tsx|js|jsx)',
@@ -41,6 +59,7 @@ module.exports = {
   ],
   transformIgnorePatterns: [
     'node_modules/(?!(.*\\.mjs$|lucide-react|framer-motion))'
+<<<<<<< HEAD
   ],
   extensionsToTreatAsEsm: ['.ts', '.tsx'],
   globals: {
@@ -49,3 +68,7 @@ module.exports = {
     }
   }
 };
+=======
+  ]
+}
+>>>>>>> origin/main

@@ -1,30 +1,29 @@
-
-
-'use client';
+import React from 'react'
+'use client'
 /**
- * SEO Component;
- * Provides comprehensive SEO meta tags and structured data;
- */
+ * SEO Component
+ * Provides comprehensive SEO meta tags and structured data
+ *
 export interface SEOProps {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content,}
 }
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  image?: string;
-  url?: string;
-  type?: 'website' | 'article' | 'product' | 'profile';
-  author?: string;
-  publishDate?: string;
-  modifiedDate?: string;
-  canonical?: string;
-  noIndex?: boolean;
-  structuredData?: Record;
-          <string, unknown>;
-  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
-  locale?: string;
+  title?: string
+  description?: string
+  keywords?: string[]
+  image?: string
+  url?: string
+  type?: 'website' | 'article' | 'product' | 'profile'
+  author?: string
+  publishDate?: string
+  modifiedDate?: string
+  canonical?: string
+  noIndex?: boolean
+  structuredData?: Record
+          <string>
+  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player'
+  locale?: string
   alternateLocales?: {/* TODO: Fix JSX expression */}
-  l: string }[];
+  l: string }[]
 }
   titl,
   e: 'Zion Tech Group - AI & IT Solutions',
@@ -52,11 +51,11 @@ export interface SEOProps {/* TODO: Fix JSX expression */}
   local,
   e: 'en_US',
   twitterCar,
-  d: 'summary_large_image' as const};
+  d: 'summary_large_image' as const}
 export const,
-  SEO: React.FC;
+  SEO: React.FC,
           <SEOProps> = ({/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content,}
 }
 //   title,
 //   description,
@@ -74,11 +73,11 @@ export const,
   locale = defaultSEO.locale,
   alternateLocales = [])
 }) => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content,}
 }
   const seo = {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: title ? `${title} | Zion Tech Group` : defaultSEO.title,
     descriptio,
@@ -91,20 +90,20 @@ export const,
   l: url || defaultSEO.url,
 //     type,
 //     twitterCard,
-//     locale};
-  // Generate structured data;
+//     locale}
+  // Generate structured data
 const generateStructuredData = () => {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content,}
 }
     if (structuredData) {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content,}
 }
-      return structuredData;
+      return structuredData
     }
     const,
-  baseStructuredData: Record;
+  baseStructuredData: Record,
           <string, unknown> = {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content,}
 }
       '@context': 'http,
   s://schema.org',
@@ -116,33 +115,30 @@ const generateStructuredData = () => {/* TODO: Fix JSX expression */}
       ur,
   l: seo.url,
       imag,
-  e: seo.image};
+  e: seo.image}
     if (author) {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content,}
 }
       baseStructuredData.author = {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content,}
 }
         '@type': 'Person',
         nam,
-  e: author};
+  e: author}
     }
     if (publishDate) {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content,}
 }
-      baseStructuredData.datePublished = publishDate;
+      baseStructuredData.datePublished = publishDate
     }
     if (modifiedDate) {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content,}
 }
-      baseStructuredData.dateModified = modifiedDate;
+      baseStructuredData.dateModified = modifiedDate
     }
-    return baseStructuredData;
-  };
-  return null;
-};
-
+    return baseStructuredData
+  }
+  return null
+}
 export default SEO;`
-
-
-
+  </SEOProps>
