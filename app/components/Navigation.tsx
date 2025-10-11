@@ -28,14 +28,41 @@ export default function Navigation() {
               <Link to="/about" className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 About
               </Link>
-              <Link to="/services" className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                Services
-              </Link>
+              <div className="relative group">
+                <button className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center">
+                  Services
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <div className="absolute left-0 mt-2 w-64 bg-white/10 backdrop-blur-lg rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                  <div className="py-2">
+                    <Link to="/ai-services" className="block px-4 py-2 text-sm text-white hover:bg-white/10 transition-colors">
+                      AI Services
+                    </Link>
+                    <Link to="/it-services" className="block px-4 py-2 text-sm text-white hover:bg-white/10 transition-colors">
+                      IT Services
+                    </Link>
+                    <Link to="/micro-saas-services" className="block px-4 py-2 text-sm text-white hover:bg-white/10 transition-colors">
+                      Micro SAAS
+                    </Link>
+                    <Link to="/cloud-services" className="block px-4 py-2 text-sm text-white hover:bg-white/10 transition-colors">
+                      Cloud Solutions
+                    </Link>
+                    <Link to="/blockchain" className="block px-4 py-2 text-sm text-white hover:bg-white/10 transition-colors">
+                      Blockchain & Web3
+                    </Link>
+                    <Link to="/5g-implementation" className="block px-4 py-2 text-sm text-white hover:bg-white/10 transition-colors">
+                      5G Implementation
+                    </Link>
+                  </div>
+                </div>
+              </div>
               <Link to="/contact" className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 Contact
               </Link>
-              <Link to="/ai-services" className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                AI Services
+              <Link to="/careers" className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                Careers
               </Link>
             </div>
           </div>
@@ -60,14 +87,30 @@ export default function Navigation() {
             <Link to="/about" className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium">
               About
             </Link>
-            <Link to="/services" className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium">
-              Services
+            <div className="px-3 py-2 text-white font-medium text-base">Services</div>
+            <Link to="/ai-services" className="text-white hover:text-purple-300 block px-6 py-2 rounded-md text-sm font-medium">
+              AI Services
+            </Link>
+            <Link to="/it-services" className="text-white hover:text-purple-300 block px-6 py-2 rounded-md text-sm font-medium">
+              IT Services
+            </Link>
+            <Link to="/micro-saas-services" className="text-white hover:text-purple-300 block px-6 py-2 rounded-md text-sm font-medium">
+              Micro SAAS
+            </Link>
+            <Link to="/cloud-services" className="text-white hover:text-purple-300 block px-6 py-2 rounded-md text-sm font-medium">
+              Cloud Solutions
+            </Link>
+            <Link to="/blockchain" className="text-white hover:text-purple-300 block px-6 py-2 rounded-md text-sm font-medium">
+              Blockchain & Web3
+            </Link>
+            <Link to="/5g-implementation" className="text-white hover:text-purple-300 block px-6 py-2 rounded-md text-sm font-medium">
+              5G Implementation
             </Link>
             <Link to="/contact" className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium">
               Contact
             </Link>
-            <Link to="/ai-services" className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium">
-              AI Services
+            <Link to="/careers" className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium">
+              Careers
             </Link>
           </div>
         </div>
