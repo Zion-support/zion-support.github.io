@@ -1,7 +1,6 @@
 'use client'
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react'
 import { 
-<<<<<<< HEAD
   Phone, 
   Mail, 
   MapPin, 
@@ -123,7 +122,6 @@ const DynamicContentShowcase = lazy(() => import('./components/DynamicContentSho
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
 
-=======
   Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, 
   BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, 
   Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, 
@@ -186,11 +184,9 @@ const ContentNewsletterSignup = lazy(() => import('./components/ContentNewslette
 const preloadComponents = () => {
   if (typeof window !== 'undefined') {
     setTimeout(() => {
-<<<<<<< HEAD
       import('./components/ContentPromotionBanner');
       import('./components/ContentCarousel');
     }, 100);
-=======
       import('./components/ContentPromotionBanner')
       import('./components/ContentCarousel')
   }, 100)
@@ -209,7 +205,6 @@ const ServiceCardSkeleton: React.FC = memo(() => (
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 
 const HomePage: React.FC = () => {
-<<<<<<< HEAD
   const [isLoaded, setIsLoaded] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -224,7 +219,6 @@ const HomePage: React.FC = () => {
     return () => clearTimeout(timer);
   }, []);
 
-=======
     const [isLoaded, setIsLoaded] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {
@@ -244,7 +238,6 @@ const HomePage: React.FC = () => {
         event_label: 'main_phone_number'
       })
     }
-<<<<<<< HEAD
   }, []);
 
   // Enhanced Micro SAAS Services with real functionality and pricing
@@ -314,7 +307,6 @@ const HomePage: React.FC = () => {
       
       {/* Accessibility Enhancer */}
       <AccessibilityEnhancer />
-=======
   }, [])
   // Enhanced error handling
   const handleError = useCallback((error: Error) => {
@@ -882,10 +874,8 @@ const HomePage: React.FC = () => {
         aria-label="Zion Tech Group - AI and IT Solutions"
       >
         {/* Animated Background */}
-<<<<<<< HEAD
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-purple-500/20 to-pink-500/20 animate-pulse"></div>
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
-=======
         <$2 />
           className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-purple-500/20 to-pink-500/20 animate-pulse"
           aria-hidden="true"
@@ -919,22 +909,18 @@ const HomePage: React.FC = () => {
             linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
           `,
           backgroundSize: '50px 50px'
-<<<<<<< HEAD
         }}></div>
 
-=======
         }}>
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">
               ZION TECH GROUP
-<<<<<<< HEAD
             </h1>
             <p className="text-2xl md:text-3xl text-white mb-8 font-light">
               AI-Powered Enterprise Solutions & Digital Transformation
             </p>
-=======
   
             <p className="text-2xl md:text-3xl text-white mb-8 font-light">
               AI-Powered Enterprise Solutions & Digital Transformation
@@ -963,13 +949,11 @@ const HomePage: React.FC = () => {
                 <Phone className="w-6 h-6 mr-2" />
                 <a href="tel:+13024640950" onClick={handlePhoneClick} className="hover:text-cyan-300 transition-colors">
                   +1 302 464 0950
-<<<<<<< HEAD
                 </a>
               </div>
               <div className="flex items-center text-purple-400 text-lg">
                 <Mail className="w-6 h-6 mr-2" />
                 <a href="mailto:kleber@ziontechgroup.com" className="hover:text-purple-300 transition-colors">
-=======
               <div className="flex items-center text-purple-400 text-lg">
                 <Mail className="w-6 h-6 mr-2" aria-hidden="true" />
                 <$2 />
@@ -1008,9 +992,7 @@ const HomePage: React.FC = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 
-=======
                   kleber@ziontechgroup.com
               <div className="flex items-center text-pink-400 text-lg">
                 <MapPin className="w-6 h-6 mr-2" />
@@ -1033,9 +1015,7 @@ const HomePage: React.FC = () => {
       <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800" role="region" aria-labelledby="micro-saas-heading">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-<<<<<<< HEAD
             <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-=======
             <h2 id="micro-saas-heading" className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
               Micro SAAS Services
@@ -1046,8 +1026,6 @@ const HomePage: React.FC = () => {
             </p>
           </div>
           
-<<<<<<< HEAD
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" role="list">
             {microSAASServices.map((service, index) => (
               <article key={index} className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20" role="listitem">
@@ -1063,10 +1041,8 @@ const HomePage: React.FC = () => {
                 {service.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                     <div className="bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold shadow-lg">
-<<<<<<< HEAD
                       🔥 POPULAR
                     </div>
-=======
                       🔥 POPULAR,
   
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
@@ -1080,11 +1056,9 @@ const HomePage: React.FC = () => {
                     {service.title}
                   <p className="text-gray-300 text-sm leading-relaxed mb-4">
                     {service.description}
-<<<<<<< HEAD
                   </p>
                 </div>
                 
-=======
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                 <div className="text-center mb-6">
                   <div className="flex items-center justify-center gap-2 mb-2">
@@ -1094,12 +1068,10 @@ const HomePage: React.FC = () => {
                     <span className="text-gray-400 line-through">{service.marketPrice}
                     <span className="bg-green-500 text-white px-2 py-1 rounded text-xs font-bold">
                       Save {service.savings}
-<<<<<<< HEAD
                     </span>
                   </div>
                 </div>
                 
-=======
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-cyan-400 mb-3">Key Features:
@@ -1109,11 +1081,9 @@ const HomePage: React.FC = () => {
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
                     ))}
-<<<<<<< HEAD
                   </ul>
                 </div>
                 
-=======
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-purple-400 mb-3">Benefits:
@@ -1122,18 +1092,14 @@ const HomePage: React.FC = () => {
                       <li key={benefitIndex} className="text-sm text-gray-300">
                         ✓ {benefit}
                     ))}
-<<<<<<< HEAD
                   </ul>
                 </div>
                 
-=======
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                 <div className="text-center">
                   <$2 />
                     href={service.link}
                     className="inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-bold py-3 px-6 rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-<<<<<<< HEAD
-=======
                     aria-label={`Get started with ${service.title}`}
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                   >
@@ -1143,20 +1109,16 @@ const HomePage: React.FC = () => {
                 </div>
               </article>
             ))}
-<<<<<<< HEAD
           </div>
         </div>
       </section>
 
-=======
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
       {/* AI Services Section */}
       <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900" role="region" aria-labelledby="ai-services-heading">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-<<<<<<< HEAD
             <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-=======
             <h2 id="ai-services-heading" className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
               AI Services & Solutions
@@ -1167,11 +1129,9 @@ const HomePage: React.FC = () => {
             </p>
           </div>
           
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {aiServicesData.map((service, index) => (
               <div key={index} className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20">
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" role="list">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {aiServices.map((service, index) => (
@@ -1184,11 +1144,9 @@ const HomePage: React.FC = () => {
                     {service.title}
                   <p className="text-gray-300 leading-relaxed mb-6">
                     {service.description}
-<<<<<<< HEAD
                   </p>
                 </div>
                 
-=======
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                 <div className="text-center mb-6">
                   <div className="flex items-center justify-center gap-2 mb-2">
@@ -1198,12 +1156,10 @@ const HomePage: React.FC = () => {
                     <span className="text-gray-400 line-through">{service.marketPrice}
                     <span className="bg-green-500 text-white px-2 py-1 rounded text-xs font-bold">
                       Save {service.savings}
-<<<<<<< HEAD
                     </span>
                   </div>
                 </div>
                 
-=======
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-purple-400 mb-3">Features:
@@ -1213,11 +1169,9 @@ const HomePage: React.FC = () => {
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
                     ))}
-<<<<<<< HEAD
                   </ul>
                 </div>
                 
-=======
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-pink-400 mb-3">Benefits:
@@ -1226,18 +1180,14 @@ const HomePage: React.FC = () => {
                       <li key={benefitIndex} className="text-sm text-gray-300">
                         ✓ {benefit}
                     ))}
-<<<<<<< HEAD
                   </ul>
                 </div>
                 
-=======
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                 <div className="text-center">
                   <$2 />
                     href={`mailto:${service.contact}?subject=Interest in ${service.title}`}
                     className="inline-flex items-center justify-center w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold py-3 px-6 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-<<<<<<< HEAD
-=======
                     aria-label={`Contact us about ${service.title}`}
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                   >
@@ -1247,20 +1197,16 @@ const HomePage: React.FC = () => {
                 </div>
               </article>
             ))}
-<<<<<<< HEAD
           </div>
         </div>
       </section>
 
-=======
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
       {/* IT Services Section */}
       <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800" role="region" aria-labelledby="it-services-heading">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-<<<<<<< HEAD
             <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
-=======
             <h2 id="it-services-heading" className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
               IT Services & Solutions
@@ -1271,11 +1217,9 @@ const HomePage: React.FC = () => {
             </p>
           </div>
           
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {itServicesData.map((service, index) => (
               <div key={index} className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-green-400/20 hover:border-green-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20">
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" role="list">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {itServices.map((service, index) => (
@@ -1288,11 +1232,9 @@ const HomePage: React.FC = () => {
                     {service.title}
                   <p className="text-gray-300 leading-relaxed mb-6">
                     {service.description}
-<<<<<<< HEAD
                   </p>
                 </div>
                 
-=======
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                 <div className="text-center mb-6">
                   <div className="flex items-center justify-center gap-2 mb-2">
@@ -1302,12 +1244,10 @@ const HomePage: React.FC = () => {
                     <span className="text-gray-400 line-through">{service.marketPrice}
                     <span className="bg-green-500 text-white px-2 py-1 rounded text-xs font-bold">
                       Save {service.savings}
-<<<<<<< HEAD
                     </span>
                   </div>
                 </div>
                 
-=======
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-green-400 mb-3">Features:
@@ -1317,11 +1257,9 @@ const HomePage: React.FC = () => {
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
                     ))}
-<<<<<<< HEAD
                   </ul>
                 </div>
                 
-=======
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-cyan-400 mb-3">Benefits:
@@ -1330,11 +1268,9 @@ const HomePage: React.FC = () => {
                       <li key={benefitIndex} className="text-sm text-gray-300">
                         ✓ {benefit}
                     ))}
-<<<<<<< HEAD
                   </ul>
                 </div>
                 
-=======
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                 <div className="text-center">
                   <$2 />
@@ -1347,18 +1283,15 @@ const HomePage: React.FC = () => {
                 </div>
               </article>
             ))}
-<<<<<<< HEAD
           </div>
         </div>
       </section>
 
-=======
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
       {/* Specialized Services Section */}
       <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-<<<<<<< HEAD
             <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
               Specialized Solutions
             </h2>
@@ -1368,7 +1301,6 @@ const HomePage: React.FC = () => {
             </p>
           </div>
           
-=======
             <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">Specialized Solutions
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Advanced specialized solutions for complex business challenges. 
@@ -1384,11 +1316,9 @@ const HomePage: React.FC = () => {
                     {service.title}
                   <p className="text-gray-300 leading-relaxed mb-6">
                     {service.description}
-<<<<<<< HEAD
                   </p>
                 </div>
                 
-=======
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                 <div className="text-center mb-6">
                   <div className="flex items-center justify-center gap-2 mb-2">
@@ -1398,12 +1328,10 @@ const HomePage: React.FC = () => {
                     <span className="text-gray-400 line-through">{service.marketPrice}
                     <span className="bg-green-500 text-white px-2 py-1 rounded text-xs font-bold">
                       Save {service.savings}
-<<<<<<< HEAD
                     </span>
                   </div>
                 </div>
                 
-=======
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-orange-400 mb-3">Features:
@@ -1413,11 +1341,9 @@ const HomePage: React.FC = () => {
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
                     ))}
-<<<<<<< HEAD
                   </ul>
                 </div>
                 
-=======
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-red-400 mb-3">Benefits:
@@ -1426,11 +1352,9 @@ const HomePage: React.FC = () => {
                       <li key={benefitIndex} className="text-sm text-gray-300">
                         ✓ {benefit}
                     ))}
-<<<<<<< HEAD
                   </ul>
                 </div>
                 
-=======
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                 <div className="text-center">
                   <$2 />
@@ -1440,12 +1364,10 @@ const HomePage: React.FC = () => {
                     {service.contact.startsWith('+') ? 'Call Now' : 'Email Us'}
                     <ArrowRight className="w-4 h-4 ml-2" />
             ))}
-<<<<<<< HEAD
           </div>
         </div>
       </section>
 
-=======
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
       {/* Contact Section */}
       <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800" role="region" aria-labelledby="contact-heading">
@@ -1458,7 +1380,6 @@ const HomePage: React.FC = () => {
             </p>
           </div>
           
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="text-center bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300">
               <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
@@ -1471,7 +1392,6 @@ const HomePage: React.FC = () => {
             
             <div className="text-center bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300">
               <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4" />
-=======
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto" role="list">
             <div className="text-center bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300" role="listitem">
               <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" aria-hidden="true" />
@@ -1498,13 +1418,11 @@ const HomePage: React.FC = () => {
                 aria-label="Email us at kleber@ziontechgroup.com"
               >
                 kleber@ziontechgroup.com
-<<<<<<< HEAD
               </a>
             </div>
             
             <div className="text-center bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-pink-400/20 hover:border-pink-400/60 transition-all duration-300">
               <MapPin className="w-12 h-12 text-pink-400 mx-auto mb-4" />
-=======
   
             </div>
             
@@ -1516,9 +1434,7 @@ const HomePage: React.FC = () => {
               <address className="text-pink-400 text-sm not-italic">
                 364 E Main St STE 1008<br />
                 Middletown DE 19709
-<<<<<<< HEAD
               </p>
-=======
               </address>
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
             </div>
@@ -1529,12 +1445,10 @@ const HomePage: React.FC = () => {
       {/* Footer */}
       <Footer />
     </div>
-<<<<<<< HEAD
   );
 };
 
 export default HomePage;
-=======
   )
 }
 export default HomePage</p>

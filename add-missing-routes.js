@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import fs from 'fs';
 import { fileURLToPath } from 'url';
 
@@ -10,7 +9,6 @@ const analysisData = JSON.parse(fs.readFileSync('/workspace/navigation-analysis.
 const missingPages = analysisData.missingPagesList;
 
 // Generate import statements for missing pages;
-=======
 import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
@@ -22,7 +20,6 @@ const appContent = fs.readFileSync('/workspace/src/App.tsx', 'utf8')
 const analysisData = JSON.parse(fs.readFileSync('/workspace/navigation-analysis.json', 'utf8'))
 const missingPages = analysisData.missingPagesList
 // Generate import statements for missing pages
->>>>>>> origin/main
 const generateImportStatement = (route) => {
   const componentName = route.split('/').pop().replace(/-/g, '').replace(/\b\w/g, l => l.toUpperCase()) + 'Page'
   return `const ${componentName} = lazy(() => import('.${route}/page'));`

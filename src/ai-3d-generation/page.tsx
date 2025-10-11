@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Star, Zap, Shield, Clock, Users, Award, ArrowRight, Cube, Palette, Camera, Layers } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
@@ -210,7 +209,6 @@ const AI3DGenerationPage: React.FC = () => {
 };
 
 export default AI3DGenerationPage;
-=======
 import React from 'react'
 import { Camera, Play, Download, Share, Star, CheckCircle, Zap, Clock, Users, Award, ArrowRight, Sparkles } from 'lucide-react'
 import Navigation from '../components/Navigation'
@@ -391,4 +389,3 @@ export default AI3DGenerationPage</a>
   </div>
   </SEOOptimizer>
 </div></div></div></div></div></div></div></div></div></div></div></span></span></h2></h3></h3></h3></ul></li></section></section></section>
->>>>>>> origin/main

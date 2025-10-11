@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React, { Suspense, lazy, useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -166,7 +165,6 @@ const NotFoundPage: React.FC = () => (
 );
 
 export default App;
-=======
 import React, { Suspense, lazy } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import ErrorBoundary from './components/ErrorBoundary'
@@ -445,4 +443,3 @@ const App: React.FC = () => {
   )
 }
 export default App</div>
->>>>>>> origin/main

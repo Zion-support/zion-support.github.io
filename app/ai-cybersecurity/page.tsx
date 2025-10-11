@@ -1,83 +1,3 @@
-<<<<<<< HEAD
-'use client';
-import React from 'react';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const AiCybersecurityPage: React.FC = () => {
-  const services = [
-    {
-      title: 'AI Threat Detection',
-      description: 'Advanced AI systems for detecting and preventing cyber threats',
-      features: ['Behavioral Analysis', 'Anomaly Detection', 'Threat Hunting'],
-      price: 'Starting at $2,000/month',
-      icon: '🛡️'
-    },
-    {
-      title: 'Automated Response',
-      description: 'AI-powered incident response and threat mitigation',
-      features: ['Auto-Response', 'Threat Containment', 'Recovery Automation'],
-      price: 'Starting at $1,800/month',
-      icon: '⚡'
-    },
-    {
-      title: 'Predictive Security',
-      description: 'AI-driven security forecasting and risk assessment',
-      features: ['Risk Prediction', 'Vulnerability Assessment', 'Threat Intelligence'],
-      price: 'Starting at $1,500/month',
-      icon: '🔮'
-    },
-    {
-      title: 'Security Analytics',
-      description: 'AI-powered analysis of security logs and events',
-      features: ['Log Analysis', 'Pattern Recognition', 'Security Insights'],
-      price: 'Starting at $1,200/month',
-      icon: '📊'
-    },
-    {
-      title: 'Zero Trust Security',
-      description: 'AI-enhanced zero trust architecture implementation',
-      features: ['Identity Verification', 'Access Control', 'Continuous Monitoring'],
-      price: 'Starting at $2,500/month',
-      icon: '🔐'
-    },
-    {
-      title: 'Security Training AI',
-      description: 'AI-powered security awareness and training programs',
-      features: ['Phishing Simulation', 'Behavioral Training', 'Risk Assessment'],
-      price: 'Starting at $800/month',
-      icon: '🎓'
-    }
-  ];
-
-  const benefits = [
-    { metric: '99.9%', description: 'Threat Detection Rate' },
-    { metric: 'Real-time', description: 'Threat Response' },
-    { metric: 'AI-Powered', description: 'Security Automation' },
-    { metric: '24/7', description: 'Continuous Monitoring' }
-  ];
-=======
-import {Helmet}}from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';
-const AiCybersecurityPage: React.FC = () => {,
-    const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-<<<<<<< HEAD
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},
-    {icon: BarChart,
-=======
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'];
-  },
-    {
-    icon: BarChart,
->>>>>>> origin/main
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']},
@@ -88,60 +8,17 @@ const AiCybersecurityPage: React.FC = () => {,
     {icon: TrendingUp,
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
-<<<<<<< HEAD
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']}]
-=======
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-  },
-  ];];
->>>>>>> origin/main
 const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology';
-<<<<<<< HEAD
-  ]
-return(<>)
-      <Helmet />
-=======
-  ];
-return (
-    <>
-  </>
-      <Helmet>
->>>>>>> origin/main
         <title>Ai Cybersecurity - Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
       <Navigation />
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-        </section>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Ai Cybersecurity
-=======
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900"></div>
-        {/* Hero Section */} <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-        </section>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} /></div>
-          <div className="relative max-w-7xl mx-auto text-center"></div>
-            <h1>Ai Cybersecurity;</h1>
->>>>>>> origin/main
             </h1>
             <p>Advanced AI-powered ai cybersecurity solution for modern businesses.</p>
             </p>
@@ -153,14 +30,6 @@ return (
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-
-        {/* Features Section */}
-        <section className="py-20 px-4">
-        </section>
-=======
-        {/* Features Section */} <section className="py-20 px-4">
->>>>>>> origin/main
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
@@ -197,14 +66,6 @@ return (
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-
-        {/* Benefits Section */}
-        <section className="py-20 px-4">
-        </section>
-=======
-        {/* Benefits Section */} <section className="py-20 px-4">
->>>>>>> origin/main
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
@@ -230,274 +91,26 @@ return (
             </div>
           ))
         </section>
-<<<<<<< HEAD
-
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-        </section>
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Contact our experts to discuss your requirements and get started today.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-pink-500 to-blue-600 hover:from-pink-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Contact Us
-                </button>
-                <button className="border border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
-                </button>
-              </div>
-=======
-        {/* CTA Section */} <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
->>>>>>> origin/main
             </div>
           ))
         </section>
-<<<<<<< HEAD
-      </div>
-      <Footer />
-
-  );
-};
-=======
-          <div className="max-w-4xl mx-auto text-center"></div>
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12"></div>
-              <h2>Ready to Get Started?</h2>
-              </h2>
-              <p>Contact our experts to discuss your requirements and get started today.</p>
-              </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
-                <button>Contact Us;</button>
-                </button>
-                <button>Learn More;</button>
-                </button>
-=======
-'use client'
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { Shield, Lock, CheckCircle, ArrowRight } from 'lucide-react'
->>>>>>> origin/main
 
 const AICybersecurityPage: React.FC = () => {
   const features = [
-<<<<<<< HEAD
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-    }
-  ];
 
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
-
-=======
-    'AI-powered threat detection',
-    'Real-time monitoring',
-    'Automated response',
-    'Behavioral analysis',
-    'Predictive security',
-    'Compliance management'
-  ]
->>>>>>> origin/main
-
->>>>>>> origin/main
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       
-<<<<<<< HEAD
-      <main className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
-        <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-            AI Cybersecurity Solutions
-          </h1>
-          <p className="text-lg text-gray-300 max-w-3xl mx-auto mb-8">
-            Defend against evolving cyber threats with AI-powered security solutions 
-            that learn, adapt, and respond to attacks in real-time.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" className="cyber-button">
-              Get Security Assessment
-            </Link>
-            <Link to="/case-studies" className="cyber-button" style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}>
-              View Security Case Studies
-            </Link>
           </div>
         </section>
 
-        {/* Benefits Section */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">AI Security Benefits</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center cyber-card">
-                <div className="text-4xl font-bold text-red-400 mb-2">{benefit.metric}</div>
-                <div className="text-gray-300">{benefit.description}</div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Services Grid */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">AI Security Services</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="cyber-card hologram-card p-6">
-                <div className="text-4xl mb-4 text-center">{service.icon}</div>
-                <h3 className="text-xl font-bold text-white mb-3 text-center">{service.title}</h3>
-                <p className="text-gray-300 mb-4 text-center">{service.description}</p>
-                <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="text-sm text-gray-400 flex items-center">
-                      <span className="text-red-400 mr-2">✓</span>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <div className="text-center">
-                  <div className="text-lg font-bold text-red-400 mb-3">{service.price}</div>
-                  <Link to="/contact" className="text-red-400 hover:text-red-300 font-medium">
-                    Learn More →
-                  </Link>
-                </div>
-              </div>
-            ))}
-=======
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Cybersecurity</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Protect your business with advanced AI-powered cybersecurity solutions.
-            </p>
->>>>>>> origin/main
-          </div>
-        </section>
-
-<<<<<<< HEAD
-        {/* CTA Section */}
-        <section className="cyber-card hologram-card p-8 text-center">
-          <h2 className="text-2xl font-bold text-white mb-4">
-            Ready to Secure Your Future with AI?
-          </h2>
-          <p className="text-gray-300 mb-6">
-            Protect your business with next-generation AI-powered cybersecurity solutions.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" className="cyber-button">
-              Start AI Security Journey
-            </Link>
-            <a href="tel:+13024640950" className="cyber-button" style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}>
-              Call: (302) 464-0950
-            </a>
-          </div>
-        </section>
-      </main>
-      
-      <Footer />
-    </div>
-  );
-};
-
-export default AiCybersecurityPage;
-=======
-      {/* Features Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Advanced Security Features
-            </h2>
-            <p className="text-xl text-gray-300">
-              Stay ahead of threats with our cutting-edge AI cybersecurity solutions.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {features.map((feature, index) => (
-<<<<<<< HEAD
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-=======
-              <div key={index} className="flex items-center text-gray-300">
-                <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                <span>{feature}</span>
->>>>>>> origin/main
->>>>>>> origin/main
               </div>
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our page solutions for your business.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-=======
->>>>>>> origin/main
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -513,18 +126,7 @@ export default AiCybersecurityPage;
           </button>
         </div>
       </section>
-<<<<<<< HEAD
-=======
-
-      <Footer />
->>>>>>> origin/main
     </div>
   )
 }
 
-<<<<<<< HEAD
-export default PagePage;
-=======
-export default AICybersecurityPage
->>>>>>> origin/main
->>>>>>> origin/main

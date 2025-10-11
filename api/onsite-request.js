@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 const { withSentry } = require('./withSentry.cjs');
 
 async function handler(req, res) {
-=======
 const fs = require('fs')
 const path = require('path')
 // Simple wrapper function to replace withSentry
@@ -10,7 +8,6 @@ const withSentry = (handler) => handler
 const dir = path.join(process.cwd(), 'data')
 const file = path.join(dir, 'onsite-requests.json')
 export default function handler(req, res) {
->>>>>>> origin/main
   if (req.method !== 'POST') {
     res.statusCode = 405
     res.setHeader('Content-Type', 'application/json')
@@ -18,7 +15,6 @@ export default function handler(req, res) {
     return
   }
 
-<<<<<<< HEAD
   try {
     const {
       name,
@@ -78,7 +74,6 @@ export default function handler(req, res) {
 }
 
 module.exports = withSentry(handler);
-=======
   const { name, email, company, phone, message, location } = req.body || {}
 
   if (!fs.existsSync(dir)) {
@@ -132,10 +127,6 @@ module.exports = withSentry(handler);
     res.end(JSON.stringify({ error: 'Failed to save request' }))
   }
 }
-<<<<<<< HEAD
 module.exports = handler;
 
-=======
 module.exports = handler
->>>>>>> origin/main
->>>>>>> origin/main

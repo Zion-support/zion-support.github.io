@@ -303,10 +303,8 @@ const ServicesPage: React.FC = () => {
               >
                 <Phone className="h-5 w-5 mr-2" />
                 Call (302) 464-0950
-<<<<<<< HEAD
               </a>
               <Link
-=======
   
               <$2 />
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
@@ -314,9 +312,7 @@ const ServicesPage: React.FC = () => {
                 className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 px-8 py-3 rounded-lg font-semibold transition-colors"
               >
                 Get Free Consultation
-<<<<<<< HEAD
               </Link>
-=======
   
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
             </div>
@@ -326,14 +322,12 @@ const ServicesPage: React.FC = () => {
 
       <Footer />
     </div>
-<<<<<<< HEAD
   );
 };
 
 export default ServicesPage;
 
 
-=======
   ),
 }
 export default ServicesPage</Link>

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 
@@ -20,7 +19,6 @@ function cleanMergeConflicts(filePath) {
       
       fs.writeFileSync(filePath, content);
       return true;
-=======
 #!/usr/bin/env node
 
 import fs from 'fs'
@@ -59,11 +57,9 @@ function cleanMergeConflicts(filePath) {
       fs.writeFileSync(filePath, content, 'utf8')
       console.log(`Cleaned: ${filePath}`)
       return true
->>>>>>> origin/main
     }
     return false
   } catch (error) {
-<<<<<<< HEAD
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
@@ -103,7 +99,6 @@ for (const file of files) {
 }
 
 console.log(`Cleaned merge conflicts in ${cleanedCount} files`);
-=======
     console.error(`Error cleaning ${filePath}:`, error.message)
     return false
   }
@@ -162,4 +157,3 @@ for (const file of criticalFiles) {
 }
 
 console.log('Merge conflict cleanup completed!')
->>>>>>> origin/main

@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-'use client';
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { Play, CheckCircle, ArrowRight, Star } from 'lucide-react';
-=======
-import { Play, ArrowRight, CheckCircle, Star, Zap, Shield, BarChart, Users } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
->>>>>>> origin/main
 
 const DemoPage: React.FC = () => {
   const [selectedDemo, setSelectedDemo] = useState('ai-analytics');
@@ -18,158 +6,14 @@ const DemoPage: React.FC = () => {
     {
       id: 'ai-analytics',
       title: 'AI Analytics Dashboard',
-<<<<<<< HEAD
-      description: 'See how our AI-powered analytics can transform your data into actionable insights.',
-      features: ['Real-time data visualization', 'Predictive analytics', 'Custom dashboards', 'Automated reporting']
-    },
-    {
-      id: 'ai-automation',
-      title: 'AI Automation Platform',
-      description: 'Experience intelligent automation that streamlines your business processes.',
-      features: ['Process automation', 'Smart workflows', 'AI chatbots', 'Predictive maintenance']
-    },
-    {
-      id: 'cloud-solutions',
-      title: 'Cloud Solutions',
-      description: 'Explore our comprehensive cloud infrastructure and migration services.',
-      features: ['Cloud migration', 'Infrastructure as Code', 'DevOps automation', 'Security monitoring']
-    }
-  ];
-
-const testimonials = [
-    {
-      name: 'Sarah Johnson',
-      company: 'TechCorp',
-      role: 'CEO',
-      content: 'The AI dashboard demo showed us exactly how we could transform our data analytics. Incredible insights!',
-
-=======
-      description: 'Experience real-time AI-powered analytics and insights for your business data.',
-      features: [
-        'Real-time data visualization',
-        'Predictive analytics',
-        'Custom reporting',
-        'Interactive dashboards'
-      ],
-      icon: BarChart,
-      duration: '5 min demo',
-      category: 'AI Solutions'
-    },
-    {
-      id: 'ai-chatbot',
-      title: 'AI Customer Service Bot',
-      description: 'See how our AI chatbot handles customer inquiries with natural language processing.',
-      features: [
-        'Natural language understanding',
-        'Multi-language support',
-        '24/7 availability',
-        'Seamless handoff to humans'
-      ],
-      icon: Users,
-      duration: '3 min demo',
-      category: 'AI Solutions'
-    },
-    {
-      id: 'cloud-migration',
-      title: 'Cloud Migration Tool',
-      description: 'Watch our automated cloud migration process in action.',
-      features: [
-        'Automated assessment',
-        'Zero-downtime migration',
-        'Cost optimization',
-        'Security compliance'
-      ],
-      icon: Zap,
-      duration: '7 min demo',
-      category: 'Cloud Services'
-    },
-    {
-      id: 'cybersecurity',
-      title: 'AI Security Monitor',
-      description: 'Experience our AI-powered threat detection and response system.',
-      features: [
-        'Real-time threat detection',
-        'Automated response',
-        'Compliance monitoring',
-        'Incident reporting'
-      ],
-      icon: Shield,
-      duration: '4 min demo',
-      category: 'Cybersecurity'
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: 'Sarah Johnson',
-      company: 'TechCorp Inc.',
-      role: 'CTO',
-      quote: 'The AI analytics demo showed us exactly how we could transform our data insights. The implementation was seamless.',
->>>>>>> origin/main
       rating: 5
     },
     {
       name: 'Michael Chen',
-<<<<<<< HEAD
-company: 'DataFlow Inc',
-      role: 'CTO',
-      content: 'The quantum computing demo was mind-blowing. We could see immediate applications for our optimization problems.',
-
-=======
-      company: 'RetailMax',
-      role: 'Head of Operations',
-      quote: 'The chatbot demo exceeded our expectations. It handled complex queries better than we imagined.',
-      rating: 5
-    },
-    {
-      name: 'Emily Rodriguez',
-      company: 'FinanceFlow',
-      role: 'IT Director',
-      quote: 'The cloud migration demo convinced us to move forward. The automation saved us months of work.',
->>>>>>> origin/main
       rating: 5
     }
   ];
 
-<<<<<<< HEAD
-return (
-
-    <>
-      <Helmet>
-        <title>Demo - Zion Tech Group | See Our Solutions in Action</title>
-        <meta name="description" content="Experience our AI and IT solutions through interactive demos. See how our technology can transform your business." />
-        <meta name="keywords" content="demo, AI demo, technology demo, Zion Tech Group, interactive demo" />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                Interactive Demos
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Experience our AI and IT solutions firsthand. See how our technology can transform your business.
-              </p>
-            </div>
-          </div>
-=======
-  const selectedDemoData = demos.find(demo => demo.id === selectedDemo);
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Live Demos - Zion Tech Group | See Our Solutions in Action</title>
-        <meta name="description" content="Experience our AI and IT solutions through interactive demos. See how our technology can transform your business with real-time demonstrations." />
-        <meta name="keywords" content="AI demos, technology demos, live demonstrations, AI solutions, cloud services, cybersecurity demos" />
-      </Helmet>
-      
-      <Navigation />
-      
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
->>>>>>> origin/main
         </section>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
@@ -236,146 +80,15 @@ return (
         <section className="py-16 px-4">
         </section>
           <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              {/* Demo List */}
-              <div className="space-y-6">
-                <h2 className="text-3xl font-bold text-white mb-8">Choose a Demo</h2>
-                {demos.map((demo) => (
-                  <div
-                    key={demo.id}
-                    className={`cyber-card p-6 cursor-pointer transition-all ${
-                      selectedDemo === demo.id ? 'ring-2 ring-cyan-500' : ''
-                    }`}
-                    onClick={() => setSelectedDemo(demo.id)}
-                  >
-                    <div className="flex items-start justify-between">
-                      <div className="flex-1">
-                        <h3 className="text-xl font-semibold text-white mb-2">{demo.title}</h3>
-                        <p className="text-gray-300 mb-4">{demo.description}</p>
-                        <ul className="space-y-2">
-                          {demo.features.map((feature, index) => (
-                            <li key={index} className="flex items-center text-sm text-gray-400">
-                              <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
-                              {feature}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      <div className="ml-4">
-                        <Play className="w-6 h-6 text-cyan-400" />
-                      </div>
-=======
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div>
-                  <div className="flex items-center mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mr-4 flex items-center justify-center">
-                      <selectedDemoData.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-bold text-white">{selectedDemoData.title}</h3>
-                      <p className="text-gray-400">{selectedDemoData.duration}</p>
-                    </div>
-                  </div>
-                  
-                  <p className="text-gray-300 mb-6">{selectedDemoData.description}</p>
-                  
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
-                    <ul className="space-y-2">
-                      {selectedDemoData.features.map((feature, index) => (
-                        <li key={index} className="flex items-center">
-                          <CheckCircle className="w-5 h-5 text-green-400 mr-2 flex-shrink-0" />
-                          <span className="text-gray-300">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  <div className="flex flex-col sm:flex-row gap-4">
-                    <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center">
-                      <Play className="w-5 h-5 mr-2" />
-                      Start Demo
-                    </button>
-                    <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center">
-                      Schedule Live Demo
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </button>
-                  </div>
-                </div>
-                
-                <div className="bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-xl p-8 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-24 h-24 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Play className="w-12 h-12 text-white" />
->>>>>>> origin/main
                     </div>
                     <h4 className="text-xl font-semibold text-white mb-2">Interactive Demo</h4>
                     <p className="text-gray-300">Click play to experience this solution in action</p>
                   </div>
-<<<<<<< HEAD
-                ))}
-              </div>
-
-              {/* Demo Preview */}
-              <div className="cyber-card p-8">
-                <h3 className="text-2xl font-bold text-white mb-6">
-                  {demos.find(d => d.id === selectedDemo)?.title} Demo
-                </h3>
-                <div className="bg-gray-800 rounded-lg p-8 mb-6 text-center">
-                  <div className="w-16 h-16 bg-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <Play className="w-8 h-8 text-white" />
-                  </div>
-                  <p className="text-gray-300 mb-4">
-                    Interactive demo coming soon. Contact us to schedule a live demonstration.
-                  </p>
-                  <button className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
-                    Schedule Live Demo
-                  </button>
-                </div>
-                <div className="space-y-4">
-                  <h4 className="text-lg font-semibold text-white">What you'll see:</h4>
-                  <ul className="space-y-2">
-                    {demos.find(d => d.id === selectedDemo)?.features.map((feature, index) => (
-                      <li key={index} className="flex items-center text-gray-300">
-                        <Star className="w-4 h-4 text-cyan-400 mr-2" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-=======
->>>>>>> origin/main
                 </div>
               </div>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-
-        {/* CTA Section */}
-        <section className="py-16 px-4 bg-gradient-to-r from-cyan-600 to-purple-600">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-4">Ready to See More?</h2>
-            <p className="text-xl text-gray-100 mb-8">
-              Schedule a personalized demo with our experts to see how our solutions can work for your business.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center">
-                <Play className="w-5 h-5 mr-2" />
-                Schedule Demo
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors flex items-center justify-center">
-                <ArrowRight className="w-5 h-5 mr-2" />
-                Contact Sales
-              </button>
-            </div>
-          </div>
-=======
-      ))
-      {/* Testimonials */}
-      <section className="py-16 px-4">
->>>>>>> origin/main
         </section>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
@@ -427,7 +140,6 @@ return (
       </section>
 
       <Footer />
-=======
 import React from 'react';
 
 const DemoPage: React.FC = () => {
@@ -443,18 +155,11 @@ const DemoPage: React.FC = () => {
           </p>
         </div>
       </div>
-<<<<<<< HEAD
-    </>
-);
-}
-=======
->>>>>>> origin/main
     </div>
   );
 };
 
 export default DemoPage;
-=======
 'use client'
 import React from 'react'
 import Navigation from '../components/Navigation'
@@ -521,5 +226,3 @@ const DemoPage: React.FC = () => {
 }
 
 export default DemoPage
->>>>>>> origin/main
->>>>>>> origin/main

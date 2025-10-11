@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React, { useEffect, useCallback, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -85,7 +84,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
 };
 
 export default AdvancedSEOOptimizer;
-=======
 'use client'
 import React, { useEffect, useCallback, useRef } from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -255,4 +253,3 @@ export default AdvancedSEOOptimizer
 }"
   </AdvancedSEOOptimizerProps>
 </li></li></li></li></li></li></li></li></li>
->>>>>>> origin/main
