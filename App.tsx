@@ -47,6 +47,8 @@ const AiAnalyticsPage = React.lazy(() => import('./app/ai-analytics/page'));
 const AiAutomationPage = React.lazy(() => import('./app/ai-automation/page'));
 const AiChatbotBuilderPage = React.lazy(() => import('./app/ai-chatbot-builder/page'));
 const AiCybersecurityPage = React.lazy(() => import('./app/ai-cybersecurity/page'));
+const AiAnalyticsProPage = React.lazy(() => import('./app/ai-analytics-pro/page'));
+const AiContentStudioPage = React.lazy(() => import('./app/ai-content-studio/page'));
 
 // IT Service Pages
 const CloudInfrastructurePage = React.lazy(() => import('./app/cloud-infrastructure/page'));
@@ -110,6 +112,8 @@ const App: React.FC = () => {
                             <Route path="/ai-automation" element={<AiAutomationPage />} />
                             <Route path="/ai-chatbot-builder" element={<AiChatbotBuilderPage />} />
                             <Route path="/ai-cybersecurity" element={<AiCybersecurityPage />} />
+                            <Route path="/ai-analytics-pro" element={<AiAnalyticsProPage />} />
+                            <Route path="/ai-content-studio" element={<AiContentStudioPage />} />
                             
                             {/* IT Service Pages */}
                             <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />

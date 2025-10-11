@@ -1,90 +1,93 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Star, Clock, Users, Shield, Zap, BarChart, TrendingUp, Database, Globe, Phone, Mail, MapPin, Image, Video, FileText, Palette } from 'lucide-react';
+import { CheckCircle, ArrowRight, Star, Clock, Users, Shield, Zap, BarChart, TrendingUp, Database, Globe, Phone, Mail, MapPin } from 'lucide-react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 
-const AiContentStudioPage: React.FC = () => {
+const AiAnalyticsProPage: React.FC = () => {
   const features = [
-    'AI writing assistant with 50+ templates for blogs, emails, and social media',
-    'Image generation and editing with advanced AI algorithms',
-    'Video creation and editing with automated voiceovers',
-    'Social media scheduling across all major platforms',
-    'SEO optimization with keyword research and content suggestions',
-    'Brand voice training to maintain consistent tone',
-    'Multi-language support for global content creation',
-    'Content calendar with automated planning',
-    'Team collaboration with real-time editing',
-    'Performance analytics and content insights'
+    'Real-time data visualization with interactive dashboards',
+    'AI-powered predictive analytics and forecasting',
+    'Custom dashboard builder with drag-and-drop interface',
+    'Automated report generation and scheduling',
+    'Multi-data source integration (50+ connectors)',
+    'Advanced filtering and segmentation capabilities',
+    'Collaborative workspaces for team collaboration',
+    'Mobile app access for on-the-go insights',
+    'API access for custom integrations',
+    'White-label options for resellers'
   ];
 
   const benefits = [
-    'Create content 10x faster with AI assistance',
-    'Increase engagement by 250% with optimized content',
-    'Reduce content creation costs by 70%',
-    'Maintain consistent brand voice across all channels',
-    'Scale content production without hiring more writers',
-    'Generate unlimited content ideas and variations'
+    'Increase data-driven decisions by 300%',
+    'Reduce reporting time by 80%',
+    'Identify trends and patterns 2x faster',
+    'Improve forecast accuracy by 65%',
+    'Save 20+ hours per week on manual reporting',
+    'Make better business decisions with AI insights'
   ];
 
-  const contentTypes = [
-    'Blog posts and articles', 'Social media posts', 'Email campaigns', 'Product descriptions',
-    'Ad copy and headlines', 'Video scripts', 'Website content', 'Press releases',
-    'Case studies', 'White papers', 'Infographics', 'Presentations'
+  const integrations = [
+    'Salesforce CRM', 'HubSpot Marketing', 'Google Analytics', 'Stripe Payments',
+    'Shopify E-commerce', 'Zapier Automation', 'Microsoft Power BI', 'Tableau',
+    'MySQL Database', 'PostgreSQL', 'MongoDB', 'Amazon Redshift'
   ];
 
-  const platforms = [
-    'WordPress', 'Shopify', 'WooCommerce', 'Squarespace', 'Wix', 'Webflow',
-    'Hootsuite', 'Buffer', 'Later', 'Sprout Social', 'Mailchimp', 'ConvertKit'
+  const useCases = [
+    'Sales forecasting and pipeline analysis',
+    'Customer behavior analysis and segmentation',
+    'Marketing campaign performance tracking',
+    'Financial reporting and KPI monitoring',
+    'Operations efficiency analysis',
+    'Customer lifetime value prediction'
   ];
 
   const pricingPlans = [
     {
-      name: 'Creator',
-      price: '$149',
+      name: 'Starter',
+      price: '$199',
       period: '/month',
-      description: 'Perfect for individual creators',
+      description: 'Perfect for small businesses',
       features: [
-        'Unlimited AI writing',
-        '100 images per month',
-        '10 videos per month',
-        '5 social media accounts',
-        'Basic templates',
-        'Email support'
+        'Up to 5 data sources',
+        '10 custom dashboards',
+        'Basic AI insights',
+        'Email support',
+        '1 user included'
       ],
       popular: false
     },
     {
-      name: 'Studio',
-      price: '$299',
+      name: 'Professional',
+      price: '$399',
       period: '/month',
-      description: 'Most popular for teams',
+      description: 'Most popular for growing teams',
       features: [
-        'Everything in Creator',
-        'Unlimited images',
-        'Unlimited videos',
-        'Unlimited social accounts',
-        'Premium templates',
-        'Brand voice training',
-        'Team collaboration',
-        'Priority support'
+        'Up to 25 data sources',
+        'Unlimited dashboards',
+        'Advanced AI analytics',
+        'Priority support',
+        '5 users included',
+        'API access',
+        'Custom integrations'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$599',
+      price: '$799',
       period: '/month',
       description: 'For large organizations',
       features: [
-        'Everything in Studio',
-        'Custom AI models',
+        'Unlimited data sources',
+        'Unlimited dashboards',
+        'Advanced AI + ML models',
+        '24/7 dedicated support',
+        'Unlimited users',
+        'Full API access',
         'White-label options',
-        'API access',
-        'Custom integrations',
-        'Dedicated account manager',
-        '24/7 phone support'
+        'Custom development'
       ],
       popular: false
     }
@@ -93,11 +96,11 @@ const AiContentStudioPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>AI Content Studio - Complete Content Creation Suite | Zion Tech Group</title>
-        <meta name="description" content="Create professional content 10x faster with AI Content Studio. AI writing, image generation, video editing, and social media automation. Starting at $149/month." />
-        <meta name="keywords" content="AI content creation, content writing, image generation, video editing, social media automation, content marketing" />
+        <title>AI Analytics Pro - Advanced Business Intelligence | Zion Tech Group</title>
+        <meta name="description" content="Transform your data into actionable insights with AI Analytics Pro. Real-time dashboards, predictive analytics, and automated reporting. Starting at $199/month." />
+        <meta name="keywords" content="AI analytics, business intelligence, data visualization, predictive analytics, dashboard, reporting, data analysis" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-content-studio" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-analytics-pro" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -105,32 +108,32 @@ const AiContentStudioPage: React.FC = () => {
         
         {/* Hero Section */}
         <section className="py-20 px-4 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-pink-500/10 to-purple-500/10"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10"></div>
           <div className="max-w-7xl mx-auto text-center relative z-10">
             <div className="mb-6">
-              <span className="inline-block px-4 py-2 bg-pink-500/10 border border-pink-500/20 rounded-full text-pink-400 text-sm font-medium mb-4">
-                🎨 Complete Content Creation Suite
+              <span className="inline-block px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-4">
+                📊 AI-Powered Business Intelligence
               </span>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              AI Content <span className="bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">Studio</span>
+              AI Analytics <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Pro</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Create professional content 10x faster with our AI-powered content creation suite. 
-              Writing, images, videos, and social media automation all in one platform.
+              Transform your data into actionable insights with our advanced AI-powered analytics platform. 
+              Real-time dashboards, predictive analytics, and automated reporting that drives business growth.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <a 
                 href="/contact" 
-                className="px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-lg font-semibold hover:from-pink-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center group shadow-lg shadow-pink-500/25 hover:shadow-xl hover:shadow-pink-500/40 transform hover:scale-105"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center group shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40 transform hover:scale-105"
               >
-                Start Free 7-Day Trial
+                Start Free 14-Day Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </a>
               <a 
                 href="tel:+13024640950" 
-                className="px-8 py-4 border-2 border-pink-400 text-pink-400 rounded-lg font-semibold hover:bg-pink-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center group"
+                className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center group"
               >
                 <Phone className="w-5 h-5 mr-2" />
                 Call (302) 464-0950
@@ -140,20 +143,20 @@ const AiContentStudioPage: React.FC = () => {
             {/* Key Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-pink-400 mb-2">10x</div>
-                <div className="text-gray-300">Faster Content Creation</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">300%</div>
+                <div className="text-gray-300">More Data-Driven Decisions</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">250%</div>
-                <div className="text-gray-300">Higher Engagement</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">80%</div>
+                <div className="text-gray-300">Time Saved on Reporting</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">70%</div>
-                <div className="text-gray-300">Cost Reduction</div>
+                <div className="text-3xl font-bold text-pink-400 mb-2">65%</div>
+                <div className="text-gray-300">Improved Forecast Accuracy</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">50+</div>
-                <div className="text-gray-300">Content Templates</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">5min</div>
+                <div className="text-gray-300">Setup Time</div>
               </div>
             </div>
           </div>
@@ -163,16 +166,16 @@ const AiContentStudioPage: React.FC = () => {
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Everything You Need to Create</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Powerful Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                From writing to visuals, we've got all your content creation needs covered.
+                Everything you need to transform your data into actionable business insights.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-pink-400/30 transition-all duration-300 group">
+                <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300 group">
                   <div className="flex items-start space-x-4">
-                    <div className="w-8 h-8 bg-gradient-to-r from-pink-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                    <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
                       <CheckCircle className="w-5 h-5 text-white" />
                     </div>
                     <div>
@@ -186,39 +189,19 @@ const AiContentStudioPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Content Types Section */}
+        {/* Benefits Section */}
         <section className="py-16 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Create Any Type of Content</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Why Choose AI Analytics Pro?</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                From blog posts to videos, our AI can help you create professional content for any purpose.
-              </p>
-            </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-              {contentTypes.map((type, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-4 text-center border border-white/10 hover:border-pink-400/30 transition-all duration-300 group hover:scale-105">
-                  <div className="text-3xl mb-3 group-hover:scale-110 transition-transform">📝</div>
-                  <div className="text-sm text-gray-300">{type}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Why Choose AI Content Studio?</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See the measurable impact on your content creation and marketing efforts.
+                See the measurable impact on your business with our AI-powered analytics platform.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 text-center group hover:scale-105 transition-all duration-300">
-                  <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                     <TrendingUp className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">{benefit}</h3>
@@ -229,19 +212,40 @@ const AiContentStudioPage: React.FC = () => {
         </section>
 
         {/* Integrations Section */}
-        <section className="py-16 px-4 bg-white/5">
+        <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Seamless Integrations</h2>
+              <h2 className="text-4xl font-bold text-white mb-6">50+ Integrations</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Connect with your favorite platforms and tools for a streamlined workflow.
+                Connect all your data sources in one place for comprehensive insights.
               </p>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-              {platforms.map((platform, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-4 text-center border border-white/10 hover:border-pink-400/30 transition-all duration-300">
+              {integrations.map((integration, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-4 text-center border border-white/10 hover:border-cyan-400/30 transition-all duration-300">
                   <div className="text-2xl mb-2">🔗</div>
-                  <div className="text-sm text-gray-300">{platform}</div>
+                  <div className="text-sm text-gray-300">{integration}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Use Cases Section */}
+        <section className="py-16 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-6">Use Cases</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                See how different teams use AI Analytics Pro to drive business growth.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {useCases.map((useCase, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/30 transition-all duration-300">
+                  <div className="text-4xl mb-4">📈</div>
+                  <h3 className="text-xl font-bold text-white mb-4">{useCase}</h3>
+                  <p className="text-gray-300">Leverage AI insights to optimize your business processes and drive growth.</p>
                 </div>
               ))}
             </div>
@@ -254,19 +258,19 @@ const AiContentStudioPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6">Simple, Transparent Pricing</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your content creation needs. All plans include a 7-day free trial.
+                Choose the plan that fits your business needs. All plans include a 14-day free trial.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`bg-white/5 backdrop-blur-lg rounded-2xl p-8 border transition-all duration-300 ${
                   plan.popular 
-                    ? 'border-pink-400/50 shadow-2xl shadow-pink-500/25 scale-105' 
-                    : 'border-white/10 hover:border-pink-400/30'
+                    ? 'border-cyan-400/50 shadow-2xl shadow-cyan-500/25 scale-105' 
+                    : 'border-white/10 hover:border-cyan-400/30'
                 }`}>
                   {plan.popular && (
                     <div className="text-center mb-6">
-                      <span className="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
                     </div>
@@ -275,7 +279,7 @@ const AiContentStudioPage: React.FC = () => {
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <p className="text-gray-300 mb-4">{plan.description}</p>
                     <div className="flex items-baseline justify-center">
-                      <span className="text-5xl font-bold text-pink-400">{plan.price}</span>
+                      <span className="text-5xl font-bold text-cyan-400">{plan.price}</span>
                       <span className="text-gray-300 ml-2">{plan.period}</span>
                     </div>
                   </div>
@@ -291,8 +295,8 @@ const AiContentStudioPage: React.FC = () => {
                     href="/contact"
                     className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 text-center block ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-pink-500 to-purple-500 text-white hover:from-pink-600 hover:to-purple-600'
-                        : 'border-2 border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-slate-900'
+                        ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600'
+                        : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
                     }`}
                   >
                     Start Free Trial
@@ -306,32 +310,32 @@ const AiContentStudioPage: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-r from-slate-800/50 to-purple-900/50 rounded-3xl p-12 border border-pink-500/20">
+            <div className="bg-gradient-to-r from-slate-800/50 to-purple-900/50 rounded-3xl p-12 border border-cyan-500/20">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Create Amazing Content?
+                Ready to Transform Your Data?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Join thousands of creators using AI Content Studio to produce professional content 
-                at scale. Start your free 7-day trial today.
+                Join thousands of businesses using AI Analytics Pro to make better decisions, 
+                faster. Start your free 14-day trial today.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                 <a 
                   href="/contact" 
-                  className="px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-lg font-semibold hover:from-pink-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center group shadow-lg shadow-pink-500/25 hover:shadow-xl hover:shadow-pink-500/40 transform hover:scale-105"
+                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center group shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40 transform hover:scale-105"
                 >
                   Start Free Trial
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </a>
                 <a 
                   href="tel:+13024640950" 
-                  className="px-8 py-4 border-2 border-pink-400 text-pink-400 rounded-lg font-semibold hover:bg-pink-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center group"
+                  className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center group"
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Call (302) 464-0950
                 </a>
               </div>
               <div className="text-sm text-gray-400">
-                <p>✓ 7-day free trial • ✓ No credit card required • ✓ Cancel anytime</p>
+                <p>✓ 14-day free trial • ✓ No credit card required • ✓ Cancel anytime</p>
               </div>
             </div>
           </div>
@@ -386,4 +390,4 @@ const AiContentStudioPage: React.FC = () => {
   );
 };
 
-export default AiContentStudioPage;
+export default AiAnalyticsProPage;
