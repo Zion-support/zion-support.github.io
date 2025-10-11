@@ -1,60 +1,36 @@
-<<<<<<< HEAD
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, Zap, Shield, Globe, Database, Code, Cloud } from 'lucide-react'
-import Navigation from './components/Navigation'
-import Footer from './components/Footer'
-=======
 import React from 'react';
 import { CheckCircle, ArrowRight, Zap, Shield, Globe, Cloud, Database, Smartphone } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-59b6
 
 export default function HomePage() {
+  const stats = [
+    { number: '500+', label: 'Projects Completed' },
+    { number: '50+', label: 'AI Services' },
+    { number: '100+', label: 'IT Solutions' },
+    { number: '24/7', label: 'Support' }
+  ];
+
   const features = [
     {
       icon: <Zap className="w-8 h-8 text-blue-500" />,
       title: 'AI-Powered Solutions',
-      description: 'Transform your business with our comprehensive AI services including content generation, chatbots, and automation.'
+      description: 'Transform your business with our comprehensive AI services including content generation, chatbots, quantum computing, and robotics.',
+      benefits: ['AI Content Generation - $99/month', 'AI Quantum Computing - $15,000/month', 'AI Robotics - $25,000/month', 'AI Analytics - $149/month'],
+      link: '/ai-services'
     },
     {
       icon: <Shield className="w-8 h-8 text-green-500" />,
-<<<<<<< HEAD
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption, compliance standards, and advanced threat protection.'
-    },
-    {
-      icon: <Globe className="w-8 h-8 text-purple-500" />,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses with 24/7 technical assistance.'
-    },
-    {
-      icon: <Database className="w-8 h-8 text-orange-500" />,
-      title: 'Data Analytics',
-      description: 'Advanced data processing and analytics to drive informed business decisions.'
-    },
-    {
-      icon: <Code className="w-8 h-8 text-red-500" />,
-      title: 'Custom Development',
-      description: 'Tailored software solutions built to meet your specific business requirements.'
-    },
-    {
-      icon: <Cloud className="w-8 h-8 text-cyan-500" />,
-      title: 'Cloud Services',
-      description: 'Scalable cloud infrastructure and migration services for modern businesses.'
-=======
       title: 'IT Services & Solutions',
-      description: 'Complete IT infrastructure services including cloud migration, cybersecurity, DevOps, and mobile development.',
-      benefits: ['Cloud Migration - Starting at $2,500', 'Cybersecurity - $1,500/month', 'Mobile Development - Starting at $5,000', 'Data Analytics - $2,000/month'],
+      description: 'Complete IT infrastructure services including cloud migration, cybersecurity, DevOps, blockchain, and mobile development.',
+      benefits: ['Cloud Migration - Starting at $2,500', 'Blockchain & Web3 - $30,000+', 'Cybersecurity - $1,500/month', 'Mobile Development - Starting at $5,000'],
       link: '/it-services'
     },
     {
       icon: <Globe className="w-8 h-8 text-purple-500" />,
       title: 'Micro SAAS Applications',
-      description: 'Powerful, affordable micro applications designed to solve specific business problems with AI intelligence.',
-      benefits: ['AI Task Manager - $19/month', 'AI Expense Tracker - $15/month', 'AI Password Manager - $12/month', 'AI Invoice Generator - $25/month'],
+      description: 'Powerful, affordable micro applications designed to solve specific business problems with AI intelligence and personal assistants.',
+      benefits: ['AI Personal Assistant Suite - $39/month', 'AI Task Manager - $19/month', 'AI Expense Tracker - $15/month', 'AI Password Manager - $12/month'],
       link: '/micro-saas-services'
     },
     {
@@ -77,30 +53,16 @@ export default function HomePage() {
       description: 'Transform your business for the digital age with comprehensive digital transformation services.',
       benefits: ['Process Automation - $2,000/month', 'Digital Workforce - $1,500/month', 'Customer Experience - $1,800/month', 'Data Strategy - $2,500/month'],
       link: '/digital-transformation'
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-59b6
     }
   ]
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Zion Tech Group - Advanced AI and IT Solutions</title>
         <meta name="description" content="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses." />
       </Helmet>
       
-<<<<<<< HEAD
-      <Navigation />
-      
-      <main>
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Advanced <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">AI & IT Solutions</span>
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform your business with cutting-edge artificial intelligence, cloud computing, and digital transformation services.
-=======
       {/* Hero Section */}
       <section className="pt-20 px-4 py-12 sm:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto">
@@ -182,51 +144,26 @@ export default function HomePage() {
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4">Ready to Transform Your Business?</h2>
               <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
                 Let's discuss how our AI and IT solutions can drive your success.
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-59b6
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
+                <Link
+                  to="/contact"
                   className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center justify-center"
                 >
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
-                </a>
-                <a
-                  href="/services"
+                </Link>
+                <Link
+                  to="/ai-services"
                   className="border border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
                 >
                   Our Services
-                </a>
+                </Link>
               </div>
             </div>
           </div>
-        </section>
-
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                We deliver innovative technology solutions that drive growth and efficiency for businesses worldwide.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="flex items-center mb-4">
-                    {feature.icon}
-                    <h3 className="text-xl font-semibold text-gray-900 ml-3">{feature.title}</h3>
-                  </div>
-                  <p className="text-gray-600">{feature.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      </main>
-      
-      <Footer />
+        </div>
+      </section>
     </div>
   )
 }

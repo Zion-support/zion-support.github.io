@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { Mail, Phone, MapPin, ArrowRight } from 'lucide-react'
-
-export default function Footer() {
-  return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div>
-            <div className="flex items-center mb-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mr-2">
-                <span className="text-white font-bold text-sm">Z</span>
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud, Shield, Globe, Database, Code, Smartphone } from 'lucide-react';
@@ -24,7 +9,9 @@ export default function Footer() {
     { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard' },
     { name: 'AI Email Assistant', path: '/ai-email-assistant' },
     { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
-    { name: 'AI Automation Suite', path: '/ai-automation' }
+    { name: 'AI Automation Suite', path: '/ai-automation' },
+    { name: 'AI Quantum Computing', path: '/ai-quantum-computing' },
+    { name: 'AI Robotics & Automation', path: '/ai-robotics-automation' }
   ];
 
   const itServices = [
@@ -33,7 +20,7 @@ export default function Footer() {
     { name: 'DevOps & CI/CD', path: '/devops-cicd' },
     { name: 'Data Analytics', path: '/data-analytics' },
     { name: 'Mobile Development', path: '/mobile-development' },
-    { name: 'Blockchain Solutions', path: '/blockchain' }
+    { name: 'Blockchain & Web3', path: '/blockchain-web3-solutions' }
   ];
 
   const microSaasServices = [
@@ -42,7 +29,8 @@ export default function Footer() {
     { name: 'AI Password Manager', path: '/ai-password-manager' },
     { name: 'AI Invoice Generator', path: '/ai-invoice-generator' },
     { name: 'AI Health Tracker', path: '/ai-health-tracker' },
-    { name: 'AI Smart Calendar', path: '/ai-smart-calendar' }
+    { name: 'AI Smart Calendar', path: '/ai-smart-calendar' },
+    { name: 'AI Personal Assistant Suite', path: '/ai-personal-assistant-suite' }
   ];
 
   const quickLinks = [
@@ -81,15 +69,12 @@ export default function Footer() {
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">Z</span>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-59b6
               </div>
               <span className="text-xl font-bold">Zion Tech Group</span>
             </div>
             <p className="text-gray-400 mb-4">
               Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.
             </p>
-<<<<<<< HEAD
-=======
             <div className="flex space-x-4">
               <a href="https://github.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
                 <Github className="w-5 h-5" />
@@ -101,44 +86,8 @@ export default function Footer() {
                 <Twitter className="w-5 h-5" />
               </a>
             </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-59b6
           </div>
 
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
-            <ul className="space-y-2">
-              <li><Link to="/ai-services" className="text-gray-400 hover:text-white transition-colors">AI Services</Link></li>
-              <li><Link to="/it-services" className="text-gray-400 hover:text-white transition-colors">IT Services</Link></li>
-              <li><Link to="/cloud-services" className="text-gray-400 hover:text-white transition-colors">Cloud Services</Link></li>
-              <li><Link to="/micro-saas-services" className="text-gray-400 hover:text-white transition-colors">Micro SAAS</Link></li>
-            </ul>
-          </div>
-
-<<<<<<< HEAD
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
-            <ul className="space-y-2">
-              <li><Link to="/about" className="text-gray-400 hover:text-white transition-colors">About Us</Link></li>
-              <li><Link to="/contact" className="text-gray-400 hover:text-white transition-colors">Contact</Link></li>
-              <li><Link to="/services" className="text-gray-400 hover:text-white transition-colors">All Services</Link></li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
-            <div className="space-y-3">
-              <div className="flex items-center">
-                <Mail className="w-4 h-4 text-purple-400 mr-2" />
-                <span className="text-gray-400">info@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center">
-                <Phone className="w-4 h-4 text-purple-400 mr-2" />
-                <span className="text-gray-400">+1 (555) 123-4567</span>
-              </div>
-              <div className="flex items-center">
-                <MapPin className="w-4 h-4 text-purple-400 mr-2" />
-                <span className="text-gray-400">New York, NY</span>
-=======
           {/* AI Services */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">AI Services</h3>
@@ -223,18 +172,11 @@ export default function Footer() {
               <div>
                 <p className="text-sm text-gray-400">Location</p>
                 <p className="text-white font-medium">364 E Main St STE 1008<br />Middletown DE 19709</p>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-59b6
               </div>
             </div>
           </div>
         </div>
 
-<<<<<<< HEAD
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p className="text-gray-400">
-            © 2024 Zion Tech Group. All rights reserved.
-          </p>
-=======
         {/* Newsletter Signup */}
         <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-lg p-6 mb-8">
           <div className="text-center">
@@ -275,7 +217,6 @@ export default function Footer() {
               </p>
             </div>
           </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-59b6
         </div>
       </div>
     </footer>
