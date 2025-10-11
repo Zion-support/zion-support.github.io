@@ -25,7 +25,7 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   enableHighContrast = true,
   enableFocusManagement = true
 }) => {
-  const [settings, setSettings] = useState</EnhancedAccessibilityProps><AccessibilitySettings>({
+  const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
     reducedMotion: false,
     fontSize: 'medium',
@@ -93,7 +93,7 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
     }
   };
 
-  const updateSettings = (newSettings: Partial</AccessibilitySettings><AccessibilitySettings>) => {
+  const updateSettings = (newSettings: Partial<AccessibilitySettings>) => {
     const updatedSettings = { ...settings, ...newSettings }
     setSettings(updatedSettings);
     applyAccessibilitySettings(updatedSettings);
