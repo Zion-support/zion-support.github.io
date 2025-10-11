@@ -8,7 +8,7 @@ import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, Users, Globe,
 // Loading skeleton component
 const ServiceCardSkeleton = () => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
-    </div><div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
+    <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
     <div className="h-4 bg-gray-200 rounded mb-2"></div>
     <div className="h-4 bg-gray-200 rounded w-5/6"></div>
   </div>
@@ -17,7 +17,7 @@ const ServiceCardSkeleton = () => (
 // Content promotion banner component
 const ContentPromotionBanner = () => (
   <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-4 text-center">
-    </div><p className="text-sm font-medium">
+    <p className="text-sm font-medium">
       🚀 New: AI-Powered Business Solutions - Transform Your Operations Today!
     </p>
   </div>

@@ -105,10 +105,6 @@ const Footer: React.FC = memo(() => {
     { name: 'Consultation', url: '/consultation' },
     { name: 'Custom Development', url: '/custom-software' }
   ]
-'use client'
-import React from 'react'
-import Link from 'next/link'
-import { Brain, Mail, Phone, MapPin, ArrowRight } from 'lucide-react'
 
 const Footer: React.FC = () => {
   return (
