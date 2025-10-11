@@ -1,8 +1,7 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 import { Search, Calendar, User, Clock, ArrowRight, Tag } from 'lucide-react';
 
 interface BlogPost {
@@ -24,7 +23,7 @@ const BlogPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>([]);
 
-  const blogPosts: BlogPost[] = [
+  const blogPosts: BlogPost[] = useMemo(() => [
     {
       id: '1',
       title: 'The Future of AI in Enterprise Solutions',
@@ -64,7 +63,7 @@ const BlogPage: React.FC = () => {
       image: '/api/placeholder/400/200',
       featured: true
     }
-  ];
+  ], []);
 
   const categories = ['all', 'AI', 'Cloud', 'Security', 'Development', 'DevOps'];
 
@@ -84,7 +83,7 @@ const BlogPage: React.FC = () => {
     }
 
     setFilteredPosts(filtered);
-  }, [searchTerm, selectedCategory]);
+  }, [searchTerm, selectedCategory, blogPosts]);
 
   const handleSearch = (value: string) => {
     setSearchTerm(value);
