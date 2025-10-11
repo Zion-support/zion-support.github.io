@@ -1,7 +1,7 @@
 import React from 'react';
 import { CheckCircle, ArrowRight, Zap, Shield, Globe } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import SEOHead from './components/SEOHead';
 
 const HomePage: React.FC = () => {
   const features = [
@@ -44,11 +44,13 @@ const HomePage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-        <meta name="description" content="Leading provider of AI-powered solutions, 5G implementation, and enterprise IT services. Transform your business with cutting-edge technology." />
-        <meta name="keywords" content="AI solutions, 5G implementation, IT services, digital transformation, enterprise technology" />
-      </Helmet>
+      <SEOHead
+        title="Zion Tech Group - Advanced AI and IT Solutions | 300% ROI Guaranteed"
+        description="Leading provider of AI-powered solutions, 5G implementation, and enterprise IT services. Transform your business with cutting-edge technology and guaranteed ROI. Contact us at +1 302 464 0950."
+        keywords="AI solutions, 5G implementation, IT services, digital transformation, enterprise technology, artificial intelligence, machine learning, automation, cloud migration, cybersecurity, Delaware, Middletown"
+        url="https://ziontechgroup.com"
+        type="website"
+      />
       
       {/* Hero Section */}
       <section className="pt-20 px-4 py-12 sm:py-16 lg:py-20">
