@@ -49,10 +49,15 @@ const Footer: React.FC = memo(() => {
   ];
 
   return (
-    <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
+    <footer 
+      id="footer"
+      className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden"
+      role="contentinfo"
+      aria-label="Site footer"
+    >
       {/* Futuristic Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-500/10 via-transparent to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5" aria-hidden="true"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-500/10 via-transparent to-transparent" aria-hidden="true"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
@@ -102,12 +107,13 @@ const Footer: React.FC = memo(() => {
 
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400">Services</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2" role="list" aria-label="Service links">
               {serviceLinks.map((link, index) => (
-                <li key={index}>
+                <li key={index} role="listitem">
                   <Link
                     to={link.url}
-                    className="text-gray-300 hover:text-cyan-400 text-sm transition-colors"
+                    className="text-gray-300 hover:text-cyan-400 text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-800 rounded px-1 py-0.5"
+                    aria-label={`Learn more about ${link.name}`}
                   >
                     {link.name}
                   </Link>

@@ -72,15 +72,24 @@ const Navigation: React.FC = () => {
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-      isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-2xl border-b border-cyan-500/20' : 'bg-transparent'
-    }`}>
+    <nav 
+      id="navigation"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-2xl border-b border-cyan-500/20' : 'bg-transparent'
+      }`}
+      role="navigation"
+      aria-label="Main navigation"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center space-x-3 group">
-              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/25">
+            <Link 
+              to="/" 
+              className="flex items-center space-x-3 group focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-lg p-1"
+              aria-label="Zion Tech Group - Go to homepage"
+            >
+              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/25" aria-hidden="true">
                 <Brain className="w-6 h-6 text-white" />
               </div>
               <div className="flex flex-col">
@@ -91,21 +100,40 @@ const Navigation: React.FC = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
-            <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+          <div className="hidden lg:flex items-center space-x-8" role="menubar">
+            <Link 
+              to="/" 
+              className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded px-2 py-1"
+              role="menuitem"
+              aria-label="Go to homepage"
+            >
               Home
             </Link>
-            <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link 
+              to="/about" 
+              className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded px-2 py-1"
+              role="menuitem"
+              aria-label="Learn about our company"
+            >
               About
             </Link>
             
             {/* Services Dropdown */}
             <div className="relative group">
-              <button className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium flex items-center">
+              <button 
+                className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium flex items-center focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded px-2 py-1"
+                aria-expanded={servicesOpen}
+                aria-haspopup="true"
+                aria-label="Services menu"
+              >
                 Services
-                <ChevronDown className="w-4 h-4 ml-1" />
+                <ChevronDown className="w-4 h-4 ml-1" aria-hidden="true" />
               </button>
-              <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-lg rounded-lg shadow-xl border border-cyan-500/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+              <div 
+                className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-lg rounded-lg shadow-xl border border-cyan-500/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50"
+                role="menu"
+                aria-label="Services submenu"
+              >
                 <div className="p-6">
                   <div className="grid grid-cols-1 gap-4">
                     <div>
@@ -221,39 +249,95 @@ const Navigation: React.FC = () => {
           <div className="lg:hidden">
             <button
               onClick={toggleMenu}
-              className="text-gray-300 hover:text-white p-2 rounded-md transition-colors"
+              className="text-gray-300 hover:text-white p-2 rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900"
+              aria-expanded={isOpen}
+              aria-controls="mobile-menu"
+              aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? <X className="h-6 w-6" aria-hidden="true" /> : <Menu className="h-6 w-6" aria-hidden="true" />}
             </button>
           </div>
         </div>
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20">
+          <div 
+            id="mobile-menu"
+            className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20"
+            role="menu"
+            aria-label="Mobile navigation menu"
+          >
             <div className="pt-4 space-y-4">
-              <Link to="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+              <Link 
+                to="/" 
+                className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded px-2 py-1" 
+                onClick={closeAllMenus}
+                role="menuitem"
+                aria-label="Go to homepage"
+              >
                 Home
               </Link>
-              <Link to="/about" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+              <Link 
+                to="/about" 
+                className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded px-2 py-1" 
+                onClick={closeAllMenus}
+                role="menuitem"
+                aria-label="Learn about our company"
+              >
                 About
               </Link>
-              <Link to="/services" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+              <Link 
+                to="/services" 
+                className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded px-2 py-1" 
+                onClick={closeAllMenus}
+                role="menuitem"
+                aria-label="View our services"
+              >
                 Services
               </Link>
-              <Link to="/pricing" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+              <Link 
+                to="/pricing" 
+                className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded px-2 py-1" 
+                onClick={closeAllMenus}
+                role="menuitem"
+                aria-label="View pricing information"
+              >
                 Pricing
               </Link>
-              <Link to="/case-studies" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+              <Link 
+                to="/case-studies" 
+                className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded px-2 py-1" 
+                onClick={closeAllMenus}
+                role="menuitem"
+                aria-label="View our case studies"
+              >
                 Case Studies
               </Link>
-              <Link to="/blog" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+              <Link 
+                to="/blog" 
+                className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded px-2 py-1" 
+                onClick={closeAllMenus}
+                role="menuitem"
+                aria-label="Read our blog"
+              >
                 Blog
               </Link>
-              <Link to="/tutorials" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+              <Link 
+                to="/tutorials" 
+                className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded px-2 py-1" 
+                onClick={closeAllMenus}
+                role="menuitem"
+                aria-label="View tutorials"
+              >
                 Tutorials
               </Link>
-              <Link to="/contact" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+              <Link 
+                to="/contact" 
+                className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded px-2 py-1" 
+                onClick={closeAllMenus}
+                role="menuitem"
+                aria-label="Contact us"
+              >
                 Contact
               </Link>
 
