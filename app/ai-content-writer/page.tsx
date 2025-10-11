@@ -5,9 +5,12 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-529a
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fd18
 const AIContentWriterPage: React.FC = () => {
   const features = [
     {
@@ -33,6 +36,7 @@ const AIContentWriterPage: React.FC = () => {
       description: 'AI-powered creative tools to enhance your content quality.',
       benefits: ['Ideas Generation', 'Headline Creation', 'Content Expansion', 'Creative Writing'],
       icon: <Sparkles className="w-8 h-8 text-orange-400" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 const AIContentWriterPage: React.FC = () => {
   const features = [
@@ -69,10 +73,13 @@ const AIContentWriterPage: React.FC = () => {
 =======
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-529a
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fd18
     }
   ];
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <>
       <Helmet>
@@ -99,6 +106,8 @@ const AIContentWriterPage: React.FC = () => {
               Professional AI content writer solutions by Zion Tech Group. Advanced AI and IT solutions for your business.
 <>
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fd18
     <>
 >>>>>>> cursor/fix-errors-and-merge-to-main-529a
       <Helmet>
@@ -123,6 +132,7 @@ const AIContentWriterPage: React.FC = () => {
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Professional AI content writing solutions by Zion Tech Group. Advanced AI and IT solutions for your business.
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -177,6 +187,8 @@ const AIContentWriterPage: React.FC = () => {
       </main>
       <Footer />
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fd18
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">
@@ -195,7 +207,7 @@ const AIContentWriterPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Advanced AI Content Creation
+                Advanced Content Writing Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Comprehensive AI content writing platform designed for modern businesses.
@@ -243,17 +255,27 @@ const AIContentWriterPage: React.FC = () => {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 
         <Footer />
       </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-529a
+=======
+        
+        <Footer />
+      </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-fd18
     </>
   );
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default AIContentWriterPage;
 =======
 =======
 export default AIContentWriterPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-529a
+=======
+export default AIContentWriterPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-fd18

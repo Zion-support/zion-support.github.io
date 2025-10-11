@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { CheckCircle, ArrowRight } from 'lucide-react';
 
 =======
@@ -10,14 +11,20 @@ import { CheckCircle, ArrowRight, Settings, Cpu, Database, Monitor } from 'lucid
 =======
 import { CheckCircle, ArrowRight, Settings, Cpu, Database, Monitor } from 'lucide-react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-529a
+=======
+import { CheckCircle, ArrowRight, Settings, Cpu, Database, Monitor } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-fd18
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-529a
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fd18
 const AIApiManagerPage: React.FC = () => {
   const features = [
     {
@@ -43,6 +50,7 @@ const AIApiManagerPage: React.FC = () => {
       description: 'Comprehensive monitoring and performance analytics.',
       benefits: ['Real-time Metrics', 'Performance Tracking', 'Error Monitoring', 'Usage Analytics'],
       icon: <Monitor className="w-8 h-8 text-orange-400" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 const AIAPIManagerPage: React.FC = () => {
   const features = [
@@ -79,6 +87,8 @@ const AIAPIManagerPage: React.FC = () => {
 =======
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-529a
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fd18
     }
   ];
 
@@ -110,8 +120,12 @@ const AIAPIManagerPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+<<<<<<< HEAD
                 Powerful API Manager Features
 >>>>>>> cursor/fix-errors-and-merge-to-main-529a
+=======
+                Advanced API Management Features
+>>>>>>> cursor/fix-errors-and-merge-to-main-fd18
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Comprehensive AI API management platform designed for modern businesses.
@@ -155,6 +169,7 @@ const AIAPIManagerPage: React.FC = () => {
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
                   Learn More
                 </button>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Comprehensive AI API Management
@@ -229,11 +244,17 @@ const AIAPIManagerPage: React.FC = () => {
       </main>
       <Footer />
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fd18
               </div>
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> cursor/fix-errors-and-merge-to-main-fd18
         <Footer />
       </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-529a
@@ -241,6 +262,7 @@ const AIAPIManagerPage: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default AIApiManagerPage;
 export default AIAPIManagerPage;
@@ -252,3 +274,6 @@ export default AIApiManagerPage;
 =======
 export default AIApiManagerPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-529a
+=======
+export default AIApiManagerPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-fd18

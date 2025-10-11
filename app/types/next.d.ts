@@ -1,9 +1,12 @@
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 =======
 // Type definitions for Next.js
 >>>>>>> cursor/fix-errors-and-merge-to-main-529a
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fd18
 declare global {
   namespace NodeJS {
     interface ProcessEnv {
@@ -19,7 +22,10 @@ declare global {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-529a
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fd18
 declare module 'next' {
   interface NextRequest {
     user?: {
@@ -34,6 +40,7 @@ declare module '*.svg' {
   export default content;
 }
 
+<<<<<<< HEAD
 declare module '*.png' {
   const content: string;
   export default content;
@@ -73,3 +80,6 @@ declare module '*.tiff' {
   const content: string;
   export default content;
 }
+=======
+export {};
+>>>>>>> cursor/fix-errors-and-merge-to-main-fd18
