@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Smartphone, CheckCircle, TrendingUp } from 'lucide-react';
+import { ChevronDown, Phone, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, ShoppingCart, CreditCard, Heart, Stethoscope, Briefcase, Calculator, Calendar, Smartphone } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isAIOpen, setIsAIOpen] = useState(false);
-  const [isITOpen, setIsITOpen] = useState(false);
-  const [isSpecializedOpen, setIsSpecializedOpen] = useState(false);
+  // Removed unused state variables
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -22,9 +20,6 @@ const Navigation: React.FC = () => {
   const closeAllMenus = () => {
     setIsMenuOpen(false);
     setIsServicesOpen(false);
-    setIsAIOpen(false);
-    setIsITOpen(false);
-    setIsSpecializedOpen(false);
   };
 
   const toggleMenu = () => {
@@ -36,35 +31,6 @@ const Navigation: React.FC = () => {
 
   const toggleServices = () => {
     setIsServicesOpen(!isServicesOpen);
-    if (isServicesOpen) {
-      setIsAIOpen(false);
-      setIsITOpen(false);
-      setIsSpecializedOpen(false);
-    }
-  };
-
-  const toggleAI = () => {
-    setIsAIOpen(!isAIOpen);
-    if (isAIOpen) {
-      setIsITOpen(false);
-      setIsSpecializedOpen(false);
-    }
-  };
-
-  const toggleIT = () => {
-    setIsITOpen(!isITOpen);
-    if (isITOpen) {
-      setIsAIOpen(false);
-      setIsSpecializedOpen(false);
-    }
-  };
-
-  const toggleSpecialized = () => {
-    setIsSpecializedOpen(!isSpecializedOpen);
-    if (isSpecializedOpen) {
-      setIsAIOpen(false);
-      setIsITOpen(false);
-    }
   };
 
   const microSAASServices = [
@@ -121,20 +87,7 @@ const Navigation: React.FC = () => {
     { name: 'Productivity Solutions', href: '/productivity', icon: BarChart }
   ];
 
-  const specializedServices = [
-    { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu },
-    { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Settings },
-    { name: 'Blockchain & Web3', href: '/blockchain', icon: Lock },
-    { name: 'IoT & Edge Computing', href: '/iot-edge', icon: Globe },
-    { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart },
-    { name: 'Robotics Solutions', href: '/robotics', icon: Settings },
-    { name: 'Enterprise Solutions', href: '/enterprise', icon: Building },
-    { name: 'Analytics Tools', href: '/analytics-tools', icon: BarChart3 },
-    { name: 'Business Apps', href: '/business-apps', icon: Briefcase },
-    { name: 'Expense Tracker Pro', href: '/expense-tracker', icon: Calculator },
-    { name: 'Task Manager Pro', href: '/task-manager-pro', icon: CheckCircle },
-    { name: 'Smart Analytics', href: '/smart-analytics', icon: TrendingUp }
-  ];
+  // Removed specializedServices as it was unused
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
