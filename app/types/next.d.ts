@@ -72,7 +72,11 @@ const Next.dPage: React.FC = () => {
   alternates?: {
     canonical?: string;
     languages?: Record<string, string>;
+<<<<<<< HEAD
+  };
+=======
   }
+>>>>>>> origin/main
   openGraph?: {
     title?: string;
     description?: string;
@@ -247,6 +251,13 @@ export interface NextPageProps {
 }
 
 <<<<<<< HEAD
+export interface MetadataRouteSitemap extends MetadataRoute {
+  url: string;
+  lastModified?: string | Date;
+  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
+  priority?: number;
+=======
+<<<<<<< HEAD
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -349,6 +360,7 @@ export interface NextPageProps {
       </section>
     </div>
   );
+>>>>>>> origin/main
 }
 
 export default NextPage;

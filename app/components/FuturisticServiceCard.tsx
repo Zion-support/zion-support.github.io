@@ -1,5 +1,19 @@
 <<<<<<< HEAD
 'use client';
+import React, { useState } from 'react';
+import { ArrowRight, Star, Zap, CheckCircle } from 'lucide-react';
+
+interface FuturisticServiceCardProps {
+  title: string;
+  description: string;
+  features: string[];
+  price: string;
+  popular?: boolean;
+  icon: React.ComponentType<{ className?: string }>;
+  onSelect: () => void;
+=======
+<<<<<<< HEAD
+'use client';
 import React from 'react';
 import {Helmet}}from 'react-helmet-async';
 import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
@@ -99,6 +113,7 @@ return (
           </div>
         </div>
   ),
+>>>>>>> origin/main
 }
 export default FuturisticServiceCardPage
   return (

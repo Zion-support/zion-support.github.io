@@ -1,8 +1,15 @@
 <<<<<<< HEAD
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Zap, Settings, Shield, Clock, CheckCircle, ArrowRight, Phone, Mail, Star, TrendingUp, Users, Award } from 'lucide-react';
+import Header from '../components/Header';
+=======
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import {Helmet}}from 'react-helmet-async';
 import Navigation from '../components/Navigation';
+>>>>>>> origin/main
 import Footer from '../components/Footer';
 import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';
 const AiAutomationPage: React.FC = () => {,
@@ -238,7 +245,10 @@ const AIAutomationPage: React.FC = () => {
           </button>
         </div>
       </section>
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/main
       <Footer />
     </div>
   )
