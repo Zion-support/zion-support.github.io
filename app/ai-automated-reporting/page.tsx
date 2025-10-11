@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
@@ -96,6 +97,9 @@ const AiAutomatedReportingPage: React.FC = () => {
 import React from 'react'
 import { CheckCircle } from 'lucide-react'
 export default function PagePage() {
+=======
+export default function AiAccountingAssistantPage() {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-35c1
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="pt-20 px-4 py-20">
@@ -112,6 +116,7 @@ export default function PagePage() {
     </div>
   )
 }
+<<<<<<< HEAD
 'use client'
 import React from 'react'
 import {Helmet} from 'react-helmet-async'
@@ -310,3 +315,5 @@ export default AiAutomatedReportingPage;
 =======
 export default AiAutomatedReportingPage
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5ef7
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-35c1
