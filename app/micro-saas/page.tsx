@@ -6,14 +6,14 @@ import { Link } from 'react-router-dom';
 import { CheckCircle, ArrowRight, Zap, Star, Users, TrendingUp, Shield, Cloud, BarChart3, MessageSquare } from 'lucide-react';
 
 interface MicroSaasProduct {
-  id: string;
-  icon: React.ComponentType<any>;
-  title: string;
-  description: string;
-  features: string[];
-  price: string;
-  users: string;
-  popular: boolean;
+  id: value,
+        icon: React.ComponentType<any>;
+  title: value,
+        description: string;
+  features: value,
+        price: string;
+  users: value,
+        popular: boolean;
   category: string;
 }
 
@@ -141,8 +141,7 @@ const MicroSaasPage: React.FC = () => {
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-              <Link
-                to="/pricing"
+                <Link to="/pricing"
                 className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
               >
                 View Pricing
@@ -251,8 +250,7 @@ const MicroSaasPage: React.FC = () => {
                 <Zap className="mr-2 h-5 w-5" />
                 Start Free Trial
               </Link>
-              <Link
-                to="/pricing"
+                <Link to="/pricing"
                 className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
               >
                 View All Pricing

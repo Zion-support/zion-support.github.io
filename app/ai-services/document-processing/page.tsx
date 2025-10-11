@@ -76,11 +76,8 @@ const PagePage: React.FC = () => {
                 </button>
               </div>
             </div>
-          </div>
-        </div>
-      </main>
-      
-      <Footer />
+          </main>
+        <Footer />
     </div>
   );
 };

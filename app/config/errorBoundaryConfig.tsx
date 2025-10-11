@@ -60,10 +60,10 @@ import React from 'react';export interface ErrorBoundaryConfig {/**
    * Custom error messages by error type*/
   customMessages: Record<string, string>;/**
    * Fallback UI components*/
-  fallbackComponents: {}
-    default: React.ComponentType<{ error: Error; resetError: () => void }>
-    network: React.ComponentType<{ error: Error; resetError: () => void }>
-    notFound: React.ComponentType<{ error: Error; resetError: () => void }>}}
+  fallbackComponents: value,
+        default: React.ComponentType<{ error: value,
+        network: React.ComponentType<{ error: value,
+        notFound: React.ComponentType<{ error: Error; resetError: () => void }>}}
 /**
  * Default error messages
  */
@@ -86,8 +86,8 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {return {
     showErrorOverlay: isDevelopment,
     maxStoredErrors: 50,
     customMessages: DEFAULT_ERROR_MESSAGES,
-    fallbackComponents: {
-      default: DefaultErrorFallback,
+    fallbackComponents: value,
+        default: DefaultErrorFallback,
       network: NetworkErrorFallback,
       notFound: NotFoundFallback,
     },

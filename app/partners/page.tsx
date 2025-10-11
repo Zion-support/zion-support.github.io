@@ -4,10 +4,10 @@ import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ExternalLink, Award, Handshake, TrendingUp } from 'lucide-react';
 
 interface Partner {
-  name: string;
-  logo: string;
-  description: string;
-  category: string;
+  name: value,
+        logo: string;
+  description: value,
+        category: string;
   website?: string;
   tier: 'strategic' | 'preferred' | 'certified';
 }

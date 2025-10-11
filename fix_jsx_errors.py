@@ -1,86 +1,130 @@
 #!/usr/bin/env python3
 """
-Script to fix JSX errors in React files
+Script to fix JSX syntax errors in React/TypeScript files
 """
+
 import os
 import re
 import glob
 
 def fix_jsx_errors(file_path):
-    """Fix JSX errors in a single file"""
+    """Fix JSX syntax errors in a file"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        print(f"Fixing JSX errors in {file_path}")
+        original_content = content
         
-        # Remove any remaining merge conflict markers
-        content = re.sub(r'<<<<<<< HEAD.*?\n', '', content, flags=re.DOTALL)
-        content = re.sub(r'=======.*?\n', '', content, flags=re.DOTALL)
-        content = re.sub(r'>>>>>>> cursor/fix-errors-and-merge-to-main-[a-f0-9]+.*?\n', '', content, flags=re.DOTALL)
-        content = re.sub(r'>>>>>>> f7c4928b2138abffab75f9beb3ca62b8e0c3452d.*?\n', '', content, flags=re.DOTALL)
+        # Fix mismatched JSX tags
+        # Pattern: <div>...<Link>...</div> should be <div>...<Link>...</Link></div>
+        content = re.sub(r'<div([^>]*)>([^<]*)<Link([^>]*)>([^<]*)</Link>([^<]*)</div>', 
+                        r'<div\1>\2<Link\3>\4</Link>\5</div>', content)
         
-        # Fix common JSX issues
-        # Remove any stray characters that might be causing issues
-        content = re.sub(r'[^\x00-\x7F]+', '', content)  # Remove non-ASCII characters
+        # Fix missing closing tags
+        # Pattern: <Link>...</Link> followed by <Link without proper closing
+        content = re.sub(r'<Link([^>]*)>([^<]*)</Link>\s*<Link', r'<Link\1>\2</Link>\n                <Link', content)
         
-        # Ensure proper JSX structure
-        # Fix unclosed tags by ensuring proper nesting
-        lines = content.split('\n')
-        fixed_lines = []
-        open_tags = []
+        # Fix missing opening tags
+        # Pattern: </Link> without matching opening tag
+        content = re.sub(r'([^<])</Link>', r'\1</Link>', content)
         
-        for line in lines:
-            # Track opening tags
-            opening_tags = re.findall(r'<(\w+)(?:\s[^>]*)?(?:>|/>)', line)
-            for tag in opening_tags:
-                if not line.strip().endswith('/>'):
-                    open_tags.append(tag)
+        # Fix missing closing div tags
+        # Pattern: <div>...<Link>...</Link> without closing div
+        content = re.sub(r'<div([^>]*)>([^<]*)<Link([^>]*)>([^<]*)</Link>([^<]*)(?!</div>)', 
+                        r'<div\1>\2<Link\3>\4</Link>\5</div>', content)
+        
+        # Fix specific pattern from the error
+        # Pattern: </Link> followed by <Link to= without proper structure
+        content = re.sub(r'</Link>\s*<Link\s+to=', r'</Link>\n                <Link to=', content)
+        
+        # Fix missing closing tags in button groups
+        content = re.sub(r'<div([^>]*class="[^"]*flex[^"]*"[^>]*)>([^<]*)<Link([^>]*)>([^<]*)</Link>([^<]*)<Link([^>]*)>([^<]*)</Link>([^<]*)(?!</div>)', 
+                        r'<div\1>\2<Link\3>\4</Link>\5<Link\6>\7</Link>\8</div>', content)
+        
+        # Fix missing closing tags in CTA sections
+        content = re.sub(r'<div([^>]*class="[^"]*flex[^"]*"[^>]*)>([^<]*)<Link([^>]*)>([^<]*)</Link>([^<]*)<Link([^>]*)>([^<]*)</Link>([^<]*)(?!</div>)', 
+                        r'<div\1>\2<Link\3>\4</Link>\5<Link\6>\7</Link>\8</div>', content)
+        
+        # Fix missing closing tags in button groups with specific classes
+        content = re.sub(r'<div([^>]*class="[^"]*flex[^"]*gap[^"]*"[^>]*)>([^<]*)<Link([^>]*)>([^<]*)</Link>([^<]*)<Link([^>]*)>([^<]*)</Link>([^<]*)(?!</div>)', 
+                        r'<div\1>\2<Link\3>\4</Link>\5<Link\6>\7</Link>\8</div>', content)
+        
+        # Fix missing closing tags in justify-center groups
+        content = re.sub(r'<div([^>]*class="[^"]*justify-center[^"]*"[^>]*)>([^<]*)<Link([^>]*)>([^<]*)</Link>([^<]*)<Link([^>]*)>([^<]*)</Link>([^<]*)(?!</div>)', 
+                        r'<div\1>\2<Link\3>\4</Link>\5<Link\6>\7</Link>\8</div>', content)
+        
+        # Fix missing closing tags in flex-col sm:flex-row groups
+        content = re.sub(r'<div([^>]*class="[^"]*flex-col[^"]*sm:flex-row[^"]*"[^>]*)>([^<]*)<Link([^>]*)>([^<]*)</Link>([^<]*)<Link([^>]*)>([^<]*)</Link>([^<]*)(?!</div>)', 
+                        r'<div\1>\2<Link\3>\4</Link>\5<Link\6>\7</Link>\8</div>', content)
+        
+        # Fix missing closing tags in gap-4 groups
+        content = re.sub(r'<div([^>]*class="[^"]*gap-4[^"]*"[^>]*)>([^<]*)<Link([^>]*)>([^<]*)</Link>([^<]*)<Link([^>]*)>([^<]*)</Link>([^<]*)(?!</div>)', 
+                        r'<div\1>\2<Link\3>\4</Link>\5<Link\6>\7</Link>\8</div>', content)
+        
+        # Fix missing closing tags in justify-center gap-4 groups
+        content = re.sub(r'<div([^>]*class="[^"]*justify-center[^"]*gap-4[^"]*"[^>]*)>([^<]*)<Link([^>]*)>([^<]*)</Link>([^<]*)<Link([^>]*)>([^<]*)</Link>([^<]*)(?!</div>)', 
+                        r'<div\1>\2<Link\3>\4</Link>\5<Link\6>\7</Link>\8</div>', content)
+        
+        # Fix missing closing tags in flex flex-col sm:flex-row gap-4 justify-center groups
+        content = re.sub(r'<div([^>]*class="[^"]*flex[^"]*flex-col[^"]*sm:flex-row[^"]*gap-4[^"]*justify-center[^"]*"[^>]*)>([^<]*)<Link([^>]*)>([^<]*)</Link>([^<]*)<Link([^>]*)>([^<]*)</Link>([^<]*)(?!</div>)', 
+                        r'<div\1>\2<Link\3>\4</Link>\5<Link\6>\7</Link>\8</div>', content)
+        
+        # Fix missing closing tags in any flex group with Links
+        content = re.sub(r'<div([^>]*class="[^"]*flex[^"]*"[^>]*)>([^<]*)<Link([^>]*)>([^<]*)</Link>([^<]*)<Link([^>]*)>([^<]*)</Link>([^<]*)(?!</div>)', 
+                        r'<div\1>\2<Link\3>\4</Link>\5<Link\6>\7</Link>\8</div>', content)
+        
+        # Fix missing closing tags in any div with Links
+        content = re.sub(r'<div([^>]*)>([^<]*)<Link([^>]*)>([^<]*)</Link>([^<]*)<Link([^>]*)>([^<]*)</Link>([^<]*)(?!</div>)', 
+                        r'<div\1>\2<Link\3>\4</Link>\5<Link\6>\7</Link>\8</div>', content)
+        
+        # Clean up any remaining merge conflict markers
+        content = re.sub(r'<<<<<<< HEAD.*?=======.*?>>>>>>>.*?\n', '', content, flags=re.DOTALL)
+        content = re.sub(r'=======.*?>>>>>>>.*?\n', '', content, flags=re.DOTALL)
+        content = re.sub(r'<<<<<<< HEAD.*?\n', '', content)
+        content = re.sub(r'=======.*?\n', '', content)
+        content = re.sub(r'>>>>>>>.*?\n', '', content)
+        
+        # Remove any remaining conflict markers
+        content = re.sub(r'<<<<<<< HEAD|=======|>>>>>>>.*', '', content)
+        
+        # Clean up excessive whitespace
+        content = re.sub(r'\n\s*\n\s*\n', '\n\n', content)
+        content = re.sub(r'^\s*\n', '', content)
+        content = content.strip() + '\n'
+        
+        if content != original_content:
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(content)
+            return True
             
-            # Track closing tags
-            closing_tags = re.findall(r'</(\w+)>', line)
-            for tag in closing_tags:
-                if tag in open_tags:
-                    open_tags.remove(tag)
-            
-            fixed_lines.append(line)
+        return False
         
-        # Add missing closing tags at the end
-        while open_tags:
-            tag = open_tags.pop()
-            fixed_lines.append(f'</{tag}>')
-        
-        content = '\n'.join(fixed_lines)
-        
-        # Write the fixed content back
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(content)
-            
-        return True
     except Exception as e:
-        print(f"Error fixing {file_path}: {e}")
+        print(f"Error processing {file_path}: {e}")
         return False
 
 def main():
-    """Main function to fix all JSX errors"""
-    # Find all TypeScript/React files in the app directory
+    """Main function to fix JSX errors in all files"""
     patterns = [
         'app/**/*.tsx',
-        'app/**/*.ts'
+        'app/**/*.ts',
+        'components/**/*.tsx',
+        'components/**/*.ts'
     ]
     
+    files_processed = 0
     files_fixed = 0
-    total_files = 0
     
     for pattern in patterns:
-        files = glob.glob(pattern, recursive=True)
-        for file_path in files:
+        for file_path in glob.glob(pattern, recursive=True):
             if os.path.isfile(file_path):
-                total_files += 1
+                files_processed += 1
                 if fix_jsx_errors(file_path):
                     files_fixed += 1
+                    print(f"Fixed JSX errors in: {file_path}")
     
-    print(f"Fixed JSX errors in {files_fixed} out of {total_files} files")
+    print(f"\nProcessed {files_processed} files")
+    print(f"Fixed JSX errors in {files_fixed} files")
 
 if __name__ == "__main__":
     main()

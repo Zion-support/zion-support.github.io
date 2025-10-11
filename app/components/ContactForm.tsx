@@ -2,17 +2,17 @@ import React, { useState } from 'react'
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react'
 
 interface FormData {
-  name: string
-  email: string
-  company: string
-  phone: string
-  service: string
-  message: string
+  name: value,
+        email: string
+  company: value,
+        phone: string
+  service: value,
+        message: string
 }
 
 interface FormStatus {
-  type: 'idle' | 'loading' | 'success' | 'error'
-  message: string
+  type: value,
+        message: string
 }
 
 const ContactForm: React.FC = () => {
@@ -29,11 +29,6 @@ const ContactForm: React.FC = () => {
     type: 'idle',
     message: ''
   })
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9603
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target
@@ -42,12 +37,7 @@ const ContactForm: React.FC = () => {
       [name]: value
     }))
   }
-<<<<<<< HEAD
 
-=======
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9603
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setStatus({ type: 'loading', message: 'Sending message...' })

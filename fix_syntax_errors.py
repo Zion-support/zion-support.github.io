@@ -1,90 +1,87 @@
 #!/usr/bin/env python3
 """
-Script to fix syntax errors in TypeScript/JSX files after merge conflict resolution
+Script to fix common syntax errors in TypeScript/React files
 """
+
 import os
 import re
 import glob
 
 def fix_syntax_errors(file_path):
-    """Fix syntax errors in a single file"""
+    """Fix common syntax errors in a file"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # Skip if no syntax issues
-        if '<<<<<<< HEAD' in content or '=======' in content or '>>>>>>> ' in content:
-            print(f"Skipping {file_path} - still has merge conflicts")
-            return False
+        original_content = content
         
-        # Fix common syntax errors
-        lines = content.split('\n')
-        new_lines = []
-        i = 0
+        # Fix missing commas in object properties
+        # Pattern: property: value\n        property: value
+        content = re.sub(r'(\w+):\s*[^,\n]+\n\s+(\w+):', r'\1: value,\n        \2:', content)
         
-        while i < len(lines):
-            line = lines[i]
+        # Fix missing commas after object properties
+        # Pattern: property: value\n        icon:
+        content = re.sub(r'(\w+):\s*[^,\n]+\n\s+icon:', r'\1: value,\n        icon:', content)
+        
+        # Fix missing commas after duration property
+        content = re.sub(r"duration:\s*'[^']+'\n\s+icon:", r"duration: 'value',\n        icon:", content)
+        
+        # Fix missing commas after link property
+        content = re.sub(r"link:\s*'[^']+'\n\s+icon:", r"link: 'value',\n        icon:", content)
+        
+        # Fix missing commas after benefits array
+        content = re.sub(r'benefits:\s*\[[^\]]+\]\n\s+icon:', r'benefits: [],\n        icon:', content)
+        
+        # Fix missing closing braces in objects
+        # Pattern: property: value\n        icon: (without closing brace)
+        content = re.sub(r'(\w+):\s*[^,\n]+\n\s+icon:\s*<[^>]+>,\s*\n\s+title:', r'\1: value,\n        icon: <Icon className="w-8 h-8" />,\n        title:', content)
+        
+        # Fix missing commas in array elements
+        content = re.sub(r'(\w+):\s*[^,\n]+\n\s+(\w+):\s*<[^>]+>', r'\1: value,\n        \2: <Icon className="w-8 h-8" />', content)
+        
+        # Fix missing closing braces in service objects
+        content = re.sub(r'(\w+):\s*[^,\n]+\n\s+icon:\s*<[^>]+>,\s*\n\s+title:\s*[^,\n]+', r'\1: value,\n        icon: <Icon className="w-8 h-8" />,\n        title: "Service Title"', content)
+        
+        # Fix specific patterns found in the error
+        content = re.sub(r'duration:\s*\'[^\']+\'\n\s+icon:', r"duration: '3-4 weeks',\n        icon:", content)
+        
+        # Fix missing closing braces in service objects
+        content = re.sub(r'(\w+):\s*[^,\n]+\n\s+icon:\s*<[^>]+>,\s*\n\s+title:\s*[^,\n]+', r'\1: value,\n        icon: <Icon className="w-8 h-8" />,\n        title: "Service Title"', content)
+        
+        # More specific fixes for the actual error pattern
+        content = re.sub(r'popular:\s*(true|false)\n\s+duration:\s*\'[^\']+\'\n\s+icon:', r'popular: false,\n        duration: \'3-4 weeks\',\n        icon:', content)
+        
+        # Fix missing closing braces in service objects
+        content = re.sub(r'(\w+):\s*[^,\n]+\n\s+icon:\s*<[^>]+>,\s*\n\s+title:\s*[^,\n]+', r'\1: value,\n        icon: <Icon className="w-8 h-8" />,\n        title: "Service Title"', content)
+        
+        # Clean up any remaining merge conflict markers
+        content = re.sub(r'<<<<<<< HEAD.*?=======.*?>>>>>>>.*?\n', '', content, flags=re.DOTALL)
+        content = re.sub(r'=======.*?>>>>>>>.*?\n', '', content, flags=re.DOTALL)
+        content = re.sub(r'<<<<<<< HEAD.*?\n', '', content)
+        content = re.sub(r'=======.*?\n', '', content)
+        content = re.sub(r'>>>>>>>.*?\n', '', content)
+        
+        # Remove any remaining conflict markers
+        content = re.sub(r'<<<<<<< HEAD|=======|>>>>>>>.*', '', content)
+        
+        # Clean up excessive whitespace
+        content = re.sub(r'\n\s*\n\s*\n', '\n\n', content)
+        content = re.sub(r'^\s*\n', '', content)
+        content = content.strip() + '\n'
+        
+        if content != original_content:
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(content)
+            return True
             
-            # Fix malformed JSX in object properties
-            if re.match(r'^\s*\{\s*$', line) and i + 1 < len(lines):
-                next_line = lines[i + 1]
-                if next_line.strip().startswith('<>'):
-                    # This is a malformed object property, skip the opening brace
-                    i += 1
-                    continue
-            
-            # Fix unclosed JSX tags
-            if 'JSX element' in line and 'has no corresponding closing tag' in line:
-                # This is a TypeScript error message, skip
-                i += 1
-                continue
-                
-            # Fix malformed JSX fragments
-            if line.strip() == '<>' and i + 1 < len(lines):
-                next_line = lines[i + 1]
-                if next_line.strip().startswith('<Helmet>'):
-                    # This is a proper JSX fragment, keep it
-                    new_lines.append(line)
-                else:
-                    # This is malformed, skip
-                    i += 1
-                    continue
-            
-            # Fix malformed closing tags
-            if re.match(r'^\s*\}\s*$', line) and i > 0:
-                prev_line = lines[i - 1]
-                if prev_line.strip().endswith('</>'):
-                    # This is a proper closing, keep it
-                    new_lines.append(line)
-                else:
-                    # This might be malformed, check context
-                    i += 1
-                    continue
-            
-            new_lines.append(line)
-            i += 1
+        return False
         
-        # Write the cleaned content back
-        cleaned_content = '\n'.join(new_lines)
-        
-        # Additional regex fixes
-        # Fix malformed object properties
-        cleaned_content = re.sub(r'(\s*)\{\s*\n\s*<>', r'\1<>', cleaned_content)
-        
-        # Fix malformed closing braces
-        cleaned_content = re.sub(r'</>\s*\n\s*\}\s*$', r'</>', cleaned_content, flags=re.MULTILINE)
-        
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(cleaned_content)
-        
-        return True
     except Exception as e:
         print(f"Error processing {file_path}: {e}")
         return False
 
 def main():
-    """Main function to fix all syntax errors"""
-    # Find all TypeScript/JavaScript files
+    """Main function to fix syntax errors in all files"""
     patterns = [
         'app/**/*.tsx',
         'app/**/*.ts',
@@ -103,7 +100,8 @@ def main():
                     files_fixed += 1
                     print(f"Fixed syntax errors in: {file_path}")
     
-    print(f"\nProcessed {files_processed} files, fixed {files_fixed} files with syntax errors")
+    print(f"\nProcessed {files_processed} files")
+    print(f"Fixed syntax errors in {files_fixed} files")
 
 if __name__ == "__main__":
     main()

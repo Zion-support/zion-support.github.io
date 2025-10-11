@@ -1,46 +1,46 @@
 // Define metadata type for compatibility
 interface Metadata {
-  title: string;
-  description: string;
-  keywords: string[];
-  authors: Array<{ name: string }>;
-  creator: string;
-  publisher: string;
-  formatDetection: {
-    email: boolean;
-    address: boolean;
+  title: value,
+        description: string;
+  keywords: value,
+        authors: Array<{ name: value,
+        creator: string;
+  publisher: value,
+        formatDetection: {
+    email: value,
+        address: boolean;
     telephone: boolean;
   };
-  metadataBase: URL;
-  alternates: {
+  metadataBase: value,
+        alternates: {
     canonical: string;
   };
-  openGraph: {
-    title: string;
-    description: string;
-    url: string;
-    siteName: string;
-    images: Array<{
-      url: string;
-      width: number;
-      height: number;
-      alt: string;
+  openGraph: value,
+        title: string;
+    description: value,
+        url: string;
+    siteName: value,
+        images: Array<{
+      url: value,
+        width: number;
+      height: value,
+        alt: string;
     }>;
-    locale: string;
-    type: string;
+    locale: value,
+        type: string;
   };
-  twitter: {
-    card: string;
-    title: string;
-    description: string;
+  twitter: value,
+        card: string;
+    title: value,
+        description: string;
     images: string[];
   };
-  robots: {
-    index: boolean;
-    follow: boolean;
-    googleBot: {
-      index: boolean;
-      follow: boolean;
+  robots: value,
+        index: boolean;
+    follow: value,
+        googleBot: {
+      index: value,
+        follow: boolean;
       'max-video-preview': number;
       'max-image-preview': string;
       'max-snippet': number;
@@ -48,8 +48,8 @@ interface Metadata {
   };
 }
 
-export const metadata: Metadata = {
-  title: 'Zion Tech Group - Advanced AI and IT Solutions',
+export const metadata: value,
+        title: 'Zion Tech Group - Advanced AI and IT Solutions',
   description: 'Leading provider of AI-powered solutions, cloud architecture, and cutting-edge technology services for businesses worldwide.',
   keywords: [
     'AI solutions',
@@ -65,17 +65,17 @@ export const metadata: Metadata = {
   authors: [{ name: 'Zion Tech Group' }],
   creator: 'Zion Tech Group',
   publisher: 'Zion Tech Group',
-  formatDetection: {
-    email: false,
+  formatDetection: value,
+        email: false,
     address: false,
     telephone: false,
   },
   metadataBase: new URL('https://ziontechgroup.com'),
-  alternates: {
-    canonical: '/',
+  alternates: value,
+        canonical: '/',
   },
-  openGraph: {
-    title: 'Zion Tech Group - Advanced AI and IT Solutions',
+  openGraph: value,
+        title: 'Zion Tech Group - Advanced AI and IT Solutions',
     description: 'Leading provider of AI-powered solutions, cloud architecture, and cutting-edge technology services for businesses worldwide.',
     url: 'https://ziontechgroup.com',
     siteName: 'Zion Tech Group',
@@ -90,17 +90,17 @@ export const metadata: Metadata = {
     locale: 'en_US',
     type: 'website',
   },
-  twitter: {
-    card: 'summary_large_image',
+  twitter: value,
+        card: 'summary_large_image',
     title: 'Zion Tech Group - Advanced AI and IT Solutions',
     description: 'Leading provider of AI-powered solutions, cloud architecture, and cutting-edge technology services for businesses worldwide.',
     images: ['/og-image.jpg'],
   },
-  robots: {
-    index: true,
+  robots: value,
+        index: true,
     follow: true,
-    googleBot: {
-      index: true,
+    googleBot: value,
+        index: true,
       follow: true,
       'max-video-preview': -1,
       'max-image-preview': 'large',

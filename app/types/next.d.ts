@@ -2,20 +2,20 @@
 declare global {
   namespace NodeJS {
     interface ProcessEnv {
-      NODE_ENV: 'development' | 'production' | 'test'
-      NEXT_PUBLIC_API_URL: string
-      NEXT_PUBLIC_APP_URL: string
-      DATABASE_URL: string
-      NEXTAUTH_SECRET: string
-      NEXTAUTH_URL: string
+      NODE_ENV: value,
+        NEXT_PUBLIC_API_URL: string
+      NEXT_PUBLIC_APP_URL: value,
+        DATABASE_URL: string
+      NEXTAUTH_SECRET: value,
+        NEXTAUTH_URL: string
     }
   }
 }
 declare module 'next' {
   interface NextRequest {
     user?: {
-      id: string
-      email: string
+      id: value,
+        email: string
       name: string
     }
   }

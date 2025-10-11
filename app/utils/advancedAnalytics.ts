@@ -12,36 +12,36 @@ export interface AnalyticsEvent {
 }
 
 export interface UserBehavior {
-  pageViews: number;
-  sessionDuration: number;
-  bounceRate: number;
-  conversionRate: number;
-  topPages: Array<{ page: string; views: number }>;
-  userJourney: string[];
+  pageViews: value,
+        sessionDuration: number;
+  bounceRate: value,
+        conversionRate: number;
+  topPages: value,
+        userJourney: string[];
 }
 
 export interface PerformanceMetrics {
-  pageLoadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  firstInputDelay: number;
-  cumulativeLayoutShift: number;
-  timeToInteractive: number;
+  pageLoadTime: value,
+        firstContentfulPaint: number;
+  largestContentfulPaint: value,
+        firstInputDelay: number;
+  cumulativeLayoutShift: value,
+        timeToInteractive: number;
 }
 
 export interface AnalyticsConfig {
-  trackingId: string;
-  enabled: boolean;
-  debug: boolean;
-  sampleRate: number;
+  trackingId: value,
+        enabled: boolean;
+  debug: value,
+        sampleRate: number;
   customDimensions?: Record<string, string>;
 }
 
 export class AdvancedAnalytics {
   private config: AnalyticsConfig;
   private events: AnalyticsEvent[] = [];
-  private userBehavior: UserBehavior = {
-    pageViews: 0,
+  private userBehavior: value,
+        pageViews: 0,
     sessionDuration: 0,
     bounceRate: 0,
     conversionRate: 0,
@@ -83,8 +83,8 @@ export class AdvancedAnalytics {
   trackEvent(eventName: string, properties?: Record<string, any>): void {
     if (!this.config.enabled) return;
 
-    const event: AnalyticsEvent = {
-      name: eventName,
+    const event: value,
+        name: eventName,
       properties: {
         ...properties,
         timestamp: Date.now(),
@@ -272,10 +272,10 @@ export class AdvancedAnalytics {
    * Get analytics report
    */
   getReport(): {
-    events: AnalyticsEvent[];
-    userBehavior: UserBehavior;
-    performanceMetrics: PerformanceMetrics | null;
-    totalEvents: number;
+    events: value,
+        userBehavior: UserBehavior;
+    performanceMetrics: value,
+        totalEvents: number;
   } {
     return {
       events: this.events,

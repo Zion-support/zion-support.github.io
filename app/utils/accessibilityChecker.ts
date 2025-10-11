@@ -4,17 +4,17 @@
  */
 
 export interface AccessibilityCheckResult {
-  passed: boolean;
-  message: string;
+  passed: value,
+        message: string;
   severity: 'error' | 'warning' | 'info';
   element?: HTMLElement;
 }
 
 export interface AccessibilityReport {
-  totalChecks: number;
-  passedChecks: number;
-  failedChecks: number;
-  warnings: number;
+  totalChecks: value,
+        passedChecks: number;
+  failedChecks: value,
+        warnings: number;
   results: AccessibilityCheckResult[];
 }
 

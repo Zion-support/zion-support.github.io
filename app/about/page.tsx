@@ -120,8 +120,7 @@ const AboutPage: React.FC = () => {
                 Get in Touch
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-              <Link 
-                to="/ai-services" 
+                <Link to="/ai-services" 
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
               >
                 Explore Services
@@ -277,7 +276,7 @@ const AboutPage: React.FC = () => {
                 >
                   Contact Us
                 </Link>
-                <Link 
+                </div><Link 
                   to="/ai-services" 
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
                 >
@@ -285,13 +284,10 @@ const AboutPage: React.FC = () => {
                 </Link>
               </div>
             </div>
-          </div>
-        </div>
-      </main>
-      
-      <Footer />
-    </div>
-  );
-};
+          </main>
+        <Footer />
+      </div>
+    );
+  };
 
 export default AboutPage;

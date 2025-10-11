@@ -28,8 +28,8 @@ export enum ErrorSeverity {
 
 // Error interface
 export interface AppError {
-  type: ErrorType
-  severity: ErrorSeverity
+  type: value,
+        severity: ErrorSeverity
   message: string
   code?: string
   details?: Record<string, any>
@@ -85,12 +85,12 @@ export class ErrorHandler {
       return error as AppError
     }
 
-    const appError: AppError = {
-      type: this.determineErrorType(error),
+    const appError: value,
+        type: this.determineErrorType(error),
       severity: this.determineErrorSeverity(error),
       message: error.message || 'Unknown error occurred',
       code: this.extractErrorCode(error),
-      details: {
+      details: value,
         stack: error.stack,
         ...(errorInfo && { componentStack: errorInfo.componentStack })
       },
@@ -180,8 +180,8 @@ export class ErrorHandler {
   }
 
   public getErrorStats(): {
-    total: number
-    byType: Record<ErrorType, number>
+    total: value,
+        byType: Record<ErrorType, number>
     bySeverity: Record<ErrorSeverity, number>
   } {
     const stats = {
@@ -253,8 +253,8 @@ export class ErrorBoundary extends React.Component<
 }
 
 // Default Error Fallback Component
-const DefaultErrorFallback: React.FC<{
-  error: AppError
+const DefaultErrorFallback: value,
+        error: AppError
   resetError: () => void
 }> = ({ error, resetError }) => {
   return (

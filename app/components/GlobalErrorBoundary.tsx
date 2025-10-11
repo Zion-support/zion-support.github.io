@@ -1,4 +1,4 @@
-    }
+}
   ]
   const benefits = [
     'Advanced AI technology integration',

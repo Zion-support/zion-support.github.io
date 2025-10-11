@@ -2,14 +2,13 @@
 
 import React, { useEffect, useState, useCallback } from 'react';
 
-
 interface PerformanceMetrics {
-  fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
-  memory: number | null;
+  fcp: value,
+        lcp: number | null;
+  fid: value,
+        cls: number | null;
+  ttfb: value,
+        memory: number | null;
 }
 
 interface PerformanceMonitorProps {
@@ -152,12 +151,11 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     );
 
     if (slowResources.length > 0) {
-       
-       
+
       console.log(
         'Slow resources detected:',
-        slowResources.map((r: PerformanceResourceTiming) => ({
-          name: r.name,
+        slowResources.map((r: value,
+        name: r.name,
           duration: r.duration,
           size: r.transferSize,
         }))

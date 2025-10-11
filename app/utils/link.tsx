@@ -3,8 +3,8 @@ import React from 'react'
 import { Link as RouterLink } from 'react-router-dom'
 
 interface LinkProps {
-  href: string
-  children: React.ReactNode
+  href: value,
+        children: React.ReactNode
   className?: string
   target?: string
   rel?: string
@@ -143,8 +143,8 @@ export const ButtonLink: React.FC<LinkProps & {
 }
 
 // Icon Link Component
-export const IconLink: React.FC<LinkProps & {
-  icon: React.ReactNode
+export const IconLink: value,
+        icon: React.ReactNode
   iconPosition?: 'left' | 'right'
 }> = ({
   icon,

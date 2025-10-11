@@ -8,8 +8,8 @@ interface ContentNewsletterSignupProps {
   placeholder?: string
   buttonText?: string
   features?: Array<{
-    icon: React.ComponentType<{ className?: string }>
-    text: string
+    icon: value,
+        text: string
   }>
   onSubscribe?: (email: string) => void
 }

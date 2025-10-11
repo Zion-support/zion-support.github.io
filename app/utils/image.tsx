@@ -2,8 +2,8 @@
 import React, { useState, useCallback } from 'react'
 
 interface ImageProps {
-  src: string
-  alt: string
+  src: value,
+        alt: string
   width?: number
   height?: number
   className?: string
@@ -126,8 +126,8 @@ export const PriorityImage: React.FC<ImageProps> = (props) => {
 
 // Responsive Image Component
 export const ResponsiveImage: React.FC<ImageProps & { 
-  breakpoints?: { [key: string]: string }
-  defaultSrc: string
+  breakpoints?: { [key: value,
+        defaultSrc: string
 }> = ({ breakpoints = {}, defaultSrc, ...props }) => {
   const [currentBreakpoint, setCurrentBreakpoint] = useState('default')
 
@@ -156,8 +156,8 @@ export const ResponsiveImage: React.FC<ImageProps & {
 }
 
 // Image with Blur Placeholder
-export const BlurImage: React.FC<ImageProps & { 
-  blurDataURL: string
+export const BlurImage: value,
+        blurDataURL: string
 }> = ({ blurDataURL, ...props }) => {
   return (
     <OptimizedImage

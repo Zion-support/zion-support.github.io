@@ -1,89 +1,146 @@
 #!/usr/bin/env python3
 """
-Script to fix JSX structure issues
+Script to fix JSX structure errors in React/TypeScript files
 """
+
 import os
 import re
 import glob
 
 def fix_jsx_structure(file_path):
-    """Fix JSX structure issues in a single file"""
+    """Fix JSX structure errors in a file"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        print(f"Fixing JSX structure in {file_path}")
+        original_content = content
         
-        # Remove any remaining merge conflict markers
-        content = re.sub(r'<<<<<<< HEAD.*?\n', '', content, flags=re.DOTALL)
-        content = re.sub(r'=======.*?\n', '', content, flags=re.DOTALL)
-        content = re.sub(r'>>>>>>> cursor/fix-errors-and-merge-to-main-[a-f0-9]+.*?\n', '', content, flags=re.DOTALL)
-        content = re.sub(r'>>>>>>> f7c4928b2138abffab75f9beb3ca62b8e0c3452d.*?\n', '', content, flags=re.DOTALL)
+        # Fix mismatched closing tags
+        # Pattern: </div> followed by </main> when opening was <main>
+        content = re.sub(r'<main([^>]*)>([^<]*)</div>\s*</main>', r'<main\1>\2</main>', content)
         
-        # Remove any stray closing tags at the end
-        content = re.sub(r'export default \w+;\n</\w+>$', r'export default \1;', content, flags=re.MULTILINE)
+        # Fix mismatched closing tags
+        # Pattern: </main> followed by </div> when opening was <div>
+        content = re.sub(r'<div([^>]*)>([^<]*)</main>\s*</div>', r'<div\1>\2</div>', content)
         
-        # Ensure proper JSX structure
-        lines = content.split('\n')
-        fixed_lines = []
-        open_tags = []
+        # Fix misplaced closing tags
+        # Pattern: </div> followed by </main> followed by <Footer />
+        content = re.sub(r'</div>\s*</main>\s*<Footer />', r'</main>\n        <Footer />', content)
         
-        for i, line in enumerate(lines):
-            # Skip empty lines
-            if not line.strip():
-                fixed_lines.append(line)
-                continue
-                
-            # Track opening tags
-            opening_tags = re.findall(r'<(\w+)(?:\s[^>]*)?(?:>|/>)', line)
-            for tag in opening_tags:
-                if not line.strip().endswith('/>') and not line.strip().endswith('</' + tag + '>'):
-                    open_tags.append(tag)
+        # Fix missing opening tags
+        # Pattern: </main> without matching opening
+        content = re.sub(r'<div([^>]*)>([^<]*)</main>', r'<div\1>\2</div>', content)
+        
+        # Fix missing closing tags
+        # Pattern: <main> without matching closing
+        content = re.sub(r'<main([^>]*)>([^<]*)</div>', r'<main\1>\2</main>', content)
+        
+        # Fix specific pattern from the error
+        # Pattern: </div> followed by </main> followed by <Footer />
+        content = re.sub(r'</div>\s*</main>\s*<Footer />', r'</main>\n        <Footer />', content)
+        
+        # Fix missing closing tags in main sections
+        content = re.sub(r'<main([^>]*)>([^<]*)</div>\s*</main>', r'<main\1>\2</main>', content)
+        
+        # Fix missing closing tags in div sections
+        content = re.sub(r'<div([^>]*)>([^<]*)</main>\s*</div>', r'<div\1>\2</div>', content)
+        
+        # Fix missing closing tags in main sections with specific classes
+        content = re.sub(r'<main([^>]*class="[^"]*"[^>]*)>([^<]*)</div>\s*</main>', r'<main\1>\2</main>', content)
+        
+        # Fix missing closing tags in div sections with specific classes
+        content = re.sub(r'<div([^>]*class="[^"]*"[^>]*)>([^<]*)</main>\s*</div>', r'<div\1>\2</div>', content)
+        
+        # Fix missing closing tags in main sections with pt-20 class
+        content = re.sub(r'<main([^>]*class="[^"]*pt-20[^"]*"[^>]*)>([^<]*)</div>\s*</main>', r'<main\1>\2</main>', content)
+        
+        # Fix missing closing tags in div sections with pt-20 class
+        content = re.sub(r'<div([^>]*class="[^"]*pt-20[^"]*"[^>]*)>([^<]*)</main>\s*</div>', r'<div\1>\2</div>', content)
+        
+        # Fix missing closing tags in main sections with px-4 class
+        content = re.sub(r'<main([^>]*class="[^"]*px-4[^"]*"[^>]*)>([^<]*)</div>\s*</main>', r'<main\1>\2</main>', content)
+        
+        # Fix missing closing tags in div sections with px-4 class
+        content = re.sub(r'<div([^>]*class="[^"]*px-4[^"]*"[^>]*)>([^<]*)</main>\s*</div>', r'<div\1>\2</div>', content)
+        
+        # Fix missing closing tags in main sections with py-20 class
+        content = re.sub(r'<main([^>]*class="[^"]*py-20[^"]*"[^>]*)>([^<]*)</div>\s*</main>', r'<main\1>\2</main>', content)
+        
+        # Fix missing closing tags in div sections with py-20 class
+        content = re.sub(r'<div([^>]*class="[^"]*py-20[^"]*"[^>]*)>([^<]*)</main>\s*</div>', r'<div\1>\2</div>', content)
+        
+        # Fix missing closing tags in main sections with max-w-7xl class
+        content = re.sub(r'<main([^>]*class="[^"]*max-w-7xl[^"]*"[^>]*)>([^<]*)</div>\s*</main>', r'<main\1>\2</main>', content)
+        
+        # Fix missing closing tags in div sections with max-w-7xl class
+        content = re.sub(r'<div([^>]*class="[^"]*max-w-7xl[^"]*"[^>]*)>([^<]*)</main>\s*</div>', r'<div\1>\2</div>', content)
+        
+        # Fix missing closing tags in main sections with mx-auto class
+        content = re.sub(r'<main([^>]*class="[^"]*mx-auto[^"]*"[^>]*)>([^<]*)</div>\s*</main>', r'<main\1>\2</main>', content)
+        
+        # Fix missing closing tags in div sections with mx-auto class
+        content = re.sub(r'<div([^>]*class="[^"]*mx-auto[^"]*"[^>]*)>([^<]*)</main>\s*</div>', r'<div\1>\2</div>', content)
+        
+        # Fix missing closing tags in main sections with any class combination
+        content = re.sub(r'<main([^>]*class="[^"]*"[^>]*)>([^<]*)</div>\s*</main>', r'<main\1>\2</main>', content)
+        
+        # Fix missing closing tags in div sections with any class combination
+        content = re.sub(r'<div([^>]*class="[^"]*"[^>]*)>([^<]*)</main>\s*</div>', r'<div\1>\2</div>', content)
+        
+        # Fix missing closing tags in any main section
+        content = re.sub(r'<main([^>]*)>([^<]*)</div>\s*</main>', r'<main\1>\2</main>', content)
+        
+        # Fix missing closing tags in any div section
+        content = re.sub(r'<div([^>]*)>([^<]*)</main>\s*</div>', r'<div\1>\2</div>', content)
+        
+        # Clean up any remaining merge conflict markers
+        content = re.sub(r'<<<<<<< HEAD.*?=======.*?>>>>>>>.*?\n', '', content, flags=re.DOTALL)
+        content = re.sub(r'=======.*?>>>>>>>.*?\n', '', content, flags=re.DOTALL)
+        content = re.sub(r'<<<<<<< HEAD.*?\n', '', content)
+        content = re.sub(r'=======.*?\n', '', content)
+        content = re.sub(r'>>>>>>>.*?\n', '', content)
+        
+        # Remove any remaining conflict markers
+        content = re.sub(r'<<<<<<< HEAD|=======|>>>>>>>.*', '', content)
+        
+        # Clean up excessive whitespace
+        content = re.sub(r'\n\s*\n\s*\n', '\n\n', content)
+        content = re.sub(r'^\s*\n', '', content)
+        content = content.strip() + '\n'
+        
+        if content != original_content:
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(content)
+            return True
             
-            # Track closing tags
-            closing_tags = re.findall(r'</(\w+)>', line)
-            for tag in closing_tags:
-                if tag in open_tags:
-                    open_tags.remove(tag)
-            
-            fixed_lines.append(line)
+        return False
         
-        # Add missing closing tags at the end if needed
-        while open_tags:
-            tag = open_tags.pop()
-            fixed_lines.append(f'</{tag}>')
-        
-        content = '\n'.join(fixed_lines)
-        
-        # Write the fixed content back
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(content)
-            
-        return True
     except Exception as e:
-        print(f"Error fixing {file_path}: {e}")
+        print(f"Error processing {file_path}: {e}")
         return False
 
 def main():
-    """Main function to fix all JSX structure issues"""
-    # Find all TypeScript/React files in the app directory
+    """Main function to fix JSX structure errors in all files"""
     patterns = [
         'app/**/*.tsx',
-        'app/**/*.ts'
+        'app/**/*.ts',
+        'components/**/*.tsx',
+        'components/**/*.ts'
     ]
     
+    files_processed = 0
     files_fixed = 0
-    total_files = 0
     
     for pattern in patterns:
-        files = glob.glob(pattern, recursive=True)
-        for file_path in files:
+        for file_path in glob.glob(pattern, recursive=True):
             if os.path.isfile(file_path):
-                total_files += 1
+                files_processed += 1
                 if fix_jsx_structure(file_path):
                     files_fixed += 1
+                    print(f"Fixed JSX structure in: {file_path}")
     
-    print(f"Fixed JSX structure in {files_fixed} out of {total_files} files")
+    print(f"\nProcessed {files_processed} files")
+    print(f"Fixed JSX structure in {files_fixed} files")
 
 if __name__ == "__main__":
     main()

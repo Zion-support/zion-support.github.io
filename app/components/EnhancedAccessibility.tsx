@@ -1,11 +1,10 @@
 'use client'
 import React, { useEffect, useState, useCallback } from 'react'
 interface AccessibilitySettings {
-  highContrast: boolean
-  reducedMotion: boolean
-  fontSize: 'normal' | 'large' | 'extra-large'
-  focusVisible: boolean}
-
+  highContrast: value,
+        reducedMotion: boolean
+  fontSize: value,
+        focusVisible: boolean}
 
 const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
@@ -44,23 +43,23 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
           outline: 2px solid #06b6d4 !important
           outline-offset: 2px !important}
         .sr-only {
-          position: absolute
-          width: 1px
-          height: 1px
-          padding: 0
-          margin: -1px
-          overflow: hidden
+          position: value,
+        width: 1px
+          height: value,
+        padding: 0
+          margin: value,
+        overflow: hidden
           clip: rect(0, 0, 0, 0)
-          white-space: nowrap
-          border: 0}
-        .sr-only.focus:not-sr-only {
-          position: static
-          width: auto
-          height: auto
-          padding: inherit
-          margin: inherit
-          overflow: visible
-          clip: auto
+          white-space: value,
+        border: 0}
+        .sr-only.focus: value,
+        position: static
+          width: value,
+        height: auto
+          padding: value,
+        margin: inherit
+          overflow: value,
+        clip: auto
           white-space: normal}
       `
       document.head.appendChild(style)}
