@@ -1,43 +1,61 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-import { Menu, X, ChevronDown } from 'lucide-react'
-export default function Navigation() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
-=======
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone } from 'lucide-react'
+import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone, Brain, Cpu, Server, Lock, BarChart3, Smartphone as Mobile, Wifi, Mail, Mic, CheckSquare, DollarSign, FileText, Heart, Calendar } from 'lucide-react'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
->>>>>>> cursor/website-audit-and-update-with-deployment-c744
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   
   const toggleMenu = () => {
     setIsOpen(!isOpen)
   }
 
-<<<<<<< HEAD
-  const toggleDropdown = (dropdown: string) => {
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
-  }
-
-=======
   const toggleServices = () => {
     setIsServicesOpen(!isServicesOpen)
   }
 
+  const toggleDropdown = (dropdown: string) => {
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
+  }
+
   const services = [
-    { name: 'AI & Machine Learning', path: '/ai-services', icon: <Zap className="w-4 h-4" /> },
+    { name: 'AI & Machine Learning', path: '/ai-services', icon: <Brain className="w-4 h-4" /> },
     { name: 'Cloud Solutions', path: '/cloud-services', icon: <Cloud className="w-4 h-4" /> },
     { name: 'Cybersecurity', path: '/cybersecurity', icon: <Shield className="w-4 h-4" /> },
-    { name: '5G Implementation', path: '/5g-implementation', icon: <Globe className="w-4 h-4" /> },
-    { name: 'Data Analytics', path: '/data-analytics', icon: <Database className="w-4 h-4" /> },
+    { name: '5G Implementation', path: '/5g-implementation', icon: <Wifi className="w-4 h-4" /> },
+    { name: 'Data Analytics', path: '/data-analytics', icon: <BarChart3 className="w-4 h-4" /> },
     { name: 'Custom Development', path: '/custom-development', icon: <Code className="w-4 h-4" /> },
-    { name: 'Mobile Solutions', path: '/mobile-development', icon: <Smartphone className="w-4 h-4" /> }
+    { name: 'Mobile Solutions', path: '/mobile-development', icon: <Mobile className="w-4 h-4" /> },
+    { name: 'Micro SAAS', path: '/micro-saas-services', icon: <Cpu className="w-4 h-4" /> }
   ]
 
->>>>>>> cursor/website-audit-and-update-with-deployment-c744
+  const aiServices = [
+    { name: 'AI Content Generator', path: '/ai-content-generator', icon: <Zap className="w-4 h-4" /> },
+    { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder', icon: <Brain className="w-4 h-4" /> },
+    { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard', icon: <BarChart3 className="w-4 h-4" /> },
+    { name: 'AI Email Assistant', path: '/ai-email-assistant', icon: <Mail className="w-4 h-4" /> },
+    { name: 'AI Voice Assistant', path: '/ai-voice-assistant', icon: <Mic className="w-4 h-4" /> },
+    { name: 'AI Automation', path: '/ai-automation', icon: <Cpu className="w-4 h-4" /> }
+  ]
+
+  const itServices = [
+    { name: 'Cloud Migration', path: '/cloud-migration', icon: <Cloud className="w-4 h-4" /> },
+    { name: 'Cybersecurity Solutions', path: '/cybersecurity-solutions', icon: <Shield className="w-4 h-4" /> },
+    { name: 'DevOps & CI/CD', path: '/devops-cicd', icon: <Server className="w-4 h-4" /> },
+    { name: 'Data Analytics', path: '/data-analytics', icon: <BarChart3 className="w-4 h-4" /> },
+    { name: 'Mobile Development', path: '/mobile-development', icon: <Mobile className="w-4 h-4" /> },
+    { name: 'Blockchain Solutions', path: '/blockchain', icon: <Lock className="w-4 h-4" /> }
+  ]
+
+  const microSaasServices = [
+    { name: 'AI Task Manager', path: '/ai-task-manager', icon: <CheckSquare className="w-4 h-4" /> },
+    { name: 'AI Expense Tracker', path: '/ai-expense-tracker', icon: <DollarSign className="w-4 h-4" /> },
+    { name: 'AI Password Manager', path: '/ai-password-manager', icon: <Lock className="w-4 h-4" /> },
+    { name: 'AI Invoice Generator', path: '/ai-invoice-generator', icon: <FileText className="w-4 h-4" /> },
+    { name: 'AI Health Tracker', path: '/ai-health-tracker', icon: <Heart className="w-4 h-4" /> },
+    { name: 'AI Smart Calendar', path: '/ai-smart-calendar', icon: <Calendar className="w-4 h-4" /> }
+  ]
   return (
     <nav className="bg-white/10 backdrop-blur-lg fixed w-full top-0 z-50 border-b border-white/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
