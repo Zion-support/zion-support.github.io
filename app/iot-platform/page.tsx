@@ -52,7 +52,6 @@
           </div>
         </section>
             </button>
-<<<<<<< HEAD
             <button>Schedule Demo;</button>
         <div className="max-w-7xl mx-auto" / /></div>
           <div className="text-center mb-16" / /></div>
@@ -76,8 +75,6 @@
             <button></button>
               Schedule Demo
             </button>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
           </div>
         </div>
       </section>

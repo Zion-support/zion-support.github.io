@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {  CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings   } from 'lucide-react';
 const AiCodeAssistantPage: React.FC = () => {
 'use client'
@@ -10,19 +9,6 @@ export default AiCodeAssistantPage;
   </button&gt;
   </h1&gt;
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-=======
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import Navigation from '../components/Navigation'
-import { Brain, BarChart, Target, TrendingUp, FileText, Zap, Shield, CheckCircle } from 'lucide-react'
-
-const AiCodeAssistantPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
     },
     {
       icon: BarChart,
@@ -60,7 +46,6 @@ const AiCodeAssistantPage: React.FC = () => {
         <meta name="keywords" content="AI, ai, code, assistant, automation, artificial intelligence, business solutions" />
       </Helmet>
       <Navigation />
-<<<<<<< HEAD
       <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></main></main>
         {/* Hero Section */}
           <div className="max-w-7xl mx-auto"></div></div>
@@ -70,56 +55,6 @@ const AiCodeAssistantPage: React.FC = () => {
                 Discover how our AI platform can revolutionize your business operations.
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div></div>
               {features.map((feature, index) =&gt; (
-=======
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-sky-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="py-20 px-4 relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Ai Code Assistant
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              AI-powered ai code assistant solution for intelligent automation and optimization
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
-                Get Started
-              </button>
-              <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <p className="text-xl text-gray-300">Powerful AI capabilities for your business</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
-                  <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
               ))}
             </div>
           </div>

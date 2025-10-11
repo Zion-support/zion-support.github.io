@@ -39,7 +39,6 @@ const CompliancePage: React.FC = () => {
   ]
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
       </div><Helmet>
         </Helmet><title>Compliance | Zion Tech Group</title>
@@ -69,36 +68,6 @@ const CompliancePage: React.FC = () => {
           <div className="grid md:grid-cols-2 gap-6" /></div>
             {benefits.map((benefit, index) =&gt; ()
             ))}
-=======
-    <>
-      <Helmet>
-        <title>Compliance - Zion Tech Group</title>
-        <meta name="description" content="AI-powered compliance solution for intelligent automation and optimization" />
-        <meta name="keywords" content="AI, compliance, automation, artificial intelligence, business solutions" />
-      </Helmet>
-      <Navigation />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-sky-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="py-20 px-4 relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Compliance
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              AI-powered compliance solution for intelligent automation and optimization
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
-                Get Started
-              </button>
-              <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-                Learn More
-              </button>
-            </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
           </div>
         </section>
 
@@ -171,7 +140,6 @@ const CompliancePage: React.FC = () => {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
     </div>
   </button>
   </button>
@@ -184,9 +152,6 @@ const CompliancePage: React.FC = () => {
               Call Now
               <Mail className="mr-2 h-5 w-5" />
               Email Us
-=======
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
   )
 }
 

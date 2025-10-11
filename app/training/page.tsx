@@ -1,4 +1,3 @@
-<<<<<<< HEAD
         <title>Page | Zion Tech Group</title>
 'use client'
 import React from 'react'
@@ -8,20 +7,12 @@ return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div></div>
       <Helmet>
         </Helmet><title>Page | Zion Tech Group</title>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
 
-<<<<<<< HEAD
                 <h3 className="text-xl font-semibold text-white mb-3"></h3></h3>{feature.title}</h3>
                 <p className="text-gray-300"></p></p>{feature.description</p&gt;}</p>
-=======
-      {/* Hero Section */} </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description</p>}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
               </div>
             ))}
 

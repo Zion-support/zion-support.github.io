@@ -81,11 +81,7 @@ export default async function handler(
 }
 }
 }
-<<<<<<< HEAD
 import {  createServerClient   } from '../../../utils/supabase/server'
-=======
-import { createServerClient } from '../../../utils/supabase/server'
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const supabase = createServerClient()

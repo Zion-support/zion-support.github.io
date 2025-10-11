@@ -12,7 +12,6 @@ const benefits = [
     'Easy integration with existing systems',
 
     'Cost-effective pricing plans',
-<<<<<<< HEAD
             </div>
           </div>
         </div>
@@ -39,11 +38,6 @@ const benefits = [
               <h2 className="text-4xl font-bold text-white mb-4"></h2></h2>Section Title</h2>
       {/* CTA Section */}
               <p className="text-xl text-gray-300"></p></p>Section description</p>
-=======
-            ))}
-            ))}
-              <p className="text-xl text-gray-300">Section description</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
             </div>
           </div>
         </section>

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { CheckCircle, ArrowRight, Settings, Zap, Shield, Users, BarChart3 }  } from 'lucide-react';
 
@@ -8,12 +7,6 @@ import React from 'react'
 import {  Helmet  } from 'react-helmet-async'import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'import {  CheckCircle, ArrowRight, Settings, Zap, Shield, Users, BarChart3   } from 'lucide-react'
 const AIApiManagerPage: React.FC = () => {
-=======
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import Navigation from '../components/Navigation'
-import { Brain, BarChart, Target, TrendingUp, FileText, Zap, Shield, CheckCircle } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
 
 const AiApiManagerPage: React.FC = () => {
   const features = [
@@ -42,17 +35,6 @@ const AiApiManagerPage: React.FC = () => {
     }
   ]
 
-<<<<<<< HEAD
-=======
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ]
-
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
   return (
     <>
       <Helmet>
@@ -61,7 +43,6 @@ const AiApiManagerPage: React.FC = () => {
         <meta name="keywords" content="AI, ai, api, manager, automation, artificial intelligence, business solutions" />
       </Helmet>
       <Navigation />
-<<<<<<< HEAD
 
 <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-sky-900 to-slate-900"></div></div>
@@ -83,27 +64,6 @@ const AiApiManagerPage: React.FC = () => {
               </button>
               <button className="border border-sky-400 text-sky-400 hover:bg-sky-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"></button>
                 View Demo
-=======
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-sky-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="py-20 px-4 relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Ai Api Manager
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              AI-powered ai api manager solution for intelligent automation and optimization
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
-                Get Started
-              </button>
-              <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-                Learn More
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
               </button>
             </div>
           </div>
@@ -133,19 +93,13 @@ const AiApiManagerPage: React.FC = () => {
                     </ul>
                   )}
                 </div>
-<<<<<<< HEAD
                 <div className="text-3xl font-bold text-white mb-2"></div></div>{stat.value}</div>
                 <div className="text-gray-300"></div></div>{stat.label}</div>
               </div>
             ))}
-=======
-              ))}
-            </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
           </div>
         </section>
 
-<<<<<<< HEAD
             </p>
           </div>
           
@@ -226,49 +180,6 @@ export default AiApiManagerPage;
               Join thousands of businesses already using our AI platform.
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold"></button>Start Your Free Trial
       <Footer />
-=======
-        {/* Benefits Section */}
-        <section className="py-20 px-4 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Ai Api Manager?</h2>
-              <p className="text-xl text-gray-300">Transform your business with intelligent automation</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <Zap className="w-6 h-6 text-cyan-400" />
-                  </div>
-                  <p className="text-gray-300">{benefit}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Get started with our Ai Api Manager and experience the future of intelligent automation.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
-                Start Free Trial
-              </button>
-              <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-                Contact Sales
-              </button>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
   )
 }
 

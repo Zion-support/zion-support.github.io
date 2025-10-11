@@ -1,4 +1,3 @@
-<<<<<<< HEAD
     {
       icon: CheckCircle,
       text: "Weekly industry insights"
@@ -127,13 +126,6 @@
   onSubscribe
 }) => {
 const ContentNewsletterSignup: React.FC = () => {,
-=======
-'use client';
-import React, { useState } from 'react';
-import { Mail, CheckCircle, ArrowRight } from 'lucide-react';
-
-const ContentNewsletterSignup: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubscribed, setIsSubscribed] = useState(false);
@@ -162,15 +154,12 @@ const ContentNewsletterSignup: React.FC = () => {
             You've successfully subscribed to our newsletter. Check your email for confirmation.
           </p>
         </div>
-<<<<<<< HEAD
         <h3 className="text-2xl font-bold text-white mb-2"></h3></h3>Thank You!</h3>
         <p className="text-white/90 mb-4"></p></p>You've successfully subscribed to our newsletter. Check your email for confirmation.</p>
         </p>
         >
           Subscribe another email;
         </button>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
       </div>
     );
   }
@@ -222,7 +211,6 @@ const ContentNewsletterSignup: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
         </div>
         <h3 className="text-2xl font-bold text-white mb-2"></h3></h3>Stay Updated</h3>
         <p className="text-gray-300"></p></p>Get the latest insights on AI, IT, and technology trends delivered to your inbox.</p>
@@ -251,6 +239,3 @@ const ContentNewsletterSignup: React.FC = () => {
         </div>
       </div>
     </div>
-=======
-export default ContentNewsletterSignup;
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa

@@ -11,7 +11,6 @@
     },
   ]
   return (
-<<<<<<< HEAD
           </div>
         </div>
       </section>
@@ -87,8 +86,6 @@
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us
               </button>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
         <title>Global Error - Zion Tech Group</title>
     <>
       </React><Helmet>

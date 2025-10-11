@@ -33,17 +33,10 @@
       height: '100%',
     })
   }
-<<<<<<< HEAD
   if (hasError) {</ImageProps&gt;
     return(</ImageProps&gt;)}if (hasError) {}return(<div)}
   if (hasError) {}return(<div)}
 'use client'
-=======
-  if (hasError) {</ImageProps>
-    return (</ImageProps>)}if (hasError) {}return (<div)}
-  if (hasError) {}return (<div)}
-'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
   const,
   imageStyle: React.CSSProperties = {/* TODO: Fix JSX expression */,}})
   }

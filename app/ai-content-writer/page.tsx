@@ -28,7 +28,6 @@ const AiContentWriterPage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'],
     }
-<<<<<<< HEAD
 
 const AIContentWriterPage: React.FC = () => {,
 'use client'
@@ -54,8 +53,6 @@ import Footer from '../components/Footer'const AIContentWriterPage: React.FC = (
       description: 'Create content in various formats including blogs, social media, emails, and marketing copy.',
       benefits: ['Blog posts', 'Social media', 'Email campaigns', 'Marketing copy'],
     },
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
   ]
 
   const benefits = [
@@ -74,7 +71,6 @@ import Footer from '../components/Footer'const AIContentWriterPage: React.FC = (
         <meta name="keywords" content="AI, ai, content, writer, automation, artificial intelligence, business solutions" />
       </Helmet>
       <Navigation />
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900"></div></div>
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden"></section></section>
@@ -94,33 +90,11 @@ import Footer from '../components/Footer'const AIContentWriterPage: React.FC = (
               </button>
               <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"></button>
                 View Demo
-=======
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-sky-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="py-20 px-4 relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Ai Content Writer
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              AI-powered ai content writer solution for intelligent automation and optimization
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
-                Get Started
-              </button>
-              <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-                Learn More
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
               </button>
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
               </div>
             ))}
           </div>
@@ -193,32 +167,6 @@ import Footer from '../components/Footer'const AIContentWriterPage: React.FC = (
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
                         {benefit}
                     ))}
-=======
-        {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <p className="text-xl text-gray-300">Powerful AI capabilities for your business</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
-                  <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
               ))}
             </div>
           </div>
@@ -245,7 +193,6 @@ import Footer from '../components/Footer'const AIContentWriterPage: React.FC = (
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600"></section></section>
           <div className="max-w-4xl mx-auto text-center"></div></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2></h2>
@@ -254,28 +201,6 @@ import Footer from '../components/Footer'const AIContentWriterPage: React.FC = (
               Join thousands of businesses already using our AI platform.
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold"></button>Start Your Free Trial
       <Footer />
-=======
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Get started with our Ai Content Writer and experience the future of intelligent automation.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
-                Start Free Trial
-              </button>
-              <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-                Contact Sales
-              </button>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
   )
 }
 

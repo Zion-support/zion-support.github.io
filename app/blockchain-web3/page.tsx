@@ -39,7 +39,6 @@ const BlockchainWeb3Page: React.FC = () => {
   ]
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
     const features = [
     {
@@ -69,32 +68,17 @@ const BlockchainWeb3Page: React.FC = () => {
   }
     ]
 return (
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
     <>
       <Helmet>
         <title>Blockchain Web3 - Zion Tech Group</title>
         <meta name="description" content="AI-powered blockchain web3 solution for intelligent automation and optimization" />
         <meta name="keywords" content="AI, blockchain, web3, automation, artificial intelligence, business solutions" />
       </Helmet>
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900"></div></div></div>
         <div className="container mx-auto px-4 py-16"></div></div></div>
           <div className="text-center mb-16"></div></div></div>
             <h1>
               Blockchain & </h1><span className="text-cyan-400"></span></span>Web3</span>
-=======
-      <Navigation />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-sky-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="py-20 px-4 relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Blockchain Web3
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               AI-powered blockchain web3 solution for intelligent automation and optimization
@@ -110,7 +94,6 @@ return (
           </div>
         </section>
 
-<<<<<<< HEAD
     </div>
   );
 };
@@ -127,31 +110,6 @@ export default PagePage;
                     <h3 className="text-2xl font-bold text-white mb-2"></h3></h3>{feature.title}</h3>
                     <p className="text-gray-300 mb-4"></p></p>{feature.description</p&gt;}</p>
                   </div>
-=======
-        {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <p className="text-xl text-gray-300">Powerful AI capabilities for your business</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
-                  <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
                 </div>
               ))}
             </div>
@@ -201,7 +159,6 @@ export default PagePage;
     </>
   )
 }
-<<<<<<< HEAD
 export default BlockchainWeb3Page
       benefits: ['24/7 availability', 'Global reach', 'Cross-border transactions', 'Universal access']
     }
@@ -234,7 +191,3 @@ export default BlockchainWeb3Page
                       {benefit}
                   ))}
             ))}
-=======
-
-export default BlockchainWeb3Page
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa

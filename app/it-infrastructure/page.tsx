@@ -44,12 +44,7 @@ return (
         <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
             ))}
-<<<<<<< HEAD
               <p className="text-xl text-gray-300"></p></p>Section description</p>
-=======
-            ))}
-              <p className="text-xl text-gray-300">Section description</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
             </div>
           </div>
         </section>

@@ -6,7 +6,6 @@ import { Brain, BarChart, Target, TrendingUp, FileText, Zap, Shield, CheckCircle
 const InvestorsPage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
       icon: Zap,
       title: 'High Performance',
             </h2>
@@ -17,42 +16,8 @@ const InvestorsPage: React.FC = () => {
                 <p className="text-gray-300"></p></p>{feature.description</p&gt;}</p>
               </div>
             ))}
-=======
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics'],
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics'],
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'],
-    }
-  ]
-
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ]
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
       <Helmet>
         <title>Page | Zion Tech Group
@@ -64,36 +29,6 @@ const InvestorsPage: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p></p>
               Our page solutions deliver unmatched performance, security, and scalability.
             ))}
-=======
-    <>
-      <Helmet>
-        <title>Investors - Zion Tech Group</title>
-        <meta name="description" content="AI-powered investors solution for intelligent automation and optimization" />
-        <meta name="keywords" content="AI, investors, automation, artificial intelligence, business solutions" />
-      </Helmet>
-      <Navigation />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-sky-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="py-20 px-4 relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Investors
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              AI-powered investors solution for intelligent automation and optimization
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
-                Get Started
-              </button>
-              <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-                Learn More
-              </button>
-            </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
           </div>
         </section>
 

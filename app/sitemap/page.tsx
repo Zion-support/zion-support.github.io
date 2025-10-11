@@ -64,22 +64,6 @@ const SitemapPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
       <Navigation />
-<<<<<<< HEAD
-=======
-      
-      <main className="pt-20">
-        {/* Hero Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
-              Site Map
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Find all the pages and sections of our website organized by category for easy navigation.
-            </p>
-          </div>
-        </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
 
         {/* Sitemap Sections */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">

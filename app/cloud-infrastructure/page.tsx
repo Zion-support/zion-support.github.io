@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   const features = [
     }
   ];];];
@@ -33,14 +32,6 @@
 import React from 'react'
 import Navigation from '../components/Navigation'import Footer from '../components/Footer'
 import {  Cloud, CheckCircle, ArrowRight  } from 'lucide-react'const CloudInfrastructurePage: React.FC = () => {
-=======
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import Navigation from '../components/Navigation'
-import { Brain, BarChart, Target, TrendingUp, FileText, Zap, Shield, CheckCircle } from 'lucide-react'
-
-const CloudInfrastructurePage: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
   const features = [
     {
       icon: Brain,
@@ -76,7 +67,6 @@ const CloudInfrastructurePage: React.FC = () => {
   ]
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
       <Navigation />
       
@@ -89,27 +79,6 @@ const CloudInfrastructurePage: React.FC = () => {
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p></p>
               Build and manage scalable cloud infrastructure for your business.
-=======
-    <>
-      <Helmet>
-        <title>Cloud Infrastructure - Zion Tech Group</title>
-        <meta name="description" content="AI-powered cloud infrastructure solution for intelligent automation and optimization" />
-        <meta name="keywords" content="AI, cloud, infrastructure, automation, artificial intelligence, business solutions" />
-      </Helmet>
-      <Navigation />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-sky-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="py-20 px-4 relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Cloud Infrastructure
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              AI-powered cloud infrastructure solution for intelligent automation and optimization
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">

@@ -1,41 +1,24 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-<<<<<<< HEAD
 import Navigation from '../components/Navigation'
 import { Brain, BarChart, Target, TrendingUp, FileText, Zap, Shield, CheckCircle } from 'lucide-react'
-=======
-import { Brain, BarChart, Target, TrendingUp, CheckCircle, Mail, Zap, Shield } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
->>>>>>> cursor/fix-errors-and-merge-to-main-f401
 
 const AiEmailMarketingAutomationPage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
       icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-=======
-      icon: Mail,
-      title: 'AI-Powered Email Marketing',
-      description: 'Advanced AI algorithms that automate and optimize email marketing campaigns.',
->>>>>>> cursor/fix-errors-and-merge-to-main-f401
     },
     {
       icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
-<<<<<<< HEAD
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics'],
-=======
-      benefits: ['Campaign analytics', 'Open rates', 'Click-through rates', 'Conversion tracking'],
->>>>>>> cursor/fix-errors-and-merge-to-main-f401
     },
     {
       icon: Target,
       title: 'Precision Targeting',
-<<<<<<< HEAD
       description: 'Target specific goals and objectives with precision and accuracy.',
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics'],
     },
@@ -62,7 +45,6 @@ const AiEmailMarketingAutomationPage: React.FC = () => {
         <meta name="description" content="AI-powered ai email marketing automation solution for intelligent automation and optimization" />
         <meta name="keywords" content="AI, ai, email, marketing, automation, automation, artificial intelligence, business solutions" />
       </Helmet>
-<<<<<<< HEAD
               <p className="text-xl text-gray-300"></p></p>Section description</p>
             </div>
           </div>
@@ -105,32 +87,6 @@ const AiEmailMarketingAutomationPage: React.FC = () => {
                   <div className="w-16 h-16 bg-gradient-to-br from-violet-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div></div></div>,
                     <feature />
                   <h3 className="text-xl font-bold text-white mb-4"></h3></h3>{feature.title}</h3>
-=======
-      <Navigation />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-sky-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="py-20 px-4 relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Ai Email Marketing Automation
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              AI-powered ai email marketing automation solution for intelligent automation and optimization
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
-                Get Started
-              </button>
-              <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
 
         {/* Features Section */}
         <section className="py-20 px-4">
@@ -160,7 +116,6 @@ const AiEmailMarketingAutomationPage: React.FC = () => {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
           <div className="max-w-7xl mx-auto"></div></div>
             <div className="text-center mb-16"></div></div>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2></h2>Key Features
@@ -172,73 +127,6 @@ const AiEmailMarketingAutomationPage: React.FC = () => {
                     <feature.icon className="w-8 h-8 text-white" />
                   <h3 className="text-xl font-bold text-white mb-4"></h3></h3>{feature.title}
                   <p className="text-gray-300 mb-4"></p></p>{feature.description}
-=======
-      description: 'Target specific customer segments with precision and accuracy.',
-      benefits: ['Audience segmentation', 'Personalization', 'A/B testing', 'Behavioral targeting'],
-    },
-    {
-      icon: TrendingUp,
-      title: 'Automation Optimization',
-      description: 'Optimize email marketing automation with data-driven strategies.',
-      benefits: ['Workflow automation', 'Trigger campaigns', 'Drip sequences', 'Lead nurturing'],
-    }
-  ]
-
-  const benefits = [
-    'Increase email open rates by 60%',
-    'Improve click-through rates by 45%',
-    'Automate email marketing workflows',
-    'Boost conversion rates by 35%',
-    'Gain competitive advantage with AI email marketing'
-  ]
-
-  return (
-    <>
-      <Helmet>
-        <title>AI Email Marketing Automation - Zion Tech Group</title>
-        <meta name="description" content="AI-powered email marketing automation for improved campaigns" />
-        <meta name="keywords" content="AI, artificial intelligence, email marketing, automation" />
-      </Helmet>
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-sky-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              AI Email Marketing Automation
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced AI-powered email marketing automation for improved campaigns.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Get Started
-              </button>
-              <button className="border border-sky-400 text-sky-400 hover:bg-sky-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                View Demo
-              </button>
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Key Features</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Advanced AI technology that drives results</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-sky-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-f401
                   {feature.benefits && (
                     <ul className="space-y-2"></ul>
                       {feature.benefits.map((benefit, idx) => (
@@ -247,35 +135,11 @@ const AiEmailMarketingAutomationPage: React.FC = () => {
                           {benefit}
                         </li>
                       ))}
-<<<<<<< HEAD
-=======
-
-        {/* Benefits Section */}
-        <section className="py-20 px-4 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Ai Email Marketing Automation?</h2>
-              <p className="text-xl text-gray-300">Transform your business with intelligent automation</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <Zap className="w-6 h-6 text-cyan-400" />
-                  </div>
-                  <p className="text-gray-300">{benefit}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
-=======
-                    </ul>
-                  )}
->>>>>>> cursor/fix-errors-and-merge-to-main-f401
                 </div>
               ))}
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
           <div className="max-w-7xl mx-auto"></div></div>
             <div className="text-center mb-16"></div></div>
               <h2 className="text-4xl font-bold text-white mb-4"></h2></h2>Section Title</h2>
@@ -290,80 +154,21 @@ const AiEmailMarketingAutomationPage: React.FC = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" / /></div>
               {benefits.map((benefit, index) =&gt; ()
-=======
-
-        {/* Benefits Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution?</h2>
-              <p className="text-xl text-gray-300">Proven results that drive business growth and efficiency</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300">
-                  <div className="flex items-center mb-4">
-                    <CheckCircle className="w-6 h-6 text-green-400 mr-3" />
-                    <span className="text-white font-semibold">{benefit}</span>
-                  </div>
-                </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-f401
               ))}
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4"></section></section>
           </section>< className="$2 />
             </div><div className="text-center mb-16"></div></div>
               </div><h2 className="text-4xl font-bold text-white mb-4"></h2></h2>Section Title</h2>
               <p className="text-xl text-gray-300"></p></p>Section description</p>
-=======
-
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Get started with our Ai Email Marketing Automation and experience the future of intelligent automation.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
-                Start Free Trial
-              </button>
-              <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-                Contact Sales
-              </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
-=======
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Contact our experts to discuss your requirements and get started today.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                Contact Us
-              </button>
-              <button className="border border-sky-400 text-sky-400 hover:bg-sky-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                Learn More
-              </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-f401
             </div>
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-=======
-      <Footer />
->>>>>>> cursor/fix-errors-and-merge-to-main-f401
     </>
   )
 }

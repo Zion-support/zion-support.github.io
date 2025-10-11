@@ -24,7 +24,6 @@ return (
 </div>
         </div>
       </section>
-<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900"></div></div>
       <SEOOptimizer 
@@ -66,12 +65,6 @@ return (
             <div className="text-center mb-16"></div></div>
               <h2 className="text-4xl font-bold text-white mb-4"></h2></h2>Section Title</h2>
             <p></p>
-=======
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-        </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
               Comprehensive IT solutions for all aspects of healthcare delivery and management.
             </p>
           </div>
@@ -92,7 +85,6 @@ return (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" / /></div>
             {benefits.map((benefit, index) => ()
             ))}
-<<<<<<< HEAD
       {/* CTA Section */}
 <section className="py-20 px-4"></section></section>
           </section>< className="$2 />
@@ -101,8 +93,6 @@ return (
               <p className="text-xl text-gray-300"></p></p>Section description</p>
             </div>
           </div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
         </section>
             </button>
             </button>

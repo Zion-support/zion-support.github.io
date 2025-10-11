@@ -55,15 +55,7 @@
                         <span>{opt</span&gt;}</span>
                       </li>
 'use client'
-<<<<<<< HEAD
 import React, { useEffect, useCallback  } from 'react'
-=======
-import React, { useEffect, useCallback } from 'react'
-const PerformanceOptimizer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  // Preload critical resources
-'use client'
-import React, { useEffect } from 'react'
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
 
 const PerformanceOptimizer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {

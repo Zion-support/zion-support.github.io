@@ -169,7 +169,6 @@ const PageBackupPage: React.FC = () => {
       
       <Navigation />
       
-<<<<<<< HEAD
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"></p></p>We help businesses leverage cutting-edge technology to drive growth,</p>
               improve efficiency, and stay ahead of the competition.
@@ -179,10 +178,6 @@ const PageBackupPage: React.FC = () => {
 
                 <div className="text-center mb-16"></div></div>
                   <h2 className="text-3xl md: text-4xl font-bold text-white mb-4"></h2></h2>,</h2>
-=======
-                <div className="text-center mb-16">
-                  <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,</h2>
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
                     Our Core Services;
                   </h2>
                   <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p></p>Comprehensive technology solutions designed to accelerate your digital transformation;</p>

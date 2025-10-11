@@ -10,7 +10,6 @@ const ContentStatistics: React.FC = () => {
     satisfaction: 0
   });
 
-<<<<<<< HEAD
   };
     years: 10
   };
@@ -20,11 +19,6 @@ const ContentStatistics: React.FC = () => {
   const statistics = [
     {icon: Users,
       value: counters.clients,
-=======
-  const stats = [
-    {
-      icon: Users,
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
       label: 'Happy Clients',
       value: 200,
       suffix: '+'
@@ -49,7 +43,6 @@ const ContentStatistics: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
           }
           return prev;
         });
@@ -184,25 +177,6 @@ const ContentStatistics: React.FC = () => {
 
     return () => {
       timers.forEach(timer =&gt; clearInterval(timer));
-=======
-  useEffect(() => {
-    const animateCounters = () => {
-      stats.forEach((stat, index) => {
-        let current = 0;
-        const increment = stat.value / 50;
-        const timer = setInterval(() => {
-          current += increment;
-          if (current >= stat.value) {
-            current = stat.value;
-            clearInterval(timer);
-          }
-          setCounters(prev => ({
-            ...prev,
-            [Object.keys(prev)[index]]: Math.floor(current)
-          }));
-        }, 20);
-      });
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
     };
 
     const timer = setTimeout(animateCounters, 500);
@@ -210,7 +184,6 @@ const ContentStatistics: React.FC = () => {
   }, []);
 
   return (
-<<<<<<< HEAD
     <div className="py-16 px-4 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div></div>
       <div className="max-w-7xl mx-auto"></div></div>
         {/* Header */}
@@ -235,24 +208,6 @@ const ContentStatistics: React.FC = () => {
                   {Math.floor(stat.value)}{stat.suffix}
                 </div>
                 <div className="text-gray-300 font-medium"></div></div>{stat.label}</div>
-=======
-    <div className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Our Impact
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Numbers that speak to our commitment to excellence and client success.
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {stats.map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mx-auto mb-4">
-                <stat.icon className="text-white" size={32} />
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
               </div>
               <div className="text-4xl font-bold text-white mb-2">
                 {counters[Object.keys(counters)[index] as keyof typeof counters]}{stat.suffix}
@@ -262,7 +217,6 @@ const ContentStatistics: React.FC = () => {
           ))}
         </div>
       </div>
-<<<<<<< HEAD
 
       </div>
     </div>
@@ -301,8 +255,6 @@ const ContentStatistics: React.FC = () => {
           </div>
         </div>
       </div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
     </div>
   );
 };

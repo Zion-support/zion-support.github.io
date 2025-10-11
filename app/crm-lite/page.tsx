@@ -31,7 +31,6 @@ const CrmLitePage: React.FC = () => {
   ]
 
   const benefits = [
-<<<<<<< HEAD
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -49,13 +48,6 @@ const CrmLitePage: React.FC = () => {
                 <p className="text-gray-300"></p></p>{feature.description</p&gt;}</p>
               </div>
     'Proven track record of success'
-=======
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
   ]
 
   return (

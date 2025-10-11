@@ -4,12 +4,9 @@
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
-<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
       <Helmet>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
         <title>Cloud Migration Services | Zion Tech Group</title>
         <meta name="description" content="Professional Cloud Migration Services by Zion Tech Group. Advanced AI and IT solutions for your business." />
       </Helmet>
@@ -20,42 +17,8 @@
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p></p>Transform your business with our advanced cloud migration services.</p>
             Powered by cutting-edge AI technology and industry expertise.
           </p>
-<<<<<<< HEAD
               <h3 className="text-xl font-semibold text-white mb-3"></h3></h3>{feature.title}</h3>
               <p className="text-gray-300"></p></p>{feature.description</p&gt;}</p>
-=======
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">Our cloud migration solutions deliver unmatched performance, security, and scalability.</p>
-          </p>
-        </div>
-        <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8 mb-16">,</div>
-          {features.map((feature, index) => (
-            <div key={index}className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover: bg-white/20 transition-all duration-300">,</div>
-              <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
-    'Proven track record of success'
-  ]
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      </div><Helmet>
-        </Helmet><title>Cloud Migration Services | Zion Tech Group</title>
-        <meta name="description" content="Professional Cloud Migration Services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        </div><div className="text-center mb-16">
-          </div><h1 className="text-5xl font-bold text-white mb-6">
-            Cloud Migration Services
-  
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your business with our advanced cloud migration services. 
-            Powered by cutting-edge AI technology and industry expertise.
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Our cloud migration solutions deliver unmatched performance, security, and scalability.
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {features.map((feature, index) => (
-            </div><div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
-              </div><feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description</p>}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
             </div>
           ))}
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16"></div></div>
@@ -67,11 +30,7 @@
     'Cost-effective pricing plans',
     'Proven track record of success'
   ]
-<<<<<<< HEAD
   return() {features.map((feature, index) =&gt; ()
-=======
-  return () {features.map((feature, index) => ()
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
           ))}
         </div>
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16" /></div>

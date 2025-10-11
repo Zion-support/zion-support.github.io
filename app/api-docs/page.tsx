@@ -76,11 +76,7 @@
       endpoint.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       endpoint.path.toLowerCase().includes(searchQuery.toLowerCase())
     )})).filter(category => category.endpoints.length > 0);
-<<<<<<< HEAD
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>)</div>
-=======
-  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
       <SEOOptimizer;
   ]
   const filteredEndpoints = apiEndpoints.map()
@@ -97,7 +93,6 @@
         keywords="API documentation, REST API, AI API, cloud API, integration, developer tools, API reference"
       />
       <Navigation />
-<<<<<<< HEAD
             </div>
           ))
         </div>
@@ -111,8 +106,6 @@
         <div className="max-w-7xl mx-auto text-center"></div></div>
           <h1 className="text-5xl font-bold text-white mb-6"></h1></h1>API Documentation;</h1>
   </
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
             Explore endpoints, authentication, and integration guides.
           </p>
               Download SDK,

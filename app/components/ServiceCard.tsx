@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section></section>
@@ -141,8 +140,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ()
           </div><div key={index} className="flex items-center gap-2"></div></div>
             </div><CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
             <span className="text-gray-300 text-sm"></span></span>{feature}</span>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
           </div>
         ))}
       {price && (

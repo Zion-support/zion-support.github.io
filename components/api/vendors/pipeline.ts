@@ -15,13 +15,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status (200).json ({ items })
   res.status (200).json ({ items })
 }
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse  } from 'next'
 import {  listPipelineForVendor   } from '../../../utils/vendor-store'
-=======
-import type { NextApiRequest, NextApiResponse } from 'next'
-import { listPipelineForVendor } from '../../../utils/vendor-store'
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const vendorId = String(req.query.vendorId || '')
   if (!vendorId) return res.status(400).json({ error: 'vendorId required' })

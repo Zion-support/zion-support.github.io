@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 import React, { useState  } from 'react'
 import {  Send, CheckCircle, AlertCircle, Loader2  } from 'lucide-react'interface FormData {
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
   email: string,
   company: string,
   phone: string,
@@ -59,7 +56,6 @@ interface FormStatus {
     'Data Analytics',
     'Cybersecurity',
     'IT Consulting',
-<<<<<<< HEAD
 
   return(<div className="max-w-2xl mx-auto p-6"></div></div>)</div>
     'Other';
@@ -67,17 +63,12 @@ interface FormStatus {
   return (
       <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center"></h2></h2>Get In Touch</h2>
       <form onSubmit={handleSubmit}className="space-y-6"></form>
-=======
-      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Get In Touch</h2>
-      <form onSubmit={handleSubmit}className="space-y-6">
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2"></label>
             Full Name;
     'Other'
   ]
 
-<<<<<<< HEAD
               </label>
               <input
                 type="text"
@@ -100,8 +91,6 @@ interface FormStatus {
         </form><div>
           </div><label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2"></label>
             Full Name
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
           </label>
               <input;
                 type="text"
@@ -152,7 +141,6 @@ interface FormStatus {
 
           <div>
               name="service"
-<<<<<<< HEAD
               ) : (
                 <div className="h-5 w-5 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
               </div>
@@ -185,8 +173,6 @@ interface FormStatus {
             </div>
           )}
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
           </button>
         </form>
 
@@ -209,7 +195,6 @@ interface FormStatus {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
 
         <div>
           <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2"></label>
@@ -272,8 +257,6 @@ interface FormStatus {
           )}
         </button>
       </form>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
     </div>
   )
 }

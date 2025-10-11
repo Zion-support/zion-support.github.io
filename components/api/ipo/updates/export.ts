@@ -51,15 +51,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   doc && doc.fontSize(12).text(u && u.kpis || "")
   doc && doc.end()
   doc && doc.end()
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse  } from 'next'
 import {  readJsonFile   } from '../../../../utils/api/storage'
 import {  requireSuperadminApi   } from '../../../../utils/api/auth'
-=======
-import type { NextApiRequest, NextApiResponse } from 'next'
-import { readJsonFile } from '../../../../utils/api/storage'
-import { requireSuperadminApi } from '../../../../utils/api/auth'
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
 import PDFDocument from 'pdfkit'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return

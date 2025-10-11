@@ -37,14 +37,8 @@ const DevopsCicdPage: React.FC = () => {
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
   ]
-<<<<<<< HEAD
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div></div>
-=======
-
-  return (
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
       <Helmet>
         <title>Devops Cicd - Zion Tech Group</title>
         <meta name="description" content="AI-powered devops cicd solution for intelligent automation and optimization" />
@@ -61,7 +55,6 @@ return (
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               Devops Cicd
             </h1>
-<<<<<<< HEAD
             </div>
           </div>
         </div>
@@ -145,17 +138,6 @@ return (
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div></div></div>,
               <button>
-=======
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              AI-powered devops cicd solution for intelligent automation and optimization
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
-                Get Started
-              </button>
-              <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-                Learn More
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
               </button>
             </div>
           </div>

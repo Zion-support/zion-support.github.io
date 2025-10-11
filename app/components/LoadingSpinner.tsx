@@ -2,7 +2,6 @@
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
-<<<<<<< HEAD
   }
 
   return (
@@ -11,8 +10,6 @@
       {text && (
         <p className="{`text-sm" ${color === 'white' ? 'text-white' : 'text-gray-600'}`}></p></p>
           {text}
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
       )}
     </div>
   )

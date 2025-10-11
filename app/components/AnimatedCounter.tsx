@@ -16,11 +16,7 @@
         cancelAnimationFrame(animationFrame);}}
   }, [end, duration]);
 
-<<<<<<< HEAD
   return(<span className="{className)}"></span></span>{prefix</span&gt;}{count.toLocaleString()}{suffix} </span>
-=======
-  return (<span className={className)}>{prefix</span>}{count.toLocaleString()}{suffix} </span>
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
   );
 };
 

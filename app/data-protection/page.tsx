@@ -7,7 +7,6 @@ const DataProtectionPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
-<<<<<<< HEAD
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency',},
     {icon: Zap,
@@ -22,47 +21,11 @@ const DataProtectionPage: React.FC = () => {
     ]
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div></div>
-=======
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics'],
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics'],
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'],
-    }
-  ]
-
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ]
-
-  return (
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
       <Helmet>
         <title>Data Protection - Zion Tech Group</title>
         <meta name="description" content="AI-powered data protection solution for intelligent automation and optimization" />
         <meta name="keywords" content="AI, data, protection, automation, artificial intelligence, business solutions" />
       </Helmet>
-<<<<<<< HEAD
             </div>
           </div>
         </div>
@@ -145,28 +108,6 @@ return (
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div></div></div>,
               <button>
-=======
-      <Navigation />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-sky-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="py-20 px-4 relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Data Protection
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              AI-powered data protection solution for intelligent automation and optimization
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
-                Get Started
-              </button>
-              <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-                Learn More
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
               </button>
             </div>
           </div>

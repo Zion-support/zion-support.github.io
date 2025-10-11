@@ -1,13 +1,6 @@
-<<<<<<< HEAD
 
 'use client'
 import React from 'react';
-=======
-'use client';
-import React from 'react';
-import { Zap, Shield, Star, Users, ArrowRight } from 'lucide-react';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
 const ContentPromotionBanner: React.FC = () => {
   const features = [
     {
@@ -52,16 +45,6 @@ const ContentPromotionBanner: React.FC = () => {
             </div>
           ))}
         </div>
-<<<<<<< HEAD
-=======
-        <a
-          href="/contact"
-          className="inline-flex items-center bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
-        >
-          Get Started Today
-          <ArrowRight className="ml-2" size={20} />
-        </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
       </div>
     </div>
   );

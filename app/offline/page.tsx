@@ -1,4 +1,3 @@
-<<<<<<< HEAD
         <title>Page | Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
@@ -18,9 +17,6 @@ import {  Helmet  } from 'react-helmet-async'return (
       </Helmet>
       {/* Hero Section */}
               <p className="text-xl text-gray-300"></p></p>Section description</p>
-=======
-              <p className="text-xl text-gray-300">Section description</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
             </div>
           </div>
         </section>
