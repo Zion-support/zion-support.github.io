@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-'use client';
-import React from 'react';
-
-const ServicesPage: React.FC = () => {
-  return (
-    <div className="min-h-screen pt-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Our <span className="text-cyan-400">Services</span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Comprehensive AI and IT solutions to transform your business.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-};
-=======
 'use client'
 import React from 'react'
 import Navigation from '../components/Navigation'
@@ -48,20 +27,20 @@ const ServicesPage: React.FC = () => {
     {
       icon: Code,
       title: 'Custom Development',
-      description: 'Tailored software solutions built to meet your specific requirements.',
+      description: 'Tailored software solutions built to your exact specifications.',
       features: ['Web Applications', 'Mobile Apps', 'API Development', 'System Integration']
     },
     {
       icon: BarChart,
       title: 'Data Analytics',
-      description: 'Transform your data into actionable insights and business intelligence.',
-      features: ['Data Visualization', 'Business Intelligence', 'Real-time Analytics', 'Reporting']
+      description: 'Transform your data into actionable business insights.',
+      features: ['Business Intelligence', 'Data Visualization', 'Predictive Modeling', 'Real-time Analytics']
     },
     {
       icon: Zap,
       title: 'Automation',
       description: 'Streamline your operations with intelligent automation solutions.',
-      features: ['Process Automation', 'Workflow Optimization', 'RPA Solutions', 'Integration']
+      features: ['Process Automation', 'Workflow Optimization', 'AI-Powered Tools', 'Integration Services']
     }
   ]
 
@@ -77,34 +56,35 @@ const ServicesPage: React.FC = () => {
               Our <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Services</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Comprehensive solutions designed to accelerate your digital transformation and drive business growth.
+              Comprehensive AI and IT solutions designed to transform your business and drive growth.
             </p>
           </div>
         </div>
       </section>
->>>>>>> origin/main
 
-      {/* Services Section */}
+      {/* Services Grid */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mr-4">
-                    <service.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white">{service.title}</h3>
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 group">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <service.icon className="w-8 h-8 text-white" />
                 </div>
+                <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                 <p className="text-gray-300 mb-6">{service.description}</p>
-                <ul className="space-y-2">
+                <ul className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-3" />
                       {feature}
                     </li>
                   ))}
                 </ul>
+                <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+                  Learn More
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </button>
               </div>
             ))}
           </div>
@@ -118,14 +98,13 @@ const ServicesPage: React.FC = () => {
             Ready to Get Started?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how our services can help you achieve your business goals.
+            Let's discuss how our services can help transform your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
-              <ArrowRight className="w-5 h-5 mr-2" />
-              Start Your Project
+            <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105">
+              Get Started
             </button>
-            <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-4 px-8 rounded-lg transition-all duration-300">
+            <button className="border border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-medium transition-all duration-300">
               Contact Us
             </button>
           </div>
