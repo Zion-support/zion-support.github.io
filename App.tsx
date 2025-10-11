@@ -43,12 +43,16 @@ const CookiesPage = React.lazy(() => import('./app/cookies/page'));
 const SitemapPage = React.lazy(() => import('./app/sitemap/page'));
 
 // AI Service Pages
+const AiMultimodalLlmPage = React.lazy(() => import('./app/ai-multimodal-llm/page'));
+const AiQuantumComputingSolutionsPage = React.lazy(() => import('./app/ai-quantum-computing-solutions/page'));
+const AiBusinessIntelligencePlatformPage = React.lazy(() => import('./app/ai-business-intelligence-platform/page'));
 const AiAnalyticsPage = React.lazy(() => import('./app/ai-analytics/page'));
 const AiAutomationPage = React.lazy(() => import('./app/ai-automation/page'));
 const AiChatbotBuilderPage = React.lazy(() => import('./app/ai-chatbot-builder/page'));
 const AiCybersecurityPage = React.lazy(() => import('./app/ai-cybersecurity/page'));
 
 // IT Service Pages
+const AdvancedCloudInfrastructurePage = React.lazy(() => import('./app/advanced-cloud-infrastructure/page'));
 const CloudInfrastructurePage = React.lazy(() => import('./app/cloud-infrastructure/page'));
 const CybersecuritySolutionsPage = React.lazy(() => import('./app/cybersecurity-solutions/page'));
 const WebDevelopmentPage = React.lazy(() => import('./app/web-development/page'));
@@ -106,12 +110,16 @@ const App: React.FC = () => {
                             <Route path="/sitemap" element={<SitemapPage />} />
                             
                             {/* AI Service Pages */}
+                            <Route path="/ai-multimodal-llm" element={<AiMultimodalLlmPage />} />
+                            <Route path="/ai-quantum-computing-solutions" element={<AiQuantumComputingSolutionsPage />} />
+                            <Route path="/ai-business-intelligence-platform" element={<AiBusinessIntelligencePlatformPage />} />
                             <Route path="/ai-analytics" element={<AiAnalyticsPage />} />
                             <Route path="/ai-automation" element={<AiAutomationPage />} />
                             <Route path="/ai-chatbot-builder" element={<AiChatbotBuilderPage />} />
                             <Route path="/ai-cybersecurity" element={<AiCybersecurityPage />} />
                             
                             {/* IT Service Pages */}
+                            <Route path="/advanced-cloud-infrastructure" element={<AdvancedCloudInfrastructurePage />} />
                             <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
                             <Route path="/cybersecurity-solutions" element={<CybersecuritySolutionsPage />} />
                             <Route path="/web-development" element={<WebDevelopmentPage />} />

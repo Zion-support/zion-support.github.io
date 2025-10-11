@@ -73,6 +73,9 @@ const Navigation: React.FC = () => {
 
   // Service data
   const aiServices = [
+    { name: 'AI Multimodal LLM', href: '/ai-multimodal-llm', icon: Brain, description: 'Advanced multimodal AI' },
+    { name: 'AI Quantum Computing', href: '/ai-quantum-computing-solutions', icon: Cpu, description: 'Quantum AI solutions' },
+    { name: 'AI Business Intelligence', href: '/ai-business-intelligence-platform', icon: BarChart, description: 'AI-powered BI platform' },
     { name: 'AI Analytics', href: '/ai-analytics', icon: BarChart, description: 'Advanced data insights' },
     { name: 'AI Automation', href: '/ai-automation', icon: Zap, description: 'Streamline workflows' },
     { name: 'AI Chatbot', href: '/ai-chatbot-builder', icon: MessageCircle, description: 'Intelligent conversations' },
@@ -112,6 +115,7 @@ const Navigation: React.FC = () => {
     { name: 'AI Content Generation Pro', href: '/ai-content-generation-pro', icon: FileText, description: 'Advanced content creation' }
   ];
   const itServices = [
+    { name: 'Advanced Cloud Infrastructure', href: '/advanced-cloud-infrastructure', icon: Cloud, description: 'Enterprise cloud solutions' },
     { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: Cloud, description: 'Scalable cloud solutions' },
     { name: 'API Development', href: '/api-development', icon: Code, description: 'API development & management' },
     { name: 'Cybersecurity', href: '/cybersecurity-solutions', icon: Shield, description: 'Comprehensive security' },
@@ -149,6 +153,7 @@ const Navigation: React.FC = () => {
   ]
 
   const microSaasServices = [
+    { name: 'AI Business Intelligence Platform', href: '/ai-business-intelligence-platform', icon: BarChart, description: 'AI-powered BI platform' },
     { name: 'Zion Analytics Pro', href: '/zion-analytics-pro', icon: BarChart, description: 'Business intelligence platform' },
     { name: 'Zion Chat AI', href: '/zion-chat-ai', icon: MessageCircle, description: 'AI customer support' },
     { name: 'Zion Security Shield', href: '/zion-security-shield', icon: Shield, description: 'Cybersecurity monitoring' },
