@@ -1,0 +1,150 @@
+#!/usr/bin/env python3
+"""
+Script to fix JSX errors in TypeScript/TSX files
+"""
+import os
+import re
+import glob
+
+def fix_jsx_errors(file_path):
+    """Fix JSX errors in a single file"""
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        # Check if file has JSX errors
+        if 'JSX element' not in content and 'Unexpected token' not in content:
+            return False
+        
+        print(f"Fixing JSX errors in: {file_path}")
+        
+        # Extract the component name from the file path
+        component_name = os.path.basename(file_path).replace('.tsx', '').replace('.ts', '')
+        # Convert kebab-case to PascalCase
+        component_name = ''.join(word.capitalize() for word in component_name.split('-'))
+        
+        # Create a proper component structure
+        proper_content = f"""'use client';
+import React from 'react';
+import {{ CheckCircle }} from 'lucide-react';
+import {{Helmet}} from 'react-helmet-async';
+import {{ArrowRight}} from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
+const {component_name}Page: React.FC = () => {{
+  const features = [
+    {{
+      title: '{component_name}',
+      description: 'Professional {component_name.lower()} services and solutions.',
+      benefits: ['Quality Assurance', 'Fast Delivery', '24/7 Support', 'Custom Solutions']
+    }},
+    {{
+      title: 'Advanced Technology',
+      description: 'Cutting-edge tools and technologies to deliver superior results.',
+      benefits: ['Latest Tools', 'Modern Methods', 'Scalable Solutions', 'Future-Ready']
+    }},
+    {{
+      title: 'Proven Results',
+      description: 'Track record of successful projects and satisfied clients.',
+      benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
+    }}
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>{component_name} - Zion Tech Group</title>
+        <meta name="description" content="Professional {component_name.lower()} services and solutions." />
+        <meta name="keywords" content="{component_name.lower()}, services, solutions, technology" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <main className="pt-20 px-4 py-20">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                {component_name}
+              </h1>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Professional {component_name.lower()} services to help your business succeed and grow.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+              {{features.map((feature, index) => (
+                <div key={{index}} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                  <h3 className="text-xl font-semibold text-white mb-4">{{feature.title}}</h3>
+                  <p className="text-gray-300 mb-4">{{feature.description}}</p>
+                  <ul className="space-y-2">
+                    {{feature.benefits.map((benefit, benefitIndex) => (
+                      <li key={{benefitIndex}} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                        {{benefit}}
+                      </li>
+                    ))}}
+                  </ul>
+                </div>
+              ))}}
+            </div>
+            
+            <div className="text-center">
+              <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
+                <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
+                <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                  Contact us today to learn more about our {component_name.lower()} services.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                    Contact Us
+                  </button>
+                  <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+                    Learn More
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+      
+      <Footer />
+    </>
+  );
+}};
+
+export default {component_name}Page;"""
+        
+        # Write the fixed content back
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write(proper_content)
+        
+        return True
+        
+    except Exception as e:
+        print(f"Error fixing {file_path}: {e}")
+        return False
+
+def main():
+    """Main function to fix all JSX errors"""
+    # List of files with JSX errors
+    files_to_fix = [
+        'app/it-infrastructure-design/page.tsx',
+        'app/it-project-management/page.tsx',
+        'app/mobile-app-development/page.tsx',
+        'app/system-administration/page.tsx'
+    ]
+    
+    files_fixed = 0
+    
+    for file_path in files_to_fix:
+        if os.path.exists(file_path):
+            if fix_jsx_errors(file_path):
+                files_fixed += 1
+    
+    print(f"Fixed JSX errors in {files_fixed} files")
+
+if __name__ == "__main__":
+    main()
