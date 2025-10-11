@@ -1,6 +1,6 @@
   onResponse?: (response: any) => any,
   onError?: (error: any) => any;,}}
-class APIInterceptor {private requestInterceptors: Array<(config: any) => any> = [],}
+class APIInterceptor {private requestInterceptors: Array<(config: any) =&gt; any&gt; = [],}
   private responseInterceptors: Array<(response: any) => any> = [],
   private errorInterceptors: Array<(error: any) => any> = [],
 // Add request interceptor,

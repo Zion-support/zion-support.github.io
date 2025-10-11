@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type { NextApiRequest, NextApiResponse  } from 'next'
 interface ShortUrl {
 // In-memory storage (in production, use a database)
 const urlStorage = new Map<string, ShortUrl>()

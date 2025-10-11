@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type { NextApiRequest, NextApiResponse  } from 'next'
 interface TextAnalysisResult {
     bigrams: Array<{ phrase: string, count: number }>
     trigrams: Array<{ phrase: string, count: number }>

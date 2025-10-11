@@ -4,9 +4,9 @@ export const debounce = <T extends (...args: any[]) => any>(,
   wait: number,
     let timeout: NodeJS.Timeout,
   return (
-    <React.Fragment>
+    <>
       ...args: Parameters</T><T>
-    </React.Fragment>
+    </>
   ) => {,
   func: T,
   }
@@ -21,8 +21,8 @@ return observer
 }
 export const measurePerformance = (name: string, fn: () => void) => {,
     ,
-    isTablet: width >= 768 && width < 1024,
-    isDesktop: width >= 1024;,}}
+    isTablet: width &gt;= 768 && width < 1024,
+    isDesktop: width &gt;= 1024;,}}
   private observers: PerformanceObserver[] = [],
   private isMonitoring: boolean = false,
   constructor(config?: Partial<OptimizationConfig>) {,}return {}}isMobile: width < 768,
@@ -224,7 +224,7 @@ Cache Hit,
 Recommendation,
   s:
 ${score < 80 ? '- Consider optimizing images and enabling compression' : ''}
-${metrics.loadTime > 2000 ? '- Implement lazy loading for better initial load time' : ''}
+${metrics.loadTime &gt; 2000 ? '- Implement lazy loading for better initial load time' : ''}
     `.trim();
   }
   /**;
@@ -236,7 +236,7 @@ ${metrics.loadTime > 2000 ? '- Implement lazy loading for better initial load ti
 // Export singleton instance;
 export const performanceOptimizer = new PerformanceOptimizer();
 export default PerformanceOptimizer;
-${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize components' : ''}`
+${metrics.memoryUsage &gt; 30 * 1024 * 1024 ? '- Review memory usage and optimize components' : ''}`
     `.trim()
   }
   /**

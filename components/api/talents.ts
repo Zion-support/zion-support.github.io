@@ -1,12 +1,12 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type { NextApiRequest, NextApiResponse  } from 'next'
 import fs from 'fs - extra'
 import path from 'path'
-import {
+import { 
   authenticateRequest,
   enforceRateLimit,
   recordRequest,
-} from '../../utils/api/partnerAuth'
-import { v4 as uuidv4 } from 'uuid'
+  } from '../../utils/api/partnerAuth'
+import {  v4 as uuidv4   } from 'uuid'
 const TALENTS_FILE = path.join(
   process.cwd()
   'data'
@@ -22,11 +22,11 @@ createdAt: now,
   await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 201)
   return res && res.status(201).json({ id: record && record.id });  return res && res.status(201).json({ id: record && record.id })
 }
-import type { NextApiRequest, NextApiResponse } from "next"
+import type { NextApiRequest, NextApiResponse  } from "next"
 import fs from "fs-extra"
 import path from "path"
-import { authenticateRequest, enforceRateLimit, recordRequest } from "../../utils/api/partnerAuth"
-import { v4 as uuidv4 } from "uuid"
+import {  authenticateRequest, enforceRateLimit, recordRequest   } from "../../utils/api/partnerAuth"
+import {  v4 as uuidv4   } from "uuid"
 const TALENTS_FILE = path.join(process.cwd(), "data", "talents", "talents.json")
 const TALENTS_FILE = path.join(process.cwd(), "data", "talents", "talents.json")
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {

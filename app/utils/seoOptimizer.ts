@@ -131,7 +131,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
    */
   generateDescription(pageDescription?: string): string {
     const description = pageDescription || this.currentPageData?.description || this.config.defaultDescription
-    return description.length > 160
+    return description.length &gt; 160
   }
   generateDescription(pageDescription?: string): string {}
     const description = pageDescription || this.currentPageData?.description || this.config.defaultDescription

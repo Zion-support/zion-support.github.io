@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type { NextApiRequest, NextApiResponse  } from 'next'
 import fs from 'fs'
 import path from 'path'
 export default async function handler(
@@ -83,7 +83,6 @@ if ( {) {
   } catch (err) {
   }
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     console.error('Request-to-hire failed', err)
     return res.status(500).json({ error: 'Internal error' })
   }

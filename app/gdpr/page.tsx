@@ -14,7 +14,7 @@ const benefits = [
     'Proven track record of success'
         </div>
       </section>
-              <p className="text-xl text-gray-300">Section description</p>
+              <p className="text-xl text-gray-300"></p></p>Section description</p>
             </div>
           </div>
         </section>

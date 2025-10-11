@@ -71,7 +71,7 @@ const itServices = [;
     // IT Infrastructure Services;
   Webcam as WebcamIcon, Speaker as SpeakerIcon
   }
-} from 'lucide-react'
+ } from 'lucide-react'
 const ITConsultingPage: React.FC = () => {
     const [selectedCategory, setSelectedCategory] = useState('all')
   const [searchTerm, setSearchTerm] = useState('')
@@ -454,23 +454,23 @@ const itServices = [
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
       {/* Hero Section */}</div>
-      <section className="py-20 px-4">
+      <section className="py-20 px-4"></section></section>
           </section>< className="$2 />
-            </div><div className="text-center mb-16">
-              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
+            </div><div className="text-center mb-16"></div></div>
+              </div><h2 className="text-4xl font-bold text-white mb-4"></h2></h2>Section Title</h2>
+              <p className="text-xl text-gray-300"></p></p>Section description</p>
             </div>
           </div>
         </section>
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20" aria-hidden="true"></div>
-        <div className="relative z-10 max-w-7xl mx-auto text-center"></div>
-          <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight cyber-text neon-pulse"></h1>,
-            Professional <span className="holographic-text">IT Services</span>
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20" aria-hidden="true"></div></div></div>
+        <div className="relative z-10 max-w-7xl mx-auto text-center"></div></div></div>
+          <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight cyber-text neon-pulse"></h1></h1></h1>,
+            Professional <span className="holographic-text"></span></span>IT Services</span>
           </h1>
           <p>Comprehensive IT solutions designed to optimize your technology infrastructure,</p>
             enhance security, and drive business growth. Expert consulting and implementation.
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center mb-12"></div>,
+          <div className="flex flex-col sm: flex-row gap-4 justify-center mb-12"></div></div></div>,
             <a>
               Call (302) 464-0950
             </a>
@@ -479,20 +479,20 @@ const itServices = [
         </div>
       </section>
 
-              <p className="text-xl text-gray-300">Section description</p>
+              <p className="text-xl text-gray-300"></p></p>Section description</p>
             </div>
           </div>
         </section>
             {/* Search */}</div>
-            <div className="flex-1"></div>
-              <div className="relative"></div>
+            <div className="flex-1"></div></div></div>
+              <div className="relative"></div></div></div>
                 <Search>
                 />,
               </div>
             </div>
 
               <select,
-                value={selectedCategory}onChange={(e) => setSelectedCategory(e.target.value)}className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20",
+                value={selectedCategory}onChange={(e) =&gt; setSelectedCategory(e.target.value)}className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20",
               >,
 
                     {category.name} </option>
@@ -519,23 +519,23 @@ const itServices = [
           </div>
         </div>
       </section>
-              <p className="text-xl text-gray-300">Section description</p>
+              <p className="text-xl text-gray-300"></p></p>Section description</p>
             </div>
           </div>
         </section>
-                <div className="flex items-start justify-between mb-4"></div>
-                  <div className="text-cyan-400 group-hover: text-cyan-300 transition-colors"></div>,
+                <div className="flex items-start justify-between mb-4"></div></div></div>
+                  <div className="text-cyan-400 group-hover: text-cyan-300 transition-colors"></div></div></div>,
                     <service />
-                  <div className="text-right"></div>
-                    <div className="text-2xl font-bold text-white">{service.price</div>}</div>
-                    <div className="text-sm text-gray-400">starting price</div>
+                  <div className="text-right"></div></div></div>
+                    <div className="text-2xl font-bold text-white"></div></div>{service.price</div&gt;}</div>
+                    <div className="text-sm text-gray-400"></div></div>starting price</div>
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3 neon-glow">{service.name}</h3>
-                <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description</p>}</p>
-                <div className="space-y-3 mb-6"></div>
+                <h3 className="text-xl font-bold text-white mb-3 neon-glow"></h3></h3>{service.name}</h3>
+                <p className="text-gray-300 mb-4 text-sm leading-relaxed"></p></p>{service.description</p&gt;}</p>
+                <div className="space-y-3 mb-6"></div></div></div>
                   <div />
-                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features: </h4>,
+                    <h4 className="text-sm font-semibold text-cyan-400 mb-2"></h4></h4>Key Features: </h4>,
                     <ul>
                         </li>
                       ))}
@@ -554,76 +554,76 @@ const itServices = [
           </div>
         </div>
       </section>
-      {/* CTA Section */} <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+      {/* CTA Section */} <section className="py-20 px-4"></section></section>
+          <div className="max-w-7xl mx-auto"></div></div>
+            <div className="text-center mb-16"></div></div>
+              <h2 className="text-4xl font-bold text-white mb-4"></h2></h2>Section Title</h2>
       {/* Services Grid */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <section className="py-12 px-4 sm:px-6 lg:px-8"></section></section>
+        <div className="max-w-7xl mx-auto"></div></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div></div>
             {filteredServices.map((service) => (
-              <div key={service.id} className="quantum-card p-6 group hover:scale-105 transition-all duration-300 energy-pulse">
-                <div className="flex items-start justify-between mb-4">
-                  <div className="text-cyan-400 group-hover:text-cyan-300 transition-colors">
+              <div key={service.id} className="quantum-card p-6 group hover:scale-105 transition-all duration-300 energy-pulse"></div></div>
+                <div className="flex items-start justify-between mb-4"></div></div>
+                  <div className="text-cyan-400 group-hover:text-cyan-300 transition-colors"></div></div>
                     <service.icon className="w-12 h-12" />
-                  <div className="text-right">
-                    <div className="text-2xl font-bold text-white">{service.price}
-                    <div className="text-sm text-gray-400">starting price
-                <h3 className="text-xl font-bold text-white mb-3 neon-glow">{service.name}
-                <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}
-                <div className="space-y-3 mb-6">
+                  <div className="text-right"></div></div>
+                    <div className="text-2xl font-bold text-white"></div></div>{service.price}
+                    <div className="text-sm text-gray-400"></div></div>starting price
+                <h3 className="text-xl font-bold text-white mb-3 neon-glow"></h3></h3>{service.name}
+                <p className="text-gray-300 mb-4 text-sm leading-relaxed"></p></p>{service.description}
+                <div className="space-y-3 mb-6"></div></div>
                   <div>
-                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:
-                    <ul className="space-y-1">
+                    <h4 className="text-sm font-semibold text-cyan-400 mb-2"></h4></h4>Key Features:
+                    <ul className="space-y-1"></ul>
                       {service.features.slice(0, 4).map((feature, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-300">
+                        <li key={idx} className="flex items-center text-sm text-gray-300"></li>
                           <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                           <span>{feature}
                       ))}
                   <div>
-                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Benefits:
-                    <ul className="space-y-1">
+                    <h4 className="text-sm font-semibold text-cyan-400 mb-2"></h4></h4>Benefits:
+                    <ul className="space-y-1"></ul>
                       {service.benefits.slice(0, 2).map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-300">
+                        <li key={idx} className="flex items-center text-sm text-gray-300"></li>
                           <TrendingUp className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           <span>{benefit}
                       ))}
-                <div className="space-y-2 mb-6 text-sm">
-                  <div className="flex justify-between">
-                    <span className="text-gray-400">Setup Time:
-                    <span className="text-white">{service.setupTime}
-                  <div className="flex justify-between">
-                    <span className="text-gray-400">Free Consultation:
-                    <span className="text-green-400">{service.freeConsultation}
-                  <div className="flex justify-between">
-                    <span className="text-gray-400">Target:
-                    <span className="text-white">{service.targetAudience}
+                <div className="space-y-2 mb-6 text-sm"></div></div>
+                  <div className="flex justify-between"></div></div>
+                    <span className="text-gray-400"></span></span>Setup Time:
+                    <span className="text-white"></span></span>{service.setupTime}
+                  <div className="flex justify-between"></div></div>
+                    <span className="text-gray-400"></span></span>Free Consultation:
+                    <span className="text-green-400"></span></span>{service.freeConsultation}
+                  <div className="flex justify-between"></div></div>
+                    <span className="text-gray-400"></span></span>Target:
+                    <span className="text-white"></span></span>{service.targetAudience}
                 {service.caseStudy && (
-                  <div className="mb-4 p-3 bg-green-900/20 border border-green-400/20 rounded-lg">
-                    <p className="text-sm text-green-300 italic">"{service.caseStudy}"
+                  <div className="mb-4 p-3 bg-green-900/20 border border-green-400/20 rounded-lg"></div></div>
+                    <p className="text-sm text-green-300 italic"></p></p>"{service.caseStudy}"
                 )}
-                <div className="space-y-3">
-                  <$2 />
-                    href={service.link}
+                <div className="space-y-3"></div></div>
+                  <div></div>
+                    href="{service.link}"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 px-4 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
                     Get Free Consultation
-                  <$2 />
+                  <div></div>
                     href="tel:+13024640950"
                     className="block w-full border border-cyan-400 text-cyan-400 py-3 px-4 rounded-lg font-semibold text-center hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
                     <Phone className="w-4 h-4 inline mr-2" />
                     Call for Quote
             ))}
       {/* CTA Section */}
-              <p className="text-xl text-gray-300">Section description</p>
+              <p className="text-xl text-gray-300"></p></p>Section description</p>
             </div>
           </div>
         </section>
             All services include free consultations and ongoing support.
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div></div></div>,
             <a>
               Get Custom IT Strategy
             </a>

@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type { NextApiRequest, NextApiResponse  } from 'next'
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -63,8 +63,8 @@ export default async function handler(
   const text = await generate_text (prompt, 'You are an expert technical recruiter and compensation analyst.')
   return res.status (200).json ({ job_description: text })
 }
-import { authenticateRequest } from '@/utils/auth'
-import { generateText } from '@/utils/ai'
+import {  authenticateRequest   } from '@/utils/auth'
+import {  generateText   } from '@/utils/ai'
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const method = (req.method || 'POST').toUpperCase()
   if (method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })

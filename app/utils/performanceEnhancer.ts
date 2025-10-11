@@ -10,9 +10,9 @@ export const debounce = <T extends (...args: unknown[]) => unknown>(,
   wait: number,
     let timeout: NodeJS.Timeout,
   return (
-    <React.Fragment>
+    <>
       ...args: Parameters</T><T>
-    </React.Fragment>
+    </>
   ) => {,
   func: T,
   }

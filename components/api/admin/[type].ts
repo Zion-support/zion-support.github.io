@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type { NextApiRequest, NextApiResponse  } from 'next'
   })
   return {
     search
@@ -7,10 +7,10 @@ import type { NextApiRequest, NextApiResponse } from 'next'
     pageSize: pageSize ? Number(pageSize) : 20, filters,
     format: (format as any) || undefined}
 }
-import { ADMIN_TYPES, AdminType, ListParams } from '../../../utils/admin/types'
-import { v4 as uuidv4 } from 'uuid'
-import { supabase as client } from '../../../utils/supabase/client'
-import { MOCK_DATA } from '../../../utils/admin/mockData'
+import {  ADMIN_TYPES, AdminType, ListParams   } from '../../../utils/admin/types'
+import {  v4 as uuidv4   } from 'uuid'
+import {  supabase as client   } from '../../../utils/supabase/client'
+import {  MOCK_DATA   } from '../../../utils/admin/mockData'
 function isSupabaseConfigured() {
   return !!process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_URL !== 'https://placeholder.supabase.co'
 }
@@ -226,7 +226,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
       }
       }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (req.method === 'PATCH') {
     const { id, updates } = req.body as {
       id: string
@@ -427,7 +426,6 @@ return res.status (405).json ({ error: 'Method not allowed' })
   }
   if (req.method === 'PATCH') {
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       return res.status(200).json({ ok: true })
     } else {
       const list = MOCK_DATA[type] || []

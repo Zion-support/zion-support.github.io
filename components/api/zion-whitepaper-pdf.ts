@@ -1,11 +1,11 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type { NextApiRequest, NextApiResponse  } from 'next'
 import PDFDocument from 'pdfkit'
-import {
+import { 
   getWhitepaperSections
   OPERATOR_PROMPT
   getWhitepaperSections,
   OPERATOR_PROMPT,
-} from '../../utils/whitepaper/zionWhitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils/whitepaper/zionWhitepaper'
+  } from '../../utils/whitepaper/zionWhitepaper';import {  getWhitepaperSections, OPERATOR_PROMPT   } from '../../utils/whitepaper/zionWhitepaper'
 function writeSection(doc: PDFDocument, title: string, content: string) {
   doc && doc.addPage(),
   doc && doc.fontSize(20).fillColor('#111111').text(title, { underline: true })
@@ -13,7 +13,7 @@ function writeSection(doc: PDFDocument, title: string, content: string) {
   doc && doc.fontSize(11).fillColor('#222222').text(content, {
   getWhitepaperSections,
   OPERATOR_PROMPT,
-} from '../../utils / whitepaper / zion_whitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils / whitepaper / zion_whitepaper'
+ } from '../../utils / whitepaper / zion_whitepaper';import {  getWhitepaperSections, OPERATOR_PROMPT   } from '../../utils / whitepaper / zion_whitepaper'
 /**
  * write_section - Function description
  */
@@ -37,7 +37,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const edition = editionParam === 'investor' |editionParam === 'developer' ? editionParam : 'full'
   res.setHeader('Content-Typeapplication/pdf')
   res.setHeader('Content-Disposition', `attachment, filename="zion-protocol-${edition}.pdf"`)
-import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils/whitepaper/zionWhitepaper'
+import {  getWhitepaperSections, OPERATOR_PROMPT   } from '../../utils/whitepaper/zionWhitepaper'
 function writeSection(doc: PDFDocument, title: string, content: string) {
   doc.addPage()
   doc.fontSize(20).fillColor('#111111').text(title, { underline: true })
@@ -189,7 +189,5 @@ function handler() {
   doc.moveDown(0.5)
   doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, { width: 480 })
   const sections = getWhitepaperSections(edition as any)
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   doc.end()
 }

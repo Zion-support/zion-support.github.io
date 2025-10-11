@@ -2,7 +2,7 @@
   </T>
   </Suspense>
   </unknown>
-    <Suspense fallback={options.loading ? options.loading() : <div>Loading...</div>}>
+    <Suspense fallback={options.loading ? options.loading() : <div&gt;Loading...</div&gt;}>
       <LazyComponent {...props} /></LazyComponent></$1>
   )
 }

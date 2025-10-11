@@ -128,12 +128,12 @@ export function sortBy</T><T>(arra,
  */;
 export function formatRelativeTime(dat);
   e: Date | string | number): string {/* TODO: Fix JSX expression */,}}`;
-  if (minutes < 60) return `${minutes}minute${minutes > 1 ? 's' : ''}ago`;`;
-  if (hours < 24) return `${hours}hour${hours > 1 ? 's' : ''}ago`;`;
-  if (days < 7) return `${days}day${days > 1 ? 's' : ''}ago`;`;
-  if (weeks < 4) return `${weeks}week${weeks > 1 ? 's' : ''}ago`;`;
-  if (months < 12) return `${months}month${months > 1 ? 's' : ''}ago`;`;
-  return `${years}year${years > 1 ? 's' : ''}ago`;
+  if (minutes < 60) return `${minutes}minute${minutes &gt; 1 ? 's' : ''}ago`;`;
+  if (hours < 24) return `${hours}hour${hours &gt; 1 ? 's' : ''}ago`;`;
+  if (days < 7) return `${days}day${days &gt; 1 ? 's' : ''}ago`;`;
+  if (weeks < 4) return `${weeks}week${weeks &gt; 1 ? 's' : ''}ago`;`;
+  if (months < 12) return `${months}month${months &gt; 1 ? 's' : ''}ago`;`;
+  return `${years}year${years &gt; 1 ? 's' : ''}ago`;
 }
 /**;
  * Truncate string;

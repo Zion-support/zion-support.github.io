@@ -17,14 +17,13 @@ const toggleSection = (;
         <Menu>
       </button>
 
-                <h2 className="text-xl font-bold text-white cyber-text">Zion Tech Group</h2>
-                <p className="text-xs text-cyan-400">AI & IT Solutions</p>
+                <h2 className="text-xl font-bold text-white cyber-text"></h2></h2>Zion Tech Group</h2>
+                <p className="text-xs text-cyan-400"></p></p>AI & IT Solutions</p>
               </div>
             </Link>
               aria-label="Close sidebar"
             >,
               <X>
->>>>>>> main
             </button>
 'use client'</button>
           </div>

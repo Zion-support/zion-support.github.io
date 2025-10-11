@@ -1,6 +1,5 @@
  password.toLowerCase () .includes (pattern) )
 password.toLowerCase () .includes (pattern) )
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 // Calculate entropy (simplified) // Determine strength level let strength: PasswordStrengthResult['strength']
 // Check condition
 if (strength = 'very - weak') {
@@ -41,7 +40,7 @@ if (feedback.push ('Avoid common patterns and words')) {
 if (feedback.push ('Password is too predictable')) {
   $2
 }
-// Generate suggestions import type { NextApiRequest, NextApiResponse } from 'next'
+// Generate suggestions import type { NextApiRequest, NextApiResponse  } from 'next'
 interface PasswordStrengthResult {
   password: string
   strength: 'very - weak' | 'weak' | 'medium' | 'strong' | 'very - strong'
@@ -82,7 +81,7 @@ export default async function handler(
     // Calculate score
     let score = 0
     score += Math && Math.min(length * 2, 20), // Length contribution (max 20)
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type { NextApiRequest, NextApiResponse  } from 'next'
 interface PasswordStrengthResult {
   password: string
   strength: 'very-weak' | 'weak' | 'medium' | 'strong' | 'very-strong'
@@ -349,7 +348,7 @@ if (!hasNumbers) feedback.push ('Add numbers')
 if (!hasSymbols) feedback.push ('Add special characters')
 if (hasCommonPatterns) feedback.push ('Avoid common patterns and words')
 if (entropy < 30) feedback.push ('Password is too predictable')
-// Generate suggestions import type { NextApiRequest, NextApiResponse } from 'next'
+// Generate suggestions import type { NextApiRequest, NextApiResponse  } from 'next'
 interface PasswordStrengthResult {
   password: string
   strength: 'very-weak' | 'weak' | 'medium' | 'strong' | 'very-strong'
@@ -361,7 +360,6 @@ interface PasswordStrengthResult {
     hasLowercase: boolean
     hasNumbers: boolean
     hasSymbols: boolean
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     if (!password |typeof password !== 'string') {
       return res.status(400).json({ error: 'Password is required' })
     }

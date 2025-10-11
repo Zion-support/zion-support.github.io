@@ -24,44 +24,44 @@ const colorClasses = useMemo(;)
       []
     );
         case 'dots':;
-          return(<div className='flex space-x-1' role='status' aria-label='Loading'></div>)
+          return(<div className='flex space-x-1' role='status' aria-label='Loading'></div></div></div>)
               {[0, 1, 2].map(i => (</div>)
-                <div;}key={i}className={`w-2 h-2 rounded-full animate-bounce ${colorClasses[color].split(' ')[1]}`}
+                <div;}key={i}className="{`w-2" h-2 rounded-full animate-bounce ${colorClasses[color].split(' ')[1]}`}
                   style={{ animationDelay: `${i * 0.1,}s` }}
                 /></div>
               ))}</div>
           );
 case 'pulse':;
           return(<div;)
-              className={`${baseClasses}rounded-full animate-pulse`}
+              className="{`${baseClasses}rounded-full" animate-pulse`}
               role='status';
               aria-label='Loading';
             /></div>
           );
 case 'skeleton':;
           return(</div>)
-            <div className='space-y-2' role='status' aria-label='Loading'></div>
+            <div className='space-y-2' role='status' aria-label='Loading'></div></div></div>
               <div;
 
-                className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
+                className="{`h-4" bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
               /></div>
               <div;
-                className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
+                className="{`h-4" bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
                 style={{ width: '75%' ,}}
               /></div>
               <div;
-                className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
+                className="{`h-4" bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`}
                 style={{ width: '50%' ,}}
               /></div>
           );
 case 'bars':;
-          return(<div className='flex space-x-1' role='status' aria-label='Loading'></div>)
-              {[0, 1, 2, 3].map(i => (</div>)
-                <div;}key={i}className={`w-1 ${colorClasses[color].split(' ')[1]}animate-pulse`}
+          return(<div className='flex space-x-1' role='status' aria-label='Loading'></div></div></div>)
+              {[0, 1, 2, 3].map(i =&gt; (</div&gt;)
+                <div;}key={i}className="{`w-1" ${colorClasses[color].split(' ')[1]}animate-pulse`}
                   style={{}height: `${12 + i * 4,}px`,
                     animationDelay: `${i * 0.1,}s`,
 'use client'
-import React, { Suspense, lazy } from 'react'
+import React, { Suspense, lazy  } from 'react'
 interface OptimizedLoadingSpinnerProps {
     size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
   variant?: 'dots' | 'pulse' | 'spinner' | 'skeleton' | 'bars'
@@ -71,10 +71,10 @@ interface OptimizedLoadingSpinnerProps {
   fullScreen?: boolean
   }
 }
-const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo()
+const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps></div></div> = memo()
   }) => {
     const sizeClasses = useMemo()
-      () => ()
+      () =&gt; ()
       }),
       []
     )
@@ -94,22 +94,22 @@ const renderSpinner = useMemo(() => {
           return (
                   key={i}
           return ()
-                  className={`w-2 h-2 rounded-full animate-bounce ${colorClasses[color].split(' ')[1]}`}
+                  className="{`w-2" h-2 rounded-full animate-bounce ${colorClasses[color].split(' ')[1]}`}
                   style={{ animationDelay: `${i * 0.1}s` }}
           return (
-    <React.Fragment>
+    <>
       <;$2 />
-              className={`${baseClasses} rounded-full animate-pulse`}
+              className="{`${baseClasses}" rounded-full animate-pulse`}
               role='status'
               aria-label='Loading'/></div>
-    </React.Fragment>
+    </>
   )
 case 'skeleton':
           return ()
           )
 case 'bars':
           return ()
-                  className={`w-1 ${colorClasses[color].split(' ')[1]} animate-pulse`}
+                  className="{`w-1" ${colorClasses[color].split(' ')[1]} animate-pulse`}
                   style={{}
                     height: `${12 + i * 4}px`,
                     animationDelay: `${i * 0.1}s`,
@@ -118,17 +118,17 @@ case 'bars':
               ))}</div>
     text && (</div>
   }
-            <p>{text</p>} </p>
+            <p>{text</p&gt;} </p>
           )
 case 'spinner':
         default:  
           return (
-    <React.Fragment>
+    <>
       <,$2 />
-              className={`${baseClasses} rounded-full border-2 border-t-transparent animate-spin`}
+              className="{`${baseClasses}" rounded-full border-2 border-t-transparent animate-spin`}
               role='status'
               aria-label='Loading'/></div>
-    </React.Fragment>
+    </>
   )
       }
     }, [size, variant, color, sizeClasses, colorClasses])
@@ -145,14 +145,14 @@ export default OptimizedLoadingSpinner/>
           )
         case 'pulse':
           return (
-            <$2 />
-              className={`${baseClasses} rounded-full animate-pulse`}
+            <div></div>
+              className="{`${baseClasses}" rounded-full animate-pulse`}
               role='status'
               aria-label='Loading'/>
           )
         case 'skeleton':
                   key={i}
-                  className={`w-1 ${colorClasses[color].split(' ')[1]} animate-pulse`}
+                  className="{`w-1" ${colorClasses[color].split(' ')[1]} animate-pulse`}
                   style={{;}
                     height: `${12 + i * 4}px`,
                     animationDelay: `${i * 0.1}s`,
@@ -161,6 +161,6 @@ export default OptimizedLoadingSpinner/>
         case 'spinner':
         default:
           return (
-            <$2 />
-              className={`${baseClasses} rounded-full border-2 border-t-transparent animate-spin`}
+            <div></div>
+              className="{`${baseClasses}" rounded-full border-2 border-t-transparent animate-spin`}
               role='status'

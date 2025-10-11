@@ -80,7 +80,7 @@ export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersCon
  */
 ): Array<{ key: string, value: string }> {
     export function getNextSecurityHeaders()
-  customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>
+  customConfig?: Partial<SecurityHeadersConfig&gt;</SecurityHeadersConfig&gt;
   }
 ): Array<{ key: string, value: string }> {}
     value}

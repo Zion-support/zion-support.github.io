@@ -57,7 +57,7 @@
   ]
   return (
 
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
         <title>Cloud Services - Zion Tech Group | Cloud Solutions & Migration</title>
       </div><Helmet>
         </Helmet><title>Cloud Services - Zion Tech Group | Cloud Solutions & Migration</title>
@@ -73,13 +73,13 @@
 
               </span>
               <br />
-              <span className="text-white">Solutions</span>
+              <span className="text-white"></span></span>Solutions</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your business with our comprehensive cloud services.</p>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p></p>Transform your business with our comprehensive cloud services.</p>
               From migration to management, we provide end-to-end cloud solutions.
             </p>
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-gray-900 transition-all duration-300">,</button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-gray-900 transition-all duration-300"></button>,</button>
                 Learn More;
               </button>
             </div>
@@ -89,126 +89,23 @@
       </section>
 
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive cloud solutions designed to accelerate your digital transformation.</p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p></p>Comprehensive cloud solutions designed to accelerate your digital transformation.</p>
             </p>
           </div>
 
-          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">,</div>
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8"></div></div>,</div>
             {services.map((service, index) => (
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
-                <p className="text-gray-300 mb-4">{service.description</p>}</p>
-                <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
+                <h3 className="text-xl font-bold text-white mb-3"></h3></h3>{service.title}</h3>
+                <p className="text-gray-300 mb-4"></p></p>{service.description</p&gt;}</p>
+                <ul className="space-y-2"></ul>
+                  {service.features.map((feature, featureIndex) =&gt; (
                   ))}
                 </ul>
               </div>
             ))}
           </div>
->>>>>>> main
 
 'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react'
-const CloudServicesPage: React.FC = () => {
-const features = [
-    {
-      icon: Shield,
-      title: 'Secure Cloud Services',
-      description: 'Comprehensive cloud services with enterprise-grade security and reliability'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast cloud services with optimized performance and scalability'
-    },
-    {
-      icon: Brain,
-      title: 'AI-Powered Management',
-      description: 'Intelligent cloud management powered by advanced AI technology'
-    },
-    {
-      icon: Globe,
-      title: 'Global Deployment',
-      description: 'Worldwide cloud services deployment and support'
-    }
-  ]
-  const benefits = [
-'Advanced cloud technology integration',
-    'Real-time monitoring and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible cloud solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ]
-  return (
-    <React.Fragment>
-      <Helmet>
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our cloud solutions deliver unmatched performance, security, and scalability.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our cloud solutions for your business.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-<title>Cloud Services | Zion Tech Group
-        <meta name="description" content="Professional Cloud Services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="cloud services, cloud computing, IT services, Zion Tech Group, cloud solutions" />
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">Cloud Services
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your business with our advanced cloud services. 
-            Powered by cutting-edge AI technology and industry expertise.
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Our cloud services deliver unmatched performance, security, and scalability.
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {features.map((feature, index) => (
-            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
-              <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">{feature.title}
-              <p className="text-gray-300">{feature.description}
-        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-8">
-            Why Choose Our Cloud Services?
-          <div className="grid md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center space-x-3">
-                <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
-                <span className="text-gray-300">{benefit}
-            ))}
+import React from 'react';

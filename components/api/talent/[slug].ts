@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type { NextApiRequest, NextApiResponse  } from 'next'
     const { item, translated } = applyTranslations(base, lang)
     return res && res.status(200).json({ item, translated })
   } catch (e: any) {
@@ -28,10 +28,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import { supabase as supabaseClient } from '@/utils/supabase/client'
-import { TALENT_PROFILES as LOCAL } from '@/data/talent'
-import type { TalentProfile } from '@/utils/types/talent'
+import {  supabase as supabaseClient   } from '@/utils/supabase/client'
+import {  TALENT_PROFILES as LOCAL   } from '@/data/talent'
+import type { TalentProfile  } from '@/utils/types/talent'
 const hasSupabase = !!process.env.NEXT_PUBLIC_SUPABASE_URL && !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 function applyTranslations(item: TalentProfile, lang?: string) {
   if (!lang || !item.translations) return { item, translated: false }

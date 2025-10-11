@@ -1,13 +1,13 @@
 'use client'
     let timeout: NodeJS.Timeout,
   return (
-    <React.Fragment>
+    <>
       ...args: Parameters</T><T>
-    </React.Fragment>
+    </>
   ) => {,
     clearTimeout(timeout),
   func: T,
-    timeout = setTimeout(() => func(...args), wait);}
+    timeout = setTimeout(() =&gt; func(...args), wait);}
   }
 }
 // Throttle utility for performance

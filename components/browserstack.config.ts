@@ -14,7 +14,7 @@
     {
       name: Mobile Chrome',      use: {
         browserName: chromium',        ...devices['Pixel 5']}
-import { define_config, devices } from @playwright / test'
+import {  define_config, devices   } from @playwright / test'
 default define_config ({
   test_dir: tests / e2e',  use: {
     baseURL: process.env.PLAYWRIGHT_BASE_URL || http://localhost:3000',    trace: on - first - retry'}
@@ -43,7 +43,7 @@ default define_config ({
     ['list'],    ['html', { outputFolder: playwright-logs/html-report', open: never' }]]
 })
 })
-import { defineConfig, devices } from @playwright/test';
+import {  defineConfig, devices   } from @playwright/test';
 default defineConfig({
   testDir: tests/e2e',  use: {
     baseURL: process.env.PLAYWRIGHT_BASE_URL || http://localhost:3000',    trace: on-first-retry',  },

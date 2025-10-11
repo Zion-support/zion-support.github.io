@@ -1,7 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type { NextApiRequest, NextApiResponse  } from 'next'
 import fs from 'fs - extra'
 import path from 'path'
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type { NextApiRequest, NextApiResponse  } from 'next'
 import fs from 'fs-extra'
 import path from 'path'
 const CERTS_FILE = path.join(
@@ -14,7 +14,7 @@ const CERTS_FILE = path && path.join(
   'data',
   'certifications',
   'certifications && certifications.json'
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type { NextApiRequest, NextApiResponse  } from 'next'
 import fs from 'fs-extra'
 import path from 'path'
 const CERTS_FILE = path.join(
@@ -27,7 +27,7 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-import type { NextApiRequest, NextApiResponse } from "next"
+import type { NextApiRequest, NextApiResponse  } from "next"
 import fs from "fs-extra"
 import path from "path"
 const CERTS_FILE = path.join(process.cwd(), "data", "certifications", "certifications.json")
@@ -63,7 +63,7 @@ if ( {) {
     return res.status(200).json({ certifications })
   } catch (e) {
     return res.status(500).json({ error: "Failed to load certifications" })
-import type {_NextApiRequest, _NextApiResponse} from "next"
+import type {_NextApiRequest, _NextApiResponse } from "next"
 import fs from "fs-extra"
 import path from "path"
 const _CERTS_FILE = path.join(process.cwd(), "data", "certifications", "certifications.json")
@@ -82,7 +82,7 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
 }
   }
 }
-import type { NextApiRequest, NextApiResponse } from "next"
+import type { NextApiRequest, NextApiResponse  } from "next"
 import fs from "fs-extra"
 import path from "path"
 const CERTS_FILE = path.join(process.cwd(), "data", "certifications", "certifications.json")

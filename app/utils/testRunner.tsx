@@ -17,8 +17,8 @@ export interface CoverageMetrics {statements: number,}
     enableCoverage: boolean,
   enablePerformance: boolean,
     enableAccessibility: boolean,
-// Test result types;}export interface PerformanceMetrics {}}import {render, RenderOptions}}from '@testing-library/react';
-import {BrowserRouter}}from 'react-router-dom';
+// Test result types;}export interface PerformanceMetrics {}}import { render, RenderOptions}  } from '@testing-library/react';
+import { BrowserRouter}  } from 'react-router-dom';
 
     performanceThreshold: number
   accessibilityThreshold: number
@@ -75,7 +75,7 @@ interface CoverageResult {statements: number,}
 interface TestSuite {name: string,}
     tests: Test[],}beforeAll: (() => void | Promise<void>)[],</void></<<<void>afterAll</void></void>: (() => void | Promise<void>)[]</void></<<<void>beforeEach</void></void>: (() => void | Promise<void>)[],</void></<<<void>afterEach</void></void>: (() => void | Promise<void>)[]}</void>
 }
-interface Test {</void>}
+interface Test {</void&gt;}
   name: string,</void>
   enableMocking: true,
   enableCoverage: true,
@@ -151,7 +151,7 @@ const customRender = ()
 }
 interface Test {
   name: string,
-  fn: () => void | Promise<void>,
+  fn: () =&gt; void | Promise<void&gt;,
   only?: boolean;}
 }
 export class TestRunner {
@@ -600,8 +600,8 @@ export class TestRunner {}
    */
   private generateReport(): void {
     const duration = Date.now() - this.startTime
-    const passed = this.results.filter(r => r.status === 'passed').length
-    const failed = this.results.filter(r => r.status === 'failed').length
+    const passed = this.results.filter(r =&gt; r.status === 'passed').length
+    const failed = this.results.filter(r =&gt; r.status === 'failed').length
   }
   private generateReport(): void {}
     const duration = Date.now() - this.startTime
@@ -616,15 +616,15 @@ export class TestRunner {}
         skipped: this.results.filter(r => r.status === 'skipped').length,
    * Generate HTML report;
    */;
-  private generateHtmlReport(): void {</void>}
+  private generateHtmlReport(): void {</void&gt;}
     const html =</void>}private generateHtmlReport(): void {}}const html =;
 <!DOCTYPE html>;
   /**
    * Generate HTML report
    */
   private generateHtmlReport(): void {
-    </void>
-    const html =</void>
+    </void&gt;
+    const html =</void&gt;
   }
   private generateHtmlReport(): void {}
     const html =
@@ -637,11 +637,11 @@ export class TestRunner {}
 
             </div>
         <h3 id="heading-summary">Summary</h3>
-        <p>Total: ${this.results.length,</p>}</p>
-        <p>Passed: ${this.results.filter(r => r.status === 'passed').length,</p>}</p>
-        <p>Failed: ${this.results.filter(r => r.status === 'failed').length,</p>}</p>
-        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length,</p>}</p>
-        <p>Duration: ${Date.now() - this.startTime,</p>}ms</p>
+        <p>Total: ${this.results.length,</p&gt;}</p>
+        <p>Passed: ${this.results.filter(r =&gt; r.status === 'passed').length,</p&gt;}</p>
+        <p>Failed: ${this.results.filter(r =&gt; r.status === 'failed').length,</p&gt;}</p>
+        <p>Skipped: ${this.results.filter(r =&gt; r.status === 'skipped').length,</p&gt;}</p>
+        <p>Duration: ${Date.now() - this.startTime,</p&gt;}ms</p>
     </div>
           .map()
           .map()
@@ -892,7 +892,7 @@ export class TestRunner {}
           .map()
             result => `}
                 ${result.status === 'failed' ? `<failure message="${result.error?.message}">${result.error?.stack}</failure>` : ''})
-                ${result.status === 'skipped' ? '<skipped/>' : ''})
+                ${result.status === 'skipped' ? '<skipped/&gt;' : ''})
             </testcase>)
           .join('')}
     </testsuite>
@@ -1011,7 +1011,7 @@ export class TestRunner {}
       name: string;),
       type: 'component' | 'integration' | 'performance' | 'accessibility' | 'visual'),
       component: ReactElement;),
-      assertions?: (result: RenderResult) => void;,}userInteractions?: (result: RenderResult) => Promise<void>,}
+      assertions?: (result: RenderResult) =&gt; void;,}userInteractions?: (result: RenderResult) => Promise<void>,}
     }>;
   ): Promise<{async runAllTests()}tests: Array<{,}name: string;,
       type: 'component' | 'integration' | 'performance' | 'accessibility' | 'visual',
@@ -1294,7 +1294,7 @@ export const testUtils = {}// Create mock data;
         description: `This is a mock ${type,}item`);
 // Test utilities
 export const testUtils = {
-    // Create mock data</void>
+    // Create mock data</void&gt;
   }
   createMockData: (type: string, count: number = 10) => {}</void>
 // Test utilities
@@ -1832,7 +1832,7 @@ class Mock {/* TODO: Fix JSX expression */}
     const original = object[method]
     const mockFn = Mock.fn()
     (object as Record<string, unknown>)[method as string] = mockFn;}
-    (mockFn as MockFunction & { mockRestore: () => void }).mockRestore = () => {}
+    (mockFn as MockFunction & { mockRestore: () =&gt; void }).mockRestore = () => {}
       (object as Record<string, unknown>)[method as string] = original;}
     }
    */

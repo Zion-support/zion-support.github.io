@@ -1,15 +1,15 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type { NextApiRequest, NextApiResponse  } from 'next'
 import fs from 'fs'
 import path from 'path'
-import { v4 as uuidv4 } from 'uuid'
+import {  v4 as uuidv4   } from 'uuid'
 import type {
   CreateGrantPayload
   GrantApplication
   CreateGrantPayload,
   GrantApplication,
-} from '../../../types/grants'
+ } from '../../../types/grants'
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants')
-import type { CreateGrantPayload, GrantApplication } from '../../../types/grants'
+import type { CreateGrantPayload, GrantApplication  } from '../../../types/grants'
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants')
 function ensureDir() {
   if (!fs.existsSync(GRANTS_DIR)) {
@@ -90,7 +90,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         return
   CreateGrantPayload,
   GrantApplication,
-} from '../../../types / grants'
+ } from '../../../types / grants'
 const GRANTS_DIR = path.join (process.cwd (), 'data', 'grants')
 /**
  * ensure_dir - Function description
@@ -288,8 +288,6 @@ if ( {) {
 }
 }
   res.status(405).end('Method Not Allowed')
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   res.setHeader('Allow', 'GET, POST')
   res.status(405).end('Method Not Allowed')
 }

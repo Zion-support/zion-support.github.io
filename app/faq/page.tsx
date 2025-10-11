@@ -35,40 +35,40 @@
   ]
   return (
         <title>FAQ - Zion Tech Group | Frequently Asked Questions</title>
-    </number><React.Fragment>
+    </number><>
       </React><Helmet>
         </Helmet><title>FAQ - Zion Tech Group | Frequently Asked Questions</title>
         <meta name="description" content="Find answers to frequently asked questions about our AI and IT services, pricing, implementation, and support." />
         <meta name="keywords" content="FAQ, frequently asked questions, AI services, IT services, support, pricing" />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
                     {openItems.includes(index) ? (
                       <ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                     ) : (
                       <ChevronDown className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                     </div>
-                      <p className="text-gray-300 leading-relaxed">{faq.answer}
+                      <p className="text-gray-300 leading-relaxed"></p></p>{faq.answer}
                   )}
               ))}
             </div>
 
-            <div className="mt-16 text-center">
-              <h2 className="text-3xl font-bold text-white mb-6">
+            <div className="mt-16 text-center"></div></div>
+              <h2 className="text-3xl font-bold text-white mb-6"></h2></h2>
                 Still have questions?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className="text-xl text-gray-300 mb-8"></p></p>
                 Our team is here to help. Contact us for personalized assistance.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div></div>
                 <a
                   href="/contact"
                   className="bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-cyan-700 transition-colors"
-                >
+                ></a>
                   Contact Us
                 </a>
                 <a
                   href="/consultation"
                   className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
-                >
+                ></a>
                   Free Consultation
                 </a>
               </div>

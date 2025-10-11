@@ -80,7 +80,7 @@ if ( {) {
   res.write_head (302, { ...headers, Location: "/" })
   res.end ()
 }
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type { NextApiRequest, NextApiResponse  } from 'next'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { role = 'guest', talent } = req.query as { role?: string; talent?: string }
   const headers: Record<string, string> = {}

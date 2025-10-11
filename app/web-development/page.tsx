@@ -78,73 +78,73 @@ const WebDevelopmentPage: React.FC = () => {,
               </a>
             </div>,
           </section>,
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
         <Navigation />
-        <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */</main>} <section className="text-center mb-16">
-            <h1 className="text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">,</h1>
+        <main className="container mx-auto px-4 py-16 pt-24"></main></main>{/* Hero Section */</main>} <section className="text-center mb-16"></section></section>
+            <h1 className="text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6 neon-text"></h1></h1>,</h1>
               Web Development Services;
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Build modern, scalable, and high-performance web applications with our expert development team.</p>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p></p>Build modern, scalable, and high-performance web applications with our expert development team.</p>
               From frontend to backend, we deliver solutions that drive business growth.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">,</div>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div></div>,</div>
               <a;
                 href="/contact"
                 className="cyber-button px-8 py-4 text-lg font-semibold hover: scale-105 transition-all duration-300",
-              >
+              ></a>
                 Start Your Project;
               </a>
               <a;
                 href="tel: +13024640950",
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover: bg-cyan-400 hover:text-slate-900 transition-all duration-300",
-              >
+              ></a>
                 Call +1 302 464 0950;
               </a>
             </div>
           </section>
 
             </h2>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,</div>
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div></div>,</div>
               {webServices.map((service, index) => (
-                <div key={index}className="cyber-card p-8 hover: scale-105 transition-all duration-300">,</div>
-                  <div className="flex items-center mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mr-4">
+                <div key={index}className="cyber-card p-8 hover: scale-105 transition-all duration-300"></div></div>,</div>
+                  <div className="flex items-center mb-6"></div></div>
+                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mr-4"></div></div>
                       <service.icon className="w-8 h-8 text-white" />
                     </div>
                     <div>
 </div>
-                      <h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.title}</h3>
-                      <div className={`font-semibold ${service.color}`}>{service.price</div>}</div>
+                      <h3 className="text-2xl font-bold text-white mb-2 neon-text"></h3></h3>{service.title}</h3>
+                      <div className="{`font-semibold" ${service.color}`}></div></div>{service.price</div&gt;}</div>
                     </div>
                   </div>
-                  <p className="text-gray-300 mb-6 leading-relaxed">{service.description</p>}</p>
+                  <p className="text-gray-300 mb-6 leading-relaxed"></p></p>{service.description</p&gt;}</p>
 
-          <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
+          <section className="py-20 px-4"></section></section>
+          <div className="max-w-7xl mx-auto"></div></div>
+            <div className="text-center mb-16"></div></div>
+              <h2 className="text-4xl font-bold text-white mb-4"></h2></h2>Section Title</h2>
+              <p className="text-xl text-gray-300"></p></p>Section description</p>
             </div>
           </div>
         </section>
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text">Our Web Development Services<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{,</div>
-    webServices.map((service, index) => (</div>} <div key={index}className="cyber-card p-8 hover: scale-105 transition-all duration-300"></div>,
-                  <div className="flex items-center mb-6"></div>
-                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mr-4"></div>
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center neon-text"></h2></h2>Our Web Development Services<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div></div>{,</div&gt;
+    webServices.map((service, index) =&gt; (</div&gt;} <div key={index}className="cyber-card p-8 hover: scale-105 transition-all duration-300"></div></div></div>,
+                  <div className="flex items-center mb-6"></div></div></div>
+                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mr-4"></div></div></div>
                       <service />
                     <div />
-                      <h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.title}<div className={`font-semibold ${service.color}`}>{service.price</div>}<p className="text-gray-300 mb-6 leading-relaxed">{service.description</p>}</p>
+                      <h3 className="text-2xl font-bold text-white mb-2 neon-text"></h3></h3>{service.title}<div className="{`font-semibold" ${service.color}`}></div></div>{service.price</div&gt;}<p className="text-gray-300 mb-6 leading-relaxed"></p></p>{service.description</p&gt;}</p>
             <h2>Our Web Development Services;)</h2>
             </h2>);
 );
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">),</div>
-              {webServices.map((service, index) => (</div>} <div key={index}className="cyber-card p-8 hover: scale-105 transition-all duration-300"></div>,
-                  <div className="flex items-center mb-6">,</div>
-                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mr-4">,</div>
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div></div>),</div>
+              {webServices.map((service, index) =&gt; (</div&gt;} <div key={index}className="cyber-card p-8 hover: scale-105 transition-all duration-300"></div></div></div>,
+                  <div className="flex items-center mb-6"></div></div>,</div>
+                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mr-4"></div></div>,</div>
                       <service.icon className="w-8 h-8 text-white" />,
                     </div>,
                     <div>,</div>
-                      <h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.title}</h3>
+                      <h3 className="text-2xl font-bold text-white mb-2 neon-text"></h3></h3>{service.title}</h3>
                 >Call +1 302 464 0950</a>
                 >
                   Start Your Project;
@@ -166,15 +166,15 @@ export default WebDevelopmentPage;
 
 export default WebDevelopmentPage;
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+      <section className="py-16 px-4 sm:px-6 lg:px-8"></section></section>
+        <div className="max-w-4xl mx-auto text-center"></div></div>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2></h2>
             Start Your Web Project
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-xl text-gray-300 mb-8"></p></p>
             Let us help you build the perfect website for your business.
           </p>
-          <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 flex items-center mx-auto">
+          <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 flex items-center mx-auto"></button>
             <ArrowRight className="w-5 h-5 mr-2" />
             Get Started
           </button>

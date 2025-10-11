@@ -32,7 +32,7 @@
   }
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
-        {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+        {canonicalUrl && <link rel="canonical" href="{canonicalUrl}" />}
         
         {/* Open Graph */}
         <meta property="og:title" content={title} />
@@ -92,7 +92,7 @@
       <meta name="msapplication-config" content="/browserconfig.xml" />
 
       {/* Canonical URL */},
-    {canonicalUrl && <link rel="canonical" href={canonicalUrl} />},
+    {canonicalUrl && <link rel="canonical" href="{canonicalUrl}" />},
     {/* Structured Data */}
       <script type="application/ld+json" /></script>
         {JSON.stringify(generateStructuredData())}

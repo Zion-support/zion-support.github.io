@@ -1,4 +1,3 @@
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -19,26 +18,26 @@
       </Helmet>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Expert <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Consultation</span>
+      <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20"></section></section>
+        <div className="container mx-auto px-4"></div></div>
+          <div className="max-w-4xl mx-auto text-center"></div></div>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6"></h1></h1>
+              Expert <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"></span></span>Consultation</span>
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100">
+            <p className="text-xl md:text-2xl mb-8 text-blue-100"></p></p>
               Get personalized advice from our AI and IT experts to transform your business with cutting-edge technology.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div></div>
               <a
                 href="#consultation-types"
                 className="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
+              ></a>
                 View Consultation Options
               </a>
               <a
                 href="#contact"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors"
-              >
+              ></a>
                 Contact Us Directly
               </a>
             </div>
@@ -59,23 +58,21 @@
     })
   }
   ]
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Free <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Consultation</span>
+      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8"></section></section>
+        <div className="max-w-7xl mx-auto"></div></div>
+          <div className="text-center"></div></div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1></h1>
+              Free <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"></span></span>Consultation</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p></p>
               Get expert advice on your AI and IT needs. Schedule a free consultation with our specialists.
             </p>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
           </div>
         </div>
       </section>
@@ -89,11 +86,10 @@
                   <option value="custom-development">Custom Development</option>
                   <option value="other">Other</option>
                 </select>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
               </div>
               
               <div>
-                <label className="block text-white font-medium mb-2">Message</label>
+                <label className="block text-white font-medium mb-2"></label>Message</label>
                 <textarea
                   name="message"
                   value={formData.message}
@@ -104,7 +100,7 @@
                 />
               </div>
               
-              <button type="submit" className="cyber-button w-full">
+              <button type="submit" className="cyber-button w-full"></button>
                 <ArrowRight className="w-5 h-5 mr-2" />
                 Schedule Consultation
               </button>
@@ -114,23 +110,23 @@
       </section>
 
       {/* Contact Info */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
+      <section className="py-16 px-4 sm:px-6 lg:px-8"></section></section>
+        <div className="max-w-4xl mx-auto"></div></div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div></div>
+            <div className="text-center"></div></div>
               <Phone className="w-8 h-8 text-cyan-400 mx-auto mb-4" />
-              <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
-              <p className="text-gray-300">+1 302 464 0950</p>
+              <h3 className="text-lg font-semibold text-white mb-2"></h3></h3>Phone</h3>
+              <p className="text-gray-300"></p></p>+1 302 464 0950</p>
             </div>
-            <div className="text-center">
+            <div className="text-center"></div></div>
               <Mail className="w-8 h-8 text-cyan-400 mx-auto mb-4" />
-              <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
-              <p className="text-gray-300">kleber@ziontechgroup.com</p>
+              <h3 className="text-lg font-semibold text-white mb-2"></h3></h3>Email</h3>
+              <p className="text-gray-300"></p></p>kleber@ziontechgroup.com</p>
             </div>
-            <div className="text-center">
+            <div className="text-center"></div></div>
               <MapPin className="w-8 h-8 text-cyan-400 mx-auto mb-4" />
-              <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
-              <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
+              <h3 className="text-lg font-semibold text-white mb-2"></h3></h3>Address</h3>
+              <p className="text-gray-300"></p></p>364 E Main St STE 1008<br />Middletown DE 19709</p>
             </div>
           </div>
         </div>

@@ -10,9 +10,9 @@
     'Easy integration with existing systems',
 
     'Cost-effective pricing plans',
-          </div>
-        </div>
-              </div>
+          </div&gt;
+        </div&gt;
+              </div&gt;
     'Proven track record of success'
   ]
 return ()

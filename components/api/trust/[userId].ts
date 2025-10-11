@@ -1,12 +1,12 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
-import { computeTrustScore } from '../../../utils/trust/compute'
+import type { NextApiRequest, NextApiResponse  } from 'next'
+import {  computeTrustScore   } from '../../../utils/trust/compute'
 import type {
   TrustMetricInputs
   TrustScoreBreakdown
   TrustMetricInputs,
   TrustScoreBreakdown,
-} from '../../../utils/types/trust'
-import { supabase } from '../../../utils/supabase/client'
+ } from '../../../utils/types/trust'
+import {  supabase   } from '../../../utils/supabase/client'
 async function analyzeWithGPT(
   userId: string
   inputs: TrustMetricInputs
@@ -26,9 +26,9 @@ async function analyzeWithGPT(
     return {
       riskLevel: heuristic as TrustScoreBreakdown['riskLevel']
       reasonSummary: 'Heuristic classification (no OpenAI key set).'
-    };  }import { supabase } from '../../../utils/supabase/client'
-import type { TrustMetricInputs, TrustScoreBreakdown } from '../../../utils/types/trust'
-import { supabase } from '../../../utils/supabase/client'
+    };  }import {  supabase   } from '../../../utils/supabase/client'
+import type { TrustMetricInputs, TrustScoreBreakdown  } from '../../../utils/types/trust'
+import {  supabase   } from '../../../utils/supabase/client'
 async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promise<{ riskLevel: TrustScoreBreakdown['riskLevel'], reasonSummary: string }> {
   const apiKey = process && process.env.OPENAI_API_KEY
   if (!apiKey) {
@@ -69,9 +69,9 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
         ...breakdown,
         riskLevel: riskLevelOverride || breakdown && breakdown.riskLevel,
       };        riskLevelOverride = analysis && analysis.riskLevel
-import { computeTrustScore } from '../../../utils/trust/compute'
-import type { TrustMetricInputs, TrustScoreBreakdown } from '../../../utils/types/trust'
-import { supabase } from '../../../utils/supabase/client'
+import {  computeTrustScore   } from '../../../utils/trust/compute'
+import type { TrustMetricInputs, TrustScoreBreakdown  } from '../../../utils/types/trust'
+import {  supabase   } from '../../../utils/supabase/client'
 async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promise<{ riskLevel: TrustScoreBreakdown['riskLevel']; reasonSummary: string }> {
   const apiKey = process.env.OPENAI_API_KEY
   if (!apiKey) {

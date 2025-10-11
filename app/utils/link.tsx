@@ -21,7 +21,7 @@ export const Link: React.FC<LinkProps> = ({,
   className?: string
   target?: string
   rel?: string
-  onClick?: () => void
+  onClick?: () =&gt; void
   'aria-label'?: string,}
 }
 export const Link: React.FC<LinkProps>= ({}
@@ -43,8 +43,8 @@ export const Link: React.FC</LinkProps><LinkProps> = ({
   target,
   rel,
   onClick,
-      href={href}
-      className={className}
+      href="{href}"
+      className="{className}"
       target={target}
       rel={rel}
       onClick={handleClick}

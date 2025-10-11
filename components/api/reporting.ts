@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type { NextApiRequest, NextApiResponse  } from 'next'
     {
       funnel: { stage: string; count: number }[]
       timeToHireDays: number
@@ -38,7 +38,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
   }
   if (method === 'POST') {
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     const updated = updateJsonFile<ReportingData>(
       FILE
       curr => {
@@ -145,8 +144,8 @@ if ( {) {
 return res.status (405).json ({ error: 'Method not allowed' })
 }
     const { funnel, timeToHireDays, costPerHireUsd } = req.body || {}
-import { authenticateRequest } from '@/utils/auth'
-import { readJsonFile, updateJsonFile } from '@/utils/fileDb'
+import {  authenticateRequest   } from '@/utils/auth'
+import {  readJsonFile, updateJsonFile   } from '@/utils/fileDb'
 interface ReportingData {
   byTenant: Record<string, {
     funnel: { stage: string; count: number }[]

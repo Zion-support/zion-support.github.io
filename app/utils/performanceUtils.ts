@@ -92,12 +92,12 @@ export const debounce = </T><T extends (...args: any[]) => any>(,
     timeout = setTimeout(() => func(...args), wait)}}) as T;
     let timeout: NodeJS.Timeout
 return (
-    <React.Fragment>
+    <>
       (...args: Parameters</T><T>
-    </React.Fragment>
+    </>
   ) => {
     clearTimeout(timeout),
-    timeout = setTimeout(() => func(...args), wait)
+    timeout = setTimeout(() =&gt; func(...args), wait)
   }
   }) as T
 }
@@ -263,7 +263,7 @@ export const lazyLoad = (callback: () => void): void => {,
   }
 
   public cleanup(): void {
-    this.observers.forEach(observer => observer.disconnect())
+    this.observers.forEach(observer =&gt; observer.disconnect())
     this.observers = []
   }
 }

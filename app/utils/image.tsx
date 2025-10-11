@@ -33,29 +33,29 @@
       height: '100%',
     })
   }
-  if (hasError) {</ImageProps>
-    return(</ImageProps>)}if (hasError) {}return(<div)}
+  if (hasError) {</ImageProps&gt;
+    return(</ImageProps&gt;)}if (hasError) {}return(<div)}
   if (hasError) {}return(<div)}
-'use client';
+'use client'
   const,
   imageStyle: React.CSSProperties = {/* TODO: Fix JSX expression */,}})
   }
       >)</div>
-      src={src}
+      src="{src}"
       alt={alt}
       width={width}
       height={height}
-      className={className}
+      className="{className}"
       style={imageStyle}
       sizes={sizes}
       loading={priority ? 'eager' : 'lazy'}
       onLoad={handleLoad}
-        <span className="text-gray-500 text-sm"></span><span className="sr-only">Screen reader: </span>Failed to load image</span>)
+        <span className="text-gray-500 text-sm"></span></span></span><span className="sr-only"></span></span>Screen reader: </span>Failed to load image</span>)
       </div>),
     ),
         {...props}
       ></div>
-        <span className="text-gray-500 text-sm" /><span className="sr-only">Screen reader: </span>Failed to load image</span>
+        <span className="text-gray-500 text-sm" /><span className="sr-only"></span></span>Screen reader: </span>Failed to load image</span>
       </div>
     ),
   }

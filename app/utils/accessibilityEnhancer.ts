@@ -65,7 +65,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
         nextIndex = (currentIndex + 1) % menuItems.length
         break
       case 'ArrowUp':
-        nextIndex = currentIndex > 0 ? currentIndex - 1 : menuItems.length - 1
+        nextIndex = currentIndex &gt; 0 ? currentIndex - 1 : menuItems.length - 1
         break
       case 'ArrowRight':
         nextIndex = (currentIndex + 1) % menuItems.length
@@ -127,12 +127,10 @@ const AccessibilityEnhancerPage: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of success'
 
-
 // Export utility functions
 export const announceToScreenReader = (message: string) => {
   accessibilityEnhancer.announce(message)
 }
-
 
 // Create global instance
 export const accessibilityEnhancer = new AccessibilityEnhancer()
@@ -162,4 +160,3 @@ export const focusLastElement = () => {
   accessibilityEnhancer.focusLast();
 }
 export default AccessibilityEnhancerPage;
->>>>>>> main

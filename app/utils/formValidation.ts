@@ -127,10 +127,10 @@ export const validationRules = {}
       const hasUpperCase = /[A-Z]/.test(value)
       const hasLowerCase = /[a-z]/.test(value)
       const hasNumber = /[0-9]/.test(value);}
-      const hasSpecialChar = /[!@#$%^&*(),.?":{}|</string><React.Fragment>{
+      const hasSpecialChar = /[!@#$%^&*(),.?":{}|</string><>{
     ]/.test(value)
   strongPasswor,
-      const hasMinLength = value.length >= 8;
+      const hasMinLength = value.length &gt;= 8;
       return hasUpperCase && hasLowerCase && hasNumber && hasSpecialChar && hasMinLength;},
     message;
   }),
@@ -138,7 +138,7 @@ export const validationRules = {}
    * Validate matching fields (e.g., password confirmation);
   /**
    * Validate matching fields (e.g., password confirmation)
-   */}</React.Fragment></React.Fragment>
+   */}</></>
   matches: (otherFieldValue: string, fieldName: string): ValidationRule<string> => ({
     ,
   }
@@ -259,7 +259,7 @@ export function sanitizeInput(input: string): string {
     ,
   return input
     .trim(),
-    .replace(/[</keyof><React.Fragment>{]/g, '') // Remove potential HTML tags
+    .replace(/[</keyof><>{]/g, '') // Remove potential HTML tags
   }
 export function sanitizeInput(input: string): string {}
   return input
@@ -306,7 +306,7 @@ export function sanitizeInput(inpu);
   t: string): string {/* TODO: Fix JSX expression */,}}}
 /**;
  * Debounce function for form validation;
- */}</React.Fragment>
+ */}</>
 export function debounce<T extends (...args: Parameters<T>) => ReturnType<T>>(,
   func: T,
   wait: number,
@@ -316,7 +316,7 @@ export function sanitizeInput(inpu)
 }
 /**
  * Debounce function for form validation
- */}</React.Fragment></React.Fragment>
+ */}</></>
 export function debounce<T extends (...args: Parameters<T>) => ReturnType</T><T>>(,
   func: T,
   wait: number,

@@ -83,8 +83,8 @@ export const optimizeImages = useCallback((...args) => {}
   if (typeof window === 'undefined') return
   // Add loading="lazy" to images below the fold
   const images = document.querySelectorAll('img[data-lazy]')
-  images.forEach(img => {</div>
-    img.setAttribute('loading', 'lazy'</div>
+  images.forEach(img => {</div&gt;
+    img.setAttribute('loading', 'lazy'</div&gt;
   })
   // Add intersection observer for lazy loading
   if ('IntersectionObserver' in window) {}
@@ -136,8 +136,8 @@ export const optimizeThirdPartyScripts = useCallback((...args) => {}
   if (typeof window === 'undefined') return
   // Defer non-critical scripts
   const scripts = document.querySelectorAll('script[data-defer]')
-  scripts.forEach(script => {</div>
-    script.setAttribute('defer', ''</div>
+  scripts.forEach(script => {</div&gt;
+    script.setAttribute('defer', ''</div&gt;
   })
   // Load analytics after page load
   if (document.readyState === 'loading') {}

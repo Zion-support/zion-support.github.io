@@ -25,28 +25,28 @@ const benefits = [
 
     'Cost-effective pricing plans',
 
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+          <div className="max-w-7xl mx-auto"></div></div>
+            <div className="text-center mb-16"></div></div>
+              <h2 className="text-4xl font-bold text-white mb-4"></h2></h2>Section Title</h2>
     'Proven track record of success'
   ]
 return (
       {/* Hero Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4"></section></section>
           </section>< className="$2 />
-            </div><div className="text-center mb-16">
-              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
+            </div><div className="text-center mb-16"></div></div>
+              </div><h2 className="text-4xl font-bold text-white mb-4"></h2></h2>Section Title</h2>
+              <p className="text-xl text-gray-300"></p></p>Section description</p>
             </div>
           </div>
         </section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center"></div>
+        <div className="max-w-7xl mx-auto"></div></div></div>
+          <div className="text-center"></div></div></div>
             <h1>
                 Page
               </span>
               <br>
-              <span className="text-white">Solutions</span>
+              <span className="text-white"></span></span>Solutions</span>
             </h1>
               </button>
               <button>Learn More,</button>
@@ -56,27 +56,27 @@ return (
         </div>
       </section>
 
-              <p className="text-xl text-gray-300">Section description</p>
+              <p className="text-xl text-gray-300"></p></p>Section description</p>
             </div>
           </div>
         </section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
+        <div className="max-w-7xl mx-auto"></div></div></div>
+          <div className="text-center mb-16"></div></div></div>
             <h2>Why Choose Our Page?,</h2>
             </h2>
             <p>Our page solutions deliver unmatched performance, security, and scalability.</p>
             </p>
           </div>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description</p>}</p>
+                <h3 className="text-xl font-semibold text-white mb-3"></h3></h3>{feature.title}</h3>
+                <p className="text-gray-300"></p></p>{feature.description</p&gt;}</p>
               </div>
             ))}
 
           </div>
         </div>
       </section>
-              <p className="text-xl text-gray-300">Section description</p>
+              <p className="text-xl text-gray-300"></p></p>Section description</p>
             </div>
           </div>
         </section>
@@ -85,41 +85,41 @@ return (
               </div>
   return (
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Page
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8"></section></section>
+        <div className="max-w-7xl mx-auto"></div></div>
+          <div className="text-center"></div></div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1></h1>
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent"></span></span>Page
               <br />
-              <span className="text-white">Solutions
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              <span className="text-white"></span></span>Solutions
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p></p>
               Transform your business with our advanced page solutions. 
               Powered by cutting-edge AI technology and industry expertise.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div></div>
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center"></button>
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">Learn More
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"></button>Learn More
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8"></section></section>
         </section>
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <div className="max-w-7xl mx-auto"></div></div>
+          <div className="text-center mb-16"></div></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2></h2>
               Why Choose Our Page?
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p></p>
               Our page solutions deliver unmatched performance, security, and scalability.
             ))}
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"></section></section>
         </section>
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Benefits
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+        <div className="max-w-7xl mx-auto"></div></div>
+          <div className="text-center mb-16"></div></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2></h2>Key Benefits
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p></p>
               Experience the power of our page solutions for your business.
       {/* CTA Section */}
-              <p className="text-xl text-gray-300">Section description</p>
+              <p className="text-xl text-gray-300"></p></p>Section description</p>
             </div>
           </div>
         </section>
@@ -128,7 +128,7 @@ return (
             <p></p>
               Contact our experts to discuss your page needs and get a customized solution.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div></div></div>,
               <button>
               </button>
             </div>

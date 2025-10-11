@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type { NextApiRequest, NextApiResponse  } from 'next'
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -81,8 +81,7 @@ export default async function handler(
 }
 }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-import { createServerClient } from '../../../utils/supabase/server'
+import {  createServerClient   } from '../../../utils/supabase/server'
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const supabase = createServerClient()

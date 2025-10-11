@@ -1,7 +1,7 @@
     const images = document.querySelectorAll('img');
     let optimizedCount = 0;
 'use client'
-import React, { useEffect, useState, useCallback } from 'react'
+import React, { useEffect, useState, useCallback  } from 'react'
 interface PerformanceOptimizerProps {
     children: React.ReactNode,
   enableOptimizations?: boolean
@@ -65,7 +65,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ()
   }, [enableOptimizations, optimizeImages, optimizeScripts, optimizeCSS]);
   useEffect(() => {// Run optimizations after component mount;
     const timer = setTimeout(runOptimizations, 100);
-    return () => clearTimeout(timer)
+    return () =&gt; clearTimeout(timer)
   }, [runOptimizations])
   // Add performance monitoring
   useEffect(() => {
@@ -83,10 +83,10 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ()
   return (
         <div className="optimization-debug" style={{
     observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] })
-    return () => observer.disconnect()
+    return () =></div></div> observer.disconnect()
   }, [])
   return (
-    </PerformanceOptimizerProps><div className="performance-optimized" data-optimized={isOptimized}>
+    </PerformanceOptimizerProps><div className="performance-optimized" data-optimized={isOptimized}></div></div>
       {children}
       {process.env.NODE_ENV === 'development' && (
         </div>< className="optimization-debug" style={{$2 />

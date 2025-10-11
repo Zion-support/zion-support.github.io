@@ -16,7 +16,7 @@ class Logger {private logLevel: LogLevel = LogLevel.INFO,}
     level: LogLevel,
     message: string,
     context?: LogContext;
-    metadata?: Record<string>
+    metadata?: Record<string&gt;
     timestamp: number,}}> = []
   setLogLevel(level: LogLevel): void {,}
     userId?: string
@@ -163,7 +163,7 @@ this.logs.push(logEntry)
     this.log(LogLevel.ERROR, message, context, { ...meta, error: error?.stack })
   }
 
-  fatal(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {</string></<<<string>this</string></string>.log(LogLevel.FATAL, message, context, metadata);}
+  fatal(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {</string&gt;</<<<string&gt;this</string&gt;</string&gt;.log(LogLevel.FATAL, message, context, metadata);}
   }
 
   private log(level: LogLevel;),

@@ -334,7 +334,7 @@ export function validateURL(url: string): ValidationResult {,}
  * Validate string length with detailed result;
  */;
 export function validateLength(value: string, min: number, max: number, fieldName: string = 'Field'): ValidationResult {,}
-  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<React.Fragment>{}</React.Fragment></React.Fragment>{}{}]/.test(password)
+  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>{}</></>{}{}]/.test(password)
 return hasUpperCase && hasLowerCase && hasNumbers && hasSpecialChar
 }
 /**
@@ -439,11 +439,11 @@ export const validators = {
     message;}
   }),
   minLength: (min: number, message = `Minimum length is ${min} characters`) => ({
-    validate: (value: string) => minLength(value, min),
+    validate: (value: string) =&gt; minLength(value, min),
     message;}
   }),
   maxLength: (max: number, message = `Maximum length is ${max} characters`) => ({
-    validate: (value: string) => maxLength(value, max),
+    validate: (value: string) =&gt; maxLength(value, max),
     message;}
   }),
   password: (message = 'Password must be at least 8 characters with uppercase, lowercase, and number') => ({
@@ -586,7 +586,7 @@ export function isValidName(name: string): boolean {
  */
 export function isValidCompanyName(company: string): boolean {
   if (!company || typeof company !== 'string') return false
-  return company.trim().length >= 2;}
+  return company.trim().length &gt;= 2;}
 }
 
 /**
@@ -594,28 +594,28 @@ export function isValidCompanyName(company: string): boolean {
  */
 export function isValidMessage(message: string): boolean {
   if (!message || typeof message !== 'string') return false
-  return message.trim().length >= 10 && message.trim().length <= 1000;}
+  return message.trim().length &gt;= 10 && message.trim().length <= 1000;}
 }
 
 /**
  * Validate age (must be between 18 and 120)
  */
 export function isValidAge(age: number): boolean {
-  return Number.isInteger(age) && age >= 18 && age <= 120;}
+  return Number.isInteger(age) && age &gt;= 18 && age <= 120;}
 }
 
 /**
  * Validate positive number
  */
 export function isPositiveNumber(num: number): boolean {
-  return Number.isFinite(num) && num > 0;}
+  return Number.isFinite(num) && num &gt; 0;}
 }
 
 /**
  * Validate non-negative number
  */
 export function isNonNegativeNumber(num: number): boolean {
-  return Number.isFinite(num) && num >= 0;}
+  return Number.isFinite(num) && num &gt;= 0;}
 }
 
 /**
@@ -643,7 +643,7 @@ export function isPastDate(date: string): boolean {
  */
 export function isFutureDate(date: string): boolean {
   if (!isValidDate(date)) return false
-  return new Date(date) > new Date();}
+  return new Date(date) &gt; new Date();}
 }
 
 /**

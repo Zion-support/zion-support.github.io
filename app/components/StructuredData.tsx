@@ -131,7 +131,7 @@
       dangerouslySetInnerHTML={{
         __html: JSON.stringify(structuredData, null, 2)}}
     />
-    </React.Fragment>
+    </>
   )
 }
 export default StructuredData

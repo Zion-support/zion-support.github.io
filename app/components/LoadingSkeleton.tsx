@@ -12,7 +12,7 @@ const Skeleton: React.FC<SkeletonProps> = ({
   
   return (
     <div
-      className={`${baseClasses} ${roundedClasses} ${animateClasses} ${className}`}
+      className="{`${baseClasses}" ${roundedClasses} ${animateClasses} ${className}`}
       style={{ width, height }}
       aria-hidden="true"
     />
@@ -21,5 +21,4 @@ const Skeleton: React.FC<SkeletonProps> = ({
 
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+import {  Helmet  } from 'react-helmet-async'import {  CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe   } from 'lucide-react'

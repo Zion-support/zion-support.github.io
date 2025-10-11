@@ -1,69 +1,65 @@
 #!/usr/bin/env node
+
 import fs from 'fs'
-import path from 'path'
-//Mapping of broken imports to correct imports
-const iconMappings = {
-  rrowleft: 'ArrowLeft'
-  alendar: 'Calendar'
-  ser: 'User'
-  lock: 'Clock'
-  ag: 'Tag'
-  rendingup: 'TrendingUp'
-  ollarsign: 'DollarSign'
-  sers: 'Users'
-  arget: 'Target'
-  rain: 'Brain'
-  ap: 'Zap'
-  hield: 'Shield'
-  rrowright: 'ArrowRight'
-  og: 'Log'
-  pu: 'Cpu'
-  lobe: 'Globe'
-  ocket: 'Rocket'
-  heckcircle: 'CheckCircle',
-  hare2: 'Share2',
-  ookmark: 'Bookmark',
-  ot: 'Bot',
-  ookopen: 'BookOpen'}
-//Function to fix imports in a file
-function fixImportsInFile(filePath) {
+import { glob } from 'glob'
+
+// Function to fix import statements
+function fixImports(filePath) {
   try {
-    //Fix lucide-react imports
-    for (const [broken, correct] of Object.entries(iconMappings)) {
-      //       const oldImport = `lucide-react/dist/esm/icons/${broken}`
-const iconMappings = {/* TODO: Fix JSX expression */}
+    let content = fs.readFileSync(filePath, 'utf8')
+    let modified = false
+
+    // Fix missing spaces in import statements
+    content = content.replace(/import([A-Za-z])/g, 'import $1')
+    content = content.replace(/import\s+{([^}]*)}/g, 'import { $1 }')
+    content = content.replace(/import\s+([A-Za-z][A-Za-z0-9]*)\s+from/g, 'import $1 from')
+    content = content.replace(/from\s+'([^']*)'/g, "from '$1'")
+    content = content.replace(/from\s+"([^"]*)"/g, 'from "$1"')
+
+    // Fix specific patterns
+    content = content.replace(/importReact/g, 'import React')
+    content = content.replace(/import{/g, 'import { ')
+    content = content.replace(/}from/g, ' } from')
+    content = content.replace(/} from/g, ' } from')
+
+    // Fix component imports
+    content = content.replace(/import([A-Z][a-zA-Z]*)from/g, 'import $1 from')
+
+    if (content !== fs.readFileSync(filePath, 'utf8')) {
+      fs.writeFileSync(filePath, content)
+      return true
+    }
+
+    return false
+  } catch (error) {
+    console.error(`Error fixing imports in ${filePath}:`, error.message)
+    return false
+  }
 }
-//Function to fix imports in a file
-function fixImportsInFile(filePath) {/* TODO: Fix JSX expression */}
-      //       const oldImport = `lucide-react/dist/esm/icons/${broken}`;`
-      //       const newImport = `lucide-react`
-      if (content.includes(oldImport)) {/* TODO: Fix JSX expression */}`
-          new RegExp(`import ${correct} from '${oldImport}';`, 'g'))
-        modified = true
+
+// Function to fix all files
+async function fixAllImports() {
+  const patterns = [
+    'app/**/*.tsx',
+    'app/**/*.ts',
+    'components/**/*.tsx',
+    'components/**/*.ts'
+  ]
+  
+  let totalFixed = 0
+  
+  for (const pattern of patterns) {
+    const files = await glob(pattern, { cwd: process.cwd() })
+    for (const file of files) {
+      if (fixImports(file)) {
+        totalFixed++
+        console.log(`Fixed imports: ${file}`)
       }
     }
-
-    //Fix Link imports if missing
-    if (content.includes('Link') && !content.includes("import Link from 'next/link'")) {
-      content = "import Link from 'next/link';\n" + content
-      modified = true
-    if (content.includes('Link') && !content.includes("import Link from 'next/link'")) {/* TODO: Fix JSX expression */}
-    }
-
-    if (modified) {/* TODO: Fix JSX expression */}
-      //       }
-  } catch (error) {/* TODO: Fix JSX expression */}
-    //     }
+  }
+  
+  console.log(`\nFixed imports in ${totalFixed} files`)
 }
 
-//Get all blog files
-// const blogDir = '/workspace/app/blog'
-const files = fs
-  .readdirSync(blogDir, { recursive: true })
-  .readdirSync(blogDir, {/* TODO: Fix JSX expression */})
-  e: true })
-  .filter(file => file.endsWith('.tsx'))
-  .map(file => path.join(blogDir, file))
-// Process each file
-files.forEach(fixImportsInFile)
-// "`
+// Run the fix
+fixAllImports().catch(console.error)

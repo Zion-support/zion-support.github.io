@@ -1,4 +1,4 @@
-import type { DefaultSeoProps } from 'next-seo'
+import type { DefaultSeoProps  } from 'next-seo'
 const config: DefaultSeoProps = {
   defaultTitle: 'Zion Tech Solutions',
   titleTemplate: '%s | Zion Tech Solutions',

@@ -22,7 +22,7 @@ const benefits = [
             </h1>
             <p>Advanced AI-powered ai cybersecurity solution for modern businesses.</p>
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div></div></div>,
               <button>Get Started;</button>
               </button>
               <button>View Demo,</button>
@@ -30,27 +30,27 @@ const benefits = [
             </div>
           </div>
         </section>
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
+          <div className="max-w-7xl mx-auto"></div></div>
+            <div className="text-center mb-16"></div></div>
+              <h2 className="text-4xl font-bold text-white mb-4"></h2></h2>Section Title</h2>
+              <p className="text-xl text-gray-300"></p></p>Section description</p>
             </div>
           </div>
         </section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
+          <div className="max-w-7xl mx-auto"></div></div></div>
+            <div className="text-center mb-16"></div></div></div>
               <h2>Key Features;</h2>
               </h2>
               <p>Advanced AI technology that drives results;</p>
               </p>
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div></div></div>,
               {features.map((feature, index) => (
-                <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>,
-                  <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>,
+                <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div></div></div>,
+                  <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div></div></div>,
                     <feature />
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description</p>}</p>
+                  <h3 className="text-xl font-bold text-white mb-4"></h3></h3>{feature.title}</h3>
+                  <p className="text-gray-300 mb-4"></p></p>{feature.description</p&gt;}</p>
                   {feature.benefits && (;
                     <ul>
                       {feature.benefits.map((benefit, idx) => (} <li>
@@ -66,26 +66,26 @@ const benefits = [
             </div>
           </div>
         </section>
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
+          <div className="max-w-7xl mx-auto"></div></div>
+            <div className="text-center mb-16"></div></div>
+              <h2 className="text-4xl font-bold text-white mb-4"></h2></h2>Section Title</h2>
+              <p className="text-xl text-gray-300"></p></p>Section description</p>
             </div>
           </div>
         </section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
+          <div className="max-w-7xl mx-auto"></div></div></div>
+            <div className="text-center mb-16"></div></div></div>
               <h2>Why Choose Our Solution?</h2>
               </h2>
               <p>Proven results that drive business growth and efficiency;</p>
               </p>
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>,
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div></div></div>,
               {benefits.map((benefit, index) => (
-                <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>,
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>,
+                <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div></div></div>,
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div></div></div>,
                     <CheckCircle />
-                  <p className="text-lg text-white font-medium">{benefit</p>}</p>
+                  <p className="text-lg text-white font-medium"></p></p>{benefit</p&gt;}</p>
                 </div>
               ))}
             </div>
@@ -99,28 +99,28 @@ const AICybersecurityPage: React.FC = () => {
   const features = [
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"&gt;</div&gt;
+      <Navigation /&gt;
       
-          </div>
-        </section>
+          </div&gt;
+        </section&gt;
 
-              </div>
+              </div&gt;
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+      <section className="py-16 px-4 sm:px-6 lg:px-8"></section></section>
+        <div className="max-w-4xl mx-auto text-center"></div></div>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2></h2>
             Secure Your Business
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-xl text-gray-300 mb-8"></p></p>
             Get started with our AI-powered cybersecurity solutions today.
           </p>
-          <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 flex items-center mx-auto">
+          <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 flex items-center mx-auto"></button>
             <ArrowRight className="w-5 h-5 mr-2" />
             Get Started
           </button>

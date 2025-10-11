@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type { NextApiRequest, NextApiResponse  } from 'next'
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -26,7 +26,7 @@ export default async function handler(
     }
     const { data, error } = await supabase
       .from('email_signups')
-import { supabase } from '../../utils/supabase/client'
+import {  supabase   } from '../../utils/supabase/client'
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).send('Method Not Allowed')
   const { email } = req.body || {}
@@ -48,7 +48,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       .single()
     if (error) {
 }
-import { supabase } from '../../utils / supabase / client'
+import {  supabase   } from '../../utils / supabase / client'
 export default async /**
  * handler - Function description
  */

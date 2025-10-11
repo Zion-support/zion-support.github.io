@@ -19,7 +19,7 @@
 
   Settings,
 
-  Database;}} from 'lucide-react'
+  Database;} } from 'lucide-react'
 const SecurityMonitoringPage: React.FC = () => {,
     const features = [
     {
@@ -58,25 +58,25 @@ return (
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+          <div className="max-w-7xl mx-auto"></div></div>
+            <div className="text-center mb-16"></div></div>
+              <h2 className="text-4xl font-bold text-white mb-4"></h2></h2>Section Title</h2>
         {/* Hero Section */}
-        <section className="py-20 px-4">
+        <section className="py-20 px-4"></section></section>
           </section>< className="$2 />
-            </div><div className="text-center mb-16">
-              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
+            </div><div className="text-center mb-16"></div></div>
+              </div><h2 className="text-4xl font-bold text-white mb-4"></h2></h2>Section Title</h2>
+              <p className="text-xl text-gray-300"></p></p>Section description</p>
             </div>
           </div>
         </section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
+          <div className="max-w-7xl mx-auto"></div></div></div>
+            <div className="text-center mb-16"></div></div></div>
               <h1>Security Monitoring Services;</h1>
               </h1>
                 Real-time threat detection, instant alerts, and expert response to keep your data safe.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div></div></div>,
                 <button>
                 </button>
                 <button>
@@ -87,31 +87,31 @@ return (
             </div>
           </div>
         </section>
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">Security Monitoring Services
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <div className="max-w-7xl mx-auto"></div></div>
+            <div className="text-center mb-16"></div></div>
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6"></h1></h1>Security Monitoring Services
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p></p>
                 Protect your business with our advanced 24/7 security monitoring solutions. 
                 Real-time threat detection, instant alerts, and expert response to keep your data safe.
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div></div>
+                <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"></button>
                   <Shield className="mr-2 h-5 w-5" />
                   Get Protected Now
-                <button className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center">
+                <button className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center"></button>
                   <Phone className="mr-2 h-5 w-5" />
                   Call (302) 464-0950
         {/* Features Section */}
-        <section className="py-20 px-4">
+        <section className="py-20 px-4"></section></section>
           </section>< className="$2 />
-            </div><div className="text-center mb-16">
-              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
+            </div><div className="text-center mb-16"></div></div>
+              </div><h2 className="text-4xl font-bold text-white mb-4"></h2></h2>Section Title</h2>
+              <p className="text-xl text-gray-300"></p></p>Section description</p>
             </div>
           </div>
         </section>
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+          <div className="max-w-7xl mx-auto"></div></div>
+            <div className="text-center mb-16"></div></div>
+              <h2 className="text-4xl font-bold text-white mb-4"></h2></h2>Section Title</h2>
           <div className="max-w-7xl mx-auto" / /></div>
             <div className="text-center mb-16" / /></div>
               <h2></h2>
@@ -122,38 +122,38 @@ return (
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" / /></div>
-              {features.map((feature, index) => ()
+              {features.map((feature, index) =&gt; ()
               ))}
         {/* Benefits Section */}
-        <section className="py-20 px-4">
+        <section className="py-20 px-4"></section></section>
           </section>< className="$2 />
-            </div><div className="text-center mb-16">
-              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
+            </div><div className="text-center mb-16"></div></div>
+              </div><h2 className="text-4xl font-bold text-white mb-4"></h2></h2>Section Title</h2>
+              <p className="text-xl text-gray-300"></p></p>Section description</p>
             </div>
           </div>
         </section>
               </p>
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>,
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div></div></div>,
               {benefits.map((benefit, index) => (
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Benefits
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <div className="max-w-7xl mx-auto"></div></div>
+            <div className="text-center mb-16"></div></div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2></h2>Key Benefits
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p></p>
                 Experience comprehensive security protection with our advanced monitoring services.
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div></div>
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-3">
+                <div key={index} className="flex items-start space-x-3"></div></div>
                   <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                  <p className="text-gray-300 text-lg">{benefit}
+                  <p className="text-gray-300 text-lg"></p></p>{benefit}
               ))}
         {/* CTA Section */}
-        <section className="py-20 px-4">
+        <section className="py-20 px-4"></section></section>
           </section>< className="$2 />
-            </div><div className="text-center mb-16">
-              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
+            </div><div className="text-center mb-16"></div></div>
+              </div><h2 className="text-4xl font-bold text-white mb-4"></h2></h2>Section Title</h2>
+              <p className="text-xl text-gray-300"></p></p>Section description</p>
             </div>
           ))
         </section>
@@ -162,7 +162,7 @@ return (
               <p></p>
                 Contact our security experts to discuss your monitoring needs and get a customized protection plan.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div></div></div>,
                 <button>
                 </button>
               </div>

@@ -1,13 +1,7 @@
 
 'use client'
-import React from 'react'
-import { CheckCircle, ArrowRight, Zap, Shield, Star, Users } from 'lucide-react'
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
+import React from 'react';
 const ContentPromotionBanner: React.FC = () => {
-import { Zap, Shield, Star, Users, ArrowRight } from 'lucide-react';
-
-const ContentPromotionBanner: React.FC = () => {
->>>>>>> main
   const features = [
     {
       icon: Brain,
@@ -19,6 +13,5 @@ const ContentPromotionBanner: React.FC = () => {
             ))}
           </div>
         </div>
->>>>>>> main
       </div>
     </div>

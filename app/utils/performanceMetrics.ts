@@ -428,7 +428,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
     if (this.webVitals.FCP) {
     }
     // FID scoring;
-    if (this.webVitals.FID) {if (this.webVitals.FID > 300) score -= 15;}calculatePerformanceScore(): number {}}let score = 100;
+    if (this.webVitals.FID) {if (this.webVitals.FID &gt; 300) score -= 15;}calculatePerformanceScore(): number {}}let score = 100;
     // FCP scoring;
     if (this.webVitals.FCP) {}if (this.webVitals.FCP > 3000) score -= 20;
       else if (this.webVitals.FCP > 1800) score -= 10;}
@@ -451,19 +451,19 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
     if (this.webVitals.FID) {}if (this.webVitals.FID > 300) score -= 15;
     // LCP scoring
     if (this.webVitals.LCP) {
-    if (this.webVitals.LCP > 4000) score -= 25
+    if (this.webVitals.LCP &gt; 4000) score -= 25
   }
       else if (this.webVitals.LCP > 2500) score -= 12;}
     }
     // CLS scoring
     if (this.webVitals.CLS) {
-    if (this.webVitals.CLS > 0.25) score -= 20
+    if (this.webVitals.CLS &gt; 0.25) score -= 20
   }
       else if (this.webVitals.CLS > 0.1) score -= 10;}
     }
     // FID scoring
     if (this.webVitals.FID) {
-    if (this.webVitals.FID > 300) score -= 15
+    if (this.webVitals.FID &gt; 300) score -= 15
   }
   calculatePerformanceScore(): number {}
     let score = 100
@@ -517,7 +517,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
     const avgNetworkTime =;
       networkMetrics.reduce((sum, m) => sum + m.value, 0) / networkMetrics.length;
     if (avgNetworkTime > 500) {recommendations.push('Optimize network requests - consider caching and reducing payload sizes');
-      networkMetrics.reduce((sum, m) => sum + m.value, 0) / networkMetrics.length;}if (avgNetworkTime > 500) {}recommendations.push();
+      networkMetrics.reduce((sum, m) =&gt; sum + m.value, 0) / networkMetrics.length;}if (avgNetworkTime > 500) {}recommendations.push();
         'Optimize network requests - consider caching and reducing payload sizes';
       );}
     if (avgNetworkTime > 500) {/* TODO: Fix JSX expression */,}}
@@ -570,7 +570,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
       networkMetrics.reduce((sum, m) => sum + m.value, 0) / networkMetrics.length
     if (avgNetworkTime > 500) {
     recommendations.push('Optimize network requests - consider caching and reducing payload sizes')
-      networkMetrics.reduce((sum, m) => sum + m.value, 0) / networkMetrics.length
+      networkMetrics.reduce((sum, m) =&gt; sum + m.value, 0) / networkMetrics.length
   }
     if (avgNetworkTime > 500) {}
       recommendations.push()

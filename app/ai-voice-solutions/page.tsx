@@ -2,15 +2,15 @@
         <meta name="keywords" content="AI voice solutions, speech recognition, text-to-speech, voice assistants, conversational AI, voice technology" />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Revolutionize customer interactions with advanced AI voice technologies including;</p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p></p>Revolutionize customer interactions with advanced AI voice technologies including;</p>
               speech recognition, natural language processing, and intelligent voice assistants.
             </p>
           </div>
 
               </p>
-              <ul className="text-sm text-gray-400 space-y-2">
+              <ul className="text-sm text-gray-400 space-y-2"></ul>
                 </ul><li>• Real-time transcription</li>
                 <li>• Multi-language support</li>
                 <li>• Noise cancellation</li>
@@ -18,9 +18,9 @@
               </ul>
             </div>
 
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"></div></div>
               </p>
-              <ul className="text-sm text-gray-400 space-y-2">
+              <ul className="text-sm text-gray-400 space-y-2"></ul>
                 </ul><li>• Natural voice generation</li>
                 <li>• Multiple voice options</li>
                 <li>• Emotional expression</li>
@@ -28,9 +28,9 @@
               </ul>
             </div>
 
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"></div></div>
               </p>
-              <ul className="text-sm text-gray-400 space-y-2">
+              <ul className="text-sm text-gray-400 space-y-2"></ul>
                 </ul><li>• Contextual understanding</li>
                 <li>• Multi-turn conversations</li>
                 <li>• Personalization</li>
@@ -38,9 +38,9 @@
               </ul>
             </div>
 
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"></div></div>
               </p>
-              <ul className="text-sm text-gray-400 space-y-2">
+              <ul className="text-sm text-gray-400 space-y-2"></ul>
                 </ul><li>• Natural language understanding</li>
                 <li>• Intent recognition</li>
                 <li>• Entity extraction</li>
@@ -48,9 +48,9 @@
               </ul>
             </div>
 
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"></div></div>
               </p>
-              <ul className="text-sm text-gray-400 space-y-2">
+              <ul className="text-sm text-gray-400 space-y-2"></ul>
                 </ul><li>• Call sentiment analysis</li>
                 <li>• Performance metrics</li>
                 <li>• Quality monitoring</li>
@@ -58,9 +58,9 @@
               </ul>
             </div>
 
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"></div></div>
               </p>
-              <ul className="text-sm text-gray-400 space-y-2">
+              <ul className="text-sm text-gray-400 space-y-2"></ul>
                 </ul><li>• Voice biometrics</li>
                 <li>• Fraud detection</li>
                 <li>• Authentication</li>
@@ -69,7 +69,7 @@
             </div>
           </div>
 
-          <div className="text-center">
+          <div className="text-center"></div></div>
             </button>
           </div>
         </div>

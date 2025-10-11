@@ -50,7 +50,7 @@ export class SecurityManager {}
     validRequests.push(now);
     storage.set(key, validRequests);
     return true;
-  }}</React.Fragment>
+  }}</>
   private getRateLimitStorage(): Map<string, number[]> {}if (!global._rateLimitStorage) {}global._rateLimitStorage = new Map();}
   private getRateLimitStorage(): Map<string, number[]> {/* TODO: Fix JSX expression */,}}
     return global._rateLimitStorage;
@@ -61,7 +61,7 @@ export class SecurityManager {}
     validRequests.push(now)
     storage.set(key, validRequests)
     return true
-  }}</React.Fragment></React.Fragment>
+  }}</></>
   private getRateLimitStorage(): Map<string, number[]> {}
     if (!global._rateLimitStorage) {}
       global._rateLimitStorage = new Map();}

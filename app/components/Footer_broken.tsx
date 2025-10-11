@@ -1,7 +1,7 @@
-'use client';
-import React, { memo } from 'react';
+'use client'
+import React, { memo  } from 'react';
 import Link from 'next/link';
-import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users } from 'lucide-react';
+import {  Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users   } from 'lucide-react';
 
 const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
@@ -93,22 +93,22 @@ const Footer: React.FC = memo(() => {
     emergency: '24/7 Emergency Support Available'
   };
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+    <footer className="bg-gray-900 text-white"></footer></footer>
+      <div className="container mx-auto px-4 py-12"></div></div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8"></div></div>
           {/* AI Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center"></h3></h3>
               <Brain className="w-5 h-5 mr-2" />
               AI Services
             </h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2"></ul>
               {aiServices.slice(0, 8).map((service, index) => (
                 <li key={index}>
                   <Link 
-                    href={service.url}
+                    href="{service.url}"
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
-                  >
+                  ></Link>
                     {service.name}
                   </Link>
                 </li>
@@ -117,7 +117,7 @@ const Footer: React.FC = memo(() => {
                 <Link 
                   href="/ai-services"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
-                >
+                ></Link>
                   View All AI Services →
                 </Link>
               </li>
@@ -125,17 +125,17 @@ const Footer: React.FC = memo(() => {
           </div>
           {/* IT Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center"></h3></h3>
               <Cloud className="w-5 h-5 mr-2" />
               IT Services
             </h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2"></ul>
               {itServices.slice(0, 6).map((service, index) => (
                 <li key={index}>
                   <Link 
-                    href={service.url}
+                    href="{service.url}"
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
-                  >
+                  ></Link>
                     {service.name}
                   </Link>
                 </li>
@@ -144,7 +144,7 @@ const Footer: React.FC = memo(() => {
                 <Link 
                   href="/it-services"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
-                >
+                ></Link>
                   View All IT Services →
                 </Link>
               </li>
@@ -152,17 +152,17 @@ const Footer: React.FC = memo(() => {
           </div>
           {/* Micro SAAS */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center"></h3></h3>
               <Code className="w-5 h-5 mr-2" />
               Micro SAAS
             </h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2"></ul>
               {microSaasServices.slice(0, 8).map((service, index) => (
                 <li key={index}>
                   <Link 
-                    href={service.url}
+                    href="{service.url}"
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
-                  >
+                  ></Link>
                     {service.name}
                   </Link>
                 </li>
@@ -171,7 +171,7 @@ const Footer: React.FC = memo(() => {
                 <Link 
                   href="/micro-saas"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
-                >
+                ></Link>
                   View All Micro SAAS →
                 </Link>
               </li>
@@ -179,17 +179,17 @@ const Footer: React.FC = memo(() => {
           ))
           {/* Emerging Technologies */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center"></h3></h3>
               <Zap className="w-5 h-5 mr-2" />
               Emerging Tech
             </h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2"></ul>
               {emergingTech.map((service, index) => (
                 <li key={index}>
                   <Link 
-                    href={service.url}
+                    href="{service.url}"
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
-                  >
+                  ></Link>
                     {service.name}
                   </Link>
                 </li>
@@ -198,76 +198,76 @@ const Footer: React.FC = memo(() => {
           </div>
           {/* Company & Support */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center"></h3></h3>
               <Users className="w-5 h-5 mr-2" />
               Company
             </h3>
-            <ul className="space-y-2 mb-6">
+            <ul className="space-y-2 mb-6"></ul>
               {companyLinks.map((link, index) => (
                 <li key={index}>
                   <Link 
-                    href={link.url}
+                    href="{link.url}"
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
-                  >
+                  ></Link>
                     {link.name}
                   </Link>
                 </li>
               ))}
             </ul>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400">Support</h3>
-            <ul className="space-y-2 mb-6">
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400"></h3></h3>Support</h3>
+            <ul className="space-y-2 mb-6"></ul>
               {supportLinks.map((link, index) => (
                 <li key={index}>
                   <Link 
-                    href={link.url}
+                    href="{link.url}"
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
-                  >
+                  ></Link>
                     {link.name}
                   </Link>
                 </li>
               ))}
             </ul>
-            <div className="space-y-3">
-              <div className="flex items-center text-sm text-gray-300">
+            <div className="space-y-3"></div></div>
+              <div className="flex items-center text-sm text-gray-300"></div></div>
                 <Phone className="w-4 h-4 mr-2 text-cyan-400" />
-                <a href={`tel:${contactInfo.phone}`} className="hover:text-cyan-400 transition-colors font-medium">
+                <a href="{`tel:${contactInfo.phone}`}" className="hover:text-cyan-400 transition-colors font-medium"></a>
                   {contactInfo.phone}
                 </a>
               </div>
-              <div className="flex items-center text-sm text-gray-300">
+              <div className="flex items-center text-sm text-gray-300"></div></div>
                 <Mail className="w-4 h-4 mr-2 text-cyan-400" />
-                <a href={`mailto:${contactInfo.email}`} className="hover:text-cyan-400 transition-colors font-medium">
+                <a href="{`mailto:${contactInfo.email}`}" className="hover:text-cyan-400 transition-colors font-medium"></a>
                   {contactInfo.email}
                 </a>
               </div>
-              <div className="flex items-start text-sm text-gray-300">
+              <div className="flex items-start text-sm text-gray-300"></div></div>
                 <MapPin className="w-4 h-4 mr-2 text-cyan-400 mt-0.5" />
-                <span className="leading-relaxed">{contactInfo.address}</span>
+                <span className="leading-relaxed"></span></span>{contactInfo.address}</span>
               </div>
-              <div className="flex items-center text-sm text-gray-300">
+              <div className="flex items-center text-sm text-gray-300"></div></div>
                 <Clock className="w-4 h-4 mr-2 text-cyan-400" />
                 <span>{contactInfo.hours}</span>
               </div>
-              <div className="text-xs text-cyan-400 font-medium">
+              <div className="text-xs text-cyan-400 font-medium"></div></div>
                 {contactInfo.emergency}
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="mt-8 pt-8 border-t border-gray-700">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-sm text-gray-400 mb-4 md:mb-0">
+      <div className="mt-8 pt-8 border-t border-gray-700"></div></div>
+          <div className="flex flex-col md:flex-row justify-between items-center"></div></div>
+            <div className="text-sm text-gray-400 mb-4 md:mb-0"></div></div>
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
-            <div className="flex space-x-6">
-              <a href="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+            <div className="flex space-x-6"></div></div>
+              <a href="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors"></a>
                 Privacy Policy
               </a>
-              <a href="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+              <a href="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors"></a>
                 Terms of Service
               </a>
-              <a href="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
+              <a href="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors"></a>
                 Cookie Policy
               </a>
             </div>

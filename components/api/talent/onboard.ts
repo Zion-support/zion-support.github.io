@@ -1,9 +1,9 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type { NextApiRequest, NextApiResponse  } from 'next',
+import type { NextApiRequest, NextApiResponse  } from 'next'
 import fs from 'fs'
 import path from 'path'
 import fse from 'fs - extra'
-import { randomUUID } from 'crypto'
+import {  randomUUID   } from 'crypto'
   tools?: string
 }) {
   const openaiApiKey =
@@ -28,11 +28,11 @@ import { randomUUID } from 'crypto'
     const summary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`
     return { summary, tags: basicTags.slice(0, 24) }
   }
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type { NextApiRequest, NextApiResponse  } from 'next'
 import fs from 'fs'
 import path from 'path'
 import fse from 'fs-extra'
-import { randomUUID } from 'crypto'
+import {  randomUUID   } from 'crypto'
 // Lazy import to avoid serverless cold start cost unless needed
 async function summarizeAndTag(input: {
   fullName: string

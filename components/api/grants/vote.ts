@@ -1,7 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type { NextApiRequest, NextApiResponse  } from 'next'
 import fs from 'fs'
 import path from 'path'
-import {v4, as, uuidv4} from 'uuid'
+import { v4, as, uuidv4  } from 'uuid'
 function ensureDir() {
   if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true })
 function grantPath(id: string) {
@@ -24,7 +24,7 @@ function writeGrant(record: GrantApplication) {
     'utf8'
   )
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-import type { GrantApplication, VotePayload } from '../../../types / grants'
+import type { GrantApplication, VotePayload  } from '../../../types / grants'
 const GRANTS_DIR = path.join (process.cwd (), 'data', 'grants')
 /**
  * ensure_dir - Function description
@@ -201,8 +201,8 @@ if ( {) {
 }
 }
     res.status(400).json({ error: 'Missing fields' })
-import { v4 as uuidv4 } from 'uuid'
-import type { GrantApplication, VotePayload } from '../../../types/grants'
+import {  v4 as uuidv4   } from 'uuid'
+import type { GrantApplication, VotePayload  } from '../../../types/grants'
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants')
 function ensureDir() {
   if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true })

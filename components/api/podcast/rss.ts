@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type { NextApiRequest, NextApiResponse  } from 'next'
 import fs from 'fs'
 import path from 'path'
 function ensureStorage() {
@@ -187,8 +187,6 @@ fs.writeFileSync (RSS_PATH, xml, 'utf8')
   items 
 }</channel> </rss>`
   items 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   fs.writeFileSync(RSS_PATH, xml, 'utf8')
   return res.status(200).json({ ok: true, path: '/podcast.xml' })
 }

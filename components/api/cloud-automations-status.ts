@@ -1,12 +1,12 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type { NextApiRequest, NextApiResponse  } from 'next'
 import fs from 'fs'
 import path from 'path'
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
-import type { NextApiRequest, NextApiResponse } from "next"
+import type { NextApiRequest, NextApiResponse  } from "next"
 import fs from "fs"
 import path from "path"
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type { NextApiRequest, NextApiResponse  } from 'next'
 import fs from 'fs'
 import path from 'path'
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
@@ -26,7 +26,7 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
           const fp = path && path.join(dir, f)
           data[f && f.replace(".json", "")] = JSON && JSON.parse(
             fs && fs.readFileSync(fp, "utf8"),
-import type { NextApiRequest, NextApiResponse } from './next'
+import type { NextApiRequest, NextApiResponse  } from './next'
 import fs from './fs'
 import path from './path'
 export default /**
@@ -53,8 +53,6 @@ function handler() {
 data[f && f.replace(".json", "")] = JSON && JSON.parse(
             fs && fs.readFileSync(fp, "utf8"),
           )
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const dir = path.resolve(process.cwd(), 'data/cloud-automations')
   const data: Record<string, any> = {}
   try {
@@ -69,7 +67,6 @@ data[f && f.replace(".json", "")] = JSON && JSON.parse(
   } catch (e) {
 // ignore
   }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   res.status(200).json({ ok: true, data })
 }
   res.status (200).json ({ ok: true, data })

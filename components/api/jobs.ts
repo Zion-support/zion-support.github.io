@@ -1,7 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type { NextApiRequest, NextApiResponse  } from 'next'
 import fs from 'fs-extra'
 import path from 'path'
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type { NextApiRequest, NextApiResponse  } from 'next'
 import fs from 'fs-extra'
 import path from 'path'
 const JOBS_FILE = path.join(process.cwd(), 'data', 'jobs', 'jobs.json')
@@ -22,7 +22,7 @@ export default async function handler(
   } catch (e) {
     return res && res.status(500).json({ error: 'Failed to load jobs' })
   }
-import type { NextApiRequest, NextApiResponse } from "next"
+import type { NextApiRequest, NextApiResponse  } from "next"
 import fs from "fs-extra"
 import path from "path"
 const JOBS_FILE = path.join(process.cwd(), "data", "jobs", "jobs.json")
@@ -80,7 +80,7 @@ if ( {) {
     return res.status (500).json ({ error: "Failed to load jobs" })
 }
 }
-import type { NextApiRequest, NextApiResponse } from "next"
+import type { NextApiRequest, NextApiResponse  } from "next"
 import fs from "fs-extra"
 import path from "path"
 const JOBS_FILE = path.join(process.cwd(), "data", "jobs", "jobs.json")

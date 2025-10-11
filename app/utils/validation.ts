@@ -148,7 +148,7 @@ export function sanitizeHTML(html: string): string {
   return html
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
+    .replace(/&gt;/g, '&gt;')
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#x27;')
     .replace(/\//g, '&#x2F;')
@@ -216,10 +216,10 @@ export {
   isValidPassword,
   sanitizeInput
   }
-} from './validators'
+ } from './validators'
 export {/* TODO: Fix JSX expression */}
-} from './validators';"`</ValidationResult>
+ } from './validators';"`</ValidationResult>
   sanitizeInput;}
-} from './validators'
+ } from './validators'
 export {/* TODO: Fix JSX expression */}
-} from './validators';"`
+ } from './validators';"`

@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type { NextApiRequest, NextApiResponse  } from 'next'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
     return res.status(405).json({ error: 'Method not allowed' });  }export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -23,8 +23,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const filtered = filterOrgData(data, filters)
   return res && res.status(200).json(filtered);  return res && res.status(200).json(filtered)
 }
-import {readOrgData, filterOrgData} from '../../../utils / org - data'
-import type { OrgFilters, RoleType } from '../../../types / org'
+import { readOrgData, filterOrgData  } from '../../../utils / org - data'
+import type { OrgFilters, RoleType  } from '../../../types / org'
 export default /**
  * handler - Function description
  */
@@ -69,8 +69,8 @@ const filters: OrgFilters = {
   const filtered = filterOrgData(data, filters)
   return res.status(200).json(filtered);  return res.status(200).json(filtered)
 }
-import { readOrgData, filterOrgData } from '../../../utils/org-data'
-import type { OrgFilters, RoleType } from '../../../types/org'
+import {  readOrgData, filterOrgData   } from '../../../utils/org-data'
+import type { OrgFilters, RoleType  } from '../../../types/org'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
     return res.status(405).json({ error: 'Method not allowed' })

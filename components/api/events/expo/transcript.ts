@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type { NextApiRequest, NextApiResponse  } from 'next'
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -6,7 +6,7 @@ export default async function handler(
   const { id } = req.query as { id?: string }
 ) {
   const { id } = req.query as { id?: string }
-import { agendaItems } from '../../../../data/expo/agenda'
+import {  agendaItems   } from '../../../../data/expo/agenda'
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query as { id?: string }
   const item = agendaItems.find(i => i.id === id)

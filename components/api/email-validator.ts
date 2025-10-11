@@ -1,10 +1,9 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
- import type { NextApiRequest, NextApiResponse } from 'next'
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import type { NextApiRequest, NextApiResponse  } from 'next'
+ import type { NextApiRequest, NextApiResponse  } from 'next'
 interface EmailValidationResult {
   email: string
   is_valid: boolean
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type { NextApiRequest, NextApiResponse  } from 'next'
 interface EmailValidationResult {
   email: string
   isValid: boolean

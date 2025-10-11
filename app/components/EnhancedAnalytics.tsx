@@ -1,24 +1,10 @@
-};
-
-export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const track = useCallback((event: string, parameters?: Record<string, any>) => {
-    console.log('Analytics Event:', event, parameters);
-  }, []);
-
-  const page = useCallback((pageName: string, parameters?: Record<string, any>) => {
-    console.log('Analytics Page:', pageName, parameters);
-  }, []);
-
-  const identify = useCallback((userId: string, traits?: Record<string, any>) => {
-    console.log('Analytics Identify:', userId, traits);
-  }, []);
 'use client'
 import React, { createContext, useContext, useEffect, useState } from 'react'
 
 interface AnalyticsContextType {
   trackEvent: (eventName: string, properties?: Record<string, any>) => void
   trackPageView: (pageName: string) => void
-  trackUserAction: (action: string, category: string, label?: string) => void
+  trackUser: (userId: string, traits?: Record<string, any>) => void
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined)
@@ -31,72 +17,72 @@ export const useAnalytics = () => {
   return context
 }
 
-interface AnalyticsProviderProps {
-  children: React.ReactNode
-}
-
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
-  const [isInitialized, setIsInitialized] = useState(false)
+export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [isLoaded, setIsLoaded] = useState(false)
 
   useEffect(() => {
     // Initialize analytics
     const initAnalytics = () => {
-      // Add Google Analytics or other analytics services here
-      if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
-        // Example: Initialize Google Analytics
-        // gtag('config', 'GA_MEASUREMENT_ID')
-      }
-      setIsInitialized(true)
+      // Add analytics initialization code here
+      setIsLoaded(true)
     }
 
     initAnalytics()
   }, [])
 
   const trackEvent = (eventName: string, properties?: Record<string, any>) => {
-    if (!isInitialized) return
+    if (!isLoaded) return
 
     // Track event with analytics service
-    if (typeof window !== 'undefined') {
-      console.log('Analytics Event:', eventName, properties)
-      
-      // Example: Send to Google Analytics
-      // gtag('event', eventName, properties)
+    console.log('Analytics Event:', eventName, properties)
+    
+    // Example: Google Analytics 4
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', eventName, properties)
     }
   }
 
   const trackPageView = (pageName: string) => {
-    if (!isInitialized) return
+    if (!isLoaded) return
 
     // Track page view
-    if (typeof window !== 'undefined') {
-      console.log('Page View:', pageName)
-      
-      // Example: Send to Google Analytics
-      // gtag('config', 'GA_MEASUREMENT_ID', {
-      //   page_title: pageName,
-      //   page_location: window.location.href
-      // })
+    console.log('Analytics Page View:', pageName)
+    
+    // Example: Google Analytics 4
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
+        page_title: pageName,
+        page_location: window.location.href
+      })
     }
   }
 
-  const trackUserAction = (action: string, category: string, label?: string) => {
-    if (!isInitialized) return
+  const trackUser = (userId: string, traits?: Record<string, any>) => {
+    if (!isLoaded) return
 
-    trackEvent('user_action', {
-      action,
-      category,
-      label,
-      timestamp: new Date().toISOString()
-    })
+    // Track user identification
+    console.log('Analytics User:', userId, traits)
+    
+    // Example: Google Analytics 4
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
+        user_id: userId,
+        custom_map: traits
+      })
+    }
   }
 
   const value: AnalyticsContextType = {
     trackEvent,
     trackPageView,
-    trackUserAction
+    trackUser
   }
 
   return (
-    <AnalyticsContext.Provider value={{ track, page, identify }}>
+    <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
+  )
+}
+
+export default AnalyticsProvider

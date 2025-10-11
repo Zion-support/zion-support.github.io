@@ -29,7 +29,7 @@
     price: '$49/month',
     originalPrice: '$79/month',
     features: ['Email management', 'Smart scheduling', 'Task automation', 'Voice commands', 'Calendar sync', 'Reminder system', 'Travel planning', 'Expense tracking'],
-    benefits: ['50% time savings', 'Never miss important tasks', 'Better organization', 'Reduced stress'],
+    benefits: ['50% time savings', 'Never miss import ant tasks', 'Better organization', 'Reduced stress'],
     link: '/ai-personal-assistant',
     popular: true,
     category: 'Productivity',

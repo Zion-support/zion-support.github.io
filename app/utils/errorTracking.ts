@@ -60,7 +60,7 @@ trackError(error: Error),
     }
       if (this.errors.size > this.maxStoredErrors) {
         const oldestError = Array.from(this.errors.values())
-          .sort((a, b) => a.firstSeen - b.firstSeen)[0]
+          .sort((a, b) =&gt; a.firstSeen - b.firstSeen)[0]
         this.errors.delete(oldestError.id)}}
     }
     this.notifyListeners(trackedError)

@@ -26,7 +26,7 @@ const benefits = [
     'Proven track record of success'
   ]
 return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div></div>
       <Helmet>
         </Helmet><title>Page | Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
@@ -38,13 +38,13 @@ return (
       </section>
               </div>
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
       <Helmet>
         <title>Page | Zion Tech Group
         <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
             ))}
-              <p className="text-xl text-gray-300">Section description</p>
+              <p className="text-xl text-gray-300"></p></p>Section description</p>
             </div>
           </div>
         </section>
@@ -53,7 +53,7 @@ return (
             <p></p>
               Contact our experts to discuss your page needs and get a customized solution.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div></div></div>,
               <button>
               </button>
             </div>

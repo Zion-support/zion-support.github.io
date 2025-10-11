@@ -1,9 +1,9 @@
-'use client';
+'use client'
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import {  Helmet  } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, Brain, BarChart, Target, TrendingUp, Zap, Eye, Users } from 'lucide-react';
+import {  CheckCircle, Brain, BarChart, Target, TrendingUp, Zap, Eye, Users   } from 'lucide-react';
 
 const AIAnalyticsPage: React.FC = () => {
   const features = [
@@ -79,23 +79,23 @@ return (
     {title: 'Risk Management',
       description: 'Identify and mitigate business risks proactively',
   return (
-    <>
-      <Helmet>
-        <title>AI Analytics - Zion Tech Group</title>
-      </Helmet>
-      <Navigation />
-            </div>
-          </div>
-        </section>
+    <&gt;
+      <Helmet&gt;
+        <title&gt;AI Analytics - Zion Tech Group</title&gt;
+      </Helmet&gt;
+      <Navigation /&gt;
+            </div&gt;
+          </div&gt;
+        </section&gt;
 
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <h1 className="text-4xl md: text-6xl font-bold text-gray-900 mb-6">,</h1>
+          <div className="max-w-7xl mx-auto"&gt;</div&gt;
+            <div className="text-center"&gt;</div&gt;
+              <h1 className="text-4xl md: text-6xl font-bold text-gray-900 mb-6"&gt;</h1&gt;,</h1&gt;
                 AI Analytics;
   </
-              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">Transform your business with intelligent analytics powered by cutting-edge AI technology.</p>
-              </p>
-              </div>
+              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"&gt;</p&gt;Transform your business with intelligent analytics powered by cutting-edge AI technology.</p&gt;
+              </p&gt;
+              </div&gt;
             ))}
           </div>
 
@@ -110,26 +110,26 @@ return (
   );
 }
         {/* Features Section */}
-        <section className="py-20 px-4 sm: px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">,</h2>
+        <section className="py-20 px-4 sm: px-6 lg:px-8"></section></section>
+          <div className="max-w-7xl mx-auto"></div></div>
+            <div className="text-center mb-16"></div></div>
+              <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4"></h2></h2>,</h2>
                 Powerful AI Analytics Features,
   </
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">Discover how our AI analytics platform can revolutionize your business intelligence.</p>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto"></p></p>Discover how our AI analytics platform can revolutionize your business intelligence.</p>
               </p>
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,</div>
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div></div>,</div>
               {features.map((feature, index) => (
-                <div key={index}className="bg-white p-6 rounded-xl shadow-lg hover: shadow-xl transition-shadow">,</div>
-                  <div className="flex items-center mb-4">
+                <div key={index}className="bg-white p-6 rounded-xl shadow-lg hover: shadow-xl transition-shadow"></div></div>,</div>
+                  <div className="flex items-center mb-4"></div></div>
                     <feature.icon className="h-8 w-8 text-blue-600 mr-3" />
-                    <h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3>
+                    <h3 className="text-xl font-semibold text-gray-900"></h3></h3>{feature.title}</h3>
                   </div>
-                  <p className="text-gray-600 mb-4">{feature.description</p>}</p>
-                  <ul className="space-y-2">
+                  <p className="text-gray-600 mb-4"></p></p>{feature.description</p&gt;}</p>
+                  <ul className="space-y-2"></ul>
                     {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex}className="flex items-center text-sm text-gray-600">
+                      <li key={benefitIndex}className="flex items-center text-sm text-gray-600"></li>
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
                         {benefit} </li>
                     ))}
@@ -139,14 +139,14 @@ return (
             </div>
           </div>
         </section>
-        {/* CTA Section */} <section className="py-20 px-4 sm: px-6 lg:px-8 bg-blue-600">,</section>
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">,</h2>
+        {/* CTA Section */} <section className="py-20 px-4 sm: px-6 lg:px-8 bg-blue-600"></section></section>,</section>
+          <div className="max-w-4xl mx-auto text-center"></div></div>
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6"></h2></h2>,</h2>
               Ready to Transform Your Analytics?
             </h2>
-            <p className="text-xl text-blue-100 mb-8">Join thousands of businesses already using our AI analytics platform.</p>
+            <p className="text-xl text-blue-100 mb-8"></p></p>Join thousands of businesses already using our AI analytics platform.</p>
             </p>
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover: bg-gray-100 transition-colors font-semibold">,</button>
+            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover: bg-gray-100 transition-colors font-semibold"></button>,</button>
               Start Your Free Trial;
   </
           </div>

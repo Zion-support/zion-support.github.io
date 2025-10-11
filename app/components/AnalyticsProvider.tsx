@@ -1,27 +1,13 @@
   if (!context) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider')}return context;
 
-import React, { createContext, useContext, useEffect, ReactNode } from 'react';
-
+import React from 'react';
 interface AnalyticsContextType {
-  trackEvent: (eventName: string, parameters?: Record<string, any>) => void;
-  trackPageView: (pageName: string, pagePath: string) => void;
+  trackEvent: (eventName: string, parameters?: Record<string, any&gt;) =&gt; void;
+  trackPageView: (pageName: string, pagePath: string) =&gt; void;
 }
 'use client'
-import React, { createContext, useContext, useEffect, ReactNode } from 'react'
-interface AnalyticsContextType {
-    trackEvent: (eventName: string, parameters?: Record<string, any>) => void
-  trackPageView: (pageName: string, pagePath: string) => void
-  }
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
-
-const AnalyticsContext = createContext</string><AnalyticsContextType | undefined>(undefined)
-export const useAnalytics = () => {
-}
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
-
-    if (typeof window === 'undefined') return;
-
+import React from 'react';
     }
   }
 
@@ -45,7 +31,6 @@ export const useAnalytics = () => {
       // })
     }
   }
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
 
       // Custom analytics tracking
       if (enableDebug) {
@@ -103,4 +88,3 @@ export default undefined
 }
 
 export default AnalyticsProvider
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe

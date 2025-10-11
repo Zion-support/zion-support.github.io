@@ -5,27 +5,26 @@
       </Helmet>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+      <section className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-20"></section></section>
+        <div className="container mx-auto px-4"></div></div>
+          <div className="max-w-4xl mx-auto text-center"></div></div>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6"></h1></h1>
               Success Stories
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100">
+            <p className="text-xl md:text-2xl mb-8 text-blue-100"></p></p>
               Discover how we've helped businesses transform their operations and achieve remarkable results through innovative technology solutions.
             </p>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Success <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Stories</span>
+      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8"></section></section>
+        <div className="max-w-7xl mx-auto"></div></div>
+          <div className="text-center"></div></div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1></h1>
+              Success <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"></span></span>Stories</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p></p>
               Discover how we've helped businesses transform their operations with AI and IT solutions.
             </p>
           </div>
@@ -37,25 +36,25 @@
           </div>
 
           {/* CTA Section */}
-          <div className="mt-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-12 text-center backdrop-blur-lg border border-white/10">
-            <h2 className="text-4xl font-bold text-white mb-4">
+          <div className="mt-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-12 text-center backdrop-blur-lg border border-white/10"></div></div>
+            <h2 className="text-4xl font-bold text-white mb-4"></h2></h2>
               Ready to Create Your Success Story?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto"></p></p>
               Let's discuss how we can help you achieve similar results for your business.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div></div>
               <a
                 href="/consultation"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
-              >
+              ></a>
                 <span>Start Your Project</span>
                 <ArrowRight className="w-5 h-5" />
               </a>
               <a
                 href="/contact"
                 className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
-              >
+              ></a>
                 Contact Us
               </a>
             </div>

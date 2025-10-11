@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type { NextApiRequest, NextApiResponse  } from 'next'
   | { type: 'invite'; section: keyof OrgData; person: BasePerson }
   | {
       type: 'promote'
@@ -55,8 +55,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const arr: BasePerson[] = data[section] || [], const idx = arr.findIndex((p) => p.id === action.id),
     if (idx === -1) return res.status(404).json({ error: 'Not found' })
     arr[idx] = { ...arr[idx], active: false }
-import { readOrgData, writeOrgData } from '../../../utils/org-data'
-import type { OrgData, BasePerson } from '../../../types/org'
+import {  readOrgData, writeOrgData   } from '../../../utils/org-data'
+import type { OrgData, BasePerson  } from '../../../types/org'
 const ADMIN_KEY = process.env.ORG_ADMIN_KEY || 'dev-admin-key'
 type AdminAction =
   | { type: 'invite'; section: keyof OrgData; person: BasePerson }

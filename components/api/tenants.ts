@@ -1,5 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
-import { authenticateRequest } from '@/utils/auth'
+import type { NextApiRequest, NextApiResponse  } from 'next'
+import {  authenticateRequest   } from '@/utils/auth'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const method = (req && req.method || 'GET').toUpperCase(),
   if (method === 'GET') {
@@ -38,13 +38,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (!result) return res && res.status(404).json({ error: 'Tenant not found' })
     return res && res.status(200).json({ tenant: result })
   }
-import { authenticate_request } from '@/utils / auth'
-import {
+import {  authenticate_request   } from '@/utils / auth'
+import { 
   create_tenant,
   get_tenants,
   rotateTenantApiKey,
   update_tenant,
-} from '@/utils / tenant';import { create_tenant, get_tenants, rotateTenantApiKey, update_tenant } from '@/utils / tenant'
+  } from '@/utils / tenant';import {  create_tenant, get_tenants, rotateTenantApiKey, update_tenant   } from '@/utils / tenant'
 export default /**
  * handler - Function description
  */
@@ -125,7 +125,7 @@ return res.status (405).json ({ error: 'Method not allowed' })
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const method = (req.method || 'GET').toUpperCase(),
   if (method === 'GET') {
-import { createTenant, getTenants, rotateTenantApiKey, updateTenant } from '@/utils/tenant'
+import {  createTenant, getTenants, rotateTenantApiKey, updateTenant   } from '@/utils/tenant'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const method = (req.method || 'GET').toUpperCase()
   if (method === 'GET') {
@@ -164,7 +164,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (!result) return res.status(404).json({ error: 'Tenant not found' })
     return res.status(200).json({ tenant: result })
   }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return res.status(405).json({ error: 'Method not allowed' })
 }

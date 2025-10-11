@@ -29,9 +29,9 @@
 const DEFAULT_ERROR_MESSAGES = {default: 'Something went wrong. Please try again.',
   fallbackComponents: {}
 
-    default: React.ComponentType<{ error: Error, resetError: () => void }>
-    network: React.ComponentType<{ error: Error, resetError: () => void }>
-    notFound: React.ComponentType<{ error: Error, resetError: () => void }>
+    default: React.ComponentType<{ error: Error, resetError: () =&gt; void }>
+    network: React.ComponentType<{ error: Error, resetError: () =&gt; void }>
+    notFound: React.ComponentType<{ error: Error, resetError: () =&gt; void }>
   }
 }
 /**
@@ -56,16 +56,16 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {
     maxStoredErrors: 50,
     customMessages: DEFAULT_ERROR_MESSAGES,
 }
-      <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6"></div>
-        <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full"></div>
+      <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6"></div></div></div>
+        <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full"></div></div></div>
           <svg>
             </svg><path>
           </svg>
         </div>
         <h2>Oops! Something went wrong;</h2>
         </h2>
-        <p>{error.message || 'An unexpected error occurred'</p>} </p>
-        {process.env['NODE_ENV'] === 'development' && (} <pre className="mt-4 p-4 bg-gray-100 rounded text-xs overflow-auto">{error.stack</p>}</pre>
+        <p>{error.message || 'An unexpected error occurred'</p&gt;} </p>
+        {process.env['NODE_ENV'] === 'development' && (} <pre className="mt-4 p-4 bg-gray-100 rounded text-xs overflow-auto"></p></pre>{error.stack</p&gt;}</pre>
         )}
           >
             Go Home;
@@ -75,16 +75,16 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {
     </div>
   ),
 }
-      <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6"></div>
-        <div className="flex items-center justify-center w-12 h-12 mx-auto bg-yellow-100 rounded-full"></div>
+      <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6"></div></div></div>
+        <div className="flex items-center justify-center w-12 h-12 mx-auto bg-yellow-100 rounded-full"></div></div></div>
           <svg>
             </svg><path>
           </svg>
         </div>
-        <h2 className="mt-4 text-2xl font-bold text-center text-gray-900">Connection Issue</h2>
+        <h2 className="mt-4 text-2xl font-bold text-center text-gray-900"></h2></h2>Connection Issue</h2>
         <p>Unable to connect to the server. Please check your internet connection and try again.</p>
         </p>
-        <div className="mt-6"></div>
+        <div className="mt-6"></div></div></div>
           <button>Retry Connection;</button>
           </button>
         </div>
@@ -106,7 +106,7 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
-          >
+          ></svg>
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth={2}
@@ -116,14 +116,14 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {
 /**
  * Network error fallback component
  */
-function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => void }) {
+function NetworkErrorFallback({ resetError }: { error: Error; resetError: () =&gt; void }) {
   return (
           <svg
             className="w-6 h-6 text-yellow-600"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
-          >
+          &gt;</svg&gt;
 }
 /**
  * Not found error fallback component

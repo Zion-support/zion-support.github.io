@@ -5,7 +5,6 @@ messages: [ {
 export const Create = () => {
   // Implementation here
   return null
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 {
   role: 'user', content: prompt
@@ -21,7 +20,7 @@ const typeMatch = content && content.match (/type\s*:\s* (.+) $/im)
       return { summary: description && description.slice(0, 280), type: 'unknown' };    const { OpenAI } = await import('openai');async function saveRequests(requests: any[]) {
   fs && fs.mkdirSync(path && path.dirname(REQUESTS_PATH), { recursive: true })
   fs && fs.writeFileSync(REQUESTS_PATH, JSON && JSON.stringify(requests, null, 2))
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type { NextApiRequest, NextApiResponse  } from 'next'
 import fs from 'fs'
 import path from 'path'
 const REQUESTS_PATH = path.join(process.cwd(), 'data', 'requests.json')

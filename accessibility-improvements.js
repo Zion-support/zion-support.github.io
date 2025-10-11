@@ -1,16 +1,13 @@
-// Accessibility improvements to implement
-// 1. Add ARIA labels to interactive elements
-// Example JSX:
-// <button aria-label="Close dialog">×
-// <input aria-describedby="email-help" type="email" />
-// <div id="email-help">Enter your email address
-// 2. Implement focus management
-const trapFocus = (element) => {
+// Accessibility improvements for the Zion Tech Group website
+
+// 1. Focus management
+export const trapFocus = (element) => {
   const focusableElements = element.querySelectorAll(
     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
   )
   const firstElement = focusableElements[0]
   const lastElement = focusableElements[focusableElements.length - 1]
+
   element.addEventListener('keydown', (e) => {
     if (e.key === 'Tab') {
       if (e.shiftKey) {
@@ -27,129 +24,173 @@ const trapFocus = (element) => {
     }
   })
 }
-// 3. Add live regions for dynamic content
-// Example JSX:
-// <div aria-live="polite" aria-atomic="true" className="sr-only">
-//   {announcement}
-//
-// 4. Ensure proper heading hierarchy
-// Example JSX:
-// <h1>Main Page Title
-// <h2>Section Title
-// <h3>Subsection Title
-// 5. Add skip links
-// Example JSX:
-// <a href="#main-content" className="skip-link">
-//   Skip to main content
-//
-// 6. Use semantic HTML
-// Example JSX:
-// <main>
-//   <nav aria-label="Main navigation">
-//     <ul>
-//       <li><a href="/">Home</a></li>
-//     </ul>
-//   </nav>
-//   <section>
-//     <h2>Section Title</h2>
-//     <article>
-//       <h3>Article Title</h3>
-//     </article>
-//   </section>
-// </main>
 
-// 7. Form accessibility;
-// <form>
-//   <fieldset>
-//     <legend>Contact Information</legend>
-//     <label htmlFor="email">Email Address</label>
-//     <input
-//       id="email" 
-//       type="email" 
-//       required
-//       aria-describedby="email-error"
-//     />
-//     <div id="email-error" role="alert" aria-live="polite">
-//       {emailError}
-//     </div>
-//   </fieldset>
-// </form>
+// 2. Skip links
+export const addSkipLinks = () => {
+  const skipLink = document.createElement('a')
+  skipLink.href = '#main-content'
+  skipLink.textContent = 'Skip to main content'
+  skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-blue-600 text-white p-2 z-50'
+  document.body.insertBefore(skipLink, document.body.firstChild)
+}
 
-// 8. Image accessibility;
-// <img
-//   src="chart.png" 
-//   alt="Sales chart showing 25% increase in Q3 2024"
-//   role="img"
-// />
-// 9. Color contrast considerations;
-// Ensure sufficient contrast ratios: // - Normal text: 4.5:1;
-// - Large text: 3:1;
-// - UI components: 3:1;
-// 10. Keyboard navigation;
-// All interactive elements should be:
-// - Focusable with Tab key;
-// - Activable with Enter/Space;
-// - Have visible focus indicators;
-// - Follow logical tab order;
-// Accessibility improvements
-// Add ARIA labels
-export const addARIALabels = () => {
-  // TODO: Implement ARIA labels
-};
+// 3. ARIA labels
+export const addAriaLabels = () => {
+  const buttons = document.querySelectorAll('button:not([aria-label])')
+  buttons.forEach(button => {
+    if (!button.textContent.trim()) {
+      button.setAttribute('aria-label', 'Button')
+    }
+  })
+}
 
-// Improve keyboard navigation
-export const improveKeyboardNavigation = () => {
-  // TODO: Implement keyboard navigation
-};
+// 4. Color contrast checker
+export const checkColorContrast = (foreground, background) => {
+  const getLuminance = (color) => {
+    const rgb = color.match(/\d+/g).map(Number)
+    const [r, g, b] = rgb.map(c => {
+      c = c / 255
+      return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4)
+    })
+    return 0.2126 * r + 0.7152 * g + 0.0722 * b
+  }
 
-// Add alt text
-export const addAltText = () => {
-  // TODO: Implement alt text
-};
+  const l1 = getLuminance(foreground)
+  const l2 = getLuminance(background)
+  const contrast = (Math.max(l1, l2) + 0.05) / (Math.min(l1, l2) + 0.05)
+  
+  return {
+    ratio: contrast,
+    passes: contrast >= 4.5,
+    level: contrast >= 7 ? 'AAA' : contrast >= 4.5 ? 'AA' : 'Fail'
+  }
+}
 
-// Run accessibility improvements
-export const runAccessibilityImprovements = () => {
-  console.log('Running accessibility improvements...');
-  addARIALabels();
-  improveKeyboardNavigation();
-  addAltText();
-};
-//       <li><a href="/">Home</a>
-//
-//
-//   <section>
-//     <h2>Section Title
-//     <article>
-//       <h3>Article Title
-//
-//
-//
-// 7. Form accessibility
-// Example JSX:
-// <form>
-//   <fieldset>
-//     <legend>Contact Information
-//     <label htmlFor="email">Email:
-//     <input id="email" type="email" required />
-//     <label htmlFor="phone">Phone:
-//     <input id="phone" type="tel" />
-//
-//
-// 8. Color contrast and visual indicators
-// Example CSS:
-// .focus-visible:focus {
-//   outline: 2px solid #0066cc
-//   outline-offset: 2px
-// }
+// 5. Keyboard navigation
+export const enhanceKeyboardNavigation = () => {
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      const modals = document.querySelectorAll('[role="dialog"]')
+      modals.forEach(modal => {
+        if (modal.style.display !== 'none') {
+          modal.style.display = 'none'
+          modal.setAttribute('aria-hidden', 'true')
+        }
+      })
+    }
+  })
+}
 
-// 9. Keyboard navigation
-// Example JSX:
-// <div role="button" tabIndex={0} onKeyDown={handleKeyDown}>
-//   Clickable div
-//
+// 6. Screen reader announcements
+export const announceToScreenReader = (message) => {
+  const announcement = document.createElement('div')
+  announcement.setAttribute('aria-live', 'assertive')
+  announcement.setAttribute('aria-atomic', 'true')
+  announcement.className = 'sr-only'
+  announcement.textContent = message
+  document.body.appendChild(announcement)
+  
+  setTimeout(() => {
+    document.body.removeChild(announcement)
+  }, 1000)
+}
+
+// 7. Form validation
+export const enhanceFormValidation = (form) => {
+  const inputs = form.querySelectorAll('input, textarea, select')
+  
+  inputs.forEach(input => {
+    input.addEventListener('blur', () => {
+      validateField(input)
+    })
+    
+    input.addEventListener('input', () => {
+      clearFieldError(input)
+    })
+  })
+}
+
+const validateField = (field) => {
+  const value = field.value.trim()
+  const type = field.type
+  const required = field.hasAttribute('required')
+  
+  if (required && !value) {
+    showFieldError(field, 'This field is required')
+    return false
+  }
+  
+  if (type === 'email' && value && !isValidEmail(value)) {
+    showFieldError(field, 'Please enter a valid email address')
+    return false
+  }
+  
+  return true
+}
+
+const showFieldError = (field, message) => {
+  clearFieldError(field)
+  
+  const error = document.createElement('div')
+  error.className = 'text-red-500 text-sm mt-1'
+  error.textContent = message
+  error.setAttribute('role', 'alert')
+  error.setAttribute('aria-live', 'polite')
+  
+  field.parentNode.appendChild(error)
+  field.setAttribute('aria-invalid', 'true')
+}
+
+const clearFieldError = (field) => {
+  const error = field.parentNode.querySelector('.text-red-500')
+  if (error) {
+    error.remove()
+  }
+  field.removeAttribute('aria-invalid')
+}
+
+const isValidEmail = (email) => {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+}
+
+// 8. High contrast mode
+export const addHighContrastMode = () => {
+  const toggle = document.createElement('button')
+  toggle.textContent = 'Toggle High Contrast'
+  toggle.className = 'fixed top-4 right-4 bg-gray-800 text-white px-4 py-2 rounded z-50'
+  toggle.addEventListener('click', () => {
+    document.body.classList.toggle('high-contrast')
+  })
+  document.body.appendChild(toggle)
+}
+
+// 9. Reduced motion support
+export const respectReducedMotion = () => {
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)')
+  
+  if (prefersReducedMotion.matches) {
+    document.documentElement.style.setProperty('--animation-duration', '0.01ms')
+    document.documentElement.style.setProperty('--animation-iteration-count', '1')
+  }
+}
+
 // 10. Screen reader announcements
-// Example JSX:
-// <div aria-live="assertive" aria-atomic="true">
-//   {errorMessage}
-//
-export { trapFocus }</div></div></div></div></button></a></a></h1></h2></h2></h3></h3></ul></li></main></section></article></nav>
+export const setupScreenReaderAnnouncements = () => {
+  // Add live region for dynamic content updates
+  const liveRegion = document.createElement('div')
+  liveRegion.setAttribute('aria-live', 'polite')
+  liveRegion.setAttribute('aria-atomic', 'true')
+  liveRegion.className = 'sr-only'
+  liveRegion.id = 'live-region'
+  document.body.appendChild(liveRegion)
+}
+
+// Initialize all accessibility features
+export const initializeAccessibility = () => {
+  addSkipLinks()
+  addAriaLabels()
+  enhanceKeyboardNavigation()
+  addHighContrastMode()
+  respectReducedMotion()
+  setupScreenReaderAnnouncements()
+}

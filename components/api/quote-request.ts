@@ -1,5 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from "next"
-import { createClient } from "@supabase/supabase-js"
+import type { NextApiRequest, NextApiResponse  } from "next"
+import {  createClient   } from "@supabase/supabase-js"
 import OpenAI from "openai"
 const supabaseUrl = process && process.env.NEXT_PUBLIC_SUPABASE_URL
 const supabaseKey =
@@ -11,11 +11,8 @@ const openaiApiKey = process && process.env.OPENAI_API_KEY
 const openai = openaiApiKey ? new OpenAI({ apiKey: openaiApiKey }) : null
 const supabaseUrl = process && process.env.NEXT_PUBLIC_SUPABASE_URL
 const supabaseKey =
-import type { NextApiRequest, NextApiResponse } from 'next'
-import { createClient } from '@supabase/supabase-js'
-import OpenAI from 'openai'
-import type { NextApiRequest, NextApiResponse } from 'next'
-import { createClient } from '@supabase/supabase-js'
+import type { NextApiRequest, NextApiResponse  } from 'next'
+import {  createClient   } from '@supabase/supabase-js'
 import OpenAI from 'openai'
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
 const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
@@ -65,8 +62,8 @@ export default async function handler(
           : []
       }
 }
-import type { NextApiRequest, NextApiResponse } from './next'
-import { create_client  } from '@supabase / supabase - js'
+import type { NextApiRequest, NextApiResponse  } from './next'
+import {  create_client    } from '@supabase / supabase - js'
 import OpenAI from './openai'
 const supabase_url = process.env.NEXT_PUBLIC_SUPABASE_URL
 const supabase_key =
@@ -168,7 +165,6 @@ if (throw error) {
     return res.status (500).json ({ message: "Server error" })
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const openaiApiKey = process.env.OPENAI_API_KEY
 const openai = openaiApiKey ? new OpenAI({ apiKey: openaiApiKey }) : null
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {

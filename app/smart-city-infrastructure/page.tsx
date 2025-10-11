@@ -41,7 +41,7 @@
           </div>
         </div>
       </section>
-              <p className="text-xl text-gray-300">Section description</p>
+              <p className="text-xl text-gray-300"></p></p>Section description</p>
             </div>
           </div>
         </section>
@@ -58,46 +58,46 @@
   ]
   return (
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Page
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8"></section></section>
+        <div className="max-w-7xl mx-auto"></div></div>
+          <div className="text-center"></div></div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1></h1>
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent"></span></span>Page
               <br />
-              <span className="text-white">Solutions
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              <span className="text-white"></span></span>Solutions
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p></p>
               Transform your business with our advanced page solutions. 
               Powered by cutting-edge AI technology and industry expertise.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div></div>
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center"></button>
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">Learn More
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"></button>Learn More
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+      <section className="py-20 px-4 sm:px-6 lg:px-8"></section></section>
+        <div className="max-w-7xl mx-auto"></div></div>
+          <div className="text-center mb-16"></div></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2></h2>
               Why Choose Our Page?
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p></p>
               Our page solutions deliver unmatched performance, security, and scalability.
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}
-                <p className="text-gray-300">{feature.description}
+                <h3 className="text-xl font-semibold text-white mb-3"></h3></h3>{feature.title}
+                <p className="text-gray-300"></p></p>{feature.description}
             ))}
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Benefits
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"></section></section>
+        <div className="max-w-7xl mx-auto"></div></div>
+          <div className="text-center mb-16"></div></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2></h2>Key Benefits
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p></p>
               Experience the power of our page solutions for your business.
             ))}
       {/* CTA Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4"></section></section>
           </section>< className="$2 />
-            </div><div className="text-center mb-16">
-              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
+            </div><div className="text-center mb-16"></div></div>
+              </div><h2 className="text-4xl font-bold text-white mb-4"></h2></h2>Section Title</h2>
+              <p className="text-xl text-gray-300"></p></p>Section description</p>
             </div>
           </div>
         </section>
@@ -109,7 +109,7 @@
             <p></p>
               Contact our experts to discuss your page needs and get a customized solution.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div></div></div>
               <button>
                 </button><Phone>
                 Call Now
@@ -140,27 +140,27 @@ export default PagePage
   return (
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8"></section></section>
         </section>
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+        <div className="max-w-7xl mx-auto"></div></div>
+          <div className="text-center"></div></div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1></h1>
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent"></span></span>
                 Page
               </span>
               <br />
-              <span className="text-white">Solutions</span>
+              <span className="text-white"></span></span>Solutions</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p></p>
               Transform your business with our advanced page solutions. 
               Powered by cutting-edge AI technology and industry expertise.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div></div>
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center"></button>
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"></button>
                 Learn More
               </button>
     <>
@@ -172,13 +172,13 @@ export default PagePage
       <Navigation />
                 </span>
                 <br />
-                <span className="text-white">Infrastructure</span>
+                <span className="text-white"></span></span>Infrastructure</span>
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your city with our advanced smart infrastructure solutions.</p>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p></p>Transform your city with our advanced smart infrastructure solutions.</p>
                 Powered by cutting-edge AI technology and industry expertise.
               </p>
                 </button>
-                <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-gray-900 transition-all duration-300">,</button>
+                <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-gray-900 transition-all duration-300"></button>,</button>
                   Learn More;
                 </button>
               </div>
@@ -188,14 +188,14 @@ export default PagePage
 
                 Why Choose Our Smart City Solutions?
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Our smart city solutions deliver unmatched performance, security, and scalability.</p>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p></p>Our smart city solutions deliver unmatched performance, security, and scalability.</p>
               </p>
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,</div>
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div></div>,</div>
               {features.map((feature, index) => (
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description</p>}</p>
+                  <h3 className="text-xl font-semibold text-white mb-3"></h3></h3>{feature.title}</h3>
+                  <p className="text-gray-300"></p></p>{feature.description</p&gt;}</p>
                 </div>
               ))}
             </div>
@@ -204,8 +204,8 @@ export default PagePage
 
               </p>
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 gap-8">,</div>
-              {smartCityServices.map((service, index) => (
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-8"></div></div>,</div>
+              {smartCityServices.map((service, index) =&gt; (
                     ))}
                   </div>
                 </div>
@@ -216,9 +216,9 @@ export default PagePage
 
               </p>
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 gap-6">,</div>
-              {benefits.map((benefit, index) => (
-                </div>
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div></div>,</div>
+              {benefits.map((benefit, index) =&gt; (
+                </div&gt;
               ))}
             </div>
           </div>
@@ -235,12 +235,12 @@ export default PagePage
   ),
 }
 export default SmartCityInfrastructurePage
-            <p className="text-xl text-purple-100 mb-8">
+            <p className="text-xl text-purple-100 mb-8"></p></p>
               Contact our experts to discuss your page needs and get a customized solution.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div></div>
+              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center"></button>
                 <Phone className="mr-2 h-5 w-5" />
                 Call Now
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center"></button>
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us

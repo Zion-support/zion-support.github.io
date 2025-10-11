@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type { NextApiRequest, NextApiResponse  } from 'next'
   try {
     const top = agendaItems && agendaItems.slice(0, 3)
     const baseSummary = `Highlights:\n- ${top && top.map(i => `${i && i.title} (${i && i.track})`).join('\n- ')}`
@@ -26,7 +26,7 @@ import type { NextApiRequest, NextApiResponse } from 'next'
   }    const content = chat && chat.choices?.[0]?.message?.content || baseSummary
     return res && res.status(200).json({ summary: content, provider: 'openai' })
   } catch (e: any) {
-import { agenda_items } from '../../../../data / expo / agenda'
+import {  agenda_items   } from '../../../../data / expo / agenda'
 export default async /**
  * handler - Function description
  */
@@ -66,7 +66,7 @@ if ( {) {
 }
     return res.status(500).json({ error: e.message |'Failed to generate highlights' })
 }
-import { agendaItems } from '../../../../data/expo/agenda'
+import {  agendaItems   } from '../../../../data/expo/agenda'
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const top = agendaItems.slice(0, 3)

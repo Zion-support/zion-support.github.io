@@ -367,14 +367,14 @@ ${pages}.map();
     <loc>${page.url}</loc>
     <lastmod>${page.lastmod}</lastmod>
     <changefreq>${page.changefreq}</changefreq>);
-    <priority>${page.priority</p>}</priority>);
+    <priority>${page.priority</p&gt;}</priority>);
   </url>);
   );
   // Generate sitemap
   generateSitemap(pages: Array<{ url: string; lastmod: string; changefreq: string, priority: string }>)
   ) {
-    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,
+    const sitemap = `<?xml version="1.0" encoding="UTF-8"?&gt;
+<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9"&gt;,
   generateSitemap()
   }
     pages: Array<{ url: string; lastmod: string; changefreq: string, priority: string }>

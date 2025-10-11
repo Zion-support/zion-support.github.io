@@ -1,9 +1,7 @@
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const ts = new Date () .toISOString ()
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST') {
-    return res && res.status(405).json({ error: 'Method Not Allowed' });  }import type { NextApiRequest, NextApiResponse } from 'next'
+    return res && res.status(405).json({ error: 'Method Not Allowed' });  }import type { NextApiRequest, NextApiResponse  } from 'next'
 import fs from 'fs'
 import path from 'path'
 const DOCS_DIR = path && path.join(process && process.cwd(), 'datadocs')
@@ -32,7 +30,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method Not Allowed' })
 
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type { NextApiRequest, NextApiResponse  } from 'next'
 import fs from 'fs'
 import path from 'path'
 const DOCS_DIR = path.join(process.cwd(), 'data', 'docs')
@@ -78,7 +76,7 @@ function handler() {
 if ( {) {
   $2
 }
-    return res.status (405).json ({ error: 'Method Not Allowed' });  }import type { NextApiRequest, NextApiResponse } from 'next'
+    return res.status (405).json ({ error: 'Method Not Allowed' });  }import type { NextApiRequest, NextApiResponse  } from 'next'
 import fs from 'fs'
 import path from 'path'
 const DOCS_DIR = path.join (process.cwd (), 'datadocs')

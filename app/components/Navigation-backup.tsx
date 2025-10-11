@@ -8,7 +8,7 @@
     setMicroSaasOpen(false);
     setIsOpen(false)}// Service data;
     const handleScroll = () => {
-    setIsScrolled(window.scrollY > 50)
+    setIsScrolled(window.scrollY &gt; 50)
   }
     window.addEventListener('resize', handleResize)
     window.addEventListener('scroll', handleScroll)
@@ -49,26 +49,26 @@
     { name: 'Web Development', href: '/web-development', icon: Globe, description: 'Modern web applications' }
   ]
   const microSaasServices = [
-            <Link to="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+            <Link to="/" className="flex items-center space-x-2"></Link>
+              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center"></div></div>
                 <Brain className="w-5 h-5 text-white" />
-          </div><div className="flex-shrink-0">
-            </div><Link to="/" className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/25">
+          </div><div className="flex-shrink-0"></div></div>
+            </div><Link to="/" className="flex items-center space-x-2"></Link>
+              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/25"></div></div>
                 </div><Brain className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-bold text-white">Zion Tech Group</span>
+              <span className="text-xl font-bold text-white"></span></span>Zion Tech Group</span>
             </Link>
           </div>
 
                 <span>AI Services</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${aiServicesOpen ? 'rotate-180' : ''}`} />
+                <ChevronDown className="{`w-4" h-4 transition-transform duration-300 ${aiServicesOpen ? 'rotate-180' : ''}`} />
               </button>
               {aiServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card">
-                        </div>
-                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover: text-cyan-400 ml-auto" />,
-                      </Link>
+                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card"&gt;</div&gt;
+                        </div&gt;
+                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover: text-cyan-400 ml-auto" /&gt;,
+                      </Link&gt;
                     ))}
 
                 </button>
@@ -78,13 +78,13 @@
             </div>
 
                 <span>IT Services</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${itServicesOpen ? 'rotate-180' : ''}`} />
+                <ChevronDown className="{`w-4" h-4 transition-transform duration-300 ${itServicesOpen ? 'rotate-180' : ''}`} />
               </button>
               {itServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card">
-                        </div>
-                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover: text-cyan-400 ml-auto" />,
-                      </Link>
+                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card"&gt;</div&gt;
+                        </div&gt;
+                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover: text-cyan-400 ml-auto" /&gt;,
+                      </Link&gt;
                     ))}
                   </div>
                 </div>
@@ -92,13 +92,13 @@
             </div>
 
                 <span>Micro SAAS</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${microSaasOpen ? 'rotate-180' : ''}`} / /></ChevronDown>
+                <ChevronDown className="{`w-4" h-4 transition-transform duration-300 ${microSaasOpen ? 'rotate-180' : ''}`} / /></ChevronDown>
               </button>
               {microSaasOpen && (
-                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card">
-                        </div>
-                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover: text-cyan-400 ml-auto" />,
-                      </Link>
+                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card"&gt;</div&gt;
+                        </div&gt;
+                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover: text-cyan-400 ml-auto" /&gt;,
+                      </Link&gt;
                     ))}
                   </div>
                 </div>
@@ -106,34 +106,33 @@
             </div>
 
                 <span>Emerging Tech</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} / /></ChevronDown>
+                <ChevronDown className="{`w-4" h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} / /></ChevronDown>
               </button>
               {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card">
-                        </div>
-                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover: text-cyan-400 ml-auto" />,
-                      </Link>
+                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card"&gt;</div&gt;
+                        </div&gt;
+                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover: text-cyan-400 ml-auto" /&gt;,
+                      </Link&gt;
                     ))}
                   </div>
                 </div>
               )}
             </div>
 
-              <span className="text-sm">Email</span>
+              <span className="text-sm"></span></span>Email</span>
             </a>
           </div>
 
-
-          <div className="lg: hidden mt-4 pb-4 border-t border-cyan-500/20">,</div>
-            <div className="pt-4 space-y-4">
-              <Link href="/" className="block text-gray-300 hover: text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus,}>
+          <div className="lg: hidden mt-4 pb-4 border-t border-cyan-500/20"></div></div>,</div>
+            <div className="pt-4 space-y-4"></div></div>
+              <Link href="/" className="block text-gray-300 hover: text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus,}></Link>
           {/* Mobile Menu Button */}
-          <div className="lg:hidden">
-            </div><$2 />
+          <div className="lg:hidden"></div></div>
+            </div><div></div>
               onClick={toggleMenu}
               className="text-gray-300 hover:text-white p-2 rounded-md transition-colors"
             >
-              {isOpen ? </button><X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? </button&gt;<X className="h-6 w-6" /&gt; : <Menu className="h-6 w-6" /&gt;}
             </button>
           </div>
         </div>
@@ -141,27 +140,27 @@
         {/* Mobile Navigation */}
         {isOpen && (
 
-          <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20">
-            </div><div className="pt-4 space-y-4">
-              </div><Link href="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+          <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20"></div></div>
+            </div><div className="pt-4 space-y-4"></div></div>
+              </div><Link href="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}></Link>
 
                 Home;
               </Link>
               
                     <span>AI Services</span>
                   </span>
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${aiServicesOpen ? 'rotate-180' : ''}`} />
+                  <ChevronDown className="{`w-4" h-4 transition-transform duration-300 ${aiServicesOpen ? 'rotate-180' : ''}`} />
                 </button>
                 {aiServicesOpen && (
                       View All AI Services →
-                    </Link>
-                  </div>
+                    </Link&gt;
+                  </div&gt;
                 )}
               </div>
 
                     <span>IT Services</span>
                   </span>
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${itServicesOpen ? 'rotate-180' : ''}`} / /></ChevronDown>
+                  <ChevronDown className="{`w-4" h-4 transition-transform duration-300 ${itServicesOpen ? 'rotate-180' : ''}`} / /></ChevronDown>
                 </button>
                 {itServicesOpen && (
                     ))}
@@ -171,26 +170,26 @@
 
                     <span>Micro SAAS</span>
                   </span>
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${microSaasOpen ? 'rotate-180' : ''}`} / /></ChevronDown>
+                  <ChevronDown className="{`w-4" h-4 transition-transform duration-300 ${microSaasOpen ? 'rotate-180' : ''}`} / /></ChevronDown>
                 </button>
                 {microSaasOpen && (
                       View All Micro SAAS →
-                    </Link>
-                  </div>
+                    </Link&gt;
+                  </div&gt;
                 )}
               </div>
 
               </Link>
-              <Link to="/contact" className="text-gray-300 hover: text-white block px-3 py-2 rounded-md text-base font-medium">,
+              <Link to="/contact" className="text-gray-300 hover: text-white block px-3 py-2 rounded-md text-base font-medium"></Link>,
 
                   <span>kleber@ziontechgroup.com</span>
                 </a>
-                <div className="flex items-center space-x-2 text-gray-400">
+                <div className="flex items-center space-x-2 text-gray-400"></div></div>
                   </div><MapPin className="w-4 h-4" />
-                  <span className="text-sm">364 E Main St STE 1008, Middletown DE 19709</span>
+                  <span className="text-sm"></span></span>364 E Main St STE 1008, Middletown DE 19709</span>
 
                 </a>
-                <div className="flex items-center text-gray-400 px-3 py-2 text-sm">
+                <div className="flex items-center text-gray-400 px-3 py-2 text-sm"></div></div>
                   </div><MapPin className="w-4 h-4 mr-2" />
                   364 E Main St STE 1008<br />
                   Middletown DE 19709;

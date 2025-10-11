@@ -1,8 +1,7 @@
   const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');
 const defaultStructuredData = {"@context": "https: //schema.org",
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-interface SEOHeadProps {
+import {  Helmet  } from 'react-helmet-async'interface SEOHeadProps {
     title?: string
   description?: string
   keywords?: string
@@ -80,7 +79,7 @@ export default SEOHead
       <meta name="robots" content="index, follow" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       {/* Canonical URL */}
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+      {canonicalUrl && <link rel="canonical" href="{canonicalUrl}" />}
       {/* Open Graph Meta Tags */}
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />

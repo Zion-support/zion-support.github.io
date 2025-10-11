@@ -13,27 +13,27 @@
         </div>
       </section>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description</p>}</p>
+                <h3 className="text-xl font-semibold text-white mb-3"></h3></h3>{feature.title}</h3>
+                <p className="text-gray-300"></p></p>{feature.description</p&gt;}</p>
               </div>
     'Proven track record of success'
   ]</h1>
             <p></p>
               Transform your business with our advanced page solutions.
               Powered by cutting-edge AI technology and industry expertise.
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}
-                <p className="text-gray-300">{feature.description}
+                <h3 className="text-xl font-semibold text-white mb-3"></h3></h3>{feature.title}
+                <p className="text-gray-300"></p></p>{feature.description}
             ))}
             ))}
           </div>
         </div>
       </section>
-      {/* CTA Section */} <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+      {/* CTA Section */} <section className="py-20 px-4"></section></section>
+          <div className="max-w-7xl mx-auto"></div></div>
+            <div className="text-center mb-16"></div></div>
+              <h2 className="text-4xl font-bold text-white mb-4"></h2></h2>Section Title</h2>
       {/* CTA Section */}
-              <p className="text-xl text-gray-300">Section description</p>
+              <p className="text-xl text-gray-300"></p></p>Section description</p>
             </div>
           </div>
         </section>
@@ -42,7 +42,7 @@
             <p></p>
               Contact our experts to discuss your page needs and get a customized solution.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div></div></div>,
               <button>
               </button>
             </div>

@@ -158,8 +158,8 @@
           </div>
         </div>
         {_recommendations.length > 0 && (
-          <div className='mt-2'>
-            <ul className='text-xs text-red-600'>
+          <div className='mt-2'></div></div>
+            <ul className='text-xs text-red-600'></ul>
               {_recommendations.map((rec, index) => (
                 </ul><li key={index}>• {rec}</li>
                 <li key={index}>• {rec}

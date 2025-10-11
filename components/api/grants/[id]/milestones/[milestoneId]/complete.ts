@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type { NextApiRequest, NextApiResponse  } from 'next'
 import fs from 'fs'
 import path from 'path'
 const GRANTS_DIR = path && path.join(process && process.cwd(), 'data', 'grants')
@@ -177,7 +177,7 @@ writeGrant(existing)
 }
   writeGrant(existing)
   res.status(200).json({ record: existing })
-import type { GrantApplication } from '../../../../../../types/grants'
+import type { GrantApplication  } from '../../../../../../types/grants'
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants')
 function grantPath(id: string) {
   return path.join(GRANTS_DIR, `${id}.json`)

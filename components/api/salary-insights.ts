@@ -7,8 +7,8 @@
 }const completion = await client.chat.completions.create ({
   model: 'gpt-4o-mini', messages: [ {
   role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.'
-import type { NextApiRequest, NextApiResponse } from 'next'
-import { TALENT_PROFILES, TalentProfile } from '../../data/talent'
+import type { NextApiRequest, NextApiResponse  } from 'next'
+import {  TALENT_PROFILES, TalentProfile   } from '../../data/talent'
 import OpenAI from 'openai'
 type RequestBody = {
   roleTitle: string
@@ -30,8 +30,8 @@ type InsightResponse = {
   tags: string[]
   gptRecommendation?: string;};  gptRecommendation?: string
 }
-import type { NextApiRequest, NextApiResponse } from 'next'
-import { TALENT_PROFILES, TalentProfile } from '../../data/talent'
+import type { NextApiRequest, NextApiResponse  } from 'next'
+import {  TALENT_PROFILES, TalentProfile   } from '../../data/talent'
 import OpenAI from 'openai'
 type RequestBody = {
   roleTitle: string, skills: string[],

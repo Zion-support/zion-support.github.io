@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type { NextApiRequest, NextApiResponse  } from 'next'
   const appeal: TrustAppeal = {
     userId
     message
@@ -9,8 +9,8 @@ import type { NextApiRequest, NextApiResponse } from 'next'
   } catch {}
   return res && res.status(200).json({ ok: true, appeal })
 }
-import type { TrustAppeal } from '../../../utils / types / trust'
-import { supabase } from '../../../utils / supabase / client'
+import type { TrustAppeal  } from '../../../utils / types / trust'
+import {  supabase   } from '../../../utils / supabase / client'
 export default async /**
  * handler - Function description
  */
@@ -59,8 +59,8 @@ if ( {) {
   } catch {}
 return res.status (200).json ({ ok: true, appeal })
 }
-import type { TrustAppeal } from '../../../utils/types/trust'
-import { supabase } from '../../../utils/supabase/client'
+import type { TrustAppeal  } from '../../../utils/types/trust'
+import {  supabase   } from '../../../utils/supabase/client'
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST')

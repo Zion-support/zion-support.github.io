@@ -21,151 +21,151 @@
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
 
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)</div>
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>)</div>
       <Helmet />
     'Proven track record of success';
   ];
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
       <Helmet>
         <title>SEOEnhancer | Zion Tech Group</title>
         <meta name="description" content="Professional SEOEnhancer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="SEOEnhancer, AI solutions, IT services, Zion Tech Group, seoenhancer" />
       </Helmet>
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">,</h1>
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">SEOEnhancer;</span>
+        <div className="max-w-7xl mx-auto"></div></div>
+          <div className="text-center"></div></div>
+            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6"></h1></h1>,</h1>
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent"></span></span>SEOEnhancer;</span>
               </span>
               <br />
-              <span className="text-white">Solutions</span>
+              <span className="text-white"></span></span>Solutions</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your business with our advanced seoenhancer solutions.</p>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p></p>Transform your business with our advanced seoenhancer solutions.</p>
               Powered by cutting-edge AI technology and industry expertise.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">,</div>
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover: from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">,</button>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div></div>,</div>
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover: from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center"></button>,</button>
                 Get Started;
                 <ArrowRight className="ml-2 h-5 w-5" />
     'Proven track record of success'
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
       </div><Helmet>
         </Helmet><title>SEOEnhancer | Zion Tech Group</title>
         <meta name="description" content="Professional SEOEnhancer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="SEOEnhancer, AI solutions, IT services, Zion Tech Group, seoenhancer" />
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm: px-6 lg:px-8">
+      <section className="relative py-20 px-4 sm: px-6 lg:px-8"></section></section>
         </section>< className="$2 />
-          </div><div className="text-center">
-            </div><h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              </h1><span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+          </div><div className="text-center"></div></div>
+            </div><h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1></h1>
+              </h1><span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent"></span></span>
                 SEOEnhancer
               </span>
               <br />
-              <span className="text-white">Solutions
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              <span className="text-white"></span></span>Solutions
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p></p>
               Transform your business with our advanced seoenhancer solutions. 
               Powered by cutting-edge AI technology and industry expertise.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              </div><button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div></div>
+              </div><button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center"></button>
                 Get Started
                 </button><ArrowRight className="ml-2 h-5 w-5" />
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-gray-900 transition-all duration-300">,</button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-gray-900 transition-all duration-300"></button>,</button>
                 Learn More;
               </button>
             </div>
           </div>
         </div>
       </section>
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,</h2>
+        <div className="max-w-7xl mx-auto"></div></div>
+          <div className="text-center mb-16"></div></div>
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4"></h2></h2>,</h2>
               Why Choose Our SEOEnhancer?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Our seoenhancer solutions deliver unmatched performance, security, and scalability.</p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p></p>Our seoenhancer solutions deliver unmatched performance, security, and scalability.</p>
             </p>
           </div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,</div>
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div></div>,</div>
             {features.map((feature, index) => (
-              <div key={index}className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300">,</div>
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+              <div key={index}className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300"></div></div>,</div>
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div></div>
                   <feature.icon className="h-6 w-6 text-white" />
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8"></section></section>
         </section>< className="$2 />
-          </div><div className="text-center mb-16">
-            </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          </div><div className="text-center mb-16"></div></div>
+            </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2></h2>
               Why Choose Our SEOEnhancer?
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p></p>
               Our seoenhancer solutions deliver unmatched performance, security, and scalability.
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div></div>
             {features.map((feature, index) => (
-              </div><div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                </div><div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+              </div><div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div></div>
+                </div><div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div></div>
                   </div><feature.icon className="h-6 w-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description</p>}</p>
+                <h3 className="text-xl font-semibold text-white mb-3"></h3></h3>{feature.title}</h3>
+                <p className="text-gray-300"></p></p>{feature.description</p&gt;}</p>
               </div>
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div></div>
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div></div>
                   <feature.icon className="h-6 w-6 text-white" />
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}
-                <p className="text-gray-300">{feature.description}
+                <h3 className="text-xl font-semibold text-white mb-3"></h3></h3>{feature.title}
+                <p className="text-gray-300"></p></p>{feature.description}
             ))}
             </p>
           </div>
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-6">,</div>
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div></div>,</div>
             {benefits.map((benefit, index) => (
               </div>
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"></section></section>
         </section>
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Benefits
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+        <div className="max-w-7xl mx-auto"></div></div>
+          <div className="text-center mb-16"></div></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2></h2>Key Benefits
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p></p>
               Experience the power of our seoenhancer solutions for your business.
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div></div>
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
+              <div key={index} className="flex items-start space-x-3"></div></div>
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}
+                <p className="text-gray-300 text-lg"></p></p>{benefit}
             ))}
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md: p-12">,</div>
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,</h2>
+        <div className="max-w-4xl mx-auto text-center"></div></div>
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md: p-12"></div></div>,</div>
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4"></h2></h2>,</h2>
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-purple-100 mb-8">Contact our experts to discuss your seoenhancer needs and get a customized solution.</p>
+            <p className="text-xl text-purple-100 mb-8"></p></p>Contact our experts to discuss your seoenhancer needs and get a customized solution.</p>
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">,</div>
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-all duration-300 flex items-center justify-center">,</button>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div></div>,</div>
+              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-all duration-300 flex items-center justify-center"></button>,</button>
                 <Phone className="mr-2 h-5 w-5" />
                 Call Now;
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">,</button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center"></button>,</button>
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us;
       {/* CTA Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8"></section></section>
         </section>< className="$2 />
-          </div><div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          </div><div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div></div>
+            </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2></h2>
               Ready to Get Started?
             </h2>
             <p className="text-xl text-purple-100 mb-8" /></p>
               Contact our experts to discuss your seoenhancer needs and get a customized solution.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              </div><button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div></div>
+              </div><button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center"></button>
                 </button><Phone className="mr-2 h-5 w-5" />
                 Call Now
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center"></button>
                 </button><Mail className="mr-2 h-5 w-5" />
                 Email Us
               </button>
@@ -177,12 +177,12 @@
   )
 }
 export default SEOEnhancer
-            <p className="text-xl text-purple-100 mb-8">
+            <p className="text-xl text-purple-100 mb-8"></p></p>
               Contact our experts to discuss your seoenhancer needs and get a customized solution.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div></div>
+              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center"></button>
                 <Phone className="mr-2 h-5 w-5" />
                 Call Now
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center"></button>
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us

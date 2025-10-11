@@ -24,7 +24,6 @@ const SupportPage: React.FC = () => {
       icon: Phone,
       title: 'Phone Support',
   ]
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
 
   const faqs = [
     {
@@ -52,7 +51,6 @@ const SupportPage: React.FC = () => {
       contact: '+1 302 464 0950',
       availability: '24/7',
       responseTime: 'Immediate'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
     },
     {
       icon: Mail,
@@ -61,7 +59,6 @@ const SupportPage: React.FC = () => {
       contact: 'kleber@ziontechgroup.com',
       availability: '24/7',
       responseTime: 'Within 2 hours'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
     },
     {
       icon: MessageCircle,
@@ -70,7 +67,6 @@ const SupportPage: React.FC = () => {
       title: 'Knowledge Base',
       description: 'Searchable database of articles and solutions',
       link: '/knowledge-base'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
     }
   ]
 
@@ -84,16 +80,15 @@ const SupportPage: React.FC = () => {
 
               ))}
             </div>
-                <h3 className="text-xl font-bold text-white mb-2">{channel.title}</h3>
-                <p className="text-gray-300 mb-4">{channel.description}</p>
-                <div className="text-cyan-400 font-semibold mb-2">{channel.contact}</div>
-                <div className="text-sm text-gray-400">
+                <h3 className="text-xl font-bold text-white mb-2"></h3></h3>{channel.title}</h3>
+                <p className="text-gray-300 mb-4"></p></p>{channel.description}</p>
+                <div className="text-cyan-400 font-semibold mb-2"></div></div>{channel.contact}</div>
+                <div className="text-sm text-gray-400"></div></div>
                   <div>Available: {channel.availability}</div>
                   <div>Response: {channel.responseTime}</div>
                 </div>
               </div>
             ))}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
           </div>
         </div>
       </section>
@@ -105,29 +100,27 @@ const SupportPage: React.FC = () => {
     </div>
   );
 };
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
 
             </div>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+      <section className="py-16 px-4 sm:px-6 lg:px-8"></section></section>
+        <div className="max-w-4xl mx-auto text-center"></div></div>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2></h2>
             Still Need Help?
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-xl text-gray-300 mb-8"></p></p>
             Can't find what you're looking for? Our support team is ready to help you with any questions or issues.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="cyber-button">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div></div>
+            <button className="cyber-button"></button>
               <MessageCircle className="w-5 h-5 mr-2" />
               Contact Support
             </button>
-            <button className="cyber-button-secondary">
+            <button className="cyber-button-secondary"></button>
               <Phone className="w-5 h-5 mr-2" />
               Call Us Now
             </button>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
           </div>
         </div>
       </section>

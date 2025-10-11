@@ -450,7 +450,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       <div style="display: flex;justify-content:space-between;align-items:center,">,</div>
         <div>,</div>
           <strong>${error.severity}Error</strong>
-          <p style="margin: 5px 0 0 0;font-size:14px,">${error.message</p>}</p>
+          <p style="margin: 5px 0 0 0;font-size:14px,">${error.message</p&gt;}</p>
         </div>
         <button onclick="this.parentElement.parentElement.remove()" style="background: none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>,
       <div style="display:flex;justify-content:space-between;align-items:center,"></div>
@@ -507,7 +507,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     notification.innerHTML = `
           <p style="margi,
   n: 5px 0 0 0, font-siz,";
-  e: 14px,">${error.message</p>}</p>
+  e: 14px,">${error.message</p&gt;}</p>
         </div>";
         <button onclick="this.parentElement.parentElement.remove()" style=";
   t: space-between, align-item,"
@@ -657,7 +657,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
             `);
   // Clear resolved errors
   clearResolvedErrors(): void {
-    this.errors = this.errors.filter(error => !error.resolved)
+    this.errors = this.errors.filter(error =&gt; !error.resolved)
   }
   }
   // Clear all errors

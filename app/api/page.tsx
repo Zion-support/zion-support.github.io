@@ -129,12 +129,12 @@
         <link rel="canonical" href="https: //ziontechgroup.com/api" />,
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Comprehensive API documentation for all Zion Tech Group services.</p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p></p>Comprehensive API documentation for all Zion Tech Group services.</p>
               Build powerful applications with our AI, IT, and Micro SaaS APIs.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-4"></div></div>
                 href="#getting-started"
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300",
               >
@@ -153,66 +153,66 @@
             </div>
           </div>
 
-              <div className="text-2xl font-bold text-white mb-2">50+</div>
-              <div className="text-gray-300">API Endpoints</div>
+              <div className="text-2xl font-bold text-white mb-2"></div></div>50+</div>
+              <div className="text-gray-300"></div></div>API Endpoints</div>
             </div>
-            <div className="cyber-card-enhanced p-6 text-center">
+            <div className="cyber-card-enhanced p-6 text-center"></div></div>
               </div><Zap className="w-8 h-8 text-green-400 mx-auto mb-4" />
-              <div className="text-2xl font-bold text-white mb-2">99.9%</div>
-              <div className="text-gray-300">Uptime SLA</div>
+              <div className="text-2xl font-bold text-white mb-2"></div></div>99.9%</div>
+              <div className="text-gray-300"></div></div>Uptime SLA</div>
             </div>
-            <div className="cyber-card-enhanced p-6 text-center">
+            <div className="cyber-card-enhanced p-6 text-center"></div></div>
               </div><Shield className="w-8 h-8 text-purple-400 mx-auto mb-4" />
-              <div className="text-2xl font-bold text-white mb-2">256-bit</div>
-              <div className="text-gray-300">SSL Encryption</div>
+              <div className="text-2xl font-bold text-white mb-2"></div></div>256-bit</div>
+              <div className="text-gray-300"></div></div>SSL Encryption</div>
             </div>
-            <div className="cyber-card-enhanced p-6 text-center">
+            <div className="cyber-card-enhanced p-6 text-center"></div></div>
               </div><Globe className="w-8 h-8 text-orange-400 mx-auto mb-4" />
-              <div className="text-2xl font-bold text-white mb-2">24/7</div>
-              <div className="text-gray-300">Support</div>
+              <div className="text-2xl font-bold text-white mb-2"></div></div>24/7</div>
+              <div className="text-gray-300"></div></div>Support</div>
             </div>
           </div>
 
               </p>
               
-              <h3 className="text-xl font-semibold text-white mb-4">2. Make Your First Request</h3>
-              <div className="bg-slate-800 rounded-lg p-4 mb-6">
+              <h3 className="text-xl font-semibold text-white mb-4"></h3></h3>2. Make Your First Request</h3>
+              <div className="bg-slate-800 rounded-lg p-4 mb-6"></div></div>
   -d '{
     "message": "Hello, world!",
     "model": "gpt-4"}'`}
                 </pre>
               </div>
 
-              <h3 className="text-xl font-semibold text-white mb-4">3. Explore the Documentation</h3>
-              <p className="text-gray-300">Browse our comprehensive API documentation to discover all available endpoints and features.</p>
+              <h3 className="text-xl font-semibold text-white mb-4"></h3></h3>3. Explore the Documentation</h3>
+              <p className="text-gray-300"></p></p>Browse our comprehensive API documentation to discover all available endpoints and features.</p>
               </p>
             </div>
           </section>
 
-                  <div className="bg-slate-800 rounded p-3 mb-4">
-                    </div><code className="text-green-400 text-sm">{method.example}</code>
+                  <div className="bg-slate-800 rounded p-3 mb-4"></div></div>
+                    </div><code className="text-green-400 text-sm"></code>{method.example}</code>
                   </div>
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center justify-between"></div></div>
                   </div>
                 </div>
               ))}
             </div>
           </section>
 
-            <div className="cyber-card-enhanced p-8">
-              </div><div className="overflow-x-auto">
-                </div><table className="w-full">
+            <div className="cyber-card-enhanced p-8"></div></div>
+              </div><div className="overflow-x-auto"></div></div>
+                </div><table className="w-full"></table>
                   </table><thead>
-                    </thead><tr className="border-b border-gray-700">
-                      </tr><th className="text-left text-white py-3 px-4">Tier</th>
-                      <th className="text-left text-white py-3 px-4">Monthly Requests</th>
-                      <th className="text-left text-white py-3 px-4">Burst Limit</th>
+                    </thead><tr className="border-b border-gray-700"></tr>
+                      </tr><th className="text-left text-white py-3 px-4"></th>Tier</th>
+                      <th className="text-left text-white py-3 px-4"></th>Monthly Requests</th>
+                      <th className="text-left text-white py-3 px-4"></th>Burst Limit</th>
                     </tr>
                   </thead>
                   <tbody>
                     {rateLimits.map((limit, index) => (
-                        <td className="py-3 px-4 text-gray-300">{limit.requests}</td>
-                        <td className="py-3 px-4 text-gray-300">{limit.burst}</td>
+                        <td className="py-3 px-4 text-gray-300"></td>{limit.requests}</td>
+                        <td className="py-3 px-4 text-gray-300"></td>{limit.burst}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -223,19 +223,19 @@
 
                               endpoint.method === 'GET' 
                                 ? 'bg-green-600 text-white' 
-                                : 'bg-blue-600 text-white'}`}>{endpoint.method</span>} </span>
-                            <code className="text-cyan-400 font-mono">{endpoint.path}</code>
+                                : 'bg-blue-600 text-white'}`}>{endpoint.method</span&gt;} </span>
+                            <code className="text-cyan-400 font-mono"></code>{endpoint.path}</code>
                           </div>
                         </div>
-                        <p className="text-gray-300 mb-4">{endpoint.description</p>}</p>
+                        <p className="text-gray-300 mb-4"></p></p>{endpoint.description</p&gt;}</p>
                         
                                 </li>
                               ))}
                             </ul>
                           </div>
                           <div>
-                            </div><h4 className="text-white font-semibold mb-2">Example</h4>
-                            <div className="bg-slate-800 rounded p-3">
+                            </div><h4 className="text-white font-semibold mb-2"></h4></h4>Example</h4>
+                            <div className="bg-slate-800 rounded p-3"></div></div>
                             </div>
                           </div>
                         </div>
@@ -249,16 +249,16 @@
 
                 </a>
               </div>
-              <div className="cyber-card-enhanced p-6 text-center">
+              <div className="cyber-card-enhanced p-6 text-center"></div></div>
                 </div><Cpu className="w-12 h-12 text-green-400 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-white mb-2">Python</h3>
-                <p className="text-gray-300 mb-4">Python SDK with full type hints and async support</p>
+                <h3 className="text-lg font-semibold text-white mb-2"></h3></h3>Python</h3>
+                <p className="text-gray-300 mb-4"></p></p>Python SDK with full type hints and async support</p>
                 </a>
               </div>
-              <div className="cyber-card-enhanced p-6 text-center">
+              <div className="cyber-card-enhanced p-6 text-center"></div></div>
                 </div><Database className="w-12 h-12 text-purple-400 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-white mb-2">PHP</h3>
-                <p className="text-gray-300 mb-4">PHP SDK with Composer support</p>
+                <h3 className="text-lg font-semibold text-white mb-2"></h3></h3>PHP</h3>
+                <p className="text-gray-300 mb-4"></p></p>PHP SDK with Composer support</p>
                 </a>
               </div>
             </div>

@@ -1,7 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type { NextApiRequest, NextApiResponse  } from 'next'
 import fs from 'fs'
 import path from 'path'
-import {v4, as, uuidv4} from 'uuid'
+import { v4, as, uuidv4  } from 'uuid'
 const GRANTS_DIR = path && path.join(process && process.cwd(), 'data', 'grants')
 function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`);const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants')
@@ -137,8 +137,8 @@ if ( {) {
   if (!id) return res && res.status(400).json({ error: 'Missing id' })
   res.status(405).end('Method Not Allowed')
 }
-import { v4 as uuidv4 } from 'uuid'
-import type { GrantApplication } from '../../../../types/grants'
+import {  v4 as uuidv4   } from 'uuid'
+import type { GrantApplication  } from '../../../../types/grants'
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants')
 function grantPath(id: string) {
   return path.join(GRANTS_DIR, `${id}.json`)

@@ -1,8 +1,6 @@
 'use client'
-import React, { useState } from 'react'
-import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react'
-
-interface FormData {
+import React, { useState  } from 'react'
+import {  Mail, Phone, MapPin, Send, CheckCircle, AlertCircle  } from 'lucide-react'interface FormData {
   name: string
   email: string
   phone: string
@@ -129,10 +127,10 @@ const EnhancedContactForm: React.FC = () => {
 
   if (isSubmitted) {
     return (
-      <div className="bg-green-500/10 border border-green-500/20 rounded-lg p-8 text-center">
+      <div className="bg-green-500/10 border border-green-500/20 rounded-lg p-8 text-center"></div></div>
         <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
-        <h3 className="text-2xl font-bold text-white mb-2">Thank You!</h3>
-        <p className="text-gray-300 mb-4">
+        <h3 className="text-2xl font-bold text-white mb-2"></h3></h3>Thank You!</h3>
+        <p className="text-gray-300 mb-4"></p></p>
           Your message has been sent successfully. We'll get back to you within 24 hours.
         </p>
         <button
@@ -146,19 +144,19 @@ const EnhancedContactForm: React.FC = () => {
   }
 
   return (
-    <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20">
-      <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold text-white mb-4">Get In Touch</h2>
-        <p className="text-gray-300">
+    <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20"></div></div>
+      <div className="text-center mb-8"></div></div>
+        <h2 className="text-3xl font-bold text-white mb-4"></h2></h2>Get In Touch</h2>
+        <p className="text-gray-300"></p></p>
           Ready to transform your business? Let's discuss your project.
         </p>
       </div>
 
-      <form onSubmit={handleSubmit} className="space-y-6" noValidate>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <form onSubmit={handleSubmit} className="space-y-6" noValidate></form>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div></div>
           {/* Name */}
           <div>
-            <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+            <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2"></label>
               Full Name *
             </label>
             <input
@@ -167,7 +165,7 @@ const EnhancedContactForm: React.FC = () => {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors duration-200 ${
+              className="{`w-full" px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors duration-200 ${
                 errors.name ? 'border-red-500' : 'border-gray-600'
               }`}
               placeholder="Your full name"
@@ -175,7 +173,7 @@ const EnhancedContactForm: React.FC = () => {
               aria-invalid={!!errors.name}
             />
             {errors.name && (
-              <p id="name-error" className="mt-1 text-sm text-red-400 flex items-center">
+              <p id="name-error" className="mt-1 text-sm text-red-400 flex items-center"></p></p>
                 <AlertCircle className="w-4 h-4 mr-1" />
                 {errors.name}
               </p>
@@ -184,7 +182,7 @@ const EnhancedContactForm: React.FC = () => {
 
           {/* Email */}
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+            <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2"></label>
               Email Address *
             </label>
             <input
@@ -193,7 +191,7 @@ const EnhancedContactForm: React.FC = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors duration-200 ${
+              className="{`w-full" px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors duration-200 ${
                 errors.email ? 'border-red-500' : 'border-gray-600'
               }`}
               placeholder="your@email.com"
@@ -201,7 +199,7 @@ const EnhancedContactForm: React.FC = () => {
               aria-invalid={!!errors.email}
             />
             {errors.email && (
-              <p id="email-error" className="mt-1 text-sm text-red-400 flex items-center">
+              <p id="email-error" className="mt-1 text-sm text-red-400 flex items-center"></p></p>
                 <AlertCircle className="w-4 h-4 mr-1" />
                 {errors.email}
               </p>
@@ -210,7 +208,7 @@ const EnhancedContactForm: React.FC = () => {
 
           {/* Phone */}
           <div>
-            <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
+            <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2"></label>
               Phone Number
             </label>
             <input
@@ -226,7 +224,7 @@ const EnhancedContactForm: React.FC = () => {
 
           {/* Company */}
           <div>
-            <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
+            <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2"></label>
               Company
             </label>
             <input
@@ -242,7 +240,7 @@ const EnhancedContactForm: React.FC = () => {
 
           {/* Service */}
           <div>
-            <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
+            <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2"></label>
               Service Interest
             </label>
             <select
@@ -251,10 +249,10 @@ const EnhancedContactForm: React.FC = () => {
               value={formData.service}
               onChange={handleChange}
               className="w-full px-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors duration-200"
-            >
+            ></select>
               <option value="">Select a service</option>
               {services.map(service => (
-                <option key={service} value={service} className="bg-gray-800">
+                <option key={service} value={service} className="bg-gray-800"></option>
                   {service}
                 </option>
               ))}
@@ -263,7 +261,7 @@ const EnhancedContactForm: React.FC = () => {
 
           {/* Budget */}
           <div>
-            <label htmlFor="budget" className="block text-sm font-medium text-gray-300 mb-2">
+            <label htmlFor="budget" className="block text-sm font-medium text-gray-300 mb-2"></label>
               Project Budget
             </label>
             <select
@@ -272,10 +270,10 @@ const EnhancedContactForm: React.FC = () => {
               value={formData.budget}
               onChange={handleChange}
               className="w-full px-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors duration-200"
-            >
+            ></select>
               <option value="">Select budget range</option>
               {budgetRanges.map(range => (
-                <option key={range} value={range} className="bg-gray-800">
+                <option key={range} value={range} className="bg-gray-800"></option>
                   {range}
                 </option>
               ))}
@@ -285,7 +283,7 @@ const EnhancedContactForm: React.FC = () => {
 
         {/* Timeline */}
         <div>
-          <label htmlFor="timeline" className="block text-sm font-medium text-gray-300 mb-2">
+          <label htmlFor="timeline" className="block text-sm font-medium text-gray-300 mb-2"></label>
             Project Timeline
           </label>
           <select
@@ -294,10 +292,10 @@ const EnhancedContactForm: React.FC = () => {
             value={formData.timeline}
             onChange={handleChange}
             className="w-full px-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors duration-200"
-          >
+          ></select>
             <option value="">Select timeline</option>
             {timelines.map(timeline => (
-              <option key={timeline} value={timeline} className="bg-gray-800">
+              <option key={timeline} value={timeline} className="bg-gray-800"></option>
                 {timeline}
               </option>
             ))}
@@ -306,7 +304,7 @@ const EnhancedContactForm: React.FC = () => {
 
         {/* Message */}
         <div>
-          <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+          <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2"></label>
             Project Details *
           </label>
           <textarea
@@ -315,7 +313,7 @@ const EnhancedContactForm: React.FC = () => {
             value={formData.message}
             onChange={handleChange}
             rows={6}
-            className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors duration-200 resize-vertical ${
+            className="{`w-full" px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors duration-200 resize-vertical ${
               errors.message ? 'border-red-500' : 'border-gray-600'
             }`}
             placeholder="Tell us about your project, goals, and any specific requirements..."
@@ -323,7 +321,7 @@ const EnhancedContactForm: React.FC = () => {
             aria-invalid={!!errors.message}
           />
           {errors.message && (
-            <p id="message-error" className="mt-1 text-sm text-red-400 flex items-center">
+            <p id="message-error" className="mt-1 text-sm text-red-400 flex items-center"></p></p>
               <AlertCircle className="w-4 h-4 mr-1" />
               {errors.message}
             </p>
@@ -331,50 +329,50 @@ const EnhancedContactForm: React.FC = () => {
         </div>
 
         {/* Submit Button */}
-        <div className="text-center">
+        <div className="text-center"></div></div>
           <button
             type="submit"
             disabled={isSubmitting}
-            className={`inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none ${
+            className="{`inline-flex" items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none ${
               isSubmitting ? 'animate-pulse' : ''
             }`}
-          >
+          ></button>
             {isSubmitting ? (
-              <>
-                <Loader2 className="w-5 h-5 mr-2 animate-spin" />
+              <&gt;
+                <Loader2 className="w-5 h-5 mr-2 animate-spin" /&gt;
                 Sending Message...
-              </>
+              </&gt;
             ) : (
-              <>
-                <Send className="w-5 h-5 mr-2" />
+              <&gt;
+                <Send className="w-5 h-5 mr-2" /&gt;
                 Send Message
-              </>
+              </&gt;
             )}
           </button>
         </div>
       </form>
 
       {/* Contact Info */}
-      <div className="mt-8 pt-8 border-t border-gray-700">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-          <div className="flex flex-col items-center">
+      <div className="mt-8 pt-8 border-t border-gray-700"></div></div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center"></div></div>
+          <div className="flex flex-col items-center"></div></div>
             <Mail className="w-6 h-6 text-cyan-400 mb-2" />
-            <p className="text-gray-300 text-sm">Email</p>
-            <a href="mailto:info@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200">
+            <p className="text-gray-300 text-sm"></p></p>Email</p>
+            <a href="mailto:info@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200"></a>
               info@ziontechgroup.com
             </a>
           </div>
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center"></div></div>
             <Phone className="w-6 h-6 text-cyan-400 mb-2" />
-            <p className="text-gray-300 text-sm">Phone</p>
-            <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200">
+            <p className="text-gray-300 text-sm"></p></p>Phone</p>
+            <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200"></a>
               +1 (302) 464-0950
             </a>
           </div>
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center"></div></div>
             <MapPin className="w-6 h-6 text-cyan-400 mb-2" />
-            <p className="text-gray-300 text-sm">Location</p>
-            <p className="text-cyan-400">
+            <p className="text-gray-300 text-sm"></p></p>Location</p>
+            <p className="text-cyan-400"></p></p>
               Middletown, DE
             </p>
           </div>

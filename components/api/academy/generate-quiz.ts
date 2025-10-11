@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type { NextApiRequest, NextApiResponse  } from 'next'
 import OpenAI from 'openai'
   const { moduleTitle, moduleContent } = req && req.body || {}
   const apiKey = process && process.env.OPENAI_API_KEY

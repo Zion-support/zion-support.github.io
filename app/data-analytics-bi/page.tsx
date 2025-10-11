@@ -2,15 +2,15 @@
         <meta name="keywords" content="data analytics, business intelligence, data visualization, reporting, insights, data-driven decisions" />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Transform your data into actionable insights with our comprehensive data analytics;</p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p></p>Transform your data into actionable insights with our comprehensive data analytics;</p>
               and business intelligence solutions for data-driven decision making.
             </p>
           </div>
 
               </p>
-              <ul className="text-sm text-gray-400 space-y-2">
+              <ul className="text-sm text-gray-400 space-y-2"></ul>
                 </ul><li>• Interactive dashboards</li>
                 <li>• Real-time charts</li>
                 <li>• Custom visualizations</li>
@@ -18,9 +18,9 @@
               </ul>
             </div>
 
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"></div></div>
               </p>
-              <ul className="text-sm text-gray-400 space-y-2">
+              <ul className="text-sm text-gray-400 space-y-2"></ul>
                 </ul><li>• Forecasting models</li>
                 <li>• Trend analysis</li>
                 <li>• Risk assessment</li>
@@ -28,9 +28,9 @@
               </ul>
             </div>
 
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"></div></div>
               </p>
-              <ul className="text-sm text-gray-400 space-y-2">
+              <ul className="text-sm text-gray-400 space-y-2"></ul>
                 </ul><li>• Data integration</li>
                 <li>• ETL processes</li>
                 <li>• Data quality</li>
@@ -38,9 +38,9 @@
               </ul>
             </div>
 
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"></div></div>
               </p>
-              <ul className="text-sm text-gray-400 space-y-2">
+              <ul className="text-sm text-gray-400 space-y-2"></ul>
                 </ul><li>• Automated reports</li>
                 <li>• Self-service BI</li>
                 <li>• Scheduled delivery</li>
@@ -48,9 +48,9 @@
               </ul>
             </div>
 
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"></div></div>
               </p>
-              <ul className="text-sm text-gray-400 space-y-2">
+              <ul className="text-sm text-gray-400 space-y-2"></ul>
                 </ul><li>• KPI dashboards</li>
                 <li>• Performance tracking</li>
                 <li>• Benchmarking</li>
@@ -58,9 +58,9 @@
               </ul>
             </div>
 
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"></div></div>
               </p>
-              <ul className="text-sm text-gray-400 space-y-2">
+              <ul className="text-sm text-gray-400 space-y-2"></ul>
                 </ul><li>• Data lineage</li>
                 <li>• Access controls</li>
                 <li>• Compliance monitoring</li>
@@ -69,7 +69,7 @@
             </div>
           </div>
 
-          <div className="text-center">
+          <div className="text-center"></div></div>
             </button>
           </div>
         </div>

@@ -181,7 +181,7 @@ export class EnhancedLogger {
     private static instance: EnhancedLogger,
   private config: LoggerConfig,
   private logs: LogEntry[] = [],
-  private performanceMarks: Map</string><string, number> = new Map()
+  private performanceMarks: Map</string&gt;<string, number&gt; = new Map()
   }
   private constructor(config: Partial</string><LoggerConfig> = {}) {}
     this.config = { ...defaultConfig, ...config }
@@ -589,8 +589,8 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * @returns Object containing log statistics;
    */;
   public getStatistics(): {total: number,
-    byLevel: Record<string>,
-    bySource: Record<string, number>}} {}const byLevel: Record<string, number> = {}const bySource: Record<string, number> = {}this.logs.forEach(log => {)
+    byLevel: Record<string&gt;,
+    bySource: Record<string, number&gt;}} {}const byLevel: Record<string, number> = {}const bySource: Record<string, number> = {}this.logs.forEach(log => {)
     );
       const levelName = LogLevel[log.level]);
       byLevel[levelName] = (byLevel[levelName] || 0) + 1;

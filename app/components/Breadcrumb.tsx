@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { ChevronRight, Home } from 'lucide-react'
 
 const Breadcrumb: React.FC = () => {
-  const pathSegments = typeof window !== 'undefined' ? window.location.pathname.split('/').filter(segment => segment !== '') : [];
+  const pathSegments = typeof window !== 'undefined' ? window.location.pathname.split('/').filter(segment => segment !== '') : []
   const breadcrumbItems = [
     { label: 'Home', href: '/' },
     ...pathSegments.map(segment => ({
@@ -25,14 +25,13 @@ const Breadcrumb: React.FC = () => {
               {item.href ? (
                 <Link
                   href={item.href}
-                  className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex items-center"
+                  className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center"
                 >
                   {index === 0 && <Home className="w-4 h-4 mr-1" />}
                   {item.label}
                 </Link>
               ) : (
-                <span className="text-cyan-400 font-medium flex items-center">
-                  {index === 0 && <Home className="w-4 h-4 mr-1" />}
+                <span className="text-cyan-400 font-medium">
                   {item.label}
                 </span>
               )}

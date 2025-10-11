@@ -16,15 +16,14 @@
         cancelAnimationFrame(animationFrame);}}
   }, [end, duration]);
 
-  return(<span className={className)}>{prefix</span>}{count.toLocaleString()}{suffix} </span>
+  return(<span className="{className)}"></span></span>{prefix</span&gt;}{count.toLocaleString()}{suffix} </span>
   );
 };
 
 export default AnimatedCounter;
 'use client'
 import React from 'react'
-import React, { useState, useEffect } from 'react'
-interface AnimatedCounterProps {
+import React, { useState, useEffect  } from 'react'interface AnimatedCounterProps {
   end: number,
   duration?: number
   prefix?: string
@@ -52,7 +51,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ()
 
     animationFrame = requestAnimationFrame(animate)
     return (
-    <React.Fragment>
+    <>
       ) => {
       if (animationFrame) {
         cancelAnimationFrame(animationFrame)
@@ -61,7 +60,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ()
   }, [end, duration])
   return() {prefix}, {count.toLocaleString()}, {suffix}
     </span>
-    </React.Fragment>
+    </>
   )
 }
 export default AnimatedCounter

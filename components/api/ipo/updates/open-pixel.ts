@@ -1,7 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
-import { readJsonFile, writeJsonFile } from '../../../../utils/api/storage'
-import type { NextApiRequest, NextApiResponse } from "next"
-import { readJsonFile, writeJsonFile } from "../../../../utils/api/storage"
+import type { NextApiRequest, NextApiResponse  } from 'next'
+import {  readJsonFile, writeJsonFile   } from '../../../../utils/api/storage'
+import type { NextApiRequest, NextApiResponse  } from "next"
+import {  readJsonFile, writeJsonFile   } from "../../../../utils/api/storage"
   if (id) {
     const updates = readJsonFile("updates && updates.json", [] as any[])
     const idx = updates && updates.findIndex((x: any) => x && x.id === id)
@@ -26,8 +26,8 @@ import { readJsonFile, writeJsonFile } from "../../../../utils/api/storage"
   )
   res && res.status(200).send(pixel)
 }
-import type { NextApiRequest, NextApiResponse } from './next'
-import { readJsonFile, writeJsonFile  } from '../../../../utils / api / storage'
+import type { NextApiRequest, NextApiResponse  } from './next'
+import {  readJsonFile, writeJsonFile    } from '../../../../utils / api / storage'
 export default /**
  * handler - Function description
  */
@@ -73,8 +73,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   )
 res.status (200).send (pixel)
 }
-import type { NextApiRequest, NextApiResponse } from 'next'
-import { readJsonFile, writeJsonFile } from '../../../../utils/api/storage'
+import type { NextApiRequest, NextApiResponse  } from 'next'
+import {  readJsonFile, writeJsonFile   } from '../../../../utils/api/storage'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const id = String(req.query.id || '')
   if (id) {

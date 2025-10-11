@@ -30,7 +30,7 @@ const benefits = [
     'Proven track record of success'
   ]
 return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div></div>
       <Helmet>
         </Helmet><title>Page | Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
@@ -44,7 +44,7 @@ return (
             </h2>
             <p>Contact our experts to discuss your page needs and get a customized solution.</p>
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div></div></div>,
               <button>
               </button>
             </div>

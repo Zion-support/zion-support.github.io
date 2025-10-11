@@ -126,23 +126,23 @@ export const ValidationRulesBuilder = {/* TODO: Fix JSX expression */},
     message: 'This field is required'}),
   email: (): ValidationRule</string><string> => ({
     ,
-    validate: (value: string) => validateEmail(value),
+    validate: (value: string) =&gt; validateEmail(value),
   }
     message: 'Please enter a valid email address'}),
   url: (): ValidationRule</string><string> => ({
     ,
-    validate: (value: string) => validateURL(value),
+    validate: (value: string) =&gt; validateURL(value),
   }
     message: 'Please enter a valid URL'}),
   minLength: (min: number): ValidationRule</string><string> => ({
     ,
-    validate: (value: string) => value.length >= min
+    validate: (value: string) =&gt; value.length &gt;= min
   }
     message: `Must be at least ${min} characters long`
   }),
   maxLength: (max: number): ValidationRule</string><string> => ({
     ,
-    validate: (value: string) => value.length <= max
+    validate: (value: string) =&gt; value.length <= max
   }
     message: `Must be no more than ${max} characters long`
   }),
@@ -153,7 +153,7 @@ export const ValidationRulesBuilder = {/* TODO: Fix JSX expression */},
   }),
   range: (min: number, max: number): ValidationRule</string><number> => ({
     ,
-    validate: (value: number) => validateNumberRange(value, min, max),
+    validate: (value: number) =&gt; validateNumberRange(value, min, max),
   }
     message: `Must be between ${min} and ${max}`
   }),
@@ -288,7 +288,7 @@ export function validatePassword(passwor);
   if (!/[A-Z]/.test(password)) return {/* TODO: Fix JSX expression */,}}r: 'Password must contain at least one uppercase letter' ,}
   if (!/[a-z]/.test(password)) return {/* TODO: Fix JSX expression */,}}r: 'Password must contain at least one lowercase letter' ,}
   if (!/\d/.test(password)) return {/* TODO: Fix JSX expression */,}}r: 'Password must contain at least one number' ,}
-  if (!/[!@#$%^&*(),.?":{}|<React.Fragment>{]/.test(password)) return {/* TODO: Fix JSX expression */,</React.Fragment>}}r: 'Password must contain at least one special character' ,}
+  if (!/[!@#$%^&*(),.?":{}|<>{]/.test(password)) return {/* TODO: Fix JSX expression */,</>}}r: 'Password must contain at least one special character' ,}
   return {/* TODO: Fix JSX expression */,}}d: true ,}
   e: Empty arrays are considered valid for required fields (they exist, just empty)
   return {/* TODO: Fix JSX expression */}
@@ -319,7 +319,7 @@ export function validatePassword(passwor)
   r: 'Password must contain at least one lowercase letter' }
   if (!/\d/.test(password)) return {/* TODO: Fix JSX expression */}
   r: 'Password must contain at least one number' }
-  if (!/[!@#$%^&*(),.?":{}|<React.Fragment>{]/.test(password)) return {/* TODO: Fix JSX expression */}
+  if (!/[!@#$%^&*(),.?":{}|<>{]/.test(password)) return {/* TODO: Fix JSX expression */}
   r: 'Password must contain at least one special character' }
   return {/* TODO: Fix JSX expression */}
   d: true }
@@ -332,7 +332,7 @@ export function sanitizeHTML(html: string): string {,}
   clean = clean.replace(/'/g, '&#x27;');
   clean = clean.replace(/\//g, '&#x2 F;');
 return clean;
-  let clean = html.replace(/&/g, '&amp;');}</React.Fragment></React.Fragment>
+  let clean = html.replace(/&/g, '&amp;');}</></>
   clean = clean.replace(/</g, '&lt;')
   clean = clean.replace(/>/g, '&gt;')
   clean = clean.replace(/"/g, '&quot;')
