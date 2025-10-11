@@ -7,20 +7,19 @@ import './app/styles/futuristic-enhanced.css';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import HomePage from './app/page';
-import { PageLoader } from './app/components/LoadingStates';
-import ErrorBoundary from './app/components/ErrorBoundary';
-import SEOHead from './app/components/EnhancedSEOHead';
-import SkipLink from './app/components/EnhancedSkipLink';
-import Breadcrumb from './app/components/Breadcrumb';
-import PerformanceOptimizer from './app/components/EnhancedPerformanceOptimizer';
-import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-import EnhancedAccessibility from './app/components/EnhancedAccessibility';
-import { usePerformanceMonitor } from './hooks/usePerformanceMonitor';
-import { AnalyticsProvider } from './app/components/EnhancedAnalytics';
-import PerformanceMonitor from './app/components/PerformanceMonitor';
-import ServiceWorker from './app/components/ServiceWorker';
-import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
 import FuturisticBackground from './app/components/FuturisticBackground';
+
+// Simple loading component
+const PageLoader = () => (
+  <div className="min-h-screen flex items-center justify-center">
+    <div className="futuristic-loading"></div>
+  </div>
+);
+
+// Simple error boundary
+const ErrorBoundary: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  return <>{children}</>;
+};
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import('./app/about/page'));
@@ -57,81 +56,60 @@ const MobileDevelopmentPage = React.lazy(() => import('./app/mobile-development/
 // Company Pages
 const TeamPage = React.lazy(() => import('./app/team/page'));
 
-// Performance monitoring hook
-const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  usePerformanceMonitor();
-  return <React.Fragment>{children}</React.Fragment>
-};
-
 // Main App Component
 const App: React.FC = () => {
   return (
-    <EnhancedErrorBoundary>
+    <ErrorBoundary>
       <HelmetProvider>
-        <SEOHead />
-        <SkipLink />
-        <ServiceWorker />
         <Router>
-          <AppWithPerformanceMonitoring>
-            <AnalyticsProvider>
-              <PerformanceOptimizer>
-                <EnhancedAccessibility>
-                  <AccessibilityEnhancer>
-                    <PerformanceMonitor />
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
-                      <FuturisticBackground />
-                      <Navigation />
-                      <Breadcrumb />
-                      <main id="main-content" className="flex-1" tabIndex={-1}>
-                        <Suspense fallback={<PageLoader />}>
-                          <Routes>
-                            <Route path="/" element={<HomePage />} />
-                            <Route path="/about" element={<AboutPage />} />
-                            <Route path="/contact" element={<ContactPage />} />
-                            <Route path="/services" element={<ServicesPage />} />
-                            <Route path="/pricing" element={<PricingPage />} />
-                            <Route path="/blog" element={<BlogPage />} />
-                            <Route path="/case-studies" element={<CaseStudiesPage />} />
-                            <Route path="/careers" element={<CareersPage />} />
-                            <Route path="/ai-services" element={<AiServicesPage />} />
-                            <Route path="/it-services" element={<ItServicesPage />} />
-                            <Route path="/micro-saas" element={<MicroSaasPage />} />
-                            <Route path="/tutorials" element={<TutorialsPage />} />
-                            <Route path="/consultation" element={<ConsultationPage />} />
-                            <Route path="/demo" element={<DemoPage />} />
-                            <Route path="/support" element={<SupportPage />} />
-                            <Route path="/privacy" element={<PrivacyPage />} />
-                            <Route path="/terms" element={<TermsPage />} />
-                            <Route path="/cookies" element={<CookiesPage />} />
-                            <Route path="/sitemap" element={<SitemapPage />} />
-                            
-                            {/* AI Service Pages */}
-                            <Route path="/ai-analytics" element={<AiAnalyticsPage />} />
-                            <Route path="/ai-automation" element={<AiAutomationPage />} />
-                            <Route path="/ai-chatbot-builder" element={<AiChatbotBuilderPage />} />
-                            <Route path="/ai-cybersecurity" element={<AiCybersecurityPage />} />
-                            
-                            {/* IT Service Pages */}
-                            <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
-                            <Route path="/cybersecurity-solutions" element={<CybersecuritySolutionsPage />} />
-                            <Route path="/web-development" element={<WebDevelopmentPage />} />
-                            <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
-                            
-                            {/* Company Pages */}
-                            <Route path="/team" element={<TeamPage />} />
-                          </Routes>
-                        </Suspense>
-                      </main>
-                      <Footer />
-                    </div>
-                  </AccessibilityEnhancer>
-                </EnhancedAccessibility>
-              </PerformanceOptimizer>
-            </AnalyticsProvider>
-          </AppWithPerformanceMonitoring>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
+            <FuturisticBackground />
+            <Navigation />
+            <main id="main-content" className="flex-1" tabIndex={-1}>
+              <Suspense fallback={<PageLoader />}>
+                <Routes>
+                  <Route path="/" element={<HomePage />} />
+                  <Route path="/about" element={<AboutPage />} />
+                  <Route path="/contact" element={<ContactPage />} />
+                  <Route path="/services" element={<ServicesPage />} />
+                  <Route path="/pricing" element={<PricingPage />} />
+                  <Route path="/blog" element={<BlogPage />} />
+                  <Route path="/case-studies" element={<CaseStudiesPage />} />
+                  <Route path="/careers" element={<CareersPage />} />
+                  <Route path="/ai-services" element={<AiServicesPage />} />
+                  <Route path="/it-services" element={<ItServicesPage />} />
+                  <Route path="/micro-saas" element={<MicroSaasPage />} />
+                  <Route path="/tutorials" element={<TutorialsPage />} />
+                  <Route path="/consultation" element={<ConsultationPage />} />
+                  <Route path="/demo" element={<DemoPage />} />
+                  <Route path="/support" element={<SupportPage />} />
+                  <Route path="/privacy" element={<PrivacyPage />} />
+                  <Route path="/terms" element={<TermsPage />} />
+                  <Route path="/cookies" element={<CookiesPage />} />
+                  <Route path="/sitemap" element={<SitemapPage />} />
+                  
+                  {/* AI Service Pages */}
+                  <Route path="/ai-analytics" element={<AiAnalyticsPage />} />
+                  <Route path="/ai-automation" element={<AiAutomationPage />} />
+                  <Route path="/ai-chatbot-builder" element={<AiChatbotBuilderPage />} />
+                  <Route path="/ai-cybersecurity" element={<AiCybersecurityPage />} />
+                  
+                  {/* IT Service Pages */}
+                  <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
+                  <Route path="/cybersecurity-solutions" element={<CybersecuritySolutionsPage />} />
+                  <Route path="/web-development" element={<WebDevelopmentPage />} />
+                  <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
+                  
+                  {/* Company Pages */}
+                  <Route path="/team" element={<TeamPage />} />
+                </Routes>
+              </Suspense>
+            </main>
+            <Footer />
+          </div>
         </Router>
       </HelmetProvider>
-    </EnhancedErrorBoundary>
+    </ErrorBoundary>
   );
 };
 
