@@ -2,15 +2,17 @@ import {X, Home, User, Settings, HelpCircle} from 'lucide-react'
 import React from 'react'
 import {Link} from 'react-router-dom'
 
-interface SidebarNavigationProps {isOpen: boolean
-  onClose: () => void}
+interface SidebarNavigationProps {
+  isOpen: boolean
+  onClose: () => void
+}
 
 const SidebarNavigation: React.FC<SidebarNavigationProps> = ({isOpen, onClose}) => {
   const navigationItems = [
     { name: 'Home', href: '/', icon: Home },
-    {name: 'About', href: '/about', icon: User},
-    {name: 'Services', href: '/services', icon: Settings},
-    {name: 'Contact', href: '/contact', icon: HelpCircle},
+    { name: 'About', href: '/about', icon: User },
+    { name: 'Services', href: '/services', icon: Settings },
+    { name: 'Contact', href: '/contact', icon: HelpCircle },
   ]
 
   return (
@@ -64,6 +66,3 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({isOpen, onClose}) 
 }
 
 export default SidebarNavigation
-      </Icon>
-    </X>
-  </SidebarNavigationProps>

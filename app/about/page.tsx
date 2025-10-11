@@ -40,7 +40,7 @@ const AboutPage: React.FC = () => {const features = [
       description: 'Leading expert in natural language processing and computer vision technologies.'} ]
 
   return (
-    <div className="min-h-screen bg-gray-50"
+    <div className="min-h-screen bg-gray-50">
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
@@ -51,12 +51,12 @@ const AboutPage: React.FC = () => {const features = [
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>About Us - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group's mission, values, and team of experts in AI and IT solutions."
+        <meta name="description" content="Learn about Zion Tech Group's mission, values, and team of experts in AI and IT solutions." />
       </Helmet>
       
       <Navigation />
       
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4">
           <div className="container mx-auto text-center">
@@ -67,9 +67,6 @@ const AboutPage: React.FC = () => {const features = [
               We are a team of passionate technologists dedicated to transforming businesses through innovative AI and technology solutions.
             </p>
           </div>
-      
-      <Footer />
-    </>
         </section>
 
         {/* Features Section */}

@@ -83,7 +83,7 @@ const AccessibilityPage: React.FC = () => {const features = [
       
       <Navigation />
       
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4">
           <div className="container mx-auto text-center">
@@ -94,14 +94,10 @@ const AccessibilityPage: React.FC = () => {const features = [
               We believe technology should be accessible to everyone. Our commitment to inclusive design ensures that our solutions work for all users.
             </p>
           </div>
-      
-      <Footer />
-    </>
         </section>
 
         {/* Features Section */}
-        <section className="
-    g: px-8"
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto"
             <div className="text-center mb-16"
               <h2 className="text-3xl m, d:text-4xl font-bold text-white mb-6"
