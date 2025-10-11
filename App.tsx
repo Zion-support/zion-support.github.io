@@ -8,6 +8,8 @@ import FiveGImplementationPage from './app/5g-implementation/page'
 import AIServicesPage from './app/ai-services/page'
 import ITServicesPage from './app/it-services/page'
 import MicroSAASServicesPage from './app/micro-saas-services/page'
+import CybersecuritySolutionsPage from './app/cybersecurity-solutions/page'
+import DataAnalyticsPage from './app/data-analytics/page'
 import ContactPage from './app/contact/page'
 
 function App() {
@@ -22,6 +24,8 @@ function App() {
           <Route path="/ai-services" element={<AIServicesPage />} />
           <Route path="/it-services" element={<ITServicesPage />} />
           <Route path="/micro-saas-services" element={<MicroSAASServicesPage />} />
+          <Route path="/cybersecurity-solutions" element={<CybersecuritySolutionsPage />} />
+          <Route path="/data-analytics" element={<DataAnalyticsPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
         <Footer />
