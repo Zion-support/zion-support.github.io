@@ -3,10 +3,14 @@ import React from 'react'
 import Link from 'next/link'
 import { ChevronRight, Home } from 'lucide-react'
 
-  const pathSegments = location.pathname.split('/').filter(segment => segment !== '');
+const Breadcrumb: React.FC = () => {
+  const pathSegments = typeof window !== 'undefined' ? window.location.pathname.split('/').filter(segment => segment !== '') : [];
   const breadcrumbItems = [
     { label: 'Home', href: '/' },
-    ...items
+    ...pathSegments.map(segment => ({
+      label: segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' '),
+      href: null
+    }))
   ]
 
   return (
