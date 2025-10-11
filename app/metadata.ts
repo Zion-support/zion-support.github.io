@@ -1,4 +1,52 @@
-import { Metadata } from 'next'
+// Define metadata type for compatibility
+interface Metadata {
+  title: string;
+  description: string;
+  keywords: string[];
+  authors: Array<{ name: string }>;
+  creator: string;
+  publisher: string;
+  formatDetection: {
+    email: boolean;
+    address: boolean;
+    telephone: boolean;
+  };
+  metadataBase: URL;
+  alternates: {
+    canonical: string;
+  };
+  openGraph: {
+    title: string;
+    description: string;
+    url: string;
+    siteName: string;
+    images: Array<{
+      url: string;
+      width: number;
+      height: number;
+      alt: string;
+    }>;
+    locale: string;
+    type: string;
+  };
+  twitter: {
+    card: string;
+    title: string;
+    description: string;
+    images: string[];
+  };
+  robots: {
+    index: boolean;
+    follow: boolean;
+    googleBot: {
+      index: boolean;
+      follow: boolean;
+      'max-video-preview': number;
+      'max-image-preview': string;
+      'max-snippet': number;
+    };
+  };
+}
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
