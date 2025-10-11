@@ -4,6 +4,7 @@ import {Helmet} from 'react-helmet-async'
 import {Eye, Ear, Hand, Brain, Shield, CheckCircle, ArrowRight, Target, BarChart, Zap} from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
+
 const AccessibilityPage: React.FC = () => {
   const features = [
     {
@@ -43,241 +44,219 @@ const AccessibilityPage: React.FC = () => {
       benefits: ['Optimized loading', 'Efficient rendering', 'Minimal overhead', 'Fast interactions']
     }
   ];
+
   const services = [
     {
       title: 'Accessibility Audits',
       description: 'Comprehensive evaluation of your digital products for accessibility compliance.',
       icon: Target,
-      benefits: ['Automated testing', 'Manual evaluation', 'User testing', 'Compliance reporting']
+      benefits: ['WCAG compliance testing', 'Screen reader testing', 'Keyboard navigation testing', 'Color contrast analysis']
     },
     {
-      title: 'Implementation Services',
-      description: 'Professional implementation of accessibility features and improvements.',
+      title: 'Design Consultation',
+      description: 'Expert guidance on creating accessible user interfaces and experiences.',
       icon: BarChart,
-      benefits: ['Code implementation', 'Design updates', 'Testing & validation', 'Training & support']
+      benefits: ['Accessible design patterns', 'Color palette optimization', 'Typography recommendations', 'Layout improvements']
     },
     {
-      title: 'Ongoing Support',
-      description: 'Continuous monitoring and maintenance of accessibility features.',
-      icon: CheckCircle,
-      benefits: ['Regular audits', 'Feature updates', 'Performance monitoring', 'Compliance tracking']
+      title: 'Development Support',
+      description: 'Technical implementation of accessibility features and best practices.',
+      icon: Zap,
+      benefits: ['ARIA implementation', 'Semantic HTML', 'Focus management', 'Testing automation']
     },
     {
       title: 'Training & Education',
-      description: 'Comprehensive training for your team on accessibility best practices.',
+      description: 'Comprehensive training programs for your team on accessibility best practices.',
       icon: Brain,
-      benefits: ['Team training', 'Best practices', 'Tool training', 'Compliance education']
+      benefits: ['Team workshops', 'Developer training', 'Design guidelines', 'Ongoing support']
     }
   ];
-  const standards = [
-    'WCAG 2.1 AA Compliance',
-    'Section 508 Compliance',
-    'ADA Compliance',
-    'EN 301 549 Compliance'
-  ];
-  const benefits = [
+
+  const complianceStandards = [
     {
-      title: 'Legal Compliance',
-      description: 'Meet accessibility requirements and avoid legal issues.',
-      icon: Shield
+      standard: 'WCAG 2.1 AA',
+      description: 'Web Content Accessibility Guidelines 2.1 Level AA compliance',
+      features: ['Perceivable', 'Operable', 'Understandable', 'Robust']
     },
     {
-      title: 'Broader Reach',
-      description: 'Access your content and services to a wider audience.',
-      icon: Target
+      standard: 'Section 508',
+      description: 'Federal accessibility requirements for government websites',
+      features: ['Government compliance', 'Federal standards', 'Public sector', 'Legal requirements']
     },
     {
-      title: 'Better UX',
-      description: 'Improved user experience for all users, not just those with disabilities.',
-      icon: CheckCircle
+      standard: 'ADA Compliance',
+      description: 'Americans with Disabilities Act compliance for digital accessibility',
+      features: ['Legal compliance', 'Equal access', 'Reasonable accommodation', 'Non-discrimination']
     },
     {
-      title: 'SEO Benefits',
-      description: 'Accessibility improvements often lead to better search engine rankings.',
-      icon: BarChart
+      standard: 'EN 301 549',
+      description: 'European accessibility standard for ICT products and services',
+      features: ['EU compliance', 'International standards', 'Public procurement', 'Harmonized approach']
     }
   ];
+
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
-        <title>Accessibility - Zion Tech Group</title>
-        <meta name="description" content="Learn about our commitment to web accessibility and inclusive design practices." />
-        <meta name="keywords" content="accessibility, inclusive design, WCAG compliance, ADA compliance, web accessibility" />
+        <title>Accessibility Services - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive accessibility services ensuring your digital products are inclusive and compliant with WCAG 2.1 AA standards." />
+        <meta name="keywords" content="accessibility, WCAG compliance, inclusive design, screen reader, keyboard navigation, ADA compliance" />
+      </Helmet>
+      
       <Navigation />
+      
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4">
-          <div className="container mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Accessibility</span> First
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              We believe technology should be accessible to everyone. Our commitment to inclusive design ensures that our solutions work for all users.
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Digital <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Accessibility</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Making digital experiences inclusive for everyone. We ensure your products are accessible, compliant, and usable by all users.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Schedule Audit
+              </button>
+            </div>
+          </div>
+        </section>
+
         {/* Features Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
+        <section className="py-20 px-4">
+          <div className="container mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-Accessibility Features
+                Accessibility Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our accessibility solutions cover all aspects of digital inclusion, ensuring your products work for everyone.
+                Comprehensive accessibility solutions for all types of users and disabilities
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                  <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-300 mb-4">
-                    {feature.description}
-                  </p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                        {benefit}
-                    ))}
-))}
-                  </ul></div></section>
+              {features.map((feature, index) => {
+                const IconComponent = feature.icon;
+                return (
+                  <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+                    <div className="flex items-center mb-4">
+                      <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mr-4">
+                        <IconComponent className="w-6 h-6 text-white" />
+                      </div>
+                      <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
+                    </div>
+                    <p className="text-gray-300 mb-4">{feature.description}</p>
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, benefitIndex) => (
+                        <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
         {/* Services Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-7xl mx-auto">
+        <section className="py-20 px-4 bg-white/5">
+          <div className="container mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Our Services
-</h2>
+              <h2 className="text-4xl font-bold text-white mb-4">Our Services</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive accessibility services to make your digital products inclusive
+                End-to-end accessibility solutions for your digital products
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {services.map((service, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                  <service.icon className="w-12 h-12 text-blue-400 mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-300 mb-4">
-                    {service.description}
-                  </p>
-                  <ul className="space-y-2">
-                    {service.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                        {benefit}
-                    ))}
-              ))}
-                  </ul>
-                </div>
-              ))}</div></section>
-        {/* Standards Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
+              {services.map((service, index) => {
+                const IconComponent = service.icon;
+                return (
+                  <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+                    <div className="flex items-center mb-4">
+                      <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mr-4">
+                        <IconComponent className="w-6 h-6 text-white" />
+                      </div>
+                      <h3 className="text-xl font-semibold text-white">{service.title}</h3>
+                    </div>
+                    <p className="text-gray-300 mb-4">{service.description}</p>
+                    <ul className="space-y-2">
+                      {service.benefits.map((benefit, benefitIndex) => (
+                        <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* Compliance Standards Section */}
+        <section className="py-20 px-4">
+          <div className="container mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Compliance Standards
-              </h2>
+              <h2 className="text-4xl font-bold text-white mb-4">Compliance Standards</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 We ensure your products meet all major accessibility standards and regulations
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {standards.map((standard, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
-                  <Shield className="w-12 h-12 text-green-400 mx-auto mb-4" />
-                  <h3 className="text-lg font-semibold text-white">
-                    {standard}
-                  </h3>
-))}
-        {/* Benefits Section */}
-<section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-                  </h3></div></section>
-        {/* Benefits Section */}
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Why Accessibility Matters
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Beyond compliance, accessibility brings real business value
-              </p>
-            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="text-center">
-                  <benefit.icon className="w-12 h-12 text-purple-400 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-gray-300">
-                    {benefit.description}
-</p>
+              {complianceStandards.map((standard, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Shield className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">{standard.standard}</h3>
+                  <p className="text-gray-300 mb-4 text-sm">{standard.description}</p>
+                  <ul className="space-y-1">
+                    {standard.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="text-xs text-gray-400">
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               ))}
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
-<section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-blue-600">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-blue-600">
           <div className="max-w-4xl mx-auto text-center">
-              ))}</div></section>
-        {/* CTA Section */}
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Make Your Products Accessible?
             </h2>
-            <p className="text-xl text-gray-100 mb-8">
-Let's work together to create inclusive digital experiences that work for everyone.
+            <p className="text-xl text-white/90 mb-8">
+              Let's work together to create inclusive digital experiences that everyone can use and enjoy.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                Start Your Accessibility Journey
+                Start Accessibility Audit
                 <ArrowRight className="ml-2 h-5 w-5" />
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
-                Schedule Consultation
               </button>
-              </button></div></section>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Contact Our Experts
+              </button>
+            </div>
+          </div>
+        </section>
       </main>
+      
       <Footer />
+    </div>
   );
 };
+
 export default AccessibilityPage;
-</Footer>
-</ArrowRight>
-</button>
-</div>
-</div>
-</section>
-</benefit>
-</div>
-</div>
-</div>
-</section>
-</Shield>
-</div>
-</div>
-</div>
-</section>
-</CheckCircle>
-</li>
-</ul>
-</service>
-</div>
-</div>
-</div>
-</section>
-</CheckCircle>
-</li>
-</ul>
-</feature>
-</div>
-</div>
-</div>
-</section>
-</span>
-</h1>
-</div>
-</section>
-</main>
-</Navigation>
-</title>
-</Helmet>
-</div>
