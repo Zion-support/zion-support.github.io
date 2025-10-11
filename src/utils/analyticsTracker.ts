@@ -359,7 +359,10 @@ if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */}
     });
   }
 }
-export default analyticsTracker;
+};
+
+};
+
 
 export default analyticsTracker;
 

@@ -43,10 +43,6 @@ return(</div>)
 =======
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     'Proven track record of success';
-<<<<<<< HEAD
-  ];
-return ()
-=======
   ];];];
 return (
           </div>
@@ -54,7 +50,6 @@ return (
         </div>
       </section>)
               </div>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
             ))}
           </div>
         </div>

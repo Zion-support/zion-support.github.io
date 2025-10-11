@@ -461,64 +461,10 @@ export const captureComponentError = (
     componentStack: errorInfo.componentStack
   });
 }
-export default ErrorReporter;
-   * Export errors as JSON;
-   */
+};
 
-  exportErrors(): string {
-    // TODO: Add content
-  }
+};
 
-}
-    return JSON.stringify()
-      {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
 
-  timestamp: new Date().toISOString(),
-        stats: this.getErrorStats(),
-        errors: this.errorQueue,
-
-      },
-//       null,
-//       2)
-  }
-}
-/**
- * Convenience function to report errors;
- */
-export const reportError = ()
-  erro,
-  r: Error,
-  severity?: ErrorReport['severity'],
-  context?: Record;
-
-          <string, unknown>
-): void => {
-    // TODO: Add content
-  }
-
-}
-/**
- * React error boundary helper;
- */
-export const captureComponentError = ()
-
-  error: Error,
-  errorInfo: { componentStack: string },
-  componentName: string): void => {
-    // TODO: Add content
-  }
-
-}
-  const report = ErrorReporter.getInstance();
-  report.reportError(error, 'high', {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//     componentName,
-    componentStac,
-  k: errorInfo.componentStack,)
-  });
-}
 export default ErrorReporter;
 

@@ -73,10 +73,7 @@ function fixSyntaxErrors(filePath) {
     });
     
     // 10. Fix missing export statements
-    if (content.includes('const ') && !content.includes('export default') && !content.includes('export {')) {
-      const componentName = content.match(/const\s+(\w+):\s*React\.FC/g);
-      if (componentName) {
-        content = content.replace(/}\s*$/, `}\n\nexport default ${componentName[1]};`);
+    if (content.includes('const ') && !content.includes('export default ${componentName[1]};`);
       }
     }
     

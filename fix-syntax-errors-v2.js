@@ -40,58 +40,6 @@ function fixSyntaxErrors(filePath) {
       {
         pattern: /export\s+default\s+function\s+(\w+)\s*\(\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*}\s*:\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*;\s*(\w+):/g,
         replacement: 'export default function $1({\n  $2:'
-      },
-      // Fix malformed object literals with missing commas
-      {
-        pattern: /(\w+):\s*(\w+),?\s*}\s*(\w+):/g,
-        replacement: '$1: $2,\n    $3:'
-      },
-      // Fix missing closing braces and parentheses
-      {
-        pattern: /(\w+):\s*(\w+),?\s*}\s*(\w+):/g,
-        replacement: '$1: $2,\n    $3:'
-      },
-      // Fix malformed JSX attributes
-      {
-        pattern: /(\w+)="([^"]*)"\s*(\w+)/g,
-        replacement: '$1="$2" $3'
-      },
-      // Fix missing semicolons in exports
-      {
-        pattern: /export\s+const\s+(\w+)\s*=\s*{\s*(\w+):\s*'([^']*)',?\s*}\s*(\w+):/g,
-        replacement: 'export const $1 = {\n  $2: \'$3\',\n  $4:'
-      },
-      // Fix malformed function declarations
-      {
-        pattern: /function\s+(\w+)\s*\(\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*}\s*:\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*;\s*(\w+):/g,
-        replacement: 'function $1({\n  $2:'
-      }
-    ];
-    
-    for (const fix of fixes) {
-      const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
-        content = newContent;
-        modified = true;
-      }
-    }
-    
-    // Additional specific fixes for common patterns
-    const specificFixes = [
-      // Fix the specific pattern in about/page.tsx
-      {
-        pattern: /(\w+):\s*(\w+),?\s*}\s*(\w+):/g,
-        replacement: '$1: $2,\n    $3:'
-      },
-      // Fix malformed metadata
-      {
-        pattern: /export\s+const\s+metadata\s*=\s*{\s*(\w+):\s*'([^']*)',?\s*}\s*(\w+):/g,
-        replacement: 'export const metadata = {\n  $1: \'$2\',\n  $3:'
-      },
-      // Fix malformed function parameters
-      {
-        pattern: /export\s+default\s+function\s+(\w+)\s*\(\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*}\s*:\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*;\s*(\w+):/g,
-        replacement: 'export default function $1({\n  $2:'
       }
     ];
     

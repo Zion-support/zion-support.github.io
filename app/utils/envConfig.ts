@@ -64,11 +64,6 @@ class EnvironmentConfig {}
 >>>>>>> origin/main
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
       enableLogging: nodeEnv !== 'test',
-<<<<<<< HEAD
-      logLevel: ()
-=======
-      logLevel: (process.env.NEXT_PUBLIC_LOG_LEVEL ||,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
         (nodeEnv === 'production' ? 'warn' : 'debug')) as EnvConfig['logLevel'],
       sentryDsn: process.env.NEXT_PUBLIC_SENTRY_DSN || process.env.VITE_SENTRY_DSN,
       gaTrackingId: process.env.NEXT_PUBLIC_GA_TRACKING_ID || process.env.VITE_GA_TRACKING_ID,}
@@ -133,15 +128,6 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */,}}}
     valid: missing.length === 0;
   }
   public validate(requiredVars: (keyof EnvConfig)[]): {}
-<<<<<<< HEAD
-    valid: boolean
-    missing: string[],}
-  }, {}
-=======
-    valid: boolean;,
-      missing: string[],}
-  } {}
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     const missing: string[] = [],
     for (const varName of requiredVars) {}
       if (!this.config[varName]) {}

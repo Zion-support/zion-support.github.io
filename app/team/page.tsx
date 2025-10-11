@@ -5,10 +5,6 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 <<<<<<< HEAD
 const TeamPage: React.FC = () => {
-<<<<<<< HEAD
-    return ()
-  )
-=======
     return (
     <>
       <Helmet>
@@ -55,7 +51,6 @@ const TeamPage: React.FC = () => {,
 <<<<<<< HEAD
         <Footer />)
     </>,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
 };
 =======

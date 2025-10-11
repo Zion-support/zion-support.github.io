@@ -973,94 +973,11 @@ export function getConnectionType(): string {
   return connection.effectiveType || connection.type || 'unknown';
 }
 
-export default {
-  init: initPerformanceMonitoring
-  measure: measurePerformance
-  mark: markPerformance,
-  measureBetween,
-  getNavigationTiming,
-  getResourceTiming,
-  getSlowResources,
-  getMemoryUsage,
-  generateReport: generatePerformanceReport,
-  monitorLongTasks,
-  monitorLayoutShifts,
-  isSlowConnection}
-  getPerformanceScore;
-}
-}
-  return connection?.effectiveType || null;
-}
+};
 
-// Export all functions;
-export {
-  type PerformanceMetric,
-  type PerformanceReport,
-  getRating,
-  sendToAnalytics}
-  getPerformanceScore;
-}
-    userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : ''}
-}
-/**
- * Check if performance is within acceptable thresholds;
- */
- * Check if performance is within acceptable limits;
- */
-export function isPerformanceAcceptable(): boolean {
-    // This would typically check against stored metrics;
-  // For now, return true as a placeholder;
-  return true;
-export function isPerformanceMonitoringSupported(): boolean {
-  return typeof window !== 'undefined' && 'performance' in window
-  }
-}
-    id: metric.id,
-  }
 
-  // Send to analytics service;
-//   // You can send this to your analytics service;
-  // analytics.track('performance_metric', performanceMetric);
-}
+};
 
-// Initialize performance monitoring;
-export function initPerformanceMonitoring() {
-    onCLS(reportMetric);
-  // onFID is deprecated, using onINP instead;
-  // onFID(reportMetric);
-  onFCP(reportMetric);
-  onLCP(reportMetric);
-  onTTFB(reportMetric)
-  }
 
-export function generatePerformanceReport(): PerformanceReport {
-  return {
-    metrics: [],
-    timestamp: new Date().toISOString(),
-    url: typeof window !== 'undefined' ? window.location.href : '',
-    userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : ''}
-}
-  getConnectionType;
-}
-  getConnectionType;
-}
-  getConnectionType;
-}
-  getConnectionType;
-}
-}
-  getConnectionType;
-}
- * Performance monitoring hook for React components;
- */
-export function usePerformanceMonitoring() {
-    if (typeof window === 'undefined') return;
-
-  // Initialize monitoring on mount;
-  initPerformanceMonitoring()
-  }
-  getConnectionType}
-}
-  getConnectionType}
 
 export default performanceUtils;

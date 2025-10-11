@@ -43,17 +43,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
     // Fix function declarations;
     content = content.replace(
-      /export default function (\w+)\(\) \{/,
-      'const $1: React.FC = () => {'
-    );
-
-    // Add proper export at the end if missing;
-    if (!content.includes('export default') && content.includes('const ')) {,
-      //       const componentName = content.match(/const (\w+): React\.FC/)?.[1];,
-      if (componentName) {,
-    content = content.replace()
-      /export default function (\w+)\(\) \{/* TODO: Fix JSX expression */}
-        content = content.replace(/^\s*}\s*$/, `  );\n};\n\nexport default ${componentName};`);
+      /export default ${componentName};`);
         modified = true;
       }
     }

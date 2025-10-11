@@ -1034,7 +1034,7 @@ $4});
     if (this.state.hasError) {
       return (
         this.props.fallback || (
-          <div style={{ padding: '20px', textAlign: 'center' }}><h2>Something went wrong</h2><p>We're sorry, but something unexpected happened.</p><button
+          <div style={{ padding: '20px', textAlign: 'center' }}></div><h2>Something went wrong</h2><p>We're sorry, but something unexpected happened.</p><button
               onClick={() => this.setState({ hasError: false, error: undefined })}
               style={{
                 padding: '10px 20px',
@@ -1088,7 +1088,7 @@ export class ErrorBoundary extends React.Component;
 }
       return (
 this.props.fallback || (
-          <div style={{ padding: '20px', textAlign: 'center' }}><h2>Something went wrong</h2><p>We're sorry, but something unexpected happened.</p><button
+          <div style={{ padding: '20px', textAlign: 'center' }}></div><h2>Something went wrong</h2><p>We're sorry, but something unexpected happened.</p><button
               onClick={() => this.setState({ hasError: false, error: undefined })}
               style={{}
   // TOD,
@@ -1147,54 +1147,11 @@ export const useErrorHandler = () => {
     clearResolvedErrors: () => errorHandler.clearResolvedErrors()
   }
 }
-export default ErrorHandler;
-// React hook for error handling;
-export const useErrorHandler = () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  const errorHandler = ErrorHandler.getInstance();
-  const handleError = useCallback()
-    (erro,
-  r: Error, context?: Record;)
-          <string, unknown>) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      return errorHandler.handleError(error, undefined, context);
-    },
-//     [errorHandler]
-  )
-  const handleNetworkError = useCallback()
-    (error: Error, url: string, status?: number) => {
-    // TODO: Add content
-  }
-}
-      return errorHandler.handleNetworkError(error, url, status);
-    },
-//     [errorHandler]
-  )
-  const handleValidationError = useCallback()
-    (field: string, message: string, value?: unknown) => {
-    // TODO: Add content
-  }
-}
-      return errorHandler.handleValidationError(field, message, value);
-    },
-//     [errorHandler]
-  );
-  return {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//     handleError,
-//     handleNetworkError,
-//     handleValidationError,
-    getError,
-  s: () => errorHandler.getErrors(),
-    getErrorStatistic,
-  s: () => errorHandler.getErrorStatistics(),
-    clearResolvedError,
-  s: () => errorHandler.clearResolvedErrors()
-  }
-}
+};
+
+};
+
+
 export default ErrorHandler;"`
   </div>
   </div>

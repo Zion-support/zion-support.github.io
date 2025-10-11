@@ -28,10 +28,6 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
 =======
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-0c44
     'Proven track record of success';
-<<<<<<< HEAD
-  ];
-return ()
-=======
   ];];];
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div></div>
@@ -46,4 +42,3 @@ return (
 };
 
 export default PWAInstallerPage;)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6

@@ -82,60 +82,12 @@ function createPerformanceMonitor() {/* TODO: Fix JSX expression */}
 interface PerformanceMetrics {/* TODO: Fix JSX expression */}
 }
 
-export default PerformanceMonitor;`
-`;
+};
 
-  fs.writeFileSync('app/components/PerformanceMonitor.tsx', performanceMonitorContent);
-  // console.log('✅ Created PerformanceMonitor component');
-}
 
-// Function to optimize images;
-function createImageOptimization() {
-function createImageOptimization() {/* TODO: Fix JSX expression */}
-}`
-  const imageOptimizationContent = `import React from 'react';
+};
 
-interface OptimizedImageProps {/* TODO: Fix JSX expression */}
-}
 
-const OptimizedImage: React.FC<OptimizedImageProps> = ({
-    ,
-  src;
-  alt,
-  width,
-  height,
-  className = '',
-  priority = false
-  }) => {
-  return(<img;
-      src={src}
-      alt={alt}
-      width={width}
-      height={height})
-      className={\`\${className}\`})
-      loading={priority ? 'eager' : 'lazy'})
-      decoding="async")
-      style={{})
-        width: width ? \`\${width}px\` : 'auto')
-        height: height ? \`\${height}px\` : 'auto'
-const,
-  OptimizedImage: React.FC<OptimizedImageProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
-      src={src}
-      alt={alt}
-      width={width}
-      height={height}`
-      className={\`\${className}\`}
-      loading={priority ? 'eager' : 'lazy'}
-      decoding="async"
-      style={/* TODO: Fix JSX expression */}`
-  h: width ? \`\${width}px\` : 'auto',
-        heigh,`
-  t: height ? \`\${height}px\` : 'auto'
-      }}
-    /></img>
-  );
-}
 
 export default OptimizedImage;`
 `;

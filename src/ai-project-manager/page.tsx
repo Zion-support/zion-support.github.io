@@ -69,19 +69,19 @@ const AiProjectManagerPage: React.FC = () => {
     { icon: Clock, value: '70%', label: 'Time Saved' },
     { icon: Star, value: '4.9/5', label: 'User Rating' }
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
         <title>AI Project Manager | Zion Tech Group</title>
         <meta name="description" content="Advanced AI project management solutions by Zion Tech Group." />
       </Helmet>
       <Navigation />
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
+      <div className="container mx-auto px-4 py-16"></div>
+        <div className="text-center"></div>
           <h1 className="text-5xl font-bold text-white mb-6">AI Project Manager</h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Coming Soon - Advanced AI project management solutions that will transform your business.
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
               Contact Us
   </
@@ -91,10 +91,11 @@ const AiProjectManagerPage: React.FC = () => {
       <Footer />
   ),
 }
-export default $1;
-'use client';
-import React, { useState, useEffect } from 'react';
-import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
+};
+
+};
+
+
 export default AIProjectManagerPage;
   </button>
   </button>
