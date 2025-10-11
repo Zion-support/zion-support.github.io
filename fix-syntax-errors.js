@@ -1,217 +1,125 @@
+#!/usr/bin/env node
+
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// List of files that need to be fixed with their basic structure
-const filesToFix = [
-  'app/ai-content-studio/page.tsx',
-  'app/ai-crm-assistant/page.tsx',
-  'app/ai-hr-solutions/page.tsx',
-  'app/ai-knowledge-management/page.tsx',
-  'app/ai-recruitment-assistant/page.tsx',
-  'app/ai-sentiment-analysis/page.tsx',
-  'app/ai-voice-solutions/page.tsx',
-  'app/analytics-tools/page.tsx',
-  'app/api-development/page.tsx',
-  'app/api-docs/page.tsx',
-  'app/api/page.tsx'
-];
-
-const baseTemplate = `'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { Brain, BarChart, CheckCircle, ArrowRight, Zap, Shield, Target } from 'lucide-react';
-
-const PageComponent: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart automation', 'Predictive analytics', 'Intelligent insights', 'Automated processes']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time monitoring', 'Performance metrics', 'Data visualization', 'Custom reports']
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing with optimized algorithms and infrastructure.',
-      benefits: ['Fast processing', 'Optimized algorithms', 'Scalable infrastructure', 'High availability']
-    },
-    {
-      icon: Shield,
-      title: 'Secure & Reliable',
-      description: 'Enterprise-grade security and reliability for mission-critical applications.',
-      benefits: ['Data encryption', 'Access control', 'Audit logging', 'Compliance ready']
+// Function to fix common syntax errors in TSX files
+function fixSyntaxErrors(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+    
+    // Fix missing closing tags and brackets
+    const lines = content.split('\n');
+    const fixedLines = [];
+    let openTags = [];
+    let braceCount = 0;
+    let parenCount = 0;
+    
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      const trimmed = line.trim();
+      
+      // Count opening and closing braces
+      for (const char of line) {
+        if (char === '{') braceCount++;
+        if (char === '}') braceCount--;
+        if (char === '(') parenCount++;
+        if (char === ')') parenCount--;
+      }
+      
+      // Track JSX tags
+      const openTagMatch = trimmed.match(/<(\w+)(?:\s[^>]*)?(?!\/)>/);
+      const closeTagMatch = trimmed.match(/<\/(\w+)>/);
+      
+      if (openTagMatch && !trimmed.includes('/>')) {
+        openTags.push(openTagMatch[1]);
+      }
+      
+      if (closeTagMatch) {
+        const tagName = closeTagMatch[1];
+        const lastIndex = openTags.lastIndexOf(tagName);
+        if (lastIndex !== -1) {
+          openTags.splice(lastIndex, 1);
+        }
+      }
+      
+      fixedLines.push(line);
     }
-  ];
+    
+    // Add missing closing tags at the end
+    while (openTags.length > 0) {
+      const tag = openTags.pop();
+      fixedLines.push(`</${tag}>`);
+      modified = true;
+    }
+    
+    // Add missing closing braces
+    while (braceCount > 0) {
+      fixedLines.push('}');
+      braceCount--;
+      modified = true;
+    }
+    
+    // Add missing closing parentheses
+    while (parenCount > 0) {
+      fixedLines.push(')');
+      parenCount--;
+      modified = true;
+    }
+    
+    if (modified) {
+      const fixedContent = fixedLines.join('\n');
+      fs.writeFileSync(filePath, fixedContent, 'utf8');
+      console.log(`Fixed syntax errors in: ${filePath}`);
+      return true;
+    }
+    
+    return false;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
+  }
+}
 
-  const benefits = [
-    'Enhanced productivity and efficiency',
-    'Reduced operational costs',
-    'Improved decision making',
-    'Scalable solutions',
-    '24/7 availability',
-    'Expert support'
-  ];
-
-  return (
-    <>
-      <Helmet>
-        <title>Page Title - Zion Tech Group</title>
-        <meta name="description" content="Description of the page and its benefits." />
-        <meta name="keywords" content="relevant, keywords, for, seo" />
-      </Helmet>
-
-      <Navigation />
-
-      <main className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Page Title
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Description of the page and its benefits for your business.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Get Started
-                </button>
-                <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Key Features
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Advanced technology that drives results
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Why Choose Our Solution?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Proven results that drive business growth
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <CheckCircle className="w-8 h-8 text-white" />
-                  </div>
-                  <p className="text-lg text-white font-medium">{benefit}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Contact our experts to discuss your requirements and get started today.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Contact Us
-                </button>
-                <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <Footer />
-    </>
-  );
-};
-
-export default PageComponent;`;
-
-filesToFix.forEach(filePath => {
-  const fullPath = path.join(__dirname, filePath);
-  const dir = path.dirname(fullPath);
+// Function to find files with syntax errors
+function findFilesWithSyntaxErrors(dir) {
+  const files = [];
   
-  // Ensure directory exists
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
+          traverse(fullPath);
+        }
+      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts'))) {
+        files.push(fullPath);
+      }
+    }
   }
   
-  // Generate component name from file path
-  const componentName = filePath
-    .split('/')
-    .pop()
-    .replace('.tsx', '')
-    .split('-')
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join('') + 'Page';
-  
-  // Replace PageComponent with actual component name
-  const content = baseTemplate.replace(/PageComponent/g, componentName);
-  
-  // Write the file
-  fs.writeFileSync(fullPath, content);
-  console.log(`Fixed: ${filePath}`);
-});
+  traverse(dir);
+  return files;
+}
 
-console.log('All files have been fixed!');
+// Main execution
+console.log('Starting syntax error fixes...');
+
+// Find all TSX/TS files
+const files = findFilesWithSyntaxErrors('/workspace');
+console.log(`Checking ${files.length} files for syntax errors`);
+
+let fixedCount = 0;
+for (const file of files) {
+  if (fixSyntaxErrors(file)) {
+    fixedCount++;
+  }
+}
+
+console.log(`Fixed syntax errors in ${fixedCount} files`);
+console.log('Syntax error fixes complete!');

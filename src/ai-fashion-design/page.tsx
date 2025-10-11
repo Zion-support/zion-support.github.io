@@ -1,168 +1,160 @@
-import React from 'react'
-import { Palette, Camera, Download, Share, Star, CheckCircle, Zap, Clock, Users, Award, ArrowRight, Sparkles } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import SEOOptimizer from '../components/SEOOptimizer'
-const AIFashionDesignPage: React.FC = () => {
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
+const Page: React.FC = () => {
   const features = [
-    'Design Generation',
-    'Trend Analysis',
-    'Color Matching',
-    'Size Optimization',
-    'Market Research',
-    'Style Recommendations',
-    'Fabric Suggestions',
-    'Pattern Creation',
-    '3D Visualization',
-    'Cost Estimation'
-  ]
-  const benefits = [
-    'Faster design cycles',
-    'Trend accuracy',
-    'Cost reduction',
-    'Market insights',
-    'Creative inspiration',
-    'Competitive advantage'
-  ]
-  const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$249',
-      period: '/month',
-      features: ['10 designs/month', 'Basic trends', 'Email support', 'Standard quality'],
-      popular: false
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence technology to transform your business operations.',
+      benefits: ['Machine learning', 'Natural language processing', 'Predictive analytics', 'Automated insights']
     },
     {
-      name: 'Professional',
-      price: '$349',
-      period: '/month',
-      features: ['Unlimited designs', 'Advanced trends', '3D visualization', 'API access', 'Priority support'],
-      popular: true
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
     {
-      name: 'Enterprise',
-      price: '$699',
-      period: '/month',
-      features: ['Everything in Pro', 'Custom models', 'White-label', 'Dedicated support', 'Market intelligence'],
-      popular: false
+      icon: TrendingUp,
+      title: 'Performance Optimization',
+      description: 'AI-powered insights to optimize your business performance.',
+      benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     }
-  ]
+  ];
+
+  const benefits = [
+    'Increase efficiency by up to 80%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Real-time processing and analysis',
+    'Seamless integration with existing systems'
+  ];
+
   return (
-    <React.Fragment>
-      <SEOOptimizer
-        title="AI Fashion Designer - AI-Powered Fashion Design & Trend Analysis | Zion Tech Group"
-        description="Revolutionize fashion design with AI Fashion Designer. Generate designs, analyze trends, and optimize collections with AI-powered fashion technology starting at $249/month."
-        keywords={['AI fashion design', 'fashion trends', 'design generation', 'fashion AI', 'trend analysis', 'fashion technology']}
-        canonicalUrl="https://ziontechgroup.com/ai-fashion-design"
-      />
+    <>
+      <Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Advanced  solutions powered by artificial intelligence and cutting-edge technology." />
+        <meta name="keywords" content="AI, , artificial intelligence, business solutions, automation" />
+      </Helmet>
+      <Navigation />
+      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-        <main className="container mx-auto px-4 py-16 pt-24">
-          {/* Hero Section */}
-          <section className="text-center mb-16">
-            <div className="max-w-4xl mx-auto">
-              <div className="flex items-center justify-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mr-4">
-                  <Palette className="w-8 h-8 text-white" />
-                <h1 className="text-4xl md:text-5xl font-bold text-white neon-text">
-                  AI Fashion Designer
-              <p className="text-xl text-gray-300 mb-8">
-                AI-powered fashion design and trend prediction for retail businesses
+        {/* Hero Section */}
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Page <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Solutions</span>
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Transform your business with our advanced AI-powered solutions designed for modern enterprises.
+              </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <$2 />
-                  href="/contact"
-                  className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300">
-                  Start Free Trial
-                <$2 />
-                  href="#demo"
-                  className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
-                  <Camera className="w-5 h-5" />
-                  View Gallery
-          {/* Features Section */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              AI Fashion Design Features
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <button className="cyber-button">
+                  Get Started <ArrowRight className="ml-2 h-5 w-5" />
+                </button>
+                <button className="cyber-button-secondary">
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose Our Solutions?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our comprehensive suite of AI-powered tools and services are designed to drive your business forward.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
-                  <div className="flex items-center mb-4">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    <h3 className="text-lg font-semibold text-white">{feature}
+                <div key={index} className="cyber-card">
+                  <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg mb-4">
+                    <feature.icon className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-400">
+                        <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               ))}
-          {/* Benefits Section */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Why Choose AI Fashion Designer?
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-black/20">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Key Benefits
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience the power of AI-driven solutions that deliver measurable results.
+              </p>
+            </div>
+            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Zap className="w-8 h-8 text-white" />
-                  <h3 className="text-lg font-semibold text-white mb-2">{benefit}
+                <div key={index} className="flex items-start">
+                  <CheckCircle className="h-6 w-6 text-green-400 mr-3 mt-1 flex-shrink-0" />
+                  <p className="text-gray-300">{benefit}</p>
+                </div>
               ))}
-          {/* Pricing Section */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Simple, Transparent Pricing
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {pricingPlans.map((plan, index) => (
-                <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
-                  {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <div className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold">
-                        Most Popular
-                  )}
-                  <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}
-                    <div className="flex items-baseline justify-center">
-                      <span className="text-4xl font-bold text-cyan-400">{plan.price}
-                      <span className="text-gray-400 ml-1">{plan.period}
-                  <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                        {feature}
-                    ))}
-                  <$2 />
-                    href="/contact"
-                    className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
-                      plan.popular
-                        ? 'cyber-button'
-                        : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
-                    }`}
-                  >
-                    Get Started
-              ))}
-          {/* CTA Section */}
-          <section className="text-center mb-16">
-            <div className="cyber-card p-12 max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-white mb-4 neon-text">
-                Ready to Revolutionize Fashion Design?
-              <p className="text-xl text-gray-300 mb-8">
-                Join leading fashion brands using AI design technology</span>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">
-                <$2 />
-                  href="/contact"
-                  className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300">
-                  Start Your Free Trial
-                <$2 />
-                  href="tel:+13024640950"
-                  className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
-                  <span>Call +1 302 464 0950
-        <Footer />
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join thousands of companies already using our AI-powered solutions to drive growth and innovation.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="cyber-button">
+                Start Your Journey <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="cyber-button-secondary">
+                Schedule Consultation
+              </button>
+            </div>
+          </div>
+        </section>
       </div>
-    </React.Fragment>
-  ),
-}
-export default AIFashionDesignPage</a>
-  </p>
-  </a>
-  </h2>
-  </h2>
-  </a>
-  </a>
-  </p>
-  </h1>
-  </div>
-  </SEOOptimizer>
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></h2></h2></h3></h3></h3></ul></li></main></section></section></section></section></section>
+      
+      <Footer />
+    </>
+  );
+};
+
+export default Page;

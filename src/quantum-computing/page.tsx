@@ -1,85 +1,160 @@
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-const QuantumComputingPage: React.FC = () => {
-    return (
-    <React.Fragment>
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
+const Page: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence technology to transform your business operations.',
+      benefits: ['Machine learning', 'Natural language processing', 'Predictive analytics', 'Automated insights']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Performance Optimization',
+      description: 'AI-powered insights to optimize your business performance.',
+      benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    }
+  ];
+
+  const benefits = [
+    'Increase efficiency by up to 80%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Real-time processing and analysis',
+    'Seamless integration with existing systems'
+  ];
+
+  return (
+    <>
       <Helmet>
-        <title>Quantum Computing Solutions - Zion Tech Group
-        <meta name="description" content="Next-generation quantum computing capabilities for complex problem solving and optimization. Harness the power of quantum mechanics for your business." />
-        <meta name="keywords" content="quantum computing, quantum algorithms, quantum optimization, quantum machine learning" />
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Advanced  solutions powered by artificial intelligence and cutting-edge technology." />
+        <meta name="keywords" content="AI, , artificial intelligence, business solutions, automation" />
+      </Helmet>
       <Navigation />
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 neon-text">
-              Quantum Computing
-            <p className="text-xl text-cyan-400 mb-8">
-              Next-generation computing power for complex problem solving
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-            <div>
-              <h2 className="text-3xl font-bold text-white mb-6">Unlock Quantum Potential
-              <p className="text-gray-300 mb-6 text-lg">
-                Our quantum computing solutions leverage the principles of quantum mechanics to solve 
-                complex optimization problems that are intractable for classical computers.
-              <ul className="space-y-4 text-gray-300">
-                <li className="flex items-center">
-                  <span className="text-cyan-400 mr-3">✓</span>
-                  Quantum optimization algorithms
-                <li className="flex items-center">
-                  <span className="text-cyan-400 mr-3">✓</span>
-                  Quantum machine learning
-                <li className="flex items-center">
-                  <span className="text-cyan-400 mr-3">✓</span>
-                  Cryptography and security
-                <li className="flex items-center">
-                  <span className="text-cyan-400 mr-3">✓</span>
-                  Financial modeling
-  
-              </ul>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Page <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Solutions</span>
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Transform your business with our advanced AI-powered solutions designed for modern enterprises.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="cyber-button">
+                  Get Started <ArrowRight className="ml-2 h-5 w-5" />
+                </button>
+                <button className="cyber-button-secondary">
+                  Learn More
+                </button>
+              </div>
             </div>
-            <div className="bg-gradient-to-r from-purple-500/20 to-cyan-500/20 p-8 rounded-lg">
-              <h3 className="text-2xl font-bold text-white mb-4">Quantum Applications
-              <div className="space-y-4">
-                <div className="bg-white/10 p-4 rounded-lg">
-                  <h4 className="text-lg font-semibold text-purple-400 mb-2">Portfolio Optimization
-                  <p className="text-gray-300">Optimize investment portfolios with quantum algorithms
-                <div className="bg-white/10 p-4 rounded-lg">
-                  <h4 className="text-lg font-semibold text-purple-400 mb-2">Drug Discovery
-                  <p className="text-gray-300">Accelerate pharmaceutical research with quantum simulation
-                <div className="bg-white/10 p-4 rounded-lg">
-                  <h4 className="text-lg font-semibold text-purple-400 mb-2">Supply Chain
-                  <p className="text-gray-300">Optimize complex logistics and supply chain networks
-          <div className="text-center">
-            <h2 className="text-3xl font-bold text-white mb-8">Ready for Quantum Computing?
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose Our Solutions?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our comprehensive suite of AI-powered tools and services are designed to drive your business forward.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="cyber-card">
+                  <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg mb-4">
+                    <feature.icon className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-400">
+                        <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-black/20">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Key Benefits
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience the power of AI-driven solutions that deliver measurable results.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start">
+                  <CheckCircle className="h-6 w-6 text-green-400 mr-3 mt-1 flex-shrink-0" />
+                  <p className="text-gray-300">{benefit}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join thousands of companies already using our AI-powered solutions to drive growth and innovation.
+            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <$2 />
-                href="/contact"
-                className="bg-gradient-to-r from-purple-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-cyan-700 transition-all duration-300">
-                Explore Quantum Solutions
-  
-              <$2 />
-                href="/consultation"
-                className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300">
-                Schedule Consultation,
-  
+              <button className="cyber-button">
+                Start Your Journey <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="cyber-button-secondary">
+                Schedule Consultation
+              </button>
             </div>
           </div>
-        </div>
-      </main>
+        </section>
+      </div>
+      
       <Footer />
-    </React.Fragment>
-  )
-  }
-export default QuantumComputingPage</a>
-  </a>
-  </li>
-  </li>
-  </li>
-  </li>
-  </p>
-  </h1>
-</div></div></div></div></div></div></p></p></p></p></h2></h2></h3></h4></h4></h4>
+    </>
+  );
+};
+
+export default Page;

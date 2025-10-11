@@ -1,203 +1,160 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { Users, Award, Brain, Shield, Linkedin, Mail, Github, Twitter } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-const TeamPage: React.FC = () => {
-  const teamMembers = [
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
+const Page: React.FC = () => {
+  const features = [
     {
-      name: 'Kleber Santos',
-      role: 'CEO & Founder',
-      bio: 'AI and technology visionary with 15+ years of experience in enterprise solutions',
-      image: '/api/placeholder/300/300',
-      linkedin: 'https://linkedin.com/in/kleber-santos',
-      email: 'kleber@ziontechgroup.com',
-      expertise: ['AI Strategy', 'Leadership', 'Innovation']
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence technology to transform your business operations.',
+      benefits: ['Machine learning', 'Natural language processing', 'Predictive analytics', 'Automated insights']
     },
     {
-      name: 'Dr. Sarah Chen',
-      role: 'Chief AI Officer',
-      bio: 'PhD in Machine Learning, leading our AI research and development initiatives',
-      image: '/api/placeholder/300/300',
-      linkedin: 'https://linkedin.com/in/sarah-chen-ai',
-      email: 'sarah@ziontechgroup.com',
-      expertise: ['Machine Learning', 'Deep Learning', 'Research']
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
     {
-      name: 'Dr. Emily Watson',
-      role: 'Head of Data Science',
-      bio: 'Data science expert specializing in predictive analytics and business intelligence',
-      image: '/api/placeholder/300/300',
-      linkedin: 'https://linkedin.com/in/emily-watson-data',
-      email: 'emily@ziontechgroup.com',
-      expertise: ['Data Science', 'Analytics', 'Statistics']
+      icon: TrendingUp,
+      title: 'Performance Optimization',
+      description: 'AI-powered insights to optimize your business performance.',
+      benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']
     },
     {
-      name: 'Lisa Thompson',
-      role: 'Head of Client Success',
-      bio: 'Client success specialist ensuring exceptional customer experience and satisfaction',
-      image: '/api/placeholder/300/300',
-      linkedin: 'https://linkedin.com/in/lisa-thompson-success',
-      email: 'lisa@ziontechgroup.com',
-      expertise: ['Client Relations', 'Project Management', 'Customer Success']
-    },
-    {
-      name: 'Michael Rodriguez',
-      role: 'Lead Software Engineer',
-      bio: 'Full-stack developer with expertise in scalable cloud architectures and microservices',
-      image: '/api/placeholder/300/300',
-      linkedin: 'https://linkedin.com/in/michael-rodriguez-dev',
-      email: 'michael@ziontechgroup.com',
-      expertise: ['Software Engineering', 'Cloud Architecture', 'DevOps']
-    },
-    {
-      name: 'Dr. James Park',
-      role: 'Head of Cybersecurity',
-      bio: 'Cybersecurity expert with 12+ years protecting enterprise systems and data',
-      image: '/api/placeholder/300/300',
-      linkedin: 'https://linkedin.com/in/james-park-security',
-      email: 'james@ziontechgroup.com',
-      expertise: ['Cybersecurity', 'Risk Assessment', 'Compliance']
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     }
-  ]
-  const stats = [
-    { icon: Users, label: 'Team Members', value: '50+' },
-    { icon: Award, label: 'Awards Won', value: '25+' },
-    { icon: Brain, label: 'Years Experience', value: '15+' },
-    { icon: Shield, label: 'Client Satisfaction', value: '99%' }
-  ]
-  const values = [
-    {
-      title: 'Innovation',
-      description: 'We constantly push the boundaries of what\'s possible with AI and technology.',
-      icon: Brain
-    },
-    {
-      title: 'Excellence',
-      description: 'We strive for the highest quality in everything we do, from code to customer service.',
-      icon: Award
-    },
-    {
-      title: 'Collaboration',
-      description: 'We believe in the power of teamwork and diverse perspectives to solve complex problems.',
-      icon: Users
-    },
-    {
-      title: 'Security',
-      description: 'We prioritize the security and privacy of our clients\' data and systems.',
-      icon: Shield
-    }
-  ]
+  ];
+
+  const benefits = [
+    'Increase efficiency by up to 80%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Real-time processing and analysis',
+    'Seamless integration with existing systems'
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
+      <Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Advanced  solutions powered by artificial intelligence and cutting-edge technology." />
+        <meta name="keywords" content="AI, , artificial intelligence, business solutions, automation" />
+      </Helmet>
       <Navigation />
-      {/* Hero Section */}
-      <section className="relative py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Meet Our <span className="text-cyan-400">Team
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            The brilliant minds behind our innovative AI and IT solutions. We're passionate about technology and dedicated to your success.
-      {/* Stats Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="w-8 h-8 text-white" />
-                <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}
-                <div className="text-gray-600 font-medium">{stat.label}
-            ))}
-      {/* Team Members */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Leadership Team
-  
-            <p className="text-xl text-gray-600">
-              Experienced professionals leading the future of AI and IT solutions,
-  
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Page <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Solutions</span>
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Transform your business with our advanced AI-powered solutions designed for modern enterprises.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="cyber-button">
+                  Get Started <ArrowRight className="ml-2 h-5 w-5" />
+                </button>
+                <button className="cyber-button-secondary">
+                  Learn More
+                </button>
+              </div>
+            </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {teamMembers.map((member, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                <div className="h-64 bg-gradient-to-br from-cyan-100 to-blue-100 flex items-center justify-center">
-                  <div className="w-32 h-32 bg-gray-300 rounded-full flex items-center justify-center">
-                    <Users className="w-16 h-16 text-gray-600" />
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}
-                  <p className="text-cyan-600 font-semibold mb-3">{member.role}
-                  <p className="text-gray-600 mb-4">{member.bio}
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-gray-900 mb-2">Expertise
-                    <div className="flex flex-wrap gap-2">
-                      {member.expertise.map((skill, skillIndex) => (
-                        <span key={skillIndex} className="bg-cyan-100 text-cyan-800 text-xs px-2 py-1 rounded-full">
-                          {skill}
-                      ))}
-                  <div className="flex space-x-3">
-                    <$2 />
-                      href={member.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-400 hover:text-cyan-600 transition-colors">
-                      <Linkedin className="w-5 h-5" />
-                    <$2 />
-                      href={`mailto:${member.email}`}
-                      className="text-gray-400 hover:text-cyan-600 transition-colors">
-                      <Mail className="w-5 h-5" />
-            ))}
-      {/* Values Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Values
-  
-            <p className="text-xl text-gray-600">
-              The principles that guide our team and our work,
-  
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose Our Solutions?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our comprehensive suite of AI-powered tools and services are designed to drive your business forward.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="cyber-card">
+                  <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg mb-4">
+                    <feature.icon className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-400">
+                        <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <value.icon className="w-8 h-8 text-white" />
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{value.title}
-                <p className="text-gray-600">{value.description}
-            ))}
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Join Our Team
-          <p className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto">
-            We're always looking for talented individuals who share our passion for innovation and excellence.
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <$2 />
-              to="/careers"
-              className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
-              View Open Positions
-  
-            <$2 />
-              to="/contact"
-              className="bg-transparent text-white px-8 py-4 rounded-lg text-lg font-semibold border-2 border-white hover:bg-white hover:text-cyan-600 transition-all duration-300">
-              Get in Touch
-  
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-black/20">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Key Benefits
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience the power of AI-driven solutions that deliver measurable results.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start">
+                  <CheckCircle className="h-6 w-6 text-green-400 mr-3 mt-1 flex-shrink-0" />
+                  <p className="text-gray-300">{benefit}</p>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join thousands of companies already using our AI-powered solutions to drive growth and innovation.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="cyber-button">
+                Start Your Journey <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="cyber-button-secondary">
+                Schedule Consultation
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      
       <Footer />
-    </div>
-  ),
-}
-export default TeamPage</Link>
-  </Link>
-  </h2>
-  </p>
-  </h2>
-  </p>
-  </h2>
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></p></p></p></p></p></h1></h3></h3></h4></section></section></section></section>
+    </>
+  );
+};
+
+export default Page;

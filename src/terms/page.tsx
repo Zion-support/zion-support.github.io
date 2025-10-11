@@ -1,242 +1,160 @@
-'use client'
-import React from 'react'
-import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe, User, Mail, Phone, Calendar, Lock, Database, Server, Key } from 'lucide-react'
-export default function TermsPage() {
-  const lastUpdated = 'January 1, 2024'
-  const sections = [
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
+const Page: React.FC = () => {
+  const features = [
     {
-      title: 'Acceptance of Terms',
-      icon: CheckCircle,
-      content: 'By accessing and using our website and services, you accept and agree to be bound by the terms and provision of this agreement.'
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence technology to transform your business operations.',
+      benefits: ['Machine learning', 'Natural language processing', 'Predictive analytics', 'Automated insights']
     },
     {
-      title: 'Use License',
-      icon: Key,
-      content: 'Permission is granted to temporarily download one copy of the materials on our website for personal, non-commercial transitory viewing only.'
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
     {
-      title: 'Service Availability',
-      icon: Server,
-      content: 'We strive to maintain 99.9% uptime for our services, but we do not guarantee uninterrupted access and reserve the right to modify or discontinue services.'
+      icon: TrendingUp,
+      title: 'Performance Optimization',
+      description: 'AI-powered insights to optimize your business performance.',
+      benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']
     },
     {
-      title: 'User Responsibilities',
-      icon: User,
-      content: 'Users are responsible for maintaining the confidentiality of their account information and for all activities that occur under their account.'
-    },
-    {
-      title: 'Intellectual Property',
-      icon: FileText,
-      content: 'All content, trademarks, and intellectual property on our website are owned by Zion Tech Group and protected by applicable copyright and trademark laws.'
-    },
-    {
-      title: 'Limitation of Liability',
-      icon: Shield,
-      content: 'In no event shall Zion Tech Group be liable for any damages arising out of the use or inability to use our services.'
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     }
-  ]
-  const prohibitedUses = [
-    'Violating any applicable laws or regulations',
-    'Transmitting malicious code or harmful content',
-    'Attempting to gain unauthorized access to our systems',
-    'Interfering with the proper functioning of our services',
-    'Using our services for illegal or unauthorized purposes',
-    'Impersonating another person or entity',
-    'Collecting user information without consent',
-    'Engaging in any form of harassment or abuse'
-  ]
-  const serviceLevels = [
-    {
-      service: 'AI Services',
-      uptime: '99.9%',
-      support: '24/7',
-      response: '1 hour'
-    },
-    {
-      service: 'IT Infrastructure',
-      uptime: '99.95%',
-      support: '24/7',
-      response: '30 minutes'
-    },
-    {
-      service: 'Cloud Services',
-      uptime: '99.9%',
-      support: '24/7',
-      response: '1 hour'
-    },
-    {
-      service: 'Support Services',
-      uptime: 'N/A',
-      support: 'Business Hours',
-      response: '4 hours'
-    }
-  ]
+  ];
+
+  const benefits = [
+    'Increase efficiency by up to 80%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Real-time processing and analysis',
+    'Seamless integration with existing systems'
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}
-      <section className="relative py-20 lg: py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
-              Terms of Service,
-  
-            <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Please read these terms carefully before using our services. By using our services, you agree to be bound by these terms.
-            <div className="flex flex-wrap justify-center gap-4">
-              <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg">
-                <Scale className="w-5 h-5 text-cyan-400" />
-                <span className="text-white font-medium">Legal Agreement
-              <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg">
-                <Shield className="w-5 h-5 text-purple-400" />
-                <span className="text-white font-medium">Protection
-              <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg">
-                <CheckCircle className="w-5 h-5 text-green-400" />
-                <span className="text-white font-medium">Transparent
-      {/* Last Updated */}
-      <section className="py-8">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-slate-800/50 rounded-lg p-6 text-center">
-              <p className="text-gray-300">
-                <strong>Last Updated:</strong> {lastUpdated}
-              <p className="text-sm text-gray-400 mt-2">
-                These terms may be updated from time to time. Continued use of our services constitutes acceptance of any changes.
-      {/* Key Terms */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-12 text-center">Key Terms
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {sections.map((section, index) => (
-                <div key={index} className="bg-slate-800/50 rounded-lg p-6">
-                  <div className="flex items-center space-x-3 mb-4">
-                    <section.icon className="w-8 h-8 text-cyan-400" />
-                    <h3 className="text-xl font-bold text-white">{section.title}
-                  <p className="text-gray-300 text-sm">{section.content}
-              ))}
-      {/* Prohibited Uses */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">Prohibited Uses
-            <p className="text-gray-300 mb-8 text-center">
-              You may not use our services for any unlawful purpose or to solicit others to perform unlawful acts.
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {prohibitedUses.map((use, index) => (
-                <div key={index} className="flex items-start space-x-3">
-                  <AlertTriangle className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />
-                  <span className="text-gray-300">{use}
-              ))}
-      {/* Service Level Agreements */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-12 text-center">Service Level Agreements
-            <div className="overflow-x-auto">
-              <table className="w-full bg-slate-800/50 rounded-lg overflow-hidden">
-                <thead>
-                  <tr className="bg-slate-700/50">
-                    <th className="px-6 py-4 text-left text-white font-semibold">Service
-                    <th className="px-6 py-4 text-left text-white font-semibold">Uptime
-                    <th className="px-6 py-4 text-left text-white font-semibold">Support
-                    <th className="px-6 py-4 text-left text-white font-semibold">Response Time
-                <tbody>
-                  {serviceLevels.map((level, index) => (
-                    <tr key={index} className="border-t border-gray-700">
-                      <td className="px-6 py-4 text-white font-medium">{level.service}
-                      <td className="px-6 py-4 text-cyan-400">{level.uptime}
-                      <td className="px-6 py-4 text-purple-400">{level.support}
-                      <td className="px-6 py-4 text-green-400">{level.response}
-                  ))}
-      {/* Payment Terms */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">Payment Terms
-            <div className="space-y-6">
-              <div className="bg-slate-800/50 rounded-lg p-6">
-                <h3 className="text-xl font-bold text-white mb-3">Billing
-                <p className="text-gray-300">
-                  Services are billed monthly or annually as agreed upon in your service contract. 
-                  Payment is due within 30 days of invoice date.
-              <div className="bg-slate-800/50 rounded-lg p-6">
-                <h3 className="text-xl font-bold text-white mb-3">Refunds
-                <p className="text-gray-300">
-                  Refunds are provided at our discretion and are subject to the terms of your specific service agreement. 
-                  No refunds for services already delivered.
-              <div className="bg-slate-800/50 rounded-lg p-6">
-                <h3 className="text-xl font-bold text-white mb-3">Late Payments
-                <p className="text-gray-300">
-                  Late payments may result in service suspension. A late fee of 1.5% per month may be applied to overdue accounts.
-      {/* Termination */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">Termination
-            <div className="space-y-6">
-              <div className="bg-slate-800/50 rounded-lg p-6">
-                <h3 className="text-xl font-bold text-white mb-3">Termination by You
-                <p className="text-gray-300">
-                  You may terminate your account at any time by providing 30 days written notice. 
-                  Data will be provided in a standard format upon request.
-              <div className="bg-slate-800/50 rounded-lg p-6">
-                <h3 className="text-xl font-bold text-white mb-3">Termination by Us
-                <p className="text-gray-300">
-                  We may terminate your account immediately if you violate these terms or engage in prohibited activities. 
-                  We will provide reasonable notice when possible.
-              <div className="bg-slate-800/50 rounded-lg p-6">
-                <h3 className="text-xl font-bold text-white mb-3">Effect of Termination
-                <p className="text-gray-300">
-                  Upon termination, your right to use our services ceases immediately. 
-                  We will retain your data for 90 days after termination for recovery purposes.
-      {/* Governing Law */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-white mb-6">Governing Law
-            <p className="text-xl text-gray-300 mb-8">
-              These terms are governed by the laws of the State of Delaware, United States. 
-              Any disputes will be resolved in the courts of Delaware.
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="flex items-center justify-center space-x-3">
-                <Globe className="w-5 h-5 text-cyan-400" />
-                <span className="text-white">Delaware, USA
-              <div className="flex items-center justify-center space-x-3">
-                <Scale className="w-5 h-5 text-cyan-400" />
-                <span className="text-white">US Law
-              <div className="flex items-center justify-center space-x-3">
-                <FileText className="w-5 h-5 text-cyan-400" />
-                <span className="text-white">English Language
-      {/* Contact Information */}
-      <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-white mb-6">Questions About These Terms?
-            <p className="text-xl text-gray-300 mb-8">
-              If you have any questions about these Terms of Service, please contact us.
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              <div className="flex items-center justify-center space-x-3">
-                <Mail className="w-5 h-5 text-cyan-400" />
-                <span className="text-white">kleber@ziontechgroup.com
-              <div className="flex items-center justify-center space-x-3">
-                <Phone className="w-5 h-5 text-cyan-400" />
-                <span className="text-white">+1 (302) 464-0950
-              <div className="flex items-center justify-center space-x-3">
-                <Globe className="w-5 h-5 text-cyan-400" />
-                <span className="text-white">Middletown, DE
-            <$2 />
-              href="/contact"
-              className="bg-cyan-500 text-white px-8 py-3 rounded-lg font-bold hover: bg-cyan-600 transition-colors inline-flex items-center">
-              <Mail className="w-5 h-5 mr-2" />
-              Contact Us
-  
+    <>
+      <Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Advanced  solutions powered by artificial intelligence and cutting-edge technology." />
+        <meta name="keywords" content="AI, , artificial intelligence, business solutions, automation" />
+      </Helmet>
+      <Navigation />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Page <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Solutions</span>
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Transform your business with our advanced AI-powered solutions designed for modern enterprises.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="cyber-button">
+                  Get Started <ArrowRight className="ml-2 h-5 w-5" />
+                </button>
+                <button className="cyber-button-secondary">
+                  Learn More
+                </button>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
-    </div>
-  ),
-}
-  </a>
-  </h1>
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></p></p></p></p></p></p></p></p></p></p></p></p></p></h2></h2></h2></h2></h2></h2></h2></h3></h3></h3></h3></h3></h3></h3></section></section></section></section></section></section></section></section></section>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose Our Solutions?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our comprehensive suite of AI-powered tools and services are designed to drive your business forward.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="cyber-card">
+                  <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg mb-4">
+                    <feature.icon className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-400">
+                        <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-black/20">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Key Benefits
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience the power of AI-driven solutions that deliver measurable results.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start">
+                  <CheckCircle className="h-6 w-6 text-green-400 mr-3 mt-1 flex-shrink-0" />
+                  <p className="text-gray-300">{benefit}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join thousands of companies already using our AI-powered solutions to drive growth and innovation.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="cyber-button">
+                Start Your Journey <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="cyber-button-secondary">
+                Schedule Consultation
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      
+      <Footer />
+    </>
+  );
+};
+
+export default Page;

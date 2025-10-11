@@ -1,235 +1,160 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { Shield, Eye, Database, Server, Mail, Phone, MapPin, CheckCircle, User, Edit, Trash2 } from 'lucide-react'
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
-const PrivacyPage: React.FC = () => {
-  const dataTypes = [
+const Page: React.FC = () => {
+  const features = [
     {
-      category: 'Personal Information',
-      icon: User,
-      description: 'Name, email, phone number, and other identifying information'
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence technology to transform your business operations.',
+      benefits: ['Machine learning', 'Natural language processing', 'Predictive analytics', 'Automated insights']
     },
     {
-      category: 'Contact Information',
-      icon: Database,
-      description: 'Name, email, phone number, and contact details'
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
     {
-      category: 'Usage Data',
-      icon: Server,
-      description: 'How you interact with our services and website'
+      icon: TrendingUp,
+      title: 'Performance Optimization',
+      description: 'AI-powered insights to optimize your business performance.',
+      benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']
     },
     {
-      category: 'Technical Data',
-      icon: Server,
-      description: 'IP address, browser type, device information, and cookies'
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     }
-  ]
+  ];
 
-  const purposes = [
-    {
-      title: 'Service Provision',
-      description: 'To provide and maintain our AI and IT services',
-      icon: CheckCircle
-    },
-    {
-      title: 'Communication',
-      description: 'To respond to inquiries and provide customer support',
-      icon: CheckCircle
-    },
-    {
-      title: 'Improvement',
-      description: 'To analyze usage patterns and improve our services',
-      icon: CheckCircle
-    },
-    {
-      title: 'Legal Compliance',
-      description: 'To comply with applicable laws and regulations',
-      icon: CheckCircle
-    }
-  ]
-
-  const rights = [
-    {
-      title: 'Access',
-      description: 'Request access to your personal data',
-      icon: Eye
-    },
-    {
-      title: 'Rectification',
-      description: 'Correct inaccurate or incomplete data',
-      icon: Edit
-    },
-    {
-      title: 'Erasure',
-      description: 'Request deletion of your personal data',
-      icon: Trash2
-    },
-    {
-      title: 'Portability',
-      description: 'Receive your data in a structured format',
-      icon: Database
-    }
-  ]
-
-  const contactInfo = {
-    email: 'privacy@ziontechgroup.com',
-    phone: '+1 (302) 464-0950',
-    address: '364 E Main St STE 1008, Middletown, DE 19709'
-  }
-
-  const contactInfo = {
-    email: 'privacy@ziontechgroup.com',
-    phone: '+1 (302) 464-0950',
-    address: '364 E Main St STE 1008, Middletown, DE 19709'
-  }
+  const benefits = [
+    'Increase efficiency by up to 80%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Real-time processing and analysis',
+    'Seamless integration with existing systems'
+  ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+    <>
       <Helmet>
-        <title>Privacy Policy - Zion Tech Group | Data Protection & Privacy</title>
-        <meta name="description" content="Learn about how Zion Tech Group protects your privacy and handles your personal data in compliance with GDPR and other privacy regulations." />
-        <meta name="keywords" content="privacy policy, data protection, GDPR compliance, privacy rights, data security" />
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Advanced  solutions powered by artificial intelligence and cutting-edge technology." />
+        <meta name="keywords" content="AI, , artificial intelligence, business solutions, automation" />
       </Helmet>
-      
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Privacy <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Policy</span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Your privacy is important to us. This policy explains how we collect, use, and protect your personal information.
-          </p>
-          <div className="flex items-center justify-center text-cyan-400">
-            <Shield className="w-6 h-6 mr-2" />
-            <span className="font-semibold">Last updated: {new Date().toLocaleDateString()}</span>
-          </div>
-        </div>
-      </section>
-
-      {/* Data Collection Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Information We Collect
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We collect information to provide better services to our users
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {dataTypes.map((type, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
-                  <type.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4">{type.category}</h3>
-                <p className="text-gray-300">{type.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Purposes Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              How We Use Your Information
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We use your information for specific, legitimate purposes
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {purposes.map((purpose, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300">
-                <div className="flex items-start">
-                  <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-500 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                    <purpose.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-white mb-2">{purpose.title}</h3>
-                    <p className="text-gray-300">{purpose.description}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Rights Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Your Privacy Rights
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              You have control over your personal data
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {rights.map((right, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 mx-auto">
-                  <right.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4">{right.title}</h3>
-                <p className="text-gray-300">{right.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Questions About Privacy?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Contact our privacy team for any questions or concerns about your data
-            </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-              <div className="flex items-center justify-center">
-                <Mail className="w-6 h-6 text-cyan-400 mr-3" />
-                <span className="text-white">{contactInfo.email}</span>
-              </div>
-              <div className="flex items-center justify-center">
-                <Phone className="w-6 h-6 text-cyan-400 mr-3" />
-                <span className="text-white">{contactInfo.phone}</span>
-              </div>
-              <div className="flex items-center justify-center">
-                <MapPin className="w-6 h-6 text-cyan-400 mr-3" />
-                <span className="text-white text-sm">{contactInfo.address}</span>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Page <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Solutions</span>
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Transform your business with our advanced AI-powered solutions designed for modern enterprises.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="cyber-button">
+                  Get Started <ArrowRight className="ml-2 h-5 w-5" />
+                </button>
+                <button className="cyber-button-secondary">
+                  Learn More
+                </button>
               </div>
             </div>
-            
-            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-              Contact Privacy Team
-            </button>
           </div>
-        </div>
-      </section>
+        </section>
 
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose Our Solutions?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our comprehensive suite of AI-powered tools and services are designed to drive your business forward.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="cyber-card">
+                  <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg mb-4">
+                    <feature.icon className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-400">
+                        <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-black/20">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Key Benefits
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience the power of AI-driven solutions that deliver measurable results.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start">
+                  <CheckCircle className="h-6 w-6 text-green-400 mr-3 mt-1 flex-shrink-0" />
+                  <p className="text-gray-300">{benefit}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join thousands of companies already using our AI-powered solutions to drive growth and innovation.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="cyber-button">
+                Start Your Journey <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="cyber-button-secondary">
+                Schedule Consultation
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      
       <Footer />
-    </div>
-  )
-}
+    </>
+  );
+};
 
-export default PrivacyPage
+export default Page;

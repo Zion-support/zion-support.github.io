@@ -1,107 +1,160 @@
-import React, { useState } from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Calendar, Clock, User, ArrowRight, Search, Filter, Tag } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
-const BlogPage: React.FC = () => {
-  const blogPosts = [
+const Page: React.FC = () => {
+  const features = [
     {
-      id: 1,
-      title: 'The Future of AI in Enterprise: 2024 Trends and Predictions',
-      excerpt: 'Explore the latest AI trends shaping enterprise technology and how businesses can leverage these innovations.',
-      author: 'Dr. Sarah Chen',
-      date: '2024-01-15',
-      readTime: '8 min read',
-      category: 'ai',
-      featured: true,
-      image: '/blog/ai-enterprise-2024.jpg'
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence technology to transform your business operations.',
+      benefits: ['Machine learning', 'Natural language processing', 'Predictive analytics', 'Automated insights']
     },
     {
-      id: 2,
-      title: 'Building Scalable Cloud Infrastructure: Best Practices',
-      excerpt: 'Learn how to design and implement cloud infrastructure that can scale with your business growth and handle increasing demands.',
-      author: 'Michael Rodriguez',
-      date: '2024-01-12',
-      readTime: '6 min read',
-      category: 'cloud',
-      featured: false,
-      image: '/blog/cloud-infrastructure.jpg'
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
     {
-      id: 3,
-      title: 'Cybersecurity in the Age of AI: New Threats and Solutions',
-      excerpt: 'Understanding the evolving cybersecurity landscape and how AI is both creating new threats and providing innovative solutions.',
-      author: 'Dr. Priya Patel',
-      date: '2024-01-10',
-      readTime: '10 min read',
-      category: 'security',
-      featured: false,
-      image: '/blog/cybersecurity-ai.jpg'
+      icon: TrendingUp,
+      title: 'Performance Optimization',
+      description: 'AI-powered insights to optimize your business performance.',
+      benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']
     },
     {
-      id: 4,
-      title: 'The Rise of Edge Computing: What It Means for Your Business',
-      excerpt: 'Discover how edge computing is transforming data processing and what it means for the future of business technology.',
-      author: 'Alex Thompson',
-      date: '2024-01-08',
-      readTime: '7 min read',
-      category: 'cloud',
-      featured: false,
-      image: '/blog/edge-computing.jpg'
-    },
-    {
-      id: 5,
-      title: 'Building Modern Web Applications with React and Next.js',
-      excerpt: 'A comprehensive guide to building fast, scalable web applications using modern React patterns and Next.js framework.',
-      author: 'Sarah Johnson',
-      date: '2024-01-05',
-      readTime: '12 min read',
-      category: 'development',
-      featured: false,
-      image: '/blog/react-nextjs.jpg'
-    },
-    {
-      id: 6,
-      title: 'Digital Transformation: A Complete Guide for Business Leaders',
-      excerpt: 'Everything you need to know about digital transformation, from strategy to implementation, to drive business growth.',
-      author: 'David Kim',
-      date: '2024-01-03',
-      readTime: '15 min read',
-      category: 'business',
-      featured: false,
-      image: '/blog/digital-transformation.jpg'
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     }
-  ]
+  ];
 
-  const filteredPosts = blogPosts.filter(post => {
-    const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         post.excerpt.toLowerCase().includes(searchTerm.toLowerCase())
-    const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory
-    return matchesSearch && matchesCategory
-  })
-
-  const featuredPost = blogPosts.find(post => post.featured)
-  const regularPosts = filteredPosts.filter(post => !post.featured)
+  const benefits = [
+    'Increase efficiency by up to 80%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Real-time processing and analysis',
+    'Seamless integration with existing systems'
+  ];
 
   return (
     <>
       <Helmet>
-        <title>Blog - Zion Tech Group | AI & IT Insights</title>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Advanced  solutions powered by artificial intelligence and cutting-edge technology." />
+        <meta name="keywords" content="AI, , artificial intelligence, business solutions, automation" />
+      </Helmet>
+      <Navigation />
+      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-        
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            </p>
-          </div>
-        </section>
-
-        {/* Search and Filter */}
-        <section className="py-8 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Page <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Solutions</span>
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Transform your business with our advanced AI-powered solutions designed for modern enterprises.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="cyber-button">
+                  Get Started <ArrowRight className="ml-2 h-5 w-5" />
+                </button>
+                <button className="cyber-button-secondary">
+                  Learn More
+                </button>
+              </div>
             </div>
           </div>
         </section>
 
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose Our Solutions?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our comprehensive suite of AI-powered tools and services are designed to drive your business forward.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="cyber-card">
+                  <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg mb-4">
+                    <feature.icon className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-400">
+                        <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-black/20">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Key Benefits
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience the power of AI-driven solutions that deliver measurable results.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start">
+                  <CheckCircle className="h-6 w-6 text-green-400 mr-3 mt-1 flex-shrink-0" />
+                  <p className="text-gray-300">{benefit}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join thousands of companies already using our AI-powered solutions to drive growth and innovation.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="cyber-button">
+                Start Your Journey <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="cyber-button-secondary">
+                Schedule Consultation
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      
+      <Footer />
+    </>
+  );
+};
+
+export default Page;
