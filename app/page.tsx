@@ -10,32 +10,38 @@ export default function HomePage() {
     {
       icon: <Zap className="w-8 h-8 text-blue-500" />,
       title: 'AI-Powered Solutions',
-      description: 'Transform your business with our comprehensive AI services including content generation, chatbots, and automation.'
+      description: 'Transform your business with our comprehensive AI services including content generation, chatbots, and automation.',
+      pricing: 'Starting at $299/month'
     },
     {
       icon: <Shield className="w-8 h-8 text-green-500" />,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption, compliance standards, and advanced threat protection.'
+      description: 'Bank-level security with encryption, compliance standards, and advanced threat protection.',
+      pricing: 'Starting at $199/month'
     },
     {
       icon: <Globe className="w-8 h-8 text-purple-500" />,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses with 24/7 technical assistance.'
+      description: 'Worldwide deployment and support for international businesses with 24/7 technical assistance.',
+      pricing: '24/7 Support'
     },
     {
       icon: <Database className="w-8 h-8 text-orange-500" />,
       title: 'Data Analytics',
-      description: 'Advanced data processing and analytics to drive informed business decisions.'
+      description: 'Advanced data processing and analytics to drive informed business decisions.',
+      pricing: 'Starting at $599/month'
     },
     {
       icon: <Code className="w-8 h-8 text-red-500" />,
       title: 'Custom Development',
-      description: 'Tailored software solutions built to meet your specific business requirements.'
+      description: 'Tailored software solutions built to meet your specific business requirements.',
+      pricing: 'Starting at $2,500/project'
     },
     {
       icon: <Cloud className="w-8 h-8 text-cyan-500" />,
       title: 'Cloud Services',
-      description: 'Scalable cloud infrastructure and migration services for modern businesses.'
+      description: 'Scalable cloud infrastructure and migration services for modern businesses.',
+      pricing: 'Starting at $399/month'
     }
   ]
 
@@ -92,7 +98,8 @@ export default function HomePage() {
                     {feature.icon}
                     <h3 className="text-xl font-semibold text-gray-900 ml-3">{feature.title}</h3>
                   </div>
-                  <p className="text-gray-600">{feature.description}</p>
+                  <p className="text-gray-600 mb-4">{feature.description}</p>
+                  <div className="text-lg font-semibold text-purple-600">{feature.pricing}</div>
                 </div>
               ))}
             </div>

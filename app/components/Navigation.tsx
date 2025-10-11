@@ -80,13 +80,19 @@ export default function Navigation() {
               >
                 About
               </Link>
+              <Link
+                to="/services"
+                className="text-gray-900 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors"
+              >
+                All Services
+              </Link>
               
               <div className="relative">
                 <button
                   onClick={toggleServices}
                   className="text-gray-900 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors flex items-center"
                 >
-                  Services
+                  Solutions
                   <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
                 </button>
                 
@@ -151,13 +157,20 @@ export default function Navigation() {
               >
                 About
               </Link>
+              <Link
+                to="/services"
+                className="text-gray-900 hover:text-purple-600 block px-3 py-2 text-base font-medium"
+                onClick={() => setIsOpen(false)}
+              >
+                All Services
+              </Link>
               
               <div>
                 <button
                   onClick={toggleServices}
                   className="text-gray-900 hover:text-purple-600 block px-3 py-2 text-base font-medium w-full text-left flex items-center justify-between"
                 >
-                  Services
+                  Solutions
                   <ChevronDown className={`h-4 w-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
                 </button>
                 
