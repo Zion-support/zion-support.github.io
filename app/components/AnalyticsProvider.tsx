@@ -1,38 +1,18 @@
-<<<<<<< HEAD
-'use client';
-
-import React, { createContext, useContext, useEffect, ReactNode } from 'react';
-
-interface AnalyticsContextType {
-  trackEvent: (eventName: string, parameters?: Record<string, any>) => void;
-  trackPageView: (pageName: string, pagePath: string) => void;
-}
-=======
 'use client'
 import React, { createContext, useContext, useEffect, ReactNode } from 'react'
 interface AnalyticsContextType {
     trackEvent: (eventName: string, parameters?: Record<string, any>) => void
   trackPageView: (pageName: string, pagePath: string) => void
   }
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
 
 const AnalyticsContext = createContext</string><AnalyticsContextType | undefined>(undefined)
 export const useAnalytics = () => {
-<<<<<<< HEAD
-  const context = useContext(AnalyticsContext);
-=======
     const context = useContext(AnalyticsContext)
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
   if (!context) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider');
   }
-<<<<<<< HEAD
-  return context;
-};
-=======
   return context
 }
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
 
 interface AnalyticsProviderProps {
   children: ReactNode;
@@ -40,26 +20,6 @@ interface AnalyticsProviderProps {
   enableDebug?: boolean;
 }
 
-<<<<<<< HEAD
-const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
-  children,
-  googleAnalyticsId,
-  enableDebug = false
-}) => {
-  const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
-    if (typeof window === 'undefined') return;
-
-    try {
-      // Google Analytics 4
-      if (window.gtag) {
-        window.gtag('event', eventName, {
-          event_category: parameters?.category || 'general',
-          event_label: parameters?.label,
-          value: parameters?.value,
-          ...parameters
-        });
-      }
-=======
 export const AnalyticsProvider: React.FC</AnalyticsContextType><AnalyticsProviderProps> = ({ children }) => {
   useEffect(() => {
     // Initialize analytics
@@ -117,7 +77,6 @@ export const AnalyticsProvider: React.FC</AnalyticsContextType><AnalyticsProvide
       // })
     }
   }
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
 
       // Custom analytics tracking
       if (enableDebug) {
@@ -151,75 +110,12 @@ export const AnalyticsProvider: React.FC</AnalyticsContextType><AnalyticsProvide
   };
 
   const trackPageView = (pageName: string, pagePath: string) => {
-<<<<<<< HEAD
-    if (typeof window === 'undefined') return;
-
-    try {
-      // Google Analytics 4
-      if (window.gtag) {
-        window.gtag('config', googleAnalyticsId || '', {
-          page_title: pageName,
-          page_location: window.location.href,
-          page_path: pagePath
-        });
-      }
-
-      if (enableDebug) {
-        console.log('Page View:', pageName, pagePath);
-      }
-
-      // Send to custom analytics endpoint
-      fetch('/api/analytics/pageview', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          page: pageName,
-          path: pagePath,
-          timestamp: new Date().toISOString(),
-          url: window.location.href,
-          referrer: document.referrer
-        })
-      }).catch(error => {
-        if (enableDebug) {
-          console.error('Page view tracking error:', error);
-        }
-      });
-
-    } catch (error) {
-      if (enableDebug) {
-        console.error('Page view error:', error);
-      }
-    }
-  };
-
-  useEffect(() => {
-    // Initialize Google Analytics
-    if (googleAnalyticsId && typeof window !== 'undefined') {
-      const script = document.createElement('script');
-      script.async = true;
-      script.src = `https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`;
-      document.head.appendChild(script);
-
-      window.dataLayer = window.dataLayer || [];
-      function gtag(...args: any[]) {
-        window.dataLayer.push(args);
-      }
-      window.gtag = gtag;
-      gtag('js', new Date());
-      gtag('config', googleAnalyticsId, {
-        page_title: document.title,
-        page_location: window.location.href
-      });
-=======
     if (typeof window === 'undefined') return,
     // Google Analytics
     if ('gtag' in window) {
       const gtag = (window as { gtag: (command: string, targetId: string, config: any) => void }).gtag
       gtag()
       })
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
     }
 
     // Track initial page view
@@ -253,21 +149,6 @@ export const AnalyticsProvider: React.FC</AnalyticsContextType><AnalyticsProvide
     </string><AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
-<<<<<<< HEAD
-  );
-};
-
-export { AnalyticsProvider };
-export default AnalyticsProvider;
-
-// Extend Window interface for gtag
-declare global {
-  interface Window {
-    gtag: (...args: any[]) => void;
-    dataLayer: any[];
-  }
-}
-=======
   )
 }
 
@@ -276,4 +157,3 @@ export default undefined
 }
 
 export default AnalyticsProvider
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
