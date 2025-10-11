@@ -53,6 +53,24 @@ export default function Navigation() {
     }
   ]
 
+  const additionalLinks = [
+    {
+      title: 'All Services',
+      href: '/services',
+      description: 'View all our services'
+    },
+    {
+      title: 'Case Studies',
+      href: '/case-studies',
+      description: 'Success stories and projects'
+    },
+    {
+      title: 'Resources',
+      href: '/resources',
+      description: 'Whitepapers, guides, and tools'
+    }
+  ]
+
   return (
     <nav className="bg-white shadow-lg fixed w-full top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -91,25 +109,42 @@ export default function Navigation() {
                 </button>
                 
                 {isServicesOpen && (
-                  <div className="absolute left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
-                    <div className="grid grid-cols-2 gap-2 p-4">
-                      {services.map((service) => {
-                        const IconComponent = service.icon
-                        return (
-                          <Link
-                            key={service.href}
-                            to={service.href}
-                            className="flex items-center p-3 rounded-lg hover:bg-gray-50 transition-colors"
-                            onClick={() => setIsServicesOpen(false)}
-                          >
-                            <IconComponent className="w-5 h-5 text-purple-600 mr-3" />
-                            <div>
-                              <div className="font-medium text-gray-900">{service.title}</div>
-                              <div className="text-sm text-gray-500">{service.description}</div>
-                            </div>
-                          </Link>
-                        )
-                      })}
+                  <div className="absolute left-0 mt-2 w-96 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
+                    <div className="p-4">
+                      <div className="grid grid-cols-2 gap-2 mb-4">
+                        {services.map((service) => {
+                          const IconComponent = service.icon
+                          return (
+                            <Link
+                              key={service.href}
+                              to={service.href}
+                              className="flex items-center p-3 rounded-lg hover:bg-gray-50 transition-colors"
+                              onClick={() => setIsServicesOpen(false)}
+                            >
+                              <IconComponent className="w-5 h-5 text-purple-600 mr-3" />
+                              <div>
+                                <div className="font-medium text-gray-900">{service.title}</div>
+                                <div className="text-sm text-gray-500">{service.description}</div>
+                              </div>
+                            </Link>
+                          )
+                        })}
+                      </div>
+                      <div className="border-t border-gray-200 pt-4">
+                        <div className="text-sm font-semibold text-gray-700 mb-2">Additional Resources</div>
+                        <div className="space-y-1">
+                          {additionalLinks.map((link) => (
+                            <Link
+                              key={link.href}
+                              to={link.href}
+                              className="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-50 rounded-lg transition-colors"
+                              onClick={() => setIsServicesOpen(false)}
+                            >
+                              {link.title}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
                     </div>
                   </div>
                 )}
@@ -180,6 +215,22 @@ export default function Navigation() {
                         </Link>
                       )
                     })}
+                    <div className="border-t border-gray-200 mt-2 pt-2">
+                      <div className="text-xs font-semibold text-gray-500 mb-1 px-3">Additional Resources</div>
+                      {additionalLinks.map((link) => (
+                        <Link
+                          key={link.href}
+                          to={link.href}
+                          className="text-gray-600 hover:text-purple-600 block px-3 py-2 text-sm font-medium"
+                          onClick={() => {
+                            setIsOpen(false)
+                            setIsServicesOpen(false)
+                          }}
+                        >
+                          {link.title}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
                 )}
               </div>

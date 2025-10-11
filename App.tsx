@@ -12,6 +12,8 @@ import ITServicesPage from './app/it-services/page'
 import MicroSAASServicesPage from './app/micro-saas-services/page'
 import CloudServicesPage from './app/cloud-services/page'
 import DigitalTransformationPage from './app/digital-transformation/page'
+import CaseStudiesPage from './app/case-studies/page'
+import ResourcesPage from './app/resources/page'
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
           <Route path="/cloud-services" element={<CloudServicesPage />} />
           <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
           <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
+          <Route path="/case-studies" element={<CaseStudiesPage />} />
+          <Route path="/resources" element={<ResourcesPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
         <Footer />
