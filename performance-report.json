@@ -1,10 +1,51 @@
 {
-  "timestamp": "2025-10-09T01:54:34.096Z",
-  "buildSize": 837,
-  "pageCount": 0,
+  "timestamp": "2025-10-11T23:28:58.762Z",
+  "optimizations": {
+    "images": {
+      "formats": [
+        "webp",
+        "avif"
+      ],
+      "quality": 85,
+      "sizes": [
+        320,
+        640,
+        768,
+        1024,
+        1280,
+        1920
+      ]
+    },
+    "bundle": {
+      "chunkSizeLimit": 250000,
+      "totalSizeLimit": 1000000,
+      "compressionLevel": 6
+    },
+    "caching": {
+      "staticAssets": "1y",
+      "html": "1h",
+      "api": "5m"
+    },
+    "criticalCSS": {
+      "enabled": true,
+      "inlineThreshold": 14000
+    }
+  },
   "recommendations": [
-    "Consider code splitting to reduce bundle size",
     "Enable gzip compression on server",
-    "Consider using a CDN for static assets"
-  ]
+    "Implement service worker for caching",
+    "Use CDN for static assets",
+    "Optimize images with WebP format",
+    "Implement lazy loading for images",
+    "Minimize third-party scripts",
+    "Use resource hints (preload, prefetch)",
+    "Implement critical CSS inlining"
+  ],
+  "metrics": {
+    "targetLCP": "< 2.5s",
+    "targetFID": "< 100ms",
+    "targetCLS": "< 0.1",
+    "targetFCP": "< 1.8s",
+    "targetTTI": "< 3.8s"
+  }
 }
