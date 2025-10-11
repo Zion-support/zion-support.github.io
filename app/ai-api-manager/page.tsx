@@ -1,105 +1,147 @@
-
-import {CheckCircle, ArrowRight, Settings, Zap, Shield, Users, BarChart3}}from 'lucide-react';
-
-const AIApiManagerPage: React.FC = () => {,
-'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Settings, Zap, Shield, Users, BarChart3 } from 'lucide-react'
-const AIApiManagerPage: React.FC = () => {
 
+const AIApiManagerPage: React.FC = () => {
   const features = [
     {
+      icon: Settings,
       title: 'Centralized API Control',
       description: 'Manage all your APIs from a single, intuitive dashboard with comprehensive monitoring and control capabilities.',
-  ];
-  const benefits = [
-  ];
-  const stats = [
+      benefits: ['Centralized management', 'Real-time monitoring', 'Easy configuration', 'Bulk operations'],
     },
     {
+      icon: Shield,
+      title: 'Advanced Security',
+      description: 'Enterprise-grade security with AI-powered threat detection and automated response systems.',
+      benefits: ['AI threat detection', 'Automated responses', 'Security analytics', 'Compliance support'],
+    },
+    {
+      icon: BarChart3,
       title: 'Advanced Analytics',
       description: 'Get deep insights into API usage, performance metrics, and user behavior with AI-powered analytics.',
       benefits: ['Usage analytics', 'Performance metrics', 'User insights', 'Predictive analytics'],
     },
     {
+      icon: Users,
+      title: 'User Management',
+      description: 'Comprehensive user management with role-based access control and detailed audit trails.',
+      benefits: ['Role-based access', 'User analytics', 'Permission management', 'Audit trails'],
+    },
+  ]
 
+  const benefits = [
+    'Reduce API management overhead by 70%',
+    'Improve security with AI-powered threat detection',
+    'Scale automatically based on demand',
+    'Gain insights with advanced analytics',
+    'Ensure compliance with industry standards'
+  ]
 
+  const stats = [
+    { label: 'APIs Managed', value: '10,000+' },
+    { label: 'Uptime', value: '99.9%' },
+    { label: 'Response Time', value: '< 50ms' },
+    { label: 'Security Incidents', value: '0' },
+  ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-        <title>AI API Manager | Zion Tech Group</title>
-      </div><Helmet>
-        </Helmet><title>AI API Manager | Zion Tech Group</title>
-        <meta name="description" content="Comprehensive AI-powered API management platform by Zion Tech Group. Centralized control, analytics, and security for all your APIs." />
-        <meta name="keywords" content="API manager, API platform, API analytics, API security, centralized management, Zion Tech Group" />
-
+    <>
+      <Helmet>
+        <title>AI API Manager - Zion Tech Group | Advanced API Management</title>
+        <meta name="description" content="Advanced AI-powered API management solution with centralized control, security, and analytics capabilities." />
+        <meta name="keywords" content="AI API manager, API management, API security, API monitoring, enterprise APIs" />
       </Helmet>
-      <Navigation />
-              View Demo,
-  
-          </div>
-        </div>
-      </section>
-
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <section className="relative py-20 px-4">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AI API <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Manager</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced AI-powered API management solution with centralized control, security, and analytics capabilities.
             </p>
-          </div>
-          
-          <div className="grid md: grid-cols-3 gap-8">,</div>
-            {features.map((feature, index) => (
-                  ))}
-            ))}
-            </p>
-
-          </div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,</div>
-            {benefits.map((benefit, index) => (
-                </div>
-                <h3 className="text-lg font-semibold text-white">{benefit}</h3>
-              </div>
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Platform?
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the benefits of our proven solutions
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <CheckCircle className="w-8 h-8 text-white" />
-                <h3 className="text-lg font-semibold text-white">{benefit}
-            ))}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                View Demo
               </button>
             </div>
           </div>
-        </div>
-      </section>
-
-      <Footer /></Footer>
-    </div>
-  ),
-}
-export default AIApiManagerPage
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?
-          <p className="text-xl text-gray-300 mb-8">Transform your business with our page solutions today
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Start Free Trial
-            <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Contact Sales
-        {/* Features Section */}
+        </section>
+        
+        <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Powerful AI Features
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Discover how our AI platform can revolutionize your business operations.
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Powerful Features
+              </h2>
+              <p className="text-xl text-gray-300">
+                Everything you need to manage and secure your APIs
+              </p>
+            </div>
+            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                  <feature.icon className="w-12 h-12 text-blue-400 mb-4" />
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+        
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Why Choose Our AI API Manager?
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-center space-x-4">
+                  <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                  <p className="text-gray-300 text-lg">{benefit}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+        
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Transform Your API Management?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact our experts to discuss your AI API management needs and get started today.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Contact Us
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+  )
+}
+
+export default AIApiManagerPage

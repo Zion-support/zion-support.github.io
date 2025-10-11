@@ -121,7 +121,8 @@ describe('checkEssentialEnvVars', () => {
         expect(errorMessage).toMatch(/VITE_REOWN_PROJECT_ID is not defined or is empty/)
         expect(errorMessage).toMatch(/VITE_SUPABASE_URL is set to a placeholder value: "your_supabase_url_here"/)
         expect(errorMessage).toMatch(/VITE_SUPABASE_ANON_KEY is not defined or is empty/)
-// NOTE: DO NOT add a static import for checkEssentialEnvVars here.;// It needs to be dynamically imported within each test after mocks are applied.
+// NOTE: DO NOT add a static import for checkEssentialEnvVars here.
+// It needs to be dynamically imported within each test after mocks are applied.
 
 import { describe, it, expect, beforeEach, afterEach, vi } from vitest'
 // Store original process.env

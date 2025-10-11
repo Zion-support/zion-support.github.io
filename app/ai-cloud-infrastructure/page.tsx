@@ -1,74 +1,114 @@
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-const AiCloudInfrastructurePage: React.FC = () => {
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Cloud, Server, Shield, BarChart } from 'lucide-react'
+
+export default function AICloudInfrastructurePage() {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},
-    {icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']},
-    {icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']},
-    {icon: TrendingUp,
+      icon: Cloud,
+      title: 'Cloud Migration',
+      description: 'Seamless migration to cloud infrastructure with AI-powered optimization.',
+      benefits: ['Automated migration', 'Cost optimization', 'Performance monitoring', 'Security compliance']
+    },
+    {
+      icon: Server,
+      title: 'Infrastructure Management',
+      description: 'Comprehensive infrastructure management with AI-powered automation.',
+      benefits: ['Automated scaling', 'Resource optimization', 'Monitoring', 'Maintenance']
+    },
+    {
+      icon: Shield,
+      title: 'Security & Compliance',
+      description: 'Enterprise-grade security and compliance with AI-powered threat detection.',
+      benefits: ['Threat detection', 'Compliance monitoring', 'Security analytics', 'Automated responses']
+    },
+    {
+      icon: BarChart,
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    }
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>AI Cloud Infrastructure - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI-powered cloud infrastructure solutions for modern businesses." />
+        <meta name="keywords" content="AI cloud infrastructure, cloud computing, artificial intelligence, infrastructure management, cloud solutions" />
       </Helmet>
-      <Navigation />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+        <section className="relative py-20 px-4">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AI Cloud <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Infrastructure</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced AI-powered cloud infrastructure solutions for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
+                Get Started
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300">
+                View Demo
+              </button>
+            </div>
+          </div>
+        </section>
+        
+        <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">,</h2>
-                Powerful AI Features,
-  </
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">Discover how our AI platform can revolutionize your business operations.</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Powerful AI Features
+              </h2>
+              <p className="text-xl text-gray-300">
+                Discover how our AI platform can revolutionize your cloud infrastructure.
               </p>
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,</div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index}className="bg-white p-6 rounded-xl shadow-lg hover: shadow-xl transition-shadow">,</div>
-                  <div className="flex items-center mb-4">
-                    <feature.icon className="h-8 w-8 text-blue-600 mr-3" />
-                    <h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3>
-                  </div>
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                  <feature.icon className="w-12 h-12 text-blue-400 mb-4" />
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-300">
+                        <div className="w-2 h-2 bg-blue-400 rounded-full mr-2"></div>
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </div>
           </div>
         </section>
-      <Footer />
-    </React.Fragment>
-  ),
-};
-
-export default AiCloudInfrastructurePage;
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'</div>
-              ))}
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-blue-600">
-          </section>< className="$2 />
-            </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
+        
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Cloud Infrastructure?
             </h2>
-            <p className="text-xl text-blue-100 mb-8" /></p>
-              Join thousands of businesses already using our AI platform.
+            <p className="text-xl text-gray-300 mb-8">
+              Contact our experts to discuss your AI cloud infrastructure needs and get started today.
             </p>
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold" /></button>
-              Start Your Free Trial
-  
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
+                Contact Us
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
           </div>
-
-            <p className="text-xl text-blue-100 mb-8">
-              Join thousands of businesses already using our AI platform.
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">Start Your Free Trial
-      <Footer />
+        </section>
+      </div>
+    </>
   )
 }
-export default AiCloudInfrastructurePage</div></div></div></div></div></div></div></div></div></button></button></button></p></p></p></p></h1></h2></h2></h3></ul></li></main></section></section></section>
