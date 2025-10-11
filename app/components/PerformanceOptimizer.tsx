@@ -4,6 +4,7 @@ import React, { useEffect, useCallback } from 'react'
 interface PerformanceOptimizerProps {
   children: React.ReactNode
   enablePreloading?: boolean
+<<<<<<< HEAD
   enableImageOptimization?: boolean
   enablePerformanceMonitoring?: boolean
 }
@@ -13,6 +14,13 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enablePreloading = true,
   enableImageOptimization = true,
   enablePerformanceMonitoring = true
+=======
+}
+
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ 
+  children, 
+  enablePreloading = true 
+>>>>>>> cursor/analyze-improve-and-deploy-application-6b65
 }) => {
   // Preload critical resources
   const preloadCriticalResources = useCallback(() => {
@@ -31,8 +39,12 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     // Preload critical images
     const criticalImages = [
       '/hero-bg.jpg',
+<<<<<<< HEAD
       '/logo.png',
       '/og-image.jpg'
+=======
+      '/logo.png'
+>>>>>>> cursor/analyze-improve-and-deploy-application-6b65
     ]
 
     criticalImages.forEach(src => {
@@ -46,7 +58,11 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
   // Optimize images
   const optimizeImages = useCallback(() => {
+<<<<<<< HEAD
     if (!enableImageOptimization || typeof window === 'undefined') return
+=======
+    if (typeof window === 'undefined') return
+>>>>>>> cursor/analyze-improve-and-deploy-application-6b65
 
     const images = document.querySelectorAll('img')
     images.forEach((img) => {
@@ -63,17 +79,28 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         img.alt = 'Zion Tech Group - AI & IT Solutions'
       }
     })
+<<<<<<< HEAD
   }, [enableImageOptimization])
 
   // Intersection Observer for animations
   const setupIntersectionObserver = useCallback(() => {
+=======
+  }, [])
+
+  // Intersection Observer for animations
+  const setupAnimationObserver = useCallback(() => {
+>>>>>>> cursor/analyze-improve-and-deploy-application-6b65
     if (typeof window === 'undefined') return
 
     const observerOptions = {
       threshold: 0.1,
       rootMargin: '0px 0px -50px 0px'
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> cursor/analyze-improve-and-deploy-application-6b65
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -81,17 +108,29 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         }
       })
     }, observerOptions)
+<<<<<<< HEAD
 
     // Observe elements with animation classes
     const animatedElements = document.querySelectorAll('.animate-on-scroll')
     animatedElements.forEach((el) => observer.observe(el))
 
+=======
+    
+    // Observe elements with animation classes
+    const animatedElements = document.querySelectorAll('.animate-on-scroll')
+    animatedElements.forEach((el) => observer.observe(el))
+    
+>>>>>>> cursor/analyze-improve-and-deploy-application-6b65
     return () => observer.disconnect()
   }, [])
 
   // Performance monitoring
   const setupPerformanceMonitoring = useCallback(() => {
+<<<<<<< HEAD
     if (!enablePerformanceMonitoring || typeof window === 'undefined' || !('performance' in window)) return
+=======
+    if (typeof window === 'undefined' || !('performance' in window)) return
+>>>>>>> cursor/analyze-improve-and-deploy-application-6b65
 
     const measurePerformance = () => {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
@@ -107,22 +146,36 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         }
         
         // Send metrics to analytics (replace with your analytics service)
+<<<<<<< HEAD
         console.log('Performance Metrics:', metrics)
         
         // Store metrics in localStorage for debugging
         localStorage.setItem('performance-metrics', JSON.stringify(metrics))
+=======
+        if (process.env.NODE_ENV === 'development') {
+          console.log('Performance Metrics:', metrics)
+        }
+>>>>>>> cursor/analyze-improve-and-deploy-application-6b65
       }
     }
 
     // Measure performance after page load
     window.addEventListener('load', measurePerformance)
     return () => window.removeEventListener('load', measurePerformance)
+<<<<<<< HEAD
   }, [enablePerformanceMonitoring])
+=======
+  }, [])
+>>>>>>> cursor/analyze-improve-and-deploy-application-6b65
 
   useEffect(() => {
     preloadCriticalResources()
     optimizeImages()
+<<<<<<< HEAD
     const cleanupObserver = setupIntersectionObserver()
+=======
+    const cleanupAnimation = setupAnimationObserver()
+>>>>>>> cursor/analyze-improve-and-deploy-application-6b65
     const cleanupPerformance = setupPerformanceMonitoring()
 
     // Re-optimize when DOM changes
@@ -136,11 +189,19 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     })
 
     return () => {
+<<<<<<< HEAD
       cleanupObserver?.()
       cleanupPerformance?.()
       observer.disconnect()
     }
   }, [preloadCriticalResources, optimizeImages, setupIntersectionObserver, setupPerformanceMonitoring])
+=======
+      cleanupAnimation?.()
+      cleanupPerformance?.()
+      observer.disconnect()
+    }
+  }, [preloadCriticalResources, optimizeImages, setupAnimationObserver, setupPerformanceMonitoring])
+>>>>>>> cursor/analyze-improve-and-deploy-application-6b65
 
   return <>{children}</>
 }

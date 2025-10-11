@@ -11,7 +11,11 @@ const Breadcrumb: React.FC = () => {
       label: segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' '),
       href: null
     }))
+<<<<<<< HEAD
   ];
+=======
+  ]
+>>>>>>> cursor/analyze-improve-and-deploy-application-6b65
 
   return (
     <nav className="bg-slate-800/50 backdrop-blur-sm border-b border-cyan-500/20" aria-label="Breadcrumb">

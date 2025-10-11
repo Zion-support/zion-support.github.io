@@ -1,32 +1,39 @@
+'use client'
 import React from 'react'
+
 interface LoadingSpinnerProps {
-    size?: 'sm' | 'md' | 'lg'
-  color?: 'primary' | 'secondary' | 'white'
+  size?: 'sm' | 'md' | 'lg'
+  color?: 'primary' | 'white' | 'cyan'
   text?: string
-  }
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ()
+}
+
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
+  size = 'md', 
+  color = 'primary',
+  text 
 }) => {
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
     lg: 'w-12 h-12'
   }
+
   const colorClasses = {
-    primary: 'text-indigo-600',
-    secondary: 'text-gray-600',
-    white: 'text-white'
+    primary: 'text-cyan-500',
+    white: 'text-white',
+    cyan: 'text-cyan-400'
   }
+
   return (
-    </LoadingSpinnerProps><div className="flex flex-col items-center justify-center space-y-2" role="status" aria-label="Loading">
-      </div><div className={`animate-spin rounded-full border-2 border-gray-300 border-t-transparent ${sizeClasses[size]} ${colorClasses[color]}`}></div>
+    <div className="flex flex-col items-center justify-center space-y-2">
+      <div className={`animate-spin rounded-full border-2 border-gray-300 border-t-transparent ${sizeClasses[size]} ${colorClasses[color]}`} />
       {text && (
-        <p className={`text-sm ${colorClasses[color]} animate-pulse`}>
+        <p className={`text-sm ${color === 'white' ? 'text-white' : 'text-gray-600'}`}>
           {text}
+        </p>
       )}
     </div>
   )
 }
+
 export default LoadingSpinner
-  )
-}
-export default LoadingSpinner</div></div></p>

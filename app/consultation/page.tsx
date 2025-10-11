@@ -16,7 +16,8 @@ const ConsultationPage: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     // Handle form submission
-    console.log('Consultation form submitted:', formData)
+    // TODO: Implement actual form submission logic
+    alert('Thank you for your consultation request! We will contact you within 24 hours.')
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
