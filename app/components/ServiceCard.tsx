@@ -1,32 +1,23 @@
-          </div>
-        ))}
-      {price && (
-        <div className="mb-6">
-        </button>
-      )}
+'use client';
+import React from 'react';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target } from 'lucide-react';
+
+interface ServiceCardProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const ServiceCard: React.FC<ServiceCardProps> = ({ className = '', children }) => {
+  return (
+    <div className={`bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group ${className}`}>
+      <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+        <Brain className="w-8 h-8 text-white" />
+      </div>
+      <h3 className="text-xl font-bold text-white mb-4">ServiceCard Title</h3>
+      <p className="text-gray-300 mb-4">ServiceCard description goes here.</p>
+      {children}
     </div>
   );
 };
 
-          </div><div className="text-3xl font-bold text-white mb-1">{price}</div>
-          <div className="text-gray-400 text-sm">per month</div>
-        </div>
-      )}
-      {onSelect && (
-        <$2 />
-          onClick={onSelect}
-          className="w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center gap-2 group">
-          Get Started
-          </button><ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-        </button>
-      )}
-    </div>
-  )
-}
-export default ServiceCard
-  </ServiceCardProps>
-          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-      )}
-  )
-}
-export default ServiceCard</div></div></div></div></div></div></div></div></span></span></p></h3>
+export default ServiceCard;

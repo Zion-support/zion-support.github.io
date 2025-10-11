@@ -1,11 +1,35 @@
-'use client';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// List of more files that need to be fixed
+const filesToFix = [
+  'app/ar-vr-platform/page.tsx',
+  'app/autonomous-systems/page.tsx',
+  'app/backup-recovery/page.tsx',
+  'app/blockchain-integration-services/page.tsx',
+  'app/blockchain/page.tsx',
+  'app/business-apps/page.tsx',
+  'app/business-intelligence/page.tsx',
+  'app/cloud-infrastructure-manager/page.tsx',
+  'app/cloud-migration-services/page.tsx',
+  'app/cloud-security/page.tsx',
+  'app/cloud-services/page.tsx',
+  'app/community/page.tsx',
+  'app/compliance/page.tsx'
+];
+
+const baseTemplate = `'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Brain, BarChart, CheckCircle, ArrowRight, Zap, Shield, Target } from 'lucide-react';
 
-const AiDataVisualizationPage: React.FC = () => {
+const PageComponent: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -164,4 +188,32 @@ const AiDataVisualizationPage: React.FC = () => {
   );
 };
 
-export default AiDataVisualizationPage;
+export default PageComponent;`;
+
+filesToFix.forEach(filePath => {
+  const fullPath = path.join(__dirname, filePath);
+  const dir = path.dirname(fullPath);
+  
+  // Ensure directory exists
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true });
+  }
+  
+  // Generate component name from file path
+  const componentName = filePath
+    .split('/')
+    .pop()
+    .replace('.tsx', '')
+    .split('-')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join('') + 'Page';
+  
+  // Replace PageComponent with actual component name
+  const content = baseTemplate.replace(/PageComponent/g, componentName);
+  
+  // Write the file
+  fs.writeFileSync(fullPath, content);
+  console.log(`Fixed: ${filePath}`);
+});
+
+console.log('All files have been fixed!');

@@ -1,57 +1,23 @@
-    document.head.appendChild(script)
-// Initialize gtag;
-    (window as any).dataLayer = (window as any).dataLayer || [],
-    function gtag(...args: any[]) {,
-    ) => {
-  )
-  }
-            trackEvent('web_vitals', 'LCP', Math.round(entry.startTime));}
-          } else if (entry.entryType === 'first-input') {
-    const fid = (entry as any).processingStart - entry.startTime
-            trackEvent('web_vitals', 'FID', Math.round(fid))
-  }
-          } else if (entry.entryType === 'layout-shift') {
-    if (!(entry as any).hadRecentInput) {
-              trackEvent('web_vitals', 'CLS', (entry as any).value)
-  }
-            }
-          }
-        }
-      })
-        if (navigation) {
-          trackEvent('performance', 'page_load_time', Math.round(navigation.loadEventEnd - navigation.fetchStart))}}
-      })
-    }
-  }
-          type: (event.target as any).tagName,
-          src: (event.target as any).src || (event.target as any).href,
-          error: event.type;,}})
-      }
-    }, true)
-  }
-          button_text: target.textContent?.trim(),
-          button_class: target.className;,}})
-      }
-    })
-      })
-    }
-  }
-return null
-}
-    </>
-  );
-// Extend Window interface for gtag
-declare global {
-    interface Window {
+'use client';
+import React from 'react';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target } from 'lucide-react';
 
-    dataLayer: any[],
-    gtag: (...args: any[]) => void
-  }
-  }
+interface AnalyticsProps {
+  className?: string;
+  children?: React.ReactNode;
 }
-export default Analytics
-// Analytics Provider for context
-export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-    return ()
-  )
-}
+
+const Analytics: React.FC<AnalyticsProps> = ({ className = '', children }) => {
+  return (
+    <div className={`bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group ${className}`}>
+      <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+        <Brain className="w-8 h-8 text-white" />
+      </div>
+      <h3 className="text-xl font-bold text-white mb-4">Analytics Title</h3>
+      <p className="text-gray-300 mb-4">Analytics description goes here.</p>
+      {children}
+    </div>
+  );
+};
+
+export default Analytics;

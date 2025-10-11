@@ -1,11 +1,55 @@
-'use client';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Get all tsx files in the app directory
+function getAllTsxFiles(dir) {
+  let results = [];
+  const list = fs.readdirSync(dir);
+  
+  list.forEach(file => {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat && stat.isDirectory()) {
+      // Skip certain directories
+      if (!['node_modules', '.next', 'dist', 'build'].includes(file)) {
+        results = results.concat(getAllTsxFiles(filePath));
+      }
+    } else if (file.endsWith('.tsx')) {
+      results.push(filePath);
+    }
+  });
+  
+  return results;
+}
+
+const allTsxFiles = getAllTsxFiles(path.join(__dirname, 'app'));
+
+// Filter out files that are likely already fixed or are components
+const filesToFix = allTsxFiles.filter(file => {
+  const relativePath = path.relative(__dirname, file);
+  return relativePath.includes('/page.tsx') || 
+         relativePath.includes('/layout.tsx') ||
+         relativePath.includes('/error.tsx') ||
+         relativePath.includes('/loading.tsx') ||
+         relativePath.includes('/not-found.tsx') ||
+         relativePath.includes('/global-error.tsx');
+});
+
+console.log(`Found ${filesToFix.length} files to potentially fix`);
+
+const baseTemplate = `'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Brain, BarChart, CheckCircle, ArrowRight, Zap, Shield, Target } from 'lucide-react';
 
-const AiDataVisualizationPage: React.FC = () => {
+const PageComponent: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -164,4 +208,59 @@ const AiDataVisualizationPage: React.FC = () => {
   );
 };
 
-export default AiDataVisualizationPage;
+export default PageComponent;`;
+
+let fixedCount = 0;
+let skippedCount = 0;
+
+filesToFix.forEach(filePath => {
+  try {
+    // Read the current file to check if it's already properly formatted
+    const currentContent = fs.readFileSync(filePath, 'utf8');
+    
+    // Skip if file already looks good (has proper imports and structure)
+    if (currentContent.includes("'use client'") && 
+        currentContent.includes('import React') && 
+        currentContent.includes('export default') &&
+        !currentContent.includes('Parsing error') &&
+        !currentContent.includes('Unexpected token')) {
+      skippedCount++;
+      return;
+    }
+    
+    const relativePath = path.relative(__dirname, filePath);
+    const dir = path.dirname(filePath);
+    
+    // Ensure directory exists
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
+    }
+    
+    // Generate component name from file path
+    const componentName = relativePath
+      .replace('app/', '')
+      .replace('/page.tsx', '')
+      .replace('/layout.tsx', 'Layout')
+      .replace('/error.tsx', 'Error')
+      .replace('/loading.tsx', 'Loading')
+      .replace('/not-found.tsx', 'NotFound')
+      .replace('/global-error.tsx', 'GlobalError')
+      .split('-')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join('') + 'Page';
+    
+    // Replace PageComponent with actual component name
+    const content = baseTemplate.replace(/PageComponent/g, componentName);
+    
+    // Write the file
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed: ${relativePath}`);
+    fixedCount++;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+  }
+});
+
+console.log(`\nFixed: ${fixedCount} files`);
+console.log(`Skipped: ${skippedCount} files`);
+console.log('All files have been processed!');

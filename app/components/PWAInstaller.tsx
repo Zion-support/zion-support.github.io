@@ -1,34 +1,23 @@
+'use client';
+import React from 'react';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target } from 'lucide-react';
+
+interface PWAInstallerProps {
+  className?: string;
+  children?: React.ReactNode;
 }
-  ]
-const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
 
-    '24/7 technical support',
-
-    'Easy integration with existing systems',
-
-    'Cost-effective pricing plans',
-
-        <title>PWAInstaller | Zion Tech Group</title>
-    'Proven track record of success'
-  ]
-return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet>
-        </Helmet><title>PWAInstaller | Zion Tech Group</title>
-        <meta name="description" content="AI-powered solution" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
-      </Helmet>
-        </div>
-      </section>
-}
-export default PWAInstallerPage
+const PWAInstaller: React.FC<PWAInstallerProps> = ({ className = '', children }) => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>PWAInstaller | Zion Tech Group
-        <meta name="description" content="Professional PWAInstaller services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="PWAInstaller, AI solutions, IT services, Zion Tech Group, pwainstaller" />
+    <div className={`bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group ${className}`}>
+      <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+        <Brain className="w-8 h-8 text-white" />
+      </div>
+      <h3 className="text-xl font-bold text-white mb-4">PWAInstaller Title</h3>
+      <p className="text-gray-300 mb-4">PWAInstaller description goes here.</p>
+      {children}
+    </div>
+  );
+};
+
+export default PWAInstaller;

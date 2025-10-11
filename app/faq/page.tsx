@@ -1,76 +1,167 @@
-  }
-  const faqs = [
-    {
-      question: "What services does Zion Tech Group offer?",
-      answer: "We offer comprehensive AI-powered solutions including enterprise AI, quantum computing, autonomous systems, digital transformation, cloud services, cybersecurity, and custom micro SaaS applications."
-    },
-    {
-      question: "How can AI solutions benefit my business?",
-      answer: "Our AI solutions can increase efficiency by up to 90%, reduce costs by 70%, and deliver ROI of 300% or more. We provide automation, data analytics, customer service enhancement, and process optimization."
-    },
-    {
-      question: "Do you offer custom development?",
-      answer: "Yes, we specialize in custom AI and IT solutions tailored to your specific business needs. Our team works closely with you to understand requirements and deliver bespoke solutions."
-    },
-    {
-      question: "What is your development process?",
-      answer: "We follow an agile development methodology with regular check-ins, iterative development, and continuous testing to ensure quality and meet your expectations."
-    },
-    {
-      question: "How long does a typical project take?",
-      answer: "Project timelines vary based on complexity. Simple solutions can be delivered in 2-4 weeks, while complex enterprise systems may take 3-6 months. We provide detailed timelines during consultation."
-    },
-    {
-      question: "Do you provide ongoing support?",
-      answer: "Yes, we offer comprehensive support and maintenance services including 24/7 monitoring, regular updates, security patches, and technical assistance."
-    },
-    {
-      question: "What technologies do you use?",
-      answer: "We use cutting-edge technologies including React, TypeScript, Python, TensorFlow, PyTorch, AWS, Azure, Docker, Kubernetes, and various AI/ML frameworks."
-    },
-    {
-      question: "How do I get started?",
-      answer: "Contact us through our consultation form or call +1-302-464-0950. We'll schedule a free consultation to discuss your needs and provide a customized proposal."
-    }
-  ]
-  return (
-        <title>FAQ - Zion Tech Group | Frequently Asked Questions</title>
-    </number><React.Fragment>
-      </React><Helmet>
-        </Helmet><title>FAQ - Zion Tech Group | Frequently Asked Questions</title>
-        <meta name="description" content="Find answers to frequently asked questions about our AI and IT services, pricing, implementation, and support." />
-        <meta name="keywords" content="FAQ, frequently asked questions, AI services, IT services, support, pricing" />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-                    {openItems.includes(index) ? (
-                      <ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                    ) : (
-                      <ChevronDown className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                    </div>
-                      <p className="text-gray-300 leading-relaxed">{faq.answer}
-                  )}
-              ))}
-            </div>
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Brain, BarChart, CheckCircle, ArrowRight, Zap, Shield, Target } from 'lucide-react';
 
-            <div className="mt-16 text-center">
-              <h2 className="text-3xl font-bold text-white mb-6">
-                Still have questions?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Our team is here to help. Contact us for personalized assistance.
+const FaqPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart automation', 'Predictive analytics', 'Intelligent insights', 'Automated processes']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time monitoring', 'Performance metrics', 'Data visualization', 'Custom reports']
+    },
+    {
+      icon: Zap,
+      title: 'High Performance',
+      description: 'Lightning-fast processing with optimized algorithms and infrastructure.',
+      benefits: ['Fast processing', 'Optimized algorithms', 'Scalable infrastructure', 'High availability']
+    },
+    {
+      icon: Shield,
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security and reliability for mission-critical applications.',
+      benefits: ['Data encryption', 'Access control', 'Audit logging', 'Compliance ready']
+    }
+  ];
+
+  const benefits = [
+    'Enhanced productivity and efficiency',
+    'Reduced operational costs',
+    'Improved decision making',
+    'Scalable solutions',
+    '24/7 availability',
+    'Expert support'
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>Page Title - Zion Tech Group</title>
+        <meta name="description" content="Description of the page and its benefits." />
+        <meta name="keywords" content="relevant, keywords, for, seo" />
+      </Helmet>
+
+      <Navigation />
+
+      <main className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Page Title
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Description of the page and its benefits for your business.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
-                  className="bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-cyan-700 transition-colors"
-                >
-                  Contact Us
-                </a>
-                <a
-                  href="/consultation"
-                  className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
-                >
-                  Free Consultation
-                </a>
+                <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  Get Started
+                </button>
+                <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                  Learn More
+                </button>
               </div>
             </div>
           </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Advanced technology that drives results
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Why Choose Our Solution?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Proven results that drive business growth
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <CheckCircle className="w-8 h-8 text-white" />
+                  </div>
+                  <p className="text-lg text-white font-medium">{benefit}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Ready to Get Started?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Contact our experts to discuss your requirements and get started today.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  Contact Us
+                </button>
+                <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
+    </>
+  );
+};
+
+export default FaqPage;

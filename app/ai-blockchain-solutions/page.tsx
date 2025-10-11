@@ -1,28 +1,97 @@
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Brain, BarChart, CheckCircle, ArrowRight, Zap, Shield, Target } from 'lucide-react';
+
 const AiBlockchainSolutionsPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart contract optimization', 'Predictive analytics', 'Automated decision making', 'Risk assessment']
     },
     {
       icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time monitoring', 'Performance metrics', 'Data visualization', 'Custom reports']
+    },
+    {
+      icon: Shield,
+      title: 'Enhanced Security',
+      description: 'Blockchain technology combined with AI for maximum security.',
+      benefits: ['Immutable records', 'Smart contracts', 'Fraud detection', 'Secure transactions']
+    },
+    {
+      icon: Zap,
+      title: 'Smart Automation',
+      description: 'Automated processes powered by AI and blockchain technology.',
+      benefits: ['Process automation', 'Smart contracts', 'Automated compliance', 'Efficient workflows']
     }
   ];
 
   const benefits = [
-    },
-  ]
+    'Increased transparency and trust',
+    'Reduced transaction costs',
+    'Enhanced security and immutability',
+    'Automated compliance and auditing',
+    'Real-time data synchronization',
+    'Scalable and decentralized solutions'
+  ];
+
   return (
+    <>
+      <Helmet>
         <title>AI Blockchain Solutions - Zion Tech Group</title>
-    <React.Fragment>
-      </React><Helmet>
-        </Helmet><title>AI Blockchain Solutions - Zion Tech Group</title>
         <meta name="description" content="Comprehensive blockchain solutions enhanced with AI technology." />
         <meta name="keywords" content="AI blockchain solutions, artificial intelligence, blockchain technology, AI solutions, smart contracts" />
+      </Helmet>
+
       <Navigation />
+
+      <main className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                AI Blockchain Solutions
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Combine the power of artificial intelligence with blockchain technology for secure, transparent, and intelligent solutions.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  Get Started
+                </button>
+                <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Advanced AI and blockchain technology that drives results
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -35,7 +104,7 @@ const AiBlockchainSolutionsPage: React.FC = () => {
                         </li>
                       ))}
                     </ul>
-                  </div>
+                  )}
                 </div>
               ))}
             </div>
@@ -44,7 +113,6 @@ const AiBlockchainSolutionsPage: React.FC = () => {
 
         {/* Benefits Section */}
         <section className="py-20 px-4">
-        </section>
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -65,12 +133,11 @@ const AiBlockchainSolutionsPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          ))
+          </div>
         </section>
 
         {/* CTA Section */}
         <section className="py-20 px-4">
-        </section>
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -80,115 +147,21 @@ const AiBlockchainSolutionsPage: React.FC = () => {
                 Contact our experts to discuss your requirements and get started today.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                   Contact Us
                 </button>
-                <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   Learn More
                 </button>
-              </div>
-            ))}
-          ))
-</section>
-      </div>
-      <Footer />
-
-  );
-};
-
-export default AiBlockchainSolutionsPage;
-        </main></main><section className="relative py-20 px-4 sm: px-6 lg:px-8">
-          </section>< className="$2 />
-            </div><div className="text-center">
-              </div><h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-                AI Blockchain Solutions
-  
-              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-                Transform your business with intelligent solutions powered by cutting-edge AI technology.
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                </div><button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                  Get Started
-  
-                <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
-                  Learn More,
-  
               </div>
             </div>
           </div>
         </section>
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">,</h2>
-                Powerful AI Features,
-  </
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">Discover how our AI platform can revolutionize your business operations.</p>
-        {/* Features Section */}
-        <section className="py-20 px-4 sm: px-6 lg:px-8">
-          </section>< className="$2 />
-            </div><div className="text-center mb-16">
-              </div><h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Powerful AI Features,
-  
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto" /></p>
-                Discover how our AI platform can revolutionize your business operations.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,</div>
-              {features.map((feature, index) => (
-                    <h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3>
-                  </div>
-                  <p className="text-gray-600 mb-4">{feature.description</p>}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
-                    ))}
-              ))}
-              Start Your Free Trial,
-  
-          </div>
-            {features.map((feature, index) => (
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description</p>}</p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
-                  ))}
-            ))}
-          </div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,</div>
-            {benefits.map((benefit, index) => (
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <CheckCircle className="w-8 h-8 text-white" />
-                <h3 className="text-lg font-semibold text-white">{benefit}
-            ))}
-          </div>
-        </div>
-      </section>
-      <Footer /></Footer>
-    </div>
-  ),
+      </main>
+
+      <Footer />
+    </>
+  );
 };
 
-export default PagePage;
-  </button>
-  </button>
-  </p>
-  </p>
-  </button>
-  </h2>
-  </button>
-  </button>
-  </h1>
-  </main>
-}
-export default PagePage;
-
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?
-          <p className="text-xl text-gray-300 mb-8">Transform your business with our page solutions today
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Start Free Trial
-            <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Contact Sales
-      <Footer />
-  )
-}
-export default PagePage</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></button></button></button></button></button></p></p></p></p></p></p></p></h1></h2></h2></h2></h2></h3></h3></h3></ul></ul></li></li></main></section></section></section></section></section>
+export default AiBlockchainSolutionsPage;

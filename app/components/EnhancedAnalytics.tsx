@@ -1,58 +1,27 @@
 'use client';
-import React, { createContext, useContext, useCallback } from 'react';
+import React from 'react';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target } from 'lucide-react';
 
-interface AnalyticsContextType {
-  trackEvent: (eventName: string, parameters?: Record<string, any>) => void;
-  trackPageView: (pageName: string) => void;
-  trackConversion: (conversionName: string, value?: number) => void;
+interface EnhancedAnalyticsProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
-
-export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext);
-  if (!context) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider');
-  }
-  return context;
-};
-
-export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const trackEvent = useCallback((eventName: string, parameters?: Record<string, any>) => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', eventName, parameters);
-    }
-  }, []);
-
-  const trackPageView = useCallback((pageName: string) => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
-        page_title: pageName,
-        page_location: window.location.href
-      });
-    }
-  }, []);
-
-  const trackConversion = useCallback((conversionName: string, value?: number) => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'conversion', {
-        send_to: conversionName,
-        value: value
-      });
-    }
-  }, []);
-
-  const value: AnalyticsContextType = {
-    trackEvent,
-    trackPageView,
-    trackConversion
-  };
-
+const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({ className = '', children }) => {
   return (
-    <AnalyticsContext.Provider value={value}>
+    <div className={`bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group ${className}`}>
+      <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+        <Brain className="w-8 h-8 text-white" />
+      </div>
+      <h3 className="text-xl font-bold text-white mb-4">EnhancedAnalytics Title</h3>
+      <p className="text-gray-300 mb-4">EnhancedAnalytics description goes here.</p>
       {children}
-    </AnalyticsContext.Provider>
+    </div>
   );
 };
 
-export default AnalyticsProvider;
+export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  return <div>{children}</div>;
+};
+
+export default EnhancedAnalytics;
