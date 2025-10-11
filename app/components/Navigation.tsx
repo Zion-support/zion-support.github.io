@@ -1,14 +1,7 @@
-<<<<<<< HEAD
 'use client';
 import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckCircle, ShoppingCart } from 'lucide-react';
-=======
-'use client'
-import React, { useState, useEffect } from 'react'
-import Link from 'next/link'
-import { Brain, ChevronDown, Menu, X, ArrowRight, Code, Cloud, Shield, BarChart, Users, FileText, DollarSign } from 'lucide-react'
->>>>>>> origin/main
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false)
