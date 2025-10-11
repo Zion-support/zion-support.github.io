@@ -1,6 +1,6 @@
-<<<<<<< HEAD
 'use client'
 import React from 'react'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27,6 +27,13 @@ import { CheckCircle, ArrowRight, Zap, Shield, Globe, Cloud, Database, Smartphon
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 >>>>>>> cursor/website-audit-and-update-with-deployment-8d34
+=======
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, Shield, Database, Code, Cloud, Smartphone, Brain, CheckCircle } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import Navigation from './components/Navigation'
+import Footer from './components/Footer'
+>>>>>>> cursor/fix-errors-and-merge-to-main-c7ba
 
 export default function HomePage() {
   const stats = [
@@ -42,9 +49,10 @@ export default function HomePage() {
 
   const features = [
     {
-      icon: <Zap className="w-8 h-8 text-blue-500" />,
+      icon: <Brain className="w-8 h-8 text-blue-500" />,
       title: 'AI-Powered Solutions',
       description: 'Transform your business with our comprehensive AI services including content generation, chatbots, and automation.',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -55,10 +63,14 @@ export default function HomePage() {
 =======
       benefits: ['AI Content Generation - $500/month', 'AI Chatbots - $300/month', 'AI Automation - $800/month', 'AI Analytics - $400/month'],
 >>>>>>> cursor/website-audit-and-update-with-deployment-8d34
+=======
+      benefits: ['AI Content Generation', 'Smart Chatbots', 'Process Automation', 'Predictive Analytics'],
+>>>>>>> cursor/fix-errors-and-merge-to-main-c7ba
       link: '/ai-services'
     },
     {
       icon: <Shield className="w-8 h-8 text-green-500" />,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -105,6 +117,8 @@ export default function HomePage() {
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8af7
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-8d34
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-c7ba
       title: 'IT Services & Solutions',
       description: 'Complete IT infrastructure services including cloud migration, cybersecurity, DevOps, and mobile development.',
       benefits: ['Cloud Migration - Starting at $2,500', 'Cybersecurity - $1,500/month', 'Mobile Development - Starting at $5,000', 'Data Analytics - $2,000/month'],
@@ -112,6 +126,7 @@ export default function HomePage() {
 >>>>>>> cursor/fix-errors-and-merge-to-main-93a1
     },
     {
+<<<<<<< HEAD
       name: 'Michael Chen',
       company: 'DataFlow Solutions',
       content: 'Their AI solutions helped us automate 80% of our processes. Incredible efficiency gains.',
@@ -131,6 +146,8 @@ export default function HomePage() {
       link: '/cloud-services'
     },
     {
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-c7ba
       icon: <Database className="w-8 h-8 text-red-500" />,
       title: '5G Implementation',
       description: 'Next-generation connectivity solutions to power your digital transformation with ultra-fast speeds and low latency.',
@@ -138,6 +155,7 @@ export default function HomePage() {
       link: '/5g-implementation'
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -151,10 +169,14 @@ export default function HomePage() {
 =======
       icon: <Smartphone className="w-8 h-8 text-yellow-500" />,
 >>>>>>> cursor/website-audit-and-update-with-deployment-8d34
+=======
+      icon: <Smartphone className="w-8 h-8 text-yellow-500" />,
+>>>>>>> cursor/fix-errors-and-merge-to-main-c7ba
       title: 'Digital Transformation',
       description: 'Transform your business for the digital age with comprehensive digital transformation services.',
       benefits: ['Process Automation - $2,000/month', 'Digital Workforce - $1,500/month', 'Customer Experience - $1,800/month', 'Data Strategy - $2,500/month'],
       link: '/digital-transformation'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -165,6 +187,22 @@ export default function HomePage() {
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8af7
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-8d34
+=======
+    },
+    {
+      icon: <Cloud className="w-8 h-8 text-cyan-500" />,
+      title: 'Cloud Services',
+      description: 'Professional cloud services including migration, infrastructure setup, security, and optimization.',
+      benefits: ['Cloud Migration', 'Infrastructure Setup', 'Security Solutions', 'Cost Optimization'],
+      link: '/cloud-services'
+    },
+    {
+      icon: <Code className="w-8 h-8 text-purple-500" />,
+      title: 'Micro SaaS',
+      description: 'Specialized micro software solutions for modern businesses.',
+      benefits: ['Custom Development', 'Scalable Architecture', 'API Integration', 'Maintenance & Support'],
+      link: '/micro-saas-services'
+>>>>>>> cursor/fix-errors-and-merge-to-main-c7ba
     }
   ];
 
@@ -180,7 +218,15 @@ export default function HomePage() {
     { number: '24/7', label: 'Support Available' }
   ]
 
+  const stats = [
+    { number: '500+', label: 'Projects Completed' },
+    { number: '99.9%', label: 'Uptime Guarantee' },
+    { number: '24/7', label: 'Support Available' },
+    { number: '50+', label: 'Expert Team' }
+  ]
+
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -207,9 +253,17 @@ export default function HomePage() {
         <title>Zion Tech Group - Advanced AI and IT Solutions</title>
         <meta name="description" content="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses." />
         <meta name="keywords" content="AI solutions, IT services, cloud computing, digital transformation, 5G implementation" />
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
+        <meta name="description" content="Leading provider of AI and IT solutions. Transform your business with our cutting-edge technology and expert services." />
+        <meta name="keywords" content="AI solutions, IT services, cloud computing, software development, Zion Tech Group" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-c7ba
       </Helmet>
 >>>>>>> cursor/website-audit-and-update-with-deployment-8d34
       
+<<<<<<< HEAD
       {/* Hero Section */}
 <<<<<<< HEAD
       <section className="pt-20 px-4 py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -262,13 +316,59 @@ export default function HomePage() {
                 <div className="text-gray-300 text-xs sm:text-sm">{stat.label}</div>
               </div>
             ))}
+=======
+      <Navigation />
+      
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+        
+        <div className="relative max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            Advanced AI & IT
+            <br />
+            <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+              Solutions
+            </span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Transform your business with cutting-edge AI technology and comprehensive IT services. 
+            We deliver innovative solutions that drive growth and efficiency.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              to="/about" 
+              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+            >
+              Learn More
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
+            <Link 
+              to="/contact" 
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+            >
+              Get Started
+            </Link>
+>>>>>>> cursor/fix-errors-and-merge-to-main-c7ba
           </div>
         </div>
       </section>
 
+      {/* Stats Section */}
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-8 mb-20">
+        {stats.map((stat, index) => (
+          <div key={index} className="text-center px-2">
+            <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
+            <div className="text-gray-300 text-xs sm:text-sm">{stat.label}</div>
+          </div>
+        ))}
+      </div>
+
       {/* Features Section */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           <div className="text-center mb-16">
@@ -295,6 +395,17 @@ export default function HomePage() {
 =======
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16 lg:mb-20">
 >>>>>>> cursor/website-audit-and-update-with-deployment-8d34
+=======
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Zion Tech Group?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We combine cutting-edge technology with industry expertise to deliver exceptional results.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+>>>>>>> cursor/fix-errors-and-merge-to-main-c7ba
             {features.map((feature, index) => (
               <a key={index} href={feature.link} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
                 <div className="mb-4 group-hover:scale-110 transition-transform duration-300">{feature.icon}</div>
@@ -319,15 +430,19 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-c7ba
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-6 sm:p-8 lg:p-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4">Ready to Transform Your Business?</h2>
               <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl mx-auto px-4">
                 Let's discuss how our AI and IT solutions can drive your success.
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-93a1
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -629,11 +744,34 @@ export default function HomePage() {
           </div>
         </section>
       </main>
+=======
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/contact"
+                  className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  Get Started
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Link>
+                <Link
+                  to="/ai-services"
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+                >
+                  Our Services
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+>>>>>>> cursor/fix-errors-and-merge-to-main-c7ba
       
       <Footer />
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8af7
     </div>
   )
+<<<<<<< HEAD
 }
 =======
         </div>
@@ -642,3 +780,6 @@ export default function HomePage() {
   );
 }
 >>>>>>> cursor/website-audit-and-update-with-deployment-8d34
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-c7ba

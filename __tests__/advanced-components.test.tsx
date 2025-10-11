@@ -252,8 +252,28 @@ describe('AdvancedPerformanceMonitor', () => {
         <MemoryRouter>
           <ThrowError shouldThrow={true} />
         </MemoryRouter>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732
       );
     }).not.toThrow();
     consoleSpy.mockRestore();
   });
 });
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e951
+      )
+    }).not.toThrow()
+    consoleSpy.mockRestore()
+  })
+})
+<<<<<<< HEAD
+>>>>>>> cursor/fix-errors-and-merge-to-main-9603
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e951
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-3732

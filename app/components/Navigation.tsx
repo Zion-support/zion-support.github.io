@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone } from 'lucide-react'
 =======
 import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Smartphone } from 'lucide-react'
@@ -21,10 +22,14 @@ import { Menu, X, ChevronDown, Zap, Cloud, Smartphone, Brain, Cpu, Wifi } from '
 >>>>>>> cursor/website-audit-and-update-with-deployment-8d34
 import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone, Brain, Cpu, Server, Wifi } from 'lucide-react'
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8af7
+=======
+import { Menu, X, ChevronDown, Zap, Cloud, Brain, Cpu, Server, Wifi } from 'lucide-react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-c7ba
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-93a1
@@ -57,6 +62,11 @@ export default function Navigation() {
     // Handle search functionality
     console.log('Search query:', query);
     // You can implement search logic here or navigate to a search results page
+=======
+
+  const toggleDropdown = (dropdown: string) => {
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
+>>>>>>> cursor/fix-errors-and-merge-to-main-c7ba
   }
 
   const services = [
@@ -64,6 +74,7 @@ export default function Navigation() {
 <<<<<<< HEAD
       title: 'AI Services',
       href: '/ai-services',
+<<<<<<< HEAD
 <<<<<<< HEAD
       icon: <Zap className="w-4 h-4" />,
       description: 'AI-powered solutions for your business'
@@ -77,18 +88,28 @@ export default function Navigation() {
         { title: 'AI Cybersecurity', href: '/ai-cybersecurity' }
       ]
 >>>>>>> cursor/website-audit-and-update-with-deployment-bee6
+=======
+      icon: <Brain className="w-4 h-4" />,
+      description: 'AI-powered solutions for content, chatbots, and automation'
+>>>>>>> cursor/fix-errors-and-merge-to-main-c7ba
     },
     {
       title: 'IT Services',
       href: '/it-services',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       icon: <Database className="w-4 h-4" />,
       description: 'Comprehensive IT infrastructure services'
+=======
+      icon: <Server className="w-4 h-4" />,
+      description: 'Complete IT infrastructure and development services'
+>>>>>>> cursor/fix-errors-and-merge-to-main-c7ba
     },
     {
       title: 'Micro SaaS',
       href: '/micro-saas-services',
+<<<<<<< HEAD
       icon: <Smartphone className="w-4 h-4" />,
       description: 'Powerful micro SaaS tools'
 =======
@@ -105,10 +126,15 @@ export default function Navigation() {
       icon: Database,
       description: 'Information Technology Solutions'
 >>>>>>> cursor/analyze-improve-and-deploy-application-04ca
+=======
+      icon: <Zap className="w-4 h-4" />,
+      description: 'Powerful micro applications for business automation'
+>>>>>>> cursor/fix-errors-and-merge-to-main-c7ba
     },
     {
       title: 'Cloud Services',
       href: '/cloud-services',
+<<<<<<< HEAD
 <<<<<<< HEAD
       icon: <Cloud className="w-4 h-4" />,
       description: 'Cloud migration and management'
@@ -146,18 +172,28 @@ export default function Navigation() {
         { title: 'Data Strategy', href: '/digital-transformation' }
       ]
 >>>>>>> cursor/website-audit-and-update-with-deployment-bee6
+=======
+      icon: <Cloud className="w-4 h-4" />,
+      description: 'Cloud migration, setup, and optimization'
+>>>>>>> cursor/fix-errors-and-merge-to-main-c7ba
     },
     {
       title: '5G Implementation',
       href: '/5g-implementation',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       icon: <Globe className="w-4 h-4" />,
       description: 'Next-generation 5G solutions'
+=======
+      icon: <Wifi className="w-4 h-4" />,
+      description: 'Next-generation connectivity solutions'
+>>>>>>> cursor/fix-errors-and-merge-to-main-c7ba
     },
     {
       title: 'Digital Transformation',
       href: '/digital-transformation',
+<<<<<<< HEAD
       icon: <Code className="w-4 h-4" />,
       description: 'Transform your digital presence'
 =======
@@ -491,22 +527,59 @@ export default function Navigation() {
             </Link>
             <Link to="/about" className="text-gray-900 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
 >>>>>>> cursor/website-audit-and-update-with-deployment-8d34
+=======
+      icon: <Cpu className="w-4 h-4" />,
+      description: 'Transform your business for the digital age'
+    }
+  ]
+
+  return (
+    <nav className="bg-white/10 backdrop-blur-lg border-b border-white/20 fixed w-full top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <Link to="/" className="flex items-center space-x-2">
+            <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+              <Zap className="w-5 h-5 text-white" />
+            </div>
+            <span className="text-xl font-bold text-white">Zion Tech Group</span>
+          </Link>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            <Link
+              to="/"
+              className="text-gray-300 hover:text-white transition-colors"
+            >
+              Home
+            </Link>
+            <Link
+              to="/about"
+              className="text-gray-300 hover:text-white transition-colors"
+            >
+>>>>>>> cursor/fix-errors-and-merge-to-main-c7ba
               About
             </Link>
             
             {/* AI Services Dropdown */}
             <div className="relative">
               <button
+<<<<<<< HEAD
                 onClick={() => toggleDropdown('ai')}
 <<<<<<< HEAD
                 className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
 =======
                 className="text-gray-900 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
 >>>>>>> cursor/website-audit-and-update-with-deployment-8d34
+=======
+                onClick={() => toggleDropdown('services')}
+                className="flex items-center text-gray-300 hover:text-white transition-colors"
+>>>>>>> cursor/fix-errors-and-merge-to-main-c7ba
               >
                 AI Services
                 <ChevronDown className="w-4 h-4 ml-1" />
               </button>
+<<<<<<< HEAD
               {activeDropdown === 'ai' && (
 <<<<<<< HEAD
                 <div className="absolute top-full left-0 mt-1 w-64 bg-white/95 backdrop-blur-lg rounded-lg shadow-lg border border-white/20 py-2 z-50">
@@ -546,10 +619,32 @@ export default function Navigation() {
 >>>>>>> cursor/website-audit-and-update-with-deployment-8d34
                     </Link>
                   ))}
+=======
+              
+              {activeDropdown === 'services' && (
+                <div className="absolute top-full left-0 mt-2 w-96 bg-white/95 backdrop-blur-lg rounded-lg shadow-xl border border-white/20 py-4 z-50">
+                  <div className="grid grid-cols-2 gap-4 px-4">
+                    {services.map((service, index) => (
+                      <Link
+                        key={index}
+                        to={service.href}
+                        className="flex items-start space-x-3 p-3 rounded-lg hover:bg-white/20 transition-colors"
+                        onClick={() => setActiveDropdown(null)}
+                      >
+                        <div className="text-blue-600 mt-1">{service.icon}</div>
+                        <div>
+                          <div className="font-semibold text-gray-900">{service.title}</div>
+                          <div className="text-sm text-gray-600">{service.description}</div>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-c7ba
                 </div>
               )}
             </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
             {/* IT Services Dropdown */}
@@ -629,6 +724,18 @@ export default function Navigation() {
               to="/contact"
               className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all duration-300"
 >>>>>>> cursor/fix-errors-and-merge-to-main-93a1
+=======
+            <Link
+              to="/contact"
+              className="text-gray-300 hover:text-white transition-colors"
+            >
+              Contact
+            </Link>
+            
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+>>>>>>> cursor/fix-errors-and-merge-to-main-c7ba
             >
               Contact
             </Link>
@@ -637,6 +744,7 @@ export default function Navigation() {
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
             <button
+<<<<<<< HEAD
               onClick={toggleMenu}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -655,12 +763,18 @@ export default function Navigation() {
 =======
               className="text-gray-900 hover:text-purple-600 p-2 rounded-md transition-colors"
 >>>>>>> cursor/website-audit-and-update-with-deployment-8d34
+=======
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-gray-300 hover:text-white transition-colors"
+>>>>>>> cursor/fix-errors-and-merge-to-main-c7ba
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
+      </div>
 
+<<<<<<< HEAD
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden">
@@ -942,9 +1056,54 @@ export default function Navigation() {
               </Link>
 >>>>>>> cursor/fix-errors-and-merge-to-main-93a1
             </div>
+=======
+      {/* Mobile Navigation */}
+      {isOpen && (
+        <div className="md:hidden">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white/10 backdrop-blur-lg rounded-lg mt-2">
+            <Link to="/" className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium transition-colors">
+              Home
+            </Link>
+            <Link to="/about" className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium transition-colors">
+              About
+            </Link>
+            
+            {/* Mobile Services */}
+            <div className="px-3 py-2">
+              <div className="text-sm font-semibold text-gray-700 mb-2">Services</div>
+              <div className="space-y-1">
+                {services.map((service, index) => (
+                  <Link
+                    key={index}
+                    to={service.href}
+                    className="flex items-center space-x-2 px-3 py-2 text-gray-600 hover:bg-white/20 rounded-md transition-colors"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {service.icon}
+                    <span>{service.title}</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+            
+            <Link
+              to="/contact"
+              className="block px-3 py-2 text-gray-900 hover:bg-white/20 rounded-md transition-colors"
+              onClick={() => setIsOpen(false)}
+            >
+              Contact
+            </Link>
+            <Link
+              to="/contact"
+              className="block w-full text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 mt-4"
+              onClick={() => setIsOpen(false)}
+            >
+              Get Started
+            </Link>
+>>>>>>> cursor/fix-errors-and-merge-to-main-c7ba
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </nav>
   )
 }

@@ -12,6 +12,7 @@ import AIServicesPage from './app/ai-services/page'
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import ITServicesPage from './app/it-services/page'
 import MicroSAASServicesPage from './app/micro-saas-services/page'
 import FiveGImplementationPage from './app/5g-implementation/page'
@@ -54,6 +55,13 @@ import MicroSaasServicesPage from './app/micro-saas-services/page'
 import CloudServicesPage from './app/cloud-services/page'
 import DigitalTransformationPage from './app/digital-transformation/page'
 >>>>>>> cursor/website-audit-and-update-with-deployment-8d34
+=======
+import ITServicesPage from './app/it-services/page'
+import MicroSaasServicesPage from './app/micro-saas-services/page'
+import FiveGImplementationPage from './app/5g-implementation/page'
+import CloudServicesPage from './app/cloud-services/page'
+import DigitalTransformationPage from './app/digital-transformation/page'
+>>>>>>> cursor/fix-errors-and-merge-to-main-c7ba
 
 function App() {
   return (
@@ -85,6 +93,7 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           <Route path="/services" element={<ServicesPage />} />
 <<<<<<< HEAD
 =======
@@ -108,6 +117,15 @@ function App() {
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-8d34
           <Route path="/contact" element={<ContactPage />} />
+=======
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/ai-services" element={<AIServicesPage />} />
+          <Route path="/it-services" element={<ITServicesPage />} />
+          <Route path="/micro-saas-services" element={<MicroSaasServicesPage />} />
+          <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
+          <Route path="/cloud-services" element={<CloudServicesPage />} />
+          <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
+>>>>>>> cursor/fix-errors-and-merge-to-main-c7ba
         </Routes>
 >>>>>>> cursor/website-audit-and-update-with-deployment-bee6
         <Footer />
