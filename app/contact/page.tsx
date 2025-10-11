@@ -50,19 +50,19 @@ export default function ContactPage() {
     {
       icon: <Mail className="w-6 h-6" />,
       title: 'Email',
-      details: 'info@ziontechgroup.com',
+      details: 'kleber@ziontechgroup.com',
       description: 'Send us an email anytime'
     },
     {
       icon: <Phone className="w-6 h-6" />,
       title: 'Phone',
-      details: '+1 (555) 123-4567',
+      details: '+1 302 464 0950',
       description: 'Mon-Fri from 8am to 6pm'
     },
     {
       icon: <MapPin className="w-6 h-6" />,
       title: 'Office',
-      details: 'New York, NY',
+      details: '364 E Main St STE 1008 Middletown DE 19709',
       description: 'Visit our headquarters'
     },
     {
