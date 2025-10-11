@@ -1,51 +1,44 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navigation from './app/components/Navigation'
 import Footer from './app/components/Footer'
-import HomePage from './app/page'
-import AboutPage from './app/about/page'
-import ContactPage from './app/contact/page'
-import AIServicesPage from './app/ai-services/page'
-<<<<<<< HEAD
-import FiveGImplementationPage from './app/5g-implementation/page'
-import ITServicesPage from './app/it-services/page'
-import MicroSAASServicesPage from './app/micro-saas-services/page'
-import CloudServicesPage from './app/cloud-services/page'
-import DigitalTransformationPage from './app/digital-transformation/page'
-=======
-import ITServicesPage from './app/it-services/page'
-import MicroSaasServicesPage from './app/micro-saas-services/page'
-import FiveGImplementationPage from './app/5g-implementation/page'
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-59b6
+import ErrorBoundary from './app/components/ErrorBoundary'
+import LoadingPage from './app/components/LoadingPage'
+
+// Lazy load pages for better performance
+const HomePage = React.lazy(() => import('./app/page'))
+const AboutPage = React.lazy(() => import('./app/about/page'))
+const ContactPage = React.lazy(() => import('./app/contact/page'))
+const AIServicesPage = React.lazy(() => import('./app/ai-services/page'))
+const FiveGImplementationPage = React.lazy(() => import('./app/5g-implementation/page'))
+const ITServicesPage = React.lazy(() => import('./app/it-services/page'))
+const MicroSaasServicesPage = React.lazy(() => import('./app/micro-saas-services/page'))
+const CloudServicesPage = React.lazy(() => import('./app/cloud-services/page'))
+const DigitalTransformationPage = React.lazy(() => import('./app/digital-transformation/page'))
 
 function App() {
   return (
-    <Router>
-      <div className="min-h-screen bg-gray-50">
-        <Navigation />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-<<<<<<< HEAD
-          <Route path="/services" element={<ServicesPage />} />
-          <Route path="/ai-services" element={<AIServicesPage />} />
-          <Route path="/it-services" element={<ITServicesPage />} />
-          <Route path="/micro-saas-services" element={<MicroSAASServicesPage />} />
-          <Route path="/cloud-services" element={<CloudServicesPage />} />
-          <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
-          <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-=======
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/ai-services" element={<AIServicesPage />} />
-          <Route path="/it-services" element={<ITServicesPage />} />
-          <Route path="/micro-saas-services" element={<MicroSaasServicesPage />} />
-          <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-59b6
-        </Routes>
-        <Footer />
-      </div>
-    </Router>
+    <ErrorBoundary>
+      <Router>
+        <div className="min-h-screen bg-gray-50">
+          <Navigation />
+          <Suspense fallback={<LoadingPage />}>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="/ai-services" element={<AIServicesPage />} />
+              <Route path="/it-services" element={<ITServicesPage />} />
+              <Route path="/micro-saas-services" element={<MicroSaasServicesPage />} />
+              <Route path="/cloud-services" element={<CloudServicesPage />} />
+              <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
+              <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
+            </Routes>
+          </Suspense>
+          <Footer />
+        </div>
+      </Router>
+    </ErrorBoundary>
   )
 }
 

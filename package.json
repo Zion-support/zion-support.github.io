@@ -41,7 +41,7 @@
     "analyze:bundle": "vite build --mode analyze && npx vite-bundle-analyzer dist/stats.html",
     "test:performance": "lighthouse http://localhost:4173 --output=html --output-path=./performance-report.html",
     "audit:security": "npm audit --audit-level=moderate",
-    "security:check": "npm audit --audit-level=moderate && npm run audit:security",
+    "security:check": "npm audit && npm audit --audit-level moderate",
     "preload:critical": "echo \"Preloading critical resources...\"",
     "optimize:advanced": "node scripts/advanced-performance-optimizer.js",
     "analyze:performance": "node scripts/performance-optimizer.js",
@@ -78,7 +78,7 @@
     "seo:audit": "node scripts/seo-audit.js",
     "comprehensive:audit": "pnpm run performance:audit && pnpm run security:audit && pnpm run accessibility:audit && pnpm run seo:audit",
     "perf:lighthouse": "lighthouse http://localhost:4173 --output=html --output-path=./lighthouse-report.html",
-    "perf:audit": "lighthouse http://localhost:4173 --output=html --output-path=./lighthouse-report.html",
+    "perf:audit": "npm run build && npm run lighthouse",
     "test:unit": "jest --testPathPattern=src --passWithNoTests",
     "test:integration": "jest --testPathPattern=app --passWithNoTests",
     "lint:fix-all": "eslint . --ext .ts,.tsx,.js,.jsx --fix --max-warnings 0",
@@ -97,7 +97,9 @@
     "deploy:production": "npm run optimize:enhanced && npm run build:check && echo 'Ready for production deployment'",
     "generate:sitemap": "node scripts/generate-sitemap.cjs",
     "optimize:performance": "node scripts/performance-optimizer.cjs",
-    "postbuild": "npm run generate:sitemap && npm run optimize:performance && echo \"Build completed successfully\""
+    "postbuild": "npm run generate:sitemap && npm run optimize:performance && echo \"Build completed successfully\"",
+    "lighthouse": "lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html",
+    "security:fix": "npm audit fix"
   },
   "dependencies": {
     "@esbuild/linux-x64": "^0.25.10",
