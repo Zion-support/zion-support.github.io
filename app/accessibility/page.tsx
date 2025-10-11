@@ -120,9 +120,7 @@ const AccessibilityPage: React.FC = () => {
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                         {benefit}
                       </li>
-                    )
-    </>
-  )
+                    ))}
                   </ul>
                 </div>
               ))}
@@ -204,9 +202,3 @@ const AccessibilityPage: React.FC = () => {
   )
 }
 export default AccessibilityPage
-            </Footer>
-          </ArrowRight>
-        </CheckCircle>
-      </CheckCircle>
-    </ArrowRight>
-  </Navigation>

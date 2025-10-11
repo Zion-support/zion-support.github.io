@@ -126,9 +126,7 @@ const AccessibilityPage: React.FC = () => {
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                         {benefit}
                       </li>
-                    )
-    </>
-  )
+                    ))}
                   </ul>
                 </div>
               ))}
@@ -198,32 +196,41 @@ const AccessibilityPage: React.FC = () => {
                 We ensure compliance with international accessibility standards
               </p>
             </div>
-            
-            </div>
           </div>
         </section>
 
         {/* Benefits Section */}
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-3">
-                  <div className="flex-shrink-0">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Key Benefits</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our accessibility solutions provide comprehensive benefits for your business and users.
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
-                    <CheckCircle className="h-6 w-6 text-cyan-400" />
-                  </div>
-                  <p className="text-gray-300">{benefit}</p>
                 <div key={index} className="flex items-start space-x-3">
                   <div className="flex-shrink-0">
-                    <Accessibility className="h-6 w-6 text-cyan-400" />
+                    <CheckCircle className="h-6 w-6 text-cyan-400" />
                   </div>
                   <p className="text-gray-300">{benefit}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Standards Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Compliance Standards</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                We ensure your products meet international accessibility standards and guidelines.
+              </p>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {standards.map((standard, index) => {
                 const Icon = standard.icon
@@ -263,13 +270,3 @@ const AccessibilityPage: React.FC = () => {
   )
 }
 export default AccessibilityPage
-                    </Footer>
-                  </ArrowRight>
-                </Icon>
-              </Accessibility>
-            </CheckCircle>
-          </div>
-        </CheckCircle>
-      </CheckCircle>
-    </ArrowRight>
-  </Navigation>

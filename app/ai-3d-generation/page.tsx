@@ -146,12 +146,14 @@ const AI3DGenerationPage: React.FC = () => {
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                         {benefit}
                       </li>
-                    )
-    </>
-  )
+                    ))}
                   </ul>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -188,7 +190,6 @@ const AI3DGenerationPage: React.FC = () => {
           </div>
         </section>
 
-            </div>
         {/* Use Cases Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
           <div className="max-w-7xl mx-auto">
@@ -319,15 +320,3 @@ const AI3DGenerationPage: React.FC = () => {
   )
 }
 export default AI3DGenerationPage
-                        </Footer>
-                      </ArrowRight>
-                    </CheckCircle>
-                  </CheckCircle>
-                </Icon>
-              </CheckCircle>
-            </Icon>
-          </CheckCircle>
-        </div>
-      </section>
-    </ArrowRight>
-  </Navigation>

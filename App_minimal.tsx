@@ -7,8 +7,7 @@ import HomePage from './app/page'
 
 const App: React.FC = () => {
   return (
-    <>
-<HelmetProvider>
+    <HelmetProvider>
       <Router>
         <div className="min-h-screen bg-white">
           <Navigation />
@@ -21,9 +20,7 @@ const App: React.FC = () => {
         </div>
       </Router>
     </HelmetProvider>
-    </>
   )
+}
+
 export default App
-      </Footer>
-    </Route>
-  </Navigation>

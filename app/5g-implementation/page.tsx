@@ -219,11 +219,5 @@ const FiveGImplementationPage: React.FC = () => {
     </>
   )
 }
+
 export default FiveGImplementationPage
-              </Footer>
-            </ArrowRight>
-          </CheckCircle>
-        </CheckCircle>
-      </CheckCircle>
-    </ArrowRight>
-  </Navigation>
