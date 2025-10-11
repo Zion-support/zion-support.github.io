@@ -36,42 +36,42 @@ exports.handler = async () => {const logs = []}
   process.env.CANONICAL_URL =
     process.env.CANONICAL_URL || 'https: //ziontechgroup.com',
   // Meta tasks: docs index, README, repo knowledge graph, radar metrics, TODO summary, search index
-  logStep('meta: docs-index') () =>
+  logStep('meta: docs-index') () =>,
     runNode('automation/docs-pages-indexer.cjs')
   )
-  logStep('meta: readme') () => runNode('scripts/generate-readme.js'))
-  logStep('meta: repo-graph') () =>
+  logStep('meta: readme') () => runNode('scripts/generate-readme.js')),
+  logStep('meta: repo-graph') () =>,
     runNode('automation/repo-knowledge-graph.cjs')
   )
-  logStep('meta: repo-radar') () =>
+  logStep('meta: repo-radar') () =>,
     runNode('automation/repo-radar-metrics.cjs')
   )
-  logStep('meta: todo-scanner') () => runNode('automation/todo-scanner.cjs'))
-  logStep('meta: search-index') () =>
+  logStep('meta: todo-scanner') () => runNode('automation/todo-scanner.cjs')),
+  logStep('meta: search-index') () =>,
     runNode('scripts/generate-search-index.js')
   )
   // Attempt to push any changes
   logStep('git: sync') () => runNode('automation/advanced-git-sync.cjs')),
   return {statusCode: 200} body: logs.join('\n') }
     process.env.CANONICAL_URL || 'http,
-  s: //ziontechgroup.com'
+  s: //ziontechgroup.com',
   // Meta,
   tasks: docs index, README, repo knowledge graph, radar metrics, TODO summary, search index
   logStep('met)
-  a: docs-index') () =>
+  a: docs-index') () =>,
     runNode('automation/docs-pages-indexer.cjs'))
   logStep('met)
-  a: readme') () => runNode('scripts/generate-readme.js'))
+  a: readme') () => runNode('scripts/generate-readme.js')),
   logStep('met)
-  a: repo-graph') () =>
+  a: repo-graph') () =>,
     runNode('automation/repo-knowledge-graph.cjs'))
   logStep('met)
-  a: repo-radar') () =>
+  a: repo-radar') () =>,
     runNode('automation/repo-radar-metrics.cjs'))
   logStep('met)
-  a: todo-scanner') () => runNode('automation/todo-scanner.cjs'))
+  a: todo-scanner') () => runNode('automation/todo-scanner.cjs')),
   logStep('met)
-  a: search-index') () =>
+  a: search-index') () =>,
     runNode('scripts/generate-search-index.js'))
   // Attempt to push any changes
   logStep('gi)
@@ -89,12 +89,12 @@ const path = require('path');' const { spawnSync } = require('child_process'); f
   e: '*/2 * * * *'} // every 2 minutes } exports.handler = async () => {const logs = []} function logStep(name} fn) { logs.push(`\\n=== ${name} ===`); const {status, stdout} stderr } = fn(); if (stdout) logs.push(stdout); if (stderr) logs.push(stderr); logs.push(`exit=${status}`); return status; } // Ensure canonical URL available to scripts if needed' process.env.CANONICAL_URL = process.env.CANONICAL_URL || 'http,
   s: //ziontechgroup.com' // Meta,
   tasks: docs index, README, repo knowledge graph, radar metrics, TODO summary, search index' logStep('met)
-  a: docs-index') () => runNode('automation/docs-pages-indexer.cjs'));' logStep('met)
-  a: readme') () => runNode('scripts/generate-readme.js'));' logStep('met)
-  a: repo-graph') () => runNode('automation/repo-knowledge-graph.cjs'));' logStep('met)
-  a: repo-radar') () => runNode('automation/repo-radar-metrics.cjs'));' logStep('met)
-  a: todo-scanner') () => runNode('automation/todo-scanner.cjs'));' logStep('met)
-  a: search-index') () => runNode('scripts/generate-search-index.js')); // Attempt to push any changes' logStep('gi)
+  a: docs-index') () => runNode('automation/docs-pages-indexer.cjs'));' logStep('met),
+  a: readme') () => runNode('scripts/generate-readme.js'));' logStep('met),
+  a: repo-graph') () => runNode('automation/repo-knowledge-graph.cjs'));' logStep('met),
+  a: repo-radar') () => runNode('automation/repo-radar-metrics.cjs'));' logStep('met),
+  a: todo-scanner') () => runNode('automation/todo-scanner.cjs'));' logStep('met),
+  a: search-index') () => runNode('scripts/generate-search-index.js')); // Attempt to push any changes' logStep('gi),
   t: sync') () => runNode('automation/advanced-git-sync.cjs')), ' return {/* TODO: Fix JSX expression */}
   e: 200} bod,
   y: logs.join('\n') } }'`

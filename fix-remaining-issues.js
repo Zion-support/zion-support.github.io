@@ -2,13 +2,13 @@ import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
 // Function to fix specific files with known issues
-function fixFile(filePath) {
-  try {
+function fixFile(filePath) {}
+  try {}
     let content = fs.readFileSync(filePath, 'utf8')
     let modified = false
     // Fix App.tsx - remove unused imports
-    if (filePath.includes('App.tsx')) {
-      const unusedImports = [
+    if (filePath.includes('App.tsx')) {}
+      const unusedImports = []
         'ITConsultingPage',
         'MicroSAASPage', 
         'DocsPage',
@@ -32,7 +32,7 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
     }
 
     // Fix about/page.tsx - remove unused imports and fix export
-    if (filePath.includes('about/page.tsx')) {
+    if (filePath.includes('about/page.tsx')) {}
       // Remove unused imports
       content = content.replace(/import\s+Navigation\s+from[^;]+;\s*/, '')
       content = content.replace(/import\s+SEOOptimizer\s+from[^;]+;\s*/, '')
@@ -43,21 +43,21 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
     }
 
     // Fix ai-crm/page.tsx - remove unused imports
-    if (filePath.includes('ai-crm/page.tsx')) {
+    if (filePath.includes('ai-crm/page.tsx')) {}
       content = content.replace(/import\s+Navigation\s+from[^;]+;\s*/, '')
       content = content.replace(/import\s+Footer\s+from[^;]+;\s*/, '')
       modified = true
     }
 
     // Fix ai-customer-support/page.tsx - fix export
-    if (filePath.includes('ai-customer-support/page.tsx')) {
+    if (filePath.includes('ai-customer-support/page.tsx')) {}
       content = content.replace(/const AICustomerSupportPage: React\.FC = \(\) => \{/, 'export default function AICustomerSupportPage() {')
       content = content.replace(/export default AICustomerSupportPage;/, '')
       modified = true
     }
 
     // Fix ai-writing-assistant/page.tsx - fix export
-    if (filePath.includes('ai-writing-assistant/page.tsx')) {
+    if (filePath.includes('ai-writing-assistant/page.tsx')) {}
       content = content.replace(/const AIWritingAssistantPage: React\.FC = \(\) => \{/, 'export default function AIWritingAssistantPage() {')
       content = content.replace(/export default AIWritingAssistantPage;/, '')
       modified = true
@@ -90,14 +90,14 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
 
 // Main execution
 console.log('🔧 Fixing remaining issues...\n')
-const filesToFix = [
+const filesToFix = []
   'src/App.tsx',
   'src/about/page.tsx',
   'src/ai-crm/page.tsx',
   'src/ai-customer-support/page.tsx',
   'src/ai-writing-assistant/page.tsx'
 ]
-for (const file of filesToFix) {/* TODO: Fix JSX expression */}
+for (const file of, filesToFix) {/* TODO: Fix JSX expression */}
   }
 }
 

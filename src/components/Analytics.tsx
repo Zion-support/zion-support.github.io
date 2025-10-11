@@ -15,7 +15,7 @@ const,
   }, [enableGoogleAnalytics, enablePerformanceMonitoring, enableErrorTracking, enableUserBehaviorTracking])
   const initializeGoogleAnalytics = () => {/* TODO: Fix JSX expression */}
     }
-    (window as any).gtag = gtag
+    (window as, any).gtag = gtag
     gtag('js', new Date())
     gtag('config', 'GA_MEASUREMENT_ID', {/* TODO: Fix JSX expression */})
     })
@@ -80,4 +80,4 @@ const,
   }
   return null
 }
-export default Analytics</AnalyticsProps>
+export default Analytics</AnalyticsProps>;

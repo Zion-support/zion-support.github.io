@@ -1,51 +1,44 @@
-import { useState, useEffect } from "react"
-import { toast } from "@/hooks/use-toast"
-import { useAuth } from "@/hooks/useAuth"
-import { supabase } from "@/integrations/supabase/client"
-import { ReferralCode, ReferralStats, Referral, ReferralReward } from "@/types/referrals"
-export function useReferrals() {
+import { useState, useEffect } from "react""import { toast } from "@/hooks/use-toast""import { useAuth } from "@/hooks/useAuth""import { supabase } from "@/integrations/supabase/client""import { ReferralCode, ReferralStats, Referral, ReferralReward } from "@/types/referrals""export function useReferrals() {}
   const { user } = useAuth()
   const [referralCode, setReferralCode] = useState<ReferralCode | null>(null)
   const [isLoading, setIsLoading] = useState(true)
   const [referrals, setReferrals] = useState<Referral[]>([])
   const [rewards, setRewards] = useState<ReferralReward[]>([])
-  const [stats, setStats] = useState<ReferralStats>({
+  const [stats, setStats] = useState<ReferralStats>({}
     totalReferrals: 0,
     pendingReferrals: 0,
     completedReferrals: 0,
     totalRewards: 0})
     totalRewards: 0,
   })
-  useEffect(() => {
-    if (user) {
+  useEffect(() => {}
+    if (user) {}
       fetchReferralCode()
       fetchReferralStats()
       fetchReferrals()
       fetchRewards()
     }
   }, [user])
-  const fetchReferralCode = async () => {
-    try {
+  const fetchReferralCode = async () => {}
+    try {}
       setIsLoading(true)
       const { data, error } = await supabase
         .from('referral_codes')
         .select('*')
         .eq('user_id', user?.id)
         .single()
-      if (error) {
-        console.error("Error fetching referral code:", error)
-        return
+      if (error) {}
+        console.error("Error fetching referral code:", error)"        return null;
       }
       setReferralCode(data)
-    } catch (error) {
-      console.error("Error in fetchReferralCode:", error)
-    } finally {
+    } catch (error) {}
+      console.error("Error in fetchReferralCode:", error)"    } finally {}
       setIsLoading(false)
     }
   }
-  const fetchReferrals = async () => {
-    try {
-      if (!user) return
+  const fetchReferrals = async () => {}
+    try {}
+      if (!user) return null;
       const { data, error } = await supabase
         .from('referrals')
         .select('*')
@@ -53,13 +46,12 @@ export function useReferrals() {
         .order('created_at', { ascending: false })
       if (error) throw error
       setReferrals(data || [])
-    } catch (error) {
-      console.error("Error fetching referrals:", error)
-    }
+    } catch (error) {}
+      console.error("Error fetching referrals:", error)"    }
   }
-  const fetchRewards = async () => {
-    try {
-      if (!user) return
+  const fetchRewards = async () => {}
+    try {}
+      if (!user) return null;
       const { data, error } = await supabase
         .from('referral_rewards')
         .select('*')
@@ -67,13 +59,12 @@ export function useReferrals() {
         .order('created_at', { ascending: false })
       if (error) throw error
       setRewards(data || [])
-    } catch (error) {
-      console.error("Error fetching rewards:", error)
-    }
+    } catch (error) {}
+      console.error("Error fetching rewards:", error)"    }
   }
-  const fetchReferralStats = async () => {
-    try {
-      if (!user) return
+  const fetchReferralStats = async () => {}
+    try {}
+      if (!user) return null;
       // Get total referrals
       const { data: referrals, error: refError } = await supabase
         .from('referrals')
@@ -90,94 +81,66 @@ export function useReferrals() {
       const totalReferrals = referrals ? referrals.length : 0
       const pendingReferrals = referrals ? referrals.filter(r => r.status === 'pending').length : 0
       const completedReferrals = referrals ? referrals.filter(r => r.status === 'completed').length : 0
-      const totalRewards = rewards ? rewards.reduce((sum, item) => {
+      const totalRewards = rewards ? rewards.reduce((sum, item) => {}
         return sum + (item.amount || 0)
       }, 0) : 0
-      setStats({
+      setStats({}
         totalReferrals,
         pendingReferrals,
         completedReferrals,
         totalRewards
       })
-    } catch (error) {
-      console.error("Error fetching referral stats:", error)
-    }
+    } catch (error) {}
+      console.error("Error fetching referral stats:", error)"    }
   }
-  const generateReferralCode = async () => {
-    try {
-      if (!user) {
-        toast({
-          title: "Authentication required",
-          description: "You need to be logged in to generate a referral code",
-          variant: "destructive"})
-          variant: "destructive",
-        })
-        return
+  const generateReferralCode = async () => {}
+    try {}
+      if (!user) {}
+        toast({}
+          title: "Authentication required","          description: "You need to be logged in to generate a referral code","          variant: "destructive"})"          variant: "destructive","        })
+        return null;
       }
-      const { data, error } = await supabase.rpc('generate_referral_code', {
-        user_id: user.id
+      const { data, error } = await supabase.rpc('generate_referral_code', {}
+        user_id: user.id,
       })
       if (error) throw error
-      toast({
-        title: "Success!",
-        description: "Your referral code has been generated",
-        variant: "success"})
-        variant: "success",
-      })
+      toast({}
+        title: "Success!","        description: "Your referral code has been generated","        variant: "success"})"        variant: "success","      })
       // Refresh the code
       fetchReferralCode()
       return data
-    } catch (error: any) {
-      console.error("Error generating referral code:", error)
-      toast({
-        title: "Error generating code",
-        description: error.message || "There was a problem generating your referral code",
-        variant: "destructive"})
-        variant: "destructive",
-      })
+    } catch (error: any) {}
+      console.error("Error generating referral code:", error)"      toast({}
+        title: "Error generating code","        description: error.message || "There was a problem generating your referral code","        variant: "destructive"})"        variant: "destructive","      })
     }
   }
   // Get the referral link for the current user
-  const getReferralLink = () => {
-    if (!referralCode) return ""
-    const baseUrl = window.location.origin
+  const getReferralLink = () => {}
+    if (!referralCode) return """    const baseUrl = window.location.origin
     return `${baseUrl}/?ref=${referralCode.code}`
   }
   // Copy the referral link to clipboard
-  const copyReferralLink = () => {
+  const copyReferralLink = () => {}
     const link = getReferralLink()
-    if (link) {
+    if (link) {}
       navigator.clipboard.writeText(link)
-      toast({
-        title: "Copied!",
-        description: "Referral link copied to clipboard",
-        variant: "success"})
-        variant: "success",
-      })
-    } else {
-      toast({
-        title: "Cannot copy link",
-        description: "Please generate a referral code first",
-        variant: "destructive"})
-        variant: "destructive",
-      })
+      toast({}
+        title: "Copied!","        description: "Referral link copied to clipboard","        variant: "success"})"        variant: "success","      })
+    } else {}
+      toast({}
+        title: "Cannot copy link","        description: "Please generate a referral code first","        variant: "destructive"})"        variant: "destructive","      })
     }
   }
   // Share on social media platforms
-  const shareOnSocialMedia = (platform: 'twitter' | 'facebook' | 'linkedin') => {
+  const shareOnSocialMedia = (platform: 'twitter' | 'facebook' | 'linkedin') => {}
     const link = getReferralLink()
-    const text = "Join Zion AI marketplace for AI talent and opportunities!"
-    if (!link) {
-      toast({
-        title: "Cannot share",
-        description: "Please generate a referral code first",
-        variant: "destructive"})
-        variant: "destructive",
-      })
-      return
+    const text = "Join Zion AI marketplace for AI talent and opportunities!""    if (!link) {}
+      toast({}
+        title: "Cannot share","        description: "Please generate a referral code first","        variant: "destructive"})"        variant: "destructive","      })
+      return null;
     }
     let shareUrl = ''
-    switch (platform) {
+    switch (platform) {}
       case 'twitter':
         shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(link)}`
         break
@@ -188,11 +151,11 @@ export function useReferrals() {
         shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(link)}`
         break
     }
-    if (shareUrl) {
+    if (shareUrl) {}
       window.open(shareUrl, '_blank')
     }
   }
-  return {
+  return {}
     referralCode,
     isLoading,
     stats,

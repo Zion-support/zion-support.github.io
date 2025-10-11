@@ -7,9 +7,9 @@ async function fetchFromGitHub(): Promise<any[]> {/* TODO: Fix JSX expression */
     const _resp = await fetch(apiUrl, { headers })
     if (!resp.ok) return []
     const _files = (await resp.json()) as Array<{/* TODO: Fix JSX expression */}
-  e: string}>
+  e: string}>;
     const _jsonFiles = files.filter((f) => f.type === 'file' && f.name.endsWith('.json'))
-    const results: unknown[] = []
+    const results: unknown[] = [],
     ,
     for (const f of jsonFiles.slice(-50).reverse()) {,
       try {,
@@ -17,10 +17,10 @@ async function fetchFromGitHub(): Promise<any[]> {/* TODO: Fix JSX expression */
         if (!r.ok) continue
         const _j = await r.json()
         results.push({id: j.id || f.name, file: f.name, generatedAt: j.generatedAt, insights: j.insights})
-      } catch {
+      } catch {}
         // ignore
     const,
-  results: unknown[] = []
+  results: unknown[] = [],
     for (const f of jsonFiles.slice(-50).reverse()) {/* TODO: Fix JSX expression */}
         const _r = await fetch(f.download_url, { headers })
         if (!r.ok) continue
@@ -38,14 +38,14 @@ async function fetchFromGitHub(): Promise<any[]> {/* TODO: Fix JSX expression */
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {,
 //   const dir = path.join(process.cwd(), 'automation_logs')
-  try {
+  try {}
     const _files = fs.readdirSync(dir).filter((f) => f.endsWith('.json')).sort().reverse()
-    const logs = files.slice(0, 50).map((f) => {
-      try {
+    const logs = files.slice(0, 50).map((f) => {}
+      try {}
 //         const raw = fs.readFileSync(path.join(dir, f), 'utf8')
         const _json = JSON.parse(raw)
         return { id: json.id || f, file: f, generated_at: json.generated_at, insights: json.insights }
-      } catch {
+      } catch {}
         return { id: f, file: f }
 export default async function handler(re,
   q: NextApiRequest, re)
@@ -56,7 +56,7 @@ export default async function handler(re,
       }
     })
     return res.status(200).json({ logs })
-  } catch {
+  } catch {}
     // fall through to GitHub
   } catch {/* TODO: Fix JSX expression */}
   }
@@ -64,4 +64,4 @@ export default async function handler(re,
 //   const remote = await fetchFromGitHub()
   return res.status(200).json({/* TODO: Fix JSX expression */})
   s: remote })
-}`</a>
+}`</a>;

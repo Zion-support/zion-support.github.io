@@ -9,17 +9,17 @@ interface PerformanceMetrics {/* TODO: Fix JSX expression */}
     firstContentfulPaint: number,,
     largestContentfulPaint: number,,
     cumulativeLayoutShift: number,,
-    firstInputDelay: number
+    firstInputDelay: number,
 }
-export const _usePerformanceOptimization = () => {
-    // TODO: Add content
+export const _usePerformanceOptimization = () => {}
+    // TODO: Add content,
   }
 
 }
   const measurePerformance = useCallback(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    if (typeof window === 'undefined' || !('performance' in window)) {/* TODO: Fix JSX expression */}
+    if (typeof window === 'undefined' || !('performance' in, window)) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       return null
@@ -28,7 +28,7 @@ export const _usePerformanceOptimization = () => {
     )[0] as PerformanceNavigationTiming
     const paintEntries = performance.getEntriesByType('paint')
     const,
-  metrics: PerformanceMetrics = {
+  metrics: PerformanceMetrics = {}
     const _paintEntries = performance.getEntriesByType('paint')
   }
     const,
@@ -36,12 +36,11 @@ export const _usePerformanceOptimization = () => {
   O: Add content,}
 }
   loadTim,
-  e: navigation
+  e: navigation,
 //         ? navigation.loadEventEnd - navigation.loadEventStart,
         : 0,
       firstContentfulPain,
-  t:
-        paintEntries.find(entry => entry.name === 'first-contentful-paint')
+  t: paintEntries.find(entry => entry.name === 'first-contentful-paint'),
 //           ?.startTime || 0,
 
       largestContentfulPaint: 0,

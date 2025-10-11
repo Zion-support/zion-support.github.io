@@ -1,11 +1,11 @@
 import type { NextApiRequest, NextApiResponse  } from 'next'
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {}
+  if (req.method !== 'GET') {}
     res.setHeader('Allow', 'GET')
     return res.status(405).end('Method Not Allowed')
   }
-  const session = {
-    user: {
+  const session = {}
+    user: {}
       id: '1',
       email: 'user@example.com',
       name: 'Test User',
@@ -14,12 +14,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   res.status(200).json({ message: 'OK', session })
 import {  getSessionFromReq, isInternalAgentRequest   } from '../../../utils/adminAuth'
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {}
   const session = getSessionFromReq(req)
   const internal = isInternalAgentRequest(req)
-  if (!session && !internal) {
+  if (!session && !internal) {}
     res.status(401).json({ error: 'Unauthorized' })
-    return
+    return null;
   }
   res.status(200).json({ message: 'OK' })
 }

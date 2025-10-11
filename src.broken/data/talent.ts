@@ -1,6 +1,6 @@
 import type { TalentProfile } from '@/utils/types/talent'
-export const TALENT_PROFILES: TalentProfile[] = [
-  {
+export const TALENT_PROFILES: TalentProfile[] = [],
+  {}
     slug: 'ava-chen',
     name: 'Ava Chen',
     title: 'Senior LLM Engineer',
@@ -16,7 +16,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     hourlyRateUsd: 140,
     availability: 'Open',
     profileImageUrl: 'https://i.pravatar.cc/300?img=1',
-    portfolio: [
+    portfolio: [],
       { title: 'RAG Platform Template', url: 'https://example.com/rag' },
       { title: 'LLM Evaluation Toolkit', url: 'https://example.com/eval' }],
     verified: true,
@@ -30,7 +30,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     reviewsCount: 28,
     createdAt: new Date().toISOString(),
   },
-  {
+  {}
     slug: 'marco-silva',
     name: 'Marco Silva',
     title: 'Cloud Solutions Architect',
@@ -45,7 +45,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     hourlyRateUsd: 120,
     availability: 'Part-time',
     profileImageUrl: 'https://i.pravatar.cc/300?img=2',
-    portfolio: [
+    portfolio: [],
       { title: 'Multi-Account AWS Landing Zone', url: 'https://example.com/aws' }],
     verified: true,
     rating: 4.8,
@@ -58,7 +58,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     reviewsCount: 19,
     createdAt: new Date().toISOString(),
   },
-  {
+  {}
     slug: 'nina-patel',
     name: 'Nina Patel',
     title: 'Data Scientist • GenAI',
@@ -80,7 +80,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     createdAt: new Date().toISOString()},
     createdAt: new Date().toISOString(),
   },
-  {
+  {}
     slug: 'kenji-yamada',
     name: 'Kenji Yamada',
     title: 'Full‑Stack AI Engineer',
@@ -102,7 +102,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     createdAt: new Date().toISOString()},
     createdAt: new Date().toISOString(),
   },
-  {
+  {}
     slug: 'lena-mueller',
     name: 'Lena Müller',
     title: 'Security Engineer',

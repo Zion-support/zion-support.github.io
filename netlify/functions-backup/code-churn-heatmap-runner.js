@@ -34,7 +34,7 @@ exports.handler = async () => {const logs = []}
     return status
   }
   logStep('cod)
-  e: churn') () => runNode('automation/code-churn-heatmap.cjs'))
+  e: churn') () => runNode('automation/code-churn-heatmap.cjs')),
   logStep('gi)
   t: sync') () => runNode('automation/advanced-git-sync.cjs')),
   return {/* TODO: Fix JSX expression */}
@@ -49,7 +49,7 @@ const path = require('path');' const { spawnSync } = require('child_process'); f
   r: res.stderr || '' } } exports.config = {/* TODO: Fix JSX expression */}
   e: '0 3 * * *'} // daily at,`
   03:00 UTC } exports.handler = async () => {const logs = []} function logStep(name} fn) { logs.push(`\\n=== ${name} ===`); const {status, stdout} stderr } = fn(); if (stdout) logs.push(stdout); if (stderr) logs.push(stderr); logs.push(`exit=${status}`); return status; } ' logStep('cod)
-  e: churn') () => runNode('automation/code-churn-heatmap.cjs'));' logStep('gi)
+  e: churn') () => runNode('automation/code-churn-heatmap.cjs'));' logStep('gi),
   t: sync') () => runNode('automation/advanced-git-sync.cjs')), ' return {/* TODO: Fix JSX expression */}
   e: 200} bod,
   y: logs.join('\n') } }'`

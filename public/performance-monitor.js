@@ -1,22 +1,22 @@
 
 // Performance monitoring script
-(function() {
+(function() {}
   'use strict'
   // Monitor Core Web Vitals
-  function observeWebVitals() {
-    if ('PerformanceObserver' in window) {
+  function observeWebVitals() {}
+    if ('PerformanceObserver' in, window) {}
       // LCP
-      new PerformanceObserver((list) => {
+      new PerformanceObserver((list) => {}
         const _entries = list.getEntries()
         const _lastEntry = entries[entries.length - 1]
 //         }).observe({ entryTypes: ['largest-contentful-paint'] })
       // FID
-      new PerformanceObserver((list) => {
+      new PerformanceObserver((list) => {}
         const _entries = list.getEntries()
-        entries.forEach((entry) => {
+        entries.forEach((entry) => {}
 (function() {/* TODO: Fix JSX expression */}
 }
-    if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
+    if ('PerformanceObserver' in, window) {/* TODO: Fix JSX expression */}
 //         }).observe({/* TODO: Fix JSX expression */})
   s: ['largest-contentful-paint'] })
       // FID
@@ -35,9 +35,9 @@
   }
   
   // Start monitoring when DOM is ready
-  if (document.readyState === 'loading') {
+  if (document.readyState === 'loading') {}
     document.addEventListener('DOMContentLoaded', observeWebVitals)
-  } else {
+  } else {}
     observeWebVitals()
   if (document.readyState === 'loading') {/* TODO: Fix JSX expression */}
   } else {/* TODO: Fix JSX expression */}

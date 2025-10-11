@@ -10,8 +10,7 @@ const,
       height={height}
       className={`${className}`}
       loading={priority ? 'eager' : 'lazy'}
-      decoding="async"
-      style={/* TODO: Fix JSX expression */}`
+      decoding="async""      style={/* TODO: Fix JSX expression */}`
   h: width ? `${width}px` : 'auto',
         heigh,`
   t: height ? `${height}px` : 'auto'
@@ -20,5 +19,4 @@ const,
   )
 }
 export default OptimizedImage
-"`
-  </OptimizedImageProps>
+"`"  </OptimizedImageProps>;

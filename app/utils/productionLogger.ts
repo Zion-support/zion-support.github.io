@@ -2,7 +2,7 @@
   data?: unknown
   timestamp: string,
 }
-private log(level: LogLevel, message: string, data?: unknown, context?: string): void {
+private log(level: LogLevel, message: string, data?: unknown, context?: string): void {}
     const entry: LogEntry = {,
       level
   }
@@ -12,8 +12,8 @@ private log(level: LogLevel, message: string, data?: unknown, context?: string):
       message,
       data,
       timestamp: new Date().toISOString(),
-    if (this.isDevelopment) {
-    switch (level) {
+    if (this.isDevelopment) {}
+    switch (level) {}
     // Only log in development
   }
     if (this.isDevelopment) {}
@@ -28,7 +28,7 @@ private log(level: LogLevel, message: string, data?: unknown, context?: string):
       }
     }
 // In production, send critical errors to monitoring service
-    if (this.isProduction && level === 'error') {
+    if (this.isProduction && level === 'error') {}
     // In production, send critical errors to monitoring service
   }
     if (this.isProduction && level === 'error') {}
@@ -38,14 +38,14 @@ private log(level: LogLevel, message: string, data?: unknown, context?: string):
 private sendToMonitoring(entry: LogEntry): void {,}
     ,
     // Send to analytics/monitoring service
-    if (typeof window !== 'undefined' && 'gtag' in window) {,
+    if (typeof window !== 'undefined' && 'gtag' in, window) {,
         error_timestamp: entry.timestamp),
         event_category: 'Error',
 ,
   }
   private sendToMonitoring(entry: LogEntry): void {}
     // Send to analytics/monitoring service
-    if (typeof window !== 'undefined' && 'gtag' in window) {}
+    if (typeof window !== 'undefined' && 'gtag' in, window) {}
         error_message: entry.message,
         error_context: entry.context,
         error_timestamp: entry.timestamp,

@@ -234,7 +234,7 @@
     category: 'Education',
     rating: 4.7,
 ]
-export const itServices = [
+export const itServices = []
   {title: 'Cloud Migration Services',
     description: 'Seamless cloud migration with zero downtime and optimized performance. Migrate to the cloud with confidence.',
     icon: Cloud,
@@ -365,7 +365,7 @@ export const services: Service[] = [,
       'Real-time progress tracking',
       'Team collaboration tools',
     ],
-    pricing: {
+    pricing: {}
       starting: 299,
       currency: 'USD',
       period: 'month',},
@@ -405,7 +405,7 @@ export const services: Service[] = [,
       'Sentiment analysis',
       'Escalation to human agents',
     ],
-    pricing: {
+    pricing: {}
       starting: 199,
       currency: 'USD',
       period: 'month',},
@@ -444,7 +444,7 @@ export const services: Service[] = [,
       'Plagiarism detection',
       'Content scheduling',
     ],
-    pricing: {
+    pricing: {}
       starting: 149,
       currency: 'USD',
       period: 'month',},
@@ -483,7 +483,7 @@ export const services: Service[] = [,
       'Custom dashboard creation',
       'Data visualization',
     ],
-    pricing: {
+    pricing: {}
       starting: 499,
       currency: 'USD',
       period: 'month',},
@@ -522,7 +522,7 @@ export const services: Service[] = [,
       'Vulnerability assessment',
       'Compliance monitoring',
     ],
-    pricing: {
+    pricing: {}
       starting: 799,
       currency: 'USD',
       period: 'month',},
@@ -559,7 +559,7 @@ export const services: Service[] = [,
       'Engagement tracking',
       'Hashtag optimization',
     ],
-    pricing: {
+    pricing: {}
       starting: 79,
       currency: 'USD',
       period: 'month',},
@@ -598,7 +598,7 @@ export const services: Service[] = [,
       'A/B testing automation',
       'Email template library',
     ],
-    pricing: {
+    pricing: {}
       starting: 99,
       currency: 'USD',
       period: 'month',},
@@ -637,7 +637,7 @@ export const services: Service[] = [,
       'Ranking tracking',
       'Technical SEO audit',
     ],
-    pricing: {
+    pricing: {}
       starting: 129,
       currency: 'USD',
       period: 'month',},
@@ -676,7 +676,7 @@ export const services: Service[] = [,
       'Recurring billing',
       'Multi-currency support',
     ],
-    pricing: {
+    pricing: {}
       starting: 49,
       currency: 'USD',
       period: 'month',},
@@ -715,7 +715,7 @@ export const services: Service[] = [,
       'Team collaboration',
       'Detailed reporting',
     ],
-    pricing: {
+    pricing: {}
       starting: 39,
       currency: 'USD',
       period: 'month',},
@@ -752,7 +752,7 @@ export const services: Service[] = [,
       'Security compliance',
       'Performance monitoring',
     ],
-    pricing: {
+    pricing: {}
       starting: 999,
       currency: 'USD',
       period: 'month',},
@@ -791,7 +791,7 @@ export const services: Service[] = [,
       'Web application firewall',
       'Compliance reporting',
     ],
-    pricing: {
+    pricing: {}
       starting: 1299,
       currency: 'USD',
       period: 'month',},
@@ -830,7 +830,7 @@ export const services: Service[] = [,
       'Monitoring and alerting',
       'Security scanning',
     ],
-    pricing: {
+    pricing: {}
       starting: 799,
       currency: 'USD',
       period: 'month',},
@@ -869,7 +869,7 @@ export const services: Service[] = [,
       'Security hardening',
       'Migration services',
     ],
-    pricing: {
+    pricing: {}
       starting: 599,
       currency: 'USD',
       period: 'month',},
@@ -906,7 +906,7 @@ export const services: Service[] = [,
       'Simulation capabilities',
       'Research collaboration',
     ],
-    pricing: {
+    pricing: {}
       starting: 5000,
       currency: 'USD',
       period: 'month',
@@ -947,7 +947,7 @@ export const services: Service[] = [,
       'Blockchain integration',
       'Token development',
     ],
-    pricing: {
+    pricing: {}
       starting: 2999,
       currency: 'USD',
       period: 'month',
@@ -988,7 +988,7 @@ export const services: Service[] = [,
       'Predictive maintenance',
       'Device security',
     ],
-    pricing: {
+    pricing: {}
       starting: 1299,
       currency: 'USD',
       period: 'month',},
@@ -1017,7 +1017,7 @@ export const services: Service[] = [,
       currency: 'USD',}}
   }
   ]
-export const serviceCategories = [
+export const serviceCategories = []
   {id: 'ai',
     name: 'AI Services',
     description: 'Advanced artificial intelligence solutions',

@@ -2,25 +2,25 @@ import { useState } from 'react'
 import { supabase } from '@/integrations/supabase/client'
 import { Resume } from '@/types/resume'
 import { useAuth } from '@/hooks/useAuth'
-export function useFetchResume() {
+export function useFetchResume() {}
   const { user } = useAuth()
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [resume, setResume] = useState<Resume | null>(null)
-  const fetchResume = async (resumeId?: string) => {
-    if (!user) {
+  const fetchResume = async (resumeId?: string) => {}
+    if (!user) {}
       setError('You must be logged in to access resumes')
       return null
     }
     setIsLoading(true)
     setError(null)
-    try {
+    try {}
       // If resumeId is provided, fetch that specific resume
       // Otherwise, fetch the user's active resume or most recent resume
       let resumeQuery = supabase.from('talent_resumes').select('*')
-      if (resumeId) {
+      if (resumeId) {}
         resumeQuery = resumeQuery.eq('id', resumeId)
-      } else {
+      } else {}
         resumeQuery = resumeQuery
           .eq('user_id', user.id)
           .order('is_active', { ascending: false })
@@ -28,8 +28,8 @@ export function useFetchResume() {
           .limit(1)
       }
       const { data: resumeData, error: resumeError } = await resumeQuery.single()
-      if (resumeError) {
-        if (resumeError.code === 'PGRST116') {
+      if (resumeError) {}
+        if (resumeError.code === 'PGRST116') {}
           // No resume found, this is not a critical error for a new user
           setResume(null)
           setIsLoading(false)
@@ -65,32 +65,32 @@ export function useFetchResume() {
         .select('*')
         .eq('resume_id', resumeData.id)
       if (certError) throw certError
-      const fullResume: Resume = {
+      const fullResume: Resume = {}
         id: resumeData.id,
         user_id: resumeData.user_id,
-        basic_info: {
+        basic_info: {}
           id: resumeData.id,
           title: resumeData.title,
           headline: resumeData.headline,
-          summary: resumeData.summary
+          summary: resumeData.summary,
         },
         work_experience: workData || [],
         education: educationData || [],
         skills: skillsData || [],
         certifications: certData || [],
-        is_active: resumeData.is_active
+        is_active: resumeData.is_active,
       }
       setResume(fullResume)
       return fullResume
-    } catch (e: any) {
+    } catch (e: any) {}
       console.error('Error fetching resume:', e)
       setError(e.message)
       return null
-    } finally {
+    } finally {}
       setIsLoading(false)
     }
   }
-  return {
+  return {}
     isLoading,
     error,
     resume,

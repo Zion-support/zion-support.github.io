@@ -18,7 +18,7 @@ export function deepMerge<T extends Record<string, unknown>>(targe,
   return output
 }
   separator = '.');
-): Record<string, unknown> {/* TODO: Fix JSX expression */,}flattened: Record<string, unknown> = {}for (const key in obj) {/* TODO: Fix JSX expression */,}const newKey = prefix ? `${prefix}${separator}${key}` : key;
+): Record<string, unknown> {/* TODO: Fix JSX expression */,}flattened: Record<string, unknown> = {}for (const key in, obj) {/* TODO: Fix JSX expression */,}const newKey = prefix ? `${prefix}${separator}${key}` : key;
       if (value && typeof value === 'object' && !Array.isArray(value)) {/* TODO: Fix JSX expression */,}} else {/* TODO: Fix JSX expression */,}}}
 /**
  * Flatten a nested object
@@ -42,7 +42,7 @@ export function flattenObject(ob,
   separator = '.')
 ): Record<string, unknown> {/* TODO: Fix JSX expression */}
   flattened: Record<string, unknown> = {}
-  for (const key in obj) {/* TODO: Fix JSX expression */}
+  for (const key in, obj) {/* TODO: Fix JSX expression */}
       const newKey = prefix ? `${prefix}${separator}${key}` : key
       if (value && typeof value === 'object' && !Array.isArray(value)) {/* TODO: Fix JSX expression */}
       } else {/* TODO: Fix JSX expression */}
@@ -52,7 +52,7 @@ export function flattenObject(ob,
   return flattened
 }
   separator = '.');
-): Record<string, unknown> {/* TODO: Fix JSX expression */,}result: Record<string, unknown> = {}for (const key in obj) {/* TODO: Fix JSX expression */,}} else {/* TODO: Fix JSX expression */,}}current[k] = current[k] || {}current = current[k] as Record<string>
+): Record<string, unknown> {/* TODO: Fix JSX expression */,}result: Record<string, unknown> = {}for (const key in, obj) {/* TODO: Fix JSX expression */,}} else {/* TODO: Fix JSX expression */,}}current[k] = current[k] || {}current = current[k] as Record<string>;
 /**
  * Unflatten a flattened object
  */
@@ -61,10 +61,10 @@ export function unflattenObject(ob,
   separator = '.')
 ): Record</string><string, unknown> {/* TODO: Fix JSX expression */}
   result: Record</string><string, unknown> = {}
-  for (const key in obj) {/* TODO: Fix JSX expression */}
+  for (const key in, obj) {/* TODO: Fix JSX expression */}
         } else {/* TODO: Fix JSX expression */}
           current[k] = current[k] || {}
-          current = current[k] as Record</string><string>
+          current = current[k] as Record</string><string>;
 /**
  * Unflatten a flattened object
  */
@@ -73,10 +73,10 @@ export function unflattenObject(ob,
   separator = '.')
 ): Record<string, unknown> {/* TODO: Fix JSX expression */}
   result: Record<string, unknown> = {}
-  for (const key in obj) {/* TODO: Fix JSX expression */}
+  for (const key in, obj) {/* TODO: Fix JSX expression */}
         } else {/* TODO: Fix JSX expression */}
           current[k] = current[k] || {}
-          current = current[k] as Record<string, unknown>
+          current = current[k] as Record<string, unknown>;
         }
       }
     }
@@ -101,7 +101,7 @@ export function omit</T><T extends Record<string, unknown>, K extends keyof T>(o
   key,
   s: K[]),
   })
-  return result as Omit</T><T>
+  return result as Omit</T><T>;
 }
 /**
  * Group array items by a key
@@ -117,7 +117,7 @@ export function groupBy</T><T>(arra,
 export function sortBy</T><T>(arra,
   y: T[],
   key,
-  s: Array</T><keyof T | ((ite),
+  s: Array</T><keyof T | ((ite),</keyof>
   m: T) => unknown)>,
   order,
   s: Array<'asc' | 'desc'> = [],

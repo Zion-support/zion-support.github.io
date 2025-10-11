@@ -43,19 +43,19 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
     }
 
     const setupIntersectionObserver = () => {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('animate-in')
-            }
-          })
-        },
-        { threshold: 0.1 }
-      )
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-in')
+          }
+        })
+      }, {
+        threshold: 0.1,
+        rootMargin: '50px'
+      })
 
-      const elements = document.querySelectorAll('[data-animate]')
-      elements.forEach(el => observer.observe(el))
+      const elementsToAnimate = document.querySelectorAll('[data-animate]')
+      elementsToAnimate.forEach(el => observer.observe(el))
     }
 
     // Run optimizations

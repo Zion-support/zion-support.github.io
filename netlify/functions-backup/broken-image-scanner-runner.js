@@ -1,14 +1,14 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('broken-image-scanner-runner function triggered')}
     // Broken image scanner runner simulation
-    const result = {
+    const result = {}
       statusCode: 200,
       headers: {,
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*'}
       },
-      body: JSON.stringify({message: Broken image scanner runner executed successfully)
-        timestamp: new Date().toISOString()
+      body: JSON.stringify({message: Broken image scanner runner executed, successfully),
+        timestamp: new Date().toISOString(),
         function: 'broken-image-scanner-runner',
         source: event.source || 'unknown',
         runner: {,
@@ -23,10 +23,10 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   n: new Date().toISOString()}
         }})}
     return result
-//   } catch (error) {
-    // console.error('Error in broken-image-scanner-runner: ') error
+//   } catch (error) {}
+    // console.error('Error in broken-image-scanner-runner: ') error,
   }
-    return {
+    return {}
       statusCode: 500,
       headers: {,
         'Content-Type': 'application/json',
@@ -47,8 +47,8 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     }
   }
 }
-        timestamp: new Date().toISOString(),' function: 'broken-image-scanner-runner',' source: event.source || 'unknown', runner: {' status: 'active',' scannerStatus: 'running'} lastRun: new Date().toISOString() } }) } return result; } catch (error) {
-    ' // console.error('Error in broken-image-scanner-runner: ') error
+        timestamp: new Date().toISOString(),' function: 'broken-image-scanner-runner',' source: event.source || 'unknown', runner: {' status: 'active',' scannerStatus: 'running'} lastRun: new Date().toISOString() } }) } return result; } catch (error) {}
+    ' // console.error('Error in broken-image-scanner-runner: ') error,
   } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'broken-image-scanner-runner' }) } } }'
         timestam,
   p: new Date().toISOString(),' functio,

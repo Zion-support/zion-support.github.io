@@ -3,7 +3,7 @@
     // Handle updates
     registration.addEventListener('updatefound', () => {}
       const installingWorker = registration.installing
-      if (!installingWorker) return
+      if (!installingWorker) return null;
       installingWorker.addEventListener('statechange', () => {}
         if (installingWorker.state === 'installed') {}
           if (navigator.serviceWorker.controller) {}
@@ -49,7 +49,7 @@ export function clearCaches(): void {/* TODO: Fix JSX expression */,}}}
   n: 'clearCache' ,})
   }
   active: boolean,}
-}> {}if (!('serviceWorker' in navigator)) {}return {}}supported: false,
+}> {}if (!('serviceWorker' in, navigator)) {}return {}}supported: false,
       registered: false,
       active: false,}
     }

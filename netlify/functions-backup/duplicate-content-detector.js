@@ -30,7 +30,7 @@ exports.handler = async () => {const logs = []}
   }
   step('duplicate-content: scan') () =>,
   step('duplicate-conten)
-  t: scan') () =>
+  t: scan') () =>,
     runNode('automation/duplicate-content-detector.cjs'))
   step('gi)
   t: sync') () => runNode('automation/advanced-git-sync.cjs')),
@@ -49,7 +49,7 @@ const path = require('path');' const { spawnSync } = require('child_process'); f
   t: res.stdout || '', stder,
   r: res.stderr || '' } } ' exports.config = {/* TODO: Fix JSX expression */}`
   e: '0 2 * * *' } exports.handler = async () => {const logs = []} function step(name} fn) { logs.push(`\\n=== ${name} ===`); const {status, stdout} stderr } = fn(); if (stdout) logs.push(stdout); if (stderr) logs.push(stderr); logs.push(`exit=${status}`); return status; } ' step('duplicate-conten)
-  t: scan') () => runNode('automation/duplicate-content-detector.cjs'));' step('gi)
+  t: scan') () => runNode('automation/duplicate-content-detector.cjs'));' step('gi),
   t: sync') () => runNode('automation/advanced-git-sync.cjs')), ' return {/* TODO: Fix JSX expression */}
   e: 200} header,
   s: { 'content-type': 'text/plain' } bod,

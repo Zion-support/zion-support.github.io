@@ -1,9 +1,9 @@
 import { useFetchResume } from './useFetchResume'
 import { useResumeActions } from './useResumeActions'
-export function useResumeBasic() {
+export function useResumeBasic() {}
   const fetchResumeOperations = useFetchResume()
   const resumeActions = useResumeActions()
-  return {
+  return {}
     // From useFetchResume
     isLoading: fetchResumeOperations.isLoading || resumeActions.isLoading,
     error: fetchResumeOperations.error || resumeActions.error,

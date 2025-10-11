@@ -1,10 +1,10 @@
 import type { NextApiRequest, NextApiResponse  } from 'next'
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {}
+  if (req.method !== 'POST') {}
     return res.status(405).json({ error: 'Method not allowed' })
   }
   const { email, password, code } = req && req.body || {}
-  if (!email || !password || !code) {
+  if (!email || !password || !code) {}
     return res && res.status(400).json({ error: 'Missing credentials' })
   }
   const result = validateCredentials(email, password, code)
@@ -17,19 +17,19 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   const { email, password, code } = req.body || {}
   // Check condition
-if ( {) {
+if ( {) {}
   $2
 }
     return res.status (400).json ({ error: 'Missing credentials' })
   }
   const result = validate_credentials (email, password, code)
   // Check condition
-if ( {) {
+if ( {) {}
   $2
 }
     return res.status (401).json ({ error: 'Invalid credentials' })
   }
-  const cookie = createSessionCookie ({
+  const cookie = createSessionCookie ({}
     email,
     role: result.role,
     twofa_verified: true,
@@ -40,16 +40,16 @@ if ( {) {
   return res.status (200).json ({ ok: true })
 }
 import {  createSessionCookie, validateCredentials   } from '../../../utils/auth-utils'
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {}
+  if (req.method !== 'POST') {}
     return res.status(405).json({ error: 'Method not allowed' })
   }
   const { email, password, code } = req.body || {}
-  if (!email || !password || !code) {
+  if (!email || !password || !code) {}
     return res.status(400).json({ error: 'Missing credentials' })
   }
   const result = validateCredentials(email, password, code)
-  if (!result.ok || !result.role) {
+  if (!result.ok || !result.role) {}
     return res.status(401).json({ error: 'Invalid credentials' })
   }
   const cookie = createSessionCookie({ email, role: result.role, twofaVerified: true })

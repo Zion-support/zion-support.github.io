@@ -22,23 +22,23 @@ export function formatEmail(email: string): string {,
   return email.toLowerCase().trim()
 }
 
-export function debounce<T extends (...args: unknown[]) => any>(
-  func: T
-  wait: number
-): (...args: Parameters<T>) => void {
-  let timeout: NodeJS.Timeout
+export function debounce<T extends (...args: unknown[]) => any>(,
+  func: T,
+  wait: number,
+): (...args: Parameters<T>) => void {}
+  let timeout: NodeJS.Timeout,
   return (...args: Parameters<T>) => {,
     clearTimeout(timeout)
     timeout = setTimeout(() => func(...args), wait)
   }
 }
 
-export function throttle<T extends (...args: unknown[]) => any>(
-  func: T
-  limit: number
-): (...args: Parameters<T>) => void {
-  let inThrottle: boolean
-  return (...args: Parameters<T>) => {
+export function throttle<T extends (...args: unknown[]) => any>(,
+  func: T,
+  limit: number,
+): (...args: Parameters<T>) => void {}
+  let inThrottle: boolean,
+  return (...args: Parameters<T>) => {}
     if (!inThrottle) {,
       func(...args)
       inThrottle = true
@@ -47,21 +47,21 @@ export function formatEmail(emai)
   l: string): string {/* TODO: Fix JSX expression */}
 }
 
-export function debounce<T extends (...arg)
+export function debounce<T extends (...arg)</T>
   s: unknown[]) => any>(fun,
   c: T,
   wai,
-  t: number;)
+  t: number;),
 ): (...arg)
   s: Parameters<T>) => void {/* TODO: Fix JSX expression */}
   }
 }
 
-export function throttle<T extends (...arg)
+export function throttle<T extends (...arg)</T>
   s: unknown[]) => any>(fun,
   c: T,
   limi,
-  t: number;)
+  t: number;),
 ): (...arg)
   s: Parameters<T>) => void {/* TODO: Fix JSX expression */}
     }

@@ -26,7 +26,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -39,7 +39,7 @@
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
@@ -51,7 +51,7 @@
   command: ${buildSettings.cmd || Not set'}`); this.log(`Publish)`
   directory: ${buildSettings.dir || `Not set}`)} } } catch (error) {this.error(`Failed to check Netlify status'}error) } } asyn,
   c: monitorBuildStatus() {/* TODO: Fix JSX expression */}
-  f: (hasChanges) { this.log('Local changes detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
+  f: (hasChanges) { this.log('Local changes, detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
   f: (!currentBuild || currentBuild.state === 'error'')) {/* TODO: Fix JSX expression */}
   o: active build or previous build failed}triggering new build...''))' i,
   f: (this.config.autoDeployEnabled) { await this.triggerBuild()} } else {/* TODO: Fix JSX expression */}`
@@ -70,9 +70,9 @@
   n: 'builds.length > 0 ? builds[0] : null'} catc,
   h: (error) {this.error('Failed to get current build'')}error)' retur,
   n: 'null'} this.error('Failed to get current build')error); return null } } async monitorExistingBuilds() {try { const builds = await this.getBuilds(5)} fo,
-  r: (const build of builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
+  r: (const build of, builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
   g: build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); i,`
-  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded timeout)investigating...`); awai,
+  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded, timeout)investigating...`); awai,
   t: this.investigateBuildTimeout(build)} } else if (build.state === error) ') {/* TODO: Fix JSX expression */}`
   d: ${build.id} failed)analyzing error...`); awai,
   t: this.analyzeBuildError(build)} else if (build.state === 'ready'')) {/* TODO: Fix JSX expression */}`
@@ -129,7 +129,7 @@
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.lengt}h}`); awai,
   t: this.analyzeFailurePatterns(failedBuilds)} awai,`
-  t: this.checkBuildConfiguration()} catch () {}async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average build)`
+  t: this.checkBuildConfiguration()} catch () {}async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average, build)`
   duration: ${Math.round(avgDuration / 1000)}s`); const failedBuilds = recentBuilds.filter(build => build.status === `error) `); if (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.length}`); await this.analyzeFailurePatterns(failedBuilds)} await this.checkBuildConfiguration()} catch (error) {this.error( Build health check failed} '}error)}'} asyn,
   c: performDailyOptimization() {/* TODO: Fix JSX expression */}
@@ -355,7 +355,7 @@
   h: (error) {/* TODO: Fix JSX expression */}
   d: to apply deployment fixes'')}error)}'} asyn,
   c: fixMissingFiles() {/* TODO: Fix JSX expression */}
-  d: output not found)running build...''})' execSync('np)
+  d: output not, found)running build...''})' execSync('np)
   m: run build'')}{/* TODO: Fix JSX expression */}
   o: 'pipe})}'} catc,
   h: (error) {this.error( Failed to fix missing files'}error)}'} asyn,
@@ -371,7 +371,7 @@
   c: retryDeployment(deploymentId) { try { this.log(`Retrying deployment ${deploymentId}...`); awai,`
   t: this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST')' this.log('Deploymen)
   t: retry triggered')} catch (error) {/* TODO: Fix JSX expression */}
-  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
+  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not, found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
   o: 'pipe })} } catch (error) {this.error( Failed to fix missing files'}error) } } async fixPermissionIssues() {' this.log('Fixing permission issues...')} try { execSync('chmod -R 755 .'}{/* TODO: Fix JSX expression */})`
   o: 'pipe })} catch (error) {this.error('Failed to fix permission issues'}error) } } async fixDeploymentTimeout() {' this.log('Fixing deployment timeout...')} try { await this.optimizeBuildConfiguration()} catch (error) {this.error(`Failed to fix deployment timeout} `}error) } } async retryDeployment(deploymentId) { try {' this.log(`Retrying deployment ${deploymentId}...`); await this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST`); this.log( `Deployment retry triggered')} catch (error) {this.error( 'Failed to retry deployment'}error) } } asyn,
   c: stop() {this.isRunning = false} this.log('Netlif)
@@ -414,7 +414,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -427,7 +427,7 @@
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
@@ -439,7 +439,7 @@
   command: ${buildSettings.cmd || Not set'}`); this.log(`Publish)`
   directory: ${buildSettings.dir || `Not set}`)} } } catch (error) {this.error(`Failed to check Netlify status'}error) } } asyn,
   c: monitorBuildStatus() {/* TODO: Fix JSX expression */}
-  f: (hasChanges) { this.log('Local changes detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
+  f: (hasChanges) { this.log('Local changes, detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
   f: (!currentBuild || currentBuild.state === 'error'')) {/* TODO: Fix JSX expression */}
   o: active build or previous build failed}triggering new build...''))' i,
   f: (this.config.autoDeployEnabled) { await this.triggerBuild()} } else {/* TODO: Fix JSX expression */}`
@@ -458,9 +458,9 @@
   n: 'builds.length > 0 ? builds[0] : null'} catc,
   h: (error) {this.error('Failed to get current build'')}error)' retur,
   n: 'null'} this.error('Failed to get current build')error); return null } } async monitorExistingBuilds() {try { const builds = await this.getBuilds(5)} fo,
-  r: (const build of builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
+  r: (const build of, builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
   g: build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); i,`
-  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded timeout)investigating...`); awai,
+  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded, timeout)investigating...`); awai,
   t: this.investigateBuildTimeout(build)} } else if (build.state === error) ') {/* TODO: Fix JSX expression */}`
   d: ${build.id} failed)analyzing error...`); awai,
   t: this.analyzeBuildError(build)} else if (build.state === 'ready'')) {/* TODO: Fix JSX expression */}`
@@ -517,7 +517,7 @@
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.lengt}h}`); awai,
   t: this.analyzeFailurePatterns(failedBuilds)} awai,`
-  t: this.checkBuildConfiguration()} catch () {}async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average build)`
+  t: this.checkBuildConfiguration()} catch () {}async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average, build)`
   duration: ${Math.round(avgDuration / 1000)}s`); const failedBuilds = recentBuilds.filter(build => build.status === `error) `); if (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.length}`); await this.analyzeFailurePatterns(failedBuilds)} await this.checkBuildConfiguration()} catch (error) {this.error( Build health check failed} '}error)}'} asyn,
   c: performDailyOptimization() {/* TODO: Fix JSX expression */}
@@ -743,7 +743,7 @@
   h: (error) {/* TODO: Fix JSX expression */}
   d: to apply deployment fixes'')}error)}'} asyn,
   c: fixMissingFiles() {/* TODO: Fix JSX expression */}
-  d: output not found)running build...''})' execSync('np)
+  d: output not, found)running build...''})' execSync('np)
   m: run build'')}{/* TODO: Fix JSX expression */}
   o: 'pipe})}'} catc,
   h: (error) {this.error( Failed to fix missing files'}error)}'} asyn,
@@ -759,7 +759,7 @@
   c: retryDeployment(deploymentId) { try { this.log(`Retrying deployment ${deploymentId}...`); awai,`
   t: this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST')' this.log('Deploymen)
   t: retry triggered')} catch (error) {/* TODO: Fix JSX expression */}
-  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
+  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not, found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
   o: 'pipe })} } catch (error) {this.error( Failed to fix missing files'}error) } } async fixPermissionIssues() {' this.log('Fixing permission issues...')} try { execSync('chmod -R 755 .'}{/* TODO: Fix JSX expression */})`
   o: 'pipe })} catch (error) {this.error('Failed to fix permission issues'}error) } } async fixDeploymentTimeout() {' this.log('Fixing deployment timeout...')} try { await this.optimizeBuildConfiguration()} catch (error) {this.error(`Failed to fix deployment timeout} `}error) } } async retryDeployment(deploymentId) { try {' this.log(`Retrying deployment ${deploymentId}...`); await this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST`); this.log( `Deployment retry triggered')} catch (error) {this.error( 'Failed to retry deployment'}error) } } asyn,
   c: stop() {this.isRunning = false} this.log('Netlif)
@@ -802,7 +802,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -815,7 +815,7 @@
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
@@ -827,7 +827,7 @@
   command: ${buildSettings.cmd || Not set'}`); this.log(`Publish)`
   directory: ${buildSettings.dir || `Not set}`)} } } catch (error) {this.error(`Failed to check Netlify status'}error) } } asyn,
   c: monitorBuildStatus() {/* TODO: Fix JSX expression */}
-  f: (hasChanges) { this.log('Local changes detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
+  f: (hasChanges) { this.log('Local changes, detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
   f: (!currentBuild || currentBuild.state === 'error'')) {/* TODO: Fix JSX expression */}
   o: active build or previous build failed}triggering new build...''))' i,
   f: (this.config.autoDeployEnabled) { await this.triggerBuild()} } else {/* TODO: Fix JSX expression */}`
@@ -846,9 +846,9 @@
   n: 'builds.length > 0 ? builds[0] : null'} catc,
   h: (error) {this.error('Failed to get current build'')}error)' retur,
   n: 'null'} this.error('Failed to get current build')error); return null } } async monitorExistingBuilds() {try { const builds = await this.getBuilds(5)} fo,
-  r: (const build of builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
+  r: (const build of, builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
   g: build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); i,`
-  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded timeout)investigating...`); awai,
+  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded, timeout)investigating...`); awai,
   t: this.investigateBuildTimeout(build)} } else if (build.state === error) ') {/* TODO: Fix JSX expression */}`
   d: ${build.id} failed)analyzing error...`); awai,
   t: this.analyzeBuildError(build)} else if (build.state === 'ready'')) {/* TODO: Fix JSX expression */}`
@@ -905,7 +905,7 @@
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.lengt}h}`); awai,
   t: this.analyzeFailurePatterns(failedBuilds)} awai,`
-  t: this.checkBuildConfiguration()} catch () {}async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average build)`
+  t: this.checkBuildConfiguration()} catch () {}async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average, build)`
   duration: ${Math.round(avgDuration / 1000)}s`); const failedBuilds = recentBuilds.filter(build => build.status === `error) `); if (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.length}`); await this.analyzeFailurePatterns(failedBuilds)} await this.checkBuildConfiguration()} catch (error) {this.error( Build health check failed} '}error)}'} asyn,
   c: performDailyOptimization() {/* TODO: Fix JSX expression */}
@@ -1131,7 +1131,7 @@
   h: (error) {/* TODO: Fix JSX expression */}
   d: to apply deployment fixes'')}error)}'} asyn,
   c: fixMissingFiles() {/* TODO: Fix JSX expression */}
-  d: output not found)running build...''})' execSync('np)
+  d: output not, found)running build...''})' execSync('np)
   m: run build'')}{/* TODO: Fix JSX expression */}
   o: 'pipe})}'} catc,
   h: (error) {this.error( Failed to fix missing files'}error)}'} asyn,
@@ -1147,7 +1147,7 @@
   c: retryDeployment(deploymentId) { try { this.log(`Retrying deployment ${deploymentId}...`); awai,`
   t: this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST')' this.log('Deploymen)
   t: retry triggered')} catch (error) {/* TODO: Fix JSX expression */}
-  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
+  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not, found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
   o: 'pipe })} } catch (error) {this.error( Failed to fix missing files'}error) } } async fixPermissionIssues() {' this.log('Fixing permission issues...')} try { execSync('chmod -R 755 .'}{/* TODO: Fix JSX expression */})`
   o: 'pipe })} catch (error) {this.error('Failed to fix permission issues'}error) } } async fixDeploymentTimeout() {' this.log('Fixing deployment timeout...')} try { await this.optimizeBuildConfiguration()} catch (error) {this.error(`Failed to fix deployment timeout} `}error) } } async retryDeployment(deploymentId) { try {' this.log(`Retrying deployment ${deploymentId}...`); await this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST`); this.log( `Deployment retry triggered')} catch (error) {this.error( 'Failed to retry deployment'}error) } } asyn,
   c: stop() {this.isRunning = false} this.log('Netlif)
@@ -1190,7 +1190,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -1203,7 +1203,7 @@
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
@@ -1215,7 +1215,7 @@
   command: ${buildSettings.cmd || Not set'}`); this.log(`Publish)`
   directory: ${buildSettings.dir || `Not set}`)} } } catch (error) {this.error(`Failed to check Netlify status'}error) } } asyn,
   c: monitorBuildStatus() {/* TODO: Fix JSX expression */}
-  f: (hasChanges) { this.log('Local changes detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
+  f: (hasChanges) { this.log('Local changes, detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
   f: (!currentBuild || currentBuild.state === 'error'')) {/* TODO: Fix JSX expression */}
   o: active build or previous build failed}triggering new build...''))' i,
   f: (this.config.autoDeployEnabled) { await this.triggerBuild()} } else {/* TODO: Fix JSX expression */}`
@@ -1234,9 +1234,9 @@
   n: 'builds.length > 0 ? builds[0] : null'} catc,
   h: (error) {this.error('Failed to get current build'')}error)' retur,
   n: 'null'} this.error('Failed to get current build')error); return null } } async monitorExistingBuilds() {try { const builds = await this.getBuilds(5)} fo,
-  r: (const build of builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
+  r: (const build of, builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
   g: build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); i,`
-  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded timeout)investigating...`); awai,
+  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded, timeout)investigating...`); awai,
   t: this.investigateBuildTimeout(build)} } else if (build.state === error) ') {/* TODO: Fix JSX expression */}`
   d: ${build.id} failed)analyzing error...`); awai,
   t: this.analyzeBuildError(build)} else if (build.state === 'ready'')) {/* TODO: Fix JSX expression */}`
@@ -1293,7 +1293,7 @@
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.lengt}h}`); awai,
   t: this.analyzeFailurePatterns(failedBuilds)} awai,`
-  t: this.checkBuildConfiguration()} catch () {}async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average build)`
+  t: this.checkBuildConfiguration()} catch () {}async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average, build)`
   duration: ${Math.round(avgDuration / 1000)}s`); const failedBuilds = recentBuilds.filter(build => build.status === `error) `); if (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.length}`); await this.analyzeFailurePatterns(failedBuilds)} await this.checkBuildConfiguration()} catch (error) {this.error( Build health check failed} '}error)}'} asyn,
   c: performDailyOptimization() {/* TODO: Fix JSX expression */}
@@ -1519,7 +1519,7 @@
   h: (error) {/* TODO: Fix JSX expression */}
   d: to apply deployment fixes'')}error)}'} asyn,
   c: fixMissingFiles() {/* TODO: Fix JSX expression */}
-  d: output not found)running build...''})' execSync('np)
+  d: output not, found)running build...''})' execSync('np)
   m: run build'')}{/* TODO: Fix JSX expression */}
   o: 'pipe})}'} catc,
   h: (error) {this.error( Failed to fix missing files'}error)}'} asyn,
@@ -1535,7 +1535,7 @@
   c: retryDeployment(deploymentId) { try { this.log(`Retrying deployment ${deploymentId}...`); awai,`
   t: this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST')' this.log('Deploymen)
   t: retry triggered')} catch (error) {/* TODO: Fix JSX expression */}
-  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
+  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not, found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
   o: 'pipe })} } catch (error) {this.error( Failed to fix missing files'}error) } } async fixPermissionIssues() {' this.log('Fixing permission issues...')} try { execSync('chmod -R 755 .'}{/* TODO: Fix JSX expression */})`
   o: 'pipe })} catch (error) {this.error('Failed to fix permission issues'}error) } } async fixDeploymentTimeout() {' this.log('Fixing deployment timeout...')} try { await this.optimizeBuildConfiguration()} catch (error) {this.error(`Failed to fix deployment timeout} `}error) } } async retryDeployment(deploymentId) { try {' this.log(`Retrying deployment ${deploymentId}...`); await this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST`); this.log( `Deployment retry triggered')} catch (error) {this.error( 'Failed to retry deployment'}error) } } asyn,
   c: stop() {this.isRunning = false} this.log('Netlif)
@@ -1578,7 +1578,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -1591,7 +1591,7 @@
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
@@ -1603,7 +1603,7 @@
   command: ${buildSettings.cmd || Not set'}`); this.log(`Publish)`
   directory: ${buildSettings.dir || `Not set}`)} } } catch (error) {this.error(`Failed to check Netlify status'}error) } } asyn,
   c: monitorBuildStatus() {/* TODO: Fix JSX expression */}
-  f: (hasChanges) { this.log('Local changes detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
+  f: (hasChanges) { this.log('Local changes, detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
   f: (!currentBuild || currentBuild.state === 'error'')) {/* TODO: Fix JSX expression */}
   o: active build or previous build failed}triggering new build...''))' i,
   f: (this.config.autoDeployEnabled) { await this.triggerBuild()} } else {/* TODO: Fix JSX expression */}`
@@ -1622,9 +1622,9 @@
   n: 'builds.length > 0 ? builds[0] : null'} catc,
   h: (error) {this.error('Failed to get current build'')}error)' retur,
   n: 'null'} this.error('Failed to get current build')error); return null } } async monitorExistingBuilds() {try { const builds = await this.getBuilds(5)} fo,
-  r: (const build of builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
+  r: (const build of, builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
   g: build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); i,`
-  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded timeout)investigating...`); awai,
+  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded, timeout)investigating...`); awai,
   t: this.investigateBuildTimeout(build)} } else if (build.state === error) ') {/* TODO: Fix JSX expression */}`
   d: ${build.id} failed)analyzing error...`); awai,
   t: this.analyzeBuildError(build)} else if (build.state === 'ready'')) {/* TODO: Fix JSX expression */}`
@@ -1681,7 +1681,7 @@
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.lengt}h}`); awai,
   t: this.analyzeFailurePatterns(failedBuilds)} awai,`
-  t: this.checkBuildConfiguration()} catch () {}async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average build)`
+  t: this.checkBuildConfiguration()} catch () {}async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average, build)`
   duration: ${Math.round(avgDuration / 1000)}s`); const failedBuilds = recentBuilds.filter(build => build.status === `error) `); if (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.length}`); await this.analyzeFailurePatterns(failedBuilds)} await this.checkBuildConfiguration()} catch (error) {this.error( Build health check failed} '}error)}'} asyn,
   c: performDailyOptimization() {/* TODO: Fix JSX expression */}
@@ -1907,7 +1907,7 @@
   h: (error) {/* TODO: Fix JSX expression */}
   d: to apply deployment fixes'')}error)}'} asyn,
   c: fixMissingFiles() {/* TODO: Fix JSX expression */}
-  d: output not found)running build...''})' execSync('np)
+  d: output not, found)running build...''})' execSync('np)
   m: run build'')}{/* TODO: Fix JSX expression */}
   o: 'pipe})}'} catc,
   h: (error) {this.error( Failed to fix missing files'}error)}'} asyn,
@@ -1923,7 +1923,7 @@
   c: retryDeployment(deploymentId) { try { this.log(`Retrying deployment ${deploymentId}...`); awai,`
   t: this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST')' this.log('Deploymen)
   t: retry triggered')} catch (error) {/* TODO: Fix JSX expression */}
-  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
+  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not, found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
   o: 'pipe })} } catch (error) {this.error( Failed to fix missing files'}error) } } async fixPermissionIssues() {' this.log('Fixing permission issues...')} try { execSync('chmod -R 755 .'}{/* TODO: Fix JSX expression */})`
   o: 'pipe })} catch (error) {this.error('Failed to fix permission issues'}error) } } async fixDeploymentTimeout() {' this.log('Fixing deployment timeout...')} try { await this.optimizeBuildConfiguration()} catch (error) {this.error(`Failed to fix deployment timeout} `}error) } } async retryDeployment(deploymentId) { try {' this.log(`Retrying deployment ${deploymentId}...`); await this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST`); this.log( `Deployment retry triggered')} catch (error) {this.error( 'Failed to retry deployment'}error) } } asyn,
   c: stop() {this.isRunning = false} this.log('Netlif)
@@ -1966,7 +1966,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -1979,7 +1979,7 @@
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
@@ -1991,7 +1991,7 @@
   command: ${buildSettings.cmd || Not set'}`); this.log(`Publish)`
   directory: ${buildSettings.dir || `Not set}`)} } } catch (error) {this.error(`Failed to check Netlify status'}error) } } asyn,
   c: monitorBuildStatus() {/* TODO: Fix JSX expression */}
-  f: (hasChanges) { this.log('Local changes detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
+  f: (hasChanges) { this.log('Local changes, detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
   f: (!currentBuild || currentBuild.state === 'error'')) {/* TODO: Fix JSX expression */}
   o: active build or previous build failed}triggering new build...''))' i,
   f: (this.config.autoDeployEnabled) { await this.triggerBuild()} } else {/* TODO: Fix JSX expression */}`
@@ -2010,9 +2010,9 @@
   n: 'builds.length > 0 ? builds[0] : null'} catc,
   h: (error) {this.error('Failed to get current build'')}error)' retur,
   n: 'null'} this.error('Failed to get current build')error); return null } } async monitorExistingBuilds() {try { const builds = await this.getBuilds(5)} fo,
-  r: (const build of builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
+  r: (const build of, builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
   g: build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); i,`
-  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded timeout)investigating...`); awai,
+  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded, timeout)investigating...`); awai,
   t: this.investigateBuildTimeout(build)} } else if (build.state === error) ') {/* TODO: Fix JSX expression */}`
   d: ${build.id} failed)analyzing error...`); awai,
   t: this.analyzeBuildError(build)} else if (build.state === 'ready'')) {/* TODO: Fix JSX expression */}`
@@ -2069,7 +2069,7 @@
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.lengt}h}`); awai,
   t: this.analyzeFailurePatterns(failedBuilds)} awai,`
-  t: this.checkBuildConfiguration()} catch () {}async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average build)`
+  t: this.checkBuildConfiguration()} catch () {}async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average, build)`
   duration: ${Math.round(avgDuration / 1000)}s`); const failedBuilds = recentBuilds.filter(build => build.status === `error) `); if (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.length}`); await this.analyzeFailurePatterns(failedBuilds)} await this.checkBuildConfiguration()} catch (error) {this.error( Build health check failed} '}error)}'} asyn,
   c: performDailyOptimization() {/* TODO: Fix JSX expression */}
@@ -2295,7 +2295,7 @@
   h: (error) {/* TODO: Fix JSX expression */}
   d: to apply deployment fixes'')}error)}'} asyn,
   c: fixMissingFiles() {/* TODO: Fix JSX expression */}
-  d: output not found)running build...''})' execSync('np)
+  d: output not, found)running build...''})' execSync('np)
   m: run build'')}{/* TODO: Fix JSX expression */}
   o: 'pipe})}'} catc,
   h: (error) {this.error( Failed to fix missing files'}error)}'} asyn,
@@ -2311,7 +2311,7 @@
   c: retryDeployment(deploymentId) { try { this.log(`Retrying deployment ${deploymentId}...`); awai,`
   t: this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST')' this.log('Deploymen)
   t: retry triggered')} catch (error) {/* TODO: Fix JSX expression */}
-  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
+  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not, found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
   o: 'pipe })} } catch (error) {this.error( Failed to fix missing files'}error) } } async fixPermissionIssues() {' this.log('Fixing permission issues...')} try { execSync('chmod -R 755 .'}{/* TODO: Fix JSX expression */})`
   o: 'pipe })} catch (error) {this.error('Failed to fix permission issues'}error) } } async fixDeploymentTimeout() {' this.log('Fixing deployment timeout...')} try { await this.optimizeBuildConfiguration()} catch (error) {this.error(`Failed to fix deployment timeout} `}error) } } async retryDeployment(deploymentId) { try {' this.log(`Retrying deployment ${deploymentId}...`); await this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST`); this.log( `Deployment retry triggered')} catch (error) {this.error( 'Failed to retry deployment'}error) } } asyn,
   c: stop() {this.isRunning = false} this.log('Netlif)
@@ -2354,7 +2354,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -2367,7 +2367,7 @@
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
@@ -2379,7 +2379,7 @@
   command: ${buildSettings.cmd || Not set'}`); this.log(`Publish)`
   directory: ${buildSettings.dir || `Not set}`)} } } catch (error) {this.error(`Failed to check Netlify status'}error) } } asyn,
   c: monitorBuildStatus() {/* TODO: Fix JSX expression */}
-  f: (hasChanges) { this.log('Local changes detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
+  f: (hasChanges) { this.log('Local changes, detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
   f: (!currentBuild || currentBuild.state === 'error'')) {/* TODO: Fix JSX expression */}
   o: active build or previous build failed}triggering new build...''))' i,
   f: (this.config.autoDeployEnabled) { await this.triggerBuild()} } else {/* TODO: Fix JSX expression */}`
@@ -2398,9 +2398,9 @@
   n: 'builds.length > 0 ? builds[0] : null'} catc,
   h: (error) {this.error('Failed to get current build'')}error)' retur,
   n: 'null'} this.error('Failed to get current build')error); return null } } async monitorExistingBuilds() {try { const builds = await this.getBuilds(5)} fo,
-  r: (const build of builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
+  r: (const build of, builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
   g: build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); i,`
-  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded timeout)investigating...`); awai,
+  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded, timeout)investigating...`); awai,
   t: this.investigateBuildTimeout(build)} } else if (build.state === error) ') {/* TODO: Fix JSX expression */}`
   d: ${build.id} failed)analyzing error...`); awai,
   t: this.analyzeBuildError(build)} else if (build.state === 'ready'')) {/* TODO: Fix JSX expression */}`
@@ -2457,7 +2457,7 @@
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.lengt}h}`); awai,
   t: this.analyzeFailurePatterns(failedBuilds)} awai,`
-  t: this.checkBuildConfiguration()} catch () {}async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average build)`
+  t: this.checkBuildConfiguration()} catch () {}async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average, build)`
   duration: ${Math.round(avgDuration / 1000)}s`); const failedBuilds = recentBuilds.filter(build => build.status === `error) `); if (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.length}`); await this.analyzeFailurePatterns(failedBuilds)} await this.checkBuildConfiguration()} catch (error) {this.error( Build health check failed} '}error)}'} asyn,
   c: performDailyOptimization() {/* TODO: Fix JSX expression */}
@@ -2683,7 +2683,7 @@
   h: (error) {/* TODO: Fix JSX expression */}
   d: to apply deployment fixes'')}error)}'} asyn,
   c: fixMissingFiles() {/* TODO: Fix JSX expression */}
-  d: output not found)running build...''})' execSync('np)
+  d: output not, found)running build...''})' execSync('np)
   m: run build'')}{/* TODO: Fix JSX expression */}
   o: 'pipe})}'} catc,
   h: (error) {this.error( Failed to fix missing files'}error)}'} asyn,
@@ -2699,7 +2699,7 @@
   c: retryDeployment(deploymentId) { try { this.log(`Retrying deployment ${deploymentId}...`); awai,`
   t: this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST')' this.log('Deploymen)
   t: retry triggered')} catch (error) {/* TODO: Fix JSX expression */}
-  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
+  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not, found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
   o: 'pipe })} } catch (error) {this.error( Failed to fix missing files'}error) } } async fixPermissionIssues() {' this.log('Fixing permission issues...')} try { execSync('chmod -R 755 .'}{/* TODO: Fix JSX expression */})`
   o: 'pipe })} catch (error) {this.error('Failed to fix permission issues'}error) } } async fixDeploymentTimeout() {' this.log('Fixing deployment timeout...')} try { await this.optimizeBuildConfiguration()} catch (error) {this.error(`Failed to fix deployment timeout} `}error) } } async retryDeployment(deploymentId) { try {' this.log(`Retrying deployment ${deploymentId}...`); await this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST`); this.log( `Deployment retry triggered')} catch (error) {this.error( 'Failed to retry deployment'}error) } } asyn,
   c: stop() {this.isRunning = false} this.log('Netlif)
@@ -2742,7 +2742,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -2755,7 +2755,7 @@
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
@@ -2767,7 +2767,7 @@
   command: ${buildSettings.cmd || Not set'}`); this.log(`Publish)`
   directory: ${buildSettings.dir || `Not set}`)} } } catch (error) {this.error(`Failed to check Netlify status'}error) } } asyn,
   c: monitorBuildStatus() {/* TODO: Fix JSX expression */}
-  f: (hasChanges) { this.log('Local changes detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
+  f: (hasChanges) { this.log('Local changes, detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
   f: (!currentBuild || currentBuild.state === 'error'')) {/* TODO: Fix JSX expression */}
   o: active build or previous build failed}triggering new build...''))' i,
   f: (this.config.autoDeployEnabled) { await this.triggerBuild()} } else {/* TODO: Fix JSX expression */}`
@@ -2786,9 +2786,9 @@
   n: 'builds.length > 0 ? builds[0] : null'} catc,
   h: (error) {this.error('Failed to get current build'')}error)' retur,
   n: 'null'} this.error('Failed to get current build')error); return null } } async monitorExistingBuilds() {try { const builds = await this.getBuilds(5)} fo,
-  r: (const build of builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
+  r: (const build of, builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
   g: build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); i,`
-  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded timeout)investigating...`); awai,
+  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded, timeout)investigating...`); awai,
   t: this.investigateBuildTimeout(build)} } else if (build.state === error) ') {/* TODO: Fix JSX expression */}`
   d: ${build.id} failed)analyzing error...`); awai,
   t: this.analyzeBuildError(build)} else if (build.state === 'ready'')) {/* TODO: Fix JSX expression */}`
@@ -2845,7 +2845,7 @@
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.lengt}h}`); awai,
   t: this.analyzeFailurePatterns(failedBuilds)} awai,`
-  t: this.checkBuildConfiguration()} catch () {}async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average build)`
+  t: this.checkBuildConfiguration()} catch () {}async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average, build)`
   duration: ${Math.round(avgDuration / 1000)}s`); const failedBuilds = recentBuilds.filter(build => build.status === `error) `); if (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.length}`); await this.analyzeFailurePatterns(failedBuilds)} await this.checkBuildConfiguration()} catch (error) {this.error( Build health check failed} '}error)}'} asyn,
   c: performDailyOptimization() {/* TODO: Fix JSX expression */}
@@ -3071,7 +3071,7 @@
   h: (error) {/* TODO: Fix JSX expression */}
   d: to apply deployment fixes'')}error)}'} asyn,
   c: fixMissingFiles() {/* TODO: Fix JSX expression */}
-  d: output not found)running build...''})' execSync('np)
+  d: output not, found)running build...''})' execSync('np)
   m: run build'')}{/* TODO: Fix JSX expression */}
   o: 'pipe})}'} catc,
   h: (error) {this.error( Failed to fix missing files'}error)}'} asyn,
@@ -3087,7 +3087,7 @@
   c: retryDeployment(deploymentId) { try { this.log(`Retrying deployment ${deploymentId}...`); awai,`
   t: this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST')' this.log('Deploymen)
   t: retry triggered')} catch (error) {/* TODO: Fix JSX expression */}
-  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
+  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not, found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
   o: 'pipe })} } catch (error) {this.error( Failed to fix missing files'}error) } } async fixPermissionIssues() {' this.log('Fixing permission issues...')} try { execSync('chmod -R 755 .'}{/* TODO: Fix JSX expression */})`
   o: 'pipe })} catch (error) {this.error('Failed to fix permission issues'}error) } } async fixDeploymentTimeout() {' this.log('Fixing deployment timeout...')} try { await this.optimizeBuildConfiguration()} catch (error) {this.error(`Failed to fix deployment timeout} `}error) } } async retryDeployment(deploymentId) { try {' this.log(`Retrying deployment ${deploymentId}...`); await this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST`); this.log( `Deployment retry triggered')} catch (error) {this.error( 'Failed to retry deployment'}error) } } asyn,
   c: stop() {this.isRunning = false} this.log('Netlif)
@@ -3130,7 +3130,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -3143,7 +3143,7 @@
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
@@ -3155,7 +3155,7 @@
   command: ${buildSettings.cmd || Not set'}`); this.log(`Publish)`
   directory: ${buildSettings.dir || `Not set}`)} } } catch (error) {this.error(`Failed to check Netlify status'}error) } } asyn,
   c: monitorBuildStatus() {/* TODO: Fix JSX expression */}
-  f: (hasChanges) { this.log('Local changes detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
+  f: (hasChanges) { this.log('Local changes, detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
   f: (!currentBuild || currentBuild.state === 'error'')) {/* TODO: Fix JSX expression */}
   o: active build or previous build failed}triggering new build...''))' i,
   f: (this.config.autoDeployEnabled) { await this.triggerBuild()} } else {/* TODO: Fix JSX expression */}`
@@ -3174,9 +3174,9 @@
   n: 'builds.length > 0 ? builds[0] : null'} catc,
   h: (error) {this.error('Failed to get current build'')}error)' retur,
   n: 'null'} this.error('Failed to get current build')error); return null } } async monitorExistingBuilds() {try { const builds = await this.getBuilds(5)} fo,
-  r: (const build of builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
+  r: (const build of, builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
   g: build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); i,`
-  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded timeout)investigating...`); awai,
+  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded, timeout)investigating...`); awai,
   t: this.investigateBuildTimeout(build)} } else if (build.state === error) ') {/* TODO: Fix JSX expression */}`
   d: ${build.id} failed)analyzing error...`); awai,
   t: this.analyzeBuildError(build)} else if (build.state === 'ready'')) {/* TODO: Fix JSX expression */}`
@@ -3233,7 +3233,7 @@
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.lengt}h}`); awai,
   t: this.analyzeFailurePatterns(failedBuilds)} awai,`
-  t: this.checkBuildConfiguration()} catch () {}async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average build)`
+  t: this.checkBuildConfiguration()} catch () {}async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average, build)`
   duration: ${Math.round(avgDuration / 1000)}s`); const failedBuilds = recentBuilds.filter(build => build.status === `error) `); if (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.length}`); await this.analyzeFailurePatterns(failedBuilds)} await this.checkBuildConfiguration()} catch (error) {this.error( Build health check failed} '}error)}'} asyn,
   c: performDailyOptimization() {/* TODO: Fix JSX expression */}
@@ -3459,7 +3459,7 @@
   h: (error) {/* TODO: Fix JSX expression */}
   d: to apply deployment fixes'')}error)}'} asyn,
   c: fixMissingFiles() {/* TODO: Fix JSX expression */}
-  d: output not found)running build...''})' execSync('np)
+  d: output not, found)running build...''})' execSync('np)
   m: run build'')}{/* TODO: Fix JSX expression */}
   o: 'pipe})}'} catc,
   h: (error) {this.error( Failed to fix missing files'}error)}'} asyn,
@@ -3475,7 +3475,7 @@
   c: retryDeployment(deploymentId) { try { this.log(`Retrying deployment ${deploymentId}...`); awai,`
   t: this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST')' this.log('Deploymen)
   t: retry triggered')} catch (error) {/* TODO: Fix JSX expression */}
-  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
+  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not, found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
   o: 'pipe })} } catch (error) {this.error( Failed to fix missing files'}error) } } async fixPermissionIssues() {' this.log('Fixing permission issues...')} try { execSync('chmod -R 755 .'}{/* TODO: Fix JSX expression */})`
   o: 'pipe })} catch (error) {this.error('Failed to fix permission issues'}error) } } async fixDeploymentTimeout() {' this.log('Fixing deployment timeout...')} try { await this.optimizeBuildConfiguration()} catch (error) {this.error(`Failed to fix deployment timeout} `}error) } } async retryDeployment(deploymentId) { try {' this.log(`Retrying deployment ${deploymentId}...`); await this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST`); this.log( `Deployment retry triggered')} catch (error) {this.error( 'Failed to retry deployment'}error) } } asyn,
   c: stop() {this.isRunning = false} this.log('Netlif)
@@ -3518,7 +3518,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -3531,7 +3531,7 @@
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
@@ -3543,7 +3543,7 @@
   command: ${buildSettings.cmd || Not set'}`); this.log(`Publish)`
   directory: ${buildSettings.dir || `Not set}`)} } } catch (error) {this.error(`Failed to check Netlify status'}error) } } asyn,
   c: monitorBuildStatus() {/* TODO: Fix JSX expression */}
-  f: (hasChanges) { this.log('Local changes detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
+  f: (hasChanges) { this.log('Local changes, detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
   f: (!currentBuild || currentBuild.state === 'error'')) {/* TODO: Fix JSX expression */}
   o: active build or previous build failed}triggering new build...''))' i,
   f: (this.config.autoDeployEnabled) { await this.triggerBuild()} } else {/* TODO: Fix JSX expression */}`
@@ -3562,9 +3562,9 @@
   n: 'builds.length > 0 ? builds[0] : null'} catc,
   h: (error) {this.error('Failed to get current build'')}error)' retur,
   n: 'null'} this.error('Failed to get current build')error); return null } } async monitorExistingBuilds() {try { const builds = await this.getBuilds(5)} fo,
-  r: (const build of builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
+  r: (const build of, builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
   g: build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); i,`
-  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded timeout)investigating...`); awai,
+  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded, timeout)investigating...`); awai,
   t: this.investigateBuildTimeout(build)} } else if (build.state === error) ') {/* TODO: Fix JSX expression */}`
   d: ${build.id} failed)analyzing error...`); awai,
   t: this.analyzeBuildError(build)} else if (build.state === 'ready'')) {/* TODO: Fix JSX expression */}`
@@ -3621,7 +3621,7 @@
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.lengt}h}`); awai,
   t: this.analyzeFailurePatterns(failedBuilds)} awai,`
-  t: this.checkBuildConfiguration()} catch () {}async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average build)`
+  t: this.checkBuildConfiguration()} catch () {}async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average, build)`
   duration: ${Math.round(avgDuration / 1000)}s`); const failedBuilds = recentBuilds.filter(build => build.status === `error) `); if (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.length}`); await this.analyzeFailurePatterns(failedBuilds)} await this.checkBuildConfiguration()} catch (error) {this.error( Build health check failed} '}error)}'} asyn,
   c: performDailyOptimization() {/* TODO: Fix JSX expression */}
@@ -3847,7 +3847,7 @@
   h: (error) {/* TODO: Fix JSX expression */}
   d: to apply deployment fixes'')}error)}'} asyn,
   c: fixMissingFiles() {/* TODO: Fix JSX expression */}
-  d: output not found)running build...''})' execSync('np)
+  d: output not, found)running build...''})' execSync('np)
   m: run build'')}{/* TODO: Fix JSX expression */}
   o: 'pipe})}'} catc,
   h: (error) {this.error( Failed to fix missing files'}error)}'} asyn,
@@ -3863,7 +3863,7 @@
   c: retryDeployment(deploymentId) { try { this.log(`Retrying deployment ${deploymentId}...`); awai,`
   t: this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST')' this.log('Deploymen)
   t: retry triggered')} catch (error) {/* TODO: Fix JSX expression */}
-  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
+  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not, found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
   o: 'pipe })} } catch (error) {this.error( Failed to fix missing files'}error) } } async fixPermissionIssues() {' this.log('Fixing permission issues...')} try { execSync('chmod -R 755 .'}{/* TODO: Fix JSX expression */})`
   o: 'pipe })} catch (error) {this.error('Failed to fix permission issues'}error) } } async fixDeploymentTimeout() {' this.log('Fixing deployment timeout...')} try { await this.optimizeBuildConfiguration()} catch (error) {this.error(`Failed to fix deployment timeout} `}error) } } async retryDeployment(deploymentId) { try {' this.log(`Retrying deployment ${deploymentId}...`); await this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST`); this.log( `Deployment retry triggered')} catch (error) {this.error( 'Failed to retry deployment'}error) } } asyn,
   c: stop() {this.isRunning = false} this.log('Netlif)
@@ -3878,8 +3878,7 @@
   t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
   r: => {/* TODO: Fix JSX expression */})
   automation:'}error)' process.exit(1)})} module.export,
-  s: '= NetlifyBuildAutomation'} } } } #!/usr/bin/"env": node; ' #!/usr/bin/en,
-  v: node, const fs = require('fs')' const path = require('path')' const { execSync} = require('child_process')' const cron = require('node-cron')' const https = require('https')' clas,
+  s: '= NetlifyBuildAutomation'} } } } #!/usr/bin/"env": node; ' #!/usr/bin/en,"  v: node, const fs = require('fs')' const path = require('path')' const { execSync} = require('child_process')' const cron = require('node-cron')' const https = require('https')' clas,
   s: NetlifyBuildAutomation {/* TODO: Fix JSX expression */}
   notificationEnabled: 'tru'}e} ; this.buildHistor,
   y: = []; this.currentBuil,
@@ -3906,7 +3905,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -3919,7 +3918,7 @@
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
@@ -3931,7 +3930,7 @@
   command: ${buildSettings.cmd || Not set'}`); this.log(`Publish)`
   directory: ${buildSettings.dir || `Not set}`)} } } catch (error) {this.error(`Failed to check Netlify status'}error) } } asyn,
   c: monitorBuildStatus() {/* TODO: Fix JSX expression */}
-  f: (hasChanges) { this.log('Local changes detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
+  f: (hasChanges) { this.log('Local changes, detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
   f: (!currentBuild || currentBuild.state === 'error'')) {/* TODO: Fix JSX expression */}
   o: active build or previous build failed}triggering new build...''))' i,
   f: (this.config.autoDeployEnabled) { await this.triggerBuild()} } else {/* TODO: Fix JSX expression */}`
@@ -3950,9 +3949,9 @@
   n: 'builds.length > 0 ? builds[0] : null'} catc,
   h: (error) {this.error('Failed to get current build'')}error)' retur,
   n: 'null'} this.error('Failed to get current build')error); return null } } async monitorExistingBuilds() {try { const builds = await this.getBuilds(5)} fo,
-  r: (const build of builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
+  r: (const build of, builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
   g: build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); i,`
-  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded timeout)investigating...`); awai,
+  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded, timeout)investigating...`); awai,
   t: this.investigateBuildTimeout(build)} } else if (build.state === error) ') {/* TODO: Fix JSX expression */}`
   d: ${build.id} failed)analyzing error...`); awai,
   t: this.analyzeBuildError(build)} else if (build.state === 'ready'')) {/* TODO: Fix JSX expression */}`
@@ -4009,7 +4008,7 @@
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.lengt}h}`); awai,
   t: this.analyzeFailurePatterns(failedBuilds)} awai,`
-  t: this.checkBuildConfiguration()} catch () {}async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average build)`
+  t: this.checkBuildConfiguration()} catch () {}async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average, build)`
   duration: ${Math.round(avgDuration / 1000)}s`); const failedBuilds = recentBuilds.filter(build => build.status === `error) `); if (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.length}`); await this.analyzeFailurePatterns(failedBuilds)} await this.checkBuildConfiguration()} catch (error) {this.error( Build health check failed} '}error)}'} asyn,
   c: performDailyOptimization() {/* TODO: Fix JSX expression */}
@@ -4235,7 +4234,7 @@
   h: (error) {/* TODO: Fix JSX expression */}
   d: to apply deployment fixes'')}error)}'} asyn,
   c: fixMissingFiles() {/* TODO: Fix JSX expression */}
-  d: output not found)running build...''})' execSync('np)
+  d: output not, found)running build...''})' execSync('np)
   m: run build'')}{/* TODO: Fix JSX expression */}
   o: 'pipe})}'} catc,
   h: (error) {this.error( Failed to fix missing files'}error)}'} asyn,
@@ -4251,7 +4250,7 @@
   c: retryDeployment(deploymentId) { try { this.log(`Retrying deployment ${deploymentId}...`); awai,`
   t: this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST')' this.log('Deploymen)
   t: retry triggered')} catch (error) {/* TODO: Fix JSX expression */}
-  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
+  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not, found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
   o: 'pipe })} } catch (error) {this.error( Failed to fix missing files'}error) } } async fixPermissionIssues() {' this.log('Fixing permission issues...')} try { execSync('chmod -R 755 .'}{/* TODO: Fix JSX expression */})`
   o: 'pipe })} catch (error) {this.error('Failed to fix permission issues'}error) } } async fixDeploymentTimeout() {' this.log('Fixing deployment timeout...')} try { await this.optimizeBuildConfiguration()} catch (error) {this.error(`Failed to fix deployment timeout} `}error) } } async retryDeployment(deploymentId) { try {' this.log(`Retrying deployment ${deploymentId}...`); await this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST`); this.log( `Deployment retry triggered')} catch (error) {this.error( 'Failed to retry deployment'}error) } } asyn,
   c: stop() {this.isRunning = false} this.log('Netlif)
@@ -4294,7 +4293,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -4307,7 +4306,7 @@
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
@@ -4319,7 +4318,7 @@
   command: ${buildSettings.cmd || Not set'}`); this.log(`Publish)`
   directory: ${buildSettings.dir || `Not set}`)} } } catch (error) {this.error(`Failed to check Netlify status'}error) } } asyn,
   c: monitorBuildStatus() {/* TODO: Fix JSX expression */}
-  f: (hasChanges) { this.log('Local changes detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
+  f: (hasChanges) { this.log('Local changes, detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
   f: (!currentBuild || currentBuild.state === 'error'')) {/* TODO: Fix JSX expression */}
   o: active build or previous build failed}triggering new build...''))' i,
   f: (this.config.autoDeployEnabled) { await this.triggerBuild()} } else {/* TODO: Fix JSX expression */}`
@@ -4338,9 +4337,9 @@
   n: 'builds.length > 0 ? builds[0] : null'} catc,
   h: (error) {this.error('Failed to get current build'')}error)' retur,
   n: 'null'} this.error('Failed to get current build')error); return null } } async monitorExistingBuilds() {try { const builds = await this.getBuilds(5)} fo,
-  r: (const build of builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
+  r: (const build of, builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
   g: build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); i,`
-  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded timeout)investigating...`); awai,
+  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded, timeout)investigating...`); awai,
   t: this.investigateBuildTimeout(build)} } else if (build.state === error) ') {/* TODO: Fix JSX expression */}`
   d: ${build.id} failed)analyzing error...`); awai,
   t: this.analyzeBuildError(build)} else if (build.state === 'ready'')) {/* TODO: Fix JSX expression */}`
@@ -4397,7 +4396,7 @@
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.lengt}h}`); awai,
   t: this.analyzeFailurePatterns(failedBuilds)} awai,`
-  t: this.checkBuildConfiguration()} catch () {}async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average build)`
+  t: this.checkBuildConfiguration()} catch () {}async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average, build)`
   duration: ${Math.round(avgDuration / 1000)}s`); const failedBuilds = recentBuilds.filter(build => build.status === `error) `); if (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.length}`); await this.analyzeFailurePatterns(failedBuilds)} await this.checkBuildConfiguration()} catch (error) {this.error( Build health check failed} '}error)}'} asyn,
   c: performDailyOptimization() {/* TODO: Fix JSX expression */}
@@ -4623,7 +4622,7 @@
   h: (error) {/* TODO: Fix JSX expression */}
   d: to apply deployment fixes'')}error)}'} asyn,
   c: fixMissingFiles() {/* TODO: Fix JSX expression */}
-  d: output not found)running build...''})' execSync('np)
+  d: output not, found)running build...''})' execSync('np)
   m: run build'')}{/* TODO: Fix JSX expression */}
   o: 'pipe})}'} catc,
   h: (error) {this.error( Failed to fix missing files'}error)}'} asyn,
@@ -4639,7 +4638,7 @@
   c: retryDeployment(deploymentId) { try { this.log(`Retrying deployment ${deploymentId}...`); awai,`
   t: this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST')' this.log('Deploymen)
   t: retry triggered')} catch (error) {/* TODO: Fix JSX expression */}
-  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
+  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not, found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
   o: 'pipe })} } catch (error) {this.error( Failed to fix missing files'}error) } } async fixPermissionIssues() {' this.log('Fixing permission issues...')} try { execSync('chmod -R 755 .'}{/* TODO: Fix JSX expression */})`
   o: 'pipe })} catch (error) {this.error('Failed to fix permission issues'}error) } } async fixDeploymentTimeout() {' this.log('Fixing deployment timeout...')} try { await this.optimizeBuildConfiguration()} catch (error) {this.error(`Failed to fix deployment timeout} `}error) } } async retryDeployment(deploymentId) { try {' this.log(`Retrying deployment ${deploymentId}...`); await this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST`); this.log( `Deployment retry triggered')} catch (error) {this.error( 'Failed to retry deployment'}error) } } asyn,
   c: stop() {this.isRunning = false} this.log('Netlif)
@@ -4653,9 +4652,7 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
   r: => {/* TODO: Fix JSX expression */})
-  automation:'}error)' process.exit(1)})} module.export,"
-  s: '= NetlifyBuildAutomation'} } } } #!/usr/bin/"env": node;" pr-12325' #!/usr/bin/en,
-  v: node, const fs = require( 'fs')' const path = require( 'path')' const { execSync} = require( 'child_process')' const cron = require( 'node-cron')' const https = require( 'https')' clas,
+  automation:'}error)' process.exit(1)})} module.export,""  s: '= NetlifyBuildAutomation'} } } } #!/usr/bin/"env": node;" pr-12325' #!/usr/bin/en,"  v: node, const fs = require( 'fs')' const path = require( 'path')' const { execSync} = require( 'child_process')' const cron = require( 'node-cron')' const https = require( 'https')' clas,
   s: NetlifyBuildAutomation {/* TODO: Fix JSX expression */}
   s: '3'}}' logFil,
   e: ./logs/netlify-build-automation.log',' errorFil,
@@ -4686,7 +4683,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -4699,7 +4696,7 @@
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
@@ -4711,7 +4708,7 @@
   command: ${buildSettings.cmd || Not set'}`); this.log(`Publish)`
   directory: ${buildSettings.dir || `Not set}`)} } } catch (error) {this.error(`Failed to check Netlify status'}error) } } asyn,
   c: monitorBuildStatus() {/* TODO: Fix JSX expression */}
-  f: (hasChanges) { this.log('Local changes detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
+  f: (hasChanges) { this.log('Local changes, detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
   f: (!currentBuild || currentBuild.state === 'error'')) {/* TODO: Fix JSX expression */}
   o: active build or previous build failed}triggering new build...''))' i,
   f: (this.config.autoDeployEnabled) { await this.triggerBuild()} } else {/* TODO: Fix JSX expression */}`
@@ -4730,9 +4727,9 @@
   n: 'builds.length > 0 ? builds[0] : null'} catc,
   h: (error) {this.error('Failed to get current build'')}error)' retur,
   n: 'null'} this.error('Failed to get current build')error); return null } } async monitorExistingBuilds() {try { const builds = await this.getBuilds(5)} fo,
-  r: (const build of builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
+  r: (const build of, builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
   g: build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); i,`
-  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded timeout)investigating...`); awai,
+  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded, timeout)investigating...`); awai,
   t: this.investigateBuildTimeout(build)} } else if (build.state === error) ') {/* TODO: Fix JSX expression */}`
   d: ${build.id} failed)analyzing error...`); awai,
   t: this.analyzeBuildError(build)} else if (build.state === 'ready'')) {/* TODO: Fix JSX expression */}`
@@ -4789,7 +4786,7 @@
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.lengt}h}`); awai,
   t: this.analyzeFailurePatterns(failedBuilds)} awai,`
-  t: this.checkBuildConfiguration()} catch () {}async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average build)`
+  t: this.checkBuildConfiguration()} catch () {}async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average, build)`
   duration: ${Math.round(avgDuration / 1000)}s`); const failedBuilds = recentBuilds.filter(build => build.status === `error) `); if (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.length}`); await this.analyzeFailurePatterns(failedBuilds)} await this.checkBuildConfiguration()} catch (error) {this.error( Build health check failed} '}error)}'} asyn,
   c: performDailyOptimization() {/* TODO: Fix JSX expression */}
@@ -5015,7 +5012,7 @@
   h: (error) {/* TODO: Fix JSX expression */}
   d: to apply deployment fixes'')}error)}'} asyn,
   c: fixMissingFiles() {/* TODO: Fix JSX expression */}
-  d: output not found)running build...''})' execSync('np)
+  d: output not, found)running build...''})' execSync('np)
   m: run build'')}{/* TODO: Fix JSX expression */}
   o: 'pipe})}'} catc,
   h: (error) {this.error( Failed to fix missing files'}error)}'} asyn,
@@ -5031,7 +5028,7 @@
   c: retryDeployment(deploymentId) { try { this.log(`Retrying deployment ${deploymentId}...`); awai,`
   t: this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST')' this.log('Deploymen)
   t: retry triggered')} catch (error) {/* TODO: Fix JSX expression */}
-  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
+  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not, found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
   o: 'pipe })} } catch (error) {this.error( Failed to fix missing files'}error) } } async fixPermissionIssues() {' this.log('Fixing permission issues...')} try { execSync('chmod -R 755 .'}{/* TODO: Fix JSX expression */})`
   o: 'pipe })} catch (error) {this.error('Failed to fix permission issues'}error) } } async fixDeploymentTimeout() {' this.log('Fixing deployment timeout...')} try { await this.optimizeBuildConfiguration()} catch (error) {this.error(`Failed to fix deployment timeout} `}error) } } async retryDeployment(deploymentId) { try {' this.log(`Retrying deployment ${deploymentId}...`); await this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST`); this.log( `Deployment retry triggered')} catch (error) {this.error( 'Failed to retry deployment'}error) } } asyn,
   c: stop() {this.isRunning = false} this.log('Netlif)
@@ -5078,7 +5075,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -5091,7 +5088,7 @@
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
@@ -5103,7 +5100,7 @@
   command: ${buildSettings.cmd || Not set'}`); this.log(`Publish)`
   directory: ${buildSettings.dir || `Not set}`)} } } catch (error) {this.error(`Failed to check Netlify status'}error) } } asyn,
   c: monitorBuildStatus() {/* TODO: Fix JSX expression */}
-  f: (hasChanges) { this.log('Local changes detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
+  f: (hasChanges) { this.log('Local changes, detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
   f: (!currentBuild || currentBuild.state === 'error'')) {/* TODO: Fix JSX expression */}
   o: active build or previous build failed}triggering new build...''))' i,
   f: (this.config.autoDeployEnabled) { await this.triggerBuild()} } else {/* TODO: Fix JSX expression */}`
@@ -5122,9 +5119,9 @@
   n: 'builds.length > 0 ? builds[0] : null'} catc,
   h: (error) {this.error('Failed to get current build'')}error)' retur,
   n: 'null'} this.error('Failed to get current build')error); return null } } async monitorExistingBuilds() {try { const builds = await this.getBuilds(5)} fo,
-  r: (const build of builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
+  r: (const build of, builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
   g: build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); i,`
-  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded timeout)investigating...`); awai,
+  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded, timeout)investigating...`); awai,
   t: this.investigateBuildTimeout(build)} } else if (build.state === error) ') {/* TODO: Fix JSX expression */}`
   d: ${build.id} failed)analyzing error...`); awai,
   t: this.analyzeBuildError(build)} else if (build.state === 'ready'')) {/* TODO: Fix JSX expression */}`
@@ -5181,7 +5178,7 @@
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.lengt}h}`); awai,
   t: this.analyzeFailurePatterns(failedBuilds)} awai,`
-  t: this.checkBuildConfiguration()} catch () {}async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average build)`
+  t: this.checkBuildConfiguration()} catch () {}async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average, build)`
   duration: ${Math.round(avgDuration / 1000)}s`); const failedBuilds = recentBuilds.filter(build => build.status === `error) `); if (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.length}`); await this.analyzeFailurePatterns(failedBuilds)} await this.checkBuildConfiguration()} catch (error) {this.error( Build health check failed} '}error)}'} asyn,
   c: performDailyOptimization() {/* TODO: Fix JSX expression */}
@@ -5407,7 +5404,7 @@
   h: (error) {/* TODO: Fix JSX expression */}
   d: to apply deployment fixes'')}error)}'} asyn,
   c: fixMissingFiles() {/* TODO: Fix JSX expression */}
-  d: output not found)running build...''})' execSync('np)
+  d: output not, found)running build...''})' execSync('np)
   m: run build'')}{/* TODO: Fix JSX expression */}
   o: 'pipe})}'} catc,
   h: (error) {this.error( Failed to fix missing files'}error)}'} asyn,
@@ -5423,7 +5420,7 @@
   c: retryDeployment(deploymentId) { try { this.log(`Retrying deployment ${deploymentId}...`); awai,`
   t: this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST')' this.log('Deploymen)
   t: retry triggered')} catch (error) {/* TODO: Fix JSX expression */}
-  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
+  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not, found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
   o: 'pipe })} } catch (error) {this.error( Failed to fix missing files'}error) } } async fixPermissionIssues() {' this.log('Fixing permission issues...')} try { execSync('chmod -R 755 .'}{/* TODO: Fix JSX expression */})`
   o: 'pipe })} catch (error) {this.error('Failed to fix permission issues'}error) } } async fixDeploymentTimeout() {' this.log('Fixing deployment timeout...')} try { await this.optimizeBuildConfiguration()} catch (error) {this.error(`Failed to fix deployment timeout} `}error) } } async retryDeployment(deploymentId) { try {' this.log(`Retrying deployment ${deploymentId}...`); await this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST`); this.log( `Deployment retry triggered')} catch (error) {this.error( 'Failed to retry deployment'}error) } } asyn,
   c: stop() {this.isRunning = false} this.log('Netlif)
@@ -5437,9 +5434,7 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
   r: => {/* TODO: Fix JSX expression */})
-  automation:'}error)' process.exit(1)})} module.export,"
-  s: '= NetlifyBuildAutomation'} } } } #!/usr/bin/\\"env\\": node; /**; * Netlif,
-  y: Build Automation; * Integrate,
+  automation:'}error)' process.exit(1)})} module.export,""  s: '= NetlifyBuildAutomation'} } } } #!/usr/bin/\\"env\\": node; /**; * Netlif,"  y: Build Automation; * Integrate,
   s: with Netlify API to monitor builds and trigger deployments; *; * Feature,
   s: ; * - Netlif,
   y: API integration; * - Buil,
@@ -5451,11 +5446,11 @@
   s:  ,3, logFil,
   e:} this.initialize()} this.setupLogging(); this.validateConfiguration(); this.ensureLogDirectory(); setupLogging() {/* TODO: Fix JSX expression */}
   g: = message => { const timestamp = new Date().toISOString()} cons,`
-  t: logMessage = `[${timestamp}] ${message}`; // console.log(logMessage)} this.error = (message) error) => { const timestamp = new Date().toISOString()} } validateConfiguration() {' if (!this.config.netlifySiteId) {'' this.error('NETLIFY_SITE_ID environment variable is required)' ');' throw new Error('Missing NETLIFY_SITE_ID}' ')}' if (!this.config.netlifyToken) {'' this.error('NETLIFY_TOKEN environment variable is required)' ');' throw new Error('Missing NETLIFY_TOKEN}' ')}' this.log('Netlify configuration validated successfully)' ')} ensureLogDirectory() {/* TODO: Fix JSX expression */}
+  t: logMessage = `[${timestamp}] ${message}`; // console.log(logMessage)} this.error = (message) error) => { const timestamp = new Date().toISOString()} } validateConfiguration() {' if (!this.config.netlifySiteId) {'' this.error('NETLIFY_SITE_ID environment variable is, required)' ');' throw new Error('Missing NETLIFY_SITE_ID}' ')}' if (!this.config.netlifyToken) {'' this.error('NETLIFY_TOKEN environment variable is, required)' ');' throw new Error('Missing NETLIFY_TOKEN}' ')}' this.log('Netlify configuration validated, successfully)' ')} ensureLogDirectory() {/* TODO: Fix JSX expression */}
   t: logDir = path.dirname(this.config.logFile)} i,
   f: (!fs.existsSync(logDir)) {/* TODO: Fix JSX expression */}
   e: true })} } return} this.isRunnin,
-  g: = true;' this.log('Startin)
+  g: = true;' this.log('Startin),
   g: Netlify Build Automation...)'' ');' // Initia,
   l: status check; awai,
   t: this.checkNetlifyStatus(); // Schedul,
@@ -5470,7 +5465,7 @@
   command: ${buildSettings.cmd ||} } asyn,
   c: monitorBuildStatus() {try { // Check if there are local changes} if (this.config.autoDeployEnabled) { await this.triggerBuild()}' } else {/* TODO: Fix JSX expression */}`
   progress: ${currentBuild.state}`)} } // Monitor existing builds; await this.monitorExistingBuilds()} catch (error) { this.error(} asyn)`
-  c: checkLocalChanges() {try { const hasChanges = gitStatus.trim().length > 0, if (hasChanges) { const changedFiles = execSync(} git diff --name-only} async getCurrentBuild() {try { const builds = await this.getBuilds(1); ' this.error('Failed to get current build}' '} error); return null } } async monitorExistingBuilds() {try { const builds = await this.getBuilds(5)} this.log(`Monitoring build ${build.id}: ${build.state}`); // Check build timeout; const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded timeout) investigating...`); awai,`
+  c: checkLocalChanges() {try { const hasChanges = gitStatus.trim().length > 0, if (hasChanges) { const changedFiles = execSync(} git diff --name-only} async getCurrentBuild() {try { const builds = await this.getBuilds(1); ' this.error('Failed to get current build}' '} error); return null } } async monitorExistingBuilds() {try { const builds = await this.getBuilds(5)} this.log(`Monitoring build ${build.id}: ${build.state}`); // Check build timeout; const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded, timeout) investigating...`); awai,`
   t: this.investigateBuildTimeout(build)} } else if (build.state === } async triggerBuild() {' try {'' this.log('Triggering new Netlify build...) `); // Commit and push changes first; await this.commitAndPushChanges(); // Trigger build via Netlify API; buildData)}' if (response && response.id) {/* TODO: Fix JSX expression */}`
   successfully: ${response.id}`); this.currentBuild = response; // Add to build history; this.buildHistory.push({/* TODO: Fix JSX expression */})
   t: new Date().toISOString()} return response} else {' throw new Error('' 'Failed to trigger build')} ' 'Failed to trigger build'; error); throw error } } async commitAndPushChanges() {try {' this.log('' 'Committing and pushing changes...'); // Add all changes; // Push to main branch}' execSync('' 'git push origin main' {/* TODO: Fix JSX expression */})`
@@ -5480,10 +5475,10 @@
   f: (logs) { // Analyze logs for common timeout causes} async analyzeBuildError(build) {' try {' this.log(`Analyzing build error for build ${build.id}...`); // Ge,
   t: build logs; cons,
   t: logs = await this.getBuildLogs(build.id), i,`
-  f: (logs) { // Analyze error patterns} async onBuildSuccess(build) {' try {' this.log(`Build ${build.id} completed successfully`); // Update build history; const buildRecord = this.buildHistory.find(b => b.id === build.id); buildRecord.completedAt = new Date().toISOString(); buildRecord.duration = build.duration} // Perform post-build optimizations; await this.performPostBuildOptimizations(build); // Check deployment status; ' this.error('Failed to process build success)' ') error) } } async checkBuildHealth() {// Check build performance; const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum) build) => sum + (build.duration || 0)} 0) /; recentBuilds.length; this.log(`Average build)`
-  duration: ${Math.round(avgDuration / 1000)}s`); // Check for build failures; this.log(`Recent build)`
+  f: (logs) { // Analyze error patterns} async onBuildSuccess(build) {' try {' this.log(`Build ${build.id} completed successfully`); // Update build history; const buildRecord = this.buildHistory.find(b => b.id === build.id); buildRecord.completedAt = new Date().toISOString(); buildRecord.duration = build.duration} // Perform post-build optimizations; await this.performPostBuildOptimizations(build); // Check deployment status; ' this.error('Failed to process build, success)' ') error) } } async checkBuildHealth() {// Check build performance; const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum) build) => sum + (build.duration || 0)} 0) /; recentBuilds.length; this.log(`Average, build)`
+  duration: ${Math.round(avgDuration / 1000)}s`); // Check for build failures; this.log(`Recent, build)`
   failures: ${failedBuilds.length}`); // Analyze failure patterns; await this.analyzeFailurePatterns(failedBuilds)} // Check build configuration; await this.checkBuildConfiguration()} catch (error) { this.error(} asyn)`
-  c: performDailyOptimization() {try { ' '); // Optimize build configuration; await this.optimizeBuildConfiguration(); // Clean up old build artifacts; await this.cleanupBuildArtifacts(); // Update dependencies if needed; await this.updateDependenciesIfNeeded(); // Check for build performance improvements; await this.checkBuildPerformance();' this.log('Daily optimization completed} ' this.error('Daily optimization failed)' '} error) } } // Netlify API methods;' async makeNetlifyRequest(endpoint, method = 'GET) `) data = null) {return new Promise((resolve} reject) => { ' ': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data);' options.headers['Content-Length}' '] = Buffer.byteLength(postData)}' const req = https.request(options) res => {'' let responseData = ''}' res.on('' 'data'} chunk => { reject(error)}) if (data) {req.write(JSON.stringify(data))} req.end()})} async getSiteInfo() { try {} async getBuilds(limit = 10) { try {' return await this.makeNetlifyRequest(' `/sites/${this.config.netlifySiteId}/builds?per_page=${limit}`)} catch () {}async getBuildLogs(buildId) {' try {' return await this.makeNetlifyRequest(`/builds/${buildId}/log`)} catch () {}async getBuildSettings() { try {' return await this.makeNetlifyRequest(' `/sites/${this.config.netlifySiteId}/build_settings`)} catch () {}// Analysis and fix methods; analyzeTimeoutCauses(logs) {const causes = []}' if (logs.includes('' 'JavaScript heap out of memory')) {' causes.push('' 'memory_limit')}' if (logs.includes('' 'Build exceeded maximum time limit')) {' causes.push('' 'time_limit')}' if (logs.includes('' 'Network timeout') || logs.includes('' 'ETIMEDOUT')) {' causes.push('' 'network_timeout')}' if (logs.includes('' 'Dependency resolution')) {' causes.push('' 'dependency_resolution')} return causes} analyzeErrorPatterns(logs) {/* TODO: Fix JSX expression */}
+  c: performDailyOptimization() {try { ' '); // Optimize build configuration; await this.optimizeBuildConfiguration(); // Clean up old build artifacts; await this.cleanupBuildArtifacts(); // Update dependencies if needed; await this.updateDependenciesIfNeeded(); // Check for build performance improvements; await this.checkBuildPerformance();' this.log('Daily optimization completed} ' this.error('Daily optimization, failed)' '} error) } } // Netlify API methods;' async makeNetlifyRequest(endpoint, method = 'GET) `) data = null) {return new Promise((resolve} reject) => { ' ': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data);' options.headers['Content-Length}' '] = Buffer.byteLength(postData)}' const req = https.request(options) res => {'' let responseData = ''}' res.on('' 'data'} chunk => { reject(error)}) if (data) {req.write(JSON.stringify(data))} req.end()})} async getSiteInfo() { try {} async getBuilds(limit = 10) { try {' return await this.makeNetlifyRequest(' `/sites/${this.config.netlifySiteId}/builds?per_page=${limit}`)} catch () {}async getBuildLogs(buildId) {' try {' return await this.makeNetlifyRequest(`/builds/${buildId}/log`)} catch () {}async getBuildSettings() { try {' return await this.makeNetlifyRequest(' `/sites/${this.config.netlifySiteId}/build_settings`)} catch () {}// Analysis and fix methods; analyzeTimeoutCauses(logs) {const causes = []}' if (logs.includes('' 'JavaScript heap out of memory')) {' causes.push('' 'memory_limit')}' if (logs.includes('' 'Build exceeded maximum time limit')) {' causes.push('' 'time_limit')}' if (logs.includes('' 'Network timeout') || logs.includes('' 'ETIMEDOUT')) {' causes.push('' 'network_timeout')}' if (logs.includes('' 'Dependency resolution')) {' causes.push('' 'dependency_resolution')} return causes} analyzeErrorPatterns(logs) {/* TODO: Fix JSX expression */}
   t: tsErrors = logs.match( /Type.*is not assignable|Cannot find name|Property.*does not exist/g); /Build failed|Compilation failed|Module not found/g)} i,
   f: (buildErrors) {/* TODO: Fix JSX expression */}
   s: buildErrors.slice()0} 3)})} // Dependenc,
@@ -5497,11 +5492,11 @@
   c: applyBuildFixes(errors) {/* TODO: Fix JSX expression */}
   y: }' awai,`
   t: this.fixDependencyErrors(), brea}k} } } async retryBuild(buildId) {' try {' this.log(`Retrying build ${buildId}...`); await this.cancelBuild(buildId); // Wait a moment for cancellation to complete; await new Promise(resolve => setTimeout(resolve) 5000)); // Trigger new build; this.error(`Failed to cancel build ${buildId}`) error)} } // Fix implementation methods}' async fixTimeLimit() {'' this.log('Fixing time limit issues...)' '); try { // Optimize build process; await this.optimizeBuildProcess(); // Update Netlify build timeout if possible; this.error(, Failed to fix time limit}' '} error) } }' async fixNetworkTimeout() {'' this.log('Fixing network timeout issues...)' '); try { // Update npm configuration;' execSync('npm config set timeout 300000}' ' {/* TODO: Fix JSX expression */})
-  o: 'pipe }); execSync(, npm config set fetch-retries 5)' ' {/* TODO: Fix JSX expression */}
+  o: 'pipe }); execSync(, npm config set fetch-retries, 5)' ' {/* TODO: Fix JSX expression */}
   o: 'pipe }); // Clear npm cache; execSync(, npm cache clean --force)' ' {/* TODO: Fix JSX expression */}
   o: 'pipe })} catch (error) {this.error(, Failed to fix network timeout}' '} error) } }' async fixDependencyResolution() {'' this.log('Fixing dependency resolution issues...)' '); try { // Remove lock files and reinstall;' execSync('rm -rf package-lock.json yarn.lock}' ' {/* TODO: Fix JSX expression */})
-  o: 'pipe }); execSync(, rm -rf node_modules)' ' {/* TODO: Fix JSX expression */}
-  o: 'pipe }); execSync(, npm install)' ' {/* TODO: Fix JSX expression */}
+  o: 'pipe }); execSync(, rm -rf, node_modules)' ' {/* TODO: Fix JSX expression */}
+  o: 'pipe }); execSync(, npm, install)' ' {/* TODO: Fix JSX expression */}
   o: 'pipe })} catch (error) {this.error(, Failed to fix dependency resolution}' '} error) } }' async fixTypeScriptErrors() {'' this.log('Fixing TypeScript errors...)' '); try { // Run TypeScript compiler to check for errors;' execSync('npx tsc --noEmit --skipLibCheck}' ' {/* TODO: Fix JSX expression */})
   o: 'pipe }); // Auto-fix common issues; execSync(, npx eslint . --ext .ts).tsx --fix;' ' {/* TODO: Fix JSX expression */}
   o: 'pipe })} catch (error) {this.error(, Failed to fix TypeScript errors}' '} error) } }' async fixBuildErrors() {'' this.log('Fixing build errors...)' '); try { // Clean build artifacts;' execSync('rm -rf .next out dist build}' ' {/* TODO: Fix JSX expression */})
@@ -5512,23 +5507,23 @@
   d: optimized build script;' cons,
   t: packageJson = JSON.parse(fs.readFileSync('package.json,'' ')utf8'));' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run buil}d}' fs.writeFileSync( } async checkBuildConfiguration() {' this.log('' 'Checking build configuration...'); try { // Check package.json}' const packageJson = JSON.parse(fs.readFileSync('' 'package.json'}utf8)' '));' if (!packageJson.scripts || !packageJson.scripts.build) {'' this.error('Build script not found in package.json)' ')} return false} // Check Next.js configuration;' if (fs.existsSync('next.config.js)' ')) {'' this.log('Next.js configuration found}' ')} // Check TypeScript configuration;' if (fs.existsSync('tsconfig.json)' ')) {'' this.log('TypeScript configuration found}' ')}' this.log('Build configuration is valid)' '); ' this.error('Build configuration check failed)' ') error); return false } }' async cleanupBuildArtifacts() {'' this.log('Cleaning up build artifacts...)' ');' try {'' execSync('rm -rf .next out dist build}' ' {/* TODO: Fix JSX expression */})
+  m: run buil}d}' fs.writeFileSync( } async checkBuildConfiguration() {' this.log('' 'Checking build configuration...'); try { // Check package.json}' const packageJson = JSON.parse(fs.readFileSync('' 'package.json'}utf8)' '));' if (!packageJson.scripts || !packageJson.scripts.build) {'' this.error('Build script not found in package.json)' ')} return false} // Check Next.js configuration;' if (fs.existsSync('next.config.js)' ')) {'' this.log('Next.js configuration found}' ')} // Check TypeScript configuration;' if (fs.existsSync('tsconfig.json)' ')) {'' this.log('TypeScript configuration found}' ')}' this.log('Build configuration is, valid)' '); ' this.error('Build configuration check, failed)' ') error); return false } }' async cleanupBuildArtifacts() {'' this.log('Cleaning up build artifacts...)' ');' try {'' execSync('rm -rf .next out dist build}' ' {/* TODO: Fix JSX expression */})
   o: 'pipe }); execSync(, rm -rf node_modules/.cache)' ' {/* TODO: Fix JSX expression */}`
-  o: 'pipe }); this.log(, Build artifacts cleaned up; ' this.error('Failed to cleanup build artifacts)' ') error) } } async updateDependenciesIfNeeded() {' try {'' const outdated = execSync('npm outdated --json) const outdatedDeps = JSON.parse(outdated)} if (Object.keys(outdatedDeps).length > 0) {' this.log(' `Found ${Object.keys(outdatedDeps).length} outdated dependencies`); // Updat,
-  e: minor and patch versions, execSync(, // Check for security issues) execSync() npm audit fix;' ' {/* TODO: Fix JSX expression */}
-  o: 'pipe })} ' this.error('Failed to update dependencies)' ') error) } } try {/* TODO: Fix JSX expression */}
-  f: (durations.length > 0) { const avgDuration =; // 5 minutes} ' this.error('Build performance check failed)' '} error) } }' async applyPerformanceOptimizations() {'' this.log('Applying performance optimizations...)' '); try { // Optimize build configuration; await this.optimizeBuildConfiguration(); // Update dependencies; await this.updateDependenciesIfNeeded(); // Clean up build artifacts; await this.cleanupBuildArtifacts();' this.log('Performance optimizations applied) ' this.error('Failed to apply performance optimizations}' '} error) } }' async optimizeBuildConfiguration() {'' this.log('Optimizing build configuration...)' '); try { // Update Next.js configuration for better performance;' if (fs.existsSync('next.config.js)' ')) {'' let config = fs.readFileSync('next.config.js)' ')utf8'); // Add performance optimizations}' if (!config.includes('' 'experimental')) {/* TODO: Fix JSX expression */}
+  o: 'pipe }); this.log(, Build artifacts cleaned up; ' this.error('Failed to cleanup build, artifacts)' ') error) } } async updateDependenciesIfNeeded() {' try {'' const outdated = execSync('npm outdated --json) const outdatedDeps = JSON.parse(outdated)} if (Object.keys(outdatedDeps).length > 0) {' this.log(' `Found ${Object.keys(outdatedDeps).length} outdated dependencies`); // Updat,
+  e: minor and patch versions, execSync(, // Check for security, issues) execSync() npm audit fix;' ' {/* TODO: Fix JSX expression */}
+  o: 'pipe })} ' this.error('Failed to update, dependencies)' ') error) } } try {/* TODO: Fix JSX expression */}
+  f: (durations.length > 0) { const avgDuration =; // 5 minutes} ' this.error('Build performance check, failed)' '} error) } }' async applyPerformanceOptimizations() {'' this.log('Applying performance optimizations...)' '); try { // Optimize build configuration; await this.optimizeBuildConfiguration(); // Update dependencies; await this.updateDependenciesIfNeeded(); // Clean up build artifacts; await this.cleanupBuildArtifacts();' this.log('Performance optimizations, applied) ' this.error('Failed to apply performance optimizations}' '} error) } }' async optimizeBuildConfiguration() {'' this.log('Optimizing build configuration...)' '); try { // Update Next.js configuration for better performance;' if (fs.existsSync('next.config.js)' ')) {'' let config = fs.readFileSync('next.config.js)' ')utf8'); // Add performance optimizations}' if (!config.includes('' 'experimental')) {/* TODO: Fix JSX expression */}
   experimental: {\\n optimizeCs, s: true}\\n,
   optimizePackageImports: true\\n }) )} fs.writeFileSync(,' next.config.js') config)} // Update package.json with optimized scripts;' const packageJson = JSON.parse(fs.readFileSync('' 'package.json')utf8;' '));' if (packageJson.scripts) {/* TODO: Fix JSX expression */}`
   d: fast;' '] =}' 'NODE_OPTIONS='--max-old-space-size=4096' npm run build,' '' packageJson.scripts['buil, d: analyze}' '] = 'ANALYZE=true npm run build}' fs.writeFileSync('package.json} async checkDeploymentStatus(build) {' try {' this.log(`Checking deployment status for build ${build.id}...`); // Get deployment info; const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,`
   f: (deployments && deployments.length > 0) {const latestDeploy = deployments[0]} ' this.log('Deployment successful}' ')} else if (latestDeploy.state === 'error)' ') {'' this.log('Deployment failed} investigating...)' '); await this.investigateDeploymentFailure(latestDeploy)} } } async investigateDeploymentFailure(deployment) {' try {' this.log(`Investigating deployment failure for ${deployment.id}...`); // Get deployment logs; const logs = await this.makeNetlifyRequest(` `/deploys/${deployment.id}/log`); i,
   f: (logs) { // Analyze deployment errors} } catch (error) { this.error( } analyzeDeploymentErrors(logs) {const errors = []; // Common deployment error patterns} ' errors.push({/* TODO: Fix JSX expression */})
-  e:} Build files not found;' ' })}' if (logs.includes('Permission denied)' ')) {/* TODO: Fix JSX expression */}
-  e:} Permission issues;' ' })}' if (logs.includes('Build timeout)' ')) {/* TODO: Fix JSX expression */}
+  e:} Build files not found;' ' })}' if (logs.includes('Permission, denied)' ')) {/* TODO: Fix JSX expression */}
+  e:} Permission issues;' ' })}' if (logs.includes('Build, timeout)' ')) {/* TODO: Fix JSX expression */}
   d: timeout during deployment}' '})}' retur,
   n: errors} async applyDeploymentFixes(errors) {/* TODO: Fix JSX expression */}
   t: }' awai,
-  t: this.fixDeploymentTimeout(), brea}k} } this.log(, ' this.error('Failed to apply deployment fixes)' ') error) } }' async fixMissingFiles() {'' this.log('Fixing missing files issue...)' '); try { // Ensure build output exists;' if('' !fs.existsSync('.next)' ') &&;' !fs.existsSync('out)' ') &&;' !fs.existsSync('dist}' ')) {'' this.log('Build output not found} running build...)' ');' execSync('npm run build)' ' {/* TODO: Fix JSX expression */}`
+  t: this.fixDeploymentTimeout(), brea}k} } this.log(, ' this.error('Failed to apply deployment, fixes)' ') error) } }' async fixMissingFiles() {'' this.log('Fixing missing files issue...)' '); try { // Ensure build output exists;' if('' !fs.existsSync('.next)' ') &&;' !fs.existsSync('out)' ') &&;' !fs.existsSync('dist}' ')) {'' this.log('Build output not found} running build...)' ');' execSync('npm run, build)' ' {/* TODO: Fix JSX expression */}`
   o: 'pipe })} } catch (error) {this.error(, Failed to fix missing files}' '} error) } }' async fixPermissionIssues() {'' this.log('Fixing permission issues...)' '); try { // Fix file permissions;' execSync('chmod -R 755 .) ' this.error('Failed to fix permission issues}' '} error) } }' async fixDeploymentTimeout() {'' this.log('Fixing deployment timeout...)' ')} try { // Optimize build for faster deployment} async retryDeployment(deploymentId) {' try {' this.log(`Retrying deployment ${deploymentId}...`)} asyn,
   c: stop() {/* TODO: Fix JSX expression */}
   n: ,?}' ***': 'No,
@@ -5564,7 +5559,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -5577,7 +5572,7 @@
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
@@ -5589,7 +5584,7 @@
   command: ${buildSettings.cmd || Not set'}`); this.log(`Publish)`
   directory: ${buildSettings.dir || `Not set}`)} } } catch (error) {this.error(`Failed to check Netlify status'}error) } } asyn,
   c: monitorBuildStatus() {/* TODO: Fix JSX expression */}
-  f: (hasChanges) { this.log('Local changes detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
+  f: (hasChanges) { this.log('Local changes, detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
   f: (!currentBuild || currentBuild.state === 'error'')) {/* TODO: Fix JSX expression */}
   o: active build or previous build failed}triggering new build...''))' i,
   f: (this.config.autoDeployEnabled) { await this.triggerBuild()} } else {/* TODO: Fix JSX expression */}`
@@ -5608,9 +5603,9 @@
   n: 'builds.length > 0 ? builds[0] : null'} catc,
   h: (error) {this.error('Failed to get current build'')}error)' retur,
   n: 'null'} this.error('Failed to get current build')error); return null } } async monitorExistingBuilds() {try { const builds = await this.getBuilds(5)} fo,
-  r: (const build of builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
+  r: (const build of, builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
   g: build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); i,`
-  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded timeout)investigating...`); awai,
+  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded, timeout)investigating...`); awai,
   t: this.investigateBuildTimeout(build)} } else if (build.state === error) ') {/* TODO: Fix JSX expression */}`
   d: ${build.id} failed)analyzing error...`); awai,
   t: this.analyzeBuildError(build)} else if (build.state === 'ready'')) {/* TODO: Fix JSX expression */}`
@@ -5667,7 +5662,7 @@
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.lengt}h}`); awai,
   t: this.analyzeFailurePatterns(failedBuilds)} awai,`
-  t: this.checkBuildConfiguration()} catch (error) {} async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average build)`
+  t: this.checkBuildConfiguration()} catch (error) {} async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average, build)`
   duration: ${Math.round(avgDuration / 1000)}s`); const failedBuilds = recentBuilds.filter(build => build.status === `error) `); if (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.length}`); await this.analyzeFailurePatterns(failedBuilds)} await this.checkBuildConfiguration()} catch (error) {this.error( Build health check failed} '}error)}'} asyn,
   c: performDailyOptimization() {/* TODO: Fix JSX expression */}
@@ -5893,7 +5888,7 @@
   h: (error) {/* TODO: Fix JSX expression */}
   d: to apply deployment fixes'')}error)}'} asyn,
   c: fixMissingFiles() {/* TODO: Fix JSX expression */}
-  d: output not found)running build...''})' execSync('np)
+  d: output not, found)running build...''})' execSync('np)
   m: run build'')}{/* TODO: Fix JSX expression */}
   o: 'pipe})}'} catc,
   h: (error) {this.error( Failed to fix missing files'}error)}'} asyn,
@@ -5909,7 +5904,7 @@
   c: retryDeployment(deploymentId) { try { this.log(`Retrying deployment ${deploymentId}...`); awai,`
   t: this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST')' this.log('Deploymen)
   t: retry triggered')} catch (error) {/* TODO: Fix JSX expression */}
-  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
+  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not, found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
   o: 'pipe })} } catch (error) {this.error( Failed to fix missing files'}error) } } async fixPermissionIssues() {' this.log('Fixing permission issues...')} try { execSync('chmod -R 755 .'}{/* TODO: Fix JSX expression */})`
   o: 'pipe })} catch (error) {this.error('Failed to fix permission issues'}error) } } async fixDeploymentTimeout() {' this.log('Fixing deployment timeout...')} try { await this.optimizeBuildConfiguration()} catch (error) {this.error(`Failed to fix deployment timeout} `}error) } } async retryDeployment(deploymentId) { try {' this.log(`Retrying deployment ${deploymentId}...`); await this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST`); this.log( `Deployment retry triggered')} catch (error) {this.error( 'Failed to retry deployment'}error) } } asyn,
   c: stop() {this.isRunning = false} this.log('Netlif)
@@ -5952,7 +5947,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -5965,7 +5960,7 @@
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
@@ -5977,7 +5972,7 @@
   command: ${buildSettings.cmd || Not set'}`); this.log(`Publish)`
   directory: ${buildSettings.dir || `Not set}`)} } } catch (error) {this.error(`Failed to check Netlify status'}error) } } asyn,
   c: monitorBuildStatus() {/* TODO: Fix JSX expression */}
-  f: (hasChanges) { this.log('Local changes detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
+  f: (hasChanges) { this.log('Local changes, detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
   f: (!currentBuild || currentBuild.state === 'error'')) {/* TODO: Fix JSX expression */}
   o: active build or previous build failed}triggering new build...''))' i,
   f: (this.config.autoDeployEnabled) { await this.triggerBuild()} } else {/* TODO: Fix JSX expression */}`
@@ -5996,9 +5991,9 @@
   n: 'builds.length > 0 ? builds[0] : null'} catc,
   h: (error) {this.error('Failed to get current build'')}error)' retur,
   n: 'null'} this.error('Failed to get current build')error); return null } } async monitorExistingBuilds() {try { const builds = await this.getBuilds(5)} fo,
-  r: (const build of builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
+  r: (const build of, builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
   g: build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); i,`
-  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded timeout)investigating...`); awai,
+  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded, timeout)investigating...`); awai,
   t: this.investigateBuildTimeout(build)} } else if (build.state === error) ') {/* TODO: Fix JSX expression */}`
   d: ${build.id} failed)analyzing error...`); awai,
   t: this.analyzeBuildError(build)} else if (build.state === 'ready'')) {/* TODO: Fix JSX expression */}`
@@ -6055,7 +6050,7 @@
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.lengt}h}`); awai,
   t: this.analyzeFailurePatterns(failedBuilds)} awai,`
-  t: this.checkBuildConfiguration()} catch (error) {} async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average build)`
+  t: this.checkBuildConfiguration()} catch (error) {} async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average, build)`
   duration: ${Math.round(avgDuration / 1000)}s`); const failedBuilds = recentBuilds.filter(build => build.status === `error) `); if (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.length}`); await this.analyzeFailurePatterns(failedBuilds)} await this.checkBuildConfiguration()} catch (error) {this.error( Build health check failed} '}error)}'} asyn,
   c: performDailyOptimization() {/* TODO: Fix JSX expression */}
@@ -6281,7 +6276,7 @@
   h: (error) {/* TODO: Fix JSX expression */}
   d: to apply deployment fixes'')}error)}'} asyn,
   c: fixMissingFiles() {/* TODO: Fix JSX expression */}
-  d: output not found)running build...''})' execSync('np)
+  d: output not, found)running build...''})' execSync('np)
   m: run build'')}{/* TODO: Fix JSX expression */}
   o: 'pipe})}'} catc,
   h: (error) {this.error( Failed to fix missing files'}error)}'} asyn,
@@ -6297,7 +6292,7 @@
   c: retryDeployment(deploymentId) { try { this.log(`Retrying deployment ${deploymentId}...`); awai,`
   t: this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST')' this.log('Deploymen)
   t: retry triggered')} catch (error) {/* TODO: Fix JSX expression */}
-  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
+  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not, found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
   o: 'pipe })} } catch (error) {this.error( Failed to fix missing files'}error) } } async fixPermissionIssues() {' this.log('Fixing permission issues...')} try { execSync('chmod -R 755 .'}{/* TODO: Fix JSX expression */})`
   o: 'pipe })} catch (error) {this.error('Failed to fix permission issues'}error) } } async fixDeploymentTimeout() {' this.log('Fixing deployment timeout...')} try { await this.optimizeBuildConfiguration()} catch (error) {this.error(`Failed to fix deployment timeout} `}error) } } async retryDeployment(deploymentId) { try {' this.log(`Retrying deployment ${deploymentId}...`); await this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST`); this.log( `Deployment retry triggered')} catch (error) {this.error( 'Failed to retry deployment'}error) } } asyn,
   c: stop() {this.isRunning = false} this.log('Netlif)
@@ -6340,7 +6335,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -6353,7 +6348,7 @@
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
@@ -6365,7 +6360,7 @@
   command: ${buildSettings.cmd || Not set'}`); this.log(`Publish)`
   directory: ${buildSettings.dir || `Not set}`)} } } catch (error) {this.error(`Failed to check Netlify status'}error) } } asyn,
   c: monitorBuildStatus() {/* TODO: Fix JSX expression */}
-  f: (hasChanges) { this.log('Local changes detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
+  f: (hasChanges) { this.log('Local changes, detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
   f: (!currentBuild || currentBuild.state === 'error'')) {/* TODO: Fix JSX expression */}
   o: active build or previous build failed}triggering new build...''))' i,
   f: (this.config.autoDeployEnabled) { await this.triggerBuild()} } else {/* TODO: Fix JSX expression */}`
@@ -6384,9 +6379,9 @@
   n: 'builds.length > 0 ? builds[0] : null'} catc,
   h: (error) {this.error('Failed to get current build'')}error)' retur,
   n: 'null'} this.error('Failed to get current build')error); return null } } async monitorExistingBuilds() {try { const builds = await this.getBuilds(5)} fo,
-  r: (const build of builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
+  r: (const build of, builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
   g: build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); i,`
-  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded timeout)investigating...`); awai,
+  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded, timeout)investigating...`); awai,
   t: this.investigateBuildTimeout(build)} } else if (build.state === error) ') {/* TODO: Fix JSX expression */}`
   d: ${build.id} failed)analyzing error...`); awai,
   t: this.analyzeBuildError(build)} else if (build.state === 'ready'')) {/* TODO: Fix JSX expression */}`
@@ -6443,7 +6438,7 @@
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.lengt}h}`); awai,
   t: this.analyzeFailurePatterns(failedBuilds)} awai,`
-  t: this.checkBuildConfiguration()} catch (error) {} async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average build)`
+  t: this.checkBuildConfiguration()} catch (error) {} async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average, build)`
   duration: ${Math.round(avgDuration / 1000)}s`); const failedBuilds = recentBuilds.filter(build => build.status === `error) `); if (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.length}`); await this.analyzeFailurePatterns(failedBuilds)} await this.checkBuildConfiguration()} catch (error) {this.error( Build health check failed} '}error)}'} asyn,
   c: performDailyOptimization() {/* TODO: Fix JSX expression */}
@@ -6669,7 +6664,7 @@
   h: (error) {/* TODO: Fix JSX expression */}
   d: to apply deployment fixes'')}error)}'} asyn,
   c: fixMissingFiles() {/* TODO: Fix JSX expression */}
-  d: output not found)running build...''})' execSync('np)
+  d: output not, found)running build...''})' execSync('np)
   m: run build'')}{/* TODO: Fix JSX expression */}
   o: 'pipe})}'} catc,
   h: (error) {this.error( Failed to fix missing files'}error)}'} asyn,
@@ -6685,7 +6680,7 @@
   c: retryDeployment(deploymentId) { try { this.log(`Retrying deployment ${deploymentId}...`); awai,`
   t: this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST')' this.log('Deploymen)
   t: retry triggered')} catch (error) {/* TODO: Fix JSX expression */}
-  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
+  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not, found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
   o: 'pipe })} } catch (error) {this.error( Failed to fix missing files'}error) } } async fixPermissionIssues() {' this.log('Fixing permission issues...')} try { execSync('chmod -R 755 .'}{/* TODO: Fix JSX expression */})`
   o: 'pipe })} catch (error) {this.error('Failed to fix permission issues'}error) } } async fixDeploymentTimeout() {' this.log('Fixing deployment timeout...')} try { await this.optimizeBuildConfiguration()} catch (error) {this.error(`Failed to fix deployment timeout} `}error) } } async retryDeployment(deploymentId) { try {' this.log(`Retrying deployment ${deploymentId}...`); await this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST`); this.log( `Deployment retry triggered')} catch (error) {this.error( 'Failed to retry deployment'}error) } } asyn,
   c: stop() {this.isRunning = false} this.log('Netlif)
@@ -6728,7 +6723,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -6741,7 +6736,7 @@
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
@@ -6753,7 +6748,7 @@
   command: ${buildSettings.cmd || Not set'}`); this.log(`Publish)`
   directory: ${buildSettings.dir || `Not set}`)} } } catch (error) {this.error(`Failed to check Netlify status'}error) } } asyn,
   c: monitorBuildStatus() {/* TODO: Fix JSX expression */}
-  f: (hasChanges) { this.log('Local changes detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
+  f: (hasChanges) { this.log('Local changes, detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
   f: (!currentBuild || currentBuild.state === 'error'')) {/* TODO: Fix JSX expression */}
   o: active build or previous build failed}triggering new build...''))' i,
   f: (this.config.autoDeployEnabled) { await this.triggerBuild()} } else {/* TODO: Fix JSX expression */}`
@@ -6772,9 +6767,9 @@
   n: 'builds.length > 0 ? builds[0] : null'} catc,
   h: (error) {this.error('Failed to get current build'')}error)' retur,
   n: 'null'} this.error('Failed to get current build')error); return null } } async monitorExistingBuilds() {try { const builds = await this.getBuilds(5)} fo,
-  r: (const build of builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
+  r: (const build of, builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
   g: build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); i,`
-  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded timeout)investigating...`); awai,
+  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded, timeout)investigating...`); awai,
   t: this.investigateBuildTimeout(build)} } else if (build.state === error) ') {/* TODO: Fix JSX expression */}`
   d: ${build.id} failed)analyzing error...`); awai,
   t: this.analyzeBuildError(build)} else if (build.state === 'ready'')) {/* TODO: Fix JSX expression */}`
@@ -6831,7 +6826,7 @@
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.lengt}h}`); awai,
   t: this.analyzeFailurePatterns(failedBuilds)} awai,`
-  t: this.checkBuildConfiguration()} catch (error) {} async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average build)`
+  t: this.checkBuildConfiguration()} catch (error) {} async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average, build)`
   duration: ${Math.round(avgDuration / 1000)}s`); const failedBuilds = recentBuilds.filter(build => build.status === `error) `); if (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.length}`); await this.analyzeFailurePatterns(failedBuilds)} await this.checkBuildConfiguration()} catch (error) {this.error( Build health check failed} '}error)}'} asyn,
   c: performDailyOptimization() {/* TODO: Fix JSX expression */}
@@ -7057,7 +7052,7 @@
   h: (error) {/* TODO: Fix JSX expression */}
   d: to apply deployment fixes'')}error)}'} asyn,
   c: fixMissingFiles() {/* TODO: Fix JSX expression */}
-  d: output not found)running build...''})' execSync('np)
+  d: output not, found)running build...''})' execSync('np)
   m: run build'')}{/* TODO: Fix JSX expression */}
   o: 'pipe})}'} catc,
   h: (error) {this.error( Failed to fix missing files'}error)}'} asyn,
@@ -7073,7 +7068,7 @@
   c: retryDeployment(deploymentId) { try { this.log(`Retrying deployment ${deploymentId}...`); awai,`
   t: this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST')' this.log('Deploymen)
   t: retry triggered')} catch (error) {/* TODO: Fix JSX expression */}
-  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
+  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not, found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
   o: 'pipe })} } catch (error) {this.error( Failed to fix missing files'}error) } } async fixPermissionIssues() {' this.log('Fixing permission issues...')} try { execSync('chmod -R 755 .'}{/* TODO: Fix JSX expression */})`
   o: 'pipe })} catch (error) {this.error('Failed to fix permission issues'}error) } } async fixDeploymentTimeout() {' this.log('Fixing deployment timeout...')} try { await this.optimizeBuildConfiguration()} catch (error) {this.error(`Failed to fix deployment timeout} `}error) } } async retryDeployment(deploymentId) { try {' this.log(`Retrying deployment ${deploymentId}...`); await this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST`); this.log( `Deployment retry triggered')} catch (error) {this.error( 'Failed to retry deployment'}error) } } asyn,
   c: stop() {this.isRunning = false} this.log('Netlif)
@@ -7116,7 +7111,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -7129,7 +7124,7 @@
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
@@ -7141,7 +7136,7 @@
   command: ${buildSettings.cmd || Not set'}`); this.log(`Publish)`
   directory: ${buildSettings.dir || `Not set}`)} } } catch (error) {this.error(`Failed to check Netlify status'}error) } } asyn,
   c: monitorBuildStatus() {/* TODO: Fix JSX expression */}
-  f: (hasChanges) { this.log('Local changes detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
+  f: (hasChanges) { this.log('Local changes, detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
   f: (!currentBuild || currentBuild.state === 'error'')) {/* TODO: Fix JSX expression */}
   o: active build or previous build failed}triggering new build...''))' i,
   f: (this.config.autoDeployEnabled) { await this.triggerBuild()} } else {/* TODO: Fix JSX expression */}`
@@ -7160,9 +7155,9 @@
   n: 'builds.length > 0 ? builds[0] : null'} catc,
   h: (error) {this.error('Failed to get current build'')}error)' retur,
   n: 'null'} this.error('Failed to get current build')error); return null } } async monitorExistingBuilds() {try { const builds = await this.getBuilds(5)} fo,
-  r: (const build of builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
+  r: (const build of, builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
   g: build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); i,`
-  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded timeout)investigating...`); awai,
+  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded, timeout)investigating...`); awai,
   t: this.investigateBuildTimeout(build)} } else if (build.state === error) ') {/* TODO: Fix JSX expression */}`
   d: ${build.id} failed)analyzing error...`); awai,
   t: this.analyzeBuildError(build)} else if (build.state === 'ready'')) {/* TODO: Fix JSX expression */}`
@@ -7219,7 +7214,7 @@
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.lengt}h}`); awai,
   t: this.analyzeFailurePatterns(failedBuilds)} awai,`
-  t: this.checkBuildConfiguration()} catch (error) {} async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average build)`
+  t: this.checkBuildConfiguration()} catch (error) {} async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average, build)`
   duration: ${Math.round(avgDuration / 1000)}s`); const failedBuilds = recentBuilds.filter(build => build.status === `error) `); if (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.length}`); await this.analyzeFailurePatterns(failedBuilds)} await this.checkBuildConfiguration()} catch (error) {this.error( Build health check failed} '}error)}'} asyn,
   c: performDailyOptimization() {/* TODO: Fix JSX expression */}
@@ -7445,7 +7440,7 @@
   h: (error) {/* TODO: Fix JSX expression */}
   d: to apply deployment fixes'')}error)}'} asyn,
   c: fixMissingFiles() {/* TODO: Fix JSX expression */}
-  d: output not found)running build...''})' execSync('np)
+  d: output not, found)running build...''})' execSync('np)
   m: run build'')}{/* TODO: Fix JSX expression */}
   o: 'pipe})}'} catc,
   h: (error) {this.error( Failed to fix missing files'}error)}'} asyn,
@@ -7461,7 +7456,7 @@
   c: retryDeployment(deploymentId) { try { this.log(`Retrying deployment ${deploymentId}...`); awai,`
   t: this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST')' this.log('Deploymen)
   t: retry triggered')} catch (error) {/* TODO: Fix JSX expression */}
-  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
+  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not, found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
   o: 'pipe })} } catch (error) {this.error( Failed to fix missing files'}error) } } async fixPermissionIssues() {' this.log('Fixing permission issues...')} try { execSync('chmod -R 755 .'}{/* TODO: Fix JSX expression */})`
   o: 'pipe })} catch (error) {this.error('Failed to fix permission issues'}error) } } async fixDeploymentTimeout() {' this.log('Fixing deployment timeout...')} try { await this.optimizeBuildConfiguration()} catch (error) {this.error(`Failed to fix deployment timeout} `}error) } } async retryDeployment(deploymentId) { try {' this.log(`Retrying deployment ${deploymentId}...`); await this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST`); this.log( `Deployment retry triggered')} catch (error) {this.error( 'Failed to retry deployment'}error) } } asyn,
   c: stop() {this.isRunning = false} this.log('Netlif)
@@ -7504,7 +7499,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -7517,7 +7512,7 @@
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
@@ -7529,7 +7524,7 @@
   command: ${buildSettings.cmd || Not set'}`); this.log(`Publish)`
   directory: ${buildSettings.dir || `Not set}`)} } } catch (error) {this.error(`Failed to check Netlify status'}error) } } asyn,
   c: monitorBuildStatus() {/* TODO: Fix JSX expression */}
-  f: (hasChanges) { this.log('Local changes detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
+  f: (hasChanges) { this.log('Local changes, detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
   f: (!currentBuild || currentBuild.state === 'error'')) {/* TODO: Fix JSX expression */}
   o: active build or previous build failed}triggering new build...''))' i,
   f: (this.config.autoDeployEnabled) { await this.triggerBuild()} } else {/* TODO: Fix JSX expression */}`
@@ -7548,9 +7543,9 @@
   n: 'builds.length > 0 ? builds[0] : null'} catc,
   h: (error) {this.error('Failed to get current build'')}error)' retur,
   n: 'null'} this.error('Failed to get current build')error); return null } } async monitorExistingBuilds() {try { const builds = await this.getBuilds(5)} fo,
-  r: (const build of builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
+  r: (const build of, builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
   g: build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); i,`
-  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded timeout)investigating...`); awai,
+  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded, timeout)investigating...`); awai,
   t: this.investigateBuildTimeout(build)} } else if (build.state === error) ') {/* TODO: Fix JSX expression */}`
   d: ${build.id} failed)analyzing error...`); awai,
   t: this.analyzeBuildError(build)} else if (build.state === 'ready'')) {/* TODO: Fix JSX expression */}`
@@ -7607,7 +7602,7 @@
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.lengt}h}`); awai,
   t: this.analyzeFailurePatterns(failedBuilds)} awai,`
-  t: this.checkBuildConfiguration()} catch (error) {} async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average build)`
+  t: this.checkBuildConfiguration()} catch (error) {} async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average, build)`
   duration: ${Math.round(avgDuration / 1000)}s`); const failedBuilds = recentBuilds.filter(build => build.status === `error) `); if (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.length}`); await this.analyzeFailurePatterns(failedBuilds)} await this.checkBuildConfiguration()} catch (error) {this.error( Build health check failed} '}error)}'} asyn,
   c: performDailyOptimization() {/* TODO: Fix JSX expression */}
@@ -7833,7 +7828,7 @@
   h: (error) {/* TODO: Fix JSX expression */}
   d: to apply deployment fixes'')}error)}'} asyn,
   c: fixMissingFiles() {/* TODO: Fix JSX expression */}
-  d: output not found)running build...''})' execSync('np)
+  d: output not, found)running build...''})' execSync('np)
   m: run build'')}{/* TODO: Fix JSX expression */}
   o: 'pipe})}'} catc,
   h: (error) {this.error( Failed to fix missing files'}error)}'} asyn,
@@ -7849,7 +7844,7 @@
   c: retryDeployment(deploymentId) { try { this.log(`Retrying deployment ${deploymentId}...`); awai,`
   t: this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST')' this.log('Deploymen)
   t: retry triggered')} catch (error) {/* TODO: Fix JSX expression */}
-  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
+  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not, found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
   o: 'pipe })} } catch (error) {this.error( Failed to fix missing files'}error) } } async fixPermissionIssues() {' this.log('Fixing permission issues...')} try { execSync('chmod -R 755 .'}{/* TODO: Fix JSX expression */})`
   o: 'pipe })} catch (error) {this.error('Failed to fix permission issues'}error) } } async fixDeploymentTimeout() {' this.log('Fixing deployment timeout...')} try { await this.optimizeBuildConfiguration()} catch (error) {this.error(`Failed to fix deployment timeout} `}error) } } async retryDeployment(deploymentId) { try {' this.log(`Retrying deployment ${deploymentId}...`); await this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST`); this.log( `Deployment retry triggered')} catch (error) {this.error( 'Failed to retry deployment'}error) } } asyn,
   c: stop() {this.isRunning = false} this.log('Netlif)
@@ -7892,7 +7887,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -7905,7 +7900,7 @@
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
@@ -7917,7 +7912,7 @@
   command: ${buildSettings.cmd || Not set'}`); this.log(`Publish)`
   directory: ${buildSettings.dir || `Not set}`)} } } catch (error) {this.error(`Failed to check Netlify status'}error) } } asyn,
   c: monitorBuildStatus() {/* TODO: Fix JSX expression */}
-  f: (hasChanges) { this.log('Local changes detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
+  f: (hasChanges) { this.log('Local changes, detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
   f: (!currentBuild || currentBuild.state === 'error'')) {/* TODO: Fix JSX expression */}
   o: active build or previous build failed}triggering new build...''))' i,
   f: (this.config.autoDeployEnabled) { await this.triggerBuild()} } else {/* TODO: Fix JSX expression */}`
@@ -7936,9 +7931,9 @@
   n: 'builds.length > 0 ? builds[0] : null'} catc,
   h: (error) {this.error('Failed to get current build'')}error)' retur,
   n: 'null'} this.error('Failed to get current build')error); return null } } async monitorExistingBuilds() {try { const builds = await this.getBuilds(5)} fo,
-  r: (const build of builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
+  r: (const build of, builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
   g: build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); i,`
-  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded timeout)investigating...`); awai,
+  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded, timeout)investigating...`); awai,
   t: this.investigateBuildTimeout(build)} } else if (build.state === error) ') {/* TODO: Fix JSX expression */}`
   d: ${build.id} failed)analyzing error...`); awai,
   t: this.analyzeBuildError(build)} else if (build.state === 'ready'')) {/* TODO: Fix JSX expression */}`
@@ -7995,7 +7990,7 @@
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.lengt}h}`); awai,
   t: this.analyzeFailurePatterns(failedBuilds)} awai,`
-  t: this.checkBuildConfiguration()} catch (error) {} async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average build)`
+  t: this.checkBuildConfiguration()} catch (error) {} async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average, build)`
   duration: ${Math.round(avgDuration / 1000)}s`); const failedBuilds = recentBuilds.filter(build => build.status === `error) `); if (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.length}`); await this.analyzeFailurePatterns(failedBuilds)} await this.checkBuildConfiguration()} catch (error) {this.error( Build health check failed} '}error)}'} asyn,
   c: performDailyOptimization() {/* TODO: Fix JSX expression */}
@@ -8221,7 +8216,7 @@
   h: (error) {/* TODO: Fix JSX expression */}
   d: to apply deployment fixes'')}error)}'} asyn,
   c: fixMissingFiles() {/* TODO: Fix JSX expression */}
-  d: output not found)running build...''})' execSync('np)
+  d: output not, found)running build...''})' execSync('np)
   m: run build'')}{/* TODO: Fix JSX expression */}
   o: 'pipe})}'} catc,
   h: (error) {this.error( Failed to fix missing files'}error)}'} asyn,
@@ -8237,7 +8232,7 @@
   c: retryDeployment(deploymentId) { try { this.log(`Retrying deployment ${deploymentId}...`); awai,`
   t: this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST')' this.log('Deploymen)
   t: retry triggered')} catch (error) {/* TODO: Fix JSX expression */}
-  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
+  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not, found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
   o: 'pipe })} } catch (error) {this.error( Failed to fix missing files'}error) } } async fixPermissionIssues() {' this.log('Fixing permission issues...')} try { execSync('chmod -R 755 .'}{/* TODO: Fix JSX expression */})`
   o: 'pipe })} catch (error) {this.error('Failed to fix permission issues'}error) } } async fixDeploymentTimeout() {' this.log('Fixing deployment timeout...')} try { await this.optimizeBuildConfiguration()} catch (error) {this.error(`Failed to fix deployment timeout} `}error) } } async retryDeployment(deploymentId) { try {' this.log(`Retrying deployment ${deploymentId}...`); await this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST`); this.log( `Deployment retry triggered')} catch (error) {this.error( 'Failed to retry deployment'}error) } } asyn,
   c: stop() {this.isRunning = false} this.log('Netlif)
@@ -8280,7 +8275,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -8293,7 +8288,7 @@
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
@@ -8305,7 +8300,7 @@
   command: ${buildSettings.cmd || Not set'}`); this.log(`Publish)`
   directory: ${buildSettings.dir || `Not set}`)} } } catch (error) {this.error(`Failed to check Netlify status'}error) } } asyn,
   c: monitorBuildStatus() {/* TODO: Fix JSX expression */}
-  f: (hasChanges) { this.log('Local changes detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
+  f: (hasChanges) { this.log('Local changes, detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
   f: (!currentBuild || currentBuild.state === 'error'')) {/* TODO: Fix JSX expression */}
   o: active build or previous build failed}triggering new build...''))' i,
   f: (this.config.autoDeployEnabled) { await this.triggerBuild()} } else {/* TODO: Fix JSX expression */}`
@@ -8324,9 +8319,9 @@
   n: 'builds.length > 0 ? builds[0] : null'} catc,
   h: (error) {this.error('Failed to get current build'')}error)' retur,
   n: 'null'} this.error('Failed to get current build')error); return null } } async monitorExistingBuilds() {try { const builds = await this.getBuilds(5)} fo,
-  r: (const build of builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
+  r: (const build of, builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
   g: build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); i,`
-  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded timeout)investigating...`); awai,
+  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded, timeout)investigating...`); awai,
   t: this.investigateBuildTimeout(build)} } else if (build.state === error) ') {/* TODO: Fix JSX expression */}`
   d: ${build.id} failed)analyzing error...`); awai,
   t: this.analyzeBuildError(build)} else if (build.state === 'ready'')) {/* TODO: Fix JSX expression */}`
@@ -8383,7 +8378,7 @@
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.lengt}h}`); awai,
   t: this.analyzeFailurePatterns(failedBuilds)} awai,`
-  t: this.checkBuildConfiguration()} catch (error) {} async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average build)`
+  t: this.checkBuildConfiguration()} catch (error) {} async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average, build)`
   duration: ${Math.round(avgDuration / 1000)}s`); const failedBuilds = recentBuilds.filter(build => build.status === `error) `); if (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.length}`); await this.analyzeFailurePatterns(failedBuilds)} await this.checkBuildConfiguration()} catch (error) {this.error( Build health check failed} '}error)}'} asyn,
   c: performDailyOptimization() {/* TODO: Fix JSX expression */}
@@ -8609,7 +8604,7 @@
   h: (error) {/* TODO: Fix JSX expression */}
   d: to apply deployment fixes'')}error)}'} asyn,
   c: fixMissingFiles() {/* TODO: Fix JSX expression */}
-  d: output not found)running build...''})' execSync('np)
+  d: output not, found)running build...''})' execSync('np)
   m: run build'')}{/* TODO: Fix JSX expression */}
   o: 'pipe})}'} catc,
   h: (error) {this.error( Failed to fix missing files'}error)}'} asyn,
@@ -8625,7 +8620,7 @@
   c: retryDeployment(deploymentId) { try { this.log(`Retrying deployment ${deploymentId}...`); awai,`
   t: this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST')' this.log('Deploymen)
   t: retry triggered')} catch (error) {/* TODO: Fix JSX expression */}
-  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
+  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not, found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
   o: 'pipe })} } catch (error) {this.error( Failed to fix missing files'}error) } } async fixPermissionIssues() {' this.log('Fixing permission issues...')} try { execSync('chmod -R 755 .'}{/* TODO: Fix JSX expression */})`
   o: 'pipe })} catch (error) {this.error('Failed to fix permission issues'}error) } } async fixDeploymentTimeout() {' this.log('Fixing deployment timeout...')} try { await this.optimizeBuildConfiguration()} catch (error) {this.error(`Failed to fix deployment timeout} `}error) } } async retryDeployment(deploymentId) { try {' this.log(`Retrying deployment ${deploymentId}...`); await this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST`); this.log( `Deployment retry triggered')} catch (error) {this.error( 'Failed to retry deployment'}error) } } asyn,
   c: stop() {this.isRunning = false} this.log('Netlif)
@@ -8668,7 +8663,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -8681,7 +8676,7 @@
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
@@ -8693,7 +8688,7 @@
   command: ${buildSettings.cmd || Not set'}`); this.log(`Publish)`
   directory: ${buildSettings.dir || `Not set}`)} } } catch (error) {this.error(`Failed to check Netlify status'}error) } } asyn,
   c: monitorBuildStatus() {/* TODO: Fix JSX expression */}
-  f: (hasChanges) { this.log('Local changes detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
+  f: (hasChanges) { this.log('Local changes, detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
   f: (!currentBuild || currentBuild.state === 'error'')) {/* TODO: Fix JSX expression */}
   o: active build or previous build failed}triggering new build...''))' i,
   f: (this.config.autoDeployEnabled) { await this.triggerBuild()} } else {/* TODO: Fix JSX expression */}`
@@ -8712,9 +8707,9 @@
   n: 'builds.length > 0 ? builds[0] : null'} catc,
   h: (error) {this.error('Failed to get current build'')}error)' retur,
   n: 'null'} this.error('Failed to get current build')error); return null } } async monitorExistingBuilds() {try { const builds = await this.getBuilds(5)} fo,
-  r: (const build of builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
+  r: (const build of, builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
   g: build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); i,`
-  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded timeout)investigating...`); awai,
+  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded, timeout)investigating...`); awai,
   t: this.investigateBuildTimeout(build)} } else if (build.state === error) ') {/* TODO: Fix JSX expression */}`
   d: ${build.id} failed)analyzing error...`); awai,
   t: this.analyzeBuildError(build)} else if (build.state === 'ready'')) {/* TODO: Fix JSX expression */}`
@@ -8771,7 +8766,7 @@
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.lengt}h}`); awai,
   t: this.analyzeFailurePatterns(failedBuilds)} awai,`
-  t: this.checkBuildConfiguration()} catch (error) {} async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average build)`
+  t: this.checkBuildConfiguration()} catch (error) {} async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average, build)`
   duration: ${Math.round(avgDuration / 1000)}s`); const failedBuilds = recentBuilds.filter(build => build.status === `error) `); if (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.length}`); await this.analyzeFailurePatterns(failedBuilds)} await this.checkBuildConfiguration()} catch (error) {this.error( Build health check failed} '}error)}'} asyn,
   c: performDailyOptimization() {/* TODO: Fix JSX expression */}
@@ -8997,7 +8992,7 @@
   h: (error) {/* TODO: Fix JSX expression */}
   d: to apply deployment fixes'')}error)}'} asyn,
   c: fixMissingFiles() {/* TODO: Fix JSX expression */}
-  d: output not found)running build...''})' execSync('np)
+  d: output not, found)running build...''})' execSync('np)
   m: run build'')}{/* TODO: Fix JSX expression */}
   o: 'pipe})}'} catc,
   h: (error) {this.error( Failed to fix missing files'}error)}'} asyn,
@@ -9013,7 +9008,7 @@
   c: retryDeployment(deploymentId) { try { this.log(`Retrying deployment ${deploymentId}...`); awai,`
   t: this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST')' this.log('Deploymen)
   t: retry triggered')} catch (error) {/* TODO: Fix JSX expression */}
-  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
+  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not, found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
   o: 'pipe })} } catch (error) {this.error( Failed to fix missing files'}error) } } async fixPermissionIssues() {' this.log('Fixing permission issues...')} try { execSync('chmod -R 755 .'}{/* TODO: Fix JSX expression */})`
   o: 'pipe })} catch (error) {this.error('Failed to fix permission issues'}error) } } async fixDeploymentTimeout() {' this.log('Fixing deployment timeout...')} try { await this.optimizeBuildConfiguration()} catch (error) {this.error(`Failed to fix deployment timeout} `}error) } } async retryDeployment(deploymentId) { try {' this.log(`Retrying deployment ${deploymentId}...`); await this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST`); this.log( `Deployment retry triggered')} catch (error) {this.error( 'Failed to retry deployment'}error) } } asyn,
   c: stop() {this.isRunning = false} this.log('Netlif)
@@ -9056,7 +9051,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -9069,7 +9064,7 @@
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
@@ -9081,7 +9076,7 @@
   command: ${buildSettings.cmd || Not set'}`); this.log(`Publish)`
   directory: ${buildSettings.dir || `Not set}`)} } } catch (error) {this.error(`Failed to check Netlify status'}error) } } asyn,
   c: monitorBuildStatus() {/* TODO: Fix JSX expression */}
-  f: (hasChanges) { this.log('Local changes detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
+  f: (hasChanges) { this.log('Local changes, detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
   f: (!currentBuild || currentBuild.state === 'error'')) {/* TODO: Fix JSX expression */}
   o: active build or previous build failed}triggering new build...''))' i,
   f: (this.config.autoDeployEnabled) { await this.triggerBuild()} } else {/* TODO: Fix JSX expression */}`
@@ -9100,9 +9095,9 @@
   n: 'builds.length > 0 ? builds[0] : null'} catc,
   h: (error) {this.error('Failed to get current build'')}error)' retur,
   n: 'null'} this.error('Failed to get current build')error); return null } } async monitorExistingBuilds() {try { const builds = await this.getBuilds(5)} fo,
-  r: (const build of builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
+  r: (const build of, builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
   g: build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); i,`
-  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded timeout)investigating...`); awai,
+  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded, timeout)investigating...`); awai,
   t: this.investigateBuildTimeout(build)} } else if (build.state === error) ') {/* TODO: Fix JSX expression */}`
   d: ${build.id} failed)analyzing error...`); awai,
   t: this.analyzeBuildError(build)} else if (build.state === 'ready'')) {/* TODO: Fix JSX expression */}`
@@ -9159,7 +9154,7 @@
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.lengt}h}`); awai,
   t: this.analyzeFailurePatterns(failedBuilds)} awai,`
-  t: this.checkBuildConfiguration()} catch (error) {} async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average build)`
+  t: this.checkBuildConfiguration()} catch (error) {} async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average, build)`
   duration: ${Math.round(avgDuration / 1000)}s`); const failedBuilds = recentBuilds.filter(build => build.status === `error) `); if (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.length}`); await this.analyzeFailurePatterns(failedBuilds)} await this.checkBuildConfiguration()} catch (error) {this.error( Build health check failed} '}error)}'} asyn,
   c: performDailyOptimization() {/* TODO: Fix JSX expression */}
@@ -9385,7 +9380,7 @@
   h: (error) {/* TODO: Fix JSX expression */}
   d: to apply deployment fixes'')}error)}'} asyn,
   c: fixMissingFiles() {/* TODO: Fix JSX expression */}
-  d: output not found)running build...''})' execSync('np)
+  d: output not, found)running build...''})' execSync('np)
   m: run build'')}{/* TODO: Fix JSX expression */}
   o: 'pipe})}'} catc,
   h: (error) {this.error( Failed to fix missing files'}error)}'} asyn,
@@ -9401,7 +9396,7 @@
   c: retryDeployment(deploymentId) { try { this.log(`Retrying deployment ${deploymentId}...`); awai,`
   t: this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST')' this.log('Deploymen)
   t: retry triggered')} catch (error) {/* TODO: Fix JSX expression */}
-  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
+  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not, found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
   o: 'pipe })} } catch (error) {this.error( Failed to fix missing files'}error) } } async fixPermissionIssues() {' this.log('Fixing permission issues...')} try { execSync('chmod -R 755 .'}{/* TODO: Fix JSX expression */})`
   o: 'pipe })} catch (error) {this.error('Failed to fix permission issues'}error) } } async fixDeploymentTimeout() {' this.log('Fixing deployment timeout...')} try { await this.optimizeBuildConfiguration()} catch (error) {this.error(`Failed to fix deployment timeout} `}error) } } async retryDeployment(deploymentId) { try {' this.log(`Retrying deployment ${deploymentId}...`); await this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST`); this.log( `Deployment retry triggered')} catch (error) {this.error( 'Failed to retry deployment'}error) } } asyn,
   c: stop() {this.isRunning = false} this.log('Netlif)
@@ -9415,9 +9410,7 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
   r: => {/* TODO: Fix JSX expression */})
-  automation:'}error)' process.exit(1)})} module.export,"
-  s: '= NetlifyBuildAutomation'} } } } #!/usr/bin/"env": node; ' #!/usr/bin/en,
-  v: node, const fs = require('fs')' const path = require('path')' const { execSync} = require('child_process')' const cron = require('node-cron')' const https = require('https')' clas,
+  automation:'}error)' process.exit(1)})} module.export,""  s: '= NetlifyBuildAutomation'} } } } #!/usr/bin/"env": node; ' #!/usr/bin/en,"  v: node, const fs = require('fs')' const path = require('path')' const { execSync} = require('child_process')' const cron = require('node-cron')' const https = require('https')' clas,
   s: NetlifyBuildAutomation {/* TODO: Fix JSX expression */}
   notificationEnabled: 'tru'}e} ; this.buildHistor,
   y: = []; this.currentBuil,
@@ -9444,7 +9437,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -9457,7 +9450,7 @@
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
@@ -9469,7 +9462,7 @@
   command: ${buildSettings.cmd || Not set'}`); this.log(`Publish)`
   directory: ${buildSettings.dir || `Not set}`)} } } catch (error) {this.error(`Failed to check Netlify status'}error) } } asyn,
   c: monitorBuildStatus() {/* TODO: Fix JSX expression */}
-  f: (hasChanges) { this.log('Local changes detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
+  f: (hasChanges) { this.log('Local changes, detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
   f: (!currentBuild || currentBuild.state === 'error'')) {/* TODO: Fix JSX expression */}
   o: active build or previous build failed}triggering new build...''))' i,
   f: (this.config.autoDeployEnabled) { await this.triggerBuild()} } else {/* TODO: Fix JSX expression */}`
@@ -9488,9 +9481,9 @@
   n: 'builds.length > 0 ? builds[0] : null'} catc,
   h: (error) {this.error('Failed to get current build'')}error)' retur,
   n: 'null'} this.error('Failed to get current build')error); return null } } async monitorExistingBuilds() {try { const builds = await this.getBuilds(5)} fo,
-  r: (const build of builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
+  r: (const build of, builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
   g: build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); i,`
-  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded timeout)investigating...`); awai,
+  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded, timeout)investigating...`); awai,
   t: this.investigateBuildTimeout(build)} } else if (build.state === error) ') {/* TODO: Fix JSX expression */}`
   d: ${build.id} failed)analyzing error...`); awai,
   t: this.analyzeBuildError(build)} else if (build.state === 'ready'')) {/* TODO: Fix JSX expression */}`
@@ -9547,7 +9540,7 @@
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.lengt}h}`); awai,
   t: this.analyzeFailurePatterns(failedBuilds)} awai,`
-  t: this.checkBuildConfiguration()} catch (error) {} async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average build)`
+  t: this.checkBuildConfiguration()} catch (error) {} async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average, build)`
   duration: ${Math.round(avgDuration / 1000)}s`); const failedBuilds = recentBuilds.filter(build => build.status === `error) `); if (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.length}`); await this.analyzeFailurePatterns(failedBuilds)} await this.checkBuildConfiguration()} catch (error) {this.error( Build health check failed} '}error)}'} asyn,
   c: performDailyOptimization() {/* TODO: Fix JSX expression */}
@@ -9773,7 +9766,7 @@
   h: (error) {/* TODO: Fix JSX expression */}
   d: to apply deployment fixes'')}error)}'} asyn,
   c: fixMissingFiles() {/* TODO: Fix JSX expression */}
-  d: output not found)running build...''})' execSync('np)
+  d: output not, found)running build...''})' execSync('np)
   m: run build'')}{/* TODO: Fix JSX expression */}
   o: 'pipe})}'} catc,
   h: (error) {this.error( Failed to fix missing files'}error)}'} asyn,
@@ -9789,7 +9782,7 @@
   c: retryDeployment(deploymentId) { try { this.log(`Retrying deployment ${deploymentId}...`); awai,`
   t: this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST')' this.log('Deploymen)
   t: retry triggered')} catch (error) {/* TODO: Fix JSX expression */}
-  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
+  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not, found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
   o: 'pipe })} } catch (error) {this.error( Failed to fix missing files'}error) } } async fixPermissionIssues() {' this.log('Fixing permission issues...')} try { execSync('chmod -R 755 .'}{/* TODO: Fix JSX expression */})`
   o: 'pipe })} catch (error) {this.error('Failed to fix permission issues'}error) } } async fixDeploymentTimeout() {' this.log('Fixing deployment timeout...')} try { await this.optimizeBuildConfiguration()} catch (error) {this.error(`Failed to fix deployment timeout} `}error) } } async retryDeployment(deploymentId) { try {' this.log(`Retrying deployment ${deploymentId}...`); await this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST`); this.log( `Deployment retry triggered')} catch (error) {this.error( 'Failed to retry deployment'}error) } } asyn,
   c: stop() {this.isRunning = false} this.log('Netlif)
@@ -9832,7 +9825,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -9845,7 +9838,7 @@
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
@@ -9857,7 +9850,7 @@
   command: ${buildSettings.cmd || Not set'}`); this.log(`Publish)`
   directory: ${buildSettings.dir || `Not set}`)} } } catch (error) {this.error(`Failed to check Netlify status'}error) } } asyn,
   c: monitorBuildStatus() {/* TODO: Fix JSX expression */}
-  f: (hasChanges) { this.log('Local changes detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
+  f: (hasChanges) { this.log('Local changes, detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
   f: (!currentBuild || currentBuild.state === 'error'')) {/* TODO: Fix JSX expression */}
   o: active build or previous build failed}triggering new build...''))' i,
   f: (this.config.autoDeployEnabled) { await this.triggerBuild()} } else {/* TODO: Fix JSX expression */}`
@@ -9876,9 +9869,9 @@
   n: 'builds.length > 0 ? builds[0] : null'} catc,
   h: (error) {this.error('Failed to get current build'')}error)' retur,
   n: 'null'} this.error('Failed to get current build')error); return null } } async monitorExistingBuilds() {try { const builds = await this.getBuilds(5)} fo,
-  r: (const build of builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
+  r: (const build of, builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
   g: build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); i,`
-  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded timeout)investigating...`); awai,
+  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded, timeout)investigating...`); awai,
   t: this.investigateBuildTimeout(build)} } else if (build.state === error) ') {/* TODO: Fix JSX expression */}`
   d: ${build.id} failed)analyzing error...`); awai,
   t: this.analyzeBuildError(build)} else if (build.state === 'ready'')) {/* TODO: Fix JSX expression */}`
@@ -9935,7 +9928,7 @@
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.lengt}h}`); awai,
   t: this.analyzeFailurePatterns(failedBuilds)} awai,`
-  t: this.checkBuildConfiguration()} catch (error) {} async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average build)`
+  t: this.checkBuildConfiguration()} catch (error) {} async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average, build)`
   duration: ${Math.round(avgDuration / 1000)}s`); const failedBuilds = recentBuilds.filter(build => build.status === `error) `); if (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.length}`); await this.analyzeFailurePatterns(failedBuilds)} await this.checkBuildConfiguration()} catch (error) {this.error( Build health check failed} '}error)}'} asyn,
   c: performDailyOptimization() {/* TODO: Fix JSX expression */}
@@ -10161,7 +10154,7 @@
   h: (error) {/* TODO: Fix JSX expression */}
   d: to apply deployment fixes'')}error)}'} asyn,
   c: fixMissingFiles() {/* TODO: Fix JSX expression */}
-  d: output not found)running build...''})' execSync('np)
+  d: output not, found)running build...''})' execSync('np)
   m: run build'')}{/* TODO: Fix JSX expression */}
   o: 'pipe})}'} catc,
   h: (error) {this.error( Failed to fix missing files'}error)}'} asyn,
@@ -10177,7 +10170,7 @@
   c: retryDeployment(deploymentId) { try { this.log(`Retrying deployment ${deploymentId}...`); awai,`
   t: this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST')' this.log('Deploymen)
   t: retry triggered')} catch (error) {/* TODO: Fix JSX expression */}
-  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
+  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not, found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
   o: 'pipe })} } catch (error) {this.error( Failed to fix missing files'}error) } } async fixPermissionIssues() {' this.log('Fixing permission issues...')} try { execSync('chmod -R 755 .'}{/* TODO: Fix JSX expression */})`
   o: 'pipe })} catch (error) {this.error('Failed to fix permission issues'}error) } } async fixDeploymentTimeout() {' this.log('Fixing deployment timeout...')} try { await this.optimizeBuildConfiguration()} catch (error) {this.error(`Failed to fix deployment timeout} `}error) } } async retryDeployment(deploymentId) { try {' this.log(`Retrying deployment ${deploymentId}...`); await this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST`); this.log( `Deployment retry triggered')} catch (error) {this.error( 'Failed to retry deployment'}error) } } asyn,
   c: stop() {this.isRunning = false} this.log('Netlif)
@@ -10191,9 +10184,7 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
   r: => {/* TODO: Fix JSX expression */})
-  automation:'}error)' process.exit(1)})} module.export,"
-  s: '= NetlifyBuildAutomation'} } } } #!/usr/bin/"env": node;" pr-12325' #!/usr/bin/en,
-  v: node, const fs = require( 'fs')' const path = require( 'path')' const { execSync} = require( 'child_process')' const cron = require( 'node-cron')' const https = require( 'https')' clas,
+  automation:'}error)' process.exit(1)})} module.export,""  s: '= NetlifyBuildAutomation'} } } } #!/usr/bin/"env": node;" pr-12325' #!/usr/bin/en,"  v: node, const fs = require( 'fs')' const path = require( 'path')' const { execSync} = require( 'child_process')' const cron = require( 'node-cron')' const https = require( 'https')' clas,
   s: NetlifyBuildAutomation {/* TODO: Fix JSX expression */}
   s: '3'}}' logFil,
   e: ./logs/netlify-build-automation.log',' errorFil,
@@ -10224,7 +10215,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -10237,7 +10228,7 @@
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
@@ -10249,7 +10240,7 @@
   command: ${buildSettings.cmd || Not set'}`); this.log(`Publish)`
   directory: ${buildSettings.dir || `Not set}`)} } } catch (error) {this.error(`Failed to check Netlify status'}error) } } asyn,
   c: monitorBuildStatus() {/* TODO: Fix JSX expression */}
-  f: (hasChanges) { this.log('Local changes detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
+  f: (hasChanges) { this.log('Local changes, detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
   f: (!currentBuild || currentBuild.state === 'error'')) {/* TODO: Fix JSX expression */}
   o: active build or previous build failed}triggering new build...''))' i,
   f: (this.config.autoDeployEnabled) { await this.triggerBuild()} } else {/* TODO: Fix JSX expression */}`
@@ -10268,9 +10259,9 @@
   n: 'builds.length > 0 ? builds[0] : null'} catc,
   h: (error) {this.error('Failed to get current build'')}error)' retur,
   n: 'null'} this.error('Failed to get current build')error); return null } } async monitorExistingBuilds() {try { const builds = await this.getBuilds(5)} fo,
-  r: (const build of builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
+  r: (const build of, builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
   g: build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); i,`
-  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded timeout)investigating...`); awai,
+  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded, timeout)investigating...`); awai,
   t: this.investigateBuildTimeout(build)} } else if (build.state === error) ') {/* TODO: Fix JSX expression */}`
   d: ${build.id} failed)analyzing error...`); awai,
   t: this.analyzeBuildError(build)} else if (build.state === 'ready'')) {/* TODO: Fix JSX expression */}`
@@ -10327,7 +10318,7 @@
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.lengt}h}`); awai,
   t: this.analyzeFailurePatterns(failedBuilds)} awai,`
-  t: this.checkBuildConfiguration()} catch (error) {} async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average build)`
+  t: this.checkBuildConfiguration()} catch (error) {} async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average, build)`
   duration: ${Math.round(avgDuration / 1000)}s`); const failedBuilds = recentBuilds.filter(build => build.status === `error) `); if (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.length}`); await this.analyzeFailurePatterns(failedBuilds)} await this.checkBuildConfiguration()} catch (error) {this.error( Build health check failed} '}error)}'} asyn,
   c: performDailyOptimization() {/* TODO: Fix JSX expression */}
@@ -10553,7 +10544,7 @@
   h: (error) {/* TODO: Fix JSX expression */}
   d: to apply deployment fixes'')}error)}'} asyn,
   c: fixMissingFiles() {/* TODO: Fix JSX expression */}
-  d: output not found)running build...''})' execSync('np)
+  d: output not, found)running build...''})' execSync('np)
   m: run build'')}{/* TODO: Fix JSX expression */}
   o: 'pipe})}'} catc,
   h: (error) {this.error( Failed to fix missing files'}error)}'} asyn,
@@ -10569,7 +10560,7 @@
   c: retryDeployment(deploymentId) { try { this.log(`Retrying deployment ${deploymentId}...`); awai,`
   t: this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST')' this.log('Deploymen)
   t: retry triggered')} catch (error) {/* TODO: Fix JSX expression */}
-  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
+  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not, found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
   o: 'pipe })} } catch (error) {this.error( Failed to fix missing files'}error) } } async fixPermissionIssues() {' this.log('Fixing permission issues...')} try { execSync('chmod -R 755 .'}{/* TODO: Fix JSX expression */})`
   o: 'pipe })} catch (error) {this.error('Failed to fix permission issues'}error) } } async fixDeploymentTimeout() {' this.log('Fixing deployment timeout...')} try { await this.optimizeBuildConfiguration()} catch (error) {this.error(`Failed to fix deployment timeout} `}error) } } async retryDeployment(deploymentId) { try {' this.log(`Retrying deployment ${deploymentId}...`); await this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST`); this.log( `Deployment retry triggered')} catch (error) {this.error( 'Failed to retry deployment'}error) } } asyn,
   c: stop() {this.isRunning = false} this.log('Netlif)
@@ -10616,7 +10607,7 @@
   f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
   e: 'true'})} } asyn,
   c: start() {if (this.isRunning) { this.log('Automation is already running''})' return} this.isRunnin,
-  g: = true; this.log('Startin)
+  g: = true; this.log('Startin),
   g: Netlify Build Automation...''))' awai,
   t: this.checkNetlifyStatus(); cron.schedule('*/2: * * * *'')asyn,
   c: () => {/* TODO: Fix JSX expression */}
@@ -10629,7 +10620,7 @@
   c: checkNetlifyStatus() {try { this.log('Checking Netlify connection...''})' const siteInfo = await this.getSiteInfo(), i,
   f: (siteInfo) {/* TODO: Fix JSX expression */}`
   site: ${siteInfo.nam}e} (${siteInfo.url})`); this.log(`Sit,
-  e: statu)`
+  e: statu)`,
   s: ${siteInfo.stat}e}`); const buildSettings = await this.getBuildSettings(); i,
   f: (buildSettings) {/* TODO: Fix JSX expression */}`
   d: |}| Not set'}`); this.log(`Publis,
@@ -10641,7 +10632,7 @@
   command: ${buildSettings.cmd || Not set'}`); this.log(`Publish)`
   directory: ${buildSettings.dir || `Not set}`)} } } catch (error) {this.error(`Failed to check Netlify status'}error) } } asyn,
   c: monitorBuildStatus() {/* TODO: Fix JSX expression */}
-  f: (hasChanges) { this.log('Local changes detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
+  f: (hasChanges) { this.log('Local changes, detected)checking if build is needed...'';)' const currentBuild = await this.getCurrentBuild()} i,
   f: (!currentBuild || currentBuild.state === 'error'')) {/* TODO: Fix JSX expression */}
   o: active build or previous build failed}triggering new build...''))' i,
   f: (this.config.autoDeployEnabled) { await this.triggerBuild()} } else {/* TODO: Fix JSX expression */}`
@@ -10660,9 +10651,9 @@
   n: 'builds.length > 0 ? builds[0] : null'} catc,
   h: (error) {this.error('Failed to get current build'')}error)' retur,
   n: 'null'} this.error('Failed to get current build')error); return null } } async monitorExistingBuilds() {try { const builds = await this.getBuilds(5)} fo,
-  r: (const build of builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
+  r: (const build of, builds) { if (build.state === 'building''}) {/* TODO: Fix JSX expression */}`
   g: build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); i,`
-  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded timeout)investigating...`); awai,
+  f: (buildAge > this.config.buildTimeout) { this.log(`Monitoring build ${build.id}: ${build.state}`); const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded, timeout)investigating...`); awai,
   t: this.investigateBuildTimeout(build)} } else if (build.state === error) ') {/* TODO: Fix JSX expression */}`
   d: ${build.id} failed)analyzing error...`); awai,
   t: this.analyzeBuildError(build)} else if (build.state === 'ready'')) {/* TODO: Fix JSX expression */}`
@@ -10719,7 +10710,7 @@
   f: (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.lengt}h}`); awai,
   t: this.analyzeFailurePatterns(failedBuilds)} awai,`
-  t: this.checkBuildConfiguration()} catch (error) {} async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average build)`
+  t: this.checkBuildConfiguration()} catch (error) {} async onBuildSuccess(build) { try {' this.log(`Build ${build.id} completed successfully`); const buildRecord = this.buildHistory.find(b => b.id === build.id); if (buildRecord) {buildRecord.status = `completed; `; buildRecord.completedAt = new Date().toISOString()} buildRecord.duration = build.duration} await this.performPostBuildOptimizations(build); await this.checkDeploymentStatus(build)} catch (error) {this.error('Failed to process build success'}error) } } async checkBuildHealth() {try { this.log(`Performing build health check...) `); const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum)build) => sum + (build.duration || 0)}0) /; recentBuilds.length; this.log(`Average, build)`
   duration: ${Math.round(avgDuration / 1000)}s`); const failedBuilds = recentBuilds.filter(build => build.status === `error) `); if (failedBuilds.length > 0) {/* TODO: Fix JSX expression */}`
   failures: ${failedBuilds.length}`); await this.analyzeFailurePatterns(failedBuilds)} await this.checkBuildConfiguration()} catch (error) {this.error( Build health check failed} '}error)}'} asyn,
   c: performDailyOptimization() {/* TODO: Fix JSX expression */}
@@ -10945,7 +10936,7 @@
   h: (error) {/* TODO: Fix JSX expression */}
   d: to apply deployment fixes'')}error)}'} asyn,
   c: fixMissingFiles() {/* TODO: Fix JSX expression */}
-  d: output not found)running build...''})' execSync('np)
+  d: output not, found)running build...''})' execSync('np)
   m: run build'')}{/* TODO: Fix JSX expression */}
   o: 'pipe})}'} catc,
   h: (error) {this.error( Failed to fix missing files'}error)}'} asyn,
@@ -10961,7 +10952,7 @@
   c: retryDeployment(deploymentId) { try { this.log(`Retrying deployment ${deploymentId}...`); awai,`
   t: this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST')' this.log('Deploymen)
   t: retry triggered')} catch (error) {/* TODO: Fix JSX expression */}
-  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
+  d: to retry deployment'}error)}' this.error('Failed to apply deployment fixes')error) } } async fixMissingFiles() {' this.log('Fixing missing files issue...'); try { if(' !fs.existsSync('.next') &&; !fs.existsSync('out') &&; !fs.existsSync('dist')) {' this.log('Build output not, found)running build...')} execSync('npm run build'}{/* TODO: Fix JSX expression */})
   o: 'pipe })} } catch (error) {this.error( Failed to fix missing files'}error) } } async fixPermissionIssues() {' this.log('Fixing permission issues...')} try { execSync('chmod -R 755 .'}{/* TODO: Fix JSX expression */})`
   o: 'pipe })} catch (error) {this.error('Failed to fix permission issues'}error) } } async fixDeploymentTimeout() {' this.log('Fixing deployment timeout...')} try { await this.optimizeBuildConfiguration()} catch (error) {this.error(`Failed to fix deployment timeout} `}error) } } async retryDeployment(deploymentId) { try {' this.log(`Retrying deployment ${deploymentId}...`); await this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`)POST`); this.log( `Deployment retry triggered')} catch (error) {this.error( 'Failed to retry deployment'}error) } } asyn,
   c: stop() {this.isRunning = false} this.log('Netlif)
@@ -10975,9 +10966,7 @@
   c: () => {/* TODO: Fix JSX expression */}
   t: automation.stop()} process.exit(0)}) automation.start().catch(erro,
   r: => {/* TODO: Fix JSX expression */})
-  automation:'}error)' process.exit(1)})} module.export,"
-  s: '= NetlifyBuildAutomation'} } } } #!/usr/bin/\\"env\\": node; /**; * Netlif,
-  y: Build Automation; * Integrate,
+  automation:'}error)' process.exit(1)})} module.export,""  s: '= NetlifyBuildAutomation'} } } } #!/usr/bin/\\"env\\": node; /**; * Netlif,"  y: Build Automation; * Integrate,
   s: with Netlify API to monitor builds and trigger deployments; *; * Feature,
   s: ; * - Netlif,
   y: API integration; * - Buil,
@@ -10989,11 +10978,11 @@
   s:  ,3, logFil,
   e:} this.initialize()} this.setupLogging(); this.validateConfiguration(); this.ensureLogDirectory(); setupLogging() {/* TODO: Fix JSX expression */}
   g: = message => { const timestamp = new Date().toISOString()} cons,`
-  t: logMessage = `[${timestamp}] ${message}`; // // console.log(logMessage)} this.error = (message) error) => { const timestamp = new Date().toISOString()} } validateConfiguration() {' if (!this.config.netlifySiteId) {'' this.error('NETLIFY_SITE_ID environment variable is required)' ');' throw new Error('Missing NETLIFY_SITE_ID}' ')}' if (!this.config.netlifyToken) {'' this.error('NETLIFY_TOKEN environment variable is required)' ');' throw new Error('Missing NETLIFY_TOKEN}' ')}' this.log('Netlify configuration validated successfully)' ')} ensureLogDirectory() {/* TODO: Fix JSX expression */}
+  t: logMessage = `[${timestamp}] ${message}`; // // console.log(logMessage)} this.error = (message) error) => { const timestamp = new Date().toISOString()} } validateConfiguration() {' if (!this.config.netlifySiteId) {'' this.error('NETLIFY_SITE_ID environment variable is, required)' ');' throw new Error('Missing NETLIFY_SITE_ID}' ')}' if (!this.config.netlifyToken) {'' this.error('NETLIFY_TOKEN environment variable is, required)' ');' throw new Error('Missing NETLIFY_TOKEN}' ')}' this.log('Netlify configuration validated, successfully)' ')} ensureLogDirectory() {/* TODO: Fix JSX expression */}
   t: logDir = path.dirname(this.config.logFile)} i,
   f: (!fs.existsSync(logDir)) {/* TODO: Fix JSX expression */}
   e: true })} } return} this.isRunnin,
-  g: = true;' this.log('Startin)
+  g: = true;' this.log('Startin),
   g: Netlify Build Automation...)'' ');' // Initia,
   l: status check; awai,
   t: this.checkNetlifyStatus(); // Schedul,
@@ -11008,7 +10997,7 @@
   command: ${buildSettings.cmd ||} } asyn,
   c: monitorBuildStatus() {try { // Check if there are local changes} if (this.config.autoDeployEnabled) { await this.triggerBuild()}' } else {/* TODO: Fix JSX expression */}`
   progress: ${currentBuild.state}`)} } // Monitor existing builds; await this.monitorExistingBuilds()} catch (error) { this.error(} asyn)`
-  c: checkLocalChanges() {try { const hasChanges = gitStatus.trim().length > 0, if (hasChanges) { const changedFiles = execSync(} git diff --name-only} async getCurrentBuild() {try { const builds = await this.getBuilds(1); ' this.error('Failed to get current build}' '} error); return null } } async monitorExistingBuilds() {try { const builds = await this.getBuilds(5)} this.log(`Monitoring build ${build.id}: ${build.state}`); // Check build timeout; const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded timeout) investigating...`); awai,`
+  c: checkLocalChanges() {try { const hasChanges = gitStatus.trim().length > 0, if (hasChanges) { const changedFiles = execSync(} git diff --name-only} async getCurrentBuild() {try { const builds = await this.getBuilds(1); ' this.error('Failed to get current build}' '} error); return null } } async monitorExistingBuilds() {try { const builds = await this.getBuilds(5)} this.log(`Monitoring build ${build.id}: ${build.state}`); // Check build timeout; const buildAge = Date.now() - new Date(build.created_at).getTime(); if (buildAge > this.config.buildTimeout) {` this.log(`Build ${build.id} exceeded, timeout) investigating...`); awai,`
   t: this.investigateBuildTimeout(build)} } else if (build.state === } async triggerBuild() {' try {'' this.log('Triggering new Netlify build...) `); // Commit and push changes first; await this.commitAndPushChanges(); // Trigger build via Netlify API; buildData)}' if (response && response.id) {/* TODO: Fix JSX expression */}`
   successfully: ${response.id}`); this.currentBuild = response; // Add to build history; this.buildHistory.push({/* TODO: Fix JSX expression */})
   t: new Date().toISOString()} return response} else {' throw new Error('' 'Failed to trigger build')} ' 'Failed to trigger build'; error); throw error } } async commitAndPushChanges() {try {' this.log('' 'Committing and pushing changes...'); // Add all changes; // Push to main branch}' execSync('' 'git push origin main' {/* TODO: Fix JSX expression */})`
@@ -11018,10 +11007,10 @@
   f: (logs) { // Analyze logs for common timeout causes} async analyzeBuildError(build) {' try {' this.log(`Analyzing build error for build ${build.id}...`); // Ge,
   t: build logs; cons,
   t: logs = await this.getBuildLogs(build.id), i,`
-  f: (logs) { // Analyze error patterns} async onBuildSuccess(build) {' try {' this.log(`Build ${build.id} completed successfully`); // Update build history; const buildRecord = this.buildHistory.find(b => b.id === build.id); buildRecord.completedAt = new Date().toISOString(); buildRecord.duration = build.duration} // Perform post-build optimizations; await this.performPostBuildOptimizations(build); // Check deployment status; ' this.error('Failed to process build success)' ') error) } } async checkBuildHealth() {// Check build performance; const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum) build) => sum + (build.duration || 0)} 0) /; recentBuilds.length; this.log(`Average build)`
-  duration: ${Math.round(avgDuration / 1000)}s`); // Check for build failures; this.log(`Recent build)`
+  f: (logs) { // Analyze error patterns} async onBuildSuccess(build) {' try {' this.log(`Build ${build.id} completed successfully`); // Update build history; const buildRecord = this.buildHistory.find(b => b.id === build.id); buildRecord.completedAt = new Date().toISOString(); buildRecord.duration = build.duration} // Perform post-build optimizations; await this.performPostBuildOptimizations(build); // Check deployment status; ' this.error('Failed to process build, success)' ') error) } } async checkBuildHealth() {// Check build performance; const recentBuilds = this.buildHistory.slice(-10); const avgDuration =} recentBuilds.reduce((sum) build) => sum + (build.duration || 0)} 0) /; recentBuilds.length; this.log(`Average, build)`
+  duration: ${Math.round(avgDuration / 1000)}s`); // Check for build failures; this.log(`Recent, build)`
   failures: ${failedBuilds.length}`); // Analyze failure patterns; await this.analyzeFailurePatterns(failedBuilds)} // Check build configuration; await this.checkBuildConfiguration()} catch (error) { this.error(} asyn)`
-  c: performDailyOptimization() {try { ' '); // Optimize build configuration; await this.optimizeBuildConfiguration(); // Clean up old build artifacts; await this.cleanupBuildArtifacts(); // Update dependencies if needed; await this.updateDependenciesIfNeeded(); // Check for build performance improvements; await this.checkBuildPerformance();' this.log('Daily optimization completed} ' this.error('Daily optimization failed)' '} error) } } // Netlify API methods;' async makeNetlifyRequest(endpoint, method = 'GET) `) data = null) {return new Promise((resolve} reject) => { ' ': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data);' options.headers['Content-Length}' '] = Buffer.byteLength(postData)}' const req = https.request(options) res => {'' let responseData = ''}' res.on('' 'data'} chunk => { reject(error)}) if (data) {req.write(JSON.stringify(data))} req.end()})} async getSiteInfo() { try {} async getBuilds(limit = 10) { try {' return await this.makeNetlifyRequest(' `/sites/${this.config.netlifySiteId}/builds?per_page=${limit}`)} catch (error) {} async getBuildLogs(buildId) {' try {' return await this.makeNetlifyRequest(`/builds/${buildId}/log`)} catch (error) {} async getBuildSettings() { try {' return await this.makeNetlifyRequest(' `/sites/${this.config.netlifySiteId}/build_settings`)} catch (error) {} // Analysis and fix methods; analyzeTimeoutCauses(logs) {const causes = []}' if (logs.includes('' 'JavaScript heap out of memory')) {' causes.push('' 'memory_limit')}' if (logs.includes('' 'Build exceeded maximum time limit')) {' causes.push('' 'time_limit')}' if (logs.includes('' 'Network timeout') || logs.includes('' 'ETIMEDOUT')) {' causes.push('' 'network_timeout')}' if (logs.includes('' 'Dependency resolution')) {' causes.push('' 'dependency_resolution')} return causes} analyzeErrorPatterns(logs) {/* TODO: Fix JSX expression */}
+  c: performDailyOptimization() {try { ' '); // Optimize build configuration; await this.optimizeBuildConfiguration(); // Clean up old build artifacts; await this.cleanupBuildArtifacts(); // Update dependencies if needed; await this.updateDependenciesIfNeeded(); // Check for build performance improvements; await this.checkBuildPerformance();' this.log('Daily optimization completed} ' this.error('Daily optimization, failed)' '} error) } } // Netlify API methods;' async makeNetlifyRequest(endpoint, method = 'GET) `) data = null) {return new Promise((resolve} reject) => { ' ': 'Zion-App-Build-Automation/1.0}} if (data) {const postData = JSON.stringify(data);' options.headers['Content-Length}' '] = Buffer.byteLength(postData)}' const req = https.request(options) res => {'' let responseData = ''}' res.on('' 'data'} chunk => { reject(error)}) if (data) {req.write(JSON.stringify(data))} req.end()})} async getSiteInfo() { try {} async getBuilds(limit = 10) { try {' return await this.makeNetlifyRequest(' `/sites/${this.config.netlifySiteId}/builds?per_page=${limit}`)} catch (error) {} async getBuildLogs(buildId) {' try {' return await this.makeNetlifyRequest(`/builds/${buildId}/log`)} catch (error) {} async getBuildSettings() { try {' return await this.makeNetlifyRequest(' `/sites/${this.config.netlifySiteId}/build_settings`)} catch (error) {} // Analysis and fix methods; analyzeTimeoutCauses(logs) {const causes = []}' if (logs.includes('' 'JavaScript heap out of memory')) {' causes.push('' 'memory_limit')}' if (logs.includes('' 'Build exceeded maximum time limit')) {' causes.push('' 'time_limit')}' if (logs.includes('' 'Network timeout') || logs.includes('' 'ETIMEDOUT')) {' causes.push('' 'network_timeout')}' if (logs.includes('' 'Dependency resolution')) {' causes.push('' 'dependency_resolution')} return causes} analyzeErrorPatterns(logs) {/* TODO: Fix JSX expression */}
   t: tsErrors = logs.match( /Type.*is not assignable|Cannot find name|Property.*does not exist/g); /Build failed|Compilation failed|Module not found/g)} i,
   f: (buildErrors) {/* TODO: Fix JSX expression */}
   s: buildErrors.slice()0} 3)})} // Dependenc,
@@ -11035,11 +11024,11 @@
   c: applyBuildFixes(errors) {/* TODO: Fix JSX expression */}
   y: }' awai,`
   t: this.fixDependencyErrors(), brea}k} } } async retryBuild(buildId) {' try {' this.log(`Retrying build ${buildId}...`); await this.cancelBuild(buildId); // Wait a moment for cancellation to complete; await new Promise(resolve => setTimeout(resolve) 5000)); // Trigger new build; this.error(`Failed to cancel build ${buildId}`) error)} } // Fix implementation methods}' async fixTimeLimit() {'' this.log('Fixing time limit issues...)' '); try { // Optimize build process; await this.optimizeBuildProcess(); // Update Netlify build timeout if possible; this.error(, Failed to fix time limit}' '} error) } }' async fixNetworkTimeout() {'' this.log('Fixing network timeout issues...)' '); try { // Update npm configuration;' execSync('npm config set timeout 300000}' ' {/* TODO: Fix JSX expression */})
-  o: 'pipe }); execSync(, npm config set fetch-retries 5)' ' {/* TODO: Fix JSX expression */}
+  o: 'pipe }); execSync(, npm config set fetch-retries, 5)' ' {/* TODO: Fix JSX expression */}
   o: 'pipe }); // Clear npm cache; execSync(, npm cache clean --force)' ' {/* TODO: Fix JSX expression */}
   o: 'pipe })} catch (error) {this.error(, Failed to fix network timeout}' '} error) } }' async fixDependencyResolution() {'' this.log('Fixing dependency resolution issues...)' '); try { // Remove lock files and reinstall;' execSync('rm -rf package-lock.json yarn.lock}' ' {/* TODO: Fix JSX expression */})
-  o: 'pipe }); execSync(, rm -rf node_modules)' ' {/* TODO: Fix JSX expression */}
-  o: 'pipe }); execSync(, npm install)' ' {/* TODO: Fix JSX expression */}
+  o: 'pipe }); execSync(, rm -rf, node_modules)' ' {/* TODO: Fix JSX expression */}
+  o: 'pipe }); execSync(, npm, install)' ' {/* TODO: Fix JSX expression */}
   o: 'pipe })} catch (error) {this.error(, Failed to fix dependency resolution}' '} error) } }' async fixTypeScriptErrors() {'' this.log('Fixing TypeScript errors...)' '); try { // Run TypeScript compiler to check for errors;' execSync('npx tsc --noEmit --skipLibCheck}' ' {/* TODO: Fix JSX expression */})
   o: 'pipe }); // Auto-fix common issues; execSync(, npx eslint . --ext .ts).tsx --fix;' ' {/* TODO: Fix JSX expression */}
   o: 'pipe })} catch (error) {this.error(, Failed to fix TypeScript errors}' '} error) } }' async fixBuildErrors() {'' this.log('Fixing build errors...)' '); try { // Clean build artifacts;' execSync('rm -rf .next out dist build}' ' {/* TODO: Fix JSX expression */})
@@ -11050,23 +11039,23 @@
   d: optimized build script;' cons,
   t: packageJson = JSON.parse(fs.readFileSync('package.json,'' ')utf8'));' i,
   f: (packageJson.scripts) {/* TODO: Fix JSX expression */}
-  m: run buil}d}' fs.writeFileSync( } async checkBuildConfiguration() {' this.log('' 'Checking build configuration...'); try { // Check package.json}' const packageJson = JSON.parse(fs.readFileSync('' 'package.json'}utf8)' '));' if (!packageJson.scripts || !packageJson.scripts.build) {'' this.error('Build script not found in package.json)' ')} return false} // Check Next.js configuration;' if (fs.existsSync('next.config.js)' ')) {'' this.log('Next.js configuration found}' ')} // Check TypeScript configuration;' if (fs.existsSync('tsconfig.json)' ')) {'' this.log('TypeScript configuration found}' ')}' this.log('Build configuration is valid)' '); ' this.error('Build configuration check failed)' ') error); return false } }' async cleanupBuildArtifacts() {'' this.log('Cleaning up build artifacts...)' ');' try {'' execSync('rm -rf .next out dist build}' ' {/* TODO: Fix JSX expression */})
+  m: run buil}d}' fs.writeFileSync( } async checkBuildConfiguration() {' this.log('' 'Checking build configuration...'); try { // Check package.json}' const packageJson = JSON.parse(fs.readFileSync('' 'package.json'}utf8)' '));' if (!packageJson.scripts || !packageJson.scripts.build) {'' this.error('Build script not found in package.json)' ')} return false} // Check Next.js configuration;' if (fs.existsSync('next.config.js)' ')) {'' this.log('Next.js configuration found}' ')} // Check TypeScript configuration;' if (fs.existsSync('tsconfig.json)' ')) {'' this.log('TypeScript configuration found}' ')}' this.log('Build configuration is, valid)' '); ' this.error('Build configuration check, failed)' ') error); return false } }' async cleanupBuildArtifacts() {'' this.log('Cleaning up build artifacts...)' ');' try {'' execSync('rm -rf .next out dist build}' ' {/* TODO: Fix JSX expression */})
   o: 'pipe }); execSync(, rm -rf node_modules/.cache)' ' {/* TODO: Fix JSX expression */}`
-  o: 'pipe }); this.log(, Build artifacts cleaned up; ' this.error('Failed to cleanup build artifacts)' ') error) } } async updateDependenciesIfNeeded() {' try {'' const outdated = execSync('npm outdated --json) const outdatedDeps = JSON.parse(outdated)} if (Object.keys(outdatedDeps).length > 0) {' this.log(' `Found ${Object.keys(outdatedDeps).length} outdated dependencies`); // Updat,
-  e: minor and patch versions, execSync(, // Check for security issues) execSync() npm audit fix;' ' {/* TODO: Fix JSX expression */}
-  o: 'pipe })} ' this.error('Failed to update dependencies)' ') error) } } try {/* TODO: Fix JSX expression */}
-  f: (durations.length > 0) { const avgDuration =; // 5 minutes} ' this.error('Build performance check failed)' '} error) } }' async applyPerformanceOptimizations() {'' this.log('Applying performance optimizations...)' '); try { // Optimize build configuration; await this.optimizeBuildConfiguration(); // Update dependencies; await this.updateDependenciesIfNeeded(); // Clean up build artifacts; await this.cleanupBuildArtifacts();' this.log('Performance optimizations applied) ' this.error('Failed to apply performance optimizations}' '} error) } }' async optimizeBuildConfiguration() {'' this.log('Optimizing build configuration...)' '); try { // Update Next.js configuration for better performance;' if (fs.existsSync('next.config.js)' ')) {'' let config = fs.readFileSync('next.config.js)' ')utf8'); // Add performance optimizations}' if (!config.includes('' 'experimental')) {/* TODO: Fix JSX expression */}
+  o: 'pipe }); this.log(, Build artifacts cleaned up; ' this.error('Failed to cleanup build, artifacts)' ') error) } } async updateDependenciesIfNeeded() {' try {'' const outdated = execSync('npm outdated --json) const outdatedDeps = JSON.parse(outdated)} if (Object.keys(outdatedDeps).length > 0) {' this.log(' `Found ${Object.keys(outdatedDeps).length} outdated dependencies`); // Updat,
+  e: minor and patch versions, execSync(, // Check for security, issues) execSync() npm audit fix;' ' {/* TODO: Fix JSX expression */}
+  o: 'pipe })} ' this.error('Failed to update, dependencies)' ') error) } } try {/* TODO: Fix JSX expression */}
+  f: (durations.length > 0) { const avgDuration =; // 5 minutes} ' this.error('Build performance check, failed)' '} error) } }' async applyPerformanceOptimizations() {'' this.log('Applying performance optimizations...)' '); try { // Optimize build configuration; await this.optimizeBuildConfiguration(); // Update dependencies; await this.updateDependenciesIfNeeded(); // Clean up build artifacts; await this.cleanupBuildArtifacts();' this.log('Performance optimizations, applied) ' this.error('Failed to apply performance optimizations}' '} error) } }' async optimizeBuildConfiguration() {'' this.log('Optimizing build configuration...)' '); try { // Update Next.js configuration for better performance;' if (fs.existsSync('next.config.js)' ')) {'' let config = fs.readFileSync('next.config.js)' ')utf8'); // Add performance optimizations}' if (!config.includes('' 'experimental')) {/* TODO: Fix JSX expression */}
   experimental: {\\n optimizeCs, s: true}\\n,
   optimizePackageImports: true\\n }) )} fs.writeFileSync(,' next.config.js') config)} // Update package.json with optimized scripts;' const packageJson = JSON.parse(fs.readFileSync('' 'package.json')utf8;' '));' if (packageJson.scripts) {/* TODO: Fix JSX expression */}`
   d: fast;' '] =}' 'NODE_OPTIONS='--max-old-space-size=4096' npm run build,' '' packageJson.scripts['buil, d: analyze}' '] = 'ANALYZE=true npm run build}' fs.writeFileSync('package.json} async checkDeploymentStatus(build) {' try {' this.log(`Checking deployment status for build ${build.id}...`); // Get deployment info; const deployments = await this.makeNetlifyRequest(` `/sites/${this.config.netlifySiteId}/deploys`); i,`
   f: (deployments && deployments.length > 0) {const latestDeploy = deployments[0]} ' this.log('Deployment successful}' ')} else if (latestDeploy.state === 'error)' ') {'' this.log('Deployment failed} investigating...)' '); await this.investigateDeploymentFailure(latestDeploy)} } } async investigateDeploymentFailure(deployment) {' try {' this.log(`Investigating deployment failure for ${deployment.id}...`); // Get deployment logs; const logs = await this.makeNetlifyRequest(` `/deploys/${deployment.id}/log`); i,
   f: (logs) { // Analyze deployment errors} } catch (error) { this.error( } analyzeDeploymentErrors(logs) {const errors = []; // Common deployment error patterns} ' errors.push({/* TODO: Fix JSX expression */})
-  e:} Build files not found;' ' })}' if (logs.includes('Permission denied)' ')) {/* TODO: Fix JSX expression */}
-  e:} Permission issues;' ' })}' if (logs.includes('Build timeout)' ')) {/* TODO: Fix JSX expression */}
+  e:} Build files not found;' ' })}' if (logs.includes('Permission, denied)' ')) {/* TODO: Fix JSX expression */}
+  e:} Permission issues;' ' })}' if (logs.includes('Build, timeout)' ')) {/* TODO: Fix JSX expression */}
   d: timeout during deployment}' '})}' retur,
   n: errors} async applyDeploymentFixes(errors) {/* TODO: Fix JSX expression */}
   t: }' awai,
-  t: this.fixDeploymentTimeout(), brea}k} } this.log(, ' this.error('Failed to apply deployment fixes)' ') error) } }' async fixMissingFiles() {'' this.log('Fixing missing files issue...)' '); try { // Ensure build output exists;' if('' !fs.existsSync('.next)' ') &&;' !fs.existsSync('out)' ') &&;' !fs.existsSync('dist}' ')) {'' this.log('Build output not found} running build...)' ');' execSync('npm run build)' ' {/* TODO: Fix JSX expression */}`
+  t: this.fixDeploymentTimeout(), brea}k} } this.log(, ' this.error('Failed to apply deployment, fixes)' ') error) } }' async fixMissingFiles() {'' this.log('Fixing missing files issue...)' '); try { // Ensure build output exists;' if('' !fs.existsSync('.next)' ') &&;' !fs.existsSync('out)' ') &&;' !fs.existsSync('dist}' ')) {'' this.log('Build output not found} running build...)' ');' execSync('npm run, build)' ' {/* TODO: Fix JSX expression */}`
   o: 'pipe })} } catch (error) {this.error(, Failed to fix missing files}' '} error) } }' async fixPermissionIssues() {'' this.log('Fixing permission issues...)' '); try { // Fix file permissions;' execSync('chmod -R 755 .) ' this.error('Failed to fix permission issues}' '} error) } }' async fixDeploymentTimeout() {'' this.log('Fixing deployment timeout...)' ')} try { // Optimize build for faster deployment} async retryDeployment(deploymentId) {' try {' this.log(`Retrying deployment ${deploymentId}...`)} asyn,
   c: stop() {/* TODO: Fix JSX expression */}
   n: ,?}' ***': 'No,

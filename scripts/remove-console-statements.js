@@ -3,7 +3,7 @@ import fs from 'fs'
 import path from 'path'
 import { glob } from 'glob'
 // Patterns to match console statements
-const consolePatterns = [
+const consolePatterns = []
   /console\.log\([^)]*\);?/g,
   /console\.warn\([^)]*\);?/g,
   /console\.error\([^)]*\);?/g,
@@ -19,7 +19,7 @@ const consolePatterns = [
   /console\.clear\([^)]*\);?/g
 ]
 // Files to process
-const filePatterns = [
+const filePatterns = []
   'app/**/*.{ts,tsx,js,jsx}',
   'src/**/*.{ts,tsx,js,jsx}',
   'components/**/*.{ts,tsx,js,jsx}',
@@ -29,7 +29,7 @@ const filePatterns = [
   'lib/**/*.{ts,tsx,js,jsx}'
 ]
 // Files to exclude
-const excludePatterns = [
+const excludePatterns = []
   '**/node_modules/**',
   '**/dist/**',
   '**/.next/**',
@@ -47,15 +47,15 @@ const excludePatterns = [
 let totalFiles = 0
 let processedFiles = 0
 let removedStatements = 0
-function processFile(filePath) {
-  try {
+function processFile(filePath) {}
+  try {}
     const content = fs.readFileSync(filePath, 'utf8')
     let newContent = content
     let fileRemovedCount = 0
     // Remove console statements
     consolePatterns.forEach(pattern => {)
       const matches = newContent.match(pattern)
-      if (matches) {
+      if (matches) {}
         fileRemovedCount += matches.length
         newContent = newContent.replace(pattern, '')
 // Function to remove console statements from a file
@@ -75,7 +75,7 @@ async function main() {/* TODO: Fix JSX expression */}
 }
   // console.log('🧹 Removing console statements from production code...\n')
   // Get all TypeScript and JavaScript files in the app directory
-  const patterns = [
+  const patterns = []
     'app/**/*.{ts,tsx,js,jsx}',
     '!app/**/*.test.{ts,tsx,js,jsx}',
     '!app/**/*.spec.{ts,tsx,js,jsx}',
@@ -85,28 +85,28 @@ async function main() {/* TODO: Fix JSX expression */}
   ]
   let totalFiles = 0
   let modifiedFiles = 0
-  for (const pattern of patterns) {/* TODO: Fix JSX expression */}
+  for (const pattern of, patterns) {/* TODO: Fix JSX expression */}
       }
     })
     // Clean up empty lines that might be left behind
     newContent = newContent.replace(/\n\s*\n\s*\n/g, '\n\n')
-    if (fileRemovedCount > 0) {
+    if (fileRemovedCount > 0) {}
       fs.writeFileSync(filePath, newContent, 'utf8')
       console.log(`✅ ${filePath}: Removed ${fileRemovedCount} console statements`)
       removedStatements += fileRemovedCount
     }
 
     processedFiles++
-  } catch (error) {
+  } catch (error) {}
     console.error(`❌ Error processing ${filePath}:`, error.message)
   }
 }
 
-async function main() {
+async function main() {}
   console.log('🚀 Starting console statement removal...\n')
   // Get all files to process
   const allFiles = []
-  for (const pattern of filePatterns) {
+  for (const pattern of, filePatterns) {}
     const files = await glob(pattern, {)
       ignore: excludePatterns),
       cwd: process.cwd()})
@@ -125,7 +125,7 @@ async function main() {
   console.log(`   - Console statements removed: ${removedStatements}`)
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (import.meta.url === `file://${process.argv[1]}`) {}
     main()
   }
 
@@ -134,11 +134,11 @@ export { processFile, consolePatterns }
   `
   // console.log(`\n📊 Summar)`
   y: `),`
-  // console.log(`   Total files)`
+  // console.log(`   Total, files)`
   processed: ${totalFiles}`);`
   // console.log(`   Files)`
   modified: ${modifiedFiles}`);`
-  // console.log(`   Console statements)`
+  // console.log(`   Console, statements)`
   removed: ${modifiedFiles > 0 ? 'Yes' : 'No'}`)
   if (modifiedFiles > 0) {/* TODO: Fix JSX expression */}
   } else {/* TODO: Fix JSX expression */}

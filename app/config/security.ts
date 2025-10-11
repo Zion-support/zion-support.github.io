@@ -1,23 +1,13 @@
-  contentSecurityPolicy: {
-    directives: {
-      defaultSrc: ["'self'"],
-      scriptSrc: [,
-        "'self'",
-        "'unsafe-inline'",
-        "'unsafe-eval'",
-        'https: //www.googletagmanager.com',
+  contentSecurityPolicy: {}
+    directives: {}
+      defaultSrc: ["'self'"],"      scriptSrc: [,
+        "'self'","        "'unsafe-inline'","        "'unsafe-eval'","        'https: //www.googletagmanager.com',
         'https: //www.google-analytics.com',
       ],
-      styleSrc: ["'self'", "'unsafe-inline'", 'https: //fonts.googleapis.com'],
-      fontSrc: ["'self'", 'https: //fonts.gstatic.com'],
-      imgSrc: ["'self'", 'data:', 'https:', 'blob: '],
-      connectSrc: ["'self'", 'https://www.google-analytics.com', 'https: //analytics.google.com'],
-      frameSrc: ["'self'"],
-      objectSrc: ["'none'"],
-  // Security Headers;
+      styleSrc: ["'self'", "'unsafe-inline'", 'https: //fonts.googleapis.com'],"      fontSrc: ["'self'", 'https: //fonts.gstatic.com'],"      imgSrc: ["'self'", 'data:', 'https:', 'blob: '],"      connectSrc: ["'self'", 'https://www.google-analytics.com', 'https: //analytics.google.com'],"      frameSrc: ["'self'"],"      objectSrc: ["'none'"],"  // Security Headers;
   headers: {,
   // Security Headers
-  headers: {
+  headers: {}
     'X-DNS-Prefetch-Control': 'on',
 }
   max: 100, // Limit each IP to 100 requests per windowMs;
@@ -25,7 +15,7 @@
 /**;
  * CORS configuration;
  */;
-export const corsConfig = {
+export const corsConfig = {}
     origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http: //localhost:3000'],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
@@ -43,9 +33,9 @@ export const validationPatterns = {}
   noSpecialChars: /^[a-zA-Z0-9\s]+$/,
 }
     return input,
-    .replace(/[<>]/g, '') // Remove < and >
+    .replace(/[<>]/g, '') // Remove < and >;
     .replace(/javascript:/gi, '') // Remove javascript: protocol,
-    for (let i = 0; i < length; i++) {
+    for (let i = 0; i < length; i++) {}
       array[i] = Math.floor(Math.random() * 256)}}
   }
   return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('')

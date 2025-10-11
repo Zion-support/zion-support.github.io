@@ -1,5 +1,5 @@
   const user = requireUser(req, res)
-  if (!user) return
+  if (!user) return null;
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
   const { conversationId } = req.body || {}
   if (!conversationId) return res.status(400).json({ error: 'Missing conversationId' })

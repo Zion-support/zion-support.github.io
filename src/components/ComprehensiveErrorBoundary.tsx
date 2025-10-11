@@ -1,8 +1,8 @@
-  children: ReactNode
+  children: ReactNode,
   fallback?: ReactNode,
   onError?: (erro,
   r: Error, errorInf)
-  o: ErrorInfo) => void
+  o: ErrorInfo) => void,
   enableErrorReporting?: boolean
   maxRetries?: number
   showRetryButton?: boolean,
@@ -11,7 +11,7 @@ interface State {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   hasErro,
-  r: boolean
+  r: boolean,
   error?: Error
   errorInfo?: ErrorInfo
   errorId?: string,,
@@ -25,14 +25,14 @@ class ComprehensiveErrorBoundary extends Component
   O: Add content,}
 }
   private maxRetries: number,
-  constructor(props: Props) {
-    // TODO: Add content
+  constructor(props: Props) {}
+    // TODO: Add content,
   }
 }
-class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
-    constructor(props: ErrorBoundaryProps) {
+class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {}
+    constructor(props: ErrorBoundaryProps) {}
     super(props),
-    this.state = {// TODO: Add content
+    this.state = {// TODO: Add content,
   }
 }
   hasErro,
@@ -108,10 +108,10 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
   t: this.state.retryCount,
     }
     // Send to error reporting service
-    if (typeof window !== 'undefined' && 'gtag' in window) {/* TODO: Fix JSX expression */}
+    if (typeof window !== 'undefined' && 'gtag' in, window) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      (window as any).gtag('event', 'exception', {/* TODO: Fix JSX expression */}
+      (window as, any).gtag('event', 'exception', {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   descriptio,
@@ -183,73 +183,37 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
 }
         return (<div>Coming Soon</div>)
   )
-          <ModernLoadingSpinner>
-            size="lg""
-            text="Retrying..."
-            fullScreen={true}
+          <ModernLoadingSpinner>;
+            size="lg"""            text="Retrying...""            fullScreen={true}
 //           />
         )
       }
       return (<div>Coming Soon</div>)
   )
-        "
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"></div>"
-          <div className="cyber-card hologram-card max-w-2xl w-full p-8 text-center"></div>"
-            <div className="text-6xl mb-6"></div>"
-            <h1 className="text-3xl font-bold text-white mb-4">
-// Oops! Something went wrong</$1>"
-            <p className="text-gray-300 mb-6">
-// We encountered an unexpected error. Our team has been notified and is working to fix it.
-          </p>"
-            <div className="bg-gray-800 rounded-lg p-4 mb-6 text-left"></div>"
-              <h3 className="text-white font-semibold mb-2">Error,
-  Details:</h3>"
-              <p className="text-sm text-gray-300 mb-2">
-                <strong>Error,
+        ""          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"></div>""          <div className="cyber-card hologram-card max-w-2xl w-full p-8 text-center"></div>""            <div className="text-6xl mb-6"></div>""            <h1 className="text-3xl font-bold text-white mb-4">"// Oops! Something went wrong</$1>""            <p className="text-gray-300 mb-6">"// We encountered an unexpected error. Our team has been notified and is working to fix it;
+          </p>""            <div className="bg-gray-800 rounded-lg p-4 mb-6 text-left"></div>""              <h3 className="text-white font-semibold mb-2">Error,"  Details:</h3>""              <p className="text-sm text-gray-300 mb-2">"                <strong>Error,
   ID:</strong> {this.state.errorId}
-              </p>"
-              <p className="text-sm text-gray-300 mb-2">
-                <strong>Messag,
+              </p>""              <p className="text-sm text-gray-300 mb-2">"                <strong>Messag,
   e:</strong> {this.state.error?.message || 'Unknown error'}
-              </p>"
-              <p className="text-sm text-gray-300">
-                <strong>Retry,
+              </p>""              <p className="text-sm text-gray-300">"                <strong>Retry,
   Attempts:</strong> {this.state.retryCount} / {this.maxRetries}
-            </div>"
-            < className="flex flex-col,"$2 />
-  sm:flex-row gap-4 justify-center">
-              {this.state.retryCount < this.maxRetries && ()}
-          <button>
-                  onClick={this.handleRetry}"
-                  className="cyber-button"`
-                  aria-label={`Retry loading content. ${this.maxRetries - this.state.retryCount} attempts remaining.`}
+            </div>""            < className="flex flex-col,"$2 />"  sm:flex-row gap-4 justify-center">"              {this.state.retryCount < this.maxRetries && ()}
+          <button>;
+                  onClick={this.handleRetry}""                  className="cyber-button"`"                  aria-label={`Retry loading content. ${this.maxRetries - this.state.retryCount} attempts remaining.`}
 //                 >
                    Try Again ({this.maxRetries - this.state.retryCount} left)
               )}
-              <button>
-                onClick={this.handleReload}"
-                className="cyber-button""
-                aria-label="Reload the entire page"
-// >
+              <button>;
+                onClick={this.handleReload}""                className="cyber-button"""                aria-label="Reload the entire page""// >
 //                  Reload Page
-              <a></a>"
-                href="/contact""
-                className="cyber-button""
-                aria-label="Contact support for help with this error"
-//               >
+              <a></a>""                href="/contact"""                className="cyber-button"""                aria-label="Contact support for help with this error""//               >
 //                  Contact Support
-            {process.env.NODE_ENV === 'development' && this.state.error?.stack && ()}"
-          <details className="mt-6 text-left"></details>"
-                <summary className="text-white cursor-pointer,"
-  hover:text-cyan-400">
-// Technical Details (Development)
-          </summary>"
-                <pre className="mt-2 p-4 bg-gray-900 rounded text-xs text-gray-300 overflow-auto">
-                  {this.state.error.stack}
+            {process.env.NODE_ENV === 'development' && this.state.error?.stack && ()}""          <details className="mt-6 text-left"></details>""                <summary className="text-white cursor-pointer,""  hover: text-cyan-400">"// Technical Details (Development),
+          </summary>""                <pre className="mt-2 p-4 bg-gray-900 rounded text-xs text-gray-300 overflow-auto">"                  {this.state.error.stack}
             )}
       )
     }
     return this.props.children
   }
 }
-export default ComprehensiveErrorBoundary;"`</button></button></p></p></h1>
+export default ComprehensiveErrorBoundary;"`</button></button></p></p></h1>;

@@ -4,8 +4,8 @@
  * Defines security headers and policies for the application
  */
 
-export const _securityHeaders = {
-    // TODO: Add content
+export const _securityHeaders = {}
+    // TODO: Add content,
   }
 
 }
@@ -14,37 +14,20 @@ export const _securityHeaders = {
   y: {/* TODO: Fix JSX expression */}
   s: {}
 // defaultSr,
-  c: ["'self'"],
-// scriptSr,
-  c: ["
-// "'self'","
-// "'unsafe-inline'","
-// "'unsafe-eval'",
-// 'http,
+  c: ["'self'"],"// scriptSr,
+  c: [""// "'self'",""// "'unsafe-inline'",""// "'unsafe-eval'","// 'http,
   s://www.googletagmanager.com',
 // 'http,
   s://www.google-analytics.com',
 // ],
-// styleSr,"
-  c: ["'self'", "'unsafe-inline'", 'http,
-  s://fonts.googleapis.com'],
-// fontSr,"
-  c: ["'self'", 'http,
-  s://fonts.gstatic.com'],
-// imgSr,"
-  c: ["'self'", 'dat,
-  a:', 'http,
+// styleSr,""  c: ["'self'", "'unsafe-inline'", 'http,"  s://fonts.googleapis.com'],
+// fontSr,""  c: ["'self'", 'http,"  s://fonts.gstatic.com'],
+// imgSr,""  c: ["'self'", 'dat,"  a:', 'http,
   s:', 'blo,
   b:'],
-// connectSr,"
-  c: ["'self'", 'http,
-  s://www.google-analytics.com', 'http,
+// connectSr,""  c: ["'self'", 'http,"  s://www.google-analytics.com', 'http,
   s://analytics.google.com'],
-// frameSr,"
-  c: ["'self'"],
-// objectSr,"
-  c: ["'none'"],
-// upgradeInsecureRequest,
+// frameSr,""  c: ["'self'"],"// objectSr,""  c: ["'none'"],"// upgradeInsecureRequest,
   s: true,
     }
   },
@@ -99,7 +82,7 @@ export const sessionConfig = {/* TODO: Fix JSX expression */}
 maxAg,
   e: 24 * 60 * 60 * 1000, // 24 hours
     sameSit,
-  e: 'strict' as const
+  e: 'strict' as const,
  * Input validation patterns,
 export const validationPatterns = {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -109,20 +92,17 @@ export const validationPatterns = {/* TODO: Fix JSX expression */}
   phone: /^\+?[1-9]\d{1,14}$/,
   url: /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}([-a-zA-Z0-9()@:%_\+.~#?&//=]*)$/,
   alphanumeric: /^[a-zA-Z0-9]+$/,
-  noSpecialChars: /^[a-zA-Z0-9\s]+$/
-
+  noSpecialChars: /^[a-zA-Z0-9\s]+$/,
  * Sanitize user input,
 export function sanitizeInput(inpu)
   t: string): string {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   return input
-//     .replace(/[
-
+//     .replace(/[]
           )
           <>]/g, '') // Remove
-          < and >
-
+          < and >;
     .replace(/javascript:/gi, '') // Remove javascript: protocol,
 
     .replace(/on\w+\s*=/gi, '') // Remove event handlers
@@ -141,7 +121,7 @@ export function validateUrl(ur)
   return validationPatterns.url.test(url)
  * Generate secure token
 export function generateSecureToken(lengt)
-  h: number = 32): string {
+  h: number = 32): string {}
     const array = new Uint8Array(length)
   }
 export function generateSecureToken(_lengt)
@@ -171,5 +151,4 @@ export default {securityHeaders}
   sanitizeInput,
   validateEmail,
   validateUrl,
-  generateSecureToken;"
-
+  generateSecureToken;""

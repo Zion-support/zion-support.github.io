@@ -21,39 +21,39 @@ export type IntegrationProviderId =
   | 'bamboohr'
   | 'workable'
   | 'bamboohr'
-export interface IntegrationProviderMeta {
-  id: IntegrationProviderId, name: string
+export interface IntegrationProviderMeta {}
+  id: IntegrationProviderId, name: string,
   id: IntegrationProviderId, name: string,
   category: IntegrationCategory, description?: string,  oauthScopes?: string[]
   icon?: string
-export interface IntegrationProviderMeta {
+export interface IntegrationProviderMeta {}
   id: IntegrationProviderId, name: string,
   category: IntegrationCategory, description?: string,  oauthScopes?: string[]
   icon?: string
 }
-export interface SyncRules {
+export interface SyncRules {}
   // CRM rules
   autoCreateContacts?: boolean
   pushNotesMode?: 'auto' | 'manual'
   // ATS rules
   autoSyncApplicants?: boolean
   autoUploadResumes?: boolean
-export interface ProviderConnection {
-export interface ProviderConnection {
-  providerId: IntegrationProviderId
-  status: SyncStatus;  accessToken?: string;  refreshToken?: string
+export interface ProviderConnection {}
+export interface ProviderConnection {}
+  providerId: IntegrationProviderId,
+  status: SyncStatus;  accessToken?: string;  refreshToken?: string,
   | 'workable'
   | 'bamboohr'
-export interface IntegrationProviderMeta {
-  id: IntegrationProviderId
-  name: string
-  category: IntegrationCategory
+export interface IntegrationProviderMeta {}
+  id: IntegrationProviderId,
+  name: string,
+  category: IntegrationCategory,
   description?: string
   oauthScopes?: string[]
   icon?: string
 }
 export type SyncStatus = 'connected' | 'warning' | 'disconnected'
-export interface SyncRules {
+export interface SyncRules {}
   // CRM rules
   autoCreateContacts?: boolean
   pushNotesMode?: 'auto' | 'manual'
@@ -66,148 +66,148 @@ export type SyncStatus = 'connected' | 'warning' | 'disconnected'
 }
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected'
-export interface IntegrationProviderMeta {
-    id: string
-  name: string
+export interface IntegrationProviderMeta {}
+    id: string,
+  name: string,
   category: 'crm' | 'ats' | 'hr',
-  description: string
+  description: string,
   }
 }
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected'
-export interface ProviderConnection {
-  id: string
-  providerId: IntegrationProviderId
-  accessToken: string
+export interface ProviderConnection {}
+  id: string,
+  providerId: IntegrationProviderId,
+  accessToken: string,
   refreshToken?: string
   expiresAt?: number,
-  config?: Record<string></string>
+  config?: Record<string></string>;
 }
-  category: 'crm' | 'ats' | 'hr'
-  description: string
+  category: 'crm' | 'ats' | 'hr',
+  description: string,
   logoUrl?: string
   websiteUrl?: string
   apiDocsUrl?: string,
-  id: string
-  providerId: IntegrationProviderId
-  accessToken: string
+  id: string,
+  providerId: IntegrationProviderId,
+  accessToken: string,
   refreshToken?: string
   expiresAt?: number
-  config?: Record<string, any>
+  config?: Record<string, any>;
 }
-  category: 'crm' | 'ats' | 'hr'
-  description: string
+  category: 'crm' | 'ats' | 'hr',
+  description: string,
   logoUrl?: string
   websiteUrl?: string
   apiDocsUrl?: string
 }
-export interface ProviderConnection {
-  id: string
-  providerId: IntegrationProviderId
-  name: string
-  status: SyncStatus
+export interface ProviderConnection {}
+  id: string,
+  providerId: IntegrationProviderId,
+  name: string,
+  status: SyncStatus,
   accessToken?: string
   refreshToken?: string
   expiresAt?: number
   lastSyncAt?: number
-export interface SyncLogEntry {
+export interface SyncLogEntry {}
   lastError?: string | null
-export interface SyncLogEntry {
-  id: string
-  timestamp: number
-  provider_id: IntegrationProviderId
-  level: 'info' | 'warn' | 'error'
-  action: string
-  details?: Record<string, any>
-export interface ManualOverride {
-  job_id: string
+export interface SyncLogEntry {}
+  id: string,
+  timestamp: number,
+  provider_id: IntegrationProviderId,
+  level: 'info' | 'warn' | 'error',
+  action: string,
+  details?: Record<string, any>;
+export interface ManualOverride {}
+  job_id: string,
   disableCrmSync?: boolean
   disableAtsSync?: boolean
-export interface ZapierEvent {
-export interface ManualOverride {
-  jobId: string
+export interface ZapierEvent {}
+export interface ManualOverride {}
+  jobId: string,
   disableCrmSync?: boolean
   disableAtsSync?: boolean
-export interface ZapierEvent {
-  id: string
-  type: 'zion && zion.job.posted' | 'zion && zion.talent.matched'
-  timestamp: number
-  payload: Record < string, any>
-export interface IntegrationsState {
-export interface ManualOverride {
-  jobId: string
+export interface ZapierEvent {}
+  id: string,
+  type: 'zion && zion.job.posted' | 'zion && zion.talent.matched',
+  timestamp: number,
+  payload: Record < string, any>;
+export interface IntegrationsState {}
+export interface ManualOverride {}
+  jobId: string,
   disableCrmSync?: boolean
   disableAtsSync?: boolean
-export interface ZapierEvent {
+export interface ZapierEvent {}
   lastError?: string | null
 }
-export interface SyncLogEntry {
-  id: string
-  providerId: IntegrationProviderId
-  name: string
-  status: SyncStatus
+export interface SyncLogEntry {}
+  id: string,
+  providerId: IntegrationProviderId,
+  name: string,
+  status: SyncStatus,
 }
 
-  status: SyncStatus
+  status: SyncStatus,
   lastSync?: number
 }
 
-  status: SyncStatus
+  status: SyncStatus,
   lastSync?: number
-  createdAt: number
-  updatedAt: number
-  status: SyncStatus
+  createdAt: number,
+  updatedAt: number,
+  status: SyncStatus,
   lastSync?: number
-  config?: Record<string, any>
+  config?: Record<string, any>;
   expiresAt?: number
-  status: SyncStatus
+  status: SyncStatus,
   lastSync?: number
-  createdAt: number
-  updatedAt: number
+  createdAt: number,
+  updatedAt: number,
   expiresAt?: number
-  status: SyncStatus
+  status: SyncStatus,
   lastSync?: number,
-  config?: Record<string></string>
+  config?: Record<string></string>;
 }
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected'
-  status: SyncStatus
+  status: SyncStatus,
   lastSync?: number
-  createdAt: number
+  createdAt: number,
   expiresAt?: number,
-  id: string
-  providerId: IntegrationProviderId
-  name: string
-  status: SyncStatus
+  id: string,
+  providerId: IntegrationProviderId,
+  name: string,
+  status: SyncStatus,
   accessToken?: string
   refreshToken?: string
   expiresAt?: number
   lastSyncAt?: number
-  createdAt: number
-  updatedAt: number
-  config?: Record<string, any>
+  createdAt: number,
+  updatedAt: number,
+  config?: Record<string, any>;
   expiresAt?: number
-  status: SyncStatus
+  status: SyncStatus,
   lastSync?: number
-  createdAt: number
-  updatedAt: number
+  createdAt: number,
+  updatedAt: number,
   expiresAt?: number
-  status: SyncStatus
+  status: SyncStatus,
   lastSync?: number
-  config?: Record<string, any>
+  config?: Record<string, any>;
 }
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected'
-  status: SyncStatus
+  status: SyncStatus,
   lastSync?: number
-  createdAt: number
+  createdAt: number,
   expiresAt?: number
 }
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected'
 }
 
-  status: SyncStatus
+  status: SyncStatus,
   lastSync?: number
   createdAt: number,
 }
@@ -215,187 +215,187 @@ export type SyncStatus = 'connected' | 'warning' | 'disconnected'
 }
 
   lastSync?: Date
-  config: Record<string></string>createdAt</string>: Date
+  config: Record<string></string>createdAt</string>: Date,
   updatedAt: Date,
 }
 
-export interface SyncLogEntry {
-    id: string
-  connectionId: string
+export interface SyncLogEntry {}
+    id: string,
+  connectionId: string,
   action: string,
-  details?: Record<string, any>
+  details?: Record<string, any>;
   }
 
-  details?: Record<string></string>
+  details?: Record<string></string>;
 }
 }
 
-export interface ManualOverride {
-    jobId: string
+export interface ManualOverride {}
+    jobId: string,
   disableCrmSync?: boolean,
   disableAtsSync?: boolean
   }
 }
 
-export interface ZapierEvent {
-    id: string
-  type: 'zion.job.posted' | 'zion.talent.matched'
+export interface ZapierEvent {}
+    id: string,
+  type: 'zion.job.posted' | 'zion.talent.matched',
   timestamp: number,
 export interface IntegrationProviderMeta {,
-  timestamp: number
+  timestamp: number,
   status: 'success' | 'error' | 'warning',
-  message: string
+  message: string,
   }
 
 export interface ManualOverride {/* TODO: Fix JSX expression */}
-  id: string
-  type: 'zion.job.posted' | 'zion.talent.matched'
-  timestamp: number
+  id: string,
+  type: 'zion.job.posted' | 'zion.talent.matched',
+  timestamp: number,
 export interface IntegrationProviderMeta {,
-  timestamp: number
-  status: 'success' | 'error' | 'warning'
-  message: string
+  timestamp: number,
+  status: 'success' | 'error' | 'warning',
+  message: string,
 }
 
-export interface IntegrationOverride {
-    id: string
-  connectionId: string
-  field: string
-  value: unknown
-  reason: string
+export interface IntegrationOverride {}
+    id: string,
+  connectionId: string,
+  field: string,
+  value: unknown,
+  reason: string,
   createdAt: Date,
-  updatedAt: Date
+  updatedAt: Date,
   }
 
 export interface IntegrationEvent {/* TODO: Fix JSX expression */}
 }
 
-export interface ZapierEvent {
-    id: string
-  type: 'zion.job.posted' | 'zion.talent.matched'
+export interface ZapierEvent {}
+    id: string,
+  type: 'zion.job.posted' | 'zion.talent.matched',
   timestamp: number,
-  payload: Record<string, any>
+  payload: Record<string, any>;
   }
 
-export interface IntegrationsState {
-    connections: ProviderConnection[]
-  logs: SyncLogEntry[]
-  overrides: ManualOverride[]
+export interface IntegrationsState {}
+    connections: ProviderConnection[],
+  logs: SyncLogEntry[],
+  overrides: ManualOverride[],
   events: ZapierEvent[],
   lastError?: string | null
   }
 
-export interface IntegrationsState {
-    connections: ProviderConnection[]
-  logs: SyncLogEntry[]
+export interface IntegrationsState {}
+    connections: ProviderConnection[],
+  logs: SyncLogEntry[],
   overrides: ManualOverride[],
-  events: ZapierEvent[]
+  events: ZapierEvent[],
   }
-  payload: Record<string></string>
-  connections: ProviderConnection[]
-  logs: SyncLogEntry[]
-  overrides: ManualOverride[]
-  events: ZapierEvent[]
+  payload: Record<string></string>;,
+  connections: ProviderConnection[],
+  logs: SyncLogEntry[],
+  overrides: ManualOverride[],
+  events: ZapierEvent[],
   lastError?: string | null
 }
 }
 }
 }
 }
-  payload: Record<string, any>
-  id: string
-  type: 'zion.job.posted' | 'zion.talent.matched'
-  timestamp: number
-  payload: Record<string, any>
+  payload: Record<string, any>;
+  id: string,
+  type: 'zion.job.posted' | 'zion.talent.matched',
+  timestamp: number,
+  payload: Record<string, any>;
 }
-export interface ManualOverride {
+export interface ManualOverride {}
   jobId: string, disableCrmSync?: boolean,
   disableAtsSync?: boolean
 }
-export interface ZapierEvent {
+export interface ZapierEvent {}
   id: string, type: 'zion.job.posted' | 'zion.talent.matched',
   timestamp: number,
-  payload: Record<string, any>
+  payload: Record<string, any>;
 }
-export interface IntegrationsState {
+export interface IntegrationsState {}
   connections: ProviderConnection[], logs: SyncLogEntry[],
   overrides: ManualOverride[],
-  events: ZapierEvent[]
+  events: ZapierEvent[],
 }
 }
 
-export interface IntegrationProviderMeta {
-  id: IntegrationProviderId
-  name: string
-  category: 'crm' | 'ats'
-  description: string
-  payload: Record<string, any>
+export interface IntegrationProviderMeta {}
+  id: IntegrationProviderId,
+  name: string,
+  category: 'crm' | 'ats',
+  description: string,
+  payload: Record<string, any>;
 }
-export interface IntegrationsState {
-  connections: ProviderConnection[]
-  logs: SyncLogEntry[]
-  overrides: ManualOverride[]
-  events: ZapierEvent[]
+export interface IntegrationsState {}
+  connections: ProviderConnection[],
+  logs: SyncLogEntry[],
+  overrides: ManualOverride[],
+  events: ZapierEvent[],
 }
 }
 
-export interface ProviderConnection {
-    id: string
-  providerId: IntegrationProviderId
-  accessToken: string
+export interface ProviderConnection {}
+    id: string,
+  providerId: IntegrationProviderId,
+  accessToken: string,
   refreshToken?: string
   expiresAt?: number
-  status: SyncStatus
+  status: SyncStatus,
   lastSync?: number,
-  createdAt: number
+  createdAt: number,
   }
 
-export interface IntegrationProviderMeta {
-    id: IntegrationProviderId
-  name: string
+export interface IntegrationProviderMeta {}
+    id: IntegrationProviderId,
+  name: string,
   category: 'crm' | 'ats' | 'hr',
-  description: string
+  description: string,
   }
   logoUrl?: string
   websiteUrl?: string
   apiDocsUrl?: string
 }
-  payload: Record<string></string>
+  payload: Record<string></string>;,
 }
 }
 
-export interface IntegrationsState {
-    connections: ProviderConnection[]
-  logs: SyncLogEntry[]
-  overrides: ManualOverride[]
+export interface IntegrationsState {}
+    connections: ProviderConnection[],
+  logs: SyncLogEntry[],
+  overrides: ManualOverride[],
   events: ZapierEvent[],
   lastError?: string | null
   }
-  id: IntegrationProviderId
-  name: string
-  category: 'crm' | 'ats' | 'hr'
-  description: string
+  id: IntegrationProviderId,
+  name: string,
+  category: 'crm' | 'ats' | 'hr',
+  description: string,
 }
   logoUrl?: string
   websiteUrl?: string
   apiDocsUrl?: string
 }
-  payload: Record<string, any>
+  payload: Record<string, any>;
 }
 }
 
-export interface IntegrationsState {
-  connections: ProviderConnection[]
-  logs: SyncLogEntry[]
-  overrides: ManualOverride[]
-  events: ZapierEvent[]
+export interface IntegrationsState {}
+  connections: ProviderConnection[],
+  logs: SyncLogEntry[],
+  overrides: ManualOverride[],
+  events: ZapierEvent[],
   lastError?: string | null;}
 }
 }
-  overrides: IntegrationOverride[]
-  events: IntegrationEvent[]
+  overrides: IntegrationOverride[],
+  events: IntegrationEvent[],
 }
 }
-  overrides: IntegrationOverride[]
+  overrides: IntegrationOverride[],
   events: IntegrationEvent[],
 }

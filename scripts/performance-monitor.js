@@ -5,19 +5,19 @@ import { fileURLToPath } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // Performance monitoring script
-const performanceReport = {
-  timestamp: new Date().toISOString()
-  buildSize: 0
+const performanceReport = {}
+  timestamp: new Date().toISOString(),
+  buildSize: 0,
   pageCount: 0,
   recommendations: []}
 
 // Analyze build output
 const buildDir = path.join(process.cwd(), '.next')
 const staticDir = path.join(buildDir, 'static')
-if (fs.existsSync(staticDir)) {
+if (fs.existsSync(staticDir)) {}
   const files = fs.readdirSync(staticDir, { recursive: true })
   const jsFiles = files.filter(file => file.endsWith('.js'))
-  jsFiles.forEach(file => {
+  jsFiles.forEach(file => {}
     )
     const filePath = path.join(staticDir, file)
     const stats = fs.statSync(filePath)
@@ -27,11 +27,11 @@ if (fs.existsSync(staticDir)) {
 }
 
 // Performance recommendations
-if (performanceReport.buildSize > 500) {
+if (performanceReport.buildSize > 500) {}
     performanceReport.recommendations.push('Consider code splitting to reduce bundle size')
   }
 
-if (performanceReport.buildSize > 1000) {
+if (performanceReport.buildSize > 1000) {}
     performanceReport.recommendations.push('Bundle size is large - consider lazy loading components')
   }
 

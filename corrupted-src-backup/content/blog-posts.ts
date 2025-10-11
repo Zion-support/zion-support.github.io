@@ -1,13 +1,13 @@
-export interface BlogPost {
-    slug: string
-  title: string
-  description: string
-  content: string
-  author: string
-  date: string
-  category: string
-  tags: string[]
-  featured: boolean
+export interface BlogPost {}
+    slug: string,
+  title: string,
+  description: string,
+  content: string,
+  author: string,
+  date: string,
+  category: string,
+  tags: string[],
+  featured: boolean,
   readTime: string,
   image?: string
   }
@@ -18,9 +18,8 @@ export const blogPosts: BlogPost[] = [,
     title: 'Operational AI Scorecards v2: Gate Risk, Ship Faster',
     description:
       'KPI-linked SLIs, online canaries, and rollback-first ops that raise velocity while reducing incidents.',
-    content: `
-# Operational AI Scorecards v2: Ship AI features weekly without surprises by wiring measurement to decisions.
-
+    content: `,
+# Operational AI Scorecards v2: Ship AI features weekly without surprises by wiring measurement to decisions.,
 ## What You'll Implement
 - KPI-linked SLIs that predict outcomes
 - Online canaries as deploy gates
@@ -36,14 +35,13 @@ export const blogPosts: BlogPost[] = [,
     featured: true,
     readTime: '7 min read',
     image: '/images/operational-ai-scorecards-v2.jpg'},
-  {
+  {}
     slug: 'ai-2025-oct-04-enterprise-rag-quality-budgets',
     title: 'Enterprise RAG Quality Budgets: Lift Correctness, Cut Spend',
     description:
       'Freshness windows, retrieval tiers, and semantic caches that raise answer quality while reducing cost.',
-    content: `
-# Enterprise RAG Quality Budgets: Production RAG needs governance and budgets.
-
+    content: `,
+# Enterprise RAG Quality Budgets: Production RAG needs governance and budgets.,
 ## Core Patterns
 - Domain schemas and strict source governance
 - Freshness windows per intent
@@ -57,15 +55,14 @@ export const blogPosts: BlogPost[] = [,
     featured: true,
     readTime: '8 min read',
     image: '/images/enterprise-rag-quality-budgets.jpg'},
-  {
+  {}
     slug: 'ai-2025-oct-04-enterprise-agents-in-production',
     title: 'Enterprise Agents in Production: Budgets, Approvals, and Rollback',
     description:
       'Practical patterns to run AI agents safely in prod with KPI-linked SLIs, action budgets, and instant rollback.',
     content: `,
 # Enterprise Agents in Production: Budgets, Approvals, and Rollback
-This guide shows how to ship agentic systems that operate within explicit budgets and guardrails while driving measurable outcomes.
-
+This guide shows how to ship agentic systems that operate within explicit budgets and guardrails while driving measurable outcomes;
 ## Ship Safely
 - Signed tools with scopes and quotas
 - Budget-aware action routing with KPI-linked SLIs
@@ -82,7 +79,7 @@ This guide shows how to ship agentic systems that operate within explicit budget
     featured: true,
     readTime: '8 min read',
     image: '/images/governed-agentic-automation.jpg'},
-  {
+  {}
     slug: 'genai-cost-optimization-v6-2025-10-03',
     title: 'GenAI Cost Optimization v6: Quality Tiers, Coalesce, Distill',
     description:
@@ -96,15 +93,14 @@ Control GenAI costs without UX regressions: quality-tier routers, request coales
     featured: true,
     readTime: '9 min read',
     image: '/images/genai-cost-optimization-v6.jpg'},
-  {
+  {}
     slug: 'ai-2025-oct-01-enterprise-ai-governance-blueprint',
     title: 'Enterprise AI Governance 2025: Scorecards, Guardrails, and Zero-Regret Rollouts',
     description:
       'Practical enterprise playbook to ship AI safely: policy tests in CI, KPI-linked scorecards, kill switches, and budget-aware routing.',
     content: `,
 # Enterprise AI Governance 2025: Scorecards, Guardrails, and Zero-Regret Rollouts
-Modern enterprises need shipping speed without surprise risk. This field guide shows how to wire governance into the product lifecycle so teams move faster with fewer incidents and lower costs.
-
+Modern enterprises need shipping speed without surprise risk. This field guide shows how to wire governance into the product lifecycle so teams move faster with fewer incidents and lower costs;
 ## What You'll Ship
 - Policy tests in CI that gate risky changes
 - KPI-linked scorecards across reliability, latency, and cost
@@ -125,7 +121,7 @@ export interface BlogPost {/* TODO: Fix JSX expression */}
 }
 
 export const,
-  blogPosts: BlogPost[] = [
+  blogPosts: BlogPost[] = [],
   {/* TODO: Fix JSX expression */}
   },
   {/* TODO: Fix JSX expression */}

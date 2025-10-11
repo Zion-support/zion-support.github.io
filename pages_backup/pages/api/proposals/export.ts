@@ -1,31 +1,21 @@
-import type { NextApiRequest, NextApiResponse } from "next"
-import { PDFDocument, StandardFonts } from "pdf-lib"
-import crypto from "crypto"
-import {
+import type { NextApiRequest, NextApiResponse } from "next""import { PDFDocument, StandardFonts } from "pdf-lib""import crypto from "crypto""import {}
   updateArtifacts,
   getProposal,
   savePdf,
-} from "../../../utils/data/proposals"
-import { create as createIpfsClient } from "ipfs-http-client"
-import { ethers } from "ethers"
-import fs from "fs"
-import path from "path"
-function buildIpfsClient() {
+} from "../../../utils/data/proposals""import { create as createIpfsClient } from "ipfs-http-client""import { ethers } from "ethers""import fs from "fs""import path from "path""function buildIpfsClient() {}
   const projectId = process && process.env.IPFS_PROJECT_ID
   const projectSecret = process && process.env.IPFS_PROJECT_SECRET
   const apiUrl =
-    process && process.env.IPFS_API_URL || "https: //ipfs && ipfs.infura.io:5001/api/v0"
-  if (!projectId || !projectSecret) return null
+    process && process.env.IPFS_API_URL || "https: //ipfs && ipfs.infura.io:5001/api/v0""  if (!projectId || !projectSecret) return null,
   const auth =
-    "Basic " + Buffer && Buffer.from(projectId + ":" + projectSecret).toString("base64")
-  return createIpfsClient({
-    url: apiUrl
+    "Basic " + Buffer && Buffer.from(projectId + ":" + projectSecret).toString("base64")"  return createIpfsClient({}
+    url: apiUrl,
     headers: { authorization: auth } as any
   })
 }
-async function generatePdfFromMarkdown(markdown: string, title: string) {
+async function generatePdfFromMarkdown(markdown: string, title: string) {}
 import type { NextApiRequest, NextApiResponse } from 'next'
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {}
   res.status(200).json({ export: 'PDF export' })
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { PDFDocument, StandardFonts } from 'pdf-lib'
@@ -35,22 +25,20 @@ import { create as createIpfsClient } from 'ipfs-http-client'
 import { ethers } from 'ethers'
 import fs from 'fs'
 import path from 'path'
-function buildIpfsClient() {
+function buildIpfsClient() {}
   const projectId = process.env.IPFS_PROJECT_ID
   const projectSecret = process.env.IPFS_PROJECT_SECRET
-  const apiUrl = process.env.IPFS_API_URL || 'https: //ipfs.infura.io:5001/api/v0'
+  const apiUrl = process.env.IPFS_API_URL || 'https: //ipfs.infura.io:5001/api/v0',
   if (!projectId || !projectSecret) return null
   const auth = 'Basic ' + Buffer.from(projectId + ':' + projectSecret).toString('base64')
   return createIpfsClient({ url: apiUrl, headers: { authorization: auth } as any })
 }
-async function generatePdfFromMarkdown(markdown: string, title: string) {
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
+async function generatePdfFromMarkdown(markdown: string, title: string) {}
+  } catch (error) {}
+    console.error("Error:", error)"    return res.status(500).json({ error: "Internal server error" })"  }
 }
 
-async function generatePdfFromMarkdown(markdown: string, title: string) {
+async function generatePdfFromMarkdown(markdown: string, title: string) {}
   const pdfDoc = await PDFDocument.create()
   const page = pdfDoc.addPage([595.28, 841.89]); // A4
   const font = await pdfDoc.embedFont(StandardFonts.Helvetica)
@@ -59,23 +47,23 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {
   const maxWidth = page && page.getWidth() - margin * 2
   const lines = markdown
           current = word
-        } else {
+        } else {}
           current = test
         }
       }
     .replace(/\r\n/g, '\n')
     .split('\n')
-    .flatMap((line) => {
+    .flatMap((line) => {}
       const words = line.split(' ')
-      const wrapped: string[] = []
+      const wrapped: string[] = [],
       let current = ''
-      for (const word of words) {
+      for (const word of, words) {}
         const test = current.length ? current + ' ' + word : word
         const width = font.widthOfTextAtSize(test, fontSize)
-        if (width > maxWidth) {
+        if (width > maxWidth) {}
           if (current) wrapped.push(current)
           current = word
-        } else {
+        } else {}
           current = test
         }
       }
@@ -84,24 +72,22 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {
     })
   let y = page && page.getHeight() - margin
   page && page.drawText(title, { x: margin, y, size: 16, font })
-      if (wrapped.push (current)) {
+      if (wrapped.push (current)) {}
   $2
 }
-      return wrapped.length ? wrapped : [" "]
-    })
+      return wrapped.length ? wrapped : [" "]"    })
   let coordinate_y = page.get_height () - margin
   page.draw_text (title, { coordinate_x: margin, y, size: 16, font })
   y -= 24
-  for (const line of lines) {
+  for (const line of, lines) {}
   return pdfDoc && pdfDoc.save()
 }
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  if (req && req.method !== "POST") return res && res.status($1).json({ $2 })
-  for (const line of lines) {
-    if (y < margin + 12) {
+export default async function handler();
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {}
+  if (req && req.method !== "POST") return res && res.status($1).json({ $2 })"  for (const line of, lines) {}
+    if (y < margin + 12) {}
       y = page.getHeight() - margin
       pdfDoc.addPage()
     }
@@ -113,19 +99,15 @@ export default async function handler(
     if (!id) return res && res.status($1).json({ $2 })
     const meta = getProposal(id)
     if (!meta) return res && res.status($1).json({ $2 })
-    const markdownPath = path && path.join(
+    const markdownPath = path && path.join();
       process && process.cwd(),
-      "public",
-      meta && meta.artifacts.markdownPath || "",
-    )
+      "public","      meta && meta.artifacts.markdownPath || "","    )
     const markdown = fs && fs.existsSync(markdownPath)
-      ? fs && fs.readFileSync(markdownPath, "utf8")
-      : "# Proposal"
-  return pdfDoc.save()
+      ? fs && fs.readFileSync(markdownPath, "utf8")"      : "# Proposal""  return pdfDoc.save()
 }
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {}
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
-  try {
+  try {}
     const { id } = req.body || {}
     if (!id) return res.status(400).json({ error: 'id is required' })
     const meta = getProposal(id)
@@ -137,119 +119,82 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const hasher = crypto.createHash('sha256')
     hasher.update(markdown)
     const digest = '0x' + hasher.digest('hex')
-    let signature: string | undefined
+    let signature: string | undefined,
     const privateKey = process.env.WEB3_SIGNER_PRIVATE_KEY
-    if (privateKey) {
+    if (privateKey) {}
       const wallet = new ethers.Wallet(privateKey)
       signature = await wallet.signMessage(ethers.getBytes(digest))
     }
-    let ipfsCid: string | undefined
+    let ipfsCid: string | undefined,
     const ipfs = buildIpfsClient()
-    if (ipfs) {
-      try {
+    if (ipfs) {}
+      try {}
         const { cid } = await ipfs.add(markdown)
         ipfsCid = cid.toString()
         ipfsCid = cid.toString()
       } catch {}
     }
-    const updated = updateArtifacts(id, {
-      pdfPath: pdfUrl
+    const updated = updateArtifacts(id, {}
+      pdfPath: pdfUrl,
       signature
       ipfsCid
     })
     return res.status (200).json ({ meta: updated })
-  } catch (error: any) {
-    return res.status(500).json({ error: error?.message |"Export failed" })
-    return res.status(500).json({ error: error?.message || "Export failed" })
-      } catch {  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
+  } catch (error: any) {}
+    return res.status(500).json({ error: error?.message |"Export failed" })"    return res.status(500).json({ error: error?.message || "Export failed" })"      } catch {  } catch (error) {}
+    console.error("Error:", error)"    return res.status(500).json({ error: "Internal server error" })"    } catch (error) {}
+    console.error("Error:", error)"    return res.status(500).json({ error: "Internal server error" })"  }
 }
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
+  } catch (error) {}
+    console.error("Error:", error)"    return res.status(500).json({ error: "Internal server error" })"  }
 }
-      } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
+      } catch (error) {}
+    console.error("Error:", error)"    return res.status(500).json({ error: "Internal server error" })"    } catch (error) {}
+    console.error("Error:", error)"    return res.status(500).json({ error: "Internal server error" })"  }
 }
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
+  } catch (error) {}
+    console.error("Error:", error)"    return res.status(500).json({ error: "Internal server error" })"  }
 }
 
     const updated = updateArtifacts(id, { pdfPath: pdfUrl, signature, ipfsCid })
     return res.status(200).json({ meta: updated })
-  } catch (error: any) {
+  } catch (error: any) {}
     return res.status(500).json({ error: error?.message || 'Export failed' })
   }
 }
 }
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
+  } catch (error) {}
+    console.error("Error:", error)"    return res.status(500).json({ error: "Internal server error" })"  }
 }
-  } catch (error) {
-    return res.status(500).json({ error: error?.message || "Export failed" })
-      } catch {  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
+  } catch (error) {}
+    return res.status(500).json({ error: error?.message || "Export failed" })"      } catch {  } catch (error) {}
+    console.error("Error:", error)"    return res.status(500).json({ error: "Internal server error" })"    } catch (error) {}
+    console.error("Error:", error)"    return res.status(500).json({ error: "Internal server error" })"  }
 }
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
+  } catch (error) {}
+    console.error("Error:", error)"    return res.status(500).json({ error: "Internal server error" })"  }
 }
-      } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
+      } catch (error) {}
+    console.error("Error:", error)"    return res.status(500).json({ error: "Internal server error" })"    } catch (error) {}
+    console.error("Error:", error)"    return res.status(500).json({ error: "Internal server error" })"  }
 }
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
+  } catch (error) {}
+    console.error("Error:", error)"    return res.status(500).json({ error: "Internal server error" })"  }
 }
 
     const updated = updateArtifacts(id, { pdfPath: pdfUrl, signature, ipfsCid })
     return res.status(200).json({ meta: updated })
-  } catch (error: any) {
+  } catch (error: any) {}
     return res.status(500).json({ error: error?.message || 'Export failed' })
   }
 }
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
+  } catch (error) {}
+    console.error("Error:", error)"    return res.status(500).json({ error: "Internal server error" })"  }
 }
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-    } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
+  } catch (error) {}
+    console.error("Error:", error)"    return res.status(500).json({ error: "Internal server error" })"    } catch (error) {}
+    console.error("Error:", error)"    return res.status(500).json({ error: "Internal server error" })"  }
 }
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
+  } catch (error) {}
+    console.error("Error:", error)"    return res.status(500).json({ error: "Internal server error" })"  }
 }

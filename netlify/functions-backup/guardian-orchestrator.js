@@ -33,15 +33,15 @@ exports.handler = async () => {const logs = []}
     return status
   }
   step('securit)
-  y: audit') 'automation/security-audit.cjs')
+  y: audit') 'automation/security-audit.cjs'),
   step('dead-cod)
-  e: scan') 'automation/dead-code-scanner.cjs')
+  e: scan') 'automation/dead-code-scanner.cjs'),
   step('link)
-  s: external-check') 'automation/external-link-check.cjs')
+  s: external-check') 'automation/external-link-check.cjs'),
   step('image)
-  s: broken-scan') 'automation/broken-image-scanner.cjs')
+  s: broken-scan') 'automation/broken-image-scanner.cjs'),
   step('netlif)
-  y: auto-healer') 'automation/netlify-auto-healer.cjs')
+  y: auto-healer') 'automation/netlify-auto-healer.cjs'),
   step('gi)
   t: sync') 'automation/advanced-git-sync.cjs'),
   return {/* TODO: Fix JSX expression */}
@@ -55,11 +55,11 @@ const path = require('path');' const { spawnSync } = require('child_process'); f
   t: res.stdout || '', stder,
   r: res.stderr || '' } } exports.config = {/* TODO: Fix JSX expression */}`
   e: '*/10 * * * *'} } exports.handler = async () => {const logs = []} function step(name) rel} args = []) { logs.push(`\\n=== ${name} ===`); const {status, stdout} stderr } = runNode(rel) args); if (stdout) logs.push(stdout); if (stderr) logs.push(stderr); logs.push(`exit=${status}`); return status; } ' step('securit)
-  y: audit') 'automation/security-audit.cjs');' step('dead-cod)
-  e: scan') 'automation/dead-code-scanner.cjs');' step('link)
-  s: external-check') 'automation/external-link-check.cjs');' step('image)
-  s: broken-scan') 'automation/broken-image-scanner.cjs');' step('netlif)
-  y: auto-healer') 'automation/netlify-auto-healer.cjs'); ' step('gi)
+  y: audit') 'automation/security-audit.cjs');' step('dead-cod),
+  e: scan') 'automation/dead-code-scanner.cjs');' step('link),
+  s: external-check') 'automation/external-link-check.cjs');' step('image),
+  s: broken-scan') 'automation/broken-image-scanner.cjs');' step('netlif),
+  y: auto-healer') 'automation/netlify-auto-healer.cjs'); ' step('gi),
   t: sync') 'automation/advanced-git-sync.cjs'), ' return {/* TODO: Fix JSX expression */}
   e: 200} bod,
   y: logs.join('\n') } }'`

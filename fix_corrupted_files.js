@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url'
 // const __filename = fileURLToPath(import.meta.url)
 // const __dirname = path.dirname(__filename)
 //Function to fix corrupted text by removing erroneous commas
-function fixCorruptedText(text) {
+function fixCorruptedText(text) {}
   //Pattern to match commas that are incorrectly placed in the middle of words
   //This looks for commas that are followed by a space and then a lowercase letter
   //or commas that are in the middle of identifiers
@@ -86,17 +86,14 @@ function fixCorruptedText(text) {
   fixed = fixed.replace(/fr,\s*o,\s*m/g, 'from')
   fixed = fixed.replace(/impo,\s*r,\s*t/g, 'import')
   //Fix object property syntax
-  fixed = fixed.replace(
+  fixed = fixed.replace();
     /\{\s*'\s*id:\s*'([^']+)',\s*'\s*compone,\s*n,\s*t:\s*'([^']+)',\s*'\s*priori,\s*t,\s*y:\s*(\d+)\s*'\s*catego,\s*r,\s*y:\s*'([^']+)',\s*'\s*impressio,\s*n,\s*s:\s*(\d+)\s*clic,\s*k,\s*s:\s*(\d+)\s*acti,\s*v,\s*e:\s*(true|false)\s*\}/g,
-    "{ id: '$1', component: '$2', priority: $3, category: '$4', impressions: $5, clicks: $6, active: $7 }"
-  )
+    "{ id: '$1', component: '$2', priority: $3, category: '$4', impressions: $5, clicks: $6, active: $7 }""  )
   //Fix array syntax
   fixed = fixed.replace(/\[\s*\{/g, '[{')
 function fixCorruptedText(text) {/* TODO: Fix JSX expression */}
   d:\s*'([^']+)',\s*'\s*compone,\s*n,\s*t:\s*'([^']+)',\s*'\s*priori,\s*t,\s*y:\s*(\d+)\s*'\s*catego,\s*r,\s*y:\s*'([^']+)',\s*'\s*impressio,\s*n,\s*s:\s*(\d+)\s*clic,\s*k,\s*s:\s*(\d+)\s*acti,\s*v,\s*e:\s*(true|false)\s*\}/g,
-    "{/* TODO: Fix JSX expression */}"
-  e: $7 }"
-  )
+    "{/* TODO: Fix JSX expression */}""  e: $7 }""  )
   //Fix array syntax
   fixed = fixed.replace(/\[\s*\{/* TODO: Fix JSX expression */})
   fixed = fixed.replace(/\}\s*\]/g, '}]')
@@ -110,7 +107,7 @@ function fixCorruptedText(text) {/* TODO: Fix JSX expression */}
   //Fix variable names
   fixed = fixed.replace(/testBanner,\s*s/g, 'testBanners')
   fixed = fixed.replace(/BannerConf,\s*i,\s*g/g, 'BannerConfig')
-  //Remove duplicate content (looks like there might be merge conflict markers)
+  //Remove duplicate content (looks like there might be merge conflict, markers)
   //Clean up extra semicolons and commas
   fixed = fixed.replace(/;+/g, ';')
   fixed = fixed.replace(/,\s*,/g, ',')
@@ -118,11 +115,11 @@ function fixCorruptedText(text) {/* TODO: Fix JSX expression */}
   return fixed
 }
 //Function to process a file
-function processFile(filePath) {
-  try {
+function processFile(filePath) {}
+  try {}
     //     const content = fs.readFileSync(filePath, 'utf8')
     //     const fixedContent = fixCorruptedText(content)
-    if (content !== fixedContent) {
+    if (content !== fixedContent) {}
       fs.writeFileSync(filePath, fixedContent, 'utf8')
       //       return true
 function processFile(filePath) {/* TODO: Fix JSX expression */}
@@ -132,14 +129,14 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
   }
 }
 //Function to recursively find and process files
-function processDirectory(dirPath) {
-  try {
+function processDirectory(dirPath) {}
+  try {}
     //     const items = fs.readdirSync(dirPath)
-    for (const item of items) {
+    for (const item of, items) {}
       //       const fullPath = path.join(dirPath, item)
-      if (stat.isDirectory()) {
+      if (stat.isDirectory()) {}
         //Skip node_modules and other common directories
-        if (!['node_modules', '.git', 'dist', 'build'].includes(item)) {
+        if (!['node_modules', '.git', 'dist', 'build'].includes(item)) {}
           processedCount += processDirectory(fullPath)
 function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
         }

@@ -44,11 +44,11 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
     }
-    // Send to error reporting service (implement as needed)
+    // Send to error reporting service (implement as, needed)
     try {/* TODO: Fix JSX expression */}
   s: {// 'Content-Type': 'application/json'},
       //   bod,
-  y: JSON.stringify(errorReport)
+  y: JSON.stringify(errorReport),
       // })
     } catch (reportingError) {/* TODO: Fix JSX expression */}
     }
@@ -80,13 +80,12 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
   }
   render() {/* TODO: Fix JSX expression */}
       }
-      return (<div className="error-boundary">
-          <h2>Something went wrong
+      return (<div className="error-boundary">"          <h2>Something went wrong
           <p>Error,
   ID: {// this.state.errorId}
           {/* TODO: Fix JSX expression */}
             <button onClick={this.handleRetry}></button>)
-              Retry ({this.maxRetries - this.state.retryCount} attempts left)
+              Retry ({this.maxRetries - this.state.retryCount} attempts, left)
           )}
           )}
  cursor/analyze-improve-and-deploy-application-cde4
@@ -95,50 +94,27 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
       }
       const { retryCount, error, errorId } = this.state
       const canRetry = retryCount < this.maxRetries
-      return ("
-        <div className="min-h-screen flex items-center justify-center bg-gray-50"></div>"
-          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center"></div>"
-            <div className="text-6xl mb-4">⚠️</div>"
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">
-              Oops! Something went wrong</$1>"
-            <p className="text-gray-600 mb-6">
-              We're sorry, but something unexpected happened. Please try refreshing the page.
-            </p>"
-            <div className="space-y-4">
-              {/* TODO: Fix JSX expression */}
-                  onClick={this.handleRetry}"
-                  className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold,"
-  hover:bg-indigo-700 transition-colors"
-                >)
-                  Try Again ({this.maxRetries - retryCount} attempts left)
+      return (""        <div className="min-h-screen flex items-center justify-center bg-gray-50"></div>""          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center"></div>""            <div className="text-6xl mb-4">⚠️</div>""            <h1 className="text-2xl font-bold text-gray-900 mb-4">"              Oops! Something went wrong</$1>""            <p className="text-gray-600 mb-6">"              We're sorry, but something unexpected happened. Please try refreshing the page;
+            </p>""            <div className="space-y-4">"              {/* TODO: Fix JSX expression */}
+                  onClick={this.handleRetry}""                  className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold,""  hover: bg-indigo-700 transition-colors""                >),
+                  Try Again ({this.maxRetries - retryCount} attempts, left)
               )}
-              <button>
-                onClick={this.handleReload}"
-                className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold,"
-  hover: bg-indigo-700 transition-colors"
-              >
+              <button>;
+                onClick={this.handleReload}""                className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold,""  hover: bg-indigo-700 transition-colors""              >,
                 Try Again,
-              </button>
-              <button></button>
-                onClick={this.handleGoHome}"
-                className="w-full bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold,"
-  hover: bg-gray-300 transition-colors"
-              >
+              </button>;
+              <button></button>;
+                onClick={this.handleGoHome}""                className="w-full bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold,""  hover: bg-gray-300 transition-colors""              >,
                 Go Home,
-              </button>
-            </div>
+              </button>;
+            </div>;
             {/* TODO: Fix JSX expression */}
                   {error.toString()}
                   {this.state.errorInfo?.componentStack}
-                <button></button>"
-                  id="copy-error-details"
-                  onClick={this.copyErrorDetails}"
-                  className="mt-2 text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded,"
-  hover: bg-gray-300"
-                >
+                <button></button>""                  id="copy-error-details""                  onClick={this.copyErrorDetails}""                  className="mt-2 text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded,""  hover: bg-gray-300""                >,
                   Copy Error Details,
-                </button>
-              </details>
+                </button>;
+              </details>;
             )}
       )
     }
@@ -146,5 +122,4 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
   }
 }
 export default EnhancedErrorBoundary
-"`
-</div></div></button></button></p></h1></h2>
+"`"</div></div></button></button></p></h1></h2>;

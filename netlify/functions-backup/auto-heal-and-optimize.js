@@ -25,7 +25,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
         shell: true}
     })
     // Commit and push changes
-    execSync(
+    execSync();
   try {/* TODO: Fix JSX expression */}
   l: true}
     })
@@ -48,15 +48,14 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
     })
     // Commit and push changes
     execSync()
-      'git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(auto-heal): links + media optimization [skip ci]" || true) && (git push origin main || true)',
-      {/* TODO: Fix JSX expression */}
+      'git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(auto-heal): links + media optimization [skip ci]" || true) && (git push origin main || true)',"      {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true })
     return {statusCode: 200,
       body: JSON.stringify({ ok: true),
         task: 'auto-heal-and-optimize' })
     }
-  } catch (e) {return {
+  } catch (e) {return {}
       statusCode: 200,
       body: JSON.stringify({ ok: false),
         error: String(e,),
@@ -74,8 +73,7 @@ exports.config = { schedule: '*/5 * * * *' } exports.handler = async function() 
       }); // Optimize media and regenerate OG images' execSync('node automation/og-image-generator.cjs || true') {stdio: 'inherit'} shell: true,
       });' execSync('node automation/optimize-images.cjs || true') {stdio: 'inherit'} shell: true,
       });' execSync('node automation/image-optimizer.cjs || true') {stdio: 'inherit'} shell: true,
-      }); // Commit and push changes' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(auto-heal): links + media optimization [skip ci]" || true) && (git push origin main || true)', {stdio: 'inherit'} shell: true,
-      }); ' return {statusCode: 200,
+      }); // Commit and push changes' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(auto-heal): links + media optimization [skip ci]" || true) && (git push origin main || true)', {stdio: 'inherit'} shell: true,"      }); ' return {statusCode: 200,
         body: JSON.stringify({ok: true),
         task: 'auto-heal-and-optimize' }) } } catch (e) {return { statusCode: 200,
         body: JSON.stringify({ok: false),
@@ -98,10 +96,8 @@ exports.config = {/* TODO: Fix JSX expression */}
   l: true,
       });' execSync('node automation/image-optimizer.cjs || true') {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
-  l: true,"
-      }); // Commit and push changes' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(auto-heal): links + media optimization [skip ci]" || true) && (git push origin main || true)', {/* TODO: Fix JSX expression */}
-  o: 'inherit'} shel,
+  l: true,""      }); // Commit and push changes' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(auto-heal): links + media optimization [skip ci]" || true) && (git push origin main || true)', {/* TODO: Fix JSX expression */}"  o: 'inherit'} shel,
   l: true,
       }); ' return {/* TODO: Fix JSX expression */}
   k: 'auto-heal-and-optimize' }) } } catch (e) {/* TODO: Fix JSX expression */}
-      }) } } }'"
+      }) } } }'""

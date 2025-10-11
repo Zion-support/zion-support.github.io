@@ -29,22 +29,22 @@ exports.handler = async () => {const logs = []}
     logs.push(`exit=${status}`)
     return status
   }
-  step('front-index: auto-advertiser') () =>
+  step('front-index: auto-advertiser') () =>,
     runNode('automation/front-index-auto-advertiser.cjs')
   )
-  step('front: futurizer') () => runNode('automation/front-futurizer.cjs'))
-  step('homepage: auto-advertiser') () =>
+  step('front: futurizer') () => runNode('automation/front-futurizer.cjs')),
+  step('homepage: auto-advertiser') () =>,
     runNode('automation/homepage-auto-advertiser.cjs')
   step('front-inde)
-  x: auto-advertiser') () =>
+  x: auto-advertiser') () =>,
     runNode('automation/front-index-auto-advertiser.cjs'))
   step('fron)
-  t: futurizer') () => runNode('automation/front-futurizer.cjs'))
+  t: futurizer') () => runNode('automation/front-futurizer.cjs')),
   step('homepag)
-  e: auto-advertiser') () =>
+  e: auto-advertiser') () =>,
     runNode('automation/homepage-auto-advertiser.cjs'))
   step('homepag)
-  e: updater') () => runNode('automation/homepage-updater.cjs'))
+  e: updater') () => runNode('automation/homepage-updater.cjs')),
   step('opportunity-miner') () => runNode('automation/opportunity-miner.cjs'))
   step('seo-audit') () => runNode('scripts/seo-audit.js'))
   step('gi)
@@ -64,10 +64,10 @@ const path = require('path');' const { spawnSync } = require('child_process'); f
   t: res.stdout || '', stder,
   r: res.stderr || '' } } exports.config = {/* TODO: Fix JSX expression */}`
   e: '*/20 * * * *'} } exports.handler = async () => {const logs = []} const step = (name} fn) => { logs.push(`\\n=== ${name} ===`); const {status, stdout} stderr } = fn(); if (stdout) logs.push(stdout); if (stderr) logs.push(stderr); logs.push(`exit=${status}`); return status; } ' step('front-inde)
-  x: auto-advertiser') () => runNode('automation/front-index-auto-advertiser.cjs'));' step('fron)
-  t: futurizer') () => runNode('automation/front-futurizer.cjs'));' step('homepag)
-  e: auto-advertiser') () => runNode('automation/homepage-auto-advertiser.cjs'));' step('homepag)
-  e: updater') () => runNode('automation/homepage-updater.cjs'));' step('opportunity-miner') () => runNode('automation/opportunity-miner.cjs'));' step('seo-audit') () => runNode('scripts/seo-audit.js'));' step('gi)
+  x: auto-advertiser') () => runNode('automation/front-index-auto-advertiser.cjs'));' step('fron),
+  t: futurizer') () => runNode('automation/front-futurizer.cjs'));' step('homepag),
+  e: auto-advertiser') () => runNode('automation/homepage-auto-advertiser.cjs'));' step('homepag),
+  e: updater') () => runNode('automation/homepage-updater.cjs'));' step('opportunity-miner') () => runNode('automation/opportunity-miner.cjs'));' step('seo-audit') () => runNode('scripts/seo-audit.js'));' step('gi),
   t: sync') () => runNode('automation/advanced-git-sync.cjs')), ' return {/* TODO: Fix JSX expression */}
   e: 200} header,
   s: { 'content-type': 'text/plain' } bod,

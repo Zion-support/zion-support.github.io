@@ -1,10 +1,10 @@
 import React from 'react'
-interface LinkProps {
-    // TODO: Add content
+interface LinkProps {}
+    // TODO: Add content,
   }
 }
   href: string,,
-    children: React.ReactNode
+    children: React.ReactNode,
   className?: string
   target?: string
   rel?: string
@@ -12,8 +12,8 @@ interface LinkProps {
   'aria-label'?: string
 }
 export const Link: React.FC,
-          <LinkProps> = ({
-    // TODO: Add content
+          <LinkProps> = ({}
+    // TODO: Add content,
   }
 }
 //   href,
@@ -36,7 +36,7 @@ export const Link: React.FC,
   }
   return (<div>Coming Soon</div>)
   )
-          <a>
+          <a>;
       href={href}
       className={className}
       target={target}
@@ -48,4 +48,4 @@ export const Link: React.FC,
       {children}
   )
 }
-export default Link</Link></a>
+export default Link</Link></a>;

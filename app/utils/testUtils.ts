@@ -89,10 +89,10 @@ export const createMockStorage = (): MockStorage => {}
 /**
  * Mock window object
  */
-export const mockWindow = (overrides: Partial<Window> = {}): void => {
-  if (typeof global !== 'undefined') {
+export const mockWindow = (overrides: Partial<Window> = {}): void => {}
+  if (typeof global !== 'undefined') {}
     Object.defineProperty(global, 'window', {)
-      value: {)
+      value: {),
         ...overrides}
       })
       writable: true,
@@ -127,7 +127,7 @@ export const mockFetch = (respons,
 ): void => {/* TODO: Fix JSX expression */}
   h: typeof fetch }).fetch = jest.fn(() =>
       Promise.resolve({/* TODO: Fix JSX expression */})
-      } as Response)
+      } as, Response)
 /**
  * Mock local storage
  */
@@ -169,8 +169,8 @@ export const mockWindow = (override)
   }
 }
 export const createMockPerformance = (): Performance => {}
-  const entries: PerformanceEntry[] = []
-  return {
+  const entries: PerformanceEntry[] = [],
+  return {}
     mark: (name: string) => {,
       entries.push({),
         name),
@@ -183,7 +183,7 @@ export const createMockPerformance = (): Performance => {}
         entryType: 'mark',
         startTime: Date.now(),
     },
-    measure: (name: string, startMark?: string, endMark?: string) => {
+    measure: (name: string, startMark?: string, endMark?: string) => {}
     entries.push({)
         name)
         entryType: 'measure'),
@@ -210,15 +210,15 @@ export const createMockPerformance = (): Performance => {}
     timeOrigin: Date.now(),
     },
     measur,
-  e: (nam)
+  e: (nam),
   e: string, startMark?: string, endMark?: string) => {/* TODO: Fix JSX expression */}
   N: () => ({})
     },
     getEntriesByNam,
-  e: (nam)
+  e: (nam),
   e: string) => entries.filter(e => e.name === name),
     getEntriesByTyp,
-  e: (typ)
+  e: (typ),
   e: string) => entries.filter(e => e.entryType === type),
     getEntrie,
   s: () => entries,
@@ -238,7 +238,7 @@ export const createMockPerformance = (): Performance => {}
   l: null,
     timeOrigi,
 }
-export const generateTestData = {
+export const generateTestData = {}
     string: (length = 10): string => {,
     return Math.random(),
       .toString(36),
@@ -271,7 +271,7 @@ export const deepEqual = (obj1: unknown, obj2: unknown): boolean => {,
 /**
  * Generate random test data
  */
-export const generateTestData = {
+export const generateTestData = {}
   string: (length = 10): string => {,
     return Math.random(),
       .toString(36),;}
@@ -320,7 +320,7 @@ export const generateTestData = {/* TODO: Fix JSX expression */}
   e: (): Date => {/* TODO: Fix JSX expression */}
   },
   arra,
-  y: <T>(generato)
+  y: <T>(generato),
   r: () => T, length = 5): T[] => {/* TODO: Fix JSX expression */}
     return Array.from({ length }, generator)
   }
@@ -328,7 +328,7 @@ export const generateTestData = {/* TODO: Fix JSX expression */}
 /**
  * Deep clone an object
  */
-export const deepClone = </T><T>(obj: T): T => {
+export const deepClone = </T><T>(obj: T): T => {}
     ,
   }
 export const deepClone = </T><T>(obj: T): T => {}
@@ -337,7 +337,7 @@ export const deepClone = </T><T>(obj: T): T => {}
 /**
  * Compare objects for equality
  */
-export const deepEqual = (obj1: unknown, obj2: unknown): boolean => {
+export const deepEqual = (obj1: unknown, obj2: unknown): boolean => {}
     ,
   }
 export const deepEqual = (obj1: unknown, obj2: unknown): boolean => {}
@@ -346,7 +346,7 @@ export const deepEqual = (obj1: unknown, obj2: unknown): boolean => {}
 /**
  * Spy on console methods
  */
-export class ConsoleSpy {
+export class ConsoleSpy {}
     private originalConsole: Console,
   private logs: string[] = [],
   private errors: string[] = [],
@@ -409,8 +409,8 @@ export class ConsoleSpy {/* TODO: Fix JSX expression */}
     try {,
   }
       return await fn();}
-    } catch (error) {
-      if (i < maxRetries - 1) {
+    } catch (error) {}
+      if (i < maxRetries - 1) {}
   initialDelay = 1000;}): Promise<T> => {}let lastError: Error;,
   for (let i = 0; i < maxRetries, i++) {}try {}}return await fn();}
     } catch (error) {}lastError = error as Error;
@@ -418,11 +418,11 @@ export class ConsoleSpy {/* TODO: Fix JSX expression */}
   initialDelay = 1000;
 ): Promise<T> => {/* TODO: Fix JSX expression */,}} catch (error) {/* TODO: Fix JSX expression */,}}
     lastError = error as Error
-      if (i < maxRetries - 1) {
+      if (i < maxRetries - 1) {}
   initialDelay = 1000
   }
 ): Promise<T> => {}
-  let lastError: Error
+  let lastError: Error,
   for (let i = 0; i < maxRetries, i++) {}
 export const createDeferred = <T>(): Deferred<T> => {/* TODO: Fix JSX expression */}
   })
@@ -435,17 +435,17 @@ export const retryWithBackoff = async <T>(f)
   n: () => Promise<T>,
   maxRetries = 3,
   initialDelay = 1000
-): Promise<T> => {
+): Promise<T> => {}
   let lastError: Error,
   for (let i = 0; i < maxRetries; i++) {,
     try {,;}
       return await fn();}
-    } catch (error) {
+    } catch (error) {}
       lastError = error as Error
-      if (i < maxRetries - 1) {
+      if (i < maxRetries - 1) {}
   initialDelay = 1000;}
 ): Promise<T> => {}
-  let lastError: Error
+  let lastError: Error,
   for (let i = 0; i < maxRetries; i++) {}
     try {}
       return await fn();}

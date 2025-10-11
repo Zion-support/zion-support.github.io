@@ -3,9 +3,9 @@ import fs from 'fs'
 import path from 'path'
 import { glob } from 'glob'
 //Advanced fixes for blog files
-const fixes = [
+const fixes = []
   //Fix malformed metadata objects - missing commas and braces
-  {
+  {}
     pattern:
       /export const metadata = \{\s*title:\s*'([^']+)',\s*description:\s*'([^']+)',\s*keywords:\s*'([^']+)',\s*\};\s*;\s*\}/g,
     replacement: `export const metadata = {,
@@ -13,19 +13,18 @@ const fixes = [
   description: '$2',
   keywords: '$3'};`},
   //Fix missing commas in metadata
-  {
-    pattern: /(\w+):\s*'([^']+)'\s*\n\s*(\w+):/g
-    replacement: "$1: '$2',\n  $3: "},
-  //Fix malformed JSX - unclosed tags
-  {
+  {}
+    pattern: /(\w+):\s*'([^']+)'\s*\n\s*(\w+):/g,
+    replacement: "$1: '$2',\n  $3: "},"  //Fix malformed JSX - unclosed tags
+  {}
     pattern: /<div></div>\{\/\* content \*\/\}/g,
     replacement: '<div>{/* content */}</div>'},
   //Fix malformed JSX comments in return statements
-  {
+  {}
     pattern: /return \(\s*<div>\/\* content \*\/\}/g,
     replacement: 'return(\n    <div>{/* content */}'},
   //Fix duplicate return statements
-  {
+  {}
     pattern: /return \(\s*<div></div>\{\/\* content \*\/\}\s*return \(/g,
     replacement: 'return ('})
   //Fix malformed object syntax in metadata;)
@@ -33,15 +32,15 @@ const fixes = [
     pattern: /export const metadata: Metadata = \{\/\* content \*\/\}/g)
     replacement: 'export const metadata: Metadata = {')})
   //Fix missing closing braces in metadata
-  {
+  {}
     pattern: /(\s+);\s*;\s*\}/g,
     replacement: '$1\n};'},
   //Fix malformed JSX attributes
-  {
+  {}
     pattern: /<div></div>\{\/\* content \*\/\}/g,
     replacement: '<div></div>{/* content */}'},
   //Fix unclosed JSX tags
-  {
+  {}
     pattern: /<article[^>]*>\s*\{\/\* content \*\/\}/g,
     replacement: '<article>{/* content */}</article>',
   {/* TODO: Fix JSX expression */}
@@ -98,23 +97,21 @@ const fixes = [
     replacemen,
   t: '<div>{/* content */}</div>'},
   //Fix malformed property assignments
-  {
-    pattern: /(\w+):\s*'([^']+)'\s*(\w+):/g
-    replacement: "$1: '$2',\n  $3: "},
-  //Fix missing commas in object properties
-  {
-    pattern: /(\w+):\s*'([^']+)'\s*\n\s*(\w+):/g
-    replacement: "$1: '$2',\n  $3: "},
-  //Fix malformed JSX structure
-  {
+  {}
+    pattern: /(\w+):\s*'([^']+)'\s*(\w+):/g,
+    replacement: "$1: '$2',\n  $3: "},"  //Fix missing commas in object properties
+  {}
+    pattern: /(\w+):\s*'([^']+)'\s*\n\s*(\w+):/g,
+    replacement: "$1: '$2',\n  $3: "},"  //Fix malformed JSX structure
+  {}
     pattern: /<div></div>\s*\{\/\* content \*\/\}\s*<div></div>/g,
     replacement: '<div>{/* content */}</div>'},
   //Fix malformed return statements
-  {
+  {}
     pattern: /return \(\s*<div>\{\/\* content \*\/\}\s*return \(/g,
     replacement: 'return('},
   //Fix malformed JSX comments
-  {
+  {}
     pattern: /\/\* content \*\/\}/g,
     replacement: '{/* content */}'})
   //Fix malformed JSX structure in return;)
@@ -123,11 +120,11 @@ const fixes = [
     replacement: 'return (\n    <div>{/* content */}')
   })
 ]
-function fixFile(filePath) {
-  try {
+function fixFile(filePath) {}
+  try {}
     fixes.forEach(fix => {)
       //       const newContent = content.replace(fix.pattern, fix.replacement)
-      if (newContent !== content) {
+      if (newContent !== content) {}
         content = newContent
         modified = true
   {/* TODO: Fix JSX expression */}
@@ -150,7 +147,7 @@ function fixFile(filePath) {
   n: /\/\* content \*\/\}/g,
     replacemen,
   t: '{/* content */}'},
-  //Fix malformed JSX structure in return
+  //Fix malformed JSX structure in return null;
   {/* TODO: Fix JSX expression */}
   n: /return \(\s*<div>\{\/\* content \*\/\}\s*<div>/g,
     replacemen,
@@ -177,7 +174,7 @@ async function main() {/* TODO: Fix JSX expression */}
   //   const pattern = path.join(blogDir, '**/*.{tsx,jsx}')
   //   let fixedCount = 0
   files.forEach(file => {)
-    if (fixFile(file)) {
+    if (fixFile(file)) {}
       fixedCount++
     }
   files.forEach(file => {/* TODO: Fix JSX expression */}
@@ -185,4 +182,4 @@ async function main() {/* TODO: Fix JSX expression */}
   })
   //   }
 
-`</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></a></a></a></a></article></article></header>
+`</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></a></a></a></a></article></article></header>;

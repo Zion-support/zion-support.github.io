@@ -1,10 +1,10 @@
-  id: string
-  name: string
-  description: string
-  id: string
-  name: string
-  description: string
-  category: | 'AI Consciousness'
+  id: string,
+  name: string,
+  description: string,
+  id: string,
+  name: string,
+  description: string,
+  category: | 'AI Consciousness',
   i,
   d: string,
   nam,
@@ -12,7 +12,7 @@
   descriptio,
   n: string,
   categor,
-  y: | 'AI Consciousness'
+  y: | 'AI Consciousness',
     | 'AI Emotional Intelligence'
     | 'AI Creativity'
     | 'AI Psychology'
@@ -29,24 +29,23 @@
   g: {/* TODO: Fix JSX expression */}
   r: string} professional?: string} enterprise?: string }
   feature,
-  s: string[]
+  s: string[],
   integrations?: string[]
   useCases?: string[],
   lin,
-  k: string
+  k: string,
   rating?: number
   launchDate?: string,,
   realService?: boolean
 }
-export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
-  {
-    id: 'ai-emotional-support-agent'
-    name: 'AI Emotional Support Agent'
-    description:
-      'On-demand AI agent trained on CBT and mindfulness protocols with escalation pathways.'
-    category: 'AI Emotional Intelligence'
+export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [],
+  {}
+    id: 'ai-emotional-support-agent',
+    name: 'AI Emotional Support Agent',
+    description: 'On-demand AI agent trained on CBT and mindfulness protocols with escalation pathways.',
+    category: 'AI Emotional Intelligence',
     pricing: { starter: '$99/mo' }
-    features: [
+    features: [],
       'CBT-guided prompts'
       'Mood tracking'
       'Crisis escalation'
@@ -54,17 +53,17 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
     ]
     integrations: ['Twilio', 'Slack']
     useCases: ['Employee wellness', '24/7 support']
-    link: 'https://ziontechgroup.com/services/ai-emotional-support-agent'
-    realService: true
+    link: 'https://ziontechgroup.com/services/ai-emotional-support-agent',
+    realService: true,
   }
-  {
-    id: 'ai-product-spec-writer'
-    name: 'AI Product Spec Writer'
+  {}
+    id: 'ai-product-spec-writer',
+    name: 'AI Product Spec Writer',
     description:
       'Generate PRDs, user stories, and acceptance criteria aligned with business goals and analytics.'
-    category: 'AI Business Management'
+    category: 'AI Business Management',
     pricing: { starter: '$79/mo' }
-    features: [
+    features: [],
       'PRD templates'
       'Story generation'
       'Acceptance criteria'
@@ -72,25 +71,24 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
     ]
     integrations: ['Jira', 'Linear']
     useCases: ['Faster planning', 'Better alignment']
-    link: 'https://ziontechgroup.com/services/ai-product-spec-writer'
-    realService: true
+    link: 'https://ziontechgroup.com/services/ai-product-spec-writer',
+    realService: true,
   }
-  {
-    id: 'ai-creative-studio'
-    name: 'AI Creative Studio'
-    description:
-      'Generate brand-consistent images and short-form videos with approvals and rights management.'
-    category: 'AI Creativity'
+  {}
+    id: 'ai-creative-studio',
+    name: 'AI Creative Studio',
+    description: 'Generate brand-consistent images and short-form videos with approvals and rights management.',
+    category: 'AI Creativity',
     pricing: { starter: '$149/mo' }
-    features: [
-];	id: string
-];	id: string
+    features: [],
+];	id: string,
+];	id: string,
 	id: string, name: string,
 	description: string,
-export type CuttingEdgeAIService = {
-	id: string
-	name: string
-	description: string
+export type CuttingEdgeAIService = {}
+	id: string,
+	name: string,
+	description: string,
 	category:
 export const,
   cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
@@ -197,24 +195,24 @@ export const,
     link: 'https://ziontechgroup.com / services / ai - creative - studio',
     real_service: true,
   }];	id: string,
-	id: string, name: string
+	id: string, name: string,
 	description: string,
     useCases: ['Marketing velocity', 'Cost savings'],
     link: 'https://ziontechgroup.com/services/ai-creative-studio',
     realService: true,
   }
 ];	id: string,
-	id: string, name: string
+	id: string, name: string,
 	description: string,
     useCases: ['Marketing velocity', 'Cost savings'],
     link: 'https://ziontechgroup.com/services/ai-creative-studio',
     realService: true,
   }
-];	id: string
 ];	id: string,
-	id: string, name: string
+];	id: string,
+	id: string, name: string,
 	description: string,
-	category: | 'AI Consciousness'
+	category: | 'AI Consciousness',
     integration,
   s: ['Canva', 'Figma'],
     use_case,
@@ -252,7 +250,7 @@ export const,
     realServic,
   e: true}
 ];	i,
-  d: string
+  d: string,
 ],	i,
   d: string,
 	i,
@@ -261,7 +259,7 @@ export const,
 	descriptio,
   n: string,
 	categor,
-  y: | 'AI Consciousness'
+  y: | 'AI Consciousness',
 		| 'AI Emotional Intelligence'
 		| 'AI Creativity'
 		| 'AI Psychology'
@@ -270,10 +268,10 @@ export const,
 		| 'AI Neural Interfaces',
 		| 'AI Quantum Computing',
 	pricing: {starter: string, professional?: string} enterprise?: string }
-	features: string[]
+	features: string[],
 	integrations?: string[]
 	useCases?: string[]
-	link: string
+	link: string,
 	rating?: number
 	launchDate?: string,,
 	realService?: boolean
@@ -284,7 +282,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
   description: 'On-demand AI agent trained on CBT and mindfulness protocols with escalation pathways.',
 		category: 'AI Emotional Intelligence',
 		pricing: { starter: '$99/mo' }
-		features: ['CBT-guided promptsMood trackingCrisis escalationHIPAA-friendly modes']
+		features: ['CBT-guided promptsMood trackingCrisis escalationHIPAA-friendly modes'],
 		integrations: ['TwilioSlack'],
 		useCases: ['Employee wellness24/7 support'],
 		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-emotional-support-agent',
@@ -295,7 +293,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
 		description: 'Generate PRDs, user stories, and acceptance criteria aligned with business goals and analytics.'
 		category: 'AI Business Management',
 		pricing: { starter: '$79/mo' }
-		features: ['PRD templatesStory generationAcceptance criteriaAnalytics alignment']
+		features: ['PRD templatesStory generationAcceptance criteriaAnalytics alignment'],
 		integrations: ['JiraLinear'],
 		useCases: ['Faster planningBetter alignment'],
 		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-product-spec-writer',
@@ -306,15 +304,15 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
   description: 'Generate brand-consistent images and short-form videos with approvals and rights management.',
 		category: 'AI Creativity',
 		pricing: { starter: '$149/mo' }
-		features: ['Brand kitImage & video genReview & approvalsRights management']
+		features: ['Brand kitImage & video genReview & approvalsRights management'],
 		integrations: ['CanvaFigma'],
 		useCases: ['Marketing velocityCost savings'],
 		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-creative-studio',
 		realService: true,
 	}
 ]
-name: string
-description: string
+name: string,
+description: string,
 category: unknown,
 		| 'AI Healthcare'
 		| 'AI Neural Interfaces'
@@ -323,7 +321,7 @@ category: unknown,
   g: {/* TODO: Fix JSX expression */}
   r: string, professional?: string} enterprise?: string }
 	feature,
-  s: string[]
+  s: string[],
 	integrations?: string[]
 	useCases?: string[],
 	lin,
@@ -335,13 +333,13 @@ category: unknown,
 export const,
   cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
 		i,
-  d: 'ai-emotional-support-agent'
+  d: 'ai-emotional-support-agent',
 		nam,
   e: 'AI Emotional Support Agent',
   descriptio,
-  n: 'On-demand AI agent trained on CBT and mindfulness protocols with escalation pathways.'
+  n: 'On-demand AI agent trained on CBT and mindfulness protocols with escalation pathways.',
 		categor,
-  y: 'AI Emotional Intelligence'
+  y: 'AI Emotional Intelligence',
 		pricin,
   g: {/* TODO: Fix JSX expression */}
   r: '$99/mo' }
@@ -357,13 +355,13 @@ export const,
 		realServic,
   e: true}
 		i,
-  d: 'ai-product-spec-writer'
+  d: 'ai-product-spec-writer',
 		nam,
-  e: 'AI Product Spec Writer'
+  e: 'AI Product Spec Writer',
 		descriptio,
   n: 'Generate PRDs, user stories, and acceptance criteria aligned with business goals and analytics.'
 		categor,
-  y: 'AI Business Management'
+  y: 'AI Business Management',
 		pricin,
   g: {/* TODO: Fix JSX expression */}
   r: '$79/mo' }
@@ -379,13 +377,13 @@ export const,
 		realServic,
   e: true}
 		i,
-  d: 'ai-creative-studio'
+  d: 'ai-creative-studio',
 		nam,
   e: 'AI Creative Studio',
   descriptio,
-  n: 'Generate brand-consistent images and short-form videos with approvals and rights management.'
+  n: 'Generate brand-consistent images and short-form videos with approvals and rights management.',
 		categor,
-  y: 'AI Creativity'
+  y: 'AI Creativity',
 		pricin,
   g: {/* TODO: Fix JSX expression */}
   r: '$149/mo' }
@@ -419,10 +417,10 @@ pricin,
   g: {/* TODO: Fix JSX expression */}
   r: string, professional?: string} enterprise?: string }
 feature,
-  s: string[]
+  s: string[],
 integrations?: string[]
 use_cases?: string[]
-link: string
+link: string,
 rating?: number,,
 lin,
   k: string,
@@ -436,7 +434,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
   description: 'On - demand AI agent trained on CBT and mindfulness protocols with escalation pathways.',
   category: 'AI Emotional Intelligence',
   pricing: { starter: '$99 / mo' }
-  features: ['CBT - guided prompts_mood tracking_crisis escalationHIPAA - friendly modes']
+  features: ['CBT - guided prompts_mood tracking_crisis escalationHIPAA - friendly modes'],
   integrations: ['TwilioSlack'],
   use_cases: ['Employee wellness24 / 7 support'],
   link: 'https://ziontechgroup.com / services / ai - emotional - support - agent',
@@ -447,7 +445,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
   description: 'Generate PRDs, user stories, and acceptance criteria aligned with business goals and analytics.'
   category: 'AI Business Management',
   pricing: { starter: '$79 / mo' }
-  features: ['PRD templates_story generation_acceptance criteria_analytics alignment']
+  features: ['PRD templates_story generation_acceptance criteria_analytics alignment'],
   integrations: ['JiraLinear'],
   use_cases: ['Faster planning_better alignment'],
   link: 'https://ziontechgroup.com / services / ai - product - spec - writer',
@@ -458,7 +456,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
   description: 'Generate brand - consistent images and short - form videos with approvals and rights management.',
   category: 'AI Creativity',
   pricing: { starter: '$149 / mo' }
-  features: ['Brand kit_image & video gen_review & approvals_rights management']
+  features: ['Brand kit_image & video gen_review & approvals_rights management'],
   integrations: ['CanvaFigma'],
   use_cases: ['Marketing velocity_cost savings'],
   link: 'https://ziontechgroup.com / services / ai - creative - studio',
@@ -466,11 +464,11 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
 export const,
   cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
   i,
-  d: 'ai - emotional - support - agent'
+  d: 'ai - emotional - support - agent',
   nam,
   e: 'AI Emotional Support Agent',
   descriptio,
-  n: 'On - demand AI agent trained on CBT and mindfulness protocols with escalation pathways.'
+  n: 'On - demand AI agent trained on CBT and mindfulness protocols with escalation pathways.',
   categor,
   y: 'AI Emotional Intelligence',
   pricin,
@@ -488,7 +486,7 @@ export const,
   real_servic,
   e: true}
   i,
-  d: 'ai - product - spec - writer'
+  d: 'ai - product - spec - writer',
   nam,
   e: 'AI Product Spec Writer',
   descriptio,
@@ -510,11 +508,11 @@ export const,
   real_servic,
   e: true}
   i,
-  d: 'ai - creative - studio'
+  d: 'ai - creative - studio',
   nam,
   e: 'AI Creative Studio',
   descriptio,
-  n: 'Generate brand - consistent images and short - form videos with approvals and rights management.'
+  n: 'Generate brand - consistent images and short - form videos with approvals and rights management.',
   categor,
   y: 'AI Creativity',
   pricin,
@@ -534,10 +532,10 @@ export const,
 export type CuttingEdgeAIService = {/* TODO: Fix JSX expression */}
 	}
 ]
-export type CuttingEdgeAIService = {
+export type CuttingEdgeAIService = {}
 	id: string,
 	name: string,,
-  description: string
+  description: string,
 	category: unknown,
 		| 'AI Consciousness'
 		| 'AI Emotional Intelligence'
@@ -552,11 +550,11 @@ export type CuttingEdgeAIService = {/* TODO: Fix JSX expression */}
   g: {/* TODO: Fix JSX expression */}
   r: string, professional?: string} enterprise?: string }
 	feature,
-  s: string[]
+  s: string[],
 	integrations?: string[]
 	useCases?: string[],
 	lin,
-  k: string
+  k: string,
 	rating?: number
 	launchDate?: string,,
 	realService?: boolean
@@ -565,44 +563,44 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
 	{,
 		id: 'ai-emotional-support-agent'}
 		name: 'AI Emotional Support Agent'}
-  description: 'On-demand AI agent trained on CBT and mindfulness protocols with escalation pathways.'
+  description: 'On-demand AI agent trained on CBT and mindfulness protocols with escalation pathways.',
 		category: 'AI Emotional Intelligence',
 		pricing: { starter: '$99/mo' }
-		features: ['CBT-guided promptsMood trackingCrisis escalationHIPAA-friendly modes']
-		integrations: ['TwilioSlack']
-		useCases: ['Employee wellness24/7 support']
-		link: 'https://ziontechgroup.com/services/ai-emotional-support-agent'
+		features: ['CBT-guided promptsMood trackingCrisis escalationHIPAA-friendly modes'],
+		integrations: ['TwilioSlack'],
+		useCases: ['Employee wellness24/7 support'],
+		link: 'https://ziontechgroup.com/services/ai-emotional-support-agent',
 		realService: true,
 	}
-	{
+	{}
 		id: 'ai-product-spec-writer'}
 		name: 'AI Product Spec Writer',,
   description: 'Generate PRDs, user stories} and acceptance criteria aligned with business goals and analytics.'
 		category: 'AI Business Management',
 		pricing: { starter: '$79/mo' }
-		features: ['PRD templatesStory generationAcceptance criteriaAnalytics alignment']
-		integrations: ['JiraLinear']
-		useCases: ['Faster planningBetter alignment']
-		link: 'https://ziontechgroup.com/services/ai-product-spec-writer'
+		features: ['PRD templatesStory generationAcceptance criteriaAnalytics alignment'],
+		integrations: ['JiraLinear'],
+		useCases: ['Faster planningBetter alignment'],
+		link: 'https://ziontechgroup.com/services/ai-product-spec-writer',
 		realService: true,
 	}
-	{
+	{}
 		id: 'ai-creative-studio'}
 		name: 'AI Creative Studio'}
-  description: 'Generate brand-consistent images and short-form videos with approvals and rights management.'
+  description: 'Generate brand-consistent images and short-form videos with approvals and rights management.',
 		category: 'AI Creativity',
 		pricing: { starter: '$149/mo' }
-		features: ['Brand kitImage & video genReview & approvalsRights management']
-		integrations: ['CanvaFigma']
-		useCases: ['Marketing velocityCost savings']
-		link: 'https://ziontechgroup.com/services/ai-creative-studio'
+		features: ['Brand kitImage & video genReview & approvalsRights management'],
+		integrations: ['CanvaFigma'],
+		useCases: ['Marketing velocityCost savings'],
+		link: 'https://ziontechgroup.com/services/ai-creative-studio',
 		realService: true,
 	}
 ]
-export type CuttingEdgeAIService = {
+export type CuttingEdgeAIService = {}
 	id: string,
 	name: string,,
-  description: string
+  description: string,
 	category: unknown,
 		| 'AI Consciousness'
 		| 'AI Emotional Intelligence'
@@ -686,70 +684,70 @@ export type CuttingEdgeAIService = {/* TODO: Fix JSX expression */}
   g: {/* TODO: Fix JSX expression */}
   r: string, professional?: string} enterprise?: string }
 	feature,
-  s: string[]
+  s: string[],
 	integrations?: string[]
 	useCases?: string[],
 	lin,
-  k: string
+  k: string,
 	rating?: number
 	launchDate?: string,,
-	features: string[]
+	features: string[],
 	integrations?: string[]
 	useCases?: string[]
-	link: string
+	link: string,
 	rating?: number
 	realService?: boolean
 }
 export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
 	useCases?: string[]
 	lin,
-  k: string
+  k: string,
 	rating?: number
 	launchDate?: string;,
 	realService?: boolean
 }
-export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
+export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [],
 	{,
 		id: 'ai-emotional-support-agent'}
 		name: 'AI Emotional Support Agent'}
-  description: 'On-demand AI agent trained on CBT and mindfulness protocols with escalation pathways.'
+  description: 'On-demand AI agent trained on CBT and mindfulness protocols with escalation pathways.',
 		category: 'AI Emotional Intelligence',
 		pricing: { starter: '$99/mo' }
-		features: ['CBT-guided promptsMood trackingCrisis escalationHIPAA-friendly modes']
-		integrations: ['TwilioSlack']
-		useCases: ['Employee wellness24/7 support']
-		link: 'https://ziontechgroup.com/services/ai-emotional-support-agent'
+		features: ['CBT-guided promptsMood trackingCrisis escalationHIPAA-friendly modes'],
+		integrations: ['TwilioSlack'],
+		useCases: ['Employee wellness24/7 support'],
+		link: 'https://ziontechgroup.com/services/ai-emotional-support-agent',
 		realService: true,
 	}
-	{
+	{}
 		id: 'ai-product-spec-writer'}
 		name: 'AI Product Spec Writer',,
   description: 'Generate PRDs, user stories} and acceptance criteria aligned with business goals and analytics.'
 		category: 'AI Business Management',
 		pricing: { starter: '$79/mo' }
-		features: ['PRD templatesStory generationAcceptance criteriaAnalytics alignment']
-		integrations: ['JiraLinear']
-		useCases: ['Faster planningBetter alignment']
-		link: 'https://ziontechgroup.com/services/ai-product-spec-writer'
+		features: ['PRD templatesStory generationAcceptance criteriaAnalytics alignment'],
+		integrations: ['JiraLinear'],
+		useCases: ['Faster planningBetter alignment'],
+		link: 'https://ziontechgroup.com/services/ai-product-spec-writer',
 		realService: true,
 	}
-	{
+	{}
 		id: 'ai-creative-studio'}
 		name: 'AI Creative Studio'}
-  description: 'Generate brand-consistent images and short-form videos with approvals and rights management.'
+  description: 'Generate brand-consistent images and short-form videos with approvals and rights management.',
 		category: 'AI Creativity',
 		pricing: { starter: '$149/mo' }
-		features: ['Brand kitImage & video genReview & approvalsRights management']
-		integrations: ['CanvaFigma']
-		useCases: ['Marketing velocityCost savings']
-		link: 'https://ziontechgroup.com/services/ai-creative-studio'
+		features: ['Brand kitImage & video genReview & approvalsRights management'],
+		integrations: ['CanvaFigma'],
+		useCases: ['Marketing velocityCost savings'],
+		link: 'https://ziontechgroup.com/services/ai-creative-studio',
 		realService: true,
 	}
 ]
 export type CuttingEdgeAIService =
-  id: string
-  name: string
-  description: string
+  id: string,
+  name: string,
+  description: string,
   category: unknown,
 export const,
   cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
@@ -840,12 +838,12 @@ export type CuttingEdgeAIService =
       'Review & approvals',
       'Rights management'],
     integration,
-  s: ['Canva', 'Figma']}];	id: string
-	category: | 'AI Consciousness'
+  s: ['Canva', 'Figma']}];	id: string,
+	category: | 'AI Consciousness',
 ],	i,
   d: string,
 	categor,
-  y: | 'AI Consciousness'
+  y: | 'AI Consciousness',
 		| 'AI Emotional Intelligence'
 		| 'AI Creativity'
 		| 'AI Psychology'
@@ -854,19 +852,19 @@ export type CuttingEdgeAIService =
 		| 'AI Neural Interfaces',
 		| 'AI Quantum Computing',
 	pricing: {starter: string, professional?: string} enterprise?: string }
-	features: string[]
+	features: string[],
 	integrations?: string[]
 	useCases?: string[]
-	link: string
+	link: string,
 	rating?: number
 	launchDate?: string,,
 	realService?: boolean
 	launchDate?: string
 	realService?: boolean
-	features: string[]
+	features: string[],
 	integrations?: string[]
 	useCases?: string[]
-	link: string
+	link: string,
 	rating?: number
 	launchDate?: string;,
 	realService?: boolean
@@ -877,52 +875,52 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
   description: 'On-demand AI agent trained on CBT and mindfulness protocols with escalation pathways.',
 		category: 'AI Emotional Intelligence',
 		pricing: { starter: '$99/mo' }
-		features: ['CBT-guided promptsMood trackingCrisis escalationHIPAA-friendly modes']
-		integrations: ['TwilioSlack']
-		useCases: ['Employee wellness24/7 support']
+		features: ['CBT-guided promptsMood trackingCrisis escalationHIPAA-friendly modes'],
+		integrations: ['TwilioSlack'],
+		useCases: ['Employee wellness24/7 support'],
 		realService: true,
-		features: ['CBT-guided promptsMood trackingCrisis escalationHIPAA-friendly modes']
-		integrations: ['TwilioSlack']
-		useCases: ['Employee wellness24/7 support']
-		realService: true
+		features: ['CBT-guided promptsMood trackingCrisis escalationHIPAA-friendly modes'],
+		integrations: ['TwilioSlack'],
+		useCases: ['Employee wellness24/7 support'],
+		realService: true,
 	}
 		id: 'ai-product-spec-writer',
 		name: 'AI Product Spec Writer',
 		description: 'Generate PRDs, user stories, and acceptance criteria aligned with business goals and analytics.'
 		category: 'AI Business Management',
 		pricing: { starter: '$79/mo' }
-		features: ['PRD templatesStory generationAcceptance criteriaAnalytics alignment']
-		integrations: ['JiraLinear']
-		useCases: ['Faster planningBetter alignment']
+		features: ['PRD templatesStory generationAcceptance criteriaAnalytics alignment'],
+		integrations: ['JiraLinear'],
+		useCases: ['Faster planningBetter alignment'],
 		realService: true,
-		features: ['PRD templatesStory generationAcceptance criteriaAnalytics alignment']
-		integrations: ['JiraLinear']
-		useCases: ['Faster planningBetter alignment']
-		realService: true
+		features: ['PRD templatesStory generationAcceptance criteriaAnalytics alignment'],
+		integrations: ['JiraLinear'],
+		useCases: ['Faster planningBetter alignment'],
+		realService: true,
 	}
 		id: 'ai-creative-studio',
 		name: 'AI Creative Studio',
   description: 'Generate brand-consistent images and short-form videos with approvals and rights management.',
 		category: 'AI Creativity',
 		pricing: { starter: '$149/mo' }
-		features: ['Brand kitImage & video genReview & approvalsRights management']
-		integrations: ['CanvaFigma']
-		useCases: ['Marketing velocityCost savings']
+		features: ['Brand kitImage & video genReview & approvalsRights management'],
+		integrations: ['CanvaFigma'],
+		useCases: ['Marketing velocityCost savings'],
 		realService: true,
 	}
 ]
-name: string
-  description: string
+name: string,
+  description: string,
 category: unknown,
-		features: ['Brand kitImage & video genReview & approvalsRights management']
-		integrations: ['CanvaFigma']
-		useCases: ['Marketing velocityCost savings']
-		realService: true
+		features: ['Brand kitImage & video genReview & approvalsRights management'],
+		integrations: ['CanvaFigma'],
+		useCases: ['Marketing velocityCost savings'],
+		realService: true,
 	}
 ]
-name: string
-  description: string
-category: unknown
+name: string,
+  description: string,
+category: unknown,
 		| 'AI Healthcare'
 		| 'AI Neural Interfaces'
 		| 'AI Quantum Computing'
@@ -930,7 +928,7 @@ category: unknown
   g: {/* TODO: Fix JSX expression */}
   r: string, professional?: string} enterprise?: string }
 	feature,
-  s: string[]
+  s: string[],
 	integrations?: string[]
 	useCases?: string[],
 	lin,
@@ -942,13 +940,13 @@ category: unknown
 export const,
   cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
 		i,
-  d: 'ai-emotional-support-agent'
+  d: 'ai-emotional-support-agent',
 		nam,
   e: 'AI Emotional Support Agent',
   descriptio,
-  n: 'On-demand AI agent trained on CBT and mindfulness protocols with escalation pathways.'
+  n: 'On-demand AI agent trained on CBT and mindfulness protocols with escalation pathways.',
 		categor,
-  y: 'AI Emotional Intelligence'
+  y: 'AI Emotional Intelligence',
 		pricin,
   g: {/* TODO: Fix JSX expression */}
   r: '$99/mo' }
@@ -961,13 +959,13 @@ export const,
 		realServic,
   e: true}
 		i,
-  d: 'ai-product-spec-writer'
+  d: 'ai-product-spec-writer',
 		nam,
-  e: 'AI Product Spec Writer'
+  e: 'AI Product Spec Writer',
 		descriptio,
   n: 'Generate PRDs, user stories, and acceptance criteria aligned with business goals and analytics.'
 		categor,
-  y: 'AI Business Management'
+  y: 'AI Business Management',
 		pricin,
   g: {/* TODO: Fix JSX expression */}
   r: '$79/mo' }
@@ -980,13 +978,13 @@ export const,
 		realServic,
   e: true}
 		i,
-  d: 'ai-creative-studio'
+  d: 'ai-creative-studio',
 		nam,
   e: 'AI Creative Studio',
   descriptio,
-  n: 'Generate brand-consistent images and short-form videos with approvals and rights management.'
+  n: 'Generate brand-consistent images and short-form videos with approvals and rights management.',
 		categor,
-  y: 'AI Creativity'
+  y: 'AI Creativity',
 		pricin,
   g: {/* TODO: Fix JSX expression */}
   r: '$149/mo' }
@@ -1017,10 +1015,10 @@ pricin,
   g: {/* TODO: Fix JSX expression */}
   r: string, professional?: string} enterprise?: string }
 feature,
-  s: string[]
+  s: string[],
 integrations?: string[]
 use_cases?: string[]
-link: string
+link: string,
 rating?: number,,
 lin,
   k: string,
@@ -1034,7 +1032,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
   description: 'On - demand AI agent trained on CBT and mindfulness protocols with escalation pathways.',
   category: 'AI Emotional Intelligence',
   pricing: { starter: '$99 / mo' }
-  features: ['CBT - guided prompts_mood tracking_crisis escalationHIPAA - friendly modes']
+  features: ['CBT - guided prompts_mood tracking_crisis escalationHIPAA - friendly modes'],
   integrations: ['TwilioSlack'],
   use_cases: ['Employee wellness24 / 7 support'],
   link: 'https://ziontechgroup.com / services / ai - emotional - support - agent',
@@ -1045,7 +1043,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
   description: 'Generate PRDs, user stories, and acceptance criteria aligned with business goals and analytics.'
   category: 'AI Business Management',
   pricing: { starter: '$79 / mo' }
-  features: ['PRD templates_story generation_acceptance criteria_analytics alignment']
+  features: ['PRD templates_story generation_acceptance criteria_analytics alignment'],
   integrations: ['JiraLinear'],
   use_cases: ['Faster planning_better alignment'],
   link: 'https://ziontechgroup.com / services / ai - product - spec - writer',
@@ -1056,7 +1054,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
   description: 'Generate brand - consistent images and short - form videos with approvals and rights management.',
   category: 'AI Creativity',
   pricing: { starter: '$149 / mo' }
-  features: ['Brand kit_image & video gen_review & approvals_rights management']
+  features: ['Brand kit_image & video gen_review & approvals_rights management'],
   integrations: ['CanvaFigma'],
   use_cases: ['Marketing velocity_cost savings'],
   link: 'https://ziontechgroup.com / services / ai - creative - studio',
@@ -1064,11 +1062,11 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
 export const,
   cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
   i,
-  d: 'ai - emotional - support - agent'
+  d: 'ai - emotional - support - agent',
   nam,
   e: 'AI Emotional Support Agent',
   descriptio,
-  n: 'On - demand AI agent trained on CBT and mindfulness protocols with escalation pathways.'
+  n: 'On - demand AI agent trained on CBT and mindfulness protocols with escalation pathways.',
   categor,
   y: 'AI Emotional Intelligence',
   pricin,
@@ -1086,7 +1084,7 @@ export const,
   real_servic,
   e: true}
   i,
-  d: 'ai - product - spec - writer'
+  d: 'ai - product - spec - writer',
   nam,
   e: 'AI Product Spec Writer',
   descriptio,
@@ -1108,11 +1106,11 @@ export const,
   real_servic,
   e: true}
   i,
-  d: 'ai - creative - studio'
+  d: 'ai - creative - studio',
   nam,
   e: 'AI Creative Studio',
   descriptio,
-  n: 'Generate brand - consistent images and short - form videos with approvals and rights management.'
+  n: 'Generate brand - consistent images and short - form videos with approvals and rights management.',
   categor,
   y: 'AI Creativity',
   pricin,

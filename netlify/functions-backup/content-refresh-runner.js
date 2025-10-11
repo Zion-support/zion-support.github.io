@@ -21,7 +21,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
         shell: true}
     })
     // Commit and push
-    execSync(
+    execSync();
   try {/* TODO: Fix JSX expression */}
   l: true}
     })
@@ -40,15 +40,14 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
     })
     // Commit and push
     execSync()
-      'git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(content): refresh docs/search/changelog [skip ci]" || true) && (git push origin main || true)',
-      {/* TODO: Fix JSX expression */}
+      'git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(content): refresh docs/search/changelog [skip ci]" || true) && (git push origin main || true)',"      {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true })
     return {statusCode: 200,
       body: JSON.stringify({ ok: true),
         task: 'content-refresh-runner' })
     }
-  } catch (e) {return {
+  } catch (e) {return {}
       statusCode: 200,
       body: JSON.stringify({ ok: false),
         error: String(e,),
@@ -65,8 +64,7 @@ exports.config = { schedule: '*/10 * * * *' } exports.handler = async function()
       }); // Refresh docs/pages indexes and search' execSync('node automation/docs-pages-indexer.cjs || true') {stdio: 'inherit'} shell: true,
       });' execSync('node scripts/generate-readme.js || true') {stdio: 'inherit'} shell: true,
       });' execSync('node scripts/generate-search-index.js || true') {stdio: 'inherit'} shell: true,
-      }); // Commit and push' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(content): refresh docs/search/changelog [skip ci]" || true) && (git push origin main || true)', {stdio: 'inherit'} shell: true,
-      }); ' return {statusCode: 200,
+      }); // Commit and push' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(content): refresh docs/search/changelog [skip ci]" || true) && (git push origin main || true)', {stdio: 'inherit'} shell: true,"      }); ' return {statusCode: 200,
         body: JSON.stringify({ok: true),
         task: 'content-refresh-runner' }) } } catch (e) {return { statusCode: 200,
         body: JSON.stringify({ok: false),
@@ -86,10 +84,8 @@ exports.config = {/* TODO: Fix JSX expression */}
   l: true,
       });' execSync('node scripts/generate-search-index.js || true') {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
-  l: true,"
-      }); // Commit and push' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(content): refresh docs/search/changelog [skip ci]" || true) && (git push origin main || true)', {/* TODO: Fix JSX expression */}
-  o: 'inherit'} shel,
+  l: true,""      }); // Commit and push' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(content): refresh docs/search/changelog [skip ci]" || true) && (git push origin main || true)', {/* TODO: Fix JSX expression */}"  o: 'inherit'} shel,
   l: true,
       }); ' return {/* TODO: Fix JSX expression */}
   k: 'content-refresh-runner' }) } } catch (e) {/* TODO: Fix JSX expression */}
-      }) } } }'"
+      }) } } }'""

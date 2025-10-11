@@ -16,7 +16,7 @@ class ImageOptimizer {/* TODO: Fix JSX expression */}
     const imageFiles = files.filter(file => )
       /.(jpg|jpeg|png|webp)$/i.test(file)
     )
-    for (const file of imageFiles) {/* TODO: Fix JSX expression */}
+    for (const file of, imageFiles) {/* TODO: Fix JSX expression */}
     }
 
 //     }

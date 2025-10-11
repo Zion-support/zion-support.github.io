@@ -4,8 +4,8 @@
  * Comprehensive security headers for production applications
  */
 
-export interface SecurityHeadersConfig {
-    // TODO: Add content
+export interface SecurityHeadersConfig {}
+    // TODO: Add content,
   }
 
 }
@@ -22,27 +22,11 @@ export const,
 }
   // Content Security Policy,
   contentSecurityPolic,
-  y: [
+  y: [],
   // TOD,
-  O: Add items]
-//     "default-src 'self'","
-    "script-src 'self' 'unsafe-inline' 'unsafe-eval' http,
-  s://www.googletagmanager.com,"
-  https://www.google-analytics.com","
-//     "style-src 'self' 'unsafe-inline'","
-    "img-src 'self' dat,
-  a: http,
-  s: blo,"
-  b:","
-    "font-src 'self' dat,"
-  a:","
-    "connect-src 'self' http,
-  s://www.google-analytics.com,"
-  https://analytics.google.com","
-//     "frame-ancestors 'none'","
-//     "base-uri 'self'","
-//     "form-action 'self'",
-//     'upgrade-insecure-requests'].join('; '),
+  O: Add items],
+//     "default-src 'self'",""    "script-src 'self' 'unsafe-inline' 'unsafe-eval' http,"  s://www.googletagmanager.com,""  https://www.google-analytics.com",""//     "style-src 'self' 'unsafe-inline'",""    "img-src 'self' dat,"  a: http,
+  s: blo,""  b:",""    "font-src 'self' dat,""  a:",""    "connect-src 'self' http,"  s://www.google-analytics.com,""  https://analytics.google.com",""//     "frame-ancestors 'none'",""//     "base-uri 'self'",""//     "form-action 'self'","//     'upgrade-insecure-requests'].join('; '),
   // HTTP Strict Transport Security (HSTS)
   strictTransportSecurit,
   y: 'max-age=63072000; includeSubDomains, preload',
@@ -55,11 +39,11 @@ export const,
   // Referrer Policy,
   referrerPolic,
   y: 'strict-origin-when-cross-origin',
-  // Permissions Policy (formerly Feature Policy)
+  // Permissions Policy (formerly Feature, Policy)
   permissionsPolic,
-  y: [
+  y: [],
   // TOD,
-  O: Add items]
+  O: Add items],
     'camera=()',
     'microphone=()',
     'geolocation=()',
@@ -76,7 +60,7 @@ export const,
  */
 export function getSecurityHeaders()
   customConfig?: Partial
-          <SecurityHeadersConfig>
+          <SecurityHeadersConfig>;
 ): Record<string, string> {const headers: Record<string, string> = {}
   // TODO: Add content,
 
@@ -123,9 +107,9 @@ export function getSecurityHeaders()
  */
 export function getNextSecurityHeaders()
   customConfig?: Partial
-          <SecurityHeadersConfig>
-): Array<{ key: string, value: string }> {
-    // TODO: Add content
+          <SecurityHeadersConfig>;
+): Array<{ key: string, value: string }> {}
+    // TODO: Add content,
   }
 
 }
@@ -137,5 +121,4 @@ export function getNextSecurityHeaders()
 //     value;)
   }))
 }
-export default defaultSecurityHeaders;"
-
+export default defaultSecurityHeaders;""

@@ -1,5 +1,5 @@
 
-const SAMPLE_QUERIES = [
+const SAMPLE_QUERIES = []
   'React developers under $50/hr',
   'Part-time DevOps jobs in LATAM',
   'AI/ML engineers for startup',

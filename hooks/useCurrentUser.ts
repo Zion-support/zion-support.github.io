@@ -1,38 +1,38 @@
 import useSWR from 'swr'
-const fetcher = (url: string) => fetch(url).then(r => (r.ok ? r.json() : null))
-export function useCurrentUser() {
-export function useCurrentUser() {
+const fetcher = (url: string) => fetch(url).then(r => (r.ok ? r.json() : null)),
+export function useCurrentUser() {}
+export function useCurrentUser() {}
   const { data, error, mutate } = useSWR('/api/auth/me', fetcher)
-  return {
-    user: data?.user |null
-    loading: !data && !error
+  return {}
+    user: data?.user |null,
+    loading: !data && !error,
     error
     mutate
 
-const fetcher = (url: string) =>: any fetch (url).then (r => (r.ok ? r.json () : null))
+const fetcher = (url: string) =>: any fetch (url).then (r => (r.ok ? r.json () : null)),
 export /**
  * useCurrentUser - Function description
  */
-function useCurrentUser() {
+function useCurrentUser() {}
   const { data, error, mutate } = useSWR ('/api / auth / me', fetcher)
-  return {
-const fetcher = (url: string) => fetch(url).then((r) => (r.ok ? r.json() : null))
-export function useCurrentUser() {
+  return {}
+const fetcher = (url: string) => fetch(url).then((r) => (r.ok ? r.json() : null)),
+export function useCurrentUser() {}
   const { data, error, mutate } = useSWR('/api/auth/me', fetcher)
-  return {
+  return {}
     user: data?.user || null,
     loading: !data && !error,
     error,
     mutate,
   }
-    loading: !data && !error
+    loading: !data && !error,
     error
     error,
     mutate}
 const fetcher = (url: string) => fetch(url).then((r) => (r.ok ? r.json() : null)),
-export function useCurrentUser() {
+export function useCurrentUser() {}
   const { data, error, mutate } = useSWR('/api/auth/me', fetcher)
-  return {
+  return {}
     user: data?.user || null, loading: !data && !error,
     error
     mutate}

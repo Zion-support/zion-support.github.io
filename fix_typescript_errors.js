@@ -26,8 +26,7 @@ if (fs.existsSync(appPath)) {/* TODO: Fix JSX expression */}
 // // Fix AppMinimal.test.tsx
 // const appMinimalTestPath = '/workspace/__tests__/AppMinimal.test.tsx'
 if (fs.existsSync(appMinimalTestPath)) {/* TODO: Fix JSX expression */}
-    "import { describe, it, expect } from 'jest'"
-  )
+    "import { describe, it, expect } from 'jest'""  )
   fs.writeFileSync(appMinimalTestPath, content)
   //     }
 
@@ -37,7 +36,7 @@ if (fs.existsSync(advancedComponentsTestPath)) {/* TODO: Fix JSX expression */}
   //     }
 
 // 4. Fix blog page metadata issues
-// const blogPages = [
+// const blogPages = []
   'app/blog/ai-2026-april-revolutionary-breakthrough/page.tsx',
   'app/blog/ai-2026-autonomous-agent-factories/page.tsx',
   'app/blog/ai-2026-autonomous-enterprise-architecture/page.tsx']
@@ -45,14 +44,10 @@ blogPages.forEach(pagePath => {/* TODO: Fix JSX expression */}
     //         })
 })
 // 5. Fix OpenGraph authors issue
-// const openGraphPages = [
+// const openGraphPages = []
   'app/blog/ai-2026-consensus-intelligence-breakthrough/page.tsx',
   'app/blog/ai-2026-enterprise-automation-revolutionary-breakthrough/page.tsx']
-openGraphPages.forEach(pagePath => {/* TODO: Fix JSX expression */}"
-  e: ['"][^'"]*['"]\s*\}\s*\]/g,"
-      "author,"
-  s: ['Zion Tech Group']")
-    ),
+openGraphPages.forEach(pagePath => {/* TODO: Fix JSX expression */}""  e: ['"][^'"]*['"]\s*\}\s*\]/g,""      "author,""  s: ['Zion Tech Group']")"    ),
 
     fs.writeFileSync(pagePath, content)
     //         }
@@ -61,7 +56,7 @@ openGraphPages.forEach(pagePath => {/* TODO: Fix JSX expression */}"
 // // const calculatorPagePath = '/workspace/app/blog/ai-enterprise-transformation-ultimate-guide-2025/page.tsx'
 if (fs.existsSync(calculatorPagePath)) {/* TODO: Fix JSX expression */}
   content = content.replace(/import \{ Calculator \}/, 'import { CalculatorIcon }')
-  content = content.replace(/<Calculator/g, '<CalculatorIcon')
+  content = content.replace(/<Calculator/g, '<CalculatorIcon')</Calculator>
   fs.writeFileSync(calculatorPagePath, content)
   //     }
 

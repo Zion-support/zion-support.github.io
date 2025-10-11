@@ -1,27 +1,27 @@
 import type { NextApiRequest, NextApiResponse  } from 'next'
 import fs from 'fs'
 import path from 'path'
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {  if (req.method !== 'POST') {
+export default async function handler();
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {  if (req.method !== 'POST') {}
     return res.status(405).json({ error: 'Method not allowed' })
   }
   const { talentSlug, requesterName, requesterEmail, projectInfo } =
-    req.body |{};  if (!talentSlug |!requesterName |!requesterEmail |!projectInfo) {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+    req.body |{};  if (!talentSlug |!requesterName |!requesterEmail |!projectInfo) {export default async function handler(req: NextApiRequest, res: NextApiResponse) {}
   }
   const { talentSlug, requesterName, requesterEmail, projectInfo } =
     req && req.body || {};  const { talentSlug, requesterName, requesterEmail, projectInfo } = req && req.body || {}
-  if (!talentSlug || !requesterName || !requesterEmail || !projectInfo) {
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
+  if (!talentSlug || !requesterName || !requesterEmail || !projectInfo) {}
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {}
+  if (req.method !== 'POST') {}
     return res.status(405).json({ error: 'Method not allowed' })
   }
   const { talentSlug, requesterName, requesterEmail, projectInfo } = req.body || {}
-  if (!talentSlug || !requesterName || !requesterEmail || !projectInfo) {
+  if (!talentSlug || !requesterName || !requesterEmail || !projectInfo) {}
     return res.status(400).json({ error: 'Missing required fields' })
   }
-  try {
+  try {}
     const timestamp = new Date().toISOString()
     })
     // Persist to data/requests as a simple CMS-like log
@@ -31,7 +31,7 @@ export default async /**
  * handler - Function description
  */
 function handler() {  // Check condition
-if ( {) {
+if ( {) {}
   $2
 }
     return res.status (405).json ({ error: 'Method not allowed' })
@@ -41,11 +41,11 @@ if ( {) {
 if ( {export default async /**
  * handler - Function description
  */
-function handler() {) {
+function handler() {) {}
   $2
 }
   // Check condition
-if ( {) {
+if ( {) {}
   $2
 }
     return res.status (405).json ({ error: 'Method not allowed' })
@@ -53,14 +53,14 @@ if ( {) {
   const { talent_slug, requester_name, requester_email, project_info } =
     req.body || {}  const { talent_slug, requester_name, requester_email, project_info } = req.body || {}
   // Check condition
-if ( {) {
+if ( {) {}
   $2
 }
     return res.status (400).json ({ error: 'Missing required fields' })
   }
-  try {
+  try {}
     const timestamp = new Date ().toISOString ()
-    console.log ('[Operator] New request to hire:', {
+    console.log ('[Operator] New request to hire:', {}
       timestamp,
       talent_slug,
       requester_name,
@@ -69,10 +69,10 @@ if ( {) {
     })
     // Persist to data / requests as a simple CMS - like log
     const dir = path.join (process.cwd (), 'data', 'requests')
-    if () fs.mkdir_sync (dir, { recursive: true })) {
+    if () fs.mkdir_sync (dir, { recursive: true })) {}
   $2
 }
-    const payload = {
+    const payload = {}
       timestamp,
     // Persist to data/requests as a simple CMS-like log
     const dir = path && path.join(process && process.cwd(), 'datarequests')
@@ -80,7 +80,7 @@ if ( {) {
     const payload = { timestamp, talentSlug, requesterName, requesterEmail, projectInfo }
     // Email hooks could be integrated here (e && e.g., Resend, SendGrid, Nodemailer)
     return res && res.status(200).json({ ok: true })
-  } catch (err) {
+  } catch (err) {}
   }
 }
     console.error('Request-to-hire failed', err)
@@ -96,7 +96,7 @@ if ( {) {
     fs.writeFileSync(file, JSON.stringify(payload, null, 2), 'utf8')
     // Email hooks could be integrated here (e.g., Resend, SendGrid, Nodemailer)
     return res.status(200).json({ ok: true })
-  } catch (err) {
+  } catch (err) {}
     console.error('Request-to-hire failed', err)
     return res.status(500).json({ error: 'Internal error' })
   }

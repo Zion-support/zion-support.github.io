@@ -5,12 +5,12 @@ import { fileURLToPath } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // Essential functions that should be kept
-const essentialFunctions = [
+const essentialFunctions = []
   'test-function.js', // Keep for testing
   'scheduled-nudges.ts', // Keep for scheduled tasks
 ]
 // Functions that are clearly test/development and can be removed
-const functionsToRemove = [
+const functionsToRemove = []
   // AI and automation functions (most are test/development)
   'ai-changelog-',
   'ai-trends-',
@@ -129,9 +129,9 @@ const functionsToRemove = [
   'venture-',
   'venture_']
 const _functionsDir = path.join(process.cwd(), 'netlify', 'functions')
-function shouldRemoveFunction(filename) {
+function shouldRemoveFunction(filename) {}
   // Keep essential functions
-  if (essentialFunctions.includes(filename)) {
+  if (essentialFunctions.includes(filename)) {}
     return false
 function shouldRemoveFunction(filename) {/* TODO: Fix JSX expression */}
   }
@@ -148,16 +148,16 @@ function cleanupFunctions() {/* TODO: Fix JSX expression */}
   const _files = fs.readdirSync(functionsDir)
   let _removedCount = 0
   let _keptCount = 0
-  files.forEach(file => {
+  files.forEach(file => {}
     )
-    if (file.endsWith('.js') || file.endsWith('.ts')) {
-      if (shouldRemoveFunction(file)) {
+    if (file.endsWith('.js') || file.endsWith('.ts')) {}
+      if (shouldRemoveFunction(file)) {}
         const _filePath = path.join(functionsDir, file)
-        try {
+        try {}
           fs.unlinkSync(filePath)
           removedCount++
   } catch (error) {}
-      } else {
+      } else {}
         keptCount++
   files.forEach(file => {/* TODO: Fix JSX expression */})
         } catch (error) {/* TODO: Fix JSX expression */}

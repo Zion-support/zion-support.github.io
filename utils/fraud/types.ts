@@ -7,108 +7,108 @@ export type AdminActionType =
   | 'investigate'
   | 'dismiss'
   | 'escalate'
-  id: string
-  case_id: string
-  type: AdminActionType
-export interface AdminAction {
-  id: string
-  case_id: string
-  type: AdminActionType
-  admin_id: string
+  id: string,
+  case_id: string,
+  type: AdminActionType,
+export interface AdminAction {}
+  id: string,
+  case_id: string,
+  type: AdminActionType,
+  admin_id: string,
   reason: string,
-  details: Record < string, any>
-  created_at: string
+  details: Record < string, any>;
+  created_at: string,
   executed_at?: string
   status: 'pending' | 'executed' | 'failed',
 }
-export interface FraudDetectionResult {
-  is_fraud: boolean
-  isFraud: boolean
-  confidence: number
-  reasons: string[]
-export interface FraudDetectionConfig {
-  enabled: boolean
-  rules: {
-    suspiciousActivity: {
-      enabled: boolean
+export interface FraudDetectionResult {}
+  is_fraud: boolean,
+  isFraud: boolean,
+  confidence: number,
+  reasons: string[],
+export interface FraudDetectionConfig {}
+  enabled: boolean,
+  rules: {}
+    suspiciousActivity: {}
+      enabled: boolean,
       threshold: number,
     }
-    fake_profile: {
-      enabled: boolean
+    fake_profile: {}
+      enabled: boolean,
       threshold: number,
     }
-    payment_fraud: {
-      enabled: boolean
+    payment_fraud: {}
+      enabled: boolean,
       threshold: number,
     }
-    spam: {
-      enabled: boolean
+    spam: {}
+      enabled: boolean,
       threshold: number,
     }
   }
-  auto_actions: {
-    enabled: boolean
-    actions: AdminActionType[]
+  auto_actions: {}
+    enabled: boolean,
+    actions: AdminActionType[],
   }
 }
 }
 export type MonitoredSource = 'signup' | 'job_post' | 'message' | 'quote' | 'review'
 export type GptClassificationLabel = 'SAFE' | 'SUSPICIOUS' | 'DANGEROUS'
-export interface FraudEvent {
-  id: string
-  userId: string | null
-  source: MonitoredSource
-  content: string | null
+export interface FraudEvent {}
+  id: string,
+  userId: string | null,
+  source: MonitoredSource,
+  content: string | null,
   metadata: Record<string, unknown> | null
-  ipAddress: string | null
-  createdAt: string; // ISO string
+  ipAddress: string | null,
+  createdAt: string; // ISO string,
 }
-export interface HeuristicEvaluation {
-  flagged: boolean
-  reasons: string[]
-  severity: 'low' | 'medium' | 'high'
+export interface HeuristicEvaluation {}
+  flagged: boolean,
+  reasons: string[],
+  severity: 'low' | 'medium' | 'high',
 }
-export interface GptClassification {
-  label: GptClassificationLabel
-  reason: string
-  confidence: number; // 0..1
+export interface GptClassification {}
+  label: GptClassificationLabel,
+  reason: string,
+  confidence: number; // 0..1,
 }
 export type FraudReviewStatus = 'PENDING' | 'WARNED' | 'SUSPENDED' | 'IGNORED'
-export interface StoredFraudRecord extends FraudEvent {
-  heuristic: HeuristicEvaluation
+export interface StoredFraudRecord extends FraudEvent {}
+  heuristic: HeuristicEvaluation,
   gpt?: GptClassification
-  autoHidden: boolean
-  status: FraudReviewStatus
+  autoHidden: boolean,
+  status: FraudReviewStatus,
 }
 export type AdminActionType = 'SUSPEND' | 'WARN' | 'IGNORE'
-export interface AdminActionRecord {
-  id: string
-  fraudId: string
-  action: AdminActionType
-  adminId: string | null
-  reason: string | null
-  createdAt: string; // ISO
+export interface AdminActionRecord {}
+  id: string,
+  fraudId: string,
+  action: AdminActionType,
+  adminId: string | null,
+  reason: string | null,
+  createdAt: string; // ISO,
 }
-export interface PrivacySettings {
-  userId: string
-  monitoringContentAnalysisOptOut: boolean
-  updatedAt: string; // ISO
+export interface PrivacySettings {}
+  userId: string,
+  monitoringContentAnalysisOptOut: boolean,
+  updatedAt: string; // ISO,
 }
-export interface ListFilters {
+export interface ListFilters {}
   source?: MonitoredSource
   userId?: string
   label?: GptClassificationLabel
   status?: FraudReviewStatus
 }
-export interface MonthlyReport {
-  month: string; // YYYY-MM
-  totals: {
-    all: number
-    safe: number
-    suspicious: number
-    dangerous: number
+export interface MonthlyReport {}
+  month: string; // YYYY-MM,
+  totals: {}
+    all: number,
+    safe: number,
+    suspicious: number,
+    dangerous: number,
   }
-  bySource: Record<MonitoredSource, number>
-  falsePositives: number; // count of IGNORED actions
-  topReasons: Array<{ reason: string; count: number }>
+  bySource: Record<MonitoredSource, number>;
+  falsePositives: number; // count of IGNORED actions,
+  topReasons: Array<{ reason: string; count: number }>;
 }

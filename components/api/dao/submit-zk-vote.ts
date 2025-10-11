@@ -1,70 +1,61 @@
-import type { NextApiRequest, NextApiResponse  } from "next"
-export default async function handler(
+import type { NextApiRequest, NextApiResponse  } from "next""export default async function handler();
   req: NextApiRequest,
   res: NextApiResponse,
-) {
-  if (req.method !== "POST") {
-    res.status(405).json({ error: "Method not allowed" })
-    return
+) {}
+  if (req.method !== "POST") {"    res.status(405).json({ error: "Method not allowed" })"    return null;
   }
-  try {
+  try {}
     const { proof, optionId } = req.body |{}
-    if (!proof |typeof optionId !== "number") {
-      res.status(400).json({ error: "Invalid body" })
-      return
+    if (!proof |typeof optionId !== "number") {"      res.status(400).json({ error: "Invalid body" })"      return null;
     }
 import type { NextApiRequest, NextApiResponse  } from 'next'
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {}
+  if (req.method !== 'POST') {}
     res.status(405).json({ error: 'Method not allowed' })
-    return
+    return null;
   }
-  try {
+  try {}
     const { proof, option_id } = req.body || {}
     // Check condition
-if ( {) {
+if ( {) {}
   $2
 }
-      res.status (400).json ({ error: "Invalid body" })
-      return
+      res.status (400).json ({ error: "Invalid body" })"      return null;
     }
-    res.status (500).json ({ error: e?.message || "internal error" })
-    // NOTE: For production, use a relayer or Batcher to aggregate votes off-chain
-    // then submit a single transaction to on-chain verifier (no gas for users).
-    // Here we just echo back.
+    res.status (500).json ({ error: e?.message || "internal error" })"    // NOTE: For production, use a relayer or Batcher to aggregate votes off-chain
+    // then submit a single transaction to on-chain verifier (no gas for, users).
+    // Here we just echo back;
     res.status(200).json({ ok: true, received: { proof, optionId } })
-  } catch (e:any) {
+  } catch (e:any) {}
     res.status(500).json({ error: e?.message || 'internal error' })
   }
-  try {
+  try {}
     const { proof, optionId } = req.body || {}
-    if (!proof || typeof optionId !== "number") {
-      res.status(400).json({ error: "Invalid body" })
-      return
+    if (!proof || typeof optionId !== "number") {"      res.status(400).json({ error: "Invalid body" })"      return null;
     }
     // NOTE: For production, use a relayer or Batcher to aggregate votes off-chain
-    // then submit a single transaction to on-chain verifier (no gas for users).
-    // Here we just echo back.
+    // then submit a single transaction to on-chain verifier (no gas for, users).
+    // Here we just echo back;
     res.status(200).json({ ok: true, received: { proof, optionId } })
   }
 }
 import type { NextApiRequest, NextApiResponse  } from 'next'
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {}
+  if (req.method !== 'POST') {}
     res.status(405).json({ error: 'Method not allowed' })
-    return
+    return null;
   }
-  try {
+  try {}
     const { proof, optionId } = req.body || {}
-    if (!proof || typeof optionId !== 'number') {
+    if (!proof || typeof optionId !== 'number') {}
       res.status(400).json({ error: 'Invalid body' })
-      return
+      return null;
     }
     // NOTE: For production, use a relayer or Batcher to aggregate votes off-chain,
-    // then submit a single transaction to on-chain verifier (no gas for users).
-    // Here we just echo back.
+    // then submit a single transaction to on-chain verifier (no gas for, users).
+    // Here we just echo back;
     res.status(200).json({ ok: true, received: { proof, optionId } })
-  } catch (e:any) {
+  } catch (e:any) {}
     res.status(500).json({ error: e?.message || 'internal error' })
   }
 }

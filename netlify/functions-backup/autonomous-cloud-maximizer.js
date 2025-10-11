@@ -42,7 +42,7 @@ exports.handler = async () => {const logs = []}
   step('git: sync') 'automation/advanced-git-sync.cjs'),
   return {statusCode: 200}
     headers: { 'content-type': 'text/plain' },
-    body: logs.join('\n')
+    body: logs.join('\n'),
   step('gi)
   t: sync') 'automation/advanced-git-sync.cjs'),
   return {/* TODO: Fix JSX expression */}

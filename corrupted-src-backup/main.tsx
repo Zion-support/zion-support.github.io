@@ -22,8 +22,8 @@ if (!container) {/* TODO: Fix JSX expression */}
 const _root = createRoot(container)
 root.render(<React.StrictMode>)
     <App />)
-root.render(<React.StrictMode>
-    <App />
+root.render(<React.StrictMode>;
+    <App />;
   </React.StrictMode>)
 )
 reportWebVitals()

@@ -1,54 +1,54 @@
 import { ServiceVariant } from '../types/service-variants'
-export interface EnterpriseBlockchainService {
-  id: string
-  name: string
-  tagline: string
-  price: string
-  period: string
-  description: string
-  features: string[]
-  popular: boolean
-  icon: string
-  color: string
-  textColor: string
-  link: string
-  marketPosition: string
-  targetAudience: string
-  trialDays: number
-  setupTime: string
-  category: string
-  realService: boolean
-  technology: string[]
-  integrations: string[]
-  useCases: string[]
-  roi: string
-  competitors: string[]
-  marketSize: string
-  growthRate: string
-  variant: ServiceVariant
-  contactInfo: {
-    mobile: string
-    email: string
-    address: string
-    website: string
+export interface EnterpriseBlockchainService {}
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
+  contactInfo: {}
+    mobile: string,
+    email: string,
+    address: string,
+    website: string,
   }
-  realImplementation: boolean
-  implementationDetails: string
-  launchDate: string
-  customers: number
-  rating: number
-  reviews: number
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number,
 }
-export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
+export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [],
   // Enterprise Blockchain Platform
-  {
+  {}
     id: 'enterprise-blockchain-platform',
     name: 'Enterprise Blockchain Platform',
     tagline: 'Build scalable enterprise blockchain solutions with 100,000+ TPS',
     price: '$6,999',
     period: '/month',
     description: 'Enterprise-grade blockchain platform that enables businesses to build scalable, secure, and compliant blockchain solutions for supply chain, finance, and identity management.',
-    features: [
+    features: [],
       '100,000+ transactions per second',
       'Enterprise-grade security',
       'Regulatory compliance tools',
@@ -79,28 +79,28 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
     marketSize: '$67B blockchain market',
     growthRate: '300% annual growth',
     variant: 'quantum-cyberpunk',
-    contactInfo: {
+    contactInfo: {}
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Full enterprise blockchain platform with high performance, security, compliance, and comprehensive development tools.',
     launchDate: '2024-01-15',
     customers: 89,
     rating: 4.8,
-    reviews: 67
+    reviews: 67,
   },
   // DeFi Platform for Enterprises
-  {
+  {}
     id: 'defi-enterprise-platform',
     name: 'DeFi Enterprise Platform',
     tagline: 'Enterprise-grade decentralized finance with institutional security',
     price: '$8,999',
     period: '/month',
     description: 'Institutional-grade decentralized finance platform that enables enterprises to participate in DeFi protocols with enhanced security, compliance, and risk management.',
-    features: [
+    features: [],
       'Institutional-grade security',
       'Regulatory compliance',
       'Risk management tools',
@@ -131,28 +131,28 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
     marketSize: '$80B DeFi market',
     growthRate: '400% annual growth',
     variant: 'quantum-financial',
-    contactInfo: {
+    contactInfo: {}
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Full enterprise DeFi platform with institutional security, compliance tools, and comprehensive risk management.',
     launchDate: '2024-02-01',
     customers: 45,
     rating: 4.9,
-    reviews: 38
+    reviews: 38,
   },
   // NFT Enterprise Platform
-  {
+  {}
     id: 'nft-enterprise-platform',
     name: 'NFT Enterprise Platform',
     tagline: 'Build enterprise NFT solutions for digital assets and collectibles',
     price: '$4,999',
     period: '/month',
     description: 'Enterprise-grade NFT platform that enables businesses to create, manage, and trade digital assets with advanced features for collectibles, gaming, and digital art.',
-    features: [
+    features: [],
       'Multi-chain NFT support',
       'Advanced metadata management',
       'Royalty and licensing tools',
@@ -183,28 +183,28 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
     marketSize: '$35B NFT market',
     growthRate: '500% annual growth',
     variant: 'holographic-advanced',
-    contactInfo: {
+    contactInfo: {}
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Full enterprise NFT platform with multi-chain support, advanced features, and comprehensive management tools.',
     launchDate: '2024-01-20',
     customers: 156,
     rating: 4.7,
-    reviews: 134
+    reviews: 134,
   },
   // Blockchain Supply Chain Platform
-  {
+  {}
     id: 'blockchain-supply-chain-platform',
     name: 'Blockchain Supply Chain Platform',
     tagline: 'End-to-end supply chain transparency with blockchain technology',
     price: '$7,999',
     period: '/month',
     description: 'Comprehensive blockchain-based supply chain platform that provides end-to-end transparency, traceability, and automation for complex supply chain operations.',
-    features: [
+    features: [],
       'End-to-end traceability',
       'Smart contract automation',
       'Real-time monitoring',
@@ -235,28 +235,28 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
     marketSize: '$28B supply chain market',
     growthRate: '280% annual growth',
     variant: 'quantum-cyberpunk',
-    contactInfo: {
+    contactInfo: {}
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Full blockchain supply chain platform with traceability, automation, and comprehensive management tools.',
     launchDate: '2024-02-15',
     customers: 78,
     rating: 4.8,
-    reviews: 62
+    reviews: 62,
   },
   // Blockchain Identity Management
-  {
+  {}
     id: 'blockchain-identity-management',
     name: 'Blockchain Identity Management',
     tagline: 'Self-sovereign identity with blockchain security and privacy',
     price: '$5,999',
     period: '/month',
     description: 'Advanced blockchain-based identity management platform that provides self-sovereign identity, zero-knowledge proofs, and privacy-preserving authentication for enterprises.',
-    features: [
+    features: [],
       'Self-sovereign identity',
       'Zero-knowledge proofs',
       'Privacy-preserving authentication',
@@ -287,17 +287,17 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
     marketSize: '$22B identity management market',
     growthRate: '250% annual growth',
     variant: 'quantum-cyberpunk',
-    contactInfo: {
+    contactInfo: {}
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Full blockchain identity platform with self-sovereign identity, zero-knowledge proofs, and comprehensive security features.',
     launchDate: '2024-01-10',
     customers: 112,
     rating: 4.8,
-    reviews: 89
+    reviews: 89,
   }
 ]

@@ -9,15 +9,15 @@ import { execSync } from 'child_process'
 import { fileURLToPath } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
-class BuildOptimizer {
-    constructor() {
+class BuildOptimizer {}
+    constructor() {}
     this.distPath = path.join(process.cwd(), 'dist')
     this.optimizations = []
   }
 
-  async optimize() {
+  async optimize() {}
     console.log('🚀 Starting build optimization...')
-    try {
+    try {}
       await this.analyzeBundle()
       await this.optimizeImages()
       await this.optimizeCSS()
@@ -29,20 +29,20 @@ class BuildOptimizer {
       await this.generateServiceWorker()
       console.log('✅ Build optimization completed successfully!')
       this.printSummary()
-  } catch (error) {
+  } catch (error) {}
     console.error('❌ Build optimization failed:', error.message)
       process.exit(1)
   }
   }
 
-  async analyzeBundle() {
+  async analyzeBundle() {}
     console.log('📊 Analyzing bundle...')
-    if (!fs.existsSync(this.distPath)) {
+    if (!fs.existsSync(this.distPath)) {}
       throw new Error('Dist folder not found. Please run build first.')
   }
 
     const files = this.getFilesRecursively(this.distPath)
-    const totalSize = files.reduce((total, file) => {
+    const totalSize = files.reduce((total, file) => {}
     const stats = fs.statSync(file)
       return total + stats.size
   }, 0)
@@ -52,13 +52,13 @@ class BuildOptimizer {
       details: `Total size: ${(totalSize / 1024 / 1024).toFixed(2)} MB`
     })
     // Check for large files
-    const largeFiles = files.filter(file => {
+    const largeFiles = files.filter(file => {}
     )
       const stats = fs.statSync(file)
       return stats.size > 100 * 1024; // 100KB
   })
-    if (largeFiles.length > 0) {
-      console.log('⚠️  Large files detected: ')
+    if (largeFiles.length > 0) {}
+      console.log('⚠️  Large files detected: '),
       largeFiles.forEach(file => {)
         const stats = fs.statSync(file),
         console.log(`   ${file}: ${(stats.size / 1024).toFixed(2)} KB`)
@@ -66,30 +66,28 @@ class BuildOptimizer {
     }
   }
 
-  async optimizeImages() {
+  async optimizeImages() {}
     console.log('🖼️  Optimizing images...')
     const imageExtensions = ['.png', '.jpg', '.jpeg', '.gif', '.svg', '.webp']
     const images = this.getFilesRecursively(this.distPath).filter(file => )
       imageExtensions.some(ext => file.toLowerCase().endsWith(ext))
     )
-    if (images.length === 0) {
+    if (images.length === 0) {}
       this.optimizations.push({)
         name: 'Image Optimization'),
         status: 'skipped'),
         details: 'No images found'})
-      return
+      return null;
     }
 
     // Add image optimization metadata
-    images.forEach(image => {
+    images.forEach(image => {}
     )
       const stats = fs.statSync(image)
       const sizeKB = (stats.size / 1024).toFixed(2)
-      // Add loading="lazy" to HTML if it contains images
-      if (image.endsWith('.html')) {
+      // Add loading="lazy" to HTML if it contains images"      if (image.endsWith('.html')) {}
         let content = fs.readFileSync(image, 'utf8')
-        content = content.replace(/<img(?![^>]*loading=)/g, '<img loading="lazy"')
-        fs.writeFileSync(image, content)
+        content = content.replace(/<img(?![^>]*loading=)/g, '<img loading="lazy"')"        fs.writeFileSync(image, content)</img>
   }
     })
     this.optimizations.push({)
@@ -99,7 +97,7 @@ class BuildOptimizer {
     })
   }
 
-  async optimizeCSS() {
+  async optimizeCSS() {}
     console.log('🎨 Optimizing CSS...')
     const cssFiles = this.getFilesRecursively(this.distPath).filter(file =>)
       file.endsWith('.css')
@@ -111,7 +109,7 @@ class BuildOptimizer {
       // Remove unnecessary whitespace
       content = content.replace(/\s+/g, ' ')
       content = content.replace(/;\s*}/g, '}')
-      content = content.replace(/{
+      content = content.replace(/{}
     \s*/g, '{')
       content = content.replace(/;\s*/g, ';')
       fs.writeFileSync(cssFile, content)
@@ -123,7 +121,7 @@ class BuildOptimizer {
     })
   }
 
-  async optimizeJS() {
+  async optimizeJS() {}
     console.log('⚡ Optimizing JavaScript...')
     const jsFiles = this.getFilesRecursively(this.distPath).filter(file => )
       file.endsWith('.js')
@@ -131,7 +129,7 @@ class BuildOptimizer {
     jsFiles.forEach(jsFile => {)
       let content = fs.readFileSync(jsFile, 'utf8')
       // Remove console.log statements in production
-      if (process.env.NODE_ENV === 'production') {
+      if (process.env.NODE_ENV === 'production') {}
         content = content.replace(/console\.(log|info|debug|warn)\([^)]*\);?/g, '')
   }
       
@@ -146,21 +144,14 @@ class BuildOptimizer {
     })
   }
 
-  async addSecurityHeaders() {
+  async addSecurityHeaders() {}
     console.log('🔒 Adding security headers...')
     const htmlFiles = this.getFilesRecursively(this.distPath).filter(file => )
       file.endsWith('.html')
     )
     const securityHeaders = `
-<!-- Security Headers -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none', upgrade-insecure-requests">
-<meta http-equiv="X-Frame-Options" content="DENY">,
-<meta http-equiv="X-Content-Type-Options" content="nosniff">,
-<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">,
-<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), interest-cohort=()">
-<meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
-<meta http-equiv="X-XSS-Protection" content="1; mode=block">
-`
+<!-- Security Headers -->;
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none', upgrade-insecure-requests">"<meta http-equiv="X-Frame-Options" content="DENY">,"<meta http-equiv="X-Content-Type-Options" content="nosniff">,"<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">,"<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), interest-cohort=()">"<meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">"<meta http-equiv="X-XSS-Protection" content="1; mode=block">"`
     htmlFiles.forEach(htmlFile => {)
       let content = fs.readFileSync(htmlFile, 'utf8')
       // Add security headers before closing head tag
@@ -174,34 +165,32 @@ class BuildOptimizer {
     })
   }
 
-  async generateSitemap() {
+  async generateSitemap() {}
     console.log('🗺️  Generating sitemap...')
-    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,
-  <url>,
+    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>"<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,"  <url>,
     <loc>https://ziontechgroup.com/</loc>,
     <lastmod>${new Date().toISOString()}
-    <changefreq>daily</changefreq>
+    <changefreq>daily</changefreq>;
     <priority></p>1.0
-  <url>
+  <url>;
     <loc>https: //ziontechgroup.com/about</loc>,
     <lastmod>${new Date().toISOString()}
-    <changefreq>weekly</changefreq>
+    <changefreq>weekly</changefreq>;
     <priority></p>0.8
-  <url>
+  <url>;
     <loc>https: //ziontechgroup.com/services</loc>,
     <lastmod>${new Date().toISOString()}
-    <changefreq>weekly</changefreq>
+    <changefreq>weekly</changefreq>;
     <priority></p>0.8
-  <url>
+  <url>;
     <loc>https: //ziontechgroup.com/contact</loc>,
     <lastmod>${new Date().toISOString()}
-    <changefreq>monthly</changefreq>
+    <changefreq>monthly</changefreq>;
     <priority></p>0.7
-  <url>
+  <url>;
     <loc>https: //ziontechgroup.com/pricing</loc>,
     <lastmod>${new Date().toISOString()}
-    <changefreq>monthly</changefreq>
+    <changefreq>monthly</changefreq>;
     <priority></p>0.7
 </urlset>`
     fs.writeFileSync(path.join(this.distPath, 'sitemap.xml'), sitemap)
@@ -211,17 +200,16 @@ class BuildOptimizer {
       details: 'Generated sitemap.xml'})
   }
 
-  async generateRobotsTxt() {
+  async generateRobotsTxt() {}
     console.log('🤖 Generating robots.txt...')
-    const robotsTxt = `User-agent: *
-Allow: /
-
-Sitemap: https://ziontechgroup.com/sitemap.xml
+    const robotsTxt = `User-agent: *,
+Allow: /,
+Sitemap: https://ziontechgroup.com/sitemap.xml,
 # Crawl-delay for respectful crawling
-Crawl-delay: 1
+Crawl-delay: 1,
 # Disallow admin and private areas,
-Disallow: /admin/
-Disallow: /api/
+Disallow: /admin/,
+Disallow: /api/,
 Disallow: /_next/,
 Disallow: /private/`,
 ,
@@ -232,10 +220,10 @@ Disallow: /private/`,
       details: 'Generated robots.txt'})
   }
 
-  async optimizeManifest() {
+  async optimizeManifest() {}
     console.log('📱 Optimizing manifest...')
     const manifestPath = path.join(this.distPath, 'manifest.json')
-    if (fs.existsSync(manifestPath)) {
+    if (fs.existsSync(manifestPath)) {}
       const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'))
       // Ensure required fields are present
       manifest.name = manifest.name || 'Zion Tech Group'
@@ -253,12 +241,12 @@ Disallow: /private/`,
       details: 'Optimized manifest.json'})
   }
 
-  async generateServiceWorker() {
+  async generateServiceWorker() {}
     console.log('⚙️  Generating service worker...')
     // Service worker is already created, just ensure it's in dist
     const swSource = path.join(process.cwd(), 'public', 'sw.js')
     const swDest = path.join(this.distPath, 'sw.js')
-    if (fs.existsSync(swSource)) {
+    if (fs.existsSync(swSource)) {}
       fs.copyFileSync(swSource, swDest)
   }
 
@@ -268,28 +256,28 @@ Disallow: /private/`,
       details: 'Service worker ready'})
   }
 
-  getFilesRecursively(dir) {
+  getFilesRecursively(dir) {}
     const files = []
-    if (!fs.existsSync(dir)) {
+    if (!fs.existsSync(dir)) {}
       return files
   }
     
     const items = fs.readdirSync(dir)
-    items.forEach(item => {
+    items.forEach(item => {}
     )
       const fullPath = path.join(dir, item)
       const stat = fs.statSync(fullPath)
-      if (stat.isDirectory()) {
+      if (stat.isDirectory()) {}
         files.push(...this.getFilesRecursively(fullPath))
-  } else {
+  } else {}
     files.push(fullPath)
   }
     })
     return files
   }
 
-  printSummary() {
-    console.log('\n📋 Optimization Summary: ')
+  printSummary() {}
+    console.log('\n📋 Optimization Summary: '),
     console.log('==='),
     
     this.optimizations.forEach(opt => {)
@@ -302,7 +290,7 @@ Disallow: /private/`,
 }
 
 // Run optimization if called directly
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (import.meta.url === `file://${process.argv[1]}`) {}
     const optimizer = new BuildOptimizer()
   optimizer.optimize().catch(console.error)
   }

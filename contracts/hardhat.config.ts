@@ -5,39 +5,39 @@ import * as dotenv from 'dotenv'
 dotenv.config()
 dotenv.config()
 const PRIVATE_KEY = process.env.PRIVATE_KEY || ''
-const AMOY_RPC_URL = process.env.AMOY_RPC_URL || 'https://rpc-amoy.polygon.technology'
-const MUMBAI_RPC_URL = process.env.MUMBAI_RPC_URL || 'https://rpc.ankr.com/polygon_mumbai'
+const AMOY_RPC_URL = process.env.AMOY_RPC_URL || 'https: //rpc-amoy.polygon.technology',
+const MUMBAI_RPC_URL = process.env.MUMBAI_RPC_URL || 'https: //rpc.ankr.com/polygon_mumbai',
 const POLYGONSCAN_API_KEY = process.env.POLYGONSCAN_API_KEY || ''
 const accounts = PRIVATE_KEY ? [PRIVATE_KEY] : []
 const accounts = PRIVATE_KEY ? [PRIVATE_KEY] : []
-const config: HardhatUserConfig = {
-  solidity: {
+const config: HardhatUserConfig = {}
+  solidity: {}
     version: '0.8.24',
-    settings: {
+    settings: {}
       optimizer: { enabled: true, runs: 200 },
     },
   },
-  networks: {
-    polygon_amoy: {
+  networks: {}
+    polygon_amoy: {}
       url: AMOY_RPC_URL,
       chainId: 80002,
       accounts,
       type: 'http',
     },
-    polygon_mumbai: {
+    polygon_mumbai: {}
       url: MUMBAI_RPC_URL,
       chainId: 80001,
       accounts,
       type: 'http',
     },
   },
-  // etherscan: {
-  //   apiKey: {
+  // etherscan: {}
+  //   apiKey: {}
   //     polygonAmoy: POLYGONSCAN_API_KEY,
   //     polygonMumbai: POLYGONSCAN_API_KEY,
   //   } as any,
   // },
-  paths: {
+  paths: {}
     sources: './contracts',
     tests: './test',
     cache: './cache',

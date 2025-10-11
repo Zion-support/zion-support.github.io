@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import fs from 'fs'
 // List of files that need type error fixes
-const filesToFix = [
+const filesToFix = []
   '/workspace/app/blog/ai-autonomous-business-systems-2026/page.tsx',
   '/workspace/app/blog/ai-cost-optimization-breakthrough-2026/page.tsx',
   '/workspace/app/components/OptimizedImage.tsx',
@@ -9,45 +9,38 @@ const filesToFix = [
   '/workspace/app/not-found.tsx',
   '/workspace/app/page-optimized.tsx']
 // // Function to process a single file
-function processFile(filePath) {
-  try {
+function processFile(filePath) {}
+  try {}
     // Fix <a> tags with 'to' prop to use Link components
-    if (content.includes('<') && content.includes('to=')) {$2 />
+    if (content.includes('<') && content.includes('to=')) {$2 />;
       // Add Link import if not present
-      if (!content.includes("import { Link } from 'react-router-dom';")) {
-        content = content.replace(/import React from 'react';/)
+      if (!content.includes("import { Link } from 'react-router-dom';")) {"        content = content.replace(/import React from 'react';/)
 function processFile(filePath) {/* TODO: Fix JSX expression */}
-      if (!content.includes("import { Link } from 'react-router-dom';")) {/* TODO: Fix JSX expression */}"
-          "import React from 'react';\nimport { Link } from 'react-router-dom';"
-        )
+      if (!content.includes("import { Link } from 'react-router-dom';")) {/* TODO: Fix JSX expression */}""          "import React from 'react';\nimport { Link } from 'react-router-dom';""        )
         modified = true
       }
 
       // Replace <a> tags with to prop to <Link> components
-      content = content.replace(/<a\s+to=/g, '< to=')$2 />
+      content = content.replace(/<a\s+to=/g, '< to=')$2 />;
       content = content.replace(/<\/a>/g, '</Link>')
       modified = true
     }
 
     // Fix href to to for Link components
-    if (content.includes('<') && content.includes('href=')) {$2 />
+    if (content.includes('<') && content.includes('href=')) {$2 />;
       content = content.replace(/href=/g, 'to=')
       modified = true
     }
 
     // Fix dynamic imports from Next.js to React lazy
-    if (content.includes('dynamic(')) {
+    if (content.includes('dynamic(')) {}
       // Add lazy import if not present
-      if (!content.includes("import { lazy } from 'react';")) {
-        content = content.replace(/import React from 'react';/)
-    if (content.includes('<') && content.includes('href=')) {/* TODO: Fix JSX expression */}$2 />
+      if (!content.includes("import { lazy } from 'react';")) {"        content = content.replace(/import React from 'react';/)
+    if (content.includes('<') && content.includes('href=')) {/* TODO: Fix JSX expression */}$2 />;
     }
 
     // Fix dynamic imports from Next.js to React lazy
-    if (content.includes('dynamic(')) {/* TODO: Fix JSX expression */}"
-      if (!content.includes("import { lazy } from 'react';")) {/* TODO: Fix JSX expression */}"
-          "import React, { lazy } from 'react';"
-        )
+    if (content.includes('dynamic(')) {/* TODO: Fix JSX expression */}""      if (!content.includes("import { lazy } from 'react';")) {/* TODO: Fix JSX expression */}""          "import React, { lazy } from 'react';""        )
         modified = true
       }
 
@@ -57,10 +50,10 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     }
 
     // Fix Image component issues
-    if (content.includes('next/image')) {
+    if (content.includes('next/image')) {}
       // Replace Next.js Image with regular img tag
       content = content.replace(/import Image from 'next\/image';/g, '')
-      content = content.replace(/<Image/g, '<img')
+      content = content.replace(/<Image/g, '<img')</Image>
       content = content.replace(/<\/Image>/g, '</img>')
       content = content.replace(/src={/g, 'src={')
       content = content.replace(/alt={/g, 'alt={')
@@ -81,11 +74,11 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
 // Process all files
 filesToFix.forEach(file => {)
-  if (processFile(file)) {
+  if (processFile(file)) {}
     fixedCount++
   }
 filesToFix.forEach(file => {/* TODO: Fix JSX expression */}
   })
 })
 // 
-}}}}}}}}}}"</a></a></a>
+}}}}}}}}}}"</a></a></a>;

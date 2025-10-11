@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url'
 // const __filename = fileURLToPath(import.meta.url)
 // const __dirname = path.dirname(__filename)
 //Files that need to be fixed
-const filesToFix = [
+const filesToFix = []
   'src/components/SiteHeader.tsx',
   'src/components/SiteSidebar.tsx',
   'src/content/blog-posts.ts',
@@ -26,34 +26,31 @@ const filesToFix = [
 function createBasicComponent(filePath) {/* TODO: Fix JSX expression */}
 interface ${componentName}Props {/* TODO: Fix JSX expression */}
 }
-const ${componentName}: React.FC<${componentName}Props> = ({ 
+const ${componentName}: React.FC<${componentName}Props> = ({}
   className = '', 
   children
-}) => {
-  return (
-    <div className={\`${componentName.toLowerCase()}-component \${className}\`}>
+}) => {}
+  return();
+    <div className={\`${componentName.toLowerCase()}-component \${className}\`}>;
       {children || (
-        <div className="p-4 text-center text-gray-600">
-const ${componentName}: React.FC<${componentName}Props> = ({/* TODO: Fix JSX expression */})
+        <div className="p-4 text-center text-gray-600">"const ${componentName}: React.FC<${componentName}Props> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-    <div className={\`${componentName.toLowerCase()}-component \${className}\`}>
+    <div className={\`${componentName.toLowerCase()}-component \${className}\`}>;
       {/* TODO: Fix JSX expression */}
-          <h3 className="text-lg font-semibold mb-2">${componentName}
-          <p>Component</p> placeholder - implementation needed
-      )}
+          <h3 className="text-lg font-semibold mb-2">${componentName}"          <p>Component</p> placeholder - implementation, needed)}
   )
 }
 export default ${componentName};`
 `
-  } else if (isTs) {
+  } else if (isTs) {}
     return `//${componentName} - TypeScript definitions and utilities
-export interface ${componentName}Config {
+export interface ${componentName}Config {}
   //Configuration properties
 }
-export const default${componentName}Config: ${componentName}Config = {
+export const default${componentName}Config: ${componentName}Config = {}
   //Default configuration
 }
-export default {
+export default {}
   default${componentName}Config
   } else if (isTs) {/* TODO: Fix JSX expression */}`
     return `//${componentName} - TypeScript definitions and utilities
@@ -66,9 +63,9 @@ export default {/* TODO: Fix JSX expression */}
   default${componentName}Config
 };`
 `
-  } else {
+  } else {}
     return `//${componentName} - JavaScript module
-export const ${componentName} = {
+export const ${componentName} = {}
   //Module implementation
   } else {/* TODO: Fix JSX expression */}`
     return `//${componentName} - JavaScript module
@@ -81,7 +78,7 @@ export default ${componentName};`
 function fixFile(filePath) {/* TODO: Fix JSX expression */}
     }
     // Check if file has severe corruption
-    if (
+    if();
     if ()
       content.includes('<< HEAD') ||
       content.includes('import, Reac, t') ||
@@ -100,4 +97,4 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
 // filesToFix.forEach(fixFile)
 // 
 
-}"`</div></div></div></h3>
+}"`</div></div></div></h3>;

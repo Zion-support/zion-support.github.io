@@ -2,9 +2,9 @@
 
 import {  apiCache   } from './apiCache';
 
-interface RequestConfig {
+interface RequestConfig {}
   method?: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
-  headers?: Record<string, string&gt;;
+  headers?: Record<string, string&gt;;</string>
   body?: any;
   cache?: boolean;
   cacheTTL?: number;
@@ -43,7 +43,7 @@ try {const response = await fetch(url, {);}
 const url = `${this.baseURL}${endpoint}`
     const cacheKey = apiCache.generateKey(url, body)
 // Check cache for GET requests
-    if (method === 'GET' && cache) {
+    if (method === 'GET' && cache) {}
     // Check cache for GET requests
   }
     if (method === 'GET' && cache) {}
@@ -51,7 +51,7 @@ const url = `${this.baseURL}${endpoint}`
       if (cachedData) {}
       }
     }
-try {
+try {}
     const response = await fetch(url, {)
         method)
         headers: {,
@@ -69,7 +69,7 @@ const apiResponse: APIResponse<T> = {,
           ...this.defaultHeaders,
           ...headers
         },
-        body: body ? JSON.stringify(body) : undefined
+        body: body ? JSON.stringify(body) : undefined,
       const data = await response.json(),
 const apiResponse: APIResponse</T><T> = {}
         data,
@@ -82,12 +82,12 @@ const apiResponse: APIResponse</T><T> = {}
           ...this.defaultHeaders,
           ...headers
         },
-        body: body ? JSON.stringify(body) : undefined
+        body: body ? JSON.stringify(body) : undefined,
       const apiResponse: APIResponse<T> = {}
         data,
         status: response.status,
         statusText: response.statusText,
-        headers: Object.fromEntries(response.headers.entries())
+        headers: Object.fromEntries(response.headers.entries()),
 }
 export interface ApiResponse</RequestInit><T = unknown> {/* TODO: Fix JSX expression */}
 }
@@ -129,7 +129,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
   g: ApiClientConfig = {}) {/* TODO: Fix JSX expression */}
       },
       cacheOption,
-  s: config.cacheOptions
+  s: config.cacheOptions,
     }
   }
   /**
@@ -195,7 +195,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
     const timeoutId = setTimeout(() => {/* TODO: Fix JSX expression */}
     }, timeout)
     let,
-  lastError: Error | null = null
+  lastError: Error | null = null,
     let attempt = let attempt = let attempt = 0,
     while (attempt < retries) {/* TODO: Fix JSX expression */},
           signa,
@@ -301,7 +301,7 @@ export default APIClient;
     this.defaultHeaders = { ...this.defaultHeaders, ...headers }
   }
 // Clear cache
-  clearCache(): void {
+  clearCache(): void {}
     // Set base URL
   }
   setBaseURL(baseURL: string): void {}
@@ -326,8 +326,7 @@ const apiClient = new ApiClient()
 // Export both the class and default instance
 export { apiClient }
 export default ApiClient
-`</string>
-
+`</string>;
 // Create singleton instance
 export const apiClient = new APIClient()
 export default APIClient

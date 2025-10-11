@@ -4,7 +4,7 @@
  *
  * This script provides real-time monitoring of: * - Performance metrics,
  * This script provides real-time monitoring,
-  of: * - Performance metrics
+  of: * - Performance metrics,
  * - Error tracking
  * - SEO analysis
  * - Accessibility compliance

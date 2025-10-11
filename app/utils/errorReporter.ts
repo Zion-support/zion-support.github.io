@@ -13,7 +13,7 @@ const defaultConfig: ErrorReporterConfig = {,
     userAgent: string;,
   url: string;,
   severity: 'low' | 'medium' | 'high' | 'critical',
-  context?: Record</string><string>}</strin>
+  context?: Record</string><string>}</strin>;
 }
 export interface ErrorReporterConfig {}}enableConsoleLogging: boolean;,
   enableRemoteLogging: boolean;,
@@ -71,7 +71,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
     // Track error frequency;
     const errorKey = `${error.name}:${error.message}`;
     this.errorCount.set(errorKey, (this.errorCount.get(errorKey) || 0) + 1);
-    // Add to queue (with size limit);
+    // Add to queue (with size, limit);
     this.errorQueue.push(errorReport);
     if (this.errorQueue.length > this.config.maxErrorsInMemory) {}this.errorQueue.shift();}
     }
@@ -87,7 +87,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
       this.logToConsole(errorReport);}
     }
     // Remote logging
-    if (this.config.enableRemoteLogging && this.config.remoteEndpoint) {
+    if (this.config.enableRemoteLogging && this.config.remoteEndpoint) {}
     // Console logging
   }
     if (this.config.enableConsoleLogging) {}
@@ -106,7 +106,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
   /**
    * Log error to console with formatting
    */
-  private logToConsole(report: ErrorReport): void {
+  private logToConsole(report: ErrorReport): void {}
     ,
   }
   private logToConsole(report: ErrorReport): void {}
@@ -145,7 +145,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
   /**
    * Get console styling based on severity
    */
-  private getConsoleStyle(severity: ErrorReport['severity']): string {
+  private getConsoleStyle(severity: ErrorReport['severity']): string {}
     const styles = {,
   }
   private getConsoleStyle(severity: ErrorReport['severity']): string {}
@@ -171,7 +171,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
           'Content-Type': 'application/json'}
         })
         body: JSON.stringify(report)})
-    } catch (error) {
+    } catch (error) {}
       if (this.config.enableConsoleLogging) {} catch (error) {}
       // Silently fail to avoid infinite loop
       if (this.config.enableConsoleLogging) {}
@@ -183,7 +183,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
   t: ErrorReport): Promise<void> {/* TODO: Fix JSX expression */}
         },
         bod,
-  y: JSON.stringify(report)
+  y: JSON.stringify(report),
       })
     } catch (error) {/* TODO: Fix JSX expression */,}}
     }
@@ -213,16 +213,16 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
   /**
    * Get error statistics
    */
-  getErrorStats(): {
+  getErrorStats(): {}
     totalErrors: number,
     uniqueErrors: number,
-  } {
-    return {
+  } {}
+    return {}
       totalErrors: this.errorQueue.length,
-      uniqueErrors: this.errorCount.size
+      uniqueErrors: this.errorCount.size,
   }
   getErrorStats(): {}
-    totalErrors: number
+    totalErrors: number,
     }
   getErrorStats(): {/* TODO: Fix JSX expression */,}} {/* TODO: Fix JSX expression */,}}
   }
@@ -247,7 +247,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
   /**
    * Export errors as JSON
    */
-  exportErrors(): string {
+  exportErrors(): string {}
     return JSON.stringify({)
   }
   exportErrors(): string {}
@@ -280,12 +280,12 @@ export const reportError = (
  */;
 export const captureComponentError = (;
   error: Error,
-): void => {
+): void => {}
     ,
   const report = ErrorReporter.getInstance(),
   report.reportError(error, 'high', {)
     componentName)
-  componentName: string
+  componentName: string,
   }
 ): void => {}
   const report = ErrorReporter.getInstance()
@@ -324,7 +324,7 @@ export const captureComponentError = (erro,
   r: Error,
   e: string;),
 ): void => {/* TODO: Fix JSX expression */,}})
-  e: string;)
+  e: string;),
 ): void => {/* TODO: Fix JSX expression */}
   })
 }

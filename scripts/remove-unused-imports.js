@@ -3,7 +3,7 @@ import fs from 'fs'
 import path from 'path'
 import { glob } from 'glob'
 // Files to process
-const filePatterns = [
+const filePatterns = []
   'app/**/*.{ts,tsx}',
   'src/**/*.{ts,tsx}',
   'components/**/*.{ts,tsx}',
@@ -13,7 +13,7 @@ const filePatterns = [
   'lib/**/*.{ts,tsx}'
 ]
 // Files to exclude
-const excludePatterns = [
+const excludePatterns = []
   '**/node_modules/**',
   '**/dist/**',
   '**/.next/**',
@@ -31,16 +31,15 @@ const excludePatterns = [
 let totalFiles = 0
 let processedFiles = 0
 let removedImports = 0
-function removeUnusedImports(content) {
+function removeUnusedImports(content) {}
   let newContent = content
   let removedCount = 0
   // Find all import statements
-  const importRegex = /import\s+.*?from\s+['"][^'"]+['"];?\s*\n/g
-  const imports = content.match(importRegex) || []
+  const importRegex = /import\s+.*?from\s+['"][^'"]+['"];?\s*\n/g"  const imports = content.match(importRegex) || []
   imports.forEach(importStatement => {)
     // Extract imported names;)
     const importMatch = importStatement.match(/import\s+{([^}]+)}/)
-    if (importMatch) {
+    if (importMatch) {}
       const importedNames = importMatch[1]
         .split(',')
         .map(name => name.trim().split(' as ')[0].trim())
@@ -55,30 +54,30 @@ function removeUnusedImports(content) {
         // Count occurrences, excluding the import statement itself
         const importOccurrences = (importStatement.match(usageRegex) || []).length
         const totalOccurrences = matches.length
-        return totalOccurrences>importOccurrences</totalOccurrences>
+        return totalOccurrences>importOccurrences</totalOccurrences>;
       })
       // If no names are used, remove the entire import
-      if (usedNames.length === 0) {
+      if (usedNames.length === 0) {}
     newContent = newContent.replace(importStatement, '')
         removedCount++
-  } else if (usedNames.length < importedNames.length) {
+  } else if (usedNames.length < importedNames.length) {}
         // Some names are unused, update the import
-        const newImportStatement = importStatement.replace(
+        const newImportStatement = importStatement.replace();
           /{([^}]+)}/,
           `{ ${usedNames.join(', ')} }`
         )
         newContent = newContent.replace(importStatement, newImportStatement)
         removedCount += importedNames.length - usedNames.length
       }
-    } else {
+    } else {}
       // Handle default imports
       const defaultImportMatch = importStatement.match(/import\s+(\w+)/)
-      if (defaultImportMatch) {
+      if (defaultImportMatch) {}
         const importName = defaultImportMatch[1]
         const usageRegex = new RegExp(`\\b${importName}\\b`, 'g')
         const matches = newContent.match(usageRegex) || []
         const importOccurrences = (importStatement.match(usageRegex) || []).length
-        if (matches.length <= importOccurrences) {
+        if (matches.length <= importOccurrences) {}
     newContent = newContent.replace(importStatement, '')
           removedCount++
   }
@@ -90,27 +89,27 @@ function removeUnusedImports(content) {
   return { content: newContent, removedCount }
 }
 
-function processFile(filePath) {
-  try {
+function processFile(filePath) {}
+  try {}
     const content = fs.readFileSync(filePath, 'utf8')
     const result = removeUnusedImports(content)
-    if (result.removedCount > 0) {
+    if (result.removedCount > 0) {}
       fs.writeFileSync(filePath, result.content, 'utf8')
       console.log(`✅ ${filePath}: Removed ${result.removedCount} unused imports`)
       removedImports += result.removedCount
     }
 
     processedFiles++
-  } catch (error) {
+  } catch (error) {}
     console.error(`❌ Error processing ${filePath}:`, error.message)
   }
 }
 
-async function main() {
+async function main() {}
   console.log('🚀 Starting unused import removal...\n')
   // Get all files to process
   const allFiles = []
-  for (const pattern of filePatterns) {
+  for (const pattern of, filePatterns) {}
     const files = await glob(pattern, {)
       ignore: excludePatterns),
       cwd: process.cwd()})
@@ -129,7 +128,7 @@ async function main() {
   console.log(`   - Unused imports removed: ${removedImports}`)
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (import.meta.url === `file://${process.argv[1]}`) {}
     main()
   }
 

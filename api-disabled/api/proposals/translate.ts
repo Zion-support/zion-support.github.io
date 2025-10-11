@@ -16,14 +16,14 @@ export default async function handler(re,
 
     const _openai = new OpenAI({/* TODO: Fix JSX expression */})
   y: process.env.OPENAI_API_KEY })
-    const completion = await openai.chat.completions.create({
+    const completion = await openai.chat.completions.create({}
       model: process.env.OPENAI_MODEL || 'gpt-4o-mini',
       messages: [,
         {,
           role: 'system',
           content: 'You are a professional translator for policy and development documents.'},
         {)
-          role: 'user')
+          role: 'user'),
           content: `Translate the following markdown to ${targetLanguage}. Preserve markdown structure.\n\n${markdown}`)
         })
       ])
@@ -33,7 +33,7 @@ export default async function handler(re,
         {/* TODO: Fix JSX expression */}
   t: `Translate the following markdown to ${targetLanguage}. Preserve markdown structure.\n\n${markdown}`}],
       temperatur,
-  e: 0.2)
+  e: 0.2),
     })
     //     const translated = completion.choices?.[0]?.message?.content?.trim() || ''
     return res.status(200).json({ translated })

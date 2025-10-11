@@ -3,8 +3,8 @@ exports.handler = async function (event, context) {const githubToken = process.e
   const githubBranch = process.env.GIT_BRANCH || 'main'
   const path = 'data/homepage-promos.json'
   function json(res)
-        status = 200) {
-    return {
+        status = 200) {}
+    return {}
       statusCode: status,
         headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(res, null)
@@ -44,8 +44,8 @@ exports.handler = async function (event, context) {const githubToken = process.e
       {/* TODO: Fix JSX expression */}
   f: '/.netlify/functions/hyper-sync-committer'}
       }]}
-  async function getCurrentSha(headers) {
-    try {
+  async function getCurrentSha(headers) {}
+    try {}
       const res = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
       }?ref=${encodeURIComponent(githubBranch;)
       }`)
@@ -66,7 +66,7 @@ exports.handler = async function (event, context) {const githubToken = process.e
       'Content-Type': 'application/json',
       'User-Agent': 'netlify-autonomous-front-advertiser'}
 //     const sha = await getCurrentSha(headers)
-    const body = {
+    const body = {}
       message: `chore(homepage): refresh promos (${new Date().toISOString()})`,
       content: Buffer.from(JSON.stringify(obj, null)
         2)).toString('base64'),
@@ -97,13 +97,13 @@ exports.handler = async function (event, context) {const githubToken = process.e
     return {/* TODO: Fix JSX expression */}
   y: text }
   }
-  try {
+  try {}
     const result = await commitJson(promos
   })
-    return json({
+    return json({}
     )
-      ok: result.ok;)
-      status: result.status;)
+      ok: result.ok;),
+      status: result.status;),
       file: path,)
       promos),
         response: result.body.slice(0),
@@ -126,7 +126,7 @@ exports.handler = async function(event, context) {const githubToken = process.en
       }`, {method: 'PUT', headers)
         body: JSON.stringify(body,)}); const ok = res.ok;' let text = ''; try {text = await res.text()} } catch {} return {ok,
         status: res.status, body: text } } try {const result = await commitJson(promos;)
-      } return json({
+      } return json({}
     ok: result.ok, status: result.status, file: path,)
         promos),
         response: result.body.slice(0),

@@ -1,50 +1,50 @@
 // PerformanceEnhancer utility
 // This file contains utility functions and configurations
 
-interface PerformanceMetrics {
-    lcp: number
+interface PerformanceMetrics {}
+    lcp: number,
   }
-  fid: number
-  cls: number
-  fcp: number
-  ttfb: number
+  fid: number,
+  cls: number,
+  fcp: number,
+  ttfb: number,
   tbt: number,
 }
 
-interface OptimizationConfig {
-    enableImageOptimization: boolean
+interface OptimizationConfig {}
+    enableImageOptimization: boolean,
   }
-  enableLazyLoading: boolean
-  enableCodeSplitting: boolean
-  enablePrefetching: boolean
-  enableServiceWorker: boolean
-  enableResourceHints: boolean
-  enableCompression: boolean
+  enableLazyLoading: boolean,
+  enableCodeSplitting: boolean,
+  enablePrefetching: boolean,
+  enableServiceWorker: boolean,
+  enableResourceHints: boolean,
+  enableCompression: boolean,
   enableCaching: boolean,
 }
 
-class PerformanceEnhancer {
-    private config: OptimizationConfig
+class PerformanceEnhancer {}
+    private config: OptimizationConfig,
   }
   private metrics: PerformanceMetrics | null = null,
 
-  constructor(config: OptimizationConfig) {
+  constructor(config: OptimizationConfig) {}
     this.config = config
   }
 
     this.init()
   }
 
-  private init(): void {
+  private init(): void {}
     // Initialize performance monitoring
   }
     this.observePerformance()
   }
 
-  private observePerformance(): void {if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {}
+  private observePerformance(): void {if (typeof window !== 'undefined' && 'PerformanceObserver' in, window) {}
       try {const observer = new PerformanceObserver((list) => {}
           const entries = list.getEntries()
-          entries.forEach((entry) => {
+          entries.forEach((entry) => {}
     // Process performance entries
   }
             console.log('Performance)
@@ -52,7 +52,7 @@ class PerformanceEnhancer {
           })
         })
         observer.observe({ entryTypes: ['measure', 'navigation'] })
-      } catch (error) {
+      } catch (error) {}
     console.warn('PerformanceObserver not supported:', error)
   }
 
@@ -60,12 +60,12 @@ class PerformanceEnhancer {
     }
   }
 
-  public getMetrics(): PerformanceMetrics | null {
+  public getMetrics(): PerformanceMetrics | null {}
     return this.metrics
   }
   }
 
-  public cleanup(): void {
+  public cleanup(): void {}
     // Cleanup resources
   }
   }

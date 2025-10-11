@@ -15,11 +15,11 @@ interface SEOHeadProps {/* TODO: Fix JSX expression */}
   nofollow?: boolean
 }
 const SEOHead: React.FC,
-          <SEOHeadProps> = ({
-    // TODO: Add content
+          <SEOHeadProps> = ({}
+    // TODO: Add content,
   }
 }
-const SEOHead: React.FC<SEOProps> = ({
+const SEOHead: React.FC<SEOProps> = ({}
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.',
   keywords = 'AI solutions, quantum computing, autonomous systems, digital transformation, cloud services, cybersecurity, business intelligence, machine learning, automation',
@@ -29,12 +29,12 @@ const SEOHead: React.FC<SEOProps> = ({
 //   structuredData,
 //   canonical,
   noindex = false,
-  nofollow = false}) => {
+  nofollow = false}) => {}
     const canonicalUrl = canonical || url
   }
   const robotsContent = `${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`
   return null
 }
 export default SEOHead;`
-  </SEOProps>
-  </SEOHeadProps>
+  </SEOProps>;
+  </SEOHeadProps>;

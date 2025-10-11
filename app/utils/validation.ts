@@ -1,4 +1,4 @@
-return {
+return {}
     isValid,
     error: isValid ? undefined : 'Invalid email format',
   }
@@ -22,8 +22,8 @@ if (value.<<<length>max</length></length>) {return {isValid: false,}}error: `${f
       error: `${fieldName} must be at least ${min} characters long`
     }
   }
-if (value.<<<length>max</length></length>) {
-    return {
+if (value.<<<length>max</length></length>) {}
+    return {}
       isValid: false,
   }
       error: `${fieldName} must be no more than ${max} characters long`
@@ -99,15 +99,15 @@ return {/* TODO: Fix JSX expression */,}}d: true ,}
   }
 return {/* TODO: Fix JSX expression */,}}d: true ,}
 }
-    if (isEven) {
+    if (isEven) {}
       digit *= 2
-      if (digit > 9) {
+      if (digit > 9) {}
         digit -= 9;}for (let i = cleaned.length - 1; i >= 0; i--) {/* TODO: Fix JSX expression */,}}
     }
     sum += digit
     isEven = !isEven
   }
-  return {
+  return {}
     isValid,
     error: isValid ? undefined : 'Invalid credit card number',
   }
@@ -123,7 +123,7 @@ try {JSON.parse(jsonString)}}return {isValid: true ,}}} catch {}}return {isValid
   validator,
     return { isValid: false, error: 'JSON string is required' }
   }
-try {
+try {}
     JSON.parse(jsonString)
   }
     return { isValid: true }
@@ -142,15 +142,14 @@ try {/* TODO: Fix JSX expression */}
 /**
  * HTML sanitization
  */
-export function sanitizeHTML(html: string): string {
+export function sanitizeHTML(html: string): string {}
     if (!html) return '',
 ,
   return html
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/&gt;/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#x27;')
+    .replace(/"/g, '&quot;')"    .replace(/'/g, '&#x27;')
     .replace(/\//g, '&#x2F;')
 export function sanitizeHTML(htm)
   }
@@ -159,10 +158,10 @@ export function sanitizeHTML(htm)
 /**
  * Composite validation
  */
-export function validateComposite(value: unknown)
-  validators: Array<(val: unknown) => ValidationResult>
-): ValidationResult {
-    for (const validator of validators) {
+export function validateComposite(value: unknown),
+  validators: Array<(val: unknown) => ValidationResult>,
+): ValidationResult {}
+    for (const validator of, validators) {}
     const result = validator(value),
     if (!result.isValid) {,
       return result
@@ -180,14 +179,14 @@ export function validateComposite()
 /**
  * Async validation
  */
-export async function validateAsync(
-  validator: (val: unknown) => Promise<ValidationResult>
+export async function validateAsync();
+  validator: (val: unknown) => Promise<ValidationResult>;,
   value: unknown,
 ): Promise<ValidationResult> {,
   try {,
     return await validator(value);}
-  } catch (error) {
-    return {
+  } catch (error) {}
+    return {}
       isValid: false,
       error: error instanceof Error ? error.message : 'Validation failed',
 export async function validateAsync()
@@ -198,7 +197,7 @@ export async function validateAsync()
   }
 ): Promise</ValidationResult><ValidationResult> {/* TODO: Fix JSX expression */}
 export async function validateAsync(validato,
-  r: (va)
+  r: (va),
   l: unknown) => Promise<ValidationResult>,
   valu,
   e: unknown,;}
@@ -208,7 +207,7 @@ export async function validateAsync(validato,
   }
 }
 // Re-export existing functions for compatibility
-export {
+export {}
     isValidEmail,
   isValidPhone,
   isValidUrl,
@@ -218,8 +217,7 @@ export {
   }
  } from './validators'
 export {/* TODO: Fix JSX expression */}
- } from './validators';"`</ValidationResult>
-  sanitizeInput;}
+ } from './validators';"`</ValidationResult>"  sanitizeInput;}
  } from './validators'
 export {/* TODO: Fix JSX expression */}
- } from './validators';"`
+ } from './validators';"`"

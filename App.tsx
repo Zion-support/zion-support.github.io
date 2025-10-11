@@ -7,7 +7,6 @@ import './app/styles/futuristic-enhanced.css'
 import Navigation from './app/components/Navigation'
 import Footer from './app/components/Footer'
 import HomePage from './app/page'
-// import { PageLoader } from './app/components/LoadingStates'
 import SEOHead from './app/components/EnhancedSEOHead'
 import SkipLink from './app/components/SkipLink'
 import Breadcrumb from './app/components/Breadcrumb'
@@ -20,6 +19,7 @@ import PerformanceMonitor from './app/components/PerformanceMonitor'
 import ServiceWorker from './app/components/ServiceWorker'
 import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary'
 import FuturisticBackground from './app/components/FuturisticBackground'
+
 // Lazy load pages for better performance with error boundaries
 const AboutPage = React.lazy(() => import('./app/about/page'))
 const ContactPage = React.lazy(() => import('./app/contact/page'))
@@ -39,6 +39,7 @@ const PrivacyPage = React.lazy(() => import('./app/privacy/page'))
 const TermsPage = React.lazy(() => import('./app/terms/page'))
 const CookiesPage = React.lazy(() => import('./app/cookies/page'))
 const SitemapPage = React.lazy(() => import('./app/sitemap/page'))
+
 // AI Service Pages
 const AiAnalyticsPage = React.lazy(() => import('./app/ai-analytics/page'))
 const AiAutomationPage = React.lazy(() => import('./app/ai-automation/page'))
@@ -48,22 +49,27 @@ const AiCustomerSupportPage = React.lazy(() => import('./app/ai-customer-support
 const AiDataAnalyticsPage = React.lazy(() => import('./app/ai-data-analytics/page'))
 const AiWorkflowAutomationPage = React.lazy(() => import('./app/ai-workflow-automation/page'))
 const AiContentGeneratorPage = React.lazy(() => import('./app/ai-content-generator/page'))
+
 // IT Service Pages
 const CloudInfrastructurePage = React.lazy(() => import('./app/cloud-infrastructure/page'))
 const CybersecuritySolutionsPage = React.lazy(() => import('./app/cybersecurity-solutions/page'))
 const WebDevelopmentPage = React.lazy(() => import('./app/web-development/page'))
 const MobileDevelopmentPage = React.lazy(() => import('./app/mobile-development/page'))
 const CloudMigrationPage = React.lazy(() => import('./app/cloud-migration/page'))
+
 // Company Pages
 const TeamPage = React.lazy(() => import('./app/team/page'))
+
 // Additional Service Pages
 const CybersecurityPage = React.lazy(() => import('./app/cybersecurity/page'))
 const DataAnalyticsPage = React.lazy(() => import('./app/data-analytics/page'))
+
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   usePerformanceMonitor()
   return <React.Fragment>{children}</React.Fragment>
 }
+
 // Main App Component
 const App: React.FC = () => {
   return (
@@ -154,5 +160,5 @@ const App: React.FC = () => {
     </EnhancedErrorBoundary>
   )
 }
-App.displayName = 'App'
+
 export default App

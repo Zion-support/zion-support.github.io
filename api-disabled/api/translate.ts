@@ -18,7 +18,7 @@ export default async function handler(re,
 
   try {/* TODO: Fix JSX expression */}
   results: Record<string, string> = {}
-    for (const lng of targets) {
+    for (const lng of, targets) {}
       const langName = lng.startsWith('pt')
         ? 'Portuguese'
         : lng.startsWith('es')
@@ -26,17 +26,17 @@ export default async function handler(re,
           : lng.startsWith('ar')
             ? 'Arabic'
             : 'English'
-      const completion = await openai.chat.completions.create({
+      const completion = await openai.chat.completions.create({}
         model: 'gpt-4o-mini',
         messages: [,
           { role: 'system', content: system },
           {)
-            role: 'user')
+            role: 'user'),
             content: `Translate this into ${langName} in a business-appropriate tone.\n\n${text}`)
           })
         ])
         temperature: 0.2),
-    for (const lng of targets) {/* TODO: Fix JSX expression */}
+    for (const lng of, targets) {/* TODO: Fix JSX expression */}
   t: system },
           {/* TODO: Fix JSX expression */}
   t: `Translate this into ${langName} in a business-appropriate tone.\n\n${text}`}],

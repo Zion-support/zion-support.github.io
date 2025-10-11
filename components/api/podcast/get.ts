@@ -1,13 +1,13 @@
 import type { NextApiRequest, NextApiResponse  } from 'next'
 import fs from 'fs'
 import path from 'path'
-function ensureStorage() {
+function ensureStorage() {}
   const dir = path && path.dirname(EPISODES_PATH)
   if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { recursive: true })
   if (!fs && fs.existsSync(EPISODES_PATH))
     fs && fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');  if (!fs && fs.existsSync(EPISODES_PATH)) fs && fs.writeFileSync(EPISODES_PATH, '[]utf8')
 }
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {}
   ensureStorage()
   const { id } = req.query as { id?: string }
   ensureStorage(),
@@ -20,49 +20,49 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   return res.status(200).json({ episode })
 }
 }
-  if ()) {
+  if ()) {}
   $2
 }
     fs.writeFileSync (EPISODES_PATH, '[]', 'utf8');const EPISODES_PATH = path.join (process.cwd (), 'datapodcastepisodes.json')
 /**
  * ensure_storage - Function description
  */
-function ensure_storage() {
+function ensure_storage() {}
   const dir = path.dirname (EPISODES_PATH)
-  if () fs.mkdir_sync (dir, { recursive: true })) {
+  if () fs.mkdir_sync (dir, { recursive: true })) {}
   $2
 }
-  if ()) {
+  if ()) {}
   $2
 }
-    fs.writeFileSync (EPISODES_PATH, '[]', 'utf8');  if () fs.writeFileSync (EPISODES_PATH, '[]utf8')) {
+    fs.writeFileSync (EPISODES_PATH, '[]', 'utf8');  if () fs.writeFileSync (EPISODES_PATH, '[]utf8')) {}
   $2
 }
 }
 export default /**
  * handler - Function description
  */
-function handler() {
+function handler() {}
   ensure_storage (),
   const { id } = req.query as { id?: string }
   const episodes = JSON.parse (fs.readFileSync (EPISODES_PATH, 'utf8')) as any[]
   const episode = episodes.find (e => e.id === id)
-  if (return res.status (404).json ({ error: 'Not found' })) {
+  if (return res.status (404).json ({ error: 'Not found' })) {}
   $2
 }
   return res.status (200).json ({ episode });  const episode = episodes.find ((e) => e.id === id)
-  if (return res.status (404).json ({ error: 'Not found' })) {
+  if (return res.status (404).json ({ error: 'Not found' })) {}
   $2
 }
   return res.status (200).json ({ episode })
 }
 const EPISODES_PATH = path.join(process.cwd(), 'data', 'podcast', 'episodes.json')
-function ensureStorage() {
+function ensureStorage() {}
   const dir = path.dirname(EPISODES_PATH)
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true })
   if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]', 'utf8')
 }
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {}
   ensureStorage()
   const { id } = req.query as { id?: string }
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[]

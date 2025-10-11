@@ -1,10 +1,10 @@
 import React from 'react'
-interface ResponsiveContainerProps {
-    // TODO: Add content
+interface ResponsiveContainerProps {}
+    // TODO: Add content,
   }
 }
   childre,
-  n: React.ReactNode
+  n: React.ReactNode,
   className?: string,
   breakpoints?: {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -46,7 +46,7 @@ const,
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    if (!isClient) return
+    if (!isClient) return null;
     if (isLargeDesktop) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -69,7 +69,7 @@ const,
   O: Add content,}
 }
     return fallback || 
-          <div className={className}>{children}</div>
+          <div className={className}>{children}</div>;
   }
   const getResponsiveClasses = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -78,16 +78,15 @@ const,
     const responsiveClasses = breakpoints[screenSize] || ''
     return `${baseClasses} ${responsiveClasses}`.trim()
   }
-  return (
-    <div className="responsivecontainer">
-      {/* Component content */}
+  return();
+    <div className="responsivecontainer">"      {/* Component content */}
     </div>)
   )
 }
 // Hook for responsive values
 export const useResponsiveValue = {}
           <T,>(value,
-  s: {
+  s: {}
     // sm?: T
   }
 // md?: T
@@ -126,7 +125,7 @@ export const useResponsiveValue = {}
 }
     return values.sm
   }
-  return values.default || values.lg || values.md || values.sm || ({} as T)
+  return values.default || values.lg || values.md || values.sm || ({} as, T)
 }
 // Hook for responsive breakpoints
 export const useBreakpoint = () => {/* TODO: Fix JSX expression */}
@@ -150,4 +149,4 @@ export const useBreakpoint = () => {/* TODO: Fix JSX expression */}
     curren,
   t: isLargeDesktop ? '2xl' : isDesktop ? 'xl' : isTablet ? 'md' : 'sm'}
 }
-export default ResponsiveContainer</ResponsiveContainerProps>
+export default ResponsiveContainer</ResponsiveContainerProps>;

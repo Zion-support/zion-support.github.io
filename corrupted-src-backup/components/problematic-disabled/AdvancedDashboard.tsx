@@ -1,16 +1,15 @@
-import React, { useState, useEffect } from "react"
-// import AdvancedCacheManager from '../utils/advancedCache'
+import React, { useState, useEffect } from "react""// import AdvancedCacheManager from '../utils/advancedCache'
 // import { securityAuditor } from '../utils/securityAuditor'
 // import EnhancedUXManager from '../utils/enhancedUXManager'
 interface DashboardData {/* TODO: Fix JSX expression */}
   }
-  performance: {
+  performance: {}
     ,
     loadTime: number,
-    responseTime: number
+    responseTime: number,
   }
   security: {,
-    threatsBlocked: number
+    threatsBlocked: number,
     vulnerabilities: number,
   performanc,
   e: {/* TODO: Fix JSX expression */}

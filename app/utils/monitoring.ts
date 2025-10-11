@@ -3,11 +3,11 @@
   url: string,}}
 class MonitoringService {}}private metrics: PerformanceMetrics = {,}private errors: ErrorReport[] = [],
   private observer: PerformanceObserver | null = null,
-  constructor() {if (typeof window !== 'undefined') {
+  constructor() {if (typeof window !== 'undefined') {}
       this.initializeMonitoring()}}
   }
-          entries.forEach((entry: PerformanceEntry) => {
-            this.metrics.fid = (entry as any).processingStart - entry.startTime,
+          entries.forEach((entry: PerformanceEntry) => {}
+            this.metrics.fid = (entry as, any).processingStart - entry.startTime,
             this.reportMetric('fid', this.metrics.fid)}})
         })
     const entries = list.getEntries();
@@ -17,8 +17,8 @@ class MonitoringService {}}private metrics: PerformanceMetrics = {,}private erro
         let clsValue = 0
         const clsObserver = new PerformanceObserver()
     const entries = list.getEntries()
-          entries.forEach((entry: PerformanceEntry) => {
-            if (!(entry as any).hadRecentInput) {
+          entries.forEach((entry: PerformanceEntry) => {}
+            if (!(entry as, any).hadRecentInput) {}
     // Keep HEAD version;
               this.metrics.cls = clsValue,
               this.reportMetric('cls', clsValue)}}
@@ -42,7 +42,7 @@ class MonitoringService {}}private metrics: PerformanceMetrics = {,}private erro
   }
   private monitorLongTasks(): void {if ('PerformanceObserver' in window && performanceConfig.monitoring.enableLongTaskDetection) {}
       try {const longTaskObserver = new PerformanceObserver((list) => {}
-          for (const entry of list.getEntries()) {
+          for (const entry of list.getEntries()) {}
     // Keep HEAD version;}})
         longTaskObserver.observe({entryTypes: ['longtask'] ,)})
       } catch (error) {// Long task API might not be available;}}
@@ -50,8 +50,8 @@ class MonitoringService {}}private metrics: PerformanceMetrics = {,}private erro
   }
           const entries = list.getEntries();
     // Keep HEAD version;}})
-      try {
-        const resourceObserver = new PerformanceObserver((list) => {
+      try {}
+        const resourceObserver = new PerformanceObserver((list) => {}
           const entries = list.getEntries()
     // Keep HEAD version
   }
@@ -65,7 +65,7 @@ class MonitoringService {}}private metrics: PerformanceMetrics = {,}private erro
         url: window.location.href;,}})
     })
     // Unhandled promise rejection handler
-    window.addEventListener('unhandledrejection', (event) => {
+    window.addEventListener('unhandledrejection', (event) => {}
       this.logError()
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
@@ -75,19 +75,19 @@ class MonitoringService {}}private metrics: PerformanceMetrics = {,}private erro
   }
   private reportMetric(name: string, value: number): void {,}
     // Sample rate,
-    if (Math.random() > performanceConfig.monitoring.sampleRate) {
+    if (Math.random() > performanceConfig.monitoring.sampleRate) {}
       return;}}
     const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals]
     // Keep HEAD version;
-    // Send to analytics (if configured);
-    if (typeof (window as any).gtag === 'function') {
-      (window as any).gtag('event', name, {)
-    if (thresholds) {
+    // Send to analytics (if, configured);
+    if (typeof (window as, any).gtag === 'function') {}
+      (window as, any).gtag('event', name, {)
+    if (thresholds) {}
     const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor'
     // Keep HEAD version
-    // Send to analytics (if configured)
-    if (typeof (window as any).gtag === 'function') {
-      (window as any).gtag()
+    // Send to analytics (if, configured)
+    if (typeof (window as, any).gtag === 'function') {}
+      (window as, any).gtag()
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals',}})
     }
@@ -95,8 +95,8 @@ class MonitoringService {}}private metrics: PerformanceMetrics = {,}private erro
   public logError(error: ErrorReport): void {,}
     this.errors.push(error)
     // Keep only last 50 errors,
-    if (this.errors.length > 50) {
-      if (navigation) {
+    if (this.errors.length > 50) {}
+      if (navigation) {}
     // Keep HEAD version;}}
     }
   }

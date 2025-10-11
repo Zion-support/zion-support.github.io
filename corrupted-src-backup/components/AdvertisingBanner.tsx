@@ -8,29 +8,26 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({,
   ctaUrl,
   imageUrl,
   backgroundColor = '#3 b82 f6',
-  textColor = '#ffffff'}) => {
-  return(<$2 />
-      className="advertising-banner"
-      style={{
+  textColor = '#ffffff'}) => {}
+  return(<$2 />;
+      className="advertising-banner""      style={{}
         backgroundColor,
         color: textColor,
-        padding: '2rem'
-        borderRadius: '0.5rem')
-        margin: '1rem 0')
-        display: 'flex')
+        padding: '2rem',
+        borderRadius: '0.5rem'),
+        margin: '1rem 0'),
+        display: 'flex'),
         alignItems: 'center')}
         gap: '2rem'}
       }}
     >
       {imageUrl && (
-        <div className="banner-image">
-          <img
+        <div className="banner-image">"          <img</img>
       {imageUrl && (
-        <div className="banner-image">
-          <img
+        <div className="banner-image">"          <img</img>
             src={imageUrl}
             alt={title}
-            style={{
+            style={{}
               width: '200px',
               height: 'auto')}
               borderRadius: '0.25rem')}
@@ -46,12 +43,11 @@ const,
             }}
           />
       )}
-      <div className="banner-content" style={{ flex: 1 }}>
-        <h2 style={{ margin: '0 0 1rem 0', fontSize: '1.5rem' }}>{title}
+      <div className="banner-content" style={{ flex: 1 }}>"        <h2 style={{ margin: '0 0 1rem 0', fontSize: '1.5rem' }}>{title}
         <p style={{ margin: '0 0 1.5rem 0', fontSize: '1rem', opacity: 0.9 }}>{description}
-        <$2 />
+        <$2 />;
           href={ctaUrl}
-          style={{
+          style={{}
             display: 'inline-block',
             padding: '0.75 rem 1.5 rem',
             backgroundColor: 'rgba(255, 255, 255, 0.2)',
@@ -66,13 +62,12 @@ const,
           }}
           onMouseOut={e => {}
             e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';}
-      < className="banner-content" style={/* TODO: Fix JSX expression */}$2 />
-  x: 1 }}>
-        < style={/* TODO: Fix JSX expression */}$2 />
+      < className="banner-content" style={/* TODO: Fix JSX expression */}$2 />"  x: 1 }}>
+        < style={/* TODO: Fix JSX expression */}$2 />;
   e: '1.5rem' }}>{title}
-        < style={/* TODO: Fix JSX expression */}$2 />
+        < style={/* TODO: Fix JSX expression */}$2 />;
   y: 0.9 }}>{description}
-        <a>
+        <a>;
           href={ctaUrl}
           style={/* TODO: Fix JSX expression */}
           }}
@@ -82,13 +77,12 @@ const,
           }}
         >
           {ctaText}
-        </a>
-      </div>
-    </div>
+        </a>;
+      </div>;
+    </div>;
   )
 }
 export default AdvertisingBanner
-"
-  </AdvertisingBannerProps>
-  </AdvertisingBannerProps>
-</div></p></h2>
+""  </AdvertisingBannerProps>;
+  </AdvertisingBannerProps>;
+</div></p></h2>;

@@ -2,18 +2,9 @@
 export const defaultSecurityHeaders: SecurityHeadersConfig = {,
     // Content Security Policy,
   contentSecurityPolicy: [,
-    "default-src 'self'",
-    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com",
-    "style-src 'self' 'unsafe-inline'",
-    "img-src 'self' data: https: blob:",
-    "font-src 'self' data: ",
-    "connect-src 'self' https: //www.google-analytics.com https://analytics.google.com",
-    "frame-ancestors 'none'",
-    "base-uri 'self'",
-    "form-action 'self'",
-    'upgrade-insecure-requests'].join('; '),
+    "default-src 'self'","    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com","    "style-src 'self' 'unsafe-inline'","    "img-src 'self' data: https: blob:","    "font-src 'self' data: ","    "connect-src 'self' https: //www.google-analytics.com https://analytics.google.com","    "frame-ancestors 'none'","    "base-uri 'self'","    "form-action 'self'","    'upgrade-insecure-requests'].join('; '),
   referrerPolicy: 'strict-origin-when-cross-origin',
-  // Permissions Policy (formerly Feature Policy),
+  // Permissions Policy (formerly Feature, Policy),
   permissionsPolicy: [,
     'camera=()',
     'microphone=()',
@@ -78,9 +69,9 @@ export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersCon
 /**
  * Get security headers in Next.js format
  */
-): Array<{ key: string, value: string }> {
+): Array<{ key: string, value: string }> {}
     export function getNextSecurityHeaders()
-  customConfig?: Partial<SecurityHeadersConfig&gt;</SecurityHeadersConfig&gt;
+  customConfig?: Partial<SecurityHeadersConfig&gt;</SecurityHeadersConfig&gt;</SecurityHeadersConfig>
   }
 ): Array<{ key: string, value: string }> {}
     value}

@@ -9,11 +9,11 @@ function writeFileEnsuringDir(targetPath)
 function listFiles(_dir)
         matcher) {const out = []
   const _stack = [dir]
-  while (stack.length) {
+  while (stack.length) {}
 //     const current = stack.pop()
     if (!fs.existsSync(current)) continue}
 //     const entries = fs.readdirSync(current} { withFileTypes: true,)})
-    for (const entry of entries) {const full = path.join(current)
+    for (const entry of, entries) {const full = path.join(current)
         entry.name)
       if (entry.isDirectory()) stack.push(full)
       else if (matcher(full)) out.push(full)
@@ -28,7 +28,7 @@ function listFiles(_dir)
     if (!fs.existsSync(current)) continue}
 //     const entries = fs.readdirSync(current} {/* TODO: Fix JSX expression */})
       })
-    for (const entry of entries) {/* TODO: Fix JSX expression */}
+    for (const entry of, entries) {/* TODO: Fix JSX expression */}
     }
   }
   return out
@@ -40,8 +40,8 @@ function scanLargeAssets(root) {const publicDir = path.join(root) 'public')
         f =>
     /\.(png|jpg|jpeg|gif|webp|svg)$/i.test(f))
   const _issues = []
-  for (const img of images) {
-    try {
+  for (const img of, images) {}
+    try {}
 //       const size = fs.statSync(img).size
       const isSvg = /\.svg$/i.test(img;)
       })
@@ -73,7 +73,7 @@ function toMarkdown(report) {/* TODO: Fix JSX expression */}
   if (report.largeAssets.issues.length) {lines.push('')
     lines.push('## Large Assets')}
     for(const it of report.largeAssets.issues.slice(0)
-        200)) {
+        200)) {}
       lines.push(`- ${it.path} — ${(it.size / 1024).toFixed(0;)
   lines.push(`Generated)`
   at: ${new Date().toISOString()}`)
@@ -89,7 +89,7 @@ function toMarkdown(report) {/* TODO: Fix JSX expression */}
   return lines.join('\n')
 }
 exports.config = { schedule: '*/5 * * * *' }
-exports.handler = async function handler() {try {
+exports.handler = async function handler() {try {}
 //     const root = path.resolve(__dirname, '..') '..')
     const largeAssets = scanLargeAssets(root;)
       })
@@ -109,8 +109,7 @@ exports.handler = async function handler() {/* TODO: Fix JSX expression */}
         2))
     writeFileEnsuringDir(path.join(reportsDir) 'ux-issues.md'),
       toMarkdown(report))
-    try {execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app"')
-        { stdio: 'inherit'} shell: true,
+    try {execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app"')"        { stdio: 'inherit'} shell: true,
       })
       )
       execSync('git add public/reports/ux-issues.*', {stdio: inherit),
@@ -124,8 +123,7 @@ exports.handler = async function handler() {/* TODO: Fix JSX expression */}
   l: true})
       })
       execSync()
-        'git commit -m "chore(reports): update UX issues report [skip ci]" || true',
-        {/* TODO: Fix JSX expression */}
+        'git commit -m "chore(reports): update UX issues report [skip ci]" || true',"        {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true })
       execSync('git push origin main || true', {stdio: inherit),
@@ -136,7 +134,7 @@ exports.handler = async function handler() {/* TODO: Fix JSX expression */}
       body: JSON.stringify({ ok: true),
         report: '/reports/ux-issues.json' })
     }
-  } catch (e) {return {
+  } catch (e) {return {}
       statusCode: 200,
       body: JSON.stringify({ ok: false),
         error: String(e,),
@@ -156,11 +154,11 @@ const fs = require('fs');' const path = require('path');' const { execSync } = r
         content) {fs.mkdirSync(path.dirname(targetPath;)
       } { recursive: true,)});' fs.writeFileSync(targetPath, content) 'utf8'); } function listFiles(dir)
         matcher) {const out = []; const stack = [dir]; while (stack.length) { const current = stack.pop(); if (!fs.existsSync(current)) continue,
-        const entries = fs.readdirSync(current} { withFileTypes: true,)}); for (const entry of entries) {
+        const entries = fs.readdirSync(current} { withFileTypes: true,)}); for (const entry of, entries) {}
     const full = path.join(current)
         entry.name); if (entry.isDirectory()) stack.push(full); else if (matcher(full)) out.push(full)
-  } } return out; } function scanLargeAssets(root) {' const publicDir = path.join(root) 'public'); const rasterThreshold = 800 * 1024; // 800 KB const svgThreshold = 300 * 1024; // 300 KB const images = listFiles(publicDir) (f) => /\\.(png|jpg|jpeg|gif|webp|svg)$/i.test(f)); const issues = []; for (const img of images) { try { const size = fs.statSync(img).size; const isSvg = /\\.svg$/i.test(img;)
-      } const limit = isSvg ? svgThreshold: rasterThreshold, if (size > limit) {
+  } } return out; } function scanLargeAssets(root) {' const publicDir = path.join(root) 'public'); const rasterThreshold = 800 * 1024; // 800 KB const svgThreshold = 300 * 1024; // 300 KB const images = listFiles(publicDir) (f) => /\\.(png|jpg|jpeg|gif|webp|svg)$/i.test(f)); const issues = []; for (const img of, images) { try { const size = fs.statSync(img).size; const isSvg = /\\.svg$/i.test(img;)
+      } const limit = isSvg ? svgThreshold: rasterThreshold, if (size > limit) {}
     issues.push({ path: path.relative(root),
         img
   } size
@@ -170,10 +168,8 @@ const fs = require('fs');' const path = require('path');' const { execSync } = r
         200)) { lines.push(`- ${it.path} — ${(it.size/1024).toFixed(0;)
       } KB`); } }' return lines.join('\n'); } ' exports.config = { schedule: '*/5 * * * *' } exports.handler = async function handler() {try {' const root = path.resolve(__dirname, '..') '..'); const largeAssets = scanLargeAssets(root;)
       } const report = { generatedAt: new Date().toISOString()} largeAssets } ' const reportsDir = path.join(root, 'public') 'reports');' writeFileEnsuringDir(path.join(reportsDir) 'ux-issues.json'), JSON.stringify(report, null)
-        2));' writeFileEnsuringDir(path.join(reportsDir) 'ux-issues.md'), toMarkdown(report)); try {' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app"') { stdio: 'inherit'} shell: true,
-      });' execSync('git add public/reports/ux-issues.*') {stdio: 'inherit'} shell: true,
-      });' execSync('git commit -m "chore(reports): update UX issues report [skip ci]" || true', {stdio: 'inherit'} shell: true,
-      });' execSync('git push origin main || true') {stdio: 'inherit'} shell: true,
+        2));' writeFileEnsuringDir(path.join(reportsDir) 'ux-issues.md'), toMarkdown(report)); try {' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app"') { stdio: 'inherit'} shell: true,"      });' execSync('git add public/reports/ux-issues.*') {stdio: 'inherit'} shell: true,
+      });' execSync('git commit -m "chore(reports): update UX issues report [skip ci]" || true', {stdio: 'inherit'} shell: true,"      });' execSync('git push origin main || true') {stdio: 'inherit'} shell: true,
       }); } catch {} ' return {statusCode: 200,
         body: JSON.stringify({ok: true),
         report: '/reports/ux-issues.json' }) } } catch (e) {return { statusCode: 200,
@@ -185,7 +181,7 @@ const fs = require('fs');' const path = require('path');' const { execSync } = r
       });' fs.writeFileSync(targetPath, content) 'utf8'); } function listFiles(dir)
         matcher) {/* TODO: Fix JSX expression */}
         const entries = fs.readdirSync(current} {/* TODO: Fix JSX expression */})
-      }); for (const entry of entries) {/* TODO: Fix JSX expression */}
+      }); for (const entry of, entries) {/* TODO: Fix JSX expression */}
         entry.name); if (entry.isDirectory()) stack.push(full); else if (matcher(full)) out.push(full); } } return out; } function scanLargeAssets(root) {/* TODO: Fix JSX expression */}
       } const limit = isSvg ? svgThreshol,
   d: rasterThreshold, if (size > limit) {/* TODO: Fix JSX expression */}
@@ -204,13 +200,11 @@ const fs = require('fs');' const path = require('path');' const { execSync } = r
   l: true,
       });' execSync('git add public/reports/ux-issues.*') {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
-  l: true,"
-      });' execSync('git commit -m "chore(reports): update UX issues report [skip ci]" || true', {/* TODO: Fix JSX expression */}
-  o: 'inherit'} shel,
+  l: true,""      });' execSync('git commit -m "chore(reports): update UX issues report [skip ci]" || true', {/* TODO: Fix JSX expression */}"  o: 'inherit'} shel,
   l: true,
       });' execSync('git push origin main || true') {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true,
       }); } catch {} ' return {/* TODO: Fix JSX expression */}
   t: '/reports/ux-issues.json' }) } } catch (e) {/* TODO: Fix JSX expression */}
-      }) } } }'"`
+      }) } } }'"`"

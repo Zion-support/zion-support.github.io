@@ -1,17 +1,17 @@
-export interface RealAdditionService2025Q3 {
-	id: string
-	name: string
-	tagline: string
-	description: string
-	price: string
-	period: string
-	category: string
-	features: string[]
+export interface RealAdditionService2025Q3 {}
+	id: string,
+	name: string,
+	tagline: string,
+	description: string,
+	price: string,
+	period: string,
+	category: string,
+	features: string[],
 	popular?: boolean
-	link: string
+	link: string,
 	trialDays?: number
 	setupTime?: string
-	realService: boolean
+	realService: boolean,
 	technology?: string[]
 	integrations?: string[]
 	useCases?: string[]
@@ -24,8 +24,8 @@ export interface RealAdditionService2025Q3 {
 	rating?: number
 	reviews?: number
 }
-export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
-	{
+export const realAdditions2025Q3: RealAdditionService2025Q3[] = [],
+	{}
 		id: 'ai-email-copilot',
 		name: 'AI Email Responder Copilot',
 		tagline: 'Auto-draft, classify, and reply to inbound emails with policy guardrails',
@@ -33,7 +33,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		price: '$79',
 		period: '/month',
 		category: 'AI Assistants',
-		features: [
+		features: [],
 			'Priority inbox and intent detection',
 			'Policy-aware auto-drafting with approvals',
 			'CRM sync and follow-up reminders',
@@ -55,9 +55,9 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		launchDate: '2025-06-01',
 		customers: 140,
 		rating: 4.7,
-		reviews: 62
+		reviews: 62,
 	},
-	{
+	{}
 		id: 'affiliate-tracking-lite',
 		name: 'Affiliate Tracking Lite',
 		tagline: 'Simple, privacy-first affiliate links and payouts for SMBs',
@@ -65,7 +65,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		price: '$39',
 		period: '/month',
 		category: 'Sales & Marketing',
-		features: [
+		features: [],
 			'Link generation and UTM tagging',
 			'Fraud and self-referral checks',
 			'Conversion webhooks and API',
@@ -87,9 +87,9 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		launchDate: '2025-06-02',
 		customers: 85,
 		rating: 4.6,
-		reviews: 33
+		reviews: 33,
 	},
-	{
+	{}
 		id: 'smb-analytics-starter',
 		name: 'SMB Analytics Starter',
 		tagline: 'Clean dashboards and alerts without a data team',
@@ -97,7 +97,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		price: '$49',
 		period: '/month',
 		category: 'Analytics & Business Intelligence',
-		features: [
+		features: [],
 			'Prebuilt KPI templates',
 			'AI explanations for spikes and dips',
 			'Weekly email digests',
@@ -119,9 +119,9 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		launchDate: '2025-06-03',
 		customers: 120,
 		rating: 4.5,
-		reviews: 28
+		reviews: 28,
 	},
-	{
+	{}
 		id: 'it-helpdesk-suite',
 		name: 'IT Helpdesk Suite',
 		tagline: 'Ticketing, SLAs, asset inventory, and AI triage in one',
@@ -129,7 +129,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		price: '$99',
 		period: '/month',
 		category: 'IT Operations',
-		features: [
+		features: [],
 			'Email-to-ticket with SLA timers',
 			'Asset discovery (agentless + agent)',
 			'Knowledge base and macros',
@@ -151,9 +151,9 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		launchDate: '2025-06-04',
 		customers: 60,
 		rating: 4.6,
-		reviews: 21
+		reviews: 21,
 	},
-	{
+	{}
 		id: 'meeting-minutes-ai',
 		name: 'Meeting Minutes AI',
 		tagline: 'Join, transcribe, summarize, and file action items',
@@ -161,7 +161,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		price: '$29',
 		period: '/month',
 		category: 'Productivity',
-		features: [
+		features: [],
 			'Auto-join major meeting apps',
 			'Topic segmentation and speakers',
 			'Action items with owners',
@@ -183,9 +183,9 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		launchDate: '2025-06-05',
 		customers: 200,
 		rating: 4.5,
-		reviews: 45
+		reviews: 45,
 	},
-	{
+	{}
 		id: 'data-quality-guard',
 		name: 'Data Quality Guard',
 		tagline: 'Detect anomalies, schema drift, and freshness gaps',
@@ -193,7 +193,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		price: '$149',
 		period: '/month',
 		category: 'Data & Analytics',
-		features: [
+		features: [],
 			'Freshness and volume checks',
 			'Anomaly detection on KPIs',
 			'Schema drift alerts',
@@ -215,9 +215,9 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		launchDate: '2025-06-06',
 		customers: 55,
 		rating: 4.6,
-		reviews: 19
+		reviews: 19,
 	},
-	{
+	{}
 		id: 'landing-page-ai-tester',
 		name: 'Landing Page AI Tester',
 		tagline: 'Generate A/B variants and ship with guardrails',
@@ -225,7 +225,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		price: '$59',
 		period: '/month',
 		category: 'Growth & Optimization',
-		features: [
+		features: [],
 			'On-brand AI text and images',
 			'Visual editor and rollback',
 			'Holdout and sample sizing',
@@ -247,9 +247,9 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		launchDate: '2025-06-07',
 		customers: 90,
 		rating: 4.5,
-		reviews: 31
+		reviews: 31,
 	},
-	{
+	{}
 		id: 'ai-brand-copilot',
 		name: 'AI Brand Copilot',
 		tagline: 'Enforce tone, style, and logo usage across teams',
@@ -257,7 +257,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		price: '$69',
 		period: '/month',
 		category: 'Content & Compliance',
-		features: [
+		features: [],
 			'Brand policy linting for text and images',
 			'Inline suggestions and fixes',
 			'Asset library and approvals',
@@ -279,9 +279,9 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		launchDate: '2025-06-08',
 		customers: 45,
 		rating: 4.6,
-		reviews: 17
+		reviews: 17,
 	},
-	{
+	{}
 		id: 'security-changelog-bot',
 		name: 'Security Changelog Bot',
 		tagline: 'Summarize vulns and fixes from repos and SBOMs',
@@ -289,7 +289,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		price: '$39',
 		period: '/month',
 		category: 'Security & Compliance',
-		features: [
+		features: [],
 			'SBOM generation and diff',
 			'PR scanner for risky changes',
 			'Weekly security digest',
@@ -311,9 +311,9 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		launchDate: '2025-06-09',
 		customers: 110,
 		rating: 4.5,
-		reviews: 26
+		reviews: 26,
 	},
-	{
+	{}
 		id: 'vendor-risk-lite',
 		name: 'Vendor Risk Lite',
 		tagline: 'Security questionnaires, evidence, and follow-ups automated',
@@ -321,7 +321,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		price: '$129',
 		period: '/month',
 		category: 'Compliance Automation',
-		features: [
+		features: [],
 			'Questionnaire templates (SOC2/ISO/NIST)',
 			'Evidence upload and mapping',
 			'Automated reminders and tasks',
@@ -343,9 +343,9 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		launchDate: '2025-06-10',
 		customers: 65,
 		rating: 4.6,
-		reviews: 24
+		reviews: 24,
 	},
-	{
+	{}
 		id: 'incident-comms-assistant',
 		name: 'Incident Comms Assistant',
 		tagline: 'Draft status updates, timelines, and postmortems',
@@ -353,7 +353,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		price: '$79',
 		period: '/month',
 		category: 'Reliability & SRE',
-		features: [
+		features: [],
 			'Channel orchestration (Slack/PagerDuty)',
 			'Templates per severity',
 			'Timeline auto-build from events',
@@ -375,9 +375,9 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		launchDate: '2025-06-11',
 		customers: 40,
 		rating: 4.5,
-		reviews: 16
+		reviews: 16,
 	},
-	{
+	{}
 		id: 'policy-privacy-scanner',
 		name: 'Policy & Privacy Scanner',
 		tagline: 'Scan sites and apps for cookie and policy compliance',
@@ -385,7 +385,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		price: '$49',
 		period: '/month',
 		category: 'Privacy & Legal',
-		features: [
+		features: [],
 			'Cookie and tracker inventory',
 			'Regional banners and consent logs',
 			'Policy generator with diffs',
@@ -407,9 +407,9 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		launchDate: '2025-06-12',
 		customers: 95,
 		rating: 4.6,
-		reviews: 29
+		reviews: 29,
 	},
-	{
+	{}
 		id: 'ai-proposal-writer',
 		name: 'AI Proposal Writer',
 		tagline: 'Convert briefs into on-brand proposals with pricing tables',
@@ -417,7 +417,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		price: '$39',
 		period: '/month',
 		category: 'Professional Services',
-		features: [
+		features: [],
 			'On-brand templates and styles',
 			'Library of scopes and clauses',
 			'Auto pricing table suggestions',
@@ -439,6 +439,6 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
 		launchDate: '2025-06-13',
 		customers: 300,
 		rating: 4.7,
-		reviews: 120
+		reviews: 120,
 	}
 ]

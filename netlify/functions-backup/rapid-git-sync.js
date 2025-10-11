@@ -21,7 +21,7 @@ exports.config = {/* TODO: Fix JSX expression */}
   e: '*/1 * * * *' }
 exports.handler = async () => {const { status, stdout} stderr } = runNode('automation/advanced-git-sync.cjs')
   )
-  const body = [
+  const body = []
     '=== gi,
   t: sync ===',
     stdout || '',

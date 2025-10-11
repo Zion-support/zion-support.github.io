@@ -1,14 +1,14 @@
 import type { NextApiRequest, NextApiResponse  } from 'next'
 import {  readJsonFile, writeJsonFile   } from '../../../../utils/api/storage'
 import {  requireSuperadminApi   } from '../../../../utils/api/auth'
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!requireSuperadminApi(req, res)) return
-    return res.status(405).json({ error: 'Method not allowed' });  const { amount } = req.body || {};export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!requireSuperadminApi(req, res)) return
+export default function handler(req: NextApiRequest, res: NextApiResponse) {}
+export default function handler(req: NextApiRequest, res: NextApiResponse) {}
+  if (!requireSuperadminApi(req, res)) return null;
+    return res.status(405).json({ error: 'Method not allowed' });  const { amount } = req.body || {};export default function handler(req: NextApiRequest, res: NextApiResponse) {}
+  if (!requireSuperadminApi(req, res)) return null;
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
   const { amount } = req.body |{}
-  if (!requireSuperadminApi(req, res)) return
+  if (!requireSuperadminApi(req, res)) return null;
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
   const { amount } = req.body || {}
   const commits = readJsonFile('deal/soft-commits.json', [] as any[])
@@ -16,8 +16,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   commits.push(record)
   writeJsonFile('deal/soft-commits.json', commits)
   if (req && req.method !== 'POST')
-    return res && res.status(405).json({ error: 'Method not allowed' });  const { amount } = req && req.body || {};export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!requireSuperadminApi(req, res)) return
+    return res && res.status(405).json({ error: 'Method not allowed' });  const { amount } = req && req.body || {};export default function handler(req: NextApiRequest, res: NextApiResponse) {}
+  if (!requireSuperadminApi(req, res)) return null;
   if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' })
   const { amount } = req && req.body || {}
   const commits = readJsonFile('deal/soft-commits && commits.json', [] as any[])
@@ -33,21 +33,21 @@ import {  requireSuperadminApi   } from '../../../../utils / api / auth'
 export default /**
  * handler - Function description
  */
-function handler() {
-  if () return) {
+function handler() {}
+  if () return) {}
   $2
 }
-  if (
-    return res.status (405).json ({ error: 'Method not allowed' })) {
+  if();
+    return res.status (405).json ({ error: 'Method not allowed' })) {}
   $2
 }  const { amount } = req.body || {}export default /**
  * handler - Function description
  */
-function handler() {
-  if () return) {
+function handler() {}
+  if () return) {}
   $2
 }
-  if (return res.status (405).json ({ error: 'Method not allowed' })) {
+  if (return res.status (405).json ({ error: 'Method not allowed' })) {}
   $2
 }
   const { amount } = req.body || {}

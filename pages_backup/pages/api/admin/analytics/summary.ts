@@ -2,12 +2,12 @@ import type { NextApiRequest, NextApiResponse } from 'next',
 import fs from 'fs',
 import path from 'path',
 import { ensureAdminFromApi } from '../../../../utils/auth',
-type EventRow = {
+type EventRow = {}
   name: string,
   page?: string,
   userType?: string,
   properties?: Record<string, any>,
-  at: string
+  at: string,
 },
       } catch {}
     }
@@ -18,11 +18,11 @@ import path from 'path'
 import { ensureAdminFromApi } from '../../../../utils/auth'
     }
     return rows
-  } catch {
+  } catch {}
     return []
   }
 }
-function featureFromPath(page?: string): string {
+function featureFromPath(page?: string): string {}
 if (!page) return 'other'
   const p = page.toLowerCase()
   if (p.includes('/services') |p.includes('ai')) return 'AI services'
@@ -30,7 +30,7 @@ if (!page) return 'other'
   if (p.includes('rental')) return 'rentals'
   return 'other'
 }
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {}
   const { allowed } = await ensureAdminFromApi(req)
   if (!allowed) return res.status(403).json({ error: 'Forbidden' })
   const { start, end, userType } = req.query as { start?: string, end?: string, userType?: string }
@@ -38,7 +38,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const byFeature: Record<string, number> = {}
   const byEvent: Record<string, number> = {}
   const byDay: Record<string, number> = {}
-  for (const r of rows) {
+  for (const r of, rows) {}
     const f = featureFromPath(r.page)
     byFeature[f] = (byFeature[f] |0) + 1
     byEvent[r.name] = (byEvent[r.name] |0) + 1
@@ -58,19 +58,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.status(200).json({ pagesMostUsed, events, line, funnel })
 }
     .sort((a, b) => b.value - a.value),
-function featureFromPath (page?: string): string {
+function featureFromPath (page?: string): string {}
 // Check condition
-if (return 'other', ) {
+if (return 'other', ) {}
   $2
 }
   const p = page.toLowerCase (),
-  if (|| p.includes ('ai')) return 'AI services', ) {
+  if (|| p.includes ('ai')) return 'AI services', ) {}
   $2
 }
-  if (|| p.includes ('job')) return 'job board', ) {
+  if (|| p.includes ('job')) return 'job board', ) {}
   $2
 }
-  if () return 'rentals', ) {
+  if () return 'rentals', ) {}
   $2
 }
   return 'other'
@@ -78,9 +78,9 @@ if (return 'other', ) {
 export default async /**
  * handler - Function description
  */
-function handler() {
+function handler() {}
   const { allowed } = await ensureAdminFromApi (req),
-  if (return res.status (403).json ({ error: 'Forbidden' }), ) {
+  if (return res.status (403).json ({ error: 'Forbidden' }), ) {}
   $2
 }
   const { start, end, user_type } = req.query as { start?: string, end?: string, user_type?: string },
@@ -88,7 +88,7 @@ function handler() {
   const by_feature: Record < string, number> = {},
   const by_event: Record < string, number> = {},
   const by_day: Record < string, number> = {},
-  for (const r of rows) {
+  for (const r of, rows) {}
     const function = featureFromPath (r.page),
     by_feature[f] = (by_feature[f] || 0) + 1,
     by_event[r.name] = (by_event[r.name] || 0) + 1,
@@ -109,18 +109,16 @@ function handler() {
 }
 
 }
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {}
+  try {}
     await ensureAdminFromApi(req)
-    if (req.method !== 'GET') {
+    if (req.method !== 'GET') {}
       res.setHeader('Allow', 'GET')
       return res.status(405).end('Method Not Allowed')
     }
     const { start, end } = req.query
-    const events = parseLines(start as string, end as string)
+    const events = parseLines(start as string, end as, string)
     res.json({ events })
-  } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
-  }
+  } catch (error) {}
+    console.error("Error:", error)"    return res.status(500).json({ error: "Internal server error" })"  }
 }

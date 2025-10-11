@@ -1,57 +1,56 @@
 const { withSentry } = require('../withSentry.cjs')
 const { isValidEmail } = require('../emailUtils.cjs')
-async function handler(req, res) {
-  if (req.method !== 'POST') {
+async function handler(req, res) {}
+  if (req.method !== 'POST') {}
     res.statusCode = 405
     res.setHeader('Content-Type', 'application/json')
     res.end(JSON.stringify({ error: 'Method not allowed' }))
-    return
+    return null;
   }
 
-  try {
+  try {}
     const { email } = req.body || {}
-    if (!email) {
+    if (!email) {}
       res.statusCode = 400
       res.setHeader('Content-Type', 'application/json')
       res.end(JSON.stringify({ error: 'Email is required' }))
-      return
+      return null;
     }
 
-    if (!isValidEmail(email)) {
+    if (!isValidEmail(email)) {}
       res.statusCode = 400
       res.setHeader('Content-Type', 'application/json')
       res.end(JSON.stringify({ error: 'Invalid email format' }))
-      return
+      return null;
     }
 
     // Save subscription logic here
-    // In a real application, you would:
-    // 1. Save to your database
+    // In a real application, you would: // 1. Save to your database,
     // 2. Add to your email marketing service (Mailchimp, ConvertKit, etc.)
     // 3. Send confirmation email
 
     // Log subscription for debugging in development
-    if (process.env.NODE_ENV === 'development') {
+    if (process.env.NODE_ENV === 'development') {}
       console.log('Newsletter subscription:', { email, timestamp: new Date().toISOString() })
     }
 
     res.statusCode = 200
     res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ 
+    res.end(JSON.stringify({}
       success: true, 
       message: 'Successfully subscribed to newsletter',
       email 
     }))
-  } catch (error) {
+  } catch (error) {}
     // Log error for debugging in development
-    if (process.env.NODE_ENV === 'development') {
+    if (process.env.NODE_ENV === 'development') {}
       console.error('Newsletter subscription error:', error)
     }
     res.statusCode = 500
     res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ 
+    res.end(JSON.stringify({}
       error: 'Failed to subscribe to newsletter',
-      details: process.env.NODE_ENV === 'development' ? error.message : undefined
+      details: process.env.NODE_ENV === 'development' ? error.message : undefined,
     }))
   }
 }

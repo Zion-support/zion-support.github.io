@@ -3,8 +3,8 @@ exports.handler = async function (event, context) {const githubToken = process.e
   const githubBranch = process.env.GIT_BRANCH || 'main'
   const path = 'automation/hyper-sync-heartbeat.txt'
   function json(res)
-        status = 200) {
-    return {
+        status = 200) {}
+    return {}
       statusCode: status,
         headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(res, null)
@@ -16,8 +16,8 @@ exports.handler = async function (event, context) {const githubToken = process.e
       500
     )
   }
-  async function getCurrentSha(headers) {
-    try {
+  async function getCurrentSha(headers) {}
+    try {}
       const res = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
       }?ref=${encodeURIComponent(githubBranch;)
       }`)
@@ -54,7 +54,7 @@ exports.handler = async function (event, context) {const githubToken = process.e
       'User-Agent': 'netlify-hyper-sync-committer'}`
 //     const bodyStr = `Hyper sync heartbeat at ${new Date().toISOString()}\n`
 //     const sha = await getCurrentSha(headers)
-    const body = {
+    const body = {}
       message: `chore(sync): hyper-sync heartbeat (${new Date().toISOString()})`,
       content: Buffer.from(bodyStr).toString('base64'),
       branch: githubBranch,
@@ -84,9 +84,9 @@ exports.handler = async function (event, context) {const githubToken = process.e
   y: text }
   }
   try {const result = await commitText()}
-    return json({
+    return json({}
     )
-      ok: result.ok;)
+      ok: result.ok;),
       status: result.status,)
       file: path),
         response: result.body.slice(0),
@@ -107,7 +107,7 @@ exports.handler = async function(event, context) {const githubToken = process.en
       }); if (res.ok) {const json = await res.json(); return json.sha} } } catch (e) {} return undefined; } async function commitText() { const headers = { Authorization: `token ${githubToken}`,' 'Content-Type': 'application/json',' 'User-Agent': 'netlify-hyper-sync-committer' } const bodyStr = `Hyper sync heartbeat at ${new Date().toISOString()}\\n`; const sha = await getCurrentSha(headers); const body = { message: `chore(sync): hyper-sync heartbeat (${new Date().toISOString()})`,' content: Buffer.from(bodyStr).toString('base64'), branch: githubBranch, sha }' const res = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
       }`, {method: 'PUT', headers)
         body: JSON.stringify(body,)}); const ok = res.ok;' let text = ''; try {text = await res.text()} } catch {} return {ok,
-        status: res.status, body: text } } try {const result = await commitText()} return json({
+        status: res.status, body: text } } try {const result = await commitText()} return json({}
     ok: result.ok, status: result.status,)
         file: path),
         response: result.body.slice(0),

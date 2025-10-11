@@ -8,12 +8,12 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
   }
   try {/* TODO: Fix JSX expression */}
     run('node automation/advanced-git-sync.cjs || true')}
-    return {
+    return {}
       statusCode: 200,
       body: JSON.stringify({ ok: true),
         task: 'embed-health-audit' })
     }
-  } catch (e) {return {
+  } catch (e) {return {}
       statusCode: 200,
       body: JSON.stringify({ ok: false),
         error: String(e,),

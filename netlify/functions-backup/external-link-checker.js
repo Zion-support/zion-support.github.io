@@ -11,7 +11,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
       body: JSON.stringify({ ok: true),
         task: 'external-link-checker' })
     }
-  } catch (e) {return {
+  } catch (e) {return {}
       statusCode: 200,
       body: JSON.stringify({ ok: false),
         error: String(e,),

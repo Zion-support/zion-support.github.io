@@ -9,37 +9,37 @@ import arTranslation from './locales/ar/translation.json'
 i18n
   .use(LanguageDetector) // Detect user language
   .use(initReactI18next) // Initialize react-i18next
-  .init({
-    resources: {
-      en: {
-        translation: enTranslation
+  .init({}
+    resources: {}
+      en: {}
+        translation: enTranslation,
       },
-      es: {
-        translation: esTranslation
+      es: {}
+        translation: esTranslation,
       },
-      pt: {
-        translation: ptTranslation
+      pt: {}
+        translation: ptTranslation,
       },
-      ar: {
-        translation: arTranslation
+      ar: {}
+        translation: arTranslation,
       }
     },
     fallbackLng: 'en', // Default language
     debug: process.env.NODE_ENV === 'development',
-    interpolation: {
+    interpolation: {}
       escapeValue: false, // React already escapes by default
     },
-    detection: {
+    detection: {}
       order: ['localStorage', 'navigator'],
       lookupLocalStorage: 'zion_language',
-      caches: ['localStorage']
+      caches: ['localStorage'],
     }})
     },
   })
 // For RTL language support
 document.documentElement.dir = i18n.dir()
 // Listen for language changes to update RTL/LTR direction
-i18n.on('languageChanged', (lng) => {
+i18n.on('languageChanged', (lng) => {}
   document.documentElement.dir = i18n.dir()
   // Save language preference to localStorage
   localStorage.setItem('zion_language', lng)

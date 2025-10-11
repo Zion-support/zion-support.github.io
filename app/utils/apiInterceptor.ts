@@ -383,7 +383,7 @@ export interface APIConfig {/* TODO: Fix JSX expression */,}}}
 // Export singleton instance
 export const apiInterceptor = APIInterceptor.getInstance()
 export default APIInterceptor
-`</APIConfig>
+`</APIConfig>;
 // Export singleton instance
 export const apiInterceptor = APIInterceptor.getInstance()
 export default APIInterceptor

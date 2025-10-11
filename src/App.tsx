@@ -55,16 +55,16 @@ const PrivacyPage = lazy(() => import('./privacy/page'));
 const TermsPage = lazy(() => import('./terms/page'));
 const CookiesPage = lazy(() => import('./cookies/page'));
 
-const App: React.FC = () => {
+const App: React.FC = () => {}
   const [isInitialized, setIsInitialized] = useState(false);
 
-  useEffect(() => {
+  useEffect(() => {}
     // Initialize app
-    const initApp = async () => {
-      try {
+    const initApp = async () => {}
+      try {}
         // Add any initialization logic here
         setIsInitialized(true);
-      } catch (error) {
+      } catch (error) {}
         console.error('Failed to initialize app:', error);
         setIsInitialized(true); // Still show the app even if initialization fails
       }
@@ -73,95 +73,52 @@ const App: React.FC = () => {
     initApp();
   }, []);
 
-  if (!isInitialized) {
+  if (!isInitialized) {}
     return <LoadingSpinner />;
   }
 
-  return (
-    <ErrorBoundary>
-      <Router>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-          <Navigation />
+  return();
+    <ErrorBoundary>;
+      <Router>;
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"          <Navigation />;
           <Suspense fallback={<LoadingSpinner />}>
-            <Routes>
+            <Routes>;
               {/* Main Pages */}
-              <Route path="/" element={<HomePage />} />
-              
+              <Route path="/" element={<HomePage />} />"              
               {/* Company Pages */}
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/team" element={<TeamPage />} />
-              <Route path="/careers" element={<CareersPage />} />
-              <Route path="/news" element={<NewsPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              
+              <Route path="/about" element={<AboutPage />} />"              <Route path="/team" element={<TeamPage />} />"              <Route path="/careers" element={<CareersPage />} />"              <Route path="/news" element={<NewsPage />} />"              <Route path="/contact" element={<ContactPage />} />"              
               {/* Main Services */}
-              <Route path="/services" element={<ItServicesPage />} />
-              <Route path="/pricing" element={<PricingPage />} />
-              <Route path="/demo" element={<DemoPage />} />
-              <Route path="/consultation" element={<ConsultationPage />} />
-              
+              <Route path="/services" element={<ItServicesPage />} />"              <Route path="/pricing" element={<PricingPage />} />"              <Route path="/demo" element={<DemoPage />} />"              <Route path="/consultation" element={<ConsultationPage />} />"              
               {/* AI Services */}
-              <Route path="/ai-services" element={<AiServicesPage />} />
-              <Route path="/ai-marketing" element={<AiMarketingPage />} />
-              <Route path="/ai-automation" element={<AiAutomationPage />} />
-              <Route path="/ai-healthcare" element={<AiHealthcarePage />} />
-              <Route path="/ai-fintech" element={<AiFintechPage />} />
-              
+              <Route path="/ai-services" element={<AiServicesPage />} />"              <Route path="/ai-marketing" element={<AiMarketingPage />} />"              <Route path="/ai-automation" element={<AiAutomationPage />} />"              <Route path="/ai-healthcare" element={<AiHealthcarePage />} />"              <Route path="/ai-fintech" element={<AiFintechPage />} />"              
               {/* IT Services */}
-              <Route path="/it-services" element={<ItServicesPage />} />
-              <Route path="/cloud-services" element={<CloudServicesPage />} />
-              <Route path="/cybersecurity" element={<CybersecurityPage />} />
-              <Route path="/data-analytics" element={<DataAnalyticsPage />} />
-              <Route path="/devops" element={<DevOpsPage />} />
-              
+              <Route path="/it-services" element={<ItServicesPage />} />"              <Route path="/cloud-services" element={<CloudServicesPage />} />"              <Route path="/cybersecurity" element={<CybersecurityPage />} />"              <Route path="/data-analytics" element={<DataAnalyticsPage />} />"              <Route path="/devops" element={<DevOpsPage />} />"              
               {/* Specialized Solutions */}
-              <Route path="/quantum-computing" element={<QuantumComputingPage />} />
-              <Route path="/autonomous-systems" element={<AutonomousSystemsPage />} />
-              <Route path="/blockchain-web3" element={<BlockchainWeb3Page />} />
-              <Route path="/iot-edge-computing" element={<IoTEdgeComputingPage />} />
-              <Route path="/business-intelligence" element={<BusinessIntelligencePage />} />
-              <Route path="/robotics" element={<RoboticsPage />} />
-              
+              <Route path="/quantum-computing" element={<QuantumComputingPage />} />"              <Route path="/autonomous-systems" element={<AutonomousSystemsPage />} />"              <Route path="/blockchain-web3" element={<BlockchainWeb3Page />} />"              <Route path="/iot-edge-computing" element={<IoTEdgeComputingPage />} />"              <Route path="/business-intelligence" element={<BusinessIntelligencePage />} />"              <Route path="/robotics" element={<RoboticsPage />} />"              
               {/* Support Pages */}
-              <Route path="/support" element={<SupportPage />} />
-              <Route path="/documentation" element={<DocumentationPage />} />
-              <Route path="/faq" element={<FAQPage />} />
-              
+              <Route path="/support" element={<SupportPage />} />"              <Route path="/documentation" element={<DocumentationPage />} />"              <Route path="/faq" element={<FAQPage />} />"              
               {/* Content Pages */}
-              <Route path="/case-studies" element={<CaseStudiesPage />} />
-              <Route path="/blog" element={<BlogPage />} />
-              
+              <Route path="/case-studies" element={<CaseStudiesPage />} />"              <Route path="/blog" element={<BlogPage />} />"              
               {/* Legal Pages */}
-              <Route path="/privacy" element={<PrivacyPage />} />
-              <Route path="/terms" element={<TermsPage />} />
-              <Route path="/cookies" element={<CookiesPage />} />
-              
+              <Route path="/privacy" element={<PrivacyPage />} />"              <Route path="/terms" element={<TermsPage />} />"              <Route path="/cookies" element={<CookiesPage />} />"              
               {/* Catch all route */}
-              <Route path="*" element={<NotFoundPage />} />
-            </Routes>
-          </Suspense>
-          <Footer />
-        </div>
-      </Router>
-    </ErrorBoundary>
+              <Route path="*" element={<NotFoundPage />} />"            </Routes>;
+          </Suspense>;
+          <Footer />;
+        </div>;
+      </Router>;
+    </ErrorBoundary>;
   );
 };
 
 // 404 Page Component
-const NotFoundPage: React.FC = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-    <div className="text-center">
-      <h1 className="text-6xl font-bold text-cyan-400 mb-4">404</h1>
-      <h2 className="text-2xl font-semibold text-white mb-4">Page Not Found</h2>
-      <p className="text-gray-300 mb-8">The page you're looking for doesn't exist.</p>
-      <a
-        href="/"
-        className="cyber-button inline-flex items-center px-6 py-3 text-lg font-semibold"
-      >
+const NotFoundPage: React.FC = () => (,
+  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">"    <div className="text-center">"      <h1 className="text-6xl font-bold text-cyan-400 mb-4">404</h1>"      <h2 className="text-2xl font-semibold text-white mb-4">Page Not Found</h2>"      <p className="text-gray-300 mb-8">The page you're looking for doesn't exist.</p>"      <a</a>
+        href="/""        className="cyber-button inline-flex items-center px-6 py-3 text-lg font-semibold""      >;
         Go Home
-      </a>
-    </div>
-  </div>
+      </a>;
+    </div>;
+  </div>;
 );
 
 export default App;

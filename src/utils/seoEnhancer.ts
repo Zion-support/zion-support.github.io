@@ -1,12 +1,12 @@
 // SeoEnhancer utility
 // This file contains utility functions and configurations
 
-interface SEOConfig {
-    title: string
+interface SEOConfig {}
+    title: string,
   }
-  description: string
-  keywords: string[]
-  canonicalUrl: string
+  description: string,
+  keywords: string[],
+  canonicalUrl: string,
   ogImage?: string
   ogType?: string
   twitterCard?: string
@@ -21,13 +21,13 @@ interface SEOConfig {
 class SEOEnhancer {/* TODO: Fix JSX expression */}
   config: SEOConfig,}
   constructor(confi)
-  g: SEOConfig) {
+  g: SEOConfig) {}
     this.config = config
   }
     this.init()
   }
 
-  private init(): void {
+  private init(): void {}
     // Initialize SEO enhancements
   }
     this.updateMetaTags()
@@ -37,8 +37,7 @@ class SEOEnhancer {/* TODO: Fix JSX expression */}
       // Update title
       document.title = this.config.title
       // Update meta description
-      let metaDescription = document.querySelector('meta[name="description"]')
-      if (!metaDescription) {
+      let metaDescription = document.querySelector('meta[name="description"]')"      if (!metaDescription) {}
     metaDescription = document.createElement('meta')
   }
         metaDescription.setAttribute('name', 'description')
@@ -55,5 +54,4 @@ class SEOEnhancer {/* TODO: Fix JSX expression */}
   }
 }
 
-export default SEOEnhancer;"
-
+export default SEOEnhancer;""

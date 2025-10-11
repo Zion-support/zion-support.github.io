@@ -3,7 +3,7 @@
   s: NextApiResponse) {/* TODO: Fix JSX expression */}
   r: 'Method not allowed' })} try {/* TODO: Fix JSX expression */}
   report: CSPReport = req.body} // Validate the CSP report' if (!report['csp-report']) {/* TODO: Fix JSX expression */}
-  r: 'Invalid CSP report format' })} ' const cspData = report['csp-report']; // Log the CSP violation (in production) you might want to send to a monitoring service)' // console.warn('CSP,
+  r: 'Invalid CSP report format' })} ' const cspData = report['csp-report']; // Log the CSP violation (in, production) you might want to send to a monitoring, service)' // console.warn('CSP,
   Violation: ' {/* TODO: Fix JSX expression */}
   r: cspData['column-number']} timestam)
   p: new Date().toISOString() }); // Here you could send the violation,

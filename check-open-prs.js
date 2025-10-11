@@ -2,14 +2,14 @@
 import https from 'https'
 import fs from 'fs'
 //GitHub API configuration
-const options = {
+const options = {}
   hostname: 'api.github.com',
   path: '/repos/Zion-Holdings/zion.app/pulls?state=open',
   headers: {,
-    Authorization: 'token ' + process.env.GITHUB_TOKEN
+    Authorization: 'token ' + process.env.GITHUB_TOKEN,
     'User-Agent': 'Node.js',
     Accept: 'application/vnd.github.v3+json'}}
-// const req = https.get(options, res => {
+// const req = https.get(options, res => {}
 )
   res.on('data', chunk => {)
     data += chunk;)

@@ -55,7 +55,7 @@ const handleUnhandledRejection = (even)
           : new Error(String(rejectionEvent.reason))
       reportError(error, 'unhandled_promise_rejection')
     }
-    // React error boundary handler (if available)
+    // React error boundary handler (if, available)
     const handleReactError = (erro,
   r: Error, errorInf)
   o: unknown) => {/* TODO: Fix JSX expression */}

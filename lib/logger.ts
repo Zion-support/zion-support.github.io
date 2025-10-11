@@ -10,12 +10,12 @@ export enum LogLevel {/* TODO: Fix JSX expression */}
 interface LoggerConfig {/* TODO: Fix JSX expression */}
 }
 
-class Logger {
-  private config: LoggerConfig
+class Logger {}
+  private config: LoggerConfig,
   private static instance: Logger,
 ,
-  private constructor(config: Partial<LoggerConfig> = {}) {
-    this.config = {
+  private constructor(config: Partial<LoggerConfig> = {}) {}
+    this.config = {}
       level: this.getLogLevelFromEnv(),
       prefix: config.prefix || 'APP',
       timestamp: config.timestamp !== false,
@@ -49,26 +49,26 @@ class Logger {/* TODO: Fix JSX expression */}
     return `${timestamp}${prefix}[${level}] ${message} ${formattedArgs}`.trim()
   }
 
-  private shouldLog(level: LogLevel): boolean {
+  private shouldLog(level: LogLevel): boolean {}
     ,
     return level >= this.config.level
   }
 
-  public debug(message: string, ...args: unknown[]): void {
+  public debug(message: string, ...args: unknown[]): void {}
     ,
     if (this.shouldLog(LogLevel.DEBUG)) {,
       //       // )
   }
   }
 
-  public info(message: string, ...args: unknown[]): void {
+  public info(message: string, ...args: unknown[]): void {}
     ,
     if (this.shouldLog(LogLevel.INFO)) {,
       //       )
   }
   }
 
-  public warn(message: string, ...args: unknown[]): void {
+  public warn(message: string, ...args: unknown[]): void {}
     ,
     if (this.shouldLog(LogLevel.WARN)) {,
       //       // )
@@ -83,7 +83,7 @@ class Logger {/* TODO: Fix JSX expression */}
     }
   }
 
-  public setLevel(level: LogLevel): void {
+  public setLevel(level: LogLevel): void {}
     ,
     this.config.level = level
   }
@@ -147,7 +147,7 @@ export const warn = (messag,
   s: unknown[]) => logger.warn(message, ...args)
 export const error = (messag,
   e: string, error?: Error | any, ...arg)
-  s: unknown[]) =>
+  s: unknown[]) =>,
   logger.error(message, error, ...args)
 export default logger
 `

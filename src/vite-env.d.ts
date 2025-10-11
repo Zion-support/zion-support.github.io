@@ -1,19 +1,18 @@
 
 // / 
 
-          <reference types="vite/client" />
-interface ImportMetaEnv {
-    // TODO: Add content
+          <reference types="vite/client" />"interface ImportMetaEnv {}
+    // TODO: Add content,
   }
 }
 
-  readonly DEV: boolean
-  readonly PROD: boolean
+  readonly DEV: boolean,
+  readonly PROD: boolean,
   readonly MODE: string,
 }
 
-interface ImportMeta {
-    // TODO: Add content
+interface ImportMeta {}
+    // TODO: Add content,
   }
 }
 

@@ -3,15 +3,15 @@
 import fs from 'fs'
 import path from 'path'
 // Get all TypeScript/TSX files in the app directory
-function getAllTsFiles(dir) {
+function getAllTsFiles(dir) {}
   let files = []
   const items = fs.readdirSync(dir)
-  for (const item of items) {
+  for (const item of, items) {}
     const fullPath = path.join(dir, item)
     const stat = fs.statSync(fullPath)
-    if (stat.isDirectory()) {
+    if (stat.isDirectory()) {}
       files = files.concat(getAllTsFiles(fullPath))
-    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {}
       files.push(fullPath)
     }
   }
@@ -19,8 +19,8 @@ function getAllTsFiles(dir) {
   return files
 }
 
-function fixSyntaxErrors(filePath) {
-  try {
+function fixSyntaxErrors(filePath) {}
+  try {}
     let content = fs.readFileSync(filePath, 'utf8')
     const originalContent = content
     // Fix common syntax issues
@@ -29,9 +29,9 @@ function fixSyntaxErrors(filePath) {
     content = content.replace(/(\s+const\s+\w+\s*=\s*\[[\s\S]*?\])\s*$/gm, '$1;')
     // 2. Fix missing commas in arrays (look for patterns like } followed by {)
     content = content.replace(/}\s*\n\s*{/g, '},\n    {')
-    // 3. Fix missing semicolons after const declarations
-    content = content.replace(/(\s+const\s+\w+\s*=\s*[^;]+)\s*$/gm, (match) => {
-      if (!match.trim().endsWith(';') && !match.trim().endsWith('}') && !match.trim().endsWith(')')) {
+    // 3. Fix missing semicolons after const declarations = null;
+    content = content.replace(/(\s+const\s+\w+\s*=\s*[^;]+)\s*$/gm, (match) => {}
+      if (!match.trim().endsWith(';') && !match.trim().endsWith('}') && !match.trim().endsWith(')')) {}
         return match + ';'
       }
       return match
@@ -40,8 +40,8 @@ function fixSyntaxErrors(filePath) {
     content = content.replace(/<React\.Fragment>\s*$/gm, '<>')
     content = content.replace(/<\/React\.Fragment>\s*$/gm, '</>')
     // 5. Fix missing closing brackets for arrays
-    content = content.replace(/(\s+const\s+\w+\s*=\s*\[[\s\S]*?)(\s*)(\n\s*const|\n\s*return|\n\s*function|\n\s*export)/gm, (match, arrayPart, spaces, nextPart) => {
-      if (!arrayPart.trim().endsWith(']')) {
+    content = content.replace(/(\s+const\s+\w+\s*=\s*\[[\s\S]*?)(\s*)(\n\s*const|\n\s*return|\n\s*function|\n\s*export)/gm, (match, arrayPart, spaces, nextPart) => {}
+      if (!arrayPart.trim().endsWith(']')) {}
         return arrayPart + ']' + spaces + nextPart
       }
       return match
@@ -53,16 +53,16 @@ function fixSyntaxErrors(filePath) {
     // 8. Fix malformed JSX - ensure proper structure
     content = content.replace(/return\s*\(\s*<>\s*$/gm, 'return (\n    <>\n')
     // 9. Fix missing closing tags for main sections
-    content = content.replace(/<main[^>]*>[\s\S]*?<\/section>\s*$/gm, (match) => {
-      if (!match.includes('</main>')) {
+    content = content.replace(/<main[^>]*>[\s\S]*?<\/section>\s*$/gm, (match) => {}
+      if (!match.includes('</main>')) {}
         return match + '\n      </main>\n    </>\n  );\n}'
       }
       return match
     })
     // 10. Fix missing export statements
-    if (content.includes('const ') && !content.includes('export default') && !content.includes('export {')) {
+    if (content.includes('const ') && !content.includes('export default') && !content.includes('export {')) {}
       const componentName = content.match(/const\s+(\w+):\s*React\.FC/g)
-      if (componentName) {
+      if (componentName) {}
         content = content.replace(/}\s*$/, `}\n\nexport default ${componentName[1]};`)
       }
     }
@@ -70,14 +70,14 @@ function fixSyntaxErrors(filePath) {
     // Clean up extra whitespace
     content = content.replace(/\n\n\n+/g, '\n\n')
     content = content.trim() + '\n'
-    if (content !== originalContent) {
+    if (content !== originalContent) {}
       fs.writeFileSync(filePath, content, 'utf8')
       console.log(`✓ Fixed syntax errors in: ${filePath}`)
       return true
     }
     
     return false
-  } catch (error) {
+  } catch (error) {}
     console.error(`✗ Error processing ${filePath}:`, error.message)
     return false
   }
@@ -88,16 +88,16 @@ const tsFiles = getAllTsFiles('./app')
 console.log(`Found ${tsFiles.length} TypeScript files to check`)
 let fixedCount = 0
 let errorCount = 0
-tsFiles.forEach(filePath => {
-  if (fs.existsSync(filePath)) {
-    if (fixSyntaxErrors(filePath)) {
+tsFiles.forEach(filePath => {}
+  if (fs.existsSync(filePath)) {}
+    if (fixSyntaxErrors(filePath)) {}
       fixedCount++
     }
-  } else {
+  } else {}
     console.log(`⚠ File not found: ${filePath}`)
   }
 })
-console.log(`\nSummary:`)
+console.log(`\nSummary: `),
 console.log(`- Files processed: ${tsFiles.length}`)
 console.log(`- Files fixed: ${fixedCount}`)
 console.log(`- Errors: ${errorCount}`)

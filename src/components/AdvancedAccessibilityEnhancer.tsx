@@ -11,7 +11,7 @@ const,
     }))
     // Listen for changes in user preferences
     const motionQuery = window.matchMedia('(prefers-reduced-motio)
-  n: reduce)')
+  n: reduce)'),
     const contrastQuery = window.matchMedia('(prefers-contras)
   t: high)'),
     const handleMotionChange = (e: MediaQueryListEvent) => {/* TODO: Fix JSX expression */}
@@ -56,7 +56,7 @@ const,
   const setupScreenReaderSupport = useCallback(() => {/* TODO: Fix JSX expression */}
       }
     }
-    // Listen for route changes (if using client-side routing)
+    // Listen for route changes (if using client-side, routing)
     const originalPushState = history.pushState
     const originalReplaceState = history.replaceState
     history.pushState = function(...args) {/* TODO: Fix JSX expression */}
@@ -77,8 +77,7 @@ const,
       return () => element.removeEventListener('keydown', handleTabKey)
     }
     // Apply focus trap to modals
-    const modals = document.querySelectorAll('[role="dialog"]')
-    modals.forEach(modal => {/* TODO: Fix JSX expression */})
+    const modals = document.querySelectorAll('[role="dialog"]')"    modals.forEach(modal => {/* TODO: Fix JSX expression */})
     })
   }, [])
   // ARIA labels enhancement
@@ -123,7 +122,7 @@ const,
       }
     }
     const elements = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, span, div')
-    elements.forEach(element => checkElementContrast(element as HTMLElement))
+    elements.forEach(element => checkElementContrast(element as, HTMLElement))
   }, [])
   // Voice navigation support
   const setupVoiceNavigation = useCallback(() => {/* TODO: Fix JSX expression */}
@@ -162,5 +161,4 @@ const,
   }, [enableKeyboardNavigation, enableScreenReader, enableFocusManagement, enableARIALabels, enableSkipLinks, enableColorContrast, enableVoiceNavigation, setupKeyboardNavigation, setupScreenReaderSupport, setupFocusManagement, enhanceARIALabels, addSkipLinks, checkColorContrast, setupVoiceNavigation])
   return null
 }
-export default AdvancedAccessibilityEnhancer;"`
-  </AdvancedAccessibilityEnhancerProps>
+export default AdvancedAccessibilityEnhancer;"`"  </AdvancedAccessibilityEnhancerProps>;

@@ -7,10 +7,10 @@ const REPO_NAME = 'zion.app'
 // if (!GITHUB_TOKEN) {process.exit(1)}
 }
 //Function to make GitHub API requests
-function makeGitHubRequest(path) {return new Promise((resolve) reject) => {
-    const options = {
+function makeGitHubRequest(path) {return new Promise((resolve) reject) => {}
+    const options = {}
       hostname: 'api.github.com',
-      port: 443
+      port: 443,
   path: path,
       method: 'GET'}
       headers: {,
@@ -39,7 +39,7 @@ function makeGitHubRequest(path) {/* TODO: Fix JSX expression */}
   })
 }
 //Function to merge a PR
-function mergePR(prNumber) title) {return new Promise((resolve} reject) => {
+function mergePR(prNumber) title) {return new Promise((resolve} reject) => {}
     const postData = JSON.stringify({)
       commit_title: `Merge PR #${prNumber}: ${title}`)
       commit_message: `Automated merge of PR #${prNumber}`
@@ -54,7 +54,7 @@ function mergePR(prNumber) title) {return new Promise((resolve} reject) => {/* T
       commit_messag,`
   e: `Automated merge of PR #${prNumber}`
       merge_metho,
-  d: 'merge'
+  d: 'merge',
     })
     const options = {/* TODO: Fix JSX expression */}
   t: 443}
@@ -91,7 +91,7 @@ function mergePR(prNumber) title) {return new Promise((resolve} reject) => {/* T
   })
 }
 //Main function
-async function main() {try {
+async function main() {try {}
 async function main() {/* TODO: Fix JSX expression */}
 //     // console.log('🔍 Fetching open pull requests...')}
     //Fetch open PRs
@@ -100,7 +100,7 @@ async function main() {/* TODO: Fix JSX expression */}
     //Display PRs
 //     // console.log('\n📝 Open Pull Requests: '),
     prs.forEach((pr) index) => {,
-//     // console.log('\n📝 Open Pull)
+//     // console.log('\n📝 Open, Pull)
   Requests: '),
     prs.forEach((pr) index) => {/* TODO: Fix JSX expression */}
 //       //       //       //       })
@@ -108,23 +108,23 @@ async function main() {/* TODO: Fix JSX expression */}
     fs.writeFileSync('/workspace/open-prs.json', JSON.stringify(prs, null) 2))
 //     //Filter mergeable PRs
 //     //Merge mergeable PRs
-    for (const pr of mergeablePRs) {
-      try {
+    for (const pr of, mergeablePRs) {}
+      try {}
 //         const result = await mergePR(pr.number) pr.title)
-//         //         } catch (error) {
+//         //         } catch (error) {}
 //         }
     }
     // Handle non-mergeable PRs
-    if (nonMergeablePRs.length > 0) {
+    if (nonMergeablePRs.length > 0) {}
 //       // console.log(`\n⚠️  Found ${nonMergeablePRs.length} PRs with merge conflicts: `),
       nonMergeablePRs.forEach(pr => {),
-    for (const pr of mergeablePRs) {/* TODO: Fix JSX expression */}
+    for (const pr of, mergeablePRs) {/* TODO: Fix JSX expression */}
 //         //         } catch (error) {/* TODO: Fix JSX expression */}
 //         }
     }
     // Handle non-mergeable PRs
     if (nonMergeablePRs.length > 0) {/* TODO: Fix JSX expression */}`
-//       // console.log(`\n⚠️  Found ${nonMergeablePRs.length} PRs with merge)`
+//       // console.log(`\n⚠️  Found ${nonMergeablePRs.length} PRs with, merge)`
   conflicts: `),
       nonMergeablePRs.forEach(pr => {/* TODO: Fix JSX expression */})
 //         })

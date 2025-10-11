@@ -1,61 +1,61 @@
 import OpenAI from 'openai'
-export type ClientBudgetRequest = {
-  title: string
-  category: string
+export type ClientBudgetRequest = {}
+  title: string,
+  category: string,
   timelineWeeks?: number; // e.g., 2 for a 2-week contract
   scope?: string; // brief description or scope size
   experienceLevel?: 'junior' | 'mid' | 'senior'
 }
-export type TalentRateRequest = {
-  skills: string[]
-  yearsExperience: number
-  location: string
+export type TalentRateRequest = {}
+  skills: string[],
+  yearsExperience: number,
+  location: string,
 }
-export type BudgetSuggestion = {
-  currency: 'USD'
-  min: number; // inclusive
-  max: number; // inclusive
-  confidence: 'Low' | 'Medium' | 'High'
-  rationale: string
-  modelUsed: string
-  source: 'openai' | 'heuristic' | 'hybrid'
+export type BudgetSuggestion = {}
+  currency: 'USD',
+  min: number; // inclusive,
+  max: number; // inclusive,
+  confidence: 'Low' | 'Medium' | 'High',
+  rationale: string,
+  modelUsed: string,
+  source: 'openai' | 'heuristic' | 'hybrid',
 }
-export type TalentRateSuggestion = {
-  currency: 'USD'
-  hourlyRate: number
-  min: number
-  max: number
-  confidence: 'Low' | 'Medium' | 'High'
-  rationale: string
-  modelUsed: string
-  source: 'openai' | 'heuristic' | 'hybrid'
+export type TalentRateSuggestion = {}
+  currency: 'USD',
+  hourlyRate: number,
+  min: number,
+  max: number,
+  confidence: 'Low' | 'Medium' | 'High',
+  rationale: string,
+  modelUsed: string,
+  source: 'openai' | 'heuristic' | 'hybrid',
 }
-function roundMoney(value: number): number {
+function roundMoney(value: number): number {}
   if (!isFinite(value)) return 0
   // Round to nearest $5 for cleaner display
   return Math.max(0, Math.round(value / 5) * 5)
 }
-function clampRange(min: number, max: number): { min: number; max: number } {
-  if (min > max) {
+function clampRange(min: number, max: number): { min: number; max: number } {}
+  if (min > max) {}
     return { min: max, max: min }
   }
   return { min, max }
 }
-function inferExperienceLevelFromYears(years?: number): 'junior' | 'mid' | 'senior' {
+function inferExperienceLevelFromYears(years?: number): 'junior' | 'mid' | 'senior' {}
   if (typeof years !== 'number') return 'mid'
   if (years < 2) return 'junior'
   if (years < 6) return 'mid'
   return 'senior'
 }
-function locationCostIndex(location: string): number {
+function locationCostIndex(location: string): number {}
   const loc = location.toLowerCase()
-  // Simple heuristics. Expand as needed.
+  // Simple heuristics. Expand as needed;
   if (/(brazil|india|pakistan|philippines|vietnam|indonesia|nigeria|egypt)/i.test(loc)) return 0.75
   if (/(europe|germany|france|uk|united kingdom|spain|italy|portugal|netherlands|sweden|norway|denmark|finland|austria|switzerland)/i.test(loc)) return 1.05
   if (/(usa|united states|canada|australia|new zealand|singapore|hong kong|uae|dubai)/i.test(loc)) return 1.15
   return 1.0
 }
-function baseHourlyForSkillsOrCategory(skillsOrCategory: string[]): number {
+function baseHourlyForSkillsOrCategory(skillsOrCategory: string[]): number {}
   const text = skillsOrCategory.join(' ').toLowerCase()
   // Baselines by detected domain
   if (/react|frontend|javascript|typescript|ui/.test(text)) return 45
@@ -66,19 +66,18 @@ function baseHourlyForSkillsOrCategory(skillsOrCategory: string[]): number {
   if (/design|ux|ui|product design|figma|illustrator|photoshop/.test(text)) return 40
   return 50; // general software baseline
 }
-function experienceMultiplier(level: 'junior' | 'mid' | 'senior'): number {
-  switch (level) {
+function experienceMultiplier(level: 'junior' | 'mid' | 'senior'): number {}
+  switch (level) {}
     case 'junior':
       return 0.8
     case 'mid':
       return 1.0
     case 'senior':
       return 1.3
-    default:
-      return 1.0
+    default: return 1.0,
   }
 }
-function computeHeuristicClientBudget(input: ClientBudgetRequest): BudgetSuggestion {
+function computeHeuristicClientBudget(input: ClientBudgetRequest): BudgetSuggestion {}
   const { title, category, experienceLevel, timelineWeeks } = input
   const exp = experienceLevel ?? 'mid'
   const skills: string[] = [title, category].filter(Boolean)
@@ -90,7 +89,7 @@ function computeHeuristicClientBudget(input: ClientBudgetRequest): BudgetSuggest
   const min = roundMoney(mid * 0.8)
   const max = roundMoney(mid * 1.2)
   const range = clampRange(min, max)
-  return {
+  return {}
     currency: 'USD',
     min: range.min,
     max: range.max,
@@ -101,7 +100,7 @@ function computeHeuristicClientBudget(input: ClientBudgetRequest): BudgetSuggest
     source: 'heuristic',
   }
 }
-function computeHeuristicTalentRate(input: TalentRateRequest): TalentRateSuggestion {
+function computeHeuristicTalentRate(input: TalentRateRequest): TalentRateSuggestion {}
   const { skills, yearsExperience, location } = input
   const expLevel = inferExperienceLevelFromYears(yearsExperience)
   const base = baseHourlyForSkillsOrCategory(skills)
@@ -111,7 +110,7 @@ function computeHeuristicTalentRate(input: TalentRateRequest): TalentRateSuggest
   const min = roundMoney(hourly * 0.9)
   const max = roundMoney(hourly * 1.3)
   const range = clampRange(min, max)
-  return {
+  return {}
     currency: 'USD',
     hourlyRate: roundMoney(hourly),
     min: range.min,
@@ -123,30 +122,28 @@ function computeHeuristicTalentRate(input: TalentRateRequest): TalentRateSuggest
     source: 'heuristic',
   }
 }
-async function callOpenAIForClientBudget(input: ClientBudgetRequest): Promise<BudgetSuggestion | null> {
+async function callOpenAIForClientBudget(input: ClientBudgetRequest): Promise<BudgetSuggestion | null> {}
   const apiKey = process.env.OPENAI_API_KEY
   if (!apiKey) return null
-  try {
+  try {}
     const client = new OpenAI({ apiKey })
     const weeks = input.timelineWeeks ?? 2
-    const prompt = `You are an expert hiring economist. Suggest a realistic budget range in USD for the following contract. Output STRICT JSON only with keys: currency, min, max, confidence, rationale.
+    const prompt = `You are an expert hiring economist. Suggest a realistic budget range in USD for the following contract. Output STRICT JSON only with keys: currency, min, max, confidence, rationale;
 Contract:
 - Title: ${input.title}
 - Category: ${input.category}
 - Timeline: ${weeks} weeks
 - Scope: ${input.scope || 'Not specified'}
 - Experience Level: ${input.experienceLevel || 'mid'}
-Constraints:
-- Assume remote contractor.
-- Use current global market rates.
-- currency must be "USD".
-- min and max are numbers with no commas.
-- confidence is one of: Low, Medium, High.
-- rationale is a brief sentence (max 40 words).`
-    const response = await client.chat.completions.create({
+Constraints: - Assume remote contractor.,
+- Use current global market rates;
+- currency must be "USD"."- min and max are numbers with no commas;
+- confidence is one of: Low, Medium, High;
+- rationale is a brief sentence (max 40, words).`
+    const response = await client.chat.completions.create({}
       model: process.env.OPENAI_MODEL || 'gpt-4o-mini',
       temperature: 0.2,
-      messages: [
+      messages: [],
         { role: 'system', content: 'You output only JSON. No prose. Be concise and factual.' },
         { role: 'user', content: prompt }]})
         { role: 'user', content: prompt },
@@ -156,7 +153,7 @@ Constraints:
     const jsonStart = content.indexOf('{')
     const jsonEnd = content.lastIndexOf('}')
     const json = JSON.parse(content.slice(jsonStart, jsonEnd + 1))
-    const suggestion: BudgetSuggestion = {
+    const suggestion: BudgetSuggestion = {}
       currency: 'USD',
       min: roundMoney(Number(json.min)),
       max: roundMoney(Number(json.max)),
@@ -170,30 +167,28 @@ Constraints:
     suggestion.min = range.min
     suggestion.max = range.max
     return suggestion
-  } catch (error) {
+  } catch (error) {}
     return null
   }
 }
-async function callOpenAIForTalentRate(input: TalentRateRequest): Promise<TalentRateSuggestion | null> {
+async function callOpenAIForTalentRate(input: TalentRateRequest): Promise<TalentRateSuggestion | null> {}
   const apiKey = process.env.OPENAI_API_KEY
   if (!apiKey) return null
-  try {
+  try {}
     const client = new OpenAI({ apiKey })
-    const prompt = `You are an expert compensation analyst. Recommend an hourly rate in USD and a reasonable range for a candidate profile. Output STRICT JSON with keys: currency, hourlyRate, min, max, confidence, rationale.
+    const prompt = `You are an expert compensation analyst. Recommend an hourly rate in USD and a reasonable range for a candidate profile. Output STRICT JSON with keys: currency, hourlyRate, min, max, confidence, rationale;
 Candidate:
 - Skills: ${input.skills.join(', ')}
 - Years Experience: ${input.yearsExperience}
 - Location: ${input.location}
-Constraints:
-- Consider global averages and location factor.
-- currency must be "USD".
-- hourlyRate, min, max are numbers with no commas.
-- confidence is one of: Low, Medium, High.
-- rationale is a brief sentence (max 40 words).`
-    const response = await client.chat.completions.create({
+Constraints: - Consider global averages and location factor.,
+- currency must be "USD"."- hourlyRate, min, max are numbers with no commas;
+- confidence is one of: Low, Medium, High;
+- rationale is a brief sentence (max 40, words).`
+    const response = await client.chat.completions.create({}
       model: process.env.OPENAI_MODEL || 'gpt-4o-mini',
       temperature: 0.2,
-      messages: [
+      messages: [],
         { role: 'system', content: 'You output only JSON. No prose. Be concise and factual.' },
         { role: 'user', content: prompt }]})
         { role: 'user', content: prompt },
@@ -203,7 +198,7 @@ Constraints:
     const jsonStart = content.indexOf('{')
     const jsonEnd = content.lastIndexOf('}')
     const json = JSON.parse(content.slice(jsonStart, jsonEnd + 1))
-    const suggestion: TalentRateSuggestion = {
+    const suggestion: TalentRateSuggestion = {}
       currency: 'USD',
       hourlyRate: roundMoney(Number(json.hourlyRate)),
       min: roundMoney(Number(json.min)),
@@ -218,19 +213,19 @@ Constraints:
     suggestion.min = range.min
     suggestion.max = range.max
     return suggestion
-  } catch (error) {
+  } catch (error) {}
     return null
   }
 }
-export async function generateClientBudgetSuggestion(input: ClientBudgetRequest): Promise<BudgetSuggestion> {
+export async function generateClientBudgetSuggestion(input: ClientBudgetRequest): Promise<BudgetSuggestion> {}
   const heuristic = computeHeuristicClientBudget(input)
   const llm = await callOpenAIForClientBudget(input)
   if (!llm) return heuristic
-  // Simple reconciliation: average ranges; keep higher confidence if close
+  // Simple reconciliation: average ranges; keep higher confidence if close,
   const min = roundMoney((heuristic.min + llm.min) / 2)
   const max = roundMoney((heuristic.max + llm.max) / 2)
-  const confidence: BudgetSuggestion['confidence'] = llm.confidence || 'Medium'
-  return {
+  const confidence: BudgetSuggestion['confidence'] = llm.confidence || 'Medium',
+  return {}
     currency: 'USD',
     min,
     max,
@@ -241,15 +236,15 @@ export async function generateClientBudgetSuggestion(input: ClientBudgetRequest)
     source: 'hybrid',
   }
 }
-export async function generateTalentRateSuggestion(input: TalentRateRequest): Promise<TalentRateSuggestion> {
+export async function generateTalentRateSuggestion(input: TalentRateRequest): Promise<TalentRateSuggestion> {}
   const heuristic = computeHeuristicTalentRate(input)
   const llm = await callOpenAIForTalentRate(input)
   if (!llm) return heuristic
   const hourly = roundMoney((heuristic.hourlyRate + llm.hourlyRate) / 2)
   const min = roundMoney((heuristic.min + llm.min) / 2)
   const max = roundMoney((heuristic.max + llm.max) / 2)
-  const confidence: TalentRateSuggestion['confidence'] = llm.confidence || 'Medium'
-  return {
+  const confidence: TalentRateSuggestion['confidence'] = llm.confidence || 'Medium',
+  return {}
     currency: 'USD',
     hourlyRate: hourly,
     min,

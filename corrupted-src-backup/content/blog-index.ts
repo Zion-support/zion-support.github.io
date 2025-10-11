@@ -3,14 +3,14 @@
  * Centralized index of all blog posts for easy discovery and navigation
  */
 
-export interface BlogPost {
-  slug: string
-  title: string
-  description: string
-  category: string
-  date: string
-  readTime: string
-  tags: string[]
+export interface BlogPost {}
+  slug: string,
+  title: string,
+  description: string,
+  category: string,
+  date: string,
+  readTime: string,
+  tags: string[],
   featured?: boolean,,
   valueProposition: string,
 export interface BlogPost {/* TODO: Fix JSX expression */}
@@ -37,7 +37,7 @@ export const october2025Breakthroughs: BlogPost[] = [,
       'enterprise AI'],
     featured: true,
     valueProposition: '$25M annual savings'},
-  {
+  {}
     slug: 'ai-2025-oct-01-quantum-inspired-optimization-enterprise',
     title: 'Quantum-Inspired Optimization 2025',
     description:,
@@ -54,7 +54,7 @@ export const october2025Breakthroughs: BlogPost[] = [,
       'portfolio optimization'],
     featured: true,
     valueProposition: '$42M annual value creation'},
-  {
+  {}
     slug: 'ai-2025-oct-01-intelligent-automation-orchestration-platform',
     title: 'Intelligent Automation Orchestration 2025',
     description:,
@@ -71,7 +71,7 @@ export const october2025Breakthroughs: BlogPost[] = [,
       'digital transformation'],
     featured: true,
     valueProposition: '$67M annual savings'},
-  {
+  {}
     slug: 'ai-2025-oct-03-continuous-intelligence-platforms',
     title: 'Continuous Intelligence 2025',
     description:,
@@ -82,8 +82,8 @@ export const october2025Breakthroughs: BlogPost[] = [,
     tags: ['streaming', 'decisioning', 'feature store', 'KPIs'],
     featured: true,
     valueProposition: '$215M annual value'},
-  {
-    slug: 'ai-2025-oct-03-autonomous-cloud-security'
+  {}
+    slug: 'ai-2025-oct-03-autonomous-cloud-security',
     title: 'Autonomous Cloud Security 2025',
     description: '99.98% threat neutralization under 5 seconds with policy-backed automations.',
     category: 'Security',
@@ -92,7 +92,7 @@ export const october2025Breakthroughs: BlogPost[] = [,
     tags: ['security', 'zero trust', 'automation', 'rollback'],
     featured: true,
     valueProposition: '$42M annual savings'},
-  {
+  {}
     slug: 'ai-2025-oct-03-quantum-supply-chain-optimization',
     title: 'Quantum Supply Chain 2025',
     description:,
@@ -103,7 +103,7 @@ export const october2025Breakthroughs: BlogPost[] = [,
     tags: ['quantum', 'optimization', 'supply chain'],
     featured: true,
     valueProposition: '$127M annual savings'},
-  {
+  {}
     slug: 'ai-2025-oct-02-rollback-guardrails-blueprint',
     title: 'Runtime Rollback Guardrails Blueprint',
     description:,
@@ -115,7 +115,7 @@ export const october2025Breakthroughs: BlogPost[] = [,
     featured: true,
     valueProposition: 'Instant reversibility, resilient releases',
 export const,
-  october2025Breakthroughs: BlogPost[] = [
+  october2025Breakthroughs: BlogPost[] = [],
   {/* TODO: Fix JSX expression */}
   },
   {/* TODO: Fix JSX expression */}
@@ -134,7 +134,7 @@ export const,
  * All blog posts combined
  */
 export const,
-  allBlogPosts: BlogPost[] = [...october2025Breakthroughs]
+  allBlogPosts: BlogPost[] = [...october2025Breakthroughs],
 /**
  * Helper functions,
  */,
@@ -150,8 +150,8 @@ export function getAllCategories(): string[] {/* TODO: Fix JSX expression */}
 export function getAllTags(): string[] {/* TODO: Fix JSX expression */}
 }
 
-export function getTotalValueProposition(): string {
-  const totalValue = allBlogPosts.reduce((sum, post) => {
+export function getTotalValueProposition(): string {}
+  const totalValue = allBlogPosts.reduce((sum, post) => {}
     const _value = post.valueProposition.match(/\$(\d+)M/)
 :corrupted-src-backup/content/blog-index.ts
 export function getTotalValueProposition(): string {/* TODO: Fix JSX expression */}
@@ -159,10 +159,10 @@ export function getTotalValueProposition(): string {/* TODO: Fix JSX expression 
   return `$${totalValue}M+ total value proposition`
 }
 
-export const blogStats = {
-  totalPosts: allBlogPosts.length
-  featuredPosts: getFeaturedPosts().length
-  categories: getAllCategories().length
+export const blogStats = {}
+  totalPosts: allBlogPosts.length,
+  featuredPosts: getFeaturedPosts().length,
+  categories: getAllCategories().length,
   tags: getAllTags().length,
   totalValue: getTotalValueProposition(),
 export const blogStats = {/* TODO: Fix JSX expression */}

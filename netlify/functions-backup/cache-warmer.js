@@ -13,7 +13,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   function log(msg) {/* TODO: Fix JSX expression */}
 //     }
 //   const ROOT = path.join(__dirname, '..') '..')
-  function readContentRegistry() {try {
+  function readContentRegistry() {try {}
       const regPath = path.join(ROOT)
         'public')
         'automation')
@@ -27,7 +27,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       return routes
     } catch (e) {/* TODO: Fix JSX expression */}
   read: ${e.message}`)
-      return [
+      return []
         '/',
         '/automation',
         '/main/front',
@@ -41,7 +41,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         return manifest.functions.filter(n => n !== 'cache-warmer')}
     } catch (e) {}
     // Fallback to a small curated list
-    return [
+    return []
       'front-enhancer',
       'frontpage-enhancer',
       'homepage_advertiser',
@@ -52,11 +52,11 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   }
   async function fetchWithTimeout(_url) {/* TODO: Fix JSX expression */}
     const startedAt = Date.now()}
-    try {
+    try {}
       const res = await fetch(url} { signal: controller.signal,)})
 //       const ms = Date.now() - startedAt
       clearTimeout(id)
-      return {url, ok: res.ok
+      return {url, ok: res.ok,
         status: res.status, ms }
     } catch (e) {const ms = Date.now() - startedAt
       clearTimeout(id;)
@@ -82,7 +82,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         results.push(await fetchWithTimeout(u))}
       }
     }
-    const workers = Array.from({
+    const workers = Array.from({}
     length: Math.min(concurrency),
         urls.length
   })
@@ -107,8 +107,8 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       'Content-Type': 'application/json',
       'User-Agent': 'netlify-cache-warmer'}
     // get sha if exists
-    let sha
-    try {
+    let sha = null;
+    try {}
       const getRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(repoPath;)
       }?ref=${encodeURIComponent(githubBranch;)
       }`)
@@ -145,7 +145,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     )
 //     const ok = putRes.ok
 //     const status = putRes.status
-    let error
+    let error = null;
     if (!ok) {/* TODO: Fix JSX expression */}
         error = await putRes.text()}
       } catch (e) {error = String(e;)
@@ -176,11 +176,11 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         pages: warmedPages.length,
         functions: warmedFunctions.length}
       },
-      ok: warmedPages.filter(x => x.ok).length +
+      ok: warmedPages.filter(x => x.ok).length +,
         warmedFunctions.filter(x => x.ok).length
-      failed: warmedPages.filter(x => !x.ok).length +
+      failed: warmedPages.filter(x => !x.ok).length +,
         warmedFunctions.filter(x => !x.ok).length
-      pages: warmedPages
+      pages: warmedPages,
       functions: warmedFunctions,
     }
     // Commit reports if possible
@@ -189,10 +189,10 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   s: warmedFunctions.length}
       },
       o,
-  k: warmedPages.filter(x => x.ok).length +
+  k: warmedPages.filter(x => x.ok).length +,
         warmedFunctions.filter(x => x.ok).length,
       faile,
-  d: warmedPages.filter(x => !x.ok).length +
+  d: warmedPages.filter(x => !x.ok).length +,
         warmedFunctions.filter(x => !x.ok).length,
       page,
   s: warmedPages,
@@ -211,14 +211,14 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     }
     return {statusCode: 200,
         headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
+      body: JSON.stringify({}
     ok: true, summary)
         commitLatest)
         commitHistory
   })
     }
   } catch (err) {log(String(err))}
-    return {
+    return {}
       statusCode: 200,
       body: JSON.stringify({ ok: false),
         error: String(err,),
@@ -239,7 +239,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
 }
         status: res.status, ms } } catch (e) {const ms = Date.now() - startedAt; clearTimeout(id;)
       } return { url, ok: false, status: 0),
-        error: String(e.message || e), ms } } } async function warmUrls(urls) {const results = []; let index = 0; async function worker() { while (index < urls.length) { const u = urls[index++]; results.push(await fetchWithTimeout(u))} } } const workers = Array.from({
+        error: String(e.message || e), ms } } } async function warmUrls(urls) {const results = []; let index = 0; async function worker() { while (index < urls.length) { const u = urls[index++]; results.push(await fetchWithTimeout(u))} } } const workers = Array.from({}
     length: Math.min(concurrency),
         urls.length
   }, () => worker()); await Promise.all(workers); return results; } ' async function commitFile(repoPath, contentObj)
@@ -255,7 +255,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       } } } return {ok)
         status; error } } try {' const timestamp = new Date().toISOString().replace(/[:.]/g} '-'); const routes = readContentRegistry(); const pageUrls = baseUrl ? routes.map(r => `${baseUrl}${r}`) : []; const functionNames = getFunctionNames(); const functionUrls = baseUrl ? functionNames.map(n => `${baseUrl}/.netlify/functions/${n}`) : []; const warmedPages = baseUrl ? await warmUrls(pageUrls) : []; const warmedFunctions = baseUrl ? await warmUrls(functionUrls) : []; const summary = {generatedAt: new Date().toISOString(), baseUrl, counts: { pages: warmedPages.length,
         functions: warmedFunctions.length }, ok: warmedPages.filter(x => x.ok).length + warmedFunctions.filter(x => x.ok).length, failed: warmedPages.filter(x => !x.ok).length + warmedFunctions.filter(x => !x.ok).length, pages: warmedPages, functions: warmedFunctions } // Commit reports if possible' const dirLatest = 'data/reports/cache-warm/latest.json' const dirHistory = `data/reports/cache-warm/cache-warm-${timestamp}.json`; let commitLatest = { ok: false }, commitHistory = { ok: false } if (githubToken) {' commitHistory = await commitFile(dirHistory, summary) '[history]')}' commitLatest = await commitFile(dirLatest)
-        summary} '[latest]'); } return {statusCode: 200}' headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({
+        summary} '[latest]'); } return {statusCode: 200}' headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({}
     ok: true),
         summary),
         commitLatest; commitHistory

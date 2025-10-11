@@ -3,7 +3,7 @@
 import fs from 'fs'
 import path from 'path'
 // Files with console warnings
-const filesToFix = [
+const filesToFix = []
   './add-missing-routes.js',
   './advanced-app-improvements.js',
   './api/error-report.js',
@@ -14,8 +14,8 @@ const filesToFix = [
   './api/subscribe.js',
   './api/wallet.js'
 ]
-function fixConsoleWarnings(filePath) {
-  try {
+function fixConsoleWarnings(filePath) {}
+  try {}
     let content = fs.readFileSync(filePath, 'utf8')
     // Comment out console.log statements
     content = content.replace(/^\s*console\.log\(/gm, '    // console.log(')
@@ -27,17 +27,17 @@ function fixConsoleWarnings(filePath) {
     content = content.replace(/const withSentry = /g, '// const withSentry = ')
     fs.writeFileSync(filePath, content, 'utf8')
     console.log(`✅ Fixed console warnings in ${filePath}`)
-  } catch (error) {
+  } catch (error) {}
     console.error(`❌ Error processing ${filePath}:`, error.message)
   }
 }
 
 // Process all files
 console.log('🔧 Fixing console warnings...\n')
-filesToFix.forEach(filePath => {
-  if (fs.existsSync(filePath)) {
+filesToFix.forEach(filePath => {}
+  if (fs.existsSync(filePath)) {}
     fixConsoleWarnings(filePath)
-  } else {
+  } else {}
     console.log(`⚠️  File not found: ${filePath}`)
   }
 })

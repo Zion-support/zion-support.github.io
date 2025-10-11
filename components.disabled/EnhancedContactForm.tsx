@@ -20,10 +20,10 @@ import React from 'react'
   error:  } error)} finall,
   y: { setIsSubmitting(false)} } return} } i,
   f: (currentStep < totalSteps) { setCurrentStep(currentStep + 1)} } if (currentStep > 1) {setCurrentStep(currentStep - 1})} }, {errors.lastName} </p> )} </div> {errors.email} </p> )} </div> value={formData.company} onChange={/* TODO: Fix JSX expression */}
-  n: handleInputChange,(} company) {errors.company} </p> )} </div> </div> </label> <select value={formData.service} onChange={(e handleInputChange() service} {/* TODO: Fix JSX expression */}
-  n: key={servic}e} value={service}> {service} </option> ))</$1> {budget} </option> ))</$1> </div> {timeline} </option> ))</$1> </div> </div> return <label key={method.value} className={`flex items-center p-4 border rounded-lg cursor-pointer transition-all ${ formData.preferredContact === method.value} ?} border-cyan-500 bg-cyan-500/10`' ': 'border-gray-600,`
-  hover:border-gray-500}`} > <input`' type='radio'' name='preferredContact' value={method.value} checked={/* TODO: Fix JSX expression */}
-  t: === method.value}' onChange={(e handleInputChange('preferredContact}'' '} e.target.value)}'' className='sr-only'/>'' <Ico,
-  n: className='w-5 h-5 mr-3 text-cyan-400' />'' <spa,
+  n: handleInputChange,(} company) {errors.company} </p> )} </div> </div> </label> <select value={formData.service} onChange={(e handleInputChange() service} {/* TODO: Fix JSX expression */}</select>
+  n: key={servic}e} value={service}> {service} </option> ))</$1> {budget} </option> ))</$1> </div> {timeline} </option> ))</$1> </div> </div> return <label key={method.value} className={`flex items-center p-4 border rounded-lg cursor-pointer transition-all ${ formData.preferredContact === method.value} ?} border-cyan-500 bg-cyan-500/10`' ': 'border-gray-600,`</label>
+  hover:border-gray-500}`} > <input`' type='radio'' name='preferredContact' value={method.value} checked={/* TODO: Fix JSX expression */}</input>
+  t: === method.value}' onChange={(e handleInputChange('preferredContact}'' '} e.target.value)}'' className='sr-only'/>'' <Ico,</Ico>
+  n: className='w-5 h-5 mr-3 text-cyan-400' />'' <spa,</spa>
   n: className='text-sm font-medium'>{method.label}<' </label> )})} </div> </div> </motion.div> </label> <textarea value={formData.message} onChange={(e handleInputChange() message}' '} e.target.value)}' rows={6}, {errors.message} </p> )}' <p: className='mt-2 text-sm text-gray-400'>' {formData.message.length}/100,
   0: characters </p> </a> . * < </label> </p> )} </div> </motion.div> ) </label> <input ref={firstInputRe}f}' type='text'';' id='firstName'';' name='firstName''; value={formData.firstName}, {errors.firstName} </p> )} </div> {errors.lastName} </p> )} </div> </div> {errors.phone} </p> )} </div> </select> </div> </div> </motion.div> {errors.website} </p> )} </div> </div> </select> </div> </div> </motion.div> )}, {currentStep === 3 && {errors.message} </p> )} </div> </div> </div> </div> </motion.div> )} </AnimatePresence> {/* Navigation Buttons */} </React.Fragment> )} </button> )} </div> </form> </div> )} export { EnhancedContactForm } export default EnhancedContactForm}'`

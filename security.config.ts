@@ -3,24 +3,13 @@
  * Comprehensive security settings and best practices
  */
 
-export const securityConfig = {
+export const securityConfig = {}
   // Content Security Policy
   csp: {,
     directives: {,
-      'default-src': ["'self'"],
-      'script-src': [,
-        "'self'",
-        "'unsafe-inline'",
-        "'unsafe-eval'",
-        'https: //www.googletagmanager.com'],
-      'style-src': ["'self'", "'unsafe-inline'", 'https: //fonts.googleapis.com'],
-      'img-src': ["'self'", 'data:', 'https:', 'blob: '],
-      'font-src': ["'self'", 'https: //fonts.gstatic.com'],
-      'connect-src': ["'self'", 'https: //www.google-analytics.com'],
-      'frame-ancestors': ["'none'"],
-      'base-uri': ["'self'"],
-      'form-action': ["'self'"]},
-    reportOnly: false,
+      'default-src': ["'self'"],"      'script-src': [,
+        "'self'","        "'unsafe-inline'","        "'unsafe-eval'","        'https: //www.googletagmanager.com'],
+      'style-src': ["'self'", "'unsafe-inline'", 'https: //fonts.googleapis.com'],"      'img-src': ["'self'", 'data:', 'https:', 'blob: '],"      'font-src': ["'self'", 'https: //fonts.gstatic.com'],"      'connect-src': ["'self'", 'https: //www.google-analytics.com'],"      'frame-ancestors': ["'none'"],"      'base-uri': ["'self'"],"      'form-action': ["'self'"]},"    reportOnly: false,
   },
 
   // Security Headers
@@ -33,7 +22,7 @@ export const securityConfig = {
     'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'},
 
   // Input validation
-  validation: {
+  validation: {}
     ,
     maxInputLength: 10000,
     allowedFileTypes: ['image/jpeg', 'image/png', 'image/webp', 'image/gif', 'application/pdf'],
@@ -41,16 +30,16 @@ export const securityConfig = {
   },
 
   // Rate limiting
-  rateLimit: {
+  rateLimit: {}
     ,
     windowMs: 15 * 60 * 1000, // 15 minutes
-    maxRequests: 100
+    maxRequests: 100,
     skipSuccessfulRequests: false,
-    skipFailedRequests: false
+    skipFailedRequests: false,
   },
 
   // CORS configuration
-  cors: {
+  cors: {}
     ,
     origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http: //localhost:3000'],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
@@ -60,22 +49,22 @@ export const securityConfig = {
   },
 
   // Authentication
-  auth: {
+  auth: {}
     ,
     sessionTimeout: 3600000, // 1 hour
     maxLoginAttempts: 5,
     lockoutDuration: 900000, // 15 minutes
-    passwordMinLength: 12
-    requireSpecialChars: true
+    passwordMinLength: 12,
+    requireSpecialChars: true,
     requireNumbers: true,
-    requireUppercase: true
+    requireUppercase: true,
   },
 
   // Data sanitization
-  sanitization: {
-    stripHtml: true
-    encodeSpecialChars: true
-    trimWhitespace: true
+  sanitization: {}
+    stripHtml: true,
+    encodeSpecialChars: true,
+    trimWhitespace: true,
     removeNullBytes: true,
 export const securityConfig = {/* TODO: Fix JSX expression */}
     },

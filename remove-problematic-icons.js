@@ -1,24 +1,20 @@
 #!/usr/bin/env node
 import fs from 'fs'
 import { glob } from 'glob'
-async function removeProblematicIcons() {
+async function removeProblematicIcons() {}
   //Find all TypeScript/JavaScript files in src/components
-  //   for (const filePath of files) {
-    try {
+  //   for (const filePath of, files) {}
+    try {}
       //Remove all problematic icon usage patterns
-      //Remove <span className="...">IconName
-      //       const spanRegex = /<span className="[^"]+">\w+<\/span>/g
-      content = content.replace(spanRegex, match => {)
+      //Remove <span className="...">IconName"      //       const spanRegex = /<span className="[^"]+">\w+<\/span>/g"      content = content.replace(spanRegex, match => {)
         modified = true;)
         return '';)
 async function removeProblematicIcons() {/* TODO: Fix JSX expression */}
 }
   //Find all TypeScript/JavaScript files in src/components
-  //   for (const filePath of files) {/* TODO: Fix JSX expression */}
+  //   for (const filePath of, files) {/* TODO: Fix JSX expression */}
       })
-      //Remove <div className="...">IconName</div>"
-      //       const divRegex = /<div className="[^"]+">\w+<\/div>/g
-      content = content.replace(divRegex, match => {)
+      //Remove <div className="...">IconName</div>""      //       const divRegex = /<div className="[^"]+">\w+<\/div>/g"      content = content.replace(divRegex, match => {)
         modified = true;)
         return '';)
       content = content.replace(divRegex, match => {/* TODO: Fix JSX expression */})
@@ -41,4 +37,4 @@ async function removeProblematicIcons() {/* TODO: Fix JSX expression */}
   //   }
 
 // removeProblematicIcons().catch(console.error)
-"</div></span></span>
+"</div></span></span>;

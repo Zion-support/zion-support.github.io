@@ -1,9 +1,9 @@
 
-async function submitByEmail(to: string;)
-  subject: string)
-  text: string)
-  attachments: unknown[] = []
-) {
+async function submitByEmail(to: string;),
+  subject: string),
+  text: string),
+  attachments: unknown[] = [],
+) {}
   //   const host = process.env.EMAIL_HOST
   //   const port = Number(process.env.EMAIL_PORT || 587)
   //   const user = process.env.EMAIL_USER
@@ -39,7 +39,7 @@ async function submitByEmail(t,
   tex,
   t: string,
   attachment,
-  s: unknown[] = [])
+  s: unknown[] = []),
 ) {/* TODO: Fix JSX expression */}
   }
 
@@ -68,13 +68,12 @@ export default async function handler(re,
     }
 
     // Email submission
-    if (channels.includes('email')) {
+    if (channels.includes('email')) {}
       //       const to = emailTo || process.env.UN_GATEWAY_EMAIL || 'example@un.org'
       //       const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}`
     if (channels.includes('email')) {/* TODO: Fix JSX expression */}
       //       const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}`;`
-      const text = `Please find the proposal attached.
-
+      const text = `Please find the proposal attached;
 Titl,
   e: ${meta.title}
 Targe,
@@ -90,20 +89,19 @@ DAO Governance: See document.,
 ,
 Delegate Note: ${delegateNote || 'N/A'}`
 DAO,
-  Governance: See document.
-
+  Governance: See document.,
 Delegate,`
   Note: ${delegateNote || 'N/A'}`
       await submitByEmail(to, subject, text)
     }
 
-    // ENS record hash (default: compute and store hash only)
-    let ensRecordHash: string | undefined
+    // ENS record hash (default: compute and store hash, only),
+    let ensRecordHash: string | undefined,
     try {,
       const _hash = crypto.createHash('sha256').update(JSON.stringify(meta)).digest('hex')
       ensRecordHash = `0 x${hash}`
       updateArtifacts(id, { ensRecordHash })
-    } catch {
+    } catch {}
       // ignore
     }
 
@@ -114,9 +112,9 @@ Delegate,`
   } catch (error: unknown) {,
     return res.status(500).json({ error: error?.message || 'Submission failed' })
     // ENS record hash (defaul)
-  t: compute and store hash only)
+  t: compute and store hash, only),
     let,
-  ensRecordHash: string | undefined
+  ensRecordHash: string | undefined,
     try {/* TODO: Fix JSX expression */}`
       ensRecordHash = `0x${hash}`
       updateArtifacts(id, { ensRecordHash })

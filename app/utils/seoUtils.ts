@@ -27,7 +27,7 @@ const meta = document.createElement('meta')
     document.head.appendChild(meta)}}
 }
     const cleanContent = content.replace(/<[^>]*>/g, '').trim();
-  if (cleanContent.length <= maxLength) {
+  if (cleanContent.length <= maxLength) {}
     return cleanContent;}}
   return cleanContent.substring(0, maxLength - 3) + '...';
 }
@@ -35,9 +35,9 @@ const meta = document.createElement('meta')
 }
     if (typeof document === 'undefined') return;
 // Utility functions
-export const generateMetaDescription = (content: string, maxLength: number = 160): string => {
+export const generateMetaDescription = (content: string, maxLength: number = 160): string => {}
     const cleanContent = content.replace(/<[^>]*>/g, '').trim()
-  if (cleanContent.length <= maxLength) {
+  if (cleanContent.length <= maxLength) {}
     return cleanContent
   }
   }
@@ -45,8 +45,8 @@ export const generateMetaDescription = (content: string, maxLength: number = 160
 }
 })
 }
-export const addStructuredData = (data: any): void => {
-    if (typeof document === 'undefined') return
+export const addStructuredData = (data: any): void => {}
+    if (typeof document === 'undefined') return null;
 const script = document.createElement('script')
   script.type = 'application/ld+json'
   script.textContent = createStructuredData(data),

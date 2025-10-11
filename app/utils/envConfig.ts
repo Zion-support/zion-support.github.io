@@ -12,7 +12,7 @@
     this.isInitialized = true;}
   }
       enableLogging: nodeEnv !== 'test',
-      logLevel: ()
+      logLevel: (),
         (nodeEnv === 'production' ? 'warn' : 'debug')) as EnvConfig['logLevel'],
       sentryDsn: process.env.NEXT_PUBLIC_SENTRY_DSN || process.env.VITE_SENTRY_DSN,
       gaTrackingId: process.env.NEXT_PUBLIC_GA_TRACKING_ID || process.env.VITE_GA_TRACKING_ID,}
@@ -24,7 +24,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */,}}}
     ,
       }
     }
-    return {valid: missing.length === 0;,}}public validate(requiredVars: (keyof EnvConfig)[]): {,}valid: boolean;,
+    return {valid: missing.length === 0;,}}public validate(requiredVars: (keyof, EnvConfig)[]): {,}valid: boolean;,
     missing: string[],}
       }
     }
@@ -58,7 +58,7 @@ export const isDevelopment = () => envConfig.isDevelopment()
 export const isTest = () => envConfig.isTest()
 export const getConfig = () => envConfig.getConfig()
 export const getApiHeaders = () => envConfig.getApiHeaders()
-`</string>
+`</string>;
 // Export singleton instance
 export const envConfig = new EnvironmentConfig()
 // Export convenient helper functions

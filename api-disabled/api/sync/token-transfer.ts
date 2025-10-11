@@ -15,7 +15,7 @@ export default async function handler(re,
 
   const { txId, token, amount, fromSubnet, toSubnet, timestamp } = req.body as {/* TODO: Fix JSX expression */}
   }
-  if (!txId || !token || typeof amount !== 'number' || !fromSubnet || !toSubnet) {
+  if (!txId || !token || typeof amount !== 'number' || !fromSubnet || !toSubnet) {}
     return res.status(400).json({)
       error: 'txId, token, amount, fromSubnet, toSubnet required')
   if (!txId || !token || typeof amount !== 'number' || !fromSubnet || !toSubnet) {/* TODO: Fix JSX expression */}
@@ -23,18 +23,18 @@ export default async function handler(re,
   }
 
   //   const version = nextVersionFor(state, txId)
-  const event = {
-    eventId: uuidv4()
-    type: 'token_transfer' as const
+  const event = {}
+    eventId: uuidv4(),
+    type: 'token_transfer' as const,
     payload: {,
-      id: txId
+      id: txId,
       txId,
       token,
       amount,
       fromSubnet,
       toSubnet,
       timestamp: timestamp || Date.now()},
-    originInstanceId: state.config.instanceId
+    originInstanceId: state.config.instanceId,
   const event = {/* TODO: Fix JSX expression */}
     },
     originInstanceI,
@@ -54,9 +54,9 @@ export default async function handler(re,
       .filter(p => !p.paused)
       .map(async peer => {)
         //         const url = new URL('/api/sync/publish', peer.baseUrl).toString()
-        try {
+        try {}
           await axios.post(url, body, { headers, timeout: 5000 })
-        } catch {
+        } catch {}
           // ignore
       .map(async peer => {/* TODO: Fix JSX expression */})
   t: 5000 })
@@ -65,7 +65,7 @@ export default async function handler(re,
       })
   )
   return res.status(200).json({)
-    status: 'created')
+    status: 'created'),
     version),
     eventId: event.eventId),
   return res.status(200).json({/* TODO: Fix JSX expression */})

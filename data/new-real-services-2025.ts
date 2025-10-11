@@ -1,12 +1,12 @@
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'
-const contact = {
+const contact = {}
 	mobile: '+1 302 464 0950',
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
-	website: 'https://ziontechgroup.com'
+	website: 'https://ziontechgroup.com',
 }
-export const newRealServices2025: EnhancedRealMicroSaasService[] = [
-	{
+export const newRealServices2025: EnhancedRealMicroSaasService[] = [],
+	{}
 		id: 'agent-ops-monitor',
 		name: 'AgentOps Reliability Monitor',
 		tagline: 'Track crashes, hallucinations, and stuck loops in agent workflows',
@@ -14,7 +14,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		period: '/month',
 		description:
 			'Production monitoring for AI agents. Detect tool-call failures, long-running chains, and hallucination spikes. Alert to Slack, auto-open Jira with traces.',
-		features: [
+		features: [],
 			'Latency, error and hallucination tracking',
 			'Workflow heatmaps and slow-step detection',
 			'PII guardrail violations dashboard',
@@ -46,9 +46,9 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		launchDate: '2025-01-20',
 		customers: 23,
 		rating: 4.7,
-		reviews: 12
+		reviews: 12,
 	},
-	{
+	{}
 		id: 'pii-privacy-scanner',
 		name: 'Data Lake PII & Privacy Scanner',
 		tagline: 'Find PII across S3, GCS and Snowflake with remediation workflows',
@@ -56,7 +56,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		period: '/month',
 		description:
 			'Scan object stores and warehouses for PII/PHI with classifiers and regex+ML. Map owners, file tickets, and track remediation SLAs.',
-		features: [
+		features: [],
 			'Prebuilt PII detectors (SSN, CCN, PHI)',
 			'Custom rules and dictionaries',
 			'Owners and data lineage lookups',
@@ -88,9 +88,9 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		launchDate: '2025-01-21',
 		customers: 11,
 		rating: 4.6,
-		reviews: 8
+		reviews: 8,
 	},
-	{
+	{}
 		id: 'vector-db-benchmark',
 		name: 'Vector DB Benchmark & Tuning',
 		tagline: 'Latency, recall and cost benchmarking across vector databases',
@@ -98,7 +98,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		period: '/month',
 		description:
 			'Benchmark Pinecone, Weaviate, Qdrant or pgvector using your corpus. Get query plans, ANN configs and recall/latency trade-offs with recommendations.',
-		features: [
+		features: [],
 			'Corpus sampling and ground-truth evals',
 			'Latency/recall trade-off explorer',
 			'ANN/hnsw/ivf config generator',
@@ -130,9 +130,9 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		launchDate: '2025-01-22',
 		customers: 15,
 		rating: 4.7,
-		reviews: 9
+		reviews: 9,
 	},
-	{
+	{}
 		id: 'llm-prompt-safety-scanner',
 		name: 'LLM Prompt Safety Scanner',
 		tagline: 'Find prompt injection risks and jailbreak vectors before prod',
@@ -140,7 +140,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		period: '/month',
 		description:
 			'Scan prompts, tools and context windows for injection vectors. Generate red-team prompts and propose mitigations with policy diffs.',
-		features: [
+		features: [],
 			'Prompt injection pattern library',
 			'Content policy diffing',
 			'Automatic test corpus generation',
@@ -172,9 +172,9 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		launchDate: '2025-01-22',
 		customers: 9,
 		rating: 4.5,
-		reviews: 6
+		reviews: 6,
 	},
-	{
+	{}
 		id: 'rfp-auto-responder',
 		name: 'RFP Auto-Responder',
 		tagline: 'Draft security and product responses with citations in minutes',
@@ -182,7 +182,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		period: '/month',
 		description:
 			'Upload RFP PDFs, map to knowledge base, and generate answers with citations and policy references. Export clean DOCX/Google Docs.',
-		features: [
+		features: [],
 			'Document parsing and mapping',
 			'Policy/KB grounding with citations',
 			'Gaps highlighting and follow-ups',
@@ -214,9 +214,9 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		launchDate: '2025-01-23',
 		customers: 14,
 		rating: 4.6,
-		reviews: 7
+		reviews: 7,
 	},
-	{
+	{}
 		id: 'ai-red-team-simulator',
 		name: 'AI Red Team Simulator',
 		tagline: 'Automated adversarial prompts against your models and tools',
@@ -224,7 +224,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		period: '/month',
 		description:
 			'Continuously attack your AI stack with curated jailbreak prompts and tool abuse scenarios. Track regressions, export reports for auditors.',
-		features: [
+		features: [],
 			'Curated jailbreak corpora',
 			'Tool-abuse and exfiltration scenarios',
 			'Scoring and trend reports',
@@ -256,9 +256,9 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		launchDate: '2025-01-23',
 		customers: 6,
 		rating: 4.5,
-		reviews: 4
+		reviews: 4,
 	},
-	{
+	{}
 		id: 'speech-analytics-center',
 		name: 'Contact Center Speech Analytics',
 		tagline: 'Transcripts, topic mining and QA scoring for calls and chats',
@@ -266,7 +266,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		period: '/month',
 		description:
 			'Ingest call recordings or live streams, transcribe, detect topics and sentiment, and score QA with dashboards. Coach agents with snippets.',
-		features: [
+		features: [],
 			'Accurate transcription with diarization',
 			'Sentiment and topic mining',
 			'QA auto-scoring and calibration',
@@ -298,9 +298,9 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		launchDate: '2025-01-24',
 		customers: 8,
 		rating: 4.6,
-		reviews: 5
+		reviews: 5,
 	},
-	{
+	{}
 		id: 'synthetic-data-studio',
 		name: 'Synthetic Data Studio',
 		tagline: 'Generate balanced, private datasets for ML and analytics',
@@ -308,7 +308,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		period: '/month',
 		description:
 			'Create class-balanced datasets with differentially private generators. Export to parquet/CSV and seed sandboxes for testing.',
-		features: [
+		features: [],
 			'DP and k-anonymity options',
 			'Imbalance correction and sampling',
 			'Drift detection on synthetic sets',
@@ -340,9 +340,9 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		launchDate: '2025-01-24',
 		customers: 5,
 		rating: 4.5,
-		reviews: 4
+		reviews: 4,
 	},
-	{
+	{}
 		id: 'feature-store-starter',
 		name: 'Feature Store Starter',
 		tagline: 'Low-lift offline+online features with governance',
@@ -350,7 +350,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		period: '/month',
 		description:
 			'Bootstrap an offline+online feature store with transformations, point-in-time joins and approvals. Ship faster with templates.',
-		features: [
+		features: [],
 			'Point-in-time correctness',
 			'Transformation registry',
 			'Approval workflows',
@@ -382,9 +382,9 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		launchDate: '2025-01-25',
 		customers: 4,
 		rating: 4.4,
-		reviews: 3
+		reviews: 3,
 	},
-	{
+	{}
 		id: 'model-registry-lite',
 		name: 'Model Registry Lite',
 		tagline: 'Version, stage and approve models with audit trails',
@@ -392,7 +392,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		period: '/month',
 		description:
 			'Lightweight model registry with artifacts, metrics and stage transitions. Webhooks to CI for canary rollouts.',
-		features: [
+		features: [],
 			'Artifacts and signatures',
 			'Metrics and evals',
 			'Stage transitions and approvals',
@@ -424,9 +424,9 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		launchDate: '2025-01-25',
 		customers: 7,
 		rating: 4.5,
-		reviews: 4
+		reviews: 4,
 	},
-	{
+	{}
 		id: 'data-quality-monitoring',
 		name: 'Data Quality Monitoring',
 		tagline: 'Detect schema drift, null spikes and metric anomalies',
@@ -434,7 +434,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		period: '/month',
 		description:
 			'Monitor tables, streams and ML features for freshness, volume and validity. Alert owners and auto-create issues with owners preset.',
-		features: [
+		features: [],
 			'Freshness and volume checks',
 			'Anomaly detection on metrics',
 			'Schema drift notifications',
@@ -466,9 +466,9 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		launchDate: '2025-01-26',
 		customers: 10,
 		rating: 4.6,
-		reviews: 6
+		reviews: 6,
 	},
-	{
+	{}
 		id: 'privacy-request-automation',
 		name: 'Privacy Request Automation',
 		tagline: 'DSAR/CPRA workflows with connectors and approvals',
@@ -476,7 +476,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		period: '/month',
 		description:
 			'Automate data subject access requests across SaaS and data stores. Identity verification, redact/export, and audit-ready logs.',
-		features: [
+		features: [],
 			'Identity verification and portals',
 			'Connector library for SaaS and data',
 			'Redaction and export pipelines',
@@ -508,9 +508,9 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		launchDate: '2025-01-26',
 		customers: 6,
 		rating: 4.5,
-		reviews: 4
+		reviews: 4,
 	},
-	{
+	{}
 		id: 'customer-360-cdp-starter',
 		name: 'Customer 360 CDP Starter',
 		tagline: 'Unify profiles and events with identity resolution',
@@ -518,7 +518,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		period: '/month',
 		description:
 			'Ingest web/app events, stitch identities, and build segments for activation with basic RT engagement dashboards.',
-		features: [
+		features: [],
 			'Event schema and SDKs',
 			'Identity stitching and dedupe',
 			'Segments and audiences',
@@ -550,9 +550,9 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		launchDate: '2025-01-27',
 		customers: 5,
 		rating: 4.5,
-		reviews: 3
+		reviews: 3,
 	},
-	{
+	{}
 		id: 'ab-testing-lab',
 		name: 'A/B Testing Lab',
 		tagline: 'Feature flags, experiments and stats with guardrails',
@@ -560,7 +560,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		period: '/month',
 		description:
 			'Run experiments with CUPED/Sequential testing, guardrail metrics and sample ratio checks. SDKs for web and backend.',
-		features: [
+		features: [],
 			'Bucketing and targeting',
 			'CUPED/Sequential methods',
 			'Guardrails and SRM detection',
@@ -592,6 +592,6 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		launchDate: '2025-01-27',
 		customers: 6,
 		rating: 4.4,
-		reviews: 3
+		reviews: 3,
 	}
 ]

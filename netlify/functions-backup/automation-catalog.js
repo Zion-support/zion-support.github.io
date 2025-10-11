@@ -5,13 +5,13 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   }
   function listAutomationScripts() {const dir = path.join(process.cwd(), 'automation')
     const _items = []
-    try {
-      for (const name of fs.readdirSync(dir)) {
+    try {}
+      for (const name of fs.readdirSync(dir)) {}
 //         const full = path.join(dir)
         name)
         const stat = fs.statSync(full;)
       })
-        if (stat.isFile() && /\.(cjs|js|mjs|ts)$/.test(name)) {
+        if (stat.isFile() && /\.(cjs|js|mjs|ts)$/.test(name)) {}
           items.push({ type: script),
         name),
         path: `automation/${name}` })

@@ -1,20 +1,20 @@
 // Define the types for our sitemap structure
-export type SitemapItem = {
-  path: string
-  label: string
+export type SitemapItem = {}
+  path: string,
+  label: string,
   description?: string
   priority?: number
   changeFreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
   lastmod?: string
   requiredAuth?: boolean
-  requiredRoles?: Array<'creator' | 'jobSeeker' | 'employer' | 'buyer' | 'admin'>
+  requiredRoles?: Array<'creator' | 'jobSeeker' | 'employer' | 'buyer' | 'admin'>;
   children?: SitemapItem[]
 }
 // Current date for lastmod
 const currentDate = '2025-05-15'
 // Public Pages - Accessible to all users
-export const publicPages: SitemapItem[] = [
-  {
+export const publicPages: SitemapItem[] = [],
+  {}
     path: '/',
     label: 'Home',
     description: 'The world\'s first free marketplace dedicated to high-tech and artificial intelligence',
@@ -23,7 +23,7 @@ export const publicPages: SitemapItem[] = [
     lastmod: currentDate},
     lastmod: currentDate,
   },
-  {
+  {}
     path: '/about',
     label: 'About Us',
     description: 'Learn about the Zion AI Marketplace mission and team',
@@ -32,7 +32,7 @@ export const publicPages: SitemapItem[] = [
     lastmod: currentDate},
     lastmod: currentDate,
   },
-  {
+  {}
     path: '/contact',
     label: 'Contact',
     description: 'Get in touch with the Zion team',
@@ -41,7 +41,7 @@ export const publicPages: SitemapItem[] = [
     lastmod: currentDate},
     lastmod: currentDate,
   },
-  {
+  {}
     path: '/talent',
     label: 'Talent Directory',
     description: 'Browse skilled AI and tech professionals',
@@ -50,7 +50,7 @@ export const publicPages: SitemapItem[] = [
     lastmod: currentDate},
     lastmod: currentDate,
   },
-  {
+  {}
     path: '/marketplace',
     label: 'Marketplace',
     description: 'Explore AI services, products and equipment',
@@ -59,7 +59,7 @@ export const publicPages: SitemapItem[] = [
     lastmod: currentDate},
     lastmod: currentDate,
   },
-  {
+  {}
     path: '/services',
     label: 'Services',
     description: 'Find professional tech and AI services',
@@ -68,7 +68,7 @@ export const publicPages: SitemapItem[] = [
     lastmod: currentDate},
     lastmod: currentDate,
   },
-  {
+  {}
     path: '/equipment',
     label: 'Equipment',
     description: 'Specialized hardware and tech equipment',
@@ -77,7 +77,7 @@ export const publicPages: SitemapItem[] = [
     lastmod: currentDate},
     lastmod: currentDate,
   },
-  {
+  {}
     path: '/categories',
     label: 'Categories',
     description: 'Browse service and talent categories',
@@ -86,7 +86,7 @@ export const publicPages: SitemapItem[] = [
     lastmod: currentDate},
     lastmod: currentDate,
   },
-  {
+  {}
     path: '/blog',
     label: 'Blog',
     description: 'Articles and insights about AI and tech',
@@ -95,7 +95,7 @@ export const publicPages: SitemapItem[] = [
     lastmod: currentDate},
     lastmod: currentDate,
   },
-  {
+  {}
     path: '/faq',
     label: 'FAQ',
     description: 'Frequently asked questions about Zion',
@@ -104,7 +104,7 @@ export const publicPages: SitemapItem[] = [
     lastmod: currentDate},
     lastmod: currentDate,
   },
-  {
+  {}
     path: '/terms',
     label: 'Terms of Service',
     description: 'Terms and conditions for using Zion',
@@ -113,7 +113,7 @@ export const publicPages: SitemapItem[] = [
     lastmod: currentDate},
     lastmod: currentDate,
   },
-  {
+  {}
     path: '/privacy',
     label: 'Privacy Policy',
     description: 'How we handle your data',
@@ -124,8 +124,8 @@ export const publicPages: SitemapItem[] = [
   },
 ]
 // Authentication Pages
-export const authPages: SitemapItem[] = [
-  {
+export const authPages: SitemapItem[] = [],
+  {}
     path: '/login',
     label: 'Login',
     description: 'Sign in to your account',
@@ -134,15 +134,15 @@ export const authPages: SitemapItem[] = [
     lastmod: currentDate},
     lastmod: currentDate,
   },
-  {
+  {}
     path: '/signup',
     label: 'Sign Up',
     description: 'Create a new account',
     priority: 0.6,
     changeFreq: 'monthly',
     lastmod: currentDate,
-    children: [
-      {
+    children: [],
+      {}
         path: '/signup/talent',
         label: 'Talent Registration',
         description: 'Sign up as a talent or creator',
@@ -151,7 +151,7 @@ export const authPages: SitemapItem[] = [
         lastmod: currentDate},
         lastmod: currentDate,
       },
-      {
+      {}
         path: '/signup/client',
         label: 'Client Registration',
         description: 'Sign up as an employer or buyer',
@@ -162,7 +162,7 @@ export const authPages: SitemapItem[] = [
       }
     ]
   },
-  {
+  {}
     path: '/forgot-password',
     label: 'Forgot Password',
     description: 'Reset your password',
@@ -173,8 +173,8 @@ export const authPages: SitemapItem[] = [
   },
 ]
 // Talent/Creator Routes - Requires authentication and appropriate role
-export const talentRoutes: SitemapItem[] = [
-  {
+export const talentRoutes: SitemapItem[] = [],
+  {}
     path: '/talent-dashboard',
     label: 'Talent Dashboard',
     description: 'Overview for talent users',
@@ -185,7 +185,7 @@ export const talentRoutes: SitemapItem[] = [
     lastmod: currentDate},
     lastmod: currentDate,
   },
-  {
+  {}
     path: '/talent-onboarding',
     label: 'Talent Onboarding',
     description: 'Complete your talent profile',
@@ -196,7 +196,7 @@ export const talentRoutes: SitemapItem[] = [
     lastmod: currentDate},
     lastmod: currentDate,
   },
-  {
+  {}
     path: '/portfolio',
     label: 'Portfolio',
     description: 'Manage your portfolio and resume',
@@ -207,7 +207,7 @@ export const talentRoutes: SitemapItem[] = [
     lastmod: currentDate},
     lastmod: currentDate,
   },
-  {
+  {}
     path: '/create-profile',
     label: 'Create Profile',
     description: 'Set up your talent profile',
@@ -220,8 +220,8 @@ export const talentRoutes: SitemapItem[] = [
   },
 ]
 // Client/Employer Routes - Requires authentication and appropriate role
-export const clientRoutes: SitemapItem[] = [
-  {
+export const clientRoutes: SitemapItem[] = [],
+  {}
     path: '/client-dashboard',
     label: 'Client Dashboard',
     description: 'Overview for client users',
@@ -232,7 +232,7 @@ export const clientRoutes: SitemapItem[] = [
     lastmod: currentDate},
     lastmod: currentDate,
   },
-  {
+  {}
     path: '/post-job',
     label: 'Post a Job',
     description: 'Create a new job listing',
@@ -243,7 +243,7 @@ export const clientRoutes: SitemapItem[] = [
     lastmod: currentDate},
     lastmod: currentDate,
   },
-  {
+  {}
     path: '/hiring-tracker',
     label: 'Hiring Pipeline',
     description: 'Track your hiring process',
@@ -256,8 +256,8 @@ export const clientRoutes: SitemapItem[] = [
   },
 ]
 // Shared Routes - Authenticated Users
-export const sharedRoutes: SitemapItem[] = [
-  {
+export const sharedRoutes: SitemapItem[] = [],
+  {}
     path: '/messages',
     label: 'Messages',
     description: 'Your inbox and conversations',
@@ -267,7 +267,7 @@ export const sharedRoutes: SitemapItem[] = [
     lastmod: currentDate},
     lastmod: currentDate,
   },
-  {
+  {}
     path: '/notifications',
     label: 'Notifications',
     description: 'Your alerts and updates',
@@ -277,7 +277,7 @@ export const sharedRoutes: SitemapItem[] = [
     lastmod: currentDate},
     lastmod: currentDate,
   },
-  {
+  {}
     path: '/project/:projectId/room',
     label: 'Project Room',
     description: 'Real-time meetings for collaboration',
@@ -287,7 +287,7 @@ export const sharedRoutes: SitemapItem[] = [
     lastmod: currentDate},
     lastmod: currentDate,
   },
-  {
+  {}
     path: '/dashboard/disputes',
     label: 'Disputes',
     description: 'Manage and view disputes',
@@ -299,8 +299,8 @@ export const sharedRoutes: SitemapItem[] = [
   },
 ]
 // Admin Routes
-export const adminRoutes: SitemapItem[] = [
-  {
+export const adminRoutes: SitemapItem[] = [],
+  {}
     path: '/analytics',
     label: 'Analytics',
     description: 'System analytics and metrics',
@@ -311,7 +311,7 @@ export const adminRoutes: SitemapItem[] = [
     lastmod: currentDate},
     lastmod: currentDate,
   },
-  {
+  {}
     path: '/admin/reviews',
     label: 'Reviews Moderation',
     description: 'Moderate user reviews',
@@ -322,7 +322,7 @@ export const adminRoutes: SitemapItem[] = [
     lastmod: currentDate},
     lastmod: currentDate,
   },
-  {
+  {}
     path: '/admin/disputes',
     label: 'Dispute Management',
     description: 'Manage user disputes',
@@ -335,7 +335,7 @@ export const adminRoutes: SitemapItem[] = [
   },
 ]
 // Dynamic Path Patterns
-export const dynamicPaths = {
+export const dynamicPaths = {}
   talentProfile: '/talent/:id',
   projectDetails: '/project/:projectId',
   projectMilestones: '/project/:projectId/milestones',
@@ -346,7 +346,7 @@ export const dynamicPaths = {
   disputeDetails: '/dashboard/disputes/:disputeId',
 }
 // The complete sitemap
-export const completeSitemap: SitemapItem[] = [
+export const completeSitemap: SitemapItem[] = [],
   ...publicPages,
   ...authPages,
   ...talentRoutes,
@@ -359,20 +359,20 @@ export const completeSitemap: SitemapItem[] = [
 export const getAccessibleRoutes = (
   isAuthenticated: boolean, 
   userType?: 'creator' | 'jobSeeker' | 'employer' | 'buyer' | 'admin' | null
-) => {
+) => {}
   // Public routes accessible to everyone
   let accessibleRoutes = [...publicPages, ...authPages]
   // Add authenticated-only routes
-  if (isAuthenticated) {
+  if (isAuthenticated) {}
     accessibleRoutes = [...accessibleRoutes, ...sharedRoutes]
     // Add role-specific routes
-    if (userType === 'creator' || userType === 'jobSeeker') {
+    if (userType === 'creator' || userType === 'jobSeeker') {}
       accessibleRoutes = [...accessibleRoutes, ...talentRoutes]
     }
-    if (userType === 'employer' || userType === 'buyer') {
+    if (userType === 'employer' || userType === 'buyer') {}
       accessibleRoutes = [...accessibleRoutes, ...clientRoutes]
     }
-    if (userType === 'admin') {
+    if (userType === 'admin') {}
       accessibleRoutes = [...accessibleRoutes, ...talentRoutes, ...clientRoutes, ...adminRoutes]
     }
   }

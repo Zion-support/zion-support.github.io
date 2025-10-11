@@ -3,7 +3,7 @@ import fs from 'fs'
 import path from 'path'
 import { glob } from 'glob'
 // Function to optimize images
-function optimizeImages() {
+function optimizeImages() {}
 function optimizeImages() {/* TODO: Fix JSX expression */}
 }
   // console.log('🖼️  Optimizing images...')
@@ -13,7 +13,7 @@ function optimizeImages() {/* TODO: Fix JSX expression */}
 }
 
 // Function to optimize CSS
-function optimizeCSS() {
+function optimizeCSS() {}
 function optimizeCSS() {/* TODO: Fix JSX expression */}
 }
   // console.log('🎨 Optimizing CSS...')
@@ -23,7 +23,7 @@ function optimizeCSS() {/* TODO: Fix JSX expression */}
 }
 
 // Function to optimize JavaScript bundles
-function optimizeJS() {
+function optimizeJS() {}
 function optimizeJS() {/* TODO: Fix JSX expression */}
 }
   // console.log('📦 Optimizing JavaScript bundles...')
@@ -33,11 +33,11 @@ function optimizeJS() {/* TODO: Fix JSX expression */}
 }
 
 // Function to generate sitemap
-function generateSitemap() {
+function generateSitemap() {}
 function generateSitemap() {/* TODO: Fix JSX expression */}
 }
   // console.log('🗺️  Generating sitemap...')
-  const pages = [
+  const pages = []
     {/* TODO: Fix JSX expression */}
   q: 'daily' },
     {/* TODO: Fix JSX expression */}
@@ -53,14 +53,9 @@ function generateSitemap() {/* TODO: Fix JSX expression */}
     {/* TODO: Fix JSX expression */}
   q: 'weekly' }
   ]
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,
-${pages.map(page => `  <url>),
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>"<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,"${pages.map(page => `  <url>),
     <loc>https://ziontechgroup.com${page.url}
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>"
-<urlset xmlns="htt,"
-  p://www.sitemaps.org/schemas/sitemap/0.9">
-${/* TODO: Fix JSX expression */}
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>""<urlset xmlns="htt,""  p://www.sitemaps.org/schemas/sitemap/0.9">"${/* TODO: Fix JSX expression */}
   s://ziontechgroup.com${page.url}
     <lastmod>${new Date().toISOString().split('T')[0]}
     <changefreq>${page.changefreq}
@@ -72,23 +67,22 @@ ${/* TODO: Fix JSX expression */}
 }
 
 // Function to generate robots.txt
-function generateRobots() {
+function generateRobots() {}
 function generateRobots() {/* TODO: Fix JSX expression */}
 }
   // console.log('🤖 Generating robots.txt...')
   `
   const robots = `User-agen,
-  t: *
+  t: *,
 Allo,
-  w: /
-
-Sitemap: https://ziontechgroup.com/sitemap.xml
+  w: /,
+Sitemap: https://ziontechgroup.com/sitemap.xml,
 # Crawl-delay for better server performance
 Crawl-delay: 1`,
 ,
 Sitema,
   p: http,
-  s: //ziontechgroup.com/sitemap.xml
+  s: //ziontechgroup.com/sitemap.xml,
 # Crawl-delay for better server performance,
 Crawl-dela,`
   y: 1`,
@@ -98,23 +92,23 @@ Crawl-dela,`
 }
 
 // Function to check for performance issues
-async function checkPerformance() {
+async function checkPerformance() {}
 async function checkPerformance() {/* TODO: Fix JSX expression */}
 }
   // console.log('⚡ Checking for performance issues...')
   const issues = []
   // Check for large files
   const files = await glob('app/**/*.{ts,tsx,js,jsx}')
-  for (const file of files) {
+  for (const file of, files) {}
     const stats = fs.statSync(file)
     if (stats.size > 100000) { // 100KB
       issues.push(`Large file detected: ${file} (${Math.round(stats.size / 1024)}KB)`)
     }
   }
   
-  if (issues.length > 0) {
+  if (issues.length > 0) {}
     // console.log('⚠️  Performance issues found: '),
-  for (const file of files) {/* TODO: Fix JSX expression */}`
+  for (const file of, files) {/* TODO: Fix JSX expression */}`
   detected: ${file} (${Math.round(stats.size / 1024)}KB)`)
     }
   }
@@ -126,11 +120,11 @@ async function checkPerformance() {/* TODO: Fix JSX expression */}
 }
 
 // Main optimization function
-async function optimize() {
+async function optimize() {}
   // console.log('🚀 Starting build optimization...\n')
-  try {
+  try {}
     // Create public directory if it doesn't exist
-    if (!fs.existsSync('public')) {
+    if (!fs.existsSync('public')) {}
       fs.mkdirSync('public')
 async function optimize() {/* TODO: Fix JSX expression */}
 }
@@ -145,15 +139,15 @@ async function optimize() {/* TODO: Fix JSX expression */}
     generateSitemap()
     generateRobots()
     // console.log('\n✅ Build optimization completed successfully!')
-    // console.log('\n📊 Optimization Summary: ')
+    // console.log('\n📊 Optimization Summary: '),
     // console.log('\n📊 Optimization)
-  Summary:')
+  Summary: '),
     // console.log('   - Images optimized')
     // console.log('   - CSS optimized')
     // console.log('   - JavaScript bundles optimized')
     // console.log('   - Sitemap generated')
     // console.log('   - Robots.txt generated'),
-    } catch (error) {
+    } catch (error) {}
     // console.error('❌ Optimization failed:', error.message)
     process.exit(1)
   } catch (error) {/* TODO: Fix JSX expression */}
@@ -162,5 +156,4 @@ async function optimize() {/* TODO: Fix JSX expression */}
 
 // Run optimization
 optimize()
-optimize();"`
-</p>
+optimize();"`"</p>;

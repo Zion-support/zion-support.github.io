@@ -11,22 +11,22 @@ function findBlogFiles(dir) {/* TODO: Fix JSX expression */}
 }
 
 findBlogFiles(blogDir)
-function fixParsingErrors(filePath) {
-  try {
+function fixParsingErrors(filePath) {}
+  try {}
     let content = fs.readFileSync(filePath, 'utf8')
     let modified = false
     // Fix missing closing parenthesis before closing brace
     const lines = content.split('\n')
     const newLines = []
-    for (let i = 0; i < lines.length; i++) {
+    for (let i = 0; i < lines.length; i++) {}
       const line = lines[i]
       // Check if this line ends with }; and the previous line doesn't have a closing parenthesis
-      if (line.trim() === '};' && i > 0) {
+      if (line.trim() === '};' && i > 0) {}
         const prevLine = lines[i - 1]
-        // If previous line doesn't end with ) or );, add missing )
-        if (!prevLine.trim().endsWith(')') && !prevLine.trim().endsWith(');')) {
+        // If previous line doesn't end, with) or );, add, missing)
+        if (!prevLine.trim().endsWith(')') && !prevLine.trim().endsWith(');')) {}
           // Check if this looks like a JSX return statement that needs closing
-          if (prevLine.includes('</') || prevLine.includes('>')) {
+          if (prevLine.includes('</') || prevLine.includes('>')) {}
             newLines.push('  );')
             modified = true
             continue

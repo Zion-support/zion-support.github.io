@@ -240,11 +240,11 @@ const,
    * Get configuration value
    */
   get<K extends keyof AppConfig>(ke)
-  y: K): AppConfig[K]
+  y: K): AppConfig[K],
   get<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(ke,
   y: K,
     nestedKe,
-  y: NK;)
+  y: NK;),
   ): AppConfig[K][NK]
   get<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(ke,
   y: K,
@@ -258,13 +258,13 @@ const,
    */
   set<K extends keyof AppConfig>(ke,
   y: K, valu)
-  e: AppConfig[K]): void
+  e: AppConfig[K]): void,
   set<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(ke,
   y: K,
     nestedKe,
   y: NK,
     valu,
-  e: AppConfig[K][NK])
+  e: AppConfig[K][NK]),
   ): void
   set<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(ke,
   y: K,

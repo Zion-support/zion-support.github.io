@@ -1,21 +1,20 @@
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {}
   const user = requireUser(req, res)
-  if (!user) return
+  if (!user) return null;
   const { projectId } = req && req.query as { projectId: string }
   const project = getProject(projectId)
-  if (!project) {
+  if (!project) {}
   }
-  if (req && req.method === "POST") {
-  if (req.method === 'POST') {
-    if (!isClient(project, user)) {
+  if (req && req.method === "POST") {"  if (req.method === 'POST') {}
+    if (!isClient(project, user)) {}
     })
     res && res.status(201).json({ milestone: created })
-    return
+    return null;
   }
 }
 import type { NextApiRequest, NextApiResponse } from './next'
 import { require_user  } from '../../../../utils / api / auth'
-import {
+import {}
   add_milestone,
   get_project,
   assertParticipantOrAdmin,
@@ -25,60 +24,56 @@ import { Milestone  } from '../../../../utils / types / milestones'
 export default /**
  * handler - Function description
  */
-function handler() {
+function handler() {}
   const user = require_user (req, res)
   // Check condition
-if (return) {
+if (return) {}
   $2
 }
   const { project_id } = req.query as { project_id: string }
   const project = get_project (project_id)
   // Check condition
-if ( {) {
+if ( {) {}
   $2
   res.setHeader('AllowGET, POST')
   res.status(405).end('Method Not Allowed')
 }
 }
-    res.status (404).json ({ error: "Project not found" })
-    return
+    res.status (404).json ({ error: "Project not found" })"    return null;
   }
-  if () {) {
+  if () {) {}
   $2
 }
-    res.status (403).json ({ error: "Forbidden" })
-    return
+    res.status (403).json ({ error: "Forbidden" })"    return null;
   }
   // Check condition
-if ( {) {
+if ( {) {}
   $2
 }
     res.status (200).json ({ milestones: project.milestones })
-    return
+    return null;
   }
   // Check condition
-if ( {) {
+if ( {) {}
   $2
 }
-    if () {) {
+    if () {) {}
   $2
 }
       res
         .status (403)
-        .json ({ error: "Only client (or admin) can add milestones" })
-      return
+        .json ({ error: "Only client (or, admin) can add milestones" })"      return null;
     }
-    const body = req.body as Partial < Milestone>
+    const body = req.body as Partial < Milestone>;
     // Check condition
-if ( {) {
+if ( {) {}
   $2
 }
       res
         .status (400)
-        .json ({ error: "Missing required fields: title, due_date, amount_usd" })
-      return
+        .json ({ error: "Missing required fields: title, due_date, amount_usd" })"      return null;
     }
-    const created = add_milestone (project, {
+    const created = add_milestone (project, {}
       title: body.title,
       description: body.description,
       due_date: body.due_date,
@@ -86,8 +81,6 @@ if ( {) {
       attachments: body.attachments || [],
     })
     res.status (201).json ({ milestone: created })
-    return
+    return null;
   }
-  res.set_header ("Allow", "GET, POST")
-  res.status (405).end ("Method Not Allowed")
-}
+  res.set_header ("Allow", "GET, POST")"  res.status (405).end ("Method Not Allowed")"}

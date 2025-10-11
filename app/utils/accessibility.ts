@@ -20,7 +20,7 @@ const announcement = document.createElement('div'),
     announcement.className = 'sr-only'
     announcement.textContent = message
 document.body.appendChild(announcement)
-setTimeout(() => {
+setTimeout(() => {}
       document.body.removeChild(announcement)}}, 1000);
   }
     const hasAriaLabel = element.hasAttribute('aria-label') || element.hasAttribute('aria-labelledby')

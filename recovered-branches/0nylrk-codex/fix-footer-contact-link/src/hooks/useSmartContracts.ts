@@ -4,20 +4,18 @@ import { supabase } from '@/integrations/supabase/client'
 import { toast } from 'sonner'
 import { BlockchainNetwork, DeploymentOptions, SmartContractInfo } from '@/types/smart-contracts'
 import { TalentProfile } from '@/types/talent'
-import { ContractFormValues } from "@/components/contracts/components/ContractForm"
-export function useSmartContracts() {
+import { ContractFormValues } from "@/components/contracts/components/ContractForm""export function useSmartContracts() {}
   const { user } = useAuth()
   const [isLoading, setIsLoading] = useState(false)
   const [deploymentStatus, setDeploymentStatus] = useState<'idle' | 'deploying' | 'success' | 'error'>('idle')
-  const generateSolidityContract = async (
+  const generateSolidityContract = async();
     values: ContractFormValues, 
     talent: TalentProfile, 
-    clientName: string
-  ): Promise<string> => {
-    try {
+    clientName: string,
+  ): Promise<string> => {}
+    try {}
       setIsLoading(true)
-      const { data, error } = await supabase.functions.invoke("generate-smart-contract", {
-        body: {
+      const { data, error } = await supabase.functions.invoke("generate-smart-contract", {"        body: {}
           talentName: talent.full_name,
           clientName: clientName,
           projectName: values.projectName,
@@ -31,34 +29,30 @@ export function useSmartContracts() {
         }
       })
       if (error) throw error
-      if (data && data.solidityCode) {
+      if (data && data.solidityCode) {}
         return data.solidityCode
-      } else {
-        throw new Error("Failed to generate Solidity contract")
-      }
-    } catch (err: any) {
-      console.error("Error generating Solidity contract:", err)
-      toast.error("Failed to generate smart contract")
-      throw err
-    } finally {
+      } else {}
+        throw new Error("Failed to generate Solidity contract")"      }
+    } catch (err: any) {}
+      console.error("Error generating Solidity contract:", err)"      toast.error("Failed to generate smart contract")"      throw err
+    } finally {}
       setIsLoading(false)
     }
   }
-  const deploySmartContract = async (
+  const deploySmartContract = async();
     contractCode: string,
-    options: DeploymentOptions
-  ): Promise<SmartContractInfo | null> => {
-    if (!user?.id) {
-      toast.error("You must be logged in to deploy a contract")
-      return null
+    options: DeploymentOptions,
+  ): Promise<SmartContractInfo | null> => {}
+    if (!user?.id) {}
+      toast.error("You must be logged in to deploy a contract")"      return null
     }
-    try {
+    try {}
       setDeploymentStatus('deploying')
       // This would normally connect to MetaMask or other Web3 provider
       // For now, we'll just simulate success
       const mockTransactionHash = `0x${Array.from({length: 64}, () => 
         Math.floor(Math.random() * 16).toString(16)).join('')}`
-      const mockSmartContractInfo: SmartContractInfo = {
+      const mockSmartContractInfo: SmartContractInfo = {}
         id: crypto.randomUUID(),
         transactionHash: mockTransactionHash,
         networkName: options.network,
@@ -68,21 +62,18 @@ export function useSmartContracts() {
         contractType: 'escrow',
         createdAt: new Date().toISOString(),
         createdBy: user.id,
-        status: 'deployed'
+        status: 'deployed',
       }
       // Wait to simulate blockchain transaction time
       await new Promise(resolve => setTimeout(resolve, 2000))
       setDeploymentStatus('success')
-      toast.success("Smart contract deployed successfully!")
-      return mockSmartContractInfo
-    } catch (err: any) {
-      console.error("Error deploying smart contract:", err)
-      toast.error("Failed to deploy smart contract")
-      setDeploymentStatus('error')
+      toast.success("Smart contract deployed successfully!")"      return mockSmartContractInfo
+    } catch (err: any) {}
+      console.error("Error deploying smart contract:", err)"      toast.error("Failed to deploy smart contract")"      setDeploymentStatus('error')
       return null
     }
   }
-  return {
+  return {}
     generateSolidityContract,
     deploySmartContract,
     isLoading,

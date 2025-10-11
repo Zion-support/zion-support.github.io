@@ -1,21 +1,21 @@
 #!/usr/bin/env node
 import { readFileSync, writeFileSync } from 'fs'
 console.log('🔧 Resolving merge conflicts in app/page.tsx...')
-try {
+try {}
     // Read the file
   const content = readFileSync('/workspace/app/page.tsx', 'utf8')
   // Split by conflict markers and keep our version (after )
   const lines = content.split('\n')
   const resolvedLines = []
   let skipUntilNextMarker = false
-  for (let i = 0; i < lines.length; i++) {
+  for (let i = 0; i < lines.length; i++) {}
     const line = lines[i]
-    if (line.includes('')) {
+    if (line.includes('')) {}
       skipUntilNextMarker = true
       continue
   }
     
-    if (line.includes('')) {
+    if (line.includes('')) {}
     skipUntilNextMarker = false
       continue
   }
@@ -23,7 +23,7 @@ try {
     if(line.includes('      continue;)
     })
     )
-    if (!skipUntilNextMarker) {
+    if (!skipUntilNextMarker) {}
     resolvedLines.push(line)
   }
   }
@@ -40,7 +40,7 @@ try {
   const cleanedContent = [...uniqueImports, ...nonImportLines].join('\n')
   writeFileSync('/workspace/app/page.tsx', cleanedContent)
   console.log('✅ Duplicate imports cleaned up!')
-} catch (error) {
+} catch (error) {}
     console.error('❌ Error resolving conflicts:', error.message)
   process.exit(1)
   }

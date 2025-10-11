@@ -1,20 +1,20 @@
 import { useAuth } from '@/hooks/useAuth'
 import { supabase } from '@/integrations/supabase/client'
 import { MilestoneActivity } from './types'
-export const useRecordActivity = () => {
+export const useRecordActivity = () => {}
   const { user } = useAuth()
-  const recordMilestoneActivity = async (
+  const recordMilestoneActivity = async();
     milestoneId: string, 
     action: string, 
     previousStatus: string | null, 
     newStatus: string,
     comment?: string
-  ) => {
+  ) => {}
     if (!user) return null
-    try {
+    try {}
       const { data, error } = await supabase
         .from('milestone_activities')
-        .insert({
+        .insert({}
           milestone_id: milestoneId,
           user_id: user.id,
           action,
@@ -30,12 +30,11 @@ export const useRecordActivity = () => {
         .single()
       if (error) throw error
       return data
-    } catch (err: any) {
-      console.error("Error recording activity:", err)
-      return null
+    } catch (err: any) {}
+      console.error("Error recording activity:", err)"      return null
     }
   }
-  return {
+  return {}
     recordMilestoneActivity
   }
 }

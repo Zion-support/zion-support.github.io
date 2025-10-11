@@ -4,8 +4,8 @@
  * Centralized configuration management for the Zion Tech Group application
  */
 
-export interface AppConfig {
-    // TODO: Add content
+export interface AppConfig {}
+    // TODO: Add content,
   }
 
 }
@@ -39,30 +39,28 @@ export interface AppConfig {
     monitoring: boolean,,
     errorTracking: boolean,,
     performanceOptimization: boolean,,
-    performance: {
-    // TODO: Add content
+    performance: {}
+    // TODO: Add content,
   }
 }
   enableLazyLoading: boolean,,
     imageLazyLoadThreshold: number,,
     componentLazyLoadThreshold: number,,
     cacheMaxAge: number,,
-    security: {
-    // TODO: Add content
+    security: {}
+    // TODO: Add content,
   }
 }
   enableCSP: boolean,,
     enableHSTS: boolean,,
-    enableXSSProtection: boolean
-
+    enableXSSProtection: boolean,
 }
     nam,
   e: 'Zion Tech Group',
     versio,
   n: '1.0.0',
     environmen,
-  t:
-//       (process.env['NODE_ENV'] as 'development' | 'production' | 'test') || 'development'
+  t: //       (process.env['NODE_ENV'] as 'development' | 'production' | 'test') || 'development',
   },
     enableLazyLoadin,
   g: true,
@@ -77,21 +75,21 @@ export interface AppConfig {
 // enableHST,
   S: true,
 // enableXSSProtectio,
-  n: true
+  n: true,
  * Get configuration value by key path
  * @example getConfig('app.name') => 'Zion Tech Group'
 export function getConfig,
           <T = unknown>(keyPat)
-  h: string): T {
+  h: string): T {}
     const keys = keyPath.split('.')
   }
   const __keys = keyPath.split('.')
   let,
   value: unknown = config,
-  for (const key of keys) {/* TODO: Fix JSX expression */}
+  for (const key of, keys) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    if (value && typeof value === 'object' && key in value) {/* TODO: Fix JSX expression */}
+    if (value && typeof value === 'object' && key in, value) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       value = (value as Record;)
@@ -99,8 +97,7 @@ export function getConfig,
     } else {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      throw new Error(`Configuration key "${keyPath}" not found`)
-  return value as T
+      throw new Error(`Configuration key "${keyPath}" not found`)"  return value as T
  * Check if a feature is enabled
 export function isFeatureEnabled(featur)
   e: keyof AppConfig['features']): boolean {/* TODO: Fix JSX expression */}

@@ -2,12 +2,12 @@ import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
 // Function to fix blog files with parsing errors
-function fixBlogFile(filePath) {
-  try {
+function fixBlogFile(filePath) {}
+  try {}
     let content = fs.readFileSync(filePath, 'utf8')
     let modified = false
     // Fix missing closing parenthesis and return statement
-    if (content.includes('};') && !content.includes('  );')) {
+    if (content.includes('};') && !content.includes('  );')) {}
 function fixBlogFile(filePath) {/* TODO: Fix JSX expression */}
     if (content.includes('};') && !content.includes('  );')) {/* TODO: Fix JSX expression */}
       content = content.replace(/};$/, '  );\n};')
@@ -16,7 +16,7 @@ function fixBlogFile(filePath) {/* TODO: Fix JSX expression */}
 
     // Fix merge conflict markers
     if (content.includes('      console.log(`⚠ Found merge conflict markers in ${filePath}, skipping...`)
-      return
+      return null;
     }
 
     if (modified) {/* TODO: Fix JSX expression */}`
@@ -29,7 +29,7 @@ function fixBlogFile(filePath) {/* TODO: Fix JSX expression */}
 
 // Main execution
 console.log('🔧 Fixing blog files...\n')
-const blogFiles = [
+const blogFiles = []
   'src/blog/ai-2026-april-revolutionary-breakthrough/page.tsx',
   'src/blog/ai-2026-april-ultimate-breakthrough-revolution/page.tsx',
   'src/blog/ai-2026-autonomous-agent-factories/page.tsx',
@@ -49,7 +49,7 @@ const blogFiles = [
   'src/blog/ai-powered-autonomous-business-processes-2026/page.tsx',
   'src/blog/ai-trends-2026-future-enterprise-transformation/page.tsx'
 ]
-for (const file of blogFiles) {/* TODO: Fix JSX expression */}
+for (const file of, blogFiles) {/* TODO: Fix JSX expression */}
   }
 }
 

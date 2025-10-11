@@ -1,8 +1,7 @@
 declare module 'lucide-react' {/* TODO: Fix JSX expression */}
   }
 
-  export type LucideIcon = ComponentType<LucideProps>
-
+  export type LucideIcon = ComponentType<LucideProps>;
   export const,
   Calendar: LucideIcon,
   export const,
@@ -36,37 +35,37 @@ declare module 'lucide-react' {/* TODO: Fix JSX expression */}
   export const,
   TrendingUp: LucideIcon,
   export const,
-  Zap: LucideIcon
+  Zap: LucideIcon,
   // Social media icons
-  export const Github: LucideIcon
-  export const Linkedin: LucideIcon
-  export const Twitter: LucideIcon
+  export const Github: LucideIcon,
+  export const Linkedin: LucideIcon,
+  export const Twitter: LucideIcon,
   // Communication icons
-  export const Mail: LucideIcon
-  export const Phone: LucideIcon
+  export const Mail: LucideIcon,
+  export const Phone: LucideIcon,
   // Location icons
-  export const MapPin: LucideIcon
+  export const MapPin: LucideIcon,
   // UI icons
-  export const Menu: LucideIcon
-  export const X: LucideIcon
-  export const Star: LucideIcon
-  export const CheckCircle: LucideIcon
-  export const AlertTriangle: LucideIcon
-  export const Home: LucideIcon
-  export const Sparkles: LucideIcon
-  export const Cpu: LucideIcon
-  export const BookOpen: LucideIcon
-  export const Shield: LucideIcon
-  export const Settings: LucideIcon
-  export const BarChart3: LucideIcon
-  export const Code: LucideIcon
-  export const ExternalLink: LucideIcon
-  export const Atom: LucideIcon
-  export const Calculator: LucideIcon
-  export const Share2: LucideIcon
-  export const Search: LucideIcon
-  export const Globe: LucideIcon
-  export const Database: LucideIcon
+  export const Menu: LucideIcon,
+  export const X: LucideIcon,
+  export const Star: LucideIcon,
+  export const CheckCircle: LucideIcon,
+  export const AlertTriangle: LucideIcon,
+  export const Home: LucideIcon,
+  export const Sparkles: LucideIcon,
+  export const Cpu: LucideIcon,
+  export const BookOpen: LucideIcon,
+  export const Shield: LucideIcon,
+  export const Settings: LucideIcon,
+  export const BarChart3: LucideIcon,
+  export const Code: LucideIcon,
+  export const ExternalLink: LucideIcon,
+  export const Atom: LucideIcon,
+  export const Calculator: LucideIcon,
+  export const Share2: LucideIcon,
+  export const Search: LucideIcon,
+  export const Globe: LucideIcon,
+  export const Database: LucideIcon,
   export const Cloud: LucideIcon,
 ,
   export const,
@@ -74,15 +73,15 @@ declare module 'lucide-react' {/* TODO: Fix JSX expression */}
   export const,
   Linkedin: LucideIcon,
   export const,
-  Twitter: LucideIcon
+  Twitter: LucideIcon,
   // Communication icons,
   export const,
   Mail: LucideIcon,
   export const,
-  Phone: LucideIcon
+  Phone: LucideIcon,
   // Location icons,
   export const,
-  MapPin: LucideIcon
+  MapPin: LucideIcon,
   // UI icons,
   export const,
   Menu: LucideIcon,
@@ -125,6 +124,6 @@ declare module 'lucide-react' {/* TODO: Fix JSX expression */}
   export const,
   Database: LucideIcon,
   export const,
-  Cloud: LucideIcon
+  Cloud: LucideIcon,
   // Add more icons as needed,
 }

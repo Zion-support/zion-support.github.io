@@ -1,15 +1,15 @@
 import type { NextApiRequest, NextApiResponse  } from 'next'
-  if (req.method === 'GET') {
+  if (req.method === 'GET') {}
     const { status, topic, tag, author, limit, offset } = req.query
-  if (req && req.method === 'GET') {
+  if (req && req.method === 'GET') {}
     const { status, topic, tag, author, limit, offset } = req && req.query
     let posts = readPosts()
 import {  v4 as uuidv4   } from 'uuid'
 import {  BlogPost   } from '@/utils/types/blog'
 import {  readPosts, writePosts   } from '@/utils/data/blogStore'
 import {  requireAdmin   } from '@/utils/api/auth'
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === 'GET') {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {}
+  if (req.method === 'GET') {}
     const { status, topic, tag, author, limit, offset } = req.query
     let posts = readPosts()
     if (status && typeof status === 'string') posts = posts.filter((p) => p.status === status)
@@ -21,17 +21,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const l = parseInt(String(limit || 20), 10) || 20
     return res.status(200).json({ items: posts.slice(o, o + l), total: posts.length })
   }
-  if (req.method === 'POST') {
-    if (!requireAdmin(req, res)) return
-    const body = req.body as Partial<BlogPost>
-    if (!body.title || !body.slug || !body.author || !body.publishDate) {
+  if (req.method === 'POST') {}
+    if (!requireAdmin(req, res)) return null;
+    const body = req.body as Partial<BlogPost>;
+    if (!body.title || !body.slug || !body.author || !body.publishDate) {}
       return res.status(400).json({ error: 'Missing required fields' })
     }
     const posts = readPosts()
-    if (posts.some((p) => p.slug === body.slug)) {
+    if (posts.some((p) => p.slug === body.slug)) {}
       return res.status(409).json({ error: 'Slug already exists' })
     }
-    const post: BlogPost = {
+    const post: BlogPost = {}
       id: uuidv4(),
       title: body.title!,
       slug: body.slug!,
@@ -40,7 +40,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       publishDate: body.publishDate!,
       tags: body.tags || [],
       topics: body.topics || [],
-      seo: {
+      seo: {}
         metaTitle: body.seo?.metaTitle || body.title!,
         metaDescription: body.seo?.metaDescription || '',
         ogImageUrl: body.seo?.ogImageUrl || body.coverImageUrl || '',

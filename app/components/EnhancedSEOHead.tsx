@@ -3,24 +3,27 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOHeadProps {
-  title?: string
-  description?: string
-  keywords?: string
-  image?: string
-  url?: string
-  type?: string
-  siteName?: string
-  structuredData?: object
+  title?: string;
+  description?: string;
+  keywords?: string;
+  image?: string;
+  url?: string;
+  type?: string;
+  siteName?: string;
+  structuredData?: object;
+  canonicalUrl?: string;
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - AI & IT Solutions',
   description = 'Leading provider of AI and IT solutions, empowering businesses with cutting-edge technology and innovative digital transformation services.',
   keywords = 'AI, artificial intelligence, IT services, cloud computing, cybersecurity, data analytics, digital transformation',
-  canonical,
-  ogImage = '/og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image'
+  canonicalUrl,
+  image = '/og-image.jpg',
+  url = 'https://ziontechgroup.com',
+  type = 'website',
+  siteName = 'Zion Tech Group',
+  structuredData
 }) => {
   const defaultStructuredData = {
     '@context': 'https://schema.org',
@@ -28,10 +31,10 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     name: 'Zion Tech Group',
     description: description,
     url: url,
-    logo: 'https://ziontechgroup.com/logo.png',
+    logo: image,
     sameAs: [
-      'https://linkedin.com/company/ziontechgroup',
       'https://twitter.com/ziontechgroup',
+      'https://linkedin.com/company/ziontechgroup',
       'https://github.com/ziontechgroup'
     ],
     contactPoint: {
@@ -49,53 +52,48 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       postalCode: '94000',
       addressCountry: 'US'
     }
-  }
+  };
+
+  const finalStructuredData = structuredData || defaultStructuredData;
 
   return (
-    <Head>
+    <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="robots" content="index, follow" />
       <meta name="author" content="Zion Tech Group" />
-      <meta name="theme-color" content="#0ea5e9" />
+      <meta name="robots" content="index, follow" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       
-      {/* Open Graph / Facebook */}
-      <meta property="og:type" content={type} />
-      <meta property="og:url" content={url} />
+      {/* Open Graph */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
+      <meta property="og:url" content={url} />
+      <meta property="og:type" content={type} />
       <meta property="og:site_name" content={siteName} />
       
       {/* Twitter */}
-      <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content={url} />
-      <meta property="twitter:title" content={title} />
-      <meta property="twitter:description" content={description} />
-      <meta property="twitter:image" content={image} />
-      
-      {/* Additional SEO meta tags */}
-      <meta name="google-site-verification" content="your-google-verification-code" />
-      <meta name="msvalidate.01" content="your-bing-verification-code" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={image} />
       
       {/* Canonical URL */}
-      <link rel="canonical" href={url} />
-      
-      {/* Favicon */}
-      <link rel="icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="manifest" href="/site.webmanifest" />
+      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
       
       {/* Structured Data */}
       <script type="application/ld+json">
-        {JSON.stringify(structuredData || defaultStructuredData)}
+        {JSON.stringify(finalStructuredData)}
       </script>
-    </Head>
-  )
-}
+      
+      {/* Additional SEO meta tags */}
+      <meta name="theme-color" content="#0f0f23" />
+      <meta name="msapplication-TileColor" content="#0f0f23" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    </Helmet>
+  );
+};
 
-export default EnhancedSEOHead
+export default SEOHead;

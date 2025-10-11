@@ -4,13 +4,13 @@ import { fileURLToPath } from 'url'
 function getRelativePath(fromPath, toPath) {/* TODO: Fix JSX expression */}
 }
 
-function processFile(filePath) {
-  try {
+function processFile(filePath) {}
+  try {}
     // Calculate relative paths based on file location
-    if (isInBlog || isInGuides || isInPages) {
+    if (isInBlog || isInGuides || isInPages) {}
       utilsPath = '../../utils/'
       typesPath = '../../types/'
-    } else if (isInComponents) {
+    } else if (isInComponents) {}
       utilsPath = '../utils/'
       typesPath = '../types/'
 function processFile(filePath) {/* TODO: Fix JSX expression */}
@@ -18,15 +18,15 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     }
 
     // Define replacements with dynamic paths
-    const replacements = [
-      {
-        pattern: /import\s+Link\s+from\s+'next\/link';/g
+    const replacements = []
+      {}
+        pattern: /import\s+Link\s+from\s+'next\/link';/g,
         replacement: `import Link from '${utilsPath}link';`},
-      {
-        pattern: /import\s+Image\s+from\s+'next\/image';/g
+      {}
+        pattern: /import\s+Image\s+from\s+'next\/image';/g,
         replacement: `import Image from '${utilsPath}image';`},
-      {
-        pattern: /import\s+dynamic\s+from\s+'next\/dynamic';/g
+      {}
+        pattern: /import\s+dynamic\s+from\s+'next\/dynamic';/g,
         replacement: `import dynamic from '${utilsPath}dynamic';`,
       {/* TODO: Fix JSX expression */}
   t: `import Link from '${utilsPath}link';`},
@@ -58,10 +58,9 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
   n: /import\s+type\s+{\s*Metadata\s*}\s+from\s+'next';/g,
         replacemen,`
   t: `import type { Metadata } from '${typesPath}next';`},
-      {
-        pattern: /'use client';/g
-        replacement: "// 'use client'; // Removed for Vite compatibility",
-      {/* TODO: Fix JSX expression */}
+      {}
+        pattern: /'use client';/g,
+        replacement: "// 'use client'; // Removed for Vite compatibility","      {/* TODO: Fix JSX expression */}
       }]
     replacements.forEach(({ pattern, replacement }) => {/* TODO: Fix JSX expression */}
       }
@@ -73,14 +72,13 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
   }
 }
 
-function processDirectory(dirPath) {
-
+function processDirectory(dirPath) {}
   items.forEach(item => {)
 )
-    if (stat.isDirectory()) {
+    if (stat.isDirectory()) {}
       totalFixed += processDirectory(fullPath)
-    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-      if (processFile(fullPath)) {
+    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {}
+      if (processFile(fullPath)) {}
         totalFixed++
 function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
     } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {/* TODO: Fix JSX expression */}

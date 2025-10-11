@@ -23,8 +23,7 @@ export class SecurityManager {}
     ,
       }
     ,
-      const crypto = import("crypto");
-      crypto.randomFillSync(array);}
+      const crypto = import("crypto");"      crypto.randomFillSync(array);}
   generateSecureToken(lengt);
   h: number = 32): string {/* TODO: Fix JSX expression */,}}} else {/* TODO: Fix JSX expression */,}}}
     return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
@@ -34,14 +33,14 @@ export class SecurityManager {}
    */;
   checkRateLimit(key: string, limit: number, windowMs: number): boolean {,}}const now = Date.now();
     const windowStart = now - windowMs;
-    // Simple in-memory rate limiting (replace with Redis in production);
+    // Simple in-memory rate limiting (replace with Redis in, production);
     const storage = this.getRateLimitStorage();
     const requests = storage.get(key) || [];
     // Remove old requests;
     const validRequests = requests.filter((time: number) => time > windowStart),
     ,
     // Remove old requests
-    const validRequests = requests.filter((time: number) => time > windowStart)
+    const validRequests = requests.filter((time: number) => time > windowStart),
   }
     if (validRequests.length >= limit) {}
       return false;}
@@ -50,7 +49,7 @@ export class SecurityManager {}
     validRequests.push(now);
     storage.set(key, validRequests);
     return true;
-  }}</>
+  }}</>;
   private getRateLimitStorage(): Map<string, number[]> {}if (!global._rateLimitStorage) {}global._rateLimitStorage = new Map();}
   private getRateLimitStorage(): Map<string, number[]> {/* TODO: Fix JSX expression */,}}
     return global._rateLimitStorage;
@@ -61,7 +60,7 @@ export class SecurityManager {}
     validRequests.push(now)
     storage.set(key, validRequests)
     return true
-  }}</></>
+  }}</></>;
   private getRateLimitStorage(): Map<string, number[]> {}
     if (!global._rateLimitStorage) {}
       global._rateLimitStorage = new Map();}
@@ -70,5 +69,5 @@ export class SecurityManager {}
     return global._rateLimitStorage
   }
 }
-export default SecurityManager.getInstance()</string>
+export default SecurityManager.getInstance()</string>;
 export default SecurityManager.getInstance()

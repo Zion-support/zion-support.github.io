@@ -9,7 +9,7 @@
   t: `Draft notes for ${c.title} about ${meta?.title || 'the book'}...\\n\\n- Key idea 1\\n- Key idea 2\\n- Key idea 3`})), res.status (200).json ({/* TODO: Fix JSX expression */})`
   s: drafted }); return; } const client = new OpenAI ({ api_key }), const system = `You are a book - writing assistant. Write concise but high - signal chapters for a visionary, systems - architecture book. Maintain clear structure, use short paragraphs, bullets where helpful, and end each chapter with 3 actionable principles.`, const drafted = [] as {/* TODO: Fix JSX expression */}
   e: string} conten,
-  t: string }[], for (const ch of chapters) {/* TODO: Fix JSX expression */}
+  t: string }[], for (const ch of, chapters) {/* TODO: Fix JSX expression */}
   k: ${meta.title} — ${meta.subtitle || ''}\\n_autho,
   r: ${meta.author}\\n_chapte,`
   r: ${ch.title}\\n\\n_write 600 - 900 words. Include 1 short quote block if appropriate.`, const completion = await client.chat.completions.create ({/* TODO: Fix JSX expression */}
@@ -22,5 +22,4 @@
   t: text }); } res.status (200).json ({/* TODO: Fix JSX expression */})
   s: drafted }); } ; res.status(200).json({/* TODO: Fix JSX expression */})
   s: drafted }); } catch (error) {/* TODO: Fix JSX expression */}
-  r: "Internal server error" }); } '
-"`
+  r: "Internal server error" }); } '""`

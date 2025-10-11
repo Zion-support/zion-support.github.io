@@ -1,19 +1,19 @@
-export interface AddedService {
-  id: string
-  name: string
-  tagline: string
-  description: string
-  price: string | number
+export interface AddedService {}
+  id: string,
+  name: string,
+  tagline: string,
+  description: string,
+  price: string | number,
   period?: string
-  category: string
-  features: string[]
+  category: string,
+  features: string[],
   icon?: string
   link?: string
   rating?: number
   customerCount?: number
 }
-export const added2025Services: AddedService[] = [
-  {
+export const added2025Services: AddedService[] = [],
+  {}
     id: 'ai-assistant-pro',
     name: 'AI Assistant Pro',
     tagline: 'Secure, branded AI copilot with RAG and analytics',
@@ -25,9 +25,9 @@ export const added2025Services: AddedService[] = [
     icon: '🤖',
     link: 'https://ziontechgroup.com/ai-assistant',
     rating: 4.8,
-    customerCount: 320
+    customerCount: 320,
   },
-  {
+  {}
     id: 'agentic-rag-platform',
     name: 'Agentic RAG Platform',
     tagline: 'Production RAG with hybrid search and agents',
@@ -39,9 +39,9 @@ export const added2025Services: AddedService[] = [
     icon: '🔗',
     link: 'https://ziontechgroup.com/agentic-rag',
     rating: 4.7,
-    customerCount: 210
+    customerCount: 210,
   },
-  {
+  {}
     id: 'ai-evals-observability',
     name: 'AI Evals & Observability',
     tagline: 'Reliable LLM features with testing and live metrics',
@@ -53,9 +53,9 @@ export const added2025Services: AddedService[] = [
     icon: '🧪',
     link: 'https://ziontechgroup.com/ai-evals',
     rating: 4.6,
-    customerCount: 180
+    customerCount: 180,
   },
-  {
+  {}
     id: 'ai-guardrails-suite',
     name: 'AI Guardrails Suite',
     tagline: 'Policy enforcement and PII/PHI controls',
@@ -67,9 +67,9 @@ export const added2025Services: AddedService[] = [
     icon: '🛡️',
     link: 'https://ziontechgroup.com/ai-guardrails',
     rating: 4.7,
-    customerCount: 140
+    customerCount: 140,
   },
-  {
+  {}
     id: 'api-security-scanner',
     name: 'API Security Scanner',
     tagline: 'Automated OpenAPI/GraphQL scanning',
@@ -81,9 +81,9 @@ export const added2025Services: AddedService[] = [
     icon: '🔐',
     link: 'https://ziontechgroup.com/api-security-scanner',
     rating: 4.6,
-    customerCount: 500
+    customerCount: 500,
   },
-  {
+  {}
     id: 'api-observability',
     name: 'API Observability & SLA Guard',
     tagline: 'Traces, SLOs, and error budgets',
@@ -95,9 +95,9 @@ export const added2025Services: AddedService[] = [
     icon: '📈',
     link: 'https://ziontechgroup.com/api-observability',
     rating: 4.5,
-    customerCount: 460
+    customerCount: 460,
   },
-  {
+  {}
     id: 'database-performance-monitor',
     name: 'Database Performance Monitor',
     tagline: 'Slow query capture and AI index advice',
@@ -109,9 +109,9 @@ export const added2025Services: AddedService[] = [
     icon: '🗄️',
     link: 'https://ziontechgroup.com/database-performance-monitor',
     rating: 4.6,
-    customerCount: 380
+    customerCount: 380,
   },
-  {
+  {}
     id: 'cloud-cost-optimizer',
     name: 'Cloud Cost Optimizer Pro',
     tagline: 'Rightsizing and anomaly detection',
@@ -123,9 +123,9 @@ export const added2025Services: AddedService[] = [
     icon: '💸',
     link: 'https://ziontechgroup.com/cloud-cost-optimizer',
     rating: 4.8,
-    customerCount: 520
+    customerCount: 520,
   },
-  {
+  {}
     id: 'ai-website-personalization',
     name: 'AI Website Personalization',
     tagline: 'Increase conversions with behavioral targeting',
@@ -137,9 +137,9 @@ export const added2025Services: AddedService[] = [
     icon: '🎯',
     link: 'https://ziontechgroup.com/ai-website-personalization',
     rating: 4.5,
-    customerCount: 260
+    customerCount: 260,
   },
-  {
+  {}
     id: 'serverless-cron-manager',
     name: 'Serverless Cron Manager',
     tagline: 'Reliable scheduled jobs for cloud apps',
@@ -151,9 +151,9 @@ export const added2025Services: AddedService[] = [
     icon: '⏰',
     link: 'https://ziontechgroup.com/serverless-cron-manager',
     rating: 4.4,
-    customerCount: 800
+    customerCount: 800,
   },
-  {
+  {}
     id: 'webhook-relay-replay',
     name: 'Webhook Relay & Replay',
     tagline: 'Never miss critical webhooks again',
@@ -165,6 +165,6 @@ export const added2025Services: AddedService[] = [
     icon: '🔁',
     link: 'https://ziontechgroup.com/webhook-relay-replay',
     rating: 4.6,
-    customerCount: 640
+    customerCount: 640,
   }
 ]

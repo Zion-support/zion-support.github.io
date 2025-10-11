@@ -2,8 +2,8 @@
 export   }, [])
     }, [])
 import { useCallback } from 'react'
-export const _useRouter = () => {
-    // TODO: Add content
+export const _useRouter = () => {}
+    // TODO: Add content,
   }
 }
   const push = useCallback((ur)

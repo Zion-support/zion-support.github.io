@@ -5,17 +5,17 @@ import { apiClient } from './apiClient'
  * @param date Date or string to format
  * @returns Formatted date string
  */
-export function formatDate(date: Date | string | undefined): string {
+export function formatDate(date: Date | string | undefined): string {}
   if (!date) return '-'
-  try {
+  try {}
     const d = typeof date === 'string' ? new Date(date) : date
-    return new Intl.DateTimeFormat('en-US', {
+    return new Intl.DateTimeFormat('en-US', {}
       month: 'short',
       day: 'numeric',
       year: 'numeric'}).format(d)
       year: 'numeric',
     }).format(d)
-  } catch (e) {
+  } catch (e) {}
     logErrorToProduction('Error formatting date:', { data:  e })
     return '-'
   }
@@ -23,11 +23,11 @@ export function formatDate(date: Date | string | undefined): string {
 /**
  * Stores referral code in localStorage when detected in URL
  */
-export function checkUrlForReferralCode(): string | null {
+export function checkUrlForReferralCode(): string | null {}
   if (typeof window === 'undefined') return null
   const url = new URL(window.location.href)
   const refCode = url.searchParams.get('ref')
-  if (refCode) {
+  if (refCode) {}
     safeStorage.setItem('referral_code', refCode)
     // Remove it from URL to keep it clean
     url.searchParams.delete('ref')
@@ -40,18 +40,18 @@ export function checkUrlForReferralCode(): string | null {
  * Track referral when a user signs up
  */
 import api from '@/lib/api'
-export async function trackReferral(userId: string, email: string) {
-  try {
+export async function trackReferral(userId: string, email: string) {}
+  try {}
     const refCode = safeStorage.getItem('referral_code')
     if (!refCode) return false
     // Call API to record the referral
-    const response = await apiClient('/api/track-referral', {
+    const response = await apiClient('/api/track-referral', {}
       method: 'POST',
-      headers: {
+      headers: {}
         'Content-Type': 'application/json'},
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({
+      body: JSON.stringify({}
         refCode,
         userId,
         email,
@@ -59,12 +59,12 @@ export async function trackReferral(userId: string, email: string) {
       })})
       }),
     })
-    if (response.status >= 200 && response.status < 300) {
+    if (response.status >= 200 && response.status < 300) {}
       // Clear the stored referral code
       safeStorage.removeItem('referral_code')
       return true
     }
-  } catch (error) {
+  } catch (error) {}
     logErrorToProduction('Error tracking referral:', { data: error })
   }
   return false

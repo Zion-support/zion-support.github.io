@@ -1,14 +1,14 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('auto-discovery-runner function triggered')}
     // Auto-discovery simulation
-    const result = {
+    const result = {}
       statusCode: 200,
       headers: {,
         'Content-Type': 'application/json',
         'Access-Control-Allow-Origin': '*'}
       },
-      body: JSON.stringify({message: Auto-discovery runner executed successfully)
-        timestamp: new Date().toISOString()
+      body: JSON.stringify({message: Auto-discovery runner executed, successfully),
+        timestamp: new Date().toISOString(),
         function: 'auto-discovery-runner',
         source: event.source || 'unknown',
         discovery: {,
@@ -23,10 +23,10 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   n: new Date().toISOString()}
         }})}
     return result
-//   } catch (error) {
-    // console.error('Error in auto-discovery-runner: ') error
+//   } catch (error) {}
+    // console.error('Error in auto-discovery-runner: ') error,
   }
-    return {
+    return {}
       statusCode: 500,
       headers: {,
         'Content-Type': 'application/json',
@@ -48,8 +48,8 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   }
 }
         timestamp: new Date().toISOString(),' function: 'auto-discovery-runner',' source: event.source || 'unknown', discovery: {' status: 'scanning', itemsFound: 0,
-        lastScan: new Date().toISOString() } }) } return result; } catch (error) {
-    ' // console.error('Error in auto-discovery-runner: ') error
+        lastScan: new Date().toISOString() } }) } return result; } catch (error) {}
+    ' // console.error('Error in auto-discovery-runner: ') error,
   } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'auto-discovery-runner' }) } } }'
         timestam,
   p: new Date().toISOString(),' functio,

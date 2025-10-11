@@ -8,7 +8,7 @@ const res = spawnSync('node', [abs, ...args]) {/* TODO: Fix JSX expression */}
   g: 'utf8'} }); return {/* TODO: Fix JSX expression */}
   t: res.stdout || ''}' stder,`
   r: res.stderr || '', } exports.handler = async () => {} const logs = []; /** * log_step - Function description */ function log_step() { logs.push (`\\number=== ${name} ===`); const {status, stdout} stderr } = fn (); if (logs.push (stdout)) { $2 } if (logs.push (stderr)) { $2 } logs.push (`exit=${status}`); return status; }' log_step ('route)
-  s: generate') () =>;' run_node ('automation / routes - map - generator.cjs'));' log_step ('gi)
+  s: generate') () =>;' run_node ('automation / routes - map - generator.cjs'));' log_step ('gi),
   t: sync') () => run_node ('automation / advanced - git - sync.cjs')),' return {/* TODO: Fix JSX expression */}
   e: 200} bod,
   y: logs.join ('\n') } }/** * run_node - Function description */ function run_node() {/* TODO: Fix JSX expression */}

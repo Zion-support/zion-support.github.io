@@ -5,7 +5,7 @@ export interface ToastProps {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   messag,
-  e: string
+  e: string,
   type?: ToastType
   duration?: number
   onClose?: () => void,,
@@ -30,7 +30,7 @@ const,
   O: Add content,}
 }
     setIsVisible(show)
-    if (show && duration > 0) {
+    if (show && duration > 0) {}
     setIsVisible(false)
   }
         if (onClose) {/* TODO: Fix JSX expression */}
@@ -79,31 +79,22 @@ const,
   }
   return (<div>Coming Soon</div>)
   )
-          <div>
+          <div>;
 className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-center gap-2 animate-fade-in ${getToastStyles()}`}
-      role="alert""
-      aria-live="polite"
-// >
-          "
-          <span className="text-xl font-bold">{getIcon()}
-      <span>{message}
-      <button>
+      role="alert"""      aria-live="polite""// >
+          ""          <span className="text-xl font-bold">{getIcon()}"      <span>{message}
+      <button>;
         onClick={() => {}
   // TOD,
   O: Add content,
 }
           setIsVisible(false)
           if (onClose) onClose()
-        }}"
-        className="ml-4,"
-  hover: opacity-80 transition-opacity""
-        aria-label="Close notification"
-//       >
+        }}""        className="ml-4,""  hover: opacity-80 transition-opacity"""        aria-label="Close notification""//       >,
 //
-          </button>
-    </div>
+          </button>;
+    </div>;
   ),
 }
-export default Toast;"`
-  </ToastProps>
-</span></span>
+export default Toast;"`"  </ToastProps>;
+</span></span>;

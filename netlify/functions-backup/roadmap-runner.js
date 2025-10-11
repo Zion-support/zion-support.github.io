@@ -2,7 +2,7 @@ const { execSync } = require('child_process')
 exports.config = {/* TODO: Fix JSX expression */}
   e: '*/10 * * * *'}
 }
-exports.handler = async () => {try {
+exports.handler = async () => {try {}
     execSync('node automation/roadmap-orchestrator.cjs || true', {)
       stdio: 'inherit'),
       shell: true}
@@ -13,7 +13,7 @@ exports.handler = async () => {try {
     return {statusCode: 200,
       body: JSON.stringify({ ok: true} task: 'roadmap-runner' })
     }
-  } catch (e) {return {
+  } catch (e) {return {}
       statusCode: 200,
       body: JSON.stringify({ ok: false} error: String(e) })
 exports.handler = async () => {/* TODO: Fix JSX expression */}

@@ -1,63 +1,63 @@
-export interface SpecializedIndustrySolution2026 {
-  id: string
-  name: string
-  tagline: string
-  price: string
-  period: string
-  description: string
-  features: string[]
-  popular: boolean
-  icon: string
-  color: string
-  textColor: string
-  link: string
-  marketPosition: string
-  targetAudience: string
-  trialDays: number
-  setupTime: string
-  category: string
-  realService: boolean
-  technology: string[]
-  integrations: string[]
-  useCases: string[]
-  roi: string
-  competitors: string[]
-  marketSize: string
-  growthRate: string
-  contactInfo: {
-    mobile: string
-    email: string
-    address: string
-    website: string
+export interface SpecializedIndustrySolution2026 {}
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  contactInfo: {}
+    mobile: string,
+    email: string,
+    address: string,
+    website: string,
   }
-  realImplementation: boolean
-  implementationDetails: string
-  launchDate: string
-  customers: number
-  rating: number
-  reviews: number
-  benefits: string[]
-  capabilities: string[]
-  marketAdvantage: string
-  averageMarketPrice: string
-  featuresCapabilities: string[]
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number,
+  benefits: string[],
+  capabilities: string[],
+  marketAdvantage: string,
+  averageMarketPrice: string,
+  featuresCapabilities: string[],
 }
-const contact = {
+const contact = {}
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 }
-export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
-  {
+export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [],
+  {}
     id: 'healthcare-ai-diagnostic-platform',
     name: 'Healthcare AI Diagnostic Platform',
     tagline: 'Advanced AI-powered diagnostic tools for healthcare professionals',
     price: '$18,999',
     period: '/month',
     description: 'Comprehensive AI-powered diagnostic platform that assists healthcare professionals in accurate diagnosis, treatment planning, and patient care optimization.',
-    features: [
-      'AI-powered image analysis (X-rays, MRIs, CT scans)',
+    features: [],
+      'AI-powered image analysis (X-rays, MRIs, CT, scans)',
       'Symptom analysis and diagnosis support',
       'Treatment recommendation engine',
       'Patient data management',
@@ -92,16 +92,16 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     launchDate: '2024-06-15',
     customers: 28,
     rating: 4.9,
-    reviews: 22
+    reviews: 22,
   },
-  {
+  {}
     id: 'fintech-blockchain-platform',
     name: 'FinTech Blockchain Platform',
     tagline: 'Secure, scalable blockchain solutions for financial services',
     price: '$22,999',
     period: '/month',
     description: 'Advanced blockchain platform designed specifically for financial services, providing secure, transparent, and efficient transaction processing, smart contracts, and digital asset management.',
-    features: [
+    features: [],
       'Smart contract development and deployment',
       'Digital asset management',
       'Cross-border payment processing',
@@ -137,16 +137,16 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     launchDate: '2024-05-01',
     customers: 35,
     rating: 4.8,
-    reviews: 31
+    reviews: 31,
   },
-  {
+  {}
     id: 'manufacturing-iot-platform',
     name: 'Manufacturing IoT Platform',
     tagline: 'Comprehensive IoT solution for smart manufacturing and Industry 4.0',
     price: '$16,999',
     period: '/month',
     description: 'Advanced IoT platform that enables smart manufacturing through real-time monitoring, predictive maintenance, quality control, and operational optimization.',
-    features: [
+    features: [],
       'Real-time equipment monitoring',
       'Predictive maintenance alerts',
       'Quality control automation',
@@ -182,16 +182,16 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     launchDate: '2024-04-15',
     customers: 42,
     rating: 4.7,
-    reviews: 38
+    reviews: 38,
   },
-  {
+  {}
     id: 'retail-ai-optimization-platform',
     name: 'Retail AI Optimization Platform',
     tagline: 'AI-powered retail optimization for enhanced customer experience and profitability',
     price: '$12,999',
     period: '/month',
     description: 'Comprehensive AI platform that optimizes retail operations through customer behavior analysis, inventory management, pricing optimization, and personalized marketing.',
-    features: [
+    features: [],
       'Customer behavior analysis',
       'Inventory optimization',
       'Dynamic pricing strategies',
@@ -227,16 +227,16 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
     launchDate: '2024-03-01',
     customers: 55,
     rating: 4.8,
-    reviews: 47
+    reviews: 47,
   },
-  {
+  {}
     id: 'logistics-supply-chain-ai',
     name: 'Logistics & Supply Chain AI Platform',
     tagline: 'Intelligent logistics optimization and supply chain management',
     price: '$19,999',
     period: '/month',
     description: 'Advanced AI platform that optimizes logistics operations, supply chain management, route planning, and delivery optimization for maximum efficiency and cost reduction.',
-    features: [
+    features: [],
       'Route optimization algorithms',
       'Supply chain visibility',
       'Demand forecasting',
@@ -247,16 +247,16 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
       'Performance monitoring',
       'Multi-carrier integration',
       'Mobile app for drivers'
-export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[] = [
+export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[] = [],
   // Financial Technology Services
-  {
+  {}
     id: 'ai-financial-risk-management',
     name: 'AI Financial Risk Management Platform',
     tagline: 'Intelligent Risk Assessment and Portfolio Optimization for Financial Institutions',
     price: '$1,599',
     period: '/month',
     description: 'Advanced AI-powered financial risk management platform that provides real-time risk assessment, portfolio optimization, and predictive analytics for banks, investment firms, and financial institutions.',
-    features: [
+    features: [],
       'Real-time risk assessment and monitoring',
       'AI-powered portfolio optimization',
       'Predictive market analysis and forecasting',
@@ -293,14 +293,14 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
     customers: 67,
     rating: 4.9,
     reviews: 45,
-    benefits: [
+    benefits: [],
       'Real-time risk monitoring',
       'Improved portfolio performance',
       'Enhanced regulatory compliance',
       'Reduced operational costs',
       'Advanced fraud detection'
     ],
-    capabilities: [
+    capabilities: [],
       'Risk assessment',
       'Portfolio optimization',
       'Market analysis',
@@ -310,7 +310,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
     ],
     marketAdvantage: 'Superior AI capabilities for financial risk management at competitive pricing compared to traditional financial terminals.',
     averageMarketPrice: '$15000-30000/year',
-    featuresCapabilities: [
+    featuresCapabilities: [],
       'Real-time risk monitoring',
       'AI portfolio optimization',
       'Predictive market analysis',
@@ -320,14 +320,14 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
     ]
   },
   // Energy & Sustainability Services
-  {
+  {}
     id: 'smart-energy-optimization-platform',
     name: 'Smart Energy Optimization Platform',
     tagline: 'AI-Powered Energy Management and Sustainability Optimization',
     price: '$799',
     period: '/month',
     description: 'Intelligent energy optimization platform that uses AI to optimize energy consumption, reduce costs, and improve sustainability for commercial buildings, manufacturing facilities, and utility companies.',
-    features: [
+    features: [],
       'AI-powered energy consumption optimization',
       'Real-time energy monitoring and analytics',
       'Predictive maintenance for energy systems',
@@ -364,14 +364,14 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
     customers: 89,
     rating: 4.8,
     reviews: 67,
-    benefits: [
+    benefits: [],
       'Reduce energy costs by 25-40%',
       'Improve sustainability metrics',
       'Enhanced operational efficiency',
       'Predictive maintenance',
       'Regulatory compliance'
     ],
-    capabilities: [
+    capabilities: [],
       'Energy optimization',
       'Real-time monitoring',
       'Predictive maintenance',
@@ -381,7 +381,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
     ],
     marketAdvantage: 'Superior AI capabilities for energy optimization with comprehensive sustainability features compared to traditional energy management systems.',
     averageMarketPrice: '$500-1200/month',
-    featuresCapabilities: [
+    featuresCapabilities: [],
       'AI energy optimization',
       'Real-time monitoring',
       'Predictive maintenance',
@@ -391,14 +391,14 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
     ]
   },
   // Transportation & Logistics Services
-  {
+  {}
     id: 'autonomous-logistics-platform',
     name: 'Autonomous Logistics Platform',
     tagline: 'AI-Powered Supply Chain Optimization and Autonomous Logistics Management',
     price: '$1,199',
     period: '/month',
     description: 'Revolutionary autonomous logistics platform that optimizes supply chains, manages autonomous vehicles, and provides intelligent routing and scheduling for maximum efficiency and cost reduction.',
-    features: [
+    features: [],
       'AI-powered supply chain optimization',
       'Autonomous vehicle fleet management',
       'Intelligent routing and scheduling',
@@ -435,14 +435,14 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
     customers: 45,
     rating: 4.8,
     reviews: 34,
-    benefits: [
+    benefits: [],
       'Optimize supply chain operations',
       'Reduce logistics costs by 30-50%',
       'Improve delivery efficiency',
       'Enhanced customer satisfaction',
       'Sustainability improvements'
     ],
-    capabilities: [
+    capabilities: [],
       'Supply chain optimization',
       'Autonomous fleet management',
       'Route optimization',
@@ -452,7 +452,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
     ],
     marketAdvantage: 'Superior AI capabilities for logistics optimization with autonomous vehicle integration compared to traditional logistics platforms.',
     averageMarketPrice: '$3000-8000/month',
-    featuresCapabilities: [
+    featuresCapabilities: [],
       'AI supply chain optimization',
       'Autonomous fleet management',
       'Intelligent routing',
@@ -462,14 +462,14 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
     ]
   },
   // Education Technology Services
-  {
+  {}
     id: 'ai-personalized-learning-platform',
     name: 'AI Personalized Learning Platform',
     tagline: 'Adaptive Learning with AI-Powered Personalization and Student Success Prediction',
     price: '$399',
     period: '/month',
     description: 'Advanced AI-powered personalized learning platform that adapts to individual student needs, provides real-time feedback, and predicts student success to improve educational outcomes.',
-    features: [
+    features: [],
       'AI-powered adaptive learning algorithms',
       'Personalized learning paths and content',
       'Real-time student progress monitoring',
@@ -506,14 +506,14 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
     customers: 156,
     rating: 4.9,
     reviews: 123,
-    benefits: [
+    benefits: [],
       'Improve student outcomes by 40%',
       'Reduce administrative workload',
       'Personalized learning experiences',
       'Real-time progress tracking',
       'Enhanced teacher effectiveness'
     ],
-    capabilities: [
+    capabilities: [],
       'Adaptive learning',
       'Personalized content',
       'Progress monitoring',
@@ -523,7 +523,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
     ],
     marketAdvantage: 'Superior AI capabilities for personalized learning with comprehensive analytics compared to traditional educational technology platforms.',
     averageMarketPrice: '$15-30/student/month',
-    featuresCapabilities: [
+    featuresCapabilities: [],
       'AI adaptive learning',
       'Personalized content',
       'Real-time monitoring',
@@ -533,14 +533,14 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
     ]
   },
   // Real Estate Technology Services
-  {
+  {}
     id: 'ai-real-estate-analytics-platform',
     name: 'AI Real Estate Analytics Platform',
     tagline: 'Intelligent Property Analysis and Market Intelligence for Real Estate Professionals',
     price: '$599',
     period: '/month',
     description: 'Advanced AI-powered real estate analytics platform that provides market intelligence, property valuation, investment analysis, and predictive insights for real estate professionals and investors.',
-    features: [
+    features: [],
       'AI-powered property valuation and analysis',
       'Market intelligence and trend analysis',
       'Investment opportunity identification',
@@ -577,14 +577,14 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
     customers: 234,
     rating: 4.8,
     reviews: 189,
-    benefits: [
+    benefits: [],
       'Accurate property valuations',
       'Market intelligence insights',
       'Investment opportunity identification',
       'Risk reduction',
       'Improved decision-making'
     ],
-    capabilities: [
+    capabilities: [],
       'Property valuation',
       'Market analysis',
       'Investment analysis',
@@ -594,7 +594,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
     ],
     marketAdvantage: 'Superior AI capabilities for real estate analytics with comprehensive market intelligence compared to traditional real estate data platforms.',
     averageMarketPrice: '$500-1500/month',
-    featuresCapabilities: [
+    featuresCapabilities: [],
       'AI property valuation',
       'Market intelligence',
       'Investment analysis',
@@ -604,14 +604,14 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
     ]
   },
   // Legal Technology Services
-  {
+  {}
     id: 'ai-legal-research-platform',
     name: 'AI Legal Research Platform',
     tagline: 'Intelligent Legal Research and Document Analysis with AI-Powered Insights',
     price: '$899',
     period: '/month',
     description: 'Advanced AI-powered legal research platform that provides intelligent case law analysis, document review, contract analysis, and legal research automation for law firms and legal professionals.',
-    features: [
+    features: [],
       'AI-powered legal research and case law analysis',
       'Intelligent document review and analysis',
       'Contract analysis and risk assessment',
@@ -648,14 +648,14 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
     customers: 89,
     rating: 4.9,
     reviews: 67,
-    benefits: [
+    benefits: [],
       'Reduce research time by 60%',
       'Improve case outcomes',
       'Enhanced document analysis',
       'Automated compliance monitoring',
       'Cost savings on research'
     ],
-    capabilities: [
+    capabilities: [],
       'Legal research',
       'Document analysis',
       'Contract review',
@@ -665,7 +665,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
     ],
     marketAdvantage: 'Superior AI capabilities for legal research with comprehensive analysis tools compared to traditional legal research platforms.',
     averageMarketPrice: '$150-300/month',
-    featuresCapabilities: [
+    featuresCapabilities: [],
       'AI legal research',
       'Document analysis',
       'Contract review',
@@ -675,14 +675,14 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
     ]
   },
   // Manufacturing Technology Services
-  {
+  {}
     id: 'smart-manufacturing-ai-platform',
     name: 'Smart Manufacturing AI Platform',
     tagline: 'Intelligent Manufacturing Optimization with AI-Powered Quality Control and Predictive Maintenance',
     price: '$1,499',
     period: '/month',
     description: 'Advanced AI-powered smart manufacturing platform that optimizes production processes, provides predictive maintenance, ensures quality control, and maximizes operational efficiency for manufacturing companies.',
-    features: [
+    features: [],
       'AI-powered production optimization',
       'Predictive maintenance and equipment monitoring',
       'Real-time quality control and inspection',
@@ -719,14 +719,14 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
     customers: 67,
     rating: 4.8,
     reviews: 45,
-    benefits: [
+    benefits: [],
       'Improve production efficiency by 40%',
       'Reduce downtime by 60%',
       'Enhance quality control',
       'Optimize energy consumption',
       'Reduce operational costs'
     ],
-    capabilities: [
+    capabilities: [],
       'Production optimization',
       'Predictive maintenance',
       'Quality control',
@@ -736,7 +736,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
     ],
     marketAdvantage: 'Superior AI capabilities for manufacturing optimization with comprehensive IoT integration compared to traditional manufacturing platforms.',
     averageMarketPrice: '$500-2000/month',
-    featuresCapabilities: [
+    featuresCapabilities: [],
       'AI production optimization',
       'Predictive maintenance',
       'Quality control',
@@ -745,14 +745,14 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
       'Performance analytics'
     ]
   },
-  {
+  {}
     id: 'ai-powered-healthcare-diagnostics',
     name: 'AI-Powered Healthcare Diagnostics',
     tagline: 'Revolutionary medical diagnostics with AI accuracy',
     price: '$2,999',
     period: '/month',
     description: 'Advanced AI-powered healthcare diagnostics platform that provides accurate medical diagnosis, treatment recommendations, and patient monitoring. Features medical imaging analysis, predictive diagnostics, and personalized medicine.',
-    features: [
+    features: [],
       'Medical imaging analysis',
       'Predictive diagnostics',
       'Personalized medicine',
@@ -782,27 +782,27 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
     competitors: ['IBM Watson Health', 'Google Health', 'Microsoft Healthcare', 'Custom medical AI platforms'],
     marketSize: '$45.8B AI healthcare market',
     growthRate: '65% annual growth',
-    contactInfo: {
+    contactInfo: {}
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Advanced AI-powered healthcare diagnostics platform with comprehensive medical AI capabilities and regulatory compliance.',
     launchDate: '2024-12-10',
     customers: 18,
     rating: 4.9,
-    reviews: 35
+    reviews: 35,
   },
-  {
+  {}
     id: 'smart-manufacturing-orchestrator',
     name: 'Smart Manufacturing Orchestrator',
     tagline: 'Intelligent manufacturing with AI and IoT optimization',
     price: '$1,899',
     period: '/month',
     description: 'Comprehensive smart manufacturing platform that uses AI, IoT, and automation to optimize production processes, quality control, and supply chain management. Features predictive maintenance and real-time optimization.',
-    features: [
+    features: [],
       'AI-powered production optimization',
       'IoT sensor integration',
       'Predictive maintenance',
@@ -832,27 +832,27 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
     competitors: ['Siemens', 'GE Digital', 'Rockwell Automation', 'Custom smart manufacturing platforms'],
     marketSize: '$38.9B smart manufacturing market',
     growthRate: '58% annual growth',
-    contactInfo: {
+    contactInfo: {}
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Advanced smart manufacturing platform with AI and IoT integration for comprehensive manufacturing optimization.',
     launchDate: '2024-11-20',
     customers: 25,
     rating: 4.8,
-    reviews: 48
+    reviews: 48,
   },
-  {
+  {}
     id: 'financial-ai-trading-platform',
     name: 'Financial AI Trading Platform',
     tagline: 'Intelligent trading with AI-powered market analysis',
     price: '$3,999',
     period: '/month',
     description: 'Revolutionary AI-powered financial trading platform that provides intelligent market analysis, automated trading strategies, and risk management. Features predictive analytics and real-time market monitoring.',
-    features: [
+    features: [],
       'AI-powered market analysis',
       'Automated trading strategies',
       'Risk management',
@@ -882,27 +882,27 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
     competitors: ['Bloomberg', 'Thomson Reuters', 'Custom trading platforms', 'Quantitative trading firms'],
     marketSize: '$52.1B AI trading market',
     growthRate: '75% annual growth',
-    contactInfo: {
+    contactInfo: {}
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Advanced AI-powered financial trading platform with comprehensive trading algorithms and risk management.',
     launchDate: '2024-10-25',
     customers: 15,
     rating: 4.7,
-    reviews: 32
+    reviews: 32,
   },
-  {
+  {}
     id: 'retail-ai-optimization-platform',
     name: 'Retail AI Optimization Platform',
     tagline: 'Intelligent retail optimization with AI and analytics',
     price: '$1,299',
     period: '/month',
     description: 'Advanced AI-powered retail optimization platform that provides intelligent inventory management, customer behavior analysis, and personalized marketing. Features demand forecasting and dynamic pricing.',
-    features: [
+    features: [],
       'AI-powered inventory management',
       'Customer behavior analysis',
       'Personalized marketing',
@@ -932,27 +932,27 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
     competitors: ['Salesforce Commerce Cloud', 'Adobe Commerce', 'Shopify Plus', 'Custom retail platforms'],
     marketSize: '$28.7B retail AI market',
     growthRate: '52% annual growth',
-    contactInfo: {
+    contactInfo: {}
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Advanced retail AI optimization platform with comprehensive retail optimization and personalized customer experiences.',
     launchDate: '2024-09-30',
     customers: 35,
     rating: 4.6,
-    reviews: 72
+    reviews: 72,
   },
-  {
+  {}
     id: 'logistics-ai-orchestrator',
     name: 'Logistics AI Orchestrator',
     tagline: 'Intelligent logistics with AI-powered optimization',
     price: '$1,599',
     period: '/month',
     description: 'Advanced AI-powered logistics platform that optimizes transportation, warehousing, and supply chain operations. Features route optimization, demand forecasting, and real-time tracking.',
-    features: [
+    features: [],
       'AI-powered route optimization',
       'Demand forecasting',
       'Real-time tracking',
@@ -988,10 +988,10 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
     launchDate: '2024-08-25',
     customers: 28,
     rating: 4.7,
-    reviews: 58
+    reviews: 58,
   }
 ]
-export const INDUSTRY_SOLUTION_CATEGORIES = [
+export const INDUSTRY_SOLUTION_CATEGORIES = []
   'Healthcare Technology',
   'FinTech Solutions',
   'Manufacturing Technology',

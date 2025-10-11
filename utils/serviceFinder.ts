@@ -17,7 +17,7 @@ import { professionalServices } from '../data/professional-services'
 import { real2029Q2Additions } from '../data/real-2029-q2-additions'
 export type ServiceRecord = any
 export type ServiceRecord = any
-const allServiceArrays: ServiceRecord[][] = [
+const allServiceArrays: ServiceRecord[][] = [],
 	enhancedRealMicroSaasServices,
 	innovativeMicroSaasServices,
 	additionalEnhancedServices,
@@ -37,16 +37,16 @@ const allServiceArrays: ServiceRecord[][] = [
 	,real2029Q2Additions
 ]
 ]
-export function findServiceBySlug(slug: string): ServiceRecord | undefined {
-	for (const arr of allServiceArrays) {
-		const hit = arr.find((s: any) => {
+export function findServiceBySlug(slug: string): ServiceRecord | undefined {}
+	for (const arr of, allServiceArrays) {}
+		const hit = arr.find((s: any) => {}
 			if (!s) return false
 			if (s.id && s.id === slug) return true
-			if (s.link && typeof s.link === 'string') {
-				try {
+			if (s.link && typeof s.link === 'string') {}
+				try {}
 					const url = new URL(s.link)
 					return url.pathname.replace(/^\/+|\/+$/g, '') === slug
-				} catch {
+				} catch {}
 					return s.link.endsWith('/' + slug)
 				}
 			}
@@ -56,18 +56,18 @@ export function findServiceBySlug(slug: string): ServiceRecord | undefined {
 	}
 	return undefined
 }
-export function listServicesByCategory(categoryIncludes: string): ServiceRecord[] {
-	const results: ServiceRecord[] = []
-	for (const arr of allServiceArrays) {
-		for (const s of arr) {
-			if (s && typeof s.category === 'string' && s.category.toLowerCase().includes(categoryIncludes.toLowerCase())) {
+export function listServicesByCategory(categoryIncludes: string): ServiceRecord[] {}
+	const results: ServiceRecord[] = [],
+	for (const arr of, allServiceArrays) {}
+		for (const s of, arr) {}
+			if (s && typeof s.category === 'string' && s.category.toLowerCase().includes(categoryIncludes.toLowerCase())) {}
 				results.push(s)
 			}
 		}
 	}
 	// Deduplicate by id or link
 	const seen = new Set<string>()
-	return results.filter((s) => {
+	return results.filter((s) => {}
 		const key = s.id || s.link || s.name
 		if (seen.has(key)) return false
 		seen.add(key)

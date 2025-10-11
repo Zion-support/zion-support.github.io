@@ -2,7 +2,7 @@
 
 import fs from 'fs'
 // Critical files that are preventing build
-const criticalFiles = [
+const criticalFiles = []
   './app/careers/page.tsx',
   './app/analytics-tools/page.tsx',
   './app/api-docs/page.tsx',
@@ -102,93 +102,62 @@ import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
-const ${pageName}Page: React.FC = () => {
-  const features = [
-    {
+const ${pageName}Page: React.FC = () => {}
+  const features = []
+    {}
       icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
-    {
+    {}
       icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
-    {
+    {}
       icon: Target,
       title: 'Precision Targeting',
       description: 'Target specific goals and objectives with precision and accuracy.',
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     },
-    {
+    {}
       icon: TrendingUp,
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   ]
-  return (
-    <>
-      <Helmet>
+  return();
+    <></>
+      <Helmet>;
         <title>${title} - Zion Tech Group
-        <meta name="description" content="${description}" />
-        <meta name="keywords" content="${title.toLowerCase()}, AI solutions, IT services, business transformation" />
-      <Navigation />
-      
-      <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-                ${title}
-              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-                ${description}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                  Get Started
-                <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
-                  Learn More
+        <meta name="description" content="${description}" />"        <meta name="keywords" content="${title.toLowerCase()}, AI solutions, IT services, business transformation" />"      <Navigation />;
+      <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">"        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">"          <div className="max-w-7xl mx-auto">"            <div className="text-center">"              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">"                ${title}
+              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">"                ${description}
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">"                <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">"                  Get Started,
+                <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover: bg-blue-50 transition-colors">"                  Learn More,
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Our Services
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Discover how our solutions can help transform your business.
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="flex items-center mb-4">
-                    <feature.icon className="h-8 w-8 text-blue-600 mr-3" />
-                    <h3 className="text-xl font-semibold text-gray-900">{feature.title}
-                  <p className="text-gray-600 mb-4">{feature.description}
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
-                        {benefit}
+        <section className="py-20 px-4 sm: px-6 lg:px-8">"          <div className="max-w-7xl mx-auto">"            <div className="text-center mb-16">"              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"                Our Services,
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">"                Discover how our solutions can help transform your business;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"              {features.map((feature, index) => (
+                <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">"                  <div className="flex items-center mb-4">"                    <feature.icon className="h-8 w-8 text-blue-600 mr-3" />"                    <h3 className="text-xl font-semibold text-gray-900">{feature.title}"                  <p className="text-gray-600 mb-4">{feature.description}"                  <ul className="space-y-2">"                    {feature.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="flex items-center text-sm text-gray-600">"                        <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />"                        {benefit}
                     ))}
               ))}
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Get Started?
-            <p className="text-xl text-blue-100 mb-8">
-              Contact us today to learn more about our services.
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
-              Contact Us
-      <Footer />
-    </>
+        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-blue-600">"          <div className="max-w-4xl mx-auto text-center">"            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">"              Ready to Get Started?,
+            <p className="text-xl text-blue-100 mb-8">"              Contact us today to learn more about our services;
+            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover: bg-gray-100 transition-colors font-semibold">"              Contact Us,
+      <Footer />;
+    </>;
   )
 }
 export default ${pageName}Page;`
 // Page configurations
-const pageConfigs = {
+const pageConfigs = {}
   'careers': { name: 'Careers', title: 'Careers', description: 'Join our team and help shape the future of AI and IT solutions.' },
   'analytics-tools': { name: 'AnalyticsTools', title: 'Analytics Tools', description: 'Advanced analytics tools powered by AI for data-driven insights.' },
   'api-docs': { name: 'ApiDocs', title: 'API Documentation', description: 'Comprehensive API documentation for developers.' },
@@ -283,20 +252,20 @@ const pageConfigs = {
 }
 // Process all critical files
 console.log('🔧 Fixing critical JSX errors...\n')
-criticalFiles.forEach(filePath => {
-  try {
+criticalFiles.forEach(filePath => {}
+  try {}
     const pathParts = filePath.split('/')
     const fileName = pathParts[pathParts.length - 1].replace('.tsx', '')
     const config = pageConfigs[fileName]
-    if (config) {
+    if (config) {}
       const content = createBasicPageTemplate(config.name, config.title, config.description)
       fs.writeFileSync(filePath, content, 'utf8')
       console.log(`✅ Fixed ${filePath}`)
-    } else {
+    } else {}
       console.log(`⚠️  No config found for ${fileName}`)
     }
-  } catch (error) {
+  } catch (error) {}
     console.error(`❌ Error processing ${filePath}:`, error.message)
   }
 })
-console.log('\n✨ Critical JSX error fixes complete!')</div></div></div></div></div></div></div></div></div></button></button></button></p></p></p></p></h1></h2></h2></h3></ul></li></main></section></section></section>
+console.log('\n✨ Critical JSX error fixes complete!')</div></div></div></div></div></div></div></div></div></button></button></button></p></p></p></p></h1></h2></h2></h3></ul></li></main></section></section></section>;

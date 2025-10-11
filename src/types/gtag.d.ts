@@ -3,8 +3,8 @@
  * Google Analytics gtag types
  */
 
-interface GtagEvent {
-    // TODO: Add content
+interface GtagEvent {}
+    // TODO: Add content,
   }
 
 }

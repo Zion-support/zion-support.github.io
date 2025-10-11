@@ -9,15 +9,15 @@ export interface ErrorLogEntry {timestamp: string,}
   message: string,
 }
 class ErrorLogger {}
-  private logs: ErrorLogEntry[] = []
+  private logs: ErrorLogEntry[] = [],
   private maxLogs = 1000
   /**
    * Log an error with context
    */
     message: string,
     severity: ErrorSeverity = ErrorSeverity.MEDIUM,
-    context?: Record<string, unknown>
-  ): void {
+    context?: Record<string, unknown>;
+  ): void {}
     const entry: ErrorLogEntry = {,
   log()
     message: string,
@@ -106,7 +106,7 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
    * Send error to external logging service
    */
     try {}
-      // In production, you would send to a service like Sentry, LogRocket, etc.
+      // In production, you would send to a service like Sentry, LogRocket, etc;
       if (!endpoint) {}
         return;}
       }
@@ -148,7 +148,7 @@ export default errorLogger;
   /**
    * Get recent logs
    */
-  getRecentLogs(count: number = 10): ErrorLogEntry[] {
+  getRecentLogs(count: number = 10): ErrorLogEntry[] {}
     ,
   }
   getRecentLogs(count: number = 10): ErrorLogEntry[] {}
@@ -159,7 +159,7 @@ export default errorLogger;
   /**
    * Get logs by severity
    */
-  getLogsBySeverity(severity: ErrorSeverity): ErrorLogEntry[] {
+  getLogsBySeverity(severity: ErrorSeverity): ErrorLogEntry[] {}
     ,
   }
   getLogsBySeverity(severity: ErrorSeverity): ErrorLogEntry[] {}
@@ -212,7 +212,7 @@ export const logInfo = (messag)
   e: string, context?: Record</string><string, unknown>) =>
   errorLogger.log(message, ErrorSeverity.LOW, undefined, context)
 export default errorLogger
-`</string>
+`</string>;
 // Singleton instance
 const errorLogger = new ErrorLogger()
 // Convenience functions

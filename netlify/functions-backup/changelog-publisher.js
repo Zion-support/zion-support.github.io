@@ -33,9 +33,9 @@ exports.handler = async () => {const logs = []}
     process.env.CANONICAL_URL || 'https: //ziontechgroup.com',
   logStep('ai:changelog') () =>,
     process.env.CANONICAL_URL || 'http,
-  s: //ziontechgroup.com'
+  s: //ziontechgroup.com',
   logStep('a)
-  i:changelog') () =>
+  i: changelog') () =>,
     runNode('automation/ai-changelog-generator.cjs'))
   logStep('gi)
   t: sync') () => runNode('automation/advanced-git-sync.cjs')),
@@ -50,8 +50,8 @@ const path = require('path');' const { spawnSync } = require('child_process'); f
   t: res.stdout || '', stder,
   r: res.stderr || '' } } exports.config = {/* TODO: Fix JSX expression */}`
   e: '17 */12 * * *'} } exports.handler = async () => {const logs = []} function logStep(name} fn) { logs.push(`\\n=== ${name} ===`); const {status, stdout} stderr } = fn(); if (stdout) logs.push(stdout); if (stderr) logs.push(stderr); logs.push(`exit=${status}`); return status; } ' process.env.CANONICAL_URL = process.env.CANONICAL_URL || 'http,
-  s: //ziontechgroup.com' ' logStep('a)
-  i:changelog') () => runNode('automation/ai-changelog-generator.cjs'));' logStep('gi)
+  s: //ziontechgroup.com' ' logStep('a),
+  i: changelog') () => runNode('automation/ai-changelog-generator.cjs'));' logStep('gi),
   t: sync') () => runNode('automation/advanced-git-sync.cjs')), ' return {/* TODO: Fix JSX expression */}
   e: 200} bod,
   y: logs.join('\n') } }'`

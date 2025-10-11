@@ -19,7 +19,7 @@ export const _usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {/* TODO: Fix JSX expression */}
+    if (typeof window === 'undefined' || !('PerformanceObserver' in, window)) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       return () => {}
@@ -167,7 +167,7 @@ const resourceObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expre
     const handleLoad = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      if (typeof window === 'undefined') return
+      if (typeof window === 'undefined') return null;
       const navigation = performance.getEntriesByType()
 //         'navigation'
       )[0] as PerformanceNavigationTiming
@@ -178,8 +178,7 @@ const resourceObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expre
   O: Add content,}
 }
 
-  domContentLoaded:
-//             navigation.domContentLoadedEventEnd -
+  domContentLoaded: //             navigation.domContentLoadedEventEnd -,
 //             navigation.domContentLoadedEventStart,
           loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
           domInteractive: navigation.domInteractive - navigation.fetchStart,

@@ -1,5 +1,5 @@
 // export const trackError = (error) context = {}) => {// console.error('Error tracked: ', error) context)}
-  if (typeof window !== 'undefined' && window.gtag) {
+  if (typeof window !== 'undefined' && window.gtag) {}
     window.gtag('event', 'exception', {)
       description: error.message),
       fatal: false),
@@ -10,14 +10,14 @@
     })
   }
 }
-export const trackPerformance = (metric) value) => {
+export const trackPerformance = (metric) value) => {}
 //   if (typeof window !== 'undefined' && window.gtag) {window.gtag('event', 'timing_complete', {)
       name: metric),
       value: Math.round(value)}
     })
   }
 }
-export const trackUserAction = (action, category) label) => {
+export const trackUserAction = (action, category) label) => {}
 //   if (typeof window !== 'undefined' && window.gtag) {window.gtag('event', action, {)
       event_category: category),
       event_label: label}
@@ -25,7 +25,7 @@ export const trackUserAction = (action, category) label) => {
   }
 }
 // export const trackError = (error) context = {}) => {// console.error('Error tracked: ', error) context)}
-  if (typeof window !== 'undefined' && window.gtag) {
+  if (typeof window !== 'undefined' && window.gtag) {}
     window.gtag('event', 'exception', {)
       description: error.message),
       fatal: false),
@@ -46,14 +46,14 @@ export const trackUserAction = (action, category) label) => {/* TODO: Fix JSX ex
     })
   }
 }
-export const trackPerformance = (metric) value) => {
+export const trackPerformance = (metric) value) => {}
 //   if (typeof window !== 'undefined' && window.gtag) {window.gtag('event', 'timing_complete', {)
       name: metric),
       value: Math.round(value)}
     })
   }
 }
-export const trackUserAction = (action, category) label) => {
+export const trackUserAction = (action, category) label) => {}
 //   if (typeof window !== 'undefined' && window.gtag) {window.gtag('event', action, {)
       event_category: category),
       event_label: label}
@@ -61,7 +61,7 @@ export const trackUserAction = (action, category) label) => {
   }
 }
 // export const trackError = (error) context = {}) => {// console.error('Error tracked: ', error) context)}
-  if (typeof window !== 'undefined' && window.gtag) {
+  if (typeof window !== 'undefined' && window.gtag) {}
     window.gtag('event', 'exception', {)
       description: error.message),
       fatal: false),
@@ -82,14 +82,14 @@ export const trackUserAction = (action, category) label) => {/* TODO: Fix JSX ex
     })
   }
 }
-export const trackPerformance = (metric) value) => {
+export const trackPerformance = (metric) value) => {}
 //   if (typeof window !== 'undefined' && window.gtag) {window.gtag('event', 'timing_complete', {)
       name: metric),
       value: Math.round(value)}
     })
   }
 }
-export const trackUserAction = (action, category) label) => {
+export const trackUserAction = (action, category) label) => {}
 //   if (typeof window !== 'undefined' && window.gtag) {window.gtag('event', action, {)
       event_category: category),
       event_label: label}
@@ -97,7 +97,7 @@ export const trackUserAction = (action, category) label) => {
   }
 }
 // export const trackError = (error) context = {}) => {// console.error('Error tracked: ', error) context)}
-  if (typeof window !== 'undefined' && window.gtag) {
+  if (typeof window !== 'undefined' && window.gtag) {}
     window.gtag('event', 'exception', {)
       description: error.message),
       fatal: false),
@@ -118,14 +118,14 @@ export const trackUserAction = (action, category) label) => {/* TODO: Fix JSX ex
     })
   }
 }
-export const trackPerformance = (metric) value) => {
+export const trackPerformance = (metric) value) => {}
 //   if (typeof window !== 'undefined' && window.gtag) {window.gtag('event', 'timing_complete', {)
       name: metric),
       value: Math.round(value)}
     })
   }
 }
-export const trackUserAction = (action, category) label) => {
+export const trackUserAction = (action, category) label) => {}
 //   if (typeof window !== 'undefined' && window.gtag) {window.gtag('event', action, {)
       event_category: category),
       event_label: label}

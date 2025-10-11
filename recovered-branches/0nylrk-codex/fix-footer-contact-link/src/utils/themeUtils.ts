@@ -1,17 +1,17 @@
 export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup'
-export interface ThemeColors {
-  primaryColor: string
-  backgroundColor: string
-  textColor: string
-  accentColor: string
-  buttonColor: string
-  cardBackground: string
+export interface ThemeColors {}
+  primaryColor: string,
+  backgroundColor: string,
+  textColor: string,
+  accentColor: string,
+  buttonColor: string,
+  cardBackground: string,
 }
 // Define theme presets
-export function getThemeColors(preset: ThemePreset, primaryColor: string): ThemeColors {
-  switch (preset) {
+export function getThemeColors(preset: ThemePreset, primaryColor: string): ThemeColors {}
+  switch (preset) {}
     case 'dark':
-      return {
+      return {}
         primaryColor,
         backgroundColor: '#0f172a',
         textColor: '#e2e8f0',
@@ -21,7 +21,7 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
         cardBackground: '#1e293b',
       }
     case 'neon':
-      return {
+      return {}
         primaryColor,
         backgroundColor: '#030712',
         textColor: '#f8fafc',
@@ -31,7 +31,7 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
         cardBackground: '#0f172a',
       }
     case 'corporate':
-      return {
+      return {}
         primaryColor,
         backgroundColor: '#f8fafc',
         textColor: '#334155',
@@ -41,7 +41,7 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
         cardBackground: '#ffffff',
       }
     case 'startup':
-      return {
+      return {}
         primaryColor,
         backgroundColor: '#16181d',
         textColor: '#fafafa',
@@ -52,7 +52,7 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
       }
     case 'light':
     default:
-      return {
+      return {}
         primaryColor,
         backgroundColor: '#ffffff',
         textColor: '#0f172a',
@@ -64,7 +64,7 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
   }
 }
 // Apply theme colors to document CSS variables
-export function applyThemeColors(colors: ThemeColors) {
+export function applyThemeColors(colors: ThemeColors) {}
   const root = document.documentElement
   root.style.setProperty('--primary-color', colors.primaryColor)
   root.style.setProperty('--background-color', colors.backgroundColor)

@@ -1,11 +1,11 @@
 
 const _openai = new OpenAI({/* TODO: Fix JSX expression */})
   y: process.env.OPENAI_API_KEY })
-// In-memory simple rate limiter (per IP)
+// In-memory simple rate limiter (per, IP)
 const RATE_LIMIT_WINDOW_MS = 5 * 60 * 1000; // 5 minutes
 // const RATE_LIMIT_MAX_REQUESTS = 15
 const,
-  ipToRequests: Record<string, {/* TODO: Fix JSX expression */}
+  ipToRequests: Record<string, {/* TODO: Fix JSX expression */}</string>
   s: number[] }> = {}
 function isRateLimited(ip: string): boolean {,
   const _now = Date.now()
@@ -41,7 +41,7 @@ export default async function handler(re,
 
   // Rate limit
   const ip =
-    (req.headers['x-forwarded-for'] as string)?.split(',')[0]?.trim() ||
+    (req.headers['x-forwarded-for'] as, string)?.split(',')[0]?.trim() ||
     req.socket.remoteAddress ||
     'unknown'
   if (isRateLimited(ip)) {/* TODO: Fix JSX expression */}
@@ -59,9 +59,9 @@ export default async function handler(re,
       system ||
       'You are a professional writing assistant. Write clear, concise, and helpful content. Format output as markdown.'
     const completion = await openai.chat.completions.create({)
-      model: 'gpt-4o-mini')
-      temperature: typeof temperature === 'number' ? temperature : 0.7;)
-      messages: [)
+      model: 'gpt-4o-mini'),
+      temperature: typeof temperature === 'number' ? temperature : 0.7;),
+      messages: [),
         { role: 'system', content: sys })
         { role: 'user', content: prompt })
       ])

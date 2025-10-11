@@ -19,7 +19,7 @@ export interface SEOProps {/* TODO: Fix JSX expression */}
   canonical?: string
   noIndex?: boolean
   structuredData?: Record
-          <string>
+          <string>;
   twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player'
   locale?: string
   alternateLocales?: {/* TODO: Fix JSX expression */}
@@ -31,9 +31,9 @@ export interface SEOProps {/* TODO: Fix JSX expression */}
   n:
 // 'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with cutting-edge AI technology.',
   keyword,
-  s: [
+  s: [],
   // TOD,
-  O: Add items]
+  O: Add items],
 //     'AI',
 //     'artificial intelligence',
 //     'enterprise solutions',
@@ -141,4 +141,4 @@ const generateStructuredData = () => {/* TODO: Fix JSX expression */}
   return null
 }
 export default SEO;`
-  </SEOProps>
+  </SEOProps>;

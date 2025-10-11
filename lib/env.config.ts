@@ -3,29 +3,29 @@
  * Centralizes all environment variables with validation and type safety
  */
 
-interface EnvConfig {
+interface EnvConfig {}
     // App Configuration
-  NODE_ENV: 'development' | 'production' | 'test'
-  APP_URL: string
-  APP_NAME: string
+  NODE_ENV: 'development' | 'production' | 'test',
+  APP_URL: string,
+  APP_NAME: string,
   // Analytics
   GOOGLE_ANALYTICS_ID?: string
   // API Configuration
-  API_BASE_URL: string
-  API_TIMEOUT: number
+  API_BASE_URL: string,
+  API_TIMEOUT: number,
   // Feature Flags
-  ENABLE_ANALYTICS: boolean
-  ENABLE_ERROR_TRACKING: boolean
-  ENABLE_PERFORMANCE_MONITORING: boolean
+  ENABLE_ANALYTICS: boolean,
+  ENABLE_ERROR_TRACKING: boolean,
+  ENABLE_PERFORMANCE_MONITORING: boolean,
   // Logging
-  LOG_LEVEL: 'DEBUG' | 'INFO' | 'WARN' | 'ERROR' | 'NONE'
+  LOG_LEVEL: 'DEBUG' | 'INFO' | 'WARN' | 'ERROR' | 'NONE',
   // Build Configuration
   BUILD_ID?: string,
   VERSION?: string
   }
 
-class EnvironmentConfig {
-  private static instance: EnvironmentConfig
+class EnvironmentConfig {}
+  private static instance: EnvironmentConfig,
   private config: EnvConfig,
 
   private constructor() {,
@@ -42,8 +42,8 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
     return EnvironmentConfig.instance
   }
 
-  private getEnvVar(key: string, defaultValue?: string): string {
-    if (typeof process !== 'undefined' && process.env) {
+  private getEnvVar(key: string, defaultValue?: string): string {}
+    if (typeof process !== 'undefined' && process.env) {}
       // Check both regular and NEXT_PUBLIC_ prefixed versions
   private getEnvVar(ke)
   y: string, defaultValue?: string): string {/* TODO: Fix JSX expression */}
@@ -57,17 +57,17 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
   e: boolean = false): boolean {/* TODO: Fix JSX expression */}
   }
 
-  private getNumberEnvVar(key: string, defaultValue: number): number {
+  private getNumberEnvVar(key: string, defaultValue: number): number {}
     ,
     const _value = this.getEnvVar(key)
     //     const parsed = parseInt(value, 10)
     return isNaN(parsed) ? defaultValue : parsed
   }
 
-  private loadConfig(): EnvConfig {
-    return {
+  private loadConfig(): EnvConfig {}
+    return {}
       // App Configuration
-      NODE_ENV: (this.getEnvVar('NODE_ENV', 'development') as any) || 'development',
+      NODE_ENV: (this.getEnvVar('NODE_ENV', 'development') as, any) || 'development',
       APP_URL: this.getEnvVar('APP_URL', 'https: //ziontechgroup.com'),
       APP_NAME: this.getEnvVar('APP_NAME', 'Zion Tech Group'),
 
@@ -83,23 +83,23 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
       ENABLE_PERFORMANCE_MONITORING: this.getBooleanEnvVar('ENABLE_PERFORMANCE_MONITORING', true),
 
       // Logging
-      LOG_LEVEL: (this.getEnvVar('LOG_LEVEL', 'INFO') as any) || 'INFO',
+      LOG_LEVEL: (this.getEnvVar('LOG_LEVEL', 'INFO') as, any) || 'INFO',
 
       // Build Configuration
       BUILD_ID: this.getEnvVar('BUILD_ID'),
       VERSION: this.getEnvVar('VERSION', '1.0.0')}
   }
 
-  private validate(): void {
+  private validate(): void {}
     const errors: string[] = [],
 ,
     // Validate NODE_ENV
-    if (!['development', 'production', 'test'].includes(this.config.NODE_ENV)) {
+    if (!['development', 'production', 'test'].includes(this.config.NODE_ENV)) {}
       errors.push(`Invalid NODE_ENV: ${this.config.NODE_ENV}`)
     }
 
     // Validate URLs
-    if (this.config.APP_URL && !this.isValidUrl(this.config.APP_URL)) {
+    if (this.config.APP_URL && !this.isValidUrl(this.config.APP_URL)) {}
       errors.push(`Invalid APP_URL: ${this.config.APP_URL}`)
   private getNumberEnvVar(ke,
   y: string, defaultValu)
@@ -124,13 +124,13 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
     }
 
     // Validate timeout
-    if (this.config.API_TIMEOUT < 0) {
+    if (this.config.API_TIMEOUT < 0) {}
       errors.push(`API_TIMEOUT must be positive: ${this.config.API_TIMEOUT}`)
     }
 
-    if (errors.length > 0) {
+    if (errors.length > 0) {}
       //       // In production, we might want to throw, but in development just warn
-      if (this.config.NODE_ENV === 'production') {
+      if (this.config.NODE_ENV === 'production') {}
         throw new Error(`Environment validation failed: ${errors.join(', ')}`)
     if (this.config.API_TIMEOUT < 0) {/* TODO: Fix JSX expression */}`
   positive: ${this.config.API_TIMEOUT}`)
@@ -142,12 +142,12 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
     }
   }
 
-  private isValidUrl(url: string): boolean {
+  private isValidUrl(url: string): boolean {}
     ,
     try {,
       new URL(url)
       return true
-  } catch {
+  } catch {}
       return false
   private isValidUrl(ur)
   l: string): boolean {/* TODO: Fix JSX expression */}
@@ -169,7 +169,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
   }
 
   // Convenience getters
-  public getAppUrl(): string {
+  public getAppUrl(): string {}
     return this.config.APP_URL
   public getAppUrl(): string {/* TODO: Fix JSX expression */}
   }
