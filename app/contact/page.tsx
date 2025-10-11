@@ -1,26 +1,11 @@
-<<<<<<< HEAD
-'use client'
-import React, { useState } from 'react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, Mail, Phone, MapPin, Clock, Send } from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-=======
 import React, { useState } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { CheckCircle, ArrowRight, Mail, Phone, MapPin, Clock, Send, MessageCircle, Calendar, Users } from 'lucide-react';
-=======
 import { CheckCircle, Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-099c
 =======
 import { CheckCircle, ArrowRight, Mail, Phone, MapPin, Clock, Send, MessageCircle } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-59b6
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -32,33 +17,14 @@ export default function ContactPage() {
     message: ''
   })
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const [status, setStatus] = useState({
-    type: 'idle',
-    message: ''
-  })
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target
-=======
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-59b6
     setFormData(prev => ({
       ...prev,
       [name]: value
     }))
   }
 
-<<<<<<< HEAD
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setStatus({ type: 'loading', message: 'Sending message...' })
-    
-    // Simulate API call
-=======
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -74,7 +40,6 @@ export default function ContactPage() {
     console.log('Form submitted:', formData);
     setIsSubmitted(true);
     // Reset form after 3 seconds
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
     setTimeout(() => {
       setStatus({ type: 'success', message: 'Message sent successfully!' })
       setFormData({
@@ -84,11 +49,6 @@ export default function ContactPage() {
         phone: '',
         service: '',
         message: ''
-<<<<<<< HEAD
-      })
-    }, 2000)
-  }
-=======
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission here
@@ -106,7 +66,6 @@ export default function ContactPage() {
 =======
       });
     }, 3000);
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -118,40 +77,10 @@ export default function ContactPage() {
     
     setIsSubmitting(false);
     setIsSubmitted(true);
->>>>>>> cursor/fix-errors-and-merge-to-main-099c
   };
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-59b6
 
   const contactMethods = [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      icon: <Mail className="w-6 h-6" />,
-      title: 'Email',
-      details: 'info@ziontechgroup.com',
-      description: 'Send us an email anytime'
-    },
-    {
-      icon: <Phone className="w-6 h-6" />,
-      title: 'Phone',
-      details: '+1 (555) 123-4567',
-      description: 'Mon-Fri from 8am to 6pm'
-    },
-    {
-      icon: <MapPin className="w-6 h-6" />,
-      title: 'Office',
-      details: 'New York, NY',
-      description: 'Visit our headquarters'
-    },
-    {
-      icon: <Clock className="w-6 h-6" />,
-      title: 'Hours',
-      details: '24/7 Support',
-      description: 'We are always here to help'
-    }
-  ]
-=======
       icon: <Mail className="w-8 h-8 text-blue-500" />,
       title: 'Email Us',
       description: 'Send us an email and we\'ll respond within 24 hours',
@@ -184,30 +113,11 @@ export default function ContactPage() {
 =======
       icon: <Mail className="w-6 h-6 text-blue-500" />,
       title: 'Email Us',
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
       details: 'contact@ziontechgroup.com',
       description: 'Send us an email anytime'
     },
     {
       icon: <Phone className="w-6 h-6 text-green-500" />,
-<<<<<<< HEAD
-      title: 'Phone',
-      details: '+1 (555) 123-4567',
-      description: 'Mon-Fri 9am-6pm PST'
-    },
-    {
-      icon: <MapPin className="w-6 h-6 text-red-500" />,
-      title: 'Office',
-      details: 'San Francisco, CA',
-      description: 'Visit our headquarters'
-    },
-    {
-      icon: <Clock className="w-6 h-6 text-purple-500" />,
-      title: 'Response Time',
-      details: '< 24 hours',
-      description: 'We respond quickly'
->>>>>>> cursor/fix-errors-and-merge-to-main-099c
-=======
       title: 'Call Us',
       details: '+1 (555) 123-4567',
       description: 'Mon-Fri from 8am to 6pm'
@@ -223,42 +133,23 @@ export default function ContactPage() {
       title: 'Business Hours',
       details: 'Monday - Friday: 8:00 AM - 6:00 PM',
       description: 'Saturday: 9:00 AM - 4:00 PM'
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
     }
   ];
 
   const services = [
-<<<<<<< HEAD
-<<<<<<< HEAD
-    'AI Services',
-    'IT Services',
-    'Micro SAAS',
-    '5G Implementation',
-    'Cloud Migration',
-    'Cybersecurity',
-    'Mobile Development',
-    'Custom Development',
-    'Other'
-=======
     'AI & Machine Learning',
 =======
     'AI Services',
     'IT Services',
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
     'Cloud Solutions',
     'Cybersecurity',
     '5G Implementation',
     'Data Analytics',
     'Mobile Development',
     'Custom Development',
-<<<<<<< HEAD
-    'Digital Transformation'
->>>>>>> cursor/fix-errors-and-merge-to-main-099c
-=======
     'Mobile Solutions',
     'Digital Transformation',
     'Other'
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
   ];
 
   const officeHours = [
@@ -273,50 +164,17 @@ export default function ContactPage() {
     { number: '24/7', label: 'Support Available' },
     { number: '500+', label: 'Happy Clients' }
   ];
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-59b6
 
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
         <title>Contact Us - Zion Tech Group</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <meta name="description" content="Get in touch with Zion Tech Group for AI solutions, IT services, and digital transformation. Contact our experts today." />
-=======
         <meta name="description" content="Get in touch with Zion Tech Group for AI services, IT solutions, and 5G implementation. Contact us for free consultation and expert advice." />
         <meta name="keywords" content="contact zion tech group, AI consultation, IT services contact, 5G implementation contact" />
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-59b6
       </Helmet>
       
       <Navigation />
       
-<<<<<<< HEAD
-      <main className="pt-20">
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Contact <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Us</span>
-              </h1>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Ready to transform your business? Get in touch with our experts and let's discuss your project.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              {/* Contact Form */}
-              <div className="bg-white rounded-lg shadow-lg p-8">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Send us a message</h2>
-                
-                {status.type === 'success' && (
-                  <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg flex items-center">
-                    <CheckCircle className="w-5 h-5 mr-2" />
-                    {status.message}
-                  </div>
-                )}
-
-=======
         <meta name="description" content="Get in touch with Zion Tech Group for AI solutions, IT services, and digital transformation. We're here to help transform your business." />
         <meta name="keywords" content="contact, AI services, IT solutions, digital transformation, business consultation" />
       </Helmet>
@@ -381,7 +239,6 @@ export default function ContactPage() {
                   <p className="text-gray-300">Thank you for your message. We'll get back to you soon.</p>
                 </div>
               ) : (
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
@@ -395,12 +252,8 @@ export default function ContactPage() {
                         value={formData.name}
                         onChange={handleChange}
                         required
-<<<<<<< HEAD
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-=======
                         className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                         placeholder="Your full name"
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
                       />
                     </div>
                     <div>
@@ -414,12 +267,8 @@ export default function ContactPage() {
                         value={formData.email}
                         onChange={handleChange}
                         required
-<<<<<<< HEAD
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-=======
                         className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                         placeholder="your@email.com"
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
                       />
                     </div>
                   </div>
@@ -435,12 +284,8 @@ export default function ContactPage() {
                         name="company"
                         value={formData.company}
                         onChange={handleChange}
-<<<<<<< HEAD
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-=======
                         className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                         placeholder="Your company name"
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
                       />
                     </div>
                     <div>
@@ -453,12 +298,8 @@ export default function ContactPage() {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-<<<<<<< HEAD
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-=======
                         className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                         placeholder="+1 (555) 123-4567"
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
                       />
                     </div>
                   </div>
@@ -472,11 +313,7 @@ export default function ContactPage() {
                       name="service"
                       value={formData.service}
                       onChange={handleChange}
-<<<<<<< HEAD
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-=======
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
                     >
                       <option value="">Select a service</option>
                       <option value="ai-services">AI Services</option>
@@ -499,53 +336,19 @@ export default function ContactPage() {
                       onChange={handleChange}
                       required
                       rows={6}
-<<<<<<< HEAD
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                      placeholder="Tell us about your project..."
-=======
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-none"
                       placeholder="Tell us about your project or requirements..."
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
                     />
                   </div>
 
                   <button
                     type="submit"
-<<<<<<< HEAD
-                    disabled={status.type === 'loading'}
-                    className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center justify-center disabled:opacity-50"
-=======
                     className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
                   >
                     {status.type === 'loading' ? 'Sending...' : 'Send Message'}
                     <Send className="w-5 h-5 ml-2" />
                   </button>
                 </form>
-<<<<<<< HEAD
-              </div>
-
-              {/* Contact Information */}
-              <div className="space-y-8">
-                <div>
-                  <h2 className="text-2xl font-bold text-gray-900 mb-6">Get in touch</h2>
-                  <p className="text-gray-600 mb-8">
-                    We're here to help you succeed. Reach out to us through any of the channels below, and we'll get back to you as soon as possible.
-                  </p>
-                </div>
-
-                <div className="space-y-6">
-                  {contactInfo.map((info, index) => (
-                    <div key={index} className="flex items-start space-x-4">
-                      <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center text-white">
-                        {info.icon}
-                      </div>
-                      <div>
-                        <h3 className="text-lg font-semibold text-gray-900">{info.title}</h3>
-                        <p className="text-gray-900 font-medium">{info.details}</p>
-                        <p className="text-gray-600">{info.description}</p>
-                      </div>
-=======
       <main className="pt-20 px-4 py-20">
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
@@ -726,7 +529,6 @@ export default function ContactPage() {
                     <div key={index} className="flex justify-between items-center">
                       <span className="text-gray-300">{schedule.day}</span>
                       <span className="text-white font-medium">{schedule.hours}</span>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-59b6
                     </div>
                   ))}
                 </div>
@@ -855,28 +657,8 @@ export default function ContactPage() {
                     </option>
                   ))}
                 </select>
->>>>>>> cursor/fix-errors-and-merge-to-main-099c
               </div>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </section>
-=======
 
-<<<<<<< HEAD
-              <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-8 border border-white/20">
-                <h3 className="text-2xl font-bold text-white mb-4">Need Immediate Help?</h3>
-                <p className="text-gray-300 mb-6">
-                  For urgent technical issues or emergency support, our 24/7 support team is always available.
-                </p>
-                <Link 
-                  to="/contact" 
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 inline-flex items-center"
-                >
-                  Emergency Support
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Link>
-=======
               )}
             </div>
 
@@ -917,7 +699,6 @@ export default function ContactPage() {
                   <MessageCircle className="w-5 h-5 mr-2" />
                   <span className="font-medium">Live chat available on our website</span>
                 </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
               </div>
             </div>
           </div>
@@ -955,7 +736,6 @@ export default function ContactPage() {
                   className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
                   placeholder="Tell us about your project or how we can help you..."
                 />
->>>>>>> cursor/fix-errors-and-merge-to-main-099c
               </div>
 
               <button
@@ -978,22 +758,10 @@ export default function ContactPage() {
             </form>
           )}
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-59b6
-      </main>
-      
-      <Footer />
-    </div>
-  )
-}
 =======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
       </section>
     </div>
   );
 };
 
 export default ContactPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-099c
