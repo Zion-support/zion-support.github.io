@@ -48,26 +48,20 @@ import Footer from '../components/Footer';
 const MicroSaasPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-<<<<<<< HEAD
   const products = [
     {
-      title: 'Zion Analytics Pro',
-=======
-  const services = [
-    {
       id: 'zion-analytics-pro',
-      name: 'Zion Analytics Pro',
->>>>>>> origin/main
+      title: 'Zion Analytics Pro',
       description: 'Advanced real-time business intelligence and analytics platform with AI-powered insights and predictive modeling.',
       price: '$89/month',
       marketPrice: '$150-500/month',
-<<<<<<< HEAD
       benefits: ['Data-driven decision making', 'Real-time insights', 'Custom dashboards', 'Automated reporting'],
       icon: BarChart,
       category: 'Analytics',
       popular: true
     },
     {
+      id: 'zion-chat-ai',
       title: 'Zion Chat AI',
       description: 'Next-generation AI customer support platform with advanced NLP, sentiment analysis, and multi-channel support.',
       features: ['GPT-4 Powered AI', 'Multi-channel Support', 'Advanced Sentiment Analysis', 'Automated Ticket Routing', 'Live Agent Handoff', 'Multi-language Support'],
@@ -587,14 +581,6 @@ const MicroSaasPage: React.FC = () => {
     {
       title: 'Zion AI Infrastructure Monitor',
       description: 'Advanced infrastructure monitoring platform with AI-powered anomaly detection and optimization.',
-      features: ['Real-time Monitoring', 'Anomaly Detection', 'Predictive Maintenance', 'Performance Optimization', 'Automated Alerts'],
-      price: '$119/month',
-      marketPrice: '$200-500/month',
-      benefits: ['Improved uptime', 'Faster issue resolution', 'Proactive maintenance', 'Cost optimization'],
-      icon: Monitor,
-      category: 'Monitoring',
-      popular: false
-=======
       features: [
         'Real-time data visualization',
         'AI-powered predictive analytics',
@@ -605,6 +591,8 @@ const MicroSaasPage: React.FC = () => {
         'API integration',
         'Mobile app access'
       ],
+      price: '$119/month',
+      marketPrice: '$200-500/month',
       benefits: [
         'Data-driven decision making',
         'Real-time insights',
@@ -612,9 +600,9 @@ const MicroSaasPage: React.FC = () => {
         'Automated reporting',
         'ROI tracking'
       ],
+      icon: BarChart3,
       category: 'Analytics',
       popular: true,
-      icon: BarChart3,
       link: 'https://analytics.ziontechgroup.com'
     },
     {
@@ -924,12 +912,10 @@ const MicroSaasPage: React.FC = () => {
       popular: false,
       icon: Package,
       link: 'https://inventory.ziontechgroup.com'
->>>>>>> origin/main
     }
   ];
 
   const categories = [
-<<<<<<< HEAD
     { id: 'all', name: 'All Tools', count: products.length },
     { id: 'Analytics', name: 'Analytics', count: products.filter(p => p.category === 'Analytics').length },
     { id: 'Customer Service', name: 'Customer Service', count: products.filter(p => p.category === 'Customer Service').length },
@@ -955,49 +941,19 @@ const MicroSaasPage: React.FC = () => {
     const matchesSearch = product.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          product.description.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || product.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-=======
-    { id: 'all', name: 'All Services', count: services.length },
-    { id: 'Analytics', name: 'Analytics', count: services.filter(s => s.category === 'Analytics').length },
-    { id: 'Customer Service', name: 'Customer Service', count: services.filter(s => s.category === 'Customer Service').length },
-    { id: 'Finance', name: 'Finance', count: services.filter(s => s.category === 'Finance').length },
-    { id: 'Marketing', name: 'Marketing', count: services.filter(s => s.category === 'Marketing').length },
-    { id: 'Security', name: 'Security', count: services.filter(s => s.category === 'Security').length },
-    { id: 'Storage', name: 'Storage', count: services.filter(s => s.category === 'Storage').length },
-    { id: 'Automation', name: 'Automation', count: services.filter(s => s.category === 'Automation').length },
-    { id: 'Project Management', name: 'Project Management', count: services.filter(s => s.category === 'Project Management').length },
-    { id: 'Content', name: 'Content', count: services.filter(s => s.category === 'Content').length },
-    { id: 'CRM', name: 'CRM', count: services.filter(s => s.category === 'CRM').length },
-    { id: 'Inventory', name: 'Inventory', count: services.filter(s => s.category === 'Inventory').length }
-  ];
-
-  const filteredServices = services.filter(service => {
-    return selectedCategory === 'all' || service.category === selectedCategory;
->>>>>>> origin/main
-  });
+    return matchesSearch && matchesCategory;  });
 
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
         <title>Micro SaaS Tools - Zion Tech Group | Business Automation Solutions</title>
         <meta name="description" content="Comprehensive suite of micro SaaS tools for business automation, analytics, and productivity. Transform your operations with our innovative solutions." />
-        <meta name="keywords" content="micro SaaS, business tools, automation, analytics, productivity, CRM, project management" />
-=======
-        <title>Micro SaaS Solutions - Zion Tech Group | Business Software Tools</title>
-        <meta name="description" content="Comprehensive micro SaaS solutions including analytics, CRM, project management, and automation tools for small to medium businesses." />
-        <meta name="keywords" content="micro saas, business software, analytics, CRM, project management, automation, small business tools" />
-        <meta property="og:title" content="Micro SaaS Solutions - Zion Tech Group" />
-        <meta property="og:description" content="Powerful micro SaaS tools to grow your business" />
-        <meta property="og:type" content="website" />
->>>>>>> origin/main
-      </Helmet>
+        <meta name="keywords" content="micro SaaS, business tools, automation, analytics, productivity, CRM, project management" />      </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
         <main className="container mx-auto px-4 py-16 pt-24">
-<<<<<<< HEAD
           {/* Header Section */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -1107,129 +1063,10 @@ const MicroSaasPage: React.FC = () => {
 
           {/* CTA Section */}
           <div className="text-center">
-            <div className="bg-slate-800/50 rounded-lg p-8">
-=======
-          {/* Hero Section */}
-          <section className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Micro SaaS Solutions
-            </h1>
-            <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">
-              Powerful Business Tools for Modern Companies
-            </p>
-            <p className="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Discover our comprehensive suite of micro SaaS solutions designed to streamline operations, 
-              boost productivity, and drive growth for small to medium businesses. Each tool is built with 
-              cutting-edge technology and user-friendly interfaces.
-            </p>
-          </section>
-
-          {/* Category Filter */}
-          <section className="mb-12">
-            <div className="flex flex-wrap justify-center gap-4">
-              {categories.map((category) => (
-                <button
-                  key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
-                  className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                    selectedCategory === category.id
-                      ? 'bg-cyan-500 text-white'
-                      : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
-                  }`}
-                >
-                  {category.name} ({category.count})
-                </button>
-              ))}
-            </div>
-          </section>
-
-          {/* Services Grid */}
-          <section className="mb-16">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredServices.map((service) => (
-                <div
-                  key={service.id}
-                  className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300"
-                >
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mr-4">
-                      <service.icon className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-white">{service.name}</h3>
-                      {service.popular && (
-                        <span className="inline-block px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-full">
-                          Popular
-                        </span>
-                      )}
-                    </div>
-                  </div>
-                  
-                  <p className="text-gray-300 mb-4">{service.description}</p>
-                  
-                  <div className="flex items-center justify-between mb-4">
-                    <div>
-                      <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
-                      <span className="text-gray-400 text-sm ml-2 line-through">{service.marketPrice}</span>
-                    </div>
-                    <span className="text-gray-400 text-sm">{service.category}</span>
-                  </div>
-
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
-                    <ul className="space-y-2">
-                      {service.features.slice(0, 4).map((feature, index) => (
-                        <li key={index} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-white mb-3">Benefits</h4>
-                    <ul className="space-y-2">
-                      {service.benefits.slice(0, 3).map((benefit, index) => (
-                        <li key={index} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  <div className="flex items-center justify-between">
-                    <a
-                      href={service.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
-                    >
-                      Try Demo
-                      <ArrowRight className="w-4 h-4 ml-1" />
-                    </a>
-                    <Link
-                      to="/contact"
-                      className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300"
-                    >
-                      Get Started
-                    </Link>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* CTA Section */}
-          <section className="text-center">
-            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
->>>>>>> origin/main
-              <h2 className="text-2xl font-bold text-white mb-4">
+            <div className="bg-slate-800/50 rounded-lg p-8">              <h2 className="text-2xl font-bold text-white mb-4">
                 Ready to Transform Your Business?
               </h2>
               <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-<<<<<<< HEAD
                 Choose from our comprehensive suite of Micro SaaS tools or get a custom solution built for your specific needs.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -1238,33 +1075,11 @@ const MicroSaasPage: React.FC = () => {
                   Get Free Consultation
                 </a>
                 <a href="tel:+13024640950"
-                  className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300">
-=======
-                Choose from our comprehensive suite of micro SaaS solutions or get a custom solution 
-                built specifically for your business needs. Contact our experts for a free consultation.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
-                >
-                  Get Free Consultation
-                </Link>
-                <a
-                  href="tel:+13024640950"
-                  className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300"
-                >
->>>>>>> origin/main
-                  Call: (302) 464-0950
+                  className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300">                  Call: (302) 464-0950
                 </a>
               </div>
             </div>
-<<<<<<< HEAD
-          </div>
-=======
-          </section>
->>>>>>> origin/main
-        </main>
+          </div>        </main>
         
         <Footer />
       </div>

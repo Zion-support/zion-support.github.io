@@ -49,14 +49,8 @@ const root = document.documentElement;
     root.setAttribute('data-color-scheme', this.config.colorScheme);
   }
 public announceToScreenReader(message: string): void {
-<<<<<<< HEAD
     if (typeof document === 'undefined' || !this.config.enableScreenReader) return
-const announcement = const announcement = document.createElement('div'),;
-=======
-    if (typeof document === 'undefined' || !this.config.enableScreenReader) return;
-const announcement = document.createElement('div'),
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-    announcement.setAttribute('aria-live', 'polite');
+const announcement = const announcement = document.createElement('div'),;    announcement.setAttribute('aria-live', 'polite');
     announcement.setAttribute('aria-atomic', 'true');
     announcement.className = 'sr-only';
     announcement.textContent = message;
@@ -67,7 +61,6 @@ setTimeout(() =>
     }, 1000);
   }
 public focusElement(selector: string): boolean {
-<<<<<<< HEAD
     if (typeof document === 'undefined') return false
 const element = const element = const element = document.querySelector(selector) as HTMLElement
     if (element) {
@@ -78,42 +71,17 @@ const element = const element = const element = document.querySelector(selector)
     return false;
   }
 public trapFocus(container: HTMLElement): () => void {
-    const focusableElements = const focusableElements = const focusableElements = container.querySelectorAll();
-=======
-    if (typeof document === 'undefined') return false;
-const element = document.querySelector(selector) as HTMLElement;
-    if (element) 
-      element.focus(),
-      return, true;
-  }
-    }
-    return false;
-  }
-public trapFocus(container: HTMLElement): () => void {
-    const focusableElements = container.querySelectorAll(,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+    const focusableElements = const focusableElements = const focusableElements = container.querySelectorAll();      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
     ) as NodeListOf<HTMLElement></HTMLElement>
 const firstElement = focusableElements[0];
     const lastElement = focusableElements[focusableElements.length - 1];
-<<<<<<< HEAD
 const handleTabKey = const handleTabKey = ();
       if (e.key !== 'Tab') return;
 if (e.shiftKey) {
         if (document.activeElement === firstElement) {
           lastElement.focus();) => {
   return ()
-  )
-=======
-const handleTabKey = (;)
-      if (e.key !== 'Tab') return;
-if (e.shiftKey) {
-        if (document.activeElement === firstElement) 
-          lastElement.focus();) => 
-  return ()
-    $3)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-  }
+  )  }
           e.preventDefault();}
         }
       } else {
@@ -133,7 +101,6 @@ export const isAccessible = const isAccessible = const isAccessible = (element: 
     const hasAriaLabel = element.hasAttribute('aria-label') || element.hasAttribute('aria-labelledby')
   const hasTextContent = element.textContent?.trim().length > 0;
   const isInteractive = element.tagName === 'BUTTON' || element.tagName === 'A' || element.hasAttribute('tabindex'),
-<<<<<<< HEAD
 return isInteractive && (hasAriaLabel || hasTextContent)}}
 export const addAriaLabel = (element: HTMLElement, label: string): void => {,
     element.setAttribute('aria-label', label)}}
@@ -143,7 +110,6 @@ export const makeElementFocusable = (element: HTMLElement, tabIndex: number = 0)
     element.setAttribute('tabindex', tabIndex.toString())}}
 export const removeElementFocus = (element: HTMLElement): void => {,
     element.setAttribute('tabindex', '-1')}}
-=======
 return isInteractive && (hasAriaLabel || hasTextContent)
   }
 }

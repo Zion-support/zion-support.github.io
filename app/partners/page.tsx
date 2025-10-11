@@ -1,30 +1,11 @@
 'use client';
-import React, {useState}from 'react';
-import {Helmet}}from 'react-helmet-async';
-
-<<<<<<< HEAD
-const PartnersPage: React.FC = () => {,
-  const partners = [
-import {ExternalLink, Award, Handshake, Users, Star, CheckCircle, ArrowRight}}from 'lucide-react';
-
-interface Partner {id: string;,}
-  name: string;,
-  logo: string;,
-  description: string;,
-  category: string;,
-  website: string;,
-  tier: 'preferred' | 'certified' | 'strategic';,}const PartnersPage: React.FC = () => {,
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedTier, setSelectedTier] = useState('all');
-
-  const partners: Partner[] = [,
-=======
-const PartnersPage: React.FC = () => {
-  const partners = [;
-import  ExternalLink, Award, Handshake, Users, Star, CheckCircle, ArrowRight } from 'lucide-react';
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { ExternalLink, Award, Handshake, Users, Star, CheckCircle, ArrowRight, Filter, Search } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 interface Partner {
-<<<<<<< HEAD
   id: string;
   name: string;
   logo: string;
@@ -32,564 +13,332 @@ interface Partner {
   category: string;
   website: string;
   tier: 'preferred' | 'certified' | 'strategic';
-}];
-=======
-  id: string;,
-      name: string;,
-      logo: string;,
-      description: string;,
-      category: string;,
-      website: string;,
-      tier: 'preferred' | 'certified' | 'strategic';
-}];];
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+  benefits: string[];
+  established: string;
+}
+
 const PartnersPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedTier, setSelectedTier] = useState('all');
+  const [searchQuery, setSearchQuery] = useState('');
 
-  const partners: Partner[] = [,
-      id: '1',
+  const partners: Partner[] = [
+    {
+      id: 'microsoft',
       name: 'Microsoft',
-      logo: '/images/partners/microsoft.png',},
-    {id: '2',
+      logo: '/images/partners/microsoft.png',
+      description: 'Strategic partnership for Azure cloud services and AI platform integration.',
+      category: 'Cloud',
+      website: 'https://microsoft.com',
+      tier: 'strategic',
+      benefits: ['Azure Credits', 'Co-marketing', 'Technical Support', 'Training Programs'],
+      established: '2020'
+    },
+    {
+      id: 'aws',
       name: 'Amazon Web Services',
-      logo: '/images/partners/aws.png',}'Access to cutting-edge technology',
-    'Joint go-to-market opportunities',
-    'Technical support and training',
-    'Co-innovation projects',
-    'Global reach and scalability',
-    'Certified expertise and solutions'
-<<<<<<< HEAD
+      logo: '/images/partners/aws.png',
+      description: 'Preferred cloud provider for scalable AI and machine learning solutions.',
+      category: 'Cloud',
+      website: 'https://aws.amazon.com',
+      tier: 'strategic',
+      benefits: ['AWS Credits', 'Architecture Reviews', 'Marketplace Listing', 'Joint Events'],
+      established: '2019'
+    },
+    {
+      id: 'google',
+      name: 'Google Cloud',
+      logo: '/images/partners/google.png',
+      description: 'AI and machine learning platform partnership for advanced analytics.',
+      category: 'AI',
+      website: 'https://cloud.google.com',
+      tier: 'strategic',
+      benefits: ['GCP Credits', 'AI/ML Tools', 'Research Collaboration', 'Go-to-Market'],
+      established: '2021'
+    },
+    {
+      id: 'nvidia',
+      name: 'NVIDIA',
+      logo: '/images/partners/nvidia.png',
+      description: 'Hardware partnership for GPU-accelerated AI computing solutions.',
+      category: 'Hardware',
+      website: 'https://nvidia.com',
+      tier: 'certified',
+      benefits: ['GPU Access', 'Technical Training', 'Early Access', 'Support'],
+      established: '2020'
+    },
+    {
+      id: 'openai',
+      name: 'OpenAI',
+      logo: '/images/partners/openai.png',
+      description: 'API partnership for advanced language models and AI capabilities.',
+      category: 'AI',
+      website: 'https://openai.com',
+      tier: 'certified',
+      benefits: ['API Access', 'Model Training', 'Research Collaboration', 'Priority Support'],
+      established: '2022'
+    },
+    {
+      id: 'salesforce',
+      name: 'Salesforce',
+      logo: '/images/partners/salesforce.png',
+      description: 'CRM integration and business automation solutions partnership.',
+      category: 'Software',
+      website: 'https://salesforce.com',
+      tier: 'preferred',
+      benefits: ['Integration Tools', 'Training', 'Support', 'Co-selling'],
+      established: '2021'
+    },
+    {
+      id: 'ibm',
+      name: 'IBM',
+      logo: '/images/partners/ibm.png',
+      description: 'Enterprise AI and quantum computing research collaboration.',
+      category: 'Enterprise',
+      website: 'https://ibm.com',
+      tier: 'certified',
+      benefits: ['Watson Integration', 'Quantum Access', 'Research', 'Training'],
+      established: '2020'
+    },
+    {
+      id: 'databricks',
+      name: 'Databricks',
+      logo: '/images/partners/databricks.png',
+      description: 'Data analytics and machine learning platform partnership.',
+      category: 'Data',
+      website: 'https://databricks.com',
+      tier: 'preferred',
+      benefits: ['Platform Access', 'Training', 'Support', 'Co-marketing'],
+      established: '2021'
+    }
   ];
-  const benefits = [
-    {title: 'Certified Expertise',
-      description: 'Our team holds certifications from leading technology partners',
-      icon: CheckCircle;,},
-    {title: 'Priority Support',
-      description: 'Get priority access to partner resources and support channels',
-      icon: CheckCircle;,},
-    {title: 'Latest Technology',
-      description: 'Access to cutting-edge tools and early release features',
-      icon: CheckCircle;,},
-    {title: 'Cost Optimization',
-      description: 'Leverage partner pricing and volume discounts for your projects',
-      icon: CheckCircle;,}];
-  const categories = ['All', 'Cloud & AI', 'Hardware & AI', 'Business Software', 'IT Management']
 
-  return(<>)
-      <Helmet />
-        <title>Partners | Zion Tech Group</title>
-        <meta name="description" content="Learn about our technology partnerships and how they benefit our clients with certified expertise and priority support." />
-        <meta name="keywords" content="partners, technology partnerships, Microsoft, AWS, Google Cloud, NVIDIA, certified expertise" />
-      </Helmet>
-
-      <Navigation />
-      
-=======
-
+  const categories = [
+    { id: 'all', name: 'All Categories', count: partners.length },
+    { id: 'Cloud', name: 'Cloud', count: partners.filter(p => p.category === 'Cloud').length },
+    { id: 'AI', name: 'AI', count: partners.filter(p => p.category === 'AI').length },
+    { id: 'Hardware', name: 'Hardware', count: partners.filter(p => p.category === 'Hardware').length },
+    { id: 'Software', name: 'Software', count: partners.filter(p => p.category === 'Software').length },
+    { id: 'Enterprise', name: 'Enterprise', count: partners.filter(p => p.category === 'Enterprise').length },
+    { id: 'Data', name: 'Data', count: partners.filter(p => p.category === 'Data').length }
   ];
 
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" /></div>
-        <section className="py-20 px-4" /></section>
-          <div className="max-w-7xl mx-auto" /></div>
-            <div className="text-center mb-16" /></div>
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6" /></h1>
-                Our Technology Partners
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" /></p>
-=======
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        </div></div>
-        <section className="py-20 px-4">
-          </section></section><div className="max-w-7xl mx-auto">
-            </div></div><div className="text-center mb-16">
-              </div></div><h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Our Technology Partners;
-              </h1></h1></h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-                We work with leading technology companies to deliver the best solutions for our clients.
-              </p></p></p>
-            </div>
+  const tiers = [
+    { id: 'all', name: 'All Tiers', count: partners.length },
+    { id: 'strategic', name: 'Strategic', count: partners.filter(p => p.tier === 'strategic').length },
+    { id: 'certified', name: 'Certified', count: partners.filter(p => p.tier === 'certified').length },
+    { id: 'preferred', name: 'Preferred', count: partners.filter(p => p.tier === 'preferred').length }
+  ];
 
-<<<<<<< HEAD
-            <div className="flex flex-wrap justify-center gap-4 mb-12" /></div>
-              {categories.map((category) => ()
-              ))}
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16" /></div>
-              {partners.map((partner, index) => ()
-=======
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
-              {categories.map((category) => (
-                </div></div><button;
-                  key=category}
-                  className="px-6 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-full text-white hover:bg-white/20 transition-all duration-300"
-                >
-                  {category})
-                </button></button></button>)
-              ))}
-            </div>
-
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">,</div>
-              {partners.map((partner, index) => (
-                </div></div><div key=index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300">
-                  </div></div><div className="aspect-video bg-white/10 rounded-xl mb-4 flex items-center justify-center">
-                    </div></div><div className="text-4xl opacity-50">🏢</div></div></div>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-2">{partner.name}</h3></h3></h3>)
-                </div>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-              ))}
-            </div>
-
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-  const categories = ['all', ...Array.from(new Set(partners.map(partner => partner.category)))];
-  const tiers = ['all', ...Array.from(new Set(partners.map(partner => partner.tier)))];
-
-<<<<<<< HEAD
-  const filteredPartners = const filteredPartners = partners.filter();
-  });
-
-  const getTierColor = const getTierColor = const getTierColor = (tier: string) => {;
-    switch (tier) {;
-=======
-  const filteredPartners = partners.filter(partner => {;
->>>>>>> origin/main
+  const filteredPartners = partners.filter(partner => {
     const matchesCategory = selectedCategory === 'all' || partner.category === selectedCategory;
-    const matchesTier = selectedTier === 'all' || partner.tier === selectedTier;)
-    return matchesCategory && matchesTier;)
+    const matchesTier = selectedTier === 'all' || partner.tier === selectedTier;
+    const matchesSearch = partner.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         partner.description.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchesCategory && matchesTier && matchesSearch;
   });
 
   const getTierColor = (tier: string) => {
-    switch (tier) 
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-      case 'strategic':;
-        return 'from-purple-500 to-pink-600';
-      case 'preferred':
-        return 'from-blue-500 to-purple-600';
-      case 'certified':
-        return 'from-green-500 to-blue-600';
-      default: return 'from-gray-500 to-gray-600';,}};
+    switch (tier) {
+      case 'strategic': return 'from-purple-500 to-pink-600';
+      case 'certified': return 'from-cyan-500 to-blue-600';
+      case 'preferred': return 'from-green-500 to-emerald-600';
+      default: return 'from-gray-500 to-gray-600';
+    }
+  };
 
-<<<<<<< HEAD
-  const getTierIcon = const getTierIcon = const getTierIcon = (tier: string) => {;
-    switch (tier) {;
-=======
   const getTierIcon = (tier: string) => {
-    switch (tier) 
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-      case 'strategic':;
-        return <Star className="w-4 h-4" />;
-      case 'preferred':
-        return <Award className="w-4 h-4" />;
-      case 'certified':
-        return <CheckCircle className="w-4 h-4" />;
-      default: return <Handshake className="w-4 h-4" />;,}};
+    switch (tier) {
+      case 'strategic': return <Star className="w-4 h-4" />;
+      case 'certified': return <Award className="w-4 h-4" />;
+      case 'preferred': return <CheckCircle className="w-4 h-4" />;
+      default: return <Handshake className="w-4 h-4" />;
+    }
+  };
 
-<<<<<<< HEAD
-  return ()
-              onChange={(e) => setSelectedCategory(e.target.value)}
-              className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
-            >
-              {categories.map()
-=======
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      </div></div><Helmet>
+    <>
+      <Helmet>
         <title>Partners - Zion Tech Group | Strategic Partnerships</title>
-        <meta name="description" content="Meet our strategic partners and learn about our technology partnerships that enable us to deliver cutting-edge AI and IT solutions." />
-        <meta name="keywords" content="partners, partnerships, strategic partners, technology partners, AI partners, cloud partners" />
+        <meta name="description" content="Discover our strategic partnerships with leading technology companies. We work with Microsoft, AWS, Google, NVIDIA, and more to deliver cutting-edge solutions." />
+        <meta name="keywords" content="partners, partnerships, Microsoft, AWS, Google, NVIDIA, OpenAI, strategic alliances" />
       </Helmet>
-
-      {/* Hero Section */}
-      <section className="py-20 px-4">
-        </section></section><div className="max-w-7xl mx-auto text-center">
-          </div></div><h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-            Our </h1></h1><span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Partners</span></span></span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">We work with industry leaders to deliver the best AI and IT solutions.</p>
-            Our strategic partnerships enable us to provide comprehensive, cutting-edge technology.
-          </p></p></p>
-        </div>
-      </section>
-
-      {/* Partnership Benefits */}
-      <section className="py-16 px-4 bg-white/5">
-        </section></section><div className="max-w-7xl mx-auto">
-          </div></div><div className="text-center mb-16">
-            </div></div><h2 className="text-4xl font-bold text-white mb-6">Why Partner With Us?</h2></h2></h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We offer comprehensive partnership programs that benefit both our partners and our clients;
-            </p></p></p>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Navigation />
+        
+        {/* Hero Section */}
+        <section className="pt-32 pb-20 px-4">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Our <span className="text-cyan-400">Partners</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+              We collaborate with industry leaders to deliver comprehensive AI and IT solutions. 
+              Our strategic partnerships enable us to provide cutting-edge technology and expertise.
+            </p>
           </div>
+        </section>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            </div></div><div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 text-center">
-              </div></div><div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                </div></div><Handshake className="w-8 h-8 text-white" />
+        {/* Filters */}
+        <section className="py-8 px-4 bg-slate-800/30">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
+              {/* Search */}
+              <div className="relative flex-1 max-w-md">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search partners..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full pl-10 pr-4 py-2 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
+                />
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">Strategic Collaboration</h3></h3></h3>
-              <p className="text-gray-300">
-                Work together to develop innovative solutions that benefit both organizations and their customers.
-              </p></p></p>
-            </div>
 
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 text-center">
-              </div></div><div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                </div></div><Users className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-4">Joint Go-to-Market</h3></h3></h3>
-              <p className="text-gray-300">
-                Leverage our combined expertise and market presence to reach new customers and expand market share.
-              </p></p></p>
-            </div>
-
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 text-center">
-              </div></div><div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                </div></div><Award className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-4">Certification Programs</h3></h3></h3>
-              <p className="text-gray-300">
-                Access to training, certification, and technical resources to stay ahead of technology trends.
-              </p></p></p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Partners Grid */}
-      <section className="py-16 px-4">
-        </section></section><div className="max-w-7xl mx-auto">
-          </div></div><div className="flex flex-col md:flex-row gap-4 mb-12">
-            </div></div><select;)
-              value={selectedCategory})
-              onChange={(e) => setSelectedCategory(e.target.value)}
-              className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
-            >
-              {categories.map(category => (
-                <option key=category} value={category}>
-                  {category === 'all' ? 'All Categories' : category})
-                </option>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-              ))}
-            </select>
-            <select;
-              value={selectedTier}
-              onChange={(e) => setSelectedTier(e.target.value)}
-              className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
-            >
-<<<<<<< HEAD
-              {tiers.map() {tier === 'all' ? 'All Tiers' : tier.charAt(0).toUpperCase() + tier.slice(1)}
-=======
-              {tiers.map(tier => ()
-                <option key=tier} value={tier}>)
-                  {tier === 'all' ? 'All Tiers' : tier.charAt(0).toUpperCase() + tier.slice(1)}
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-                </option>
-              ))}
-            </select>
-          </div>
-
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" /></div>
-            {filteredPartners.map((partner) => ()
-                    <span className="text-white font-bold text-lg">{partner.name.charAt(0)}</span>
-                  </div>
-                  <div className={`px-3 py-1 rounded-full text-xs font-medium text-white bg-gradient-to-r ${getTierColor(partner.tier)} flex items-center gap-1`} /></div>
-=======
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredPartners.map((partner) => (
-              </div></div><div key=partner.id} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 border border-white/20">
-                </div></div><div className="flex items-center justify-between mb-6">)</div></div><div className="w-16 h-16 bg-gradient-to-br from-gray-500 to-gray-600 rounded-lg flex items-center justify-center">)</div></div><span className="text-white font-bold text-lg">{partner.name.charAt(0)}</span></span></span>
-                  </div>
-                  <div className={`px-3 py-1 rounded-full text-xs font-medium text-white bg-gradient-to-r $getTierColor(partner.tier)} flex items-center gap-1`}>
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-                    {getTierIcon(partner.tier)},
-    {partner.tier.charAt(0).toUpperCase() + partner.tier.slice(1)}
-                  </div></div></div>
-                </div>
-
-                <h3 className="text-xl font-bold text-white mb-2">{partner.name}</h3></h3></h3>
-                <p className="text-gray-300 text-sm mb-4">{partner.category}</p></p></p>
-                <p className="text-gray-300 mb-6">{partner.description}</p></p></p>
-
-<<<<<<< HEAD
-                <div className="flex items-center justify-between" /></div>
-                  <a href={partner.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-400 hover:text-blue-300 font-medium transition-colors flex items-center gap-2" /></a>
-                    Visit Website
-                    <ExternalLink className="w-4 h-4" / /></ExternalLink>
-=======
-                <div className="flex items-center justify-between">
-                  </div></div><a;
-                    href={partner.website}
-                    target="_blank" rel="noopener noreferrer", className="text-blue-400 hover:text-blue-300 font-medium transition-colors flex items-center gap-2"
+              {/* Category Filter */}
+              <div className="flex flex-wrap gap-2">
+                {categories.map((category) => (
+                  <button
+                    key={category.id}
+                    onClick={() => setSelectedCategory(category.id)}
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
+                      selectedCategory === category.id
+                        ? 'bg-cyan-500 text-white'
+                        : 'bg-slate-700 text-gray-300 hover:bg-slate-600'
+                    }`}
                   >
-                    Visit Website;
-                    <ExternalLink className="w-4 h-4" />
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-                  </a>
-                </div>
+                    {category.name} ({category.count})
+                  </button>
+                ))}
               </div>
-            ))}
-          </div>
 
-<<<<<<< HEAD
-          {filteredPartners.length === 0 && ()
-=======
-          {filteredPartners.length === 0 && (
-            <div className="text-center py-12">
-              </div></div><p className="text-gray-400 text-lg">No partners found matching your criteria.</p></p></p>)
-            </div>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-          )}
-        </div>
-      </section>
-
-      {/* Partnership Tiers */}
-<<<<<<< HEAD
-      <section className="py-16 px-4 bg-white/5" /></section>
-        <div className="max-w-7xl mx-auto" /></div>
-          <div className="text-center mb-16" /></div>
-            <h2 className="text-4xl font-bold text-white mb-6">Partnership Tiers</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto" /></p>
-              We offer different partnership levels to meet the needs of various organizations
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8" /></div>
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20" /></div>
-              <div className="flex items-center gap-3 mb-6" /></div>
-                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center" /></div>
-                  <CheckCircle className="w-6 h-6 text-white" / /></CheckCircle>
-=======
-      <section className="py-16 px-4 bg-white/5">
-        </section></section><div className="max-w-7xl mx-auto">
-          </div></div><div className="text-center mb-16">
-            </div></div><h2 className="text-4xl font-bold text-white mb-6">Partnership Tiers</h2></h2></h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We offer different partnership levels to meet the needs of various organizations;
-            </p></p></p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            </div></div><div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-              </div></div><div className="flex items-center gap-3 mb-6">
-                </div></div><div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center">
-                  </div></div><CheckCircle className="w-6 h-6 text-white" />
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-                </div>
-                <h3 className="text-2xl font-bold text-white">Certified Partner</h3></h3></h3>
+              {/* Tier Filter */}
+              <div className="flex flex-wrap gap-2">
+                {tiers.map((tier) => (
+                  <button
+                    key={tier.id}
+                    onClick={() => setSelectedTier(tier.id)}
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
+                      selectedTier === tier.id
+                        ? 'bg-purple-500 text-white'
+                        : 'bg-slate-700 text-gray-300 hover:bg-slate-600'
+                    }`}
+                  >
+                    {tier.name} ({tier.count})
+                  </button>
+                ))}
               </div>
-<<<<<<< HEAD
-              <ul className="space-y-3 text-gray-300" /></ul>
-                <li className="flex items-center gap-2" /></li>
-                  <CheckCircle className="w-4 h-4 text-green-400" / /></CheckCircle>
-                  <span>Basic training and certification</span>
-                </li>
-                <li className="flex items-center gap-2" /></li>
-                  <CheckCircle className="w-4 h-4 text-green-400" / /></CheckCircle>
-                  <span>Marketing support materials</span>
-                </li>
-                <li className="flex items-center gap-2" /></li>
-                  <CheckCircle className="w-4 h-4 text-green-400" / /></CheckCircle>
-                  <span>Technical documentation access</span>
-                </li>
-                <li className="flex items-center gap-2" /></li>
-                  <CheckCircle className="w-4 h-4 text-green-400" / /></CheckCircle>
-                  <span>Email support</span>
-=======
-              <ul className="space-y-3 text-gray-300">
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>Basic training and certification</span></span></span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>Marketing support materials</span></span></span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>Technical documentation access</span></span></span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>Email support</span></span></span>
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-                </li>
-              </ul>
-            </div>
-
-<<<<<<< HEAD
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/50 ring-2 ring-blue-400/20" /></div>
-              <div className="flex items-center gap-3 mb-6" /></div>
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center" /></div>
-                  <Award className="w-6 h-6 text-white" / /></Award>
-=======
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/50 ring-2 ring-blue-400/20">
-              </div></div><div className="flex items-center gap-3 mb-6">
-                </div></div><div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                  </div></div><Award className="w-6 h-6 text-white" />
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-                </div>
-                <h3 className="text-2xl font-bold text-white">Preferred Partner</h3></h3></h3>
-              </div>
-<<<<<<< HEAD
-              <ul className="space-y-3 text-gray-300" /></ul>
-                <li className="flex items-center gap-2" /></li>
-                  <CheckCircle className="w-4 h-4 text-green-400" / /></CheckCircle>
-                  <span>Advanced training and certification</span>
-                </li>
-                <li className="flex items-center gap-2" /></li>
-                  <CheckCircle className="w-4 h-4 text-green-400" / /></CheckCircle>
-                  <span>Co-marketing opportunities</span>
-                </li>
-                <li className="flex items-center gap-2" /></li>
-                  <CheckCircle className="w-4 h-4 text-green-400" / /></CheckCircle>
-                  <span>Priority technical support</span>
-                </li>
-                <li className="flex items-center gap-2" /></li>
-                  <CheckCircle className="w-4 h-4 text-green-400" / /></CheckCircle>
-                  <span>Dedicated partner manager</span>
-=======
-              <ul className="space-y-3 text-gray-300">
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>Advanced training and certification</span></span></span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>Co-marketing opportunities</span></span></span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>Priority technical support</span></span></span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>Dedicated partner manager</span></span></span>
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-                </li>
-              </ul>
-            </div>
-
-<<<<<<< HEAD
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20" /></div>
-              <div className="flex items-center gap-3 mb-6" /></div>
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center" /></div>
-                  <Star className="w-6 h-6 text-white" / /></Star>
-=======
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-              </div></div><div className="flex items-center gap-3 mb-6">
-                </div></div><div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center">
-                  </div></div><Star className="w-6 h-6 text-white" />
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-                </div>
-                <h3 className="text-2xl font-bold text-white">Strategic Partner</h3></h3></h3>
-              </div>
-<<<<<<< HEAD
-              <ul className="space-y-3 text-gray-300" /></ul>
-                <li className="flex items-center gap-2" /></li>
-                  <CheckCircle className="w-4 h-4 text-green-400" / /></CheckCircle>
-                  <span>Exclusive training and certification</span>
-                </li>
-                <li className="flex items-center gap-2" /></li>
-                  <CheckCircle className="w-4 h-4 text-green-400" / /></CheckCircle>
-                  <span>Joint product development</span>
-                </li>
-                <li className="flex items-center gap-2" /></li>
-                  <CheckCircle className="w-4 h-4 text-green-400" / /></CheckCircle>
-                  <span>24/7 priority support</span>
-                </li>
-                <li className="flex items-center gap-2" /></li>
-                  <CheckCircle className="w-4 h-4 text-green-400" / /></CheckCircle>
-                  <span>Executive relationship management</span>
-=======
-              <ul className="space-y-3 text-gray-300">
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>Exclusive training and certification</span></span></span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>Joint product development</span></span></span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>24/7 priority support</span></span></span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>Executive relationship management</span></span></span>
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-                </li>
-              </ul>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA Section */}
-<<<<<<< HEAD
-      <section className="py-20 px-4" /></section>
-        <div className="max-w-4xl mx-auto text-center" /></div>
-          <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12" /></div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" /></h2>
-              Become Our Partner
+        {/* Partners Grid */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredPartners.map((partner) => (
+                <div key={partner.id} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 group">
+                  {/* Header */}
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center text-white text-xl font-bold">
+                      {partner.name.split(' ').map(n => n[0]).join('')}
+                    </div>
+                    <div className={`px-3 py-1 rounded-full text-xs font-medium text-white bg-gradient-to-r ${getTierColor(partner.tier)} flex items-center gap-1`}>
+                      {getTierIcon(partner.tier)}
+                      {partner.tier.charAt(0).toUpperCase() + partner.tier.slice(1)}
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <h3 className="text-xl font-semibold text-white mb-2">{partner.name}</h3>
+                  <p className="text-gray-300 text-sm mb-4 leading-relaxed">{partner.description}</p>
+                  
+                  {/* Category & Established */}
+                  <div className="flex items-center justify-between mb-4 text-sm">
+                    <span className="px-2 py-1 bg-cyan-500/20 text-cyan-300 rounded">
+                      {partner.category}
+                    </span>
+                    <span className="text-gray-400">
+                      Since {partner.established}
+                    </span>
+                  </div>
+
+                  {/* Benefits */}
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-white mb-2">Partnership Benefits:</h4>
+                    <ul className="space-y-1">
+                      {partner.benefits.map((benefit, index) => (
+                        <li key={index} className="text-gray-300 text-sm flex items-center">
+                          <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* Actions */}
+                  <div className="flex gap-2">
+                    <a
+                      href={partner.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 inline-flex items-center justify-center px-4 py-2 bg-cyan-500/20 text-cyan-300 rounded-lg hover:bg-cyan-500/30 transition-all duration-300 text-sm font-medium"
+                    >
+                      <ExternalLink className="w-4 h-4 mr-2" />
+                      Visit Website
+                    </a>
+                    <button className="px-4 py-2 border border-cyan-500/50 text-cyan-300 rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm font-medium">
+                      Learn More
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {filteredPartners.length === 0 && (
+              <div className="text-center py-12">
+                <div className="w-16 h-16 bg-slate-700 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Search className="w-8 h-8 text-gray-400" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">No partners found</h3>
+                <p className="text-gray-400">Try adjusting your search or filter criteria.</p>
+              </div>
+            )}
+          </div>
+        </section>
+
+        {/* Become a Partner CTA */}
+        <section className="py-20 px-4 bg-slate-800/30">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Become Our <span className="text-cyan-400">Partner</span>
             </h2>
-            <p className="text-xl text-gray-300 mb-8" /></p>
-              Join our partner ecosystem and help us deliver innovative AI and IT solutions to businesses worldwide.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center" /></div>
-              <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105" /></button>
-                Apply for Partnership
-                <ArrowRight className="inline-block ml-2 w-5 h-5" / /></ArrowRight>
-              </button>
-              <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300" /></button>
-                Learn More
-              </button>
-=======
-      <section className="py-20 px-4">
-        </section></section><div className="max-w-4xl mx-auto text-center">
-          </div></div><div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-            </div></div><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Become Our Partner;
-            </h2></h2></h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join our partner ecosystem and help us deliver innovative AI and IT solutions to businesses worldwide.
-            </p></p></p>
+              Join our partner ecosystem and unlock new opportunities for growth. 
+              We offer various partnership programs tailored to your business needs.
+            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              </div></div><button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Apply for Partnership;
-                </button></button><ArrowRight className="inline-block ml-2 w-5 h-5" />
-              </button>
-              <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                Learn More;
-              </button></button></button>
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+              <a
+                href="/contact"
+                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+              >
+                <Handshake className="w-5 h-5 mr-2" />
+                Partner With Us
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </a>
+              <a
+                href="/partnership-programs"
+                className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
+              >
+                View Programs
+              </a>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
-<<<<<<< HEAD
-=======
+        </section>
 
->>>>>>> origin/main
+        <Footer />
+      </div>
+    </>
   );
 };
 

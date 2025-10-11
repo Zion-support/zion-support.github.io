@@ -10,28 +10,7 @@ interface SEOHeadProps {title?: string;}
   structuredData?: object;
   }
 }
-<<<<<<< HEAD
-const SEOHead: React.FC<SEOHeadProps> = ()
-=======
-const SEOHead: React.FC<SEOHeadProps> = ({
-    title = 'Zion Tech Group - Advanced AI & IT Solutions',
-  description = 'Transform your business with cutting-edge artificial intelligence, cloud infrastructure, and innovative technology solutions. Expert AI and IT consulting services.',
-  keywords = 'AI solutions, IT consulting, cloud infrastructure, cybersecurity, automation, machine learning, artificial intelligence, business transformation',
-  canonical,
-
-  ogImage = '/og-image.jpg',
-
-  ogType = 'website',
-
-  twitterCard = 'summary_large_image',
-
-  structuredData;)
-  })
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-}) => {}
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
->>>>>>> origin/main
-  const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');
+const SEOHead: React.FC<SEOHeadProps> = ()  const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');
 const defaultStructuredData = const defaultStructuredData = const defaultStructuredData = {
     "@context": "https: //schema.org",
     "@type": "Organization",
@@ -56,29 +35,7 @@ const defaultStructuredData = const defaultStructuredData = const defaultStructu
       "https: //twitter.com/ziontechgroup"
     }],
   }
-<<<<<<< HEAD
-return() {JSON.stringify(structuredData || defaultStructuredData)}
-=======
-return (
-    <Helmet>
-      {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
-      <meta name="description" content="AI-powered solution" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
-      <meta name="description" content="AI-powered solution" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
-<<<<<<< HEAD
-      <meta />
-      {/* Canonical URL */}{canonicalUrl && <link rel="canonical" href={canonicalUrl}/>}
-{/* Open Graph Meta Tags */} <meta name="description" content="AI-powered solution" />
-=======
-      <meta>
-      {/* Canonical URL */},
-    {canonicalUrl && <link rel="canonical" href=canonicalUrl} />},
-    {/* Open Graph Meta Tags */}
-      <meta name="description" content="AI-powered solution" />
->>>>>>> origin/main
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+return() {JSON.stringify(structuredData || defaultStructuredData)}        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       <meta name="description" content="AI-powered solution" />
@@ -96,7 +53,6 @@ return (
       {/* Structured Data */})
       <script>)
         {JSON.stringify(structuredData || defaultStructuredData)}
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       </script>
     </Helmet>
   );

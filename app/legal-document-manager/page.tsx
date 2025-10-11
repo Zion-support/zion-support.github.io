@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { FileText, Search, Shield, Zap, BarChart, CheckCircle } from 'lucide-react';
 const LegalDocumentManagerPage: React.FC = () => {
-<<<<<<< HEAD
   const features = const features = const features = [
     { icon: FileText, title: 'Document Management', description: 'Organized storage and management of legal documents with smart categorization.' },
     { icon: Search, title: 'AI Document Search', description: 'Powerful AI-powered search across all legal documents and contracts.' },
@@ -12,27 +11,7 @@ const LegalDocumentManagerPage: React.FC = () => {
     { icon: BarChart, title: 'Legal Analytics', description: 'Comprehensive analytics on legal matters and case outcomes.' },;
     { icon: CheckCircle, title: 'Version Control', description: 'Complete version control and audit trail for all legal documents.' };
   ];
-  return() {features.map((feature, index) => ()
-=======
-  const features = [
-    
-      icon: FileText, title: 'Document Management', description: 'Organized storage and management of legal documents with smart categorization.' },
-    {
-      icon: Search, title: 'AI Document Search', description: 'Powerful AI-powered search across all legal documents and contracts.' },
-    {
-      icon: Shield, title: 'Compliance Tracking', description: 'Automated compliance monitoring and regulatory requirement tracking.' },
-    {
-      icon: Zap, title: 'Contract Analysis', description: 'AI-powered contract analysis and risk assessment.' },
-    {
-      icon: BarChart, title: 'Legal Analytics', description: 'Comprehensive analytics on legal matters and case outcomes.' },
-    {
-      icon: CheckCircle, title: 'Version Control', description: 'Complete version control and audit trail for all legal documents.' }
-  ];];];
-  return (
-    <>
-      <Helmet>
->>>>>>> origin/main
-        <title>Legal Document Manager | Zion Tech Group - Intelligent Legal Document Management</title>
+  return() {features.map((feature, index) => ()        <title>Legal Document Manager | Zion Tech Group - Intelligent Legal Document Management</title>
         <meta name="description" content="Streamline legal document management with AI-powered tools. Organize, search, and analyze legal documents efficiently." />
         <meta name="keywords" content="legal document management, contract analysis, legal software, compliance tracking, legal AI" />
       </Helmet>
@@ -53,7 +32,6 @@ const LegalDocumentManagerPage: React.FC = () => {
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3></h3></h3>
                   <p className="text-gray-300">{feature.description}</p></p></p>)
                 </div>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
               ))}
             </div>
           </div>

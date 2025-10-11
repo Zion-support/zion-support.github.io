@@ -3,7 +3,6 @@
  * Provides comprehensive accessibility improvements for web applications;
  */
 
-<<<<<<< HEAD
 export class AccessibilityEnhancer {private focusableElements: HTMLElement[] = [],}
   private skipLinks: HTMLElement[] = [],
   private landmarks: HTMLElement[] = [],
@@ -87,184 +86,7 @@ export class AccessibilityEnhancer {private focusableElements: HTMLElement[] = [
    * Handle escape key;
    */
   private handleEscapeKey(event: KeyboardEvent): void {,}
-    // Close any open modals or dropdowns;
-=======
-  private handleEscapeKey(event: KeyboardEvent): void {
-<<<<<<< HEAD
-    // Close any open modals or dropdowns
-    const modals = document.querySelectorAll('[role="dialog"], [aria-hidden="false"]');
-    modals.forEach()
-=======
-    // Close any open modals or dropdowns;
-    const modals = document.querySelectorAll('[role="dialog"][aria-hidden="false"]');
-    modals.forEach(modal => )
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-      const closeButton = modal.querySelector('[aria-label*="close"], [aria-label*="Close"]') as HTMLElement;
-      closeButton?.click();})
-    
-<<<<<<< HEAD
-    // Close any open menus
-    const menus = document.querySelectorAll('[role="menu"], [aria-expanded="true"]');
-    menus.forEach()
-      const trigger = document.querySelector(`[aria-controls="${menu.id}"]`) as HTMLElement;
-=======
-    // Close any open menus;
-    const menus = document.querySelectorAll('[role="menu"][aria-expanded="true"]');
-    menus.forEach(menu => {)
-      const trigger = document.querySelector(`[aria-controls="$menu.id}"]`) as HTMLElement;
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-      trigger?.click();
-    })
-  }
-
-  /**
-   * Handle arrow key navigation;
-   */
-  private handleArrowKeys(event: KeyboardEvent): void {,}
-    const activeElement = document.activeElement as HTMLElement;
-    
-    // Handle arrow keys for radio groups, menus, etc.
-    if (activeElement.getAttribute('role') === 'menuitem' || 
-        activeElement.getAttribute('type') === 'radio') 
-      this.handleMenuNavigation(event);
-    }
-  }
-
-  /**
-   * Handle menu navigation with arrow keys;
-   */
-  private handleMenuNavigation(event: KeyboardEvent): void {,}
-    const activeElement = document.activeElement as HTMLElement;
-<<<<<<< HEAD
-    const menuItems = const menuItems = const menuItems = Array.from()
-      activeElement.closest('[role="menu"]')?.querySelectorAll('[role="menuitem"]') || [];
-    ) as HTMLElement[];
-=======
-    const menuItems = Array.from()
-      activeElement.closest('[role="menu"]')?.querySelectorAll('[role="menuitem"]') || []
-    ) as HTMLElement[]
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-    ;
-    const currentIndex = menuItems.indexOf(activeElement);
-    
-    if (currentIndex === -1) return;
-    
-    let nextIndex = currentIndex;
-    
-    switch (event.key) 
-      case 'ArrowDown':
-        nextIndex = (currentIndex + 1) % menuItems.length;
-        break;
-      case 'ArrowUp':
-        nextIndex = currentIndex > 0 ? currentIndex - 1 : menuItems.length - 1;
-        break;
-      case 'ArrowRight':
-        nextIndex = (currentIndex + 1) % menuItems.length;
-        break;
-      case 'ArrowLeft':
-        nextIndex = currentIndex > 0 ? currentIndex - 1 : menuItems.length - 1;
-        break;}menuItems[nextIndex]?.focus();
-    event.preventDefault();
-  }
-
-  /**
-   * Setup skip links;
-   */
-  private setupSkipLinks(): void {
-    // Create skip to main content link;
-    const skipLink = document.createElement('a');
-    skipLink.href = '#main-content';
-    skipLink.textContent = 'Skip to main content';
-    skipLink.className = 'sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';,
-    document.body.insertBefore(skipLink, document.body.firstChild);
-    
-    this.skipLinks.push(skipLink);
-  }
-
-  /**
-   * Setup landmarks;
-   */
-  private setupLandmarks(): void {
-    // Ensure main content has proper landmark;
-    const mainContent = document.querySelector('main') || document.querySelector('#main-content');
-    if (mainContent) 
-      mainContent.setAttribute('role', 'main');
-      mainContent.id = 'main-content';
-    }
-    
-    // Setup navigation landmarks;
-    const navs = document.querySelectorAll('nav');
-    navs.forEach((nav, index) => {
-      if (!nav.getAttribute('aria-label') && !nav.getAttribute('aria-labelledby')
-        nav.setAttribute('aria-label', `Navigation $index + 1}`);
-      }
-    })
-    
-    // Setup banner landmark;
-    const header = document.querySelector('header');
-    if (header) {
-      header.setAttribute('role', 'banner');
-    }
-    
-    // Setup contentinfo landmark;
-    const footer = document.querySelector('footer');
-    if (footer) {footer.setAttribute('role', 'contentinfo');}}
-
-  /**
-   * Setup ARIA labels;
-   */
-  private setupAriaLabels(): void {
-    // Add ARIA labels to buttons without text;
-    const iconButtons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
-<<<<<<< HEAD
-    iconButtons.forEach()
-=======
-    iconButtons.forEach(button => )
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-      const icon = button.querySelector('svg');
-      if (icon) 
-        const iconName = icon.getAttribute('data-icon') || 'button';
-        button.setAttribute('aria-label', iconName);}})
-    
-    // Add ARIA labels to form inputs;
-    const inputs = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])');
-<<<<<<< HEAD
-    inputs.forEach()
-      const label = document.querySelector(`label[for="${input.id}"]`);
-=======
-    inputs.forEach(input => {)
-      const label = document.querySelector(`label[for="$input.id}"]`);
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-      if (label) {
-        input.setAttribute('aria-labelledby', label.id || `label-$input.id}`);
-        if (!label.id) {
-          label.id = `label-$input.id}`;
-        }
-      }
-    })
-  }
-
-  /**
-   * Setup color contrast improvements;
-   */
-  private setupColorContrast(): void {
-    // Add high contrast mode support;
-    const mediaQuery = window.matchMedia('(prefers-contrast: high)');
-    
-<<<<<<< HEAD
-    const handleContrastChange = const handleContrastChange = (e: MediaQueryListEvent) => {;
-      if (e.matches) {;
-=======
-    const handleContrastChange = (e: MediaQueryListEvent) => 
-      if (e.matches) ;
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-        document.body.classList.add('high-contrast');
-      } else {
-        document.body.classList.remove('high-contrast');
-      }
-    }
->>>>>>> origin/main
-    
+    // Close any open modals or dropdowns;    
     mediaQuery.addEventListener('change', handleContrastChange);
     handleContrastChange(mediaQuery);
   }
@@ -339,7 +161,6 @@ export class AccessibilityEnhancer {private focusableElements: HTMLElement[] = [
   public destroy(): void {this.isInitialized = false;}
     this.focusableElements = []
     this.skipLinks = []
-<<<<<<< HEAD
     this.landmarks = []}}
 
 // Create global instance;
@@ -348,12 +169,3 @@ export const accessibilityEnhancer = new AccessibilityEnhancer();
 // Export utility functions;
 export const announceToScreenReader = (message: string) => {,
   accessibilityEnhancer.announce(message);}export const updateFocusableElements = () => {accessibilityEnhancer.updateFocusableElements();}export const focusFirstElement = () => {accessibilityEnhancer.focusFirst();}export const focusLastElement = () => {accessibilityEnhancer.focusLast();}
-=======
-    this.landmarks = []
-  }
-
-// Export utility functions;
-export const announceToScreenReader = (message: string) => {;
-  accessibilityEnhancer.announce(message);
-}
->>>>>>> origin/main

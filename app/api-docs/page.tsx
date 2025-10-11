@@ -1,305 +1,467 @@
 'use client';
-import React, {useState}from 'react';
-import {Search, Code, Key, Zap, ArrowRight, Copy, Check, Globe, Brain, Cloud, Shield, Settings, Users, Database, Eye, Sparkles, BookOpen, FileText, Download}}from 'lucide-react';
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Code, Copy, Check, ExternalLink, BookOpen, Zap, Shield, Database, Cloud, Brain } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-export default function APIDocsPage() {const [copiedCode, setCopiedCode] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState('');
-<<<<<<< HEAD
-  const copyToClipboard = const copyToClipboard = const copyToClipboard = (code: string, id: string) => {
-=======
-  const copyToClipboard = (code: string, id: string) => 
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-    navigator.clipboard.writeText(code)
-    setCopiedCode(id),
-    setTimeout(() => setCopiedCode(null), 2000)}const apiEndpoints = [
-    {title: 'AI Services',
-      description: 'Artificial Intelligence and Machine Learning APIs',
-      icon: Brain,
-      endpoints: [,
-      name: 'Text Analysis',
-          method: 'POST',
-          path: '/api/ai/text-analysis',
-          description: 'Analyze text sentiment, entities, and key phrases',
-          code: `curl -X POST "https://api.ziontechgroup.com/ai/text-analysis" \\
-  -H "Authorization: Bearer YOUR_API_KEY" \\
-  -H "Content-Type: application/json" \\
-<<<<<<< HEAD
-  -d '{;
-    "text": "Your text to analyze",;
-=======
-  -d '
-    "text": "Your text to analyze",
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-    "features": ["sentiment", "entities", "key_phrases"];
-  }'`
->>>>>>> origin/main
-        },
-        {name: 'Image Recognition',
-          method: 'POST',
-          path: '/api/ai/image-recognition',
-          description: 'Identify objects, faces, and scenes in images',
-          code: `curl -X POST "https://api.ziontechgroup.com/ai/image-recognition" \\
-  -H "Authorization: Bearer YOUR_API_KEY" \\
-  -H "Content-Type: application/json" \\
-  -d '
-    "image_url": "https://example.com/image.jpg",
-    "features": ["objects", "faces", "text"]}'`
-        }
-  ]
-    },
-    {title: 'Cloud Services',
-      description: 'Cloud infrastructure and deployment APIs',
-      icon: Cloud,
-      endpoints: [,
-        {
-          name: 'Deploy Application',
-          method: 'POST',
-          path: '/api/cloud/deploy',
-          description: 'Deploy applications to cloud infrastructure',
-          code: `curl -X POST "https://api.ziontechgroup.com/cloud/deploy" \\
-  -H "Authorization: Bearer YOUR_API_KEY" \\
-  -H "Content-Type: application/json" \\
-  -d '
-    "app_name": "my-app",
-    "environment": "production",
-    "config": 
-      "cpu": "2",
-      "memory": "4GB",
-      "instances": 3;
-    }
-  }'`
-        }
-  ]
-    },
-    {title: 'Data Analytics',
-      description: 'Data processing and analytics APIs',
-      icon: Database,
-      endpoints: [,
-      name: 'Process Data',
-          method: 'POST',
-          path: '/api/analytics/process',
-          description: 'Process and analyze large datasets',
-          code: `curl -X POST "https://api.ziontechgroup.com/analytics/process" \\
-  -H "Authorization: Bearer YOUR_API_KEY" \\
-  -H "Content-Type: application/json" \\
-  -d '
-    "dataset_id": "dataset_123",
-    "operations": ["aggregate", "filter", "transform"],
-    "output_format": "json"}'`
-        }
-  ]
-<<<<<<< HEAD
-  const filteredEndpoints = apiEndpoints.map(category => ({)
-=======
-    }
-<<<<<<< HEAD
-  ];
-  const filteredEndpoints = const filteredEndpoints = const filteredEndpoints = apiEndpoints.map()
-      endpoint.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      endpoint.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      endpoint.path.toLowerCase().includes(searchQuery.toLowerCase());
-    );
-  })).filter(category => category.endpoints.length > 0);
-  return() {filteredEndpoints.map((category, categoryIndex) => ()
-                  {category.endpoints.map((endpoint, endpointIndex) => ()
-                          onClick={() => copyToClipboard(endpoint.code, `${categoryIndex}-${endpointIndex}`)}
-                          className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
-                          {copiedCode === `${categoryIndex}-${endpointIndex}` ? ()
-                          ) : ()
-                          )}
-                        </button>
-                      </div>
-                      <p className="text-gray-300 mb-4">{endpoint.description}</p>
-                      <div className="bg-slate-900 rounded-lg p-4 overflow-x-auto" /></div>
-                        <pre className="text-gray-300 text-sm" /></pre>
-                          <code>{endpoint.code}</code>
-=======
-  ];];
-  const filteredEndpoints = apiEndpoints.map(category => ({
-    ...category,)
-    endpoints: category.endpoints.filter(endpoint => )
-      endpoint.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      endpoint.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      endpoint.path.toLowerCase().includes(searchQuery.toLowerCase()
-    )
-  })).filter(category => category.endpoints.length > 0);
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      </div></div><SEOOptimizer;
-        title="API Documentation - Zion Tech Group" description="Complete API documentation for Zion Tech Group's AI and IT solutions. Explore endpoints, authentication, and integration guides.", keywords="API documentation, REST API, AI API, cloud API, integration, developer tools, API reference"
-      />
-      <Navigation />
-      {/* Hero Section */}
-<<<<<<< HEAD
-<section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">API Documentation;</h1>
-  </
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Complete API documentation for Zion Tech Group's AI and IT solutions.</p>
-=======
 
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Complete API documentation for Zion Tech Group's AI and IT solutions. 
->>>>>>> origin/main
-            Explore endpoints, authentication, and integration guides.
-          </p></p></p>
-            <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
-              </button></button><Code className="mr-2 h-5 w-5" />
-              Get Started;
-  </
-            <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-              </button></button><Download className="mr-2 h-5 w-5" />
-              Download SDK,
-  </
+interface APIEndpoint {
+  id: string;
+  method: string;
+  path: string;
+  description: string;
+  parameters: Array<{
+    name: string;
+    type: string;
+    required: boolean;
+    description: string;
+  }>;
+  response: {
+    status: number;
+    example: any;
+  };
+  category: string;
+}
+
+const ApiDocsPage: React.FC = () => {
+  const [copiedCode, setCopiedCode] = useState<string | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState('all');
+
+  const categories = [
+    { id: 'all', name: 'All APIs', icon: BookOpen },
+    { id: 'ai', name: 'AI Services', icon: Brain },
+    { id: 'cloud', name: 'Cloud', icon: Cloud },
+    { id: 'database', name: 'Database', icon: Database },
+    { id: 'security', name: 'Security', icon: Shield },
+    { id: 'analytics', name: 'Analytics', icon: Zap }
+  ];
+
+  const endpoints: APIEndpoint[] = [
+    {
+      id: 'ai-chat',
+      method: 'POST',
+      path: '/api/v1/ai/chat',
+      description: 'Send a message to the AI chat service and get a response.',
+      category: 'ai',
+      parameters: [
+        { name: 'message', type: 'string', required: true, description: 'The message to send to the AI' },
+        { name: 'model', type: 'string', required: false, description: 'AI model to use (default: gpt-4)' },
+        { name: 'temperature', type: 'number', required: false, description: 'Response creativity (0-1, default: 0.7)' }
+      ],
+      response: {
+        status: 200,
+        example: {
+          response: "Hello! How can I help you today?",
+          model: "gpt-4",
+          tokens_used: 15,
+          timestamp: "2024-01-15T10:30:00Z"
+        }
+      }
+    },
+    {
+      id: 'ai-content-generate',
+      method: 'POST',
+      path: '/api/v1/ai/content/generate',
+      description: 'Generate content using AI based on provided prompts.',
+      category: 'ai',
+      parameters: [
+        { name: 'prompt', type: 'string', required: true, description: 'Content generation prompt' },
+        { name: 'type', type: 'string', required: true, description: 'Content type (blog, email, social, etc.)' },
+        { name: 'length', type: 'number', required: false, description: 'Desired content length in words' }
+      ],
+      response: {
+        status: 200,
+        example: {
+          content: "Generated content based on your prompt...",
+          type: "blog",
+          word_count: 250,
+          timestamp: "2024-01-15T10:30:00Z"
+        }
+      }
+    },
+    {
+      id: 'analytics-dashboard',
+      method: 'GET',
+      path: '/api/v1/analytics/dashboard',
+      description: 'Retrieve analytics dashboard data.',
+      category: 'analytics',
+      parameters: [
+        { name: 'date_from', type: 'string', required: false, description: 'Start date (YYYY-MM-DD)' },
+        { name: 'date_to', type: 'string', required: false, description: 'End date (YYYY-MM-DD)' },
+        { name: 'metrics', type: 'array', required: false, description: 'Specific metrics to retrieve' }
+      ],
+      response: {
+        status: 200,
+        example: {
+          total_users: 1250,
+          active_users: 890,
+          page_views: 15420,
+          conversion_rate: 3.2,
+          period: "2024-01-01 to 2024-01-15"
+        }
+      }
+    },
+    {
+      id: 'cloud-deploy',
+      method: 'POST',
+      path: '/api/v1/cloud/deploy',
+      description: 'Deploy an application to the cloud infrastructure.',
+      category: 'cloud',
+      parameters: [
+        { name: 'app_name', type: 'string', required: true, description: 'Name of the application' },
+        { name: 'environment', type: 'string', required: true, description: 'Deployment environment (dev, staging, prod)' },
+        { name: 'config', type: 'object', required: true, description: 'Application configuration' }
+      ],
+      response: {
+        status: 200,
+        example: {
+          deployment_id: "dep_123456",
+          status: "deploying",
+          url: "https://app-123456.example.com",
+          estimated_time: "5 minutes"
+        }
+      }
+    },
+    {
+      id: 'database-query',
+      method: 'POST',
+      path: '/api/v1/database/query',
+      description: 'Execute a database query.',
+      category: 'database',
+      parameters: [
+        { name: 'query', type: 'string', required: true, description: 'SQL query to execute' },
+        { name: 'database', type: 'string', required: true, description: 'Target database name' },
+        { name: 'limit', type: 'number', required: false, description: 'Maximum number of results' }
+      ],
+      response: {
+        status: 200,
+        example: {
+          results: [
+            { id: 1, name: "Example", created_at: "2024-01-15T10:30:00Z" }
+          ],
+          row_count: 1,
+          execution_time: "0.05s"
+        }
+      }
+    },
+    {
+      id: 'security-scan',
+      method: 'POST',
+      path: '/api/v1/security/scan',
+      description: 'Perform a security scan on the specified target.',
+      category: 'security',
+      parameters: [
+        { name: 'target', type: 'string', required: true, description: 'URL or IP to scan' },
+        { name: 'scan_type', type: 'string', required: true, description: 'Type of security scan' },
+        { name: 'options', type: 'object', required: false, description: 'Additional scan options' }
+      ],
+      response: {
+        status: 200,
+        example: {
+          scan_id: "scan_789012",
+          status: "completed",
+          vulnerabilities: 0,
+          score: 95,
+          report_url: "https://reports.example.com/scan_789012"
+        }
+      }
+    }
+  ];
+
+  const filteredEndpoints = endpoints.filter(endpoint => 
+    selectedCategory === 'all' || endpoint.category === selectedCategory
+  );
+
+  const copyToClipboard = async (code: string, id: string) => {
+    try {
+      await navigator.clipboard.writeText(code);
+      setCopiedCode(id);
+      setTimeout(() => setCopiedCode(null), 2000);
+    } catch (err) {
+      console.error('Failed to copy: ', err);
+    }
+  };
+
+  const getMethodColor = (method: string) => {
+    switch (method) {
+      case 'GET': return 'bg-green-500';
+      case 'POST': return 'bg-blue-500';
+      case 'PUT': return 'bg-yellow-500';
+      case 'DELETE': return 'bg-red-500';
+      default: return 'bg-gray-500';
+    }
+  };
+
+  const generateCodeExample = (endpoint: APIEndpoint) => {
+    const baseUrl = 'https://api.ziontechgroup.com';
+    const exampleParams = endpoint.parameters
+      .filter(p => p.required)
+      .reduce((acc, param) => {
+        acc[param.name] = param.type === 'string' ? `"example_${param.name}"` : 
+                         param.type === 'number' ? 123 : 
+                         param.type === 'boolean' ? true : 
+                         param.type === 'array' ? '[]' : '{}';
+        return acc;
+      }, {} as any);
+
+    if (endpoint.method === 'GET') {
+      const queryParams = Object.entries(exampleParams)
+        .map(([key, value]) => `${key}=${value}`)
+        .join('&');
+      return `curl -X GET "${baseUrl}${endpoint.path}?${queryParams}" \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\
+  -H "Content-Type: application/json"`;
+    } else {
+      return `curl -X ${endpoint.method} "${baseUrl}${endpoint.path}" \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\
+  -H "Content-Type: application/json" \\
+  -d '${JSON.stringify(exampleParams, null, 2)}'`;
+    }
+  };
+
+  return (
+    <>
+      <Helmet>
+        <title>API Documentation - Zion Tech Group | Developer API Reference</title>
+        <meta name="description" content="Complete API documentation for Zion Tech Group services. Find endpoints, parameters, examples, and integration guides." />
+        <meta name="keywords" content="API, documentation, developer, endpoints, integration, REST API" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Navigation />
+        
+        {/* Hero Section */}
+        <section className="pt-32 pb-20 px-4">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="text-cyan-400">API</span> Documentation
+            </h1>
+            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+              Comprehensive API reference for all our services. Get started with our RESTful APIs 
+              and integrate our AI and IT solutions into your applications.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="#getting-started"
+                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+              >
+                <BookOpen className="w-5 h-5 mr-2" />
+                Get Started
+              </a>
+              <a
+                href="/docs"
+                className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
+              >
+                <ExternalLink className="w-5 h-5 mr-2" />
+                View Full Docs
+              </a>
+            </div>
           </div>
-        </div>
-      </section>
-      {/* Quick Start */}
-      <section className="py-16 px-4">
-        </section></section><div className="max-w-7xl mx-auto">
-          </div></div><h2 className="text-3xl font-bold text-white mb-8 text-center">Quick Start</h2></h2></h2>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            </div></div><div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-              </div></div><div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
-                </div></div><Key className="w-6 h-6 text-white" />
+        </section>
+
+        {/* Getting Started */}
+        <section id="getting-started" className="py-20 px-4 bg-slate-800/30">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center">Getting Started</h2>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20">
+                <h3 className="text-xl font-semibold text-white mb-4">Authentication</h3>
+                <p className="text-gray-300 mb-4">
+                  All API requests require authentication using your API key. Include it in the Authorization header.
+                </p>
+                <div className="bg-slate-900 rounded-lg p-4 relative">
+                  <button
+                    onClick={() => copyToClipboard('Authorization: Bearer YOUR_API_KEY', 'auth-header')}
+                    className="absolute top-2 right-2 p-2 text-gray-400 hover:text-cyan-400 transition-colors"
+                  >
+                    {copiedCode === 'auth-header' ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
+                  </button>
+                  <code className="text-cyan-300 text-sm">
+                    Authorization: Bearer YOUR_API_KEY
+                  </code>
+                </div>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">1. Get API Key</h3></h3></h3>
-              <p className="text-gray-300 mb-4">Sign up and get your API key from the dashboard</p></p></p>
-              <button className="text-purple-400 hover:text-purple-300 font-medium">
-                Get API Key →
-              </button></button></button>
-            </div>
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-              </div></div><div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
-                </div></div><Code className="w-6 h-6 text-white" />
+              
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20">
+                <h3 className="text-xl font-semibold text-white mb-4">Base URL</h3>
+                <p className="text-gray-300 mb-4">
+                  All API endpoints are relative to our base URL. Use HTTPS for all requests.
+                </p>
+                <div className="bg-slate-900 rounded-lg p-4 relative">
+                  <button
+                    onClick={() => copyToClipboard('https://api.ziontechgroup.com', 'base-url')}
+                    className="absolute top-2 right-2 p-2 text-gray-400 hover:text-cyan-400 transition-colors"
+                  >
+                    {copiedCode === 'base-url' ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
+                  </button>
+                  <code className="text-cyan-300 text-sm">
+                    https://api.ziontechgroup.com
+                  </code>
+                </div>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">2. Make Request</h3></h3></h3>
-              <p className="text-gray-300 mb-4">Use our REST API with your preferred language</p></p></p>
-              <button className="text-purple-400 hover:text-purple-300 font-medium">
-                View Examples →
-              </button></button></button>
-            </div>
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-              </div></div><div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
-                </div></div><Zap className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">3. Integrate</h3></h3></h3>
-              <p className="text-gray-300 mb-4">Build amazing applications with our APIs</p></p></p>
-              <button className="text-purple-400 hover:text-purple-300 font-medium">
-                Start Building →
-              </button></button></button>
             </div>
           </div>
-        </div>
-      </section>
-      {/* API Endpoints */}
-      <section className="py-16 px-4">
-        </section></section><div className="max-w-7xl mx-auto">
-          </div></div><h2 className="text-3xl font-bold text-white mb-12 text-center">API Endpoints</h2></h2></h2>)
-          <div className="space-y-8">)
-            {filteredEndpoints.map((category, categoryIndex) => (
-              </div></div><div key=categoryIndex} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-                </div></div><div className="flex items-center gap-4 mb-8">
-                  </div></div><div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
-                    </div></div><category.icon className="w-6 h-6 text-white" />
+        </section>
+
+        {/* API Categories */}
+        <section className="py-8 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex flex-wrap gap-2 justify-center">
+              {categories.map((category) => {
+                const IconComponent = category.icon;
+                return (
+                  <button
+                    key={category.id}
+                    onClick={() => setSelectedCategory(category.id)}
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 flex items-center gap-2 ${
+                      selectedCategory === category.id
+                        ? 'bg-cyan-500 text-white'
+                        : 'bg-slate-700 text-gray-300 hover:bg-slate-600'
+                    }`}
+                  >
+                    <IconComponent className="w-4 h-4" />
+                    {category.name}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* API Endpoints */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center">API Endpoints</h2>
+            <div className="space-y-8">
+              {filteredEndpoints.map((endpoint) => (
+                <div key={endpoint.id} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20">
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="flex items-center gap-4">
+                      <span className={`px-3 py-1 rounded text-sm font-medium text-white ${getMethodColor(endpoint.method)}`}>
+                        {endpoint.method}
+                      </span>
+                      <code className="text-cyan-300 text-lg font-mono">{endpoint.path}</code>
+                    </div>
+                    <button
+                      onClick={() => copyToClipboard(generateCodeExample(endpoint), endpoint.id)}
+                      className="p-2 text-gray-400 hover:text-cyan-400 transition-colors"
+                    >
+                      {copiedCode === endpoint.id ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
+                    </button>
                   </div>
-                  <div>
-                    </div></div><h3 className="text-2xl font-bold text-white mb-2">{category.title}</h3></h3></h3>
-                    <p className="text-gray-300">{category.description}</p></p></p>
-                  </div>
-                </div>)
-                <div className="space-y-6">)
-                  {category.endpoints.map((endpoint, endpointIndex) => (
-                    </div></div><div key=endpointIndex} className="bg-white/5 rounded-xl p-6 border border-white/10">
-                      </div></div><div className="flex items-center justify-between mb-4">
-                        </div></div><div className="flex items-center gap-4">
-                          </div></div><span className={`px-3 py-1 rounded-full text-sm font-medium $
-                            endpoint.method === 'POST' 
-                              ? 'bg-green-500/20 text-green-400' 
-                              : 'bg-blue-500/20 text-blue-400'
-                          }`}>
-                            {endpoint.method}
-                          </span></span></span>
-                          <code className="text-purple-400 font-mono">{endpoint.path}</code>
-                        </div>)
-                        <button)
-                          onClick={() => copyToClipboard(endpoint.code, `$categoryIndex}-${endpointIndex}`)}
-                          className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
-                          {copiedCode === `$categoryIndex}-${endpointIndex}` ? (
-                            </button></button><>
-                              <Check className="w-4 h-4" />
-                              Copied!)
-                            </>)
-                          ) : (
-                            <>
-                              <Copy className="w-4 h-4" />
-                              Copy;)
-                            </>)
-                          )}
-                        </button>
+                  
+                  <p className="text-gray-300 mb-6">{endpoint.description}</p>
+                  
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    {/* Parameters */}
+                    <div>
+                      <h4 className="text-lg font-semibold text-white mb-3">Parameters</h4>
+                      <div className="space-y-2">
+                        {endpoint.parameters.map((param, index) => (
+                          <div key={index} className="bg-slate-900 rounded-lg p-3">
+                            <div className="flex items-center gap-2 mb-1">
+                              <code className="text-cyan-300 font-mono">{param.name}</code>
+                              <span className="text-gray-400 text-sm">({param.type})</span>
+                              {param.required && (
+                                <span className="px-2 py-1 bg-red-500/20 text-red-300 text-xs rounded">Required</span>
+                              )}
+                            </div>
+                            <p className="text-gray-300 text-sm">{param.description}</p>
+                          </div>
+                        ))}
                       </div>
-                      <p className="text-gray-300 mb-4">{endpoint.description}</p></p></p>
-                      <div className="bg-slate-900 rounded-lg p-4 overflow-x-auto">
-                        </div></div><pre className="text-gray-300 text-sm">
-                          </p></p><code>{endpoint.code}</code>
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+                    </div>
+                    
+                    {/* Response */}
+                    <div>
+                      <h4 className="text-lg font-semibold text-white mb-3">Response</h4>
+                      <div className="bg-slate-900 rounded-lg p-3">
+                        <div className="flex items-center gap-2 mb-2">
+                          <span className="text-green-400 text-sm font-medium">Status: {endpoint.response.status}</span>
+                        </div>
+                        <pre className="text-cyan-300 text-sm overflow-x-auto">
+                          {JSON.stringify(endpoint.response.example, null, 2)}
                         </pre>
                       </div>
                     </div>
-                  ))}
+                  </div>
+                  
+                  {/* Code Example */}
+                  <div className="mt-6">
+                    <h4 className="text-lg font-semibold text-white mb-3">Example Request</h4>
+                    <div className="bg-slate-900 rounded-lg p-4 relative">
+                      <button
+                        onClick={() => copyToClipboard(generateCodeExample(endpoint), `${endpoint.id}-example`)}
+                        className="absolute top-2 right-2 p-2 text-gray-400 hover:text-cyan-400 transition-colors"
+                      >
+                        {copiedCode === `${endpoint.id}-example` ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
+                      </button>
+                      <pre className="text-cyan-300 text-sm overflow-x-auto">
+                        {generateCodeExample(endpoint)}
+                      </pre>
+                    </div>
+                  </div>
                 </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* SDKs and Libraries */}
+        <section className="py-20 px-4 bg-slate-800/30">
+          <div className="max-w-7xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-white mb-8">SDKs & Libraries</h2>
+            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+              Use our official SDKs and libraries to integrate our APIs into your applications quickly and easily.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20">
+                <Code className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">JavaScript/Node.js</h3>
+                <p className="text-gray-300 mb-4">Official SDK for JavaScript and Node.js applications.</p>
+                <a
+                  href="https://npmjs.com/package/@ziontechgroup/api"
+                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium"
+                >
+                  View on NPM
+                  <ExternalLink className="w-4 h-4 ml-1" />
+                </a>
               </div>
-            ))}
+              
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20">
+                <Code className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">Python</h3>
+                <p className="text-gray-300 mb-4">Python SDK for data science and AI applications.</p>
+                <a
+                  href="https://pypi.org/project/ziontechgroup-api"
+                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium"
+                >
+                  View on PyPI
+                  <ExternalLink className="w-4 h-4 ml-1" />
+                </a>
+              </div>
+              
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/20">
+                <Code className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">Postman Collection</h3>
+                <p className="text-gray-300 mb-4">Import our Postman collection to test APIs quickly.</p>
+                <a
+                  href="/api/postman-collection.json"
+                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium"
+                >
+                  Download Collection
+                  <ExternalLink className="w-4 h-4 ml-1" />
+                </a>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
-      {/* CTA Section */}
-<<<<<<< HEAD
-      <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700" /></section>
-        <div className="max-w-4xl mx-auto text-center" /></div>
-          <h2 className="text-4xl md: text-5xl font-bold text-white mb-6" /></h2>
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl text-purple-100 mb-8" /></p>
-            Start building with our APIs today and create amazing applications.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center" /></div>
-            <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors" /></button>
-              Get API Key
-  </
-            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors" /></button>
-              View SDKs
-  </
-=======
-      <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
-        </section></section><div className="max-w-4xl mx-auto text-center">
-          </div></div><h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
-            Ready to Get Started?
-          </h2></h2></h2>
-          <p className="text-xl text-purple-100 mb-8">
-            Start building with our APIs today and create amazing applications.
-          </p></p></p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            </div></div><button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">
-              Get API Key;
-  </button></button></
-            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">
-              View SDKs;
-  </button></button></
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-          </div>
-        </div>
-      </section>
-      <Footer / /></Footer>
-    </div>
-  ),
-}
-  </button>
-  </button>
-  </button>
-  </button>
-  </h1>
-  </SEOOptimizer>
-  </string>
+        </section>
+
+        <Footer />
+      </div>
+    </>
+  );
+};
+
+export default ApiDocsPage;

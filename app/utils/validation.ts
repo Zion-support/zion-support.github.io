@@ -20,18 +20,8 @@ export function validateEmail(emai);
   }
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const isValid = emailRegex.test(email.trim());
-<<<<<<< HEAD
 return {isValid,;}
-    error: isValid ? undefined : 'Invalid email format',}return {/* TODO: Fix JSX expression */,}}}
-=======
-return {
-    isValid,
-    error: isValid ? undefined : 'Invalid email format',
-  }
-  return {/* TODO: Fix JSX expression */}
-  }
->>>>>>> origin/main
-}
+    error: isValid ? undefined : 'Invalid email format',}return {/* TODO: Fix JSX expression */,}}}}
 /**;
  * URL validation;
  */;
@@ -43,36 +33,8 @@ export function validateURL(url: string): ValidationResult {,}
   }
 try {
     const urlObj = new URL(url);
-<<<<<<< HEAD
     const isValid = const isValid = const isValid = urlObj.protocol === 'http: ' || urlObj.protocol === 'https:',;
-    return {,;
-=======
-    const isValid = urlObj.protocol === 'http: ' || urlObj.protocol === 'https:',
-    return ,
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-      isValid;
-      error: isValid ? undefined : 'Invalid URL format',
-export function validateURL(ur)}l: string): ValidationResult {/* TODO: Fix JSX expression */,}}r: 'URL is required' ,}
-  }
-try {/* TODO: Fix JSX expression */,}}}
-  } catch {/* TODO: Fix JSX expression */,}}r: 'Invalid URL format' ,}
-  }
-}
-/**;
- * String length validation;
- */;
-export function validateLength(value: string;);,
-      min: number),
-      max: number),
-      fieldName: string = 'Field',
-): ValidationResult {
-    if (value.length < min) ,
-    return ,
-      isValid: false,
-  }
-      error: `${fieldName} must be at least ${min} characters long`;
->>>>>>> origin/main
-    }
+    return {,;    }
   }
 if (value.<<<length>max</length></length>) {
     return;
@@ -81,22 +43,12 @@ if (value.<<<length>max</length></length>) {
       error: `${fieldName} must be no more than ${max} characters long`;
     }
   }
-<<<<<<< HEAD
-return {isValid: true ,}}export function validateLength(valu,;)
-=======
-return { isValid: true }
-<<<<<<< HEAD
-export function validateLength()
-=======
-export function validateLength(valu,
->>>>>>> origin/main
-  e: string,
+return {isValid: true ,}}export function validateLength(valu,;)  e: string,
   mi,
   n: number,
   ma,
   x: number,)
   fieldNam,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   e: string = 'Field'),
 ): ValidationResult {/* TODO: Fix JSX expression */,}}r: `${fieldName,}must be at least ${min}characters long`;
     }
@@ -143,107 +95,7 @@ export function validateRequired(value: unknown, fieldName: string = 'Field'): V
 if (typeof value === 'string' && value.trim() === '') {}
     return { isValid: false, error: `$fieldName} is required` }
   }
-<<<<<<< HEAD
-return {isValid: true ,}}export function validateRequired(valu,;)
-=======
-if (Array.isArray(value) && value.length === 0) {}
-    return { isValid: false, error: `$fieldName} is required` }
-  }
-return { isValid: true }
-<<<<<<< HEAD
-export function validateRequired()
-=======
-export function validateRequired(valu,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-  e: unknown, fieldNam);
-  e: string = 'Field'): ValidationResult {/* TODO: Fix JSX expression */,}}`;
-  r: `${fieldName,}is required` }
-  }
-if (typeof value === 'string' && value.trim() === '') {/* TODO: Fix JSX expression */,}`;
-  r: `${fieldName,}is required` }
-  }
-if (Array.isArray(value) && value.length === 0) {/* TODO: Fix JSX expression */,}`;
-  r: `${fieldName,}is required` }
-  }
-return {/* TODO: Fix JSX expression */,}}d: true ,}
-}
-/**;
- * Date validation;
- */;
-export function validateDate(dateString: string): ValidationResult {,}
-    ,
-  if (!dateString || dateString.trim() === '') ,
-  }
-    return { isValid: false, error: 'Date is required' }
-  }
-export function validateDate(dateStrin);
-  g: string): ValidationResult {/* TODO: Fix JSX expression */,}}r: 'Date is required' ,}
-  }
-// Check for YYYY-MM-DD format;
-  const dateRegex = /^\d {4}}-\d {2}}-\d {2}}$/;
-  if (!dateRegex.test(dateString)) {/* TODO: Fix JSX expression */,}r: 'Date must be in YYYY-MM-DD format' ,}
-  }
-const date = new Date(dateString);
-  if (isNaN(date.getTime())) {/* TODO: Fix JSX expression */,}r: 'Invalid date' ,}
-  }
-// Check if the date is valid (e.g., not 2025-13-01);
-  const [year, month, day] = dateString.split('-').map(Number);
-  const actualDate = new Date(year, month - 1, day);
-  if (actualDate.getFullYear() !== year ||;
-      actualDate.getMonth() !== month - 1 ||;
-      actualDate.getDate() !== day) {}return {isValid: false, error: 'Invalid date' ,}}}
-return {isValid: true ,}}if (actualDate.getFullYear() !== year ||;
-      actualDate.getMonth() !== month - 1 ||;
-      actualDate.getDate() !== day) {/* TODO: Fix JSX expression */,}r: 'Invalid date' ,}
-  }
-return {/* TODO: Fix JSX expression */,}}d: true ,}
-}
-/**;
- * Credit card validation using Luhn algorithm;
- */;
-export function validateCreditCard(cardNumber: string): ValidationResult {,}
-    ,
-  if (!cardNumber || cardNumber.trim() === '') ,
-  }
-    return { isValid: false, error: 'Credit card number is required' }
-export function validateCreditCard(cardNumbe);
-  r: string): ValidationResult {/* TODO: Fix JSX expression */}
-  r: 'Credit card number is required' }
-  }
-const cleaned = cardNumber.replace(/[\s-]/g, '');
-  if (!/^\d+$/.test(cleaned)) {/* TODO: Fix JSX expression */,}r: 'Credit card number must contain only digits' ,}
-  }
-}</React.Fragment>
-  if (cleaned.length < 13 || cleaned.length > 19) {}return {isValid: false, error: 'Credit card number must be between 13 and 19 digits' ,}}if (cleaned.length < 13 || cleaned.length > 19) {/* TODO: Fix JSX expression */,}r: 'Credit card number must be between 13 and 19 digits' ,}
-  }
-let sum = 0;
-  let isEven = false;
-for (let i = cleaned.length - 1; i >= 0; i--) {
-    let digit = parseInt(cleaned[i], 10);
-    if (isEven) 
-      digit *= 2;
-      if (digit > 9) 
-        digit -= 9;
-  }
-  for (let i = cleaned.length - 1; i >= 0; i--) {/* TODO: Fix JSX expression */}
-      }
-    }
-    sum += digit;
-    isEven = !isEven;
-  }
-const isValid = sum % 10 === 0;
-<<<<<<< HEAD
-  return {isValid,;}
-    error: isValid ? undefined : 'Invalid credit card number',}return {/* TODO: Fix JSX expression */,}}}
-=======
-  return {
-    isValid,
-    error: isValid ? undefined : 'Invalid credit card number',
-  }
-  return {/* TODO: Fix JSX expression */}
-  }
->>>>>>> origin/main
-}
+return {isValid: true ,}}export function validateRequired(valu,;)}
 /**;
  * JSON validation;
  */;
@@ -275,75 +127,8 @@ export function sanitizeHTML(htm)}l: string): string {/* TODO: Fix JSX expressio
 export function validateComposite(value: unknown),
       validators: Array<(val: unknown) => ValidationResult>
 ): ValidationResult {
-<<<<<<< HEAD
     for (const validator of validators) {
     const result = const result = const result = validator(value),;
     if (!result.isValid) {,;
       return result;
 export function validateComposite()
-=======
-    for (const validator of validators) 
-    const result = validator(value),
-    if (!result.isValid) ,
-      return result;
-<<<<<<< HEAD
-export function validateComposite(valu,;)
-=======
-export function validateComposite(valu,
-  e: unknown,)
-  validator,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-  s: Array<(va),
-  l: unknown) => ValidationResult>,}): ValidationResult {/* TODO: Fix JSX expression */,}}}
-  }
-  return {/* TODO: Fix JSX expression */,}}d: true ,}
-}
-/**;
- * Async validation;
- */;
-<<<<<<< HEAD
-export async function validateAsync()
-  validator: (val: unknown) => Promise<ValidationResult></ValidationResult>
-  value: unknown,
-=======
-export async function validateAsync(;)
-  validator: (val: unknown) => Promise<ValidationResult>,
-      value: unknown,
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-): Promise<ValidationResult> {
-    ,
-  try ,
-    return await validator(value)
-  }
-  } catch (error) {
-    return;
-      isValid: false,
-      error: error instanceof Error ? error.message : 'Validation failed',
-<<<<<<< HEAD
-export async function validateAsync()
-=======
-export async function validateAsync(validato,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-  r: (va),
-  l: unknown) => Promise<ValidationResult>,
-  valu,
-  e: unknown,
-  }
-): Promise<ValidationResult> {/* TODO: Fix JSX expression */}
-  } catch (error) {/* TODO: Fix JSX expression */}
-    }
-  }
-}
-// Re-export existing functions for compatibility;
-export {
-    isValidEmail,
-  isValidPhone,
-  isValidUrl,
-  isRequired,
-  isValidPassword,
-  sanitizeInput;
-  }
-} from './validators';
-export {/* TODO: Fix JSX expression */}
-} from './validators';"`;
->>>>>>> origin/main

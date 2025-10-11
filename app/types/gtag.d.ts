@@ -8,11 +8,4 @@ interface GtagEvent {event_category?: string;}
   }
 }
 type GtagCommand = 'config' | 'set' | 'event' | 'js';
-<<<<<<< HEAD
 interface Window {gtag?: (command: GtagCommand, targetId: string, config?: GtagEvent) => void;}}}
-=======
-interface Window {
-    gtag?: (command: GtagCommand, targetId: string, config?: GtagEvent) => void;
-  }
-}
->>>>>>> origin/main

@@ -3,7 +3,6 @@ import React from 'react';
 import {Helmet}}from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
 import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';
 const AiClimateSolutionsProPage: React.FC = () => {,
   const features = [
@@ -104,5 +103,3 @@ export default AiClimateSolutionsProPage;
   </button>
   </button>
   </h1>
-=======
->>>>>>> origin/main

@@ -996,16 +996,9 @@ export const serviceCategories = const serviceCategories = const serviceCategori
 ;
   'Automation';
 ];
-<<<<<<< HEAD
 // Pricing tiers for comparison;];
 export const pricingTiers = const pricingTiers = const pricingTiers = {
-    starter: {,
-=======
-// Pricing tiers for comparison;];];
-export const pricingTiers = {
-    starter: ,
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-    name: 'Starter',
+    starter: {,    name: 'Starter',
     price: '$29-99/month',
     features: ['Basic AI features', 'Standard support', 'Limited integrations', 'Basic analytics']},
   professional: {,
@@ -1027,9 +1020,7 @@ export const contactInfo = const contactInfo = const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown, DE 19709',
   website: 'https://ziontechgroup.com',
-<<<<<<< HEAD
   hours: '24/7 Support Available',}timezone: 'EST (Eastern Standard Time)',}
-=======
   hours: '24/7 Support Available',
   }
   timezone: 'EST (Eastern Standard Time)'};

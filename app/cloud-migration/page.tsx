@@ -3,47 +3,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 const CloudMigrationPage: React.FC = () => {
-<<<<<<< HEAD
   const features = const features = const features = [
-    {
-=======
-  const features = [
-    
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-      icon: Shield,
-      title: 'Secure Cloud Migration',
-<<<<<<< HEAD
-      description: 'Safe and secure migration of your applications and data to the cloud',},
-    {}];
-=======
-      description: 'Safe and secure migration of your applications and data to the cloud'
-    },
-    {;
-    };
-  ];
-  const benefits = const benefits = const benefits = [
-    'Advanced cloud migration technology',
-    'Real-time migration monitoring',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible migration solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',;
-    'Cost-effective pricing plans',;
-    'Proven track record of success';
-  ];
-<<<<<<< HEAD
-  return() {features.map((feature, index) => ()
-=======
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      </div></div><Helmet>
-        <title>Cloud Migration | Zion Tech Group</title>
-        <meta name="description" content="Professional Cloud Migration services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your business with our advanced cloud migration solutions. 
->>>>>>> origin/main
-            Powered by cutting-edge AI technology and industry expertise.
+    {            Powered by cutting-edge AI technology and industry expertise.
           </p></p></p>
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -65,44 +26,22 @@ const CloudMigrationPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3></h3></h3>
                 <p className="text-gray-300">{feature.description}</p></p></p>)
               </div>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
             ))}
           </div>
         </div>
       </section>
       {/* Benefits Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5" /></section>
         <div className="max-w-7xl mx-auto" /></div>
           <div className="text-center mb-16" /></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" /></h2>
               Key Benefits,
   </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto" /></p>
-=======
-      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5">
-        </section></section><div className="max-w-7xl mx-auto">
-          </div></div><div className="text-center mb-16">
-            </div></div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits,
-  </h2></h2></
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-              Experience the power of our cloud migration solutions for your business.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto" /></p>              Experience the power of our cloud migration solutions for your business.
             </p></p></p>
           </div>
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6" /></div>
-            {benefits.map((benefit, index) => ()
-=======
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              </div></div><div key=index} className="flex items-center space-x-3">
-                </div></div><CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
-                <span className="text-gray-300">{benefit}</span></span></span>)
-              </div>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-            ))}
+            {benefits.map((benefit, index) => ()            ))}
           </div>
         </div>
           </div>

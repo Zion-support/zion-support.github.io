@@ -9,22 +9,10 @@ interface SecurityEnhancerProps {
 const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {
     useEffect(() => {
     // Security enhancement logic;
-<<<<<<< HEAD
     const enhanceSecurity = const enhanceSecurity = ();
         'X-XSS-Protection': '1; mode=block',) => {
   return ()
-  )
-=======
-    const enhanceSecurity = (;
-      // Add security headers;
-      const securityHeaders = 
-        'X-Content-Type-Options': 'nosniff',)
-        'X-Frame-Options': 'DENY',)
-        'X-XSS-Protection': '1; mode=block',) => 
-  return ()
-    $3)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-  }
+  )  }
         'Referrer-Policy': 'strict-origin-when-cross-origin';}
       }
 // Add CSP meta tag;

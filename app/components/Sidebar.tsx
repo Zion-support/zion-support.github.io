@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 import React, {Suspense, lazy}from 'react';
 import {Link, useLocation}}from 'react-router-dom';
 import {X,}
@@ -153,11 +152,7 @@ return(<>)
               onClick={() =>setIsOpen(false)</button>}className="lg: hidden text-gray-400 hover:text-white transition-colors",
               aria-label="Close sidebar"
             >,
-              <X>
-=======
-
->>>>>>> origin/main
-            </button>
+              <X>            </button>
           </div>
 
           {/* Navigation */}

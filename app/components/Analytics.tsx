@@ -6,104 +6,7 @@ interface AnalyticsProps {enableGoogleAnalytics?: boolean;}
   enableUserBehaviorTracking?: boolean;
   }
 }
-<<<<<<< HEAD
-const Analytics: React.FC<AnalyticsProps> = ()
-=======
-const Analytics: React.FC<AnalyticsProps> = ({
-    enableGoogleAnalytics = true,
-  enablePerformanceMonitoring = true,
-  enableErrorTracking = true,
-  enableUserBehaviorTracking = true;)
-  })
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-}) => {
-    useEffect(() => 
-    if (enableGoogleAnalytics) 
-      initializeGoogleAnalytics()
-  }
-    }
-if (enablePerformanceMonitoring) {
-    initializePerformanceMonitoring()
-  }
-    }
-if (enableErrorTracking) {
-    initializeErrorTracking()
-  }
-    }
-if (enableUserBehaviorTracking) {
-    initializeUserBehaviorTracking()
-  }
-    }
-  }, [enableGoogleAnalytics, enablePerformanceMonitoring, enableErrorTracking, enableUserBehaviorTracking]);
-<<<<<<< HEAD
-const initializeGoogleAnalytics = const initializeGoogleAnalytics = ();
-=======
-const initializeGoogleAnalytics = (;
-    // Load Google Analytics;)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = 'https: //www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';,
-    document.head.appendChild(script)
-// Initialize gtag;
-    (window as any).dataLayer = (window as any).dataLayer || [],
-    function gtag(...args: any[]) {
-<<<<<<< HEAD
-    ) => {
-  return ()
-  )
-=======
-    ) => 
-  return ()
-    $3)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-  }
-      (window as any).dataLayer.push(args);}
-    }
-    (window as any).gtag = gtag;
-gtag('js', new Date());
-<<<<<<< HEAD
-    gtag()
-    })
-  }
-const initializePerformanceMonitoring = const initializePerformanceMonitoring = ()
-    if ('PerformanceObserver' in window) {;
-    // Monitor Core Web Vitals;
-      const observer = const observer = const observer = new PerformanceObserver((list) => {;
-        for (const entry of list.getEntries()) {;
-          if (entry.entryType === 'largest-contentful-paint') {) => {;
-  return ()
-  )
-=======
-    gtag('config', 'GA_MEASUREMENT_ID', {
-    page_title: document.title,
-      page_location: window.location.href,
-      send_page_view: true;)
-  })
-    })
-  }
-const initializePerformanceMonitoring = (;)
-    if ('PerformanceObserver' in window) {
-    // Monitor Core Web Vitals;
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'largest-contentful-paint') ) => ;
-  return ()
-    $3)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-  }
-            trackEvent('web_vitals', 'LCP', Math.round(entry.startTime));}
-          } else if (entry.entryType === 'first-input') {
-    const fid = (entry as any).processingStart - entry.startTime;
-            trackEvent('web_vitals', 'FID', Math.round(fid)
-  }
-          } else if (entry.entryType === 'layout-shift') {
-    if (!(entry as any).hadRecentInput) 
-              trackEvent('web_vitals', 'CLS', (entry as any).value)
-  }
-            }
->>>>>>> origin/main
-          }
+const Analytics: React.FC<AnalyticsProps> = ()          }
         }
       })
 observer.observe({entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'])})
@@ -117,51 +20,23 @@ observer.observe({entryTypes: ['largest-contentful-paint', 'first-input', 'layou
       })
     }
   }
-<<<<<<< HEAD
 const initializeErrorTracking = const initializeErrorTracking = ()
     window.addEventListener('error', (event) => {
     trackEvent()
         colno: event.colno,) => {
   return ()
-  )
-=======
-const initializeErrorTracking = (;)
-    // Track JavaScript errors;)
-    window.addEventListener('error', (event) => {
-    trackEvent('error', 'javascript_error', 
-        message: event.message,
-        filename: event.filename,)
-        lineno: event.lineno,)
-        colno: event.colno,) => 
-  return ()
-    $3)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-  }
+  )  }
         error: event.error?.stack,}
       })
     });
 // Track unhandled promise rejections;
     window.addEventListener('unhandledrejection', (event) => {
-<<<<<<< HEAD
-    trackEvent()
-=======
-    trackEvent('error', 'unhandled_promise_rejection', 
-        reason: event.reason,
-        promise: event.promise;)
-  })
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-      })
+    trackEvent()      })
     })
 // Track resource loading errors;
     window.addEventListener('error', (event) => {
-<<<<<<< HEAD
     if (event.target !== window) {
-        trackEvent()
-=======
-    if (event.target !== window) 
-        trackEvent('error', 'resource_error', )
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-          type: (event.target as any).tagName,
+        trackEvent()          type: (event.target as any).tagName,
           src: (event.target as any).src || (event.target as any).href,
           error: event.type;
   }
@@ -170,21 +45,10 @@ const initializeErrorTracking = (;)
       }
     }, true);
   }
-<<<<<<< HEAD
 const initializeUserBehaviorTracking = const initializeUserBehaviorTracking = ()
       page_location: window.location.href,) => {
   return ()
-  )
-=======
-const initializeUserBehaviorTracking = (;
-    // Track page views;
-    trackEvent('page_view', 'page_view', {)
-    page_title: document.title,)
-      page_location: window.location.href,) => 
-  return ()
-    $3)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-  }
+  )  }
       page_path: window.location.pathname,}
     });
 // Track scroll depth;
@@ -211,22 +75,11 @@ const initializeUserBehaviorTracking = (;
 if (tagName === 'a') 
 
         const href = (target as HTMLAnchorElement).href;
-<<<<<<< HEAD
-        trackEvent()
-=======
-        trackEvent('engagement', 'link_click', )
-          link_url: href,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-          link_text: target.textContent?.trim()
+        trackEvent()          link_text: target.textContent?.trim()
   }
         })
       } else if (tagName === 'button') {
-<<<<<<< HEAD
-    trackEvent()
-=======
-    trackEvent('engagement', 'button_click', )
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-          button_text: target.textContent?.trim(),
+    trackEvent()          button_text: target.textContent?.trim(),
           button_class: target.className;
   }
         })
@@ -235,7 +88,6 @@ if (tagName === 'a')
 // Track form submissions;
     document.addEventListener('submit', (event) => {
     const form = event.target as HTMLFormElement;
-<<<<<<< HEAD
       trackEvent()
       })
     })
@@ -245,25 +97,7 @@ const trackEvent = const trackEvent = ()
     (window as any).gtag()
         event_label: typeof value === 'object' ? JSON.stringify(value) : value,) => {
   return ()
-  )
-=======
-      trackEvent('engagement', 'form_submit', 
-        form_id: form.id,
-        form_class: form.className,
-        form_action: form.action;)
-  })
-      })
-    })
-  }
-const trackEvent = (;)
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-    (window as any).gtag('event', action, )
-        event_category: category,)
-        event_label: typeof value === 'object' ? JSON.stringify(value) : value,) => 
-  return ()
-    $3)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-  }
+  )  }
         value: typeof value === 'number' ? value : undefined,}
       })
     }
@@ -281,20 +115,6 @@ declare global {
 
 export default Analytics;
 // Analytics Provider for context;
-<<<<<<< HEAD
 export const AnalyticsProvider: React.FC<{children: React.ReactNode ,}> = ({children}) => {return(<>)
-      <Analytics />}{children}
-=======
-export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-<<<<<<< HEAD
-    return ()
-=======
-    return (
-    <>
-      <Analytics />
-  },
-    {children})
-    </>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-  );
+      <Analytics />}{children}  );
 }

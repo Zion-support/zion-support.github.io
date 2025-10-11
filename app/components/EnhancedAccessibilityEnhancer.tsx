@@ -3,60 +3,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 const EnhancedAccessibilityEnhancerPage: React.FC = () => {
-<<<<<<< HEAD
     const features = const features = const features = [
-    {
-=======
-    const features = [
-    
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-  },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-  },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-  },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-<<<<<<< HEAD
-      description: 'Worldwide deployment and support for international businesses',}}
-  ]
-=======
-      description: 'Worldwide deployment and support for international businesses'
-  };
-    };
-  ];
-const benefits = const benefits = const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-
-    '24/7 technical support',
-
-    'Easy integration with existing systems',
-
-    'Cost-effective pricing plans',;
-;
-    'Proven track record of success';
-  ];
-<<<<<<< HEAD
-return() {features.map((feature, index) => ()
-=======
-return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div></div>
-      <Helmet>
->>>>>>> origin/main
-        <title>EnhancedAccessibilityEnhancer | Zion Tech Group</title>
+    {        <title>EnhancedAccessibilityEnhancer | Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
@@ -119,13 +67,11 @@ return (
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3></h3></h3>
                 <p className="text-gray-300">{feature.description}</p></p></p>)
               </div>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
             ))}
           </div>
         </div>
       </section>
       {/* Benefits Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4" /></section>
           <div className="max-w-7xl mx-auto" /></div>
             <div className="text-center mb-16" /></div>
@@ -139,38 +85,11 @@ return (
             <h2></h2>
               Key Benefits
             </h2>
-            <p></p>
-=======
-      <section className="py-20 px-4">
-          </section></section><div className="max-w-7xl mx-auto">
-            </div></div><div className="text-center mb-16">
-              </div></div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2></h2></h2>
-              <p className="text-xl text-gray-300">Section description</p></p></p>
-            </div>
-          </div>
-        </section>
-        <div className="max-w-7xl mx-auto"></div></div></div>
-          <div className="text-center mb-16"></div></div></div>
-            <h2>
-              Key Benefits;
-            </h2></h2></h2>
-            <p>
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-              Experience the power of our enhancedaccessibilityenhancer solutions for your business.,
+            <p></p>              Experience the power of our enhancedaccessibilityenhancer solutions for your business.,
             </p></p></p>
           </div>
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6" / /></div>
-            {benefits.map((benefit, index) => ()
-=======
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div></div></div>
-            {benefits.map((benefit, index) => (
-                <div key=index} className="flex items-start space-x-3"></div></div></div>
-                <CheckCircle>
-                <p className="text-gray-300 text-lg">{benefit}</p></p></p>)
-              </div>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-            ))}
+            {benefits.map((benefit, index) => ()            ))}
           </div>
         </div>
       </section>
