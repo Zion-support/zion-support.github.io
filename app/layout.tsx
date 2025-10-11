@@ -1,8 +1,9 @@
-'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
 
+<<<<<<< HEAD
 const LayoutPage: React.FC = () => {
 <<<<<<< HEAD
   const features = const features = const features = [
@@ -21,12 +22,41 @@ const LayoutPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       description: 'Worldwide deployment and support for international businesses'
     }
+=======
+interface LayoutProps {
+  children: React.ReactNode;
+}
+>>>>>>> cursor/analyze-improve-and-deploy-application-89d8
 
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+  return (
+    <>
+      <Helmet>
+        <html lang="en" />
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#0f172a" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link 
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" 
+          rel="stylesheet" 
+        />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Navigation />
+        <main className="relative">
+          {children}
+        </main>
+        <Footer />
+      </div>
+    </>
+  );
+};
 
+<<<<<<< HEAD
               <span className="text-white">Solutions</span></span></span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" /></p>
@@ -113,3 +143,6 @@ const LayoutPage: React.FC = () => {
 ;
 };];
 export default LayoutPage;
+=======
+export default Layout;
+>>>>>>> cursor/analyze-improve-and-deploy-application-89d8

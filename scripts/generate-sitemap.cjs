@@ -16,9 +16,9 @@ const pages = [
     priority: '0.8'
   },
   {
-    url: 'https://ziontechgroup.com/services',
+    url: 'https://ziontechgroup.com/contact',
     lastmod: new Date().toISOString().split('T')[0],
-    changefreq: 'weekly',
+    changefreq: 'monthly',
     priority: '0.9'
   },
   {
@@ -34,18 +34,6 @@ const pages = [
     priority: '0.9'
   },
   {
-    url: 'https://ziontechgroup.com/pricing',
-    lastmod: new Date().toISOString().split('T')[0],
-    changefreq: 'monthly',
-    priority: '0.8'
-  },
-  {
-    url: 'https://ziontechgroup.com/contact',
-    lastmod: new Date().toISOString().split('T')[0],
-    changefreq: 'monthly',
-    priority: '0.8'
-  },
-  {
     url: 'https://ziontechgroup.com/blog',
     lastmod: new Date().toISOString().split('T')[0],
     changefreq: 'daily',
@@ -55,7 +43,7 @@ const pages = [
     url: 'https://ziontechgroup.com/case-studies',
     lastmod: new Date().toISOString().split('T')[0],
     changefreq: 'weekly',
-    priority: '0.7'
+    priority: '0.8'
   },
   {
     url: 'https://ziontechgroup.com/careers',
@@ -64,49 +52,35 @@ const pages = [
     priority: '0.6'
   },
   {
-    url: 'https://ziontechgroup.com/partners',
+    url: 'https://ziontechgroup.com/privacy',
     lastmod: new Date().toISOString().split('T')[0],
-    changefreq: 'monthly',
-    priority: '0.6'
+    changefreq: 'yearly',
+    priority: '0.3'
   },
   {
-    url: 'https://ziontechgroup.com/support',
+    url: 'https://ziontechgroup.com/terms',
     lastmod: new Date().toISOString().split('T')[0],
-    changefreq: 'weekly',
-    priority: '0.7'
-  },
-  {
-    url: 'https://ziontechgroup.com/faq',
-    lastmod: new Date().toISOString().split('T')[0],
-    changefreq: 'monthly',
-    priority: '0.6'
-  },
-  {
-    url: 'https://ziontechgroup.com/demo',
-    lastmod: new Date().toISOString().split('T')[0],
-    changefreq: 'monthly',
-    priority: '0.7'
-  },
-  {
-    url: 'https://ziontechgroup.com/consultation',
-    lastmod: new Date().toISOString().split('T')[0],
-    changefreq: 'monthly',
-    priority: '0.8'
+    changefreq: 'yearly',
+    priority: '0.3'
   }
 ];
 
-// Generate XML sitemap
+// Generate sitemap XML
 const generateSitemap = () => {
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${pages.map(page => `  <url>
-    <loc>${page.url}</loc>
-    <lastmod>${page.lastmod}</lastmod>
-    <changefreq>${page.changefreq}</changefreq>
-    <priority>${page.priority}</priority>
-  </url>`).join('\n')}
-</urlset>`;
-
+  let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n';
+  sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+  
+  pages.forEach(page => {
+    sitemap += '  <url>\n';
+    sitemap += `    <loc>${page.url}</loc>\n`;
+    sitemap += `    <lastmod>${page.lastmod}</lastmod>\n`;
+    sitemap += `    <changefreq>${page.changefreq}</changefreq>\n`;
+    sitemap += `    <priority>${page.priority}</priority>\n`;
+    sitemap += '  </url>\n';
+  });
+  
+  sitemap += '</urlset>';
+  
   return sitemap;
 };
 
@@ -114,6 +88,11 @@ ${pages.map(page => `  <url>
 const sitemap = generateSitemap();
 const publicDir = path.join(__dirname, '..', 'public');
 const sitemapPath = path.join(publicDir, 'sitemap.xml');
+
+// Ensure public directory exists
+if (!fs.existsSync(publicDir)) {
+  fs.mkdirSync(publicDir, { recursive: true });
+}
 
 fs.writeFileSync(sitemapPath, sitemap);
 console.log('Sitemap generated successfully');

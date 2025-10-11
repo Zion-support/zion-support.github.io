@@ -1,19 +1,21 @@
 'use client';
 import React, { Suspense, useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 <<<<<<< HEAD
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Mail, Code, Cloud, Smartphone } from 'lucide-react';
+=======
+import Layout from './layout';
+import SEOHead from './components/SEOHead';
+import ErrorBoundary from './components/ErrorBoundary';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+import { PageLoader, ServiceCardSkeleton } from './components/LoadingStates';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Mail, Code, Cloud, Smartphone, Eye } from 'lucide-react';
+>>>>>>> cursor/analyze-improve-and-deploy-application-89d8
 
-// Loading skeleton component
-const ServiceCardSkeleton = () => (
-  <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
-    <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
-    <div className="h-4 bg-gray-200 rounded mb-2"></div>
-    <div className="h-4 bg-gray-200 rounded w-5/6"></div>
-  </div>
-);
+// Remove duplicate ServiceCardSkeleton since it's now imported
 
 // Content promotion banner component
 const ContentPromotionBanner = () => (
@@ -159,20 +161,31 @@ const HomePage: React.FC = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title>Zion Tech Group - AI & IT Solutions | Leading Technology Company</title>
         <meta name="description" content="Zion Tech Group provides cutting-edge AI solutions, cloud services, cybersecurity, and custom development. Transform your business with our innovative technology services." />
         <meta name="keywords" content="AI solutions, cloud services, cybersecurity, custom development, IT consulting, data analytics, technology company" />
       </Helmet>
+=======
+    <ErrorBoundary>
+      <PerformanceOptimizer>
+        <Layout>
+          <SEOHead />
+>>>>>>> cursor/analyze-improve-and-deploy-application-89d8
 
       <Navigation />
       
+<<<<<<< HEAD
 <<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
         <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
+=======
+      <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
+>>>>>>> cursor/analyze-improve-and-deploy-application-89d8
           {/* Hero Section */}
           <section
             className={`text-center mb-16 transition-all duration-1000 ${
@@ -401,6 +414,7 @@ const HomePage: React.FC = () => {
             </div>
           </section>
         </main>
+<<<<<<< HEAD
 =======
           </div>
         </section>
@@ -442,6 +456,11 @@ const HomePage: React.FC = () => {
 
       <Footer />
     </>
+=======
+        </Layout>
+      </PerformanceOptimizer>
+    </ErrorBoundary>
+>>>>>>> cursor/analyze-improve-and-deploy-application-89d8
   );
 };
 

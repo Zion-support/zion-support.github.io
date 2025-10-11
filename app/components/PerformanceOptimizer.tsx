@@ -1,8 +1,7 @@
-'use client';
-import React, { useEffect, useState, useCallback } from 'react';
-import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react';
+import React, { useEffect, memo } from 'react';
 
 interface PerformanceOptimizerProps {
+<<<<<<< HEAD
     children: React.ReactNode;
   enableImageOptimization?: boolean;
   enableLazyLoading?: boolean;
@@ -72,8 +71,14 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     setOptimizations(newOptimizations);
     setIsOptimizing(false);
   }, [enableImageOptimization, optimizeImages, optimizeMemory]);
+=======
+  children: React.ReactNode;
+}
+>>>>>>> cursor/analyze-improve-and-deploy-application-89d8
 
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ children }) => {
   useEffect(() => {
+<<<<<<< HEAD
 <<<<<<< HEAD
     // Run initial optimizations
     const timer = const timer = const timer = setTimeout(() => {;
@@ -182,14 +187,29 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       ];
       criticalImages.forEach(src => ];];)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+=======
+    // Preload critical resources
+    const preloadCriticalResources = () => {
+      const criticalResources = [
+        '/fonts/inter-var.woff2',
+        '/images/hero-bg.webp',
+        '/images/logo.svg'
+      ];
+
+      criticalResources.forEach(resource => {
+>>>>>>> cursor/analyze-improve-and-deploy-application-89d8
         const link = document.createElement('link');
         link.rel = 'preload';
-        link.href = src;
-        link.as = 'image';
-        document.head.appendChild(link)
-  })
-    }
+        link.href = resource;
+        link.as = resource.endsWith('.woff2') ? 'font' : 'image';
+        if (resource.endsWith('.woff2')) {
+          link.crossOrigin = 'anonymous';
+        }
+        document.head.appendChild(link);
+      });
+    };
 
+<<<<<<< HEAD
     // Optimize images;
     if (enableImageOptimization && typeof window !== 'undefined') {
     const images = document.querySelectorAll('img');
@@ -228,10 +248,23 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
               img.removeAttribute('data-src');
               observer.unobserve(img)
   }
+=======
+    // Optimize images
+    const optimizeImages = () => {
+      const images = document.querySelectorAll('img[data-src]');
+      const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target as HTMLImageElement;
+            img.src = img.dataset.src || '';
+            img.classList.remove('lazy');
+            imageObserver.unobserve(img);
+>>>>>>> cursor/analyze-improve-and-deploy-application-89d8
           }
-        })
-      })
+        });
+      });
 
+<<<<<<< HEAD
       const lazyImages = document.querySelectorAll('img[data-src]');
       lazyImages.forEach(img => imageObserver.observe(img));
     }
@@ -269,9 +302,46 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     }
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting]);
+=======
+      images.forEach(img => imageObserver.observe(img));
+    };
+>>>>>>> cursor/analyze-improve-and-deploy-application-89d8
 
-  return null;
+    // Optimize fonts
+    const optimizeFonts = () => {
+      if ('fonts' in document) {
+        document.fonts.ready.then(() => {
+          document.body.classList.add('fonts-loaded');
+        });
+      }
+    };
 
-};
+    // Prefetch important pages
+    const prefetchPages = () => {
+      const importantPages = ['/about', '/contact', '/ai-services', '/it-services'];
+      importantPages.forEach(page => {
+        const link = document.createElement('link');
+        link.rel = 'prefetch';
+        link.href = page;
+        document.head.appendChild(link);
+      });
+    };
+
+    // Initialize optimizations
+    preloadCriticalResources();
+    optimizeImages();
+    optimizeFonts();
+    prefetchPages();
+
+    // Cleanup
+    return () => {
+      // Cleanup if needed
+    };
+  }, []);
+
+  return <>{children}</>;
+});
+
+PerformanceOptimizer.displayName = 'PerformanceOptimizer';
 
 export default PerformanceOptimizer;
