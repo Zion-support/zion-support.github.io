@@ -6,7 +6,9 @@ const ServicesPage: React.FC = () => {const [searchTerm, setSearchTerm] = useSta
       icon: Wifi,
       title: 'Feature 1',
       description: 'Description for feature 1.',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
+    }
+    } ,
     {id: 2,
       title: 'Cloud Services',} ]
   const categories = [

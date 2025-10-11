@@ -43,9 +43,9 @@ const AIAgriculturalIntelligenceProPage: React.FC = () => {
       description: 'GPS-guided precision farming techniques for maximum efficiency and minimal waste.',
       benefits: ['GPS guidance', 'Variable rate application', 'Field mapping', 'Resource optimization']
     }
-  ]
+  ];
 
-return (
+  return (
     <>
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
@@ -230,7 +230,8 @@ return (
 
       <Footer />
     </div>
-  )
-}
+    </>
+  );
+};
 
-export default AIAgriculturalIntelligenceProPage
+export default AIAgriculturalIntelligenceProPage;

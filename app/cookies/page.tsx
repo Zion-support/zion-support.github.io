@@ -8,7 +8,9 @@ const CookiesPage: React.FC = () => {const features = [
       icon: Wifi,
       title: 'Feature 1',
       description: 'Description for feature 1.',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
+    }
+    } ,
     {icon: Settings,
       title: 'Functional Cookies',
       description: 'These cookies enable enhanced functionality and personalization.',

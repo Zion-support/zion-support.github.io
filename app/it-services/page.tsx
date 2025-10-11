@@ -9,7 +9,7 @@ const ITServicesPage: React.FC = () => {const services = [
 title: 'Cloud Infrastructure',;,
 description: 'Scalable and secure cloud solutions for your business needs.',;,
 icon: Cloud,,
-    }
+    },
     {;,
 id: 2,;,
 title: 'Cybersecurity',;,
@@ -20,11 +20,15 @@ price: 'From $1,000/month'} ,
     {icon: BarChart,
       title: 'Feature 2', 
       description: 'Description for feature 2.',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
+    }
+    } ,
     {icon: CheckCircle,
       title: 'Feature 3',
       description: 'Description for feature 3.',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ]
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
+    }
+    } ]
 const categories = [
     {id: 'all', name: 'All Services'} ,
     {id: 'cloud', name: 'Cloud Services'} ,

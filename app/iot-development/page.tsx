@@ -8,15 +8,21 @@ const PagePage: React.FC = () => {const features = [
       icon: Wifi,
       title: 'Feature 1',
       description: 'Description for feature 1.',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
+    }
+    } ,
     {icon: BarChart,
       title: 'Feature 2', 
       description: 'Description for feature 2.',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
+    }
+    } ,
     {icon: CheckCircle,
       title: 'Feature 3',
       description: 'Description for feature 3.',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ];
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
+    }
+    } ];
 
   const benefits = [
     'Increase efficiency by up to 80%',

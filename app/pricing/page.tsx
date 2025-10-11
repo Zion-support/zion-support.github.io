@@ -9,12 +9,14 @@ const PricingPage: React.FC = () => {const features = [
       icon: Wifi,
       title: 'Feature 1',
       description: 'Description for feature 1.',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
+    }
+    } ,
     {name: 'Professional',
       ],
       popular: true,
       icon: Star,
-    }
+    },
     {name: 'Enterprise',
       ],
       popular: false,

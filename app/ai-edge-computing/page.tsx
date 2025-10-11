@@ -1,20 +1,24 @@
-<<<<<<< HEAD
 'use client'
 import React from 'react'
 import {Helmet} from 'react-helmet-async'
-import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
+import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Wifi} from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-const PagePage: React.FC = () => {const features = [
+const PagePage: React.FC = () => {
+  const features = [
     {
       icon: Wifi,
       title: 'Feature 1',
       description: 'Description for feature 1.',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
+    }
+    },
     {icon: Target,
       title: 'Precision Targeting',
       description: 'Target specific goals and objectives with precision.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']} ]
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    }
+    } ]
   const benefits = [
     'Increase efficiency by up to 80%',
     'Reduce costs by 30% with automation',
@@ -107,23 +111,27 @@ const PagePage: React.FC = () => {const features = [
       
       <Footer />
     </>
-=======
 'use client';
 import React from 'react';
 import {Helmet} from 'react-helmet-async';
 import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp} from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const PagePage: React.FC = () => {const features = [;
+const PagePage: React.FC = () => {
+  const features = [;
     {;
       icon: Wifi,;
       title: 'Feature 1',;
       description: 'Description for feature 1.',}
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']},;
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
+    }
+    },;
     {icon: Target,;
       title: 'Precision Targeting',;
       description: 'Target specific goals and objectives with precision.',}
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']}];
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    }
+    }];
   const benefits = [;
     'Increase efficiency by up to 80%',;
     'Reduce costs by 30% with automation',;
@@ -205,7 +213,6 @@ const PagePage: React.FC = () => {const features = [;
                 </div>;
       <Footer />;
     </>;
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
               ))}
             </div>;
       <Footer />;
@@ -215,7 +222,6 @@ const PagePage: React.FC = () => {const features = [;
     </>;
         </section>;
         {/* Benefits Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -285,7 +291,6 @@ const PagePage: React.FC = () => {const features = [;
   );
 };
 
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">;
             <div className="text-center mb-16">;
@@ -346,4 +351,3 @@ const PagePage: React.FC = () => {const features = [;
     </>;);
 };
 ;
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
