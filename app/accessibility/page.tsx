@@ -66,21 +66,6 @@ const standards = [
     }
   ];
 
-<<<<<<< HEAD
-  return (
-    <React.Fragment>
-      <Helmet>
-        <title>Accessibility Solutions - Zion Tech Group | Inclusive Digital Experiences</title>
-        <meta name="description" content="Creating inclusive digital experiences that work for everyone. Our accessibility solutions ensure your applications are usable by people of all abilities." />
-        <meta name="keywords" content="accessibility, WCAG, ADA compliance, inclusive design, digital accessibility, Zion Tech Group" />
-      </Helmet>
-=======
-  return (<div>
-        <title>Accessibility Solutions - Zion Tech Group | Inclusive Digital Experiences<
-        <meta name="description" content="Creating inclusive digital experiences that work for everyone. Our accessibility solutions ensure your applications are usable by people of all abilities." 
-        <meta name="keywords" content="accessibility, WCAG, ADA compliance, inclusive design, digital accessibility, Zion Tech Group" 
-      <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section *
@@ -133,32 +118,6 @@ const standards = [
                   <h3 className="text-2xl font-bold text-white mb-4 group-hove,
     r:text-cyan-400 transition-colors">
                     {feature.title}
-<<<<<<< HEAD
-                  </h3>
-                  <p className="text-gray-300 mb-6">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-gray-300 text-sm">
-                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
-                        {benefit}
-                      </li>
-                    ));
-                  </ul>
-                </div>
-              ));
-            </div>
-          </div>
-        </section>
-
-        {/* Standards Compliance */}
-        <section className="py-20 px-4">
-=======
-                  <
-                  <p className="text-gray-300 mb-6">{feature.description}<
-                  <ul className="space-y-2">)
-                    {feature.benefits.map((benefit, benefitIndex) => (<li key={benefitIndex} className="flex items-center text-gray-300 text-sm">
-                        
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
@@ -182,21 +141,6 @@ const standards = [
                   <p className="text-gray-300 mb-4 text-sm">{standard.description}<
                   <span className="inline-block px-4 py-2 bg-green-500
                     {standard.status}
-<<<<<<< HEAD
-                  </span>
-                </div>
-              ));
-            </div>
-          </div>
-        </section>
-=======
-                  <
-                <)
-              ))}
-            <
-          <
-        <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
         {/* CTA Section *
         <section className="py-20 px-4">
@@ -215,24 +159,4 @@ const standards = [
                 <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hove,
     r:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   Contact Us
-<<<<<<< HEAD
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </React.Fragment>)
-=======
-                <
-              <
-            <
-          <
-        <
-      <
-    <
-  );
-};
-
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 export default AccessibilityPage;

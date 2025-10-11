@@ -12,27 +12,6 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" 
       <
 
-<<<<<<< HEAD
-      {/* Hero Section */}
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ));
-          </div>
-        </div>
-      </section>
-=======
-      {/* Hero Section *
-                <
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}<
-                <p className="text-gray-300">{feature.description}<
-              <)
-            ))}
-          <
-        <
-      <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
               Key Benefits
@@ -48,14 +27,4 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
             <
             <p className="text-xl text-purple-100 mb-8">
               Contact our experts to discuss your page needs and get a customized solution.
-<<<<<<< HEAD
-            </p>
-    </div>)
-=======
-            <
-    <
-  );
-};
-
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 export default PagePage;

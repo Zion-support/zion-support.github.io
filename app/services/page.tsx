@@ -15,16 +15,6 @@ import {
   Search,
 
 } from 'lucide-react';
-<<<<<<< HEAD
-;
-const ServicesPage: React.FC = () => {const services = [
-    // AI Services
-=======
-
-const ServicesPage: React.FC = () => {
-  const services = [
-    /
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
     {
       ico,
     n: Brain,
@@ -426,387 +416,6 @@ const ServicesPage: React.FC = () => {
       title: 'IT Consulting',
       description: 'Strategic IT consulting to optimize your technology infrastructure and processes.',
       features: ['Technology Assessment', 'Strategic Planning', 'Cost Optimization', 'Digital Transformation', 'Training'],
-<<<<<<< HEAD
-      price: 'Starting at $299/hour',
-      category: 'IT Services'
-    },
-    {
-      icon: Cloud,
-      title: 'Cloud Infrastructure Management',
-      description: 'Comprehensive cloud infrastructure management with 99.9% uptime guarantee and 24/7 monitoring.',
-      features: ['99.9% Uptime SLA', '24/7 Monitoring', 'Auto-scaling', 'Cost Optimization', 'Security Management'],
-      price: 'Starting at $1,299/month',
-      category: 'IT Services'
-    },
-    {
-      icon: Shield,
-      title: 'Network Security Solutions',
-      description: 'Advanced network security with firewall management, intrusion detection, and threat prevention.',
-      features: ['Firewall Management', 'Intrusion Detection', 'Threat Prevention', 'VPN Solutions', 'Network Monitoring'],
-      price: 'Starting at $599/month',
-      category: 'IT Services'
-    },
-    {
-      icon: Database,
-      title: 'Data Backup & Recovery',
-      description: 'Comprehensive data backup and disaster recovery solutions with automated backups and instant recovery.',
-      features: ['Automated Backups', 'Instant Recovery', 'Disaster Recovery', 'Data Encryption', 'Compliance'],
-      price: 'Starting at $199/month',
-      category: 'IT Services'
-    },
-    {
-      icon: Settings,
-      title: 'IT Asset Management',
-      description: 'Complete IT asset lifecycle management with inventory tracking, maintenance scheduling, and cost optimization.',
-      features: ['Asset Tracking', 'Maintenance Scheduling', 'Cost Optimization', 'License Management', 'Depreciation Tracking'],
-      price: 'Starting at $149/month',
-      category: 'IT Services'
-    },
-    {
-      icon: Globe,
-      title: 'Website Hosting & Maintenance',
-      description: 'Reliable website hosting with SSL certificates, CDN, and regular maintenance for optimal performance.',
-      features: ['99.9% Uptime', 'SSL Certificates', 'CDN Integration', 'Regular Updates', 'Performance Monitoring'],
-      price: 'Starting at $49/month',
-      category: 'IT Services'
-    },
-    {
-      icon: Smartphone,
-      title: 'Mobile Device Management',
-      description: 'Enterprise mobile device management with security policies, app management, and remote control.',
-      features: ['Device Security', 'App Management', 'Remote Control', 'Policy Enforcement', 'Data Protection'],
-      price: 'Starting at $99/month',
-      category: 'IT Services'
-    },
-    {
-      icon: Shield,
-      title: 'Compliance & Audit Services',
-      description: 'Ensure regulatory compliance with automated monitoring, audit trails, and compliance reporting.',
-      features: ['Regulatory Compliance', 'Audit Trails', 'Compliance Reporting', 'Risk Assessment', 'Documentation'],
-      price: 'Starting at $399/month',
-      category: 'IT Services'
-    },
-    {
-      icon: BarChart3,
-      title: 'IT Performance Monitoring',
-      description: 'Real-time IT performance monitoring with alerting, reporting, and optimization recommendations.',
-      features: ['Real-time Monitoring', 'Performance Alerts', 'Optimization Recommendations', 'Capacity Planning', 'Trend Analysis'],
-      price: 'Starting at $299/month',
-      category: 'IT Services'
-    },
-    {
-      icon: Users,
-      title: 'IT Training & Support',
-      description: 'Comprehensive IT training programs and ongoing support for your team and end users.',
-      features: ['Custom Training Programs', 'End-user Support', 'Technical Documentation', 'Video Tutorials', 'Certification'],
-      price: 'Starting at $199/month',
-      category: 'IT Services'
-    },
-    {
-      icon: Settings,
-      title: 'IT Project Management',
-      description: 'Professional IT project management with planning, execution, and delivery of technology initiatives.',
-      features: ['Project Planning', 'Resource Management', 'Timeline Tracking', 'Risk Management', 'Quality Assurance'],
-      price: 'Starting at $399/month',
-      category: 'IT Services'
-    },
-    {
-      icon: Shield,
-      title: 'Vulnerability Assessment',
-      description: 'Comprehensive security vulnerability assessment with penetration testing and remediation guidance.',
-      features: ['Vulnerability Scanning', 'Penetration Testing', 'Remediation Guidance', 'Security Reports', 'Follow-up Testing'],
-      price: 'Starting at $1,999/assessment',
-      category: 'IT Services'
-    },
-    {
-      icon: Cloud,
-      title: 'Hybrid Cloud Solutions',
-      description: 'Seamless hybrid cloud solutions combining on-premises and cloud infrastructure for optimal performance.',
-      features: ['Hybrid Architecture', 'Data Synchronization', 'Workload Migration', 'Cost Optimization', 'Security Integration'],
-      price: 'Starting at $1,599/month',
-      category: 'IT Services'
-    },
-    {
-      icon: Database,
-      title: 'Data Migration Services',
-      description: 'Secure and efficient data migration between systems with zero downtime and data integrity.',
-      features: ['Zero Downtime', 'Data Integrity', 'Migration Planning', 'Testing & Validation', 'Rollback Capability'],
-      price: 'Starting at $2,999/project',
-      category: 'IT Services'
-    },
-    {
-      icon: Globe,
-      title: 'API Development & Integration',
-      description: 'Custom API development and integration services for seamless data exchange between systems.',
-      features: ['Custom API Development', 'System Integration', 'API Documentation', 'Testing & Validation', 'Performance Optimization'],
-      price: 'Starting at $799/month',
-      category: 'IT Services'
-    },
-    {
-      icon: Settings,
-      title: 'IT Governance & Strategy',
-      description: 'Strategic IT governance and technology roadmap development for long-term business success.',
-      features: ['IT Strategy Development', 'Technology Roadmaps', 'Governance Frameworks', 'Risk Management', 'Performance Metrics'],
-      price: 'Starting at $499/month',
-      category: 'IT Services'
-    },
-
-    // Micro SAAS Services
-    {
-      icon: Smartphone,
-      title: 'AI-Powered CRM',
-      description: 'Intelligent customer relationship management with AI insights, automated follow-ups, and predictive analytics.',
-      features: ['AI Lead Scoring', 'Automated Follow-ups', 'Predictive Analytics', 'Contact Management', 'Sales Pipeline'],
-      price: '$149/month',
-      category: 'Micro SAAS',
-      popular: true
-    },
-    {
-      icon: BarChart3,
-      title: 'AI Analytics Dashboard',
-      description: 'Real-time business intelligence with AI-powered insights, custom dashboards, and automated reporting.',
-      features: ['Real-time Analytics', 'Custom Dashboards', 'Automated Reports', 'Data Visualization', 'Predictive Insights'],
-      price: '$199/month',
-      category: 'Micro SAAS',
-      popular: true
-    },
-    {
-      icon: Code,
-      title: 'AI Content Studio',
-      description: 'Complete content creation suite with AI writing, image generation, video editing, and social media automation.',
-      features: ['AI Writing', 'Image Generation', 'Video Editing', 'Social Media Automation', 'SEO Optimization'],
-      price: '$299/month',
-      category: 'Micro SAAS',
-      popular: true
-    },
-    {
-      icon: Users,
-      title: 'AI Chatbot Builder',
-      description: 'Create intelligent chatbots for customer support, sales, and lead generation with no coding required.',
-      features: ['No-code Builder', 'Multi-language Support', 'Integration APIs', 'Analytics Dashboard', 'Custom Training'],
-      price: '$99/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: Mail,
-      title: 'AI Email Marketing',
-      description: 'Automated email campaigns with AI optimization, personalization, and advanced analytics for maximum ROI.',
-      features: ['AI Optimization', 'Personalization', 'A/B Testing', 'Advanced Analytics', 'Automation Workflows'],
-      price: '$179/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: Smartphone,
-      title: 'AI Mobile App Builder',
-      description: 'Build native mobile apps with AI assistance, drag-and-drop interface, and instant deployment.',
-      features: ['Drag-and-drop Builder', 'AI Code Generation', 'Instant Deployment', 'Cross-platform', 'App Store Publishing'],
-      price: '$399/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: Search,
-      title: 'AI SEO Optimizer',
-      description: 'Automated SEO analysis, keyword research, content optimization, and ranking tracking with AI insights.',
-      features: ['Keyword Research', 'Content Optimization', 'Ranking Tracking', 'Competitor Analysis', 'Technical SEO'],
-      price: '$129/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: BarChart3,
-      title: 'AI Invoice Generator',
-      description: 'Automated invoice creation, payment tracking, and financial reporting with AI-powered insights.',
-      features: ['Automated Invoicing', 'Payment Tracking', 'Financial Reports', 'Tax Calculations', 'Client Portal'],
-      price: '$79/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: Code,
-      title: 'AI Writing Assistant',
-      description: 'Advanced AI writing tool for blogs, emails, reports, and content creation with 50+ templates.',
-      features: ['50+ Templates', 'Multi-language Support', 'Plagiarism Check', 'SEO Optimization', 'Tone Adjustment'],
-      price: '$29/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: BarChart3,
-      title: 'Smart Analytics',
-      description: 'Real-time business analytics with AI insights, automated reports, and predictive forecasting.',
-      features: ['Real-time Analytics', 'Predictive Forecasting', 'Automated Reports', 'Custom Metrics', 'Data Integration'],
-      price: '$49/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: Calendar,
-      title: 'AI Scheduler',
-      description: 'Intelligent scheduling with calendar optimization, meeting coordination, and time management.',
-      features: ['Calendar Optimization', 'Meeting Coordination', 'Time Management', 'Auto-scheduling', 'Integration APIs'],
-      price: '$19/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: BarChart3,
-      title: 'Expense Tracker',
-      description: 'AI-powered expense management with receipt scanning, categorization, and budget insights.',
-      features: ['Receipt Scanning', 'Auto-categorization', 'Budget Insights', 'Tax Preparation', 'Multi-currency'],
-      price: '$15/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: CheckSquare,
-      title: 'Task Manager Pro',
-      description: 'Advanced task management with AI prioritization, team collaboration, and progress tracking.',
-      features: ['AI Prioritization', 'Team Collaboration', 'Progress Tracking', 'Time Tracking', 'Project Templates'],
-      price: '$39/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: Users,
-      title: 'CRM Lite',
-      description: 'Lightweight CRM with AI lead scoring, contact management, and sales pipeline automation.',
-      features: ['AI Lead Scoring', 'Contact Management', 'Sales Pipeline', 'Email Integration', 'Mobile App'],
-      price: '$59/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: Mail,
-      title: 'Email Optimizer',
-      description: 'AI-powered email optimization with subject line suggestions, send time optimization, and A/B testing.',
-      features: ['Subject Line AI', 'Send Time Optimization', 'A/B Testing', 'Open Rate Tracking', 'Spam Analysis'],
-      price: '$25/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: Globe,
-      title: 'Social Media Manager',
-      description: 'AI-driven social media management with content creation, scheduling, and performance analytics.',
-      features: ['Content Creation', 'Auto-scheduling', 'Performance Analytics', 'Multi-platform', 'Engagement Tracking'],
-      price: '$45/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: Code,
-      title: 'AI Design Studio',
-      description: 'Create stunning graphics, logos, and marketing materials with AI-powered design tools.',
-      features: ['AI Design Tools', 'Logo Generation', 'Marketing Materials', 'Brand Kit', 'Template Library'],
-      price: '$35/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: Globe,
-      title: 'Landing Page Builder',
-      description: 'Build high-converting landing pages with AI optimization and A/B testing capabilities.',
-      features: ['Drag-and-drop Builder', 'AI Optimization', 'A/B Testing', 'Conversion Tracking', 'Mobile Responsive'],
-      price: '$29/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: Search,
-      title: 'SEO Optimizer',
-      description: 'AI-powered SEO analysis and optimization with keyword research and content suggestions.',
-      features: ['SEO Analysis', 'Keyword Research', 'Content Suggestions', 'Ranking Tracking', 'Technical Audits'],
-      price: '$49/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: BarChart3,
-      title: 'Ad Campaign Manager',
-      description: 'Automated ad campaign management with AI optimization across Google, Facebook, and LinkedIn.',
-      features: ['Multi-platform Ads', 'AI Optimization', 'Budget Management', 'Performance Tracking', 'Auto-bidding'],
-      price: '$79/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: Code,
-      title: 'Code Assistant',
-      description: 'AI-powered code completion, debugging, and optimization for multiple programming languages.',
-      features: ['Code Completion', 'Debugging Help', 'Code Optimization', 'Multi-language Support', 'Documentation'],
-      price: '$39/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: Settings,
-      title: 'API Builder',
-      description: 'Create and manage APIs with AI assistance, documentation generation, and testing tools.',
-      features: ['API Creation', 'Documentation Generation', 'Testing Tools', 'Version Control', 'Rate Limiting'],
-      price: '$59/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: Shield,
-      title: 'Bug Tracker Pro',
-      description: 'Advanced bug tracking with AI-powered issue detection, prioritization, and resolution suggestions.',
-      features: ['AI Issue Detection', 'Priority Scoring', 'Resolution Suggestions', 'Team Collaboration', 'Integration APIs'],
-      price: '$25/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: FileText,
-      title: 'Doc Generator',
-      description: 'Automatically generate technical documentation, API docs, and user guides from code.',
-      features: ['Auto Documentation', 'API Docs', 'User Guides', 'Code Comments', 'Multiple Formats'],
-      price: '$19/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: Users,
-      title: 'AI Recruitment Assistant',
-      description: 'Streamline hiring with AI-powered resume screening, candidate matching, and interview scheduling.',
-      features: ['Resume Screening', 'Candidate Matching', 'Interview Scheduling', 'Skills Assessment', 'Background Checks'],
-      price: '$199/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: Shield,
-      title: 'Medical Records Manager',
-      description: 'HIPAA-compliant medical records management with AI-powered data extraction and analysis.',
-      features: ['HIPAA Compliance', 'Data Extraction', 'Medical Analysis', 'Patient Portal', 'Integration APIs'],
-      price: '$299/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: BarChart3,
-      title: 'AI Accounting Assistant',
-      description: 'Automated accounting with AI-powered bookkeeping, tax preparation, and financial reporting.',
-      features: ['Automated Bookkeeping', 'Tax Preparation', 'Financial Reports', 'Expense Tracking', 'Compliance'],
-      price: '$149/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: BarChart3,
-      title: 'Property Management AI',
-      description: 'AI-powered property management with tenant screening, maintenance scheduling, and rent optimization.',
-      features: ['Tenant Screening', 'Maintenance Scheduling', 'Rent Optimization', 'Property Analytics', 'Tenant Portal'],
-      price: '$179/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: Shield,
-      title: 'Legal Document Manager',
-      description: 'AI-powered legal document management with contract analysis, compliance tracking, and risk assessment.',
-      features: ['Contract Analysis', 'Compliance Tracking', 'Risk Assessment', 'Document Templates', 'Legal Research'],
-      price: '$249/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: Users,
-      title: 'Online Learning Platform',
-      description: 'AI-powered educational platform with personalized learning paths and progress tracking.',
-      features: ['Personalized Learning', 'Progress Tracking', 'Course Creation', 'Assessment Tools', 'Certification'],
-      price: '$99/month',
-      category: 'Micro SAAS'
-    },
-    {
-      icon: BarChart3,
-      title: 'Supply Chain Optimizer',
-      description: 'AI-powered supply chain optimization with demand forecasting and inventory management.',
-      features: ['Demand Forecasting', 'Inventory Management', 'Supplier Analytics', 'Risk Assessment', 'Cost Optimization'],
-      price: '$399/month',
-      category: 'Micro SAAS'
-=======
-      price: 'Starting at $299
-      categor,
-    y: 'IT Services'
->>>>>>> cursor/fix-errors-and-merge-to-main-e8e3
     }
   ];
 ;
@@ -823,43 +432,6 @@ const categories = [
     'IT Services',
     'Micro SAAS'
   ];
-<<<<<<< HEAD
-;
-const [selectedCategory, setSelectedCategory] = React.useState('All');
-const [searchTerm, setSearchTerm] = React.useState('');
-const [currentPage, setCurrentPage] = React.useState(1);
-const servicesPerPage = 12;
-;
-const filteredServices = services.filter(service => {;
-const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
-const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch});
-;
-const totalPages = Math.ceil(filteredServices.length / servicesPerPage);
-const startIndex = (currentPage - 1) * servicesPerPage;
-const endIndex = startIndex + servicesPerPage;
-const currentServices = filteredServices.slice(startIndex, endIndex);
-=======
-
-  const [selectedCategory, setSelectedCategory] = React.useState('All');
-  const [searchTerm, setSearchTerm] = React.useState('');
-  const [currentPage, setCurrentPage] = React.useState(1);
-  const servicesPerPage = 12;
-
-  const filteredServices = services.filter(service => {
-    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;)
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
-<<<<<<< HEAD
-
-  const totalPages = Math.ceil(filteredServices.length / servicesPerPage);
-  const startIndex = (currentPage - 1) * servicesPerPage;
-  const endIndex = startIndex + servicesPerPage;
-  const currentServices = filteredServices.slice(startIndex, endIndex);
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
   // Reset to first page when filters change
   React.useEffect(() => {
@@ -907,63 +479,13 @@ const currentServices = filteredServices.slice(startIndex, endIndex);
                     <input
                       type="text"
                       placeholder="Search services..."
-<<<<<<< HEAD
-                      value={searchTerm}
-                      onChange={(e) => setSearchTerm(e.target.value);
-                      className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"
-                    />
-                  </div>
-                </div>
-=======
-                      value = { searchTerm };
-                      onChange = { (e) => setSearchTerm(e.target.value) };
-                      className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white
-                    
-                  <
-                <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
                 <div className="md:w-64">
                   <div className="relative">
                     <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" 
                     <select
-<<<<<<< HEAD
-                      value={selectedCategory}
-                      onChange={(e) => setSelectedCategory(e.target.value);
-                      className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors appearance-none"
-=======
-                      value = { selectedCategory };
-                      onChange = { (e) => setSelectedCategory(e.target.value) };
-                      className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
                     >
                       {categories.map((category) => (<option key={category} value={category} className="bg-gray-800">
                           {category}
-<<<<<<< HEAD
-                        </option>
-                      ));
-                    </select>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="flex flex-wrap gap-2 justify-center">
-                {categories.slice(1).map((category) => (
-                  <button
-                    key={category}
-                    onClick={() => setSelectedCategory(category);
-=======
-                        <)
-                      ))}
-                    <
-                  <
-                <
-              <
-              
-              <div className="flex flex-wrap gap-2 justify-center">
-                {categories.slice(1).map((category) => (<button
-                    key = { category };)
-                    onClick = { () => setSelectedCategory(category) };
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                       selectedCategory === category
                         ? 'bg-cyan-500 text-white'
@@ -971,21 +493,6 @@ const currentServices = filteredServices.slice(startIndex, endIndex);
                     }`}
                   >
                     {category}
-<<<<<<< HEAD
-                  </button>
-                ));
-              </div>
-            </div>
-          </div>
-        </section>
-=======
-                  <
-                ))}
-              <
-            <
-          <
-        <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
         {/* Services Grid *
         <section className="py-20 px-4">
@@ -999,27 +506,8 @@ const currentServices = filteredServices.slice(startIndex, endIndex);
               <
             <
             
-<<<<<<< HEAD
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {currentServices.map((service, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 group relative">
-=======
-            <div className="grid md: grid-cols-2 l,
-    g:grid-cols-3 gap-8">
-              {filteredServices.map((service), index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white
->>>>>>> cursor/fix-errors-and-merge-to-main-e8e3
                   {service.popular && (
                     <div className="absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-<<<<<<< HEAD
-                      Popular
-                    </div>);
-=======
-
-                    <
-                  )}
-                  
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
                   <div className="flex items-start mb-6">
                     <div className="bg-cyan-500/20 p-3 rounded-lg mr-4 group-hover:bg-cyan-500
                       <service.icon className="w-8 h-8 text-cyan-400" 
@@ -1042,25 +530,6 @@ const currentServices = filteredServices.slice(startIndex, endIndex);
                       {service.features.slice(0), 4).map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" 
                           {feature}
-<<<<<<< HEAD
-                        </li>
-                      ));
-                      {service.features.length > 4 && (
-                        <li className="text-gray-400 text-sm">
-                          +{service.features.length - 4} more features
-                        </li>);
-                    </ul>
-                  </div>
-=======
-                        <)
-                      ))}
-                      {service.features.length > 4 && (<li className="text-gray-400 text-sm">
-                          +{service.features.length - 4} more features
-                        <)
-                      )}
-                    <
-                  <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
                   
                   <div className="mb-6">
                     <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}<
@@ -1070,60 +539,6 @@ const currentServices = filteredServices.slice(startIndex, endIndex);
                   <div className="flex flex-col sm: flex-row gap-3">
                     <button className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center group-hover:scale-105">
                       Get Quote
-<<<<<<< HEAD
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                    </button>
-                    <button className="flex-1 border border-white/20 text-white font-semibold py-3 px-6 rounded-lg hover:bg-white/10 transition-all duration-300">
-                      Learn More
-                    </button>
-                  </div>
-                </div>
-              ));
-            </div>
-            
-            {/* Pagination */}
-            {totalPages > 1 && (
-              <div className="flex justify-center items-center mt-12 space-x-2">
-                <button
-                  onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1));
-                  disabled={currentPage === 1}
-                  className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white hover:bg-white/20 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
-                >
-                  Previous
-                </button>
-                
-                <div className="flex space-x-2">
-                  {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
-                    <button
-                      key={page}
-                      onClick={() => setCurrentPage(page);
-                      className={`px-4 py-2 rounded-lg transition-all duration-300 ${
-                        currentPage === page
-                          ? 'bg-cyan-500 text-white'
-                          : 'bg-white/10 text-white hover:bg-white/20'
-                      }`}
-                    >
-                      {page}
-                    </button>
-                  ));
-                </div>
-                
-                <button
-                  onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages));
-                  disabled={currentPage === totalPages}
-                  className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white hover:bg-white/20 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
-                >
-                  Next
-                </button>
-              </div>);
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-=======
-                      
->>>>>>> cursor/fix-errors-and-merge-to-main-e8e3
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Get Started?
@@ -1138,22 +553,4 @@ const currentServices = filteredServices.slice(startIndex, endIndex);
               <button className="border border-white/20 text-white font-semibold py-4 px-8 rounded-lg hove,
     r:bg-white
                 View Portfolio
-<<<<<<< HEAD
-              </button>
-            </div>
-          </div>
-        </section>
-      </div>
-    </React.Fragment>)
-=======
-              <
-            <
-          <
-        <
-      <
-    <
-  );
-};
-
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 export default ServicesPage;

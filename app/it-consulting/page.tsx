@@ -72,24 +72,6 @@ import {
   Smartphone as SmartphoneIcon2, Laptop as LaptopIcon,
   Tablet as TabletIcon, Headphones as HeadphonesIcon2,
   Keyboard as KeyboardIcon, Mouse as MouseIcon,
-<<<<<<< HEAD
-  Webcam as WebcamIcon, Speaker as SpeakerIcon;)
-} from 'lucide-react';
-;
-const ITConsultingPage: React.FC = () => {const [selectedCategory, setSelectedCategory] = useState('all');
-const [searchTerm, setSearchTerm] = useState('');
-;
-const itServices = [
-=======
-  Webcam as WebcamIcon, Speaker as SpeakerIcon]
-    } from 'lucide-react';
-
-const ITConsultingPage: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-
-  const itServices = [
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
     // IT Infrastructure Services
     {
       id: 'it-infrastructure-design',

@@ -1,33 +1,35 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
 import Link from 'next/link';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, Search } from 'lucide-react';
-=======
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, Search } from 'lucide-react';
-=======
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
-<<<<<<< HEAD
-const Navigation: React.FC = () => {const [isOpen, setIsOpen] = useState(false);
-const [servicesOpen, setServicesOpen] = useState(false);
-const [aiServicesOpen, setAiServicesOpen] = useState(false);
-const [itServicesOpen, setItServicesOpen] = useState(false);
-const [microSaasOpen, setMicroSaasOpen] = useState(false);
-const [isScrolled, setIsScrolled] = useState(false);
-const handleResize = () => {
-    if (window.innerWidth >= 1024) {
-      setIsOpen(false);
-    }
-  }
-const handleScroll = () => {
-    setIsScrolled(window.scrollY > 50);
-  };
-  
-=======
->>>>>>> main
->>>>>>> origin/main
+import {
+  Brain,
+  Cloud,
+  Cpu,
+  Zap,
+  ChevronDown,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  Menu,
+  X,
+  Target,
+  Users,
+  BarChart,
+  Code,
+  Shield,
+  TrendingUp,
+  Globe,
+  Lock,
+  Settings,
+  Smartphone,
+  Search,
+  Calendar,
+  CheckSquare,
+  FileText,
+  Sparkles
+} from 'lucide-react';
+
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -35,7 +37,16 @@ const Navigation: React.FC = () => {
   const [itServicesOpen, setItServicesOpen] = useState(false);
   const [microSaasOpen, setMicroSaasOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
+  const handleResize = () => {
+    if (window.innerWidth >= 1024) {
+      setIsOpen(false);
+    }
+  };
+
+  const handleScroll = () => {
+    setIsScrolled(window.scrollY > 50);
+  };
+
   useEffect(() => {
     window.addEventListener('resize', handleResize);
     window.addEventListener('scroll', handleScroll);
@@ -44,16 +55,18 @@ const Navigation: React.FC = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-const closeAllMenus = () => {
+
+  const closeAllMenus = () => {
     setServicesOpen(false);
     setAiServicesOpen(false);
     setItServicesOpen(false);
     setMicroSaasOpen(false);
     setIsOpen(false);
-  }
-const toggleMenu = () => {
+  };
+
+  const toggleMenu = () => {
     setIsOpen(!isOpen);
-  }
+  };
 const aiServices = [
     { name: 'AI Solutions', href: '/ai-services', icon: Brain, description: 'Core AI Solutions' },
     { name: 'AI Marketing Automation', href: '/ai-marketing', icon: Target, description: 'AI-Powered Marketing' },

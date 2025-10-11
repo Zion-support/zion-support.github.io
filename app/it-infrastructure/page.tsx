@@ -47,31 +47,6 @@ const benefits = [
         <
       <
 
-<<<<<<< HEAD
-              </div>
-            ));
-          </div>
-        </div>
-      </section>
-
-              </div>
-            ));
-          </div>
-        </div>
-      </section>
-=======
-              <)
-            ))}
-          <
-        <
-      <
-
-              <
-            ))}
-          <
-        <
-      <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
       {/* CTA Section *
       <section className="py-20 px-4 sm: px-6 lg:px-8">
@@ -89,22 +64,4 @@ const benefits = [
                 
                 <Mail className="mr-2 h-5 w-5" 
                 Email Us
-<<<<<<< HEAD
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>)
-=======
-              <
-            <
-          <
-        <
-      <
-    <
-  );
-};
-
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 export default PagePage;

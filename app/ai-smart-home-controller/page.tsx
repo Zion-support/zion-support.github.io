@@ -41,21 +41,6 @@ const benefits = [
     'Gain competitive advantage with advanced technology'
   ];
 
-<<<<<<< HEAD
-  return (
-    <React.Fragment>
-      <Helmet>
-        <title>Ai Smart Home Controller - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered ai smart home controller solution for modern businesses." />
-        <meta name="keywords" content="AI ai smart home controller, artificial intelligence, ai smart home controller, AI solutions, intelligent automation" />
-      </Helmet>
-=======
-  return (<div>
-        <title>Ai Smart Home Controller - Zion Tech Group<
-        <meta name="description" content="Advanced AI-powered ai smart home controller solution for modern businesses." 
-        <meta name="keywords" content="AI ai smart home controller, artificial intelligence, ai smart home controller, AI solutions, intelligent automation" 
-      <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
         {/* Hero Section *
         <section className="relative py-20 px-4 overflow-hidden">)
@@ -103,26 +88,6 @@ const benefits = [
                   <p className="text-gray-300 mb-4">{feature.description}<
                   {feature.benefits && (
                     <ul className="space-y-2">
-<<<<<<< HEAD
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
-                        </li>
-                      ));
-                    </ul>);
-                </div>
-              ));
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-20 px-4">
-=======
-                      {feature.benefits.map((benefit, idx) => (<li key={idx} className="flex items-center text-sm text-gray-400">
-                          
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
@@ -133,34 +98,6 @@ const benefits = [
               <
             <
 
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <CheckCircle className="w-8 h-8 text-white" />
-                  </div>
-                  <p className="text-lg text-white font-medium">{benefit}</p>
-                </div>
-              ));
-            </div>
-          </div>
-        </section>
-=======
-            <div className="grid grid-cols-1 md:grid-cols-2 l,
-    g:grid-cols-3 gap-8">
-              {benefits.map((benefit), index) => (<div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hove,
-    r:scale-110 transition-transform">
-                    <CheckCircle className="w-8 h-8 text-white" 
-                  <
-                  <p className="text-lg text-white font-medium">{benefit}<
-                <)
-              ))}
-            <
-          <
-        <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
         {/* CTA Section *
         <section className="py-20 px-4">
@@ -179,26 +116,4 @@ const benefits = [
                 <button className="border border-sky-400 text-sky-400 hover:bg-sky-400 hove,
     r:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   Learn More
-<<<<<<< HEAD
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-      <Footer />
-    </React.Fragment>)
-=======
-                <
-              <
-            <
-          <
-        <
-      <
-      <Footer 
-    <
-  );
-};
-
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 export default AiSmartHomeControllerPage;

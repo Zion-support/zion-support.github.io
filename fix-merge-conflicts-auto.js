@@ -14,12 +14,6 @@ function fixMergeConflicts(filePath) {
     const patterns = [
       // Fix function closing patterns
       {
-        regex: /<<<<<<< HEAD\s*\n\);\)\s*\n=======\s*\n\s*\);\s*\};\s*\n>>>>>>> [^\n]+/g,
-        replacement: '  );\n};'
-      },
-      // Fix simple merge conflicts with just one choice
-      {
-        regex: /<<<<<<< HEAD\s*\n([^=]+)\s*\n=======\s*\n([^>]+)\s*\n>>>>>>> [^\n]+/g,
         replacement: (match, head, branch) => {
           // Choose the longer/more complete version
           return head.trim().length > branch.trim().length ? head.trim() : branch.trim();
@@ -27,12 +21,6 @@ function fixMergeConflicts(filePath) {
       },
       // Fix empty merge conflicts
       {
-        regex: /<<<<<<< HEAD\s*\n\s*\n=======\s*\n\s*\n>>>>>>> [^\n]+/g,
-        replacement: ''
-      },
-      // Fix merge conflicts with just whitespace differences
-      {
-        regex: /<<<<<<< HEAD\s*\n(\s*)\s*\n=======\s*\n(\s*)\s*\n>>>>>>> [^\n]+/g,
         replacement: (match, head, branch) => {
           return head.trim() || branch.trim();
         }

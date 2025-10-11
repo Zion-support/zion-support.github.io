@@ -44,21 +44,6 @@ const FiveGImplementationPage: React.FC = () => {const features = [
     }
   ];
 
-<<<<<<< HEAD
-  return (
-    <React.Fragment>
-      <Helmet>
-        <title>5G Network Implementation - Zion Tech Group | Zion Tech Group - AI & IT Solutions</title>
-        <meta name="description" content="Complete 5G network implementation services with ultra-low latency, high-speed connectivity, and advanced features for modern applications and IoT ecosystems." />
-        <meta name="keywords" content="5G implementation, network infrastructure, IoT connectivity, edge computing, Zion Tech Group" />
-      </Helmet>
-=======
-  return (<div>
-        <title>5G Network Implementation - Zion Tech Group | Zion Tech Group - AI & IT Solutions<
-        <meta name="description" content="Complete 5G network implementation services with ultra-low latency, high-speed connectivity, and advanced features for modern applications and IoT ecosystems." 
-        <meta name="keywords" content="5G implementation, network infrastructure, IoT connectivity, edge computing, Zion Tech Group" 
-      <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section *
         <section className="relative py-20 px-4 overflow-hidden">)
@@ -110,26 +95,6 @@ const FiveGImplementationPage: React.FC = () => {const features = [
                   <p className="text-gray-300 mb-4">{feature.description}<
                   {feature.benefits && (
                     <ul className="space-y-2">
-<<<<<<< HEAD
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
-                        </li>
-                      ));
-                    </ul>);
-                </div>
-              ));
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-=======
-                      {feature.benefits.map((benefit, idx) => (<li key={idx} className="flex items-center text-sm text-gray-400">
-                          
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
           <div className="container mx-auto text-center">
             <div className="bg-white
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
@@ -145,24 +110,4 @@ const FiveGImplementationPage: React.FC = () => {const features = [
                 <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hove,
     r:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   Learn More
-<<<<<<< HEAD
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </React.Fragment>)
-=======
-                <
-              <
-            <
-          <
-        <
-      <
-    <
-  );
-};
-
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 export default FiveGImplementationPage;

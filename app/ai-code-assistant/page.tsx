@@ -1,22 +1,6 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import Navigation from '../components
-import Footer from '../components
-=======
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-<<<<<<< HEAD
-import { CheckCircle, ArrowRight } from 'lucide-react';
-;
-const PagePage: React.FC = () => {const features = [
-    {
-      title: 'Feature 1',
-      description: 'Description of feature 1',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
-=======
->>>>>>> main
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
 const PagePage: React.FC = () => {
@@ -45,12 +29,7 @@ const PagePage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 =======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
 import { CheckCircle, ArrowRight } from 'lucide-react';
 
 const PagePage: React.FC = () => {
@@ -68,23 +47,8 @@ const PagePage: React.FC = () => {
       benefits: ['Global deployment', 'Edge computing', 'Load balancing', 'Geographic optimization']
     },
     {
-<<<<<<< HEAD
-      title: 'Feature 3',
-      description: 'Description of feature 3',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
->>>>>>> main
     }
   ];
-<<<<<<< HEAD
-const benefits = [
-=======
-
-  const benefits = [
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> main
     'Increase efficiency by up to 50%',
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
     'Reduce costs by 30% with automation',
@@ -108,99 +72,6 @@ const benefits = [
     'Gain competitive advantage with advanced technology'
   ];
 
-<<<<<<< HEAD
-  return (
-    <>
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced page solution powered by artificial intelligence." />
-        <meta name="keywords" content="page" />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-        
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                Page
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Advanced page solution powered by artificial intelligence.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
-                >
-                  <span>Get Started</span>
-                  <ArrowRight className="w-5 h-5" />
-                </a>
-                <a
-                  href="#features"
-                  className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center space-x-2"
-                >
-                  <span>Learn More</span>
-                  <ArrowRight className="w-5 h-5" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section id="features" className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">Powerful Features</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our comprehensive platform provides everything you need to succeed.
-              </p>
-            </div>
-<<<<<<< HEAD
-=======
-  return (<>
-        <title>Ai Code Assistant - Zion Tech Group<
-        <meta name="description" content="Advanced AI-powered ai code assistant solution for modern businesses." 
-        <meta name="keywords" content="AI ai code assistant, artificial intelligence, ai code assistant, AI solutions, intelligent automation" 
-      <
-
-        {/* Hero Section *
-        <section className="relative py-20 px-4 overflow-hidden">)
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" 
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} 
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">
-              Ai Code Assistant
-            <
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced AI-powered ai code assistant solution for modern businesses.
-            <
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Get Started
-              <
-              <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                View Demo
-              <
-            <
-          <
-        <
-
-        {/* Features Section *
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Key Features
-              <
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Advanced AI technology that drives results
-              <
-            <
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
 
             <div className="grid grid-cols-1 md:grid-cols-2 l,
     g:grid-cols-4 gap-8">
@@ -217,25 +88,6 @@ const benefits = [
                       {feature.benefits.map((benefit, idx) => (<li key={idx} className="flex items-center text-sm text-gray-400">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" 
                           {benefit}
-<<<<<<< HEAD
-                        </li>
-                      ));
-                    </ul>);
-const benefits = [
-=======
-                        <)
-                      ))}
-                    <
-                  )}
-<<<<<<< HEAD
-                <
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}<
-                <p className="text-gray-300 mb-4">{feature.description}<
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (<li key={benefitIndex} className="flex items-center text-sm text-gray-400">
-                      
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
     'Benefit 1',
                   )}    'Benefit 1',
@@ -326,9 +178,6 @@ const benefits = [
               <
             <
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-xl p-8 backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 transition-all duration-300">
@@ -423,117 +272,13 @@ const benefits = [
                 <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hove,
     r:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   Learn More
-<<<<<<< HEAD
-                <
-              <
-            <
-          <
-        <
-      <
-      <Footer 
-    <
-  );
-};
-
-export default AiCodeAssistantPage;
-=======
-                </button>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
               </div>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-      </div>
-      {/* Benefits Section */}
-      </div>      {/* Benefits Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Page?</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the benefits of our proven solutions
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <CheckCircle className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white">{benefit}</h3>
-              </div>
-            ));
-=======
-
-        {/* CTA Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4 text-center">
-            <div className="bg-gradient-to-r from-cyan-500/10 to-purple-600/10 rounded-2xl p-12 backdrop-blur-sm border border-white/10">
-              <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Join hundreds of companies that have already transformed their business with our solutions.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
-                >
-                  <span>Get Started Now</span>
-                  <ArrowRight className="w-5 h-5" />
-                </a>
-                <a
-                  href="/pricing"
-                  className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center space-x-2"
-                >
-                  <span>View Pricing</span>
-                  <ArrowRight className="w-5 h-5" />
-                </a>
-              </div>
-            </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
           </div>
         </section>
 
-<<<<<<< HEAD
-      {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Transform your business with our page solutions today
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-              Start Free Trial
-            </button>
-            <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Contact Sales
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <Footer />
-    </div>
-  );
-};
-
-    </div>)
-export default PagePage
-export default AiCodeAssistantPage
-export default PagePage;
-<<<<<<< HEAD
-=======
-        <Footer />
-      </div>
-    </>
-  );
-};
-
-export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
 =======
 >>>>>>> main
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-068b
