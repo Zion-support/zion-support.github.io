@@ -27,6 +27,7 @@ const DynamicContentShowcase: React.FC = () => {
       description: 'Scale effortlessly across multiple regions with automatic load balancing'
     }
   ];
+
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -37,6 +38,7 @@ const DynamicContentShowcase: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
+
   const testimonials = [
     {
       name: 'Sarah Johnson',
@@ -59,7 +61,7 @@ const DynamicContentShowcase: React.FC = () => {
       content: 'Outstanding security features and seamless integration. Perfect for our needs.',
       rating: 5
     }
-  ]
+  ];
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -87,9 +89,9 @@ const DynamicContentShowcase: React.FC = () => {
             <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
               <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4">
                 <feature.icon className="h-6 w-6 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
             </div>
           ))}
         </div>

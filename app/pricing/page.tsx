@@ -54,7 +54,7 @@ const PricingPage: React.FC = () => {
       ],
       popular: false
     }
-  ]
+  ];
 
   return (
     <>
@@ -77,7 +77,7 @@ const PricingPage: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {plans.map((plan, index) => (
+              {pricingPlans.map((plan, index) => (
                 <div
                   key={index}
                   className={`bg-white/5 backdrop-blur-lg rounded-2xl p-8 border transition-all duration-300 ${
@@ -131,9 +131,9 @@ const PricingPage: React.FC = () => {
             </div>
           </div>
         </section>
-      </div>
-    </>
-  );
+        </div>
+      </>
+    );
 };
 
 export default PricingPage;
