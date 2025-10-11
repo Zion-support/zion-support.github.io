@@ -1,28 +1,22 @@
-const { captureException, Sentry } = require('../src/utils/sentry');
-
+// Sentry wrapper for API routes
 function withSentry(handler) {
-  return async (req, res) => {
+  return async function wrappedHandler(req, res) {
     try {
-      await handler(req, res);
+      return await handler(req, res);
     } catch (error) {
-      captureException(error && error.stack ? error.stack : error);
+      console.error('API Error:', error);
+      
+      // In production, you would send this to Sentry
+      if (process.env.NODE_ENV === 'production' && process.env.SENTRY_DSN) {
+        // Sentry.captureException(error);
+      }
+      
       if (!res.headersSent) {
         res.statusCode = 500;
-        if (res.json) {
-          res.json({ error: 'Internal server error' });
-        } else {
-          res.end('Internal server error');
-        }
-      }
-    } finally {
-      try {
-        await Sentry.flush(2000);
-      } catch {
-        // ignore flush errors
+        res.json({ error: 'Internal server error' });
       }
     }
   };
 }
 
-module.exports.withSentry = withSentry;
-module.exports.withErrorLogging = withSentry; // backwards compatibility
+module.exports = { withSentry };

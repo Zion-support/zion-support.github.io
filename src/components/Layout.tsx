@@ -1,366 +1,185 @@
-import React, { useState } from 'react';
-import { ReactNode } from 'react';
-interface LayoutProps {
-  children: ReactNode;
-}
-const navigation: NavItem[] = [
-  { label: 'Home', href: '/' },
-  {
-    label: 'Services',
-    href: '/services',
-    children: [
-      { label: 'AI & Machine Learning', href: '/services#ai' },
-      { label: 'Quantum Technology', href: '/services#quantum' },
-      { label: 'Cybersecurity', href: '/services#cybersecurity' },
-      { label: 'Cloud & Infrastructure', href: '/services#cloud' },
-      { label: 'Blockchain & Web3', href: '/services#blockchain' },
-      { label: 'IoT & Edge Computing', href: '/services#iot' },
-      { label: 'Biotechnology & Healthcare', href: '/services#biotech' },
-      { label: 'Space Technology', href: '/services#space' },
-      { label: 'Manufacturing & Industry 4.0', href: '/services#manufacturing' },
-      { label: 'FinTech & Wealth Management', href: '/services#fintech' },
-      { label: 'Consulting & Strategy', href: '/services#consulting' },
-      { label: 'All Services', href: '/services' }
-    ]
-  },
-  { label: 'Contact', href: '/contact' }
-];
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './globals.css';
 
-const sidebarNavigation: NavItem[] = [
-  { label: 'Main', icon: Home, href: '/', children: [
-    { label: 'Home', href: '/', icon: Home },
-    { label: 'Services', href: '/services', icon: Briefcase },
-    { label: 'Contact', href: '/contact', icon: Phone }
-  ]},
-  { label: 'Services', icon: Briefcase, href: '/services', children: [
-    { label: 'AI Autonomous Systems', href: '/services#ai', icon: Brain },
-    { label: 'Cloud Platforms', href: '/services#cloud', icon: Cloud },
-    { label: 'Cybersecurity', href: '/services#cybersecurity', icon: Shield },
-    { label: 'Micro SaaS', href: '/services#saas', icon: Code },
-    { label: 'Technical Consulting', href: '/services', icon: Users },
-    { label: 'System Integration', href: '/services', icon: Network }
-  ]},
-  { label: 'Company', icon: Building, href: '#', children: [
-    { label: 'About Us', href: '/', icon: Building },
-    { label: 'Our Team', href: '/', icon: Users },
-    { label: 'Careers', href: '/', icon: Target },
-    { label: 'Partners', href: '/', icon: Users2 }
-  ]},
-  { label: 'Resources', icon: BookOpen, href: '#', children: [
-    { label: 'Blog', href: '/', icon: FileText },
-    { label: 'Case Studies', href: '/', icon: BarChart3 },
-    { label: 'White Papers', href: '/', icon: FileText },
-    { label: 'Webinars', href: '/', icon: Video },
-    { label: 'Documentation', href: '/', icon: HelpCircle }
-  ]},
-  { label: 'Support', icon: HelpCircle, href: '#', children: [
-    { label: 'Help Center', href: '/', icon: HelpCircle },
-    { label: 'Contact Support', href: '/contact', icon: MessageSquare },
-    { label: 'Training', href: '/', icon: GraduationCap },
-    { label: 'Status Page', href: '/', icon: Activity }
-  ]},
-  { label: 'Legal', icon: Shield, href: '#', children: [
-    { label: 'Privacy Policy', href: '/privacy', icon: Shield },
-    { label: 'Terms of Service', href: '/terms', icon: FileText },
-    { label: 'Cookie Policy', href: '/', icon: Cookie },
-    { label: 'GDPR Compliance', href: '/', icon: Lock }
-  ]}
-];
-
-export default function Layout({ children }: { children: React.ReactNode }) {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState<string | null>(null);
-  const location = useLocation();
-  const isActive = (href: string) => location.pathname === href;
-
-  // Handle scroll effect for header
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  // Close mobile menu when route changes
-  useEffect(() => {
-    setMobileMenuOpen(false);
-    setSidebarOpen(false);
-    setDropdownOpen(null);
-  }, [location]);
-
-  const toggleDropdown = (label: string) => {
-    setDropdownOpen(dropdownOpen === label ? null : label);
-  };
-
-  const toggleSidebarDropdown = (label: string) => {
-    setSidebarDropdownOpen(sidebarDropdownOpen === label ? null : label);
-  };
-
+function Header(): React.JSX.Element {
   return (
-    <div className="min-h-screen bg-zion-slate-dark">
-      {/* Header */}
-      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-zion-slate-dark/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
-      }`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            {/* Logo */}
-            <Link to="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">Z</span>
-              </div>
-              <span className="text-white font-bold text-xl">Zion Tech</span>
+    <header className="border-b border-gray-200 sticky top-0 z-50 bg-white shadow-sm">
+      <nav className="flex items-center justify-between px-4 py-3 max-w-6xl mx-auto">
+        <Link
+          to="/"
+          className="font-bold text-lg text-gray-900 hover:text-blue-600 transition-colors"
+        >
+          Zion Tech Group
+        </Link>
+        <div className="hidden md:flex gap-6">
+          <Link to="/about" className="text-gray-700 hover:text-blue-600 transition-colors">
+            About
+          </Link>
+          <Link to="/services" className="text-gray-700 hover:text-blue-600 transition-colors">
+            Services
+          </Link>
+          <div className="relative group">
+            <Link
+              to="/services"
+              className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1"
+            >
+              AI Solutions
+              <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                REVOLUTIONARY
+              </span>
             </Link>
-
-            {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center space-x-8">
-              {navigation.map((item) => (
-                <div key={item.label} className="relative">
-                  {item.children ? (
-                    <button
-                      onClick={() => toggleDropdown(item.label)}
-                      className="flex items-center space-x-1 text-zion-slate-light hover:text-white transition-colors"
-                    >
-                      <span>{item.label}</span>
-                      <ChevronDown className="w-4 h-4" />
-                    </button>
-                  ) : (
-                    <Link
-                      to={item.href}
-                      className={`transition-colors ${
-                        isActive(item.href) ? 'text-zion-cyan' : 'text-zion-slate-light hover:text-white'
-                      }`}
-                    >
-                      {item.label}
-                    </Link>
-                  )}
-
-                  {/* Dropdown Menu */}
-                  {item.children && dropdownOpen === item.label && (
-                    <div className="absolute top-full left-0 mt-2 w-64 bg-zion-blue-dark border border-zion-cyan/20 rounded-lg shadow-xl backdrop-blur-sm">
-                      <div className="py-2">
-                        {item.children.map((child) => (
-                          <Link
-                            key={child.label}
-                            to={child.href}
-                            className="flex items-center space-x-3 px-4 py-2 text-zion-slate-light hover:text-white hover:bg-zion-cyan/10 transition-colors"
-                          >
-                            {child.icon && <child.icon className="w-4 h-4" />}
-                            <span>{child.label}</span>
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-                </div>
-              ))}
-            </nav>
-
-            {/* Right side actions */}
-            <div className="flex items-center space-x-4">
-              <Search />
-              <ThemeToggle />
-              
-              {/* Mobile menu button */}
-              <button
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="md:hidden p-2 text-zion-slate-light hover:text-white transition-colors"
-              >
-                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-              </button>
-            </div>
           </div>
+          <div className="relative group">
+            <Link
+              to="/services"
+              className="text-gray-700 hover:text-blue-600 transition-colors flex items-center gap-1"
+            >
+              Quantum Computing
+              <span className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                NEXT-GEN
+              </span>
+            </Link>
+          </div>
+          <Link to="/contact" className="text-gray-700 hover:text-blue-600 transition-colors">
+            Contact
+          </Link>
         </div>
-
-        {/* Mobile Navigation */}
-        {mobileMenuOpen && (
-          <div className="md:hidden bg-zion-slate-dark border-t border-zion-cyan/20">
-            <div className="px-4 py-2 space-y-1">
-              {navigation.map((item) => (
-                <div key={item.label}>
-                  {item.children ? (
-                    <button
-                      onClick={() => toggleDropdown(item.label)}
-                      className="flex items-center justify-between w-full px-3 py-2 text-left text-zion-slate-light hover:text-white hover:bg-zion-cyan/10 rounded-md transition-colors"
-                    >
-                      <span>{item.label}</span>
-                      <ChevronRight className="w-4 h-4" />
-                    </button>
-                  ) : (
-                    <Link
-                      to={item.href}
-                      className={`block px-3 py-2 rounded-md transition-colors ${
-                        isActive(item.href) ? 'text-zion-cyan bg-zion-cyan/10' : 'text-zion-slate-light hover:text-white hover:bg-zion-cyan/10'
-                      }`}
-                    >
-                      {item.icon && <item.icon className="w-4 h-4" />}
-                      <span>{item.label}</span>
-                    </Link>
-                  )}
-
-                  {/* Mobile Dropdown */}
-                  {item.children && dropdownOpen === item.label && (
-                    <div className="ml-4 mt-1 space-y-1">
-                      {item.children.map((child) => (
-                        <Link
-                          key={child.label}
-                          to={child.href}
-                          className="flex items-center space-x-3 px-3 py-2 text-zion-slate-light hover:text-white hover:bg-zion-cyan/10 rounded-md transition-colors"
-                        >
-                          {child.icon && <child.icon className="w-4 h-4" />}
-                          <span>{child.label}</span>
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-      </header>
-
-      {/* Sidebar */}
-      <div className={`fixed inset-y-0 left-0 z-40 w-64 bg-zion-slate-dark border-r border-zion-cyan/20 transform transition-transform duration-300 ease-in-out ${
-        sidebarOpen ? 'translate-x-0' : '-translate-x-full'
-      }`}>
-        <div className="flex items-center justify-between h-16 px-4 border-b border-zion-cyan/20">
-          <span className="text-white font-semibold">Navigation</span>
-          <button
-            onClick={() => setSidebarOpen(false)}
-            className="p-2 text-zion-slate-light hover:text-white transition-colors"
+        <div className="flex items-center gap-4">
+          <Link
+            to="/contact"
+            className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
           >
-            <X className="w-5 h-5" />
+            Get Started
+          </Link>
+          <button className="md:hidden">
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
           </button>
         </div>
-        
-        <nav className="px-4 py-4 space-y-2">
-          {sidebarNavigation.map((item) => (
-            <div key={item.label}>
-              {item.children ? (
-                <button
-                  onClick={() => toggleSidebarDropdown(item.label)}
-                  className="flex items-center justify-between w-full px-3 py-2 text-left text-zion-slate-light hover:text-white hover:bg-zion-cyan/10 rounded-md transition-colors"
-                >
-                  <div className="flex items-center space-x-3">
-                    {item.icon && <item.icon className="w-4 h-4" />}
-                    <span>{item.label}</span>
-                  </div>
-                  <ChevronRight className="w-4 h-4" />
-                </button>
-              ) : (
-                <Link
-                  to={item.href}
-                  className={`flex items-center space-x-3 px-3 py-2 rounded-md transition-colors ${
-                    isActive(item.href) ? 'text-zion-cyan bg-zion-cyan/10' : 'text-zion-slate-light hover:text-white hover:bg-zion-cyan/10'
-                  }`}
-                >
-                  {item.icon && <item.icon className="w-4 h-4" />}
-                  <span>{item.label}</span>
-                </Link>
-              )}
+      </nav>
+    </header>
+  );
+}
 
-              {/* Sidebar Dropdown */}
-              {item.children && sidebarDropdownOpen === item.label && (
-                <div className="ml-4 mt-1 space-y-1">
-                  {item.children.map((child) => (
-                    <Link
-                      key={child.label}
-                      to={child.href}
-                      className="flex items-center space-x-3 px-3 py-2 text-zion-slate-light hover:text-white hover:bg-zion-cyan/10 rounded-md transition-colors"
-                    >
-                      {child.icon && <child.icon className="w-4 h-4" />}
-                      <span>{child.label}</span>
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-          ))}
-        </nav>
-      </div>
-
-      {/* Main Content */}
-      <main className="pt-16">
-        {children}
-      </main>
-
-      {/* Footer */}
-      <footer className="bg-zion-slate-dark border-t border-zion-cyan/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {/* Company Info */}
-            <div className="col-span-1 md:col-span-2">
-              <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">Z</span>
-                </div>
-                <span className="text-white font-bold text-xl">Zion Tech Group</span>
-              </div>
-              <p className="text-zion-slate-light mb-4 max-w-md">
-                Leading technology solutions provider specializing in AI, cloud platforms, cybersecurity, and digital transformation.
-              </p>
-              <div className="flex space-x-4">
-                <a href="#" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
-                  <Linkedin className="w-5 h-5" />
-                </a>
-                <a href="#" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
-                  <Twitter className="w-5 h-5" />
-                </a>
-                <a href="#" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
-                  <Github className="w-5 h-5" />
-                </a>
-                <a href="#" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
-                  <Youtube className="w-5 h-5" />
-                </a>
-              </div>
-            </div>
-
-            {/* Quick Links */}
-            <div>
-              <h3 className="text-white font-semibold mb-4">Quick Links</h3>
-              <ul className="space-y-2">
-                <li><Link to="/services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Services</Link></li>
-                <li><Link to="/about" className="text-zion-slate-light hover:text-zion-cyan transition-colors">About</Link></li>
-                <li><Link to="/blog" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Blog</Link></li>
-                <li><Link to="/contact" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Contact</Link></li>
-              </ul>
-            </div>
-
-            {/* Support */}
-            <div>
-              <h3 className="text-white font-semibold mb-4">Support</h3>
-              <ul className="space-y-2">
-                <li><Link to="/help" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Help Center</Link></li>
-                <li><Link to="/status" className="text-zion-slate-light hover:text-zion-cyan transition-colors">System Status</Link></li>
-                <li><Link to="/contact" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Contact Support</Link></li>
-                <li><Link to="/training" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Training</Link></li>
-              </ul>
+function Footer(): React.JSX.Element {
+  return (
+    <footer className="bg-gray-900 text-white py-12">
+      <div className="container mx-auto px-4">
+        <div className="grid md:grid-cols-4 gap-8">
+          <div>
+            <h3 className="text-xl font-bold mb-4">Zion Tech Group</h3>
+            <p className="text-gray-400 mb-4">
+              Leading provider of AI-powered enterprise solutions and digital transformation
+              services.
+            </p>
+            <div className="flex space-x-4">
+              <a href="https://twitter.com/ziontechgroup" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+                </svg>
+              </a>
+              <a href="https://linkedin.com/company/ziontechgroup" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                </svg>
+              </a>
             </div>
           </div>
-
-          <div className="border-t border-zion-cyan/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-zion-slate-light text-sm">
-              © 2025 Zion Tech Group. All rights reserved.
-            </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link to="/privacy" className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors">
-                Privacy Policy
-              </Link>
-              <Link to="/terms" className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors">
-                Terms of Service
-              </Link>
-              <Link to="/cookies" className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors">
-                Cookie Policy
-              </Link>
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Services</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  to="/services"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  AI Solutions
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Quantum Computing
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Business Intelligence
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Cloud Migration
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Company</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/about" className="text-gray-400 hover:text-white transition-colors">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/blog" className="text-gray-400 hover:text-white transition-colors">
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-gray-400 hover:text-white transition-colors">
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Contact</h4>
+            <div className="space-y-2 text-gray-400">
+              <p>Email: kleber@ziontechgroup.com</p>
+              <p>Phone: +1 (302) 464-0950</p>
+              <p>
+                Address: 364 E Main St STE 1008
+                <br />
+                Middletown, DE 19709
+              </p>
             </div>
           </div>
         </div>
-      </footer>
+        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+          <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  );
+}
 
-      <ScrollToTop />
+interface LayoutProps {
+  children: React.ReactNode;
+}
+
+export default function Layout({ children }: LayoutProps): React.JSX.Element {
+  return (
+    <div className="min-h-screen flex flex-col">
+      <Header />
+      <main className="flex-1">{children}</main>
+      <Footer />
     </div>
   );
 }

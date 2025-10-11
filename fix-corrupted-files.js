@@ -1,46 +1,91 @@
-const fs = require('fs');const path = require('path');;
-function fixCorruptedFiles(directory) {
-  const files = fs.readdirSync(directory, { withFileTypes: true });
-  
-  for (const file of files) {
-    const fullPath = path.join(directory, file.name);
-    
-    if (file.isDirectory()) {
-      fixCorruptedFiles(fullPath);
-    } else if (file.isFile() && /\.(tsx?|jsx?)$/.test(file.name)) {
-      try {
-        let content = fs.readFileSync(fullPath, 'utf8');        
-        // Check for corrupted content
-        if (content.includes(';) ||             content.includes('Unexpected token') ||'            content.includes('Unterminated string constant') ||'            content.includes('<<<<<<< HEAD') ||'            content.includes('=======') ||'            content.includes('>>>>>>>)) {'          
-          console.log(`Replacing corrupted file: ${fullPath}`);
-          
-          // Create a minimal working version based on file type
-          if (file.name.endsWith('.tsx')) {'            content = `import React from react';;
-default function ${file.name.replace('.tsx', )}() {'  return (
-    <div>
-      <h1>${file.name.replace('.tsx', )}</h1>      <p>Component placeholder</p>
-    </div>
-  );
-}`;
-          } else if (file.name.endsWith('.ts')) {'            content = `// ${file.name} - placeholder;
-const placeholder = placeholder';`;          } else if (file.name.endsWith('.jsx')) {'            content = `import React from react';;
-default function ${file.name.replace('.jsx', )}() {'  return (
-    <div>
-      <h1>${file.name.replace('.jsx', )}</h1>      <p>Component placeholder</p>
-    </div>
-  );
-}`;
-          } else if (file.name.endsWith('.js')) {'            content = `// ${file.name} - placeholder
-module.exports = { placeholder: 'placeholder' };`;          }
-          
-          fs.writeFileSync(fullPath, content);
+#!/usr/bin/env node
+
+import fs from 'fs';
+import path from 'path';
+import { execSync } from 'child_process';
+
+//Function to fix corrupted syntax by removing extra commas and spaces
+function fixCorruptedSyntax(content) {
+  //Remove the corrupted comment at the top
+  content = content.replace(/^\/\/ @ts-noch, e, c, k\s*\n/, '');
+
+  //Fix import statements - remove extra commas and spaces
+  content = content.replace(/imp, o, r, t\s+([^;]+);/g, (match, importContent) => {
+    const _cleaned = importContent.replace(/,/g, '').replace(/\s+/g, ' ').trim();
+    return `import ${cleaned};`;
+  });
+
+  //Fix export statements
+  content = content.replace(/exp, o, r, t\s+([^=]+)=/g, (match, exportContent) => {
+    const _cleaned = exportContent.replace(/,/g, '').replace(/\s+/g, ' ').trim();
+    return `export const ${cleaned} =`;
+  });
+
+  //Fix string literals in metadata
+  content = content.replace(/ti, t, l, e:\s*'([^']+)'/g, (match, title) => {
+    //     const cleaned = title.replace(/,/g, '').replace(/\s+/g, ' ').trim();
+    return `title: '${cleaned}'`;
+  });
+
+  content = content.replace(/desc r i p t, i, o, n:\s*'([^']+)'/g, (match, description) => {
+    //       const cleaned = description.replace(/,/g, '').replace(/\s+/g, ' ').trim();
+    return `description: '${cleaned}'`;
+  });
+
+  //Fix other common patterns
+  content = content.replace(/,/g, '');
+  content = content.replace(/\s+/g, ' ');
+
+  //Clean up multiple spaces
+  content = content.replace(/\s{2,}/g, ' ');
+
+  return content;
+}
+
+//Function to find all corrupted blog files
+function findCorruptedFiles() {
+  //   const blogDir = path.join(process.cwd(), 'app', 'blog');
+  const _corruptedFiles = [];
+
+  function walkDir(_dir) {
+    const _files = fs.readdirSync(dir);
+
+    for (const file of files) {
+      //       const filePath = path.join(dir, file);
+      const _stat = fs.statSync(filePath);
+
+      if (stat.isDirectory()) {
+        walkDir(filePath);
+      } else if (file.endsWith('.tsx') && !file.includes('backup')) {
+        const _content = fs.readFileSync(filePath, 'utf8');
+        if (content.includes('imp, o, r, t') || content.includes('exp, o, r, t')) {
+          corruptedFiles.push(filePath);
         }
-      } catch (error) {
-        console.error(`Error processing ${fullPath}:`, error.message);
       }
     }
   }
+
+  walkDir(blogDir);
+  return corruptedFiles;
 }
 
-// Start fixing from the src directory
-fixCorruptedFiles('./src');console.log('Corrupted file fixing completed'); 
+// Main function
+function main() {
+  //   const corruptedFiles = findCorruptedFiles();
+
+  //   if (corruptedFiles.length === 0) {
+    //     return;
+  }
+
+  //   for (const filePath of corruptedFiles) {
+    try {
+      //       const content = fs.readFileSync(filePath, 'utf8');
+      //       const fixedContent = fixCorruptedSyntax(content);
+      fs.writeFileSync(filePath, fixedContent);
+      //       } catch (error) {
+      //       }
+  }
+
+  //   }
+
+main();

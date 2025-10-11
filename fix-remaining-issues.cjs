@@ -1,195 +1,131 @@
 const fs = require('fs');
 const path = require('path');
+const glob = require('glob');
 
-function removeUnusedImports(filePath) {
+// Function to fix remaining issues in a file
+function fixRemainingIssues(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Remove unused lucide-react imports
-    const lucideImportRegex =
-      /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/g;
-    const matches = content.match(lucideImportRegex);
+    // Fix href to to in Link components (more comprehensive)
+    const hrefToToRegex = /<Link\s+([^>]*?)href={['"]([^'"]+)['"]}([^>]*?)>/g;
+    content = content.replace(hrefToToRegex, (match, before, href, after) => {
+      modified = true;
+      return `<Link ${before}to={'${href}'}${after}>`;
+    });
 
-    if (matches) {
-      for (const match of matches) {
-        const importContent = match.match(/{\s*([^}]+)\s*}/)[1];
-        const imports = importContent.split(',').map(imp => imp.trim());
+    // Fix remaining href attributes in Link components
+    const hrefAttributeRegex = /href={['"]([^'"]+)['"]}/g;
+    content = content.replace(hrefAttributeRegex, (match, href) => {
+      // Only replace if it's inside a Link component
+      const beforeMatch = content.substring(0, content.indexOf(match));
+      const lastLinkOpen = beforeMatch.lastIndexOf('<Link');
+      const lastLinkClose = beforeMatch.lastIndexOf('>');
+      
+      if (lastLinkOpen > lastLinkClose) {
+        modified = true;
+        return `to={'${href}'}`;
+      }
+      return match;
+    });
 
-        // Check which imports are actually used
-        const usedImports = imports.filter(imp => {
-          const importName = imp.split(' as ')[0].trim();
-          // Count occurrences in the file (excluding the import line itself)
-          const contentWithoutImport = content.replace(match, '');
-          const occurrences = (
-            contentWithoutImport.match(
-              new RegExp(`\\b${importName}\\b`, 'g')
-            ) || []
-          ).length;
-          return occurrences > 0;
-        });
+    // Remove Metadata type references
+    const metadataRegex = /export\s+const\s+metadata:\s*Metadata\s*=/g;
+    content = content.replace(metadataRegex, (match) => {
+      modified = true;
+      return '// export const metadata: Metadata = // Removed for Vite';
+    });
 
-        if (usedImports.length === 0) {
-          content = content.replace(match, '');
-          modified = true;
-        } else if (usedImports.length < imports.length) {
-          const newImport = `import { ${usedImports.join(', ')} } from 'lucide-react';`;
-          content = content.replace(match, newImport);
-          modified = true;
+    // Fix dynamic imports that weren't caught
+    const dynamicRegex = /const\s+(\w+)\s+=\s+dynamic\(/g;
+    content = content.replace(dynamicRegex, (match, varName) => {
+      modified = true;
+      return `const ${varName} = lazy(`;
+    });
+
+    // Fix dynamic import closing
+    const dynamicCloseRegex = /,\s*\{\s*loading:\s*\(\)\s+=>\s+<(\w+)Skeleton\s*\/>,\s*\}\);?/g;
+    content = content.replace(dynamicCloseRegex, (match, skeletonName) => {
+      modified = true;
+      return `);`;
+    });
+
+    // Add React import if missing and we have JSX
+    if (content.includes('<') && content.includes('>') && !content.includes('import React')) {
+      const lines = content.split('\n');
+      let insertIndex = 0;
+      
+      // Find the first import statement or add at the beginning
+      for (let i = 0; i < lines.length; i++) {
+        if (lines[i].startsWith('import ')) {
+          insertIndex = i;
+          break;
         }
       }
-    }
-
-    // Remove unused Head imports
-    if (
-      content.includes("import Head from 'next/head';") &&
-      !content.includes('<Head>')
-    ) {
-      content = content.replace(/import Head from 'next\/head';\n?/g, '');
-      modified = true;
-    }
-
-    // Remove unused Link imports
-    if (
-      content.includes("import Link from 'next/link';") &&
-      !content.includes('<Link')
-    ) {
-      content = content.replace(/import Link from 'next\/link';\n?/g, '');
-      modified = true;
-    }
-
-    // Remove unused React imports (if using Next.js)
-    if (
-      content.includes("import React from 'react';") &&
-      !content.includes('React.')
-    ) {
-      content = content.replace(/import React from 'react';\n?/g, '');
-      modified = true;
-    }
-
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      return true;
-    }
-
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
-}
-
-function fixPropertyAssignmentErrors(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-
-    // Fix object property syntax issues
-    const patterns = [
-      // Fix colon instead of equals
-      { from: /(\w+):\s*(\w+)\s*=/g, to: '$1: $2' },
-      // Fix missing quotes around object keys
-      { from: /(\w+):\s*(\w+)\s*:/g, to: '$1: $2:' },
-      // Fix property assignment syntax
-      { from: /(\w+)\s*=\s*(\w+)\s*:/g, to: '$1: $2:' },
-    ];
-
-    for (const pattern of patterns) {
-      if (pattern.from.test(content)) {
-        content = content.replace(pattern.from, pattern.to);
+      
+      if (!content.includes('import React')) {
+        lines.splice(insertIndex, 0, "import React from 'react';");
+        content = lines.join('\n');
         modified = true;
       }
     }
 
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      return true;
-    }
-
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
-}
-
-function removeUnusedVariables(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-
-    // Remove unused variable declarations
-    const lines = content.split('\n');
-    const newLines = [];
-
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-
-      // Skip lines that declare unused variables
-      if (
-        line.match(/^\s*const\s+\w+\s*=\s*\[.*\]\s*;\s*$/) ||
-        line.match(/^\s*const\s+\w+\s*=\s*\{.*\}\s*;\s*$/) ||
-        line.match(/^\s*const\s+\w+\s*=\s*[^=]+;\s*$/) ||
-        line.match(/^\s*let\s+\w+\s*=\s*[^=]+;\s*$/)
-      ) {
-        const varName = line.match(/^\s*(?:const|let)\s+(\w+)/);
-        if (varName) {
-          const name = varName[1];
-          // Check if variable is used elsewhere in the file
-          const contentWithoutLine = content.replace(line, '');
-          const occurrences = (
-            contentWithoutLine.match(new RegExp(`\\b${name}\\b`, 'g')) || []
-          ).length;
-
-          if (occurrences === 0) {
-            // Skip this line (remove unused variable)
-            modified = true;
-            continue;
-          }
+    // Add lazy import if we have lazy usage
+    if (content.includes('lazy(') && !content.includes('import { lazy }')) {
+      const lines = content.split('\n');
+      let insertIndex = 0;
+      
+      for (let i = 0; i < lines.length; i++) {
+        if (lines[i].startsWith('import ')) {
+          insertIndex = i;
+          break;
         }
       }
-
-      newLines.push(line);
+      
+      lines.splice(insertIndex, 0, "import { lazy } from 'react';");
+      content = lines.join('\n');
+      modified = true;
     }
 
     if (modified) {
-      const newContent = newLines.join('\n');
-      fs.writeFileSync(filePath, newContent, 'utf8');
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
       return true;
     }
-
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
-function processDirectory(dirPath) {
-  const files = fs.readdirSync(dirPath);
-  let fixedCount = 0;
+// Find all TypeScript/JavaScript files in the app directory
+const patterns = [
+  'app/**/*.tsx',
+  'app/**/*.ts',
+  'app/**/*.jsx',
+  'app/**/*.js'
+];
 
-  for (const file of files) {
-    const filePath = path.join(dirPath, file);
-    const stat = fs.statSync(filePath);
+let totalFixed = 0;
 
-    if (stat.isDirectory()) {
-      fixedCount += processDirectory(filePath);
-    } else if (
-      file.endsWith('.tsx') ||
-      file.endsWith('.ts') ||
-      file.endsWith('.jsx') ||
-      file.endsWith('.js')
-    ) {
-      if (removeUnusedImports(filePath)) fixedCount++;
-      if (fixPropertyAssignmentErrors(filePath)) fixedCount++;
-      if (removeUnusedVariables(filePath)) fixedCount++;
+patterns.forEach(pattern => {
+  const files = glob.sync(pattern, { cwd: process.cwd() });
+  
+  files.forEach(file => {
+    // Skip certain directories
+    if (file.includes('node_modules') || 
+        file.includes('.next') || 
+        file.includes('dist') ||
+        file.includes('build')) {
+      return;
     }
-  }
+    
+    if (fixRemainingIssues(file)) {
+      totalFixed++;
+    }
+  });
+});
 
-  return fixedCount;
-}
-
-console.log('Starting comprehensive code quality fixes...');
-const fixedCount = processDirectory('./pages');
-console.log(`Fixed ${fixedCount} files`);
+console.log(`\nTotal files fixed: ${totalFixed}`);

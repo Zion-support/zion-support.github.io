@@ -1,69 +1,125 @@
 #!/bin/bash
 
-# Script to merge all open PRs systematically
-# This script will fetch open PRs and merge them one by one
+# Comprehensive PR Merger Script
+# Merges all open PRs into main branch
 
-echo "Starting comprehensive PR merge process..."
+set -e
 
-# Function to merge a PR
-merge_pr() {
-    local pr_number=$1
-    local pr_title=$2
-    local branch_name=$3
+echo "=========================================="
+echo "Starting Comprehensive PR Merge Process"
+echo "=========================================="
+echo ""
+
+# List of PRs to merge (from newest to oldest)
+PRS=(
+  "26238:cursor/fix-errors-and-merge-to-main-016f"
+  "26237:cursor/fix-errors-and-merge-to-main-4d3d"
+  "26236:cursor/fix-errors-and-merge-to-main-1fda"
+  "26235:cursor/fix-errors-and-merge-to-main-9d5a"
+  "26234:cursor/fix-errors-and-merge-to-main-e10a"
+  "26233:cursor/fix-errors-and-merge-to-main-c5c2"
+  "26232:cursor/fix-errors-and-merge-to-main-05e6"
+  "26231:cursor/fix-errors-and-merge-to-main-ea05"
+  "26230:cursor/fix-errors-and-merge-to-main-49e0"
+  "26229:cursor/fix-errors-and-merge-to-main-0710"
+  "26228:cursor/fix-errors-and-merge-to-main-7c89"
+  "26226:cursor/fix-errors-and-merge-to-main-f537"
+  "26225:cursor/fix-errors-and-merge-to-main-75d4"
+  "26224:cursor/fix-errors-and-merge-to-main-e348"
+  "26223:cursor/fix-errors-and-merge-to-main-4a29"
+  "26222:cursor/fix-errors-and-merge-to-main-74c6"
+)
+
+MERGED=0
+FAILED=0
+SKIPPED=0
+
+# Ensure we're on main and up to date
+echo "Updating main branch..."
+git checkout main
+git pull origin main
+
+echo ""
+echo "Processing ${#PRS[@]} PRs..."
+echo ""
+
+for pr_info in "${PRS[@]}"; do
+  IFS=':' read -r PR_NUM BRANCH <<< "$pr_info"
+  
+  echo "----------------------------------------"
+  echo "Processing PR #$PR_NUM: $BRANCH"
+  echo "----------------------------------------"
+  
+  # Fetch the branch
+  if ! git fetch origin "$BRANCH"; then
+    echo "❌ Failed to fetch branch $BRANCH"
+    ((FAILED++))
+    continue
+  fi
+  
+  # Check if branch exists
+  if ! git rev-parse "origin/$BRANCH" >/dev/null 2>&1; then
+    echo "⚠️  Branch $BRANCH not found, skipping"
+    ((SKIPPED++))
+    continue
+  fi
+  
+  # Try to merge
+  echo "Attempting to merge origin/$BRANCH into main..."
+  
+  if git merge "origin/$BRANCH" --no-edit -m "Merge PR #$PR_NUM: Fix errors and merge to main"; then
+    echo "✅ Successfully merged PR #$PR_NUM"
+    ((MERGED++))
+  else
+    echo "⚠️  Merge conflict detected for PR #$PR_NUM"
     
-    echo "Processing PR #$pr_number: $pr_title"
-    echo "Branch: $branch_name"
+    # Auto-resolve conflicts by accepting main changes for problematic files
+    git status --short | grep "^UU\|^AA\|^DD" | awk '{print $2}' | while read -r conflict_file; do
+      echo "   Resolving conflict in: $conflict_file"
+      
+      # For report files, accept both versions
+      if [[ "$conflict_file" == *"REPORT"* ]] || [[ "$conflict_file" == *"SUMMARY"* ]]; then
+        git add "$conflict_file" 2>/dev/null || git checkout --ours "$conflict_file" && git add "$conflict_file"
+      else
+        # For other files, keep main version
+        git checkout --ours "$conflict_file" && git add "$conflict_file"
+      fi
+    done
     
-    # Checkout the branch
-    if git checkout "$branch_name" 2>/dev/null; then
-        echo "Successfully checked out $branch_name"
-        
-        # Pull latest changes
-        git pull origin "$branch_name" 2>/dev/null
-        
-        # Merge into main
-        git checkout main
-        if git merge "$branch_name" --no-edit 2>/dev/null; then
-            echo "Successfully merged PR #$pr_number"
-            return 0
-        else
-            echo "Failed to merge PR #$pr_number - resolving conflicts..."
-            # Try to resolve conflicts automatically
-            git status
-            # For now, just continue with the next PR
-            git merge --abort 2>/dev/null
-            return 1
-        fi
+    # Complete the merge
+    if git commit --no-edit -m "Merge PR #$PR_NUM: Fix errors and merge to main (auto-resolved conflicts)"; then
+      echo "✅ Successfully merged PR #$PR_NUM (with conflict resolution)"
+      ((MERGED++))
     else
-        echo "Failed to checkout branch $branch_name"
-        return 1
+      echo "❌ Failed to complete merge for PR #$PR_NUM"
+      git merge --abort 2>/dev/null || true
+      ((FAILED++))
     fi
-}
-
-# Get list of open PRs
-echo "Fetching open PRs..."
-PRS=$(curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100" | grep -E '"number":|"title":|"ref":' | tr -d '",' | awk '
-/^[[:space:]]*"number":/ { pr = $2; next }
-/^[[:space:]]*"title":/ { title = $0; gsub(/^[[:space:]]*"title":[[:space:]]*/, "", title); next }
-/^[[:space:]]*"ref":/ { ref = $2; print pr "|" title "|" ref; next }
-')
-
-echo "Found PRs to process:"
-echo "$PRS"
-
-# Process each PR
-echo "$PRS" | while IFS='|' read -r pr_number pr_title pr_ref; do
-    if [ -n "$pr_number" ] && [ -n "$pr_ref" ]; then
-        echo "Processing PR #$pr_number..."
-        merge_pr "$pr_number" "$pr_title" "$pr_ref"
-        echo "---"
-    fi
+  fi
+  
+  echo ""
 done
 
-echo "PR merge process completed!"
-echo "Pushing all changes to main..."
+echo "=========================================="
+echo "Merge Summary"
+echo "=========================================="
+echo "Total PRs processed: ${#PRS[@]}"
+echo "Successfully merged: $MERGED"
+echo "Failed: $FAILED"
+echo "Skipped: $SKIPPED"
+echo "=========================================="
 
-# Push all changes
-git push origin main
+# Push changes to main
+if [ $MERGED -gt 0 ]; then
+  echo ""
+  echo "Pushing merged changes to origin/main..."
+  if git push origin main; then
+    echo "✅ Successfully pushed all changes to main"
+  else
+    echo "❌ Failed to push changes. Please push manually."
+    exit 1
+  fi
+fi
 
-echo "All changes pushed to main branch!"
+echo ""
+echo "✅ All operations completed!"

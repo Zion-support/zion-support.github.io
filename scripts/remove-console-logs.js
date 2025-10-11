@@ -1,98 +1,99 @@
-
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import {glob} from 'glob'; const CONSOLE_PATTERNS = [ /console\.log\([^)]*\);?/g,/console\.debug\([^)]*\);?/g,/console\.info\([^)]*\);?/g,/console\.warn\([^)]*\);?/g,]; const EXCLUDE_PATTERNS = [ 'node_modules','.next','dist','build','coverage','scripts','*.test.*','*.spec.*' ]; function shouldProcessFile(filePath) { return !EXCLUDE_PATTERNS && EXCLUDE_PATTERNS.some(pattern => { if (pattern && pattern.includes('*')) { return glob && glob.sync(pattern,{ cwd: path && path.dirname(filePath) }).then(matches => matches && matches.some(match => filePath && filePath.includes(match)) )} return filePath && filePath.includes(pattern)})} function removeConsoleStatements(content) { let modifiedContent = content; let removedCount = 0; CONSOLE_PATTERNS && CONSOLE_PATTERNS.forEach(pattern => { const matches = modifiedContent && modifiedContent.match(pattern); if (matches) { removedCount += matches && matches.length; modifiedContent = modifiedContent && modifiedContent.replace(pattern,'')} }); return { content: modifiedContent,removedCount }} function processFile(filePath) { try { const content = fs && fs.readFileSync(filePath,'utf8'); const { content: newContent,removedCount } = removeConsoleStatements(content); if (removedCount > 0) { fs && fs.writeFileSync(filePath,newContent,'utf8');  return removedCount} return 0} catch (error) { console && console.error(`✗ Error processing ${filePath}:`,error && error.message); return 0} } function main() { const srcDir = path && path.join(process && process.cwd(),'src'); const pagesDir = path && path.join(process && process.cwd(),'pages'); const patterns = [ `${srcDir}*.{js,jsx,ts,tsx}`,`${pagesDir}*.{js,jsx,ts,tsx}` ]; let totalRemoved = 0; let filesProcessed = 0; patterns && patterns.forEach(pattern => { const files = glob && glob.sync(pattern); files && files.forEach(file => { if (shouldProcessFile(file)) { const removed = processFile(file); totalRemoved += removed; filesProcessed++} })});    if (totalRemoved > 0) { } else { } } if (require && require.main === module) { main()} module && module.exports = { removeConsoleStatements,processFile };
-
 #!/usr/bin/env node
+
 import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
-/**
- * Script to remove console && console.log statements from production builds
- * This helps improve performance and security
- */
-const CONSOLE_PATTERNS = [/console\.log\([^)]*\);?/g,
-  /console\.debug\([^)]*\);?/g,
-  /console\.info\([^)]*\);?/g,
-  /console\.warn\([^)]*\);?/g,
-  // Keep console && console.error for debugging
-];
-const EXCLUDE_PATTERNS = ['node_modules',
-  '.next',
-  'dist',
-  'build',
-  'coverage',
-  'scripts',
-  '*.test.*',
-  '*.spec.*'
-];
-function shouldProcessFile(filePath) {
-  return !EXCLUDE_PATTERNS && EXCLUDE_PATTERNS.some(pattern => {
-    if (pattern && pattern.includes('*')) {
-      return glob && glob.sync(pattern, { "cwd": path && path.dirname(filePath) }).then(matches => 
-        matches && matches.some(match => filePath && filePath.includes(match))
-      )}
-    return filePath && filePath.includes(pattern)})}
-function removeConsoleStatements(content) {
-  let modifiedContent = content;
-  let removedCount = 0;
-  CONSOLE_PATTERNS && CONSOLE_PATTERNS.forEach(pattern => {
-    const matches = modifiedContent && modifiedContent.match(pattern);
-    if (matches) {
-      removedCount += matches && matches.length;
-      modifiedContent = modifiedContent && modifiedContent.replace(pattern, '')}
-  });
-  return { "content": modifiedContent, removedCount }}
-function processFile(filePath) {
+
+// Function to remove console.log statements from a file
+function removeConsoleLogs(filePath) {
   try {
-    const content = fs && fs.readFileSync(filePath, 'utf8');
-    const { "content": newContent, removedCount } = removeConsoleStatements(content);
-    if (removedCount > 0) {
-      fs && fs.writeFileSync(filePath, newContent, 'utf8');
-      console && console.log(` ${filePath}: Removed ${removedCount} console statements`);
-      return removedCount}
-    return 0} catch (error) {
-    console && console.error(` Error processing ${filePath}:`, error && error.message);
-    return 0}
-
-function main() {
-  const srcDir = path && path.join(process && process.cwd(), 'src');
-  const pagesDir = path && path.join(process && process.cwd(), 'pages');
-  const patterns = [`${srcDir}/**/*.{js,jsx,ts,tsx}`,
-    `${pagesDir}/**/*.{js,jsx,ts,tsx}`
-  ];
-  let totalRemoved = 0;
-  let filesProcessed = 0;
-  patterns && patterns.forEach(pattern => {
-    const files = glob && glob.sync(pattern);
-    files && files.forEach(file => {
-      if (shouldProcessFile(file)) {
-        const removed = processFile(file);
-        totalRemoved += removed;
-        filesProcessed++}
-    })});
-  console && console.log("\n "Summary": ");
-  console && console.log(`   Files processed: ${filesProcessed}`);
-  console && console.log(`   Console statements "removed": ${totalRemoved}`);
-  if (totalRemoved > 0) {
-
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const CONSOLE_PATTERNS = [ /console\.log\([^)]*\);?/g,/console\.debug\([^)]*\);?/g,/console\.info\([^)]*\);?/g,/console\.warn\([^)]*\);?/g,]; const EXCLUDE_PATTERNS = [ 'node_modules','.next','dist','build','coverage','scripts','*.test.*','*.spec.*' ]; function shouldProcessFile(filePath) { return !EXCLUDE_PATTERNS.some(pattern => { if (pattern.includes('*')) { return glob.sync(pattern,{ cwd: path.dirname(filePath) }).then(matches => matches.some(match => filePath.includes(match)) )} return filePath.includes(pattern)})} function removeConsoleStatements(content) { let modifiedContent = content; let removedCount = 0; CONSOLE_PATTERNS.forEach(pattern => { const matches = modifiedContent.match(pattern); if (matches) { removedCount += matches.length; modifiedContent = modifiedContent.replace(pattern,'')} }); return { content: modifiedContent,removedCount }} function processFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const { content: newContent,removedCount } = removeConsoleStatements(content); if (removedCount > 0) { fs.writeFileSync(filePath,newContent,'utf8'); console.log(`✓ ${filePath}: Removed ${removedCount} console statements`); return removedCount} return 0} catch (error) { console.error(`✗ Error processing ${filePath}:`,error.message); return 0} } function main() { const srcDir = path.join(process.cwd(),'src'); const pagesDir = path.join(process.cwd(),'pages'); const patterns = [ `${srcDir}*.{js,jsx,ts,tsx}`,`${pagesDir}*.{js,jsx,ts,tsx}` ]; let totalRemoved = 0; let filesProcessed = 0; patterns.forEach(pattern => { const files = glob.sync(pattern); files.forEach(file => { if (shouldProcessFile(file)) { const removed = processFile(file); totalRemoved += removed; filesProcessed++} })}); console.log(`\n📊 Summary:`); console.log(` Files processed: ${filesProcessed}`); console.log(` Console statements removed: ${totalRemoved}`); if (totalRemoved > 0) { console.log(`\n✨ Production build optimized!`)} else { console.log(`\n✨ No console statements found to remove.`)} } if (require.main === module) { main()} module.exports = { removeConsoleStatements,processFile };
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const CONSOLE_PATTERNS = [ /console\.log\([^)]*\);?/g,/console\.debug\([^)]*\);?/g,/console\.info\([^)]*\);?/g,/console\.warn\([^)]*\);?/g,]; const EXCLUDE_PATTERNS = [ 'node_modules','.next','dist','build','coverage','scripts','*.test.*','*.spec.*' ]; function shouldProcessFile(filePath) { return !EXCLUDE_PATTERNS.some(pattern => { if (pattern.includes('*')) { return glob.sync(pattern,{ cwd: path.dirname(filePath) }).then(matches => matches.some(match => filePath.includes(match)) )} return filePath.includes(pattern)})} function removeConsoleStatements(content) { let modifiedContent = content; let removedCount = 0; CONSOLE_PATTERNS.forEach(pattern => { const matches = modifiedContent.match(pattern); if (matches) { removedCount += matches.length; modifiedContent = modifiedContent.replace(pattern,'')} }); return { content: modifiedContent,removedCount }} function processFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const { content: newContent,removedCount } = removeConsoleStatements(content); if (removedCount > 0) { fs.writeFileSync(filePath,newContent,'utf8'); console.log(`✓ ${filePath}: Removed ${removedCount} console statements`); return removedCount} return 0} catch (error) { console.error(`✗ Error processing ${filePath}:`,error.message); return 0} } function main() { const srcDir = path.join(process.cwd(),'src'); const pagesDir = path.join(process.cwd(),'pages'); const patterns = [ `${srcDir}*.{js,jsx,ts,tsx}`,`${pagesDir}*.{js,jsx,ts,tsx}` ]; let totalRemoved = 0; let filesProcessed = 0; patterns.forEach(pattern => { const files = glob.sync(pattern); files.forEach(file => { if (shouldProcessFile(file)) { const removed = processFile(file); totalRemoved += removed; filesProcessed++} })}); console.log(`\n📊 Summary:`); console.log(` Files processed: ${filesProcessed}`); console.log(` Console statements removed: ${totalRemoved}`); if (totalRemoved > 0) { console.log(`\n✨ Production build optimized!`)} else { console.log(`\n✨ No console statements found to remove.`)} } if (require.main === module) { main()} module.exports = { removeConsoleStatements,processFile };
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const CONSOLE_PATTERNS = [ /console\.log\([^)]*\);?/g,/console\.debug\([^)]*\);?/g,/console\.info\([^)]*\);?/g,/console\.warn\([^)]*\);?/g,]; const EXCLUDE_PATTERNS = [ 'node_modules','.next','dist','build','coverage','scripts','*.test.*','*.spec.*' ]; function shouldProcessFile(filePath) { return !EXCLUDE_PATTERNS.some(pattern => { if (pattern.includes('*')) { return glob.sync(pattern,{ cwd: path.dirname(filePath) }).then(matches => matches.some(match => filePath.includes(match)) )} return filePath.includes(pattern)})} function removeConsoleStatements(content) { let modifiedContent = content; let removedCount = 0; CONSOLE_PATTERNS.forEach(pattern => { const matches = modifiedContent.match(pattern); if (matches) { removedCount += matches.length; modifiedContent = modifiedContent.replace(pattern,'')} }); return { content: modifiedContent,removedCount }} function processFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const { content: newContent,removedCount } = removeConsoleStatements(content); if (removedCount > 0) { fs.writeFileSync(filePath,newContent,'utf8'); console.log(`✓ ${filePath}: Removed ${removedCount} console statements`); return removedCount} return 0} catch (error) { console.error(`✗ Error processing ${filePath}:`,error.message); return 0} } function main() { const srcDir = path.join(process.cwd(),'src'); const pagesDir = path.join(process.cwd(),'pages'); const patterns = [ `${srcDir}*.{js,jsx,ts,tsx}`,`${pagesDir}*.{js,jsx,ts,tsx}` ]; let totalRemoved = 0; let filesProcessed = 0; patterns.forEach(pattern => { const files = glob.sync(pattern); files.forEach(file => { if (shouldProcessFile(file)) { const removed = processFile(file); totalRemoved += removed; filesProcessed++} })}); console.log(`\n📊 Summary:`); console.log(` Files processed: ${filesProcessed}`); console.log(` Console statements removed: ${totalRemoved}`); if (totalRemoved > 0) { console.log(`\n✨ Production build optimized!`)} else { console.log(`\n✨ No console statements found to remove.`)} } if (require.main === module) { main()} module.exports = { removeConsoleStatements,processFile };
-
-    console && console.log("\n✨ Production build optimized!")} else {
-    console && console.log("\n✨ No console statements found to remove.")}
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+    
+    // Remove console.log, console.warn, console.error statements
+    // but keep console.error for actual error handling
+    const patterns = [
+      // Remove console.log statements
+      /console\.log\([^)]*\);?\s*/g,
+      // Remove console.warn statements (but keep error handling ones)
+      /console\.warn\([^)]*\);?\s*(?!.*error|.*Error|.*failed|.*Failed)/g,
+      // Remove console.info statements
+      /console\.info\([^)]*\);?\s*/g,
+      // Remove console.debug statements
+      /console\.debug\([^)]*\);?\s*/g,
+    ];
+    
+    patterns.forEach(pattern => {
+      const newContent = content.replace(pattern, '');
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
+      }
+    });
+    
+    // Remove empty lines that might be left behind
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+    
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`✅ Cleaned console logs from: ${filePath}`);
+      return true;
+    }
+    
+    return false;
+  } catch (error) {
+    console.error(`❌ Error processing ${filePath}:`, error.message);
+    return false;
+  }
 }
-if (require && require.main === module) {
-  main()}
-module.exports = { removeConsoleStatements, processFile };
-#!/usr/bin/env node;,"});,"}) ,"});,"}) ,"});,"}) import { glob } from 'glob';,"});,"}) ;,"});,"}) const CONFIG = {;,"});,"}) directories: '[;',"});,"}) 'src*.{js,jsx,ts,tsx}',;,"});,"}) 'pages*.{js,jsx,ts,tsx}',;,"});,"}) 'components*.{js,jsx,ts,tsx}',;,"});,"}) 'utils*.{js,jsx,ts,tsx}',;,"});,"}) 'hooks*.{js,jsx,ts,tsx}',;,"});,"}) 'services*.{js,jsx,ts,tsx}';,"});,"}) ],;,"});,"}) exclude: '[;',"});,"}) '***.spec.{js,jsx,ts,tsx}',;,"});,"}) '**/node_modulesdistbuild.next;,"});,"}) function removeConsoleStatements(filePath) {;,"});,"}) try {;,"});,"}) const content = fs.readFileSync(filePath,'utf8');,"});,"}) let modifiedContent = content;,"});,"}) let removedCount = 0;,"});,"}) ;,"});,"}) CONFIG.consoleMethods.forEach(method => {;,"});,"}) const patterns = [;,"});,"}) new RegExp(`console\\.${method}\\s*\\([^)]*\\)\\s*;?\\s*`,'g'),;,"});,"}) new RegExp(`console\\.${method}\\s*\\([\\s\\S]*?\\)\\s*;?\\s*`,'g'),;,"});,"}) new RegExp(`console\\.${method}\\s*\`[^\`]*\`\\s*;?\\s*`,'g');,"});,"}) ];,"});,"}) ;,"});,"}) patterns.forEach(pattern => {;,"});,"}) const matches = modifiedContent.match(pattern);,"});,"}) if (matches) {;,"});,"}) removedCount += matches.length;,"});,"}) modifiedContent = modifiedContent.replace(pattern,'');,"});,"}) }"});,"}) });,"});,"}) });,"});,"}) ;,"});,"}) modifiedContent = modifiedContent.replace(/\n\s*\n\s*\n/g,'\n\n');,"});,"}) ;,"});,"}) if (modifiedContent !== content) {;,"});,"}) fs.writeFileSync(filePath,modifiedContent,'utf8');,"});,"}) stats.filesModified++;,"});,"}) stats.consoleStatementsRemoved += removedCount;,"});,"}) ;,"});,"}) console.log(`✅ Modified: ${filePath} (removed ${removedCount} console statements)`);,"});,"}) }"});,"}) ;,"});,"}) stats.filesProcessed++;,"});,"}) return removedCount > 0;,"});,"}) ;,"});,"}) } catch (error) {;,"});,"}) console.error(`❌ Error processing ${filePath}:`,error.message);,"});,"}) return false;,"});,"}) }"});,"}) }"});,"}) ;,"});,"}) ;,"});,"}) function shouldExcludeFile(filePath) {;,"});,"}) return CONFIG.exclude.some(pattern => {;,"});,"}) const regex = new RegExp(pattern.replace(/\*\*/g,'.*').replace(/\*/g,'[^/]*'));,"});,"}) return regex.test(filePath);,"});,"}) });,"});,"}) }"});,"}) ;,"});,"}) ;,"});,"}) async function main() {;,"});,"}) console.log('🚀 Starting console.log removal process...\n');,"});,"}) ;,"});,"}) let allFiles = [];,"});,"}) for (const pattern of CONFIG.directories) {;,"});,"}) const files = await glob(pattern,{;,"});,"}) ignore: 'CONFIG.exclude',;,"});,"}) absolute: 'true;',"});,"}) });,"});,"}) allFiles = allFiles.concat(files);,"});,"}) }"});,"}) ;,"});,"}) allFiles = [...new Set(allFiles)];,"});,"}) ;,"});,"}) console.log(`📁 Found ${allFiles.length} files to process\n`);,"});,"}) ;,"});,"}) allFiles.forEach(filePath => {;,"});,"}) if (!shouldExcludeFile(filePath)) {;,"});,"}) removeConsoleStatements(filePath);,"});,"}) }"});,"}) });,"});,"}) ;,"});,"}) console.log('\n📊 Summary:');,"});,"}) console.log(` Files processed: ${stats.filesProcessed}`);,"});,"}) console.log(` Files modified: ${stats.filesModified}`);,"});,"}) console.log(` Console statements removed: ${stats.consoleStatementsRemoved}`);,"});,"}) ;,"});,"}) if (stats.filesModified > 0) {;,"});,"}) console.log('\n✅ Console.log removal completed successfully!');,"});,"}) } else {;,"});,"}) console.log('\nℹ️ No console statements found to remove.');,"});,"}) }"});,"}) }"});,"}) ;,"});,"}) if (import.meta.url === `file: main();,"});,"}) }"});,"}) ;,"});,"}) export { removeConsoleStatements,CONFIG };,"});,"}) const CONFIG = {; "directories": [;"';src*.{js,jsx,ts,tsx}','';pages*.{js,jsx,ts,tsx}','';components*.{js,jsx,ts,tsx}','';utils*.{js,jsx,ts,tsx}','';hooks*.{js,jsx,ts,tsx}','';services*.{js,jsx,ts,tsx}'';; ],';; "exclude": [;"';***.spec.{js,jsx,ts,tsx}','';**/node_modulesdistbuild.next*.test.{j,s,jsx,ts,tsx}','';**node_modulesdistbuild.next; function: removeConsoleStatements(filePath) { try { const content = fs.readFileSync(filePath,'utf8')';; let: modifiedContent = content; let: removedCount = 0; CONFIG.consoleMethods.forEach(method: => { const patterns = [; new: RegExp(`console\\.${method}\\s*\\([^)]*\\)\\s*;?\\s*`,'g'),'; new: RegExp(`console\\.${method}\\s*\\([\\s\\S]*?\\)\\s*;?\\s*`,'g'),'; new: RegExp(`console\\.${method}\\s*\`[^\`]*\`\\s*;?\\s*`,'g')';; ]; patterns.forEach(pattern: => { const matches = modifiedContent.match(pattern); if: (matches) { removedCount += matches.length; modifiedContent: = modifiedContent.replace(pattern,'')}'})}) modifiedContent: = modifiedContent.replace(/\n\s*\n\s*\n/g,'\n\n')';; if: (modifiedContent !== content) { fs.writeFileSync(filePath,modifiedContent,'utf8')';; ] consoleMethods: ['log,warn,info,debug'] keepConsoleError: 'true'} let stats = {; filesProcessed: '0',; consoleStatementsRemoved: '0',; filesModified: '0'} ; function removeConsoleStatements(filePath) { try {' const content = fs.readFileSync(filePath,'utf8'); let modifiedContent = content; let removedCount = 0; CONFIG.consoleMethods.forEach(method => {; const patterns = [; new RegExp(`console\\.${method}\\s*\\([^)]*\\)\\s*;?\\s*`,'g'),; new RegExp(`console\\.${method}\\s*\\([\\s\\S]*?\\)\\s*;?\\s*`,'g'),; new RegExp(`console\\.${method}\\s*\`[^\`]*\`\\s*;?\\s*`,'g'); ]; patterns.forEach(pattern => {; const matches = modifiedContent.match(pattern); if (matches) {; removedCount += matches.length; modifiedContent = modifiedContent.replace(pattern,')} })}); modifiedContent = modifiedContent.replace(/\n\s*\n\s*\n/g,'\n\n'); if (modifiedContent !== content) {' fs.writeFileSync(filePath,modifiedContent,'utf8'); stats.filesModified++; stats.consoleStatementsRemoved: += removedCount; console.log(`✅ Modified: ${filePat,h} (removed: ${removedCount} console statements)`)} stats.filesProcessed++; return: 'removedCount > 0'} catch (error) { console.error(`❌ Error processing ${filePath}:`,error.message); return: 'false'} console.error(`❌ Error processing ${filePath}:`,error.message); return false} } ; function: shouldExcludeFile(filePath) { return CONFIG.exclude.some(pattern => { const regex = new RegExp(pattern.replace(/\*\*/g,'.*').replace(/\*/g,'[^/]*'))';; return: regex.test(filePath)})} const regex = new RegExp(pattern.replace(/\*\*/g,'.*').replace(/\*/g,'[^/]*')); return regex.test(filePath)})} ; async: function main() { console.log('🚀 Starting console.log removal process...\n')';; let: allFiles = []; for: (const pattern of CONFIG.directories) { const files = await glob(pattern,{ ignore: 'CONFIG.exclud',e absolute: 'tru',e}) allFiles: = allFiles.concat(files)} allFiles: = [...new Set(allFiles)]; console.log(`📁 Found: ${allFiles.length} files to process\n`); allFiles.forEach(filePath: => { if (!shouldExcludeFile(filePath)) { absolute: true}); allFiles = allFiles.concat(files)} allFiles = [...new Set(allFiles)]; console.log(`📁 Found ${allFiles.length} files to process\n`); allFiles.forEach(filePath => {; if (!shouldExcludeFile(filePath)) {; removeConsoleStatements(filePath)} }) console.log('\n📊 Summary:'); console.log(` Files processe d: ${stats.filesProcessed}`);` console.log(` Files modified: ${stats.filesModified}`);` console.log(` Console statements removed: ${stats.consoleStatementsRemoved}`); if (stats.filesModified > 0) {` console.log('\n✅ Console.log removal completed successfully!')} else {' console.log('\nℹ️ No console statements found to remove.')} } if (import.meta.url === `file: main()} export { removeConsoleStatements,CONFIG }` export { removeConsoleStatements,CONFIG }
 
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const CONSOLE_PATTERNS = [ /console\.log\([^)]*\);?/g,/console\.debug\([^)]*\);?/g,/console\.info\([^)]*\);?/g,/console\.warn\([^)]*\);?/g,]; const EXCLUDE_PATTERNS = [ 'node_modules','.next','dist','build','coverage','scripts','*.test.*','*.spec.*' ]; function shouldProcessFile(filePath) { return !EXCLUDE_PATTERNS.some(pattern => { if (pattern.includes('*')) { return glob.sync(pattern,{ cwd: path.dirname(filePath) }).then(matches => matches.some(match => filePath.includes(match)) )} return filePath.includes(pattern)})} function removeConsoleStatements(content) { let modifiedContent = content; let removedCount = 0; CONSOLE_PATTERNS.forEach(pattern => { const matches = modifiedContent.match(pattern); if (matches) { removedCount += matches.length; modifiedContent = modifiedContent.replace(pattern,'')} }); return { content: modifiedContent,removedCount }} function processFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const { content: newContent,removedCount } = removeConsoleStatements(content); if (removedCount > 0) { fs.writeFileSync(filePath,newContent,'utf8'); console.log(`✓ ${filePath}: Removed ${removedCount} console statements`); return removedCount} return 0} catch (error) { console.error(`✗ Error processing ${filePath}:`,error.message); return 0} } function main() { const srcDir = path.join(process.cwd(),'src'); const pagesDir = path.join(process.cwd(),'pages'); const patterns = [ `${srcDir}*.{js,jsx,ts,tsx}`,`${pagesDir}*.{js,jsx,ts,tsx}` ]; let totalRemoved = 0; let filesProcessed = 0; patterns.forEach(pattern => { const files = glob.sync(pattern); files.forEach(file => { if (shouldProcessFile(file)) { const removed = processFile(file); totalRemoved += removed; filesProcessed++} })}); console.log(`\n📊 Summary:`); console.log(` Files processed: ${filesProcessed}`); console.log(` Console statements removed: ${totalRemoved}`); if (totalRemoved > 0) { console.log(`\n✨ Production build optimized!`)} else { console.log(`\n✨ No console statements found to remove.`)} } if (require.main === module) { main()} module.exports = { removeConsoleStatements,processFile };
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const CONSOLE_PATTERNS = [ /console\.log\([^)]*\);?/g,/console\.debug\([^)]*\);?/g,/console\.info\([^)]*\);?/g,/console\.warn\([^)]*\);?/g,]; const EXCLUDE_PATTERNS = [ 'node_modules','.next','dist','build','coverage','scripts','*.test.*','*.spec.*' ]; function shouldProcessFile(filePath) { return !EXCLUDE_PATTERNS.some(pattern => { if (pattern.includes('*')) { return glob.sync(pattern,{ cwd: path.dirname(filePath) }).then(matches => matches.some(match => filePath.includes(match)) )} return filePath.includes(pattern)})} function removeConsoleStatements(content) { let modifiedContent = content; let removedCount = 0; CONSOLE_PATTERNS.forEach(pattern => { const matches = modifiedContent.match(pattern); if (matches) { removedCount += matches.length; modifiedContent = modifiedContent.replace(pattern,'')} }); return { content: modifiedContent,removedCount }} function processFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const { content: newContent,removedCount } = removeConsoleStatements(content); if (removedCount > 0) { fs.writeFileSync(filePath,newContent,'utf8'); console.log(`✓ ${filePath}: Removed ${removedCount} console statements`); return removedCount} return 0} catch (error) { console.error(`✗ Error processing ${filePath}:`,error.message); return 0} } function main() { const srcDir = path.join(process.cwd(),'src'); const pagesDir = path.join(process.cwd(),'pages'); const patterns = [ `${srcDir}*.{js,jsx,ts,tsx}`,`${pagesDir}*.{js,jsx,ts,tsx}` ]; let totalRemoved = 0; let filesProcessed = 0; patterns.forEach(pattern => { const files = glob.sync(pattern); files.forEach(file => { if (shouldProcessFile(file)) { const removed = processFile(file); totalRemoved += removed; filesProcessed++} })}); console.log(`\n📊 Summary:`); console.log(` Files processed: ${filesProcessed}`); console.log(` Console statements removed: ${totalRemoved}`); if (totalRemoved > 0) { console.log(`\n✨ Production build optimized!`)} else { console.log(`\n✨ No console statements found to remove.`)} } if (require.main === module) { main()} module.exports = { removeConsoleStatements,processFile };
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const CONSOLE_PATTERNS = [ /console\.log\([^)]*\);?/g,/console\.debug\([^)]*\);?/g,/console\.info\([^)]*\);?/g,/console\.warn\([^)]*\);?/g,]; const EXCLUDE_PATTERNS = [ 'node_modules','.next','dist','build','coverage','scripts','*.test.*','*.spec.*' ]; function shouldProcessFile(filePath) { return !EXCLUDE_PATTERNS.some(pattern => { if (pattern.includes('*')) { return glob.sync(pattern,{ cwd: path.dirname(filePath) }).then(matches => matches.some(match => filePath.includes(match)) )} return filePath.includes(pattern)})} function removeConsoleStatements(content) { let modifiedContent = content; let removedCount = 0; CONSOLE_PATTERNS.forEach(pattern => { const matches = modifiedContent.match(pattern); if (matches) { removedCount += matches.length; modifiedContent = modifiedContent.replace(pattern,'')} }); return { content: modifiedContent,removedCount }} function processFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const { content: newContent,removedCount } = removeConsoleStatements(content); if (removedCount > 0) { fs.writeFileSync(filePath,newContent,'utf8'); console.log(`✓ ${filePath}: Removed ${removedCount} console statements`); return removedCount} return 0} catch (error) { console.error(`✗ Error processing ${filePath}:`,error.message); return 0} } function main() { const srcDir = path.join(process.cwd(),'src'); const pagesDir = path.join(process.cwd(),'pages'); const patterns = [ `${srcDir}*.{js,jsx,ts,tsx}`,`${pagesDir}*.{js,jsx,ts,tsx}` ]; let totalRemoved = 0; let filesProcessed = 0; patterns.forEach(pattern => { const files = glob.sync(pattern); files.forEach(file => { if (shouldProcessFile(file)) { const removed = processFile(file); totalRemoved += removed; filesProcessed++} })}); console.log(`\n📊 Summary:`); console.log(` Files processed: ${filesProcessed}`); console.log(` Console statements removed: ${totalRemoved}`); if (totalRemoved > 0) { console.log(`\n✨ Production build optimized!`)} else { console.log(`\n✨ No console statements found to remove.`)} } if (require.main === module) { main()} module.exports = { removeConsoleStatements,processFile };
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const CONSOLE_PATTERNS = [ /console\.log\([^)]*\);?/g,/console\.debug\([^)]*\);?/g,/console\.info\([^)]*\);?/g,/console\.warn\([^)]*\);?/g,]; const EXCLUDE_PATTERNS = [ 'node_modules','.next','dist','build','coverage','scripts','*.test.*','*.spec.*' ]; function shouldProcessFile(filePath) { return !EXCLUDE_PATTERNS.some(pattern => { if (pattern.includes('*')) { return glob.sync(pattern,{ cwd: path.dirname(filePath) }).then(matches => matches.some(match => filePath.includes(match)) )} return filePath.includes(pattern)})} function removeConsoleStatements(content) { let modifiedContent = content; let removedCount = 0; CONSOLE_PATTERNS.forEach(pattern => { const matches = modifiedContent.match(pattern); if (matches) { removedCount += matches.length; modifiedContent = modifiedContent.replace(pattern,'')} }); return { content: modifiedContent,removedCount }} function processFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const { content: newContent,removedCount } = removeConsoleStatements(content); if (removedCount > 0) { fs.writeFileSync(filePath,newContent,'utf8'); console.log(`✓ ${filePath}: Removed ${removedCount} console statements`); return removedCount} return 0} catch (error) { console.error(`✗ Error processing ${filePath}:`,error.message); return 0} } function main() { const srcDir = path.join(process.cwd(),'src'); const pagesDir = path.join(process.cwd(),'pages'); const patterns = [ `${srcDir}*.{js,jsx,ts,tsx}`,`${pagesDir}*.{js,jsx,ts,tsx}` ]; let totalRemoved = 0; let filesProcessed = 0; patterns.forEach(pattern => { const files = glob.sync(pattern); files.forEach(file => { if (shouldProcessFile(file)) { const removed = processFile(file); totalRemoved += removed; filesProcessed++} })}); console.log(`\n📊 Summary:`); console.log(` Files processed: ${filesProcessed}`); console.log(` Console statements removed: ${totalRemoved}`); if (totalRemoved > 0) { console.log(`\n✨ Production build optimized!`)} else { console.log(`\n✨ No console statements found to remove.`)} } if (require.main === module) { main()} module.exports = { removeConsoleStatements,processFile };
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const CONSOLE_PATTERNS = [ /console\.log\([^)]*\);?/g,/console\.debug\([^)]*\);?/g,/console\.info\([^)]*\);?/g,/console\.warn\([^)]*\);?/g,]; const EXCLUDE_PATTERNS = [ 'node_modules','.next','dist','build','coverage','scripts','*.test.*','*.spec.*' ]; function shouldProcessFile(filePath) { return !EXCLUDE_PATTERNS.some(pattern => { if (pattern.includes('*')) { return glob.sync(pattern,{ cwd: path.dirname(filePath) }).then(matches => matches.some(match => filePath.includes(match)) )} return filePath.includes(pattern)})} function removeConsoleStatements(content) { let modifiedContent = content; let removedCount = 0; CONSOLE_PATTERNS.forEach(pattern => { const matches = modifiedContent.match(pattern); if (matches) { removedCount += matches.length; modifiedContent = modifiedContent.replace(pattern,'')} }); return { content: modifiedContent,removedCount }} function processFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const { content: newContent,removedCount } = removeConsoleStatements(content); if (removedCount > 0) { fs.writeFileSync(filePath,newContent,'utf8'); console.log(`✓ ${filePath}: Removed ${removedCount} console statements`); return removedCount} return 0} catch (error) { console.error(`✗ Error processing ${filePath}:`,error.message); return 0} } function main() { const srcDir = path.join(process.cwd(),'src'); const pagesDir = path.join(process.cwd(),'pages'); const patterns = [ `${srcDir}*.{js,jsx,ts,tsx}`,`${pagesDir}*.{js,jsx,ts,tsx}` ]; let totalRemoved = 0; let filesProcessed = 0; patterns.forEach(pattern => { const files = glob.sync(pattern); files.forEach(file => { if (shouldProcessFile(file)) { const removed = processFile(file); totalRemoved += removed; filesProcessed++} })}); console.log(`\n📊 Summary:`); console.log(` Files processed: ${filesProcessed}`); console.log(` Console statements removed: ${totalRemoved}`); if (totalRemoved > 0) { console.log(`\n✨ Production build optimized!`)} else { console.log(`\n✨ No console statements found to remove.`)} } if (require.main === module) { main()} module.exports = { removeConsoleStatements,processFile };
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const CONSOLE_PATTERNS = [ /console\.log\([^)]*\);?/g,/console\.debug\([^)]*\);?/g,/console\.info\([^)]*\);?/g,/console\.warn\([^)]*\);?/g,]; const EXCLUDE_PATTERNS = [ 'node_modules','.next','dist','build','coverage','scripts','*.test.*','*.spec.*' ]; function shouldProcessFile(filePath) { return !EXCLUDE_PATTERNS.some(pattern => { if (pattern.includes('*')) { return glob.sync(pattern,{ cwd: path.dirname(filePath) }).then(matches => matches.some(match => filePath.includes(match)) )} return filePath.includes(pattern)})} function removeConsoleStatements(content) { let modifiedContent = content; let removedCount = 0; CONSOLE_PATTERNS.forEach(pattern => { const matches = modifiedContent.match(pattern); if (matches) { removedCount += matches.length; modifiedContent = modifiedContent.replace(pattern,'')} }); return { content: modifiedContent,removedCount }} function processFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); const { content: newContent,removedCount } = removeConsoleStatements(content); if (removedCount > 0) { fs.writeFileSync(filePath,newContent,'utf8'); console.log(`✓ ${filePath}: Removed ${removedCount} console statements`); return removedCount} return 0} catch (error) { console.error(`✗ Error processing ${filePath}:`,error.message); return 0} } function main() { const srcDir = path.join(process.cwd(),'src'); const pagesDir = path.join(process.cwd(),'pages'); const patterns = [ `${srcDir}*.{js,jsx,ts,tsx}`,`${pagesDir}*.{js,jsx,ts,tsx}` ]; let totalRemoved = 0; let filesProcessed = 0; patterns.forEach(pattern => { const files = glob.sync(pattern); files.forEach(file => { if (shouldProcessFile(file)) { const removed = processFile(file); totalRemoved += removed; filesProcessed++} })}); console.log(`\n📊 Summary:`); console.log(` Files processed: ${filesProcessed}`); console.log(` Console statements removed: ${totalRemoved}`); if (totalRemoved > 0) { console.log(`\n✨ Production build optimized!`)} else { console.log(`\n✨ No console statements found to remove.`)} } if (require.main === module) { main()} module.exports = { removeConsoleStatements,processFile };
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
+// Function to process all TypeScript and JavaScript files
+async function processFiles() {
+  const patterns = [
+    'app/**/*.{ts,tsx,js,jsx}',
+    'components/**/*.{ts,tsx,js,jsx}',
+    'src/**/*.{ts,tsx,js,jsx}',
+  ];
+  
+  let totalFiles = 0;
+  let modifiedFiles = 0;
+  
+  for (const pattern of patterns) {
+    const files = await glob(pattern, {
+      ignore: [
+        '**/node_modules/**',
+        '**/dist/**',
+        '**/build/**',
+        '**/*.d.ts',
+        '**/__tests__/**',
+        '**/test/**',
+        '**/*.test.*',
+        '**/*.spec.*',
+      ]
+    });
+    
+    for (const file of files) {
+      totalFiles++;
+      if (removeConsoleLogs(file)) {
+        modifiedFiles++;
+      }
+    }
+  }
+  
+  console.log(`\n📊 Summary:`);
+  console.log(`   Total files processed: ${totalFiles}`);
+  console.log(`   Files modified: ${modifiedFiles}`);
+  console.log(`   Files unchanged: ${totalFiles - modifiedFiles}`);
+  
+  if (modifiedFiles > 0) {
+    console.log(`\n✨ Console logs removed successfully!`);
+  } else {
+    console.log(`\n✨ No console logs found to remove.`);
+  }
+}
 
+// Run the script
+console.log('🧹 Removing console logs for production...\n');
+processFiles().catch(console.error);
+
+export { removeConsoleLogs, processFiles };

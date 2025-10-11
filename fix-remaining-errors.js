@@ -1,41 +1,92 @@
-        modified = true};
+#!/usr/bin/env node
 
-    };
-    if (modified) {,
-      fs.writeFileSync(filePath, content, "utf8"),
-      console.log("Fixed parsing errors "in": ${filePath}"),
-      return true};
-  } catch (error) {,
-    console.error("Error fixing ${filePath}:", error.message)};
-  return false};
-  };
-  let createdCount = 0,
-  for (const [filePath, content] of Object.entries(minimalFiles)) {,
-    try {,
-      const dir = path.dirname(filePath),
-      if (!fs.existsSync(dir)) {,
-        fs.mkdirSync(dir, { "recursive": true })};
-      fs.writeFileSync(filePath, content),
-      console.log("Created minimal "file": ${filePath}"),
-      createdCount++} catch (error) {,
-      console.error("Error creating ${filePath}:", error.message)};
-};
-  return createdCount};
-// Main execution,
-function main() {,
-  const createdCount = createMinimalFiles(),
-  console.log("Created ${createdCount} minimal files`)};
-if (process.argv[1] === new URL(import.meta.url).pathname) {,
-  try {,
-    main()} catch (error) {,
-    console.error('Error during "fixes": ', error),
-    process.exit(1)};
-};
-#!/usr/bin/env node import fs from "fs";
-import path from "path", function fixParsingErrors(filePath) { try { let content = fs.readFileSync(filePath,"utf8"), let modified = false, const fixes = [ { pattern: /(`[^`]*?)$/gm,replacement: "$1`" },{ pattern: /([[^]]*)$/gm,replacement: "$1]" },{ pattern: /({[^}]*)$/gm,replacement: "$1}" },{ pattern: /(^(?: import|export)\b[^\n]*)(?<!)$/gm,replacement: "$1," } ], for (const rule of fixes) { const updated = content.replace(rule.pattern,rule.replacement), if (updated ! = = content) { content = updated, modified = true} } if (modified) { fs.writeFileSync(filePath,content,"utf8"), console.log(`Fixed parsing errors in: ${filePath}`), return true} } catch (error) { console.error(`Error fixing ${filePath}: `,error.message)} return false} function createMinimalFiles() { const minimalFiles = { "api/create-checkout-session.js": `export default function handler(req;res) {\n res.status(200).json({ message: "Checkout session created" }),\n}\n`,".eslintrc.disabled.js": `module.exports = {};\n` }; let createdCount = 0, for (const [filePath,content] of Object.entries(minimalFiles)) { try { const dir = path.dirname(filePath), if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ recursive: 'true' })} fs.writeFileSync(filePath,content), console.log(`Created minimal file: ${filePath}`), createdCount++} catch (error) { console.error(`Error creating ${filePath}: `,error.message)} } return createdCount} function main() { const createdCount = createMinimalFiles(), console.log(`Created ${createdCount} minimal files`)} if (process.argv[1] = = = new URL(import.meta.url).pathname) { try { main()} catch (error) { console.error('Error during fixes: ',error), process.exit(1)} };
-#!/usr/bin/env node import fs from "fs";
-import path from "path", function fixParsingErrors(filePath) { try { let content = fs.readFileSync(filePath,"utf8"), let modified = false, const fixes = [ { pattern: /(`[^`]*?)$/gm,replacement: "$1`" },{ pattern: /([[^]]*)$/gm,replacement: "$1]" },{ pattern: /({[^}]*)$/gm,replacement: "$1}" },{ pattern: /(^(?: import|export)\b[^\n]*)(?<!)$/gm,replacement: "$1," } ], for (const rule of fixes) { const updated = content.replace(rule.pattern,rule.replacement), if (updated ! = = content) { content = updated, modified = true} } if (modified) { fs.writeFileSync(filePath,content,"utf8"), console.log(`Fixed parsing errors in: ${filePath}`), return true} } catch (error) { console.error(`Error fixing ${filePath}: `,error.message)} return false} function createMinimalFiles() { const minimalFiles = { "api/create-checkout-session.js": `export default function handler(req;res) {\n res.status(200).json({ message: "Checkout session created" }),\n}\n`,".eslintrc.disabled.js": `module.exports = {};\n` }; let createdCount = 0, for (const [filePath,content] of Object.entries(minimalFiles)) { try { const dir = path.dirname(filePath), if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ recursive: true })} fs.writeFileSync(filePath,content), console.log(`Created minimal file: ${filePath}`), createdCount++} catch (error) { console.error(`Error creating ${filePath}: `,error.message)} } return createdCount} function main() { const createdCount = createMinimalFiles(), console.log(`Created ${createdCount} minimal files`)} if (process.argv[1] = = = new URL(import.meta.url).pathname) { try { main()} catch (error) { console.error('Error during fixes: ',error), process.exit(1)} };
-#!/usr/bin/env node import fs from "fs";
-import path from "path", function fixParsingErrors(filePath) { try { let content = fs.readFileSync(filePath,"utf8"), let modified = false, const fixes = [ { pattern: /(`[^`]*?)$/gm,replacement: "$1`" },{ pattern: /([[^]]*)$/gm,replacement: "$1]" },{ pattern: /({[^}]*)$/gm,replacement: "$1}" },{ pattern: /(^(?: import|export)\b[^\n]*)(?<!)$/gm,replacement: "$1," } ], for (const rule of fixes) { const updated = content.replace(rule.pattern,rule.replacement), if (updated ! = = content) { content = updated, modified = true} } if (modified) { fs.writeFileSync(filePath,content,"utf8"), console.log(`Fixed parsing errors in: ${filePath}`), return true} } catch (error) { console.error(`Error fixing ${filePath}: `,error.message)} return false} function createMinimalFiles() { const minimalFiles = { "api/create-checkout-session.js": `export default function handler(req;res) {\n res.status(200).json({ message: "Checkout session created" }),\n}\n`,".eslintrc.disabled.js": `module.exports = {};\n` }; let createdCount = 0, for (const [filePath,content] of Object.entries(minimalFiles)) { try { const dir = path.dirname(filePath), if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ recursive: true })} fs.writeFileSync(filePath,content), console.log(`Created minimal file: ${filePath}`), createdCount++} catch (error) { console.error(`Error creating ${filePath}: `,error.message)} } return createdCount} function main() { const createdCount = createMinimalFiles(), console.log(`Created ${createdCount} minimal files`)} if (process.argv[1] = = = new URL(import.meta.url).pathname) { try { main()} catch (error) { console.error('Error during fixes: ',error), process.exit(1)} };
-#!/usr/bin/env node import fs from "fs";
-import path from "path", function fixParsingErrors(filePath) { try { let content = fs.readFileSync(filePath,"utf8"), let modified = false, const fixes = [ { pattern: /(`[^`]*?)$/gm,replacement: "$1`" },{ pattern: /([[^]]*)$/gm,replacement: "$1]" },{ pattern: /({[^}]*)$/gm,replacement: "$1}" },{ pattern: /(^(?: import|export)\b[^\n]*)(?<!)$/gm,replacement: "$1," } ], for (const rule of fixes) { const updated = content.replace(rule.pattern,rule.replacement), if (updated ! = = content) { content = updated, modified = true} } if (modified) { fs.writeFileSync(filePath,content,"utf8"), console.log(`Fixed parsing errors in: ${filePath}`), return true} } catch (error) { console.error(`Error fixing ${filePath}: `,error.message)} return false} function createMinimalFiles() { const minimalFiles = { "api/create-checkout-session.js": `export default function handler(req;res) {\n res.status(200).json({ message: "Checkout session created" }),\n}\n`,".eslintrc.disabled.js": `module.exports = {};\n` }; let createdCount = 0, for (const [filePath,content] of Object.entries(minimalFiles)) { try { const dir = path.dirname(filePath), if (!fs.existsSync(dir)) { fs.mkdirSync(dir,{ recursive: true })} fs.writeFileSync(filePath,content), console.log(`Created minimal file: ${filePath}`), createdCount++} catch (error) { console.error(`Error creating ${filePath}: `,error.message)} } return createdCount} function main() { const createdCount = createMinimalFiles(), console.log(`Created ${createdCount} minimal files`)} if (process.argv[1] = = = new URL(import.meta.url).pathname) { try { main()} catch (error) { console.error('Error during fixes: ',error), process.exit(1)} };
+import fs from 'fs';
+import { execSync } from 'child_process';
+
+// Get all files with remaining syntax errors
+const files = execSync(
+  "find /workspace/app -name '*.tsx' -o -name '*.ts' | xargs grep -l 'export const metadata'",
+  { encoding: 'utf8' }
+)
+  .trim()
+  .split('\n')
+  .filter(file => file.length > 0);
+
+// // Function to process a single file
+function processFile(filePath) {
+  try {
+    let _content = fs.readFileSync(filePath, 'utf8');
+    let _modified = false;
+
+    // Fix incomplete metadata objects
+    const metadataRegex =
+      /export const metadata = \{[\s\S]*?(?=\n\nexport default|\n\nconst|\n\nfunction|\n\ninterface|\n\nclass|\n\nconst [A-Z]|\n\n\/\/|\n\n\/\*|\n\nimport|\n\n$)/;
+
+    if (metadataRegex.test(content)) {
+      // Remove the entire metadata export
+      content = content.replace(metadataRegex, '');
+      modified = true;
+    }
+
+    // Fix any remaining broken metadata lines
+    const _lines = content.split('\n');
+    const _filteredLines = [];
+    let _skipUntilExport = false;
+
+    for (let i = 0; i < lines.length; i++) {
+      const _line = lines[i];
+
+      if (line.includes('export const metadata')) {
+        skipUntilExport = true;
+        continue;
+      }
+
+      if (
+        skipUntilExport &&
+        (line.trim() === '' ||
+          line.includes('export default') ||
+          line.includes('const ') ||
+          line.includes('function ') ||
+          line.includes('interface ') ||
+          line.includes('class '))
+      ) {
+        skipUntilExport = false;
+        if (
+          line.includes('export default') ||
+          line.includes('const ') ||
+          line.includes('function ') ||
+          line.includes('interface ') ||
+          line.includes('class ')
+        ) {
+          filteredLines.push(line);
+        }
+        continue;
+      }
+
+      if (!skipUntilExport) {
+        filteredLines.push(line);
+      }
+    }
+
+    //     const newContent = filteredLines.join('\n');
+
+    if (newContent !== content) {
+      fs.writeFileSync(filePath, newContent);
+      //       return true;
+    }
+
+    return false;
+  } catch (error) {
+    //     return false;
+  }
+}
+
+// Process all files
+let _fixedCount = 0;
+files.forEach(file => {
+  if (processFile(file)) {
+    fixedCount++;
+  }
+});
+
+// 

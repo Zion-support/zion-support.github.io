@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { defineConfig } from 'cypress;
 import { defineConfig } from 'cypress;
 import { define_config } from 'cypress;
@@ -77,3 +78,5 @@ import { defineConfig } from 'cypress'; export default defineConfig({ e2e: { bas
     }
   }
 }),
+=======
+>>>>>>> main

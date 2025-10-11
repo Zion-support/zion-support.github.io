@@ -1,138 +1,134 @@
-'use client';
+import React, { useEffect } from 'react';
 
-import { useEffect } from 'react';
+interface AnalyticsProps {
+  trackingId?: string;
+}
 
+const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) => {
+  useEffect(() => {
+    // Google Analytics 4
+    if (typeof window !== 'undefined' && trackingId) {
+      // Load Google Analytics script
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
+      document.head.appendChild(script);
+
+      // Initialize gtag
+      window.dataLayer = window.dataLayer || [];
+      function gtag(...args: any[]) {
+        window.dataLayer.push(args);
+      }
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', trackingId, {
+        page_title: document.title,
+        page_location: window.location.href,
+      });
+
+      // Track page views
+      const trackPageView = () => {
+        gtag('event', 'page_view', {
+          page_title: document.title,
+          page_location: window.location.href,
+          page_path: window.location.pathname,
+        });
+      };
+
+      // Track initial page view
+      trackPageView();
+
+      // Track route changes (for SPA)
+      const originalPushState = history.pushState;
+      const originalReplaceState = history.replaceState;
+
+      history.pushState = function(...args) {
+        originalPushState.apply(history, args);
+        setTimeout(trackPageView, 0);
+      };
+
+      history.replaceState = function(...args) {
+        originalReplaceState.apply(history, args);
+        setTimeout(trackPageView, 0);
+      };
+
+      window.addEventListener('popstate', trackPageView);
+
+      // Track performance metrics
+      const trackPerformance = () => {
+        if ('performance' in window) {
+          const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+          
+          gtag('event', 'timing_complete', {
+            name: 'load',
+            value: Math.round(navigation.loadEventEnd - navigation.loadEventStart),
+          });
+
+          gtag('event', 'timing_complete', {
+            name: 'dom_content_loaded',
+            value: Math.round(navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart),
+          });
+        }
+      };
+
+      // Track performance after page load
+      if (document.readyState === 'complete') {
+        trackPerformance();
+      } else {
+        window.addEventListener('load', trackPerformance);
+      }
+
+      // Track scroll depth
+      let maxScroll = 0;
+      const trackScroll = () => {
+        const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+        if (scrollPercent > maxScroll && scrollPercent % 25 === 0) {
+          maxScroll = scrollPercent;
+          gtag('event', 'scroll', {
+            event_category: 'engagement',
+            event_label: `${scrollPercent}%`,
+            value: scrollPercent,
+          });
+        }
+      };
+
+      window.addEventListener('scroll', trackScroll, { passive: true });
+
+      // Track clicks on important elements
+      const trackClicks = (event: Event) => {
+        const target = event.target as HTMLElement;
+        const link = target.closest('a');
+        
+        if (link) {
+          gtag('event', 'click', {
+            event_category: 'engagement',
+            event_label: link.href,
+            value: 1,
+          });
+        }
+      };
+
+      document.addEventListener('click', trackClicks);
+
+      // Cleanup
+      return () => {
+        window.removeEventListener('popstate', trackPageView);
+        window.removeEventListener('load', trackPerformance);
+        window.removeEventListener('scroll', trackScroll);
+        document.removeEventListener('click', trackClicks);
+      };
+    }
+  }, [trackingId]);
+
+  return null;
+};
+
+// Extend Window interface for TypeScript
 declare global {
   interface Window {
+    dataLayer: any[];
     gtag: (...args: any[]) => void;
   }
 }
 
-interface AnalyticsProps {
-  gaId?: string;
-}
-
-export default function Analytics({ gaId = 'G-XXXXXXXXXX' }: AnalyticsProps) {
-  useEffect(() => {
-    // Load Google Analytics
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${gaId}`;
-    document.head.appendChild(script);
-
-    // Initialize gtag
-    window.gtag = function() {
-      (window.gtag as any).q = (window.gtag as any).q || [];
-      (window.gtag as any).q.push(arguments);
-    };
-
-    window.gtag('js', new Date());
-    window.gtag('config', gaId, {
-      page_title: document.title,
-      page_location: window.location.href,
-    });
-
-    // Track page views
-    const trackPageView = () => {
-      if (window.gtag) {
-        window.gtag('config', gaId, {
-          page_title: document.title,
-          page_location: window.location.href,
-        });
-      }
-    };
-
-    // Track page views on route changes
-    const handleRouteChange = () => {
-      trackPageView();
-    };
-
-    // Listen for popstate events (back/forward navigation)
-    window.addEventListener('popstate', handleRouteChange);
-
-    // Track initial page view
-    trackPageView();
-
-    return () => {
-      window.removeEventListener('popstate', handleRouteChange);
-    };
-  }, [gaId]);
-
-  // Track custom events
-  const trackEvent = (action: string, category: string, label?: string, value?: number) => {
-    if (window.gtag) {
-      window.gtag('event', action, {
-        event_category: category,
-        event_label: label,
-        value: value,
-      });
-    }
-  };
-
-  // Track form submissions
-  const trackFormSubmission = (formName: string) => {
-    trackEvent('form_submit', 'engagement', formName);
-  };
-
-  // Track button clicks
-  const trackButtonClick = (buttonName: string) => {
-    trackEvent('click', 'engagement', buttonName);
-  };
-
-  // Track service page views
-  const trackServiceView = (serviceName: string) => {
-    trackEvent('view_service', 'engagement', serviceName);
-  };
-
-  // Track contact interactions
-  const trackContactInteraction = (interactionType: string) => {
-    trackEvent('contact_interaction', 'engagement', interactionType);
-  };
-
-  return null;
-}
-
-// Export tracking functions for use in other components
-export const analytics = {
-  trackEvent: (action: string, category: string, label?: string, value?: number) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', action, {
-        event_category: category,
-        event_label: label,
-        value: value,
-      });
-    }
-  },
-  trackFormSubmission: (formName: string) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'form_submit', {
-        event_category: 'engagement',
-        event_label: formName,
-      });
-    }
-  },
-  trackButtonClick: (buttonName: string) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'click', {
-        event_category: 'engagement',
-        event_label: buttonName,
-      });
-    }
-  },
-  trackServiceView: (serviceName: string) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'view_service', {
-        event_category: 'engagement',
-        event_label: serviceName,
-      });
-    }
-  },
-  trackContactInteraction: (interactionType: string) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'contact_interaction', {
-        event_category: 'engagement',
-        event_label: interactionType,
-      });
-    }
-  },
-};
+export default Analytics;

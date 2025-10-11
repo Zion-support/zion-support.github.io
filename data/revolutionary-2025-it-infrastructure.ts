@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export const revolutionary2025ITInfrastructure: Array<Record<string, any>> = []
 import { ServiceVariant } from '../types/service-variants';
 export interface Revolutionary2025ITService {
@@ -149,44 +150,26 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     features: [
       'Self-healing infrastructure',
       'AI-powered incident response',
+=======
+export const revolutionaryITInfrastructure2025Services = [{name: 'Revolutionary Cloud Infrastructure 2025',
+    path: '/services/revolutionary-cloud-infrastructure-2025',
+    description: 'Next-generation cloud infrastructure and management',
+    icon: 'Cloud',
+    category: 'IT Infrastructure',
+    features: [,
+      'Multi-cloud management',
+>>>>>>> main
       'Automated scaling',
-      'Predictive maintenance',
-      'Zero-downtime deployments',
-      'Performance optimization',
-      'Security automation',
-      'Compliance management'
+      'Advanced security',
+      'Performance optimization'
     ],
-    popular: true,
-    icon: '🚀',
-    color: 'from-purple-600 to-indigo-700',
-    textColor: 'text-purple-400',
-    link: 'https://ziontechgroup.com/autonomous-devops-platform',
-    marketPosition: 'Most autonomous DevOps platform. Traditional DevOps requires constant human intervention and manual management.',
-    targetAudience: 'Enterprises, DevOps teams, Cloud-native companies, SaaS companies, IT operations',
-    trialDays: 30,
-    setupTime: '6 hours',
-    category: 'Autonomous DevOps & Infrastructure',
-    realService: true,
-    technology: ['AI/ML', 'DevOps', 'Kubernetes', 'Python', 'Terraform', 'Ansible'],
-    integrations: ['GitHub', 'Jenkins', 'Docker', 'Kubernetes', 'Cloud providers'],
-    useCases: ['Continuous deployment', 'Infrastructure management', 'Performance optimization', 'Security automation', 'Compliance management'],
-    roi: 'Enterprises see 3000%+ ROI through reduced downtime and automated operations.',
-    competitors: ['GitLab', 'Jenkins', 'CircleCI'],
-    marketSize: '$150B DevOps market',
-    growthRate: '600% annual growth',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true,
-    implementationDetails: 'Fully functional autonomous DevOps platform with self-healing infrastructure, AI incident response, and automated operations.',
-    launchDate: '2025-03-15',
-    customers: 250,
-    rating: 4.9,
-    reviews: 198
+    pricing: unknown,
+      starter: '$299/month',
+      professional: '$599/month'}
+      enterprise: 'Custom'
+    }
   },
+<<<<<<< HEAD
   // 🧠 AI-Powered Data Management Services
   {
     id: 'ai-data-management-platform',
@@ -483,3 +466,36 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
   }
 ];
 export default revolutionary2025ITServices;
+=======
+    name: 'Revolutionary DevOps Automation 2025',
+    path: '/services/revolutionary-devops-automation-2025',
+    description: 'Intelligent DevOps and CI/CD automation',
+    icon: 'Code',
+    category: 'DevOps',
+    features: [,
+      'Automated deployment',
+      'Intelligent testing',
+      'Performance monitoring',
+      'Security scanning'
+    ],
+    pricing: unknown,
+      starter: '$399/month',
+      professional: '$799/month',
+      enterprise: 'Custom'
+    }
+  }
+];
+export const revolutionaryITCategories2025 = [
+  'Cloud Infrastructure',
+  'DevOps Automation',
+  'Security & Compliance',
+  'Performance Optimization'
+];
+export const revolutionaryITStats2025 =
+  totalServices: 2,
+  categories: 4,
+  averageRating: 4.8,
+  activeUsers: 1800,
+};
+export const revolutionaryITInfrastructure2025Services = [ name: 'Revolutionary Cloud Infrastructure 2025',' path: '/services/revolutionary-cloud-infrastructure-2025',' description: 'Next-generation cloud infrastructure and management',' icon: 'Cloud',' category: 'IT Infrastructure', features: [' 'Multi-cloud management',' 'Automated scaling',' 'Advanced security',' 'Performance optimization' ], pricing: ' starter: '$299/month',' professional: '$599/month',' enterprise: 'Custom' } }, ' name: 'Revolutionary DevOps Automation 2025',' path: '/services/revolutionary-devops-automation-2025',' description: 'Intelligent DevOps and CI/CD automation',' icon: 'Code',' category: 'DevOps', features: [' 'Automated deployment',' 'Intelligent testing',' 'Performance monitoring',' 'Security scanning' ], pricing: ' starter: '$399/month',' professional: '$799/month',' enterprise: 'Custom' } } ]; export const revolutionaryITCategories2025 = [' 'Cloud Infrastructure',' 'DevOps Automation',' 'Security & Compliance',' 'Performance Optimization' ]; export const revolutionaryITStats2025 = totalServices: 2, categories: 4, averageRating: 4.8, activeUsers: 1800 };'
+>>>>>>> main

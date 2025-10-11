@@ -1,112 +1,142 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { visualizer } from 'rollup-plugin-visualizer';
-import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
-  resolve: {
-    alias: {
-      '@': '/workspace/src'
-    }
-  },
   plugins: [
-    react({
-      babel: {
-        plugins: [
-          ['@babel/plugin-transform-react-jsx', { runtime: 'automatic' }],
-          ['@babel/plugin-proposal-decorators', { legacy: true }],
-          ['@babel/plugin-transform-class-properties', { loose: true }]
-        ]
-      }
-    }),
+    react(),
     visualizer({
       filename: 'dist/stats.html',
-      open: true,
+      open: false,
       gzipSize: true,
       brotliSize: true,
     }),
-    VitePWA({
-      registerType: 'autoUpdate',
-      workbox: {
-        globPatterns: ['**/*.{js,css,html,ico,png,svg,webp,avif}'],
-        maximumFileSizeToCacheInBytes: 5 * 1024 * 1024, // 5MB
-        runtimeCaching: [
-          {
-            urlPattern: /^https:\/\/api\./,
-            handler: 'NetworkFirst',
-            options: {
-              cacheName: 'api-cache',
-              expiration: {
-                maxEntries: 100,
-                maxAgeSeconds: 60 * 60 * 24 // 24 hours
-              }
-            }
-          }
-        ]
-      },
-      includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
-      manifest: {
-        name: 'Zion Tech Group',
-        short_name: 'Zion Tech',
-        description: 'AI & Technology Solutions',
-        theme_color: '#2563eb',
-        background_color: '#ffffff',
-        display: 'standalone',
-        icons: [
-          {
-            src: 'pwa-192x192.png',
-            sizes: '192x192',
-            type: 'image/png'
-          },
-          {
-            src: 'pwa-512x512.png',
-            sizes: '512x512',
-            type: 'image/png'
-          }
-        ]
-      }
-    })
   ],
+  root: '.',
   build: {
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          ui: ['@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu', '@radix-ui/react-tabs'],
-          utils: ['axios', 'framer-motion', 'clsx', 'tailwind-merge'],
-          charts: ['recharts'],
-          forms: ['react-hook-form', '@hookform/resolvers']
-        },
-      },
-    },
-    chunkSizeWarningLimit: 1000,
+    outDir: 'dist',
+    target: 'es2015',
     minify: 'terser',
+    sourcemap: false,
+    chunkSizeWarningLimit: 500,
+    cssCodeSplit: true,
+    assetsInlineLimit: 2048,
+    reportCompressedSize: true,
+    // Optimize build performance
+    emptyOutDir: true,
+    copyPublicDir: true,
+    // Enhanced performance optimizations
     terserOptions: {
       compress: {
         drop_console: true,
         drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info'],
-        passes: 2
+        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn', 'console.error'],
+        passes: 5,
+        unsafe: true,
+        unsafe_comps: true,
+        unsafe_math: true,
+        unsafe_proto: true,
+        unsafe_arrows: true,
+        unsafe_methods: true,
+        unsafe_regexp: true,
+        unsafe_undefined: true,
+        collapse_vars: true,
+        sequences: true,
+        dead_code: true,
+        conditionals: true,
+        comparisons: true,
+        evaluate: true,
+        booleans: true,
+        loops: true,
+        unused: true,
+        hoist_funs: true,
+        hoist_vars: true,
+        if_return: true,
+        join_vars: true,
+        side_effects: true,
+        properties: true,
+        reduce_vars: true,
+        reduce_funcs: true,
+        keep_fargs: false,
+        keep_fnames: false,
+        keep_infinity: false,
+        toplevel: true,
+        warnings: false,
+        negate_iife: true,
+        typeofs: true,
+        global_defs: {
+          'process.env.NODE_ENV': '"production"'
+        }
       },
       mangle: {
-        safari10: true
-      }
+        safari10: true,
+        toplevel: true,
+      },
+      format: {
+        comments: false,
+        ecma: 2015,
+      },
     },
-    sourcemap: false,
-    reportCompressedSize: true
+    // Reduce memory usage during build
+    rollupOptions: {
+      maxParallelFileOps: 2,
+      treeshake: {
+        moduleSideEffects: false,
+      },
+      external: id => {
+        // Externalize Next.js modules to prevent build errors
+        if (id.includes('next/') || id.includes('next')) {
+          return true;
+        }
+        return false;
+      },
+      output: {
+        manualChunks: id => {
+          // Core React libraries
+          if (id.includes('node_modules/react') || id.includes('node_modules/react-dom')) {
+            return 'vendor';
+          }
+          // Router library
+          if (id.includes('node_modules/react-router-dom')) {
+            return 'router';
+          }
+          // UI libraries
+          if (
+            id.includes('node_modules/framer-motion') ||
+            id.includes('node_modules/lucide-react')
+          ) {
+            return 'ui';
+          }
+          // Utilities and web vitals
+          if (id.includes('node_modules/web-vitals')) {
+            return 'page';
+          }
+          // Split other node_modules into separate chunks
+          if (id.includes('node_modules')) {
+            return 'libs';
+          }
+        },
+        assetFileNames: 'assets/[name]-[hash][extname]',
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js',
+      },
+    },
   },
   server: {
-    hmr: true,
     port: 3000,
     host: true,
-    open: true
   },
   preview: {
-    port: 3000,
-    host: true
+    port: 4173,
+    host: true,
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'framer-motion'],
-    exclude: ['@vite/client', '@vite/env']
-  }
+    include: ['react', 'react-dom', 'react-router-dom', 'framer-motion', 'lucide-react'],
+  },
+  css: {
+    devSourcemap: false,
+  },
+  esbuild: {
+    drop: ['console', 'debugger'],
+  },
 });

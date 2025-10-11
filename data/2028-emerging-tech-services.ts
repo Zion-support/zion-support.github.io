@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 export interface EmergingTech2028Service {
 export interface EmergingTechService2028 {
@@ -27,77 +28,81 @@ export interface EmergingTechService2028 {
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
+=======
+
+export interface EmergingTechService2028
+export interface EmergingTechService2028 {id: string;
+export interface EmergingTechService2028 {  id: string;
+export interface EmergingTechService2028 {
+  name: string;
+  tagline: string;
+  price: string;
+>>>>>>> main
   description: string;
   features: string[];
   link: string;
   category: string;
+<<<<<<< HEAD
   realImplementation: boolean;
   contactInfo: {
     mobile: string;
     email: string;
     address: string;
     website: string;
+=======
+  real_implementation: boolean;
+  contact_info: unknown;
+    mobile: string;
+    email: string}
+    address: string}
+>>>>>>> main
   };
+export interface EmergingTechService2028 {;
+  id: string;
+  name: string;
+  tagline: string;
+  price: string,,
+  description: string;
+  features: string[];
+  link: string;
+  category: string;
   realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+  contactInfo: {,
+    mobile: string;
+    email: string}
+    address: string}
+  }
 }
-export const emergingTech2028Services: EmergingTech2028Service[] = [
-  // Biometric Authentication Platform
-  {
-    id: 'biometric-authentication-platform',
-    name: 'Biometric Authentication Platform',
-    tagline: 'Secure identity verification with advanced biometrics',
-    price: '$1,999',
-    period: '/month',
-    description: 'Next-generation biometric authentication platform that uses facial recognition, fingerprint scanning, voice analysis, and behavioral biometrics to provide secure, frictionless identity verification.',
-    features: [
-      'Multi-modal biometric authentication',
-      'Facial recognition technology',
-      'Fingerprint scanning',
-      'Voice biometrics',
-      'Behavioral analysis',
-      'Liveness detection',
-      'Anti-spoofing measures',
-      'Compliance management',
-      'Analytics dashboard',
-      'API for applications'
+    address: string,
+  }
+export const emergingTech2028Services: EmergingTechService2028[] = [;
+    address: string,
+  }
+;
+export const emergingTech2028Services: EmergingTechService2028[] = [,
+    id: '2028 - emerging - tech - service',
+    name: '2028 Emerging Tech Service Platform',
+    tagline: 'Emerging tech services for 2028',
+    price: '$299 / month',
+    description: unknown,
+      'Advanced platform showcasing emerging technology services and innovations for 2028.',
+    features: [,
+      'Emerging tech services',
+      'Innovation platform',
+      'Future capabilities',
+      'Advanced features',
+      'Expert insights',
     ],
-    popular: true,
-    icon: '👁️',
-    color: 'from-blue-600 to-indigo-700',
-    textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/biometric-authentication',
-    marketPosition: 'Leading biometric authentication platform with the highest accuracy rates and security standards. Used by financial institutions, healthcare organizations, and government agencies.',
-    targetAudience: ['Financial institutions', 'Healthcare organizations', 'Government agencies', 'Technology companies', 'Retail chains', 'Educational institutions'],
-    trialDays: 30,
-    setupTime: '2 weeks',
-    category: 'Biometric Technology',
-    realService: true,
-    technology: ['Python', 'TensorFlow', 'Computer Vision', 'NLP', 'AWS', 'Docker', 'React', 'Node.js'],
-    integrations: ['Identity providers', 'SSO systems', 'Mobile apps', 'Web applications', 'Security tools'],
-    useCases: ['User authentication', 'Access control', 'Identity verification', 'Fraud prevention', 'Compliance management'],
-    roi: 'Financial institutions report 400% ROI through reduced fraud and improved security.',
-    competitors: ['Face ID', 'Touch ID', 'Windows Hello'],
-    marketSize: '$18B biometric market',
-    growthRate: '30% annual growth',
-    variant: 'biometric-futuristic',
-    contactInfo: {
+    link: '/services / 2028 - emerging - tech - service',
+    category: 'Emerging Tech Services 2028',
+    real_implementation: true,
+    contact_info: unknown,
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
     },
-    realImplementation: true,
-    implementationDetails: 'Complete biometric authentication platform with multi-modal verification, liveness detection, and compliance tools. Includes mobile SDKs and web APIs.',
-    launchDate: '2028-01-20',
-    customers: 180,
-    rating: 4.8,
-    reviews: 134
   },
+<<<<<<< HEAD
   // Edge Computing Orchestration Platform
   {
     id: 'edge-computing-orchestration-platform',
@@ -465,12 +470,15 @@ export const emergingTech2028Services: EmergingTech2028Service[] = [
 }
 export const emergingTech2028Services: EmergingTechService2028[] = [
   {
+=======
+];      mobile: "+1 302 464 0950"
+>>>>>>> main
     id: "2028-emerging-tech-service",
     name: "2028 Emerging Tech Service Platform",
     tagline: "Emerging tech services for 2028",
     price: "$299/month",
     description: "Advanced platform showcasing emerging technology services and innovations for 2028.",
-    features: [
+    features: [,
       "Emerging tech services",
       "Innovation platform",
       "Future capabilities",
@@ -480,10 +488,80 @@ export const emergingTech2028Services: EmergingTechService2028[] = [
     link: "/services/2028-emerging-tech-service",
     category: "Emerging Tech Services 2028",
     realImplementation: true,
-    contactInfo: {
+    contactInfo: unknown,
+      email: "kleber@ziontechgroup.com"
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+  id: string, name: string,
+  tagline: string, price: string,
+  description: string, features: string[],
+  link: string, category: string,
+  realImplementation: boolean,
+  contactInfo: unknown,
+    mobile: string, email: string,
+    address: string,
+  }
+}
+export const emergingTech2028Services: EmergingTechService2028[] = [,
+    id: "2028-emerging-tech-service", name: "2028 Emerging Tech Service Platform",
+    tagline: "Emerging tech services for 2028", price: "$299/month",
+    description: "Advanced platform showcasing emerging technology services and innovations for 2028.",
+    features: [;
+      "Emerging tech services"
+      "Innovation platform"
+      "Future capabilities"
+      "Advanced features"
+      "Expert insights"
+    ],
+    link: "/services/2028-emerging-tech-service", category: "Emerging Tech Services 2028",
+    realImplementation: true,
+    contactInfo: unknown,
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+      email: "kleber@ziontechgroup.com"
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+;
+    id: "2028-emerging-tech-service",
+    name: "2028 Emerging Tech Service Platform",
+    tagline: "Emerging tech services for 2028",
+    price: "$299/month",
+    description: "Advanced platform showcasing emerging technology services and innovations for 2028.",
+    features: [,
+      "Emerging tech services",
+      "Innovation platform",
+      "Future capabilities",
+      "Advanced features",
+      "Expert insights"
+    ],
+    link: "/services/2028-emerging-tech-service",
+    category: "Emerging Tech Services 2028",
+    realImplementation: true,
+    contactInfo: unknown,
+      mobile: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+    },
+  };
+];      mobile: "+1 302 464 0950"
+      email: "kleber@ziontechgroup.com"
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+export interface EmergingTechService2028 export interface EmergingTechService2028 id: string; export interface EmergingTechService2028 {id: string; export interface EmergingTechService2028 name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; real_implementation: boolean; contact_info: mobile: string; email: string} address: string} }; export interface EmergingTechService2028 {; id: string,; name: string,; tagline: string,; price: string, description: string,; features: string[],; link: string,; category: string,; realImplementation: boolean,; contactInfo: {, mobile: string,; email: string,} address: string} } } address: string, } export const emergingTech2028Services: EmergingTechService2028[] = [ address: string, } ; export const emergingTech2028Services: EmergingTechService2028[] = [, id: '2028 - emerging - tech - service',' name: '2028 Emerging Tech Service Platform',' tagline: 'Emerging tech services for 2028',' price: '$299 / month', description:  ,' 'Advanced platform showcasing emerging technology services and innovations for 2028.', features: [,' 'Emerging tech services',' 'Innovation platform',' 'Future capabilities',' 'Advanced features',' 'Expert insights', ],' link: '/services / 2028 - emerging - tech - service',' category: 'Emerging Tech Services 2028', real_implementation: true, contact_info: ' mobile: '+1 302 464 0950',' email: 'kleber@ziontechgroup && ziontechgroup.com',' address: '364 E Main St STE 1008 Middletown DE 19709', }, }, ]; mobile: "+1 302 464 0950" id: "2028-emerging-tech-service", name: "2028 Emerging Tech Service Platform", tagline: "Emerging tech services for 2028", price: "$299/month", description: "Advanced platform showcasing emerging technology services and innovations for 2028.", features: [ "Emerging tech services", "Innovation platform", "Future capabilities", "Advanced features", "Expert insights" ], link: "/services/2028-emerging-tech-service", category: "Emerging Tech Services 2028", realImplementation: true, contactInfo: email: "kleber@ziontechgroup.com" address: "364 E Main St STE 1008 Middletown DE 19709" } } ]; address: "364 E Main St STE 1008 Middletown DE 19709" } } ]; id: string, name: string, tagline: string, price: string, description: string, features: string[], link: string, category: string, realImplementation: boolean, contactInfo: mobile: string, email: string, address: string } } export const emergingTech2028Services: EmergingTechService2028[] = [ id: "2028-emerging-tech-service", name: "2028 Emerging Tech Service Platform", tagline: "Emerging tech services for 2028", price: "$299/month", description: "Advanced platform showcasing emerging technology services and innovations for 2028.", features: [ "Emerging tech services" "Innovation platform" "Future capabilities" "Advanced features" "Expert insights" ], link: "/services/2028-emerging-tech-service", category: "Emerging Tech Services 2028", realImplementation: true, contactInfo: mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com", address: "364 E Main St STE 1008 Middletown DE 19709" } } ]; email: "kleber@ziontechgroup.com" address: "364 E Main St STE 1008 Middletown DE 19709" } } ]; id: "2028-emerging-tech-service", name: "2028 Emerging Tech Service Platform", tagline: "Emerging tech services for 2028", price: "$299/month", description: "Advanced platform showcasing emerging technology services and innovations for 2028.", features: [ "Emerging tech services", "Innovation platform", "Future capabilities", "Advanced features", "Expert insights" ], link: "/services/2028-emerging-tech-service", category: "Emerging Tech Services 2028", realImplementation: true, contactInfo: mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",' mobile: '+1 302 464 0950',' email: 'kleber@ziontechgroup.com',' address: '364 E Main St STE 1008 Middletown DE 19709', }, },; ]; mobile: "+1 302 464 0950" email: "kleber@ziontechgroup.com" mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com", address: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '

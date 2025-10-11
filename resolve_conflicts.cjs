@@ -1,65 +1,83 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
+const path = require('path');
 const { execSync } = require('child_process');
 
-console.log('🚀 Resolving merge conflicts...');
-
-// Function to resolve conflicts in a file
-function resolveFileConflicts(filePath) {
+// Find all files with merge conflicts
+function findConflictFiles() {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    const output = execSync(
+      'grep -r "^<<<<<<<\\|^=======\\|^>>>>>>>" --include="*.js" --include="*.ts" --include="*.tsx" --include="*.jsx" . 2>/dev/null | cut -d: -f1 | sort -u',
+      { cwd: __dirname, encoding: 'utf8', maxBuffer: 10 * 1024 * 1024 }
+    );
+    return output.trim().split('\n').filter(f => f && !f.includes('node_modules') && !f.includes('.disabled') && !f.includes('backup'));
+  } catch (error) {
+    console.error('Error finding conflict files:', error.message);
+    return [];
+  }
+}
+
+// Resolve conflicts by taking the "ours" version (origin/main or latest)
+function resolveConflict(content) {
+  const lines = content.split('\n');
+  const result = [];
+  let inConflict = false;
+  let inOurs = false;
+  let conflictDepth = 0;
+  
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
     
-    if (!content.includes('<<<<<<< HEAD')) {
-      return false;
+    if (line.startsWith('<<<<<<<')) {
+      inConflict = true;
+      inOurs = true;
+      conflictDepth++;
+      continue;
     }
     
-    console.log(`🔧 Resolving conflicts in: ${filePath}`);
+    if (line.startsWith('=======') && inConflict) {
+      inOurs = false;
+      continue;
+    }
     
-    // Strategy: Keep both sides and remove conflict markers
-    content = content
-      .replace(/<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)>>>>>>> [^\n]+/g, '$1')
-      .replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '')
-      .replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+    if (line.startsWith('>>>>>>>') && inConflict) {
+      conflictDepth--;
+      if (conflictDepth === 0) {
+        inConflict = false;
+        inOurs = false;
+      }
+      continue;
+    }
     
-    // Clean up any remaining markers
-    content = content
-      .replace(/<<<<<<< HEAD/g, '')
-      .replace(/=======/g, '')
-      .replace(/>>>>>>> [^\n]+/g, '');
+    if (!inConflict || inOurs) {
+      result.push(line);
+    }
+  }
+  
+  return result.join('\n');
+}
+
+// Main execution
+const conflictFiles = findConflictFiles();
+console.log(`Found ${conflictFiles.length} files with merge conflicts`);
+
+let fixed = 0;
+for (const file of conflictFiles) {
+  const filePath = path.join(__dirname, file);
+  try {
+    if (!fs.existsSync(filePath)) continue;
     
-    fs.writeFileSync(filePath, content, 'utf8');
-    return true;
+    const content = fs.readFileSync(filePath, 'utf8');
+    if (!content.includes('<<<<<<<') && !content.includes('=======') && !content.includes('>>>>>>>')) {
+      continue;
+    }
+    
+    const resolved = resolveConflict(content);
+    fs.writeFileSync(filePath, resolved, 'utf8');
+    console.log(`✓ Resolved: ${file}`);
+    fixed++;
   } catch (error) {
-    console.error(`❌ Error resolving ${filePath}:`, error.message);
-    return false;
+    console.error(`✗ Error resolving ${file}:`, error.message);
   }
 }
 
-// Main resolution
-function main() {
-  // Resolve app/page.tsx
-  if (resolveFileConflicts('/workspace/app/page.tsx')) {
-    console.log('✅ Resolved conflicts in app/page.tsx');
-  }
-  
-  // Resolve yarn.lock by taking the incoming version
-  try {
-    execSync('git checkout --theirs yarn.lock', { cwd: '/workspace' });
-    console.log('✅ Resolved conflicts in yarn.lock');
-  } catch (error) {
-    console.log('⚠️ Could not resolve yarn.lock conflicts:', error.message);
-  }
-  
-  // Add resolved files
-  try {
-    execSync('git add app/page.tsx yarn.lock', { cwd: '/workspace' });
-    console.log('✅ Added resolved files to staging');
-  } catch (error) {
-    console.log('⚠️ Error adding files:', error.message);
-  }
-  
-  console.log('🎉 Conflict resolution completed!');
-}
-
-main();
+console.log(`\nResolved ${fixed} files`);

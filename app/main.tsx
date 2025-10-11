@@ -1,10 +1,14 @@
 import React from 'react';
-import { createRoot } from 'react-dom/client';
+import ReactDOM from 'react-dom/client';
+import App from './App';
 import './globals.css';
-import HomePage from './page';
 
-const container = document.getElementById('root');
-if (container) {
-  const root = createRoot(container);
-  root.render(<HomePage />);
+const _root = document.getElementById('root');
+
+if (root) {
+  ReactDOM.createRoot(root).render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  );
 }
