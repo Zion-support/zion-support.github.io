@@ -1,112 +1,82 @@
-'use client';
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
 
-const LayoutPage: React.FC = () => {,
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Bank-level security with encryption and compliance standards'
+const inter = Inter({ subsets: ['latin'] });
+
+export const metadata: Metadata = {
+  title: 'Zion Tech Group - Advanced AI and IT Solutions',
+  description: 'Leading provider of AI-powered solutions, cloud services, cybersecurity, and digital transformation services for businesses worldwide.',
+  keywords: 'AI solutions, cloud services, cybersecurity, digital transformation, IT consulting, software development',
+  authors: [{ name: 'Zion Tech Group' }],
+  creator: 'Zion Tech Group',
+  publisher: 'Zion Tech Group',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
   },
-    {
-    icon: Globe,
+  metadataBase: new URL('https://ziontechgroup.com'),
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: 'Zion Tech Group - Advanced AI and IT Solutions',
+    description: 'Leading provider of AI-powered solutions, cloud services, cybersecurity, and digital transformation services for businesses worldwide.',
+    url: 'https://ziontechgroup.com',
+    siteName: 'Zion Tech Group',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Zion Tech Group - Advanced AI and IT Solutions',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Zion Tech Group - Advanced AI and IT Solutions',
+    description: 'Leading provider of AI-powered solutions, cloud services, cybersecurity, and digital transformation services for businesses worldwide.',
+    images: ['/og-image.jpg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
     },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-    }
-  ]
-const benefits = [
-  ];
-
-  const benefits = [
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Layout | Zion Tech Group</title>
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        </section>
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
-              <span>Layout</span>
-              <br />
-              <span className="text-white">Solutions</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your business with our advanced layout solutions.</p>
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        </section>
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our Layout?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our layout solutions deliver unmatched performance, security, and scalability.
-            </p>
-          </div>
-              </div>
-            ))}
-          </div>
-        ))
-      </section>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the power of our layout solutions for your business.</p>
-            </p>
-          </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        </section>
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-              Contact our experts to discuss your layout needs and get a customized solution.
-            </p>
-              </button>
-            </div>
-          </div>
-        ))
-      </section>
-    </div>
-  );
+  },
+  verification: {
+    google: 'your-google-verification-code',
+  },
 };
 
-export default LayoutPage;
-
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <meta name="theme-color" content="#1a1a1a" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
+      <body className={inter.className}>
+        {children}
+      </body>
+    </html>
+  );
+}
