@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-=======
-
-=======
 // Type definitions for Next.js
->>>>>>> cursor/fix-errors-and-merge-to-main-529a
 declare global {
   namespace NodeJS {
     interface ProcessEnv {
@@ -16,10 +11,7 @@ declare global {
     }
   }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-529a
 declare module 'next' {
   interface NextRequest {
     user?: {
@@ -28,7 +20,8 @@ declare module 'next' {
       name: string
     }
   }
-=======
+}
+
 declare module '*.svg' {
   const content: React.FunctionComponent<React.SVGAttributes<SVGElement>>;
   export default content;

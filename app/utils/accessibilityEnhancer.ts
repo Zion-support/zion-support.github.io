@@ -1,13 +1,9 @@
-<<<<<<< HEAD
 /**
  * Accessibility Enhancer Utility
  * Provides comprehensive accessibility improvements for web applications
  */
 
 export interface AccessibilityConfig {
-=======
-// Accessibility Enhancement Utilities
-export interface AccessibilityOptions {
   enableKeyboardNavigation: boolean;
   enableScreenReader: boolean;
   enableHighContrast: boolean;
@@ -15,7 +11,7 @@ export interface AccessibilityOptions {
   enableAriaLabels: boolean;
 }
 
-export const defaultAccessibilityOptions: AccessibilityOptions = {
+export const defaultAccessibilityConfig: AccessibilityConfig = {
   enableKeyboardNavigation: true,
   enableScreenReader: true,
   enableHighContrast: false,
@@ -23,71 +19,6 @@ export const defaultAccessibilityOptions: AccessibilityOptions = {
   enableAriaLabels: true,
 };
 
-export class AccessibilityEnhancer {
-  private options: AccessibilityOptions;
-
-  constructor(options: Partial<AccessibilityOptions> = {}) {
-    this.options = { ...defaultAccessibilityOptions, ...options };
-  }
-
-  public enhanceElement(element: HTMLElement): void {
-    if (this.options.enableKeyboardNavigation) {
-      this.addKeyboardNavigation(element);
-    }
-    
-    if (this.options.enableScreenReader) {
-      this.addScreenReaderSupport(element);
-    }
-    
-    if (this.options.enableFocusIndicators) {
-      this.addFocusIndicators(element);
-    }
-    
-    if (this.options.enableAriaLabels) {
-      this.addAriaLabels(element);
-    }
-  }
-
-=======
-  private addKeyboardNavigation(element: HTMLElement): void {
-    element.setAttribute('tabindex', '0');
-  }
-
-  private addScreenReaderSupport(element: HTMLElement): void {
-    if (!element.getAttribute('aria-label')) {
-      const text = element.textContent || element.getAttribute('alt') || 'Interactive element';
-      element.setAttribute('aria-label', text);
-    }
-  }
-
-  private addFocusIndicators(element: HTMLElement): void {
-    element.style.outline = '2px solid #0066cc';
-    element.style.outlineOffset = '2px';
-  }
-
-  private addAriaLabels(element: HTMLElement): void {
-    if (element.tagName === 'BUTTON' && !element.getAttribute('aria-label')) {
-      element.setAttribute('aria-label', element.textContent || 'Button');
-    }
-  }
-}
-
-export function enhanceAccessibility(
-  selector: string, 
-  options: Partial<AccessibilityOptions> = {}
-): void {
-  const enhancer = new AccessibilityEnhancer(options);
-  const elements = document.querySelectorAll(selector);
-  
-  elements.forEach((element) => {
-    if (element instanceof HTMLElement) {
-      enhancer.enhanceElement(element);
-    }
-  });
-}
-
-export default AccessibilityEnhancer;
-=======
 interface AccessibilityMetrics {
   colorContrastIssues: number;
   keyboardNavigationScore: number;
@@ -100,6 +31,7 @@ interface AccessibilityMetrics {
 }
 
 class AccessibilityEnhancer {
+  private config: AccessibilityConfig;
   private metrics: AccessibilityMetrics = {
     colorContrastIssues: 0,
     keyboardNavigationScore: 0,
@@ -115,13 +47,24 @@ class AccessibilityEnhancer {
   private currentFocusIndex: number = 0;
   private observers: MutationObserver[] = [];
 
-  constructor() {
+  constructor(config: Partial<AccessibilityConfig> = {}) {
+    this.config = { ...defaultAccessibilityConfig, ...config };
     this.initialize();
   }
 
   private initialize(): void {
-    this.setupKeyboardNavigation();
-    this.setupScreenReaderSupport();
+    if (this.config.enableKeyboardNavigation) {
+      this.setupKeyboardNavigation();
+    }
+    if (this.config.enableScreenReader) {
+      this.setupScreenReaderSupport();
+    }
+    if (this.config.enableFocusIndicators) {
+      this.setupFocusIndicators();
+    }
+    if (this.config.enableAriaLabels) {
+      this.setupAriaLabels();
+    }
     this.setupMetricsCollection();
     this.scanAccessibility();
   }
@@ -136,10 +79,7 @@ class AccessibilityEnhancer {
   }
 
   private setupScreenReaderSupport(): void {
-    // Create live regions for screen reader announcements
     this.createLiveRegions();
-    
-    // Enhance buttons with aria-labels
     this.enhanceButtons();
   }
 
@@ -168,6 +108,26 @@ class AccessibilityEnhancer {
   }
 
   private enhanceButtons(): void {
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach((button) => {
+      if (!button.getAttribute('aria-label')) {
+        button.setAttribute('aria-label', button.textContent || 'Button');
+      }
+    });
+  }
+
+  private setupFocusIndicators(): void {
+    const style = document.createElement('style');
+    style.textContent = `
+      *:focus {
+        outline: 2px solid #0066cc !important;
+        outline-offset: 2px !important;
+      }
+    `;
+    document.head.appendChild(style);
+  }
+
+  private setupAriaLabels(): void {
     const buttons = document.querySelectorAll('button');
     buttons.forEach((button) => {
       if (!button.getAttribute('aria-label')) {
@@ -271,18 +231,6 @@ class AccessibilityEnhancer {
     this.metrics.headingsWithoutContent = Array.from(headings).filter(heading => !heading.textContent?.trim()).length;
   }
 
-  private announceToScreenReader(message: string, priority: 'polite' | 'assertive' = 'polite'): void {
-    const liveRegion = document.getElementById(
-      priority === 'assertive' ? 'assertive-live-region' : 'live-region'
-    );
-    if (liveRegion) {
-      liveRegion.textContent = message;
-      setTimeout(() => {
-        liveRegion.textContent = '';
-      }, 1000);
-    }
-  }
-
   getMetrics(): AccessibilityMetrics {
     return { ...this.metrics };
   }
@@ -323,8 +271,4 @@ export const focusElement = (element: HTMLElement) => {
   accessibilityEnhancer.focusElement(element);
 };
 
-export const updateFocusableElements = () => {
-  // This method is now handled internally by the class
-  accessibilityEnhancer.getMetrics();
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-529a
+export default AccessibilityEnhancer;
