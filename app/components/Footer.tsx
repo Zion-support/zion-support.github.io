@@ -25,7 +25,11 @@ const Footer: React.FC = memo(() => {
     { name: 'Cybersecurity', url: '/it-services?category=Security' },
     { name: 'Quantum Computing', url: '/ai-services?category=Quantum Computing' },
     { name: '5G Implementation', url: '/it-services?category=5G Technology' },
-    { name: 'Blockchain Solutions', url: '/it-services?category=Blockchain' }
+    { name: 'Blockchain Solutions', url: '/it-services?category=Blockchain' },
+    { name: 'AI Analytics', url: '/ai-services?category=Analytics' },
+    { name: 'AI Chatbots', url: '/ai-services?category=Customer Service' },
+    { name: 'AI Content Generation', url: '/ai-services?category=Content Generation' },
+    { name: 'AI Automation', url: '/ai-services?category=Automation' }
   ];
 
   const resourcesLinks = [
@@ -36,7 +40,9 @@ const Footer: React.FC = memo(() => {
     { name: 'Tutorials', url: '/tutorials' },
     { name: 'Community', url: '/community' },
     { name: 'Demo', url: '/demo' },
-    { name: 'Compliance', url: '/compliance' }
+    { name: 'Case Studies', url: '/case-studies' },
+    { name: 'Blog', url: '/blog' },
+    { name: 'Support', url: '/support' }
   ];
 
   const enterpriseLinks = [
@@ -45,7 +51,10 @@ const Footer: React.FC = memo(() => {
     { name: 'Business Intelligence', url: '/business-intelligence' },
     { name: 'Edge Computing', url: '/it-services?category=Edge Computing' },
     { name: 'Consultation', url: '/consultation' },
-    { name: 'Custom Development', url: '/custom-software' }
+    { name: 'Custom Development', url: '/custom-software' },
+    { name: 'AI Infrastructure', url: '/it-services?category=AI Infrastructure' },
+    { name: 'Quantum Computing', url: '/ai-services?category=Quantum Computing' },
+    { name: 'Blockchain Solutions', url: '/it-services?category=Blockchain' }
   ];
 
   return (

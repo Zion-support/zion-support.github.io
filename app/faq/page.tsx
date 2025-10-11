@@ -7,15 +7,10 @@ import Footer from '../components/Footer';
 
 const FAQPage: React.FC = () => {
   const [openItems, setOpenItems] = useState<number[]>([]);
-<<<<<<< HEAD
   const [searchQuery, setSearchQuery] = useState('');
 
   const toggleItem = (index: number) => {
     setOpenItems(prev => 
-=======
-  const toggleItem = (index: number) => 
-    setOpenItems(prev => )
->>>>>>> cursor/website-audit-and-update-with-deployment-43a6
       prev.includes(index) 
         ? prev.filter(item => item !== index)
         : [...prev, index]
@@ -60,7 +55,6 @@ const FAQPage: React.FC = () => {
     },
     {
       question: "What industries do you serve?",
-<<<<<<< HEAD
       answer: "We serve a wide range of industries including healthcare, finance, e-commerce, manufacturing, education, real estate, legal, and more. Our solutions are tailored to meet industry-specific requirements and compliance standards.",
       category: "Industries"
     },

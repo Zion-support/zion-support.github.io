@@ -8,6 +8,8 @@ import Footer from '../components/Footer';
 const ServicesPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const [currentPage, setCurrentPage] = useState(1);
+  const [servicesPerPage] = useState(12);
 
   const services = [
     // AI Services
@@ -154,8 +156,6 @@ const ServicesPage: React.FC = () => {
       price: 'Starting at $129/month',
       marketPrice: '$250-600/month',
       benefits: ['Save 80% content creation time', 'Consistent brand voice', 'SEO optimization', 'Multi-platform publishing']
-<<<<<<< HEAD
-=======
     },
     {
       icon: Users,
@@ -676,7 +676,192 @@ const ServicesPage: React.FC = () => {
       price: 'Starting at $2,500/month',
       marketPrice: '$4000-15000/month',
       benefits: ['Complete process automation', 'Reduced manual work', 'Improved efficiency', 'Cost savings']
->>>>>>> cursor/website-audit-and-update-with-deployment-43a6
+    },
+
+    // Additional Innovative AI Services
+    {
+      icon: Brain,
+      title: 'AI Climate Intelligence',
+      description: 'Advanced climate modeling and environmental impact analysis using AI and machine learning.',
+      category: 'ai',
+      features: ['Climate Modeling', 'Carbon Footprint Analysis', 'Environmental Risk Assessment', 'Sustainability Reporting', 'Green Energy Optimization', 'Climate Prediction'],
+      price: 'Starting at $799/month',
+      marketPrice: '$1500-4000/month',
+      benefits: ['Environmental compliance', 'Cost savings on energy', 'Sustainability goals', 'Future-proof planning']
+    },
+    {
+      icon: Eye,
+      title: 'AI Medical Imaging Pro',
+      description: 'Revolutionary medical imaging analysis with AI-powered diagnosis and treatment recommendations.',
+      category: 'ai',
+      features: ['Medical Image Analysis', 'Diagnosis Assistance', 'Treatment Planning', 'Drug Discovery', 'Patient Monitoring', 'Clinical Decision Support'],
+      price: 'Starting at $1,299/month',
+      marketPrice: '$2500-8000/month',
+      benefits: ['Improved diagnosis accuracy', 'Faster treatment decisions', 'Better patient outcomes', 'Reduced medical errors']
+    },
+    {
+      icon: Zap,
+      title: 'AI Smart Grid Manager',
+      description: 'Intelligent energy grid management with real-time optimization and predictive maintenance.',
+      category: 'ai',
+      features: ['Grid Optimization', 'Demand Forecasting', 'Fault Detection', 'Load Balancing', 'Renewable Integration', 'Predictive Maintenance'],
+      price: 'Starting at $999/month',
+      marketPrice: '$2000-6000/month',
+      benefits: ['Reduced energy waste', 'Improved grid stability', 'Lower maintenance costs', 'Better renewable integration']
+    },
+    {
+      icon: Globe,
+      title: 'AI Smart City Platform',
+      description: 'Comprehensive smart city management with AI-powered urban planning and citizen services.',
+      category: 'ai',
+      features: ['Urban Planning', 'Traffic Optimization', 'Citizen Services', 'Resource Management', 'Emergency Response', 'Environmental Monitoring'],
+      price: 'Starting at $2,999/month',
+      marketPrice: '$5000-20000/month',
+      benefits: ['Improved city efficiency', 'Better citizen experience', 'Reduced costs', 'Sustainable development']
+    },
+
+    // Additional Innovative IT Services
+    {
+      icon: Cpu,
+      title: 'Neuromorphic Computing',
+      description: 'Next-generation brain-inspired computing systems for ultra-efficient AI processing.',
+      category: 'it',
+      features: ['Neuromorphic Chips', 'Spiking Neural Networks', 'Ultra-low Power Processing', 'Real-time Learning', 'Edge AI Deployment', 'Cognitive Computing'],
+      price: 'Starting at $4,999/month',
+      marketPrice: '$10000-50000/month',
+      benefits: ['Exponential efficiency gains', 'Real-time processing', 'Ultra-low power consumption', 'Revolutionary AI capabilities']
+    },
+    {
+      icon: Shield,
+      title: 'Quantum-Safe Cryptography',
+      description: 'Post-quantum cryptographic solutions to protect against future quantum computer threats.',
+      category: 'it',
+      features: ['Quantum-Resistant Algorithms', 'Key Management', 'Secure Communications', 'Data Protection', 'Compliance Support', 'Migration Services'],
+      price: 'Starting at $1,999/month',
+      marketPrice: '$4000-15000/month',
+      benefits: ['Future-proof security', 'Quantum threat protection', 'Compliance ready', 'Long-term data protection']
+    },
+    {
+      icon: Database,
+      title: 'Distributed Ledger Infrastructure',
+      description: 'Advanced blockchain and distributed ledger technology implementation for enterprise applications.',
+      category: 'it',
+      features: ['Blockchain Networks', 'Smart Contracts', 'DeFi Integration', 'NFT Platforms', 'Cross-chain Solutions', 'Enterprise DApps'],
+      price: 'Starting at $2,499/month',
+      marketPrice: '$5000-25000/month',
+      benefits: ['Transparent operations', 'Enhanced security', 'Reduced intermediaries', 'Innovation opportunities']
+    },
+    {
+      icon: Monitor,
+      title: 'AI-Powered DevOps',
+      description: 'Intelligent DevOps platform with AI-driven automation, monitoring, and optimization.',
+      category: 'it',
+      features: ['AI Code Analysis', 'Automated Testing', 'Intelligent Deployment', 'Performance Optimization', 'Anomaly Detection', 'Self-healing Systems'],
+      price: 'Starting at $1,799/month',
+      marketPrice: '$3000-12000/month',
+      benefits: ['Faster deployments', 'Reduced errors', 'Better performance', 'Automated operations']
+    },
+
+    // Additional Innovative Micro SaaS
+    {
+      icon: Heart,
+      title: 'Zion AI Wellness Coach',
+      description: 'Personalized wellness and health management platform with AI-powered recommendations.',
+      category: 'saas',
+      features: ['Health Monitoring', 'Personalized Plans', 'Nutrition Tracking', 'Exercise Recommendations', 'Mental Health Support', 'Progress Analytics'],
+      price: 'Starting at $39/month',
+      marketPrice: '$80-200/month',
+      benefits: ['Better health outcomes', 'Personalized care', 'Cost-effective wellness', 'Improved quality of life']
+    },
+    {
+      icon: Users,
+      title: 'Zion AI Learning Platform',
+      description: 'Intelligent e-learning platform with personalized education and skill development.',
+      category: 'saas',
+      features: ['Personalized Learning', 'Skill Assessment', 'Progress Tracking', 'Adaptive Content', 'Certification Management', 'Collaborative Learning'],
+      price: 'Starting at $89/month',
+      marketPrice: '$150-400/month',
+      benefits: ['Improved learning outcomes', 'Personalized education', 'Skill development', 'Cost-effective training']
+    },
+    {
+      icon: Globe,
+      title: 'Zion AI Travel Assistant',
+      description: 'Smart travel planning and management platform with AI-powered recommendations and optimization.',
+      category: 'saas',
+      features: ['Trip Planning', 'Price Optimization', 'Real-time Updates', 'Personalized Recommendations', 'Expense Tracking', 'Travel Analytics'],
+      price: 'Starting at $59/month',
+      marketPrice: '$120-300/month',
+      benefits: ['Better travel experiences', 'Cost savings', 'Time optimization', 'Personalized recommendations']
+    },
+    {
+      icon: Package,
+      title: 'Zion AI Logistics Optimizer',
+      description: 'Intelligent logistics and supply chain optimization with AI-powered route planning and inventory management.',
+      category: 'saas',
+      features: ['Route Optimization', 'Inventory Management', 'Demand Forecasting', 'Cost Analysis', 'Performance Tracking', 'Real-time Monitoring'],
+      price: 'Starting at $199/month',
+      marketPrice: '$400-1200/month',
+      benefits: ['Reduced logistics costs', 'Improved efficiency', 'Better customer service', 'Optimized operations']
+    },
+    {
+      icon: BarChart3,
+      title: 'Zion AI Investment Advisor',
+      description: 'AI-powered investment analysis and portfolio management platform with real-time market insights.',
+      category: 'saas',
+      features: ['Portfolio Analysis', 'Risk Assessment', 'Market Prediction', 'Investment Recommendations', 'Performance Tracking', 'Tax Optimization'],
+      price: 'Starting at $149/month',
+      marketPrice: '$300-800/month',
+      benefits: ['Better investment decisions', 'Risk management', 'Portfolio optimization', 'Market insights']
+    },
+    {
+      icon: Settings,
+      title: 'Zion AI Smart Home Manager',
+      description: 'Intelligent home automation and energy management platform with AI-powered optimization.',
+      category: 'saas',
+      features: ['Home Automation', 'Energy Management', 'Security Monitoring', 'Predictive Maintenance', 'Cost Optimization', 'Remote Control'],
+      price: 'Starting at $79/month',
+      marketPrice: '$150-400/month',
+      benefits: ['Energy savings', 'Improved comfort', 'Enhanced security', 'Cost reduction']
+    },
+    {
+      icon: FileText,
+      title: 'Zion AI Legal Research',
+      description: 'Advanced legal research and case analysis platform with AI-powered insights and recommendations.',
+      category: 'saas',
+      features: ['Case Research', 'Legal Analysis', 'Precedent Finding', 'Document Review', 'Compliance Checking', 'Legal Writing Assistant'],
+      price: 'Starting at $299/month',
+      marketPrice: '$500-1500/month',
+      benefits: ['Faster research', 'Better case preparation', 'Reduced costs', 'Improved accuracy']
+    },
+    {
+      icon: Eye,
+      title: 'Zion AI Quality Inspector',
+      description: 'Automated quality control and inspection platform with computer vision and AI analysis.',
+      category: 'saas',
+      features: ['Visual Inspection', 'Defect Detection', 'Quality Scoring', 'Process Monitoring', 'Predictive Quality', 'Compliance Reporting'],
+      price: 'Starting at $179/month',
+      marketPrice: '$350-900/month',
+      benefits: ['Improved quality', 'Reduced defects', 'Cost savings', 'Consistent standards']
+    },
+    {
+      icon: Brain,
+      title: 'Zion AI Research Assistant',
+      description: 'Intelligent research platform with AI-powered data analysis, hypothesis generation, and insights.',
+      category: 'saas',
+      features: ['Data Analysis', 'Hypothesis Generation', 'Literature Review', 'Statistical Analysis', 'Report Generation', 'Collaboration Tools'],
+      price: 'Starting at $129/month',
+      marketPrice: '$250-600/month',
+      benefits: ['Faster research', 'Better insights', 'Reduced manual work', 'Improved accuracy']
+    },
+    {
+      icon: Zap,
+      title: 'Zion AI Energy Trader',
+      description: 'Intelligent energy trading platform with AI-powered market analysis and automated trading.',
+      category: 'saas',
+      features: ['Market Analysis', 'Trading Algorithms', 'Risk Management', 'Price Prediction', 'Portfolio Optimization', 'Real-time Trading'],
+      price: 'Starting at $399/month',
+      marketPrice: '$800-2000/month',
+      benefits: ['Better trading decisions', 'Risk reduction', 'Profit optimization', 'Market insights']
     }
   ];
 
@@ -694,32 +879,32 @@ const ServicesPage: React.FC = () => {
     return matchesSearch && matchesCategory;
   });
 
+  // Pagination logic
+  const indexOfLastService = currentPage * servicesPerPage;
+  const indexOfFirstService = indexOfLastService - servicesPerPage;
+  const currentServices = filteredServices.slice(indexOfFirstService, indexOfLastService);
+  const totalPages = Math.ceil(filteredServices.length / servicesPerPage);
+
+  // Reset to first page when filters change
+  React.useEffect(() => {
+    setCurrentPage(1);
+  }, [searchTerm, selectedCategory]);
+
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
         <title>Services - Zion Tech Group | AI, IT & Micro SaaS Solutions</title>
         <meta name="description" content="Comprehensive AI services, IT solutions, and Micro SaaS tools. From quantum computing to cloud migration, we provide cutting-edge technology solutions for modern businesses." />
         <meta name="keywords" content="AI services, IT services, micro saas, cloud migration, cybersecurity, quantum computing, blockchain, business automation" />
-        <link rel="canonical" href="https://ziontechgroup.com/services" />
-=======
-        <title>Our Services - Zion Tech Group | AI & IT Solutions</title>
-        <meta name="description" content="Comprehensive AI and IT services including chatbots, analytics, cloud migration, cybersecurity, and custom software development." />
-        <meta name="keywords" content="AI services, IT services, cloud migration, cybersecurity, software development, micro saas" />
         <meta property="og:title" content="Our Services - Zion Tech Group" />
         <meta property="og:description" content="Comprehensive AI and IT solutions for your business" />
         <meta property="og:type" content="website" />
->>>>>>> cursor/website-audit-and-update-with-deployment-43a6
+        <link rel="canonical" href="https://ziontechgroup.com/services" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
-<<<<<<< HEAD
         <main className="pt-20">
-=======
-        
-        <main className="container mx-auto px-4 py-16 pt-24">
->>>>>>> cursor/website-audit-and-update-with-deployment-43a6
           {/* Hero Section */}
           <section className="py-20 px-4">
             <div className="max-w-7xl mx-auto text-center">
@@ -771,8 +956,8 @@ const ServicesPage: React.FC = () => {
           {/* Services Grid */}
           <section className="py-16 px-4">
             <div className="max-w-7xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredServices.map((service, index) => (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
+                {currentServices.map((service, index) => (
                   <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/30 transition-all duration-300 hover:scale-105">
                     <div className="flex items-center mb-6">
                       <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl flex items-center justify-center mr-4">
@@ -866,6 +1051,53 @@ const ServicesPage: React.FC = () => {
               )}
             </div>
           </section>
+
+          {/* Pagination */}
+          {totalPages > 1 && (
+            <section className="py-8 px-4">
+              <div className="max-w-7xl mx-auto">
+                <div className="flex justify-center items-center space-x-2">
+                  <button
+                    onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+                    disabled={currentPage === 1}
+                    className="px-4 py-2 rounded-lg bg-slate-800 text-white hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
+                  >
+                    Previous
+                  </button>
+                  
+                  <div className="flex space-x-1">
+                    {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
+                      <button
+                        key={page}
+                        onClick={() => setCurrentPage(page)}
+                        className={`px-4 py-2 rounded-lg transition-all duration-300 ${
+                          currentPage === page
+                            ? 'bg-cyan-500 text-white'
+                            : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
+                        }`}
+                      >
+                        {page}
+                      </button>
+                    ))}
+                  </div>
+                  
+                  <button
+                    onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+                    disabled={currentPage === totalPages}
+                    className="px-4 py-2 rounded-lg bg-slate-800 text-white hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
+                  >
+                    Next
+                  </button>
+                </div>
+                
+                <div className="text-center mt-4">
+                  <p className="text-gray-400 text-sm">
+                    Showing {indexOfFirstService + 1}-{Math.min(indexOfLastService, filteredServices.length)} of {filteredServices.length} services
+                  </p>
+                </div>
+              </div>
+            </section>
+          )}
 
           {/* CTA Section */}
           <section className="py-20 px-4">
