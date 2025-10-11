@@ -44,7 +44,6 @@ export default function FiveGImplementationPage() {
       benefits: ['Advanced Security', 'Compliance Ready', 'Data Protection', 'Network Security']
     }
   ];
-import { CheckCircle } from 'lucide-react';
 
 const FiveGImplementationPage: React.FC = () => {
   return (
