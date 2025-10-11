@@ -1,77 +1,51 @@
-        <meta name="description" content="Professional API development services including RESTful APIs, GraphQL, microservices, and API integration solutions for modern applications." />
-        <meta name="keywords" content="API development, RESTful APIs, GraphQL, microservices, API integration, web services" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p></p>Build robust, scalable APIs that power your applications with our comprehensive;</p>
-              API development services including RESTful APIs, GraphQL, and microservices.
-            </p>
-          </div>
+'use client';
+import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
 
+const PagePage: React.FC = () => {
+  return (
+    <>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Navigation />
+        
+        {/* Hero Section */}
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Page
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Discover our comprehensive solutions designed to transform your business.
               </p>
-              <ul className="text-sm text-gray-400 space-y-2"></ul>
-                </ul><li>• RESTful architecture</li>
-                <li>• HTTP methods</li>
-                <li>• Status codes</li>
-                <li>• API documentation</li>
-              </ul>
-            </div>
-
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"></div></div>
-              </p>
-              <ul className="text-sm text-gray-400 space-y-2"></ul>
-                </ul><li>• Schema design</li>
-                <li>• Resolvers</li>
-                <li>• Subscriptions</li>
-                <li>• Caching strategies</li>
-              </ul>
-            </div>
-
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"></div></div>
-              </p>
-              <ul className="text-sm text-gray-400 space-y-2"></ul>
-                </ul><li>• Service decomposition</li>
-                <li>• Inter-service communication</li>
-                <li>• Load balancing</li>
-                <li>• Service discovery</li>
-              </ul>
-            </div>
-
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"></div></div>
-              </p>
-              <ul className="text-sm text-gray-400 space-y-2"></ul>
-                </ul><li>• Authentication</li>
-                <li>• Authorization</li>
-                <li>• Rate limiting</li>
-                <li>• Input validation</li>
-              </ul>
-            </div>
-
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"></div></div>
-              </p>
-              <ul className="text-sm text-gray-400 space-y-2"></ul>
-                </ul><li>• Unit testing</li>
-                <li>• Integration testing</li>
-                <li>• Load testing</li>
-                <li>• Security testing</li>
-              </ul>
-            </div>
-
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"></div></div>
-              </p>
-              <ul className="text-sm text-gray-400 space-y-2"></ul>
-                </ul><li>• API gateway</li>
-                <li>• Monitoring & analytics</li>
-                <li>• Version control</li>
-                <li>• Developer portal</li>
-              </ul>
             </div>
           </div>
+        </section>
 
-          <div className="text-center"></div></div>
-            </button>
+        {/* Content Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Coming Soon
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                This page is under development. Please check back soon for updates.
+              </p>
+              <button className="cyber-button">
+                Learn More
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </button>
+            </div>
           </div>
-        </div>
+        </section>
       </div>
+      
+      <Footer />
     </>
+  );
+};
+
+export default PagePage;

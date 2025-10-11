@@ -1,77 +1,51 @@
-        <meta name="description" content="Advanced AI voice solutions including speech recognition, text-to-speech, voice assistants, and conversational AI for enhanced customer experiences." />
-        <meta name="keywords" content="AI voice solutions, speech recognition, text-to-speech, voice assistants, conversational AI, voice technology" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p></p>Revolutionize customer interactions with advanced AI voice technologies including;</p>
-              speech recognition, natural language processing, and intelligent voice assistants.
-            </p>
-          </div>
+'use client';
+import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
 
+const PagePage: React.FC = () => {
+  return (
+    <>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Navigation />
+        
+        {/* Hero Section */}
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Page
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Discover our comprehensive solutions designed to transform your business.
               </p>
-              <ul className="text-sm text-gray-400 space-y-2"></ul>
-                </ul><li>• Real-time transcription</li>
-                <li>• Multi-language support</li>
-                <li>• Noise cancellation</li>
-                <li>• Custom vocabulary</li>
-              </ul>
-            </div>
-
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"></div></div>
-              </p>
-              <ul className="text-sm text-gray-400 space-y-2"></ul>
-                </ul><li>• Natural voice generation</li>
-                <li>• Multiple voice options</li>
-                <li>• Emotional expression</li>
-                <li>• SSML support</li>
-              </ul>
-            </div>
-
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"></div></div>
-              </p>
-              <ul className="text-sm text-gray-400 space-y-2"></ul>
-                </ul><li>• Contextual understanding</li>
-                <li>• Multi-turn conversations</li>
-                <li>• Personalization</li>
-                <li>• Integration capabilities</li>
-              </ul>
-            </div>
-
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"></div></div>
-              </p>
-              <ul className="text-sm text-gray-400 space-y-2"></ul>
-                </ul><li>• Natural language understanding</li>
-                <li>• Intent recognition</li>
-                <li>• Entity extraction</li>
-                <li>• Response generation</li>
-              </ul>
-            </div>
-
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"></div></div>
-              </p>
-              <ul className="text-sm text-gray-400 space-y-2"></ul>
-                </ul><li>• Call sentiment analysis</li>
-                <li>• Performance metrics</li>
-                <li>• Quality monitoring</li>
-                <li>• Insights dashboard</li>
-              </ul>
-            </div>
-
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"></div></div>
-              </p>
-              <ul className="text-sm text-gray-400 space-y-2"></ul>
-                </ul><li>• Voice biometrics</li>
-                <li>• Fraud detection</li>
-                <li>• Authentication</li>
-                <li>• Privacy protection</li>
-              </ul>
             </div>
           </div>
+        </section>
 
-          <div className="text-center"></div></div>
-            </button>
+        {/* Content Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Coming Soon
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                This page is under development. Please check back soon for updates.
+              </p>
+              <button className="cyber-button">
+                Learn More
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </button>
+            </div>
           </div>
-        </div>
+        </section>
       </div>
+      
+      <Footer />
     </>
+  );
+};
+
+export default PagePage;

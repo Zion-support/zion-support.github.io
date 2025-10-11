@@ -82,13 +82,8 @@ if ( {) {
     writeJsonFile ('deal / offerings.json', offerings)
     return res.status (200).json (offerings)
   }
-<<<<<<< HEAD
 import {  readJsonFile, writeJsonFile   } from '../../../../utils/api/storage'
 import {  requireSuperadminApi   } from '../../../../utils/api/auth'
-=======
-import { readJsonFile, writeJsonFile } from '../../../../utils/api/storage'
-import { requireSuperadminApi } from '../../../../utils/api/auth'
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return
   if (req.method === 'GET') {

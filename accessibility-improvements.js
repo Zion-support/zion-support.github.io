@@ -1,29 +1,13 @@
-<<<<<<< HEAD
 // Accessibility improvements for the Zion Tech Group website
 
 // 1. Focus management
 export const trapFocus = (element) => {
-=======
-// Accessibility improvements to implement
-// 1. Add ARIA labels to interactive elements
-// Example JSX:
-// <button aria-label="Close dialog">×</button>
-// <input aria-describedby="email-help" type="email" />
-// <div id="email-help">Enter your email address</div>
-
-// 2. Implement focus management
-const trapFocus = (element) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-f401
   const focusableElements = element.querySelectorAll(
     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
   )
   const firstElement = focusableElements[0]
   const lastElement = focusableElements[focusableElements.length - 1]
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> cursor/fix-errors-and-merge-to-main-f401
   element.addEventListener('keydown', (e) => {
     if (e.key === 'Tab') {
       if (e.shiftKey) {
@@ -41,7 +25,6 @@ const trapFocus = (element) => {
   })
 }
 
-<<<<<<< HEAD
 // 2. Skip links
 export const addSkipLinks = () => {
   const skipLink = document.createElement('a')
@@ -123,87 +106,10 @@ export const enhanceFormValidation = (form) => {
     
     input.addEventListener('input', () => {
       clearFieldError(input)
-=======
-// 3. Add keyboard navigation
-const addKeyboardNavigation = () => {
-  // Add keyboard event listeners to interactive elements
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      const target = e.target
-      if (target.getAttribute('role') === 'button' || target.tagName === 'BUTTON') {
-        target.click()
-        e.preventDefault()
-      }
-    }
-  })
-}
-
-// 4. Implement skip links
-const addSkipLinks = () => {
-  const skipLink = document.createElement('a')
-  skipLink.href = '#main-content'
-  skipLink.textContent = 'Skip to main content'
-  skipLink.className = 'skip-link'
-  skipLink.style.cssText = `
-    position: absolute;
-    top: -40px;
-    left: 6px;
-    background: #000;
-    color: #fff;
-    padding: 8px;
-    text-decoration: none;
-    z-index: 1000;
-  `
-  skipLink.addEventListener('focus', () => {
-    skipLink.style.top = '6px'
-  })
-  skipLink.addEventListener('blur', () => {
-    skipLink.style.top = '-40px'
-  })
-  document.body.insertBefore(skipLink, document.body.firstChild)
-}
-
-// 5. Add high contrast mode support
-const addHighContrastMode = () => {
-  const toggle = document.createElement('button')
-  toggle.textContent = 'Toggle High Contrast'
-  toggle.addEventListener('click', () => {
-    document.body.classList.toggle('high-contrast')
-  })
-  document.body.appendChild(toggle)
-}
-
-// 6. Implement screen reader only text
-const addScreenReaderOnly = (element, text) => {
-  const srOnly = document.createElement('span')
-  srOnly.textContent = text
-  srOnly.className = 'sr-only'
-  srOnly.style.cssText = `
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-  `
-  element.appendChild(srOnly)
-}
-
-// 7. Add form validation with ARIA
-const addFormValidation = (form) => {
-  const inputs = form.querySelectorAll('input, textarea, select')
-  inputs.forEach(input => {
-    input.addEventListener('blur', () => {
-      validateInput(input)
->>>>>>> cursor/fix-errors-and-merge-to-main-f401
     })
   })
 }
 
-<<<<<<< HEAD
 const validateField = (field) => {
   const value = field.value.trim()
   const type = field.type
@@ -269,7 +175,6 @@ export const respectReducedMotion = () => {
 }
 
 // 10. Screen reader announcements
-<<<<<<< HEAD
 export const setupScreenReaderAnnouncements = () => {
   // Add live region for dynamic content updates
   const liveRegion = document.createElement('div')
@@ -289,14 +194,6 @@ export const initializeAccessibility = () => {
   respectReducedMotion()
   setupScreenReaderAnnouncements()
 }
-=======
-// Example JSX:
-// <div aria-live="assertive" aria-atomic="true">
-//   {errorMessage}
-//
-export { trapFocus }
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
-=======
 const validateInput = (input) => {
   const isValid = input.checkValidity()
   const errorId = `${input.id}-error`
@@ -386,4 +283,3 @@ export {
   announceToScreenReader, 
   initAccessibility 
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-f401

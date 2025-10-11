@@ -1,15 +1,8 @@
-<<<<<<< HEAD
 'use client'
 import React from 'react';
 import {  Helmet  } from 'react-helmet-async';
   );
 };
-=======
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import Navigation from '../components/Navigation'
-import { Brain, BarChart, Target, TrendingUp, FileText, Zap, Shield, CheckCircle } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
 
 const AiConversationalAiPage: React.FC = () => {
   const features = [

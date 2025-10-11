@@ -1,4 +1,3 @@
-<<<<<<< HEAD
  */
 
 import {  apiCache   } from './apiCache';
@@ -11,8 +10,6 @@ interface RequestConfig {
   cacheTTL?: number;
 }
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
 }
 interface APIResponse<T = any> {}data: T,
   status: number,

@@ -1,163 +1,176 @@
-<<<<<<< HEAD
-                  ))}
-                </ul>
-                <div className="text-center"></div></div>
-                  <div className="text-lg font-bold text-indigo-400 mb-3"></div></div>{service.price}</div>
-                  <Link to="/contact" className="text-indigo-400 hover:text-indigo-300 font-medium"></Link>
-                    Learn More →
-                  </Link>
-                </div>
-              </div>
-=======
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Server, Shield, Cloud, Code, ArrowRight, CheckCircle } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
+import { ArrowRight, CheckCircle, Shield, Cloud, Database, Code, Users, Settings, Zap, Brain, BarChart, Target, TrendingUp, Globe, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
 
-const ItServicesPage: React.FC = () => {
+const ITServicesPage: React.FC = () => {
   const services = [
     {
-      icon: Server,
-      title: 'Infrastructure Management',
-      description: 'Comprehensive IT infrastructure solutions for modern businesses',
-      features: ['Server Management', 'Network Design', 'Hardware Support', 'System Monitoring']
+      id: 1,
+      title: 'Cloud Infrastructure',
+      description: 'Scalable and secure cloud solutions for your business needs.',
+      icon: Cloud,
+      features: ['AWS/Azure/GCP', 'Migration Services', 'DevOps', 'Monitoring'],
+      price: 'From $500/month'
     },
     {
-      icon: Cloud,
-      title: 'Cloud Solutions',
-      description: 'Scalable cloud infrastructure and migration services',
-      features: ['Cloud Migration', 'Multi-Cloud Strategy', 'Cloud Security', 'Cost Optimization']
+      id: 2,
+      title: 'Cybersecurity',
+      description: 'Comprehensive security solutions to protect your digital assets.',
+      icon: Shield,
+      features: ['Security Audit', 'Penetration Testing', 'Compliance', 'Incident Response'],
+      price: 'From $1,000/month'
+    },
+    {
+      id: 3,
+      title: 'Database Management',
+      description: 'Optimize and maintain your database infrastructure.',
+      icon: Database,
+      features: ['Performance Tuning', 'Backup & Recovery', 'Migration', 'Monitoring'],
+      price: 'From $800/month'
+    },
+    {
+      id: 4,
+      title: 'Network Solutions',
+      description: 'Design and implement robust network infrastructure.',
+      icon: Wifi,
+      features: ['Network Design', 'Security Implementation', 'Monitoring', 'Support'],
+      price: 'From $600/month'
+    },
+    {
+      id: 5,
+      title: 'IT Support',
+      description: '24/7 technical support for your business operations.',
+      icon: Users,
+      features: ['Help Desk', 'Remote Support', 'On-site Service', 'Training'],
+      price: 'From $300/month'
+    },
+    {
+      id: 6,
+      title: 'System Administration',
+      description: 'Comprehensive system management and maintenance.',
+      icon: Settings,
+      features: ['Server Management', 'User Management', 'Security Updates', 'Monitoring'],
+      price: 'From $700/month'
+    }
+  ];
+
+  const benefits = [
+    {
+      icon: Zap,
+      title: 'Fast Implementation',
+      description: 'Quick deployment and setup of IT solutions'
     },
     {
       icon: Shield,
-      title: 'Cybersecurity',
-      description: 'Advanced security solutions to protect your digital assets',
-      features: ['Threat Detection', 'Security Audits', 'Compliance Management', 'Incident Response']
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security and reliability'
     },
     {
-      icon: Code,
-      title: 'Software Development',
-      description: 'Custom software solutions tailored to your business needs',
-      features: ['Web Applications', 'Mobile Apps', 'API Development', 'Legacy Modernization']
+      icon: Users,
+      title: 'Expert Support',
+      description: '24/7 support from certified professionals'
+    },
+    {
+      icon: TrendingUp,
+      title: 'Scalable Solutions',
+      description: 'Solutions that grow with your business'
     }
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen pt-20"&gt;</div&gt;
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16"&gt;</div&gt;
-        <div className="text-center"&gt;</div&gt;
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"&gt;</h1&gt;
-            <span className="text-cyan-400"&gt;</span&gt;IT Services</span&gt;
-          </h1&gt;
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"&gt;</p&gt;
-            Complete technology infrastructure solutions for your business.
-          </p&gt;
-        </div&gt;
-      </div&gt;
-    </div&gt;
-  );
-};
-'use client'
-import React from 'react'
-import Navigation from '../components/Navigation'import Footer from '../components/Footer'
-import {  Server, Shield, Cloud, Code, CheckCircle, ArrowRight  } from 'lucide-react'{/* Services Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8"></section></section>
-        <div className="max-w-7xl mx-auto"></div></div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div></div>
-            {services.map((service, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300"></div></div>
-                <div className="flex items-center mb-4"></div></div>
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mr-4"></div></div>
-                    <service.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white"></h3></h3>{service.title}</h3>
-                </div>
-                <p className="text-gray-300 mb-6"></p></p>{service.description}</p>
-                <ul className="space-y-2"></ul>
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300"></li>
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8"></section></section>
-        <div className="max-w-4xl mx-auto text-center"></div></div>
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2></h2>
-            Need IT Support?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8"></p></p>
-            Our expert team is ready to help you with all your IT needs.
-          </p>
-          <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 flex items-center mx-auto"></button>
-            <ArrowRight className="w-5 h-5 mr-2" />
-            Get Started
-          </button>
-        </div>
-      </section>
-
-      <Footer />
-    </div>
-  )
-}
-
-export default ITServicesPage
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      
-      <main className="pt-20">
+    <>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Navigation />
+        
         {/* Hero Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
-              IT Services
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Comprehensive IT solutions to support your business growth and digital transformation.
-            </p>
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                IT <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Services</span>
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Comprehensive IT solutions to keep your business running smoothly and securely.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose Our IT Services?
+              </h2>
+              <p className="text-xl text-gray-300">
+                We provide reliable, secure, and scalable IT solutions tailored to your business needs.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <benefit.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2">{benefit.title}</h3>
+                  <p className="text-gray-300">{benefit.description}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
         {/* Services Grid */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {services.map((service, index) => (
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Our IT Services
+              </h2>
+              <p className="text-xl text-gray-300">
+                Comprehensive IT solutions designed to meet your business requirements.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {services.map((service) => (
                 <div
-                  key={index}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
+                  key={service.id}
+                  className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 group"
                 >
-                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4 group-hover:scale-110 transition-transform">
-                    <service.icon className="text-white" size={32} />
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mr-4">
+                      <service.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="text-xl font-bold text-white">{service.title}</h3>
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+                  
                   <p className="text-gray-300 mb-4">{service.description}</p>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-400">
-                        <CheckCircle className="text-green-400 mr-2 flex-shrink-0" size={16} />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <a
-                    href="/contact"
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 mt-4 group-hover:translate-x-1 transition-transform"
-                  >
+                  
+                  <div className="mb-4">
+                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
+                    <ul className="space-y-1">
+                      {service.features.map((feature, index) => (
+                        <li key={index} className="text-sm text-gray-300 flex items-center">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="text-lg font-bold text-cyan-400">{service.price}</div>
+                  </div>
+                  
+                  <button className="w-full cyber-button group-hover:bg-cyan-500 group-hover:text-white transition-all duration-300">
                     Learn More
-                    <ArrowRight className="ml-1" size={16} />
-                  </a>
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </button>
                 </div>
               ))}
             </div>
@@ -165,35 +178,31 @@ export default ITServicesPage
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your IT?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Optimize Your IT Infrastructure?
+            </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how our IT services can help optimize your business operations.
+              Let's discuss how our IT services can help streamline your operations and improve efficiency.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-              >
-                Get IT Consultation
-                <ArrowRight className="ml-2" size={20} />
-              </a>
-              <a
-                href="/services"
-                className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300"
-              >
-                View All Services
-              </a>
+              <button className="cyber-button">
+                Get Started
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </button>
+              <button className="cyber-button-secondary">
+                Schedule Consultation
+                <Calendar className="w-5 h-5 ml-2" />
+              </button>
             </div>
           </div>
         </section>
-      </main>
+      </div>
       
       <Footer />
-    </div>
+    </>
   );
 };
 
-export default ItServicesPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
+export default ITServicesPage;

@@ -37,11 +37,7 @@ export default async function handler(
   res.set_header ("Content - Type", "text / markdown")
   return res.status (200).send (`# Zion Partner SDK (REST)\n\n_base URL: /api\n\n_endpoints:\n- POST /talents\n- GET /jobs\n- GET /certifications\n- POST /verify - student\n- POST /redeem - grant\n\n_auth:\n- Provide X - API - KEY header or Authorization: Bearer <JWT> (use /api / partners / token).`)
 }
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse  } from "next"
-=======
-import type { NextApiRequest, NextApiResponse } from "next"
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const type = (req.query.type as string) || "rest"
   if (type === "graphql") {

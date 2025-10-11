@@ -20,16 +20,11 @@ jest.mock('@prisma/client', () => {
 })
 
 describe('/api/products', () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-f401
   let mockPrisma: any
 
   beforeEach(() => {
     mockPrisma = new PrismaClient()
     jest.clearAllMocks()
-<<<<<<< HEAD
   })
 
   afterEach(() => {
@@ -46,53 +41,6 @@ describe('/api/products', () => {
 
     const { req, res } = createMocks<NextApiRequest, NextApiResponse>({
       method: 'GET'
-=======
-  let mockPrisma: jest.Mocked<PrismaClient>
-
-  beforeEach(() => {
-    mockPrisma = new PrismaClient() as jest.Mocked<PrismaClient>
-    jest.clearAllMocks()
-  })
-
-  afterEach(() => {
-    jest.resetAllMocks()
-  })
-
-  it('should return products successfully', async () => {
-    const mockProducts = [
-      { id: 1, name: 'Product 1', price: 100 },
-      { id: 2, name: 'Product 2', price: 200 }
-    ]
-
-    mockPrisma.product.findMany.mockResolvedValue(mockProducts)
-
-    const { req, res } = createMocks<NextApiRequest, NextApiResponse>({
-      method: 'GET'
-    })
-
-    await productHandler(req, res)
-
-    expect(res._getStatusCode()).toBe(200)
-    expect(JSON.parse(res._getData())).toEqual({
-      success: true,
-      data: mockProducts
-    })
-  })
-
-  it('should handle errors gracefully', async () => {
-    mockPrisma.product.findMany.mockRejectedValue(new Error('Database error'))
-
-    const { req, res } = createMocks<NextApiRequest, NextApiResponse>({
-      method: 'GET'
-    })
-
-    await productHandler(req, res)
-
-    expect(res._getStatusCode()).toBe(500)
-    expect(JSON.parse(res._getData())).toEqual({
-      success: false,
-      error: 'Internal server error'
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
     })
 
     await productHandler(req, res)
@@ -106,7 +54,6 @@ describe('/api/products', () => {
 
     const { req, res } = createMocks<NextApiRequest, NextApiResponse>({
       method: 'GET'
-=======
   })
 
   afterEach(() => {
@@ -162,7 +109,6 @@ describe('/api/products', () => {
       expect(JSON.parse(res._getData())).toEqual({
         error: 'Internal server error'
       })
->>>>>>> cursor/fix-errors-and-merge-to-main-f401
     })
 
     await productHandler(req, res)

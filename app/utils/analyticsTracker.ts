@@ -122,7 +122,6 @@ return (
           </div>
         ))
       </section>
-<<<<<<< HEAD
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section></section>
@@ -131,8 +130,6 @@ return (
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2></h2>
               Ready to Get Started?
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
             </h2>
             <p>Contact our experts to discuss your analyticstracker needs and get a customized solution.;</p>
             </p>

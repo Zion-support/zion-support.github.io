@@ -4,101 +4,102 @@ import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
 
-// Function to fix merge conflicts in a file
-function fixMergeConflicts(filePath) {
+// Function to resolve merge conflicts by keeping HEAD version
+function resolveMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Check if file has merge conflicts
-    if (!content.includes('<<<<<<< HEAD') && !content.includes('=======') && !content.includes('>>>>>>>')) {
-      return false; // No conflicts to fix
+    // Check if file has merge conflict markers
+    if (!content.includes('<<<<<<< HEAD')) {
+      return false; // No conflicts to resolve
     }
     
-    console.log(`Fixing merge conflicts in: ${filePath}`);
+    console.log(`Resolving conflicts in: ${filePath}`);
     
-    // Split by merge conflict markers
+    // Split content by merge conflict markers
     const lines = content.split('\n');
-    const result = [];
+    const resolvedLines = [];
     let inConflict = false;
-    let conflictType = null;
-    let headContent = [];
-    let otherContent = [];
+    let keepHead = false;
     
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
       
       if (line.startsWith('<<<<<<< HEAD')) {
         inConflict = true;
-        conflictType = 'head';
+        keepHead = true;
         continue;
       } else if (line.startsWith('=======')) {
-        conflictType = 'other';
+        keepHead = false;
         continue;
       } else if (line.startsWith('>>>>>>>')) {
-        // End of conflict - choose the "other" version (usually the newer one)
-        result.push(...otherContent);
         inConflict = false;
-        conflictType = null;
-        headContent = [];
-        otherContent = [];
+        keepHead = false;
         continue;
       }
       
       if (inConflict) {
-        if (conflictType === 'head') {
-          headContent.push(line);
-        } else if (conflictType === 'other') {
-          otherContent.push(line);
+        if (keepHead) {
+          resolvedLines.push(line);
         }
+        // Skip lines from other branch
       } else {
-        result.push(line);
+        resolvedLines.push(line);
       }
     }
     
-    // Write the fixed content back
-    fs.writeFileSync(filePath, result.join('\n'));
+    const resolvedContent = resolvedLines.join('\n');
+    fs.writeFileSync(filePath, resolvedContent, 'utf8');
     return true;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error resolving conflicts in ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Function to recursively find and fix merge conflicts
-function findAndFixConflicts(dir) {
-  const files = fs.readdirSync(dir);
-  let fixedCount = 0;
-  
-  for (const file of files) {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat.isDirectory()) {
-      // Skip node_modules and other common directories
-      if (['node_modules', '.git', 'dist', 'build', '.next'].includes(file)) {
-        continue;
-      }
-      fixedCount += findAndFixConflicts(filePath);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
-      if (fixMergeConflicts(filePath)) {
-        fixedCount++;
-      }
-    }
+// Function to find all files with merge conflicts
+function findFilesWithConflicts() {
+  try {
+    const result = execSync('find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | grep -v node_modules | xargs grep -l "<<<<<<< HEAD"', { 
+      encoding: 'utf8',
+      stdio: 'pipe'
+    });
+    return result.trim().split('\n').filter(line => line.length > 0);
+  } catch (error) {
+    console.error('Error finding files with conflicts:', error.message);
+    return [];
   }
-  
-  return fixedCount;
 }
 
 // Main execution
 console.log('Starting merge conflict resolution...');
-const fixedCount = findAndFixConflicts('/workspace');
-console.log(`Fixed merge conflicts in ${fixedCount} files.`);
 
-// Also run git status to check for any remaining conflicts
+const filesWithConflicts = findFilesWithConflicts();
+console.log(`Found ${filesWithConflicts.length} files with merge conflicts`);
+
+let resolvedCount = 0;
+let errorCount = 0;
+
+for (const filePath of filesWithConflicts) {
+  if (resolveMergeConflicts(filePath)) {
+    resolvedCount++;
+  } else {
+    errorCount++;
+  }
+}
+
+console.log(`\nResolution complete:`);
+console.log(`- Files resolved: ${resolvedCount}`);
+console.log(`- Files with errors: ${errorCount}`);
+console.log(`- Total files processed: ${filesWithConflicts.length}`);
+
+// Verify no more conflicts
 try {
-  const gitStatus = execSync('git status --porcelain', { cwd: '/workspace', encoding: 'utf8' });
-  console.log('Git status after fixes:');
-  console.log(gitStatus);
+  const remainingConflicts = execSync('find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | grep -v node_modules | xargs grep -l "<<<<<<< HEAD" | wc -l', { 
+    encoding: 'utf8',
+    stdio: 'pipe'
+  });
+  console.log(`\nRemaining files with conflicts: ${remainingConflicts.trim()}`);
 } catch (error) {
-  console.log('Could not check git status:', error.message);
+  console.log('No remaining conflicts found!');
 }

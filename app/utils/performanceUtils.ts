@@ -245,13 +245,8 @@ export const lazyLoad = (callback: () => void): void => {,
   }
 
   public cleanup(): void {
-<<<<<<< HEAD
     this.observers.forEach(observer =&gt; observer.disconnect())
     this.observers = []
-=======
-    this.observers.forEach(observer => observer.disconnect())
-    this.observers = [];}
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
   }
 }
 

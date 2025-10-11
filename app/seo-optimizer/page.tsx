@@ -6,7 +6,6 @@ import { Brain, BarChart, Target, TrendingUp, FileText, Zap, Shield, CheckCircle
 const SeoOptimizerPage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -21,30 +20,6 @@ const SeoOptimizerPage: React.FC = () => {
         </div&gt;
               </div&gt;
     'Proven track record of success'
-=======
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics'],
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics'],
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'],
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
   ]
 
   const benefits = [

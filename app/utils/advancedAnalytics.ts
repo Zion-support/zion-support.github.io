@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client'
 import React from 'react';
 import { Helmet}  } from 'react-helmet-async';
@@ -8,8 +7,6 @@ const AdvancedAnalyticsPage: React.FC = () => {,
 import React from 'react'
 import {  Helmet  } from 'react-helmet-async'import {  CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe   } from 'lucide-react'
 const AdvancedAnalyticsPage: React.FC = () => {
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
     const features = [
     {
       icon: Brain,

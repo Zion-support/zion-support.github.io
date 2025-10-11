@@ -1,87 +1,51 @@
-},
-    {icon: Clock,
-      title: '24/7 Monitoring',
-      description: 'Continuous monitoring of IoT devices and systems with intelligent alerting.',
-                  ))}
-                </ul>
-</div>
-            ))}
+'use client';
+import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
 
-          </div>
-        </div>
-      </section>
-              <p className="text-xl text-gray-300"></p></p>Section description</p>
+const PagePage: React.FC = () => {
+  return (
+    <>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Navigation />
+        
+        {/* Hero Section */}
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Page
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Discover our comprehensive solutions designed to transform your business.
+              </p>
             </div>
           </div>
         </section>
-            </h2>
-            <p>Our IoT platform supports a wide range of industries and applications,</p>
-              from smart manufacturing to connected cities.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div></div></div>,
-            {useCases.map((useCase, index) =&gt; (} <div key={index}className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover: bg-white/10 transition-all duration-300"></div></div></div>,
-                <div className="text-4xl mb-4"></div></div>{useCase.icon</div&gt;}</div>
-                <h3 className="text-xl font-semibold text-white mb-3"></h3></h3>{useCase.title}</h3>
-                <p className="text-gray-300"></p></p>{useCase.description</p&gt;}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-        <div className="max-w-7xl mx-auto"></div></div>
-          <div className="text-center mb-16"></div></div>
-            <h2 className="text-4xl font-bold text-white mb-4"></h2></h2>IoT Use Cases
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p></p>
-              Our IoT platform supports a wide range of industries and applications, 
-              from smart manufacturing to connected cities.
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div></div>
-            {useCases.map((useCase, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300"></div></div>
-                <div className="text-4xl mb-4"></div></div>{useCase.icon}
-                <h3 className="text-xl font-semibold text-white mb-3"></h3></h3>{useCase.title}
-                <p className="text-gray-300"></p></p>{useCase.description}
-            ))}
-      {/* Benefits Section */}
-      <section className="py-20 px-4"></section></section>
-          </section>< className="$2 />
-            </div><div className="text-center mb-16"></div></div>
-              </div><h2 className="text-4xl font-bold text-white mb-4"></h2></h2>Section Title</h2>
-              <p className="text-xl text-gray-300"></p></p>Section description</p>
+
+        {/* Content Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Coming Soon
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                This page is under development. Please check back soon for updates.
+              </p>
+              <button className="cyber-button">
+                Learn More
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </button>
             </div>
           </div>
         </section>
-            </button>
-<<<<<<< HEAD
-            <button>Schedule Demo;</button>
-        <div className="max-w-7xl mx-auto" / /></div>
-          <div className="text-center mb-16" / /></div>
-            <h2></h2>
-              Why Choose Our IoT Platform?
-            </h2>
-            <p></p>
-              Experience the benefits of a comprehensive IoT platform designed for scale,
-              security, and performance.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" / /></div>
-            {benefits.map((benefit, index) =&gt; ()
-            ))}
-      {/* CTA Section */}
-          <p></p>
-            Start building your IoT platform today. Get started with a free consultation
-            and discover how we can help you succeed.
-          </p>
-            </button>
-            <button></button>
-              Schedule Demo
-            </button>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
-          </div>
-        </div>
-      </section>
-      <Footer / /></Footer>
-  )
-}
-export default PagePage</$1>
+      </div>
+      
+      <Footer />
+    </>
+  );
+};
+
+export default PagePage;

@@ -16,13 +16,8 @@ function handler() {
   if () return) {
   $2
 }
-<<<<<<< HEAD
 import {  readJsonFile   } from '../../../utils/api/storage'
 import {  requireSuperadminApi   } from '../../../utils/api/auth'
-=======
-import { readJsonFile } from '../../../utils/api/storage'
-import { requireSuperadminApi } from '../../../utils/api/auth'
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return
   const data = readJsonFile('audit-log.json', [] as unknown[])

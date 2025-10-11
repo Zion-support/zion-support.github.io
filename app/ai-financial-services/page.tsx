@@ -1,77 +1,51 @@
-        <meta name="description" content="Advanced AI-powered financial services including fraud detection, risk assessment, algorithmic trading, and financial forecasting solutions." />
-        <meta name="keywords" content="AI financial services, fintech AI, fraud detection, risk assessment, algorithmic trading, financial forecasting" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p></p>Transform your financial operations with cutting-edge AI solutions for fraud detection,</p>
-              risk assessment, algorithmic trading, and predictive analytics.
-            </p>
-          </div>
+'use client';
+import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
 
+const PagePage: React.FC = () => {
+  return (
+    <>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Navigation />
+        
+        {/* Hero Section */}
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Page
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Discover our comprehensive solutions designed to transform your business.
               </p>
-              <ul className="text-sm text-gray-400 space-y-2"></ul>
-                </ul><li>• Real-time transaction monitoring</li>
-                <li>• Pattern recognition</li>
-                <li>• Risk scoring</li>
-                <li>• Automated alerts</li>
-              </ul>
-            </div>
-
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"></div></div>
-              </p>
-              <ul className="text-sm text-gray-400 space-y-2"></ul>
-                </ul><li>• Credit scoring models</li>
-                <li>• Market risk analysis</li>
-                <li>• Portfolio optimization</li>
-                <li>• Regulatory compliance</li>
-              </ul>
-            </div>
-
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"></div></div>
-              </p>
-              <ul className="text-sm text-gray-400 space-y-2"></ul>
-                </ul><li>• Automated trading strategies</li>
-                <li>• Market sentiment analysis</li>
-                <li>• High-frequency trading</li>
-                <li>• Performance optimization</li>
-              </ul>
-            </div>
-
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"></div></div>
-              </p>
-              <ul className="text-sm text-gray-400 space-y-2"></ul>
-                </ul><li>• Revenue forecasting</li>
-                <li>• Market trend analysis</li>
-                <li>• Economic indicators</li>
-                <li>• Scenario modeling</li>
-              </ul>
-            </div>
-
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"></div></div>
-              </p>
-              <ul className="text-sm text-gray-400 space-y-2"></ul>
-                </ul><li>• Automated reporting</li>
-                <li>• Compliance monitoring</li>
-                <li>• Regulatory updates</li>
-                <li>• Audit preparation</li>
-              </ul>
-            </div>
-
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"></div></div>
-              </p>
-              <ul className="text-sm text-gray-400 space-y-2"></ul>
-                </ul><li>• Customer segmentation</li>
-                <li>• Churn prediction</li>
-                <li>• Product recommendations</li>
-                <li>• Lifetime value analysis</li>
-              </ul>
             </div>
           </div>
+        </section>
 
-          <div className="text-center"></div></div>
-            </button>
+        {/* Content Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Coming Soon
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                This page is under development. Please check back soon for updates.
+              </p>
+              <button className="cyber-button">
+                Learn More
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </button>
+            </div>
           </div>
-        </div>
+        </section>
       </div>
+      
+      <Footer />
     </>
+  );
+};
+
+export default PagePage;

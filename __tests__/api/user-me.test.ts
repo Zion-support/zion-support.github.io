@@ -10,12 +10,7 @@ interface MockApiResponse extends NextApiResponse {
 }
 
 function mockReq(method: string, body?: unknown): NextApiRequest {
-<<<<<<< HEAD
-<<<<<<< HEAD
   return { method, body, headers: {}, query: {}, cookies: {} } as NextApiRequest
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-f401
   return {
     method,
     body,
@@ -23,10 +18,6 @@ function mockReq(method: string, body?: unknown): NextApiRequest {
     query: {},
     cookies: {}
   } as NextApiRequest
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-f401
 }
 
 function mockRes(): MockApiResponse {
@@ -60,7 +51,6 @@ test('PUT updates profile', () => {
   handler(req, res)
   
   expect(res.json).toHaveBeenCalledWith(
-<<<<<<< HEAD
     expect.objectContaining({
       name: 'New Name'
     })
@@ -69,33 +59,11 @@ test('PUT updates profile', () => {
 
 test('DELETE soft deletes account', () => {
   const req = mockReq('DELETE')
-=======
-    expect.objectContaining({ name: 'New Name' })
-  )
-})
-
-test('DELETE soft deletes account', () => {
-  const req = mockReq('DELETE')
   const res = mockRes()
   
   handler(req, res)
   
-  expect(res.json).toHaveBeenCalledWith({ success: true })
-})
-
-test('unsupported method returns 405', () => {
-  const req = mockReq('POST')
->>>>>>> cursor/fix-errors-and-merge-to-main-f401
-  const res = mockRes()
-  
-  handler(req, res)
-  
-<<<<<<< HEAD
   expect(res.json).toHaveBeenCalledWith({
     success: true
   })
-=======
-  expect(res.status).toHaveBeenCalledWith(405)
-  expect(res.end).toHaveBeenCalled()
->>>>>>> cursor/fix-errors-and-merge-to-main-f401
 })

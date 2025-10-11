@@ -1,44 +1,51 @@
-<<<<<<< HEAD
-import React, { Suspense  } from 'react';
-import {  BrowserRouter, Routes, Route   } from 'react-router-dom';
-import {  HelmetProvider   } from 'react-helmet-async';
-import {  ErrorBoundary   } from 'react-error-boundary';
-=======
-import React from 'react'
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
+'use client';
+import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
 
-const App = () => {
+const AppPage: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <ErrorBoundary>
-      <HelmetProvider>
-        <BrowserRouter>
-          <div className="App"></div></div>
-            <PerformanceMonitor />
-            <AccessibilityEnhancer />
-            <Suspense fallback={<AppLoadingSpinner />}>
-              <Routes>
-                {/* Main Pages */}
-                <Route path="/" element={<HomePage /&gt;} />
-                <Route path="/about" element={<AboutPage /&gt;} />
-                <Route path="/accessibility" element={<AccessibilityPage /&gt;} />
-                <Route path="/5g-implementation" element={<FiveGImplementationPage /&gt;} />
-                
-                {/* Add more routes as needed */}
-              </Routes>
-            </Suspense>
+    <>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Navigation />
+        
+        {/* Hero Section */}
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                App
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Discover our comprehensive solutions designed to transform your business.
+              </p>
+            </div>
           </div>
-        </BrowserRouter>
-      </HelmetProvider>
-    </ErrorBoundary>
+        </section>
+
+        {/* Content Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Coming Soon
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                This page is under development. Please check back soon for updates.
+              </p>
+              <button className="cyber-button">
+                Learn More
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      
+      <Footer />
+    </>
   );
 };
-=======
-    <div>
-      <h1>App Component</h1>
-    </div>
-  )
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
 
-export default App
+export default AppPage;

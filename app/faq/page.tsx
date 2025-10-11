@@ -1,76 +1,51 @@
-  }
-  const faqs = [
-    {
-      question: "What services does Zion Tech Group offer?",
-      answer: "We offer comprehensive AI-powered solutions including enterprise AI, quantum computing, autonomous systems, digital transformation, cloud services, cybersecurity, and custom micro SaaS applications."
-    },
-    {
-      question: "How can AI solutions benefit my business?",
-      answer: "Our AI solutions can increase efficiency by up to 90%, reduce costs by 70%, and deliver ROI of 300% or more. We provide automation, data analytics, customer service enhancement, and process optimization."
-    },
-    {
-      question: "Do you offer custom development?",
-      answer: "Yes, we specialize in custom AI and IT solutions tailored to your specific business needs. Our team works closely with you to understand requirements and deliver bespoke solutions."
-    },
-    {
-      question: "What is your development process?",
-      answer: "We follow an agile development methodology with regular check-ins, iterative development, and continuous testing to ensure quality and meet your expectations."
-    },
-    {
-      question: "How long does a typical project take?",
-      answer: "Project timelines vary based on complexity. Simple solutions can be delivered in 2-4 weeks, while complex enterprise systems may take 3-6 months. We provide detailed timelines during consultation."
-    },
-    {
-      question: "Do you provide ongoing support?",
-      answer: "Yes, we offer comprehensive support and maintenance services including 24/7 monitoring, regular updates, security patches, and technical assistance."
-    },
-    {
-      question: "What technologies do you use?",
-      answer: "We use cutting-edge technologies including React, TypeScript, Python, TensorFlow, PyTorch, AWS, Azure, Docker, Kubernetes, and various AI/ML frameworks."
-    },
-    {
-      question: "How do I get started?",
-      answer: "Contact us through our consultation form or call +1-302-464-0950. We'll schedule a free consultation to discuss your needs and provide a customized proposal."
-    }
-  ]
-  return (
-        <title>FAQ - Zion Tech Group | Frequently Asked Questions</title>
-    </number><>
-      </React><Helmet>
-        </Helmet><title>FAQ - Zion Tech Group | Frequently Asked Questions</title>
-        <meta name="description" content="Find answers to frequently asked questions about our AI and IT services, pricing, implementation, and support." />
-        <meta name="keywords" content="FAQ, frequently asked questions, AI services, IT services, support, pricing" />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
-                    {openItems.includes(index) ? (
-                      <ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                    ) : (
-                      <ChevronDown className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                    </div>
-                      <p className="text-gray-300 leading-relaxed"></p></p>{faq.answer}
-                  )}
-              ))}
-            </div>
+'use client';
+import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
 
-            <div className="mt-16 text-center"></div></div>
-              <h2 className="text-3xl font-bold text-white mb-6"></h2></h2>
-                Still have questions?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8"></p></p>
-                Our team is here to help. Contact us for personalized assistance.
+const PagePage: React.FC = () => {
+  return (
+    <>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Navigation />
+        
+        {/* Hero Section */}
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Page
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Discover our comprehensive solutions designed to transform your business.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div></div>
-                <a
-                  href="/contact"
-                  className="bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-cyan-700 transition-colors"
-                ></a>
-                  Contact Us
-                </a>
-                <a
-                  href="/consultation"
-                  className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
-                ></a>
-                  Free Consultation
-                </a>
-              </div>
             </div>
           </div>
+        </section>
+
+        {/* Content Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Coming Soon
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                This page is under development. Please check back soon for updates.
+              </p>
+              <button className="cyber-button">
+                Learn More
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      
+      <Footer />
+    </>
+  );
+};
+
+export default PagePage;

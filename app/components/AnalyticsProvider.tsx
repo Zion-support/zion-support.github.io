@@ -7,22 +7,7 @@ interface AnalyticsContextType {
   trackPageView: (pageName: string, pagePath: string) =&gt; void;
 }
 'use client'
-<<<<<<< HEAD
 import React from 'react';
-=======
-import React, { createContext, useContext, useEffect, ReactNode } from 'react'
-interface AnalyticsContextType {
-    trackEvent: (eventName: string, parameters?: Record<string, any>) => void
-  trackPageView: (pageName: string, pagePath: string) => void
-  }
-
-const AnalyticsContext = createContext</string><AnalyticsContextType | undefined>(undefined)
-export const useAnalytics = () => {
-}
-
-    if (typeof window === 'undefined') return;
-
->>>>>>> cursor/fix-errors-and-merge-to-main-9eaa
     }
   }
 

@@ -1,205 +1,51 @@
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 1024) {
-        setIsOpen(false)}}
+'use client';
+import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
 
-    setAiServicesOpen(false);
-    setItServicesOpen(false);
-    setMicroSaasOpen(false);
-    setIsOpen(false)}// Service data;
-    const handleScroll = () => {
-    setIsScrolled(window.scrollY &gt; 50)
-  }
-    window.addEventListener('resize', handleResize)
-    window.addEventListener('scroll', handleScroll)
-    return () => {
-    window.removeEventListener('resize', handleResize)
-      window.removeEventListener('scroll', handleScroll)
-  }
-  }, [])
-  const toggleMenu = () => setIsOpen(!isOpen)
-  const toggleServices = () => setServicesOpen(!servicesOpen)
-  const toggleAiServices = () => setAiServicesOpen(!aiServicesOpen)
-  const toggleItServices = () => setItServicesOpen(!itServicesOpen)
-  const toggleMicroSaas = () => setMicroSaasOpen(!microSaasOpen)
-  const closeAllMenus = () => {
-    setServicesOpen(false)
-    setAiServicesOpen(false)
-    setItServicesOpen(false)
-    setMicroSaasOpen(false)
-    setIsOpen(false)
-  }
-
-  // Service data
-  const aiServices = [
-  const itServices = [
-    {name: 'Cloud Infrastructure', href: '/ai-cloud-infrastructure', icon: Cloud, description: 'Scalable cloud solutions' ,},
-    {name: 'API Management', href: '/ai-api-management', icon: Code, description: 'API development & management' ,},
-    {name: 'Cybersecurity', href: '/ai-cybersecurity-suite', icon: Shield, description: 'Comprehensive security' ,},
-    {name: 'Data Management', href: '/ai-data-analytics', icon: Database, description: 'Data processing & storage' ,},
-    {name: 'Mobile Development', href: '/mobile-development', icon: Smartphone, description: 'iOS & Android apps' ,},
-    {name: 'Web Development', href: '/web-development', icon: Globe, description: 'Modern web applications' ,}];
-  ]
-  const itServices = [
-    { name: 'Cloud Infrastructure', href: '/ai-cloud-infrastructure', icon: Cloud, description: 'Scalable cloud solutions' },
-    { name: 'API Management', href: '/ai-api-management', icon: Code, description: 'API development & management' },
-    { name: 'Cybersecurity', href: '/ai-cybersecurity-suite', icon: Shield, description: 'Comprehensive security' },
-    { name: 'Data Management', href: '/ai-data-analytics', icon: Database, description: 'Data processing & storage' },
-    { name: 'Mobile Development', href: '/mobile-development', icon: Smartphone, description: 'iOS & Android apps' },
-    { name: 'Web Development', href: '/web-development', icon: Globe, description: 'Modern web applications' }
-  ]
-  const microSaasServices = [
-            <Link to="/" className="flex items-center space-x-2"></Link>
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center"></div></div>
-                <Brain className="w-5 h-5 text-white" />
-          </div><div className="flex-shrink-0"></div></div>
-            </div><Link to="/" className="flex items-center space-x-2"></Link>
-              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/25"></div></div>
-                </div><Brain className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-xl font-bold text-white"></span></span>Zion Tech Group</span>
-            </Link>
-          </div>
-
-                <span>AI Services</span>
-                <ChevronDown className="{`w-4" h-4 transition-transform duration-300 ${aiServicesOpen ? 'rotate-180' : ''}`} />
-              </button>
-              {aiServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card"&gt;</div&gt;
-                        </div&gt;
-                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover: text-cyan-400 ml-auto" /&gt;,
-                      </Link&gt;
-                    ))}
-
-                </button>
-                
-                {servicesOpen && (
-
-            </div>
-
-                <span>IT Services</span>
-                <ChevronDown className="{`w-4" h-4 transition-transform duration-300 ${itServicesOpen ? 'rotate-180' : ''}`} />
-              </button>
-              {itServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card"&gt;</div&gt;
-                        </div&gt;
-                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover: text-cyan-400 ml-auto" /&gt;,
-                      </Link&gt;
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-
-                <span>Micro SAAS</span>
-                <ChevronDown className="{`w-4" h-4 transition-transform duration-300 ${microSaasOpen ? 'rotate-180' : ''}`} / /></ChevronDown>
-              </button>
-              {microSaasOpen && (
-                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card"&gt;</div&gt;
-                        </div&gt;
-                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover: text-cyan-400 ml-auto" /&gt;,
-                      </Link&gt;
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-
-                <span>Emerging Tech</span>
-                <ChevronDown className="{`w-4" h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} / /></ChevronDown>
-              </button>
-              {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card"&gt;</div&gt;
-                        </div&gt;
-                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover: text-cyan-400 ml-auto" /&gt;,
-                      </Link&gt;
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-
-              <span className="text-sm"></span></span>Email</span>
-            </a>
-          </div>
-
-          <div className="lg: hidden mt-4 pb-4 border-t border-cyan-500/20"></div></div>,</div>
-            <div className="pt-4 space-y-4"></div></div>
-              <Link href="/" className="block text-gray-300 hover: text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus,}></Link>
-          {/* Mobile Menu Button */}
-          <div className="lg:hidden"></div></div>
-            </div><div></div>
-              onClick={toggleMenu}
-              className="text-gray-300 hover:text-white p-2 rounded-md transition-colors"
-            >
-              {isOpen ? </button&gt;<X className="h-6 w-6" /&gt; : <Menu className="h-6 w-6" /&gt;}
-            </button>
-          </div>
-        </div>
-
-        {/* Mobile Navigation */}
-        {isOpen && (
-
-          <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20"></div></div>
-            </div><div className="pt-4 space-y-4"></div></div>
-              </div><Link href="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}></Link>
-
-                Home;
-              </Link>
-              
-                    <span>AI Services</span>
-                  </span>
-                  <ChevronDown className="{`w-4" h-4 transition-transform duration-300 ${aiServicesOpen ? 'rotate-180' : ''}`} />
-                </button>
-                {aiServicesOpen && (
-                      View All AI Services →
-                    </Link&gt;
-                  </div&gt;
-                )}
-              </div>
-
-                    <span>IT Services</span>
-                  </span>
-                  <ChevronDown className="{`w-4" h-4 transition-transform duration-300 ${itServicesOpen ? 'rotate-180' : ''}`} / /></ChevronDown>
-                </button>
-                {itServicesOpen && (
-                    ))}
-                  </div>
-                )}
-              </div>
-
-                    <span>Micro SAAS</span>
-                  </span>
-                  <ChevronDown className="{`w-4" h-4 transition-transform duration-300 ${microSaasOpen ? 'rotate-180' : ''}`} / /></ChevronDown>
-                </button>
-                {microSaasOpen && (
-                      View All Micro SAAS →
-                    </Link&gt;
-                  </div&gt;
-                )}
-              </div>
-
-              </Link>
-              <Link to="/contact" className="text-gray-300 hover: text-white block px-3 py-2 rounded-md text-base font-medium"></Link>,
-
-                  <span>kleber@ziontechgroup.com</span>
-                </a>
-                <div className="flex items-center space-x-2 text-gray-400"></div></div>
-                  </div><MapPin className="w-4 h-4" />
-                  <span className="text-sm"></span></span>364 E Main St STE 1008, Middletown DE 19709</span>
-
-                </a>
-                <div className="flex items-center text-gray-400 px-3 py-2 text-sm"></div></div>
-                  </div><MapPin className="w-4 h-4 mr-2" />
-                  364 E Main St STE 1008<br />
-                  Middletown DE 19709;
-                </div>
-              </div>
+const NavigationBackupPage: React.FC = () => {
+  return (
+    <>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Navigation />
+        
+        {/* Hero Section */}
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Navigation Backup
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Discover our comprehensive solutions designed to transform your business.
+              </p>
             </div>
           </div>
-        )}
+        </section>
+
+        {/* Content Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Coming Soon
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                This page is under development. Please check back soon for updates.
+              </p>
+              <button className="cyber-button">
+                Learn More
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </button>
+            </div>
+          </div>
+        </section>
       </div>
-    </nav>
-  )
-}
-export default Navigation
+      
+      <Footer />
+    </>
+  );
+};
+
+export default NavigationBackupPage;

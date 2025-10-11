@@ -7,7 +7,7 @@ import './app/styles/futuristic-enhanced.css'
 import Navigation from './app/components/Navigation'
 import Footer from './app/components/Footer'
 import HomePage from './app/page'
-import { PageLoader } from './app/components/LoadingStates'
+// import { PageLoader } from './app/components/LoadingStates'
 import SEOHead from './app/components/EnhancedSEOHead'
 import SkipLink from './app/components/SkipLink'
 import Breadcrumb from './app/components/Breadcrumb'
@@ -94,7 +94,7 @@ const App: React.FC = () => {
                       <Navigation />
                       <Breadcrumb />
                       <main id="main-content" className="flex-1" tabIndex={-1}>
-                        <Suspense fallback={<PageLoader />}>
+                        <Suspense fallback={<div className="flex items-center justify-center min-h-screen"><div className="text-white">Loading...</div></div>}>
                           <Routes>
                             <Route path="/" element={<HomePage />} />
                             <Route path="/about" element={<AboutPage />} />
