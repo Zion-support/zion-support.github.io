@@ -19,7 +19,23 @@ import {
   Users,
   MessageSquare,
   FileText,
-  Target
+  Target,
+  Cpu,
+  Lock,
+  Calendar,
+  CheckSquare,
+  DollarSign,
+  Heart,
+  Mic,
+  Package,
+  Monitor,
+  Wifi,
+  Workflow,
+  ShoppingCart,
+  Mail,
+  TrendingUp,
+  Code,
+  Server
 } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -28,7 +44,7 @@ const ServicesPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const services = const services = const services = [
+  const services = [
     // AI Services
     {
       icon: Brain,
@@ -38,7 +54,8 @@ const ServicesPage: React.FC = () => {
       features: ['Natural Language Processing', 'Multi-language Support', 'Sentiment Analysis', 'CRM Integration', 'Real-time Learning'],
       price: 'Starting at $299/month',
       marketPrice: '$500-2000/month',
-        benefits: ['Reduce support costs by 60%', '24/7 availability', 'Instant responses', 'Scalable solutions']
+      benefits: ['Reduce support costs by 60%', '24/7 availability', 'Instant responses', 'Scalable solutions'],
+      link: 'https://ziontechgroup.com/ai-chatbot-builder'
     },
     {
       icon: BarChart3,
@@ -48,7 +65,8 @@ const ServicesPage: React.FC = () => {
       features: ['Predictive Analytics', 'Real-time Dashboards', 'Automated Reporting', 'Anomaly Detection', 'Custom Data Models'],
       price: 'Starting at $399/month',
       marketPrice: '$800-3000/month',
-      benefits: ['Data-driven insights', 'Predictive forecasting', 'Automated reporting', 'ROI optimization']
+      benefits: ['Data-driven insights', 'Predictive forecasting', 'Automated reporting', 'ROI optimization'],
+      link: 'https://ziontechgroup.com/ai-analytics'
     },
     {
       icon: Zap,
@@ -58,7 +76,8 @@ const ServicesPage: React.FC = () => {
       features: ['Process Mining', 'Workflow Optimization', 'Task Automation', 'Exception Handling', 'Performance Monitoring'],
       price: 'Starting at $349/month',
       marketPrice: '$600-2500/month',
-      benefits: ['Process efficiency', 'Error reduction', 'Cost savings', 'Scalable automation']
+      benefits: ['Process efficiency', 'Error reduction', 'Cost savings', 'Scalable automation'],
+      link: 'https://ziontechgroup.com/ai-automation'
     },
     {
       icon: Eye,
@@ -68,7 +87,8 @@ const ServicesPage: React.FC = () => {
       features: ['Object Detection', 'Quality Control Automation', 'Facial Recognition', 'Video Analytics', 'Real-time Processing'],
       price: 'Starting at $599/month',
       marketPrice: '$1000-5000/month',
-      benefits: ['Automated quality control', 'Enhanced security', 'Real-time monitoring', 'Cost reduction']
+      benefits: ['Automated quality control', 'Enhanced security', 'Real-time monitoring', 'Cost reduction'],
+      link: 'https://ziontechgroup.com/ai-computer-vision'
     },
     {
       icon: Shield,
@@ -78,7 +98,8 @@ const ServicesPage: React.FC = () => {
       features: ['Real-time Monitoring', 'Behavioral Analysis', 'Risk Scoring', 'Anomaly Detection', 'Automated Alerts'],
       price: 'Starting at $799/month',
       marketPrice: '$1500-5000/month',
-      benefits: ['Reduce fraud losses by 85%', 'Real-time protection', 'False positive reduction', 'Compliance ready']
+      benefits: ['Reduce fraud losses by 85%', 'Real-time protection', 'False positive reduction', 'Compliance ready'],
+      link: 'https://ziontechgroup.com/ai-fraud-detection'
     },
     {
       icon: FileText,
@@ -88,7 +109,8 @@ const ServicesPage: React.FC = () => {
       features: ['Blog Post Generation', 'Social Media Content', 'Email Campaigns', 'SEO Optimization', 'Brand Voice Customization'],
       price: 'Starting at $199/month',
       marketPrice: '$300-1500/month',
-      benefits: ['Save 80% content creation time', 'Consistent brand voice', 'SEO optimization', 'Multi-platform publishing']
+      benefits: ['Save 80% content creation time', 'Consistent brand voice', 'SEO optimization', 'Multi-platform publishing'],
+      link: 'https://ziontechgroup.com/ai-content-generation'
     },
     {
       icon: Brain,
@@ -98,7 +120,8 @@ const ServicesPage: React.FC = () => {
       features: ['Quantum Optimization', 'Cryptographic Security', 'Complex Simulations', 'Machine Learning Acceleration', 'Quantum Algorithms'],
       price: 'Starting at $2,999/month',
       marketPrice: '$5000-20000/month',
-      benefits: ['Exponential processing power', 'Unbreakable encryption', 'Revolutionary problem solving', 'Future-proof technology']
+      benefits: ['Exponential processing power', 'Unbreakable encryption', 'Revolutionary problem solving', 'Future-proof technology'],
+      link: 'https://ziontechgroup.com/ai-quantum-computing'
     },
     {
       icon: Eye,
@@ -108,7 +131,8 @@ const ServicesPage: React.FC = () => {
       features: ['3D Holographic Displays', 'Gesture Recognition', 'Spatial Computing', 'AR/VR Integration', 'Real-time Rendering'],
       price: 'Starting at $1,499/month',
       marketPrice: '$2500-10000/month',
-      benefits: ['Immersive user experience', 'Enhanced productivity', 'Cutting-edge technology', 'Competitive advantage']
+      benefits: ['Immersive user experience', 'Enhanced productivity', 'Cutting-edge technology', 'Competitive advantage'],
+      link: 'https://ziontechgroup.com/ai-holographic-workspace'
     },
     {
       icon: Cpu,
@@ -118,7 +142,8 @@ const ServicesPage: React.FC = () => {
       features: ['Edge AI Processing', 'Real-time Analytics', 'Low Latency Response', 'Offline Capability', 'Distributed Learning'],
       price: 'Starting at $899/month',
       marketPrice: '$1500-6000/month',
-      benefits: ['Ultra-low latency', 'Reduced bandwidth costs', 'Enhanced privacy', 'Real-time processing']
+      benefits: ['Ultra-low latency', 'Reduced bandwidth costs', 'Enhanced privacy', 'Real-time processing'],
+      link: 'https://ziontechgroup.com/ai-edge-computing'
     },
     {
       icon: Shield,
@@ -128,117 +153,8 @@ const ServicesPage: React.FC = () => {
       features: ['Quantum Key Distribution', 'Post-Quantum Cryptography', 'Quantum Threat Detection', 'Advanced Encryption', 'Future-Proof Security'],
       price: 'Starting at $1,299/month',
       marketPrice: '$2000-8000/month',
-      benefits: ['Quantum-resistant security', 'Future-proof protection', 'Advanced threat detection', 'Military-grade encryption']
-    },
-    {
-      icon: Database,
-      title: 'AI Neural Database',
-      description: 'Revolutionary database system that learns and optimizes itself using neural networks.',
-      category: 'ai',
-      features: ['Self-Optimizing Queries', 'Predictive Indexing', 'Automatic Scaling', 'Neural Query Optimization', 'Intelligent Caching'],
-      price: 'Starting at $799/month',
-      marketPrice: '$1200-5000/month',
-      benefits: ['Self-optimizing performance', 'Reduced maintenance', 'Intelligent scaling', 'Predictive optimization']
-    },
-    {
-      icon: Users,
-      title: 'AI Customer Service',
-      description: 'Intelligent customer service solutions with automated ticket routing and sentiment analysis.',
-      category: 'ai',
-      features: ['Automated Ticket Routing', 'Sentiment Analysis', 'Multi-channel Support', 'Live Agent Handoff', 'Performance Analytics'],
-      price: 'Starting at $249/month',
-      marketPrice: '$400-1800/month',
-      benefits: ['Improved response times', 'Better customer satisfaction', 'Reduced agent workload', '24/7 availability']
-    },
-    {
-      icon: DollarSign,
-      title: 'AI Financial Analysis',
-      description: 'Advanced financial modeling and risk assessment using machine learning algorithms.',
-      category: 'ai',
-      features: ['Risk Assessment', 'Financial Modeling', 'Market Analysis', 'Credit Scoring', 'Fraud Prevention'],
-      price: 'Starting at $699/month',
-      marketPrice: '$1200-4000/month',
-      benefits: ['Improved risk management', 'Better investment decisions', 'Reduced financial losses', 'Compliance automation']
-    },
-    {
-      icon: Heart,
-      title: 'AI Healthcare Diagnostics',
-      description: 'Medical image analysis and diagnostic assistance using advanced computer vision and machine learning.',
-      category: 'ai',
-      features: ['Medical Image Analysis', 'Diagnostic Assistance', 'Patient Monitoring', 'Drug Discovery', 'Treatment Optimization'],
-      price: 'Starting at $999/month',
-      marketPrice: '$2000-8000/month',
-      benefits: ['Improved diagnostic accuracy', 'Faster diagnosis', 'Reduced medical errors', 'Cost-effective healthcare']
-    },
-    {
-      icon: Target,
-      title: 'AI Marketing Automation',
-      description: 'Intelligent marketing campaigns with personalized content and automated customer journey optimization.',
-      category: 'ai',
-      features: ['Personalized Campaigns', 'Customer Segmentation', 'A/B Testing', 'Lead Scoring', 'ROI Optimization'],
-      price: 'Starting at $399/month',
-      marketPrice: '$600-2500/month',
-      benefits: ['Higher conversion rates', 'Personalized experiences', 'Automated optimization', 'Better ROI']
-    },
-    {
-      icon: Settings,
-      title: 'AI Predictive Maintenance',
-      description: 'Predictive maintenance solutions for industrial equipment using IoT sensors and machine learning.',
-      category: 'ai',
-      features: ['Equipment Monitoring', 'Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization', 'Performance Analytics'],
-      price: 'Starting at $599/month',
-      marketPrice: '$1000-4000/month',
-      benefits: ['Reduced downtime', 'Lower maintenance costs', 'Extended equipment life', 'Improved efficiency']
-    },
-    {
-      icon: Globe,
-      title: 'AI Language Translation',
-      description: 'Real-time language translation and localization services powered by advanced neural networks.',
-      category: 'ai',
-      features: ['Real-time Translation', 'Multi-language Support', 'Context Understanding', 'Voice Translation', 'Document Translation'],
-      price: 'Starting at $149/month',
-      marketPrice: '$250-1000/month',
-      benefits: ['Global communication', 'Reduced language barriers', 'Faster localization', 'Cost-effective translation']
-    },
-    {
-      icon: Mic,
-      title: 'AI Voice Recognition',
-      description: 'Advanced speech-to-text and voice command solutions for various business applications.',
-      category: 'ai',
-      features: ['Speech-to-Text', 'Voice Commands', 'Speaker Identification', 'Noise Cancellation', 'Multi-language Support'],
-      price: 'Starting at $299/month',
-      marketPrice: '$500-2000/month',
-      benefits: ['Hands-free operation', 'Improved accessibility', 'Faster data entry', 'Enhanced user experience']
-    },
-    {
-      icon: Database,
-      title: 'AI Data Processing',
-      description: 'Intelligent data cleaning, validation, and processing using machine learning algorithms.',
-      category: 'ai',
-      features: ['Data Cleaning', 'Validation Rules', 'Duplicate Detection', 'Data Enrichment', 'Quality Scoring'],
-      price: 'Starting at $199/month',
-      marketPrice: '$350-1500/month',
-      benefits: ['Improved data quality', 'Reduced manual work', 'Better insights', 'Cost savings']
-    },
-    {
-      icon: Lock,
-      title: 'AI Cybersecurity',
-      description: 'Advanced threat detection and security monitoring using artificial intelligence and machine learning.',
-      category: 'ai',
-      features: ['Threat Detection', 'Behavioral Analysis', 'Incident Response', 'Vulnerability Scanning', 'Security Analytics'],
-      price: 'Starting at $799/month',
-      marketPrice: '$1500-5000/month',
-      benefits: ['Enhanced security', 'Faster threat detection', 'Reduced false positives', '24/7 monitoring']
-    },
-    {
-      icon: Calendar,
-      title: 'AI Scheduling Assistant',
-      description: 'Intelligent scheduling and calendar management with automated meeting optimization.',
-      category: 'ai',
-      features: ['Smart Scheduling', 'Meeting Optimization', 'Conflict Resolution', 'Time Zone Management', 'Resource Allocation'],
-      price: 'Starting at $99/month',
-      marketPrice: '$150-600/month',
-      benefits: ['Improved productivity', 'Reduced scheduling conflicts', 'Time optimization', 'Better resource utilization']
+      benefits: ['Quantum-resistant security', 'Future-proof protection', 'Advanced threat detection', 'Military-grade encryption'],
+      link: 'https://ziontechgroup.com/ai-quantum-security'
     },
     
     // IT Services
@@ -250,7 +166,8 @@ const ServicesPage: React.FC = () => {
       features: ['Cloud Architecture Design', 'Multi-cloud Strategies', 'Cost Optimization', 'Disaster Recovery', 'Auto-scaling', 'Security Compliance'],
       price: 'Starting at $2,500/month',
       marketPrice: '$4000-15000/month',
-      benefits: ['99.9% uptime guarantee', 'Cost reduction up to 40%', 'Scalable infrastructure', 'Expert migration support']
+      benefits: ['99.9% uptime guarantee', 'Cost reduction up to 40%', 'Scalable infrastructure', 'Expert migration support'],
+      link: 'https://ziontechgroup.com/cloud-infrastructure'
     },
     {
       icon: Shield,
@@ -260,7 +177,8 @@ const ServicesPage: React.FC = () => {
       features: ['Threat Detection & Response', 'Vulnerability Assessments', 'Penetration Testing', 'Security Monitoring', 'Compliance Management', 'Employee Training'],
       price: 'Starting at $1,800/month',
       marketPrice: '$3000-12000/month',
-      benefits: ['24/7 security monitoring', 'Reduced security incidents', 'Compliance assurance', 'Expert security team']
+      benefits: ['24/7 security monitoring', 'Reduced security incidents', 'Compliance assurance', 'Expert security team'],
+      link: 'https://ziontechgroup.com/cybersecurity-solutions'
     },
     {
       icon: Database,
@@ -270,7 +188,8 @@ const ServicesPage: React.FC = () => {
       features: ['Database Design & Optimization', 'Performance Tuning', 'Backup & Recovery', 'Data Migration', 'Security Hardening', 'Monitoring & Maintenance'],
       price: 'Starting at $1,200/month',
       marketPrice: '$2000-8000/month',
-      benefits: ['Improved performance', 'Data security', 'Automated backups', 'Expert DBA support']
+      benefits: ['Improved performance', 'Data security', 'Automated backups', 'Expert DBA support'],
+      link: 'https://ziontechgroup.com/database-management'
     },
     {
       icon: Settings,
@@ -280,7 +199,8 @@ const ServicesPage: React.FC = () => {
       features: ['CI/CD Pipeline Setup', 'Infrastructure as Code', 'Container Orchestration', 'Monitoring & Logging', 'Automated Testing', 'Deployment Automation'],
       price: 'Starting at $2,200/month',
       marketPrice: '$3500-10000/month',
-      benefits: ['Faster deployments', 'Reduced downtime', 'Improved code quality', 'Automated workflows']
+      benefits: ['Faster deployments', 'Reduced downtime', 'Improved code quality', 'Automated workflows'],
+      link: 'https://ziontechgroup.com/devops-cicd'
     },
     {
       icon: Users,
@@ -290,7 +210,8 @@ const ServicesPage: React.FC = () => {
       features: ['IT Strategy Development', 'Technology Assessment', 'Digital Transformation Planning', 'Vendor Evaluation', 'Process Optimization', 'Change Management'],
       price: 'Starting at $200/hour',
       marketPrice: '$300-800/hour',
-      benefits: ['Strategic guidance', 'Cost optimization', 'Technology alignment', 'Competitive advantage']
+      benefits: ['Strategic guidance', 'Cost optimization', 'Technology alignment', 'Competitive advantage'],
+      link: 'https://ziontechgroup.com/it-consulting'
     },
     {
       icon: Code,
@@ -300,7 +221,8 @@ const ServicesPage: React.FC = () => {
       features: ['Custom Application Development', 'API Development', 'Integration Services', 'Performance Optimization', 'Security Implementation', 'Quality Assurance'],
       price: 'Starting at $150/hour',
       marketPrice: '$200-500/hour',
-      benefits: ['Tailored solutions', 'Modern technology stack', 'Scalable architecture', 'Ongoing support']
+      benefits: ['Tailored solutions', 'Modern technology stack', 'Scalable architecture', 'Ongoing support'],
+      link: 'https://ziontechgroup.com/custom-software-development'
     },
     {
       icon: Smartphone,
@@ -310,7 +232,8 @@ const ServicesPage: React.FC = () => {
       features: ['iOS & Android Development', 'Cross-platform Solutions', 'App Store Optimization', 'Push Notifications', 'Offline Functionality', 'Performance Tuning'],
       price: 'Starting at $8,000/project',
       marketPrice: '$15000-50000/project',
-      benefits: ['Native performance', 'Cross-platform compatibility', 'App store success', 'User engagement']
+      benefits: ['Native performance', 'Cross-platform compatibility', 'App store success', 'User engagement'],
+      link: 'https://ziontechgroup.com/mobile-app-development'
     },
     {
       icon: Globe,
@@ -320,7 +243,8 @@ const ServicesPage: React.FC = () => {
       features: ['React/Next.js Development', 'Responsive Design', 'SEO Optimization', 'Performance Tuning', 'Security Implementation', 'Content Management'],
       price: 'Starting at $5,000/project',
       marketPrice: '$10000-30000/project',
-      benefits: ['Modern technology stack', 'SEO optimized', 'Mobile responsive', 'Fast loading times']
+      benefits: ['Modern technology stack', 'SEO optimized', 'Mobile responsive', 'Fast loading times'],
+      link: 'https://ziontechgroup.com/web-development'
     },
     {
       icon: Wifi,
@@ -330,7 +254,8 @@ const ServicesPage: React.FC = () => {
       features: ['Network Design & Implementation', 'Wireless Solutions', 'Security Configuration', 'Performance Monitoring', 'Disaster Recovery', '24/7 Support'],
       price: 'Starting at $1,500/month',
       marketPrice: '$2500-8000/month',
-      benefits: ['Reliable connectivity', 'Enhanced security', 'Scalable infrastructure', 'Expert support']
+      benefits: ['Reliable connectivity', 'Enhanced security', 'Scalable infrastructure', 'Expert support'],
+      link: 'https://ziontechgroup.com/network-infrastructure'
     },
     {
       icon: Monitor,
@@ -340,150 +265,11 @@ const ServicesPage: React.FC = () => {
       features: ['24/7 Helpdesk Support', 'Remote Assistance', 'Hardware Maintenance', 'Software Installation', 'User Training', 'Incident Management'],
       price: 'Starting at $99/user/month',
       marketPrice: '$150-300/user/month',
-      benefits: ['Reduced downtime', 'Expert support', 'Proactive maintenance', 'User satisfaction']
-    },
-    {
-      icon: Package,
-      title: 'IT Asset Management',
-      description: 'Complete lifecycle management of IT assets including procurement, deployment, and disposal.',
-      category: 'it',
-      features: ['Asset Inventory', 'Lifecycle Management', 'Procurement Services', 'Deployment Planning', 'Disposal Services', 'Cost Optimization'],
-      price: 'Starting at $299/month',
-      marketPrice: '$500-1500/month',
-      benefits: ['Cost optimization', 'Asset visibility', 'Compliance management', 'Reduced waste']
-    },
-    {
-      icon: BarChart3,
-      title: 'Business Intelligence & Analytics',
-      description: 'Data visualization and business intelligence solutions to transform data into actionable insights.',
-      category: 'it',
-      features: ['Data Visualization', 'Dashboard Creation', 'Report Automation', 'Data Integration', 'Performance Metrics', 'Custom Analytics'],
-      price: 'Starting at $799/month',
-      marketPrice: '$1200-4000/month',
-      benefits: ['Data-driven decisions', 'Real-time insights', 'Automated reporting', 'Better performance']
-    },
-    {
-      icon: Lock,
-      title: 'Data Backup & Recovery',
-      description: 'Comprehensive data backup and disaster recovery solutions to protect critical business data.',
-      category: 'it',
-      features: ['Automated Backups', 'Disaster Recovery Planning', 'Data Encryption', 'Offsite Storage', 'Recovery Testing', 'Compliance Support'],
-      price: 'Starting at $199/month',
-      marketPrice: '$350-1200/month',
-      benefits: ['Data protection', 'Business continuity', 'Compliance assurance', 'Peace of mind']
-    },
-    {
-      icon: Settings,
-      title: 'System Administration',
-      description: 'Professional system administration services for servers, networks, and IT infrastructure.',
-      category: 'it',
-      features: ['Server Management', 'User Account Management', 'Security Updates', 'Performance Monitoring', 'Troubleshooting', 'Documentation'],
-      price: 'Starting at $1,000/month',
-      marketPrice: '$1500-5000/month',
-      benefits: ['System reliability', 'Security maintenance', 'Performance optimization', 'Expert administration']
-    },
-    {
-      icon: Zap,
-      title: 'Performance Optimization',
-      description: 'Comprehensive performance optimization services for applications, databases, and infrastructure.',
-      category: 'it',
-      features: ['Application Optimization', 'Database Tuning', 'Infrastructure Scaling', 'Load Testing', 'Performance Monitoring', 'Capacity Planning'],
-      price: 'Starting at $1,200/month',
-      marketPrice: '$2000-6000/month',
-      benefits: ['Improved performance', 'Better user experience', 'Cost optimization', 'Scalable solutions']
-    },
-    {
-      icon: Cpu,
-      title: 'Quantum Computing Infrastructure',
-      description: 'Revolutionary quantum computing infrastructure setup and management for advanced computational needs.',
-      category: 'it',
-      features: ['Quantum Hardware Setup', 'Quantum Software Integration', 'Quantum Algorithm Development', 'Quantum Security Implementation', 'Quantum Performance Optimization'],
-      price: 'Starting at $5,000/month',
-      marketPrice: '$10000-50000/month',
-      benefits: ['Exponential processing power', 'Revolutionary problem solving', 'Future-proof technology', 'Competitive advantage']
-    },
-    {
-      icon: Eye,
-      title: 'Holographic Technology Solutions',
-      description: 'Advanced holographic display and interaction systems for immersive business applications.',
-      category: 'it',
-      features: ['Holographic Display Setup', '3D Content Creation', 'Gesture Recognition Systems', 'Spatial Computing Integration', 'AR/VR Implementation'],
-      price: 'Starting at $3,500/month',
-      marketPrice: '$6000-25000/month',
-      benefits: ['Immersive user experience', 'Enhanced productivity', 'Cutting-edge technology', 'Competitive differentiation']
-    },
-    {
-      icon: Brain,
-      title: 'AI Infrastructure & MLOps',
-      description: 'Complete AI infrastructure setup with machine learning operations and model deployment.',
-      category: 'it',
-      features: ['AI Model Deployment', 'MLOps Pipeline Setup', 'GPU Infrastructure', 'Model Monitoring', 'Auto-scaling AI Services'],
-      price: 'Starting at $2,800/month',
-      marketPrice: '$4500-15000/month',
-      benefits: ['Scalable AI infrastructure', 'Automated ML operations', 'High-performance computing', 'Cost-effective AI deployment']
-    },
-    {
-      icon: Shield,
-      title: 'Zero-Trust Security Architecture',
-      description: 'Comprehensive zero-trust security implementation with advanced threat protection and monitoring.',
-      category: 'it',
-      features: ['Zero-Trust Implementation', 'Identity & Access Management', 'Micro-segmentation', 'Continuous Monitoring', 'Threat Intelligence'],
-      price: 'Starting at $2,200/month',
-      marketPrice: '$3500-12000/month',
-      benefits: ['Enhanced security posture', 'Reduced attack surface', 'Continuous monitoring', 'Compliance assurance']
-    },
-    {
-      icon: Database,
-      title: 'Blockchain & Web3 Infrastructure',
-      description: 'Complete blockchain infrastructure setup with smart contracts and decentralized applications.',
-      category: 'it',
-      features: ['Blockchain Network Setup', 'Smart Contract Development', 'DeFi Integration', 'NFT Platform Development', 'Web3 Security'],
-      price: 'Starting at $3,200/month',
-      marketPrice: '$5000-20000/month',
-      benefits: ['Decentralized solutions', 'Enhanced security', 'Transparent operations', 'Future-proof technology']
-    },
-    {
-      icon: Globe,
-      title: 'Edge Computing Solutions',
-      description: 'Distributed edge computing infrastructure for low-latency applications and IoT integration.',
-      category: 'it',
-      features: ['Edge Server Deployment', 'IoT Integration', 'Real-time Processing', 'Distributed Architecture', 'Edge Security'],
-      price: 'Starting at $1,800/month',
-      marketPrice: '$3000-10000/month',
-      benefits: ['Ultra-low latency', 'Reduced bandwidth costs', 'Enhanced privacy', 'Real-time processing']
-    },
-    {
-      icon: Zap,
-      title: '5G Network Implementation',
-      description: 'Complete 5G network infrastructure setup and optimization for high-speed connectivity.',
-      category: 'it',
-      features: ['5G Network Design', 'Infrastructure Deployment', 'Performance Optimization', 'Security Implementation', 'IoT Integration'],
-      price: 'Starting at $4,500/month',
-      marketPrice: '$8000-30000/month',
-      benefits: ['Ultra-fast connectivity', 'Low latency', 'Massive IoT support', 'Enhanced mobile experience']
-    },
-    {
-      icon: Monitor,
-      title: 'Advanced Monitoring & Observability',
-      description: 'Comprehensive monitoring and observability platform with AI-powered insights and automation.',
-      category: 'it',
-      features: ['Full-Stack Monitoring', 'AI-Powered Analytics', 'Automated Alerting', 'Performance Optimization', 'Predictive Maintenance'],
-      price: 'Starting at $1,500/month',
-      marketPrice: '$2500-8000/month',
-      benefits: ['Proactive issue detection', 'Improved uptime', 'Better performance', 'Reduced downtime']
-    },
-    {
-      icon: Settings,
-      title: 'Hyperautomation Solutions',
-      description: 'End-to-end hyperautomation implementation with AI, RPA, and process intelligence.',
-      category: 'it',
-      features: ['RPA Implementation', 'Process Mining', 'AI Integration', 'Workflow Automation', 'Intelligent Document Processing'],
-      price: 'Starting at $2,500/month',
-      marketPrice: '$4000-15000/month',
-      benefits: ['Complete process automation', 'Reduced manual work', 'Improved efficiency', 'Cost savings']
+      benefits: ['Reduced downtime', 'Expert support', 'Proactive maintenance', 'User satisfaction'],
+      link: 'https://ziontechgroup.com/it-support-helpdesk'
     },
     
-    // Micro SaaS
+    // Micro SaaS Services
     {
       icon: BarChart3,
       title: 'Zion Analytics Pro',
@@ -492,7 +278,8 @@ const ServicesPage: React.FC = () => {
       features: ['Real-time Data Visualization', 'AI-powered Predictive Analytics', 'Custom Dashboard Builder', 'Advanced Data Connectors', 'Automated Report Generation', 'Multi-tenant Architecture'],
       price: 'Starting at $89/month',
       marketPrice: '$150-500/month',
-      benefits: ['Data-driven decision making', 'Real-time insights', 'Custom dashboards', 'Automated reporting']
+      benefits: ['Data-driven decision making', 'Real-time insights', 'Custom dashboards', 'Automated reporting'],
+      link: 'https://ziontechgroup.com/zion-analytics-pro'
     },
     {
       icon: MessageSquare,
@@ -502,7 +289,8 @@ const ServicesPage: React.FC = () => {
       features: ['GPT-4 Powered AI', 'Multi-channel Support', 'Advanced Sentiment Analysis', 'Automated Ticket Routing', 'Live Agent Handoff', 'Multi-language Support'],
       price: 'Starting at $149/month',
       marketPrice: '$300-800/month',
-      benefits: ['24/7 customer support', 'Reduced response time', 'Improved customer satisfaction', 'Lead generation']
+      benefits: ['24/7 customer support', 'Reduced response time', 'Improved customer satisfaction', 'Lead generation'],
+      link: 'https://ziontechgroup.com/zion-chat-ai'
     },
     {
       icon: FileText,
@@ -512,7 +300,8 @@ const ServicesPage: React.FC = () => {
       features: ['AI-powered Invoice Generation', 'Automated Recurring Billing', 'Multi-currency Support', 'Payment Tracking', 'Tax Calculation', 'Client Portal'],
       price: 'Starting at $49/month',
       marketPrice: '$100-300/month',
-      benefits: ['Save 90% invoice creation time', 'Reduce payment delays', 'Automated follow-ups', 'Professional invoices']
+      benefits: ['Save 90% invoice creation time', 'Reduce payment delays', 'Automated follow-ups', 'Professional invoices'],
+      link: 'https://ziontechgroup.com/zion-invoice-genius'
     },
     {
       icon: Target,
@@ -522,7 +311,8 @@ const ServicesPage: React.FC = () => {
       features: ['AI-powered Lead Scoring', 'Multi-channel Lead Capture', 'Automated Lead Nurturing', 'CRM Integration', 'Advanced Analytics', 'A/B Testing'],
       price: 'Starting at $99/month',
       marketPrice: '$200-600/month',
-      benefits: ['Increase qualified leads by 300%', 'Automated lead nurturing', 'Better conversion rates', 'ROI optimization']
+      benefits: ['Increase qualified leads by 300%', 'Automated lead nurturing', 'Better conversion rates', 'ROI optimization'],
+      link: 'https://ziontechgroup.com/zion-lead-magnet'
     },
     {
       icon: Shield,
@@ -532,7 +322,8 @@ const ServicesPage: React.FC = () => {
       features: ['Real-time Threat Monitoring', 'Vulnerability Scanning', 'Incident Response', 'Security Analytics', 'Compliance Reporting', 'Employee Training'],
       price: 'Starting at $199/month',
       marketPrice: '$400-1200/month',
-      benefits: ['Enhanced security posture', 'Reduced risk exposure', 'Compliance assurance', 'Peace of mind']
+      benefits: ['Enhanced security posture', 'Reduced risk exposure', 'Compliance assurance', 'Peace of mind'],
+      link: 'https://ziontechgroup.com/zion-security-shield'
     },
     {
       icon: Cloud,
@@ -542,7 +333,8 @@ const ServicesPage: React.FC = () => {
       features: ['Automated Backups', 'Cross-platform Sync', 'Version Control', 'Disaster Recovery', 'Data Encryption', 'Compliance Support'],
       price: 'Starting at $79/month',
       marketPrice: '$150-400/month',
-      benefits: ['Data protection', 'Business continuity', 'Cost-effective storage', 'Easy recovery']
+      benefits: ['Data protection', 'Business continuity', 'Cost-effective storage', 'Easy recovery'],
+      link: 'https://ziontechgroup.com/zion-cloud-vault'
     },
     {
       icon: FileText,
@@ -552,7 +344,8 @@ const ServicesPage: React.FC = () => {
       features: ['AI Content Generation', 'SEO Optimization', 'Multi-platform Publishing', 'Content Calendar', 'Brand Voice Customization', 'Performance Analytics'],
       price: 'Starting at $129/month',
       marketPrice: '$250-600/month',
-      benefits: ['Save 80% content creation time', 'Consistent brand voice', 'SEO optimization', 'Multi-platform publishing']
+      benefits: ['Save 80% content creation time', 'Consistent brand voice', 'SEO optimization', 'Multi-platform publishing'],
+      link: 'https://ziontechgroup.com/zion-content-studio'
     },
     {
       icon: Users,
@@ -562,7 +355,8 @@ const ServicesPage: React.FC = () => {
       features: ['AI-powered Lead Scoring', 'Automated Follow-ups', 'Predictive Analytics', 'Sales Forecasting', 'Customer Segmentation', 'Integration Hub'],
       price: 'Starting at $179/month',
       marketPrice: '$300-800/month',
-      benefits: ['Improved sales performance', 'Better customer relationships', 'Automated processes', 'Data-driven insights']
+      benefits: ['Improved sales performance', 'Better customer relationships', 'Automated processes', 'Data-driven insights'],
+      link: 'https://ziontechgroup.com/zion-crm-intelligence'
     },
     {
       icon: Database,
@@ -572,7 +366,8 @@ const ServicesPage: React.FC = () => {
       features: ['Real-time Data Sync', 'Multi-source Integration', 'Data Transformation', 'Error Handling', 'Monitoring Dashboard', 'API Management'],
       price: 'Starting at $149/month',
       marketPrice: '$250-700/month',
-      benefits: ['Unified data view', 'Reduced manual work', 'Improved accuracy', 'Real-time updates']
+      benefits: ['Unified data view', 'Reduced manual work', 'Improved accuracy', 'Real-time updates'],
+      link: 'https://ziontechgroup.com/zion-data-sync'
     },
     {
       icon: Calendar,
@@ -582,7 +377,8 @@ const ServicesPage: React.FC = () => {
       features: ['AI Task Allocation', 'Resource Planning', 'Progress Tracking', 'Team Collaboration', 'Time Tracking', 'Performance Analytics'],
       price: 'Starting at $99/month',
       marketPrice: '$200-500/month',
-      benefits: ['Improved project success', 'Better resource utilization', 'Enhanced collaboration', 'Automated workflows']
+      benefits: ['Improved project success', 'Better resource utilization', 'Enhanced collaboration', 'Automated workflows'],
+      link: 'https://ziontechgroup.com/zion-project-master'
     },
     {
       icon: Mail,
@@ -592,7 +388,8 @@ const ServicesPage: React.FC = () => {
       features: ['AI Personalization', 'Automated Campaigns', 'A/B Testing', 'Behavioral Triggers', 'Analytics Dashboard', 'Template Library'],
       price: 'Starting at $89/month',
       marketPrice: '$150-400/month',
-      benefits: ['Higher open rates', 'Better engagement', 'Automated campaigns', 'Improved ROI']
+      benefits: ['Higher open rates', 'Better engagement', 'Automated campaigns', 'Improved ROI'],
+      link: 'https://ziontechgroup.com/zion-email-automation'
     },
     {
       icon: Package,
@@ -602,7 +399,8 @@ const ServicesPage: React.FC = () => {
       features: ['Demand Forecasting', 'Automated Reordering', 'Multi-location Management', 'Supplier Integration', 'Cost Optimization', 'Analytics Dashboard'],
       price: 'Starting at $159/month',
       marketPrice: '$300-800/month',
-      benefits: ['Reduced stockouts', 'Lower inventory costs', 'Improved cash flow', 'Better supplier relationships']
+      benefits: ['Reduced stockouts', 'Lower inventory costs', 'Improved cash flow', 'Better supplier relationships'],
+      link: 'https://ziontechgroup.com/zion-inventory-smart'
     },
     {
       icon: Settings,
@@ -612,7 +410,8 @@ const ServicesPage: React.FC = () => {
       features: ['Visual Workflow Builder', 'API Integrations', 'Conditional Logic', 'Task Automation', 'Approval Workflows', 'Performance Monitoring'],
       price: 'Starting at $119/month',
       marketPrice: '$200-600/month',
-      benefits: ['Process efficiency', 'Reduced errors', 'Cost savings', 'Scalable automation']
+      benefits: ['Process efficiency', 'Reduced errors', 'Cost savings', 'Scalable automation'],
+      link: 'https://ziontechgroup.com/zion-workflow-automation'
     },
     {
       icon: Monitor,
@@ -622,7 +421,8 @@ const ServicesPage: React.FC = () => {
       features: ['Real-time Monitoring', 'AI-powered Alerts', 'Performance Analytics', 'Uptime Tracking', 'Error Tracking', 'Capacity Planning'],
       price: 'Starting at $139/month',
       marketPrice: '$250-700/month',
-      benefits: ['Improved uptime', 'Faster issue resolution', 'Better performance', 'Proactive monitoring']
+      benefits: ['Improved uptime', 'Faster issue resolution', 'Better performance', 'Proactive monitoring'],
+      link: 'https://ziontechgroup.com/zion-performance-monitor'
     },
     {
       icon: CheckSquare,
@@ -632,7 +432,8 @@ const ServicesPage: React.FC = () => {
       features: ['Compliance Tracking', 'Automated Reporting', 'Document Management', 'Audit Trail', 'Risk Assessment', 'Training Management'],
       price: 'Starting at $199/month',
       marketPrice: '$400-1000/month',
-      benefits: ['Reduced compliance risk', 'Automated reporting', 'Better documentation', 'Cost savings']
+      benefits: ['Reduced compliance risk', 'Automated reporting', 'Better documentation', 'Cost savings'],
+      link: 'https://ziontechgroup.com/zion-compliance-manager'
     },
     {
       icon: Globe,
@@ -642,7 +443,8 @@ const ServicesPage: React.FC = () => {
       features: ['AI Content Suggestions', 'Multi-platform Scheduling', 'Performance Analytics', 'Engagement Tracking', 'Hashtag Optimization', 'Competitor Analysis'],
       price: 'Starting at $79/month',
       marketPrice: '$150-400/month',
-      benefits: ['Increased engagement', 'Time savings', 'Better content strategy', 'Improved reach']
+      benefits: ['Increased engagement', 'Time savings', 'Better content strategy', 'Improved reach'],
+      link: 'https://ziontechgroup.com/zion-social-scheduler'
     },
     {
       icon: Eye,
@@ -652,7 +454,8 @@ const ServicesPage: React.FC = () => {
       features: ['AI Auto-editing', 'Voice Transcription', 'Subtitle Generation', 'Thumbnail Creation', 'Multi-format Export', 'Cloud Storage'],
       price: 'Starting at $99/month',
       marketPrice: '$200-500/month',
-      benefits: ['Faster video production', 'Professional quality', 'Automated processes', 'Cost-effective editing']
+      benefits: ['Faster video production', 'Professional quality', 'Automated processes', 'Cost-effective editing'],
+      link: 'https://ziontechgroup.com/zion-ai-video-editor'
     },
     {
       icon: Globe,
@@ -662,7 +465,8 @@ const ServicesPage: React.FC = () => {
       features: ['Real-time Translation', 'Document Translation', 'Voice Translation', 'Context Awareness', 'Quality Scoring', 'API Integration'],
       price: 'Starting at $69/month',
       marketPrice: '$120-300/month',
-      benefits: ['Global communication', 'Accurate translations', 'Time savings', 'Cost-effective solution']
+      benefits: ['Global communication', 'Accurate translations', 'Time savings', 'Cost-effective solution'],
+      link: 'https://ziontechgroup.com/zion-ai-translator-pro'
     },
     {
       icon: Code,
@@ -672,7 +476,8 @@ const ServicesPage: React.FC = () => {
       features: ['Automated Code Review', 'Security Scanning', 'Performance Analysis', 'Best Practice Suggestions', 'Team Collaboration', 'Integration Support'],
       price: 'Starting at $149/month',
       marketPrice: '$250-600/month',
-      benefits: ['Improved code quality', 'Faster reviews', 'Better security', 'Team learning']
+      benefits: ['Improved code quality', 'Faster reviews', 'Better security', 'Team learning'],
+      link: 'https://ziontechgroup.com/zion-ai-code-reviewer'
     },
     {
       icon: Users,
@@ -682,7 +487,8 @@ const ServicesPage: React.FC = () => {
       features: ['Customer Segmentation', 'Behavioral Analysis', 'Predictive Analytics', 'Churn Prediction', 'Personalization Engine', 'ROI Tracking'],
       price: 'Starting at $189/month',
       marketPrice: '$350-800/month',
-      benefits: ['Better customer understanding', 'Improved retention', 'Personalized experiences', 'Data-driven decisions']
+      benefits: ['Better customer understanding', 'Improved retention', 'Personalized experiences', 'Data-driven decisions'],
+      link: 'https://ziontechgroup.com/zion-customer-insights-pro'
     },
     {
       icon: Mail,
@@ -692,7 +498,8 @@ const ServicesPage: React.FC = () => {
       features: ['Smart Email Sorting', 'AI Response Suggestions', 'Email Scheduling', 'Priority Detection', 'Spam Filtering', 'Analytics Dashboard'],
       price: 'Starting at $59/month',
       marketPrice: '$100-250/month',
-      benefits: ['Improved productivity', 'Better email management', 'Time savings', 'Reduced email stress']
+      benefits: ['Improved productivity', 'Better email management', 'Time savings', 'Reduced email stress'],
+      link: 'https://ziontechgroup.com/zion-ai-email-assistant'
     },
     {
       icon: Calendar,
@@ -702,7 +509,8 @@ const ServicesPage: React.FC = () => {
       features: ['Meeting Transcription', 'Action Item Extraction', 'Follow-up Automation', 'Meeting Analytics', 'Integration Support', 'Voice Recognition'],
       price: 'Starting at $89/month',
       marketPrice: '$150-400/month',
-      benefits: ['Better meeting outcomes', 'Automated follow-ups', 'Improved productivity', 'Better documentation']
+      benefits: ['Better meeting outcomes', 'Automated follow-ups', 'Improved productivity', 'Better documentation'],
+      link: 'https://ziontechgroup.com/zion-ai-meeting-assistant'
     },
     {
       icon: Target,
@@ -712,7 +520,8 @@ const ServicesPage: React.FC = () => {
       features: ['Content Analysis', 'Keyword Optimization', 'Ranking Tracking', 'Competitor Analysis', 'Technical SEO', 'Performance Monitoring'],
       price: 'Starting at $129/month',
       marketPrice: '$250-600/month',
-      benefits: ['Improved search rankings', 'Better organic traffic', 'Content optimization', 'Competitive advantage']
+      benefits: ['Improved search rankings', 'Better organic traffic', 'Content optimization', 'Competitive advantage'],
+      link: 'https://ziontechgroup.com/zion-ai-seo-optimizer'
     },
     {
       icon: Database,
@@ -722,7 +531,8 @@ const ServicesPage: React.FC = () => {
       features: ['Automated Data Cleaning', 'Duplicate Detection', 'Data Validation', 'Quality Scoring', 'Error Correction', 'Data Enrichment'],
       price: 'Starting at $79/month',
       marketPrice: '$150-400/month',
-      benefits: ['Improved data quality', 'Reduced manual work', 'Better insights', 'Cost savings']
+      benefits: ['Improved data quality', 'Reduced manual work', 'Better insights', 'Cost savings'],
+      link: 'https://ziontechgroup.com/zion-ai-data-cleaner'
     },
     {
       icon: FileText,
@@ -732,7 +542,8 @@ const ServicesPage: React.FC = () => {
       features: ['Contract Analysis', 'Risk Assessment', 'Compliance Checking', 'Clause Extraction', 'Automated Summaries', 'Version Comparison'],
       price: 'Starting at $199/month',
       marketPrice: '$400-1000/month',
-      benefits: ['Faster contract review', 'Reduced risk', 'Better compliance', 'Time savings']
+      benefits: ['Faster contract review', 'Reduced risk', 'Better compliance', 'Time savings'],
+      link: 'https://ziontechgroup.com/zion-ai-contract-analyzer'
     },
     {
       icon: CheckSquare,
@@ -742,7 +553,8 @@ const ServicesPage: React.FC = () => {
       features: ['AI Question Suggestions', 'Multi-format Surveys', 'Real-time Analytics', 'Response Analysis', 'Automated Reports', 'Integration Support'],
       price: 'Starting at $69/month',
       marketPrice: '$120-300/month',
-      benefits: ['Better survey design', 'Improved response rates', 'Automated analysis', 'Actionable insights']
+      benefits: ['Better survey design', 'Improved response rates', 'Automated analysis', 'Actionable insights'],
+      link: 'https://ziontechgroup.com/zion-ai-survey-builder'
     },
     {
       icon: DollarSign,
@@ -752,7 +564,8 @@ const ServicesPage: React.FC = () => {
       features: ['Automated Bookkeeping', 'Expense Categorization', 'Financial Analysis', 'Tax Preparation', 'Invoice Processing', 'Compliance Reporting'],
       price: 'Starting at $149/month',
       marketPrice: '$250-600/month',
-      benefits: ['Reduced accounting costs', 'Improved accuracy', 'Better financial insights', 'Time savings']
+      benefits: ['Reduced accounting costs', 'Improved accuracy', 'Better financial insights', 'Time savings'],
+      link: 'https://ziontechgroup.com/zion-ai-accounting-assistant'
     },
     {
       icon: Users,
@@ -762,7 +575,8 @@ const ServicesPage: React.FC = () => {
       features: ['AI Candidate Screening', 'Resume Analysis', 'Skill Matching', 'Interview Scheduling', 'Background Checks', 'Analytics Dashboard'],
       price: 'Starting at $179/month',
       marketPrice: '$300-800/month',
-      benefits: ['Faster hiring process', 'Better candidate matches', 'Reduced bias', 'Improved efficiency']
+      benefits: ['Faster hiring process', 'Better candidate matches', 'Reduced bias', 'Improved efficiency'],
+      link: 'https://ziontechgroup.com/zion-ai-recruitment-pro'
     },
     {
       icon: Shield,
@@ -772,7 +586,8 @@ const ServicesPage: React.FC = () => {
       features: ['Automated Content Filtering', 'Sentiment Analysis', 'Compliance Checking', 'Real-time Monitoring', 'Custom Rules', 'Analytics Dashboard'],
       price: 'Starting at $159/month',
       marketPrice: '$300-700/month',
-      benefits: ['Reduced moderation costs', 'Consistent enforcement', 'Better user experience', 'Compliance assurance']
+      benefits: ['Reduced moderation costs', 'Consistent enforcement', 'Better user experience', 'Compliance assurance'],
+      link: 'https://ziontechgroup.com/zion-ai-content-moderation'
     },
     {
       icon: Settings,
@@ -782,7 +597,8 @@ const ServicesPage: React.FC = () => {
       features: ['Equipment Monitoring', 'Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization', 'Performance Analytics', 'Alert System'],
       price: 'Starting at $199/month',
       marketPrice: '$400-1000/month',
-      benefits: ['Reduced downtime', 'Lower maintenance costs', 'Extended equipment life', 'Better planning']
+      benefits: ['Reduced downtime', 'Lower maintenance costs', 'Extended equipment life', 'Better planning'],
+      link: 'https://ziontechgroup.com/zion-ai-predictive-maintenance'
     },
     {
       icon: Zap,
@@ -792,7 +608,8 @@ const ServicesPage: React.FC = () => {
       features: ['Energy Monitoring', 'Consumption Analysis', 'Cost Optimization', 'Predictive Analytics', 'Automated Controls', 'Sustainability Reporting'],
       price: 'Starting at $129/month',
       marketPrice: '$250-600/month',
-      benefits: ['Reduced energy costs', 'Better sustainability', 'Automated optimization', 'Environmental impact']
+      benefits: ['Reduced energy costs', 'Better sustainability', 'Automated optimization', 'Environmental impact'],
+      link: 'https://ziontechgroup.com/zion-ai-energy-manager'
     },
     {
       icon: Package,
@@ -802,7 +619,8 @@ const ServicesPage: React.FC = () => {
       features: ['Demand Forecasting', 'Inventory Optimization', 'Supplier Management', 'Risk Assessment', 'Cost Analysis', 'Performance Tracking'],
       price: 'Starting at $219/month',
       marketPrice: '$400-1000/month',
-      benefits: ['Reduced costs', 'Better inventory management', 'Improved efficiency', 'Risk mitigation']
+      benefits: ['Reduced costs', 'Better inventory management', 'Improved efficiency', 'Risk mitigation'],
+      link: 'https://ziontechgroup.com/zion-ai-supply-chain-optimizer'
     },
     {
       icon: Shield,
@@ -812,7 +630,8 @@ const ServicesPage: React.FC = () => {
       features: ['Real-time Monitoring', 'Behavioral Analysis', 'Risk Scoring', 'Automated Alerts', 'Machine Learning', 'Compliance Support'],
       price: 'Starting at $249/month',
       marketPrice: '$500-1500/month',
-      benefits: ['Reduced fraud losses', 'Real-time protection', 'Better accuracy', 'Compliance ready']
+      benefits: ['Reduced fraud losses', 'Real-time protection', 'Better accuracy', 'Compliance ready'],
+      link: 'https://ziontechgroup.com/zion-ai-fraud-detector'
     },
     {
       icon: MessageSquare,
@@ -822,7 +641,8 @@ const ServicesPage: React.FC = () => {
       features: ['AI Chatbots', 'Sentiment Analysis', 'Ticket Routing', 'Knowledge Base', 'Live Agent Handoff', 'Performance Analytics'],
       price: 'Starting at $189/month',
       marketPrice: '$350-800/month',
-      benefits: ['Improved customer satisfaction', 'Reduced response times', '24/7 availability', 'Cost savings']
+      benefits: ['Improved customer satisfaction', 'Reduced response times', '24/7 availability', 'Cost savings'],
+      link: 'https://ziontechgroup.com/zion-ai-customer-service-pro'
     },
     {
       icon: Target,
@@ -832,7 +652,8 @@ const ServicesPage: React.FC = () => {
       features: ['Campaign Automation', 'Personalization Engine', 'Lead Scoring', 'A/B Testing', 'Analytics Dashboard', 'Multi-channel Support'],
       price: 'Starting at $159/month',
       marketPrice: '$300-700/month',
-      benefits: ['Higher conversion rates', 'Better personalization', 'Automated optimization', 'Improved ROI']
+      benefits: ['Higher conversion rates', 'Better personalization', 'Automated optimization', 'Improved ROI'],
+      link: 'https://ziontechgroup.com/zion-ai-marketing-automation'
     },
     {
       icon: FileText,
@@ -842,7 +663,8 @@ const ServicesPage: React.FC = () => {
       features: ['Document OCR', 'Data Extraction', 'Form Processing', 'Document Classification', 'Search & Retrieval', 'Integration APIs'],
       price: 'Starting at $139/month',
       marketPrice: '$250-600/month',
-      benefits: ['Faster document processing', 'Reduced manual work', 'Better accuracy', 'Cost savings']
+      benefits: ['Faster document processing', 'Reduced manual work', 'Better accuracy', 'Cost savings'],
+      link: 'https://ziontechgroup.com/zion-ai-document-ai'
     },
     {
       icon: Brain,
@@ -852,7 +674,8 @@ const ServicesPage: React.FC = () => {
       features: ['Quantum Data Processing', 'Complex Optimization', 'Advanced Pattern Recognition', 'Real-time Insights', 'Quantum Machine Learning'],
       price: 'Starting at $299/month',
       marketPrice: '$500-2000/month',
-      benefits: ['Exponential processing speed', 'Complex problem solving', 'Advanced analytics', 'Future-proof technology']
+      benefits: ['Exponential processing speed', 'Complex problem solving', 'Advanced analytics', 'Future-proof technology'],
+      link: 'https://ziontechgroup.com/zion-ai-quantum-analytics'
     },
     {
       icon: Eye,
@@ -862,7 +685,8 @@ const ServicesPage: React.FC = () => {
       features: ['3D Virtual Workspace', 'AI Collaboration Tools', 'Holographic Presentations', 'Spatial Computing', 'Real-time Rendering'],
       price: 'Starting at $199/month',
       marketPrice: '$350-1200/month',
-      benefits: ['Immersive collaboration', 'Enhanced productivity', 'Cutting-edge interface', 'Remote work revolution']
+      benefits: ['Immersive collaboration', 'Enhanced productivity', 'Cutting-edge interface', 'Remote work revolution'],
+      link: 'https://ziontechgroup.com/zion-ai-holographic-workspace'
     },
     {
       icon: Cpu,
@@ -872,7 +696,8 @@ const ServicesPage: React.FC = () => {
       features: ['Edge AI Processing', 'Real-time Analytics', 'Offline Intelligence', 'Distributed Learning', 'Low Latency Response'],
       price: 'Starting at $149/month',
       marketPrice: '$250-800/month',
-      benefits: ['Ultra-low latency', 'Reduced bandwidth costs', 'Enhanced privacy', 'Real-time processing']
+      benefits: ['Ultra-low latency', 'Reduced bandwidth costs', 'Enhanced privacy', 'Real-time processing'],
+      link: 'https://ziontechgroup.com/zion-ai-edge-intelligence'
     },
     {
       icon: Shield,
@@ -882,7 +707,8 @@ const ServicesPage: React.FC = () => {
       features: ['Quantum Encryption', 'Post-Quantum Security', 'Advanced Threat Detection', 'Zero-Trust Architecture', 'Quantum Key Distribution'],
       price: 'Starting at $179/month',
       marketPrice: '$300-1000/month',
-      benefits: ['Quantum-resistant security', 'Future-proof protection', 'Advanced threat detection', 'Military-grade encryption']
+      benefits: ['Quantum-resistant security', 'Future-proof protection', 'Advanced threat detection', 'Military-grade encryption'],
+      link: 'https://ziontechgroup.com/zion-ai-quantum-security'
     },
     {
       icon: Database,
@@ -892,7 +718,8 @@ const ServicesPage: React.FC = () => {
       features: ['Self-Optimizing Queries', 'Predictive Indexing', 'Automatic Scaling', 'Neural Optimization', 'Intelligent Caching'],
       price: 'Starting at $129/month',
       marketPrice: '$200-600/month',
-      benefits: ['Self-optimizing performance', 'Reduced maintenance', 'Intelligent scaling', 'Predictive optimization']
+      benefits: ['Self-optimizing performance', 'Reduced maintenance', 'Intelligent scaling', 'Predictive optimization'],
+      link: 'https://ziontechgroup.com/zion-ai-neural-database-pro'
     },
     {
       icon: Zap,
@@ -902,7 +729,8 @@ const ServicesPage: React.FC = () => {
       features: ['Energy Monitoring', 'Cost Optimization', 'Predictive Analytics', 'Automated Controls', 'Sustainability Reporting'],
       price: 'Starting at $99/month',
       marketPrice: '$150-500/month',
-      benefits: ['Reduced energy costs', 'Better sustainability', 'Automated optimization', 'Environmental impact']
+      benefits: ['Reduced energy costs', 'Better sustainability', 'Automated optimization', 'Environmental impact'],
+      link: 'https://ziontechgroup.com/zion-ai-energy-optimizer'
     },
     {
       icon: Target,
@@ -912,7 +740,8 @@ const ServicesPage: React.FC = () => {
       features: ['Demand Forecasting', 'Risk Assessment', 'Supplier Optimization', 'Cost Analysis', 'Performance Tracking'],
       price: 'Starting at $219/month',
       marketPrice: '$400-1200/month',
-      benefits: ['Reduced costs', 'Better inventory management', 'Improved efficiency', 'Risk mitigation']
+      benefits: ['Reduced costs', 'Better inventory management', 'Improved efficiency', 'Risk mitigation'],
+      link: 'https://ziontechgroup.com/zion-ai-supply-chain-intelligence'
     },
     {
       icon: Users,
@@ -922,7 +751,8 @@ const ServicesPage: React.FC = () => {
       features: ['AI Candidate Matching', 'Skills Assessment', 'Performance Prediction', 'Retention Analytics', 'Diversity Optimization'],
       price: 'Starting at $189/month',
       marketPrice: '$300-800/month',
-      benefits: ['Better talent matches', 'Reduced hiring time', 'Improved retention', 'Diversity optimization']
+      benefits: ['Better talent matches', 'Reduced hiring time', 'Improved retention', 'Diversity optimization'],
+      link: 'https://ziontechgroup.com/zion-ai-talent-intelligence'
     },
     {
       icon: Globe,
@@ -932,7 +762,8 @@ const ServicesPage: React.FC = () => {
       features: ['Context-Aware Translation', 'Cultural Adaptation', 'Real-time Translation', 'Voice Translation', 'Document Processing'],
       price: 'Starting at $79/month',
       marketPrice: '$120-400/month',
-      benefits: ['Accurate translations', 'Cultural sensitivity', 'Real-time processing', 'Global communication']
+      benefits: ['Accurate translations', 'Cultural sensitivity', 'Real-time processing', 'Global communication'],
+      link: 'https://ziontechgroup.com/zion-ai-global-translator'
     },
     {
       icon: FileText,
@@ -942,7 +773,8 @@ const ServicesPage: React.FC = () => {
       features: ['Contract Analysis', 'Legal Document Review', 'Compliance Checking', 'Risk Assessment', 'Automated Summaries'],
       price: 'Starting at $249/month',
       marketPrice: '$400-1200/month',
-      benefits: ['Faster legal reviews', 'Reduced legal costs', 'Better compliance', 'Risk mitigation']
+      benefits: ['Faster legal reviews', 'Reduced legal costs', 'Better compliance', 'Risk mitigation'],
+      link: 'https://ziontechgroup.com/zion-ai-legal-assistant'
     },
     {
       icon: Heart,
@@ -952,7 +784,8 @@ const ServicesPage: React.FC = () => {
       features: ['Health Monitoring', 'Predictive Analytics', 'Wellness Tracking', 'Risk Assessment', 'Personalized Recommendations'],
       price: 'Starting at $159/month',
       marketPrice: '$250-700/month',
-      benefits: ['Better health outcomes', 'Preventive care', 'Personalized insights', 'Cost savings']
+      benefits: ['Better health outcomes', 'Preventive care', 'Personalized insights', 'Cost savings'],
+      link: 'https://ziontechgroup.com/zion-ai-health-monitor'
     },
     {
       icon: BarChart3,
@@ -962,7 +795,8 @@ const ServicesPage: React.FC = () => {
       features: ['Market Analysis', 'Trend Prediction', 'Competitor Intelligence', 'Risk Assessment', 'Investment Insights'],
       price: 'Starting at $199/month',
       marketPrice: '$350-1000/month',
-      benefits: ['Better market insights', 'Improved decision making', 'Risk mitigation', 'Competitive advantage']
+      benefits: ['Better market insights', 'Improved decision making', 'Risk mitigation', 'Competitive advantage'],
+      link: 'https://ziontechgroup.com/zion-ai-market-intelligence'
     },
     {
       icon: Settings,
@@ -972,7 +806,8 @@ const ServicesPage: React.FC = () => {
       features: ['Process Mining', 'Workflow Optimization', 'Bottleneck Detection', 'Automated Improvements', 'Performance Analytics'],
       price: 'Starting at $139/month',
       marketPrice: '$250-600/month',
-      benefits: ['Process efficiency', 'Cost reduction', 'Automated optimization', 'Better performance']
+      benefits: ['Process efficiency', 'Cost reduction', 'Automated optimization', 'Better performance'],
+      link: 'https://ziontechgroup.com/zion-ai-process-optimizer'
     },
     {
       icon: Monitor,
@@ -982,110 +817,218 @@ const ServicesPage: React.FC = () => {
       features: ['Real-time Monitoring', 'Anomaly Detection', 'Predictive Maintenance', 'Performance Optimization', 'Automated Alerts'],
       price: 'Starting at $119/month',
       marketPrice: '$200-500/month',
-      benefits: ['Improved uptime', 'Faster issue resolution', 'Proactive maintenance', 'Cost optimization'];
-    };
+      benefits: ['Improved uptime', 'Faster issue resolution', 'Proactive maintenance', 'Cost optimization'],
+      link: 'https://ziontechgroup.com/zion-ai-infrastructure-monitor'
+    }
   ];
-  const categories = const categories = const categories = [
+
+  const categories = [
     { id: 'all', name: 'All Services', count: services.length },
     { id: 'ai', name: 'AI Services', count: services.filter(s => s.category === 'ai').length },
-    { id: 'it', name: 'IT Services', count: services.filter(s => s.category === 'it').length },;
-    { id: 'saas', name: 'Micro SaaS', count: services.filter(s => s.category === 'saas').length };
+    { id: 'it', name: 'IT Services', count: services.filter(s => s.category === 'it').length },
+    { id: 'saas', name: 'Micro SaaS', count: services.filter(s => s.category === 'saas').length }
   ];
-    const filteredServices = const filteredServices = const filteredServices = services.filter();
-      const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+
+  const filteredServices = services.filter(service => {
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     return matchesSearch && matchesCategory;
-  })
+  });
 
-  return ()
+  return (
+    <>
+      <Helmet>
+        <title>Our Services - AI & IT Solutions | Zion Tech Group</title>
+        <meta name="description" content="Comprehensive AI and IT services including micro SaaS solutions, cloud infrastructure, cybersecurity, and digital transformation. Expert solutions for modern businesses." />
+        <meta name="keywords" content="AI services, IT services, micro SaaS, cloud computing, cybersecurity, digital transformation, business solutions" />
+        <meta property="og:title" content="Our Services - Zion Tech Group" />
+        <meta property="og:description" content="Comprehensive AI and IT services for modern businesses" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Our Services - Zion Tech Group" />
+        <meta name="twitter:description" content="Comprehensive AI and IT services for modern businesses" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Navigation />
+        
+        <main className="container mx-auto px-4 py-16 pt-24">
+          {/* Header Section */}
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              Our Services
+            </h1>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+              Comprehensive AI and IT solutions designed to transform your business. From cutting-edge artificial intelligence 
+              to robust cloud infrastructure, we provide the technology you need to succeed in the digital age.
+            </p>
+            
+            {/* Contact Information */}
+            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 max-w-4xl mx-auto mb-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                <div>
+                  <Phone className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
+                  <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
+                  <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                    +1 (302) 464-0950
+                  </a>
+                </div>
+                <div>
+                  <Mail className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
+                  <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
+                  <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                    kleber@ziontechgroup.com
+                  </a>
+                </div>
+                <div>
+                  <MapPin className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
+                  <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
+                  <p className="text-gray-300">364 E Main St STE 1008<br />Middletown, DE 19709</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Search and Filter Section */}
+          <div className="mb-12">
+            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
+              <div className="flex flex-col lg:flex-row gap-6">
+                <div className="flex-1 relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  <input
+                    type="text"
+                    placeholder="Search services..."
+                    value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                     className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                   />
                 </div>
-                <div className="flex items-center space-x-2" /></div>
-                  <Filter className="text-gray-400 w-5 h-5" / /></Filter>
+                <div className="flex items-center space-x-2">
+                  <Filter className="text-gray-400 w-5 h-5" />
                   <select
                     value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)}
                     className="px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                   >
-                    {categories.map() {category.name} ({category.count})
+                    {categories.map(category => (
+                      <option key={category.id} value={category.id}>
+                        {category.name} ({category.count})
                       </option>
                     ))}
                   </select>
                 </div>
               </div>
             </div>
+          </div>
 
-            {/* Services Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" /></div>
-              {filteredServices.map((service, index) => ()
-                        )}
-                      </div>
+          {/* Services Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service, index) => (
+              <div
+                key={index}
+                className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/30 transition-all duration-300 hover:scale-105 group"
+              >
+                <div className="flex items-center mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                    <service.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
+                    <div className="flex items-center space-x-4 text-sm">
+                      <span className="text-cyan-400 font-semibold">{service.price}</span>
+                      <span className="text-gray-400">Market: {service.marketPrice}</span>
                     </div>
                   </div>
-                  
-                  <p className="text-gray-300 mb-4 leading-relaxed" /></p>
-                    {service.description}
-                  </p>
-                  
-                  <div className="mb-4" /></div>
-                    <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
-                    <ul className="space-y-1" /></ul>
-                      {service.features.slice(0, 4).map((feature, featureIndex) => ()
+                </div>
+                
+                <p className="text-gray-300 mb-6 leading-relaxed">
+                  {service.description}
+                </p>
+                
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-white mb-3">Key Features:</h4>
+                  <ul className="space-y-2">
+                    {service.features.slice(0, 4).map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {service.benefits && (
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-white mb-3">Benefits:</h4>
+                    <ul className="space-y-1">
+                      {service.benefits.slice(0, 3).map((benefit, benefitIndex) => (
+                        <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                          <ArrowRight className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />
+                          {benefit}
+                        </li>
                       ))}
                     </ul>
                   </div>
-
-                  {service.benefits && ()
-                        {service.benefits.slice(0, 3).map((benefit, benefitIndex) => ()
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-                  
-                  <div className="flex items-center justify-between" /></div>
-                    <a href="/contact"
-                      className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors" /></a>
-                      Learn More
-                      <ArrowRight className="w-4 h-4 ml-1" / /></ArrowRight>
-                    </a>
-                    <a href="/contact"
-                      className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300" /></a>
-                      Get Quote
-                    </a>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* CTA Section */}
-            <div className="mt-16 text-center" /></div>
-              <div className="bg-slate-800/50 rounded-lg p-8" /></div>
-                <h2 className="text-2xl font-bold text-white mb-4" /></h2>
-                  Ready to Get Started?
-                </h2>
-                <p className="text-gray-300 mb-6 max-w-2xl mx-auto" /></p>
-                  Contact our experts for a free consultation and discover how our services can transform your business.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center" /></div>
-                  <a href="/contact"
-                    className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300" /></a>
-                    Get Free Consultation
+                )}
+                
+                <div className="flex items-center justify-between">
+                  <a 
+                    href={service.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
+                  >
+                    Learn More
+                    <ArrowRight className="w-4 h-4 ml-1" />
                   </a>
-                  <a href="tel:+13024640950"
-                    className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300" /></a>
-                    Call: (302) 464-0950
+                  <a 
+                    href="/contact"
+                    className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300"
+                  >
+                    Get Quote
                   </a>
                 </div>
               </div>
+            ))}
+          </div>
+
+          {/* CTA Section */}
+          <div className="mt-16 text-center">
+            <div className="bg-slate-800/50 rounded-2xl p-8 border border-white/10">
+              <h2 className="text-3xl font-bold text-white mb-4">
+                Ready to Get Started?
+              </h2>
+              <p className="text-gray-300 mb-8 max-w-2xl mx-auto text-lg">
+                Contact our experts for a free consultation and discover how our services can transform your business. 
+                We're here to help you succeed with cutting-edge technology solutions.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a 
+                  href="/contact"
+                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 text-lg"
+                >
+                  Get Free Consultation
+                </a>
+                <a 
+                  href="tel:+13024640950"
+                  className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300 text-lg"
+                >
+                  Call: (302) 464-0950
+                </a>
+                <a 
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300 text-lg"
+                >
+                  Email Us
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-      </main>
-      
-      <Footer / /></Footer>
+        </main>
+        
+        <Footer />
+      </div>
     </>
   );
 };

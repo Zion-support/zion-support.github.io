@@ -11,16 +11,11 @@ const FuturisticBackground: React.FC = () => {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    const resizeCanvas = () => {;
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    }
+    let animationId: number;
+    let particles: Particle[] = [];
+    let mouse = { x: 0, y: 0 };
 
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
-
-    // Quantum particles
-    const particles: Array<{
+    class Particle {
       x: number;
       y: number;
       vx: number;
@@ -28,93 +23,184 @@ const FuturisticBackground: React.FC = () => {
       size: number;
       opacity: number;
       color: string;
-    }> = []
+      life: number;
+      maxLife: number;
 
-    const colors = ['#00ffff', '#8b5cf6', '#ec4899', '#10b981', '#3b82f6'];
-    // Create particles
-    for (let i = 0; i < 50; i++) {
-      particles.push()
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.5,
-        vy: (Math.random() - 0.5) * 0.5,
-        size: Math.random() * 3 + 1,
-        opacity: Math.random() * 0.5 + 0.2,
-        color: colors[Math.floor(Math.random() * colors.length)]
-        })
+      constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.vx = (Math.random() - 0.5) * 2;
+        this.vy = (Math.random() - 0.5) * 2;
+        this.size = Math.random() * 3 + 1;
+        this.opacity = Math.random() * 0.5 + 0.2;
+        this.color = this.getRandomColor();
+        this.life = 0;
+        this.maxLife = Math.random() * 200 + 100;
       }
-    const animate = () => {;
+
+      getRandomColor() {
+        const colors = ['#06b6d4', '#8b5cf6', '#ec4899', '#10b981', '#f59e0b'];
+        return colors[Math.floor(Math.random() * colors.length)];
+      }
+
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
+        this.life++;
+
+        // Wrap around screen
+        if (this.x < 0) this.x = canvas.width;
+        if (this.x > canvas.width) this.x = 0;
+        if (this.y < 0) this.y = canvas.height;
+        if (this.y > canvas.height) this.y = 0;
+
+        // Fade out over time
+        this.opacity = Math.max(0, 1 - (this.life / this.maxLife));
+
+        // Reset if dead
+        if (this.life >= this.maxLife) {
+          this.x = Math.random() * canvas.width;
+          this.y = Math.random() * canvas.height;
+          this.life = 0;
+          this.opacity = Math.random() * 0.5 + 0.2;
+        }
+      }
+
+      draw() {
+        ctx.save();
+        ctx.globalAlpha = this.opacity;
+        ctx.fillStyle = this.color;
+        ctx.shadowBlur = 10;
+        ctx.shadowColor = this.color;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();
+      }
+    }
+
+    const resizeCanvas = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
+
+    const initParticles = () => {
+      particles = [];
+      const particleCount = Math.floor((canvas.width * canvas.height) / 10000);
+      for (let i = 0; i < particleCount; i++) {
+        particles.push(new Particle());
+      }
+    };
+
+    const drawConnections = () => {
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+
+          if (distance < 100) {
+            ctx.save();
+            ctx.globalAlpha = (1 - distance / 100) * 0.2;
+            ctx.strokeStyle = '#06b6d4';
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.stroke();
+            ctx.restore();
+          }
+        }
+      }
+    };
+
+    const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       // Update and draw particles
-      particles.forEach((particle, index) => {
-        particle.x += particle.vx;
-        particle.y += particle.vy;
+      particles.forEach(particle => {
+        particle.update();
+        particle.draw();
+      });
 
-        // Wrap around screen
-        if (particle.x < 0) particle.x = canvas.width;
-        if (particle.x > canvas.width) particle.x = 0;
-        if (particle.y < 0) particle.y = canvas.height;
-        if (particle.y > canvas.height) particle.y = 0;
+      // Draw connections
+      drawConnections();
 
-        // Draw particle
-        ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fillStyle = particle.color;
-        ctx.globalAlpha = particle.opacity;
-        ctx.fill();
+      animationId = requestAnimationFrame(animate);
+    };
 
-        // Draw connections
-        particles.forEach((otherParticle, otherIndex) => {
-          if (index !== otherIndex) {
-            const dx = particle.x - otherParticle.x;
-            const dy = particle.y - otherParticle.y;
-            const distance = Math.sqrt(dx * dx + dy * dy);
+    const handleMouseMove = (e: MouseEvent) => {
+      mouse.x = e.clientX;
+      mouse.y = e.clientY;
+    };
 
-            if (distance < 100) {
-              ctx.beginPath();
-              ctx.moveTo(particle.x, particle.y);
-              ctx.lineTo(otherParticle.x, otherParticle.y);
-              ctx.strokeStyle = particle.color;
-              ctx.globalAlpha = (100 - distance) / 100 * 0.1;
-              ctx.lineWidth = 0.5;
-              ctx.stroke();
-            }
-          }
-        })
-      })
+    const handleResize = () => {
+      resizeCanvas();
+      initParticles();
+    };
 
-      // Draw cyber grid
-      ctx.globalAlpha = 0.1;
-      ctx.strokeStyle = '#00ffff';
-      ctx.lineWidth = 0.5;
-
-      for (let x = 0; x < canvas.width; x += 20) {
-        ctx.beginPath();
-        ctx.moveTo(x, 0);
-        ctx.lineTo(x, canvas.height);
-        ctx.stroke();
-      }
-
-      for (let y = 0; y < canvas.height; y += 20) {
-        ctx.beginPath();
-        ctx.moveTo(0, y);
-        ctx.lineTo(canvas.width, y);
-        ctx.stroke();
-      }
-
-      ctx.globalAlpha = 1;
-      requestAnimationFrame(animate);
-    }
-
+    // Initialize
+    resizeCanvas();
+    initParticles();
     animate();
 
+    // Event listeners
+    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('resize', handleResize);
+
     return () => {
-      window.removeEventListener('resize', resizeCanvas);
-    }
+      cancelAnimationFrame(animationId);
+      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
 
-  return ()
+  return (
+    <>
+      {/* Animated Background Canvas */}
+      <canvas
+        ref={canvasRef}
+        className="fixed inset-0 w-full h-full pointer-events-none z-0"
+        style={{ background: 'transparent' }}
+      />
+      
+      {/* Cyber Grid Overlay */}
+      <div className="fixed inset-0 w-full h-full pointer-events-none z-0 cyber-grid opacity-30" />
+      
+      {/* Neural Network Overlay */}
+      <div className="fixed inset-0 w-full h-full pointer-events-none z-0 neural-network-bg opacity-20" />
+      
+      {/* Matrix Rain Effect */}
+      <div className="fixed inset-0 w-full h-full pointer-events-none z-0 matrix-rain opacity-10" />
+      
+      {/* Holographic Scan Lines */}
+      <div className="fixed inset-0 w-full h-full pointer-events-none z-0">
+        <div className="holographic-scan-lines" />
+      </div>
+      
+      <style jsx>{`
+        .holographic-scan-lines {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 2px,
+            rgba(6, 182, 212, 0.03) 2px,
+            rgba(6, 182, 212, 0.03) 4px
+          );
+          animation: scanMove 3s linear infinite;
+        }
+        
+        @keyframes scanMove {
+          0% { transform: translateY(-100%); }
+          100% { transform: translateY(100vh); }
+        }
+      `}</style>
+    </>
   );
 };
 

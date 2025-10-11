@@ -9,56 +9,94 @@ const MicroSaasPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 
-  const products = const products = const products = [
-    {;
-<<<<<<< HEAD;
-;];
-  const [selectedCategory, setSelectedCategory] = React.useState('All');
-
-  const filteredProducts = const filteredProducts = selectedCategory === 'All' ;
-    ? products ;
-    : products.filter(product => product.category === selectedCategory);
-=======
-      title: 'Zion Analytics Pro',
-      description: 'Advanced real-time business intelligence and analytics platform with AI-powered insights and predictive modeling.',
-      features: ['Real-time Data Visualization', 'AI-powered Predictive Analytics', 'Custom Dashboard Builder', 'Advanced Data Connectors', 'Automated Report Generation', 'Multi-tenant Architecture'],
+  const products = [
+    {
+      id: 'zion-analytics-pro',
+      name: 'Zion Analytics Pro',
+      description: 'Advanced real-time business intelligence and analytics platform with AI-powered insights.',
       price: '$89/month',
       marketPrice: '$150-500/month',
-      benefits: ['Data-driven decision making', 'Real-time insights', 'Custom dashboards', 'Automated reporting'],
-      icon: BarChart,
+      features: [
+        'Real-time Data Visualization',
+        'AI-powered Predictive Analytics',
+        'Custom Dashboard Builder',
+        'Advanced Data Connectors',
+        'Automated Report Generation',
+        'Multi-tenant Architecture'
+      ],
+      benefits: [
+        'Data-driven decision making',
+        'Real-time insights',
+        'Custom dashboards',
+        'Automated reporting'
+      ],
       category: 'Analytics',
-      popular: true
+      popular: true,
+      icon: BarChart3
     },
     {
-      title: 'Zion Chat AI',
-      description: 'Next-generation AI customer support platform with advanced NLP, sentiment analysis, and multi-channel support.',
-      features: ['GPT-4 Powered AI', 'Multi-channel Support', 'Advanced Sentiment Analysis', 'Automated Ticket Routing', 'Live Agent Handoff', 'Multi-language Support'],
+      id: 'zion-chat-ai',
+      name: 'Zion Chat AI',
+      description: 'Next-generation AI customer support platform with advanced NLP and sentiment analysis.',
       price: '$149/month',
       marketPrice: '$300-800/month',
-      benefits: ['24/7 customer support', 'Reduced response time', 'Improved customer satisfaction', 'Lead generation'],
-      icon: MessageCircle,
+      features: [
+        'GPT-4 Powered AI',
+        'Multi-channel Support',
+        'Advanced Sentiment Analysis',
+        'Automated Ticket Routing',
+        'Live Agent Handoff',
+        'Multi-language Support'
+      ],
+      benefits: [
+        '24/7 customer support',
+        'Reduced response time',
+        'Improved customer satisfaction',
+        'Lead generation'
+      ],
       category: 'Customer Service',
-      popular: true
+      popular: true,
+      icon: MessageSquare
     },
     {
-      title: 'Zion Security Shield',
-      description: 'Comprehensive cybersecurity monitoring and threat detection platform for small to medium businesses.',
-      features: ['Real-time Threat Monitoring', 'Vulnerability Scanning', 'Incident Response', 'Security Analytics', 'Compliance Reporting', 'Employee Training'],
-      price: '$199/month',
-      marketPrice: '$400-1200/month',
-      benefits: ['Enhanced security posture', 'Reduced risk exposure', 'Compliance assurance', 'Peace of mind'],
-      icon: Shield,
-      category: 'Security',
-      popular: true
-    },
-    {
-      title: 'Zion Cloud Vault',
-      description: 'Secure cloud backup and disaster recovery solution with automated data protection and cross-platform sync.',
-      features: ['Automated Backups', 'Cross-platform Sync', 'Version Control', 'Disaster Recovery', 'Data Encryption', 'Compliance Support'],
-      price: '$79/month',
-      marketPrice: '$150-400/month',
-      benefits: ['Data protection', 'Business continuity', 'Cost-effective storage', 'Easy recovery'],
-      icon: Database,
+      id: 'zion-invoice-genius',
+      name: 'Zion Invoice Genius',
+      description: 'AI-powered invoice generation and management with automated billing and payment tracking.',
+      price: '$49/month',
+      marketPrice: '$100-300/month',
+      features: [
+        'AI-powered Invoice Generation',
+        'Automated Recurring Billing',
+        'Multi-currency Support',
+        'Payment Tracking',
+        'Tax Calculation',
+        'Client Portal'
+      ],
+      benefits: [
+        'Save 90% invoice creation time',
+        'Reduce payment delays',
+        'Automated follow-ups',
+        'Professional invoices'
+      ],
+      category: 'Finance',
+      popular: false,
+      icon: FileText
+    }
+  ];
+
+  const categories = [
+    { id: 'all', name: 'All Products', count: products.length },
+    { id: 'Analytics', name: 'Analytics', count: products.filter(p => p.category === 'Analytics').length },
+    { id: 'Customer Service', name: 'Customer Service', count: products.filter(p => p.category === 'Customer Service').length },
+    { id: 'Finance', name: 'Finance', count: products.filter(p => p.category === 'Finance').length }
+  ];
+
+  const filteredProducts = products.filter(product => {
+    const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         product.description.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory = selectedCategory === 'all' || product.category === selectedCategory;
+    return matchesSearch && matchesCategory;
+  });
       category: 'Storage',
       popular: false
     },
