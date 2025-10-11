@@ -2,7 +2,7 @@
 import React from 'react'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
-import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, Users, Globe, Code, BarChart, Target, Sparkles, Cpu, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart, Rocket, Clock, Award, Lightbulb, Gauge, Phone } from 'lucide-react'
+import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, Users, Globe, Code, BarChart, Target, Sparkles, Cpu, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart, Rocket, Clock, Award, Lightbulb, Gauge, Phone, Mail, MapPin } from 'lucide-react'
 
 const HomePage: React.FC = () => {
   const services = [
@@ -91,12 +91,12 @@ const HomePage: React.FC = () => {
               that drive innovation and accelerate digital transformation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+              <a href="/consultation" className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 text-center">
                 Get Started
-              </button>
-              <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+              </a>
+              <a href="/demo" className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 text-center">
                 Schedule Demo
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -148,12 +148,31 @@ const HomePage: React.FC = () => {
             Let's discuss how our AI and IT solutions can help you achieve your goals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+            <a href="/consultation" className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 text-center">
               Start Your Project
-            </button>
-            <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-4 px-8 rounded-lg transition-all duration-300">
+            </a>
+            <a href="/contact" className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-4 px-8 rounded-lg transition-all duration-300 text-center">
               Contact Us
-            </button>
+            </a>
+          </div>
+          
+          {/* Contact Information */}
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="text-center">
+              <Phone className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
+              <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
+              <p className="text-gray-300">+1 302 464 0950</p>
+            </div>
+            <div className="text-center">
+              <Mail className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
+              <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
+              <p className="text-gray-300">kleber@ziontechgroup.com</p>
+            </div>
+            <div className="text-center">
+              <MapPin className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
+              <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
+              <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
+            </div>
           </div>
         </div>
       </section>
