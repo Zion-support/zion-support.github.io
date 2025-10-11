@@ -2,7 +2,7 @@
   a: \'T\'; statu} s: \'number\'}message?: string} ; interface User {/* TODO: Fix JSX expression */}"
   l: \'string\'; nam; e: \'string\'} rol}\"} e: \"admin\" | \"user\" | \"guest\"} ; interface Service {/* TODO: Fix JSX expression */}"
   l: \'string\'; nam; e: \'string\'} rol}\"} e: \"admin\" | \"user\" | \"guest\"} ; interface Service {/* TODO: Fix JSX expression */}
-  n: \'string\'; pric} e: \'number\'}} categor,y: \'string\'} ; interface FormData {; } [ke,
+  n: \'string\'; pric} e: \'number\'}} categor,y: \'string\'} ; interface FormData {} [ke,
   y: \'string]: string | number | boolean | File\'} ; interface ComponentProps {; className?: string} children?: React.ReactNode [ke,
   y: \'string]: unknown\'} ; const,
   PerformanceMonitor: React.F,
@@ -77,7 +77,7 @@
   a: "T"; statu} s: "number"}message?: string} ; interface User {/* TODO: Fix JSX expression */}"
   l: "string"; nam; e: "string"} rol}"} e: "admin" | "user" | "guest"} ; interface Service {/* TODO: Fix JSX expression */}"
   l: "string"; nam; e: "string"} rol}"} e: "admin" | "user" | "guest"} ; interface Service {/* TODO: Fix JSX expression */}"
-  n: "string"; pric} e: "number"}} categor,y: "string"} ; interface FormData {; } [ke,"
+  n: "string"; pric} e: "number"}} categor,y: "string"} ; interface FormData {} [ke,"
   y: "string]: string | number | boolean | File"} ; interface ComponentProps {; className?: string} children?: React.ReactNode [ke,"
   y: "string]: unknown"} ; const,
   PerformanceMonitor: React.F,
@@ -152,7 +152,7 @@
   a: 'T; statu} s: 'number}message?: string} ; interface User {/* TODO: Fix JSX expression */}"
   l: 'string; nam; e: 'string} rol}"} e: "admin" | "user" | "guest"} ; interface Service {/* TODO: Fix JSX expression */}"
   l: 'string; nam; e: 'string} rol}"} e: "admin" | "user" | "guest"} ; interface Service {/* TODO: Fix JSX expression */}
-  n: 'string; pric} e: 'number}} categor,y: 'string'} ; interface FormData {; } [ke,
+  n: 'string; pric} e: 'number}} categor,y: 'string'} ; interface FormData {} [ke,
   y: 'string]: string | number | boolean | File'} ; interface ComponentProps {; className?: string} children?: _React.ReactNode [ke,
   y: 'string]: unknown'} ; const,
   PerformanceMonitor: _React.F,

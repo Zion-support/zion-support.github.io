@@ -541,10 +541,7 @@ const tabs = [
   n: Building,
   return (<div>Coming Soon</div>)
   )
-          <React.Fragment>
-      <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
-        <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}"
           <div className="text-center mb-16"></div>"
             < className="text-4xl,"$2 />
@@ -570,7 +567,6 @@ const tabs = [
           < className="grid grid-cols-2,"$2 />
   md:grid-cols-4 gap-6 mb-16">
             {stats.map((stat, index) => ()}"
-          <div key={index} className="text-center">
                 <div className={`w-16 h-16 ${stat.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}></div>`
                   <stat.icon className={`w-8 h-8 ${stat.color}`} /></stat>`
                 <div className={`text-3xl font-bold ${stat.color} mb-2`}>{stat.value}</div>"
@@ -578,9 +574,7 @@ const tabs = [
             ))}
           {/* Tabs */}"
           <div className="mb-12"></div>"
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
               {tabs.map((tab) => ()}
-          <button>
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}`
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${}
@@ -599,7 +593,6 @@ const tabs = [
           {/* Tab Content */}
           {activeTab === 'solutions' && ()}"
           <div className="mb-16"></div>"
-              <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
 // Our Green IT Solutions</$1>"
               < className="grid grid-cols-1,$2 />
   md:grid-cols-2,"
@@ -616,22 +609,18 @@ const tabs = [
                     <div className="mb-4"></div>"
                       <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key,
   Features:</h4>"
-                      <ul className="space-y-1">
                         {solution.features.map((feature, featureIndex) => ()}"
           <li key={featureIndex} className="text-sm text-gray-300 flex items-start"></li>"
-                            <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
                             {feature}
                       </ul>"
 <div className="text-sm font-semibold text-green-400 mb-1">Environmental,
   Impact:</div>"
                       <div className="text-sm text-gray-300">{solution.impact}</div>"
                     <div className="flex items-center justify-between"></div>`
-                      <div className={`text-lg font-bold ${solution.color}`}>
                         {solution.pricing}
                       <$2 />
                         href="/contact" className="inline-flex items-center text-cyan-400 hover: text-cyan-300 font-medium text-sm transition-colors"
 Learn More,
-                        <ArrowRight className="w-4 h-4 ml-1" />
           )}
           {activeTab === 'benefits' && (}
 Benefits of Green IT;"
@@ -640,13 +629,10 @@ Benefits of Green IT;"
                 {benefits.map((benefit, index) => ()}"
           <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50"></div>"
                       <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4"></div>"
-                        <benefit.icon className="w-6 h-6 text-cyan-400" />
                       <div></div>"
                         <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>"
                         <p className="text-gray-300 mb-4">{benefit.description}</p>"
-                    <ul className="space-y-2">
                       {benefit.details.map((detail, detailIndex) => ()}"
-          <li key={detailIndex} className="text-sm text-gray-300 flex items-start">
                           {detail}
 {activeTab === 'certifications' && (}
                 Our Certifications;"
@@ -677,56 +663,18 @@ Benefits of Green IT;"
                     <h4 className="text-sm font-semibold text-green-400 mb-2">Result,
   s:</h4>)
                       {study.results.map((result, resultIndex) => ()}"
-          <li key={resultIndex} className="text-sm text-gray-300 flex items-start">
                           {result}
 {/* CTA Section */}"
           <div className="bg-gradient-to-r from-green-900/50 to-blue-900/50 rounded-2xl p-8 text-center"></div>"
-            <h2 className="text-2xl font-bold text-white mb-4">
               Ready to Go Green?"
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
 // Start your journey towards sustainable IT operations. Get a free environmental
               assessment and discover how much you can save while protecting the planet.
-          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105" Get Free Assessment
                 href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-                <Phone className="w-4 h-4 mr-2" />
                 (302) 464-0950
                 href="mailto:kleber@ziontechgroup.com" className="border-2 border-green-400 text-green-400 px-8 py-3 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-                <Mail className="w-4 h-4 mr-2" />
                 Email Us
-      <Footer />
-    </div>
   ),
 }
 export default GreenItPage</div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </li>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </h2>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
 </div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></button></p></p></p></p></p></p></p></p></h2></h2></h2></h3></h3></h3></h3></h4></h4></h4></h4></ul></ul></ul></li></li></li></li>

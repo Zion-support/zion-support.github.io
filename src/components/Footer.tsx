@@ -87,7 +87,7 @@ import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Clou
                   >
                   <Link 
                     to={link.url}
-                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
+                    className="text-gray-400 hover: text-cyan-400 transition-colors duration-300 text-sm"
                   >
               <li><Link to="/services" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">All Services</Link></li>
               <li><Link to="/pricing" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Pricing</Link></li>
@@ -111,8 +111,7 @@ import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Clou
                 Cookie Policy
               </Link>
             </div>
-  );
-});
+  )});
 
 Footer.displayName = 'Footer';
 export default Footer;

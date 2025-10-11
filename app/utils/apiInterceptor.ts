@@ -1,5 +1,5 @@
   onResponse?: (response: any) => any,
-  onError?: (error: any) => any;,}}
+  onError?: (error: any) => any,}}
 class APIInterceptor {private requestInterceptors: Array<(config: any) =&gt; any&gt; = [],}
   private responseInterceptors: Array<(response: any) => any> = [],
   private errorInterceptors: Array<(error: any) => any> = [],
@@ -20,7 +20,7 @@ class APIInterceptor {private requestInterceptors: Array<(config: any) =&gt; any
     }
   }
       response: this.responseInterceptors.length,
-      error: this.errorInterceptors.length;,}}
+      error: this.errorInterceptors.length,}}
   }
 }
   r: Error, ur);

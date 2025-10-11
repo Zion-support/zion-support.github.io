@@ -96,7 +96,12 @@ const MicroSaasServicesPage: React.FC = () => {
                       )
     </>
   )
-                    </ul>
+                    
+                  
+                  
+                  
+                  
+                  </ul>
                   )}
                 </div>
               ))}
@@ -157,7 +162,3 @@ const MicroSaasServicesPage: React.FC = () => {
   )
 }
 export default MicroSaasServicesPage
-        </Footer>
-      </CheckCircle>
-    </CheckCircle>
-  </Navigation>

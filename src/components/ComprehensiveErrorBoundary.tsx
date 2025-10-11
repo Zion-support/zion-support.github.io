@@ -50,7 +50,7 @@ r: Error): Partial,
           <State> {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    return {/* TODO: Fix JSX expression */;}
+    return {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   hasErro,;,

@@ -397,6 +397,4 @@ const getPerformanceRecommendations = useCallback(() => {/* TODO: Fix JSX expres
   return null
 }
 export default AdvancedPerformanceMonitor;`
-  </PerformanceMetrics>
-  </PerformanceMonitorProps>
 </div></div></div></div></div></div></div></div></h3></h4></ul>

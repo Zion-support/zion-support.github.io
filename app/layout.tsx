@@ -3,7 +3,7 @@ import {Helmet} from 'react-helmet-async'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 import './globals.css'
-interface RootLayoutProps {children: React.ReactNode;}
+interface RootLayoutProps {children: React.ReactNode}
 
 const RootLayout: React.FC<RootLayoutProps> = ({children}) => {
   return (
@@ -29,6 +29,3 @@ const RootLayout: React.FC<RootLayoutProps> = ({children}) => {
     </>
   );
 export default RootLayout
-      </Footer>
-    </Navigation>
-  </RootLayoutProps>

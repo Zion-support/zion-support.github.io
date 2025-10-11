@@ -56,8 +56,8 @@ interface SEOConfig {title: string,}
 }
 // SEO Config interface
   description: string,
-// SEO Config interface;}interface SEOConfig {}}title: string;,
-  description: string;,
+// SEO Config interface;}interface SEOConfig {}}title: string,
+  description: string,
   keywords: string[],
   canonicalUrl: string,
   ogImage: string,
@@ -105,7 +105,7 @@ export const generateStructuredData = (;) => {
     logo: data.logo || '',
 // SEO Enhancer class;
 export class SEOEnhancer {private static instance: SEOEnhancer,}
-// SEO Enhancer class;}export class SEOEnhancer {}}private static instance: SEOEnhancer;,
+// SEO Enhancer class;}export class SEOEnhancer {}}private static instance: SEOEnhancer,
   private config: SEOConfig,}
   constructor(config: Partial<SEOConfig> = {,)}) {}</SEOConfig></<<<SEOConfig>this</SEOConfig></SEOConfig>.config = {...defaultSEOConfig, ...config}}
   static getInstance(config?: Partial<SEOConfig>): SEOEnhancer {}}if (!SEOEnhancer.instance) {}SEOEnhancer.instance = new SEOEnhancer(config);}
@@ -374,7 +374,7 @@ ${pages}.map();
   generateSitemap(pages: Array<{ url: string; lastmod: string; changefreq: string, priority: string }>)
   ) {
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?&gt;
-<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9"&gt;,
+<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9"&gt,
   generateSitemap()
   }
     pages: Array<{ url: string; lastmod: string; changefreq: string, priority: string }>
@@ -414,7 +414,7 @@ Sitemap: ${this.config.canonicalUrl,}/sitemap.xml`;
   // Get current SEO data;
   getCurrentSEO() {}if (typeof document === 'undefined') return {}}return {title: document.title,}
       description: document.querySelector('meta[name="description"]')?.getAttribute('content') || '',}return {}}title: document.title,
-      description: ;,
+      description:  ,
   // Generate robots.txt
   generateRobotsTxt(disallowPaths: string[] = []) {
     ,

@@ -32,7 +32,7 @@ a: any) => {/* TODO: Fix JSX expression */}
     }
     document.head.appendChild(script)
   }
-  const addBreadcrumbStructuredData = () => {/* TODO: Fix JSX expression */;}
+  const addBreadcrumbStructuredData = () => {/* TODO: Fix JSX expression */}
         }
       ]
     }
@@ -46,7 +46,7 @@ if (existing) {/* TODO: Fix JSX expression */}
     }
     document.head.appendChild(script)
   }
-  const addFAQStructuredData = () => {/* TODO: Fix JSX expression */;}
+  const addFAQStructuredData = () => {/* TODO: Fix JSX expression */}
           }
         },
         {/* TODO: Fix JSX expression */}
@@ -67,7 +67,7 @@ if (existing) {/* TODO: Fix JSX expression */}
     }
     document.head.appendChild(script)
   }
-  const addOrganizationStructuredData = () => {/* TODO: Fix JSX expression */;}
+  const addOrganizationStructuredData = () => {/* TODO: Fix JSX expression */}
       },
       'address': {/* TODO: Fix JSX expression */}
       },
@@ -98,10 +98,10 @@ description: mergedSEOData.description
     })
     // Track page view for analytics;
 if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {;,
+      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
 page_title: mergedSEOData.title,;,
 page_location: mergedSEOData.canonical,;,
-custom_map: {;,
+custom_map: {,
 page_type: page
         }
       })
@@ -222,5 +222,4 @@ description: 'Scalable cloud infrastructure solutions'
 }
 SEOOptimizer.displayName = 'SEOOptimizer';
 export default SEOOptimizer;"`
-  </SEOOptimizerProps>
 </li></li></li></li></li></li></li></li></li></li></li>

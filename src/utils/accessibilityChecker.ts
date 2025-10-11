@@ -60,15 +60,15 @@ AAA = 'AAA'
 export interface A11yIssue {
     /** Unique identifier for the issue */;,
 id: string
-  /** Issue type/category */;,
+  /** Issue type/category */,
 type: string
-  /** Severity level */;,
+  /** Severity level */,
 severity: A11ySeverity
-  /** WCAG level this issue violates */;,
+  /** WCAG level this issue violates */,
 wcagLevel: WCAGLevel,
   /** WCAG success criterion (e.g., "1.1.1", "2.4.7") */;,
 wcagCriterion: string
-  /** Description of the issue */;,
+  /** Description of the issue */,
 message: string
  * Accessibility issue interface,
  */;
@@ -106,11 +106,11 @@ codeExample?: string,
 export interface A11yCheckResult {
     /** Whether the check passed */;,
 passed: boolean
-  /** Number of issues found */;,
+  /** Number of issues found */,
 issueCount: number
-  /** List of issues */;,
+  /** List of issues */,
 issues: A11yIssue[]
-  /** Timestamp of the check */;,
+  /** Timestamp of the check */,
 timestamp: Date,
   /** Overall accessibility score (0-100) */;,
 score: number
@@ -229,16 +229,16 @@ score: 100
    * @param element - Root element to check
    */;
 private checkImages(element: Element): void {;
-const images = element.querySelectorAll('img');,;
+const images = element.querySelectorAll('img'),;
 images.forEach((img), index) => {;
 const alt = img.getAttribute('alt');;
 const role = img.getAttribute('role');
       // Check for missing alt attribute;
 if (alt === null && role !== 'presentation') {;
-this.addIssue({;,
+this.addIssue({
 }
 type: 'missing-alt-text'},;
-return {/* TODO: Fix JSX expression */;}
+return {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
 ;,
@@ -263,7 +263,7 @@ public checkDocument(): A11yCheckResult {
     if (typeof document === 'undefined') {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      return {/* TODO: Fix JSX expression */;}
+      return {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
 ;,
@@ -314,7 +314,7 @@ codeExample: '<img src="..." alt="Description of image" />'
       }
       // Check for empty alt on decorative images without role;
 if (alt === '' && role !== 'presentation') {;
-this.addIssue({;,
+this.addIssue({
 type: 'empty-alt-without-role'},;,
 codeExample: '
 
@@ -350,13 +350,13 @@ codeExample: '<img src="..." alt="" role="presentation" />'
    * @param element - Root element to check
    */;
 private checkHeadings(element: Element): void {;
-const headings = Array.from(element.querySelectorAll('h1);, h2, h3, h4, h5, h6'));
+const headings = Array.from(element.querySelectorAll('h1), h2, h3, h4, h5, h6'));
 if (headings.length === 0) return;
 headings.forEach((heading), index) => {;
 const level = parseInt(heading.tagName.charAt(1));
       // Check for skipped heading levels;
 if (level > previousLevel + 1 && previousLevel !== 0) {;
-this.addIssue({;,
+this.addIssue({
 }
 type: 'skipped-heading-level'},;,
 codeExample: '
@@ -406,7 +406,7 @@ codeExample: `Use h${previousLevel + 1} instead of h${level}`
       }
       // Check for empty headings;
 if (!heading.textContent?.trim()) {;
-this.addIssue({;,
+this.addIssue({
 type: 'empty-heading'}
   )
       }
@@ -432,7 +432,7 @@ $4})
     // Check for multiple h1s;
 const h1Count = element.querySelectorAll('h1').length;;
 if (h1Count > 1) {;
-this.addIssue({;,
+this.addIssue({
 type: 'multiple-h1'},;,
 fix: 'Add descriptive text to the heading'
 
@@ -467,8 +467,8 @@ $4})
    * @param element - Root element to check
    */;
 private checkLinks(element: Element): void {;
-const links = element.querySelectorAll('a');,;
-links.forEach((link), index) => {;,
+const links = element.querySelectorAll('a'),;
+links.forEach((link), index) => {
 fix: 'Use only one h1 per page for the main heading'
 
 }
@@ -497,7 +497,7 @@ const ariaLabelledBy = link.getAttribute('aria-labelledby');;
 const title = link.getAttribute('title');
       // Check for links without accessible text;
 if (!text && !ariaLabel && !ariaLabelledBy && !title) {;
-this.addIssue({;,
+this.addIssue({
 type: 'link-no-text'},
       // Check for links without accessible text;
 if (!text && !ariaLabel && !ariaLabelledBy && !title) {/* TODO: Fix JSX expression */}
@@ -519,7 +519,7 @@ codeExample: '<Link to="..." aria-label="Description">...</Link>'
       }
       // Check for generic link text;
 if (text && ['click here', 'read more', 'more', 'link'].includes(text.toLowerCase())) {;
-this.addIssue({;,
+this.addIssue({
 type: 'generic-link-text'},;,
 codeExample: '
 
@@ -553,7 +553,7 @@ target === '_blank' &&
         !ariaLabel?.includes('new window') &&
         !text?.includes('(opens in new window)')
       ) {;
-this.addIssue({;,
+this.addIssue({
 type: 'new-window-no-warning'}
   )
       }
@@ -593,14 +593,14 @@ codeExample:
    * @param element - Root element to check
    */;
 private checkButtons(element: Element): void {;
-const buttons = element.querySelectorAll('button');,;
+const buttons = element.querySelectorAll('button'),;
 buttons.forEach((button), index) => {;
 const text = button.textContent?.trim();;
 const ariaLabel = button.getAttribute('aria-label');;
 const ariaLabelledBy = button.getAttribute('aria-labelledby');
       // Check for buttons without accessible text;
 if (!text && !ariaLabel && !ariaLabelledBy) {;
-this.addIssue({;,
+this.addIssue({
 }
 type: 'button-no-text'},
 
@@ -659,7 +659,7 @@ codeExample: '<button aria-label="Close dialog">×</button>'
    * @param element - Root element to check
    */;
 private checkForms(element: Element): void {;
-const inputs = element.querySelectorAll('input;, select, textarea');
+const inputs = element.querySelectorAll('input, select, textarea');
 inputs.forEach((input), index) => {;
 const id = input.getAttribute('id');;
 const ariaLabel = input.getAttribute('aria-label');;
@@ -671,7 +671,7 @@ const type = input.getAttribute('type');
 if (type === 'hidden' || type === 'submit' || type === 'button') return
       // Check for form controls without labels;;
 if (!label && !ariaLabel && !ariaLabelledBy) {;
-this.addIssue({;,
+this.addIssue({
 type: 'form-no-label'},;,
 codeExample: '
 
@@ -746,11 +746,10 @@ private checkColors(element: Element): void {
     // This is a simplified check - full color contrast checking requires
     // computing actual rendered colors which is complex;
 const elementsWithColor = element.querySelectorAll('[style*="color"]');;
-elementsWithColor.forEach(el => {;
-}
+elementsWithColor.forEach(el => {}
 const style = el.getAttribute('style');},;
-if (style?.includes('color:') && !style.includes('background')) {;
-this.addIssue({;,
+if (style?.includes('color: ') && !style.includes('background')) {;
+this.addIssue({,
 type: 'color-without-background'},
    * @private
    * @param element - Root element to check
@@ -793,11 +792,11 @@ $4})
    */;
 private checkKeyboardAccess(element: Element): void {
     // Check for interactive elements with tabindex="-1";
-const interactiveElements = element.querySelectorAll('a;, button, input, select, textarea');
+const interactiveElements = element.querySelectorAll('a, button, input, select, textarea');
 interactiveElements.forEach(el => {;
 const tabindex = el.getAttribute('tabindex');;
 if (tabindex === '-1') {;
-this.addIssue({;,
+this.addIssue({
 }
 type: 'interactive-not-focusable'},;,
 fix: 'Ensure sufficient color contrast (4.5:1 for normal text)'
@@ -850,7 +849,7 @@ const role = el.getAttribute('role');;
 const tabindex = el.getAttribute('tabindex');;
 const onKeyDown = el.getAttribute('onkeydown');;
 if (!role || !tabindex || !onKeyDown) {;
-this.addIssue({;,
+this.addIssue({
 }
 type: 'click-without-keyboard'},;,
 codeExample: '
@@ -920,7 +919,7 @@ const validRoles = [;
         'note',
         'presentation'];
 if (role && !validRoles.includes(role)) {;
-this.addIssue({;,
+this.addIssue({
 }
 type: 'invalid-aria-role'},;,
 codeExample: '
@@ -993,7 +992,7 @@ const labelledBy = el.getAttribute('aria-labelledby');;
 if (labelledBy) {;
 const referencedElement = document.getElementById(labelledBy);;
 if (!referencedElement) {;
-this.addIssue({;,
+this.addIssue({
 type: 'aria-labelledby-missing'},;,
 fix: 'Use a valid ARIA role or remove the role attribute'
 
@@ -1032,10 +1031,10 @@ $4})
    * @param element - Root element to check
    */;
 private checkLandmarks(element: Element): void {;
-const hasMain = element.querySelector('main;, [role="main"]')
+const hasMain = element.querySelector('main, [role="main"]')
     // const hasNav = element.querySelector('nav;, [role="navigation"]');
 if (!hasMain) {;
-this.addIssue({;,
+this.addIssue({
 type: 'missing-main-landmark'},;,
 fix: 'Ensure the referenced element exists'
 
@@ -1082,7 +1081,7 @@ $4})
    * @param issue - Partial issue object
    */;
 private addIssue(issue: Omit<A11yIssue, 'id'>): void {;
-this.issues.push({;,
+this.issues.push({
 id: this.generateIssueId()},
       ...issue
     })
@@ -1124,8 +1123,7 @@ return Math.round(score);
    * @returns Array of issues with the specified severity
    */;
 public getIssuesBySeverity(severity: A11ySeverity): A11yIssue[] {;
-return this.issues.filter(issue => issue.severity === severity);
-  }
+return this.issues.filter(issue => issue.severity === severity)}
   /**
    * Get issues by WCAG level
    *
@@ -1133,8 +1131,7 @@ return this.issues.filter(issue => issue.severity === severity);
    * @returns Array of issues that violate the specified WCAG level
    */;
 public getIssuesByWCAGLevel(level: WCAGLevel): A11yIssue[] {;
-return this.issues.filter(issue => issue.wcagLevel === level);
-  }
+return this.issues.filter(issue => issue.wcagLevel === level)}
   /**
    * Generate accessibility report
    *
@@ -1199,7 +1196,7 @@ private calculateScore(): number {
 
 }
     if (this.issues.length === 0) return 100;;
-const severityWeights={/* TODO: Fix JSX expression */;}
+const severityWeights={/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       [A11ySeverity.MINOR]: 1,

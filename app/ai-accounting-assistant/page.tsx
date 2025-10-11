@@ -149,6 +149,11 @@ const AIAccountingAssistantPage: React.FC = () => {
                     )
     </>
   )
+                  
+                  
+                  
+                  
+                  
                   </ul>
                 </div>
               ))}
@@ -318,16 +323,3 @@ const AIAccountingAssistantPage: React.FC = () => {
   )
 }
 export default AIAccountingAssistantPage
-                          </Footer>
-                        </ArrowRight>
-                      </CheckCircle>
-                    </CheckCircle>
-                  </Icon>
-                </CheckCircle>
-              </Icon>
-            </CheckCircle>
-          </div>
-        </div>
-      </section>
-    </ArrowRight>
-  </Navigation>

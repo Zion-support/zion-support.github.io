@@ -45,7 +45,10 @@ const EnterpriseSolutionsPage: React.FC = () => {
               )
     </>
   )
-            </div>
+            
+                
+                
+                </div>
           </div>
         </section>
 
@@ -64,4 +67,3 @@ const EnterpriseSolutionsPage: React.FC = () => {
   )
 }
 export default EnterpriseSolutionsPage
-  </Navigation>

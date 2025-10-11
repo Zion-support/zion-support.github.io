@@ -105,6 +105,4 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
   )
 }
 export default MicroSAASCard;"`
-  </MicroSAASCardProps>
-  </MicroSAASCardProps>
 </span></span></span></span></span></ul></ul>

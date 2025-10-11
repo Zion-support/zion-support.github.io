@@ -80,5 +80,4 @@ const Breadcrumb: React.FC = () => {
   )
 }
 export default Breadcrumb</ol>
-  </nav>
 </div></div></span></ol></li></nav>

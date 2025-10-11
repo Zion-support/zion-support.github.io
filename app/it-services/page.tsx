@@ -1,18 +1,18 @@
 import React from 'react';
-import {Helmet;} from 'react-helmet-async'
+import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const ITServicesPage: React.FC = () => {
 const services = [
-    {;,
+    {,
 }
 id: 1},;,
 title: 'Cloud Infrastructure',;,
 description: 'Scalable and secure cloud solutions for your business needs.',;,
 icon: Cloud,
     },
-    {;,
+    {
 id: 2,;,
 title: 'Cybersecurity',;,
 description: 'Comprehensive security solutions to protect your digital assets.',;,
@@ -48,7 +48,10 @@ return (
               )
     </>
   )
-            </div>
+            
+                
+                
+                </div>
           </div>
         </section>
 

@@ -53,7 +53,7 @@ export interface Revolutionary2025Service {,
   contactInfo: unknown
     mobile: string
     email: string
-export interface Revolutionary2025Service {;,
+export interface Revolutionary2025Service {,
     address: string}
   i,
   d: string

@@ -1,61 +1,61 @@
 import React from 'react';
-import {Helmet;} from 'react-helmet-async'
+import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import {Shield;, Eye, Database, Server, Mail, Phone, MapPin, CheckCircle, User, Edit, Trash2} from 'lucide-react'
 const PrivacyPage: React.FC = () => {
 const dataTypes = [
-    {;,
+    {,
 }
 category: 'Personal Information'},;,
 icon: User,;,
 description: 'Name, email, phone number, and other identifying information'
     },
-    {;,
+    {
 category: 'Contact Information',;,
 icon: Database,;,
 description: 'Name, email, phone number, and contact details'},
-    {;,
+    {
 category: 'Usage Data',;,
 icon: Server,;,
 description: 'How you interact with our services and website'},
-    {;,
+    {
 category: 'Technical Data',;,
 icon: Server,;,
 description: 'IP address, browser type, device information, and cookies'}
   ]
 const purposes = [
-    {;,
+    {
 title: 'Service Provision',;,
 description: 'To provide and maintain our AI and IT services',;,
 icon: CheckCircle},
-    {;,
+    {
 title: 'Communication',;,
 description: 'To respond to inquiries and provide customer support',;,
 icon: CheckCircle},
-    {;,
+    {
 title: 'Improvement',;,
 description: 'To analyze usage patterns and improve our services',;,
 icon: CheckCircle},
-    {;,
+    {
 title: 'Legal Compliance',;,
 description: 'To comply with applicable laws and regulations',;,
 icon: CheckCircle}
   ]
 const rights = [
-    {;,
+    {
 title: 'Access',;,
 description: 'Request access to your personal data',;,
 icon: Eye},
-    {;,
+    {
 title: 'Rectification',;,
 description: 'Correct inaccurate or incomplete data',;,
 icon: Edit},
-    {;,
+    {
 title: 'Erasure',;,
 description: 'Request deletion of your personal data',;,
 icon: Trash2},
-    {;,
+    {
 title: 'Portability',;,
 description: 'Receive your data in a structured format',;,
 icon: Database}
@@ -222,10 +222,3 @@ Contact Privacy Team
 }
 
 export default PrivacyPage
-
-            </Footer>
-          </MapPin>
-        </Phone>
-      </Mail>
-    </Shield>
-  </Navigation>

@@ -174,22 +174,4 @@ const PageTemplate: React.FC<{title: string
     </div>)
 }
 export default PageTemplate</h2>
-  </h2>
-  </h2>
-  </h2>
-  </h2>
-  </h2>
-  </SEOOptimizer>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></p></p></p></p></p></p></p></p></p></h1></h2></h2></h3></h3></h3></h3></h3></h3>
-                        </Footer>
-                      </MapPin>
-                    </Mail>
-                  </a>
-                </Phone>
-              </TrendingUp>
-            </TrendingUp>
-          </CheckCircle>
-        </CheckCircle>
-      </Phone>
-    </Icon>
-  </Navigation>

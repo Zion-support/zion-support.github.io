@@ -89,6 +89,4 @@ const,
 }
 export default AdvertisingBanner
 "
-  </AdvertisingBannerProps>
-  </AdvertisingBannerProps>
 </div></p></h2>

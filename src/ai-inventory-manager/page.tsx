@@ -1,10 +1,10 @@
 import React from 'react';;
-import { Link; } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';;
 import Footer from '../components/Footer';;
 import { Package;, Target, Zap, Settings, CheckCircle, Star,  Package,  Target,  Settings } from 'lucide-react';
 const AIInventoryManagerPage: React.FC = () => {;
-const features = [];,;
+const features = [],;
 return (;
     {// TODO: Add content
 }

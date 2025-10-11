@@ -10,8 +10,7 @@ export interface Service {
   link: string;
   popular?: boolean;
   category: string;
-  rating: number;
-}
+  rating: number}
 
 export const services: Service[] = [
   {

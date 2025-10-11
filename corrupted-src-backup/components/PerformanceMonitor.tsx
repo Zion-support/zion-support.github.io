@@ -347,11 +347,4 @@ const,
 }
 export default PerformanceMonitor
 }"`
-  </WebVitalsMetrics>
-  </PerformanceMonitorProps>
-  </PerformanceMonitorProps>
-  </WebVitalsMetrics>
-  </PerformanceMonitorProps>
-  </WebVitalsMetrics>
-  </PerformanceMonitorProps>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></h3>

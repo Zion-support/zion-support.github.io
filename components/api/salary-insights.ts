@@ -28,7 +28,7 @@ type InsightResponse = {
   trendMonthly: { label: string; value: number }[]
   regionalComparison: { region: string; medianHourlyUsd: number }[]
   tags: string[]
-  gptRecommendation?: string;};  gptRecommendation?: string
+  gptRecommendation?: string};  gptRecommendation?: string
 }
 import type { NextApiRequest, NextApiResponse  } from 'next'
 import {  TALENT_PROFILES, TalentProfile   } from '../../data/talent'

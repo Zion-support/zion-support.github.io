@@ -23,5 +23,3 @@ const,
 }
 export default LoadingSpinner
 `
-  </LoadingSpinnerProps>
-</div>

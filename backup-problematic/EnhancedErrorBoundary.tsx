@@ -10,7 +10,7 @@ super(props);
 this.state={hasError: false}
   }
   static getDerivedStateFromError(error: Error): State {,;
-return { hasError: true;, error }
+return { hasError: true, error }
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {,;
 this.setState({);

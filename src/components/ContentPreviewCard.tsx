@@ -155,5 +155,4 @@ const,
   )
 }
 export default ContentPreviewCard;"`
-  </ContentPreviewCardProps>
 </span></span></span></span></span></span></p></p></p></p></p>

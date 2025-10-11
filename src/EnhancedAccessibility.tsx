@@ -85,8 +85,8 @@ Space
 } from 'lucide-react';
 interface AccessibilitySettings {
   // Visual;,
-highContrast: boolean;,
-largeText: boolean;,
+highContrast: boolean,
+largeText: boolean,
 fontSize: number;
 EyeIcon,;
 EyeSlashIcon,;
@@ -100,29 +100,29 @@ CheckCircleIcon,;
 ExclamationTriangleIcon,;
 XMarkIcon
 } from '@heroicons/react/24/outline';
-interface AccessibilitySettings {;,
-highContrast: boolean;,
-reducedMotion: boolean;,
-largeText: boolean;,
-screenReader: boolean;,
-keyboardNavigation: boolean;,
-reducedMotion: boolean;,
-screenReader: boolean;,
-keyboardNavigation: boolean;,
-focusIndicator: boolean;,
-colorBlindness: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';,
-dyslexia: boolean;,
-highContrastText: boolean;,
-largeCursor: boolean;,
-soundEffects: boolean;,
-autoPlay: boolean;,
-showFocusRings: boolean;,
-showKeyboardShortcuts: boolean;,
-showScreenReaderHints: boolean;,
-showAccessibilityInfo: boolean;,
-fontSize: number;,
-colorBlindMode: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';,
-deviceMode: 'desktop' | 'tablet' | 'mobile';,
+interface AccessibilitySettings {
+highContrast: boolean,
+reducedMotion: boolean,
+largeText: boolean,
+screenReader: boolean,
+keyboardNavigation: boolean,
+reducedMotion: boolean,
+screenReader: boolean,
+keyboardNavigation: boolean,
+focusIndicator: boolean,
+colorBlindness: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia',
+dyslexia: boolean,
+highContrastText: boolean,
+largeCursor: boolean,
+soundEffects: boolean,
+autoPlay: boolean,
+showFocusRings: boolean,
+showKeyboardShortcuts: boolean,
+showScreenReaderHints: boolean,
+showAccessibilityInfo: boolean,
+fontSize: number,
+colorBlindMode: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia',
+deviceMode: 'desktop' | 'tablet' | 'mobile',
 theme: 'light' | 'dark' | 'auto'
 }
 ;
@@ -131,7 +131,7 @@ position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right'
 }
 ;
 export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({;
-position = 'bottom-right';,
+position = 'bottom-right',
 theme: 'light' | 'dark' | 'auto'
 }
 ;
@@ -145,9 +145,9 @@ position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right'
 ;
 export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({;
 position = 'bottom-right' 
-}) => {;,
-soundEnabled: boolean;,
-focusIndicator: boolean;,
+}) => {
+soundEnabled: boolean,
+focusIndicator: boolean,
 screenReader: boolean
 }
 }
@@ -161,7 +161,7 @@ position = 'bottom-right'
 }) => {;
 const [isOpen, setIsOpen] = useState(false);
 const [isExpanded, setIsExpanded] = useState(false);
-const [settings, setSettings] = useState<AccessibilitySettings>({;,
+const [settings, setSettings] = useState<AccessibilitySettings>({
 highContrast: false,;,
 largeText: false,;,
 largeText: false,;,
@@ -196,7 +196,7 @@ const [isMinimized, setIsMinimized] = useState(false);
 const accessibilityRef = useRef<HTMLDivElement>(null);;
 const announcementRef = useRef<HTMLDivElement>(null);
   // Initialize accessibility features;
-useEffect(() => {;,
+useEffect(() => {
 theme: 'auto'
 }
   })
@@ -205,8 +205,7 @@ const applySettings = useCallback((newSettings: AccessibilitySettings) => {;;
 const root = document.documentElement;
     // High contrast;
 if (settings.highContrast) {;
-root.classList.add('high-contrast');
-}
+root.classList.add('high-contrast')}
 root.style.setProperty('--contrast-filter'}, 'contrast(1.5) brightness(1.2)')
     } else {;
 root.classList.remove('high-contrast');
@@ -274,8 +273,7 @@ const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {;;
 const root = document.documentElement;
     // High contrast mode;
 if (newSettings.highContrast) {;
-root.classList.add('high-contrast');
-}
+root.classList.add('high-contrast')}
 root.style.setProperty('--bg-primary'}, '#000000');
 root.style.setProperty('--text-primary', '#ffffff');
 root.style.setProperty('--accent-color', '#ffff00')
@@ -382,15 +380,14 @@ console.warn('Failed to load accessibility settings:', error)
     }
   }, [applySettings])
   // Update settings;
-const updateSetting = useCallback((key: keyof AccessibilitySettings);, value: any) => {;
-}
+const updateSetting = useCallback((key: keyof AccessibilitySettings), value: any) => {}
 const newSettings={...settings;}, [key]: value }
     setSettings(newSettings);
 applySettings(newSettings)
   }, [settings, applySettings])
   // Reset to defaults;
 const resetSettings = useCallback(() => {;;
-const defaultSettings: AccessibilitySettings={;,
+const defaultSettings: AccessibilitySettings={,
 }
 highContrast: false},;,
 fontSize: 100,;,
@@ -503,15 +500,13 @@ const target = e.target as HTMLElement;;
 const focusId = target.getAttribute('data-focus-id') || target.tagName.toLowerCase();;
 setCurrentFocus(focusId);
 setFocusHistory(prev => [...prev.slice(-9), focusId]);
-if (settings.screenReader) {;
-}
+if (settings.screenReader) {}
 announceToScreenReader(`${target.textContent || target.getAttribute('aria-label') || focusId} focused`)
       }
     });
 document.addEventListener('focusout', (e) => {;
 const target = e.target as HTMLElement;;
-if (settings.screenReader) {;
-}
+if (settings.screenReader) {}
 announceToScreenReader(`${target.textContent || target.getAttribute('aria-label') || 'Element'} lost focus`)
       }
     })
@@ -540,7 +535,7 @@ const [activeTab, setActiveTab] = useState<'settings' | 'scanner' | 'help'>('set
 useEffect(() => {;
 const root = document.documentElement;
     // High contrast mode;
-if (settings.highContrast) {;,
+if (settings.highContrast) {
 }
 fontSize: 16},;,
 colorBlindMode: 'none',;,
@@ -551,8 +546,7 @@ const applySettings = useCallback((newSettings: AccessibilitySettings) => {;;
 const root = document.documentElement;
     // High contrast mode;
 if (newSettings.highContrast) {;
-root.classList.add('high-contrast');
-}
+root.classList.add('high-contrast')}
 root.style.setProperty('--bg-primary'}, '#000000');
 root.style.setProperty('--text-primary', '#ffffff');
 root.style.setProperty('--accent-color', '#ffff00')
@@ -618,37 +612,37 @@ applySettings(settings)
   // Keyboard navigation support;
 useEffect(() => {;
 if (!settings.keyboardNavigation) return;
-const handleKeyDown = (event: KeyboardEvent) => {;;,
+const handleKeyDown = (event: KeyboardEvent) => {
 }
 fontSize: number}; // 50% to 200%;,
-colorBlindness: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';,
-reducedMotion: boolean;,
+colorBlindness: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia',
+reducedMotion: boolean,
 darkMode: 'auto' | 'light' | 'dark'
-  // Audio;,
-soundEffects: boolean;,
-autoPlayMedia: boolean;,
+  // Audio,
+soundEffects: boolean,
+autoPlayMedia: boolean,
 voiceCommands: boolean
-  // Navigation;,
-screenReader: boolean;,
-keyboardNavigation: boolean;,
+  // Navigation,
+screenReader: boolean,
+keyboardNavigation: boolean,
 focusIndicator: boolean
-  // Advanced;,
-dyslexia: boolean;,
-lineSpacing: number; // 1.0 to 2.0;,
-wordSpacing: number; // 0.5 to 2.0;,
+  // Advanced,
+dyslexia: boolean,
+lineSpacing: number; // 1.0 to 2.0,
+wordSpacing: number; // 0.5 to 2.0,
 letterSpacing: number; // -0.5 to 2.0
 }
 ;
-interface VoiceCommand {;,
-command: string;,
-action: string;,
+interface VoiceCommand {
+command: string,
+action: string,
 description: string
 }
 ;
 const EnhancedAccessibility: React.FC = () => {;
 const [isVisible, setIsVisible] = useState(false);
 const [activeTab, setActiveTab] = useState<'general' | 'visual' | 'audio' | 'navigation'>('general');
-const [settings, setSettings] = useState<AccessibilitySettings>({;,
+const [settings, setSettings] = useState<AccessibilitySettings>({
 highContrast: false,;,
 fontSize: 100,;,
 colorBlindness: 'none',;,
@@ -733,8 +727,7 @@ return () => document.removeEventListener('keydown';, handleKeyDown)
   // Screen reader announcements;
 const announceToScreenReader = useCallback((message: string) => {;;
 if (settings.screenReader) {;
-const announcement = document.createElement('div');;
-}
+const announcement = document.createElement('div');}
 announcement.setAttribute('aria-live'}, 'polite');
 announcement.setAttribute('aria-atomic', 'true');
 announcement.className = 'sr-only';
@@ -747,8 +740,7 @@ document.body.removeChild(announcement)
     }
   }, [settings.screenReader])
   // Update settings;
-const updateSetting = useCallback((key: keyof AccessibilitySettings);, value: any) => {;
-}
+const updateSetting = useCallback((key: keyof AccessibilitySettings), value: any) => {}
 const newSettings={...settings;}, [key]: value }
     setSettings(newSettings)
     // Announce changes to screen reader;
@@ -804,8 +796,7 @@ event.preventDefault();
 setIsVisible(!isVisible);
 break;
 case 'h':;
-event.preventDefault();
-}
+event.preventDefault()}
 setSettings(prev => ({ ...prev)}, highContrast: !prev.highContrast }));
 break;
 case 'f':;
@@ -845,8 +836,7 @@ return () => document.removeEventListener('keydown';, handleKeyDown)
 const getPositionClasses = () => {;;
 switch (position) {;
 const announceToScreenReader = (message: string) => {;;
-if (settings.screenReader) {;
-}
+if (settings.screenReader) {}
 setAnnouncements(prev => [...prev}, message])
       // Remove announcement after 5 seconds;
 setTimeout(() => {;
@@ -857,25 +847,21 @@ setAnnouncements(prev => prev.filter(a => a !== message))
   }
   const setupHighContrastDetection = () => {;;
 const mediaQuery = window.matchMedia('(prefers-contrast: high)');;
-if (mediaQuery.matches) {;
-}
+if (mediaQuery.matches) {}
 setSettings(prev => ({ ...prev)}, highContrast: true }))
     }
 ;
-mediaQuery.addEventListener('change', (e) => {;
-}
+mediaQuery.addEventListener('change', (e) => {}
 setSettings(prev => ({ ...prev)}, highContrast: e.matches }))
     })
   }
   const setupMotionDetection = () => {;;
 const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');;
-if (mediaQuery.matches) {;
-}
+if (mediaQuery.matches) {}
 setSettings(prev => ({ ...prev)}, reducedMotion: true }))
     }
 ;
-mediaQuery.addEventListener('change', (e) => {;
-}
+mediaQuery.addEventListener('change', (e) => {}
 setSettings(prev => ({ ...prev)}, reducedMotion: e.matches }))
     })
   }
@@ -885,8 +871,8 @@ const style = document.createElement('style');;
 style.textContent = `
 }
       .color-blindness-protanopia { filter: url('#protanopia')}; }
-      .color-blindness-deuteranopia { filter: url('#deuteranopia'); }
-      .color-blindness-tritanopia { filter: url('#tritanopia'); }
+      .color-blindness-deuteranopia { filter: url('#deuteranopia')}
+      .color-blindness-tritanopia { filter: url('#tritanopia')}
     `;
 document.head.appendChild(style)
   }
@@ -901,8 +887,7 @@ document.head.appendChild(link)
     }
   }
   const setupLargeCursor = () => {;;
-if (settings.largeCursor) {;
-}
+if (settings.largeCursor) {}
 document.body.style.cursor = 'url("data:image/svg+xml};utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'32\' height=\'32\'><circle cx=\'16\' cy=\'16\' r=\'14\' fill=\'none\' stroke=\'black\' stroke-width=\'2\'/><circle cx=\'16\' cy=\'16\' r=\'4\' fill=\'black\'/></svg>") 16 16, auto'
     } else {;
 document.body.style.cursor = ''
@@ -930,8 +915,7 @@ const gainNode = audioContext.createGain();;
 oscillator.connect(gainNode);
 gainNode.connect(audioContext.destination);
 switch (type) {;
-case 'click':;
-}
+case 'click':}
 oscillator.frequency.setValueAtTime(800}, audioContext.currentTime);
 break;
 case 'focus':;
@@ -997,8 +981,7 @@ if (settings.showScreenReaderHints) {
 const elements = document.querySelectorAll('[data-sr-hint]');;
 elements.forEach((element) => {;
 const hint = element.getAttribute('data-sr-hint');;
-if (hint) {;
-}
+if (hint) {}
 element.setAttribute('aria-label'}, hint);
 element.setAttribute('aria-describedby', `sr-hint-${element.id || Math.random()}`)
         }
@@ -1012,21 +995,20 @@ if (settings.showAccessibilityInfo) {
 document.addEventListener('mouseover'}, (e) => {;
 const target = e.target as HTMLElement;;
 const info = target.getAttribute('data-accessibility-info');;
-if (info) {;
-}
+if (info) {}
 showAccessibilityTooltip(target}, info)
         }
       })
     }
   }
-  const showAccessibilityTooltip = (element: HTMLElement;, info: string) => {;
+  const showAccessibilityTooltip = (element: HTMLElement, info: string) => {;
 const tooltip = document.createElement('div');;
 tooltip.className = 'accessibility-tooltip';
 tooltip.textContent = info;
-tooltip.style.cssText = `;,
-position: absolute;,
-background: #000;,
-color: #fff;,
+tooltip.style.cssText = `,
+position: absolute,
+background: #000,
+color: #fff,
 padding: 8px;
 border-radius: 4px;
 font-size: 14px;
@@ -1034,8 +1016,7 @@ z-index: 10000;
 pointer-events: none
     `;
 document.body.appendChild(tooltip);
-const rect = element.getBoundingClientRect();;
-}
+const rect = element.getBoundingClientRect();}
 tooltip.style.left = `${rect.left + rect.width / 2}px`;
 tooltip.style.top = `${rect.top - 40}px`;
 setTimeout(() => {;
@@ -1044,7 +1025,7 @@ document.body.removeChild(tooltip)
     }, 3000)
   }
   const resetSettings = () => {;;
-const defaultSettings: AccessibilitySettings={;,
+const defaultSettings: AccessibilitySettings={,
 }
 highContrast: false},;,
 fontSize: 16,;,
@@ -1074,9 +1055,8 @@ return 'top-4 right-4';;
 case 'bottom-left':;
 return 'bottom-4 left-4';;
 case 'bottom-right':;,
-default:;
-return 'bottom-4 right-4';
-}
+default: ;
+return 'bottom-4 right-4'}
     }
   }
   const handleDragStart = (e: React.MouseEvent) => {;;
@@ -1084,7 +1064,7 @@ if (e.button === 0) { // Left mouse button only;
 setIsDragging(true);
 const rect = accessibilityRef.current?.getBoundingClientRect();;
 if (rect) {;
-setDragOffset({;,
+setDragOffset({,
 }
 x: e.clientX - rect.left},;,
 y: e.clientY - rect.top
@@ -1096,8 +1076,7 @@ y: e.clientY - rect.top
 if (isDragging && accessibilityRef.current) {;
 const x = e.clientX - dragOffset.x;;
 const y = e.clientY - dragOffset.y;;
-accessibilityRef.current.style.position = 'fixed';
-}
+accessibilityRef.current.style.position = 'fixed'}
 accessibilityRef.current.style.left = `${x}px`;
 accessibilityRef.current.style.top = `${y}px`;
 accessibilityRef.current.style.transform = 'none'
@@ -1108,8 +1087,7 @@ setIsDragging(false)
 }
   }
   useEffect(() => {;
-if (isDragging) {;
-}
+if (isDragging) {}
 document.addEventListener('mousemove'}, handleDragMove);
 document.addEventListener('mouseup', handleDragEnd);
 return () => {;;
@@ -1231,8 +1209,7 @@ console.error('Failed to parse accessibility settings:', error)
 useEffect(() => {;
 const handleFocusChange = (event: FocusEvent) => {;;
 const target = event.target as HTMLElement;;
-if (target && target !== currentFocus) {;
-}
+if (target && target !== currentFocus) {}
 setFocusHistory(prev => [...prev.slice(-4)}, target]);
 setCurrentFocus(target)
         // Announce focus changes for screen readers;
@@ -1310,7 +1287,7 @@ fontSize: size
   }
   // Reset to default settings;
 const resetSettings = () => {;;
-const defaultSettings: AccessibilitySettings={;,
+const defaultSettings: AccessibilitySettings={,
 }
 highContrast: false},;,
 fontSize: 'medium',;,
@@ -1348,9 +1325,8 @@ case 'top-left':;
 return 'top-6 left-6';;
 case 'bottom-left':;
 return 'bottom-6 left-6';;,
-default:;
-return 'bottom-6 right-6';
-    }
+default: ;
+return 'bottom-6 right-6'}
   }
   return (;
     <>
@@ -2132,7 +2108,7 @@ Close
           --accent-color: #0000ff
         }
         
-        .high-contrast * {;,
+        .high-contrast * {
 color: var(--text-color) !important;
 background-color: var(--bg-color) !important;
 border-color: var(--border-color) !important
@@ -2151,21 +2127,21 @@ font-size: 1.2em
         }
         
         /* Focus indicators */
-        .show-focus-indicator *:focus {;,
+        .show-focus-indicator *:focus {
 outline: 3px solid #3b82f6 !important;
 outline-offset: 2px !important
         }
         
         /* Color blindness support */
-        [style*="--color-blindness: protanopia"] {;,
+        [style*="--color-blindness: protanopia"] {,
 filter: url('#protanopia')
         }
         
-        [style*="--color-blindness: deuteranopia"] {;,
+        [style*="--color-blindness: deuteranopia"] {,
 filter: url('#deuteranopia')
         }
         
-        [style*="--color-blindness: tritanopia"] {;,
+        [style*="--color-blindness: tritanopia"] {,
 filter: url('#tritanopia')
         }
         
@@ -2183,7 +2159,7 @@ font-size: var(--font-size-base)
               <div className="bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 p-3 text-center">
                 <$2 />;
 onClick={() => {};
-setSettings({;,
+setSettings({
 }
 highContrast: false},;,
 largeText: false,;,
@@ -2262,8 +2238,7 @@ root.classList.remove('dyslexia-friendly')
     }
   }, [settings])
   // Toggle setting with announcement;
-const toggleSetting = (key: keyof AccessibilitySettings) => {;;
-}
+const toggleSetting = (key: keyof AccessibilitySettings) => {}
 const newSettings={...settings;}, [key]: !settings[key] }
     setSettings(newSettings)
     // Visual accessibility;
@@ -2296,8 +2271,7 @@ break;
 case 'close':;
 setIsVisible(false);
 break;
-case 'highContrast':;
-}
+case 'highContrast':}
 setSettings(prev => ({ ...prev)}, highContrast: true }));
 break;
 case 'normalContrast':;
@@ -2358,7 +2332,7 @@ console.error('Error starting voice recognition:', error)
   }, [recognition, settings.voiceCommands])
   // Reset all settings;
 const resetAllSettings = useCallback(() => {;;
-setSettings({;,
+setSettings({
 }
 highContrast: false},;,
 fontSize: 100,;,
@@ -2892,13 +2866,13 @@ value={settings.letterSpacing}
         <div className="bg-gray-50 dark:bg-gray-800 p-3 flex items-center justify-between">
           <$2 />;
 onClick={() => setShowKeyboardShortcuts(!showKeyboardShortcuts)}
-            className="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
+            className="flex items-center space-x-2 text-sm text-gray-600 dark: text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
           >
             <HelpCircle className="w-4 h-4" />
             <span>Keyboard Shortcuts</span>
           </button>
           
-          <div className="text-xs text-gray-500">;,
+          <div className="text-xs text-gray-500">,
 Score: {accessibilityScore}/100
           </div>
         </div>

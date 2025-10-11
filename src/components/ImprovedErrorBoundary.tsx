@@ -3,7 +3,7 @@
  * Improved Error Boundary
  * Enhanced error handling with recovery mechanisms and user-friendly fallbacks
  */;
-interface Props {;,
+interface Props {
 children: ReactNode;
 fallback?: ReactNode,;
 onError?: (erro,;,
@@ -12,30 +12,30 @@ o: ErrorInfo) => void;
 resetKeys?: Array,
           <string | number>
   }
-interface State {;,
-hasError: boolean;,
-error: Error | null;,
+interface State {
+hasError: boolean,
+error: Error | null,
 errorInfo: ErrorInfo | null,;,
 errorCount: number
   }
 class ImprovedErrorBoundary extends Component<Props, State> {;
 constructor(props: Props) {;
 super(props)},;
-this.state={;,
+this.state={
 hasError: false,;,
 error: null,;,
 errorInfo: null,;,
 errorCount: 0}
   }
   static getDerivedStateFromError(error: Error): Partial<State> {;
-return {;;,
+return {
 hasError: true},;
 error
     }
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo): void {
     // Log error to console for debugging;
-console.error('Error caught by ImprovedErrorBoundary:', {;,
+console.error('Error caught by ImprovedErrorBoundary:', {
 message: error.message,;,
 stack: error.stack,;,
 component: errorInfo.componentStack ?? undefined,;,
@@ -56,9 +56,9 @@ errorCount: prevState.errorCount + 1
 if (process.env['NODE_ENV'] === 'development') {}
     // Send to external error tracking (if available);
 if (typeof window !== 'undefined' && (window as unknown as { Sentry: unknown) }).Sentry) {
-      (window as unknown as { Sentry: { captureException: (error: Error)}}, context: Record<string, unknown>) => void } }).Sentry.captureException(error, {;,
-contexts: {;,
-react: {;,
+      (window as unknown as { Sentry: { captureException: (error: Error)}}, context: Record<string, unknown>) => void } }).Sentry.captureException(error, {
+contexts: {,
+react: {,
 componentStack: errorInfo.componentStack;
 interface State {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -100,7 +100,7 @@ r: Error): Partial,
           <State> {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    return {/* TODO: Fix JSX expression */;}
+    return {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   hasErro,;,
@@ -176,7 +176,7 @@ k: errorInfo.componentStack,
     }
   }
   componentDidUpdate(prevProps: Props): void {;
-componentDidUpdate(prevProp);,
+componentDidUpdate(prevProp),
 s: Props): void {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -193,7 +193,7 @@ if (resetKeysChanged && this.state.hasError) {/* TODO: Fix JSX expression */}
     }
   }
   resetErrorBoundary = (): void => {;
-this.setState({;,
+this.setState({
 }
 hasError: false},;,
 error: null,;,
@@ -329,7 +329,7 @@ This error has occurred {this.state.errorCount} times
   }
 }
 const styles={;;,
-container: {;,
+container: {,
 minHeight: '100vh'},;,
 display: 'flex',;,
 alignItems: 'center',;,
@@ -338,7 +338,7 @@ padding: '20px',;,
 backgroundColor: '#f5f5f5',;,
 fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
   },;,
-content: {;,
+content: {,
 maxWidth: '600px',;,
 width: '100%',;,
 backgroundColor: 'white',;,
@@ -347,23 +347,23 @@ padding: '40px',;,
 boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',;,
 textAlign: 'center' as const
   },;,
-icon: {;,
+icon: {,
 fontSize: '48px',;,
 marginBottom:   ,;
 $4},;,
-title: {;,
+title: {,
 fontSize: '24px',;,
 fontWeight: 'bold',;,
 color: '#333',;,
 marginBottom:   ,;
 $4},;,
-message: {;,
+message: {,
 fontSize: '16px',;,
 color: '#666',;,
 marginBottom: '32px',;,
 lineHeight:   ,;
 $4},;,
-details: {;,
+details: {,
 textAlign: 'left' as const,;,
 marginBottom: '24px',;,
 backgroundColor: '#f9f9f9',;,
@@ -371,20 +371,20 @@ padding: '16px',;,
 borderRadius: '4px',;,
 border:   ,;
 $4},;,
-summary: {;,
+summary: {,
 cursor: 'pointer',;,
 fontWeight: 'bold',;,
 marginBottom: '12px',;,
 userSelect: 'none' as const
   },;,
-errorDetails: {;,
+errorDetails: {,
 fontSize:   ,;
 $4},;,
-errorMessage: {;,
+errorMessage: {,
 marginBottom: '12px',;,
 color:   ,;
 $4},;,
-stack: {;,
+stack: {,
 backgroundColor: '#f5f5f5',;,
 padding: '12px',;,
 borderRadius: '4px',;,
@@ -394,13 +394,13 @@ fontFamily: 'monospace',;,
 whiteSpace: 'pre-wrap' as const,;,
 wordBreak: 'break-all' as const
   },;,
-actions: {;,
+actions: {,
 display: 'flex',;,
 gap: '12px',;,
 justifyContent: 'center',;,
 flexWrap: 'wrap' as const
   },;,
-button: {;,
+button: {,
 padding: '12px 24px',;,
 fontSize: '16px',;,
 fontWeight: '500',;,
@@ -411,10 +411,10 @@ borderRadius: '4px',;,
 cursor: 'pointer',;,
 transition:   ,;
 $4},;,
-secondaryButton: {;,
+secondaryButton: {,
 backgroundColor:   ,;
 $4},;,
-errorCount: {;,
+errorCount: {,
 marginTop: '24px',;,
 fontSize: '14px',;,
 color:   ,;
@@ -425,7 +425,7 @@ $4}
     return this.props.children;
   }
 }
-const styles={// TODO: Add content;}
+const styles={// TODO: Add content}
 }
   containe,;,
 r: {/* TODO: Fix JSX expression */}

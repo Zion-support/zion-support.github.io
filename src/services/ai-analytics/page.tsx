@@ -307,10 +307,8 @@ export default AIAnalyticsPage
             < className="grid grid-cols-1,"$2 />
   md:grid-cols-3 gap-8">
               {pricingTiers.map((tier, index) => ()}`
-          <div key={index} className={`${tier.bgColor} rounded-lg p-6 border border-gray-700/50 relative ${tier.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                   {tier.popular && ()}"
           <div className="absolute -top-3 left-1/2 transform -translate-x-1/2"></div>"
-                      <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-medium">
 // Most Popular
                   )}"
                   <div className="text-center mb-6"></div>"
@@ -319,9 +317,7 @@ export default AIAnalyticsPage
                       <span className={`text-3xl font-bold ${tier.color}`}>{tier.price}</span>"
                       <span className="text-gray-400 ml-1">{tier.period}</span>"
                     <p className="text-gray-300 text-sm mt-2">{tier.description}</p>"
-                  <ul className="space-y-3 mb-6">
                     {tier.features.map((feature, featureIndex) => ()}"
-          <li key={featureIndex} className="text-sm text-gray-300 flex items-start">
                         {feature}
                   <$2 />
                     href="/contact" className={`w-full block text-center py-3 px-4 rounded-lg font-medium transition-all duration-300 ${}
@@ -345,52 +341,15 @@ export default AIAnalyticsPage
                   <p className="text-gray-300 text-sm">{benefit.description}
 {/* CTA Section */}"
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center"></div>"
-            <h2 className="text-2xl font-bold text-white mb-4">
               Ready to Transform Your Data?"
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Start your journey with AI analytics today. Get a free consultation and discover
               how our platform can revolutionize your business intelligence.
-            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105" Get Free Consultation
                 href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-                <Phone className="w-4 h-4 mr-2" />
                 (302) 464-0950
                 href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-                <Mail className="w-4 h-4 mr-2" />
                 Email Us
-      <Footer />
-    </div>
   ),
 }
 export default AiAnalyticsPage</div>
-  </p>
-  </h2>
-  </div>
-  </div>
-  </div>
-  </a>
-  </li>
-  </ul>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </p>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
 </span></span></span></span></span></span></span></span></span></p></p></p></p></p></p></p></p></h1></h2></h2></h2></h3></h3></h3></h3></ul></ul></ul></li></li>

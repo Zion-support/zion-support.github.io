@@ -23,8 +23,7 @@ return () => {// Track component unmount duration;
   }
     }
 return (
-    <>
-      ) => {
+    </> => {
     // Track component unmount duration
       if (trackPerformance) {
         const _duration = performance.now() - mountTimeRef.current
@@ -100,7 +99,7 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
     component = 'Unknown',
     trackErrors = true,
     trackPerformance = true,
-    trackAnalytics = true,;}
+    trackAnalytics = true}
   } = _options;const _renderCountRef = useRef<number>(0)
   useEffect(() => {
     mountTimeRef.current = performance.now()
@@ -149,7 +148,7 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
       if (trackErrors) {
         errorTracker.trackError(error, {
           component,
-          ...context,;}
+          ...context}
         })
       }
     },
@@ -164,14 +163,14 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
     [component, trackAnalytics]
   )
   const measureOperation = useCallback(
-    (operationName: string) => {;}
+    (operationName: string) => {}
       const _markName = `${component}-${operationName}`
       const _startTime = performance.now()
       return {
         end: () => {
           const _duration = performance.now() - startTime
           if (trackPerformance) {
-            analytics.trackPerformance(;}
+            analytics.trackPerformance(}
               `${component}-${operationName}`,
               duration,
               duration > 1000 ? 'slow' : 'fast'
@@ -187,7 +186,7 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
   return {
     trackError,
     trackUserAction,
-    measureOperation,;}
+    measureOperation}
   }
 }
 

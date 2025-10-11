@@ -47,4 +47,3 @@ const PerformanceDashboard: React.FC = () => {const [metrics, setMetrics] = useS
   )
 }
 export default PerformanceDashboard</button>
-  </PerformanceMetrics>

@@ -74,4 +74,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   await tagOperatorSession (session_id, tag ?? "escalate")
   return res.status (200).json ({ ok: true, id })
 }
-</a>

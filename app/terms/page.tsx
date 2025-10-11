@@ -12,5 +12,5 @@ const PagePage: React.FC = () => {return (
       
       <Footer />
     </>
-  );}
+  )}
   </Footer>

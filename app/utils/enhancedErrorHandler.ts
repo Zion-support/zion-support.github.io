@@ -12,7 +12,7 @@ interface ErrorContext {}
   action?: string,
   props?: Record</string><string, unknown></string></<<<string>state</string></string>?: Record<string>}</strin>
 }
-interface ErrorReport {}}id: string;,
+interface ErrorReport {}}id: string,
   type: 'javascript' | 'promise' | 'resource' | 'network' | 'custom',
   message: string,
   stack?: string
@@ -41,7 +41,7 @@ interface ErrorHandlerConfig {enableConsoleLogging: boolean,}
 }
   apiKey?: string,}
 }
-class EnhancedErrorHandler {}}private config: ErrorHandlerConfig;,
+class EnhancedErrorHandler {}}private config: ErrorHandlerConfig,
   private errors: ErrorReport[] = [],
     this.config = {
       enableConsoleLogging: true,
@@ -280,12 +280,12 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
     const tags = this.generateTags(errorData)
     return {
       message: errorData.message,
-      stack: errorData.stack;,}return {}}id: this.generateErrorId(),
+      stack: errorData.stack,}return {}}id: this.generateErrorId(),
       type: errorData.type,
       message: errorData.message,
       stack: errorData.stack,
         status: errorData.status,
-        statusText: errorData.statusText;,}metadata: {,}filename: errorData.filename,
+        statusText: errorData.statusText,}metadata: {,}filename: errorData.filename,
         lineno: errorData.lineno,
         colno: errorData.colno,
         element: errorData.element,
@@ -397,7 +397,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
   private getErrorContext(): ErrorContext {}
     return {}
       url: window.location.href,
-      userAgent: navigator.userAgent;,}private getErrorContext(): ErrorContext {}}return {}}url: window.location.href,
+      userAgent: navigator.userAgent,}private getErrorContext(): ErrorContext {}}return {}}url: window.location.href,
       userAgent: navigator.userAgent,
       timestamp: new Date().toISOString(),
       sessionId: this.getSessionId(),
@@ -412,7 +412,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
       errorData.status &&);
       errorData.status >= 500;);
     ) {}private determineSeverity(errorData: {),}type: ErrorReport['type'],
-    message: string;,
+    message: string,
     status?: number;
     element?: string,}
   }): ErrorReport['severity'] {}if(;)
@@ -741,7 +741,7 @@ if (errorReport.stack) {}
       errorsByCategory[error.category] =
         (errorsByCategory[error.category] || 0) + 1
       errorsBySeverity[error.severity] =
-        (errorsBySeverity[error.severity] || 0) + 1;}
+        (errorsBySeverity[error.severity] || 0) + 1}
     })
     })
     const recentErrors = this.errors;

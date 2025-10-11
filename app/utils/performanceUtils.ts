@@ -118,7 +118,7 @@ export const lazyLoad = (callback: () => void): void => {,
 }</void>
   private observers: PerformanceObserver[] = []
   constructor() {
-    this.initializeMetrics();}
+    this.initializeMetrics()}
   }
 
   private initializeMetrics(): void {
@@ -151,7 +151,7 @@ export const lazyLoad = (callback: () => void): void => {,
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.name === type) {
-            callback(entry);}
+            callback(entry)}
           }
         }
       })
@@ -211,7 +211,7 @@ export const lazyLoad = (callback: () => void): void => {,
     }
   }
 
-  public getMetrics(): PerformanceMetrics {;}
+  public getMetrics(): PerformanceMetrics {}
     return { ...this.metrics }
   }
 
@@ -260,7 +260,7 @@ export const measureFunction = <T extends (...args: any[]) => any>(
     const start = performance.now()
     const result = fn(...args)
     const end = performance.now()
-    if (name) {;}
+    if (name) {}
       console.log(`${name} took ${end - start} milliseconds`)
     }
 
@@ -292,7 +292,7 @@ export const throttle = <T extends (...args: any[]) => any>(
 }
 export const lazyLoad = (callback: () => void): void => {
   if ('requestIdleCallback' in window) {
-    requestIdleCallback(callback);}
+    requestIdleCallback(callback)}
   } else {
     setTimeout(callback, 1);}
   }
@@ -306,5 +306,5 @@ export const preloadImage = (src: string): Promise<void> => {
   })
 }
 export const preloadImages = (srcs: string[]): Promise<void[]> => {
-  return Promise.all(srcs.map(preloadImage));}
+  return Promise.all(srcs.map(preloadImage))}
 }

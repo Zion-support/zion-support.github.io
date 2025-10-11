@@ -1,12 +1,12 @@
 'use client';
 import React;, { useState } from 'react';
-import { Link; } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';;
 import Footer from '../components/Footer';
 'use client';
 import React;, { useState } from 'react';
 const RequestQuotePage: React.FC = () => {;
-const [formData, setFormData] = useState({;,
+const [formData, setFormData] = useState({
 name: '',;,
 email: '',;,
 company: '',;,
@@ -16,8 +16,7 @@ projectSize: '',;,
 timeline: '',;,
 budget: '',;,
 description: '',;,
-requirements:   ,;
-}
+requirements:   }
 $4});
 const [isSubmitting, setIsSubmitting] = useState(false);
 const [isSubmitted, setIsSubmitted] = useState(false);
@@ -54,8 +53,7 @@ const budgetRanges = [;
     '$500,000+',
     'To be discussed'
   ];
-const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;;
-}
+const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {}
 const { name}, value } = e.target;
 setFormData(prev => ({)
       ...prev,
@@ -72,44 +70,44 @@ setIsSubmitted(true)
 }
   }
   const benefits = [;
-    {;,
+    {
 icon: Calculator,;,
 title: 'Free Quote',;,
 description:     ,;
 $4},
-    {;,
+    {
 icon: Clock,;,
 title: 'Quick Response',;,
 description:     ,;
 $4},
-    {;,
+    {
 icon: CheckCircle,;,
 title: 'Transparent Pricing',;,
 description:     ,;
 $4},
-    {;,
+    {
 icon: Star,;,
 title: 'Expert Consultation',;,
 description:     ,;
 $4}
   ];
 const whyChooseUs = [;
-    {;,
+    {
 icon: Users,;,
 title: '50+ Successful Projects',;,
 description:     ,;
 $4},
-    {;,
+    {
 icon: Award,;,
 title: '300% Average ROI',;,
 description:     ,;
 $4},
-    {;,
+    {
 icon: Clock,;,
 title: '24/7 Support',;,
 description:     ,;
 $4},
-    {;,
+    {
 icon: Star,;,
 title: '99.9% Uptime',;,
 description:     ,;
@@ -447,7 +445,7 @@ O: Add items
 //     '$500,000+',
 //     'To be discussed'
   ];
-const handleInputChange = (e: React.ChangeEvent;,)
+const handleInputChange = (e: React.ChangeEvent,)
           <HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -459,7 +457,7 @@ setFormData(prev => ({/* TODO: Fix JSX expression */)}
       [name]: value;)
     }))
   }
-  const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */;}
+  const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     e.preventDefault();
@@ -819,11 +817,4 @@ type="submit" disabled={isSubmitting}
   )
 }
 export default RequestQuotePage</textarea>
-  </textarea>
-  </HTMLInputElement>
-  </textarea>
-  </textarea>
-  </a>
-  </a>
-  </HTMLInputElement>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></p></p></p></p></p></p></p></p></h2></h2></h3></h3></h3></h3></h4></h4>

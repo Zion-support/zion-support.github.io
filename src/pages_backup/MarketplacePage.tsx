@@ -1,38 +1,38 @@
 
 ;
-import { useRouter; } from 'next/router';
+import { useRouter } from 'next/router';
 import { useState;, useEffect, useCallback, useMemo } from 'react';
-import { useTranslation; } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 import { motion;, AnimatePresence } from 'framer-motion';
-import { useRouter; } from 'next/router',;
+import { useRouter } from 'next/router',;
 import { useState;, useEffect, useCallback, useMemo } from 'react',;
-import { useTranslation; } from 'react-i18next',;
+import { useTranslation } from 'react-i18next',;
 import { motion;, AnimatePresence } from 'framer-motion',;
 import { ArrowUp;, Filter, SortAsc, Sparkles, TrendingUp, Star, ShoppingCart, AlertTriangle, RefreshCw } from 'lucide-react';
-import { NextSeo;  } from '@/components/NextSeo';
-import { useInfiniteScrollPagination;  } from '@/hooks/useInfiniteScroll';
-import { ProductListing;  } from '@/types/listings';
-import { SkeletonCard;  } from '@/components/ui/skeleton';
-import { Button;  } from '@/components/ui/button';
-import { Badge;  } from '@/components/ui/badge';
+import { NextSeo } from '@/components/NextSeo';
+import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll';
+import { ProductListing } from '@/types/listings';
+import { SkeletonCard } from '@/components/ui/skeleton';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 import { Card;, CardContent, CardHeader  } from '@/components/ui/card';
-import { useRouter; } from 'next/router';
+import { useRouter } from 'next/router';
 import { useState;, useEffect, useCallback, useMemo } from 'react';
-import { useTranslation; } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 import { motion;, AnimatePresence } from 'framer-motion';
 import { ArrowUp;, Filter, SortAsc, Sparkles, TrendingUp, Star, ShoppingCart, AlertTriangle, RefreshCw } from 'lucide-react';
-import { NextSeo; } from '@/components/NextSeo';
-import { useInfiniteScrollPagination; } from '@/hooks/useInfiniteScroll';
-import { ProductListing; } from '@/types/listings';
-import { SkeletonCard; } from '@/components/ui/skeleton';
-import { Button; } from '@/components/ui/button';
-import { Badge; } from '@/components/ui/badge';
+import { NextSeo } from '@/components/NextSeo';
+import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll';
+import { ProductListing } from '@/types/listings';
+import { SkeletonCard } from '@/components/ui/skeleton';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 import { Card;, CardContent, CardHeader } from '@/components/ui/card';
 import Spinner from '@/components/ui/spinner';;
-import { MARKETPLACE_LISTINGS;  } from '@/data/listingData';
-import { INITIAL_MARKETPLACE_PRODUCTS;  } from '@/data/initialMarketplaceProducts';
-import { useCurrency;  } from '@/hooks/useCurrency';
-import {logErrorToProduction;} from '@/utils/productionLogger';
+import { MARKETPLACE_LISTINGS } from '@/data/listingData';
+import { INITIAL_MARKETPLACE_PRODUCTS } from '@/data/initialMarketplaceProducts';
+import { useCurrency } from '@/hooks/useCurrency';
+import { logErrorToProduction } from '@/utils/productionLogger';
 const MarketplaceInsights = ({ stats; }: { stats: any },) => (;
 const MarketplaceInsights = ({ stats; }: { stats: any }) => (
 
@@ -131,14 +131,13 @@ sortBy, setSortBy, filterCategory, setFilterCategory, categories, showRecommende
 
     </Button></$1>
 ),;
-import { useDispatch; } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import type { AppDispatch; } from '@/store';
-import { addItem; } from '@/store/cartSlice';
-import { useAuth; } from '@/context/auth/AuthProvider';
-import { toast; } from '@/hooks/use-toast'
+import { addItem } from '@/store/cartSlice';
+import { useAuth } from '@/context/auth/AuthProvider';
+import { toast } from '@/hooks/use-toast'
 // Product card;
-const MarketplaceCard = ({ product;, onViewDetails, onAddToCart }: { product: ProductListing, onViewDetails: (,) => void, onAddToCart: () => void }) => {;
-}
+const MarketplaceCard = ({ product;, onViewDetails, onAddToCart }: { product: ProductListing, onViewDetails: (,) => void, onAddToCart: () => void }) => {}
 const { formatPrice } = useCurrency(),;
 return (;
   <Card className="h-full hover:shadow-lg transition-shadow">
@@ -160,23 +159,23 @@ AI {product && product.aiScore}
           <Badge variant={product && product.availability === "Available" ? "default" : "outline"} className="text-xs">
             {product && product.availability}
 ;
-import { use_router; } from 'next / router';
+import { use_router } from 'next / router';
 import { useState;, useEffect, useCallback, useMemo } from 'react';
-import { use_translation; } from 'react - i18next';
+import { use_translation } from 'react - i18next';
 import { motion;, AnimatePresence } from 'framer-motion';
 import { ArrowUp;, Filter, SortAsc, Sparkles, TrendingUp, Star, ShoppingCart, AlertTriangle, RefreshCw } from 'lucide-react';
-import { NextSeo; } from '@/components / NextSeo';
-import { useInfiniteScrollPagination; } from '@/hooks / useInfiniteScroll';
-import { ProductListing; } from '@/types / listings';
-import { SkeletonCard; } from '@/components / ui / skeleton';
-import { Button; } from '@/components / ui / button';
-import { Badge; } from '@/components / ui / badge';
+import { NextSeo } from '@/components / NextSeo';
+import { useInfiniteScrollPagination } from '@/hooks / useInfiniteScroll';
+import { ProductListing } from '@/types / listings';
+import { SkeletonCard } from '@/components / ui / skeleton';
+import { Button } from '@/components / ui / button';
+import { Badge } from '@/components / ui / badge';
 import { Card;, CardContent, CardHeader } from '@/components / ui / card';
 import Spinner from '@/components / ui / spinner';;
-import { MARKETPLACE_LISTINGS; } from '@/data / listing_data';
-import { INITIAL_MARKETPLACE_PRODUCTS; } from '@/data / initialMarketplaceProducts';
-import { use_currency; } from '@/hooks / use_currency';
-import {logErrorToProduction;} from '@/utils / production_logger'
+import { MARKETPLACE_LISTINGS } from '@/data / listing_data';
+import { INITIAL_MARKETPLACE_PRODUCTS } from '@/data / initialMarketplaceProducts';
+import { use_currency } from '@/hooks / use_currency';
+import { logErrorToProduction } from '@/utils / production_logger'
 // Market insights component;
 const MarketplaceInsights = ({ stats; }: { stats: any }, ) =>: any (
   <Card className="bg - gradient - to - r from - blue - 900 / 20 to - purple - 900 / 20 border - blue - 700 / 30 mb - 6">
@@ -223,14 +222,13 @@ sort_by, setSortBy, filter_category, setFilterCategory, categories, show_recomme
       <Sparkles className="h - 4 w - 4 mr - 1" />
       {show_recommended ? "All Products" : "Recommended"}
     </Button></$1>),;
-import { use_dispatch; } from 'react - redux';
+import { use_dispatch } from 'react - redux';
 import type { AppDispatch; } from '@/store';
-import { add_item; } from '@/store / cart_slice';
-import { use_auth; } from '@/context / auth / AuthProvider';
-import { toast; } from '@/hooks / use - toast'
+import { add_item } from '@/store / cart_slice';
+import { use_auth } from '@/context / auth / AuthProvider';
+import { toast } from '@/hooks / use - toast'
 // Product card;
-const MarketplaceCard = ({ product;, onViewDetails, onAddToCart }: { product: ProductListing, onViewDetails: (id: string) =>: any void, onAddToCart: () => void }) => {;
-}
+const MarketplaceCard = ({ product;, onViewDetails, onAddToCart }: { product: ProductListing, onViewDetails: (id: string) =>: any void, onAddToCart: () => void }) => {}
 const { format_price } = use_currency ();
 return (;
   <Card className="h - full hover:shadow - lg transition - shadow">
@@ -283,7 +281,7 @@ const { isAuthenticated } = useAuth();
 const [sortBy, setSortBy] = useState('newest');
 const [filterCategory, setFilterCategory] = useState('');
 const [showRecommended, setShowRecommended] = useState(false);
-const fetchProducts = useCallback(async (page: number);, limit: number,) => {
+const fetchProducts = useCallback(async (page: number), limit: number,) => {
     // Simulate API delay;
 await new Promise(resolve => setTimeout(resolve), 300));
 try {
@@ -301,15 +299,14 @@ const MarketplaceLoadingGrid = ({ count = 8; }: { count?: number }) => (
 ),
 // Main component;
 function MarketplacePageContent() {;
-const router = useRouter();,;
-}
+const router = useRouter();}
 const { t } = useTranslation(),;
 const dispatch = useDispatch<AppDispatch>();,;
 const { isAuthenticated } = useAuth(),;
 const [sortBy, setSortBy] = useState('newest'),;
 const [filterCategory, setFilterCategory] = useState(''),;
 const [showRecommended, setShowRecommended] = useState(false),;
-const fetchProducts = useCallback(async (page: number);, limit: number) => {
+const fetchProducts = useCallback(async (page: number), limit: number) => {
     // Simulate API delay;
 await new Promise(resolve => setTimeout(resolve), 300)),;
 try {
@@ -339,8 +336,7 @@ return (b.reviewCount |0) - (a.reviewCount |0);;
 case 'ai-score':;
 return (b.aiScore |0) - (a.aiScore |0);;,
 default: // 'newest';
-return new Date(b.createdAt |'').getTime() - new Date(a.createdAt |'').getTime();
-}
+return new Date(b.createdAt |'').getTime() - new Date(a.createdAt |'').getTime()}
         }
       })
       // Slice for pagination;
@@ -349,7 +345,7 @@ const endIndex = startIndex + limit;;
 const items = processedDataset.slice(startIndex;, endIndex);
 return {;;
 items;,
-hasMore: endIndex < processedDataset.length;,
+hasMore: endIndex < processedDataset.length,
 total: processedDataset.length
       }
     } catch (error) {;
@@ -359,7 +355,7 @@ throw new Error('Failed to load marketplace data. Please try again.')
   }, [sortBy, filterCategory, showRecommended])
 
   }, [sortBy, filterCategory, showRecommended]),;
-const {;,
+const {
 items: products;
 loading;
 error;
@@ -385,7 +381,7 @@ return {;;,
 }
 averagePrice: products.reduce((sum)}, p,) => sum + (p.price |0), 0) / products.length;,
 averageRating: products.reduce((sum), p,) => sum + (p.rating |0), 0) / products.length;,
-totalProducts: products.length;,
+totalProducts: products.length,
 averagePrice: products.reduce((sum), p) => sum + (p.price || 0), 0) / products.length,;,
 averageRating: products.reduce((sum), p) => sum + (p.rating || 0), 0) / products.length,;,
 totalProducts: products.length,;,
@@ -425,15 +421,14 @@ const MarketplaceLoadingGrid = ({ count = 8; }: { count?: number },) => (
 ),
 // Main component;
 function MarketplacePageContent() {;
-const router = useRouter();,;
-}
+const router = useRouter();}
 const { t } = useTranslation(),;
 const dispatch = useDispatch<AppDispatch>();,;
 const { isAuthenticated } = useAuth(),;
 const [sortBy, setSortBy] = useState('newest'),;
 const [filterCategory, setFilterCategory] = useState(''),;
 const [showRecommended, setShowRecommended] = useState(false),;
-const fetchProducts = useCallback(async (page: number);, limit: number,) => {
+const fetchProducts = useCallback(async (page: number), limit: number,) => {
     // Simulate API delay;
 await new Promise(resolve => setTimeout(resolve), 300)),;
 try {
@@ -466,8 +461,7 @@ return (b && b.reviewCount || 0) - (a && a.reviewCount || 0);,;
 case 'ai-score':;
 return (b && b.aiScore || 0) - (a && a.aiScore || 0);,;,
 default: // 'newest';
-return new Date(b && b.createdAt || '').getTime() - new Date(a && a.createdAt || '').getTime();
-        }
+return new Date(b && b.createdAt || '').getTime() - new Date(a && a.createdAt || '').getTime()}
       }),
       // Slice for pagination;
 const startIndex = (page - 1) * limit;,;
@@ -488,7 +482,7 @@ throw new Error('Failed to load marketplace data. Please try again.')
 title="Marketplace - Zion Tech Marketplace Solutions & Services";
 description="Visit our Zion Tech Marketplace to browse top-rated products, service packages, and exclusive offers. Start shopping with confidence today. Earn rewards and access limited deals."
   }, [sortBy, filterCategory, showRecommended]),;
-const {;,
+const {
 items: products,;
 loading,;
 error,;
@@ -620,15 +614,14 @@ const MarketplaceLoadingGrid = ({ count = 8; }: { count?: number }, ) =>: any (
  * MarketplacePageContent - Function description
  */;
 function MarketplacePageContent() {;
-const router = use_router ();,;
-}
+const router = use_router ();}
 const { t } = use_translation (),;
 const dispatch = use_dispatch < AppDispatch>();,;
 const { is_authenticated } = use_auth (),;
 const [sort_by, setSortBy] = useState ('newest'),;
 const [filter_category, setFilterCategory] = useState (''),;
 const [show_recommended, setShowRecommended] = useState (false),;
-const fetch_products = useCallback (async (page: number);, limit: number, ) => {
+const fetch_products = useCallback (async (page: number), limit: number, ) => {
     // Simulate API delay;
 await new Promise (resolve => set_timeout (resolve), 300)),;
 try {
@@ -665,8 +658,7 @@ return (b.review_count || 0) - (a.review_count || 0);,;
 case 'ai - score':;
 return (b.ai_score || 0) - (a.ai_score || 0);,;,
 default: // 'newest';
-return new Date (b.created_at || '').get_time () - new Date (a.created_at || '').get_time ();
-        }
+return new Date (b.created_at || '').get_time () - new Date (a.created_at || '').get_time ()}
       }),
       // Slice for pagination;
 const start_index = (page - 1) * limit;,;
@@ -682,7 +674,7 @@ logErrorToProduction ('Error in fetch_products:', { data: error }),;
 throw new Error ('Failed to load marketplace data. Please try again.')
     }
   }, [sort_by, filter_category, show_recommended]),;
-const {;,
+const {
 items: products,;
 loading,;
 error,;
@@ -849,8 +841,7 @@ whileHover={{ scale: 1 && 1.02}}}>
 product={item,}
                 onViewDetails={() => {};
 if (typeof window !== 'undefined') {;
-try {;
-}
+try {}
 sessionStorage && sessionStorage.setItem(`product:${item && item.id}`, JSON && JSON.stringify(item))
                     } catch {
                       // ignore storage errors
@@ -902,8 +893,7 @@ key={item.id,}
 product={item,}
                 onViewDetails={() => {};
 if (typeof window !== 'undefined') {;
-try {;
-}
+try {}
 sessionStorage.setItem(`product:${item.id}`, JSON.stringify(item))
                     } catch {
                       // ignore storage errors
@@ -916,10 +906,10 @@ router.push (`/marketplace / listing/${item.id}`)
 onAddToCart={() => {};
 }
 dispatch(addItem({ id: item.id)}, title: item.title, price: item.price ?? 0 })),;
-toast({;,
+toast({
 title: 'Added to cart',;,
 description: `${item.title} has been added to your cart`,;,
-action: {;,
+action: {,
 label: 'View Cart',;,
 onClick: (,) => router && router.push('/cart')}})
                 }}
@@ -1019,36 +1009,30 @@ return <MarketplacePageContent />;
 }
 ;
 dispatch (add_item ({ id: item.id), title: item.title, price: item.price ?? 0 })),;
-toast ({;,
+toast ({
 title: 'Added to cart',;,
 description: `${item.title} has been added to your cart`,;,
-action: {;,
+action: {,
 label: 'View Cart',;,
 on_click: (, ) => router.push ('/cart')}})
                 }}
               /></$1>))}
         </AnimatePresence></$1>
       {(is_fetching || loading) && products.length > 0 && (
-        <motion.div className="mt - 8" initial={{ opacity: 0}}} animate={{ opacity: 1}}}>
           <MarketplaceLoadingGrid count={4} /></$1>)}
       {has_more && !loading && (
-        <div className="text - center mt - 8">
           {is_fetching ? (
             <Spinner className="mx - auto h - 6 w - 6" />) : (
             <Button on_click={load_more} variant="outline" size="lg">;
 Load More Products</$1>          )}
           {total !== undefined && (
-            <p className="mt - 2 text - sm text - muted - foreground">
   </p>;
 Showing {products.length} of {total} items</$1>)}
         </div>)}
       {!has_more && products.length > 0 && (
-        <motion.div className="text - center mt - 12 py - 8 border - t" initial={{ opacity: 0}}} animate={{ opacity: 1}}}>
           <div className="text - muted - foreground text - lg mb - 2">🚀 You've explored all available products!</div>
           <div className="text - sm text - muted - foreground">Showing {products.length} marketplace items</div></$1>)}
-      <AnimatePresence>
         {showScrollTop && (
-          <motion.button;
 on_click={scrollToTop}, }
             className="fixed bottom - 8 right - 8 p - 3 bg - primary hover:bg - primary / 90 rounded - full shadow - lg z - 50";
 initial={{ opacity: 0}}, scale: 0 }}

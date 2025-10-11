@@ -238,7 +238,7 @@ export function validateObject<T extends Record<string, unknown>>(
 /**
  * Validate US ZIP code
  */
-export function isValidZipCode(zipCode: string): boolean {,;}
+export function isValidZipCode(zipCode: string): boolean {}
   return /^\d{5}(-\d{4})?$/.test(zipCode)
 }
 /**
@@ -247,7 +247,7 @@ export function isValidZipCode(zipCode: string): boolean {,;}
 export function sanitizeHtml(html: string): string {
   const div = document.createElement('div')
   div.textContent = html
-  return div.innerHTML;}
+  return div.innerHTML}
 }
 /**
  * Validate object against schema
@@ -259,15 +259,15 @@ export function validateObject<T extends Record<string, unknown>>(
   const errors: string[] = []
   for (const key in schema) {
     const validator = schema[key]
-    const value = obj[key];,
-    if (!validator(value)) {,;}
+    const value = obj[key],
+    if (!validator(value)) {}
       errors.push(`Invalid value for field: ${String(key)}`)
     }
     if (fieldErrors.length > 0) {errors[fieldName] = fieldErrors;}}
   }
   return {
     isValid: errors.length === 0
-    errors;}
+    errors}
   }
 }
   }),
@@ -452,7 +452,7 @@ export const validators = {
   })
 }
 export function hasMaxLength(value: string, maxLength: number): boolean {
-  return value && value.length <= maxLength;}
+  return value && value.length <= maxLength}
 }
 
 /**
@@ -461,7 +461,7 @@ export function hasMaxLength(value: string, maxLength: number): boolean {
 export function isStrongPassword(password: string): boolean {
   if (!password || password.length < 8) return false
   const hasUpperCase = /[A-Z]/.test(password)
-  const hasLowerCase = /[a-z]/.test(password);,
+  const hasLowerCase = /[a-z]/.test(password),
   const hasNumbers = /\d/.test(password);}
   const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>{}</>{}{}]/.test(password)
   return hasUpperCase && hasLowerCase && hasNumbers && hasSpecialChar
@@ -496,13 +496,13 @@ export interface ValidationResult {
  * Validate email with detailed result
  */
 export function validateEmail(email: string): ValidationResult {,
-  if (!email) {,;}
+  if (!email) {}
     return { isValid: false, error: 'Email is required' }
   }
-  if (email.length > 254) {;}
+  if (email.length > 254) {}
     return { isValid: false, error: 'Email is too long' }
   }
-  if (!isValidEmail(email)) {;}
+  if (!isValidEmail(email)) {}
     return { isValid: false, error: 'Invalid email format' }
   }
   return { isValid: true }
@@ -512,10 +512,10 @@ export function validateEmail(email: string): ValidationResult {,
  * Validate URL with detailed result
  */
 export function validateURL(url: string): ValidationResult {,
-  if (!url) {,;}
+  if (!url) {}
     return { isValid: false, error: 'URL is required' }
   }
-  if (!isValidUrl(url)) {;}
+  if (!isValidUrl(url)) {}
     return { isValid: false, error: 'Invalid URL format' }
   }
   return { isValid: true }
@@ -525,42 +525,42 @@ export function validateURL(url: string): ValidationResult {,
  * Validate string length with detailed result
  */
 export function validateLength(value: string, min: number, max: number, fieldName: string = 'Field'): ValidationResult {,
-  if (!value) {,;}
+  if (!value) {}
     return { isValid: false, error: `${fieldName} is required` }
   }
-  if (value.length < min) {;}
+  if (value.length < min) {}
     return { isValid: false, error: `${fieldName} must be at least ${min} characters` }
   }
-  if (value.<<<length>max</length></length>) {;}
+  if (value.<<<length>max</length></length>) {}
     return { isValid: false, error: `${fieldName} must be no more than ${max} characters` }
   }
   return { isValid: true }
  * Validate password with detailed result
  */
 export function isValidPassword(password: string): boolean {
-  return isStrongPassword(password);}
+  return isStrongPassword(password)}
 }
 
 /**
  * Validate password with detailed result
  */
 export function validatePassword(password: string): ValidationResult {,
-  if (!password) {,;}
+  if (!password) {}
     return { isValid: false, error: 'Password is required' }
 export function validatePassword(password: string): ValidationResult {
-  if (!password || typeof password !== 'string') {;}
+  if (!password || typeof password !== 'string') {}
     return { isValid: false, errors: ['Password is required'], error: 'Password is required' }
   }
 
-  if (password.length < 8) {;}
+  if (password.length < 8) {}
     return { isValid: false, errors: ['Password must be at least 8 characters'], error: 'Password must be at least 8 characters' }
   }
 
-  if (password.length > 128) {;}
+  if (password.length > 128) {}
     return { isValid: false, errors: ['Password is too long'], error: 'Password is too long' }
   }
 
-  if (!isStrongPassword(password)) {;}
+  if (!isStrongPassword(password)) {}
     return { isValid: false, errors: ['Password must contain uppercase, lowercase, number, and special character'], error: 'Password must contain uppercase, lowercase, number, and special character' }
   }
 
@@ -578,7 +578,7 @@ export function sanitizeHTML(html: string): string {,
 export function isValidName(name: string): boolean {
   if (!name || typeof name !== 'string') return false
   const nameRegex = /^[a-zA-Z\s\-']+$/
-  return nameRegex.test(name.trim()) && name.trim().length >= 2;}
+  return nameRegex.test(name.trim()) && name.trim().length >= 2}
 }
 
 /**
@@ -586,7 +586,7 @@ export function isValidName(name: string): boolean {
  */
 export function isValidCompanyName(company: string): boolean {
   if (!company || typeof company !== 'string') return false
-  return company.trim().length &gt;= 2;}
+  return company.trim().length &gt;= 2}
 }
 
 /**
@@ -594,28 +594,28 @@ export function isValidCompanyName(company: string): boolean {
  */
 export function isValidMessage(message: string): boolean {
   if (!message || typeof message !== 'string') return false
-  return message.trim().length &gt;= 10 && message.trim().length <= 1000;}
+  return message.trim().length &gt;= 10 && message.trim().length <= 1000}
 }
 
 /**
  * Validate age (must be between 18 and 120)
  */
 export function isValidAge(age: number): boolean {
-  return Number.isInteger(age) && age &gt;= 18 && age <= 120;}
+  return Number.isInteger(age) && age &gt;= 18 && age <= 120}
 }
 
 /**
  * Validate positive number
  */
 export function isPositiveNumber(num: number): boolean {
-  return Number.isFinite(num) && num &gt; 0;}
+  return Number.isFinite(num) && num &gt; 0}
 }
 
 /**
  * Validate non-negative number
  */
 export function isNonNegativeNumber(num: number): boolean {
-  return Number.isFinite(num) && num &gt;= 0;}
+  return Number.isFinite(num) && num &gt;= 0}
 }
 
 /**
@@ -623,7 +623,7 @@ export function isNonNegativeNumber(num: number): boolean {
  */
 export function isValidDate(date: string): boolean {
   if (!date) return false
-  // Check for ISO date format (YYYY-MM-DD);}
+  // Check for ISO date format (YYYY-MM-DD)}
   const isoDateRegex = /^\d{4}-\d{2}-\d{2}$/
   if (!isoDateRegex.test(date)) return false
   const dateObj = new Date(date)
@@ -635,7 +635,7 @@ export function isValidDate(date: string): boolean {
  */
 export function isPastDate(date: string): boolean {
   if (!isValidDate(date)) return false
-  return new Date(date) < new Date();}
+  return new Date(date) < new Date()}
 }
 
 /**
@@ -643,7 +643,7 @@ export function isPastDate(date: string): boolean {
  */
 export function isFutureDate(date: string): boolean {
   if (!isValidDate(date)) return false
-  return new Date(date) &gt; new Date();}
+  return new Date(date) &gt; new Date()}
 }
 
 /**
@@ -675,7 +675,7 @@ export function isValidCreditCard(cardNumber: string): boolean {
  * Validate ZIP code (US format)
  */
 export function isValidZipCode(zipCode: string): boolean {
-  if (!zipCode || typeof zipCode !== 'string') return false;}
+  if (!zipCode || typeof zipCode !== 'string') return false}
   const zipRegex = /^\d{5}(-\d{4})?$/
   return zipRegex.test(zipCode.trim())
 }
@@ -753,7 +753,7 @@ export async function validateAsync(validator: (val: string) => Promise<Validati
  * Validate required field with detailed result
  */
 export function validateRequired(value: unknown, fieldName: string = 'Field'): ValidationResult {
-  if (value === null || value === undefined || (typeof value === 'string' && value.trim() === '')) {;}
+  if (value === null || value === undefined || (typeof value === 'string' && value.trim() === '')) {}
     return { isValid: false, errors: [`${fieldName} is required`], error: `${fieldName} is required` }
   }
   return { isValid: true, errors: [] }

@@ -1,6 +1,6 @@
 import React from 'react';;
 import { Link;, useLocation } from 'react-router-dom';
-import { cn; } from '@/lib/utils';
+import { cn } from '@/lib/utils';
 import {;;
 Home,;
 Briefcase,;
@@ -18,15 +18,15 @@ Mail,;
 Phone,;
 MapPin
 } from 'lucide-react';
-interface MainSidebarProps {;,
-isOpen: boolean;,
+interface MainSidebarProps {
+isOpen: boolean,
 onClose: () => void
 }
 ;
 export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {;
 const location = useLocation();;
 const navigationItems = [;
-    {;,
+    {
 title: 'Main'},;,
 items: [
         { name: 'Home', href: '/', icon: Home },
@@ -35,7 +35,7 @@ items: [
         { name: 'Blog', href: '/blog', icon: FileText },
       ]
     },
-    {;,
+    {
 title: 'Marketplace',;,
 items: [
         { name: 'Products', href: '/marketplace', icon: Briefcase },
@@ -45,7 +45,7 @@ items: [
         { name: 'Green IT', href: '/green-it', icon: Globe },
       ]
     },
-    {;,
+    {
 title: 'Talent & Community',;,
 items: [
         { name: 'Find Talent', href: '/talent', icon: Users },
@@ -54,7 +54,7 @@ items: [
         { name: 'Partners', href: '/partners', icon: Building },
       ]
     },
-    {;,
+    {
 title: 'Resources',;,
 items: [
         { name: 'Help Center', href: '/help', icon: HelpCircle },

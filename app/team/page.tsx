@@ -7,6 +7,5 @@ const PagePage: React.FC = () => {return (
       
       <Footer />
     </>
-  );}
+  )}
 export default PagePage
-  </Footer>

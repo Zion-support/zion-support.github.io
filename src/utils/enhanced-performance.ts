@@ -388,7 +388,6 @@ export class PerformanceMonitor {/* TODO: Fix JSX expression */}
 // Utility Functions
  * Throttle function
 export function throttle
-          <T extends (...arg)
   s: unknown[]) => any>(* Request idle callback wrapper,
 export function runWhenIdle(callbac)
   k: () => void, timeout = 1000): void {/* TODO: Fix JSX expression */}

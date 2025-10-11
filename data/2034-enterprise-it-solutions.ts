@@ -122,7 +122,7 @@ export type EnterpriseITSolution = {/* TODO: Fix JSX expression */}
   integrations?: string[]
   use_cases?: string[]
   link: string; // canonical internal link under /services/*
-  real_service?: boolean;,
+  real_service?: boolean,
   rating?: number
   lin,
   k: string; // canonical internal link under /services/*
@@ -2016,7 +2016,7 @@ export type EnterpriseITSolution = {
 export type EnterpriseITSolution = {
 	id: string
 	name: string
-	tagline?: string;,
+	tagline?: string,
 	description: string
 	category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity'}
 	pricing: {,
@@ -2025,7 +2025,7 @@ export type EnterpriseITSolution = {
 		enterprise?: string
 	}
 	features: string[]
-	integrations?: string[];,
+	integrations?: string[],
 	useCases?: string[];,
 	link: string, // canonical internal link under /services/*
 export const,

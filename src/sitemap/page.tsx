@@ -206,15 +206,4 @@ const SitemapPage: React.FC = () => {
   ),
 }
 export default SitemapPage</Link>
-  </Link>
-  </p>
-  </h2>
-  </h2>
-  </h2>
-  </h2>
-  </h2>
-  </h2>
-  </p>
-  </h1>
-  </SEOOptimizer>
 </div></div></div></div></div></div></div></div></div></div></div></div></p></p></p></p></p></p></p></h3></h3></h3></h3></h3></h3></section></section></section></section></section></section></section>

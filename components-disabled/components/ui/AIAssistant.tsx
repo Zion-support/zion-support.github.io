@@ -31,5 +31,5 @@ dark:border-gray-800 bg-gray-50,");,
 dark:bg-gray-900 p-3 text-sm whitespace-pre-wrap' />)' {output || 'No content yet. Click Generate.'} </pre> )} </div> </div> </div> </div> )} </React.Fragment>; ); }"' <pre className="text-left">{output || 'No content yet. Click Generate.'}</pre> onChange={e => setOutput(e.target.value)} rows={12}' className='w-full rounded-md border border-gray-300,;,
 dark:border-gray-700 bg-white,;,
 dark:bg-gray-900 p-2 text-sm' /> ) : (' <re className='w-full rounded-md border border-gray-200,$2 />;,
-dark:border-gray-800 bg-gray-50);,
+dark: border-gray-800 bg-gray-50),
 dark:bg-gray-900 p-3 text-sm whitespace-pre-wrap'>' {output || 'No content yet. Click Generate.'} </pre> origin/cursor/automate-test-improve-and-merge-code-2533 )} </div> </div> </div> </div> )} </React.Fragment>'"`</button></button></p></p></p></p></h3></h3>

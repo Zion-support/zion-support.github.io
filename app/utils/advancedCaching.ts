@@ -22,17 +22,17 @@ const AdvancedCachingPage: React.FC = () => {
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency';}
+      description: 'Advanced AI technology to transform your business operations and improve efficiency'}
     },
     {
       icon: Zap,
       title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results';}
+      description: 'Lightning-fast processing and real-time analytics for optimal results'}
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards';}
+      description: 'Bank-level security with encryption and compliance standards'}
     },
     {
       icon: Globe,
@@ -108,7 +108,10 @@ return (
                 <h3 className="text-xl font-semibold text-white mb-3"></h3></h3>{feature.title}</h3>
                 <p className="text-gray-300"></p></p>{feature.description</p&gt;}</p>
               </div>
-            )</div>
+            )
+                
+                
+                </div>
           </div>
         </div>
       </section>
@@ -117,10 +120,15 @@ return (
             <h2>Key Benefits;</h2>
             </h2>
               </div>
-            )</div>
+            )
+                
+                
+                </div>
           </div>
         ))
-      </section>
+      
+        
+        </section>
             </h2>
             <p>Contact our experts to discuss your advancedcaching needs and get a customized solution.;</p>
             </p>
@@ -152,5 +160,7 @@ return (
             </div>
           </div>
         ))
-      </section>
+      
+        
+        </section>
     </div>

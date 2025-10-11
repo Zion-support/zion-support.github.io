@@ -1,5 +1,5 @@
 import React from 'react';;
-import { Helmet; } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 interface SEOHeadProps {;
 title?: string;
 description?: string;
@@ -14,9 +14,8 @@ keywords = "AI solutions, enterprise AI, quantum computing, digital transformati
 image = "https://ziontechgroup.com/og-image.png",;
 url = "https://ziontechgroup.com",;
 type = "website"
-}) => {;
-}
-const structuredData={"@context": "https://schema.org";},
+}) => {}
+const structuredData={"@context": "https: //schema.org"},
     "@type": "Organization",
     "name": "Zion Tech Group",
     "url": "https://ziontechgroup.com",

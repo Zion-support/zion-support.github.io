@@ -1,31 +1,31 @@
 import React from 'react';;
 import { CheckCircle;, TrendingUp, Phone, Mail, MapPin, Star, Zap, Shield, Clock, Users, Award, ArrowRight, Cube, Palette, Camera, Layers } from 'lucide-react';
-import { Helmet; } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';;
 import Footer from '../components/Footer';;
 ;
 const AI3DGenerationPage: React.FC = () => {;
 const industries = [;
-    {;,
+    {,
 }
 title: 'Architecture & Real Estate'},;,
 description: 'Create 3D visualizations and virtual tours',;,
 icon: Building,;,
 features: ['3D building models', 'Virtual walkthroughs', 'Interior design', 'Landscape visualization']
     },
-    {;,
+    {
 title: 'Gaming & Entertainment',;,
 description: 'Generate game assets and characters',;,
 icon: Gamepad2,;,
 features: ['Character models', 'Environment assets', 'Animation sequences', 'Texture generation']
     },
-    {;,
+    {
 title: 'Manufacturing & Product Design',;,
 description: 'Prototype and visualize products',;,
 icon: Wrench,;,
 features: ['Product prototypes', 'Assembly visualization', 'Material testing', 'Quality inspection']
     },
-    {;,
+    {
 title: 'Healthcare & Medical',;,
 description: 'Create medical models and simulations',;,
 icon: Stethoscope,;,
@@ -34,19 +34,19 @@ features: ['Anatomical models', 'Surgical planning', 'Medical training', 'Prosth
   ];
 ;
 const features = [;
-    {;,
+    {
 icon: Cube,;,
 title: 'AI-Powered 3D Modeling',;,
 description: 'Generate complex 3D models from text descriptions or 2D images',;,
 benefits: ['90% faster modeling', 'Unlimited creativity', 'Consistent quality', 'Cost effective']
     },
-    {;,
+    {
 icon: Palette,;,
 title: 'Advanced Texturing',;,
 description: 'Create realistic textures and materials automatically',;,
 benefits: ['Photorealistic results', 'Material variety', 'Lighting optimization', 'Seamless integration']
     },
-    {;,
+    {
 icon: Camera,;,
 title: 'Rendering & Animation',;,
 description: 'Produce high-quality renders and smooth animations',;,
@@ -186,7 +186,7 @@ View Demo
           <section className="text-center bg-gradient-to-r from-cyan-600 to-purple-600 rounded-lg p-12">
             <h2 className="text-3xl font-bold text-white mb-4">Ready to Create Amazing 3D Content?</h2>
             <p className="text-xl text-cyan-100 mb-8">Let our AI 3D generation technology transform your creative process</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <a;
 href="tel:+13024640950";
 className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center gap-2"
@@ -207,7 +207,6 @@ Get Free Quote
       
       <Footer />
     </div>
-  );
-};
+  )};
 ;
 export default AI3DGenerationPage;

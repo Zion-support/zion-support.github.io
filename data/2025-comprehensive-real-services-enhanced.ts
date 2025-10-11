@@ -10,26 +10,22 @@ export interface Service {
     starter: {
       price: number;
       period: string;
-      features: string[];
-    };
+      features: string[]};
     professional: {
       price: number;
       period: string;
-      features: string[];
-    };
+      features: string[]};
     enterprise: {
       price: number;
       period: string;
-      features: string[];
-    };
+      features: string[]};
   };
   category: string;
   tags: string[];
   website: string;
   contact: {
     phone: string;
-    email: string;
-  };
+    email: string};
   marketSize: string;
   targetAudience: string;
   competitiveAdvantage: string;
@@ -39,8 +35,7 @@ export interface Service {
   icon: string;
   benefits: string[];
   marketPrice: string;
-  savings: string;
-}
+  savings: string}
 
 // Micro SAAS Services - Real, Market-Validated Solutions
 export const microSaasServices: Service[] = [

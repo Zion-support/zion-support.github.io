@@ -661,7 +661,6 @@ import {
   Clock,
   CheckCircle,
   AlertTriangle,
-  TrendingUp
 } from 'lucide-react'
 import { SEO } from '@/components/SEO'
 const IT_SERVICES = [
@@ -845,8 +844,6 @@ const SERVICE_BENEFITS = [
 ]
 export default function ITServicesPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-slate to-zion-purple-dark">
-      <SEO 
         title="IT Services & Solutions - Zion Tech Group" 
         description="Comprehensive IT services including cloud solutions, cybersecurity, infrastructure, managed services, and more. Expert IT solutions for businesses."
         keywords="IT services, cloud computing, cybersecurity, network infrastructure, managed IT services, software development, disaster recovery"
@@ -854,13 +851,9 @@ export default function ITServicesPage() {
       />
 
       {/* Hero Section */}
-      <div className="relative overflow-hidden bg-gradient-to-r from-zion-blue-dark to-zion-purple-dark py-20">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
-        <div className="relative container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             IT Services & Solutions
-          </h1>
 import React from 'react'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -1205,67 +1198,25 @@ export default function ITServicesPage() {
     }
   }, [selectedCategory])
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-slate to-zion-blue-dark">
       {/* Hero Section */}
-      <div className="relative overflow-hidden bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 py-20">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/10 to-zion-cyan/10 opacity-20"></div>
-        <div className="container mx-auto px-4 text-center relative z-10">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan bg-clip-text text-transparent">
             IT Services
-          </h1>
-          <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
             Comprehensive IT solutions to modernize your infrastructure, enhance security, and drive business growth. 
             From cloud migration to custom development, we've got you covered.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-3">
-              <Server className="h-5 w-5 mr-2" />
               Explore IT Solutions
-            </Button>
-            <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-3">
-              <Settings className="h-5 w-5 mr-2" />
               Get IT Consultation
-          <p className="text-xl text-zion-cyan max-w-3xl mx-auto mb-8">
             Comprehensive IT services to modernize your infrastructure, enhance security, 
             and drive business growth through technology innovation.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button asChild size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
               <Link to="/request-quote">Get IT Quote</Link>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
               <Link to="/contact">Schedule Consultation</Link>
-            </Button>
-          </div>
-        </div>
-      </div>
 
       {/* Contact Info Banner */}
-      <div className="bg-zion-blue-dark/80 border-b border-zion-blue-light">
-        <div className="container mx-auto px-4 py-6">
-          <div className="flex flex-wrap items-center justify-center gap-8 text-center">
-            <div className="flex items-center gap-3">
-              <Phone className="h-5 w-5 text-zion-cyan" />
               <span className="text-white">+1 302 464 0950</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <Mail className="h-5 w-5 text-zion-cyan" />
               <span className="text-white">kleber@ziontechgroup.com</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <MapPin className="h-5 w-5 text-zion-cyan" />
               <span className="text-white">364 E Main St STE 1008, Middletown DE 19709</span>
-            </div>
-          </div>
-        </div>
-      </div>
 
       {/* Category Filter */}
-      <div className="py-8 bg-zion-blue-dark/50">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center gap-3">
             {categories.map((category) => (
-              <Button
                 key={category}
                 variant={selectedCategory === category ? "default" : "outline"}
                 onClick={() => setSelectedCategory(category)}
@@ -1276,156 +1227,74 @@ export default function ITServicesPage() {
                 }`}
               >
                 {category}
-              </Button>
       {/* Service Benefits */}
-      <div className="py-16 bg-zion-slate/50">
-        <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Why Choose Our IT Services?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {SERVICE_BENEFITS.map((benefit, index) => (
-              <div key={index} className="text-center">
                 <div className="mb-4">{benefit.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
                 <p className="text-zion-cyan/80">{benefit.description}</p>
-              </div>
             ))}
-          </div>
-        </div>
-      </div>
 
       {/* Categories Overview */}
-      <div className="py-16 bg-zion-slate">
-        <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-white text-center mb-12">IT Service Categories</h2>
-          <div className="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-9 gap-4">
             {IT_SERVICE_CATEGORIES.map((category) => (
-              <div key={category.name} className="text-center">
-                <div className={`w-16 h-16 ${category.color} rounded-full mx-auto mb-3 flex items-center justify-center`}>
                   <span className="text-white font-bold text-lg">{category.count}</span>
-                </div>
                 <p className="text-zion-cyan font-medium text-sm">{category.name}</p>
-              </div>
             ))}
-          </div>
-        </div>
-      </div>
 
       {/* IT Services Grid */}
-      <div className="py-20 bg-zion-blue-dark/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Comprehensive IT Solutions</h2>
-            <p className="text-xl text-zion-cyan max-w-3xl mx-auto">
               Choose from our extensive range of IT services designed to meet your business needs
-            </p>
-          </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {IT_SERVICES.map((service) => (
-              <Card key={service.id} className="bg-zion-blue-dark/50 border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-purple/20">
-                <CardHeader className="pb-4">
-                  <div className="flex justify-between items-start mb-3">
                     {service.icon}
                     {service.badge && (
-                      <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan border-zion-purple/30">
                         {service.badge}
-                      </Badge>
                     )}
-                  </div>
                   <CardTitle className="text-xl text-white">{service.title}</CardTitle>
                   <CardDescription className="text-zion-cyan/80">{service.description}</CardDescription>
-                </CardHeader>
                 
-                <CardContent className="space-y-4">
-                  <div>
                     <h4 className="text-white font-semibold mb-2">Key Features:</h4>
-                    <ul className="space-y-1">
                       {service.features.map((feature, index) => (
-                        <li key={index} className="text-sm text-zion-cyan/70 flex items-center">
                           <span className="w-2 h-2 bg-zion-cyan rounded-full mr-2"></span>
                           {feature}
-                        </li>
                       ))}
-                    </ul>
-                  </div>
                   
-                  <div>
                     <h4 className="text-white font-semibold mb-2">Business Benefits:</h4>
-                    <ul className="space-y-1">
                       {service.benefits.map((benefit, index) => (
-                        <li key={index} className="text-sm text-zion-cyan/70 flex items-center">
                           <span className="w-2 h-2 bg-zion-cyan rounded-full mr-2"></span>
                           {benefit}
-                        </li>
                       ))}
-                    </ul>
-                  </div>
                   
-                  <div>
                     <h4 className="text-white font-semibold mb-2">Pricing:</h4>
-                    <div className="text-sm text-zion-cyan/70 space-y-1">
                       <p>Starting: {service.pricing.starting}</p>
                       <p>Average: {service.pricing.average}</p>
                       <p>Enterprise: {service.pricing.enterprise}</p>
-                    </div>
-                  </div>
                   
-                  <div className="pt-4">
-                    <Button asChild className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
                       <Link to={service.link}>Learn More</Link>
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
             ))}
-                </div>
-              </div>
               
               <p className="text-gray-300 mb-4">{service.description}</p>
               
-              <div className="mb-4">
-                <div className="text-2xl font-bold text-white mb-2">
                   {formatPrice(service.price, service.pricingModel)}
-                </div>
                 <div className="text-sm text-gray-400">{service.userLimit}</div>
                 <div className="text-sm text-green-400 font-medium">{service.marketPrice}</div>
-              </div>
 
-              <div className="mb-4">
                 <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
-                <div className="flex flex-wrap gap-2">
                   {service.features.slice(0, 3).map((feature, index) => (
-                    <span key={index} className="px-2 py-1 text-xs bg-blue-500/20 text-blue-300 rounded">
                       {feature}
-                    </span>
                   ))}
-                </div>
-              </div>
 
-              <div className="mb-4">
                 <h4 className="text-sm font-semibold text-white mb-2">Benefits:</h4>
-                <div className="flex flex-wrap gap-2">
                   {service.benefits.slice(0, 2).map((benefit, index) => (
-                    <span key={index} className="px-2 py-1 text-xs bg-green-500/20 text-green-300 rounded">
                       {benefit}
-                    </span>
                   ))}
-                </div>
-              </div>
 
-              <div className="mb-4">
                 <h4 className="text-sm font-semibold text-white mb-2">Perfect For:</h4>
-                <div className="flex flex-wrap gap-2">
                   {service.targetAudience.slice(0, 2).map((audience, index) => (
-                    <span key={index} className="px-2 py-1 text-xs bg-purple-500/20 text-purple-300 rounded">
                       {audience}
-                    </span>
                   ))}
-                </div>
-              </div>
 
-              <div className="border-t border-gray-600 pt-4">
-                <div className="flex items-center justify-between text-sm text-gray-400">
                   <span>Start your free trial today</span>
                   <$2 />
                     href={service.contactInfo.website}
@@ -1434,63 +1303,25 @@ export default function ITServicesPage() {
                     rel="noopener noreferrer"
                   >
                     Get Started →
-                  </a>
-                </div>
-              </div>
-            </div>
           ))}
-        </div>
 
         {/* Contact Information */}
-        <div className="mt-16 text-center">
-          <div className="bg-white/5 backdrop-blur-sm border border-gray-600 rounded-xl p-8">
             <h2 className="text-2xl font-bold text-white mb-4">Ready to Modernize Your IT Infrastructure?</h2>
-            <p className="text-gray-300 mb-6">
               Our IT solutions are designed to scale with your business and provide enterprise-grade reliability
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-              <div>
-                <Phone className="w-8 h-8 text-blue-400 mx-auto mb-2" />
                 <p className="text-white font-semibold">Phone</p>
                 <p className="text-gray-300">+1 302 464 0950</p>
-              </div>
-              <div>
-                <Mail className="w-8 h-8 text-blue-400 mx-auto mb-2" />
                 <p className="text-white font-semibold">Email</p>
                 <p className="text-gray-300">kleber@ziontechgroup.com</p>
-              </div>
-              <div>
-                <MapPin className="w-8 h-8 text-blue-400 mx-auto mb-2" />
                 <p className="text-white font-semibold">Address</p>
                 <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
       {/* CTA Section */}
-      <div className="py-20 bg-gradient-to-r from-zion-purple-dark to-zion-blue-dark">
-        <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your IT Infrastructure?</h2>
-          <p className="text-xl text-zion-cyan mb-8 max-w-2xl mx-auto">
             Our IT experts are ready to help you modernize your technology stack and drive business growth.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button asChild size="lg" className="bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-zion-slate">
               <Link to="/request-quote">Request Free Assessment</Link>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
               <Link to="/contact">Contact Our Team</Link>
-            </Button>
-          </div>
-          <div className="mt-8 text-zion-cyan">
             <p>Mobile: +1 302 464 0950 | Email: kleber@ziontechgroup.com</p>
             <p>Address: 364 E Main St STE 1008 Middletown DE 19709</p>
-          </div>
-        </div>
-      </div>
-    </div>
   )
   Server, 
   Database, 
@@ -1508,7 +1339,6 @@ export default function ITServicesPage() {
   CheckCircle,
   Star,
   Clock,
-  DollarSign
 } from 'lucide-react'
 export default function ITServicesPage() {
   const itServices = [
@@ -1682,17 +1512,13 @@ export default function ITServicesPage() {
   ]
   return (
     <>
-      <SEO 
         title="IT Services - Zion Tech Group" 
         description="Comprehensive IT services including cloud migration, cybersecurity, DevOps, and infrastructure solutions. Expert IT consulting and managed services."
         keywords="IT services, cloud migration, cybersecurity, DevOps, managed IT services, IT consulting"
         canonical="https://ziontechgroup.com/it-services"
       />
-      <Header />
       
-      <main className="min-h-screen bg-background">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-cyan py-20 overflow-hidden">
           <div className="absolute inset-0 bg-black/20"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-zion-blue/10 to-zion-cyan/10"></div>
           
@@ -1701,148 +1527,58 @@ export default function ITServicesPage() {
           <div className="absolute bottom-20 right-10 w-40 h-40 bg-zion-cyan/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
           <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-zion-purple/30 rounded-full blur-2xl animate-pulse delay-500"></div>
           
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="text-center max-w-4xl mx-auto">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight">
                 IT Services & Solutions
-              </h1>
-              <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
                 Transform your business technology infrastructure with our comprehensive IT services. 
                 From cloud migration to cybersecurity, we deliver enterprise-grade solutions that drive growth.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="bg-zion-cyan hover:bg-zion-cyan/80 text-zion-slate-dark">
                   <Link to="/request-quote">Get Free Assessment</Link>
-                </Button>
-                <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
                   <Link to="/contact">Contact Our Team</Link>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* Services Grid */}
-        <section className="py-20 bg-background">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Enterprise IT Solutions
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
                 Choose from our comprehensive portfolio of IT services, each designed to address specific 
                 business challenges and drive measurable results.
-              </p>
-            </div>
 
             {/* Category Filter */}
-            <div className="flex flex-wrap justify-center gap-3 mb-12">
               {categories.map((category, index) => (
-                <Button
                   key={index}
                   variant={category.active ? "default" : "outline"}
                   className={category.active ? "bg-zion-cyan text-zion-slate-dark" : "border-zion-cyan/30 text-zion-cyan hover:bg-zion-cyan/10"}
                 >
                   {category.name} ({category.count})
-                </Button>
               ))}
-            </div>
 
             {/* Services Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {itServices.map((service) => (
-                <Card key={service.id} className="group hover:shadow-2xl transition-all duration-300 border-zion-cyan/20 hover:border-zion-cyan/50 bg-card/50 backdrop-blur-sm">
-                  <CardHeader className="pb-4">
-                    <div className="flex justify-between items-start mb-3">
                       {service.icon}
                       {service.badge && (
-                        <Badge variant="secondary" className="bg-zion-cyan/20 text-zion-cyan border-zion-cyan/30">
                           {service.badge}
-                        </Badge>
                       )}
-                    </div>
-                    <CardTitle className="text-xl group-hover:text-zion-cyan transition-colors">
                       {service.title}
-                    </CardTitle>
-                    <CardDescription className="text-muted-foreground">
                       {service.description}
-                    </CardDescription>
-                  </CardHeader>
                   
-                  <CardContent className="pb-4">
-                    <div className="mb-4">
                       <span className="text-2xl font-bold text-zion-cyan">{service.price}</span>
-                    </div>
                     
-                    <div className="space-y-2 mb-4">
                       {service.features.slice(0, 3).map((feature, index) => (
-                        <div key={index} className="flex items-center text-sm">
-                          <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
                           <span className="text-muted-foreground">{feature}</span>
-                        </div>
                       ))}
-                    </div>
                     
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="flex items-center gap-1">
-                        <Star className="h-4 w-4 text-yellow-500 fill-current" />
                         <span className="text-sm text-muted-foreground">{service.rating}</span>
                         <span className="text-sm text-muted-foreground">({service.reviewCount})</span>
-                      </div>
-                      <Badge variant="outline" className="text-xs">
                         {service.category}
-                      </Badge>
-                    </div>
 
-                    <div className="flex items-center justify-between text-sm text-muted-foreground">
-                      <div className="flex items-center gap-1">
-                        <Clock className="h-4 w-4" />
                         <span>{service.deliveryTime}</span>
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <DollarSign className="h-4 w-4" />
                         <span>Fixed Price</span>
-                      </div>
-                    </div>
-                  </CardContent>
                   
-                  <CardContent className="pt-0">
-                    <Button asChild className="w-full group-hover:bg-zion-cyan group-hover:text-zion-slate-dark transition-all duration-300">
-                      <Link to={service.link}>
                         Learn More
-                        <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                      </Link>
-                    </Button>
-                  </CardContent>
-                </Card>
               ))}
-            </div>
-          </div>
-        </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-cyan-dark">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your IT Infrastructure?
-            </h2>
-            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
               Let our IT experts help you identify the right solutions for your business. 
               Get a free assessment and discover how modern IT can transform your operations.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-zion-cyan hover:bg-zion-cyan/80 text-zion-slate-dark">
                 <Link to="/request-quote">Start Your IT Transformation</Link>
-              </Button>
-              <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
                 <Link to="/contact">Schedule a Call</Link>
-              </Button>
-            </div>
-          </div>
-        </section>
-      </main>
       
-      <Footer />
     </>
   )
 }

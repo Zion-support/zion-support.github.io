@@ -143,5 +143,4 @@ const,
 }
 export default AdvancedSEOOptimizer
 "
-  </AdvancedSEOOptimizerProps>
 </li></li></li></li></li></li></li></li></li>

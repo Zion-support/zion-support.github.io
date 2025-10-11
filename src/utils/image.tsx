@@ -164,7 +164,6 @@ quality = 75,
     return (
           <div>Coming Soon
   )
-          <div>
 className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={imageStyle}
         {...props}
@@ -174,7 +173,6 @@ className={`bg-gray-200 flex items-center justify-center ${className}`}
   }
   return (<div>Coming Soon</div>)
   )
-          <img>
       src={src}
       alt={alt}
       width={width}

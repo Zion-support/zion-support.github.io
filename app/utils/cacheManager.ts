@@ -41,7 +41,7 @@ export interface CacheStats {}}hits: number,
 ,
   constructor(config: CacheConfig = {,)}) {this.config = {
       storage: config.storage || CacheStorage.Memory,
-      defaultTTL: config.defaultTTL || 5 * 60 * 1000 // 5 minutes;,}private stats: CacheStats = {,}hits: 0,
+      defaultTTL: config.defaultTTL || 5 * 60 * 1000 // 5 minutes,}private stats: CacheStats = {,}hits: 0,
     misses: 0,
     hitRate: 0,
     count: 0,
@@ -60,7 +60,7 @@ export interface CacheStats {}}hits: number,
   constructor(config: CacheConfig = {}) {
     this.config = {
       storage: config.storage || CacheStorage.Memory
-      defaultTTL: config.defaultTTL || 5 * 60 * 1000 // 5 minutes;}
+      defaultTTL: config.defaultTTL || 5 * 60 * 1000 // 5 minutes}
   private stats: CacheStats = {}
     hits: 0,
     misses: 0,
@@ -431,7 +431,7 @@ try {}
 }
     );
   storage: CacheStorage.LocalStorage),
-  defaultTTL: 30 * 60 * 1000 // 30 minutes;,
+  defaultTTL: 30 * 60 * 1000 // 30 minutes,
 // Create singleton instances for different use cases
 export const memoryCache = new CacheManager({ storage: CacheStorage.Memory })
 export const localStorageCache = new CacheManager()
@@ -440,10 +440,10 @@ export const localStorageCache = new CacheManager()
   defaultTTL: 30 * 60 * 1000 // 30 minutes
 export const sessionStorageCache = new CacheManager({),
   storage: CacheStorage.SessionStorage),
-  defaultTTL: 60 * 60 * 1000 // 1 hour;,}export const localStorageCache = new CacheManager({)}storage: CacheStorage.LocalStorage,
+  defaultTTL: 60 * 60 * 1000 // 1 hour,}export const localStorageCache = new CacheManager({)}storage: CacheStorage.LocalStorage,
   defaultTTL: 30 * 60 * 1000 // 30 minutes,
 export const sessionStorageCache = new CacheManager({)}storage: CacheStorage.SessionStorage,
-  defaultTTL: 60 * 60 * 1000 // 1 hour;,
+  defaultTTL: 60 * 60 * 1000 // 1 hour,
 export default CacheManager,
     return {/* TODO: Fix JSX expression */,}}}
   }
@@ -458,7 +458,7 @@ export default CacheManager
   private getStorage(): Storage | null {}
     if (typeof window === 'undefined') return null
     switch (this.config.storage) {
-      case CacheStorage.LocalStorage: return window.localStorage;}
+      case CacheStorage.LocalStorage: return window.localStorage}
     switch (this.config.storage) {}
       case CacheStorage.LocalStorage:
         return window.localStorage

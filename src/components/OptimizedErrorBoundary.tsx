@@ -1,14 +1,14 @@
 'use client';
-interface OptimizedErrorBoundaryProps {;,
+interface OptimizedErrorBoundaryProps {
 children: ReactNode;
 fallback?: ReactNode,;
 onError?: (error: Error, errorInfo: ErrorInfo) => void;
 resetOnPropsChange?: boolean,;
 resetKeys?: Array<string | number>
   }
-interface State {;,
-hasError: boolean;,
-error: Error | null;,
+interface State {
+hasError: boolean,
+error: Error | null,
 errorInfo: ErrorInfo | null,;,
 errorId: string
   }
@@ -19,7 +19,7 @@ State
 private resetTimeoutId: number | null = null;
 constructor(props: OptimizedErrorBoundaryProps) {;
 super(props)},;
-this.state={;,
+this.state={
 hasError: false,;,
 error: null,;,
 errorInfo: null,;,
@@ -27,7 +27,7 @@ errorId:     ,;
 $4}
   }
   static getDerivedStateFromError(error: Error): Partial<State> {;
-return {;;,
+return {
 hasError: true},;
 error,;,
 errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
@@ -78,8 +78,8 @@ clearTimeout(this.resetTimeoutId)
     // Report to error monitoring service;
 if (typeof window !== 'undefined' && 'gtag' in window) {;
 const gtag = (;;
-window as unknown as {;,
-gtag: (;,
+window as unknown as {,
+gtag: (,
 }
 command: string},;,
 action: string,;,
@@ -87,10 +87,10 @@ parameters: Record<string, unknown>
           ) => void
   }
       ).gtag;
-gtag('event', 'exception', {;,
+gtag('event', 'exception', {
 description: error.message,;,
 fatal: false,;,
-custom_map: {;,
+custom_map: {,
 error_id: this.state.errorId,;,
 component_stack: errorInfo.componentStack
         }
@@ -103,7 +103,7 @@ clearTimeout(this.resetTimeoutId)
 }
   }
     this.resetTimeoutId = window.setTimeout(() => {;
-this.setState({;,
+this.setState({
 }
 hasError: false},;,
 error: null,;,
@@ -133,9 +133,9 @@ error={this.state.error}
     return this.props.children;
   }
 }
-interface ErrorFallbackProps {;,
-error: Error | null;,
-errorInfo: ErrorInfo | null;,
+interface ErrorFallbackProps {
+error: Error | null,
+errorInfo: ErrorInfo | null,
 errorId: string,;,
 onRetry: () => void
   }

@@ -490,7 +490,6 @@ export const reportError = ()
   r: Error,
   severity?: ErrorReport['severity'],
   context?: Record
-          <string, unknown>
 ): void => {
     // TODO: Add content
   }

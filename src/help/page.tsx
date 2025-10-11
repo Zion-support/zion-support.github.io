@@ -1,20 +1,19 @@
 import {HelpCircle;, Search, Phone, Mail, MessageSquare, BookOpen, Video, Download, CheckCircle, ArrowRight, Users} from 'lucide-react'
 'use client';
 import React;, { useState } from 'react';
-import { Link; } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';;
 import Footer from '../components/Footer';;
 const HelpPage: React.FC = () => {;
 const [searchTerm, setSearchTerm] = useState('');
 const [activeCategory, setActiveCategory] = useState('getting-started');
 const categories = [;
-    {;,
+    {
 id: 'getting-started',;,
 name: 'Getting Started',;,
 icon: BookOpen,;,
 color: 'text-blue-400',;,
-bgColor:     ,;
-}
+bgColor:     }
 $4},;,
 id: 'troubleshooting',;,
 name: 'Troubleshooting',;,
@@ -103,7 +102,7 @@ titletitle: 'Download Center',;,
 description: 'SDKs, tools, and resources for developers',;,
 icon: Download,;,
 count: '25+ downloads';
-const supportChannels = [;;,
+const supportChannels = [;,
 title: 'Live Chat',;,
 description: 'Get instant help from our support team',;,
 color: 'text-cyan-400',;,
@@ -122,9 +121,9 @@ titletitle: 'Community Forum',;,
 description: 'Connect with other users and share knowledge',;,
 icon: Users,;,
 responseTime: 'Community driven';
-const faqs = [;;,
+const faqs = [;,
 question: 'How quickly can I get started with your AI services?',;,
-answer: 'Most of our AI services can be set up within 24-48 hours. We provide comprehensive onboarding support to ensure you\'re up and running quickly.';,
+answer: 'Most of our AI services can be set up within 24-48 hours. We provide comprehensive onboarding support to ensure you\'re up and running quickly.',
 question: 'Do you offer training for our team?',;,
 answer:       ,;,
 questionquestion: 'What kind of support do you provide?',;,
@@ -299,7 +298,7 @@ bgColo,;,
 r: 'bg-purple-500/10'
     }
   ];
-const helpArticles={/* TODO: Fix JSX expression */;}
+const helpArticles={/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     'getting-started': [;
@@ -364,34 +363,4 @@ Email Us
       <Footer /></Footer>
     </React.Fragment>;
 export default HelpPage,
-  </div>
-  </p>
-  </h2>
-  </div>
-  </div>
-  </div>
-  </div>
-  </button>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </h2>
-  </button>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </h2>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </h1>
-  </div>
-  </div>
 </div></div></div></div></span></span></a></p></p></p></p></p></h3></h3></h3></h3></article>

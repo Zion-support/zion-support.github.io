@@ -5,7 +5,7 @@ this.state={hasError: false}
   }
 ;
 static getDerivedStateFromError(error) {;
-return { hasError: true; }
+return { hasError: true}
   }
 ;
 componentDidCatch(error, errorInfo) {;
@@ -22,71 +22,71 @@ return this.props.children;
 }
 import React from 'react';;
 const pageKey = `search-${routeKey;}-${router && router.asPath}`;
-import { useRouter; } from 'next/router';
+import { useRouter } from 'next/router';
 import { useRouterReady;, useRouteChange } from '@/hooks/useRouterReady';
-import { EnhancedSearchInput; } from "@/components/search/EnhancedSearchInput";
-import { generateSearchSuggestions; } from "@/data/marketplaceData";
-import { SearchSuggestion; } from "@/types/search";
-import {logErrorToProduction;} from '@/utils/productionLogger';
+import { EnhancedSearchInput } from '@/components/search/EnhancedSearchInput';
+import { generateSearchSuggestions } from '@/data/marketplaceData';
+import { SearchSuggestion } from '@/types/search';
+import { logErrorToProduction } from '@/utils/productionLogger';
 import {;;
 Tabs;
 TabsContent;
 TabsList;
 const pageKey = `search-${routeKey;}-${router.asPath}`;
-import { useRouter; } from 'next/router';
+import { useRouter } from 'next/router';
 import { useRouterReady;, useRouteChange } from '@/hooks/useRouterReady';
-import { EnhancedSearchInput; } from "@/components/search/EnhancedSearchInput";
-import { generateSearchSuggestions; } from "@/data/marketplaceData";
-import { SearchSuggestion; } from "@/types/search";
-import {logErrorToProduction;} from '@/utils/productionLogger';
+import { EnhancedSearchInput } from '@/components/search/EnhancedSearchInput';
+import { generateSearchSuggestions } from '@/data/marketplaceData';
+import { SearchSuggestion } from '@/types/search';
+import { logErrorToProduction } from '@/utils/productionLogger';
 import {;;
 Tabs;
 TabsContent;
 TabsList;
 TabsTrigger} from "@/components/ui/tabs";
 import { useEffect;, useState } from "react",;
-import { useRouter; } from 'next/router',;
+import { useRouter } from 'next/router',;
 import { useRouterReady;, useRouteChange } from '@/hooks/useRouterReady',;
-import { EnhancedSearchInput; } from "@/components/search/EnhancedSearchInput",;
-import { generateSearchSuggestions; } from "@/data/marketplaceData",;
-import { SearchSuggestion; } from "@/types/search",;
-import {logErrorToProduction;} from '@/utils/productionLogger',;
+import { EnhancedSearchInput } from '@/components/search/EnhancedSearchInput',;
+import { generateSearchSuggestions } from '@/data/marketplaceData',;
+import { SearchSuggestion } from '@/types/search',;
+import { logErrorToProduction } from '@/utils/productionLogger',;
 import {;;
 Tabs,;
 TabsContent,;
 TabsList,;
 TabsTrigger} from "@/components/ui/tabs",;
-import { Loader2; } from 'lucide-react';
-import { Loader2; } from 'lucide-react';
+import { Loader2 } from 'lucide-react';
+import { Loader2 } from 'lucide-react';
 const pageKey = `search-${routeKey;}-${router.asPath}`;
-import { useRouter; } from 'next/router';
+import { useRouter } from 'next/router';
 import { useRouterReady;, useRouteChange } from '@/hooks/useRouterReady';
-import { EnhancedSearchInput; } from "@/components/search/EnhancedSearchInput";
-import { generateSearchSuggestions; } from "@/data/marketplaceData";
-import { SearchSuggestion; } from "@/types/search";
-import {logErrorToProduction;} from '@/utils/productionLogger';
+import { EnhancedSearchInput } from '@/components/search/EnhancedSearchInput';
+import { generateSearchSuggestions } from '@/data/marketplaceData';
+import { SearchSuggestion } from '@/types/search';
+import { logErrorToProduction } from '@/utils/productionLogger';
 import {;;
 Tabs;
 TabsContent;
 TabsList;
 TabsTrigger} from "@/components/ui/tabs";
 import { useEffect;, useState } from "react",;
-import { useRouter; } from 'next/router',;
+import { useRouter } from 'next/router',;
 import { useRouterReady;, useRouteChange } from '@/hooks/useRouterReady',;
-import { EnhancedSearchInput; } from "@/components/search/EnhancedSearchInput",;
-import { generateSearchSuggestions; } from "@/data/marketplaceData",;
-import { SearchSuggestion; } from "@/types/search",;
-import {logErrorToProduction;} from '@/utils/productionLogger',;
+import { EnhancedSearchInput } from '@/components/search/EnhancedSearchInput',;
+import { generateSearchSuggestions } from '@/data/marketplaceData',;
+import { SearchSuggestion } from '@/types/search',;
+import { logErrorToProduction } from '@/utils/productionLogger',;
 import {;;
 Tabs,;
 TabsContent,;
 TabsList,;
 TabsTrigger} from "@/components/ui/tabs",;
-import { Loader2; } from 'lucide-react';
-interface SearchResult {;,
-id: string;,
-type: "product" | "service" | "talent" | "blog" | "doc";,
-title: string;,
+import { Loader2 } from 'lucide-react';
+interface SearchResult {
+id: string,
+type: "product" | "service" | "talent" | "blog" | "doc",
+title: string,
 description: string
 }
 function highlight(text: string, term: string) {
@@ -98,8 +98,7 @@ function highlight(text: string, term: string) {
   },;
 const handleSubmit = (e: React.FormEvent) => {;;
 e.preventDefault(),;
-if (query.trim()) {;
-}
+if (query.trim()) {}
 router.push(`/search?q=${encodeURIComponent(query.trim())}`)
     }
   },;
@@ -251,7 +250,7 @@ if (!term.trim () ) {;
 setResults ([]);
 return;
 return
-;}
+}
 }setLoading (true);
 try {;
 const res = await fetch (`/api/search?query=$ {;;
@@ -396,11 +395,11 @@ $2
   set_results (data.results)
 }else {;
 set_results ([]);';
-logErrorToProduction ('Search API response structure is not as expected:', {;,
+logErrorToProduction ('Search API response structure is not as expected:', {
 data: data
 })
 }catch (error) {';
-logErrorToProduction ('Search failed:', {;,
+logErrorToProduction ('Search failed:', {
 data: error
 });
 set_results ([])

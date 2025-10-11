@@ -8,16 +8,16 @@ private retryCount = 0;
 private maxRetries = 3;
 constructor(props: Props) {;
 super(props);
-this.state={;,
-hasError: false;,
-error: null;,
+this.state={,
+hasError: false,
+error: null,
 errorInfo: null},;,
 errorId: null
   }
   }
   static getDerivedStateFromError(error: Error): Partial<State> {
     // Update state so the next render will show the fallback UI,;
-return {;,;,
+return {;,
 hasError: true,;
 error,;,
 errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`}
@@ -48,13 +48,13 @@ if (this.props.onError) {/* TODO: Fix JSX expression */}
 this.reportError(error, errorInfo)
   }
   private reportError = (error: Error, errorInfo: ErrorInfo) => {;
-const errorReport={;;,
-errorId: this.state.errorId;,
-message: error.message;,
-stack: error.stack;,
-componentStack: errorInfo.componentStack;,
-timestamp: new Date().toISOString();,
-userAgent: navigator.userAgent;,
+const errorReport={
+errorId: this.state.errorId,
+message: error.message,
+stack: error.stack,
+componentStack: errorInfo.componentStack,
+timestamp: new Date().toISOString(),
+userAgent: navigator.userAgent,
 }
 url: window.location.href},;,
 retryCount: this.retryCount
@@ -62,7 +62,7 @@ retryCount: this.retryCount
     // Send to error reporting service;
 if (typeof window !== 'undefined' && 'fetch' in window) {;
 fetch('/api/errors', {);,
-method: 'POST');,
+method: 'POST'),
 headers: {)
           'Content-Type': 'application/json')});,
 body: JSON.stringify(errorReport),;
@@ -109,18 +109,18 @@ private handleRetry = () => {/* TODO: Fix JSX expression */}
   }
   private handleReportBug = () => {;
 const errorDetails={;;,
-errorId: this.state.errorId;,
-message: this.state.error?.message;,
-stack: this.state.error?.stack;,
+errorId: this.state.errorId,
+message: this.state.error?.message,
+stack: this.state.error?.stack,
 }
 componentStack: this.state.errorInfo?.componentStack},;,
 timestamp: new Date().toISOString(),;,
 url: window.location.href
   }
     // Create a mailto link with error details
-//     const subject = `Bug Report - Error ID: ${this.state.errorId;}`
-//     const body = `Error Details:\n\n${JSON.stringify(errorDetails;, null, 2)}`
-//     const mailtoLink = `mailto:support@ziontechgroup.com?subject=${encodeURIComponent(subject);}&body=${encodeURIComponent(body)}`;
+//     const subject = `Bug Report - Error ID: ${this.state.errorId}`
+//     const body = `Error Details: \n\n${JSON.stringify(errorDetails, null, 2)}`
+//     const mailtoLink = `mailto: support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 private handleReportBug = () => {/* TODO: Fix JSX expression */}
     }
     // Create a mailto link with error details;`

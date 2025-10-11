@@ -207,7 +207,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           const av = (a as any)[params.sort!]
           const bv = (b as any)[params.sort!]
           return (
-            (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1));        });          return (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1)
+            (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1))});          return (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1)
         })
       }
       const total = filtered && filtered.length

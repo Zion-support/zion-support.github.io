@@ -74,6 +74,4 @@ const,
 }
 export default EnhancedLoading
 "`
-  </LoadingProps>
-  </LoadingProps>
 </div></div></div></div>

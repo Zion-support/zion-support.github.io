@@ -45,7 +45,10 @@ const ItInfrastructureDesignPage: React.FC = () => {
               )
     </>
   )
-            </div>
+            
+                
+                
+                </div>
           </div>
         </section>
 
@@ -64,4 +67,3 @@ const ItInfrastructureDesignPage: React.FC = () => {
   )
 }
 export default ItInfrastructureDesignPage
-  </Navigation>

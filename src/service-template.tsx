@@ -95,6 +95,4 @@ Ready to Transform Your Business?"
   )
 }
 export default ServicePage</p>
-  </h1>
-  </ServicePageProps>
 </p></h2></h3></ul>

@@ -426,6 +426,4 @@ const reportMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
   )
 }
 export default EnhancedPerformanceMonitor;"
-  </PerformanceMetrics>
-  </PerformanceMonitorProps>
 </div></div></span></span></span></span></span></span></span></span></span></span></span></span></button></h3>

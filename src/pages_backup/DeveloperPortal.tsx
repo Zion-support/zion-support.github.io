@@ -27,22 +27,21 @@ Developer Portal
 Access the Zion API, manage your API keys, and set up webhooks.
         </p>
       </div>;
-import { useState; } from "react";
-import { useAuth; } from "@/hooks/useAuth";
+import { useState } from 'react';
+import { useAuth } from '@/hooks/useAuth';
 import { BookOpen;, Code, Key, List, LucideIcon, Terminal, Webhook } from 'lucide-react';
-import { ProtectedRoute; } from "@/components/ProtectedRoute";
-import { ApiKeysManager; } from "@/components/developers/ApiKeysManager";
-import { WebhooksManager; } from "@/components/developers/WebhooksManager";
-import { ApiDocumentation; } from "@/components/developers/ApiDocumentation";
-import { ApiLogs; } from "@/components/developers/ApiLogs";
-interface TabDefinition {;,
+import { ProtectedRoute } from '@/components/ProtectedRoute';
+import { ApiKeysManager } from '@/components/developers/ApiKeysManager';
+import { WebhooksManager } from '@/components/developers/WebhooksManager';
+import { ApiDocumentation } from '@/components/developers/ApiDocumentation';
+import { ApiLogs } from '@/components/developers/ApiLogs';
+interface TabDefinition {
 id: string,;,
 label: string,;,
 icon: LucideIcon
 }
 ;
-export function DeveloperPortal() {;
-}
+export function DeveloperPortal() {}
 const { user } = useAuth(),;
 const [activeTab, setActiveTab] = useState<string>("documentation"),
   
@@ -120,9 +119,9 @@ key={tab.id}
                 className={`inline-flex items-center px-4 py-3 border-b-2 text-sm font-medium ${};
 activeTab === tab.id
                     ? "text-white border-zion-purple"
-                    : "text-zinc-500 border-transparent hover:text-zinc-400 hover:border-zinc-700";
-import { useState;} from 'react';
-import { use_auth; } from '@/hooks / use_auth';
+                    : "text-zinc-500 border-transparent hover: text-zinc-400 hover:border-zinc-700";
+import { useState} from 'react';
+import { use_auth } from '@/hooks / use_auth';
 import {;;
 BookOpen,;
 Code,;
@@ -132,20 +131,19 @@ LucideIcon,;
 Terminal,;
 Webhook,
 } from 'lucide-react';
-import { ProtectedRoute; } from '@/components / ProtectedRoute';
-import { ApiKeysManager; } from '@/components / developers / ApiKeysManager';
-import { WebhooksManager; } from '@/components / developers / WebhooksManager';
-import { ApiDocumentation; } from '@/components / developers / ApiDocumentation';
-import { ApiLogs; } from '@/components / developers / ApiLogs';
-interface TabDefinition {;,
-id: string;,
-label: string;,
+import { ProtectedRoute } from '@/components / ProtectedRoute';
+import { ApiKeysManager } from '@/components / developers / ApiKeysManager';
+import { WebhooksManager } from '@/components / developers / WebhooksManager';
+import { ApiDocumentation } from '@/components / developers / ApiDocumentation';
+import { ApiLogs } from '@/components / developers / ApiLogs';
+interface TabDefinition {
+id: string,
+label: string,
 icon: LucideIcon;
 export /**
  * DeveloperPortal - Function description
  */;
-function DeveloperPortal() {;
-}
+function DeveloperPortal() {}
 const { user } = use_auth ();
 const [active_tab, setActiveTab] = useState < string>('documentation')
   // Define the tabs;
@@ -182,8 +180,8 @@ active_tab === tab.id
               </button>)
           })}
 ;
-import { useState; } from 'react';
-import { useAuth; } from '@/hooks/useAuth';
+import { useState } from 'react';
+import { useAuth } from '@/hooks/useAuth';
 import {;;
 BookOpen,;
 Code,;
@@ -193,17 +191,16 @@ LucideIcon,;
 Terminal,;
 Webhook,
 } from 'lucide-react';
-import { ProtectedRoute; } from '@/components/ProtectedRoute';
-import { ApiKeysManager; } from '@/components/developers/ApiKeysManager';
-import { WebhooksManager; } from '@/components/developers/WebhooksManager';
-import { ApiDocumentation; } from '@/components/developers/ApiDocumentation';
-import { ApiLogs; } from '@/components/developers/ApiLogs';
-interface TabDefinition {;,
-id: string;,
-label: string;,
+import { ProtectedRoute } from '@/components/ProtectedRoute';
+import { ApiKeysManager } from '@/components/developers/ApiKeysManager';
+import { WebhooksManager } from '@/components/developers/WebhooksManager';
+import { ApiDocumentation } from '@/components/developers/ApiDocumentation';
+import { ApiLogs } from '@/components/developers/ApiLogs';
+interface TabDefinition {
+id: string,
+label: string,
 icon: LucideIcon;
-export function DeveloperPortal() {;
-}
+export function DeveloperPortal() {}
 const { user } = useAuth();
 const [activeTab, setActiveTab] = useState<string>('documentation')
   // Define the tabs;
@@ -297,9 +294,6 @@ onClick={() => setActiveTab(tab && tab.id)}
 ;
 export default function ProtectedDeveloperPortal() {;
 return (;
-    <ProtectedRoute>
-      <DeveloperPortal />
-    </ProtectedRoute>
 
 
 

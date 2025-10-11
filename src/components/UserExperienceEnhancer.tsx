@@ -304,5 +304,3 @@ $4})
 export default UserExperienceEnhancer
 }
 export default UserExperienceEnhancer;`
-  </UserExperienceEnhancerProps>
-  </UserExperienceEnhancerProps>

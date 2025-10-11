@@ -9,4 +9,3 @@ const TestComponent = () => {
 const TestComponent = () => {/* TODO: Fix JSX expression */}
 }
 export default TestComponent</$1></h1>
-  </div>

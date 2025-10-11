@@ -10,7 +10,7 @@ export interface LogContext {
   sessionId?: string;
   component?: string;
   action?: string;
-  [key: string]: unknown;,}}
+  [key: string]: unknown,}}
 class Logger {private logLevel: LogLevel = LogLevel.INFO,}
   private logs: Array<{,
     level: LogLevel,
@@ -41,7 +41,7 @@ class Logger {
     errorOrContextOrMetadata?: Error | string | Record<string, unknown>);
     contextOrMetadata?: string | Record<string, unknown>);
     metadata?: Record<string>
-  ): void {let error: Error | undefined;,}
+  ): void {let error: Error | undefined,}
     errorOrContextOrMetadata?: Error | string | Record<string, unknown>)
     contextOrMetadata?: string | Record</string><string, unknown>)
     metadata?: Record</string><string>
@@ -176,7 +176,7 @@ this.logs.push(logEntry)
       level,
       message,
       context,
-      metadata,;}
+      metadata}
       timestamp: Date.now()}
 
     this.logs.push(logEntry)
@@ -282,7 +282,7 @@ getLogs(level?: LogLevel): Array<{level: LogLevel,
     ,
     // In a real application, you would send this to your logging service;
     // For example: Sentry, LogRocket, DataDog, etc.;
-    // Example implementation: ;,
+    // Example implementation:  ,
     // fetch('/api/logs', {);
     //   method: 'POST'),}//   headers: {// 'Content-Type': 'application/json',})
     //   body: JSON.stringify(entry),

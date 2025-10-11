@@ -12,7 +12,7 @@ interface SEOData {
  ogType?: string
  twitterCard?: string
  twitterTitle?: string
- twitterDescription?: string;,
+ twitterDescription?: string,
  twitterImage?: string
  structuredData?: Record<string, unknown></$1>robots</string>?: string
  author?: string

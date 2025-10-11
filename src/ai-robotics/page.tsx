@@ -1,10 +1,10 @@
 import React from 'react';;
-import { Link; } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';;
 import Footer from '../components/Footer';;
 import { Bot;, Cpu, Settings, Shield, CheckCircle, Star,  Bot,  Cpu,  Shield } from 'lucide-react';
 const AIRoboticsPage: React.FC = () => {;
-const features = [];,;
+const features = [],;
 return (;
     {// TODO: Add content
 }

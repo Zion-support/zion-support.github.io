@@ -71,7 +71,3 @@ const PagePage: React.FC = () => {
     </>
   );
 export default PagePage
-        </Footer>
-      </ArrowRight>
-    </div>
-  </Navigation>

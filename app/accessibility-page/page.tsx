@@ -126,9 +126,7 @@ const AccessibilityPage: React.FC = () => {
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                         {benefit}
                       </li>
-                    )
-    </>
-  )
+                    ))}
                   </ul>
                 </div>
               ))}
@@ -204,8 +202,7 @@ const AccessibilityPage: React.FC = () => {
         </section>
 
         {/* Benefits Section */}
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-3">
                   <div className="flex-shrink-0">
@@ -263,13 +260,3 @@ const AccessibilityPage: React.FC = () => {
   )
 }
 export default AccessibilityPage
-                    </Footer>
-                  </ArrowRight>
-                </Icon>
-              </Accessibility>
-            </CheckCircle>
-          </div>
-        </CheckCircle>
-      </CheckCircle>
-    </ArrowRight>
-  </Navigation>

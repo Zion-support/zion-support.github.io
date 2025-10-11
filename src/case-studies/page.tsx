@@ -188,11 +188,4 @@ const CaseStudiesPage: React.FC = () => {
   ),
 }
 export default CaseStudiesPage</Link>
-  </p>
-  </p>
-  </h2>
-  </Link>
-  </p>
-  </h1>
-  </Link>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></p></p></p></p></p></p></h3></h4></h4></h4></section></section></section>

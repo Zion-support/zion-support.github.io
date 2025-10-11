@@ -41,7 +41,7 @@ export const debounce = <T extends (...args: unknown[]) => unknown>(
   let timeout: NodeJS.Timeout
   return (...args: Parameters<T>) => {,
   func: T,
-  wait: number;}
+  wait: number}
 ): ((...args: Parameters<T>) => void) => {}
   let timeout: NodeJS.Timeout
   return (...args: Parameters<T>) => {}
@@ -58,7 +58,7 @@ export const throttle = <T extends (...args: unknown[]) => unknown>(
   return (...args: Parameters<T>) => {
     if (!inThrottle) {,
   func: T,
-  limit: number;}
+  limit: number}
 ): ((...args: Parameters<T>) => void) => {}
   let inThrottle: boolean,
   return (...args: Parameters<T>) => {}
@@ -286,10 +286,10 @@ observer.observe({ entryTypes: ['layout-shift'] })
       }
     })
     limit: memory.jsHeapSizeLimit,
-    percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100;,}}
+    percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100,}}
 }
     ,
-      firstPaint: paint.find((entry) => entry.name === 'first-paint')?.startTime || 0;,
+      firstPaint: paint.find((entry) => entry.name === 'first-paint')?.startTime || 0,
       firstContentfulPaint: paint.find((entry) => entry.name === 'first-contentful-paint')?.startTime || 0,
 // Memory usage monitoring;}export const getMemoryUsage = () => {}if (typeof window === 'undefined' || !('memory' in performance)) {}return null;
   }

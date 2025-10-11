@@ -177,6 +177,4 @@ const,
 }
 export default AccessibilityEnhancer
 "`
-  </AccessibilityEnhancerProps>
-  </AccessibilityEnhancerProps>
 </div></div></button></button>

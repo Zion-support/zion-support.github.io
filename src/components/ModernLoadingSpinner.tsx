@@ -109,6 +109,4 @@ const,
 }
 export default ModernLoadingSpinner
 export default ModernLoadingSpinner;"`
-  </ModernLoadingSpinnerProps>
-  </ModernLoadingSpinnerProps>
 </div></div></div></div></div></p></p>

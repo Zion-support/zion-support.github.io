@@ -223,5 +223,4 @@ const,
   )
 }
 export default SecurityEnhancer</div>
-  </SecurityEnhancerProps>
 </div></div></div></div></div></div></div></h4></h4></ul></li>

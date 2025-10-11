@@ -1,5 +1,5 @@
 import React;, { useState } from 'react';
-import { Link; } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';;
 import Footer from '../components/Footer';;
 import SEOOptimizer from '../components/SEOOptimizer';;
@@ -18,37 +18,37 @@ const supportCategories = [;
     { id: 'api', name: 'API & Integration', icon: BarChart, count: 4 }
   ];
 const faqs = [;
-    {;,
+    {
 id: 1,;,
 question: 'How do I get started with Zion Tech Group services?',;,
 answer: 'Getting started is easy! Contact our team at +1 302 464 0950 or email kleber@ziontechgroup.com for a free consultation. We\'ll assess your needs and recommend the best AI solutions for your business.',;,
 category: 'getting-started'
     },
-    {;,
+    {
 id: 2,;,
 question: 'What AI services do you offer?',;,
 answer: 'We offer comprehensive AI services including Machine Learning, Natural Language Processing, Computer Vision, AI Automation, Quantum AI Computing, and AI Cybersecurity. We also provide Micro SAAS solutions for immediate deployment.',;,
 category: 'ai-services'
     },
-    {;,
+    {
 id: 3,;,
 question: 'How much do your services cost?',;,
 answer: 'Our pricing starts at $299/month for the Starter plan. We offer flexible pricing based on your specific needs. Contact us for a custom quote tailored to your requirements.',;,
 category: 'billing'
     },
-    {;,
+    {
 id: 4,;,
 question: 'Do you provide 24/7 technical support?',;,
 answer: 'Yes! We offer 24/7 technical support for all our clients. Our expert team is always available to help with any technical issues or questions you may have.',;,
 category: 'technical'
     },
-    {;,
+    {
 id: 5,;,
 question: 'How do I integrate your AI services with my existing systems?',;,
 answer: 'Our team provides comprehensive integration support. We work with your existing infrastructure and provide APIs, SDKs, and custom integration solutions to ensure seamless implementation.',;,
 category: 'api'
     },
-    {;,
+    {
 id: 6,;,
 question: 'What is your typical project timeline?',;,
 answer: 'Project timelines vary based on complexity. Simple AI implementations can take 2-4 weeks, while complex enterprise transformations may take 3-6 months. We provide detailed timelines during our consultation.',;,
@@ -56,7 +56,7 @@ category: 'getting-started'
     }
   ];
 const supportChannels = [;
-    {;,
+    {
 icon: Phone,;,
 title: 'Phone Support',;,
 description: 'Speak directly with our AI experts',;,
@@ -64,7 +64,7 @@ contact: '+1 302 464 0950',;,
 availability: '24/7 Available',;,
 color: 'text-green-400'
     },
-    {;,
+    {
 icon: Mail,;,
 title: 'Email Support',;,
 description: 'Get detailed responses via email',;,
@@ -72,7 +72,7 @@ contact: 'kleber@ziontechgroup.com',;,
 availability: 'Response within 2 hours',;,
 color: 'text-blue-400'
     },
-    {;,
+    {
 icon: MessageSquare,;,
 title: 'Live Chat',;,
 description: 'Instant support through our chat system',;,
@@ -80,7 +80,7 @@ contact: 'Start Chat',;,
 availability: 'Mon-Fri 9AM-6PM EST',;,
 color: 'text-purple-400'
     },
-    {;,
+    {
 icon: Calendar,;,
 title: 'Schedule Call',;,
 description: 'Book a consultation with our team',;,
@@ -90,37 +90,37 @@ color: 'text-cyan-400'
     }
   ];
 const resources = [;
-    {;,
+    {
 title: 'Documentation',;,
 description: 'Comprehensive guides and API documentation',;,
 icon: FileText,;,
 link: '/docs'
     },
-    {;,
+    {
 title: 'Video Tutorials',;,
 description: 'Step-by-step video guides for all services',;,
 icon: Eye,;,
 link: '/tutorials'
     },
-    {;,
+    {
 title: 'Case Studies',;,
 description: 'Real-world examples and success stories',;,
 icon: BarChart,;,
 link: '/case-studies'
     },
-    {;,
+    {
 title: 'API Reference',;,
 description: 'Complete API documentation and examples',;,
 icon: Code,;,
 link: '/api-docs'
     },
-    {;,
+    {
 title: 'Best Practices',;,
 description: 'Industry best practices and guidelines',;,
 icon: Award,;,
 link: '/best-practices'
     },
-    {;,
+    {
 title: 'Community Forum',;,
 description: 'Connect with other users and experts',;,
 icon: Users,;,
@@ -256,13 +256,4 @@ Send Email
   ),
 }
 export default SupportPage</a>
-  </a>
-  </p>
-  </h2>
-  </h2>
-  </h2>
-  </h2>
-  </p>
-  </h1>
-  </SEOOptimizer>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></p></p></p></p></h3></h3></h3></section></section></section></section></section></section>

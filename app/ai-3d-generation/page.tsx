@@ -149,6 +149,11 @@ const AI3DGenerationPage: React.FC = () => {
                     )
     </>
   )
+                  
+                  
+                  
+                  
+                  
                   </ul>
                 </div>
               ))}
@@ -319,15 +324,3 @@ const AI3DGenerationPage: React.FC = () => {
   )
 }
 export default AI3DGenerationPage
-                        </Footer>
-                      </ArrowRight>
-                    </CheckCircle>
-                  </CheckCircle>
-                </Icon>
-              </CheckCircle>
-            </Icon>
-          </CheckCircle>
-        </div>
-      </section>
-    </ArrowRight>
-  </Navigation>

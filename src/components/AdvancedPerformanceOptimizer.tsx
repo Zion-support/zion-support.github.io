@@ -124,4 +124,3 @@ const,
   return null
 }
 export default AdvancedPerformanceOptimizer;`
-  </AdvancedPerformanceOptimizerProps>

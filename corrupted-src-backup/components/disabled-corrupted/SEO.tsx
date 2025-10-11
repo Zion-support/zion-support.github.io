@@ -53,6 +53,4 @@ const,
 }
 export default SEO
 "
-  </SEOProps>
-  </SEOProps>
 </li></li>

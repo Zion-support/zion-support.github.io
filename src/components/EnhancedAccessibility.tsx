@@ -397,16 +397,3 @@ onClick={resetSettings} className="w-full mt-4 px-3 py-2 bg-red-600,"
   ),
 }
 export default EnhancedAccessibility;"`
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </AccessibilitySettings>
-  </AccessibilityProps>

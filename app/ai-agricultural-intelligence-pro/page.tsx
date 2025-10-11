@@ -1,8 +1,8 @@
 'use client'
 import React from 'react';
-import {Helmet;} from 'react-helmet-async'
+import { Helmet } from 'react-helmet-async'
     },
-    {;,
+    {
 icon: BarChart,;,
 title: 'Advanced Analytics',}
   ]
@@ -49,7 +49,10 @@ Learn More
               )
     </>
   )
-            </div>
+            
+                
+                
+                </div>
           </div>
         </section>
 

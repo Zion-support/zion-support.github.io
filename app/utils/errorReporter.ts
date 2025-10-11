@@ -6,17 +6,17 @@ export interface ErrorReporterConfig {enableConsoleLogging: boolean,}
   enableRemoteLogging: boolean,
 }
 const defaultConfig: ErrorReporterConfig = {,
-    ,}export interface ErrorReport {}}message: string;,
+    ,}export interface ErrorReport {}}message: string,
   stack?: string;
   componentStack?: string,
   timestamp: string,
-    userAgent: string;,
-  url: string;,
+    userAgent: string,
+  url: string,
   severity: 'low' | 'medium' | 'high' | 'critical',
   context?: Record</string><string>}</strin>
 }
-export interface ErrorReporterConfig {}}enableConsoleLogging: boolean;,
-  enableRemoteLogging: boolean;,
+export interface ErrorReporterConfig {}}enableConsoleLogging: boolean,
+  enableRemoteLogging: boolean,
   remoteEndpoint?: string,
   maxErrorsInMemory: number,
     captureContext: boolean,}
@@ -26,8 +26,8 @@ const defaultConfig: ErrorReporterConfig = {,}enableConsoleLogging: process.env[
   maxErrorsInMemory: 50,
 }
   private config: ErrorReporterConfig,
-  private errorQueue: ErrorReport[] = [],}export class ErrorReporter {}}private static instance: ErrorReporter;,
-  private config: ErrorReporterConfig;,
+  private errorQueue: ErrorReport[] = [],}export class ErrorReporter {}}private static instance: ErrorReporter,
+  private config: ErrorReporterConfig,
   private errorQueue: ErrorReport[] = [],
     this.config = { ...defaultConfig, ...config }
 export interface ErrorReport {/* TODO: Fix JSX expression */}
@@ -198,7 +198,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
   getErrorStats(): {totalErrors: number,
     uniqueErrors: number,}errorsByType: Record<string>,}
   } {return {totalErrors: this.errorQueue.length,}
-      uniqueErrors: this.errorCount.size;,}getErrorStats(): {}totalErrors: number;,
+      uniqueErrors: this.errorCount.size,}getErrorStats(): {}totalErrors: number,
     uniqueErrors: number,
     errorsByType: Record<string>,}
   } {}return {}}totalErrors: this.errorQueue.length,

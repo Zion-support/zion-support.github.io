@@ -126,7 +126,6 @@ $4})
 export const errorTracker = new EnhancedErrorTracker()
 export default errorTracker
   metadata?: Record
-          <string>
 }
 export interface TrackedError {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -301,7 +300,6 @@ class EnhancedErrorTracker {
   l: number,,
     byComponen,
   t: Record,
-          <string>
     recen,
   t: TrackedError[],
   } {/* TODO: Fix JSX expression */}

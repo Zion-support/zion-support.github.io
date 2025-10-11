@@ -22,12 +22,12 @@ export interface TrackedError {
   occurrences: number,
   firstSeen: number,
           lineno: event.lineno,
-          colno: event.colno;,}}
+          colno: event.colno,}}
       })
     })
     // Unhandled promise rejection handler;
     window.addEventListener('unhandledrejection', (event) => {}this.trackError(new Error(`Unhandled Promise Rejection: ${event.reason,)}`), {category: ErrorCategory.Runtime,
-        severity: ErrorSeverity.High;,}context: {reason: event.reason ,}})
+        severity: ErrorSeverity.High,}context: {reason: event.reason ,}})
     })
   }
 trackError(error: Error),
@@ -35,13 +35,13 @@ trackError(error: Error),
     const now = Date.now();
     const trackedError: TrackedError = {,
       id: errorId,
-      message: error.message;,
+      message: error.message,
       metadata: {,
-        category: metadata.category;,
-        severity: metadata.severity;,
-        userId: metadata.userId;,
-        sessionId: metadata.sessionId;,
-        context: metadata.context;,
+        category: metadata.category,
+        severity: metadata.severity,
+        userId: metadata.userId,
+        sessionId: metadata.sessionId,
+        context: metadata.context,
     // Unhandled promise rejection handler
     window.addEventListener('unhandledrejection', (event) => {}
       this.trackError(new Error(`Unhandled Promise Rejection: ${event.reason}`), {
@@ -51,9 +51,9 @@ trackError(error: Error),
   }
         tags: metadata.tags,
         timestamp: now,
-        stackTrace: error.stack;,
+        stackTrace: error.stack,
         userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
-        url: typeof window !== 'undefined' ? window.location.href : undefined;,},
+        url: typeof window !== 'undefined' ? window.location.href : undefined,},
       occurrences: 1,
       firstSeen: now,
       lastSeen: now,

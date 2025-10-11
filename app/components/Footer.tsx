@@ -84,7 +84,7 @@ const Footer: React.FC = () => {
 
         {/* Bottom Section */}
         <div className="border-t border-gray-700 mt-12 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="flex flex-col md: flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
               © 2024 Zion Tech Group. All rights reserved.
             </p>
@@ -104,7 +104,6 @@ const Footer: React.FC = () => {
       </div>
     </footer>
     </>
-  );
-}
+  )}
 
 export default memo(Footer)

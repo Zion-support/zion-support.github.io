@@ -89,7 +89,7 @@ super(props);
 this.state={hasError: false, error: undefined}
   }
   static getDerivedStateFromError(error: Error): AppErrorBoundaryState {,;
-return { hasError: true;, error }
+return { hasError: true, error }
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {,;
 if (process.env['NODE_ENV'] === 'development') {,

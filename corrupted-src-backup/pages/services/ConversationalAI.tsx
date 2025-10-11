@@ -1,4 +1,4 @@
-import { Helmet; } from "react-helmet-async";";
+import { Helmet } from 'react-helmet-async';";
 impo, r, t { Vid, e, o } fr, o, m "luci, d, e-rea, c, t";";
 import, Header, from "../../componen, t, s/Head, e, r";";
 import, Footer, from "../../componen, t, s/Foot, e, r";
@@ -386,7 +386,7 @@ content="Deploy, advanced, conversational AI, with, 96% accura, c, y, 1, 5, 0+ l
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />;,
 g:px-8">",
             <div, className="te, x, t-cent, e, r">
-          <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />;,
+          <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />,
 g:px-8">"
             <div, className="te, x, t-cent, e, r">
               <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">";
@@ -463,15 +463,15 @@ g:px-8">",
             <div, className="text-center mb-12">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
         <section, className="py-16, b, g-gr, a, y-50">"
-          <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />;,
+          <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />,
 g: px-8">",
             <div, className="text-center mb-12">"
-          <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />;,
+          <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />,
 g:px-8">"</section>
             <div, className="text-center mb-12"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
         <section, className="py-16, b, g-gr, a, y-50">"
-          <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />;,
+          <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />,
 g:px-8">",</section>
             <div, className="text-center mb-12">"</div>
         {/* Key, Benefit, s */}"
@@ -558,7 +558,7 @@ g:px-8">",
         <section, className="py-20">";)
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",),
             <div, className="te, x, t-center, m, b-16">"
-          <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />;,
+          <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />,
 g:px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
@@ -649,7 +649,7 @@ g:px-8">",
         <section, className="py-20, b, g-gr, a, y-50">"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",
             <div, className="te, x, t-center, m, b-16">"
-          <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />;,
+          <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />,
 g:px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
@@ -724,15 +724,15 @@ g:px-8">",
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
         <section, className="py-20">"
-          <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />;,
+          <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />,
 g: px-8">",
             <div, className="te, x, t-center, m, b-16">"
-          <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />;,
+          <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />,
 g:px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
         <section, className="py-20">"
-          <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />;,
+          <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />,
 g:px-8">",</section>
             <div, className="te, x, t-center, m, b-16">"</div>
         {/* Featur, e, s */}"
@@ -821,7 +821,7 @@ g:px-8">",
         <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",
             <div, className="te, x, t-center, m, b-16">"
-          <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />;,
+          <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />,
 g:px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
@@ -917,7 +917,7 @@ g:px-8">",
         <section, className="py-20">"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",
             <div, className="te, x, t-center, m, b-16">"
-          <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />;,
+          <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />,
 g:px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
@@ -974,11 +974,11 @@ g:px-8, tex, t-cent, e, r">"
         <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-viol, e, t-900, vi, a-purp, l, e-800, t, o-pi, n, k-900, tex, t-whi, t, e">"
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />;,
 g:px-8, tex, t-cent, e, r">"
-          <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />;,
+          <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />,
 g:px-8, tex, t-cent, e, r">"</section>
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6"></h2>
         <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-viol, e, t-900, vi, a-purp, l, e-800, t, o-pi, n, k-900, tex, t-whi, t, e">"
-          <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />;,
+          <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />,
 g:px-8, tex, t-cent, e, r">"</section>
         {/* CTA, Sectio, n */}"
         <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-viol, e, t-900, vi, a-purp, l, e-800, t, o-pi, n, k-900, tex, t-whi, t, e"></section>"

@@ -83,7 +83,7 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {
   }
 }
   const isDevelopment = process.env['NODE_ENV'] === 'development';;
-return {/* TODO: Fix JSX expression */;}
+return {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   logErrors: true,;,
@@ -283,7 +283,7 @@ export function formatErrorForLogging(error: Error): Record,
     // TODO: Add content
   }
 }
-  return {/* TODO: Fix JSX expression */;}
+  return {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   message: error.message,;,

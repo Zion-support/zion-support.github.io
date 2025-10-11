@@ -11,7 +11,6 @@ export default function AIAutonomousBusinessSystems2026() {/* TODO: Fix JSX expr
   2026: 95% Automation Achievement</h1>"
             <p className="text-gray-600 text-lg">January 28, 2026 · 40 min read · Autonomous Systems</p>"
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🎯 Automation Results</h2>"
-            <p className="text-gray-700 mb-6">
               Revolutionary AI autonomous business systems have achieved <strong>95% operational automation</strong>,
               transforming how enterprises operate. Discover the breakthrough technologies and strategies that
               enable self-managing business processes.
@@ -26,7 +25,6 @@ export default function AIAutonomousBusinessSystems2026() {/* TODO: Fix JSX expr
             <p className="text-gray-700 mb-6">Our autonomous business systems leverage cutting-edge AI technologies to create self-managing
               enterprises that operate with minimal human intervention."
             <h3 className="text-xl font-semibold text-gray-800 mb-4">Core Components</h3>"
-            <ul className="list-disc list-inside text-gray-700 mb-6 space-y-2">
               <li> <strong>AI Decision,
   Engine:</strong> Real-time autonomous decision making
               <li> <strong>Process,
@@ -41,7 +39,6 @@ export default function AIAutonomousBusinessSystems2026() {/* TODO: Fix JSX expr
   functions:"
             <h3 className="text-xl font-semibold text-gray-800 mb-4">Phase)
   1: Foundation (Months 1-6)</h3>"
-            <ul className="list-disc list-inside text-gray-700 mb-4 space-y-2">
 <li>• Deploy AI decision engines for core business processes
               <li>• Implement automated workflow orchestration
               <li>• Establish real-time monitoring and alerting

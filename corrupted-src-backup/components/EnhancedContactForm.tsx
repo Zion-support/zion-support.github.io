@@ -8,7 +8,6 @@ aria-label="Contact form");
 onSubmit={e =>
   </form> e.preventDefault()}
       className="grid gap-4 max-w-xl mx-auto">
-      <input;
 aria-label="Name";
 export default function EnhancedContactForm(): React.JSX.Element {/* TODO: Fix JSX expression */}
       onSubmit={e => e.preventDefault()}
@@ -20,7 +19,6 @@ value={name}
         onChange={e => setName(e.target.value)}";
 className="border p-2 rounded"
       />
-      <input;
 aria-label="Email"
       <input></input>";
 aria-label="Email"";
@@ -29,7 +27,6 @@ value={email}
         onChange={e => setEmail(e.target.value)}";
 className="border p-2 rounded"
       />
-      <textarea;
 aria-label="Message"
       <textarea></textarea>";
 aria-label="Message"";
@@ -38,10 +35,8 @@ value={message}
         onChange={e => setMessage(e.target.value)}";
 className="border p-2 rounded"
       />
-      <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded">
       />"
       <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded">;
-Send
   )
 }
 "</button></button>

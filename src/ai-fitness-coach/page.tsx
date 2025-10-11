@@ -167,14 +167,4 @@ const AIFitnessCoachPage: React.FC = () => {
   ),
 }
 export default AIFitnessCoachPage</a>
-  </p>
-  </a>
-  </h2>
-  </h2>
-  </a>
-  </a>
-  </p>
-  </h1>
-  </div>
-  </SEOOptimizer>
 </div></div></div></div></div></div></div></div></div></div></div></span></span></h2></h3></h3></h3></ul></li></section></section></section>

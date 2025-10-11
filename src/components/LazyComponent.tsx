@@ -8,16 +8,12 @@ export default function LazyComponent({
   children
 }: LazyComponentProps) {
 const DefaultFallback = () => (
-  <div className="flex items-center justify-center p-8">
-    <div className="cyber-loader">
     <span className="ml-3 text-cyan-400">Loading...
 )
 const LazyComponent: React.FC<LazyComponentProps> = ({</LazyComponentProps>fallback</LazyComponentProps> = <DefaultFallback />,</DefaultFallback>children
 }) => {
   return (
-    <Suspense fallback={fallback}>
       {children}
-    </Suspense>
   )
 }
 // Higher-order component for lazy loading
@@ -26,7 +22,6 @@ export const withLazyLoading = <P extends object>(</P>Component</P>: ComponentTy
   const LazyWrappedComponent = (props: P) => (
     <LazyComponent fallback={fallback}></LazyComponent>
       <Component {...props} /></Component>
-    </LazyComponent>
   )
   LazyWrappedComponent.displayName = `withLazyLoading(${Component.displayName || Component.name})`
   return LazyWrappedComponent
@@ -38,7 +33,6 @@ export const createLazyComponent = <P extends object>(</P>importFunc</P>: () => 
   return (props: P) => (
     <LazyComponent fallback={fallback}></LazyComponent>
       <LazyComponent {...props} /></LazyComponen>
-    </LazyComponent>
   )
 }
 export default LazyComponent
@@ -66,7 +60,6 @@ export const _withLazyLoading = {}
   s: P) => ()
           <Suspense fallback={fallback || <LoadingSpinner />}>
       <Component {...props} /></Component>
-    </Suspense>
   )
 }
 // Lazy component wrapper with intersection observer
@@ -122,13 +115,10 @@ const,
   }, [delay, threshold, rootMargin])
   return (<div>Coming Soon</div>)
   )
-          <div ref={elementRef}>
       {isVisible ? ()}
-          <Suspense fallback={fallback}>
           {children}
       ) : ()
 // fallback)}
-          </div>
   )
 }
 // Preload function for critical components
@@ -159,7 +149,6 @@ export const createLazyComponent = {}
   s: P) => ()
           <Suspense fallback={fallback || <LoadingSpinner />}>
       <LazyComponent {...props} /></LazyComponent>
-    </Suspense>
   )
 }
 // Critical resource preloader
@@ -205,10 +194,4 @@ const imagePreloads = [
   })
 }
 export default LazyComponent</P>
-  </P>
-  </any>
-  </HTMLDivElement>
-  </LazyComponentProps>
-  </P>
-  </P>
 </div></div></span></a>

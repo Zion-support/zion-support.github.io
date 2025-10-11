@@ -1,12 +1,12 @@
 'use client';
 import React;, { useState } from 'react';
-import { Link; } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';;
 import Footer from '../components/Footer';
 'use client';
 import React;, { useState } from 'react';
 const LoginPage: React.FC = () => {;
-const [formData, setFormData] = useState({;,
+const [formData, setFormData] = useState({
 email: '',;,
 password: '',;,
 rememberMe: false
@@ -14,8 +14,7 @@ rememberMe: false
   });
 const [showPassword, setShowPassword] = useState(false);
 const [isLoading, setIsLoading] = useState(false);
-const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {;;
-}
+const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {}
 const { name}, value, type, checked } = e.target;
 setFormData(prev => ({)
       ...prev,
@@ -33,17 +32,17 @@ window.location.href = '/'
 }
   }
   const features = [;
-    {;,
+    {
 icon: Shield,;,
 title: 'Secure Access',;,
 description:     ,;
 $4},
-    {;,
+    {
 icon: CheckCircle,;,
 title: '24/7 Support',;,
 description:     ,;
 $4},
-    {;,
+    {
 icon: Phone,;,
 title: 'Mobile Ready',;,
 description:     ,;
@@ -91,7 +90,7 @@ e: false,)
   });
 const [showPassword, setShowPassword] = useState(false);
 const [isLoading, setIsLoading] = useState(false);
-const _handleInputChange = (e: React.ChangeEvent;,)
+const _handleInputChange = (e: React.ChangeEvent,)
           <HTMLInputElement>) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -103,7 +102,7 @@ setFormData(prev => ({/* TODO: Fix JSX expression */)}
       [name]: type === 'checkbox' ? checked : value;)
     }))
   }
-  const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */;}
+  const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     e.preventDefault();
@@ -399,11 +398,4 @@ href="/signup" className="inline-flex items-center text-cyan-400 hover:text-cyan
   ),
 }
 export default LoginPage</a>
-  </button>
-  </button>
-  </button>
-  </a>
-  </label>
-  </HTMLInputElement>
-  </HTMLInputElement>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></h1></h1></h2></h2></h3></h3>

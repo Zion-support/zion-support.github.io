@@ -109,7 +109,7 @@ import SEOOptimizer from './components/SEOOptimizer';;
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';;
 import Analytics from './components/Analytics';;
 import SecurityEnhancer from './components/SecurityEnhancer';;
-import { initializePerformanceOptimizations; } from './utils/performanceOptimizations';
+import { initializePerformanceOptimizations } from './utils/performanceOptimizations';
 import { microSaasServices;, aiServices, itServices, specializedServices } from '../data/2025-comprehensive-real-services-enhanced';
 
 // Dynamically import heavy components for better performance;;
@@ -313,7 +313,7 @@ Cutting-edge technology meets practical business needs.
               <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-white mb-2">Call Us</h3>
               <p className="text-gray-300 mb-4">Speak directly with our experts</p>
-              <a href="tel:+13024640950" onClick={handlePhoneClick} className="text-cyan-400 hover:text-cyan-300 text-lg font-semibold">
+              <a href="tel:+13024640950" onClick={handlePhoneClick} className="text-cyan-400 hover: text-cyan-300 text-lg font-semibold">
                 +1 302 464 0950
               </a>
             </div>
@@ -327,7 +327,6 @@ Cutting-edge technology meets practical business needs.
   </div>
               <MapPin className="w-12 h-12 text-pink-400 mx-auto mb-4" />
               </p>
-  );
-};
+  )};
 ;
 export default HomePage;

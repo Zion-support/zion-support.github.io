@@ -194,10 +194,4 @@ const TeamPage: React.FC = () => {
   ),
 }
 export default TeamPage</Link>
-  </Link>
-  </h2>
-  </p>
-  </h2>
-  </p>
-  </h2>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></p></p></p></p></p></h1></h3></h3></h4></section></section></section></section>

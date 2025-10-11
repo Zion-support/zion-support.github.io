@@ -96,7 +96,12 @@ const PerformanceOptimizationPage: React.FC = () => {
                       )
     </>
   )
-                    </ul>
+                    
+                  
+                  
+                  
+                  
+                  </ul>
                   )}
                 </div>
               ))}
@@ -157,7 +162,3 @@ const PerformanceOptimizationPage: React.FC = () => {
   )
 }
 export default PerformanceOptimizationPage
-        </Footer>
-      </CheckCircle>
-    </CheckCircle>
-  </Navigation>

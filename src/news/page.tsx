@@ -1,12 +1,12 @@
 import React from 'react';;
-import { Link; } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';;
 import Footer from '../components/Footer';;
 import SEOOptimizer from '../components/SEOOptimizer';;
 import { Calendar;, ArrowRight, TrendingUp, Users, Award, Globe, Zap, Brain, Shield, Code, BarChart, MessageSquare, Eye, Cpu, Target, Lock, BarChart3, FileText, Search, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Clock3, Compass, PieChart, TrendingDown, Activity } from 'lucide-react';
 const NewsPage: React.FC = () => {;
 const newsArticles = [;
-    {;,
+    {,
 }
 id: 1},;,
 title: 'Zion Tech Group Launches Revolutionary AI Analytics Dashboard',;,
@@ -17,7 +17,7 @@ image: '📊',;,
 featured: true,;,
 readTime: '5 min read'
     },
-    {;,
+    {
 id: 2,;,
 title: 'AI Enterprise Transformation: $50M Annual Savings Achieved',;,
 excerpt: 'Fortune 500 companies achieve unprecedented savings through our comprehensive AI transformation strategies.',;,
@@ -27,7 +27,7 @@ image: '💰',;,
 featured: true,;,
 readTime: '8 min read'
     },
-    {;,
+    {
 id: 3,;,
 title: 'Quantum Computing Breakthrough: Next-Gen Algorithms Ready',;,
 excerpt: 'Revolutionary quantum algorithms deliver exponential speedup for complex optimization problems.',;,
@@ -37,7 +37,7 @@ image: '⚡',;,
 featured: false,;,
 readTime: '6 min read'
     },
-    {;,
+    {
 id: 4,;,
 title: 'Autonomous Systems Revolution: Self-Managing Infrastructure',;,
 excerpt: 'Self-healing systems and predictive maintenance transform enterprise operations with zero-downtime guarantees.',;,
@@ -47,7 +47,7 @@ image: '🤖',;,
 featured: false,;,
 readTime: '7 min read'
     },
-    {;,
+    {
 id: 5,;,
 title: 'AI Cybersecurity: 99.9% Threat Detection Rate Achieved',;,
 excerpt: 'Advanced AI-powered security solutions provide real-time threat detection and automated response.',;,
@@ -57,7 +57,7 @@ image: '🔒',;,
 featured: false,;,
 readTime: '4 min read'
     },
-    {;,
+    {
 id: 6,;,
 title: 'Micro SAAS Solutions: 12 New AI Tools Launched',;,
 excerpt: 'Comprehensive suite of AI-powered business tools now available for immediate deployment.',;,
@@ -121,7 +121,7 @@ client success stories, and industry insights from Zion Tech Group.
                         <span className="text-gray-400 text-sm">{article.readTime}
                       <div className="flex items-center text-gray-400 text-sm">
                         <Calendar className="w-4 h-4 mr-2" />
-                        {new Date(article.date).toLocaleDateString('en-US', {;,
+                        {new Date(article.date).toLocaleDateString('en-US', {
 year: 'numeric',;,
 month: 'long',;,
 day: 'numeric' 
@@ -151,7 +151,7 @@ Read More
                         <span className="text-gray-400 text-xs">{article.readTime}
                       <div className="flex items-center text-gray-400 text-xs">
                         <Calendar className="w-3 h-3 mr-1" />
-                        {new Date(article.date).toLocaleDateString('en-US', {;,
+                        {new Date(article.date).toLocaleDateString('en-US', {
 month: 'short',;,
 day: 'numeric',;,
 year: 'numeric'
@@ -192,11 +192,4 @@ No spam, unsubscribe at any time.
   )
 }
 export default NewsPage</button>
-  </p>
-  </h2>
-  </h2>
-  </h2>
-  </p>
-  </h1>
-  </SEOOptimizer>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></a></a></p></p></p></p></h3></h3></main></section></section></section></section></section></article></article>

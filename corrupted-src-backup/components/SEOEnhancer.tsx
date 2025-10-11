@@ -179,6 +179,4 @@ const,
 }
 export default SEOEnhancer
 "`
-  </SEOEnhancerProps>
-  </SEOEnhancerProps>
 </li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li>

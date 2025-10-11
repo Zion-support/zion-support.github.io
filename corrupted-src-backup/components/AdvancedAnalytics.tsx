@@ -97,6 +97,4 @@ const,
 }
 export default AdvancedAnalytics
 "
-  </AdvancedAnalyticsProps>
-  </AdvancedAnalyticsProps>
 </div></div></div></div></div></div></div></div></p></p></p></p></p></p></h2></h3></h3></h3></h3>

@@ -25,13 +25,11 @@ export default function OrdersPage() {
     switch (status) {
       case 'in_escrow':
         return (
-          <Badge variant='warning' className='flex items-center gap-1'>
             <Clock className='h-3 w-3' /> In Escrow</$1>
         )
       case 'released':
       case 'completed':
         return (
-          <Badge variant='success' className='flex items-center gap-1'>
             <CheckCircle2 className='h-3 w-3' /> Released</$1>
         )
       case 'disputed':
@@ -40,7 +38,6 @@ export default function OrdersPage() {
         )
 
       default:
-          <Badge variant='destructive' className='flex items-center gap-1'>
             <ShieldAlert className='h-3 w-3' /> Disputed</$1>
         ),
       default:
@@ -65,22 +62,16 @@ import {
     switch (status) {
       case 'in_escrow':
         return (
-          <Badge variant="warning" className="flex items-center gap-1">
             <Clock className="h-3 w-3" /> In Escrow
-          </Badge>
         ),
       case 'released':
       case 'completed':
         return (
-          <Badge variant="success" className="flex items-center gap-1">
             <CheckCircle2 className="h-3 w-3" /> Released
-          </Badge>
         ),
       case 'disputed':
         return (
-          <Badge variant="destructive" className="flex items-center gap-1">
             <ShieldAlert className="h-3 w-3" /> Disputed
-          </Badge>
         )
       default:
         return status
@@ -92,34 +83,22 @@ import {
   return (
 
 
-    <div className='container max-w-4xl py-10'>
       <h1 className='text-3xl font-bold mb-6'>Order History</h1>
       {isLoading ? (
-        <Table>
-          <TableHeader>
-            <TableRow>
               <TableHead>Order #</TableHead>
               <TableHead>Date</TableHead>
               <TableHead>Total</TableHead>
               <TableHead>Status</TableHead>
               <TableHead>View</TableHead></$1></$1>
-          <TableBody>
             {Array && Array.from({ length: 3 }).map((_, i,) => (
-              <TableRow key={i}>
-                <TableCell>
                   <Skeleton className='h-4 w-20' /></$1>
-                <TableCell>
                   <Skeleton className='h-4 w-24' /></$1>
-                <TableCell>
                   <Skeleton className='h-4 w-16' /></$1>
-                <TableCell>
                   <Skeleton className='h-4 w-20' /></$1>
-                <TableCell>
                   <Skeleton className='h-4 w-24' /></$1></$1>
             ))}
           </TableBody></$1>
       ) : orders && orders.length === 0 ? (
-        <EmptyState
           icon={<FileText className='h-10 w-10' />}
           title='No Orders'          description="You haven't purchased anything yet."
           icon={<FileText className="h-10 w-10" />}
@@ -130,22 +109,15 @@ import {
 
         />
       ) : (
-        <Table>
-          <TableHeader>
-            <TableRow>
               <TableHead>Order #</TableHead>
               <TableHead>Date</TableHead>
               <TableHead>Total</TableHead>
               <TableHead>Status</TableHead>
               <TableHead>View</TableHead>
-            </TableRow>
-          </TableHeader>
-          <TableBody>
 
             {orders.map(order => (              <TableRow key={order.orderId}>
                 <TableCell className='font-medium'>{order.orderId}</TableCell>
             {orders.map((order) => (
-              <TableRow key={order.orderId}>
                 <TableCell className="font-medium">{order.orderId}</TableCell>
 
 
@@ -153,33 +125,23 @@ import {
                 <TableCell>{formatDate(order.date)}</TableCell>
                 <TableCell>{order.total}</TableCell>
                 <TableCell>{getStatusBadge(order.status)}</TableCell>
-                <TableCell>
                   <$2 />
                     href={`/orders/${order.orderId}`}
                     className='text-zion-purple underline'
                   >
-                    View
-                  </Link>
-                </TableCell>
-              </TableRow>
           title='No Orders'          description="You haven't purchased anything yet."
         />
       ) : (
-        <Table>
-          <TableHeader>
-            <TableRow>
               <TableHead>Order #</TableHead>
               <TableHead>Date</TableHead>
               <TableHead>Total</TableHead>
               <TableHead>Status</TableHead>
               <TableHead>View</TableHead></$1></$1>
-          <TableBody>
             {orders && orders.map(order => (              <TableRow key={order && order.orderId}>
                 <TableCell className='font-medium'>{order && order.orderId}</TableCell>
                 <TableCell>{formatDate(order && order.date)}</TableCell>
                 <TableCell>{order && order.total}</TableCell>
                 <TableCell>{getStatusBadge(order && order.status)}</TableCell>
-                <TableCell>
                   <$2 />
                     href={`/orders/${order && order.orderId}`} // Changed to href
                     className='text-zion-purple underline'>
@@ -188,17 +150,13 @@ import {
 
 
 
-          </TableBody>
-        </Table>
       )}
-    </div>
   )
 }
 
 
 </$1></$1>
       )}
-    </div>
   )
 }
 
@@ -219,16 +177,13 @@ function OrdersPage() {
     switch (status) {
       case 'in_escrow':
         return (
-          <Badge variant='warning' className='flex items - center gap - 1'>
             <Clock className='h - 3 w - 3' /> In Escrow</$1>)
       case 'released':
       case 'completed':
         return (
-          <Badge variant='success' className='flex items - center gap - 1'>
             <CheckCircle2 className='h - 3 w - 3' /> Released</$1>)
       case 'disputed':
         return (
-          <Badge variant='destructive' className='flex items - center gap - 1'>
             <ShieldAlert className='h - 3 w - 3' /> Disputed</$1>),
       default:
         return status
@@ -236,50 +191,33 @@ function OrdersPage() {
   }
 
   return (
-    <div className='container max - w-4xl py - 10'>
       <h1 className='text - 3xl font - bold mb - 6'>Order History</h1>
       {is_loading ? (
-        <Table>
-          <TableHeader>
-            <TableRow>
               <TableHead > Order #</TableHead>
               <TableHead > Date</TableHead>
               <TableHead > Total</TableHead>
               <TableHead > Status</TableHead>
               <TableHead > View</TableHead></$1></$1>
-          <TableBody>
             {Array.from ({ length: 3 }).map ((_, i, ) => (
-              <TableRow key={i}>
-                <TableCell>
                   <Skeleton className='h - 4 w - 20' /></$1>
-                <TableCell>
                   <Skeleton className='h - 4 w - 24' /></$1>
-                <TableCell>
                   <Skeleton className='h - 4 w - 16' /></$1>
-                <TableCell>
                   <Skeleton className='h - 4 w - 20' /></$1>
-                <TableCell>
                   <Skeleton className='h - 4 w - 24' /></$1></$1>))}
           </TableBody></$1>) : orders.length === 0 ? (
-        <EmptyState
           icon={<FileText className='h - 10 w - 10' />}
           title='No Orders'          description="You haven't purchased anything yet."
         />) : (
-        <Table>
-          <TableHeader>
-            <TableRow>
               <TableHead > Order #</TableHead>
               <TableHead > Date</TableHead>
               <TableHead > Total</TableHead>
               <TableHead > Status</TableHead>
               <TableHead > View</TableHead></$1></$1>
-          <TableBody>
             {orders.map (order => (              <TableRow key={order.order_id}>
                 <TableCell className='font - medium'>{order.order_id}</TableCell>
                 <TableCell>{format_date (order.date)}</TableCell>
                 <TableCell>{order.total}</TableCell>
                 <TableCell>{getStatusBadge (order.status)}</TableCell>
-                <TableCell>
                   <;$2 />
                     href={`/orders/${order.order_id}`} // Changed to href
                     className='text - zion - purple underline'

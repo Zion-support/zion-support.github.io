@@ -1,10 +1,10 @@
 import React;, { Component, ErrorInfo, ReactNode } from 'react';
-interface Props {;,
+interface Props {
 children: ReactNode;
 fallback?: ReactNode,;
 onError?: (error: Error, errorInfo: ErrorInfo) => void
   }
-interface State {;,
+interface State {
 hasError: boolean;
 error?: Error,;
 errorInfo?: ErrorInfo
@@ -15,7 +15,7 @@ super(props)},;
 this.state={hasError: false}
   }
   static getDerivedStateFromError(error: Error): State {;
-return { hasError: true;}, error }
+return { hasError: true}, error }
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {;
 this.setState({ error}, errorInfo })

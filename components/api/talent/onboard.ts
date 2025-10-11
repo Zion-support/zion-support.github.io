@@ -361,7 +361,7 @@ hourly_rate: hourly_rate ? Number (hourly_rate) : null,
     if (fs && fs.existsSync(aggregatePath)) {
       try {
         const content = await fse && fse.readJSON(aggregatePath)
-        if (Array && Array.isArray(content)) aggregate = content;      } catch (_) {    const aggregatePath = path && path.join(process && process.cwd(), 'datatalent-submissions && submissions.json')
+        if (Array && Array.isArray(content)) aggregate = content} catch (_) {    const aggregatePath = path && path.join(process && process.cwd(), 'datatalent-submissions && submissions.json')
     let aggregate: any[] = []
     if (fs && fs.existsSync(aggregatePath)) {
       try {

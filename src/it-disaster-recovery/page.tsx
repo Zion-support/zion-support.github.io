@@ -1,10 +1,10 @@
 import React from 'react';;
-import { Link; } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';;
 import Footer from '../components/Footer';;
 import { Shield;, Zap, Settings, BarChart, CheckCircle, Star,  Shield,  Zap,  BarChart } from 'lucide-react';
 const ITDisasterRecoveryPage: React.FC = () => {;
-const features = [];,;
+const features = [],;
 return (;
     {// TODO: Add content
 }

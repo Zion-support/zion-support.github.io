@@ -141,4 +141,3 @@ const generateStructuredData = () => {/* TODO: Fix JSX expression */}
   return null
 }
 export default SEO;`
-  </SEOProps>

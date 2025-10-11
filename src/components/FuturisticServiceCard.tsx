@@ -98,5 +98,4 @@ const,
   )
 }
 export default FuturisticServiceCard;"`
-  </FuturisticServiceCardProps>
 </div></button></p></ul>

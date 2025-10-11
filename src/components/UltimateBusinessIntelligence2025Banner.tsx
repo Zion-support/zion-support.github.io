@@ -239,28 +239,7 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
           <div key={index} className="text-center"></div>"
               <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>"
               <div className="text-gray-300">{stat.label}</div>
-    </section>
   )
 }
 export default UltimateBusinessIntelligence2025Banner;"
-  </div>
-  </div>
-  </button>
-  </div>
-  </div>
-  </span>
-  </div>
-  </div>
-  </div>
-  </div>
-  </svg>
-  </div>
-  </div>
-  </div>
-  </path>
-  </div>
-  </span>
-  </div>
-  </div>
-  </div>
 </div></div></div></div></div></span></span></span></span></a></p></h1>

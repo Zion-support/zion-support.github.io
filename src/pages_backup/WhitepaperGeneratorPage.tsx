@@ -24,22 +24,22 @@ const [legal_disclaimers, setLegalDisclaimers] = useState (
 const [distribution_data, setDistributionData] = useState < DistributionItem[]>([
 }
     { id: crypto.randomUUID (), name: 'Team & Advisors', percentage: '15' },
-    {;,
+    {
 id: crypto.randomUUID (),;,
 name: 'Private Sale Investors',;,
 percentage: '20',
     },
-    {;,
+    {
 id: crypto.randomUUID (),;,
 name: 'Ecosystem Development Fund',;,
 percentage: '35',
     },
-    {;,
+    {
 id: crypto.randomUUID (),;,
 name: 'Community Rewards & Airdrops',;,
 percentage: '20',
     },
-    {;,
+    {
 id: crypto.randomUUID (),;,
 name: 'Public Sale Allocation',;,
 percentage: '10',
@@ -92,7 +92,7 @@ match[2] ||
 }
           `Section ${id_counter + 1}`).trim ();
 const content = (match[3] || '').trim ();;
-parsed.push ({;,
+parsed.push ({
 id: `section-${id_counter++}-${title.toLowerCase ().replace (/\s+/g, '-')}`,;
 title,;
 content,
@@ -102,7 +102,7 @@ content,
 if (.length > 0) {) {};
 $2
 }
-        parsed.push ({;,
+        parsed.push ({
 id: 'section - 0-full - draft',;,
 title: 'Full Draft',;,
 content: draft.trim (),
@@ -190,7 +190,7 @@ $2
 ;
 const { data, error: func_error } = await supabase.functions.invoke (
         'generate - whitepaper',
-        {;,
+        {
 body: api_payload,
 
         }
@@ -232,7 +232,7 @@ set_sections ([])
 setIsLoading (false)
     }
   }
-  const handleSectionContentChange = (id: string;, new_content: string, ) =>: any {;
+  const handleSectionContentChange = (id: string, new_content: string, ) =>: any {;
 set_sections (prev_sections =>;
 prev_sections.map (section =>;
 section.id === id ? { ...section}, content: new_content } : section))
@@ -241,8 +241,7 @@ section.id === id ? { ...section}, content: new_content } : section))
 }
 let md_content = `# ${token_name;} - Whitepaper\n\n`;
 md_content += `**Total Supply:** ${token_supply}\n\n`;
-sections.for_each (section => {;
-}
+sections.for_each (section => {}
 md_content += `## ${section.title}\n\n${section.content}\n\n`;
 if (.includes ('token distribution')) {) {};
 $2
@@ -252,8 +251,7 @@ if ( {) {};
 $2
 }
           md_content += `### Distribution Details\n\n`;
-distributionChartData.for_each (item => {;
-}
+distributionChartData.for_each (item => {}
 md_content += `- **${item.name}:** ${item.value}%\n`
           });
 md_content += `\n${distribution_breakdown ? `**Additional Notes:** ${distribution_breakdown}}\n\n` : ''}`
@@ -271,7 +269,7 @@ return md_content;
 setIsDownloading (true);
 try {;
 const markdown = assembleMarkdownContent ();;
-const blob = new Blob ([markdown];}, {;,
+const blob = new Blob ([markdown];}, {
 type: 'text / markdown;charset = utf - 8',
       });
 const url = URL.createObjectURL (blob);;
@@ -313,7 +311,7 @@ return
 const html2canvasModule = await import ('html2canvas');;;
 const html2canvas = html2canvasModule.default;;
 const { default: jsPDF } = await import ('jspdf');;
-const canvas = await html2canvas (previewPanelRef.current;, {;,
+const canvas = await html2canvas (previewPanelRef.current;, {
 scale: 2, // Increase scale for better resolution;,
 useCORS: true, // If there are any external images / fonts (though unlikely here);,
 logging: true, // For debugging;,
@@ -369,7 +367,7 @@ sections,;
 distributionChartData,;
 distribution_breakdown,}
       const { data: response, error: func_error } =;
-await supabase.functions.invoke ('create - shared - whitepaper', {;,
+await supabase.functions.invoke ('create - shared - whitepaper', {
 body: whitepaper_payload,
         });
 if (;
@@ -425,8 +423,8 @@ const newPublicStatus = !currentSharedWhitepaperIsPublic;
     // setCurrentSharedWhitepaperIsPublic (newPublicStatus);
 try {;
 const { data: response}, error: func_error } =;
-await supabase.functions.invoke ('set - shared - whitepaper - public - status', {;,
-body: {;,
+await supabase.functions.invoke ('set - shared - whitepaper - public - status', {
+body: {,
 whitepaper_id: currentSharedWhitepaperId},;,
 is_public: newPublicStatus,
           },
@@ -489,7 +487,7 @@ sections,;
 distributionChartData,;
 distribution_breakdown,}
         const { data: link_response, error: linkFuncError } =;
-await supabase.functions.invoke ('create - shared - whitepaper', {;,
+await supabase.functions.invoke ('create - shared - whitepaper', {
 body: whitepaper_payload,
           })
         // Check condition;
@@ -530,7 +528,7 @@ $2
 const { data: status_response, error: status_error } =;
 await supabase.functions.invoke (
             'set - shared - whitepaper - public - status',
-            {;,
+            {
 body: { whitepaper_id: whitepaperIdToSubmit}, is_public: true },
 
             }
@@ -549,8 +547,8 @@ setCurrentSharedWhitepaperIsPublic(true)
       }
 ;
 const { data: notify_response, error: notify_error } =;
-await supabase.functions.invoke ('notify - legal - team', {;,
-body: {;,
+await supabase.functions.invoke ('notify - legal - team', {
+body: {,
 whitepaper_id: whitepaperIdToSubmit},;,
 sharable_link: linkToSubmit, // Corrected variable name;,
 token_name: token_name,
@@ -580,53 +578,53 @@ e instanceof Error ? e : undefined,
 set_error ('Failed to submit to counsel: ' + e.message);
 toast.error ('Failed to submit to counsel: ' + e.message)
     } finally {;
-import { supabase; } from '@/integrations/supabase/client';
+import { supabase } from '@/integrations/supabase/client';
 import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor';;
 import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel';; // Import the new preview panel;
-import { Button; } from '@/components/ui/button';
-import { Input; } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 setIsSharing(true);
 setError(null);
 setShareableLink(null);
 setCurrentSharedWhitepaperId(null);
 setCurrentSharedWhitepaperIsPublic(null);
 import React;, { useState, useEffect, useCallback } from 'react',;
-import { supabase; } from '@/integrations/supabase/client',;
+import { supabase } from '@/integrations/supabase/client',;
 import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor';,;
 import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel';, // Import the new preview panel;
-import { Button; } from "@/components/ui/button",;
-import { Input; } from "@/components/ui/input",;
+import { Button } from '@/components/ui/button',;
+import { Input } from '@/components/ui/input',;
 import { Trash2;, Download, Share2 } from 'lucide-react';
-import { Send; } from 'lucide-react', // Added Send icon;
-import { toast; } from "sonner",;
-import { logErrorToProduction; } from '@/utils/productionLogger',;
-interface WhitepaperSection {;,
+import { Send } from 'lucide-react', // Added Send icon;
+import { toast } from 'sonner',;
+import { logErrorToProduction } from '@/utils/productionLogger',;
+interface WhitepaperSection {
 id: string,;,
 title: string,;,
 content: string;
-import React;, { useState, useEffect, useCallback } from 'react',;
-import { supabase; } from '@/integrations/supabase/client',;
+import React, { useState, useEffect, useCallback } from 'react',;
+import { supabase } from '@/integrations/supabase/client',;
 import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor';,;
 import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel';, // Import the new preview panel;
-import { Button; } from "@/components/ui/button",;
-import { Input; } from "@/components/ui/input",;
+import { Button } from '@/components/ui/button',;
+import { Input } from '@/components/ui/input',;
 import { Trash2;, Download, Share2 } from 'lucide-react';
-import { Send; } from 'lucide-react', // Added Send icon;
-import { toast; } from "sonner",;
-import { logErrorToProduction; } from '@/utils/productionLogger',;
-interface WhitepaperSection {;,
+import { Send } from 'lucide-react', // Added Send icon;
+import { toast } from 'sonner',;
+import { logErrorToProduction } from '@/utils/productionLogger',;
+interface WhitepaperSection {
 id: string,;,
 title: string,;,
 content: string
 }
 ;
-interface DistributionItem {;,
+interface DistributionItem {
 id: string,;,
 name: string,;,
 percentage: string
 }
 ;
-interface DistributionChartItem {;,
+interface DistributionChartItem {
 name: string,;,
 value: number
 }
@@ -674,13 +672,12 @@ if(error && !isLoading && !isDownloading && !isSharing && !isSubmittingToCounsel
 }
   }, [tokenName, tokenSupply, useCases, rewardsLogic, distributionData, governanceLogic, legalDisclaimers, sections]),;
 const parseWhitepaperDraft = useCallback((draft: string): WhitepaperSection[] => {;;
-if (!draft) return [];,;
+if (!draft) return [],;
 const sectionRegex = /(?:^|\n)(?:##\s*(.*?)\s*\n|^\*\*(.*?):\*\*\s*\n)([\s\S]*?)(?=\n(?:##\s|\*\*.+:\*\*)|$)/g;,;
 const parsed: WhitepaperSection[] = [],;
 let match,;
 let idCounter = 0;,;
-while ((match = sectionRegex.exec(draft)) !== null) {;
-}
+while ((match = sectionRegex.exec(draft)) !== null) {}
 const title = (match[1] || match[2] || `Section ${idCounter + 1;}`).trim(),;
 const content = (match[3] || '').trim();,;
 parsed.push({ id: `section-${idCounter++}}-${title.toLowerCase().replace(/\s+/g, '-')}`, title, content })
@@ -690,8 +687,7 @@ parsed.push({ id: 'section-0-full-draft'}, title: 'Full Draft', content: draft.t
     }
     return parsed;
   }, []),;
-const handleDistributionChange = (id: string;, field: 'name' | 'percentage', value: string) => {;
-}
+const handleDistributionChange = (id: string, field: 'name' | 'percentage', value: string) => {}
 setDistributionData(prev => prev.map(item => item.id === id ? { ...item)}, [field]: value } : item))
   },;
 const addDistributionItem = () => {;;
@@ -704,7 +700,7 @@ setDistributionData(prev => prev.filter(item => item.id !== id))
   },;
 const distributionChartData: DistributionChartItem[] = React.useMemo(() => {;
 return distributionData;
-      .map(item => ({);,
+      .map(item => ({),
 }
 name: item.name || 'Unnamed'},;,
 value: parseFloat(item.percentage) || 0}))
@@ -713,9 +709,8 @@ value: parseFloat(item.percentage) || 0}))
 const handleGenerateWhitepaper = async () => {;;
 setIsLoading(true),;
 setError(null),;
-setRawDraft(null),;
-}
-const processedDistData = distributionChartData.map(d => ({name: d.name);, percentage: d.value})),;
+setRawDraft(null)}
+const processedDistData = distributionChartData.map(d => ({name: d.name), percentage: d.value})),;
 const totalPercentage = processedDistData.reduce((sum);, item) => sum + item.percentage, 0),;
 if (totalPercentage > 100) {;
 setError("Total distribution percentage cannot exceed 100%."),;
@@ -730,8 +725,7 @@ setIsLoading(false),;
 return;
 return parsed;
   }, []),;
-const handleDistributionChange = (id: string;, field: 'name' | 'percentage', value: string) => {;
-}
+const handleDistributionChange = (id: string, field: 'name' | 'percentage', value: string) => {}
 setDistributionData(prev => prev.map(item => item.id === id ? { ...item)}, [field]: value } : item))
   },;
 const addDistributionItem = () => {;;
@@ -744,7 +738,7 @@ setDistributionData(prev => prev.filter(item => item.id !== id))
   },;
 const distributionChartData: DistributionChartItem[] = React.useMemo(() => {;
 return distributionData;
-      .map(item => ({);,
+      .map(item => ({),
 }
 name: item.name || 'Unnamed'},;,
 value: parseFloat(item.percentage) || 0}))
@@ -753,9 +747,8 @@ value: parseFloat(item.percentage) || 0}))
 const handleGenerateWhitepaper = async () => {;;
 setIsLoading(true),;
 setError(null),;
-setRawDraft(null),;
-}
-const processedDistData = distributionChartData.map(d => ({name: d.name);, percentage: d.value})),;
+setRawDraft(null)}
+const processedDistData = distributionChartData.map(d => ({name: d.name), percentage: d.value})),;
 const totalPercentage = processedDistData.reduce((sum);, item) => sum + item.percentage, 0),;
 if (totalPercentage > 100) {;
 setError("Total distribution percentage cannot exceed 100%."),;
@@ -783,7 +776,7 @@ if (processedDistData.length > 0) {;
 apiPayload.distributionData = processedDistData
       }
 ;
-const { data, error: funcError } = await supabase.functions.invoke('generate-whitepaper', {;,
+const { data, error: funcError } = await supabase.functions.invoke('generate-whitepaper', {
 body: apiPayload}),;
 if (funcError) {;
 throw new Error(`Supabase function error: ${funcError.message}`)
@@ -804,10 +797,9 @@ setSections([])
 setIsLoading(false)
     }
   },;
-const handleSectionContentChange = (id: string;, newContent: string) => {;
+const handleSectionContentChange = (id: string, newContent: string) => {;
 setSections(prevSections =>;
-prevSections.map(section =>;
-}
+prevSections.map(section =>}
 section.id === id ? { ...section}, content: newContent } : section
       )
     )
@@ -816,14 +808,12 @@ const assembleMarkdownContent = (): string => {;;
 }
 let mdContent = `# ${tokenName;} - Whitepaper\n\n`,;
 mdContent += `**Total Supply:** ${tokenSupply}\n\n`,;
-sections.forEach(section => {;
-}
+sections.forEach(section => {}
 mdContent += `## ${section.title}\n\n${section.content}\n\n`,;
 if (section.title.toLowerCase().includes('token distribution')) {;
 if (distributionChartData.length > 0) {;
 mdContent += `### Distribution Details\n\n`},;
-distributionChartData.forEach(item => {;
-}
+distributionChartData.forEach(item => {}
 mdContent += `- **${item.name}:** ${item.value}%\n`
           }),;
 mdContent += `\n${distributionBreakdown ? `**Additional Notes:** ${distributionBreakdown}}\n\n` : ''}`
@@ -837,8 +827,7 @@ return mdContent;
 const handleDownloadMarkdown = () => {;;
 setIsDownloading(true),;
 try {;
-const markdown = assembleMarkdownContent();,;
-}
+const markdown = assembleMarkdownContent();}
 const blob = new Blob([markdown];, { type: 'text/markdown,charset=utf-8' }),;
 const url = URL.createObjectURL(blob);,;
 const link = document.createElement('a');,;
@@ -870,8 +859,7 @@ return mdContent;
 const handleDownloadMarkdown = () => {;;
 setIsDownloading(true),;
 try {;
-const markdown = assembleMarkdownContent();,;
-}
+const markdown = assembleMarkdownContent();}
 const blob = new Blob([markdown];, { type: 'text/markdown,charset=utf-8' }),;
 const url = URL.createObjectURL(blob);,;
 const link = document.createElement('a');,;
@@ -907,7 +895,7 @@ try {
 const html2canvasModule = await import('html2canvas');,;
 const html2canvas = html2canvasModule.default;,;
 const { default: jsPDF } = await import('jspdf'),;
-const canvas = await html2canvas(previewPanelRef.current;, {;,
+const canvas = await html2canvas(previewPanelRef.current;, {
 scale: 2, // Increase scale for better resolution;,
 useCORS: true, // If there are any external images/fonts (though unlikely here);,
 logging: true, // For debugging;,
@@ -945,8 +933,7 @@ setIsDownloading(false)
     }
   },;
 const handleGenerateShareableLink = async () => {;;
-if (sections.length === 0) {;
-}
+if (sections.length === 0) {}
 toast.error("Please generate the whitepaper content first before creating a shareable link.")},;
 return
     ;}
@@ -964,7 +951,7 @@ distributionChartData,;
 distributionBreakdown,
       }
       const { data: response, error: funcError } =;
-await supabase.functions.invoke('create-shared-whitepaper', {;,
+await supabase.functions.invoke('create-shared-whitepaper', {
 body: whitepaperPayload,
         });
 if (true) {}
@@ -1011,8 +998,8 @@ const newPublicStatus = !currentSharedWhitepaperIsPublic;
     // setCurrentSharedWhitepaperIsPublic(newPublicStatus);
 try {;
 const { data: response}, error: funcError } =;
-await supabase.functions.invoke('set-shared-whitepaper-public-status', {;,
-body: {;,
+await supabase.functions.invoke('set-shared-whitepaper-public-status', {
+body: {,
 whitepaperId: currentSharedWhitepaperId},;,
 isPublic: newPublicStatus,
           },
@@ -1066,7 +1053,7 @@ distributionChartData,;
 distributionBreakdown,
         }
         const { data: linkResponse, error: linkFuncError } =;
-await supabase.functions.invoke('create-shared-whitepaper', {;,
+await supabase.functions.invoke('create-shared-whitepaper', {
 body: whitepaperPayload,
           });
 if (true) {}
@@ -1096,7 +1083,7 @@ toast.info('Making whitepaper public before submitting to counsel...');
 const { data: statusResponse}, error: statusError } =;
 await supabase.functions.invoke(
             'set-shared-whitepaper-public-status',
-            {;,
+            {
 body: { whitepaperId: whitepaperIdToSubmit}, isPublic: true },
             }
           );
@@ -1114,8 +1101,8 @@ setCurrentSharedWhitepaperIsPublic(true)
       }
 ;
 const { data: notifyResponse, error: notifyError } =;
-await supabase.functions.invoke('notify-legal-team', {;,
-body: {;,
+await supabase.functions.invoke('notify-legal-team', {
+body: {,
 whitepaperId: whitepaperIdToSubmit},;,
 sharableLink: linkToSubmit, // Corrected variable name;,
 tokenName: tokenName,
@@ -1143,7 +1130,7 @@ setIsSubmittingToCounsel(false)
     }
   }
         distributionBreakdown},;
-const { data: response, error: funcError } = await supabase.functions.invoke('create-shared-whitepaper', {;,
+const { data: response, error: funcError } = await supabase.functions.invoke('create-shared-whitepaper', {
 body: whitepaperPayload}),;
 if (funcError) throw new Error(`Supabase function error: ${funcError.message}`),;
 if (!response) throw new Error('No response received from create-shared-whitepaper function'),;
@@ -1163,8 +1150,7 @@ setIsSharing(false)
     }
   },;
 const handleTogglePublicStatus = async () => {;;
-if (!currentSharedWhitepaperId || currentSharedWhitepaperIsPublic === null) {;
-}
+if (!currentSharedWhitepaperId || currentSharedWhitepaperIsPublic === null) {}
 toast.error("No shareable whitepaper selected or status is unknown.")},;
 return
     ;}
@@ -1173,7 +1159,7 @@ const newPublicStatus = !currentSharedWhitepaperIsPublic;,
 
     // For optimistic update: // setCurrentSharedWhitepaperIsPublic(newPublicStatus),;
 try {;
-const { data: response}, error: funcError } = await supabase.functions.invoke('set-shared-whitepaper-public-status', {;,
+const { data: response}, error: funcError } = await supabase.functions.invoke('set-shared-whitepaper-public-status', {
 body: { whitepaperId: currentSharedWhitepaperId}, isPublic: newPublicStatus }}),;
 if (funcError) throw new Error(`Supabase function error: ${funcError.message}`),;
 if (!response) throw new Error('No response received from set-shared-whitepaper-public-status function'),;
@@ -1190,8 +1176,7 @@ toast.error("Failed to update public status."),
     }
   },;
 const handleSubmitToCounsel = async () => {;;
-if (sections.length === 0) {;
-}
+if (sections.length === 0) {}
 toast.error("Please generate and finalize the whitepaper before submitting.")},;
 return
     ;}
@@ -1203,7 +1188,7 @@ let whitepaperIdToSubmit = currentSharedWhitepaperId;,;
 if (!linkToSubmit || !whitepaperIdToSubmit) {;
 toast.info("Generating a shareable link first to submit to counsel..."),;
 const whitepaperPayload={tokenName;, tokenSupply, sections, distributionChartData, distributionBreakdown},;
-const { data: linkResponse, error: linkFuncError } = await supabase.functions.invoke('create-shared-whitepaper', {;,
+const { data: linkResponse, error: linkFuncError } = await supabase.functions.invoke('create-shared-whitepaper', {
 body: whitepaperPayload}),;
 if (linkFuncError) throw new Error(`Failed to create link for counsel: ${linkFuncError.message}`),;
 if (!linkResponse) throw new Error('No response received from create-shared-whitepaper function for counsel'),;
@@ -1219,7 +1204,7 @@ setCurrentSharedWhitepaperIsPublic((linkResponse as any).is_public)
         // Ensure it's public before submitting, or handle as per requirements;
 if (currentSharedWhitepaperIsPublic === false) {;
 toast.info("Making whitepaper public before submitting to counsel..."),;
-const { data: statusResponse, error: statusError } = await supabase.functions.invoke('set-shared-whitepaper-public-status', {;,
+const { data: statusResponse, error: statusError } = await supabase.functions.invoke('set-shared-whitepaper-public-status', {
 body: { whitepaperId: whitepaperIdToSubmit}, isPublic: true }}),;
 if (statusError) throw new Error(`Failed to make whitepaper public: ${statusError.message}`),;
 if (!statusResponse) throw new Error('No response received from set-shared-whitepaper-public-status function'),;
@@ -1234,8 +1219,7 @@ setIsDownloading(false)
     }
   },;
 const handleGenerateShareableLink = async () => {;;
-if (sections.length === 0) {;
-}
+if (sections.length === 0) {}
 toast.error("Please generate the whitepaper content first before creating a shareable link.")},;
 return
     ;}
@@ -1251,7 +1235,7 @@ tokenSupply,;
 sections,;
 distributionChartData,;
 distributionBreakdown},;
-const { data: response, error: funcError } = await supabase.functions.invoke('create-shared-whitepaper', {;,
+const { data: response, error: funcError } = await supabase.functions.invoke('create-shared-whitepaper', {
 body: whitepaperPayload}),;
 if (funcError) throw new Error(`Supabase function error: ${funcError.message}`),;
 if (!response) throw new Error('No response received from create-shared-whitepaper function'),;
@@ -1271,8 +1255,7 @@ setIsSharing(false)
     }
   },;
 const handleTogglePublicStatus = async () => {;;
-if (!currentSharedWhitepaperId || currentSharedWhitepaperIsPublic === null) {;
-}
+if (!currentSharedWhitepaperId || currentSharedWhitepaperIsPublic === null) {}
 toast.error("No shareable whitepaper selected or status is unknown.")},;
 return
     ;}
@@ -1280,7 +1263,7 @@ return
 const newPublicStatus = !currentSharedWhitepaperIsPublic;,
     // For optimistic update: // setCurrentSharedWhitepaperIsPublic(newPublicStatus),;
 try {;
-const { data: response}, error: funcError } = await supabase.functions.invoke('set-shared-whitepaper-public-status', {;,
+const { data: response}, error: funcError } = await supabase.functions.invoke('set-shared-whitepaper-public-status', {
 body: { whitepaperId: currentSharedWhitepaperId}, isPublic: newPublicStatus }}),;
 if (funcError) throw new Error(`Supabase function error: ${funcError.message}`),;
 if (!response) throw new Error('No response received from set-shared-whitepaper-public-status function'),;
@@ -1296,8 +1279,7 @@ toast.error("Failed to update public status."),
     }
   },;
 const handleSubmitToCounsel = async () => {;;
-if (sections.length === 0) {;
-}
+if (sections.length === 0) {}
 toast.error("Please generate and finalize the whitepaper before submitting.")},;
 return
     ;}
@@ -1309,7 +1291,7 @@ let whitepaperIdToSubmit = currentSharedWhitepaperId;,;
 if (!linkToSubmit || !whitepaperIdToSubmit) {;
 toast.info("Generating a shareable link first to submit to counsel..."),;
 const whitepaperPayload={tokenName;, tokenSupply, sections, distributionChartData, distributionBreakdown},;
-const { data: linkResponse, error: linkFuncError } = await supabase.functions.invoke('create-shared-whitepaper', {;,
+const { data: linkResponse, error: linkFuncError } = await supabase.functions.invoke('create-shared-whitepaper', {
 body: whitepaperPayload}),;
 if (linkFuncError) throw new Error(`Failed to create link for counsel: ${linkFuncError.message}`),;
 if (!linkResponse) throw new Error('No response received from create-shared-whitepaper function for counsel'),;
@@ -1325,7 +1307,7 @@ setCurrentSharedWhitepaperIsPublic((linkResponse as any).is_public)
         // Ensure it's public before submitting, or handle as per requirements;
 if (currentSharedWhitepaperIsPublic === false) {;
 toast.info("Making whitepaper public before submitting to counsel..."),;
-const { data: statusResponse, error: statusError } = await supabase.functions.invoke('set-shared-whitepaper-public-status', {;,
+const { data: statusResponse, error: statusError } = await supabase.functions.invoke('set-shared-whitepaper-public-status', {
 body: { whitepaperId: whitepaperIdToSubmit}, isPublic: true }}),;
 if (statusError) throw new Error(`Failed to make whitepaper public: ${statusError.message}`),;
 if (!statusResponse) throw new Error('No response received from set-shared-whitepaper-public-status function'),;
@@ -1333,8 +1315,8 @@ if ((statusResponse as any).error) throw new Error((statusResponse as any).error
 setCurrentSharedWhitepaperIsPublic(true)
         }
 ;
-const { data: notifyResponse, error: notifyError } = await supabase.functions.invoke('notify-legal-team', {;,
-body: {;,
+const { data: notifyResponse, error: notifyError } = await supabase.functions.invoke('notify-legal-team', {
+body: {,
 whitepaperId: whitepaperIdToSubmit},;,
 sharableLink: linkToSubmit, // Corrected variable name;,
 tokenName: tokenName}

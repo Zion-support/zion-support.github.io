@@ -525,10 +525,8 @@ const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
         <div className="flex items-center space-x-4"></div>"
           <div className="flex items-center space-x-2"></div>`
             <div className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-red-500'}`}></div>"
-            <span className="text-sm text-gray-600">
               {isMonitoring ? 'Monitoring' : 'Stopped'}
           {enableExport && ()}
-          <button>
               onClick={handleExport}"
               className="px-4 py-2 bg-blue-600 text-white rounded-md,
   hover:bg-blue-700,
@@ -539,7 +537,6 @@ const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
 //               Export Data
           )}
       {lastUpdate && ()}"
-          <p className="text-sm text-gray-500 mb-4">
           Last,
   updated: {lastUpdate.toLocaleTimeString()}
       {/* Performance Metrics */}"
@@ -551,10 +548,8 @@ const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
           <div className="bg-gray-50 p-4 rounded-lg"></div>"
             <div className="flex items-center justify-between"></div>"
               <span className="text-sm font-medium text-gray-600">Performance Score</span>`
-              <span className={`text-2xl font-bold ${getPerformanceScoreColor(metrics.performance.score)}`}>
                 {metrics.performance.score}"
               <span className="text-sm font-medium text-gray-600">Load Time</span>"
-              <span className="text-lg font-semibold text-gray-900">
                 {metrics.performance.loadTime.toFixed(0)}ms;"
               <span className="text-sm font-medium text-gray-600">FCP
                 {metrics.performance.firstContentfulPaint.toFixed(0)}ms;"
@@ -570,16 +565,12 @@ const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
   md:grid-cols-2,"
   lg:grid-cols-4 gap-4"></div>"
               <span className="text-sm font-medium text-gray-600">Total Errors</span>"
-              <span className="text-2xl font-bold text-red-600">
                 {metrics.errors.total}"
               <span className="text-sm font-medium text-gray-600">Critical</span>"
-              <span className="text-lg font-semibold text-red-600">
                 {metrics.errors.bySeverity.critical || 0}"
               <span className="text-sm font-medium text-gray-600">High</span>"
-              <span className="text-lg font-semibold text-red-500">
                 {metrics.errors.bySeverity.high || 0}"
               <span className="text-sm font-medium text-gray-600">Medium</span>"
-              <span className="text-lg font-semibold text-yellow-600">
                 {metrics.errors.bySeverity.medium || 0}
       {/* Memory and Network */}"
         <h3 className="text-lg font-semibold text-gray-900 mb-4">System Resources</h3>"
@@ -587,14 +578,12 @@ const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
   md:grid-cols-2 gap-4"></div>"
             <h4 className="text-sm font-medium text-gray-600 mb-2">Memory Usage</h4>"
             <div className="space-y-2"></div>"
-              <div className="flex justify-between text-sm">
                 <span>Used
                 <span>{metrics.memory.used.toFixed(2)} MB
                 <span>Total
                 <span>{metrics.memory.total.toFixed(2)} MB
                 <span>Limit
                 <span>{metrics.memory.limit.toFixed(2)} MB</span>"
-              <div className="w-full bg-gray-200 rounded-full h-2">
                 <div></div>`
 className={`h-2 rounded-full ${}
   // TOD,
@@ -607,14 +596,11 @@ className={`h-2 rounded-full ${}
   h: `${Math.min(metrics.memory.percentage, 100)}%` }}
           "
           <h3 className="text-lg font-semibold text-gray-900 mb-4">Recent Errors</h3>"
-          <div className="space-y-2 max-h-64 overflow-y-auto">
             {metrics.errors.recent.map((error) => ()}"
           <div key={error.id} className="bg-gray-50 p-3 rounded-lg"></div>"
                 <div className="flex items-center justify-between mb-2"></div>"
                   <span className="text-sm font-medium text-gray-900">{error.message}</span>`
-                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${getSeverityColor(error.severity)}`}>
                     {error.severity}"
-                <div className="flex items-center justify-between text-xs text-gray-500">
                   <span>{error.type}
                   <span>{new Date(error.timestamp).toLocaleTimeString()}
             ))}

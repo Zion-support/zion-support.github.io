@@ -1,16 +1,15 @@
 /**
  * SEO utility functions
  */;
-export interface SEOConfig {;,
-title: string;,
+export interface SEOConfig {
+title: string,
 description: string;
 keywords?: string[];
 ogImage?: string,,;
 canonicalUrl?: string
   }
 ;
-export const generateMetaTags = (config: SEOConfig): string => {;,;
-}
+export const generateMetaTags = (config: SEOConfig): string => {}
 export interface SEOConfig {/* TODO: Fix JSX expression */}
 }
 ;
@@ -35,7 +34,7 @@ tags += `<link rel="canonical" href="${canonicalUrl}" />
 return tags;
 }
 ;
-export const updatePageTitle = (title: string) => {;,;
+export const updatePageTitle = (title: string) => {,;
 if (typeof window !== 'undefined') {,;
 document.title = title;
 export const updatePageTitle = (titl);;,

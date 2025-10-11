@@ -104,5 +104,3 @@ const,
   )
 }
 export default LazyImage;"
-  </LazyImageProps>
-</div>

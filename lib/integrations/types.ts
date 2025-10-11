@@ -389,7 +389,7 @@ export interface IntegrationsState {
   logs: SyncLogEntry[]
   overrides: ManualOverride[]
   events: ZapierEvent[]
-  lastError?: string | null;}
+  lastError?: string | null}
 }
 }
   overrides: IntegrationOverride[]

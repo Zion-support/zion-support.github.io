@@ -53,5 +53,3 @@ Ready to See More?
 }
 
 export default DemoPage
-    </Footer>
-  </Navigation>

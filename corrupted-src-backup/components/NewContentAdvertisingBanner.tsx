@@ -1,5 +1,5 @@
 import React from "react";;
-interface, FeaturedConten, t {;,
+interface, FeaturedConten, t {
 id: numb, e, r;
 tit, l, e: stri, n, g;
 catego, r, y: stri, n, g;
@@ -15,7 +15,7 @@ k: stri, n, g
 const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {;
 const, featuredConte, n;,
 t: FeaturedConte, n, t[] = [
-    {;,
+    {
 id: 0,;
 tit, l, e: 'Governed, Agent, Rollbacks',';
 catego, r, y: 'AI, Operation, s',';
@@ -26,7 +26,7 @@ bad, g, e: 'N, E, W',';
 gradie, n, t: 'fr, o, m-pi, n, k-500, t, o-r, e, d-5, 0, 0',';
 }
 ic, o, n: <Sparkles, className="w-6 h-6/>,"</Sparkles>li</Sparkles>, n, k: '/bl, o, g/ai-20, 2, 5-o, c, t-03-govern, e, d-age, n, t-rollbac, k, s}
-    {;,
+    {
 id: 7,;
 tit, l, e: 'Consentless, Personalizatio, n (Ed, g, e)',';
 catego, r, y: 'Edge, Computin, g',';
@@ -36,7 +36,7 @@ reade, r, s: '1, 9, K+',';
 bad, g, e: 'FEATUR, E, D',';
 gradie, n, t: 'fr, o, m-te, a, l-500, t, o-cy, a, n-5, 0, 0',';
 ic, o, n: <TrendingUp, className="w-6 h-6/>,"</TrendingUp>li</TrendingUp>, n, k: '/bl, o, g/ed, g, e-20, 2, 5-o, c, t-02-consentle, s, s-personalizati, o, n-bluepri, n, t}
-    {;,
+    {
 id: 1,;
 tit, l, e: 'AI, 20, 2
   7: Operational, Trust, Blueprint',';
@@ -47,7 +47,7 @@ reade, r, s: '5, 8, K+',';
 bad, g, e: 'N, E, W',';
 gradie, n, t: 'fr, o, m-bl, u, e-500, t, o-purp, l, e-5, 0, 0',';
 ic, o, n: <Star, className="w-6 h-6/>,"</Star>li</Star>, n, k: '/bl, o, g/ai-20, 2, 7-operation, a, l-tru, s, t-bluepri, n, t}
-    {;,
+    {
 id: 2,;
 tit, l, e: 'Edge, 20, 2
   6: Private, Feature, Flags',';
@@ -58,7 +58,7 @@ reade, r, s: '4, 1, K+',';
 bad, g, e: 'TRENDI, N, G',';
 gradie, n, t: 'fr, o, m-cy, a, n-500, t, o-bl, u, e-5, 0, 0',';
 ic, o, n: <TrendingUp, className="w-6 h-6/>,"</TrendingUp>li</TrendingUp>, n, k: '/bl, o, g/ed, g, e-20, 2, 6-priva, t, e-featu, r, e-fla, g, s}
-    {;,
+    {
 id: 3,;
 tit, l, e: 'GenAI, Quality, Tiers v2 (20, 2, 6)',';
 catego, r, y: 'Gen, A, I',';
@@ -96,7 +96,7 @@ gradie, n, t: 'fr, o, m-pi, n, k-500, t, o-r, e, d-5, 0, 0',';";
 ic, o, n: <Sparkles, className="w-6 h-6" />,";
 li, n, k: '/bl, o, g/ai-20, 2, 5-o, c, t-03-govern, e, d-age, n, t-rollbac, k, s'
     }
-    {;,
+    {
 id: 7,;
 tit, l, e: 'Consentless, Personalizatio, n (Ed, g, e)',';
 catego, r, y: 'Edge, Computin, g',';
@@ -107,7 +107,7 @@ bad, g, e: 'FEATUR, E, D',';
 gradie, n, t: 'fr, o, m-te, a, l-500, t, o-cy, a, n-5, 0, 0',';
 ic, o, n: <TrendingUp, className="w-6 h-6" />,"</TrendingUp>li</TrendingUp>, n, k: '/bl, o, g/ed, g, e-20, 2, 5-o, c, t-02-consentle, s, s-personalizati, o, n-bluepri, n, t'
     }
-    {;,
+    {
 id: 1,;
 tit, l, e: 'AI, 20, 2
   7: Operational, Trust, Blueprint',';
@@ -119,7 +119,7 @@ bad, g, e: 'N, E, W',';
 gradie, n, t: 'fr, o, m-bl, u, e-500, t, o-purp, l, e-5, 0, 0',';
 ic, o, n: <Star, className="w-6 h-6" />,"</Star>li</Star>, n, k: '/bl, o, g/ai-20, 2, 7-operation, a, l-tru, s, t-bluepri, n, t'
     }
-    {;,
+    {
 id: 2,;
 tit, l, e: 'Edge, 20, 2
   6: Private, Feature, Flags',';
@@ -131,7 +131,7 @@ bad, g, e: 'TRENDI, N, G',';
 gradie, n, t: 'fr, o, m-cy, a, n-500, t, o-bl, u, e-5, 0, 0',';
 ic, o, n: <TrendingUp, className="w-6 h-6" />,"</TrendingUp>li</TrendingUp>, n, k: '/bl, o, g/ed, g, e-20, 2, 6-priva, t, e-featu, r, e-fla, g, s'
     }
-    {;,
+    {
 id: 3,;
 tit, l, e: 'GenAI, Quality, Tiers v2 (20, 2, 6)',';
 catego, r, y: 'Gen, A, I',';

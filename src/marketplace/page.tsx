@@ -1,21 +1,20 @@
 import {ShoppingCart;, Users, Wrench, Search, Filter, Star, Clock, CheckCircle, ArrowRight, Phone, Mail, Award} from 'lucide-react'
 'use client';
 import React;, { useState } from 'react';
-import { Link; } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';;
 import Footer from '../components/Footer';;
 const MarketplacePage: React.FC = () => {;
 const [activeCategory, setActiveCategory] = useState('products');
 const [searchTerm, setSearchTerm] = useState('');
 const categories = [;
-    {;,
+    {
 id: 'products',;,
 name: 'Products',;,
 icon: ShoppingCart,;,
 color: 'text-blue-400',;,
 bgColor: 'bg-blue-500/10',;,
-description:     ,;
-}
+description:     }
 $4},;,
 id: 'talent',;,
 name: 'Talent',;,
@@ -97,7 +96,7 @@ projects: 89,;,
 rate: '$180/hour',;,
 image: '👩‍🔬',;,
 available: false;
-const equipment = [;;,
+const equipment = [;,
 name: 'AI Workstation Pro',;,
 description: 'High-performance workstation optimized for AI development and training',;,
 category: 'Hardware',;,
@@ -123,9 +122,8 @@ case 'talent':;
 return talent;;
 case 'equipment':;
 return equipment;;,
-default:;
-return [];
-}
+default: ;
+return []}
   }
   const filteredItems = getCurrentItems().filter(item =>;;
 item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
@@ -145,7 +143,7 @@ iconicon: Star,;,
 value: '4.8',;,
 label: 'Average Rating',;,
 color: 'text-yellow-400';
-const benefits = [;;,
+const benefits = [;,
 icon: CheckCircle,;,
 title: 'Verified Vendors',;,
 description:       ,;,
@@ -412,38 +410,4 @@ href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 tex
 Email Us
       <Footer /></Footer>;
 export default MarketplacePage,
-  </div>
-  </p>
-  </h2>
-  </div>
-  </div>
-  </div>
-  </h2>
-  </button>
-  </span>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </button>
-  </div>
-  </button>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </h1>
-  </div>
-  </div>
 </div></div></div></div></div></div></span></span></span></span></span></span></span></p></p></p></h2></h3></h3></h4></h4></h4></ul></li>

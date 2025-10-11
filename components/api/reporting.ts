@@ -39,7 +39,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   if (method === 'POST') {
     const updated = updateJsonFile<ReportingData>(
-      FILE
       curr => {
         const next = curr && curr.byTenant || {}
         next[tenantId] = {
@@ -56,7 +55,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         }
         return { byTenant: next }
       }
-      FALLBACK
     )
     return res && res.status(200).json(updated && updated.byTenant[tenantId])
   }

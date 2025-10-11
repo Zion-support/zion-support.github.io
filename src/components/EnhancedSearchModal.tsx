@@ -1,21 +1,21 @@
 import React;, { useState, useEffect, useRef } from 'react';
 import { Search;, X, ArrowRight, Clock, TrendingUp, Star } from 'lucide-react';
-interface SearchResult {;,
-id: string;,
-title: string;,
-description: string;,
-url: string;,
-category: string;,
+interface SearchResult {
+id: string,
+title: string,
+description: string,
+url: string,
+category: string,
 type: 'page' | 'service' | 'blog' | 'documentation';
 popularity?: number,;
 lastModified?: string
   }
-interface SearchModalProps {;,
+interface SearchModalProps {
 isOpen: boolean,;,
 onClose: () => void
   }
 const mockSearchResults: SearchResult[] = [
-  {;,
+  {,
 id: '1',;,
 title: 'AI Analytics Dashboard',;,
 description: 'AI-powered business intelligence and analytics platform with real-time insights and predictive modeling.',;,
@@ -25,7 +25,7 @@ type: 'service',;,
 popularity: 95,;,
 lastModified: '2024-01-15'
   },
-  {;,
+  {
 id: '2',;,
 title: 'AI Workflow Automation',;,
 description: 'Visual workflow builder with AI-powered process optimization and automation capabilities.',;,
@@ -35,7 +35,7 @@ type: 'service',;,
 popularity: 88,;,
 lastModified: '2024-01-10'
   },
-  {;,
+  {
 id: '3',;,
 title: 'About Us',;,
 description: 'Learn about Zion Tech Group, our mission, team, and commitment to AI innovation.',;,
@@ -45,7 +45,7 @@ type: 'page',;,
 popularity: 75,;,
 lastModified: '2024-01-08'
   },
-  {;,
+  {
 id: '4',;,
 title: 'AI Customer Support',;,
 description: 'Intelligent customer support solutions with natural language processing and automated responses.',;,
@@ -55,7 +55,7 @@ type: 'service',;,
 popularity: 90,;,
 lastModified: '2024-01-14'
   },
-  {;,
+  {
 id: '5',;,
 title: 'API Documentation',;,
 description: 'Comprehensive API documentation for integrating with our AI services and platforms.',;,
@@ -89,8 +89,7 @@ inputRef.current.focus()
   }
   }, [isOpen]);
 useEffect(() => {;
-const handleKeyDown = (e: KeyboardEvent) => {;;
-}
+const handleKeyDown = (e: KeyboardEvent) => {}
 if (!isOpen) return},;
 if (e.key === 'Escape') {;
 onClose()
@@ -112,8 +111,7 @@ return () => document.removeEventListener('keydown';, handleKeyDown)
   }, [isOpen, results, selectedIndex, onClose]);
 const searchResults = async (searchQuery: string) => {;;
 if (!searchQuery.trim()) {;
-setResults([]);
-}
+setResults([])}
 setShowSuggestions(true)},;
 return
   ;}
@@ -163,12 +161,10 @@ case 'IT Services':;
 return '☁️';;
 case 'Company':;
 return '🏢';;
-case 'Documentation':;
-}
+case 'Documentation':}
 return '📚';},;,
-default:;
-return '🔍';
-  }
+default: ;
+return '🔍'}
   }
   const getTypeColor = (type: string) => {;;
 switch (type) {;
@@ -178,12 +174,10 @@ case 'page':;
 return 'text-purple-400';;
 case 'blog':;
 return 'text-pink-400';;
-case 'documentation':;
-}
+case 'documentation':}
 return 'text-green-400';},;,
-default:;
-return 'text-gray-400';
-  }
+default: ;
+return 'text-gray-400'}
   }
   if (!isOpen) return null;;
 return (;
@@ -295,8 +289,4 @@ Popular searches: AI Analytics, Quantum Computing, Workflow Automation
   )
 }
 export default EnhancedSearchModal</p>
-  </h3>
-  </h3>
-  </div>
-  </div>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></p></h3></h3>

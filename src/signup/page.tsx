@@ -1,11 +1,11 @@
 import {Eye;, EyeOff, Mail, Lock, User, Building, Phone, CheckCircle, Shield, Award, Globe} from 'lucide-react'
 'use client';
 import React;, { useState } from 'react';
-import { Link; } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';;
 import Footer from '../components/Footer';;
 const SignupPage: React.FC = () => {;
-const [formData, setFormData] = useState({;,
+const [formData, setFormData] = useState({
 firstName: '',;,
 lastName: '',;,
 email: '',;,
@@ -20,8 +20,7 @@ subscribeNewsletter: false
 const [showPassword, setShowPassword] = useState(false);
 const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 const [isLoading, setIsLoading] = useState(false);
-const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {;;
-}
+const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {}
 const { name}, value, type, checked } = e.target;
 setFormData(prev => ({)
       ...prev,
@@ -30,8 +29,7 @@ setFormData(prev => ({)
   }
   const handleSubmit = async (e: React.FormEvent) => {;;
 e.preventDefault();
-if (formData.password !== formData.confirmPassword) {;
-}
+if (formData.password !== formData.confirmPassword) {}
 alert('Passwords do not match')},;
 return
   ;}
@@ -44,7 +42,7 @@ setIsLoading(false)
     // Redirect to dashboard or home page;
 window.location.href = '/';
 const features = [;
-    {;,
+    {
 icon: Shield,;,
 title: 'Enterprise Security',;,
 description:     ,;
@@ -93,7 +91,7 @@ r: false,)
 const [showPassword, setShowPassword] = useState(false);
 const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 const [isLoading, setIsLoading] = useState(false);
-const handleInputChange = (e: React.ChangeEvent;,)
+const handleInputChange = (e: React.ChangeEvent,)
           <HTMLInputElement>) => {/* TODO: Fix JSX expression */}
     const { name, value, type, checked } = e.target;
 setFormData(prev => ({/* TODO: Fix JSX expression */)}
@@ -103,7 +101,7 @@ setFormData(prev => ({/* TODO: Fix JSX expression */)}
       [name]: type === 'checkbox' ? checked : value;)
     }))
   }
-  const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */;}
+  const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     e.preventDefault();

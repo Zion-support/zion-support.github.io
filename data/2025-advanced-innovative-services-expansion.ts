@@ -1961,7 +1961,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     launchDate: '2025-01-15', customers: 89
     rating: 4.8, reviews: 67
     benefits: [
-      '70% faster deployment cycles40% reduction in infrastructure costs99.9% deployment success rateZero-downtime deployments24/7 autonomous monitoring'];,
+      '70% faster deployment cycles40% reduction in infrastructure costs99.9% deployment success rateZero-downtime deployments24/7 autonomous monitoring'],
     capabilities: [}
       'Autonomous pipeline managementPredictive scalingSelf-healing deploymentsIntelligent resource optimizationAutomated security compliance'
     ]}

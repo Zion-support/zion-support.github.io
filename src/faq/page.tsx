@@ -15,16 +15,16 @@ prev.includes(index)
 }
   }
   const faqData = [;
-    {;,
+    {
 category: 'General Questions',;,
-questions: [;,
+questions: [,
 question: 'What is Zion Tech Group?',;,
 answer:         ,;
 $4},;,
 question: 'What services do you offer?',;,
 answer:           ,;,
 questionquestion: 'How can I get started?',;,
-answer: 'Getting started is easy! Contact us for a free consultation at (302) 464-0950 or email kleber@ziontechgroup.com. We\'ll assess your needs and recommend the best solutions for your business.';,
+answer: 'Getting started is easy! Contact us for a free consultation at (302) 464-0950 or email kleber@ziontechgroup.com. We\'ll assess your needs and recommend the best solutions for your business.',
 question: 'Do you offer custom solutions?',;,
 answer:         ,;
 $4}
@@ -153,7 +153,7 @@ Contact Form
       <Footer />
     </React.Fragment>;
 export default FAQPage,;
-import { Link; } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';;
 import Footer from '../components/Footer';;
 const FAQPage: React.FC = () => {;
@@ -292,7 +292,7 @@ n: 'How quickly do you respond to support requests?',;
 answe,;,
 r: 'We respond to support requests within 1 hour during business hours and within 4 hours for non-critical issues outside business hours. Critical issues receive immediate attention.'
   ],;
-const filteredData = faqData.map(category => ({/* TODO: Fix JSX expression */);}
+const filteredData = faqData.map(category => ({/* TODO: Fix JSX expression */)}
   O: Add content,}
 }
 //     ...category,;
@@ -304,21 +304,14 @@ s: category.questions.filter(q =>)
   })).filter(category => category.questions.length > 0);
 return (<div>Coming Soon</div>);
   )
-          <React.Fragment>
-      <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
-        <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}"
           <div className="text-center mb-12"></div>"
             < className="text-4xl,"$2 />;,
 md:text-5xl font-bold text-white mb-6 neon-text">
 // Frequently Asked Questions</h1>"
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
 // Find answers to common questions about our AI and IT services, pricing, and support.
             {/* Search Bar */}
-            <div className="max-w-md mx-auto relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input;
 type="text" placeholder="Search FAQs...";
 value={searchTerm}
                 onChange={(e) =>
@@ -330,13 +323,10 @@ focus:ring-2,";,
 focus:ring-cyan-400/20"
 // />
           {/* FAQ Content */}"
-          <div className="max-w-4xl mx-auto">
             {filteredData.map((category), categoryIndex) => ()}"
           <div key={categoryIndex} className="mb-12"></div>"
-                <h2 className="text-2xl font-bold text-cyan-400 mb-6 neon-text">
                   {category.category}
                 </h2>"
-                <div className="space-y-4">
                   {category.questions.map((item), itemIndex) => {}
   // TOD,;,
 O: Add content,
@@ -344,7 +334,6 @@ O: Add content,
                     const globalIndex = categoryIndex * 100 + itemIndex;;
 const isOpen = openItems.includes(globalIndex);
           "
-          <div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700/50">
                         <button>;
 onClick={() => toggleItem(globalIndex)}";
 className="w-full px-6 py-4 text-left flex items-center justify-between,";,
@@ -353,10 +342,8 @@ hover:bg-slate-700/50 transition-colors"
           "
           <span className="text-white font-medium pr-4">{item.question}
                           {isOpen ? ()}"
-          <ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                           ) : ()
                             "
-          <ChevronDown className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                           )}
                         {isOpen && ()}"
           <div className="px-6 pb-4"></div>"
@@ -364,15 +351,12 @@ hover:bg-slate-700/50 transition-colors"
                   })}
             ))}
 {/* Contact CTA */}
-          <div className="mt-16 bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">;
 Still Have Questions?
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">;
 Can't find the answer you're looking for? Our team is here to help you with any questions about our services.
-            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <$2 />;
 href="tel:+13024640950" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-                <Phone className="w-5 h-5 mr-2" />
 // Call (302) 464-0950;
 href="mailto:kleber@ziontechgroup.com" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" />;
@@ -384,18 +368,4 @@ Contact Form
     </React.Fragment>;
 export default FAQPage,;
 export default FaqPage</div>
-  </p>
-  </h2>
-  </div>
-  </a>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
 </div></div></div></div></div></div></span></span></button></p></p></p></p></p></h2></h2>

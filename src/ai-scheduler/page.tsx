@@ -213,31 +213,4 @@ $4}
 export default AISchedulerPage
 import { ArrowRight, CheckCircle, Calendar, Clock, Users, Zap, Brain, Target, Shield, Globe, Phone, Mail } from 'lucide-react'
 export default AISchedulerPage</p>
-  </h2>
-  </section>
-  </div>
-  </div>
-  </div>
-  </div>
-  </button>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </h2>
-  </div>
-  </div>
-  </Link>
-  </a>
-  </div>
-  </p>
-  </p>
-  </h1>
-  </div>
-  </section>
-  </div>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></p></p></p></p></h3></h3></h3></section>

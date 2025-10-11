@@ -34,7 +34,7 @@ interface PageSEOData {}
 }
 class SEOOptimizer {private config: SEOConfig,}
   private currentPageData: PageSEOData | null = null,
-  constructor(config: SEOConfig) {,}class SEOOptimizer {}}private config: SEOConfig;,
+  constructor(config: SEOConfig) {,}class SEOOptimizer {}}private config: SEOConfig,
   private currentPageData: PageSEOData | null = null,
     return keywords.join(', ');}
   generateKeywords(pageKeywords?: string[]): string {/* TODO: Fix JSX expression */,}}}
@@ -414,7 +414,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   generateSitemapData(): Array<{url: string; lastmod: string; changefreq: string, priority: number ,}> {// This would typically come from your CMS or routing system;
     return [;
       {
-        url: this.config.siteUrl;,}generateSitemapData(): Array<{url: string; lastmod: string; changefreq: string, priority: number ,}> {}// This would typically come from your CMS or routing system;
+        url: this.config.siteUrl,}generateSitemapData(): Array<{url: string; lastmod: string; changefreq: string, priority: number ,}> {}// This would typically come from your CMS or routing system;
     return [;
       {}url: this.config.siteUrl,
   private trackSEOMetric()

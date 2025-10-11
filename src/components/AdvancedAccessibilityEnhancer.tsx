@@ -163,4 +163,3 @@ const,
   return null
 }
 export default AdvancedAccessibilityEnhancer;"`
-  </AdvancedAccessibilityEnhancerProps>

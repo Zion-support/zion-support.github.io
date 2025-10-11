@@ -243,31 +243,4 @@ const PagePage: React.FC = () => {
   )
 }
 export default SmartAnalyticsPage</a>
-  </a>
-  </a>
-  </div>
-  </div>
-  </div>
-  </section>
-  </p>
-  </h2>
-  </section>
-  </p>
-  </h1>
-  </section>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </h2>
-  </section>
-  </Link>
-  </a>
-  </p>
-  </h1>
-  </div>
-  </div>
 </div></span></span></span></span></p></p></p></h3></h3></ul></ul></li></main></section>

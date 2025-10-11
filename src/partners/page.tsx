@@ -335,20 +335,4 @@ const PagePage: React.FC = () => {
   ),
 }
 export default PartnersPage</a>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
 </div></div></div></div></div></span></span></p></p></p></p></p></p></p></p></p></h2></h2></h2></h2></h3></h3></h3></ul></ul></li>

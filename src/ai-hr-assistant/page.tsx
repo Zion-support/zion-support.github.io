@@ -85,8 +85,4 @@ const AIHRAssistantPage: React.FC = () => {
   )
 }
 export default AIHRAssistantPage</h2>
-  </a>
-  </a>
-  </p>
-  </h1>
 </div></div></div></p></h3></ul></li></main></section>

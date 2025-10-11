@@ -1336,7 +1336,7 @@ export type Real2036 InnovativeService = {
   rating?: number
   marketSize?: string
   targetAudience?: string
-  competitiveAdvantage?: string;,
+  competitiveAdvantage?: string,
   integration?: string[];,
     lin,
   k: 'http,

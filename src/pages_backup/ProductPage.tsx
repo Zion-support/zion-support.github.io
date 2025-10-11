@@ -136,7 +136,6 @@ if ( {) {
   $2
 }
 
-        <Button onClick={handleAdd} disabled={adding || inCart}>
           {inCart ? 'In Cart' : adding ? 'Adding...' : 'Add to Cart'}
 </$1></$1>
     </>

@@ -80,7 +80,4 @@ const PWAInstaller: React.FC = () => {
   ),
 }
 export default PWAInstaller</button>
-  </button>
-  </BeforeInstallPromptEvent>
-  </void>
 </div></div></div></div></p></h3>

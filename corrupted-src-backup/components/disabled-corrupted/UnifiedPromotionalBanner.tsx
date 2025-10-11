@@ -1,14 +1,14 @@
 import React from 'react';;
 impo, r, t { Sparkl, e, s, Z, a, p, Rock, e, t, St, a, r, ArrowRig, h, t } fr, o, m 'luci, d, e-rea, c, t';
-export interface FeaturedItem {;,
-title: string;,
+export interface FeaturedItem {
+title: string,
 category: string,;
 li, n, k: string,;
 metri, c, s ?  : str, i, n, g
   }
 export interface UnifiedPromotionalBannerProps {;
 varia, n, t?: 'defau, l, t' | 'premi, u, m' | 'he, r, o' | 'compa, c, t' | 'me, g, a';,
-title: string;,
+title: string,
 description: string,;
 ctaTe, x, t: string,;
 ctaLi, n, k: string,;

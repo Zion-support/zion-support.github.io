@@ -371,28 +371,4 @@ Most Popular
   ),
 }
 export default ExpenseTrackerPage</div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </button>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </h2>
-  </div>
-  </div>
-  </Link>
-  </a>
-  </div>
-  </p>
-  </p>
-  </div>
-  </section>
-  </div>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></p></p></p></p></p></h3></h3></h3></section></section>

@@ -1,6 +1,6 @@
 'use client';
 import React;, { useState } from 'react';
-import { Link; } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';;
 import Footer from '../components/Footer';
 'use client';
@@ -8,16 +8,15 @@ import React;, { useState } from 'react';
 const ResearchDevelopmentPage: React.FC = () => {;
 const [activeTab, setActiveTab] = useState('ai');
 const _researchAreas = [;
-    {;,
+    {
 id: 'ai',;,
 name: 'Artificial Intelligence',;,
 icon: Brain,;,
 color: 'text-purple-400',;,
 bgColor: 'bg-purple-500/10',;,
-description:     ,;
-}
+description:     }
 $4},
-    {;,
+    {
 id: 'quantum',;,
 name: 'Quantum Computing',;,
 icon: Atom,;,
@@ -25,7 +24,7 @@ color: 'text-blue-400',;,
 bgColor: 'bg-blue-500/10',;,
 description:     ,;
 $4},
-    {;,
+    {
 id: 'autonomous',;,
 name: 'Autonomous Systems',;,
 icon: Rocket,;,
@@ -33,7 +32,7 @@ color: 'text-green-400',;,
 bgColor: 'bg-green-500/10',;,
 description:     ,;
 $4},
-    {;,
+    {
 id: 'emerging',;,
 name: 'Emerging Technologies',;,
 icon: Lightbulb,;,
@@ -44,7 +43,7 @@ $4}
   ];
 const researchProjects={;;,
 ai: [
-      {;,
+      {,
 title: 'Consensus Intelligence Framework'},;,
 description: 'Developing a novel AI framework that enables multiple AI systems to reach consensus on complex decisions',;,
 status: 'In Progress',;,
@@ -59,7 +58,7 @@ outcomes: [
 icon: Brain,;,
 color:       ,;
 $4},
-      {;,
+      {
 title: 'Autonomous Business Intelligence',;,
 description: 'Creating self-managing business intelligence systems that adapt and optimize without human intervention',;,
 status: 'Completed',;,
@@ -74,7 +73,7 @@ outcomes: [
 icon: Target,;,
 color:       ,;
 $4},
-      {;,
+      {
 title: 'Neural Architecture Search for Enterprise',;,
 description: 'Developing automated neural architecture search specifically optimized for enterprise applications',;,
 status: 'In Progress',;,
@@ -91,7 +90,7 @@ color:       ,;
 $4}
     ],;,
 quantum: [
-      {;,
+      {,
 title: 'Quantum Machine Learning Algorithms',;,
 description: 'Developing quantum algorithms for machine learning that leverage quantum advantage',;,
 status: 'In Progress',;,
@@ -106,7 +105,7 @@ outcomes: [
 icon: Atom,;,
 color:       ,;
 $4},
-      {;,
+      {
 title: 'Quantum Error Correction for Business Applications',;,
 description: 'Researching practical quantum error correction methods for commercial quantum computing',;,
 status: 'Planning',;,
@@ -123,7 +122,7 @@ color:       ,;
 $4}
     ],;,
 autonomous: [
-      {;,
+      {,
 title: 'Autonomous Enterprise Operations',;,
 description: 'Developing fully autonomous systems for enterprise operations and decision-making',;,
 status: 'In Progress',;,
@@ -138,7 +137,7 @@ outcomes: [
 icon: Rocket,;,
 color:       ,;
 $4},
-      {;,
+      {
 title: 'Multi-Agent Coordination Systems',;,
 description: 'Researching coordination mechanisms for multiple autonomous agents in complex environments',;,
 status: 'Completed',;,
@@ -155,7 +154,7 @@ color:       ,;
 $4}
     ],;,
 emerging: [
-      {;,
+      {,
 title: 'Neuromorphic Computing for AI',;,
 description: 'Exploring brain-inspired computing architectures for more efficient AI processing',;,
 status: 'In Progress',;,
@@ -170,7 +169,7 @@ outcomes: [
 icon: Lightbulb,;,
 color:       ,;
 $4},
-      {;,
+      {
 title: 'Edge AI for IoT Systems',;,
 description: 'Developing ultra-efficient AI systems for edge computing and IoT applications',;,
 status: 'Completed',;,
@@ -188,7 +187,7 @@ $4}
     ]
   }
   const publications = [;
-    {;,
+    {
 title: 'Consensus Intelligence: A Framework for Multi-Agent Decision Making',;,
 authors: 'Dr. Sarah Chen, Dr. Michael Rodriguez, et al.',;,
 journal: 'Nature Machine Intelligence',;,
@@ -196,7 +195,7 @@ year: '2025',;,
 impact: 'High',;,
 link:     ,;
 $4},
-    {;,
+    {
 title: 'Autonomous Business Process Optimization Using Reinforcement Learning',;,
 authors: 'Dr. James Wilson, Dr. Lisa Park, et al.',;,
 journal: 'Journal of Artificial Intelligence Research',;,
@@ -204,7 +203,7 @@ year: '2025',;,
 impact: 'High',;,
 link:     ,;
 $4},
-    {;,
+    {
 title: 'Quantum Machine Learning for Financial Risk Assessment',;,
 authors: 'Dr. Alex Kumar, Dr. Maria Santos, et al.',;,
 journal: 'Quantum Information Processing',;,
@@ -212,7 +211,7 @@ year: '2024',;,
 impact: 'Medium',;,
 link:     ,;
 $4},
-    {;,
+    {
 title: 'Multi-Agent Coordination in Distributed Systems',;,
 authors: 'Dr. Robert Kim, Dr. Jennifer Lee, et al.',;,
 journal: 'Nature Communications',;,
@@ -222,22 +221,22 @@ link:     ,;
 $4}
   ];
 const achievements = [;
-    {;,
+    {
 icon: Award,;,
 title: '50+ Research Papers',;,
 description:     ,;
 $4},
-    {;,
+    {
 icon: Users,;,
 title: '100+ Researchers',;,
 description:     ,;
 $4},
-    {;,
+    {
 icon: Target,;,
 title: '15+ Patents',;,
 description:     ,;
 $4},
-    {;,
+    {
 icon: Globe,;,
 title: 'Global Collaborations',;,
 description:     ,;
@@ -347,7 +346,7 @@ descriptio,;,
 n: 'Researching next-generation technologies'
     }
   ];
-const researchProjects={/* TODO: Fix JSX expression */;}
+const researchProjects={/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   a,;,
@@ -1002,6 +1001,4 @@ href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 tex
   ),
 }
 export default ResearchDevelopmentPage</a>
-  </a>
-  </a>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></button></p></p></p></p></p></p></p></p></h2></h2></h2></h2></h2></h2></h3></h3></h3></ul></ul></li>

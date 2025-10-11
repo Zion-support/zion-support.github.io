@@ -9,7 +9,6 @@ export default async function handler("req": NextApiRequest, "res": NextApiRespo
     const body = req.body as Partial
 export default function ClientPage() {
   return (
-    <ClientBudgetRequest>
     if (!body || !body.title || !body.category) {
       return res.status(400).json({ "error": 'Missing required fields: title, category' })}
     const "input": ClientBudgetRequest = {

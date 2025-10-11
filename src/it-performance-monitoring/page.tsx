@@ -1,10 +1,10 @@
 import React from 'react';;
-import { Link; } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';;
 import Footer from '../components/Footer';;
 import { BarChart;, Zap, Shield, Settings, CheckCircle, Star,  BarChart,  Zap,  Settings } from 'lucide-react';
 const ITPerformanceMonitoringPage: React.FC = () => {;
-const features = [];,;
+const features = [],;
 return (;
     {// TODO: Add content
 }

@@ -1,7 +1,7 @@
 'use client';
 import React;, { useState } from 'react';
 const,;,
-InteractiveAIROICalculator: React.FC = () => {return (;}
+InteractiveAIROICalculator: React.FC = () => {return (}
     <div>Coming Soon</div>)
   )
 }

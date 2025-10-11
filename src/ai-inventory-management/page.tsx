@@ -6,12 +6,9 @@ export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression
         <title>AI Inventory Management Solutions - Zion Tech Group
         <meta name="description" content="Intelligent AI-powered inventory management with predictive analytics, automated reordering, and real-time optimization. Starting at $149/month." /></meta>"
         <meta name="keywords" content="AI inventory management, inventory optimization, supply chain management, predictive analytics, automated reordering" /></meta>"
-        <nk rel="canonical" href="http,"$2 />
   s://ziontechgroup.com/ai-inventory-management" />
       "
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
         <Navigation /></Navigation>"
-        <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}"
           <section className="text-center mb-16"></section>"
             < className="text-4xl,"$2 />
@@ -32,37 +29,31 @@ export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression
               <div className="cyber-card p-6 energy-pulse"></div>"
                 <div className="text-4xl mb-4 text-center">🔮</div>"
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Demand Forecasting</h3>"
-                <p className="text-gray-300 text-center">
                   AI predicts future demand with 95% accuracy using historical data, seasonality, and market trends.
               "
               <div className="cyber-card p-6 energy-pulse"></div>"
                 <div className="text-4xl mb-4 text-center">📦</div>"
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Automated Reordering</h3>"
-                <p className="text-gray-300 text-center">
                   Automatically reorder products when stock levels reach optimal thresholds to prevent stockouts.
               "
               <div className="cyber-card p-6 energy-pulse"></div>"
                 <div className="text-4xl mb-4 text-center">📊</div>"
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Real-time Analytics</h3>"
-                <p className="text-gray-300 text-center">
                   Get instant insights into inventory performance, turnover rates, and optimization opportunities.
               "
               <div className="cyber-card p-6 energy-pulse"></div>"
                 <div className="text-4xl mb-4 text-center">🎯</div>"
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Stock Optimization</h3>"
-                <p className="text-gray-300 text-center">
                   AI optimizes stock levels to minimize carrying costs while maintaining service levels.
               "
               <div className="cyber-card p-6 energy-pulse"></div>"
                 <div className="text-4xl mb-4 text-center">🚨</div>"
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Alert System</h3>"
-                <p className="text-gray-300 text-center">
                   Get notified about low stock, overstock, slow-moving items, and other critical inventory issues.
               "
               <div className="cyber-card p-6 energy-pulse"></div>"
                 <div className="text-4xl mb-4 text-center">📱</div>"
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Mobile Access</h3>"
-                <p className="text-gray-300 text-center">
                   Manage inventory on-the-go with our mobile app for barcode scanning and real-time updates.
           {/* Pricing Section */}"
           <section className="mb-16"></section>"
@@ -72,7 +63,6 @@ export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression
               <div className="cyber-card p-8 text-center"></div>"
                 <h3 className="text-2xl font-bold text-white mb-4">Small Business</h3>"
                 <div className="text-4xl font-bold text-cyan-400 mb-6">$149<span className="text-lg">/month</span></div>"
-                <ul className="text-gray-300 space-y-3 mb-8">
                   <li>Up to 1,000 SKUs
                   <li>Basic forecasting
                   <li>Email alerts
@@ -84,7 +74,6 @@ export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression
               <div className="cyber-card p-8 text-center border-2 border-cyan-400"></div>"
                 <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>"
                 <div className="text-4xl font-bold text-cyan-400 mb-6">$399<span className="text-lg">/month</span></div>"
-                <ul className="text-gray-300 space-y-3 mb-8">
                   <li>Up to 10,000 SKUs
                   <li>Advanced forecasting
                   <li>Automated reordering
@@ -97,7 +86,6 @@ export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression
               <div className="cyber-card p-8 text-center"></div>"
                 <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>"
                 <div className="text-4xl font-bold text-cyan-400 mb-6">Custom</div>"
-                <ul className="text-gray-300 space-y-3 mb-8">
                   <li>Unlimited SKUs
                   <li>Full AI suite
                   <li>Custom integrations
@@ -159,7 +147,6 @@ export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression
           {/* CTA Section */}"
           <section className="text-center"></section>"
             <h2 className="text-3xl font-bold text-white mb-6">Optimize Your Inventory Today</h2>"
-            <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
               Join 3,000+ businesses using our AI inventory management system to reduce costs and eliminate stockouts.
             </p>"
             < className="flex flex-col,"$2 />
@@ -173,13 +160,7 @@ export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression
   hover:bg-white,"
   hover: text-indigo-600 transition-all duration-300"></a>
                 Get Free Demo
-              </a>
-            </div>
-          </section>
-        </main>
         <Footer /></Footer>
-      </div>
-    </div>
   ),
 }"
 </p></p></p></p></p></p></p></p></p></p></p></p></p></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li>

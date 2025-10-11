@@ -1,11 +1,11 @@
 import React from 'react';;
-import { Link; } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { CheckCircle;, X, Zap, Brain, Cloud, ArrowRight, Star, Users, Shield, Clock } from 'lucide-react';
 import Navigation from '../components/Navigation';;
 import Footer from '../components/Footer';;
 const PricingPage: React.FC = () => {;
 const plans = [;
-    {;,
+    {,
 }
 name: 'Starter'},;,
 description: 'Perfect for small businesses getting started with AI',;,
@@ -29,7 +29,7 @@ limitations: [
 cta: 'Get Started',;,
 popular: false
     },
-    {;,
+    {
 name: 'Professional',;,
 description: 'Ideal for growing companies with advanced AI needs',;,
 price: '$7,500',;,
@@ -51,7 +51,7 @@ limitations: [],;,
 cta: 'Start Free Trial',;,
 popular: true
     },
-    {;,
+    {
 name: 'Enterprise',;,
 description: 'Complete AI transformation for large organizations',;,
 price: 'Custom',;,
@@ -76,25 +76,25 @@ popular: false
     }
   ];
 const addOns = [;
-    {;,
+    {
 name: 'Additional AI Models',;,
 description: 'Extra custom AI models beyond your plan limits',;,
 price: '$500',;,
 period: '/model/month'
     },
-    {;,
+    {
 name: 'Priority Support',;,
 description: '24/7 priority support with dedicated account manager',;,
 price: '$1,000',;,
 period: '/month'
     },
-    {;,
+    {
 name: 'Custom Integrations',;,
 description: 'Bespoke integrations with your existing systems',;,
 price: '$2,000',;,
 period: '/integration'
     },
-    {;,
+    {
 name: 'Training & Workshops',;,
 description: 'On-site or virtual training for your team',;,
 price: '$5,000',;,
@@ -102,27 +102,27 @@ period: '/day'
     }
   ];
 const faqs = [;
-    {;,
+    {
 question: 'Can I change my plan at any time?',;,
 answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the beginning of your next billing cycle.'
     },
-    {;,
+    {
 question: 'Is there a free trial available?',;,
 answer: 'Yes, we offer a 14-day free trial for our Professional plan. No credit card required to start.'
     },
-    {;,
+    {
 question: 'What happens if I exceed my plan limits?',;,
 answer: 'We\'ll notify you when you\'re approaching your limits and help you upgrade or purchase additional capacity.'
     },
-    {;,
+    {
 question: 'Do you offer custom pricing for large organizations?',;,
 answer: 'Yes, we offer custom pricing and enterprise solutions for organizations with specific needs. Contact our sales team for more information.'
     },
-    {;,
+    {
 question: 'What support is included?',;,
 answer: 'All plans include email support. Professional and Enterprise plans include priority support with faster response times.'
     },
-    {;,
+    {
 question: 'Can I cancel anytime?',;,
 answer: 'Yes, you can cancel your subscription at any time. There are no long-term contracts or cancellation fees.'
     }
@@ -130,7 +130,7 @@ answer: 'Yes, you can cancel your subscription at any time. There are no long-te
 const getColorClasses = (color: string) => {;;
 switch (color) {;
 case 'blue':;
-return {;;,
+return {
 }
 bg: 'bg-blue-500'},;,
 text: 'text-blue-500',;,
@@ -154,8 +154,8 @@ border: 'border-purple-500',;,
 light: 'bg-purple-50',;,
 textLight: 'text-purple-600'
         }
-      default:;
-return {;;,
+      default: ;
+return {
 bg: 'bg-gray-500',;,
 text: 'text-gray-500',;,
 border: 'border-gray-500',;,
@@ -292,10 +292,4 @@ Schedule Demo
   ),
 }
 export default PricingPage</Link>
-  </Link>
-  </p>
-  </h2>
-  </p>
-  </h2>
-  </div>
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></p></p></p></p></p></p></h1></h2></h3></h3></h3></h4></h4></ul></ul></li></li></section></section></section></section>

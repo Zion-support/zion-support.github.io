@@ -9,8 +9,7 @@ const getAllPages = () => {return [;;}
     { url: '/blog', priority: 0.8, changefreq: 'weekly' }]
 }
 const generateSitemap = (pages: Array<{ url: string;; priority: number, changefreq: string }>) => {;
-const baseUrl = 'https:// ziontechgroup.com';
-}
+const baseUrl = 'https: // ziontechgroup.com'}
   }
   const sitemap = `;
           <?xml version="1.0" encoding="UTF-8"?>
@@ -50,6 +49,4 @@ export const generateStaticSitemap = () => {;;
 return generateSitemap(getAllPages());
 }
   }
-  </p>
-  </h1>
 </p></p></main></section>

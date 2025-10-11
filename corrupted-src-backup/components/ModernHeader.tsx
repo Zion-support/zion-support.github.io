@@ -65,7 +65,7 @@ return(<header, className="bg-white, shado, w-sm, borde, r-b, borde, r-gr, a, y-
 g:px-8">",;
 return (;
     <header, className="bg-white, shado, w-sm, borde, r-b, borde, r-gr, a, y-200, sticky, top-0 z-50">
-      <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />;,
+      <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />,
 g:px-8">"
         <div, className="flex, justif, y-between, item, s-cente, r, h-16">
     { na, m, e: 'Ho, m, e', hr, e, f: '/' },'
@@ -132,11 +132,11 @@ dropdo, w, n: [,
   ];
 return ();
     <header, className="bg-white, shado, w-sm, borde, r-b, borde, r-gr, a, y-200, sticky, top-0 z-50">";)
-      <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;)$2 />;,
+      <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;)$2 />,
 g:px-8">",),;
 return (</div>;
     <header, className="bg-white, shado, w-sm, borde, r-b, borde, r-gr, a, y-200, sticky, top-0 z-50">"
-      <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />;,
+      <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />,
 g:px-8">",</div>
         <div, className="flex, justif, y-between, item, s-cente, r, h-16">"
           {/* Lo, g, o */}</div>

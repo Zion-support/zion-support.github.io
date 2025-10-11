@@ -383,7 +383,7 @@ export const,
     reviews: 22
     // @ts-expect-error augment common shape for UI components that expect contactInfo
     contactInfo: contact
-    // @ts - expect - error augment common shape for UI components that expect contact_info;,
+    // @ts - expect - error augment common shape for UI components that expect contact_info,
     contact_info: contact
   }
     name: 'Ecommerce Reviews & UGC Activation',
@@ -802,7 +802,7 @@ export const,
     customers: 12
     rating: 4.8
     reviews: 18
-    // @ts-expect-error augment common shape for UI components that expect contactInfo;,
+    // @ts-expect-error augment common shape for UI components that expect contactInfo,
     contactInfo: contact
   }
     id: 'wordpress-internal-linking-automation'

@@ -111,6 +111,3 @@ export const,
 }
 export default BannerRotationManager
 `
-  </BannerRotationManagerProps>
-  </BannerRotationManagerProps>
-</div>

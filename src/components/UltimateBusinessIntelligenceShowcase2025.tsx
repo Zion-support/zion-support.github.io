@@ -202,7 +202,6 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
   y: 'resource',
               {/* Badge */}
           <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>"
-                <span className="text-green-400 font-semibold text-sm">
                   {item.featured ? 'FEATURED' : 'NEW'}
                 </span>"
                 <span className="text-gray-400 text-sm">{item.type}
@@ -211,7 +210,6 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
   r:text-cyan-400 transition-colors">
                 {item.title}
               {/* Description */}"
-              <p className="text-gray-300 mb-6 text-sm leading-relaxed">
                 {item.description}
               {/* Metrics */}
                     {item.metrics.roi}"
@@ -220,13 +218,10 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
                   <div className="text-gray-400 text-xs">Timeline
               {/* Tags */}
                 {item.tags.slice(0, 3).map((tag, index) => ()}
-          <span>
                     key={index}"
                     className="px-3 py-1 bg-white/10 text-gray-300 text-xs rounded-full"
                 Read {item.readingTime}"
-                <span className="text-lg">
         {/* Call to Action */}"
-            <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Transform Your Business?"
             <p className="text-cyan-100 mb-6">Join thousands of enterprises already using our AI-powered solutions</p>"
                 to="/contact""
@@ -248,5 +243,4 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
 >Learn More</Link>
     </section>)
 export default UltimateBusinessIntelligenceShowcase2025,
-  </path>
 </div></div></div></div></div></div></div></span></span></span></span></span></span></a></p></p></p></p></h3></h3></h3>

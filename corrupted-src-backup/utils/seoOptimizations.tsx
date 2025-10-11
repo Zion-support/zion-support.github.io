@@ -2,7 +2,7 @@
  * SEO Optimization Utilities
  * Comprehensive SEO enhancements for the Zion website
  */;
-import { Helmet; } from 'react-helmet-async'
+import { Helmet } from 'react-helmet-async'
 // Meta tags utilities;
 export const seoUtils={/* content */;}
   // Generate structured data for organization;,
@@ -41,12 +41,12 @@ generateFAQSchema: (faqs: Array<{question: string, answer: string}>) => ({/* con
   }),
   // Generate article structured data;,
 generateArticleSchema: (article: {/* content */}
-    title: string;,
-description: string;,
-author: string;,
-datePublished: string;,
+    title: string,
+description: string,
+author: string,
+datePublished: string,
 dateModified: string;
-image?: string;,
+image?: string,
 url: string,
   }) => ({/* content */}
     "@context": "https: //schema.org",
@@ -150,12 +150,12 @@ priority: priority || '0.8'}
   },
   // Generate robots.txt content;,
 generateRobotsTxt: (sitemapUrl: string = 'https://zion.app/sitemap.xml') => {/* content */}
-    return `User-agent: *;,;,
+    return `User-agent: *,;,
 Allow: /,
 ,;,
 Sitemap: ${sitemapUrl}`
   // Generate sitemap entries,;,
-generateSitemapEntry: (ur);,
+generateSitemapEntry: (ur),
 l: string, lastmod?: string, changefreq?: string, priority?: string) => {/* content */}
     return {/* content */;}
       url,;
@@ -169,7 +169,7 @@ y: priority || '0.8'
   },
   // Generate robots.txt content,;,
 generateRobotsTxt: (sitemapUr,;,
-l: string = 'http);,
+l: string = 'http),
 s://zion.app/sitemap.xml') => {/* content */}
     return `User-agen;,;,
 t: *;
@@ -194,21 +194,21 @@ generateTwitterUrl: (path: string, baseUrl: string = 'https://zion.app') => {/* 
   // Generate canonical URL,;,
 generateCanonicalUrl: (pat,;,
 h: string, baseUr,;,
-l: string = 'http);,
+l: string = 'http),
 s://zion.app') => {/* content */}`;
 return `${baseUrl;}${path}`
   },
   // Generate Open Graph URL,;,
 generateOGUrl: (pat,;,
 h: string, baseUr,;,
-l: string = 'http);,
+l: string = 'http),
 s://zion.app') => {/* content */}`;
 return `${baseUrl;}${path}`
   },
   // Generate Twitter Card URL,;,
 generateTwitterUrl: (pat,;,
 h: string, baseUr,;,
-l: string = 'http);,
+l: string = 'http),
 s://zion.app') => {/* content */}`;
 return `${baseUrl;}${path}`
   }
@@ -277,7 +277,7 @@ document.head.appendChild(link)
   },
   // Optimize images for SEO;,
 optimizeImageSEO: (src: string, alt: string, width?: number, height?: number): {/* content */}
-    src: string;,
+    src: string,
 alt: string,
   // Optimize images for SEO,;,
 optimizeImageSEO: (sr,;,
@@ -329,7 +329,7 @@ n: url,)
   // Track custom events;,
 trackEvent: (eventName: string, parameters?: Record<string, unknown>) => {/* content */}
   // Track custom events,;,
-trackEvent: (eventNam);,
+trackEvent: (eventNam),
 e: string, parameters?: Record<string, unknown>) => {/* content */}
     if (typeof window !== 'undefined' && (window as Window & { gtag?: Function) }).gtag) {/* content */}
       (window as Window & {/* TODO: Fix JSX expression */});,
@@ -343,7 +343,7 @@ trackConversion: (conversionId: string, value?: number) => {/* content */}
 send_to: conversionId),;,
 value: value,
   // Track conversion events,;,
-trackConversion: (conversionI);,
+trackConversion: (conversionI),
 d: string, value?: number) => {/* content */}
     if (typeof window !== 'undefined' && (window as typeof window & { gtag?: Function) }).gtag) {/* content */}
       (window as typeof window & {/* TODO: Fix JSX expression */});,
@@ -365,7 +365,7 @@ const trackMetric = (metric: { name: string;; value: number; id: string, delta: 
       analyticsUtils.trackEvent('core_web_vitals', {/* content */});,
 metric_name: metric.name),;,
 metric_value: Math.round(metric.value),;,
-metric_id: metric.id;,
+metric_id: metric.id,
 metric_delta: metric.delta,
   // Track Core Web Vitals,;,
 trackCoreWebVitals: () => {/* content */}
@@ -413,7 +413,7 @@ type?: string;
 structuredData?: Record<string>)
 }) => {/* content */}
 //   const siteName = 'Zion Tech Group';
-//   const siteUrl = 'https: //zion.app';,
+//   const siteUrl = 'https: //zion.app',
 //   const siteUrl = 'http;,;,
 s: //zion.app',`
 //   const defaultImage = `${siteUrl;}/images/og-default.jpg`

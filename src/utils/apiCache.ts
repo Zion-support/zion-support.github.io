@@ -575,7 +575,6 @@ export async function cachedFetch
   l: string,
   options?: RequestInit,
   cacheConfig?: Partial
-          <ApiCacheConfig>
 ): Promise<T> {
     // TODO: Add content
   }

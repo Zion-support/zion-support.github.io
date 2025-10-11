@@ -9,12 +9,9 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
         <title>AI Data Visualization Solutions - Zion Tech Group
         <meta name="description" content="Intelligent AI-powered data visualization with automated insights, interactive dashboards, and predictive analytics. Starting at $149/month." /></meta>"
         <meta name="keywords" content="AI data visualization, business intelligence, interactive dashboards, data analytics, predictive insights" /></meta>"
-        <nk rel="canonical" href="http,"$2 />
   s://ziontechgroup.com/ai-data-visualization" />
       "
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
         <Navigation /></Navigation>"
-        <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}"
           <section className="text-center mb-16"></section>"
             < className="text-4xl,"$2 />
@@ -35,37 +32,31 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
               <div className="cyber-card p-6 energy-pulse"></div>"
                 <div className="text-4xl mb-4 text-center">🎨</div>"
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Auto-Generated Charts</h3>"
-                <p className="text-gray-300 text-center">
                   AI automatically selects the best chart types and creates stunning visualizations from your data.
               "
               <div className="cyber-card p-6 energy-pulse"></div>"
                 <div className="text-4xl mb-4 text-center">🔍</div>"
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Smart Insights</h3>"
-                <p className="text-gray-300 text-center">
                   AI analyzes your data and provides intelligent insights, trends, and recommendations.
               "
               <div className="cyber-card p-6 energy-pulse"></div>"
                 <div className="text-4xl mb-4 text-center">📱</div>"
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Interactive Dashboards</h3>"
-                <p className="text-gray-300 text-center">
                   Create responsive, interactive dashboards that work perfectly on all devices.
               "
               <div className="cyber-card p-6 energy-pulse"></div>"
                 <div className="text-4xl mb-4 text-center">🤖</div>"
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Natural Language Queries</h3>"
-                <p className="text-gray-300 text-center">
                   Ask questions in plain English and get instant visual answers from your data.
               "
               <div className="cyber-card p-6 energy-pulse"></div>"
                 <div className="text-4xl mb-4 text-center">⚡</div>"
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Real-time Updates</h3>"
-                <p className="text-gray-300 text-center">
                   Visualizations update automatically as new data comes in, keeping insights current.
               "
               <div className="cyber-card p-6 energy-pulse"></div>"
                 <div className="text-4xl mb-4 text-center">🔮</div>"
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Predictive Analytics</h3>"
-                <p className="text-gray-300 text-center">
                   AI predicts future trends and outcomes based on historical data patterns.
           {/* Pricing Section */}"
           <section className="mb-16"></section>"
@@ -75,7 +66,6 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
               <div className="cyber-card p-8 text-center"></div>"
                 <h3 className="text-2xl font-bold text-white mb-4">Starter</h3>"
                 <div className="text-4xl font-bold text-cyan-400 mb-6">$149<span className="text-lg">/month</span></div>"
-                <ul className="text-gray-300 space-y-3 mb-8">
                   <li>Up to 5 data sources
                   <li>10 dashboards
                   <li>Basic AI insights
@@ -87,7 +77,6 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
               <div className="cyber-card p-8 text-center border-2 border-cyan-400"></div>"
                 <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>"
                 <div className="text-4xl font-bold text-cyan-400 mb-6">$399<span className="text-lg">/month</span></div>"
-                <ul className="text-gray-300 space-y-3 mb-8">
                   <li>Up to 25 data sources
                   <li>Unlimited dashboards
                   <li>Advanced AI insights
@@ -100,7 +89,6 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
               <div className="cyber-card p-8 text-center"></div>"
                 <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>"
                 <div className="text-4xl font-bold text-cyan-400 mb-6">Custom</div>"
-                <ul className="text-gray-300 space-y-3 mb-8">
                   <li>Unlimited data sources
                   <li>Unlimited dashboards
                   <li>Full AI suite
@@ -137,7 +125,6 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
           {/* CTA Section */}"
           <section className="text-center"></section>"
             <h2 className="text-3xl font-bold text-white mb-6">Start Visualizing Your Data Today</h2>"
-            <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
               Join 2,000+ companies using our AI data visualization platform to make better decisions with their data.
             </p>"
             < className="flex flex-col,"$2 />
@@ -151,13 +138,7 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
   hover:bg-white,"
   hover: text-indigo-600 transition-all duration-300"></a>
                 Get Free Demo
-              </a>
-            </div>
-          </section>
-        </main>
         <Footer /></Footer>
-      </div>
-    </div>
   ),
 }"
 </p></p></p></p></p></p></p></p></p></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li>

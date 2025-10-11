@@ -198,8 +198,7 @@ export interface RouteHandler {
   POST?: (req: Request) =&gt; Promise<Response&gt;
   PUT?: (req: Request) =&gt; Promise<Response&gt;
   DELETE?: (req: Request) =&gt; Promise<Response&gt;
-  PATCH?: (req: Request) =&gt; Promise<Response&gt;
-}
+  PATCH?: (req: Request) =&gt; Promise<Response&gt}
 
 // Dynamic route types
 export interface DynamicRoute {

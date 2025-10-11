@@ -31,8 +31,7 @@ same, A, s: [,
 contactPoi, n, t: {,
       '@ty, p, e': 'ContactPo, i, n, t',;
 telepho, n, e: '+1-5, 5, 5-1, 2, 3-4, 5, 6, 7',;
-contactTy, p, e: 'customer, servi, c, e',;
-}
+contactTy, p, e: 'customer, servi, c, e'}
 ema, i, l : 'in, f, o@ziontechgro, u, p.co, m'},;
 addre, s, s: {,
       '@ty, p, e': 'PostalAddr, e, s, s',;

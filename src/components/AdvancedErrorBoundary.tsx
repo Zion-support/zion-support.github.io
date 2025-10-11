@@ -1,38 +1,38 @@
 'use client';
 import React;, { Component, ErrorInfo, ReactNode } from 'react';
-interface ErrorBoundaryState {;,
-hasError: boolean;,
-error: Error | null;,
+interface ErrorBoundaryState {
+hasError: boolean,
+error: Error | null,
 errorInfo: ErrorInfo | null,;,
 errorId: string | null
   }
-interface ErrorBoundaryProps {;,
+interface ErrorBoundaryProps {
 children: ReactNode,;
 fallback?: ReactNode
   }
-interface ErrorReport {;,
-errorId: string | null;,
-error: Error;,
-errorInfo: ErrorInfo;,
-errorMessage: string;,
-errorStack: string | undefined;,
-errorComponentStack: string | null | undefined;,
-errorBoundary: string;,
-errorTimestamp: string;,
+interface ErrorReport {
+errorId: string | null,
+error: Error,
+errorInfo: ErrorInfo,
+errorMessage: string,
+errorStack: string | undefined,
+errorComponentStack: string | null | undefined,
+errorBoundary: string,
+errorTimestamp: string,
 errorUserAgent: string | null,;,
 errorUrl: string | null
   }
 class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {;
 constructor(props: ErrorBoundaryProps) {;
 super(props)},;
-this.state={;,
+this.state={
 hasError: false,;,
 error: null,;,
 errorInfo: null,;,
 errorId: null}
   }
   static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {;
-return {;;,
+return {
 hasError: true},;
 error,;,
 errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
@@ -55,7 +55,7 @@ this.reportError(error, errorInfo)
   }
   private reportError = async (error: Error, errorInfo: ErrorInfo) => {;
 try {;
-const errorReport: ErrorReport={;,
+const errorReport: ErrorReport={,
 }
 errorId: this.state.errorId},;
 error,;
@@ -69,7 +69,7 @@ errorUserAgent: typeof window !== 'undefined' ? window.navigator.userAgent : nul
 errorUrl: typeof window !== 'undefined' ? window.location.href : null
       }
       // Send to error reporting service;
-await fetch('/api/error-report', {;,
+await fetch('/api/error-report', {
 method: 'POST',;,
 headers: {
           'Content-Type': 'application/json',
@@ -81,7 +81,7 @@ console.error('Failed to report error:', reportError)
   }
   }
   private handleRetry = () => {;
-this.setState({;,
+this.setState({
 }
 hasError: false},;,
 error: null,;,

@@ -1,123 +1,111 @@
 #!/usr/bin/env node
 
 import fs from 'fs';
+import path from 'path';
 import { glob } from 'glob';
 
-// Function to fix specific syntax errors
-function fixSpecificErrors(content) {
+// Function to fix remaining syntax errors
+function fixRemainingErrors(content) {
   let fixed = content;
   
-  // Fix empty React.Fragment tags
-  fixed = fixed.replace(/<React\.Fragment><\/React\.Fragment>/g, '');
-  fixed = fixed.replace(/<React\.Fragment>\s*<\/React\.Fragment>/g, '');
-  
-  // Fix JSX expressions that need single parent
-  const returnMatch = fixed.match(/return\s*\(\s*([\s\S]*?)\s*\)\s*;?\s*}/);
-  if (returnMatch) {
-    const returnContent = returnMatch[1].trim();
-    const lines = returnContent.split('\n');
-    
-    // Check if there are multiple top-level elements
-    let topLevelElements = 0;
-    let inJSX = false;
-    let braceCount = 0;
-    
-    for (const line of lines) {
-      const trimmed = line.trim();
-      if (trimmed.startsWith('<') && !trimmed.startsWith('</') && !trimmed.includes('//')) {
-        if (braceCount === 0) {
-          topLevelElements++;
-        }
-        inJSX = true;
-      }
-      if (trimmed.includes('{')) {
-        braceCount += (line.match(/\{/g) || []).length;
-      }
-      if (trimmed.includes('}')) {
-        braceCount -= (line.match(/\}/g) || []).length;
-      }
-    }
-    
-    // If multiple top-level elements, wrap in fragment
-    if (topLevelElements > 1 && !returnContent.includes('<>') && !returnContent.includes('<React.Fragment>')) {
-      fixed = fixed.replace(returnMatch[0], `return (\n    <>\n${returnContent}\n    </>\n  );`);
-    }
-  }
-  
-  // Fix missing closing tags
-  const openTags = [];
+  // Fix orphaned JSX elements after export default
   const lines = fixed.split('\n');
-  const fixedLines = [];
+  const cleanedLines = [];
+  let inComponent = false;
+  let componentDepth = 0;
+  let exportLineFound = false;
   
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
     
-    // Track opening tags
-    const openTagMatch = line.match(/<(\w+)(?:\s[^>]*)?>(?!\s*<\/\1>)/g);
-    if (openTagMatch) {
-      openTagMatch.forEach(tag => {
-        const tagName = tag.match(/<(\w+)/)[1];
-        if (!['img', 'br', 'hr', 'input', 'meta', 'link', 'Helmet'].includes(tagName)) {
-          openTags.push(tagName);
-        }
-      });
+    // Check if we hit export default
+    if (line.includes('export default') && line.includes('Page')) {
+      exportLineFound = true;
+      inComponent = false;
+      cleanedLines.push(line);
+      continue;
     }
     
-    // Track closing tags
-    const closeTagMatch = line.match(/<\/(\w+)>/g);
-    if (closeTagMatch) {
-      closeTagMatch.forEach(tag => {
-        const tagName = tag.match(/<\/(\w+)>/)[1];
-        const index = openTags.lastIndexOf(tagName);
-        if (index !== -1) {
-          openTags.splice(index, 1);
-        }
-      });
+    // If we've found export default, skip any remaining JSX elements
+    if (exportLineFound) {
+      // Only keep the export line and any comments or empty lines after it
+      if (line.trim() === '' || line.trim().startsWith('//') || line.trim().startsWith('/*')) {
+        cleanedLines.push(line);
+      } else if (line.trim().match(/^<\/[A-Z][a-zA-Z]*>$/)) {
+        // Skip orphaned closing tags
+        continue;
+      } else if (line.trim().match(/^<[A-Z][a-zA-Z]*[^>]*>$/)) {
+        // Skip orphaned opening tags
+        continue;
+      } else if (line.trim().match(/^\s*[A-Z][a-zA-Z]*\s*$/)) {
+        // Skip orphaned component names
+        continue;
+      } else {
+        // Keep other content after export default
+        cleanedLines.push(line);
+      }
+      continue;
     }
     
-    fixedLines.push(line);
+    // Check if we're in a component definition
+    if (line.includes('const') && line.includes('Page') && line.includes('=')) {
+      inComponent = true;
+      componentDepth = 0;
+    }
     
-    // Add missing closing tags at the end
-    if (i === lines.length - 1 && openTags.length > 0) {
-      for (let j = openTags.length - 1; j >= 0; j--) {
-        fixedLines.push('  '.repeat(j + 1) + `</${openTags[j]}>`);
+    // Count opening and closing tags
+    if (inComponent) {
+      const openTags = (line.match(/<[A-Z][a-zA-Z]*[^>]*>/g) || []).length;
+      const closeTags = (line.match(/<\/[A-Z][a-zA-Z]*>/g) || []).length;
+      componentDepth += openTags - closeTags;
+      
+      // If we hit a closing tag when depth is 0, we're outside the component
+      if (componentDepth <= 0 && closeTags > 0) {
+        inComponent = false;
       }
     }
+    
+    cleanedLines.push(line);
   }
   
-  fixed = fixedLines.join('\n');
+  fixed = cleanedLines.join('\n');
   
-  // Fix missing imports
-  if (fixed.includes('Globe') && !fixed.includes("import { Globe }")) {
-    fixed = fixed.replace(
-      /import { ([^}]+) } from 'lucide-react'/,
-      (match, imports) => {
-        if (!imports.includes('Globe')) {
-          return `import { ${imports}, Globe } from 'lucide-react'`;
-        }
-        return match;
-      }
-    );
-  }
+  // Fix malformed JSX fragments and closing tags
+  fixed = fixed.replace(/<>\s*\)/g, '</>');
+  fixed = fixed.replace(/<>\s*<\/>\s*\)/g, '</>');
   
-  // Fix malformed JSX
-  fixed = fixed.replace(/\{\s*([^}]*?)\s*\}/g, (match, content) => {
-    if (content.trim() && !content.includes('{') && !content.includes('}')) {
-      return `{${content.trim()}}`;
-    }
-    return match;
+  // Fix malformed list items
+  fixed = fixed.replace(/(\s*\)\s*)\s*<\/ul>/g, '$1\n                  </ul>');
+  
+  // Fix malformed object properties
+  fixed = fixed.replace(/(\w+):\s*([^,}]+);\s*,/g, '$1: $2,');
+  fixed = fixed.replace(/(\w+):\s*([^,}]+);\s*}/g, '$1: $2}');
+  
+  // Fix malformed JSX attributes
+  fixed = fixed.replace(/className="([^"]*)"\s*;\s*/g, 'className="$1" ');
+  
+  // Fix malformed function calls
+  fixed = fixed.replace(/\{\s*;\s*,/g, '{');
+  fixed = fixed.replace(/,\s*;\s*\}/g, '}');
+  fixed = fixed.replace(/\{\s*;\s*\}/g, '{}');
+  
+  // Fix malformed import statements
+  fixed = fixed.replace(/import\s*{\s*([^}]+);\s*}\s*from\s*['"]([^'"]+)['"]/g, (match, imports, module) => {
+    const cleanImports = imports
+      .split(',')
+      .map(imp => imp.trim().replace(/;+$/, ''))
+      .filter(imp => imp.length > 0)
+      .join(', ');
+    return `import { ${cleanImports} } from '${module}'`;
   });
   
-  // Fix missing semicolons in JSX
-  fixed = fixed.replace(/(\w+)\s*$/gm, (match, word) => {
-    if (['return', 'const', 'let', 'var', 'function', 'if', 'else', 'for', 'while'].includes(word)) {
-      return match;
-    }
-    if (match.trim() && !match.includes(';') && !match.includes('{') && !match.includes('}') && !match.includes('<')) {
-      return match + ';';
-    }
-    return match;
-  });
+  // Fix malformed JSX structure in lists
+  fixed = fixed.replace(/(\s*\)\s*)\s*<\/ul>/g, '$1\n                  </ul>');
+  
+  // Fix malformed closing tags
+  fixed = fixed.replace(/(\s*\)\s*)\s*<\/div>/g, '$1\n                </div>');
+  fixed = fixed.replace(/(\s*\)\s*)\s*<\/section>/g, '$1\n        </section>');
+  fixed = fixed.replace(/(\s*\)\s*)\s*<\/main>/g, '$1\n      </main>');
   
   return fixed;
 }
@@ -125,58 +113,37 @@ function fixSpecificErrors(content) {
 // Function to process a single file
 function processFile(filePath) {
   try {
-    console.log(`Processing: ${filePath}`);
-    
     const content = fs.readFileSync(filePath, 'utf8');
+    const fixed = fixRemainingErrors(content);
     
-    // Skip if not a React component file
-    if (!filePath.endsWith('.tsx') && !filePath.endsWith('.jsx')) {
-      return;
-    }
-    
-    // Fix specific errors
-    const fixed = fixSpecificErrors(content);
-    
-    // Only write if content changed
-    if (fixed !== content) {
+    if (content !== fixed) {
       fs.writeFileSync(filePath, fixed, 'utf8');
-      console.log(`✓ Fixed: ${filePath}`);
+      console.log(`Fixed: ${filePath}`);
+      return true;
     }
+    return false;
   } catch (error) {
-    console.error(`✗ Error processing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
   }
 }
 
 // Main execution
 async function main() {
-  console.log('Starting remaining error fixes...');
+  console.log('Starting remaining syntax error fixes...');
   
-  // Get all TypeScript/JavaScript files in the app directory
-  const patterns = [
-    'app/**/*.tsx',
-    'components/**/*.tsx',
-    '*.tsx'
-  ];
+  // Get all TypeScript/JSX files in the app directory
+  const files = await glob('app/**/*.{ts,tsx}', { cwd: process.cwd() });
   
-  let allFiles = [];
+  let fixedCount = 0;
   
-  for (const pattern of patterns) {
-    const files = await glob(pattern, { cwd: process.cwd() });
-    allFiles = allFiles.concat(files);
+  for (const file of files) {
+    if (processFile(file)) {
+      fixedCount++;
+    }
   }
   
-  // Remove duplicates
-  allFiles = [...new Set(allFiles)];
-  
-  console.log(`Found ${allFiles.length} files to process`);
-  
-  // Process each file
-  allFiles.forEach(processFile);
-  
-  console.log('Remaining error fixes completed!');
+  console.log(`Fixed ${fixedCount} files`);
 }
 
-// Run the main function
 main().catch(console.error);
-
-export { fixSpecificErrors, processFile };

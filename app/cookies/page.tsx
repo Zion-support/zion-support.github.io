@@ -60,6 +60,11 @@ const CookiesPage: React.FC = () => {
                     )
     </>
   )
+                  
+                  
+                  
+                  
+                  
                   </ul>
                 </div>
               ))}
@@ -144,5 +149,3 @@ const CookiesPage: React.FC = () => {
   )
 }
 export default CookiesPage
-    </Footer>
-  </Navigation>

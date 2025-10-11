@@ -90,6 +90,11 @@ const PagePage: React.FC = () => {
                     )
     </>
   )
+                  
+                  
+                  
+                  
+                  
                   </ul>
                 </div>
               ))}
@@ -121,8 +126,3 @@ const PagePage: React.FC = () => {
   )
 }
 export default PagePage
-          </Footer>
-        </ArrowRight>
-      </CheckCircle>
-    </ArrowRight>
-  </Navigation>
