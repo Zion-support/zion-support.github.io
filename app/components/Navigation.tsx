@@ -1,28 +1,15 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-import { Menu, X, ChevronDown } from 'lucide-react'
-export default function Navigation() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
-=======
 import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone } from 'lucide-react'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
->>>>>>> cursor/website-audit-and-update-with-deployment-c744
   
   const toggleMenu = () => {
     setIsOpen(!isOpen)
   }
 
-<<<<<<< HEAD
-  const toggleDropdown = (dropdown: string) => {
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
-  }
-
-=======
   const toggleServices = () => {
     setIsServicesOpen(!isServicesOpen)
   }
@@ -36,8 +23,6 @@ export default function Navigation() {
     { name: 'Custom Development', path: '/custom-development', icon: <Code className="w-4 h-4" /> },
     { name: 'Mobile Solutions', path: '/mobile-development', icon: <Smartphone className="w-4 h-4" /> }
   ]
-
->>>>>>> cursor/website-audit-and-update-with-deployment-c744
   return (
     <nav className="bg-white/10 backdrop-blur-lg fixed w-full top-0 z-50 border-b border-white/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
