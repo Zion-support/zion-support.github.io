@@ -19,10 +19,13 @@ export default function handler(req, res) {
     res.end(JSON.stringify({ 
       success: true, 
       message: 'Onsite request submitted successfully',
-      requestId: request.id
+      requestId: Date.now().toString()
     }))
 
   } catch (error) {
     console.error('Error processing onsite request:', error)
     res.statusCode = 500
     res.setHeader('Content-Type', 'application/json')
+    res.end(JSON.stringify({ error: 'Internal server error' }))
+  }
+}

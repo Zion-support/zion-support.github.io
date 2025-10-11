@@ -1,4 +1,3 @@
-
 const AiEcommerceAssistantPage: React.FC = () => {
   const features = [
     {
@@ -63,7 +62,6 @@ const AiEcommerceAssistantPage: React.FC = () => {
 
         {/* CTA Section */}
                 Contact Sales
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
               </button>
             </div>
           </div>

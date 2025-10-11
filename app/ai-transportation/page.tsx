@@ -51,4 +51,3 @@ import Footer from '../components/Footer';
 };
 
 export default AiTransportationPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7

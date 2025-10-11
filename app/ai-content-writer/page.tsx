@@ -9,7 +9,6 @@ import React from 'react';
     '24/7 availability',
     'Expert support'
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
 
 const PagePage: React.FC = () => {
   return (
@@ -63,9 +62,7 @@ const PagePage: React.FC = () => {
 
         {/* CTA Section */}
 
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
       <Footer />
     </>
   );
 };
-

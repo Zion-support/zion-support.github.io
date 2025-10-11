@@ -17,9 +17,7 @@ import Footer from '../components/Footer';
           </div>
         </section>
 
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
       <Footer />
     </>
   );
 };
-

@@ -51,4 +51,3 @@ import Footer from '../components/Footer';
 };
 
 export default AiLogoDesignerPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7

@@ -34,7 +34,6 @@
     'Seamless integration with existing systems'
   ];
 
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
   return (
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -74,7 +73,6 @@
                   </ul>
                 </div>
               ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
             </div>
           </div>
         </section>
@@ -87,4 +85,3 @@
     </>
   );
 };
-

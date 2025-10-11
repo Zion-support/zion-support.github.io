@@ -1,4 +1,4 @@
-  const benefits = [
+const benefits = [
     'Enhanced productivity and efficiency',
     'Reduced operational costs',
     'Improved decision making',
@@ -36,7 +36,6 @@
                   Learn More
                 </button>
               </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
             </div>
           </div>
         </section>

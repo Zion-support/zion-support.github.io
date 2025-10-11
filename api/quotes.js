@@ -17,6 +17,8 @@ export default async function handler(req, res) {
     }
 
     // Process quote submission logic here
+    const quote = {
+      id: Date.now().toString(),
       name,
       email,
       phone,
@@ -38,5 +40,9 @@ export default async function handler(req, res) {
     }))
 
   } catch (error) {
+    console.error('Error processing quote request:', error)
+    res.statusCode = 500
+    res.setHeader('Content-Type', 'application/json')
+    res.end(JSON.stringify({ error: 'Internal server error' }))
   }
 }

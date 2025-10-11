@@ -43,7 +43,6 @@
                   <p className="text-lg text-white font-medium">{benefit}</p>
                 </div>
               ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
             </div>
           </div>
         </section>
@@ -52,4 +51,3 @@
     </>
   );
 };
-

@@ -1,4 +1,3 @@
-
 const AiEcommerceOptimizerPage: React.FC = () => {
   const features = [
     {
@@ -80,4 +79,3 @@ const AiEcommerceOptimizerPage: React.FC = () => {
 };
 
 export default AiEcommerceOptimizerPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7

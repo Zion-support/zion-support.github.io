@@ -1,4 +1,4 @@
-    {
+{
       icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
@@ -87,7 +87,6 @@
         </section>
       </main>
 
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
       <Footer />
     </>
   );

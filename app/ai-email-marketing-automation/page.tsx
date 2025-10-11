@@ -1,4 +1,3 @@
-
 const AiEmailMarketingAutomationPage: React.FC = () => {
   const features = [
     {
@@ -64,4 +63,3 @@ const AiEmailMarketingAutomationPage: React.FC = () => {
 };
 
 export default AiEmailMarketingAutomationPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7

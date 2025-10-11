@@ -2,13 +2,94 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import { ArrowRight, CheckCircle, Calculator, BarChart, Target, TrendingUp, Zap, Shield } from 'lucide-react';
 
-const PagePage: React.FC = () => {
+const AiAccountingAssistantPage: React.FC = () => {
+  const features = [
+    {
+      icon: Calculator,
+      title: 'Automated Calculations',
+      description: 'AI-powered automated calculations for all your accounting needs.',
+      benefits: ['Automated data entry', 'Error detection', 'Real-time calculations', 'Audit trails']
+    },
+    {
+      icon: BarChart,
+      title: 'Financial Analytics',
+      description: 'Comprehensive financial analytics and reporting capabilities.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Performance Optimization',
+      description: 'AI-powered insights to optimize your financial performance.',
+      benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']
+    },
+    {
+      icon: Target,
+      title: 'Precision Accounting',
+      description: 'Target specific accounting requirements with precision.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    }
+  ];
+
+  const benefits = [
+    'Reduce accounting errors by 95%',
+    'Save 20+ hours per week on data entry',
+    'Improve financial accuracy with AI',
+    'Automate repetitive accounting tasks',
+    'Real-time financial insights',
+    'Seamless integration with existing systems'
+  ];
+
   return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
+      
+      <main className="pt-20">
+        {/* Hero Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
+              AI Accounting Assistant
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your accounting workflow with our advanced AI-powered assistant.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
+                Learn More
+              </button>
             </div>
           </div>
         </section>
 
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">AI Accounting Features</h2>
+              <p className="text-xl text-gray-300">Advanced accounting capabilities powered by AI</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
+                  <div className="text-cyan-400 mb-4">
+                    <feature.icon className="h-8 w-8" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-cyan-400 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </div>
@@ -19,8 +100,8 @@ const PagePage: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our AI Solutions?</h2>
-              <p className="text-xl text-gray-300">Transform your business with intelligent automation</p>
+              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our AI Accounting Assistant?</h2>
+              <p className="text-xl text-gray-300">Transform your accounting workflow with intelligent automation</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
@@ -38,9 +119,9 @@ const PagePage: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Accounting?</h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our AI-powered solutions.
+              Get started with our AI-powered accounting assistant today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
@@ -49,8 +130,15 @@ const PagePage: React.FC = () => {
               </button>
               <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
                 Contact Sales
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
               </button>
             </div>
           </div>
         </section>
+      </main>
+      
+      <Footer />
+    </div>
+  );
+};
+
+export default AiAccountingAssistantPage;

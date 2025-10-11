@@ -1,4 +1,3 @@
-
 const AiEducationPage: React.FC = () => {
   const features = [
     {
@@ -66,4 +65,3 @@ const AiEducationPage: React.FC = () => {
 };
 
 export default AiEducationPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7

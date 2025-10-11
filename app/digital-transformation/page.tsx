@@ -124,4 +124,3 @@ import React from 'react';
 };
 
 export default DigitalTransformationPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
