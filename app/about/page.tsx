@@ -58,7 +58,6 @@ const AboutPage: React.FC = () => {const features = [
       
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
         {/* Hero Section */}
-<<<<<<< HEAD
         <section className="pt-20 pb-16 px-4">
           <div className="container mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -186,43 +185,12 @@ const AboutPage: React.FC = () => {const features = [
                   <h3 className="text-xl font-semibold text-white mb-2">{member.name}</h3>
                   <p className="text-purple-400 mb-4">{member.role}</p>
                   <p className="text-gray-300">{member.bio}</p>
-=======
-        <section className="
-    g: px-8"
-          <div className="max-w-7xl mx-auto"
-            <div className="text-center"
-              <h1 className="text-4xl m, d:text-6xl font-bold text-white mb-6"
-                About <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400"
-              </h1>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"
-                We are a leading technology company specializing in AI and IT solutions that transform businesses and drive innovation.
-              </p>
-
-        {/* Mission Section */}
-        <section className="
-    g: px-8"
-          <div className="max-w-7xl mx-auto"
-            <div className="text-center mb-16"
-              <h2 className="text-3xl m, d:text-4xl font-bold text-white mb-6"
-              <p className="text-xl text-gray-300 max-w-4xl mx-auto"
-                To empower businesses with cutting-edge AI and IT solutions that drive growth, efficiency, and innovation. 
-                We believe technology should be accessible, powerful, and transformative.
-              </p>
-
-            <div className="grid md:grid-cols-3 gap-8"
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center"
-                  <feature.icon className="w-12 h-12 text-purple-400 mx-auto mb-4"
-                  <h3 className="text-xl font-semibold text-white mb-3"
-                  <p className="text-gray-300"
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
                 </div>
       
       <Footer />
     </>
               ))}
             </div>
-<<<<<<< HEAD
       
       <Footer />
     </>
@@ -233,64 +201,6 @@ const AboutPage: React.FC = () => {const features = [
         </section>
       </main>
       
-=======
-
-        {/* Values Section */}
-        <section className="py-16 px-4 sm: px-6 lg:px-8 bg-white/5"
-          <div className="max-w-7xl mx-auto"
-            <div className="text-center mb-16"
-              <h2 className="
-    ,
-    d: text-4xl font-bold text-white mb-6"
-            </div>
-
-            <div className="grid m, d:grid-cols-3 gap-8"
-              {values.map((value, index) => (
-                <div key={index} className="text-center"
-                  <value.icon className="w-16 h-16 text-purple-400 mx-auto mb-6"
-                  <h3 className="text-2xl font-semibold text-white mb-4"
-                  <p className="text-gray-300"
-                </div>
-              ))}
-            </div>
-
-        {/* Team Section */}
-        <section className="
-    g: px-8"
-          <div className="max-w-7xl mx-auto"
-            <div className="text-center mb-16"
-              <h2 className="text-3xl m, d:text-4xl font-bold text-white mb-6"
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto"
-                Our team of experts brings together decades of experience in AI, machine learning, and enterprise IT solutions.
-              </p>
-
-            <div className="grid md:grid-cols-3 gap-8"
-              {team.map((member, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center"
-                  <h3 className="text-xl font-semibold text-white mb-2"
-                  <p className="text-purple-400 mb-4"
-                  <p className="text-gray-300"
-                </div>
-              ))}
-            </div>
-
-        {/* CTA Section */}
-        <section className="py-16 px-4 sm: px-6 lg:px-8"
-          <div className="max-w-4xl mx-auto text-center"
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8"
-              Let's work together to create innovative solutions that drive your success.
-            </p>
-            <button className="
-    ,
-    r: from-purple-600 hove, r:to-pink-600 transition-all duration-300 flex items-center mx-auto"
-              Get Started
-              <ArrowRight className="w-5 h-5 ml-2"
-            </button>
-
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
       <Footer />
     </>
   )

@@ -23,7 +23,6 @@ const SitemapXMLPage: React.FC = () => {return (
             <div className="text-center"
               <p className="text-gray-300 mb-4"
                 This page provides a comprehensive sitemap of all available pages and services.
-<<<<<<< HEAD
               </p&gt;
               <p className="text-sm text-gray-400"&gt;</p&gt;
                 For the XML sitemap, please visit: <a href="/sitemap.xml" className="text-cyan-400 hover:text-cyan-300"&gt;</a&gt;/sitemap.xml</a&gt;
@@ -67,16 +66,3 @@ export default SitemapXMLPage
     </>
     </>
   );
-=======
-              </p&gt
-              <p className="text-sm text-gray-400"
-                For the XML sitemap, please visit: <a href="/sitemap.xml" className="text-cyan-400 hove, r:text-cyan-300"
-              </p&gt
-            </div&gt
-          </div&gt
-        </div&gt
-      </div&gt
-    </&gt
-    </>);
-export default SitemapXMLPage</Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe

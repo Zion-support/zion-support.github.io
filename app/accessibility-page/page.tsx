@@ -68,7 +68,6 @@ const AccessibilityPage: React.FC = () => {const features = [
       icon: BarChart} ]
   return (
     <>
-<<<<<<< HEAD
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
@@ -80,18 +79,12 @@ const AccessibilityPage: React.FC = () => {const features = [
       <Helmet>
         <title>Accessibility - Zion Tech Group</title>
         <meta name="description" content="Learn about our commitment to web accessibility and inclusive design practices." />
-=======
-<Helmet>
-        <title>Accessibility Services - Zion Tech Group</title>
-        <meta name="description" content="Make your digital products accessible to everyone. Comprehensive accessibility services including audits, implementation, and ongoing support."
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
       </Helmet>
       
       <Navigation />
       
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
         {/* Hero Section */}
-<<<<<<< HEAD
         <section className="pt-20 pb-16 px-4">
           <div className="container mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -105,27 +98,6 @@ const AccessibilityPage: React.FC = () => {const features = [
       <Footer />
     </>
         </section>
-=======
-        <section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8"
-          <div className="max-w-7xl mx-auto"
-            <div className="text-center"
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400"
-              </h1>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"
-                Make your digital products accessible to everyone. We provide comprehensive accessibility solutions that ensure your content and services are inclusive for all users.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"
-                <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center"
-                  Get Started
-                  <ArrowRight className="w-5 h-5 ml-2"
-                </button>
-                <button className="
-    ,
-    r: bg-purple-400 hove, r:text-white transition-all duration-300"
-                  Learn More
-                </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
 
         {/* Features Section */}
         <section className="
@@ -155,7 +127,6 @@ const AccessibilityPage: React.FC = () => {const features = [
                   </ul>
               ))}
             </div>
-<<<<<<< HEAD
       
       <Footer />
     </>
@@ -195,35 +166,6 @@ const AccessibilityPage: React.FC = () => {const features = [
       <Footer />
     </>
         </section>
-=======
-
-        {/* Services Section */}
-        <section className="
-    g: px-8 bg-white/5"
-          <div className="max-w-7xl mx-auto"
-            <div className="text-center mb-16"
-              <h2 className="text-3xl m, d:text-4xl font-bold text-white mb-6"
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto"
-                From initial assessment to ongoing support, we provide end-to-end accessibility solutions.
-              </p>
-
-            <div className="grid md:grid-cols-2 gap-8"
-              {services.map((service, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6"
-                  <service.icon className="w-12 h-12 text-purple-400 mb-4"
-                  <h3 className="text-xl font-semibold text-white mb-3"
-                  <p className="text-gray-300 mb-4"
-                  <ul className="space-y-2"
-                    {service.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-300"
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2"
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-              ))}
-            </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
 
         {/* Benefits Section */}
         <section className="py-16 px-4 sm: px-6 lg:px-8"
@@ -233,18 +175,11 @@ const AccessibilityPage: React.FC = () => {const features = [
               <p className="text-xl text-gray-300 max-w-3xl mx-auto"
                 Accessibility isn't just the right thing to do—it's also good for business.
               </p>
-<<<<<<< HEAD
             </div>
       
       <Footer />
     </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-=======
-
-            <div className="
-    ,
-    d: grid-cols-2 l, g:grid-cols-4 gap-8"
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center"
                   <benefit.icon className="w-16 h-16 text-purple-400 mx-auto mb-6"
@@ -256,7 +191,6 @@ const AccessibilityPage: React.FC = () => {const features = [
     </>
               ))}
             </div>
-<<<<<<< HEAD
       
       <Footer />
     </>
@@ -265,53 +199,6 @@ const AccessibilityPage: React.FC = () => {const features = [
       <Footer />
     </>
         </section>
-=======
-
-        {/* Standards Section */}
-          <div className="max-w-7xl mx-auto"
-            <div className="text-center mb-16"
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"
-                Compliance Standards
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto"
-                We ensure compliance with international accessibility standards
-              </div>
-
-        {/* Benefits Section */}
-            </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 l, g:grid-cols-3 gap-8"
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-3"
-                  <div className="flex-shrink-0"
-              </p>
-            
-            <div className="grid grid-cols-1 md: grid-cols-2 l, g:grid-cols-3 gap-8"
-              {benefits.map((benefit, index) => (
-                    <CheckCircle className="h-6 w-6 text-cyan-400"
-                  </div>
-                  <p className="text-gray-300"
-                <div key={index} className="flex items-start space-x-3"
-                  <div className="flex-shrink-0"
-                    <Accessibility className="h-6 w-6 text-cyan-400"
-                  </div>
-                  <p className="text-gray-300"
-                </div>
-              ))}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8"
-              {standards.map((standard, index) => {
-                const Icon = standard.icon
-                return (
-                  <div key={index} className="text-center"
-                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6"
-                      <Icon className="w-8 h-8 text-white"
-                    </div>
-                    <h3 className="text-xl font-semibold text-white mb-4"
-                    <p className="text-gray-300"
-                  </div>
-                )
-              })}
-            </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
 
         {/* CTA Section */}
         <section className="py-16 px-4 sm: px-6 lg:px-8"
@@ -322,7 +209,6 @@ const AccessibilityPage: React.FC = () => {const features = [
             <p className="text-xl text-gray-300 mb-8"
               Let's work together to create inclusive digital experiences that everyone can use and enjoy.
             </p>
-<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 flex items-center justify-center">
                 Get Accessibility Audit
@@ -342,15 +228,6 @@ const AccessibilityPage: React.FC = () => {const features = [
         </section>
       </main>
       
-=======
-            <button className="
-    ,
-    r: from-purple-600 hove, r:to-pink-600 transition-all duration-300 flex items-center mx-auto"
-              Start Your Accessibility Journey
-              <ArrowRight className="w-5 h-5 ml-2"
-            </button>
-
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
       <Footer />
     </>
   )

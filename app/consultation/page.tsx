@@ -65,7 +65,6 @@ Get Started
     ,
     r: bg-cyan-400 hove, r:text-white transition-all duration-300"
 Learn More
-<<<<<<< HEAD
                 </button>
               </div>
       
@@ -103,49 +102,11 @@ Learn More
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
-=======
-                </section>
-
-        {/* Hero Section */}
-        <section></section>
-          <div></div>
-            <div></div>
-              <h1>
-
-              <div></div>
-                <button>;
-Get Started</button>
-                  <ArrowRight className="ml-2 h-5 w-5"
-
-                <button>;
-Learn More
-
-
-
-
-
-        {/* Features Section */}</button>
-        <section></section>
-          <div></div>
-            <div></div>
-              <h2>Powerful Features</h2>
-              <p>Everything you need to succeed with AI</p>
-            <div>
-              {features.map((feature), index) => (</div>
-                <div></div>
-                  <div></div>
-                    <feature.icon className="h-8 w-8"
-
-                  <h3 className="text-xl font-semibold text-white mb-3"
-                  <p>{feature.description}</p>
-                  <ul className="space-y-2"
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
                     {feature.benefits.map((benefit), benefitIndex) => (
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-300"
                         <CheckCircle className="h-4 w-4 text-cyan-400 mr-2 flex-shrink-0"
                         {benefit}
                       </li>
-<<<<<<< HEAD
                     ))}
                   </ul>
                 </div>
@@ -215,38 +176,3 @@ Learn More
   );
 };
 
-=======
-                    )
-    </>
-  )
-                  </div>
-              ))}
-
-
-
-        {/* Benefits Section */}
-        <section></section>
-          <div></div>
-            <div>
-
-            <div>
-              {benefits.map((benefit), index) => (</div>
-                <div></div>
-                  <div></div>
-                    <Zap className="h-6 w-6 text-cyan-400"
-
-                  <p>{benefit}</p>
-              ))}
-            </section>
-Learn More
-
-
-
-
-
-      <Footer />
-    </>
-  )
-}
-        </h1>
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe

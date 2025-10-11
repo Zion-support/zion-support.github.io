@@ -14,7 +14,7 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({isOpen, onClose}) 
   ]
 
   return (
-    
+    <>
       {/* Overlay */}
       {isOpen && (
         <div

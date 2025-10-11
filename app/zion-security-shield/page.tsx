@@ -36,7 +36,6 @@ const PagePage: React.FC = () => {
 
   return (
     <>
-<<<<<<< HEAD
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
@@ -46,9 +45,6 @@ const PagePage: React.FC = () => {
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
         <Navigation />
         
         {/* Hero Section */}
@@ -164,10 +160,7 @@ const PagePage: React.FC = () => {
       
       <Footer />
     </>
-<<<<<<< HEAD
       <Footer />
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
     </>
   );
 export default PagePage

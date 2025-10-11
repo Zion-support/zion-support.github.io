@@ -65,11 +65,11 @@ const EnhancedHeader: React.FC = () => {
               </Link>
             </nav>
           </div>
+        </div>
+      </header>
     </>
   )
-      </div>
-    </header>
-  )}
+}
 
 export default EnhancedHeader
     </Menu>

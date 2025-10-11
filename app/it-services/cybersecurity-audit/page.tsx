@@ -1,4 +1,3 @@
-<<<<<<< HEAD
             </div>
       
       <Footer />
@@ -8,10 +7,6 @@
       <Footer />
     </>
         </section>
-=======
-
-
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
 
         {/* Content Section */}
         <section className="py-16 px-4 sm: px-6 l, g: px-8"
@@ -21,7 +16,6 @@
       ,
     d:text-4xl font-bold text-white mb-6"
                 Coming Soon
-<<<<<<< HEAD
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 This page is under development. Please check back soon for updates.
@@ -47,8 +41,6 @@
     </>
   );
 };
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
 
               <p className="text-xl text-gray-300 mb-8"
                 This page is under development. Please check back soon for updates.

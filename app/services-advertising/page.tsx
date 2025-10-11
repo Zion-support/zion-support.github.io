@@ -7,7 +7,6 @@ import {Helmet} from 'react-helmet-async'
   ]
   return (
     <>
-<<<<<<< HEAD
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
@@ -79,28 +78,3 @@ import {Helmet} from 'react-helmet-async'
   );
 };
 
-=======
-<Helmet>
-      </Helmet>
-      <Navigation />
-      
-      <div>
-        {/* Hero Section */} {/* Features Section */}
-
-
-
-        {/* Benefits Section */}
-                </div>
-              )
-    </>
-  )
-            </section>
-
-        {/* CTA Section */}
-
-      <Footer />
-    </>
-  )
-}
-    </Navigation>
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe

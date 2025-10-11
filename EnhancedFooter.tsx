@@ -85,9 +85,7 @@ const EnhancedFooter: React.FC = () => {
                     </span>
                   </Link>
                 </li>
-              )
-    </>
-  )
+              ))}
             </ul>
           </div>
           
