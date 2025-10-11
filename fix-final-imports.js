@@ -1,78 +1,64 @@
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
+import fs from 'fs'
+import { fileURLToPath } from 'url'
 function processFile(filePath) {
   try {
-    let _content = fs.readFileSync(filePath, 'utf8');
-    let _modified = false;
-
     // Fix remaining import path issues
     const replacements = [
       // Fix SEOOptimizer component
       {
         pattern: /import\s+{\s*useRouter\s*}\s+from\s+'\.\.\/\.\.\/utils\/navigation';/g,
-        replacement: "import { useRouter } from '../utils/navigation';",
-      },
+        replacement: "import { useRouter } from '../utils/navigation';"},
       // Fix root-level files
       {
         pattern: /import\s+{\s*Metadata\s*}\s+from\s+'\.\/types\/next';/g,
-        replacement: "import { Metadata } from './types/next';",
-      },
+        replacement: "import { Metadata } from './types/next';"},
       {
-        pattern: /import\s+Link\s+from\s+'\.\/utils\/link';/g,
-        replacement: "import Link from './utils/link';",
-      },
+        pattern: /import\s+Link\s+from\s+'\.\/utils\/link';/g
+        replacement: "import Link from './utils/link';"},
       // Fix MetadataRoute namespace issue
       {
-        pattern: /MetadataRoute\./g,
+        pattern: /MetadataRoute\./g
         replacement: 'MetadataRoute',
+function processFile(filePath) {/* TODO: Fix JSX expression */}
+  n: /import\s+{\s*useRouter\s*}\s+from\s+'\.\.\/\.\.\/utils\/navigation';/g,
+        replacemen,
+  t: "import { useRouter } from '../utils/navigation';"},
+      // Fix root-level files
+      {/* TODO: Fix JSX expression */}
+  n: /import\s+{\s*Metadata\s*}\s+from\s+'\.\/types\/next';/g,
+        replacemen,"
+  t: "import { Metadata } from './types/next';"},
+      {/* TODO: Fix JSX expression */}
       },
-    ];
-
-    replacements.forEach(({ pattern, replacement }) => {
-      if (pattern.test(content)) {
-        content = content.replace(pattern, replacement);
-        modified = true;
+      // Fix MetadataRoute namespace issue
+      {/* TODO: Fix JSX expression */}
+      }]
+    replacements.forEach(({ pattern, replacement }) => {/* TODO: Fix JSX expression */}
       }
-    });
-
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-
-      return true;
+    })
+    if (modified) {/* TODO: Fix JSX expression */}
     }
-    return false;
-  } catch (error) {
-
-    return false;
+    return false
+  } catch (error) {/* TODO: Fix JSX expression */}
   }
 }
 
 function processDirectory(dirPath) {
-  const _items = fs.readdirSync(dirPath);
-  let _totalFixed = 0;
 
-  items.forEach(item => {
-    const _fullPath = path.join(dirPath, item);
-    const _stat = fs.statSync(fullPath);
-
+  items.forEach(item => {)
+)
     if (stat.isDirectory()) {
-      totalFixed += processDirectory(fullPath);
+      totalFixed += processDirectory(fullPath)
     } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
       if (processFile(fullPath)) {
-        totalFixed++;
+        totalFixed++
+function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
+    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {/* TODO: Fix JSX expression */}
       }
     }
-  });
-
-  return totalFixed;
+  })
+  return totalFixed
 }
 
 // Process the app directory
-const _appDir = path.join(__dirname, 'app');
-
-const _fixedCount = processDirectory(appDir);
+// Process the app directory;"

@@ -1,35 +1,42 @@
-import React from 'react';
+import React from 'react'
 interface LinkProps {
-  href: string;
-  children: React.ReactNode;
-  className?: string;
-  target?: string;
-  rel?: string;
-  onClick?: () => void;
-  'aria-label'?: string;
+    // TODO: Add content
+  }
 }
-export const Link: React.FC<LinkProps> = ({
-  href,
-  children,
-  className,
-  target,
-  rel,
-  onClick,
+  href: string,,
+    children: React.ReactNode
+  className?: string
+  target?: string
+  rel?: string
+  onClick?: () => void
+  'aria-label'?: string
+}
+export const Link: React.FC,
+          <LinkProps> = ({
+    // TODO: Add content
+  }
+}
+//   href,
+//   children,
+//   className,
+//   target,
+//   rel,
+//   onClick,
   'aria-label': ariaLabel,
-  ...props
-}) => {
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (onClick) {
-      onClick();
+//   ...props;)
+}) => {if (onClick) {}
     }
     // Handle internal navigation
-    if (href.startsWith('/') && !href.startsWith('//')) {
-      e.preventDefault();
-      window.location.href = href;
+    if (href.startsWith('/') && !href.startsWith('//')) {/* TODO: Fix JSX expression */}
+  O: Add content,}
+}
+      e.preventDefault()
+      window.location.href = href
     }
-  };
-  return (
-    <a
+  }
+  return (<div>Coming Soon</div>)
+  )
+          <a>
       href={href}
       className={className}
       target={target}
@@ -37,9 +44,8 @@ export const Link: React.FC<LinkProps> = ({
       onClick={handleClick}
       aria-label={ariaLabel}
       {...props}
-    >
+// >
       {children}
-    </a>
-  );
-};
-export default Link;
+  )
+}
+export default Link</Link></a>

@@ -1,8 +1,6 @@
-import fs from 'fs';
-
+import fs from 'fs'
 // Read existing pages
-const existingPages = fs.readFileSync('existing_pages.txt', 'utf8').split('\n').filter(page => page.trim() && page !== 'page.tsx');
-
+const existingPages = fs.readFileSync('existing_pages.txt', 'utf8').split('\n').filter(page => page.trim() && page !== 'page.tsx')
 // Navigation links from the Navigation component
 const navigationLinks = [
   // Main navigation
@@ -16,7 +14,7 @@ const navigationLinks = [
   '/ai-lead-generation', '/ai-document-processing', '/ai-seo-optimizer', '/ai-ecommerce-solutions',
   '/ai-financial-analyzer', '/ai-video-generation', '/ai-voice-cloning', '/ai-music-composition',
   '/ai-fashion-design', '/ai-fitness-coach', '/ai-workflow-automation', '/ai-sales-automation',
-  '/ai-data-visualization', '/ai-3d-generation',
+  '/ai-data-visualization', '/ai-3 d-generation',
   
   // AI Services
   '/machine-learning', '/ai-business-intelligence', '/ai-supply-chain', '/ai-quality-assurance',
@@ -36,20 +34,15 @@ const navigationLinks = [
   '/quantum-computing', '/autonomous-systems', '/blockchain', '/iot-edge', '/business-intelligence',
   '/robotics', '/enterprise', '/analytics-tools', '/business-apps', '/expense-tracker',
   '/task-manager-pro', '/smart-analytics'
-];
-
+]
 // Convert to page names (remove leading slash)
-const navigationPages = navigationLinks.map(link => link.substring(1));
-
+const navigationPages = navigationLinks.map(link => link.substring(1))
 // Find missing pages
-const missingPages = navigationPages.filter(page => !existingPages.includes(page));
-
-console.log('Missing pages:');
-missingPages.forEach(page => console.log(`- ${page}`));
-
-console.log(`\nTotal missing pages: ${missingPages.length}`);
-console.log(`Total existing pages: ${existingPages.length}`);
-console.log(`Total navigation links: ${navigationPages.length}`);
-
+const missingPages = navigationPages.filter(page => !existingPages.includes(page))
+console.log('Missing pages: ')
+missingPages.forEach(page => console.log(`- ${page}`))
+console.log(`\nTotal missing pages: ${missingPages.length}`)
+console.log(`Total existing pages: ${existingPages.length}`)
+console.log(`Total navigation links: ${navigationPages.length}`)
 // Write missing pages to file
-fs.writeFileSync('missing_pages.txt', missingPages.join('\n'));
+fs.writeFileSync('missing_pages.txt', missingPages.join('\n'))

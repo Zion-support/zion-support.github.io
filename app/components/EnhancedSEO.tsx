@@ -1,207 +1,366 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-interface SEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  canonicalUrl?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  structuredData?: any;
-  noindex?: boolean;
-  nofollow?: boolean;
-  alternateLanguages?: { [key: string]: string };
-  preloadResources?: Array<{
-    href: string;
-    as: string;
-    type?: string;
-  }>;
-}
-
-const EnhancedSEO: React.FC<SEOProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.',
-  keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services', 'artificial intelligence', 'business intelligence', 'data analytics', 'cybersecurity', 'cloud migration', 'DevOps', 'IT consulting'],
-  canonicalUrl = 'https://ziontechgroup.com',
-  ogImage = 'https://ziontechgroup.com/og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  structuredData,
-  noindex = false,
-  nofollow = false,
-  alternateLanguages = {},
-  preloadResources = []
-}) => {
-  const robotsContent = [
-    noindex ? 'noindex' : 'index',
-    nofollow ? 'nofollow' : 'follow',
-    'max-snippet:-1',
-    'max-image-preview:large',
-    'max-video-preview:-1'
-  ].join(', ');
-
-  const defaultStructuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'TechCompany',
-    name: 'Zion Tech Group',
-    url: canonicalUrl,
-    description: description,
-    foundingDate: '2020',
-    numberOfEmployees: '50-100',
-    industry: 'Technology',
-    services: [
-      'AI Solutions',
-      'Quantum Computing',
-      'Autonomous Systems',
-      'Digital Transformation',
-      'Cloud Services',
-      'Automation',
-      'Business Intelligence'
-    ],
-    contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+1-302-464-0950',
-      contactType: 'Customer Service',
-      areaServed: 'US',
-      availableLanguage: 'en'
+const EnhancedSEOPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced AI technology to transform your business operations and improve efficiency'
     },
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: '364 E Main St STE 1008',
-      addressLocality: 'Middletown',
-      addressRegion: 'DE',
-      postalCode: '19709',
-      addressCountry: 'US'
+    {
+      icon: Zap,
+      title: 'High Performance',
+      description: 'Lightning-fast processing and real-time analytics for optimal results'
     },
-    sameAs: [
-      'https://www.linkedin.com/company/zion-tech-group',
-      'https://twitter.com/ziontechgroup',
-      'https://github.com/ziontechgroup'
-    ]
-  };
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with encryption and compliance standards'
+    },
+    {
+      icon: Globe,
+      title: 'Global Reach',
+      description: 'Worldwide deployment and support for international businesses'
+    }
+  ];
 
-  const finalStructuredData = structuredData || defaultStructuredData;
+  const benefits = [
+=======
+import {Helmet}}from 'react-helmet-async';
+import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
+=======
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+>>>>>>> origin/main
+const benefits = [
+>>>>>>> origin/main
+    'Advanced AI technology integration',
+    'Real-time processing and analytics',
+    'Enterprise-grade security and compliance',
+    'Scalable and flexible solutions',
 
+    '24/7 technical support',
+
+    'Easy integration with existing systems',
+
+    'Cost-effective pricing plans',
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+    'Proven track record of success'
+  ]
+return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
+      <Helmet />
+=======
+    'Proven track record of success';
+  ];];];
+return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <Helmet>
+>>>>>>> origin/main
+        <title>EnhancedSEO | Zion Tech Group</title>
+        <meta name="description" content="AI-powered solution" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+      </Helmet>
+      {/* Hero Section */} <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
+    'Proven track record of success'
+  ]
+return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <Helmet>
+        </Helmet><title>EnhancedSEO | Zion Tech Group</title>
+        <meta name="description" content="AI-powered solution" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+      </Helmet>
+      {/* Hero Section */}
+<<<<<<< HEAD
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        </section>
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+=======
+      <section className="py-20 px-4">
+          </section>< className="$2 />
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> origin/main
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center"></div>
+            <h1>
+<<<<<<< HEAD
+              <span>EnhancedSEO;</span>
+=======
+              </h1><span>
+>>>>>>> origin/main
+                EnhancedSEO
+>>>>>>> origin/main
+              </span>
+              <br>
+              <span className="text-white">Solutions</span>
+            </h1>
+<<<<<<< HEAD
+            <p>Transform your business with our advanced enhancedseo solutions.;</p>
+              Powered by cutting-edge AI technology and industry expertise.
+            </p>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
+              <button>Get Started;</button>
+                <ArrowRight>
+=======
+            <p>
+              Transform your business with our advanced enhancedseo solutions.
+              Powered by cutting-edge AI technology and industry expertise.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <button>
+                Get Started
+                </button><ArrowRight>
+>>>>>>> origin/main
+              </button>
+              <button>Learn More,</button>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+<<<<<<< HEAD
+      {/* Features Section */} <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
+      {/* Features Section */}
+      <section className="py-20 px-4">
+          </section>< className="$2 />
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> origin/main
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2>Why Choose Our EnhancedSEO?,</h2>
+            </h2>
+            <p>Our enhancedseo solutions deliver unmatched performance, security, and scalability.</p>
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,
+            {features.map((feature, index) => (
+                <div key={index}className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300"></div>,
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
+                  <feature />
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description</p>}</p>
+              </div>
   return (
-    <Helmet>
-      {/* Basic Meta Tags */}
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords.join(', ')} />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="robots" content={robotsContent} />
-      <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="format-detection" content="telephone=no,address=no,email=no" />
-      <meta name="color-scheme" content="dark light" />
-      <meta name="theme-color" content="#0f172a" />
-      
-      {/* Canonical URL */}
-      <link rel="canonical" href={canonicalUrl} />
-      
-      {/* Open Graph / Facebook */}
-      <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-      <meta property="og:image:alt" content={title} />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
-      
-      {/* Twitter */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:url" content={canonicalUrl} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
-      <meta name="twitter:image:alt" content={title} />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />
-      
-      {/* Additional SEO Meta Tags */}
-      <meta name="application-name" content="Zion Tech Group" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-      <meta name="mobile-web-app-capable" content="yes" />
-      <meta name="msapplication-TileColor" content="#0f172a" />
-      <meta name="msapplication-config" content="/browserconfig.xml" />
-      
-      {/* Security Headers */}
-      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-      <meta httpEquiv="X-Frame-Options" content="DENY" />
-      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
-      <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
-      
-      {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://www.google-analytics.com" />
-      <link rel="preconnect" href="https://www.googletagmanager.com" />
-      
-      {/* DNS Prefetch */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//fonts.gstatic.com" />
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
-      <link rel="dns-prefetch" href="//www.googletagmanager.com" />
-      
-      {/* Preload critical resources */}
-      {preloadResources.map((resource, index) => (
-        <link
-          key={index}
-          rel="preload"
-          href={resource.href}
-          as={resource.as}
-          type={resource.type}
-        />
-      ))}
-      
-      {/* Favicon and Icons */}
-      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-      <link rel="icon" type="image/png" href="/favicon.png" />
-      <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-      <link rel="manifest" href="/manifest.json" />
-      
-      {/* Alternate Languages */}
-      {Object.entries(alternateLanguages).map(([lang, url]) => (
-        <link key={lang} rel="alternate" hrefLang={lang} href={url} />
-      ))}
-      
-      {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify(finalStructuredData)}
-      </script>
-      
-      {/* Additional Structured Data for Services */}
-      <script type="application/ld+json">
-        {JSON.stringify({
-          '@context': 'https://schema.org',
-          '@type': 'Service',
-          name: 'AI and IT Solutions',
-          provider: {
-            '@type': 'TechCompany',
-            name: 'Zion Tech Group',
-            url: canonicalUrl
-          },
-          description: description,
-          serviceType: 'Technology Services',
-          areaServed: 'Worldwide',
-          availableChannel: {
-            '@type': 'ServiceChannel',
-            serviceUrl: canonicalUrl,
-            servicePhone: '+1-302-464-0950',
-            serviceEmail: 'kleber@ziontechgroup.com'
-          }
-        })}
-      </script>
-    </Helmet>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>EnhancedSEO | Zion Tech Group
+        <meta name="description" content="Professional EnhancedSEO services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="EnhancedSEO, AI solutions, IT services, Zion Tech Group, enhancedseo" />
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">EnhancedSEO
+              <br />
+              <span className="text-white">Solutions
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your business with our advanced enhancedseo solutions. 
+              Powered by cutting-edge AI technology and industry expertise.
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">Learn More
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        </section>
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Our EnhancedSEO?
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our enhancedseo solutions deliver unmatched performance, security, and scalability.
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+                  <feature.icon className="h-6 w-6 text-white" />
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}
+                <p className="text-gray-300">{feature.description}
+            ))}
+<<<<<<< HEAD
+          </div>
+        </div>
+      </section>
+      {/* Benefits Section */} <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
+      {/* Benefits Section */}
+      <section className="py-20 px-4">
+          </section>< className="$2 />
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> origin/main
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
+<<<<<<< HEAD
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2>Key Benefits;</h2>
+            </h2>
+            <p>Experience the power of our enhancedseo solutions for your business.,</p>
+=======
+        <div className="max-w-7xl mx-auto" / /></div>
+          <div className="text-center mb-16" / /></div>
+            <h2></h2>
+              Key Benefits
+            </h2>
+            <p></p>
+              Experience the power of our enhancedseo solutions for your business.,
+>>>>>>> origin/main
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>,
+            {benefits.map((benefit, index) => (
+<<<<<<< HEAD
+                <div key={index}className="flex items-start space-x-3"></div>
+                <CheckCircle />
+                <p className="text-gray-300 text-lg">{benefit</p>}</p>
+=======
+                <div key={index} className="flex items-start space-x-3"></div>
+                <CheckCircle>
+                </CheckCircle><p className="text-gray-300 text-lg">{benefit}</p>
+>>>>>>> origin/main
+              </div>
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        </section>
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Benefits
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the power of our enhancedseo solutions for your business.
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-start space-x-3">
+                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+                <p className="text-gray-300 text-lg">{benefit}
+            ))}
+<<<<<<< HEAD
+          </div>
+        ))
+      </section>
+      {/* CTA Section */} <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
+      {/* CTA Section */}
+<<<<<<< HEAD
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        </section>
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+=======
+      <section className="py-20 px-4">
+          </section>< className="$2 />
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> origin/main
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
+<<<<<<< HEAD
+        <div className="max-w-4xl mx-auto text-center"></div>
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md: p-12"></div>,
+            <h2>Ready to Get Started?</h2>
+            </h2>
+            <p>Contact our experts to discuss your enhancedseo needs and get a customized solution.</p>
+=======
+        <div className="max-w-4xl mx-auto text-center" / /></div>
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12" / /></div>
+            <h2></h2>
+>>>>>>> origin/main
+              Ready to Get Started?
+            </h2>
+            <p></p>
+              Contact our experts to discuss your enhancedseo needs and get a customized solution.
+>>>>>>> origin/main
+            </p>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
+              <button>
+<<<<<<< HEAD
+                <Phone>
+                Call Now;
+              </button>
+              <button>
+                <Mail>
+                Email Us;
+=======
+                </button><Phone>
+                Call Now
+              </button>
+              <button>
+                </button><Mail>
+                Email Us
+>>>>>>> origin/main
+              </button>
+            </div>
+          </div>
+        ))
+      </section>
+    </div>
+  ),
+}
+export default EnhancedSEOPage
+            <p className="text-xl text-purple-100 mb-8">
+              Contact our experts to discuss your enhancedseo needs and get a customized solution.
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+                <Phone className="mr-2 h-5 w-5" />
+                Call Now
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+                <Mail className="mr-2 h-5 w-5" />
+                Email Us
+<<<<<<< HEAD
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 };
 
-export default EnhancedSEO;
+export default EnhancedSEOPage;
+=======
+  )
+}
+export default EnhancedSEOPage</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></button></button></button></button></p></p></p></p></p></p></h1></h2></h2></h2></h3></section></section></section></section>
+>>>>>>> origin/main

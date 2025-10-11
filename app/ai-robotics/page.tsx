@@ -1,320 +1,184 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
-import { Settings, Brain, Zap, Shield, Target, ArrowRight, CheckCircle, Star, Users, Award, Lock, BarChart, Cpu, Eye, MessageSquare, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Truck, Smartphone, TrendingUp } from 'lucide-react';
+<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+
+const PagePage: React.FC = () => {
+  const features = [
+=======
+import {Helmet}}from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-const AIRoboticsPage: React.FC = () => {
-  const features = [
+import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';
+const AiRoboticsPage: React.FC = () => {,
+=======
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
+const AiRoboticsPage: React.FC = () => {
+>>>>>>> origin/main
+    const features = [
+>>>>>>> origin/main
     {
       icon: Brain,
-      title: 'Intelligent Robotics',
-      description: 'AI-powered robots that can learn, adapt, and make decisions in real-time for complex tasks.',
-      benefits: ['Machine learning', 'Adaptive behavior', 'Real-time decisions', 'Continuous improvement']
-    },
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+<<<<<<< HEAD
+<<<<<<< HEAD
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},
+    {icon: BarChart,
+=======
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'];
+=======
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'],
+>>>>>>> origin/main
+  },
     {
-      icon: Eye,
-      title: 'Computer Vision',
-      description: 'Advanced vision systems that enable robots to see, recognize, and interact with their environment.',
-      benefits: ['Object recognition', 'Spatial awareness', 'Quality inspection', 'Navigation assistance']
-    },
+    icon: BarChart,
+>>>>>>> origin/main
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+<<<<<<< HEAD
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']},
+    {icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']},
+    {icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+<<<<<<< HEAD
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']}]
+=======
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+  },
+  ];];
+>>>>>>> origin/main
+=======
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics'],
+  },
     {
-      icon: Settings,
-      title: 'Autonomous Operation',
-      description: 'Robots that can operate independently with minimal human intervention and supervision.',
-      benefits: ['Self-navigation', 'Task planning', 'Error recovery', 'Maintenance alerts']
-    },
+    icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics'],
+  },
     {
-      icon: Zap,
-      title: 'Precision Control',
-      description: 'High-precision robotic control systems for delicate and complex manufacturing tasks.',
-      benefits: ['Micro-precision', 'Repeatable accuracy', 'Force control', 'Speed optimization']
-    },
-    {
-      icon: Users,
-      title: 'Human-Robot Collaboration',
-      description: 'Safe and efficient collaboration between humans and robots in shared workspaces.',
-      benefits: ['Safety protocols', 'Intuitive interfaces', 'Collaborative tasks', 'Workflow optimization']
-    },
-    {
-      icon: Shield,
-      title: 'Safety Systems',
-      description: 'Advanced safety features and fail-safe mechanisms for secure robotic operations.',
-      benefits: ['Collision avoidance', 'Emergency stops', 'Safety monitoring', 'Risk assessment']
-    }
+    icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'],
+  }
+    ]
+>>>>>>> origin/main
+const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+<<<<<<< HEAD
+    'Gain competitive advantage with advanced technology';
+<<<<<<< HEAD
+  ]
+return(<>)
+      <Helmet />
+=======
   ];
+return (
+    <>
+  </>
+      <Helmet>
+>>>>>>> origin/main
+        <title>Ai Robotics - Zion Tech Group</title>
+=======
+    'Gain competitive advantage with advanced technology'
+  ]
+return (
+    <>
+      <Helmet>
+        </Helmet><title>Ai Robotics - Zion Tech Group</title>
+>>>>>>> origin/main
+        <meta name="description" content="AI-powered solution" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+      </Helmet>
+<<<<<<< HEAD
 
-  const applications = [
-    {
-      title: 'Manufacturing',
-      description: 'Industrial robots for assembly, welding, painting, and quality control in manufacturing.',
-      icon: Factory,
-      useCases: ['Assembly automation', 'Quality control', 'Welding robots', 'Painting systems']
-    },
-    {
-      title: 'Healthcare',
-      description: 'Medical robots for surgery, rehabilitation, and patient care assistance.',
-      icon: Stethoscope,
-      useCases: ['Surgical robots', 'Rehabilitation', 'Patient monitoring', 'Drug delivery']
-    },
-    {
-      title: 'Logistics',
-      description: 'Warehouse and delivery robots for inventory management and order fulfillment.',
-      icon: Truck,
-      useCases: ['Warehouse automation', 'Order picking', 'Delivery robots', 'Inventory tracking']
-    },
-    {
-      title: 'Agriculture',
-      description: 'Agricultural robots for planting, harvesting, and crop monitoring.',
-      icon: Home,
-      useCases: ['Precision farming', 'Crop monitoring', 'Harvesting robots', 'Soil analysis']
-    },
-    {
-      title: 'Service Industry',
-      description: 'Service robots for cleaning, security, and customer assistance.',
-      icon: Users,
-      useCases: ['Cleaning robots', 'Security patrols', 'Customer service', 'Maintenance tasks']
-    },
-    {
-      title: 'Research & Exploration',
-      description: 'Robots for scientific research, space exploration, and underwater missions.',
-      icon: Compass,
-      useCases: ['Space exploration', 'Underwater research', 'Scientific experiments', 'Data collection']
-    }
-  ];
-
-  const capabilities = [
-    {
-      metric: '99.9%',
-      description: 'Accuracy in precision tasks',
-      icon: Target
-    },
-    {
-      metric: '24/7',
-      description: 'Continuous operation capability',
-      icon: Clock3
-    },
-    {
-      metric: '50%',
-      description: 'Increase in productivity',
-      icon: TrendingUp
-    },
-    {
-      metric: '90%',
-      description: 'Reduction in workplace injuries',
-      icon: Shield
-    }
-  ];
-
-  const pricingPlans = [
-    {
-      name: 'Robotics Starter',
-      price: '$2,499/month',
-      description: 'For small-scale robotic applications',
-      features: [
-        'Basic robot programming',
-        'Standard sensors',
-        'Email support',
-        'Cloud monitoring',
-        'Basic analytics',
-        'Documentation'
-      ],
-      popular: false
-    },
-    {
-      name: 'Robotics Professional',
-      price: '$5,999/month',
-      description: 'For enterprise robotic solutions',
-      features: [
-        'Advanced AI programming',
-        'Advanced sensors',
-        'Priority support',
-        'Real-time monitoring',
-        'Advanced analytics',
-        'Custom integrations',
-        'Training & consultation',
-        'API access'
-      ],
-      popular: true
-    },
-    {
-      name: 'Robotics Enterprise',
-      price: 'Custom',
-      description: 'For large-scale robotic operations',
-      features: [
-        'Custom robot development',
-        'On-site deployment',
-        'Dedicated support team',
-        '24/7 monitoring',
-        'White-label solutions',
-        'Advanced safety systems',
-        'Custom reporting',
-        'Full customization'
-      ],
-      popular: false
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center space-x-2 bg-cyan-400/10 text-cyan-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <Settings className="w-4 h-4" />
-              <span>Intelligent Robotics Solutions</span>
-            </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Robotics</span>
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                Page
+              </span>
+              <br />
+              <span className="text-white">Solutions</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Build intelligent robots that can see, learn, and adapt. Our AI-powered robotics solutions 
-              combine advanced machine learning with precision engineering for autonomous operation.
+              Transform your business with our advanced page solutions. 
+              Powered by cutting-edge AI technology and industry expertise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/contact" className="cyber-button px-8 py-4 text-lg">
-                Build AI Robots
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </a>
-              <a href="/demo" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors text-lg">
-                View Demo
-              </a>
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+                Learn More
+              </button>
             </div>
-          </div>
-
-          {/* Capabilities */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-            {capabilities.map((capability, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-cyan-400/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <capability.icon className="w-8 h-8 text-cyan-400" />
-                </div>
-                <div className="text-3xl font-bold text-cyan-400 mb-2">{capability.metric}</div>
-                <div className="text-gray-300">{capability.description}</div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto max-w-6xl">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              AI Robotics Capabilities
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Our Page?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI robotics platform provides the intelligence and capabilities needed for 
-              autonomous operation in any environment.
+              Our page solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 hover:border-cyan-400/40 transition-colors">
-                <div className="w-12 h-12 bg-cyan-400/10 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-cyan-400" />
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+                  <feature.icon className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
+                <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Applications Section */}
-      <section className="py-16 px-4 bg-slate-800/30">
-        <div className="container mx-auto max-w-6xl">
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              AI Robotics Applications
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Key Benefits
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover how AI robotics is transforming industries and enabling new possibilities.
+              Experience the power of our page solutions for your business.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {applications.map((app, index) => (
-              <div key={index} className="bg-slate-900/50 backdrop-blur-sm border border-purple-400/20 rounded-lg p-6 hover:border-purple-400/40 transition-colors">
-                <div className="w-12 h-12 bg-purple-400/10 rounded-lg flex items-center justify-center mb-4">
-                  <app.icon className="w-6 h-6 text-purple-400" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{app.title}</h3>
-                <p className="text-gray-300 mb-4">{app.description}</p>
-                <div className="space-y-2">
-                  {app.useCases.map((useCase, idx) => (
-                    <div key={idx} className="flex items-center text-sm text-purple-300">
-                      <Target className="w-4 h-4 mr-2" />
-                      {useCase}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              AI Robotics Plans
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the right plan for your AI robotics needs.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
-              <div key={index} className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-lg p-8 ${
-                plan.popular 
-                  ? 'border-cyan-400/40 ring-2 ring-cyan-400/20' 
-                  : 'border-gray-600/50'
-              }`}>
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-medium">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="text-4xl font-bold text-cyan-400 mb-2">{plan.price}</div>
-                  <p className="text-gray-300">{plan.description}</p>
-                </div>
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <a href="/contact" className={`w-full block text-center py-3 px-6 rounded-lg font-medium transition-colors ${
-                  plan.popular
-                    ? 'bg-cyan-400 text-slate-900 hover:bg-cyan-300'
-                    : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400/10'
-                }`}>
-                  Get Started
-                </a>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-start space-x-3">
+                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+                <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
             ))}
           </div>
@@ -322,29 +186,304 @@ const AIRoboticsPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 bg-slate-800/30">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Build AI Robots?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Start building intelligent robots that can see, learn, and adapt to any environment.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/contact" className="cyber-button px-8 py-4 text-lg">
-              Start Building
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </a>
-            <a href="/demo" className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400/10 transition-colors text-lg">
-              Schedule Demo
-            </a>
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-purple-100 mb-8">
+              Contact our experts to discuss your page needs and get a customized solution.
+            </p>
+=======
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-orange-900 to-slate-900"></div>
+<<<<<<< HEAD
+        {/* Hero Section */} <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
+        {/* Hero Section */}
+<<<<<<< HEAD
+        <section className="relative py-20 px-4 overflow-hidden">
+        </section>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Ai Robotics
+=======
+        <section className="py-20 px-4">
+          </section>< className="$2 />
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> origin/main
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} /></div>
+          <div className="relative max-w-7xl mx-auto text-center"></div>
+            <h1>Ai Robotics;</h1>
+>>>>>>> origin/main
+            </h1>
+<<<<<<< HEAD
+            <p>Advanced AI-powered ai robotics solution for modern businesses.</p>
+            </p>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
+              <button>Get Started;</button>
+              </button>
+              <button>View Demo,</button>
+=======
+            <p></p>
+              Advanced AI-powered ai robotics solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center" / /></div>
+              <button></button>
+                Get Started
+              </button>
+              <button></button>
+                View Demo,
+>>>>>>> origin/main
+              </button>
+            </div>
+          </div>
+        </section>
+<<<<<<< HEAD
 
+        {/* Features Section */}
+        <section className="py-20 px-4">
+        </section>
+=======
+<<<<<<< HEAD
+        {/* Features Section */} <section className="py-20 px-4">
+>>>>>>> origin/main
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">Ai Robotics
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Advanced AI-powered ai robotics solution for modern businesses.
+>>>>>>> origin/main
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-orange-500 to-blue-600 hover:from-orange-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Get Started
+              <button className="border border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">View Demo
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          </section>< className="$2 />
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> origin/main
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
+<<<<<<< HEAD
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
+              <h2>Key Features;</h2>
+              </h2>
+              <p>Advanced AI technology that drives results;</p>
+=======
+          <div className="max-w-7xl mx-auto" / /></div>
+            <div className="text-center mb-16" / /></div>
+              <h2></h2>
+                Key Features
+              </h2>
+              <p></p>
+                Advanced AI technology that drives results
+>>>>>>> origin/main
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,
+              {features.map((feature, index) => (
+                <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>,
+                  <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>,
+                    <feature />
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+<<<<<<< HEAD
+                  <p className="text-gray-300 mb-4">{feature.description</p>}</p>
+                  {feature.benefits && (;
+                    <ul>
+                      {feature.benefits.map((benefit, idx) => (} <li>
+                          <CheckCircle />
+=======
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {
+    feature.benefits && (
+                    <ul>
+                      {feature.benefits.map((benefit, idx) => (
+  }
+                        </ul><li>
+                          </li><CheckCircle>
+>>>>>>> origin/main
+
+                          {benefit} </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+
+            </div>
+          </div>
+        </section>
+<<<<<<< HEAD
+        {/* Benefits Section */} <section className="py-20 px-4">
+=======
+>>>>>>> origin/main
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Key Features
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Advanced AI technology that drives results
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}
+                  <p className="text-gray-300 mb-4">{feature.description}
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                          {benefit}
+                      ))}
+<<<<<<< HEAD
+                    </ul>
+                  </div>
+=======
+                  )}
+              ))}
+        {/* Benefits Section */}
+        <section className="py-20 px-4">
+          </section>< className="$2 />
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
+<<<<<<< HEAD
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
+              <h2>Why Choose Our Solution?</h2>
+              </h2>
+              <p>Proven results that drive business growth and efficiency;</p>
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>,
+              {benefits.map((benefit, index) => (
+                <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>,
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>,
+                    <CheckCircle />
+                  <p className="text-lg text-white font-medium">{benefit</p>}</p>
+>>>>>>> origin/main
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+<<<<<<< HEAD
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4">
+        </section>
+=======
+        {/* CTA Section */} <section className="py-20 px-4">
+>>>>>>> origin/main
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
+          <div className="max-w-7xl mx-auto" / /></div>
+            <div className="text-center mb-16" / /></div>
+              <h2></h2>
+                Why Choose Our Solution?
+              </h2>
+              <p></p>
+                Proven results that drive business growth and efficiency
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" / /></div>
+              {benefits.map((benefit, index) => ()
+              ))}
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          </section>< className="$2 />
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> origin/main
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          ))
+        </section>
+<<<<<<< HEAD
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+        </section>
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+=======
+<<<<<<< HEAD
+          <div className="max-w-4xl mx-auto text-center"></div>
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12"></div>
+              <h2>Ready to Get Started?</h2>
+              </h2>
+              <p>Contact our experts to discuss your requirements and get started today.</p>
+              </p>
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
+                <button>Contact Us;</button>
+                </button>
+                <button>Learn More;</button>
+=======
+          <div className="max-w-4xl mx-auto text-center" / /></div>
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12" / /></div>
+              <h2></h2>
+>>>>>>> origin/main
+                Ready to Get Started?
+              </h2>
+              <p></p>
+                Contact our experts to discuss your requirements and get started today.
+              </p>
+              <div className="flex flex-col sm: flex-row gap-4 justify-center" / /></div>
+                <button></button>
+                  Contact Us
+                </button>
+                <button></button>
+                  Learn More
+>>>>>>> origin/main
+                </button>
+              </div>
+            </div>
+          ))
+        </section>
+      </div>
+<<<<<<< HEAD
       <Footer />
-    </div>
+
   );
 };
 
-export default AIRoboticsPage;
+<<<<<<< HEAD
+export default PagePage;
+=======
+export default AiRoboticsPage;
+=======
+      <Footer></Footer>
+    </>
+  ),
+}
+export default AiRoboticsPage</$1></h3>
+>>>>>>> origin/main
+>>>>>>> origin/main

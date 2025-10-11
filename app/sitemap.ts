@@ -1,76 +1,91 @@
-import { MetadataRoute } from 'next'
+<<<<<<< HEAD
+import { MetadataRoute } from 'next';
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://ziontechgroup.com'
+  const baseUrl = 'https://ziontechgroup.com';
+  
   const routes = [
     '',
     '/about',
-    '/pricing',
-    '/demo',
-    '/consultation',
+    '/services',
     '/ai-services',
-    '/ai-marketing',
-    '/ai-automation',
-    '/ai-healthcare',
-    '/ai-fintech',
-    '/ai-content-generation',
-    '/ai-data-analytics',
-    '/ai-cybersecurity',
-    '/ai-workflow-automation',
-    '/ai-ecommerce-solutions',
-    '/ai-mobile-app-development',
-    '/ai-sales-automation',
-    '/ai-data-visualization',
-    '/ai-customer-support',
-    '/ai-design-studio',
-    '/ai-writing-assistant',
-    '/ai-scheduler',
-    '/ai-crm',
-    '/ai-chatbot-builder',
-    '/it-services',
-    '/it-infrastructure',
-    '/cybersecurity',
     '/cloud-services',
-    '/devops',
-    '/database',
-    '/networking',
-    '/system-admin',
-    '/digital-transformation',
-    '/micro-saas',
-    '/crm-lite',
-    '/email-optimizer',
-    '/landing-page-builder',
-    '/seo-optimizer',
-    '/smart-analytics',
-    '/expense-tracker',
-    '/task-manager-pro',
-    '/quantum-computing',
-    '/autonomous-systems',
-    '/blockchain-web3',
-    '/iot-edge-computing',
-    '/business-intelligence',
-    '/robotics',
-    '/enterprise',
-    '/case-studies',
-    '/blog',
+    '/data-analytics',
+    '/cybersecurity',
+    '/consultation',
     '/contact',
-    '/team',
-    '/careers',
-    '/news',
-    '/docs',
-    '/api-docs',
+    '/blog',
+    '/case-studies',
+    '/partners',
     '/support',
-    '/status',
-    '/privacy',
-    '/terms',
-    '/cookies',
-    '/gdpr',
-    '/security',
-    '/compliance'
-  ]
+    '/demo',
+    '/ai-3d-generation',
+    '/edge-computing',
+    '/financial-it',
+    '/web-development',
+  ];
+
   return routes.map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
-    changeFrequency: 'weekly' as const,
-    priority: route === '' ? 1.0 : 0.8
-  }))
+    changeFrequency: 'monthly',
+    priority: route === '' ? 1 : 0.8,
+  }));
 }
+=======
+<<<<<<< HEAD
+import {MetadataRoute}}from 'next';
+export default function sitemap(): MetadataRoute.Sitemap {return [;}
+=======
+import { MetadataRoute } from 'next'
+export default function sitemap(): MetadataRoute.Sitemap {
+    return [
+>>>>>>> origin/main
+    {
+      url: 'https://ziontechgroup.com',
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 1,},
+    {url: 'https://ziontechgroup.com/about',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,},
+    {url: 'https://ziontechgroup.com/services',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,},
+    {url: 'https://ziontechgroup.com/contact',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,},
+    {url: 'https://ziontechgroup.com/blog',
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.7,},
+    {url: 'https://ziontechgroup.com/ai-3d-generation',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,},
+    {url: 'https://ziontechgroup.com/edge-computing',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,},
+    {url: 'https://ziontechgroup.com/financial-it',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,},
+    {url: 'https://ziontechgroup.com/consultation',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,},
+    {url: 'https://ziontechgroup.com/partners',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.5,},
+    {url: 'https://ziontechgroup.com/support',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.5,},
+  ]
+}
+>>>>>>> origin/main

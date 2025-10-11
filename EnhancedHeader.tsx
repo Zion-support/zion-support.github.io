@@ -1,56 +1,48 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-
+import { Menu, X } from 'lucide-react'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 const EnhancedHeader: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const navigationItems = [
-    { name: 'Home', href: '/' },
-    { name: 'Services', href: '/services' },
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
-  ];
-
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
   return (
-    <header className="bg-white shadow-lg">
+    <header className="bg-slate-900/95 backdrop-blur-sm border-b border-cyan-500/20 fixed w-full top-0 z-50">
       <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center py-4">
-          <Link to="/" className="text-2xl font-bold text-blue-600">
-            Zion Tech Group
-          </Link>
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <Link to="/" className="flex items-center space-x-2">
+            <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-lg">Z
+            <span className="text-white font-bold text-xl">Zion Tech Group
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
-            {navigationItems.map(item => (
-              <Link
-                key={item.name}
-                to={item.href}
-                className="text-gray-700 hover:text-blue-600 transition-colors"
-              >
-                {item.name}
-              </Link>
-            ))}
-          </nav>
+          <nav className="hidden md:flex items-center space-x-8">
+            <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors">
+              Home
+            <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors">
+              About
+            <Link to="/services" className="text-gray-300 hover:text-cyan-400 transition-colors">
+              Services
+            <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors">
+              Contact
           {/* Mobile Menu Button */}
-          <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-gray-700">
-            {isOpen ? <span className="text-xl">✕</span> : <span className="text-xl">☰</span>}
-          </button>
-        </div>
-        {isOpen && (
-          <div className="md:hidden py-4 border-t">
-            {navigationItems.map(item => (
-              <Link
-                key={item.name}
-                to={item.href}
-                className="block py-2 text-gray-700 hover:text-blue-600 transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                {item.name}
-              </Link>
-            ))}
-          </div>
+          <$2 />
+            onClick={toggleMenu}
+            className="md:hidden text-gray-300 hover:text-cyan-400 transition-colors">
+            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="md:hidden py-4 border-t border-cyan-500/20">
+            <nav className="flex flex-col space-y-4">
+              <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                Home
+              <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                About
+              <Link to="/services" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                Services
+              <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors">
+                Contact
         )}
-      </div>
-    </header>
-  );
-};
-
-export default EnhancedHeader;
+  )
+}
+export default EnhancedHeader</div></div></div></div></span></span></Link></Link></Link></Link></Link></Link></Link></Link></Link></header></nav></nav>

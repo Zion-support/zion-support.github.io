@@ -1,236 +1,386 @@
+<<<<<<< HEAD
 'use client';
-import React, { lazy } from 'react';
-import { CheckCircle, Phone, Mail } from 'lucide-react';
-
-const Navigation = lazy(() => import('../components/Navigation'))
-const Footer = lazy(() => import('../components/Footer'))
-const AIFitnessCoachPage: React.FC = React.memo((props) => {
-  const features = [
-    'AI form analysis',
-    'Personalized workout plans',
-    'Real-time feedback',
-    'Progress tracking',
-    'Injury prevention',
-    'Nutrition guidance',
-    'Wearable integration',
-    'Social challenges'
-  ]
-  const benefits = [
-    'Improve workout effectiveness by 40%',
-    'Prevent injuries with AI monitoring',
-    'Personalize fitness plans',
-    'Track progress automatically',
-    'Motivate with AI coaching',
-    'Integrate with fitness devices'
-  ]
-  const useCases = [
-    'Home workouts',
-    'Gym training',
-    'Rehabilitation',
-    'Athletic performance',
-    'Weight loss',
-    'Muscle building',
-    'Flexibility training',
-    'Group fitness'
-  ]
-  const pricing = [
+import React from 'react';
+import {Helmet}}from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';
+const AiFitnessCoachPage: React.FC = () => {,
+=======
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
+const AiFitnessCoachPage: React.FC = () => {
+>>>>>>> origin/main
+    const features = [
     {
-      plan: 'Basic',
-      price: '$9.99/month',
-      features: ['Basic workouts', 'Form analysis', 'Progress tracking', 'Email support'],
-      popular: false}
-    },
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+<<<<<<< HEAD
+<<<<<<< HEAD
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},
+    {icon: BarChart,
+=======
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'];
+=======
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'],
+>>>>>>> origin/main
+  },
     {
-      plan: 'Pro',
-      price: '$19.99/month',
-      features: ['Personalized plans', 'AI coaching', 'Wearable sync', 'Nutrition tips', 'Priority support'],
-      popular: true}
-    },
+    icon: BarChart,
+>>>>>>> origin/main
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+<<<<<<< HEAD
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']},
+    {icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']},
+    {icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+<<<<<<< HEAD
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']}]
+=======
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+  },
+  ];];
+>>>>>>> origin/main
+=======
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics'],
+  },
     {
-      plan: 'Elite',
-      price: '$39.99/month',
-      features: ['Custom training', '1-on-1 AI coach', 'Advanced analytics', 'Group challenges', 'Phone support'],
-      popular: false}
-    }
+    icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics'],
+  },
+    {
+    icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'],
+  }
+    ]
+>>>>>>> origin/main
+const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+<<<<<<< HEAD
+    'Gain competitive advantage with advanced technology';
+<<<<<<< HEAD
   ]
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+return(<>)
+      <Helmet />
+=======
+  ];
+return (
+    <>
+  </>
+      <Helmet>
+>>>>>>> origin/main
+        <title>Ai Fitness Coach - Zion Tech Group</title>
+=======
+    'Gain competitive advantage with advanced technology'
+  ]
+return (
+    <>
+      <Helmet>
+        </Helmet><title>Ai Fitness Coach - Zion Tech Group</title>
+>>>>>>> origin/main
+        <meta name="description" content="AI-powered solution" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+      </Helmet>
       <Navigation />
-      <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50" aria-label="Skip to main content">Skip to main content</a><main className="container mx-auto px-4 py-16 pt-24" id="main-content">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-yellow-900 to-slate-900"></div>
+<<<<<<< HEAD
+        {/* Hero Section */} <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
         {/* Hero Section */}
-        <section className="text-center mb-16">
-          <div className="inline-flex items-center space-x-2 bg-green-600/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
-            <Dumbbell className="w-4 h-4" />
-            <span><span className="sr-only">Screen reader: </span>AI Fitness Technology</span>
-          </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-            AI Fitness Coach
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Get personalized fitness coaching with AI-powered form analysis, workout optimization, 
-            and real-time feedback. Achieve your fitness goals faster and safer.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:+13024640950"
-              className="cyber-button inline-flex items-center space-x-2"
-            >
-              <Phone className="w-4 h-4" />
-              <span><span className="sr-only">Screen reader: </span>Call: (302) 464-0950</span>
-            </a>
-            <a
-              href="/contact"
-              className="border-2 border-green-400 text-green-400 px-8 py-3 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300"
-             aria-label="
-              Start Free Trial
-            ">
-              Start Free Trial
-            </a>
+<<<<<<< HEAD
+        <section className="relative py-20 px-4 overflow-hidden">
+        </section>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Ai Fitness Coach
+=======
+        <section className="py-20 px-4">
+          </section>< className="$2 />
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> origin/main
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
           </div>
         </section>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} /></div>
+          <div className="relative max-w-7xl mx-auto text-center"></div>
+            <h1>Ai Fitness Coach;</h1>
+>>>>>>> origin/main
+            </h1>
+<<<<<<< HEAD
+            <p>Advanced AI-powered ai fitness coach solution for modern businesses.</p>
+            </p>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
+              <button>Get Started;</button>
+              </button>
+              <button>View Demo,</button>
+=======
+            <p></p>
+              Advanced AI-powered ai fitness coach solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center" / /></div>
+              <button></button>
+                Get Started
+              </button>
+              <button></button>
+                View Demo,
+>>>>>>> origin/main
+              </button>
+            </div>
+          </div>
+        </section>
+<<<<<<< HEAD
 
         {/* Features Section */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-            AI-Powered Fitness Features
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {features.map((feature, index) => (
-              <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
-                <div className="w-12 h-12 bg-green-600/20 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Dumbbell className="w-6 h-6 text-green-400" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>
-              </div>
-            ))}
+        <section className="py-20 px-4">
+        </section>
+=======
+<<<<<<< HEAD
+        {/* Features Section */} <section className="py-20 px-4">
+>>>>>>> origin/main
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">Ai Fitness Coach
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Advanced AI-powered ai fitness coach solution for modern businesses.
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-yellow-500 to-blue-600 hover:from-yellow-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Get Started
+              <button className="border border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">View Demo
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          </section>< className="$2 />
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> origin/main
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
           </div>
         </section>
+<<<<<<< HEAD
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
+              <h2>Key Features;</h2>
+              </h2>
+              <p>Advanced AI technology that drives results;</p>
+=======
+          <div className="max-w-7xl mx-auto" / /></div>
+            <div className="text-center mb-16" / /></div>
+              <h2></h2>
+                Key Features
+              </h2>
+              <p></p>
+                Advanced AI technology that drives results
+>>>>>>> origin/main
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,
+              {features.map((feature, index) => (
+                <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>,
+                  <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>,
+                    <feature />
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+<<<<<<< HEAD
+                  <p className="text-gray-300 mb-4">{feature.description</p>}</p>
+                  {feature.benefits && (;
+                    <ul>
+                      {feature.benefits.map((benefit, idx) => (} <li>
+                          <CheckCircle />
+=======
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {
+    feature.benefits && (
+                    <ul>
+                      {feature.benefits.map((benefit, idx) => (
+  }
+                        </ul><li>
+                          </li><CheckCircle>
+>>>>>>> origin/main
+
+                          {benefit} </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+
+            </div>
+          </div>
+        </section>
+<<<<<<< HEAD
+        {/* Benefits Section */} <section className="py-20 px-4">
+=======
+>>>>>>> origin/main
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Key Features
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Advanced AI technology that drives results
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}
+                  <p className="text-gray-300 mb-4">{feature.description}
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                          {benefit}
+                      ))}
+<<<<<<< HEAD
+                    </ul>
+                  </div>
+=======
+                  )}
+              ))}
+        {/* Benefits Section */}
+        <section className="py-20 px-4">
+          </section>< className="$2 />
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
+<<<<<<< HEAD
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
+              <h2>Why Choose Our Solution?</h2>
+              </h2>
+              <p>Proven results that drive business growth and efficiency;</p>
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>,
+              {benefits.map((benefit, index) => (
+                <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>,
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>,
+                    <CheckCircle />
+                  <p className="text-lg text-white font-medium">{benefit</p>}</p>
+>>>>>>> origin/main
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+<<<<<<< HEAD
 
         {/* Benefits Section */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-            Why Choose Our AI Fitness Coach?
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-2">{benefit}</h3>
-                  <p className="text-gray-300 text-sm">
-                    Transform your fitness journey with AI technology that adapts to your needs and goals.
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
+        <section className="py-20 px-4">
         </section>
-
-        {/* Use Cases Section */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-            Perfect For Every Fitness Goal
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
-              <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
-                <div className="w-10 h-10 bg-blue-600/20 rounded-lg flex items-center justify-center mb-4">
-                  <Target className="w-5 h-5 text-blue-400" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{useCase}</h3>
-                <p className="text-gray-300 text-sm">
-                  Achieve your specific fitness goals with personalized AI coaching.
-                </p>
-              </div>
-            ))}
-          </div>
+=======
+        {/* CTA Section */} <section className="py-20 px-4">
+>>>>>>> origin/main
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
+          <div className="max-w-7xl mx-auto" / /></div>
+            <div className="text-center mb-16" / /></div>
+              <h2></h2>
+                Why Choose Our Solution?
+              </h2>
+              <p></p>
+                Proven results that drive business growth and efficiency
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" / /></div>
+              {benefits.map((benefit, index) => ()
+              ))}
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          </section>< className="$2 />
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> origin/main
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          ))
         </section>
+<<<<<<< HEAD
 
-        {/* Pricing Section */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-            Choose Your Plan
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
-              <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-green-500' : ''}`}>
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-green-500 text-white px-4 py-1 rounded-full text-sm font-medium"><span className="sr-only">Screen reader: </span>
-                      Most Popular
-                    </span>
-                  </div>}
-                )}
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.plan}</h3>
-                  <div className="text-4xl font-bold text-green-400 mb-2">{plan.price}</div>
-                  <p className="text-gray-300">per month</p>
-                </div>
-                <ul className="space-y-3 mb-8" role="list">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center space-x-2">
-                      <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                      <span className="text-gray-300"><span className="sr-only">Screen reader: </span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <button className={`w-full py-3 px-4 rounded-lg font-semibold transition-all duration-300 ${
-                  plan.popular 
-                    ? 'bg-green-600 text-white hover:bg-green-700' 
-                    : 'border-2 border-green-400 text-green-400 hover:bg-green-400 hover:text-slate-900'`}
-                }`} aria-label="
-                  Get Started
-                " tabIndex="0">
-                  Get Started
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+        </section>
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+=======
+<<<<<<< HEAD
+          <div className="max-w-4xl mx-auto text-center"></div>
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12"></div>
+              <h2>Ready to Get Started?</h2>
+              </h2>
+              <p>Contact our experts to discuss your requirements and get started today.</p>
+              </p>
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
+                <button>Contact Us;</button>
+                </button>
+                <button>Learn More;</button>
+=======
+          <div className="max-w-4xl mx-auto text-center" / /></div>
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12" / /></div>
+              <h2></h2>
+>>>>>>> origin/main
+                Ready to Get Started?
+              </h2>
+              <p></p>
+                Contact our experts to discuss your requirements and get started today.
+              </p>
+              <div className="flex flex-col sm: flex-row gap-4 justify-center" / /></div>
+                <button></button>
+                  Contact Us
+                </button>
+                <button></button>
+                  Learn More
+>>>>>>> origin/main
                 </button>
               </div>
-            ))}
-          </div>
+            </div>
+          ))
         </section>
-
-        {/* Technology Stack */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-            Technology Stack
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-            {['Computer Vision', 'Motion Analysis', 'Wearable APIs', 'Mobile Apps', 'Cloud AI', 'Health APIs'].map((tech, index) => (
-              <div key={index} className="cyber-card p-4 text-center">
-                <div className="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center mx-auto mb-2">
-                  <Shield className="w-4 h-4 text-cyan-400" />
-                </div>
-                <span className="text-sm text-gray-300"><span className="sr-only">Screen reader: </span>{tech}</span>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Contact Section */}
-        <section className="bg-gradient-to-r from-green-600/20 to-blue-600/20 rounded-lg p-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4 neon-text">Ready to Transform Your Fitness?</h2>
-          <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-            Contact us today to learn more about our AI fitness coaching technology and start your personalized fitness journey.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:+13024640950"
-              className="cyber-button inline-flex items-center space-x-2"
-            >
-              <Phone className="w-4 h-4" />
-              <span><span className="sr-only">Screen reader: </span>Call: (302) 464-0950</span>
-            </a>
-            <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-green-400 text-green-400 px-8 py-3 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center space-x-2"
-            >
-              <Mail className="w-4 h-4" />
-              <span><span className="sr-only">Screen reader: </span>Email Us</span>
-            </a>
-          </div>
-        </section>
-      </main>
+      </div>
+<<<<<<< HEAD
       <Footer />
-    </div>
-  )
+
+  );
+};
+
+export default AiFitnessCoachPage;
+=======
+      <Footer></Footer>
+    </>
+  ),
 }
-export default AIFitnessCoachPage
+export default AiFitnessCoachPage</$1></h3>
+>>>>>>> origin/main

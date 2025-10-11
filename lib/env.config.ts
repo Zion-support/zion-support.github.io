@@ -4,79 +4,77 @@
  */
 
 interface EnvConfig {
-  // App Configuration
-  NODE_ENV: 'development' | 'production' | 'test';
-  APP_URL: string;
-  APP_NAME: string;
-
+    // App Configuration
+  NODE_ENV: 'development' | 'production' | 'test'
+  APP_URL: string
+  APP_NAME: string
   // Analytics
-  GOOGLE_ANALYTICS_ID?: string;
-
+  GOOGLE_ANALYTICS_ID?: string
   // API Configuration
-  API_BASE_URL: string;
-  API_TIMEOUT: number;
-
+  API_BASE_URL: string
+  API_TIMEOUT: number
   // Feature Flags
-  ENABLE_ANALYTICS: boolean;
-  ENABLE_ERROR_TRACKING: boolean;
-  ENABLE_PERFORMANCE_MONITORING: boolean;
-
+  ENABLE_ANALYTICS: boolean
+  ENABLE_ERROR_TRACKING: boolean
+  ENABLE_PERFORMANCE_MONITORING: boolean
   // Logging
-  LOG_LEVEL: 'DEBUG' | 'INFO' | 'WARN' | 'ERROR' | 'NONE';
-
+  LOG_LEVEL: 'DEBUG' | 'INFO' | 'WARN' | 'ERROR' | 'NONE'
   // Build Configuration
-  BUILD_ID?: string;
-  VERSION?: string;
-}
-
-class EnvironmentConfig {
-  private static instance: EnvironmentConfig;
-  private config: EnvConfig;
-
-  private constructor() {
-    this.config = this.loadConfig();
-    this.validate();
+  BUILD_ID?: string,
+  VERSION?: string
   }
 
-  public static getInstance(): EnvironmentConfig {
-    if (!EnvironmentConfig.instance) {
-      EnvironmentConfig.instance = new EnvironmentConfig();
+class EnvironmentConfig {
+  private static instance: EnvironmentConfig
+  private config: EnvConfig,
+
+  private constructor() {,
+    this.config = this.loadConfig()
+    this.validate()
+interface EnvConfig {/* TODO: Fix JSX expression */}
+}
+
+class EnvironmentConfig {/* TODO: Fix JSX expression */}
+  }
+
+  public static getInstance(): EnvironmentConfig {/* TODO: Fix JSX expression */}
     }
-    return EnvironmentConfig.instance;
+    return EnvironmentConfig.instance
   }
 
   private getEnvVar(key: string, defaultValue?: string): string {
     if (typeof process !== 'undefined' && process.env) {
       // Check both regular and NEXT_PUBLIC_ prefixed versions
-      return process.env[key] || process.env[`NEXT_PUBLIC_${key}`] || defaultValue || '';
+  private getEnvVar(ke)
+  y: string, defaultValue?: string): string {/* TODO: Fix JSX expression */}
+      return process.env[key] || process.env[`NEXT_PUBLIC_${key}`] || defaultValue || ''
     }
-    return defaultValue || '';
+    return defaultValue || ''
   }
 
-  private getBooleanEnvVar(key: string, defaultValue: boolean = false): boolean {
-    const _value = this.getEnvVar(key);
-    if (!value) return defaultValue;
-    return value.toLowerCase() === 'true' || value === '1';
+  private getBooleanEnvVar(ke,
+  y: string, defaultValu)
+  e: boolean = false): boolean {/* TODO: Fix JSX expression */}
   }
 
   private getNumberEnvVar(key: string, defaultValue: number): number {
-    const _value = this.getEnvVar(key);
-    //     const parsed = parseInt(value, 10);
-    return isNaN(parsed) ? defaultValue : parsed;
+    ,
+    const _value = this.getEnvVar(key)
+    //     const parsed = parseInt(value, 10)
+    return isNaN(parsed) ? defaultValue : parsed
   }
 
   private loadConfig(): EnvConfig {
     return {
       // App Configuration
       NODE_ENV: (this.getEnvVar('NODE_ENV', 'development') as any) || 'development',
-      APP_URL: this.getEnvVar('APP_URL', 'https://ziontechgroup.com'),
+      APP_URL: this.getEnvVar('APP_URL', 'https: //ziontechgroup.com'),
       APP_NAME: this.getEnvVar('APP_NAME', 'Zion Tech Group'),
 
       // Analytics
       GOOGLE_ANALYTICS_ID: this.getEnvVar('GOOGLE_ANALYTICS_ID'),
-
       // API Configuration
-      API_BASE_URL: this.getEnvVar('API_BASE_URL', 'https://api.ziontechgroup.com'),
+      API_BASE_URL: this.getEnvVar('API_BASE_URL', 'https: //api.ziontechgroup.com'),
       API_TIMEOUT: this.getNumberEnvVar('API_TIMEOUT', 30000),
 
       // Feature Flags
@@ -89,95 +87,113 @@ class EnvironmentConfig {
 
       // Build Configuration
       BUILD_ID: this.getEnvVar('BUILD_ID'),
-      VERSION: this.getEnvVar('VERSION', '1.0.0'),
-    };
+      VERSION: this.getEnvVar('VERSION', '1.0.0')}
   }
 
   private validate(): void {
-    const errors: string[] = [];
-
+    const errors: string[] = [],
+,
     // Validate NODE_ENV
     if (!['development', 'production', 'test'].includes(this.config.NODE_ENV)) {
-      errors.push(`Invalid NODE_ENV: ${this.config.NODE_ENV}`);
+      errors.push(`Invalid NODE_ENV: ${this.config.NODE_ENV}`)
     }
 
     // Validate URLs
     if (this.config.APP_URL && !this.isValidUrl(this.config.APP_URL)) {
-      errors.push(`Invalid APP_URL: ${this.config.APP_URL}`);
+      errors.push(`Invalid APP_URL: ${this.config.APP_URL}`)
+  private getNumberEnvVar(ke,
+  y: string, defaultValu)
+  e: number): number {/* TODO: Fix JSX expression */}
+  }
+
+  private loadConfig(): EnvConfig {/* TODO: Fix JSX expression */}
+    }
+  }
+
+  private validate(): void {/* TODO: Fix JSX expression */}`
+  NODE_ENV: ${this.config.NODE_ENV}`)
     }
 
-    if (this.config.API_BASE_URL && !this.isValidUrl(this.config.API_BASE_URL)) {
-      errors.push(`Invalid API_BASE_URL: ${this.config.API_BASE_URL}`);
+    // Validate URLs
+    if (this.config.APP_URL && !this.isValidUrl(this.config.APP_URL)) {/* TODO: Fix JSX expression */}`
+  APP_URL: ${this.config.APP_URL}`)
+    }
+
+    if (this.config.API_BASE_URL && !this.isValidUrl(this.config.API_BASE_URL)) {/* TODO: Fix JSX expression */}`
+  API_BASE_URL: ${this.config.API_BASE_URL}`)
     }
 
     // Validate timeout
     if (this.config.API_TIMEOUT < 0) {
-      errors.push(`API_TIMEOUT must be positive: ${this.config.API_TIMEOUT}`);
+      errors.push(`API_TIMEOUT must be positive: ${this.config.API_TIMEOUT}`)
     }
 
     if (errors.length > 0) {
       //       // In production, we might want to throw, but in development just warn
       if (this.config.NODE_ENV === 'production') {
-        throw new Error(`Environment validation failed: ${errors.join(', ')}`);
+        throw new Error(`Environment validation failed: ${errors.join(', ')}`)
+    if (this.config.API_TIMEOUT < 0) {/* TODO: Fix JSX expression */}`
+  positive: ${this.config.API_TIMEOUT}`)
+    }
+
+    if (errors.length > 0) {/* TODO: Fix JSX expression */}`
+  failed: ${errors.join(', ')}`)
       }
     }
   }
 
   private isValidUrl(url: string): boolean {
-    try {
-      new URL(url);
-      return true;
-    } catch {
-      return false;
+    ,
+    try {,
+      new URL(url)
+      return true
+  } catch {
+      return false
+  private isValidUrl(ur)
+  l: string): boolean {/* TODO: Fix JSX expression */}
+    } catch {/* TODO: Fix JSX expression */}
     }
   }
 
-  public get(): Readonly<EnvConfig> {
-    return { ...this.config };
+  public get(): Readonly<EnvConfig> {/* TODO: Fix JSX expression */}
+    return { ...this.config }
   }
 
-  public isDevelopment(): boolean {
-    return this.config.NODE_ENV === 'development';
+  public isDevelopment(): boolean {/* TODO: Fix JSX expression */}
   }
 
-  public isProduction(): boolean {
-    return this.config.NODE_ENV === 'production';
+  public isProduction(): boolean {/* TODO: Fix JSX expression */}
   }
 
-  public isTest(): boolean {
-    return this.config.NODE_ENV === 'test';
+  public isTest(): boolean {/* TODO: Fix JSX expression */}
   }
 
   // Convenience getters
   public getAppUrl(): string {
-    return this.config.APP_URL;
+    return this.config.APP_URL
+  public getAppUrl(): string {/* TODO: Fix JSX expression */}
   }
 
-  public getApiBaseUrl(): string {
-    return this.config.API_BASE_URL;
+  public getApiBaseUrl(): string {/* TODO: Fix JSX expression */}
   }
 
-  public getGoogleAnalyticsId(): string | undefined {
-    return this.config.GOOGLE_ANALYTICS_ID;
+  public getGoogleAnalyticsId(): string | undefined {/* TODO: Fix JSX expression */}
   }
 
-  public isAnalyticsEnabled(): boolean {
-    return this.config.ENABLE_ANALYTICS && this.isProduction();
+  public isAnalyticsEnabled(): boolean {/* TODO: Fix JSX expression */}
   }
 
-  public isErrorTrackingEnabled(): boolean {
-    return this.config.ENABLE_ERROR_TRACKING;
+  public isErrorTrackingEnabled(): boolean {/* TODO: Fix JSX expression */}
   }
 
-  public isPerformanceMonitoringEnabled(): boolean {
-    return this.config.ENABLE_PERFORMANCE_MONITORING;
+  public isPerformanceMonitoringEnabled(): boolean {/* TODO: Fix JSX expression */}
   }
 }
 
 // Export singleton instance
-export const env = EnvironmentConfig.getInstance();
-
+export const env = EnvironmentConfig.getInstance()
 // Export typed config
-export type { EnvConfig };
+export type { EnvConfig }
 
-export default env;
+export default env
+`

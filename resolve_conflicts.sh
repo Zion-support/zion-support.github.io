@@ -1,41 +1,47 @@
 #!/bin/bash
 
-# Script to resolve merge conflicts by choosing the Next.js version (pr-26771)
+# Script to resolve merge conflicts by keeping the newer version (after =======)
 
-echo "Resolving merge conflicts..."
+echo "Resolving merge conflicts in all files..."
 
-# List of files with conflicts
-files=(
-  "app/App.tsx"
-  "app/components/PWAInstaller.tsx"
-  "app/components/AccessibilityEnhancer.tsx"
-  "app/components/GlobalErrorBoundary.tsx"
-  "app/components/Footer.tsx"
-  "app/components/PerformanceMonitor.tsx"
-  "app/components/AnalyticsProvider.tsx"
-  "app/components/OptimizedImage.tsx"
-  "app/components/Navigation.tsx"
-  "app/components/EnhancedErrorBoundary.tsx"
-  "app/autonomous-systems/page.tsx"
-  "app/business-intelligence/page.tsx"
-  "app/quantum-computing/page.tsx"
-  "app/ai-content-generation/page.tsx"
-  "app/sitemap/page.tsx"
-  "app/utils/accessibilityChecker.ts"
-  "app/utils/logger.ts"
-  "app/globals.css"
-)
+# Find all files with merge conflicts
+files=$(find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null)
 
-for file in "${files[@]}"; do
-  if [ -f "$file" ]; then
-    echo "Processing $file..."
+for file in $files; do
+    echo "Processing: $file"
     
-    # Use git checkout to get the version from pr-26771 (the Next.js version)
-    git checkout --theirs "$file" 2>/dev/null || echo "Could not resolve $file automatically"
+    # Create a temporary file
+    temp_file="${file}.tmp"
     
-    # Add the resolved file
-    git add "$file"
-  fi
+    # Process the file to resolve conflicts
+    awk '
+    /<<<<<<< HEAD/ {
+        in_conflict = 1
+        next
+    }
+    /=======/ {
+        if (in_conflict) {
+            in_conflict = 2
+            next
+        }
+    }
+    />>>>>>> / {
+        if (in_conflict == 2) {
+            in_conflict = 0
+            next
+        }
+    }
+    {
+        if (in_conflict == 0) {
+            print
+        } else if (in_conflict == 2) {
+            print
+        }
+    }
+    ' "$file" > "$temp_file"
+    
+    # Replace original file with processed version
+    mv "$temp_file" "$file"
 done
 
-echo "Conflict resolution complete!"
+echo "Merge conflicts resolved in all files."

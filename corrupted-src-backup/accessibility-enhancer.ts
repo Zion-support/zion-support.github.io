@@ -1,26 +1,22 @@
 class AccessibilityEnhancer {
-  private static instance: AccessibilityEnhancer;
-  private isInitialized: boolean = false;
-
+  private static instance: AccessibilityEnhancer
+  private isInitialized: boolean = false,
+,
+class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
   private constructor() {}
 
-  public static getInstance(): AccessibilityEnhancer {
-    if (!AccessibilityEnhancer.instance) {
-      AccessibilityEnhancer.instance = new AccessibilityEnhancer();
+  public static getInstance(): AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     }
-    return AccessibilityEnhancer.instance;
+    return AccessibilityEnhancer.instance
   }
 
-  public initialize(): void {
-    if (this.isInitialized) return;
-
-    this.setupAccessibilityFeatures();
-    this.isInitialized = true;
+  public initialize(): void {/* TODO: Fix JSX expression */}
   }
 
   private setupAccessibilityFeatures(): void {
     // Add accessibility enhancements here
+  private setupAccessibilityFeatures(): void {/* TODO: Fix JSX expression */}
     //     }
 }
 
-export default AccessibilityEnhancer;
+export default AccessibilityEnhancer

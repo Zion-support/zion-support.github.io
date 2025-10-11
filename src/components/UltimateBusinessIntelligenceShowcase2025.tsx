@@ -1,7 +1,9 @@
-'use client';
-import React, { useState } from 'react';
-const UltimateBusinessIntelligenceShowcase2025 = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
+'use client'
+import React, { useState } from 'react'
+        return (
+import { Link } from 'react-router-dom'
+const _UltimateBusinessIntelligenceShowcase2025 = () => {
+  const [selectedCategory, setSelectedCategory] = useState('all')
   const content = [
     {
       id: 'ultimate-business-intelligence-revolution',
@@ -14,97 +16,66 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
         roi: '30,000%',
         efficiency: '500%',
         accuracy: '99.9%',
-        timeline: '12 months'
-      },
+        timeline:       ,
+$4},
       readingTime: '35 min read',
       featured: true,
       tags: ['AI Revolution', 'Business Intelligence', 'ROI', 'Fortune 500', '30,000% ROI']
-    },
-    {
       id: 'fortune-500-business-intelligence-success',
       title: 'Fortune 500 Ultimate Business Intelligence Success',
       description: 'How a $15.2B manufacturing giant achieved unprecedented business intelligence transformation with AI-powered analytics.',
       url: '/case-studies/fortune-500-ultimate-business-intelligence-success',
       type: 'Case Study',
       category: 'case-study',
-      metrics: {
-        roi: '30,000%',
         savings: '$750B',
         company: '$15.2B',
-        timeline: '18 months'
-      },
-      readingTime: '25 min read',
-      featured: true,
+        timeline:       ,
+readingTimereadingTime: '25 min read',
       tags: ['Fortune 500', 'Success Story', '30,000% ROI', 'Manufacturing', 'Case Study']
-    },
-    {
       id: 'business-intelligence-implementation-guide',
       title: 'AI 2025 Ultimate Business Intelligence Implementation Guide',
       description: 'Complete roadmap to 30,000% ROI through revolutionary AI-powered business intelligence transformation.',
       url: '/resources/ai-2025-ultimate-business-intelligence-implementation-guide',
       type: 'Implementation Guide',
       category: 'resource',
-      metrics: {
-        roi: '30,000%',
         success: '99.8%',
         timeline: '18 months',
-        adoption: '100%'
-      },
-      readingTime: '45 min read',
-      featured: true,
+        adoption:       ,
+readingTimereadingTime: '45 min read',
       tags: ['Implementation', 'Guide', '30,000% ROI', 'Roadmap', 'Best Practices']
     }
-  ];
+  ]
   const categories = [
     { id: 'all', name: 'All Content' },
     { id: 'blog', name: 'Blog Posts' },
     { id: 'case-study', name: 'Case Studies' },
     { id: 'resource', name: 'Resources' }
-  ];
   const filteredContent = selectedCategory === 'all' 
     ? content 
-    : content.filter(item => item.category === selectedCategory);
-  return (
+    : content.filter(item => item.category === selectedCategory)
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background Effects */}
-      <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div
+      <div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse">
+        <$2 />
           className="absolute top-3/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"
           style={{ animationDelay: '2s' }}
-        ></div>
-        <div
+        >
           className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"
           style={{ animationDelay: '1s' }}
-        ></div>
-      </div>
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="flex items-center justify-center gap-2 mb-6">
             <span className="text-2xl">🚀</span>
-            <span className="text-yellow-400 font-bold text-lg">
-              ULTIMATE BUSINESS INTELLIGENCE 2025
-            </span>
+            <span className="text-yellow-400 font-bold text-lg">ULTIMATE BUSINESS INTELLIGENCE 2025</span>
             <span className="text-2xl">⚡</span>
-          </div>
-          <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
-            Revolutionary Content
-            <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              Showcase 2025
-            </span>
+          <h1 className="text-4xl md: text-6xl font-extrabold text-white mb-6">Revolutionary Content<span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Showcase 2025</span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Explore our comprehensive collection of AI-powered business intelligence
-            content that&apos;s transforming enterprises worldwide
-          </p>
-        </div>
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">Explore our comprehensive collection of AI-powered business intelligence
+            content that&apos,s transforming enterprises worldwide</p>
         {/* Category Filter */}
-        <div className="flex justify-center gap-4 mb-12 flex-wrap">
           {categories.map((category) => (
-            <button
+            <$2 />
               key={category.id}
-              onClick={() => setSelectedCategory(category.id)}
+              onClick={() =>setSelectedCategory(category.id)}
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                 selectedCategory === category.id
                   ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg'
@@ -112,101 +83,170 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
               }`}
             >
               {category.name}
-            </button>
           ))}
-        </div>
         {/* Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {filteredContent.map((item) => (
-            <div
-              key={item.id}
-              className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
-            >
               {/* Badge */}
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+                <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse">
                 <span className="text-green-400 font-semibold text-sm">
                   {item.featured ? 'FEATURED' : 'NEW'}
-                </span>
-                <span className="text-gray-400 text-sm">{item.type}</span>
-              </div>
+                <span className="text-gray-400 text-sm">{item.type}
               {/* Title */}
               <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
                 {item.title}
-              </h3>
               {/* Description */}
               <p className="text-gray-300 mb-6 text-sm leading-relaxed">
                 {item.description}
-              </p>
               {/* Metrics */}
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-cyan-400">
                     {item.metrics.roi}
-                  </div>
-                  <div className="text-gray-400 text-xs">ROI</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-green-400">
+                  <div className="text-gray-400 text-xs">ROI
                     {item.metrics.timeline}
-                  </div>
-                  <div className="text-gray-400 text-xs">Timeline</div>
-                </div>
-              </div>
+                  <div className="text-gray-400 text-xs">Timeline
               {/* Tags */}
-              <div className="flex flex-wrap gap-2 mb-6">
                 {item.tags.slice(0, 3).map((tag, index) => (
-                  <span
+                  <$2 />
                     key={index}
                     className="px-3 py-1 bg-white/10 text-gray-300 text-xs rounded-full"
-                  >
                     {tag}
-                  </span>
-                ))}
-              </div>
               {/* CTA */}
-              <a href={item.url}
+              <$2 />
+                href={item.url}
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 w-full justify-center"
-              >
                 Read {item.readingTime}
-                <span className="text-lg">→</span>
-              </a>
-            </div>
-          ))}
-        </div>
+                <span className="text-lg">→
         {/* Call to Action */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Transform Your Business?
-            </h3>
-            <p className="text-cyan-100 mb-6">
-              Join thousands of enterprises already using our AI-powered solutions
-            </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <a href="/contact"
-                className="inline-flex items-center px-12 py-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-xl rounded-2xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-2xl"
-              >
-                Start Your Transformation
-                <svg className="ml-3 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
+            <p className="text-cyan-100 mb-6">Join thousands of enterprises already using our AI-powered solutions
+                to="/contact"
+                className="inline-flex items-center px-12 py-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-xl rounded-2xl hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-2xl">Start Your Transformation<svg className="ml-3 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <ath$2 />
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={2}
                     d="M17 8l4 4m0 0l-4 4m4-4H3"
                   />
-                </svg>
-              </a>
-              <a href="/services"
-                className="inline-flex items-center px-12 py-6 border-2 border-blue-400 text-blue-300 font-bold text-xl rounded-2xl hover:bg-blue-400/10 transition-all duration-300"
-              >
-                Learn More
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
-export default UltimateBusinessIntelligenceShowcase2025;
+                to="/services"
+                className="inline-flex items-center px-12 py-6 border-2 border-blue-400 text-blue-300 font-bold text-xl rounded-2xl hover: bg-blue-400/10 transition-all duration-300">Learn More</Link>
+    </section>)
+export default UltimateBusinessIntelligenceShowcase2025
+'use client',
+import React, { useState } from 'react'
+        return (import { Link } from 'react-router-dom';)
+const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expression */}
+  O: Add content,}
+}
+  const [selectedCategory, setSelectedCategory] = useState('all')
+  const content = [
+  // TOD,
+  O: Add items
+],
+    {/* TODO: Fix JSX expression */}
+  O: Add content,}
+}
+  i,
+  d: 'ultimate-business-intelligence-revolution',
+      titl,
+  e: 'AI,
+  2025: The Ultimate Business Intelligence Revolution',
+      descriptio,
+  n: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.',
+      ur,
+  l: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough',
+      typ,
+  e: 'Blog Post',
+      categor,
+  y: 'blog',
+      metric,
+  s: {/* TODO: Fix JSX expression */}
+  O: Add content,}
+}
+  ro,
+  i: '30,000%',
+        efficienc,
+  y: '500%',
+        accurac,
+  y: '99.9%',
+        timelin,
+  e: '12 months'
+      },
+      readingTim,
+  e: '35 min read',
+      feature,
+  d: true,
+      tag,
+  s: ['AI Revolution', 'Business Intelligence', 'ROI', 'Fortune 500', '30,000% ROI']
+      i,
+  d: 'fortune-500-business-intelligence-success',
+      titl,
+  e: 'Fortune 500 Ultimate Business Intelligence Success',
+      descriptio,
+  n: 'How a $15.2B manufacturing giant achieved unprecedented business intelligence transformation with AI-powered analytics.',
+      ur,
+  l: '/case-studies/fortune-500-ultimate-business-intelligence-success',
+      typ,
+  e: 'Case Study',
+      categor,
+  y: 'case-study',
+      i,
+  d: 'business-intelligence-implementation-guide',
+      titl,
+  e: 'AI 2025 Ultimate Business Intelligence Implementation Guide',
+      descriptio,
+  n: 'Complete roadmap to 30,000% ROI through revolutionary AI-powered business intelligence transformation.',
+      ur,
+  l: '/resources/ai-2025-ultimate-business-intelligence-implementation-guide',
+      typ,
+  e: 'Implementation Guide',
+      categor,
+  y: 'resource',
+              {/* Badge */}
+          <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>"
+                <span className="text-green-400 font-semibold text-sm">
+                  {item.featured ? 'FEATURED' : 'NEW'}
+                </span>"
+                <span className="text-gray-400 text-sm">{item.type}
+              {/* Title */}"
+              < className="text-xl font-bold text-white mb-4 group-hove,"$2 />
+  r:text-cyan-400 transition-colors">
+                {item.title}
+              {/* Description */}"
+              <p className="text-gray-300 mb-6 text-sm leading-relaxed">
+                {item.description}
+              {/* Metrics */}
+                    {item.metrics.roi}"
+                  <div className="text-gray-400 text-xs">ROI
+                    {item.metrics.timeline}"
+                  <div className="text-gray-400 text-xs">Timeline
+              {/* Tags */}
+                {item.tags.slice(0, 3).map((tag, index) => ()}
+          <span>
+                    key={index}"
+                    className="px-3 py-1 bg-white/10 text-gray-300 text-xs rounded-full"
+                Read {item.readingTime}"
+                <span className="text-lg">
+        {/* Call to Action */}"
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Ready to Transform Your Business?"
+            <p className="text-cyan-100 mb-6">Join thousands of enterprises already using our AI-powered solutions</p>"
+                to="/contact""
+                className="inline-flex items-center px-12 py-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-xl rounded-2xl,
+  hover:from-blue-700,
+  hover:to-indigo-700 transition-all duration-300 transform,"
+  hover:scale-105 shadow-2xl""
+              >Start Your Transformation<svg className="ml-3 w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path></path>"
+                    strokeLinecap="round""
+                    strokeLinejoin="round"
+                    strokeWidth={2}"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+// />
+          </svg>"
+                to="/services""
+                className="inline-flex items-center px-12 py-6 border-2 border-blue-400 text-blue-300 font-bold text-xl rounded-2xl,"
+  hover: bg-blue-400/10 transition-all duration-300"
+>Learn More</Link>
+    </section>)
+export default UltimateBusinessIntelligenceShowcase2025,
+  </path>
+</div></div></div></div></div></div></div></span></span></span></span></span></span></a></p></p></p></p></h3></h3></h3>

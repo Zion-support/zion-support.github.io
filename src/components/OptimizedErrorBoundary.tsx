@@ -1,287 +1,232 @@
-'use client';
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { logger } from '../utils/productionLogger';
-
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-  resetOnPropsChange?: boolean;
-  resetKeys?: Array<string | number>;
-  level?: 'page' | 'component' | 'critical';
-}
-
+'use client'
+interface OptimizedErrorBoundaryProps {
+    children: ReactNode
+  fallback?: ReactNode,
+  onError?: (error: Error, errorInfo: ErrorInfo) => void
+  resetOnPropsChange?: boolean,
+  resetKeys?: Array<string | number>
+  }
 interface State {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string;
-  retryCount: number;
-}
-
-class OptimizedErrorBoundary extends Component<Props, State> {
-  private retryTimeoutId: number | null = null;
-  private maxRetries = 3;
-  private retryDelay = 1000;
-
-  constructor(props: Props) {
-    super(props);
+    hasError: boolean
+  error: Error | null
+  errorInfo: ErrorInfo | null,
+  errorId: string
+  }
+class OptimizedErrorBoundary extends Component
+  OptimizedErrorBoundaryProps,
+  State
+> {
+  private resetTimeoutId: number | null = null
+  constructor(props: OptimizedErrorBoundaryProps) {
+    super(props),
     this.state = {
       hasError: false,
       error: null,
       errorInfo: null,
-      errorId: '',
-      retryCount: 0
-    };
+      errorId:     ,
+$4}
   }
-
   static getDerivedStateFromError(error: Error): Partial<State> {
-    const errorId = `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-    
     return {
       hasError: true,
       error,
-      errorId
-    };
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+    }
   }
-
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    const { onError, level = 'component' } = this.props;
-    const { errorId, retryCount } = this.state;
-
-    // Log error details
-    logger.error('Error boundary caught error', {
-      errorId,
-      error: error.message,
-      stack: error.stack,
-      componentStack: errorInfo.componentStack,
-      level,
-      retryCount,
-      url: window.location.href,
-      userAgent: navigator.userAgent,
-      timestamp: new Date().toISOString()
-    });
-
-    // Update state with error info
     this.setState({
-      errorInfo,
-      error
-    });
-
-    // Call custom error handler
-    if (onError) {
-      onError(error, errorInfo);
-    }
-
-    // Report to error tracking service
-    this.reportError(error, errorInfo, errorId);
-
-    // Auto-retry for non-critical errors
-    if (level !== 'critical' && retryCount < this.maxRetries) {
-      this.scheduleRetry();
-    }
+      error,
+      errorInfo
+    })
+    // Log error to console in development
+    if (process.env['NODE_ENV'] === 'development') {}
+    // Call custom error handler if provided
+    if (this.props.onError) {
+    this.props.onError(error, errorInfo)
   }
-
-  componentDidUpdate(prevProps: Props) {
-    const { resetOnPropsChange, resetKeys } = this.props;
-    const { hasError } = this.state;
-
-    if (hasError && resetOnPropsChange) {
-      const hasResetKeyChanged = resetKeys?.some((key, index) => 
-        key !== prevProps.resetKeys?.[index]
-      );
-
-      if (hasResetKeyChanged) {
-        this.resetErrorBoundary();
+    // Send error to monitoring service in production
+    if (process.env['NODE_ENV'] === 'production') {
+    this.reportError(error, errorInfo)
+  }
+  }
+  componentDidUpdate(prevProps: OptimizedErrorBoundaryProps) {
+    const { resetKeys, resetOnPropsChange } = this.props
+    const { hasError } = this.state
+    if (hasError && prevProps.resetKeys !== resetKeys) {
+    if (resetKeys && prevProps.resetKeys) {
+          (key, index) => key !== prevProps.resetKeys?.[index]
+        )
+        if (hasResetKeyChanged) {
+          this.resetErrorBoundary()
+  }
       }
     }
+    if (
+      hasError &&
+      resetOnPropsChange &&
+      prevProps.children !== this.props.children
+    ) {
+    this.resetErrorBoundary()
   }
-
+  }
   componentWillUnmount() {
-    if (this.retryTimeoutId) {
-      clearTimeout(this.retryTimeoutId);
-    }
+    if (this.resetTimeoutId) {
+      clearTimeout(this.resetTimeoutId)
   }
-
-  private reportError = (error: Error, errorInfo: ErrorInfo, errorId: string) => {
-    // Report to Google Analytics if available
+  }
+  private reportError = (error: Error, errorInfo: ErrorInfo) => {
+    // Report to error monitoring service
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'exception', {
+      const gtag = (
+        window as unknown as {
+          gtag: (
+            command: string,
+            action: string,
+            parameters: Record<string, unknown>
+          ) => void
+  }
+      ).gtag
+      gtag('event', 'exception', {
         description: error.message,
         fatal: false,
         custom_map: {
-          error_id: errorId,
+          error_id: this.state.errorId,
           component_stack: errorInfo.componentStack
         }
-      });
+      })
     }
-
-    // Report to custom error tracking service
-    if (typeof window !== 'undefined' && 'fetch' in window) {
-      fetch('/api/error-reporting', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          errorId,
-          message: error.message,
-          stack: error.stack,
-          componentStack: errorInfo.componentStack,
-          url: window.location.href,
-          userAgent: navigator.userAgent,
-          timestamp: new Date().toISOString(),
-          level: this.props.level || 'component'
-        })
-      }).catch(err => {
-        logger.warn('Failed to report error to tracking service', { error: err.message });
-      });
-    }
-  };
-
-  private scheduleRetry = () => {
-    const { retryCount } = this.state;
-    const delay = this.retryDelay * Math.pow(2, retryCount); // Exponential backoff
-
-    this.retryTimeoutId = window.setTimeout(() => {
-      this.setState(prevState => ({
+  }
+  private resetErrorBoundary = () => {
+    if (this.resetTimeoutId) {
+      clearTimeout(this.resetTimeoutId)
+  }
+    this.resetTimeoutId = window.setTimeout(() => {
+      this.setState({
         hasError: false,
         error: null,
         errorInfo: null,
-        retryCount: prevState.retryCount + 1
-      }));
-    }, delay);
-
-    logger.info('Scheduled error boundary retry', { 
-      retryCount: retryCount + 1, 
-      delay 
-    });
-  };
-
-  private resetErrorBoundary = () => {
-    this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorId: '',
-      retryCount: 0
-    });
-
-    if (this.retryTimeoutId) {
-      clearTimeout(this.retryTimeoutId);
-      this.retryTimeoutId = null;
-    }
-
-    logger.info('Error boundary reset');
-  };
-
+        errorId:       ,
+$4})
+    }, 100)
+  }
   private handleRetry = () => {
-    this.resetErrorBoundary();
-  };
-
-  private handleReload = () => {
-    window.location.reload();
-  };
-
+    this.resetErrorBoundary()
+  }
   render() {
-    const { hasError, error, errorId, retryCount } = this.state;
-    const { children, fallback, level = 'component' } = this.props;
-
-    if (hasError) {
-      // Use custom fallback if provided
-      if (fallback) {
-        return fallback;
-      }
-
-      // Default error UI based on level
+    if (this.state.hasError) {
+      if (this.props.fallback) {
+        return this.props.fallback
+  }
       return (
-        <div className="error-boundary" style={{
-          padding: '20px',
-          margin: '20px',
-          border: '1px solid #ef4444',
-          borderRadius: '8px',
-          backgroundColor: '#fef2f2',
-          color: '#dc2626'
-        }}>
-          <div className="error-header">
-            <h2 style={{ margin: '0 0 10px 0', fontSize: '18px' }}>
-              {level === 'critical' ? 'Critical Error' : 'Something went wrong'}
-            </h2>
-            <p style={{ margin: '0 0 15px 0', fontSize: '14px' }}>
-              {level === 'critical' 
-                ? 'A critical error occurred. Please reload the page.'
-                : 'An error occurred while loading this section.'
-              }
-            </p>
-          </div>
-
-          {process.env.NODE_ENV === 'development' && error && (
-            <details style={{ marginBottom: '15px' }}>
-              <summary style={{ cursor: 'pointer', fontWeight: 'bold' }}>
-                Error Details (Development Only)
-              </summary>
-              <pre style={{ 
-                marginTop: '10px', 
-                padding: '10px', 
-                backgroundColor: '#f3f4f6', 
-                borderRadius: '4px',
-                overflow: 'auto',
-                fontSize: '12px'
-              }}>
-                {error.message}
-                {'\n\n'}
-                {error.stack}
-              </pre>
-            </details>
-          )}
-
-          <div className="error-actions" style={{ display: 'flex', gap: '10px' }}>
-            {level !== 'critical' && retryCount < this.maxRetries && (
-              <button
-                onClick={this.handleRetry}
-                style={{
-                  padding: '8px 16px',
-                  backgroundColor: '#3b82f6',
-                  color: 'white',
-                  border: 'none',
-                  borderRadius: '4px',
-                  cursor: 'pointer',
-                  fontSize: '14px'
-                }}
-              >
-                Try Again ({this.maxRetries - retryCount} attempts left)
-              </button>
-            )}
-            
-            <button
-              onClick={this.handleReload}
-              style={{
-                padding: '8px 16px',
-                backgroundColor: '#6b7280',
-                color: 'white',
-                border: 'none',
-                borderRadius: '4px',
-                cursor: 'pointer',
-                fontSize: '14px'
-              }}
-            >
-              Reload Page
-            </button>
-          </div>
-
-          <div className="error-id" style={{ 
-            marginTop: '15px', 
-            fontSize: '12px', 
-            color: '#6b7280' 
-          }}>
-            Error ID: {errorId}
-          </div>
-        </div>
-      );
+        <ErrorFallback
+          error={this.state.error}
+          errorInfo={this.state.errorInfo}
+          errorId={this.state.errorId}
+          onRetry={this.handleRetry}
+        />
+      )
     }
-
-    return children;
+    return this.props.children
   }
 }
-
-export default OptimizedErrorBoundary;
+interface ErrorFallbackProps {
+    error: Error | null
+  errorInfo: ErrorInfo | null
+  errorId: string,
+  onRetry: () => void
+  }
+const ErrorFallback = memo<ErrorFallbackProps>(
+  ({ error, errorInfo, errorId, onRetry }) => (
+    <div className='min-h-screen flex items-center justify-center bg-gray-50 px-4'>
+      <div className='max-w-md w-full bg-white rounded-lg shadow-lg p-6 text-center'>
+        <div className='mb-4'>
+          <div className='mx-auto w-12 h-12 bg-red-100 rounded-full flex items-center justify-center'>
+            <svg
+              className='w-6 h-6 text-red-600'
+              fill='none'
+              stroke='currentColor'
+              viewBox='0 0 24 24'
+            >
+              <ath$2 />
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                strokeWidth={2}
+                d='M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.268 19.5c-.77.833.192 2.5 1.732 2.5z'
+              />
+        <h1 className='text-xl font-semibold text-gray-900 mb-2'>
+          Something went wrong
+        <p className='text-gray-600 mb-4'>
+          We&apos;re sorry, but something unexpected happened. Please try again.
+        {process.env['NODE_ENV'] === 'development' && error && (
+          <details className='mb-4 text-left'>
+            <summary className='cursor-pointer text-sm text-gray-500 hover:text-gray-700'>
+              Error Details (Development)
+            <div className='mt-2 p-3 bg-gray-100 rounded text-xs font-mono text-gray-800 overflow-auto'>
+              <div className='mb-2'>
+                <strong>Error:</strong> {error.message}
+        {process.env['NODE_ENV'] === 'development' && error && ()}
+          <details className='mb-4 text-left'>
+            <summary className='cursor-pointer text-sm text-gray-500,
+  hover:text-gray-700'>
+// Error Details (Development)
+            <div className='mt-2 p-3 bg-gray-100 rounded text-xs font-mono text-gray-800 overflow-auto'>
+              <div className='mb-2'>
+                <strong>Erro,
+  r:</strong> {error.message}
+              <div className='mb-2'>
+                <strong>Stac,
+  k:
+                <pre className='whitespace-pre-wrap'>{error.stack}
+              {errorInfo && (
+                <div>
+                  <strong>Component Stack:
+                  <pre className='whitespace-pre-wrap'>
+              {errorInfo && ()}
+          <div>
+                  <strong>Component,
+  Stack:
+                  <pre className='whitespace-pre-wrap'>
+                    {errorInfo.componentStack}
+              )}
+        )}
+        < className='flex flex-col,$2 />
+  sm:flex-row gap-2 justify-center'>
+          <button>
+            onClick={onRetry}
+            className='px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors'
+          >
+            Try Again
+            className='px-4 py-2 bg-blue-600 text-white rounded-md,
+  hover:bg-blue-700,
+  focus:outline-none,
+  focus:ring-2,
+  focus:ring-blue-500,
+  focus:ring-offset-2 transition-colors'
+// >
+//             Try Again
+          <button>
+            onClick={() => window.location.reload()}
+            className='px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors'
+          >
+            Reload Page
+        {errorId && (
+          <p className='mt-4 text-xs text-gray-400'>Error ID: {errorId}
+        )}
+  )
+)
+ErrorFallback.displayName = 'ErrorFallback'
+            className='px-4 py-2 bg-gray-600 text-white rounded-md,
+  hover:bg-gray-700,
+  focus:outline-none,
+  focus:ring-2,
+  focus:ring-gray-500,
+  focus:ring-offset-2 transition-colors'
+// >
+//             Reload Page
+        {errorId && ()}
+          <p className='mt-4 text-xs text-gray-400'>Error,
+  ID: {errorId}
+        )}
+//   )
+)
+ErrorFallback.displayName = 'ErrorFallback'</div></div></div></div></div></div></div></div></div></div></div></button></button></p></p></p></p></p></p></h1></a>

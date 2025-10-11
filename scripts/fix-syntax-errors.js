@@ -1,104 +1,143 @@
 #!/usr/bin/env node
-
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-console.log('🔧 Fixing syntax errors...');
-
-// Common syntax fixes
-const fixes = [
-  // Fix duplicate 'from' in imports
-  { pattern: /from from/g, replacement: 'from' },
-  // Fix missing semicolons after imports
-  { pattern: /import\s+{[^}]+}\s+from\s+['"][^'"]+['"]\s*(?=\n)/g, replacement: (match) => match + ';' },
-  // Fix unterminated template literals
-  { pattern: /`([^`]*)$/gm, replacement: '`$1`' },
-  // Fix missing closing braces
-  { pattern: /(\{[^}]*)$/gm, replacement: '$1}' },
-  // Fix module declaration syntax
-  { pattern: /declare module\s+[^'"]/g, replacement: (match) => match.replace(/declare module\s+([^'"])/, 'declare module "$1"') },
-  // Fix require() imports
-  { pattern: /require\(['"]([^'"]+)['"]\)/g, replacement: 'import("$1")' },
-  // Fix Function type usage
-  { pattern: /: Function/g, replacement: ': (...args: any[]) => any' },
-  // Fix empty interfaces
-  { pattern: /interface\s+\w+\s*{\s*}/g, replacement: 'type $1 = Record<string, never>' },
-  // Fix non-null assertions
-  { pattern: /(\w+)!/g, replacement: '$1 as any' },
-  // Fix console statements
-  { pattern: /console\.(log|warn|error|info|debug)\([^)]*\);/g, replacement: '' },
-  // Fix unused variables
-  { pattern: /const\s+(\w+)\s*=\s*[^;]+;\s*(?=\n)/g, replacement: (match, varName) => {
-    // Only remove if it's clearly unused (simple heuristic)
-    return match.includes('_') ? '' : match;
-  }},
-];
-
-function fixFile(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-
-    fixes.forEach(fix => {
-      const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
-        content = newContent;
-        modified = true;
+import fs from 'fs'
+import { glob } from 'glob'
+// Files to process
+const filePatterns = [
+  'app/**/*.{ts,tsx}',
+  'src/**/*.{ts,tsx}',
+  'components/**/*.{ts,tsx}'
+]
+// Files to exclude
+const excludePatterns = [
+  '**/node_modules/**',
+  '**/dist/**',
+  '**/.next/**',
+  '**/build/**',
+  '**/coverage/**',
+  '**/*.test.{ts,tsx}',
+  '**/*.spec.{ts,tsx}',
+  '**/scripts/**',
+  '**/automation/**',
+  '**/backup*/**',
+  '**/disabled*/**',
+  '**/corrupted*/**',
+  '**/temp*/**'
+]
+let totalFiles = 0
+let processedFiles = 0
+let fixedFiles = 0
+function fixSyntaxErrors(content) {
+  let newContent = content
+  let fixed = false
+  // Fix missing closing braces and parentheses
+  // Pattern: Missing closing brace for setState,
+  const setStatePattern = /this\.setState\(\s*\{[^}]*\s*$/gm
+  if (setStatePattern.test(newContent)) {
+    newContent = newContent.replace(setStatePattern, (match) => {
+      if (!match.includes('});')) {
+        return match + '\n    });'
       }
-    });
+      return match
+    })
+    fixed = true
+  }
 
-    if (modified) {
-      fs.writeFileSync(filePath, content);
-      console.log(`✅ Fixed: ${filePath}`);
-      return true;
+  // Fix missing closing braces for function calls
+  const functionCallPattern = /(\w+\(\s*\{[^}]*\s*)\s*$/gm
+  if (functionCallPattern.test(newContent)) {
+    newContent = newContent.replace(functionCallPattern, (match) => {
+      if (!match.includes('});') && !match.includes('});')) {
+        return match + '\n      });'
+      }
+      return match
+    })
+    fixed = true
+  }
+
+  // Fix missing closing braces for if statements
+  const ifStatementPattern = /if\s*\([^)]*\)\s*\{[^}]*\s*$/gm
+  if (ifStatementPattern.test(newContent)) {
+    newContent = newContent.replace(ifStatementPattern, (match) => {
+      if (!match.includes('}')) {
+        return match + '\n    }'
+      }
+      return match
+    })
+    fixed = true
+  }
+
+  // Fix missing closing braces for forEach
+  const forEachPattern = /\.forEach\([^)]*\)\s*\{[^}]*\s*$/gm
+  if (forEachPattern.test(newContent)) {
+    newContent = newContent.replace(forEachPattern, (match) => {
+      if (!match.includes('});')) {
+        return match + '\n    });'
+      }
+      return match
+    })
+    fixed = true
+  }
+
+  // Fix missing closing braces for object methods
+  const objectMethodPattern = /(\w+:\s*\([^)]*\)\s*=>\s*\{[^}]*)\s*$/gm
+  if (objectMethodPattern.test(newContent)) {
+    newContent = newContent.replace(objectMethodPattern, (match) => {
+      if (!match.includes('}')) {
+        return match + '\n  }'
+      }
+      return match
+    })
+    fixed = true
+  }
+
+  // Clean up multiple empty lines
+  newContent = newContent.replace(/\n\s*\n\s*\n/g, '\n\n')
+  return { content: newContent, fixed }
+}
+
+function processFile(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8')
+    const result = fixSyntaxErrors(content)
+    if (result.fixed) {
+      fs.writeFileSync(filePath, result.content, 'utf8')
+      console.log(`✅ ${filePath}: Fixed syntax errors`)
+      fixedFiles++
     }
-    return false;
+
+    processedFiles++
   } catch (error) {
-    console.error(`❌ Error fixing ${filePath}:`, error.message);
-    return false;
+    console.error(`❌ Error processing ${filePath}:`, error.message)
   }
 }
 
-// Find all TypeScript/JavaScript files
-function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
-  let files = [];
-  
-  try {
-    const items = fs.readdirSync(dir);
-    
-    for (const item of items) {
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        if (!['node_modules', '.git', 'dist', 'build', '.next', 'backup-problematic'].includes(item)) {
-          files = files.concat(findFiles(fullPath, extensions));
-        }
-      } else if (extensions.some(ext => item.endsWith(ext))) {
-        files.push(fullPath);
-      }
-    }
-  } catch (error) {
-    // Skip directories we can't read
+async function main() {
+  console.log('🚀 Starting syntax error fixes...\n')
+  // Get all files to process
+  const allFiles = []
+  for (const pattern of filePatterns) {
+    const files = await glob(pattern, {)
+      ignore: excludePatterns),
+      cwd: process.cwd()})
+    allFiles.push(...files)
   }
-  
-  return files;
+
+  // Remove duplicates
+  const uniqueFiles = [...new Set(allFiles)]
+  totalFiles = uniqueFiles.length
+  console.log(`📁 Found ${totalFiles} files to process\n`)
+  // Process each file
+  uniqueFiles.forEach(processFile)
+  console.log(`\n🎉 Syntax error fixes completed!`)
+  console.log(`📊 Statistics: `),
+  console.log(`   - Files processed: ${processedFiles}/${totalFiles}`)
+  console.log(`   - Files fixed: ${fixedFiles}`)
 }
 
-// Main fix process
-const files = findFiles('./app');
-let fixedCount = 0;
-
-console.log(`Found ${files.length} files to process...`);
-
-files.forEach(file => {
-  if (fixFile(file)) {
-    fixedCount++;
+if (import.meta.url === `file://${process.argv[1]}`) {
+    main()
   }
-});
 
-console.log(`\n🎉 Syntax fix complete! Modified ${fixedCount} files.`);
+export { processFile, fixSyntaxErrors }
+// #!/usr/bin/env node import fs from 'fs'' import path from 'path'' import { glob } from 'glob' ' // Find all TypeScript/JavaScript files' const files = await glob('src/**/*.{ts,tsx,js}jsx}') {/* TODO: Fix JSX expression */}
+  d: '/workspace' }); let totalFixed = 0; let totalErrors = 0; for (const file of files) {/* TODO: Fix JSX expression */}

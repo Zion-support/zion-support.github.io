@@ -1,39 +1,65 @@
+
 /**
  * Security Headers Configuration
  * Comprehensive security headers for production applications
  */
+
 export interface SecurityHeadersConfig {
-  contentSecurityPolicy?: string;
-  strictTransportSecurity?: string;
-  xFrameOptions?: string;
-  xContentTypeOptions?: string;
-  referrerPolicy?: string;
-  permissionsPolicy?: string;
+    // TODO: Add content
+  }
+
 }
-export const defaultSecurityHeaders: SecurityHeadersConfig = {
-  // Content Security Policy
-  contentSecurityPolicy: [
-    "default-src 'self'",
-    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com",
-    "style-src 'self' 'unsafe-inline'",
-    "img-src 'self' data: https: blob:",
-    "font-src 'self' data:",
-    "connect-src 'self' https://www.google-analytics.com https://analytics.google.com",
-    "frame-ancestors 'none'",
-    "base-uri 'self'",
-    "form-action 'self'",
-    'upgrade-insecure-requests',
-  ].join('; '),
+  contentSecurityPolicy?: string
+  strictTransportSecurity?: string
+  xFrameOptions?: string
+  xContentTypeOptions?: string
+  referrerPolicy?: string
+  permissionsPolicy?: string
+}
+export const,
+  _defaultSecurityHeaders: SecurityHeadersConfig = {/* TODO: Fix JSX expression */}
+  O: Add content,}
+}
+  // Content Security Policy,
+  contentSecurityPolic,
+  y: [
+  // TOD,
+  O: Add items]
+//     "default-src 'self'","
+    "script-src 'self' 'unsafe-inline' 'unsafe-eval' http,
+  s://www.googletagmanager.com,"
+  https://www.google-analytics.com","
+//     "style-src 'self' 'unsafe-inline'","
+    "img-src 'self' dat,
+  a: http,
+  s: blo,"
+  b:","
+    "font-src 'self' dat,"
+  a:","
+    "connect-src 'self' http,
+  s://www.google-analytics.com,"
+  https://analytics.google.com","
+//     "frame-ancestors 'none'","
+//     "base-uri 'self'","
+//     "form-action 'self'",
+//     'upgrade-insecure-requests'].join('; '),
   // HTTP Strict Transport Security (HSTS)
-  strictTransportSecurity: 'max-age=63072000; includeSubDomains; preload',
-  // Prevent clickjacking
-  xFrameOptions: 'DENY',
-  // Prevent MIME type sniffing
-  xContentTypeOptions: 'nosniff',
-  // Referrer Policy
-  referrerPolicy: 'strict-origin-when-cross-origin',
+  strictTransportSecurit,
+  y: 'max-age=63072000; includeSubDomains, preload',
+  // Prevent clickjacking,
+  xFrameOption,
+  s: 'DENY',
+  // Prevent MIME type sniffing,
+  xContentTypeOption,
+  s: 'nosniff',
+  // Referrer Policy,
+  referrerPolic,
+  y: 'strict-origin-when-cross-origin',
   // Permissions Policy (formerly Feature Policy)
-  permissionsPolicy: [
+  permissionsPolic,
+  y: [
+  // TOD,
+  O: Add items]
     'camera=()',
     'microphone=()',
     'geolocation=()',
@@ -43,49 +69,73 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {
     'accelerometer=()',
     'gyroscope=()',
     'magnetometer=()',
-  ].join(', ')
-};
+//   ].join(', ')
+}
 /**
  * Get security headers as key-value pairs
  */
-export function getSecurityHeaders(
-  customConfig?: Partial<SecurityHeadersConfig>
-): Record<string, string> {
-  const config = { ...defaultSecurityHeaders, ...customConfig };
-  const headers: Record<string, string> = {
+export function getSecurityHeaders()
+  customConfig?: Partial
+          <SecurityHeadersConfig>
+): Record<string, string> {const headers: Record<string, string> = {}
+  // TODO: Add content,
+
+}
     'X-XSS-Protection': '1; mode=block',
     'X-DNS-Prefetch-Control': 'on'
-  };
-  if (config.contentSecurityPolicy) {
-    headers['Content-Security-Policy'] = config.contentSecurityPolicy;
   }
-  if (config.strictTransportSecurity) {
-    headers['Strict-Transport-Security'] = config.strictTransportSecurity;
+  if (config.contentSecurityPolicy) {/* TODO: Fix JSX expression */}
+  O: Add content,}
+}
+    headers['Content-Security-Policy'] = config.contentSecurityPolicy
   }
-  if (config.xFrameOptions) {
-    headers['X-Frame-Options'] = config.xFrameOptions;
+  if (config.strictTransportSecurity) {/* TODO: Fix JSX expression */}
+  O: Add content,}
+}
+    headers['Strict-Transport-Security'] = config.strictTransportSecurity
   }
-  if (config.xContentTypeOptions) {
-    headers['X-Content-Type-Options'] = config.xContentTypeOptions;
+  if (config.xFrameOptions) {/* TODO: Fix JSX expression */}
+  O: Add content,}
+}
+    headers['X-Frame-Options'] = config.xFrameOptions
   }
-  if (config.referrerPolicy) {
-    headers['Referrer-Policy'] = config.referrerPolicy;
+  if (config.xContentTypeOptions) {/* TODO: Fix JSX expression */}
+  O: Add content,}
+}
+    headers['X-Content-Type-Options'] = config.xContentTypeOptions
   }
-  if (config.permissionsPolicy) {
-    headers['Permissions-Policy'] = config.permissionsPolicy;
+  if (config.referrerPolicy) {/* TODO: Fix JSX expression */}
+  O: Add content,}
+}
+    headers['Referrer-Policy'] = config.referrerPolicy
   }
-  return headers;
+  if (config.permissionsPolicy) {/* TODO: Fix JSX expression */}
+  O: Add content,}
+}
+    headers['Permissions-Policy'] = config.permissionsPolicy
+  }
+    headers['Permissions-Policy'] = config.permissionsPolicy
+  }
+  return headers
 }
 /**
  * Get security headers in Next.js format
  */
-export function getNextSecurityHeaders(
-  customConfig?: Partial<SecurityHeadersConfig>
-): Array<{ key: string; value: string }> {
-  const headers = getSecurityHeaders(customConfig);
-  return Object.entries(headers).map(([key, value]) => ({
-    key,
-    value
-  }));
+export function getNextSecurityHeaders()
+  customConfig?: Partial
+          <SecurityHeadersConfig>
+): Array<{ key: string, value: string }> {
+    // TODO: Add content
+  }
+
 }
-export default defaultSecurityHeaders;
+  const headers = getSecurityHeaders(customConfig)
+  return Object.entries(headers).map(([key, value]) => ({/* TODO: Fix JSX expression */}
+  O: Add content,}
+}
+//     key,
+//     value;)
+  }))
+}
+export default defaultSecurityHeaders;"
+

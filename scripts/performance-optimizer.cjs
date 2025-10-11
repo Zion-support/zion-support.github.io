@@ -1,160 +1,227 @@
-#!/usr/bin/env node
-
-/**
- * Performance Optimizer for Zion Tech Group Website
- * Optimizes images, CSS, and JavaScript for better performance
- */
-
 const fs = require('fs');
 const path = require('path');
 
-console.log('🚀 Starting performance optimization...');
+console.log('Running performance optimizations...');
 
-// Optimize CSS by removing unused styles
-function optimizeCSS() {
-  console.log('📝 Optimizing CSS...');
+// Create critical CSS file
+const criticalCSS = `
+/* Critical CSS for above-the-fold content */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #0f172a 0%, #581c87 50%, #0f172a 100%);
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* Navigation styles */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(6, 182, 212, 0.2);
+}
+
+/* Hero section styles */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 8vw, 6rem);
+  font-weight: 700;
+  background: linear-gradient(135deg, #22d3ee, #a855f7, #ec4899);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.125rem, 4vw, 1.5rem);
+  color: #d1d5db;
+  margin-bottom: 2rem;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Button styles */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #22d3ee, #a855f7);
+  color: white;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(34, 211, 238, 0.25);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px rgba(34, 211, 238, 0.4);
+}
+
+/* Card styles */
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  border-radius: 1rem;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border-color: rgba(34, 211, 238, 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(34, 211, 238, 0.1);
+}
+
+/* Loading states */
+.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 3rem;
+  }
   
-  const cssPath = path.join(__dirname, '../dist/assets');
-  if (fs.existsSync(cssPath)) {
-    const files = fs.readdirSync(cssPath);
-    const cssFiles = files.filter(file => file.endsWith('.css'));
-    
-    cssFiles.forEach(file => {
-      const filePath = path.join(cssPath, file);
-      let content = fs.readFileSync(filePath, 'utf8');
+  .hero-subtitle {
+    font-size: 1.125rem;
+  }
+  
+  .btn-primary {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Performance optimizations */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+`;
+
+// Write critical CSS to public directory
+const publicDir = path.join(__dirname, '..', 'public');
+if (!fs.existsSync(publicDir)) {
+  fs.mkdirSync(publicDir, { recursive: true });
+}
+
+fs.writeFileSync(path.join(publicDir, 'critical.css'), criticalCSS);
+
+// Create a simple performance monitoring script
+const performanceScript = `
+// Performance monitoring
+(function() {
+  'use strict';
+  
+  // Monitor Core Web Vitals
+  function measureWebVitals() {
+    if ('performance' in window && 'getEntriesByType' in performance) {
+      // First Contentful Paint
+      const fcp = performance.getEntriesByName('first-contentful-paint')[0];
+      if (fcp) {
+        console.log('FCP:', fcp.startTime);
+      }
       
-      // Remove unused CSS rules (basic optimization)
-      content = content
-        .replace(/\/\*[\s\S]*?\*\//g, '') // Remove comments
-        .replace(/\s+/g, ' ') // Minify whitespace
-        .replace(/;\s*}/g, '}') // Remove unnecessary semicolons
-        .replace(/:\s+/g, ':') // Remove space after colons
-        .replace(/,\s+/g, ',') // Remove space after commas
-        .trim();
+      // Largest Contentful Paint
+      const lcp = performance.getEntriesByType('largest-contentful-paint')[0];
+      if (lcp) {
+        console.log('LCP:', lcp.startTime);
+      }
       
-      fs.writeFileSync(filePath, content);
-      console.log(`✅ Optimized ${file}`);
+      // First Input Delay
+      const fid = performance.getEntriesByType('first-input')[0];
+      if (fid) {
+        console.log('FID:', fid.processingStart - fid.startTime);
+      }
+    }
+  }
+  
+  // Run after page load
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', measureWebVitals);
+  } else {
+    measureWebVitals();
+  }
+  
+  // Image lazy loading
+  function lazyLoadImages() {
+    const images = document.querySelectorAll('img[data-src]');
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          img.src = img.dataset.src;
+          img.classList.remove('lazy');
+          observer.unobserve(img);
+        }
+      });
     });
+    
+    images.forEach(img => imageObserver.observe(img));
   }
-}
-
-// Optimize HTML
-function optimizeHTML() {
-  console.log('📄 Optimizing HTML...');
   
-  const htmlPath = path.join(__dirname, '../dist/index.html');
-  if (fs.existsSync(htmlPath)) {
-    let content = fs.readFileSync(htmlPath, 'utf8');
-    
-    // Remove unnecessary whitespace
-    content = content
-      .replace(/\s+/g, ' ')
-      .replace(/>\s+</g, '><')
-      .trim();
-    
-    fs.writeFileSync(htmlPath, content);
-    console.log('✅ Optimized index.html');
+  // Initialize lazy loading
+  if ('IntersectionObserver' in window) {
+    lazyLoadImages();
   }
-}
+})();
+`;
 
-// Add performance hints
-function addPerformanceHints() {
-  console.log('⚡ Adding performance hints...');
-  
-  const htmlPath = path.join(__dirname, '../dist/index.html');
-  if (fs.existsSync(htmlPath)) {
-    let content = fs.readFileSync(htmlPath, 'utf8');
-    
-    // Add resource hints
-    const resourceHints = `
-    <link rel="preload" href="/assets/vendor-avszxO8f.js" as="script" crossorigin>
-    <link rel="preload" href="/assets/index-Djua46cn.css" as="style">
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>`;
-    
-    // Insert before closing head tag
-    content = content.replace('</head>', `${resourceHints}\n</head>`);
-    
-    fs.writeFileSync(htmlPath, content);
-    console.log('✅ Added performance hints');
-  }
-}
+fs.writeFileSync(path.join(publicDir, 'performance.js'), performanceScript);
 
-// Generate sitemap
-function generateSitemap() {
-  console.log('🗺️ Generating sitemap...');
-  
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://ziontechgroup.com</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/about</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/ai-services</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/contact</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-</urlset>`;
-  
-  fs.writeFileSync(path.join(__dirname, '../dist/sitemap.xml'), sitemap);
-  console.log('✅ Generated sitemap.xml');
-}
-
-// Generate robots.txt
-function generateRobotsTxt() {
-  console.log('🤖 Generating robots.txt...');
-  
-  const robots = `User-agent: *
-Allow: /
-
-Sitemap: https://ziontechgroup.com/sitemap.xml
-
-# Performance hints
-Crawl-delay: 1`;
-  
-  fs.writeFileSync(path.join(__dirname, '../dist/robots.txt'), robots);
-  console.log('✅ Generated robots.txt');
-}
-
-// Main optimization function
-function optimize() {
-  try {
-    optimizeCSS();
-    optimizeHTML();
-    addPerformanceHints();
-    generateSitemap();
-    generateRobotsTxt();
-    
-    console.log('🎉 Performance optimization completed successfully!');
-    console.log('📊 Optimizations applied:');
-    console.log('  - CSS minification and cleanup');
-    console.log('  - HTML minification');
-    console.log('  - Resource hints added');
-    console.log('  - Sitemap generated');
-    console.log('  - Robots.txt generated');
-  } catch (error) {
-    console.error('❌ Error during optimization:', error);
-    process.exit(1);
-  }
-}
-
-// Run optimization
-optimize();
+console.log('Performance optimizations completed');

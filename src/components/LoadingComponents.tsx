@@ -1,9 +1,8 @@
-import React from 'react';
-export const LoadingSpinner: React.FC = () => {
-  return (
-    <div className='flex items-center justify-center min-h-screen'>
-      <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600'></div>
-    </div>
-  );
-};
-export default LoadingSpinner;
+import React from 'react'
+interface LoadingComponentsProps {/* TODO: Fix JSX expression */}
+}
+const,
+  LoadingComponents: React.FC<LoadingComponentsProps> = () => {/* TODO: Fix JSX expression */}
+      {/* Component content */}
+  )
+}

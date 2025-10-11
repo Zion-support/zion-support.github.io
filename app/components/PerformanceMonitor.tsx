@@ -1,110 +1,163 @@
+<<<<<<< HEAD
 'use client';
-import { useEffect } from 'react';
-import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 
-interface PerformanceMonitorProps {
-  enableReporting?: boolean;
-  enableConsoleLogging?: boolean;
-}
+import React, { useEffect } from 'react';
+import { measureWebVitals } from '../../src/utils/performanceMonitor';
 
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
-  enableReporting = true,
-  enableConsoleLogging = false
-}) => {
+const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
-    if (!enableReporting) return;
+    // Initialize performance monitoring
+    measureWebVitals();
 
-    const reportMetric = (metric: any) => {
-      if (enableConsoleLogging) {
-        console.log('Performance Metric:', metric);
-      }
-
-      // Send to analytics
-      if (typeof window !== 'undefined' && 'gtag' in window) {
-        (window as any).gtag('event', 'web_vitals', {
-          event_category: 'Performance',
-          event_label: metric.name,
-          value: Math.round(metric.value),
-          non_interaction: true,
-        });
-      }
-
-      // Send to custom analytics endpoint
-      if (typeof window !== 'undefined' && navigator.sendBeacon) {
-        const data = JSON.stringify({
-          name: metric.name,
-          value: metric.value,
-          delta: metric.delta,
-          id: metric.id,
-          navigationType: metric.navigationType,
-          timestamp: Date.now(),
-          url: window.location.href,
-          userAgent: navigator.userAgent,
-        });
-
-        navigator.sendBeacon('/api/analytics/performance', data);
-      }
-    };
-
-    // Measure Core Web Vitals
-    getCLS(reportMetric);
-    getFID(reportMetric);
-    getFCP(reportMetric);
-    getLCP(reportMetric);
-    getTTFB(reportMetric);
-
-    // Additional performance monitoring
-    const measurePageLoad = () => {
-      if (typeof window !== 'undefined' && window.performance) {
-        const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    // Track page load performance
+    const trackPageLoad = () => {
+      if (typeof window !== 'undefined' && 'performance' in window) {
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         
         if (navigation) {
-          const metrics = {
-            name: 'page_load_time',
-            value: navigation.loadEventEnd - navigation.fetchStart,
-            delta: navigation.loadEventEnd - navigation.fetchStart,
-            id: 'page-load',
-            navigationType: navigation.type,
-          };
+          const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
+          const domContentLoaded = navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
           
-          reportMetric(metrics);
+          console.log('Page Load Performance:', {
+            loadTime,
+            domContentLoaded,
+            totalTime: navigation.loadEventEnd - navigation.fetchStart
+          });
         }
-      }
-    };
+=======
+<<<<<<< HEAD
+'use client';
+import React, { useEffect } from 'react';
 
-    // Measure when page is fully loaded
+const PerformanceMonitor: React.FC = () => {
+  useEffect(() => {
+    // Monitor performance metrics
+    const observer = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        console.log('Performance Entry:', entry);
+=======
+'use client'
+import React, { useEffect, useState } from 'react'
+
+interface PerformanceMetrics {
+  loadTime: number
+  domContentLoaded: number
+  firstContentfulPaint: number
+  largestContentfulPaint: number
+  cumulativeLayoutShift: number
+}
+
+const PerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null)
+
+  useEffect(() => {
+    const measurePerformance = () => {
+      if (typeof window === 'undefined' || !('performance' in window)) return
+
+      const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+      if (!perfData) return
+
+      const newMetrics: PerformanceMetrics = {
+        loadTime: perfData.loadEventEnd - perfData.fetchStart,
+        domContentLoaded: perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart,
+        firstContentfulPaint: 0,
+        largestContentfulPaint: 0,
+        cumulativeLayoutShift: 0
+>>>>>>> origin/main
+>>>>>>> origin/main
+      }
+    });
+
+<<<<<<< HEAD
+    // Track performance after page load
     if (document.readyState === 'complete') {
-      measurePageLoad();
+      trackPageLoad();
     } else {
-      window.addEventListener('load', measurePageLoad);
+      window.addEventListener('load', trackPageLoad);
     }
 
-    // Monitor memory usage (if available)
-    const measureMemory = () => {
-      if (typeof window !== 'undefined' && 'memory' in performance) {
-        const memory = (performance as any).memory;
-        const memoryMetrics = {
-          name: 'memory_usage',
-          value: memory.usedJSHeapSize / 1024 / 1024, // Convert to MB
-          delta: memory.usedJSHeapSize / 1024 / 1024,
-          id: 'memory-usage',
-          navigationType: 'navigate',
-        };
-        
-        reportMetric(memoryMetrics);
-      }
-    };
-
-    // Measure memory usage periodically
-    const memoryInterval = setInterval(measureMemory, 30000); // Every 30 seconds
+    return () => {
+      window.removeEventListener('load', trackPageLoad);
+=======
+<<<<<<< HEAD
+    observer.observe({ entryTypes: ['measure', 'navigation'] });
 
     return () => {
-      window.removeEventListener('load', measurePageLoad);
-      clearInterval(memoryInterval);
+      observer.disconnect();
+>>>>>>> origin/main
     };
-  }, [enableReporting, enableConsoleLogging]);
+  }, []);
 
   return null;
 };
+<<<<<<< HEAD
 
 export default PerformanceMonitor;
+=======
+=======
+      // Get FCP if available
+      const fcpEntry = performance.getEntriesByName('first-contentful-paint')[0]
+      if (fcpEntry) {
+        newMetrics.firstContentfulPaint = fcpEntry.startTime
+      }
+
+      // Get LCP if available
+      const lcpEntries = performance.getEntriesByType('largest-contentful-paint')
+      if (lcpEntries.length > 0) {
+        newMetrics.largestContentfulPaint = lcpEntries[lcpEntries.length - 1].startTime
+      }
+
+      // Get CLS if available
+      const clsEntries = performance.getEntriesByType('layout-shift')
+      if (clsEntries.length > 0) {
+        newMetrics.cumulativeLayoutShift = clsEntries.reduce((sum, entry) => {
+          return sum + (entry as any).value
+        }, 0)
+      }
+
+      setMetrics(newMetrics)
+
+      // Log metrics in development
+      if (process.env.NODE_ENV === 'development') {
+        console.log('Performance Metrics:', newMetrics)
+      }
+    }
+
+    // Measure performance after page load
+    if (document.readyState === 'complete') {
+      measurePerformance()
+    } else {
+      window.addEventListener('load', measurePerformance)
+    }
+
+    return () => {
+      window.removeEventListener('load', measurePerformance)
+    }
+  }, [])
+
+  // Don't render anything in production
+  if (process.env.NODE_ENV === 'production') {
+    return null
+  }
+
+  return (
+    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50">
+      <div className="font-bold mb-2">Performance Metrics</div>
+      {metrics ? (
+        <div className="space-y-1">
+          <div>Load Time: {metrics.loadTime.toFixed(2)}ms</div>
+          <div>DOM Ready: {metrics.domContentLoaded.toFixed(2)}ms</div>
+          <div>FCP: {metrics.firstContentfulPaint.toFixed(2)}ms</div>
+          <div>LCP: {metrics.largestContentfulPaint.toFixed(2)}ms</div>
+          <div>CLS: {metrics.cumulativeLayoutShift.toFixed(4)}</div>
+        </div>
+      ) : (
+        <div>Measuring...</div>
+      )}
+    </div>
+  )
+}
+>>>>>>> origin/main
+
+export default PerformanceMonitor
+>>>>>>> origin/main

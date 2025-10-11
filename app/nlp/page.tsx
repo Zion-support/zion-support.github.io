@@ -1,209 +1,246 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
-import { Globe, Search, Bot, FileText, CheckCircle, Phone } from 'lucide-react';;
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import PerformanceOptimizer from '../components/PerformanceOptimizer';
-import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
-import SecurityEnhancer from '../components/SecurityEnhancer';
-import Analytics from '../components/Analytics';
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-const NLPPage: React.FC = () => {
-  const services = [
+const PagePage: React.FC = () => {
+  const features = [
     {
-      title: 'Text Analysis',
-      description: 'Extract insights from unstructured text data with advanced NLP techniques',
-      features: ['Sentiment Analysis', 'Entity Recognition', 'Topic Modeling', 'Text Classification'],
-      icon: FileText,
-      color: 'text-blue-400'
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced AI technology to transform your business operations and improve efficiency'
     },
     {
-      title: 'Language Translation',
-      description: 'Real-time translation across 100+ languages with high accuracy',
-      features: ['Multi-language Support', 'Context-aware Translation', 'Custom Models', 'API Integration'],
+      icon: Zap,
+      title: 'High Performance',
+      description: 'Lightning-fast processing and real-time analytics for optimal results'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with encryption and compliance standards'
+    },
+    {
       icon: Globe,
-      color: 'text-green-400'
-    },
-    {
-      title: 'Chatbot Development',
-      description: 'Intelligent conversational AI that understands and responds naturally',
-      features: ['Natural Language Understanding', 'Context Management', 'Multi-turn Conversations', 'Integration APIs'],
-      icon: Bot,
-      color: 'text-purple-400'
-    },
-    {
-      title: 'Document Processing',
-      description: 'Automated extraction and analysis of information from documents',
-      features: ['OCR Processing', 'Data Extraction', 'Document Classification', 'Knowledge Graphs'],
-      icon: Search,
-      color: 'text-cyan-400'
+      title: 'Global Reach',
+      description: 'Worldwide deployment and support for international businesses'
     }
   ];
 
   const benefits = [
-    'Process 10,000+ documents per hour',
-    'Achieve 95% accuracy in text analysis',
-    'Support 100+ languages automatically',
-    'Reduce manual processing by 80%',
-    'Enable 24/7 multilingual customer support'
+=======
+'use client'
+import React from 'react'
+  ]
+const benefits = [
+>>>>>>> origin/main
+    'Advanced AI technology integration',
+    'Real-time processing and analytics',
+    'Enterprise-grade security and compliance',
+    'Scalable and flexible solutions',
+
+    '24/7 technical support',
+
+    'Easy integration with existing systems',
+
+    'Cost-effective pricing plans',
+<<<<<<< HEAD
+    'Proven track record of success'
   ];
 
   return (
-    <>
-      <SEOOptimizer
-        title="Natural Language Processing - Zion Tech Group"
-        description="Advanced NLP solutions including text analysis, language translation, chatbot development, and document processing. Transform text data into actionable insights."
-        keywords={['natural language processing', 'NLP', 'text analysis', 'language translation', 'chatbot development', 'document processing']}
-        canonicalUrl="https://ziontechgroup.com/nlp"
-      />
-      <PerformanceOptimizer
-        enableImageOptimization={true}
-        enableLazyLoading={true}
-        enableCodeSplitting={true}
-        enablePreloading={true}
-      />
-      <AccessibilityEnhancer
-        enableKeyboardNavigation={true}
-        enableScreenReaderSupport={true}
-        enableHighContrast={true}
-        enableFocusManagement={true}
-      />
-      <SecurityEnhancer
-        enableCSP={true}
-        enableHTTPSRedirect={true}
-        enableXSSProtection={true}
-        enableClickjackingProtection={true}
-      />
-      <Analytics />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">
-        <Navigation />
-        
-        <main className="container mx-auto px-4 py-16 pt-24">
-          {/* Hero Section */}
-          <section className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch" data-text="Natural Language Processing">
-              Natural Language Processing
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
+      </Helmet>
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                Page
+              </span>
+              <br />
+              <span className="text-white">Solutions</span>
             </h1>
-            <p className="text-xl text-cyan-400 mb-8 font-medium">
-              Advanced Text Intelligence Solutions
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your business with our advanced page solutions. 
+              Powered by cutting-edge AI technology and industry expertise.
             </p>
-            <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8">
-              Transform unstructured text data into actionable insights with our advanced NLP solutions. 
-              From sentiment analysis to multilingual translation, we help you understand and process 
-              human language at scale.
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+                Learn More
+              </button>
+=======
+<<<<<<< HEAD
+
+    'Proven track record of success';
+  ];
+</h1>
+            <p>Transform your business with our advanced page solutions.;</p>
+              Powered by cutting-edge AI technology and industry expertise.
             </p>
-          </section>
-
-          {/* Services */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Our NLP Services</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {services.map((service, index) => (
-                <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
-                  <service.icon className={`w-16 h-16 ${service.color} mx-auto mb-4`} />
-                  <h3 className="text-xl font-bold text-white mb-3 neon-text text-center">{service.title}</h3>
-                  <p className="text-gray-300 mb-4 text-sm text-center leading-relaxed">{service.description}</p>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-xs text-gray-300">
-                        <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+>>>>>>> origin/main
             </div>
-          </section>
+          </div>
+        </div>
+      </section>
+<<<<<<< HEAD
 
-          {/* Benefits */}
-          <section className="mb-16">
-            <div className="cyber-card p-8 max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-white mb-6 text-center neon-text">Why Choose Our NLP Solutions?</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <h3 className="text-xl font-bold text-cyan-400 mb-4">Key Benefits</h3>
-                  <ul className="space-y-3">
-                    {benefits.map((benefit, index) => (
-                      <li key={index} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                        <span>{benefit}</span>
-                      </li>
-                    ))}
-                  </ul>
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Our Page?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our page solutions deliver unmatched performance, security, and scalability.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+                  <feature.icon className="h-6 w-6 text-white" />
+=======
+>>>>>>> origin/main
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold text-purple-400 mb-4">Our Process</h3>
-                  <div className="space-y-4">
-                    <div className="flex items-start">
-                      <div className="w-8 h-8 bg-cyan-400 text-slate-900 rounded-full flex items-center justify-center text-sm font-bold mr-3 flex-shrink-0">1</div>
-                      <div>
-                        <h4 className="font-semibold text-white">Data Preparation</h4>
-                        <p className="text-sm text-gray-300">Clean and preprocess your text data</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start">
-                      <div className="w-8 h-8 bg-purple-400 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 flex-shrink-0">2</div>
-                      <div>
-                        <h4 className="font-semibold text-white">Model Training</h4>
-                        <p className="text-sm text-gray-300">Train custom NLP models for your domain</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start">
-                      <div className="w-8 h-8 bg-green-400 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 flex-shrink-0">3</div>
-                      <div>
-                        <h4 className="font-semibold text-white">Integration</h4>
-                        <p className="text-sm text-gray-300">Deploy and integrate with your systems</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start">
-                      <div className="w-8 h-8 bg-yellow-400 text-slate-900 rounded-full flex items-center justify-center text-sm font-bold mr-3 flex-shrink-0">4</div>
-                      <div>
-                        <h4 className="font-semibold text-white">Optimization</h4>
-                        <p className="text-sm text-gray-300">Continuous monitoring and improvement</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description</p>}</p>
               </div>
-            </div>
-          </section>
+=======
+    'Proven track record of success'
+  ]</h1>
+            <p></p>
+              Transform your business with our advanced page solutions.
+              Powered by cutting-edge AI technology and industry expertise.
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}
+                <p className="text-gray-300">{feature.description}
+>>>>>>> origin/main
+            ))}
+            ))}
+<<<<<<< HEAD
+          </div>
+        </div>
+      </section>
 
-          {/* CTA Section */}
-          <section className="text-center">
-            <div className="cyber-card p-8 max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-white mb-4 neon-text">
-                Ready to Unlock the Power of Text Data?
-              </h2>
-              <p className="text-lg text-gray-300 mb-8">
-                Our NLP experts are ready to help you extract valuable insights from your text data. 
-                Contact us today for a free consultation and discover the potential of natural language processing.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
-                  className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-                >
-                  Get Free Consultation
-                </a>
-                <a
-                  href="tel:+13024640950"
-                  className="flex items-center justify-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-                >
-                  <Phone className="w-5 h-5" />
-                  Call +1 302 464 0950
-                </a>
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Key Benefits
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the power of our page solutions for your business.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-start space-x-3">
+                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+                <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
+            ))}
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
+          </div>
+        </div>
+      </section>
+      {/* CTA Section */} <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
+      {/* CTA Section */}
+<<<<<<< HEAD
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        </section>
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+=======
+      <section className="py-20 px-4">
+          </section>< className="$2 />
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> origin/main
+              <p className="text-xl text-gray-300">Section description</p>
             </div>
-          </section>
-        </main>
-
-        <Footer />
-      </div>
-    </>
+          </div>
+        </section>
+<<<<<<< HEAD
+        <div className="max-w-4xl mx-auto text-center"></div>
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md: p-12"></div>,
+            <h2>Ready to Get Started?</h2>
+            </h2>
+            <p>Contact our experts to discuss your page needs and get a customized solution.</p>
+=======
+        <div className="max-w-4xl mx-auto text-center" / /></div>
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12" / /></div>
+            <h2></h2>
+>>>>>>> origin/main
+              Ready to Get Started?
+            </h2>
+            <p></p>
+              Contact our experts to discuss your page needs and get a customized solution.
+>>>>>>> origin/main
+            </p>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
+              <button>
+<<<<<<< HEAD
+                <Phone>
+                Call Now;
+              </button>
+              <button>
+                <Mail>
+                Email Us;
+=======
+                </button><Phone>
+                Call Now
+              </button>
+              <button>
+                </button><Mail>
+                Email Us
+>>>>>>> origin/main
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+<<<<<<< HEAD
   );
 };
 
-export default NLPPage;
+export default PagePage;
+=======
+  ),
+};]
+export default PagePage
+            <p className="text-xl text-purple-100 mb-8">
+              Contact our experts to discuss your page needs and get a customized solution.
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+                <Phone className="mr-2 h-5 w-5" />
+                Call Now
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+                <Mail className="mr-2 h-5 w-5" />
+                Email Us
+  )
+}
+export default PagePage</div></div></div></button></button></p></p></p></h2></h3></section>
+>>>>>>> origin/main

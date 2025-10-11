@@ -1,234 +1,222 @@
-import React, { useEffect } from 'react';
-
-const AccessibilityEnhancer: React.FC = () => {
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
-
-    // Skip to main content functionality
-    const addSkipToMainContent = () => {
-      const skipLink = document.createElement('a');
-      skipLink.href = '#main-content';
-      skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
-      skipLink.style.cssText = `
-        position: absolute;
-        top: -40px;
-        left: 6px;
-        background: #2563eb;
-        color: white;
-        padding: 8px;
-        text-decoration: none;
-        border-radius: 4px;
-        z-index: 1000;
-        transition: top 0.3s;
-      `;
-      
-      skipLink.addEventListener('focus', () => {
-        skipLink.style.top = '6px';
-      });
-      
-      skipLink.addEventListener('blur', () => {
-        skipLink.style.top = '-40px';
-      });
-      
-      document.body.insertBefore(skipLink, document.body.firstChild);
-    };
-
-    // Add ARIA landmarks
-    const addAriaLandmarks = () => {
-      const main = document.querySelector('main');
-      if (main && !main.getAttribute('id')) {
-        main.id = 'main-content';
-        main.setAttribute('role', 'main');
-        main.setAttribute('aria-label', 'Main content');
-      }
-
-      const header = document.querySelector('header');
-      if (header && !header.getAttribute('role')) {
-        header.setAttribute('role', 'banner');
-      }
-
-      const footer = document.querySelector('footer');
-      if (footer && !footer.getAttribute('role')) {
-        footer.setAttribute('role', 'contentinfo');
-      }
-
-      const nav = document.querySelector('nav');
-      if (nav && !nav.getAttribute('role')) {
-        nav.setAttribute('role', 'navigation');
-        nav.setAttribute('aria-label', 'Main navigation');
-      }
-    };
-
-    // Enhance focus management
-    const enhanceFocusManagement = () => {
-      // Add focus indicators for keyboard navigation
-      const style = document.createElement('style');
-      style.textContent = `
-        *:focus {
-          outline: 2px solid #2563eb;
-          outline-offset: 2px;
-        }
-        
-        .focus-visible:focus {
-          outline: 2px solid #2563eb;
-          outline-offset: 2px;
-        }
-        
-        .sr-only {
-          position: absolute;
-          width: 1px;
-          height: 1px;
-          padding: 0;
-          margin: -1px;
-          overflow: hidden;
-          clip: rect(0, 0, 0, 0);
-          white-space: nowrap;
-          border: 0;
-        }
-        
-        .sr-only:focus {
-          position: static;
-          width: auto;
-          height: auto;
-          padding: inherit;
-          margin: inherit;
-          overflow: visible;
-          clip: auto;
-          white-space: normal;
-        }
-      `;
-      document.head.appendChild(style);
-    };
-
+import React, { useEffect } from 'react'
+interface AccessibilityEnhancerProps {
+    children: React.ReactNode
+  }
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+    </AccessibilityEnhancerProps>useEffect</AccessibilityEnhancerProps>(() => {
     // Add keyboard navigation support
-    const addKeyboardNavigation = () => {
-      // Handle escape key for modals and dropdowns
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-          const activeElement = document.activeElement as HTMLElement;
-          if (activeElement && activeElement.blur) {
-            activeElement.blur();
-          }
-        }
-      });
-
-      // Handle tab navigation for custom components
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Tab') {
-          const focusableElements = document.querySelectorAll(
-            'a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select'
-          );
-          const focusableArray = Array.from(focusableElements) as HTMLElement[];
-          const currentIndex = focusableArray.indexOf(document.activeElement as HTMLElement);
-          
-          if (e.shiftKey) {
-            // Shift + Tab (backwards)
-            if (currentIndex > 0) {
-              focusableArray[currentIndex - 1].focus();
-            } else {
-              focusableArray[focusableArray.length - 1].focus();
-            }
-          } else {
-            // Tab (forwards)
-            if (currentIndex < focusableArray.length - 1) {
-              focusableArray[currentIndex + 1].focus();
-            } else {
-              focusableArray[0].focus();
-            }
-          }
-        }
-      });
-    };
-
-    // Add screen reader announcements
-    const addScreenReaderAnnouncements = () => {
-      const announcementDiv = document.createElement('div');
-      announcementDiv.setAttribute('aria-live', 'polite');
-      announcementDiv.setAttribute('aria-atomic', 'true');
-      announcementDiv.className = 'sr-only';
-      announcementDiv.id = 'screen-reader-announcements';
-      document.body.appendChild(announcementDiv);
-
-      // Function to announce messages to screen readers
-      (window as any).announceToScreenReader = (message: string) => {
-        announcementDiv.textContent = message;
-        setTimeout(() => {
-          announcementDiv.textContent = '';
-        }, 1000);
-      };
-    };
-
-    // Add high contrast mode support
-    const addHighContrastSupport = () => {
-      const style = document.createElement('style');
-      style.textContent = `
-        @media (prefers-contrast: high) {
-          * {
-            background-color: white !important;
-            color: black !important;
-            border-color: black !important;
-          }
-          
-          a {
-            text-decoration: underline !important;
-          }
-          
-          button {
-            border: 2px solid black !important;
-          }
-        }
-      `;
-      document.head.appendChild(style);
-    };
-
-    // Add reduced motion support
-    const addReducedMotionSupport = () => {
-      const style = document.createElement('style');
-      style.textContent = `
-        @media (prefers-reduced-motion: reduce) {
-          *,
-          *::before,
-          *::after {
-            animation-duration: 0.01ms !important;
-            animation-iteration-count: 1 !important;
-            transition-duration: 0.01ms !important;
-            scroll-behavior: auto !important;
-          }
-        }
-      `;
-      document.head.appendChild(style);
-    };
-
-    // Initialize all accessibility enhancements
-    addSkipToMainContent();
-    addAriaLandmarks();
-    enhanceFocusManagement();
-    addKeyboardNavigation();
-    addScreenReaderAnnouncements();
-    addHighContrastSupport();
-    addReducedMotionSupport();
-
-    // Add loading state announcements
-    const announceLoadingState = () => {
-      if ((window as any).announceToScreenReader) {
-        (window as any).announceToScreenReader('Page loaded successfully');
-      }
-    };
-
-    // Announce when page is fully loaded
-    if (document.readyState === 'complete') {
-      announceLoadingState();
-    } else {
-      window.addEventListener('load', announceLoadingState);
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Tab') {
+        document.body.classList.add('keyboard-navigation')
+  }
     }
-
+    const handleMouseDown = () => {
+    document.body.classList.remove('keyboard-navigation')
+  }
+    // Add focus indicators
+    const addFocusIndicators = () => {
+    const style = document.createElement('style')
+      style.textContent = `
+        .keyboard-navigation *:focus {
+          outline: 2 px solid #06 b6 d4 !important,
+          outline-offset: 2 px !important
+  }
+      `
+      document.head.appendChild(style)
+    }
+    // Add ARIA labels to interactive elements
+    const enhanceAccessibility = () => {
+    const buttons = document.querySelectorAll('button: not([aria-label])'),
+      buttons.forEach(button => {
+        if (!button.getAttribute('aria-label') && button.textContent) {
+          button.setAttribute('aria-label', button.textContent.trim())
+  }
+        // Add role if missing
+        if (!button.getAttribute('role')) {
+    button.setAttribute('role', 'button')
+  }
+      const links = document.querySelectorAll('a: not([aria-label])'),
+      links.forEach(link => {
+    if (!link.getAttribute('aria-label') && link.textContent) {
+          link.setAttribute('aria-label', link.textContent.trim())
+  }
+        // Add external link indicators
+        if (link.getAttribute('href')?.startsWith('http') && !link.getAttribute('href')?.includes('ziontechgroup.com')) {
+          link.setAttribute('aria-label', `${link.textContent?.trim()} (opens in new tab)`)
+          link.setAttribute('target', '_blank')
+          link.setAttribute('rel', 'noopener noreferrer')
+        }
+      })
+      // Add ARIA labels to images
+      const images = document.querySelectorAll('img: not([alt])'),
+      images.forEach(img => {
+    if (!img.getAttribute('alt')) {
+          img.setAttribute('alt', '')
+  }
+      })
+      // Add ARIA labels to form inputs
+      const inputs = document.querySelectorAll('input: not([aria-label])'),
+      inputs.forEach(input => {
+        const label = document.querySelector(`label[for="${input.getAttribute('id')}"]`)
+        if (label && !input.getAttribute('aria-label')) {
+    input.setAttribute('aria-label', label.textContent?.trim() || '')
+  }
+      })
+      // Add skip links
+      const skipLink = document.createElement('a')
+      skipLink.href = '#main-content'
+      skipLink.textContent = 'Skip to main content'
+      skipLink.className = 'sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50',
+      document.body.insertBefore(skipLink, document.body.firstChild)
+    }
+    addFocusIndicators()
+    enhanceAccessibility()
+    document.addEventListener('keydown', handleKeyDown)
+    document.addEventListener('mousedown', handleMouseDown)
     return () => {
-      window.removeEventListener('load', announceLoadingState);
-    };
-  }, []);
-
-  return null; // This component doesn't render anything
-};
-
-export default AccessibilityEnhancer;
+    document.removeEventListener('keydown', handleKeyDown)
+      document.removeEventListener('mousedown', handleMouseDown)
+  }
+  }, [])
+  return <React.Fragment>{children}</React.Fragment>
+import React, { useEffect, useState } from 'react'
+interface AccessibilitySettings {
+    highContrast: boolean
+  reducedMotion: boolean
+  fontSize: 'small' | 'medium' | 'large',
+  focusVisible: boolean
+  }
+const AccessibilityEnhancer: React.FC = () => {
+  const [settings, setSettings] = useState<AccessibilitySettings>({
+    highContrast: false,
+    reducedMotion: false,
+    fontSize: 'medium',
+    focusVisible: false})
+  useEffect(() => {
+    // Check for user preferences
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches,
+    setSettings(prev => ({
+      ...prev,
+      reducedMotion: prefersReducedMotion,
+      highContrast: prefersHighContrast}))
+    // Apply accessibility settings
+    const root = document.documentElement
+    if (settings.highContrast) {
+    root.classList.add('high-contrast')
+  } else {
+    root.classList.remove('high-contrast')
+  }
+    if (settings.reducedMotion) {
+    root.classList.add('reduced-motion')
+  } else {
+    root.classList.remove('reduced-motion')
+  }
+    // Font size
+    root.classList.remove('font-small', 'font-medium', 'font-large')
+    root.classList.add(`font-${settings.fontSize}`)
+    // Focus visible
+    if (settings.focusVisible) {
+    root.classList.add('focus-visible')
+  } else {
+    root.classList.remove('focus-visible')
+  }
+    // Add keyboard navigation support
+    const handleKeyDown = (e: KeyboardEvent) => {
+    // Skip to main content
+      if (e.key === 'Tab' && e.shiftKey && e.target === document.body) {
+        const mainContent = document.querySelector('main, [role="main"]')
+        if (mainContent) {
+          (mainContent as HTMLElement).focus()
+          e.preventDefault()
+  }
+      }
+      // Escape key to close modals/dropdowns
+      if (e.key === 'Escape') {
+    const activeElement = document.activeElement as HTMLElement
+        if (activeElement && activeElement.blur) {
+          activeElement.blur()
+  }
+      }
+    }
+    document.addEventListener('keydown', handleKeyDown)
+    return () => {
+    document.removeEventListener('keydown', handleKeyDown)
+  }
+  }, [settings])
+  // Add ARIA live region for announcements
+  useEffect(() => {
+    const liveRegion = document.createElement('div')
+    liveRegion.setAttribute('aria-live', 'polite')
+    liveRegion.setAttribute('aria-atomic', 'true')
+    liveRegion.className = 'sr-only'
+    liveRegion.id = 'live-region'
+    document.body.appendChild(liveRegion)
+    return () => {
+      const existingLiveRegion = document.getElementById('live-region')
+      if (existingLiveRegion) {
+        existingLiveRegion.remove()
+  }
+    }
+  }, [])
+  // Announce page changes
+  useEffect(() => {
+    const announcePageChange = () => {
+      const liveRegion = document.getElementById('live-region')
+      if (liveRegion) {
+        const pageTitle = document.title
+        liveRegion.textContent = `Page loaded: ${pageTitle}`
+      }
+    }
+    // Announce after a short delay to ensure content is loaded
+    const timeoutId = setTimeout(announcePageChange, 1000)
+    return () => clearTimeout(timeoutId)
+  }, [])
+  // Don't render anything in production
+  if (process.env.NODE_ENV === 'production') {
+    return null
+  }
+  return (
+    <div className="fixed top-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs z-50">
+      <div className="mb-2 font-bold">Accessibility Settings
+      <div className="space-y-2">
+        <label className="flex items-center space-x-2">
+          <input
+            type="checkbox"
+            checked={settings.highContrast}
+            onChange={(e) => setSettings(prev => ({ ...prev, highContrast: e.target.checked }))}
+            className="rounded"
+          />
+          <span>High Contrast
+        <label className="flex items-center space-x-2">
+          <input
+            type="checkbox"
+            checked={settings.reducedMotion}
+            onChange={(e) => setSettings(prev => ({ ...prev, reducedMotion: e.target.checked }))}
+            className="rounded"
+          />
+          <span>Reduced Motion
+        <div>
+          <label className="block mb-1">Font Size:
+          <select
+            value={settings.fontSize}
+            onChange={(e) => setSettings(prev => ({ ...prev, fontSize: e.target.value as any }))}
+            className="bg-gray-700 text-white rounded px-2 py-1">
+            <option value="small">Small
+            <option value="medium">Medium
+            <option value="large">Large
+        <label className="flex items-center space-x-2">
+          <input
+            type="checkbox"
+            checked={settings.focusVisible}
+            onChange={(e) => setSettings(prev => ({ ...prev, focusVisible: e.target.checked }))}
+            className="rounded"
+          />
+          <span>Focus Visible</span>
+        </label>
+      </div>
+    </div>
+  )
+}
+export default AccessibilityEnhancer</AccessibilitySettings>
+</div></div></span></span>
