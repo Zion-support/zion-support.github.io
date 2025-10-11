@@ -78,6 +78,10 @@ const DynamicContentShowcase: React.FC = () => {
       }, 5000);
       return () => clearInterval(interval);
     }
+    
+    return () => {
+      // No cleanup needed when not playing
+    };
   }, [isPlaying, testimonials.length]);
 
   const nextTestimonial = () => {

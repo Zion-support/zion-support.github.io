@@ -31,8 +31,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   });
 
   const measureWebVitals = useCallback(() => {
-    if (typeof window === 'undefined' || !('performance' in window)) return;
-    if (typeof PerformanceObserver === 'undefined') return;
+    if (typeof window === 'undefined' || !('performance' in window)) return () => {};
+    if (typeof PerformanceObserver === 'undefined') return () => {};
 
     const observers: PerformanceObserver[] = [];
 
@@ -51,7 +51,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
         observers.push(lcpObserver);
       } catch (error) {
-        // eslint-disable-next-line no-console
+         
       }
     }
 
@@ -77,7 +77,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         fidObserver.observe({ entryTypes: ['first-input'] });
         observers.push(fidObserver);
       } catch (error) {
-        // eslint-disable-next-line no-console
+         
       }
     }
 
@@ -104,7 +104,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         clsObserver.observe({ entryTypes: ['layout-shift'] });
         observers.push(clsObserver);
       } catch (error) {
-        // eslint-disable-next-line no-console
+         
       }
     }
 
@@ -128,7 +128,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         memory,
       }));
     } catch (error) {
-      // eslint-disable-next-line no-console
+       
     }
 
     // Cleanup observers
@@ -137,7 +137,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         try {
           observer.disconnect();
         } catch (error) {
-          // eslint-disable-next-line no-console
+           
         }
       });
     };
@@ -153,7 +153,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
     if (slowResources.length > 0) {
        
-      // eslint-disable-next-line no-console
+       
+      console.log(
         'Slow resources detected:',
         slowResources.map((r: PerformanceResourceTiming) => ({
           name: r.name,
@@ -165,7 +166,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   }, []);
 
   const measureCoreWebVitals = useCallback(() => {
-    if (typeof window === 'undefined') return;
+    if (typeof window === 'undefined') return () => {};
 
     // Use web-vitals library if available
     try {
@@ -200,10 +201,14 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     } catch {
       // web-vitals not available, continue without it
     }
+    
+    return () => {
+      // Cleanup function for web-vitals
+    };
   }, []);
 
   useEffect(() => {
-    if (!enableRealTimeMonitoring) return;
+    if (!enableRealTimeMonitoring) return () => {};
 
     const cleanup = measureWebVitals();
     measureResourceTiming();

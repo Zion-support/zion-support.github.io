@@ -59,6 +59,10 @@ const ContentCarousel: React.FC = () => {
       }, 5000);
       return () => clearInterval(timer);
     }
+    
+    return () => {
+      // No cleanup needed when not playing
+    };
   }, [isPlaying, slides.length]);
 
   const nextSlide = () => {

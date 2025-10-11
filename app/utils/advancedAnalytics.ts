@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-// Utility file: advancedAnalytics
-export const advancedAnalytics = {
-  // Utility functions will be implemented here
-};
-=======
 /**
  * Advanced Analytics Utility
  * Provides comprehensive analytics tracking and reporting functionality
@@ -327,4 +321,3 @@ export const trackPageView = (page?: string) => {
   // This would be implemented with a global analytics instance
   console.log('Track page view:', page);
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-c587

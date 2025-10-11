@@ -1,10 +1,6 @@
 'use client';
 
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
-=======
-import React, { useState, useMemo } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-c587
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Search, Calendar, User, Clock, ArrowRight, Tag } from 'lucide-react';
@@ -19,38 +15,22 @@ interface BlogPost {
   readTime: string;
   category: string;
   tags: string[];
-<<<<<<< HEAD
-  image: string;
-  featured: boolean;
-=======
   featured: boolean;
   image: string;
->>>>>>> cursor/fix-errors-and-merge-to-main-c587
 }
 
 const BlogPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-<<<<<<< HEAD
-  const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>([]);
-
-=======
 
   // Sample blog posts data
->>>>>>> cursor/fix-errors-and-merge-to-main-c587
   const blogPosts: BlogPost[] = [
     {
       id: '1',
       title: 'The Future of AI in Enterprise Solutions',
-<<<<<<< HEAD
-      excerpt: 'Exploring how artificial intelligence is transforming enterprise operations and what businesses need to know.',
-      content: 'Full article content here...',
-      author: 'Dr. Sarah Johnson',
-=======
       excerpt: 'Exploring how artificial intelligence is transforming business operations and creating new opportunities for growth.',
       content: 'Full article content...',
       author: 'Dr. Sarah Chen',
->>>>>>> cursor/fix-errors-and-merge-to-main-c587
       date: '2024-01-15',
       readTime: '5 min read',
       category: 'AI',
@@ -103,57 +83,14 @@ const BlogPage: React.FC = () => {
       filtered = filtered.filter(post => post.category === selectedCategory);
     }
 
-<<<<<<< HEAD
-    setFilteredPosts(filtered);
-  }, [searchTerm, selectedCategory]);
-
-  const handleSearch = (value: string) => {
-    setSearchTerm(value);
-  };
-=======
     return filtered;
   }, [searchTerm, selectedCategory]);
 
   const featuredPosts = blogPosts.filter(post => post.featured);
->>>>>>> cursor/fix-errors-and-merge-to-main-c587
 
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
-        <title>Blog - Zion Tech Group | AI & IT Insights</title>
-        <meta name="description" content="Stay updated with the latest insights on AI, cloud computing, cybersecurity, and IT solutions from our expert team." />
-        <meta name="keywords" content="AI blog, IT insights, technology trends, cloud computing, cybersecurity, software development" />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Tech <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Insights</span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Stay ahead with expert insights on AI, cloud computing, cybersecurity, and the latest technology trends.
-            </p>
-            
-            {/* Search Bar */}
-            <div className="max-w-2xl mx-auto mb-8">
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search articles..."
-                  value={searchTerm}
-                  onChange={(e) => handleSearch(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
-                />
-              </div>
-            </div>
-
-            {/* Category Filter */}
-            <div className="flex flex-wrap justify-center gap-2 mb-8">
-=======
         <title>Blog - Zion Tech Group</title>
         <meta name="description" content="Stay updated with the latest insights in AI, cloud computing, cybersecurity, and technology trends from Zion Tech Group experts." />
         <meta name="keywords" content="tech blog, AI insights, cloud computing, cybersecurity, technology trends" />
@@ -227,22 +164,14 @@ const BlogPage: React.FC = () => {
           <div className="container mx-auto px-4">
             {/* Category Filter */}
             <div className="flex flex-wrap justify-center gap-4 mb-12">
->>>>>>> cursor/fix-errors-and-merge-to-main-c587
               {categories.map((category) => (
                 <button
                   key={category}
                   onClick={() => setSelectedCategory(category)}
-<<<<<<< HEAD
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                    selectedCategory === category
-                      ? 'bg-purple-500 text-white'
-                      : 'bg-white/10 text-gray-300 hover:bg-white/20'
-=======
                   className={`px-6 py-3 rounded-full font-medium transition-colors ${
                     selectedCategory === category
                       ? 'bg-blue-600 text-white'
                       : 'bg-white text-gray-700 hover:bg-gray-100'
->>>>>>> cursor/fix-errors-and-merge-to-main-c587
                   }`}
                 >
                   {category}
@@ -250,32 +179,6 @@ const BlogPage: React.FC = () => {
               ))}
             </div>
 
-<<<<<<< HEAD
-        {/* Blog Posts */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredPosts.map((post) => (
-                <article key={post.id} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                  {post.featured && (
-                    <div className="flex items-center gap-2 mb-4">
-                      <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
-                      <span className="text-purple-400 text-sm font-semibold">Featured</span>
-                    </div>
-                  )}
-                  
-                  <div className="mb-4">
-                    <div className="flex items-center justify-between text-sm text-gray-400 mb-2">
-                      <div className="flex items-center space-x-4">
-                        <div className="flex items-center space-x-1">
-                          <User className="w-4 h-4" />
-                          <span>{post.author}</span>
-                        </div>
-                        <div className="flex items-center space-x-1">
-                          <Calendar className="w-4 h-4" />
-                          <span>{post.date}</span>
-                        </div>
-=======
             {/* Posts Grid */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredPosts.map((post) => (
@@ -292,7 +195,6 @@ const BlogPage: React.FC = () => {
                       <div className="flex items-center text-sm text-gray-500">
                         <User className="w-4 h-4 mr-2" />
                         <span>{post.author}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-c587
                       </div>
                       <div className="flex items-center text-sm text-gray-500">
                         <Calendar className="w-4 h-4 mr-2" />
@@ -312,37 +214,11 @@ const BlogPage: React.FC = () => {
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </Link>
                     </div>
-<<<<<<< HEAD
-                    
-                    <h3 className="text-xl font-bold text-white mb-3 hover:text-purple-400 transition-colors">
-                      {post.title}
-                    </h3>
-                    
-                    <p className="text-gray-300 mb-4 line-clamp-3">
-                      {post.excerpt}
-                    </p>
-                    
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center space-x-2">
-                        <Tag className="w-4 h-4 text-gray-400" />
-                        <span className="text-sm text-gray-400">{post.category}</span>
-                      </div>
-                      <button className="flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors font-medium">
-                        <span>Read More</span>
-                        <ArrowRight className="w-4 h-4" />
-                      </button>
-                    </div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-c587
                   </div>
                 </article>
               ))}
             </div>
-<<<<<<< HEAD
-            
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-c587
             {filteredPosts.length === 0 && (
               <div className="text-center py-12">
                 <p className="text-gray-500 text-lg">No articles found matching your criteria.</p>

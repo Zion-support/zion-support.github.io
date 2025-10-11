@@ -120,7 +120,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     if (enableHighContrast && typeof window !== 'undefined') {
       const prefersHighContrast = window.matchMedia('(prefers-contrast: high)');
       
-      const updateHighContrast = (e: MediaQueryListEvent) => {
+      const updateHighContrast = (e: MediaQueryListEvent | MediaQueryList) => {
         if (e.matches) {
           document.documentElement.classList.add('high-contrast');
         } else {
@@ -128,11 +128,16 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         }
       };
 
-      prefersHighContrast.addEventListener('change', updateHighContrast);
+      const handleChange = (e: MediaQueryListEvent) => updateHighContrast(e);
+      prefersHighContrast.addEventListener('change', handleChange);
       updateHighContrast(prefersHighContrast);
 
-      return () => prefersHighContrast.removeEventListener('change', updateHighContrast);
+      return () => prefersHighContrast.removeEventListener('change', handleChange);
     }
+    
+    return () => {
+      // No cleanup needed
+    };
   }, [enableKeyboardNavigation, enableScreenReaderSupport, enableHighContrast, enableFocusManagement]);
 
   return null;
