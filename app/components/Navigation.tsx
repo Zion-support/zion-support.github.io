@@ -1,56 +1,17 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-099c
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone } from 'lucide-react'
-
-export default function Navigation() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [isServicesOpen, setIsServicesOpen] = useState(false)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone, Brain, Cpu, Server, Wifi } from 'lucide-react'
-=======
-import { Menu, X, ChevronDown, Cloud, Code, Smartphone, Brain, Cpu, Wifi } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-e951
+import { Menu, X, ChevronDown, Cloud, Code, Smartphone, Brain, Cpu, Wifi, Database, Shield, Globe } from 'lucide-react'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
-<<<<<<< HEAD
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-59b6
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-099c
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e951
   
   const toggleMenu = () => {
     setIsOpen(!isOpen)
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-099c
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
-  const toggleServices = () => {
-    setIsServicesOpen(!isServicesOpen)
-=======
   const toggleDropdown = (dropdown: string) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
->>>>>>> cursor/fix-errors-and-merge-to-main-e951
   }
 
   const services = [

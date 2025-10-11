@@ -1,24 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-import { Mail, Phone, MapPin } from 'lucide-react'
-
-export default function Footer() {
-  return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div>
-            <div className="flex items-center mb-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mr-2">
-                <span className="text-white font-bold text-sm">Z</span>
-=======
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud, Shield, Globe, Database, Code, Smartphone } from 'lucide-react';
-=======
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Code, Smartphone } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-e951
 
 export default function Footer() {
   const aiServices = [
