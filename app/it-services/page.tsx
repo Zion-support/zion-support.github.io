@@ -1,137 +1,42 @@
+'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async'
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import { Helmet } from 'react-helmet-async';
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
 
-const ITServicesPage: React.FC = () => {const services = [
-    {} id: 1,
-    };,
-title: 'Cloud Infrastructure',;,
-description: 'Scalable and secure cloud solutions for your business needs.',;,
-icon: Cloud,,
-    }
-    {;,
-id: 2,;,
-title: 'Cybersecurity',;,
-description: 'Comprehensive security solutions to protect your digital assets.',;,
-icon: Shield,;,
-features: ['Security Audit', 'Penetration Testing', 'Compliance', 'Incident Response'],;,
-price: 'From $1,000/month'} ,
-    {icon: BarChart,
-      title: 'Feature 2', 
-      description: 'Description for feature 2.',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
-    {icon: CheckCircle,
-      title: 'Feature 3',
-      description: 'Description for feature 3.',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ]
-const categories = [
-    {id: 'all', name: 'All Services'} ,
-    {id: 'cloud', name: 'Cloud Services'} ,
-    {id: 'development', name: 'Web Development'} ,
-    {id: 'security', name: 'Cybersecurity'} ,
-    {id: 'database', name: 'Database'} ,
-    {id: 'devops', name: 'DevOps'} ]
-const filteredServices = services.filter(service =>;
-selectedCategory === 'all' || service.category === selectedCategory
-  )
-return (
-    <>
+const PagePage: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gray-50">
       <Helmet>
-        <title>AI Analytics - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
-        <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Professional page services and solutions." />
       </Helmet>
       <Navigation />
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm: px-6 l, g:px-8">
-            </div>
-
-      <Footer />
-    </>
-          </div>
-
-      <Footer />
-    </>
-        </section>
-
-              )
-    </>
-  )
-            </div>
-
-      <Footer />
-    </>
-          </div>
-
-      <Footer />
-    </>
-        </section>
-
-        {/* Services Grid */}
-        <section className="py-16 px-4 sm: px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-Our IT Services>
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform your data into actionable insights with our advanced AI analytics platform
-              </p>
-            </div>
-
-      <Footer />
-    </>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  </button>
-                </div>
-
-      <Footer />
-    </>
-              ))}
-            </div>
-
-      <Footer />
-    </>
-          </div>
-
-      <Footer />
-    </>
-        </section>
-
-        {/* CTA Section */}
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
-Ready to Optimize Your IT Infrastructure?>
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform your data into actionable insights with our advanced AI analytics platform
-              </p>
+      
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-8">
+              Page
+            </h1>
+            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+              Professional page services and solutions for your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300">
+                Get Started
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
               </button>
             </div>
-
-      <Footer />
-    </>
           </div>
-
+        </div>
+      </main>
+      
       <Footer />
-    </>
-        </section>
-      </div>
-
-      <Footer />
-    </>
-      <Footer />
-    </>
+    </div>
   );
 };
 
+export default PagePage;

@@ -1,45 +1,42 @@
-import { Inter } from 'next/font/google'
-import './globals.css'
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from 'components/Navigation';
+import Footer from 'components/Footer';
 
-const inter = Inter({ subsets: ['latin'] })
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+const LayoutPage: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <html lang="en">
-      <body className={inter.className}>
-        {children}
-      </body>
-    </html>
-  )
-}
-=======
-    <>
-<html lang="en"
-      <head>
-        <Helmet>
-          <title>Zion Tech Group - AI & IT Solutions</title>
-          <meta name="description" content="Leading provider of AI and IT solutions for modern businesses. Transform your operations with cutting-edge technology."
-          <meta name="keywords" content="AI solutions, IT services, artificial intelligence, business automation, technology consulting"
-          <meta name="viewport" content="width=device-width, initial-scale=1"
-<<<<<<< HEAD
-<link rel="icon" href="/favicon.ico">
-        </Helmet>
-      <body className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd
-        <Navigation />
-        <main className="pt-20">
-          {children}
-        </main>
-        <Footer />
-      </body>
-    </>
+    <div className="min-h-screen bg-gray-50">
+      <Helmet>
+        <title>Layout - Zion Tech Group</title>
+        <meta name="description" content="Professional layout services and solutions." />
+      </Helmet>
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-8">
+              Layout
+            </h1>
+            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+              Professional layout services and solutions for your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300">
+                Get Started
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
+      
+      <Footer />
+    </div>
   );
-export default RootLayout
-      </Footer>
->>>>>>> cursor/fix-errors-and-merge-to-main-0f52
+};
+
+export default LayoutPage;

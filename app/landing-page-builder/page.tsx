@@ -1,149 +1,42 @@
-import React from 'react'
-const LandingPageBuilderPage: React.FC = () => {const features = [
-    {} 'Advanced AI technology integration'},
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-const benefits = [
-    'Enhanced productivity and efficiency',
-    'Reduced operational costs',
-    'Improved decision making',
-    'Scalable solutions',
-    '24/7 availability',
-    'Expert support'
-  ]
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
 
-return (
-    <>
-
+const PagePage: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gray-50">
       <Helmet>
-        <title>AI Analytics - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
-        <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Professional page services and solutions." />
       </Helmet>
       <Navigation />
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Page Title - Zion Tech Group</title>
-        <meta name="description" content="Description of the page and its benefits."
-        <meta name="keywords" content="relevant, keywords, for, seo"
-      </Helmet />
-
-    'Cost-effective pricing plans',
-          </div&gt
-        </div&gt
-              </div&gt
-    'Proven track record of success'
-  ]
-const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ]
-return (
-      <Helmet>
-        <title>AI Analytics - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
-        <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
-      </Helmet>
-      <Navigation />
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Landing Page Builder - Zion Tech Group</title>
-        <meta name="description" content="AI-powered landing page builder solution for intelligent automation and optimization" />
-        <meta name="keywords" content="AI, landing, page, builder, automation, artificial intelligence, business solutions" />
-      </Helmet>
-
-      <Navigation />
-<<<<<<< HEAD
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-sky-900 to-slate-900">
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-52bd
-        {/* Hero Section */}
-        <section className="py-20 px-4 relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse">
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md: text-7xl font-bold text-white mb-6">
-Landing Page Builder
+      
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-8">
+              Page
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-AI-powered landing page builder solution for intelligent automation and optimization
+            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+              Professional page services and solutions for your business needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
-Get Started
+              <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300">
+                Get Started
               </button>
-              <button className=">
-    ,>
-    r: bg-cyan-400 hove, r:text-white transition-all duration-300">
-Learn More
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Learn More
               </button>
             </div>
-
-      <Footer />
-    </>
           </div>
-
+        </div>
+      </main>
+      
       <Footer />
-    </>
-        </section>
+    </div>
+  );
+};
 
-        {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-                  <p className="text-gray-300 mb-4">
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit
-    </>
-  );, idx) => (
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2">
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-
-      <Footer />
-    </>
-              ))}
-            </div>
-
-      <Footer />
-    </>
-          </div>
-
-      <Footer />
-    </>
-        </section>
-
-        {/* Benefits Section */}
-                </div>
-
-      <Footer />
-    </>
-              ))}
-            </div>
-
-      <Footer />
-    </>
-          </div>
-
-      <Footer />
-    </>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-  </div>
-
-      <Footer />
-    </>
+export default PagePage;
