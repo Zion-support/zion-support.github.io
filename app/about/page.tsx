@@ -1,5 +1,4 @@
 'use client'
-import { CheckCircle } from 'lucide-react'
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

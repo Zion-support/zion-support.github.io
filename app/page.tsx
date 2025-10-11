@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import Navigation from './components/Navigation';
@@ -53,32 +52,6 @@ const HomePage: React.FC = () => {
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
                 Advanced AI and IT Solutions for Modern Businesses
-=======
-'use client'
-import React from 'react'
-import {CheckCircle, Cloud, Shield, Code, Wifi} from 'lucide-react'
-const AppPage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <main className="pt-20 px-4 py-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional app services delivered by experienced professionals.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="flex items-center mb-4">
-                <CheckCircle className="h-8 w-8 text-green-400 mr-3" />
-                <h3 className="text-xl font-semibold text-white">Expert Solutions</h3>
-              </div>
-              <p className="text-gray-300 mb-4">
-                Professional app services delivered by experienced professionals.
->>>>>>> cursor/fix-errors-and-merge-to-main-6202
               </p>
             </div>
             
@@ -113,7 +86,6 @@ const AppPage: React.FC = () => {
               ))}
             </div>
           </div>
-<<<<<<< HEAD
         </main>
       </div>
       
@@ -123,11 +95,3 @@ const AppPage: React.FC = () => {
 };
 
 export default HomePage;
-=======
-        </div>
-      </main>
-    </div>
-  )
-}
-export default AppPage
->>>>>>> cursor/fix-errors-and-merge-to-main-6202

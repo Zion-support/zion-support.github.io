@@ -5,6 +5,7 @@ import {ArrowRight} from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 export default function AiApiManagementPage() {
+  const features = [
     {
       title: 'Expert Solutions',
       description: 'Professional page services delivered by experienced professionals.',
@@ -91,7 +92,7 @@ export default function AiApiManagementPage() {
         </div>
       </main>
     </div>
-  )
+  );
 }
 
-export default AiApiManagementPage
+export default AiApiManagementPage;
