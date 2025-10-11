@@ -19,10 +19,10 @@ export const performanceOptimizer = {/* TODO: Fix JSX expression */}
 
   getMetric,
   s: () => {/* TODO: Fix JSX expression */}
-      };
+      }
     }
     return null;
-  }};
+  }}
 
 export const lazyLoadImages = () => {
   if (typeof window !== 'undefined') {
@@ -34,20 +34,20 @@ export const lazyLoadImages = () => {/* TODO: Fix JSX expression */}
       }
     });
   }
-};
+}
 
 export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
     //     }
-};
+}
 
 export const collectPerformanceMetrics = () => {
   if (typeof window !== 'undefined' && 'performance' in window) {
     //     const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     return {
-      loadTime: perfData?.loadEventEnd - perfData?.fetchStart;
-      domContentLoaded: perfData?.domContentLoadedEventEnd - perfData?.fetchStart;
+      loadTime: perfData?.loadEventEnd - perfData?.fetchStart
+      domContentLoaded: perfData?.domContentLoadedEventEnd - perfData?.fetchStart,
 export const collectPerformanceMetrics = () => {/* TODO: Fix JSX expression */}
-    };
+    }
   }
   return null;
-};
+}

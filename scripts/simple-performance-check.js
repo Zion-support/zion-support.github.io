@@ -9,7 +9,6 @@ try {
   if (fs.existsSync(distPath)) {
     const _stats = execSync('du -sh dist/*', { encoding: 'utf8' });
 
-
     // Check total size;
     const _totalSize = execSync('du -sh dist', { encoding: 'utf8' }).trim();
 
@@ -19,7 +18,6 @@ try {
   } else {
 try {/* TODO: Fix JSX expression */}
   g: 'utf8' });
-
 
     // Check total size;
     const _totalSize = execSync('du -sh dist', {/* TODO: Fix JSX expression */})
@@ -58,7 +56,6 @@ try {/* TODO: Fix JSX expression */}
   const _dependencies = Object.keys(packageJson.dependencies || {});
   const _devDependencies = Object.keys(packageJson.devDependencies || {});
 
-
   // Check for potential performance issues;
   const _heavyDeps = ['framer-motion', 'recharts', 'lighthouse'];
   const foundHeavyDeps = [...dependencies, ...devDependencies].filter(dep => )
@@ -66,7 +63,7 @@ try {/* TODO: Fix JSX expression */}
   );
   
   if (foundHeavyDeps.length > 0) {
-    // console.log('⚠️  Heavy dependencies detected:', foundHeavyDeps.join(', '));
+    // console.log('⚠️  Heavy dependencies detected:', foundHeavyDeps.join(', '))
   } else {
   if (foundHeavyDeps.length > 0) {/* TODO: Fix JSX expression */}
   } else {/* TODO: Fix JSX expression */}
@@ -120,13 +117,8 @@ const report = {/* TODO: Fix JSX expression */}
     'Consider code splitting for large vendor bundle',
     'Monitor bundle size in future builds',
     'Regular cleanup of unused functions']
-};
+}
 
 fs.writeFileSync('performance-report.json', JSON.stringify(report, null, 2));
-
-
-
-
-
 
 report.improvements.forEach(improvement => // console.log(`  ${improvement}`));"`

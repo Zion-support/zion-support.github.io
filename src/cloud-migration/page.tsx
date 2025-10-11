@@ -198,7 +198,7 @@ const,
               Reduce costs by 40%, improve scalability, and enhance security with zero downtime.
             </p>"
             <div className="flex flex-col,"
-  sm:flex-row gap-4 justify-center"></div>
+  sm: flex-row gap-4 justify-center"></div>
               <Link></Link>"
                 href="/contact""
                 className="cyber-button inline-flex items-center justify-center px-8 py-4 text-lg font-semibold">
@@ -207,7 +207,7 @@ const,
               </Link>"
                 href="/demo""
                 className="cyber-button-outline inline-flex items-center justify-center px-8 py-4 text-lg font-semibold"
-                Free Assessment;
+                Free Assessment,
       {/* Features Section */}"
       <div className="py-20 bg-slate-800/50"></div>"
         <div className="container mx-auto px-4"></div>"
@@ -237,24 +237,24 @@ const,
           <section className="text-center mb-16"></section>"
             <h1 className="text-4xl,
   sm:text-5xl,"
-  md:text-6xl font-bold text-white mb-6"></h1>
+  md: text-6xl font-bold text-white mb-6"></h1>
               Cloud Migration Services;"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
-              Seamlessly migrate your applications and data to the cloud with our expert migration services;
+              Seamlessly migrate your applications and data to the cloud with our expert migration services,
               <a></a>"
                 className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold,"
-  hover:bg-blue-700 transition-colors inline-flex items-center"
-                Get Started;
+  hover: bg-blue-700 transition-colors inline-flex items-center"
+                Get Started,
               </a>"
                 className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold,
   hover:bg-blue-600,"
-  hover:text-white transition-all duration-300 inline-flex items-center"
-                View Demo;
+  hover: text-white transition-all duration-300 inline-flex items-center"
+                View Demo
           </section>
 "
           <section className="mb-16"></section>"
             <h2 className="text-3xl font-bold text-center text-white mb-12"></h2>
-              Our Migration Services;
+              Our Migration Services,
             </h2>"
             <div className="grid grid-cols-1,
   md:grid-cols-2,"
@@ -315,7 +315,7 @@ const,
   n: {step.duration}</div>
       {/* Benefits Section */}"
           <div className="grid grid-cols-1,"
-  lg:grid-cols-2 gap-12 items-center"></div>
+  lg: grid-cols-2 gap-12 items-center"></div>
             <div></div>"
               <h2 className="text-4xl font-bold text-white mb-6">Why Choose Our Cloud Migration?</h2>"
               <div className="space-y-6"></div>"
@@ -347,7 +347,7 @@ const,
           <h2 className="text-4xl font-bold text-white mb-6"></h2>
             Accelerate Your Cloud Journey;"
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
-            Don't let outdated infrastructure hold your business back. Our cloud migration;
+            Don't let outdated infrastructure hold your business back. Our cloud migration,
             services will help you modernize, scale, and compete in the digital economy.
               Start Your Migration;"
       <section className="py-16 px-4"></section>"
@@ -391,9 +391,9 @@ const,
         <h1 className="text-4xl font-bold text-white mb-4">Cloud Migration</h1>"
         <p className="text-gray-300 mb-8">Coming Soon - Seamless cloud migration services</p>"
         <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg,"
-  hover:bg-cyan-600 transition-colors"></a>
-          Contact Us;
-  );
-};
+  hover: bg-cyan-600 transition-colors"></a>
+          Contact Us
+  ),
+}
 export default CloudMigrationPage;
 "`

@@ -154,16 +154,16 @@ function cleanupFunctions() {/* TODO: Fix JSX expression */}
   let _removedCount = 0;
   let _keptCount = 0;
 
-
-  files.forEach(file => {)
+  files.forEach(file => {
+    )
     if (file.endsWith('.js') || file.endsWith('.ts')) {
       if (shouldRemoveFunction(file)) {
         const _filePath = path.join(functionsDir, file);
         try {
           fs.unlinkSync(filePath);
 
-          removedCount++;
-        } catch (error) {}
+          removedCount++
+  } catch (error) {}
       } else {
         keptCount++;
   files.forEach(file => {/* TODO: Fix JSX expression */})
@@ -173,8 +173,6 @@ function cleanupFunctions() {/* TODO: Fix JSX expression */}
       }
     }
   });
-
-
 
 }
 

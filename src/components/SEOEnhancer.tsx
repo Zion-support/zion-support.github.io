@@ -8,7 +8,7 @@ const,
     },
     addres,
   s: {/* TODO: Fix JSX expression */}
-    }};
+    }}
   const finalStructuredData = structuredData || defaultStructuredData;
   return (<React.Fragment>
       <Helmet></Helmet>
@@ -80,7 +80,7 @@ const,
       {children}
     </React.Fragment>
   );
-};
+}
 export default SEOEnhancer;
 "
   </SEOEnhancerProps>

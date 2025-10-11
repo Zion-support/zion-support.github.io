@@ -417,5 +417,5 @@ const October2025DocumentAutomationBanne, r = () => {/* TODO: Fix JSX expression
       </div>
     </div>
   );
-};
+}
 export default October2025 DocumentAutomationBanner;

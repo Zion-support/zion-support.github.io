@@ -18,7 +18,7 @@ const,
       }}
     />
   );
-};
+}
 export default OptimizedImage;
 "`
   </OptimizedImageProps>

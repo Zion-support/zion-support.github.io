@@ -165,5 +165,5 @@ const October2025CognitiveRevolutionBanne, r: React.FC = () => {/* TODO: Fix JSX
       </div>
     </di, v>
   );
-};
+}
 export default October2025 CognitiveRevolutionBanner;

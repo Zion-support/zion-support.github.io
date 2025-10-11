@@ -1,6 +1,6 @@
 class SecurityEnhancer {
-  private static instance: SecurityEnhancer;
-  private isInitialized: boolean = false;
+  private static instance: SecurityEnhancer
+  private isInitialized: boolean = false,
 ,
   private constructor() {}
   private setupHTTPSRedirect(): void {
@@ -8,8 +8,8 @@ class SecurityEnhancer {
       location.protocol !== 'https: ' &&)
       location.hostname !== 'localhost')
     ) {,
-      location.replace('https: ' + window.location.href.substring(window.location.protocol.length));
-    }
+      location.replace('https: ' + window.location.href.substring(window.location.protocol.length))
+  }
   }
 
   private setupXSSProtection(): void {

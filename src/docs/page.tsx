@@ -159,12 +159,12 @@ const DocsPage: React.FC = () => {
     : filteredDocs;
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
-      case 'Beginner': return 'text-green-400 bg-green-500/20';
-      case 'Intermediate': return 'text-yellow-400 bg-yellow-500/20';
-      case 'Advanced': return 'text-red-400 bg-red-500/20';
-      default: return 'text-gray-400 bg-gray-500/20';
-    }
-  };
+      case 'Beginner': return 'text-green-400 bg-green-500/20'
+      case 'Intermediate': return 'text-yellow-400 bg-yellow-500/20'
+      case 'Advanced': return 'text-red-400 bg-red-500/20',
+      default: return 'text-gray-400 bg-gray-500/20'
+  }
+  }
   return (
     <React.Fragment>
       <SEOOptimizer
@@ -178,11 +178,11 @@ const DocsPage: React.FC = () => {
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
           <section className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-              Documentation;
+            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text">
+              Documentation
   </
             <p className="text-xl text-cyan-400 mb-8">
-              Everything you need to build with AI;
+              Everything you need to build with AI,
   </
             <p className="text-lg text-gray-300 max-w-4xl mx-auto">
               Comprehensive guides, API references, and tutorials to help you 
@@ -299,18 +299,18 @@ const DocsPage: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8">
                 Start building with our AI services today;
   </
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold inline-flex items-center justify-center">
                   <MessageSquare className="w-5 h-5 mr-2" />
-                  Contact Our Team;
+                  Contact Our Team
   </
                 <Link
                   to="/demo"
                   className="cyber-button-secondary px-8 py-4 text-lg font-semibold inline-flex items-center justify-center">
                   <Play className="w-5 h-5 mr-2" />
-                  Request Demo;
+                  Request Demo
   </
               </div>
             </div>
@@ -319,8 +319,8 @@ const DocsPage: React.FC = () => {
         <Footer />
       </div>
     </React.Fragment>
-  );
-};
+  ),
+}
 export default DocsPage;
   </Link>
   </Link>

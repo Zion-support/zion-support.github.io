@@ -191,6 +191,6 @@ const October2025LatestBreakthroughBanne, r = () => {/* TODO: Fix JSX expression
       </div>
     </div>
   );
-};
+}
 export default October2025LatestBreakthroughBanner;
 "`

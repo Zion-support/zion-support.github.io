@@ -2,7 +2,7 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {
   const, showcaseConten, t = [
     {
       i;
-  d: 1;
+  d: 1,
       tit, l, e: "Enterprise, AI, Transformation Playbook, 202, 6","
       descripti, o, n: "Complete, guide, to achieving, 9, 5% automation, with, Fortune 500, case, studies a, n, d $10, 0, M+ savings, strategie, s","
       sl, u, g: "enterpri, s, e-ai-transformati, o, n-playbo, o, k-20, 2, 6","
@@ -26,7 +26,7 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {
   s: "$10, 0, M+", automati, o, n: "95%", r, o, i: "3, 0, 0%" }";
     }
     {
-      id: 2;
+      id: 2,
       tit, l, e: "AI, Securit, y & Compliance, Masterclas, s","
       descripti, o, n: "Milita, r, y-grade, security, protocols, GDPR, complianc, e, and, zer, o-trust, architecture, for enterprise, AI, systems","
       sl, u, g: "ai-securi, t, y-complian, c, e-mastercla, s, s-20, 2, 6","
@@ -50,7 +50,7 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {
   y: "99.99%", complian, c, e: "1, 0, 0%", threa, t, s: "0" }";
     }
     {
-      id: 3;
+      id: 3,
       tit, l, e: "Quant, u, m-Neural, Computing, Implementation","
       descripti, o, n: "St, e, p-by-step, guide, to implementing, quantu, m-neural, networks, with 1000 x, performance, improvements","
       sl, u, g: "quant, u, m-neur, a, l-computi, n, g-implementati, o, n-20, 2, 6","
@@ -74,7 +74,7 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {
   e: "100, 0, x", efficien, c, y: "95%", spe, e, d: "Lightni, n, g" }";
     }
     {
-      id: 4;
+      id: 4,
       tit, l, e: "Autonomous, Operations, Framework","
       descripti, o, n: "Build, sel, f-healing, systems, with 98% automation, rates, and predictive, maintenance, capabilities","
       sl, u, g: "autonomo, u, s-operatio, n, s-framewo, r, k-20, 2, 6","
@@ -98,7 +98,7 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {
   n: "98%", upti, m, e: "99.9%", efficien, c, y: "85%" }";
     }
     {
-      id: 5;
+      id: 5,
       tit, l, e: "Edge, AI, Deployment at, Enterprise, Scale","
       descripti, o, n: "Distributed, AI, processing across, 1, 0,0, 0, 0+ nodes, with, real-time, decision, making and, local, autonomy","
       sl, u, g: "ed, g, e-ai-deployme, n, t-enterpri, s, e-sca, l, e-20, 2, 6","
@@ -122,7 +122,7 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {
   s: "10,0, 0, 0+", laten, c, y: "<1, m, s", reliabili, t, y: "99.9%" }";
     }
     {
-      id: 6;
+      id: 6,
       tit, l, e: "Me, t, a-Cognitive, AI, Development Gui, d, e","
       descripti, o, n: "Create, AI, systems that, think, about thinking, with, advanced reasoning, and, self-improvement, capabilitie, s","
       sl, u, g: "me, t, a-cogniti, v, e-ai-developme, n, t-gui, d, e-20, 2, 6","
@@ -154,8 +154,8 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {
       {/* Animated, background, effects */}</div>
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-15"></div>
         <div, className="absolute, to, p-0, lef, t-1/3 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>
-        <div, className="absolute, botto, m-0, righ, t-1/3 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>;
-        <div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '4s' }}></d, i, v>;
+        <div, className="absolute, botto, m-0, righ, t-1/3 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>
+        <div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '4s' }}></d, i, v>
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-15">";</div>
         <div, className="absolute, to, p-0, lef, t-1/3 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
         <div, className="absolute, botto, m-0, righ, t-1/3 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>';
@@ -183,8 +183,8 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
       {/* Animated, background, effects */}"
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-15"></div>"
         <div, className="absolute, to, p-0, lef, t-1/3 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>"
-        <div, className="absolute, botto, m-0, righ, t-1/3 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>;"
-        <div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '4s' }}></d, i, v>;"
+        <div, className="absolute, botto, m-0, righ, t-1/3 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>"
+        <div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '4s' }}></d, i, v>"
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-15">";"
         <div, className="absolute, to, p-0, lef, t-1/3 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";"
         <div, className="absolute, botto, m-0, righ, t-1/3 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>';"
@@ -461,7 +461,7 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
                     <Zap, className="w-4 h-4, tex, t-bl, u, e-4, 0, 0  />
                     {conte, n, t.readTi, m, e}
                   </sp, a, n>
-                  <sp, a, n>{new, Dat, e(conte, n, t.da, t, e).toLocaleDateStri, n, g('en-US', { mon, t, h: 'sho, r, t', d, a, y: 'numer, i, c', ye, a, r: 'numer, i, c' })}</sp, a, n>;
+                  <sp, a, n>{new, Dat, e(conte, n, t.da, t, e).toLocaleDateStri, n, g('en-US', { mon, t, h: 'sho, r, t', d, a, y: 'numer, i, c', ye, a, r: 'numer, i, c' })}</sp, a, n>
                 <div, className="flex, item, s-center, justif, y-between, tex, t-sm, tex, t-gr, a, y-400, m, b-8, p, b-6, borde, r-b, borde, r-whi, t, e/15">";</div>
                   <span, className="flex, item, s-center, ga, p-2">";</span>
                 {/* Meta, Inf, o */}"
@@ -470,7 +470,7 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
                     <Zap, className="w-4 h-4, tex, t-bl, u, e-4, 0, 0  /></Zap>
                     {conte, n, t.readTi, m, e}
                   </sp, a, n>
-                  <sp, a, n>{new, Dat, e(conte, n, t.da, t, e).toLocaleDateStri, n, g('en-US', { mon, t, h: 'sho, r, t', d, a, y: 'numer, i, c', ye, a, r: 'numer, i, c' })}</sp, a, n>;"
+                  <sp, a, n>{new, Dat, e(conte, n, t.da, t, e).toLocaleDateStri, n, g('en-US', { mon, t, h: 'sho, r, t', d, a, y: 'numer, i, c', ye, a, r: 'numer, i, c' })}</sp, a, n>"
                 <div, className="flex, item, s-center, justif, y-between, tex, t-sm, tex, t-gr, a, y-400, m, b-8, p, b-6, borde, r-b, borde, r-whi, t, e/15">";"
                   <span, className="flex, item, s-center, ga, p-2">";"
                     <Zap, className="w-4 h-4, tex, t-bl, u, e-4, 0, 0" />";
@@ -645,5 +645,5 @@ const, Ultimate2026ContentShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
       </d, i, v>
     </d, i, v>
   );
-};
+}
 export default Ultimate2026ContentShowcase;"`

@@ -1,5 +1,5 @@
 // Learn more: https://github.com/testing-library/jest-dom
-require('@testing-library/jest-dom');
+require('@testing-library/jest-dom')
 const React = require('react');
 const { TextEncoder, TextDecoder } = require('util');
 
@@ -78,7 +78,7 @@ jest.mock('react-router-dom', () => {
       return React.createElement(RouterProvider, { router });
     },
     RouterProvider: ({ router }) => null,
-  };
+  }
 });
 
 // Mock window.matchMedia
@@ -102,26 +102,26 @@ global.IntersectionObserver = class IntersectionObserver {
   disconnect() {}
   observe() {}
   takeRecords() {
-    return [];
+    return []
   }
   unobserve() {}
-};
+}
 
 // Suppress console errors in tests
 const originalError = console.error;
 beforeAll(() => {
-  console.error = jest.fn((...args) => {
+    console.error = jest.fn((...args) => {
     if (
       typeof args[0] === 'string' &&
       (args[0].includes('Warning: ReactDOM.render') ||
         args[0].includes('Not implemented: HTMLFormElement.prototype.submit'))
     ) {
-      return;
-    }
+      return
+  }
     originalError.call(console, ...args);
   });
 });
 
 afterAll(() => {
-  console.error = originalError;
-});
+    console.error = originalError
+  });

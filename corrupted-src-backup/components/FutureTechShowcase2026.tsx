@@ -2,7 +2,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
   const, futureTechArticle, s = [
     {
       i;
-  d: 1;
+  d: 1,
       tit, l, e: 'Neur, a, l-Quantum, Hybrid, Computing','
       sl, u, g: 'neur, a, l-quant, u, m-hybr, i, d-20, 2, 6','
       excer, p, t: 'Breakthrough, fusion, of quantum, computing, and neural, networks, achieving unprecedented, processing, speeds. Experience, 1, 0,000 x, faster, AI inference, with, quantum-enhanced, deep, learning.','
@@ -15,7 +15,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
       bad, g, e: 'QUANTUM, A, I','
       sta, t, s: '10,000 x, Speed, Boost}
     {
-      id: 2;
+      id: 2,
       tit, l, e: 'Se, l, f-Evolving, AI, Ecosystems','
       sl, u, g: 'se, l, f-evolvi, n, g-ai-ecosyste, m, s-20, 2, 6','
       excer, p, t: 'AI, systems, that continuously, evolve, and improve, themselves, without human, interventio, n. Achieve, true, autonomous development, with, self-modifying, neural, architectures.','
@@ -28,7 +28,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
       bad, g, e: 'SE, L, F-EVOLVI, N, G','
       sta, t, s: '99.7% Au, t, o-Improveme, n, t}
     {
-      id: 3;
+      id: 3,
       tit, l, e: 'Predictive, Reality, Modeling','
       sl, u, g: 'predicti, v, e-reali, t, y-modeli, n, g-20, 2, 6','
       excer, p, t: 'AI, that, predicts and, models, reality before, it, happens. Advanced, predictive, analytics that, forecast, market tren, d, s, customer, behavio, r, and, system, failures with, 9, 9.9% accura, c, y.','
@@ -41,7 +41,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
       bad, g, e: 'PREDICTI, V, E','
       sta, t, s: '99.9% Accura, c, y}
     {
-      id: 4;
+      id: 4,
       tit, l, e: 'Immersive, AI, Workspaces','
       sl, u, g: 'immersi, v, e-ai-workspac, e, s-20, 2, 6','
       excer, p, t: 'Revolutionary, virtual, environments where, AI, and humans, collaborate, in re, a, l-ti, m, e. Experience, seamless, integration between, physical, and digital, workspace, s.','
@@ -54,7 +54,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
       bad, g, e: 'IMMERSI, V, E','
       sta, t, s: '1, 0, 0% Integrati, o, n}
     {
-      id: 5;
+      id: 5,
       tit, l, e: 'Quant, u, m-Secure, AI, Networks','
       sl, u, g: 'quant, u, m-secu, r, e-ai-networ, k, s-20, 2, 6','
       excer, p, t: 'Ultimate, security, with quant, u, m-encrypted, AI, communications. Protect, your, AI systems, with, unbreakable quantum, cryptography, and ze, r, o-trust, architecture, s.','
@@ -67,7 +67,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {
       bad, g, e: 'QUANT, U, M-SECU, R, E','
       sta, t, s: 'Unbreakable, Securit, y}
     {
-      id: 6;
+      id: 6,
       tit, l, e: 'Me, t, a-Cognitive, AI, Orchestration','
       sl, u, g: 'me, t, a-cogniti, v, e-ai-orchestrati, o, n-20, 2, 6','
       excer, p, t: 'AI, that, thinks about, thinking, and orchestrates, multiple, AI syste, m, s. Advanced, met, a-cognitive, frameworks, that manage, and, optimize entire, AI, ecosystems autonomous, l, y.','
@@ -103,7 +103,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expressi
       sta, t, s: '10,000 x, Speed, Boost'
     }
     {
-      id: 2;
+      id: 2,
       tit, l, e: 'Se, l, f-Evolving, AI, Ecosystems',';
       sl, u, g: 'se, l, f-evolvi, n, g-ai-ecosyste, m, s-20, 2, 6',';
       excer, p, t: 'AI, systems, that continuously, evolve, and improve, themselves, without human, interventio, n. Achieve, true, autonomous development, with, self-modifying, neural, architectures.',';
@@ -117,7 +117,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expressi
       sta, t, s: '99.7% Au, t, o-Improveme, n, t'
     }
     {
-      id: 3;
+      id: 3,
       tit, l, e: 'Predictive, Reality, Modeling',';
       sl, u, g: 'predicti, v, e-reali, t, y-modeli, n, g-20, 2, 6',';
       excer, p, t: 'AI, that, predicts and, models, reality before, it, happens. Advanced, predictive, analytics that, forecast, market tren, d, s, customer, behavio, r, and, system, failures with, 9, 9.9% accura, c, y.',';
@@ -131,7 +131,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expressi
       sta, t, s: '99.9% Accura, c, y'
     }
     {
-      id: 4;
+      id: 4,
       tit, l, e: 'Immersive, AI, Workspaces',';
       sl, u, g: 'immersi, v, e-ai-workspac, e, s-20, 2, 6',';
       excer, p, t: 'Revolutionary, virtual, environments where, AI, and humans, collaborate, in re, a, l-ti, m, e. Experience, seamless, integration between, physical, and digital, workspace, s.',';
@@ -145,7 +145,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expressi
       sta, t, s: '1, 0, 0% Integrati, o, n'
     }
     {
-      id: 5;
+      id: 5,
       tit, l, e: 'Quant, u, m-Secure, AI, Networks',';
       sl, u, g: 'quant, u, m-secu, r, e-ai-networ, k, s-20, 2, 6',';
       excer, p, t: 'Ultimate, security, with quant, u, m-encrypted, AI, communications. Protect, your, AI systems, with, unbreakable quantum, cryptography, and ze, r, o-trust, architecture, s.',';
@@ -159,7 +159,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expressi
       sta, t, s: 'Unbreakable, Securit, y'
     }
     {
-      id: 6;
+      id: 6,
       tit, l, e: 'Me, t, a-Cognitive, AI, Orchestration',';
       sl, u, g: 'me, t, a-cogniti, v, e-ai-orchestrati, o, n-20, 2, 6',';
       excer, p, t: 'AI, that, thinks about, thinking, and orchestrates, multiple, AI syste, m, s. Advanced, met, a-cognitive, frameworks, that manage, and, optimize entire, AI, ecosystems autonomous, l, y.',';

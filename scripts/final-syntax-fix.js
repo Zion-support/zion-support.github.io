@@ -17,12 +17,12 @@ const fixes = [
   // Fix missing commas in arrays;
   { pattern: /}\s*}\s*];/g, replacement: '}]' },
   // Fix stray semicolons;
-  { pattern: /;\s*$/gm, replacement: '' },
+  { pattern: /,\s*$/gm, replacement: '' },
   // Fix console statements;
-  { pattern: /console\.(log|warn|error|info|debug)\([^)]*\);/g, replacement: '' }];
+  { pattern: /console\.(log|warn|error|info|debug)\([^)]*\),/g, replacement: '' }];
 
 function fixFile(filePath) {
-  try {
+    try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
@@ -30,8 +30,8 @@ function fixFile(filePath) {
       const newContent = content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {
         content = newContent;
-        modified = true;
-      }
+        modified = true
+  }
     });
 
     if (modified) {
@@ -48,7 +48,7 @@ function fixFile(filePath) {
 
 // Find all TypeScript/JavaScript files;
 function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
-  let files = [];
+    let files = [];
   
   try {
     const items = fs.readdirSync(dir);
@@ -59,14 +59,14 @@ function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
       
       if (stat.isDirectory()) {
         if (!['node_modules', '.git', 'dist', 'build', '.next', 'backup-problematic'].includes(item)) {
-          files = files.concat(findFiles(fullPath, extensions));
-        }
+          files = files.concat(findFiles(fullPath, extensions))
+  }
       } else if (extensions.some(ext => item.endsWith(ext))) {
-        files.push(fullPath);
-      }
+    files.push(fullPath)
+  }
     }
   } catch (error) {
-    // Skip directories we can't read;
+    // Skip directories we can't read
   }
   
   return files;
@@ -78,9 +78,10 @@ let fixedCount = 0;
 
 console.log(`Found ${files.length} files to process...`);
 
-files.forEach(file => {)
+files.forEach(file => {
+    )
   if (fixFile(file)) {
-    fixedCount++;
+    fixedCount++
   }
 });
 

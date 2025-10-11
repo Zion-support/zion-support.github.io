@@ -298,5 +298,5 @@ const LatestContentBanner202, 5: React.FC = () => {/* TODO: Fix JSX expression *
       </div>
     </di, v>
   );
-};
+}
 export default LatestContentBanner2025;"`

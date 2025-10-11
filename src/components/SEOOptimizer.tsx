@@ -21,21 +21,21 @@ const,
     if (!meta) {/* TODO: Fix JSX expression */}
     }
     meta.setAttribute('content', content);
-  };
+  }
   const updateCanonicalUrl = (ur)
   l: string) => {/* TODO: Fix JSX expression */}
     }
     canonical.setAttribute('href', url);
-  };
+  }
   const addStructuredData = (dat)
   a: any) => {/* TODO: Fix JSX expression */}
     }
     document.head.appendChild(script);
-  };
+  }
   const addBreadcrumbStructuredData = () => {/* TODO: Fix JSX expression */}
         }
       ]
-    };
+    }
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(breadcrumbData);
@@ -45,7 +45,7 @@ const,
     if (existing) {/* TODO: Fix JSX expression */}
     }
     document.head.appendChild(script);
-  };
+  }
   const addFAQStructuredData = () => {/* TODO: Fix JSX expression */}
           }
         },
@@ -56,7 +56,7 @@ const,
           }
         }
       ]
-    };
+    }
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(faqData);
@@ -66,7 +66,7 @@ const,
     if (existing) {/* TODO: Fix JSX expression */}
     }
     document.head.appendChild(script);
-  };
+  }
   const addOrganizationStructuredData = () => {/* TODO: Fix JSX expression */}
       },
       'address': {/* TODO: Fix JSX expression */}
@@ -77,7 +77,7 @@ const,
         'http,
   s://linkedin.com/company/ziontechgroup'
       ]
-    };
+    }
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(organizationData);
@@ -86,8 +86,8 @@ const,
     const existing = document.getElementById('organization-structured-data');
     if (existing) {/* TODO: Fix JSX expression */}
     }
-  };
-  const mergedSEOData = { ...defaultSEOData, ...seoData };
+  }
+  const mergedSEOData = { ...defaultSEOData, ...seoData }
   useEffect(() => {
     // Log SEO optimization
     logger.info('SEO optimization applied', { 
@@ -208,7 +208,7 @@ const,
       </script>
     </Helmet>
   );
-};
+}
 SEOOptimizer.displayName = 'SEOOptimizer';
 export default SEOOptimizer;"`
   </SEOOptimizerProps>

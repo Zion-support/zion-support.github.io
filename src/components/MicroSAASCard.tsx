@@ -1,37 +1,39 @@
 import React from 'react';
 'use client';
 interface MicroSAASCardProps {/* TODO: Fix JSX expression */}
-  O: Add content;}
+  O: Add content,}
 }
   servic,
   e: {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
-  titl,
-  e: string;
-    descriptio,
-  n: string;
-    ico,
-  n: string;
-    pric,
-  e: string;,
-    feature,
-  s: string[];,
-    benefit,
-  s: string[];
-    marketPrice?: string;,
-    categor,
-  y: string;,
-    technologie,
-  s: string[];,
-    contactInf,
-  o: string;
-    link?: string;
-    popular?: boolean;
-  };
+  O: Add content,}
 }
-const MicroSAASCard: React.FC;
-          <MicroSAASCardProps> = ({ service }) => {// TODO: Add content;}
+  titl,
+  e: string,
+    descriptio,
+  n: string,
+    ico,
+  n: string,
+    pric,
+  e: string,,
+    feature,
+  s: string[],,
+    benefit,
+  s: string[]
+    marketPrice?: string,,
+    categor,
+  y: string,,
+    technologie,
+  s: string[],,
+    contactInf,
+  o: string
+    link?: string
+    popular?: boolean,
+  }
+}
+const MicroSAASCard: React.FC,
+          <MicroSAASCardProps> = ({ service }) => {
+    // TODO: Add content
+  }
 }
 const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
   return (
@@ -100,9 +102,9 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
   o:kleber@ziontechgroup.com'}"
             className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg,
   hover:from-cyan-600,"
-  hover:to-blue-700 transition-all duration-300 flex items-center justify-center text-sm font-medium"
+  hover: to-blue-700 transition-all duration-300 flex items-center justify-center text-sm font-medium"
 // >
-//             Get Started;"
+//             Get Started,"
           <ArrowRight className="w-4 h-4 ml-2" /></ArrowRight>
           </a>"
           <p className="text-xs text-gray-400 mt-2 text-center">{service.contactInfo}</p>
@@ -110,7 +112,7 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
       </div>
     </div>
   );
-};
+}
 export default MicroSAASCard;"`
   </MicroSAASCardProps>
   </MicroSAASCardProps>

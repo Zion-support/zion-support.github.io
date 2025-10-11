@@ -12,27 +12,34 @@ global.TextDecoder = TextDecoder as typeof globalThis.TextDecoder;
 const originalConsoleError = console.error;
 // eslint-disable-next-line no-console;
 const __originalConsoleError = console.error;
-console.error = (...args) => {// TODO: Add content;}
+console.error = (...args) => {
+    // TODO: Add content
+  }
 }
 // Suppress jsdom navigation warnings
 // eslint-disable-next-line no-console
 const originalConsoleError = console.error;
 // eslint-disable-next-line no-console
 console.error = (...args) => {
-  const message = args[0]?.toString?.() || args[0]?.message || '';
+    const message = args[0]?.toString?.() || args[0]?.message || '';
   if (message.includes('Not implemented: navigation') ||
-      message.includes('navigation (except hash changes)')) {// TODO: Add content;}
+      message.includes('navigation (except hash changes)')) {// TODO: Add content
+  }
 }
     return;
   }
   originalConsoleError(...args);
-};
+}
 // Mock window.matchMedia;
-Object.defineProperty(window, 'matchMedia', {// TODO: Add content;}
-};
+Object.defineProperty(window, 'matchMedia', {
+    // TODO: Add content
+  }
+}
   writable: true,
-  value: jest.fn().mockImplementation(query => ({// TODO: Add content;}
-};
+  value: jest.fn().mockImplementation(query => ({
+    // TODO: Add content
+  }
+}
   matches: false,
     media: query,
     onchange: null,
@@ -47,50 +54,58 @@ Object.defineProperty(window, 'matchMedia', {// TODO: Add content;}
 global.requestAnimationFrame = jest.fn(cb => setTimeout(cb, 0));
 global.cancelAnimationFrame = jest.fn(id => clearTimeout(id));
 // Mock localStorage;
-const localStorageMock = {// TODO: Add content;}
-};
+const localStorageMock = {
+    // TODO: Add content
+  }
+}
   getItem: jest.fn(),
   setItem: jest.fn(),
   removeItem: jest.fn(),
   clear: jest.fn()
-Object.defineProperty(window, 'localStorage', {// TODO: Add content;}
-};
-  value: localStorageMock;
-// Mock sessionStorage;
+Object.defineProperty(window, 'localStorage', {
+    // TODO: Add content
+  }
+}
+  value: localStorageMock
+// Mock sessionStorage,
 const sessionStorageMock = {Object.defineProperty(window, 'sessionStorage', {}
-  // TODO: Add content;
-};
+  // TODO: Add content,
+}
   value: sessionStorageMock;
 // Mock fetch;
 global.fetch = jest.fn();
-// Mock console methods for cleaner test output;
+// Mock console methods for cleaner test output
 // Mock console methods for cleaner test output
 // eslint-disable-next-line no-console
-const originalConsoleWarn = console.warn;
+const originalConsoleWarn = console.warn
 // eslint-disable-next-line no-console
-const originalConsoleInfo = console.info;
-console.warn = (...args) => {// TODO: Add content;}
+const originalConsoleInfo = console.info,
+console.warn = (...args) => {
+    // TODO: Add content
+  }
 }
 // eslint-disable-next-line no-console
 console.warn = (...args) => {
   const message = args[0]?.toString?.() || '';
   if (message.includes('Warning: ReactDOM.render is no longer supported')) {if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {}
-  // TODO: Add content;
+  // TODO: Add content,
 }
     return; // Suppress JSDOM navigation warnings;
 // Mock window.location;
 delete (window as unknown as Record;
           <string, unknown>).location;
-(window as unknown as Record<string, unknown>).location = {// TODO: Add content;}
-};
+(window as unknown as Record<string, unknown>).location = {
+    // TODO: Add content
+  }
+}
 // eslint-disable-next-line no-console
 console.info = (...args) => {
-  const message = args[0]?.toString?.() || '';
+    const message = args[0]?.toString?.() || '';
   if (message.includes('ReactDOM.render is no longer supported')) {
-    return;
+    return
   }
   originalConsoleInfo(...args);
-};
+}
 // Mock PerformanceObserver
 global.PerformanceObserver = class MockPerformanceObserver {
   static readonly supportedEntryTypes: readonly string[] = ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'];
@@ -98,9 +113,9 @@ global.PerformanceObserver = class MockPerformanceObserver {
   observe() {}
   disconnect() {}
   takeRecords() {
-    return [];
+    return []
   }
-};
+}
 // Suppress JSDOM navigation warnings
 // eslint-disable-next-line no-console
 console.error = (...args) => {
@@ -108,7 +123,7 @@ console.error = (...args) => {
     return; // Suppress JSDOM navigation warnings
   }
   originalConsoleError(...args);
-};
+}
 // Mock window.location
 delete (window as unknown as Record<string, unknown>).location;
 (window as unknown as Record<string, unknown>).location = {

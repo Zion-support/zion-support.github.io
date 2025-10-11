@@ -7,7 +7,7 @@ import typ, e { UnifiedPromotionalBannerPro, p, s } fr, o, m '../UnifiedPromotio
   n: Rea c t.ReactN o d e }> = ({ childr e n }) => (<BrowserRout, e, r>{childr, e, n}</BrowserRout, e, r>)
 );
 descri, b, e('UnifiedPromotionalBann, e, r', () => {/* TODO: Fix JSX expression */}
-   }; descri, b, e('Core, Functionalit, y', () => {/* TODO: Fix JSX expression */}
+   } descri, b, e('Core, Functionalit, y', () => {/* TODO: Fix JSX expression */}
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s} classNa, m, e = "cust, o, m-cla, s, s"</RouterWrap, p, e, r></UnifiedPromotionalBann>
       ); const, banne, r = contain, e, r.firstChi, l, d; expe, c, t(ban, n, e, r).toHaveCla, s, s('cust, o, m-cla, s, s');"
           <UnifiedPromotionalBann, e, r {...defaultPro, p, s} varia, n, t = "defau, l, t"</RouterWrap, p, e, r></UnifiedPromotionalBann>

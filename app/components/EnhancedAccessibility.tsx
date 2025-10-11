@@ -1,262 +1,96 @@
 'use client';
-<<<<<<< HEAD
-import React, { useEffect } from 'react';
-=======
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useAnalytics } from './EnhancedAnalytics';
 
 interface AccessibilitySettings {
   highContrast: boolean;
   reducedMotion: boolean;
-  fontSize: 'normal' | 'large' | 'extra-large';
-  focusVisible: boolean;
+  fontSize: 'small' | 'medium' | 'large';
+  screenReader: boolean;
+  keyboardNavigation: boolean;
 }
 
->>>>>>> cursor/analyze-improve-and-deploy-application-5431
-const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+interface EnhancedAccessibilityProps {
+  children: React.ReactNode;
+  enableKeyboardNavigation?: boolean;
+  enableScreenReaderSupport?: boolean;
+  enableHighContrast?: boolean;
+  enableFocusManagement?: boolean;
+}
+
+const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
+  children,
+  enableKeyboardNavigation = true,
+  enableScreenReaderSupport = true,
+  enableHighContrast = true,
+  enableFocusManagement = true
+}) => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
     reducedMotion: false,
-    fontSize: 'normal',
-    focusVisible: false
+    fontSize: 'medium',
+    screenReader: false,
+    keyboardNavigation: true
   });
-  const { trackEvent } = useAnalytics();
+
+  const analytics = useAnalytics();
 
   useEffect(() => {
-<<<<<<< HEAD
-    // Add ARIA landmarks
-    const addLandmarks = () => {
-      const main = document.querySelector('main');
-      if (main && !main.getAttribute('role')) {
-        main.setAttribute('role', 'main');
-      }
-      const nav = document.querySelector('nav');
-      if (nav && !nav.getAttribute('role')) {
-        nav.setAttribute('role', 'navigation');
-      }
-      const footer = document.querySelector('footer');
-      if (footer && !footer.getAttribute('role')) {
-        footer.setAttribute('role', 'contentinfo');
-      }
-<<<<<<< HEAD
-    };
-    // Add skip links
-    const addSkipLinks = () => {
-      const skipLink = document.createElement('a');
-      skipLink.href = '#main-content';
-      skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-600 text-white px-4 py-2 rounded-lg font-semibold z-50';
-      document.body.insertBefore(skipLink, document.body.firstChild);
-    };
-    // Enhance focus management
-    const enhanceFocusManagement = () => {
-      // Add focus indicators
-      const style = document.createElement('style');
-      style.textContent = `
-        *:focus {
-          outline: 2px solid #06b6d4 !important;
-          outline-offset: 2px !important;
-        }
-        .sr-only {
-          position: absolute;
-          width: 1px;
-          height: 1px;
-          padding: 0;
-          margin: -1px;
-          overflow: hidden;
-          clip: rect(0, 0, 0, 0);
-          white-space: nowrap;
-          border: 0;
-        }
-        .sr-only.focus:not-sr-only {
-          position: static;
-          width: auto;
-          height: auto;
-          padding: inherit;
-          margin: inherit;
-          overflow: visible;
-          clip: auto;
-          white-space: normal;
-        }
-      `;
-      document.head.appendChild(style);
-    };
-    // Initialize accessibility enhancements
-    addLandmarks();
-    addSkipLinks();
-    enhanceFocusManagement();
-    // Cleanup function
-    return () => {
-      const skipLink = document.querySelector('a[href="#main-content"]');
-      if (skipLink) {
-        skipLink.remove();
-=======
-
-      const header = document.querySelector('header');
-      if (header && !header.getAttribute('role')) {
-        header.setAttribute('role', 'banner');
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-      }
-=======
-    // Check for user preferences
+    // Detect user preferences
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
-
-    setSettings(prev => ({
-      ...prev,
+    
+    setSettings({
+      highContrast: prefersHighContrast,
       reducedMotion: prefersReducedMotion,
-      highContrast: prefersHighContrast
-    }));
-
-    // Apply initial settings
-    applyAccessibilitySettings({
-      ...settings,
-      reducedMotion: prefersReducedMotion,
-      highContrast: prefersHighContrast
+      fontSize: 'medium',
+      screenReader: false,
+      keyboardNavigation: true
     });
 
-    // Listen for preference changes
-    const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const contrastQuery = window.matchMedia('(prefers-contrast: high)');
+    // Apply initial accessibility settings
+    applyAccessibilitySettings({
+      highContrast: prefersHighContrast,
+      reducedMotion: prefersReducedMotion,
+      fontSize: 'medium',
+      screenReader: false,
+      keyboardNavigation: true
+    });
 
-    const handleMotionChange = (e: MediaQueryListEvent) => {
-      setSettings(prev => ({ ...prev, reducedMotion: e.matches }));
-      applyAccessibilitySettings({ ...settings, reducedMotion: e.matches });
->>>>>>> cursor/analyze-improve-and-deploy-application-5431
-    };
-
-    const handleContrastChange = (e: MediaQueryListEvent) => {
-      setSettings(prev => ({ ...prev, highContrast: e.matches }));
-      applyAccessibilitySettings({ ...settings, highContrast: e.matches });
-    };
-
-    motionQuery.addEventListener('change', handleMotionChange);
-    contrastQuery.addEventListener('change', handleContrastChange);
-
-    // Setup keyboard navigation
-    setupKeyboardNavigation();
-
-    // Setup focus management
-    setupFocusManagement();
-
-    return () => {
-      motionQuery.removeEventListener('change', handleMotionChange);
-      contrastQuery.removeEventListener('change', handleContrastChange);
-    };
-  }, []);
-<<<<<<< HEAD
-  return <React.Fragment>{children}</React.Fragment>;
-=======
+    // Track accessibility usage
+    analytics?.track('accessibility_initialized', {
+      prefersReducedMotion,
+      prefersHighContrast
+    });
+  }, [analytics]);
 
   const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
     const root = document.documentElement;
     
-    // Apply high contrast
+    // High contrast mode
     if (newSettings.highContrast) {
       root.classList.add('high-contrast');
     } else {
       root.classList.remove('high-contrast');
     }
 
-    // Apply reduced motion
+    // Reduced motion
     if (newSettings.reducedMotion) {
       root.classList.add('reduced-motion');
     } else {
       root.classList.remove('reduced-motion');
     }
 
-    // Apply font size
-    root.classList.remove('font-normal', 'font-large', 'font-extra-large');
+    // Font size
+    root.classList.remove('font-small', 'font-medium', 'font-large');
     root.classList.add(`font-${newSettings.fontSize}`);
 
-    // Apply focus visible
-    if (newSettings.focusVisible) {
-      root.classList.add('focus-visible');
+    // Screen reader optimizations
+    if (newSettings.screenReader) {
+      root.classList.add('screen-reader-optimized');
     } else {
-      root.classList.remove('focus-visible');
+      root.classList.remove('screen-reader-optimized');
     }
-  };
-
-  const setupKeyboardNavigation = () => {
-    // Skip to main content functionality
-    const skipLink = document.querySelector('.skip-link');
-    if (skipLink) {
-      skipLink.addEventListener('click', (e) => {
-        e.preventDefault();
-        const main = document.querySelector('main');
-        if (main) {
-          main.focus();
-          main.scrollIntoView();
-        }
-      });
-    }
-
-    // Trap focus in modals
-    const modals = document.querySelectorAll('[role="dialog"]');
-    modals.forEach(modal => {
-      const focusableElements = modal.querySelectorAll(
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-      );
-      const firstElement = focusableElements[0] as HTMLElement;
-      const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
-
-      const handleKeyDown = (e: KeyboardEvent) => {
-        if (e.key === 'Tab') {
-          if (e.shiftKey) {
-            if (document.activeElement === firstElement) {
-              lastElement?.focus();
-              e.preventDefault();
-            }
-          } else {
-            if (document.activeElement === lastElement) {
-              firstElement?.focus();
-              e.preventDefault();
-            }
-          }
-        }
-      };
-
-      modal.addEventListener('keydown', handleKeyDown);
-    });
-  };
-
-  const setupFocusManagement = () => {
-    // Add focus indicators
-    const style = document.createElement('style');
-    style.textContent = `
-      .focus-visible *:focus {
-        outline: 2px solid #3b82f6;
-        outline-offset: 2px;
-      }
-      
-      .high-contrast {
-        --tw-bg-opacity: 1;
-        --tw-text-opacity: 1;
-      }
-      
-      .reduced-motion * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-      }
-      
-      .font-large {
-        font-size: 1.125rem;
-      }
-      
-      .font-extra-large {
-        font-size: 1.25rem;
-      }
-    `;
-    document.head.appendChild(style);
-
-    // Track focus events for analytics
-    document.addEventListener('focusin', (e) => {
-      trackEvent('focus_event', {
-        category: 'accessibility',
-        label: (e.target as HTMLElement).tagName
-      });
-    });
   };
 
   const updateSettings = (newSettings: Partial<AccessibilitySettings>) => {
@@ -264,28 +98,93 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     setSettings(updatedSettings);
     applyAccessibilitySettings(updatedSettings);
     
-    trackEvent('accessibility_setting_changed', {
-      category: 'accessibility',
-      label: Object.keys(newSettings)[0]
-    });
+    analytics?.track('accessibility_settings_changed', newSettings);
   };
 
-  // Provide accessibility context
+  // Keyboard navigation support
   useEffect(() => {
-    const context = {
-      settings,
-      updateSettings
+    if (!enableKeyboardNavigation) return;
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      // Skip to main content
+      if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
+        const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement;
+        if (skipLink) {
+          skipLink.focus();
+          event.preventDefault();
+        }
+      }
+
+      // Escape key to close modals/dropdowns
+      if (event.key === 'Escape') {
+        const activeElement = document.activeElement as HTMLElement;
+        if (activeElement && activeElement.blur) {
+          activeElement.blur();
+        }
+      }
     };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [enableKeyboardNavigation]);
+
+  // Focus management
+  useEffect(() => {
+    if (!enableFocusManagement) return;
+
+    const handleFocusIn = (event: FocusEvent) => {
+      const target = event.target as HTMLElement;
+      
+      // Ensure focus is visible
+      if (target && target.classList) {
+        target.classList.add('focus-visible');
+      }
+    };
+
+    const handleFocusOut = (event: FocusEvent) => {
+      const target = event.target as HTMLElement;
+      
+      // Remove focus styling
+      if (target && target.classList) {
+        target.classList.remove('focus-visible');
+      }
+    };
+
+    document.addEventListener('focusin', handleFocusIn);
+    document.addEventListener('focusout', handleFocusOut);
     
-    (window as any).accessibilityContext = context;
+    return () => {
+      document.removeEventListener('focusin', handleFocusIn);
+      document.removeEventListener('focusout', handleFocusOut);
+    };
+  }, [enableFocusManagement]);
+
+  // Screen reader announcements
+  const announceToScreenReader = (message: string) => {
+    if (!enableScreenReaderSupport) return;
+    const announcement = document.createElement('div');
+    announcement.setAttribute('aria-live', 'polite');
+    announcement.setAttribute('aria-atomic', 'true');
+    announcement.className = 'sr-only';
+    announcement.textContent = message;
+    
+    document.body.appendChild(announcement);
+    
+    setTimeout(() => {
+      document.body.removeChild(announcement);
+    }, 1000);
+  };
+
+  // Expose accessibility functions to window for global access
+  useEffect(() => {
+    (window as any).accessibility = {
+      updateSettings,
+      announceToScreenReader,
+      settings
+    };
   }, [settings]);
 
   return <>{children}</>;
->>>>>>> cursor/analyze-improve-and-deploy-application-5431
 };
-<<<<<<< HEAD
-export default EnhancedAccessibility;
-=======
 
 export default EnhancedAccessibility;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

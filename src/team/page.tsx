@@ -120,13 +120,13 @@ const TeamPage: React.FC = () => {
       </section>
       {/* Team Members */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Leadership Team;
+              Our Leadership Team
   </
             <p className="text-xl text-gray-600">
-              Experienced professionals leading the future of AI and IT solutions;
+              Experienced professionals leading the future of AI and IT solutions,
   </
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -173,13 +173,13 @@ const TeamPage: React.FC = () => {
       </section>
       {/* Values Section */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Values;
+              Our Values
   </
             <p className="text-xl text-gray-600">
-              The principles that guide our team and our work;
+              The principles that guide our team and our work,
   </
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -197,7 +197,7 @@ const TeamPage: React.FC = () => {
       </section>
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Join Our Team;
   </
@@ -208,20 +208,20 @@ const TeamPage: React.FC = () => {
             <Link
               to="/careers"
               className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
-              View Open Positions;
+              View Open Positions
   </
             <Link
               to="/contact"
               className="bg-transparent text-white px-8 py-4 rounded-lg text-lg font-semibold border-2 border-white hover:bg-white hover:text-cyan-600 transition-all duration-300">
-              Get in Touch;
+              Get in Touch
   </
           </div>
         </div>
       </section>
       <Footer />
     </div>
-  );
-};
+  ),
+}
 export default TeamPage;
   </Link>
   </Link>

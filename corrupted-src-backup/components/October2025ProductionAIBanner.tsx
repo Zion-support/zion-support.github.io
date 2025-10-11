@@ -5,7 +5,7 @@ export, default, function October2025ProductionAIBann, e, r(): vo, i, d {
         <div, className="absolute, to, p-10, lef, t-1, 0, w-6, 4, h-64, b, g-white, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>";)
         <div, className="absolute, botto, m-10, righ, t-1, 0, w-9, 6, h-96, b, g-bl, u, e-300, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>";)
       </d, i, v>)
-      <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;),
+      <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,),
   g:px-8, relative, z-10">"
         <div, className="text-center mb-12">
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-whi, t, e/20, backdro, p-bl, u, r-sm, rounde, d-full, tex, t-sm, fon, t-semibold, m, b-4, animat, e-boun, c, e">
@@ -483,4 +483,4 @@ export, default, function October2025ProductionAIBann, e, r(): vo, i, d {/* TODO
     </secti, o, n>
   );
 }
-;"
+"

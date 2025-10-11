@@ -3,7 +3,6 @@ import path from 'path';
 import { execSync } from 'child_process';
 import { fileURLToPath } from 'url';
 
-
 // Function to remove unused imports from a file;
 function removeUnusedImports(filePath) {
   try {

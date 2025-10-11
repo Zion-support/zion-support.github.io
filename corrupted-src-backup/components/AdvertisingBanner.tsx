@@ -13,7 +13,7 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({,
       className="advertising-banner"
       style={{
         backgroundColor,
-        color: textColor;
+        color: textColor,
         padding: '2rem'
         borderRadius: '0.5rem')
         margin: '1rem 0')
@@ -56,7 +56,7 @@ const,
             display: 'inline-block',
             padding: '0.75 rem 1.5 rem',
             backgroundColor: 'rgba(255, 255, 255, 0.2)',
-            color: textColor;
+            color: textColor,
             textDecoration: 'none',
             borderRadius: '0.25rem',
             fontWeight: 'bold'}
@@ -87,7 +87,7 @@ const,
       </div>
     </div>
   );
-};
+}
 export default AdvertisingBanner;
 "
   </AdvertisingBannerProps>

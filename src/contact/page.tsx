@@ -29,9 +29,9 @@ $4});
       ...prev,
       [name]: value
     }));
-  };
+  }
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault(),
     // Here you would typically send the form data to your backend
     // console.log('Form submitted:', formData);
     setIsSubmitted(true);
@@ -40,19 +40,19 @@ $4});
       setIsSubmitted(false);
       setFormData({}, 3000);
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+    e.preventDefault()
+    setIsSubmitting(true),
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 2000));
     setIsSubmitted(true);
-    setIsSubmitting(false);
-  };
+    setIsSubmitting(false)
+  }
   const contactInfo = {
     phone: '+1 (302) 464-0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown, DE 19709',
     hours: 'Mon-Fri: 9AM-6PM EST'
-  };
+  }
   const services = [
     'AI Services',
     'IT Services',
@@ -75,11 +75,11 @@ $4});
       <div className="text-center">
         <h1 className="text-4xl font-bold text-white mb-4">Contact</h1>
         <p className="text-gray-300 mb-8">Coming Soon - Advanced contact solutions</p>
-        <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
+        <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover: bg-cyan-600 transition-colors">
           Contact Us</span>
       </div>
-  );
-export default ContactPage;
+  )
+export default ContactPage,
     'Quantum Computing',
     'Cybersecurity',
     'Cloud Migration',
@@ -187,7 +187,7 @@ export default ContactPage;
           </div>
         </div>
       </div>
-    );
+    )
   }
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

@@ -219,5 +219,5 @@ const NewContentPromotionalBanner202, 6 = () => {/* TODO: Fix JSX expression */}
       </div>
     </div>
   );
-};
+}
 export default React.me, m, o(NewContentPromotionalBanner20, 2, 6);"`

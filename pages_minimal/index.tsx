@@ -5,7 +5,7 @@ export const metadata: Metadata = {,
   openGraph: {,
     title: 'Index',
     description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',
-    type: 'article'}};
+    type: 'article'}}
 export default function index() {
   return(<div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 py-8">
@@ -40,7 +40,7 @@ export default function index() {
       </div>)
 export const,
   metadata: Metadata = {/* TODO: Fix JSX expression */}
-  }};
+  }}
 export default function index() {/* TODO: Fix JSX expression */}
 }
   return (<div className="min-h-screen bg-gray-50"></div>"

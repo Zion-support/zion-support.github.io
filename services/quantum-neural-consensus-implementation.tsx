@@ -5,7 +5,7 @@ export const metadata: Metadata = {,
   openGraph: {,
     title: 'Quantum Neural Consensus Implementation',
     description: 'Professional Quantum Neural Consensus Implementation services from Zion Tech Group.',
-    type: 'website'}};
+    type: 'website'}}
 export default function QuantumNeuralConsensusImplementation() {
   return(<div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 py-8">
@@ -31,7 +31,7 @@ export default function QuantumNeuralConsensusImplementation() {
       </div>)
 export const,
   metadata: Metadata = {/* TODO: Fix JSX expression */}
-  }};
+  }}
 export default function QuantumNeuralConsensusImplementation() {/* TODO: Fix JSX expression */}
 }
   return (<div className="min-h-screen bg-gray-50"></div>"

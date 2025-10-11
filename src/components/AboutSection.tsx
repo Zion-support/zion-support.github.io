@@ -157,7 +157,7 @@ export default function AboutSection() {
             machine learning, software development, and IT consulting. We're passionate 
             about technology and committed to delivering exceptional results.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-24 h-24 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                 <span className="text-black font-bold text-2xl">AI</span>
@@ -183,7 +183,7 @@ export default function AboutSection() {
         </div>
       </div>
     </section>
-  );
+  ),
 }
   </h3>
   </h3>

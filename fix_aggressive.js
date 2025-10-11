@@ -59,7 +59,7 @@ function fixCorruptedSyntax(text) {/* TODO: Fix JSX expression */}
     /const\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*:\s*React\.FC\s*=\s*\(/g,
     'const $1: React.FC = (',
     'const $1: React.FC = (')
-  );
+  ),
   fixed = fixed.replace(/const\s*([a-zA-Z_$][a-zA-Z0-9 _$]*)\s*=\s*\(/g, 'const $1 = (');
 
   //Fix corrupted JSX;
@@ -80,8 +80,9 @@ function fixCorruptedSyntax(text) {/* TODO: Fix JSX expression */}
   fixed = fixed.replace(/([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\(\s*([^)]*)\s*\)/g, '$1($2)');
 
   //Fix corrupted arrow functions;
-  fixed = fixed.replace(/\([^)]*\)\s*=>\s*\{/g, match => {
-    return match.replace(/\s+/g, ' ').trim();
+  fixed = fixed.replace(/\([^)]*\)\s*=>\s*\{
+    /g, match => {
+    return match.replace(/\s+/g, ' ').trim()
   });
 
   //Fix corrupted string literals;

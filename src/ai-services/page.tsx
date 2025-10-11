@@ -50,16 +50,16 @@ $4}
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Coming Soon - Advanced AI services solutions that will transform your business.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
-              Contact Us;
+              Contact Us
   </
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
-              Learn More;
+              Learn More
   </
       <Footer />
-  );
-};
+  ),
+}
 export default $1;
 'use client';
 import React, { useState, useEffect } from 'react';
@@ -70,10 +70,10 @@ import {
   Cpu, Database, Globe, Lock, Sparkles, Code, Eye, MessageSquare
 } from 'lucide-react';
 export default function AIServicesPage() {
-  const [activeTab, setActiveTab] = useState('overview');
+    const [activeTab, setActiveTab] = useState('overview');
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
-    setIsVisible(true);
+    setIsVisible(true)
   }, []);
   const aiServices = [
     {
@@ -232,18 +232,18 @@ export default function AIServicesPage() {
                 Transform your business with cutting-edge AI solutions. Achieve 300% ROI, 70% cost reduction, 
                 and 90% efficiency gains with our comprehensive AI services.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a
                   href="tel:+13024640950"
                   className="cyber-button inline-flex items-center px-8 py-4 text-lg">
                   <Phone className="w-5 h-5 mr-2" />
-                  (302) 464-0950;
+                  (302) 464-0950
   </
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="cyber-button inline-flex items-center px-8 py-4 text-lg">
                   <Mail className="w-5 h-5 mr-2" />
-                  Get Quote;
+                  Get Quote,
   </
               </div>
             </div>
@@ -320,14 +320,14 @@ export default function AIServicesPage() {
                   </div>
                   <div className="mt-6 flex gap-3">
                     <a
-                      href="tel:+13024640950"
+                      href="tel: +13024640950"
                       className="flex-1 cyber-button text-center py-3">
-                      Get Started;
+                      Get Started
   </
                     <a
                       href="mailto:kleber@ziontechgroup.com"
                       className="flex-1 bg-slate-800 text-white py-3 px-4 rounded-lg hover:bg-slate-700 transition-colors text-center">
-                      Learn More;
+                      Learn More,
   </
                   </div>
                 </div>
@@ -338,7 +338,7 @@ export default function AIServicesPage() {
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl lg: text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business with AI?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -349,20 +349,20 @@ export default function AIServicesPage() {
                 href="tel:+13024640950"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg">
                 <Phone className="w-5 h-5 mr-2" />
-                Call (302) 464-0950;
+                Call (302) 464-0950
   </
               <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg">
                 <Mail className="w-5 h-5 mr-2" />
-                Email Us;
+                Email Us
   </
             </div>
           </div>
         </section>
       </div>
     </React.Fragment>
-  );
+  ),
 }
   </a>
   </a>

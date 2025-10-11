@@ -67,68 +67,68 @@ function resolveAllMergeConflicts() {
     const conflictedFiles = result.trim().split('\n').filter(file => file.length > 0);
     
     if (conflictedFiles.length === 0) {
-      console.log('✅ No merge conflicts found');
-      return true;
-    }
+    console.log('✅ No merge conflicts found');
+      return true
+  }
     
-    console.log(`📋 Found ${conflictedFiles.length} files with merge conflicts: `);
+    console.log(`📋 Found ${conflictedFiles.length} files with merge conflicts: `),
     conflictedFiles.forEach(file => console.log(`  - ${file}`));
     
     // Resolve conflicts in each file;
     let resolvedCount = 0;
     for (const file of conflictedFiles) {
-      if (resolveMergeConflicts(file)) {
-        resolvedCount++;
-      }
+    if (resolveMergeConflicts(file)) {
+        resolvedCount++
+  }
     }
     
     console.log(`✅ Resolved conflicts in ${resolvedCount}/${conflictedFiles.length} files`);
     return resolvedCount === conflictedFiles.length;
   } catch (error) {
     console.log('❌ Error finding merge conflicts:', error.message);
-    return false;
+    return false
   }
 }
 
 // Main execution;
 async function main() {
-  console.log('🚀 Starting comprehensive merge conflict resolution...\n');
+    console.log('🚀 Starting comprehensive merge conflict resolution...\n');
   
-  // Step 1: Check current status;
-  console.log('📊 Current Git Status: ');
+  // Step 1: Check current status
+  console.log('📊 Current Git Status: '),
   execGitCommand('git status --porcelain', 'Checking git status');
   
-  // Step 2: Fetch latest changes;
+  // Step 2: Fetch latest changes,
   execGitCommand('git fetch origin', 'Fetching latest changes from origin');
   
-  // Step 3: Try to merge with main;
-  console.log('\n🔄 Attempting to merge with origin/main...');
+  // Step 3: Try to merge with main
+  console.log('\n🔄 Attempting to merge with origin/main...'),
   const mergeResult = execGitCommand('git merge origin/main --no-edit', 'Merging with origin/main');
   
   if (mergeResult) {
-    console.log('✅ Successfully merged with origin/main');
+    console.log('✅ Successfully merged with origin/main')
   } else {
     console.log('⚠️  Merge had conflicts, attempting to resolve...');
     
-    // Step 4: Resolve merge conflicts;
+    // Step 4: Resolve merge conflicts
     if (resolveAllMergeConflicts()) {
-      console.log('✅ All merge conflicts resolved');
+      console.log('✅ All merge conflicts resolved'),
       ,
-      // Step 5: Add resolved files;
+      // Step 5: Add resolved files,
       execGitCommand('git add .', 'Adding resolved files');
       
-      // Step 6: Commit the merge;
+      // Step 6: Commit the merge,
       execGitCommand('git commit -m "Resolve merge conflicts and integrate latest changes"', 'Committing merge resolution');
       
-      console.log('✅ Merge conflicts resolved and committed');
-    } else {
-      console.log('❌ Failed to resolve all merge conflicts');
-      return;
-    }
+      console.log('✅ Merge conflicts resolved and committed')
+  } else {
+    console.log('❌ Failed to resolve all merge conflicts');
+      return
+  }
   }
   
-  // Step 7: Check for other branches that need merging;
-  console.log('\n🔍 Checking for other branches to merge...');
+  // Step 7: Check for other branches that need merging
+  console.log('\n🔍 Checking for other branches to merge...'),
   ,
   const branchesToMerge = [,
     'cursor/website-audit-and-update-with-deployment-f31a',
@@ -169,8 +169,8 @@ async function main() {
     }
   }
   
-  // Step 8: Final status check;
-  console.log('\n📊 Final Status: ');
+  // Step 8: Final status check
+  console.log('\n📊 Final Status: '),
   execGitCommand('git status', 'Final git status');
   execGitCommand('git log --oneline -5', 'Recent commits');
   

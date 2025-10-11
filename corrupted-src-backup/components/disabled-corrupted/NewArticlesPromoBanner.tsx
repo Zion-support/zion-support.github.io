@@ -235,5 +235,5 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/*
       </div>
     </div>
   );
-};
+}
 export default NewArticlesPromoBanner;"`

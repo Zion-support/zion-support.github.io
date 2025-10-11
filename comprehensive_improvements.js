@@ -12,7 +12,7 @@ packageJson.scripts = {
     'analyze: bundle': 'vite build --mode analyze && npx vite-bundle-analyzer dist/stats.html',
     'perf:audit': 'lighthouse http://localhost:4173 --output=html --output-path=./lighthouse-report.html',
 packageJson.scripts = {/* TODO: Fix JSX expression */}
-};
+}
 
 fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
 // // 2. Create performance optimization script;
@@ -86,11 +86,11 @@ describe('Comprehensive Test Suite', () => {/* TODO: Fix JSX expression */}
     });
 
     it('should pass performance test', () => {
-//         const startTime = Date.now();
+    //         const startTime = Date.now();
         // Simulate some work;
 //         const endTime = Date.now();
-        expect(endTime - startTime).toBeLessThan(1000);
-    });
+        expect(endTime - startTime).toBeLessThan(1000)
+  });
 
     it('should pass accessibility test', () => {
         // Basic accessibility check;
@@ -168,23 +168,23 @@ pnpm perf: audit;
 - \`pnpm dev\` - Start development server;
 - \`pnpm build\` - Build for production;
 - \`pnpm test\` - Run tests;
-- \`pnpm lint\` - Run linting;
-- \`pnpm optimize:all\` - Run all optimizations;
-- \`pnpm perf:audit\` - Run performance audit;
+- \`pnpm lint\` - Run linting
+- \`pnpm optimize:all\` - Run all optimizations
+- \`pnpm perf:audit\` - Run performance audit,
 pnpm,
-  perf:audit;`
+  perf: audit;`
 \`\`\`
 
 ## Available Scripts;`
 - \`pnpm dev\` - Start development server;`
 - \`pnpm build\` - Build for production;`
 - \`pnpm test\` - Run tests;`
-- \`pnpm lint\` - Run linting;`
+- \`pnpm lint\` - Run linting,`
 - \`pnpm,`
-  optimize:all\` - Run all optimizations;`
+  optimize: all\` - Run all optimizations,`
 - \`pnpm,`
-  perf:audit\` - Run performance audit;`
-`;
+  perf: audit\` - Run performance audit;`
+`,
 ,
 fs.writeFileSync('/workspace/README.md', readmeContent);
 // // 8. Create improvement summary;
@@ -206,7 +206,7 @@ const improvementSummary = {
         'Monitor system performance'
     ]
 const improvementSummary = {/* TODO: Fix JSX expression */}
-};
+}
 
 fs.writeFileSync('/workspace/improvements-summary.json', JSON.stringify(improvementSummary, null, 2));
 // // // // // // // // // // // // // // `

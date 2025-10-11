@@ -1,0 +1,285 @@
+'use client';
+import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Shield, CheckCircle, AlertTriangle, Code, DollarSign, Clock, Users, Zap, Brain, ArrowRight, Star, TrendingUp, Lock, FileText, BarChart, Target, Award, Rocket, Globe, Database, Cpu, Eye, MessageSquare, Settings, Calendar, CheckSquare, Phone, Mail, MapPin } from 'lucide-react';
+
+const AISmartContractAuditor: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  const features = [
+    {
+      icon: Shield,
+      title: 'Automated Security Analysis',;
+      description: 'AI-powered vulnerability detection in smart contracts using advanced static analysis',;
+      benefits: ['Detects 99.9% of common vulnerabilities', 'Reduces audit time by 80%', 'Zero false positives'],
+    },
+    {
+      icon: Code,
+      title: 'Code Quality Assessment',
+      description: 'Comprehensive code review with best practices compliance and optimization suggestions',
+      benefits: ['Gas optimization recommendations', 'Code complexity analysis', 'Best practices compliance']
+    },
+    {
+      icon: BarChart,
+      title: 'Risk Scoring System',
+      description: 'Intelligent risk assessment with detailed scoring and mitigation strategies',
+      benefits: ['Real-time risk scoring', 'Priority-based recommendations', 'Historical trend analysis']
+    },
+    {
+      icon: Brain,
+      title: 'Machine Learning Models',
+      description: 'Advanced ML models trained on thousands of audited contracts for pattern recognition',
+      benefits: ['Continuous learning', 'Pattern recognition', 'Predictive analysis']
+    },
+  ];
+  const pricingPlans = [
+    {
+      name: 'Starter',
+      price: '$299',
+      period: '/month',
+      description: 'Perfect for small projects and individual developers',
+      features: [
+        'Up to 5 smart contracts per month',
+        'Basic security analysis',
+        'Code quality assessment',
+        'Email support',
+        'PDF audit reports',
+        'Basic risk scoring'
+      ],
+      popular: false
+    },
+    {
+      name: 'Professional',
+      price: '$799',
+      period: '/month',
+      description: 'Ideal for growing DeFi projects and development teams',
+      features: [
+        'Up to 25 smart contracts per month',
+        'Advanced security analysis',
+        'Gas optimization recommendations',
+        'Priority support',
+        'Detailed audit reports',
+        'Advanced risk scoring',
+        'API access',
+        'Custom compliance checks'
+      ],
+      popular: true
+    },
+    {
+      name: 'Enterprise',
+      price: '$1,999',
+      period: '/month',
+      description: 'For large-scale projects and enterprise clients',
+      features: [
+        'Unlimited smart contracts',
+        'Comprehensive security analysis',
+        'Custom ML model training',
+        '24/7 dedicated support',
+        'Executive summary reports',
+        'Real-time monitoring',
+        'Custom integrations',
+        'White-label solutions',
+        'On-site consultation'
+      ],
+      popular: false;
+    };
+  ];
+
+  const useCases = [
+    {
+      title: 'DeFi Protocol Audits',
+      description: 'Comprehensive security analysis for decentralized finance protocols',
+      icon: DollarSign,
+      results: 'Reduced security incidents by 95%'
+    },
+    {
+      title: 'NFT Marketplace Security',
+      description: 'Smart contract auditing for NFT platforms and marketplaces',
+      icon: Image,
+      results: 'Zero critical vulnerabilities found'
+    },
+    {
+      title: 'Token Launch Security',
+      description: 'Pre-launch security audits for new token contracts',
+      icon: Rocket,
+      results: '100% successful token launches'
+    },
+    {
+      title: 'Cross-Chain Bridge Audits',
+      description: 'Security analysis for cross-chain bridge implementations',
+      icon: Globe,
+      results: 'Prevented $50M+ in potential losses';
+    };
+  ];
+  return ()
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-500/20 via-transparent to-transparent" / /></div>
+          <div className="max-w-7xl mx-auto relative z-10" /></div>
+            <div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} /></div>
+              <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full px-6 py-3 mb-8 border border-cyan-500/30" /></div>
+                <Shield className="w-5 h-5 text-cyan-400" / /></Shield>
+                <span className="text-cyan-400 font-semibold">AI-Powered Security</span>
+              </div>
+              
+              <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" /></h1>
+                AI Smart Contract Auditor
+              </h1>
+              
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed" /></p>
+                Advanced AI-powered smart contract auditing with automated security analysis, 
+                vulnerability detection, and comprehensive risk assessment for blockchain projects.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12" /></div>
+                <div className="flex items-center space-x-2 text-cyan-400" /></div>
+                  <CheckCircle className="w-5 h-5" / /></CheckCircle>
+                  <span className="font-semibold">99.9% Vulnerability Detection</span>
+                </div>
+                <div className="flex items-center space-x-2 text-purple-400" /></div>
+                  <Clock className="w-5 h-5" / /></Clock>
+                  <span className="font-semibold">80% Faster Audits</span>
+                </div>
+                <div className="flex items-center space-x-2 text-pink-400" /></div>
+                  <Shield className="w-5 h-5" / /></Shield>
+                  <span className="font-semibold">Zero False Positives</span>
+                </div>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center" /></div>
+                <a href="tel:+13024640950"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:scale-105" /></a>
+                  <Phone className="w-5 h-5 mr-2" / /></Phone>
+                  Call (302) 464-0950
+                </a>
+                <a href="mailto:kleber@ziontechgroup.com"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 hover:scale-105" /></a>
+                  <Mail className="w-5 h-5 mr-2" / /></Mail>
+                  Get Quote
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8" /></section>
+          <div className="max-w-7xl mx-auto" /></div>
+            <div className="text-center mb-16" /></div>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent" /></h2>
+                Advanced AI Security Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto" /></p>
+                Our AI-powered smart contract auditor uses cutting-edge machine learning 
+                and static analysis to provide comprehensive security assessments.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" /></div>
+              {features.map((feature, index) => ()
+                    {feature.benefits.map((benefit, idx) => ()
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Use Cases Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/30 to-slate-900/30" /></section>
+          <div className="max-w-7xl mx-auto" /></div>
+            <div className="text-center mb-16" /></div>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent" /></h2>
+                Trusted by Leading Projects
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto" /></p>
+                Our AI smart contract auditor has secured billions in value across 
+                various blockchain ecosystems and use cases.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" /></div>
+              {useCases.map((useCase, index) => ()
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8" /></section>
+          <div className="max-w-7xl mx-auto" /></div>
+            <div className="text-center mb-16" /></div>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent" /></h2>
+                Transparent Pricing
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto" /></p>
+                Choose the perfect plan for your smart contract auditing needs. 
+                All plans include our advanced AI security analysis.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8" /></div>
+              {pricingPlans.map((plan, index) => ()
+                  )}
+                  
+                  <div className="text-center mb-8" /></div>
+                    <h3 className="text-2xl font-bold mb-2 text-white">{plan.name}</h3>
+                    <p className="text-gray-400 mb-4">{plan.description}</p>
+                    <div className="flex items-baseline justify-center" /></div>
+                      <span className="text-5xl font-bold text-cyan-400">{plan.price}</span>
+                      <span className="text-gray-400 ml-2">{plan.period}</span>
+                    </div>
+                  </div>
+                  
+                  <ul className="space-y-4 mb-8" /></ul>
+                    {plan.features.map((feature, idx) => ()
+                    ))}
+                  </ul>
+                  
+                  <a href="tel:+13024640950"
+                    className={`w-full py-3 px-6 rounded-xl font-semibold text-center transition-all duration-300 ${
+                      plan.popular
+                        ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700'
+                        : 'bg-gradient-to-r from-gray-700 to-gray-600 text-white hover:from-gray-600 hover:to-gray-500'
+                    }`} /></a>
+                    Get Started
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10" /></section>
+          <div className="max-w-4xl mx-auto text-center" /></div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent" /></h2>
+              Secure Your Smart Contracts Today
+            </h2>
+            <p className="text-xl text-gray-300 mb-8" /></p>
+              Don't risk your project's security. Get comprehensive AI-powered smart contract auditing 
+              with our advanced security analysis platform.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center" /></div>
+              <a href="tel:+13024640950"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:scale-105" /></a>
+                <Phone className="w-5 h-5 mr-2" / /></Phone>
+                Call (302) 464-0950
+              </a>
+              <a href="mailto:kleber@ziontechgroup.com"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 hover:scale-105" /></a>
+                <Mail className="w-5 h-5 mr-2" / /></Mail>
+                Get Free Quote
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+};
+
+export default AISmartContractAuditor;

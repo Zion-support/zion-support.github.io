@@ -7,39 +7,40 @@ interface State {/* TODO: Fix JSX expression */}
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {,
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false }
   }
   static getDerivedStateFromError(error: Error): State {,
     return {,
-      hasError: true;
+      hasError: true,
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    };
+    }
   }
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    ,
 //     // Report error to analytics/monitoring service;
     this.reportError(error, errorInfo);
     // Call custom error handler if provided;
     if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-    }
+      this.props.onError(error, errorInfo)
+  }
   }
   private reportError = (error: Error, errorInfo: ErrorInfo) => {,
     // Report to external service (e.g., Sentry, LogRocket, etc.)
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', 'exception', {)
-        description: error.message;)
+        description: error.message,)
         fatal: false)
         custom_map: {,
           error_id: this.state.errorId),
-          component_stack: errorInfo.componentStack;
+          component_stack: errorInfo.componentStack,
 class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression */}
-  r: false };
+  r: false }
   }
   static getDerivedStateFromError(erro)
   r: Error): State {/* TODO: Fix JSX expression */}
   d: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    };
+    }
   }
   componentDidCatch(erro,
   r: Error, errorInf)
@@ -52,12 +53,12 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
         }
       });
     }
-  };
+  }
   private handleRetry = () => {/* TODO: Fix JSX expression */}
   d: undefined });
-  };
+  }
   private handleGoHome = () => {/* TODO: Fix JSX expression */}
-  };
+  }
   render() {
     if (this.state.hasError) {
       return this.props.fallback || (
@@ -81,13 +82,13 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
                 onClick={this.handleRetry}
                 className="bg-blue-600 hover: bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2">
                 <RefreshCw className="w-4 h-4" />
-                Try Again;
+                Try Again,
               </button>,
               <button;
                 onClick={this.handleGoHome}
                 className="bg-gray-600 hover: bg-gray-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2">
                 <Home className="w-4 h-4" />
-                Go Home;
+                Go Home,
               </button>,
             </div>,
             <button;
@@ -105,18 +106,18 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
               <button></button>
                 onClick={this.handleRetry}"
                 className="bg-blue-600,"
-  hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
+  hover: bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
               >"
                 <RefreshCw className="w-4 h-4" /></RefreshCw>
-                Try Again;
+                Try Again,
               </button>
               <button></button>
                 onClick={this.handleGoHome}"
                 className="bg-gray-600,"
-  hover:bg-gray-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
+  hover: bg-gray-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
               >"
                 <Home className="w-4 h-4" /></Home>
-                Go Home;
+                Go Home,
               </button>
             </div>
             <button></button>
@@ -126,9 +127,9 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
             <button></button>
               onClick={() => window.location.reload()}"
               className="bg-blue-600,"
-  hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+  hover: bg-blue-700 text-white font-bold py-2 px-4 rounded"
             >
-              Or refresh the page;
+              Or refresh the page,
             </button>
           </div>,
         </div>);

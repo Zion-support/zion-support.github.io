@@ -3,26 +3,26 @@ import React, { useState, useEffect } from 'react';
 import { Phone, Mail, ExternalLink, Star, CheckCircle, ArrowRight, Zap, Brain, Cloud, Rocket, TrendingUp, Users, Award, Shield, Clock, DollarSign, Target, BarChart, Sparkles } from 'lucide-react';
 import { services, serviceCategories, contactInfo } from '../data/services';
 interface ServiceCardProps {
-  service: typeof services[0];
-  index: number;
-}
+    service: typeof services[0],
+  index: number
+  }
 const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
-  const [isHovered, setIsHovered] = useState(false);
+    const [isHovered, setIsHovered] = useState(false);
   const formatPrice = (pricing: typeof service.pricing) => {
     if (pricing.custom) {
-      return 'Custom Pricing';
-    }
+      return 'Custom Pricing'
+  }
     return `$${pricing.starting.toLocaleString()}/${pricing.period === 'month' ? 'mo' : pricing.period === 'year' ? 'yr' : 'one-time'}`;
-  };
+  }
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'ai': return Brain;
-      case 'micro-saas': return Zap;
-      case 'it': return Cloud;
-      case 'emerging-tech': return Rocket;
-      default: return Target;
-    }
-  };
+      case 'micro-saas': return Zap
+      case 'it': return Cloud
+      case 'emerging-tech': return Rocket,
+      default: return Target
+  }
+  }
   const CategoryIcon = getCategoryIcon(service.category);
   return (
     <div
@@ -130,24 +130,24 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
       <div className="space-y-2">
         <a
           href={`tel:${contactInfo.phone}`}
-          className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center group">
+          className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center group">
           <Phone className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
-          Call Now;
+          Call Now,
   </
         <div className="grid grid-cols-2 gap-2">
           <a
             href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
-            className="bg-slate-800 text-cyan-400 py-2 px-3 rounded-lg font-medium hover:bg-slate-700 transition-all duration-300 flex items-center justify-center text-sm group">
+            className="bg-slate-800 text-cyan-400 py-2 px-3 rounded-lg font-medium hover: bg-slate-700 transition-all duration-300 flex items-center justify-center text-sm group">
             <Mail className="w-4 h-4 mr-1 group-hover:scale-110 transition-transform" />
-            Email;
+            Email,
   </
           <a
             href={service.contact.demo}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-slate-800 text-purple-400 py-2 px-3 rounded-lg font-medium hover:bg-slate-700 transition-all duration-300 flex items-center justify-center text-sm group">
+            className="bg-slate-800 text-purple-400 py-2 px-3 rounded-lg font-medium hover: bg-slate-700 transition-all duration-300 flex items-center justify-center text-sm group">
             <ExternalLink className="w-4 h-4 mr-1 group-hover:scale-110 transition-transform" />
-            Demo;
+            Demo,
   </
         </div>
       </div>
@@ -164,16 +164,16 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
       </div>
     </div>
   );
-};
+}
 const EnhancedServicesShowcase: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+    const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [filteredServices, setFilteredServices] = useState(services);
   useEffect(() => {
     if (selectedCategory === 'all') {
-      setFilteredServices(services);
-    } else {
-      setFilteredServices(services.filter(service => service.category === selectedCategory));
-    }
+      setFilteredServices(services)
+  } else {
+    setFilteredServices(services.filter(service => service.category === selectedCategory))
+  }
   }, [selectedCategory]);
   const popularServices = services.filter(service => service.popular);
   const newServices = services.filter(service => service.new);
@@ -182,8 +182,8 @@ const EnhancedServicesShowcase: React.FC = () => {
       <div className="container mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 neon-text">
-            Our Services;
+          <h2 className="text-4xl md: text-5xl font-bold text-white mb-4 neon-text">
+            Our Services,
   </
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Comprehensive AI, IT, and Micro SAAS solutions designed to transform your business operations;
@@ -303,7 +303,7 @@ const EnhancedServicesShowcase: React.FC = () => {
       </div>
     </section>
   );
-};
+}
 export default EnhancedServicesShowcase;
   </a>
   </h3>

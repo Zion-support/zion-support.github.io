@@ -185,7 +185,7 @@ $4},
         color:       ,
 $4}
     ]
-  };
+  }
   const publications = [
     {
       title: 'Consensus Intelligence: A Framework for Multi-Agent Decision Making',
@@ -249,8 +249,8 @@ $4}
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Research & Development;
+            <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
+              Research & Development,
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Pushing the boundaries of technology through cutting-edge research and innovation. 
@@ -279,15 +279,15 @@ $4}
               <p className="text-gray-300 max-w-2xl mx-auto">
     <div>Coming Soon</div>
   );
-};
+}
   const [activeTab, setActiveTab] = useState('ai');
   const _researchAreas = [
   // TOD,
-  O: Add items;
-];;
+  O: Add items
+],
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   i,
   d: 'ai',
       nam,
@@ -302,8 +302,8 @@ $4}
   n: 'Advancing the frontiers of AI and machine learning'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   i,
   d: 'quantum',
       nam,
@@ -318,8 +318,8 @@ $4}
   n: 'Exploring quantum algorithms and quantum advantage'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   i,
   d: 'autonomous',
       nam,
@@ -334,8 +334,8 @@ $4}
   n: 'Developing self-managing and intelligent systems'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   i,
   d: 'emerging',
       nam,
@@ -351,15 +351,15 @@ $4}
     }
   ];
   const researchProjects = {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   a,
   i: [
   // TOD,
   O: Add items]
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Consensus Intelligence Framework',
         descriptio,
@@ -386,8 +386,8 @@ $4}
   r: 'text-purple-400'
       },
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Autonomous Business Intelligence',
         descriptio,
@@ -414,8 +414,8 @@ $4}
   r: 'text-green-400'
       },
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Neural Architecture Search for Enterprise',
         descriptio,
@@ -447,8 +447,8 @@ $4}
   // TOD,
   O: Add items]
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Quantum Machine Learning Algorithms',
         descriptio,
@@ -475,8 +475,8 @@ $4}
   r: 'text-blue-400'
       },
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Quantum Error Correction for Business Applications',
         descriptio,
@@ -508,8 +508,8 @@ $4}
   // TOD,
   O: Add items]
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Autonomous Enterprise Operations',
         descriptio,
@@ -536,8 +536,8 @@ $4}
   r: 'text-green-400'
       },
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Multi-Agent Coordination Systems',
         descriptio,
@@ -569,8 +569,8 @@ $4}
   // TOD,
   O: Add items]
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Neuromorphic Computing for AI',
         descriptio,
@@ -597,8 +597,8 @@ $4}
   r: 'text-yellow-400'
       },
       {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Edge AI for IoT Systems',
         descriptio,
@@ -625,14 +625,14 @@ $4}
   r: 'text-blue-400'
       }
 //     ]
-  };
+  }
   const publications = [
   // TOD,
-  O: Add items;
-];;
+  O: Add items
+],
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Consensus,
   Intelligence: A Framework for Multi-Agent Decision Making',
@@ -648,8 +648,8 @@ $4}
   k: '#'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Autonomous Business Process Optimization Using Reinforcement Learning',
       author,
@@ -664,8 +664,8 @@ $4}
   k: '#'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Quantum Machine Learning for Financial Risk Assessment',
       author,
@@ -680,8 +680,8 @@ $4}
   k: '#'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   titl,
   e: 'Multi-Agent Coordination in Distributed Systems',
       author,
@@ -698,11 +698,11 @@ $4}
   ];
   const achievements = [
   // TOD,
-  O: Add items;
-];;
+  O: Add items
+],
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   ico,
   n: Award,
       titl,
@@ -711,8 +711,8 @@ $4}
   n: 'Published in top-tier conferences and journals'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   ico,
   n: Users,
       titl,
@@ -721,8 +721,8 @@ $4}
   n: 'World-class research team across multiple disciplines'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   ico,
   n: Target,
       titl,
@@ -731,8 +731,8 @@ $4}
   n: 'Innovative technologies and methodologies'
     },
     {/* TODO: Fix JSX expression */}
-  O: Add content;}
-};
+  O: Add content,}
+}
   ico,
   n: Globe,
       titl,
@@ -750,11 +750,11 @@ $4}
           {/* Header */}"
           <div className="text-center mb-16"></div>"
             <h1 className="text-4xl,"
-  md:text-5xl font-bold text-white mb-6 neon-text"></h1>
-// Research & Development;
+  md: text-5xl font-bold text-white mb-6 neon-text"></h1>
+// Research & Development
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon;
+            Coming Soon,
   </
           </div>
           {/* Research Areas Tabs */}"
@@ -766,7 +766,7 @@ $4}
                   onClick={() => setActiveTab(area.id)}
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${}
   // TOD,
-  O: Add content;
+  O: Add content,
 }
                     activeTab === area.id;`
                       ? `${area.bgColor} ${area.color} border-2 border-current`
@@ -855,7 +855,7 @@ $4}
                       <div className="text-sm text-gray-400 mb-1">Status</div>`
                       <div className={`text-sm font-medium ${}
   // TOD,
-  O: Add content;
+  O: Add content,
 }
                         project.status === 'Completed' ? 'text-green-400' :
                         project.status === 'In Progress' ? 'text-blue-400' : 'text-yellow-400'`
@@ -938,7 +938,7 @@ $4}
                         <span>{pub.year}</span>`
                         <span className={`px-2 py-1 rounded text-xs ${}
   // TOD,
-  O: Add content;
+  O: Add content,
 }
                           pub.impact === 'High' ? 'bg-green-500/20 text-green-400' : 'bg-blue-500/20 text-blue-400'`
                         }`}></span>
@@ -948,9 +948,9 @@ $4}
                       <a></a>
                         href={pub.link}"
                         className="text-cyan-400,"
-  hover:text-cyan-300 text-sm font-medium"
+  hover: text-cyan-300 text-sm font-medium"
 // >
-//                         Read Paper;
+//                         Read Paper,
           </a>
                     </div>
                   </div>
@@ -998,24 +998,24 @@ $4}
               Interested in collaborating on cutting-edge research? We welcome partnerships with 
               universities, research institutions, and industry leaders.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <a
                 href="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
                 <BookOpen className="w-5 h-5 mr-2" />
-                Start Collaboration;
+                Start Collaboration
   </
               <a
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center">
                 <Phone className="w-4 h-4 mr-2" />
-                (302) 464-0950;
+                (302) 464-0950
   </
               <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center">
                 <Mail className="w-4 h-4 mr-2" />
-                Email Us;
+                Email Us,
   </
           {/* CTA Section */}"
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center"></div>"
@@ -1026,7 +1026,7 @@ $4}
 // Interested in collaborating on cutting-edge research? We welcome partnerships with;
               universities, research institutions, and industry leaders.
           </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <a
                 href="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
 // >
@@ -1039,14 +1039,14 @@ $4}
 // >
           "
           <Phone className="w-4 h-4 mr-2" /></Phone>
-// (302) 464-0950;
+// (302) 464-0950
           </a>
               <a
                 href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
 // >
           "
           <Mail className="w-4 h-4 mr-2" /></Mail>
-// Email Us;
+// Email Us
           </a>
             </div>
           </div>
@@ -1055,8 +1055,8 @@ $4}
       <Footer />
     </React.Fragment>
     </div>
-  );
-};
+  ),
+}
 export default ResearchDevelopmentPage;
   </a>
   </a>

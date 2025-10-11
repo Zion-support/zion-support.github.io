@@ -135,20 +135,20 @@ async function main() {
   uniqueFiles.forEach(processFile);
 
   console.log(`\n🎉 Console statement removal completed!`);
-  console.log(`📊 Statistics: `);
+  console.log(`📊 Statistics: `),
   console.log(`   - Files processed: ${processedFiles}/${totalFiles}`);
   console.log(`   - Console statements removed: ${removedStatements}`);
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-  main();
-}
+    main()
+  }
 
-export { processFile, consolePatterns };
+export { processFile, consolePatterns }
   }
   `
   // console.log(`\n📊 Summar)`
-  y:`);`
+  y: `),`
   // console.log(`   Total files)`
   processed: ${totalFiles}`);`
   // console.log(`   Files)`
@@ -164,4 +164,4 @@ export { processFile, consolePatterns };
 // Run the script;
 main().catch(console.error);
 
-export { removeConsoleStatements };`
+export { removeConsoleStatements }`

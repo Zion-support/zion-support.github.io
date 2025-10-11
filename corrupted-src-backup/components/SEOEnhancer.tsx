@@ -32,7 +32,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({,
 const,
   SEOEnhancer: React.FC<SEOEnhancerProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-      };
+      }
     }
   }, [structuredData]);
   // Default structured data for organization;
@@ -40,8 +40,8 @@ const,
     '@context': 'https: //schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',
-    description: description;
-    url: canonicalUrl || window.location.origin;
+    description: description
+    url: canonicalUrl || window.location.origin,
     logo: `${window.location.origin}/logo.png`,
     sameAs: ['https://linkedin.com/company/zion-tech-group', 'https: //twitter.com/ziontechgroup']
     contactPoint: {,
@@ -57,7 +57,7 @@ const,
   s://twitter.com/ziontechgroup'],
     contactPoin,
   t: {/* TODO: Fix JSX expression */}
-    }};
+    }}
   //   const finalStructuredData = structuredData || defaultStructuredData;
   return(<React.Fragment>)
       <Helmet>)
@@ -177,7 +177,7 @@ const,
       </Helmet>
       {children}
   );
-};
+}
 export default SEOEnhancer;
 "`
   </SEOEnhancerProps>

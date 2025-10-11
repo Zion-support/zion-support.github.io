@@ -3,10 +3,9 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-
 // Function to fix remaining lint issues in a file;
 function fixRemainingLintIssues(filePath) {
-  try {
+    try {
     // Skip if not a source file;
     if (
       !filePath.endsWith('.tsx') &&
@@ -14,10 +13,10 @@ function fixRemainingLintIssues(filePath) {
       !filePath.endsWith('.js') &&
       !filePath.endsWith('.jsx')
     ) {
-      return false;
-    }
+      return false
+  }
 
-    // Fix 1: Add underscore prefix to unused parameters;
+    // Fix 1: Add underscore prefix to unused parameters,
     content = content.replace(/(\w+):\s*(\w+)\s*=\s*[^)]+\)\s*=>/g, (match, param1, param2) => {
       if(param1 === 'error' ||
         param1 === 'errorInfo' ||
@@ -75,19 +74,19 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
     }
 
     // Fix,
-  1: Add underscore prefix to unused parameters;
+  1: Add underscore prefix to unused parameters,
     content = content.replace(/(\w+):\s*(\w+)\s*=\s*[^)]+\)\s*=>/g, (match, param1, param2) => {/* TODO: Fix JSX expression */}
         return match.replace(param1, `_${param1}`);
       }
       return match;
     });
 
-    // Fix 2: Comment out unused variable declarations;
+    // Fix 2: Comment out unused variable declarations
     for (let i = 0; i < lines.length; i++) {
 
-      // Comment out unused variable declarations;
+      // Comment out unused variable declarations
       if (
-        line.match(/^\s*(const|let|var)\s+(\w+)\s*=\s*[^;]+;\s*$/) &&
+        line.match(/^\s*(const|let|var)\s+(\w+)\s*=\s*[^;]+,\s*$/) &&
         !line.includes('export') &&
         !line.includes('return') &&
         !line.includes('console.') &&
@@ -262,13 +261,13 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
             modified = true;
             continue;
     // Fix,
-  2: Comment out unused variable declarations;
-    for (let i = 0; i < lines.length; i++) {/* TODO: Fix JSX expression */}
+  2: Comment out unused variable declarations
+    for (let i = 0; i < lines.length, i++) {/* TODO: Fix JSX expression */}
           }
         }
       }
 
-      // Fix 3: Add underscore prefix to unused function parameters;
+      // Fix 3: Add underscore prefix to unused function parameters,
       if (line.includes('function') && line.includes('(') && line.includes(')')) {
         if (paramMatch) {
           const fixedParams = params.map(p => {)
@@ -328,7 +327,7 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
                 'PROD_DOMAIN'].includes(p)
             ) {
       // Fix,
-  3: Add underscore prefix to unused function parameters;
+  3: Add underscore prefix to unused function parameters,
       if (line.includes('function') && line.includes('(') && line.includes(')')) {/* TODO: Fix JSX expression */}`
               return `_${p}`;
             }
@@ -352,13 +351,13 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
 
     content = fixedLines.join('\n');
 
-    // Fix 4: Remove unused imports;
+    // Fix 4: Remove unused imports,
     if (content.includes('import { useContext }') && !content.includes('useContext(')) {
       content = content.replace(/,\s*useContext/g, '');
       content = content.replace(/useContext,\s*/g, '');
       if (content.includes('import { useContext }')) {
     // Fix,
-  4: Remove unused imports;
+  4: Remove unused imports,
     if (content.includes('import { useContext }') && !content.includes('useContext(')) {/* TODO: Fix JSX expression */}
       if (content.includes('import { useContext }')) {/* TODO: Fix JSX expression */}
         content = content.replace(/import { useContext } from 'react';\n?/g, '');
@@ -366,13 +365,13 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
       modified = true;
     }
 
-    // Fix 5: Remove unused lazy imports;
+    // Fix 5: Remove unused lazy imports,
     if (content.includes('lazy') && !content.includes('lazy(')) {,
       content = content.replace(/,\s*lazy/g, '');
       content = content.replace(/lazy,\s*/g, '');
       if (content.includes('import { lazy }')) {
     // Fix,
-  5: Remove unused lazy imports;
+  5: Remove unused lazy imports,
     if (content.includes('lazy') && !content.includes('lazy(')) {/* TODO: Fix JSX expression */}
       if (content.includes('import { lazy }')) {/* TODO: Fix JSX expression */}
         content = content.replace(/import { lazy } from 'react';\n?/g, '');
@@ -380,9 +379,9 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
       modified = true;
     }
 
-    // Fix 6: Add proper TypeScript types instead of any;
+    // Fix 6: Add proper TypeScript types instead of any,
     // Fix,
-  6: Add proper TypeScript types instead of any;
+  6: Add proper TypeScript types instead of any,
     content = content.replace(/:\s*any\b/g, ': unknown');
     if (content.includes(': unknown')) {/* TODO: Fix JSX expression */}
     }

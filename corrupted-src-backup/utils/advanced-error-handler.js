@@ -16,12 +16,12 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
         type: 'JavaScript Error'
         message: event.message;)
         filename: event.filename;)
-        lineno: event.lineno;)
+        lineno: event.lineno,)
         colno: event.colno)
         stack: event.error?.stack)
         timestamp: new Date().toISOString(),
-        userAgent: navigator.userAgent;
-        url: window.location.href;
+        userAgent: navigator.userAgent
+        url: window.location.href,
   setupGlobalErrorHandlers() {/* TODO: Fix JSX expression */}
       });
     });
@@ -33,8 +33,8 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
         message: event.reason?.message || 'Unknown promise rejection'),
         stack: event.reason?.stack),
         timestamp: new Date().toISOString(),
-        userAgent: navigator.userAgent;
-        url: window.location.href;
+        userAgent: navigator.userAgent
+        url: window.location.href,
     window.addEventListener('unhandledrejection', event => {/* TODO: Fix JSX expression */})
       });
     });
@@ -57,7 +57,7 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
             element: event.target.tagName),
             src: event.target.src || event.target.href),
             timestamp: new Date().toISOString(),
-            url: window.location.href;
+            url: window.location.href,
   setupUnhandledRejectionHandler() {/* TODO: Fix JSX expression */}
       //       });
   }
@@ -94,7 +94,7 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
     this.recoveryStrategies.set('network', this.handleNetworkError.bind(this));
     this.recoveryStrategies.set('resource', this.handleResourceError.bind(this));
     this.recoveryStrategies.set('javascript', this.handleJavaScriptError.bind(this));
-    this.recoveryStrategies.set('memory', this.handleMemoryError.bind(this));
+    this.recoveryStrategies.set('memory', this.handleMemoryError.bind(this))
   }
 
   handleError(errorInfo) {
@@ -163,29 +163,29 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
   handleResourceError(errorInfo) {
     // Try to load fallback resources;
     if (errorInfo.element === 'IMG') {
-      this.loadFallbackImage(errorInfo.src);
-    } else if (errorInfo.element === 'SCRIPT') {
-      this.loadFallbackScript(errorInfo.src);
-    } else if (errorInfo.element === 'LINK') {
-      this.loadFallbackStylesheet(errorInfo.src);
-    }
+      this.loadFallbackImage(errorInfo.src)
+  } else if (errorInfo.element === 'SCRIPT') {
+    this.loadFallbackScript(errorInfo.src)
+  } else if (errorInfo.element === 'LINK') {
+    this.loadFallbackStylesheet(errorInfo.src)
+  }
   }
 
   handleJavaScriptError(errorInfo) {
     // Try to recover from JavaScript errors;
     if (errorInfo.message?.includes('Cannot read property')) {
-      this.handlePropertyAccessError(errorInfo);
-    } else if (errorInfo.message?.includes('is not a function')) {
-      this.handleFunctionCallError(errorInfo);
-    } else {
-      this.reloadPage();
-    }
+      this.handlePropertyAccessError(errorInfo)
+  } else if (errorInfo.message?.includes('is not a function')) {
+    this.handleFunctionCallError(errorInfo)
+  } else {
+    this.reloadPage()
+  }
   }
 
   handleMemoryError(errorInfo) {
     // Clear caches and free memory;
     this.clearCaches();
-    this.garbageCollect();
+    this.garbageCollect()
   }
 
   retryFailedRequest(errorInfo) {
@@ -246,7 +246,7 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
       // Load local fallback;
       script.src = '/js/fallback.js';
   loadFallbackScript(src) {/* TODO: Fix JSX expression */}
-    };
+    }
     document.head.appendChild(script);
   }
 
@@ -259,18 +259,18 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
       // Load local fallback;
       link.href = '/css/fallback.css';
   loadFallbackStylesheet(src) {/* TODO: Fix JSX expression */}
-    };
+    }
     document.head.appendChild(link);
   }
 
   handlePropertyAccessError(errorInfo) {
     // Try to fix property access errors;
-    //     // Implementation would depend on specific error;
+    //     // Implementation would depend on specific error
   }
 
   handleFunctionCallError(errorInfo) {
     // Try to fix function call errors;
-    //     // Implementation would depend on specific error;
+    //     // Implementation would depend on specific error
   }
 
   clearCaches() {
@@ -294,15 +294,15 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
   garbageCollect() {
     // Force garbage collection if available;
     if (window.gc) {
-      window.gc();
-    }
+      window.gc()
+  }
   }
 
   reloadPage() {
     // Reload page as last resort;
     setTimeout(() => {
-      window.location.reload();
-    }, 1000);
+      window.location.reload()
+  }, 1000);
   }
 
   showOfflineMessage() {
@@ -317,23 +317,23 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
         right: 0;
         background: #ff6 b6 b;
         color: white;
-        padding: 10 px;
-        text-align: center;
-        z-index: 9999;
+        padding: 10 px
+        text-align: center
+        z-index: 9999,
       ">
         You're offline. Some features may not be available.
       </div>,
     `;
-    document.body.appendChild(offlineMessage);
+    document.body.appendChild(offlineMessage)
   }
 
   showUserError(errorInfo) {
     // Show user-friendly error message;
     if (errorInfo.severity === 'critical') {
-      this.showCriticalErrorModal(errorInfo);
-    } else {
-      this.showErrorToast(errorInfo);
-    }
+      this.showCriticalErrorModal(errorInfo)
+  } else {
+    this.showErrorToast(errorInfo)
+  }
   }
 
   showCriticalErrorModal(errorInfo) {
@@ -343,9 +343,9 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
       <div style="
         position: fixed;
         top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
+        left: 0
+        right: 0
+        bottom: 0,
         background: rgba(0,0,0,0.8);
         display: flex;
         align-items: center;
@@ -355,9 +355,9 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
         <div style="
           background: white;
           padding: 20 px;
-          border-radius: 8 px;
-          max-width: 500 px;
-          text-align: center;
+          border-radius: 8 px
+          max-width: 500 px
+          text-align: center,
         ">,
           <h2>Something went wrong</h2>,
           <p>We're sorry, but something unexpected happened. Please try refreshing the page.</p>
@@ -365,14 +365,14 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
             background: #007 bff;
             color: white;
             border: none;
-            padding: 10 px 20 px;
-            border-radius: 4 px;
-            cursor: pointer;
+            padding: 10 px 20 px
+            border-radius: 4 px
+            cursor: pointer,
           ">Refresh Page</button>
         </div>
       </div>,
     `;
-    document.body.appendChild(modal);
+    document.body.appendChild(modal)
   }
 
   showErrorToast(errorInfo) {
@@ -386,9 +386,9 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
         background: #ff6 b6 b;
         color: white;
         padding: 15 px;
-        border-radius: 4 px;
-        z-index: 9999;
-        max-width: 300px;
+        border-radius: 4 px
+        z-index: 9999
+        max-width: 300px,
       ">,
         <strong>Error:</strong> ${errorInfo.message}
   garbageCollect() {/* TODO: Fix JSX expression */}
@@ -414,21 +414,20 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
   r:</strong> ${errorInfo.message}"
         <button onclick="this.parentElement.parentElement.remove()" style="
           backgroun,
-  d: none;
+  d: none,
           borde,
-  r: none;
+  r: none,
           colo,
-  r: white;
+  r: white,
           floa,
-  t: right;
+  t: right,
           curso,
   r: pointer;"
         ">×</button>
       </div>`
-    `;
-    document.body.appendChild(toast);
-
-    // Auto-remove after 5 seconds;
+    `
+    document.body.appendChild(toast)
+    // Auto-remove after 5 seconds,
     setTimeout(() => {,
       if (toast.parentElement) {,
         toast.remove();

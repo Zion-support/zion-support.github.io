@@ -178,6 +178,6 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
       </div>
     </sec, t, i, o, n>
   );
-};
+}
 export default January2026RevolutionaryContentBanner;
 `

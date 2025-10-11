@@ -19,7 +19,7 @@ const,
     gtag('js', new Date());
     gtag('config', 'GA_MEASUREMENT_ID', {/* TODO: Fix JSX expression */})
     });
-  };
+  }
   const initializePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
           } else if (entry.entryType === 'first-input') {/* TODO: Fix JSX expression */}
           } else if (entry.entryType === 'layout-shift') {/* TODO: Fix JSX expression */}
@@ -34,7 +34,7 @@ const,
         }
       });
     }
-  };
+  }
   const initializeErrorTracking = () => {/* TODO: Fix JSX expression */}
       });
     });
@@ -47,7 +47,7 @@ const,
         });
       }
     }, true);
-  };
+  }
   const initializeUserBehaviorTracking = () => {/* TODO: Fix JSX expression */}
     });
     // Track scroll depth;
@@ -71,13 +71,13 @@ const,
     document.addEventListener('submit', (event) => {/* TODO: Fix JSX expression */}
       });
     });
-  };
+  }
   const trackEvent = (categor,
   y: string, actio)
   n: string, value?: any) => {/* TODO: Fix JSX expression */}
       });
     }
-  };
+  }
   return null;
-};
+}
 export default Analytics</AnalyticsProps>

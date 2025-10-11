@@ -50,7 +50,7 @@ const,
       <link rel="canonical" href={url} /></link>
     </Helmet>
   );
-};
+}
 export default SEO;
 "
   </SEOProps>

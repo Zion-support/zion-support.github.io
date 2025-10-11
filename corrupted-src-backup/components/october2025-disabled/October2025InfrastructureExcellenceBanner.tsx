@@ -142,6 +142,6 @@ const October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX expr
       </div>
     </div>
   );
-};
+}
 export default October2025InfrastructureExcellenceBanner;
 "`

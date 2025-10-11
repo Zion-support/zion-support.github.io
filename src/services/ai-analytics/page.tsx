@@ -23,10 +23,11 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const AIAnalyticsPage: React.FC = () => {
-  const features = [];
+    const features = [],
   return (
-    {// TODO: Add content;}
-};
+    {// TODO: Add content
+  }
+}
   ico,
   n: Brain,
       titl,
@@ -36,7 +37,7 @@ const AIAnalyticsPage: React.FC = () => {
       benefit,
   s: [
   // TOD,
-  O: Add items];
+  O: Add items],
 //         '95% accuracy in predictions',
 //         'Real-time data processing',
 //         'Automated trend detection',
@@ -158,8 +159,8 @@ icon$5: Award,
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              AI Analytics Services;
+            <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
+              AI Analytics Services,
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Transform your data into actionable insights with our advanced AI-powered analytics platform. 
@@ -289,7 +290,7 @@ icon$5: Award,
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
               Start your journey with AI analytics today. Get a free consultation and discover 
               how our platform can revolutionize your business intelligence.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
                 Get Free Consultation
                 href="tel:+13024640950"
@@ -302,8 +303,8 @@ icon$5: Award,
                 Email Us
       <Footer />
     </React.Fragment>
-  );
-};
+  ),
+}
 export default AIAnalyticsPage;
 {/* Use Cases */}
               Use Cases;"
@@ -341,7 +342,7 @@ export default AIAnalyticsPage;
                         {feature}
                   <a
                     href="/contact" className={`w-full block text-center py-3 px-4 rounded-lg font-medium transition-all duration-300 ${}
-  // TODO: Add content;
+  // TODO: Add content,
 }
 //                       tier.popular;
                         ? 'bg-cyan-400 text-slate-900,
@@ -367,18 +368,18 @@ export default AIAnalyticsPage;
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto"></p>
               Start your journey with AI analytics today. Get a free consultation and discover;
               how our platform can revolutionize your business intelligence.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105" Get Free Consultation;
                 href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Phone className="w-4 h-4 mr-2" />
-                (302) 464-0950;
+                (302) 464-0950
                 href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" />
-                Email Us;
+                Email Us
       <Footer />
     </div>
-  );
-};
+  ),
+}
 export default AiAnalyticsPage;
   </div>
   </p>

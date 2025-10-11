@@ -9,7 +9,7 @@ const __dirname = path.dirname(__filename);
 
 // Get all TypeScript files in the app directory
 function getAllTsxFiles(dir) {
-  const files = [];
+    const files = [];
   const items = fs.readdirSync(dir);
   
   for (const item of items) {
@@ -17,10 +17,10 @@ function getAllTsxFiles(dir) {
     const stat = fs.statSync(fullPath);
     
     if (stat.isDirectory()) {
-      files.push(...getAllTsxFiles(fullPath));
-    } else if (item.endsWith('.tsx')) {
-      files.push(fullPath);
-    }
+      files.push(...getAllTsxFiles(fullPath))
+  } else if (item.endsWith('.tsx')) {
+    files.push(fullPath)
+  }
   }
   
   return files;
@@ -32,7 +32,7 @@ function fixTsxFile(filePath) {
     let modified = false;
 
     // Fix 1: Fix malformed JSX with missing opening tags
-    const malformedJsxPattern = /<(\w+)([^>]*)\s*>\s*<\/\1>\s*([^<]+)/g;
+    const malformedJsxPattern = /<(\w+)([^>]*)\s*>\s*<\/\1>\s*([^<]+)/g,
     content = content.replace(malformedJsxPattern, (match, tagName, attributes, text) => {
       if (text.trim()) {
         modified = true;
@@ -42,7 +42,7 @@ function fixTsxFile(filePath) {
     });
 
     // Fix 2: Fix self-closing tags that should have content
-    const selfClosingWithContentPattern = /<(\w+)([^>]*)\s*\/>\s*([^<]+)/g;
+    const selfClosingWithContentPattern = /<(\w+)([^>]*)\s*\/>\s*([^<]+)/g,
     content = content.replace(selfClosingWithContentPattern, (match, tagName, attributes, text) => {
       if (text.trim() && !text.includes('<')) {
         modified = true;
@@ -70,7 +70,7 @@ function fixTsxFile(filePath) {
     });
 
     // Fix 5: Fix missing closing parentheses in function calls
-    const missingParenPattern = /(\w+\([^)]*)\s*\n\s*(\w+)/g;
+    const missingParenPattern = /(\w+\([^)]*)\s*\n\s*(\w+)/g,
     content = content.replace(missingParenPattern, (match, funcCall, nextToken) => {
       if (!funcCall.includes(')') && !nextToken.startsWith(')')) {
         modified = true;
@@ -80,7 +80,7 @@ function fixTsxFile(filePath) {
     });
 
     // Fix 6: Fix JSX elements with missing content between tags
-    const emptyJsxPattern = /<(\w+)([^>]*)>\s*<\/\1>\s*([^<\n]+)/g;
+    const emptyJsxPattern = /<(\w+)([^>]*)>\s*<\/\1>\s*([^<\n]+)/g,
     content = content.replace(emptyJsxPattern, (match, tagName, attributes, content) => {
       if (content.trim()) {
         modified = true;
@@ -90,7 +90,7 @@ function fixTsxFile(filePath) {
     });
 
     // Fix 7: Fix malformed className attributes with quotes
-    const malformedClassPattern = /className="([^"]*"[^"]*)"([^>]*)>/g;
+    const malformedClassPattern = /className="([^"]*"[^"]*)"([^>]*)>/g,
     content = content.replace(malformedClassPattern, (match, className, rest) => {
       const fixedClassName = className.replace(/"/g, '&quot;');
       modified = true;
@@ -107,19 +107,18 @@ function fixTsxFile(filePath) {
       const match = line.match(unclosedTagPattern);
       if (match) {
         const tagName = match[1];
-        const attributes = match[2];
-        
+        const attributes = match[2]
         // Look ahead to see if there's a closing tag
-        let foundClosing = false;
+        let foundClosing = false
         for (let j = i + 1; j < lines.length; j++) {
-          const nextLine = lines[j].trim();
+          const nextLine = lines[j].trim(),
           if (nextLine.startsWith(`</${tagName}>`)) {
-            foundClosing = true;
-            break;
-          }
+    foundClosing = true;
+            break
+  }
           if (nextLine.startsWith('<') && !nextLine.startsWith('</')) {
-            break;
-          }
+    break
+  }
         }
         
         if (!foundClosing) {
@@ -150,8 +149,8 @@ const tsxFiles = getAllTsxFiles(appDir);
 
 let fixedCount = 0;
 tsxFiles.forEach(filePath => {
-  if (fixTsxFile(filePath)) {
-    fixedCount++;
+    if (fixTsxFile(filePath)) {
+    fixedCount++
   }
 });
 

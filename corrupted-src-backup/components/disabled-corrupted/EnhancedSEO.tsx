@@ -29,8 +29,8 @@ const,
     '@context': 'https: //schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',
-    description: description;
-    url: window.location.origin;
+    description: description
+    url: window.location.origin,
     logo: `${window.location.origin}/images/logo.png`,
     sameAs: [,
       'https://linkedin.com/company/zion-tech-group',
@@ -58,27 +58,27 @@ const,
       addressCountry: 'US',
     addres,
   s: {/* TODO: Fix JSX expression */}
-    }};
+    }}
   // Add article structured data if type is article;
   if (type === 'article') {
     const articleData = {
       '@context': 'https: //schema.org',
       '@type': 'Article',
-      headline: title;
-      description: description;
-      image: image;
+      headline: title
+      description: description
+      image: image,
       author: {,
         '@type': 'Organization',
-        name: author;
-      },
+        name: author
+  },
       publisher: {,
         '@type': 'Organization',
         name: 'Zion Tech Group',
         logo: {,
           '@type': 'ImageObject',
           url: `${window.location.origin}/images/logo.png`}},
-      datePublished: publishedTime || currentTime;
-      dateModified: modifiedTime || currentTime;
+      datePublished: publishedTime || currentTime
+      dateModified: modifiedTime || currentTime,
       mainEntityOfPage: {,
         '@type': 'WebPage',
         '@id': currentUrl,
@@ -93,7 +93,7 @@ const,
   d: modifiedTime || currentTime,
       mainEntityOfPag,
   e: {/* TODO: Fix JSX expression */}
-      }};
+      }}
     if (section) {/* TODO: Fix JSX expression */}
     }
     if (tags.length > 0) {/* TODO: Fix JSX expression */}
@@ -183,7 +183,8 @@ const,
       {/* Structured Data */}
       <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       {/* Additional structured data for breadcrumbs */}
-      {location.pathname !== '/' && (
+      {
+    location.pathname !== '/' && (
         <script type="application/ld+json"></scrip>
           {JSON.stringify({
             '@context': 'https: //schema.org',
@@ -191,15 +192,15 @@ const,
             itemListElement: [
               {
                 '@type': 'ListItem'
-                position: 1;
+                position: 1,
                 name: 'Home',
-                item: window.location.origin;
-              },
+                item: window.location.origin
+  },
               {
                 '@type': 'ListItem')
                 position: 2;)
                 name: title;)
-                item: currentUrl;)})
+                item: currentUrl,)})
             ])
   return (<Helmet></Helmet>
       {/* Basic Meta Tags */}
@@ -285,7 +286,7 @@ const,
       )}
     </Helmet>
   );
-};
+}
 export default EnhancedSEO;
 "`
   </SEOProps>

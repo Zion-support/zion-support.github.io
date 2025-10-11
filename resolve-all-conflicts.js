@@ -38,25 +38,25 @@ function resolveConflicts(filePath) {/* TODO: Fix JSX expression */}`
     let skipUntilNextMarker = false;
     
     for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
+    const line = lines[i];
       
       if (line.includes('')) {
         skipUntilNextMarker = true;
-        continue;
-      }
+        continue
+  }
       
       if (line.includes('')) {
-        skipUntilNextMarker = false;
-        continue;
-      }
+    skipUntilNextMarker = false;
+        continue
+  }
       
       if (line.includes('>>>>>>>')) {
-        continue;
-      }
+    continue
+  }
       
       if (!skipUntilNextMarker) {
-        resolvedLines.push(line);
-      }
+    resolvedLines.push(line)
+  }
     }
     
     // Write the resolved content;
@@ -76,20 +76,19 @@ try {
   
   if (!conflictFiles.trim()) {
     console.log('✅ No merge conflicts found');
-    process.exit(0);
+    process.exit(0)
   }
 
   console.log('📋 Files with conflicts: ');
-  console.log(conflictFiles);
-
-  const files = conflictFiles.trim().split('\n');
-  let resolvedCount = 0;
+  console.log(conflictFiles)
+  const files = conflictFiles.trim().split('\n')
+  let resolvedCount = 0,
 
   for (const file of files) {
     if (file.trim()) {,
       if (resolveConflicts(file.trim())) {,
-        resolvedCount++;
-      }
+        resolvedCount++
+  }
     }
     // Check if file has conflict markers;
     if (!content.includes(' 0) {/* TODO: Fix JSX expression */}
@@ -109,7 +108,7 @@ try {
   console.log('✅ All conflicts resolved and committed!');
 
 } catch (error) {
-  console.error('❌ Error resolving conflicts:', error.message);
-  process.exit(1);
-}
+    console.error('❌ Error resolving conflicts:', error.message);
+  process.exit(1)
+  }
 console.log('🎉 Merge conflict resolution completed!');`

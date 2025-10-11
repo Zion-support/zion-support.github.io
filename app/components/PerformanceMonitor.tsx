@@ -1,9 +1,4 @@
 'use client';
-<<<<<<< HEAD
-import React from 'react';
-'use client';
-=======
-
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
@@ -14,62 +9,15 @@ interface PerformanceMetrics {
   ttfb?: number;
 }
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({});
   const [isVisible, setIsVisible] = useState(false);
-<<<<<<< HEAD
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  useEffect(() => {
-    // Initialize performance monitoring
-    const measureWebVitals = () => {
-      // Basic web vitals measurement
-      if (typeof window !== 'undefined' && 'performance' in window) {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        if (navigation) {
-          const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
-          const domContentLoaded = navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
-          // Get memory usage if available
-          const memory = (performance as any).memory;
-          const memoryUsage = memory ? Math.round(memory.usedJSHeapSize / 1024 / 1024) : 0;
-          // Get connection speed
-          const connection = (navigator as any).connection;
-          const connectionSpeed = connection ? connection.effectiveType || 'unknown' : 'unknown';
-          setMetrics({
-            loadTime: Math.round(loadTime),
-            memoryUsage,
-            connectionSpeed,
-            renderTime: Math.round(domContentLoaded)
-          });
-        }
-      }
-    };
-    // Track performance after page load
-    if (document.readyState === 'complete') {
-      measureWebVitals();
-    } else {
-      window.addEventListener('load', measureWebVitals);
-    }
-    // Keyboard shortcut to toggle visibility
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.ctrlKey && e.shiftKey && e.key === 'P') {
-        e.preventDefault();
-        setIsVisible(prev => !prev);
-      }
-    };
-    window.addEventListener('keydown', handleKeyDown);
-    return () => {
-      window.removeEventListener('load', measureWebVitals);
-      window.removeEventListener('keydown', handleKeyDown);
-    };
-  }, []);
-=======
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
     // Only show in development or when performance monitoring is enabled
-    const shouldMonitor = process.env.NODE_ENV === 'development' || 
+    const shouldMonitor = process.env.NODE_ENV === 'development' ||
                          localStorage.getItem('performance-monitoring') === 'true';
 
     if (!shouldMonitor) return;
@@ -138,9 +86,9 @@ const PerformanceMonitor: React.FC = () => {
   };
 
   return (
-    <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-sm border border-slate-700 rounded-lg p-4 text-xs text-white z-50 max-w-xs">
-      <div className="flex items-center justify-between mb-2">
-        <h3 className="font-semibold text-cyan-400">Performance</h3>
+    <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-lg border border-cyan-500/20 rounded-lg p-4 text-xs text-white z-50 max-w-xs">
+      <div className="flex justify-between items-center mb-2">
+        <span className="font-semibold text-cyan-400">Performance</span>
         <button
           onClick={() => setIsVisible(false)}
           className="text-gray-400 hover:text-white"
@@ -158,7 +106,6 @@ const PerformanceMonitor: React.FC = () => {
             </span>
           </div>
         )}
-        
         {metrics.fid && (
           <div className="flex justify-between">
             <span>FID:</span>
@@ -167,7 +114,6 @@ const PerformanceMonitor: React.FC = () => {
             </span>
           </div>
         )}
-        
         {metrics.cls && (
           <div className="flex justify-between">
             <span>CLS:</span>
@@ -176,7 +122,6 @@ const PerformanceMonitor: React.FC = () => {
             </span>
           </div>
         )}
-        
         {metrics.fcp && (
           <div className="flex justify-between">
             <span>FCP:</span>
@@ -185,7 +130,6 @@ const PerformanceMonitor: React.FC = () => {
             </span>
           </div>
         )}
-        
         {metrics.ttfb && (
           <div className="flex justify-between">
             <span>TTFB:</span>
@@ -197,7 +141,6 @@ const PerformanceMonitor: React.FC = () => {
       </div>
     </div>
   );
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 };
+
 export default PerformanceMonitor;
-  </PerformanceMetrics>

@@ -49,11 +49,12 @@ async function processFiles() {/* TODO: Fix JSX expression */}
       ]
     });
     
-    files.forEach(file => {)
+    files.forEach(file => {
+    )
       totalFiles++;)
       if (removeConsoleLogs(file)) {
-        modifiedFiles++;
-      }
+        modifiedFiles++
+  }
   for (const pattern of patterns) {/* TODO: Fix JSX expression */}
     });
     

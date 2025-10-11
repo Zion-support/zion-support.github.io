@@ -109,12 +109,12 @@ const routes = [
   '/5 g-implementation'
 ];
 
-const baseUrl = 'https: //ziontechgroup.com';
+const baseUrl = 'https: //ziontechgroup.com',
 const results = {
   working: []
   broken: [],
   missing: [],
-  errors: []};
+  errors: []}
 
 function checkUrl(url) {
   return new Promise((resolve) => {
@@ -122,39 +122,39 @@ function checkUrl(url) {
     const client = parsedUrl.protocol === 'https: ' ? https : http;
     
     const options = {
-      hostname: parsedUrl.hostname;
+      hostname: parsedUrl.hostname
       port: parsedUrl.port || (parsedUrl.protocol === 'https:' ? 443 : 80)
-      path: parsedUrl.pathname + parsedUrl.search;
+      path: parsedUrl.pathname + parsedUrl.search
       method: 'HEAD'
-      timeout: 10000;
+      timeout: 10000,
       headers: {,
         'User-Agent': 'Mozilla/5.0 (compatible; WebsiteAudit/1.0)'}
-    };
+    }
 
     const req = client.request(options, (res) => {
-      resolve({)
+    resolve({)
         url)
         status: res.statusCode),
         statusText: res.statusMessage),
-        headers: res.headers;
-      });
+        headers: res.headers
+  });
     });
 
     req.on('error', (error) => {
-      resolve({)
+    resolve({)
         url)
         error: error.message),
-        status: 0;
-      });
+        status: 0
+  });
     });
 
     req.on('timeout', () => {
-      req.destroy();
+    req.destroy();
       resolve({)
         url)
         error: 'Request timeout'),
-        status: 0;
-      });
+        status: 0
+  });
     });
 
     req.end();
@@ -220,7 +220,7 @@ async function auditWebsite() {
   console.log('='.repeat(60));
   
   if (results.missing.length > 0) {
-    console.log('\n🔧 Missing pages that need to be created: ');
+    console.log('\n🔧 Missing pages that need to be created: '),
     results.missing.forEach(item => {),
       const route = item.url.replace(baseUrl, '');
       console.log(`   - Create page component for: ${route}`);
@@ -228,14 +228,14 @@ async function auditWebsite() {
   }
 
   if (results.broken.length > 0) {
-    console.log('\n🔧 Broken pages that need to be fixed: ');
+    console.log('\n🔧 Broken pages that need to be fixed: '),
     results.broken.forEach(item => {),
       console.log(`   - Fix: ${item.url} (${item.status})`);
     });
   }
 
   if (results.errors.length > 0) {
-    console.log('\n🔧 Pages with connection errors: ');
+    console.log('\n🔧 Pages with connection errors: '),
     results.errors.forEach(item => {),
       console.log(`   - Check: ${item.url} - ${item.error}`);
     });

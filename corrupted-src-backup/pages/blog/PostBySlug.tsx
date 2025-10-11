@@ -98,11 +98,11 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
           <a;
             href="/blog"
             className="bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors">
-            Back to Blog;)
+            Back to Blog,)
           </a>)
         </div>)
       </div>)
-    );
+    )
   }
   return(<div className="min-h-screen bg-gray-50">
   return (

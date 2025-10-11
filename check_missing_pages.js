@@ -5,13 +5,13 @@ const footerContent = fs.readFileSync('app/components/Footer.tsx', 'utf8');
 
 // Extract all href values from the Footer;
 const footerLinks = [];
-const hrefMatches = footerContent.match(/href: \s*'([^']+)'/g);
+const hrefMatches = footerContent.match(/href: \s*'([^']+)'/g)
 if (hrefMatches) {
-  hrefMatches.forEach(match => {)
-    const href = match.match(/href:\s*'([^']+)'/)[1];
+    hrefMatches.forEach(match => {)
+    const href = match.match(/href:\s*'([^']+)'/)[1],
     if (href.startsWith('/')) {,
-      footerLinks.push(href.substring(1)); // Remove leading slash;
-    }
+      footerLinks.push(href.substring(1)); // Remove leading slash
+  }
   });
 }
 
@@ -20,13 +20,13 @@ const navContent = fs.readFileSync('app/components/Navigation.tsx', 'utf8');
 
 // Extract all path values from the Navigation;
 const navLinks = [];
-const pathMatches = navContent.match(/path: \s*'([^']+)'/g);
+const pathMatches = navContent.match(/path: \s*'([^']+)'/g)
 if (pathMatches) {
-  pathMatches.forEach(match => {)
-    const path = match.match(/path:\s*'([^']+)'/)[1];
+    pathMatches.forEach(match => {)
+    const path = match.match(/path:\s*'([^']+)'/)[1],
     if (path.startsWith('/')) {,
-      navLinks.push(path.substring(1)); // Remove leading slash;
-    }
+      navLinks.push(path.substring(1)); // Remove leading slash
+  }
   });
 }
 
@@ -37,8 +37,8 @@ try {
   const result = execSync('find app -name "page.tsx" | sed "s|app/||" | sed "s|/page.tsx||"', { encoding: 'utf8' });
   existingPages.push(...result.trim().split('\n').filter(Boolean));
 } catch (error) {
-  console.error('Error getting existing pages:', error.message);
-}
+    console.error('Error getting existing pages:', error.message)
+  }
 
 // Combine all links;
 const allLinks = [...new Set([...footerLinks, ...navLinks])].sort();
@@ -56,8 +56,8 @@ if (missingPages.length > 0) {
   console.log('\n=== MISSING PAGES ===');
   missingPages.forEach(page => console.log(`- ${page}`));
 } else {
-  console.log('\n✅ All navigation and footer links have corresponding pages!');
-}
+    console.log('\n✅ All navigation and footer links have corresponding pages!')
+  }
 
 // Check for pages that exist but aren't linked;
 const unlinkedPages = existingPages.filter(page => !allLinks.includes(page));

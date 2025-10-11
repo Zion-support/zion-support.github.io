@@ -1,6 +1,6 @@
 class PerformanceMonitor {
-  private static instance: PerformanceMonitor;
-  private isInitialized: boolean = false;
+  private static instance: PerformanceMonitor
+  private isInitialized: boolean = false,
 ,
 class PerformanceMonitor {/* TODO: Fix JSX expression */}
   private constructor() {}

@@ -1,6 +1,6 @@
 const, October2025CuttingEdgeInnovationsBanne, r = () => {
   return(<div, className="bg-gradie, n, t-to-r, fro, m-indi, g, o-9, 0, 0/40, vi, a-purp, l, e-9, 0, 0/40, t, o-pi, n, k-9, 0, 0/40, borde, r-b, borde, r-indi, g, o-5, 0, 0/30, backdro, p-bl, u, r-sm">)
-      <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;),
+      <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,),
   g:px-8, p, y-6">"
         <div, className="flex, item, s-start, ga, p-4">
           <div, className="hidden, s, m: flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, rounde, d-2xl, b, g-gradie, n, t-to-br, fro, m-indi, g, o-500, t, o-purp, l, e-600, fle, x-shri, n, k-0, shado, w-lg, shado, w-indi, g, o-5, 0, 0/50">"
@@ -231,7 +231,7 @@ const, October2025CuttingEdgeInnovationsBanne, r = () => {/* TODO: Fix JSX expre
               classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-indi, g, o-600, t, o-purp, l, e-600, hove, r: fr, o, m-indi, g, o-500, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, rounde, d-lg, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, shado, w-lg, hove, r:shad, o, w-xl, hov, e,"
   r:shad, o, w-indi, g, o-5, 0, 0/50"
             ></Li>
-              <sp, a, n>Explore, Toda, y's, Breakthrough, Innovations</sp, a, n>;"
+              <sp, a, n>Explore, Toda, y's, Breakthrough, Innovations</sp, a, n>"
               <Link, className="w-5 h-5  /></Link>
               <sp, a, n>Explore, Toda, y's, Breakthrough, Innovations</sp, a, n>';"
               <Link, className="w-5 h-5" />";
@@ -241,6 +241,6 @@ const, October2025CuttingEdgeInnovationsBanne, r = () => {/* TODO: Fix JSX expre
       </d, i, v>
     </d, i, v>
   );
-};
+}
 export default October2025CuttingEdgeInnovationsBanner;
-;"
+"

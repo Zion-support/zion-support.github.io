@@ -8,7 +8,7 @@ async function reportWebVitals() {/* TODO: Fix JSX expression */}
   c: {/* TODO: Fix JSX expression */})
   e: number }) => {/* TODO: Fix JSX expression */}
         //         }
-    };
+    }
     onCLS(log);
     onLCP(log);
     onFCP(log);

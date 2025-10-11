@@ -45,9 +45,9 @@ export const seoUtils = {/* content */}
     description: string;
     author: string;
     datePublished: string;
-    dateModified: string;
-    image?: string;
-    url: string;
+    dateModified: string
+    image?: string
+    url: string,
   }) => ({/* content */}
     "@context": "https: //schema.org",
     "@type": "Article",
@@ -109,18 +109,18 @@ export const seoUtils = {/* content */}
   generateArticleSchema: (articl,
   e: {/* content */}
     titl,
-  e: string;
+  e: string,
     descriptio,
-  n: string;
+  n: string,
     autho,
-  r: string;
+  r: string,
     datePublishe,
-  d: string;
+  d: string,
     dateModifie,
-  d: string;
-    image?: string;
+  d: string
+    image?: string,
     ur,
-  l: string;)
+  l: string,)
   }) => ({/* content */}"
     "@context": "http,"
   s://schema.org","
@@ -137,7 +137,7 @@ export const seoUtils = {/* content */}
     })
   })
 });
-};
+}
 // Sitemap generation utilities;
 export const sitemapUtils = {/* content */}
   // Generate sitemap entries;
@@ -146,7 +146,7 @@ export const sitemapUtils = {/* content */}
       url,
       lastmod: lastmod || new Date().toISOString().split('T')[0],
       changefreq: changefreq || 'weekly',
-      priority: priority || '0.8'};
+      priority: priority || '0.8'}
   },
   // Generate robots.txt content;
   generateRobotsTxt: (sitemapUrl: string = 'https://zion.app/sitemap.xml') => {/* content */}
@@ -165,7 +165,7 @@ Sitemap: ${sitemapUrl}`;
   q: changefreq || 'weekly',
       priorit,
   y: priority || '0.8'
-    };
+    }
   },
   // Generate robots.txt content,
   generateRobotsTxt: (sitemapUr,
@@ -178,7 +178,7 @@ Allo,
 Sitema,`
   p: ${sitemapUrl}`;
   }
-};
+}
 // URL optimization utilities;
 export const urlUtils = {/* content */}
   // Generate canonical URL;
@@ -212,7 +212,7 @@ export const urlUtils = {/* content */}
   s://zion.app') => {/* content */}`
     return `${baseUrl}${path}`;
   }
-};
+}
 // Content optimization utilities;
 export const contentOptimization = {/* content */}
   // Extract keywords from content;
@@ -252,7 +252,7 @@ export const contentOptimization = {/* content */}
   r: string = ' | '): string => {/* content */}`
     return pageTitle ? `${pageTitle}${separator}${siteName}` : siteName;
   }
-};
+}
 // Performance SEO utilities;
 export const performanceSEO = {/* content */}
   // Preload critical resources;
@@ -277,20 +277,20 @@ export const performanceSEO = {/* content */}
   },
   // Optimize images for SEO;
   optimizeImageSEO: (src: string, alt: string, width?: number, height?: number): {/* content */}
-    src: string;
-    alt: string;
+    src: string
+    alt: string,
   // Optimize images for SEO,
   optimizeImageSEO: (sr,
   c: string, al)
   t: string, width?: number, height?: number): {/* content */}
     sr,
-  c: string;
+  c: string,
     al,
-  t: string;
-    width?: number;
-    height?: number;
+  t: string
+    width?: number
+    height?: number,
     loadin,
-  g: 'lazy';
+  g: 'lazy',
   } => {/* content */}
     return {/* content */}
       sr,`
@@ -298,12 +298,12 @@ export const performanceSEO = {/* content */}
       alt,
       width,
       height,
-      loading: 'lazy' as const;
+      loading: 'lazy' as const,
       loadin,
-  g: 'lazy' as const;
-    };
+  g: 'lazy' as const,
+    }
   }
-};
+}
 // Analytics and tracking utilities;
 export const analyticsUtils = {/* content */}
   // Track page views;
@@ -311,7 +311,7 @@ export const analyticsUtils = {/* content */}
     if (typeof window !== 'undefined' && (window as typeof window & { gtag?: Function }).gtag) {/* content */}
       (window as typeof window & { gtag: Function }).gtag('config', 'GA_MEASUREMENT_ID', {/* content */})
         page_title: title),
-        page_location: url;
+        page_location: url,
   // Track page views,
   trackPageView: (ur,
   l: string, titl)
@@ -322,7 +322,7 @@ export const analyticsUtils = {/* content */}
         page_titl,
   e: title,
         page_locatio,
-  n: url;)
+  n: url,)
       });
     }
   },
@@ -341,7 +341,7 @@ export const analyticsUtils = {/* content */}
     if (typeof window !== 'undefined' && (window as typeof window & { gtag?: Function }).gtag) {/* content */}
       (window as typeof window & { gtag: Function }).gtag('event', 'conversion', {/* content */})
         send_to: conversionId),
-        value: value;
+        value: value,
   // Track conversion events,
   trackConversion: (conversionI)
   d: string, value?: number) => {/* content */}
@@ -351,22 +351,22 @@ export const analyticsUtils = {/* content */}
         send_t,
   o: conversionId,
         valu,
-  e: value;)
+  e: value,)
       });
     }
   }
-};
+}
 // Core Web Vitals tracking;
 export const coreWebVitals = {/* content */}
   // Track Core Web Vitals;
   trackCoreWebVitals: () => {/* content */}
     if (typeof window === 'undefined') return;
-    const trackMetric = (metric: { name: string; value: number; id: string; delta: number }) => {/* content */}
+    const trackMetric = (metric: { name: string; value: number; id: string, delta: number }) => {/* content */}
       analyticsUtils.trackEvent('core_web_vitals', {/* content */})
         metric_name: metric.name),
         metric_value: Math.round(metric.value),
-        metric_id: metric.id;
-        metric_delta: metric.delta;
+        metric_id: metric.id
+        metric_delta: metric.delta,
   // Track Core Web Vitals,
   trackCoreWebVitals: () => {/* content */}
     if (typeof window === 'undefined') return;
@@ -381,9 +381,9 @@ export const coreWebVitals = {/* content */}
         metric_i,
   d: metric.id,
         metric_delt,
-  a: metric.delta;
+  a: metric.delta,
       });
-    };
+    }
     // Import and track web vitals;
     import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {/* content */}
       onCLS(trackMetric);
@@ -393,7 +393,7 @@ export const coreWebVitals = {/* content */}
       onTTFB(trackMetric);
     });
   }
-};
+}
 // SEO component for React;
 export const SEOComponent = ({/* content */}
   title, 
@@ -410,12 +410,12 @@ export const SEOComponent = ({/* content */}
   image?: string;
   url?: string;
   type?: string;
-  structuredData?: Record<string, unknown>;)
+  structuredData?: Record<string>)
 }) => {/* content */}
 //   const siteName = 'Zion Tech Group';
-//   const siteUrl = 'https: //zion.app';
+//   const siteUrl = 'https: //zion.app',
 //   const siteUrl = 'http,
-  s://zion.app';`
+  s: //zion.app',`
 //   const defaultImage = `${siteUrl}/images/og-default.jpg`;
   `
 //   const fullTitle = title ? `${title} | ${siteName}` : siteName;`
@@ -472,7 +472,7 @@ export const SEOComponent = ({/* content */}
       )}
     </Helmet>
   );
-};
+}
 // Initialize SEO optimizations;
 export const initializeSEO = () => {/* content */}
   // Preload critical resources;
@@ -490,4 +490,4 @@ export const initializeSEO = () => {/* content */}
       document.head.appendChild(meta);
     }
   }
-};"`
+}"`

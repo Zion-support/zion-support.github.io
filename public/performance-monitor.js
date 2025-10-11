@@ -40,7 +40,7 @@
   
   // Start monitoring when DOM is ready;
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', observeWebVitals);
+    document.addEventListener('DOMContentLoaded', observeWebVitals)
   } else {
     observeWebVitals();
   if (document.readyState === 'loading') {/* TODO: Fix JSX expression */}

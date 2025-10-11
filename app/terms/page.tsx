@@ -1,239 +1,208 @@
 'use client';
 import React from 'react';
-import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe, User, Mail, Phone, Calendar, Lock, Database, Server, Key } from 'lucide-react';
-<<<<<<< HEAD
-export default function TermsPage() {
-  const lastUpdated = 'January 1, 2024';
+import { Helmet } from 'react-helmet-async';
+import { FileText, Scale, Shield, AlertTriangle, Users, Mail, Phone, Calendar } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
+const TermsPage: React.FC = () => {
+  const lastUpdated = 'December 2024';
+
   const sections = [
     {
+      icon: FileText,
       title: 'Acceptance of Terms',
-      icon: CheckCircle,
-      content: 'By accessing and using our website and services, you accept and agree to be bound by the terms and provision of this agreement.'
+      content: [
+        'By accessing and using Zion Tech Group\'s website and services, you accept and agree to be bound by the terms and provision of this agreement.',
+        'If you do not agree to abide by the above, please do not use this service.',
+        'These terms apply to all visitors, users, and others who access or use the service.'
+      ]
     },
     {
+      icon: Users,
       title: 'Use License',
-      icon: Key,
-      content: 'Permission is granted to temporarily download one copy of the materials on our website for personal, non-commercial transitory viewing only.'
+      content: [
+        'Permission is granted to temporarily download one copy of the materials on Zion Tech Group\'s website for personal, non-commercial transitory viewing only.',
+        'This is the grant of a license, not a transfer of title, and under this license you may not: modify or copy the materials, use the materials for any commercial purpose or for any public display, attempt to reverse engineer any software contained on the website, or remove any copyright or other proprietary notations from the materials.',
+        'This license shall automatically terminate if you violate any of these restrictions and may be terminated by Zion Tech Group at any time.'
+      ]
     },
     {
-      title: 'Service Availability',
-      icon: Server,
-      content: 'We strive to maintain high service availability but cannot guarantee uninterrupted access to our services.'
+      icon: AlertTriangle,
+      title: 'Disclaimer',
+      content: [
+        'The materials on Zion Tech Group\'s website are provided on an \'as is\' basis. Zion Tech Group makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.',
+        'Further, Zion Tech Group does not warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials on its website or otherwise relating to such materials or on any sites linked to this site.'
+      ]
     },
     {
-      title: 'Limitation of Liability',
+      icon: Scale,
+      title: 'Limitations',
+      content: [
+        'In no event shall Zion Tech Group or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on Zion Tech Group\'s website, even if Zion Tech Group or a Zion Tech Group authorized representative has been notified orally or in writing of the possibility of such damage.',
+        'Because some jurisdictions do not allow limitations on implied warranties, or limitations of liability for consequential or incidental damages, these limitations may not apply to you.'
+      ]
+    },
+    {
       icon: Shield,
-      content: 'In no event shall Zion Tech Group or its suppliers be liable for any damages arising out of the use or inability to use our services.'
+      title: 'Service Terms',
+      content: [
+        'Our AI and IT services are provided subject to separate service agreements that will be executed at the time of engagement.',
+        'Service availability is subject to maintenance windows and technical requirements.',
+        'We reserve the right to modify or discontinue services with reasonable notice.',
+        'Client data security and confidentiality are maintained in accordance with industry best practices and applicable regulations.'
+      ],
+    };
+  ];
+
+  const additionalSections = [
+    {
+      title: 'Accuracy of Materials',
+      content: 'The materials appearing on Zion Tech Group\'s website could include technical, typographical, or photographic errors. Zion Tech Group does not warrant that any of the materials on its website are accurate, complete, or current. Zion Tech Group may make changes to the materials contained on its website at any time without notice. However, Zion Tech Group does not make any commitment to update the materials.'
     },
     {
-      title: 'Privacy Policy',
-      icon: Lock,
-      content: 'Your privacy is important to us. Please review our Privacy Policy, which also governs your use of our services.'
+      title: 'Links',
+      content: 'Zion Tech Group has not reviewed all of the sites linked to our website and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement by Zion Tech Group of the site. Use of any such linked website is at the user\'s own risk.'
+    },
+    {
+      title: 'Modifications',
+      content: 'Zion Tech Group may revise these terms of service for its website at any time without notice. By using this website, you are agreeing to be bound by the then current version of these terms of service.'
+    },
+    {
+      title: 'Governing Law',;
+<<<<<<< HEAD;
+      icon: Scale,];
+=======
+      content: 'These terms and conditions are governed by and construed in accordance with the laws of Delaware, United States, and you irrevocably submit to the exclusive jurisdiction of the courts in that state or location.'
     },
     {
       title: 'Intellectual Property',
-      icon: Database,
-      content: 'All content, trademarks, and other intellectual property on this website are the property of Zion Tech Group.'
+      content: 'All content, trademarks, service marks, trade names, logos, and other intellectual property on this website are the property of Zion Tech Group or its licensors and are protected by copyright and other intellectual property laws. You may not use, reproduce, or distribute any content without our express written permission.'
+    },
+    {
+      title: 'Privacy Policy',
+      content: 'Your privacy is important to us. Please review our Privacy Policy, which also governs your use of the website, to understand our practices.'
+    },
+    {
+      title: 'Prohibited Uses',
+      content: 'You may not use our website or services for any unlawful purpose or to solicit others to perform unlawful acts, to violate any international, federal, provincial, or state regulations, rules, laws, or local ordinances, to infringe upon or violate our intellectual property rights or the intellectual property rights of others, to harass, abuse, insult, harm, defame, slander, disparage, intimidate, or discriminate, to submit false or misleading information, or to upload or transmit viruses or any other type of malicious code.'
     },
     {
       title: 'Termination',
-      icon: AlertTriangle,
-      content: 'We may terminate or suspend your access to our services immediately, without prior notice, for any reason whatsoever.'
-    },
-    {
-      title: 'Governing Law',
-      icon: Scale,
-      content: 'These terms shall be governed by and construed in accordance with the laws of the United States.'
+      content: 'We may terminate or suspend your access immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms. Upon termination, your right to use the service will cease immediately.'
     }
   ];
-  return (
-    <div className="min-h-screen bg-white"></div>
-      <div className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20"></div>
-        <div className="container mx-auto px-4 text-center"></div>
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Terms of Service</h1>
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-            Please read these terms carefully before using our services;
-  </
-          <div className="flex items-center justify-center text-sm text-blue-200"></div>
-            <Calendar className="h-4 w-4 mr-2" />
-            Last updated: {lastUpdated}
-          </div>
-        </div>
-      </div>
-      <div className="py-20"></div>
-        <div className="container mx-auto px-4"></div>
-          <div className="max-w-4xl mx-auto"></div>
-            <div className="space-y-8">
-              {sections.map((section, index) => (</div>
-                <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm"></div>
-                  <div className="flex items-start"></div>
-                    <div className="flex-shrink-0 mr-4"></div>
-                      <section.icon className="h-6 w-6 text-blue-600" />
-                    </div>
-                    <div></div>
-                      <h2 className="text-2xl font-bold text-gray-900 mb-3">
-=======
-;
-export default function TermsPage() {;
-  const lastUpdated = 'January 1, 2024';
-;
-  const sections = [;
-    {;
-      title: 'Acceptance of Terms',;
-      icon: CheckCircle,;
-      content: 'By accessing and using our website and services, you accept and agree to be bound by the terms and provision of this agreement.';}
-    },;
-    {;
-      title: 'Use License',;
-      icon: Key,;
-      content: 'Permission is granted to temporarily download one copy of the materials on our website for personal, non-commercial transitory viewing only.';}
-    },;
-    {;
-      title: 'Service Availability',;
-      icon: Server,;
-      content: 'We strive to maintain high service availability but cannot guarantee uninterrupted access to our services.';}
-    },;
-    {;
-      title: 'Limitation of Liability',;
-      icon: Shield,;
-      content: 'In no event shall Zion Tech Group or its suppliers be liable for any damages arising out of the use or inability to use our services.';}
-    },;
-    {;
-      title: 'Privacy Policy',;
-      icon: Lock,;
-      content: 'Your privacy is important to us. Please review our Privacy Policy, which also governs your use of our services.';}
-    },;
-    {;
-      title: 'Intellectual Property',;
-      icon: Database,;
-      content: 'All content, trademarks, and other intellectual property on this website are the property of Zion Tech Group.';}
-    },;
-    {;
-      title: 'Termination',;
-      icon: AlertTriangle,;
-      content: 'We may terminate or suspend your access to our services immediately, without prior notice, for any reason whatsoever.';}
-    },;
-    {;
-      title: 'Governing Law',;
-      icon: Scale,;
-      content: 'These terms shall be governed by and construed in accordance with the laws of the United States.';}
-    }
-  ];
-;
-  return (;
-    <div className="min-h-screen bg-white"></div>;
-      <div className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20"></div>;
-        <div className="container mx-auto px-4 text-center"></div>;
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">;
-            Terms of Service</h1>;
-          </h1>;
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">;
-            Please read these terms carefully before using our services;
-          </p>;
-          <div className="flex items-center justify-center text-sm text-blue-200"></div>;
-            <Calendar className="h-4 w-4 mr-2" />;
-            Last updated: {lastUpdated}
-          </div>;
-        </div>;
-      </div>;
-      <div className="py-20"></div>;
-        <div className="container mx-auto px-4"></div>;
-          <div className="max-w-4xl mx-auto"></div>;
-            <div className="space-y-8"></div>;
-              {sections.map((section, index) => (</div>;}
-                <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm"></div>;
-                  <div className="flex items-start"></div>;
-                    <div className="flex-shrink-0 mr-4"></div>;
-                      <section.icon className="h-6 w-6 text-blue-600" /></section>;
-                    </div>;
-                    <div></div>;
-                      <h2 className="text-2xl font-bold text-gray-900 mb-3">;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-                        {index + 1}. {section.title}
-                      </h2>;
-                      <p className="text-gray-700 leading-relaxed">;
-                        {section.content}
-                      </p>;
-                    </div>;
-                  </div>;
-                </div>;
-              ))}
-<<<<<<< HEAD
-            </div>
-            <div className="mt-16 bg-gray-50 rounded-lg p-8"></div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Contact Information</h3>
-              <p className="text-gray-700 mb-6">
-                If you have any questions about these Terms of Service, please contact us:
+
+>>>>>>> cursor/website-audit-and-update-with-deployment-26c5
+  return ()
+                Welcome to Zion Tech Group. These Terms of Service ("Terms") govern your use of our website located at 
+                ziontechgroup.com (the "Service") operated by Zion Tech Group ("us", "we", or "our").
               </p>
-              <div className="grid md:grid-cols-2 gap-6"></div>
-                <div className="flex items-center"></div>
-                  <Mail className="h-5 w-5 text-blue-600 mr-3" />
-                  <span className="text-gray-700">legal@ziontechgroup.com</span>
+              <p className="text-gray-300 leading-relaxed" /></p>
+                By accessing or using our Service, you agree to be bound by these Terms. If you disagree with any part 
+                of these terms, then you may not access the Service.
+              </p>
+            </div>
+
+            {/* Main Sections */}
+            <div className="space-y-8" /></div>
+              {sections.map((section, index) => ()
+                    {section.content.map((item, itemIndex) => ()
+                    ))}
+                  </ul>
                 </div>
-                <div className="flex items-center"></div>
-                  <Phone className="h-5 w-5 text-blue-600 mr-3" />
-                  <span className="text-gray-700">(302) 464-0950</span>
+              ))}
+            </div>
+
+            {/* Additional Sections */}
+            <div className="mt-12 space-y-8" /></div>
+              {additionalSections.map((section, index) => ()
+              ))}
+            </div>
+
+            {/* Service-Specific Terms */}
+            <div className="bg-slate-800/50 rounded-lg p-8 mt-12" /></div>
+              <h2 className="text-2xl font-bold text-white mb-6">Service-Specific Terms</h2>
+              <div className="space-y-6" /></div>
+                <div></div>
+                  <h3 className="text-xl font-semibold text-white mb-3">AI Services</h3>
+                  <ul className="space-y-2 text-gray-300" /></ul>
+                    <li>• AI models and algorithms are provided "as is" and may require customization for specific use cases</li>
+                    <li>• Performance metrics and accuracy claims are based on our testing and may vary in production environments</li>
+                    <li>• Client data used for AI training is handled in accordance with our privacy policy and data protection standards</li>
+                    <li>• AI services may require ongoing maintenance and updates to maintain optimal performance</li>
+                  </ul>
                 </div>
-                <div className="flex items-center"></div>
-                  <Globe className="h-5 w-5 text-blue-600 mr-3" />
-                  <span className="text-gray-700">ziontechgroup.com</span>
+                <div></div>
+                  <h3 className="text-xl font-semibold text-white mb-3">IT Services</h3>
+                  <ul className="space-y-2 text-gray-300" /></ul>
+                    <li>• Service level agreements (SLAs) are defined in individual service contracts</li>
+                    <li>• Maintenance windows and updates will be scheduled with advance notice when possible</li>
+                    <li>• Security measures and compliance requirements are maintained according to industry standards</li>
+                    <li>• Backup and disaster recovery procedures are implemented as per service agreements</li>
+                  </ul>
                 </div>
-                <div className="flex items-center"></div>
-                  <User className="h-5 w-5 text-blue-600 mr-3" />
-                  <span className="text-gray-700">Zion Tech Group Legal Team</span>
+                <div></div>
+                  <h3 className="text-xl font-semibold text-white mb-3">Micro SaaS Tools</h3>
+                  <ul className="space-y-2 text-gray-300" /></ul>
+                    <li>• Subscription terms and pricing are subject to change with 30 days notice</li>
+                    <li>• Feature updates and improvements are included in active subscriptions</li>
+                    <li>• Data export capabilities are provided for client data portability</li>
+                    <li>• Service availability targets are defined in individual service level agreements</li>
+                  </ul>
                 </div>
               </div>
             </div>
-            <div className="mt-8 text-center"></div>
-              <p className="text-sm text-gray-500">
-                By using our services, you acknowledge that you have read and understood these terms.
-              </p>
+
+            {/* Payment Terms */}
+            <div className="bg-slate-800/50 rounded-lg p-8 mt-8" /></div>
+              <h2 className="text-2xl font-bold text-white mb-6">Payment Terms</h2>
+              <div className="space-y-4 text-gray-300" /></div>
+                <p></p>
+                  Payment terms for our services are defined in individual service agreements. Generally:
+                </p>
+                <ul className="space-y-2 ml-6" /></ul>
+                  <li>• Invoices are due within 30 days of receipt unless otherwise specified</li>
+                  <li>• Late payments may incur additional charges as specified in service agreements</li>
+                  <li>• Services may be suspended for non-payment after appropriate notice periods</li>
+                  <li>• Refund policies are outlined in individual service contracts</li>
+                </ul>
+              </div>
             </div>
+
+            {/* Contact Information */}
+            <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 border border-cyan-500/20 rounded-lg p-8 mt-12" /></div>
+              <h2 className="text-2xl font-bold text-white mb-6">Contact Information</h2>
+              <p className="text-gray-300 mb-6" /></p>
+                If you have any questions about these Terms of Service, please contact us:
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6" /></div>
+                <div className="flex items-center space-x-3" /></div>
+                  <Mail className="w-5 h-5 text-cyan-400" / /></Mail>
+                  <span className="text-gray-300">kleber@ziontechgroup.com</span>
+                </div>
+                <div className="flex items-center space-x-3" /></div>
+                  <Phone className="w-5 h-5 text-cyan-400" / /></Phone>
+                  <span className="text-gray-300">+1 302 464 0950</span>
+                </div>
+                <div className="flex items-start space-x-3" /></div>
+                  <Calendar className="w-5 h-5 text-cyan-400 mt-1" / /></Calendar>
+                  <div className="text-gray-300" /></div>
+                    <div>364 E Main St STE 1008</div>
+                    <div>Middletown, DE 19709</div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  );
           </div>
         </div>
-      </div>
-    </div>
+      </main>
+      
+      <Footer /></Footer>
+    </>
   );
-}
-  </p>
-=======
-            </div>;
-            <div className="mt-16 bg-gray-50 rounded-lg p-8"></div>;
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Contact Information</h3>;
-              <p className="text-gray-700 mb-6">;
-                If you have any questions about these Terms of Service, please contact us:;
-              </p>;
-              <div className="grid md:grid-cols-2 gap-6"></div>;
-                <div className="flex items-center"></div>;
-                  <Mail className="h-5 w-5 text-blue-600 mr-3" />;
-                  <span className="text-gray-700">legal@ziontechgroup.com</span>;
-                </div>;
-                <div className="flex items-center"></div>;
-                  <Phone className="h-5 w-5 text-blue-600 mr-3" />;
-                  <span className="text-gray-700">(302) 464-0950</span>;
-                </div>;
-                <div className="flex items-center"></div>;
-                  <Globe className="h-5 w-5 text-blue-600 mr-3" />;
-                  <span className="text-gray-700">ziontechgroup.com</span>;
-                </div>;
-                <div className="flex items-center"></div>;
-                  <User className="h-5 w-5 text-blue-600 mr-3" />;
-                  <span className="text-gray-700">Zion Tech Group Legal Team</span>;
-                </div>;
-              </div>;
-            </div>;
-            <div className="mt-8 text-center"></div>;
-              <p className="text-sm text-gray-500">;
-                By using our services, you acknowledge that you have read and understood these terms.;
-              </p>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;
-  );
-}
-;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+};
+
+export default TermsPage;
+>>>>>>> cursor/website-audit-and-update-with-deployment-26c5

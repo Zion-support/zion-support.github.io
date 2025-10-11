@@ -8,56 +8,56 @@
   link: string;
   category: string;
   realImplementation: boolean;
-  contactInfo: unknown;
-    mobile: string;
-    email: string;
-export interface ProfessionalService {;,
+  contactInfo: unknown
+    mobile: string
+    email: string,
+export interface ProfessionalService {,
     address: string}
   i,
-  d: string;
+  d: string,
   nam,
-  e: string;
+  e: string,
   taglin,
   e: string,
   pric,
   e: string,
   descriptio,
-  n: string;
+  n: string,
   feature,
-  s: string[];
+  s: string[],
   lin,
-  k: string;
+  k: string,
   categor,
-  y: string;
+  y: string,
   realImplementatio,
-  n: boolean;
+  n: boolean,
   contactInf,
-  o: unknown;
+  o: unknown,
     mobil,
-  e: string;
+  e: string,
     emai,
-  l: string;
+  l: string,
 export interface ProfessionalService {/* TODO: Fix JSX expression */}
   s: string}
-};
+}
   i,
-  d: string;
+  d: string,
   nam,
-  e: string;
+  e: string,
   taglin,
-  e: string;
+  e: string,
   pric,
   e: string,,
   descriptio,
-  n: string;
+  n: string,
   feature,
-  s: string[];
+  s: string[],
   lin,
-  k: string;
+  k: string,
   categor,
-  y: string;
+  y: string,
   realImplementatio,
-  n: boolean;
+  n: boolean,
   contactInf,
   o: {/* TODO: Fix JSX expression */}
   l: string}
@@ -68,28 +68,28 @@ export interface ProfessionalService {/* TODO: Fix JSX expression */}
       address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
 ];
-  id: string, name: string;
-  tagline: string, price: string;
+  id: string, name: string,
+  tagline: string, price: string,
   description: string, features: string[],
-  link: string, category: string;
-  realImplementation: boolean;
-  contactInfo: unknown;
-    mobile: string, email: string;
-    address: string;
+  link: string, category: string
+  realImplementation: boolean
+  contactInfo: unknown,
+    mobile: string, email: string
+    address: string,
   }
 }
 export const professionalServices: ProfessionalService[] = [,
     id: "it-consulting", name: "IT Consulting Services",
     tagline: "Expert IT consulting for business growth", price: "$120/hour"
     description: "Professional IT consulting services to help businesses optimize their technology investments."
-    features: [;
+    features: [,
       "Technology assessment"
       "Strategic planning"
       "Implementation guidance"
       "Performance optimization",
       "Ongoing support"],
     link: "/services/it-consulting", category: "Professional Services",
-    realImplementation: true;
+    realImplementation: true,
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
 ];
@@ -137,7 +137,7 @@ export const,
     descriptio,"
   n: "Professional IT consulting services to help businesses optimize their technology investments.",
     feature,
-  s: [;"
+  s: [,"
       "Technology assessment""
       "Strategic planning""
       "Implementation guidance""
@@ -170,8 +170,7 @@ export const,
     }
   }
 ];
-;
-    id: "it-consulting"
+id: "it-consulting"
     name: "IT Consulting Services",
     tagline: "Expert IT consulting for business growth",
     price: "$120/hour",
@@ -185,13 +184,13 @@ export const,
     ],
     link: "/services/it-consulting"
     category: "Professional Services"
-    realImplementation: true;
-    contactInfo: unknown;
+    realImplementation: true
+    contactInfo: unknown,
       mobile: "+1 302 464 0950"
       email: "kleber@ziontechgroup.com"
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}};
+      address: '364 E Main St STE 1008 Middletown DE 19709'}}
 ];      mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       mobile: "+1 302 464 0950",
@@ -232,7 +231,7 @@ export const,
       emai,
   l: 'kleber@ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}};
+  s: '364 E Main St STE 1008 Middletown DE 19709'}}
 ];      mobil,"
   e: "+1 302 464 0950",
   emai,"
@@ -247,28 +246,28 @@ export const,
   }
 ];
 i,
-  d: string; nam,
-  e: string; taglin,
+  d: string, nam,
+  e: string, taglin,
   e: string, pric,
   e: string, descriptio,
-  n: string; feature,
-  s: string[]; lin,
-  k: string; categor,
-  y: string; realImplementatio,
-  n: boolean; contactInf,
+  n: string, feature,
+  s: string[], lin,
+  k: string, categor,
+  y: string, realImplementatio,
+  n: boolean, contactInf,
   o: mobil,
-  e: string; emai,
-  l: string; export interface ProfessionalService {/* TODO: Fix JSX expression */}
-  s: string }; i,
-  d: string; nam,
-  e: string; taglin,
-  e: string; pric,
+  e: string, emai,
+  l: string, export interface ProfessionalService {/* TODO: Fix JSX expression */}
+  s: string } i,
+  d: string, nam,
+  e: string, taglin,
+  e: string, pric,
   e: string, descriptio,
-  n: string; feature,
-  s: string[]; lin,
-  k: string; categor,
-  y: string; realImplementatio,
-  n: boolean; contactInf,
+  n: string, feature,
+  s: string[], lin,
+  k: string, categor,
+  y: string, realImplementatio,
+  n: boolean, contactInf,
   o: {/* TODO: Fix JSX expression */}
   l: string} addres,
   s: string} } } addres,"
@@ -318,7 +317,7 @@ i,
   l: "kleber@ziontechgroup.com", mobil,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}}; ]; mobil,"
+  s: '364 E Main St STE 1008 Middletown DE 19709'}} ]; mobil,"
   e: "+1 302 464 0950",
   emai,"
   l: "kleber@ziontechgroup.com" mobil,"

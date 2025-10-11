@@ -163,7 +163,7 @@ const AIFashionDesignPage: React.FC = () => {
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Join leading fashion brands using AI design technology</span>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a
                   href="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300">
@@ -180,8 +180,8 @@ const AIFashionDesignPage: React.FC = () => {
         <Footer />
       </div>
     </React.Fragment>
-  );
-};
+  ),
+}
 export default AIFashionDesignPage</a>
   </p>
   </a>

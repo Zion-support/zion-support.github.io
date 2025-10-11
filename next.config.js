@@ -25,7 +25,7 @@ const nextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 60,
     dangerouslyAllowSVG: true,
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox,",
   },
 
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
@@ -54,17 +54,17 @@ const nextConfig = {
             enforce: true,
           },
           lib: {
-            test(module) {
+    test(module) {
               return (
                 module.size() > 160000 &&
                 /node_modules[/\\]/.test(module.identifier())
-              );
-            },
+              )
+  },
             name(module) {
-              const _hash = crypto.createHash('sha1');
+    const _hash = crypto.createHash('sha1');
               _hash.update(module.identifier());
-              return _hash.digest('hex').substring(0, 8);
-            },
+              return _hash.digest('hex').substring(0, 8)
+  },
             priority: 30,
             minChunks: 1,
             reuseExistingChunk: true,
@@ -75,7 +75,7 @@ const nextConfig = {
             priority: 20,
           },
           shared: {
-            name(module, chunks) {
+    name(module, chunks) {
               return (
                 'shared-' +
                 crypto
@@ -83,8 +83,8 @@ const nextConfig = {
                   .update(chunks.reduce((acc, chunk) => acc + chunk.name, ''))
                   .digest('hex')
                   .substring(0, 8)
-              );
-            },
+              )
+  },
             priority: 10,
             minChunks: 2,
             reuseExistingChunk: true,
@@ -94,7 +94,7 @@ const nextConfig = {
         minSize: 20000,
       },
       minimize: !dev,
-    };
+    }
 
     // Tree shaking
     config.optimization.usedExports = true;
@@ -121,7 +121,7 @@ const nextConfig = {
           },
           {
             key: 'X-XSS-Protection',
-            value: '1; mode=block',
+            value: '1, mode=block',
           },
           {
             key: 'Permissions-Policy',
@@ -129,11 +129,11 @@ const nextConfig = {
           },
           {
             key: 'Strict-Transport-Security',
-            value: 'max-age=63072000; includeSubDomains; preload',
+            value: 'max-age=63072000; includeSubDomains, preload',
           },
           {
             key: 'Content-Security-Policy',
-            value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: blob:; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';",
+            value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: blob:; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self',",
           },
         ],
       },
@@ -190,6 +190,6 @@ const nextConfig = {
       exclude: ['error', 'warn'],
     } : false,
   },
-};
+}
 
 export default bundleAnalyzer(nextConfig);

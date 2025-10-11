@@ -220,11 +220,11 @@ export default function AboutPage() {
         </section>
         {/* Mission Section */}
         <section className="py-20 bg-gray-50 rounded-xl mb-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                  Our Mission;
+                  Our Mission,
   </
                 <p className="text-lg text-gray-600 mb-6">
                   To democratize access to advanced AI technology and empower businesses of all sizes 
@@ -236,8 +236,8 @@ export default function AboutPage() {
                 </p>
                 <Link
                   to="/contact"
-                  className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                  Get in Touch;
+                  className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors">
+                  Get in Touch,
   </
               </div>
               <div className="bg-white rounded-xl shadow-lg p-8">
@@ -253,13 +253,13 @@ export default function AboutPage() {
         </section>
         {/* Values Section */}
         <section className="py-20 bg-white rounded-xl mb-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Our Values;
+                Our Values
   </
               <p className="text-xl text-gray-600">
-                The principles that guide everything we do;
+                The principles that guide everything we do,
   </
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -281,13 +281,13 @@ export default function AboutPage() {
         </section>
         {/* Team Section */}
         <section className="py-20 bg-gray-50 rounded-xl mb-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Meet Our Team;
+                Meet Our Team
   </
               <p className="text-xl text-gray-600">
-                The experts behind our innovative solutions;
+                The experts behind our innovative solutions,
   </
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -316,7 +316,7 @@ export default function AboutPage() {
         </section>
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Work With Us?
             </h2>
@@ -327,12 +327,12 @@ export default function AboutPage() {
               <Link
                 to="/contact"
                 className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
-                Start a Project;
+                Start a Project
   </
               <Link
                 to="/careers"
                 className="bg-transparent text-white px-8 py-4 rounded-lg text-lg font-semibold border-2 border-white hover:bg-white hover:text-blue-600 transition-all duration-300">
-                Join Our Team;
+                Join Our Team,
   </
             </div>
           </div>
@@ -350,12 +350,12 @@ export default function AboutPage() {
                 <div className="text-gray-600 font-medium">
                   {stat.label}
                 </div>
-      <section className="relative py-20 lg:py-32 overflow-hidden">
+      <section className="relative py-20 lg: py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
-              About Zion Tech Group;
+              About Zion Tech Group,
   </
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
               Leading the future of AI-powered enterprise solutions with cutting-edge technology, 
@@ -381,10 +381,10 @@ export default function AboutPage() {
       {/* Mission & Vision */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                Our Mission;
+                Our Mission,
   </
               <p className="text-lg text-gray-300 mb-6 leading-relaxed">
                 To democratize artificial intelligence and cutting-edge technology for enterprises worldwide, 
@@ -406,8 +406,8 @@ export default function AboutPage() {
               </div>
             </div>
             <div>
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                Our Vision;
+              <h2 className="text-3xl lg: text-4xl font-bold text-white mb-6">
+                Our Vision,
   </
               <p className="text-lg text-gray-300 mb-6 leading-relaxed">
                 To be the world's leading provider of AI and quantum computing solutions, 
@@ -439,11 +439,11 @@ export default function AboutPage() {
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Our Values;
+            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
+              Our Values
   </
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              The principles that guide everything we do and shape our culture;
+              The principles that guide everything we do and shape our culture,
   </
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -463,8 +463,8 @@ export default function AboutPage() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Meet Our Team;
+            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
+              Meet Our Team,
   </
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
               World-class experts in AI, quantum computing, and enterprise technology;
@@ -497,11 +497,11 @@ export default function AboutPage() {
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Our Achievements;
+            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
+              Our Achievements
   </
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Numbers that speak to our impact and success;
+              Numbers that speak to our impact and success,
   </
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
@@ -525,11 +525,11 @@ export default function AboutPage() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Our Journey;
+            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
+              Our Journey
   </
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Key milestones in our company's growth and innovation;
+              Key milestones in our company's growth and innovation,
   </
           </div>
           <div className="max-w-4xl mx-auto">
@@ -555,7 +555,7 @@ export default function AboutPage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl lg: text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
@@ -566,19 +566,19 @@ export default function AboutPage() {
               href="/contact"
               className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center">
               <MessageSquare className="w-5 h-5 mr-2" />
-              Get Started Today;
+              Get Started Today
   </
             <a
               href="/consultation"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-cyan-600 transition-colors inline-flex items-center">
               <Calendar className="w-5 h-5 mr-2" />
-              Free Consultation;
+              Free Consultation
   </
           </div>
         </div>
       </section>
     </div>
-  );
+  ),
 }
   </a>
   </a>

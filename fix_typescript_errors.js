@@ -5,7 +5,7 @@ import fs from 'fs';
 if (fs.existsSync(seoOptimizerPath)) {/* TODO: Fix JSX expression */}
     /interface AdvancedSEOOptimizerProps \{[^}]*\}/,
     `interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */}
-  };
+  }
   enableStructuredData?: boolean;
   enableAnalytics?: boolean;
   enablePerformanceTracking?: boolean;`
@@ -59,7 +59,7 @@ openGraphPages.forEach(pagePath => {/* TODO: Fix JSX expression */}"
   e: ['"][^'"]*['"]\s*\}\s*\]/g,"
       "author,"
   s: ['Zion Tech Group']")
-    );
+    ),
 
     fs.writeFileSync(pagePath, content);
     //         }

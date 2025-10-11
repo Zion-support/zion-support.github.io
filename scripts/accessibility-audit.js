@@ -73,7 +73,7 @@ const accessibilityChecklist = {
       'Touch targets are at least 44 px'
     ]
   }
-};
+}
 
 // Check HTML files for accessibility issues;
 function auditHTMLFiles() {
@@ -99,22 +99,23 @@ function auditHTMLFiles() {
     
     // Check for alt attributes;
     const imgTags = content.match(/<img[^>]*>/g) || [];
-    imgTags.forEach(img => {)
+    imgTags.forEach(img => {
+    )
       if (!img.includes('alt=')) {
-        console.log('    ⚠️  Image missing alt attribute');
-      }
+        console.log('    ⚠️  Image missing alt attribute')
+  }
     });
     
     // Check for heading hierarchy;
     const headings = content.match(/<h[1-6][^>]*>/g) || [];
     if (headings.length === 0) {
-      console.log('    ⚠️  No heading elements found');
-    }
+    console.log('    ⚠️  No heading elements found')
+  }
     
     // Check for skip links;
     if (!content.includes('skip') && !content.includes('Skip')) {
-      console.log('    ⚠️  No skip links found');
-    }
+    console.log('    ⚠️  No skip links found')
+  }
   });
 }
 
@@ -133,18 +134,18 @@ function auditCSSFiles() {
     
     // Check for focus styles;
     if (!content.includes(':focus')) {
-      console.log('    ⚠️  No focus styles found');
-    }
+    console.log('    ⚠️  No focus styles found')
+  }
     
     // Check for high contrast support;
     if (!content.includes('prefers-contrast')) {
-      console.log('    ⚠️  No high contrast support');
-    }
+    console.log('    ⚠️  No high contrast support')
+  }
     
     // Check for reduced motion support;
     if (!content.includes('prefers-reduced-motion')) {
-      console.log('    ⚠️  No reduced motion support');
-    }
+    console.log('    ⚠️  No reduced motion support')
+  }
   });
 }
 
@@ -154,7 +155,7 @@ function generateAccessibilityReport() {
   
   const report = {
     timestamp: new Date().toISOString()
-    checklist: accessibilityChecklist;
+    checklist: accessibilityChecklist,
     recommendations: [,
       'Add ARIA labels to interactive elements',
       'Implement focus management for modals',
@@ -175,7 +176,7 @@ function generateAccessibilityReport() {
       'Keyboard-only navigation testing',
       'Color contrast analyzers'
     ]
-  };
+  }
   
   fs.writeFileSync(
     path.join(__dirname, '../accessibility-report.json'), 
@@ -187,7 +188,7 @@ function generateAccessibilityReport() {
 
 // Generate accessibility improvements;
 function generateAccessibilityImprovements() {
-  console.log('🔧 Generating accessibility improvements...');
+    console.log('🔧 Generating accessibility improvements...');
   
   const improvements = `
 // Accessibility improvements to implement;
@@ -209,17 +210,17 @@ const trapFocus = (element) => {
       if (e.shiftKey) {
         if (document.activeElement === firstElement) {
           lastElement.focus();
-          e.preventDefault();
-        }
+          e.preventDefault()
+  }
       } else {
-        if (document.activeElement === lastElement) {
+    if (document.activeElement === lastElement) {
           firstElement.focus();
-          e.preventDefault();
-        }
+          e.preventDefault()
+  }
       }
     }
   });
-};
+}
 
 // 3. Add live regions for dynamic content;
 <div aria-live="polite" aria-atomic="true" className="sr-only">
@@ -282,9 +283,9 @@ const trapFocus = (element) => {
 // All interactive elements should be:
 // - Focusable with Tab key;
 // - Activable with Enter/Space;
-// - Have visible focus indicators;
-// - Follow logical tab order;
-`;
+// - Have visible focus indicators
+// - Follow logical tab order
+`,
 ,
   fs.writeFileSync()
     path.join(__dirname, '../accessibility-improvements.js'), 
@@ -296,7 +297,7 @@ const trapFocus = (element) => {
 
 // Main audit function;
 function audit() {
-  try {
+    try {
     auditHTMLFiles();
     auditCSSFiles();
     generateAccessibilityReport();
@@ -304,10 +305,10 @@ function audit() {
     
     console.log('✅ Accessibility audit completed successfully!');
     console.log('📋 Check accessibility-report.json for detailed results');
-    console.log('🔧 Check accessibility-improvements.js for implementation guide');
+    console.log('🔧 Check accessibility-improvements.js for implementation guide')
   } catch (error) {
     console.error('❌ Error during accessibility audit:', error);
-    process.exit(1);
+    process.exit(1)
   }
 }
 

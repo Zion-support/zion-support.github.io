@@ -4,7 +4,7 @@
  */
 
 interface EnvConfig {
-  // App Configuration;
+    // App Configuration;
   NODE_ENV: 'development' | 'production' | 'test';
   APP_URL: string;
   APP_NAME: string;
@@ -22,16 +22,15 @@ interface EnvConfig {
   ENABLE_PERFORMANCE_MONITORING: boolean;
 
   // Logging;
-  LOG_LEVEL: 'DEBUG' | 'INFO' | 'WARN' | 'ERROR' | 'NONE';
-
-  // Build Configuration;
-  BUILD_ID?: string;
-  VERSION?: string;
-}
+  LOG_LEVEL: 'DEBUG' | 'INFO' | 'WARN' | 'ERROR' | 'NONE'
+  // Build Configuration
+  BUILD_ID?: string,
+  VERSION?: string
+  }
 
 class EnvironmentConfig {
-  private static instance: EnvironmentConfig;
-  private config: EnvConfig;
+  private static instance: EnvironmentConfig
+  private config: EnvConfig,
 
   private constructor() {,
     this.config = this.loadConfig();
@@ -62,10 +61,11 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
   e: boolean = false): boolean {/* TODO: Fix JSX expression */}
   }
 
-  private getNumberEnvVar(key: string, defaultValue: number): number {,
+  private getNumberEnvVar(key: string, defaultValue: number): number {
+    ,
     const _value = this.getEnvVar(key);
     //     const parsed = parseInt(value, 10);
-    return isNaN(parsed) ? defaultValue : parsed;
+    return isNaN(parsed) ? defaultValue : parsed
   }
 
   private loadConfig(): EnvConfig {
@@ -91,11 +91,11 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
 
       // Build Configuration;
       BUILD_ID: this.getEnvVar('BUILD_ID'),
-      VERSION: this.getEnvVar('VERSION', '1.0.0')};
+      VERSION: this.getEnvVar('VERSION', '1.0.0')}
   }
 
   private validate(): void {
-    const errors: string[] = [];
+    const errors: string[] = [],
 ,
     // Validate NODE_ENV;
     if (!['development', 'production', 'test'].includes(this.config.NODE_ENV)) {
@@ -111,7 +111,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
   }
 
   private loadConfig(): EnvConfig {/* TODO: Fix JSX expression */}
-    };
+    }
   }
 
   private validate(): void {/* TODO: Fix JSX expression */}`
@@ -146,11 +146,12 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
     }
   }
 
-  private isValidUrl(url: string): boolean {,
+  private isValidUrl(url: string): boolean {
+    ,
     try {,
       new URL(url);
-      return true;
-    } catch {
+      return true
+  } catch {
       return false;
   private isValidUrl(ur)
   l: string): boolean {/* TODO: Fix JSX expression */}
@@ -159,7 +160,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
   }
 
   public get(): Readonly<EnvConfig> {/* TODO: Fix JSX expression */}
-    return { ...this.config };
+    return { ...this.config }
   }
 
   public isDevelopment(): boolean {/* TODO: Fix JSX expression */}
@@ -197,7 +198,7 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
 export const env = EnvironmentConfig.getInstance();
 
 // Export typed config;
-export type { EnvConfig };
+export type { EnvConfig }
 
 export default env;
 `

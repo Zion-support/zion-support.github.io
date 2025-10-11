@@ -74,12 +74,12 @@ export default function TermsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">
+      <section className="relative py-20 lg: py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
-              Terms of Service;
+              Terms of Service,
   </
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
               Please read these terms carefully before using our services. By using our services, you agree to be bound by these terms.
@@ -295,15 +295,15 @@ export default function TermsPage() {
             </div>
             <a
               href="/contact"
-              className="bg-cyan-500 text-white px-8 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center">
+              className="bg-cyan-500 text-white px-8 py-3 rounded-lg font-bold hover: bg-cyan-600 transition-colors inline-flex items-center">
               <Mail className="w-5 h-5 mr-2" />
-              Contact Us;
+              Contact Us
   </
           </div>
         </div>
       </section>
     </div>
-  );
+  ),
 }
   </a>
   </h1>

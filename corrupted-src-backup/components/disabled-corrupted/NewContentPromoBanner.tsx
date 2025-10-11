@@ -7,7 +7,7 @@ interface NewContentPromoBannerProp, s {/* TODO: Fix JSX expression */}
  }
 const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-  }; const featuredConten, t = [
+  } const featuredConten, t = [
     {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
@@ -183,5 +183,5 @@ const NewContentPromoBanne, r: React.FC<NewContentPromoBannerPro, p, s> = ({/* T
       </div>
     </div>
   );
-};
+}
 export default React.me, m, o(NewContentPromoBann, e, r);"`

@@ -239,6 +239,6 @@ const October2025LatestPremiumContentBanne, r = () => {/* TODO: Fix JSX expressi
       </div>
     </div>
   );
-};
+}
 export default October2025LatestPremiumContentBanner;
 "

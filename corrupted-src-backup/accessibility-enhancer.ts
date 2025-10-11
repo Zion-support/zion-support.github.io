@@ -1,6 +1,6 @@
 class AccessibilityEnhancer {
-  private static instance: AccessibilityEnhancer;
-  private isInitialized: boolean = false;
+  private static instance: AccessibilityEnhancer
+  private isInitialized: boolean = false,
 ,
 class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
   private constructor() {}

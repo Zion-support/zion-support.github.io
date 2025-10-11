@@ -78,11 +78,11 @@ const SitemapPage: React.FC = () => {
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}
           <section className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-              Site Map;
+            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text">
+              Site Map
   </
             <p className="text-xl text-cyan-400 mb-8">
-              Navigate through all our pages and services;
+              Navigate through all our pages and services,
   </
             <p className="text-lg text-gray-300 max-w-4xl mx-auto">
               Find everything you need on our website. From AI services to IT solutions, 
@@ -230,16 +230,16 @@ const SitemapPage: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8">
                 Contact our team for personalized assistance and recommendations;
   </
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold">
-                  Contact Us;
+                  Contact Us
   </
                 <Link
                   to="/demo"
                   className="cyber-button-secondary px-8 py-4 text-lg font-semibold">
-                  Request Demo;
+                  Request Demo
   </
               </div>
             </div>
@@ -248,8 +248,8 @@ const SitemapPage: React.FC = () => {
         <Footer />
       </div>
     </React.Fragment>
-  );
-};
+  ),
+}
 export default SitemapPage;
   </Link>
   </Link>

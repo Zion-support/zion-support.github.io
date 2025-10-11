@@ -197,5 +197,5 @@ const September30NewContentMegaBanner = () => {/* TODO: Fix JSX expression */}
       </div>
     </di, v>
   );
-};
+}
 export default September30NewContentMegaBanner;"

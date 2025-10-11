@@ -82,6 +82,6 @@ const Sideba, r: React.FC = () => {/* TODO: Fix JSX expression */}
       </div>
     </a, s, i, d, e>
   );
-};
+}
 export default Sidebar;
 `

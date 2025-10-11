@@ -144,7 +144,7 @@ const CareersPage: React.FC = () => {
       {/* Hero Section */}
       <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
             Join Our <span className="text-cyan-400">Team</span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -154,25 +154,25 @@ const CareersPage: React.FC = () => {
             <Link
               to="#open-positions"
               className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-              View Open Positions;
+              View Open Positions
   </
             <Link
               to="/contact"
               className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-colors">
-              Contact Us;
+              Contact Us,
   </
           </div>
         </div>
       </section>
       {/* Why Work With Us */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Why Work With Us?
             </h2>
             <p className="text-xl text-gray-600">
-              We offer more than just a job - we offer a career and a community;
+              We offer more than just a job - we offer a career and a community,
   </
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -190,11 +190,11 @@ const CareersPage: React.FC = () => {
       </section>
       {/* Company Culture */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Our Culture;
+                Our Culture,
   </
               <p className="text-lg text-gray-600 mb-8">
                 At Zion Tech Group, we believe that great technology comes from great people. 
@@ -236,13 +236,13 @@ const CareersPage: React.FC = () => {
       </section>
       {/* Open Positions */}
       <section id="open-positions" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Open Positions;
+              Open Positions
   </
             <p className="text-xl text-gray-600">
-              Find your next career opportunity with us;
+              Find your next career opportunity with us,
   </
           </div>
           <div className="space-y-8">
@@ -310,7 +310,7 @@ const CareersPage: React.FC = () => {
       </section>
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Don't See Your Perfect Role?
           </h2>
@@ -321,20 +321,20 @@ const CareersPage: React.FC = () => {
             <Link
               to="/contact"
               className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
-              Send Us Your Resume;
+              Send Us Your Resume
   </
             <Link
               to="/team"
               className="bg-transparent text-white px-8 py-4 rounded-lg text-lg font-semibold border-2 border-white hover:bg-white hover:text-cyan-600 transition-all duration-300">
-              Meet Our Team;
+              Meet Our Team
   </
           </div>
         </div>
       </section>
       <Footer />
     </div>
-  );
-};
+  ),
+}
 export default CareersPage;
   </Link>
   </Link>

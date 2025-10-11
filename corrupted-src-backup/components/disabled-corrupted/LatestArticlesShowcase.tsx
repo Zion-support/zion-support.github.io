@@ -96,5 +96,5 @@ const LatestArticlesShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */
       </div>
     </sec, t, i, o, n>
   );
-};
+}
 export default LatestArticlesShowcase;
