@@ -101,6 +101,7 @@ export const usePerformanceMonitoring = () => {
         resourceObserver.disconnect();
       };
     } catch (error) {
+      console.error('Performance monitoring setup failed:', error);
       return () => {};
     }
   }, [reportMetric]);

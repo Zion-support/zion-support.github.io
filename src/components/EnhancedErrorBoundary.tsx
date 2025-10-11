@@ -39,7 +39,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     });
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      }
+      console.error('Error caught by boundary:', error, errorInfo);
+    }
     // Call custom error handler if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
@@ -62,12 +63,14 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
       console.group('🚨 Error Boundary Caught Error');
+      console.error('Error Report:', errorReport);
       console.groupEnd();
     }
     // Send to error reporting service (implement as needed)
     try {
       // In a real app, you would send this to your error reporting service
       // For now, we'll just log it
+      console.log('Error report prepared:', errorReport);
        
       // Example: Send to error reporting service
       // await fetch('/api/errors', {
@@ -76,7 +79,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       //   body: JSON.stringify(errorReport)
       // });
     } catch (reportingError) {
-      }
+      console.error('Failed to report error:', reportingError);
+    }
   };
   private getUserId = (): string | null => {
     // Get user ID from localStorage, cookies, or context
@@ -120,9 +124,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {
           }, 2000);
         }
       })
-      .catch(() => {
-         
-        });
+      .catch((error) => {
+        console.error('Failed to copy error details:', error);
+      });
   };
   render() {
     if (this.state.hasError) {
@@ -130,7 +134,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       if (this.props.fallback) {
         return this.props.fallback;
       }
-      const { retryCount, error, errorId } = this.state;
+      const { retryCount, error } = this.state;
       const canRetry = retryCount < this.maxRetries;
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
