@@ -143,6 +143,7 @@ const EnhancedFooter: React.FC = () => {
               </div>
             </div>
           </div>
+        </div>
         
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">

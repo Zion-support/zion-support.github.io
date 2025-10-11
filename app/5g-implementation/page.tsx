@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Wifi, BarChart, CheckCircle, Brain, Target, TrendingUp, FileText, Zap, Shield, ArrowRight } from 'lucide-react';
 import { Wifi, BarChart, CheckCircle, Brain, Target, TrendingUp, FileText, Zap, Shield, ArrowRight, PieChart } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -18,17 +17,19 @@ const FiveGImplementationPage: React.FC = () => {
       icon: BarChart,
       title: 'High-Speed Connectivity',
       description: 'Experience blazing-fast speeds up to 10 Gbps for seamless data transfer.',
+      benefits: ['10 Gbps speeds', 'Seamless data transfer', 'High bandwidth', 'Fast connectivity']
     },
     {
+      icon: TrendingUp,
+      title: 'Performance Optimization',
+      description: 'AI-powered insights to optimize your 5G network performance.',
+      benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']
     },
     {
       icon: Shield,
       title: 'Enhanced Security',
       description: 'Advanced security protocols and encryption for secure 5G communications.',
-      icon: TrendingUp,
-      title: 'Performance Optimization',
-      description: 'AI-powered insights to optimize your 5G network performance.',
-      benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']
+      benefits: ['End-to-end encryption', 'Threat detection', 'Secure authentication', 'Privacy protection']
     },
     {
       icon: Target,
@@ -41,12 +42,6 @@ const FiveGImplementationPage: React.FC = () => {
       title: 'AI-Powered Intelligence',
       description: 'Leverage artificial intelligence for smart network management.',
       benefits: ['Smart routing', 'Predictive maintenance', 'Automated optimization', 'Intelligent analytics']
-    },
-    {
-      icon: Shield,
-      title: 'Enhanced Security',
-      description: 'Advanced security protocols for 5G network protection.',
-      benefits: ['End-to-end encryption', 'Threat detection', 'Secure authentication', 'Privacy protection']
     }
   ];
 
@@ -139,11 +134,18 @@ const FiveGImplementationPage: React.FC = () => {
                         </li>
                       ))}
                     </ul>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </section>
 
         {/* Benefits Section */}
+        <section className="py-20 px-4 bg-gray-900">
+          <div className="container mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Why Choose Our 5G Implementation?
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
@@ -202,6 +204,10 @@ const FiveGImplementationPage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started Today
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Schedule Demo
               </button>
             </div>
           </div>
@@ -213,5 +219,4 @@ const FiveGImplementationPage: React.FC = () => {
   );
 };
 
-export default FiveGImplementationPage;
 export default FiveGImplementationPage;
