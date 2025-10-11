@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle, ArrowRight, Cloud, Shield, Zap, Globe } from 'lucide-react';
+import { CheckCircle, ArrowRight, Cloud, Server, Shield, Zap } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -7,8 +7,7 @@ import Footer from '../components/Footer';
 const CloudServicesPage: React.FC = () => {
   const features = [
     {
-=======
-      icon: Cloud,
+icon: Cloud,
 =======
 icon: Cloud,
 
@@ -65,12 +64,33 @@ description: 'Comprehensive AWS solutions including EC2, S3, Lambda, and more',
       features: ['Compute Engine', 'Cloud Storage', 'BigQuery', 'AI Platform', 'Kubernetes']
 =======
 
+=======
+      title: 'Cloud Infrastructure',
+      description: 'Scalable and reliable cloud infrastructure solutions.',
+      benefits: ['Auto-scaling', 'High Availability', 'Global Reach', 'Cost Optimization'],
+      icon: <Cloud className="w-8 h-8 text-blue-400" />
+    },
+    {
+      title: 'Server Management',
+      description: 'Professional server management and maintenance services.',
+      benefits: ['24/7 Monitoring', 'Security Updates', 'Performance Tuning', 'Backup Solutions'],
+      icon: <Server className="w-8 h-8 text-purple-400" />
+    },
+    {
+      title: 'Security Solutions',
+      description: 'Comprehensive cloud security and compliance solutions.',
+      benefits: ['Data Encryption', 'Access Control', 'Threat Detection', 'Compliance'],
+      icon: <Shield className="w-8 h-8 text-green-400" />
+    },
+    {
+      title: 'Performance Optimization',
+      description: 'Advanced performance optimization and monitoring.',
+      benefits: ['Load Balancing', 'Caching', 'CDN Integration', 'Real-time Monitoring'],
+      icon: <Zap className="w-8 h-8 text-orange-400" />
     }
   ];
 
   return (
-<>
-=======
 <>
       <Helmet>
         <title>Cloud Services | Zion Tech Group</title>
@@ -106,88 +126,26 @@ description: 'Comprehensive AWS solutions including EC2, S3, Lambda, and more',
 
 =======
 
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">
-                Get Started Today
-                <ArrowRight className="inline-block ml-2 w-5 h-5" />
-              </button>
-              <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                View Solutions
-              </button>
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-<h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Comprehensive Cloud Solutions
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Professional cloud services to help your business succeed and grow.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
-<feature.icon className="w-12 h-12 text-blue-400 mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Cloud Providers Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-<h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Cloud Providers
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We work with all major cloud providers to deliver the best solutions for your needs.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
-              {cloudProviders.map((provider, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <h3 className="text-2xl font-bold text-white mb-4">{provider.name}</h3>
-                  <p className="text-gray-300 mb-6">{provider.description}</p>
-                  <div className="space-y-2">
-                    {provider.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                        {feature}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-Contact us today to learn more about our cloud services and migration solutions.
 =======
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
+    <>
+      <Helmet>
+        <title>Cloud Services - Zion Tech Group</title>
+        <meta name="description" content="Professional cloud services and infrastructure solutions." />
+      </Helmet>
+      <Navigation />
+      <main className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              Cloud Services
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Professional cloud services and infrastructure solutions for modern businesses. 
+              Scale your operations with our reliable cloud platform.
+            </p>
+          </div>
+
+<div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
               <h2 className="text-4xl font-bold text-white mb-4">Ready to Move to the Cloud?</h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
                 Contact us today to learn more about our cloud services and migration solutions.
@@ -203,11 +161,35 @@ Contact us today to learn more about our cloud services and migration solutions.
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
                   Learn More
                 </button>
-              </div>
-            </div>
-          </div>
-</section>
 =======
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
+                <div className="flex items-center mb-4">
+                  {feature.icon}
+                  <h3 className="text-xl font-semibold text-gray-900 ml-3">
+                    {feature.title}
+                  </h3>
+                </div>
+                <p className="text-gray-600 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-sm text-gray-600">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center mx-auto">
+              Get Started
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </button>
+          </div>
 </section>
 
         <Footer />
@@ -220,6 +202,11 @@ Contact us today to learn more about our cloud services and migration solutions.
     </>
 =======
 
+=======
+        </div>
+      </main>
+      <Footer />
+    </>
   );
 };
 

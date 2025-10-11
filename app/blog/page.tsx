@@ -1,4 +1,3 @@
-=======
 'use client';
 
 import React, { useState, useEffect, useMemo } from 'react';
@@ -106,124 +105,38 @@ const blogPosts: BlogPost[] = useMemo(() => [
     setSelectedCategory(category);
   };
 
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
+const BlogPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
         <title>Blog - Zion Tech Group</title>
-        <meta name="description" content="Latest insights on AI, cloud computing, cybersecurity, and technology trends from Zion Tech Group." />
-        <meta name="keywords" content="blog, AI, cloud computing, cybersecurity, technology trends" />
+        <meta name="description" content="Latest insights and updates from Zion Tech Group." />
       </Helmet>
-      
       <Navigation />
-      
-      <main className="pt-20 px-4 py-20">
-        <div className="max-w-7xl mx-auto">
-          {/* Hero Section */}
+      <main className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Our Blog
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              Blog
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Stay updated with the latest insights on AI, cloud computing, cybersecurity, and technology trends.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Latest insights and updates from Zion Tech Group.
             </p>
           </div>
-
-          {/* Search and Filter Section */}
-          <div className="mb-12">
-            <div className="flex flex-col md:flex-row gap-4 mb-8">
-              <div className="relative flex-1">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search articles..."
-                  value={searchTerm}
-                  onChange={(e) => handleSearch(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
-                />
-              </div>
-              <div className="flex flex-wrap gap-2">
-                {categories.map((category) => (
-                  <button
-                    key={category}
-                    onClick={() => handleCategoryChange(category)}
-                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                      selectedCategory === category
-                        ? 'bg-purple-600 text-white'
-                        : 'bg-white/10 text-gray-300 hover:bg-white/20'
-                    }`}
-                  >
-                    {category.charAt(0).toUpperCase() + category.slice(1)}
-                  </button>
-                ))}
-              </div>
-            </div>
+          
+          <div className="text-center">
+            <p className="text-gray-600">Blog posts coming soon...</p>
           </div>
-
-          {/* Blog Posts Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredPosts.map((post) => (
-              <article key={post.id} className="bg-white/10 backdrop-blur-lg rounded-2xl overflow-hidden border border-white/20 hover:border-white/40 transition-all duration-300">
-                <div className="aspect-video bg-gradient-to-br from-purple-500 to-blue-600 relative">
-                  {post.featured && (
-                    <div className="absolute top-4 left-4">
-                      <span className="bg-yellow-400 text-black px-2 py-1 rounded-full text-xs font-semibold">
-                        Featured
-                      </span>
-                    </div>
-                  )}
-                </div>
-                
-                <div className="p-6">
-                  <div className="flex items-center gap-4 text-sm text-gray-400 mb-3">
-                    <span className="flex items-center">
-                      <Calendar className="w-4 h-4 mr-1" />
-                      {new Date(post.date).toLocaleDateString()}
-                    </span>
-                    <span className="flex items-center">
-                      <Clock className="w-4 h-4 mr-1" />
-                      {post.readTime}
-                    </span>
-                    <span className="flex items-center">
-                      <User className="w-4 h-4 mr-1" />
-                      {post.author}
-                    </span>
-                  </div>
-
-                  <h2 className="text-xl font-bold text-white mb-3 line-clamp-2">
-                    {post.title}
-                  </h2>
-                  
-                  <p className="text-gray-300 mb-4 line-clamp-3">
-                    {post.excerpt}
-                  </p>
-
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {post.tags.map((tag) => (
-                      <span key={tag} className="px-2 py-1 bg-purple-500/20 text-purple-400 text-xs rounded-full">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  <button className="flex items-center text-purple-400 hover:text-purple-300 font-medium transition-colors">
-                    Read More
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </button>
-                </div>
-              </article>
-            ))}
-          </div>
-
-          {filteredPosts.length === 0 && (
-            <div className="text-center py-12">
-              <p className="text-gray-400 text-lg">No articles found matching your criteria.</p>
-            </div>
-          )}
         </div>
       </main>
-      
       <Footer />
-    </div>
+    </>
   );
 };
 

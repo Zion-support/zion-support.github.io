@@ -1,81 +1,13 @@
 import React from 'react';
-import { Star, Users, Award, MapPin, Clock, Briefcase, CheckCircle, ArrowRight, Target, Lightbulb } from 'lucide-react';
-=======
 import { CheckCircle, ArrowRight, Star, Users, Award, MapPin, Clock, Briefcase, Target, Lightbulb } from 'lucide-react';
 
 =======
 import { Star, Users, Award, MapPin, Clock, Briefcase, CheckCircle, ArrowRight, Target, Lightbulb } from 'lucide-react';
 
+=======
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-
-interface JobPosition {
-  id: string;
-  title: string;
-  department: string;
-  location: string;
-  type: string;
-  experience: string;
-  description: string;
-  requirements: string[];
-  benefits: string[];
-  posted: string;
-  featured: boolean;
-}
-
-const CareersPage: React.FC = () => {
-
-  const companyValues = [
-    {
-      title: 'Innovation',
-      description: 'We push the boundaries of technology and creativity.',
-      icon: <Lightbulb className="w-8 h-8 text-yellow-400" />
-    },
-    {
-      title: 'Excellence',
-      description: 'We strive for the highest quality in everything we do.',
-      icon: <Award className="w-8 h-8 text-blue-400" />
-    },
-    {
-      title: 'Collaboration',
-      description: 'We work together to achieve extraordinary results.',
-      icon: <Users className="w-8 h-8 text-green-400" />
-    },
-    {
-      title: 'Growth',
-      description: 'We invest in our people and their development.',
-      icon: <Target className="w-8 h-8 text-purple-400" />
-    }
-  ];
-
-  const jobPositions: JobPosition[] = [
-    {
-      id: '1',
-      title: 'Senior Full Stack Developer',
-      department: 'Engineering',
-      location: 'Remote',
-      type: 'Full-time',
-      experience: '5+ years',
-      description: 'Join our engineering team to build cutting-edge AI and web applications.',
-      requirements: ['React/Next.js', 'Node.js', 'TypeScript', 'AWS', 'AI/ML experience'],
-      benefits: ['Health insurance', 'Remote work', 'Learning budget'],
-      posted: '2 days ago',
-      featured: true
-    },
-    {
-      id: '2',
-      title: 'AI/ML Engineer',
-      department: 'AI Research',
-      location: 'San Francisco, CA',
-      type: 'Full-time',
-      experience: '3+ years',
-      description: 'Develop and implement machine learning models and AI solutions.',
-      requirements: ['Python', 'TensorFlow/PyTorch', 'MLOps', 'Cloud platforms'],
-      benefits: ['Health insurance', 'Stock options', 'Conference budget'],
-      posted: '1 week ago',
-      featured: false
-=======
 
 const CareersPage: React.FC = () => {
   const jobPositions: JobPosition[] = [
@@ -329,6 +261,32 @@ const CareersPage: React.FC = () => {
 
         <Footer />
       </div>
+=======
+const CareersPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Careers - Zion Tech Group</title>
+        <meta name="description" content="Join our team and build the future of technology." />
+      </Helmet>
+      <Navigation />
+      <main className="min-h-screen bg-gradient-to-br from-gray-50 to-green-50">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              Careers
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Join our team and build the future of technology.
+            </p>
+          </div>
+          
+          <div className="text-center">
+            <p className="text-gray-600">Career opportunities coming soon...</p>
+          </div>
+        </div>
+      </main>
+      <Footer />
     </>
   );
 };

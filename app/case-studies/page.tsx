@@ -1,48 +1,16 @@
 import React from 'react';
-import { ArrowRight, Users, Award, Clock, CheckCircle, Star, TrendingUp, Shield } from 'lucide-react';
-=======
 import { CheckCircle, ArrowRight, Users, Award, Clock, Star } from 'lucide-react';
 
 =======
 import { ArrowRight, Users, Award, Clock, CheckCircle, Star, TrendingUp, Shield } from 'lucide-react';
 
+=======
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-interface CaseStudy {
-  id: string;
-  title: string;
-  description: string;
-  industry: string;
-  duration: string;
-  results: string[];
-  technologies: string[];
-  image: string;
-  featured: boolean;
-}
-
 const CaseStudiesPage: React.FC = () => {
-  const caseStudies: CaseStudy[] = [
-    {
-      id: 'ai-customer-service',
-      title: 'AI-Powered Customer Service Transformation',
-      description: 'Revolutionized customer support with intelligent chatbots and automated workflows, reducing response time by 80%.',
-      industry: 'E-commerce',
-      duration: '6 months',
-      results: ['80% faster response time', '60% cost reduction', '95% customer satisfaction'],
-      technologies: ['OpenAI GPT-4', 'React', 'Node.js', 'MongoDB'],
-      image: '/api/placeholder/600/400',
-      featured: true
-    },
-    {
-      id: 'cloud-migration',
-      title: 'Enterprise Cloud Migration',
-      description: 'Successfully migrated legacy systems to cloud infrastructure, improving scalability and reducing operational costs.',
-      industry: 'Financial Services',
-      duration: '8 months',
-=======
-      results: ['50% cost reduction', '99.9% uptime', '3x faster deployment'],
+results: ['50% cost reduction', '99.9% uptime', '3x faster deployment'],
 =======
 results: ['50% cost reduction', '99.9% uptime', '3x faster deployment'],
 
@@ -279,6 +247,31 @@ Success
 
         <Footer />
       </div>
+=======
+  return (
+    <>
+      <Helmet>
+        <title>Case Studies - Zion Tech Group</title>
+        <meta name="description" content="Explore our successful projects and case studies." />
+      </Helmet>
+      <Navigation />
+      <main className="min-h-screen bg-gradient-to-br from-gray-50 to-purple-50">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              Case Studies
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Explore our successful projects and case studies.
+            </p>
+          </div>
+          
+          <div className="text-center">
+            <p className="text-gray-600">Case studies coming soon...</p>
+          </div>
+        </div>
+      </main>
+      <Footer />
     </>
   );
 };
