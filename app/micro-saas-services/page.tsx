@@ -1,75 +1,74 @@
 import React from 'react';
-<<<<<<< HEAD
-import { CheckCircle, ArrowRight, Zap, Clock, DollarSign, Star, Users, Shield } from 'lucide-react';
+import { CheckCircle, ArrowRight, Zap, Clock, DollarSign, Star, Users, Shield, Globe, Brain, BarChart3, Mail, Target, Share2, FileText } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
 const MicroSAASServicesPage: React.FC = () => {
   const microSAAS = [
     {
-      icon: <Zap className="w-8 h-8 text-blue-500" />,
-      title: 'AI Task Manager',
-      description: 'Intelligent task management with AI-powered prioritization, scheduling, and productivity insights.',
-      features: ['AI task prioritization', 'Smart scheduling', 'Productivity analytics', 'Team collaboration'],
-      pricing: '$19/month',
-      link: '/ai-task-manager',
+      icon: <Brain className="w-8 h-8 text-blue-500" />,
+      title: 'AI Content Writer Pro',
+      description: 'Advanced AI-powered content creation tool with SEO optimization and brand voice customization.',
+      features: ['SEO-optimized content', 'Brand voice training', 'Multi-language support', 'Content scheduling', 'Plagiarism detection'],
+      pricing: '$29/month',
+      link: '/micro-saas-services/ai-content-writer',
       popular: true,
-      users: '1,200+',
+      users: '2,500+',
       rating: '4.9'
     },
     {
-      icon: <DollarSign className="w-8 h-8 text-green-500" />,
-      title: 'AI Expense Tracker',
-      description: 'Automated expense tracking with receipt scanning, categorization, and financial insights.',
-      features: ['Receipt scanning', 'Auto categorization', 'Budget tracking', 'Financial reports'],
-      pricing: '$15/month',
-      link: '/ai-expense-tracker',
+      icon: <BarChart3 className="w-8 h-8 text-green-500" />,
+      title: 'AI Analytics Dashboard',
+      description: 'Real-time business intelligence with predictive analytics and automated reporting.',
+      features: ['Real-time analytics', 'Predictive insights', 'Custom dashboards', 'Automated reports', 'Data visualization'],
+      pricing: '$49/month',
+      link: '/micro-saas-services/ai-analytics-dashboard',
       popular: true,
-      users: '850+',
+      users: '1,800+',
       rating: '4.8'
     },
     {
-      icon: <Shield className="w-8 h-8 text-red-500" />,
-      title: 'AI Password Manager',
-      description: 'Secure password management with AI-powered security recommendations and breach monitoring.',
-      features: ['Secure storage', 'AI security audit', 'Breach monitoring', 'Multi-device sync'],
-      pricing: '$12/month',
-      link: '/ai-password-manager',
+      icon: <Mail className="w-8 h-8 text-purple-500" />,
+      title: 'AI Email Assistant',
+      description: 'Smart email management with automated responses, scheduling, and priority classification.',
+      features: ['Smart email sorting', 'Auto-responses', 'Email scheduling', 'Priority classification', 'Template library'],
+      pricing: '$19/month',
+      link: '/micro-saas-services/ai-email-assistant',
       popular: false,
-      users: '650+',
+      users: '1,200+',
       rating: '4.7'
     },
     {
-      icon: <Clock className="w-8 h-8 text-purple-500" />,
-      title: 'AI Invoice Generator',
-      description: 'Automated invoice generation with AI-powered templates, payment tracking, and client management.',
-      features: ['Auto invoice generation', 'Payment tracking', 'Client management', 'Tax calculations'],
-      pricing: '$25/month',
-      link: '/ai-invoice-generator',
+      icon: <Target className="w-8 h-8 text-orange-500" />,
+      title: 'AI Lead Generation',
+      description: 'Automated lead discovery and qualification with CRM integration and follow-up automation.',
+      features: ['Lead discovery', 'Qualification scoring', 'CRM integration', 'Follow-up automation', 'Contact enrichment'],
+      pricing: '$39/month',
+      link: '/micro-saas-services/ai-lead-generation',
       popular: true,
-      users: '980+',
+      users: '1,600+',
       rating: '4.9'
     },
     {
-      icon: <Users className="w-8 h-8 text-orange-500" />,
-      title: 'AI Health Tracker',
-      description: 'Personal health monitoring with AI insights, goal tracking, and wellness recommendations.',
-      features: ['Health monitoring', 'AI insights', 'Goal tracking', 'Wellness recommendations'],
-      pricing: '$18/month',
-      link: '/ai-health-tracker',
+      icon: <Share2 className="w-8 h-8 text-red-500" />,
+      title: 'AI Social Media Manager',
+      description: 'Automated social media posting, engagement tracking, and content optimization.',
+      features: ['Auto-posting', 'Engagement tracking', 'Content optimization', 'Hashtag research', 'Performance analytics'],
+      pricing: '$25/month',
+      link: '/micro-saas-services/ai-social-media-manager',
       popular: false,
-      users: '720+',
+      users: '1,100+',
       rating: '4.6'
     },
     {
-      icon: <Clock className="w-8 h-8 text-indigo-500" />,
-      title: 'AI Smart Calendar',
-      description: 'Intelligent calendar management with AI scheduling, meeting optimization, and time blocking.',
-      features: ['AI scheduling', 'Meeting optimization', 'Time blocking', 'Integration sync'],
-      pricing: '$22/month',
-      link: '/ai-smart-calendar',
-      popular: true,
-      users: '1,100+',
+      icon: <FileText className="w-8 h-8 text-yellow-500" />,
+      title: 'AI Document Processor',
+      description: 'Intelligent document processing with OCR, data extraction, and automated workflows.',
+      features: ['OCR technology', 'Data extraction', 'Document classification', 'Workflow automation', 'API integration'],
+      pricing: '$35/month',
+      link: '/micro-saas-services/ai-document-processor',
+      popular: false,
+      users: '900+',
       rating: '4.8'
     }
   ];
@@ -77,7 +76,7 @@ const MicroSAASServicesPage: React.FC = () => {
   const benefits = [
     {
       title: 'Affordable Pricing',
-      description: 'Start from just $12/month with no hidden fees or setup costs',
+      description: 'Start from just $15/month with no hidden fees or setup costs',
       icon: <DollarSign className="w-6 h-6 text-green-500" />
     },
     {
@@ -101,86 +100,25 @@ const MicroSAASServicesPage: React.FC = () => {
     {
       name: 'Sarah Johnson',
       role: 'CEO, TechStart Inc.',
-      content: 'AI Task Manager has revolutionized how our team manages projects. The AI prioritization saves us 10+ hours per week.',
+      content: 'AI Content Writer Pro has revolutionized our content marketing. The SEO optimization saves us 15+ hours per week.',
       rating: 5
     },
     {
       name: 'Michael Chen',
-      role: 'Freelance Designer',
-      content: 'The AI Invoice Generator is a game-changer. It automatically creates professional invoices and tracks payments seamlessly.',
+      role: 'Marketing Director',
+      content: 'The AI Analytics Dashboard provides insights we never had before. Our decision-making is now data-driven.',
       rating: 5
     },
     {
       name: 'Emily Rodriguez',
       role: 'Small Business Owner',
-      content: 'AI Expense Tracker has simplified our financial management. The receipt scanning feature is incredibly accurate.',
+      content: 'AI Lead Generation has tripled our qualified leads. The automation is incredible and ROI is immediate.',
       rating: 5
-=======
-import { CheckCircle, ArrowRight, Zap, Shield, Globe, DollarSign, Users, Clock, Star } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-
-const MicroSaasServicesPage: React.FC = () => {
-  const microSaasServices = [
-    {
-      icon: <Zap className="w-8 h-8 text-blue-500" />,
-      title: 'AI Content Writer Pro',
-      description: 'Advanced AI-powered content creation tool with SEO optimization and brand voice customization.',
-      features: ['SEO-optimized content', 'Brand voice training', 'Multi-language support', 'Content scheduling', 'Plagiarism detection'],
-      pricing: '$29/month',
-      popular: true,
-      link: '/micro-saas-services/ai-content-writer'
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-green-500" />,
-      title: 'AI Analytics Dashboard',
-      description: 'Real-time business intelligence with predictive analytics and automated reporting.',
-      features: ['Real-time analytics', 'Predictive insights', 'Custom dashboards', 'Automated reports', 'Data visualization'],
-      pricing: '$49/month',
-      popular: false,
-      link: '/micro-saas-services/ai-analytics-dashboard'
-    },
-    {
-      icon: <Globe className="w-8 h-8 text-purple-500" />,
-      title: 'AI Email Assistant',
-      description: 'Smart email management with automated responses, scheduling, and priority classification.',
-      features: ['Smart email sorting', 'Auto-responses', 'Email scheduling', 'Priority classification', 'Template library'],
-      pricing: '$19/month',
-      popular: false,
-      link: '/micro-saas-services/ai-email-assistant'
-    },
-    {
-      icon: <Users className="w-8 h-8 text-orange-500" />,
-      title: 'AI Lead Generation',
-      description: 'Automated lead discovery and qualification with CRM integration and follow-up automation.',
-      features: ['Lead discovery', 'Qualification scoring', 'CRM integration', 'Follow-up automation', 'Contact enrichment'],
-      pricing: '$39/month',
-      popular: true,
-      link: '/micro-saas-services/ai-lead-generation'
-    },
-    {
-      icon: <Clock className="w-8 h-8 text-red-500" />,
-      title: 'AI Social Media Manager',
-      description: 'Automated social media posting, engagement tracking, and content optimization.',
-      features: ['Auto-posting', 'Engagement tracking', 'Content optimization', 'Hashtag research', 'Performance analytics'],
-      pricing: '$25/month',
-      popular: false,
-      link: '/micro-saas-services/ai-social-media-manager'
-    },
-    {
-      icon: <DollarSign className="w-8 h-8 text-yellow-500" />,
-      title: 'AI Expense Tracker',
-      description: 'Intelligent expense management with receipt scanning, categorization, and budget alerts.',
-      features: ['Receipt scanning', 'Auto-categorization', 'Budget alerts', 'Tax preparation', 'Expense reports'],
-      pricing: '$15/month',
-      popular: false,
-      link: '/micro-saas-services/ai-expense-tracker'
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d668
     }
   ];
 
   const stats = [
-    { number: '10,000+', label: 'Active Users' },
+    { number: '15,000+', label: 'Active Users' },
     { number: '99.9%', label: 'Uptime' },
     { number: '24/7', label: 'Support' },
     { number: '30-day', label: 'Free Trial' }
@@ -190,13 +128,8 @@ const MicroSaasServicesPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Micro SAAS Services - Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name="description" content="Powerful micro SAAS applications including AI task management, expense tracking, password management, and more. Affordable solutions for modern businesses." />
-        <meta name="keywords" content="micro SAAS, AI applications, task management, expense tracking, password manager, invoice generator, productivity tools" />
-=======
-        <meta name="description" content="Powerful micro SAAS solutions for modern businesses. AI-powered tools for content creation, analytics, email management, and more." />
-        <meta name="keywords" content="micro saas, ai tools, business software, content creation, analytics, email management" />
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d668
+        <meta name="description" content="Powerful micro SAAS applications including AI content creation, analytics, email management, lead generation, and more. Affordable AI-powered solutions for modern businesses." />
+        <meta name="keywords" content="micro SAAS, AI applications, content creation, analytics, email management, lead generation, social media, document processing, productivity tools" />
       </Helmet>
       
       {/* Hero Section */}
@@ -207,11 +140,7 @@ const MicroSaasServicesPage: React.FC = () => {
               Micro SAAS Services
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-<<<<<<< HEAD
-              Powerful, AI-powered micro applications designed to solve specific business problems. Affordable, easy-to-use solutions that deliver immediate value.
-=======
-              Powerful, AI-driven micro software solutions designed to streamline your business operations and boost productivity.
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d668
+              Powerful, AI-powered micro applications designed to solve specific business problems. Affordable, easy-to-use solutions that deliver immediate value and boost productivity.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
