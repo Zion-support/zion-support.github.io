@@ -114,7 +114,6 @@ const AIAccountingAssistantPage: React.FC = () => {
   ]
 
   return (
-<<<<<<< HEAD
     <>
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
@@ -125,10 +124,8 @@ const AIAccountingAssistantPage: React.FC = () => {
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-=======
     <div className="min-h-screen bg-gray-50">
       <Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
         <title>AI Accounting Assistant - Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered accounting assistant that automates bookkeeping, financial reporting, and compliance for businesses of all sizes." />
         <meta name="keywords" content="AI accounting, automated bookkeeping, financial software, accounting assistant, business finance" />
@@ -138,7 +135,6 @@ const AIAccountingAssistantPage: React.FC = () => {
       
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-<<<<<<< HEAD
         <section className="
     g: px-8"
           <div className="max-w-7xl mx-auto"
@@ -163,7 +159,6 @@ const AIAccountingAssistantPage: React.FC = () => {
       
       <Footer />
     </>
-=======
         <section className="pt-20 pb-16 px-4">
           <div className="container mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -180,13 +175,11 @@ const AIAccountingAssistantPage: React.FC = () => {
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
                 Schedule Demo
               </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
             </div>
           </div>
         </section>
 
         {/* Features Section */}
-<<<<<<< HEAD
             </div>
       
       <Footer />
@@ -252,9 +245,7 @@ const AIAccountingAssistantPage: React.FC = () => {
     </>
               ))}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-=======
         <section className="py-16 px-4 sm:px-6 lg:px-8">
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -336,7 +327,6 @@ const AIAccountingAssistantPage: React.FC = () => {
                 Choose the plan that fits your business needs
               </p>
             </div>
-<<<<<<< HEAD
       
       <Footer />
     </>
@@ -399,7 +389,6 @@ const AIAccountingAssistantPage: React.FC = () => {
 };
 
 export default AiAccountingAssistantPage;
-=======
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingTiers.map((tier, index) => (
@@ -467,4 +456,3 @@ export default AiAccountingAssistantPage;
 }
 
 export default AIAccountingAssistantPage
->>>>>>> cursor/fix-errors-and-merge-to-main-259c

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client'
 import React from 'react'
 import {Helmet} from 'react-helmet-async'
@@ -45,7 +44,6 @@ const PagePage: React.FC = () => {const features = [
       <Navigation />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
 'use client';
 import React from 'react';
 import {Helmet} from 'react-helmet-async';
@@ -90,7 +88,6 @@ const PagePage: React.FC = () => {const features = [;
       </Helmet>;
       <Navigation />;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">;
@@ -119,7 +116,6 @@ const PagePage: React.FC = () => {const features = [;
     </>;
         </section>;
         {/* Features Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -154,7 +150,6 @@ const PagePage: React.FC = () => {const features = [;
       
       <Footer />
     </>
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">;
             <div className="text-center mb-16">;
@@ -185,7 +180,6 @@ const PagePage: React.FC = () => {const features = [;
                 </div>;
       <Footer />;
     </>;
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
               ))}
             </div>;
       <Footer />;
@@ -195,7 +189,6 @@ const PagePage: React.FC = () => {const features = [;
     </>;
         </section>;
         {/* Benefits Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -268,7 +261,6 @@ const PagePage: React.FC = () => {const features = [;
     </>
         </section>
 
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">;
             <div className="text-center mb-16">;
@@ -332,7 +324,6 @@ const PagePage: React.FC = () => {const features = [;
       <Footer />;
     </>;
         </section>;
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">;
           <div className="max-w-7xl mx-auto">;
@@ -428,8 +419,5 @@ const PagePage: React.FC = () => {const features = [;
       <Footer />;
     </>;);
 };
-<<<<<<< HEAD
 
-=======
 ;
->>>>>>> cursor/fix-errors-and-merge-to-main-259c

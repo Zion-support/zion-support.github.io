@@ -1,17 +1,14 @@
 'use client'
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { BarChart, TrendingUp, PieChart, Target, CheckCircle, ArrowRight } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-=======
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { BarChart, TrendingUp, PieChart, Target, CheckCircle, ArrowRight, Brain, Shield, Zap, FileText } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
 
 const AnalyticsDashboardPage: React.FC = () => {
   const features = [
@@ -125,23 +122,17 @@ const AnalyticsDashboardPage: React.FC = () => {
     <div className="min-h-screen bg-gray-50">
       <Helmet>
         <title>AI Analytics Dashboard - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Advanced AI-powered analytics dashboard for comprehensive business intelligence and data visualization." />
-=======
         <meta name="description" content="Powerful AI-powered analytics dashboard for real-time data visualization, trend analysis, and business intelligence." />
         <meta name="keywords" content="AI analytics, data visualization, business intelligence, dashboard, data analysis" />
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
       </Helmet>
       
       <Navigation />
       
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}>
-=======
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
         <section className="pt-20 pb-16 px-4">
           <div className="container mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -208,7 +199,6 @@ const AnalyticsDashboardPage: React.FC = () => {
                 Comprehensive analytics solutions for your business
               </p>
             </div>
-<<<<<<< HEAD
       
       <Footer />
     </>
@@ -221,7 +211,6 @@ const AnalyticsDashboardPage: React.FC = () => {
       
       <Footer />
     </>
-=======
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {services.map((service, index) => {
@@ -293,14 +282,12 @@ const AnalyticsDashboardPage: React.FC = () => {
                     {tier.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
                   </button>
                 </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
               ))}
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4">
           <div className="container mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Ready to Get Started?</h2>
@@ -311,7 +298,6 @@ const AnalyticsDashboardPage: React.FC = () => {
               <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
 Start Free Trial>
                 <ArrowRight className="ml-2 h-5 w-5">
-=======
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -324,7 +310,6 @@ Start Free Trial>
               <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
                 Start Free Trial
                 <ArrowRight className="ml-2 w-5 h-5" />
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
               </button>
               <button className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300">
                 Contact Sales

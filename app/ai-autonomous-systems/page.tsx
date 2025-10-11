@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client'
 import React from 'react'
 import {Helmet} from 'react-helmet-async'
@@ -186,7 +185,6 @@ const PagePage: React.FC = () => {const features = [
       <Footer />
     </>
   )
-=======
 'use client';
 import React from 'react';
 import {Helmet} from 'react-helmet-async';
@@ -354,6 +352,5 @@ const PagePage: React.FC = () => {const features = [;
         </section>;
       <Footer />;
     </>;);
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
 }
           </ArrowRight>;

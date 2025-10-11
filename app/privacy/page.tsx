@@ -122,10 +122,7 @@ We collect information to provide better services to our users
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
                   <type.icon className="w-8 h-8 text-white">
                 </div>
-<<<<<<< HEAD
-=======
       
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
       <Footer />
     </>
                 <h3 className="text-xl font-bold text-white mb-4">{type.category}</h3>
@@ -217,10 +214,7 @@ You have control over your personal data
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 mx-auto">
                   <right.icon className="w-8 h-8 text-white">
                 </div>
-<<<<<<< HEAD
-=======
       
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
       <Footer />
     </>
                 <h3 className="text-xl font-bold text-white mb-4">{right.title}</h3>
@@ -258,10 +252,7 @@ Contact our privacy team for any questions or concerns about your data
                 <Mail className="w-6 h-6 text-cyan-400 mr-3">
                 <span className="text-white">
               </div>
-<<<<<<< HEAD
-=======
       
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
       <Footer />
     </>
               <div className="flex items-center justify-center">

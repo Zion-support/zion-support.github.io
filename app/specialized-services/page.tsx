@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client'
 import React from 'react'
 import {Helmet} from 'react-helmet-async'
@@ -106,7 +105,6 @@ const PagePage: React.FC = () => {const features = [
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2"
                         {benefit}
                       </li>
-=======
 'use client';
 import React from 'react';
 import {Helmet} from 'react-helmet-async';
@@ -206,7 +204,6 @@ const PagePage: React.FC = () => {const features = [;
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2">;
                         {benefit}>;
                       </li>;
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
                     ))}
                   </ul>;
               ))}
@@ -230,7 +227,6 @@ const PagePage: React.FC = () => {const features = [;
                     <span className="text-lg font-medium text-gray-900">;
                   </div>;
               ))}
-<<<<<<< HEAD
             </div>
 
         <section className="py-20"
@@ -264,7 +260,6 @@ export default PagePage
     </>
     </>
   );
-=======
             </div>;
         <section className="py-20";
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center";
@@ -294,4 +289,3 @@ export default PagePage;
     </>;
     </>;);
 ;
->>>>>>> cursor/fix-errors-and-merge-to-main-259c

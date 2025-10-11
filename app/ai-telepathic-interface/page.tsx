@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client'
 import React from 'react'
 import {Helmet} from 'react-helmet-async'
@@ -115,7 +114,6 @@ const PagePage: React.FC = () => {const features = [
       
       <Footer />
     </>
-=======
 'use client';
 import React from 'react';
 import {Helmet} from 'react-helmet-async';
@@ -221,7 +219,6 @@ const PagePage: React.FC = () => {const features = [;
                 </div>;
       <Footer />;
     </>;
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
               ))}
             </div>;
       <Footer />;
@@ -231,7 +228,6 @@ const PagePage: React.FC = () => {const features = [;
     </>;
         </section>;
         {/* Benefits Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -301,7 +297,6 @@ const PagePage: React.FC = () => {const features = [;
   );
 };
 
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">;
             <div className="text-center mb-16">;
@@ -363,4 +358,3 @@ const PagePage: React.FC = () => {const features = [;
     </>;);
 };
 ;
->>>>>>> cursor/fix-errors-and-merge-to-main-259c

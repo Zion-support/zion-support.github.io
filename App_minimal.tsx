@@ -20,13 +20,7 @@ const App: React.FC = () => {
         </div>
       </Router>
     </HelmetProvider>
-<<<<<<< HEAD
   );
 };
 
 export default App;
-=======
-    </>
-  )
-export default App
->>>>>>> cursor/fix-errors-and-merge-to-main-259c

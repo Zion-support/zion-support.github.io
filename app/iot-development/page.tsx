@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client'
 import React from 'react'
 import Navigation from '../components/Navigation'
@@ -87,7 +86,6 @@ const PagePage: React.FC = () => {const features = [
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2"
                         {benefit}
                       </li>
-=======
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
@@ -170,11 +168,9 @@ const PagePage: React.FC = () => {const features = [;
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2">;
                         {benefit}>;
                       </li>;
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
                     ))}
                   </ul>;
               ))}
-<<<<<<< HEAD
             </div>
       
       <Footer />
@@ -193,7 +189,6 @@ const PagePage: React.FC = () => {const features = [;
   );
 export default PagePage
       </Footer>
-=======
             </div>;
       <Footer />;
     </>;
@@ -208,4 +203,3 @@ export default PagePage
     </>;);
 export default PagePage;
       </Footer>;
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
