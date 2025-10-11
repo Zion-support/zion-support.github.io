@@ -63,6 +63,11 @@ export default function Footer() {
             <h3 className="text-lg font-semibold">Services</h3>
             <ul className="space-y-2">
               <li>
+                <Link to="/services" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  All Services
+                </Link>
+              </li>
+              <li>
                 <Link to="/ai-services" className="text-gray-400 hover:text-white transition-colors text-sm">
                   AI Solutions
                 </Link>
@@ -73,14 +78,56 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
+                <Link to="/ai-cloud-infrastructure" className="text-gray-400 hover:text-white transition-colors text-sm">
                   Cloud Services
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  Digital Transformation
-                </a>
+                <Link to="/ai-cybersecurity" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  Cybersecurity
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-data-analytics" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  Data Analytics
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* AI Services */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">AI Services</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/ai-ml" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  Machine Learning
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-vision" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  Computer Vision
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-nlp" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  Natural Language Processing
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-chatbot-builder" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  AI Chatbots
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-content-generator" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  Content Generation
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-predictive-analytics" className="text-gray-400 hover:text-white transition-colors text-sm">
+                  Predictive Analytics
+                </Link>
               </li>
             </ul>
           </div>
