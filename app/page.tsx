@@ -1,7 +1,7 @@
 import React from 'react';
 import { CheckCircle, ArrowRight, Zap, Shield, Globe } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import SEO from './components/SEO';
 
 const HomePage: React.FC = () => {
   const features = [
@@ -34,11 +34,11 @@ const HomePage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-        <meta name="description" content="Leading provider of AI-powered solutions, 5G implementation, and enterprise IT services. Transform your business with cutting-edge technology." />
-        <meta name="keywords" content="AI solutions, 5G implementation, IT services, digital transformation, enterprise technology" />
-      </Helmet>
+      <SEO 
+        title="Zion Tech Group - Advanced AI and IT Solutions"
+        description="Leading provider of AI-powered solutions, 5G implementation, and enterprise IT services. Transform your business with cutting-edge technology."
+        keywords="AI solutions, 5G implementation, IT services, digital transformation, enterprise technology"
+      />
       
       {/* Hero Section */}
       <section className="pt-20 px-4 py-20">
