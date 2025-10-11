@@ -9,16 +9,7 @@ const MicroSaasPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 
-  const products = const products = const products = [
-    {;
-<<<<<<< HEAD;
-;];
-  const [selectedCategory, setSelectedCategory] = React.useState('All');
-
-  const filteredProducts = const filteredProducts = selectedCategory === 'All' ;
-    ? products ;
-    : products.filter(product => product.category === selectedCategory);
-=======
+  const products = [
       title: 'Zion Analytics Pro',
       description: 'Advanced real-time business intelligence and analytics platform with AI-powered insights and predictive modeling.',
       features: ['Real-time Data Visualization', 'AI-powered Predictive Analytics', 'Custom Dashboard Builder', 'Advanced Data Connectors', 'Automated Report Generation', 'Multi-tenant Architecture'],
