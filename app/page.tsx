@@ -1,10 +1,13 @@
 'use client';
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
-import Navigation from './components/Navigation';
+import Navigation from './components/OptimizedNavigation';
 import Footer from './components/Footer';
 import PerformanceOptimizer from './components/EnhancedPerformanceOptimizer';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import ErrorBoundary from './components/ErrorBoundary';
+import { PageLoader, ServiceCardSkeleton, StatsSkeleton } from './components/LoadingStates';
 // import { ServiceCardSkeleton, StatsSkeleton } from './components/EnhancedLoadingStates';
 import { Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, DollarSign, Award, Rocket, Layers, Workflow, BarChart3, MessageSquare, Headphones, Monitor, HardDrive, Wifi, Printer, Router, Package, Heart, DollarSign as Dollar, Award as Trophy, Rocket as Launch, Layers as Stack, Workflow as Process, BarChart3 as Analytics, MessageSquare as Chat, Headphones as Support, Monitor as Screen, HardDrive as Storage, Wifi as Network, Printer as Print, Router as Gateway, Package as Box, Eye, Mic } from 'lucide-react';
 
@@ -14,6 +17,57 @@ const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
 const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
+
+// Memoized components for better performance
+const MemoizedServiceCard = memo(({ service, index }: { service: any, index: number }) => (
+  <div key={index} className="group relative bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105">
+    <div className="flex items-center justify-between mb-4">
+      <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
+        <service.icon className="w-6 h-6 text-white" />
+      </div>
+      {service.popular && (
+        <span className="bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-xs font-bold">
+          Popular
+        </span>
+      )}
+    </div>
+    
+    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+      {service.title}
+    </h3>
+    
+    <p className="text-gray-300 mb-4 text-sm leading-relaxed">
+      {service.description}
+    </p>
+    
+    <div className="space-y-3 mb-4">
+      <div className="flex items-center justify-between">
+        <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
+        <span className="text-sm text-gray-400 line-through">{service.marketPrice}</span>
+      </div>
+      <div className="text-xs text-green-400 font-semibold">
+        Save {Math.round((1 - parseFloat(service.price.replace('$', '').replace('/month', '')) / parseFloat(service.marketPrice.replace('$', '').replace('/month', ''))) * 100)}%
+      </div>
+    </div>
+    
+    <div className="space-y-2 mb-4">
+      <h4 className="text-sm font-semibold text-white">Key Features:</h4>
+      <ul className="space-y-1">
+        {service.features.slice(0, 3).map((feature: string, idx: number) => (
+          <li key={idx} className="flex items-center gap-2 text-xs text-gray-300">
+            <CheckCircle className="w-3 h-3 text-green-400 flex-shrink-0" />
+            {feature}
+          </li>
+        ))}
+      </ul>
+    </div>
+    
+    <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 transform hover:scale-105">
+      Get Started
+    </button>
+  </div>
+));
+MemoizedServiceCard.displayName = 'MemoizedServiceCard';
 
 // Preload critical components
 const preloadComponents = () => {
@@ -1448,11 +1502,11 @@ description: 'Custom API development, third-party integrations, and microservice
   ]
 
   return (
-    <React.Fragment>
+    <ErrorBoundary>
       <SEOOptimizer
-        title="Zion Tech Group - Advanced AI and IT Solutions"
-        description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
-        keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services']}
+        title="Zion Tech Group - AI & IT Solutions | Leading Technology Provider"
+        description="Transform your business with cutting-edge AI and IT solutions. Expert cybersecurity, cloud infrastructure, and digital transformation services. Get started today!"
+        keywords={['AI solutions', 'IT services', 'cybersecurity', 'cloud computing', 'digital transformation', 'business automation', 'machine learning', 'data analytics', 'AI chatbots', 'cloud migration', 'cybersecurity solutions', 'AI consulting']}
         canonicalUrl="https://ziontechgroup.com"
         structuredData={{
           '@context': 'https://schema.org',
@@ -1548,7 +1602,8 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
         
         <Footer />
       </div>
-    </React.Fragment>
+      <PerformanceMonitor />
+    </ErrorBoundary>
   );
 }
 

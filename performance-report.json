@@ -1,10 +1,60 @@
 {
-  "timestamp": "2025-10-09T01:54:34.096Z",
-  "buildSize": 837,
-  "pageCount": 0,
+  "timestamp": "2025-10-11T11:57:15.586Z",
+  "optimizations": {
+    "images": {
+      "quality": 85,
+      "formats": [
+        "webp",
+        "avif",
+        "jpeg"
+      ],
+      "sizes": [
+        320,
+        640,
+        768,
+        1024,
+        1280,
+        1920
+      ]
+    },
+    "css": {
+      "minify": true,
+      "removeUnused": true,
+      "criticalCSS": true
+    },
+    "js": {
+      "minify": true,
+      "treeShaking": true,
+      "codeSplitting": true
+    },
+    "caching": {
+      "staticAssets": "1y",
+      "html": "1h",
+      "api": "5m"
+    },
+    "compression": {
+      "gzip": true,
+      "brotli": true,
+      "level": 6
+    }
+  },
   "recommendations": [
-    "Consider code splitting to reduce bundle size",
     "Enable gzip compression on server",
-    "Consider using a CDN for static assets"
-  ]
+    "Implement CDN for static assets",
+    "Use WebP/AVIF images with fallbacks",
+    "Implement service worker for caching",
+    "Optimize critical rendering path",
+    "Use lazy loading for images and components",
+    "Minimize third-party scripts",
+    "Implement resource hints (preload, prefetch)",
+    "Use HTTP/2 server push for critical resources",
+    "Optimize database queries and API responses"
+  ],
+  "metrics": {
+    "targetLCP": 2500,
+    "targetFID": 100,
+    "targetCLS": 0.1,
+    "targetFCP": 1800,
+    "targetTTFB": 800
+  }
 }

@@ -3,150 +3,117 @@ const path = require('path');
 
 console.log('Running performance optimizations...');
 
-// Create critical CSS file
-const criticalCSS = `
+// Performance optimization configurations
+const optimizations = {
+  // Image optimization settings
+  images: {
+    quality: 85,
+    formats: ['webp', 'avif', 'jpeg'],
+    sizes: [320, 640, 768, 1024, 1280, 1920]
+  },
+  
+  // CSS optimization
+  css: {
+    minify: true,
+    removeUnused: true,
+    criticalCSS: true
+  },
+  
+  // JavaScript optimization
+  js: {
+    minify: true,
+    treeShaking: true,
+    codeSplitting: true
+  },
+  
+  // Caching strategies
+  caching: {
+    staticAssets: '1y',
+    html: '1h',
+    api: '5m'
+  },
+  
+  // Compression
+  compression: {
+    gzip: true,
+    brotli: true,
+    level: 6
+  }
+};
+
+// Generate performance optimization report
+function generatePerformanceReport() {
+  const report = {
+    timestamp: new Date().toISOString(),
+    optimizations: optimizations,
+    recommendations: [
+      'Enable gzip compression on server',
+      'Implement CDN for static assets',
+      'Use WebP/AVIF images with fallbacks',
+      'Implement service worker for caching',
+      'Optimize critical rendering path',
+      'Use lazy loading for images and components',
+      'Minimize third-party scripts',
+      'Implement resource hints (preload, prefetch)',
+      'Use HTTP/2 server push for critical resources',
+      'Optimize database queries and API responses'
+    ],
+    metrics: {
+      targetLCP: 2500, // ms
+      targetFID: 100,  // ms
+      targetCLS: 0.1,  // score
+      targetFCP: 1800, // ms
+      targetTTFB: 800  // ms
+    }
+  };
+
+  const reportPath = path.join(__dirname, '..', 'performance-report.json');
+  fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+  
+  console.log('Performance report generated');
+  return report;
+}
+
+// Generate critical CSS recommendations
+function generateCriticalCSS() {
+  const criticalCSS = `
 /* Critical CSS for above-the-fold content */
-* {
-  box-sizing: border-box;
+.hero-section {
+  background: linear-gradient(135deg, #0f172a 0%, #7c3aed 50%, #0f172a 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-body {
-  margin: 0;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-  background: linear-gradient(135deg, #0f172a 0%, #581c87 50%, #0f172a 100%);
-  color: #ffffff;
-  line-height: 1.6;
-}
-
-/* Navigation styles */
-nav {
+.navigation {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 50;
   background: rgba(15, 23, 42, 0.95);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(6, 182, 212, 0.2);
+  backdrop-filter: blur(10px);
 }
 
-/* Hero section styles */
-.hero-section {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 2rem 1rem;
-}
-
-.hero-title {
-  font-size: clamp(2.5rem, 8vw, 6rem);
-  font-weight: 700;
-  background: linear-gradient(135deg, #22d3ee, #a855f7, #ec4899);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  line-height: 1.1;
-  margin-bottom: 1.5rem;
-}
-
-.hero-subtitle {
-  font-size: clamp(1.125rem, 4vw, 1.5rem);
-  color: #d1d5db;
-  margin-bottom: 2rem;
-  max-width: 48rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Button styles */
-.btn-primary {
-  display: inline-flex;
-  align-items: center;
-  padding: 1rem 2rem;
-  background: linear-gradient(135deg, #22d3ee, #a855f7);
-  color: white;
-  border-radius: 0.5rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 10px 25px rgba(34, 211, 238, 0.25);
-}
-
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 20px 40px rgba(34, 211, 238, 0.4);
-}
-
-/* Card styles */
-.card {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(16px);
+.service-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
   border-radius: 1rem;
-  padding: 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: all 0.3s ease;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.card:hover {
-  border-color: rgba(34, 211, 238, 0.3);
-  transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(34, 211, 238, 0.1);
+/* Preload critical fonts */
+@font-face {
+  font-family: 'Inter';
+  font-display: swap;
+  src: url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 }
 
-/* Loading states */
-.loading {
-  opacity: 0.7;
-  pointer-events: none;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 3rem;
-  }
-  
-  .hero-subtitle {
-    font-size: 1.125rem;
-  }
-  
-  .btn-primary {
-    padding: 0.875rem 1.5rem;
-    font-size: 0.875rem;
-  }
-}
-
-/* Animation keyframes */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fade-in {
-  animation: fadeInUp 0.6s ease-out;
-}
-
-/* Performance optimizations */
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-* {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* Reduce motion for users who prefer it */
+/* Optimize animations */
 @media (prefers-reduced-motion: reduce) {
-  * {
+  *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -154,74 +121,164 @@ img {
 }
 `;
 
-// Write critical CSS to public directory
-const publicDir = path.join(__dirname, '..', 'public');
-if (!fs.existsSync(publicDir)) {
-  fs.mkdirSync(publicDir, { recursive: true });
+  const cssPath = path.join(__dirname, '..', 'public', 'critical.css');
+  fs.writeFileSync(cssPath, criticalCSS);
+  
+  console.log('Critical CSS generated');
 }
 
-fs.writeFileSync(path.join(publicDir, 'critical.css'), criticalCSS);
+// Generate service worker for caching
+function generateServiceWorker() {
+  const serviceWorker = `
+const CACHE_NAME = 'zion-tech-v1';
+const urlsToCache = [
+  '/',
+  '/about',
+  '/services',
+  '/contact',
+  '/static/css/main.css',
+  '/static/js/main.js'
+];
 
-// Create a simple performance monitoring script
-const performanceScript = `
-// Performance monitoring
-(function() {
-  'use strict';
-  
-  // Monitor Core Web Vitals
-  function measureWebVitals() {
-    if ('performance' in window && 'getEntriesByType' in performance) {
-      // First Contentful Paint
-      const fcp = performance.getEntriesByName('first-contentful-paint')[0];
-      if (fcp) {
-        console.log('FCP:', fcp.startTime);
-      }
-      
-      // Largest Contentful Paint
-      const lcp = performance.getEntriesByType('largest-contentful-paint')[0];
-      if (lcp) {
-        console.log('LCP:', lcp.startTime);
-      }
-      
-      // First Input Delay
-      const fid = performance.getEntriesByType('first-input')[0];
-      if (fid) {
-        console.log('FID:', fid.processingStart - fid.startTime);
-      }
-    }
-  }
-  
-  // Run after page load
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', measureWebVitals);
-  } else {
-    measureWebVitals();
-  }
-  
-  // Image lazy loading
-  function lazyLoadImages() {
-    const images = document.querySelectorAll('img[data-src]');
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const img = entry.target;
-          img.src = img.dataset.src;
-          img.classList.remove('lazy');
-          observer.unobserve(img);
-        }
-      });
-    });
-    
-    images.forEach(img => imageObserver.observe(img));
-  }
-  
-  // Initialize lazy loading
-  if ('IntersectionObserver' in window) {
-    lazyLoadImages();
-  }
-})();
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then((cache) => cache.addAll(urlsToCache))
+  );
+});
+
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request)
+      .then((response) => {
+        // Return cached version or fetch from network
+        return response || fetch(event.request);
+      })
+  );
+});
+
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    caches.keys().then((cacheNames) => {
+      return Promise.all(
+        cacheNames.map((cacheName) => {
+          if (cacheName !== CACHE_NAME) {
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    })
+  );
+});
 `;
 
-fs.writeFileSync(path.join(publicDir, 'performance.js'), performanceScript);
+  const swPath = path.join(__dirname, '..', 'public', 'sw.js');
+  fs.writeFileSync(swPath, serviceWorker);
+  
+  console.log('Service worker generated');
+}
 
-console.log('Performance optimizations completed');
+// Generate manifest.json for PWA
+function generateManifest() {
+  const manifest = {
+    name: 'Zion Tech Group - AI & IT Solutions',
+    short_name: 'Zion Tech',
+    description: 'Leading provider of AI and IT solutions, empowering businesses with cutting-edge technology.',
+    start_url: '/',
+    display: 'standalone',
+    background_color: '#0f172a',
+    theme_color: '#06b6d4',
+    icons: [
+      {
+        src: '/logo192.png',
+        sizes: '192x192',
+        type: 'image/png'
+      },
+      {
+        src: '/logo512.png',
+        sizes: '512x512',
+        type: 'image/png'
+      }
+    ],
+    categories: ['business', 'productivity', 'technology'],
+    lang: 'en',
+    orientation: 'portrait-primary'
+  };
+
+  const manifestPath = path.join(__dirname, '..', 'public', 'manifest.json');
+  fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
+  
+  console.log('Web app manifest generated');
+}
+
+// Generate .htaccess for Apache servers
+function generateHtaccess() {
+  const htaccess = `
+# Enable compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+</IfModule>
+
+# Enable browser caching
+<IfModule mod_expires.c>
+    ExpiresActive on
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+
+# Security headers
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options nosniff
+    Header always set X-Frame-Options DENY
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+</IfModule>
+
+# Redirect to HTTPS
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+`;
+
+  const htaccessPath = path.join(__dirname, '..', 'public', '.htaccess');
+  fs.writeFileSync(htaccessPath, htaccess);
+  
+  console.log('.htaccess generated');
+}
+
+// Run all optimizations
+function runOptimizations() {
+  try {
+    generatePerformanceReport();
+    generateCriticalCSS();
+    generateServiceWorker();
+    generateManifest();
+    generateHtaccess();
+    
+    console.log('Performance optimizations completed');
+  } catch (error) {
+    console.error('Error running optimizations:', error);
+    process.exit(1);
+  }
+}
+
+runOptimizations();
