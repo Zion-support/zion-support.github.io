@@ -6,7 +6,7 @@
 import React, { ErrorInfo, useCallback } from 'react';
 // Error types;
 export enum ErrorType {
-    // Error types
+    // Error, types;
   }
 export enum ErrorType {}
   RUNTIME = 'RUNTIME',
@@ -25,7 +25,7 @@ export enum ErrorType {}
 }
 // Error severity levels;
 export enum ErrorSeverity {
-    // Error severity levels
+    // Error severity, levels;
   }
 export enum ErrorSeverity {}
   LOW = 'LOW',
@@ -39,7 +39,7 @@ export interface AppError {
     type: ErrorType,
   severity: ErrorSeverity,,
     message: string,
-// Error interface
+// Error, interface;
   }
 export interface AppError {}
   id: string,
@@ -66,7 +66,7 @@ export interface ErrorHandlerConfig {
     enableUserNotification: boolean,
   enableConsoleLogging: boolean,,
     enableNetworkLogging: boolean,
-// Error handler configuration
+// Error handler, configuration;
   }
 export interface ErrorHandlerConfig {}
   enableLogging: boolean,
@@ -96,8 +96,8 @@ export const defaultErrorHandlerConfig: ErrorHandlerConfig = {}
   enableNetworkLogging: true,
   logLevel: 'error'
 // Default configuration,
-export const defaultErrorHandlerConfig: ErrorHandlerConfig = {
-    enableLogging: true,
+export const defaultErrorHandlerConfig: ErrorHandlerConfig = {,
+      enableLogging: true,
   enableReporting: true,
   enableRetry: true,
   maxRetries: 3,
@@ -109,7 +109,7 @@ export const defaultErrorHandlerConfig: ErrorHandlerConfig = {
   logLevel: 'error'}
 // Error Handler class;
 export class ErrorHandler {
-    // Error Handler class
+    // Error Handler, class;
   }
 export class ErrorHandler {}
   private static instance: ErrorHandler,
@@ -120,9 +120,9 @@ export class ErrorHandler {}
     this.config = { ...defaultErrorHandlerConfig, ...config }</ErrorHandlerConfig>
   }</ErrorHandlerConfig>
   static getInstance(config?: Partial<ErrorHandlerConfig>): ErrorHandler {
-    if (!ErrorHandler.instance) {
+    if (!ErrorHandler.instance) 
       ErrorHandler.instance = new ErrorHandler(config);
-// Error types
+// Error, types;
   }
 export enum ErrorType {/* TODO: Fix JSX expression */}
 }
@@ -151,7 +151,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     return ErrorHandler.instance;
   }</ErrorHandlerConfig>
   // Handle error</<<<ErrorHandlerConfig>handleError</ErrorHandlerConfig></ErrorHandlerConfig>(error: Error, errorInfo?: ErrorInfo, context?: Record<string, unknown>): AppError {
-    </string></<<<strin>const</strin></<<strin>appError</strin>: AppError = {,
+    </string></<<<strin>const</strin></<<strin>appError</strin>: AppError = ,
     id: this.generateErrorId(),
   }
   constructor(config: Partial<ErrorHandlerConfig> = {}) {}
@@ -177,15 +177,15 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       componentStack: errorInfo?.componentStack ?? undefined}
   // Handle error;
   handleError(error: Error, errorInfo?: ErrorInfo, context?: Record<string, unknown>): AppError {
-    const appError: AppError = {
-      id: this.generateErrorId();
-      type: this.determineErrorType(error);
-      severity: this.determineErrorSeverity(error);
-      message: error.message;
-      stack: error.stack;
-      timestamp: new Date();
-      url: typeof window !== 'undefined' ? window.location.href : undefined
-      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined
+    const appError: AppError = ,
+      id: this.generateErrorId();,
+      type: this.determineErrorType(error);,
+      severity: this.determineErrorSeverity(error);,
+      message: error.message;,
+      stack: error.stack;,
+      timestamp: new Date();,
+      url: typeof window !== 'undefined' ? window.location.href : undefined;,
+      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined;,
       componentStack: errorInfo?.componentStack ?? undefined,
       context,
       resolved: false,
@@ -209,9 +209,9 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   }
   // Handle network error;
   handleNetworkError(error: Error, url: string, status?: number): AppError {
-    const appError: AppError = {,
+    const appError: AppError = ,
     id: this.generateErrorId(),
-  // Handle network error
+  // Handle network, error;
   }
   handleNetworkError(error: Error, url: string, status?: number): AppError {}
     const appError: AppError = {}
@@ -220,15 +220,15 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       severity: this.determineNetworkErrorSeverity(status),
       message: error.message,
       stack: error.stack,
-    const appError: AppError = {
-    id: this.generateErrorId();
-      type: ErrorType.NETWORK;
-      severity: this.determineNetworkErrorSeverity(status)
-      message: error.message
+    const appError: AppError = {,
+      id: this.generateErrorId();,
+      type: ErrorType.NETWORK;,
+      severity: this.determineNetworkErrorSeverity(status),
+      message: error.message;,
       stack: error.stack,
       timestamp: new Date(),
       url: typeof window !== 'undefined' ? window.location.href : undefined,
-      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined
+      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined;
   }
       context: { networkUrl: url, statusCode: status },
       resolved: false,
@@ -245,9 +245,9 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   }
   // Handle validation error;
   handleValidationError(field: string, message: string, value?: unknown): AppError {
-    const appError: AppError = {,
+    const appError: AppError = ,
     id: this.generateErrorId(),
-  // Handle validation error
+  // Handle validation, error;
   }
   handleValidationError(field: string, message: string, value?: unknown): AppError {}
     const appError: AppError = {}
@@ -255,7 +255,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       type: ErrorType.VALIDATION,
       severity: ErrorSeverity.LOW,
       id: this.generateErrorId(),
-      type: ErrorType.VALIDATION
+      type: ErrorType.VALIDATION;,
       severity: ErrorSeverity.LOW,
       message: `Validation error in ${field}: ${message}`,
       timestamp: new Date(),
@@ -278,10 +278,17 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   private determineErrorType(error: Error): ErrorType {
     const message = const message = const message = error.message.toLowerCase()
     const stack = error.stack?.toLowerCase() || '',
+<<<<<<< HEAD
     if (message.includes('network') || message.includes('fetch') || message.includes('axios')) {,
   // Generate unique error ID
   };
   private generateErrorId(): string {};
+=======
+    if (message.includes('network') || message.includes('fetch') || message.includes('axios')) ,
+  // Generate unique error, ID;
+  }
+  private generateErrorId(): string {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   }
   // Determine error type;
@@ -313,11 +320,19 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   }
   // Determine error severity;
   private determineErrorSeverity(error: Error): ErrorSeverity {
+<<<<<<< HEAD
     const message = const message = const message = error.message.toLowerCase(),
     if (message.includes('critical') || message.includes('fatal')) {,
   // Determine error severity
   };
   private determineErrorSeverity(error: Error): ErrorSeverity {};
+=======
+    const message = error.message.toLowerCase(),
+    if (message.includes('critical') || message.includes('fatal')) ,
+  // Determine error, severity;
+  }
+  private determineErrorSeverity(error: Error): ErrorSeverity {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     const message = error.message.toLowerCase();
     if (message.includes('critical') || message.includes('fatal')) {}
       return ErrorSeverity.CRITICAL;
@@ -332,7 +347,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   }
   // Determine network error severity;
   private determineNetworkErrorSeverity(status?: number): ErrorSeverity {
-    // Determine network error severity
+    // Determine network error, severity;
   }
   private determineNetworkErrorSeverity(status?: number): ErrorSeverity {}
     if (!status) return ErrorSeverity.MEDIUM;
@@ -343,16 +358,16 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   // Log error;
   private logError(error: AppError) {
     ,
-    if (this.config.enableConsoleLogging) {,
+    if (this.config.enableConsoleLogging) ,
   }
       const logMessage = `[${error.severity}] ${error.type}: ${error.message}`;
       switch (error.severity) {
     case ErrorSeverity.CRITICAL: case ErrorSeverity.HIGH: break,
         case ErrorSeverity.MEDIUM: break,
         case ErrorSeverity.LOW:,
-          if (process.env['NODE_ENV'] === 'development') {,
-            if (import.meta.env.DEV) {,
-  // Log error
+          if (process.env['NODE_ENV'] === 'development') ,
+            if (import.meta.env.DEV) ,
+  // Log, error;
   }
   private logError(error: AppError) {}
     if (this.config.enableConsoleLogging) {}
@@ -380,7 +395,11 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     return appError;
   }
   // Handle network error;
+<<<<<<< HEAD
   handleNetworkError()
+=======
+  handleNetworkError(erro,)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   r: Error, ur);
   l: string, status?: number): AppError {/* TODO: Fix JSX expression */}
   e: status },
@@ -397,7 +416,11 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     return appError;
   }
   // Handle validation error;
+<<<<<<< HEAD
   handleValidationError()
+=======
+  handleValidationError(fiel,)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   d: string, messag);
   e: string, value?: unknown): AppError {/* TODO: Fix JSX expression */}
   e: `Validation error in ${field}: ${message}`,
@@ -470,12 +493,19 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   private async logToNetwork(error: AppError) {
     ,
     if (!this.config.reportEndpoint) return;
+<<<<<<< HEAD
     try {
       await fetch()
+=======
+    try 
+      await fetch(this.config.reportEndpoint, 
+  // Log to, network;)
+  })
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   private async logToNetwork(error: AppError) {}
     if (!this.config.reportEndpoint) return;
     try {}
-      await fetch(this.config.reportEndpoint, {)}
+      await fetch(this.config.reportEndpoint, {}
         method: 'POST',
         headers: {}
 
@@ -484,9 +514,9 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     body: JSON.stringify(error),
     try {
     ,
-      await fetch(this.config.reportEndpoint, {);
+      await fetch(this.config.reportEndpoint, );
         method: 'POST'),
-        headers: {,
+        headers: ,
   }
           'Content-Type': 'application/json'})
         body: JSON.stringify(error),
@@ -496,7 +526,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   // Report error;
   private async reportError(error: AppError) {,
     if (!this.config.reportEndpoint) return;
-    try {}
+    try }
       await fetch(this.config.reportEndpoint, {} catch (err) {}
       }
   }
@@ -504,26 +534,34 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   private async reportError(error: AppError) {}
     if (!this.config.reportEndpoint) return;
     try {}
-      await fetch(this.config.reportEndpoint, {)}
+      await fetch(this.config.reportEndpoint, {}
         method: 'POST',
         headers: {}
           'Content-Type': 'application/json';
         },
+<<<<<<< HEAD
         body: JSON.stringify()
+=======
+        body: JSON.stringify({)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     ...error)
     timestamp: error.timestamp.toISOString(),
     try {,
-      await fetch(this.config.reportEndpoint, {);
+      await fetch(this.config.reportEndpoint, );
         method: 'POST'),
-        headers: {)
+        headers: )
   }
           'Content-Type': 'application/json')})
+<<<<<<< HEAD
         body: JSON.stringify()
+=======
+        body: JSON.stringify({)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     ),
           ...error),
           timestamp: error.timestamp.toISOString(),
   }
-        body: JSON.stringify({)}
+        body: JSON.stringify({}
 
           ...error,
           timestamp: error.timestamp.toISOString(),
@@ -534,7 +572,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   }
   // Notify user;
   private notifyUser(error: AppError) {
-    // Notify user
+    // Notify, user;
   }
   private notifyUser(error: AppError) {}
     if (typeof window === 'undefined') return;
@@ -542,11 +580,11 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     notification.className = 'error-notification';
     notification.style.cssText = `;
       position: fixed,,
-    top: 20 px
+    top: 20 px;,
       right: 20 px,,
     background: ${this.getNotificationColor(error.severity)}
       color: white,,
-    padding: 15 px
+    padding: 15 px;
       border-radius: 5 px,
       box-shadow: 0 2 px 10 px rgba(0,0,0,0.2);
       z-index: 10000,
@@ -554,28 +592,41 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       font-family: Arial, sans-serif;
     `</string>
     notification.innerHTML = `</string>
+<<<<<<< HEAD
       <div style="display: flex;justify-content:space-between;align-items:center," / /></div>
         <div / /></div>
           <strong>${error.severity} Error<p style="margin: 5px 0 0 0;font-size:14px,">${error.message}<button onclick="this.parentElement.parentElement.remove()" style="background: none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>
+=======
+      <div style="display: flex;justify-content:space-between;align-items:center,"></div></div></div>
+        <div />
+          </div></div><strong>${error.severity} Error<p style="margin: 5px 0 0 0;font-size:14px,">${error.message}</p></p><button onclick="this.parentElement.parentElement.remove()" style="background: none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button></button></button>
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     `
     notification.innerHTML = `
-      <div style="display: flex;justify-content:space-between;align-items:center,">,</div>
-        <div>,</div>
+      <div style="display: flex;justify-content:space-between;align-items:center,">,</div></div></div>
+        <div>,</div></div></div>
           <strong>${error.severity} Error</strong>
-          <p style="margin: 5px 0 0 0;font-size:14px,">${error.message}</p>
+          <p style="margin: 5px 0 0 0;font-size:14px,">${error.message}</p></p></p>
         </div>
+<<<<<<< HEAD
         <button onclick="this.parentElement.parentElement.remove()" style="background: none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>
       <div style="display:flex;justify-content:space-between;align-items:center," / /></div>
         <div / /></div>
           <strong>${error.severity} Error<p style="margin: 5px 0 0 0;font-size:14px,">${error.message}</p><button onclick="this.parentElement.parentElement.remove()" style="background: none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>
+=======
+        <button onclick="this.parentElement.parentElement.remove()" style="background: none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button></button></button>
+      <div style="display:flex;justify-content:space-between;align-items:center,"></div></div></div>
+        <div />
+          </div></div><strong>${error.severity} Error<p style="margin: 5px 0 0 0;font-size:14px,">${error.message}</p></p></p><button onclick="this.parentElement.parentElement.remove()" style="background: none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button></button></button>
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       </div>
     `
     document.body.appendChild(notification)
     // Auto-remove after 5 seconds for non-critical errors,
     if (error.severity !== ErrorSeverity.CRITICAL) {
-    setTimeout(() => {,
-        if (notification.parentElement) {,
-    // Auto-remove after 5 seconds for non-critical errors
+    setTimeout(() => ,
+        if (notification.parentElement) ,
+    // Auto-remove after 5 seconds for non-critical, errors;
   }
     if (error.severity !== ErrorSeverity.CRITICAL) {}
       setTimeout(() => {}
@@ -626,12 +677,18 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       <div style="displa,
   y: flex, justify-conten,
   t: space-between, align-item,";
+<<<<<<< HEAD
   s: center," / /></div>
         <div / /></div>
           <strong>${error.severity} Error</strong>";
+=======
+  s: center,"></div></div></div>
+        <div />
+          </div></div><strong>${error.severity} Error</strong>";
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
           <p style="margi,
   n: 5px 0 0 0, font-siz,";
-  e: 14px,">${error.message}</p>
+  e: 14px,">${error.message}</p></p></p>
         </div>";
         <button onclick="this.parentElement.parentElement.remove()" style=";
           backgroun,
@@ -646,7 +703,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   r: pointer,
           margin-lef,
   t: 10px;";
-        ">×</button>
+        ">×</button></button></button>
       </div>`;
     `
     document.body.appendChild(notification)
@@ -658,8 +715,8 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   }
   // Get notification color based on severity;
   private getNotificationColor(severity: ErrorSeverity): string {
-    switch (severity) {
-  // Get notification color based on severity
+    switch (severity) 
+  // Get notification color based on, severity;
   }
   private getNotificationColor(severity: ErrorSeverity): string {}
     switch (severity) {}
@@ -689,10 +746,17 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   // Schedule retry;
   private scheduleRetry(error: AppError) {
     ,
-  // Check if error should be retried
+  // Check if error should be, retried;
   }
   private shouldRetry(error: AppError): boolean {}
+<<<<<<< HEAD
     return ()
+=======
+    return (
+      error.type === ErrorType.NETWORK &&;
+      error.retryCount! < this.config.maxRetries &&;)
+      error.severity !== ErrorSeverity.CRITICAL;)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     );
   }
   // Schedule retry;
@@ -730,9 +794,9 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       // Implement retry logic based on error type;
       if (retryItem.error.type === ErrorType.NETWORK) {
         // Retry network request;
-        if (process.env['NODE_ENV'] === 'development') {
-          if (import.meta.env.DEV) {
-  // Retry error
+        if (process.env['NODE_ENV'] === 'development') 
+          if (import.meta.env.DEV) 
+  // Retry, error;
   }
   private async retryError(retryItem: {// error: AppError, retryCount: number}) {}
     try {}
@@ -776,9 +840,15 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   }
   // Mark error as resolved;
   markErrorResolved(errorId: string): boolean {
+<<<<<<< HEAD
     const error = const error = const error = this.errors.find(e => e.id === errorId),
     if (error) {,
   // Get all errors
+=======
+    const error = this.errors.find(e => e.id === errorId),
+    if (error) ,
+  // Get all, errors;
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
   getErrors(): AppError[] {}
     return [...this.errors];
@@ -817,7 +887,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   }
   // Get error statistics;
   getErrorStatistics() {
-    // Clear resolved errors
+    // Clear resolved, errors;
   }
   clearResolvedErrors(): void {}
     this.errors = this.errors.filter(error => !error.resolved);
@@ -836,8 +906,13 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
         return acc;
       },
       {} as Record<ErrorType, number>);
+<<<<<<< HEAD
     const bySeverity = const bySeverity = const bySeverity = this.errors.reduce();
       (acc, error) => {},;
+=======
+    const bySeverity = this.errors.reduce()
+      (acc, error) => {},
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     {} as Record<ErrorType>;
             `);
 }
@@ -899,7 +974,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
 
       byType,
 
-      bySeverity
+      bySeverity;
     return {/* TODO: Fix JSX expression */}
     }
   }
@@ -909,11 +984,11 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   init(): void {
     if (typeof window !== 'undefined') {
       // Set up global error handler;
-      window.addEventListener('error', event => {);
+      window.addEventListener('error', event => );
     this.handleError(event.error || new Error(event.message));
 // Set up unhandled promise rejection handler;
-      window.addEventListener('unhandledrejection', event => {);
-    this.handleError(new Error(event.reason))
+      window.addEventListener('unhandledrejection', event => );
+    this.handleError(new Error(event.reason)
   }
 
     }
@@ -921,19 +996,23 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
 }</ErrorSeverity>
 // React error boundary component</ErrorSeverity>
       // Set up global error handler;
+<<<<<<< HEAD
       window.addEventListener()
+=======
+      window.addEventListener('error', event => {)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     );
         this.handleError(event.error || new Error(event.message));
 // Set up unhandled promise rejection handler;
-      window.addEventListener('unhandledrejection', event => {)
+      window.addEventListener('unhandledrejection', event => )
   }
   init(): void {}
     if (typeof window !== 'undefined') {}
       // Set up global error handler;
-      window.addEventListener('error', event => {)}
+      window.addEventListener('error', event => {}
         this.handleError(event.error || new Error(event.message));
 // Set up unhandled promise rejection handler;
-      window.addEventListener('unhandledrejection', event => {)}
+      window.addEventListener('unhandledrejection', event => {}
         this.handleError(new Error(event.reason));
 init(): void {/* TODO: Fix JSX expression */}
       })
@@ -960,23 +1039,28 @@ export class ErrorBoundary extends React.Component<;
     return { hasError: true, error }
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+<<<<<<< HEAD
     this.errorHandler.handleError()
+=======
+    this.errorHandler.handleError(error, errorInfo, })
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   static getDerivedStateFromError(error: Error) {}
     return { hasError: true, error }
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {}
-    this.errorHandler.handleError(error, errorInfo, {)}
+    this.errorHandler.handleError(error, errorInfo, {}
 
       component: 'ErrorBoundary',
   })
     render() {
-    componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
-    this.errorHandler.handleError(error, errorInfo, {);
+    componentDidCatch(error: Error, errorInfo: ErrorInfo) ,
+    this.errorHandler.handleError(error, errorInfo, );
       component: 'ErrorBoundary')
   }
 
 )}
   render() {
+<<<<<<< HEAD
     if (this.state.hasError) {
       return()
   render() {}
@@ -985,17 +1069,33 @@ export class ErrorBoundary extends React.Component<;
               onClick={() =>this.setState({ hasError: false, error: undefined })}
             <h2>Something went wrong</h2>);
             <p>We're sorry, but something unexpected happened.</p>);
+=======
+    if (this.state.hasError) 
+      return(this.props.fallback || (
+  }
+          <div style={ padding: '20px', textAlign: 'center' }></div></div></div>)
+            <h2>Something went wrong</h2></h2><p>We're sorry, but something unexpected happened.</p></p><button;)
+  render() {}
+    if (this.state.hasError) {}
+      return (
+        this.props.fallback || (;
+          <div style={ padding: '20px', textAlign: 'center' }></button></div></button></div></div>)
+            <h2>Something went wrong</h2></h2></h2><p>We're sorry, but something unexpected happened.</p></p></p><button;)
+              onClick={() =>this.setState( hasError: false, error: undefined })}
+            </button></button><h2>Something went wrong</h2></h2></h2>);
+            <p>We're sorry, but something unexpected happened.</p></p></p>);
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
             <button;);
-              onClick={() => this.setState({ hasError: false, error: undefined })}
-              style={{}
-              style={{}
+              onClick={() => this.setState( hasError: false, error: undefined })}
+              style={}
+              style={}
                 padding: '10px 20px',
                 backgroundColor: '#007bff',
                 color: 'white',
                 border: 'none',
                 borderRadius: '4px'}
                 cursor: 'pointer'}
-export class ErrorBoundary extends React.Component<;
+export class ErrorBoundary extends React.Component</button></button><;
   {/* TODO: Fix JSX expression */}
   n: React.ReactNode, fallback?: React.ReactNode },
   {/* TODO: Fix JSX expression */}
@@ -1009,24 +1109,35 @@ export class ErrorBoundary extends React.Component<;
   r: Error) {/* TODO: Fix JSX expression */}
   r: true, error }
   }
+<<<<<<< HEAD
   componentDidCatch()
+=======
+  componentDidCatch(erro,)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   r: Error, errorInf);
   o: ErrorInfo) {/* TODO: Fix JSX expression */}
     })
   }
   render() {/* TODO: Fix JSX expression */}
+<<<<<<< HEAD
   n: 'center' }}></div>
             <h2>Something went wrong</h2>
             <p>We're sorry, but something unexpected happened.</p>
             <button / /></button>
+=======
+  n: 'center' }></div>
+            <h2>Something went wrong</h2></h2></h2>
+            <p>We're sorry, but something unexpected happened.</p></p></p>
+            <button />
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
               onClick={/* TODO: Fix JSX expression */}
   r: undefined })}
               style={/* TODO: Fix JSX expression */}
-              }}
-            ></button>
+              }
+            ></button></button></button>
               Try again</button>
             >;
-              Try again
+              Try again;
             </button>
           </div>
         );
@@ -1037,7 +1148,11 @@ export class ErrorBoundary extends React.Component<;
 // React hook for error handling;
 export const useErrorHandler = (;) => {
     return ()
+<<<<<<< HEAD
   )
+=======
+    $3)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
 // React hook for error handling;}
 export const useErrorHandler = const useErrorHandler = () => {};
@@ -1075,12 +1190,20 @@ export default ErrorHandler</string>
 export const useErrorHandler = const useErrorHandler = () => {/* TODO: Fix JSX expression */},;
     [errorHandler];
   );
+<<<<<<< HEAD
   const handleNetworkError = const handleNetworkError = const handleNetworkError = useCallback();
+=======
+  const handleNetworkError = useCallback((erro,)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   r: Error, ur);
   l: string, status?: number) => {/* TODO: Fix JSX expression */},
     [errorHandler]
   );
+<<<<<<< HEAD
   const handleValidationError = const handleValidationError = const handleValidationError = useCallback();
+=======
+  const handleValidationError = useCallback((fiel,)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   d: string, messag);
   e: string, value?: unknown) => {/* TODO: Fix JSX expression */},
     [errorHandler]

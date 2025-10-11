@@ -14,8 +14,8 @@
 }
 export class SEOManager {
     private config: SEOConfig,
-constructor(config: SEOConfig) {
-    this.config = config
+constructor(config: SEOConfig) 
+    this.config = config;
   }
   }
 public updateConfig(newConfig: Partial<SEOConfig>): void {}
@@ -40,7 +40,7 @@ private applyConfig(): void {
 // Update Twitter Card tags;
     this.updateTwitterTags();
 // Update robots meta;
-    if (this.config.robots) {
+    if (this.config.robots) 
       this.updateMetaTag('robots', this.config.robots)
   }
     }
@@ -66,14 +66,18 @@ private applyConfig(): void {
     }
 // Update tags;
     if (this.config.tags) {
+<<<<<<< HEAD
     this.config.tags.forEach()
+=======
+    this.config.tags.forEach(tag => )
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
         this.addMetaTag('article:tag', tag)
   }
       })
     }
   }
 private updateMetaTag(name: string, content: string): void {
-    if (typeof document === 'undefined') return
+    if (typeof document === 'undefined') return;
   }
     let meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement;
     if (!meta) {
@@ -87,7 +91,7 @@ private updateMetaTag(name: string, content: string): void {
 private updateCanonicalUrl(): void {
     if (typeof document === 'undefined' || !this.config.canonicalUrl) return;
 let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
-    if (!canonical) {
+    if (!canonical) 
       canonical = document.createElement('link');
       canonical.rel = 'canonical';
       document.head.appendChild(canonical)
@@ -106,7 +110,11 @@ const ogTags = const ogTags = const ogTags = [},
 if (this.config.ogImage) {}
       ogTags.push({ property: 'og:image', content: this.config.ogImage })
     }
+<<<<<<< HEAD
 ogTags.forEach()
+=======
+ogTags.forEach(tag => {)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     this.updateMetaTagByProperty(tag.property, tag.content)
   }
     })
@@ -121,13 +129,17 @@ const twitterTags = const twitterTags = const twitterTags = [},
 if (this.config.twitterImage) {}
       twitterTags.push({ name: 'twitter:image', content: this.config.twitterImage })
     }
+<<<<<<< HEAD
 twitterTags.forEach()
+=======
+twitterTags.forEach(tag => {)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     this.updateMetaTag(tag.name, tag.content)
   }
     })
   }
 private updateMetaTagByProperty(property: string, content: string): void {
-    if (typeof document === 'undefined') return
+    if (typeof document === 'undefined') return;
   }
     let meta = document.querySelector(`meta[property="${property}"]`) as HTMLMetaElement;
     if (!meta) {
@@ -140,8 +152,13 @@ private updateMetaTagByProperty(property: string, content: string): void {
   }
 private addMetaTag(name: string, content: string): void {
     if (typeof document === 'undefined') return;
+<<<<<<< HEAD
 const meta = const meta = const meta = document.createElement('meta')
     meta.name = name
+=======
+const meta = document.createElement('meta')
+    meta.name = name;
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     meta.content = content,
     document.head.appendChild(meta)
   }
@@ -150,8 +167,8 @@ const meta = const meta = const meta = document.createElement('meta')
 // Utility functions;
 export const generateMetaDescription = (content: string, maxLength: number = 160): string => {;
     const cleanContent = content.replace(/<[^>]*>/g, '').trim();
-  if (cleanContent.length <= maxLength) {
-    return cleanContent
+  if (cleanContent.length <= maxLength) 
+    return, cleanContent;
   }
   }
   return cleanContent.substring(0, maxLength - 3) + '...';

@@ -8,7 +8,7 @@ export enum LogLevel {
   INFO = 1,
   WARN = 2,
   ERROR = 3,
-  FATAL = 4
+  FATAL = 4;
   }
 }
 export interface LogContext {
@@ -16,13 +16,13 @@ export interface LogContext {
   sessionId?: string;
   component?: string;
   action?: string;
-  [key: string]: unknown
+  [key: string]: unknown;
   }
 }
 class Logger {
     private logLevel: LogLevel = LogLevel.INFO,
-  private logs: Array<{
-    level: LogLevel,
+  private logs: Array<,
+      level: LogLevel,
     message: string,
     context?: LogContext;
     metadata?: Record<string></string>
@@ -31,11 +31,11 @@ class Logger {
   }> = []
   setLogLevel(level: LogLevel): void {
     ,
-    this.logLevel = level
+    this.logLevel = level;
   }
   }
 getLogLevel(): LogLevel {
-    return this.logLevel
+    return this.logLevel;
   }
   }
 debug(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {
@@ -55,12 +55,12 @@ error(message: string,),
     contextOrMetadata?: string | Record<string, unknown>);
     metadata?: Record<string></string>
   ): void {
-    let error: Error | undefined
+    let error: Error | undefined;
     let context: LogContext | undefined,
     let meta: Record<string, unknown> | undefined;
     // Handle different parameter combinations;
-    if (errorOrContextOrMetadata instanceof Error) {
-      error = errorOrContextOrMetadata
+    if (errorOrContextOrMetadata instanceof Error) 
+      error = errorOrContextOrMetadata;
   }
       context = typeof contextOrMetadata === 'string' ? { action: contextOrMetadata } : contextOrMetadata;
       meta = metadata;
@@ -114,7 +114,14 @@ class Logger {/* TODO: Fix JSX expression */}
   /**;
    * Log an error message;
    */;
+<<<<<<< HEAD
   error()
+=======
+  error(messag,
+  e: string,
+    errorOrContextOrMetadata?: Error | string | Record<string, unknown>,)
+    contextOrMetadata?: string | Record<string, unknown>,)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     metadata?: Record<string, unknown></string>);
   ): void {/* TODO: Fix JSX expression */}
     } else if (typeof errorOrContextOrMetadata === 'string') {/* TODO: Fix JSX expression */}
@@ -134,7 +141,7 @@ private log(level: LogLevel,),
     metadata?: Record<string></string>
   ): void {
     if (level < this.logLevel) return;
-    const logEntry = {;
+    const logEntry = ;
       level,
       message,
       context,
@@ -159,7 +166,7 @@ this.logs.push(logEntry);
       case LogLevel.WARN: break,
       case LogLevel.ERROR: break,
       case LogLevel.FATAL:,
-        break
+        break;
   }
     }
   }
@@ -171,7 +178,7 @@ getLogs(level?: LogLevel): Array<{
     timestamp: number,
   }
   }> {
-    if (level !== undefined) {
+    if (level !== undefined) 
       return this.logs.filter(log => log.level === level);
   /**;
    * Log a fatal error message;
@@ -183,7 +190,15 @@ getLogs(level?: LogLevel): Array<{
   /**;
    * Core logging method;
    */;
+<<<<<<< HEAD
   private log()
+=======
+  private log(leve,
+  l: LogLevel,
+    messag,
+  e: string,)
+    context?: LogContext,)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     metadata?: Record<string, unknown></string>);
   ): void {/* TODO: Fix JSX expression */}
     }
@@ -227,7 +242,12 @@ getLogs(level?: LogLevel): Array<{
   /**;
    * Output to console with appropriate styling;
    */;
+<<<<<<< HEAD
   private outputToConsole()
+=======
+  private outputToConsole(leve,)
+  l: LogLevel, messag,)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   e: string, entr);
   y: LogMetadata): void {/* TODO: Fix JSX expression */}
     }
@@ -248,14 +268,18 @@ getLogs(level?: LogLevel): Array<{
     // In a real application, you would send this to your logging service;
     // For example: Sentry, LogRocket, DataDog, etc.;
     // Example implementation:;
-    // fetch('/api/logs', {);
+    // fetch('/api/logs', );
     //   method: 'POST'),
   }
     //   headers: {// 'Content-Type': 'application/json'})
     //   body: JSON.stringify(entry),
+<<<<<<< HEAD
     // }).catch()
     )
   }
+=======
+    // }).catch(err => {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     //   // })
   }
 exportLogs(): string {

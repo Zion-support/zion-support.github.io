@@ -13,46 +13,58 @@ interface SEOOptimizerProps {
   children: React.ReactNode;
 }
 
+<<<<<<< HEAD
 const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ()
+=======
+const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
+  title = 'Zion Tech Group - Advanced AI and IT Solutions',
+  description = 'Professional AI and IT solutions for your business. Advanced technology, expert support, and proven results.',
+  keywords = 'AI solutions, IT services, technology, business solutions, Zion Tech Group',
+  canonicalUrl,
+  ogImage = '/images/og-image.jpg',
+  twitterCard = 'summary_large_image',
+  structuredData,)
+  children)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 }) => {
   const [seoScore, setSeoScore] = useState(0);
   const [recommendations, setRecommendations] = useState<string[]>([]);
 
-  const analyzeSEO = useCallback(() => {;
+  const analyzeSEO = useCallback(() => ;
     if (typeof window === 'undefined') return;
 
     let score = 0;
     const newRecommendations: string[] = []
 
-    // Check title length
-    if (title.length >= 30 && title.length <= 60) {
+    // Check title length;
+    if (title.length >= 30 && title.length <= 60) 
       score += 20;
     } else {
       newRecommendations.push('Title should be between 30-60 characters');
     }
 
-    // Check description length
+    // Check description length;
     if (description.length >= 120 && description.length <= 160) {
       score += 20;
     } else {
       newRecommendations.push('Description should be between 120-160 characters');
     }
 
-    // Check for keywords in title
+    // Check for keywords in title;
     if (keywords && title.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {
       score += 15;
     } else {
       newRecommendations.push('Include primary keyword in title');
     }
 
-    // Check for keywords in description
+    // Check for keywords in description;
     if (keywords && description.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {
       score += 15;
     } else {
       newRecommendations.push('Include primary keyword in description');
     }
 
-    // Check for heading structure
+    // Check for heading structure;
     const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
     if (headings.length > 0) {
       score += 10;
@@ -60,7 +72,7 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ()
       newRecommendations.push('Add proper heading structure');
     }
 
-    // Check for images with alt text
+    // Check for images with alt text;
     const images = document.querySelectorAll('img');
     const imagesWithAlt = document.querySelectorAll('img[alt]');
     if (images.length === imagesWithAlt.length && images.length > 0) {
@@ -69,7 +81,7 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ()
       newRecommendations.push('Add alt text to all images');
     }
 
-    // Check for internal links
+    // Check for internal links;
     const internalLinks = document.querySelectorAll('a[href^="/"], a[href^="./"]');
     if (internalLinks.length > 0) {
       score += 10;
@@ -85,8 +97,13 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ()
     analyzeSEO();
   }, [analyzeSEO]);
 
+<<<<<<< HEAD
   const generateStructuredData = const generateStructuredData = const generateStructuredData = () => {
     const defaultStructuredData = {
+=======
+  const generateStructuredData = () => {
+    const defaultStructuredData = 
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Zion Tech Group",
@@ -95,6 +112,7 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ()
       "logo": ogImage,
       "sameAs": [
         "https://twitter.com/ziontechgroup",
+<<<<<<< HEAD
         "https://linkedin.com/company/ziontechgroup"
       ]
     };
@@ -105,6 +123,20 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ()
   const _trackPageView = const _trackPageView = const _trackPageView = (config: SEOData) => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as unknown as { gtag: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag()
+=======
+        "https: //linkedin.com/company/ziontechgroup"
+    }]
+    }
+
+    return structuredData || defaultStructuredData;
+  }
+
+  const _trackPageView = (config: SEOData) => {
+    if (typeof window !== 'undefined' && 'gtag' in window) 
+      (window as unknown as  gtag: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {
+        page_title: config.title,)
+        page_location: config.canonicalUrl,)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       })
     }
   }
@@ -113,20 +145,60 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ()
     if (typeof window !== 'undefined' && 'performance' in window) {;
       window.addEventListener('load', () => {;
         const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+<<<<<<< HEAD
         if (_perfData && typeof window !== 'undefined' && 'gtag' in window) {
           (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag()
+=======
+        if (_perfData && typeof window !== 'undefined' && 'gtag' in window) 
+          (window as unknown as  gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'page_load_performance', {
+            event_category: 'Performance',)
+            event_label: 'Page Load',)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
             value: Math.round(_perfData.loadEventEnd - _perfData.fetchStart),
           })
         }
       })
     }
   }
+<<<<<<< HEAD
   return() {JSON.stringify(generateStructuredData())}
+=======
+  return (
+    <>
+      <Helmet>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="keywords" content={keywords} />
+        {canonicalUrl && <link rel="canonical" href=canonicalUrl} />},
+    {/* Open Graph */}
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:type" content="website" />
+        {canonicalUrl && <meta property="og:url" content=canonicalUrl} />},
+    {/* Twitter Card */}
+        <meta name="twitter:card" content={twitterCard} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={ogImage} />
+        
+        {/* Structured Data */})
+        <script type="application/ld+json">)
+          {JSON.stringify(generateStructuredData())}
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
         </script>
       </Helmet>
       
       {children},
+<<<<<<< HEAD
     {process.env.NODE_ENV === 'development' && ()
+=======
+    {process.env.NODE_ENV === 'development' && (
+        <div className="seo-debug" style=
+          position: 'fixed',
+          top: '10px',)
+          left: '10px',)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
           background: 'rgba(0,0,0,0.8)',
           color: 'white',
           padding: '10px',
@@ -134,10 +206,21 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ()
           fontSize: '12px',
           zIndex: 1000,
           maxWidth: '300px'
+<<<<<<< HEAD
         }}></div>
           <div>SEO Score: {seoScore}/100</div>
           {recommendations.length > 0 && ()
                 {recommendations.map((rec, index) => ()
+=======
+        }>
+          </div></div><div>SEO Score: {seoScore}/100</div></div></div>
+          {recommendations.length > 0 && (
+            <div>
+              </div></div><div>Recommendations:</div></div></div>)
+              <ul style= margin: '5px 0', paddingLeft: '15px' }>)
+                {recommendations.map((rec, index) => ()
+                  <li key=index}>{rec}</li>)
+>>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                 ))}
               </ul>
             </div>
@@ -177,7 +260,7 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ()
       <meta property="og:site_name" content="Zion Tech Group" / /></meta>
       <meta property="og:locale" content="en_US" / /></meta>
       {/* Canonical URL */},
-    {canonicalUrl && <link rel="canonical" href={canonicalUrl} />},
+    {canonicalUrl && <link rel="canonical" href=canonicalUrl} />},
     {/* Structured Data */}
       <script type="application/ld+json" /></script>
         {JSON.stringify(generateStructuredData())}
