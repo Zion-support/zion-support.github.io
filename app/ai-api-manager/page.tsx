@@ -34,14 +34,15 @@ const PagePage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+    <>
       <Helmet>
-        <title>Page | Zion Tech Group</title>
-        <meta name="description" content="Professional page solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group" />
+        <title>AI API Manager | Zion Tech Group</title>
+        <meta name="description" content="Professional AI API manager solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="AI API manager, AI solutions, IT services, Zion Tech Group" />
       </Helmet>
       
-      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+        <Navigation />
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
@@ -224,9 +225,9 @@ const PagePage: React.FC = () => {
             </div>
           </div>
         </section>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </>
   );
 };
 
