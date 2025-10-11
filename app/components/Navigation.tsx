@@ -107,9 +107,12 @@ const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+<<<<<<< HEAD
+=======
   const [aiServicesOpen, setAiServicesOpen] = useState(false);
   const [itServicesOpen, setItServicesOpen] = useState(false);
   const [microSaasOpen, setMicroSaasOpen] = useState(false);
+>>>>>>> origin/main
 
   // Handle scroll effect
   useEffect(() => {
@@ -305,6 +308,98 @@ const Navigation: React.FC = () => {
 
 >>>>>>> origin/main
   return (
+<<<<<<< HEAD
+    <nav className="bg-slate-900/90 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-cyan-500/20">
+      <div className="container mx-auto px-4">
+        <div className="flex justify-between items-center py-4">
+          {/* Logo */}
+          <Link to="/" className="text-2xl font-bold text-cyan-400 neon-text flex items-center">
+            <span className="text-3xl mr-2">⚡</span>
+            Zion Tech Group
+          </Link>
+
+          {/* Desktop Menu */}
+          <div className="hidden lg:flex space-x-8">
+            <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
+              Home
+            </Link>
+            <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
+              About
+            </Link>
+            
+            {/* Services Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => setServicesOpen(!servicesOpen)}
+                className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center font-medium"
+              >
+                Services
+                <ChevronDown className="w-4 h-4 ml-1" />
+              </button>
+              {servicesOpen && (
+                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800 rounded-lg shadow-xl border border-cyan-500/20 py-4 z-50">
+                  <div className="grid grid-cols-2 gap-4 px-4">
+                    <div>
+                      <h3 className="font-semibold text-cyan-400 mb-2">Core Services</h3>
+                      <Link to="/services" className="block px-3 py-2 text-gray-300 hover:bg-cyan-500/20 hover:text-cyan-400 rounded">
+                        All Services
+                      </Link>
+                      <Link to="/micro-saas" className="block px-3 py-2 text-gray-300 hover:bg-cyan-500/20 hover:text-cyan-400 rounded">
+                        Micro SAAS Solutions
+                      </Link>
+                      <Link to="/ai-services" className="block px-3 py-2 text-gray-300 hover:bg-cyan-500/20 hover:text-cyan-400 rounded">
+                        AI Services
+                      </Link>
+                      <Link to="/it-services" className="block px-3 py-2 text-gray-300 hover:bg-cyan-500/20 hover:text-cyan-400 rounded">
+                        IT Services
+                      </Link>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-cyan-400 mb-2">AI Solutions</h3>
+                      <Link to="/ai-marketing" className="block px-3 py-2 text-gray-300 hover:bg-cyan-500/20 hover:text-cyan-400 rounded">
+                        AI Marketing
+                      </Link>
+                      <Link to="/ai-automation" className="block px-3 py-2 text-gray-300 hover:bg-cyan-500/20 hover:text-cyan-400 rounded">
+                        AI Automation
+                      </Link>
+                      <Link to="/ai-healthcare" className="block px-3 py-2 text-gray-300 hover:bg-cyan-500/20 hover:text-cyan-400 rounded">
+                        AI Healthcare
+                      </Link>
+                      <Link to="/ai-fintech" className="block px-3 py-2 text-gray-300 hover:bg-cyan-500/20 hover:text-cyan-400 rounded">
+                        AI Fintech
+                      </Link>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-cyan-400 mb-2">Specialized</h3>
+                      <Link to="/quantum-computing" className="block px-3 py-2 text-gray-300 hover:bg-cyan-500/20 hover:text-cyan-400 rounded">
+                        Quantum Computing
+                      </Link>
+                      <Link to="/autonomous-systems" className="block px-3 py-2 text-gray-300 hover:bg-cyan-500/20 hover:text-cyan-400 rounded">
+                        Autonomous Systems
+                      </Link>
+                      <Link to="/blockchain-web3" className="block px-3 py-2 text-gray-300 hover:bg-cyan-500/20 hover:text-cyan-400 rounded">
+                        Blockchain & Web3
+                      </Link>
+                      <Link to="/cybersecurity" className="block px-3 py-2 text-gray-300 hover:bg-cyan-500/20 hover:text-cyan-400 rounded">
+                        Cybersecurity
+                      </Link>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-cyan-400 mb-2">Resources</h3>
+                      <Link to="/blog" className="block px-3 py-2 text-gray-300 hover:bg-cyan-500/20 hover:text-cyan-400 rounded">
+                        Blog & Insights
+                      </Link>
+                      <Link to="/guides" className="block px-3 py-2 text-gray-300 hover:bg-cyan-500/20 hover:text-cyan-400 rounded">
+                        Technical Guides
+                      </Link>
+                      <Link to="/case-studies" className="block px-3 py-2 text-gray-300 hover:bg-cyan-500/20 hover:text-cyan-400 rounded">
+                        Case Studies
+                      </Link>
+                      <Link to="/sitemap" className="block px-3 py-2 text-gray-300 hover:bg-cyan-500/20 hover:text-cyan-400 rounded">
+                        Sitemap
+                      </Link>
+                    </div>
+=======
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-2xl border-b border-cyan-500/20' : 'bg-transparent'
     }`}>
@@ -408,11 +503,21 @@ const Navigation: React.FC = () => {
                         <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 ml-auto" />
                       </Link>
                     ))}
+>>>>>>> origin/main
                   </div>
                 </div>
               )}
             </div>
 
+<<<<<<< HEAD
+            <Link to="/enterprise" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
+              Enterprise
+            </Link>
+            <Link to="/team" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
+              Team
+            </Link>
+            <Link to="/contact" className="bg-cyan-500 text-white px-6 py-2 rounded-lg hover:bg-cyan-600 transition-colors font-medium">
+=======
             {/* IT Services Dropdown */}
             <div className="relative group">
               <button
@@ -538,6 +643,7 @@ const Navigation: React.FC = () => {
             </Link>
             <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
 >>>>>>> origin/main
+>>>>>>> origin/main
               Contact
             </Link>
           </div>
@@ -546,15 +652,102 @@ const Navigation: React.FC = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
+            className="lg:hidden text-gray-300 hover:text-cyan-400"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+=======
+<<<<<<< HEAD
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
             className="lg:hidden text-gray-300 hover:text-cyan-400 transition-colors duration-300"
             aria-label="Toggle mobile menu"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+>>>>>>> origin/main
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isOpen && (
+<<<<<<< HEAD
+          <div className="lg:hidden py-4 border-t border-cyan-500/20">
+            <div className="flex flex-col space-y-4">
+              <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
+                Home
+              </Link>
+              <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
+                About
+              </Link>
+              
+              {/* Services Section */}
+              <div className="space-y-2">
+                <div className="text-cyan-400 font-semibold text-lg">Services</div>
+                <div className="ml-4 space-y-2">
+                  <Link to="/services" className="block text-gray-300 hover:text-cyan-400 transition-colors">
+                    All Services
+                  </Link>
+                  <Link to="/micro-saas" className="block text-gray-300 hover:text-cyan-400 transition-colors">
+                    Micro SAAS Solutions
+                  </Link>
+                  <Link to="/ai-services" className="block text-gray-300 hover:text-cyan-400 transition-colors">
+                    AI Services
+                  </Link>
+                  <Link to="/ai-marketing" className="block text-gray-300 hover:text-cyan-400 transition-colors">
+                    AI Marketing
+                  </Link>
+                  <Link to="/ai-automation" className="block text-gray-300 hover:text-cyan-400 transition-colors">
+                    AI Automation
+                  </Link>
+                  <Link to="/ai-healthcare" className="block text-gray-300 hover:text-cyan-400 transition-colors">
+                    AI Healthcare
+                  </Link>
+                  <Link to="/ai-fintech" className="block text-gray-300 hover:text-cyan-400 transition-colors">
+                    AI Fintech
+                  </Link>
+                  <Link to="/it-services" className="block text-gray-300 hover:text-cyan-400 transition-colors">
+                    IT Services
+                  </Link>
+                  <Link to="/quantum-computing" className="block text-gray-300 hover:text-cyan-400 transition-colors">
+                    Quantum Computing
+                  </Link>
+                  <Link to="/autonomous-systems" className="block text-gray-300 hover:text-cyan-400 transition-colors">
+                    Autonomous Systems
+                  </Link>
+                  <Link to="/blockchain-web3" className="block text-gray-300 hover:text-cyan-400 transition-colors">
+                    Blockchain & Web3
+                  </Link>
+                  <Link to="/cybersecurity" className="block text-gray-300 hover:text-cyan-400 transition-colors">
+                    Cybersecurity
+                  </Link>
+                </div>
+              </div>
+              
+              <Link to="/enterprise" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
+                Enterprise
+              </Link>
+              <Link to="/team" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
+                Team
+              </Link>
+              <Link to="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
+                Blog
+              </Link>
+              <Link to="/guides" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
+                Guides
+              </Link>
+              <Link to="/contact" className="bg-cyan-500 text-white px-6 py-2 rounded-lg hover:bg-cyan-600 transition-colors font-medium text-center">
+                Contact Us
+              </Link>
+            </div>
+          </div>
+=======
           <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20">
             <div className="pt-4 space-y-4">
               <Link href="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
@@ -742,6 +935,7 @@ const Navigation: React.FC = () => {
 >>>>>>> origin/main
             </div>
           </div>
+>>>>>>> origin/main
         )}
       </div>
     </nav>

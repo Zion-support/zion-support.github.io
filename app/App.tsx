@@ -232,6 +232,57 @@ import PerformanceMonitor from './components/PerformanceMonitor'
 import AccessibilityEnhancer from './components/AccessibilityEnhancer'
 import LoadingSpinner from './components/LoadingSpinner'
 // Lazy load pages for better performance
+<<<<<<< HEAD
+const _HomePage = lazy(() => import('./page'));
+const _AboutPage = lazy(() => import('./about/page'));
+const _ServicesPage = lazy(() => import('./services/page'));
+const _ContactPage = lazy(() => import('./contact/page'));
+const _TeamPage = lazy(() => import('./team/page'));
+const _PrivacyPage = lazy(() => import('./privacy/page'));
+const _TermsPage = lazy(() => import('./terms/page'));
+const _EnterprisePage = lazy(() => import('./enterprise/page'));
+const _ServicesAdvertisingPage = lazy(() => import('./services-advertising/page'));
+const _CaseStudiesPage = lazy(() => import('./case-studies/page'));
+
+// AI Services Pages
+const _AiServicesPage = lazy(() => import('./ai-services/page'));
+const _AiMarketingPage = lazy(() => import('./ai-marketing/page'));
+const _AiAutomationPage = lazy(() => import('./ai-automation/page'));
+const _AiHealthcarePage = lazy(() => import('./ai-healthcare/page'));
+const _AiFintechPage = lazy(() => import('./ai-fintech/page'));
+const _AiDataAnalyticsPage = lazy(() => import('./ai-data-analytics/page'));
+const _AiCybersecurityPage = lazy(() => import('./ai-cybersecurity/page'));
+const _AiWorkflowAutomationPage = lazy(() => import('./ai-workflow-automation/page'));
+const _AiCloudInfrastructurePage = lazy(() => import('./ai-cloud-infrastructure/page'));
+const _AiEcommerceSolutionsPage = lazy(() => import('./ai-ecommerce-solutions/page'));
+const _AiMobileAppDevelopmentPage = lazy(() => import('./ai-mobile-app-development/page'));
+
+// Specialized Services Pages
+const _QuantumComputingPage = lazy(() => import('./quantum-computing/page'));
+const _AutonomousSystemsPage = lazy(() => import('./autonomous-systems/page'));
+const _BusinessIntelligencePage = lazy(() => import('./business-intelligence/page'));
+const _BlockchainWeb3Page = lazy(() => import('./blockchain-web3/page'));
+const _IotEdgeComputingPage = lazy(() => import('./iot-edge-computing/page'));
+const _CybersecurityPage = lazy(() => import('./cybersecurity/page'));
+const _MicroSaasPage = lazy(() => import('./micro-saas/page'));
+const _ItServicesPage = lazy(() => import('./it-services/page'));
+
+// Additional Pages
+const _BlogPage = lazy(() => import('./blog/page'));
+const _GuidesPage = lazy(() => import('./guides/page'));
+const _SitemapPage = lazy(() => import('./sitemap/page'));
+
+// Utils
+import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer';
+import { logger } from './utils/logger';
+import performanceMonitor from './utils/performanceMonitor';
+import seoOptimizer from './utils/seoOptimizer';
+import accessibilityEnhancer from './utils/accessibilityEnhancer';
+
+// Styles
+import './globals.css';
+
+=======
 const HomePage = lazy(() => import('./page'))
 const AboutPage = lazy(() => import('./about/page'))
 const ContactPage = lazy(() => import('./contact/page'))
@@ -328,6 +379,7 @@ const EdgeComputingPage = lazy(() => import('./edge-computing/page'))
 // Loading component
 const AppLoadingSpinner = () => ()
 )
+>>>>>>> origin/main
 const App: React.FC = () => {
     return (
     <ErrorBoundary>
@@ -377,8 +429,103 @@ const App: React.FC = () => {
                 <Route path="/ai-data-visualization" element={<AiDataVisualizationPage />} />
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+  return (
+    <HelmetProvider>
+      <AdvancedErrorBoundary
+        enableErrorReporting={true}
+        enableRetry={true}
+        onError={(error, errorInfo) => {
+          logger.error(error.message, { error, errorInfo });
+        }}
+      >
+        <PerformanceOptimizer>
+          <AccessibilityEnhancer>
+            <SEOEnhancer
+              title="Zion Tech Group - Advanced AI and IT Solutions"
+              description="Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology."
+            >
+              <AdvancedSEOOptimizer
+                config={{
+                  title: 'Zion Tech Group - Advanced AI and IT Solutions',
+                  description: 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.',
+                  keywords: ['AI solutions', 'enterprise AI', 'quantum computing', 'autonomous systems', 'digital transformation', 'automation', 'cloud services', 'AI consulting', 'business intelligence', 'machine learning'],
+                  canonicalUrl: 'https://ziontechgroup.com',
+                  ogImage: 'https://ziontechgroup.com/og-image.jpg',
+                  structuredData: {
+                    '@type': 'TechCompany',
+                    name: 'Zion Tech Group',
+                    description: 'Advanced AI and IT Solutions Provider',
+                    foundingDate: '2020',
+                    numberOfEmployees: '50-100',
+                    industry: 'Technology',
+                    services: [
+                      'AI Solutions',
+                      'Digital Transformation',
+                      'Cloud Services',
+                      'Automation',
+                      'Business Intelligence'
+                    ]
+                  }
+                }}
+                enableStructuredData={true}
+                enableOpenGraph={true}
+                enableTwitterCards={true}
+                enableSchemaMarkup={true}
+              />
+              <Router>
+                <div className="App">
+                  <Analytics trackingId="G-XXXXXXXXXX" />
+                  <Navigation />
+                  <main id="main-content">
+                    <Suspense fallback={<LoadingSpinner />}>
+                      <Routes>
+                        <Route path="/" element={<_HomePage />} />
+                        <Route path="/about" element={<_AboutPage />} />
+                        <Route path="/services" element={<_ServicesPage />} />
+                        <Route path="/contact" element={<_ContactPage />} />
+                        <Route path="/team" element={<_TeamPage />} />
+                        <Route path="/privacy" element={<_PrivacyPage />} />
+                        <Route path="/terms" element={<_TermsPage />} />
+                        <Route path="/enterprise" element={<_EnterprisePage />} />
+                        <Route path="/services-advertising" element={<_ServicesAdvertisingPage />} />
+                        <Route path="/case-studies" element={<_CaseStudiesPage />} />
+                        
+                        {/* AI Services Routes */}
+                        <Route path="/ai-services" element={<_AiServicesPage />} />
+                        <Route path="/ai-marketing" element={<_AiMarketingPage />} />
+                        <Route path="/ai-automation" element={<_AiAutomationPage />} />
+                        <Route path="/ai-healthcare" element={<_AiHealthcarePage />} />
+                        <Route path="/ai-fintech" element={<_AiFintechPage />} />
+                        <Route path="/ai-data-analytics" element={<_AiDataAnalyticsPage />} />
+                        <Route path="/ai-cybersecurity" element={<_AiCybersecurityPage />} />
+                        <Route path="/ai-workflow-automation" element={<_AiWorkflowAutomationPage />} />
+                        <Route path="/ai-cloud-infrastructure" element={<_AiCloudInfrastructurePage />} />
+                        <Route path="/ai-ecommerce-solutions" element={<_AiEcommerceSolutionsPage />} />
+                        <Route path="/ai-mobile-app-development" element={<_AiMobileAppDevelopmentPage />} />
+                        
+                        {/* Specialized Services Routes */}
+                        <Route path="/quantum-computing" element={<_QuantumComputingPage />} />
+                        <Route path="/autonomous-systems" element={<_AutonomousSystemsPage />} />
+                        <Route path="/business-intelligence" element={<_BusinessIntelligencePage />} />
+                        <Route path="/blockchain-web3" element={<_BlockchainWeb3Page />} />
+                        <Route path="/iot-edge-computing" element={<_IotEdgeComputingPage />} />
+                        <Route path="/cybersecurity" element={<_CybersecurityPage />} />
+                        <Route path="/micro-saas" element={<_MicroSaasPage />} />
+                        <Route path="/it-services" element={<_ItServicesPage />} />
+                        
+                        {/* Additional Routes */}
+                        <Route path="/blog" element={<_BlogPage />} />
+                        <Route path="/guides" element={<_GuidesPage />} />
+                        <Route path="/sitemap" element={<_SitemapPage />} />
+                      </Routes>
+                    </Suspense>
+                  </main>
+                  <Footer />
+=======
 =======
 <<<<<<< HEAD
+>>>>>>> origin/main
 
 =======
                 {/* Additional AI Services */}
