@@ -31,7 +31,7 @@ import Footer from '../components/Footer';
 const AiServicesPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const services = const services = const services = [
+  const services = [
     {
       id: 'ai-chatbots',
       name: 'AI-Powered Chatbots',
@@ -1010,10 +1010,244 @@ const AiServicesPage: React.FC = () => {
       ],
       category: 'Content Generation',
       popular: true,
-      icon: FileText;
-    };
+      icon: FileText
+    },
+    {
+      id: 'ai-quantum-computing',
+      name: 'AI Quantum Computing Solutions',
+      description: 'Revolutionary quantum computing applications for optimization, cryptography, and complex problem solving',
+      price: '$2,999/month',
+      marketPrice: '$5000-20000/month',
+      features: [
+        'Quantum Optimization Algorithms',
+        'Cryptographic Security',
+        'Complex Simulations',
+        'Machine Learning Acceleration',
+        'Quantum Neural Networks',
+        'Real-time Quantum Processing',
+        'Advanced Quantum Algorithms',
+        'Quantum Error Correction'
+      ],
+      benefits: [
+        'Exponential processing power',
+        'Unbreakable encryption',
+        'Revolutionary problem solving',
+        'Future-proof technology'
+      ],
+      category: 'Quantum Computing',
+      popular: true,
+      icon: Cpu
+    },
+    {
+      id: 'ai-holographic-interface',
+      name: 'AI Holographic Interface',
+      description: 'Next-generation holographic user interfaces powered by AI for immersive business applications',
+      price: '$1,499/month',
+      marketPrice: '$2500-10000/month',
+      features: [
+        '3D Holographic Displays',
+        'Gesture Recognition',
+        'Spatial Computing',
+        'AR/VR Integration',
+        'Real-time Rendering',
+        'AI-powered Interactions',
+        'Multi-user Collaboration',
+        'Immersive Data Visualization'
+      ],
+      benefits: [
+        'Immersive user experience',
+        'Enhanced productivity',
+        'Cutting-edge technology',
+        'Competitive advantage'
+      ],
+      category: 'Holographic Technology',
+      popular: true,
+      icon: Eye
+    },
+    {
+      id: 'ai-edge-computing-platform',
+      name: 'AI Edge Computing Platform',
+      description: 'Distributed AI processing at the edge for real-time decision making and reduced latency',
+      price: '$899/month',
+      marketPrice: '$1500-6000/month',
+      features: [
+        'Edge AI Processing',
+        'Real-time Analytics',
+        'Low Latency Response',
+        'Offline Capability',
+        'Distributed Learning',
+        'Edge Device Management',
+        'Bandwidth Optimization',
+        'Privacy-Preserving AI'
+      ],
+      benefits: [
+        'Ultra-low latency',
+        'Reduced bandwidth costs',
+        'Enhanced privacy',
+        'Real-time processing'
+      ],
+      category: 'Edge Computing',
+      popular: false,
+      icon: Server
+    },
+    {
+      id: 'ai-quantum-security-suite',
+      name: 'AI Quantum Security Suite',
+      description: 'Advanced quantum-resistant cybersecurity solutions for future-proof protection',
+      price: '$1,299/month',
+      marketPrice: '$2000-8000/month',
+      features: [
+        'Quantum Key Distribution',
+        'Post-Quantum Cryptography',
+        'Quantum Threat Detection',
+        'Advanced Encryption',
+        'Future-Proof Security',
+        'Quantum Random Number Generation',
+        'Zero-Trust Architecture',
+        'Military-Grade Protection'
+      ],
+      benefits: [
+        'Quantum-resistant security',
+        'Future-proof protection',
+        'Advanced threat detection',
+        'Military-grade encryption'
+      ],
+      category: 'Cybersecurity',
+      popular: true,
+      icon: Shield
+    },
+    {
+      id: 'ai-neural-database',
+      name: 'AI Neural Database',
+      description: 'Revolutionary database system that learns and optimizes itself using neural networks',
+      price: '$799/month',
+      marketPrice: '$1200-5000/month',
+      features: [
+        'Self-Optimizing Queries',
+        'Predictive Indexing',
+        'Automatic Scaling',
+        'Neural Query Optimization',
+        'Intelligent Caching',
+        'Adaptive Performance Tuning',
+        'Machine Learning Integration',
+        'Real-time Optimization'
+      ],
+      benefits: [
+        'Self-optimizing performance',
+        'Reduced maintenance',
+        'Intelligent scaling',
+        'Predictive optimization'
+      ],
+      category: 'Database Technology',
+      popular: false,
+      icon: Database
+    },
+    {
+      id: 'ai-climate-prediction',
+      name: 'AI Climate Prediction Engine',
+      description: 'Advanced climate modeling and prediction using AI for environmental monitoring and planning',
+      price: '$1,999/month',
+      marketPrice: '$4000-15000/month',
+      features: [
+        'Climate Pattern Analysis',
+        'Weather Prediction Models',
+        'Environmental Impact Assessment',
+        'Carbon Footprint Tracking',
+        'Renewable Energy Optimization',
+        'Disaster Risk Assessment',
+        'Long-term Climate Forecasting',
+        'Sustainability Analytics'
+      ],
+      benefits: [
+        'Accurate climate predictions',
+        'Environmental planning',
+        'Risk mitigation',
+        'Sustainability optimization'
+      ],
+      category: 'Environmental AI',
+      popular: false,
+      icon: Globe
+    },
+    {
+      id: 'ai-drug-discovery',
+      name: 'AI Drug Discovery Pro',
+      description: 'Revolutionary AI-powered drug discovery platform for pharmaceutical research and development',
+      price: '$3,999/month',
+      marketPrice: '$8000-30000/month',
+      features: [
+        'Molecular Design',
+        'Drug Target Identification',
+        'Clinical Trial Optimization',
+        'Side Effect Prediction',
+        'Drug Interaction Analysis',
+        'Personalized Medicine',
+        'Biomarker Discovery',
+        'Regulatory Compliance'
+      ],
+      benefits: [
+        'Faster drug development',
+        'Reduced research costs',
+        'Improved success rates',
+        'Personalized treatments'
+      ],
+      category: 'Healthcare AI',
+      popular: true,
+      icon: Heart
+    },
+    {
+      id: 'ai-financial-crime-detection',
+      name: 'AI Financial Crime Detection Pro',
+      description: 'Advanced AI system for detecting and preventing financial crimes with real-time monitoring',
+      price: '$1,599/month',
+      marketPrice: '$3000-12000/month',
+      features: [
+        'Real-time Transaction Monitoring',
+        'Money Laundering Detection',
+        'Fraud Pattern Recognition',
+        'Risk Scoring Algorithms',
+        'Regulatory Compliance',
+        'Suspicious Activity Reporting',
+        'Cross-border Monitoring',
+        'Machine Learning Models'
+      ],
+      benefits: [
+        'Enhanced fraud detection',
+        'Regulatory compliance',
+        'Reduced financial losses',
+        'Real-time protection'
+      ],
+      category: 'Financial AI',
+      popular: true,
+      icon: DollarSign
+    },
+    {
+      id: 'ai-energy-grid-management',
+      name: 'AI Energy Grid Management Pro',
+      description: 'Intelligent energy grid optimization and management system for smart cities and utilities',
+      price: '$2,299/month',
+      marketPrice: '$4500-18000/month',
+      features: [
+        'Smart Grid Optimization',
+        'Demand Response Management',
+        'Renewable Energy Integration',
+        'Load Balancing',
+        'Predictive Maintenance',
+        'Energy Storage Optimization',
+        'Grid Stability Monitoring',
+        'Carbon Footprint Reduction'
+      ],
+      benefits: [
+        'Optimized energy distribution',
+        'Reduced energy waste',
+        'Improved grid stability',
+        'Environmental sustainability'
+      ],
+      category: 'Energy AI',
+      popular: false,
+      icon: Zap
+    }
   ];
-  const categories = const categories = const categories = [
+  const categories = [
     { id: 'all', name: 'All Services', count: services.length },
     { id: 'Customer Service', name: 'Customer Service', count: services.filter(s => s.category === 'Customer Service').length },
     { id: 'Content', name: 'Content', count: services.filter(s => s.category === 'Content').length },
@@ -1040,94 +1274,145 @@ const AiServicesPage: React.FC = () => {
     { id: 'IoT & Analytics', name: 'IoT & Analytics', count: services.filter(s => s.category === 'IoT & Analytics').length },
     { id: 'Conversational AI', name: 'Conversational AI', count: services.filter(s => s.category === 'Conversational AI').length },
     { id: 'Knowledge Management', name: 'Knowledge Management', count: services.filter(s => s.category === 'Knowledge Management').length },
-    { id: 'Reporting & Analytics', name: 'Reporting & Analytics', count: services.filter(s => s.category === 'Reporting & Analytics').length },;
-    { id: 'Content Generation', name: 'Content Generation', count: services.filter(s => s.category === 'Content Generation').length };
+    { id: 'Reporting & Analytics', name: 'Reporting & Analytics', count: services.filter(s => s.category === 'Reporting & Analytics').length },
+    { id: 'Content Generation', name: 'Content Generation', count: services.filter(s => s.category === 'Content Generation').length },
+    { id: 'Quantum Computing', name: 'Quantum Computing', count: services.filter(s => s.category === 'Quantum Computing').length },
+    { id: 'Holographic Technology', name: 'Holographic Technology', count: services.filter(s => s.category === 'Holographic Technology').length },
+    { id: 'Edge Computing', name: 'Edge Computing', count: services.filter(s => s.category === 'Edge Computing').length },
+    { id: 'Cybersecurity', name: 'Cybersecurity', count: services.filter(s => s.category === 'Cybersecurity').length },
+    { id: 'Database Technology', name: 'Database Technology', count: services.filter(s => s.category === 'Database Technology').length },
+    { id: 'Environmental AI', name: 'Environmental AI', count: services.filter(s => s.category === 'Environmental AI').length },
+    { id: 'Healthcare AI', name: 'Healthcare AI', count: services.filter(s => s.category === 'Healthcare AI').length },
+    { id: 'Financial AI', name: 'Financial AI', count: services.filter(s => s.category === 'Financial AI').length },
+    { id: 'Energy AI', name: 'Energy AI', count: services.filter(s => s.category === 'Energy AI').length }
   ];
-  const filteredServices = const filteredServices = const filteredServices = services.filter();
+  const filteredServices = services.filter(service => 
+    selectedCategory === 'all' || service.category === selectedCategory
   );
 
-  return() {categories.map((category) => ()
-                    onClick={() => setSelectedCategory(category.id)}
-                    className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                      selectedCategory === category.id
-                        ? 'bg-cyan-500 text-white'
-                        : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
-                    }`}
-                  >
-                    {category.name} ({category.count})
-                  </button>
-                ))}
-              </div>
-            </div>
+  return (
+    <>
+      <Helmet>
+        <title>AI Services - Zion Tech Group | Advanced Artificial Intelligence Solutions</title>
+        <meta name="description" content="Comprehensive AI services including chatbots, computer vision, machine learning, and automation solutions for modern businesses." />
+        <meta name="keywords" content="AI services, artificial intelligence, machine learning, chatbots, computer vision, automation" />
+      </Helmet>
 
-            {/* Services Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16" /></div>
-              {filteredServices.map((service) => ()
-                    )}
-                  </div>
-                  
-                  <p className="text-gray-300 mb-4">{service.description}</p>
-                  
-                  <div className="flex items-center justify-between mb-4" /></div>
-                    <div></div>
-                      <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
-                      <span className="text-gray-400 text-sm ml-2 line-through">{service.marketPrice}</span>
-                    </div>
-                    <span className="text-gray-400 text-sm">{service.category}</span>
-                  </div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Navigation />
+        
+        <main className="container mx-auto px-4 py-16 pt-24">
+          {/* Header Section */}
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              AI Services
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Comprehensive artificial intelligence solutions designed to transform your business operations and drive innovation.
+            </p>
+          </div>
 
-                  <div className="mb-6" /></div>
-                    <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
-                    <ul className="space-y-2" /></ul>
-                      {service.features.slice(0, 3).map((feature, index) => ()
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="flex items-center justify-between" /></div>
-                    <Link to="/contact"
-                      className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors" /></Link>
-                      Learn More
-                      <ArrowRight className="w-4 h-4 ml-1" / /></ArrowRight>
-                    </Link>
-                    <Link to="/contact"
-                      className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300" /></Link>
-                      Get Quote
-                    </Link>
-                  </div>
-                </div>
+          {/* Category Filter */}
+          <div className="mb-12">
+            <div className="flex flex-wrap gap-4 justify-center">
+              {categories.map((category) => (
+                <button
+                  key={category.id}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                    selectedCategory === category.id
+                      ? 'bg-cyan-500 text-white'
+                      : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
+                  }`}
+                >
+                  {category.name} ({category.count})
+                </button>
               ))}
             </div>
+          </div>
 
-            {/* CTA Section */}
-            <div className="text-center" /></div>
-              <div className="bg-slate-800/50 rounded-lg p-8" /></div>
-                <h2 className="text-2xl font-bold text-white mb-4" /></h2>
-                  Ready to Transform Your Business with AI?
-                </h2>
-                <p className="text-gray-300 mb-6 max-w-2xl mx-auto" /></p>
-                  Let our AI experts help you choose the right solutions for your business needs. 
-                  Get a free consultation and see how AI can transform your operations.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center" /></div>
-                  <Link to="/contact"
-                    className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300" /></Link>
-                    Get Free Consultation
-                  </Link>
-                  <a href="tel:+13024640950"
-                    className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300" /></a>
-                    Call: (302) 464-0950
+          {/* Services Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {filteredServices.map((service) => (
+              <div key={service.id} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mr-4">
+                    <service.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white">{service.name}</h3>
+                    <span className="text-sm text-gray-400">{service.category}</span>
+                  </div>
+                </div>
+                
+                <p className="text-gray-300 mb-4">{service.description}</p>
+                
+                <div className="flex items-center justify-between mb-4">
+                  <div>
+                    <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
+                    <span className="text-gray-400 text-sm ml-2 line-through">{service.marketPrice}</span>
+                  </div>
+                  {service.popular && (
+                    <span className="bg-yellow-500 text-black px-2 py-1 rounded-full text-xs font-semibold">
+                      Popular
+                    </span>
+                  )}
+                </div>
+
+                <div className="mb-6">
+                  <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
+                  <ul className="space-y-2">
+                    {service.features.slice(0, 3).map((feature, index) => (
+                      <li key={index} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="flex items-center justify-between">
+                  <a href="/contact"
+                    className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">
+                    Learn More
+                    <ArrowRight className="w-4 h-4 ml-1" />
+                  </a>
+                  <a href="/contact"
+                    className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300">
+                    Get Quote
                   </a>
                 </div>
               </div>
+            ))}
+          </div>
+
+          {/* CTA Section */}
+          <div className="text-center">
+            <div className="bg-slate-800/50 rounded-lg p-8">
+              <h2 className="text-2xl font-bold text-white mb-4">
+                Ready to Transform Your Business with AI?
+              </h2>
+              <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+                Let our AI experts help you choose the right solutions for your business needs. 
+                Get a free consultation and see how AI can transform your operations.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="/contact"
+                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300">
+                  Get Free Consultation
+                </a>
+                <a href="tel:+13024640950"
+                  className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300">
+                  Call: (302) 464-0950
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-      </main>
-      
-      <Footer / /></Footer>
+        </main>
+        
+        <Footer />
+      </div>
     </>
   );
-}
 
 export default AiServicesPage;
