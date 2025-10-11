@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           <div>
             <div className="flex items-center mb-4">
               <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mr-2">
@@ -20,12 +20,14 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
+            <h3 className="text-lg font-semibold mb-4">AI & Technology Services</h3>
             <ul className="space-y-2">
               <li><Link to="/ai-services" className="text-gray-400 hover:text-white transition-colors">AI Services</Link></li>
               <li><Link to="/it-services" className="text-gray-400 hover:text-white transition-colors">IT Services</Link></li>
               <li><Link to="/cloud-services" className="text-gray-400 hover:text-white transition-colors">Cloud Services</Link></li>
               <li><Link to="/micro-saas-services" className="text-gray-400 hover:text-white transition-colors">Micro SAAS</Link></li>
+              <li><Link to="/digital-transformation" className="text-gray-400 hover:text-white transition-colors">Digital Transformation</Link></li>
+              <li><Link to="/5g-implementation" className="text-gray-400 hover:text-white transition-colors">5G Implementation</Link></li>
             </ul>
           </div>
 
@@ -35,6 +37,17 @@ export default function Footer() {
               <li><Link to="/about" className="text-gray-400 hover:text-white transition-colors">About Us</Link></li>
               <li><Link to="/contact" className="text-gray-400 hover:text-white transition-colors">Contact</Link></li>
               <li><Link to="/services" className="text-gray-400 hover:text-white transition-colors">All Services</Link></li>
+              <li><a href="https://ziontechgroup.com" className="text-gray-400 hover:text-white transition-colors">Visit Website</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Resources</h3>
+            <ul className="space-y-2">
+              <li><a href="https://ziontechgroup.com/blog" className="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+              <li><a href="https://ziontechgroup.com/case-studies" className="text-gray-400 hover:text-white transition-colors">Case Studies</a></li>
+              <li><a href="https://ziontechgroup.com/whitepapers" className="text-gray-400 hover:text-white transition-colors">White Papers</a></li>
+              <li><a href="https://ziontechgroup.com/support" className="text-gray-400 hover:text-white transition-colors">Support Center</a></li>
             </ul>
           </div>
 
@@ -43,15 +56,15 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center">
                 <Mail className="w-4 h-4 text-purple-400 mr-2" />
-                <span className="text-gray-400">info@ziontechgroup.com</span>
+                <span className="text-gray-400">kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center">
                 <Phone className="w-4 h-4 text-purple-400 mr-2" />
-                <span className="text-gray-400">+1 (555) 123-4567</span>
+                <span className="text-gray-400">+1 302 464 0950</span>
               </div>
               <div className="flex items-center">
                 <MapPin className="w-4 h-4 text-purple-400 mr-2" />
-                <span className="text-gray-400">New York, NY</span>
+                <span className="text-gray-400">364 E Main St STE 1008 Middletown DE 19709</span>
               </div>
             </div>
           </div>
