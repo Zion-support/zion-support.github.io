@@ -987,7 +987,6 @@ const AiServicesPage: React.FC = () => {
       icon: Mic
     },
     {
-<<<<<<< HEAD
       id: 'ai-content-generation',
       name: 'AI Content Generation Pro',
       description: 'Advanced content generation platform with multi-format support and brand consistency',
@@ -1012,52 +1011,98 @@ const AiServicesPage: React.FC = () => {
       category: 'Content Generation',
       popular: true,
       icon: FileText
-=======
-      title: 'AI-Powered Parenting Assistant',
+    },
+    {
+      id: 'ai-parenting-assistant',
+      name: 'AI-Powered Parenting Assistant',
       description: 'Intelligent parenting support with child development monitoring and activity recommendations.',
-      icon: '👶',
-      price: 'Starting at $1,500/month',
-      features: ['Development monitoring', 'Activity recommendations', 'Safety alerts', 'Progress tracking', 'Expert guidance'],
-      benefits: ['Support child development', 'Improve parenting confidence', 'Ensure child safety'],
+      price: '$1,500/month',
       marketPrice: '$2,500-6,000/month',
+      features: [
+        'Development monitoring',
+        'Activity recommendations',
+        'Safety alerts',
+        'Progress tracking',
+        'Expert guidance'
+      ],
+      benefits: [
+        'Support child development',
+        'Improve parenting confidence',
+        'Ensure child safety'
+      ],
       category: 'Family AI',
-      technologies: ['Child Development Models', 'Safety Monitoring', 'Custom Family Models', 'Mobile Apps', 'Expert Systems']
+      popular: false,
+      icon: Heart
     },
     {
-      title: 'AI-Powered Elderly Care',
+      id: 'ai-elderly-care',
+      name: 'AI-Powered Elderly Care',
       description: 'Intelligent elderly care monitoring with health tracking and safety assistance.',
-      icon: '👴',
-      price: 'Starting at $2,500/month',
-      features: ['Health monitoring', 'Safety assistance', 'Medication reminders', 'Emergency alerts', 'Family communication'],
-      benefits: ['Improve elderly care', 'Ensure safety', 'Reduce care costs'],
+      price: '$2,500/month',
       marketPrice: '$4,000-10,000/month',
+      features: [
+        'Health monitoring',
+        'Safety assistance',
+        'Medication reminders',
+        'Emergency alerts',
+        'Family communication'
+      ],
+      benefits: [
+        'Improve elderly care',
+        'Ensure safety',
+        'Reduce care costs'
+      ],
       category: 'Elderly Care AI',
-      technologies: ['Health Monitoring', 'Safety Systems', 'Custom Care Models', 'IoT Integration', 'Mobile Apps']
+      popular: false,
+      icon: Heart
     },
     {
-      title: 'AI-Powered Accessibility Assistant',
+      id: 'ai-accessibility-assistant',
+      name: 'AI-Powered Accessibility Assistant',
       description: 'Intelligent accessibility support with adaptive interfaces and assistive technology.',
-      icon: '♿',
-      price: 'Starting at $1,800/month',
-      features: ['Adaptive interfaces', 'Voice control', 'Visual assistance', 'Mobility support', 'Communication aids'],
-      benefits: ['Improve accessibility', 'Enhance independence', 'Support inclusion'],
+      price: '$1,800/month',
       marketPrice: '$3,000-7,000/month',
+      features: [
+        'Adaptive interfaces',
+        'Voice control',
+        'Visual assistance',
+        'Mobility support',
+        'Communication aids'
+      ],
+      benefits: [
+        'Improve accessibility',
+        'Enhance independence',
+        'Support inclusion'
+      ],
       category: 'Accessibility AI',
-      technologies: ['Accessibility APIs', 'Assistive Technology', 'Custom Accessibility Models', 'Mobile Apps', 'IoT Integration']
+      popular: false,
+      icon: Shield
     },
     {
-      title: 'AI-Powered Environmental Monitoring',
+      id: 'ai-environmental-monitoring',
+      name: 'AI-Powered Environmental Monitoring',
       description: 'Intelligent environmental monitoring with pollution detection and sustainability recommendations.',
-      icon: '🌱',
-      price: 'Starting at $2,000/month',
-      features: ['Pollution monitoring', 'Sustainability analysis', 'Environmental alerts', 'Carbon tracking', 'Green recommendations'],
-      benefits: ['Monitor environmental impact', 'Improve sustainability', 'Reduce carbon footprint'],
+      price: '$2,000/month',
       marketPrice: '$3,500-8,000/month',
+      features: [
+        'Pollution monitoring',
+        'Sustainability analysis',
+        'Environmental alerts',
+        'Carbon tracking',
+        'Green recommendations'
+      ],
+      benefits: [
+        'Monitor environmental impact',
+        'Improve sustainability',
+        'Reduce carbon footprint'
+      ],
       category: 'Environmental AI',
-      technologies: ['Environmental Sensors', 'Pollution Detection', 'Custom Environmental Models', 'IoT Integration', 'Analytics']
+      popular: false,
+      icon: Globe
     },
     {
-      title: 'AI-Powered Wildlife Conservation',
+      id: 'ai-wildlife-conservation',
+      name: 'AI-Powered Wildlife Conservation',
       description: 'Intelligent wildlife monitoring and conservation with species identification and behavior analysis.',
       icon: '🦁',
       price: 'Starting at $3,500/month',

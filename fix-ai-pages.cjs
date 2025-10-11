@@ -12,12 +12,7 @@ aiPages.forEach(filePath => {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Fix extra semicolons
-    content = content.replace(/;;;;/g, '');
-    content = content.replace(/;;;/g, '');
-    content = content.replace(/;;/g, ';');
-
-    // Fix missing comma after last feature object - more specific patterns
+    // Fix missing comma after last feature object
     content = content.replace(
       /(\s+benefits:\s*\[[^\]]*\]\s*)\n\s*}\s*\n\s*}\s*\n\s*\]/g,
       '$1\n        }\n    }\n];'
@@ -29,19 +24,25 @@ aiPages.forEach(filePath => {
       'const benefits = [\n        $1,\n        $2,\n        $3,\n        $4,\n        $5\n    ];'
     );
 
-    // Fix individual semicolons in benefits array
+    // Fix malformed meta tags
     content = content.replace(
-      /'([^']+)',;/g,
-      "'$1',"
+      /<meta>\s*<meta>/g,
+      '<meta name="description" content="Advanced AI-powered solution for modern businesses" />'
     );
 
-    // Fix missing comma in features array
+    // Fix unclosed Navigation tag
     content = content.replace(
-      /(\s+benefits:\s*\[[^\]]*\]\s*)\n\s*}\s*\n\s*}\s*\n\s*\]/g,
-      '$1\n        }\n    }\n];'
+      /<Navigation>\s*<div/g,
+      '<Navigation />\n            <div'
     );
 
-    // Fix malformed JSX - missing closing tags
+    // Fix malformed JSX structure
+    content = content.replace(
+      /return \(\s*<>\s*<Helmet>[\s\S]*?<\/Helmet>\s*<Navigation>\s*<div className="min-h-screen/g,
+      'return (\n        <>\n            <Helmet>\n                <title>AI Solution - Zion Tech Group</title>\n                <meta name="description" content="Advanced AI-powered solution for modern businesses" />\n            </Helmet>\n            <Navigation />\n            <div className="min-h-screen'
+    );
+
+    // Fix missing closing tags
     content = content.replace(
       /<h1>\s*([^<]+);\s*<\/h1>/g,
       '<h1 className="text-5xl md:text-7xl font-bold text-white mb-6">$1</h1>'
@@ -52,20 +53,28 @@ aiPages.forEach(filePath => {
       '<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">$1</p>'
     );
 
-    content = content.replace(
-      /<h2>\s*([^<]+);\s*<\/h2>/g,
-      '<h2 className="text-4xl font-bold text-white mb-4">$1</h2>'
-    );
-
+    // Fix malformed button tags
     content = content.replace(
       /<button>\s*([^<]+);\s*<\/button>/g,
       '<button className="bg-gradient-to-r from-emerald-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:scale-105 transition-transform">$1</button>'
+    );
+
+    // Fix missing closing tags for feature mapping
+    content = content.replace(
+      /features\.map\(\(feature, index\) => \(\s*}\s*<div key={index}/g,
+      'features.map((feature, index) => (\n                <div key={index}'
     );
 
     // Fix malformed feature icon usage
     content = content.replace(
       /<feature>\s*<\/div>/g,
       '<feature.icon className="w-8 h-8 text-white" />\n                    </div>'
+    );
+
+    // Fix missing closing tags for benefits mapping
+    content = content.replace(
+      /benefits\.map\(\(benefit, index\) => \(\s*}\s*<div key={index}/g,
+      'benefits.map((benefit, index) => (\n                <div key={index}'
     );
 
     // Fix malformed CheckCircle usage
@@ -110,4 +119,4 @@ aiPages.forEach(filePath => {
   }
 });
 
-console.log('All syntax errors fix completed');
+console.log('AI pages fix completed');
