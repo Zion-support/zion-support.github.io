@@ -1,7 +1,6 @@
 'use client';
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+import React, { useState, useEffect, useCallback } from 'react';
+import { Link } from 'react-router-dom';
 import { 
   Menu, 
   X, 
@@ -13,7 +12,36 @@ import {
   ArrowRight,
   Phone,
   Mail,
-  MapPin
+  MapPin,
+  Shield,
+  Code,
+  BarChart,
+  Users,
+  Target,
+  Globe,
+  Database,
+  Smartphone,
+  Lock,
+  TrendingUp,
+  Settings,
+  Calendar,
+  CheckSquare,
+  FileText,
+  MessageCircle,
+  Heart,
+  DollarSign,
+  Box,
+  Monitor,
+  Link as LinkIcon,
+  Server,
+  Package,
+  Mic,
+  Workflow,
+  Eye,
+  Wifi,
+  MessageSquare,
+  CheckCircle,
+  ShoppingCart
 } from 'lucide-react';
 
 const Navigation: React.FC = () => {
