@@ -31,7 +31,7 @@ import Footer from '../components/Footer';
 const AiServicesPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const services = const services = const services = [
+  const services = [
     {
       id: 'ai-chatbots',
       name: 'AI-Powered Chatbots',
