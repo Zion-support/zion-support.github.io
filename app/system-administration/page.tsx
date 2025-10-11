@@ -2,53 +2,34 @@
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
 
-export default function PagePage() {
+const SystemAdministrationPage: React.FC = () => {
   const features = [
     {
-      title: 'Expert Solutions',
-      description: 'Professional page services delivered by experienced professionals.',
-      benefits: ['Quality Assurance', 'Fast Delivery', '24/7 Support', 'Custom Solutions']
+      title: 'Server Management',
+      description: 'Comprehensive server administration and maintenance services.',
+      benefits: ['Server Monitoring', 'Performance Optimization', 'Security Updates', 'Backup Management']
     },
     {
-      title: 'Advanced Technology',
-      description: 'Cutting-edge tools and technologies to deliver superior results.',
-      benefits: ['Latest Tools', 'Modern Methods', 'Scalable Solutions', 'Future-Ready']
+      title: 'Network Administration',
+      description: 'Expert network setup, configuration, and maintenance.',
+      benefits: ['Network Design', 'Security Configuration', 'Troubleshooting', 'Performance Tuning']
     },
     {
-      title: 'Proven Results',
-      description: 'Track record of successful projects and satisfied clients.',
-      benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
+      title: 'System Security',
+      description: 'Advanced security measures and threat protection.',
+      benefits: ['Security Audits', 'Firewall Management', 'Access Control', 'Incident Response']
     }
   ];
-
-const SystemAdministrationPage: React.FC = () => {
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
-    
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
-    
-      benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']} ,
-    
-      benefits: ['Interactive charts', 'Custom reports', 'Data export', 'Visual storytelling']} ,
-    
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']} ]
-  const benefits = [
-    'Increase efficiency by up to 80%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Real-time processing and analysis',
-    'Seamless integration with existing systems'
-  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <main className="pt-20 px-4 py-20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Page
+              System Administration
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional page services to help your business succeed and grow.
+              Professional system administration services for servers, networks, and IT infrastructure management.
             </p>
           </div>
           
@@ -73,7 +54,7 @@ const SystemAdministrationPage: React.FC = () => {
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
               <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Contact us today to learn more about our page services.
+                Contact us today to learn more about our system administration services.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
@@ -89,4 +70,6 @@ const SystemAdministrationPage: React.FC = () => {
       </main>
     </div>
   );
-}
+};
+
+export default SystemAdministrationPage;
