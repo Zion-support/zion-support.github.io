@@ -38,57 +38,6 @@ const benefits = const benefits = const benefits = [
         </div>
       </section>
       {/* CTA Section */}
-<<<<<<< HEAD
-      <section className="py-20 px-4" /></section>
-          <div className="max-w-7xl mx-auto" /></div>
-            <div className="text-center mb-16" /></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-        </section>
-        <div className="max-w-4xl mx-auto text-center" / /></div>
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12" / /></div>
-            <h2></h2>
-              Ready to Get Started?
-            </h2>
-            <p></p>
-              Contact our experts to discuss your page needs and get a customized solution.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center" / /></div>
-              <button></button>
-                <Phone></Phone>
-                Call Now
-              </button>
-              <button></button>
-                <Mail></Mail>
-                Email Us
-=======
-      <section className="py-20 px-4">
-          </section></section><div className="max-w-7xl mx-auto">
-            </div></div><div className="text-center mb-16">
-              </div></div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2></h2></h2>
-              <p className="text-xl text-gray-300">Section description</p></p></p>
-            </div>
-          </div>
-        </section>
-        <div className="max-w-4xl mx-auto text-center"></div></div></div>
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div></div></div>
-            <h2>
-              Ready to Get Started?
-            </h2></h2></h2>
-            <p>
-              Contact our experts to discuss your page needs and get a customized solution.
-            </p></p></p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div></div></div>
-              <button>
-                </button></button><Phone>
-                Call Now;
-              </button>
-              <button>
-                </button></button><Mail>
-                Email Us;
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
               </button>
             </div>
           </div>

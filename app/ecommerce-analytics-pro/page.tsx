@@ -3,13 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { BarChart, TrendingUp, Users, ShoppingCart, DollarSign, Target, CheckCircle, ArrowRight } from 'lucide-react';
 const EcommerceAnalyticsProPage: React.FC = () => {
-<<<<<<< HEAD
-  const features = const features = const features = [
-    {
-=======
-  const features = [
-    
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       icon: BarChart,
       title: 'Real-time Analytics',
       description: 'Track sales, conversions, and customer behavior in real-time with advanced analytics dashboards.'},

@@ -46,13 +46,6 @@ const [isIntersecting, setIsIntersecting] = useState(false);
   const ref = useRef<HTMLElement>(null);
 useEffect(() => {const element = ref.current;
     if (!element) return;
-<<<<<<< HEAD
-const observer = const observer = new IntersectionObserver()
-      ([entry]) => {;
-=======
-const observer = new IntersectionObserver(;)
-      ([entry]) => 
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
         setIsIntersecting(entry.isIntersecting);
         setEntry(entry);
 if (entry.isIntersecting && freezeOnceVisible) 

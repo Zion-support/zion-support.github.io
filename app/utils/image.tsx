@@ -31,31 +31,6 @@ interface ImageProps {}
   onLoad?: () => void;
   onError?: () => void;}
 }
-<<<<<<< HEAD
-export const Image: React.FC<ImageProps>= ()
-=======
-export const Image: React.FC<ImageProps>= ({}
-export const Image: React.FC<ImageProps> = ({}
-  src,
-export const Image: React.FC<ImageProps> = ({
-    ,
-  src;
-  alt,
-  width,
-  height,
-  className,
-  priority = false,
-  quality = 75,
-  placeholder = 'empty',
-  blurDataURL,
-  fill = false,
-  sizes,
-  style,
-  onLoad,
-  onError,
-  })
-  ...props})
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 }) => {}
   const [, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
@@ -88,26 +63,6 @@ export const Image: React.FC<ImageProps> = ({
   }
   if (hasError) {
     </ImageProps>
-<<<<<<< HEAD
-    return ()
-  if (hasError) {}
-    return ()
-  if (hasError) {}
-    return()
-=======
-    return (</ImageProps>)
-  })
-  if (hasError) {}
-    return ()
-      <div})
-  if (hasError) {}
-    return(<div}
-'use client';
-import React, { useState, useCallback } from 'react';
-interface ImageProps {/* TODO: Fix JSX expression */}
-})
-export const,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   Image: React.FC<ImageProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
   }, [onLoad]);

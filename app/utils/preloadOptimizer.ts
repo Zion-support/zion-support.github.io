@@ -21,20 +21,6 @@ export const preloadCriticalResources = const preloadCriticalResources = useCall
   if (typeof window === 'undefined') return;
   // Preload critical fonts;
   const fontPreloads = [;
-<<<<<<< HEAD
-    'https: //fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'
-    'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap'
-  ],
-  fontPreloads.forEach()
-    )
-  }
-  fontPreloads.forEach(href => {)}];
-=======
-    'https: //fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap', 'https: //fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap'
-    }],
-  fontPreloads.forEach(href => {}
-  fontPreloads.forEach(href => {}];];
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     const link = document.createElement('link');
 >>>>>>> origin/main
     link.rel = 'preload';
@@ -55,15 +41,6 @@ export const preloadCriticalResources = const preloadCriticalResources = const p
     )}criticalImages.forEach(src => {)}const link = document.createElement('link');
 =======
   ];
-<<<<<<< HEAD
-  criticalImages.forEach()
-    )
-  }
-  criticalImages.forEach(src => {)}];
-=======
-  criticalImages.forEach(src => {}
-  criticalImages.forEach(src => {}];];
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     const link = document.createElement('link');
 >>>>>>> origin/main
     link.rel = 'preload';
@@ -79,13 +56,6 @@ export const preloadRoute = useCallback((...args) => {;
   if (typeof window === 'undefined') return;
 >>>>>>> origin/main
   // Preload route-specific resources;
-<<<<<<< HEAD
-  const routeResources = const routeResources = const routeResources = {};
-export const preloadRoute = useCallback((...args) => {};
-=======
-  const routeResources = }
-export const preloadRoute = useCallback((...args) => {}
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   if (typeof window === 'undefined') return;
   // Preload route-specific resources;
   const routeResources = const routeResources = const routeResources = {}
@@ -98,13 +68,6 @@ export const preloadRoute = useCallback((...args) => {}
   if (resources) {
     resources.forEach(resource => )
   }
-<<<<<<< HEAD
-  if (resources) {};
-    resources.forEach(resource => {)};
-=======
-  if (resources) {}
-    resources.forEach(resource => {}
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       const link = document.createElement('link');
       link.rel = 'prefetch';
       link.href = resource;
@@ -134,13 +97,6 @@ export const optimizeImages = useCallback((...args) => {;
       entries.forEach(entry => {);
         if (entry.isIntersecting) 
           const img = entry.target as HTMLImageElement;
-<<<<<<< HEAD
-          if (img.dataset['src']) {}
-export const optimizeImages = const optimizeImages = useCallback((...args) => {};
-=======
-          if (img.dataset['src']) }
-export const optimizeImages = useCallback((...args) => {}
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   if (typeof window === 'undefined') return;
   // Add loading="lazy" to images below the fold;
   const images = document.querySelectorAll('img[data-lazy]');
@@ -149,15 +105,6 @@ export const optimizeImages = useCallback((...args) => {}
   })
   // Add intersection observer for lazy loading;
   if ('IntersectionObserver' in window) {}
-<<<<<<< HEAD
-    const imageObserver = const imageObserver = const imageObserver = new IntersectionObserver((entries) => {}
-      entries.forEach(entry => {)};
-        if (entry.isIntersecting) {};
-=======
-    const imageObserver = new IntersectionObserver((entries) => {}
-      entries.forEach(entry => {}
-        if (entry.isIntersecting) {}
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
           const img = entry.target as HTMLImageElement;
           if (img.dataset['src']) {}
             img['src'] = img.dataset['src']
@@ -170,11 +117,6 @@ export const optimizeImages = useCallback((...args) => {}
 export const preloadRoute = (rout);
   e: string) => {/* TODO: Fix JSX expression */}
   }
-<<<<<<< HEAD
-  const resources = const resources = const resources = routeResources[route as keyof typeof routeResources]
-=======
-  const resources = routeResources[route as keyof typeof, routeResources]
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   if (resources) {/* TODO: Fix JSX expression */}
     })
   }
@@ -204,13 +146,6 @@ export const optimizeThirdPartyScripts = useCallback((...args) => {;
   })
   // Load analytics after page load;
   if (document.readyState === 'loading') {
-<<<<<<< HEAD
-    document.addEventListener('DOMContentLoaded', () => {}
-export const optimizeThirdPartyScripts = const optimizeThirdPartyScripts = useCallback((...args) => {};
-=======
-    document.addEventListener('DOMContentLoaded', () => }
-export const optimizeThirdPartyScripts = useCallback((...args) => {}
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   if (typeof window === 'undefined') return;
   // Defer non-critical scripts;
   const scripts = document.querySelectorAll('script[data-defer]');
@@ -223,17 +158,6 @@ export const optimizeThirdPartyScripts = useCallback((...args) => {}
   } else {}}loadAnalytics()}
   }
 }
-<<<<<<< HEAD
-const loadAnalytics = const loadAnalytics = const loadAnalytics = useCallback((...args) => {
-    // Load Google Analytics after page load
-  };
-const loadAnalytics = useCallback((...args) => {};
-=======
-const loadAnalytics = useCallback((...args) => {
-    // Load Google Analytics after page, load;
-  }
-const loadAnalytics = useCallback((...args) => {}
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   // Load Google Analytics after page load;
   const gaScript = document.createElement('script');
   gaScript.async = true;

@@ -3,21 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 const BlockchainWeb3Page: React.FC = () => {
-<<<<<<< HEAD
-    const features = const features = const features = [
-    {
-      icon: Zap,
-      title: 'Smart Contracts',;
-      description: 'Automated, self-executing contracts with the terms directly written into code.',;
-      benefits: ['Automated execution', 'Transparent transactions', 'Reduced costs', 'Enhanced security'];
-=======
-    const features = [
-    
-      icon: Zap,
-      title: 'Smart Contracts',
-      description: 'Automated, self-executing contracts with the terms directly written into code.',
-      benefits: [''Automated execution', 'Transparent transactions', 'Reduced costs', 'Enhanced security''];
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   },
     {
       icon: Shield,

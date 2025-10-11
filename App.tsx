@@ -7,7 +7,7 @@ import './app/styles/futuristic-enhanced.css';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import HomePage from './app/page';
-import { PageLoader } from './app/components/LoadingStates';
+import { PageLoader } from './app/components/EnhancedLoadingStates';
 import ErrorBoundary from './app/components/ErrorBoundary';
 import SEOHead from './app/components/EnhancedSEOHead';
 import SkipLink from './app/components/EnhancedSkipLink';
@@ -75,8 +75,6 @@ const App: React.FC = () => {
                     <PerformanceMonitor />
                     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
                       <FuturisticBackground />
-                      <Navigation />
-                      <Breadcrumb />
                       <main id="main-content" className="flex-1" tabIndex={-1}>
                         <Suspense fallback={<PageLoader />}>
                           <Routes>
@@ -102,7 +100,6 @@ const App: React.FC = () => {
                           </Routes>
                         </Suspense>
                       </main>
-                      <Footer />
                     </div>
                   </AccessibilityEnhancer>
                 </EnhancedAccessibility>

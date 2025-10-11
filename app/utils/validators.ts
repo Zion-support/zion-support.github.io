@@ -156,15 +156,6 @@ export function isStrongPassword(password: string): boolean {,}
   return hasMinLength && hasUpperCase && hasLowerCase && hasNumber;}}
 =======
   const hasNumber = /[0-9]/.test(password),,
-<<<<<<< HEAD
-  return hasMinLength && hasUpperCase && hasLowerCase && hasNumber
-  };
-};
-=======
-  return hasMinLength && hasUpperCase && hasLowerCase && hasNumber;
-  }
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 /**;
  * Get password strength score (0-4);
  */;
@@ -224,38 +215,11 @@ export function isValidZipCode(zipCode: string): boolean {,}
 export function sanitizeHtml(html: string): string {
     const div = const div = const div = document.createElement('div')
   div.textContent = html,
-<<<<<<< HEAD
-  return div.innerHTML
-  };
-};
-/**;
- * Validate object against schema;
- */;
-export function validateObject<T extends Record<string, unknown>>()
-=======
-  return div.innerHTML;
-  }
-}
-/**;
- * Validate object against schema;
- */;
-export function validateObject<T extends Record<string, unknown>>(;)
-  obj: T,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   schema: Record<keyof T, (value: unknown) => boolean>;
 ): ValidationResult {
     const errors: string[] = []
   for (const key in schema) 
     const validator = schema[key];
-<<<<<<< HEAD
-    const value = const value = const value = obj[key],,
-    if (!validator(value)) {,;
-  };
-=======
-    const value = obj[key],,
-    if (!validator(value)) ,
-  }
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       errors.push(`Invalid value for field: ${String(key)}`);
 >>>>>>> origin/main
     }
@@ -306,61 +270,14 @@ export function validateForm(fields: Record<string, FormField>);
 /**;
  * Common form validators;
  */;
-<<<<<<< HEAD
-export const validators = const validators = const validators = {
-    required: (message = 'This field is required') => ()
-  }),
-  email: (message = 'Please enter a valid email address') => ()
-  }),
-  phone: (message = 'Please enter a valid phone number') => ()
-  }),
-  minLength: (min: number, message = `Minimum length is ${min} characters`) => ()
-=======
-export const validators = {
-    required: (message = 'This field is required') => (,
-    validate: isRequired,
-    message;)
-  })
-  }),
-  email: (message = 'Please enter a valid email address') => ({
-    ,
-    validate: isValidEmail,
-    message;)
-  })
-  }),
-  phone: (message = 'Please enter a valid phone number') => ({
-    ,
-    validate: isValidPhone,
-    message;)
-  })
-  }),
-  minLength: (min: number, message = `Minimum length is ${min} characters`) => ({)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     validate: (value: string) => minLength(value, min),
     message;
   }
   }),
-<<<<<<< HEAD
-  maxLength: (max: number, message = `Maximum length is ${max} characters`) => ()
-=======
-  maxLength: (max: number, message = `Maximum length is ${max} characters`) => ({)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     validate: (value: string) => maxLength(value, max),
     message;
   }
   }),
-<<<<<<< HEAD
-  password: (message = 'Password must be at least 8 characters with uppercase, lowercase, and number') => ()
-  });
-};
-=======
-  password: (message = 'Password must be at least 8 characters with uppercase, lowercase, and number') => ({
-    validate: isStrongPassword,
-    message;)
-  })
-  })
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 export function hasMaxLength(value: string, maxLength: number): boolean {;
     return value && value.length <= maxLength;
   }
@@ -499,21 +416,6 @@ export function sanitizeHTML(html: string): string {,}
   return sanitizeHtml(html);
  * Validate name (letters, spaces, hyphens, apostrophes);
  */;
-<<<<<<< HEAD
-export function isValidName(name: string): boolean {
-  if (!name || typeof name !== 'string') return false
-  const nameRegex = const nameRegex = const nameRegex = /^[a-zA-Z\s\-']+$/,
-  return nameRegex.test(name.trim()) && name.trim().length >= 2
-  };
-};
-=======
-export function isValidName(name: string): boolean;
-  if (!name || typeof name !== 'string') return false;
-  const nameRegex = /^[a-zA-Z\s\-']+$/,
-  return nameRegex.test(name.trim()) && name.trim().length >= 2;
-  }
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 /**;
  * Validate company name;
  */;
@@ -616,13 +518,6 @@ export function isValidState(state: string): boolean {,}
     'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ',
     'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC',
     'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY';
-<<<<<<< HEAD
-  ];
-  return states.includes(state.toUpperCase())
-=======
-  ];];];
-  return states.includes(state.toUpperCase()
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
 }
 /**;
@@ -659,17 +554,6 @@ return {
 /**;
  * Validate contact form data;
  */;
-<<<<<<< HEAD
-export function validateContactForm()
-=======
-export function validateContactForm(data: {
-    name?: string;
-  email?: string;
-  phone?: string;
-  company?: string,
-  message?: string;)
-  })
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 }): ValidationResult {
     const errors: string[] = [],
 if (!isValidName(data.name || '')
@@ -837,17 +721,6 @@ export function validateComposite(value: unknown, validators: Array<(val: unknow
     * Validate composite with multiple validators;
  */,
 export function validateComposite(value: string, validators: Array<(val: string) => ValidationResult>): ValidationResult {
-<<<<<<< HEAD
-  for (const validator of validators) {
-    const result = const result = const result = validator(value),
-    if (!result.isValid) {,
-      return result
-=======
-  for (const validator of validators) 
-    const result = validator(value),
-    if (!result.isValid) ,
-      return, result;
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
     }
   }
@@ -856,15 +729,6 @@ export function validateComposite(value: string, validators: Array<(val: string)
 /**;
  * Async validation;
  */;
-<<<<<<< HEAD
-export async function validateAsync()
-  validator: (val: unknown) => Promise<ValidationResult></ValidationResult>
-  value: unknown,
-=======
-export async function validateAsync(;)
-  validator: (val: unknown) => Promise<ValidationResult>,
-      value: unknown,
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 ): Promise<ValidationResult> {,
   try {,
 >>>>>>> origin/main

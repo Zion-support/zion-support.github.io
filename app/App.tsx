@@ -218,11 +218,11 @@ const App: React.FC = () => {,
                 <Route path="/edge-computing" element={<EdgeComputingPage />}/>
               </Routes>
             </Suspense>
-          </div>
+          </AccessibilityEnhancer>
         </BrowserRouter>
-      </HelmetProvider>)
-    </ErrorBoundary>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
+      </HelmetProvider>
+    </ErrorBoundary>
+>>>>>>> cursor/analyze-improve-and-deploy-application-d4cc
   );
 };
 

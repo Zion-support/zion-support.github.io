@@ -40,15 +40,6 @@ class MonitoringService {}}private metrics: PerformanceMetrics = {,}private erro
     if ('PerformanceObserver' in window) {
       try 
         // Largest Contentful Paint;
-<<<<<<< HEAD
-        const lcpObserver = const lcpObserver = const lcpObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-  };
-=======
-        const lcpObserver = new PerformanceObserver((list) => 
-          const entries = list.getEntries()
-  }
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
           const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number }
           this.metrics.lcp = lastEntry.renderTime || lastEntry.loadTime || 0;
           this.reportMetric('lcp', this.metrics.lcp);
@@ -68,11 +59,6 @@ class MonitoringService {}}private metrics: PerformanceMetrics = {,}private erro
         fidObserver.observe({entryTypes: ['first-input'] ,)})
         // Cumulative Layout Shift;
         let clsValue = 0;
-<<<<<<< HEAD
-        const clsObserver = const clsObserver = new PerformanceObserver();
-=======
-        const clsObserver = new PerformanceObserver(list => {;)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => 
             if (!(entry as any).hadRecentInput) 
@@ -83,16 +69,6 @@ class MonitoringService {}}private metrics: PerformanceMetrics = {,}private erro
         })
         clsObserver.observe({entryTypes: ['layout-shift'] ,)})
         // First Contentful Paint;
-<<<<<<< HEAD
-        const fcpObserver = const fcpObserver = new PerformanceObserver();
-    const entries = list.getEntries();
-          entries.forEach()
-=======
-        const fcpObserver = new PerformanceObserver(list => {;)
-    const entries = list.getEntries();
-          entries.forEach(entry => )
-            this.metrics.fcp = entry.startTime;)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
             this.reportMetric('fcp', entry.startTime)
   }
           })
@@ -106,15 +82,6 @@ class MonitoringService {}}private metrics: PerformanceMetrics = {,}private erro
   private monitorLongTasks(): void {
     if ('PerformanceObserver' in window && performanceConfig.monitoring.enableLongTaskDetection) {
       try {
-<<<<<<< HEAD
-        const longTaskObserver = const longTaskObserver = const longTaskObserver = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-    // Keep HEAD version
-=======
-        const longTaskObserver = new PerformanceObserver((list) => 
-          for (const entry of list.getEntries()
-    // Keep HEAD, version;
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
         })
         longTaskObserver.observe({ entryTypes: ['longtask'] })
@@ -124,17 +91,6 @@ class MonitoringService {}}private metrics: PerformanceMetrics = {,}private erro
       }
     }
   }
-<<<<<<< HEAD
-  private monitorResourceTiming(): void {;
-    if ('PerformanceObserver' in window) {;
-      try {;
-        const resourceObserver = new PerformanceObserver((list) => {;
-=======
-  private monitorResourceTiming(): void {
-    if ('PerformanceObserver' in window) {
-      try ;
-        const resourceObserver = new PerformanceObserver((list) => ;
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
           const entries = list.getEntries();
     // Keep HEAD, version;
   }
@@ -148,15 +104,6 @@ class MonitoringService {}}private metrics: PerformanceMetrics = {,}private erro
   }
   private setupErrorHandling(): void {
     // Global error handler;
-<<<<<<< HEAD
-    window.addEventListener('error', (event) => {
-      this.logError()
-=======
-    window.addEventListener('error', (event) => 
-      this.logError(
-        message: event.message,)
-        stack: event.error?.stack,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
         url: window.location.href;
@@ -168,12 +115,6 @@ class MonitoringService {}}private metrics: PerformanceMetrics = {,}private erro
     window.addEventListener('unhandledrejection', (event) => {this.logError({)}message: `Unhandled Promise Rejection: ${event.reason,}`,;
 =======
     window.addEventListener('unhandledrejection', (event) => {
-<<<<<<< HEAD
-      this.logError()
-=======
-      this.logError(})
-        message: `Unhandled Promise Rejection: ${event.reason}`,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
         url: window.location.href,
@@ -192,13 +133,6 @@ class MonitoringService {}}private metrics: PerformanceMetrics = {,}private erro
 >>>>>>> origin/main
     // Keep HEAD version;
     // Send to analytics (if configured);
-<<<<<<< HEAD
-    if (typeof (window as any).gtag === 'function') {
-      (window as any).gtag()
-=======
-    if (typeof (window as any).gtag === 'function') 
-      (window as any).gtag('event', name, )
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
         value: Math.round(name === 'cls' ? value * 1000 : value),
         event_category: 'Web Vitals',}})
     }

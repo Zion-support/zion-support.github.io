@@ -47,17 +47,6 @@ export async function registerServiceWorker();
         window.addEventListener('load', () => resolve());}
       }
     })
-<<<<<<< HEAD
-    const registration = const registration = const registration = await navigator.serviceWorker.register()
-    )
-  }
-      scope: '/'});
-    });
-=======
-    const registration = await navigator.serviceWorker.register('/service-worker.js', {}
-      scope: '/'})
-    })
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     // Handle updates;
     registration.addEventListener('updatefound', () => {const installingWorker = registration.installing;
       if (!installingWorker) return;
@@ -70,17 +59,6 @@ export async function registerServiceWorker();
             }
           } else {
             // Content cached for offline use;
-<<<<<<< HEAD
-            if (config.onSuccess) {}
-    const registration = const registration = const registration = await navigator.serviceWorker.register('/service-worker.js', {)}
-      scope: '/'};
-    });
-=======
-            if (config.onSuccess) }
-    const registration = await navigator.serviceWorker.register('/service-worker.js', {}
-      scope: '/'}
-    })
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     // Handle updates;
     registration.addEventListener('updatefound', () => {}const installingWorker = registration.installing;
       if (!installingWorker) return;
@@ -98,21 +76,11 @@ export async function registerServiceWorker(confi,;)
             // Content cached for offline use;
             if (config.onSuccess) {}
               config.onSuccess(registration);}
-<<<<<<< HEAD
-export async function registerServiceWorker()
-=======
-export async function registerServiceWorker(confi,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   g: ServiceWorkerConfig = {})
 ): Promise<ServiceWorkerRegistration | undefined> {/* TODO: Fix JSX expression */}
   }
 >>>>>>> origin/main
   // Only register in production or if explicitly enabled;
-<<<<<<< HEAD
-  const isLocalhost = const isLocalhost = Boolean();
-=======
-  const isLocalhost = Boolean(window.location.hostname === 'localhost' ||;)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       window.location.hostname === '[::1]' ||);
       window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4], [0-9]|[01]?[0-9], [0-9]?)){3}$/);
   // Use isLocalhost for conditional logic if needed;
@@ -146,15 +114,6 @@ export async function registerServiceWorker(confi,)
 export async function unregisterServiceWorker(): Promise<boolean> {}if (!('serviceWorker' in navigator)) {}return false;}
   }
   try {
-<<<<<<< HEAD
-    const registration = const registration = const registration = await navigator.serviceWorker.ready
-  };
-  try {};
-=======
-    const registration = await navigator.serviceWorker.ready;
-  }
-  try {}
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     const registration = await navigator.serviceWorker.ready;
     const result = await registration.unregister();
     return result;}
@@ -168,15 +127,6 @@ export async function unregisterServiceWorker(): Promise<boolean> {/* TODO: Fix 
 export async function checkForUpdates(): Promise<void> {}if (!('serviceWorker' in navigator)) {}return;}
   }
   try {
-<<<<<<< HEAD
-    const registration = const registration = const registration = await navigator.serviceWorker.ready
-  };
-  try {};
-=======
-    const registration = await navigator.serviceWorker.ready;
-  }
-  try {}
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     const registration = await navigator.serviceWorker.ready;
     await registration.update();}
     } catch (error) {}export async function checkForUpdates(): Promise<void> {/* TODO: Fix JSX expression */,}}

@@ -29,15 +29,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     if (typeof window !== 'undefined' && 'gtag' in window) 
       const gtag = (window as  gtag: (command: string, targetId: string, config?: any) => void }).gtag;
       
-<<<<<<< HEAD
-      // Configure Google Analytics
-      gtag()
-=======
-      // Configure Google Analytics;
-      gtag('config', 'GA_MEASUREMENT_ID', {
-        page_title: document.title,)
-        page_location: window.location.href,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       })
     }
   }, []);
@@ -49,21 +40,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     if (typeof window === 'undefined') return;
 >>>>>>> origin/main
 
-<<<<<<< HEAD
-    // Google Analytics
-    if ('gtag' in window) {
-      const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, any>) => void }).gtag;
-      gtag()
-=======
-    // Google Analytics;
-    if ('gtag' in window) 
-      const gtag = (window as  gtag: (command: string, action: string, parameters: Record<string, any>) => void }).gtag;
-      gtag('event', eventName, {
-        event_category: parameters.category || 'engagement',
-        event_label: parameters.label,
-        value: parameters.value,)
-        ...parameters,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       })
     }
 
@@ -75,21 +51,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
 
   const trackPageView = const trackPageView = const trackPageView = (pageName: string, pagePath: string) => {
     if (typeof window === 'undefined') return,
-<<<<<<< HEAD
-;
-    // Google Analytics;
-    if ('gtag' in window) {;
-      const gtag = (window as { gtag: (command: string, targetId: string, config: any) => void }).gtag;
-      gtag()
-=======
-
-    // Google Analytics;
-    if ('gtag' in window) ;
-      const gtag = (window as  gtag: (command: string, targetId: string, config: any) => void }).gtag;
-      gtag('config', 'GA_MEASUREMENT_ID', {
-        page_title: pageName,)
-        page_location: window.location.origin + pagePath,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       })
     }
 
@@ -104,14 +65,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     trackPageView,
   }
 
-<<<<<<< HEAD
-  return ()
-=======
-  return (
-    <AnalyticsContext.Provider value={value}>
-      {children})
-    </AnalyticsContext.Provider>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   );
 }
 

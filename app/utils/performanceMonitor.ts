@@ -69,11 +69,6 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
               this.recordMetric('FCP', entry.startTime);
             }
 // Largest Contentful Paint;
-<<<<<<< HEAD
-        this.observeEntry()
-=======
-        this.observeEntry('largest-contentful-paint', entries => {)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     );
           const lastEntry = entries[entries.length - 1]);
           if (lastEntry) 
@@ -81,25 +76,11 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
               (lastEntry as any).renderTime || (lastEntry as any).loadTime || lastEntry.startTime;
             )}}
 // First Input Delay;
-<<<<<<< HEAD
-        this.observeEntry()
-=======
-        this.observeEntry('first-input', entries => {)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     );
           const firstInput = entries[0]);
           if (firstInput && (firstInput as any).processingStart !== undefined) 
         // Largest Contentful, Paint;
   }
-<<<<<<< HEAD
-        this.observeEntry('largest-contentful-paint', entries => {)}
-          const lastEntry = const lastEntry = const lastEntry = entries[entries.length - 1];
-          if (lastEntry) {};
-=======
-        this.observeEntry('largest-contentful-paint', entries => {}
-          const lastEntry = entries[entries.length - 1]
-          if (lastEntry) {}
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
             this.recordMetric();
               'LCP',
 >>>>>>> origin/main
@@ -107,15 +88,6 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
             );
           }
 // First Input Delay;
-<<<<<<< HEAD
-        this.observeEntry('first-input', entries => {)}
-          const firstInput = const firstInput = const firstInput = entries[0];
-          if (firstInput && (firstInput as any).processingStart !== undefined) {};
-=======
-        this.observeEntry('first-input', entries => {}
-          const firstInput = entries[0]
-          if (firstInput && (firstInput as any).processingStart !== undefined) {}
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
             const fid = (firstInput as any).processingStart - firstInput.startTime;
             this.recordMetric('FID', fid);
           }
@@ -142,19 +114,6 @@ if (clsValue > 0) {}this.recordMetric('CLS', clsValue);
           })
         })
         // Largest Contentful Paint;
-<<<<<<< HEAD
-        this.observeEntry()
-          })
-        })
-        // First Input Delay;
-        this.observeEntry()
-=======
-        this.observeEntry('largest-contentful-paint', entries => {/* TODO: Fix JSX expression */})
-          })
-        })
-        // First Input Delay;
-        this.observeEntry('first-input', entries => {/* TODO: Fix JSX expression */})
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
           })
         })
         // Cumulative Layout Shift;
@@ -175,15 +134,6 @@ if (clsValue > 0) {}this.recordMetric('CLS', clsValue);
 =======
   private observePaint(name: string, metricKey: keyof PerformanceMetrics): void {
     try {,
-<<<<<<< HEAD
-      const observer = const observer = const observer = new PerformanceObserver((list) => {,
-        for (const entry of list.getEntries()) {,;
-          if (entry.name === name) {,;
-=======
-      const observer = new PerformanceObserver((list) => {,
-        for (const entry of list.getEntries()) ,
-          if (entry.name === name) ,
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
             (this.metrics as any)[metricKey] = entry.startTime;,
   }
   private observePaint(name: string, metricKey: keyof PerformanceMetrics): void {}
@@ -237,11 +187,6 @@ observer.observe({entryTypes: ['first-input'] ,)})
     } catch (error) {/* TODO: Fix JSX expression */}
     }
   }
-<<<<<<< HEAD
-  private observePaint()
-=======
-  private observePaint(nam,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   e: string, metricKe);
   y: keyof PerformanceMetrics): void {/* TODO: Fix JSX expression */,}}}
         }
@@ -426,19 +371,6 @@ observer.observe({entryTypes: ['resource'] ,)})
       this.addCustomMetric(`largeResource_${entry.name)}`, size);
     }
   }
-<<<<<<< HEAD
-  addCustomMetric()
-  e: string, valu);
-  e: number): void {/* TODO: Fix JSX expression */}
-  }
-  private logMetric()
-=======
-  addCustomMetric(nam,)
-  e: string, valu);
-  e: number): void {/* TODO: Fix JSX expression */}
-  }
-  private logMetric(nam,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   e: string, valu);
   e: number): void {/* TODO: Fix JSX expression */,}}`;
       }ms`);

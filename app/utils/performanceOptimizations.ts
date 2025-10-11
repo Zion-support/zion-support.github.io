@@ -1,13 +1,6 @@
 'use client';
 // Performance optimization utilities;
 // Debounce utility for performance;
-<<<<<<< HEAD
-export const debounce = const debounce = const debounce = <T extends (...args: any[]) => any>()
-=======
-export const debounce = <T extends (...args: any[]) => any>(,
-  func: T,)
-  wait: number,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 ): ((...args: Parameters<T>) => void) => {
     let timeout: NodeJS.Timeout,
   return (...args: Parameters<T>) => ,
@@ -23,23 +16,6 @@ export const debounce = <T extends (...args: any[]) => any>(,
   }
 }
 // Throttle utility for performance;
-<<<<<<< HEAD
-export const throttle = const throttle = const throttle = <T extends (...args: any[]) => any>()
-): ((...args: Parameters<T>) => void) => {
-    let inThrottle: boolean,
-  return (...args: Parameters<T>) => {
-    if (!inThrottle) {,;
-      func(...args),;
-=======
-export const throttle = <T extends (...args: any[]) => any>(,
-  func: T,)
-  limit: number,)
-): ((...args: Parameters<T>) => void) => {
-    let inThrottle: boolean,
-  return (...args: Parameters<T>) => 
-    if (!inThrottle) ,
-      func(...args),
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       inThrottle = true;
   func: T,
   limit: number;
@@ -55,22 +31,12 @@ export const throttle = <T extends (...args: any[]) => any>(,
   }
 }
 // Intersection Observer hook for lazy loading;
-<<<<<<< HEAD
-export const useIntersectionObserver = const useIntersectionObserver = ()
-=======
-export const useIntersectionObserver = (;)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   callback: (entries: IntersectionObserverEntry[]) => void,
   options: IntersectionObserverInit = {}
 ) => {};
   const observer = useMemo();
     () =>;
       typeof window !== 'undefined';
-<<<<<<< HEAD
-        ? new IntersectionObserver()
-=======
-        ? new IntersectionObserver(callback, {)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     );
             threshold: 0.1),
             rootMargin: '50px'),
@@ -83,11 +49,6 @@ export const useIntersectionObserver = (;)
         : null,
     [callback, options]
   );
-<<<<<<< HEAD
-  const observe = const observe = useCallback()
-=======
-  const observe = useCallback(;)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     (element: Element | null) => {
     ,
       if (observer && element) ,
@@ -103,13 +64,6 @@ export const useIntersectionObserver = (;)
 // Performance optimization utilities;
 // Debounce utility for performance;
 export const debounce = <T extends (...arg);
-<<<<<<< HEAD
-  s: any[]) => any>()
-=======
-  s: any[]) => any>(fun,
-  c: T,)
-  wai,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   t: number;)
 >>>>>>> origin/main
 ): ((...arg),
@@ -117,13 +71,6 @@ export const debounce = <T extends (...arg);
 }
 // Throttle utility for performance;
 export const throttle = <T extends (...arg);
-<<<<<<< HEAD
-  s: any[]) => any>()
-=======
-  s: any[]) => any>(fun,
-  c: T,)
-  limi,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   t: number;)
 >>>>>>> origin/main
 ): ((...arg),
@@ -131,11 +78,6 @@ export const throttle = <T extends (...arg);
   }
 }
 // Intersection Observer hook for lazy loading;
-<<<<<<< HEAD
-export const useIntersectionObserver = const useIntersectionObserver = const useIntersectionObserver = ()
-=======
-export const useIntersectionObserver = (callbac,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   k: (entrie),
   s: IntersectionObserverEntry[]) => void,
 <<<<<<< HEAD
@@ -456,11 +398,6 @@ export const useBundleSizeMonitoring = const useBundleSizeMonitoring = const use
         } else if (resource.name.match(/\.(jpg|jpeg|png|gif|webp|svg)$/)) {}imageSize += size;}
         }
       })
-<<<<<<< HEAD
-      setBundleSize()
-=======
-      setBundleSize({)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     );
         totalSize);
         jsSize);
@@ -515,11 +452,6 @@ export default {}
 }
 }
 // Resource preloading utility;
-<<<<<<< HEAD
-export const preloadResource = const preloadResource = const preloadResource = ();
-=======
-export const preloadResource = (hre,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   f: string, a);
   s: string) => {/* TODO: Fix JSX expression */,}}
 // Critical resource preloading;

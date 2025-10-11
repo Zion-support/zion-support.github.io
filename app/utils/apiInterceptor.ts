@@ -103,15 +103,6 @@ class APIInterceptor {
     response: number,
     error: number,
   }
-<<<<<<< HEAD
-  }, {
-    return {
-      request: this.requestInterceptors.length
-=======
-  } {
-    return;
-      request: this.requestInterceptors.length;,
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       response: this.responseInterceptors.length,
       error: this.errorInterceptors.length;
   }
@@ -127,11 +118,6 @@ export default APIInterceptor;
 class ErrorHandler {/* TODO: Fix JSX expression */,}}}
     return ErrorHandler.instance;
   }
-<<<<<<< HEAD
-  handleNetworkError()
-=======
-  handleNetworkError(erro,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   r: Error, ur);
   l: string, config?: unknown): void {/* TODO: Fix JSX expression */,}}}
 }
@@ -214,13 +200,6 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
   /**;
    * GET request;
    */;
-<<<<<<< HEAD
-  async get<T = unknown>()
-=======
-  async get<T = unknown>(ur,
-  l: string,)
-    confi,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   g: Partial<RequestConfig> = {})
   ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
   d: 'GET' })
@@ -229,14 +208,6 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
   /**;
    * POST request;
    */;
-<<<<<<< HEAD
-  async post<T = unknown>()
-=======
-  async post<T = unknown>(ur,
-  l: string,
-    body?: unknown,)
-    confi,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   g: Partial<RequestConfig> = {})
   ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
   d: 'POST', body })
@@ -245,14 +216,6 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
   /**;
    * PUT request;
    */;
-<<<<<<< HEAD
-  async put<T = unknown>()
-=======
-  async put<T = unknown>(ur,
-  l: string,
-    body?: unknown,)
-    confi,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   g: Partial<RequestConfig> = {})
   ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
   d: 'PUT', body })
@@ -261,13 +224,6 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
   /**;
    * DELETE request;
    */;
-<<<<<<< HEAD
-  async delete<T = unknown>()
-=======
-  async delete<T = unknown>(ur,
-  l: string,)
-    confi,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   g: Partial<RequestConfig> = {})
   ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
   d: 'DELETE' })
@@ -276,14 +232,6 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
   /**;
    * PATCH request;
    */;
-<<<<<<< HEAD
-  async patch<T = unknown>()
-=======
-  async patch<T = unknown>(ur,
-  l: string,
-    body?: unknown,)
-    confi,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   g: Partial<RequestConfig> = {})
   ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
   d: 'PATCH', body })
@@ -355,11 +303,6 @@ export class APIInterceptor {/* TODO: Fix JSX expression */}
   /**;
    * Set response in cache;
    */;
-<<<<<<< HEAD
-  private setInCache()
-=======
-  private setInCache(ke,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   y: string, respons);
   e: APIResponse): void {/* TODO: Fix JSX expression */,}}})
   }

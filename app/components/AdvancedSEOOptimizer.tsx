@@ -12,19 +12,6 @@ interface SEOOptimizerProps {title?: string;}
   children: React.ReactNode;
 }
 
-<<<<<<< HEAD
-const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ()
-=======
-const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Professional AI and IT solutions for your business. Advanced technology, expert support, and proven results.',
-  keywords = 'AI solutions, IT services, technology, business solutions, Zion Tech Group',
-  canonicalUrl,
-  ogImage = '/images/og-image.jpg',
-  twitterCard = 'summary_large_image',
-  structuredData,)
-  children)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 }) => {
   const [seoScore, setSeoScore] = useState(0);
   const [recommendations, setRecommendations] = useState<string[]>([]);
@@ -88,13 +75,6 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
   useEffect(() => {analyzeSEO();}, [analyzeSEO]);
 
-<<<<<<< HEAD
-  const generateStructuredData = const generateStructuredData = const generateStructuredData = () => {
-    const defaultStructuredData = {
-=======
-  const generateStructuredData = () => {
-    const defaultStructuredData = 
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Zion Tech Group",
@@ -103,31 +83,6 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
       "logo": ogImage,
       "sameAs": [
         "https://twitter.com/ziontechgroup",
-<<<<<<< HEAD
-        "https://linkedin.com/company/ziontechgroup"
-      ]
-    };
-;
-    return structuredData || defaultStructuredData;
-  }
-
-  const _trackPageView = const _trackPageView = const _trackPageView = (config: SEOData) => {
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as unknown as { gtag: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag()
-=======
-        "https: //linkedin.com/company/ziontechgroup"
-    }]
-    }
-
-    return structuredData || defaultStructuredData;
-  }
-
-  const _trackPageView = (config: SEOData) => {
-    if (typeof window !== 'undefined' && 'gtag' in window) 
-      (window as unknown as  gtag: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {
-        page_title: config.title,)
-        page_location: config.canonicalUrl,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       })
     }
   }
@@ -137,15 +92,6 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
       window.addEventListener('load', () => {;
 >>>>>>> origin/main
         const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-<<<<<<< HEAD
-        if (_perfData && typeof window !== 'undefined' && 'gtag' in window) {
-          (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag()
-=======
-        if (_perfData && typeof window !== 'undefined' && 'gtag' in window) 
-          (window as unknown as  gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'page_load_performance', {
-            event_category: 'Performance',)
-            event_label: 'Page Load',)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
             value: Math.round(_perfData.loadEventEnd - _perfData.fetchStart),
           })
         }
@@ -202,15 +148,6 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
       {children}{process.env.NODE_ENV === 'development' && (
 =======
       {children},
-<<<<<<< HEAD
-    {process.env.NODE_ENV === 'development' && ()
-=======
-    {process.env.NODE_ENV === 'development' && (
-        <div className="seo-debug" style=
-          position: 'fixed',
-          top: '10px',)
-          left: '10px',)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
           background: 'rgba(0,0,0,0.8)',
           color: 'white',
           padding: '10px',
@@ -218,21 +155,6 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
           fontSize: '12px',
           zIndex: 1000,
           maxWidth: '300px'
-<<<<<<< HEAD
-        }}></div>
-          <div>SEO Score: {seoScore}/100</div>
-          {recommendations.length > 0 && ()
-                {recommendations.map((rec, index) => ()
-=======
-        }>
-          </div></div><div>SEO Score: {seoScore}/100</div></div></div>
-          {recommendations.length > 0 && (
-            <div>
-              </div></div><div>Recommendations:</div></div></div>)
-              <ul style= margin: '5px 0', paddingLeft: '15px' }>)
-                {recommendations.map((rec, index) => ()
-                  <li key=index}>{rec}</li>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                 ))}
               </ul>
             </div>

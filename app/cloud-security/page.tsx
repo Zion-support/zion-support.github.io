@@ -78,17 +78,6 @@ const CloudSecurityPage: React.FC = () => {
               Experience the power of our cloud security solutions for your business.
             </p></p></p>
           </div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6" /></div>
-            {benefits.map((benefit, index) => ()
-=======
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              </div></div><div key=index} className="flex items-center space-x-3">
-                </div></div><CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
-                <span className="text-gray-300">{benefit}</span></span></span>)
-              </div>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
             ))}
           </div>
         </div>

@@ -46,11 +46,6 @@ private applyConfig(): void {if (typeof document === 'undefined') return;}
     if (this.config.section) {this.updateMetaTag('article:section', this.config.section)}}
 // Update tags;
     if (this.config.tags) {
-<<<<<<< HEAD
-    this.config.tags.forEach()
-=======
-    this.config.tags.forEach(tag => )
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
         this.addMetaTag('article:tag', tag)
   }
       })
@@ -95,11 +90,6 @@ if (this.config.ogImage) {}
       ogTags.push({ property: 'og:image', content: this.config.ogImage })
 >>>>>>> origin/main
     }
-<<<<<<< HEAD
-ogTags.forEach()
-=======
-ogTags.forEach(tag => {)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     this.updateMetaTagByProperty(tag.property, tag.content)
   }
 <<<<<<< HEAD
@@ -123,11 +113,6 @@ if (this.config.twitterImage) {}
       twitterTags.push({ name: 'twitter:image', content: this.config.twitterImage })
 >>>>>>> origin/main
     }
-<<<<<<< HEAD
-twitterTags.forEach()
-=======
-twitterTags.forEach(tag => {)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     this.updateMetaTag(tag.name, tag.content)
   }
     })
@@ -144,13 +129,6 @@ private updateMetaTagByProperty(property: string, content: string): void {
   }
 private addMetaTag(name: string, content: string): void {,}
     if (typeof document === 'undefined') return;
-<<<<<<< HEAD
-const meta = const meta = const meta = document.createElement('meta')
-    meta.name = name
-=======
-const meta = document.createElement('meta')
-    meta.name = name;
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     meta.content = content,
     document.head.appendChild(meta)
   }

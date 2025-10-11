@@ -7,13 +7,6 @@ const DocsPage: React.FC = () => {,
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-<<<<<<< HEAD
-  const categories = const categories = const categories = [
-    { id: 'all', name: 'All Documentation', icon: BookOpen },
-=======
-  const categories = [
-     id: 'all', name: 'All Documentation', icon: BookOpen },
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     { id: 'getting-started', name: 'Getting Started', icon: Zap },
     { id: 'ai-services', name: 'AI Services', icon: Brain },
     { id: 'it-services', name: 'IT Services', icon: Cloud },
@@ -187,143 +180,26 @@ const DocsPage: React.FC = () => {,
           </div>
 
           {/* Quick Links */}
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12" /></div>
-            {quickLinks.map((link, index) => ()
-=======
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
-            {quickLinks.map((link, index) => (
-              </div></div><a;
-                key=index}
-                href={link.url}
-                className="cyber-card-enhanced p-6 text-center group hover:scale-105 transition-all duration-300"
-              >
-                <link.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4 group-hover:text-cyan-300" />
-                <h3 className="text-lg font-semibold text-white group-hover:text-cyan-300">{link.title}</h3></h3></h3>)
-              </a>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
             ))}
           </div>
 
           {/* Category Filter */}
-<<<<<<< HEAD
-          <div className="mb-8" /></div>
-            <h2 className="text-2xl font-bold text-white mb-6">Browse by Category</h2>
-            <div className="flex flex-wrap gap-4" /></div>
-              {categories.map((category) => ()
-=======
-          <div className="mb-8">
-            </div></div><h2 className="text-2xl font-bold text-white mb-6">Browse by Category</h2></h2></h2>
-            <div className="flex flex-wrap gap-4">
-              {categories.map((category) => (
-                </div></div><button;)
-                  key=category.id})
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                   onClick={() => setSelectedCategory(category.id)}
                   className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 $
                     selectedCategory === category.id;
                       ? 'bg-cyan-500 text-white'
                       : 'bg-slate-800 text-gray-300 hover: bg-slate-700',}`}
                 >
-<<<<<<< HEAD
-                  <category.icon className="w-5 h-5" /></category>
-                  <span>{category.name}</span>
-=======
-                  </button></button><category.icon className="w-5 h-5" />
-                  <span>{category.name}</span></span></span>
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                 </button>
               ))}
             </div>
           </div>
 
           {/* Documentation List */}
-<<<<<<< HEAD
-          <div className="space-y-6" /></div>
-            {searchResults.map((doc) => ()
-                    {doc.sections.map((section, sectionIndex) => ()
-=======
-          <div className="space-y-6">
-            {searchResults.map((doc) => (
-              </div></div><div key=doc.id} className="cyber-card-enhanced p-8 group hover:scale-105 transition-all duration-300">
-                </div></div><div className="flex items-start justify-between mb-4">
-                  </div></div><div className="flex-1">
-                    </div></div><h3 className="text-2xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                      {doc.title}
-                    </h3></h3></h3>
-                    <p className="text-gray-300 mb-4 leading-relaxed">
-                      {doc.description}
-                    </p></p></p>
-                    <div className="flex items-center space-x-6 text-sm text-gray-400 mb-4">
-                      </div></div><span className="flex items-center">
-                        </span></span><FileText className="w-4 h-4 mr-1" />
-                        {doc.readTime} read;
-                      </span>
-                      <span className="flex items-center">
-                        </span></span><Settings className="w-4 h-4 mr-1" />
-                        {doc.difficulty}
-                      </span>
-                      <span className="flex items-center">
-                        </span></span><Database className="w-4 h-4 mr-1" />
-                        Updated {doc.lastUpdated}
-                      </span>
-                    </div>
-                  </div>
-                  <div className="ml-6">
-                    </div></div><span className={`px-3 py-1 rounded text-xs font-semibold $
-                      doc.difficulty === 'Beginner' 
-                        ? 'bg-green-600 text-white' 
-                        : doc.difficulty === 'Intermediate'
-                        ? 'bg-yellow-600 text-white'
-                        : 'bg-red-600 text-white'
-                    }`}>
-                      {doc.difficulty}
-                    </span></span></span>
-                  </div>
-                </div>
-                
-                <div className="mb-6">
-                  </div></div><h4 className="text-white font-semibold mb-3">Sections:</h4>)
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">)
-                    {doc.sections.map((section, sectionIndex) => (
-                      </div></div><div key=sectionIndex} className="flex items-center text-gray-300 text-sm">
-                        </div></div><CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                        {section})
-                      </div>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                     ))}
                   </div>
                 </div>
 
-<<<<<<< HEAD
-                <div className="flex items-center justify-between" /></div>
-                  <div className="flex space-x-4" /></div>
-                    <a href={`/docs/${doc.id}`}
-                      className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 flex items-center" /></a>
-                      Read Guide
-                      <ArrowRight className="w-4 h-4 ml-2" / /></ArrowRight>
-                    </a>
-                    <a href={`/docs/${doc.id}/download`}
-                      className="border-2 border-cyan-400 text-cyan-400 px-6 py-2 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center" /></a>
-                      <Download className="w-4 h-4 mr-2" / /></Download>
-                      Download PDF
-=======
-                <div className="flex items-center justify-between">
-                  </div></div><div className="flex space-x-4">
-                    </div></div><a;
-                      href={`/docs/$doc.id}`}
-                      className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 flex items-center"
-                    >
-                      Read Guide;
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </a>
-                    <a;
-                      href={`/docs/$doc.id}/download`}
-                      className="border-2 border-cyan-400 text-cyan-400 px-6 py-2 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center"
-                    >
-                      <Download className="w-4 h-4 mr-2" />
-                      Download PDF;
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                     </a>
                   </div>
                 </div>
@@ -362,85 +238,15 @@ const DocsPage: React.FC = () => {,
 =======
           )},
     {/* Additional Resources */}
-<<<<<<< HEAD
-          <div className="cyber-card-enhanced p-8 mt-16" /></div>
-            <h2 className="text-2xl font-bold text-white mb-6">Additional Resources</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" /></div>
-              <a href="/tutorials"
-                className="flex items-center space-x-3 p-4 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300" /></a>
-                <BookOpen className="w-8 h-8 text-cyan-400" / /></BookOpen>
-                <div></div>
-                  <div className="text-white font-semibold">Tutorials</div>
-                  <div className="text-gray-300 text-sm">Step-by-step guides</div>
-=======
-          <div className="cyber-card-enhanced p-8 mt-16">
-            </div></div><h2 className="text-2xl font-bold text-white mb-6">Additional Resources</h2></h2></h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              </div></div><a;
-                href="/tutorials" className="flex items-center space-x-3 p-4 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300"
-              >
-                <BookOpen className="w-8 h-8 text-cyan-400" />
-                <div>
-                  </div></div><div className="text-white font-semibold">Tutorials</div></div></div>
-                  <div className="text-gray-300 text-sm">Step-by-step guides</div></div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                 </div>
                 <ArrowRight className="w-5 h-5 text-gray-400 ml-auto" / /></ArrowRight>
               </a>
-<<<<<<< HEAD
-              <a href="/api"
-                className="flex items-center space-x-3 p-4 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300" /></a>
-                <Code className="w-8 h-8 text-green-400" / /></Code>
-                <div></div>
-                  <div className="text-white font-semibold">API Reference</div>
-                  <div className="text-gray-300 text-sm">Complete API documentation</div>
-=======
-              <a;
-                href="/api" className="flex items-center space-x-3 p-4 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300"
-              >
-                <Code className="w-8 h-8 text-green-400" />
-                <div>
-                  </div></div><div className="text-white font-semibold">API Reference</div></div></div>
-                  <div className="text-gray-300 text-sm">Complete API documentation</div></div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                 </div>
                 <ArrowRight className="w-5 h-5 text-gray-400 ml-auto" / /></ArrowRight>
               </a>
-<<<<<<< HEAD
-              <a href="/community"
-                className="flex items-center space-x-3 p-4 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300" /></a>
-                <Users className="w-8 h-8 text-purple-400" / /></Users>
-                <div></div>
-                  <div className="text-white font-semibold">Community</div>
-                  <div className="text-gray-300 text-sm">Developer community</div>
-=======
-              <a;
-                href="/community" className="flex items-center space-x-3 p-4 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300"
-              >
-                <Users className="w-8 h-8 text-purple-400" />
-                <div>
-                  </div></div><div className="text-white font-semibold">Community</div></div></div>
-                  <div className="text-gray-300 text-sm">Developer community</div></div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                 </div>
                 <ArrowRight className="w-5 h-5 text-gray-400 ml-auto" / /></ArrowRight>
               </a>
-<<<<<<< HEAD
-              <a href="/support"
-                className="flex items-center space-x-3 p-4 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300" /></a>
-                <Shield className="w-8 h-8 text-orange-400" / /></Shield>
-                <div></div>
-                  <div className="text-white font-semibold">Support</div>
-                  <div className="text-gray-300 text-sm">Get help and support</div>
-=======
-              <a;
-                href="/support" className="flex items-center space-x-3 p-4 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300"
-              >
-                <Shield className="w-8 h-8 text-orange-400" />
-                <div>
-                  </div></div><div className="text-white font-semibold">Support</div></div></div>
-                  <div className="text-gray-300 text-sm">Get help and support</div></div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                 </div>
                 <ArrowRight className="w-5 h-5 text-gray-400 ml-auto" / /></ArrowRight>
               </a>

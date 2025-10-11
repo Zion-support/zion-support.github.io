@@ -76,11 +76,6 @@ class EnhancedAnalytics {}}private queue: AnalyticsEvent[] = [],}
       ...config}
     }
     // Track initialization;
-<<<<<<< HEAD
-    this.trackEvent()
-=======
-    this.trackEvent({)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     );
       category: 'System'),
       action: 'Analytics Initialized'),
@@ -153,30 +148,10 @@ class EnhancedAnalytics {}}private queue: AnalyticsEvent[] = [],}
     }
   }
   private sendToGtag(event: AnalyticsEvent): void {}
-<<<<<<< HEAD
-    if ()
-=======
-    if (;
-      typeof window !== 'undefined' &&;
-      (;)
-        window as {})
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
           gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void;}
         }
       ).gtag;
     ) {}
-<<<<<<< HEAD
-      ()
-          gtag: (command: string, action: string, parameters: Record<string, unknown>) => void;}
-        }
-      ).gtag()
-=======
-      (;)
-        window as unknown as {})
-          gtag: (command: string, action: string, parameters: Record<string, unknown>) => void;}
-        }
-      ).gtag('event', event.action, {)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     );
         event_category: event.category;),
         event_label: event.label),
@@ -238,11 +213,6 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
   }
   public initialize(config?: {userId?: string; userType?: string)}): void {/* TODO: Fix JSX expression */,}}}
     // Track initialization;
-<<<<<<< HEAD
-    this.trackEvent()
-=======
-    this.trackEvent({/* TODO: Fix JSX expression */})
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       })
     })
   }
@@ -334,11 +304,6 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
 =======
       metadata: {}
         rating}
-<<<<<<< HEAD
-  public trackPerformance()
-=======
-  public trackPerformance(metri,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   c: string, valu);
   e: number, rating?: string): void {/* TODO: Fix JSX expression */,}}}
     })
@@ -449,15 +414,6 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
     sessionId: string,
   }
     userProperties: UserProperties,}
-<<<<<<< HEAD
-  }, {
-    return {
-      queueSize: this.queue.length
-=======
-  } {
-    return;
-      queueSize: this.queue.length;,
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       offlineQueueSize: this.offlineQueue.length,
       sessionId: this.sessionId;
   }

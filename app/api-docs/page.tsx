@@ -6,11 +6,6 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 export default function APIDocsPage() {const [copiedCode, setCopiedCode] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
-<<<<<<< HEAD
-  const copyToClipboard = const copyToClipboard = const copyToClipboard = (code: string, id: string) => {
-=======
-  const copyToClipboard = (code: string, id: string) => 
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     navigator.clipboard.writeText(code)
     setCopiedCode(id),
     setTimeout(() => setCopiedCode(null), 2000)}const apiEndpoints = [
@@ -25,13 +20,6 @@ export default function APIDocsPage() {const [copiedCode, setCopiedCode] = useSt
           code: `curl -X POST "https://api.ziontechgroup.com/ai/text-analysis" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
-<<<<<<< HEAD
-  -d '{;
-    "text": "Your text to analyze",;
-=======
-  -d '
-    "text": "Your text to analyze",
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     "features": ["sentiment", "entities", "key_phrases"];
   }'`
 >>>>>>> origin/main
@@ -256,39 +244,6 @@ export default function APIDocsPage() {const [copiedCode, setCopiedCode] = useSt
         </div>
       </section>
       {/* CTA Section */}
-<<<<<<< HEAD
-      <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700" /></section>
-        <div className="max-w-4xl mx-auto text-center" /></div>
-          <h2 className="text-4xl md: text-5xl font-bold text-white mb-6" /></h2>
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl text-purple-100 mb-8" /></p>
-            Start building with our APIs today and create amazing applications.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center" /></div>
-            <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors" /></button>
-              Get API Key
-  </
-            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors" /></button>
-              View SDKs
-  </
-=======
-      <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
-        </section></section><div className="max-w-4xl mx-auto text-center">
-          </div></div><h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
-            Ready to Get Started?
-          </h2></h2></h2>
-          <p className="text-xl text-purple-100 mb-8">
-            Start building with our APIs today and create amazing applications.
-          </p></p></p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            </div></div><button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">
-              Get API Key;
-  </button></button></
-            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">
-              View SDKs;
-  </button></button></
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
           </div>
         </div>
       </section>

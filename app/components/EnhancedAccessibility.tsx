@@ -14,6 +14,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     reducedMotion: false
   });
 
+const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ children }) => {
   useEffect(() => {
     // Apply accessibility settings
     if (settings.highContrast) {

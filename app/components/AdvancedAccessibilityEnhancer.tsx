@@ -11,15 +11,6 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
     // Check for user's motion preferences;
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
     setIsReducedMotion(mediaQuery.matches)
-<<<<<<< HEAD
-    // Check for high contrast preference
-    const highContrastQuery = const highContrastQuery = const highContrastQuery = window.matchMedia('(prefers-contrast: high)');
-    setIsHighContrast(highContrastQuery.matches),;
-=======
-    // Check for high contrast preference;
-    const highContrastQuery = window.matchMedia('(prefers-contrast: high)')
-    setIsHighContrast(highContrastQuery.matches),
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     // Apply accessibility enhancements;
     document.documentElement.setAttribute('data-accessibility-enhanced', 'true');
     if (isHighContrast) 
@@ -28,15 +19,6 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
     if (isReducedMotion) {
     document.documentElement.classList.add('reduced-motion')
   }
-<<<<<<< HEAD
-    // Add keyboard navigation support
-    const handleKeyDown = const handleKeyDown = const handleKeyDown = (event: KeyboardEvent) => {
-    if (event.key === 'Tab') {
-=======
-    // Add keyboard navigation support;
-    const handleKeyDown = (event: KeyboardEvent) => {
-    if (event.key === 'Tab') 
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
         document.body.classList.add('keyboard-navigation')
   }
     }
@@ -64,21 +46,6 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
     setFontSize(size),
     document.documentElement.setAttribute('data-font-size', size)
   }
-<<<<<<< HEAD
-  return ()
-=======
-  return (
-    <div className="accessibility-enhanced">
-      </div></div><div className="accessibility-controls" style={ position: 'fixed', top: '10px', right: '10px', zIndex: 1000 }>
-        </div></div><button;
-          onClick={toggleHighContrast}
-          className="accessibility-button"
-          aria-label="Toggle high contrast"
-        >
-          {isHighContrast ? 'Normal Contrast' : 'High Contrast'}
-        </button></button></button>
-        <div className="font-size-controls">)</div></div><button)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
             onClick={() => changeFontSize('small')}
             className="accessibility-button"
             aria-label="Small font size"

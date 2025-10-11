@@ -10,19 +10,6 @@ interface SEOOptimizerProps {title?: string;}
   structuredData?: object;
   children: React.ReactNode;
   }
-<<<<<<< HEAD
-const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ()
-=======
-const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Professional AI and IT solutions for your business. Advanced technology, expert support, and proven results.',
-  keywords = 'AI solutions, IT services, technology, business solutions, Zion Tech Group',
-  canonicalUrl,
-  ogImage = '/images/og-image.jpg',
-  twitterCard = 'summary_large_image',
-  structuredData,)
-  children)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 }) => {
     const [seoScore, setSeoScore] = useState(0);
   const [recommendations, setRecommendations] = useState<string[]>([]);
@@ -82,13 +69,6 @@ const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
   useEffect(() => {
     analyzeSEO()
   }, [analyzeSEO]);
-<<<<<<< HEAD
-  const generateStructuredData = const generateStructuredData = const generateStructuredData = () => {
-    const defaultStructuredData = {
-=======
-  const generateStructuredData = () => {
-    const defaultStructuredData = 
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Zion Tech Group",
@@ -172,21 +152,6 @@ const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
           fontSize: '12px',
           zIndex: 1000,
           maxWidth: '300px'
-<<<<<<< HEAD
-        }}></div>
-          <div>SEO Score: {seoScore}/100</div>
-          {recommendations.length > 0 && ()
-                {recommendations.map((rec, index) => ()
-=======
-        }>
-          </div></div><div>SEO Score: {seoScore}/100</div></div></div>
-          {recommendations.length > 0 && (
-            <div>
-              </div></div><div>Recommendations:</div></div></div>)
-              <ul style= margin: '5px 0', paddingLeft: '15px' }>)
-                {recommendations.map((rec, index) => ()
-                  <li key=index}>{rec}</li>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                 ))}
               </ul>
             </div>

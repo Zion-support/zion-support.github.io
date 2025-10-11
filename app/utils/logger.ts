@@ -246,12 +246,6 @@ getLogs(level?: LogLevel): Array<{level: LogLevel,
   /**;
    * Output to console with appropriate styling;
    */;
-<<<<<<< HEAD
-  private outputToConsole()
-=======
-  private outputToConsole(leve,)
-  l: LogLevel, messag,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   e: string, entr);
   y: LogMetadata): void {/* TODO: Fix JSX expression */,}}}
   }
@@ -275,13 +269,6 @@ getLogs(level?: LogLevel): Array<{level: LogLevel,
   }
     //   headers: {// 'Content-Type': 'application/json'})
     //   body: JSON.stringify(entry),
-<<<<<<< HEAD
-    // }).catch()
-    )
-  }
-=======
-    // }).catch(err => {}
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     //   // })
   }
 exportLogs(): string {

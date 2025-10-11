@@ -8,63 +8,12 @@ interface OptimizedLoadingSpinnerProps {size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   fullScreen?: boolean;
   }
 }
-<<<<<<< HEAD
-const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo()
-  }) => {
-    const sizeClasses = const sizeClasses = useMemo()
-      () => ()
-=======
-const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(,
-  ({
-    size = 'md',
-    variant = 'spinner',
-    text = 'Loading...',
-    className = '',
-    color = 'blue',
-    fullScreen = false,)
-  })
-  }) => {
-    const sizeClasses = useMemo(;)
-      () => (
-        xs: 'h-3 w-3',
-        sm: 'h-4 w-4',
-        md: 'h-8 w-8',
-        lg: 'h-12 w-12',
-        xl: 'h-16 w-16',)
-  })
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       }),
       [];
     );
-<<<<<<< HEAD
-const textSizeClasses = const textSizeClasses = useMemo()
-      () => ()
-=======
-const textSizeClasses = useMemo(;)
-      () => ({
-    xs: 'text-xs',
-        sm: 'text-sm',
-        md: 'text-base',
-        lg: 'text-lg',
-        xl: 'text-xl',)
-  })
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       }),
       [];
     );
-<<<<<<< HEAD
-const colorClasses = const colorClasses = useMemo()
-      () => ()
-=======
-const colorClasses = useMemo(;)
-      () => ({
-    blue: 'border-blue-600 bg-blue-600',
-        gray: 'border-gray-600 bg-gray-600',
-        green: 'border-green-600 bg-green-600',
-        red: 'border-red-600 bg-red-600',
-        purple: 'border-purple-600 bg-purple-600',)
-  })
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       }),
       [];
     );
@@ -154,17 +103,6 @@ case 'bars':;
           );
 case 'spinner':;
         default:  
-<<<<<<< HEAD
-          return ()
-=======
-          return (
-            <div,
-
-              className={`$baseClasses} rounded-full border-2 border-t-transparent animate-spin`}
-              role='status';
-              aria-label='Loading';)
-            /></div></div></div>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
           );
       }
     }, [size, variant, color, sizeClasses, colorClasses]);

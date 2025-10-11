@@ -1,5 +1,5 @@
 'use client';
-import React, { memo } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users, ArrowRight } from 'lucide-react';
 
@@ -80,6 +80,7 @@ const Footer: React.FC = memo(() => {
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-5698
   ];
 
+const Footer: React.FC = () => {
   return (
     <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
       {/* Futuristic Background Effects */}
@@ -256,8 +257,6 @@ const Footer: React.FC = memo(() => {
       </div>
     </footer>
   );
-});
-
-Footer.displayName = 'Footer';
+};
 
 export default Footer;

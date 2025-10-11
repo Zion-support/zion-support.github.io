@@ -182,11 +182,6 @@ export class ErrorReporter {/* TODO: Fix JSX expression */,}}g: Partial<ErrorRep
    * Get console styling based on severity;
    */;
   private getConsoleStyle(severity: ErrorReport['severity']): string {
-<<<<<<< HEAD
-    const styles = const styles = const styles = {,
-=======
-    const styles = ,
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
   private getConsoleStyle(severity: ErrorReport['severity']): string {}
     const styles = {}
@@ -258,13 +253,6 @@ export class ErrorReporter {/* TODO: Fix JSX expression */,}}g: Partial<ErrorRep
     uniqueErrors: number,
   }
     errorsByType: Record<string>}
-<<<<<<< HEAD
-  }, {
-    return {
-=======
-  } {
-    return;
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       totalErrors: this.errorQueue.length,
       uniqueErrors: this.errorCount.size;
   }
@@ -322,37 +310,11 @@ export class ErrorReporter {/* TODO: Fix JSX expression */,}}g: Partial<ErrorRep
 /**;
  * Convenience function to report errors;
  */;
-<<<<<<< HEAD
-export const reportError = const reportError = ()
-): void => {};
-=======
-export const reportError = (;
-  error: Error,
-  severity?: ErrorReport['severity'],)
-  context?: Record<string>)
-): void => {}
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   ErrorReporter.getInstance().reportError(error, severity, context);}
 }
 /**;
  * React error boundary helper;
  */;
-<<<<<<< HEAD
-export const captureComponentError = const captureComponentError = ()
-): void => {
-    ,;
-  const report = const report = ErrorReporter.getInstance(),;
-  report.reportError(error, 'high', {);
-=======
-export const captureComponentError = (;
-  error: Error,
-  errorInfo: { componentStack: string },)
-  componentName: string,)
-): void => {
-    ,
-  const report = ErrorReporter.getInstance(),
-  report.reportError(error, 'high', );
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     componentName);
   componentName: string;
   }
@@ -365,13 +327,6 @@ export const captureComponentError = (;
   })
 }
 export default ErrorReporter;
-<<<<<<< HEAD
-export const reportError = const reportError = const reportError = ();
-=======
-export const reportError = (erro,
-  r: Error,)
-  severity?: ErrorReport['severity'],)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   context?: Record<string, unknown></string>);
 ): void => {/* TODO: Fix JSX expression */,}}
 /**;

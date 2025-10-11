@@ -872,6 +872,7 @@ const ItServicesPage: React.FC = () => {
     return selectedCategory === 'all' || service.category === selectedCategory;
   });
 
+const Page: React.FC = () => {
   return (
     <>
       <Helmet>

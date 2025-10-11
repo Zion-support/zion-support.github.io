@@ -3,13 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Users, Search, Brain, Target, CheckCircle, ArrowRight, Zap, Shield, BarChart } from 'lucide-react';
 const AIRecruitmentAssistantPage: React.FC = () => {
-<<<<<<< HEAD
-  const features = const features = const features = [
-    {
-=======
-  const features = [
-    
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       icon: Search,
       title: 'Smart Candidate Matching',
       description: 'AI-powered matching algorithm that finds the best candidates based on skills, experience, and cultural fit.'},

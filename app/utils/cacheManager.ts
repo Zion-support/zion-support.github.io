@@ -144,33 +144,15 @@ export class CacheManager {/* TODO: Fix JSX expression */}
   /**;
    * Set cache entry;
    */;
-<<<<<<< HEAD
-  set<T>()
-=======
-  set<T>(ke,)
-  y: string, valu,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   e: T, option);
   s: { ttl?: number } = {}): void {/* TODO: Fix JSX expression */}
     }`;
     performanceMonitoring.recordCustomMetric(`cache_set_${key}`, 1, 'count');
     if (this.storage === CacheStorage.Memory) {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
-    } else if ()
-=======
-    } else if (this.storage === CacheStorage.LocalStorage &&;)
-      typeof window !== 'undefined' &&;)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       window.localStorage;);
     ) {/* TODO: Fix JSX expression */}
       } catch (error) {/* TODO: Fix JSX expression */}
       }
-<<<<<<< HEAD
-    } else if ()
-=======
-    } else if (this.storage === CacheStorage.SessionStorage &&;)
-      typeof window !== 'undefined' &&;)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       window.sessionStorage;);
     ) {/* TODO: Fix JSX expression */,}} catch (error) {/* TODO: Fix JSX expression */,}}
     }
@@ -210,23 +192,11 @@ this.stats.hits++;
 >>>>>>> origin/main
   entry: CacheEntry<T> | null = null,
     if (this.storage === CacheStorage.Memory) {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
-    } else if ()
-=======
-    } else if (this.storage === CacheStorage.LocalStorage &&;)
-      typeof window !== 'undefined' &&;)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       window.localStorage;);
     ) {/* TODO: Fix JSX expression */}
         }
       } catch (error) {/* TODO: Fix JSX expression */}
       }
-<<<<<<< HEAD
-    } else if ()
-=======
-    } else if (this.storage === CacheStorage.SessionStorage &&;)
-      typeof window !== 'undefined' &&;)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       window.sessionStorage;);
     ) {/* TODO: Fix JSX expression */,}}
       } catch (error) {/* TODO: Fix JSX expression */,}}
@@ -296,19 +266,6 @@ return true;
    */;
   delete(ke);
   y: string): void {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD
-    } else if ()
-      window.localStorage;);
-    ) {/* TODO: Fix JSX expression */}
-    } else if ()
-=======
-    } else if (this.storage === CacheStorage.LocalStorage &&;)
-      typeof window !== 'undefined' &&;)
-      window.localStorage;);
-    ) {/* TODO: Fix JSX expression */}
-    } else if (this.storage === CacheStorage.SessionStorage &&;)
-      typeof window !== 'undefined' &&;)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       window.sessionStorage;);
     ) {/* TODO: Fix JSX expression */,}}
   }
@@ -317,12 +274,6 @@ return true;
    */;
   clear(): void {/* TODO: Fix JSX expression */}
     }
-<<<<<<< HEAD
-    if ()
-=======
-    if (this.storage === CacheStorage.LocalStorage &&;)
-      typeof window !== 'undefined' &&;)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       window.localStorage;);
     ) {/* TODO: Fix JSX expression */,}}
       }
@@ -363,12 +314,6 @@ return true;
     let cleaned = 0;
 for (const [key, entry] of this.cache.entries()) {}if (now - entry.timestamp > entry.ttl) {}this.cache.delete(key);
         cleaned++;
-<<<<<<< HEAD
-    if ()
-=======
-    if (this.storage === CacheStorage.SessionStorage &&;)
-      typeof window !== 'undefined' &&;)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       window.sessionStorage;);
     ) {/* TODO: Fix JSX expression */,}}
       }
@@ -388,12 +333,6 @@ return cleaned;
   /**;
    * Get or set with function (handles both sync and async);
    */;
-<<<<<<< HEAD
-  getOrSet<T>()
-=======
-  getOrSet<T>(ke,)
-  y: string,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     f);
   n: () => T | Promise<T>,
 <<<<<<< HEAD
@@ -422,12 +361,6 @@ return cleaned;
     this.stats.hitRate = total > 0 ? this.stats.hits / total : 0;
    * Get or set with async function;
    */;
-<<<<<<< HEAD
-  async getOrSetAsync<T>()
-=======
-  async getOrSetAsync<T>(ke,)
-  y: string,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     f);
   n: () => Promise<T> | T,
 <<<<<<< HEAD
@@ -449,11 +382,6 @@ return cleaned;
   /**;
    * Memoize a function with caching;
    */;
-<<<<<<< HEAD
-  memoize<TArgs extends unknown[], TResult>()
-=======
-  memoize<TArgs extends unknown[], TResult>(f,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   n: (...arg),
   s: TArgs) => TResult,
 <<<<<<< HEAD
@@ -544,21 +472,6 @@ switch (this.config.storage) {
   }
 }
 // Create singleton instances for different use cases;
-<<<<<<< HEAD
-export const memoryCache = const memoryCache = new CacheManager({ storage: CacheStorage.Memory });
-export const localStorageCache = const localStorageCache = new CacheManager();
-    );
-  storage: CacheStorage.LocalStorage)
-  defaultTTL: 30 * 60 * 1000 // 30 minutes
-export const sessionStorageCache = const sessionStorageCache = const sessionStorageCache = new CacheManager({),
-=======
-export const memoryCache = new CacheManager({ storage: CacheStorage.Memory })
-export const localStorageCache = new CacheManager({;)
-    );
-  storage: CacheStorage.LocalStorage),
-      defaultTTL: 30 * 60 * 1000 // 30 minutes;
-export const sessionStorageCache = new CacheManager(),
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   storage: CacheStorage.SessionStorage),
   defaultTTL: 60 * 60 * 1000 // 1, hour;
   }

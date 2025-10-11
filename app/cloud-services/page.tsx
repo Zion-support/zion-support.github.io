@@ -5,13 +5,6 @@ import {Helmet}}from 'react-helmet-async';
 import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Cloud, Server, Database, Lock}}from 'lucide-react';
 
 const CloudServicesPage: React.FC = () => {
-<<<<<<< HEAD
-  const services = const services = const services = [
-    {
-=======
-  const features = [
-    
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       icon: Cloud,
       title: 'Cloud Migration',;
       description: 'Seamlessly migrate your infrastructure to the cloud with zero downtime and maximum security.',;

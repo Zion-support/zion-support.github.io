@@ -73,15 +73,6 @@ export const corsConfig = const corsConfig = const corsConfig = {
   allowedHeaders: ['Content-Type', 'Authorization'],
 >>>>>>> origin/main
   credentials: true,
-<<<<<<< HEAD
-  maxAge: 86400, // 24 hours
-  };
-};
-=======
-  maxAge: 86400, // 24, hours;
-  }
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 /**;
  * Session configuration;
  */;
@@ -89,15 +80,6 @@ export const sessionConfig = const sessionConfig = const sessionConfig = {
     secret: process.env.SESSION_SECRET || 'your-secret-key-change-in-production',
   resave: false,
   saveUninitialized: false,
-<<<<<<< HEAD
-  cookie: {
-    secure: process.env['NODE_ENV'] === 'production',;
-    httpOnly: true,;
-=======
-  cookie:  ,
-      secure: process.env['NODE_ENV'] === 'production',
-    httpOnly: true,
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     maxAge: 24 * 60 * 60 * 1000, // 24 hours;
     sameSite: 'strict' as const,},
 }

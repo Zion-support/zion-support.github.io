@@ -4,17 +4,6 @@ import {Helmet}}from 'react-helmet-async';
 import {ChevronDown, ChevronUp}}from 'lucide-react';
 const FAQPage: React.FC = () => {,
   const [openItems, setOpenItems] = useState<number[]>([]);
-<<<<<<< HEAD
-  const toggleItem = const toggleItem = const toggleItem = (index: number) => {
-    setOpenItems()
-      prev.includes(index) ;
-        ? prev.filter(item => item !== index);
-=======
-  const toggleItem = (index: number) => 
-    setOpenItems(prev => )
-      prev.includes(index) 
-        ? prev.filter(item => item !== index)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
         : [...prev, index];
     );
   }

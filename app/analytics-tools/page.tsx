@@ -3,13 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 const AnalyticsToolsPage: React.FC = () => {
-<<<<<<< HEAD
-  const features = const features = const features = [
-    {
-=======
-  const features = [
-    
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       icon: Brain,
       title: 'AI-Powered Analytics',
       description: 'Advanced AI technology to transform your data analysis and business intelligence',},
@@ -100,17 +93,6 @@ const AnalyticsToolsPage: React.FC = () => {
               Experience the power of our analytics tools for your business.
             </p></p></p>
           </div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6" /></div>
-            {benefits.map((benefit, index) => ()
-=======
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              </div></div><div key=index} className="flex items-center space-x-3">
-                </div></div><CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
-                <span className="text-gray-300">{benefit}</span></span></span>)
-              </div>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
             ))}
           </div>
         </div>

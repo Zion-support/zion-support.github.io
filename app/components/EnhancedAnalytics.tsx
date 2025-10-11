@@ -31,7 +31,7 @@ export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ chi
   }, []);
 
   return (
-    <AnalyticsContext.Provider value={{ track, page, identify }}>
+    <AnalyticsContext.Provider value={{ trackEvent, trackPageView }}>
       {children}
     </AnalyticsContext.Provider>
   );

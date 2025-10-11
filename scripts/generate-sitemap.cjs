@@ -97,8 +97,38 @@ const generateSitemap = () => {
 
   sitemap += `</urlset>`;
 
-  return sitemap;
-};
+  const publicPath = path.join(__dirname, '../public');
+  if (!fs.existsSync(publicPath)) {
+    fs.mkdirSync(publicPath, { recursive: true });
+  }
+
+  fs.writeFileSync(path.join(publicPath, 'sitemap.xml'), sitemap);
+  console.log('Sitemap generated successfully');
+}
+
+// Generate robots.txt
+function generateRobots() {
+  const robots = `User-agent: *
+Allow: /
+
+Sitemap: ${siteUrl}/sitemap.xml
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+
+# Allow important pages
+Allow: /ai-services/
+Allow: /it-services/
+Allow: /blog/
+Allow: /case-studies/`;
+
+  const publicPath = path.join(__dirname, '../public');
+  if (!fs.existsSync(publicPath)) {
+    fs.mkdirSync(publicPath, { recursive: true });
+  }
 
 // Write sitemap to file
 const sitemap = generateSitemap();

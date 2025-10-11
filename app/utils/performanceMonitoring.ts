@@ -104,17 +104,6 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
       paintObserver.observe({type: 'paint', buffered: true ,)})
       this.observers.push(paintObserver);
       // Observe LCP;
-<<<<<<< HEAD
-      const lcpObserver = const lcpObserver = const lcpObserver = new PerformanceObserver((list) => {
-    // Observe LCP
-  };
-      const lcpObserver = new PerformanceObserver((list) => {};
-=======
-      const lcpObserver = new PerformanceObserver((list) => {
-    // Observe, LCP;
-  }
-      const lcpObserver = new PerformanceObserver((list) => {}
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
         const entries = list.getEntries();
         const lastEntry = const lastEntry = const lastEntry = entries[entries.length - 1];
         if (lastEntry) {};
@@ -131,11 +120,6 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
 =======
       const clsObserver = new PerformanceObserver((list) => {;
     // Observe CLS;
-<<<<<<< HEAD
-      let clsValue = let clsValue = let clsValue = 0
-=======
-      let clsValue = 0;
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
       const clsObserver = new PerformanceObserver((list) => {}
         list.getEntries().forEach((entry) => {};
@@ -149,13 +133,6 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
       clsObserver.observe({type: 'layout-shift', buffered: true ,)})
       this.observers.push(clsObserver);
       // Observe FID;
-<<<<<<< HEAD
-      const fidObserver = const fidObserver = const fidObserver = new PerformanceObserver((list) => {
-    // Observe FID
-=======
-      const fidObserver = new PerformanceObserver((list) => {
-    // Observe, FID;
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
       const fidObserver = new PerformanceObserver((list) => {};
         list.getEntries().forEach((entry) => {};
@@ -165,13 +142,6 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
       fidObserver.observe({type: 'first-input', buffered: true ,)})
       this.observers.push(fidObserver);
       // Observe navigation timing for TTFB;
-<<<<<<< HEAD
-      const navObserver = const navObserver = new PerformanceObserver((list) => {;
-    list.getEntries().forEach((entry) => {;
-=======
-      const navObserver = new PerformanceObserver((list) => {
-    list.getEntries().forEach((entry) => ;
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
           const navEntry = entry as PerformanceNavigationTiming;
       // Observe navigation timing for, TTFB;
   }
@@ -252,11 +222,6 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
     logger.info(`Web Vital: ${name,)}`, 'PerformanceMonitoring', {value, rating})
     // Send to analytics;
     this.sendToAnalytics(metric);
-<<<<<<< HEAD
-  private recordWebVital()
-=======
-  private recordWebVital(nam,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   e: keyof WebVitals, valu);
   e: number): void {/* TODO: Fix JSX expression */,}}}
     this.webVitals[name] = metric;
@@ -291,11 +256,6 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
     if (value <= threshold.good) return 'good';
     if (value <= threshold.poor) return 'needs-improvement';
     return 'poor';
-<<<<<<< HEAD
-  private getRating()
-=======
-  private getRating(nam,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   e: keyof WebVitals, valu);
   e: number): 'good' | 'needs-improvement' | 'poor' {/* TODO: Fix JSX expression */}
   r: number }> = {/* TODO: Fix JSX expression */}
@@ -353,12 +313,6 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
   e: string, valu,;
 =======
     logger.debug(`Custom Metric: ${name}`, 'PerformanceMonitoring', { value, unit })
-<<<<<<< HEAD
-  recordCustomMetric()
-=======
-  recordCustomMetric(nam,)
-  e: string, valu,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   e: number, uni);
   t: CustomMetric['unit']): void {/* TODO: Fix JSX expression */,}}}
     this.customMetrics.push(metric);
@@ -427,11 +381,6 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
    */;
   getPerformanceScore(): number {}}const vitals = Object.values(this.webVitals);
     if (vitals.length === 0) return 0;
-<<<<<<< HEAD
-    const scores = const scores = vitals.map();
-=======
-    const scores = vitals.map(metric => {;)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     );
       switch (metric.rating) 
         case 'good': return 100;
@@ -439,13 +388,6 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
         case 'poor': return 0;
     if (vitals.length === 0) return, 0;
   }
-<<<<<<< HEAD
-    const scores = const scores = const scores = vitals.map(metric => {)};
-      switch (metric.rating) {};
-=======
-    const scores = vitals.map(metric => {}
-      switch (metric.rating) {}
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
         case 'good': return 100;
         case 'needs-improvement': return 50;
         case 'poor': return 0;
@@ -464,19 +406,6 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
     customMetrics: CustomMetric[],
   }
   getSummary(): {}
-<<<<<<< HEAD
-    score: number;
-    webVitals: WebVitals
-    customMetrics: CustomMetric[]
-    recommendations: string[],}
-  }, {}
-=======
-    score: number;,
-      webVitals: WebVitals;,
-      customMetrics: CustomMetric[],
-      recommendations: string[],}
-  } {}
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     const score = this.getPerformanceScore();
     const recommendations: string[] = [],
     // Generate recommendations based on metrics;
@@ -591,11 +520,6 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
   /**;
    * Measure function execution time;
    */;
-<<<<<<< HEAD
-  measureFunction<T>()
-=======
-  measureFunction<T>(nam,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   e: string, f);
   n: () => T): T {/* TODO: Fix JSX expression */,}}`;
     this.recordCustomMetric(`fn_${name)}`, duration, 'ms');
@@ -604,11 +528,6 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
   /**;
    * Measure async function execution time;
    */;
-<<<<<<< HEAD
-  async measureAsyncFunction<T>()
-=======
-  async measureAsyncFunction<T>(nam,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   e: string, f);
   n: () => Promise<T>): Promise<T> {/* TODO: Fix JSX expression */,}`;
     this.recordCustomMetric(`async_fn_${name)}`, duration, 'ms');
@@ -623,12 +542,6 @@ class PerformanceMonitoringService {/* TODO: Fix JSX expression */}
   /**;
    * Measure between two marks;
    */;
-<<<<<<< HEAD
-  measure()
-=======
-  measure(nam,)
-  e: string, startMar,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   k: string, endMar);
   k: string): number | null {/* TODO: Fix JSX expression */,}}}
       } catch (error) {/* TODO: Fix JSX expression */,}}
@@ -682,17 +595,6 @@ interface MetricData {}
   rating?: 'good' | 'needs-improvement' | 'poor';}
 }
 const simpleMetrics = new Map<string, MetricData>();
-<<<<<<< HEAD
-export const recordMetric = const recordMetric = const recordMetric = useCallback((...args) => {
-    // Record in our simple metrics store for testing
-  };
-export const recordMetric = useCallback((...args) => {};
-=======
-export const recordMetric = useCallback((...args) => {
-    // Record in our simple metrics store for, testing;
-  }
-export const recordMetric = useCallback((...args) => {}
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   // Record in our simple metrics store for testing;
   const existing = simpleMetrics.get(name);
   if (existing) {}existing.values.push(value);
@@ -701,16 +603,6 @@ export const recordMetric = useCallback((...args) => {}
     existing.min = Math.min(existing.min, value);
     existing.max = Math.max(existing.max, value);}
   } else {
-<<<<<<< HEAD
-    simpleMetrics.set()
-      count: 1;)
-      average: value;)
-=======
-    simpleMetrics.set(name, )
-      values: [value]),
-      count: 1;),
-      average: value;),
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       min: value;),
       max: value),
   }
@@ -783,15 +675,6 @@ export const measureAsyncFunction = const measureAsyncFunction = const measureAs
 =======
   const start = performance.now(),
   const result = await fn(),
-<<<<<<< HEAD
-  const duration = performance.now() - start
-  };
-export const measureFunction = <T>(name: string, fn: () => T): T => {};
-=======
-  const duration = performance.now() - start;
-  }
-export const measureFunction = <T>(name: string, fn: () => T): T => {}
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   const start = performance.now();
 >>>>>>> origin/main
   const result = fn();
@@ -813,11 +696,6 @@ export const getPerformanceScore = const getPerformanceScore = (): number => {};
     .map(name => metrics[name]);
     .filter(Boolean);
   if (webVitals.length === 0) return 0;
-<<<<<<< HEAD
-  const scores = const scores = webVitals.map();
-=======
-  const scores = webVitals.map(metric => {;)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     );
     switch (metric.rating) 
       case 'good': return 100;
@@ -825,13 +703,6 @@ export const getPerformanceScore = const getPerformanceScore = (): number => {};
       case 'poor': return 0;
   if (webVitals.length === 0) return, 0;
   }
-<<<<<<< HEAD
-  const scores = const scores = const scores = webVitals.map(metric => {)};
-    switch (metric.rating) {};
-=======
-  const scores = webVitals.map(metric => {}
-    switch (metric.rating) {}
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       case 'good': return 100;
       case 'needs-improvement': return 50;
       case 'poor': return 0;
@@ -867,23 +738,12 @@ export enum MetricUnit {/* TODO: Fix JSX expression */,}}}
 // Simple metrics structure for testing;
 interface MetricData {/* TODO: Fix JSX expression */,}}}
 const simpleMetrics = new Map<string, MetricData>();
-<<<<<<< HEAD
-export const recordMetric = const recordMetric = const recordMetric = ();
-=======
-export const recordMetric = (nam,)
-  e: string, valu,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   e: number, uni);
   t: MetricUnit = MetricUnit.Milliseconds) => {/* TODO: Fix JSX expression */,}} else {/* TODO: Fix JSX expression */,}}})
   }
   // Also record in the main performance monitoring service;
   performanceMonitoring.recordCustomMetric(name, value, unit);
 }
-<<<<<<< HEAD
-function getRating()
-=======
-function getRating(nam,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   e: string, valu);
   e: number): 'good' | 'needs-improvement' | 'poor' {/* TODO: Fix JSX expression */}
   r: number }> = {/* TODO: Fix JSX expression */}
@@ -915,19 +775,6 @@ export const getMetrics = const getMetrics = const getMetrics = (): Record<strin
 }
 export const clearMetrics = const clearMetrics = const clearMetrics = () => {/* TODO: Fix JSX expression */}
 }
-<<<<<<< HEAD
-export const measureFunction = <T>();
-  e: string, f);
-  n: () => T): T => {/* TODO: Fix JSX expression */}
-}
-export const measureAsyncFunction = const measureAsyncFunction = const measureAsyncFunction = async <T>();
-=======
-export const measureFunction = <T>(nam,)
-  e: string, f);
-  n: () => T): T => {/* TODO: Fix JSX expression */}
-}
-export const measureAsyncFunction = async <T>(nam,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   e: string, f);
   n: () => Promise<T>): Promise<T> => {/* TODO: Fix JSX expression */}
 }

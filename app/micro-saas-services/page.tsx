@@ -996,15 +996,6 @@ export const serviceCategories = const serviceCategories = const serviceCategori
 ;
   'Automation';
 ];
-<<<<<<< HEAD
-// Pricing tiers for comparison;];
-export const pricingTiers = const pricingTiers = const pricingTiers = {
-    starter: {,
-=======
-// Pricing tiers for comparison;];];
-export const pricingTiers = {
-    starter: ,
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     name: 'Starter',
     price: '$29-99/month',
     features: ['Basic AI features', 'Standard support', 'Limited integrations', 'Basic analytics']},

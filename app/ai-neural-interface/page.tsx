@@ -13,15 +13,6 @@ const AINeuralInterface: React.FC = () => {,
   const features = const features = const features = [
     {
       icon: Brain,
-<<<<<<< HEAD
-      title: 'Neural Signal Processing',;
-      description: 'Advanced AI algorithms for real-time neural signal interpretation and processing',;
-      benefits: ['Real-time signal processing', 'High accuracy interpretation', 'Low latency response'];
-=======
-      title: 'Neural Signal Processing',
-      description: 'Advanced AI algorithms for real-time neural signal interpretation and processing',
-      benefits: [''Real-time signal processing', 'High accuracy interpretation', 'Low latency response''];
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     },
     {
       icon: Eye,
@@ -93,11 +84,6 @@ const AINeuralInterface: React.FC = () => {,
         'Training programs'
       ],
       popular: false;
-<<<<<<< HEAD
-    };
-=======
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   ];
 
   const useCases = const useCases = const useCases = [
@@ -175,61 +161,6 @@ const AINeuralInterface: React.FC = () => {,
                 prosthetic control, and cognitive enhancement through advanced brain-computer interfaces.
               </p></p></p>
               
-<<<<<<< HEAD
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12" /></div>
-                <div className="flex items-center space-x-2 text-cyan-400" /></div>
-                  <Brain className="w-5 h-5" / /></Brain>
-                  <span className="font-semibold">Real-time Processing</span>
-                </div>
-                <div className="flex items-center space-x-2 text-purple-400" /></div>
-                  <Shield className="w-5 h-5" / /></Shield>
-                  <span className="font-semibold">Medical Grade</span>
-                </div>
-                <div className="flex items-center space-x-2 text-pink-400" /></div>
-                  <Target className="w-5 h-5" / /></Target>
-                  <span className="font-semibold">Precise Control</span>
-                </div>
-              </div>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center" /></div>
-                <a href="tel:+13024640950"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:scale-105" /></a>
-                  <Phone className="w-5 h-5 mr-2" / /></Phone>
-                  Call (302) 464-0950
-                </a>
-                <a href="mailto:kleber@ziontechgroup.com"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 hover:scale-105" /></a>
-                  <Mail className="w-5 h-5 mr-2" / /></Mail>
-                  Get Quote
-=======
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-                </div></div><div className="flex items-center space-x-2 text-cyan-400">
-                  </div></div><Brain className="w-5 h-5" />
-                  <span className="font-semibold">Real-time Processing</span></span></span>
-                </div>
-                <div className="flex items-center space-x-2 text-purple-400">
-                  </div></div><Shield className="w-5 h-5" />
-                  <span className="font-semibold">Medical Grade</span></span></span>
-                </div>
-                <div className="flex items-center space-x-2 text-pink-400">
-                  </div></div><Target className="w-5 h-5" />
-                  <span className="font-semibold">Precise Control</span></span></span>
-                </div>
-              </div>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                </div></div><a;
-                  href="tel:+13024640950" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:scale-105"
-                >
-                  <Phone className="w-5 h-5 mr-2" />
-                  Call (302) 464-0950;
-                </a>
-                <a;
-                  href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 hover:scale-105"
-                >
-                  <Mail className="w-5 h-5 mr-2" />
-                  Get Quote;
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                 </a>
               </div>
             </div>
@@ -237,52 +168,10 @@ const AINeuralInterface: React.FC = () => {,
         </section>
 
         {/* Features Section */}
-<<<<<<< HEAD
-        <section className="py-20 px-4 sm:px-6 lg:px-8" /></section>
-          <div className="max-w-7xl mx-auto" /></div>
-            <div className="text-center mb-16" /></div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent" /></h2>
-                Advanced Neural Interface Features
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto" /></p>
-                Our AI-powered neural interface technology provides cutting-edge solutions 
-=======
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          </section></section><div className="max-w-7xl mx-auto">
-            </div></div><div className="text-center mb-16">
-              </div></div><h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                Advanced Neural Interface Features;
-              </h2></h2></h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI-powered neural interface technology provides cutting-edge solutions;
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                 for medical rehabilitation, prosthetic control, and cognitive enhancement.
               </p></p></p>
             </div>
             
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" /></div>
-              {features.map((feature, index) => ()
-                    {feature.benefits.map((benefit, idx) => ()
-=======
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                </div></div><div;
-                  key=index}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10"
-                >
-                  </div></div><div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-6">
-                    </div></div><feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-4 text-white">{feature.title}</h3></h3></h3>
-                  <p className="text-gray-300 mb-6">{feature.description}</p></p></p>)
-                  <ul className="space-y-2">)
-                    {feature.benefits.map((benefit, idx) => (
-                      <li key=idx} className="flex items-center text-sm text-cyan-400">
-                        <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />
-                        {benefit})
-                      </li>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                     ))}
                   </ul>
                 </div>
@@ -292,150 +181,21 @@ const AINeuralInterface: React.FC = () => {,
         </section>
 
         {/* Use Cases Section */}
-<<<<<<< HEAD
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/30 to-slate-900/30" /></section>
-          <div className="max-w-7xl mx-auto" /></div>
-            <div className="text-center mb-16" /></div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent" /></h2>
-                Medical & Research Applications
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto" /></p>
-                Our neural interface technology is transforming medical rehabilitation 
-=======
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/30 to-slate-900/30">
-          </section></section><div className="max-w-7xl mx-auto">
-            </div></div><div className="text-center mb-16">
-              </div></div><h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Medical & Research Applications;
-              </h2></h2></h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our neural interface technology is transforming medical rehabilitation;
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                 and research across various applications and use cases.
               </p></p></p>
             </div>
             
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" /></div>
-              {useCases.map((useCase, index) => ()
-=======
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {useCases.map((useCase, index) => (
-                </div></div><div;
-                  key=index}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 hover:scale-105"
-                >
-                  </div></div><div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6">
-                    </div></div><useCase.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-4 text-white">{useCase.title}</h3></h3></h3>
-                  <p className="text-gray-300 mb-4">{useCase.description}</p></p></p>
-                  <div className="text-cyan-400 font-semibold text-sm">
-                    {useCase.results}
-                  </div></div></div>)
-                </div>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
               ))}
             </div>
           </div>
         </section>
 
         {/* Pricing Section */}
-<<<<<<< HEAD
-        <section className="py-20 px-4 sm:px-6 lg:px-8" /></section>
-          <div className="max-w-7xl mx-auto" /></div>
-            <div className="text-center mb-16" /></div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-pink-400 to-cyan-400 bg-clip-text text-transparent" /></h2>
-                Specialized Pricing Plans
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto" /></p>
-=======
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          </section></section><div className="max-w-7xl mx-auto">
-            </div></div><div className="text-center mb-16">
-              </div></div><h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-pink-400 to-cyan-400 bg-clip-text text-transparent">
-                Specialized Pricing Plans;
-              </h2></h2></h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                 Choose the perfect neural interface plan for your medical or research needs. 
                 All plans include our advanced AI processing and medical-grade interfaces.
               </p></p></p>
             </div>
             
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8" /></div>
-              {pricingPlans.map((plan, index) => ()
-                  )}
-                  
-                  <div className="text-center mb-8" /></div>
-                    <h3 className="text-2xl font-bold mb-2 text-white">{plan.name}</h3>
-                    <p className="text-gray-400 mb-4">{plan.description}</p>
-                    <div className="flex items-baseline justify-center" /></div>
-                      <span className="text-5xl font-bold text-cyan-400">{plan.price}</span>
-                      <span className="text-gray-400 ml-2">{plan.period}</span>
-                    </div>
-                  </div>
-                  
-                  <ul className="space-y-4 mb-8" /></ul>
-                    {plan.features.map((feature, idx) => ()
-                    ))}
-                  </ul>
-                  
-                  <a href="tel:+13024640950"
-                    className={`w-full py-3 px-6 rounded-xl font-semibold text-center transition-all duration-300 ${
-                      plan.popular
-                        ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700'
-                        : 'bg-gradient-to-r from-gray-700 to-gray-600 text-white hover:from-gray-600 hover:to-gray-500'
-                    }`} /></a>
-                    Get Started
-=======
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
-                </div></div><div;
-                  key=index}
-                  className={`relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-xl $
-                    plan.popular;
-                      ? 'border-cyan-500/50 shadow-cyan-500/20' 
-                      : 'border-gray-700/50 hover:border-cyan-500/30'
-                  }`}
-                >
-                  {plan.popular && (
-                    </div></div><div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      </div></div><div className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold">
-                        Most Popular;
-                      </div></div></div>)
-                    </div>)
-                  )}
-                  
-                  <div className="text-center mb-8">
-                    </div></div><h3 className="text-2xl font-bold mb-2 text-white">{plan.name}</h3></h3></h3>
-                    <p className="text-gray-400 mb-4">{plan.description}</p></p></p>
-                    <div className="flex items-baseline justify-center">
-                      </div></div><span className="text-5xl font-bold text-cyan-400">{plan.price}</span></span></span>
-                      <span className="text-gray-400 ml-2">{plan.period}</span></span></span>
-                    </div>
-                  </div>
-                  
-                  <ul className="space-y-4 mb-8">
-                    {plan.features.map((feature, idx) => (
-                      <li key=idx} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                        {feature})
-                      </li>)
-                    ))}
-                  </ul>
-                  
-                  <a;
-                    href="tel:+13024640950"
-                    className={`w-full py-3 px-6 rounded-xl font-semibold text-center transition-all duration-300 $
-                      plan.popular;
-                        ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700'
-                        : 'bg-gradient-to-r from-gray-700 to-gray-600 text-white hover:from-gray-600 hover:to-gray-500'
-                    }`}
-                  >
-                    Get Started;
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                   </a>
                 </div>
               ))}
@@ -444,49 +204,6 @@ const AINeuralInterface: React.FC = () => {,
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10" /></section>
-          <div className="max-w-4xl mx-auto text-center" /></div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent" /></h2>
-              Transform Lives with Neural Technology
-            </h2>
-            <p className="text-xl text-gray-300 mb-8" /></p>
-              Join leading medical institutions and researchers using our AI-powered neural interface 
-              technology to restore function and enhance human capabilities.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center" /></div>
-              <a href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:scale-105" /></a>
-                <Phone className="w-5 h-5 mr-2" / /></Phone>
-                Call (302) 464-0950
-              </a>
-              <a href="mailto:kleber@ziontechgroup.com"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 hover:scale-105" /></a>
-                <Mail className="w-5 h-5 mr-2" / /></Mail>
-                Get Free Quote
-=======
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10">
-          </section></section><div className="max-w-4xl mx-auto text-center">
-            </div></div><h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              Transform Lives with Neural Technology;
-            </h2></h2></h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join leading medical institutions and researchers using our AI-powered neural interface;
-              technology to restore function and enhance human capabilities.
-            </p></p></p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              </div></div><a;
-                href="tel:+13024640950" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:scale-105"
-              >
-                <Phone className="w-5 h-5 mr-2" />
-                Call (302) 464-0950;
-              </a>
-              <a;
-                href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 hover:scale-105"
-              >
-                <Mail className="w-5 h-5 mr-2" />
-                Get Free Quote;
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
               </a>
             </div>
           </div>

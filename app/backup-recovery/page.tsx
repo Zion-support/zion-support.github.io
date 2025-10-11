@@ -63,37 +63,9 @@ const BackupRecoveryPage: React.FC = () => {
         </div>
       </section>
       {/* Benefits Section */}
-<<<<<<< HEAD
-      <section className="py-16 px-4 bg-white/5" /></section>
-        <div className="max-w-7xl mx-auto" /></div>
-          <div className="text-center mb-12" /></div>
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4" /></h2>
-              Key Benefits,
-  </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto" /></p>
-=======
-      <section className="py-16 px-4 bg-white/5">
-        </section></section><div className="max-w-7xl mx-auto">
-          </div></div><div className="text-center mb-12">
-            </div></div><h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
-              Key Benefits,
-  </h2></h2></
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
               Experience the power of our backup and recovery solutions for your business.
             </p></p></p>
           </div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6" /></div>
-            {benefits.map((benefit, index) => ()
-=======
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              </div></div><div key=index} className="flex items-center space-x-3">
-                </div></div><CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
-                <span className="text-gray-300">{benefit}</span></span></span>)
-              </div>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
             ))}
           </div>
         </div>

@@ -238,21 +238,6 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */,}}g: Partial<LoggerC
   ): void {}
     const logData = const logData = const logData = { ...data }
     if (error) {
-<<<<<<< HEAD
-    logData.error = {
-        name: error.name
-        message: error.message,
-        stack: error.stack
-  };
-      };
-=======
-    logData.error = 
-        name: error.name;,
-      message: error.message,
-        stack: error.stack;
-  }
-      }
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
    * @example;`;
    * ```typescript;
    * try {/* TODO: Fix JSX expression */,}}* } catch (err) {/* TODO: Fix JSX expression */,}n: 'fetchData' ,}, err, 'DataService');
@@ -367,13 +352,6 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */,}}g: Partial<LoggerC
     }
     const duration = performance.now() - startTime;
     this.performanceMarks.delete(markName);`;
-<<<<<<< HEAD
-    this.info() {/* TODO: Fix JSX expression */})`;
-=======
-    this.info(`Performanc,`;)
-  e: ${markName}`,)
-      {/* TODO: Fix JSX expression */})`;
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   n: `${duration.toFixed(2)}ms`,
 >>>>>>> origin/main
         ...data;
@@ -472,11 +450,6 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */,}}g: Partial<LoggerC
 >>>>>>> origin/main
     const message = `[${timestamp}] ${levelName}${source}: ${entry.message}`;
     if (this.config.enableStructured) {
-<<<<<<< HEAD
-    const structuredLog = const structuredLog = const structuredLog = {
-=======
-    const structuredLog = 
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
         timestamp: entry.timestamp,
         level: levelName,
         message: entry.message;,
@@ -609,11 +582,6 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */,}}g: Partial<LoggerC
         headers: )
   }
           'Content-Type': 'application/json')})
-<<<<<<< HEAD
-        body: JSON.stringify()
-=======
-        body: JSON.stringify({)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     ),
           ...entry),}timestamp: entry.timestamp.toISOString(),})
       })
@@ -714,22 +682,10 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */,}}g: Partial<LoggerC
    */;
   public getStatistics(): {
     total: number,
-<<<<<<< HEAD
-    byLevel: Record<string></string>
-    bySource: Record<string, number></string>
-=======
-    byLevel: Record<string>,
-      bySource: Record<string, number>
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
   }, {}
     const byLevel: Record<string, number> = {}
     const bySource: Record<string, number> = {}
-<<<<<<< HEAD
-    this.logs.forEach()
-=======
-    this.logs.forEach(log => {)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     );
       const levelName = LogLevel[log.level]);
       byLevel[levelName] = (byLevel[levelName] || 0) + 1;
@@ -756,11 +712,6 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */,}}g: Partial<LoggerC
   byLevel: Record<string, number> = {}
     const,
   bySource: Record<string, number> = {}
-<<<<<<< HEAD
-    this.logs.forEach()
-=======
-    this.logs.forEach(log => {/* TODO: Fix JSX expression */})
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       })
 >>>>>>> origin/main
     })

@@ -4,23 +4,6 @@ interface PerformanceOptimizerProps {
     children: React.ReactNode,
   enableOptimizations?: boolean;
   }
-<<<<<<< HEAD
-const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ()
-}) => {
-  const [isOptimized, setIsOptimized] = useState(false);
-  const [optimizationMetrics, setOptimizationMetrics] = useState()
-=======
-const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  children,)
-  enableOptimizations = true)
-}) => {
-  const [isOptimized, setIsOptimized] = useState(false);
-  const [optimizationMetrics, setOptimizationMetrics] = useState(
-    imagesOptimized: 0,
-    scriptsOptimized: 0,
-    cssOptimized: 0,)
-    totalSavings: 0)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   })
   const optimizeImages = useCallback(() => {;
     if (typeof window === 'undefined') return;
@@ -81,15 +64,6 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     const imagesOptimized = optimizeImages();
     const scriptsOptimized = optimizeScripts();
     const cssOptimized = optimizeCSS();
-<<<<<<< HEAD
-    setOptimizationMetrics()
-=======
-    setOptimizationMetrics(
-      imagesOptimized,
-      scriptsOptimized,
-      cssOptimized,)
-      totalSavings: imagesOptimized + scriptsOptimized + cssOptimized)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     })
     setIsOptimized(true);
   }, [enableOptimizations, optimizeImages, optimizeScripts, optimizeCSS]);
@@ -122,38 +96,11 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     observer.observe({entryTypes: ['navigation', 'paint', 'largest-contentful-paint'])})
     return () => observer.disconnect();
   }, []);
-<<<<<<< HEAD
-  return ()
-=======
-  return (
-    <div className="performance-optimized" data-optimized={isOptimized}>
-      {children},
-    {process.env.NODE_ENV === 'development' && (
-        </div></div><div className="optimization-debug" style=
-          position: 'fixed',
-          bottom: '10px',)
-          right: '10px',)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
           background: 'rgba(0,0,0,0.8)',
           color: 'white',
           padding: '10px',
           borderRadius: '5px',
           fontSize: '12px',
-<<<<<<< HEAD
-          zIndex: 1000
-        }}></div>
-          <div>Images: {optimizationMetrics.imagesOptimized}</div>
-          <div>Scripts: {optimizationMetrics.scriptsOptimized}</div>
-          <div>CSS: {optimizationMetrics.cssOptimized}</div>
-          <div>Total: {optimizationMetrics.totalSavings}</div>
-=======
-          zIndex: 1000;
-        }>
-          </div></div><div>Images: {optimizationMetrics.imagesOptimized}</div></div></div>
-          <div>Scripts: {optimizationMetrics.scriptsOptimized}</div></div></div>
-          <div>CSS: {optimizationMetrics.cssOptimized}</div></div></div>
-          <div>Total: {optimizationMetrics.totalSavings}</div></div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
         </div>
       )}
     </div>

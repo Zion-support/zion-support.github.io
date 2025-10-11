@@ -45,17 +45,6 @@ export interface AppConfig {
     enableConsole: boolean,
     enableNetwork: boolean,}}
 }
-<<<<<<< HEAD
-const defaultConfig: AppConfig = {
-    environment: 'development',
-    api: {
-    baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
-=======
-const defaultConfig: AppConfig = {,
-      environment: 'development',
-      api:  ,
-      baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     timeout: 30000,
     retryAttempts: 3,
     enableCaching: true,
@@ -326,11 +315,6 @@ export class ConfigManager {/* TODO: Fix JSX expression */,}}overrides: Partial<
   /**;
    * Deep merge two config objects;
    */;
-<<<<<<< HEAD
-  private mergeConfig()
-=======
-  private mergeConfig(bas,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   e: AppConfig, overrid);
   e: Partial<AppConfig>): AppConfig {/* TODO: Fix JSX expression */,}}const result = {...base}as AppConfig;
     (Object.keys(override) as Array<keyof AppConfig>).forEach(<K extends keyof AppConfig>(ke);

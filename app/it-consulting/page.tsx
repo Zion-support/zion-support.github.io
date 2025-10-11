@@ -482,12 +482,6 @@ const categories = const categories = const categories = [
     { id: 'recovery', name: 'Disaster Recovery', icon: RefreshCw },;
     { id: 'compliance', name: 'Compliance', icon: CheckSquare };
   ];
-<<<<<<< HEAD
-const filteredServices = const filteredServices = itServices.filter();
-=======
-const filteredServices = itServices.filter(service => {;)
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
@@ -531,37 +525,6 @@ return (
       </section>
 
       {/* Search and Filter Section */}
-<<<<<<< HEAD
-      <section className="py-20 px-4" /></section>
-          <div className="max-w-7xl mx-auto" /></div>
-            <div className="text-center mb-16" /></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-        </section>
-        <div className="max-w-7xl mx-auto" / /></div>
-          <div className="flex flex-col lg:flex-row gap-6 mb-8" / /></div>
-            {/* Search */}</div>
-            <div className="flex-1" / /></div>
-              <div className="relative" / /></div>
-                <Search></Search>
-=======
-      <section className="py-20 px-4">
-          </section></section><div className="max-w-7xl mx-auto">
-            </div></div><div className="text-center mb-16">
-              </div></div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2></h2></h2>
-              <p className="text-xl text-gray-300">Section description</p></p></p>
-            </div>
-          </div>
-        </section>
-        <div className="max-w-7xl mx-auto"></div></div></div>
-          <div className="flex flex-col lg:flex-row gap-6 mb-8"></div></div></div>
-            {/* Search */}</div>
-            <div className="flex-1"></div></div></div>
-              <div className="relative"></div></div></div>
-                <Search>
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                 <input;
                   type="text";
                   placeholder="Search IT services...";
@@ -571,25 +534,10 @@ return (
             </div>
 
             {/* Category Filter */}
-<<<<<<< HEAD
-            <div className="lg: w-64" / /></div>
-=======
-            <div className="lg: w-64"></div></div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
               <select,
                 value={selectedCategory}onChange={(e) => setSelectedCategory(e.target.value)}className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20",
               >,
                 {
-<<<<<<< HEAD
-    categories.map((category) => ()
-=======
-    categories.map((category) => (
-  }
-                  <option>
-
-                    {category.name})
-                  </option>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                 ))}
 
               </select>
@@ -597,18 +545,6 @@ return (
           </div>
 
           {/* Category Pills */}
-<<<<<<< HEAD
-          <div className="flex flex-wrap gap-2 mb-8" / /></div>
-            {
-    categories.map((category) => ()
-=======
-          <div className="flex flex-wrap gap-2 mb-8"></div></div></div>
-            {
-    categories.map((category) => (</div>
-              <button;
-  })
-                key={category.id})
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                 onClick={() => setSelectedCategory(category.id)}
                 className={
     `px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 $
@@ -697,61 +633,6 @@ return (
                     </ul>
                   </div>
                 </div>
-<<<<<<< HEAD
-                <div className="space-y-2 mb-6 text-sm" / /></div>
-                  <div className="flex justify-between" / /></div>
-                    <span className="text-gray-400">Setup Time:</span>
-                    <span className="text-white">{service.setupTime}</span>
-                  </div>
-                  <div className="flex justify-between" / /></div>
-                    <span className="text-gray-400">Free Consultation:</span>
-                    <span className="text-green-400">{service.freeConsultation}</span>
-                  </div>
-                  <div className="flex justify-between" / /></div>
-                    <span className="text-gray-400">Target:</span>
-                    <span className="text-white">{service.targetAudience}</span>
-                  </div>
-                </div>
-                {
-    service.caseStudy && ()
-                )}
-<div className="space-y-3" / /></div>
-                  <a></a>
-                    Get Free Consultation
-                  </a>
-                  <a></a>
-                    <Phone></Phone>
-                    Call for Quote
-=======
-                <div className="space-y-2 mb-6 text-sm"></div></div></div>
-                  <div className="flex justify-between"></div></div></div>
-                    <span className="text-gray-400">Setup Time:</span></span></span>
-                    <span className="text-white">{service.setupTime}</span></span></span>
-                  </div>
-                  <div className="flex justify-between"></div></div></div>
-                    <span className="text-gray-400">Free Consultation:</span></span></span>
-                    <span className="text-green-400">{service.freeConsultation}</span></span></span>
-                  </div>
-                  <div className="flex justify-between"></div></div></div>
-                    <span className="text-gray-400">Target:</span></span></span>
-                    <span className="text-white">{service.targetAudience}</span></span></span>
-                  </div>
-                </div>
-                {
-    service.caseStudy && (;
-                  <div className="mb-4 p-3 bg-green-900/20 border border-green-400/20 rounded-lg"></div></div></div>
-  }
-                    <p className="text-sm text-green-300 italic">"{service.caseStudy}"</p></p></p>)
-                  </div>)
-                )}
-<div className="space-y-3"></div></div></div>
-                  <a>
-                    Get Free Consultation;
-                  </a>
-                  <a>
-                    <Phone>
-                    Call for Quote;
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
                   </a>
                 </div>
               </div>
@@ -760,57 +641,6 @@ return (
         </div>
       </section>
       {/* CTA Section */}
-<<<<<<< HEAD
-      <section className="py-20 px-4" /></section>
-          <div className="max-w-7xl mx-auto" /></div>
-            <div className="text-center mb-16" /></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-        </section>
-        <div className="max-w-4xl mx-auto text-center" / /></div>
-          <h2></h2>
-            Ready to Optimize Your IT Infrastructure?,
-          </h2>
-          <p></p>
-            Our certified IT professionals deliver reliable, secure, and scalable solutions.;
-            All services include free consultations and ongoing support.
-          </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center" / /></div>
-            <a></a>
-              <Phone></Phone>
-              Call (302) 464-0950
-            </a>
-            <a></a>
-              <Mail></Mail>
-              Get Custom IT Strategy
-=======
-      <section className="py-20 px-4">
-          </section></section><div className="max-w-7xl mx-auto">
-            </div></div><div className="text-center mb-16">
-              </div></div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2></h2></h2>
-              <p className="text-xl text-gray-300">Section description</p></p></p>
-            </div>
-          </div>
-        </section>
-        <div className="max-w-4xl mx-auto text-center"></div></div></div>
-          <h2>
-            Ready to Optimize Your IT Infrastructure?,
-          </h2></h2></h2>
-          <p>
-            Our certified IT professionals deliver reliable, secure, and scalable solutions.;
-            All services include free consultations and ongoing support.
-          </p></p></p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div></div></div>
-            <a>
-              <Phone>
-              Call (302) 464-0950;
-            </a>
-            <a>
-              <Mail>
-              Get Custom IT Strategy;
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
             </a>
           </div>
         </div>

@@ -43,13 +43,6 @@ export function validateURL(url: string): ValidationResult {,}
   }
 try {
     const urlObj = new URL(url);
-<<<<<<< HEAD
-    const isValid = const isValid = const isValid = urlObj.protocol === 'http: ' || urlObj.protocol === 'https:',;
-    return {,;
-=======
-    const isValid = urlObj.protocol === 'http: ' || urlObj.protocol === 'https:',
-    return ,
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       isValid;
       error: isValid ? undefined : 'Invalid URL format',
 export function validateURL(ur)}l: string): ValidationResult {/* TODO: Fix JSX expression */,}}r: 'URL is required' ,}
@@ -150,11 +143,6 @@ if (Array.isArray(value) && value.length === 0) {}
     return { isValid: false, error: `$fieldName} is required` }
   }
 return { isValid: true }
-<<<<<<< HEAD
-export function validateRequired()
-=======
-export function validateRequired(valu,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   e: unknown, fieldNam);
   e: string = 'Field'): ValidationResult {/* TODO: Fix JSX expression */,}}`;
   r: `${fieldName,}is required` }
@@ -301,15 +289,6 @@ export function validateComposite(valu,
 /**;
  * Async validation;
  */;
-<<<<<<< HEAD
-export async function validateAsync()
-  validator: (val: unknown) => Promise<ValidationResult></ValidationResult>
-  value: unknown,
-=======
-export async function validateAsync(;)
-  validator: (val: unknown) => Promise<ValidationResult>,
-      value: unknown,
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 ): Promise<ValidationResult> {
     ,
   try ,
@@ -319,11 +298,6 @@ export async function validateAsync(;)
     return;
       isValid: false,
       error: error instanceof Error ? error.message : 'Validation failed',
-<<<<<<< HEAD
-export async function validateAsync()
-=======
-export async function validateAsync(validato,)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   r: (va),
   l: unknown) => Promise<ValidationResult>,
   valu,

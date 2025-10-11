@@ -3,13 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Smartphone, Monitor, Cloud } from 'lucide-react';
 const BusinessAppsPage: React.FC = () => {
-<<<<<<< HEAD
-  const features = const features = const features = [
-    {
-=======
-  const features = [
-    
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       icon: Smartphone,
       title: 'Mobile Apps',
       description: 'Custom mobile applications for iOS and Android platforms',},
@@ -38,80 +31,9 @@ const BusinessAppsPage: React.FC = () => {
     'Cost-effective pricing plans',;
     'Proven track record of success';
   ];
-<<<<<<< HEAD
-  return() {features.map((feature, index) => ()
-            ))}
-          </div>
-        </div>
-      <section className="py-16 px-4 bg-white/5" /></section>
-        <div className="max-w-7xl mx-auto" /></div>
-          <div className="text-center mb-12" /></div>
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4" /></h2>
-              Key Benefits,
-  </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto" /></p>
-=======
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      </div></div><Helmet>
-        <title>Business Apps | Zion Tech Group</title>
-        <meta name="keywords" content="business apps, mobile apps, web apps, AI solutions, IT services, Zion Tech Group" />
-      </Helmet>
-      {/* Hero Section */}
-      <section className="relative py-20 px-4">
-        </section></section><div className="max-w-7xl mx-auto text-center">
-          </div></div><h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
-            Business Apps,
-  </h1></h1></
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your business with our advanced business app solutions. 
-            Powered by cutting-edge AI technology and industry expertise.
-          </p></p></p>
-        </div>
-      </section>
-      {/* Features Section */}
-      <section className="py-16 px-4">
-        </section></section><div className="max-w-7xl mx-auto">
-          </div></div><div className="text-center mb-12">
-            </div></div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our Business Apps?
-            </h2></h2></h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our business app solutions deliver unmatched performance, security, and scalability.
-            </p></p></p>
-          </div>)
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">)
-            {features.map((feature, index) => (
-              </div></div><div key=index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-                </div></div><feature.icon className="w-12 h-12 text-purple-400 mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3></h3></h3>
-                <p className="text-gray-300">{feature.description}</p></p></p>)
-              </div>)
-            ))}
-          </div>
-        </div>
-      <section className="py-16 px-4 bg-white/5">
-        </section></section><div className="max-w-7xl mx-auto">
-          </div></div><div className="text-center mb-12">
-            </div></div><h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
-              Key Benefits,
-  </h2></h2></
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
               Experience the power of our business app solutions for your business.
             </p></p></p>
           </div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6" /></div>
-            {benefits.map((benefit, index) => ()
-=======
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              </div></div><div key=index} className="flex items-center space-x-3">
-                </div></div><CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
-                <span className="text-gray-300">{benefit}</span></span></span>)
-              </div>)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
             ))}
           </div>
         </div>
