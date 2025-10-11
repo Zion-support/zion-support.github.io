@@ -1,30 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { CheckCircle, ArrowRight } from 'lucide-react';
-
-=======
 import { CheckCircle, ArrowRight, Settings, Cpu, Database, Monitor } from 'lucide-react';
-
-=======
-import { CheckCircle, ArrowRight, Settings, Cpu, Database, Monitor } from 'lucide-react';
-=======
-import { CheckCircle, ArrowRight, Settings, Cpu, Database, Monitor } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-529a
-=======
-import { CheckCircle, ArrowRight, Settings, Cpu, Database, Monitor } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-fd18
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-529a
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fd18
 const AIApiManagerPage: React.FC = () => {
   const features = [
     {
@@ -50,45 +29,6 @@ const AIApiManagerPage: React.FC = () => {
       description: 'Comprehensive monitoring and performance analytics.',
       benefits: ['Real-time Metrics', 'Performance Tracking', 'Error Monitoring', 'Usage Analytics'],
       icon: <Monitor className="w-8 h-8 text-orange-400" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-const AIAPIManagerPage: React.FC = () => {
-  const features = [
-    {
-      title: 'API Configuration',
-      description: 'Centralized configuration management for all your AI APIs and services.',
-      benefits: ['Easy Setup', 'Flexible Configuration', 'Environment Management', 'Version Control']
-    },
-    {
-      title: 'User Management',
-      description: 'Comprehensive user and team management with role-based access control.',
-      benefits: ['Role-Based Access', 'Team Collaboration', 'User Analytics', 'Permission Management']
-    },
-    {
-      title: 'Performance Monitoring',
-      description: 'Real-time monitoring and analytics for API performance and usage.',
-      benefits: ['Real-time Metrics', 'Performance Tracking', 'Usage Analytics', 'Alert System']
-    },
-    {
-      title: 'Security Controls',
-      description: 'Advanced security features to protect your AI API infrastructure.',
-      benefits: ['Authentication', 'Authorization', 'Rate Limiting', 'Audit Logging']
-    },
-    {
-      title: 'Integration Tools',
-      description: 'Powerful tools for integrating AI APIs with your existing systems.',
-      benefits: ['SDK Generation', 'Webhook Support', 'API Testing', 'Documentation']
-    },
-    {
-      title: 'Cost Management',
-      description: 'Intelligent cost tracking and optimization for AI API usage.',
-      benefits: ['Usage Tracking', 'Cost Analytics', 'Budget Controls', 'Optimization Tips']
-
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-529a
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fd18
     }
   ];
 
@@ -111,21 +51,12 @@ const AIAPIManagerPage: React.FC = () => {
             </p>
           </div>
 
-<<<<<<< HEAD
-<h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Advanced AI API Management
-=======
         {/* Features Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-<<<<<<< HEAD
-                Powerful API Manager Features
->>>>>>> cursor/fix-errors-and-merge-to-main-529a
-=======
                 Advanced API Management Features
->>>>>>> cursor/fix-errors-and-merge-to-main-fd18
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Comprehensive AI API management platform designed for modern businesses.
@@ -169,13 +100,6 @@ const AIAPIManagerPage: React.FC = () => {
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
                   Learn More
                 </button>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Comprehensive AI API Management
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Professional AI API manager services to help your business succeed and grow.
               </p>
             </div>
             

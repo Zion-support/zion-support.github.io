@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-'use client';
-
-import React, { useState, useEffect, useMemo } from 'react';
-import { Helmet } from 'react-helmet-async';
-'use client';
-
-import React, { useState, useEffect, useMemo } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Search, Calendar, User, Clock, ArrowRight, Tag } from 'lucide-react';
-
-=======
-import { Search, Calendar, User, Clock, ArrowRight } from 'lucide-react';
-
-=======
-import React, { useState, useEffect } from 'react';
-import { Calendar, Clock, User, Tag, ArrowRight, Search } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
->>>>>>> cursor/fix-errors-and-merge-to-main-529a
-=======
 'use client';
 
 import React, { useState, useMemo } from 'react';
@@ -28,7 +5,6 @@ import { Helmet } from 'react-helmet-async';
 import { Search, Calendar, User, Clock, ArrowRight, Tag } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
->>>>>>> cursor/fix-errors-and-merge-to-main-fd18
 
 interface BlogPost {
   id: string;
@@ -44,9 +20,6 @@ interface BlogPost {
   image: string;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 const blogPosts: BlogPost[] = [
   {
     id: '1',
@@ -88,7 +61,6 @@ const blogPosts: BlogPost[] = [
     featured: true
   }
 ];
->>>>>>> cursor/fix-errors-and-merge-to-main-529a
 
 const BlogPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');

@@ -1,37 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { CheckCircle, ArrowRight, Users, Clock, Star, Zap, Target } from 'lucide-react';
-
-=======
-import React, { useState } from 'react';
-import { CheckCircle, ArrowRight, Clock, Star, Phone, Mail, MapPin } from 'lucide-react';
-
-=======
-import React from 'react';
-=======
-import React from 'react';
-import { CheckCircle, ArrowRight, Clock, DollarSign, Star } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-529a
-=======
 import React, { useState } from 'react';
 import { CheckCircle, ArrowRight, Clock, Star, Phone, Mail, MapPin, Users, Zap, Target } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-fd18
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-interface ConsultationPackage {
-=======
 interface ConsultationService {
-
-=======
-interface ConsultationService {
->>>>>>> cursor/fix-errors-and-merge-to-main-529a
-=======
-interface ConsultationService {
->>>>>>> cursor/fix-errors-and-merge-to-main-fd18
   id: string;
   name: string;
   description: string;

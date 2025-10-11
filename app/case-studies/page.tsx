@@ -1,24 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { CheckCircle, ArrowRight, Users, Award, Clock, Star } from 'lucide-react';
-
-=======
-import { ArrowRight, Users, Award, Clock, CheckCircle, Star, TrendingUp, Shield } from 'lucide-react';
-
-=======
-=======
-import { ArrowRight, Calendar, Building, TrendingUp, Code } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-529a
-=======
 import { CheckCircle, ArrowRight, Users, Award, Clock, Star, TrendingUp } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-fd18
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-<<<<<<< HEAD
-=======
 interface CaseStudy {
   id: string;
   title: string;
@@ -34,14 +19,7 @@ interface CaseStudy {
   solution: string;
 }
 
->>>>>>> cursor/fix-errors-and-merge-to-main-fd18
 const CaseStudiesPage: React.FC = () => {
-<<<<<<< HEAD
-results: ['50% cost reduction', '99.9% uptime', '3x faster deployment'],
-=======
-results: ['50% cost reduction', '99.9% uptime', '3x faster deployment'],
-
-=======
   const caseStudies: CaseStudy[] = [
     {
       id: 'ai-customer-service',
@@ -68,9 +46,7 @@ results: ['50% cost reduction', '99.9% uptime', '3x faster deployment'],
       description: 'Successfully migrated legacy systems to cloud infrastructure for improved scalability and performance.',
       industry: 'Financial Services',
       duration: '8 months',
-<<<<<<< HEAD
       results: ['50% cost reduction', '99.9% uptime', '3x faster deployment'],
->>>>>>> cursor/fix-errors-and-merge-to-main-529a
       technologies: ['AWS', 'Docker', 'Kubernetes', 'Terraform'],
       image: '/api/placeholder/600/400',
       featured: true

@@ -1,24 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { CheckCircle, ArrowRight, Star, Users, Award, MapPin, Clock, Briefcase, Target, Lightbulb } from 'lucide-react';
-
-=======
 import { Star, Users, Award, MapPin, Clock, Briefcase, CheckCircle, ArrowRight, Target, Lightbulb } from 'lucide-react';
-
-=======
-=======
-import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-529a
-=======
-import { Star, Users, Award, MapPin, Clock, Briefcase, CheckCircle, ArrowRight, Target, Lightbulb } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-fd18
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-<<<<<<< HEAD
-=======
 interface JobPosition {
   id: string;
   title: string;
@@ -33,36 +18,19 @@ interface JobPosition {
   featured: boolean;
 }
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-529a
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fd18
 const CareersPage: React.FC = () => {
   const jobPositions: JobPosition[] = [
     {
       id: '1',
       title: 'Senior AI Engineer',
       department: 'AI Solutions',
-<<<<<<< HEAD
       location: 'San Francisco, CA',
       type: 'Full-time',
       experience: '5+ years',
-<<<<<<< HEAD
       description: 'Lead the development of cutting-edge AI solutions and machine learning models.',
       requirements: ['Python, TensorFlow, PyTorch', '5+ years ML experience', 'PhD in Computer Science'],
       benefits: ['Competitive salary', 'Health insurance', 'Stock options', 'Remote work'],
-=======
-      description: 'Lead development of cutting-edge AI solutions and machine learning models.',
-      requirements: ['Python, TensorFlow, PyTorch', '5+ years ML experience', 'PhD in AI/ML preferred'],
-      benefits: ['Competitive salary', 'Health insurance', 'Remote work', 'Stock options'],
->>>>>>> cursor/fix-errors-and-merge-to-main-529a
       posted: '2 days ago',
-=======
-      location: 'Remote',
-      type: 'Full-time',
-      experience: '5+ years',
-      description: 'Lead the development of cutting-edge AI solutions and machine learning models.',
-      requirements: [
         'Master\'s degree in Computer Science or related field',
         '5+ years of experience in AI/ML development',
         'Proficiency in Python, TensorFlow, PyTorch',
