@@ -7,7 +7,6 @@ import Footer from '../components/Footer';
 
 const PagePage: React.FC = () => {
   const features = [
-<<<<<<< HEAD
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -26,9 +25,7 @@ const PagePage: React.FC = () => {
       description: 'AI-powered insights to optimize your business performance.',
       benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']
     },
-=======
     {},
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
     {
       icon: Target,
       title: 'Precision Targeting',
@@ -153,8 +150,5 @@ const PagePage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default PagePage;
-=======
 export default AiEmailMarketingAutomationPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc

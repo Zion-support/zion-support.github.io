@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 const CybersecurityPage: React.FC = () => {
   const features = [
@@ -38,7 +36,6 @@ const CybersecurityPage: React.FC = () => {
     'Seamless integration with existing systems'
   ];
 
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
   return (
             </div>
           </div>

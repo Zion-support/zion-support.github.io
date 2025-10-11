@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
@@ -453,4 +451,3 @@ export default DynamicContentShowcase;
 }
 
 export default DynamicContentShowcase
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc

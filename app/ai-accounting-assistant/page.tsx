@@ -1,8 +1,6 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -32,46 +30,36 @@ const PagePage: React.FC = () => {
       title: 'Precision Targeting',
       description: 'Target specific goals and objectives with precision.',
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-=======
 import { Calculator, FileText, BarChart, CheckCircle, ArrowRight, Zap, Target, TrendingUp } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-=======
 import { Calculator, FileText, BarChart, TrendingUp, CheckCircle, ArrowRight, Zap, Shield, Brain, Target } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
->>>>>>> cursor/fix-errors-and-merge-to-main-54c9
 const AiAccountingAssistantPage: React.FC = () => {
   const features = [
     {
       icon: Calculator,
       title: 'Automated Calculations',
-<<<<<<< HEAD
       description: 'AI-powered calculations for complex accounting tasks with 99.9% accuracy.',
       benefits: ['Tax calculations', 'Depreciation schedules', 'Financial ratios', 'Cost analysis']
-=======
       description: 'AI-powered calculations for complex accounting tasks and financial analysis.',
       benefits: ['Tax calculations', 'Financial ratios', 'Budget analysis', 'Cost tracking']
->>>>>>> cursor/fix-errors-and-merge-to-main-54c9
     },
     {
       icon: FileText,
       title: 'Document Processing',
-<<<<<<< HEAD
       description: 'Intelligent document analysis and data extraction from invoices and receipts.',
       benefits: ['Invoice processing', 'Receipt scanning', 'Data extraction', 'Error detection']
-=======
       description: 'Intelligent document processing and data extraction from invoices and receipts.',
       benefits: ['Invoice processing', 'Receipt scanning', 'Data extraction', 'Document classification']
->>>>>>> cursor/fix-errors-and-merge-to-main-54c9
     },
     {
       icon: BarChart,
       title: 'Financial Reporting',
       description: 'Generate comprehensive financial reports and analytics automatically.',
-<<<<<<< HEAD
       benefits: ['P&L statements', 'Balance sheets', 'Cash flow reports', 'Trend analysis']
     },
     {
@@ -79,8 +67,6 @@ const AiAccountingAssistantPage: React.FC = () => {
       title: 'Compliance Monitoring',
       description: 'Ensure compliance with accounting standards and regulations.',
       benefits: ['GAAP compliance', 'Tax regulations', 'Audit preparation', 'Risk assessment']
->>>>>>> cursor/fix-errors-and-merge-to-main-8a51
-=======
       benefits: ['P&L statements', 'Balance sheets', 'Cash flow reports', 'Custom analytics']
     },
     {
@@ -88,28 +74,22 @@ const AiAccountingAssistantPage: React.FC = () => {
       title: 'Predictive Analytics',
       description: 'AI-driven insights for financial forecasting and business planning.',
       benefits: ['Revenue forecasting', 'Expense prediction', 'Risk analysis', 'Growth planning']
->>>>>>> cursor/fix-errors-and-merge-to-main-54c9
     }
   ];
 
   const benefits = [
-<<<<<<< HEAD
-<<<<<<< HEAD
     'Increase efficiency by up to 80%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Real-time processing and analysis',
     'Seamless integration with existing systems'
-=======
     'Reduce accounting errors by 95%',
     'Save 80% of time on routine tasks',
     'Automated compliance checking',
     'Real-time financial insights',
     'Seamless integration with existing systems',
     '24/7 automated processing'
->>>>>>> cursor/fix-errors-and-merge-to-main-8a51
-=======
     'Reduce accounting errors by 90%',
     'Save 15+ hours per week on manual tasks',
     'Improve financial accuracy and compliance',
@@ -139,41 +119,29 @@ const AiAccountingAssistantPage: React.FC = () => {
       description: 'Powerful tools for accounting professionals to serve more clients.',
       icon: Target
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-54c9
   ];
 
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Advanced page solutions powered by artificial intelligence and cutting-edge technology." />
         <meta name="keywords" content="AI, page, artificial intelligence, business solutions, automation" />
-=======
         <title>AI Accounting Assistant - Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered accounting assistant for automated calculations, document processing, and financial reporting." />
         <meta name="keywords" content="AI accounting, automated accounting, financial software, accounting assistant, bookkeeping automation" />
->>>>>>> cursor/fix-errors-and-merge-to-main-8a51
-=======
         <title>AI Accounting Assistant - Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered accounting assistant for automated financial management and reporting" />
         <meta name="keywords" content="AI accounting, financial automation, accounting software, bookkeeping, financial reporting" />
->>>>>>> cursor/fix-errors-and-merge-to-main-54c9
       </Helmet>
       <Navigation />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-54c9
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-<<<<<<< HEAD
                 Page <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Solutions</span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -188,7 +156,6 @@ const AiAccountingAssistantPage: React.FC = () => {
                   Learn More
                 </button>
               </div>
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -205,8 +172,6 @@ const AiAccountingAssistantPage: React.FC = () => {
               <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
                 Learn More
               </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-8a51
-=======
                 AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Accounting Assistant</span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -221,26 +186,21 @@ const AiAccountingAssistantPage: React.FC = () => {
                   Schedule Demo
                 </button>
               </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-54c9
             </div>
           </div>
         </section>
 
         {/* Features Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Powerful Features</h2>
               <p className="text-xl text-gray-300">Everything you need to succeed with AI</p>
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Powerful Features</h2>
               <p className="text-xl text-gray-300">Everything you need for automated accounting</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-8a51
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -260,7 +220,6 @@ const AiAccountingAssistantPage: React.FC = () => {
                   </ul>
                 </div>
               ))}
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -322,27 +281,21 @@ const AiAccountingAssistantPage: React.FC = () => {
                   </div>
                 )
               })}
->>>>>>> cursor/fix-errors-and-merge-to-main-54c9
             </div>
           </div>
         </section>
 
         {/* Benefits Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our AI Solutions?</h2>
               <p className="text-xl text-gray-300">Transform your business with intelligent automation</p>
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our AI Accounting Assistant?</h2>
               <p className="text-xl text-gray-300">Transform your accounting with intelligent automation</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-8a51
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -352,7 +305,6 @@ const AiAccountingAssistantPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                 Transform your accounting workflow with intelligent automation
               </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-54c9
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -373,11 +325,8 @@ const AiAccountingAssistantPage: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Automate Your Accounting?</h2>
             <p className="text-xl text-gray-300 mb-8">
-<<<<<<< HEAD
               Join thousands of businesses already using our AI accounting assistant to streamline their financial processes.
-=======
               Join thousands of businesses already using our AI-powered accounting solutions.
->>>>>>> cursor/fix-errors-and-merge-to-main-54c9
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
@@ -385,18 +334,9 @@ const AiAccountingAssistantPage: React.FC = () => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-<<<<<<< HEAD
-<<<<<<< HEAD
                 Learn More
-=======
                 Schedule Demo
->>>>>>> cursor/fix-errors-and-merge-to-main-8a51
-=======
                 Contact Sales
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-54c9
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
               </button>
             </div>
           </div>
@@ -408,12 +348,6 @@ const AiAccountingAssistantPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default PagePage;
-=======
 export default AiAccountingAssistantPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-8a51
-=======
 export default AiAccountingAssistantPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-54c9

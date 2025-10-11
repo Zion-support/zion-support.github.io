@@ -7,7 +7,6 @@ import Footer from '../components/Footer';
 
 const PagePage: React.FC = () => {
   const features = [
-<<<<<<< HEAD
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -26,9 +25,7 @@ const PagePage: React.FC = () => {
       description: 'AI-powered insights to optimize your business performance.',
       benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']
     },
-=======
     {},
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
     {
       icon: Target,
       title: 'Precision Targeting',
@@ -47,7 +44,6 @@ const PagePage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <>
       <Helmet>
         <title>Page - Zion Tech Group</title>
@@ -76,7 +72,6 @@ const PagePage: React.FC = () => {
                   Learn More
                 </button>
               </div>
-=======
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our advanced AI-powered solutions.
@@ -89,7 +84,6 @@ const PagePage: React.FC = () => {
               <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
                 Learn More
               </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
             </div>
           </div>
         </section>
@@ -168,8 +162,5 @@ const PagePage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default PagePage;
-=======
 export default AiEmailAssistantPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc

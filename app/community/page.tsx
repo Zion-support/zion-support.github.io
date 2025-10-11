@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
   const benefits = [
     'Enhanced productivity and efficiency',
     'Reduced operational costs',
@@ -38,7 +36,6 @@
                   Learn More
                 </button>
               </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
             </div>
           </div>
         </section>

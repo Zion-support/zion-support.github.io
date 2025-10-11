@@ -5,7 +5,6 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Tar
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-<<<<<<< HEAD
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -145,8 +144,6 @@ const PagePage: React.FC = () => {
         </section>
       </div>
       
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
       <Footer />
     </>
   );

@@ -4,8 +4,6 @@ import { Helmet } from 'react-helmet-async';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-=======
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
 import { Phone, Mail, MessageCircle, FileText, Clock, CheckCircle } from 'lucide-react';
 import React from 'react'
@@ -127,7 +125,6 @@ const SupportPage: React.FC = () => {
   const toggleFaq = (index: number) => {
     setOpenFaq(openFaq === index ? null : index);
   };
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
 
 const PagePage: React.FC = () => {
   const features = [
@@ -186,7 +183,6 @@ const PagePage: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Discover our comprehensive page solutions designed to transform your business with AI and advanced technology.
               </p>
-<<<<<<< HEAD
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
                   Get Started
@@ -196,7 +192,6 @@ const PagePage: React.FC = () => {
                   Learn More
                 </button>
               </div>
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
@@ -244,18 +239,14 @@ const PagePage: React.FC = () => {
                   <channel.icon className="w-8 h-8 text-white" />
                 </div>
               ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
-=======
         {/* Content Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Powerful Features</h2>
@@ -323,8 +314,6 @@ const PagePage: React.FC = () => {
         </section>
       </div>
       
-<<<<<<< HEAD
-=======
         {/* FAQ Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-4xl mx-auto">
@@ -534,15 +523,12 @@ const PagePage: React.FC = () => {
         </div>
       </section>
       
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
       <Footer />
     </>
   );
 };
 
-<<<<<<< HEAD
 export default PagePage;
-=======
 export default PagePage;
 export default SupportPage;
 export default SupportPage;
@@ -551,4 +537,3 @@ export default SupportPage;
 }
 
 export default SupportPage
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc

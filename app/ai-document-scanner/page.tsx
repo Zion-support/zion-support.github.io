@@ -7,7 +7,6 @@ import Footer from '../components/Footer';
 
 const PagePage: React.FC = () => {
   const features = [
-<<<<<<< HEAD
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -20,9 +19,7 @@ const PagePage: React.FC = () => {
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
-=======
     {},
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
     {
       icon: TrendingUp,
       title: 'Performance Optimization',
@@ -54,7 +51,6 @@ const PagePage: React.FC = () => {
         <meta name="keywords" content="AI, page, artificial intelligence, business solutions, automation" />
       </Helmet>
       <Navigation />
-<<<<<<< HEAD
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -76,7 +72,6 @@ const PagePage: React.FC = () => {
                   Learn More
                 </button>
               </div>
-=======
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our advanced AI-powered solutions.
@@ -89,7 +84,6 @@ const PagePage: React.FC = () => {
               <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
                 Learn More
               </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
             </div>
           </div>
         </section>
@@ -168,8 +162,5 @@ const PagePage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default PagePage;
-=======
 export default AiDocumentScannerPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc

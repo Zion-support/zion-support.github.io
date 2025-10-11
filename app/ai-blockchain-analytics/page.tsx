@@ -4,8 +4,6 @@ import { Helmet } from 'react-helmet-async';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-=======
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
 import { BarChart, TrendingUp, PieChart, ArrowRight, CheckCircle, Zap, Shield, Target } from 'lucide-react';
 import React from 'react'
@@ -13,7 +11,6 @@ import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { Brain, BarChart, CheckCircle, TrendingUp, Shield, Zap } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
 
 const PagePage: React.FC = () => {
   const features = [
@@ -51,8 +48,6 @@ const PagePage: React.FC = () => {
     'Real-time processing and analysis',
     'Seamless integration with existing systems'
   ];
-<<<<<<< HEAD
-=======
     'Real-time blockchain data analysis',
     'AI-powered insights and predictions',
     'Comprehensive security monitoring',
@@ -60,7 +55,6 @@ const PagePage: React.FC = () => {
     'Advanced pattern recognition',
     'Scalable data processing'
   ]
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
 
   return (
     <>
@@ -82,7 +76,6 @@ const PagePage: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Discover our comprehensive page solutions designed to transform your business with AI and advanced technology.
               </p>
-<<<<<<< HEAD
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
                   Get Started
@@ -92,7 +85,6 @@ const PagePage: React.FC = () => {
                   Learn More
                 </button>
               </div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       
@@ -126,13 +118,10 @@ const PagePage: React.FC = () => {
               <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
                 Learn More
               </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-=======
         {/* Content Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -146,7 +135,6 @@ const PagePage: React.FC = () => {
               <button className="cyber-button">
                 Learn More
                 <ArrowRight className="w-5 h-5 ml-2" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
           <div className="max-w-7xl mx-auto">
@@ -170,8 +158,6 @@ const PagePage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-<<<<<<< HEAD
-=======
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"></p></p>
               Advanced AI-powered ai blockchain analytics solution for modern businesses.
             </p>
@@ -223,7 +209,6 @@ const PagePage: React.FC = () => {
                       ))}
                     </ul>
                   )}
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
                 </div>
               ))}
             </div>
@@ -231,12 +216,9 @@ const PagePage: React.FC = () => {
         </section>
 
         {/* Benefits Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <section className="py-20 px-4">
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our AI Solutions?</h2>
@@ -249,8 +231,6 @@ const PagePage: React.FC = () => {
                     <Zap className="h-6 w-6 text-cyan-400" />
                   </div>
                   <p className="text-gray-300">{benefit}</p>
-<<<<<<< HEAD
-=======
         <section className="py-20 px-4"></section></section>
         </section>
           <div className="max-w-7xl mx-auto"></div></div>
@@ -270,7 +250,6 @@ const PagePage: React.FC = () => {
                     <CheckCircle className="w-8 h-8 text-white" />
                   </div>
                   <p className="text-lg text-white font-medium"></p></p>{benefit}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
                 </div>
               ))}
             </div>
@@ -290,12 +269,10 @@ const PagePage: React.FC = () => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-<<<<<<< HEAD
                 Learn More
               </button>
             </div>
           </div>
-=======
                 Contact Sales
               </button>
         <section className="py-20 px-4">
@@ -318,7 +295,6 @@ const PagePage: React.FC = () => {
             </div>
           </div>
         <section className="py-20 px-4"></section></section>
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
         </section>
       </div>
       
@@ -327,9 +303,7 @@ const PagePage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default PagePage;
-=======
 export default PagePage;
       </main>
 
@@ -433,4 +407,3 @@ export default PagePage;
 
 export default AiBlockchainAnalyticsPage
 export default AiBlockchainAnalyticsPage
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc

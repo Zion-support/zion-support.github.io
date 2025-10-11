@@ -1,13 +1,10 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
 'use client';
 import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 import Navigation from '../components/Navigation';
@@ -17,15 +14,12 @@ const PagePage: React.FC = () => {
   const features = [
     {
       icon: Brain,
-<<<<<<< HEAD
       title: 'AI-Powered Solutions',
       description: 'Advanced artificial intelligence technology to transform your business operations.',
       benefits: ['Machine learning', 'Natural language processing', 'Predictive analytics', 'Automated insights']
-=======
       title: 'Intelligent Analysis',
       description: 'Advanced AI algorithms that understand code patterns and detect complex security issues.',
       benefits: ['Pattern recognition', 'Threat intelligence', 'Risk assessment', 'Predictive analysis']
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
     },
     {
       icon: BarChart,
@@ -47,13 +41,10 @@ const PagePage: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
-=======
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings }  } from 'lucide-react';
 const AiCodeSecurityAuditorPage: React.FC = () => {,
 'use client'
 import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
   const benefits = [
     'Increase efficiency by up to 80%',
     'Reduce costs by 30% with automation',
@@ -65,7 +56,6 @@ import React from 'react';
 
   return (
     <>
-<<<<<<< HEAD
       <Helmet>
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Advanced page solutions powered by artificial intelligence and cutting-edge technology." />
@@ -73,8 +63,6 @@ import React from 'react';
       </Helmet>
       <Navigation />
       
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
@@ -84,9 +72,7 @@ import React from 'react';
                 Page <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Solutions</span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-<<<<<<< HEAD
                 Discover our comprehensive page solutions designed to transform your business with AI and advanced technology.
-=======
                 Discover our comprehensive solutions designed to transform your business.
               </p>
             </div>
@@ -213,7 +199,6 @@ import React from 'react';
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Protect your codebase with AI-powered security auditing that automatically detects vulnerabilities and security issues.
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
@@ -229,7 +214,6 @@ import React from 'react';
         </section>
 
         {/* Features Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -238,7 +222,6 @@ import React from 'react';
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-=======
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -259,15 +242,12 @@ import React from 'react';
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
                   <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <feature.icon className="w-8 h-8 text-white" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
                   <div className="text-cyan-400 mb-4">
                     <feature.icon className="h-8 w-8" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
-<<<<<<< HEAD
-=======
         <section className="py-20 px-4"></section></section>
         </section>
           <div className="max-w-7xl mx-auto"></div></div>
@@ -297,7 +277,6 @@ import React from 'react';
                       ))}
                     </ul>
                   )}
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
@@ -313,13 +292,11 @@ import React from 'react';
         </section>
 
         {/* Benefits Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our AI Solutions?</h2>
               <p className="text-xl text-gray-300">Transform your business with intelligent automation</p>
-=======
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -348,7 +325,6 @@ import React from 'react';
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Security Auditor?</h2>
               <p className="text-xl text-gray-300">Transform your code security with intelligent automation</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
@@ -358,20 +334,15 @@ import React from 'react';
                   </div>
                   <p className="text-gray-300">{benefit}</p>
                 </div>
-<<<<<<< HEAD
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div></div>
               {benefits.map((benefit, index) =&gt; (
                 </div&gt;
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
               ))}
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
-=======
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
@@ -395,7 +366,6 @@ import React from 'react';
                   Learn More
                 </button>
               </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
@@ -413,21 +383,16 @@ import React from 'react';
             </div>
           </div>
         </section>
-<<<<<<< HEAD
       </div>
       
-=======
       </main>
 
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
       <Footer />
     </>
   );
 };
 
-<<<<<<< HEAD
 export default PagePage;
-=======
 export default PagePage;
 export default AiCodeSecurityAuditorPage;
 export default AiCodeSecurityAuditorPage;
@@ -466,4 +431,3 @@ export default AiCodeSecurityAuditorPage
 };
 
 export default AiCodeSecurityAuditorPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
