@@ -446,7 +446,8 @@ button:focus-visible {
   .neon-text {
     animation: none;
     text-shadow: 0 0 5px currentColor;
-=======
+  }
+}
 /* Advanced Futuristic Effects */
 .cyber-nav {
   background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.95) 100%);
@@ -739,7 +740,6 @@ button:focus-visible {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a8d8
   }
   
   .pulse-glow {

@@ -1,7 +1,5 @@
 'use client'
 import React, { useState } from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
 import { Calendar, Clock, CheckCircle, ArrowRight } from 'lucide-react'
 
 const ConsultationPage: React.FC = () => {
@@ -28,7 +26,6 @@ const ConsultationPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
       
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
@@ -195,8 +192,6 @@ const ConsultationPage: React.FC = () => {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   )
 }

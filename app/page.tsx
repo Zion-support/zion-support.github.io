@@ -1,7 +1,5 @@
 'use client'
 import React from 'react'
-import Navigation from './components/Navigation'
-import Footer from './components/Footer'
 import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, Users, Globe, Code, BarChart, Target, Sparkles, Cpu, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart, Rocket, Clock, Award, Lightbulb, Gauge, Phone } from 'lucide-react'
 
 const HomePage: React.FC = () => {
@@ -46,7 +44,6 @@ const HomePage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
       
       {/* Hero Section */}
       <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
@@ -129,8 +126,6 @@ const HomePage: React.FC = () => {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   )
 }
