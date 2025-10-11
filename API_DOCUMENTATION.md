@@ -126,8 +126,7 @@ try {
   ErrorHandler.handle(error, {
     severity: ErrorSeverity.HIGH,
     category: ErrorCategory.NETWORK,
-    context: { userId, action: 'fetchData' },
-  });
+    context: { userId, action: 'fetchData' }});
 }
 ```
 
@@ -209,8 +208,7 @@ const schema = generateArticleSchema({
   description: 'Article description',
   author: 'Author Name',
   datePublished: '2025-10-08',
-  image: 'https://example.com/image.jpg',
-});
+  image: 'https://example.com/image.jpg'});
 ```
 
 #### Breadcrumb Schema
@@ -221,8 +219,7 @@ import { generateBreadcrumbSchema } from '@/src/utils/structuredData';
 const schema = generateBreadcrumbSchema([
   { name: 'Home', url: '/' },
   { name: 'Blog', url: '/blog' },
-  { name: 'Article', url: '/blog/article' },
-]);
+  { name: 'Article', url: '/blog/article' }]);
 ```
 
 ### Sitemap Generation
@@ -237,15 +234,11 @@ const sitemap = generateSitemap({
       loc: '/',
       changefreq: CHANGEFREQ.DAILY,
       priority: PRIORITY.CRITICAL,
-      lastmod: new Date().toISOString(),
-    },
+      lastmod: new Date().toISOString()},
     {
       loc: '/about',
       changefreq: CHANGEFREQ.MONTHLY,
-      priority: PRIORITY.HIGH,
-    },
-  ],
-});
+      priority: PRIORITY.HIGH}]});
 ```
 
 ### Analytics
@@ -259,8 +252,7 @@ trackEvent({
   category: 'User',
   action: 'Click',
   label: 'CTA Button',
-  value: 1,
-});
+  value: 1});
 ```
 
 #### Track Page Views
@@ -378,8 +370,7 @@ import PerformanceMonitor from '@/app/components/PerformanceMonitor';
 1. **Use dynamic imports for code splitting**
    ```typescript
    const Component = dynamic(() => import('./Component'), {
-     loading: () => <Loading />,
-   });
+     loading: () => <Loading />});
    ```
 
 2. **Implement proper caching strategies**

@@ -160,7 +160,7 @@ git status
 cat <conflicted-file>
 
 # 3. Edit files to resolve conflicts
-# Remove markers: <<<<<<, =======, >>>>>>>
+# Remove markers: <<<<<<, , >>>>>>>
 # Keep desired changes
 
 # 4. Stage resolved files
@@ -342,15 +342,15 @@ After successful merge, consider these improvements:
 
 ## 🎯 QUICK ACTION CHECKLIST
 
-- [ ] Run `python3 auto_merge_prs.py` to merge current fixes
-- [ ] Check GitHub for open PRs
-- [ ] Merge any remaining PRs
-- [ ] Verify with `npm run type-check`
-- [ ] Verify with `npm run build`
-- [ ] Verify with `npm test`
-- [ ] Update CHANGELOG.md
-- [ ] Tag release if needed
-- [ ] Monitor deployment
+- [] Run `python3 auto_merge_prs.py` to merge current fixes
+- [] Check GitHub for open PRs
+- [] Merge any remaining PRs
+- [] Verify with `npm run type-check`
+- [] Verify with `npm run build`
+- [] Verify with `npm test`
+- [] Update CHANGELOG.md
+- [] Tag release if needed
+- [] Monitor deployment
 
 ---
 

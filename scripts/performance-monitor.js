@@ -1,102 +1,45 @@
 #!/usr/bin/env node
+import fs from 'fs'
+import path from 'path'
+import { fileURLToPath } from 'url'
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+// Performance monitoring script
+const performanceReport = {
+  timestamp: new Date().toISOString()
+  buildSize: 0
+  pageCount: 0,
+  recommendations: []}
 
-import fs from 'fs';
-import path from 'path';
-import { execSync } from 'child_process';
+// Analyze build output
+const buildDir = path.join(process.cwd(), '.next')
+const staticDir = path.join(buildDir, 'static')
+if (fs.existsSync(staticDir)) {
+  const files = fs.readdirSync(staticDir, { recursive: true })
+  const jsFiles = files.filter(file => file.endsWith('.js'))
+  jsFiles.forEach(file => {
+    )
+    const filePath = path.join(staticDir, file)
+    const stats = fs.statSync(filePath)
+    performanceReport.buildSize += stats.size
+  })
+  performanceReport.buildSize = Math.round(performanceReport.buildSize / 1024); // Convert to KB
+}
 
-// 1. Build size analysis
-
-try {
-  const _distPath = path.join(process.cwd(), 'dist');
-  if (fs.existsSync(distPath)) {
-    const _stats = execSync('du -sh dist/*', { encoding: 'utf8' });
-
-
-    // Check for large files
-    const _largeFiles = execSync('find dist -type f -size +100k -exec ls -lh {} +', { encoding: 'utf8' });
-    if (largeFiles.trim()) {
-
-
-    } else {
-
-    }
-  } else {
-
+// Performance recommendations
+if (performanceReport.buildSize > 500) {
+    performanceReport.recommendations.push('Consider code splitting to reduce bundle size')
   }
-} catch (error) {
 
-}
-
-// 2. Bundle analysis
-
-try {
-  execSync('npm run build:analyze', { stdio: 'inherit' });
-
-} catch (error) {
-
-}
-
-// 3. Performance audit
-
-try {
-  // Start preview server in background
-  const _previewProcess = execSync('npm run preview &', { stdio: 'pipe' });
-  
-  // Wait for server to start
-  await new Promise(resolve => setTimeout(resolve, 5000));
-  
-  // Run lighthouse audit
-  execSync('lighthouse http://localhost:4173 --output=html --output-path=./lighthouse-report.html --quiet', { stdio: 'inherit' });
-  
-  // Kill preview server
-  execSync('pkill -f "vite preview"', { stdio: 'pipe' });
-
-} catch (error) {
-
-}
-
-// 4. Check for performance issues
-
-// Check for unused dependencies
-try {
-  const _packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-  const _dependencies = Object.keys(packageJson.dependencies || {});
-  const _devDependencies = Object.keys(packageJson.devDependencies || {});
-
-
-  // Check for potential performance issues
-  const _heavyDeps = ['framer-motion', 'recharts', 'lighthouse'];
-  const foundHeavyDeps = [...dependencies, ...devDependencies].filter(dep => 
-    heavyDeps.some(heavy => dep.includes(heavy))
-  );
-  
-  if (foundHeavyDeps.length > 0) {
-    console.log('⚠️  Heavy dependencies detected:', foundHeavyDeps.join(', '));
-  } else {
-
+if (performanceReport.buildSize > 1000) {
+    performanceReport.recommendations.push('Bundle size is large - consider lazy loading components')
   }
-} catch (error) {
 
-}
-
-// 5. Generate performance report
-
-const report = {
-  timestamp: new Date().toISOString(),
-  buildSize: execSync('du -sh dist', { encoding: 'utf8' }).trim(),
-  functionsCount: execSync('find netlify/functions -name "*.js" | wc -l', { encoding: 'utf8' }).trim(),
-  optimizationStatus: 'Completed',
-  recommendations: [
-    '✅ Functions directory cleaned up (reduced from 348 to 81 functions)',
-    '✅ Build memory optimized with NODE_OPTIONS',
-    '✅ Vite configuration optimized for performance',
-    '✅ Netlify configuration optimized',
-    '✅ Memory leak warnings eliminated',
-  ]
-};
-
-fs.writeFileSync('performance-report.json', JSON.stringify(report, null, 2));
-
-
-
-
+performanceReport.recommendations.push('Enable gzip compression on server')
+performanceReport.recommendations.push('Consider using a CDN for static assets')
+// Write report
+const reportPath = path.join(process.cwd(), 'performance-report.json')
+fs.writeFileSync(reportPath, JSON.stringify(performanceReport, null, 2))
+console.log('Performance Report Generated: '),
+console.log(`Build Size: ${performanceReport.buildSize} KB`)
+console.log(`Recommendations: ${performanceReport.recommendations.length}`)

@@ -5,12 +5,11 @@ import sys
 def clean_merge_conflicts(content):
     """Remove merge conflict markers and keep the most complete code."""
     # Pattern to match merge conflict blocks
-    pattern = r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+\n'
+    pattern = r'\n(.*?)\n
     
     # Also handle standalone markers
-    content = re.sub(r'^<<<<<<< HEAD\n', '', content, flags=re.MULTILINE)
-    content = re.sub(r'^=======\n', '', content, flags=re.MULTILINE)
-    content = re.sub(r'^>>>>>>> [^\n]+\n', '', content, flags=re.MULTILINE)
+    content = re.sub(r'^\n', '', content, flags=re.MULTILINE)
+    content = re.sub(r'^
     
     # Remove empty lines at the start
     content = content.lstrip()

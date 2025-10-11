@@ -1,115 +1,314 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+<<<<<<< HEAD
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-}
-
-interface State {
-  hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
-}
-
-class GlobalErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
-  }
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
-      error,
-      errorInfo
-    });
-
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
+const GlobalErrorBoundaryPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+    },
+    {
+      icon: Zap,
+      title: 'High Performance',
+      description: 'Lightning-fast processing and real-time analytics for optimal results'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with encryption and compliance standards'
+    },
+    {
+      icon: Globe,
+      title: 'Global Reach',
+      description: 'Worldwide deployment and support for international businesses'
     }
+  ];
 
-    // Log error to analytics in production
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'exception', {
-        description: error.message,
-        fatal: false,
-        custom_map: {
-          stack: error.stack
-        }
-      });
-    }
-  }
+  const benefits = [
+=======
+}
+  ]
+const benefits = [
+>>>>>>> origin/main
+    'Advanced AI technology integration',
+    'Real-time processing and analytics',
+    'Enterprise-grade security and compliance',
+    'Scalable and flexible solutions',
 
-  render() {
-    if (this.state.hasError) {
-      // Custom fallback UI
-      if (this.props.fallback) {
-        return this.props.fallback;
-      }
+    '24/7 technical support',
 
-      // Default fallback UI
-      return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
-            <div className="flex items-center mb-4">
-              <div className="flex-shrink-0">
-                <svg className="h-8 w-8 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
-                </svg>
+    'Easy integration with existing systems',
+
+    'Cost-effective pricing plans',
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+    'Proven track record of success'
+  ]
+return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
+      <Helmet />
+=======
+    'Proven track record of success';
+  ];];];
+return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <Helmet>
+>>>>>>> origin/main
+        <title>GlobalErrorBoundary | Zion Tech Group</title>
+        <meta name="description" content="AI-powered solution" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+      </Helmet>
+      {/* Features Section */} <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
+    'Proven track record of success'
+  ]
+return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <Helmet>
+        </Helmet><title>GlobalErrorBoundary | Zion Tech Group</title>
+        <meta name="description" content="AI-powered solution" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+      </Helmet>
+      {/* Features Section */}
+      <section className="py-20 px-4">
+          </section>< className="$2 />
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> origin/main
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2>Why Choose Our GlobalErrorBoundary?,</h2>
+            </h2>
+            <p>Our globalerrorboundary solutions deliver unmatched performance, security, and scalability.</p>
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,
+            {features.map((feature, index) => (
+                <div key={index}className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300"></div>,
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
+                  <feature />
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description</p>}</p>
               </div>
-              <div className="ml-3">
-                <h3 className="text-lg font-medium text-gray-900">
-                  Something went wrong
-                </h3>
-              </div>
-            </div>
-            <div className="mt-2">
-              <p className="text-sm text-gray-500">
-                We're sorry, but something unexpected happened. Please try refreshing the page.
-              </p>
-            </div>
-            <div className="mt-4 flex space-x-3">
-              <button
-                onClick={() => window.location.reload()}
-                className="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-              >
-                Refresh Page
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>GlobalErrorBoundary | Zion Tech Group
+        <meta name="description" content="Professional GlobalErrorBoundary services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="GlobalErrorBoundary, AI solutions, IT services, Zion Tech Group, globalerrorboundary" />
+<<<<<<< HEAD
+      </Helmet>
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                GlobalErrorBoundary
+              </span>
+              <br />
+              <span className="text-white">Solutions</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your business with our advanced globalerrorboundary solutions. 
+              Powered by cutting-edge AI technology and industry expertise.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
               </button>
-              <button
-                onClick={() => this.setState({ hasError: false, error: undefined, errorInfo: undefined })}
-                className="inline-flex items-center px-3 py-2 border border-gray-300 text-sm leading-4 font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-              >
-                Try Again
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+                Learn More
               </button>
             </div>
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mt-4">
-                <summary className="text-sm font-medium text-gray-700 cursor-pointer">
-                  Error Details (Development)
-                </summary>
-                <div className="mt-2 p-3 bg-gray-100 rounded-md">
-                  <pre className="text-xs text-gray-600 whitespace-pre-wrap">
-                    {this.state.error.stack}
-                  </pre>
-                  {this.state.errorInfo && (
-                    <pre className="text-xs text-gray-600 whitespace-pre-wrap mt-2">
-                      {this.state.errorInfo.componentStack}
-                    </pre>
-                  )}
-                </div>
-              </details>
-            )}
           </div>
         </div>
-      );
-    }
+      </section>
 
-    return this.props.children;
-  }
+=======
+>>>>>>> origin/main
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        </section>
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Our GlobalErrorBoundary?
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our globalerrorboundary solutions deliver unmatched performance, security, and scalability.
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+                  <feature.icon className="h-6 w-6 text-white" />
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}
+                <p className="text-gray-300">{feature.description}
+            ))}
+<<<<<<< HEAD
+          </div>
+        </div>
+      </section>
+      {/* Benefits Section */} <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
+      {/* Benefits Section */}
+      <section className="py-20 px-4">
+          </section>< className="$2 />
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> origin/main
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
+<<<<<<< HEAD
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2>Key Benefits;</h2>
+            </h2>
+            <p>Experience the power of our globalerrorboundary solutions for your business.,</p>
+=======
+        <div className="max-w-7xl mx-auto" / /></div>
+          <div className="text-center mb-16" / /></div>
+            <h2></h2>
+              Key Benefits
+            </h2>
+            <p></p>
+              Experience the power of our globalerrorboundary solutions for your business.,
+>>>>>>> origin/main
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>,
+            {benefits.map((benefit, index) => (
+<<<<<<< HEAD
+                <div key={index}className="flex items-start space-x-3"></div>
+                <CheckCircle />
+                <p className="text-gray-300 text-lg">{benefit</p>}</p>
+=======
+                <div key={index} className="flex items-start space-x-3"></div>
+                <CheckCircle>
+                </CheckCircle><p className="text-gray-300 text-lg">{benefit}</p>
+>>>>>>> origin/main
+              </div>
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        </section>
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Benefits
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the power of our globalerrorboundary solutions for your business.
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-start space-x-3">
+                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+                <p className="text-gray-300 text-lg">{benefit}
+            ))}
+<<<<<<< HEAD
+          </div>
+        ))
+      </section>
+      {/* CTA Section */} <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+=======
+      {/* CTA Section */}
+<<<<<<< HEAD
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        </section>
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+=======
+      <section className="py-20 px-4">
+          </section>< className="$2 />
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+>>>>>>> origin/main
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
+<<<<<<< HEAD
+        <div className="max-w-4xl mx-auto text-center"></div>
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md: p-12"></div>,
+            <h2>Ready to Get Started?</h2>
+            </h2>
+            <p>Contact our experts to discuss your globalerrorboundary needs and get a customized solution.</p>
+=======
+        <div className="max-w-4xl mx-auto text-center" / /></div>
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12" / /></div>
+            <h2></h2>
+>>>>>>> origin/main
+              Ready to Get Started?
+            </h2>
+            <p></p>
+              Contact our experts to discuss your globalerrorboundary needs and get a customized solution.
+>>>>>>> origin/main
+            </p>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
+              <button>
+<<<<<<< HEAD
+                <Phone>
+                Call Now;
+              </button>
+              <button>
+                <Mail>
+                Email Us;
+=======
+                </button><Phone>
+                Call Now
+              </button>
+              <button>
+                </button><Mail>
+                Email Us
+>>>>>>> origin/main
+              </button>
+            </div>
+          </div>
+        ))
+      </section>
+    </div>
+  ),
 }
+export default GlobalErrorBoundaryPage
+            <p className="text-xl text-purple-100 mb-8">
+              Contact our experts to discuss your globalerrorboundary needs and get a customized solution.
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+                <Phone className="mr-2 h-5 w-5" />
+                Call Now
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+                <Mail className="mr-2 h-5 w-5" />
+                Email Us
+<<<<<<< HEAD
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
 
-export { GlobalErrorBoundary };
+export default GlobalErrorBoundaryPage;
+=======
+  )
+}
+export default GlobalErrorBoundaryPage</div></div></div></div></div></div></div></div></div></div></div></div></div></button></button></p></p></p></p></p></h2></h2></h2></h3></section></section></section>
+>>>>>>> origin/main

@@ -1,92 +1,72 @@
-#!/usr/bin/env node
-
-import fs from 'fs';
-import { execSync } from 'child_process';
-
-// Get all files with remaining syntax errors
-const files = execSync(
-  "find /workspace/app -name '*.tsx' -o -name '*.ts' | xargs grep -l 'export const metadata'",
-  { encoding: 'utf8' }
-)
-  .trim()
-  .split('\n')
-  .filter(file => file.length > 0);
-
-// // Function to process a single file
-function processFile(filePath) {
-  try {
-    let _content = fs.readFileSync(filePath, 'utf8');
-    let _modified = false;
-
-    // Fix incomplete metadata objects
-    const metadataRegex =
-      /export const metadata = \{[\s\S]*?(?=\n\nexport default|\n\nconst|\n\nfunction|\n\ninterface|\n\nclass|\n\nconst [A-Z]|\n\n\/\/|\n\n\/\*|\n\nimport|\n\n$)/;
-
-    if (metadataRegex.test(content)) {
-      // Remove the entire metadata export
-      content = content.replace(metadataRegex, '');
-      modified = true;
-    }
-
-    // Fix any remaining broken metadata lines
-    const _lines = content.split('\n');
-    const _filteredLines = [];
-    let _skipUntilExport = false;
-
-    for (let i = 0; i < lines.length; i++) {
-      const _line = lines[i];
-
-      if (line.includes('export const metadata')) {
-        skipUntilExport = true;
-        continue;
-      }
-
-      if (
-        skipUntilExport &&
-        (line.trim() === '' ||
-          line.includes('export default') ||
-          line.includes('const ') ||
-          line.includes('function ') ||
-          line.includes('interface ') ||
-          line.includes('class '))
-      ) {
-        skipUntilExport = false;
-        if (
-          line.includes('export default') ||
-          line.includes('const ') ||
-          line.includes('function ') ||
-          line.includes('interface ') ||
-          line.includes('class ')
-        ) {
-          filteredLines.push(line);
-        }
-        continue;
-      }
-
-      if (!skipUntilExport) {
-        filteredLines.push(line);
+import fs from 'fs'
+import path from 'path'
+import { fileURLToPath } from 'url'
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+// Get all files with errors
+const getAllFilesWithErrors = () => {
+  const srcDir = path.join(__dirname, 'src')
+  const files = []
+  const scanDirectory = (dir) => {
+    const items = fs.readdirSync(dir)
+    for (const item of items) {
+      const fullPath = path.join(dir, item)
+      const stat = fs.statSync(fullPath)
+      if (stat.isDirectory()) {
+        scanDirectory(fullPath)
+      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+        files.push(fullPath)
       }
     }
-
-    //     const newContent = filteredLines.join('\n');
-
-    if (newContent !== content) {
-      fs.writeFileSync(filePath, newContent);
-      //       return true;
-    }
-
-    return false;
-  } catch (error) {
-    //     return false;
   }
+  scanDirectory(srcDir)
+  return files
 }
-
-// Process all files
-let _fixedCount = 0;
-files.forEach(file => {
-  if (processFile(file)) {
-    fixedCount++;
+// Fix all remaining syntax errors
+const fixRemainingErrors = () => {
+  const files = getAllFilesWithErrors()
+  let fixedCount = 0
+  for (const filePath of files) {
+    try {
+      let content = fs.readFileSync(filePath, 'utf8')
+      let modified = false
+      // Fix component names with spaces or special characters
+      const componentNameMatch = content.match(/const\s+([A-Za-z0-9\s\-]+)Page: \s*React\.FC/)
+      if (componentNameMatch) {,
+        const oldName = componentNameMatch[1];,
+        const newName = oldName
+          .replace(/\s+/g, '')
+          .replace(/\-/g, '')
+          .replace(/^([a-z])/, (match, letter) => letter.toUpperCase())
+        if (oldName !== newName) {
+          content = content.replace(new RegExp(`const\\s+${oldName.replace(/[\s\-]/g, '\\s+')}Page:\\s*React\\.FC`, 'g'), `const ${newName}Page: React.FC`)
+          content = content.replace(new RegExp(`export\\s+default\\s+${oldName.replace(/[\s\-]/g, '\\s+')}Page`, 'g'), `export default ${newName}Page`)
+          modified = true
+        }
+      }
+      
+      // Fix any remaining TODO comments that might cause issues
+      content = content.replace(/\/\/\s*TODO:.*$/gm, '')
+      content = content.replace(/{\s*\/\/\s*TODO:.*?}/g, '{}')
+      content = content.replace(/\[\s*\/\/\s*TODO:.*?]/g, '[]')
+      content = content.replace(/\(\s*\/\/\s*TODO:.*?\)/g, '()')
+      // Fix any malformed JSX
+      content = content.replace(/\/\/\s*[^/]/g, '')
+      content = content.replace(/<[^>]*\/\/[^>]*>/g, (match) => match.replace(/\/\/.*/, ''))
+      // Fix any incomplete function calls or objects
+      content = content.replace(/{\s*}\s*$/gm, '{}')
+      content = content.replace(/\[\s*\]\s*$/gm, '[]')
+      content = content.replace(/\(\s*\)\s*$/gm, '()')
+      if (modified) {
+        fs.writeFileSync(filePath, content)
+        console.log(`Fixed: ${path.relative(__dirname, filePath)}`)
+        fixedCount++
+      }
+    } catch (error) {
+      console.error(`Error fixing ${filePath}:`, error.message)
+    }
   }
-});
-
-// 
+  
+  console.log(`Fixed ${fixedCount} files!`)
+}
+fixRemainingErrors()

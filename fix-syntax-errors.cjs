@@ -1,123 +1,186 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
 
-// Fix App.tsx - remove duplicate }, []);
-function fixAppTsx() {
-  const filePath = path.join(__dirname, 'App.tsx');
-  let content = fs.readFileSync(filePath, 'utf8');
-  
-  // Find and fix duplicate }, []);
-  content = content.replace(/    \[\]\s+\);\s+  }, \[\]\);/g, '    []\n  );');
-  
-  fs.writeFileSync(filePath, content, 'utf8');
-  console.log('Fixed App.tsx');
-}
-
-// Fix api/shipping-rates.js - remove duplicate module.exports and closing braces
-function fixShippingRates() {
-  const filePath = path.join(__dirname, 'api', 'shipping-rates.js');
-  let content = fs.readFileSync(filePath, 'utf8');
-  
-  // Remove all lines after the first module.exports
-  const lines = content.split('\n');
-  const firstExportIndex = lines.findIndex(line => line.trim() === 'module.exports = withSentry(handler);');
-  
-  if (firstExportIndex !== -1) {
-    const fixedLines = lines.slice(0, firstExportIndex + 1);
-    content = fixedLines.join('\n') + '\n';
+<<<<<<< HEAD
+// Function to fix common syntax errors in a file
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-813e
+function fixSyntaxErrors(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+    
+<<<<<<< HEAD
+    // Fix semicolons in object properties (should be commas)
+    const semicolonInObject = /(\w+):\s*\[[^\]]*\]\s*;/g;
+    content = content.replace(semicolonInObject, (match) => {
+      modified = true;
+      return match.replace(';', ',');
+    });
+    
+    // Fix semicolons in array elements (should be commas)
+    const semicolonInArray = /(\w+):\s*\[[^\]]*\]\s*;\s*(\w+):/g;
+    content = content.replace(semicolonInArray, (match) => {
+      modified = true;
+      return match.replace(';', ',');
+    });
+    
+    // Fix malformed JSX return statements
+    const malformedReturn = /return\s*\(\s*\n\s*onChange=/g;
+    content = content.replace(malformedReturn, (match) => {
+      modified = true;
+      return 'return (\n    <>\n      <Helmet>\n        <title>Services - Zion Tech Group</title>\n        <meta name="description" content="Comprehensive AI and IT services for modern businesses." />\n      </Helmet>\n      <Navigation />\n      <main className="pt-16">\n        <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">\n          <div className="container mx-auto px-4">\n            <div className="max-w-4xl mx-auto text-center">\n              <h1 className="text-5xl font-bold text-white mb-6">Our Services</h1>\n              <p className="text-xl text-gray-300 mb-8">Comprehensive AI and IT solutions for your business</p>\n              <div className="relative max-w-md mx-auto">\n                <input\n                  type="text"\n                  placeholder="Search services..."\n                  value={searchTerm}\n                  onChange=';
+    });
+    
+    // Fix duplicate closing tags
+    const duplicateClosing = /<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/div>/g;
+    content = content.replace(duplicateClosing, '</div>\n        </section>\n      </main>\n      <Footer />\n    </>\n  );');
+    
+    // Fix malformed JSX elements
+    const malformedJSX = /<(\w+)\s*\/\s*\/\s*>/g;
+    content = content.replace(malformedJSX, '<$1 />');
+    
+    // Fix missing closing braces in objects
+    const missingBrace = /(\w+):\s*\[[^\]]*\]\s*;\s*(\w+):\s*\[/g;
+    content = content.replace(missingBrace, (match) => {
+      modified = true;
+      return match.replace(';', ',');
+    });
+    
+    // Write the fixed content back
+    if (modified) {
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed syntax errors in: ${filePath}`);
+      return true;
+    }
+    return false;
+=======
+    // Fix unclosed button tags
+    content = content.replace(/<button([^>]*)>\s*([^<]*?)\s*<\/\s*$/gm, '<button$1>$2</button>');
+    content = content.replace(/<button([^>]*)>\s*([^<]*?)\s*<\/\s*$/gm, '<button$1>$2</button>');
+    
+    // Fix unclosed div tags
+    content = content.replace(/<div([^>]*)>\s*([^<]*?)\s*<\/\s*$/gm, '<div$1>$2</div>');
+    
+    // Fix unclosed h1, h2, h3, h4, h5, h6 tags
+    content = content.replace(/<(h[1-6])([^>]*)>\s*([^<]*?)\s*<\/\s*$/gm, '<$1$2>$3</$1>');
+    
+    // Fix unclosed p tags
+    content = content.replace(/<p([^>]*)>\s*([^<]*?)\s*<\/\s*$/gm, '<p$1>$2</p>');
+    
+    // Fix unclosed span tags
+    content = content.replace(/<span([^>]*)>\s*([^<]*?)\s*<\/\s*$/gm, '<span$1>$2</span>');
+    
+    // Fix unclosed li tags
+    content = content.replace(/<li([^>]*)>\s*([^<]*?)\s*<\/\s*$/gm, '<li$1>$2</li>');
+    
+    // Fix unclosed ul/ol tags
+    content = content.replace(/<(ul|ol)([^>]*)>\s*([^<]*?)\s*<\/\s*$/gm, '<$1$2>$3</$1>');
+    
+    // Fix malformed JSX attributes with semicolons
+    content = content.replace(/(\w+)=\{([^}]+)\}\s*;/g, '$1={$2}');
+    
+    // Fix standalone semicolons in JSX
+    content = content.replace(/;\s*<\/[^>]+>/g, '</$1>');
+    
+    // Fix any remaining malformed closing tags
+    content = content.replace(/<\/\s*$/gm, '');
+    
+    // Remove any remaining standalone semicolons
+    content = content.replace(/^\s*;\s*$/gm, '');
+    
+    // Fix any malformed React.Fragment
+    content = content.replace(/<React\.Fragment>\s*([^<]*?)\s*<\/\s*$/gm, '<React.Fragment>$1</React.Fragment>');
+    
+    // Fix any malformed <> fragments
+    content = content.replace(/<>\s*([^<]*?)\s*<\/\s*$/gm, '<>$1</>');
+    
+    // Write the cleaned content back
+    fs.writeFileSync(filePath, content, 'utf8');
+    console.log(`Fixed syntax errors in: ${filePath}`);
+    return true;
+>>>>>>> cursor/fix-errors-and-merge-to-main-813e
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
-  
-  fs.writeFileSync(filePath, content, 'utf8');
-  console.log('Fixed api/shipping-rates.js');
 }
 
-// Fix api/subscribe.js - remove duplicate catch blocks and module.exports
-function fixSubscribe() {
-  const filePath = path.join(__dirname, 'api', 'subscribe.js');
-  let content = fs.readFileSync(filePath, 'utf8');
+<<<<<<< HEAD
+// Function to recursively find and fix all TypeScript/JavaScript files
+function fixAllFiles(dir) {
+  const files = fs.readdirSync(dir);
+  let fixedCount = 0;
+=======
+function findFilesWithSyntaxErrors(dir) {
+  const files = [];
+>>>>>>> cursor/fix-errors-and-merge-to-main-813e
   
-  // Remove duplicate catch blocks and trailing content
-  const lines = content.split('\n');
-  const firstExportIndex = lines.findIndex(line => line.trim() === 'module.exports = withSentry(handler);');
-  
-  if (firstExportIndex !== -1) {
-    // Find the line just before the duplicate catches
-    let lastGoodLine = firstExportIndex;
-    for (let i = firstExportIndex - 1; i >= 0; i--) {
-      if (lines[i].trim() === '}' && i > 0 && lines[i-1].includes('catch')) {
-        // Found legitimate closing brace for a catch block
-        lastGoodLine = i + 1;
-        break;
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+<<<<<<< HEAD
+    if (stat.isDirectory()) {
+      // Skip node_modules and other directories we don't want to modify
+      if (!['node_modules', '.git', 'dist', '.next'].includes(file)) {
+        fixedCount += fixAllFiles(filePath);
+      }
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
+      if (fixSyntaxErrors(filePath)) {
+        fixedCount++;
+=======
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.includes('node_modules') && !item.startsWith('.')) {
+        traverse(fullPath);
+      } else if (stat.isFile() && /\.(tsx?|jsx?)$/.test(item)) {
+        files.push(fullPath);
+>>>>>>> cursor/fix-errors-and-merge-to-main-813e
       }
     }
-    
-    // Re-read and fix more carefully
-    content = fs.readFileSync(filePath, 'utf8');
-    
-    // Remove lines with duplicate catch blocks
-    content = content.replace(/  } catch \(err\) {\s+console\.error\('Subscribe API error:', err\);\s+  } catch \(error\) {[\s\S]*?  } catch \(error\) {[\s\S]*?  } catch \(error\) {/g, '');
-    
-    // Keep only content up to first module.exports
-    const parts = content.split('module.exports = withSentry(handler);');
-    content = parts[0] + 'module.exports = withSentry(handler);\n';
   }
   
-  fs.writeFileSync(filePath, content, 'utf8');
-  console.log('Fixed api/subscribe.js');
+  return fixedCount;
 }
 
-// Fix app/components/ErrorBoundary.tsx - add missing closing paren
-function fixErrorBoundary() {
-  const filePath = path.join(__dirname, 'app', 'components', 'ErrorBoundary.tsx');
-  let content = fs.readFileSync(filePath, 'utf8');
-  
-  // Find line 112 and add missing )
-  const lines = content.split('\n');
-  if (lines.length > 112) {
-    // Look for the missing closing paren context
-    for (let i = 110; i < 115 && i < lines.length; i++) {
-      if (lines[i].includes('      );') && !lines[i].includes(');')) {
-        lines[i] = lines[i].replace('      );', '      ));');
-        break;
-      }
-    }
-    content = lines.join('\n');
-  }
-  
-  fs.writeFileSync(filePath, content, 'utf8');
-  console.log('Fixed app/components/ErrorBoundary.tsx');
-}
+<<<<<<< HEAD
+// Start fixing from the app directory
+const appDir = path.join(__dirname, 'app');
+console.log('Starting to fix syntax errors...');
+const fixedCount = fixAllFiles(appDir);
+console.log(`Fixed ${fixedCount} files`);
+=======
+// Main execution
+const workspaceDir = process.cwd();
+console.log('Finding and fixing syntax errors...');
 
-// Fix src/utils/analytics.ts - close comment and add method
-function fixAnalytics() {
-  const filePath = path.join(__dirname, 'src', 'utils', 'analytics.ts');
-  let content = fs.readFileSync(filePath, 'utf8');
-  
-  // Fix unclosed comment
-  content = content.replace(/  \/\*\*\s+\* Update user properties\s+  }\s+  \/\*\*\s+\* Update user properties\s+export default analytics;/g, 
-    `  /**
-   * Update user properties
-   */
-  updateUserProperties(properties: Record<string, any>) {
-    this.userProperties = { ...this.userProperties, ...properties };
+const files = findFilesWithSyntaxErrors(workspaceDir);
+console.log(`Found ${files.length} files to check`);
+
+let fixedCount = 0;
+let errorCount = 0;
+
+for (const file of files) {
+  if (fixSyntaxErrors(file)) {
+    fixedCount++;
+  } else {
+    errorCount++;
   }
 }
 
-export default analytics;`);
-  
-  fs.writeFileSync(filePath, content, 'utf8');
-  console.log('Fixed src/utils/analytics.ts');
-}
+console.log(`\nSummary:`);
+console.log(`- Files processed: ${fixedCount}`);
+console.log(`- Files with errors: ${errorCount}`);
+console.log(`- Total files: ${files.length}`);
 
-// Run all fixes
-try {
-  fixAppTsx();
-  fixShippingRates();
-  fixSubscribe();
-  fixErrorBoundary();
-  fixAnalytics();
-  console.log('\nAll syntax errors fixed!');
-} catch (error) {
-  console.error('Error fixing files:', error);
-  process.exit(1);
+if (errorCount === 0) {
+  console.log('\nAll syntax errors have been fixed!');
+} else {
+  console.log('\nSome files had errors and may need manual review.');
 }
+>>>>>>> cursor/fix-errors-and-merge-to-main-813e

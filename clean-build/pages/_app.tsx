@@ -1,10 +1,6 @@
-import type { AppProps } from 'next/app';
-import Head from 'next/head';
-import '../styles/globals.css';
-
+import '../styles/globals.css'
 export default function App({ Component, pageProps }: AppProps) {
-  return (
-    <>
+  return(<React.Fragment>
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -12,8 +8,11 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
-      </Head>
+      </Head>)
+      <Component {...pageProps} />)
+    </React.Fragment>)
+export default function App({ Component, pageProps }: AppProps) {/* TODO: Fix JSX expression */}
       <Component {...pageProps} />
-    </>
-  );
+  )
 }
+</li></li></li>
