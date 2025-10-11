@@ -1,59 +1,9 @@
-<<<<<<< HEAD
-'use client';
-=======
-
-interface Partner {
-  name: string;
-  logo: string;
-  description: string;
-  category: string;
-  website?: string;
-  tier: 'strategic' | 'preferred' | 'certified';
-}
-
-const PartnersPage: React.FC = () => {
-  const partners: Partner[] = [
-'use client'
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
 import React from 'react';
-<<<<<<< HEAD
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
-
-const PagePage: React.FC = () => {
-  return (
-<<<<<<< HEAD
-    <>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-        
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Page
-=======
-    'Joint go-to-market opportunities',
-    'Technical support and training',
-    'Co-innovation projects',
-    'Global reach and scalability',
-    'Certified expertise and solutions'
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
-        <section className="py-20 px-4"></section></section>
-          <div className="max-w-7xl mx-auto"></div></div>
-            <div className="text-center mb-16"></div></div>
-              <h1 className="text-4xl md: text-6xl font-bold text-white mb-6"></h1></h1>,</h1>
-                Our Technology Partners;
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Discover our comprehensive solutions designed to transform your business.
               </p>
             </div>
-<<<<<<< HEAD
-=======
 
             <div className="flex flex-wrap justify-center gap-4 mb-12"></div></div>{categories.map((category) => (</div>
                 <button;
@@ -90,7 +40,6 @@ const PagePage: React.FC = () => {
                 </div>
               ))}
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
           </div>
         </section>
 
@@ -113,7 +62,6 @@ const PagePage: React.FC = () => {
         </section>
       </div>
       
-=======
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -273,14 +221,8 @@ const PartnersPage: React.FC = () => {
         </section>
       </main>
 
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
       <Footer />
     </>
   );
 };
 
-<<<<<<< HEAD
-export default PagePage;
-=======
-export default PartnersPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7

@@ -5,7 +5,6 @@ import path from 'path';
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 ;
@@ -13,7 +12,6 @@ import path from 'path';
 export interface TokenTransaction {
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 

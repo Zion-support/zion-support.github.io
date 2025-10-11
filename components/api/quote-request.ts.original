@@ -1,37 +1,7 @@
-<<<<<<< HEAD
-
-import type { NextApiRequest, NextApiResponse } from "next";
-import { createClient } from "@supabase/supabase-js";
-import OpenAI from "openai";
-
-
-const supabaseUrl = process && process.env.NEXT_PUBLIC_SUPABASE_URL;
-const supabaseKey =
-  process && process.env.SUPABASE_SERVICE_ROLE_KEY ||
-  process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-
-const supabase =
-  supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null;
-const openaiApiKey = process && process.env.OPENAI_API_KEY;
-const openai = openaiApiKey ? new OpenAI({ apiKey: openaiApiKey }) : null;
-const supabaseUrl = process && process.env.NEXT_PUBLIC_SUPABASE_URL;
-const supabaseKey =
-
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { createClient } from '@supabase/supabase-js';
-import OpenAI from 'openai';
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { createClient } from '@supabase/supabase-js';
-import OpenAI from 'openai';
-
->>>>>>> origin/auto/autonomy-17186719616
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 const supabase = supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null;
 
-<<<<<<< HEAD
 
 
 const openaiApiKey = process.env.OPENAI_API_KEY;
@@ -213,7 +183,6 @@ if (throw error) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
@@ -221,7 +190,6 @@ if (throw error) {
 
 
 
-=======
 const openaiApiKey = process.env.OPENAI_API_KEY;
 const openai = openaiApiKey ? new OpenAI({ apiKey: openaiApiKey }) : null;
 
@@ -272,4 +240,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ message: 'Server error' });
   }
 }
->>>>>>> origin/auto/autonomy-17186719616

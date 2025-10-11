@@ -113,10 +113,4 @@ export function useResumeActions() {
     error,
     createResume,
     updateBasicInfo,
-<<<<<<< HEAD
-    setActiveResume};
-=======
-    setActiveResume,
-  };
->>>>>>> origin/auto/autonomy-17186719616
 }

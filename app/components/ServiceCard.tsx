@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-'use client';
-import React from 'react';
-<<<<<<< HEAD
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
 
 const ServiceCardPage: React.FC = () => {
   return (
@@ -43,8 +34,6 @@ const ServiceCardPage: React.FC = () => {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
             </div>
-<<<<<<< HEAD
-=======
           ))
         </div>
       </section>
@@ -114,7 +103,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ()
           </div><div key={index} className="flex items-center gap-2"></div></div>
             </div><CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
             <span className="text-gray-300 text-sm"></span></span>{feature}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
           </div>
         </section>
       </div>
@@ -125,7 +113,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ()
 };
 
 export default ServiceCardPage;
-=======
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target } from 'lucide-react';
 
 interface ServiceCardProps {
@@ -147,4 +134,3 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ className = '', children }) =
 };
 
 export default ServiceCard;
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7

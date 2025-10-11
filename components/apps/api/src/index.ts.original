@@ -1,26 +1,12 @@
 import Fastify from 'fastify';
 import cors from '@fastify/cors';
 import rateLimit from '@fastify/rate-limit';
-<<<<<<< HEAD
-import { createOpenAIClient, generateJobPost } from './openai';
-import { withUser } from './pg';
-import dotenv from 'dotenv';
-=======
-import dotenv from 'dotenv';
-import { createOpenAIClient, generateJobPost } from './openai.js';
-import { getPool, withUser } from './pg.js';
->>>>>>> origin/auto/autonomy-17186719616
 
 dotenv.config();
 
 const app = Fastify({ logger: true });
 
 await app.register(cors, {
-<<<<<<< HEAD
-  origin: (origin: string | undefined, cb: (err: Error | null, allow?: boolean) => void) => {
-=======
-  origin: (origin, cb) => {
->>>>>>> origin/auto/autonomy-17186719616
     const allowed = (process.env.CORS_ORIGINS || '').split(',').map((s) => s.trim());
     if (!origin || allowed.includes('*') || allowed.includes(origin)) {
       cb(null, true);
@@ -39,11 +25,6 @@ function getUserId(req: any): string | null {
   return (req.headers['x-user-id'] as string) || (req.query as any)['user_id'] || null;
 }
 
-<<<<<<< HEAD
-app.post('/ai/ask', async (req: any, reply: any) => {
-=======
-app.post('/ai/ask', async (req, reply) => {
->>>>>>> origin/auto/autonomy-17186719616
   const body = (req.body as any) || {};
   const prompt = body.prompt as string;
   if (!prompt) return reply.code(400).send({ error: 'prompt required' });
@@ -51,11 +32,6 @@ app.post('/ai/ask', async (req, reply) => {
   return { text: completion.output_text };
 });
 
-<<<<<<< HEAD
-app.post('/jobs/generate', async (req: any, reply: any) => {
-=======
-app.post('/jobs/generate', async (req, reply) => {
->>>>>>> origin/auto/autonomy-17186719616
   const body = (req.body as any) || {};
   const role = (body.role as string) || 'Engineer';
   const userId = getUserId(req);
@@ -71,11 +47,6 @@ app.post('/jobs/generate', async (req, reply) => {
   return { saved: Boolean(userId), description };
 });
 
-<<<<<<< HEAD
-app.get('/talent/search', async (req: any, reply: any) => {
-=======
-app.get('/talent/search', async (req, reply) => {
->>>>>>> origin/auto/autonomy-17186719616
   const q = (req.query as any).q as string;
   const country = (req.query as any).country as string | undefined;
   const userId = getUserId(req);
@@ -83,11 +54,6 @@ app.get('/talent/search', async (req, reply) => {
   const rows = await withUser(userId, async (client) => {
     const res = await client.query(
       `SELECT id, full_name, country, skills, experience_years FROM talent_profile
-<<<<<<< HEAD
-       WHERE ($1::text IS NULL OR $1::text IS NULL OR country = $1)
-=======
-       WHERE ($1::text IS NULL OR country = $1)
->>>>>>> origin/auto/autonomy-17186719616
          AND ($2::text IS NULL OR EXISTS (
               SELECT 1 FROM unnest(skills) s WHERE s ILIKE '%' || $2 || '%'
            ))
@@ -100,11 +66,6 @@ app.get('/talent/search', async (req, reply) => {
   return { results: rows };
 });
 
-<<<<<<< HEAD
-app.get('/projects/:name/track', async (req: any, reply: any) => {
-=======
-app.get('/projects/:name/track', async (req, reply) => {
->>>>>>> origin/auto/autonomy-17186719616
   const name = (req.params as any).name as string;
   const userId = getUserId(req);
   if (!userId) return reply.code(401).send({ error: 'unauthorized' });
@@ -116,11 +77,6 @@ app.get('/projects/:name/track', async (req, reply) => {
   return { project };
 });
 
-<<<<<<< HEAD
-app.get('/notifications', async (req: any, reply: any) => {
-=======
-app.get('/notifications', async (req, reply) => {
->>>>>>> origin/auto/autonomy-17186719616
   const userId = getUserId(req);
   if (!userId) return reply.code(401).send({ error: 'unauthorized' });
   const items = await withUser(userId, async (client) => {
@@ -134,13 +90,4 @@ app.get('/notifications', async (req, reply) => {
 });
 
 const port = Number(process.env.API_PORT || 4000);
-<<<<<<< HEAD
-app.listen({ port, host: '0.0.0.0' }).catch((err: any) => {
-  app.log.error(err);
-  (process as any).exit(1);
-=======
-app.listen({ port, host: '0.0.0.0' }).catch((err) => {
-  app.log.error(err);
-  process.exit(1);
->>>>>>> origin/auto/autonomy-17186719616
 });

@@ -1,69 +1,43 @@
-<<<<<<< HEAD
-'use client';
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
-=======
-import { Phone, Mail, MessageCircle, FileText, Clock, CheckCircle } from 'lucide-react';
-=======
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
+'use client'
+import React, { useState } from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { Phone, Mail, MessageCircle, FileText, HelpCircle, Clock, CheckCircle } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
+import { ChevronDown, ChevronUp, Mail, Phone, MessageCircle, ArrowRight, Clock, CheckCircle, Users, Shield } from 'lucide-react'
 
 const SupportPage: React.FC = () => {
+  const [openFAQ, setOpenFAQ] = useState<number | null>(null)
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
+    priority: 'medium'
+  })
+
   const faqs = [
     {
-      question: 'How do I get started with your AI services?',
-      answer: 'Getting started is easy! Contact our team for a free consultation where we assess your needs and create a customized implementation plan.'
-    },
-    {
-      question: 'What is your typical project timeline?',
-      answer: 'Project timelines vary based on complexity, but most AI implementations take 4-12 weeks from start to finish.'
-    },
-    {
-      question: 'Do you provide ongoing support?',
-      answer: 'Yes, we offer comprehensive support packages including monitoring, maintenance, and optimization services.'
+      question: 'How do I get started with your services?',
+      answer: 'Getting started is easy! Simply contact us through our consultation form or call us directly. We\'ll schedule a free consultation to understand your needs and provide a tailored solution.'
     },
     {
       question: 'What technologies do you work with?',
-      answer: 'We work with all major cloud platforms (AWS, Azure, GCP), AI frameworks (TensorFlow, PyTorch), and modern development stacks.'
-=======
-import { ChevronDown, ChevronUp, Mail, Phone, MessageCircle, ArrowRight, Clock, CheckCircle, Users, Shield } from 'lucide-react';
-
-const SupportPage: React.FC = () => {
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
-
-  const faqs = [
-    {
-      question: 'How do I get started with your AI solutions?',
-      answer: 'Getting started is easy! Simply contact our team through our contact form or schedule a free consultation. We\'ll assess your needs and create a customized plan for your business.'
+      answer: 'We work with all major cloud platforms (AWS, Azure, GCP), AI frameworks (TensorFlow, PyTorch), and modern web technologies (React, Node.js, Python, etc.). We stay current with the latest technologies to provide cutting-edge solutions.'
     },
     {
-      question: 'What support do you provide?',
-      answer: 'We provide comprehensive support including email support, phone support, and dedicated account management for enterprise clients. Our support team is available 24/7 for critical issues.'
+      question: 'Do you provide ongoing support?',
+      answer: 'Yes! We offer comprehensive support packages including 24/7 monitoring, regular maintenance, and technical support. Our support team is always available to help you with any issues or questions.'
     },
     {
-      question: 'How long does implementation take?',
-      answer: 'Implementation timelines vary depending on the complexity of your project. Simple AI integrations can take 2-4 weeks, while complex enterprise solutions may take 3-6 months. We provide detailed timelines during our consultation.'
+      question: 'What is your typical project timeline?',
+      answer: 'Project timelines vary depending on complexity and scope. Simple projects can be completed in 2-4 weeks, while complex enterprise solutions may take 3-6 months. We provide detailed timelines during the planning phase.'
     },
     {
-      question: 'Do you offer training?',
-      answer: 'Yes! We provide comprehensive training for your team on all our solutions. This includes hands-on workshops, documentation, and ongoing support to ensure your team can effectively use our tools.'
+      question: 'Do you offer training for our team?',
+      answer: 'Absolutely! We provide comprehensive training programs to help your team understand and effectively use the solutions we implement. This includes documentation, video tutorials, and hands-on training sessions.'
     },
     {
-      question: 'What is your response time for support requests?',
-      answer: 'We aim to respond to all support requests within 2 hours during business hours. For critical issues, we provide immediate response and resolution within 4 hours.'
-    },
-    {
-      question: 'Do you provide documentation and resources?',
-      answer: 'Yes, we provide comprehensive documentation, API references, and video tutorials for all our solutions. Our knowledge base is regularly updated with the latest information and best practices.'
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
+      question: 'What are your pricing models?',
+      answer: 'We offer flexible pricing models including fixed-price projects, hourly consulting, and ongoing support contracts. We work with you to find the pricing structure that best fits your budget and needs.'
     }
   ]
 
@@ -73,398 +47,253 @@ const SupportPage: React.FC = () => {
       title: 'Phone Support',
       description: 'Call us for immediate assistance',
       contact: '+1 (555) 123-4567',
-      availability: '24/7 for critical issues'
+      hours: '24/7 Emergency Support',
+      responseTime: 'Immediate'
     },
     {
       icon: Mail,
       title: 'Email Support',
       description: 'Send us a detailed message',
       contact: 'support@ziontechgroup.com',
-      availability: 'Response within 2 hours'
+      hours: 'Mon-Fri 9AM-6PM PST',
+      responseTime: 'Within 4 hours'
     },
     {
       icon: MessageCircle,
       title: 'Live Chat',
-<<<<<<< HEAD
-      description: 'Chat with our support team in real-time',
-      contact: 'Available on website',
-      availability: 'Business hours',
-      responseTime: 'Immediate'
-    },
-    {
-      icon: FileText,
-      title: 'Knowledge Base',
-      description: 'Searchable database of articles and solutions',
-      contact: 'Self-service',
-      availability: '24/7',
-      responseTime: 'Immediate'
-    }
-  ];
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-=======
       description: 'Chat with our support team',
       contact: 'Available on website',
-      availability: 'Mon-Fri 9AM-6PM EST'
+      hours: 'Mon-Fri 9AM-6PM PST',
+      responseTime: 'Within 2 minutes'
     }
-  ];
+  ]
 
-  const supportFeatures = [
-    {
-      icon: Clock,
-      title: 'Fast Response',
-      description: 'Get help quickly with our 2-hour response guarantee'
-    },
-    {
-      icon: Users,
-      title: 'Expert Team',
-      description: 'Our support team consists of certified AI and IT professionals'
-    },
-    {
-      icon: Shield,
-      title: 'Secure Support',
-      description: 'All support interactions are encrypted and secure'
-    },
-    {
-      icon: CheckCircle,
-      title: 'Guaranteed Resolution',
-      description: 'We ensure your issues are resolved to your satisfaction'
-    }
-  ];
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }))
+  }
 
-  const toggleFaq = (index: number) => {
-    setOpenFaq(openFaq === index ? null : index);
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    // Handle form submission
+    console.log('Support ticket submitted:', formData)
+  }
 
-const PagePage: React.FC = () => {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
         {/* Hero Section */}
-<<<<<<< HEAD
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Page
+                Support Center
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Discover our comprehensive solutions designed to transform your business.
+                We're here to help! Get the support you need to make the most of our services.
               </p>
-=======
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
-              Support Center
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Get help when you need it. Our expert support team is here to assist you 24/7.
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-      <Helmet>
-        <title>Support - Zion Tech Group | Expert Technical Support</title>
-        <meta name="description" content="Get expert technical support for all your AI and IT needs. 24/7 support with multiple channels to help you succeed." />
-        <meta name="keywords" content="technical support, AI support, IT support, customer service, help desk, troubleshooting" />
-      </Helmet>
-      
-      <Navigation />
-      
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Expert <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Support</span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Get the help you need when you need it. Our expert support team is here to assist you with all your AI and IT challenges.
-          </p>
-        </div>
-      </section>
-
-      {/* Support Channels */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              How Can We Help You?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the support channel that works best for you
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {supportChannels.map((channel, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <channel.icon className="w-8 h-8 text-white" />
-                </div>
-<<<<<<< HEAD
-              ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Content Section */}
+        {/* Support Channels */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Coming Soon
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                This page is under development. Please check back soon for updates.
-              </p>
-              <button className="cyber-button">
-                Learn More
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </button>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-white mb-6">Get in Touch</h2>
+              <p className="text-xl text-gray-300">Choose your preferred support channel</p>
             </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {supportChannels.map((channel, index) => (
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 text-center">
+                  <channel.icon className="h-12 w-12 text-cyan-400 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold text-white mb-3">{channel.title}</h3>
+                  <p className="text-gray-300 mb-4">{channel.description}</p>
+                  <div className="text-cyan-400 font-semibold mb-2">{channel.contact}</div>
+                  <div className="text-sm text-gray-400 mb-2">{channel.hours}</div>
+                  <div className="text-sm text-gray-400">Response: {channel.responseTime}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Support Ticket Form */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-white mb-6">Submit a Support Ticket</h2>
+              <p className="text-xl text-gray-300">Describe your issue and we'll get back to you quickly</p>
+            </div>
+            
+            <form onSubmit={handleSubmit} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border border-purple-500/20">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label htmlFor="name" className="block text-white mb-2">Full Name *</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
+                    placeholder="Your full name"
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="email" className="block text-white mb-2">Email Address *</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
+                    placeholder="your@email.com"
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="subject" className="block text-white mb-2">Subject *</label>
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
+                    placeholder="Brief description of your issue"
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="priority" className="block text-white mb-2">Priority</label>
+                  <select
+                    id="priority"
+                    name="priority"
+                    value={formData.priority}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-500"
+                  >
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                    <option value="urgent">Urgent</option>
+                  </select>
+                </div>
+              </div>
+              
+              <div className="mb-6">
+                <label htmlFor="message" className="block text-white mb-2">Message *</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  required
+                  rows={6}
+                  className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
+                  placeholder="Please provide detailed information about your issue..."
+                />
+              </div>
+              
+              <button
+                type="submit"
+                className="w-full bg-cyan-500 text-white py-3 px-6 rounded-lg hover:bg-cyan-600 transition-colors flex items-center justify-center"
+              >
+                Submit Ticket
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+            </form>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-white mb-6">Frequently Asked Questions</h2>
+              <p className="text-xl text-gray-300">Find answers to common questions</p>
+            </div>
+            
+            <div className="space-y-4">
+              {faqs.map((faq, index) => (
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg border border-purple-500/20">
+                  <button
+                    onClick={() => setOpenFAQ(openFAQ === index ? null : index)}
+                    className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700/50 transition-colors"
+                  >
+                    <span className="text-white font-semibold">{faq.question}</span>
+                    {openFAQ === index ? (
+                      <ChevronUp className="h-5 w-5 text-cyan-400" />
+                    ) : (
+                      <ChevronDown className="h-5 w-5 text-cyan-400" />
+                    )}
+                  </button>
+                  {openFAQ === index && (
+                    <div className="px-6 pb-4">
+                      <p className="text-gray-300">{faq.answer}</p>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Status Page */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-white mb-6">System Status</h2>
+            <p className="text-xl text-gray-300 mb-8">Check the current status of our services</p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-green-500/20">
+                <div className="flex items-center justify-center mb-3">
+                  <CheckCircle className="h-8 w-8 text-green-400 mr-2" />
+                  <span className="text-white font-semibold">All Systems Operational</span>
+                </div>
+                <p className="text-gray-300 text-sm">All services are running normally</p>
+              </div>
+              
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-green-500/20">
+                <div className="flex items-center justify-center mb-3">
+                  <Clock className="h-8 w-8 text-green-400 mr-2" />
+                  <span className="text-white font-semibold">99.9% Uptime</span>
+                </div>
+                <p className="text-gray-300 text-sm">Last 30 days</p>
+              </div>
+              
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-green-500/20">
+                <div className="flex items-center justify-center mb-3">
+                  <Shield className="h-8 w-8 text-green-400 mr-2" />
+                  <span className="text-white font-semibold">Security Status</span>
+                </div>
+                <p className="text-gray-300 text-sm">All systems secure</p>
+              </div>
+            </div>
+            
+            <button className="mt-8 text-cyan-400 hover:text-cyan-300 flex items-center mx-auto">
+              View Detailed Status Page
+              <ArrowRight className="ml-1 w-4 h-4" />
+            </button>
           </div>
         </section>
       </div>
       
-=======
-        {/* FAQ Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Frequently Asked Questions</h2>
-              <p className="text-xl text-gray-300">Find answers to common questions</p>
-            </div>
-            <div className="space-y-6">
-              {faqs.map((faq, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-                  <h3 className="text-xl font-semibold text-white mb-3">{faq.question}</h3>
-                  <p className="text-gray-300">{faq.answer}</p>
-=======
-                <h3 className="text-xl font-bold text-white mb-2">{channel.title}</h3>
-                <p className="text-gray-300 mb-4">{channel.description}</p>
-                <div className="text-cyan-400 font-semibold mb-2">{channel.contact}</div>
-                <div className="text-sm text-gray-400">
-                  <div>Available: {channel.availability}</div>
-                  <div>Response: {channel.responseTime}</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-xl text-gray-300">
-              Find answers to common questions about our services
-            </p>
-          </div>
-          
-          <div className="space-y-6">
-            {faqs.map((faq, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
-                <h3 className="text-xl font-bold text-white mb-4 flex items-center">
-                  <HelpCircle className="w-6 h-6 text-cyan-400 mr-3" />
-                  {faq.question}
-                </h3>
-                <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Still Need Help?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Can't find what you're looking for? Our support team is ready to help you with any questions or issues.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
-              <MessageCircle className="w-5 h-5 mr-2" />
-              Contact Support
-            </button>
-            <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center">
-              <Phone className="w-5 h-5 mr-2" />
-              Call Us Now
-            </button>
-          </div>
-        </div>
-      </section>
-
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Support & <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Help</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              We're here to help you succeed. Get the support you need with our comprehensive help resources and expert assistance.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
-                Contact Support
-              </button>
-              <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-                View Documentation
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Support Channels */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Get in Touch
-            </h2>
-            <p className="text-xl text-gray-300">
-              Choose the support channel that works best for you
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {supportChannels.map((channel, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <channel.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{channel.title}</h3>
-                <p className="text-gray-300 mb-4">{channel.description}</p>
-                <div className="text-cyan-400 font-semibold mb-2">{channel.contact}</div>
-                <div className="text-sm text-gray-400">{channel.availability}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Support Features */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our Support?
-            </h2>
-            <p className="text-xl text-gray-300">
-              We provide exceptional support to ensure your success
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {supportFeatures.map((feature, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-xl text-gray-300">
-              Find answers to common questions about our services
-            </p>
-          </div>
-          
-          <div className="space-y-4">
-            {faqs.map((faq, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden">
-                <button
-                  onClick={() => toggleFaq(index)}
-                  className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-white/10 transition-all duration-300"
-                >
-                  <h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
-                  {openFaq === index ? (
-                    <ChevronUp className="w-6 h-6 text-cyan-400 flex-shrink-0" />
-                  ) : (
-                    <ChevronDown className="w-6 h-6 text-cyan-400 flex-shrink-0" />
-                  )}
-                </button>
-                {openFaq === index && (
-                  <div className="px-8 pb-6">
-                    <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Still Need Help?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Can't find what you're looking for? Our support team is ready to help you with any questions or issues.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
-              Contact Support
-            </button>
-            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-              Schedule Call
-            </button>
-          </div>
-        </div>
-      </section>
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
       <Footer />
-<<<<<<< HEAD
     </>
   );
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default PagePage;
-=======
 export default SupportPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-=======
-export default SupportPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
-=======
-    </div>
-  )
-}
-
-export default SupportPage
->>>>>>> cursor/fix-errors-and-merge-to-main-7175

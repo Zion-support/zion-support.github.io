@@ -20,12 +20,3 @@ const AdvancedSEOOptimizer_new: React.FC<AdvancedSEOOptimizer_newProps> = ({ cla
   );
 };
 
-<<<<<<< HEAD
-  )
-}
-export default AdvancedSEOOptimizerNew
-  </SEOOptimizerProps>
-</div></ul></li></li>
-=======
-export default AdvancedSEOOptimizer_new;
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7

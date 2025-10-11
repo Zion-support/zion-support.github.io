@@ -1,14 +1,9 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/auto/autonomy-17186719616
 // Export all micro SaaS services
 export { urlShortenerService } from './urlShortenerService';
 export { passwordGeneratorService } from './passwordGeneratorService';
 export { qrCodeService } from './qrCodeService';
 export { fileConverterService } from './fileConverterService';
 export { textAnalysisService } from './textAnalysisService';
-<<<<<<< HEAD
 // Export service types and interfaces
 export type {;
   ShortUrl;
@@ -20,7 +15,6 @@ export type {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 ;
@@ -28,7 +22,6 @@ export type {;
 export type {
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -41,7 +34,6 @@ export type {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 ;
@@ -49,7 +41,6 @@ export type {
 export type {
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -62,7 +53,6 @@ export type {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 ;
@@ -70,7 +60,6 @@ export type {
 export type {
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -84,7 +73,6 @@ export type {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 ;
@@ -92,7 +80,6 @@ export type {
 export type {
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -138,7 +125,6 @@ export const SERVICES_METADATA = {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -347,7 +333,6 @@ export const getServiceStats = () => {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -358,7 +343,6 @@ export const getServiceStats = () => {;
 };
 
 
-=======
 
 // Export service types and interfaces
 export type {
@@ -522,4 +506,3 @@ export const getServiceStats = () => {
     }
   };
 };
->>>>>>> origin/auto/autonomy-17186719616

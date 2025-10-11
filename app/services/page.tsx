@@ -1,180 +1,57 @@
-<<<<<<< HEAD
-'use client';
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { Search, Filter, ArrowRight, Star, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, CheckCircle, Clock, Award, Code, Cloud, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { 
-  Brain, 
-  Cloud, 
-  Shield, 
-  BarChart, 
-  Code, 
-  Database, 
-  Globe, 
-  Smartphone, 
-  Settings, 
-  Zap, 
-  CheckCircle,
-  ArrowRight
-} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
+'use client'
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react'
 
 const ServicesPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
   const services = [
     {
-      id: 1,
-      title: 'AI Solutions',
-<<<<<<< HEAD
-      category: 'ai',
-      description: 'Comprehensive artificial intelligence solutions for your business needs.',
       icon: Brain,
+      title: 'AI Services',
+      description: 'Advanced artificial intelligence solutions to automate and optimize your business processes.',
       features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
-      price: 'Custom',
-      duration: '3-6 months'
-=======
-      description: 'Cutting-edge artificial intelligence solutions to automate processes and enhance decision-making.',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
+      price: 'Starting at $5,000/month'
     },
     {
-      id: 2,
-      title: 'Cloud Services',
-<<<<<<< HEAD
-      category: 'cloud',
-      description: 'Scalable cloud infrastructure and migration services.',
       icon: Cloud,
-      features: ['AWS/Azure/GCP', 'Migration Services', 'DevOps', 'Monitoring'],
-      price: 'From $500/month',
-      duration: '1-3 months'
-    },
-    {
-      id: 3,
-      title: 'Data Analytics',
-      category: 'data',
-      description: 'Transform your data into actionable business insights.',
-      icon: BarChart,
-      features: ['Data Visualization', 'Business Intelligence', 'Real-time Analytics', 'Reporting'],
-      price: 'From $1,000/month',
-      duration: '2-4 months'
-    },
-    {
-      id: 4,
-      title: 'Cybersecurity',
-      category: 'security',
-      description: 'Protect your business with advanced security solutions.',
-      icon: Shield,
-      features: ['Security Audit', 'Penetration Testing', 'Compliance', 'Incident Response'],
-      price: 'From $2,000/month',
-      duration: '1-2 months'
-    },
-    {
-      id: 5,
-      title: 'Mobile Development',
-      category: 'mobile',
-      description: 'Native and cross-platform mobile applications.',
-      icon: Smartphone,
-      features: ['iOS/Android Apps', 'React Native', 'Flutter', 'App Store Optimization'],
-      price: 'From $5,000',
-      duration: '2-6 months'
-    },
-    {
-      id: 6,
-      title: 'Web Development',
-      category: 'web',
-      description: 'Modern, responsive web applications and websites.',
-      icon: Code,
-      features: ['React/Next.js', 'Node.js', 'Database Design', 'API Development'],
-      price: 'From $3,000',
-      duration: '1-4 months'
-=======
-      description: 'Scalable cloud infrastructure and migration services for modern businesses.',
-      features: ['Cloud Migration', 'Infrastructure as Code', 'Auto-scaling', '24/7 Monitoring']
+      title: 'Cloud Infrastructure',
+      description: 'Scalable and secure cloud solutions for modern businesses.',
+      features: ['AWS Integration', 'Azure Services', 'Google Cloud', 'Hybrid Solutions'],
+      price: 'Starting at $3,000/month'
     },
     {
       icon: Shield,
       title: 'Cybersecurity',
-      description: 'Comprehensive security solutions to protect your digital assets and data.',
-      features: ['Threat Detection', 'Security Audits', 'Compliance Management', 'Incident Response']
+      description: 'Comprehensive security solutions to protect your digital assets.',
+      features: ['Threat Detection', 'Data Protection', 'Compliance', 'Incident Response'],
+      price: 'Starting at $4,000/month'
     },
     {
       icon: BarChart,
       title: 'Data Analytics',
-      description: 'Transform raw data into actionable insights with advanced analytics tools.',
-      features: ['Business Intelligence', 'Real-time Dashboards', 'Data Visualization', 'Custom Reports']
+      description: 'Transform your data into actionable insights and business intelligence.',
+      features: ['Real-time Dashboards', 'Custom Reports', 'Data Visualization', 'Performance Metrics'],
+      price: 'Starting at $2,500/month'
     },
     {
       icon: Code,
       title: 'Custom Development',
-      description: 'Tailored software solutions built to meet your specific business requirements.',
-      features: ['Web Applications', 'Mobile Apps', 'API Development', 'System Integration']
+      description: 'Tailored software solutions built specifically for your business needs.',
+      features: ['Web Applications', 'Mobile Apps', 'API Development', 'System Integration'],
+      price: 'Starting at $8,000/month'
     },
     {
-      icon: Database,
-      title: 'Database Management',
-      description: 'Optimize and manage your data infrastructure for maximum performance.',
-      features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Data Migration']
+      icon: Settings,
+      title: 'IT Consulting',
+      description: 'Strategic IT guidance to help you make informed technology decisions.',
+      features: ['Technology Assessment', 'Digital Transformation', 'Process Optimization', 'Vendor Management'],
+      price: 'Starting at $1,500/month'
     }
   ];
-
-  const processSteps = [
-    {
-      step: '01',
-      title: 'Discovery',
-      description: 'We analyze your business needs and current infrastructure to understand your requirements.'
-    },
-    {
-      step: '02',
-      title: 'Strategy',
-      description: 'We develop a comprehensive strategy tailored to your specific goals and objectives.'
-    },
-    {
-      step: '03',
-      title: 'Implementation',
-      description: 'Our expert team implements the solution with minimal disruption to your operations.'
-    },
-    {
-      step: '04',
-      title: 'Support',
-      description: 'We provide ongoing support and maintenance to ensure optimal performance.'
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
-    }
-  ];
-
-  const categories = [
-    { value: 'all', label: 'All Services' },
-    { value: 'ai', label: 'AI Solutions' },
-    { value: 'cloud', label: 'Cloud Services' },
-    { value: 'data', label: 'Data Analytics' },
-    { value: 'security', label: 'Cybersecurity' },
-    { value: 'mobile', label: 'Mobile Development' },
-    { value: 'web', label: 'Web Development' }
-  ];
-
-  const filteredServices = services.filter(service => {
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
 
   return (
     <>
-      <Helmet>
-        <title>Services - Zion Tech Group | AI and IT Solutions</title>
-        <meta name="description" content="Discover our comprehensive range of AI and IT services designed to transform your business. From AI solutions to cloud services and data analytics." />
-        <meta name="keywords" content="AI services, IT services, cloud services, data analytics, cybersecurity, Zion Tech Group" />
-      </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
@@ -183,204 +60,61 @@ const ServicesPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Our <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Services</span>
+                Our Services
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Comprehensive solutions designed to accelerate your digital transformation and drive business growth.
+                Comprehensive AI and IT solutions designed to transform your business and drive growth.
               </p>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </section>
-
-        {/* Search and Filter Section */}
-        <section className="py-8 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-              <div className="flex flex-col md:flex-row gap-4 mb-6">
-                <div className="flex-1">
-                  <div className="relative">
-                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                    <input
-                      type="text"
-                      placeholder="Search services..."
-                      value={searchTerm}
-                      onChange={(e) => setSearchTerm(e.target.value)}
-                      className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"
-                    />
-                  </div>
-                </div>
-                <div className="md:w-64">
-                  <div className="relative">
-                    <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                    <select
-                      value={selectedCategory}
-                      onChange={(e) => setSelectedCategory(e.target.value)}
-                      className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors appearance-none"
-                    >
-                      {categories.map(category => (
-                        <option key={category.value} value={category.value}>
-                          {category.label}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                </div>
-=======
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
-                  Get Started
-                </button>
-                <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-                  View Portfolio
-                </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
-              </div>
             </div>
           </div>
         </section>
 
         {/* Services Grid */}
-<<<<<<< HEAD
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredServices.map((service) => (
-                <div
-                  key={service.id}
-                  className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 group"
-                >
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mr-4">
-                      <service.icon className="w-6 h-6 text-white" />
-                    </div>
-                    <h3 className="text-xl font-bold text-white">{service.title}</h3>
-                  </div>
-                  
-                  <p className="text-gray-300 mb-4">{service.description}</p>
-                  
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
-                    <ul className="space-y-1">
-                      {service.features.map((feature, index) => (
-                        <li key={index} className="text-sm text-gray-300 flex items-center">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="text-sm text-gray-300">
-                      <div className="flex items-center mb-1">
-                        <DollarSign className="w-4 h-4 mr-1" />
-                        <span className="font-medium">{service.price}</span>
-                      </div>
-                      <div className="flex items-center">
-                        <Clock className="w-4 h-4 mr-1" />
-                        <span>{service.duration}</span>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <button className="w-full cyber-button group-hover:bg-cyan-500 group-hover:text-white transition-all duration-300">
-                    Learn More
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </button>
-                </div>
-              ))}
-            </div>
-=======
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                What We Offer
-              </h2>
-              <p className="text-xl text-gray-300">
-                Comprehensive technology solutions for modern businesses
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
                   <div className="flex items-center mb-4">
-                    <service.icon className="w-8 h-8 text-cyan-400 mr-3" />
+                    <service.icon className="h-8 w-8 text-purple-400 mr-3" />
                     <h3 className="text-xl font-semibold text-white">{service.title}</h3>
                   </div>
                   <p className="text-gray-300 mb-4">{service.description}</p>
-                  <ul className="space-y-2">
+                  <ul className="space-y-2 mb-4">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-400">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                        <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
                         {feature}
                       </li>
                     ))}
                   </ul>
+                  <div className="text-cyan-400 font-semibold mb-4">{service.price}</div>
+                  <button className="w-full bg-cyan-500 text-white py-2 px-4 rounded-lg hover:bg-cyan-600 transition-colors flex items-center justify-center">
+                    Learn More
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </button>
                 </div>
               ))}
             </div>
-          </div>
-        </section>
-
-        {/* Process Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Our Process
-              </h2>
-              <p className="text-xl text-gray-300">
-                How we deliver exceptional results
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {processSteps.map((step, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-white font-bold text-xl">{step.step}</span>
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>
-                  <p className="text-gray-300">{step.description}</p>
-                </div>
-              ))}
-            </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
           </div>
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-16 px-4 sm:px-6 lg:px-8">
-=======
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
+              Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how our services can help you achieve your goals.
+              Contact us today to discuss your project and discover how we can help transform your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
-              <button className="cyber-button">
-                Get Started
-                <ArrowRight className="w-5 h-5 ml-2" />
+              <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors flex items-center justify-center">
+                Get a Quote
+                <ArrowRight className="ml-2 h-5 w-5" />
               </button>
-              <button className="cyber-button-secondary">
-                Schedule Consultation
-                <Calendar className="w-5 h-5 ml-2" />
-=======
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
-                Start Your Project
-              </button>
-              <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-                Schedule Consultation
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
+              <button className="border border-cyan-500 text-cyan-500 px-8 py-3 rounded-lg hover:bg-cyan-500 hover:text-white transition-colors">
+                Schedule a Call
               </button>
             </div>
           </div>

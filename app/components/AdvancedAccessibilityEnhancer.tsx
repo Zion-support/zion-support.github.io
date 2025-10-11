@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-'use client';
-import React from 'react';
-<<<<<<< HEAD
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
-=======
-    }
-  ];
-
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
 
 const AdvancedAccessibilityEnhancerPage: React.FC = () => {
   return (
@@ -66,50 +44,7 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
 };
 
 export default AdvancedAccessibilityEnhancerPage;
-<<<<<<< HEAD
-=======
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target } from 'lucide-react';
-
-interface AdvancedAccessibilityEnhancerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps> = ({ className = '', children }) => {
-  return (
-    <div className={`bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group ${className}`}>
-      <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-        <Brain className="w-8 h-8 text-white" />
-      </div>
-      <h3 className="text-xl font-bold text-white mb-4">AdvancedAccessibilityEnhancer Title</h3>
-      <p className="text-gray-300 mb-4">AdvancedAccessibilityEnhancer description goes here.</p>
-      {children}
-    </div>
-=======
-    setIsReducedMotion(mediaQuery.matches)
-    // Check for high contrast preference;
-    const highContrastQuery = window.matchMedia('(prefers-contrast: high)'),
-    setIsHighContrast(highContrastQuery.matches),
-    // Apply accessibility enhancements
-    document.documentElement.setAttribute('data-accessibility-enhanced', 'true')
-    if (isHighContrast) {
-      document.documentElement.classList.add('high-contrast')}if (isReducedMotion) {document.documentElement.classList.add('reduced-motion')}// Add keyboard navigation support;
-    const handleKeyDown = (event: KeyboardEvent) => {,
-    if (event.key === 'Tab') {
-    return () => {
-    document.removeEventListener('keydown', handleKeyDown)
-      document.removeEventListener('mousedown', handleMouseDown)
-  }
-  }, [isHighContrast, isReducedMotion])
-  const toggleHighContrast = () => {
-    setIsHighContrast(!isHighContrast)
-    document.documentElement.classList.toggle('high-contrast')
-  }
-  const changeFontSize = (size: string) => {
-    setFontSize(size),
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
   );
 };
 
 export default AdvancedAccessibilityEnhancer;
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7

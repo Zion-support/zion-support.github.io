@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 import React from 'react'
 import { Zap, Shield, Star, Users, ArrowRight } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
 
 'use client'
 import React from 'react';
@@ -53,9 +50,6 @@ const ContentPromotionBanner: React.FC = () => {
             </div>
           ))}
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         
         <div className="text-center mt-8">
           <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center mx-auto">
@@ -63,9 +57,6 @@ const ContentPromotionBanner: React.FC = () => {
             <ArrowRight className="w-5 h-5 ml-2" />
           </button>
         </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
       </div>
     </div>
   )

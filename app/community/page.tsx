@@ -1,109 +1,3 @@
-<<<<<<< HEAD
-'use client';
-import React from 'react';
-<<<<<<< HEAD
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
-
-const PagePage: React.FC = () => {
-  return (
-    <>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-        
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Page
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Discover our comprehensive solutions designed to transform your business.
-              </p>
-=======
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { Brain, BarChart, CheckCircle, ArrowRight, Zap, Shield, Target } from 'lucide-react';
-
-const PagePage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart automation', 'Predictive analytics', 'Intelligent insights', 'Automated processes']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time monitoring', 'Performance metrics', 'Data visualization', 'Custom reports']
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing with optimized algorithms and infrastructure.',
-      benefits: ['Fast processing', 'Optimized algorithms', 'Scalable infrastructure', 'High availability']
-    },
-    {
-      icon: Shield,
-      title: 'Secure & Reliable',
-      description: 'Enterprise-grade security and reliability for mission-critical applications.',
-      benefits: ['Data encryption', 'Access control', 'Audit logging', 'Compliance ready']
-    }
-  ];
-
-=======
-
-const CommunityPage: React.FC = () => {,
-  const [activeTab, setActiveTab] = useState('overview');
-
-'use client'
-import React, { useState  } from 'react'
-import {  Helmet  } from 'react-helmet-async'import {  Users, MessageCircle, Calendar, Star, ArrowRight, ExternalLink, Mail, Phone, MapPin, Clock, CheckCircle, Award, TrendingUp, Heart   } from 'lucide-react'
-const CommunityPage: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('overview')
-  const communityStats = [
-  ]
-  const events = [
-    {title: 'AI Development Workshop',
-      date: '2024-02-15',
-      time: '2:00 PM EST',
-      type: 'Workshop',
-      attendees: 150,
-      description: 'Learn advanced AI development techniques and best practices',},
-    {title: 'Cloud Infrastructure Meetup',
-      date: '2024-02-20',
-      time: '6:00 PM EST',
-      type: 'Meetup',
-      attendees: 75,
-      description: 'Discuss cloud architecture and deployment strategies',},
-    {title: 'SaaS Business Growth Panel',
-      date: '2024-02-25',
-      time: '3:00 PM EST',
-      type: 'Panel',
-      attendees: 200,
-  const forums = [
-    {name: 'AI Services',
-      description: 'Discuss AI development, machine learning, and automation',
-      posts: 1250,
-      members: 1800;,},
-    {name: 'IT Services',
-      description: 'Cloud infrastructure, DevOps, and system administration',
-      posts: 980,
-      members: 1200;,},
-    {name: 'Micro SaaS',
-      description: 'Building and scaling micro SaaS applications',
-      posts: 750,
-      members: 900;,},
-    {name: 'General Discussion',
-      description: 'General tech discussions and community updates',
-      posts: 2100,
-  ]
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
   const benefits = [
     'Enhanced productivity and efficiency',
     'Reduced operational costs',
@@ -142,37 +36,14 @@ const CommunityPage: React.FC = () => {
                   Learn More
                 </button>
               </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-        {/* Content Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Coming Soon
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                This page is under development. Please check back soon for updates.
-              </p>
-              <button className="cyber-button">
-                Learn More
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </button>
-            </div>
-=======
-              </div&gt;
-            ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
           </div>
         </section>
       </div>
       
-=======
         {/* Features Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -257,7 +128,6 @@ const CommunityPage: React.FC = () => {
         </section>
       </main>
 
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
       <Footer />
     </>
   );

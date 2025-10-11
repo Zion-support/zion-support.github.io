@@ -10,11 +10,6 @@ export function slugify(title: string, separator = "-"): string {
     .toLowerCase()
     .replace(/[^a-z0-9\s-]/g, "")
     .replace(/[\s-]+/g, sep)
-<<<<<<< HEAD
-    .replace(new RegExp(`${escaped}{2}`, "g"), sep)
-=======
-    .replace(new RegExp(`${escaped}{2,}`, "g"), sep)
->>>>>>> origin/auto/autonomy-17186719616
     .replace(new RegExp(`^${escaped}+|${escaped}+$`, "g"), "");
 }
 

@@ -52,8 +52,6 @@ export function writeState(updater: (state: IntegrationState) => void): Integrat
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
 

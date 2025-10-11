@@ -23,7 +23,6 @@ export const ENHANCED_MICRO_SAAS_SERVICES: MicroSaasService[] = [
   price: number;
   currency: string;
   pricingModel: 'one-time' | 'monthly' | 'yearly' | 'per-user' | 'per-project' | 'usage-based' | 'freemium';
-=======
 export interface EnhancedMicroSaasService {
   id: string;
   name: string;
@@ -64,7 +63,6 @@ export interface EnhancedMicroSaasService {
     estimatedDelivery: "2-3 weeks",
     supportLevel: "premium",
     marketPrice: "$2,500 - $8,000/month",
-=======
       "AI invoice generation",
       "Expense categorization",
       "Financial reporting",
@@ -786,7 +784,6 @@ export const SERVICE_CATEGORIES = [
     count: 1
   }
 ];
-=======
     aiScore: 91,
     rating: 4.4,
     reviewCount: 56,
@@ -815,7 +812,6 @@ export const MICRO_SAAS_PRICING_TIERS = [
   { name: "Professional", price: "$299-799", features: ["Advanced features", "Priority support", "Up to 25 users"] },
   { name: "Enterprise", price: "$799+", features: ["Custom features", "24/7 support", "Unlimited users"] }
 ];
-=======
 export const searchServices = (query: string) => {
   const searchTerm = query.toLowerCase();
   return ENHANCED_MICRO_SAAS_SERVICES.filter(service =>

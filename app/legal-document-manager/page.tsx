@@ -1,35 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
-
-const PagePage: React.FC = () => {
-  return (
-    <>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-        
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Page
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Discover our comprehensive solutions designed to transform your business.
-              </p>
-=======
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { Brain, BarChart, CheckCircle, ArrowRight, Zap, Shield, Target } from 'lucide-react';
-
-const LegalDocumentManagerPage: React.FC = () => {
-  const features = [
-<<<<<<< HEAD
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -94,78 +64,10 @@ const LegalDocumentManagerPage: React.FC = () => {
                   Learn More
                 </button>
               </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Content Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Coming Soon
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                This page is under development. Please check back soon for updates.
-              </p>
-              <button className="cyber-button">
-                Learn More
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </button>
-            </div>
-          </div>
-        </section>
-      </div>
-      
-=======
-        {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Key Features
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Advanced technology that drives results
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-=======
-        <title>Legal Document Manager | Zion Tech Group - Intelligent Legal Document Management</title>
-    <>
-      </React><Helmet>
-        </Helmet><title>Legal Document Manager | Zion Tech Group - Intelligent Legal Document Management</title>
-        <meta name="description" content="Streamline legal document management with AI-powered tools. Organize, search, and analyze legal documents efficiently." />
-        <meta name="keywords" content="legal document management, contract analysis, legal software, compliance tracking, legal AI" />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p></p>Streamline legal document management with AI-powered tools.</p>
-            </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div></div>,</div>
-              {features.map((feature, index) => (
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4"></h3></h3>{feature.title}</h3>
-                  <p className="text-gray-300"></p></p>{feature.description</p&gt;}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
                 </div>
               ))}
             </div>
@@ -218,21 +120,13 @@ const LegalDocumentManagerPage: React.FC = () => {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
       </main>
 
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
       <Footer />
     </>
   );
 };
 
-<<<<<<< HEAD
-export default PagePage;
-=======
-export default LegalDocumentManagerPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-=======
       </div>
     </>
   )
@@ -254,4 +148,3 @@ export default LegalDocumentManagerPage
   )
 }
 export default LegalDocumentManagerPage</div></div></div></div></div></div></p></p></h1></h3></section>
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd

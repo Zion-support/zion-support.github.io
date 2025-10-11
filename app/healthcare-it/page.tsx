@@ -1,40 +1,3 @@
-<<<<<<< HEAD
-'use client';
-import React from 'react';
-<<<<<<< HEAD
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
-
-const PagePage: React.FC = () => {
-=======
-icon: Heart,
-      title: 'HIPAA Compliance',
-      description: 'Full HIPAA compliance solutions with automated controls, monitoring, and reporting capabilities.',
-      benefits: ['Automated compliance', 'Audit trails', 'Risk management'],
-    },
-    {icon: Zap,
-      title: 'Patient Data Security',
-      description: 'Bank-level security for patient data with encryption, access controls, and monitoring.',
-return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900"></div></div></div>
-      <SEOOptimizer>
-              <p className="text-xl text-gray-300"></p></p>Section description</p>
-            </div>
-          </div>
-        </section>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(239,68,68,0.3)_0%,transparent_50%)] animate-pulse" /></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} /></div>
-        <div className="relative max-w-7xl mx-auto text-center"></div></div></div>
-            Protect patient data while improving operational efficiency.
-          </p>
-              <ArrowRight></ArrowRight>
-            </button>
-            </button>
-</div>
-        </div>
-      </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
   return (
     <>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -50,7 +13,6 @@ return (
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Discover our comprehensive solutions designed to transform your business.
               </p>
-=======
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -122,70 +84,15 @@ const HealthcareItPage: React.FC = () => {
                   Learn More
                 </button>
               </div>
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Content Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Coming Soon
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                This page is under development. Please check back soon for updates.
-              </p>
-              <button className="cyber-button">
-                Learn More
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </button>
-=======
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* Benefits Section */} <section className="py-20 px-4"></section></section>
-          <div className="max-w-7xl mx-auto"></div></div>
-            <div className="text-center mb-16"></div></div>
-              <h2 className="text-4xl font-bold text-white mb-4"></h2></h2>Section Title</h2>
-            <p></p>
-              Comprehensive IT solutions for all aspects of healthcare delivery and management.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" / /></div>
-            {
-    services.map((service, index) =&gt; ()
-            ))}
-              <p className="text-xl text-gray-300"></p></p>Section description</p>
-            </div>
-          </div>
-        </section>
-              Why Choose Our Healthcare IT Solutions?
-            </h2>
-            <p></p>
-              Experience the benefits of modern healthcare technology with our proven solutions.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" / /></div>
-            {benefits.map((benefit, index) => ()
-            ))}
-      {/* CTA Section */}
-<section className="py-20 px-4"></section></section>
-          </section>< className="$2 />
-            </div><div className="text-center mb-16"></div></div>
-              </div><h2 className="text-4xl font-bold text-white mb-4"></h2></h2>Section Title</h2>
-              <p className="text-xl text-gray-300"></p></p>Section description</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
             </div>
           </div>
         </section>
       </div>
       
-=======
         {/* Features Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -270,14 +177,8 @@ const HealthcareItPage: React.FC = () => {
         </section>
       </main>
 
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
       <Footer />
     </>
   );
 };
 
-<<<<<<< HEAD
-export default PagePage;
-=======
-export default HealthcareItPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
