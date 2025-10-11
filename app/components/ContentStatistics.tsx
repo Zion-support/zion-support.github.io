@@ -194,8 +194,12 @@ const ContentStatistics: React.FC = () => {
     {
       icon: Brain,
       title: 'AI Innovation',
+<<<<<<< HEAD
+      description: 'Leading AI solutions for modern businesses'
+=======
       description: 'Leading the industry with cutting-edge AI solutions'
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
+>>>>>>> origin/main
     },
     {
       icon: Globe,
@@ -393,30 +397,39 @@ const ContentStatistics: React.FC = () => {
   }, []);
 
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-20 px-4">
+    <div className="py-16 px-4 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto">
-        {/* Header Section */}
+        {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Our Impact in Numbers
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text-enhanced">
+            Trusted by Industry Leaders
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            See how we've helped businesses transform their operations with our AI-powered solutions.
+            Our proven track record speaks for itself. Join thousands of satisfied clients who have transformed their businesses with our solutions.
           </p>
         </div>
 
         {/* Statistics Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {statistics.map((stat, index) => (
-            <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 text-center border border-white/10">
-              <div className={`w-16 h-16 ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
-                <stat.icon className="w-8 h-8 text-white" />
+            <div key={index} className="text-center group">
+              <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-2xl p-8 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 hover:scale-105">
+                <div className={`w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform`}>
+                  <stat.icon className="w-8 h-8 text-white" />
+                </div>
+                <div className={`text-4xl font-bold ${stat.color} mb-2`}>
+                  {Math.floor(stat.value)}{stat.suffix}
+                </div>
+                <div className="text-gray-300 font-medium">{stat.label}</div>
               </div>
+<<<<<<< HEAD
+=======
               <div className="text-4xl font-bold text-white mb-2">
                 {Math.floor(stat.value)}{stat.suffix}
               </div>
               <div className="text-gray-300 text-lg">{stat.label}</div>
 >>>>>>> main
+>>>>>>> origin/main
             </div>
           ))}
         </div>
@@ -445,20 +458,19 @@ const ContentStatistics: React.FC = () => {
                 </div>
 =======
         {/* Achievements Section */}
-        <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-          <h3 className="text-2xl font-bold text-white text-center mb-8">Why We're Different</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {achievements.map((achievement, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {achievements.map((achievement, index) => (
+            <div key={index} className="text-center group">
+              <div className="bg-gradient-to-br from-slate-800/30 to-slate-700/30 rounded-2xl p-8 border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
+                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
                   <achievement.icon className="w-8 h-8 text-white" />
                 </div>
-                <h4 className="text-xl font-semibold text-white mb-2">{achievement.title}</h4>
+                <h3 className="text-xl font-bold text-white mb-2">{achievement.title}</h3>
                 <p className="text-gray-300">{achievement.description}</p>
 >>>>>>> main
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
 =======
       {/* CTA Section */}

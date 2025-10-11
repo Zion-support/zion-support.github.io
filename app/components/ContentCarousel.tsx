@@ -46,6 +46,10 @@ const ContentCarousel: React.FC = () => {
 <<<<<<< HEAD
       title: 'AI Solutions',
       description: 'Transform your business with cutting-edge artificial intelligence solutions.',
+=======
+<<<<<<< HEAD
+      title: 'AI Solutions',
+      description: 'Transform your business with cutting-edge artificial intelligence solutions.',
 <<<<<<< HEAD
       features: [,
         'Machine Learning Models',
@@ -79,17 +83,23 @@ const ContentCarousel: React.FC = () => {
 =======
       title: 'AI-Powered Analytics',
       description: 'Transform your data into actionable insights with our advanced AI analytics platform.',
+>>>>>>> origin/main
       features: [
-        'Real-time data processing',
-        'Predictive analytics',
-        'Custom dashboards',
-        'Automated reporting'
+        'Machine Learning',
+        'Natural Language Processing',
+        'Computer Vision',
+        'Predictive Analytics'
       ],
+<<<<<<< HEAD
+      icon: Zap,
+      color: 'from-cyan-500 to-blue-600'
+=======
       icon: Cloud,
       color: 'from-blue-500 to-purple-600'
 >>>>>>> main
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
+>>>>>>> origin/main
 >>>>>>> origin/main
     },
     {
@@ -116,6 +126,9 @@ const ContentCarousel: React.FC = () => {
       ],
       icon: Zap,
 <<<<<<< HEAD
+      color: 'from-purple-500 to-pink-600'
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       color: 'from-orange-500 to-red-600',},
@@ -138,6 +151,7 @@ const ContentCarousel: React.FC = () => {
       color: 'from-yellow-500 to-orange-600'
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
 >>>>>>> origin/main
+>>>>>>> origin/main
     },
     {
       id: 4,
@@ -152,10 +166,14 @@ const ContentCarousel: React.FC = () => {
       ],
       icon: Shield,
 <<<<<<< HEAD
+      color: 'from-red-500 to-orange-600'
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
       color: 'from-blue-500 to-indigo-600',}];
 =======
       color: 'from-red-500 to-pink-600'
+>>>>>>> origin/main
     }
   ];
 >>>>>>> main
@@ -323,81 +341,58 @@ const ContentCarousel: React.FC = () => {
   };
 
   return (
-    <div className="relative bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Our Solutions
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover how our cutting-edge AI and technology solutions can transform your business.
-          </p>
-        </div>
-
-        <div className="relative">
-          <div className="overflow-hidden rounded-2xl">
-            <div 
-              className="flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-            >
-              {slides.map((slide) => (
-                <div key={slide.id} className="w-full flex-shrink-0">
-                  <div className={`bg-gradient-to-br ${slide.color} p-8 md:p-12 text-white`}>
-                    <div className="max-w-4xl mx-auto">
-                      <div className="flex flex-col md:flex-row items-center gap-8">
-                        <div className="flex-1">
-                          <div className="flex items-center mb-6">
-                            <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mr-4">
-                              <slide.icon className="w-8 h-8 text-white" />
-                            </div>
-                            <h3 className="text-3xl md:text-4xl font-bold">{slide.title}</h3>
-                          </div>
-                          <p className="text-xl text-white/90 mb-8 leading-relaxed">
-                            {slide.description}
-                          </p>
-                          <ul className="space-y-3">
-                            {slide.features.map((feature, index) => (
-                              <li key={index} className="flex items-center text-white/90">
-                                <div className="w-2 h-2 bg-white rounded-full mr-3 flex-shrink-0"></div>
-                                {feature}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+    <div className="relative w-full max-w-6xl mx-auto">
+      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900/90 to-slate-800/90 backdrop-blur-sm border border-cyan-500/20">
+        <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
+          {slides.map((slide) => (
+            <div key={slide.id} className="w-full flex-shrink-0 p-8 md:p-12">
+              <div className="text-center">
+                <div className={`w-20 h-20 mx-auto mb-6 bg-gradient-to-r ${slide.color} rounded-2xl flex items-center justify-center shadow-lg`}>
+                  <slide.icon className="w-10 h-10 text-white" />
                 </div>
-              ))}
+                <h3 className="text-3xl md:text-4xl font-bold text-white mb-4 neon-text-enhanced">
+                  {slide.title}
+                </h3>
+                <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+                  {slide.description}
+                </p>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+                  {slide.features.map((feature, index) => (
+                    <div key={index} className="bg-slate-800/50 rounded-lg p-4 border border-cyan-500/20">
+                      <span className="text-cyan-400 font-medium">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
-          </div>
-
-          {/* Navigation buttons */}
-          <button
-            onClick={prevSlide}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300"
-          >
-            <ChevronLeft className="w-6 h-6" />
-          </button>
-          <button
-            onClick={nextSlide}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300"
-          >
-            <ChevronRight className="w-6 h-6" />
-          </button>
-
-          {/* Dots indicator */}
-          <div className="flex justify-center mt-8 space-x-2">
-            {slides.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentSlide ? 'bg-white' : 'bg-white/30'
-                }`}
-              />
-            ))}
-          </div>
+          ))}
+        </div>
+        
+        {/* Navigation buttons */}
+        <button
+          onClick={prevSlide}
+          className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-slate-800/80 hover:bg-slate-700/80 rounded-full flex items-center justify-center text-white transition-all duration-300 hover:scale-110"
+        >
+          <ChevronLeft className="w-6 h-6" />
+        </button>
+        <button
+          onClick={nextSlide}
+          className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-slate-800/80 hover:bg-slate-700/80 rounded-full flex items-center justify-center text-white transition-all duration-300 hover:scale-110"
+        >
+          <ChevronRight className="w-6 h-6" />
+        </button>
+        
+        {/* Dots indicator */}
+        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                index === currentSlide ? 'bg-cyan-400 scale-125' : 'bg-slate-600 hover:bg-slate-500'
+              }`}
+            />
+          ))}
         </div>
 >>>>>>> main
       </div>

@@ -10,6 +10,8 @@ const DynamicContentShowcase: React.FC = () => {,
 =======
 import React, { useState, useEffect } from 'react';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import { Brain, Cloud, Zap, Shield, Globe, Users, CheckCircle, Star, ArrowRight } from 'lucide-react';
 
 const DynamicContentShowcase: React.FC = () => {
@@ -22,6 +24,7 @@ const DynamicContentShowcase: React.FC = () => {
   const [currentFeature, setCurrentFeature] = useState(0);
 >>>>>>> main
 =======
+>>>>>>> origin/main
 
 import React, { useState, useEffect } from 'react';
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, Clock, Award, Play, Pause, ChevronLeft, ChevronRight } from 'lucide-react';
@@ -60,6 +63,8 @@ const DynamicContentShowcase: React.FC = () => {
   const features = [
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
     {
+<<<<<<< HEAD
+=======
       id: 1,
 <<<<<<< HEAD
       title: 'AI Solutions',
@@ -89,6 +94,7 @@ const DynamicContentShowcase: React.FC = () => {
       color: 'from-purple-500 to-pink-600'
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
 >>>>>>> origin/main
+>>>>>>> origin/main
     },
     {
       id: 2,
@@ -101,6 +107,8 @@ const DynamicContentShowcase: React.FC = () => {
       title: 'AI Automation',
       description: 'Automate complex business processes with intelligent AI systems.',
       icon: Zap,
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -133,12 +141,22 @@ const DynamicContentShowcase: React.FC = () => {
       color: 'from-yellow-500 to-orange-600'
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
 >>>>>>> origin/main
+>>>>>>> origin/main
     },
     {
       id: 4,
       title: 'Cybersecurity Solutions',
       description: 'Protect your business with comprehensive AI-powered security solutions.',
       icon: Shield,
+<<<<<<< HEAD
+      title: 'Enterprise Security',
+      description: 'Bank-level security with end-to-end encryption and compliance standards'
+    },
+    {
+      icon: Globe,
+      title: 'Global Scalability',
+      description: 'Scale effortlessly across multiple regions with automatic load balancing'
+=======
 <<<<<<< HEAD
       title: 'Enterprise Security',
       description: 'Bank-level security with end-to-end encryption and compliance standards',
@@ -197,10 +215,21 @@ const DynamicContentShowcase: React.FC = () => {
 <<<<<<< HEAD
     'Proven track record of success';
 =======
+>>>>>>> origin/main
     }
   ];
-
   const benefits = [
+<<<<<<< HEAD
+    'Advanced AI technology integration',
+    'Real-time processing and analytics',
+    'Enterprise-grade security and compliance',
+    'Scalable and flexible solutions',
+    '24/7 technical support',
+    'Easy integration with existing systems',
+    'Cost-effective pricing plans',
+    'Proven track record of success'
+  ];
+=======
     {
       icon: Award,
       title: 'Advanced AI Technology',
@@ -226,6 +255,7 @@ const DynamicContentShowcase: React.FC = () => {
   const testimonials: Testimonial[] = [
 =======
   ]
+>>>>>>> origin/main
   const testimonials = [
 <<<<<<< HEAD
     {name: 'Sarah Johnson',
@@ -267,15 +297,24 @@ const DynamicContentShowcase: React.FC = () => {
       company: 'DataFlow Systems',
       role: 'CEO',
 <<<<<<< HEAD
+      content: 'The performance improvements we\'ve seen are remarkable. Highly recommended!',
+=======
+<<<<<<< HEAD
       content: 'Outstanding performance and reliability. Our team productivity increased by 300% and we\'ve seen a 50% reduction in operational costs.',
 =======
       content: 'Outstanding performance and reliability. Our team productivity increased by 300%.',
 >>>>>>> cursor/website-audit-and-update-with-deployment-acbe
 >>>>>>> origin/main
+>>>>>>> origin/main
       rating: 5
     },
     {
       name: 'Emily Rodriguez',
+<<<<<<< HEAD
+      company: 'CloudFirst Solutions',
+      role: 'VP Engineering',
+      content: 'Outstanding security features and seamless integration. Perfect for our needs.',
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
       company: 'CloudFirst Solutions',
@@ -299,9 +338,10 @@ const DynamicContentShowcase: React.FC = () => {
 <<<<<<< HEAD
       content: 'Seamless integration with our existing systems. The scalability and performance exceeded our expectations.',
 >>>>>>> origin/main
+>>>>>>> origin/main
       rating: 5
     }
-  ];
+  ]
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -312,12 +352,16 @@ const DynamicContentShowcase: React.FC = () => {
 >>>>>>> origin/main
 =======
   useEffect(() => {
+<<<<<<< HEAD
+    const timer = setInterval(() => {
+=======
     const interval = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % features.length);
     }, 4000);
 >>>>>>> main
+>>>>>>> origin/main
 
-    return () => clearInterval(interval);
+    return () => clearInterval(timer);
   }, [features.length]);
 
 <<<<<<< HEAD
@@ -345,36 +389,21 @@ const DynamicContentShowcase: React.FC = () => {
                 ))}
 =======
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
+    <div className="py-16 px-4">
       <div className="max-w-7xl mx-auto">
-        {/* Header Section */}
+        {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Solutions</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Dynamic <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Solutions</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover how our cutting-edge AI and technology solutions can transform your business operations and drive unprecedented growth.
+            Experience the power of our AI and IT solutions through interactive demonstrations and real-world applications.
           </p>
         </div>
 
-        {/* Features Carousel */}
-        <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 md:p-12 border border-white/10 mb-16">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h3 className="text-3xl font-bold text-white mb-4">{features[currentFeature].title}</h3>
-              <p className="text-gray-300 text-lg mb-6">{features[currentFeature].description}</p>
-              <div className="flex space-x-2">
-                {features.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentFeature(index)}
-                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                      index === currentFeature ? 'bg-white' : 'bg-white/30'
-                    }`}
-                  />
-                ))}
-              </div>
             </div>
+
+            {/* Feature Visual */}
             <div className="flex justify-center">
               <div className={`w-80 h-80 bg-gradient-to-br ${features[currentFeature].color} rounded-2xl flex items-center justify-center relative overflow-hidden`}>
                 <div className="absolute inset-0 bg-black/20"></div>
@@ -664,6 +693,8 @@ export default DynamicContentShowcase;
         {/* Benefits Section */} <div className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10 mb-16">
           <h3 className="text-2xl font-bold text-white mb-6 text-center">Why Choose Us?</h3>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-4">,</div>
             {benefits.map((benefit, index) => (
               <div key={index}className="flex items-center space-x-3 p-3 rounded-lg bg-white/5">
@@ -712,6 +743,7 @@ export default DynamicContentShowcase;
                 <h4 className="text-lg font-semibold text-white mb-2">{benefit.title}</h4>
                 <p className="text-gray-300 text-sm">{benefit.description}</p>
 >>>>>>> main
+>>>>>>> origin/main
               </div>
             ))}
           </div>
@@ -720,6 +752,40 @@ export default DynamicContentShowcase;
         {/* Interactive Demo Section */} <div className="bg-gradient-to-r from-blue-900 to-purple-900 rounded-2xl p-8 md: p-12">,</div>
           <div className="text-center mb-8">
             <h3 className="text-3xl font-bold text-white mb-4">Try Our Solutions</h3>
+<<<<<<< HEAD
+            <p className="text-xl text-blue-100 max-w-2xl mx-auto">
+              Experience the power of our AI and IT solutions with interactive demos and live examples.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
+              <Brain className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+              <h4 className="text-lg font-bold text-white mb-2">AI Demo</h4>
+              <p className="text-gray-300 text-sm mb-4">See AI in action with our interactive demos</p>
+              <button className="bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+                Try Demo
+              </button>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
+              <Cloud className="w-12 h-12 text-blue-400 mx-auto mb-4" />
+              <h4 className="text-lg font-bold text-white mb-2">Cloud Trial</h4>
+              <p className="text-gray-300 text-sm mb-4">Test our cloud solutions with a free trial</p>
+              <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+                Start Trial
+              </button>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
+              <Shield className="w-12 h-12 text-green-400 mx-auto mb-4" />
+              <h4 className="text-lg font-bold text-white mb-2">Security Scan</h4>
+              <p className="text-gray-300 text-sm mb-4">Get a free security assessment</p>
+              <button className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+                Scan Now
+              </button>
+            </div>
+=======
 <<<<<<< HEAD
             <p className="text-xl text-blue-100 max-w-2xl mx-auto">Experience the power of our AI and IT solutions with interactive demos and live examples.</p>
             </p>
@@ -778,6 +844,7 @@ export default DynamicContentShowcase;
               Schedule Demo
             </button>
 >>>>>>> main
+>>>>>>> origin/main
           </div>
         ))}
       </div>
