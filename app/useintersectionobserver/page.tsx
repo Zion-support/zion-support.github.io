@@ -17,8 +17,5 @@
 
       <Footer />
     </>
-        </section>
-  );
-};
-
+        </section>);};
 export default UseintersectionobserverPage;

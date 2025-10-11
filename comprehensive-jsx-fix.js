@@ -56,9 +56,7 @@ Learn More
       </div>
 
       <Footer />
-    </>
-  );
-};
+    </>);};
 ;
 export default ${componentName};`;
 ;
@@ -124,9 +122,7 @@ corruptedFiles.push(filePath);
       } catch (error) {
         // If we can't read the file, consider it corrupted;
 corruptedFiles.push(filePath);
-      }
-    }
-;
+      }};
 return corruptedFiles;;
   } catch (error) {;
 console.error('Error finding corrupted files:', error.message);
@@ -153,9 +149,7 @@ console.log(`Fixing: ${filePath}`);
     } catch (error) {;
 console.error(`Error fixing ${filePath}:`, error.message);
       errorCount++;
-    }
-  }
-;
+    }};
 console.log(`\nFixed ${fixedCount} files`);
   console.log(`Errors: ${errorCount} files`);
 }

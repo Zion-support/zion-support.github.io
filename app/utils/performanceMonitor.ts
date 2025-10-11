@@ -39,8 +39,7 @@ interface PerformanceMetrics {}
           if (lastEntry) {}
             this.recordMetric()
               'LCP',
-              (lastEntry as any).renderTime || (lastEntry as any).loadTime || lastEntry.startTime;
-            );
+              (lastEntry as any).renderTime || (lastEntry as any).loadTime || lastEntry.startTime;);
           }
 // First Input Delay;
         this.observeEntry('first-input', entries => {)}const firstInput = entries[0]

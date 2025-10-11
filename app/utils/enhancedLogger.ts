@@ -590,8 +590,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    */;
   public getStatistics(): {total: number,
     byLevel: Record<string&gt;,
-    bySource: Record<string, number&gt;}} {}const byLevel: Record<string, number> = {}const bySource: Record<string, number> = {}this.logs.forEach(log => {)
-    );
+    bySource: Record<string, number&gt;}} {}const byLevel: Record<string, number> = {}const bySource: Record<string, number> = {}this.logs.forEach(log => {));
       const levelName = LogLevel[log.level]);
       byLevel[levelName] = (byLevel[levelName] || 0) + 1;
   /**
@@ -623,16 +622,14 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
   }
         timestamp: log.timestamp.toISOString()})),
       null,
-      2;
-    );
+      2;);
   }
 }
 // Export singleton instance;
 export const logger = EnhancedLogger.getInstance();
 // Export default;
 export default EnhancedLogger;
-      2;
-    );
+      2;);
       2
     )
   }

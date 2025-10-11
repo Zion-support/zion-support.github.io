@@ -20,9 +20,7 @@ MapPin
 } from 'lucide-react';
 interface MainSidebarProps {;,
 isOpen: boolean;,
-onClose: () => void
-}
-;
+onClose: () => void};
 export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {;
 const location = useLocation();;
 const navigationItems = [;

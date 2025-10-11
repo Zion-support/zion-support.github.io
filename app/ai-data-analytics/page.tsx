@@ -168,8 +168,7 @@ const PagePage: React.FC = () => {const features = [
       <Footer />
     </>
       <Footer />
-    </>
-  );
+    </>);
 }
       </div>
       
@@ -181,5 +180,4 @@ const PagePage: React.FC = () => {const features = [
       
       <Footer />
     </>
-    </>
-  );
+    </>);

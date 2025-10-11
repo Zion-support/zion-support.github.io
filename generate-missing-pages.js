@@ -172,10 +172,7 @@ const ${serviceName}Page: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
-  );
-};
-
+    </>);};
 export default ${serviceName}Page;`;
 
 // Service configurations
@@ -269,9 +266,7 @@ const serviceConfigs = {
     title: 'AI Video Analysis',
     description: 'Advanced video content analysis with AI-powered object detection, scene recognition, and automated video processing capabilities.',
     keywords: 'video analysis, computer vision, object detection, video AI, automated processing'
-  }
-};
-
+  }};
 // IT Services configurations
 const itServiceConfigs = {
   'api-development-advanced': {
@@ -399,9 +394,7 @@ const itServiceConfigs = {
     title: 'Workflow Automation',
     description: 'Intelligent workflow automation with AI-powered process optimization, automated decision-making, and comprehensive business process management.',
     keywords: 'workflow automation, process automation, business process management, AI workflows, automated processes'
-  }
-};
-
+  }};
 // Zion Micro SAAS configurations
 const zionServiceConfigs = {
   'zion-analytics-pro': {
@@ -499,9 +492,7 @@ const zionServiceConfigs = {
     title: 'Zion Social Scheduler',
     description: 'AI-powered social media management with automated posting, content optimization, and comprehensive social media analytics.',
     keywords: 'social media management, social scheduling, content optimization, social analytics, social automation'
-  }
-};
-
+  }};
 // Function to create directory if it doesn't exist
 function ensureDir(dirPath) {
   if (!fs.existsSync(dirPath)) {
@@ -561,9 +552,7 @@ const remainingPages = report.missingPages.filter(page =>
   !page.includes('.js') &&
   !page.includes('.css') &&
   page !== '/search' &&
-  page !== '/sitemap.xml'
-);
-
+  page !== '/sitemap.xml');
 if (remainingPages.length > 0) {
   console.log('\n📝 Remaining pages to create:');
   remainingPages.forEach(page => {

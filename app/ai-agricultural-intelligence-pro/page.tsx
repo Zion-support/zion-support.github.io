@@ -53,14 +53,8 @@ return (
         <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
       </Helmet>
       <Navigation />
-<<<<<<< HEAD
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">      <Helmet>
-=======
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
         <title>AI Agricultural Intelligence Pro - Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered agricultural intelligence platform for precision farming, crop monitoring, and yield optimization." />
         <meta name="keywords" content="AI agriculture, precision farming, crop monitoring, agricultural intelligence, smart farming" />
@@ -120,8 +114,7 @@ return (
                         </li>
                       ))}
                     </ul>
-                  </div>
-                );
+                  </div>);
               })}
             </div>
           </div>
@@ -155,8 +148,7 @@ return (
                         </li>
                       ))}
                     </ul>
-                  </div>
-                );
+                  </div>);
               })}
             </div>
           </div>

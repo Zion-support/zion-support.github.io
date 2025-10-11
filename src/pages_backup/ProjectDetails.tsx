@@ -550,12 +550,7 @@ function ProjectDetailsContent() {
                           src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
 
-<<<<<<< HEAD
-                          loading="lazy"
-=======
-
-                          loading="lazy">
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
+loading="lazy">
                         />
 
                       ) : (

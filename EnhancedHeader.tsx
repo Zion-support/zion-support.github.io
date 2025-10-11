@@ -65,8 +65,5 @@ const EnhancedHeader: React.FC = () => {
           </div>
         )}
       </div>
-    </header>
-  );
-};
-
+    </header>);};
 export default EnhancedHeader;

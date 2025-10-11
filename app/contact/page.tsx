@@ -71,25 +71,13 @@ return (
       </Helmet>
 
       <Navigation />
-<<<<<<< HEAD
-
-      <main className="pt-16"
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700"
-          <div className="
-    g: px-8"
-            <div className="text-center"
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"
-Get in <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"
-=======
-      
-      <main className="pt-16">
+<main className="pt-16">
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700">
           <div className=">
     g: px-8">
             <div className="text-center">
               <h1 className="text-4xl m, d:text-6xl font-bold text-white mb-6">
 Get in <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
 Ready to transform your business? Let's discuss how our AI and IT solutions can help you achieve your goals.
@@ -118,10 +106,6 @@ return (
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                       <Icon className="w-6 h-6 text-white">
                     </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
       <Footer />
     </>
                     <h3 className="text-lg font-semibold text-white mb-2">{info.title}</h3>
@@ -155,15 +139,12 @@ Send us a Message
                 <p className="text-lg text-gray-300 mb-8">
 Fill out the form below and we'll get back to you as soon as possible. We're here to help you succeed.
                 </p>
-<<<<<<< HEAD
 
                 <form onSubmit={handleSubmit} className="space-y-6"
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6"
-=======
                 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
 Full Name *

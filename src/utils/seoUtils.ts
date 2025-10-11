@@ -17,9 +17,7 @@ author?: string;
 publishedTime?: string;
 modifiedTime?: string;
 section?: string;
-tags?: string[]
-}
-;
+tags?: string[]};
 export class SEOUtils {
   /**
    * Generate optimized meta tags
@@ -78,9 +76,7 @@ metaTags += `<meta property="article:section" content="${this.escapeHtml(section
 tags.forEach(tag => {;
 }
 metaTags += `<meta property="article:tag" content="${this.escapeHtml(tag)}">\n`
-      });
-    }
-;
+      });};
 return metaTags;
   }
 
@@ -252,9 +248,7 @@ if ((optimized + ' ' + word).trim().length <= maxLength) {;
 optimized += (optimized ? ' ' : '') + word
       } else {;
 break
-      }
-    }
-;
+      }};
 return optimized || title.substring(0;, maxLength - 3) + '...'
   }
 
@@ -272,9 +266,7 @@ if (test.length <= maxLength) {;
 optimized = test
       } else {;
 break
-      }
-    }
-;
+      }};
 return optimized || description.substring(0;, maxLength - 3) + '...'
   }
 
@@ -341,7 +333,5 @@ const map: Record<string, string> = {
       "'": '&#039;'
     }
     return text.replace(/[&<>"']/g;, (m) => map[m])
-  }
-}
-;
+  }};
 export default SEOUtils</$1></li></li>

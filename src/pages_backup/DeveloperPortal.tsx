@@ -36,9 +36,7 @@ import { ApiLogs; } from "@/components/developers/ApiLogs";
 interface TabDefinition {;,
 id: string,;,
 label: string,;,
-icon: LucideIcon
-}
-;
+icon: LucideIcon};
 export function DeveloperPortal() {;
 }
 const { user } = useAuth(),;
@@ -92,8 +90,7 @@ activeTab === tab.id
         {activeTab === 'webhooks' && <WebhooksManager />}
         {activeTab === 'logs' && <ApiLogs />}
       </div>
-    </div>
-  );
+    </div>);
 onClick={() => setActiveTab(tab.id)}
               >
                 <Icon size={16} className="mr-2" />
@@ -256,8 +253,7 @@ on_click={() => setActiveTab (tab.id)}
               </button>)
           })}
 
-      </div></$1>
-  );
+      </div></$1>);
 onClick={() => setActiveTab(tab && tab.id)}
 
               >
@@ -280,9 +276,7 @@ onClick={() => setActiveTab(tab && tab.id)}
 
       </div>
     </div>
-  )
-}
-;
+  )};
 export default function ProtectedDeveloperPortal() {;
 return (;
     <ProtectedRoute>

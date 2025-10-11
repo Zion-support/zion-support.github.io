@@ -166,7 +166,4 @@ const PagePage: React.FC = () => {const features = [
       <Footer />
     </>
       <Footer />
-    </>
-  );
-};
-
+    </>);};

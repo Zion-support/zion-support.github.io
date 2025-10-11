@@ -71,8 +71,6 @@ Ready to See More?
       <Footer />
     </>
       <Footer />
-    </>
-  );
-};
+    </>);};
 ;
 export default DemoPage;

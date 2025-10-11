@@ -123,12 +123,8 @@ const AIAccountingAssistantPage: React.FC = () => {
       <Navigation />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<< HEAD
-      <Helmet>        <title>AI Accounting Assistant - Zion Tech Group</title>
-=======
-      <Helmet>
+<Helmet>
         <title>AI Accounting Assistant - Zion Tech Group</title>
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
         <meta name="description" content="Revolutionary AI-powered accounting assistant that automates bookkeeping, financial reporting, and compliance for businesses of all sizes." />
         <meta name="keywords" content="AI accounting, automated bookkeeping, financial software, accounting assistant, business finance" />
       </Helmet>
@@ -137,22 +133,13 @@ const AIAccountingAssistantPage: React.FC = () => {
 
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-<<<<<<< HEAD
-        <section className="
-    g: px-8"
-          <div className="max-w-7xl mx-auto"
-            <div className="text-center"
-              <h1 className="text-4xl m, d:text-6xl font-bold text-white mb-6"
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400"
-=======
-        <section className="pt-20 pb-16 px-8">
+<section className="pt-20 pb-16 px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
                   AI Accounting Assistant
                 </span>
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
                 Transform your accounting processes with our intelligent AI assistant. Automate bookkeeping, gain insights, and ensure compliance with ease.
@@ -166,13 +153,7 @@ const AIAccountingAssistantPage: React.FC = () => {
                   Watch Demo
                 </button>
               </div>
-<<<<<<< HEAD
-
-      <Footer />
-    </>            </div>
-=======
-            </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
+</div>
           </div>
         </section>
 
@@ -241,12 +222,8 @@ const AIAccountingAssistantPage: React.FC = () => {
       <Footer />
     </>
               ))}
-<<<<<<< HEAD
-        <section className="py-20 px-4 sm:px-6 lg:px-8">          <div className="max-w-7xl mx-auto">
-=======
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+<section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Powerful Features
@@ -274,8 +251,7 @@ const AIAccountingAssistantPage: React.FC = () => {
                         </li>
                       ))}
                     </ul>
-                  </div>
-                );
+                  </div>);
               })}
             </div>
           </div>
@@ -309,8 +285,7 @@ const AIAccountingAssistantPage: React.FC = () => {
                         </li>
                       ))}
                     </ul>
-                  </div>
-                );
+                  </div>);
               })}
             </div>
           </div>
@@ -327,11 +302,7 @@ const AIAccountingAssistantPage: React.FC = () => {
                 Choose the plan that fits your business needs
               </p>
             </div>
-<<<<<<< HEAD
 
-=======
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
       <Footer />
     </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -375,30 +346,9 @@ const AIAccountingAssistantPage: React.FC = () => {
                 Contact Sales
               </button>
             </div>
-<<<<<<< HEAD
-
-      <Footer />
-    </>
-          </div>
-
-      <Footer />
-    </>
-        </section>
-      </div>
-
-=======
-          </div>
+</div>
         </section>
       </main>
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
       <Footer />
-    </>
-  );
-};
-
-<<<<<<< HEAD
+    </>);};
 export default AiAccountingAssistantPage;
-=======
-export default AiAccountingAssistantPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb

@@ -109,8 +109,5 @@ const Footer: React.FC = () => {
               <Link to="/cookies" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Cookie Policy
               </Link>
-            </div></div></div></div></footer>
-  );
-};
-
+            </div></div></div></div></footer>);};
 export default Footer

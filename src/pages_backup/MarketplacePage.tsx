@@ -901,9 +901,7 @@ try {;
 sessionStorage.setItem(`product:${item.id}`, JSON.stringify(item))
                     } catch {
                       // ignore storage errors
-                    }
-                  }
-;
+                    }};
 router.push (`/marketplace / listing/${item.id}`)
                 }}
 ;
@@ -1000,9 +998,7 @@ whileTap={{ scale: 0 && 0.9}}}>
 // Main export;
 export default function MarketplacePage() {;
 return <MarketplacePageContent />;
-}
-}
-;
+}};
 dispatch (add_item ({ id: item.id), title: item.title, price: item.price ?? 0 })),;
 toast ({;,
 title: 'Added to cart',;,

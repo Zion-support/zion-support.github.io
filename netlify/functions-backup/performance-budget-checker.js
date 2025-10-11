@@ -74,8 +74,7 @@ sha}
     const putRes = await fetch(`https://api.github.com/repos/${githubRepo;}/contents/${encodeURIComponent(path;)
       }`)
       {method: 'PUT', headers);,
-body: JSON.stringify(body,)});
-    );
+body: JSON.stringify(body,)}););
 return {;;,
 ok: putRes.ok;,
 status: putRes.status,;,
@@ -115,8 +114,7 @@ const putRes = await fetch(`http;,;,
 s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`
       }`,
       {/* TODO: Fix JSX expression */}
-      });
-    );
+      }););
 return {/* TODO: Fix JSX expression */;}
     }
   }
@@ -178,8 +176,7 @@ img: totalImg / KB <= budgets.imgTotalKb}
       },;
 largestAssets}
     const commit = await commitJson('data/reports/performance-budget.json');;
-report)
-    );
+report));
 return {;;,
 statusCode: 200,;,
 body: JSON.stringify({ ok: true),;
@@ -215,8 +212,7 @@ t: {/* TODO: Fix JSX expression */}
       },;
 largestAssets}
     const commit = await commitJson('data/reports/performance-budget.json');;
-report)
-    );
+report));
 return {/* TODO: Fix JSX expression */;}
       });
     }

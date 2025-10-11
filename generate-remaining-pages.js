@@ -249,10 +249,7 @@ const ${serviceName}Page: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
-  );
-};
-
+    </>);};
 export default ${serviceName}Page;`;
 
 // Remaining Zion AI service configurations
@@ -376,9 +373,7 @@ const remainingZionConfigs = {
     title: 'Zion Customer Insights',
     description: 'Comprehensive customer analytics with AI-powered insights, behavior analysis, and automated customer intelligence.',
     keywords: 'customer insights, customer analytics, behavior analysis, customer intelligence, AI analytics'
-  }
-};
-
+  }};
 // Function to create directory if it doesn't exist
 function ensureDir(dirPath) {
   if (!fs.existsSync(dirPath)) {

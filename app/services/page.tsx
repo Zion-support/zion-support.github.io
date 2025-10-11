@@ -101,7 +101,6 @@ const ServicesPage: React.FC = () => {const [searchTerm, setSearchTerm] = useSta
       <Footer />
     </>
       <Footer />
-    </>
-  );
+    </>);
 export default ServicesPage
     </Footer>

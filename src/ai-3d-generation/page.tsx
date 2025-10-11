@@ -206,8 +206,6 @@ Get Free Quote
       </main>
 
       <Footer />
-    </div>
-  );
-};
+    </div>);};
 ;
 export default AI3DGenerationPage;

@@ -297,9 +297,7 @@ import { Link; } from "react-router-dom";
 export default function FAQ() {;
 const faqs = [;
     {
-}
-}
-;
+}};
 const faqData: FAQItem[] = [
   {;,
 question: "What is Zion Tech Group?",;,

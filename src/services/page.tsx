@@ -120,9 +120,6 @@ const ServicesPage: React.FC = () => {
 
               </a>
               <Link
-              </Link>
-  );
-};
-
+              </Link>);};
 export default ServicesPage;
 

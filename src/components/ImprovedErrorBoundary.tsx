@@ -182,8 +182,7 @@ s: Props): void {/* TODO: Fix JSX expression */}
 }
     // Reset error state if resetKeys changed;
 if (this.props.resetKeys && prevProps.resetKeys) {
-        (key, index) => key !== prevProps.resetKeys![index]
-      );
+        (key, index) => key !== prevProps.resetKeys![index]);
 if (resetKeysChanged && this.state.hasError) {;
 if (resetKeysChanged && this.state.hasError) {/* TODO: Fix JSX expression */}
   O: Add content,}

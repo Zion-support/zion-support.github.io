@@ -38,17 +38,13 @@ id: string;,
 title: string;,
 description: string;,
 icon: React.ReactNode;,
-links: SitemapLink[]
-}
-;
+links: SitemapLink[]};
 interface SitemapLink {;,
 title: string;,
 href: string;
 description?: string;
 isExternal?: boolean;
-badge?: string
-}
-;
+badge?: string};
 const sitemapSections: SitemapSection[] = [
   {;,
 id: 'main',;,
@@ -755,8 +751,7 @@ Visit Help Center →
       </main>
 
       <Footer />
-    </>
-  );
+    </>);
 return (;
     </>;
 const renderPageSection = (title: string;, pages: any[], IconComponent: any) => (
@@ -779,8 +774,7 @@ key={page.path}
           </Link>
         ))}
       </div>
-    </div>
-  );
+    </div>);
 return (;
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white">
       {/* Hero Section */}

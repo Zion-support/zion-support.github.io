@@ -152,14 +152,10 @@ const PagePage: React.FC = () => {const features = [
       
       <Footer />
     </>
-    </>
-  );
-};
-
+    </>);};
 export default PagePage
       </div>
       
       <Footer />
     </>
-    </>
-  );
+    </>);

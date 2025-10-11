@@ -169,8 +169,5 @@ const Navigation: React.FC = () => {
                 Demo
               </Link>
             </div></div>)}
-      </div></nav>
-  );
-};
-
+      </div></nav>);};
 export default Navigation

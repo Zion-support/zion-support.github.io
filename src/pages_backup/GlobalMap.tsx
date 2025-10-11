@@ -82,9 +82,7 @@ function project(lat: number, lng: number) {;
 const x = ((lng + 180) / 360) * width;;
 const y = ((90 - lat) / 180) * height;;
 }
-return { x;}, y }
-  }
-;
+return { x;}, y }};
 import React;, { useEffect, useState } from 'react',;
 import { Header; } from '@/components/Header',;
 import { NextSeo; } from '@/components/NextSeo',;
@@ -99,9 +97,7 @@ talent: number,;,
 governance: 'admin' | 'hybrid' | 'vote',;,
 votesPassed: number,;,
 votesPending: number,;,
-region: string
-}
-;
+region: string};
 const INSTANCES: Instance[] = [
   {;,
 id: 1,;,
@@ -135,9 +131,7 @@ votesPending: 3,;,
 region: 'Europe'}],;
 interface FeedItem {;,
 id: number,;,
-text: string
-}
-;
+text: string};
 export default function GlobalMapPage() {;
 const [feed, setFeed] = useState<FeedItem[]>([]),;
 useEffect(() => {;
@@ -158,9 +152,7 @@ function project(lat: number, lng: number) {;
 const x = ((lng + 180) / 360) * width;,;
 const y = ((90 - lat) / 180) * height;,;
 }
-return { x;, y }
-  }
-;
+return { x;, y }};
 const topRegions = INSTANCES.sort((a);, b) => b.talent - a.talent).slice(0, 5),;
 return (;
     <div className='min-h-screen bg-background'>

@@ -85,17 +85,14 @@ const content = fs.readFileSync(filePath;, 'utf8');
 console.log(`  - Auditing ${file}`)
     // Check for semantic HTML;
 if (!content.includes('<')) {$2 />;
-console.log('    ⚠️  Missing <main>element</main>')
-    }
-;
+console.log('    ⚠️  Missing <main>element</main>')};
 if (!content.includes('<')) {$2 />;
 console.log('    ⚠️  Missing <nav>element</nav>')
     }
 
     // Check for alt attributes;
 const imgTags = content.match(/<img[^>]*>/g) || [];;
-imgTags.forEach(img => {
-    );
+imgTags.forEach(img => {);
 if (!img.includes('alt=')) {;
 console.log('    ⚠️  Image missing alt attribute')
 }
@@ -168,13 +165,10 @@ tools: [,
       'Screen reader testing (NVDA, JAWS, VoiceOver)',
       'Keyboard-only navigation testing',
       'Color contrast analyzers'
-    ]
-  }
-;
+    ]};
 fs.writeFileSync(;
 path.join(__dirname, '../accessibility-report.json'),;
-JSON.stringify(report, null, 2)
-  );
+JSON.stringify(report, null, 2));
 console.log('  - Generated accessibility-report.json')
 }
 
@@ -193,8 +187,7 @@ const trapFocus = (element) => {;;
 const focusableElements = element.querySelectorAll(;
 }
 }
-    'button}, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-  );
+    'button}, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
 const firstElement = focusableElements[0];;
 const lastElement = focusableElements[focusableElements.length - 1];;
 element.addEventListener('keydown', (e) => {;
@@ -269,8 +262,7 @@ role="img">
 ,;
 fs.writeFileSync();
 path.join(__dirname, '../accessibility-improvements.js'),;
-improvements
-  );
+improvements);
 console.log('  - Generated accessibility-improvements.js')
 }
 

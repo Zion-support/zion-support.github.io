@@ -96,8 +96,7 @@ function fixSpecificErrors(content) {
           return `import { ${imports}, Globe } from 'lucide-react'`;
         }
         return match;
-      }
-    );
+      });
   }
 
   // Fix malformed JSX
@@ -179,4 +178,4 @@ async function main() {
 // Run the main function
 main().catch(console.error);
 
-export { fixSpecificErrors, processFile };
+export { fixSpecificErrors, processFile};

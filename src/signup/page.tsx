@@ -388,6 +388,5 @@ Trusted by 1000+ companies worldwide;"
                   <div className="text-2xl font-bold text-white">Microsoft</div>"
                   <div className="text-2xl font-bold text-white">Google</div>"
                   <div className="text-2xl font-bold text-white">Amazon
-      <Footer />
-  );
+      <Footer />);
 export default SignupPage</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></a></p></p></p></p></p></p></p></p></h1></h1></h2></h2></h3></h3>

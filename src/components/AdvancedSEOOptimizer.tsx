@@ -42,9 +42,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       "@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
       "contactType": "customer service"
-    }
-  };
-
+    }};
   const finalStructuredData = structuredData || baseStructuredData;
 
   return (
@@ -79,10 +77,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
         </script>
       </Helmet>
       {children}
-    </>
-  );
-};
-
+    </>);};
 export default AdvancedSEOOptimizer;
 'use client'
 import React, { useEffect, useCallback, useRef } from 'react'

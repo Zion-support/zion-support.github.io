@@ -16,32 +16,27 @@ class EnvValidator {private errors: string[] = [],}
       return;
     }
     if (!validEnvs.includes(nodeEnv)) {}this.errors.push();
-        `NODE_ENV must be one of: ${validEnvs.join(', ')}. Got: ${nodeEnv,}`;
-      );
+        `NODE_ENV must be one of: ${validEnvs.join(', ')}. Got: ${nodeEnv,}`;);
     }
   }
   private validateOptionalVars(): void {}}const nodeEnv = this.getNodeEnv();
     // In production, these should be set;
     if (nodeEnv === 'production') {if (!process.env['NEXT_PUBLIC_SITE_URL']) {
         this.warnings.push(// In production, these should be set;)}if (nodeEnv === 'production') {}if (!process.env['NEXT_PUBLIC_SITE_URL']) {}this.warnings.push();
-          'NEXT_PUBLIC_SITE_URL is not set (recommended for production)';
-        );
+          'NEXT_PUBLIC_SITE_URL is not set (recommended for production)';);
       }
       if (!process.env['NEXT_PUBLIC_GA_ID']) {}this.warnings.push();
-          'NEXT_PUBLIC_GA_ID is not set (analytics will be disabled)';
-        );
+          'NEXT_PUBLIC_GA_ID is not set (analytics will be disabled)';);
       }
     }
   }
   private getNodeEnv(): 'development' | 'production' | 'test' {}const env = process.env['NODE_ENV'] || 'development';
     return env as 'development' | 'production' | 'test';
   getConfig(): EnvConfig {/* TODO: Fix JSX expression */,}}failed: ;,
-${validation.errors.join(')}')}`;
-      );
+${validation.errors.join(')}')}`;);
     }
     if (validation.warnings.length > 0) {/* TODO: Fix JSX expression */,}`;
-      }`;
-      );
+      }`;);
       this.errors.push('NODE_ENV is not set');]
       return
     }

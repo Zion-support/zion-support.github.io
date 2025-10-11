@@ -171,15 +171,12 @@ private async reportToExternalService(errorId: string): Promise<void> {,
     ,
   }
     // Initialize counters;
-    Object.values(ErrorCategory).forEach(category => {)
-    );
+    Object.values(ErrorCategory).forEach(category => {));
       byCategory[category] = 0;)}});
-    Object.values(ErrorSeverity).forEach(severity => {)
-    );
+    Object.values(ErrorSeverity).forEach(severity => {));
       bySeverity[severity] = 0;)}});
     // Count errors;
-    errors.forEach(error => {)
-    );
+    errors.forEach(error => {));
       byCategory[error.metadata.category]++);
       bySeverity[error.metadata.severity]++)
   }

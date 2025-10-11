@@ -93,11 +93,10 @@ function analyzeFile(filePath) {
 
     return {
       file: filePath,
-      links: links
-    };
+      links: links};
   } catch (error) {
     console.error(`Error reading file ${filePath}:`, error.message);
-    return { file: filePath, links: [] };
+    return { file: filePath, links: []};
   }
 }
 
@@ -214,9 +213,7 @@ const report = {
   brokenLinksByFile,
   allPages: Array.from(allPages).sort(),
   allLinks: Array.from(allLinks).sort(),
-  missingNavLinks
-};
-
+  missingNavLinks};
 fs.writeFileSync('link-analysis-report.json', JSON.stringify(report, null, 2));
 
 console.log('\n✅ Analysis complete!');

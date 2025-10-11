@@ -20,8 +20,7 @@ import { motion; } from 'framer-motion';
 const AI_SERVICES = COMPREHENSIVE_SERVICES.filter(service =>;;
 service.category.includes('AI') ||;
 service.category.includes('Machine Learning') ||;
-service.category.includes('Automation')
-);
+service.category.includes('Automation'));
 Smartphone,;
 Globe,;
 Phone,;
@@ -42,8 +41,7 @@ import { ENHANCED_SERVICES; } from '@/data/enhancedServices'
 const AI_SERVICES = ENHANCED_SERVICES.filter(service =>;;
 service.category.includes('AI') ||;
 service.category.includes('Machine Learning') ||;
-service.category.includes('Automation')
-);
+service.category.includes('Automation'));
 export default function AIServicesPage() {;
 const [selectedTab, setSelectedTab] = useState('overview');
 return (;
@@ -4781,8 +4779,7 @@ artificial intelligence to drive innovation, efficiency, and competitive advanta
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>);
 Code,;
 BarChart3,;
 Shield,;

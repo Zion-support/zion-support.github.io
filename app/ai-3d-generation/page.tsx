@@ -129,14 +129,8 @@ const AI3DGenerationPage: React.FC = () => {
         <meta name="keywords" content="AI 3D generation, 3D modeling, artificial intelligence, design automation, 3D assets" />
         <title>AI 3D Generation - Zion Tech Group</title>
         <meta name="description" content="AI-powered 3D model generation and rendering solutions for creative professionals" />
-<<<<<<< HEAD
-        <meta name="keywords" content="AI, 3D generation, 3D modeling, computer graphics, AI art, 3D rendering" />      </Helmet>
-
-=======
-        <meta name="keywords" content="AI, 3D generation, 3D modeling, computer graphics, AI art, 3D rendering" />
+<meta name="keywords" content="AI, 3D generation, 3D modeling, computer graphics, AI art, 3D rendering" />
       </Helmet>
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
       <Navigation />
 
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -159,13 +153,7 @@ const AI3DGenerationPage: React.FC = () => {
                   View Gallery
                 </button>
               </div>
-<<<<<<< HEAD
-
-      <Footer />
-    </>            </div>
-=======
-            </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
+</div>
           </div>
         </section>
 
@@ -234,12 +222,8 @@ const AI3DGenerationPage: React.FC = () => {
       <Footer />
     </>
               ))}
-<<<<<<< HEAD
-        <section className="py-20 px-4 sm:px-6 lg:px-8">          <div className="max-w-7xl mx-auto">
-=======
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+<section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Powerful Features
@@ -267,8 +251,7 @@ const AI3DGenerationPage: React.FC = () => {
                         </li>
                       ))}
                     </ul>
-                  </div>
-                );
+                  </div>);
               })}
             </div>
           </div>
@@ -302,8 +285,7 @@ const AI3DGenerationPage: React.FC = () => {
                         </li>
                       ))}
                     </ul>
-                  </div>
-                );
+                  </div>);
               })}
             </div>
           </div>
@@ -320,11 +302,7 @@ const AI3DGenerationPage: React.FC = () => {
                 Choose the plan that fits your creative needs
               </p>
             </div>
-<<<<<<< HEAD
 
-=======
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
       <Footer />
     </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -390,8 +368,7 @@ const AI3DGenerationPage: React.FC = () => {
                   </div>
 
       <Footer />
-    </>
-                );
+    </>);
               })}
             </div>
 
@@ -467,8 +444,7 @@ const AI3DGenerationPage: React.FC = () => {
                   </div>
 
       <Footer />
-    </>
-                );
+    </>);
               })}
             </div>
 
@@ -477,12 +453,8 @@ const AI3DGenerationPage: React.FC = () => {
           </div>
 
       <Footer />
-<<<<<<< HEAD
-    </>        </section>
-=======
-    </>
+</>
         </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
 
         {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -507,16 +479,7 @@ const AI3DGenerationPage: React.FC = () => {
       </main>
 
       <Footer />
-<<<<<<< HEAD
-    </>
-      <Footer />
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
-    </>
-  );
-};
-
-<<<<<<< HEAD
+    </>);};
 export default Ai3dGenerationPage
       </div>
 
@@ -540,8 +503,5 @@ export default Ai3dGenerationPage
 
       <Footer />
     </>
-    </>
-  );
-=======
+    </>);
 export default Ai3dGenerationPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb

@@ -90,8 +90,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
             }
           }
         });
-        // Paint timing;
-    );
+        // Paint timing;);
         navObserver.observe({ entryTypes: ['navigation'] });
         this.observers.push(navObserver)
         // Paint timing
@@ -112,8 +111,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
             }
           }
         });
-        // Largest Contentful Paint;
-    );
+        // Largest Contentful Paint;);
           const entries = list.getEntries();
         paintObserver.observe({ entryTypes: ['paint'] });
         this.observers.push(paintObserver)
@@ -136,8 +134,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
               value: lastEntry.startTime,
               unit: 'ms',
               timestamp: new Date(),
-        // Layout Shift;
-    );
+        // Layout Shift;);
           let clsValue = 0;);
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
         this.observers.push(lcpObserver)
@@ -149,8 +146,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
             if ((entry as LayoutShift).hadRecentInput) continue;}clsValue += (entry as LayoutShift).value;}
           }
           this.webVitals.CLS = clsValue;
-          this.recordMetric({)
-    );
+          this.recordMetric({));
             name: 'CLS'),
             value: clsValue),
             unit: 'score'),

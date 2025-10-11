@@ -24,8 +24,7 @@ if (keyPropFix !== content) {/* TODO: Fix JSX expression */}
 placement: <button>\nonClick={...props} -> <\nonClick={...props}$2 />;
 const onClickFix = content.replace();
         /<(\w+)>\s*\n\s*onClick=\{([^}]+)\}/g,
-        '<$1\nonClick={$2}'
-      );
+        '<$1\nonClick={$2}');
 if (onClickFix !== content) {/* TODO: Fix JSX expression */}
       }
 
@@ -33,8 +32,7 @@ if (onClickFix !== content) {/* TODO: Fix JSX expression */}
 placement: <div>\nclassName={...props} -> <\nclassName={...props}$2 />;
 const classNameFix = content.replace();
         /<(\w+)>\s*\n\s*className=\{([^}]+)\}/g,
-        '<$1\nclassName={$2}'
-      );
+        '<$1\nclassName={$2}');
 if (classNameFix !== content) {/* TODO: Fix JSX expression */}
       }
 
@@ -75,17 +73,14 @@ syntax: ${/* TODO: Fix JSX expression */}
 tags: <input\n...\n\n<button -> <input\n...\n/>\n\n<button>;
 const inputFix = content.replace();
         /<input([^>]*?)\n\s*\n\s*</g,$2 />
-        '<input$1\n/>\n\n<'$2 />
-      );
+        '<input$1\n/>\n\n<'$2 />);
 if (inputFix !== content) {/* TODO: Fix JSX expression */}
       }
 
       //7. Fix unclosed br,;,
 tags: <br> -> <br />
       //       const brFix = content.replace(/<br>/g;, '<br />');
-if (brFix !== content) {/* TODO: Fix JSX expression */}
-      }
-;
+if (brFix !== content) {/* TODO: Fix JSX expression */}};
 if (modified) {/* TODO: Fix JSX expression */}
         //         }
     } catch (error) {/* TODO: Fix JSX expression */}

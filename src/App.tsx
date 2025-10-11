@@ -67,9 +67,7 @@ const App: React.FC = () => {
       } catch (error) {
         console.error('Failed to initialize app:', error);
         setIsInitialized(true); // Still show the app even if initialization fails
-      }
-    };
-
+      }};
     initApp();
   }, []);
 
@@ -143,10 +141,7 @@ const App: React.FC = () => {
           <Footer />
         </div>
       </Router>
-    </ErrorBoundary>
-  );
-};
-
+    </ErrorBoundary>);};
 // 404 Page Component
 const NotFoundPage: React.FC = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
@@ -161,7 +156,5 @@ const NotFoundPage: React.FC = () => (
         Go Home
       </a>
     </div>
-  </div>
-);
-
+  </div>);
 export default App;

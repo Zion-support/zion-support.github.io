@@ -7,9 +7,7 @@ description: string;,
 keywords: string[];
   noIndex?: boolean;
   structuredData?: any;
-  children?: ReactNode;
-}
-;
+  children?: ReactNode;};
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({;
 title,;
 description,;
@@ -29,8 +27,7 @@ const defaultStructuredData={"@context": "https://schema.org";},
       "@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
       "contactType": "customer service"
-    }
-  };
+    }};
 ;
 const finalStructuredData = structuredData || defaultStructuredData;;
 ;
@@ -68,9 +65,7 @@ return (;
         </script>
       </Helmet>
       {children}
-    </>
-  );
-};
+    </>);};
 ;
 export default SEOEnhancer;
 import React;, { ReactNode } from 'react';

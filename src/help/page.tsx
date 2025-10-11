@@ -137,8 +137,7 @@ const getCurrentArticles = () => {;;
 return helpArticles[activeCategory as keyof typeof helpArticles] || [];;
 const filteredArticles = getCurrentArticles().filter(article =>;;
 article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-article.description.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+article.description.toLowerCase().includes(searchTerm.toLowerCase()));
 return (;
     <React.Fragment>
       <Navigation />

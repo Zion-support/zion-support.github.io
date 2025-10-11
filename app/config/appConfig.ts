@@ -2,22 +2,18 @@ export interface AppConfig {
   app: {
     name: string;
     version: string;
-    environment: 'development' | 'production' | 'test';
-  };
+    environment: 'development' | 'production' | 'test';};
   api: {
     baseUrl: string;
     timeout: number;
-    retryAttempts: number;
-  };
+    retryAttempts: number;};
   features: {
     analytics: boolean;
     monitoring: boolean;
-    notifications: boolean;
-  };
+    notifications: boolean;};
   ui: {
     theme: 'light' | 'dark' | 'auto';
-    language: string;
-  };
+    language: string;};
 }
 
 export const config: AppConfig = {
@@ -39,5 +35,4 @@ export const config: AppConfig = {
   ui: {
     theme: 'dark',
     language: 'en',
-  },
-};
+  },};

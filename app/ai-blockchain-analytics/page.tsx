@@ -55,13 +55,7 @@ return (
       </Helmet>
 
       <Navigation />
-<<<<<<< HEAD
-
-      <main className="pt-16"
-=======
-      
-      <main className="pt-16">
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
+<main className="pt-16">
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center">
@@ -182,8 +176,7 @@ Start Free Trial>
       <Footer />
     </>
       <Footer />
-    </>
-  );
+    </>);
 }
       </div>
 
@@ -195,5 +188,4 @@ Start Free Trial>
 
       <Footer />
     </>
-    </>
-  );
+    </>);

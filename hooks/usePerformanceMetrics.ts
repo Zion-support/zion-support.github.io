@@ -66,5 +66,5 @@ export function usePerformanceMetrics() {
     }).observe({ entryTypes: ['navigation'] });
   }, []);
 
-  return { metrics, isSupported };
+  return { metrics, isSupported};
 }

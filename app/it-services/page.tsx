@@ -131,7 +131,4 @@ Ready to Optimize Your IT Infrastructure?>
       <Footer />
     </>
       <Footer />
-    </>
-  );
-};
-
+    </>);};

@@ -203,8 +203,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
         });
         clearTimeout(timeoutId);
         this.abortControllers.delete(cacheKey);
-            await response.text();
-          );
+            await response.text(););
         clearTimeout(timeoutId)
         this.abortControllers.delete(cacheKey)
         if (!response.ok) {/* TODO: Fix JSX expression */}`

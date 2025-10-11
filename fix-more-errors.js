@@ -184,10 +184,7 @@ const PageComponent: React.FC = () => {
       </main>
 
       <Footer />
-    </>
-  );
-};
-
+    </>);};
 export default PageComponent;`;
 
 filesToFix.forEach(filePath => {

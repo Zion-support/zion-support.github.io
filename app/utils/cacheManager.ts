@@ -428,8 +428,7 @@ try {}
         return null
     }
   }
-}
-    );
+});
   storage: CacheStorage.LocalStorage),
   defaultTTL: 30 * 60 * 1000 // 30 minutes;,
 // Create singleton instances for different use cases

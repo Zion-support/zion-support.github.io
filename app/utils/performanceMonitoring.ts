@@ -306,8 +306,7 @@ class PerformanceMonitoringService {}}private static instance: PerformanceMonito
         });
       }
     } catch (error) {/* TODO: Fix JSX expression */,}}
-  }
-    );
+  });
       switch (metric.rating) {
         case 'good': return 100;
         case 'needs-improvement': return 50;
@@ -619,8 +618,7 @@ export const measureFunction = <T>(name: string, fn: () => T): T => {,
   const webVitals = webVitalNames;
     .map(name => metrics[name]);
     .filter(Boolean);
-  if (webVitals.length === 0) return 0;
-    );
+  if (webVitals.length === 0) return 0;);
     switch (metric.rating) {
       case 'good': return 100;
       case 'needs-improvement': return 50;

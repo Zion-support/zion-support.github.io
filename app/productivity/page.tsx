@@ -187,14 +187,10 @@ const PagePage: React.FC = () => {const features = [
     </>
         </section>
       <Footer />
-    </>
-  );
-};
-
+    </>);};
 export default PagePage
       </div>
       
       <Footer />
     </>
-    </>
-  );
+    </>);

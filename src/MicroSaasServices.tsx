@@ -2110,9 +2110,7 @@ link: string;,
 icon: React.ReactNode;,
 tags: string[];,
 rating: number;,
-reviewCount: number
-}
-;
+reviewCount: number};
 const MICRO_SAAS_SERVICES: MicroSaasService[] = [
   {;,
 id: "ai-content-generator",;,
@@ -2465,8 +2463,7 @@ const [selectedCategory, setSelectedCategory] = useState<string>('all');
 const filteredServices = selectedCategory === 'all'; 
     ? MICRO_SAAS_SERVICES 
     : MICRO_SAAS_SERVICES.filter(service =>;
-service.category.toLowerCase().replace(/\s+/g, '-') === selectedCategory
-      );
+service.category.toLowerCase().replace(/\s+/g, '-') === selectedCategory);
 return (;
     <div className="min-h-screen bg-background">
 }
@@ -2996,9 +2993,7 @@ View All Services
   )
 }
     </div>
-  )
-}
-;
+  )};
 function ServiceCard({ service }: { service: MicroSaasService }) {;
 return (;
     <Card className="group bg-white/5 backdrop-blur-sm border-zion-blue-light/20 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 overflow-hidden">

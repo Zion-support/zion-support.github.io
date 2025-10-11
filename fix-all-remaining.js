@@ -204,10 +204,7 @@ const PageComponent: React.FC = () => {
       </main>
 
       <Footer />
-    </>
-  );
-};
-
+    </>);};
 export default PageComponent;`;
 
 let fixedCount = 0;

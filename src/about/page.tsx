@@ -4,8 +4,5 @@ import { Users, CheckCircle, Star, Shield, Award, Target, Globe, Brain, Cloud, C
 
 const AboutPage: React.FC = () => {
         </div>
-      </section>
-  );
-};
-
+      </section>);};
 export default AboutPage;

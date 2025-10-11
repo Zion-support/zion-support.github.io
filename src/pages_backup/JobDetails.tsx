@@ -69,9 +69,7 @@ const job_id = typeof rawJobId === 'string' ? rawJobId : undefined;;
 const { job, is_loading, error } = useJobDetails (job_id) as {;,
 job: Job | undefined;,
 is_loading: boolean;,
-error: any
-  }
-;
+error: any};
 deadline?: string;
 export default function JobDetails() {;
 const router = useRouter();; // Init router;
@@ -109,9 +107,7 @@ client_id: string,;
 skills?: string[],;,
 created_at: string,;,
 category: string,;
-deadline?: string
-}
-;
+deadline?: string};
 deadline?: string;
 export default function JobDetails() {;
 return (;
@@ -230,9 +226,7 @@ $2
       toast.error ('Only job seekers can apply for jobs');
 return
     ;}
-    setIsApplyModalOpen (true)
-  }
-;
+    setIsApplyModalOpen (true)};
 const handleApplySuccess = async (appliedJobId: string) => {;;
 toast.success ('Application submitted successfully!');
 setIsApplyModalOpen (false)
@@ -335,8 +329,7 @@ client_id: job.client_id,
 isOpen={isApplyModalOpen}
           onClose={() => setIsApplyModalOpen(false)}        />
       )}
-    </>
-  );
+    </>);
 return (<> <Header /> <div className="container mx-auto px-4 py-16 text-center" > <h1 className="text-2xl font-bold mb-4" >Job Not Found</h1> <p className="mb-8" >The job you're looking for doesn't exist or has been removed.</p> <ButtononClick={';
   () => router && router.push ('/careers')}>View All Jobs</Button> </div> </>) 
 }router && router.push (`/login?redirect=$ {;

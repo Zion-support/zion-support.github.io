@@ -10,26 +10,21 @@ export interface Service {
     starter: {
       price: number;
       period: string;
-      features: string[];
-    };
+      features: string[];};
     professional: {
       price: number;
       period: string;
-      features: string[];
-    };
+      features: string[];};
     enterprise: {
       price: number;
       period: string;
-      features: string[];
-    };
-  };
+      features: string[];};};
   category: string;
   tags: string[];
   website: string;
   contact: {
     phone: string;
-    email: string;
-  };
+    email: string;};
   marketSize: string;
   targetAudience: string;
   competitiveAdvantage: string;
@@ -1837,5 +1832,4 @@ export const contactInfo = {
   phone: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-};
+  website: 'https://ziontechgroup.com'};

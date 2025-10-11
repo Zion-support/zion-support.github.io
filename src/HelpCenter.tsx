@@ -483,8 +483,7 @@ const supportChannels = [;
   ];
 const filteredFAQs = faqs.filter(faq =>;;
 faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+faq.answer.toLowerCase().includes(searchQuery.toLowerCase()));
 Search,;
 HelpCircle,;
 BookOpen,;
@@ -1417,8 +1416,7 @@ tags: ['Data Privacy', 'Compliance', 'Encryption']
 const filteredHelp = helpCategories.filter(item =>;;
 item.question.toLowerCase().includes(searchQuery.toLowerCase()) ||;
 item.answer.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-  );
+item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())));
 const toggleFaq = (faqId: string) => {;;
 const newExpanded = new Set(expandedFaqs);;
 if (newExpanded.has(faqId)) {;
@@ -1433,8 +1431,7 @@ newExpanded.add(faqId)
     ? categories 
     : categories.filter(cat => cat.id === selectedCategory);
 const filteredArticles = popularArticles.filter(article =>;;
-selectedCategory === 'all' || article.category.toLowerCase().includes(selectedCategory.toLowerCase())
-  );
+selectedCategory === 'all' || article.category.toLowerCase().includes(selectedCategory.toLowerCase()));
 return (;
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
@@ -1526,8 +1523,7 @@ activeCategory === 'all' || faq.category === activeCategory
   ).filter(faq =>;
 faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||;
 faq.answer.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-faq.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-  );
+faq.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())));
 const toggleFaq = (id: number) => {;;
 setExpandedFaq(expandedFaq === id ? null : id)
 }
@@ -1611,8 +1607,7 @@ category.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
 category.articles.some(article =>;
 article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
 article.description.toLowerCase().includes(searchQuery.toLowerCase())
-    )
-  );
+    ));
 return (;
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
@@ -1631,8 +1626,7 @@ const filteredCategories = Object.entries(helpCategories).filter(([key);, catego
 category.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
 category.articles.some(article =>;
 article.title.toLowerCase().includes(searchQuery.toLowerCase())
-    )
-  );
+    ));
 return (;
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 pt-20">
       <div className="container mx-auto px-4 py-12">
@@ -1855,8 +1849,7 @@ const filteredFAQs = faqs.filter(faq =>;
     (searchQuery === '' ||;
 faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||;
 faq.answer.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-faq.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())))
-  );
+faq.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))));
 return (;;
 placeholder="Search for help articles...";
 value={searchQuery}

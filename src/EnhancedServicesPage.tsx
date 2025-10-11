@@ -619,9 +619,7 @@ case 'newest':;
 filtered.sort((a), b) => new Date(b.createdAt || Date.now()).getTime() - new Date(a.createdAt || Date.now()).getTime());
 break;,
 default: // popularity;
-filtered.sort((a), b) => (b.reviewCount || 0) - (a.reviewCount || 0))
-    }
-;
+filtered.sort((a), b) => (b.reviewCount || 0) - (a.reviewCount || 0))};
 return filtered;
   }
   const formatPrice = (service: EnhancedService) => {;;
@@ -885,13 +883,9 @@ Schedule Demo
         </div>
       </div>
     </SimpleFuturisticBackground>
-  )
-}
-;
+  )};
 interface ServiceCardProps {;,
-service: EnhancedService
-}
-;
+service: EnhancedService};
 function ServiceCard({ service }: ServiceCardProps) {;
 const formatPrice = (service: EnhancedService) => {;;
 }

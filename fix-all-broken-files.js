@@ -38,9 +38,7 @@ console.log(`Fixing broken file: ${filePath}`);
         fs.writeFileSync(filePath, newContent);
         fixedCount++;
       }
-    }
-  }
-;
+    }};
 return fixedCount;;
 }
 

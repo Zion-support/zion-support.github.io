@@ -129,8 +129,7 @@ return [];
   }
   const filteredItems = getCurrentItems().filter(item =>;;
 item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-item.description.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+item.description.toLowerCase().includes(searchTerm.toLowerCase()));
 const stats = [;;,
 value: '500+',;,
 label: 'Products Available',;,

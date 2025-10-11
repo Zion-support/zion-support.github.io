@@ -1,22 +1,14 @@
 class ErrorBoundary extends React.Component {;
 constructor(props) {;
 super(props);
-this.state={hasError: false}
-  }
-;
+this.state={hasError: false}};
 static getDerivedStateFromError(error) {;
-return { hasError: true; }
-  }
-;
+return { hasError: true; }};
 componentDidCatch(error, errorInfo) {;
-console.error('Error caught by boundary:', error, errorInfo)
-  }
-;
+console.error('Error caught by boundary:', error, errorInfo)};
 render() {;
 if (this.state.hasError) {;
-return <div>Something went wrong.</div>;
-    }
-;
+return <div>Something went wrong.</div>;};
 return this.props.children;
   }
 }
@@ -233,8 +225,7 @@ key={`blog-${r && r.id}}`}
         )}
 
       </main>
-    </div>
-  );
+    </div>);
 setQuery (urlQuery)
 }, [router.isReady, router.query.q]), //Fixed dependency array //Fetch results when query changes useEffect ( () => {;
 if (!router.isReady) return;

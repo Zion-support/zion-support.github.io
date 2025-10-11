@@ -54,8 +54,7 @@ const { resetKeys}, resetOnPropsChange } = this.props;
 const { hasError } = this.state;
 if (hasError && prevProps.resetKeys !== resetKeys) {;
 if (resetKeys && prevProps.resetKeys) {
-          (key}, index) => key !== prevProps.resetKeys?.[index]
-        );
+          (key}, index) => key !== prevProps.resetKeys?.[index]);
 if (hasResetKeyChanged) {;
 this.resetErrorBoundary()
   }
@@ -216,8 +215,7 @@ onClick={() => window.location.reload()}
 Reload Page
         {errorId && (
           <p className='mt-4 text-xs text-gray-400'>Error ID: {errorId}
-        )});
-);
+        )}););
 ErrorFallback.displayName = 'ErrorFallback';
 className='px-4 py-2 bg-gray-600 text-white rounded-md,;,
 hover:bg-gray-700,;,
@@ -231,6 +229,5 @@ focus:ring-offset-2 transition-colors'
           <p className='mt-4 text-xs text-gray-400'>Error,;,
 ID: {errorId}
         )}
-//   )
-);
+//   ));
 ErrorFallback.displayName = 'ErrorFallback'</div></div></div></div></div></div></div></div></div></div></div></button></button></p></p></p></p></p></p></h1></a>

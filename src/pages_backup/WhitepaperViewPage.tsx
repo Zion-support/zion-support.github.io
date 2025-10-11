@@ -79,29 +79,18 @@ $2
 logErrorToProduction ('Error fetching shared whitepaper:', { data:  e }),;
 set_error (e.message || 'An unexpected error occurred.')
       } finally {;
-setLoading(false)
-
-      }
-;
+setLoading(false)};
 class ErrorBoundary extends React.Component {;
 constructor(props) {;
 super(props);
-this.state={hasError: false}
-  }
-;
+this.state={hasError: false}};
 static getDerivedStateFromError(error) {;
-return { hasError: true; }
-  }
-;
+return { hasError: true; }};
 componentDidCatch(error, errorInfo) {;
-console.error('Error caught by boundary:', error, errorInfo)
-  }
-;
+console.error('Error caught by boundary:', error, errorInfo)};
 render() {;
 if (this.state.hasError) {;
-return <div>Something went wrong.</div>;
-    }
-;
+return <div>Something went wrong.</div>;};
 return this.props.children;
   }
   created_at: string;,
@@ -132,9 +121,7 @@ distributionChartData: Array<{ name: string, value: number }>,;
 distributionBreakdown?: string
   },;,
 created_at: string,;,
-is_public: boolean
-}
-;
+is_public: boolean};
 const WhitepaperViewPage: React.FC = () => {;
 const router = useRouter();;
 }
@@ -271,18 +258,14 @@ body: { id }}),
 fetchWhitepaper()
   }, [id]),;
 if (loading) {;
-return <div className="flex justify-center items-center h-screen"><p>Loading whitepaper...</p></div>;
-  }
-;
+return <div className="flex justify-center items-center h-screen"><p>Loading whitepaper...</p></div>;};
 if (error) {;
 return (;
       <div className="flex flex-col justify-center items-center h-screen text-red-600">
         <p>Error: {error}</p>
         <Button asChild variant="link" className="mt-4">
           <Link href="/"><ArrowLeft className="mr-2 h-4 w-4" /> Back to Home</Link></$1></$1>
-    )
-  }
-;
+    )};
 if (!sharedData) { // Check sharedData which includes the is_public flag;
 return (;
          <div className="flex flex-col justify-center items-center h-screen">
@@ -300,9 +283,7 @@ return (;
         <p className="mb-4">This whitepaper is not public and you do not have permission to view it.</p>
         <Button asChild variant="link">
           <Link href="/"><ArrowLeft className="mr-2 h-4 w-4" /> Back to Home</Link></$1></$1>
-    )
-  }
-;
+    )};
 const { whitepaper_data: whitepaper } = sharedData,;
 return (;
     <div className="container mx-auto p-4 md:p-8 bg-gray-50 min-h-screen">

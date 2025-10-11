@@ -23,9 +23,7 @@ async function handler(req, res) {
       currency,
       status: 'requires_payment_method',
       client_secret: 'pi_' + Date.now() + '_secret_' + Math.random().toString(36).substr(2, 9),
-      created: Math.floor(Date.now() / 1000)
-    };
-
+      created: Math.floor(Date.now() / 1000)};
     // In a real implementation, you would:
     // 1. Create a payment intent with Stripe
     // 2. Store the payment intent in your database

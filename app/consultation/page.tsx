@@ -172,7 +172,4 @@ Learn More
       <Footer />
     </>
       <Footer />
-    </>
-  );
-};
-
+    </>);};

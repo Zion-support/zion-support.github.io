@@ -70,10 +70,7 @@ const Component: React.FC<ComponentProps> = ({ className = '', children }) => {
       <h3 className="text-xl font-bold text-white mb-4">Component Title</h3>
       <p className="text-gray-300 mb-4">Component description goes here.</p>
       {children}
-    </div>
-  );
-};
-
+    </div>);};
 export default Component;`;
 
 let fixedCount = 0;

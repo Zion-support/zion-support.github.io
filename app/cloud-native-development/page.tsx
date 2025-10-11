@@ -103,7 +103,6 @@ const PagePage: React.FC = () => {const features = [
       <Footer />
     </>
       <Footer />
-    </>
-  );
+    </>);
 export default PagePage
       </Footer>

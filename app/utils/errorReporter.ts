@@ -255,8 +255,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
       {}
         timestamp: new Date().toISOString(),
         stats: this.getErrorStats(),
-      2;
-    );
+      2;);
   exportErrors(): string {/* TODO: Fix JSX expression */,}},
       null,;
         errors: this.errorQueue},
@@ -264,8 +263,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
       2
     )
       null,
-      2;
-    );
+      2;);
   }
 }
 /**

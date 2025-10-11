@@ -52,8 +52,7 @@ class EnhancedAnalytics {}
       ...config}
     }
     // Track initialization;
-    this.trackEvent({)
-    );
+    this.trackEvent({));
     // Track initialization
     this.trackEvent()
     )

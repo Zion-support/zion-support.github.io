@@ -11,16 +11,14 @@ const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 ;
 setIsScrolled(window.scrollY > 50);
-}
-    };
+}};
 ;
 window.addEventListener('resize', handleResize);
     window.addEventListener('scroll', handleScroll);
     return () => {;;
 window.removeEventListener('resize', handleResize);
       window.removeEventListener('scroll', handleScroll);
-}
-    };
+}};
   }, []);
 ;
 const closeAllMenus = () => {;;
@@ -29,9 +27,7 @@ setServicesOpen(false);
     setItServicesOpen(false);
     setMicroSaasOpen(false);
     setIsOpen(false);
-}
-  };
-
+}};
   ];
 
               <h1 className="text-xl font-bold text-white cyber-text neon-pulse">Zion Tech Group</h1>
@@ -131,8 +127,6 @@ onClick={closeAllMenus}>
           </div>
         )}
       </div>
-    </nav>
-  );
-};
+    </nav>);};
 ;
 export default Navigation;

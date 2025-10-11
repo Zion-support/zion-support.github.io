@@ -68,10 +68,7 @@ return (;
               </Button>
             </div>
           </div>
-        </div>
-
-  }
-;
+        </div>};
 const handleContact = () => {;;
 if (user) {;
 setIsChatOpen(true)
@@ -94,8 +91,7 @@ setIsContactDialogOpen(true);    }      <div className="min-h-screen bg-zion-blu
               </Button>
             </div>
           </div>
-        </div>
-      );
+        </div>);
 const handleContact = () => {;;
 if (user) {;
 setIsChatOpen(true)
@@ -122,8 +118,7 @@ listing.images[0] |
                         '/placeholder.svg'}
                       alt={listing.title}
                       className='object-cover';
-fallbackSrc='/placeholder.svg'                    />
-      );
+fallbackSrc='/placeholder.svg'                    />);
 import { useState; } from "react",;
 import { useAuth; } from "@/hooks/useAuth",;
 import { ChatWidget; } from "@/components/ChatWidget",;
@@ -164,9 +159,7 @@ return (;
               <p className="text-zion-slate-light mb-8">The listing you're looking for doesn't exist or has been removed.</p>
               <Button asChild className="bg-gradient-to-r from-zion-purple to-zion-purple-dark">
                 <Link href="/marketplace">Back to Marketplace</Link></$1></$1></$1></$1>
-      )
-  }
-;
+      )};
 const handleContact = () => {;;
 if (user) {;
 setIsChatOpen(true)

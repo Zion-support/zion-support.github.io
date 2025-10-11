@@ -109,8 +109,7 @@ import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Clou
               <Link to="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
                 Cookie Policy
               </Link>
-            </div>
-  );
+            </div>);
 });
 
 Footer.displayName = 'Footer';

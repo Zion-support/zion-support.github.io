@@ -48,11 +48,7 @@ function fixMergeConflicts(content) {
 
   // Remove merge conflict markers and keep HEAD version
   fixed = fixed
-<<<<<<< HEAD
-    .replace(/    .replace(/  
-=======
-    .replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)    .replace(/<<<<<<< HEAD\n([\s\S]*?)  
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
+.replace(/\n([\s\S]*?)\n([\s\S]*?)    .replace(/\n([\s\S]*?)
   // Remove duplicate Helmet tags
   fixed = fixed.replace(/<Helmet>[\s\S]*?<\/Helmet>\s*<Helmet>[\s\S]*?<\/Helmet>/g, (match) => {
     const firstHelmet = match.match(/<Helmet>[\s\S]*?<\/Helmet>/)[0];
@@ -79,14 +75,11 @@ function fixSpecificFile(filePath, content) {
     // Fix the malformed JSX structure
     fixed = fixed.replace(
       /<div className="min-h-screen bg-gray-50"\s*<Helmet>/g,
-      '<div className="min-h-screen bg-gray-50">\n      <Helmet>'
-    );
-
+      '<div className="min-h-screen bg-gray-50">\n      <Helmet>');
     // Remove duplicate Helmet and Navigation
     fixed = fixed.replace(
       /<Helmet>[\s\S]*?<\/Helmet>\s*<Navigation \/>\s*<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">\s*<Helmet>[\s\S]*?<\/Helmet>\s*<Navigation \/>/g,
-      '<Helmet>\n        <title>5G Implementation - Zion Tech Group</title>\n        <meta name="description" content="Complete 5G network implementation services with ultra-low latency, high-speed connectivity, and advanced features for modern applications and IoT ecosystems." />\n        <meta name="keywords" content="5G implementation, network infrastructure, ultra-low latency, high-speed connectivity, IoT, smart cities, edge computing" />\n      </Helmet>\n      <Navigation />'
-    );
+      '<Helmet>\n        <title>5G Implementation - Zion Tech Group</title>\n        <meta name="description" content="Complete 5G network implementation services with ultra-low latency, high-speed connectivity, and advanced features for modern applications and IoT ecosystems." />\n        <meta name="keywords" content="5G implementation, network infrastructure, ultra-low latency, high-speed connectivity, IoT, smart cities, edge computing" />\n      </Helmet>\n      <Navigation />');
   }
 
   return fixed;
@@ -165,4 +158,4 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   main();
 }
 
-export { fixMergeConflicts, fixJSXSyntax, processFile };
+export { fixMergeConflicts, fixJSXSyntax, processFile};

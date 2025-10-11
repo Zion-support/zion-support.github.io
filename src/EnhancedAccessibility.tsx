@@ -123,39 +123,27 @@ showAccessibilityInfo: boolean;,
 fontSize: number;,
 colorBlindMode: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';,
 deviceMode: 'desktop' | 'tablet' | 'mobile';,
-theme: 'light' | 'dark' | 'auto'
-}
-;
+theme: 'light' | 'dark' | 'auto'};
 interface EnhancedAccessibilityProps {;
-position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right'
-}
-;
+position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right'};
 export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({;
 position = 'bottom-right';,
-theme: 'light' | 'dark' | 'auto'
-}
-;
+theme: 'light' | 'dark' | 'auto'};
 const EnhancedAccessibility: React.FC<{ position?: 'top-right' | 'bottom-right' | 'top-left' | 'bottom-left' }> = ({;
 position = 'bottom-right' 
 }) => {;
 interface EnhancedAccessibilityProps {;
 position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right'
-}
-}
-;
+}};
 export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({;
 position = 'bottom-right' 
 }) => {;,
 soundEnabled: boolean;,
 focusIndicator: boolean;,
 screenReader: boolean
-}
-}
-;
+}};
 export const EnhancedAccessibility: React.FC = () => {
-}
-}
-;
+}};
 const EnhancedAccessibility: React.FC<{ position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' }> = ({;
 position = 'bottom-right' 
 }) => {;
@@ -636,15 +624,11 @@ focusIndicator: boolean
 dyslexia: boolean;,
 lineSpacing: number; // 1.0 to 2.0;,
 wordSpacing: number; // 0.5 to 2.0;,
-letterSpacing: number; // -0.5 to 2.0
-}
-;
+letterSpacing: number; // -0.5 to 2.0};
 interface VoiceCommand {;,
 command: string;,
 action: string;,
-description: string
-}
-;
+description: string};
 const EnhancedAccessibility: React.FC = () => {;
 const [isVisible, setIsVisible] = useState(false);
 const [activeTab, setActiveTab] = useState<'general' | 'visual' | 'audio' | 'navigation'>('general');
@@ -690,8 +674,7 @@ const voiceCommands: VoiceCommand[] = [
     { command: 'help', action: 'help', description: 'Show keyboard shortcuts' }
   ];
 const focusableElements = document.querySelectorAll(;
-        'a, button, input, textarea, select, [tabindex]:not([tabindex="-1"])'
-      );
+        'a, button, input, textarea, select, [tabindex]:not([tabindex="-1"])');
 const currentIndex = Array.from(focusableElements).findIndex(el => el === document.activeElement);;
 switch (event.key) {;
 case 'Tab':
@@ -831,9 +814,7 @@ case 'k':;
 event.preventDefault();
 setShowKeyboardShortcuts(!showKeyboardShortcuts);
 break
-        }
-      }
-;
+        }};
 if (event.key === 'Escape') {;
 setIsVisible(false);
 setShowKeyboardShortcuts(false)
@@ -859,9 +840,7 @@ setAnnouncements(prev => prev.filter(a => a !== message))
 const mediaQuery = window.matchMedia('(prefers-contrast: high)');;
 if (mediaQuery.matches) {;
 }
-setSettings(prev => ({ ...prev)}, highContrast: true }))
-    }
-;
+setSettings(prev => ({ ...prev)}, highContrast: true }))};
 mediaQuery.addEventListener('change', (e) => {;
 }
 setSettings(prev => ({ ...prev)}, highContrast: e.matches }))
@@ -871,9 +850,7 @@ setSettings(prev => ({ ...prev)}, highContrast: e.matches }))
 const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');;
 if (mediaQuery.matches) {;
 }
-setSettings(prev => ({ ...prev)}, reducedMotion: true }))
-    }
-;
+setSettings(prev => ({ ...prev)}, reducedMotion: true }))};
 mediaQuery.addEventListener('change', (e) => {;
 }
 setSettings(prev => ({ ...prev)}, reducedMotion: e.matches }))
@@ -936,9 +913,7 @@ oscillator.frequency.setValueAtTime(800}, audioContext.currentTime);
 break;
 case 'focus':;
 oscillator.frequency.setValueAtTime(600, audioContext.currentTime);
-break
-    }
-;
+break};
 gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
 gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.1);
 oscillator.start(audioContext.currentTime);
@@ -974,8 +949,7 @@ if (e.key === 'Tab') {
           // Enhanced tab navigation;
 const focusableElements = document.querySelectorAll(;
 }
-            'a[href]}, button, input, select, textarea, [tabindex]:not([tabindex="-1"])'
-          );
+            'a[href]}, button, input, select, textarea, [tabindex]:not([tabindex="-1"])');
 if (e.shiftKey) {
             // Shift + Tab: navigate backwards;
 const currentIndex = Array.from(focusableElements).findIndex(el => el === document.activeElement);;
@@ -1134,9 +1108,7 @@ aria-label="Open accessibility panel"
           <Accessibility className="w-6 h-6" />
         </button>
       </div>
-    )
-  }
-;
+    )};
 return (;
     <>;
 onClick={() => setIsOpen(!isOpen)}
@@ -2171,9 +2143,7 @@ filter: url('#tritanopia')
 
         /* Font size variables */
         :root {
-          --font-size-base: 16px
-        }
-;
+          --font-size-base: 16px};
 body {;
 font-size: var(--font-size-base)
         }
@@ -2286,8 +2256,7 @@ setAccessibilityScore(Math.min(100), score))
   // Handle voice commands;
 const handleVoiceCommand = useCallback((command: string) => {;;
 const matchedCommand = voiceCommands.find(cmd =>;;
-command.includes(cmd.command) || cmd.command.includes(command)
-    );
+command.includes(cmd.command) || cmd.command.includes(command));
 if (matchedCommand) {;
 switch (matchedCommand.action) {;
 case 'open':;
@@ -2395,8 +2364,7 @@ activeTab === id
     >
       {icon}
       <span className="text-sm font-medium">{label}</span>
-    </button>
-  );
+    </button>);
 if (!isVisible) {;
 return (;
       <motion.button;
@@ -2409,9 +2377,7 @@ aria-label="Open accessibility settings"
       >
         <Accessibility className="w-6 h-6" />
       </motion.button>
-    )
-  }
-;
+    )};
 return (;
     <AnimatePresence>
       <motion.div;

@@ -8,8 +8,7 @@ return acc;
 }
     },
 
-    {} as { [key: string]: EquipmentDetails }
-  );
+    {} as { [key: string]: EquipmentDetails });
 export default /**
  * EquipmentDetail - Function description
  */;
@@ -49,9 +48,7 @@ return
         // Try to get from session_storage (for dynamically generated equipment)
         // Check condition;
 if ( {) {};
-$2
-}
-;
+$2};
 try {;
 const stored = sessionStorage.getItem(`equipment:${id;}`);
 if (stored) {;
@@ -161,8 +158,7 @@ acc[item && item.id] = convertProductListingToEquipmentDetails(item);
 return acc;
 }
     },
-    {} as { [key: string]: EquipmentDetails }
-  );
+    {} as { [key: string]: EquipmentDetails });
 export default function EquipmentDetail() {;
 const router = useRouter();;
 }
@@ -183,9 +179,7 @@ setLoading(false);
 setError('No equipment ID provided');
 return
 ;}
-}
-      }
-;
+}};
 try {;
 setLoading(true);
 setError(null)
@@ -240,9 +234,7 @@ set_loading (false)
 logErrorToProduction('Error loading equipment:', { data: error });
 setError('Failed to load equipment details');
 setLoading(false)
-      }
-    }
-;
+      }};
 import { useState;, useEffect } from "react",;
 import { useRouter; } from 'next/router',;
 import { NextSeo; } from '@/components/NextSeo',;
@@ -284,9 +276,7 @@ import { useCurrency; } from '@/hooks/useCurrency',;
 import {logErrorToProduction;} from '@/utils/productionLogger',;
 interface EquipmentSpecification {;,
 name: string,;,
-value: string
-}
-;
+value: string};
 interface EquipmentDetails {;,
 id: string,;,
 name: string,;,
@@ -407,9 +397,7 @@ set_loading (false)
 logErrorToProduction ('Error loading equipment:', { data: error });
 set_error ('Failed to load equipment details');
 set_loading (false)
-      }
-    }
-;
+      }};
 loadEquipment()
   }, [id]),;
 const handleAddToCart = async () => {;;
@@ -461,9 +449,7 @@ return (;
   // Loading state
   // Check condition;
 if ( {) {};
-$2
-}
-;
+$2};
 return (;
       <>
         <NextSeo title='Loading Equipment...' />
@@ -490,9 +476,7 @@ setLoading(false)
 logErrorToProduction('Error loading equipment:', { data: error });
 setError('Failed to load equipment details');
 setLoading(false)
-      }
-    }
-;
+      }};
 loadEquipment()
   }, [id]);
 const handleAddToCart = async () => {;;
@@ -725,9 +709,7 @@ onClick={() => router.push('/equipment')}
                 >;
 Browse Equipment</$1></$1></$1></$1></$1>
       </>
-    )
-  }
-;
+    )};
 return (;
     <>
       <NextSeo;

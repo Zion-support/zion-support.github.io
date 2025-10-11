@@ -170,9 +170,7 @@ e: number,
  * ```
  */;
 export class AccessibilityChecker {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-;
+  O: Add content,}};
 private issues: A11yIssue[] = []
   /**
    * Check an element and its descendants for accessibility issues
@@ -882,8 +880,7 @@ $4});
    */;
 private checkARIA(element: Element): void {;
 const elementsWithAria = element.querySelectorAll(;
-      '[role], [aria-label], [aria-labelledby], [aria-describedby]'
-    );
+      '[role], [aria-label], [aria-labelledby], [aria-describedby]');
 elementsWithAria.forEach(el => {;
 const role = el.getAttribute('role');
       // Check for invalid ARIA roles;
@@ -928,8 +925,7 @@ private checkARIA(element: Element): void {
 
 }
     const elementsWithAria = element.querySelectorAll();
-//       '[role], [aria-label], [aria-labelledby], [aria-describedby]'
-    );
+//       '[role], [aria-label], [aria-labelledby], [aria-describedby]');
 elementsWithAria.forEach(el => {/* TODO: Fix JSX expression */}
   O: Add content,}
 });
@@ -1163,9 +1159,7 @@ d: this.generateIssueId(),
    */;
 private generateIssueId(): string {
     // TODO: Add content
-  }
-}
-;
+  }};
 return `a11y_${Date.now();}_${Math.random().toString(36).substr(2, 9)}`
   }
   /**

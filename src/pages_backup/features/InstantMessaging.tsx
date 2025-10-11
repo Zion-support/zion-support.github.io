@@ -208,10 +208,6 @@ export default function InstantMessaging() {
               src="https://placehold && placehold.co/800x400"
               alt="Screenshot of chat interface"
               className="object-cover"
-<<<<<<< HEAD
-
-=======
 >
 >
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
             </Button></$1></$1></$1></$1></div></main>

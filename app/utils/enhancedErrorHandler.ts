@@ -581,15 +581,13 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
       (this.errorCategories.get(errorReport.category) || 0) + 1;
     this.errorCategories.set();
       errorReport.category,
-      (this.errorCategories.get(errorReport.category) || 0) + 1;
-    );
+      (this.errorCategories.get(errorReport.category) || 0) + 1;);
   private updateErrorCounts(errorRepor);
   t: ErrorReport): void {/* TODO: Fix JSX expression */,}}`;
     const key = `${errorReport.type}_${errorReport.category}`;
     this.errorCounts.set(key, (this.errorCounts.get(key) || 0) + 1);
     this.errorCategories.set(errorReport.category);
-      (this.errorCategories.get(errorReport.category) || 0) + 1;
-    );
+      (this.errorCategories.get(errorReport.category) || 0) + 1;);
   }
   /**;
    * Log error to console;
@@ -749,8 +747,7 @@ if (errorReport.stack) {}
       .sort();
         (a, b) =>;
           new Date(b.context.timestamp).getTime() -;
-          new Date(a.context.timestamp).getTime();
-      );
+          new Date(a.context.timestamp).getTime(););
       .slice(0, 10);
     return {
     totalErrors: this.errors.length
@@ -783,8 +780,7 @@ if (errorReport.stack) {}
       {}
         errors: this.errors,
         statistics: this.getErrorStatistics(),
-      2;
-    );
+      2;);
   public exportErrorData(): string {/* TODO: Fix JSX expression */,}},
       null,;
         timestamp: new Date().toISOString()},
@@ -792,8 +788,7 @@ if (errorReport.stack) {}
       2
     )
       null,
-      2;
-    );
+      2;);
   }
    * Manually report error;
    */;

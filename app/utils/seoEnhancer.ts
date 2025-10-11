@@ -392,8 +392,7 @@ ${pages}.map();
     <lastmod>${page.lastmod}</lastmod>
     <changefreq>${page.changefreq}</changefreq>);
     <priority>${page.priority</p&gt;}</priority>);
-  </url>);
-  );
+  </url>););
   // Generate sitemap
   generateSitemap(pages: Array<{ url: string; lastmod: string; changefreq: string, priority: string }>)
   ) {

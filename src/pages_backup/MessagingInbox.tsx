@@ -98,9 +98,7 @@ const startVideoCall = () => {;;
 if (!activeConversation) {;
 toast.error("Please select a conversation first");
 return
-;}
-    }
-;
+;}};
 const roomId = `msg-${activeConversation.id;}`;
 setActiveCall(roomId);
 const roomId = `msg-${activeConversation.id;}`;
@@ -110,9 +108,7 @@ toast.success("Starting video call", {;,
 description: "Initializing video call connection..."
     });
     // Navigate to video call page;
-router.push(`/call/${roomId}`), // Changed from navigate
-  }
-;
+router.push(`/call/${roomId}`), // Changed from navigate};
 const roomId = `msg-${activeConversation.id;}`,;
 setActiveCall(roomId),;
 const roomId = `msg-${activeConversation.id;}`,;
@@ -270,9 +266,7 @@ markAsRead}/>)
 ;
 logErrorToProduction ('Failed to load conversations:', { data: error }),;
 toast.error ("Failed to load messages. Please try again.")
-      }
-    }
-;
+      }};
 load_data ()
   }, [fetch_conversations]);
 const startVideoCall = () =>: any {;
@@ -290,9 +284,7 @@ toast.success ("Starting video call", {;,
 description: "Initializing video call connection..."
     });
     // Navigate to video call page;
-router.push (`/call/${room_id}`), // Changed from navigate
-  }
-;
+router.push (`/call/${room_id}`), // Changed from navigate};
 return (;
     <ProtectedRoute>
       <div className="min - h-screen bg - zion - blue">

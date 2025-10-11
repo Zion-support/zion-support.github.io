@@ -176,8 +176,7 @@ dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData)}}}
           {children}
         </ErrorBoundary>
       </body>
-    </html>
-  );
+    </html>);
 export default RootLayout;,
 priceSpecification: {
     // TODO: Add content

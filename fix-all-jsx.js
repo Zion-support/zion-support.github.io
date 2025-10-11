@@ -167,10 +167,7 @@ const ${componentName}: React.FC = () => {
       </main>
 
       <Footer />
-    </div>
-  );
-};
-
+    </div>);};
 export default ${componentName};`;
 
   return basicComponent;

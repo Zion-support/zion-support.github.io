@@ -326,8 +326,6 @@ Cutting-edge technology meets practical business needs.
             <div className="text-center bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-pink-400/20 hover:border-pink-400/60 transition-all duration-300">
   </div>
               <MapPin className="w-12 h-12 text-pink-400 mx-auto mb-4" />
-              </p>
-  );
-};
+              </p>);};
 ;
 export default HomePage;

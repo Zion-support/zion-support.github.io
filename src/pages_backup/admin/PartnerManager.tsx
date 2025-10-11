@@ -1,6 +1,4 @@
-onViewDetails, });
-}
-;
+onViewDetails, });};
 import { use_router; } from 'next / router';
 import { Button;  } from '@/components / ui / button';
 import { Card;, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components / ui / card';
@@ -70,9 +68,7 @@ default:;
 return <Badge variant="outline">{status;}</Badge>;
 partners;
 isLoading;
-onViewDetails, }
-
-  );
+onViewDetails, });
 partners,;
 isLoading,;
 onViewDetails, });
@@ -184,9 +180,7 @@ p.name.toLowerCase().includes(lowerQuery) ||;
 p.niche.toLowerCase().includes(lowerQuery) ||;
 p.bio?.toLowerCase().includes(lowerQuery) ||;
 p.website?.toLowerCase().includes(lowerQuery)
-      )
-    }
-;
+      )};
 setFilteredPartners(filtered)
   },;
 const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {;;
@@ -661,9 +655,7 @@ Save Changes
             </div>
           )}
         </DialogContent></$1></$1>
-  )
-}
-;
+  )};
 interface PartnerTableProps {;,
 partners: PartnerProfile[],;,
 isLoading: boolean,;,
@@ -671,9 +663,7 @@ onViewDetails: (partner: PartnerProfile) => void,;,
 onUpdateStatus: (partnerId: string, status: 'approved' | 'rejected') => void,;,
 onOpenSettings: (partner: PartnerProfile) => void,;,
 getStatusBadge: (status: string) => JSX.Element,;,
-getFraudFlagBadge: (flags?: number) => JSX.Element | null
-}
-;
+getFraudFlagBadge: (flags?: number) => JSX.Element | null};
 function PartnerTable({;
 partners,;
 isLoading,;
@@ -687,9 +677,7 @@ if (isLoading) {;
 return (;
       <div className="text-center py-8">
         <p className="text-zion-slate-light">Loading partner data...</p></$1>
-    )
-  }
-;
+    )};
 if (partners.length === 0) {;
 return (;
       <div className="py-8">
@@ -700,9 +688,7 @@ description="There are no partner applications to display.";
 className="border-none bg-transparent text-center">
         />
       </div>
-    )
-  }
-;
+    )};
 return (;
     <Table>
       <TableHeader>

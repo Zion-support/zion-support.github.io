@@ -184,10 +184,6 @@ const PagePage: React.FC = () => {const features = [
         </section>
       <Footer />
     </>
-<<<<<<< HEAD
-  )}
-=======
-  )
+)
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
           </ArrowRight>;

@@ -74,7 +74,4 @@ import {Helmet} from 'react-helmet-async'
       <Footer />
     </>
       <Footer />
-    </>
-  );
-};
-
+    </>);};

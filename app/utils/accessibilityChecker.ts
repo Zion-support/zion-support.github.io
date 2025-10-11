@@ -125,5 +125,4 @@ const AccessibilityCheckerPage: React.FC = () => {
           </div>
         ))
       </section>
-    </div>
-  );
+    </div>);

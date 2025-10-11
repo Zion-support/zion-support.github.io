@@ -2,12 +2,10 @@ const CACHE_NAME = 'zion-tech-group-v1';
   '/manifest.json'
 ];
 
-// Install event
-  );
+// Install event);
 });
 
-// Fetch event
-  );
+// Fetch event);
 });
 
 // Background sync for offline form submissions

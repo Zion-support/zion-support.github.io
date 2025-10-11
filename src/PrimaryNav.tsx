@@ -132,9 +132,7 @@ try {;
 const messaging = useMessaging();,;
 unreadCount = messaging.unreadCount
   } catch {
-    // context not available
-  }
-;
+    // context not available};
 const handleSubmit = (e: React.FormEvent) => {;;
 e.preventDefault(),;
 const trimmed = query.trim();,;
@@ -212,9 +210,7 @@ $2
 router.push (`/blog/${sugg.slug}`)
                   } else {
                     // Default: search results page with query parameter;
-router.push (`/search?q=${encodeURIComponent (sugg.text)}`)
-                  }
-;
+router.push (`/search?q=${encodeURIComponent (sugg.text)}`)};
 onSelectSuggestion={sugg => {};
 }
 logDebug('PrimaryNav search suggestion selected:'}, {;,
@@ -535,9 +531,7 @@ unreadCount={unreadCount}
       {isMobile && <MobileBottomNav unreadCount={unreadCount}} />}
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
-  )
-}
-;
+  )};
 return (<> <header className="sticky top-0 z-70 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md" role="navigation" aria-label="Primary" data-testid="header" > <div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap" > <Logo />;
 }setQuery ('')
 //Track analytics event
@@ -647,9 +641,7 @@ Contact
       </nav>
     </header>
   )}
-'"`
-}
-;
+'"`};
 className="absolute inset-0 bg-black/50 backdrop-blur-sm";
 onClick={() => setMobileMenuOpen(false)}
             aria-hidden="true"
@@ -673,9 +665,7 @@ unread_count={unread_count}
               openLoginModal={returnToPath => setLoginOpen (true)}            /></$1></$1>)}
       {is_mobile && <MobileBottomNav unread_count={unread_count}} />}
       <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />
-    </>)
-}
-;
+    </>)};
 return (<> <header className="sticky top - 0 z - 70 w - full border - b border - primary / 20 bg - card / 90 backdrop - blur - md" role="navigation" aria - label="Primary" data - testid="header" > <div className="container flex items - center justify - between gap - 2 min - h-16 px - 4 sm:px - 6 max-[320px]:flex - wrap" > <Logo />;
 }set_query ('')
 //Track analytics event

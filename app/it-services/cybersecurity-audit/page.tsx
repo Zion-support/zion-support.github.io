@@ -38,10 +38,7 @@
       <Footer />
     </>
       <Footer />
-    </>
-  );
-};
-
+    </>);};
               <p className="text-xl text-gray-300 mb-8">
                 This page is under development. Please check back soon for updates.
 

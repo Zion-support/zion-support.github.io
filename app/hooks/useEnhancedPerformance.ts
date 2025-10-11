@@ -48,8 +48,7 @@ if (trackPerformance && renderCountRef.current > 10) {
         });
       },
     [component, trackErrors]
-              duration > 1000 ? 'slow' : 'fast';
-            );
+              duration > 1000 ? 'slow' : 'fast';);
   )
 const trackUserAction = useCallback(
     (action: string, metadata?: Record</string><string, unknown>) => {
