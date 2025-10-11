@@ -140,15 +140,12 @@ const,
       {/* Skip to main content link */}
       <a></a>"
         href="#main-content""
-<<<<<<< HEAD
         className="skip-link"
         onClick={/* TODO: Fix JSX expression */});
   r: 'smooth' });
-=======
         className="skip-link">
         onClick={/* TODO: Fix JSX expression */})
   r: 'smooth' })
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
           }
         }}
       >

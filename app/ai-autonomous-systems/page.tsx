@@ -31,14 +31,12 @@ const PagePage: React.FC = () => {const features = [
     'Seamless integration with existing systems'
   ]
   return (
-    <>
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
         <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
       </Helmet>
       <Navigation />
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
@@ -58,19 +56,12 @@ const PagePage: React.FC = () => {const features = [
                   Learn More
                 </button>
               </div>
-
       <Footer />
-    </>
             </div>
-
       <Footer />
-    </>
           </div>
-
       <Footer />
-    </>
         </section>
-
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -80,7 +71,6 @@ const PagePage: React.FC = () => {const features = [
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Discover the powerful features that make our solutions stand out.
               </p>
-
             <div className="
     ,>
     d: grid-cols-2 l, g:grid-cols-3 gap-8">
@@ -91,7 +81,6 @@ const PagePage: React.FC = () => {const features = [
                     <h3 className="text-xl font-semibold text-gray-900">
                   </div>
       <Footer />
-    </>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
@@ -101,24 +90,16 @@ const PagePage: React.FC = () => {const features = [
                         {benefit}
                       </li>
                     )
-    </>
   )
                   </ul>
                 </div>
-
       <Footer />
-    </>
               ))}
             </div>
-
       <Footer />
-    </>
           </div>
-
       <Footer />
-    </>
         </section>
-
         <section className="py-20 bg-gray-100">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -128,7 +109,6 @@ const PagePage: React.FC = () => {const features = [
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Experience the benefits of working with industry leaders.
               </p>
-
             <div className="
     ,>
     d: grid-cols-2 l, g:grid-cols-3 gap-8">
@@ -139,23 +119,15 @@ const PagePage: React.FC = () => {const features = [
                     <span className="text-lg font-medium text-gray-900">
                   </div>
       <Footer />
-    </>
                   <p className="text-gray-300">{benefit}</p>
                 </div>
-
       <Footer />
-    </>
               ))}
             </div>
-
       <Footer />
-    </>
           </div>
-
       <Footer />
-    </>
         </section>
-
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -174,20 +146,11 @@ const PagePage: React.FC = () => {const features = [
                 Schedule Demo
               </button>
             </div>
-
       <Footer />
-    </>
           </div>
-
       <Footer />
-    </>
         </section>
       <Footer />
-    </>
-<<<<<<< HEAD
   )}
-=======
-  )
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
           </ArrowRight>;

@@ -10,14 +10,13 @@ const PagePage: React.FC = () => {const features = [
       description: 'Description for feature 1.',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
     {icon: BarChart,
-      title: 'Feature 2', 
+      title: 'Feature 2',
       description: 'Description for feature 2.',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
     {icon: CheckCircle,
       title: 'Feature 3',
       description: 'Description for feature 3.',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ];
-
   const benefits = [
     'Increase efficiency by up to 80%',
     'Reduce costs by 30% with automation',
@@ -26,20 +25,16 @@ const PagePage: React.FC = () => {const features = [
     'Real-time processing and analysis',
     'Seamless integration with existing systems'
   ];
-
   return (
-    <>
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
         <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
       </Helmet>
       <Navigation />
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
-
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -51,15 +46,10 @@ const PagePage: React.FC = () => {const features = [
                 Transform your business with our cutting-edge AI and IT solutions designed for the modern enterprise.
               </p>
             </div>
-
       <Footer />
-    </>
           </div>
-
       <Footer />
-    </>
         </section>
-
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -69,7 +59,6 @@ const PagePage: React.FC = () => {const features = [
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Discover the powerful features that make our solutions stand out.
               </p>
-
             <div className="
     ,>
     d: grid-cols-2 l, g:grid-cols-3 gap-8">
@@ -90,20 +79,13 @@ const PagePage: React.FC = () => {const features = [
                   </ul>
               ))}
             </div>
-
       <Footer />
-    </>
           </div>
-
       <Footer />
-    </>
         </section>
       </div>
-
       <Footer />
-    </>
       <Footer />
-    </>
   );
 export default PagePage
       </Footer>

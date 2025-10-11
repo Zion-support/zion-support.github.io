@@ -206,10 +206,7 @@ export default function Internationalization() {
               src="https://placehold && placehold.co/800x400"
               alt="Screenshot of language options"
               className="object-cover"
-<<<<<<< HEAD
 
-=======
 >
 >
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
               <Link href="/">Explore Zion</Link></$1></$1></$1></$1></$1></div></main>

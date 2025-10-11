@@ -12,24 +12,19 @@ const benefits = [
     '24/7 availability',
     'Expert support'
   ]
-
 return (
-    <>
-
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
         <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
       </Helmet>
       <Navigation />
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Page Title - Zion Tech Group</title>
         <meta name="description" content="Description of the page and its benefits."
         <meta name="keywords" content="relevant, keywords, for, seo"
       </Helmet />
-
     'Cost-effective pricing plans',
           </div&gt
         </div&gt
@@ -50,22 +45,15 @@ return (
         <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
       </Helmet>
       <Navigation />
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Email Optimizer - Zion Tech Group</title>
         <meta name="description" content="AI-powered email optimizer solution for intelligent automation and optimization" />
         <meta name="keywords" content="AI, email, optimizer, automation, artificial intelligence, business solutions" />
       </Helmet>
-
       <Navigation />
-<<<<<<< HEAD
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-sky-900 to-slate-900"
-=======
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-sky-900 to-slate-900">
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
         {/* Hero Section */}
         <section className="py-20 px-4 relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse">
@@ -87,15 +75,10 @@ Get Started
 Learn More
               </button>
             </div>
-
       <Footer />
-    </>
           </div>
-
       <Footer />
-    </>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -104,7 +87,6 @@ Learn More
                   {feature.benefits && (
                     <ul className="space-y-2">
                       {feature.benefits.map((benefit
-    </>
   );, idx) => (
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2">
                           {benefit}
@@ -113,40 +95,24 @@ Learn More
                     </ul>
                   )}
                 </div>
-
       <Footer />
-    </>
               ))}
             </div>
-
       <Footer />
-    </>
           </div>
-
       <Footer />
-    </>
         </section>
-
         {/* Benefits Section */}
                 </div>
-
       <Footer />
-    </>
               ))}
             </div>
-
       <Footer />
-    </>
           </div>
-
       <Footer />
-    </>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
   </div>
-
       <Footer />
-    </>

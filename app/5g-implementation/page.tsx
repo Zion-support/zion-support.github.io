@@ -4,7 +4,6 @@ import {Helmet} from 'react-helmet-async'
 import {Wifi, BarChart, CheckCircle, Brain, Target, TrendingUp, FileText, Zap, Shield, ArrowRight, PieChart} from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-
 const FiveGImplementationPage: React.FC = () => {
   const features = [
     {
@@ -44,7 +43,6 @@ const FiveGImplementationPage: React.FC = () => {
       benefits: ['Reduced latency', 'Bandwidth optimization', 'Real-time analytics', 'Local processing']
     }
   ];
-
   const useCases = [
     {
       title: 'Smart Manufacturing',
@@ -71,13 +69,9 @@ const FiveGImplementationPage: React.FC = () => {
       benefits: ['Traffic management', 'Energy optimization', 'Public safety', 'Environmental monitoring']
     }
   ];
-
-<<<<<<< HEAD
   const values = [    {
-=======
   const values = [
     {
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
       step: '01',
       title: 'Network Assessment',
       description: 'Comprehensive analysis of current infrastructure and requirements.',
@@ -102,10 +96,6 @@ const FiveGImplementationPage: React.FC = () => {
       details: ['Performance monitoring', 'Network optimization', 'Capacity management', 'Security updates']
     }
   ];
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
@@ -114,7 +104,6 @@ const FiveGImplementationPage: React.FC = () => {
         <meta name="keywords" content="5G implementation, network infrastructure, ultra-low latency, high-speed connectivity, IoT, smart cities, edge computing" />
       </Helmet>
       <Navigation />
-
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
@@ -137,18 +126,14 @@ const FiveGImplementationPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-<<<<<<< HEAD
                 Advanced 5G Features              </h2>
-=======
                 Advanced 5G Features
               </h2>
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Unlock the full potential of 5G technology with our comprehensive implementation services.
               </p>
@@ -172,15 +157,11 @@ const FiveGImplementationPage: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-<<<<<<< HEAD
               ))}            </div>
-=======
               ))}
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
           </div>
         </section>
-
         {/* Use Cases Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -206,12 +187,9 @@ const FiveGImplementationPage: React.FC = () => {
                     {useCase.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-<<<<<<< HEAD
                         {benefit}                      </li>
-=======
                         {benefit}
                       </li>
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
                     ))}
                   </ul>
                 </div>
@@ -219,7 +197,6 @@ const FiveGImplementationPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Process Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -256,7 +233,6 @@ const FiveGImplementationPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-blue-600">
           <div className="max-w-4xl mx-auto text-center">
@@ -269,12 +245,9 @@ const FiveGImplementationPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
                 Start Your Project
-<<<<<<< HEAD
                 <ArrowRight className="ml-2 h-5 w-5" />              </button>
-=======
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
                 Contact Our Experts
               </button>
@@ -282,10 +255,8 @@ const FiveGImplementationPage: React.FC = () => {
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );
 };
-
 export default FiveGImplementationPage;

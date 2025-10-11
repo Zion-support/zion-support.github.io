@@ -4,7 +4,6 @@ import {Helmet} from 'react-helmet-async'
 import {Calculator, BarChart, Shield, Zap, CheckCircle, ArrowRight, Brain, Target, TrendingUp, FileText} from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-
 const AIAccountingAssistantPage: React.FC = () => {
   const features = [
     {
@@ -44,7 +43,6 @@ const AIAccountingAssistantPage: React.FC = () => {
       benefits: ['Goal setting', 'Progress tracking', 'Milestone alerts', 'Achievement insights']
     }
   ]
-
   const services = [
     {
       title: 'Bookkeeping Automation',
@@ -71,7 +69,6 @@ const AIAccountingAssistantPage: React.FC = () => {
       benefits: ['Audit trails', 'Documentation', 'Compliance reports', 'Regulatory support']
     }
   ]
-
   const pricingTiers = [
     {
       name: 'Starter',
@@ -112,39 +109,29 @@ const AIAccountingAssistantPage: React.FC = () => {
       ]
     }
   ]
-
   return (
-    <>
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
         <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
       </Helmet>
       <Navigation />
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<< HEAD
       <Helmet>        <title>AI Accounting Assistant - Zion Tech Group</title>
-=======
       <Helmet>
         <title>AI Accounting Assistant - Zion Tech Group</title>
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
         <meta name="description" content="Revolutionary AI-powered accounting assistant that automates bookkeeping, financial reporting, and compliance for businesses of all sizes." />
         <meta name="keywords" content="AI accounting, automated bookkeeping, financial software, accounting assistant, business finance" />
       </Helmet>
-
       <Navigation />
-
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-<<<<<<< HEAD
         <section className="
     g: px-8"
           <div className="max-w-7xl mx-auto"
             <div className="text-center"
               <h1 className="text-4xl m, d:text-6xl font-bold text-white mb-6"
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400"
-=======
         <section className="pt-20 pb-16 px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
@@ -152,7 +139,6 @@ const AIAccountingAssistantPage: React.FC = () => {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
                   AI Accounting Assistant
                 </span>
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
                 Transform your accounting processes with our intelligent AI assistant. Automate bookkeeping, gain insights, and ensure compliance with ease.
@@ -166,21 +152,14 @@ const AIAccountingAssistantPage: React.FC = () => {
                   Watch Demo
                 </button>
               </div>
-<<<<<<< HEAD
-
       <Footer />
     </>            </div>
-=======
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
           </div>
         </section>
-
         {/* Features Section */}
             </div>
-
       <Footer />
-    </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
@@ -194,12 +173,10 @@ const AIAccountingAssistantPage: React.FC = () => {
                         {benefit}
                       </li>
                     )
-    </>
   )
                   </ul>
               ))}
             </div>
-
         <section className="py-20 bg-gray-100">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -209,7 +186,6 @@ const AIAccountingAssistantPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                 Tailored solutions for different business types
               </p>
-
             <div className="
     ,>
     d: grid-cols-2 l, g:grid-cols-4 gap-8">
@@ -223,9 +199,7 @@ const AIAccountingAssistantPage: React.FC = () => {
                     <h3 className="text-xl font-semibold text-white mb-4">
                     <p className="text-gray-300">
                   </div>
-
       <Footer />
-    </>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
@@ -237,16 +211,11 @@ const AIAccountingAssistantPage: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-
       <Footer />
-    </>
               ))}
-<<<<<<< HEAD
         <section className="py-20 px-4 sm:px-6 lg:px-8">          <div className="max-w-7xl mx-auto">
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Powerful Features
@@ -255,7 +224,6 @@ const AIAccountingAssistantPage: React.FC = () => {
                 Everything you need to manage your finances with AI precision
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => {
                 const Icon = feature.icon
@@ -280,7 +248,6 @@ const AIAccountingAssistantPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Services Section */}
         <section className="py-20 px-4 bg-slate-800/50">
           <div className="container mx-auto">
@@ -290,7 +257,6 @@ const AIAccountingAssistantPage: React.FC = () => {
                 Comprehensive accounting solutions powered by artificial intelligence
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {services.map((service, index) => {
                 const Icon = service.icon
@@ -315,7 +281,6 @@ const AIAccountingAssistantPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -327,38 +292,23 @@ const AIAccountingAssistantPage: React.FC = () => {
                 Choose the plan that fits your business needs
               </p>
             </div>
-<<<<<<< HEAD
-
-=======
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
       <Footer />
-    </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-3">
                   <div className="flex-shrink-0">
                     <Zap className="h-6 w-6 text-cyan-400" />
                   </div>
-
       <Footer />
-    </>
                   <p className="text-gray-300">{benefit}</p>
                 </div>
-
       <Footer />
-    </>
               ))}
             </div>
-
       <Footer />
-    </>
           </div>
-
       <Footer />
-    </>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -375,30 +325,16 @@ const AIAccountingAssistantPage: React.FC = () => {
                 Contact Sales
               </button>
             </div>
-<<<<<<< HEAD
-
       <Footer />
-    </>
           </div>
-
       <Footer />
-    </>
         </section>
       </div>
-
-=======
           </div>
         </section>
       </main>
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
       <Footer />
-    </>
   );
 };
-
-<<<<<<< HEAD
 export default AiAccountingAssistantPage;
-=======
 export default AiAccountingAssistantPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb

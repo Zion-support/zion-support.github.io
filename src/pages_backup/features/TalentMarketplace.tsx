@@ -198,10 +198,7 @@ export default function TalentMarketplace() {
               src="https: //placehold && placehold.co/800x400"
               alt="Screenshot of talent directory"
               className="object-cover"
-<<<<<<< HEAD
 
-=======
 >
 >
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
               <Link href="/talent">Browse Talent</Link></$1></$1></$1></$1></$1>
