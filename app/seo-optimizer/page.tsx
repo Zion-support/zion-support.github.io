@@ -59,13 +59,7 @@ return (
       </Helmet>
 
       <Navigation />
-<<<<<<< HEAD
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-sky-900 to-slate-900"
-=======
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-sky-900 to-slate-900">
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-sky-900 to-slate-900">
         {/* Hero Section */}
         <section className="py-20 px-4 relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse">

@@ -44,83 +44,20 @@ const AccessibilityPage: React.FC = () => {
       benefits: ['Optimized loading', 'Efficient rendering', 'Minimal overhead', 'Fast interactions']
     }
   ];
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
-  const services = [
-    {
-      title: 'Accessibility Audits',
-      description: 'Comprehensive evaluation of your digital products for accessibility compliance.',
-      icon: Target,
-      benefits: ['Automated testing', 'Manual evaluation', 'User testing', 'Compliance reporting']
-    },
-    {
-      title: 'Implementation Services',
-      description: 'Professional implementation of accessibility features and improvements.',
-      icon: BarChart,
-      benefits: ['Code implementation', 'Design updates', 'Testing & validation', 'Training & support']
-    },
-    {
-      title: 'Ongoing Support',
-      description: 'Continuous monitoring and maintenance of accessibility features.',
-      icon: CheckCircle,
-      benefits: ['Regular audits', 'Feature updates', 'Performance monitoring', 'Compliance tracking']
-    },
-    {
-      title: 'Training & Education',
-      description: 'Comprehensive training for your team on accessibility best practices.',
-      icon: Brain,
-      benefits: ['Team training', 'Best practices', 'Tool training', 'Compliance education']
-    }
-  ];
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
   const standards = [
     'WCAG 2.1 AA Compliance',
     'Section 508 Compliance',
     'ADA Compliance',
     'EN 301 549 Compliance'
   ];
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
-  const benefits = [
-    {
-      title: 'Legal Compliance',
-      description: 'Meet accessibility requirements and avoid legal issues.',
-      icon: Shield
-    },
-    {
-      title: 'Broader Reach',
-      description: 'Access your content and services to a wider audience.',
-      icon: Target
-    },
-    {
-      title: 'Better UX',
-      description: 'Improved user experience for all users, not just those with disabilities.',
-      icon: CheckCircle
-    },
-    {
-      title: 'SEO Benefits',
-      description: 'Accessibility improvements often lead to better search engine rankings.',
-      icon: BarChart
-    }
-  ];
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
         <title>Accessibility - Zion Tech Group</title>
         <meta name="description" content="Learn about our commitment to web accessibility and inclusive design practices." />
         <meta name="keywords" content="accessibility, inclusive design, WCAG compliance, ADA compliance, web accessibility" />
-      </Helmet>
       <Navigation />
 
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -129,24 +66,17 @@ const AccessibilityPage: React.FC = () => {
           <div className="container mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Accessibility</span> First
-            </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               We believe technology should be accessible to everyone. Our commitment to inclusive design ensures that our solutions work for all users.
             </p>
-          </div>
-        </section>
 
         {/* Features Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-<<<<<<< HEAD
-                Accessibility Features              </h2>
-=======
-                Accessibility Features
+Accessibility Features
               </h2>
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our accessibility solutions cover all aspects of digital inclusion, ensuring your products work for everyone.
               </p>
@@ -166,18 +96,8 @@ const AccessibilityPage: React.FC = () => {
                       <li key={idx} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                         {benefit}
-                      </li>
                     ))}
-                  </ul>
-                </div>
-<<<<<<< HEAD
-              ))}            </div>
-=======
-              ))}
-            </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
-          </div>
-        </section>
+))}
 
         {/* Services Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
@@ -185,12 +105,8 @@ const AccessibilityPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Our Services
-<<<<<<< HEAD
-              </h2>              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-=======
-              </h2>
+</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
                 Comprehensive accessibility services to make your digital products inclusive
               </p>
             </div>
@@ -209,14 +125,8 @@ const AccessibilityPage: React.FC = () => {
                       <li key={idx} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                         {benefit}
-                      </li>
                     ))}
-                  </ul>
-                </div>
               ))}
-            </div>
-          </div>
-        </section>
 
         {/* Standards Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -236,23 +146,11 @@ const AccessibilityPage: React.FC = () => {
                   <h3 className="text-lg font-semibold text-white">
                     {standard}
                   </h3>
-                </div>
-<<<<<<< HEAD
-              ))}            </div>
-=======
-              ))}
-            </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
-          </div>
-        </section>
+))}
 
         {/* Benefits Section */}
-<<<<<<< HEAD
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">          <div className="max-w-7xl mx-auto">
-=======
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+<section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Why Accessibility Matters
@@ -270,54 +168,69 @@ const AccessibilityPage: React.FC = () => {
                   </h3>
                   <p className="text-gray-300">
                     {benefit.description}
-<<<<<<< HEAD
-                  </p>                </div>
-=======
-                  </p>
-                </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
+</p>
               ))}
-            </div>
-          </div>
-        </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-blue-600">          <div className="max-w-4xl mx-auto text-center">
-=======
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-blue-600">
+<section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-blue-600">
           <div className="max-w-4xl mx-auto text-center">
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Make Your Products Accessible?
             </h2>
             <p className="text-xl text-gray-100 mb-8">
-<<<<<<< HEAD
-              Let's work together to create inclusive digital experiences that work for everyone.            </p>
-=======
-              Let's work together to create inclusive digital experiences that work for everyone.
+Let's work together to create inclusive digital experiences that work for everyone.
             </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
                 Start Your Accessibility Journey
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
                 Schedule Consultation
               </button>
-            </div>
-          </div>
-        </section>
-      </main>
 
       <Footer />
-    </div>
   );
 };
 
-<<<<<<< HEAD
 export default AccessibilityPage;
-=======
-export default AccessibilityPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
+</Footer>
+</ArrowRight>
+</button>
+</div>
+</div>
+</section>
+</benefit>
+</div>
+</div>
+</div>
+</section>
+</Shield>
+</div>
+</div>
+</div>
+</section>
+</CheckCircle>
+</li>
+</ul>
+</service>
+</div>
+</div>
+</div>
+</section>
+</CheckCircle>
+</li>
+</ul>
+</feature>
+</div>
+</div>
+</div>
+</section>
+</span>
+</h1>
+</div>
+</section>
+</main>
+</Navigation>
+</title>
+</Helmet>
+</div>

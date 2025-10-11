@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+import {Helmet} from 'react-helmet-async';
+import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp} from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -39,7 +39,6 @@ const AiAnalyticsPage: React.FC = () => {
         <title>AI Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
         <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
-      </Helmet>
       <Navigation />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -47,7 +46,6 @@ const AiAnalyticsPage: React.FC = () => {
         <title>AI Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
         <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
-      </Helmet>
       <Navigation />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -57,7 +55,6 @@ const AiAnalyticsPage: React.FC = () => {
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Analytics</span>
-              </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Transform your data into actionable insights with our advanced AI analytics platform
               </p>
@@ -72,15 +69,12 @@ const AiAnalyticsPage: React.FC = () => {
 
       <Footer />
     </>
-            </div>
 
       <Footer />
     </>
-          </div>
 
       <Footer />
     </>
-        </section>
 
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -88,7 +82,6 @@ const AiAnalyticsPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">AI Analytics Features</h2>
               <p className="text-xl text-gray-300">Powerful tools for data analysis and insights</p>
-            </div>
 
       <Footer />
     </>
@@ -97,7 +90,6 @@ const AiAnalyticsPage: React.FC = () => {
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
                   <div className="text-cyan-400 mb-4">
                     <feature.icon className="h-8 w-8" />
-                  </div>
 
       <Footer />
     </>
@@ -108,23 +100,17 @@ const AiAnalyticsPage: React.FC = () => {
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="h-4 w-4 text-cyan-400 mr-2 flex-shrink-0" />
                         {benefit}
-                      </li>
                     ))}
-                  </ul>
-                </div>
 
       <Footer />
     </>
               ))}
-            </div>
 
       <Footer />
     </>
-          </div>
 
       <Footer />
     </>
-        </section>
 
         {/* Benefits Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -132,7 +118,6 @@ const AiAnalyticsPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our AI Solutions?</h2>
               <p className="text-xl text-gray-300">Transform your business with intelligent automation</p>
-            </div>
 
       <Footer />
     </>
@@ -142,28 +127,20 @@ const AiAnalyticsPage: React.FC = () => {
                   <div className="flex items-center">
                     <CheckCircle className="h-6 w-6 text-green-500 mr-3">
                     <span className="text-lg font-medium text-gray-900">
-                  </div>
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
       <Footer />
     </>
                   <p className="text-gray-300">{benefit}</p>
-                </div>
 
       <Footer />
     </>
               ))}
-            </div>
 
       <Footer />
     </>
-          </div>
 
       <Footer />
     </>
-        </section>
 
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
@@ -181,17 +158,13 @@ const AiAnalyticsPage: React.FC = () => {
     ,>
     r: bg-blue-600 hove, r:text-white transition-colors">
                 Schedule Demo
-              </button>
             </div>
 
       <Footer />
     </>
-          </div>
 
       <Footer />
     </>
-        </section>
-      </div>
 
       <Footer />
     </>
@@ -201,3 +174,60 @@ const AiAnalyticsPage: React.FC = () => {
 };
 
 export default AiAnalyticsPage;
+</Footer>
+</Footer>
+</Footer>
+</Footer>
+</div>
+</section>
+</Footer>
+</Footer>
+</Footer>
+</p>
+</Footer>
+</span>
+</CheckCircle>
+</div>
+</div>
+</div>
+</Footer>
+</p>
+</h2>
+</div>
+</div>
+</section>
+</Footer>
+</Footer>
+</Footer>
+</CheckCircle>
+</li>
+</ul>
+</p>
+</h3>
+</Footer>
+</feature>
+</div>
+</div>
+</div>
+</Footer>
+</p>
+</h2>
+</div>
+</div>
+</section>
+</Footer>
+</Footer>
+</Footer>
+</span>
+</h1>
+</div>
+</div>
+</section>
+</div>
+</Navigation>
+</title>
+</Helmet>
+</div>
+</Navigation>
+</title>
+</Helmet>

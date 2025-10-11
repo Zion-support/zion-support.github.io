@@ -22,15 +22,12 @@ const PagePage: React.FC = () => {const features = [
       title: 'Precision Targeting',
       description: 'Target specific goals and objectives with precision.',
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']} ]
-            </div>
 
       <Footer />
     </>
-          </div>
 
       <Footer />
     </>
-        </section>
 
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
@@ -38,7 +35,6 @@ const PagePage: React.FC = () => {const features = [
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Powerful Features</h2>
               <p className="text-xl text-gray-300">Everything you need to succeed with AI</p>
-            </div>
 
       <Footer />
     </>
@@ -48,11 +44,7 @@ const PagePage: React.FC = () => {const features = [
                   <div className="flex items-center mb-4">
                     <feature.icon className="h-8 w-8 text-blue-600 mr-3">
                     <h3 className="text-xl font-semibold text-gray-900">
-                  </div>
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
       <Footer />
     </>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -62,23 +54,17 @@ const PagePage: React.FC = () => {const features = [
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="h-4 w-4 text-cyan-400 mr-2 flex-shrink-0" />
                         {benefit}
-                      </li>
                     ))}
-                  </ul>
-                </div>
 
       <Footer />
     </>
               ))}
-            </div>
 
       <Footer />
     </>
-          </div>
 
       <Footer />
     </>
-        </section>
 
         {/* Benefits Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -86,7 +72,6 @@ const PagePage: React.FC = () => {const features = [
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our AI Solutions?</h2>
               <p className="text-xl text-gray-300">Transform your business with intelligent automation</p>
-            </div>
 
       <Footer />
     </>
@@ -96,27 +81,20 @@ const PagePage: React.FC = () => {const features = [
                   <div className="flex items-center">
                     <CheckCircle className="h-6 w-6 text-green-500 mr-3">
                     <span className="text-lg font-medium text-gray-900">
-                  </div>
-<<<<<<< HEAD
-=======
+
       <Footer />
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
     </>
                   <p className="text-gray-300">{benefit}</p>
-                </div>
 
       <Footer />
     </>
               ))}
-            </div>
 
       <Footer />
     </>
-          </div>
 
       <Footer />
     </>
-        </section>
 
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
@@ -134,17 +112,13 @@ const PagePage: React.FC = () => {const features = [
     ,>
     r: bg-blue-600 hove, r:text-white transition-colors">
                 Schedule Demo
-              </button>
             </div>
 
       <Footer />
     </>
-          </div>
 
       <Footer />
     </>
-        </section>
-      </div>
 
       <Footer />
     </>
@@ -154,3 +128,47 @@ const PagePage: React.FC = () => {const features = [
 };
 
 export default PagePage;
+</Footer>
+</Footer>
+</Footer>
+</Footer>
+</div>
+</section>
+</Footer>
+</Footer>
+</Footer>
+</p>
+</Footer>
+</span>
+</CheckCircle>
+</div>
+</div>
+</div>
+</Footer>
+</p>
+</h2>
+</div>
+</div>
+</section>
+</Footer>
+</Footer>
+</Footer>
+</CheckCircle>
+</li>
+</ul>
+</p>
+</h3>
+</Footer>
+</h3>
+</feature>
+</div>
+</div>
+</div>
+</Footer>
+</p>
+</h2>
+</div>
+</div>
+</section>
+</Footer>
+</Footer>

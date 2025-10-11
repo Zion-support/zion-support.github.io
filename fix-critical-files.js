@@ -1,110 +1,168 @@
 #!/usr/bin/env node
 
-import fs from 'fs'
-import path from 'path'
-// Function to fix specific critical files
-function fixCriticalFiles() {
-  const criticalFiles = [
-    {
-      path: '/workspace/src/metadata.ts',
-      content: `export const metadata = {
-  title: 'Zion Tech Group - Advanced AI and IT Solutions',
-  description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
-  keywords: ['AI', 'IT Solutions', 'Digital Transformation', 'Enterprise'],
-  openGraph: {
-    title: 'Zion Tech Group - Advanced AI and IT Solutions',
-    description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
-    type: 'website'}};`
-    },
-    {
-      path: '/workspace/src/vite-env.d.ts',
-      content: `/// <reference types="vite/client" />
+import fs from 'fs';
+import path from 'path';
+import { execSync } from 'child_process';
 
-interface ImportMetaEnv {
-  readonly VITE_APP_TITLE: string
-  readonly VITE_APP_DESCRIPTION: string
-  readonly VITE_APP_URL: string
-  readonly VITE_APP_API_URL: string
-  readonly DEV: boolean
-  readonly PROD: boolean
-  readonly MODE: string
-}
+// List of critical files that need to be fixed
+const criticalFiles = [
+  'app/about/page.tsx',
+  'app/5g-implementation/page.tsx',
+  'app/accessibility/page.tsx',
+  'app/accessibility-page/page.tsx',
+  'app/ai-3d-generation/page.tsx',
+  'app/ai-accounting-assistant/page.tsx',
+  'app/ai-agricultural-intelligence-pro/page.tsx',
+  'app/ai-analytics/page.tsx',
+  'app/ai-analytics-dashboard/page.tsx',
+  'app/ai-api-management/page.tsx',
+  'app/ai-autonomous-systems/page.tsx',
+  'app/ai-blockchain-analytics/page.tsx',
+  'app/ai-blockchain-solutions/page.tsx',
+  'app/ai-code-security-auditor/page.tsx',
+  'app/ai-computer-vision/page.tsx',
+  'app/ai-content-generator/page.tsx',
+  'app/ai-document-processor/page.tsx',
+  'app/ai-drug-discovery-pro/page.tsx',
+  'app/ai-ecommerce-solutions/page.tsx',
+  'app/ai-email-assistant/page.tsx'
+];
 
-interface ImportMeta {
-  readonly env: ImportMetaEnv
-}`
-    },
-    {
-      path: '/workspace/src/layout.tsx',
-      content: `import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import Analytics from './components/Analytics'
-export default function RootLayout({
-  children}: {
-  children: React.ReactNode
-}) {
-  return (
-    <html lang="en">
-      <head>
-        <Analytics />
-      <body>
-        <Navigation />
-        <main>{children}
-        <Footer />
-  )
-}`
+// Function to fix a specific file
+function fixFile(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+
+    // Remove any remaining merge conflict markers
+    const conflictRegex = /<<<<<<< HEAD|=======|>>>>>>> [^\n]+/g;
+    if (conflictRegex.test(content)) {
+      content = content.replace(conflictRegex, '');
+      modified = true;
     }
-  ]
-  for (const file of criticalFiles) {
-    try {
-      fs.writeFileSync(file.path, file.content, 'utf8')
-      console.log(`✓ Fixed: ${file.path}`)
-    } catch (error) {
-      console.error(`Error fixing ${file.path}:`, error.message)
-    }
-  }
-}
 
-// Function to clean up other problematic files
-function cleanProblematicFiles() {
-  const problematicFiles = [
-    '/workspace/src/page-minimal-metadata.ts',
-    '/workspace/src/page-minimal.tsx',
-    '/workspace/src/page-optimized.tsx',
-    '/workspace/src/setupTests.tsx',
-    '/workspace/src/sitemap-utils.ts',
-    '/workspace/src/sitemap.ts',
-    '/workspace/src/sitemap.tsx',
-    '/workspace/src/services/BaseService.ts',
-    '/workspace/src/middleware/rateLimiter.ts',
-    '/workspace/src/middleware/requestMiddleware.ts'
-  ]
-  for (const filePath of problematicFiles) {
-    try {
-      if (fs.existsSync(filePath)) {
-        // Create minimal valid content for each file type
-        let content = ''
-        if (filePath.endsWith('.tsx')) {
-          content = `import React from 'react';\n\nexport default function Component() {\n  return <div>Component placeholder</div>;\n}`
-        } else if (filePath.endsWith('.ts')) {
-          content = `// TypeScript file placeholder\nexport {};`
-        } else if (filePath.endsWith('.js')) {
-          content = `// JavaScript file placeholder\nexport {};`
-        }
-
-        fs.writeFileSync(filePath, content, 'utf8')
-        console.log(`✓ Cleaned: ${filePath}`)
+    // Fix common JSX issues
+    // Fix unclosed tags by ensuring proper structure
+    const lines = content.split('\n');
+    const fixedLines = [];
+    let openTags = [];
+    
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      const trimmedLine = line.trim();
+      
+      // Skip empty lines and comments
+      if (!trimmedLine || trimmedLine.startsWith('//') || trimmedLine.startsWith('/*')) {
+        fixedLines.push(line);
+        continue;
       }
-    } catch (error) {
-      console.error(`Error cleaning ${filePath}:`, error.message)
+      
+      // Check for opening tags
+      const openTagMatch = trimmedLine.match(/<(\w+)([^>]*)>/);
+      if (openTagMatch) {
+        const tagName = openTagMatch[1];
+        const attributes = openTagMatch[2];
+        
+        // Skip self-closing tags
+        if (!attributes.includes('/>') && !['img', 'br', 'hr', 'input', 'meta', 'link'].includes(tagName)) {
+          openTags.push({ tag: tagName, line: i });
+        }
+        fixedLines.push(line);
+        continue;
+      }
+      
+      // Check for closing tags
+      const closeTagMatch = trimmedLine.match(/<\/(\w+)>/);
+      if (closeTagMatch) {
+        const tagName = closeTagMatch[1];
+        const lastOpenTag = openTags[openTags.length - 1];
+        
+        if (lastOpenTag && lastOpenTag.tag === tagName) {
+          openTags.pop();
+        } else {
+          // This might be an extra closing tag, skip it
+          console.log(`Skipping extra closing tag ${tagName} in ${filePath} at line ${i + 1}`);
+          continue;
+        }
+        fixedLines.push(line);
+        continue;
+      }
+      
+      // Check for JSX expressions
+      if (trimmedLine.includes('{') && trimmedLine.includes('}')) {
+        // Ensure proper JSX syntax
+        let fixedLine = line;
+        
+        // Fix broken JSX expressions
+        fixedLine = fixedLine.replace(/\{\s*([^}]*?)\s*\}/g, '{$1}');
+        
+        // Fix missing semicolons in JSX
+        if (fixedLine.includes(';') && !fixedLine.trim().endsWith(';')) {
+          fixedLine = fixedLine.replace(/;\s*$/, '');
+        }
+        
+        fixedLines.push(fixedLine);
+        continue;
+      }
+      
+      fixedLines.push(line);
     }
+    
+    // Add missing closing tags
+    while (openTags.length > 0) {
+      const { tag } = openTags.pop();
+      fixedLines.push(`</${tag}>`);
+      modified = true;
+    }
+    
+    const newContent = fixedLines.join('\n');
+    
+    // Clean up extra whitespace
+    const cleanedContent = newContent
+      .replace(/\n\s*\n\s*\n/g, '\n\n')
+      .replace(/^\s*\n/g, '')
+      .replace(/\n\s*$/g, '');
+    
+    if (modified || cleanedContent !== content) {
+      fs.writeFileSync(filePath, cleanedContent);
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+    
+    return false;
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-// Main execution
-console.log('🔧 Fixing critical files...')
-fixCriticalFiles()
-console.log('🧹 Cleaning problematic files...')
-cleanProblematicFiles()
-console.log('✅ Critical files fixed!')</main>
+// Main function
+function main() {
+  console.log('Fixing critical files...');
+  
+  let fixedCount = 0;
+  
+  for (const file of criticalFiles) {
+    const fullPath = path.join(process.cwd(), file);
+    if (fs.existsSync(fullPath)) {
+      if (fixFile(fullPath)) {
+        fixedCount++;
+      }
+    } else {
+      console.log(`File not found: ${file}`);
+    }
+  }
+  
+  console.log(`\nFixed ${fixedCount} critical files.`);
+  
+  // Run type check
+  try {
+    console.log('\nRunning type check...');
+    execSync('pnpm run type-check', { stdio: 'inherit' });
+    console.log('Type check passed!');
+  } catch (error) {
+    console.log('Type check still has errors, but critical files have been processed.');
+  }
+}
+
+main();

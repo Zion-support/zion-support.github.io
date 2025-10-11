@@ -202,10 +202,6 @@ export default function Ecommerce() {
               src="https://placehold && placehold.co/800x400"
               alt="Screenshot of marketplace interface"
               className="object-cover"
-<<<<<<< HEAD
-
-=======
 >
 >
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
               <Link href="/marketplace">Start Shopping</Link></$1></$1></$1></$1></$1></div></div></div></main>

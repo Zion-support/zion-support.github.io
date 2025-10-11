@@ -119,40 +119,25 @@ const AIAccountingAssistantPage: React.FC = () => {
         <title>AI Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
         <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
-      </Helmet>
       <Navigation />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<< HEAD
-      <Helmet>        <title>AI Accounting Assistant - Zion Tech Group</title>
-=======
-      <Helmet>
+<Helmet>
         <title>AI Accounting Assistant - Zion Tech Group</title>
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
         <meta name="description" content="Revolutionary AI-powered accounting assistant that automates bookkeeping, financial reporting, and compliance for businesses of all sizes." />
         <meta name="keywords" content="AI accounting, automated bookkeeping, financial software, accounting assistant, business finance" />
-      </Helmet>
 
       <Navigation />
 
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-<<<<<<< HEAD
-        <section className="
-    g: px-8"
-          <div className="max-w-7xl mx-auto"
-            <div className="text-center"
-              <h1 className="text-4xl m, d:text-6xl font-bold text-white mb-6"
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400"
-=======
-        <section className="pt-20 pb-16 px-8">
+<section className="pt-20 pb-16 px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
                   AI Accounting Assistant
                 </span>
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
                 Transform your accounting processes with our intelligent AI assistant. Automate bookkeeping, gain insights, and ensure compliance with ease.
@@ -161,23 +146,11 @@ const AIAccountingAssistantPage: React.FC = () => {
                 <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center">
                   Start Free Trial
                   <ArrowRight className="w-5 h-5 ml-2" />
-                </button>
                 <button className="border border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300">
                   Watch Demo
                 </button>
-              </div>
-<<<<<<< HEAD
-
-      <Footer />
-    </>            </div>
-=======
-            </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
-          </div>
-        </section>
 
         {/* Features Section */}
-            </div>
 
       <Footer />
     </>
@@ -192,13 +165,10 @@ const AIAccountingAssistantPage: React.FC = () => {
                       <li key={idx} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2">
                         {benefit}
-                      </li>
                     )
     </>
   )
-                  </ul>
               ))}
-            </div>
 
         <section className="py-20 bg-gray-100">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
@@ -219,10 +189,8 @@ const AIAccountingAssistantPage: React.FC = () => {
                   <div key={index} className="text-center">
                     <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                       <Icon className="w-8 h-8 text-white">
-                    </div>
                     <h3 className="text-xl font-semibold text-white mb-4">
                     <p className="text-gray-300">
-                  </div>
 
       <Footer />
     </>
@@ -233,20 +201,13 @@ const AIAccountingAssistantPage: React.FC = () => {
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="h-4 w-4 text-cyan-400 mr-2 flex-shrink-0" />
                         {benefit}
-                      </li>
                     ))}
-                  </ul>
-                </div>
 
       <Footer />
     </>
               ))}
-<<<<<<< HEAD
-        <section className="py-20 px-4 sm:px-6 lg:px-8">          <div className="max-w-7xl mx-auto">
-=======
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+<section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Powerful Features
@@ -263,7 +224,6 @@ const AIAccountingAssistantPage: React.FC = () => {
                   <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-purple-400/50 transition-all duration-300">
                     <div className="text-purple-400 mb-4">
                       <Icon className="w-8 h-8" />
-                    </div>
                     <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                     <p className="text-gray-300 mb-4">{feature.description}</p>
                     <ul className="space-y-2">
@@ -271,15 +231,9 @@ const AIAccountingAssistantPage: React.FC = () => {
                         <li key={idx} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           {benefit}
-                        </li>
                       ))}
-                    </ul>
-                  </div>
                 );
               })}
-            </div>
-          </div>
-        </section>
 
         {/* Services Section */}
         <section className="py-20 px-4 bg-slate-800/50">
@@ -289,7 +243,6 @@ const AIAccountingAssistantPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Comprehensive accounting solutions powered by artificial intelligence
               </p>
-            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {services.map((service, index) => {
@@ -298,7 +251,6 @@ const AIAccountingAssistantPage: React.FC = () => {
                   <div key={index} className="text-center">
                     <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
                       <Icon className="w-8 h-8 text-white" />
-                    </div>
                     <h3 className="text-xl font-semibold text-white mb-4">{service.title}</h3>
                     <p className="text-gray-300 mb-4">{service.description}</p>
                     <ul className="space-y-2">
@@ -306,15 +258,9 @@ const AIAccountingAssistantPage: React.FC = () => {
                         <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="h-4 w-4 text-purple-400 mr-2 flex-shrink-0" />
                           {benefit}
-                        </li>
                       ))}
-                    </ul>
-                  </div>
                 );
               })}
-            </div>
-          </div>
-        </section>
 
         {/* Pricing Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -327,11 +273,7 @@ const AIAccountingAssistantPage: React.FC = () => {
                 Choose the plan that fits your business needs
               </p>
             </div>
-<<<<<<< HEAD
 
-=======
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
       <Footer />
     </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -339,25 +281,20 @@ const AIAccountingAssistantPage: React.FC = () => {
                 <div key={index} className="flex items-start space-x-3">
                   <div className="flex-shrink-0">
                     <Zap className="h-6 w-6 text-cyan-400" />
-                  </div>
 
       <Footer />
     </>
                   <p className="text-gray-300">{benefit}</p>
-                </div>
 
       <Footer />
     </>
               ))}
-            </div>
 
       <Footer />
     </>
-          </div>
 
       <Footer />
     </>
-        </section>
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -370,35 +307,93 @@ const AIAccountingAssistantPage: React.FC = () => {
               <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
                 Start Free Trial
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
               <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
                 Contact Sales
               </button>
-            </div>
-<<<<<<< HEAD
-
-      <Footer />
-    </>
-          </div>
-
-      <Footer />
-    </>
-        </section>
-      </div>
-
-=======
-          </div>
-        </section>
-      </main>
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
       <Footer />
     </>
   );
 };
 
-<<<<<<< HEAD
 export default AiAccountingAssistantPage;
-=======
-export default AiAccountingAssistantPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
+</Footer>
+</ArrowRight>
+</button>
+</div>
+</h2>
+</div>
+</section>
+</Footer>
+</Footer>
+</Footer>
+</p>
+</Footer>
+</Zap>
+</div>
+</div>
+</div>
+</Footer>
+</div>
+</section>
+</CheckCircle>
+</li>
+</ul>
+</p>
+</h3>
+</Icon>
+</div>
+</div>
+</div>
+</h2>
+</div>
+</div>
+</section>
+</CheckCircle>
+</li>
+</ul>
+</p>
+</h3>
+</Icon>
+</div>
+</div>
+</div>
+</div>
+</section>
+</Footer>
+</CheckCircle>
+</li>
+</ul>
+</p>
+</h3>
+</Footer>
+</p>
+</h3>
+</Icon>
+</div>
+</div>
+</div>
+</div>
+</section>
+</CheckCircle>
+</li>
+</ul>
+</p>
+</h3>
+</feature>
+</div>
+</div>
+</Footer>
+</ArrowRight>
+</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+</Navigation>
+</title>
+</Helmet>
+</div>
+</Navigation>
+</title>
+</Helmet>

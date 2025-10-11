@@ -2,117 +2,131 @@
 
 import fs from 'fs';
 import path from 'path';
-import { execSync } from 'child_process';
 
-// Function to fix common syntax errors
+// Function to fix common syntax errors in React/TypeScript files
 function fixSyntaxErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    const originalContent = content;
+    let modified = false;
 
-    // Fix common JSX syntax issues
-    content = content.replace(/\}\s*\)\s*$/gm, '});');
-    content = content.replace(/\}\s*\)\s*export/gm, '});\nexport');
-    content = content.replace(/\}\s*\)\s*$/gm, '});');
-
-    // Fix missing closing tags
-    content = content.replace(/<([^>]+)>\s*$/gm, (match, tagName) => {
-      if (!match.includes('</') && !match.includes('/>')) {
-        return match;
+    // Fix JSX fragment issues
+    content = content.replace(/<>([^<]*?)<\/>/gs, (match, inner) => {
+      if (inner.trim()) {
+        modified = true;
+        return `<div>${inner}</div>`;
       }
       return match;
     });
 
-    // Fix identifier expected errors
-    content = content.replace(/\}\s*\)\s*$/gm, '});');
-    content = content.replace(/\}\s*\)\s*export/gm, '});\nexport');
+    // Fix unclosed JSX tags by adding proper closing tags
+    const unclosedTags = [
+      'main', 'section', 'div', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
+      'p', 'span', 'button', 'a', 'ul', 'ol', 'li', 'form', 'input',
+      'textarea', 'select', 'option', 'table', 'tr', 'td', 'th',
+      'thead', 'tbody', 'tfoot', 'nav', 'header', 'footer', 'article',
+      'aside', 'figure', 'figcaption', 'blockquote', 'code', 'pre'
+    ];
 
-    // Fix unexpected token errors
-    content = content.replace(/\}\s*\)\s*$/gm, '});');
-    content = content.replace(/\}\s*\)\s*export/gm, '});\nexport');
-
-    // Fix JSX closing tag issues
-    content = content.replace(/<([^>]+)>\s*$/gm, (match, tagName) => {
-      if (!match.includes('</') && !match.includes('/>')) {
-        return match;
+    for (const tag of unclosedTags) {
+      // Find unclosed opening tags
+      const openTagRegex = new RegExp(`<${tag}([^>]*)>(?!.*</${tag}>)`, 'gs');
+      const matches = content.match(openTagRegex);
+      
+      if (matches) {
+        // This is a complex fix, let's use a simpler approach
+        // Just ensure proper closing for common patterns
+        content = content.replace(new RegExp(`<${tag}([^>]*)>\\s*$`, 'gm'), `<${tag}$1></${tag}>`);
+        modified = true;
       }
-      return match;
-    });
+    }
 
-    // Fix missing semicolons
-    content = content.replace(/\}\s*\)\s*$/gm, '});');
-    content = content.replace(/\}\s*\)\s*export/gm, '});\nexport');
+    // Fix missing closing tags for self-closing elements
+    const selfClosingElements = ['img', 'br', 'hr', 'input', 'meta', 'link'];
+    for (const element of selfClosingElements) {
+      content = content.replace(new RegExp(`<${element}([^>]*?)(?<!/)>`, 'g'), `<${element}$1 />`);
+      modified = true;
+    }
 
-    // Fix spread operator issues
-    content = content.replace(/\.\.\.\s*\)/g, '...props)');
-    content = content.replace(/\.\.\.\s*}/g, '...props}');
-
-    // Fix missing commas
-    content = content.replace(/\}\s*\)\s*$/gm, '});');
-    content = content.replace(/\}\s*\)\s*export/gm, '});\nexport');
-
-    // Remove empty lines with just spaces
-    content = content.replace(/^\s*\n/gm, '\n');
-
-    // Remove multiple consecutive empty lines
+    // Fix JSX expressions that need wrapping
+    content = content.replace(/\{([^}]*?)\s*\}\s*\{([^}]*?)\s*\}/g, '{$1}{$2}');
+    
+    // Fix missing semicolons in JSX
+    content = content.replace(/(\w+)\s*(\n\s*<)/g, '$1;$2');
+    
+    // Fix broken JSX attributes
+    content = content.replace(/className\s*=\s*"([^"]*?)\s*"/g, 'className="$1"');
+    content = content.replace(/className\s*=\s*'([^']*?)\s*'/g, "className='$1'");
+    
+    // Fix broken string literals
+    content = content.replace(/"([^"]*?)\s*"/g, '"$1"');
+    content = content.replace(/'([^']*?)\s*'/g, "'$1'");
+    
+    // Fix missing commas in arrays and objects
+    content = content.replace(/(\w+)\s*\n\s*(\w+)/g, '$1,\n$2');
+    
+    // Fix broken function calls
+    content = content.replace(/(\w+)\s*\(\s*\)\s*(\w+)/g, '$1();\n$2');
+    
+    // Clean up extra whitespace
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+    content = content.replace(/^\s*\n/g, '');
+    content = content.replace(/\n\s*$/g, '');
 
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
+    if (modified) {
+      fs.writeFileSync(filePath, content);
       console.log(`Fixed syntax errors in: ${filePath}`);
       return true;
     }
-
     return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Function to recursively find all TypeScript/JavaScript files
-function findSourceFiles(dir, fileList = []) {
-  const files = fs.readdirSync(dir);
-
-  files.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-
-    if (stat.isDirectory()) {
-      // Skip node_modules, .git, and other common directories
-      if (!['node_modules', '.git', 'dist', 'build', '.next', 'out'].includes(file)) {
-        findSourceFiles(filePath, fileList);
+// Function to find all TypeScript/JavaScript files
+function findSourceFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
+  const files = [];
+  
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        // Skip node_modules, .git, and other common directories
+        if (!['node_modules', '.git', '.next', 'dist', 'build', 'out'].includes(item)) {
+          traverse(fullPath);
+        }
+      } else if (stat.isFile()) {
+        const ext = path.extname(item);
+        if (extensions.includes(ext)) {
+          files.push(fullPath);
+        }
       }
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
-      fileList.push(filePath);
     }
-  });
-
-  return fileList;
-}
-
-// Main execution
-console.log('Finding source files...');
-const sourceFiles = findSourceFiles('/workspace');
-
-console.log(`Found ${sourceFiles.length} source files`);
-
-let fixedCount = 0;
-sourceFiles.forEach(filePath => {
-  if (fixSyntaxErrors(filePath)) {
-    fixedCount++;
   }
-});
-
-console.log(`Fixed syntax errors in ${fixedCount} files`);
-
-// Run linting to check for remaining issues
-console.log('Running linting to check for remaining issues...');
-try {
-  execSync('npm run lint', { stdio: 'inherit', cwd: '/workspace' });
-  console.log('Linting passed!');
-} catch (error) {
-  console.log('Linting found issues, but syntax errors should be resolved');
+  
+  traverse(dir);
+  return files;
 }
 
-console.log('Syntax error fixing completed!');
+// Main function
+function main() {
+  console.log('Starting syntax error resolution...');
+  
+  const sourceFiles = findSourceFiles(process.cwd());
+  let fixedCount = 0;
+  
+  for (const file of sourceFiles) {
+    if (fixSyntaxErrors(file)) {
+      fixedCount++;
+    }
+  }
+  
+  console.log(`\nFixed syntax errors in ${fixedCount} files.`);
+}
+
+main();

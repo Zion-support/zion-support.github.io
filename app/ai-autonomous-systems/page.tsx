@@ -36,7 +36,6 @@ const PagePage: React.FC = () => {const features = [
         <title>AI Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
         <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
-      </Helmet>
       <Navigation />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -46,7 +45,6 @@ const PagePage: React.FC = () => {const features = [
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Page <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Solutions</span>
-              </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Transform your data into actionable insights with our advanced AI analytics platform
               </p>
@@ -61,15 +59,12 @@ const PagePage: React.FC = () => {const features = [
 
       <Footer />
     </>
-            </div>
 
       <Footer />
     </>
-          </div>
 
       <Footer />
     </>
-        </section>
 
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -89,7 +84,6 @@ const PagePage: React.FC = () => {const features = [
                   <div className="flex items-center mb-4">
                     <feature.icon className="h-8 w-8 text-blue-600 mr-3">
                     <h3 className="text-xl font-semibold text-gray-900">
-                  </div>
       <Footer />
     </>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -99,25 +93,19 @@ const PagePage: React.FC = () => {const features = [
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="h-4 w-4 text-cyan-400 mr-2 flex-shrink-0" />
                         {benefit}
-                      </li>
                     )
     </>
   )
-                  </ul>
-                </div>
 
       <Footer />
     </>
               ))}
-            </div>
 
       <Footer />
     </>
-          </div>
 
       <Footer />
     </>
-        </section>
 
         <section className="py-20 bg-gray-100">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
@@ -137,24 +125,19 @@ const PagePage: React.FC = () => {const features = [
                   <div className="flex items-center">
                     <CheckCircle className="h-6 w-6 text-green-500 mr-3">
                     <span className="text-lg font-medium text-gray-900">
-                  </div>
       <Footer />
     </>
                   <p className="text-gray-300">{benefit}</p>
-                </div>
 
       <Footer />
     </>
               ))}
-            </div>
 
       <Footer />
     </>
-          </div>
 
       <Footer />
     </>
-        </section>
 
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
@@ -172,22 +155,59 @@ const PagePage: React.FC = () => {const features = [
     ,>
     r: bg-blue-600 hove, r:text-white transition-colors">
                 Schedule Demo
-              </button>
             </div>
 
       <Footer />
     </>
-          </div>
 
       <Footer />
     </>
-        </section>
       <Footer />
     </>
-<<<<<<< HEAD
-  )}
-=======
-  )
+)
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
-          </ArrowRight>;
+</Footer>
+</Footer>
+</Footer>
+</div>
+</section>
+</Footer>
+</Footer>
+</Footer>
+</p>
+</Footer>
+</span>
+</CheckCircle>
+</div>
+</div>
+</div>
+</div>
+</section>
+</Footer>
+</Footer>
+</Footer>
+</CheckCircle>
+</li>
+</ul>
+</p>
+</h3>
+</Footer>
+</h3>
+</feature>
+</div>
+</div>
+</div>
+</div>
+</section>
+</Footer>
+</Footer>
+</Footer>
+</span>
+</h1>
+</div>
+</div>
+</section>
+</div>
+</Navigation>
+</title>
+</Helmet>

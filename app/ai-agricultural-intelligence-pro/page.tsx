@@ -51,20 +51,12 @@ return (
         <title>AI Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
         <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
-      </Helmet>
       <Navigation />
-<<<<<<< HEAD
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">      <Helmet>
-=======
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
         <title>AI Agricultural Intelligence Pro - Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered agricultural intelligence platform for precision farming, crop monitoring, and yield optimization." />
         <meta name="keywords" content="AI agriculture, precision farming, crop monitoring, agricultural intelligence, smart farming" />
-      </Helmet>
 
       <Navigation />
 
@@ -74,7 +66,6 @@ return (
           <div className="container mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               AI <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">Agricultural Intelligence Pro</span>
-            </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Transform your farming operations with AI-powered precision agriculture. Monitor crops, optimize yields, and maximize profits with cutting-edge technology.
             </p>
@@ -82,13 +73,9 @@ return (
               <button className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Start Free Trial
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-all duration-300">
                 Schedule Demo
               </button>
-            </div>
-          </div>
-        </section>
 
         {/* Features Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -109,7 +96,6 @@ return (
                   <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-green-400/50 transition-all duration-300">
                     <div className="text-green-400 mb-4">
                       <Icon className="w-8 h-8" />
-                    </div>
                     <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                     <p className="text-gray-300 mb-4">{feature.description}</p>
                     <ul className="space-y-2">
@@ -117,15 +103,9 @@ return (
                         <li key={idx} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           {benefit}
-                        </li>
                       ))}
-                    </ul>
-                  </div>
                 );
               })}
-            </div>
-          </div>
-        </section>
 
         {/* Services Section */}
         <section className="py-20 px-4 bg-slate-800/50">
@@ -135,7 +115,6 @@ return (
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Comprehensive agricultural intelligence solutions
               </p>
-            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {services.map((service, index) => {
@@ -144,7 +123,6 @@ return (
                   <div key={index} className="text-center">
                     <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                       <Icon className="w-8 h-8 text-white" />
-                    </div>
                     <h3 className="text-xl font-semibold text-white mb-4">{service.title}</h3>
                     <p className="text-gray-300 mb-4">{service.description}</p>
                     <ul className="space-y-2">
@@ -152,15 +130,9 @@ return (
                         <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
                           {benefit}
-                        </li>
                       ))}
-                    </ul>
-                  </div>
                 );
               })}
-            </div>
-          </div>
-        </section>
 
         {/* Pricing Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -187,17 +159,13 @@ return (
                     <div className="flex items-baseline justify-center">
                       <span className="text-4xl font-bold text-white">{tier.price}</span>
                       <span className="text-gray-300 ml-1">{tier.period}</span>
-                    </div>
-                  </div>
 
                   <ul className="space-y-3 mb-8">
                     {tier.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
                         {feature}
-                      </li>
                     ))}
-                  </ul>
 
                   <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     tier.name === 'Professional'
@@ -205,12 +173,7 @@ return (
                       : 'border border-white text-white hover:bg-white hover:text-green-600'>
                   }`}>
                     {tier.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
-                  </button>
-                </div>
               ))}
-            </div>
-          </div>
-        </section>
 
         {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -225,18 +188,69 @@ return (
               <button className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
                 Start Free Trial
                 <ArrowRight className="ml-2 w-5 h-5" />
-              </button>
               <button className="border border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-400 hover:text-white transition-all duration-300">
                 Contact Sales
               </button>
-            </div>
-          </div>
-        </section>
-      </main>
 
       <Footer />
-    </div>
   )
 }
 
 export default AIAgriculturalIntelligenceProPage
+</Footer>
+</ArrowRight>
+</button>
+</div>
+</div>
+</section>
+</CheckCircle>
+</li>
+</ul>
+</span>
+</span>
+</div>
+</p>
+</h3>
+</div>
+</div>
+</div>
+</section>
+</CheckCircle>
+</li>
+</ul>
+</p>
+</h3>
+</Icon>
+</div>
+</div>
+</div>
+</h2>
+</div>
+</div>
+</section>
+</CheckCircle>
+</li>
+</ul>
+</p>
+</h3>
+</Icon>
+</div>
+</div>
+</div>
+</div>
+</section>
+</ArrowRight>
+</button>
+</div>
+</span>
+</h1>
+</div>
+</section>
+</main>
+</Navigation>
+</title>
+</Helmet>
+</div>
+</Navigation>
+</title>
+</Helmet>

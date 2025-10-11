@@ -85,12 +85,8 @@ const PagePage: React.FC = () => {const features = [
                       <li key={idx} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2">
                         {benefit}
-<<<<<<< HEAD
-                      </li>                    ))}
-=======
-                      </li>
+</li>
                     ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
                   </ul>;
               ))}
             </div>
@@ -110,8 +106,4 @@ const PagePage: React.FC = () => {const features = [
     </>
   );
 export default PagePage
-<<<<<<< HEAD
-      </Footer>
-=======
-      </Footer>
->>>>>>> cursor/fix-errors-and-merge-to-main-f0fb
+</Footer>
