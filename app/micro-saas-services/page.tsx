@@ -1,6 +1,7 @@
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Brain, Database, Shield, Code, Smartphone, Globe, Clock, DollarSign } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -9,6 +10,8 @@ import Footer from '../components/Footer';
 =======
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-fec5
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9603
 import { CheckCircle, ArrowRight, Zap, Clock, DollarSign, Star, Users, Shield } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -229,9 +232,14 @@ const MicroSaasServicesPage: React.FC = () => {
       pricing: '$22/month',
       link: '/ai-smart-calendar',
       popular: false,
+<<<<<<< HEAD
       users: '290+',
       rating: '4.4'
 >>>>>>> cursor/fix-errors-and-merge-to-main-fec5
+=======
+      users: '1,100+',
+      rating: '4.8'
+>>>>>>> cursor/fix-errors-and-merge-to-main-9603
     }
   ];
 
@@ -240,11 +248,16 @@ const MicroSaasServicesPage: React.FC = () => {
       icon: <CheckCircle className="w-6 h-6 text-green-500" />,
       title: 'Affordable Pricing',
 <<<<<<< HEAD
+<<<<<<< HEAD
       description: 'Start from just $29/month with no setup fees',
+=======
+      description: 'Start with low-cost plans and scale as you grow',
+>>>>>>> cursor/fix-errors-and-merge-to-main-9603
       icon: <DollarSign className="w-6 h-6 text-green-500" />
     },
     {
       title: 'Quick Setup',
+<<<<<<< HEAD
       description: 'Get up and running in minutes, not months',
       icon: <Clock className="w-6 h-6 text-blue-500" />
     },
@@ -302,9 +315,27 @@ const MicroSaasServicesPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-fec5
   ];
 
+=======
+      description: 'Get up and running in minutes, not weeks',
+      icon: <Zap className="w-6 h-6 text-blue-500" />
+    },
+    {
+      title: 'AI-Powered',
+      description: 'Leverage artificial intelligence for better results',
+      icon: <Star className="w-6 h-6 text-purple-500" />
+    },
+    {
+      title: 'Growing Community',
+      description: 'Join thousands of satisfied users worldwide',
+      icon: <Users className="w-6 h-6 text-orange-500" />
+    }
+  ];
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9603
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <Helmet>
+<<<<<<< HEAD
         <title>Micro SAAS Services - Zion Tech Group</title>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -322,9 +353,15 @@ const MicroSaasServicesPage: React.FC = () => {
         <meta name="description" content="Powerful AI-driven micro software solutions designed to streamline your business operations and boost productivity. Affordable tools for modern businesses." />
         <meta name="keywords" content="micro SAAS, AI tools, productivity apps, business automation, task management, expense tracking" />
 >>>>>>> cursor/fix-errors-and-merge-to-main-fec5
+=======
+        <title>Micro SaaS Services - Zion Tech Group</title>
+        <meta name="description" content="Affordable micro SaaS solutions powered by AI. Task management, expense tracking, password management, and more." />
+        <meta name="keywords" content="micro SaaS, AI tools, task management, expense tracking, productivity, affordable software" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-9603
       </Helmet>
-      
+
       {/* Hero Section */}
+<<<<<<< HEAD
       <section className="pt-20 px-4 py-12 sm:py-16 lg:py-20">
 <<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-099c
@@ -355,12 +392,26 @@ const MicroSaasServicesPage: React.FC = () => {
               Powerful AI-driven micro software solutions designed to streamline your business operations and boost productivity. 
               Affordable tools for modern businesses.
 >>>>>>> cursor/fix-errors-and-merge-to-main-fec5
+=======
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              Micro
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                {' '}SaaS Services
+              </span>
+            </h1>
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              Affordable, AI-powered micro SaaS solutions designed to solve specific business problems with minimal complexity.
+>>>>>>> cursor/fix-errors-and-merge-to-main-9603
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
               >
+<<<<<<< HEAD
 <<<<<<< HEAD
                 Get Started Today
 =======
@@ -614,21 +665,75 @@ const MicroSaasServicesPage: React.FC = () => {
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                     <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center">
                       <Star className="w-4 h-4 mr-1" />
+=======
+                Get Started Today
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              <Link
+                to="/pricing"
+                className="inline-flex items-center px-8 py-4 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-colors"
+              >
+                View Pricing
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Micro SaaS Grid */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Our Micro SaaS Portfolio
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Choose from our collection of focused, AI-powered micro SaaS solutions designed for specific business needs.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {microSAAS.map((service, index) => (
+              <div
+                key={index}
+                className={`relative bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 ${
+                  service.popular ? 'ring-2 ring-blue-500' : ''
+                }`}
+              >
+                {service.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+>>>>>>> cursor/fix-errors-and-merge-to-main-9603
                       Popular
                     </div>
                   </div>
                 )}
+<<<<<<< HEAD
                 <div className="mb-4 group-hover:scale-110 transition-transform duration-300">{app.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-purple-300 transition-colors">{app.title}</h3>
                 <p className="text-gray-300 mb-6">{app.description}</p>
+=======
+                
+                <div className="mb-6">
+                  {service.icon}
+                  <h3 className="text-2xl font-bold text-gray-900 mt-4 mb-2">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4">
+                    {service.description}
+                  </p>
+                </div>
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-9603
                 <ul className="space-y-2 mb-6">
-                  {app.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-600">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
                 </ul>
+<<<<<<< HEAD
                 <div className="flex items-center justify-between mb-4">
                   <div className="text-2xl font-bold text-white">{app.pricing}</div>
                   <div className="flex items-center text-sm text-gray-400">
@@ -652,6 +757,28 @@ const MicroSaasServicesPage: React.FC = () => {
                   Try Now
 >>>>>>> cursor/fix-errors-and-merge-to-main-fec5
                   <ArrowRight className="w-4 h-4 ml-2" />
+=======
+
+                <div className="mb-6">
+                  <div className="flex justify-between items-center mb-2">
+                    <span className="text-3xl font-bold text-gray-900">
+                      {service.pricing}
+                    </span>
+                    <div className="flex items-center">
+                      <Star className="w-5 h-5 text-yellow-500 mr-1" />
+                      <span className="text-gray-600 font-semibold">{service.rating}</span>
+                    </div>
+                  </div>
+                  <p className="text-sm text-gray-500">{service.users} users</p>
+                </div>
+
+                <Link
+                  to={service.link}
+                  className="w-full inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Try Now
+                  <ArrowRight className="ml-2 w-4 h-4" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-9603
                 </Link>
               </div>
             ))}
@@ -660,10 +787,15 @@ const MicroSaasServicesPage: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
+<<<<<<< HEAD
       <section className="py-12 sm:py-16 lg:py-20 px-4">
+=======
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+>>>>>>> cursor/fix-errors-and-merge-to-main-9603
         <div className="max-w-7xl mx-auto">
 <<<<<<< HEAD
           <div className="text-center mb-16">
+<<<<<<< HEAD
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4">Why Choose Micro SAAS?</h2>
             <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
               Get the benefits of enterprise software at a fraction of the cost
@@ -698,8 +830,33 @@ const MicroSaasServicesPage: React.FC = () => {
               </div>
             ))}
 >>>>>>> cursor/fix-errors-and-merge-to-main-fec5
+=======
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Why Choose Micro SaaS?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Micro SaaS solutions offer focused functionality with minimal complexity and maximum value.
+            </p>
           </div>
 
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="text-center">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-6">
+                  {benefit.icon}
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                  {benefit.title}
+                </h3>
+                <p className="text-gray-600">
+                  {benefit.description}
+                </p>
+              </div>
+            ))}
+>>>>>>> cursor/fix-errors-and-merge-to-main-9603
+          </div>
+
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           {/* CTA Section */}
@@ -755,6 +912,31 @@ const MicroSaasServicesPage: React.FC = () => {
                 </Link>
               </div>
             </div>
+=======
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-purple-600">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Try Our Micro SaaS Solutions?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Start with a free trial and experience the power of focused, AI-powered solutions.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
+            >
+              Start Free Trial
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Link>
+            <Link
+              to="/pricing"
+              className="inline-flex items-center px-8 py-4 border border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
+            >
+              View All Plans
+            </Link>
+>>>>>>> cursor/fix-errors-and-merge-to-main-9603
           </div>
         </div>
       </main>
@@ -766,6 +948,7 @@ const MicroSaasServicesPage: React.FC = () => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default MicroSaasServicesPage;
 =======
 export default MicroSaasServicesPage;
@@ -773,3 +956,6 @@ export default MicroSaasServicesPage;
 =======
 export default MicroSAASServicesPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-fec5
+=======
+export default MicroSAASServicesPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-9603
