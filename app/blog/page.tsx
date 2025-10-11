@@ -88,6 +88,10 @@ const BlogPage: React.FC = () => {
     <>
       <Helmet>
         <title>Blog - Zion Tech Group | AI & IT Insights</title>
+        <meta name="description" content="Stay updated with the latest insights on AI, technology, and IT solutions from our expert team." />
+        <meta name="keywords" content="blog, AI insights, technology news, IT solutions, tech trends" />
+      </Helmet>
+      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
@@ -95,13 +99,30 @@ const BlogPage: React.FC = () => {
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            </p>
+              Our Blog
+            </h1>
           </div>
         </section>
 
         {/* Search and Filter */}
         <section className="py-8 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                Search Our Blog
+              </h2>
+              <p className="text-gray-600 mb-6">
+                Find articles on topics that interest you
+              </p>
             </div>
           </div>
         </section>
+      </div>
+      
+      <Footer />
+    </>
+  );
+};
+
+export default BlogPage;
 

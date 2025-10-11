@@ -177,7 +177,6 @@ const EnhancedFooter: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
     </footer>
   )
 }

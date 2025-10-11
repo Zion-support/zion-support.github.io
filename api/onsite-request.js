@@ -1,10 +1,5 @@
-import fs from 'fs'
-import path from 'path'
-
-// Simple wrapper function to replace withSentry
-const withSentry = (handler) => handler
-const dir = path.join(process.cwd(), 'data')
-const file = path.join(dir, 'onsite-requests.json')
+// Simple wrapper function to replace withSentry (currently unused)
+// const withSentry = (handler) => handler
 
 export default function handler(req, res) {
   if (req.method !== 'POST') {
@@ -15,63 +10,25 @@ export default function handler(req, res) {
   }
 
   try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    const request = {
-      id: Date.now().toString(),
-      timestamp: new Date().toISOString(),
-      ...req.body
-=======
-    const { name, email, phone, company, location, requirements } = req.body || {}
-    
-    if (!name || !email || !phone || !company) {
-      res.statusCode = 400
-      res.setHeader('Content-Type', 'application/json')
-      res.end(JSON.stringify({ error: 'Name, email, phone, and company are required' }))
-=======
-    const { name, email, phone, company, message, service } = req.body || {}
-=======
     const { name, email, phone, company, message, preferredDate, serviceType } = req.body || {}
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
     
     if (!name || !email || !phone) {
       res.statusCode = 400
       res.setHeader('Content-Type', 'application/json')
       res.end(JSON.stringify({ error: 'Name, email, and phone are required' }))
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-8a51
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
       return
     }
 
-    const request = {
-      id: Date.now().toString(),
+    // Process the request (in a real app, you would save to database)
+    console.log('Onsite request received:', {
       name,
       email,
       phone,
-<<<<<<< HEAD
-<<<<<<< HEAD
-      company,
-      location: location || 'Not specified',
-      requirements: requirements || 'General onsite service request',
-      timestamp: new Date().toISOString()
->>>>>>> cursor/fix-errors-and-merge-to-main-fe05
-=======
-      company: company || 'Not specified',
-      message: message || 'No message provided',
-      service: service || 'General inquiry',
-      timestamp: new Date().toISOString()
->>>>>>> cursor/fix-errors-and-merge-to-main-8a51
-=======
       company: company || 'Not specified',
       message: message || 'No message provided',
       preferredDate: preferredDate || 'Not specified',
-      serviceType: serviceType || 'General consultation',
-      timestamp: new Date().toISOString()
->>>>>>> cursor/fix-errors-and-merge-to-main-3cfc
-    }
+      serviceType: serviceType || 'General consultation'
+    })
 
     res.setHeader('Content-Type', 'application/json')
     res.end(JSON.stringify({ 
