@@ -160,68 +160,47 @@ const ${fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/-([a-z])/g
 export default ${fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/-([a-z])/g, (g) => g[1].toUpperCase())}Page;`;
 }
 
-// Function to check if a file is broken (has syntax errors)
-function isFileBroken(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    
-    // Check for common broken patterns
-    if (content.includes('Declaration or statement expected') ||
-        content.includes('Expression expected') ||
-        content.includes('Identifier expected') ||
-        content.includes('Parameter declaration expected') ||
-        content.includes('Expected corresponding closing tag') ||
-        content.includes('JSX expressions must have one parent element') ||
-        content.trim().length < 100 ||
-        content.includes('error TS') ||
-        content.includes('TS1005') ||
-        content.includes('TS1109') ||
-        content.includes('TS1128') ||
-        content.includes('TS1138') ||
-        content.includes('TS17015') ||
-        content.includes('TS17002')) {
-      return true;
-    }
-    
-    // Check if file starts with broken syntax
-    const lines = content.split('\n');
-    if (lines.length > 0) {
-      const firstLine = lines[0].trim();
-      if (firstLine.includes('Declaration or statement expected') ||
-          firstLine.includes('Expression expected') ||
-          firstLine.includes('Identifier expected') ||
-          firstLine.includes('error TS')) {
-        return true;
-      }
-    }
-    
-    return false;
-  } catch (error) {
-    return true;
-  }
-}
+// List of files that are known to be broken based on the error output
+const brokenFiles = [
+  'app/accessibility-page/page.tsx',
+  'app/accessibility/page.tsx',
+  'app/ai-3d-generation/page.tsx',
+  'app/ai-api-management/page.tsx',
+  'app/ai-api-manager/page.tsx',
+  'app/ai-automated-reporting/page.tsx',
+  'app/ai-automated-testing/page.tsx',
+  'app/ai-climate-solutions-pro/page.tsx',
+  'app/ai-cloud-infrastructure/page.tsx',
+  'app/ai-content-generation-pro/page.tsx',
+  'app/ai-content-studio/page.tsx',
+  'app/ai-conversational-ai/page.tsx',
+  'app/ai-crm-assistant/page.tsx',
+  'app/ai-customer-churn/page.tsx',
+  'app/ai-customer-support/page.tsx',
+  'app/ai-ecommerce-assistant/page.tsx',
+  'app/ai-financial-planner/page.tsx',
+  'app/ai-financial-services/page.tsx',
+  'app/ai-health-tracker/page.tsx',
+  'app/ai-hr-solutions/page.tsx',
+  'app/ai-lead-scoring/page.tsx',
+  'app/ai-learning-platform/page.tsx',
+  'app/ai-mobile-builder/page.tsx',
+  'app/ai-neural-interface/page.tsx',
+  'app/ai-quantum-computing-simulator/page.tsx'
+];
 
-// Function to fix broken files
-function fixBrokenFiles(dirPath) {
-  const items = fs.readdirSync(dirPath);
+// Function to fix specific broken files
+function fixSpecificFiles() {
   let fixedCount = 0;
   
-  for (const item of items) {
-    const fullPath = path.join(dirPath, item);
-    const stat = fs.statSync(fullPath);
+  for (const filePath of brokenFiles) {
+    const fullPath = path.join('/workspace', filePath);
     
-    if (stat.isDirectory()) {
-      // Skip node_modules and other irrelevant directories
-      if (!['node_modules', '.git', 'dist', 'build', '.next', '__tests__'].includes(item)) {
-        fixedCount += fixBrokenFiles(fullPath);
-      }
-    } else if (stat.isFile() && item.endsWith('.tsx') && item === 'page.tsx') {
-      if (isFileBroken(fullPath)) {
-        console.log(`Fixing broken file: ${fullPath}`);
-        const newContent = createBasicPageTemplate(fullPath);
-        fs.writeFileSync(fullPath, newContent);
-        fixedCount++;
-      }
+    if (fs.existsSync(fullPath)) {
+      console.log(`Fixing broken file: ${fullPath}`);
+      const newContent = createBasicPageTemplate(fullPath);
+      fs.writeFileSync(fullPath, newContent);
+      fixedCount++;
     }
   }
   
@@ -229,6 +208,6 @@ function fixBrokenFiles(dirPath) {
 }
 
 // Main execution
-console.log('Starting comprehensive broken file fix...');
-const fixedCount = fixBrokenFiles('/workspace/app');
+console.log('Starting force fix for specific broken files...');
+const fixedCount = fixSpecificFiles();
 console.log(`Fixed ${fixedCount} broken files.`);

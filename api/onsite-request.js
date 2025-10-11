@@ -15,6 +15,12 @@ export default function handler(req, res) {
   }
 
   try {
+    const request = {
+      id: Date.now().toString(),
+      timestamp: new Date().toISOString(),
+      ...req.body
+    }
+
     res.setHeader('Content-Type', 'application/json')
     res.end(JSON.stringify({ 
       success: true, 
@@ -26,3 +32,6 @@ export default function handler(req, res) {
     console.error('Error processing onsite request:', error)
     res.statusCode = 500
     res.setHeader('Content-Type', 'application/json')
+    res.end(JSON.stringify({ error: 'Internal server error' }))
+  }
+}

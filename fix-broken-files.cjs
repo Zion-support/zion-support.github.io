@@ -172,14 +172,7 @@ function isFileBroken(filePath) {
         content.includes('Parameter declaration expected') ||
         content.includes('Expected corresponding closing tag') ||
         content.includes('JSX expressions must have one parent element') ||
-        content.trim().length < 100 ||
-        content.includes('error TS') ||
-        content.includes('TS1005') ||
-        content.includes('TS1109') ||
-        content.includes('TS1128') ||
-        content.includes('TS1138') ||
-        content.includes('TS17015') ||
-        content.includes('TS17002')) {
+        content.trim().length < 100) {
       return true;
     }
     
@@ -189,8 +182,7 @@ function isFileBroken(filePath) {
       const firstLine = lines[0].trim();
       if (firstLine.includes('Declaration or statement expected') ||
           firstLine.includes('Expression expected') ||
-          firstLine.includes('Identifier expected') ||
-          firstLine.includes('error TS')) {
+          firstLine.includes('Identifier expected')) {
         return true;
       }
     }
@@ -229,6 +221,6 @@ function fixBrokenFiles(dirPath) {
 }
 
 // Main execution
-console.log('Starting comprehensive broken file fix...');
+console.log('Starting broken file fix...');
 const fixedCount = fixBrokenFiles('/workspace/app');
 console.log(`Fixed ${fixedCount} broken files.`);

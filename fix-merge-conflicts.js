@@ -22,8 +22,7 @@ const __dirname = path.dirname(__filename);
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
       
-      if (line.trim().startsWith('<<<<<<< HEAD')) {
-        inConflict = true;
+      if (line.trim().startsWith('        inConflict = true;
     return true;
   } catch (error) {
     console.error(`Error resolving conflicts in ${filePath}:`, error.message);
