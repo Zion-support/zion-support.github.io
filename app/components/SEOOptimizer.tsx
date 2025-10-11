@@ -1,10 +1,33 @@
-    </Helmet>
-  )
-}
-export default SEOOptimizer
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
-      <meta name="twitter:image" content={ogImage} />
-      
-      {/* Additional SEO meta tags */}
-      <meta name="robots" content="index, follow" />
-      <meta name="author" content="Zion Tech Group" />
+'use client'
+import React, { useEffect } from 'react'
+
+const SEOOptimizer: React.FC = () => {
+  useEffect(() => {
+    // SEO optimization code
+    const optimizeSEO = () => {
+      // Add structured data
+      const structuredData = {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Zion Tech Group",
+        "url": "https://ziontechgroup.com",
+        "description": "Leading provider of AI-powered enterprise solutions"
+      };
+
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.textContent = JSON.stringify(structuredData);
+      document.head.appendChild(script);
+    };
+
+    optimizeSEO();
+
+    return () => {
+      // Cleanup if needed
+    };
+  }, []);
+
+  return null; // This component doesn't render anything visible
+};
+
+export default SEOOptimizer;
