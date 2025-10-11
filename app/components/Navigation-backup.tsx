@@ -1,5 +1,10 @@
   useEffect(() => {
     const handleResize = () => {
+  return (
+    <div>
+      {/* Content */}
+    </div>
+  );
       if (window.innerWidth >= 1024) {
         setIsOpen(false)}}
 

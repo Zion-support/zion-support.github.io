@@ -44,7 +44,7 @@ const AiFinancialPlannerPage: React.FC = () => {
   ]
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>AI Financial Planner - Zion Tech Group</title>
         <meta name="description" content="Intelligent financial planning and investment management powered by AI. Optimize your portfolio and achieve your financial goals." />
@@ -200,7 +200,7 @@ const AiFinancialPlannerPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    
   )
 }
 

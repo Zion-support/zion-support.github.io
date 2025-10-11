@@ -1,5 +1,6 @@
       title: 'Predictive Analytics',
 const benefits = [
+    // Add items here
   ]
 
   const benefits = [

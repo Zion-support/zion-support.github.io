@@ -16,6 +16,7 @@ const AIApiManagerPage: React.FC = () => {
       description: 'Manage all your APIs from a single, intuitive dashboard with comprehensive monitoring and control capabilities.',
   ];
   const benefits = [
+    // Add items here
   ];
   const stats = [
     },

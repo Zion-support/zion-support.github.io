@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 'use client';
 
 import React, { useEffect } from 'react';
->>>>>>> cursor/website-audit-and-update-with-deployment-635f
 
 interface AccessibilityEnhancerProps {
   enableKeyboardNavigation?: boolean;
@@ -23,6 +19,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 }) => {
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+
     if (enableKeyboardNavigation) {
       const handleKeyDown = (event: KeyboardEvent) => {
         if (event.key === 'Tab') {
@@ -31,6 +29,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       };
 
       const handleMouseDown = () => {
+  return (
+    <div>
+      {/* Content */}
+    </div>
+  );
         document.body.classList.remove('keyboard-navigation');
       };
 
@@ -41,13 +44,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         document.removeEventListener('keydown', handleKeyDown);
         document.removeEventListener('mousedown', handleMouseDown);
       };
+    }
+  }, [enableKeyboardNavigation]);
+
   useEffect(() => {
     if (typeof window === 'undefined') return;
-
-
-      document.addEventListener('keydown', handleKeyDown);
-      return () => document.removeEventListener('keydown', handleKeyDown);
-    }
 
     // Add screen reader support
     if (enableScreenReaderSupport) {
@@ -64,94 +65,111 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       const main = document.querySelector('main');
       if (main && !main.getAttribute('role')) {
         main.setAttribute('role', 'main');
-        main.id = 'main-content';
+        main.setAttribute('id', 'main-content');
       }
 
       const nav = document.querySelector('nav');
       if (nav && !nav.getAttribute('role')) {
         nav.setAttribute('role', 'navigation');
-        nav.id = 'navigation';
+        nav.setAttribute('id', 'navigation');
       }
 
-      // Add live region for announcements
-      const liveRegion = document.createElement('div');
-      liveRegion.setAttribute('aria-live', 'polite');
-      liveRegion.setAttribute('aria-atomic', 'true');
-      liveRegion.className = 'sr-only';
-      liveRegion.id = 'live-region';
-      document.body.appendChild(liveRegion);
+      return () => {
+        const skipLinksElement = document.querySelector('.sr-only');
+        if (skipLinksElement) {
+          skipLinksElement.remove();
+        }
+      };
     }
-  }, [enableKeyboardNavigation]);
+  }, [enableScreenReaderSupport]);
 
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    if (enableHighContrast) {
+      document.body.classList.add('high-contrast');
+      return () => {
+        document.body.classList.remove('high-contrast');
+      };
+    }
+  }, [enableHighContrast]);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    if (enableFocusManagement) {
+      const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+      
+      const handleFocus = (event: FocusEvent) => {
+        const target = event.target as HTMLElement;
+        if (target.matches(focusableElements)) {
+          target.classList.add('focus-visible');
+        }
+      };
+
+      const handleBlur = (event: FocusEvent) => {
+        const target = event.target as HTMLElement;
+        target.classList.remove('focus-visible');
+      };
+
+      document.addEventListener('focusin', handleFocus);
+      document.addEventListener('focusout', handleBlur);
+
+      return () => {
+        document.removeEventListener('focusin', handleFocus);
+        document.removeEventListener('focusout', handleBlur);
+      };
+    }
+  }, [enableFocusManagement]);
+
+  return (
+    <div className="accessibility-enhanced">
+      {children}
+      <style jsx>{`
+        .sr-only {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          white-space: nowrap;
+          border: 0;
+        }
+
+        .skip-link {
+          position: absolute;
+          top: -40px;
+          left: 6px;
+          background: #000;
+          color: #fff;
+          padding: 8px;
+          text-decoration: none;
+          z-index: 1000;
+          border-radius: 4px;
+        }
+
+        .skip-link:focus {
+          top: 6px;
+        }
+
+        .keyboard-navigation *:focus {
+          outline: 2px solid #3b82f6;
+          outline-offset: 2px;
+        }
+
+        .high-contrast {
+          filter: contrast(150%) brightness(1.2);
+        }
+
+        .focus-visible {
+          outline: 2px solid #3b82f6;
+          outline-offset: 2px;
+        }
+      `}</style>
+    </div>
+  );
 };
 
 export default AccessibilityEnhancer;
-<<<<<<< HEAD
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-aca8
-'use client'
-import React, { useEffect } from 'react'
-
-interface AccessibilityEnhancerProps {
-  children: React.ReactNode
-  enableKeyboardNavigation?: boolean
-  enableScreenReaderSupport?: boolean
-  enableHighContrast?: boolean
-  enableFocusManagement?: boolean
-}
-
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ 
-  children,
-  enableKeyboardNavigation = true,
-  enableScreenReaderSupport = true,
-  enableHighContrast = false,
-  enableFocusManagement = true
-}) => {
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      // Add keyboard navigation support
-      if (enableKeyboardNavigation) {
-        document.body.classList.add('keyboard-navigation')
-      }
-
-      // Add screen reader support
-      if (enableScreenReaderSupport) {
-        // Add skip links
-        const skipLinks = document.createElement('div')
-        skipLinks.innerHTML = `
-          <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded-lg z-50">
-            Skip to main content
-          </a>
-        `
-        document.body.insertBefore(skipLinks, document.body.firstChild)
-      }
-
-      // Add high contrast mode
-      if (enableHighContrast) {
-        document.body.classList.add('high-contrast')
-      }
-
-      // Add focus management
-      if (enableFocusManagement) {
-        const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-        const focusableContent = document.querySelectorAll(focusableElements)
-        
-        focusableContent.forEach(element => {
-          element.addEventListener('focus', () => {
-            element.classList.add('focus-visible')
-          })
-          element.addEventListener('blur', () => {
-            element.classList.remove('focus-visible')
-          })
-        })
-      }
-    }
-  }, [enableKeyboardNavigation, enableScreenReaderSupport, enableHighContrast, enableFocusManagement])
-
-  return <>{children}</>
-}
-
-export default AccessibilityEnhancer
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-635f

@@ -1,4 +1,5 @@
   const categories = [
+    // Add items here
   ]
   const documentation = [
     {id: 1,
@@ -80,7 +81,7 @@
       )
     : filteredDocs;
 
-  return(<>)
+  return()
       <Helmet />
         <title>Documentation - Zion Tech Group</title>
     ? documentation 
@@ -92,7 +93,7 @@
       )
     : filteredDocs
   return (
-    <>
+    <div>
       <Helmet>
         </Helmet><title>Documentation - Zion Tech Group</title>
         <meta name="description" content="Complete documentation for Zion Tech Group's AI, IT, and Micro SaaS services. Get started with our comprehensive guides and API references." />
@@ -228,7 +229,7 @@
           </div>
         </div>
       </div>
-    </>
+    
   )
 }
 export default DocsPage

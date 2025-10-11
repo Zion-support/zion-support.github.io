@@ -1,11 +1,11 @@
 'use client';
   return (
-    <>
+    
       <Helmet>
         <title>AI Analytics Dashboard - Zion Tech Group</title>
 
       <Footer />
-    </>
+    
   );
 };
 

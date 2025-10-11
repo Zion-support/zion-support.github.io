@@ -19,6 +19,11 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       }
 
       const handleMouseDown = () => {
+  return (
+    <div>
+      {/* Content */}
+    </div>
+  );
         document.body.classList.remove('keyboard-navigation')
       }
 
@@ -34,7 +39,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     }
   }, [])
 
-  return <>{children}</>
+  return {children}
 }
 
 export default EnhancedAccessibility

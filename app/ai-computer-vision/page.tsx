@@ -182,7 +182,6 @@ const AiComputerVisionPage: React.FC = () => {
 };
 
 export default AiComputerVisionPage;
->>>>>>> main
       {/* CTA Section */}
       <section className="py-20 px-4">
         </section>< className="$2 />

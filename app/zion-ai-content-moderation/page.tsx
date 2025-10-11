@@ -1,11 +1,14 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Helmet } from 'react-helmet-async';
 import { Brain, Zap, CheckCircle, ArrowRight, Star, Users, BarChart, Shield, Target, Clock, Cpu } from 'lucide-react';
 
 const ZionAIContentModerationPage: React.FC = () => {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Zion AI Content Moderation | Zion Tech Group</title>
         <meta name="description" content="Automated content moderation with AI-powered filtering, inappropriate content detection, and community management for safe platforms." />
@@ -239,7 +242,7 @@ const ZionAIContentModerationPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    
   );
 };
 

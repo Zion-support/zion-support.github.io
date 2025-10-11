@@ -1,11 +1,14 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Helmet } from 'react-helmet-async';
 import { Brain, Zap, CheckCircle, ArrowRight, Star, Users, BarChart, Shield, Target, Clock } from 'lucide-react';
 
 const ITSecurityServicesPage: React.FC = () => {
   return (
-    <>
+    <div>
       <Helmet>
         <title>IT Security Services | Zion Tech Group</title>
         <meta name="description" content="Comprehensive IT security services including security assessment, monitoring, incident response, and compliance management." />
@@ -157,7 +160,7 @@ const ITSecurityServicesPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    
   );
 };
 

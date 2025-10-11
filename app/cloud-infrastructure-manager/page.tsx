@@ -37,6 +37,7 @@ const CloudInfrastructureManagerPage: React.FC = () => {,
     {icon: Zap,
       title: 'DevOps Integration',
 const benefits = [
+    // Add items here
   ]
   const benefits = [
     'Centralized cloud infrastructure management',

@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import { Cloud, Zap, Shield, ChevronLeft, ChevronRight } from 'lucide-react';
->>>>>>> main
 
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react';
@@ -64,7 +62,6 @@ const ContentCarousel: React.FC = () => {,
       icon: Shield,
     }
   ];
->>>>>>> main
 
   useEffect(() => {const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);}, 5000);
@@ -111,6 +108,11 @@ const ContentCarousel: React.FC = () => {,
           />
         ))}
   const nextSlide = () => {
+  return (
+    <div>
+      {/* Content */}
+    </div>
+  );
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
 
@@ -172,7 +174,6 @@ const ContentCarousel: React.FC = () => {,
             />
           ))}
         </div>
->>>>>>> main
       </div>
     </div>
     },
@@ -208,5 +209,3 @@ const ContentCarousel: React.FC = () => {,
   );
 };
 
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-635f

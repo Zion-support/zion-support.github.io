@@ -4,6 +4,7 @@ const PagePage: React.FC = () => {
       icon: Brain,
       title: 'AI-Powered Solutions',
 const benefits = [
+    // Add items here
   ]
   const benefits = [
     'Advanced AI technology integration',

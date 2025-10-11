@@ -44,7 +44,7 @@ const AiHealthTrackerPage: React.FC = () => {
   ]
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>AI Health Tracker - Zion Tech Group</title>
         <meta name="description" content="Intelligent health tracking and analysis powered by AI. Monitor your health, get personalized recommendations, and achieve your wellness goals." />
@@ -200,7 +200,7 @@ const AiHealthTrackerPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    
   )
 }
 

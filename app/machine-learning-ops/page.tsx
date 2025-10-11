@@ -1,11 +1,14 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Helmet } from 'react-helmet-async';
 import { Brain, Zap, CheckCircle, ArrowRight, Star, Users, BarChart, Shield, Target, Clock } from 'lucide-react';
 
 const MachineLearningOpsPage: React.FC = () => {
   return (
-    <>
+    <div>
       <Helmet>
         <title>MLOps & AI Operations | Zion Tech Group</title>
         <meta name="description" content="Complete MLOps and AI operations services with model deployment, monitoring, and lifecycle management for production AI systems." />
@@ -157,7 +160,7 @@ const MachineLearningOpsPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    
   );
 };
 

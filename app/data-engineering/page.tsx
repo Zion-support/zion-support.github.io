@@ -1,11 +1,14 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Helmet } from 'react-helmet-async';
 import { Brain, Zap, CheckCircle, ArrowRight, Star, Users, BarChart, Shield, Target, Clock } from 'lucide-react';
 
 const DataEngineeringPage: React.FC = () => {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Data Engineering | Zion Tech Group</title>
         <meta name="description" content="Comprehensive data engineering services with pipeline development, data warehousing, and advanced data processing solutions." />
@@ -157,7 +160,7 @@ const DataEngineeringPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    
   );
 };
 

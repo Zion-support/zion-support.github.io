@@ -44,7 +44,7 @@ const AiLeadScoringPage: React.FC = () => {
   ]
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>AI Lead Scoring - Zion Tech Group</title>
         <meta name="description" content="Intelligent lead scoring powered by AI. Automatically score and prioritize leads to improve conversion rates and sales efficiency." />
@@ -200,7 +200,7 @@ const AiLeadScoringPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    
   )
 }
 

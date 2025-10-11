@@ -11,6 +11,11 @@ const EnhancedPerformanceOptimizer: React.FC<EnhancedPerformanceOptimizerProps> 
     if (typeof window !== 'undefined') {
       // Preload critical resources
       const preloadCriticalResources = () => {
+  return (
+    <div>
+      {/* Content */}
+    </div>
+  );
         const criticalImages = [
           '/images/hero-bg.jpg',
           '/images/logo.png'
@@ -48,7 +53,7 @@ const EnhancedPerformanceOptimizer: React.FC<EnhancedPerformanceOptimizerProps> 
     }
   }, [])
 
-  return <>{children}</>
+  return {children}
 }
 
 export default EnhancedPerformanceOptimizer

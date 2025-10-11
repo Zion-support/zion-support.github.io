@@ -3,6 +3,9 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 import { CheckCircle, Brain, BarChart, Target, TrendingUp, Zap, Eye, Users } from 'lucide-react';
 
 const AIAnalyticsPage: React.FC = () => {
@@ -45,8 +48,8 @@ const AIAnalyticsPage: React.FC = () => {
   ];
 
 return (
-    <>
-  </>
+    
+  
       <Helmet>
         <title>Ai Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai analytics solution for modern businesses." />
@@ -79,7 +82,7 @@ return (
     {title: 'Risk Management',
       description: 'Identify and mitigate business risks proactively',
   return (
-    <>
+    <div>
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
       </Helmet>
@@ -102,11 +105,11 @@ return (
   );
 }
       </main>
-    </>
+    
   );
 }
       </main>
-    </>
+    
   );
 }
         {/* Features Section */}
@@ -153,4 +156,4 @@ return (
         </section>
       </main>
       <Footer />
-    </>
+    

@@ -2,6 +2,7 @@ const features = [
     {icon: Brain,
       title: 'AI-Powered Solutions',
 const benefits = [
+    // Add items here
   ]
   const benefits = [
     'Advanced AI technology integration',

@@ -1,11 +1,14 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Helmet } from 'react-helmet-async';
 import { Brain, Zap, CheckCircle, ArrowRight, Star, Users, BarChart, Shield, Target, Clock, Cpu } from 'lucide-react';
 
 const ZionAISurveyBuilderPage: React.FC = () => {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Zion AI Survey Builder | Zion Tech Group</title>
         <meta name="description" content="Intelligent survey creation with AI-powered question generation, response analysis, and automated survey insights." />
@@ -239,7 +242,7 @@ const ZionAISurveyBuilderPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    
   );
 };
 

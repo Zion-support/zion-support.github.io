@@ -1,4 +1,5 @@
   const features = [
+    // Add items here
   ]
   const benefits = [
     'Enterprise-grade security and compliance',
@@ -49,7 +50,6 @@
 
               Email Us
   </
->>>>>>> main
           </div>
         </div>
         <div className="text-center">

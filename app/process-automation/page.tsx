@@ -36,6 +36,7 @@ const ProcessAutomationPage: React.FC = () => {,
     {icon: BarChart,
       title: 'Performance Monitoring',
 const benefits = [
+    // Add items here
   ]
   const benefits = [
     'Reduce manual work and human errors',

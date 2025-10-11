@@ -30,14 +30,14 @@ const benefits = [
     'Scale operations without proportional staff increases',
   ];
 return (
-    <>
-  </>
+    
+  
       <Helmet>
         <title>Ai Customer Support - Zion Tech Group</title>
     'Gain competitive advantage with advanced technology'
   ]
 return (
-    <>
+    
       <Helmet>
         </Helmet><title>Ai Customer Support - Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
@@ -255,7 +255,6 @@ return (
               <div key={index} className="text-center">
                 <div className="flex justify-center mb-4">
                   {stat.icon}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
                 </div>
                 <div className="text-3xl md:text-4xl font-bold text-white mb-2">
                   {stat.value}
@@ -481,4 +480,3 @@ return (
 }
 
 export default AiCustomerSupportPage
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9

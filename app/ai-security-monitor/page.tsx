@@ -44,7 +44,7 @@ const AiSecurityMonitorPage: React.FC = () => {
   ]
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>AI Security Monitor - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered security monitoring and threat detection. Protect your infrastructure with intelligent security automation." />
@@ -200,7 +200,7 @@ const AiSecurityMonitorPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    
   )
 }
 

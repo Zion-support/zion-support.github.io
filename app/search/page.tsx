@@ -63,7 +63,7 @@ const SearchPage: React.FC = () => {
   }, [searchQuery]);
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>Search | Zion Tech Group</title>
         <meta name="description" content="Search through our comprehensive AI and IT solutions, services, and resources." />
@@ -198,7 +198,7 @@ const SearchPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    
   );
 };
 

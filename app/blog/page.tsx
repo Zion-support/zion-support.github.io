@@ -80,7 +80,7 @@ const BlogPage: React.FC = () => {
   ]
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>Blog - Zion Tech Group | AI & IT Insights</title>
         <meta name="description" content="Stay updated with the latest insights on AI, IT solutions, and digital transformation from Zion Tech Group experts." />
@@ -209,7 +209,7 @@ const BlogPage: React.FC = () => {
 
         <Footer />
       </div>
-    </>
+    </div>
   );
 };
 

@@ -44,7 +44,7 @@ const AIAgriculturalIntelligenceProPage: React.FC = () => {
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>AI Agricultural Intelligence Pro - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered agricultural intelligence solutions for modern farming. Optimize crop yields, monitor health, and make data-driven decisions." />
@@ -131,7 +131,7 @@ const AIAgriculturalIntelligenceProPage: React.FC = () => {
       </section>
 
       <Footer />
-    </>
+    
   );
 };
 

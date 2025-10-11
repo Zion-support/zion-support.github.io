@@ -44,7 +44,7 @@ const SystemAdministrationPage: React.FC = () => {
   ]
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>System Administration - Zion Tech Group</title>
         <meta name="description" content="Professional system administration services. Server management, monitoring, security, and optimization for your IT infrastructure." />
@@ -200,7 +200,7 @@ const SystemAdministrationPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    
   )
 }
 

@@ -224,7 +224,9 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
    */
   private getRobotsContent(): string {}
     if (!this.currentPageData) return 'index, follow'
-    const directives = []
+    const directives = [
+    // Add items here
+  ]
     if (!this.currentPageData.noindex) {}
       directives.push('noindex');}
     }

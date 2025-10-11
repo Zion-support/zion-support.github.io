@@ -6,6 +6,11 @@ const PerformanceMonitor: React.FC = () => {
     if (typeof window !== 'undefined') {
       // Monitor Core Web Vitals
       const monitorWebVitals = () => {
+  return (
+    <div>
+      {/* Content */}
+    </div>
+  );
         // Monitor Largest Contentful Paint (LCP)
         new PerformanceObserver((list) => {
           const entries = list.getEntries()

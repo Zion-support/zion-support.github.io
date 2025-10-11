@@ -1,11 +1,14 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Helmet } from 'react-helmet-async';
 import { Brain, Zap, CheckCircle, ArrowRight, Star, Users, BarChart, Shield, Target, Clock, Cpu } from 'lucide-react';
 
 const ZionAICodeReviewerPage: React.FC = () => {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Zion AI Code Reviewer | Zion Tech Group</title>
         <meta name="description" content="Automated code review and quality assurance with AI-powered analysis, bug detection, and intelligent suggestions for better code quality." />
@@ -239,7 +242,7 @@ const ZionAICodeReviewerPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    
   );
 };
 

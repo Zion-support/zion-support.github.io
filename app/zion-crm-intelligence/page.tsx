@@ -1,11 +1,14 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Helmet } from 'react-helmet-async';
 import { Brain, Zap, CheckCircle, ArrowRight, Star, Users, BarChart, Shield, Target, Clock } from 'lucide-react';
 
 const ZionCRMIntelligencePage: React.FC = () => {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Zion CRM Intelligence | Zion Tech Group</title>
         <meta name="description" content="AI-enhanced CRM system with intelligent customer insights, automated workflows, and predictive analytics for sales optimization." />
@@ -157,7 +160,7 @@ const ZionCRMIntelligencePage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    
   );
 };
 

@@ -21,7 +21,6 @@
       description: 'Interactive visualizations that update in real-time with your business data',
       details: ['Live Data Streaming', 'Custom Dashboards', 'Interactive Charts', 'Mobile Responsive']
     },
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
     {
       icon: Target,
       title: 'Predictive Modeling',
@@ -36,14 +35,14 @@ const benefits = [
     'Scale operations without proportional staff increases',
   ];
 return (
-    <>
-  </>
+    
+  
       <Helmet>
         <title>Ai Data Analytics - Zion Tech Group</title>
     'Gain competitive advantage with advanced technology'
   ]
 return (
-    <>
+    
       <Helmet>
         </Helmet><title>Ai Data Analytics - Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
@@ -463,4 +462,3 @@ return (
 }
 
 export default AiDataAnalyticsPage
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9

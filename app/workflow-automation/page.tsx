@@ -1,11 +1,14 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Helmet } from 'react-helmet-async';
 import { Brain, Zap, CheckCircle, ArrowRight, Star, Users, BarChart, Shield, Target, Clock } from 'lucide-react';
 
 const WorkflowAutomationPage: React.FC = () => {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Workflow Automation | Zion Tech Group</title>
         <meta name="description" content="Intelligent workflow automation with AI-powered process optimization, automated decision-making, and comprehensive business process management." />
@@ -157,7 +160,7 @@ const WorkflowAutomationPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    
   );
 };
 

@@ -145,6 +145,11 @@ export default AdvancedAccessibilityEnhancerPage;
   }
   }, [isHighContrast, isReducedMotion])
   const toggleHighContrast = () => {
+  return (
+    <div>
+      {/* Content */}
+    </div>
+  );
     setIsHighContrast(!isHighContrast)
     document.documentElement.classList.toggle('high-contrast')
   }

@@ -3,6 +3,7 @@
       icon: BarChart,
       title: 'Real-time Analytics',
 const benefits = [
+    // Add items here
   ]
   const benefits = [
     'Real-time data visualization and reporting',

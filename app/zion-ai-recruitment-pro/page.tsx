@@ -1,11 +1,14 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Helmet } from 'react-helmet-async';
 import { Brain, Zap, CheckCircle, ArrowRight, Star, Users, BarChart, Shield, Target, Clock, Cpu } from 'lucide-react';
 
 const ZionAIRecruitmentProPage: React.FC = () => {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Zion AI Recruitment Pro | Zion Tech Group</title>
         <meta name="description" content="Advanced recruitment automation with AI-powered candidate screening, resume analysis, and intelligent hiring workflows." />
@@ -239,7 +242,7 @@ const ZionAIRecruitmentProPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    
   );
 };
 

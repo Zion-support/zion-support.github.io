@@ -16,6 +16,7 @@
   ];
   ]
   const benefits = [
+    // Add items here
   ]
   const pricing = [
     {name: 'Starter',
@@ -106,7 +107,6 @@
               </div>
             ))}
           </div>
->>>>>>> main
 
 'use client'
 import React from 'react'

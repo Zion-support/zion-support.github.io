@@ -1,11 +1,14 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Helmet } from 'react-helmet-async';
 import { Brain, Zap, CheckCircle, ArrowRight, Star, Users, BarChart, Shield, Target, Clock } from 'lucide-react';
 
 const CloudNativeDevelopmentPage: React.FC = () => {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Cloud-Native Development | Zion Tech Group</title>
         <meta name="description" content="Build scalable, resilient applications with cloud-native development practices, microservices architecture, and container orchestration." />
@@ -157,7 +160,7 @@ const CloudNativeDevelopmentPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    
   );
 };
 

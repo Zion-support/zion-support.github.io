@@ -1,5 +1,6 @@
   const features = [
 const benefits = [
+    // Add items here
   ]
   const benefits = [
     'Advanced AI technology integration',

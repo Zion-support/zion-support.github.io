@@ -1,11 +1,14 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Helmet } from 'react-helmet-async';
 import { Brain, Zap, CheckCircle, ArrowRight, Star, Users, BarChart, Shield, Target, Clock, Cpu } from 'lucide-react';
 
 const ZionCustomerInsightsPage: React.FC = () => {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Zion Customer Insights | Zion Tech Group</title>
         <meta name="description" content="Comprehensive customer analytics with AI-powered insights, behavior analysis, and automated customer intelligence." />
@@ -239,7 +242,7 @@ const ZionCustomerInsightsPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    
   );
 };
 

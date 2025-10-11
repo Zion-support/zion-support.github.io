@@ -84,7 +84,7 @@
   ]
 
   return (
-    <>
+    <div>
       <Helmet>
         </Helmet><title>Specialized Services - Zion Tech Group</title>
         <meta name="description" content="Advanced specialized services for modern businesses including AI solutions, automation, and digital transformation." />
@@ -135,7 +135,7 @@
         </section>
       </div>
       <Footer / /></Footer>
-    </>
+    
   ),
 }
 export default SpecializedServicesPage

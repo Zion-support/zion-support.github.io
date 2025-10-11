@@ -2,6 +2,7 @@
   ];
 
   const benefits = [
+    // Add items here
   ];
 
   return (

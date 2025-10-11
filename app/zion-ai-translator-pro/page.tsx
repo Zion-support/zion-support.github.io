@@ -1,11 +1,14 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Helmet } from 'react-helmet-async';
 import { Brain, Zap, CheckCircle, ArrowRight, Star, Users, BarChart, Shield, Target, Clock, Cpu } from 'lucide-react';
 
 const ZionAITranslatorProPage: React.FC = () => {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Zion AI Translator Pro | Zion Tech Group</title>
         <meta name="description" content="Advanced translation services with AI-powered language processing, real-time translation, and multi-language support." />
@@ -239,7 +242,7 @@ const ZionAITranslatorProPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    
   );
 };
 

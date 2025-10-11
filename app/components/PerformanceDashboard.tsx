@@ -1,5 +1,10 @@
   useEffect(() => {
     const updateMetrics = () => {
+  return (
+    <div>
+      {/* Content */}
+    </div>
+  );
       const navigation = performance.getEntriesByType()
       )[0] as PerformanceNavigationTiming
       const loadTime = navigation

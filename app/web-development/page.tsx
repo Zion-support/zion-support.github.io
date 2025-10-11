@@ -5,7 +5,7 @@ const process = [
     }
   ];
 return (
-    <>
+    
       <SEOOptimizer;
         title="Web Development Services - Zion Tech Group";
         description="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern technologies and best practices.";
@@ -155,7 +155,7 @@ const WebDevelopmentPage: React.FC = () => {,
         </div>
       </section>
 
-    </>);
+    );
 };
 
 export default WebDevelopmentPage;

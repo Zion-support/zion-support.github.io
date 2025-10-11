@@ -1,11 +1,14 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Helmet } from 'react-helmet-async';
 import { Brain, Zap, CheckCircle, ArrowRight, Star, Users, BarChart, Shield, Target, Clock } from 'lucide-react';
 
 const AIPredictiveModelingPage: React.FC = () => {
   return (
-    <>
+    <div>
       <Helmet>
         <title>AI Predictive Modeling | Zion Tech Group</title>
         <meta name="description" content="Advanced predictive modeling with machine learning algorithms to forecast trends, behaviors, and outcomes for data-driven decisions." />
@@ -157,7 +160,7 @@ const AIPredictiveModelingPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    
   );
 };
 

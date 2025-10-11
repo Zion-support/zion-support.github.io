@@ -1,11 +1,14 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Helmet } from 'react-helmet-async';
 import { Brain, Zap, CheckCircle, ArrowRight, Star, Users, BarChart, Shield, Target, Clock } from 'lucide-react';
 
 const DataVisualizationPage: React.FC = () => {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Data Visualization | Zion Tech Group</title>
         <meta name="description" content="Advanced data visualization solutions with interactive dashboards, real-time analytics, and comprehensive business intelligence tools." />
@@ -157,7 +160,7 @@ const DataVisualizationPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    
   );
 };
 

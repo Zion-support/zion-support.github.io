@@ -1,11 +1,14 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Helmet } from 'react-helmet-async';
 import { Brain, Zap, CheckCircle, ArrowRight, Star, Users, BarChart, Shield, Target, Clock } from 'lucide-react';
 
 const AIVideoAnalysisPage: React.FC = () => {
   return (
-    <>
+    <div>
       <Helmet>
         <title>AI Video Analysis | Zion Tech Group</title>
         <meta name="description" content="Advanced video content analysis with AI-powered object detection, scene recognition, and automated video processing capabilities." />
@@ -157,7 +160,7 @@ const AIVideoAnalysisPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    
   );
 };
 

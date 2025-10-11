@@ -1,5 +1,8 @@
 'use client';
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 import {Helmet}}from 'react-helmet-async';
 import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
 const AdvancedAnalyticsPage: React.FC = () => {,
@@ -22,6 +25,7 @@ const AdvancedAnalyticsPage: React.FC = () => {
     {icon: Globe,
       title: 'Global Reach',
 const benefits = [
+    // Add items here
   ]
   const benefits = [
 'use client'

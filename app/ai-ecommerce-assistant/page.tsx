@@ -44,7 +44,7 @@ const AiEcommerceAssistantPage: React.FC = () => {
   ]
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>AI E-commerce Assistant - Zion Tech Group</title>
         <meta name="description" content="Boost your e-commerce sales with AI-powered automation. Smart recommendations, pricing optimization, and customer insights." />
@@ -200,7 +200,7 @@ const AiEcommerceAssistantPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    
   )
 }
 

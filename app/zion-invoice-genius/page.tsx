@@ -1,11 +1,14 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Helmet } from 'react-helmet-async';
 import { Brain, Zap, CheckCircle, ArrowRight, Star, Users, BarChart, Shield, Target, Clock } from 'lucide-react';
 
 const ZionInvoiceGeniusPage: React.FC = () => {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Zion Invoice Genius | Zion Tech Group</title>
         <meta name="description" content="AI-powered invoice generation and management with automated billing, payment tracking, and comprehensive financial reporting." />
@@ -157,7 +160,7 @@ const ZionInvoiceGeniusPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    
   );
 };
 

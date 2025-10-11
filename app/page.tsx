@@ -340,8 +340,6 @@ const HomePage: React.FC = () => {
               </ul>
             </article>
           </div>
-<<<<<<< HEAD
-=======
           
           <div className="text-center mt-8">
             <a 
@@ -351,7 +349,6 @@ const HomePage: React.FC = () => {
               View All Services
             </a>
           </div>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7c5e
         </section>
 
         {/* Statistics Section */}

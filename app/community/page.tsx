@@ -9,6 +9,7 @@ import { Users, MessageCircle, Calendar, Star, ArrowRight, ExternalLink, Mail, P
 const CommunityPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('overview')
   const communityStats = [
+    // Add items here
   ]
   const events = [
     {title: 'AI Development Workshop',

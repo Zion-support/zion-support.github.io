@@ -44,7 +44,7 @@ const ItProjectManagementPage: React.FC = () => {
   ]
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>IT Project Management - Zion Tech Group</title>
         <meta name="description" content="Professional IT project management services. Expert planning, execution, and delivery of technology projects." />
@@ -200,7 +200,7 @@ const ItProjectManagementPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    
   )
 }
 

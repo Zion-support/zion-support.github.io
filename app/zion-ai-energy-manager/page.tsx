@@ -1,11 +1,14 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Helmet } from 'react-helmet-async';
 import { Brain, Zap, CheckCircle, ArrowRight, Star, Users, BarChart, Shield, Target, Clock, Cpu } from 'lucide-react';
 
 const ZionAIEnergyManagerPage: React.FC = () => {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Zion AI Energy Manager | Zion Tech Group</title>
         <meta name="description" content="Smart energy management with AI-powered optimization, consumption analysis, and automated energy efficiency recommendations." />
@@ -239,7 +242,7 @@ const ZionAIEnergyManagerPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    
   );
 };
 

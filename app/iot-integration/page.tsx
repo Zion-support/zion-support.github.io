@@ -1,11 +1,14 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Helmet } from 'react-helmet-async';
 import { Brain, Zap, CheckCircle, ArrowRight, Star, Users, BarChart, Shield, Target, Clock } from 'lucide-react';
 
 const IoTIntegrationPage: React.FC = () => {
   return (
-    <>
+    <div>
       <Helmet>
         <title>IoT Integration | Zion Tech Group</title>
         <meta name="description" content="Seamless IoT integration services to connect devices, systems, and platforms for unified IoT ecosystem management." />
@@ -157,7 +160,7 @@ const IoTIntegrationPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    
   );
 };
 

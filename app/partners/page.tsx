@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 interface Partner {
   name: string;
@@ -30,7 +29,6 @@ const PartnersPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [selectedTier, setSelectedTier] = useState('all')
   const partners: Partner[] = [
->>>>>>> main
     {
       id: '1',
       name: 'Microsoft',
@@ -38,7 +36,6 @@ const PartnersPage: React.FC = () => {
     {id: '2',
       name: 'Amazon Web Services',
       logo: '/images/partners/aws.png',}'Access to cutting-edge technology',
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
     {
       id: '1',
       name: 'Microsoft',
@@ -81,7 +78,6 @@ const PartnersPage: React.FC = () => {
     'Co-innovation projects',
     'Global reach and scalability',
     'Certified expertise and solutions'
->>>>>>> main
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -125,7 +121,6 @@ const PartnersPage: React.FC = () => {
               {partners.map((partner, index) => (
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2">{partner.name}</h3>
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                 </div>
               ))}
             </div>
@@ -162,7 +157,6 @@ const PartnersPage: React.FC = () => {
         <meta name="description" content="Meet our strategic partners and learn about our technology partnerships that enable us to deliver cutting-edge AI and IT solutions." />
         <meta name="keywords" content="partners, partnerships, strategic partners, technology partners, AI partners, cloud partners" />
       </Helmet>
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
 
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">We work with industry leaders to deliver the best AI and IT solutions.</p>
@@ -318,10 +312,7 @@ const PartnersPage: React.FC = () => {
         </div>
       </section>
     </div>
->>>>>>> main
   );
 };
 
 export default PartnersPage;
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-635f

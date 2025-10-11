@@ -1,11 +1,14 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Helmet } from 'react-helmet-async';
 import { Brain, Zap, CheckCircle, ArrowRight, Star, Users, BarChart, Shield, Target, Clock } from 'lucide-react';
 
 const AIConversationAnalyticsPage: React.FC = () => {
   return (
-    <>
+    <div>
       <Helmet>
         <title>AI Conversation Analytics | Zion Tech Group</title>
         <meta name="description" content="Advanced conversation analysis and insights powered by AI to understand customer interactions, sentiment, and optimize communication strategies." />
@@ -157,7 +160,7 @@ const AIConversationAnalyticsPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    
   );
 };
 

@@ -163,7 +163,7 @@ export default PagePage
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
               </button>
-    <>
+    
       <Helmet>
         </Helmet><title>Smart City Infrastructure - Zion Tech Group</title>
         <meta name="description" content="Advanced smart city infrastructure solutions including IoT networks, data analytics, and digital transformation for modern cities." />
@@ -231,7 +231,7 @@ export default PagePage
         </section>
       </div>
       <Footer /></Footer>
-    </>
+    
   ),
 }
 export default SmartCityInfrastructurePage

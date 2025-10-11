@@ -35,6 +35,7 @@ const EmailMarketingAutomationPage: React.FC = () => {,
     {icon: Zap,
       title: 'Smart Triggers',
 const benefits = [
+    // Add items here
   ]
   const benefits = [
     'Increase email engagement rates',

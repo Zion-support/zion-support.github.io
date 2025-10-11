@@ -1,11 +1,14 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Helmet } from 'react-helmet-async';
 import { Brain, Zap, CheckCircle, ArrowRight, Star, Users, BarChart, Shield, Target, Clock } from 'lucide-react';
 
 const ZionDataSyncPage: React.FC = () => {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Zion Data Sync | Zion Tech Group</title>
         <meta name="description" content="Automated data integration platform with real-time synchronization, data transformation, and comprehensive data management." />
@@ -157,7 +160,7 @@ const ZionDataSyncPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    
   );
 };
 

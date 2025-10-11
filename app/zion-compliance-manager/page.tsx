@@ -1,11 +1,14 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Helmet } from 'react-helmet-async';
 import { Brain, Zap, CheckCircle, ArrowRight, Star, Users, BarChart, Shield, Target, Clock } from 'lucide-react';
 
 const ZionComplianceManagerPage: React.FC = () => {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Zion Compliance Manager | Zion Tech Group</title>
         <meta name="description" content="Automated compliance management system with regulatory monitoring, automated reporting, and comprehensive compliance tracking." />
@@ -157,7 +160,7 @@ const ZionComplianceManagerPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    
   );
 };
 

@@ -44,7 +44,7 @@ const MobileAppDevelopmentPage: React.FC = () => {
   ]
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>Mobile App Development - Zion Tech Group</title>
         <meta name="description" content="Professional mobile app development for iOS and Android. Custom solutions with native performance and modern design." />
@@ -200,7 +200,7 @@ const MobileAppDevelopmentPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    
   )
 }
 

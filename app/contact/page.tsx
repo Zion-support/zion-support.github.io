@@ -27,7 +27,7 @@ const ContactPage: React.FC = () => {
   }
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>Contact Us - Zion Tech Group | AI & IT Solutions</title>
         <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact our experts to discuss your digital transformation needs." />
@@ -162,7 +162,7 @@ const ContactPage: React.FC = () => {
         
         <Footer />
       </div>
-    </>
+    </div>
   )
 }
 

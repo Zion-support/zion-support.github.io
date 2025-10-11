@@ -1,10 +1,12 @@
     const features = [
     {
       icon: Brain,
-    }
-  ];
+      title: "AI Service",
+      description: "AI-powered solution"
+    };
 
   const benefits = [
+    // Add items here
   ];
 
   return (

@@ -44,7 +44,7 @@ const ItInfrastructureDesignPage: React.FC = () => {
   ]
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>IT Infrastructure Design - Zion Tech Group</title>
         <meta name="description" content="Professional IT infrastructure design and architecture. Scalable, secure, and optimized solutions for your business needs." />
@@ -200,7 +200,7 @@ const ItInfrastructureDesignPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    
   )
 }
 

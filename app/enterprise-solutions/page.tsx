@@ -44,7 +44,7 @@ const EnterpriseSolutionsPage: React.FC = () => {
   ]
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>Enterprise Solutions - Zion Tech Group</title>
         <meta name="description" content="Comprehensive enterprise solutions for large organizations. Scalable, secure, and integrated technology solutions." />
@@ -200,7 +200,7 @@ const EnterpriseSolutionsPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    
   )
 }
 

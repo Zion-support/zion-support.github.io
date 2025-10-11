@@ -37,6 +37,7 @@ const PenetrationTestingPage: React.FC = () => {,
     {icon: Zap,
       title: 'Expert Security Analysis',
 const benefits = [
+    // Add items here
   ]
   const benefits = [
     'Identify security vulnerabilities before attackers do',

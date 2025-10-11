@@ -1,11 +1,14 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Helmet } from 'react-helmet-async';
 import { Brain, Zap, CheckCircle, ArrowRight, Star, Users, BarChart, Shield, Target, Clock, Cpu } from 'lucide-react';
 
 const ZionAIMeetingAssistantPage: React.FC = () => {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Zion AI Meeting Assistant | Zion Tech Group</title>
         <meta name="description" content="Smart meeting management with AI-powered scheduling, automated note-taking, and intelligent meeting insights." />
@@ -239,7 +242,7 @@ const ZionAIMeetingAssistantPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    
   );
 };
 

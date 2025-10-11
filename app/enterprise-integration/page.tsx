@@ -1,11 +1,14 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Helmet } from 'react-helmet-async';
 import { Brain, Zap, CheckCircle, ArrowRight, Star, Users, BarChart, Shield, Target, Clock } from 'lucide-react';
 
 const EnterpriseIntegrationPage: React.FC = () => {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Enterprise Integration | Zion Tech Group</title>
         <meta name="description" content="Seamless enterprise system integration with API management, data synchronization, and comprehensive workflow automation." />
@@ -157,7 +160,7 @@ const EnterpriseIntegrationPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    
   );
 };
 

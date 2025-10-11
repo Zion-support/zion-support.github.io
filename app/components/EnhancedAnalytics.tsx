@@ -9,6 +9,11 @@ interface AnalyticsContextType {
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined)
 
 export const useAnalytics = () => {
+  return (
+    <div>
+      {/* Content */}
+    </div>
+  );
   const context = useContext(AnalyticsContext)
   if (!context) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider')

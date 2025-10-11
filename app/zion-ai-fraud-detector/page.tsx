@@ -1,11 +1,14 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Helmet } from 'react-helmet-async';
 import { Brain, Zap, CheckCircle, ArrowRight, Star, Users, BarChart, Shield, Target, Clock, Cpu } from 'lucide-react';
 
 const ZionAIFraudDetectorPage: React.FC = () => {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Zion AI Fraud Detector | Zion Tech Group</title>
         <meta name="description" content="Advanced fraud detection with AI-powered analysis, real-time monitoring, and automated fraud prevention for secure transactions." />
@@ -239,7 +242,7 @@ const ZionAIFraudDetectorPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    
   );
 };
 

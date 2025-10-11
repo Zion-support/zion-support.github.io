@@ -201,13 +201,13 @@ interface FormStatus {
             className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
           >
             {status.type === 'loading' ? (
-              <>
+              
                 <div className="h-5 w-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
                 <span>Sending...</span>
 
             ) : (
-              <>
-  </>
+              
+  
                 <Send className="h-5 w-5" />
                 <span>Send Message</span>
 
@@ -293,15 +293,15 @@ interface FormStatus {
           className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 disabled:from-gray-500 disabled:to-gray-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 disabled:scale-100 disabled:cursor-not-allowed flex items-center justify-center"
         >
           {isSubmitting ? (
-            <>
+            
               <Loader2 className="w-5 h-5 mr-2 animate-spin" />
               Sending...
-            </>
+            
           ) : (
-            <>
+            
               <Send className="w-5 h-5 mr-2" />
               Send Message
-            </>
+            
           )}
         </button>
       </form>

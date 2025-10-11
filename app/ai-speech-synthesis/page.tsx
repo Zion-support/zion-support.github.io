@@ -1,11 +1,14 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Helmet } from 'react-helmet-async';
 import { Brain, Zap, CheckCircle, ArrowRight, Star, Users, BarChart, Shield, Target, Clock } from 'lucide-react';
 
 const AISpeechSynthesisPage: React.FC = () => {
   return (
-    <>
+    <div>
       <Helmet>
         <title>AI Speech Synthesis | Zion Tech Group</title>
         <meta name="description" content="Natural-sounding speech synthesis with AI-powered text-to-speech technology for applications, accessibility, and multimedia content." />
@@ -157,7 +160,7 @@ const AISpeechSynthesisPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    
   );
 };
 

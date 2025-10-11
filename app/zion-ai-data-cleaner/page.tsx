@@ -1,11 +1,14 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Helmet } from 'react-helmet-async';
 import { Brain, Zap, CheckCircle, ArrowRight, Star, Users, BarChart, Shield, Target, Clock, Cpu } from 'lucide-react';
 
 const ZionAIDataCleanerPage: React.FC = () => {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Zion AI Data Cleaner | Zion Tech Group</title>
         <meta name="description" content="Intelligent data cleaning and validation with AI-powered data quality assessment, automated cleaning, and data standardization." />
@@ -239,7 +242,7 @@ const ZionAIDataCleanerPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    
   );
 };
 

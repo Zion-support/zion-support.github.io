@@ -1,11 +1,14 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Helmet } from 'react-helmet-async';
 import { Brain, Zap, CheckCircle, ArrowRight, Star, Users, BarChart, Shield, Target, Clock, Cpu } from 'lucide-react';
 
 const ZionAIContractAnalyzerPage: React.FC = () => {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Zion AI Contract Analyzer | Zion Tech Group</title>
         <meta name="description" content="Intelligent contract analysis with AI-powered review, risk assessment, and automated contract management for legal compliance." />
@@ -239,7 +242,7 @@ const ZionAIContractAnalyzerPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    
   );
 };
 

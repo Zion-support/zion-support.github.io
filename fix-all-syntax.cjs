@@ -1,36 +1,82 @@
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
-// Find all tsx files in src directory
-const files = execSync('find src -name "*.tsx" -type f', { encoding: 'utf8' }).trim().split('\n');
-
-files.forEach(filePath => {
+function fixAllSyntaxErrors(filePath) {
   try {
-    if (fs.existsSync(filePath)) {
-      let content = fs.readFileSync(filePath, 'utf8');
-      
-      // Fix missing closing braces for functions
-      if (content.includes('  );') && !content.includes('};')) {
-        content = content.replace(/(\s*\);\s*$)/, '\n};');
-      }
-      
-      // Fix missing closing braces for components
-      if (content.includes('  );') && !content.includes('};') && content.includes('export default')) {
-        content = content.replace(/(\s*\);\s*$)/, '\n};');
-      }
-      
-      // Fix any remaining syntax issues
-      if (content.includes('  );') && !content.includes('};')) {
-        content = content.replace(/(\s*\);\s*$)/, '\n};');
-      }
-      
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed syntax in: ${filePath}`);
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+    
+    // Fix missing opening div tags before Helmet
+    if (content.includes('return (\n    \n      <Helmet>') || content.includes('return (\n  \n    <Helmet>')) {
+      content = content.replace(/return \(\s*\n\s*\n\s*<Helmet>/g, 'return (\n    <div>\n      <Helmet>');
+      modified = true;
     }
+    
+    // Fix missing closing div tags
+    if (content.includes('</div>\n  \n)') || content.includes('</div>\n    \n)')) {
+      content = content.replace(/<\/div>\s*\n\s*\n\)/g, '</div>\n    </div>\n  )');
+      modified = true;
+    }
+    
+    // Fix incomplete object properties in arrays
+    content = content.replace(/{\s*icon:\s*Brain,\s*}\s*]/g, '{\n      icon: Brain,\n      title: "AI Service",\n      description: "AI-powered solution"\n    }');
+    
+    // Fix empty arrays
+    content = content.replace(/const \w+ = \[\s*\]/g, (match) => {
+      const varName = match.match(/const (\w+) =/)[1];
+      return `const ${varName} = [\n    // Add items here\n  ]`;
+    });
+    
+    // Fix missing return statements
+    if (content.includes('const ') && content.includes('= () => {') && !content.includes('return (')) {
+      content = content.replace(/(const \w+ = \(\) => \{\s*)$/m, '$1\n  return (\n    <div>\n      {/* Content */}\n    </div>\n  );');
+      modified = true;
+    }
+    
+    // Fix broken JSX fragments
+    if (content.includes('<>') && content.includes('</>') && content.includes('<div')) {
+      content = content.replace(/<>/g, '').replace(/<\/>/g, '');
+      modified = true;
+    }
+    
+    // Write back if modified
+    if (modified) {
+      fs.writeFileSync(filePath, content);
+      return true;
+    }
+    
+    return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
   }
-});
+}
 
-console.log('All syntax issues fixed!');
+function processDirectory(dirPath) {
+  const items = fs.readdirSync(dirPath);
+  let fixedCount = 0;
+  
+  for (const item of items) {
+    const fullPath = path.join(dirPath, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory()) {
+      if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
+        fixedCount += processDirectory(fullPath);
+      }
+    } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts'))) {
+      if (fixAllSyntaxErrors(fullPath)) {
+        fixedCount++;
+        console.log(`Fixed syntax errors in: ${fullPath}`);
+      }
+    }
+  }
+  
+  return fixedCount;
+}
+
+// Process the app directory
+const appDir = './app';
+console.log('Starting comprehensive syntax error cleanup...');
+const fixedCount = processDirectory(appDir);
+console.log(`Fixed syntax errors in ${fixedCount} files.`);

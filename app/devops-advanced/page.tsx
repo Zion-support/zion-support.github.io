@@ -1,11 +1,14 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Helmet } from 'react-helmet-async';
 import { Brain, Zap, CheckCircle, ArrowRight, Star, Users, BarChart, Shield, Target, Clock } from 'lucide-react';
 
 const DevOpsAdvancedPage: React.FC = () => {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Advanced DevOps & SRE | Zion Tech Group</title>
         <meta name="description" content="Enterprise DevOps and Site Reliability Engineering with advanced automation, monitoring, and continuous improvement practices." />
@@ -157,7 +160,7 @@ const DevOpsAdvancedPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    
   );
 };
 

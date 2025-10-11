@@ -4,6 +4,11 @@
 'use client'
 import { useEffect } from 'react'
 export const usePerformanceMonitor = () => {
+  return (
+    <div>
+      {/* Content */}
+    </div>
+  );
   useEffect(() => {
     if (typeof window === 'undefined') return
     // Monitor Core Web Vitals

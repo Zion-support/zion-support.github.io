@@ -37,6 +37,7 @@ const SecurityMonitoringSuitePage: React.FC = () => {,
     {icon: Zap,
       title: 'Automated Response',
 const benefits = [
+    // Add items here
   ]
   const benefits = [
     '24/7 security monitoring and protection',

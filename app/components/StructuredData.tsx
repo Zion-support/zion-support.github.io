@@ -1,5 +1,10 @@
   type = 'Organization', 
   data;}) => {const getDefaultData = () => {
+  return (
+    <div>
+      {/* Content */}
+    </div>
+  );
     switch (type) {
       case 'Organization':
         return {"@context": "https://schema.org",}

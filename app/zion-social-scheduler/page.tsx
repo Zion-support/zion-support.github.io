@@ -1,11 +1,14 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Helmet } from 'react-helmet-async';
 import { Brain, Zap, CheckCircle, ArrowRight, Star, Users, BarChart, Shield, Target, Clock } from 'lucide-react';
 
 const ZionSocialSchedulerPage: React.FC = () => {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Zion Social Scheduler | Zion Tech Group</title>
         <meta name="description" content="AI-powered social media management with automated posting, content optimization, and comprehensive social media analytics." />
@@ -157,7 +160,7 @@ const ZionSocialSchedulerPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    
   );
 };
 

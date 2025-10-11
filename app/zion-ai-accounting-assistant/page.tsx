@@ -1,11 +1,14 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Helmet } from 'react-helmet-async';
 import { Brain, Zap, CheckCircle, ArrowRight, Star, Users, BarChart, Shield, Target, Clock, Cpu } from 'lucide-react';
 
 const ZionAIAccountingAssistantPage: React.FC = () => {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Zion AI Accounting Assistant | Zion Tech Group</title>
         <meta name="description" content="Intelligent accounting automation with AI-powered bookkeeping, financial analysis, and automated reporting for streamlined financial management." />
@@ -239,7 +242,7 @@ const ZionAIAccountingAssistantPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    
   );
 };
 

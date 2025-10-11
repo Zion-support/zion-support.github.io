@@ -1,11 +1,14 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Helmet } from 'react-helmet-async';
 import { Brain, Zap, CheckCircle, ArrowRight, Star, Users, BarChart, Shield, Target, Clock } from 'lucide-react';
 
 const BlockchainDevelopmentPage: React.FC = () => {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Blockchain Development | Zion Tech Group</title>
         <meta name="description" content="Comprehensive blockchain development services including smart contracts, DeFi applications, and enterprise blockchain solutions." />
@@ -157,7 +160,7 @@ const BlockchainDevelopmentPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    
   );
 };
 

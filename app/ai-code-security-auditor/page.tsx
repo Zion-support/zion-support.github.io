@@ -181,7 +181,6 @@ const AiCodeSecurityAuditorPage: React.FC = () => {
 };
 
 export default AiCodeSecurityAuditorPage;
->>>>>>> main
       {/* CTA Section */}
       <section className="py-20 px-4">
         </section>< className="$2 />

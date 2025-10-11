@@ -1,11 +1,14 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Helmet } from 'react-helmet-async';
 import { MessageCircle, Brain, Shield, Users, Zap, CheckCircle, ArrowRight, Star, BarChart, Globe, Lock, Target } from 'lucide-react';
 
 const AIChatbotEnterprisePage: React.FC = () => {
   return (
-    <>
+    <div>
       <Helmet>
         <title>AI Enterprise Chatbot | Zion Tech Group</title>
         <meta name="description" content="Deploy enterprise-grade AI chatbots with advanced natural language processing, multi-channel support, and seamless integration for large-scale customer service operations." />
@@ -325,7 +328,7 @@ const AIChatbotEnterprisePage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    
   );
 };
 

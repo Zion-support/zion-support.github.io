@@ -1,11 +1,14 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Helmet } from 'react-helmet-async';
 import { Brain, Zap, CheckCircle, ArrowRight, Star, Users, BarChart, Shield, Target, Clock } from 'lucide-react';
 
 const ZionProjectMasterPage: React.FC = () => {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Zion Project Master | Zion Tech Group</title>
         <meta name="description" content="Intelligent project management platform with AI-powered planning, resource optimization, and automated project tracking." />
@@ -157,7 +160,7 @@ const ZionProjectMasterPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    
   );
 };
 

@@ -52,11 +52,12 @@ const AIContentWriterPage: React.FC = () => {
     },
   ]
   const benefits = [
+    // Add items here
   ];
 
   return (
-    <>
-  </>
+    
+  
       <Helmet>
         <title>Ai Content Writer - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai content writer solution for modern businesses." />

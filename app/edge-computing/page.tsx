@@ -51,6 +51,7 @@ const services = [
     {icon: '📱',
       title: 'Mobile Edge',
 const benefits = [
+    // Add items here
   ]
   const benefits = [
     'Ultra-Low Latency',

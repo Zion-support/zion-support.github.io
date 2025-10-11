@@ -36,6 +36,7 @@ const ProjectManagementProPage: React.FC = () => {,
     {icon: Zap,
       title: 'Automation',
 const benefits = [
+    // Add items here
   ]
   const benefits = [
     'Improve project delivery times',

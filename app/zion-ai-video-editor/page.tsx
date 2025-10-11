@@ -1,11 +1,14 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { Helmet } from 'react-helmet-async';
 import { Brain, Zap, CheckCircle, ArrowRight, Star, Users, BarChart, Shield, Target, Clock, Cpu } from 'lucide-react';
 
 const ZionAIVideoEditorPage: React.FC = () => {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Zion AI Video Editor | Zion Tech Group</title>
         <meta name="description" content="Intelligent video editing with AI-powered automation, smart cuts, and automated video production for content creators." />
@@ -239,7 +242,7 @@ const ZionAIVideoEditorPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    
   );
 };
 

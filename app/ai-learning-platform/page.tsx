@@ -44,7 +44,7 @@ const AiLearningPlatformPage: React.FC = () => {
   ]
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>AI Learning Platform - Zion Tech Group</title>
         <meta name="description" content="Intelligent learning platform powered by AI. Personalized education, adaptive assessments, and skill development for individuals and organizations." />
@@ -200,7 +200,7 @@ const AiLearningPlatformPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+    
   )
 }
 
