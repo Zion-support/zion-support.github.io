@@ -64,6 +64,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-gray-900 text-white">
+<<<<<<< HEAD
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
 <<<<<<< HEAD
         {/* Main Footer Content */}
@@ -74,12 +75,20 @@ export default function Footer() {
 >>>>>>> cursor/fix-errors-and-merge-to-main-099c
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center space-x-2">
+=======
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+          {/* Company Info */}
+          <div className="lg:col-span-2">
+            <div className="flex items-center space-x-2 mb-4">
+>>>>>>> cursor/fix-errors-and-merge-to-main-fec5
               <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">Z</span>
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-59b6
               </div>
               <span className="text-xl font-bold">Zion Tech Group</span>
             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <p className="text-gray-400 mb-4">
               Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.
@@ -101,10 +110,30 @@ export default function Footer() {
               <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
                 <Twitter className="w-5 h-5" />
               </a>
+=======
+            <p className="text-gray-300 mb-6 max-w-md">
+              Leading provider of AI-powered solutions, 5G implementation, and enterprise IT services. 
+              Transform your business with cutting-edge technology.
+            </p>
+            <div className="space-y-3">
+              <div className="flex items-center text-gray-300">
+                <Mail className="w-4 h-4 mr-3" />
+                <span>contact@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center text-gray-300">
+                <Phone className="w-4 h-4 mr-3" />
+                <span>+1 (555) 123-4567</span>
+              </div>
+              <div className="flex items-center text-gray-300">
+                <MapPin className="w-4 h-4 mr-3" />
+                <span>123 Tech Street, Innovation City, IC 12345</span>
+              </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-fec5
             </div>
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-59b6
           </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
@@ -169,6 +198,45 @@ export default function Footer() {
           {/* IT Services */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">IT Services</h3>
+=======
+          {/* Services */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Services</h3>
+            <ul className="space-y-2">
+              {services.map((service, index) => (
+                <li key={index}>
+                  <Link 
+                    to={service.path} 
+                    className="text-gray-300 hover:text-purple-300 transition-colors"
+                  >
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul className="space-y-2">
+              {quickLinks.map((link, index) => (
+                <li key={index}>
+                  <Link 
+                    to={link.path} 
+                    className="text-gray-300 hover:text-purple-300 transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Resources</h3>
+>>>>>>> cursor/fix-errors-and-merge-to-main-fec5
             <ul className="space-y-2">
               <li>
                 <Link to="/it-services" className="text-gray-400 hover:text-white transition-colors text-sm font-semibold">
@@ -183,9 +251,17 @@ export default function Footer() {
               {services.slice(0, 6).map((service, index) => (
 >>>>>>> cursor/fix-errors-and-merge-to-main-099c
                 <li key={index}>
+<<<<<<< HEAD
                   <Link to={service.path} className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group">
                     {service.name}
                     <ArrowRight className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+=======
+                  <Link 
+                    to={resource.path} 
+                    className="text-gray-300 hover:text-purple-300 transition-colors"
+                  >
+                    {resource.name}
+>>>>>>> cursor/fix-errors-and-merge-to-main-fec5
                   </Link>
                 </li>
               ))}
@@ -194,6 +270,7 @@ export default function Footer() {
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* Micro SAAS Services */}
         <div className="mb-12">
           <h3 className="text-lg font-semibold mb-4">Micro SAAS Services</h3>
@@ -257,18 +334,22 @@ export default function Footer() {
             © 2024 Zion Tech Group. All rights reserved.
           </p>
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fec5
         {/* Newsletter Signup */}
-        <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-lg p-6 mb-8">
-          <div className="text-center">
-            <h3 className="text-xl font-semibold text-white mb-2">Stay Updated</h3>
-            <p className="text-gray-300 text-sm mb-4">Get the latest insights on AI, technology trends, and industry updates.</p>
-            <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+        <div className="border-t border-gray-800 mt-12 pt-8">
+          <div className="max-w-md mx-auto text-center">
+            <h3 className="text-lg font-semibold mb-4">Stay Updated</h3>
+            <p className="text-gray-300 mb-4">
+              Get the latest updates on AI technology and IT solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-2">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
               />
-              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
+              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
                 Subscribe
                 <ArrowRight className="w-4 h-4 ml-2" />
               </button>
@@ -276,6 +357,7 @@ export default function Footer() {
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* Bottom Footer */}
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
@@ -310,6 +392,40 @@ export default function Footer() {
               © 2024 Zion Tech Group. All rights reserved.
             </p>
 >>>>>>> cursor/fix-errors-and-merge-to-main-099c
+=======
+        {/* Bottom Bar */}
+        <div className="border-t border-gray-800 mt-8 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="text-gray-400 text-sm mb-4 md:mb-0">
+              © 2024 Zion Tech Group. All rights reserved.
+            </div>
+            
+            {/* Social Links */}
+            <div className="flex space-x-4 mb-4 md:mb-0">
+              <a href="#" className="text-gray-400 hover:text-purple-300 transition-colors">
+                <Github className="w-5 h-5" />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-purple-300 transition-colors">
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-purple-300 transition-colors">
+                <Twitter className="w-5 h-5" />
+              </a>
+            </div>
+
+            {/* Legal Links */}
+            <div className="flex flex-wrap gap-4 text-sm">
+              {legal.map((item, index) => (
+                <Link 
+                  key={index}
+                  to={item.path} 
+                  className="text-gray-400 hover:text-purple-300 transition-colors"
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-fec5
           </div>
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-59b6
         </div>

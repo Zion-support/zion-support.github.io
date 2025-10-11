@@ -1,7 +1,10 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Cloud, Shield, Server, Database, Smartphone, Globe, Code, Cpu } from 'lucide-react';
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fec5
 import { CheckCircle, ArrowRight, Cloud, Shield, Code, Database, Smartphone, DollarSign, Clock, Users } from 'lucide-react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-099c
 import { Helmet } from 'react-helmet-async';
@@ -9,7 +12,7 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const ITServicesPage: React.FC = () => {
+const ItServicesPage: React.FC = () => {
   const itServices = [
     {
 <<<<<<< HEAD
@@ -167,59 +170,65 @@ const ITServicesPage: React.FC = () => {
       duration: '2-4 weeks'
     },
     {
-      icon: <Shield className="w-8 h-8 text-red-500" />,
+      icon: <Shield className="w-8 h-8 text-green-500" />,
       title: 'Cybersecurity Solutions',
+<<<<<<< HEAD
       description: 'Comprehensive security solutions to protect your digital assets and ensure compliance.',
       features: ['Security audit', 'Penetration testing', 'Compliance management', '24/7 monitoring'],
+=======
+      description: 'Comprehensive security services to protect your business from cyber threats and data breaches.',
+      features: ['Security audits', 'Penetration testing', 'Firewall configuration', 'Incident response'],
+>>>>>>> cursor/fix-errors-and-merge-to-main-fec5
       pricing: 'Starting at $1,500/month',
-      link: '/cybersecurity-solutions',
-      popular: true,
+      link: '/cybersecurity',
+      popular: false,
       duration: 'Ongoing'
     },
     {
-      icon: <Code className="w-8 h-8 text-green-500" />,
-      title: 'DevOps & CI/CD',
-      description: 'Streamline your development process with automated deployment and continuous integration.',
-      features: ['CI/CD pipeline setup', 'Docker containerization', 'Kubernetes orchestration', 'Monitoring setup'],
-      pricing: 'Starting at $3,000',
-      link: '/devops-cicd',
+      icon: <Code className="w-8 h-8 text-purple-500" />,
+      title: 'Custom Development',
+      description: 'Bespoke software solutions tailored to your specific business requirements and workflows.',
+      features: ['Web applications', 'Mobile apps', 'API development', 'Database design'],
+      pricing: 'Starting at $5,000',
+      link: '/custom-development',
       popular: false,
-      duration: '3-6 weeks'
+      duration: '4-12 weeks'
     },
     {
-      icon: <Database className="w-8 h-8 text-purple-500" />,
+      icon: <Database className="w-8 h-8 text-orange-500" />,
       title: 'Data Analytics',
-      description: 'Transform your data into actionable insights with advanced analytics and visualization.',
-      features: ['Data warehousing', 'Business intelligence', 'Predictive analytics', 'Custom dashboards'],
+      description: 'Transform your data into actionable insights with advanced analytics and business intelligence.',
+      features: ['Data visualization', 'Predictive analytics', 'Custom dashboards', 'Real-time reporting'],
       pricing: 'Starting at $2,000/month',
       link: '/data-analytics',
       popular: false,
-      duration: '4-8 weeks'
+      duration: '2-6 weeks'
     },
     {
-      icon: <Smartphone className="w-8 h-8 text-orange-500" />,
+      icon: <Smartphone className="w-8 h-8 text-pink-500" />,
       title: 'Mobile Development',
-      description: 'Native and cross-platform mobile applications for iOS and Android.',
-      features: ['Native iOS/Android apps', 'React Native development', 'UI/UX design', 'App store deployment'],
-      pricing: 'Starting at $5,000',
+      description: 'Native and cross-platform mobile applications for iOS and Android platforms.',
+      features: ['iOS development', 'Android development', 'Cross-platform apps', 'App store deployment'],
+      pricing: 'Starting at $8,000',
       link: '/mobile-development',
-      popular: true,
-      duration: '6-12 weeks'
+      popular: false,
+      duration: '6-16 weeks'
     },
     {
-      icon: <Database className="w-8 h-8 text-indigo-500" />,
-      title: 'Blockchain Solutions',
-      description: 'Implement blockchain technology for secure transactions and smart contracts.',
-      features: ['Smart contract development', 'DApp creation', 'Token development', 'Blockchain integration'],
-      pricing: 'Starting at $8,000',
-      link: '/blockchain',
+      icon: <Users className="w-8 h-8 text-indigo-500" />,
+      title: 'IT Consulting',
+      description: 'Strategic IT consulting to help you make informed technology decisions and optimize your infrastructure.',
+      features: ['Technology assessment', 'Strategic planning', 'Vendor selection', 'Implementation guidance'],
+      pricing: 'Starting at $150/hour',
+      link: '/it-consulting',
       popular: false,
-      duration: '8-16 weeks'
+      duration: 'As needed'
     }
   ];
 
   const benefits = [
     {
+<<<<<<< HEAD
       title: 'Cost Effective',
       description: 'Reduce IT costs by up to 40% with our optimized solutions',
       icon: <DollarSign className="w-6 h-6 text-green-500" />
@@ -236,6 +245,28 @@ const ITServicesPage: React.FC = () => {
     }
   ];
 >>>>>>> cursor/fix-errors-and-merge-to-main-099c
+=======
+      icon: <CheckCircle className="w-6 h-6 text-green-500" />,
+      title: '24/7 Support',
+      description: 'Round-the-clock technical support and monitoring to ensure your systems run smoothly.'
+    },
+    {
+      icon: <CheckCircle className="w-6 h-6 text-blue-500" />,
+      title: 'Scalable Solutions',
+      description: 'IT solutions that grow with your business and adapt to changing requirements.'
+    },
+    {
+      icon: <CheckCircle className="w-6 h-6 text-purple-500" />,
+      title: 'Cost Effective',
+      description: 'Optimize your IT spending with efficient solutions and transparent pricing.'
+    },
+    {
+      icon: <CheckCircle className="w-6 h-6 text-orange-500" />,
+      title: 'Expert Team',
+      description: 'Certified professionals with years of experience in enterprise IT solutions.'
+    }
+  ];
+>>>>>>> cursor/fix-errors-and-merge-to-main-fec5
 
   const stats = [
     { number: '500+', label: 'Projects Completed' },
@@ -261,6 +292,7 @@ const ITServicesPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>IT Services - Zion Tech Group</title>
+<<<<<<< HEAD
 <<<<<<< HEAD
         <meta name="description" content="Comprehensive IT services including cloud migration, cybersecurity, DevOps, mobile development, and custom software solutions. Enterprise-grade technology services." />
         <meta name="keywords" content="IT services, cloud migration, cybersecurity, DevOps, mobile development, custom software, enterprise technology" />
@@ -293,13 +325,32 @@ const ITServicesPage: React.FC = () => {
             <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8 px-4">
               Comprehensive IT solutions to accelerate your digital transformation and drive business growth.
 >>>>>>> cursor/fix-errors-and-merge-to-main-099c
+=======
+        <meta name="description" content="Comprehensive IT services including cloud migration, cybersecurity, custom development, and data analytics. Transform your business with our expert IT solutions." />
+        <meta name="keywords" content="IT services, cloud migration, cybersecurity, custom development, data analytics, mobile development" />
+      </Helmet>
+      
+      {/* Hero Section */}
+      <section className="pt-20 px-4 py-12 sm:py-16 lg:py-20">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12 sm:mb-16">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
+              IT Services & Solutions
+            </h1>
+            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-6 sm:mb-8 px-4">
+              Comprehensive IT services designed to modernize your infrastructure, enhance security, and drive digital transformation.
+>>>>>>> cursor/fix-errors-and-merge-to-main-fec5
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/contact" 
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
               >
+<<<<<<< HEAD
                 Get Free Consultation
+=======
+                Get Started
+>>>>>>> cursor/fix-errors-and-merge-to-main-fec5
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link 
@@ -312,6 +363,7 @@ const ITServicesPage: React.FC = () => {
           </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
           {/* Stats Section */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
 =======
@@ -320,11 +372,19 @@ const ITServicesPage: React.FC = () => {
             {stats.map((stat, index) => (
               <div key={index} className="text-center px-2">
                 <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
+=======
+          {/* Stats Section */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12 sm:mb-16 lg:mb-20">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-1 sm:mb-2">{stat.number}</div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-fec5
                 <div className="text-gray-300 text-xs sm:text-sm">{stat.label}</div>
               </div>
             ))}
           </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
           {/* Technologies We Use */}
           <div className="mb-20">
@@ -410,6 +470,28 @@ const ITServicesPage: React.FC = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-20">
             {itServices.map((service, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
+=======
+      {/* IT Services Section */}
+      <section className="py-12 sm:py-16 lg:py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Our IT Services</h2>
+            <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
+              End-to-end IT solutions to power your digital transformation
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16 lg:mb-20">
+            {itServices.map((service, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 group relative">
+                {service.popular && (
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                    <div className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                      Most Popular
+                    </div>
+                  </div>
+                )}
+>>>>>>> cursor/fix-errors-and-merge-to-main-fec5
                 <div className="mb-4 group-hover:scale-110 transition-transform duration-300">{service.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-purple-300 transition-colors">{service.title}</h3>
                 <p className="text-gray-300 mb-6">{service.description}</p>
@@ -421,6 +503,7 @@ const ITServicesPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
+<<<<<<< HEAD
                 <div className="flex justify-between items-center mb-4">
                   <span className="text-2xl font-bold text-white">{service.pricing}</span>
                   {service.popular && (
@@ -428,11 +511,20 @@ const ITServicesPage: React.FC = () => {
                       Popular
                     </span>
                   )}
+=======
+                <div className="flex items-center justify-between mb-4">
+                  <div className="text-2xl font-bold text-white">{service.pricing}</div>
+                  <div className="text-sm text-gray-400">{service.duration}</div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-fec5
                 </div>
                 <div className="text-sm text-gray-400 mb-6">Duration: {service.duration}</div>
                 <Link 
                   to={service.link}
+<<<<<<< HEAD
                   className="inline-flex items-center text-blue-400 hover:text-blue-300 font-semibold transition-colors"
+=======
+                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+>>>>>>> cursor/fix-errors-and-merge-to-main-fec5
                 >
                   Learn More
                   <ArrowRight className="w-4 h-4 ml-2" />
@@ -442,6 +534,7 @@ const ITServicesPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-099c
           </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
           {/* Why Choose Our IT Services */}
           <div className="mb-20">
@@ -509,12 +602,45 @@ const ITServicesPage: React.FC = () => {
               <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl mx-auto px-4">
                 Let's discuss how our IT services can help your business grow and succeed.
 >>>>>>> cursor/fix-errors-and-merge-to-main-099c
+=======
+      {/* Benefits Section */}
+      <section className="py-12 sm:py-16 lg:py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our IT Services?</h2>
+            <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
+              Experience the difference with our comprehensive IT solutions
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="text-center">
+                <div className="mb-4 flex justify-center">{benefit.icon}</div>
+                <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
+                <p className="text-gray-300 text-sm">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-12 sm:py-16 lg:py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Ready to Modernize Your IT Infrastructure?</h2>
+              <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
+                Let's discuss how our IT services can transform your business operations and drive growth.
+>>>>>>> cursor/fix-errors-and-merge-to-main-fec5
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   to="/contact" 
                   className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
+<<<<<<< HEAD
 <<<<<<< HEAD
                   Get Free Assessment
 =======
@@ -530,6 +656,15 @@ const ITServicesPage: React.FC = () => {
 =======
                   View All Services
 >>>>>>> cursor/fix-errors-and-merge-to-main-099c
+=======
+                  Get Free Consultation
+                </Link>
+                <Link 
+                  to="/ai-services" 
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+                >
+                  Explore AI Services
+>>>>>>> cursor/fix-errors-and-merge-to-main-fec5
                 </Link>
               </div>
             </div>
@@ -543,7 +678,11 @@ const ITServicesPage: React.FC = () => {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default ITServicesPage;
 =======
 export default ITServicesPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-099c
+=======
+export default ItServicesPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-fec5

@@ -2,13 +2,17 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-099c
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fec5
 import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone } from 'lucide-react'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone, Brain, Cpu, Server, Wifi } from 'lucide-react'
@@ -19,6 +23,8 @@ export default function Navigation() {
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-59b6
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-099c
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fec5
   
   const toggleMenu = () => {
     setIsOpen(!isOpen)
@@ -26,8 +32,11 @@ export default function Navigation() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-099c
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fec5
   const toggleServices = () => {
     setIsServicesOpen(!isServicesOpen)
   }
@@ -115,6 +124,7 @@ export default function Navigation() {
             </Link>
           </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className="hidden lg:block">
             <div className="ml-10 flex items-baseline space-x-8">
@@ -275,7 +285,53 @@ export default function Navigation() {
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-59b6
                 Contact
               </Link>
+=======
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-1">
+            <Link to="/" className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              Home
+            </Link>
+            <Link to="/about" className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              About
+            </Link>
+            
+            {/* Services Dropdown */}
+            <div className="relative">
+              <button
+                onClick={toggleServices}
+                className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
+              >
+                Services
+                <ChevronDown className="w-4 h-4 ml-1" />
+              </button>
+              
+              {isServicesOpen && (
+                <div className="absolute top-full left-0 mt-2 w-64 bg-white/95 backdrop-blur-lg rounded-lg shadow-lg border border-white/20 py-2 z-50">
+                  {services.map((service, index) => (
+                    <Link
+                      key={index}
+                      to={service.path}
+                      className="flex items-center px-4 py-2 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors"
+                      onClick={() => setIsServicesOpen(false)}
+                    >
+                      {service.icon}
+                      <span className="ml-3 text-sm font-medium">{service.name}</span>
+                    </Link>
+                  ))}
+                </div>
+              )}
+>>>>>>> cursor/fix-errors-and-merge-to-main-fec5
             </div>
+            
+            <Link to="/contact" className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              Contact
+            </Link>
+            <Link 
+              to="/contact" 
+              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+            >
+              Get Started
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -283,10 +339,14 @@ export default function Navigation() {
             <button
               onClick={toggleMenu}
 <<<<<<< HEAD
+<<<<<<< HEAD
               className="text-gray-900 hover:text-purple-600 p-2"
 =======
               className="text-white hover:text-purple-300 inline-flex items-center justify-center p-2 rounded-md transition-colors"
 >>>>>>> cursor/fix-errors-and-merge-to-main-099c
+=======
+              className="text-white hover:text-purple-300 p-2 rounded-md transition-colors"
+>>>>>>> cursor/fix-errors-and-merge-to-main-fec5
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -295,24 +355,41 @@ export default function Navigation() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         {isOpen && (
           <div className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
               <Link
                 to="/"
                 className="text-gray-900 hover:text-purple-600 block px-3 py-2 text-base font-medium"
+=======
+        {/* Mobile Navigation */}
+        {isOpen && (
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-white/10 backdrop-blur-lg rounded-lg mt-2 border border-white/20">
+              <Link 
+                to="/" 
+                className="block text-white hover:text-purple-300 px-3 py-2 rounded-md text-base font-medium transition-colors"
+>>>>>>> cursor/fix-errors-and-merge-to-main-fec5
                 onClick={() => setIsOpen(false)}
               >
                 Home
               </Link>
+<<<<<<< HEAD
               <Link
                 to="/about"
                 className="text-gray-900 hover:text-purple-600 block px-3 py-2 text-base font-medium"
+=======
+              <Link 
+                to="/about" 
+                className="block text-white hover:text-purple-300 px-3 py-2 rounded-md text-base font-medium transition-colors"
+>>>>>>> cursor/fix-errors-and-merge-to-main-fec5
                 onClick={() => setIsOpen(false)}
               >
                 About
               </Link>
               
+<<<<<<< HEAD
               <div>
                 <button
                   onClick={toggleServices}
@@ -371,10 +448,34 @@ export default function Navigation() {
               <Link
                 to="/contact"
                 className="text-gray-900 hover:text-purple-600 block px-3 py-2 text-base font-medium"
+=======
+              {/* Mobile Services */}
+              <div className="px-3 py-2">
+                <div className="text-white font-medium text-base mb-2">Services</div>
+                <div className="space-y-1 ml-4">
+                  {services.map((service, index) => (
+                    <Link
+                      key={index}
+                      to={service.path}
+                      className="flex items-center text-gray-300 hover:text-purple-300 px-2 py-1 rounded text-sm transition-colors"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {service.icon}
+                      <span className="ml-2">{service.name}</span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+              
+              <Link 
+                to="/contact" 
+                className="block text-white hover:text-purple-300 px-3 py-2 rounded-md text-base font-medium transition-colors"
+>>>>>>> cursor/fix-errors-and-merge-to-main-fec5
                 onClick={() => setIsOpen(false)}
               >
                 Contact
               </Link>
+<<<<<<< HEAD
             </div>
 =======
             {/* IT Services Mobile */}
@@ -442,6 +543,16 @@ export default function Navigation() {
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-59b6
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-099c
+=======
+              <Link 
+                to="/contact" 
+                className="block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-3 py-2 rounded-lg text-base font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-center mt-4"
+                onClick={() => setIsOpen(false)}
+              >
+                Get Started
+              </Link>
+            </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-fec5
           </div>
         )}
       </div>
