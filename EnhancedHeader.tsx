@@ -26,23 +26,32 @@ const EnhancedHeader: React.FC = () => {
             <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors">
               Contact
           {/* Mobile Menu Button */}
-          <$2 />
+          <button
             onClick={toggleMenu}
             className="md:hidden text-gray-300 hover:text-cyan-400 transition-colors">
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-cyan-500/20">
             <nav className="flex flex-col space-y-4">
               <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors">
                 Home
+              </Link>
               <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors">
                 About
+              </Link>
               <Link to="/services" className="text-gray-300 hover:text-cyan-400 transition-colors">
                 Services
+              </Link>
               <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors">
                 Contact
+              </Link>
+            </nav>
+          </div>
         )}
+      </div>
+    </header>
   )
 }
-export default EnhancedHeader</div></div></div></div></span></span></Link></Link></Link></Link></Link></Link></Link></Link></Link></header></nav></nav>
+export default EnhancedHeader

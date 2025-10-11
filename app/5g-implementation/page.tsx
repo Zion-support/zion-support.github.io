@@ -8,6 +8,7 @@ const FiveGImplementationPage = () => {
       icon: Wifi,
       title: '5G Network Design',
       description: 'Complete 5G network design and implementation with optimal coverage and performance.',
+      benefits: ['Network planning', 'Coverage optimization', 'Performance tuning', 'Capacity planning']
     },
   ]
 

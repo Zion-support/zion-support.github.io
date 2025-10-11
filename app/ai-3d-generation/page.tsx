@@ -1,6 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { Brain, BarChart, Cube, Zap } from 'lucide-react'
+import { Brain, BarChart, Box, Zap } from 'lucide-react'
 
 const Ai3DGenerationPage = () => {
   const features = [
@@ -15,7 +15,7 @@ const Ai3DGenerationPage = () => {
       description: 'Comprehensive analytics dashboard with real-time data visualization for 3D projects.',
     },
     {
-      icon: Cube,
+      icon: Box,
       title: '3D Modeling',
       description: 'Create stunning 3D models with AI assistance and automated optimization.',
     },

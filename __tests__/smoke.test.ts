@@ -1,20 +1,20 @@
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
-import smoke.ts from '../components/smoke.ts'
+import smoke from '../components/smoke'
 describe('smoke.ts', () => {
   test('renders without crashing', () => {
-    render(<smoke.ts />)
-    expect(screen.getByTestId('smoke.ts')).toBeInTheDocument()
+    render(<smoke />)
+    expect(screen.getByTestId('smoke')).toBeInTheDocument()
   })
   test('displays correct content', () => {
-    render(<smoke.ts />)
+    render(<smoke />)
   })
   test('handles user interactions', () => {
-    render(<smoke.ts />)
+    render(<smoke />)
   })
   test('applies correct styling', () => {
-    render(<smoke.ts />)
+    render(<smoke />)
   })
 })
 import { add } from '../utils/smoke'

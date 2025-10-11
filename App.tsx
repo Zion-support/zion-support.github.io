@@ -8,7 +8,7 @@ import Navigation from './app/components/Navigation'
 import Footer from './app/components/Footer'
 import HomePage from './app/page'
 import { PageLoader } from './app/components/LoadingStates'
-import ErrorBoundary from './app/components/ErrorBoundary'
+// import ErrorBoundary from './app/components/ErrorBoundary'
 import SEOHead from './app/components/EnhancedSEOHead'
 import SkipLink from './app/components/SkipLink'
 import Breadcrumb from './app/components/Breadcrumb'
@@ -68,11 +68,13 @@ const App: React.FC = () => {
         <SEOHead 
           title="Zion Tech Group - AI & IT Solutions"
           description="Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
-          keywords={['AI solutions', 'IT services', 'quantum computing', 'digital transformation', 'enterprise software', 'automation', 'machine learning']}
-          canonicalUrl="https://ziontechgroup.com"
+          keywords="AI solutions, IT services, quantum computing, digital transformation, enterprise software, automation, machine learning"
+          canonical="https://ziontechgroup.com"
         />
         <SkipLink />
-        <ServiceWorker />
+        <ServiceWorker>
+          <div />
+        </ServiceWorker>
         <Router>
           <AppWithPerformanceMonitoring>
             <AnalyticsProvider>
@@ -80,11 +82,13 @@ const App: React.FC = () => {
                 <EnhancedAccessibility>
                   <AccessibilityEnhancer
                     enableKeyboardNavigation={true}
-                    enableScreenReaderSupport={true}
+                    enableScreenReader={true}
                     enableHighContrast={false}
                     enableFocusManagement={true}
                   >
-                    <PerformanceMonitor />
+                    <PerformanceMonitor>
+                      <div />
+                    </PerformanceMonitor>
                     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
                       <FuturisticBackground />
                       <Navigation />

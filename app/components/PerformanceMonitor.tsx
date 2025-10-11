@@ -32,17 +32,17 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
       // Web Vitals monitoring
       if (enableReporting) {
-        import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-          getCLS(console.log);
-          getFID(console.log);
-          getFCP(console.log);
-          getLCP(console.log);
-          getTTFB(console.log);
+        import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {
+          onCLS(console.log);
+          onFCP(console.log);
+          onLCP(console.log);
+          onTTFB(console.log);
         });
       }
 
       return () => observer.disconnect();
     }
+    return undefined;
   }, [enableMonitoring, enableReporting]);
 
   return <>{children}</>;

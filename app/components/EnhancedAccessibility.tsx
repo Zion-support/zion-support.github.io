@@ -37,6 +37,7 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
         return () => document.removeEventListener('keydown', handleKeyDown);
       }
     }
+    return undefined;
   }, [enableKeyboardNavigation]);
 
   useEffect(() => {
@@ -57,6 +58,7 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
         document.body.insertBefore(skipLink, document.body.firstChild);
       }
     }
+    return undefined;
   }, [enableScreenReader]);
 
   useEffect(() => {
@@ -74,6 +76,7 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
         return () => mediaQuery.removeEventListener('change', handleChange);
       }
     }
+    return undefined;
   }, [enableHighContrast]);
 
   useEffect(() => {
@@ -97,6 +100,7 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
         return () => document.removeEventListener('focusin', handleFocusTrap);
       }
     }
+    return undefined;
   }, [enableFocusManagement]);
 
   return (
