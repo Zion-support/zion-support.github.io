@@ -2,6 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Github, Linkedin, Twitter } from 'lucide-react';
+
 export default function Footer() {
   return (
     <footer className="bg-white/5 backdrop-blur-lg border-t border-white/20">

@@ -3,6 +3,7 @@ import React from 'react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import {CheckCircle, Cloud, Shield, Code, Wifi} from 'lucide-react';
+
 const HomePage: React.FC = () => {
   const features = [
     {
