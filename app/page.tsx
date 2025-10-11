@@ -1,11 +1,11 @@
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
+import Navigation from './components/Navigation'
+import Footer from './components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 
-const PagePage: React.FC = () => {
+const HomePage: React.FC = () => {
   const features = [
     {
       icon: Star,
@@ -36,9 +36,9 @@ const PagePage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Page - Zion Tech Group | AI & IT Solutions</title>
-        <meta name="description" content="Advanced page solutions powered by artificial intelligence. Transform your business with cutting-edge technology." />
-        <meta name="keywords" content="page, AI solutions, IT services, technology" />
+        <title>Zion Tech Group - AI & IT Solutions | Leading Technology Company</title>
+        <meta name="description" content="Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology." />
+        <meta name="keywords" content="AI solutions, IT services, quantum computing, digital transformation, enterprise software, automation, machine learning" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -49,10 +49,10 @@ const PagePage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Page <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Solutions</span>
+                Welcome to <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Zion Tech Group</span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Advanced page solutions powered by artificial intelligence. Transform your business with cutting-edge technology.
+                Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105">
@@ -71,7 +71,7 @@ const PagePage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Key Features
+                Our Solutions
               </h2>
               <p className="text-xl text-gray-300">
                 Powerful AI-driven solutions for modern businesses
@@ -106,7 +106,7 @@ const PagePage: React.FC = () => {
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Get Started?
+              Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Contact our experts to learn more about our solutions and get started today.
@@ -128,4 +128,4 @@ const PagePage: React.FC = () => {
   );
 };
 
-export default PagePage;
+export default HomePage;

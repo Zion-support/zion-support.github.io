@@ -19,6 +19,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 }) => {
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+
     if (enableKeyboardNavigation) {
       const handleKeyDown = (event: KeyboardEvent) => {
         if (event.key === 'Tab') {
@@ -37,13 +39,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         document.removeEventListener('keydown', handleKeyDown);
         document.removeEventListener('mousedown', handleMouseDown);
       };
+    }
+  }, [enableKeyboardNavigation]);
+
   useEffect(() => {
     if (typeof window === 'undefined') return;
-
-
-      document.addEventListener('keydown', handleKeyDown);
-      return () => document.removeEventListener('keydown', handleKeyDown);
-    }
 
     // Add screen reader support
     if (enableScreenReaderSupport) {
@@ -60,88 +60,52 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       const main = document.querySelector('main');
       if (main && !main.getAttribute('role')) {
         main.setAttribute('role', 'main');
-        main.id = 'main-content';
       }
 
       const nav = document.querySelector('nav');
       if (nav && !nav.getAttribute('role')) {
         nav.setAttribute('role', 'navigation');
-        nav.id = 'navigation';
       }
 
-      // Add live region for announcements
-      const liveRegion = document.createElement('div');
-      liveRegion.setAttribute('aria-live', 'polite');
-      liveRegion.setAttribute('aria-atomic', 'true');
-      liveRegion.className = 'sr-only';
-      liveRegion.id = 'live-region';
-      document.body.appendChild(liveRegion);
+      return () => {
+        const existingSkipLinks = document.querySelector('.sr-only');
+        if (existingSkipLinks) {
+          existingSkipLinks.remove();
+        }
+      };
     }
-  }, [enableKeyboardNavigation]);
+  }, [enableScreenReaderSupport]);
 
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    if (enableHighContrast) {
+      document.body.classList.add('high-contrast');
+      return () => {
+        document.body.classList.remove('high-contrast');
+      };
+    }
+  }, [enableHighContrast]);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    if (enableFocusManagement) {
+      const handleFocusIn = (event: FocusEvent) => {
+        const target = event.target as HTMLElement;
+        if (target && target.focus) {
+          target.focus();
+        }
+      };
+
+      document.addEventListener('focusin', handleFocusIn);
+      return () => {
+        document.removeEventListener('focusin', handleFocusIn);
+      };
+    }
+  }, [enableFocusManagement]);
+
+  return <>{children}</>;
 };
 
 export default AccessibilityEnhancer;
-'use client'
-import React, { useEffect } from 'react'
-
-interface AccessibilityEnhancerProps {
-  children: React.ReactNode
-  enableKeyboardNavigation?: boolean
-  enableScreenReaderSupport?: boolean
-  enableHighContrast?: boolean
-  enableFocusManagement?: boolean
-}
-
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ 
-  children,
-  enableKeyboardNavigation = true,
-  enableScreenReaderSupport = true,
-  enableHighContrast = false,
-  enableFocusManagement = true
-}) => {
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      // Add keyboard navigation support
-      if (enableKeyboardNavigation) {
-        document.body.classList.add('keyboard-navigation')
-      }
-
-      // Add screen reader support
-      if (enableScreenReaderSupport) {
-        // Add skip links
-        const skipLinks = document.createElement('div')
-        skipLinks.innerHTML = `
-          <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded-lg z-50">
-            Skip to main content
-          </a>
-        `
-        document.body.insertBefore(skipLinks, document.body.firstChild)
-      }
-
-      // Add high contrast mode
-      if (enableHighContrast) {
-        document.body.classList.add('high-contrast')
-      }
-
-      // Add focus management
-      if (enableFocusManagement) {
-        const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-        const focusableContent = document.querySelectorAll(focusableElements)
-        
-        focusableContent.forEach(element => {
-          element.addEventListener('focus', () => {
-            element.classList.add('focus-visible')
-          })
-          element.addEventListener('blur', () => {
-            element.classList.remove('focus-visible')
-          })
-        })
-      }
-    }
-  }, [enableKeyboardNavigation, enableScreenReaderSupport, enableHighContrast, enableFocusManagement])
-
-  return <>{children}</>
-}
-
-export default AccessibilityEnhancer
