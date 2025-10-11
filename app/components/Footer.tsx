@@ -233,9 +233,13 @@ const Footer: React.FC = () => {
     </footer>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 =======
 }
 >>>>>>> cursor/website-audit-and-update-with-deployment-3bf1
+=======
+};
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-8fdc
 
 export default Footer;

@@ -2,377 +2,351 @@
  * Comprehensive validation utilities for forms and data
  * Provides all validation functions expected by tests
  */
+
 export interface ValidationResult {
-    isValid: boolean,
-  error?: string
-  errors?: string[],
-  }
-export interface ValidationResult {/* TODO: Fix JSX expression */}
+  isValid: boolean;
+  error?: string;
+  errors?: string[];
 }
+
 /**
  * Email validation with length check
  */
 export function validateEmail(email: string): ValidationResult {
-    ,
-  if (!email || email.length > 254) {,
+  if (!email || email.length > 254) {
+    return { isValid: false, error: 'Email is too long' };
   }
-    return { isValid: false, error: 'Email is too long' }
-export function validateEmail(emai)
-  l: string): ValidationResult {/* TODO: Fix JSX expression */}
-  r: 'Email is too long' }
-  }
-const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-  const isValid = emailRegex.test(email.trim())
-return {
+  
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const isValid = emailRegex.test(email.trim());
+  
+  return {
     isValid,
     error: isValid ? undefined : 'Invalid email format',
-  }
-  return {/* TODO: Fix JSX expression */}
-  }
+  };
 }
+
 /**
  * URL validation
  */
 export function validateURL(url: string): ValidationResult {
-    ,
-  if (!url || url.trim() === '') {,
+  if (!url || url.trim() === '') {
+    return { isValid: false, error: 'URL is required' };
   }
-    return { isValid: false, error: 'URL is required' }
-  }
-try {
-    const urlObj = new URL(url)
-    const isValid = urlObj.protocol === 'http: ' || urlObj.protocol === 'https:',
-    return {,
-      isValid
-      error: isValid ? undefined : 'Invalid URL format',
-export function validateURL(ur)
-  }
-  l: string): ValidationResult {/* TODO: Fix JSX expression */}
-  r: 'URL is required' }
-  }
-try {/* TODO: Fix JSX expression */}
-    }
-  } catch {/* TODO: Fix JSX expression */}
-  r: 'Invalid URL format' }
-  }
-}
-/**
- * String length validation
- */
-export function validateLength(value: string;)
-  min: number)
-  max: number)
-  fieldName: string = 'Field',
-): ValidationResult {
-    if (value.length < min) {,
-    return {,
-      isValid: false,
-  }
-      error: `${fieldName} must be at least ${min} characters long`
-    }
-  }
-if (value.<<<length>max</length></length>) {
+  
+  try {
+    const urlObj = new URL(url);
+    const isValid = urlObj.protocol === 'http:' || urlObj.protocol === 'https:';
     return {
-      isValid: false,
+      isValid,
+      error: isValid ? undefined : 'Invalid URL format',
+    };
+  } catch {
+    return { isValid: false, error: 'Invalid URL format' };
   }
-      error: `${fieldName} must be no more than ${max} characters long`
-    }
-  }
-return { isValid: true }
-export function validateLength()
-  e: string = 'Field'),
-): ValidationResult {/* TODO: Fix JSX expression */}
-  r: `${fieldName} must be at least ${min} characters long`
-    }
-  }
-if (value.length > max) {/* TODO: Fix JSX expression */}`
-  r: `${fieldName} must be no more than ${max} characters long`
-    }
-  }
-return {/* TODO: Fix JSX expression */}
-  d: true }
 }
+
+/**
+ * Phone number validation
+ */
+export function validatePhone(phone: string): ValidationResult {
+  if (!phone || phone.trim() === '') {
+    return { isValid: false, error: 'Phone number is required' };
+  }
+  
+  const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
+  const cleaned = phone.replace(/[\s\-\(\)]/g, '');
+  const isValid = phoneRegex.test(cleaned);
+  
+  return {
+    isValid,
+    error: isValid ? undefined : 'Invalid phone number format',
+  };
+}
+
 /**
  * Password validation
  */
 export function validatePassword(password: string): ValidationResult {
-    ,
-  if (!password || password.length < 8) {,
+  if (!password) {
+    return { isValid: false, error: 'Password is required' };
   }
-    return { isValid: false, error: 'Password must be at least 8 characters long' }
+  
+  if (password.length < 8) {
+    return { isValid: false, error: 'Password must be at least 8 characters long' };
   }
-if (password.length > 128) {}
-    return { isValid: false, error: 'Password is too long' }
-export function validatePassword(passwor)
-  d: string): ValidationResult {/* TODO: Fix JSX expression */}
-  r: 'Password must be at least 8 characters long' }
+  
+  if (password.length > 128) {
+    return { isValid: false, error: 'Password is too long' };
   }
-if (password.length > 128) {/* TODO: Fix JSX expression */}
-  r: 'Password is too long' }
+  
+  const hasUpperCase = /[A-Z]/.test(password);
+  const hasLowerCase = /[a-z]/.test(password);
+  const hasNumbers = /\d/.test(password);
+  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+  
+  const errors: string[] = [];
+  
+  if (!hasUpperCase) {
+    errors.push('Password must contain at least one uppercase letter');
   }
-const hasUpperCase = /[A-Z]/.test(password)
-  const hasLowerCase = /[a-z]/.test(password)
-  const hasNumbers = /\d/.test(password)
-  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<React.Fragment>{]/.test(password)
-if (!hasUpperCase) {}
-    return { isValid: false, error: 'Password must contain at least one uppercase letter' }
+  
+  if (!hasLowerCase) {
+    errors.push('Password must contain at least one lowercase letter');
   }
-if (!hasLowerCase) {}
-    return { isValid: false, error: 'Password must contain at least one lowercase letter' }
+  
+  if (!hasNumbers) {
+    errors.push('Password must contain at least one number');
   }
-if (!hasNumbers) {}
-    return { isValid: false, error: 'Password must contain at least one number' }
+  
+  if (!hasSpecialChar) {
+    errors.push('Password must contain at least one special character');
   }
-if (!hasSpecialChar) {}
-    return { isValid: false, error: 'Password must contain at least one special character' }
-  }
-return { isValid: true }
-if (!hasUpperCase) {/* TODO: Fix JSX expression */}
-  r: 'Password must contain at least one uppercase letter' }
-  }
-if (!hasLowerCase) {/* TODO: Fix JSX expression */}
-  r: 'Password must contain at least one lowercase letter' }
-  }
-if (!hasNumbers) {/* TODO: Fix JSX expression */}
-  r: 'Password must contain at least one number' }
-  }
-if (!hasSpecialChar) {/* TODO: Fix JSX expression */}
-  r: 'Password must contain at least one special character' }
-  }
-return {/* TODO: Fix JSX expression */}
-  d: true }
+  
+  return {
+    isValid: errors.length === 0,
+    error: errors.length > 0 ? errors[0] : undefined,
+    errors: errors.length > 0 ? errors : undefined,
+  };
 }
+
 /**
  * Required field validation
  */
-export function validateRequired(value: unknown, fieldName: string = 'Field'): ValidationResult {
-    ,
-  if (value === null || value === undefined) {,
+export function validateRequired(value: any, fieldName: string = 'Field'): ValidationResult {
+  if (value === null || value === undefined) {
+    return { isValid: false, error: `${fieldName} is required` };
   }
-    return { isValid: false, error: `${fieldName} is required` }
+  
+  if (typeof value === 'string' && value.trim() === '') {
+    return { isValid: false, error: `${fieldName} is required` };
   }
-if (typeof value === 'string' && value.trim() === '') {}
-    return { isValid: false, error: `${fieldName} is required` }
+  
+  if (Array.isArray(value) && value.length === 0) {
+    return { isValid: false, error: `${fieldName} is required` };
   }
-if (Array.isArray(value) && value.length === 0) {}
-    return { isValid: false, error: `${fieldName} is required` }
-  }
-return { isValid: true }
-export function validateRequired()
-  e: unknown, fieldNam)
-  e: string = 'Field'): ValidationResult {/* TODO: Fix JSX expression */}`
-  r: `${fieldName} is required` }
-  }
-if (typeof value === 'string' && value.trim() === '') {/* TODO: Fix JSX expression */}`
-  r: `${fieldName} is required` }
-  }
-if (Array.isArray(value) && value.length === 0) {/* TODO: Fix JSX expression */}`
-  r: `${fieldName} is required` }
-  }
-return {/* TODO: Fix JSX expression */}
-  d: true }
+  
+  return { isValid: true };
 }
+
 /**
  * Date validation
  */
 export function validateDate(dateString: string): ValidationResult {
-    ,
-  if (!dateString || dateString.trim() === '') {,
+  if (!dateString) {
+    return { isValid: false, error: 'Date is required' };
   }
-    return { isValid: false, error: 'Date is required' }
+  
+  const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
+  if (!dateRegex.test(dateString)) {
+    return { isValid: false, error: 'Invalid date format. Use YYYY-MM-DD' };
   }
-export function validateDate(dateStrin)
-  g: string): ValidationResult {/* TODO: Fix JSX expression */}
-  r: 'Date is required' }
+  
+  const date = new Date(dateString);
+  if (isNaN(date.getTime())) {
+    return { isValid: false, error: 'Invalid date' };
   }
-// Check for YYYY-MM-DD format
-  const dateRegex = /^\d{4}-\d{2}-\d{2}$/
-  if (!dateRegex.test(dateString)) {/* TODO: Fix JSX expression */}
-  r: 'Date must be in YYYY-MM-DD format' }
+  
+  // Check if the date is valid (not in the future for birth dates, etc.)
+  const today = new Date();
+  if (date > today) {
+    return { isValid: false, error: 'Date cannot be in the future' };
   }
-const date = new Date(dateString)
-  if (isNaN(date.getTime())) {/* TODO: Fix JSX expression */}
-  r: 'Invalid date' }
+  
+  // Additional validation for birth date (must be at least 13 years old)
+  const thirteenYearsAgo = new Date();
+  thirteenYearsAgo.setFullYear(thirteenYearsAgo.getFullYear() - 13);
+  
+  if (date > thirteenYearsAgo) {
+    return { isValid: false, error: 'Must be at least 13 years old' };
   }
-// Check if the date is valid (e.g., not 2025-13-01)
-  const [year, month, day] = dateString.split('-').map(Number)
-  const actualDate = new Date(year, month - 1, day)
-  if (actualDate.getFullYear() !== year ||
-      actualDate.getMonth() !== month - 1 ||
-      actualDate.getDate() !== day) {}
-    return { isValid: false, error: 'Invalid date' }
-  }
-return { isValid: true }
-  if (actualDate.getFullYear() !== year ||
-      actualDate.getMonth() !== month - 1 ||
-      actualDate.getDate() !== day) {/* TODO: Fix JSX expression */}
-  r: 'Invalid date' }
-  }
-return {/* TODO: Fix JSX expression */}
-  d: true }
+  
+  return { isValid: true };
 }
+
 /**
  * Credit card validation using Luhn algorithm
  */
 export function validateCreditCard(cardNumber: string): ValidationResult {
-    ,
-  if (!cardNumber || cardNumber.trim() === '') {,
+  if (!cardNumber) {
+    return { isValid: false, error: 'Credit card number is required' };
   }
-    return { isValid: false, error: 'Credit card number is required' }
-export function validateCreditCard(cardNumbe)
-  r: string): ValidationResult {/* TODO: Fix JSX expression */}
-  r: 'Credit card number is required' }
+  
+  const cleaned = cardNumber.replace(/\s/g, '');
+  
+  if (!/^\d+$/.test(cleaned)) {
+    return { isValid: false, error: 'Credit card number must contain only digits' };
   }
-const cleaned = cardNumber.replace(/[\s-]/g, '')
-  if (!/^\d+$/.test(cleaned)) {/* TODO: Fix JSX expression */}
-  r: 'Credit card number must contain only digits' }
+  
+  // Check length
+  if (cleaned.length < 13 || cleaned.length > 19) {
+    return { isValid: false, error: 'Invalid credit card number length' };
   }
-}</React.Fragment></React.Fragment>
-  if (cleaned.length < 13 || cleaned.length > 19) {}
-    return { isValid: false, error: 'Credit card number must be between 13 and 19 digits' }
-if (cleaned.length < 13 || cleaned.length > 19) {/* TODO: Fix JSX expression */}
-  r: 'Credit card number must be between 13 and 19 digits' }
-  }
-let sum = 0
-  let isEven = false
-for (let i = cleaned.length - 1; i >= 0; i--) {
-    let digit = parseInt(cleaned[i], 10)
+  
+  // Luhn algorithm
+  let sum = 0;
+  let isEven = false;
+  
+  for (let i = cleaned.length - 1; i >= 0; i--) {
+    let digit = parseInt(cleaned.charAt(i));
+    
     if (isEven) {
-      digit *= 2
+      digit *= 2;
       if (digit > 9) {
-        digit -= 9
-  }
-  for (let i = cleaned.length - 1; i >= 0; i--) {/* TODO: Fix JSX expression */}
+        digit -= 9;
       }
     }
-    sum += digit
-    isEven = !isEven
+    
+    sum += digit;
+    isEven = !isEven;
   }
-const isValid = sum % 10 === 0
+  
+  const isValid = sum % 10 === 0;
+  
   return {
     isValid,
     error: isValid ? undefined : 'Invalid credit card number',
-  }
-  return {/* TODO: Fix JSX expression */}
-  }
+  };
 }
+
 /**
  * JSON validation
  */
 export function validateJSON(jsonString: string): ValidationResult {
-    ,
-  if (!jsonString || jsonString.trim() === '') {,
+  if (!jsonString) {
+    return { isValid: false, error: 'JSON string is required' };
   }
-    return { isValid: false, error: 'JSON string is required' }
-  }
-try {
-    JSON.parse(jsonString)
-  }
-    return { isValid: true }
-  } catch {}
-    return { isValid: false, error: 'Invalid JSON format' }
-export function validateJSON(jsonStrin)
-  g: string): ValidationResult {/* TODO: Fix JSX expression */}
-  r: 'JSON string is required' }
-  }
-try {/* TODO: Fix JSX expression */}
-  d: true }
-  } catch {/* TODO: Fix JSX expression */}
-  r: 'Invalid JSON format' }
+  
+  try {
+    JSON.parse(jsonString);
+    return { isValid: true };
+  } catch (error) {
+    return { isValid: false, error: 'Invalid JSON format' };
   }
 }
-/**
- * HTML sanitization
- */
-export function sanitizeHTML(html: string): string {
-    if (!html) return '',
-,
-  return html
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#x27;')
-    .replace(/\//g, '&#x2F;')
-export function sanitizeHTML(htm)
-  }
-  l: string): string {/* TODO: Fix JSX expression */}
-}
-/**
- * Composite validation
- */
-export function validateComposite(value: unknown)
-  validators: Array<(val: unknown) => ValidationResult>
-): ValidationResult {
-    for (const validator of validators) {
-    const result = validator(value),
-    if (!result.isValid) {,
-      return result
-export function validateComposite()
-  s: Array<(va),
-  l: unknown) => ValidationResult>
-  }
-): ValidationResult {/* TODO: Fix JSX expression */}
-    }
-  }
-  return {/* TODO: Fix JSX expression */}
-  d: true }
-}
-/**
- * Async validation
- */
-export async function validateAsync()
-  validator: (val: unknown) => Promise<ValidationResult></ValidationResult>
-  value: unknown,
-): Promise</ValidationResult><ValidationResult> {
-    ,
-  try {,
-    return await validator(value)
-  }
 
 /**
- * Async validation
+ * Generic validation function
  */
-export async function validateAsync(
-  validator: (val: unknown) => Promise<ValidationResult>
-  value: unknown,
-): Promise<ValidationResult> {,
-  try {,
-    return await validator(value);}
-  } catch (error) {
-    return {
-      isValid: false,
-      error: error instanceof Error ? error.message : 'Validation failed',
-export async function validateAsync()
-  r: (va),
-  l: unknown) => Promise</ValidationResult><ValidationResult>,
-  valu,
-  e: unknown,
+export function validateField(
+  value: any,
+  rules: {
+    required?: boolean;
+    minLength?: number;
+    maxLength?: number;
+    pattern?: RegExp;
+    custom?: (value: any) => ValidationResult;
   }
-): Promise</ValidationResult><ValidationResult> {/* TODO: Fix JSX expression */}
-export async function validateAsync(validato,
-  r: (va)
-  l: unknown) => Promise<ValidationResult>,
-  valu,
-  e: unknown,;}
-): Promise<ValidationResult> {/* TODO: Fix JSX expression */}
-  } catch (error) {/* TODO: Fix JSX expression */}
+): ValidationResult {
+  // Required validation
+  if (rules.required) {
+    const requiredResult = validateRequired(value);
+    if (!requiredResult.isValid) {
+      return requiredResult;
     }
   }
-}
-// Re-export existing functions for compatibility
-export {
-    isValidEmail,
-  isValidPhone,
-  isValidUrl,
-  isRequired,
-  isValidPassword,
-  sanitizeInput
+  
+  // Skip other validations if value is empty and not required
+  if (!value && !rules.required) {
+    return { isValid: true };
   }
-} from './validators'
-export {/* TODO: Fix JSX expression */}
-} from './validators';"`</ValidationResult>
-  sanitizeInput;}
-} from './validators'
-export {/* TODO: Fix JSX expression */}
-} from './validators';"`
+  
+  // Length validations
+  if (typeof value === 'string') {
+    if (rules.minLength && value.length < rules.minLength) {
+      return { isValid: false, error: `Minimum length is ${rules.minLength}` };
+    }
+    
+    if (rules.maxLength && value.length > rules.maxLength) {
+      return { isValid: false, error: `Maximum length is ${rules.maxLength}` };
+    }
+    
+    // Pattern validation
+    if (rules.pattern && !rules.pattern.test(value)) {
+      return { isValid: false, error: 'Invalid format' };
+    }
+  }
+  
+  // Custom validation
+  if (rules.custom) {
+    return rules.custom(value);
+  }
+  
+  return { isValid: true };
+}
+
+/**
+ * Validate form data
+ */
+export function validateFormData(
+  data: Record<string, any>,
+  validationRules: Record<string, any>
+): ValidationResult {
+  const errors: string[] = [];
+  
+  for (const [field, rules] of Object.entries(validationRules)) {
+    const result = validateField(data[field], rules);
+    if (!result.isValid && result.error) {
+      errors.push(result.error);
+    }
+  }
+  
+  return {
+    isValid: errors.length === 0,
+    errors: errors.length > 0 ? errors : undefined,
+  };
+}
+
+/**
+ * Async validation functions
+ */
+export async function validateEmailAsync(email: string): Promise<ValidationResult> {
+  const basicValidation = validateEmail(email);
+  if (!basicValidation.isValid) {
+    return basicValidation;
+  }
+  
+  // Here you could add additional async validation like checking if email exists
+  // For now, just return the basic validation result
+  return basicValidation;
+}
+
+export async function validateUsernameAsync(username: string): Promise<ValidationResult> {
+  if (!username) {
+    return { isValid: false, error: 'Username is required' };
+  }
+  
+  if (username.length < 3) {
+    return { isValid: false, error: 'Username must be at least 3 characters long' };
+  }
+  
+  if (username.length > 20) {
+    return { isValid: false, error: 'Username must be less than 20 characters' };
+  }
+  
+  const usernameRegex = /^[a-zA-Z0-9_]+$/;
+  if (!usernameRegex.test(username)) {
+    return { isValid: false, error: 'Username can only contain letters, numbers, and underscores' };
+  }
+  
+  // Here you could add additional async validation like checking if username is available
+  return { isValid: true };
+}
+
+// Export all validation functions
+export const validationUtils = {
+  validateEmail,
+  validateURL,
+  validatePhone,
+  validatePassword,
+  validateRequired,
+  validateDate,
+  validateCreditCard,
+  validateJSON,
+  validateField,
+  validateFormData,
+  validateEmailAsync,
+  validateUsernameAsync,
+};
+
+export default validationUtils;

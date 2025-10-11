@@ -15,11 +15,17 @@ interface SEOHeadProps {
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
+<<<<<<< HEAD
   title = 'Zion Tech Group - AI & IT Solutions',
   description = 'Leading provider of AI and IT solutions, empowering businesses with cutting-edge technology and innovative digital transformation services.',
   keywords = 'AI, artificial intelligence, IT services, cloud computing, cybersecurity, data analytics, digital transformation, machine learning, automation, digital transformation services',
+=======
+  title = 'Zion Tech Group - Advanced AI & IT Solutions | 300% ROI Guaranteed',
+  description = 'Transform your business with cutting-edge AI and IT solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains. Leading provider of AI automation, cloud infrastructure, and cybersecurity.',
+  keywords = 'AI solutions, artificial intelligence, IT services, cloud computing, cybersecurity, data analytics, digital transformation, machine learning, automation, enterprise AI, AI consulting, cloud migration, AI chatbots, predictive analytics, business intelligence',
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-8fdc
   canonical,
-  ogImage = '/og-image.jpg',
+  ogImage = 'https://ziontechgroup.com/og-image.jpg',
   ogType = 'website',
   twitterCard = 'summary_large_image',
   structuredData,
@@ -27,6 +33,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
   const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : 'https://ziontechgroup.com')
+<<<<<<< HEAD
   
   // Default structured data
   const defaultStructuredData = {
@@ -79,6 +86,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   }
 
   const finalStructuredData = structuredData || defaultStructuredData
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-8fdc
 
   return (
     <Head>
@@ -150,23 +159,42 @@ const SEOHead: React.FC<SEOHeadProps> = ({
             "url": "https://ziontechgroup.com",
             "logo": "https://ziontechgroup.com/logo.png",
             "foundingDate": "2020",
+<<<<<<< HEAD
             "address": {
               "@type": "PostalAddress",
               "addressLocality": "San Francisco",
               "addressRegion": "CA",
+=======
+            "numberOfEmployees": "50-100",
+            "industry": "Information Technology",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "364 E Main St STE 1008",
+              "addressLocality": "Middletown",
+              "addressRegion": "DE",
+              "postalCode": "19709",
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-8fdc
               "addressCountry": "US"
             },
             "contactPoint": [
               {
                 "@type": "ContactPoint",
+<<<<<<< HEAD
                 "telephone": "+1-555-123-4567",
+=======
+                "telephone": "+1-302-464-0950",
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-8fdc
                 "contactType": "customer service",
                 "email": "info@ziontechgroup.com",
                 "availableLanguage": "English"
               },
               {
                 "@type": "ContactPoint",
+<<<<<<< HEAD
                 "telephone": "+1-555-123-4567",
+=======
+                "telephone": "+1-302-464-0950",
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-8fdc
                 "contactType": "sales",
                 "email": "sales@ziontechgroup.com",
                 "availableLanguage": "English"
@@ -175,6 +203,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
             "sameAs": [
               "https://linkedin.com/company/ziontechgroup",
               "https://twitter.com/ziontechgroup",
+<<<<<<< HEAD
               "https://github.com/ziontechgroup"
             ],
             "service": [
@@ -197,26 +226,84 @@ const SEOHead: React.FC<SEOHeadProps> = ({
             "hasOfferCatalog": {
               "@type": "OfferCatalog",
               "name": "AI & IT Services",
+=======
+              "https://facebook.com/ziontechgroup",
+              "https://youtube.com/ziontechgroup"
+            ],
+            "offers": [
+              {
+                "@type": "Offer",
+                "name": "AI Solutions",
+                "description": "Advanced artificial intelligence solutions for business automation and optimization",
+                "price": "5000",
+                "priceCurrency": "USD",
+                "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "price": "5000",
+                  "priceCurrency": "USD",
+                  "billingIncrement": "P1M"
+                }
+              },
+              {
+                "@type": "Offer",
+                "name": "Cloud Infrastructure",
+                "description": "Scalable and secure cloud solutions for modern businesses",
+                "price": "2500",
+                "priceCurrency": "USD",
+                "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "price": "2500",
+                  "priceCurrency": "USD",
+                  "billingIncrement": "P1M"
+                }
+              }
+            ],
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "reviewCount": "127",
+              "bestRating": "5",
+              "worstRating": "1"
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "AI and IT Services",
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-8fdc
               "itemListElement": [
                 {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
+<<<<<<< HEAD
                     "name": "AI Solutions"
+=======
+                    "name": "AI Solutions",
+                    "description": "Machine Learning, NLP, Computer Vision, Predictive Analytics"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-8fdc
                   }
                 },
                 {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
+<<<<<<< HEAD
                     "name": "Cloud Infrastructure"
+=======
+                    "name": "Cloud Infrastructure",
+                    "description": "AWS, Azure, GCP Migration, DevOps, Container Orchestration"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-8fdc
                   }
                 },
                 {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
+<<<<<<< HEAD
                     "name": "Cybersecurity"
+=======
+                    "name": "Cybersecurity",
+                    "description": "Threat Detection, Data Protection, Compliance, Security Audits"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-8fdc
                   }
                 }
               ]

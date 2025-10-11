@@ -1,19 +1,19 @@
 'use client'
 import React, { useState } from 'react'
-import { Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react'
+import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react'
 
 interface FormData {
   name: string
   email: string
   company: string
+  phone: string
+  service: string
   message: string
+  budget: string
 }
 
 interface FormErrors {
-  name?: string
-  email?: string
-  company?: string
-  message?: string
+  [key: string]: string
 }
 
 const ContactForm: React.FC = () => {
@@ -21,43 +21,75 @@ const ContactForm: React.FC = () => {
     name: '',
     email: '',
     company: '',
-    message: ''
+    phone: '',
+    service: '',
+    message: '',
+    budget: ''
   })
 
   const [errors, setErrors] = useState<FormErrors>({})
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
 
+  const services = [
+    'AI Solutions',
+    'Cloud Infrastructure',
+    'Cybersecurity',
+    'Custom Development',
+    'Data Analytics',
+    'Automation',
+    'Consultation',
+    'Other'
+  ]
+
+  const budgetRanges = [
+    'Under $10,000',
+    '$10,000 - $50,000',
+    '$50,000 - $100,000',
+    '$100,000 - $500,000',
+    'Over $500,000'
+  ]
+
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {}
 
-    // Name validation
     if (!formData.name.trim()) {
       newErrors.name = 'Name is required'
-    } else if (formData.name.trim().length < 2) {
-      newErrors.name = 'Name must be at least 2 characters'
     }
 
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     if (!formData.email.trim()) {
       newErrors.email = 'Email is required'
-    } else if (!emailRegex.test(formData.email)) {
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       newErrors.email = 'Please enter a valid email address'
     }
 
-    // Message validation
+    if (!formData.company.trim()) {
+      newErrors.company = 'Company is required'
+    }
+
+    if (!formData.phone.trim()) {
+      newErrors.phone = 'Phone number is required'
+    }
+
+    if (!formData.service) {
+      newErrors.service = 'Please select a service'
+    }
+
     if (!formData.message.trim()) {
       newErrors.message = 'Message is required'
     } else if (formData.message.trim().length < 10) {
-      newErrors.message = 'Message must be at least 10 characters'
+      newErrors.message = 'Message must be at least 10 characters long'
+    }
+
+    if (!formData.budget) {
+      newErrors.budget = 'Please select a budget range'
     }
 
     setErrors(newErrors)
     return Object.keys(newErrors).length === 0
   }
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target
     setFormData(prev => ({
       ...prev,
@@ -65,10 +97,10 @@ const ContactForm: React.FC = () => {
     }))
 
     // Clear error when user starts typing
-    if (errors[name as keyof FormErrors]) {
+    if (errors[name]) {
       setErrors(prev => ({
         ...prev,
-        [name]: undefined
+        [name]: ''
       }))
     }
   }
@@ -86,7 +118,7 @@ const ContactForm: React.FC = () => {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000))
       
-      // TODO: Replace with actual API call
+      // Here you would typically send the data to your backend
       console.log('Form submitted:', formData)
       
       setIsSubmitted(true)
@@ -94,11 +126,13 @@ const ContactForm: React.FC = () => {
         name: '',
         email: '',
         company: '',
-        message: ''
+        phone: '',
+        service: '',
+        message: '',
+        budget: ''
       })
     } catch (error) {
-      console.error('Form submission error:', error)
-      // Handle error (show error message, etc.)
+      console.error('Error submitting form:', error)
     } finally {
       setIsSubmitting(false)
     }
@@ -106,13 +140,11 @@ const ContactForm: React.FC = () => {
 
   if (isSubmitted) {
     return (
-      <div className="bg-green-500/10 border border-green-500/20 rounded-2xl p-8 text-center">
-        <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-          <CheckCircle className="w-8 h-8 text-green-400" />
-        </div>
-        <h3 className="text-2xl font-bold text-white mb-4">Message Sent Successfully!</h3>
+      <div className="bg-gradient-to-br from-green-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-8 border border-green-500/30 text-center">
+        <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
+        <h3 className="text-2xl font-bold text-white mb-4">Thank You!</h3>
         <p className="text-gray-300 mb-6">
-          Thank you for your message. We'll get back to you within 24 hours.
+          Your message has been sent successfully. Our team will get back to you within 24 hours.
         </p>
         <button
           onClick={() => setIsSubmitted(false)}
@@ -125,102 +157,186 @@ const ContactForm: React.FC = () => {
   }
 
   return (
-    <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
-      <h2 className="text-2xl font-bold text-white mb-6">Send us a message</h2>
-      <form onSubmit={handleSubmit} className="space-y-6" noValidate>
-        <div>
-          <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-            Full Name *
-          </label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 transition-colors ${
-              errors.name 
-                ? 'border-red-500 focus:ring-red-500' 
-                : 'border-gray-600 focus:ring-cyan-500'
-            }`}
-            placeholder="Your full name"
-            required
-            aria-describedby={errors.name ? 'name-error' : undefined}
-            aria-invalid={!!errors.name}
-          />
-          {errors.name && (
-            <p id="name-error" className="mt-2 text-sm text-red-400 flex items-center">
-              <AlertCircle className="w-4 h-4 mr-1" />
-              {errors.name}
-            </p>
-          )}
+    <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30">
+      <div className="text-center mb-8">
+        <h2 className="text-3xl font-bold text-white mb-4">Get In Touch</h2>
+        <p className="text-gray-300">
+          Ready to transform your business? Let's discuss your project and how we can help you achieve your goals.
+        </p>
+      </div>
+
+      <form onSubmit={handleSubmit} className="space-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label htmlFor="name" className="block text-white font-semibold mb-2">
+              Full Name *
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleInputChange}
+              className={`w-full px-4 py-3 rounded-lg bg-white/10 border ${
+                errors.name ? 'border-red-500' : 'border-gray-600'
+              } text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent`}
+              placeholder="Enter your full name"
+            />
+            {errors.name && (
+              <p className="text-red-400 text-sm mt-1 flex items-center">
+                <AlertCircle className="w-4 h-4 mr-1" />
+                {errors.name}
+              </p>
+            )}
+          </div>
+
+          <div>
+            <label htmlFor="email" className="block text-white font-semibold mb-2">
+              Email Address *
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleInputChange}
+              className={`w-full px-4 py-3 rounded-lg bg-white/10 border ${
+                errors.email ? 'border-red-500' : 'border-gray-600'
+              } text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent`}
+              placeholder="Enter your email address"
+            />
+            {errors.email && (
+              <p className="text-red-400 text-sm mt-1 flex items-center">
+                <AlertCircle className="w-4 h-4 mr-1" />
+                {errors.email}
+              </p>
+            )}
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label htmlFor="company" className="block text-white font-semibold mb-2">
+              Company *
+            </label>
+            <input
+              type="text"
+              id="company"
+              name="company"
+              value={formData.company}
+              onChange={handleInputChange}
+              className={`w-full px-4 py-3 rounded-lg bg-white/10 border ${
+                errors.company ? 'border-red-500' : 'border-gray-600'
+              } text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent`}
+              placeholder="Enter your company name"
+            />
+            {errors.company && (
+              <p className="text-red-400 text-sm mt-1 flex items-center">
+                <AlertCircle className="w-4 h-4 mr-1" />
+                {errors.company}
+              </p>
+            )}
+          </div>
+
+          <div>
+            <label htmlFor="phone" className="block text-white font-semibold mb-2">
+              Phone Number *
+            </label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              value={formData.phone}
+              onChange={handleInputChange}
+              className={`w-full px-4 py-3 rounded-lg bg-white/10 border ${
+                errors.phone ? 'border-red-500' : 'border-gray-600'
+              } text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent`}
+              placeholder="Enter your phone number"
+            />
+            {errors.phone && (
+              <p className="text-red-400 text-sm mt-1 flex items-center">
+                <AlertCircle className="w-4 h-4 mr-1" />
+                {errors.phone}
+              </p>
+            )}
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label htmlFor="service" className="block text-white font-semibold mb-2">
+              Service Interested In *
+            </label>
+            <select
+              id="service"
+              name="service"
+              value={formData.service}
+              onChange={handleInputChange}
+              className={`w-full px-4 py-3 rounded-lg bg-white/10 border ${
+                errors.service ? 'border-red-500' : 'border-gray-600'
+              } text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent`}
+            >
+              <option value="">Select a service</option>
+              {services.map((service) => (
+                <option key={service} value={service} className="bg-gray-800">
+                  {service}
+                </option>
+              ))}
+            </select>
+            {errors.service && (
+              <p className="text-red-400 text-sm mt-1 flex items-center">
+                <AlertCircle className="w-4 h-4 mr-1" />
+                {errors.service}
+              </p>
+            )}
+          </div>
+
+          <div>
+            <label htmlFor="budget" className="block text-white font-semibold mb-2">
+              Project Budget *
+            </label>
+            <select
+              id="budget"
+              name="budget"
+              value={formData.budget}
+              onChange={handleInputChange}
+              className={`w-full px-4 py-3 rounded-lg bg-white/10 border ${
+                errors.budget ? 'border-red-500' : 'border-gray-600'
+              } text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent`}
+            >
+              <option value="">Select budget range</option>
+              {budgetRanges.map((range) => (
+                <option key={range} value={range} className="bg-gray-800">
+                  {range}
+                </option>
+              ))}
+            </select>
+            {errors.budget && (
+              <p className="text-red-400 text-sm mt-1 flex items-center">
+                <AlertCircle className="w-4 h-4 mr-1" />
+                {errors.budget}
+              </p>
+            )}
+          </div>
         </div>
 
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-            Email Address *
-          </label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 transition-colors ${
-              errors.email 
-                ? 'border-red-500 focus:ring-red-500' 
-                : 'border-gray-600 focus:ring-cyan-500'
-            }`}
-            placeholder="your.email@example.com"
-            required
-            aria-describedby={errors.email ? 'email-error' : undefined}
-            aria-invalid={!!errors.email}
-          />
-          {errors.email && (
-            <p id="email-error" className="mt-2 text-sm text-red-400 flex items-center">
-              <AlertCircle className="w-4 h-4 mr-1" />
-              {errors.email}
-            </p>
-          )}
-        </div>
-
-        <div>
-          <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
-            Company
-          </label>
-          <input
-            type="text"
-            id="company"
-            name="company"
-            value={formData.company}
-            onChange={handleChange}
-            className="w-full px-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-colors"
-            placeholder="Your company name"
-          />
-        </div>
-
-        <div>
-          <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-            Message *
+          <label htmlFor="message" className="block text-white font-semibold mb-2">
+            Project Details *
           </label>
           <textarea
             id="message"
             name="message"
             value={formData.message}
-            onChange={handleChange}
+            onChange={handleInputChange}
             rows={5}
-            className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 transition-colors resize-vertical ${
-              errors.message 
-                ? 'border-red-500 focus:ring-red-500' 
-                : 'border-gray-600 focus:ring-cyan-500'
-            }`}
-            placeholder="Tell us about your project..."
-            required
-            aria-describedby={errors.message ? 'message-error' : undefined}
-            aria-invalid={!!errors.message}
+            className={`w-full px-4 py-3 rounded-lg bg-white/10 border ${
+              errors.message ? 'border-red-500' : 'border-gray-600'
+            } text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none`}
+            placeholder="Tell us about your project, goals, and any specific requirements..."
           />
           {errors.message && (
-            <p id="message-error" className="mt-2 text-sm text-red-400 flex items-center">
+            <p className="text-red-400 text-sm mt-1 flex items-center">
               <AlertCircle className="w-4 h-4 mr-1" />
               {errors.message}
             </p>
@@ -234,7 +350,7 @@ const ContactForm: React.FC = () => {
         >
           {isSubmitting ? (
             <>
-              <Loader2 className="w-5 h-5 mr-2 animate-spin" />
+              <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
               Sending...
             </>
           ) : (
@@ -245,6 +361,26 @@ const ContactForm: React.FC = () => {
           )}
         </button>
       </form>
+
+      <div className="mt-8 pt-8 border-t border-gray-600">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+          <div className="flex flex-col items-center">
+            <Mail className="w-6 h-6 text-cyan-400 mb-2" />
+            <p className="text-white font-semibold">Email Us</p>
+            <p className="text-gray-300 text-sm">info@ziontechgroup.com</p>
+          </div>
+          <div className="flex flex-col items-center">
+            <Phone className="w-6 h-6 text-cyan-400 mb-2" />
+            <p className="text-white font-semibold">Call Us</p>
+            <p className="text-gray-300 text-sm">+1 (302) 464-0950</p>
+          </div>
+          <div className="flex flex-col items-center">
+            <MapPin className="w-6 h-6 text-cyan-400 mb-2" />
+            <p className="text-white font-semibold">Visit Us</p>
+            <p className="text-gray-300 text-sm">Middletown, DE</p>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
