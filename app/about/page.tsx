@@ -42,18 +42,12 @@ const AboutPage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <>
       <Helmet>
         <title>About Us - Zion Tech Group | AI & IT Solutions</title>
         <meta name="description" content="Learn about Zion Tech Group's mission to democratize access to cutting-edge AI and IT solutions. Meet our team of passionate technologists." />
         <meta name="keywords" content="about us, team, mission, AI solutions, IT services, technology company" />
       </Helmet>
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
->>>>>>> cursor/fix-errors-and-merge-to-main-aca8
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         

@@ -32,21 +32,25 @@ const EnhancedFooter: React.FC = () => {
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">Z
-              <div className="text-xl font-bold">Zion Tech Group
+                <span className="text-white font-bold text-xl">Z</span>
+              </div>
+              <div className="text-xl font-bold">Zion Tech Group</div>
             <p className="text-gray-300 mb-6 max-w-md">
               Leading technology solutions provider helping businesses transform their digital
               presence with cutting-edge AI, cloud architecture and innovative development services.
+            </p>
             <div className="flex space-x-4">
-              <$2 />
+              <a
                 href="https://linkedin.com/company/ziontechgroup"
                 className="text-gray-400 hover:text-white transition-colors">
                 <Linkedin className="w-5 h-5" />
-              <$2 />
+              </a>
+              <a
                 href="https://twitter.com/ziontechgroup"
                 className="text-gray-400 hover:text-white transition-colors">
                 <Twitter className="w-5 h-5" />
-              <$2 />
+              </a>
+              <a
                 href="https://github.com/ziontechgroup"
                 className="text-gray-400 hover:text-white transition-colors">
                 <Github className="w-5 h-5" />
