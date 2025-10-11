@@ -19,19 +19,34 @@ export default function Navigation() {
       title: 'AI Services',
       href: '/ai-services',
       icon: <Zap className="w-4 h-4" />,
-      description: 'AI-powered solutions for your business'
+      description: 'AI-powered solutions for your business',
+      subServices: [
+        { title: 'AI CRM Assistant', href: '/ai-crm-assistant', description: 'Smart customer relationship management' },
+        { title: 'AI Cybersecurity Suite', href: '/ai-cybersecurity-suite', description: 'Advanced AI security solutions' },
+        { title: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions', description: 'Blockchain with AI integration' }
+      ]
     },
     {
       title: 'IT Services',
       href: '/it-services',
       icon: <Database className="w-4 h-4" />,
-      description: 'Comprehensive IT infrastructure services'
+      description: 'Comprehensive IT infrastructure services',
+      subServices: [
+        { title: 'Cloud Migration', href: '/it-services#cloud-migration', description: 'Seamless cloud transitions' },
+        { title: 'Cybersecurity', href: '/it-services#cybersecurity', description: 'Protect your digital assets' },
+        { title: 'DevOps & CI/CD', href: '/it-services#devops', description: 'Streamline development processes' }
+      ]
     },
     {
       title: 'Micro SaaS',
       href: '/micro-saas-services',
       icon: <Smartphone className="w-4 h-4" />,
-      description: 'Powerful micro SaaS tools'
+      description: 'Powerful micro SaaS tools',
+      subServices: [
+        { title: 'AI Expense Tracker', href: '/ai-expense-tracker', description: 'Smart expense management' },
+        { title: 'AI Task Manager', href: '/micro-saas-services#ai-task-manager', description: 'Intelligent task management' },
+        { title: 'AI Content Writer', href: '/micro-saas-services#ai-content-writer', description: 'AI-powered content creation' }
+      ]
     },
     {
       title: 'Cloud Services',
@@ -89,24 +104,39 @@ export default function Navigation() {
               </button>
               
               {isServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg z-50">
+                <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-lg z-50">
                   <div className="p-4">
-                    <div className="grid grid-cols-1 gap-2">
+                    <div className="grid grid-cols-1 gap-4">
                       {services.map((service, index) => (
-                        <Link
-                          key={index}
-                          to={service.href}
-                          className="flex items-center p-3 rounded-lg hover:bg-gray-100 transition-colors"
-                          onClick={() => setIsServicesOpen(false)}
-                        >
-                          <div className="flex-shrink-0 text-blue-600">
-                            {service.icon}
-                          </div>
-                          <div className="ml-3">
-                            <p className="text-sm font-medium text-gray-900">{service.title}</p>
-                            <p className="text-xs text-gray-500">{service.description}</p>
-                          </div>
-                        </Link>
+                        <div key={index} className="border-b border-gray-200 pb-4 last:border-b-0 last:pb-0">
+                          <Link
+                            to={service.href}
+                            className="flex items-center p-3 rounded-lg hover:bg-gray-100 transition-colors mb-2"
+                            onClick={() => setIsServicesOpen(false)}
+                          >
+                            <div className="flex-shrink-0 text-blue-600">
+                              {service.icon}
+                            </div>
+                            <div className="ml-3">
+                              <p className="text-sm font-medium text-gray-900">{service.title}</p>
+                              <p className="text-xs text-gray-500">{service.description}</p>
+                            </div>
+                          </Link>
+                          {service.subServices && (
+                            <div className="ml-8 space-y-1">
+                              {service.subServices.map((subService, subIndex) => (
+                                <Link
+                                  key={subIndex}
+                                  to={subService.href}
+                                  className="block px-3 py-2 text-xs text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded transition-colors"
+                                  onClick={() => setIsServicesOpen(false)}
+                                >
+                                  {subService.title}
+                                </Link>
+                              ))}
+                            </div>
+                          )}
+                        </div>
                       ))}
                     </div>
                   </div>

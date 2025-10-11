@@ -29,13 +29,34 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
+            <h3 className="text-lg font-semibold mb-4">AI Services</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/ai-services" className="text-gray-400 hover:text-white transition-colors">
-                  AI Services
+                  AI Services Overview
                 </Link>
               </li>
+              <li>
+                <Link to="/ai-crm-assistant" className="text-gray-400 hover:text-white transition-colors">
+                  AI CRM Assistant
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-cybersecurity-suite" className="text-gray-400 hover:text-white transition-colors">
+                  AI Cybersecurity Suite
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-blockchain-solutions" className="text-gray-400 hover:text-white transition-colors">
+                  AI Blockchain Solutions
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold mb-4">IT & SaaS Services</h3>
+            <ul className="space-y-2">
               <li>
                 <Link to="/it-services" className="text-gray-400 hover:text-white transition-colors">
                   IT Services
@@ -43,7 +64,12 @@ export default function Footer() {
               </li>
               <li>
                 <Link to="/micro-saas-services" className="text-gray-400 hover:text-white transition-colors">
-                  Micro SaaS
+                  Micro SaaS Tools
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-expense-tracker" className="text-gray-400 hover:text-white transition-colors">
+                  AI Expense Tracker
                 </Link>
               </li>
               <li>
@@ -90,15 +116,15 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center">
                 <Mail className="w-4 h-4 text-gray-400 mr-3" />
-                <span className="text-gray-400">info@ziontechgroup.com</span>
+                <span className="text-gray-400">kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center">
                 <Phone className="w-4 h-4 text-gray-400 mr-3" />
-                <span className="text-gray-400">+1 (555) 123-4567</span>
+                <span className="text-gray-400">+1 302 464 0950</span>
               </div>
               <div className="flex items-center">
                 <MapPin className="w-4 h-4 text-gray-400 mr-3" />
-                <span className="text-gray-400">San Francisco, CA</span>
+                <span className="text-gray-400">364 E Main St STE 1008 Middletown DE 19709</span>
               </div>
             </div>
           </div>

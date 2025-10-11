@@ -11,6 +11,11 @@ import MicroSAASServicesPage from './app/micro-saas-services/page'
 import FiveGImplementationPage from './app/5g-implementation/page'
 import CloudServicesPage from './app/cloud-services/page'
 import DigitalTransformationPage from './app/digital-transformation/page'
+import AICRMAssistantPage from './app/ai-crm-assistant/page'
+import AICybersecuritySuitePage from './app/ai-cybersecurity-suite/page'
+import AIBlockchainSolutionsPage from './app/ai-blockchain-solutions/page'
+import AIExpenseTrackerPage from './app/ai-expense-tracker/page'
+import CloudMigrationPage from './app/cloud-migration/page'
 
 function App() {
   return (
@@ -28,6 +33,11 @@ function App() {
             <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
             <Route path="/cloud-services" element={<CloudServicesPage />} />
             <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
+            <Route path="/ai-crm-assistant" element={<AICRMAssistantPage />} />
+            <Route path="/ai-cybersecurity-suite" element={<AICybersecuritySuitePage />} />
+            <Route path="/ai-blockchain-solutions" element={<AIBlockchainSolutionsPage />} />
+            <Route path="/ai-expense-tracker" element={<AIExpenseTrackerPage />} />
+            <Route path="/cloud-migration" element={<CloudMigrationPage />} />
           </Routes>
         </main>
         <Footer />
