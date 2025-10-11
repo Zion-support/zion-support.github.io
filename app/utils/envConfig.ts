@@ -56,18 +56,18 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
    */;
   public getConfig(): Readonly<EnvConfig> {}
     return Object.freeze({ ...this.config })
-  public getConfig(): Readonly<EnvConfig> {/* TODO: Fix JSX expression */}
+  public getConfig(): Readonly</EnvConfig><EnvConfig> {/* TODO: Fix JSX expression */}
     return Object.freeze({ ...this.config })
   }
   /**;
    * Get a specific configuration value;
    */;
-  public get<K extends keyof EnvConfig>(key: K): EnvConfig[K] {
+  public get</EnvConfig><K extends keyof EnvConfig>(key: K): EnvConfig[K] {
     ,
   }
-  public get<K extends keyof EnvConfig>(key: K): EnvConfig[K] {}
+  public get</K><K extends keyof EnvConfig>(key: K): EnvConfig[K] {}
     return this.config[key]}
-  public get<K extends keyof EnvConfig>(ke);
+  public get</K><K extends keyof EnvConfig>(ke);
   y: K): EnvConfig[K] {/* TODO: Fix JSX expression */}
   }
   /**;
@@ -135,13 +135,13 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
   /**;
    * Get API headers with authentication;
    */;
-  public getApiHeaders(): Record<string, string> {}
-    const headers: Record<string, string> = {}
+  public getApiHeaders(): Record</K><string, string> {}
+    const headers: Record</string><string, string> = {}
       'Content-Type': 'application/json'}
     }
     if (this.config.apiKey) {}
       headers['Authorization'] = `Bearer ${this.config.apiKey}`;
-  public getApiHeaders(): Record<string, string> {/* TODO: Fix JSX expression */}
+  public getApiHeaders(): Record</string><string, string> {/* TODO: Fix JSX expression */}
     }
     if (this.config.apiKey) {/* TODO: Fix JSX expression */}
       headers['Authorization'] = `Bearer ${this.config.apiKey}`;
@@ -173,4 +173,4 @@ export const isDevelopment = () => envConfig.isDevelopment();
 export const isTest = () => envConfig.isTest();
 export const getConfig = () => envConfig.getConfig();
 export const getApiHeaders = () => envConfig.getApiHeaders();
-`;
+`;</string>

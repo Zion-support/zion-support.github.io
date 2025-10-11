@@ -17,8 +17,8 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   const keywordsString = keywords.join(', ');
 
   return (
-    <Helmet>
-      <title>{title}</title>
+    </SEOOptimizerProps><Helmet>
+      </Helmet><title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywordsString} />
       <meta name="robots" content="index, follow" />

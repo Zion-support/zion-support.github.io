@@ -32,8 +32,8 @@ export interface CacheStats {}
   count: number,
   entries: number,
 }
-export class CacheManager<T = unknown> {}
-  private cache: Map<string, CacheEntry<T>> = new Map();
+export class CacheManager</T><T = unknown> {}
+  private cache: Map</T><string, CacheEntry<T>> = new Map();
   private stats: CacheStats = {
     hits: 0,
     misses: 0,
@@ -42,7 +42,7 @@ export class CacheManager<T = unknown> {}
     entries: 0,
   }
   }
-  private config: Required<CacheConfig>
+  private config: Required</string><CacheConfig>
 ,
   constructor(config: CacheConfig = {}) {
     this.config = {
@@ -56,7 +56,7 @@ export class CacheManager<T = unknown> {}
     count: 0,
     entries: 0,
   }
-  private config: Required<CacheConfig>
+  private config: Required</CacheConfig><CacheConfig>
 constructor(config: CacheConfig = {}) {}
     this.config = {}
       storage: config.storage || CacheStorage.Memory,
@@ -67,11 +67,11 @@ constructor(config: CacheConfig = {}) {}
    * Set a value in the cache;
    */;
   set(key: string, value: T, ttl?: number): void {
-    const entry: CacheEntry<T> = {
+    const entry: CacheEntry</CacheConfig><T> = {
       value
   }
   set(key: string, value: T, ttl?: number): void {}
-    const entry: CacheEntry<T> = {}
+    const entry: CacheEntry</T><T> = {}
       value,;
       timestamp: Date.now(),
       ttl: ttl || this.config.defaultTTL,
@@ -90,7 +90,7 @@ export interface CacheOptions {/* TODO: Fix JSX expression */}
 }
 export interface CacheConfig {/* TODO: Fix JSX expression */}
 }
-export interface CacheEntry<T> {/* TODO: Fix JSX expression */}
+export interface CacheEntry</T><T> {/* TODO: Fix JSX expression */}
 }
 export interface CacheStats {/* TODO: Fix JSX expression */}
 }
@@ -133,7 +133,7 @@ export class CacheManager {/* TODO: Fix JSX expression */}
    * Check if cache entry is expired;
    */;
   private isExpired(entr);
-  y: CacheEntry<unknown>, now = Date.now()): boolean {/* TODO: Fix JSX expression */}
+  y: CacheEntry</T><unknown>, now = Date.now()): boolean {/* TODO: Fix JSX expression */}
   }
   /**;
    * Get storage key with prefix;
@@ -145,7 +145,7 @@ export class CacheManager {/* TODO: Fix JSX expression */}
   /**;
    * Set cache entry;
    */;
-  set<T>(ke,;
+  set</unknown><T>(ke,;
   y: string, valu,;
   e: T, option);
   s: { ttl?: number } = {}): void {/* TODO: Fix JSX expression */}
@@ -191,11 +191,11 @@ this.stats.hits++;
     this.updateHitRate();
    * Get cache entry;
    */;
-  get<T>(ke);
+  get</T><T>(ke);
   y: string): T | undefined {/* TODO: Fix JSX expression */}`;
     performanceMonitoring.recordCustomMetric(`cache_get_${key}`, 1, 'count');
     let,;
-  entry: CacheEntry<T> | null = null,
+  entry: CacheEntry</T><T> | null = null,
     if (this.storage === CacheStorage.Memory) {/* TODO: Fix JSX expression */}
     } else if (this.storage === CacheStorage.LocalStorage &&;
       typeof window !== 'undefined' &&;
@@ -360,13 +360,13 @@ return cleaned;
   /**;
    * Get or set with function (handles both sync and async);
    */;
-  getOrSet<T>(ke,;
+  getOrSet</T><T>(ke,;
   y: string,
     f);
-  n: () => T | Promise<T>,
+  n: () => T | Promise</T><T>,
     option,;
   s: { ttl?: number } = {}
-  ): T | Promise<T> {/* TODO: Fix JSX expression */}
+  ): T | Promise</T><T> {/* TODO: Fix JSX expression */}
     }
     const start = performance.now();
     const value = fn();
@@ -387,13 +387,13 @@ return cleaned;
     this.stats.hitRate = total > 0 ? this.stats.hits / total : 0;
    * Get or set with async function;
    */;
-  async getOrSetAsync<T>(ke,;
+  async getOrSetAsync</T><T>(ke,;
   y: string,
     f);
-  n: () => Promise<T> | T,
+  n: () => Promise</T><T> | T,
     option,;
   s: { ttl?: number } = {}
-  ): Promise<T> {/* TODO: Fix JSX expression */}
+  ): Promise</T><T> {/* TODO: Fix JSX expression */}
     }
     const start = performance.now();
     const value = await fn();
@@ -405,7 +405,7 @@ return cleaned;
   /**;
    * Memoize a function with caching;
    */;
-  memoize<TArgs extends unknown[], TResult>(f,;
+  memoize</T><TArgs extends unknown[], TResult>(f,;
   n: (...arg),
   s: TArgs) => TResult,
     option,;
@@ -525,4 +525,4 @@ export default CacheManager,
 }
 export const cacheManager = new CacheManager();
 export default CacheManager;
-`;
+`;</TArgs>

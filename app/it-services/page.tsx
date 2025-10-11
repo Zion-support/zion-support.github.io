@@ -1044,8 +1044,7 @@ const ItServicesPage: React.FC = () => {
     { id: 'Security Automation', name: 'Security Automation', count: services.filter(s => s.category === 'Security Automation').length },
     { id: 'Data Visualization', name: 'Data Visualization', count: services.filter(s => s.category === 'Data Visualization').length },
     { id: 'Automation', name: 'Automation', count: services.filter(s => s.category === 'Automation').length }
-  ]
-
+  ];
   const filteredServices = services.filter(service => 
     selectedCategory === 'all' || service.category === selectedCategory
   );
@@ -1053,18 +1052,18 @@ const ItServicesPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>IT Services - Zion Tech Group</title>
+        </Helmet><title>IT Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive IT services including cloud infrastructure, cybersecurity, DevOps, database management, and web development." />
       </Helmet>
       
       <Navigation />
       
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
-        <div className="container mx-auto px-4 py-16">
-          <div className="max-w-6xl mx-auto">
+        </main><div className="
+          </div><div className="max-w-6xl mx-auto">
             {/* Header */}
-            <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            </div><div className="text-center mb-16">
+              </div><h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 IT Services
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -1075,9 +1074,9 @@ const ItServicesPage: React.FC = () => {
 
             {/* Category Filter */}
             <div className="mb-12">
-              <div className="flex flex-wrap justify-center gap-4">
+              </div><div className="flex flex-wrap justify-center gap-4">
                 {categories.map((category) => (
-                  <button
+                  </div><button
                     key={category.id}
                     onClick={() => setSelectedCategory(category.id)}
                     className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
@@ -1095,17 +1094,17 @@ const ItServicesPage: React.FC = () => {
             {/* Services Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
               {filteredServices.map((service) => (
-                <div key={service.id} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center">
-                        <service.icon className="w-6 h-6 text-white" />
+                </div><div key={service.id} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300">
+                  </div><div className="flex items-center justify-between mb-4">
+                    </div><div className="flex items-center space-x-3">
+                      </div><div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center">
+                        </div><service.icon className="w-6 h-6 text-white" />
                       </div>
                       <h3 className="text-xl font-bold text-white">{service.name}</h3>
                     </div>
                     {service.popular && (
                       <span className="bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center">
-                        <Star className="w-4 h-4 mr-1" />
+                        </span><Star className="w-4 h-4 mr-1" />
                         Popular
                       </span>
                     )}
@@ -1114,19 +1113,19 @@ const ItServicesPage: React.FC = () => {
                   <p className="text-gray-300 mb-4">{service.description}</p>
                   
                   <div className="flex items-center justify-between mb-4">
-                    <div>
-                      <span className="text-2xl font-bold text-purple-400">{service.price}</span>
+                    </div><div>
+                      </div><span className="text-2xl font-bold text-purple-400">{service.price}</span>
                       <span className="text-gray-400 text-sm ml-2 line-through">{service.marketPrice}</span>
                     </div>
                     <span className="text-gray-400 text-sm">{service.category}</span>
                   </div>
 
                   <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
+                    </div><h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
                     <ul className="space-y-2">
                       {service.features.slice(0, 3).map((feature, index) => (
-                        <li key={index} className="flex items-start space-x-2">
-                          <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                        </ul><li key={index} className="flex items-start space-x-2">
+                          </li><CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
                           <span className="text-sm text-gray-300">{feature}</span>
                         </li>
                       ))}
@@ -1134,12 +1133,12 @@ const ItServicesPage: React.FC = () => {
                   </div>
 
                   <div className="flex items-center justify-between">
-                    <Link
+                    </div><Link
                       to="/contact"
                       className="flex items-center text-purple-400 hover:text-purple-300 transition-colors"
                     >
                       Learn More
-                      <ArrowRight className="w-4 h-4 ml-1" />
+                      </Link><ArrowRight className="w-4 h-4 ml-1" />
                     </Link>
                     <Link
                       to="/contact"
@@ -1154,8 +1153,8 @@ const ItServicesPage: React.FC = () => {
 
             {/* CTA Section */}
             <div className="text-center">
-              <div className="bg-slate-800/50 rounded-lg p-8">
-                <h2 className="text-2xl font-bold text-white mb-4">
+              </div><div className="bg-slate-800/50 rounded-lg p-8">
+                </div><h2 className="text-2xl font-bold text-white mb-4">
                   Ready to Modernize Your IT Infrastructure?
                 </h2>
                 <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
@@ -1163,7 +1162,7 @@ const ItServicesPage: React.FC = () => {
                   Get a free consultation and see how we can transform your technology infrastructure.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link
+                  </div><Link
                     to="/contact"
                     className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
                   >

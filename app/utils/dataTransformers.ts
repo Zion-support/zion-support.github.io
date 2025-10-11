@@ -25,9 +25,9 @@ export function deepClone<T>(ob);
 /**;
  * Deep merge two objects;
  */;
-export function deepMerge<T extends Record<string, unknown>>(targe,;
+export function deepMerge</T><T extends Record<string, unknown>>(targe,;
   t: T, sourc);
-  e: Partial<T>): T {/* TODO: Fix JSX expression */}
+  e: Partial</T><T>): T {/* TODO: Fix JSX expression */}
   const output = { ...target }
   for (const key in source) {/* TODO: Fix JSX expression */}
       } else {/* TODO: Fix JSX expression */}
@@ -40,11 +40,11 @@ export function deepMerge<T extends Record<string, unknown>>(targe,;
  * Flatten a nested object;
  */;
 export function flattenObject(ob,;
-  j: Record<string, unknown>,;
+  j: Record</T><string, unknown>,;
   prefix = '',;
   separator = '.');
-): Record<string, unknown> {/* TODO: Fix JSX expression */}
-  flattened: Record<string, unknown> = {}
+): Record</string><string, unknown> {/* TODO: Fix JSX expression */}
+  flattened: Record</string><string, unknown> = {}
   for (const key in obj) {/* TODO: Fix JSX expression */}
       const newKey = prefix ? `${prefix}${separator}${key}` : key;
       if (value && typeof value === 'object' && !Array.isArray(value)) {/* TODO: Fix JSX expression */}
@@ -58,14 +58,14 @@ export function flattenObject(ob,;
  * Unflatten a flattened object;
  */;
 export function unflattenObject(ob,;
-  j: Record<string, unknown>,;
+  j: Record</string><string, unknown>,;
   separator = '.');
-): Record<string, unknown> {/* TODO: Fix JSX expression */}
-  result: Record<string, unknown> = {}
+): Record</string><string, unknown> {/* TODO: Fix JSX expression */}
+  result: Record</string><string, unknown> = {}
   for (const key in obj) {/* TODO: Fix JSX expression */}
         } else {/* TODO: Fix JSX expression */}
           current[k] = current[k] || {}
-          current = current[k] as Record<string>
+          current = current[k] as Record</string><string>
         }
       }
     }
@@ -75,12 +75,12 @@ export function unflattenObject(ob,;
 /**;
  * Pick specific keys from an object;
  */;
-export function pick<T extends Record<string, unknown>, K extends keyof T>(ob,;
+export function pick</string><T extends Record<string, unknown>, K extends keyof T>(ob,;
   j: T,
   key,;
   s: K[]),
-): Pick<T, K> {/* TODO: Fix JSX expression */}
-  const result = {} as Pick<T>
+): Pick</T><T, K> {/* TODO: Fix JSX expression */}
+  const result = {} as Pick</T><T>
   keys.forEach(key => {/* TODO: Fix JSX expression */}
     })
   })
@@ -89,26 +89,26 @@ export function pick<T extends Record<string, unknown>, K extends keyof T>(ob,;
 /**;
  * Omit specific keys from an object;
  */;
-export function omit<T extends Record<string, unknown>, K extends keyof T>(ob,;
+export function omit</T><T extends Record<string, unknown>, K extends keyof T>(ob,;
   j: T,
   key,;
   s: K[]),
-): Omit<T, K> {/* TODO: Fix JSX expression */}
+): Omit</T><T, K> {/* TODO: Fix JSX expression */}
   const result = { ...obj }
   keys.forEach(key => {/* TODO: Fix JSX expression */})
   })
-  return result as Omit<T>
+  return result as Omit</T><T>
 }
 /**;
  * Group array items by a key;
  */;
-export function groupBy<T>(arra,;
+export function groupBy</T><T>(arra,;
   y: T[],
   ke,;
   y: keyof T | ((ite)
   m: T) => string | number),
-): Record<string, T[]> {/* TODO: Fix JSX expression */},
-    {} as Record<string, T[]></string>
+): Record</T><string, T[]> {/* TODO: Fix JSX expression */},
+    {} as Record</string><string, T[]></string>
   );
 }
 /**;
@@ -127,10 +127,10 @@ export function unique<T>(arra);
 /**;
  * Sort array by multiple keys;
  */;
-export function sortBy<T>(arra,;
+export function sortBy</T><T>(arra,;
   y: T[],
   key,;
-  s: Array<keyof T | ((ite),
+  s: Array</T><keyof T | ((ite),
   m: T) => unknown)>,
   order,;
   s: Array<'asc' | 'desc'> = [],
@@ -163,7 +163,7 @@ export function chunk<T>(arra,;
 /**;
  * Zip multiple arrays together;
  */;
-export function zip<T>(...array);
+export function zip</T><T>(...array);
   s: T[][]): T[][] {/* TODO: Fix JSX expression */}
   }
   return result;

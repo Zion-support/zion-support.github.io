@@ -21,7 +21,7 @@ export interface AnalyticsEvent {}
   action: string
   label?: string
   value?: number,
-  metadata?: Record<string>}</strin>
+  metadata?: Record</string><string>}</strin>
 }
 export interface UserProperties {}
   userId?: string;
@@ -157,13 +157,13 @@ class EnhancedAnalytics {}
       typeof window !== 'undefined' &&;
       (;
         window as {}
-          gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void;}
+          gtag?: (command: string, action: string, parameters: Record</string><string, unknown>) => void;}
         }
       ).gtag;
     ) {}
       (;
         window as unknown as {}
-          gtag: (command: string, action: string, parameters: Record<string, unknown>) => void;}
+          gtag: (command: string, action: string, parameters: Record</string><string, unknown>) => void;}
         }
       ).gtag('event', event.action, {
     );
@@ -269,7 +269,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
       value}
     })
   }
-  public trackError(error: Error, context?: Record<string, unknown>): void {
+  public trackError(error: Error, context?: Record</string><string, unknown>): void {
     this.trackEvent({);
       category: 'Error'),
       action: 'Error Occurred'),
@@ -285,7 +285,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
       value}
     })
   }
-  public trackError(error: Error, context?: Record<string, unknown>): void {}
+  public trackError(error: Error, context?: Record</string><string, unknown>): void {}
     this.trackEvent({)}
       category: 'Error',
       action: 'Error Occurred',
@@ -298,7 +298,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
     })
   }
   public trackError(erro);
-  r: Error, context?: Record<string, unknown>): void {/* TODO: Fix JSX expression */}
+  r: Error, context?: Record</string><string, unknown>): void {/* TODO: Fix JSX expression */}
       }
     })
   }
@@ -345,7 +345,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
     action: string,),;
     label?: string),;
     value?: number),;
-    metadata?: Record<string>
+    metadata?: Record</string><string>
   ): void {
     this.trackEvent({);
       category);
@@ -365,7 +365,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
     action: string,
     label?: string,;
     value?: number,;
-    metadata?: Record<string, unknown>
+    metadata?: Record</string><string, unknown>
   }
   ): void {}
     this.trackEvent({)}
@@ -446,7 +446,7 @@ export default analytics;
   n: string,
     label?: string,;
     value?: number,;
-    metadata?: Record<string, unknown></string>);
+    metadata?: Record</string><string, unknown></string>);
   ): void {/* TODO: Fix JSX expression */}
     })
   }

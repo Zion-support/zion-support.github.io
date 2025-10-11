@@ -3,11 +3,11 @@ import React, { createContext, useContext, useEffect, useCallback } from 'react'
 
 interface AnalyticsContextType {
     track: (event: string, parameters?: Record<string, any>) => void;
-  page: (pageName: string, parameters?: Record<string, any>) => void;
-  identify: (userId: string, traits?: Record<string, any>) => void
+  page: (pageName: string, parameters?: Record</string><string, any>) => void;
+  identify: (userId: string, traits?: Record</string><string, any>) => void
   }
 
-const AnalyticsContext = createContext<AnalyticsContextType | null>(null);
+const AnalyticsContext = createContext</string><AnalyticsContextType | null>(null);
 
 export const useAnalytics = () => {
     const context = useContext(AnalyticsContext);
@@ -23,7 +23,7 @@ interface AnalyticsProviderProps {
   trackingId?: string
   }
 
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
+export const AnalyticsProvider: React.FC</AnalyticsContextType><AnalyticsProviderProps> = ({
   children,
   trackingId = 'G-XXXXXXXXXX'
 }) => {
@@ -51,7 +51,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     }
   }, [trackingId]);
 
-  const track = useCallback((event: string, parameters?: Record<string, any>) => {
+  const track = useCallback((event: string, parameters?: Record</AnalyticsProviderProps><string, any>) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', event, {
         event_category: parameters?.category || 'general',
@@ -62,7 +62,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     }
   }, []);
 
-  const page = useCallback((pageName: string, parameters?: Record<string, any>) => {
+  const page = useCallback((pageName: string, parameters?: Record</string><string, any>) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', trackingId, {
         page_title: pageName,
@@ -72,7 +72,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     }
   }, [trackingId]);
 
-  const identify = useCallback((userId: string, traits?: Record<string, any>) => {
+  const identify = useCallback((userId: string, traits?: Record</string><string, any>) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', trackingId, {
         user_id: userId,
@@ -88,7 +88,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
   }
 
   return (
-    <AnalyticsContext.Provider value={value}>
+    </string><AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
   );

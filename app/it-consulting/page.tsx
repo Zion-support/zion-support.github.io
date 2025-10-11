@@ -493,8 +493,8 @@ const categories = [
     { id: 'consulting', name: 'Consulting', icon: Briefcase },
     { id: 'recovery', name: 'Disaster Recovery', icon: RefreshCw },
     { id: 'compliance', name: 'Compliance', icon: CheckSquare }
-  ]
-const filteredServices = itServices.filter(service => {
+  ];
+  const filteredServices = itServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
@@ -505,9 +505,9 @@ return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       {/* Hero Section */}</div>
       <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+          </section><div className="
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
@@ -523,11 +523,11 @@ return (
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center mb-12"></div>
             <a>
-              <Phone>
+              </a><Phone>
               Call (302) 464-0950
             </a>
             <a>
-              <Mail>
+              </a><Mail>
               Get IT Consultation,
             </a>
           </div>
@@ -536,9 +536,9 @@ return (
 
       {/* Search and Filter Section */}
       <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+          </section><div className="
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
@@ -549,7 +549,7 @@ return (
             <div className="flex-1"></div>
               <div className="relative"></div>
                 <Search>
-                <input;
+                </Search><input;
                   type="text";
                   placeholder="Search IT services...";
                   value={searchTerm}
@@ -571,7 +571,7 @@ return (
                 {
     categories.map((category) => (
   }
-                  <option>
+                  </select><option>
 
                     {category.name}
                   </option>
@@ -606,9 +606,9 @@ return (
       </section>
       {/* Services Grid */}
       <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+          </section><div className="
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
@@ -636,9 +636,9 @@ return (
                       {
     service.features.slice(0, 4).map((feature, idx) => (
   }
-                        <li>
-                          <CheckCircle>
-                          <span>{feature}</span>
+                        </ul><li>
+                          </li><CheckCircle>
+                          </CheckCircle><span>{feature}</span>
                         </li>
                       ))}
                     </ul>
@@ -649,9 +649,9 @@ return (
                       {
     service.benefits.slice(0, 2).map((benefit, idx) => (
   }
-                        <li>
-                          <TrendingUp>
-                          <span>{benefit}</span>
+                        </ul><li>
+                          </li><TrendingUp>
+                          </TrendingUp><span>{benefit}</span>
                         </li>
                       ))}
                     </ul>
@@ -683,7 +683,7 @@ return (
                     Get Free Consultation
                   </a>
                   <a>
-                    <Phone>
+                    </a><Phone>
                     Call for Quote
                   </a>
                 </div>
@@ -694,9 +694,9 @@ return (
       </section>
       {/* CTA Section */}
       <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+          </section><div className="
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
@@ -711,11 +711,11 @@ return (
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <a>
-              <Phone>
+              </a><Phone>
               Call (302) 464-0950
             </a>
             <a>
-              <Mail>
+              </a><Mail>
               Get Custom IT Strategy
             </a>
           </div>

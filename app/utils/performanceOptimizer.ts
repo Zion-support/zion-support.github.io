@@ -2,32 +2,48 @@
 export const debounce = <T extends (...args: any[]) => any>(,
   func: T,
   wait: number,
-): ((...args: Parameters<T>) => void) => {
+): ((...args: Parameters</T><T>) => void) => {
     let timeout: NodeJS.Timeout,
-  return (...args: Parameters<T>) => {,
+  return (
+    <React.Fragment>
+      ...args: Parameters</T><T>
+    </React.Fragment>
+  ) => {,
   func: T,
   wait: number
   }
-): ((...args: Parameters<T>) => void) => {}
+): ((...args: Parameters</T><T>) => void) => {}
   let timeout: NodeJS.Timeout,
-  return (...args: Parameters<T>) => {}
+  return (
+    <React.Fragment>
+      ...args: Parameters</T><T>
+    </React.Fragment>
+  ) => {}
     clearTimeout(timeout);
     timeout = setTimeout(() => func(...args), wait);
   }
 }
-export const throttle = <T extends (...args: any[]) => any>(,
+export const throttle = </T><T extends (...args: any[]) => any>(,
   func: T,
   limit: number,
-): ((...args: Parameters<T>) => void) => {
+): ((...args: Parameters</T><T>) => void) => {
     let inThrottle: boolean,
-  return (...args: Parameters<T>) => {
+  return (
+    <React.Fragment>
+      ...args: Parameters</T><T>
+    </React.Fragment>
+  ) => {
     if (!inThrottle) {,
   func: T,
   limit: number
   }
-): ((...args: Parameters<T>) => void) => {}
+): ((...args: Parameters</T><T>) => void) => {}
   let inThrottle: boolean,
-  return (...args: Parameters<T>) => {}
+  return (
+    <React.Fragment>
+      ...args: Parameters</T><T>
+    </React.Fragment>
+  ) => {}
     if (!inThrottle) {}
       func(...args);
       inThrottle = true;
@@ -49,18 +65,18 @@ const observer = new IntersectionObserver((entries) => {}
 }, options);
 return observer;
 }
-export const preloadImage = (src: string): Promise<void> => {,
+export const preloadImage = (src: string): Promise</T><void> => {,
   return new Promise((resolve, reject) => {}
-export const preloadImage = (src: string): Promise<void> => {}
+export const preloadImage = (src: string): Promise</void><void> => {}
   return new Promise((resolve, reject) => {}
     const img = new Image();
     img.onload = () => resolve();
     img.onerror = reject;
     img.src = src;
 }
-export const preloadScript = (src: string): Promise<void> => {,
+export const preloadScript = (src: string): Promise</void><void> => {,
   return new Promise((resolve, reject) => {}
-export const preloadScript = (src: string): Promise<void> => {}
+export const preloadScript = (src: string): Promise</void><void> => {}
   return new Promise((resolve, reject) => {}
     const script = document.createElement('script');
     script.src = src;
@@ -116,7 +132,7 @@ const logger = {/* TODO: Fix JSX expression */},
   performanc,;
   e: (messag,
   e: string, dat);
-  a: Record<string, unknown>, context?: string) => {/* TODO: Fix JSX expression */},
+  a: Record</OptimizationConfig><string, unknown>, context?: string) => {/* TODO: Fix JSX expression */},
   erro,;
   r: (messag,
   e: string, erro);
@@ -137,7 +153,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   observers: PerformanceObserver[] = [],
   private,;
   isMonitoring: boolean = false,
-  constructor(config?: Partial<OptimizationConfig>) {/* TODO: Fix JSX expression */}
+  constructor(config?: Partial</string><OptimizationConfig>) {/* TODO: Fix JSX expression */}
     this.config = { ...this.config, ...config }
     this.initializePerformanceMonitoring();
   }

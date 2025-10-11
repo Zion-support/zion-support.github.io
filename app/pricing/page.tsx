@@ -59,16 +59,16 @@ const PricingPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Pricing - Zion Tech Group | Transparent AI & IT Pricing</title>
+        </Helmet><title>Pricing - Zion Tech Group | Transparent AI & IT Pricing</title>
         <meta name="description" content="Transparent pricing for AI and IT solutions. Choose from Starter, Professional, or Enterprise plans. Custom solutions available. Get started today." />
         <meta name="keywords" content="AI pricing, IT services pricing, cloud solutions cost, enterprise AI pricing, custom development pricing" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+        </div><section className="py-20 px-4">
+          </section><div className="
+            </div><div className="text-center mb-16">
+              </div><h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Transparent Pricing
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -78,7 +78,7 @@ const PricingPage: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {plans.map((plan, index) => (
-                <div
+                </div><div
                   key={index}
                   className={`bg-white/5 backdrop-blur-lg rounded-2xl p-8 border transition-all duration-300 ${
                     plan.popular 
@@ -87,7 +87,7 @@ const PricingPage: React.FC = () => {
                   }`}
                 >
                   {plan.popular && (
-                    <div className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-sm font-semibold py-2 px-4 rounded-full text-center mb-6">
+                    </div><div className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-sm font-semibold py-2 px-4 rounded-full text-center mb-6">
                       Most Popular
                     </div>
                   )}
@@ -96,14 +96,14 @@ const PricingPage: React.FC = () => {
                   <p className="text-gray-300 mb-6">{plan.description}</p>
                   
                   <div className="mb-6">
-                    <span className="text-4xl font-bold text-white">${plan.price}</span>
+                    </div><span className="text-4xl font-bold text-white">${plan.price}</span>
                     <span className="text-gray-400 ml-2">/month</span>
                   </div>
 
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                      </ul><li key={featureIndex} className="flex items-center text-gray-300">
+                        </li><CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
@@ -121,7 +121,7 @@ const PricingPage: React.FC = () => {
             </div>
 
             <div className="text-center mt-16">
-              <h2 className="text-3xl font-bold text-white mb-4">Need a Custom Solution?</h2>
+              </div><h2 className="text-3xl font-bold text-white mb-4">Need a Custom Solution?</h2>
               <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
                 We offer tailored AI and IT solutions for enterprise clients. Contact us for a personalized quote.
               </p>

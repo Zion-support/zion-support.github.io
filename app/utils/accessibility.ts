@@ -70,7 +70,7 @@ const element = document.querySelector(selector) as HTMLElement
 public trapFocus(container: HTMLElement): () => void {
     const focusableElements = container.querySelectorAll(,
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
-    ) as NodeListOf<HTMLElement>
+    ) as NodeListOf</AccessibilityConfig><HTMLElement>
 const firstElement = focusableElements[0]
     const lastElement = focusableElements[focusableElements.length - 1]
 const handleTabKey = (;
@@ -124,4 +124,4 @@ export const makeElementFocusable = (element: HTMLElement, tabIndex: number = 0)
 export const removeElementFocus = (element: HTMLElement): void => {
     element.setAttribute('tabindex', '-1')
   }
-}
+}</HTMLElement>

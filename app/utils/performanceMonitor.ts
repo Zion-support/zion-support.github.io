@@ -23,7 +23,7 @@ interface PerformanceMetrics {}
   cls?: number; // Cumulative Layout Shift;
   ttfb?: number; // Time to First Byte;
   fmp?: number; // First Meaningful Paint;
-  customMetrics: Record<string></strin>
+  customMetrics: Record</string><string></strin>
 }
 class PerformanceMonitor {}
   private metrics: PerformanceMetrics = {}

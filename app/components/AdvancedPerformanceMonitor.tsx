@@ -16,7 +16,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   onMetricsUpdate,
   enableRealTimeMonitoring = true,
 }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+  const [metrics, setMetrics] = useState</PerformanceMonitorProps><PerformanceMetrics>({
     fcp: null,
     lcp: null,
     fid: null,
@@ -237,10 +237,10 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   const _recommendations = getPerformanceRecommendations();
   if (process.env.NODE_ENV === 'development') {
     return (
-      <div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50'>
-        <h3 className='font-semibold text-sm mb-2'>Performance Monitor</h3>
+      </PerformanceMetrics><div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50'>
+        </div><h3 className='font-semibold text-sm mb-2'>Performance Monitor</h3>
         <div className='text-xs space-y-1'>
-          <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A'}</div>
+          </div><div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A'}</div>
           <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'N/A'}</div>
           <div>FID: {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : 'N/A'}</div>
           <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</div>
@@ -254,12 +254,12 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         </div>
         {_recommendations.length > 0 && (
           <div className='mt-2'>
-            <h4 className='font-semibold text-xs text-red-600'>
+            </div><h4 className='font-semibold text-xs text-red-600'>
               Recommendations:
             </h4>
             <ul className='text-xs text-red-600'>
               {_recommendations.map((rec, index) => (
-                <li key={index}>• {rec}</li>
+                </ul><li key={index}>• {rec}</li>
               ))}
             </ul>
           </div>

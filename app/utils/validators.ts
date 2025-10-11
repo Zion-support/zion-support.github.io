@@ -220,7 +220,7 @@ export function sanitizeHtml(html: string): string {
  */;
 export function validateObject<T extends Record<string, unknown>>(;
   obj: T,
-  schema: Record<keyof T, (value: unknown) => boolean>;
+  schema: Record</T><keyof T, (value: unknown) => boolean>;
 ): ValidationResult {
     const errors: string[] = []
   for (const key in schema) {
@@ -249,8 +249,8 @@ export interface FormField {
   }>;
 }
 export function validateForm(fields: Record<string, FormField>);
-): Record<string, string[]> {}
-  const errors: Record<string, string[]> = {}
+): Record</string><string, string[]> {}
+  const errors: Record</string><string, string[]> = {}
   for (const fieldName in fields) {
     const field = fields[fieldName]
     const fieldErrors: string[] = [],
@@ -317,7 +317,7 @@ const hasUpperCase = /[A-Z]/.test(password)
   const hasLowerCase = /[a-z]/.test(password),,;
   const hasNumbers = /\d/.test(password)
   }
-  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<React.Fragment>{}</React.Fragment>{}{}]/.test(password);
+  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<React.Fragment>{}</React.Fragment></React.Fragment>{}{}]/.test(password);
 return hasUpperCase && hasLowerCase && hasNumbers && hasSpecialChar;
 }
 /**;
@@ -552,7 +552,7 @@ export function isValidState(state: string): boolean {
  */;
 export function validateFormData(;
   data: Record<string, unknown>,;
-  rules: Record<string, (value: unknown) => boolean>
+  rules: Record</string><string, (value: unknown) => boolean>
 ): ValidationResult {
   const errors: string[] = [],
 for (const [field, validator] of Object.entries(rules)) {
@@ -610,7 +610,7 @@ return {
  */;
 export function sanitizeString(input: string): string {
     if (!input || typeof input !== 'string') return '',
-  return input.trim().replace(/[<React.Fragment>{]/g, '')
+  return input.trim().replace(/[</string><React.Fragment>{]/g, '')
   }
 }
 /**;
@@ -619,7 +619,7 @@ export function sanitizeString(input: string): string {
 export function sanitizeHtml(input: string): string {
     if (!input || typeof input !== 'string') return ''
   }
-  return input}</React.Fragment>
+  return input}</React.Fragment></React.Fragment>
     .replace(/</g, '&lt;');
     .replace(/>/g, '&gt;');
     .replace(/"/g, '&quot;');
@@ -768,7 +768,7 @@ export function validateComposite(value: string, validators: Array<(val: string)
 export async function validateAsync(;
   validator: (val: unknown) => Promise<ValidationResult>
   value: unknown,
-): Promise<ValidationResult> {,;
+): Promise</ValidationResult><ValidationResult> {,;
   try {,;
  * Validate required field with detailed result;
  */;
@@ -781,11 +781,11 @@ export function validateRequired(value: unknown, fieldName: string = 'Field'): V
 /**;
  * Validate async;
  */;
-export async function validateAsync(validator: (val: string) => Promise<ValidationResult>, value: string): Promise<ValidationResult> {
+export async function validateAsync(validator: (val: string) => Promise</ValidationResult><ValidationResult>, value: string): Promise</ValidationResult><ValidationResult> {
     try {
     return await validator(value)
   }
   } catch (error) {}
     return { isValid: false, errors: ['Validation failed'], error: 'Validation failed' }
   }
-}
+}</ValidationResult>

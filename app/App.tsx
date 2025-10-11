@@ -117,16 +117,16 @@ const AppLoadingSpinner = () => (
 const App: React.FC = () => {
     return (
     <ErrorBoundary>
-      <HelmetProvider>
-        <BrowserRouter>
-          <div className="App">
-            <PerformanceMonitor>
-              <AccessibilityEnhancer />
+      </ErrorBoundary><HelmetProvider>
+        </HelmetProvider><BrowserRouter>
+          </BrowserRouter><div className="App">
+            </div><PerformanceMonitor>
+              </PerformanceMonitor><AccessibilityEnhancer />
             </PerformanceMonitor>
             <Suspense fallback={<AppLoadingSpinner />}>
               <Routes>
                 {/* Main Pages */}
-                <Route path="/" element={<HomePage />} />
+                </Routes><Route path="/" element={<HomePage />} />
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/contact" element={<ContactPage />} />
                 <Route path="/services" element={<ServicesPage />} />

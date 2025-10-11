@@ -32,9 +32,9 @@ interface ImageProps {}
   onError?: () => void;}
 }
 export const Image: React.FC<ImageProps>= ({}
-export const Image: React.FC<ImageProps> = ({}
+export const Image: React.FC</ImageProps><ImageProps> = ({}
   src,
-export const Image: React.FC<ImageProps> = ({
+export const Image: React.FC</ImageProps><ImageProps> = ({
     ,
   src;
   alt,
@@ -109,7 +109,7 @@ export const,
         style={imageStyle}
         {...props})
       >)</div>
-        <span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>)
+        <span className="text-gray-500 text-sm"></span><span className="sr-only">Screen reader: </span>Failed to load image</span>)
       </div>),
     ),
         {...props}

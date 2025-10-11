@@ -55,9 +55,9 @@ const defaultStructuredData = {
     ],
   }
 return (
-    <Helmet>
+    </SEOHeadProps><Helmet>
       {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
+      </Helmet><title>{fullTitle}</title>
       <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       <meta name="description" content="AI-powered solution" />

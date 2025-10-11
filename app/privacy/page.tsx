@@ -42,4 +42,4 @@ import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, 
   return (
     <>
       <Helmet>
-        <title>Privacy Policy - Zion Tech Group</title>
+        </Helmet><title>Privacy Policy - Zion Tech Group</title>

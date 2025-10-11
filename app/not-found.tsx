@@ -17,7 +17,7 @@ export default function NotFound() {
         </p>
         <div className="flex flex-col sm: flex-row gap-3"></div>
           <Link>
-            <Home>
+            </Link><Home>
             Go Home,
           </Link>
           <button
@@ -25,7 +25,7 @@ export default function NotFound() {
             onClick={() => window.history.back()}
             className="flex items-center justify-center px-6 py-3 border-2 border-gray-600 text-gray-300 hover: bg-gray-700 font-medium rounded-lg transition-colors"
           >
-            <ArrowLeft>
+            </button><ArrowLeft>
             Go Back,
           </button>
         </div>

@@ -59,7 +59,7 @@ const AiChatbotBuilderPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>AI Chatbot Builder - Zion Tech Group</title>
+        </Helmet><title>AI Chatbot Builder - Zion Tech Group</title>
         <meta name="description" content="Build intelligent chatbots without coding. Create, deploy, and manage AI-powered chatbots for customer support, lead generation, and more." />
         <meta name="keywords" content="AI chatbot builder, no-code chatbot, conversational AI, chatbot platform" />
       </Helmet>
@@ -67,10 +67,10 @@ const AiChatbotBuilderPage: React.FC = () => {
       
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+        </main></main><section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          </section><div className="
+            </div><div className="text-center">
+              </div><h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 AI Chatbot Builder
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -78,7 +78,7 @@ const AiChatbotBuilderPage: React.FC = () => {
                 conversational experiences that engage your customers and drive results.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                </div><button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
                   Start Building
                 </button>
                 <button className="border border-gray-300 text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors">
@@ -91,9 +91,9 @@ const AiChatbotBuilderPage: React.FC = () => {
 
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          </section><div className="
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Powerful Features
               </h2>
               <p className="text-xl text-gray-300">
@@ -103,8 +103,8 @@ const AiChatbotBuilderPage: React.FC = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                  <feature.icon className="w-12 h-12 text-blue-400 mb-4" />
+                </div><div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                  </div><feature.icon className="w-12 h-12 text-blue-400 mb-4" />
                   <h3 className="text-xl font-semibold text-white mb-3">
                     {feature.title}
                   </h3>
@@ -113,8 +113,8 @@ const AiChatbotBuilderPage: React.FC = () => {
                   </p>
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                      </ul><li key={benefitIndex} className="flex items-center text-sm text-gray-400">
+                        </li><CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                         {benefit}
                       </li>
                     ))}
@@ -135,8 +135,8 @@ const AiChatbotBuilderPage: React.FC = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {useCases.map((useCase, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                  <h3 className="text-xl font-semibold text-white mb-3">
+                </div><div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                  </div><h3 className="text-xl font-semibold text-white mb-3">
                     {useCase.title}
                   </h3>
                   <p className="text-gray-300 mb-4">
@@ -144,8 +144,8 @@ const AiChatbotBuilderPage: React.FC = () => {
                   </p>
                   <ul className="space-y-2">
                     {useCase.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-400">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                      </ul><li key={idx} className="flex items-center text-sm text-gray-400">
+                        </li><CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                         {benefit}
                       </li>
                     ))}
@@ -158,15 +158,15 @@ const AiChatbotBuilderPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          </section><div className="
+            </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Build Your Chatbot?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Start building your intelligent chatbot today and transform your customer experience.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+              </div><button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
                 Start Building
               </button>
               <button className="border border-gray-300 text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors">

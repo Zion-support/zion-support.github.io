@@ -15,7 +15,7 @@ interface LinkProps {}
   'aria-label'?: string,}
 }
 export const Link: React.FC<LinkProps>= ({}
-export const Link: React.FC<LinkProps> = ({}
+export const Link: React.FC</LinkProps><LinkProps> = ({}
   href,
   href: string,
   children: React.ReactNode;
@@ -25,7 +25,7 @@ export const Link: React.FC<LinkProps> = ({}
   onClick?: () => void
   'aria-label'?: string,}
 }
-export const Link: React.FC<LinkProps> = ({
+export const Link: React.FC</LinkProps><LinkProps> = ({
     ,
   href;
   children,
@@ -64,7 +64,7 @@ export const,
     if (href.startsWith('/') && !href.startsWith('//')) {/* TODO: Fix JSX expression */}
     }
   }
-  return (<a />
+  return (</a><a />
       href={href}
       className={className}
       target={target}

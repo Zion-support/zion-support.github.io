@@ -148,27 +148,27 @@ const MicroSaasPage: React.FC = () => {
   const popularProducts = microSaasProducts.filter(product => product.popular);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Micro SaaS - Zion Tech Group | AI-Powered Business Tools</title>
+    </any><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      </div><Helmet>
+        </Helmet><title>Micro SaaS - Zion Tech Group | AI-Powered Business Tools</title>
         <meta name="description" content="Discover our collection of AI-powered micro SaaS tools designed to solve specific business problems. Analytics, security, productivity, and more." />
         <meta name="keywords" content="micro SaaS, AI tools, business software, analytics dashboard, project management, content generator, security monitoring" />
       </Helmet>
 
       {/* Hero Section */}
       <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-            Micro <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">SaaS</span> Tools
+        </section><div className="
+          </div><h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+            Micro </h1><span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">SaaS</span> Tools
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Powerful, focused AI tools that solve specific business problems. 
             Each tool is designed to deliver immediate value with minimal setup.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+            </div><button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
               Explore Tools
-              <ArrowRight className="inline-block ml-2 w-5 h-5" />
+              </button><ArrowRight className="inline-block ml-2 w-5 h-5" />
             </button>
             <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               View Pricing
@@ -183,9 +183,9 @@ const MicroSaasPage: React.FC = () => {
       {/* Featured Products */}
       {popularProducts.length > 0 && (
         <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-white mb-6">Featured Tools</h2>
+          </section><div className="
+            </div><div className="text-center mb-12">
+              </div><h2 className="text-4xl font-bold text-white mb-6">Featured Tools</h2>
               <p className="text-xl text-gray-300">Our most popular micro SaaS solutions</p>
             </div>
 
@@ -201,15 +201,15 @@ const MicroSaasPage: React.FC = () => {
 
       {/* All Products */}
       <section className="py-16 px-4 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row gap-4 mb-12">
-            <select
+        </section><div className="
+          </div><div className="flex flex-col md:flex-row gap-4 mb-12">
+            </div><select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
               className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
             >
               {categories.map(category => (
-                <option key={category} value={category}>
+                </select><option key={category} value={category}>
                   {category === 'all' ? 'All Categories' : category}
                 </option>
               ))}
@@ -218,10 +218,10 @@ const MicroSaasPage: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProducts.map((product) => (
-              <div key={product.id} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/10 transition-all duration-300 border border-white/20">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-blue-500 rounded-lg flex items-center justify-center">
-                    <product.icon className="w-6 h-6 text-white" />
+              </div><div key={product.id} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/10 transition-all duration-300 border border-white/20">
+                </div><div className="flex items-center justify-between mb-4">
+                  </div><div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-blue-500 rounded-lg flex items-center justify-center">
+                    </div><product.icon className="w-6 h-6 text-white" />
                   </div>
                   {product.popular && (
                     <span className="bg-yellow-500/20 text-yellow-300 px-2 py-1 rounded-full text-xs font-medium">
@@ -237,8 +237,8 @@ const MicroSaasPage: React.FC = () => {
 
                 <ul className="space-y-2 mb-6">
                   {product.features.slice(0, 3).map((feature, index) => (
-                    <li key={index} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                    </ul><li key={index} className="flex items-center text-sm text-gray-300">
+                      </li><CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       <span className="line-clamp-1">{feature}</span>
                     </li>
                   ))}
@@ -246,7 +246,7 @@ const MicroSaasPage: React.FC = () => {
 
                 <button className="w-full text-blue-400 hover:text-blue-300 font-medium transition-colors flex items-center justify-center gap-2">
                   Learn More
-                  <ArrowRight className="w-4 h-4" />
+                  </button><ArrowRight className="w-4 h-4" />
                 </button>
               </div>
             ))}
@@ -254,7 +254,7 @@ const MicroSaasPage: React.FC = () => {
 
           {filteredProducts.length === 0 && (
             <div className="text-center py-12">
-              <p className="text-gray-400 text-lg">No products found in this category.</p>
+              </div><p className="text-gray-400 text-lg">No products found in this category.</p>
             </div>
           )}
         </div>
@@ -262,18 +262,18 @@ const MicroSaasPage: React.FC = () => {
 
       {/* Benefits Section */}
       <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">Why Choose Our Micro SaaS Tools?</h2>
+        </section><div className="
+          </div><div className="text-center mb-16">
+            </div><h2 className="text-4xl font-bold text-white mb-6">Why Choose Our Micro SaaS Tools?</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Each tool is designed to solve a specific problem with maximum efficiency
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Zap className="w-8 h-8 text-white" />
+            </div><div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 text-center">
+              </div><div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                </div><Zap className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Quick Setup</h3>
               <p className="text-gray-300">
@@ -282,8 +282,8 @@ const MicroSaasPage: React.FC = () => {
             </div>
 
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <TrendingUp className="w-8 h-8 text-white" />
+              </div><div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                </div><TrendingUp className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Immediate ROI</h3>
               <p className="text-gray-300">
@@ -292,8 +292,8 @@ const MicroSaasPage: React.FC = () => {
             </div>
 
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Rocket className="w-8 h-8 text-white" />
+              </div><div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                </div><Rocket className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Scalable Solutions</h3>
               <p className="text-gray-300">
@@ -306,18 +306,18 @@ const MicroSaasPage: React.FC = () => {
 
       {/* CTA Section */}
       <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+        </section><div className="
+          </div><div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
+            </div><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Start with any of our micro SaaS tools and see immediate improvements in your business operations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+              </div><button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
-                <ArrowRight className="inline-block ml-2 w-5 h-5" />
+                </button><ArrowRight className="inline-block ml-2 w-5 h-5" />
               </button>
               <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                 Contact Sales

@@ -23,7 +23,7 @@ export interface ErrorContext {}
   action?: string;
   userId?: string;
   sessionId?: string;
-  metadata?: Record<string>}</strin>
+  metadata?: Record</string><string>}</strin>
 }
 export interface TrackedError {}
   message: string;
@@ -126,13 +126,13 @@ class EnhancedErrorTracker {}
       typeof window !== 'undefined' &&;
       (;
         window as {}
-          gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void;}
+          gtag?: (command: string, action: string, parameters: Record</string><string, unknown>) => void;}
         }
       ).gtag;
     ) {}
       (;
         window as unknown as {}
-          gtag: (command: string, action: string, parameters: Record<string, unknown>) => void;}
+          gtag: (command: string, action: string, parameters: Record</string><string, unknown>) => void;}
         }
       ).gtag('event', 'exception', {
     );
@@ -156,10 +156,10 @@ class EnhancedErrorTracker {}
   }
   public getErrorStats(): {}
     total: number
-    byComponent: Record<string>
+    byComponent: Record</string><string>
     recent: TrackedError[],}
   } {}
-    const byComponent: Record<string, number> = {}
+    const byComponent: Record</string><string, number> = {}
     this.errors.forEach(error => {
     );
       const component = error.context.component || 'Unknown')
@@ -236,7 +236,7 @@ class EnhancedErrorTracker {/* TODO: Fix JSX expression */}
   }
   public getErrorStats(): {/* TODO: Fix JSX expression */}
   } {/* TODO: Fix JSX expression */}
-  byComponent: Record<string, number> = {}
+  byComponent: Record</string><string, number> = {}
     this.errors.forEach(error => {/* TODO: Fix JSX expression */})
     })
     return {/* TODO: Fix JSX expression */}
@@ -246,4 +246,4 @@ class EnhancedErrorTracker {/* TODO: Fix JSX expression */}
 // Export singleton instance;
 export const errorTracker = new EnhancedErrorTracker();
 export default errorTracker;
-`;
+`;</string>

@@ -66,16 +66,16 @@ useEffect(() => {
   return (
     <>
       <SEOOptimizer>
-      <PerformanceOptimizer>
-      <AccessibilityEnhancer>
-      <Analytics>
-      <SecurityEnhancer>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain"></div>
+      </SEOOptimizer><PerformanceOptimizer>
+      </PerformanceOptimizer><AccessibilityEnhancer>
+      </AccessibilityEnhancer><Analytics>
+      </Analytics><SecurityEnhancer>
+      </SecurityEnhancer><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain"></div>
         {/* Navigation */}</div>
         <Navigation>
         {/* Skip to main content for accessibility */}
 
-        <a>
+        </Navigation><a>
           Skip to main content
         </a>
 
@@ -83,12 +83,12 @@ useEffect(() => {
       <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"></div>}>;
         <ContentPromotionBanner>
       </Suspense>
-      <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main"></main>
+      <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main"></main></main>
         {/* Hero Section */}
         <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+          </section><div className="
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
@@ -141,9 +141,9 @@ useEffect(() => {
         </section>
         {/* Services Section */}
         <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+          </section><div className="
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
@@ -992,9 +992,9 @@ useEffect(() => {
         </section>
         {/* Micro SAAS Solutions Section */}
         <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+          </section><div className="
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
@@ -1258,9 +1258,9 @@ useEffect(() => {
         </Suspense>
         {/* Contact Section */}
         <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+          </section><div className="
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
@@ -1303,7 +1303,7 @@ useEffect(() => {
                     <div />
                       <p className="text-gray-300 text-sm">Address</p>
                       <p>
-                        364 E Main St STE 1008<br>
+                        364 E Main St STE 1008</p><br>
                         Middletown, DE 19709
                       </p>
                     </div>
@@ -1314,7 +1314,7 @@ useEffect(() => {
                     <div />
                       <p className="text-gray-300 text-sm">Business Hours</p>
                       <p>
-                        Monday - Friday: 9:00 AM - 6:00 PM EST<br>
+                        Monday - Friday: 9:00 AM - 6:00 PM EST</p><br>
                         24/7 Emergency Support Available,
                       </p>
                     </div>
@@ -1325,7 +1325,7 @@ useEffect(() => {
               <div className="cyber-card hologram-card p-8"></div>
                 <h3 className="text-2xl font-bold text-white mb-6 neon-text">Get Free Consultation</h3>
                 <form>
-                  <div />
+                  </form><div />
                     <label>
                       Full Name
                     </label>
@@ -1345,7 +1345,7 @@ useEffect(() => {
                       Service Interest
                     </label>
                     <select>
-                      <option value="">Select a service</option>
+                      </select><option value="">Select a service</option>
                       <option value="ai-services">AI Services</option>
                       <option value="it-services">IT Services</option>
                       <option value="micro-saas">Micro SAAS Solutions</option>

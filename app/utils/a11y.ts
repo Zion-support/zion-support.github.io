@@ -275,4 +275,4 @@ moveFocusInside(container: HTMLElement): void {
     firstFocusable?.focus()
   }
   }
-}
+}</string>

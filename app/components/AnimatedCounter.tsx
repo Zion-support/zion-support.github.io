@@ -40,7 +40,9 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
 
     animationFrame = requestAnimationFrame(animate);
 
-    return () => {
+    return (
+    <React.Fragment>
+      ) => {
       if (animationFrame) {
         cancelAnimationFrame(animationFrame);
       }
@@ -51,6 +53,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
     <span className={className}>
       {prefix}{count.toLocaleString()}{suffix}
     </span>
+    </React.Fragment>
   );
 };
 

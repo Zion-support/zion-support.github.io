@@ -34,16 +34,16 @@ const PageFixedPage: React.FC = () => {
 return (
     <>
       <Helmet>
-        <title>Page Fixed - Zion Tech Group</title>
+        </Helmet><title>Page Fixed - Zion Tech Group</title>
         <meta>
       </Helmet>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}
         <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+          </section><div className="
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
@@ -69,9 +69,9 @@ return (
         </section>
         {/* Features Section */}
         <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+          </section><div className="
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
@@ -97,8 +97,8 @@ return (
                     <ul>
                       {feature.benefits.map((benefit, idx) => (
   }
-                        <li>
-                          <CheckCircle>
+                        </ul><li>
+                          </li><CheckCircle>
 
                           {benefit}
                         </li>
@@ -113,9 +113,9 @@ return (
         </section>
         {/* CTA Section */}
         <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+          </section><div className="
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>

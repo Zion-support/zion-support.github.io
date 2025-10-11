@@ -8,33 +8,49 @@ import React from 'react';
 export const debounce = <T extends (...args: unknown[]) => unknown>(,
   func: T,
   wait: number,
-): ((...args: Parameters<T>) => void) => {
+): ((...args: Parameters</T><T>) => void) => {
     let timeout: NodeJS.Timeout,
-  return (...args: Parameters<T>) => {,
+  return (
+    <React.Fragment>
+      ...args: Parameters</T><T>
+    </React.Fragment>
+  ) => {,
   func: T,
   wait: number
   }
-): ((...args: Parameters<T>) => void) => {}
+): ((...args: Parameters</T><T>) => void) => {}
   let timeout: NodeJS.Timeout,
-  return (...args: Parameters<T>) => {}
+  return (
+    <React.Fragment>
+      ...args: Parameters</T><T>
+    </React.Fragment>
+  ) => {}
     clearTimeout(timeout);
     timeout = setTimeout(() => func(...args), wait);
   }
 }
 // Throttle function for performance optimization;
-export const throttle = <T extends (...args: unknown[]) => unknown>(,
+export const throttle = </T><T extends (...args: unknown[]) => unknown>(,
   func: T,
   limit: number,
-): ((...args: Parameters<T>) => void) => {
+): ((...args: Parameters</T><T>) => void) => {
     let inThrottle: boolean,
-  return (...args: Parameters<T>) => {
+  return (
+    <React.Fragment>
+      ...args: Parameters</T><T>
+    </React.Fragment>
+  ) => {
     if (!inThrottle) {,
   func: T,
   limit: number
   }
-): ((...args: Parameters<T>) => void) => {}
+): ((...args: Parameters</T><T>) => void) => {}
   let inThrottle: boolean,
-  return (...args: Parameters<T>) => {}
+  return (
+    <React.Fragment>
+      ...args: Parameters</T><T>
+    </React.Fragment>
+  ) => {}
     if (!inThrottle) {}
       func(...args);
       inThrottle = true;
@@ -45,7 +61,7 @@ export const throttle = <T extends (...args: unknown[]) => unknown>(,
 // Performance monitoring utilities;
 export class PerformanceMonitor {
     private static instance: PerformanceMonitor,
-  private metrics: Map<string, number> = new Map();
+  private metrics: Map</T><string, number> = new Map();
   private observers: PerformanceObserver[] = [],
   static getInstance(): PerformanceMonitor {,;
     if (!PerformanceMonitor.instance) {,;
@@ -53,7 +69,7 @@ export class PerformanceMonitor {
   }
 export class PerformanceMonitor {}
   private static instance: PerformanceMonitor,
-  private metrics: Map<string, number> = new Map();
+  private metrics: Map</string><string, number> = new Map();
   private observers: PerformanceObserver[] = [],
   static getInstance(): PerformanceMonitor {}
     if (!PerformanceMonitor.instance) {}
@@ -81,23 +97,23 @@ export class PerformanceMonitor {}
     if ('memory' in performance) {}
       const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
       if (memory) {}
-export const debounce = <T extends (...arg);
+export const debounce = </string><T extends (...arg);
   s: unknown[]) => unknown>(fun,
   c: T,
   wai,;
   t: number;)
 ): ((...arg),
-  s: Parameters<T>) => void) => {/* TODO: Fix JSX expression */}
+  s: Parameters</T><T>) => void) => {/* TODO: Fix JSX expression */}
   }
 }
 // Throttle function for performance optimization;
-export const throttle = <T extends (...arg);
+export const throttle = </T><T extends (...arg);
   s: unknown[]) => unknown>(fun,
   c: T,
   limi,;
   t: number;)
 ): ((...arg),
-  s: Parameters<T>) => void) => {/* TODO: Fix JSX expression */}
+  s: Parameters</T><T>) => void) => {/* TODO: Fix JSX expression */}
     }
   }
 }
@@ -190,7 +206,7 @@ export const usePerformanceMonitor = (;) => {
   }
 // React hook for performance monitoring;}
 export const usePerformanceMonitor = (componentName: string) => {}
-  const renderStartTime = useRef<number>(0);
+  const renderStartTime = useRef</T><number>(0);
   const monitor = PerformanceMonitor.getInstance();
   useEffect(() => {}
     renderStartTime.current = performance.now();
@@ -518,4 +534,4 @@ export const collectPerformanceMetrics = () => {/* TODO: Fix JSX expression */},
 // Initialize performance enhancements;
 export const initializePerformanceEnhancements = () => {/* TODO: Fix JSX expression */}
     }
-}`;
+}`;</number>

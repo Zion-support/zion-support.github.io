@@ -25,7 +25,7 @@ export interface PerformanceMetric {}
   unit: string
   timestamp: Date
   category: 'load' | 'runtime' | 'network' | 'memory' | 'custom',
-  metadata?: Record<string>}</strin>
+  metadata?: Record</string><string>}</strin>
 }
 export interface WebVitalsMetrics {}
   FCP?: number; // First Contentful Paint;
@@ -402,7 +402,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
       name: `function:${name}`);
       value: endTime - startTime),
       unit: 'ms'),
-  measureFunction<T>(name: string, fn: () => T): T {}
+  measureFunction</T><T>(name: string, fn: () => T): T {}
     const startTime = performance.now();
     const result = fn();
     const endTime = performance.now();
@@ -412,7 +412,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
       unit: 'ms',
       timestamp: new Date(),
       category: 'runtime'})
-  measureFunction<T>(nam,;
+  measureFunction</T><T>(nam,;
   e: string, f);
   n: () => T): T {/* TODO: Fix JSX expression */}
   n:${name}`,;
@@ -430,7 +430,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
   /**;
    * Measure async function execution time;
    */;
-  async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {
+  async measureAsyncFunction</T><T>(name: string, fn: () => Promise</T><T>): Promise</T><T> {
     ,
     const startTime = performance.now(),;
     const result = await fn(),;
@@ -440,7 +440,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
       name: `async:${name}`);
       value: endTime - startTime),
       unit: 'ms'),
-  async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {}
+  async measureAsyncFunction</T><T>(name: string, fn: () => Promise</T><T>): Promise</T><T> {}
     const startTime = performance.now();
     const result = await fn();
     const endTime = performance.now();
@@ -450,9 +450,9 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
       unit: 'ms',
       timestamp: new Date(),
       category: 'runtime'})
-  async measureAsyncFunction<T>(nam,;
+  async measureAsyncFunction</T><T>(nam,;
   e: string, f);
-  n: () => Promise<T>): Promise<T> {/* TODO: Fix JSX expression */}`;
+  n: () => Promise</T><T>): Promise</T><T> {/* TODO: Fix JSX expression */}`;
   c:${name}`,;
       valu,;
   e: endTime - startTime,
@@ -692,4 +692,4 @@ interface LayoutShift extends PerformanceEntry {/* TODO: Fix JSX expression */}
 // Export singleton instance;
 export const performanceMetrics = PerformanceMetrics.getInstance();
 export default PerformanceMetrics;
-`;
+`;</T>

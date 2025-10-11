@@ -7,12 +7,12 @@ const TeamPage: React.FC = () => {
     return (
     <>
       <Helmet>
-        <title>Our Team - Zion Tech Group</title>
+        </Helmet><title>Our Team - Zion Tech Group</title>
         <meta>
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
         <Navigation>
-        <main className="pt-20"></main>
+        </Navigation><main className="pt-20"></main></main>
           <div className="container mx-auto px-4 py-16"></div>
             <div className="max-w-4xl mx-auto"></div>
               <h1>

@@ -7,7 +7,7 @@ interface UserExperienceEnhancerProps {
   }
 }
 const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ children }) => {}
-  const [loadingStates, setLoadingStates] = useState<Record<string, boolean>>({})
+  const [loadingStates, setLoadingStates] = useState</UserExperienceEnhancerProps><Record<string, boolean>>({})
 useEffect(() => {
     // UX enhancement logic;
     const enhanceUX = (;
@@ -42,7 +42,7 @@ useEffect(() => {
     }
 enhanceUX();
   }, []);
-return <React.Fragment>{children}</React.Fragment>
+return </Record><React.Fragment>{children}</React.Fragment></React.Fragment>
 };
 
 export default UserExperienceEnhancer;

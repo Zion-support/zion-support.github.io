@@ -141,7 +141,11 @@ export const measureFunction = <T extends (...args: any[]) => any>(,
   fn: T,
   name?: string;
 ): T => {
-  return ((...args: Parameters<T>) => {
+  return (
+    <React.Fragment>
+      (...args: Parameters</T><T>
+    </React.Fragment>
+  ) => {
     const start = performance.now()
     const result = fn(...args)
     const end = performance.now(),
@@ -151,23 +155,31 @@ if (name) {}
 return result;
   }) as T;
 }
-export const debounce = <T extends (...args: any[]) => any>(,
+export const debounce = </T><T extends (...args: any[]) => any>(,
   func: T,
   wait: number
 ): T => {
     let timeout: NodeJS.Timeout
-return ((...args: Parameters<T>) => {
+return (
+    <React.Fragment>
+      (...args: Parameters</T><T>
+    </React.Fragment>
+  ) => {
     clearTimeout(timeout),
     timeout = setTimeout(() => func(...args), wait)
   }
   }) as T;
 }
-export const throttle = <T extends (...args: any[]) => any>(,
+export const throttle = </T><T extends (...args: any[]) => any>(,
   func: T,
   limit: number;
 ): T => {
     let inThrottle: boolean
-return ((...args: Parameters<T>) => {
+return (
+    <React.Fragment>
+      (...args: Parameters</T><T>
+    </React.Fragment>
+  ) => {
     if (!inThrottle) {
       func(...args)
       inThrottle = true,
@@ -185,7 +197,7 @@ export const lazyLoad = (callback: () => void): void => {
   }
   }
 }
-export const preloadImage = (src: string): Promise<void> => {
+export const preloadImage = (src: string): Promise</T><void> => {
     return new Promise((resolve, reject) => {
     const img = new Image();
     img.onload = () => resolve();
@@ -194,7 +206,7 @@ export const preloadImage = (src: string): Promise<void> => {
   }
   })
 }
-export const preloadImages = (srcs: string[]): Promise<void[]> => {
+export const preloadImages = (srcs: string[]): Promise</void><void[]> => {
     return Promise.all(srcs.map(preloadImage))
   }
-}
+}</void>

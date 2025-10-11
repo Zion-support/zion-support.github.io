@@ -33,7 +33,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
     // Run optimization after component mount
     const timer = setTimeout(optimizeImages, 100);
-    return () => clearTimeout(timer);
+    return (
+    <React.Fragment>
+      ) => clearTimeout(timer);
   }, [enableImageOptimization]);
 
   // Lazy loading
@@ -120,7 +122,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
         // Send metrics to analytics
         if (typeof window !== 'undefined' && 'gtag' in window) {
-          const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
+          const gtag = (window as { gtag: (command: string, action: string, parameters: Record</PerformanceOptimizerProps><string, unknown>
+    </React.Fragment>
+  ) => void }).gtag;
           gtag('event', 'performance_metrics', {
             event_category: 'performance',
             event_label: 'page_load',
@@ -135,7 +139,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     return () => window.removeEventListener('load', measurePerformance);
   }, []);
 
-  return <React.Fragment>{children}</React.Fragment>;
+  return </string><React.Fragment>{children}</React.Fragment></React.Fragment>;
 };
 
 export default PerformanceOptimizer;

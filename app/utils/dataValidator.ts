@@ -7,7 +7,7 @@ export interface ValidationRule<T = unknown> {/* TODO: Fix JSX expression */}
 }
 export interface FieldRule {/* TODO: Fix JSX expression */}
 }
-export type ValidationRules = Record<string>
+export type ValidationRules = Record</T><string>
 export interface ValidationResult {/* TODO: Fix JSX expression */}
 }
 export class ValidationError extends Error {
@@ -193,7 +193,7 @@ export function createCustomValidator<T>(;
     return {,;
       isValid;
       errors: isValid ? [] : [message],
-export function createCustomValidator<T>(validato,;
+export function createCustomValidator</T><T>(validato,;
   r: (valu),
   e: T) => boolean,
   messag,;
@@ -248,7 +248,7 @@ export function validateForm<T extends Record<string, unknown>>(;
 ): ValidationResult {
     ,
   }
-  const errors: Record<string, string[]> = {}
+  const errors: Record</T><string, string[]> = {}
   for (const field in rules) {
     const value = data[field]
     const fieldRules = rules[field] || []
@@ -271,13 +271,13 @@ export function validateForm<T extends Record<string, unknown>>(;
           context: {,
             field;
             errors: fieldErrors,
-export function validateForm<T extends Record<string, unknown>>(dat,;
+export function validateForm</string><T extends Record<string, unknown>>(dat,;
   a: T,
   rule,;
   s: ValidationRules,)
   }
 ): ValidationResult {/* TODO: Fix JSX expression */}
-  errors: Record<string, string[]> = {}
+  errors: Record</T><string, string[]> = {}
   for (const field in rules) {/* TODO: Fix JSX expression */}
       }
     }
@@ -300,23 +300,23 @@ export function validateForm<T extends Record<string, unknown>>(dat,;
  */;
 export const ValidationRulesBuilder = {/* TODO: Fix JSX expression */},
     message: 'This field is required'}),;
-  email: (): ValidationRule<string> => ({
+  email: (): ValidationRule</string><string> => ({
     ,
     validate: (value: string) => validateEmail(value),
   }
     message: 'Please enter a valid email address'}),;
-  url: (): ValidationRule<string> => ({
+  url: (): ValidationRule</string><string> => ({
     ,
     validate: (value: string) => validateURL(value),
   }
     message: 'Please enter a valid URL'}),;
-  minLength: (min: number): ValidationRule<string> => ({
+  minLength: (min: number): ValidationRule</string><string> => ({
     ,
     validate: (value: string) => value.length >= min
   }
     message: `Must be at least ${min} characters long`;
   }),;
-  maxLength: (max: number): ValidationRule<string> => ({
+  maxLength: (max: number): ValidationRule</string><string> => ({
     ,
     validate: (value: string) => value.length <= max
   }
@@ -328,13 +328,13 @@ export const ValidationRulesBuilder = {/* TODO: Fix JSX expression */},
     message
   }
   }),;
-  range: (min: number, max: number): ValidationRule<number> => ({
+  range: (min: number, max: number): ValidationRule</string><number> => ({
     ,
     validate: (value: number) => validateNumberRange(value, min, max),
   }
     message: `Must be between ${min} and ${max}`;
   }),;
-  custom: <T>(validator: (value: T) => boolean, message: string): ValidationRule<T> => ({
+  custom: </number><T>(validator: (value: T) => boolean, message: string): ValidationRule</T><T> => ({
     ,
     validate: validator,
     message
@@ -349,37 +349,37 @@ class DataValidator {
   }
   }),;
   emai,;
-  l: (): ValidationRule<string> => ({/* TODO: Fix JSX expression */})
+  l: (): ValidationRule</T><string> => ({/* TODO: Fix JSX expression */})
   }),;
   ur,;
-  l: (): ValidationRule<string> => ({/* TODO: Fix JSX expression */})
+  l: (): ValidationRule</string><string> => ({/* TODO: Fix JSX expression */})
   }),;
   minLengt,;
   h: (mi),
-  n: number): ValidationRule<string> => ({/* TODO: Fix JSX expression */}`;
+  n: number): ValidationRule</string><string> => ({/* TODO: Fix JSX expression */}`;
   e: `Must be at least ${min} characters long`);
   }),;
   maxLengt,;
   h: (ma),
-  x: number): ValidationRule<string> => ({/* TODO: Fix JSX expression */}`;
+  x: number): ValidationRule</string><string> => ({/* TODO: Fix JSX expression */}`;
   e: `Must be no more than ${max} characters long`);
   }),;
   patter,;
   n: (patter,
   n: RegExp, messag);
-  e: string): ValidationRule<string> => ({/* TODO: Fix JSX expression */})
+  e: string): ValidationRule</string><string> => ({/* TODO: Fix JSX expression */})
   }),;
   rang,;
   e: (mi,
   n: number, ma);
-  x: number): ValidationRule<number> => ({/* TODO: Fix JSX expression */}`;
+  x: number): ValidationRule</string><number> => ({/* TODO: Fix JSX expression */}`;
   e: `Must be between ${min} and ${max}`);
   }),;
   custo,;
-  m: <T>(validato,
+  m: </number><T>(validato,
   r: (valu),
   e: T) => boolean, messag,;
-  e: string): ValidationRule<T> => ({/* TODO: Fix JSX expression */})
+  e: string): ValidationRule</T><T> => ({/* TODO: Fix JSX expression */})
   })
 }
 // Legacy class-based API for backward compatibility;
@@ -409,7 +409,7 @@ class DataValidator {/* TODO: Fix JSX expression */}
   e: unknown): value is unknown[] {/* TODO: Fix JSX expression */}
   }
   isObject(valu);
-  e: unknown): value is Record<string, unknown> {/* TODO: Fix JSX expression */}
+  e: unknown): value is Record</T><string, unknown> {/* TODO: Fix JSX expression */}
   }
   matchesPattern(value: string, pattern: RegExp): boolean {
     ,
@@ -492,7 +492,7 @@ export function sanitizeHTML(html: string): string {
 ,;
   // First escape HTML entities
   }
-  let clean = html.replace(/&/g, '&amp;');}</React.Fragment>
+  let clean = html.replace(/&/g, '&amp;');}</React.Fragment></React.Fragment>
   clean = clean.replace(/</g, '&lt;');
   clean = clean.replace(/>/g, '&gt;');
   clean = clean.replace(/"/g, '&quot;');

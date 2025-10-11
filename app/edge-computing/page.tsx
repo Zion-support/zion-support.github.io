@@ -65,8 +65,8 @@ const services = [
       description: 'Mobile edge computing for 5G and mobile applications'
   }
     }
-  ]
-const benefits = [
+  ];
+  const benefits = [
     'Ultra-Low Latency',
     'Reduced Bandwidth Costs',
 
@@ -114,16 +114,16 @@ const useCases = [
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900"></div>
       <Helmet>
-        <title>Edge Computing Solutions | Zion Tech Group</title>
+        </Helmet><title>Edge Computing Solutions | Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
       <Navigation>
       {/* Hero Section */}
-      <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+      </Navigation><section className="py-20 px-4">
+          </section><div className="
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
@@ -133,7 +133,7 @@ return (
         <div className="relative max-w-7xl mx-auto text-center"></div>
           <h1>
             Edge Computing;
-            <span>
+            </h1><span>
               Solutions
             </span>
           </h1>
@@ -144,7 +144,7 @@ return (
           <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <button>
               Get Started Today
-              <ArrowRight>
+              </button><ArrowRight>
             </button>
             <button>
               View Demo,
@@ -154,9 +154,9 @@ return (
       </section>
       {/* Features Section */}
       <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+          </section><div className="
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
@@ -179,8 +179,8 @@ return (
                   {
     feature.benefits.map((benefit, benefitIndex) => (
   }
-                    <li>
-                      <CheckCircle>
+                    </ul><li>
+                      </li><CheckCircle>
 
                       {benefit}
                     </li>
@@ -194,9 +194,9 @@ return (
       </section>
       {/* Services Section */}
       <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+          </section><div className="
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
@@ -223,9 +223,9 @@ return (
       </section>
       {/* Use Cases Section */}
       <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+          </section><div className="
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
@@ -252,9 +252,9 @@ return (
       </section>
       {/* Benefits Section */}
       <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+          </section><div className="
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
@@ -279,9 +279,9 @@ return (
       </section>
       {/* CTA Section */}
       <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+          </section><div className="
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>

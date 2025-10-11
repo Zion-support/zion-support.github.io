@@ -24,7 +24,7 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
   children
 }) => {
   const [seoScore, setSeoScore] = useState(0);
-  const [recommendations, setRecommendations] = useState<string[]>([]);
+  const [recommendations, setRecommendations] = useState</SEOOptimizerProps><string[]>([]);
 
   const analyzeSEO = useCallback(() => {
     if (typeof window === 'undefined') return;
@@ -124,7 +124,7 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
       window.addEventListener('load', () => {
         const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         if (_perfData && typeof window !== 'undefined' && 'gtag' in window) {
-          (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'page_load_performance', {
+          (window as unknown as { gtag: (command: string, action: string, parameters: Record</string><string, unknown>) => void }).gtag('event', 'page_load_performance', {
             event_category: 'Performance',
             event_label: 'Page Load',
             value: Math.round(_perfData.loadEventEnd - _perfData.fetchStart),
@@ -136,7 +136,7 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
   return (
     <>
       <Helmet>
-        <title>{title}</title>
+        </Helmet><title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
         {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
@@ -175,13 +175,13 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
           zIndex: 1000,
           maxWidth: '300px'
         }}>
-          <div>SEO Score: {seoScore}/100</div>
+          </div><div>SEO Score: {seoScore}/100</div>
           {recommendations.length > 0 && (
             <div>
-              <div>Recommendations:</div>
+              </div><div>Recommendations:</div>
               <ul style={{ margin: '5px 0', paddingLeft: '15px' }}>
                 {recommendations.map((rec, index) => (
-                  <li key={index}>{rec}</li>
+                  </ul><li key={index}>{rec}</li>
                 ))}
               </ul>
             </div>

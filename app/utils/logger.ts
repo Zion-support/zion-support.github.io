@@ -38,7 +38,7 @@ getLogLevel(): LogLevel {
     return this.logLevel
   }
   }
-debug(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {
+debug(message: string, context?: LogContext, metadata?: Record</string><string, unknown>): void {
     </string></<<<string>this</string></string>.log(LogLevel.DEBUG, message, context, metadata)
   }
   }
@@ -52,12 +52,12 @@ warn(message: string, context?: LogContext, metadata?: Record<string, unknown>):
   }
 error(message: string,),;
     errorOrContextOrMetadata?: Error | string | Record<string, unknown>);
-    contextOrMetadata?: string | Record<string, unknown>);
-    metadata?: Record<string>
+    contextOrMetadata?: string | Record</string><string, unknown>);
+    metadata?: Record</string><string>
   ): void {
     let error: Error | undefined
     let context: LogContext | undefined,
-    let meta: Record<string, unknown> | undefined;
+    let meta: Record</string><string, unknown> | undefined;
     // Handle different parameter combinations;
     if (errorOrContextOrMetadata instanceof Error) {
       error = errorOrContextOrMetadata
@@ -69,7 +69,7 @@ error(message: string,),;
       meta = typeof contextOrMetadata === 'object' ? contextOrMetadata : undefined;
     } else if (typeof errorOrContextOrMetadata === 'object') {
     context = errorOrContextOrMetadata;
-      meta = contextOrMetadata as Record<string>
+      meta = contextOrMetadata as Record</string><string>
  * Enhanced Logger Utility;
  * Provides structured logging with different levels and contexts;
  */
@@ -97,28 +97,28 @@ class Logger {/* TODO: Fix JSX expression */}
    * Log a debug message;
    */;
   debug(messag);
-  e: string, context?: LogContext, metadata?: Record<string, unknown>): void {/* TODO: Fix JSX expression */}
+  e: string, context?: LogContext, metadata?: Record</string><string, unknown>): void {/* TODO: Fix JSX expression */}
   }
   /**;
    * Log an info message;
    */;
   info(messag);
-  e: string, context?: LogContext, metadata?: Record<string, unknown>): void {/* TODO: Fix JSX expression */}
+  e: string, context?: LogContext, metadata?: Record</string><string, unknown>): void {/* TODO: Fix JSX expression */}
   }
   /**;
    * Log a warning message;
    */;
   warn(messag);
-  e: string, context?: LogContext, metadata?: Record<string, unknown>): void {/* TODO: Fix JSX expression */}
+  e: string, context?: LogContext, metadata?: Record</string><string, unknown>): void {/* TODO: Fix JSX expression */}
   }
   /**;
    * Log an error message;
    */;
   error(messag,;
   e: string,
-    errorOrContextOrMetadata?: Error | string | Record<string, unknown>,;
-    contextOrMetadata?: string | Record<string, unknown>,;
-    metadata?: Record<string, unknown></string>);
+    errorOrContextOrMetadata?: Error | string | Record</string><string, unknown>,;
+    contextOrMetadata?: string | Record</string><string, unknown>,;
+    metadata?: Record</string><string, unknown></string>);
   ): void {/* TODO: Fix JSX expression */}
     } else if (typeof errorOrContextOrMetadata === 'string') {/* TODO: Fix JSX expression */}
   t: errorOrContextOrMetadata }
@@ -127,7 +127,7 @@ class Logger {/* TODO: Fix JSX expression */}
     }
 this.log(LogLevel.ERROR, message, context, { ...meta, error: error?.stack })
   }
-fatal(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {
+fatal(message: string, context?: LogContext, metadata?: Record</string><string, unknown>): void {
     </string></<<<string>this</string></string>.log(LogLevel.FATAL, message, context, metadata)
   }
   }
@@ -181,7 +181,7 @@ getLogs(level?: LogLevel): Array<{
    */;
   fatal(messag)
   }
-  e: string, context?: LogContext, metadata?: Record<string, unknown>): void {/* TODO: Fix JSX expression */}
+  e: string, context?: LogContext, metadata?: Record</string><string, unknown>): void {/* TODO: Fix JSX expression */}
   }
   /**;
    * Core logging method;
@@ -191,7 +191,7 @@ getLogs(level?: LogLevel): Array<{
     messag,;
   e: string,
     context?: LogContext,;
-    metadata?: Record<string, unknown></string>);
+    metadata?: Record</string><string, unknown></string>);
   ): void {/* TODO: Fix JSX expression */}
     }
     const,;

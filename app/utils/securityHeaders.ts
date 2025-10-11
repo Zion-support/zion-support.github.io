@@ -61,10 +61,10 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {}
  */;
 export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>);
 export function getSecurityHeaders();
-  customConfig?: Partial<SecurityHeadersConfig>
-): Record<string, string> {}
+  customConfig?: Partial</SecurityHeadersConfig><SecurityHeadersConfig>
+): Record</SecurityHeadersConfig><string, string> {}
   const config = { ...defaultSecurityHeaders, ...customConfig }
-  const headers: Record<string, string> = {}
+  const headers: Record</string><string, string> = {}
     'X-XSS-Protection': '1; mode=block',;
     'X-DNS-Prefetch-Control': 'on'}
   }
@@ -93,11 +93,11 @@ export const,;
 /**;
  * Get security headers as key-value pairs;
  */;
-export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig />);
+export function getSecurityHeaders(customConfig?: Partial</string><SecurityHeadersConfig />);
 ): Record<string, string> {/* TODO: Fix JSX expression */}
   const config = { ...defaultSecurityHeaders, ...customConfig }
   const,;
-  headers: Record<string, string> = {/* TODO: Fix JSX expression */}
+  headers: Record</string><string, string> = {/* TODO: Fix JSX expression */}
   }
   if (config.contentSecurityPolicy) {/* TODO: Fix JSX expression */}
   }
@@ -116,7 +116,7 @@ export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig 
 /**;
  * Get security headers in Next.js format;
  */;
-export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>);
+export function getNextSecurityHeaders(customConfig?: Partial</string><SecurityHeadersConfig>);
 ): Array<{ key: string, value: string }> {
     export function getNextSecurityHeaders();
   customConfig?: Partial<SecurityHeadersConfig>

@@ -122,13 +122,13 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
     validRequests.push(now);
     storage.set(key, validRequests);
     return true;
-  }}</React.Fragment>
+  }}</React.Fragment></React.Fragment>
   private getRateLimitStorage(): Map<string, number[]> {}
     if (!global._rateLimitStorage) {}
       global._rateLimitStorage = new Map();}
-  private getRateLimitStorage(): Map<string, number[]> {/* TODO: Fix JSX expression */}
+  private getRateLimitStorage(): Map</string><string, number[]> {/* TODO: Fix JSX expression */}
     }
     return global._rateLimitStorage;
   }
 }
-export default SecurityManager.getInstance();
+export default SecurityManager.getInstance();</string>

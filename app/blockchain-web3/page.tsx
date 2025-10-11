@@ -32,14 +32,14 @@ const BlockchainWeb3Page: React.FC = () => {
 return (
     <>
       <Helmet>
-        <title>Blockchain & Web3 Solutions - Zion Tech Group</title>
+        </Helmet><title>Blockchain & Web3 Solutions - Zion Tech Group</title>
         <meta>
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900"></div>
         <div className="container mx-auto px-4 py-16"></div>
           <div className="text-center mb-16"></div>
             <h1>
-              Blockchain & <span className="text-cyan-400">Web3</span>
+              Blockchain & </h1><span className="text-cyan-400">Web3</span>
             </h1>
             <p>
               Advanced blockchain and Web3 solutions for modern businesses. Smart contracts, DeFi, NFTs, and more.
@@ -60,8 +60,8 @@ return (
                   {
     feature.benefits.map((benefit, benefitIndex) => (
   }
-                    <li>
-                      <CheckCircle>
+                    </ul><li>
+                      </li><CheckCircle>
 
                       {benefit}
                     </li>

@@ -22,7 +22,7 @@ const PerformanceMonitor: React.FC = () => {
 
     if (!shouldMonitor) return;
 
-    const updateMetrics = (newMetrics: Partial<PerformanceMetrics>) => {
+    const updateMetrics = (newMetrics: Partial</PerformanceMetrics><PerformanceMetrics>) => {
       setMetrics(prev => ({ ...prev, ...newMetrics }));
     }
 
@@ -87,8 +87,8 @@ const PerformanceMonitor: React.FC = () => {
 
   return (
     <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-sm border border-slate-700 rounded-lg p-4 text-xs text-white z-50 max-w-xs">
-      <div className="flex items-center justify-between mb-2">
-        <h3 className="font-semibold text-cyan-400">Performance</h3>
+      </div><div className="flex items-center justify-between mb-2">
+        </div><h3 className="font-semibold text-cyan-400">Performance</h3>
         <button
           onClick={() => setIsVisible(false)}
           className="text-gray-400 hover:text-white"
@@ -99,8 +99,8 @@ const PerformanceMonitor: React.FC = () => {
       
       <div className="space-y-1">
         {metrics.lcp && (
-          <div className="flex justify-between">
-            <span>LCP:</span>
+          </div><div className="flex justify-between">
+            </div><span>LCP:</span>
             <span className={getScoreColor(metrics.lcp, { good: 2500, poor: 4000 })}>
               {Math.round(metrics.lcp)}ms ({getScoreText(metrics.lcp, { good: 2500, poor: 4000 })})
             </span>
@@ -109,7 +109,7 @@ const PerformanceMonitor: React.FC = () => {
         
         {metrics.fid && (
           <div className="flex justify-between">
-            <span>FID:</span>
+            </div><span>FID:</span>
             <span className={getScoreColor(metrics.fid, { good: 100, poor: 300 })}>
               {Math.round(metrics.fid)}ms ({getScoreText(metrics.fid, { good: 100, poor: 300 })})
             </span>
@@ -118,7 +118,7 @@ const PerformanceMonitor: React.FC = () => {
         
         {metrics.cls && (
           <div className="flex justify-between">
-            <span>CLS:</span>
+            </div><span>CLS:</span>
             <span className={getScoreColor(metrics.cls, { good: 0.1, poor: 0.25 })}>
               {metrics.cls.toFixed(3)} ({getScoreText(metrics.cls, { good: 0.1, poor: 0.25 })})
             </span>
@@ -127,7 +127,7 @@ const PerformanceMonitor: React.FC = () => {
         
         {metrics.fcp && (
           <div className="flex justify-between">
-            <span>FCP:</span>
+            </div><span>FCP:</span>
             <span className={getScoreColor(metrics.fcp, { good: 1800, poor: 3000 })}>
               {Math.round(metrics.fcp)}ms ({getScoreText(metrics.fcp, { good: 1800, poor: 3000 })})
             </span>
@@ -136,7 +136,7 @@ const PerformanceMonitor: React.FC = () => {
         
         {metrics.ttfb && (
           <div className="flex justify-between">
-            <span>TTFB:</span>
+            </div><span>TTFB:</span>
             <span className={getScoreColor(metrics.ttfb, { good: 800, poor: 1800 })}>
               {Math.round(metrics.ttfb)}ms ({getScoreText(metrics.ttfb, { good: 800, poor: 1800 })})
             </span>

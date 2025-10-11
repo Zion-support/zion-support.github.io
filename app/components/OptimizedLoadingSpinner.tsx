@@ -56,7 +56,7 @@ const renderSpinner = useMemo(() => {
     switch (variant) {
         case 'dots':;
           return (
-            <div className='flex space-x-1' role='status' aria-label='Loading'></div>
+            </OptimizedLoadingSpinnerProps><div className='flex space-x-1' role='status' aria-label='Loading'></div>
               {[0, 1, 2].map(i => (</div>
                 <div
   }
@@ -69,13 +69,15 @@ const renderSpinner = useMemo(() => {
           );
 case 'pulse':;
           return (
-            <div;
+    <React.Fragment>
+      <div;
 
               className={`${baseClasses} rounded-full animate-pulse`}
               role='status';
               aria-label='Loading';
             /></div>
-          );
+    </React.Fragment>
+  );
 case 'skeleton':;
           return (</div>
             <div className='space-y-2' role='status' aria-label='Loading'></div>
@@ -112,13 +114,15 @@ case 'bars':;
 case 'spinner':;
         default:  
           return (
-            <div,
+    <React.Fragment>
+      <div,
 
               className={`${baseClasses} rounded-full border-2 border-t-transparent animate-spin`}
               role='status';
               aria-label='Loading';
             /></div>
-          );
+    </React.Fragment>
+  );
       }
     }, [size, variant, color, sizeClasses, colorClasses]);
 const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClasses} ${className}`;

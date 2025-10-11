@@ -24,9 +24,9 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   
   return (
-    <Helmet>
+    </SEOHeadProps><Helmet>
       {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
+      </Helmet><title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords.join(', ')} />
       <link rel="canonical" href={canonicalUrl} />

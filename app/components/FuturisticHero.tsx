@@ -25,8 +25,8 @@ const FuturisticHeroPage: React.FC = () => {
       description: 'Worldwide deployment and support for international businesses'
   }
     }
-  ]
-const benefits = [
+  ];
+  const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -45,7 +45,7 @@ return (
             {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-3"></div>
                 <CheckCircle>
-                <p className="text-gray-300 text-lg">{benefit}</p>
+                </CheckCircle><p className="text-gray-300 text-lg">{benefit}</p>
               </div>
             ))}
           </div>
@@ -53,9 +53,9 @@ return (
       </section>
       {/* CTA Section */}
       <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+          </section><div className="
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
@@ -70,11 +70,11 @@ return (
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button>
-                <Phone>
+                </button><Phone>
                 Call Now
               </button>
               <button>
-                <Mail>
+                </button><Mail>
                 Email Us
               </button>
             </div>

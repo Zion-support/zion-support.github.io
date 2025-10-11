@@ -81,8 +81,8 @@ const services = [
     'Consulting',
 
     'Other'
-  ]
-const contactInfo = [
+  ];
+  const contactInfo = [
     {
     icon: Phone,
       title: 'Phone',
@@ -112,7 +112,7 @@ const contactInfo = [
 return (
     <>
       <Helmet>
-        <title>Contact Us - Zion Tech Group | Get in Touch</title>
+        </Helmet><title>Contact Us - Zion Tech Group | Get in Touch</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
@@ -122,7 +122,7 @@ return (
           <div className="text-center mb-16"></div>
             <h1>
               Get in;
-              <span>
+              </h1><span>
                 {' '}Touch
               </span>
             </h1>
@@ -140,7 +140,7 @@ return (
     submitStatus === 'success' && (;
                 <div className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg flex items-center gap-3"></div>
                   <CheckCircle>
-                  <span className="text-green-400">Message sent successfully! We'll get back to you soon.</span>
+                  </CheckCircle><span className="text-green-400">Message sent successfully! We'll get back to you soon.</span>
                 </div>
   }
               )}
@@ -152,14 +152,14 @@ return (
   }
               )}
 <form>
-                <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>
+                </form><div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>
                   <div />
                     <label>
                       Full Name *
                     </label>
                     <div className="relative"></div>
                       <User>
-                      <input />
+                      </User><input />
                   </div>
                   <div />
                     <label>
@@ -167,7 +167,7 @@ return (
                     </label>
                     <div className="relative"></div>
                       <Mail>
-                      <input />
+                      </Mail><input />
                   </div>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
@@ -177,7 +177,7 @@ return (
                     </label>
                     <div className="relative"></div>
                       <Building>
-                      <input />
+                      </Building><input />
                   </div>
                   <div />
                     <label>
@@ -185,7 +185,7 @@ return (
                     </label>
                     <div className="relative"></div>
                       <Phone>
-                      <input />
+                      </Phone><input />
                   </div>
                 </div>
                 <div />
@@ -194,8 +194,8 @@ return (
                   </label>
                   <div className="relative"></div>
                     <Globe>
-                    <select>
-                      <option value="">Select a service</option>
+                    </Globe><select>
+                      </select><option value="">Select a service</option>
                       {
     services.map((service) => (
   }
@@ -214,7 +214,7 @@ return (
                   </label>
                   <div className="relative"></div>
                     <MessageCircle>
-                    <textarea />
+                    </MessageCircle><textarea />
                 </div>
                 <button>
                   {
@@ -226,7 +226,7 @@ return (
                   ) : (;
                     <>
                       <Send>
-                      <span>Send Message</span>
+                      </Send><span>Send Message</span>
                     </>
   }
                   )}
@@ -281,7 +281,7 @@ return (
                       <MapPin />
                     <div />
                       <h3 className="text-lg font-semibold text-white">Address</h3>
-                      <p className="text-gray-300">123 Tech Street<br />San Francisco, CA 94105</p>
+                      <p className="text-gray-300">123 Tech Street</p><br />San Francisco, CA 94105</p>
                     </div>
                   </div>
                   <div className="flex items-center"></div>
@@ -289,7 +289,7 @@ return (
                       <Clock />
                     <div />
                       <h3 className="text-lg font-semibold text-white">Business Hours</h3>
-                      <p className="text-gray-300">Mon - Fri: 9:00 AM - 6:00 PM<br />Sat: 10:00 AM - 4:00 PM</p>
+                      <p className="text-gray-300">Mon - Fri: 9:00 AM - 6:00 PM</p><br />Sat: 10:00 AM - 4:00 PM</p>
                     </div>
                   </div>
                 </div>

@@ -8,7 +8,7 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
 // Loading skeleton component
 const ServiceCardSkeleton = () => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
-    <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
+    </div><div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
     <div className="h-4 bg-gray-200 rounded mb-2"></div>
     <div className="h-4 bg-gray-200 rounded w-5/6"></div>
   </div>
@@ -17,7 +17,7 @@ const ServiceCardSkeleton = () => (
 // Content promotion banner component
 const ContentPromotionBanner = () => (
   <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-4 text-center">
-    <p className="text-sm font-medium">
+    </div><p className="text-sm font-medium">
       🚀 New: AI-Powered Business Solutions - Transform Your Operations Today!
     </p>
   </div>
@@ -92,7 +92,7 @@ const HomePage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
+        </Helmet><title>Zion Tech Group - Advanced AI and IT Solutions</title>
         <meta name="description" content="Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology." />
         <meta name="keywords" content="AI solutions, IT services, digital transformation, enterprise software, cloud computing, cybersecurity" />
       </Helmet>
@@ -114,10 +114,10 @@ const HomePage: React.FC = () => {
 
           {/* Stats Section */}
           <section className="mb-16">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            </section><div className="
               {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="flex justify-center mb-2">{stat.icon}</div>
+                </div><div key={index} className="text-center">
+                  </div><div className="flex justify-center mb-2">{stat.icon}</div>
                   <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
                   <div className="text-gray-400 text-sm">{stat.label}</div>
                 </div>
@@ -127,7 +127,7 @@ const HomePage: React.FC = () => {
 
           {/* AI Services Section */}
           <section className="mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center">
+            </section></section><h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center">
               AI Services
             </h2>
             <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto">
@@ -135,8 +135,8 @@ const HomePage: React.FC = () => {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {aiServices.map((service, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300">
-                  <service.icon className="w-12 h-12 text-blue-400 mb-4" />
+                </div><div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300">
+                  </div><service.icon className="w-12 h-12 text-blue-400 mb-4" />
                   <h3 className="text-xl font-semibold text-white mb-3">
                     {service.name}
                   </h3>
@@ -150,7 +150,7 @@ const HomePage: React.FC = () => {
 
           {/* IT Services Section */}
           <section className="mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center">
+            </section></section><h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center">
               IT Services
             </h2>
             <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto">
@@ -158,8 +158,8 @@ const HomePage: React.FC = () => {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {itServices.map((service, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300">
-                  <service.icon className="w-12 h-12 text-green-400 mb-4" />
+                </div><div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300">
+                  </div><service.icon className="w-12 h-12 text-green-400 mb-4" />
                   <h3 className="text-xl font-semibold text-white mb-3">
                     {service.name}
                   </h3>

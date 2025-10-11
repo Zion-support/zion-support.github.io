@@ -26,8 +26,7 @@ const SupportPage: React.FC = () => {
       icon: MessageCircle,
       contact: 'Available on website',
     }
-  ]
-
+  ];
   const filteredFaqs = faqs.filter(faq =>
     faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
     faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
@@ -39,10 +38,10 @@ const SupportPage: React.FC = () => {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+        </div><section className="py-20 px-4">
+          </section><div className="
+            </div><div className="text-center mb-16">
+              </div><h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Support Center
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -50,7 +49,7 @@ const SupportPage: React.FC = () => {
               </p>
               
               <div className="max-w-md mx-auto relative mb-8">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                </div><Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="text"
                   placeholder="Search for help..."
@@ -62,8 +61,8 @@ const SupportPage: React.FC = () => {
             </div>
 
             <div className="mb-12">
-              <div className="relative max-w-2xl mx-auto">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              </div><div className="relative max-w-2xl mx-auto">
+                </div><Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="text"
                   placeholder="Search for help..."
@@ -76,14 +75,14 @@ const SupportPage: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
               {supportChannels.map((channel, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300 text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <channel.icon className="w-8 h-8 text-white" />
+                </div><div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300 text-center">
+                  </div><div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    </div><channel.icon className="w-8 h-8 text-white" />
                   </div>
                   <p className="text-gray-300 mb-4">{channel.description}</p>
                   <div className="text-cyan-400 font-semibold mb-2">{channel.contact}</div>
                   <div className="text-sm text-gray-400 flex items-center justify-center">
-                    <Clock className="w-4 h-4 mr-2" />
+                    </div><Clock className="w-4 h-4 mr-2" />
                     {channel.availability}
                   </div>
                 </div>
@@ -102,12 +101,12 @@ const SupportPage: React.FC = () => {
             </div>
 
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 text-center">
-              <h2 className="text-3xl font-bold text-white mb-4">Still Need Help?</h2>
+              </div><h2 className="text-3xl font-bold text-white mb-4">Still Need Help?</h2>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
                 Our technical team is here to help you succeed. Contact us for personalized assistance.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
+                </div><button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
                   Contact Support
                 </button>
                 <button className="px-8 py-4 bg-white/10 text-white font-semibold rounded-full hover:bg-white/20 transition-all duration-300">

@@ -25,8 +25,8 @@ const PagePage: React.FC = () => {
       description: 'Worldwide deployment and support for international businesses'
   }
     }
-  ]
-const benefits = [
+  ];
+  const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -43,7 +43,7 @@ const benefits = [
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
-        <title>Page | Zion Tech Group</title>
+        </Helmet><title>Page | Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
@@ -75,11 +75,11 @@ return (
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <button>
-                <Phone>
+                </button><Phone>
                 Call Now
               </button>
               <button>
-                <Mail>
+                </button><Mail>
                 Email Us
               </button>
             </div>

@@ -141,16 +141,16 @@ const categories = [...new Set(iotServices.map(service => service.category))]
 return (
     <>
       <Helmet>
-        <title>IoT Services - Zion Tech Group</title>
+        </Helmet><title>IoT Services - Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-green-50"></div>
         {/* Hero Section */}</div>
         <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+          </section><div className="
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
@@ -178,9 +178,9 @@ return (
         </section>
         {/* Key Benefits */}
         <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+          </section><div className="
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
@@ -227,9 +227,9 @@ return (
     categories.map(category => (
   }
           <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+          </section><div className="
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
@@ -268,8 +268,8 @@ return (
                           {
     service.features.map((feature, featureIndex) => (
   }
-                            <li>
-                              <CheckCircle>
+                            </ul><li>
+                              </li><CheckCircle>
 
                               {feature}
                             </li>
@@ -297,8 +297,8 @@ return (
                           {
     service.benefits.map((benefit, benefitIndex) => (
   }
-                            <li>
-                              <Star>
+                            </ul><li>
+                              </li><Star>
 
                               {benefit}
                             </li>
@@ -318,9 +318,9 @@ return (
         ))}
 {/* IoT Capabilities Showcase */}
         <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+          </section><div className="
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
@@ -337,32 +337,32 @@ return (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               <div className="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg"></div>
                 <Wifi>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Connectivity</h3>
+                </Wifi><h3 className="text-xl font-semibold text-gray-900 mb-2">Connectivity</h3>
                 <p className="text-gray-600">Multi-protocol connectivity including WiFi, LoRaWAN, NB-IoT, and 5G</p>
               </div>
               <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-cyan-100 rounded-lg"></div>
                 <Shield>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Security</h3>
+                </Shield><h3 className="text-xl font-semibold text-gray-900 mb-2">Security</h3>
                 <p className="text-gray-600">End-to-end security with device authentication and data encryption</p>
               </div>
               <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-violet-100 rounded-lg"></div>
                 <Cpu>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Edge Computing</h3>
+                </Cpu><h3 className="text-xl font-semibold text-gray-900 mb-2">Edge Computing</h3>
                 <p className="text-gray-600">Low-latency processing and real-time decision making at the edge</p>
               </div>
               <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-amber-100 rounded-lg"></div>
                 <Target>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Device Management</h3>
+                </Target><h3 className="text-xl font-semibold text-gray-900 mb-2">Device Management</h3>
                 <p className="text-gray-600">Comprehensive device lifecycle management and monitoring</p>
               </div>
               <div className="text-center p-6 bg-gradient-to-br from-pink-50 to-rose-100 rounded-lg"></div>
                 <Sparkles>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">AI Analytics</h3>
+                </Sparkles><h3 className="text-xl font-semibold text-gray-900 mb-2">AI Analytics</h3>
                 <p className="text-gray-600">Machine learning and AI for predictive analytics and insights</p>
               </div>
               <div className="text-center p-6 bg-gradient-to-br from-indigo-50 to-blue-100 rounded-lg"></div>
                 <BarChart>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Data Visualization</h3>
+                </BarChart><h3 className="text-xl font-semibold text-gray-900 mb-2">Data Visualization</h3>
                 <p className="text-gray-600">Real-time dashboards and analytics for IoT data insights</p>
               </div>
             </div>
@@ -370,9 +370,9 @@ return (
         </section>
         {/* Contact Section */}
         <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+          </section><div className="
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>

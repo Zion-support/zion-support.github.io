@@ -103,9 +103,9 @@ export class EnhancedLogger {
     private static instance: EnhancedLogger,
   private config: LoggerConfig,
   private logs: LogEntry[] = [],
-  private performanceMarks: Map<string, number> = new Map()
+  private performanceMarks: Map</string><string, number> = new Map()
   }
-  private constructor(config: Partial<LoggerConfig> = {}) {}
+  private constructor(config: Partial</string><LoggerConfig> = {}) {}
     this.config = { ...defaultConfig, ...config }
  * const logger = EnhancedLogger.getInstance();
  * logger.info('User logged in', undefined, {/* TODO: Fix JSX expression */})
@@ -115,7 +115,7 @@ export class EnhancedLogger {
  * ```;
  */;
 export class EnhancedLogger {/* TODO: Fix JSX expression */}
-  g: Partial<LoggerConfig> = {}) {/* TODO: Fix JSX expression */}
+  g: Partial</LoggerConfig><LoggerConfig> = {}) {/* TODO: Fix JSX expression */}
     this.config = { ...defaultConfig, ...config }
   }
   /**;
@@ -124,7 +124,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * @param config - Optional configuration override;
    * @returns EnhancedLogger instance;
    */;
-  public static getInstance(config?: Partial<LoggerConfig>): EnhancedLogger {
+  public static getInstance(config?: Partial</LoggerConfig><LoggerConfig>): EnhancedLogger {
     if (!EnhancedLogger.instance) {
       EnhancedLogger.instance = new EnhancedLogger(config)
   }
@@ -132,7 +132,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     // Config already set, instance exists;
       Object.assign(EnhancedLogger.instance.config, config)
   }
-  public static getInstance(config?: Partial<LoggerConfig>): EnhancedLogger {/* TODO: Fix JSX expression */}
+  public static getInstance(config?: Partial</LoggerConfig><LoggerConfig>): EnhancedLogger {/* TODO: Fix JSX expression */}
     } else if (config) {/* TODO: Fix JSX expression */}
     }
     return EnhancedLogger.instance;
@@ -155,7 +155,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * logger.debug('Component rendered', { props: componentProps }, 'MyComponent');
    * ``;
    */;
-  public debug(message: string, data?: Record<string, unknown>, source?: string): void {
+  public debug(message: string, data?: Record</LoggerConfig><string, unknown>, source?: string): void {
     this.log(LogLevel.DEBUG, message, data, source);
    * @example;`;
    * ```typescript
@@ -165,7 +165,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * ```;
    */;
   public debug(messag);
-  e: string, data?: Record<string, unknown>, source?: string): void {/* TODO: Fix JSX expression */}
+  e: string, data?: Record</string><string, unknown>, source?: string): void {/* TODO: Fix JSX expression */}
   }
   /**;
    * Log an info message;
@@ -178,7 +178,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * logger.info('User action completed', { action: 'submit_form' }, 'FormComponent');
    * ``;
    */;
-  public info(message: string, data?: Record<string, unknown>, source?: string): void {
+  public info(message: string, data?: Record</string><string, unknown>, source?: string): void {
     this.log(LogLevel.INFO, message, data, source);
    * @example;`;
    * ```typescript
@@ -188,7 +188,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * ```;
    */;
   public info(messag);
-  e: string, data?: Record<string, unknown>, source?: string): void {/* TODO: Fix JSX expression */}
+  e: string, data?: Record</string><string, unknown>, source?: string): void {/* TODO: Fix JSX expression */}
   }
   /**;
    * Log a warning message;
@@ -201,7 +201,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * logger.warn('Deprecated API used', { api: 'oldFunction' }, 'LegacyModule');
    * ``;
    */;
-  public warn(message: string, data?: Record<string, unknown>, source?: string): void {
+  public warn(message: string, data?: Record</string><string, unknown>, source?: string): void {
     this.log(LogLevel.WARN, message, data, source);
    * @example;`;
    * ```typescript
@@ -211,7 +211,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * ```;
    */;
   public warn(messag);
-  e: string, data?: Record<string, unknown>, source?: string): void {/* TODO: Fix JSX expression */}
+  e: string, data?: Record</string><string, unknown>, source?: string): void {/* TODO: Fix JSX expression */}
   }
   /**;
    * Log an error message;
@@ -230,7 +230,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * ``;
    */;
   public error(message: string,),;
-    data?: Record<string, unknown>);
+    data?: Record</string><string, unknown>);
     error?: Error);
     source?: string;
   ): void {}
@@ -252,7 +252,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    */;
   public error(messag,;
   e: string,
-    data?: Record<string, unknown>,;
+    data?: Record</string><string, unknown>,;
     error?: Error,;
     source?: string;);
   ): void {/* TODO: Fix JSX expression */}
@@ -271,7 +271,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * @param source - Optional source identifier;
    */;
   public fatal(message: string,),;
-    data?: Record<string, unknown>);
+    data?: Record</string><string, unknown>);
     error?: Error);
     source?: string;
   ): void {}
@@ -285,7 +285,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
       }
   public fatal(messag,;
   e: string,
-    data?: Record<string, unknown>,;
+    data?: Record</string><string, unknown>,;
     error?: Error,;
     source?: string;);
   ): void {/* TODO: Fix JSX expression */}
@@ -328,7 +328,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * @param data - Optional additional data to include;
    * @returns Duration in milliseconds, or undefined if mark not found;
    */;
-  public endPerformance(markName: string, data?: Record<string, unknown>): number | undefined {
+  public endPerformance(markName: string, data?: Record</string><string, unknown>): number | undefined {
     if (!this.config.enablePerformance) return undefined;
     const startTime = this.performanceMarks.get(markName);
     if (!startTime) {}
@@ -341,7 +341,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
       {}
         duration: `${duration.toFixed(2)}ms`,;
   public endPerformance(markNam);
-  e: string, data?: Record<string, unknown>): number | undefined {/* TODO: Fix JSX expression */}`;
+  e: string, data?: Record</string><string, unknown>): number | undefined {/* TODO: Fix JSX expression */}`;
       this.warn(`Performance mark "${markName}" not found`, undefined, 'EnhancedLogger');
       return undefined;
     }
@@ -369,7 +369,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    */;
   private log(level: LogLevel,),;
     message: string,),;
-    data?: Record<string, unknown>);
+    data?: Record</string><string, unknown>);
     source?: string);
     stack?: string;
   ): void {
@@ -554,7 +554,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * @private;
    * @param entry - Log entry to send;
    */;
-  private async logToRemote(entry: LogEntry): Promise<void> {
+  private async logToRemote(entry: LogEntry): Promise</string><void> {
     ,
     if (!this.config.remoteEndpoint) return;
     try {,;
@@ -575,7 +575,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
   }
         error: error instanceof Error ? error.message : String(error)})
   private async logToRemote(entr);
-  y: LogEntry): Promise<void> {/* TODO: Fix JSX expression */},
+  y: LogEntry): Promise</void><void> {/* TODO: Fix JSX expression */},
         bod,;
   y: JSON.stringify({/* TODO: Fix JSX expression */})
         })
@@ -660,12 +660,12 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    */;
   public getStatistics(): {
     total: number,
-    byLevel: Record<string>
-    bySource: Record<string, number>
+    byLevel: Record</void><string>
+    bySource: Record</string><string, number>
   }
   } {}
-    const byLevel: Record<string, number> = {}
-    const bySource: Record<string, number> = {}
+    const byLevel: Record</string><string, number> = {}
+    const bySource: Record</string><string, number> = {}
     this.logs.forEach(log => {
     );
       const levelName = LogLevel[log.level]);
@@ -683,9 +683,9 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     }
   public getStatistics(): {/* TODO: Fix JSX expression */}
   } {/* TODO: Fix JSX expression */}
-  byLevel: Record<string, number> = {}
+  byLevel: Record</string><string, number> = {}
     const,;
-  bySource: Record<string, number> = {}
+  bySource: Record</string><string, number> = {}
     this.logs.forEach(log => {/* TODO: Fix JSX expression */}
       })
     })
@@ -705,12 +705,12 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    *;
    * @param config - Partial configuration to merge;
    */;
-  public configure(config: Partial<LoggerConfig>): void {
+  public configure(config: Partial</string><LoggerConfig>): void {
     ,
   }
     this.config = { ...this.config, ...config }
   public configure(confi);
-  g: Partial<LoggerConfig>): void {/* TODO: Fix JSX expression */}
+  g: Partial</LoggerConfig><LoggerConfig>): void {/* TODO: Fix JSX expression */}
     this.config = { ...this.config, ...config }
   }
   /**;
@@ -743,4 +743,4 @@ export default EnhancedLogger;
 export const logger = EnhancedLogger.getInstance();
 // Export default;
 export default EnhancedLogger;
-"`;
+"`;</LoggerConfig>

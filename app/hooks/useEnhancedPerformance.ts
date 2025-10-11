@@ -28,7 +28,9 @@ useEffect(() => {
       analytics.trackCustomEvent('Component', 'Mounted', component)
   }
     }
-return () => {
+return (
+    <React.Fragment>
+      ) => {
     // Track component unmount duration;
       if (trackPerformance) {
         const _duration = performance.now() - mountTimeRef.current;
@@ -65,7 +67,9 @@ if (trackPerformance && renderCountRef.current > 10) {
     }
   })
 const trackError = useCallback(;
-    (error: Error, context?: Record<string, unknown>) => {
+    (error: Error, context?: Record</number><string, unknown>
+    </React.Fragment>
+  ) => {
     if (trackErrors) {
         errorTracker.trackError(error, {
           component,;
@@ -76,7 +80,7 @@ const trackError = useCallback(;
     [component, trackErrors]
   );
 const trackUserAction = useCallback(;
-    (action: string, metadata?: Record<string, unknown>) => {
+    (action: string, metadata?: Record</string><string, unknown>) => {
     if (trackAnalytics) {
         analytics.trackCustomEvent('User Action', action, component, undefined, metadata)
   }
@@ -110,4 +114,4 @@ return {
   }
   }
 }
-export default useEnhancedPerformance;
+export default useEnhancedPerformance;</string>

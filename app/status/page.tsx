@@ -66,8 +66,8 @@ const services = [
       description: 'System monitoring and alerts'
   }
     }
-  ]
-const incidents = [
+  ];
+  const incidents = [
     {
     id: 1,
       title: 'API Response Time Degradation',
@@ -96,16 +96,16 @@ const getStatusIcon = (;
 
         return <CheckCircle>
       case 'degraded':;
-        return <AlertTriangle>
+        return </CheckCircle><AlertTriangle>
       case 'outage':;
-        return <XCircle>
+        return </AlertTriangle><XCircle>
 
       default:;) => {
   return (
     $3
   )
   }
-        return <Clock>}
+        return </XCircle><Clock>}
     }
   }
 const getStatusColor = (;
@@ -163,7 +163,7 @@ return (
               </span>
             </div>
             <button>
-              <RefreshCw>
+              </button><RefreshCw>
               Refresh
             </button>
           </div>
@@ -175,9 +175,9 @@ return (
 
       {/* Services Status */}
       <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+          </section><div className="
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
@@ -222,9 +222,9 @@ return (
 
       {/* Recent Incidents */}
       <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+          </section><div className="
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
@@ -266,9 +266,9 @@ return (
       </section>
       {/* Performance Metrics */}
       <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+          </section><div className="
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
@@ -305,9 +305,9 @@ return (
       </section>
       {/* CTA Section */}
       <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+          </section><div className="
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>

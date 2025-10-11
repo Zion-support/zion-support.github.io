@@ -4,36 +4,52 @@
 export const debounce = <T extends (...args: any[]) => any>(,
   func: T,
   wait: number,
-): ((...args: Parameters<T>) => void) => {
+): ((...args: Parameters</T><T>) => void) => {
     let timeout: NodeJS.Timeout,
-  return (...args: Parameters<T>) => {,
+  return (
+    <React.Fragment>
+      ...args: Parameters</T><T>
+    </React.Fragment>
+  ) => {,
     clearTimeout(timeout),;
   func: T,
   wait: number
   }
-): ((...args: Parameters<T>) => void) => {}
+): ((...args: Parameters</T><T>) => void) => {}
   let timeout: NodeJS.Timeout,
-  return (...args: Parameters<T>) => {}
+  return (
+    <React.Fragment>
+      ...args: Parameters</T><T>
+    </React.Fragment>
+  ) => {}
     clearTimeout(timeout);
     timeout = setTimeout(() => func(...args), wait);}
   }
 }
 // Throttle utility for performance;
-export const throttle = <T extends (...args: any[]) => any>(,
+export const throttle = </T><T extends (...args: any[]) => any>(,
   func: T,
   limit: number,
-): ((...args: Parameters<T>) => void) => {
+): ((...args: Parameters</T><T>) => void) => {
     let inThrottle: boolean,
-  return (...args: Parameters<T>) => {
+  return (
+    <React.Fragment>
+      ...args: Parameters</T><T>
+    </React.Fragment>
+  ) => {
     if (!inThrottle) {,
       func(...args),;
       inThrottle = true;
   func: T,
   limit: number
   }
-): ((...args: Parameters<T>) => void) => {}
+): ((...args: Parameters</T><T>) => void) => {}
   let inThrottle: boolean,
-  return (...args: Parameters<T>) => {}
+  return (
+    <React.Fragment>
+      ...args: Parameters</T><T>
+    </React.Fragment>
+  ) => {}
     if (!inThrottle) {}
       func(...args);
       inThrottle = true;
@@ -76,23 +92,23 @@ export const useIntersectionObserver = (;
 'use client';
 // Performance optimization utilities;
 // Debounce utility for performance;
-export const debounce = <T extends (...arg);
+export const debounce = </T><T extends (...arg);
   s: any[]) => any>(fun,
   c: T,
   wai,;
   t: number;)
 ): ((...arg),
-  s: Parameters<T>) => void) => {/* TODO: Fix JSX expression */}
+  s: Parameters</T><T>) => void) => {/* TODO: Fix JSX expression */}
   }
 }
 // Throttle utility for performance;
-export const throttle = <T extends (...arg);
+export const throttle = </T><T extends (...arg);
   s: any[]) => any>(fun,
   c: T,
   limi,;
   t: number;)
 ): ((...arg),
-  s: Parameters<T>) => void) => {/* TODO: Fix JSX expression */}
+  s: Parameters</T><T>) => void) => {/* TODO: Fix JSX expression */}
     }
   }
 }

@@ -5,15 +5,15 @@ const SocialMediaManagerPage: React.FC = () => {
     return (
     <>,
       <Helmet>
-        <title>Social Media Manager | Zion Tech Group - AI Social Media Automation</title>
+        </Helmet><title>Social Media Manager | Zion Tech Group - AI Social Media Automation</title>
         <meta>
         <link>
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+          </section><div className="
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
@@ -21,7 +21,7 @@ const SocialMediaManagerPage: React.FC = () => {
           <div className="max-w-7xl mx-auto text-center"></div>
             <div className="inline-flex items-center space-x-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6"></div>
               <Share2>
-              <span>Social Media Manager</span>
+              </Share2><span>Social Media Manager</span>
             </div>
             <h1>
               AI Social Media </h1>
@@ -33,7 +33,7 @@ const SocialMediaManagerPage: React.FC = () => {
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <button>
-                <span>Get Started</span>
+                </button><span>Get Started</span>
                 <ArrowRight>
               </button>
               <button>
@@ -43,9 +43,9 @@ const SocialMediaManagerPage: React.FC = () => {
           </div>
         </section>
         <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+          </section><div className="
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>

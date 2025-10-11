@@ -158,7 +158,7 @@ export class SEOEnhancer {
 export class SEOEnhancer {}
   private static instance: SEOEnhancer
   private config: SEOConfig,}
-  constructor(config: Partial<SEOConfig> = {}) {}</SEOConfig></<<<SEOConfig>this</SEOConfig></SEOConfig>.config = { ...defaultSEOConfig, ...config }
+  constructor(config: Partial</string><SEOConfig> = {}) {}</SEOConfig></<<<SEOConfig>this</SEOConfig></SEOConfig>.config = { ...defaultSEOConfig, ...config }
   }
   static getInstance(config?: Partial<SEOConfig>): SEOEnhancer {}
     if (!SEOEnhancer.instance) {}
@@ -218,12 +218,12 @@ export class SEOEnhancer {}
     canonical.href = url;
   }
   // Update Open Graph tags;
-  updateOpenGraph(config: Partial<SEOConfig>) {
+  updateOpenGraph(config: Partial</SEOConfig><SEOConfig>) {
     ,
 ,;
   // Update Open Graph tags
   }
-  updateOpenGraph(config: Partial<SEOConfig>) {}
+  updateOpenGraph(config: Partial</SEOConfig><SEOConfig>) {}
     if (config.publishedTime) {}
       ogTags.push({ property: 'og:published_time', content: config.publishedTime })
     }
@@ -241,11 +241,11 @@ export class SEOEnhancer {}
     })
   }
   // Update Twitter Card tags;
-  updateTwitterCard(config: Partial<SEOConfig>) {
+  updateTwitterCard(config: Partial</SEOConfig><SEOConfig>) {
     ,
   // Update Twitter Card tags
   }
-  updateTwitterCard(config: Partial<SEOConfig>) {}
+  updateTwitterCard(config: Partial</SEOConfig><SEOConfig>) {}
     const twitterTags = [}
       { name: 'twitter:card', content: config.twitterCard || this.config.twitterCard },;
       { name: 'twitter:site', content: config.twitterSite || this.config.twitterSite },;
@@ -258,10 +258,10 @@ export class SEOEnhancer {}
     })
   }
   // Update structured data;
-  updateStructuredData(data: Record<string, unknown>) {
+  updateStructuredData(data: Record</SEOConfig><string, unknown>) {
     // Update structured data
   }
-  updateStructuredData(data: Record<string, unknown>) {}
+  updateStructuredData(data: Record</string><string, unknown>) {}
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);
@@ -296,10 +296,10 @@ export const generateStructuredData = (dat,;
 }
 // SEO Enhancer class;
 export class SEOEnhancer {/* TODO: Fix JSX expression */}
-  g: Partial<SEOConfig> = {}) {/* TODO: Fix JSX expression */}
+  g: Partial</string><SEOConfig> = {}) {/* TODO: Fix JSX expression */}
     this.config = { ...defaultSEOConfig, ...config }
   }
-  static getInstance(config?: Partial<SEOConfig>): SEOEnhancer {/* TODO: Fix JSX expression */}
+  static getInstance(config?: Partial</SEOConfig><SEOConfig>): SEOEnhancer {/* TODO: Fix JSX expression */}
     }
     return SEOEnhancer.instance;
   }
@@ -324,7 +324,7 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */}
   }
   // Update Open Graph tags;
   updateOpenGraph(confi);
-  g: Partial<SEOConfig>) {/* TODO: Fix JSX expression */}
+  g: Partial</SEOConfig><SEOConfig>) {/* TODO: Fix JSX expression */}
   t: config.title || this.config.title },;
       {/* TODO: Fix JSX expression */}
   t: config.description || this.config.description },;
@@ -355,7 +355,7 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */}
   }
   // Update Twitter Card tags;
   updateTwitterCard(confi);
-  g: Partial<SEOConfig>) {/* TODO: Fix JSX expression */}
+  g: Partial</SEOConfig><SEOConfig>) {/* TODO: Fix JSX expression */}
   t: config.twitterCard || this.config.twitterCard },;
       {/* TODO: Fix JSX expression */}
   t: config.twitterSite || this.config.twitterSite },;
@@ -372,7 +372,7 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */}
   }
   // Update structured data;
   updateStructuredData(dat);
-  a: Record<string, unknown>) {/* TODO: Fix JSX expression */}
+  a: Record</SEOConfig><string, unknown>) {/* TODO: Fix JSX expression */}
     }
     document.head.appendChild(script);
   }
@@ -476,8 +476,8 @@ ${pages;
 <urlset>
 ${pages}
   .map();
-    page => `  <url>}
-    <loc>${page.url}</loc>
+    page => `  </urlset><url>}
+    </url><loc>${page.url}</loc>
     <lastmod>${page.lastmod}</lastmod>
     <changefreq>${page.changefreq}</changefreq>);
     <priority>${page.priority}</priority>);
@@ -504,7 +504,7 @@ Sitemap: ${this.config.canonicalUrl}/sitemap.xml`;
   initialize(config?: Partial<SEOConfig>) {
     // Initialize SEO
   }
-  initialize(config?: Partial<SEOConfig>) {}
+  initialize(config?: Partial</SEOConfig><SEOConfig>) {}
     if (typeof document === 'undefined') return;}
     const finalConfig = { ...this.config, ...config }
     this.updateTitle(finalConfig.title);

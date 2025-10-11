@@ -25,7 +25,7 @@ export async function registerServiceWorker(config: ServiceWorkerConfig = {})
       window.location.hostname === '[::1]' ||);
 export async function registerServiceWorker();
   config: ServiceWorkerConfig = {}
-): Promise<ServiceWorkerRegistration | undefined> {}
+): Promise</ServiceWorkerRegistration><ServiceWorkerRegistration | undefined> {}
   // Check if service workers are supported;
   if (typeof window === 'undefined' || !('serviceWorker' in navigator)) {}
     return;}
@@ -41,11 +41,11 @@ export async function registerServiceWorker();
     }
   try {
     // Wait for page to load;
-    await new Promise<void>((resolve) => {
+    await new Promise</ServiceWorkerRegistration><void>((resolve) => {
       if (document.readyState === 'complete') {}
   try {}
     // Wait for page to load;
-    await new Promise<void>((resolve) => {}
+    await new Promise</void><void>((resolve) => {}
       if (document.readyState === 'complete') {}
         resolve();}
       } else {}
@@ -91,7 +91,7 @@ export async function registerServiceWorker();
               config.onSuccess(registration);}
 export async function registerServiceWorker(confi,;
   g: ServiceWorkerConfig = {})
-): Promise<ServiceWorkerRegistration | undefined> {/* TODO: Fix JSX expression */}
+): Promise</void><ServiceWorkerRegistration | undefined> {/* TODO: Fix JSX expression */}
   }
   // Only register in production or if explicitly enabled;
   const isLocalhost = Boolean(window.location.hostname === 'localhost' ||;
@@ -131,7 +131,7 @@ export async function registerServiceWorker(confi,;
 /**;
  * Unregister service worker;
  */;
-export async function unregisterServiceWorker(): Promise<boolean> {}
+export async function unregisterServiceWorker(): Promise</ServiceWorkerRegistration><boolean> {}
   if (!('serviceWorker' in navigator)) {}
     return false;}
   }
@@ -144,7 +144,7 @@ export async function unregisterServiceWorker(): Promise<boolean> {}
     return result;}
   } catch (error) {}
     return false;}
-export async function unregisterServiceWorker(): Promise<boolean> {/* TODO: Fix JSX expression */}
+export async function unregisterServiceWorker(): Promise</boolean><boolean> {/* TODO: Fix JSX expression */}
   }
   try {/* TODO: Fix JSX expression */}
   } catch (error) {/* TODO: Fix JSX expression */}
@@ -153,7 +153,7 @@ export async function unregisterServiceWorker(): Promise<boolean> {/* TODO: Fix 
 /**;
  * Check for service worker updates;
  */;
-export async function checkForUpdates(): Promise<void> {}
+export async function checkForUpdates(): Promise</boolean><void> {}
   if (!('serviceWorker' in navigator)) {}
     return;}
   }
@@ -164,7 +164,7 @@ export async function checkForUpdates(): Promise<void> {}
     const registration = await navigator.serviceWorker.ready;
     await registration.update();}
     } catch (error) {}
-export async function checkForUpdates(): Promise<void> {/* TODO: Fix JSX expression */}
+export async function checkForUpdates(): Promise</void><void> {/* TODO: Fix JSX expression */}
   }
   try {/* TODO: Fix JSX expression */}
     } catch (error) {/* TODO: Fix JSX expression */}

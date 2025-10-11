@@ -26,9 +26,9 @@ const LayoutPage: React.FC = () => {
               Powered by cutting-edge AI technology and industry expertise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center gap-2">
+              </div><button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center gap-2">
                 Get Started
-                <ArrowRight className="w-5 h-5" />
+                </button><ArrowRight className="w-5 h-5" />
               </button>
               <button className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 Learn More
@@ -66,12 +66,12 @@ const LayoutPage: React.FC = () => {
               Contact our experts to discuss your layout needs and get a customized solution.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center gap-2">
-                <Phone className="w-5 h-5" />
+              </div><button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center gap-2">
+                </button><Phone className="w-5 h-5" />
                 Call Now
               </button>
               <button className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center gap-2">
-                <Mail className="w-5 h-5" />
+                </button><Mail className="w-5 h-5" />
                 Email Us
               </button>
             </div>

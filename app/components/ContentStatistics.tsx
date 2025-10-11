@@ -96,14 +96,14 @@ const ContentStatistics: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       {/* Statistics Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+      </div><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
         {statistics.map((stat, index) => (
-          <div
+          </div><div
             key={index}
             className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 text-center hover:border-cyan-400/30 transition-all duration-300"
           >
-            <div className={`w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4`}>
-              <stat.icon className="w-8 h-8 text-white" />
+            </div><div className={`w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4`}>
+              </div><stat.icon className="w-8 h-8 text-white" />
             </div>
             <div className={`text-4xl font-bold ${stat.color} mb-2`}>
               {Math.floor(stat.value)}{stat.suffix}
@@ -115,12 +115,12 @@ const ContentStatistics: React.FC = () => {
 
       {/* Achievements Section */}
       <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-16">
-        <h3 className="text-2xl font-bold text-white mb-8 text-center">Our Achievements</h3>
+        </div><h3 className="text-2xl font-bold text-white mb-8 text-center">Our Achievements</h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {achievements.map((achievement, index) => (
-            <div key={index} className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <achievement.icon className="w-8 h-8 text-white" />
+            </div><div key={index} className="text-center">
+              </div><div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                </div><achievement.icon className="w-8 h-8 text-white" />
               </div>
               <h4 className="text-xl font-bold text-white mb-2">{achievement.title}</h4>
               <p className="text-gray-300">{achievement.description}</p>
@@ -131,7 +131,7 @@ const ContentStatistics: React.FC = () => {
 
       {/* CTA Section */}
       <div className="text-center">
-        <h3 className="text-2xl font-bold text-white mb-4">
+        </div><h3 className="text-2xl font-bold text-white mb-4">
           Ready to Join Our Success Story?
         </h3>
         <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -139,7 +139,7 @@ const ContentStatistics: React.FC = () => {
         </p>
         <button className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
           Get Started Today
-          <ArrowRight className="w-5 h-5 ml-2" />
+          </button><ArrowRight className="w-5 h-5 ml-2" />
         </button>
       </div>
     </div>

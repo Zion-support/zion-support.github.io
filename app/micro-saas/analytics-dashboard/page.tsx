@@ -34,8 +34,8 @@ const AIAnalyticsDashboardPage: React.FC = () => {
       description: 'Monitor KPIs and business objectives with automated alerts.'
   }
     }
-  ]
-const benefits = [
+  ];
+  const benefits = [
     'Real-time data visualization and reporting',
     'AI-powered predictive analytics',
 
@@ -46,8 +46,8 @@ const benefits = [
     'Multi-platform data integration',
 
     'Mobile-responsive design'
-  ]
-const metrics = [
+  ];
+  const metrics = [
     { label: 'Data Sources', value: '50+', icon: BarChart },
     { label: 'Update Frequency', value: 'Real-time', icon: Clock },
     { label: 'Accuracy Rate', value: '99.9%', icon: Shield },
@@ -56,7 +56,7 @@ const metrics = [
 return (
     <>
       <Helmet>
-        <title>AI Analytics Dashboard | Zion Tech Group - Real-time Business Intelligence</title>
+        </Helmet><title>AI Analytics Dashboard | Zion Tech Group - Real-time Business Intelligence</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
         <link>
@@ -64,9 +64,9 @@ return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}</div>
         <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+          </section><div className="
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
@@ -75,7 +75,7 @@ return (
             <div className="text-center mb-16"></div>
               <div className="inline-flex items-center space-x-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6"></div>
                 <BarChart>
-                <span>AI Analytics Dashboard</span>
+                </BarChart><span>AI Analytics Dashboard</span>
               </div>
               <h1>
                 Real-time Business </h1>
@@ -87,7 +87,7 @@ return (
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <button>
-                  <span>Start Free Trial</span>
+                  </button><span>Start Free Trial</span>
                   <ArrowRight>
                 </button>
                 <button>
@@ -99,9 +99,9 @@ return (
         </section>
         {/* Features Section */}
         <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+          </section><div className="
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
@@ -129,9 +129,9 @@ return (
         </section>
         {/* Metrics Section */}
         <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+          </section><div className="
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
@@ -159,9 +159,9 @@ return (
         </section>
         {/* Benefits Section */}
         <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+          </section><div className="
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
@@ -180,7 +180,7 @@ return (
   }
                   <div key={index} className="flex items-start space-x-3"></div>
                     <CheckCircle>
-                    <span className="text-gray-300 text-lg">{benefit}</span>
+                    </CheckCircle><span className="text-gray-300 text-lg">{benefit}</span>
                   </div>
                 ))}
               </div>
@@ -189,15 +189,15 @@ return (
                 <div className="space-y-4"></div>
                   <div className="flex items-center space-x-3"></div>
                     <Star>
-                    <span className="text-gray-300">"Increased revenue by 40% with better insights"</span>
+                    </Star><span className="text-gray-300">"Increased revenue by 40% with better insights"</span>
                   </div>
                   <div className="flex items-center space-x-3"></div>
                     <Star>
-                    <span className="text-gray-300">"Reduced reporting time by 80%"</span>
+                    </Star><span className="text-gray-300">"Reduced reporting time by 80%"</span>
                   </div>
                   <div className="flex items-center space-x-3"></div>
                     <Star>
-                    <span className="text-gray-300">"Improved decision making speed by 3x"</span>
+                    </Star><span className="text-gray-300">"Improved decision making speed by 3x"</span>
                   </div>
                 </div>
               </div>
@@ -206,9 +206,9 @@ return (
         </section>
         {/* CTA Section */}
         <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+          </section><div className="
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
@@ -224,7 +224,7 @@ return (
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <button>
-                  <span>Start Free Trial</span>
+                  </button><span>Start Free Trial</span>
                   <ArrowRight>
                 </button>
                 <button>

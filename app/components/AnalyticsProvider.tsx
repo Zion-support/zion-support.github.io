@@ -6,7 +6,7 @@ interface AnalyticsContextType {
   trackPageView: (pageName: string, pagePath: string) => void
   }
 
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+const AnalyticsContext = createContext</string><AnalyticsContextType | undefined>(undefined);
 
 export const useAnalytics = () => {
     const context = useContext(AnalyticsContext);
@@ -20,7 +20,7 @@ interface AnalyticsProviderProps {
     children: ReactNode
   }
 
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
+export const AnalyticsProvider: React.FC</AnalyticsContextType><AnalyticsProviderProps> = ({ children }) => {
   useEffect(() => {
     // Initialize Google Analytics if available
     if (typeof window !== 'undefined' && 'gtag' in window) {
@@ -34,12 +34,12 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     }
   }, []);
 
-  const trackEvent = (eventName: string, parameters: Record<string, any> = {}) => {
+  const trackEvent = (eventName: string, parameters: Record</AnalyticsProviderProps><string, any> = {}) => {
     if (typeof window === 'undefined') return;
 
     // Google Analytics
     if ('gtag' in window) {
-      const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, any>) => void }).gtag;
+      const gtag = (window as { gtag: (command: string, action: string, parameters: Record</string><string, any>) => void }).gtag;
       gtag('event', eventName, {
         event_category: parameters.category || 'engagement',
         event_label: parameters.label,
@@ -78,7 +78,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   }
 
   return (
-    <AnalyticsContext.Provider value={value}>
+    </string><AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
   );

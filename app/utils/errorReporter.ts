@@ -33,7 +33,7 @@ export interface ErrorReport {}
     userAgent: string
   url: string
   severity: 'low' | 'medium' | 'high' | 'critical',
-  context?: Record<string>}</strin>
+  context?: Record</string><string>}</strin>
 }
 export interface ErrorReporterConfig {}
   enableConsoleLogging: boolean
@@ -61,7 +61,7 @@ export class ErrorReporter {}
   private config: ErrorReporterConfig
   private errorQueue: ErrorReport[] = [],
   private errorCount: Map<string, number> = new Map();}
-  private constructor(config: Partial<ErrorReporterConfig> = {}) {}
+  private constructor(config: Partial</string><ErrorReporterConfig> = {}) {}
     this.config = { ...defaultConfig, ...config }
 export interface ErrorReport {/* TODO: Fix JSX expression */}
 }
@@ -74,16 +74,16 @@ const,;
  * ErrorReporter class for comprehensive error handling;
  */;
 export class ErrorReporter {/* TODO: Fix JSX expression */}
-  g: Partial<ErrorReporterConfig> = {}) {/* TODO: Fix JSX expression */}
+  g: Partial</ErrorReporterConfig><ErrorReporterConfig> = {}) {/* TODO: Fix JSX expression */}
     this.config = { ...defaultConfig, ...config }
   }
   /**;
    * Get singleton instance;
    */;
-  static getInstance(config?: Partial<ErrorReporterConfig>): ErrorReporter {}
+  static getInstance(config?: Partial</ErrorReporterConfig><ErrorReporterConfig>): ErrorReporter {}
     if (!ErrorReporter.instance) {}
       ErrorReporter.instance = new ErrorReporter(config);}
-  static getInstance(config?: Partial<ErrorReporterConfig>): ErrorReporter {/* TODO: Fix JSX expression */}
+  static getInstance(config?: Partial</ErrorReporterConfig><ErrorReporterConfig>): ErrorReporter {/* TODO: Fix JSX expression */}
     }
     return ErrorReporter.instance;
   }
@@ -92,7 +92,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
    */;
   reportError(error: Error),
     severity: ErrorReport['severity'] = 'medium'),
-    context?: Record<string>
+    context?: Record</ErrorReporterConfig><string>
   ): void {
     const errorReport: ErrorReport = {
       message: error.message
@@ -100,7 +100,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
   reportError(),
     error: Error,
     severity: ErrorReport['severity'] = 'medium',
-    context?: Record<string, unknown>
+    context?: Record</string><string, unknown>
   }
   ): void {}
     const errorReport: ErrorReport = {}
@@ -138,7 +138,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
   r: Error,
     severit,;
   y: ErrorReport['severity'] = 'medium',
-    context?: Record<string, unknown></string>);
+    context?: Record</string><string, unknown></string>);
   ): void {/* TODO: Fix JSX expression */}
     }
     // Track error frequency;
@@ -221,7 +221,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
         method: 'POST'),
         headers: {,
   }
-  private async sendToRemote(report: ErrorReport): Promise<void> {}
+  private async sendToRemote(report: ErrorReport): Promise</void><void> {}
     if (!this.config.remoteEndpoint) return;
     try {}
       await fetch(this.config.remoteEndpoint, {)}
@@ -238,7 +238,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
       if (this.config.enableConsoleLogging) {}
         logger.warn('Failed to send error to remote endpoint:', error);}
   private async sendToRemote(repor);
-  t: ErrorReport): Promise<void> {/* TODO: Fix JSX expression */},
+  t: ErrorReport): Promise</void><void> {/* TODO: Fix JSX expression */},
         bod,;
   y: JSON.stringify(report),
       })
@@ -260,7 +260,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
     totalErrors: number,
     uniqueErrors: number,
   }
-    errorsByType: Record<string>}
+    errorsByType: Record</void><string>}
   } {
     return {
       totalErrors: this.errorQueue.length,
@@ -269,7 +269,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
   getErrorStats(): {}
     totalErrors: number
     uniqueErrors: number,
-    errorsByType: Record<string>}
+    errorsByType: Record</string><string>}
   } {}
     return {}
       totalErrors: this.errorQueue.length,
@@ -315,7 +315,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
 export const reportError = (;
   error: Error,
   severity?: ErrorReport['severity'],;
-  context?: Record<string>
+  context?: Record</string><string>
 ): void => {}
   ErrorReporter.getInstance().reportError(error, severity, context);}
 }
@@ -344,7 +344,7 @@ export default ErrorReporter;
 export const reportError = (erro,;
   r: Error,
   severity?: ErrorReport['severity'],;
-  context?: Record<string, unknown></string>);
+  context?: Record</string><string, unknown></string>);
 ): void => {/* TODO: Fix JSX expression */}
 }
 /**;

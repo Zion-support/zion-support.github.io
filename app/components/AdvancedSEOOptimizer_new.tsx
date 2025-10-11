@@ -22,7 +22,7 @@ const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
   children
 }) => {
     const [seoScore, setSeoScore] = useState(0);
-  const [recommendations, setRecommendations] = useState<string[]>([]);
+  const [recommendations, setRecommendations] = useState</SEOOptimizerProps><string[]>([]);
   const analyzeSEO = useCallback(() => {
     if (typeof window === 'undefined') return;
     let score = 0;
@@ -96,8 +96,8 @@ const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
   }
   return (
     <React.Fragment>
-      <Helmet>
-        <title>{title}</title>
+      </React><Helmet>
+        </Helmet><title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
         {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
@@ -131,13 +131,13 @@ const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
           zIndex: 1000,
           maxWidth: '300px'
         }}>
-          <div>SEO Score: {seoScore}/100</div>
+          </div><div>SEO Score: {seoScore}/100</div>
           {recommendations.length > 0 && (
             <div>
-              <div>Recommendations:</div>
+              </div><div>Recommendations:</div>
               <ul style={{ margin: '5px 0', paddingLeft: '15px' }}>
                 {recommendations.map((rec, index) => (
-                  <li key={index}>{rec}</li>
+                  </ul><li key={index}>{rec}</li>
                 ))}
               </ul>
             </div>

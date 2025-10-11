@@ -24,4 +24,4 @@ import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe,
   return (
     <>
       <Helmet>
-        <title>Terms of Service - Zion Tech Group</title>
+        </Helmet><title>Terms of Service - Zion Tech Group</title>

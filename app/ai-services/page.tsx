@@ -1043,8 +1043,7 @@ const AiServicesPage: React.FC = () => {
     { id: 'Knowledge Management', name: 'Knowledge Management', count: services.filter(s => s.category === 'Knowledge Management').length },
     { id: 'Reporting & Analytics', name: 'Reporting & Analytics', count: services.filter(s => s.category === 'Reporting & Analytics').length },
     { id: 'Content Generation', name: 'Content Generation', count: services.filter(s => s.category === 'Content Generation').length }
-  ]
-
+  ];
   const filteredServices = services.filter(service => 
     selectedCategory === 'all' || service.category === selectedCategory
   );
@@ -1052,18 +1051,18 @@ const AiServicesPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>AI Services - Zion Tech Group</title>
+        </Helmet><title>AI Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive AI services including chatbots, content generation, analytics, computer vision, and workflow automation." />
       </Helmet>
       
       <Navigation />
       
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
-        <div className="container mx-auto px-4 py-16">
-          <div className="max-w-6xl mx-auto">
+        </main><div className="
+          </div><div className="max-w-6xl mx-auto">
             {/* Header */}
-            <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            </div><div className="text-center mb-16">
+              </div><h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 AI Services
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -1074,9 +1073,9 @@ const AiServicesPage: React.FC = () => {
 
             {/* Category Filter */}
             <div className="mb-12">
-              <div className="flex flex-wrap justify-center gap-4">
+              </div><div className="flex flex-wrap justify-center gap-4">
                 {categories.map((category) => (
-                  <button
+                  </div><button
                     key={category.id}
                     onClick={() => setSelectedCategory(category.id)}
                     className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
@@ -1094,17 +1093,17 @@ const AiServicesPage: React.FC = () => {
             {/* Services Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
               {filteredServices.map((service) => (
-                <div key={service.id} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
-                        <service.icon className="w-6 h-6 text-white" />
+                </div><div key={service.id} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300">
+                  </div><div className="flex items-center justify-between mb-4">
+                    </div><div className="flex items-center space-x-3">
+                      </div><div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
+                        </div><service.icon className="w-6 h-6 text-white" />
                       </div>
                       <h3 className="text-xl font-bold text-white">{service.name}</h3>
                     </div>
                     {service.popular && (
                       <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center">
-                        <Star className="w-4 h-4 mr-1" />
+                        </span><Star className="w-4 h-4 mr-1" />
                         Popular
                       </span>
                     )}
@@ -1113,19 +1112,19 @@ const AiServicesPage: React.FC = () => {
                   <p className="text-gray-300 mb-4">{service.description}</p>
                   
                   <div className="flex items-center justify-between mb-4">
-                    <div>
-                      <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
+                    </div><div>
+                      </div><span className="text-2xl font-bold text-cyan-400">{service.price}</span>
                       <span className="text-gray-400 text-sm ml-2 line-through">{service.marketPrice}</span>
                     </div>
                     <span className="text-gray-400 text-sm">{service.category}</span>
                   </div>
 
                   <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
+                    </div><h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
                     <ul className="space-y-2">
                       {service.features.slice(0, 3).map((feature, index) => (
-                        <li key={index} className="flex items-start space-x-2">
-                          <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                        </ul><li key={index} className="flex items-start space-x-2">
+                          </li><CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
                           <span className="text-sm text-gray-300">{feature}</span>
                         </li>
                       ))}
@@ -1133,12 +1132,12 @@ const AiServicesPage: React.FC = () => {
                   </div>
 
                   <div className="flex items-center justify-between">
-                    <Link
+                    </div><Link
                       to="/contact"
                       className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
                     >
                       Learn More
-                      <ArrowRight className="w-4 h-4 ml-1" />
+                      </Link><ArrowRight className="w-4 h-4 ml-1" />
                     </Link>
                     <Link
                       to="/contact"
@@ -1153,8 +1152,8 @@ const AiServicesPage: React.FC = () => {
 
             {/* CTA Section */}
             <div className="text-center">
-              <div className="bg-slate-800/50 rounded-lg p-8">
-                <h2 className="text-2xl font-bold text-white mb-4">
+              </div><div className="bg-slate-800/50 rounded-lg p-8">
+                </div><h2 className="text-2xl font-bold text-white mb-4">
                   Ready to Transform Your Business with AI?
                 </h2>
                 <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
@@ -1162,7 +1161,7 @@ const AiServicesPage: React.FC = () => {
                   Get a free consultation and see how AI can transform your operations.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link
+                  </div><Link
                     to="/contact"
                     className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
                   >

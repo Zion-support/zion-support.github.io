@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet-async';
   return (
     <>
       <Helmet>
-        <title>Cookie Policy - Zion Tech Group</title>
+        </Helmet><title>Cookie Policy - Zion Tech Group</title>
                 </div>
               </div>
             </div>

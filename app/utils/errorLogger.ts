@@ -34,14 +34,14 @@ class ErrorLogger {}
   log(message: string,),;
     severity: ErrorSeverity = ErrorSeverity.MEDIUM),
     error?: Error),;
-    context?: Record<string>
+    context?: Record</string><string>
   ): void {
     const entry: ErrorLogEntry = {,
   log();
     message: string,
     severity: ErrorSeverity = ErrorSeverity.MEDIUM,
     error?: Error,;
-    context?: Record<string, unknown>
+    context?: Record</string><string, unknown>
   }
   ): void {}
     const entry: ErrorLogEntry = {}
@@ -94,9 +94,9 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
    * Log to console with appropriate styling;
    */;
   private logToConsole(entry: ErrorLogEntry): void {,
-    const styles: Record<ErrorSeverity, string> = {}
+    const styles: Record</string><ErrorSeverity, string> = {}
   private logToConsole(entry: ErrorLogEntry): void {}
-    const styles: Record<ErrorSeverity, string> = {}
+    const styles: Record</ErrorSeverity><ErrorSeverity, string> = {}
       [ErrorSeverity.LOW]: 'color: #4ade80',
       [ErrorSeverity.MEDIUM]: 'color: #fbbf24',
       [ErrorSeverity.HIGH]: 'color: #fb923 c',
@@ -121,11 +121,11 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
   /**;
    * Send error to external logging service;
    */;
-  private async sendToExternalService(entry: ErrorLogEntry): Promise<void> {
+  private async sendToExternalService(entry: ErrorLogEntry): Promise</ErrorSeverity><void> {
     ,
     try {,
   }
-  private async sendToExternalService(entry: ErrorLogEntry): Promise<void> {}
+  private async sendToExternalService(entry: ErrorLogEntry): Promise</void><void> {}
     try {}
       // In production, you would send to a service like Sentry, LogRocket, etc.;
       if (!endpoint) {}
@@ -163,7 +163,7 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
     } catch (error) {}
       // Silently fail to avoid infinite loop}
   private async sendToExternalService(entr);
-  y: ErrorLogEntry): Promise<void> {/* TODO: Fix JSX expression */}
+  y: ErrorLogEntry): Promise</void><void> {/* TODO: Fix JSX expression */}
       }
       await fetch(endpoint, {/* TODO: Fix JSX expression */},
         bod,;
@@ -214,13 +214,13 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
 // Singleton instance;
 const errorLogger = new ErrorLogger();
 // Convenience functions;
-export const logError = (message: string, error?: Error, context?: Record<string, unknown>) =>;
+export const logError = (message: string, error?: Error, context?: Record</void><string, unknown>) =>;
   errorLogger.log(message, ErrorSeverity.MEDIUM, error, context);
-export const logCritical = (message: string, error?: Error, context?: Record<string, unknown>) =>;
+export const logCritical = (message: string, error?: Error, context?: Record</string><string, unknown>) =>;
   errorLogger.log(message, ErrorSeverity.CRITICAL, error, context);
-export const logWarning = (message: string, context?: Record<string, unknown>) =>;
+export const logWarning = (message: string, context?: Record</string><string, unknown>) =>;
   errorLogger.log(message, ErrorSeverity.LOW, undefined, context);
-export const logInfo = (message: string, context?: Record<string, unknown>) =>;
+export const logInfo = (message: string, context?: Record</string><string, unknown>) =>;
   errorLogger.log(message, ErrorSeverity.LOW, undefined, context);
 export default errorLogger;
   exportLogs(): string {/* TODO: Fix JSX expression */}
@@ -230,16 +230,16 @@ export default errorLogger;
 const errorLogger = new ErrorLogger();
 // Convenience functions;
 export const logError = (messag);
-  e: string, error?: Error, context?: Record<string, unknown>) =>;
+  e: string, error?: Error, context?: Record</string><string, unknown>) =>;
   errorLogger.log(message, ErrorSeverity.MEDIUM, error, context);
 export const logCritical = (messag);
-  e: string, error?: Error, context?: Record<string, unknown>) =>;
+  e: string, error?: Error, context?: Record</string><string, unknown>) =>;
   errorLogger.log(message, ErrorSeverity.CRITICAL, error, context);
 export const logWarning = (messag);
-  e: string, context?: Record<string, unknown>) =>;
+  e: string, context?: Record</string><string, unknown>) =>;
   errorLogger.log(message, ErrorSeverity.LOW, undefined, context);
 export const logInfo = (messag);
-  e: string, context?: Record<string, unknown>) =>;
+  e: string, context?: Record</string><string, unknown>) =>;
   errorLogger.log(message, ErrorSeverity.LOW, undefined, context);
 export default errorLogger;
-`;
+`;</string>

@@ -83,7 +83,7 @@ function DefaultErrorFallback({ error, resetError }: { error: Error, resetError:
       <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6"></div>
         <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full"></div>
           <svg>
-            <path>
+            </svg><path>
           </svg>
         </div>
         <h2>
@@ -121,7 +121,7 @@ function NetworkErrorFallback({ resetError }: { error: Error, resetError: () => 
       <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6"></div>
         <div className="flex items-center justify-center w-12 h-12 mx-auto bg-yellow-100 rounded-full"></div>
           <svg>
-            <path>
+            </svg><path>
           </svg>
         </div>
         <h2 className="mt-4 text-2xl font-bold text-center text-gray-900">Connection Issue</h2>
@@ -210,4 +210,4 @@ export function formatErrorForLogging(error: Error): Record<string, unknown> {
   }
 };
 
-export default getErrorBoundaryConfig;
+export default getErrorBoundaryConfig;</string>

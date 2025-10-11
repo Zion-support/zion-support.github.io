@@ -82,8 +82,8 @@ const benefits = [
     'Integrate with existing systems',
 
     'Provide 24/7 support and monitoring'
-  ]
-const stats = [
+  ];
+  const stats = [
     { number: '500+', label: 'Enterprise Clients', icon: Building },
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
     { number: '50%', label: 'Cost Reduction', icon: TrendingUp },
@@ -92,12 +92,12 @@ const stats = [
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <SEOOptimizer>
-      <Navigation>
+      </SEOOptimizer><Navigation>
       {/* Hero Section */}
-      <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+      </Navigation><section className="py-20 px-4">
+          </section><div className="
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
@@ -118,7 +118,7 @@ return (
           <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <button>
               Get Enterprise Consultation
-              <ArrowRight>
+              </button><ArrowRight>
             </button>
             <button>
               View Case Studies,
@@ -129,9 +129,9 @@ return (
 
       {/* Stats Section */}
       <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+          </section><div className="
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
@@ -154,9 +154,9 @@ return (
       </section>
       {/* Features Section */}
       <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+          </section><div className="
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
@@ -172,15 +172,15 @@ return (
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
                   <feature>
-                  <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
+                  </feature><h3 className="text-xl font-semibold text-white">{feature.title}</h3>
                 </div>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
                 <ul>
                   {
     feature.benefits.map((benefit, idx) => (
   }
-                    <li>
-                      <CheckCircle>
+                    </ul><li>
+                      </li><CheckCircle>
 
                       {benefit}
                     </li>
@@ -211,9 +211,9 @@ return (
       </section>
       {/* Benefits Section */}
       <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+          </section><div className="
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
@@ -226,9 +226,9 @@ return (
       </section>
       {/* CTA Section */}
       <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+          </section><div className="
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
@@ -243,7 +243,7 @@ return (
           <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <button>
               Contact Enterprise Sales
-              <ArrowRight>
+              </button><ArrowRight>
             </button>
             <button>
               Learn More
