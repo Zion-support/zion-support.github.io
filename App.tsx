@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import './app/styles/futuristic.css';
 import './app/styles/futuristic-enhanced.css';
+import './app/styles/futuristic-advanced.css';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import HomePage from './app/page';
@@ -47,6 +48,10 @@ const AiAnalyticsPage = React.lazy(() => import('./app/ai-analytics/page'));
 const AiAutomationPage = React.lazy(() => import('./app/ai-automation/page'));
 const AiChatbotBuilderPage = React.lazy(() => import('./app/ai-chatbot-builder/page'));
 const AiCybersecurityPage = React.lazy(() => import('./app/ai-cybersecurity/page'));
+const AiCustomerSupportProPage = React.lazy(() => import('./app/ai-customer-support-pro/page'));
+const AiAnalyticsDashboardProPage = React.lazy(() => import('./app/ai-analytics-dashboard-pro/page'));
+const AiMarketingAutomationProPage = React.lazy(() => import('./app/ai-marketing-automation-pro/page'));
+const AiContentStudioProPage = React.lazy(() => import('./app/ai-content-studio-pro/page'));
 
 // IT Service Pages
 const CloudInfrastructurePage = React.lazy(() => import('./app/cloud-infrastructure/page'));
@@ -110,6 +115,10 @@ const App: React.FC = () => {
                             <Route path="/ai-automation" element={<AiAutomationPage />} />
                             <Route path="/ai-chatbot-builder" element={<AiChatbotBuilderPage />} />
                             <Route path="/ai-cybersecurity" element={<AiCybersecurityPage />} />
+                            <Route path="/ai-customer-support-pro" element={<AiCustomerSupportProPage />} />
+                            <Route path="/ai-analytics-dashboard-pro" element={<AiAnalyticsDashboardProPage />} />
+                            <Route path="/ai-marketing-automation-pro" element={<AiMarketingAutomationProPage />} />
+                            <Route path="/ai-content-studio-pro" element={<AiContentStudioProPage />} />
                             
                             {/* IT Service Pages */}
                             <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />

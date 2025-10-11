@@ -258,9 +258,9 @@ const HomePage: React.FC = () => {
                   🚀 Trusted by 500+ Companies Worldwide
                 </span>
               </div>
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent leading-tight">
+              <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent leading-tight neon-text-advanced">
                 Transform Your Business with 
-                <span className="block text-6xl md:text-8xl mt-2">AI & IT Solutions</span>
+                <span className="block text-6xl md:text-8xl mt-2 glitch-advanced" data-text="AI & IT Solutions">AI & IT Solutions</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
                 Leading provider of cutting-edge AI and IT solutions that drive innovation, 
@@ -290,14 +290,14 @@ const HomePage: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                 <a 
                   href="/contact" 
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center group shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40 transform hover:scale-105"
+                  className="px-8 py-4 cyber-button-advanced cyber-glow text-white rounded-lg font-semibold flex items-center justify-center group"
                 >
                   Get Free Consultation
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </a>
                 <a 
                   href="/services" 
-                  className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center group"
+                  className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center group hover-glow-advanced"
                 >
                   Explore Services
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -351,7 +351,7 @@ const HomePage: React.FC = () => {
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/30 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
+                  className="group cyber-card-advanced holographic-card-advanced quantum-pulse-advanced hover-lift-advanced rounded-2xl p-8"
                 >
                   <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
                     <feature.icon className="w-8 h-8 text-white" />
@@ -544,7 +544,7 @@ const HomePage: React.FC = () => {
 };
 
 export default HomePage;
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
+                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-advanced neural-network-advanced matrix-rain-advanced particle-bg-advanced">
         {/* Navigation */}
         <Navigation />
         {/* Skip to main content for accessibility */}
@@ -685,7 +685,7 @@ export default HomePage;
                     Learn More →
           {/* Micro SAAS Services Grid */}
           <div className="mb-12">
-            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">Micro SAAS Solutions
+            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text-advanced">Micro SAAS Solutions
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
               <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
