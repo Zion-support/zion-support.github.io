@@ -76,8 +76,10 @@ export const createMockStorage = (): MockStorage => {}
 /**
  * Mock window object
  */
-      value: {),
-        ...global.window),
+      value: {
+    ),
+    ...global.window),
+    
   }
 export const mockWindow = (overrides: Partial</Window><Window> = {}): void => {}
 /**
@@ -90,10 +92,13 @@ export const createMockStorage = (): MockStorage => {}
  * Mock window object
  */
 export const mockWindow = (overrides: Partial<Window> = {}): void => {
-  if (typeof global !== 'undefined') {
-    Object.defineProperty(global, 'window', {)
+    if (typeof global !== 'undefined') {
+    Object.defineProperty(global,
+    'window',
+    {)
       value: {)
-        ...overrides}
+        ...overrides
+  }
       })
       writable: true,
     })
@@ -172,8 +177,8 @@ export const createMockPerformance = (): Performance => {}
   const entries: PerformanceEntry[] = []
   return {
     mark: (name: string) => {,
-      entries.push({),
-        name),
+    entries.push({),
+    name),
         entryType: 'mark'),
   }
   return {}
@@ -196,11 +201,16 @@ export const createMockPerformance = (): Performance => {}
     getEntriesByName: (name: string) => entries.filter(e => e.name === name),
     getEntriesByType: (type: string) => entries.filter(e => e.entryType === type),
     getEntries: () => entries,
-    clearMarks: () => {,
-    ,}entries.length = 0;},
-    clearMeasures: () => {,
+    clearMarks: () => {
     ,
-    clearResourceTimings: () => {},
+    ,
+    
+  }entries.length = 0;},
+    clearMeasures: () => {
+    ,
+    ,
+    clearResourceTimings: () => {
+  },
     setResourceTimingBufferSize: () => {},
     toJSON: () => ({}),
     addEventListener: () => {},
@@ -241,7 +251,7 @@ export const createMockPerformance = (): Performance => {}
 export const generateTestData = {
     string: (length = 10): string => {,
     return Math.random(),
-      .toString(36),
+    .toString(36),
   }
 export const generateTestData = {}
   string: (length = 10): string => {}
@@ -251,7 +261,7 @@ export const generateTestData = {}
     return `test${generateTestData.string(5)}@example.com`
   },
   url: (): string => {`}
-    return `https://example.com/${generateTestData.string(10)}`
+    return `https: //example.com/${generateTestData.string(10)}`
   },
   y: <T>(generato),
   r: () => T, length = 5): T[] => {/* TODO: Fix JSX expression */,}return Array.from({length)}, generator);
@@ -260,8 +270,11 @@ export const generateTestData = {}
 /**;
  * Deep clone an object;
  */;
-export const deepClone = <T>(obj: T): T => {,
-    ,}export const deepClone = <T>(obj: T): T => {,}return JSON.parse(JSON.stringify(obj));}
+export const deepClone = <T>(obj: T): T => {
+    ,
+    ,
+    
+  }export const deepClone = <T>(obj: T): T => {,}return JSON.parse(JSON.stringify(obj));}
 }
 /**;
  * Compare objects for equality;
@@ -272,9 +285,10 @@ export const deepEqual = (obj1: unknown, obj2: unknown): boolean => {,
  * Generate random test data
  */
 export const generateTestData = {
-  string: (length = 10): string => {,
+    string: (length = 10): string => {,
     return Math.random(),
-      .toString(36),;}
+    .toString(36),;
+  }
 export const generateTestData = {}
   string: (length = 10): string => {}
     return Math.random()
@@ -292,7 +306,7 @@ export const generateTestData = {}
     return `test${generateTestData.string(5)}@example.com`
   },
   url: (): string => {`}
-    return `https://example.com/${generateTestData.string(10)}`
+    return `https: //example.com/${generateTestData.string(10)}`
   },
   date: (): Date => {,;}
   date: (): Date => {}
@@ -314,7 +328,7 @@ export const generateTestData = {/* TODO: Fix JSX expression */}
   },
   ur,
   l: (): string => {/* TODO: Fix JSX expression */}`
-  s://example.com/${generateTestData.string(10)}`
+  s: //example.com/${generateTestData.string(10)}`
   },
   dat,
   e: (): Date => {/* TODO: Fix JSX expression */}
@@ -348,10 +362,11 @@ export const deepEqual = (obj1: unknown, obj2: unknown): boolean => {}
  */
 export class ConsoleSpy {
     private originalConsole: Console,
-  private logs: string[] = [],
-  private errors: string[] = [],
+    private logs: string[] = [],
+    private errors: string[] = [],
   private warnings: string[] = [],
-  constructor() {}this.originalConsole = {...console}this.mock();
+  constructor() {
+  }this.originalConsole = {...console}this.mock();
   }
     }
       this.errors.push(args.map(String).join(' '));}
@@ -405,8 +420,10 @@ export class ConsoleSpy {/* TODO: Fix JSX expression */}
   clear(): void {/* TODO: Fix JSX expression */,}}}
 }
     let lastError: Error,
-  for (let i = 0; i < maxRetries; i++) {,
+  for (let i = 0; i < maxRetries; i++) {
+    ,
     try {,
+    
   }
       return await fn();}
     } catch (error) {
@@ -426,7 +443,11 @@ export class ConsoleSpy {/* TODO: Fix JSX expression */}
   for (let i = 0; i < maxRetries, i++) {}
 export const createDeferred = <T>(): Deferred<T> => {/* TODO: Fix JSX expression */}
   })
-  return { promise, resolve, reject }
+  return {
+    promise,
+    resolve,
+    reject
+  }
 }
 /**
  * Retry a function with exponential backoff
@@ -436,9 +457,10 @@ export const retryWithBackoff = async <T>(f)
   maxRetries = 3,
   initialDelay = 1000
 ): Promise<T> => {
-  let lastError: Error,
-  for (let i = 0; i < maxRetries; i++) {,
-    try {,;}
+    let lastError: Error,
+    for (let i = 0; i < maxRetries; i++) {,
+    try {,;
+  }
       return await fn();}
     } catch (error) {
       lastError = error as Error
@@ -460,7 +482,15 @@ export const retryWithBackoff = async <T>(f)
  * Measure execution time of a function;
  */;
 export const measureExecutionTime = async <T>(;
-  fn: () => T | Promise<T>): Promise<{result: T, duration: number ,}> => {fn: () =&gt; T | Promise<T&gt;,}): Promise<{result: T, duration: number ,}> => {}const start = performance.now();
+  fn: () => T | Promise<T>): Promise<{
+    result: T,
+    duration: number,
+    
+  }> => {fn: () =&gt; T | Promise<T&gt;,}): Promise<{
+    result: T,
+    duration: number,
+    
+  }> => {}const start = performance.now();
   const result = await fn();
 /**
  * Measure execution time of a function

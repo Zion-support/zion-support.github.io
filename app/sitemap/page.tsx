@@ -2,7 +2,11 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
+import {
+    ArrowRight,
+    CheckCircle,
+    Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart
+  } from 'lucide-react';
 
 const PagePage: React.FC = () => {
   return (
@@ -19,7 +23,7 @@ const PagePage: React.FC = () => {
         </section>
 
         {/* Content Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <section className="py-16 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">

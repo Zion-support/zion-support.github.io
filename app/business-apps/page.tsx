@@ -1,36 +1,40 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+import { Helmet  } from "react-helmet-async";
+import {
+    ArrowRight,
+    CheckCircle,
+    Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp
+  } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const PagePage: React.FC = () => {
-  const features = [
+    const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced artificial intelligence technology to transform your business operations.',
+    title: 'AI-Powered Solutions',
+    description: 'Advanced artificial intelligence technology to transform your business operations.',
       benefits: ['Machine learning', 'Natural language processing', 'Predictive analytics', 'Automated insights']
-    },
+  },
     {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+    icon: BarChart,
+    title: 'Advanced Analytics',
+    description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
+  },
     {
-      icon: TrendingUp,
-      title: 'Performance Optimization',
-      description: 'AI-powered insights to optimize your business performance.',
+    icon: TrendingUp,
+    title: 'Performance Optimization',
+    description: 'AI-powered insights to optimize your business performance.',
       benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']
-    },
+  },
     {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision.',
+    icon: Target,
+    title: 'Precision Targeting',
+    description: 'Target specific goals and objectives with precision.',
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    }
+  }
   ];
 
   const benefits = [
@@ -53,7 +57,7 @@ const PagePage: React.FC = () => {
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -80,4 +84,4 @@ const PagePage: React.FC = () => {
   );
 };
 
-export default PagePage;
+export default PagePage;</div>

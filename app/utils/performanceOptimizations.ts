@@ -1,24 +1,28 @@
 'use client'
     let timeout: NodeJS.Timeout,
   return (
-    <>
-      ...args: Parameters</T><T>
+    <div>
+      ...args: Parameters</div>T><T>
     </>
-  ) => {,
+  ) => {
+    ,
     clearTimeout(timeout),
-  func: T,
-    timeout = setTimeout(() =&gt; func(...args), wait);}
+    func: T,
+    timeout = setTimeout(() =&gt; func(...args), wait);
+  }
   }
 }
 // Throttle utility for performance
 export const throttle = </T><T extends (...args: any[]) => any>(,
   func: T,
   limit: number,
-    if (!inThrottle) {,
-      func(...args),
-      inThrottle = true
+    if (!inThrottle) {
+    ,
+    func(...args),
+    inThrottle = true
   func: T,
-): ((...args: Parameters<T>) => void) => {}
+): ((...args: Parameters<T>) => void) => {
+  }
   let inThrottle: boolean
   return (...args: Parameters<T>) => {}
     if (!inThrottle) {}
@@ -93,8 +97,10 @@ export const useIntersectionObserver = (callbac,
 }
 // Image lazy loading hook
 export const useLazyImage = useCallback((...args) => {
-    const [imageSrc, setImageSrc] = useState(placeholder || '')
-  const [isLoaded, setIsLoaded] = useState(false)
+    const [imageSrc,
+    setImageSrc] = useState(placeholder || '')
+  const [isLoaded,
+    setIsLoaded] = useState(false)
   }
   const [isError, setIsError] = useState(false);}
   const { observe } = useIntersectionObserver(useCallback()
@@ -186,7 +192,11 @@ export const usePerformanceMonitoring = useCallback((...args) => {}
       window.addEventListener('load', updateMetrics);}
     }
     if ('web-vitals' in window) {}
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {}
+      import('web-vitals').then(({
+    getCLS,
+    getFID,
+    getFCP, getLCP, getTTFB
+  }) => {}
         getCLS((metric) => setMetrics(prev => ({ ...prev, cls: metric.value })))
         getFID((metric) => setMetrics(prev => ({ ...prev, fid: metric.value })))
         getFCP((metric) => setMetrics(prev => ({ ...prev, fcp: metric.value })))
@@ -202,7 +212,7 @@ export const usePerformanceMonitoring = useCallback((...args) => {}
     usedJSHeapSize?: number;
   }>({})
     const updateMemoryInfo = useCallback((...args) => {
-  useEffect(() => {
+    useEffect(() => {
       const memory = (performance as any).memory;
     if (typeof window === 'undefined' || !('memory' in performance)) return
     const updateMemoryInfo = useCallback((...args) => {
@@ -210,10 +220,10 @@ export const usePerformanceMonitoring = useCallback((...args) => {}
       if (memory) {
         setMemoryInfo({)
           usedJSHeapSize: memory.usedJSHeapSize),
-          totalJSHeapSize: memory.totalJSHeapSize),
-          usedJSHeapSize: memory.usedJSHeapSize,
+    totalJSHeapSize: memory.totalJSHeapSize),
+    usedJSHeapSize: memory.usedJSHeapSize,
           totalJSHeapSize: memory.totalJSHeapSize,
-      }
+  }
     }
     updateMemoryInfo()
     const interval = setInterval(updateMemoryInfo, 5000)

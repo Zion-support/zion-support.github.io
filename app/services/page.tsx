@@ -1,17 +1,20 @@
 
 const ServicesPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
+    const [searchTerm,
+    setSearchTerm] = useState('');
+  const [selectedCategory,
+    setSelectedCategory] = useState('all');
 
   const services = [
     {
       id: 1,
       title: 'AI Solutions',
-    },
+  },
     {
-      id: 2,
-      title: 'Cloud Services',
-    }
+    id: 2,
+    title: 'Cloud Services',
+    
+  }
   ];
 
   const categories = [
@@ -43,7 +46,7 @@ const ServicesPage: React.FC = () => {
         <Navigation />
         
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -63,7 +66,7 @@ const ServicesPage: React.FC = () => {
 
         {/* CTA Section */}
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8">

@@ -48,12 +48,15 @@ interface PerformanceMetrics {}
             this.recordMetric('FID', fid);
           }
 // Cumulative Layout Shift;
-        this.observeEntry('layout-shift', (entries) => {let clsValue = 0;
-              (lastEntry as any).renderTime || (lastEntry as any).loadTime || lastEntry.startTime
         this.observeEntry('layout-shift', (entries) => {
+    let clsValue = 0;
+              (lastEntry as any).renderTime || (lastEntry as any).loadTime || lastEntry.startTime
+        this.observeEntry('layout-shift',
+    (entries) => {
     let clsValue = 0
           entries.forEach((entry: PerformanceEntry) => {,
-            }
+    
+  }
 if (clsValue > 0) {}this.recordMetric('CLS', clsValue);
   private initializeObservers(): void {/* TODO: Fix JSX expression */,}}}
           })
@@ -228,9 +231,13 @@ observer.observe({ entryTypes: ['layout-shift'] })
     ,
     }
     // Send to analytics if available;
-    if (typeof window !== 'undefined' && (window as any).gtag) {(window as any).gtag('event', 'performance_metric', {);
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+    (window as any).gtag('event',
+    'performance_metric',
+    {);
         metric_name: name),
-    // Track slow resources;}if (duration > 1000) {}this.addCustomMetric(`slowResource_${entry.name)}`, duration);
+    // Track slow resources;
+  }if (duration > 1000) {}this.addCustomMetric(`slowResource_${entry.name)}`, duration);
     }
     // Track large resources;
     if (size > 100000) {// 100KB}this.addCustomMetric(`largeResource_${entry.name)}`, size);
@@ -247,7 +254,9 @@ observer.observe({ entryTypes: ['layout-shift'] })
     }
     // Send to analytics if available
     if (typeof window !== 'undefined' && (window as any).gtag) {
-    (window as any).gtag('event', 'performance_metric', {)
+    (window as any).gtag('event',
+    'performance_metric',
+    {)
         metric_name: name),
     // Track slow resources
   }
@@ -297,7 +306,11 @@ observer.observe({ entryTypes: ['layout-shift'] })
 generateReport(): string {const score = this.getScore();}
     const metrics = this.getMetrics();
     return `;
-Performance Report:  ,}Score: ${score,}Metrics: ${JSON.stringify(metrics, null, 2)}`;
+Performance Report:  ,}Score: ${score,}Metrics: ${
+    JSON.stringify(metrics,
+    null,
+    2)
+  }`;
       observer.observe({/* TODO: Fix JSX expression */})
   s: ['resource'] })
       this.observers.push(observer)
@@ -325,7 +338,6 @@ Performance Report:  ,}Score: ${score,}Metrics: ${JSON.stringify(metrics, null, 
     if (this.metrics.cls) {/* TODO: Fix JSX expression */}
     }
     return `
-Performance Report:
-  }
+Performance Report:  }
 Score: ${score}
   }

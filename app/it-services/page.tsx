@@ -1,5 +1,5 @@
 import React from 'react';;
-import { Helmet; } from 'react-helmet-async';
+import { Helmet;  } from "react-helmet-async";
 import Navigation from '../components/Navigation';;
 import Footer from '../components/Footer';;
 ;
@@ -12,14 +12,16 @@ title: 'Cloud Infrastructure',;,
 description: 'Scalable and secure cloud solutions for your business needs.',;,
 icon: Cloud,
     },
-    {;,
-id: 2,;,
+    {
+    ;,
+    id: 2,
+    ;,
 title: 'Cybersecurity',;,
 description: 'Comprehensive security solutions to protect your digital assets.',;,
 icon: Shield,;,
 features: ['Security Audit', 'Penetration Testing', 'Compliance', 'Incident Response'],;,
 price: 'From $1,000/month'
-    },
+  },
     {
     }
   ];
@@ -40,7 +42,7 @@ return (;
         <Navigation />
         
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8">
             </div>
           </div>
         </section>
@@ -51,7 +53,7 @@ return (;
         </section>
 
         {/* Services Grid */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <section className="py-16 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
@@ -75,7 +77,7 @@ Our IT Services
 
         {/* CTA Section */}
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">;
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">;
 Ready to Optimize Your IT Infrastructure?
             </h2>
             <p className="text-xl text-gray-300 mb-8">

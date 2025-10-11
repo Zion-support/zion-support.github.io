@@ -15,10 +15,12 @@ export const validationRules = {}
   /**;
    * Validate email format;
    */;
-  email: (message = 'Please enter a valid email address'): ValidationRule<string> => ({,
+  email: (message = 'Please enter a valid email address'): ValidationRule<string> => ({
+    ,
     ,
     validate: (value: string) => {,
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,}email: (message = 'Please enter a valid email address'): ValidationRule<string> => ({,}validate: (value: string) => {,}const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+  }email: (message = 'Please enter a valid email address'): ValidationRule<string> => ({,}validate: (value: string) => {,}const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       return emailRegex.test(value);},
     message;
     message;);
@@ -45,8 +47,11 @@ export const validationRules = {}
   /**;
    * Validate phone number (US format);
    */;
-  phoneUS: (message = 'Please enter a valid US phone number'): ValidationRule<string> => ({,
-    ,}phoneUS: (message = 'Please enter a valid US phone number'): ValidationRule<string> => ({,}validate: (value: string) => {,}const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
+  phoneUS: (message = 'Please enter a valid US phone number'): ValidationRule<string> => ({
+    ,
+    ,
+    
+  }phoneUS: (message = 'Please enter a valid US phone number'): ValidationRule<string> => ({,}validate: (value: string) => {,}const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
       return phoneRegex.test(value.replace(/\s/g, ''));
       const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
       return phoneRegex.test(value.replace(/\s/g, ''));
@@ -66,13 +71,14 @@ export const validationRules = {}
   }),
    * Validate URL format;
    */;
-  url: (message = 'Please enter a valid URL'): ValidationRule<string> => ({,
-  /**
-   * Validate URL format
-   */
+  url: (message = 'Please enter a valid URL'): ValidationRule<string> => ({
     ,
+    /**
+   * Validate URL format
+   */,
     validate: (value: string) => {,
-  url: (message = 'Please enter a valid URL'): ValidationRule<string> => ({}
+  url: (message = 'Please enter a valid URL'): ValidationRule<string> => ({
+  }
     validate: (value: string) => {}
       try {}
         new URL(value)
@@ -101,9 +107,11 @@ export const validationRules = {}
   /**;
    * Validate custom condition;
    */;
-  custom: <T>(validator: (value: T) => boolean, message: string): ValidationRule<T> => ({,
+  custom: <T>(validator: (value: T) => boolean, message: string): ValidationRule<T> => ({
     ,
-    validate: validator,}custom: <T>(validator: (value: T) => boolean, message: string): ValidationRule<T> => ({,}validate: validator,
+    ,
+    validate: validator,
+  }custom: <T>(validator: (value: T) => boolean, message: string): ValidationRule<T> => ({,}validate: validator,
   /**
    * Validate pattern match
    */
@@ -119,15 +127,18 @@ export const validationRules = {}
    */;
   strongPassword: (,
     message = 'Password must be at least 8 characters with uppercase, lowercase, number, and special character';
-  ): ValidationRule<string> => ({validate: (value: string) => {,
-      const hasUpperCase = /[A-Z]/.test(value),}const hasLowerCase = /[a-z]/.test(value)): ValidationRule<string> => ({}validate: (value: string) => {,}const hasUpperCase = /[A-Z]/.test(value);
+  ): ValidationRule<string> => ({
+    validate: (value: string) => {,
+    const hasUpperCase = /[A-Z]/.test(value),
+    
+  }const hasLowerCase = /[a-z]/.test(value)): ValidationRule<string> => ({}validate: (value: string) => {,}const hasUpperCase = /[A-Z]/.test(value);
       const hasLowerCase = /[a-z]/.test(value);
       const hasNumber = /[0-9]/.test(value);}
     validate: (value: string) => {}
       const hasUpperCase = /[A-Z]/.test(value)
       const hasLowerCase = /[a-z]/.test(value)
       const hasNumber = /[0-9]/.test(value);}
-      const hasSpecialChar = /[!@#$%^&*(),.?":{}|</string><>{
+      const hasSpecialChar = /[!@#$%^&*(),.?":{}|</string><div>{
     ]/.test(value)
   strongPasswor,
       const hasMinLength = value.length &gt;= 8;
@@ -138,7 +149,7 @@ export const validationRules = {}
    * Validate matching fields (e.g., password confirmation);
   /**
    * Validate matching fields (e.g., password confirmation)
-   */}</></>
+   */}</div>></>
   matches: (otherFieldValue: string, fieldName: string): ValidationRule<string> => ({
     ,
   }
@@ -184,7 +195,9 @@ export const validationRules = {}
    */
   fileSize: (maxSizeInMB: number, message?: string): ValidationRule<File> => ({
     validate: (file: File) => {,
-  fileSize: (maxSizeInMB: number, message?: string): ValidationRule<File> => ({}
+    fileSize: (maxSizeInMB: number,
+    message?: string): ValidationRule<File> => ({
+  }
     validate: (file: File) => {}
       const maxSizeInBytes = maxSizeInMB * 1024 * 1024
       return file.size <= maxSizeInBytes;}
@@ -210,10 +223,11 @@ export const validationRules = {}
 /**
  * Validate a single field with multiple rules
  */
-export function validateField<T>(value: T, rules: ValidationRule<T>[]): ValidationResult {,
-  const errors: string[] = [],
-  for (const rule of rules) {,
-    }
+export function validateField<T>(value: T, rules: ValidationRule<T>[]): ValidationResult {
+    ,
+    const errors: string[] = [],
+    for (const rule of rules) {,
+  }
   }
     }
   }
@@ -257,7 +271,7 @@ export function getFormErrors<T extends Record<string, unknown>>(
  */
 export function sanitizeInput(input: string): string {
     ,
-  return input
+    return input
     .trim(),
     .replace(/[</keyof><>{]/g, '') // Remove potential HTML tags
   }
@@ -296,17 +310,17 @@ export function getFormErrors<T extends Record<string, unknown>>(validationResul
   return errors
 }
     .trim(),
-    .replace(/[<>{]/g, '') // Remove potential HTML tags;}
+    .replace(/[<div>{]/g, '') // Remove potential HTML tags;}
 export function sanitizeInput(input: string): string {}
   return input
-    .trim()}</>
-    .replace(/[<>{]/g, '') // Remove potential HTML tags;}
+    .trim()}</div>>
+    .replace(/[<div>{]/g, '') // Remove potential HTML tags;}
     .replace(/[^\w\s@.-]/gi, ''); // Keep only alphanumeric, spaces, @, ., -}
 export function sanitizeInput(inpu);
   t: string): string {/* TODO: Fix JSX expression */,}}}
 /**;
  * Debounce function for form validation;
- */}</>
+ */}</div>>
 export function debounce<T extends (...args: Parameters<T>) => ReturnType<T>>(,
   func: T,
   wait: number,
@@ -322,11 +336,12 @@ export function debounce<T extends (...args: Parameters<T>) => ReturnType</T><T>
   wait: number,
 ): (...args: Parameters</T><T>) => void {
     let timeout: NodeJS.Timeout | null = null,
-  return function executedFunction(...args: Parameters</T><T>) {,
+    return function executedFunction(...args: Parameters</T><T>) {,
     const later = useCallback((...args) => {,
       timeout = null
   func: T,
-      func(...args);}
+      func(...args);
+  }
     }
     if (timeout) {}clearTimeout(timeout);}
     }

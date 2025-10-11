@@ -6,7 +6,8 @@
 }
 interface PageSEOData {
     title: string,
-  description: string,
+    description: string,
+    
   }
 interface SEOConfig {}
   siteName: string
@@ -55,31 +56,31 @@ class SEOOptimizer {private config: SEOConfig,}
     this.setMetaTag('author', this.currentPageData.author || this.config.siteName);
     this.setMetaTag('robots', this.getRobotsContent());
     // Open Graph tags;
-    this.setMetaTag('og:title', title, 'property');
-    this.setMetaTag('og:description', description, 'property');
-    this.setMetaTag('og:image', image, 'property');
-    this.setMetaTag('og:url', url, 'property');
-    this.setMetaTag('og:type', this.currentPageData.type || 'website', 'property');
-    this.setMetaTag('og:site_name', this.config.siteName, 'property');
+    this.setMetaTag('og: title', title, 'property');
+    this.setMetaTag('og: description', description, 'property');
+    this.setMetaTag('og: image', image, 'property');
+    this.setMetaTag('og: url', url, 'property');
+    this.setMetaTag('og: type', this.currentPageData.type || 'website', 'property');
+    this.setMetaTag('og: site_name', this.config.siteName, 'property');
     // Twitter Card tags;
-    if (this.config.twitterHandle) {// Twitter Card tags;}if (this.config.twitterHandle) {}this.setMetaTag('twitter:card', 'summary_large_image');`}
-      this.setMetaTag('twitter:site', `@${this.config.twitterHandle)}`);
-      this.setMetaTag('twitter:title', title);
-      this.setMetaTag('twitter:description', description);
-      this.setMetaTag('twitter:image', image);
+    if (this.config.twitterHandle) {// Twitter Card tags;}if (this.config.twitterHandle) {}this.setMetaTag('twitter: card', 'summary_large_image');`}
+      this.setMetaTag('twitter: site', `@${this.config.twitterHandle)}`);
+      this.setMetaTag('twitter: title', title);
+      this.setMetaTag('twitter: description', description);
+      this.setMetaTag('twitter: image', image);
     }
     // Additional meta tags;
     this.setMetaTag('viewport', 'width=device-width, initial-scale=1.0');
     this.setMetaTag('theme-color', '#1e40af');
     this.setMetaTag('msapplication-TileColor', '#1e40af');
   private updateMetaTags(): void {/* TODO: Fix JSX expression */,}}`;
-  r:site', `@${this.config.twitterHandle}`);
+  r: site', `@${this.config.twitterHandle}`);
       this.setMetaTag('twitte);
-  r:title', title);
+  r: title', title);
       this.setMetaTag('twitte);
-  r:description', description);
+  r: description', description);
       this.setMetaTag('twitte);
-  r:image', image);
+  r: image', image);
   constructor(config: SEOConfig) {}
     this.config = config;}
 interface SEOConfig {/* TODO: Fix JSX expression */}
@@ -105,6 +106,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     ,
     this.currentPageData = data
     this.updateMetaTags(),
+    
   }
   setPageData(data: PageSEOData): void {}
     this.currentPageData = data
@@ -169,32 +171,32 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     this.setMetaTag('author', this.currentPageData.author || this.config.siteName)
     this.setMetaTag('robots', this.getRobotsContent())
     // Open Graph tags
-    this.setMetaTag('og:title', title, 'property')
-    this.setMetaTag('og:description', description, 'property')
-    this.setMetaTag('og:image', image, 'property')
-    this.setMetaTag('og:url', url, 'property')
-    this.setMetaTag('og:type', this.currentPageData.type || 'website', 'property')
-    this.setMetaTag('og:site_name', this.config.siteName, 'property')
+    this.setMetaTag('og: title', title, 'property')
+    this.setMetaTag('og: description', description, 'property')
+    this.setMetaTag('og: image', image, 'property')
+    this.setMetaTag('og: url', url, 'property')
+    this.setMetaTag('og: type', this.currentPageData.type || 'website', 'property')
+    this.setMetaTag('og: site_name', this.config.siteName, 'property')
     // Twitter Card tags
     if (this.config.twitterHandle) {
     // Twitter Card tags
   }
     if (this.config.twitterHandle) {}
-      this.setMetaTag('twitter:card', 'summary_large_image');`}
-      this.setMetaTag('twitter:site', `@${this.config.twitterHandle}`)
-      this.setMetaTag('twitter:title', title)
-      this.setMetaTag('twitter:description', description)
-      this.setMetaTag('twitter:image', image)
+      this.setMetaTag('twitter: card', 'summary_large_image');`}
+      this.setMetaTag('twitter: site', `@${this.config.twitterHandle}`)
+      this.setMetaTag('twitter: title', title)
+      this.setMetaTag('twitter: description', description)
+      this.setMetaTag('twitter: image', image)
     }
     this.setMetaTag('viewport', 'width=device-width, initial-scale=1.0')
     this.setMetaTag('theme-color', '#1e40af')
     this.setMetaTag('msapplication-TileColor', '#1e40af')
   private updateMetaTags(): void {/* TODO: Fix JSX expression */}`
-  r:site', `@${this.config.twitterHandle}`)
+  r: site', `@${this.config.twitterHandle}`)
       this.setMetaTag('twitte)
-  r:title', title)
+  r: title', title)
       this.setMetaTag('twitte)
-  r:description', description)
+  r: description', description)
       this.setMetaTag('twitte)
     }
     // Additional meta tags
@@ -261,7 +263,8 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
     if (!this.currentPageData) return
     const structuredData = {
       '@context': 'https: //schema.org',
-      publisher: {,
+    publisher: {,
+    
   }
   private updateStructuredData(): void {}
     if (!this.currentPageData) return
@@ -411,10 +414,18 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   /**;
    * Generate sitemap data;
    */;
-  generateSitemapData(): Array<{url: string; lastmod: string; changefreq: string, priority: number ,}> {// This would typically come from your CMS or routing system;
+  generateSitemapData(): Array<{
+    url: string; lastmod: string; changefreq: string,
+    priority: number,
+    
+  }> {// This would typically come from your CMS or routing system;
     return [;
       {
-        url: this.config.siteUrl;,}generateSitemapData(): Array<{url: string; lastmod: string; changefreq: string, priority: number ,}> {}// This would typically come from your CMS or routing system;
+        url: this.config.siteUrl;,}generateSitemapData(): Array<{
+    url: string; lastmod: string; changefreq: string,
+    priority: number,
+    
+  }> {}// This would typically come from your CMS or routing system;
     return [;
       {}url: this.config.siteUrl,
   private trackSEOMetric()
@@ -520,7 +531,7 @@ Disallo,`
 const defaultConfig: SEOConfig = {
     siteName: 'Zion Tech Group',
     siteUrl: 'https://zion.app',
-// Default configuration
+    // Default configuration
   }
 const defaultConfig: SEOConfig = {}
   siteName: 'Zion Tech Group',

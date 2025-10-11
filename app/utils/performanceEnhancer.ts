@@ -10,11 +10,13 @@ export const debounce = <T extends (...args: unknown[]) => unknown>(,
   wait: number,
     let timeout: NodeJS.Timeout,
   return (
-    <>
-      ...args: Parameters</T><T>
+    <div>
+      ...args: Parameters</div>T><T>
     </>
-  ) => {,
-  func: T,
+  ) => {
+    ,
+    func: T,
+    
   }
 }
 // Throttle function for performance optimization
@@ -38,10 +40,11 @@ export const debounce = <T extends (...args: unknown[]) => unknown>(
   func: T,
   wait: number,
 ): ((...args: Parameters<T>) => void) => {
-  let timeout: NodeJS.Timeout
+    let timeout: NodeJS.Timeout
   return (...args: Parameters<T>) => {,
-  func: T,
-  wait: number;}
+    func: T,
+    wait: number;
+  }
 ): ((...args: Parameters<T>) => void) => {}
   let timeout: NodeJS.Timeout
   return (...args: Parameters<T>) => {}
@@ -54,11 +57,12 @@ export const throttle = <T extends (...args: unknown[]) => unknown>(
   func: T,
   limit: number,
 ): ((...args: Parameters<T>) => void) => {
-  let inThrottle: boolean,
-  return (...args: Parameters<T>) => {
+    let inThrottle: boolean,
+    return (...args: Parameters<T>) => {
     if (!inThrottle) {,
-  func: T,
-  limit: number;}
+    func: T,
+  limit: number;
+  }
 ): ((...args: Parameters<T>) => void) => {}
   let inThrottle: boolean,
   return (...args: Parameters<T>) => {}
@@ -71,12 +75,14 @@ export const throttle = <T extends (...args: unknown[]) => unknown>(
 }
 // Performance monitoring utilities
 export class PerformanceMonitor {
-  private static instance: PerformanceMonitor,
-  private metrics: Map<string, number> = new Map()
+    private static instance: PerformanceMonitor,
+    private metrics: Map<string,
+    number> = new Map()
   private observers: PerformanceObserver[] = []
   static getInstance(): PerformanceMonitor {,
     if (!PerformanceMonitor.instance) {,
-// Performance monitoring utilities;}
+// Performance monitoring utilities;
+  }
 export class PerformanceMonitor {}
   private static instance: PerformanceMonitor,
   private metrics: Map<string, number> = new Map()

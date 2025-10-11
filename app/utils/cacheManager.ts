@@ -39,9 +39,12 @@ export interface CacheStats {}}hits: number,
     hitRate: 0,
     count: 0,
 ,
-  constructor(config: CacheConfig = {,)}) {this.config = {
+  constructor(config: CacheConfig = {,)}) {
+    this.config = {
       storage: config.storage || CacheStorage.Memory,
-      defaultTTL: config.defaultTTL || 5 * 60 * 1000 // 5 minutes;,}private stats: CacheStats = {,}hits: 0,
+    defaultTTL: config.defaultTTL || 5 * 60 * 1000 // 5 minutes;,
+    
+  }private stats: CacheStats = {,}hits: 0,
     misses: 0,
     hitRate: 0,
     count: 0,
@@ -78,7 +81,10 @@ export interface CacheStats {}}hits: number,
    */
   set(key: string, value: T, ttl?: number): void {
     const entry: CacheEntry<T> = {
-  set(key: string, value: T, ttl?: number): void {}
+  set(key: string,
+    value: T,
+    ttl?: number): void {
+  }
     const entry: CacheEntry<T> = {}
       value,
       timestamp: Date.now(),
@@ -422,8 +428,7 @@ try {}
       }
     } catch (error) {}}
   }
-      case CacheStorage.SessionStorage:
-        return window.sessionStorage,
+      case CacheStorage.SessionStorage: return window.sessionStorage,
       default:,
         return null
     }
@@ -438,9 +443,11 @@ export const localStorageCache = new CacheManager()
     )
   storage: CacheStorage.LocalStorage)
   defaultTTL: 30 * 60 * 1000 // 30 minutes
-export const sessionStorageCache = new CacheManager({),
-  storage: CacheStorage.SessionStorage),
-  defaultTTL: 60 * 60 * 1000 // 1 hour;,}export const localStorageCache = new CacheManager({)}storage: CacheStorage.LocalStorage,
+export const sessionStorageCache = new CacheManager({
+    ),
+    storage: CacheStorage.SessionStorage),
+    defaultTTL: 60 * 60 * 1000 // 1 hour;,
+  }export const localStorageCache = new CacheManager({)}storage: CacheStorage.LocalStorage,
   defaultTTL: 30 * 60 * 1000 // 30 minutes,
 export const sessionStorageCache = new CacheManager({)}storage: CacheStorage.SessionStorage,
   defaultTTL: 60 * 60 * 1000 // 1 hour;,
@@ -460,8 +467,7 @@ export default CacheManager
     switch (this.config.storage) {
       case CacheStorage.LocalStorage: return window.localStorage;}
     switch (this.config.storage) {}
-      case CacheStorage.LocalStorage:
-        return window.localStorage
+      case CacheStorage.LocalStorage: return window.localStorage
       case CacheStorage.SessionStorage:
         return window.sessionStorage
       default:,

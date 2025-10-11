@@ -3,8 +3,16 @@
     { name: 'title', content: data.title },
     { name: 'description', content: data.description },
     { name: 'keywords', content: data.keywords || '' },
-    { name: 'robots', content: 'index, follow' },
-    { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+    {
+    name: 'robots',
+    content: 'index,
+    follow'
+  },
+    {
+    name: 'viewport',
+    content: 'width=device-width,
+    initial-scale=1'
+  },
     { name: 'author', content: 'Zion Holdings' },
     { name: 'canonical', content: data.canonical || '' },
     { property: 'og:title', content: data.ogTitle || data.title },
@@ -131,7 +139,8 @@ export class SEOEnhancer {}
   }
   }
   // Update canonical URL;
-  updateCanonicalUrl(url: string) {,
+  updateCanonicalUrl(url: string) {
+    ,
     let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement,
     if (!canonical) {,
       canonical = document.createElement('link'),
@@ -149,11 +158,23 @@ export class SEOEnhancer {}
   }
     ,
     }
-    if (config.modifiedTime) {}ogTags.push({property: 'og:modified_time', content: config.modifiedTime ,)})
+    if (config.modifiedTime) {}ogTags.push({
+    property: 'og:modified_time',
+    content: config.modifiedTime,
+    )
+  })
     }
-    if (config.section) {}ogTags.push({property: 'og:section', content: config.section ,)})
+    if (config.section) {}ogTags.push({
+    property: 'og:section',
+    content: config.section,
+    )
+  })
     }
-    if (config.tags) {}ogTags.push({property: 'og:tags', content: config.tags.join(', ')})
+    if (config.tags) {}ogTags.push({
+    property: 'og:tags',
+    content: config.tags.join(',
+    ')
+  })
     }
     ogTags.forEach(({property, content)}) => {}this.updateMetaTag(property, content);}
     })
@@ -285,7 +306,9 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */,}}g: Partial<SEOConfig>
   // Update language
   updateLanguage(language: string) {
     ,
-    if (typeof document !== 'undefined') {,}document.documentElement.lang = language;}
+    if (typeof document !== 'undefined') {,
+    
+  }document.documentElement.lang = language;}
     }
   }
     ) as HTMLMetaElement;
@@ -307,8 +330,10 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */,}}g: Partial<SEOConfig>
     if (!meta) {
     meta = document.createElement('meta')
       if (nameOrProperty.startsWith('og: ') || nameOrProperty.startsWith('twitter:')) {,
-  y: string, conten);
-  t: string) {/* TODO: Fix JSX expression */,}`meta[name="${nameOrProperty}"], meta[property="${nameOrProperty}"]`;
+    y: string,
+    conten);
+  t: string) {/* TODO: Fix JSX expression */,
+  }`meta[name="${nameOrProperty}"], meta[property="${nameOrProperty}"]`;
     ) as HTMLMetaElement;
     if (!meta) {/* TODO: Fix JSX expression */,}} else {/* TODO: Fix JSX expression */,}}}
       document.head.appendChild(meta);
@@ -329,7 +354,7 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */,}}g: Partial<SEOConfig>
     ) as HTMLMetaElement
     if (!meta) {}
       meta = document.createElement('meta')
-      if (nameOrProperty.startsWith('og:') || nameOrProperty.startsWith('twitter:')) {}
+      if (nameOrProperty.startsWith('og: ') || nameOrProperty.startsWith('twitter:')) {}
         meta.setAttribute('property', nameOrProperty);}
       } else {}
         meta.setAttribute('name', nameOrProperty);}
@@ -354,12 +379,20 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */,}}g: Partial<SEOConfig>
     meta.content = content
   }
   // Generate sitemap;
-  generateSitemap(pages: Array<{url: string; lastmod: string; changefreq: string, priority: string ,)}>);
+  generateSitemap(pages: Array<{
+    url: string; lastmod: string; changefreq: string,
+    priority: string,
+    )
+  }>);
   ) {const sitemap = `<?xml version="1.0" encoding="UTF-8"?>;
 <urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,
 ${pages;
   // Generate sitemap;
-  generateSitemap()}pages: Array<{url: string; lastmod: string; changefreq: string, priority: string ,}>;
+  generateSitemap()}pages: Array<{
+    url: string; lastmod: string; changefreq: string,
+    priority: string,
+    
+  }>;
   ) {}const sitemap = `<?xml version="1.0" encoding="UTF-8"?>;
 <urlset>
 ${pages}.map();
@@ -380,7 +413,7 @@ ${pages}.map();
     pages: Array<{ url: string; lastmod: string; changefreq: string, priority: string }>
   ) {}
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">
 ${pages}
   .map()
   .join('\n')}
@@ -388,10 +421,12 @@ ${pages}
     return sitemap
   }
   // Generate robots.txt;
-  generateRobotsTxt(disallowPaths: string[] = []) {,
+  generateRobotsTxt(disallowPaths: string[] = []) {
+    ,
     ,
     const robots = `User-agent: *,
-  // Generate robots.txt;}generateRobotsTxt(disallowPaths: string[] = []) {,}const robots = `User-agent: *,
+  // Generate robots.txt;
+  }generateRobotsTxt(disallowPaths: string[] = []) {,}const robots = `User-agent: *,
 Allow: /`,}
 ${disallowPaths.map(path => `Disallow: ${path,)}`).join('\n')}
 Sitemap: ${this.config.canonicalUrl,}/sitemap.xml`;
@@ -419,7 +454,7 @@ Sitemap: ${this.config.canonicalUrl,}/sitemap.xml`;
   generateRobotsTxt(disallowPaths: string[] = []) {
     ,
     const robots = `User-agent: *,
-  // Generate robots.txt
+    // Generate robots.txt
   }
   generateRobotsTxt(disallowPaths: string[] = []) {}
     if (typeof document === 'undefined') return;}
@@ -442,12 +477,12 @@ Sitemap: ${this.config.canonicalUrl,}/sitemap.xml`;
     if (typeof document === 'undefined') return {}
     return {
     title: document.title,
-      description: document.querySelector('meta[name="description"]')?.getAttribute('content') || '',
+    description: document.querySelector('meta[name="description"]')?.getAttribute('content') || '',
+    
   }
     return {}
       title: document.title,
-      description: 
-        document.querySelector('meta[name="description"]')?.getAttribute('content') || '',
+      description: document.querySelector('meta[name="description"]')?.getAttribute('content') || '',
       keywords: document.querySelector('meta[name="keywords"]')?.getAttribute('content') || '',
     }
   }
@@ -469,8 +504,8 @@ export const generateAdvancedStructuredData = (;) => {
   if (data.type === 'Organization') {
     return {
       ...baseStructure,
-      address: {,
-  // Add type-specific properties
+    address: {,
+    // Add type-specific properties
   }
   if (data.type === 'Organization') {}
     return {}
@@ -515,8 +550,8 @@ export const generateAdvancedStructuredData = (;) => {
       ...baseStructure,
       potentialAction: {
     ,
-        '@type': 'SearchAction',
-        target: {,
+    '@type': 'SearchAction',
+    target: {,
   }
       potentialAction: {}
         '@type': 'SearchAction',
@@ -533,11 +568,13 @@ export const generateAdvancedStructuredData = (;) => {
   }
     ,
         '@type': 'Organization',}name: 'Zion Holdings',},
-      publisher: {,
+      publisher: {
     ,
-        '@type': 'Organization',
+    ,
+    '@type': 'Organization',
         name: 'Zion Holdings',
-      publisher: {}
+      publisher: {
+  }
         '@type': 'Organization',
         name: 'Zion Holdings',
         logo: {}
@@ -552,11 +589,12 @@ export const generateAdvancedStructuredData = (;) => {
     return {
     urlset: {
       '@xmlns': 'http://www.sitemaps.org/schemas/sitemap/0.9',
-      url: pages.map(page => ({),
-        loc: page.url,),
+    url: pages.map(page => ({),
+    loc: page.url,),
         lastmod: page.lastModified),
         changefreq: page.changeFrequency),
-// Generate sitemap data;}export const generateSitemapData = useCallback((...args) => {}return {}}urlset: {,}'@xmlns': 'http: //www.sitemaps.org/schemas/sitemap/0.9',
+// Generate sitemap data;
+  }export const generateSitemapData = useCallback((...args) => {}return {}}urlset: {,}'@xmlns': 'http: //www.sitemaps.org/schemas/sitemap/0.9',
       url: pages.map(page => ({),}loc: page.url,
         lastmod: page.lastModified,
         changefreq: page.changeFrequency,

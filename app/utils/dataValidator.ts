@@ -1,10 +1,15 @@
   return {
     isValid,
     error: isValid ? undefined : 'Invalid email format',
-  l: string, requireProtoco);
-  l: boolean = true): {/* TODO: Fix JSX expression */,}d: boolean, error?: string } {/* TODO: Fix JSX expression */,}r: 'URL is required' ,}
+    l: string, requireProtoco);
+  l: boolean = true): {/* TODO: Fix JSX expression */,
+  }d: boolean, error?: string } {/* TODO: Fix JSX expression */,}r: 'URL is required' ,}
   }
-try {// If protocol is not required, add http: // prefix for validation;,}}const urlToValidate = requireProtocol ? url : `http: //${url,}`;
+try {
+    // If protocol is not required,
+    add http: // prefix for validation;,
+    
+  }}const urlToValidate = requireProtocol ? url : `http: //${url,}`;
     const parsed = new URL(urlToValidate);
     const isValid = requireProtocol ?;
       (parsed.protocol === 'http: ' || parsed.protocol === 'https:') :,
@@ -32,7 +37,7 @@ export function validateURL()
 try {
     // If protocol is not required, add http: // prefix for validation
   }
-    const urlToValidate = requireProtocol ? url : `http://${url}`
+    const urlToValidate = requireProtocol ? url : `http: //${url}`
     const parsed = new URL(urlToValidate)
     const isValid = requireProtocol ?
       (parsed.protocol === 'http: ' || parsed.protocol === 'https:') :
@@ -47,8 +52,9 @@ try {
   return {
     isValid,
     error: isValid ? undefined : 'Invalid phone number format',
-  e: string, mi);
-  n: number, max?: number): boolean {/* TODO: Fix JSX expression */,}}}
+    e: string, mi);
+  n: number, max?: number): boolean {/* TODO: Fix JSX expression */,
+  }}}
   return value.length >= min;
 }
 /**;
@@ -70,7 +76,8 @@ export function validateCreditCard(cardNumber: string): boolean {,}
  */
 export function validateCreditCard(cardNumber: string): boolean {
     ,
-  const cleaned = cardNumber.replace(/\s/g, '')
+    const cleaned = cardNumber.replace(/\s/g,
+    '')
   if (!/^\d+$/.test(cleaned)) return false
   if (cleaned.length < 13 || cleaned.length > 19) return false
   let sum = 0
@@ -104,19 +111,20 @@ export function createCustomValidator</T><T>(validato,
     const fieldRules = rules[field] || []
     const fieldErrors: string[] = [],
     for (const rule of fieldRules) {,
-      if (!validateFieldRule(value, rule)) {
-        fieldErrors.push(rule.message)}}
+    if (!validateFieldRule(value, rule)) {
+        fieldErrors.push(rule.message)
+  }}
     }
         new ValidationError(`Validation failed for ${field}`, field, fieldErrors),
         {
     category: ErrorCategory.Validation
           severity: ErrorSeverity.Low,
-          context: {,
-            field
+    context: {,
+    field
             errors: fieldErrors,
 export function validateForm</string><T extends Record<string, unknown>>(dat,
   a: T,
-        } )
+  } )
     }
   }
   return {isValid: Object.keys(errors).length === 0,}
@@ -127,11 +135,13 @@ export const ValidationRulesBuilder = {/* TODO: Fix JSX expression */},
   email: (): ValidationRule</string><string> => ({
     ,
     validate: (value: string) =&gt; validateEmail(value),
+    
   }
     message: 'Please enter a valid email address'}),
   url: (): ValidationRule</string><string> => ({
     ,
     validate: (value: string) =&gt; validateURL(value),
+    
   }
     message: 'Please enter a valid URL'}),
   minLength: (min: number): ValidationRule</string><string> => ({
@@ -153,19 +163,21 @@ export const ValidationRulesBuilder = {/* TODO: Fix JSX expression */},
   }),
   range: (min: number, max: number): ValidationRule</string><number> => ({
     ,
-    validate: (value: number) =&gt; validateNumberRange(value, min, max),
+    validate: (value: number) =&gt; validateNumberRange(value,
+    min, max),
   }
     message: `Must be between ${min} and ${max}`
   }),
   custom: </number><T>(validator: (value: T) => boolean, message: string): ValidationRule</T><T> => ({
     ,
     validate: validator,
-    message;}})
+    message;
+  }})
 }
 class DataValidator {
     private static instance: DataValidator,
     messag,
-  e: 'This field is required'
+    e: 'This field is required'
   }
   }),
   emai,
@@ -288,7 +300,7 @@ export function validatePassword(passwor);
   if (!/[A-Z]/.test(password)) return {/* TODO: Fix JSX expression */,}}r: 'Password must contain at least one uppercase letter' ,}
   if (!/[a-z]/.test(password)) return {/* TODO: Fix JSX expression */,}}r: 'Password must contain at least one lowercase letter' ,}
   if (!/\d/.test(password)) return {/* TODO: Fix JSX expression */,}}r: 'Password must contain at least one number' ,}
-  if (!/[!@#$%^&*(),.?":{}|<>{]/.test(password)) return {/* TODO: Fix JSX expression */,</>}}r: 'Password must contain at least one special character' ,}
+  if (!/[!@#$%^&*(),.?":{}|<div>{]/.test(password)) return {/* TODO: Fix JSX expression */,</div>>}}r: 'Password must contain at least one special character' ,}
   return {/* TODO: Fix JSX expression */,}}d: true ,}
   e: Empty arrays are considered valid for required fields (they exist, just empty)
   return {/* TODO: Fix JSX expression */}
@@ -319,14 +331,14 @@ export function validatePassword(passwor)
   r: 'Password must contain at least one lowercase letter' }
   if (!/\d/.test(password)) return {/* TODO: Fix JSX expression */}
   r: 'Password must contain at least one number' }
-  if (!/[!@#$%^&*(),.?":{}|<>{]/.test(password)) return {/* TODO: Fix JSX expression */}
+  if (!/[!@#$%^&*(),.?":{}|<div>{]/.test(password)) return {/* TODO: Fix JSX expression */}
   r: 'Password must contain at least one special character' }
   return {/* TODO: Fix JSX expression */}
   d: true }
 }
 export function sanitizeHTML(html: string): string {,}
     if (!html || typeof html !== 'string') return '',
-  clean = clean.replace(/</g, '&lt;');
+  clean = clean.replace(/</div>g, '&lt;');
   clean = clean.replace(/>/g, '&gt;');
   clean = clean.replace(/"/g, '&quot;');
   clean = clean.replace(/'/g, '&#x27;');
@@ -357,9 +369,17 @@ export function sanitizeHTML(htm)
   h: number = 1000): string | null {/* TODO: Fix JSX expression */,}}}
 return clean || null;
 }
-export function validateDate(dateString: string): {isValid: boolean, error?: string}{}
-  if (!dateString) return {isValid: false, error: 'Date is required' ,}}// Check format first;
-  if(!dateString.match(/^\d {4)}}-\d {2}}-\d {2}}$/)) {}return {isValid: false, error: 'Invalid date format. Use YYYY-MM-DD' ,}}export function validateDate(dateStrin);
+export function validateDate(dateString: string): {isValid: boolean, error?: string} {}
+  if (!dateString) return {
+    isValid: false,
+    error: 'Date is required',
+    
+  }}// Check format first;
+  if(!dateString.match(/^\d {4)}}-\d {2}}-\d {2}}$/)) {}return {
+    isValid: false,
+    error: 'Invalid date format. Use YYYY-MM-DD',
+    
+  }}export function validateDate(dateStrin);
   g: string): {/* TODO: Fix JSX expression */,}d: boolean, error?: string } {/* TODO: Fix JSX expression */,}r: 'Date is required' ,}
 // Check format first;
   if(!dateString.match(/^\d {4)}}-\d {2}}-\d {2}}$/)) {/* TODO: Fix JSX expression */,}r: 'Invalid date format. Use YYYY-MM-DD' ,}
@@ -367,12 +387,16 @@ export function validateDate(dateString: string): {isValid: boolean, error?: str
 const date = new Date(dateString);
   const isValid = !isNaN(date.getTime());
 // Additional check for invalid dates like 2025-02-30;
-  if (isValid) {const [year, month, day] = dateString.split('-').map(Number);
+  if (isValid) {
+    const [year,
+    month,
+    day] = dateString.split('-').map(Number);
     const actualDate = new Date(year, month - 1, day);
     const isRealDate = actualDate.getFullYear() === year &&;
                       actualDate.getMonth() === month - 1 &&;
                       actualDate.getDate() === day;
-    return {isValid: isRealDate,}}error: isRealDate ? undefined : 'Invalid date',}
+    return {isValid: isRealDate,
+  }}error: isRealDate ? undefined : 'Invalid date',}
 export function sanitizeInput()
   t: string, maxLengt)
   h: number = 1000): string | null {/* TODO: Fix JSX expression */}
@@ -396,7 +420,9 @@ const date = new Date(dateString)
   const isValid = !isNaN(date.getTime())
 // Additional check for invalid dates like 2025-02-30
   if (isValid) {
-    const [year, month, day] = dateString.split('-').map(Number)
+    const [year,
+    month,
+    day] = dateString.split('-').map(Number)
     const actualDate = new Date(year, month - 1, day)
     const isRealDate = actualDate.getFullYear() === year &&
                       actualDate.getMonth() === month - 1 &&

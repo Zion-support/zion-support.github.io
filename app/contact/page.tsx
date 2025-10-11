@@ -1,17 +1,23 @@
 import React;, { useState } from 'react';
-import { Helmet; } from 'react-helmet-async';
-import { Phone;, Mail, MapPin, Clock, Send } from 'lucide-react';
+import { Helmet;  } from "react-helmet-async";
+import {
+    Phone;,
+    Mail,
+    MapPin, Clock, Send
+  } from 'lucide-react';
 import Navigation from '../components/Navigation';;
 import Footer from '../components/Footer';;
-const ContactPage: React.FC = () => {;
-const [formData, setFormData] = useState({;,
-name: '',;,
+const ContactPage: React.FC = () => {
+    ;
+const [formData,
+    setFormData] = useState({;,
+    name: '',;,
 email: '',;,
 company: '',;,
 phone: '',;,
 service: '',;,
 message: ''
-}
+  }
   });
 const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;;
 setFormData({
@@ -29,30 +35,38 @@ console.log('Form submitted:', formData);
   };
 ;
 const contactInfo = [;
-    {;,
-icon: Phone,;,
+    {
+    ;,
+    icon: Phone,
+    ;,
 title: 'Phone',;,
 value: '+1 (555) 123-4567',;,
 description: 'Mon-Fri 9AM-6PM EST'
-    },
-    {;,
-icon: Mail,;,
+  },
+    {
+    ;,
+    icon: Mail,
+    ;,
 title: 'Email',;,
 value: 'info@ziontechgroup.com',;,
 description: 'We\'ll respond within 24 hours'
-    },
-    {;,
-icon: MapPin,;,
+  },
+    {
+    ;,
+    icon: MapPin,
+    ;,
 title: 'Address',;,
 value: '123 Tech Street, Silicon Valley, CA 94000',;,
 description: 'Visit our headquarters'
-    },
-    {;,
-icon: Clock,;,
+  },
+    {
+    ;,
+    icon: Clock,
+    ;,
 title: 'Business Hours',;,
 value: 'Monday - Friday',;,
 description: '9:00 AM - 6:00 PM EST'
-    }
+  }
   ];
 const services = [;
     'AI Solutions',
@@ -76,7 +90,7 @@ return (;
         <Navigation />
         
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">;
@@ -90,7 +104,7 @@ Ready to transform your business? Let's discuss how our AI and IT solutions can 
         </section>
 
         {/* Contact Info Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <section className="py-16 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {contactInfo.map((info), index) => {;
@@ -112,7 +126,7 @@ return (;
         </section>
 
         {/* Contact Form Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <div>
@@ -124,7 +138,7 @@ Fill out the form below and we'll get back to you as soon as possible. We're her
                 </p>
                 
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">;
 Full Name *
@@ -136,7 +150,7 @@ name="name";
 value={formData.name}
                         onChange={handleChange}
                         required;
-className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";
+className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";
 placeholder="Your full name"
                       />
   </input>
@@ -152,7 +166,7 @@ name="email";
 value={formData.email}
                         onChange={handleChange}
                         required;
-className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";
+className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";
 placeholder="your@email.com"
                       />
   </input>
@@ -170,7 +184,7 @@ id="company";
 name="company";
 value={formData.company}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";
 placeholder="Your company name"
                       />
   </input>
@@ -185,7 +199,7 @@ id="phone";
 name="phone";
 value={formData.phone}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";
 placeholder="+1 (555) 123-4567"
                       />
   </input>
@@ -201,7 +215,7 @@ id="service";
 name="service";
 value={formData.service}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     >
                       <option value="">Select a service</option>
                       {services.map((service), index) => (
@@ -221,7 +235,7 @@ value={formData.message}
                       onChange={handleChange}
                       required;
 rows={6}
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";
 placeholder="Tell us about your project or requirements..."
                     />
   </textarea>

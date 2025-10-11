@@ -5,8 +5,11 @@
 export interface ErrorReporterConfig {enableConsoleLogging: boolean,}
   enableRemoteLogging: boolean,
 }
-const defaultConfig: ErrorReporterConfig = {,
-    ,}export interface ErrorReport {}}message: string;,
+const defaultConfig: ErrorReporterConfig = {
+    ,
+    ,
+    
+  }export interface ErrorReport {}}message: string;,
   stack?: string;
   componentStack?: string,
   timestamp: string,
@@ -156,15 +159,18 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
     }
     return styles[severity]
     if (!this.config.remoteEndpoint) return;
-      await fetch(this.config.remoteEndpoint, {);
+      await fetch(this.config.remoteEndpoint, {
+    );
         method: 'POST'),
-        headers: {,}private async sendToRemote(report: ErrorReport): Promise<void> {,}if (!this.config.remoteEndpoint) return;
+    headers: {,
+    
+  }private async sendToRemote(report: ErrorReport): Promise<void> {,}if (!this.config.remoteEndpoint) return;
     try {}}await fetch(this.config.remoteEndpoint, {)}method: 'POST',
         headers: {,}'Content-Type': 'application/json'}
         })
         body: JSON.stringify(report),})
     } catch (error) {// Silently fail to avoid infinite loop;}if (this.config.enableConsoleLogging) {}catch (error) {}// Silently fail to avoid infinite loop;
-      if (this.config.enableConsoleLogging) {}logger.warn('Failed to send error to remote endpoint:', error);}
+      if (this.config.enableConsoleLogging) {}logger.warn('Failed to send error to remote endpoint: ', error);}
   private async sendToRemote(repor);
         method: 'POST',
         headers: {}
@@ -175,7 +181,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
       if (this.config.enableConsoleLogging) {} catch (error) {}
       // Silently fail to avoid infinite loop
       if (this.config.enableConsoleLogging) {}
-        logger.warn('Failed to send error to remote endpoint:', error);}
+        logger.warn('Failed to send error to remote endpoint: ', error);}
   private async sendToRemote(repor)
         bod,
   y: JSON.stringify(report),
@@ -195,8 +201,11 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
   /**;
    * Get error statistics;
    */;
-  getErrorStats(): {totalErrors: number,
-    uniqueErrors: number,}errorsByType: Record<string>,}
+  getErrorStats(): {
+    totalErrors: number,
+    uniqueErrors: number,
+    
+  }errorsByType: Record<string>,}
   } {return {totalErrors: this.errorQueue.length,}
       uniqueErrors: this.errorCount.size;,}getErrorStats(): {}totalErrors: number;,
     uniqueErrors: number,
@@ -213,14 +222,10 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
   /**
    * Get error statistics
    */
-  getErrorStats(): {
-    totalErrors: number,
-    uniqueErrors: number,
-  } {
-    return {
+  getErrorStats(): {totalErrors: number,
+    uniqueErrors: number,} {return {
       totalErrors: this.errorQueue.length,
-      uniqueErrors: this.errorCount.size
-  }
+      uniqueErrors: this.errorCount.size}
   getErrorStats(): {}
     totalErrors: number
     }
@@ -282,8 +287,8 @@ export const captureComponentError = (;
   error: Error,
 ): void => {
     ,
-  const report = ErrorReporter.getInstance(),
-  report.reportError(error, 'high', {)
+    const report = ErrorReporter.getInstance(),
+    report.reportError(error, 'high', {)
     componentName)
   componentName: string
   }

@@ -2,25 +2,32 @@
 
 'use client'
 import React from 'react'
-import {  Helmet  } from 'react-helmet-async'import {  CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe   } from 'lucide-react'
+import {  Helmet  } from 'react-helmet-async'import {
+    CheckCircle,
+    ArrowRight,
+    Phone, Mail, MapPin, Zap, Shield, Brain, Globe
+  } from 'lucide-react'
 const AccessibilityCheckerPage: React.FC = () => {
-  const features = [
+    const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Solutions',
-    },
+    title: 'AI-Powered Solutions',
+    
+  },
     {
-      icon: Zap,
-      title: 'High Performance',
-    },
+    icon: Zap,
+    title: 'High Performance',
+    
+  },
     {
-      icon: Shield,
-      title: 'Enterprise Security',
-    },
+    icon: Shield,
+    title: 'Enterprise Security',
+    
+  },
     {
-      icon: Globe,
-      title: 'Global Reach',
-  const benefits = [
+    icon: Globe,
+    title: 'Global Reach',
+    const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -32,7 +39,7 @@ const AccessibilityCheckerPage: React.FC = () => {
   ]
         <div className="max-w-7xl mx-auto"></div></div>
           <div className="text-center"></div></div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1></h1>
+            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6"></h1></h1>
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent"></span></span>
                 AccessibilityChecker
               </span>
@@ -56,8 +63,9 @@ const AccessibilityCheckerPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8"></section></section>
+      {/* Features Section */
+  }
+      <section className="py-20 px-4 sm: px-6 lg:px-8"></section></section>
         <div className="max-w-7xl mx-auto"></div></div>
           <div className="text-center mb-16"></div></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2></h2>
@@ -68,9 +76,9 @@ const AccessibilityCheckerPage: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div></div>
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div></div>
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div></div>
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300"></div></div>
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div></div>
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
@@ -82,7 +90,7 @@ const AccessibilityCheckerPage: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"></section></section>
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5"></section></section>
         <div className="max-w-7xl mx-auto"></div></div>
           <div className="text-center mb-16"></div></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2></h2>

@@ -4,11 +4,13 @@ export const debounce = <T extends (...args: any[]) => any>(,
   wait: number,
     let timeout: NodeJS.Timeout,
   return (
-    <>
-      ...args: Parameters</T><T>
+    <div>
+      ...args: Parameters</div>T><T>
     </>
-  ) => {,
-  func: T,
+  ) => {
+    ,
+    func: T,
+    
   }
 }
 export const throttle = </T><T extends (...args: any[]) => any>(,
@@ -19,10 +21,12 @@ export const throttle = </T><T extends (...args: any[]) => any>(,
 return observer
 }
 }
-export const measurePerformance = (name: string, fn: () => void) => {,
+export const measurePerformance = (name: string, fn: () => void) => {
+    ,
     ,
     isTablet: width &gt;= 768 && width < 1024,
-    isDesktop: width &gt;= 1024;,}}
+    isDesktop: width &gt;= 1024;,
+  }}
   private observers: PerformanceObserver[] = [],
   private isMonitoring: boolean = false,
   constructor(config?: Partial<OptimizationConfig>) {,}return {}}isMobile: width < 768,
@@ -60,8 +64,11 @@ const logger = {/* TODO: Fix JSX expression */},
     }
   }
   private observeFID() {}try {}}const observer = new PerformanceObserver((list) => {}const entries = list.getEntries();
-        entries.forEach((entry: PerformanceEntry) => {,
-    ,}entries.forEach((entry: PerformanceEntry) => {,}const fidEntry = entry as PerformanceEntry & {processingStart: number ,}} catch {/* TODO: Fix JSX expression */,}}}
+        entries.forEach((entry: PerformanceEntry) => {
+    ,
+    ,
+    
+  }entries.forEach((entry: PerformanceEntry) => {,}const fidEntry = entry as PerformanceEntry & {processingStart: number ,}} catch {/* TODO: Fix JSX expression */,}}}
   }
   private observeFID() {/* TODO: Fix JSX expression */,}t: number ,}
           this.metrics.fid = fidEntry.processingStart - fidEntry.startTime;
@@ -162,9 +169,19 @@ const logger = {/* TODO: Fix JSX expression */},
   private observeTTFB() {}try {}}const observer = new PerformanceObserver((list) => {}const entries = list.getEntries();
       let clsValue = 0
       const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries()
+    const entries = list.getEntries()
         entries.forEach((entry: PerformanceEntry) => {,
-    ,}const navEntry = entry as PerformanceEntry & {responseStart: number, requestStart: number ,}if (navEntry.responseStart > 0) {this.metrics.ttfb = navEntry.responseStart - navEntry.requestStart;}entries.forEach((entry: PerformanceEntry) => {,}const navEntry = entry as PerformanceEntry & {responseStart: number, requestStart: number ,}if (navEntry.responseStart > 0) {}this.metrics.ttfb = navEntry.responseStart - navEntry.requestStart;
+    ,
+    
+  }const navEntry = entry as PerformanceEntry & {
+    responseStart: number,
+    requestStart: number,
+    
+  }if (navEntry.responseStart > 0) {this.metrics.ttfb = navEntry.responseStart - navEntry.requestStart;}entries.forEach((entry: PerformanceEntry) => {,}const navEntry = entry as PerformanceEntry & {
+    responseStart: number,
+    requestStart: number,
+    
+  }if (navEntry.responseStart > 0) {}this.metrics.ttfb = navEntry.responseStart - navEntry.requestStart;
     } catch {/* TODO: Fix JSX expression */,}}}
   }
       if (!img.hasAttribute('loading')) {
@@ -222,8 +239,7 @@ Bundle,
 Cache Hit,
   Rate: ${metrics.cacheHitRate}%
 Recommendation,
-  s:
-${score < 80 ? '- Consider optimizing images and enabling compression' : ''}
+  s: ${score < 80 ? '- Consider optimizing images and enabling compression' : ''}
 ${metrics.loadTime &gt; 2000 ? '- Implement lazy loading for better initial load time' : ''}
     `.trim();
   }
@@ -249,5 +265,9 @@ ${metrics.memoryUsage &gt; 30 * 1024 * 1024 ? '- Review memory usage and optimiz
 // Export singleton instance
 export const performanceOptimizer = new PerformanceOptimizer()
 export default PerformanceOptimizer
-export { PerformanceOptimizer, type PerformanceMetrics, type PerformanceConfig }
+export {
+    PerformanceOptimizer,
+    type PerformanceMetrics,
+    type PerformanceConfig
+  }
 `

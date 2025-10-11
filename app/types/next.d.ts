@@ -1,29 +1,33 @@
 const NextPage: React.FC = () => {
 'use client'
 import React from 'react'
-import {  Helmet  } from 'react-helmet-async'import {  CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe   } from 'lucide-react'
+import {  Helmet  } from 'react-helmet-async'import {
+    CheckCircle,
+    ArrowRight,
+    Phone, Mail, MapPin, Zap, Shield, Brain, Globe
+  } from 'lucide-react'
 const Next.dPage: React.FC = () => {
-  const features = [
+    const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
+    title: 'AI-Powered Solutions',
+    description: 'Advanced AI technology to transform your business operations and improve efficiency'
+  },
     {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
+    icon: Zap,
+    title: 'High Performance',
+    description: 'Lightning-fast processing and real-time analytics for optimal results'
+  },
     {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
+    icon: Shield,
+    title: 'Enterprise Security',
+    description: 'Bank-level security with encryption and compliance standards'
+  },
     {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-    }
+    icon: Globe,
+    title: 'Global Reach',
+    description: 'Worldwide deployment and support for international businesses'
+  }
   ]
   const benefits = [
     'Advanced AI technology integration',
@@ -74,29 +78,32 @@ const Next.dPage: React.FC = () => {
     google?: string;
     yandex?: string;
     yahoo?: string;
-    other?: Record<string, string>;
+    other?: Record<string,
+    string>;
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
       <Helmet>
         <title>Next.d | Zion Tech Group
         <meta name="description" content="Professional Next.d services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="next.d, AI solutions, IT services, Zion Tech Group, next.d" />
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8"></section></section>
+        <meta name="keywords" content="next.d,
+    AI solutions, IT services, Zion Tech Group, next.d" />
+      {/* Features Section */
+  }
+      <section className="py-20 px-4 sm: px-6 lg:px-8"></section></section>
         <div className="max-w-7xl mx-auto"></div></div>
           <div className="text-center mb-16"></div></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2></h2>
               Why Choose Our Next.d?
             <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p></p>
               Our next.d solutions deliver unmatched performance, security, and scalability.
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div></div>
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div></div>
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3"></div></div>
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg"></p></p>{benefit}
             ))}
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8"></section></section>
+      <section className="py-20 px-4 sm: px-6 lg:px-8"></section></section>
         <div className="max-w-4xl mx-auto text-center"></div></div>
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2></h2>

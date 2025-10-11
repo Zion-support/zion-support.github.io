@@ -1,17 +1,23 @@
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
-import { Check, Star, ArrowRight, Zap, Shield, Users } from 'lucide-react'
+import {
+    Check,
+    Star,
+    ArrowRight, Zap, Shield, Users
+  } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
 const PricingPage: React.FC = () => {
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly')
+    const [billingCycle,
+    setBillingCycle] = useState<'monthly' | 'yearly'>('monthly')
 
   const plans = [
     {
       name: 'Starter',
-      description: 'Perfect for small businesses getting started with AI',
-      price: { monthly: 999, yearly: 9999 },
+    description: 'Perfect for small businesses getting started with AI',
+      price: { monthly: 999, yearly: 9999
+  },
       features: [
         'Monthly reports'
       ],
@@ -19,63 +25,68 @@ const PricingPage: React.FC = () => {
       icon: Zap
     },
     {
-      name: 'Professional',
-      ],
-      popular: true,
+    name: 'Professional',
+    ],
+    popular: true,
       icon: Star
-    },
+  },
     {
-      name: 'Enterprise',
-      ],
-      popular: false,
+    name: 'Enterprise',
+    ],
+    popular: false,
       icon: Shield
+  }
+  ]
+
+  const addOns = [
+    {
+    name: 'Additional Users',
+    description: 'Add more team members to your plan',
+    price: { monthly: 50, yearly: 500
+  }
+    },
+    {
+    name: 'Priority Support',
+    description: 'Get faster response times and dedicated support',
+    price: { monthly: 200, yearly: 2000
+  }
+    },
+    {
+    name: 'Custom Development',
+    description: 'Bespoke solutions tailored to your needs',
+    price: { monthly: 1000, yearly: 10000
+  }
+    },
+    {
+    name: 'Training & Onboarding',
+    description: 'Comprehensive training for your team',
+    price: { monthly: 500, yearly: 5000
+  }
     }
   ]
 
   const addOns = [
     {
-      name: 'Additional Users',
-      description: 'Add more team members to your plan',
-      price: { monthly: 50, yearly: 500 }
-    },
+    name: 'AI Chatbot',
+    price: '$500/month',
+    description: 'Intelligent customer support chatbot'
+  },
     {
-      name: 'Priority Support',
-      description: 'Get faster response times and dedicated support',
-      price: { monthly: 200, yearly: 2000 }
-    },
+    name: 'Data Analytics Pro',
+    price: '$800/month',
+    description: 'Advanced business intelligence dashboard'
+  },
     {
-      name: 'Custom Development',
-      description: 'Bespoke solutions tailored to your needs',
-      price: { monthly: 1000, yearly: 10000 }
-    },
-    {
-      name: 'Training & Onboarding',
-      description: 'Comprehensive training for your team',
-      price: { monthly: 500, yearly: 5000 }
-    }
-  ]
-
-  const addOns = [
-    {
-      name: 'AI Chatbot',
-      price: '$500/month',
-      description: 'Intelligent customer support chatbot'
-    },
-    {
-      name: 'Data Analytics Pro',
-      price: '$800/month',
-      description: 'Advanced business intelligence dashboard'
-    },
-    {
-      name: 'Cybersecurity Suite',
-      price: '$1,200/month',
+    name: 'Cybersecurity Suite',
+    price: '$1,
+    200/month',
       description: 'Comprehensive security monitoring'
-    },
+  },
     {
-      name: 'Custom Development',
-      price: '$150/hour',
-      description: 'Tailored solutions for your business'
-    }
+    name: 'Custom Development',
+    price: '$150/hour',
+    description: 'Tailored solutions for your business'
+  }
   ];
 
   return (
@@ -88,12 +99,12 @@ const PricingPage: React.FC = () => {
               </span>
               <button
                 onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
-                className="mx-4 relative inline-flex h-6 w-11 items-center rounded-full bg-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-900"
+                className="mx-4 relative inline-flex h-6 w-11 items-center rounded-full bg-gray-600 transition-colors focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-900"
               >
                 <span
                   className={`${
                     billingCycle === 'yearly' ? 'translate-x-6' : 'translate-x-1'
-                  } inline-block h-4 w-4 transform rounded-full bg-white transition-transform`}
+                  }inline-block h-4 w-4 transform rounded-full bg-white transition-transform`}
                 />
               </button>
               <span className={`text-lg font-medium ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'}`}>
@@ -112,7 +123,7 @@ const PricingPage: React.FC = () => {
                 </div>
 
         {/* FAQ Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -164,7 +175,7 @@ const PricingPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Get Started?

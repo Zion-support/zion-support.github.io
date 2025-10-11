@@ -2,10 +2,12 @@
 import React from 'react';;
 import { Helmet; } from 'react-helmet-async';
     },
-    {;,
-icon: BarChart,;,
+    {
+    ;,
+    icon: BarChart,
+    ;,
 title: 'Advanced Analytics',
-    }
+  }
   ];
 ;
 const benefits = [;
@@ -15,7 +17,7 @@ return (;
     <>
       <Helmet>
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -36,7 +38,7 @@ Learn More
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -52,7 +54,7 @@ Learn More
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
               </button>
             </div>
