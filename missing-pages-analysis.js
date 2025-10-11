@@ -1,149 +1,89 @@
-// Analysis of missing pages based on navigation links
-
+// Analysis of missing pages and routes
 const navigationLinks = [
-  // From Header navigation
-  '/ai-services',
-  '/it-services', 
-  '/cloud-infrastructure',
-  '/cybersecurity',
-  '/services',
-  '/ai-marketing',
-  '/ai-automation',
-  '/ai-healthcare',
-  '/ai-fintech',
-  '/ai-content-generation',
-  '/ai-data-analytics',
-  '/quantum-computing',
-  '/autonomous-systems',
-  '/blockchain-web3',
-  '/iot-edge-computing',
-  '/robotics',
-  '/about',
-  '/team',
-  '/careers',
-  '/case-studies',
-  '/contact',
+  // AI Services
+  '/ai-analytics', '/ai-automation', '/ai-chatbot-builder', '/ai-cybersecurity',
+  '/ai-crm', '/ai-data-analytics', '/ai-healthcare', '/ai-financial-services',
+  '/ai-computer-vision', '/ai-voice-solutions', '/ai-ecommerce-solutions',
+  '/ai-hr-solutions', '/ai-content-generation', '/ai-workflow-automation',
+  '/ai-document-processing', '/ai-predictive-analytics', '/ai-edge-computing',
+  '/ai-video-analysis', '/ai-speech-synthesis', '/ai-recommendation-engine',
+  '/ai-sentiment-analysis', '/ai-chatbot-enterprise', '/ai-content-moderation',
+  '/ai-predictive-modeling', '/ai-document-intelligence', '/ai-conversation-analytics',
+  '/ai-supply-chain-ai', '/ai-healthcare-diagnostics', '/ai-financial-forecasting',
+  '/ai-iot-analytics', '/ai-conversational-ai', '/ai-automated-testing',
+  '/ai-knowledge-management', '/ai-customer-churn', '/ai-automated-reporting',
+  '/ai-voice-assistant', '/ai-content-generation-pro',
   
-  // From Footer links
-  '/privacy',
-  '/terms',
-  '/cookies',
-  '/pricing',
-  '/consultation',
-  '/docs',
-  '/api-docs',
-  '/support',
-  '/status'
-]
-const existingPages = [
-  '/pricing',
-  '/quantum-computing',
-  '/privacy',
-  '/robotics',
-  '/team',
-  '/services',
-  '/smart-cities',
-  '/security',
-  '/sitemap',
-  '/support',
-  '/status',
-  '/terms',
-  '/system-status',
-  '/smart-analytics',
-  '/it-services',
-  '/news',
-  '/cybersecurity-suite',
-  '/database-management',
-  '/micro-saas',
-  '/gdpr',
-  '/it-consulting',
-  '/expense-tracker',
-  '/managed-it',
-  '/iot-edge-computing',
-  '/contact',
-  '/cybersecurity',
-  '/docs',
-  '/it-support',
-  '/it-infrastructure-solutions',
-  '/cookies',
-  '/it-infrastructure',
-  '/consultation',
-  '/network-solutions',
-  '/ai-crm',
-  '/ai-music-composition',
-  '/blog',
-  '/ai-invoice-generator',
-  '/ai-chatbot-builder',
-  '/ai-business-intelligence',
-  '/ai-fashion-design',
-  '/blockchain',
-  '/ai-writing-assistant',
-  '/ai-workflow-automation',
-  '/cloud-migration',
-  '/cloud-infrastructure',
-  '/ai-image-recognition',
-  '/ai-services',
-  '/api-docs',
-  '/ai-voice-cloning',
-  '/ai-customer-support-bot',
-  '/ai-customer-service',
-  '/compliance',
-  '/ai-healthcare',
-  '/ai-fintech',
-  '/ai-social-media-manager',
-  '/ai-marketing',
-  '/ai-inventory-management',
-  '/ai-time-tracker',
-  '/ai-design-studio',
-  '/ai-data-visualization',
-  '/ai-expense-tracker',
-  '/ar-vr-solutions',
-  '/careers',
-  '/ai-financial-advisor',
-  '/case-studies',
-  '/ai-mobile-app-builder',
-  '/ai-healthcare-solutions',
-  '/ai-code-generation',
-  '/ai-sales-automation',
-  '/ai-automation',
-  '/ai-cybersecurity',
-  '/ai-analytics',
-  '/ai-content-generation',
-  '/ai-recommendation-engine',
-  '/ai-project-management',
-  '/ai-scheduler',
-  '/ai-hr-assistant',
-  '/ai-customer-support',
-  '/ai-predictive-analytics',
-  '/ai-video-generation',
-  '/ai-fitness-coach',
-  '/ai-analytics-dashboard',
-  '/ai-content-studio',
-  '/autonomous-systems',
-  '/ai-email-marketing',
-  '/ai-seo-optimizer',
-  '/ai-voice-processing',
-  '/ai-document-processor',
-  '/ai-data-analytics',
-  '/ai-cloud-infrastructure',
-  '/ai-enterprise-solutions',
-  '/ai-project-manager',
-  '/ai-3d-generation',
-  '/about'
-]
-// Find missing pages
-const missingPages = navigationLinks.filter(link => !existingPages.includes(link))
-console.log('Missing pages from navigation:')
-missingPages.forEach(page => console.log(`- ${page}`))
-// Find pages that exist but aren't in navigation
-const extraPages = existingPages.filter(page => !navigationLinks.includes(page))
-console.log('\nPages that exist but aren\'t in main navigation:')
-extraPages.forEach(page => console.log(`- ${page}`))
-// Check for broken links (pages that should exist based on navigation)
-const brokenLinks = missingPages.filter(page => {
-  // These are critical pages that should exist
-  const criticalPages = ['/blockchain-web3']
-  return criticalPages.includes(page)
-})
-console.log('\nCritical missing pages (broken links):')
-brokenLinks.forEach(page => console.log(`- ${page}`))
+  // IT Services
+  '/cloud-infrastructure', '/api-development', '/cybersecurity-solutions',
+  '/database-management', '/mobile-development', '/web-development',
+  '/devops-cicd', '/it-support', '/data-analytics-bi', '/custom-software',
+  '/network-infrastructure', '/it-asset-management', '/it-security-services',
+  '/it-project-management', '/cloud-native-development', '/ai-integration-services',
+  '/blockchain-development', '/iot-development', '/e-commerce-development',
+  '/api-development-advanced', '/data-engineering', '/cybersecurity-advanced',
+  '/cloud-migration-advanced', '/devops-advanced', '/machine-learning-ops',
+  '/enterprise-integration', '/performance-optimization', '/disaster-recovery-advanced',
+  '/compliance-automation', '/cloud-cost-optimization', '/security-automation',
+  '/data-visualization', '/workflow-automation', '/cloud-native-security',
+  
+  // Micro SAAS
+  '/zion-analytics-pro', '/zion-chat-ai', '/zion-security-shield',
+  '/zion-cloud-vault', '/zion-content-studio', '/zion-crm-intelligence',
+  '/zion-data-sync', '/zion-lead-magnet', '/zion-project-master',
+  '/zion-email-automation', '/zion-inventory-smart', '/zion-invoice-genius',
+  '/zion-workflow-automation', '/zion-performance-monitor', '/zion-compliance-manager',
+  '/zion-social-scheduler', '/zion-ai-video-editor', '/zion-ai-translator-pro',
+  '/zion-ai-code-reviewer', '/zion-customer-insights', '/zion-ai-email-assistant',
+  '/zion-ai-meeting-assistant', '/zion-ai-seo-optimizer', '/zion-ai-data-cleaner',
+  '/zion-ai-contract-analyzer', '/zion-ai-survey-builder', '/zion-ai-accounting-assistant',
+  '/zion-ai-recruitment-pro', '/zion-ai-content-moderation', '/zion-ai-predictive-maintenance',
+  '/zion-ai-energy-manager', '/zion-ai-supply-chain-optimizer', '/zion-ai-fraud-detector',
+  '/zion-ai-customer-service-pro', '/zion-ai-marketing-automation', '/zion-ai-document-ai',
+  
+  // Emerging Tech
+  '/5g-implementation', '/ai-3d-generation', '/ai-holographic-workspace',
+  '/ai-autonomous-systems', '/ai-blockchain-solutions', '/ai-edge-computing',
+  '/quantum-computing', '/ar-vr-solutions', '/iot-integration', '/machine-learning'
+];
+
+const existingRoutes = [
+  '/', '/about', '/contact', '/services', '/pricing', '/blog', '/case-studies',
+  '/careers', '/ai-services', '/it-services', '/micro-saas', '/tutorials',
+  '/consultation', '/demo', '/support', '/privacy', '/terms', '/cookies',
+  '/sitemap', '/ai-analytics', '/ai-automation', '/ai-chatbot-builder',
+  '/ai-cybersecurity', '/cloud-infrastructure', '/cybersecurity-solutions',
+  '/web-development', '/mobile-development', '/team'
+];
+
+// Find missing routes
+const missingRoutes = navigationLinks.filter(link => !existingRoutes.includes(link));
+
+console.log('Missing Routes:', missingRoutes);
+console.log('Total missing routes:', missingRoutes.length);
+
+// Categorize missing routes
+const missingAIServices = missingRoutes.filter(route => route.startsWith('/ai-'));
+const missingITServices = missingRoutes.filter(route => 
+  ['/api-development', '/database-management', '/devops-cicd', '/it-support',
+   '/data-analytics-bi', '/custom-software', '/network-infrastructure',
+   '/it-asset-management', '/it-security-services', '/it-project-management',
+   '/cloud-native-development', '/ai-integration-services', '/blockchain-development',
+   '/iot-development', '/e-commerce-development', '/api-development-advanced',
+   '/data-engineering', '/cybersecurity-advanced', '/cloud-migration-advanced',
+   '/devops-advanced', '/machine-learning-ops', '/enterprise-integration',
+   '/performance-optimization', '/disaster-recovery-advanced', '/compliance-automation',
+   '/cloud-cost-optimization', '/security-automation', '/data-visualization',
+   '/workflow-automation', '/cloud-native-security'].includes(route)
+);
+const missingMicroSAAS = missingRoutes.filter(route => route.startsWith('/zion-'));
+const missingEmergingTech = missingRoutes.filter(route => 
+  ['/5g-implementation', '/ai-3d-generation', '/ai-holographic-workspace',
+   '/ai-autonomous-systems', '/ai-blockchain-solutions', '/ai-edge-computing',
+   '/quantum-computing', '/ar-vr-solutions', '/iot-integration', '/machine-learning'].includes(route)
+);
+
+console.log('\nMissing AI Services:', missingAIServices.length);
+console.log('Missing IT Services:', missingITServices.length);
+console.log('Missing Micro SAAS:', missingMicroSAAS.length);
+console.log('Missing Emerging Tech:', missingEmergingTech.length);
