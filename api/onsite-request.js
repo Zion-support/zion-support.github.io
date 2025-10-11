@@ -132,5 +132,10 @@ module.exports = withSentry(handler);
     res.end(JSON.stringify({ error: 'Failed to save request' }))
   }
 }
+<<<<<<< HEAD
+module.exports = handler;
+
+=======
 module.exports = handler
+>>>>>>> origin/main
 >>>>>>> origin/main

@@ -1,5 +1,9 @@
+<<<<<<< HEAD
+export default {
+=======
 module.exports = {
   preset: 'ts-jest',
+>>>>>>> origin/main
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   moduleNameMapper: {
@@ -15,6 +19,8 @@ module.exports = {
   },
   transform: {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     '^.+\\.(ts|tsx)$': ['ts-jest', {
       tsconfig: 'tsconfig.json',
       useESM: true
@@ -25,6 +31,7 @@ module.exports = {
 =======
 
 >>>>>>> origin/main
+>>>>>>> origin/main
     '^.+\\.(ts|tsx|js|jsx)$': ['babel-jest', {
       presets: [
         ['@babel/preset-env', { targets: { node: 'current' } }],
@@ -34,7 +41,10 @@ module.exports = {
     }]
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/main
 >>>>>>> origin/main
 >>>>>>> origin/main
   },

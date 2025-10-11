@@ -121,12 +121,17 @@ const App: React.FC = () => {,
         <BrowserRouter>
           <div className="App">
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
             <PerformanceMonitor />
             <AccessibilityEnhancer />
             <Suspense fallback={<AppLoadingSpinner />}>
               <Routes>
                 {/* Main Pages */}
                 <Route path="/" element={<HomePage />} />
+<<<<<<< HEAD
+=======
 =======
             <PerformanceMonitor>
               <AccessibilityEnhancer />
@@ -337,6 +342,7 @@ const App: React.FC = () => {
                 {/* Main Pages */}
                 </Routes><Route path="/" element={<HomePage />} />
 >>>>>>> origin/main
+>>>>>>> origin/main
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/contact" element={<ContactPage />} />
                 <Route path="/services" element={<ServicesPage />} />
@@ -351,6 +357,10 @@ const App: React.FC = () => {
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/main
 >>>>>>> origin/main
                 {/* AI Services */}
                 <Route path="/ai-services" element={<AiServicesPage />} />
@@ -365,6 +375,9 @@ const App: React.FC = () => {
                 <Route path="/ai-customer-support" element={<AiCustomerSupportPage />} />
                 <Route path="/ai-sales-automation" element={<AiSalesAutomationPage />} />
                 <Route path="/ai-data-visualization" element={<AiDataVisualizationPage />} />
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -384,12 +397,16 @@ const App: React.FC = () => {
                 <Route path="/ai-voice-solutions" element={<AiVoiceSolutionsPage />} />
                 <Route path="/ai-hr-solutions" element={<AiHrSolutionsPage />} />
 >>>>>>> origin/main
+>>>>>>> origin/main
                 {/* IT Services */}
                 <Route path="/it-services" element={<ItServicesPage />} />
                 <Route path="/it-infrastructure" element={<ItInfrastructurePage />} />
                 <Route path="/it-support" element={<ItSupportPage />} />
                 <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
                 <Route path="/cybersecurity" element={<CybersecurityPage />} />
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -409,6 +426,7 @@ const App: React.FC = () => {
                 <Route path="/data-analytics-bi" element={<DataAnalyticsBiPage />} />
                 <Route path="/custom-software" element={<CustomSoftwarePage2 />} />
 >>>>>>> origin/main
+>>>>>>> origin/main
                 {/* Emerging Technologies */}
                 <Route path="/blockchain" element={<BlockchainPage />} />
                 <Route path="/quantum-computing" element={<QuantumComputingPage />} />
@@ -416,10 +434,15 @@ const App: React.FC = () => {
                 <Route path="/ar-vr-solutions" element={<ARVRSolutionsPage />} />
                 <Route path="/autonomous-systems" element={<AutonomousSystemsPage />} />
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
 
                 {/* Micro SaaS */}
                 <Route path="/micro-saas" element={<MicroSaasPage />} />
 
+<<<<<<< HEAD
+=======
 =======
                 {/* Additional Emerging Technologies */}
                 <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
@@ -431,12 +454,15 @@ const App: React.FC = () => {
                 {/* Micro SaaS */}
                 <Route path="/micro-saas" element={<MicroSaasPage />} />
 >>>>>>> origin/main
+>>>>>>> origin/main
                 {/* Support Pages */}
                 <Route path="/docs" element={<DocsPage />} />
                 <Route path="/api-docs" element={<ApiDocsPage />} />
                 <Route path="/support" element={<SupportPage />} />
                 <Route path="/status" element={<StatusPage />} />
                 <Route path="/consultation" element={<ConsultationPage />} />
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
                 {/* Additional Important Pages */}
@@ -450,6 +476,7 @@ const App: React.FC = () => {
                 <Route path="/enterprise" element={<EnterprisePage />} />
                 <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
                 <Route path="/edge-computing" element={<EdgeComputingPage />} />
+>>>>>>> origin/main
 >>>>>>> origin/main
 >>>>>>> origin/main
               </Routes>
