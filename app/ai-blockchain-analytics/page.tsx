@@ -1,33 +1,33 @@
 'use client'
 import React from 'react';
-import {Helmet;} from 'react-helmet-async'
+import { Helmet } from 'react-helmet-async'
 import {ArrowRight;, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const PagePage: React.FC = () => {
 const features = [
-    {;,
+    {
 }
-icon: Brain},;,
-title: 'AI-Powered Solutions',;,
-description: 'Advanced artificial intelligence technology to transform your business operations.',;,
+icon: Brain},
+title: 'AI-Powered Solutions',
+description: 'Advanced artificial intelligence technology to transform your business operations.',
 benefits: ['Machine learning', 'Natural language processing', 'Predictive analytics', 'Automated insights']
     },
-    {;,
-icon: BarChart,;,
-title: 'Advanced Analytics',;,
-description: 'Comprehensive analytics dashboard with real-time data visualization.',;,
+    {
+icon: BarChart,
+title: 'Advanced Analytics',
+description: 'Comprehensive analytics dashboard with real-time data visualization.',
 benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']},
-    {;,
-icon: TrendingUp,;,
-title: 'Performance Optimization',;,
-description: 'AI-powered insights to optimize your business performance.',;,
+    {
+icon: TrendingUp,
+title: 'Performance Optimization',
+description: 'AI-powered insights to optimize your business performance.',
 benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']},
-    {;,
-icon: Target,;,
-title: 'Precision Targeting',;,
-description: 'Target specific goals and objectives with precision.',;,
+    {
+icon: Target,
+title: 'Precision Targeting',
+description: 'Target specific goals and objectives with precision.',
 benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']}
   ]
 
@@ -41,8 +41,7 @@ const benefits = [
   ]
 
 return (
-    <>
-
+    
       <Helmet>
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Advanced page solutions powered by artificial intelligence and cutting-edge technology." />
@@ -87,7 +86,7 @@ Discover our comprehensive page solutions designed to transform your business wi
                         {benefit}
                       </li>
                     )
-    </>
+
   )
                   </ul>
                 </div>
@@ -133,7 +132,7 @@ Start Free Trial
       </div>
       
       <Footer />
-    </>
+
   )
 }
               </Footer>

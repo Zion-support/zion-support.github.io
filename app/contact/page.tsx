@@ -1,15 +1,15 @@
 import React;, {useState} from 'react'
-import {Helmet;} from 'react-helmet-async'
+import { Helmet } from 'react-helmet-async'
 import {Phone;, Mail, MapPin, Clock, Send} from 'lucide-react'
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 const ContactPage: React.FC = () => {
-const [formData, setFormData] = useState({;,
-name: '',;,
-email: '',;,
-company: '',;,
-phone: '',;,
-service: '',;,
+const [formData, setFormData] = useState({
+name: '',
+email: '',
+company: '',
+phone: '',
+service: '',
 message: ''
 }
   })
@@ -28,25 +28,25 @@ console.log('Form submitted:', formData);}
   }
 
 const contactInfo = [
-    {;,
-icon: Phone,;,
-title: 'Phone',;,
-value: '+1 (555) 123-4567',;,
+    {
+icon: Phone,
+title: 'Phone',
+value: '+1 (555) 123-4567',
 description: 'Mon-Fri 9AM-6PM EST'},
-    {;,
-icon: Mail,;,
-title: 'Email',;,
-value: 'info@ziontechgroup.com',;,
+    {
+icon: Mail,
+title: 'Email',
+value: 'info@ziontechgroup.com',
 description: 'We\'ll respond within 24 hours'},
-    {;,
-icon: MapPin,;,
-title: 'Address',;,
-value: '123 Tech Street, Silicon Valley, CA 94000',;,
+    {
+icon: MapPin,
+title: 'Address',
+value: '123 Tech Street, Silicon Valley, CA 94000',
 description: 'Visit our headquarters'},
-    {;,
-icon: Clock,;,
-title: 'Business Hours',;,
-value: 'Monday - Friday',;,
+    {
+icon: Clock,
+title: 'Business Hours',
+value: 'Monday - Friday',
 description: '9:00 AM - 6:00 PM EST'}
   ]
 const services = [
@@ -60,8 +60,7 @@ const services = [
     'Other'
   ]
 return (
-    <>
-
+    
       <Helmet>
         <title>Contact Us - Zion Tech Group | AI & IT Solutions</title>
         <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact our team for consultations, support, and project inquiries." />
@@ -101,7 +100,7 @@ return (
                     <p className="text-cyan-400 mb-2">{info.value}</p>
                     <p className="text-gray-300 text-sm">{info.description}</p>
                   </div>
-    </>
+
   );)}
             </div>
           </div>
@@ -285,13 +284,8 @@ Why Choose Us?
       </div>
       
       <Footer />
-    </>
+
   )
 }
 
 export default ContactPage
-          </Footer>
-        </Send>
-      </Icon>
-    </Navigation>
-  </HTMLInputElement>

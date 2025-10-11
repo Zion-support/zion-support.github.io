@@ -6,7 +6,7 @@ import {Helmet} from 'react-helmet-async'
   const benefits = [
   ]
   return (
-    <>
+    
 <Helmet>
       </Helmet>
       <Navigation />
@@ -25,7 +25,7 @@ import {Helmet} from 'react-helmet-async'
         {/* Benefits Section */}
                 </div>
               )
-    </>
+
   )
             </div>
           </div>
@@ -39,7 +39,7 @@ import {Helmet} from 'react-helmet-async'
       </div>
       
       <Footer />
-    </>
+
   )
 }
     </Footer>

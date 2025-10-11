@@ -1,4 +1,3 @@
-
 const EnterpriseSolutionsPage: React.FC = () => {
   const features = [
     {
@@ -29,7 +28,7 @@ const EnterpriseSolutionsPage: React.FC = () => {
     'Seamless integration with existing systems'
   ]
   return (
-    <>
+    
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       
@@ -43,7 +42,7 @@ const EnterpriseSolutionsPage: React.FC = () => {
               </p>
                 </div>
               )
-    </>
+
   )
             </div>
           </div>
@@ -64,4 +63,3 @@ const EnterpriseSolutionsPage: React.FC = () => {
   )
 }
 export default EnterpriseSolutionsPage
-  </Navigation>

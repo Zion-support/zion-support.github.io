@@ -50,7 +50,7 @@ const Navigation: React.FC = () => {
   }
   const toggleDropdown = (dropdown: string) => {setActiveDropdown(activeDropdown === dropdown ? null : dropdown);}
   return (
-    <>
+    
 <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur-sm border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
@@ -165,7 +165,7 @@ const Navigation: React.FC = () => {
         )}
       </div>
     </nav>
-    </>
+
   )
 }
 

@@ -1,23 +1,23 @@
 import React from 'react';
-import {Helmet;} from 'react-helmet-async'
+import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const ITServicesPage: React.FC = () => {
 const services = [
-    {;,
+    {
 }
-id: 1},;,
-title: 'Cloud Infrastructure',;,
-description: 'Scalable and secure cloud solutions for your business needs.',;,
+id: 1},
+title: 'Cloud Infrastructure',
+description: 'Scalable and secure cloud solutions for your business needs.',
 icon: Cloud,
     },
-    {;,
-id: 2,;,
-title: 'Cybersecurity',;,
-description: 'Comprehensive security solutions to protect your digital assets.',;,
-icon: Shield,;,
-features: ['Security Audit', 'Penetration Testing', 'Compliance', 'Incident Response'],;,
+    {
+id: 2,
+title: 'Cybersecurity',
+description: 'Comprehensive security solutions to protect your digital assets.',
+icon: Shield,
+features: ['Security Audit', 'Penetration Testing', 'Compliance', 'Incident Response'],
 price: 'From $1,000/month'},
     {
     }
@@ -34,8 +34,7 @@ const filteredServices = services.filter(service =>;
 selectedCategory === 'all' || service.category === selectedCategory
   )
 return (
-    <>
-
+    
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
@@ -46,7 +45,7 @@ return (
         </section>
 
               )
-    </>
+
   )
             </div>
           </div>
@@ -89,7 +88,7 @@ Ready to Optimize Your IT Infrastructure?
       </div>
       
       <Footer />
-    </>
+
   )
 }
     </Footer>

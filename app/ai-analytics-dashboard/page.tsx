@@ -1,6 +1,6 @@
 'use client'
 import React from 'react';
-import {Helmet;} from 'react-helmet-async'
+import { Helmet } from 'react-helmet-async'
       </Helmet>
       <Navigation />
       
@@ -48,7 +48,7 @@ Start Free Trial
       </div>
       
       <Footer />
-    </>
+
   )
 }
         </Footer>

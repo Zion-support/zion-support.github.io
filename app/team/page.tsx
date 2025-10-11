@@ -1,4 +1,3 @@
-
 const PagePage: React.FC = () => {return (
             </div>
           </div>
@@ -6,7 +5,6 @@ const PagePage: React.FC = () => {return (
       </div>
       
       <Footer />
-    </>
+
   );}
 export default PagePage
-  </Footer>

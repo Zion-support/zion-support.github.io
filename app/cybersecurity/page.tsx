@@ -8,7 +8,7 @@
           </div>
         </section>
       <Footer />
-    </>
+
   )
 }
   </Footer>

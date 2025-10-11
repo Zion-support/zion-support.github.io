@@ -5,8 +5,7 @@ import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Targ
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
       <Footer />
-    </>
+
   )
 }
 export default PagePage
-  </Footer>

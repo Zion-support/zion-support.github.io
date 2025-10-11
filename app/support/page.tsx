@@ -34,7 +34,7 @@ const PagePage: React.FC = () => {
     'Seamless integration with existing systems'
   ]
   return (
-    <>
+    
 <Helmet>
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Advanced page solutions powered by artificial intelligence and cutting-edge technology." />
@@ -77,7 +77,7 @@ const PagePage: React.FC = () => {
                         {benefit}
                       </li>
                     )
-    </>
+
   )
                   </ul>
                 </div>
@@ -127,7 +127,7 @@ const PagePage: React.FC = () => {
       </div>
       
       <Footer />
-    </>
+
   )
 }
           </Footer>

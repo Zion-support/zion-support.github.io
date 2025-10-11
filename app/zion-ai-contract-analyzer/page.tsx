@@ -5,7 +5,7 @@ import Footer from '../components/Footer'
 import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart} from 'lucide-react'
 const PagePage: React.FC = () => {
   return (
-    <>
+    
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
@@ -43,10 +43,7 @@ const PagePage: React.FC = () => {
       </div>
       
       <Footer />
-    </>
-    </>
+
+
   );
 export default PagePage
-      </Footer>
-    </ArrowRight>
-  </Navigation>

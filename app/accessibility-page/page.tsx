@@ -12,26 +12,36 @@ const AccessibilityPage: React.FC = () => {
       description: 'Comprehensive solutions for users with visual impairments and color vision deficiencies.',
       benefits: ['Screen reader compatibility', 'High contrast modes', 'Color blind support', 'Text scaling']
     },
-    {icon: Ear,
+    {
+      icon: Ear,
       title: 'Audio Accessibility',
       description: 'Enhanced audio experiences for users with hearing impairments.',
-      benefits: ['Closed captions', 'Sign language support', 'Audio descriptions', 'Visual alerts']},
-    {icon: Hand,
+      benefits: ['Closed captions', 'Sign language support', 'Audio descriptions', 'Visual alerts']
+    },
+    {
+      icon: Hand,
       title: 'Motor Accessibility',
       description: 'Support for users with motor disabilities and mobility challenges.',
-      benefits: ['Keyboard navigation', 'Voice control', 'Switch access', 'Gesture recognition']},
-    {icon: Brain,
+      benefits: ['Keyboard navigation', 'Voice control', 'Switch access', 'Gesture recognition']
+    },
+    {
+      icon: Brain,
       title: 'Cognitive Accessibility',
       description: 'Features designed to support users with cognitive and learning disabilities.',
-      benefits: ['Simplified interfaces', 'Clear instructions', 'Consistent navigation', 'Error prevention']},
-    {icon: Shield,
+      benefits: ['Simplified interfaces', 'Clear instructions', 'Consistent navigation', 'Error prevention']
+    },
+    {
+      icon: Shield,
       title: 'Compliance & Standards',
       description: 'Full compliance with WCAG 2.1 AA standards and accessibility regulations.',
-      benefits: ['WCAG 2.1 AA compliance', 'Section 508 compliance', 'ADA compliance', 'International standards']},
-    {icon: Zap,
+      benefits: ['WCAG 2.1 AA compliance', 'Section 508 compliance', 'ADA compliance', 'International standards']
+    },
+    {
+      icon: Zap,
       title: 'Performance Optimization',
       description: 'Fast, efficient accessibility features that don\'t compromise performance.',
-      benefits: ['Optimized loading', 'Efficient rendering', 'Minimal overhead', 'Fast interactions']}
+      benefits: ['Optimized loading', 'Efficient rendering', 'Minimal overhead', 'Fast interactions']
+    }
   ]
   const services = [
     {title: 'Accessibility Audits',
@@ -73,7 +83,7 @@ const AccessibilityPage: React.FC = () => {
   ]
   return (
     <>
-<Helmet>
+      <Helmet>
         <title>Accessibility Services - Zion Tech Group</title>
         <meta name="description" content="Make your digital products accessible to everyone. Comprehensive accessibility services including audits, implementation, and ongoing support." />
       </Helmet>
@@ -126,9 +136,7 @@ const AccessibilityPage: React.FC = () => {
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                         {benefit}
                       </li>
-                    )
-    </>
-  )
+                    ))}
                   </ul>
                 </div>
               ))}
@@ -262,14 +270,5 @@ const AccessibilityPage: React.FC = () => {
     </>
   )
 }
+
 export default AccessibilityPage
-                    </Footer>
-                  </ArrowRight>
-                </Icon>
-              </Accessibility>
-            </CheckCircle>
-          </div>
-        </CheckCircle>
-      </CheckCircle>
-    </ArrowRight>
-  </Navigation>

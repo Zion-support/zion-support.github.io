@@ -27,7 +27,7 @@ import React from 'react'
       </div>
       
       <Footer />
-    </>
+
   )
 }
     </Footer>

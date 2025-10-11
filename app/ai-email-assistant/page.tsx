@@ -22,7 +22,7 @@ const PagePage: React.FC = () => {
     'Seamless integration with existing systems'
   ]
   return (
-    <>
+    
 </div>
           </div>
         </section>
@@ -49,7 +49,7 @@ const PagePage: React.FC = () => {
                         {benefit}
                       </li>
                     )
-    </>
+
   )
                   </ul>
                 </div>
@@ -99,7 +99,7 @@ const PagePage: React.FC = () => {
       </div>
       
       <Footer />
-    </>
+
   )
 }
         </Footer>

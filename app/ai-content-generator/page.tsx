@@ -98,11 +98,7 @@ const PagePage: React.FC = () => {
       </div>
       
       <Footer />
-    </>
+
   )
 }
 export default PagePage
-        </Footer>
-      </ArrowRight>
-    </Zap>
-  </CheckCircle>

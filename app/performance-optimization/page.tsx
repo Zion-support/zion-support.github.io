@@ -34,7 +34,7 @@ const PerformanceOptimizationPage: React.FC = () => {
     'Expert support'
   ]
   return (
-    <>
+    
 <Helmet>
         <title>Page Title - Zion Tech Group</title>
         <meta name="description" content="Description of the page and its benefits." />
@@ -94,7 +94,7 @@ const PerformanceOptimizationPage: React.FC = () => {
                           {benefit}
                         </li>
                       )
-    </>
+
   )
                     </ul>
                   )}
@@ -153,11 +153,7 @@ const PerformanceOptimizationPage: React.FC = () => {
       </main>
 
       <Footer />
-    </>
+
   )
 }
 export default PerformanceOptimizationPage
-        </Footer>
-      </CheckCircle>
-    </CheckCircle>
-  </Navigation>

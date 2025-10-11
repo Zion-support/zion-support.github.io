@@ -92,7 +92,7 @@ const AI3DGenerationPage: React.FC = () => {
       popular: false}
   ]
   return (
-    <>
+    
 <Helmet>
         <title>AI 3D Generation Services - Zion Tech Group</title>
         <meta name="description" content="Transform your ideas into stunning 3D models with our AI-powered 3D generation services. Fast, accurate, and professional results." />
@@ -147,7 +147,7 @@ const AI3DGenerationPage: React.FC = () => {
                         {benefit}
                       </li>
                     )
-    </>
+
   )
                   </ul>
                 </div>
@@ -315,19 +315,10 @@ const AI3DGenerationPage: React.FC = () => {
       </main>
 
       <Footer />
-    </>
+
   )
 }
 export default AI3DGenerationPage
-                        </Footer>
-                      </ArrowRight>
-                    </CheckCircle>
-                  </CheckCircle>
-                </Icon>
-              </CheckCircle>
-            </Icon>
-          </CheckCircle>
+
         </div>
       </section>
-    </ArrowRight>
-  </Navigation>

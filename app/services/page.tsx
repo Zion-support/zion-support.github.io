@@ -24,7 +24,7 @@ const ServicesPage: React.FC = () => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
     return matchesSearch && matchesCategory;})
   return (
-    <>
+    
 <Helmet>
         <title>Services - Zion Tech Group | AI and IT Solutions</title>
         <meta name="description" content="Discover our comprehensive range of AI and IT services designed to transform your business. From AI solutions to cloud services and data analytics." />
@@ -69,9 +69,7 @@ const ServicesPage: React.FC = () => {
       </div>
       
       <Footer />
-    </>
-    </>
+
+
   );
 export default ServicesPage
-    </Footer>
-  </Navigation>

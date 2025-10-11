@@ -13,7 +13,7 @@ import React from 'react'
           </div>
         </section>
       <Footer />
-    </>
+
   )
 }
   </Footer>

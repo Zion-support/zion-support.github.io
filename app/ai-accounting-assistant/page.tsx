@@ -92,7 +92,7 @@ const AIAccountingAssistantPage: React.FC = () => {
       popular: false}
   ]
   return (
-    <>
+    
 <Helmet>
         <title>AI Accounting Assistant - Zion Tech Group</title>
         <meta name="description" content="Streamline your accounting with our AI-powered assistant. Automated bookkeeping, financial analytics, and compliance management." />
@@ -147,7 +147,7 @@ const AIAccountingAssistantPage: React.FC = () => {
                         {benefit}
                       </li>
                     )
-    </>
+
   )
                   </ul>
                 </div>
@@ -314,20 +314,11 @@ const AIAccountingAssistantPage: React.FC = () => {
       </main>
 
       <Footer />
-    </>
+
   )
 }
 export default AIAccountingAssistantPage
-                          </Footer>
-                        </ArrowRight>
-                      </CheckCircle>
-                    </CheckCircle>
-                  </Icon>
-                </CheckCircle>
-              </Icon>
-            </CheckCircle>
-          </div>
+
+        </div>
         </div>
       </section>
-    </ArrowRight>
-  </Navigation>

@@ -17,8 +17,7 @@ const benefits = [
   ]
 
 return (
-    <>
-
+    
       <Helmet>
         <title>Page Title - Zion Tech Group</title>
         <meta name="description" content="Description of the page and its benefits." />
@@ -77,7 +76,7 @@ Learn More
                   {feature.benefits && (
                     <ul className="space-y-2">
                       {feature.benefits.map((benefit
-    </>
+
   );, idx) => (
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                           {benefit}

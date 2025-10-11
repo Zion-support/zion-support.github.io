@@ -25,7 +25,7 @@ const CookiesPage: React.FC = () => {
       examples: ['Ad targeting', 'Campaign tracking', 'Conversion tracking']}
   ]
   return (
-    <>
+    
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       
@@ -58,7 +58,7 @@ const CookiesPage: React.FC = () => {
                     {type.examples.map((example, exampleIndex) => (
                       <li key={exampleIndex}>• {example}</li>
                     )
-    </>
+
   )
                   </ul>
                 </div>
@@ -144,5 +144,3 @@ const CookiesPage: React.FC = () => {
   )
 }
 export default CookiesPage
-    </Footer>
-  </Navigation>

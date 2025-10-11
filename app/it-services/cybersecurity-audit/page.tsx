@@ -1,4 +1,4 @@
-            </div>
+</div>
           </div>
         </section>
 
@@ -22,9 +22,7 @@
       </div>
       
       <Footer />
-    </>
+
   )
 }
 export default PagePage
-    </Footer>
-  </ArrowRight>

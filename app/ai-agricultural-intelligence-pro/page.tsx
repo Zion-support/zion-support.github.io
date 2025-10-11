@@ -1,18 +1,25 @@
 'use client'
 import React from 'react';
-import {Helmet;} from 'react-helmet-async'
-    },
-    {;,
-icon: BarChart,;,
-title: 'Advanced Analytics',}
-  ]
+import { Helmet } from 'react-helmet-async'
+import { BarChart } from 'lucide-react'
+
+const features = [
+  {
+    icon: BarChart,
+    title: 'Advanced Analytics'
+  }
+]
 
 const benefits = [
-  ]
+  'Increased crop yield by 30%',
+  'Reduced water usage by 25%',
+  'Predictive pest management',
+  'Real-time soil monitoring'
+]
 
-return (
+const AgriculturalIntelligenceProPage = () => {
+  return (
     <>
-
       <Helmet>
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
@@ -47,7 +54,7 @@ Learn More
                   <p className="text-gray-300">{benefit}</p>
                 </div>
               )
-    </>
+
   )
             </div>
           </div>
@@ -66,5 +73,5 @@ Learn More
     </>
   )
 }
-    </Footer>
-  </ArrowRight>
+
+export default AgriculturalIntelligenceProPage

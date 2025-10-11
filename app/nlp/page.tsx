@@ -27,9 +27,7 @@ import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Targ
       </div>
       
       <Footer />
-    </>
+
   )
 }
 export default PagePage
-    </Footer>
-  </ArrowRight>

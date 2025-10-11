@@ -16,7 +16,7 @@ const PagePage: React.FC = () => {
   const benefits = [
   ]
   return (
-    <>
+    
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
@@ -57,7 +57,7 @@ const PagePage: React.FC = () => {
                         {benefit}
                       </li>
                     )
-    </>
+
   )
                   </ul>
                 </div>
@@ -99,7 +99,7 @@ const PagePage: React.FC = () => {
           </div>
         </section>
       <Footer />
-    </>
+
   )
 }
           </Footer>

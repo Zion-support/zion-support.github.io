@@ -34,7 +34,7 @@ Proven results that drive business growth
           <div className="max-w-4xl mx-auto text-center">
   </div>
       <Footer />
-    </>
+
   )
 }
       </Footer>

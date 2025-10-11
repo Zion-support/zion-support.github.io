@@ -2,7 +2,7 @@
 import React from 'react'
 import {Helmet} from 'react-helmet-async'
 const SitemapXMLPage: React.FC = () => {return (
-    <>
+    
 <&gt
       <Helmet&gt
         <title&gt;Sitemap | Zion Tech Group</title&gt
@@ -32,6 +32,6 @@ const SitemapXMLPage: React.FC = () => {return (
         </div&gt
       </div&gt
     </&gt
-    </>
+
   );
 export default SitemapXMLPage

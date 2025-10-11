@@ -66,7 +66,7 @@ const PricingPage: React.FC = () => {
       description: 'Tailored solutions for your business'}
   ]
   return (
-    <>
+    
 </p>
             
             {/* Billing Toggle */}
@@ -76,7 +76,7 @@ const PricingPage: React.FC = () => {
               </span>
               <button
                 onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly'
-    </>
+
   )
                 className="mx-4 relative inline-flex h-6 w-11 items-center rounded-full bg-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-900"
               >
@@ -175,7 +175,7 @@ const PricingPage: React.FC = () => {
       </div>
       
       <Footer />
-    </>
+
   )
 }
 

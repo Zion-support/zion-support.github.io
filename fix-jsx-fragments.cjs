@@ -4,44 +4,52 @@ const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
 
-// Function to fix common syntax errors
-function fixSyntaxErrors(content) {
+// Function to fix JSX fragment issues
+function fixJSXFragments(content) {
   let fixed = content;
   
-  // Fix malformed import statements
-  fixed = fixed.replace(/import\s*{\s*Helmet;\s*}\s*from\s*['"]react-helmet-async['"]/g, 
-    "import { Helmet } from 'react-helmet-async'");
-  
-  // Fix malformed object syntax like {;,
-  fixed = fixed.replace(/{\s*;\s*,/g, '{');
-  fixed = fixed.replace(/,\s*;\s*}/g, '}');
-  fixed = fixed.replace(/,\s*;\s*,/g, ',');
-  
-  // Fix malformed icon declarations
-  fixed = fixed.replace(/icon:\s*(\w+),\s*;\s*,/g, 'icon: $1,');
-  
-  // Remove orphaned JSX elements after export default
-  const exportMatch = fixed.match(/export\s+default\s+\w+$/m);
-  if (exportMatch) {
-    const exportIndex = exportMatch.index + exportMatch[0].length;
-    const afterExport = fixed.substring(exportIndex);
+  // Fix missing React fragments around JSX elements
+  // Look for return statements followed by JSX without fragments
+  const returnMatch = fixed.match(/return\s*\(\s*\n\s*<[^>]+>/);
+  if (returnMatch) {
+    // Check if there's already a fragment
+    const afterReturn = fixed.substring(returnMatch.index + returnMatch[0].length);
+    const hasFragment = afterReturn.match(/^\s*<[^>]*>\s*$/m) || afterReturn.match(/^\s*<[^>]*>\s*<[^>]+>/m);
     
-    // Check if there are orphaned JSX elements after export
-    if (afterExport.trim().match(/^\s*[<]/)) {
-      // Remove everything after the export statement
-      fixed = fixed.substring(0, exportIndex).trim() + '\n';
+    if (!hasFragment) {
+      // Add React fragment
+      fixed = fixed.replace(/return\s*\(\s*\n\s*</, 'return (\n    <>\n      <');
+      
+      // Find the end of the JSX and add closing fragment
+      const lastClosingTag = fixed.lastIndexOf('</');
+      if (lastClosingTag !== -1) {
+        const afterLastTag = fixed.substring(lastClosingTag);
+        const nextClosingParen = afterLastTag.indexOf(')');
+        if (nextClosingParen !== -1) {
+          const insertPos = lastClosingTag + afterLastTag.substring(0, nextClosingParen).lastIndexOf('>') + 1;
+          fixed = fixed.substring(0, insertPos) + '\n    </>\n  ' + fixed.substring(insertPos);
+        }
+      }
     }
   }
   
-  // Fix missing closing tags in JSX fragments
-  fixed = fixed.replace(/<>\s*$/gm, '');
-  fixed = fixed.replace(/^\s*<\/>\s*$/gm, '');
+  // Fix missing closing brackets for arrays
+  if (fixed.includes('const benefits = [') && !fixed.includes(']')) {
+    fixed = fixed.replace(/const benefits = \[\s*\]/, 'const benefits = []');
+  }
   
-  // Fix malformed JSX structure
-  fixed = fixed.replace(/\s*<>\s*$/gm, '');
-  fixed = fixed.replace(/^\s*<\/>\s*$/gm, '');
+  // Fix missing closing brackets for features array
+  if (fixed.includes('const features = [') && !fixed.includes(']')) {
+    fixed = fixed.replace(/const features = \[\s*{\s*icon:\s*(\w+),\s*title:\s*'([^']+)'\s*}\s*\]/, 
+      `const features = [
+  {
+    icon: $1,
+    title: '$2'
+  }
+]`);
+  }
   
-  // Fix missing closing div tags
+  // Fix missing closing tags
   const openDivs = (fixed.match(/<div[^>]*>/g) || []).length;
   const closeDivs = (fixed.match(/<\/div>/g) || []).length;
   
@@ -81,7 +89,7 @@ function fixSyntaxErrors(content) {
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixSyntaxErrors(content);
+    const fixed = fixJSXFragments(content);
     
     if (content !== fixed) {
       fs.writeFileSync(filePath, fixed, 'utf8');
@@ -117,4 +125,4 @@ if (require.main === module) {
   main();
 }
 
-module.exports = { fixSyntaxErrors, processFile };
+module.exports = { fixJSXFragments, processFile };

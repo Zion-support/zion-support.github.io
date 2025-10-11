@@ -7,7 +7,7 @@ interface RootLayoutProps {children: React.ReactNode;}
 
 const RootLayout: React.FC<RootLayoutProps> = ({children}) => {
   return (
-    <>
+    
 <html lang="en">
       <head>
         <Helmet>
@@ -26,9 +26,6 @@ const RootLayout: React.FC<RootLayoutProps> = ({children}) => {
         <Footer />
       </body>
     </html>
-    </>
+
   );
 export default RootLayout
-      </Footer>
-    </Navigation>
-  </RootLayoutProps>

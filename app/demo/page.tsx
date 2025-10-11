@@ -1,4 +1,3 @@
-
 const DemoPage: React.FC = () => {
 const [selectedDemo, setSelectedDemo] = useState(0)
 
@@ -48,10 +47,8 @@ Ready to See More?
       </div>
       
       <Footer />
-    </>
+
   )
 }
 
 export default DemoPage
-    </Footer>
-  </Navigation>

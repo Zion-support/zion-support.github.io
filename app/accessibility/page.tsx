@@ -66,7 +66,7 @@ const AccessibilityPage: React.FC = () => {
       icon: BarChart}
   ]
   return (
-    <>
+    
 <Helmet>
         <title>Accessibility Services - Zion Tech Group</title>
         <meta name="description" content="Make your digital products accessible to everyone. Comprehensive accessibility services including audits, implementation, and ongoing support." />
@@ -120,9 +120,7 @@ const AccessibilityPage: React.FC = () => {
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                         {benefit}
                       </li>
-                    )
-    </>
-  )
+                    ))}
                   </ul>
                 </div>
               ))}
@@ -200,13 +198,7 @@ const AccessibilityPage: React.FC = () => {
       </main>
 
       <Footer />
-    </>
+
   )
 }
 export default AccessibilityPage
-            </Footer>
-          </ArrowRight>
-        </CheckCircle>
-      </CheckCircle>
-    </ArrowRight>
-  </Navigation>
