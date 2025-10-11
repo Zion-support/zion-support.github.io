@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useCallback } from 'react'
 interface AccessibilitySettings {
   highContrast: boolean
   reducedMotion: boolean
@@ -87,10 +87,11 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     addLandmarks()
     addSkipLinks()
     enhanceFocusManagement()
-    const cleanup = addKeyboardNavigation()
-      const header = document.querySelector('header')
-      if (header && !header.getAttribute('role')) {
-        header.setAttribute('role', 'banner')}
+    addKeyboardNavigation();
+    const header = document.querySelector('header');
+    if (header && !header.getAttribute('role')) {
+      header.setAttribute('role', 'banner');
+    }
     // Check for user preferences
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches
@@ -124,7 +125,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       motionQuery.removeEventListener('change', handleMotionChange)
       contrastQuery.removeEventListener('change', handleContrastChange)
     }
-  }, [])
+  }, [settings, setupFocusManagement])
 
   const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
     const root = document.documentElement
@@ -180,7 +181,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
         }
       }
       modal.addEventListener('keydown', handleKeyDown)})}
-  const setupFocusManagement = () => {
+  const setupFocusManagement = useCallback(() => {
     // Add focus indicators
     const style = document.createElement('style')
     style.textContent = `
@@ -209,7 +210,9 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       trackEvent('focus_event', {
         category: 'accessibility',
         label: (e.target as HTMLElement).tagName
-      })})}
+      })});
+  }, []);
+
   const updateSettings = (newSettings: Partial<AccessibilitySettings>) => {
     const updatedSettings = { ...settings, ...newSettings }
     setSettings(updatedSettings)
@@ -223,7 +226,11 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     const context = {
       settings,
       updateSettings
-    }
-    (window as any).accessibilityContext = context}, [settings])
-  return <>{children}</>}
-export default EnhancedAccessibility
+    };
+    (window as { accessibilityContext: unknown }).accessibilityContext = context;
+  }, [settings, updateSettings]);
+  
+  return <>{children}</>;
+};
+
+export default EnhancedAccessibility;

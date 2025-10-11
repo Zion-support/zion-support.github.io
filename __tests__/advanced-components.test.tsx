@@ -249,5 +249,7 @@ describe('AdvancedPerformanceMonitor', () => {
         <MemoryRouter>
           <ThrowError shouldThrow={true} />
         </MemoryRouter>
-      )}).not.toThrow()
-    consoleSpy.mockRestore()})})
+      )}).not.toThrow();
+    consoleSpy.mockRestore();
+  });
+});
