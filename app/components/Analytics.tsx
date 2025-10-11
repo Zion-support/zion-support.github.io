@@ -1,10 +1,11 @@
 'use client'
-import React from 'react'
 import React, { useEffect } from 'react'
-interface AnalyticsProps {interface AnalyticsProps {enableGoogleAnalytics?: boolean
+
+interface AnalyticsProps {
+  enableGoogleAnalytics?: boolean
   enablePerformanceMonitoring?: boolean
   enableErrorTracking?: boolean
-  enableUserBehaviorTracking?: boolean}
+  enableUserBehaviorTracking?: boolean
 }
 const Analytics: React.FC<AnalyticsProps> = ({
   enableGoogleAnalytics = true,

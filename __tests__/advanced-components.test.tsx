@@ -21,6 +21,9 @@ const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
 // const helmetContext = {}
 describe('AdvancedErrorBoundary', () => {
   it('renders children when there is no error', () => {
+    // Test implementation
+  })
+})
 
 describe('Advanced Components', () => {
   it('renders test content without error', () => {
@@ -249,5 +252,8 @@ describe('AdvancedPerformanceMonitor', () => {
         <MemoryRouter>
           <ThrowError shouldThrow={true} />
         </MemoryRouter>
-      )}).not.toThrow()
-    consoleSpy.mockRestore()})})
+      )
+    }).not.toThrow()
+    consoleSpy.mockRestore()
+  })
+})
