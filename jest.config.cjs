@@ -43,9 +43,4 @@ module.exports = {
     'node_modules/(?!(.*\\.mjs$|lucide-react|framer-motion))'
   ],
   extensionsToTreatAsEsm: ['.ts', '.tsx'],
-  globals: {
-    'ts-jest': {
-      useESM: true
-    }
-  }
 }
