@@ -1,29 +1,18 @@
 #!/bin/bash
 
-# Script to resolve merge conflicts by keeping the main branch version
-# and removing conflict markers
+# Script to resolve all merge conflicts by removing conflict markers
+echo "Resolving merge conflicts in all files..."
 
-echo "Resolving all merge conflicts..."
-
-# Find all files with conflict markers
-conflict_files=$(git status --porcelain | grep "^UU" | cut -c4-)
-
-for file in $conflict_files; do
-    echo "Processing $file..."
-    
-    # Check if file exists
-    if [ -f "$file" ]; then
-        # Create a backup
-        cp "$file" "${file}.backup"
-        
-        # Use sed to resolve conflicts by keeping the main branch version (after =======)
-        # and removing conflict markers
-        sed -i '/^/d; /^
-        
-        echo "Resolved conflicts in $file"
-    else
-        echo "File $file not found, skipping..."
+# Find all files with merge conflicts and resolve them
+find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | while read file; do
+    if grep -q "<<<<<<< HEAD" "$file" 2>/dev/null; then
+        echo "Resolving conflicts in: $file"
+        # Create backup
+        cp "$file" "$file.backup"
+        # Remove conflict markers and keep HEAD version
+        sed '/<<<<<<< HEAD/,/>>>>>>> cursor/d' "$file" > "$file.tmp"
+        mv "$file.tmp" "$file"
     fi
 done
 
-echo "All conflicts resolved!"
+echo "Merge conflicts resolved!"
