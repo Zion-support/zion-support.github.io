@@ -5,7 +5,7 @@ import { Wifi, BarChart, Brain, Target, Zap, Shield, CheckCircle } from 'lucide-
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-export default function FiveGImplementationPage() {
+function FiveGImplementationPage() {
   const features = [
     {
       icon: <Wifi className="w-8 h-8" />,
@@ -111,4 +111,4 @@ const FiveGImplementationPage: React.FC = () => {
   );
 }
 
-}
+export default FiveGImplementationPage;
