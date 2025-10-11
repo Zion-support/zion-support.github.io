@@ -33,16 +33,82 @@ const MicroSaasPage: React.FC = () => {
     {
       id: '2',
       icon: Users,
-      title: 'AI-Powered CRM',
-      description: 'Intelligent customer relationship management with automated lead scoring and personalized interactions',
-      features: ['Lead management', 'Email automation', 'Sales forecasting', 'Integration APIs', 'Custom fields'],
-      price: '$149/month',
+      title: 'AI Project Manager',
+      description: 'Intelligent project management with AI-powered task prioritization and resource allocation',
+      features: ['AI task prioritization', 'Smart resource allocation', 'Risk prediction', 'Team collaboration', 'Real-time reporting'],
+      price: '$79/month',
       users: 'Up to 100 users',
-      popular: false,
-      category: 'CRM'
+      popular: true,
+      category: 'Project Management'
     },
     {
       id: '3',
+      icon: MessageSquare,
+      title: 'AI Invoice Generator',
+      description: 'Smart invoicing solution that automates billing, payment tracking, and client management',
+      features: ['AI-powered generation', 'Payment reminders', 'Multi-currency support', 'Tax automation', 'Client portal'],
+      price: '$49/month',
+      users: 'Unlimited invoices',
+      popular: true,
+      category: 'Finance'
+    },
+    {
+      id: '4',
+      icon: TrendingUp,
+      title: 'AI Social Scheduler',
+      description: 'AI-powered social media management that optimizes posting times and maximizes engagement',
+      features: ['Content suggestions', 'Optimal timing', 'Hashtag optimization', 'Engagement analytics', 'Multi-platform'],
+      price: '$79/month',
+      users: 'Up to 10 accounts',
+      popular: true,
+      category: 'Social Media'
+    },
+    {
+      id: '5',
+      icon: Shield,
+      title: 'AI Customer Insights',
+      description: 'Advanced customer analytics that predicts behavior and provides actionable insights',
+      features: ['Customer segmentation', 'Behavioral analysis', 'Churn prediction', 'Personalized recommendations', 'Journey mapping'],
+      price: '$299/month',
+      users: 'Up to 100K customers',
+      popular: false,
+      category: 'Analytics'
+    },
+    {
+      id: '6',
+      icon: Cloud,
+      title: 'AI Workflow Automation',
+      description: 'Intelligent process automation that streamlines business workflows and eliminates manual tasks',
+      features: ['Visual workflow builder', 'AI optimization', 'Multi-app integrations', 'Error handling', 'Real-time monitoring'],
+      price: '$149/month',
+      users: 'Unlimited workflows',
+      popular: true,
+      category: 'Automation'
+    },
+    {
+      id: '7',
+      icon: BarChart3,
+      title: 'AI Email Optimizer',
+      description: 'Email marketing optimization that maximizes open rates and click-through rates with AI',
+      features: ['Subject line optimization', 'Send time optimization', 'Content personalization', 'A/B testing', 'Engagement prediction'],
+      price: '$99/month',
+      users: 'Up to 100K emails',
+      popular: false,
+      category: 'Marketing'
+    },
+    {
+      id: '8',
+      icon: Users,
+      title: 'AI Data Analyzer',
+      description: 'Intelligent data analysis that automatically generates insights and detects trends',
+      features: ['AI-powered insights', 'Automated reports', 'Predictive analytics', 'Real-time dashboards', 'Trend detection'],
+      price: '$199/month',
+      users: 'Up to 10M data points',
+      popular: false,
+      category: 'Analytics'
+    },
+    {
+      id: '9',
       icon: Shield,
       title: 'Security Monitor',
       description: 'Comprehensive security monitoring and threat detection for small businesses',
@@ -53,7 +119,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Security'
     },
     {
-      id: '4',
+      id: '10',
       icon: Cloud,
       title: 'Cloud Backup Pro',
       description: 'Automated cloud backup and disaster recovery solution with AI-powered optimization',
@@ -64,7 +130,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Backup'
     },
     {
-      id: '5',
+      id: '11',
       icon: MessageSquare,
       title: 'AI Chat Support',
       description: 'Intelligent customer support chatbot with natural language processing and human handoff',
@@ -75,7 +141,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Support'
     },
     {
-      id: '6',
+      id: '12',
       icon: TrendingUp,
       title: 'Marketing Automation',
       description: 'AI-driven marketing automation platform for email campaigns and social media management',
@@ -87,7 +153,7 @@ const MicroSaasPage: React.FC = () => {
     }
   ];
 
-  const categories = ['All', 'Analytics', 'CRM', 'Security', 'Backup', 'Support', 'Marketing'];
+  const categories = ['All', 'Analytics', 'Project Management', 'Finance', 'Social Media', 'Automation', 'Marketing', 'Security', 'Backup', 'Support'];
 
   const benefits = [
     {
