@@ -3,17 +3,9 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const PagePage: React.FC = () => {
-  return (
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      
-      <Footer />
+const Page: React.FC = () => {}
+  return ()
+      <Footer /></Footer>
     </>
   );
 };
-

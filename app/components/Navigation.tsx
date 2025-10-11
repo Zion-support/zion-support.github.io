@@ -1,48 +1,7 @@
-'use client'
-import React, { useState, useEffect, useCallback } from 'react'
-import { Link } from 'react-router-dom'
-import { 
-  ChevronDown, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Menu, 
-  X, 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Code, 
-  BarChart, 
-  Users, 
-  Zap, 
-  ArrowRight, 
-  Cpu, 
-  Target, 
-  Globe, 
-  Database, 
-  Smartphone, 
-  Lock, 
-  TrendingUp, 
-  Settings, 
-  Calendar, 
-  CheckSquare, 
-  FileText, 
-  MessageCircle, 
-  Heart, 
-  DollarSign, 
-  Box, 
-  Monitor, 
-  Link as LinkIcon, 
-  Server, 
-  Package, 
-  Mic, 
-  Workflow, 
-  Eye, 
-  Wifi, 
-  MessageSquare, 
-  CheckCircle, 
-  ShoppingCart 
-} from 'lucide-react'
+'use client';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { ChevronDown, Menu, X, Brain } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -99,37 +58,14 @@ const Navigation: React.FC = () => {
               )}
             </div>
 
-            <div className="relative">
-              <button
-                onClick={() => toggleDropdown('solutions')}
-                className="flex items-center text-gray-300 hover:text-white transition-colors"
-              >
-                Solutions
-                <ChevronDown className="w-4 h-4 ml-1" />
-              </button>
-              {activeDropdown === 'solutions' && (
-                <div className="absolute top-full left-0 mt-2 w-48 bg-slate-800 rounded-lg shadow-lg border border-white/10">
-                  <Link to="/ai-solutions" className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-slate-700 rounded-t-lg">
-                    AI Solutions
-                  </Link>
-                  <Link to="/cloud-solutions" className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-slate-700">
-                    Cloud Solutions
-                  </Link>
-                  <Link to="/enterprise-solutions" className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-slate-700">
-                    Enterprise Solutions
-                  </Link>
-                </div>
-              )}
-            </div>
-
             <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
               About
             </Link>
             <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
               Contact
             </Link>
-            <Link to="/demo" className="bg-cyan-500 text-white px-4 py-2 rounded-lg hover:bg-cyan-600 transition-colors">
-              Demo
+            <Link to="/pricing" className="text-gray-300 hover:text-white transition-colors">
+              Pricing
             </Link>
           </div>
 
@@ -147,24 +83,21 @@ const Navigation: React.FC = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-800 rounded-lg mt-2">
-              <Link to="/" className="block px-3 py-2 text-gray-300 hover:text-white rounded-md">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800 rounded-lg mt-2">
+              <Link to="/" className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-700 rounded-md">
                 Home
               </Link>
-              <Link to="/services" className="block px-3 py-2 text-gray-300 hover:text-white rounded-md">
+              <Link to="/services" className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-700 rounded-md">
                 Services
               </Link>
-              <Link to="/solutions" className="block px-3 py-2 text-gray-300 hover:text-white rounded-md">
-                Solutions
-              </Link>
-              <Link to="/about" className="block px-3 py-2 text-gray-300 hover:text-white rounded-md">
+              <Link to="/about" className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-700 rounded-md">
                 About
               </Link>
-              <Link to="/contact" className="block px-3 py-2 text-gray-300 hover:text-white rounded-md">
+              <Link to="/contact" className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-700 rounded-md">
                 Contact
               </Link>
-              <Link to="/demo" className="block px-3 py-2 bg-cyan-500 text-white rounded-md hover:bg-cyan-600">
-                Demo
+              <Link to="/pricing" className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-700 rounded-md">
+                Pricing
               </Link>
             </div>
           </div>

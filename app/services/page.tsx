@@ -1,20 +1,22 @@
 
-const ServicesPage: React.FC = () => {
+const ServicesPage: React.FC = () => {}
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const services = [
-    {
-      id: 1,
-      title: 'AI Solutions',
+  const services = [;
+    {}
+      id: 1
+      titl,
+      e: 'AI Solutions'
     },
-    {
-      id: 2,
-      title: 'Cloud Services',
+    {}
+      id: 2
+      titl,
+      e: 'Cloud Services'
     }
   ];
 
-  const categories = [
+  const categories = [;
     { value: 'all', label: 'All Services' },
     { value: 'ai', label: 'AI Solutions' },
     { value: 'cloud', label: 'Cloud Services' },
@@ -24,59 +26,48 @@ const ServicesPage: React.FC = () => {
     { value: 'web', label: 'Web Development' }
   ];
 
-  const filteredServices = services.filter(service => {
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  const filteredServices = services.filter(service => {}
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
 
-  return (
+  return ()
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title>Services - Zion Tech Group | AI and IT Solutions</title>
-        <meta name="description" content="Discover our comprehensive range of AI and IT services designed to transform your business. From AI solutions to cloud services and data analytics." />
-        <meta name="keywords" content="AI services, IT services, cloud services, data analytics, cybersecurity, Zion Tech Group" />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-        
+        <meta name="description" content="Discover our comprehensive range of AI and IT services designed to transform your business. From AI solutions to cloud services and data analytics." /></meta>
+        <meta name="keywords" content="AI services, IT services, cloud services, data analytics, cybersecurity, Zion Tech Group" /></meta>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+        <Navigation /></Navigation>
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center"></div>
+              <h1 className="text-4xl m,
+      d:text-6xl font-bold text-white mb-6"></h1>
                 Our <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Services</span>
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
                 Comprehensive solutions designed to accelerate your digital transformation and drive business growth.
-              </p>
-              </div>
-            </div>
-          </div>
-        </section>
 
-        {/* Services Grid */}
-          </div>
-        </section>
 
-        {/* CTA Section */}
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+
+
+
+        {/* Services Grid */},
+    {/* CTA Section */}
+          <div className="max-w-4xl mx-auto text-center"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
               Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
+
+            <p className="text-xl text-gray-300 mb-8"></p>
               Let's discuss how our services can help you achieve your goals.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              </button>
-            </div>
-          </div>
-        </section>
-      </div>
-      
-      <Footer />
+
+            <div className="flex flex-col s,
+      m:flex-row gap-4 justify-center"></div>
+      <Footer /></Footer>
     </>
   );
 };

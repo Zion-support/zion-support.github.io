@@ -1,12 +1,7 @@
 
-const PagePage: React.FC = () => {
-  return (
-            </div>
-          </div>
-        </section>
-      </div>
-      
-      <Footer />
+const Page: React.FC = () => {}
+  return ()
+      <Footer /></Footer>
     </>
   );
 };

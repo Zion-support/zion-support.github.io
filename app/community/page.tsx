@@ -1,12 +1,9 @@
-            </div>
-          </div>
-        </section>
 
-          </div>
-        </section>
-      </div>
-      
-      <Footer />
+
+
+
+
+      <Footer /></Footer>
     </>
   );
 };

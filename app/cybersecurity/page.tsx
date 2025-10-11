@@ -1,14 +1,5 @@
-  return (
-            </div>
-          </div>
-        </section>
-
-              </button>
-            </div>
-          </div>
-        </section>
-      <Footer />
+  return ()
+      <Footer /></Footer>
     </>
   );
 };
-

@@ -1,76 +1,61 @@
 'use client';
 import React from 'react';
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title>Page Title - Zion Tech Group</title>
-        <meta name="description" content="Description of the page and its benefits." />
-        <meta name="keywords" content="relevant, keywords, for, seo" />
-      </Helmet>
+        <meta name="description" content="Description of the page and its benefits." /></meta>
+        <meta name="keywords" content="relevant, keywords, for, seo" /></meta>
+      <Navigation /></Navigation>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
+                Description of the page and its benefits: for your business.
 
-      <Navigation />
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Description of the page and its benefits for your business.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+                <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
                   Get Started
-                </button>
-                <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
 
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
+                <button className="border border-green-400 text-green-400 hover:bg-green-400 hove,
+      r:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"></button>
+                  Learn More
+
+
+
+
+
+              <p className="text-xl text-gray-300 mb-8"></p>
                 This page is under development. Please check back soon for updates.
-              </p>
-              <button className="cyber-button">
+
+              <button className="cyber-button"></button>
                 Learn More
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </button>
-            </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                <ArrowRight className="w-5 h-5 ml-2" /></ArrowRight>
+              ))},
+    {/* Benefits Section */}
+        <section className="py-20 px-4"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
+              ))},
+    {/* CTA Section */}
+        <section className="py-20 px-4"></section>
+          <div className="max-w-4xl mx-auto text-center"></div>
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12"></div>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
                 Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
+
+              <p className="text-xl text-gray-300 mb-8"></p>
                 Contact our experts to discuss your requirements and get started today.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+                <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
                   Contact Us
-                </button>
-                <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+
+                <button className="border border-green-400 text-green-400 hover:bg-green-400 hove,
+      r:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"></button>
                   Learn More
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-      <Footer />
+
+
+
+
+
+      <Footer /></Footer>
     </>
   );
 };
-
