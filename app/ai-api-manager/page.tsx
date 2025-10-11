@@ -1,51 +1,38 @@
 'use client';
 import React from 'react';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, ArrowRight } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const PagePage: React.FC = () => {
+const AiapiManagerPage: React.FC = () => {
   const features = [
     {
-      title: 'Page',
-      description: 'Professional page services for modern businesses.',
-      benefits: ['Expert Solutions', 'Advanced Technology', 'Proven Results', '24/7 Support']
+      title: 'API Lifecycle Management',
+      description: 'Complete API lifecycle management from design to deployment and monitoring.',
+      benefits: ['API Design', 'Version Control', 'Deployment', 'Monitoring']
     },
     {
-      title: 'Advanced Technology',
-      description: 'Cutting-edge tools and technologies to deliver superior results.',
-      benefits: ['Latest Tools', 'Modern Methods', 'Scalable Solutions', 'Future-Ready']
+      title: 'Developer Portal',
+      description: 'Comprehensive developer portal for API documentation and testing.',
+      benefits: ['Interactive Docs', 'API Testing', 'SDK Generation', 'Code Examples']
     },
     {
-      title: 'Proven Results',
-      description: 'Track record of successful projects and satisfied clients.',
-      benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
+      title: 'Security & Compliance',
+      description: 'Enterprise-grade security and compliance features for your APIs.',
+      benefits: ['OAuth 2.0', 'API Keys', 'Rate Limiting', 'Audit Logs']
     }
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional page services and solutions." />
-        <meta name="keywords" content="page, services, solutions, technology" />
-      </Helmet>
-      
-      <Navigation />
-      
-      <main className="pt-20 px-4 py-20">
-=======
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
         <title>AI API Manager | Zion Tech Group</title>
         <meta name="description" content="Professional AI API manager solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="AI API manager, AI solutions, IT services, Zion Tech Group" />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-        <Navigation />
+      <Navigation />
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
@@ -53,13 +40,13 @@ const PagePage: React.FC = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Page
+            AI API
             <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
-              Solutions
+              Manager
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Professional page solutions by Zion Tech Group. Advanced AI and IT solutions for your business.
+            Professional AI API manager solutions by Zion Tech Group. Advanced AI and IT solutions for your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">
@@ -75,14 +62,13 @@ const PagePage: React.FC = () => {
 
       {/* Features Section */}
       <section className="py-20 px-4">
->>>>>>> cursor/fix-errors-and-merge-to-main-ace5
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Page
-            </h1>
+            <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AI API Manager Features
+            </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional page services to help your business succeed and grow.
+              Comprehensive AI API management solutions to help your business succeed and grow.
             </p>
           </div>
           
@@ -107,7 +93,7 @@ const PagePage: React.FC = () => {
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
               <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Contact us today to learn more about our page services.
+                Contact us today to learn more about our AI API manager services.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
@@ -119,19 +105,12 @@ const PagePage: React.FC = () => {
               </div>
             </div>
           </div>
-<<<<<<< HEAD
         </div>
-      </main>
+      </section>
       
       <Footer />
     </div>
-=======
-        </section>
-        <Footer />
-      </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-ace5
   );
 };
 
-export default PagePage;
+export default AiapiManagerPage;

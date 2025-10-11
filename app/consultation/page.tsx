@@ -5,27 +5,9 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const PagePage: React.FC = () => {
-  const features = [
+const ConsultationPage: React.FC = () => {
+  const consultationServices = [
     {
-<<<<<<< HEAD
-      title: 'Page',
-      description: 'Professional page services for modern businesses.',
-      benefits: ['Expert Solutions', 'Advanced Technology', 'Proven Results', '24/7 Support']
-    },
-    {
-      title: 'Advanced Technology',
-      description: 'Cutting-edge tools and technologies to deliver superior results.',
-      benefits: ['Latest Tools', 'Modern Methods', 'Scalable Solutions', 'Future-Ready']
-    },
-    {
-      title: 'Proven Results',
-      description: 'Track record of successful projects and satisfied clients.',
-      benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
-    }
-  ];
-
-=======
       id: 'strategy',
       name: 'IT Strategy Consultation',
       description: 'Comprehensive analysis of your current IT infrastructure and strategic planning for digital transformation.',
@@ -123,14 +105,12 @@ const PagePage: React.FC = () => {
     }
   ];
 
->>>>>>> cursor/fix-errors-and-merge-to-main-ace5
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-<<<<<<< HEAD
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional page services and solutions." />
-        <meta name="keywords" content="page, services, solutions, technology" />
+        <title>Consultation | Zion Tech Group</title>
+        <meta name="description" content="Professional IT consultation services by Zion Tech Group. Expert guidance for your technology needs." />
+        <meta name="keywords" content="IT consultation, technology consulting, digital transformation, Zion Tech Group" />
       </Helmet>
       
       <Navigation />
@@ -139,23 +119,23 @@ const PagePage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Page
+              IT Consultation
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional page services to help your business succeed and grow.
+              Expert IT consultation services to help your business succeed and grow.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-            {features.map((feature, index) => (
+            {consultationServices.map((service, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-4">{service.name}</h3>
+                <p className="text-gray-300 mb-4">{service.description}</p>
                 <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                      {benefit}
+                      {feature}
                     </li>
                   ))}
                 </ul>
@@ -325,23 +305,16 @@ const PagePage: React.FC = () => {
                 <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 flex items-center justify-center">
                   <Mail className="mr-2 h-5 w-5" />
                   Contact Us
->>>>>>> cursor/fix-errors-and-merge-to-main-ace5
                 </button>
               </div>
             </div>
           </div>
-<<<<<<< HEAD
         </div>
       </main>
       
       <Footer />
     </div>
-=======
-        </section>
-      </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-ace5
   );
 };
 
-export default PagePage;
+export default ConsultationPage;
