@@ -8,50 +8,101 @@ const PricingPage: React.FC = () => {
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$99',
+      price: '$299',
       period: '/month',
-      description: 'Perfect for small businesses getting started',
+      description: 'Perfect for small businesses getting started with AI and IT solutions',
       features: [
-        'Basic AI consultation',
+        'Basic AI consultation (2 hours/month)',
         'Email support',
-        'Monthly reports',
-        'Basic analytics',
-        '5 hours of support'
+        'Monthly performance reports',
+        'Basic analytics dashboard',
+        '5 hours of technical support',
+        'Standard security monitoring',
+        'Basic cloud infrastructure',
+        'Up to 5 users'
       ],
-      popular: false
+      popular: false,
+      category: 'Small Business'
     },
     {
       name: 'Professional',
-      price: '$299',
+      price: '$799',
       period: '/month',
-      description: 'Ideal for growing businesses',
+      description: 'Ideal for growing businesses with advanced needs',
       features: [
-        'Advanced AI solutions',
-        'Priority support',
-        'Weekly reports',
-        'Advanced analytics',
-        '20 hours of support',
+        'Advanced AI solutions & automation',
+        'Priority support (4-hour response)',
+        'Weekly detailed reports',
+        'Advanced analytics & insights',
+        '20 hours of technical support',
         'Custom integrations',
-        'Training sessions'
+        'Training sessions (2/month)',
+        'Enhanced security suite',
+        'Scalable cloud infrastructure',
+        'Up to 25 users',
+        'API access'
       ],
-      popular: true
+      popular: true,
+      category: 'Growing Business'
     },
     {
       name: 'Enterprise',
-      price: '$999',
+      price: '$2,499',
       period: '/month',
-      description: 'For large organizations',
+      description: 'For large organizations requiring comprehensive solutions',
       features: [
-        'Full AI suite',
-        '24/7 support',
-        'Real-time reports',
-        'Custom analytics',
-        'Unlimited support',
-        'Custom development',
+        'Full AI suite with custom models',
+        '24/7 dedicated support',
+        'Real-time monitoring & reports',
+        'Custom analytics & BI',
+        'Unlimited technical support',
+        'Custom development projects',
         'Dedicated account manager',
-        'SLA guarantee'
+        'SLA guarantee (99.9% uptime)',
+        'Enterprise security suite',
+        'Multi-cloud infrastructure',
+        'Unlimited users',
+        'Full API access',
+        'On-site training',
+        'Compliance support (SOC2, GDPR)'
       ],
-      popular: false
+      popular: false,
+      category: 'Enterprise'
+    }
+  ]
+
+  const microSaasPricing = [
+    {
+      name: 'AI Content Generator',
+      price: '$29',
+      period: '/month',
+      description: 'Generate high-quality content with AI',
+      features: ['10,000 words/month', 'Multiple content types', 'SEO optimization', 'Email support'],
+      link: 'https://ziontechgroup.com/ai-content-generator'
+    },
+    {
+      name: 'Business Analytics',
+      price: '$49',
+      period: '/month',
+      description: 'Real-time business intelligence',
+      features: ['Unlimited dashboards', 'Custom reports', 'Data visualization', 'Priority support'],
+      link: 'https://ziontechgroup.com/business-analytics'
+    },
+    {
+      name: 'API Management',
+      price: '$39',
+      period: '/month',
+      description: 'Complete API lifecycle management',
+      features: ['API gateway', 'Rate limiting', 'Authentication', 'Documentation'],
+      link: 'https://ziontechgroup.com/api-management'
+    },
+    {
+      name: 'Mobile App Builder',
+      price: '$79',
+      period: '/month',
+      description: 'No-code mobile app development',
+      features: ['Drag & drop builder', 'Native performance', 'Push notifications', 'App store deployment'],
+      link: 'https://ziontechgroup.com/mobile-builder'
     }
   ]
 
@@ -126,6 +177,53 @@ const PricingPage: React.FC = () => {
         </div>
       </section>
 
+      {/* Micro-SaaS Pricing Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Micro-SaaS Solutions
+            </h2>
+            <p className="text-xl text-gray-300">
+              Individual software solutions with transparent, affordable pricing.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {microSaasPricing.map((service, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300">
+                <div className="text-center mb-6">
+                  <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
+                  <p className="text-gray-300 text-sm mb-4">{service.description}</p>
+                  <div className="flex items-baseline justify-center">
+                    <span className="text-3xl font-bold text-cyan-400">{service.price}</span>
+                    <span className="text-gray-300 ml-1">{service.period}</span>
+                  </div>
+                </div>
+                
+                <ul className="space-y-2 mb-6">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
+                      <Check className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                
+                <a 
+                  href={service.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white py-2 px-4 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
+                >
+                  Try Now
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -135,10 +233,21 @@ const PricingPage: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8">
             We understand that every business is unique. Contact us to discuss your specific requirements and get a tailored quote.
           </p>
-          <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 flex items-center mx-auto">
-            <Zap className="w-5 h-5 mr-2" />
-            Contact Sales
-          </button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="mailto:kleber@ziontechgroup.com"
+              className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
+            >
+              <Zap className="w-5 h-5 mr-2" />
+              Contact Sales
+            </a>
+            <a 
+              href="tel:+13024640950"
+              className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 flex items-center justify-center"
+            >
+              Call Us: +1 302 464 0950
+            </a>
+          </div>
         </div>
       </section>
 
