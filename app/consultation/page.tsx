@@ -1,16 +1,9 @@
-<<<<<<< HEAD
 'use client';
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { ArrowRight, CheckCircle, Clock, Users, Target } from 'lucide-react';
-=======
-import React, { useState } from 'react'
-import { Helmet } from 'react-helmet-async'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { ArrowRight, Phone, Mail, MapPin } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-7ba6
+import { ArrowRight, Phone, Mail, MapPin, CheckCircle, Clock, Users, Target } from 'lucide-react';
 
 const ConsultationPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -18,14 +11,9 @@ const ConsultationPage: React.FC = () => {
     email: '',
     company: '',
     phone: '',
-<<<<<<< HEAD
     service: '',
     message: ''
   });
-=======
-    message: ''
-  })
->>>>>>> cursor/fix-errors-and-merge-to-main-7ba6
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
