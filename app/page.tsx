@@ -3,7 +3,8 @@ import React, { Suspense, useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Mail, Code, Cloud, Smartphone } from 'lucide-react';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, Mail, Code, Cloud, Smartphone, Eye } from 'lucide-react';
+import ImageOptimizer from './components/ImageOptimizer';
 
 // Loading skeleton component
 const ServiceCardSkeleton = () => (
