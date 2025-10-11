@@ -32,7 +32,7 @@ if (!page) return 'other'
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { allowed } = await ensureAdminFromApi(req)
-  if (!allowed) return res.status(403).json({ error: 'Forbidden' })
+  if (!allowed) return res.status(403).json({ error: 'Forbidden' });
   const { start, end, userType } = req.query as { start?: string, end?: string, userType?: string }
   const rows = parseLines(start, end).filter((r) => !userType |userType === 'all' |(r.userType |'guest') === userType)
   const byFeature: Record<string, number> = {}
@@ -55,7 +55,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const line = days.map((d) => ({ date: d, value: byDay[d] }))
   const funnelStages = ['VisitAI Prompt UsedPost CreatedMessage Sent']
   const funnel = funnelStages.map((stage) => ({ label: stage, value: byEvent[stage] |0 }))
-  res.status(200).json({ pagesMostUsed, events, line, funnel })
+  res.status(200).json({ pagesMostUsed, events, line, funnel });
 }
     .sort((a, b) => b.value - a.value),
 function featureFromPath (page?: string): string {
@@ -105,7 +105,7 @@ function handler() {
   const line = days.map ((d) => ({ date: d, value: by_day[d] })),
   const funnel_stages = ['VisitAI Prompt UsedPost CreatedMessage Sent'],
   const funnel = funnel_stages.map ((stage) => ({ label: stage, value: by_event[stage] || 0 })),
-  res.status (200).json ({ pagesMostUsed, events, line, funnel })
+  res.status (200).json ({ pagesMostUsed, events, line, funnel });
 }
 
 }
@@ -118,9 +118,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
     const { start, end } = req.query
     const events = parseLines(start as string, end as string)
-    res.json({ events })
+    res.json({ events });
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }

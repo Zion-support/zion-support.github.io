@@ -70,8 +70,8 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
         ],
         temperature: 0.3,
         max_tokens: 150
-      })
-    })
+      });
+    });
     const data = await response.json()
     if (!response.ok) {
       console.error("OpenAI API error:", data.error)
@@ -111,7 +111,7 @@ const updateFraudFlag = async (
       gpt_classification: classification.toLowerCase(),
       gpt_explanation: explanation,
       updated_at: new Date().toISOString()
-    })
+    });
     .eq("id", flagId)
   if (error) {
     console.error("Error updating fraud flag:", error)
@@ -123,7 +123,7 @@ const updateFraudFlag = async (
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders })
+    return new Response(null, { headers: corsHeaders });
   }
   try {
     console.log("Received content analysis request")
@@ -133,7 +133,7 @@ serve(async (req) => {
     const requestData = await req.json().catch(err => {
       console.error("Error parsing request JSON:", err)
       throw new Error("Invalid JSON in request body")
-    })
+    });
     const { content, contentType, flagId } = validateRequest(requestData)
     console.log(`Analyzing ${contentType} content${flagId ? ` for flag ID ${flagId}` : ''}`)
     // Create prompt and analyze with OpenAI
@@ -153,7 +153,7 @@ serve(async (req) => {
     console.log("Analysis completed successfully:", result)
     return new Response(JSON.stringify(result), { 
       headers: { ...corsHeaders, "Content-Type": "application/json" } 
-    })
+    });
   } catch (error) {
     console.error("Error analyzing content:", error)
     // Determine appropriate status code based on error
@@ -167,7 +167,6 @@ serve(async (req) => {
       { 
         status: statusCode, 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
-      }
-    )
+      });
   }
-})
+});

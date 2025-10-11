@@ -64,7 +64,7 @@ export const mockFetch = ()
   if (typeof global !== 'undefined') {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    (global as typeof global & {/* TODO: Fix JSX expression */})
+    (global as typeof global & {/* TODO: Fix JSX expression */});
   h: typeof fetch }).fetch = jest.fn(() =>
       Promise.resolve({/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -168,7 +168,7 @@ export const mockWindow = (overrides: Partial,)
 
       writable: true,
 
-    })
+    });
   }
 }
 /**
@@ -203,7 +203,7 @@ export const createMockPerformance = (): Performance => {
         duratio,
   n: 0,
         toJSO,
-  N: () => ({})
+  N: () => ({});
   )
       } as PerformanceEntry)
     },
@@ -220,7 +220,7 @@ measure: (name: string, startMark?: string, endMark?: string) => {entries.push({
         duratio,
   n: 100,
         toJSO,
-  N: () => ({})
+  N: () => ({});
   )
       } as PerformanceEntry)
     },

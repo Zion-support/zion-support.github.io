@@ -45,11 +45,11 @@ async function fixAllImports() {
     'components/**/*.tsx',
     'components/**/*.ts'
   ]
-  
+
   let totalFixed = 0
-  
+
   for (const pattern of patterns) {
-    const files = await glob(pattern, { cwd: process.cwd() })
+    const files = await glob(pattern, { cwd: process.cwd() });
     for (const file of files) {
       if (fixImports(file)) {
         totalFixed++
@@ -57,7 +57,7 @@ async function fixAllImports() {
       }
     }
   }
-  
+
   console.log(`\nFixed imports in ${totalFixed} files`)
 }
 

@@ -1,6 +1,6 @@
 export, default, function October2025NewContentAdvertisingBann, e, r(): vo, i, d {
   return(<section, className="relative, p, y-20, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, overflo, w-hidd, e, n">";)
-      {/* Animated, Background, Elements */})
+      {/* Animated, Background, Elements */});
       <div, className="absolute, inse, t-0">)
         <div, className="absolute, to, p-0, lef, t-0 w-ful, l, h-full, b, g-[u, r, l('da, t, a: ima, g, e/s, v, g+x, m, l;base, 6, 4,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z, y, I+PGRlZ, n, M+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZ, S, I+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlc, m, 4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Z, z, 4=')] opaci, t, y-40/>"
         <div, className="absolute, to, p-1/4, righ, t-1/4 w-9, 6, h-96, b, g-yell, o, w-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e  />

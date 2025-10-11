@@ -22,7 +22,7 @@ export default async function handler(
     const { data, error } = await supabase
       .from('email_signups')    const isPlaceholder = (process && process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '').includes('placeholder')
     if (isPlaceholder) {
-      return res && res.status(200).json({ ok: true, simulated: true })
+      return res && res.status(200).json({ ok: true, simulated: true });
     }
     const { data, error } = await supabase
       .from('email_signups')
@@ -39,11 +39,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // If placeholders are still used, just accept without DB write
     const isPlaceholder = (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '').includes('placeholder')
     if (isPlaceholder) {
-      return res.status(200).json({ ok: true, simulated: true })
+      return res.status(200).json({ ok: true, simulated: true });
     }
     const { data, error } = await supabase
       .from('email_signups')
-      .insert({ email: normalized, source: 'mobile-launch', created_at: new Date().toISOString() })
+      .insert({ email: normalized, source: 'mobile-launch', created_at: new Date().toISOString() });
       .select('*')
       .single()
     if (error) {
@@ -93,7 +93,7 @@ if ( {) {
 if ( {) {
   $2
 }
-      return res.status (200).json ({ ok: true, simulated: true })
+      return res.status (200).json ({ ok: true, simulated: true });
     }
     const { data, error } = await supabase
       .from ('email_signups')
@@ -101,7 +101,7 @@ if ( {) {
         email: normalized,
         source: 'mobile - launch',
         created_at: new Date ().toISOString (),
-      })      .select ('*')      .insert ({ email: normalized, source: 'mobile - launch', created_at: new Date ().toISOString () })
+      })      .select ('*')      .insert ({ email: normalized, source: 'mobile - launch', created_at: new Date ().toISOString () });
       .select ('*')
       .single ()
     // Check condition
@@ -111,26 +111,26 @@ if ( {) {
       if () {) {
   $2
 }
-        return res.status (200).json ({ ok: true, duplicate: true })
+        return res.status (200).json ({ ok: true, duplicate: true });
       }
       return res.status(500).send(error.message |'Database error')
     }
-    return res.status(200).json({ ok: true, data })
+    return res.status(200).json({ ok: true, data });
   } catch (e: any) {
   }      }
       return res.status(500).send(error.message |'Database error')
     }
-    return res.status(200).json({ ok: true, data })
+    return res.status(200).json({ ok: true, data });
   } catch (e: any) {
     return res.status(500).send(e?.message |'Unexpected error')
 }
   }
       if (error.message && error.message.includes('duplicate')) {
-        return res.status(200).json({ ok: true, duplicate: true })
+        return res.status(200).json({ ok: true, duplicate: true });
       }
       return res.status(500).send(error.message || 'Database error')
     }
-    return res.status(200).json({ ok: true, data })
+    return res.status(200).json({ ok: true, data });
   } catch (e: any) {
     return res.status(500).send(e?.message || 'Unexpected error')
   }

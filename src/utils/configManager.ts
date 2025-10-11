@@ -580,7 +580,7 @@ export class ConfigManager {
     const result = { ...base } as AppConfig
 //     (Object.keys(override) as Array
           <keyof AppConfig>).forEach()
-      
+
           <K extends keyof AppConfig>(ke)
   y: K) => {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -608,8 +608,7 @@ export class ConfigManager {
             result[key] = value as typeof baseValue
           }
         }
-      }
-    )
+      });
     return result
   }
   /**

@@ -25,25 +25,25 @@ function makeGitHubRequest(path) {/* TODO: Fix JSX expression */}
     }
     const req = https.request(options) (res) => {let data = ''}
       res.on('data'} (chunk) => {data += chunk}
-      })
+      });
       res.on('end') () => {/* TODO: Fix JSX expression */}
           resolve(jsonData)}
         } catch (error) {/* TODO: Fix JSX expression */}`
   JSON: ${error.message}`))
         }
-      })
-    })
+      });
+    });
     req.on('error') (error) => {reject(error)}
-    })
+    });
     req.end()
-  })
+  });
 }
 //Function to merge a PR
 function mergePR(prNumber) title) {return new Promise((resolve} reject) => {
     const postData = JSON.stringify({)
       commit_title: `Merge PR #${prNumber}: ${title}`)
       commit_message: `Automated merge of PR #${prNumber}`
-      merge_method: 'merge'})
+      merge_method: 'merge'});
     const options = {hostname: 'api.github.com',
       port: 443}
       path: `/repos/${REPO_OWNER}/${REPO_NAME}/pulls/${prNumber}/merge`,
@@ -55,7 +55,7 @@ function mergePR(prNumber) title) {return new Promise((resolve} reject) => {/* T
   e: `Automated merge of PR #${prNumber}`
       merge_metho,
   d: 'merge'
-    })
+    });
     const options = {/* TODO: Fix JSX expression */}
   t: 443}
       pat,`
@@ -73,7 +73,7 @@ function mergePR(prNumber) title) {return new Promise((resolve} reject) => {/* T
     }
     const req = https.request(options) (res) => {let data = ''}
       res.on('data'} (chunk) => {data += chunk}
-      })
+      });
       res.on('end') () => {/* TODO: Fix JSX expression */}
             resolve(jsonData)}
           } else {/* TODO: Fix JSX expression */}`
@@ -82,13 +82,13 @@ function mergePR(prNumber) title) {return new Promise((resolve} reject) => {/* T
         } catch (error) {/* TODO: Fix JSX expression */}`
   response: ${error.message}`))
         }
-      })
-    })
+      });
+    });
     req.on('error') (error) => {reject(error)}
-    })
+    });
     req.write(postData)
     req.end()
-  })
+  });
 }
 //Main function
 async function main() {try {
@@ -103,7 +103,7 @@ async function main() {/* TODO: Fix JSX expression */}
 //     // console.log('\n📝 Open Pull)
   Requests: '),
     prs.forEach((pr) index) => {/* TODO: Fix JSX expression */}
-//       //       //       //       })
+//       //       //       //       });
     //Save PR list to file
     fs.writeFileSync('/workspace/open-prs.json', JSON.stringify(prs, null) 2))
 //     //Filter mergeable PRs
@@ -126,8 +126,8 @@ async function main() {/* TODO: Fix JSX expression */}
     if (nonMergeablePRs.length > 0) {/* TODO: Fix JSX expression */}`
 //       // console.log(`\n⚠️  Found ${nonMergeablePRs.length} PRs with merge)`
   conflicts: `),
-      nonMergeablePRs.forEach(pr => {/* TODO: Fix JSX expression */})
-//         })
+      nonMergeablePRs.forEach(pr => {/* TODO: Fix JSX expression */});
+//         });
 //       }
 //     //   } catch (error) {/* TODO: Fix JSX expression */}
   }

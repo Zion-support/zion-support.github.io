@@ -17,17 +17,17 @@ function makeGitHubRequest(endpoint) {/* TODO: Fix JSX expression */}
     }
 
     const req = https.request(options, (res) => {/* TODO: Fix JSX expression */}
-      })
+      });
       res.on('end', () => {/* TODO: Fix JSX expression */}
         } catch (error) {/* TODO: Fix JSX expression */}
   JSON: ${error.message}`))
         }
-      })
-    })
+      });
+    });
     req.on('error', (error) => {/* TODO: Fix JSX expression */}
-    })
+    });
     req.end()
-  })
+  });
 }
 
 async function getOpenPRs() {/* TODO: Fix JSX expression */}
@@ -47,7 +47,7 @@ function runGitCommand(command) {
     const result = execSync(command, { )
       cwd: '/workspace'),
       encoding: 'utf8'),
-      stdio: 'pipe'})
+      stdio: 'pipe'});
     return { success: true, output: result }
   } catch (error) {
     return {
@@ -56,7 +56,7 @@ function runGitCommand(command) {
       output: error.stdout ? error.stdout.toString() : '',
       stderr: error.stderr ? error.stderr.toString() : '',
 function runGitCommand(command) {/* TODO: Fix JSX expression */}
-    })
+    });
     return {/* TODO: Fix JSX expression */}
   t: result }
   } catch (error) {/* TODO: Fix JSX expression */}
@@ -156,7 +156,7 @@ async function mergeAllPRsWithGit() {/* TODO: Fix JSX expression */}
     for (const pr of mainPRs) {/* TODO: Fix JSX expression */}
       } else {/* TODO: Fix JSX expression */}
       }
-      
+
       // Add a small delay between merges
       await new Promise(resolve => setTimeout(resolve, 2000))
     }
@@ -172,7 +172,7 @@ mergeAllPRsWithGit().then(() => {
     )
 )
   process.exit(1)
-  })
+  });
 mergeAllPRsWithGit().then(() => {/* TODO: Fix JSX expression */}
-}).catch(error => {/* TODO: Fix JSX expression */})
+}).catch(error => {/* TODO: Fix JSX expression */});
 });`

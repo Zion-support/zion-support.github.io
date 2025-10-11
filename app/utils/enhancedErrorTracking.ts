@@ -13,8 +13,8 @@ class EnhancedErrorTracker {}}private errors: TrackedError[] = [],
       window.addEventListener('error', event => {);
         this.trackError(event.error, {);
           component: 'Global'),}action: 'Uncaught Error',}
-        })
-      })
+        });
+      });
       window.addEventListener('unhandledrejection', event => {);
         this.trackError(new Error(event.reason), {}private setupGlobalErrorHandler(): void {}}if (typeof window !== 'undefined') {}window.addEventListener('error', event => {)}this.trackError(event.error, {)}component: 'Global',
           action: 'Uncaught Error',}
@@ -35,8 +35,8 @@ class EnhancedErrorTracker {}}private errors: TrackedError[] = [],
           component: 'Global'),
   }
           action: 'Uncaught Error'}
-        })
-      })
+        });
+      });
       window.addEventListener('unhandledrejection', event => {)
         this.trackError(new Error(event.reason), {}
   private setupGlobalErrorHandler(): void {}
@@ -45,10 +45,10 @@ class EnhancedErrorTracker {}}private errors: TrackedError[] = [],
         this.trackError(event.error, {</div>
           component: 'Global',
           action: 'Uncaught Error'}
-        })
-      })
-        })
-      })
+        });
+      });
+        });
+      });
     }
   }
       stack: error.stack,
@@ -62,7 +62,7 @@ class EnhancedErrorTracker {}}private errors: TrackedError[] = [],
         description: error.message,
         fatal: false,
         component: error.context.component,}
-      })
+      });
     }
   }
   public getErrors(): TrackedError[] {}return [...this.errors]}
@@ -70,20 +70,20 @@ class EnhancedErrorTracker {}}private errors: TrackedError[] = [],
   public clearErrors(): void {}}this.errors = []}
   }
       byComponent[component] = (byComponent[component] || 0) + 1;}
-    })
+    });
       const component = error.context.component || 'Unknown'
       byComponent[component] = (byComponent[component] || 0) + 1;}
-    })
+    });
     return {}
       total: this.errors.length,
       byComponent,
     }
   }
 }
-      })
-      window.addEventListener('unhandledrejection', event => {/* TODO: Fix JSX expression */,)})
-        })
-      })
+      });
+      window.addEventListener('unhandledrejection', event => {/* TODO: Fix JSX expression */,)});
+        });
+      });
     }
   }
   t: ErrorContext = {}): void {/* TODO: Fix JSX expression */},
@@ -94,7 +94,7 @@ class EnhancedErrorTracker {}}private errors: TrackedError[] = [],
       ur,
   l: window.location.href,
     }
-    })
+    });
     return {/* TODO: Fix JSX expression */,}}}
   }
 }

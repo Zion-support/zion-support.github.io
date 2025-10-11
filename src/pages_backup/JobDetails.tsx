@@ -123,11 +123,9 @@ title={`${job.title}} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
       />
       <Header />
 
-
-
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <Briefcase className="mt-1 h-5 w-5 text-muted-foreground" />
                   <div className="ml-3">
@@ -135,7 +133,7 @@ title={`${job.title}} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
                     <p className="font-medium">Freelance / Remote</p>
                   </div>
                 </div>
-                
+
                 {!isOwnJob && (
                   <Button;
 className="w-full mt-4";
@@ -145,17 +143,6 @@ onClick={handleApply}
 Apply Now</$1>
                 )}
 
-
-
-
-
-
-
-
-
-
-
-                
                 <div className="flex items-start">
                   <Clock className="mt-1 h-5 w-5 text-muted-foreground" />
                   <div className="ml-3">
@@ -165,7 +152,7 @@ Apply Now</$1>
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <Briefcase className="mt-1 h-5 w-5 text-muted-foreground" />
                   <div className="ml-3">
@@ -173,7 +160,7 @@ Apply Now</$1>
                     <p className="font-medium">Freelance / Remote</p>
                   </div>
                 </div>
-                
+
                 {!isOwnJob && (
                   <Button;
 className="w-full mt-4";
@@ -183,15 +170,11 @@ onClick={handleApply}
 Apply Now</$1>
                 )}
 
-                
-
-
                 {isOwnJob && (
                   <div className="text-center p-2 bg-muted rounded-md mt-4">
                     <p className="text-sm text-muted-foreground">This is your job posting</p>
                   </div>
                 )}
-
 
                 {isOwnJob && (
                   <div className='text-center p-2 bg-muted rounded-md mt-4'>
@@ -333,7 +316,6 @@ Apply Now</$1>)}
                     <p className='text - sm text - muted - foreground'>;
 This is your job posting</$1></$1>)}
 
-
               </CardContent></$1></$1></$1></$1>;,
 id: job.id;,
 title: job.title;,
@@ -412,8 +394,6 @@ job && (<ApplyToJobModal job={{}
 }'"
 }
 }
-
-
 
 }
 ;,

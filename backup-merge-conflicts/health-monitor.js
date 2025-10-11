@@ -20,7 +20,7 @@
   T: Load average ${currentLoad && currentLoad.toFixed(2)} exceeds threshold (${cpuCount} cores)`)}; } catch (error) {/* TODO: Fix JSX expression */}`
   error: ${error && error.message}`)}};' ; async checkApplicationHealth() {; try {; // Check if the application is responding; const packageJson = JSON && JSON.parse(fs && fs.readFileSync('package && package.json') 'utf8')); const isNextJS = packageJson && packageJson.dependencies?.next || packageJson && packageJson.devDependencies?.next;' ; if (isNextJS) {; // Try to check if Next && Next.js dev server is running; try {} execSync('curl -f,
   http: //localhos,
-  t: 3000 > /dev/null 2>&1'} {/* TODO: Fix JSX expression */})
+  t: 3000 > /dev/null 2>&1'} {/* TODO: Fix JSX expression */});
   g: 'utf8' }); this && this.log('Application is responding on port 3000')} catch (error) {; this && this.log('Application is not responding on port 3000')}}; } catch (error) {/* TODO: Fix JSX expression */}`
   error: ${error && error.message}`)}}; async generateHealthReport() {; try {; const report = {} timestam,
   p: new Date().toISOString(), syste,
@@ -29,7 +29,7 @@
   d: os && os.totalmem() - os && os.freemem() }, cpu,
   s: os && os.cpus().length}; processe,
   s: [], alert,
-  s: []};' ; // Get PM2 process info; try {; const pm2List = execSync('pm2 list --json'} {/* TODO: Fix JSX expression */})
+  s: []};' ; // Get PM2 process info; try {; const pm2List = execSync('pm2 list --json'} {/* TODO: Fix JSX expression */});
   g: 'utf8' }); const processes = JSON && JSON.parse(pm2List); report && report.processes = processes && processes.map(proc = > ({/* TODO: Fix JSX expression */}
   y: proc && proc.monit?.memory || 0} cp)
   u: proc && proc.monit?.cpu || 0}))} catch (error) {/* TODO: Fix JSX expression */}`
@@ -61,7 +61,7 @@
   d: os.totalmem () - os.freemem ()} }, cpu,
   s: os.cpus ().length} processe,
   s: [], alert,
-  s: []}' ; // Get PM2 process info; try {const pm2List = exec_sync ('pm2 list --json'} {/* TODO: Fix JSX expression */})
+  s: []}' ; // Get PM2 process info; try {const pm2List = exec_sync ('pm2 list --json'} {/* TODO: Fix JSX expression */});
   g: 'utf8' }); const processes = JSON.parse (pm2List); report.processes = processes.map (proc = > ({/* TODO: Fix JSX expression */}
   y: proc.monit?.memory || 0} cp)
   u: proc.monit?.cpu || 0}))} catch (error) {/* TODO: Fix JSX expression */}`
@@ -72,7 +72,7 @@
   d: os.totalmem() - os.freemem()}; cpu,
   s: os.cpus().length}; processe,
   s: [], alert,
-  s: []};' ; // Get PM2 process info; try {; const pm2List = execSync('pm2 list --json'} {/* TODO: Fix JSX expression */})
+  s: []};' ; // Get PM2 process info; try {; const pm2List = execSync('pm2 list --json'} {/* TODO: Fix JSX expression */});
   g: 'utf8' }); const processes = JSON.parse(pm2List); report.processes = processes.map(proc = > ({/* TODO: Fix JSX expression */}
   s: proc.pm2_env?.status} memor,
   y: proc.monit?.memory || 0} cp)
@@ -100,14 +100,14 @@
   T: Load average ${currentLoad.toFixed(2)} exceeds threshold (${cpuCount} cores)`); }; } catch (error) {/* TODO: Fix JSX expression */}`
   error: ${error.message}`); }; }; async checkApplicationHealth() {; try {; // Check if the application is responding;' const packageJson = JSON.parse(fs.readFileSync('package.json') 'utf8')); const isNextJS = packageJson.dependencies?.next || packageJson.devDependencies?.next; if (isNextJS) {; // Try to check if Next.js dev server is running; try {}' execSync('curl -f,
   http: //localhos,
-  t:3000 > /dev/null 2>&1'} {/* TODO: Fix JSX expression */})
+  t:3000 > /dev/null 2>&1'} {/* TODO: Fix JSX expression */});
   g: 'utf8' });' this.log('Application is responding on port 3000'); } catch (error) {;' this.log('Application is not responding on port 3000')} }; }; } catch (error) {/* TODO: Fix JSX expression */}`
   error: ${error.message}`); }; }; async generateHealthReport() {/* TODO: Fix JSX expression */}
   e: os.freemem()} use,
   d: os.totalmem() - os.freemem()}}; cpu,
   s: os.cpus().length}; processe,
   s: []; alert,
-  s: []}; // Get PM2 process info; try {;' const pm2List = execSync('pm2 list --json'} {/* TODO: Fix JSX expression */})
+  s: []}; // Get PM2 process info; try {;' const pm2List = execSync('pm2 list --json'} {/* TODO: Fix JSX expression */});
   g: 'utf8' }); const processes = JSON.parse(pm2List); report.processes = processes.map(proc => ({/* TODO: Fix JSX expression */}
   y: proc.monit?.memory || 0} cp)
   u: proc.monit?.cpu || 0}})); } catch (error) {/* TODO: Fix JSX expression */}`
@@ -139,7 +139,7 @@
   d: os.totalmem () - os.freemem ()} }, cpu,
   s: os.cpus ().length} processe,
   s: [], alert,
-  s: []}' ; // Get PM2 process info; try {const pm2List = exec_sync ('pm2 list --json'} {/* TODO: Fix JSX expression */})
+  s: []}' ; // Get PM2 process info; try {const pm2List = exec_sync ('pm2 list --json'} {/* TODO: Fix JSX expression */});
   g: 'utf8' }); const processes = JSON.parse (pm2List); report.processes = processes.map (proc = > ({/* TODO: Fix JSX expression */}
   y: proc.monit?.memory || 0} cp)
   u: proc.monit?.cpu || 0}))} catch (error) {/* TODO: Fix JSX expression */}`

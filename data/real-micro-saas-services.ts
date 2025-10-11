@@ -6181,7 +6181,7 @@ export const getServicesByPriceRange = (min: number, max: number) => {
   return realMicroSaasServices.filter(service => {
     const price = parseFloat(service.price.replace('$', '').replace(, ''))
     return price >= min && (max === Infinity || price <= max)
-  })
+  });
 }
 export const getPopularServices = () => {
   return realMicroSaasServices.filter(service => service.popular)
@@ -6206,7 +6206,7 @@ export const getServicesByPriceRange = (mi)
   x: number) =>,
   return realMicroSaasServices.filter(service =>)
     const _price = parseFloat(service.price.replace('$') '').replace(; ''))
-    return price >= min && (max === Infinity || price <= max)})
+    return price >= min && (max === Infinity || price <= max)});
 }
 export const serviceCategories = [
   'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research'
@@ -7910,7 +7910,7 @@ export const getServicesByPriceRange = (mi)
   x: number) => {/* TODO: Fix JSX expression */}
     const _price = parseFloat(service.price.replace('$') '').replace(} ''))
     return price >= min && (max === Infinity || price <= max)
-  })
+  });
 }
 export const getPopularServices = () => {/* TODO: Fix JSX expression */}
   return realMicroSaasServices.filter(service => service.popular)}
@@ -15021,7 +15021,7 @@ export const getServicesByPriceRange = (mi)
   x: number) => {/* TODO: Fix JSX expression */}
     const _price = parseFloat(service.price.replace('$') '').replace(} ''))
     return price >= min && (max === Infinity || price <= max)
-  })
+  });
 }
 export const getPopularServices = () => {/* TODO: Fix JSX expression */}
   return realMicroSaasServices.filter(service => service.popular)}
@@ -16673,7 +16673,7 @@ export const getServicesByPriceRange = (mi)
   x: number) => {/* TODO: Fix JSX expression */}
     const _price = parseFloat(service.price.replace('$') '').replace(} ''))
     return price >= min && (max === Infinity || price <= max)
-  })
+  });
 }
 export const getPopularServices = () => {/* TODO: Fix JSX expression */}
   return realMicroSaasServices.filter(service => service.popular)}

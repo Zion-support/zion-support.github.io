@@ -15,9 +15,9 @@ const PageTemplate: React.FC<{title: string
     <>
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)
       <SEOOptimizer;)
-        title={`${title} - Zion Tech Group`})
-        description={description})
-        keywords={keywords})
+        title={`${title} - Zion Tech Group`});
+        description={description});
+        keywords={keywords});
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer
@@ -65,7 +65,7 @@ const PageTemplate: React.FC<{title: string
           <div className="text-center mb-12"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Features
-  
+
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
               Powerful capabilities designed to transform your business,
             </p>
@@ -110,7 +110,7 @@ const PageTemplate: React.FC<{title: string
           <div className="text-center mb-12"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Pricing
-  
+
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
               Transparent pricing with no hidden fees,
             </p>
@@ -165,7 +165,7 @@ const PageTemplate: React.FC<{title: string
                 Middletown DE 19709
                 364 E Main St STE 1008</p><br />
                 Middletown DE 19709,
-  
+
             </div>
           </div>
         </section>

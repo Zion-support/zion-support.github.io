@@ -40,11 +40,11 @@ import {
 const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
-  
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
   }
-  
+
   const toggleDropdown = (dropdown: string) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
   }
@@ -67,7 +67,7 @@ const Navigation: React.FC = () => {
             <Link to="/" className="text-gray-300 hover:text-white transition-colors">
               Home
             </Link>
-            
+
             <div className="relative">
               <button
                 onClick={() => toggleDropdown('services')}

@@ -14,7 +14,7 @@ interface SendNewsletterRequest {
 }
 serve(async (req) => {
   if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders })
+    return new Response(null, { headers: corsHeaders });
   }
   try {
     const resendApiKey = Deno.env.get("RESEND_API_KEY")
@@ -30,16 +30,16 @@ serve(async (req) => {
         to: [testEmail],
         subject: `[TEST] ${subject}`,
         html: body,
-        text: previewText})
+        text: previewText});
       return new Response(JSON.stringify(emailResponse), {
         headers: { ...corsHeaders, "Content-Type": "application/json" },
-        status: 200})
+        status: 200});
         text: previewText,
-      })
+      });
       return new Response(JSON.stringify(emailResponse), {
         headers: { ...corsHeaders, "Content-Type": "application/json" },
         status: 200,
-      })
+      });
     } 
     // In production, we would fetch subscriber emails from the database
     // and send the newsletter to all subscribers
@@ -50,15 +50,15 @@ serve(async (req) => {
     }
     return new Response(JSON.stringify(emailResponse), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
-      status: 200})
+      status: 200});
       status: 200,
-    })
+    });
   } catch (error) {
     console.error("Error in send-newsletter function:", error)
     return new Response(JSON.stringify({ error: error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
-      status: 500})
+      status: 500});
       status: 500,
-    })
+    });
   }
-})
+});

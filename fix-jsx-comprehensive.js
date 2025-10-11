@@ -15,7 +15,7 @@ function fixJsxFile(filePath) {
       modified = true
       console.log(`Fixed self-closing div tags in ${filePath}`)
     }
-    
+
     // Fix mismatched section/div tags
     const sectionDivPattern = /<section([^>]*)>[\s\S]*?<\/div>/g
     const sectionDivReplacement = (match, sectionAttrs) => {
@@ -27,7 +27,7 @@ function fixJsxFile(filePath) {
       modified = true
       console.log(`Fixed section/div mismatch in ${filePath}`)
     }
-    
+
     if (modified) {
       fs.writeFileSync(filePath, content)
       return true
@@ -51,7 +51,7 @@ function findTsxFiles(dir) {
       files.push(fullPath)
     }
   }
-  
+
   return files
 }
 
@@ -63,6 +63,6 @@ tsxFiles.forEach(file => {
   if (fixJsxFile(file)) {
     fixedCount++
   }
-})
+});
 console.log(`✅ Fixed ${fixedCount} files`)
 console.log('🎉 Comprehensive JSX fixes completed!')</div></div>

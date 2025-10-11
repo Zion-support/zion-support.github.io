@@ -20,23 +20,23 @@ function fixFunctionNames(filePath) {
         line = line.replace(/function\s+[^(]+/, `function ${validFunctionName}`)
         modified = true
       }
-      
+
       // Fix export default function declarations
       if (line.includes('export default function ') && line.includes('(')) {
         line = line.replace(/export default function\s+[^(]+/, `export default function ${validFunctionName}`)
         modified = true
       }
-      
+
       newLines.push(line)
     }
-    
+
     content = newLines.join('\n')
     if (modified) {
       fs.writeFileSync(filePath, content)
       console.log(`✅ Fixed: ${filePath}`)
       return true
     }
-    
+
     return false
   } catch (error) {
     console.error(`❌ Error fixing ${filePath}:`, error.message)
@@ -69,7 +69,7 @@ function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
       // Skip directories we can't read
     }
   }
-  
+
   traverse(dir)
   return files
 }

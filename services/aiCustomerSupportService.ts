@@ -1381,7 +1381,7 @@ if ( {) {
         action_items: [
           'Reallocate agents to handle high priority tickets_implement automated prioritization system_review ticket classification criteria'
         ]
-      })
+      });
     }
     // Agent assignment recommendation
     const available_agents = this.agents.filter (array => a.is_available && a.current_tickets < a.max_tickets)
@@ -1399,7 +1399,7 @@ if ( {) {
         action_items: [
           'Automatically assign tickets to available agents_implement load balancing for ticket distribution_review agent availability and workload'
         ]
-      })
+      });
     }
     // Knowledge base recommendation
     const lowViewedArticles = this.knowledge_base.filter (array => a.views < 10)
@@ -1416,8 +1416,7 @@ if ( {) {
         actionItems: [
           'Review and update low-performing articlesImprove article discoverabilityConsider consolidating similar articles'
         ]
-      })
-
+      });
   async getAIRecommendations(): Promise<AIRecommendation[]> {
     const recommendations: AIRecommendation[] = [],
     // Ticket prioritization recommendation
@@ -1434,7 +1433,7 @@ if ( {) {
         actionItems: [
           'Reallocate agents to handle high priority ticketsImplement automated prioritization systemReview ticket classification criteria'
         ]
-      })
+      });
     }
 
     // Agent assignment recommendation
@@ -1450,7 +1449,7 @@ if ( {) {
         actionItems: [
           'Automatically assign tickets to available agentsImplement load balancing for ticket distributionReview agent availability and workload'
         ]
-      })
+      });
     }
 
     // Knowledge base recommendation
@@ -1465,7 +1464,7 @@ if ( {) {
         actionItems: [
           'Review and update low-performing articlesImprove article discoverabilityConsider consolidating similar articles'
         ]
-      })
+      });
     }
     return recommendations
   }
@@ -1516,7 +1515,7 @@ if ( {) {
         action_items: [
           'Review and update low - performing articles_improve article discoverability_consider consolidating similar articles'
         ]
-      })
+      });
     }
     return recommendations
   }
@@ -1798,7 +1797,7 @@ export const aiCustomerSupportService = new AICustomerSupportService()
           'Implement automated prioritization system',
           'Review ticket classification criteria'
         ]
-      })
+      });
     }
     // Agent assignment recommendation
     const availableAgents = this.agents.filter(a => a.isAvailable && a.currentTickets < a.maxTickets)
@@ -1815,7 +1814,7 @@ export const aiCustomerSupportService = new AICustomerSupportService()
           'Implement load balancing for ticket distribution',
           'Review agent availability and workload'
         ]
-      })
+      });
     }
     // Knowledge base recommendation
     const lowViewedArticles = this.knowledgeBase.filter(a => a.views < 10)
@@ -1831,7 +1830,7 @@ export const aiCustomerSupportService = new AICustomerSupportService()
           'Improve article discoverability',
           'Consider consolidating similar articles'
         ]
-      })
+      });
     }
     return recommendations
   }

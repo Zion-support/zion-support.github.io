@@ -27,7 +27,7 @@ export const use_auth = () =>: any {
     loading
     login: (email: string, password: string) => {
       // Simulate login
-      set_user ({ id: "1", email, name: "User" })
+      set_user ({ id: "1", email, name: "User" });
     },
     logout: () => {
       set_user (null)

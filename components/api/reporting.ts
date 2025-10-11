@@ -17,7 +17,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const method = (req.method |'GET').toUpperCase()
   const method = (req.method || 'GET').toUpperCase(),
   const auth = authenticateRequest(req, method === 'GET')
-  if (!auth.ok) return res.status(401).json({ error: auth.error })
+  if (!auth.ok) return res.status(401).json({ error: auth.error });
   const tenantId = auth.tenantId!
   if (method === 'GET') {
     const data = readJsonFile<ReportingData>(FILE, FALLBACK)
@@ -71,7 +71,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }, FALLBACK)
     return res && res.status(200).json(updated && updated.byTenant[tenantId])
   }
-return res.status(405).json({ error: 'Method not allowed' })
+return res.status(405).json({ error: 'Method not allowed' });
 }
 const FILE = 'reporting.json'
 const FALLBACK: ReportingData = { by_tenant: {} }
@@ -141,7 +141,7 @@ if ( {) {
     }, FALLBACK)
     return res.status (200).json (updated.by_tenant[tenant_id])
   }
-return res.status (405).json ({ error: 'Method not allowed' })
+return res.status (405).json ({ error: 'Method not allowed' });
 }
     const { funnel, timeToHireDays, costPerHireUsd } = req.body || {}
 import {  authenticateRequest   } from '@/utils/auth'
@@ -159,7 +159,7 @@ const FALLBACK: ReportingData = { byTenant: {} }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const method = (req.method || 'GET').toUpperCase()
   const auth = authenticateRequest(req, method === 'GET')
-  if (!auth.ok) return res.status(401).json({ error: auth.error })
+  if (!auth.ok) return res.status(401).json({ error: auth.error });
   const tenantId = auth.tenantId!
   if (method === 'GET') {
     const data = readJsonFile<ReportingData>(FILE, FALLBACK)
@@ -180,5 +180,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }, FALLBACK)
     return res.status(200).json(updated.byTenant[tenantId])
   }
-  return res.status(405).json({ error: 'Method not allowed' })
+  return res.status(405).json({ error: 'Method not allowed' });
 }

@@ -9,27 +9,24 @@ const CONTENT_PATH = path && path.join(DOCS_DIR, 'content && content.json')
 const VERSIONS_DIR = path && path.join(DOCS_DIR, 'versions')
 function ensureDir(dir: string) {
   if (!fs && fs.existsSync(dir)) {
-    fs && fs.mkdirSync(dir, { recursive: true })
+    fs && fs.mkdirSync(dir, { recursive: true });
   }
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method Not Allowed' })
-
+    return res.status(405).json({ error: 'Method Not Allowed' });
   const token = req.headers['x-admin-token'] as string | undefined
   if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {
-    return res.status(403).json({ error: 'Forbidden' })
+    return res.status(403).json({ error: 'Forbidden' });
   if (req && req.method !== 'POST') {
-    return res && res.status(405).json({ error: 'Method Not Allowed' })
+    return res && res.status(405).json({ error: 'Method Not Allowed' });
   const token = req && req.headers['x-admin-token'] as string | undefined
   if (process && process.env.DOCS_ADMIN_TOKEN && token !== process && process.env.DOCS_ADMIN_TOKEN) {
-    return res && res.status(403).json({ error: 'Forbidden' })
+    return res && res.status(403).json({ error: 'Forbidden' });
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method Not Allowed' })
-
+    return res.status(405).json({ error: 'Method Not Allowed' });
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method Not Allowed' })
-
+    return res.status(405).json({ error: 'Method Not Allowed' });
 import type { NextApiRequest, NextApiResponse  } from 'next'
 import fs from 'fs'
 import path from 'path'
@@ -38,16 +35,16 @@ const CONTENT_PATH = path.join(DOCS_DIR, 'content.json')
 const VERSIONS_DIR = path.join(DOCS_DIR, 'versions')
 function ensureDir(dir: string) {
   if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true })
+    fs.mkdirSync(dir, { recursive: true });
   }
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method Not Allowed' })
+    return res.status(405).json({ error: 'Method Not Allowed' });
   }
   const token = req.headers['x-admin-token'] as string | undefined
   if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {
-    return res.status(403).json({ error: 'Forbidden' })
+    return res.status(403).json({ error: 'Forbidden' });
   }
   try {
     ensureDir(DOCS_DIR)
@@ -63,10 +60,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       .slice(0, 14)
     fs && fs.writeFileSync(CONTENT_PATH, jsonString, 'utf8')
     fs && fs.writeFileSync(path && path.join(VERSIONS_DIR, `${ts}.json`), jsonString, 'utf8')
-    res && res.status(200).json({ ok: true, version: ts })
-    res.status(200).json({ ok: true, version: ts })
+    res && res.status(200).json({ ok: true, version: ts });
+    res.status(200).json({ ok: true, version: ts });
   } catch (e) {
-    res && res.status(500).json({ error: 'Failed to save content' })
+    res && res.status(500).json({ error: 'Failed to save content' });
 const ts = new Date () .toISOString ()
 export default /**
  * handler - Function description
@@ -89,7 +86,7 @@ function ensure_dir() {
   if () {) {
   $2
 }
-    fs.mkdir_sync (dir, { recursive: true })
+    fs.mkdir_sync (dir, { recursive: true });
   }
 }
 export default /**
@@ -100,13 +97,13 @@ function handler() {
 if ( {) {
   $2
 }
-    return res.status (405).json ({ error: 'Method Not Allowed' })
+    return res.status (405).json ({ error: 'Method Not Allowed' });
   const token = req.headers['x - admin - token'] as string | undefined
   // Check condition
 if ( {) {
   $2
 }
-    return res.status (403).json ({ error: 'Forbidden' })
+    return res.status (403).json ({ error: 'Forbidden' });
   }
   try {
     ensure_dir (DOCS_DIR)
@@ -120,14 +117,14 @@ if ( {) {
       .slice (0, 14)
     fs.writeFileSync (CONTENT_PATH, json_string, 'utf8')
     fs.writeFileSync (path.join (VERSIONS_DIR, `${ts}.json`), json_string, 'utf8')
-    res.status (200).json ({ ok: true, version: ts })
+    res.status (200).json ({ ok: true, version: ts });
   } catch (e) {
-    res.status (500).json ({ error: 'Failed to save content' })
+    res.status (500).json ({ error: 'Failed to save content' });
   }
 }
-    res.status (500).json ({ error: 'Failed to save content' })
+    res.status (500).json ({ error: 'Failed to save content' });
   }  } catch (e) {
-    res.status (500).json ({ error: 'Failed to save content' })
+    res.status (500).json ({ error: 'Failed to save content' });
   }
 }
     const ts = new Date()
@@ -136,8 +133,8 @@ if ( {) {
       .slice(0, 14)
     fs.writeFileSync(CONTENT_PATH, jsonString, 'utf8')
     fs.writeFileSync(path.join(VERSIONS_DIR, `${ts}.json`), jsonString, 'utf8')
-    res.status(200).json({ ok: true, version: ts })
+    res.status(200).json({ ok: true, version: ts });
   } catch (e) {
-    res.status(500).json({ error: 'Failed to save content' })
+    res.status(500).json({ error: 'Failed to save content' });
   }
 }

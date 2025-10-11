@@ -54,7 +54,7 @@ const, March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression
                 lab, e, l: 'Enhancem, e, n, t')
                 ic, o, n: '📈'),
                 col, o, r: 'te, x, t-emera, l, d-40, 0')
-              })
+              });
               {
                 val, u, e: '50, 0%',
                 lab, e, l: 'Enhancem, e, n, t',

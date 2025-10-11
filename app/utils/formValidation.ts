@@ -205,7 +205,7 @@ export const validationRules = {}
   e: (allowedType)
   s: string[], message?: string): ValidationRule<File> => ({/* TODO: Fix JSX expression */})`
   of: ${allowedTypes.join(', ')}`
-  })
+  });
 }
 /**
  * Validate a single field with multiple rules

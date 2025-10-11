@@ -4,10 +4,6 @@ export default function ITSupportPage() {
     {import React from "react"
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate"
 
-
-
-
-
     {
       name: 'Lisa Wong'
       role: 'Operations Manager'
@@ -15,14 +11,6 @@ import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemp
       avatar: '/placeholder.svg'
     }
     {
-
-
-
-
-
-
-
-
 
 export default function ITSupportPage() {
   const benefits = [
@@ -50,27 +38,25 @@ export default function ITSupportPage() {
       role: "IT Lead",
       text: "Professional and responsive. Their technicians feel like an extension of our own team.",
 
-
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props)
     this.state = { hasError: false }
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true }
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo)
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>
     }
-    
+
     return this.props.children
   }
 }
@@ -84,9 +70,6 @@ import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemp
 import { Phone, ShieldCheck, Clock } from 'lucide-react'
 import React from "react"
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate"
-
-
-
 
     <ServiceLandingTemplate
       title="IT Support Services"

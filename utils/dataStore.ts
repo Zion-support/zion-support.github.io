@@ -33,10 +33,10 @@ const REVIEWS_PATH = path.join(DATA_DIR, 'reviews.json')
 async function ensureFilesExist(): Promise<void> {
   await fs.ensureDir(DATA_DIR)
   if (!(await fs.pathExists(PROJECTS_PATH))) {
-    await fs.writeJson(PROJECTS_PATH, [], { spaces: 2 })
+    await fs.writeJson(PROJECTS_PATH, [], { spaces: 2 });
   }
   if (!(await fs.pathExists(REVIEWS_PATH))) {
-    await fs.writeJson(REVIEWS_PATH, [], { spaces: 2 })
+    await fs.writeJson(REVIEWS_PATH, [], { spaces: 2 });
   }
 }
 export async function readProjects(): Promise<Project[]> {
@@ -44,14 +44,14 @@ export async function readProjects(): Promise<Project[]> {
   return fs.readJson(PROJECTS_PATH)
 }
 export async function writeProjects(projects: Project[]): Promise<void> {
-  await fs.writeJson(PROJECTS_PATH, projects, { spaces: 2 })
+  await fs.writeJson(PROJECTS_PATH, projects, { spaces: 2 });
 }
 export async function readReviews(): Promise<Review[]> {
   await ensureFilesExist()
   return fs.readJson(REVIEWS_PATH)
 }
 export async function writeReviews(reviews: Review[]): Promise<void> {
-  await fs.writeJson(REVIEWS_PATH, reviews, { spaces: 2 })
+  await fs.writeJson(REVIEWS_PATH, reviews, { spaces: 2 });
 }
 export async function findProjectById(
   projectId: string

@@ -199,7 +199,7 @@ const announcementRef = useRef<HTMLDivElement>(null);
 useEffect(() => {;,
 theme: 'auto'
 }
-  })
+  });
   // Apply accessibility settings to document;
 const applySettings = useCallback((newSettings: AccessibilitySettings) => {;;
 const root = document.documentElement;
@@ -212,7 +212,7 @@ root.style.setProperty('--contrast-filter'}, 'contrast(1.5) brightness(1.2)')
 root.classList.remove('high-contrast');
 root.style.removeProperty('--contrast-filter')
     }
-    
+
     // Font size;
 root.style.setProperty('--font-size-multiplier', `${newSettings.fontSize / 100}`)
     // Reduced motion;
@@ -333,7 +333,7 @@ root.classList.add('large-cursor')
     } else {;
 root.classList.remove('large-cursor')
     }
-    
+
     // Color blindness;
 if (newSettings.colorBlindness !== 'none') {;
 const filters={;;,
@@ -345,14 +345,14 @@ tritanopia: 'url(#tritanopia)'
     } else {;
 root.style.removeProperty('--color-filter')
     }
-    
+
     // Focus indicator;
 if (newSettings.focusIndicator) {;
 root.classList.add('show-focus')
     } else {;
 root.classList.remove('show-focus')
     }
-    
+
     // Theme;
 if (newSettings.theme === 'light') {;
 root.classList.remove('dark');
@@ -363,7 +363,7 @@ root.classList.add('dark')
     } else {;
 root.classList.remove('light', 'dark')
     }
-    
+
     // Save to localStorage;
 localStorage.setItem('accessibility-settings', JSON.stringify(newSettings))
   }, [])
@@ -446,19 +446,19 @@ event.preventDefault();
 setIsOpen(!isOpen)
 }
       }
-      
+
       // Ctrl/Cmd + Plus to increase font size;
 if ((event.ctrlKey || event.metaKey) && event.key === '=') {;
 event.preventDefault();
 adjustFontSize('increase')
       }
-      
+
       // Ctrl/Cmd + Minus to decrease font size;
 if ((event.ctrlKey || event.metaKey) && event.key === '-') {;
 event.preventDefault();
 adjustFontSize('decrease')
       }
-      
+
       // Ctrl/Cmd + 0 to reset font size;
 if ((event.ctrlKey || event.metaKey) && event.key === '0') {;
 event.preventDefault();
@@ -514,7 +514,7 @@ if (settings.screenReader) {;
 }
 announceToScreenReader(`${target.textContent || target.getAttribute('aria-label') || 'Element'} lost focus`)
       }
-    })
+    });
   }
   const setupScreenReaderAnnouncements = () => {;
     // Create live region for screen reader announcements;
@@ -545,7 +545,7 @@ if (settings.highContrast) {;,
 fontSize: 16},;,
 colorBlindMode: 'none',;,
 deviceMode: 'desktop'
-  })
+  });
   // Apply accessibility settings to the document;
 const applySettings = useCallback((newSettings: AccessibilitySettings) => {;;
 const root = document.documentElement;
@@ -865,7 +865,7 @@ setSettings(prev => ({ ...prev)}, highContrast: true }))
 mediaQuery.addEventListener('change', (e) => {;
 }
 setSettings(prev => ({ ...prev)}, highContrast: e.matches }))
-    })
+    });
   }
   const setupMotionDetection = () => {;;
 const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');;
@@ -877,7 +877,7 @@ setSettings(prev => ({ ...prev)}, reducedMotion: true }))
 mediaQuery.addEventListener('change', (e) => {;
 }
 setSettings(prev => ({ ...prev)}, reducedMotion: e.matches }))
-    })
+    });
   }
   const setupColorBlindnessSimulation = () => {;
     // CSS filters for color blindness simulation;
@@ -919,7 +919,7 @@ playSound('click')
 document.addEventListener('focusin', () => {;
 playSound('focus')
 }
-      })
+      });
     }
   }
   const playSound = (type: string) => {;
@@ -954,7 +954,7 @@ media.setAttribute('preload', 'none');
 media.setAttribute('autoplay', 'false');
 media.setAttribute('muted', 'true')
 }
-      })
+      });
     }
   }
   const setupFocusRings = () => {;;
@@ -988,7 +988,7 @@ const nextIndex = currentIndex < focusableElements.length - 1 ? currentIndex + 1
             (focusableElements[nextIndex] as HTMLElement).focus()
           }
         }
-      })
+      });
     }
   }
   const setupScreenReaderHints = () => {;;
@@ -1002,7 +1002,7 @@ if (hint) {;
 element.setAttribute('aria-label'}, hint);
 element.setAttribute('aria-describedby', `sr-hint-${element.id || Math.random()}`)
         }
-      })
+      });
     }
   }
   const setupAccessibilityInfo = () => {;;
@@ -1016,7 +1016,7 @@ if (info) {;
 }
 showAccessibilityTooltip(target}, info)
         }
-      })
+      });
     }
   }
   const showAccessibilityTooltip = (element: HTMLElement;, info: string) => {;
@@ -1088,7 +1088,7 @@ setDragOffset({;,
 }
 x: e.clientX - rect.left},;,
 y: e.clientY - rect.top
-        })
+        });
       }
     }
   }
@@ -1248,13 +1248,13 @@ if (event.key === 'Tab') {
 document.body.classList.add('keyboard-navigation')
 }
       }
-      
+
       // Escape key to close accessibility panel;
 if (event.key === 'Escape' && isOpen) {;
 setIsOpen(false);
 buttonRef.current?.focus()
       }
-      
+
       // Alt + A to toggle accessibility panel;
 if (event.altKey && event.key === 'a') {;
 event.preventDefault();
@@ -1456,7 +1456,7 @@ settings.highContrast
               >
                 <Contrast className="w-4 h-4 mx-auto" />
               </button>
-              
+
               <$2 />;
 onClick={() => setSettings(prev => ({ ...prev)}}, fontSize: Math.min(prev.fontSize + 2, 24) }))}
                 className="w-full p-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors";
@@ -1464,7 +1464,7 @@ aria-label="Increase font size"
               >
                 <ZoomIn className="w-4 h-4 mx-auto" />
               </button>
-              
+
               <$2 />;
 onClick={() => setSettings(prev => ({ ...prev)}}, reducedMotion: !prev.reducedMotion }))}
                 className={`w-full p-2 rounded transition-colors ${};
@@ -1498,7 +1498,7 @@ checked={settings.highContrast}
                     />
                     <span className="text-sm text-gray-600 dark:text-gray-400">High Contrast</span>
                   </label>
-                  
+
                   <label className="flex items-center space-x-2">
                     <input;
 type="checkbox";
@@ -1509,7 +1509,7 @@ checked={settings.highContrastText}
                     />
                     <span className="text-sm text-gray-600 dark:text-gray-400">High Contrast Text</span>
                   </label>
-                  
+
                   <label className="flex items-center space-x-2">
                     <input;
 type="checkbox";
@@ -1520,7 +1520,7 @@ checked={settings.largeCursor}
                     />
                     <span className="text-sm text-gray-600 dark:text-gray-400">Large Cursor</span>
                   </label>
-                  
+
                   <div className="flex items-center space-x-2">
                     <span className="text-sm text-gray-600 dark:text-gray-400">Font Size:</span>
                     <$2 />;
@@ -1834,7 +1834,7 @@ checked={settings.reducedMotion}
                     />
                     <span className="text-sm text-gray-600 dark:text-gray-400">Reduced Motion</span>
                   </label>
-                  
+
                   <label className="flex items-center space-x-2">
                     <input;
 type="checkbox";
@@ -1845,7 +1845,7 @@ checked={settings.soundEffects}
                     />
                     <span className="text-sm text-gray-600 dark:text-gray-400">Sound Effects</span>
                   </label>
-                  
+
                   <label className="flex items-center space-x-2">
                     <input;
 type="checkbox";
@@ -1876,7 +1876,7 @@ checked={settings.screenReader}
                     />
                     <span className="text-sm text-gray-600 dark:text-gray-400">Screen Reader Mode</span>
                   </label>
-                  
+
                   <label className="flex items-center space-x-2">
                     <input;
 type="checkbox";
@@ -1887,7 +1887,7 @@ checked={settings.keyboardNavigation}
                     />
                     <span className="text-sm text-gray-600 dark:text-gray-400">Enhanced Keyboard Navigation</span>
                   </label>
-                  
+
                   <label className="flex items-center space-x-2">
                     <input;
 type="checkbox";
@@ -1898,7 +1898,7 @@ checked={settings.focusIndicator}
                     />
                     <span className="text-sm text-gray-600 dark:text-gray-400">Show Focus Indicator</span>
                   </label>
-                  
+
                   <label className="flex items-center space-x-2">
                     <input;
 type="checkbox";
@@ -1932,7 +1932,7 @@ value={settings.colorBlindness}
                       <option value="tritanopia">Tritanopia (Blue-Blind)</option>
                     </select>
                   </div>
-                  
+
                   <label className="flex items-center space-x-2">
                     <input;
 type="checkbox";
@@ -1963,7 +1963,7 @@ checked={settings.showKeyboardShortcuts}
                     />
                     <span className="text-sm text-gray-600 dark:text-gray-400">Show Keyboard Shortcuts</span>
                   </label>
-                  
+
                   <label className="flex items-center space-x-2">
                     <input;
 type="checkbox";
@@ -1974,7 +1974,7 @@ checked={settings.showScreenReaderHints}
                     />
                     <span className="text-sm text-gray-600 dark:text-gray-400">Show Screen Reader Hints</span>
                   </label>
-                  
+
                   <label className="flex items-center space-x-2">
                     <input;
 type="checkbox";
@@ -1998,7 +1998,7 @@ onClick={resetSettings}
                     <RotateCcw className="w-4 h-4 inline mr-1" />;
 Reset
                   </button>
-                  
+
                   <$2 />;
 onClick={() => setIsExpanded(!isExpanded)}
                     className="px-3 py-2 text-sm bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
@@ -2131,44 +2131,44 @@ Close
           --border-color: #000000
           --accent-color: #0000ff
         }
-        
+
         .high-contrast * {;,
 color: var(--text-color) !important;
 background-color: var(--bg-color) !important;
 border-color: var(--border-color) !important
         }
-        
+
         /* Reduced motion */
         .reduced-motion * {;
 animation-duration: 0.01ms !important;
 animation-iteration-count: 1 !important;
 transition-duration: 0.01ms !important
         }
-        
+
         /* Large text */
         .large-text {;
 font-size: 1.2em
         }
-        
+
         /* Focus indicators */
         .show-focus-indicator *:focus {;,
 outline: 3px solid #3b82f6 !important;
 outline-offset: 2px !important
         }
-        
+
         /* Color blindness support */
         [style*="--color-blindness: protanopia"] {;,
 filter: url('#protanopia')
         }
-        
+
         [style*="--color-blindness: deuteranopia"] {;,
 filter: url('#deuteranopia')
         }
-        
+
         [style*="--color-blindness: tritanopia"] {;,
 filter: url('#tritanopia')
         }
-        
+
         /* Font size variables */
         :root {
           --font-size-base: 16px
@@ -2225,20 +2225,20 @@ root.classList.add('high-contrast')
     } else {;
 root.classList.remove('high-contrast')
     }
-    
+
     // Color blindness;
 root.classList.remove('protanopia', 'deuteranopia', 'tritanopia');
 if (settings.colorBlindness !== 'none') {;
 root.classList.add(settings.colorBlindness)
     }
-    
+
     // Reduced motion;
 if (settings.reducedMotion) {;
 root.classList.add('reduced-motion')
     } else {;
 root.classList.remove('reduced-motion')
     }
-    
+
     // Dark mode;
 if (settings.darkMode === 'dark' || 
         (settings.darkMode === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches)) {;
@@ -2246,14 +2246,14 @@ root.classList.add('dark')
     } else {;
 root.classList.remove('dark')
     }
-    
+
     // Focus indicator;
 if (settings.focusIndicator) {;
 root.classList.add('focus-indicator')
     } else {;
 root.classList.remove('focus-indicator')
     }
-    
+
     // Dyslexia support;
 if (settings.dyslexia) {;
 root.classList.add('dyslexia-friendly')
@@ -2337,10 +2337,10 @@ case 'help':;
 setShowKeyboardShortcuts(true);
 break
       }
-      
+
       // Play confirmation sound;
 if (audioRef.current && settings.soundEffects) {;
-audioRef.current.play().catch(() => {})
+audioRef.current.play().catch(() => {});
       }
     }
   }, [voiceCommands, settings.soundEffects])
@@ -2380,7 +2380,7 @@ showFocusRings: true,;,
 showKeyboardShortcuts: false,;,
 showScreenReaderHints: false,;,
 showAccessibilityInfo: false
-    })
+    });
   }, [])
   // Tab component;
 const TabButton: React.FC<{ id: string; icon: React.ReactNode; label: string }> = ({;
@@ -2435,7 +2435,7 @@ aria-label="Close accessibility settings"
               <X className="w-5 h-5" />
             </button>
           </div>
-          
+
           {/* Accessibility Score */}
           <div className="mt-3 flex items-center justify-between">
             <span className="text-sm opacity-90">Accessibility Score</span>
@@ -2497,7 +2497,7 @@ isListening
                       </>
                     )}
                   </button>
-                  
+
                   <div className="text-xs text-gray-600 dark:text-gray-400">
                     <p className="font-medium mb-2">Available Commands:</p>
                     <div className="grid grid-cols-1 gap-1">
@@ -2748,7 +2748,7 @@ isListening
                       </>
                     )}
                   </button>
-                  
+
                   <div className="text-xs text-gray-600 dark:text-gray-400">
                     <p className="font-medium mb-2">Voice Commands:</p>
                     <div className="space-y-1">
@@ -2897,7 +2897,7 @@ onClick={() => setShowKeyboardShortcuts(!showKeyboardShortcuts)}
             <HelpCircle className="w-4 h-4" />
             <span>Keyboard Shortcuts</span>
           </button>
-          
+
           <div className="text-xs text-gray-500">;,
 Score: {accessibilityScore}/100
           </div>
@@ -2929,7 +2929,7 @@ onClick={() => setShowKeyboardShortcuts(false)}
                     <X className="w-5 h-5" />
                   </button>
                 </div>
-                
+
                 <div className="space-y-3">
                   {[
                     { key: 'Alt + A'}, action: 'Toggle accessibility panel' },

@@ -9,9 +9,9 @@ export function useUIState() {
     availability: true,
     region: true,
     experience: true,
-    price: true})
+    price: true});
     price: true,
-  })
+  });
   // Toggle expanded sections in the sidebar
   const toggleSection = (sectionName: keyof typeof expandedSections) => {
     setExpandedSections(prev => ({

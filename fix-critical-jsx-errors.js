@@ -136,7 +136,7 @@ const ${pageName}Page: React.FC = () => {
         <meta name="description" content="${description}" />
         <meta name="keywords" content="${title.toLowerCase()}, AI solutions, IT services, business transformation" />
       <Navigation />
-      
+
       <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -298,5 +298,5 @@ criticalFiles.forEach(filePath => {
   } catch (error) {
     console.error(`❌ Error processing ${filePath}:`, error.message)
   }
-})
+});
 console.log('\n✨ Critical JSX error fixes complete!')</div></div></div></div></div></div></div></div></div></button></button></button></p></p></p></p></h1></h2></h2></h3></ul></li></main></section></section></section>

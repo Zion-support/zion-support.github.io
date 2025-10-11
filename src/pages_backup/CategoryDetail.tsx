@@ -8,8 +8,6 @@ const AUTO_SERVICE_TITLES = [
   "IoT Device Integration Service"
   "Blockchain Data Solutions"
 
-
-
 const AUTO_SERVICE_TITLES = [
   "AI - Powered Customer Support"
   "Cloud Infrastructure Management"
@@ -115,17 +113,12 @@ function generateInnovationListing (index: number): ProductListing {
     }
     },
 
-
-
-
-
     'ai-models-apis': {
       title: "AI Models & APIs"
       description: "Access cutting-edge AI models with easy integration"
       icon: <Brain className="w-6 h-6" />
     }
     },
-
 
     'content-creation': {
       title: "Content Creation"
@@ -134,14 +127,12 @@ function generateInnovationListing (index: number): ProductListing {
     }
     },
 
-
     'data-analysis': {
       title: "Data Analysis"
       description: "Extract insights from complex datasets"
       icon: <BarChart className="w-6 h-6" />
     }
     },
-
 
     'computer-vision': {
       title: "Computer Vision"
@@ -150,7 +141,6 @@ function generateInnovationListing (index: number): ProductListing {
     }
     },
 
-
     'virtual-assistants': {
       title: "Virtual Assistants"
       description: "Intelligent automation for your workflow"
@@ -158,15 +148,12 @@ function generateInnovationListing (index: number): ProductListing {
     }
     },
 
-
     'voice-speech': {
       title: "Voice & Speech"
       description: "Speech recognition and synthesis tools"
       icon: <Mic className="w-6 h-6" />
 
-
     },
-
 
     'developer-tools': {
       title: "Developer Tools",
@@ -175,19 +162,10 @@ function generateInnovationListing (index: number): ProductListing {
     };          icon: <Bot className="w-6 h-6" />},
     },
 
-
     'developer-tools': {
       title: "Developer Tools"
       description: "AI-powered coding assistance and automation"
       icon: <Code className="w-6 h-6" />
-
-
-
-
-
-
-
-
 
     },
     'business-solutions': {
@@ -245,7 +223,7 @@ function generateInnovationListing (index: number): ProductListing {
         setListings(listingsToShow)
       } catch (err) {
         logErrorToProduction('Category load error:', { data: err }),
-        toast({ title: 'Error', description: 'Failed to load category' })
+        toast({ title: 'Error', description: 'Failed to load category' });
       } finally {
         setIsLoading(false)
       }
@@ -270,22 +248,22 @@ function generateInnovationListing (index: number): ProductListing {
   // Handle requesting a quote
   const handleRequestQuote = (listingId: string) => {
     const listing = listings.find(item => item.id === listingId),
-    
+
     if (listing) {
       toast({
         title: "Quote Requested",
         description: `Your quote request for ${listing.title} has been sent.`
       }),
-      
+
       // Navigate to the quote request page with the listing information
       const queryParams = new URLSearchParams({
         serviceType: listing.category,
         itemId: listing.id,
         itemTitle: listing.title,
         itemCategory: listing.category,
-        ...(listing.images?.[0] && { itemImage: listing.images[0] })
+        ...(listing.images?.[0] && { itemImage: listing.images[0] });
       }),
-      
+
       router.push(`/request-quote?${queryParams.toString()}`)
     }
   },
@@ -295,9 +273,6 @@ function generateInnovationListing (index: number): ProductListing {
     : 'Category | Zion Marketplace',
   const seoDescription =
     category.description || 'Explore listings in this category.',
-
-
-
 
   return (
     <>
@@ -313,9 +288,6 @@ function generateInnovationListing (index: number): ProductListing {
                Back to Categories
             </Link>
           </div>
-          
-
-
 
           <div className="text-center mb-12">
             <div className="flex justify-center mb-6">
@@ -395,8 +367,6 @@ function generateInnovationListing (index: number): ProductListing {
             </GradientHeading>
             <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
               {category.description}
-
-
 
 import { useRouter } from 'next/router'
 import Link from 'next/link'
@@ -543,7 +513,7 @@ function generateInnovationListing(): any (index: number): ProductListing {
         setListings(listingsToShow)
       } catch (err) {
         logErrorToProduction('Category load error:', { data: err }),
-        toast({ title: 'Error', description: 'Failed to load category' })
+        toast({ title: 'Error', description: 'Failed to load category' });
       } finally {
         setIsLoading(false)
       }
@@ -575,7 +545,7 @@ function generateInnovationListing(): any (index: number): ProductListing {
         itemId: listing.id,
         itemTitle: listing.title,
         itemCategory: listing.category,
-        ...(listing.images?.[0] && { itemImage: listing.images[0] })
+        ...(listing.images?.[0] && { itemImage: listing.images[0] });
       }),
       router.push(`/request-quote?${queryParams.toString()}`)
     }
@@ -621,21 +591,10 @@ function generateInnovationListing(): any (index: number): ProductListing {
             </div>
           )}
 
-
-
-
-
-
-
-
-
           </div></$1></$1>
     </>
   )
 }
-
-
-
 
             </p></$1>
           {is_loading ? (

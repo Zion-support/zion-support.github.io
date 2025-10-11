@@ -56,7 +56,7 @@ function removeUnusedImports(content) {
         const importOccurrences = (importStatement.match(usageRegex) || []).length
         const totalOccurrences = matches.length
         return totalOccurrences>importOccurrences</totalOccurrences>
-      })
+      });
       // If no names are used, remove the entire import
       if (usedNames.length === 0) {
     newContent = newContent.replace(importStatement, '')
@@ -84,7 +84,7 @@ function removeUnusedImports(content) {
   }
       }
     }
-  })
+  });
   // Clean up multiple empty lines
   newContent = newContent.replace(/\n\s*\n\s*\n/g, '\n\n')
   return { content: newContent, removedCount }
@@ -113,7 +113,7 @@ async function main() {
   for (const pattern of filePatterns) {
     const files = await glob(pattern, {)
       ignore: excludePatterns),
-      cwd: process.cwd()})
+      cwd: process.cwd()});
     allFiles.push(...files)
   }
 

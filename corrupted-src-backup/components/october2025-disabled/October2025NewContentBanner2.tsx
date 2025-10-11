@@ -24,7 +24,7 @@ const October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o">
             Explore, cuttin, g-edge, AI, solutions transforming, industrie, s — from sustainable, computing to, intelligent, automation
         </div>)
-        {/* Articles, G, r, i, d */})
+        {/* Articles, G, r, i, d */});
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">)
           { newArticl, e, s.m, a, p((arti, c, l, e) = > {
             const Ico, n = artic, l, e.ic, o, n; return(<, ke, y = { artic, l, e.slug  }, to = {`/bl, o, g/${artic, l, e.slug}`}$2 />
@@ -80,7 +80,7 @@ const October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
                 <div, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">
                   <sp, a, n>Read, Articl, e
                   <Link, className="w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" />
-                </d, i, v  > {/* Hover, Gradient, Effe, c, t */})
+                </d, i, v  > {/* Hover, Gradient, Effe, c, t */});
                 <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-5, rounde, d-2xl, transitio, n-opacity, duratio, n-30, 0`} />)
                 {/* Read, More, Link */}"
                 <div, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">

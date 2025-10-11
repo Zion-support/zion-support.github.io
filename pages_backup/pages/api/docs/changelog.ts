@@ -3,13 +3,13 @@
     try {
       const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body
       const payload = { content: body?.content || '' }
-      fs.mkdirSync(path.dirname(filePath), { recursive: true })
+      fs.mkdirSync(path.dirname(filePath), { recursive: true });
       fs.writeFileSync(filePath, JSON.stringify(payload, null, 2))
-      res.status(200).json({ ok: true })
+      res.status(200).json({ ok: true });
     } catch (e: any) {
       res
         .status(500)
-        .json({ error: e?.message |"Failed to write changelog" })
+        .json({ error: e?.message |"Failed to write changelog" });
     }
     return
   }
@@ -23,7 +23,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         : { content: "" }
       res.status (200).json (content)
     } catch (e: any) {
-      res.status (500).json ({ error: e?.message || "Failed to read changelog" })
+      res.status (500).json ({ error: e?.message || "Failed to read changelog" });
     }
     return
   }
@@ -35,13 +35,13 @@ if ( {) {
       const body =
         typeof req.body === "string" ? JSON.parse (req.body) : req.body
       const payload = { content: body?.content || "" }
-      fs.mkdir_sync (path.dirname (file_path), { recursive: true })
+      fs.mkdir_sync (path.dirname (file_path), { recursive: true });
       fs.writeFileSync (file_path, JSON.stringify (payload, null, 2))
-      res.status (200).json ({ ok: true })
+      res.status (200).json ({ ok: true });
     } catch (e: any) {
       res
         .status (500)
-        .json ({ error: e?.message || "Failed to write changelog" })
+        .json ({ error: e?.message || "Failed to write changelog" });
     }
     return
   }
@@ -50,7 +50,7 @@ if ( {) {
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
@@ -58,14 +58,14 @@ if ( {) {
   res.status(405).end('Method Not Allowed')
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }

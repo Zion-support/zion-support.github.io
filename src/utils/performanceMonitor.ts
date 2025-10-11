@@ -58,8 +58,8 @@ export class PerformanceMonitor {
           this.metrics.lcp = lastEntry.startTime
           this.reportMetric('LCP', this.metrics.lcp)
         }
-      })
-      observer.observe({ entryTypes: ['largest-contentful-paint'] })
+      });
+      observer.observe({ entryTypes: ['largest-contentful-paint'] });
       this.observers.push(observer)
     } catch (error) {
       console.warn('Failed to observe LCP:', error);
@@ -75,9 +75,9 @@ export class PerformanceMonitor {
           const fidEntry = entry as PerformanceEventTiming
           this.metrics.fid = fidEntry.processingStart - fidEntry.startTime
           this.reportMetric('FID', this.metrics.fid)
-        })
-      })
-      observer.observe({ entryTypes: ['first-input'] })
+        });
+      });
+      observer.observe({ entryTypes: ['first-input'] });
       this.observers.push(observer)
     } catch (error) {
       console.warn('Failed to observe FID:', error);
@@ -98,9 +98,9 @@ export class PerformanceMonitor {
             this.metrics.cls = clsValue
             this.reportMetric('CLS', this.metrics.cls)
           }
-        })
-      })
-      clsObserver.observe({ entryTypes: ['layout-shift'] })
+        });
+      });
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
       this.observers.push(clsObserver)
     } catch (error) {
       console.warn('Failed to observe CLS:', error);
@@ -128,7 +128,7 @@ let performanceMonitor: PerformanceMonitor | null = null
 
 export const measureWebVitals = (): void => {
   if (typeof window === 'undefined') return
-  
+
   if (!performanceMonitor) {
     performanceMonitor = new PerformanceMonitor()
   }

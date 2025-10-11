@@ -16,7 +16,7 @@ interface RequestBody {
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
-    return new Response(null, { headers: corsHeaders })
+    return new Response(null, { headers: corsHeaders });
   }
   try {
     const { messages } = await req.json() as RequestBody
@@ -38,10 +38,10 @@ serve(async (req) => {
         model: 'gpt-4o-mini',
         messages: combinedMessages,
         temperature: 0.7,
-        max_tokens: 500})})
+        max_tokens: 500})});
         max_tokens: 500,
       }),
-    })
+    });
     const data = await response.json()
     if (data.error) {
       throw new Error(data.error.message)
@@ -51,15 +51,15 @@ serve(async (req) => {
     // This would track common questions, successful interactions, etc.
     console.log('AI chat interaction logged')
     return new Response(JSON.stringify({ message: assistantMessage }), {
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' }});
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-    })
+    });
   } catch (error) {
     console.error('Error in ai-chat function:', error)
     return new Response(JSON.stringify({ error: error.message }), {
       status: 500,
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' }});
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-    })
+    });
   }
-})
+});

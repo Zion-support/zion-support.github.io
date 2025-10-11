@@ -51,7 +51,7 @@ export function findServiceBySlug(slug: string): ServiceRecord | undefined {
 				}
 			}
 			return false
-		})
+		});
 		if (hit) return hit
 	}
 	return undefined
@@ -72,5 +72,5 @@ export function listServicesByCategory(categoryIncludes: string): ServiceRecord[
 		if (seen.has(key)) return false
 		seen.add(key)
 		return true
-	})
+	});
 }

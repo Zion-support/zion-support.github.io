@@ -195,8 +195,6 @@ setError(e.message |'An unexpected error occurred.')
 setLoading(false)
       }
 
-
-
     }
     },;
 fetchWhitepaper()
@@ -293,7 +291,6 @@ return (;
               <Link href="/"><ArrowLeft className="mr-2 h-4 w-4" /> Back to Home</Link></$1></$1>
     )
   }
-
 
   // Access control based on is_public and admin role;
 if (!sharedData && sharedData.is_public && !isAdmin) {;

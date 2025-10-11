@@ -47,7 +47,7 @@ export default defineConfig({
         if (browser && browser.family === 'chromium') {
           launchOptions && launchOptions.args.push('--disable-ipv6');        }
         return launchOptions
-      })
+      });
     }
     env: {
     defaultCommandTimeout: 10000
@@ -90,7 +90,7 @@ export default defineConfig({
           launchOptions.args.push('--disable-ipv6')
         }
         return launchOptions
-      })
+      });
     }
     env: {
       CYPRESS_TEST_USER_EMAIL: process.env.CYPRESS_TEST_USER_EMAIL || 'localtest@example.com', CYPRESS_TEST_USER_PASSWORD: process.env.CYPRESS_TEST_USER_PASSWORD || 'localpassword123',
@@ -105,7 +105,7 @@ export default defineConfig({
     mochaFile: 'cypress/results/junit-[hash].xml',
     toConsole: true
   }
-})
+});
 import { defineConfig } from 'cypress',
 export default defineConfig({
   e2e: {
@@ -119,7 +119,7 @@ export default defineConfig({
           launchOptions.args.push('--disable-ipv6')
         }
         return launchOptions
-      })
+      });
     }
     env: {
       CYPRESS_TEST_USER_EMAIL: process.env.CYPRESS_TEST_USER_EMAIL || 'localtest@example.com'
@@ -160,11 +160,11 @@ export default defineConfig({
   }, });    mocha_file: 'cypress / results / junit-[hash].xml'
     to_console: true
   }
-})
+});
           launchOptions.args.push('--disable-ipv6')
         }
         return launchOptions
-      })
+      });
     },
     env: {
       CYPRESS_TEST_USER_EMAIL: process.env.CYPRESS_TEST_USER_EMAIL || 'localtest@example.com',
@@ -182,4 +182,4 @@ export default defineConfig({
     mochaFile: 'cypress/results/junit-[hash].xml',
     toConsole: true
   }
-})
+});

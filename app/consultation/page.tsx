@@ -43,7 +43,7 @@ return (
         <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
       </Helmet>
       <Navigation />
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Page - Zion Tech Group</title>
@@ -67,15 +67,15 @@ Get Started
 Learn More
                 </button>
               </div>
-      
+
       <Footer />
     </>
             </div>
-      
+
       <Footer />
     </>
           </div>
-      
+
       <Footer />
     </>
         </section>
@@ -87,7 +87,7 @@ Learn More
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Powerful Features</h2>
               <p className="text-xl text-gray-300">Everything you need to succeed with AI</p>
             </div>
-      
+
       <Footer />
     </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -96,7 +96,7 @@ Learn More
                   <div className="text-cyan-400 mb-4">
                     <feature.icon className="h-8 w-8" />
                   </div>
-      
+
       <Footer />
     </>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -110,16 +110,16 @@ Learn More
                     ))}
                   </ul>
                 </div>
-      
+
       <Footer />
     </>
               ))}
             </div>
-      
+
       <Footer />
     </>
           </div>
-      
+
       <Footer />
     </>
         </section>
@@ -129,7 +129,7 @@ Learn More
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
             </div>
-      
+
       <Footer />
     </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -138,37 +138,37 @@ Learn More
                   <div className="flex-shrink-0">
                     <Zap className="h-6 w-6 text-cyan-400" />
                   </div>
-      
+
       <Footer />
     </>
                   <p className="text-gray-300">{benefit}</p>
                 </div>
-      
+
       <Footer />
     </>
               ))}
             </div>
-      
+
       <Footer />
     </>
           </div>
-      
+
       <Footer />
     </>
         </section>;
 Learn More
               </button>
             </div>
-      
+
       <Footer />
     </>
           </div>
-      
+
       <Footer />
     </>
         </section>
       </div>
-      
+
       <Footer />
     </>
       <Footer />

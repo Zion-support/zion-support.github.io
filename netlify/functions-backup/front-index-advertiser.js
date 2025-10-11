@@ -3,10 +3,10 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
   try {execSync('node automation/front-index-advertiser.cjs || true', {)
       stdio: inherit),
         shell: true}
-    })
+    });
     return {statusCode: 200,
       body: JSON.stringify({ ok: true),
-        task: 'front-index-advertiser' })
+        task: 'front-index-advertiser' });
     }
   } catch (e) {return {
       statusCode: 200,
@@ -14,12 +14,12 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
         error: String(e,),
   try {/* TODO: Fix JSX expression */}
   l: true}
-    })
+    });
     return {/* TODO: Fix JSX expression */}
-  k: 'front-index-advertiser' })
+  k: 'front-index-advertiser' });
     }
   } catch (e) {/* TODO: Fix JSX expression */}
-      })
+      });
     }
   }
 }

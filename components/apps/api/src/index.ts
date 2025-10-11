@@ -8,7 +8,7 @@ import dotenv from 'dotenv'
 import {  createOpenAIClient, generateJobPost   } from './openai.js'
 import {  getPool, withUser   } from './pg.js'
 dotenv.config()
-const app = Fastify({ logger: true })
+const app = Fastify({ logger: true });
 await app.register(cors, {
   origin: (origin: string | undefined, cb: (err: Error | null, allow?: boolean) => void) => {
   origin: (origin, cb) => {
@@ -20,8 +20,8 @@ await app.register(cors, {
     cb(new Error('Not allowed'), false)
   },
   methods: ['GET', 'POST', 'OPTIONS']
-})
-await app.register(rateLimit, { global: true, max: 100, timeWindow: '1m' })
+});
+await app.register(rateLimit, { global: true, max: 100, timeWindow: '1m' });
 const openai = createOpenAIClient(process.env.OPENAI_API_KEY || '')
 function getUserId(req: any): string | null {
   return (req.headers['x-user-id'] as string) || (req.query as any)['user_id'] || null
@@ -30,10 +30,10 @@ app.post('/ai/ask', async (req: any, reply: any) => {
 app.post('/ai/ask', async (req, reply) => {
   const body = (req.body as any) || {}
   const prompt = body.prompt as string
-  if (!prompt) return reply.code(400).send({ error: 'prompt required' })
-  const completion = await openai.responses.create({ model: 'gpt-4o-mini', input: prompt })
+  if (!prompt) return reply.code(400).send({ error: 'prompt required' });
+  const completion = await openai.responses.create({ model: 'gpt-4o-mini', input: prompt });
   return { text: completion.output_text }
-})
+});
 app.post('/jobs/generate', async (req: any, reply: any) => {
 app.post('/jobs/generate', async (req, reply) => {
   const body = (req.body as any) || {}
@@ -47,15 +47,15 @@ app.post('/jobs/generate', async (req, reply) => {
        VALUES ($1, $2, $3, $4, $5, 'draft')`,
       [userId, role, description, body.location || null, body.tags || null]
     )
-  })
+  });
   return { saved: Boolean(userId), description }
-})
+});
 app.get('/talent/search', async (req: any, reply: any) => {
 app.get('/talent/search', async (req, reply) => {
   const q = (req.query as any).q as string
   const country = (req.query as any).country as string | undefined
   const userId = getUserId(req)
-  if (!userId) return reply.code(401).send({ error: 'unauthorized' })
+  if (!userId) return reply.code(401).send({ error: 'unauthorized' });
   const rows = await withUser(userId, async (client) => {
     const res = await client.query(
       `SELECT id, full_name, country, skills, experience_years FROM talent_profile
@@ -69,34 +69,34 @@ app.get('/talent/search', async (req, reply) => {
       [country || null, q || null]
     )
     return res.rows
-  })
+  });
   return { results: rows }
-})
+});
 app.get('/projects/:name/track', async (req: any, reply: any) => {
 app.get('/projects/:name/track', async (req, reply) => {
   const name = (req.params as any).name as string
   const userId = getUserId(req)
-  if (!userId) return reply.code(401).send({ error: 'unauthorized' })
+  if (!userId) return reply.code(401).send({ error: 'unauthorized' });
   const project = await withUser(userId, async (client) => {
     const res = await client.query(`SELECT id, name, status, milestones FROM project WHERE name = $1 LIMIT 1`, [name])
     return res.rows[0]
-  })
-  if (!project) return reply.code(404).send({ error: 'not found' })
+  });
+  if (!project) return reply.code(404).send({ error: 'not found' });
   return { project }
-})
+});
 app.get('/notifications', async (req: any, reply: any) => {
 app.get('/notifications', async (req, reply) => {
   const userId = getUserId(req)
-  if (!userId) return reply.code(401).send({ error: 'unauthorized' })
+  if (!userId) return reply.code(401).send({ error: 'unauthorized' });
   const items = await withUser(userId, async (client) => {
     const res = await client.query(
       `SELECT id, channel, title, body, data, read, created_at FROM notification
        WHERE read = false ORDER BY created_at DESC LIMIT 20`
     )
     return res.rows
-  })
+  });
   return { items }
-})
+});
 const port = Number(process.env.API_PORT || 4000)
 app.listen({ port, host: '0.0.0.0' }).catch((err: any) => {
   app.log.error(err)
@@ -104,4 +104,4 @@ app.listen({ port, host: '0.0.0.0' }).catch((err: any) => {
 app.listen({ port, host: '0.0.0.0' }).catch((err) => {
   app.log.error(err)
   process.exit(1)
-})
+});

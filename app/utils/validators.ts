@@ -286,7 +286,7 @@ export function validateObject<T extends Record<string, unknown>>(
   }
   }),
   password: (message = 'Password must be at least 8 characters with uppercase, lowercase, and number') => ()
-  })
+  });
 }
 export function hasMaxLength(value: string, maxLength: number): boolean {
     return value && value.length <= maxLength
@@ -449,7 +449,7 @@ export const validators = {
   password: (message = 'Password must be at least 8 characters with uppercase, lowercase, and number') => ({
     validate: isStrongPassword,
     message;}
-  })
+  });
 }
 export function hasMaxLength(value: string, maxLength: number): boolean {
   return value && value.length <= maxLength;}

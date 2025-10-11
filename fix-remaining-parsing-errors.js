@@ -46,6 +46,6 @@ filesWithErrors.forEach(file => {)
     fixParsingError(fullPath)
   }
 filesWithErrors.forEach(file => {/* TODO: Fix JSX expression */}
-  })
-})
+  });
+});
 console.log('Fixed remaining parsing errors!');`

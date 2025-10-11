@@ -37,8 +37,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
       {
     rootMargin: '50px 0px',
         threshold: 0.01
-  }
-    )
+  });
     if (imgRef.current) {
     observer.observe(imgRef.current)
   }
@@ -86,7 +85,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
       className={`relative overflow-hidden ${className}`}
       style={{ width, height }}
     >
-      {/* Placeholder */})
+      {/* Placeholder */});
       {!isLoaded && ()
         <img;)
       {/* Placeholder */}

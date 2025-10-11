@@ -29,7 +29,7 @@ interface GeneratedNewsletterContent {
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders })
+    return new Response(null, { headers: corsHeaders });
   }
   try {
     const openAIApiKey = Deno.env.get("OPENAI_API_KEY")
@@ -75,10 +75,10 @@ serve(async (req) => {
           { role: "system", content: systemPrompt },
           { role: "user", content: userPrompt }
         ],
-        temperature: 0.7})})
+        temperature: 0.7})});
         temperature: 0.7,
       }),
-    })
+    });
     if (!response.ok) {
       const errorData = await response.json()
       throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
@@ -107,10 +107,10 @@ serve(async (req) => {
             }
           ],
           temperature: 0.7,
-          max_tokens: 100})})
+          max_tokens: 100})});
           max_tokens: 100,
         }),
-      })
+      });
       const imagePromptData = await imagePromptResponse.json()
       generatedContent.imagePrompt = imagePromptData.choices[0].message.content
     }
@@ -132,7 +132,7 @@ serve(async (req) => {
         month: 'short',
         day: 'numeric',
         year: 'numeric'
-      })
+      });
       // Auto-calculate read time (rough estimate: 200 words per minute)
       const wordCount = generatedContent.body.split(/\s+/).length
       const readTime = Math.max(1, Math.ceil(wordCount / 200)) + " min read"
@@ -158,7 +158,7 @@ serve(async (req) => {
           is_published: true,
           created_by: "system",
           updated_at: new Date().toISOString()
-        })
+        });
         .select()
         .single()
       if (error) {
@@ -177,20 +177,20 @@ serve(async (req) => {
             related_id: blogPost.id,
             action_url: `/blog/${slug}`,
             action_text: "View Post"
-          })
+          });
       }
     }
     return new Response(JSON.stringify(generatedContent), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
-      status: 200})
+      status: 200});
       status: 200,
-    })
+    });
   } catch (error) {
     console.error("Error in generate-content function:", error)
     return new Response(JSON.stringify({ error: error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
-      status: 500})
+      status: 500});
       status: 500,
-    })
+    });
   }
-})
+});

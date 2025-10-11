@@ -10,13 +10,6 @@ import {
   TableHead
   TableHeader
 
-
-
-
-
-
-
-
 export default function OrdersPage() {
   const { user } = useAuth()
   const { data: orders, isLoading } = useGetOrdersQuery(user?.id)
@@ -47,8 +40,6 @@ export default function OrdersPage() {
         return status
     }
 
-
-
   }
 
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react'
@@ -60,7 +51,6 @@ import {
   Table,
   TableBody,
   TableCell,
-
 
     switch (status) {
       case 'in_escrow':
@@ -88,9 +78,7 @@ import {
   }
   },
 
-
   return (
-
 
     <div className='container max-w-4xl py-10'>
       <h1 className='text-3xl font-bold mb-6'>Order History</h1>
@@ -126,8 +114,6 @@ import {
           title="No Orders"
           description="You haven't purchased anything yet."
 
-
-
         />
       ) : (
         <Table>
@@ -147,8 +133,6 @@ import {
             {orders.map((order) => (
               <TableRow key={order.orderId}>
                 <TableCell className="font-medium">{order.orderId}</TableCell>
-
-
 
                 <TableCell>{formatDate(order.date)}</TableCell>
                 <TableCell>{order.total}</TableCell>
@@ -186,15 +170,12 @@ import {
                     View</$1></$1></$1>
             ))}
 
-
-
           </TableBody>
         </Table>
       )}
     </div>
   )
 }
-
 
 </$1></$1>
       )}

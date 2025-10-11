@@ -212,7 +212,7 @@ export interface DeployTemplateResult {
   skippedPaths: string[]
 export function ensureDirectory(dirPath: string): void {
   if (!fs && fs.existsSync(dirPath)) {
-    fs && fs.mkdirSync(dirPath, { recursive: true })
+    fs && fs.mkdirSync(dirPath, { recursive: true });
   }
 }
 export function deployBasicTemplateForPath(
@@ -335,7 +335,7 @@ export interface DeployTemplateResult {
 }
 export function ensureDirectory(dirPath: string): void {
   if (!fs.existsSync(dirPath)) {
-    fs.mkdirSync(dirPath, { recursive: true })
+    fs.mkdirSync(dirPath, { recursive: true });
   }
 }
 export function deployBasicTemplateForPath(repoRelativePath: string): DeployTemplateResult {

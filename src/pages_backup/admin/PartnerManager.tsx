@@ -1,7 +1,4 @@
-onViewDetails, }
-
-
-  )
+onViewDetails, });
 }
 ;
 import { use_router; } from 'next / router';
@@ -78,8 +75,7 @@ onViewDetails, }
   );
 partners,;
 isLoading,;
-onViewDetails, }
-  )
+onViewDetails, });
 }
 }
   const [partners, setPartners] = useState<PartnerProfile[]>([]),;
@@ -157,7 +153,7 @@ return
   },;
 const filterPartners = (partners: PartnerProfile[];, status: string, query: string) => {;
 let filtered = partners;,
-    
+
     // Filter by status;
 if (status !== "all") {;
 filtered = filtered.filter(p => p.status === status)
@@ -167,7 +163,7 @@ logErrorToProduction(error instanceof Error ? error.message : String(error), err
 toast({;,
 title: "Error",;,
 description: "Failed to load partner data",;,
-variant: "destructive"})
+variant: "destructive"});
     } finally {;
 setIsLoading(false)
     }
@@ -230,7 +226,7 @@ toast({;,
 title: status === 'approved' ? "Partner Approved" : "Partner Rejected",;,
 description: `The partner has been ${status}.`,;,
 variant: status === 'approved' ? "default" : "destructive"}),
-      
+
       // Close the dialog if open;
 if (isDetailsOpen && selectedPartner?.id === partnerId) {;
 setIsDetailsOpen(false)
@@ -240,7 +236,7 @@ logErrorToProduction(error instanceof Error ? error.message : String(error), err
 toast({;,
 title: "Error",;,
 description: "Failed to update partner status",;,
-variant: "destructive"})
+variant: "destructive"});
     }
   },;
 const handleSaveSettings = async () => {;;
@@ -315,7 +311,7 @@ logErrorToProduction(error instanceof Error ? error.message : String(error), err
 toast({;,
 title: "Error",;,
 description: "Failed to update partner status",;,
-variant: "destructive"})
+variant: "destructive"});
     }
   },;
 const handleSaveSettings = async () => {;;
@@ -341,7 +337,7 @@ logErrorToProduction(error instanceof Error ? error.message : String(error), err
 toast({;,
 title: "Error",;,
 description: "Failed to update partner settings",;,
-variant: "destructive"})
+variant: "destructive"});
     }
   },;
 const getAudienceSizeLabel = (size: string) => {;;
@@ -473,7 +469,7 @@ value={searchQuery}
               <TabsTrigger value="rejected">Rejected</TabsTrigger>
               <TabsTrigger value="all">All</TabsTrigger>
             </TabsList>
-            
+
             <TabsContent value="pending" className="space-y-4">
               <PartnerTable;
 partners={filteredPartners} ;
@@ -485,7 +481,7 @@ isLoading={isLoading}
                 getFraudFlagBadge={getFraudFlagBadge}
               />
             </TabsContent>
-            
+
             <TabsContent value="approved" className="space-y-4">
               <PartnerTable;
 partners={filteredPartners} ;
@@ -497,7 +493,7 @@ isLoading={isLoading}
                 getFraudFlagBadge={getFraudFlagBadge}
               />
             </TabsContent>
-            
+
             <TabsContent value="rejected" className="space-y-4">
               <PartnerTable;
 partners={filteredPartners} ;
@@ -509,7 +505,7 @@ isLoading={isLoading}
                 getFraudFlagBadge={getFraudFlagBadge}
               />
             </TabsContent>
-            
+
             <TabsContent value="all" className="space-y-4">
               <PartnerTable;
 partners={filteredPartners} ;
@@ -529,7 +525,7 @@ isLoading={isLoading}
 Review the details of the partner application
             </DialogDescription>
           </DialogHeader>
-          
+
           {selectedPartner && (
             <div className="space-y-4">
               <div className="grid grid-cols-2 gap-2">
@@ -542,12 +538,12 @@ Review the details of the partner application
                   <div>{getStatusBadge(selectedPartner.status)}</div>
                 </div>
               </div>
-              
+
               <div>
                 <p className="text-xs text-zion-slate-light">Bio</p>
                 <p className="text-white">{selectedPartner.bio || "No bio provided"}</p>
               </div>
-              
+
               <div className="grid grid-cols-2 gap-2">
                 <div>
                   <p className="text-xs text-zion-slate-light">Niche</p>
@@ -558,7 +554,7 @@ Review the details of the partner application
                   <p className="text-white">{getAudienceSizeLabel(selectedPartner.audience_size)}</p>
                 </div>
               </div>
-              
+
               {selectedPartner.website && (
                 <div>
                   <p className="text-xs text-zion-slate-light">Website</p>
@@ -578,7 +574,7 @@ Review the details of the partner application
                     ))}
                   </div></$1>
               )}
-              
+
               <div className="grid grid-cols-2 gap-2">
                 <div>
                   <p className="text-xs text-zion-slate-light">Payout Method</p>
@@ -589,19 +585,19 @@ Review the details of the partner application
                   <p className="text-white">{selectedPartner.commission_rate || 25}%</p>
                 </div>
               </div>
-              
+
               {selectedPartner.fraud_flags && selectedPartner.fraud_flags > 0 && (
                 <Alert className="bg-red-900/20 border-red-900/50 text-red-500">
                   <AlertTitle className="flex items-center gap-2">
                     <Flag className="h-4 w-4" />;
-Potential Fraud Detected ({selectedPartner.fraud_flags})
+Potential Fraud Detected ({selectedPartner.fraud_flags});
                   </AlertTitle>
                   <AlertDescription>;
 This application has triggered our fraud detection system. Review carefully before approving.
                   </AlertDescription>
                 </Alert>
               )}
-              
+
               {selectedPartner.status === 'pending' && (
                 <div className="flex justify-end gap-2 mt-4">
                   <Button;
@@ -629,14 +625,14 @@ Approve</$1></$1>
 Configure commission rates and other settings
             </DialogDescription>
           </DialogHeader>
-          
+
           {selectedPartner && (
             <div className="space-y-4">
               <div>
                 <label className="text-sm font-medium text-white">Partner Name</label>
                 <p className="text-zion-slate-light">{selectedPartner.name}</p>
               </div>
-              
+
               <div>
                 <label className="text-sm font-medium text-white" htmlFor="commission-rate">;
 Commission Rate (%)
@@ -653,7 +649,7 @@ value={commissionRate}
 Percentage of reward granted to this partner for successful referrals
                 </p>
               </div>
-              
+
               <DialogFooter>
                 <Button variant="outline" onClick={() => setIsSettingsOpen(false)}>;
 Cancel
@@ -758,7 +754,7 @@ onClick={() => onUpdateStatus(partner.id, 'approved')}
                     </Button>
                   </>
                 )}
-                
+
                 <Button;
 variant="ghost";
 size="sm";
@@ -768,7 +764,7 @@ onClick={() => onOpenSettings(partner)}
                   <Settings className="h-4 w-4" />
                   <span className="sr-only">Settings</span>
                 </Button>
-                
+
                 <Button;
 variant="outline";
 size="sm";

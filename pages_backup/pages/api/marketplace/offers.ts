@@ -42,7 +42,7 @@ import { Offer, PaymentTerms, Project  } from '../../../utils / marketplace / ty
  * bad - Function description
  */
 function bad() {
-  return res.status (code).json ({ ok: false, error: message })
+  return res.status (code).json ({ ok: false, error: message });
 }
 export default /**
  * handler - Function description
@@ -58,15 +58,15 @@ if ( {) {
 if ( {) {
   $2
 }
-        const offers = list_offers ({ client_id: user.id })
-        return res.json ({ ok: true, offers })
+        const offers = list_offers ({ client_id: user.id });
+        return res.json ({ ok: true, offers });
       }
       // Check condition
 if ( {) {
   $2
 }
-        const offers = list_offers ({ talent_slug: user.talent_slug })
-        return res.json ({ ok: true, offers })
+        const offers = list_offers ({ talent_slug: user.talent_slug });
+        return res.json ({ ok: true, offers });
       }
       return bad(res, "Unknown role", 403)
     }
@@ -95,7 +95,7 @@ if ( {) {
         status: "SENT"
       }
       saveOffer(offer)
-      return res.status(201).json({ ok: true, offer })
+      return res.status(201).json({ ok: true, offer });
     }
     if (req.method === "PATCH") {
       // Update offer: accept or request changes
@@ -140,7 +140,7 @@ if ( {) {
         saveProject(project)
         existing.projectId = project.id
         saveOffer(existing)
-        return res.json({ ok: true, offer: existing, project })
+        return res.json({ ok: true, offer: existing, project });
       }
       if (action === "request_changes") {
         if (user.role !== "talent")
@@ -148,24 +148,24 @@ if ( {) {
         existing.status = "CHANGES_REQUESTED"
         existing.changeRequestNote = changeRequestNote |""
         saveOffer(existing)
-        return res.json({ ok: true, offer: existing })
+        return res.json({ ok: true, offer: existing });
       }
       if (action === "decline") {
         if (user.role !== "talent")
           return bad(res, "Only talent can decline", 403)
         existing.status = "DECLINED"
-        return res.json({ ok: true, offers })
+        return res.json({ ok: true, offers });
       }
       if (user.role === "talent") {
     if (req.method === "GET") {
       const user = getDemoUser(req)
       if (user.role === "client") {
-        const offers = listOffers({ clientId: user.id })
-        return res.json({ ok: true, offers })
+        const offers = listOffers({ clientId: user.id });
+        return res.json({ ok: true, offers });
       }
       if (user.role === "talent") {
-        const offers = listOffers({ talentSlug: user.talentSlug })
-        return res.json({ ok: true, offers })
+        const offers = listOffers({ talentSlug: user.talentSlug });
+        return res.json({ ok: true, offers });
       }
       return bad(res, "Unknown role", 403)
     }
@@ -216,7 +216,7 @@ if ( {) {
         if (user.role !== "talent") return bad(res, "Only talent can accept", 403)
       }
       save_offer (offer)
-      return res.status (201).json ({ ok: true, offer })
+      return res.status (201).json ({ ok: true, offer });
     }
     // Check condition
 if ( {) {
@@ -274,25 +274,25 @@ if ( {) {
         save_project (project)
         existing.project_id = project.id
         save_offer (existing)
-        return res.json ({ ok: true, offer: existing, project })
+        return res.json ({ ok: true, offer: existing, project });
       }
       // Check condition
 if ( {) {
   $2
 function bad(res: NextApiResponse, message: string, code = 400) {
-  return res.status(code).json({ ok: false, error: message })
+  return res.status(code).json({ ok: false, error: message });
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     if (req.method === "GET") {
       const user = getDemoUser(req)
       if (user.role === "client") {
-        const offers = listOffers({ clientId: user.id })
-        return res.json({ ok: true, offers })
+        const offers = listOffers({ clientId: user.id });
+        return res.json({ ok: true, offers });
       }
       if (user.role === "talent") {
-        const offers = listOffers({ talentSlug: user.talentSlug })
-        return res.json({ ok: true, offers })
+        const offers = listOffers({ talentSlug: user.talentSlug });
+        return res.json({ ok: true, offers });
       }
       return bad(res, "Unknown role", 403)
     }
@@ -321,7 +321,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         status: "SENT"
       }
       saveOffer(offer)
-      return res.status(201).json({ ok: true, offer })
+      return res.status(201).json({ ok: true, offer });
     }
     if (req.method === "PATCH") {
       // Update offer: accept or request changes
@@ -366,7 +366,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         saveProject(project)
         existing.projectId = project.id
         saveOffer(existing)
-        return res.json({ ok: true, offer: existing, project })
+        return res.json({ ok: true, offer: existing, project });
       }
       if (action === "request_changes") {
         if (user.role !== "talent")
@@ -374,7 +374,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         existing.status = "CHANGES_REQUESTED"
         existing.changeRequestNote = changeRequestNote |""
         saveOffer(existing)
-        return res.json({ ok: true, offer: existing })
+        return res.json({ ok: true, offer: existing });
       }
       if (action === "decline") {
         if (user.role !== "talent")
@@ -391,7 +391,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         agreementUrl,
       }
       saveOffer(offer)
-      return res.status(201).json({ ok: true, offer })
+      return res.status(201).json({ ok: true, offer });
     }
     if (req.method === "PATCH") {
       // Update offer: accept or request changes
@@ -429,14 +429,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         saveProject(project)
         existing.projectId = project.id
         saveOffer(existing)
-        return res.json({ ok: true, offer: existing, project })
+        return res.json({ ok: true, offer: existing, project });
       }
       if (action === "request_changes") {
         if (user.role !== "talent") return bad(res, "Only talent can request changes", 403)
         existing.status = "CHANGES_REQUESTED"
         existing.changeRequestNote = changeRequestNote || ""
         saveOffer(existing)
-        return res.json({ ok: true, offer: existing })
+        return res.json({ ok: true, offer: existing });
       }
       return bad(res, "Unknown action")
     }
@@ -445,20 +445,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const status = e?.statusCode |500
     return res
       .status(status)
-      .json({ ok: false, error: e?.message |"Server error" })
+      .json({ ok: false, error: e?.message |"Server error" });
       if (action === "decline") {
-      .json({ ok: false, error: e?.message || "Server error" })
+      .json({ ok: false, error: e?.message || "Server error" });
           notes: []},
         saveProject(project),
         existing.projectId = project.id,
         saveOffer(existing),
-        return res.json({ ok: true, offer: existing, project })
+        return res.json({ ok: true, offer: existing, project });
         } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
         if (
@@ -470,18 +470,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         existing.status = "CHANGES_REQUESTED",
         existing.changeRequestNote = changeRequestNote || "",
         saveOffer(existing),
-        return res.json({ ok: true, offer: existing })
+        return res.json({ ok: true, offer: existing });
         } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
@@ -489,23 +489,22 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         if (user.role !== "talent") return bad(res, "Only talent can decline", 403)
         existing.status = "DECLINED"
         save_offer (existing)
-        return res.json ({ ok: true, offer: existing })
+        return res.json ({ ok: true, offer: existing });
       }
       return bad (res, "Unknown action")
     }
     return bad (res, "Method not allowed", 405)
   } catch (e: any) {
     const status = e?.statusCode || 500
-    return res.status(status).json({ ok: false, error: e?.message || "Server error" })
+    return res.status(status).json({ ok: false, error: e?.message || "Server error" });
   }
 }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
-}
-      )
+});
       if (action === "accept") {
           id: uuidv4(),
           title: `Project with ${existing && existing.talentSlug}`,
@@ -528,14 +527,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }

@@ -38,11 +38,11 @@ const PagePage: React.FC = () => {const features = [
                 Transform your business with our cutting-edge AI and IT solutions designed for the modern enterprise.
               </p>
             </div>
-      
+
       <Footer />
     </>
           </div>
-      
+
       <Footer />
     </>
         </section>
@@ -56,7 +56,7 @@ const PagePage: React.FC = () => {const features = [
               <p className="text-xl text-gray-600 max-w-3xl mx-auto"
                 Discover the powerful features that make our solutions stand out.
               </p>
-            
+
             <div className="
     ,
     d: grid-cols-2 l, g:grid-cols-3 gap-8"
@@ -77,16 +77,16 @@ const PagePage: React.FC = () => {const features = [
                   </ul>
               ))}
             </div>
-      
+
       <Footer />
     </>
           </div>
-      
+
       <Footer />
     </>
         </section>
       </div>
-      
+
       <Footer />
     </>
       <Footer />

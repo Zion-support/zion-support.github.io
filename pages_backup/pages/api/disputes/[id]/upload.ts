@@ -18,11 +18,11 @@ export default async function handler(
 ) {
   const { id } = req.query
   if (typeof id !== "string")
-    return res && res.status(400).json({ error: "Invalid id" })
+    return res && res.status(400).json({ error: "Invalid id" });
   const user = parseUserFromRequest(req)
   if (req && req.method === "POST") {
     const dispute = await getDisputeById(id)
-      return res && res.status(e && e.statusCode || 403).json({ error: "Forbidden" })
+      return res && res.status(e && e.statusCode || 403).json({ error: "Forbidden" });
     }
     const { files } =
 import type { NextApiRequest, NextApiResponse } from './next'
@@ -61,13 +61,13 @@ if ( {) {
     try {
       ensureInvolvedOrAdmin (user, dispute.clientUserId, dispute.talentUserId)
     } catch (e: any) {
-      return res.status (e.status_code || 403).json ({ error: "Forbidden" })
+      return res.status (e.status_code || 403).json ({ error: "Forbidden" });
     }
     const { files } =
       req.body ||
       ({} as {
         files: { file_name: string; mime_type: string; base64: string }[]
-      })
+      });
     }
 }
 async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
@@ -75,7 +75,7 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
   await new Promise<void>((resolve, reject) => {
     dispute.updated_at = now
     await upsert_dispute (dispute)
-    return res.status (201).json ({ dispute })
+    return res.status (201).json ({ dispute });
   }
   res.set_header ("Allow", "POST")
   return res.status (405).end ("Method Not Allowed")
@@ -93,9 +93,8 @@ async function fsPromisesWrite (file_path: string, data: Buffer): Promise < void
         fs.write_file (file_path, data, (err2: any) =>
           err2 ? reject (err2) : resolve (),
         )
-      }
-    )
-  })
+      });
+  });
 }
 import type { NextApiRequest, NextApiResponse } from 'next'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -110,26 +109,26 @@ export const config = {
 export default async function handler(req, res) {
   try {
   const { id } = req.query
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
       ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId)
     } catch (error) {
-      return res.status(e.statusCode || 403).json({ error: 'Forbidden' })
+      return res.status(e.statusCode || 403).json({ error: 'Forbidden' });
       } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
     const { files } = req.body || {} as { files: { fileName: string, mimeType: string, base64: string }[] },
-    if (!Array.isArray(files) || files.length === 0) return res.status( error: 'No files' ).json({$2})
+    if (!Array.isArray(files) || files.length === 0) return res.status( error: 'No files' ).json({$2});
     const now = new Date().toISOString()
     const dir = await ensureDisputeUploadDir(dispute.id)
     for (const f of files) {
@@ -144,35 +143,35 @@ export default async function handler(req, res) {
         mimeType: f.mimeType || 'application/octet-stream',
         path: filePath,
         uploadedAt: now,
-        uploadedByUserId: user.id})
+        uploadedByUserId: user.id});
       } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
     dispute.updatedAt = now
     await upsertDispute(dispute)
-    return res.status(201).json({ dispute })
+    return res.status(201).json({ dispute });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
@@ -180,15 +179,15 @@ export default async function handler(req, res) {
   return res.status(405).end('Method Not Allowed')
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
@@ -196,20 +195,20 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
   const fs = await import('fs')
   await new Promise<void>((resolve, reject) => {
     fs.mkdir(require('path').dirname(filePath), { recursive: true }, (err: any) => {
-      if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })
+      if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
       fs.writeFile(filePath, data, (err2: any) => (err2 ? reject(err2) : resolve()))
-    })
-  })
+    });
+  });
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }

@@ -42,8 +42,7 @@ export default function ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}(
             ${fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/([A-Z])/g, ' $1').trim()}
           <p className="text-gray-600">
             Component content will be added here.
-      )}
-  )
+      )});
 }`
   } else if (isUtil || isConfig) {
     content = `// ${fileName.charAt(0).toUpperCase() + fileName.slice(1)} utility
@@ -70,7 +69,7 @@ export default function ${fileName}() {
   return null
 }`
   }
-  
+
   return content
 }
 
@@ -112,7 +111,7 @@ function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
       // Skip directories we can't read
     }
   }
-  
+
   traverse(dir)
   return files
 }

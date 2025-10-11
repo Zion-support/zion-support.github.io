@@ -2,110 +2,101 @@
 
 import fs from 'fs';
 import path from 'path';
-import { glob } from 'glob';
+import { execSync } from 'child_process';
 
-// Function to fix merge conflicts by keeping the HEAD version
-function fixMergeConflicts(content) {
-  // Remove merge conflict markers and keep HEAD version
-  let fixed = content
-    .replace(/<<<<<<< HEAD\n([\s\S]*?)=======\n([\s\S]*?)>>>>>>> [^\n]+\n/g, '$1')
-    .replace(/<<<<<<< HEAD\n([\s\S]*?)>>>>>>> [^\n]+\n/g, '$1');
-  
-  return fixed;
-}
+// Function to recursively find all files with merge conflicts
+function findFilesWithConflicts(dir, fileList = []) {
+  const files = fs.readdirSync(dir);
 
-// Function to fix common syntax errors
-function fixSyntaxErrors(content) {
-  let fixed = content;
-  
-  // Fix missing commas in object properties
-  fixed = fixed.replace(/(\w+):\s*(\w+)\s*\n\s*(\w+):/g, '$1: $2,\n    $3:');
-  
-  // Fix malformed icon properties
-  fixed = fixed.replace(/ico,\s*n:/g, 'icon:');
-  
-  // Fix missing closing braces in JSX
-  fixed = fixed.replace(/(<div[^>]*>)\s*$/gm, '$1');
-  
-  // Fix missing closing parentheses in function calls
-  fixed = fixed.replace(/(\w+)\s*$/gm, (match, func) => {
-    if (func.match(/^(div|section|main|header|footer)$/)) {
-      return match;
-    }
-    return match;
-  });
-  
-  return fixed;
-}
+  files.forEach(file => {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
 
-// Function to process a single file
-function processFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    
-    // Check if file has merge conflicts
-    if (content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>')) {
-      console.log(`Fixing merge conflicts in: ${filePath}`);
-      
-      let fixed = fixMergeConflicts(content);
-      fixed = fixSyntaxErrors(fixed);
-      
-      fs.writeFileSync(filePath, fixed, 'utf8');
-      console.log(`✓ Fixed: ${filePath}`);
-      return true;
-    }
-    
-    // Check for syntax errors even without merge conflicts
-    if (content.includes('ico, n:') || content.includes('},\n    {')) {
-      console.log(`Fixing syntax errors in: ${filePath}`);
-      
-      let fixed = fixSyntaxErrors(content);
-      
-      fs.writeFileSync(filePath, fixed, 'utf8');
-      console.log(`✓ Fixed syntax: ${filePath}`);
-      return true;
-    }
-    
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
-}
-
-// Main function
-async function main() {
-  console.log('Starting merge conflict and syntax error fixes...\n');
-  
-  // Find all TypeScript and TSX files
-  const patterns = [
-    'app/**/*.tsx',
-    'app/**/*.ts',
-    '*.tsx',
-    '*.ts',
-    'components/**/*.tsx',
-    'components/**/*.ts'
-  ];
-  
-  let totalFiles = 0;
-  let fixedFiles = 0;
-  
-  for (const pattern of patterns) {
-    const files = await glob(pattern, { cwd: process.cwd() });
-    
-    for (const file of files) {
-      totalFiles++;
-      if (processFile(file)) {
-        fixedFiles++;
+    if (stat.isDirectory()) {
+      // Skip node_modules, .git, and other common directories
+      if (!['node_modules', '.git', 'dist', 'build', '.next', 'out'].includes(file)) {
+        findFilesWithConflicts(filePath, fileList);
+      }
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
+      try {
+        const content = fs.readFileSync(filePath, 'utf8');
+        if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>')) {
+          fileList.push(filePath);
+        }
+      } catch (error) {
+        // Skip files that can't be read
       }
     }
+  });
+
+  return fileList;
+}
+
+// Function to fix merge conflicts in a file
+function fixMergeConflicts(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    const originalContent = content;
+
+    // Remove merge conflict markers and keep the HEAD version
+    content = content.replace(/    
+    // Clean up any remaining conflict markers
+    content = content.replace(/    content = content.replace(/\n?/g, '');
+    content = content.replace(/    
+    // Fix common syntax issues
+    content = content.replace(/\}\s*\)\s*$/gm, '});');
+    content = content.replace(/\}\s*\)\s*export/gm, '});\nexport');
+    content = content.replace(/\}\s*\)\s*$/gm, '});');
+
+    // Fix JSX closing tags
+    content = content.replace(/<([^>]+)>\s*$/gm, (match, tagName) => {
+      if (!match.includes('</')) {
+        return match;
+      }
+      return match;
+    });
+
+    // Remove empty lines with just spaces
+    content = content.replace(/^\s*\n/gm, '\n');
+
+    // Remove multiple consecutive empty lines
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed merge conflicts in: ${filePath}`);
+      return true;
+    }
+
+    return false;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
-  
-  console.log(`\nCompleted! Processed ${totalFiles} files, fixed ${fixedFiles} files.`);
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
-  main();
+// Main execution
+console.log('Finding files with merge conflicts...');
+const filesWithConflicts = findFilesWithConflicts('/workspace');
+
+console.log(`Found ${filesWithConflicts.length} files with merge conflicts`);
+
+let fixedCount = 0;
+filesWithConflicts.forEach(filePath => {
+  if (fixMergeConflicts(filePath)) {
+    fixedCount++;
+  }
+});
+
+console.log(`Fixed merge conflicts in ${fixedCount} files`);
+
+// Run linting to check for remaining issues
+console.log('Running linting to check for remaining issues...');
+try {
+  execSync('npm run lint', { stdio: 'inherit', cwd: '/workspace' });
+  console.log('Linting passed!');
+} catch (error) {
+  console.log('Linting found issues, but merge conflicts should be resolved');
 }
 
-export { fixMergeConflicts, fixSyntaxErrors, processFile };
+console.log('Merge conflict fixing completed!');

@@ -295,7 +295,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
   n: this.currentPageData.section,
         keyword,
   s: this.generateKeywords(),
-      })
+      });
     }
     // Add article-specific properties
     if (this.currentPageData.type === 'article') {/* TODO: Fix JSX expression */}
@@ -369,11 +369,11 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
         }
         if (clsValue > 0.25) {// Poor CLS;
       let clsValue = 0;}new PerformanceObserver((list) => {}for (const entry of list.getEntries()) {}if (!(entry as any).hadRecentInput) {}clsValue += (entry as any).value;}
-      }).observe({ entryTypes: ['largest-contentful-paint'] })
+      }).observe({ entryTypes: ['largest-contentful-paint'] });
   private setupPerformanceMonitoring(): void {/* TODO: Fix JSX expression */}
         }
-      }).observe({/* TODO: Fix JSX expression */})
-  s: ['largest-contentful-paint'] })
+      }).observe({/* TODO: Fix JSX expression */});
+  s: ['largest-contentful-paint'] });
       // Monitor CLS (Cumulative Layout Shift)
       let clsValue = 0
       new PerformanceObserver((list) => {
@@ -393,19 +393,19 @@ class SEOOptimizer {/* TODO: Fix JSX expression */}
         }
         if (clsValue > 0.25) {// Poor CLS}this.trackSEOMetric('poor_cls', clsValue);}
         }
-      }).observe({entryTypes: ['layout-shift'] ,)})
+      }).observe({entryTypes: ['layout-shift'] ,)});
       new PerformanceObserver((list) => {/* TODO: Fix JSX expression */,}}
         }
         if (clsValue > 0.25) {/* TODO: Fix JSX expression */,}}
-      }).observe({/* TODO: Fix JSX expression */,)})
-  s: ['layout-shift'] ,})
+      }).observe({/* TODO: Fix JSX expression */,)});
+  s: ['layout-shift'] ,});
     }
   }
         metric_name: metric,
         metric_value: Math.round(value),
   private trackSEOMetric(metri,
   c: string, valu);
-  e: number): void {/* TODO: Fix JSX expression */,}}})
+  e: number): void {/* TODO: Fix JSX expression */,}}});
     }
   }
   /**;
@@ -487,7 +487,7 @@ Disallo,`
     const images = document.querySelectorAll('img');
     images.forEach((img, index) => {}if (!img.alt) {`}issues.push(`Image ${index + 1)}is missing alt text`);
       }
-    })
+    });
     // Check for heading structure;
     const h1s = document.querySelectorAll('h1');
     if (h1s.length === 0) {}issues.push('Page is missing H1 tag');}
@@ -501,7 +501,7 @@ Disallo,`
     images.forEach((img, index) => {/* TODO: Fix JSX expression */,}`;
         issues.push(`Image ${index + 1)}is missing alt text`);
       }
-    })
+    });
     // Check for heading structure;
     const h1s = document.querySelectorAll('h1');
     if (h1s.length === 0) {/* TODO: Fix JSX expression */,}} else if (h1s.length > 1) {/* TODO: Fix JSX expression */,}}

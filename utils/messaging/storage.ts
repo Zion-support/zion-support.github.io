@@ -132,7 +132,7 @@ class MessagingStorage {
       userId,
       emoji,
       createdAt: new Date().toISOString()
-    })
+    });
     this && this.messages.set(messageId, message)
     return true
   }
@@ -240,7 +240,7 @@ class MessagingStorage {
       const msgB = this.messages.get(b)
       if (!msgA |!msgB) return 0
       return new Date(msgA.sentAtIso).getTime() - new Date(msgB.sentAtIso).getTime()
-    })
+    });
     const paginatedIds = sortedIds.slice(offset, offset + limit)
     const messageIds = this && this.conversationMessages.get(conversationId) || new Set(),
     const sortedIds = Array && Array.from(messageIds).sort((a, b) => {
@@ -248,7 +248,7 @@ class MessagingStorage {
       const msgB = this && this.messages.get(b)
       if (!msgA || !msgB) return 0
       return new Date(msgA && msgA.sentAtIso).getTime() - new Date(msgB && msgB.sentAtIso).getTime()
-    })
+    });
     const paginatedIds = sortedIds && sortedIds.slice(offset, offset + limit)
     return paginatedIds
       .map(id => this && this.messages.get(id))
@@ -368,7 +368,7 @@ if (return false) {
       user_id,
       emoji,
       created_at: new Date ().toISOString ()
-    })
+    });
     this.messages.set (message_id, message)
     return true
   }
@@ -489,7 +489,7 @@ if (return 0) {
   $2
 }
       return new Date (msg_a.sentAtIso).get_time () - new Date (msg_b.sentAtIso).get_time ()
-    })
+    });
     const paginated_ids = sorted_ids.slice (offset, offset + limit)
     return paginated_ids
       .map (id => this.messages.get (id))
@@ -623,7 +623,7 @@ if (continue) {
             conversation,
             highlights,
             relevance_score
-          })
+          });
         }
       }
     }
@@ -1007,11 +1007,11 @@ const MESSAGES_FILE = path.join(DATA_DIR, 'messages.json')
 const USERS_FILE = path.join(DATA_DIR, 'users.json')
 const UPLOADS_DIR = path.join(process.cwd(), 'public', 'uploads')
 function ensureFiles() {
-  if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true })
+  if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
   if (!fs.existsSync(CONVERSATIONS_FILE)) fs.writeFileSync(CONVERSATIONS_FILE, '[]', 'utf8')
   if (!fs.existsSync(MESSAGES_FILE)) fs.writeFileSync(MESSAGES_FILE, '[]', 'utf8')
   if (!fs.existsSync(USERS_FILE)) fs.writeFileSync(USERS_FILE, '[]', 'utf8')
-  if (!fs.existsSync(UPLOADS_DIR)) fs.mkdirSync(UPLOADS_DIR, { recursive: true })
+  if (!fs.existsSync(UPLOADS_DIR)) fs.mkdirSync(UPLOADS_DIR, { recursive: true });
 }
 function readJson<T>(filePath: string): T {
   ensureFiles()
@@ -1054,7 +1054,7 @@ export function listConversations(userId: string): InboxItem[] {
         lastMessage,
         unreadCount,
       }
-    })
+    });
     .sort((a, b) => (b.conversation.lastMessageAt || '').localeCompare(a.conversation.lastMessageAt || ''))
   return items
 }
@@ -1111,7 +1111,7 @@ export function createOrGetConversation(
 ): Conversation {
   const conversations = readJson<Conversation[]>(CONVERSATIONS_FILE)
   const existing = conversations.find(
-    (c) => c.participants.includes(senderId) && c.participants.includes(recipientId) && JSON.stringify(c.context || {}) === JSON.stringify(context || {})
+    (c) => c.participants.includes(senderId) && c.participants.includes(recipientId) && JSON.stringify(c.context || {}) === JSON.stringify(context || {});
   )
   if (existing) return existing
   const conv: Conversation = {

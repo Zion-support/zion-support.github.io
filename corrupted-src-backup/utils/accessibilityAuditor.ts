@@ -46,7 +46,7 @@ export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
           'Add descriptive alt text for all images'
         )
       }
-    })
+    });
   }
 
   private checkHeadings(): void {
@@ -66,7 +66,7 @@ export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
       }
 
       previousLevel = level
-    })
+    });
   }
 
   private checkLinks(): void {
@@ -82,7 +82,7 @@ export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
           'Add href attribute or role="button"'
         )
       }
-    })
+    });
   }
 
   private checkForms(): void {
@@ -98,7 +98,7 @@ export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
           'Add id and associated label or aria-label'
         )
       }
-    })
+    });
   }
 
   private checkButtons(): void {
@@ -114,7 +114,7 @@ export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
           'Add text content or aria-label'
         )
       }
-    })
+    });
   }
 
   private checkColorContrast(): void {
@@ -143,7 +143,7 @@ export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
           'Consider if element should be focusable'
         )
       }
-    })
+    });
   }
 
   private checkARIALabels(): void {
@@ -161,7 +161,7 @@ export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
           'Use either aria-label or aria-labelledby, not both'
         )
       }
-    })
+    });
   }
 
   private addIssue(severity: AccessibilityIssue['severity'])
@@ -183,7 +183,7 @@ export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
     recommendatio,
   n: string,)
   ): void {/* TODO: Fix JSX expression */}
-    })
+    });
   }
 
   /**

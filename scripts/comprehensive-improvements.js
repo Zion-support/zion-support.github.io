@@ -178,7 +178,7 @@ export default defineConfig({
     react({)
       jsxImportSource: '@emotion/react')
       babel: {)
-        plugins: ['@emotion/babel-plugin'])})
+        plugins: ['@emotion/babel-plugin'])});
     }),
     visualizer({)
       filename: 'dist/stats.html'),
@@ -216,9 +216,9 @@ export default defineConfig({
   define: {,
     __DEV__: JSON.stringify(process.env['NODE_ENV'] === 'development'),
 export default defineConfig({/* TODO: Fix JSX expression */}
-      })
+      });
     }),
-    visualizer({/* TODO: Fix JSX expression */})
+    visualizer({/* TODO: Fix JSX expression */});
     })],
   buil,
   d: {/* TODO: Fix JSX expression */}
@@ -256,8 +256,8 @@ if (typeof window !== 'undefined') {
     entries.forEach((entry) => {
       analytics.track('long_task', 'performance', 'detected', undefined, entry.duration)
 if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */}
-    })
-  })
+    });
+  });
   // Track Web Vitals
 //   const metrics = performanceOptimizer.measurePageLoad()
   if (metrics) {/* TODO: Fix JSX expression */}
@@ -268,7 +268,7 @@ if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */}
 function runSEOEnhancement() {
   console.log('🔍 Running SEO enhancement...')
   try {
-    execSync('node scripts/seo-enhancer.js', { stdio: 'inherit' })
+    execSync('node scripts/seo-enhancer.js', { stdio: 'inherit' });
     console.log('✅ SEO enhancement completed')
   } catch (error) {
     console.error('❌ SEO enhancement failed:', error.message)
@@ -279,7 +279,7 @@ function runSEOEnhancement() {
 function runAccessibilityEnhancement() {
   console.log('♿ Running accessibility enhancement...')
   try {
-    execSync('node scripts/accessibility-enhancer.js', { stdio: 'inherit' })
+    execSync('node scripts/accessibility-enhancer.js', { stdio: 'inherit' });
     console.log('✅ Accessibility enhancement completed')
   } catch (error) {
     console.error('❌ Accessibility enhancement failed:', error.message)
@@ -290,7 +290,7 @@ function runAccessibilityEnhancement() {
 function runBuild() {
   console.log('🏗️ Running build...')
   try {
-    execSync('npm run build', { stdio: 'inherit' })
+    execSync('npm run build', { stdio: 'inherit' });
     console.log('✅ Build completed')
   } catch (error) {
     console.error('❌ Build failed:', error.message)
@@ -433,19 +433,19 @@ export const createDebugger = (componentNam)
   measur,
   e: (nam,
   e: string, f)`
-  n: () => void) => measurePerformance(\`[\${componentName}] \${name}\`, fn)})
+  n: () => void) => measurePerformance(\`[\${componentName}] \${name}\`, fn)});
 export default {/* TODO: Fix JSX expression */}`
 }`
 fs.writeFileSync(path.join(__dirname, '..', 'src', 'utils', 'devUtils.ts'), devUtils)
 // // 8. Run final checks
 // try {/* TODO: Fix JSX expression */}
-  o: 'inherit' })
+  o: 'inherit' });
 //   // Lint check
-//   execSync('npm run lint', {/* TODO: Fix JSX expression */})
-  o: 'inherit' })
+//   execSync('npm run lint', {/* TODO: Fix JSX expression */});
+  o: 'inherit' });
 //   // Build check
-//   execSync('npm run build', {/* TODO: Fix JSX expression */})
-  o: 'inherit' })
+//   execSync('npm run build', {/* TODO: Fix JSX expression */});
+  o: 'inherit' });
 //   } catch (error) {/* TODO: Fix JSX expression */}
 }
 

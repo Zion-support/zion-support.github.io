@@ -57,7 +57,7 @@ const NewServicesPromoBanne, r: React.FC<NewServicesPromoBannerPro, p, s> = ({</
                     <Link, className="w-4 h-4" />
 interface NewServicesPromoBannerProp, s {/* TODO: Fix JSX expression */}
  }
-const NewServicesPromoBanne, r: React.FC<NewServicesPromoBannerPro, p, s> = ({/* TODO: Fix JSX expression */})
+const NewServicesPromoBanne, r: React.FC<NewServicesPromoBannerPro, p, s> = ({/* TODO: Fix JSX expression */});
 }) => {/* TODO: Fix JSX expression */}
       <div, classNam, e = {`bg-gradie, n, t-to-br, fro, m-emera, l, d-600, vi, a-te, a, l-600, t, o-cy, a, n-600, rounde, d-3x, l, p-8, m, d : p-12, tex, t-whi, t, e ${class N, a, m, e  }`}>
         <div, classNam, e = "m, a, x-w-6xl, m, x-au, t, o"></div>"

@@ -24,11 +24,11 @@ function load (): Record < string, KycProfile> {
     return {}
   }
 }
-  })
+  });
 }
     ok: true, profile,
     requiredDocuments: getRequiredDocuments(profile.role),
-    optionalDocuments: getOptionalDocuments(profile.role)})
+    optionalDocuments: getOptionalDocuments(profile.role)});
 }
 export default /**
  * handler - Function description
@@ -52,5 +52,5 @@ function handler() {
     profile,
     required_documents: getRequiredDocuments (profile.role),
     optional_documents: getOptionalDocuments (profile.role),
-  })
+  });
 }

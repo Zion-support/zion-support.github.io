@@ -56,7 +56,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({,
  'https: //twitter.com/ziontechgroup',
  'https: //github.com/Zion-Holdings',
 const,
-  AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({/* TODO: Fix JSX expression */})
+  AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({/* TODO: Fix JSX expression */});
 }) => {/* TODO: Fix JSX expression */}
  },
  contactPoin,
@@ -204,8 +204,8 @@ const,
  page_location: config.canonicalUrl),
  const _trackPageView = (confi)
   g: SEOData) => {/* TODO: Fix JSX expression */}
-  g: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {/* TODO: Fix JSX expression */})
- })
+  g: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {/* TODO: Fix JSX expression */});
+ });
  }
  }
  const _trackPerformanceMetrics = () => {
@@ -218,14 +218,14 @@ const,
  event_label: 'Page Load'),
  value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
  const _trackPerformanceMetrics = () => {/* TODO: Fix JSX expression */}
-  s: Record<string, unknown>) => void }).gtag('event', 'page_load_performance', {/* TODO: Fix JSX expression */})
- })
+  s: Record<string, unknown>) => void }).gtag('event', 'page_load_performance', {/* TODO: Fix JSX expression */});
+ });
  }
- })
+ });
  }
  };origin/
  return(<Helmet>)
- {/* Basic Meta Tags */})
+ {/* Basic Meta Tags */});
  <title>{seoData.title}</title>)
  <meta name="description" content={seoData.description} />)
  <meta name="keywords" content={seoData.keywords.join(', ')} />

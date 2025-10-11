@@ -67,7 +67,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
   t: `import type { Metadata } from '${typesPath}next';`}]
     replacements.forEach(({ pattern, replacement }) => {/* TODO: Fix JSX expression */}
       }
-    })
+    });
     // Fix MetadataRoute namespace issue
     if (content.includes('MetadataRoute.')) {
       content = content.replace(/MetadataRoute\./g, 'MetadataRoute.')
@@ -95,7 +95,7 @@ function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
     } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {/* TODO: Fix JSX expression */}
       }
     }
-  })
+  });
   return totalFixed
 }
 

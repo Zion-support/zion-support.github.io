@@ -21,10 +21,10 @@ serve(async (req) => {
       headers: {
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Methods': 'POST, GET, OPTIONS',
-        'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}})
+        'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}});
         'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
       },
-    })
+    });
   }
   try {
     // Extract auth token from request
@@ -32,9 +32,9 @@ serve(async (req) => {
     if (!authHeader) {
       return new Response(JSON.stringify({ error: 'Missing authorization header' }), {
         status: 401,
-        headers: { 'Content-Type': 'application/json' }})
+        headers: { 'Content-Type': 'application/json' }});
         headers: { 'Content-Type': 'application/json' },
-      })
+      });
     }
     // Verify the token with Supabase auth
     const token = authHeader.replace('Bearer ', '')
@@ -42,9 +42,9 @@ serve(async (req) => {
     if (authError || !user) {
       return new Response(JSON.stringify({ error: 'Unauthorized' }), {
         status: 401,
-        headers: { 'Content-Type': 'application/json' }})
+        headers: { 'Content-Type': 'application/json' }});
         headers: { 'Content-Type': 'application/json' },
-      })
+      });
     }
     // Parse URL to determine action
     const url = new URL(req.url)
@@ -71,18 +71,18 @@ serve(async (req) => {
     }
     return new Response(JSON.stringify({ error: 'Invalid action' }), {
       status: 400,
-      headers: { 'Content-Type': 'application/json' }})
+      headers: { 'Content-Type': 'application/json' }});
       headers: { 'Content-Type': 'application/json' },
-    })
+    });
   } catch (error) {
     console.error('Error processing request:', error)
     return new Response(JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
-      headers: { 'Content-Type': 'application/json' }})
+      headers: { 'Content-Type': 'application/json' }});
       headers: { 'Content-Type': 'application/json' },
-    })
+    });
   }
-})
+});
 async function createWebhook(userId: string, name: string, url: string, eventTypes: string[], secret?: string) {
   try {
     const { data, error } = await supabase
@@ -93,31 +93,31 @@ async function createWebhook(userId: string, name: string, url: string, eventTyp
         url,
         event_types: eventTypes,
         secret
-      })
+      });
       .select('id, name, url, event_types, is_active, created_at')
     if (error) {
       console.error('Error creating webhook:', error)
       return new Response(JSON.stringify({ error: 'Failed to create webhook' }), {
         status: 500,
-        headers: { 'Content-Type': 'application/json' }})
+        headers: { 'Content-Type': 'application/json' }});
         headers: { 'Content-Type': 'application/json' },
-      })
+      });
     }
     return new Response(JSON.stringify({ 
       webhook: data[0],
       message: 'Webhook created successfully'
     }), {
       status: 201,
-      headers: { 'Content-Type': 'application/json' }})
+      headers: { 'Content-Type': 'application/json' }});
       headers: { 'Content-Type': 'application/json' },
-    })
+    });
   } catch (error) {
     console.error('Error in createWebhook:', error)
     return new Response(JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
-      headers: { 'Content-Type': 'application/json' }})
+      headers: { 'Content-Type': 'application/json' }});
       headers: { 'Content-Type': 'application/json' },
-    })
+    });
   }
 }
 async function getUserWebhooks(userId: string) {
@@ -126,34 +126,34 @@ async function getUserWebhooks(userId: string) {
       .from('webhook_configs')
       .select('id, name, url, event_types, is_active, created_at, last_triggered_at')
       .eq('user_id', userId)
-      .order('created_at', { ascending: false })
+      .order('created_at', { ascending: false });
     if (error) {
       console.error('Error fetching webhooks:', error)
       return new Response(JSON.stringify({ error: 'Failed to fetch webhooks' }), {
         status: 500,
-        headers: { 'Content-Type': 'application/json' }})
+        headers: { 'Content-Type': 'application/json' }});
         headers: { 'Content-Type': 'application/json' },
-      })
+      });
     }
     return new Response(JSON.stringify({ webhooks: data }), {
       status: 200,
-      headers: { 'Content-Type': 'application/json' }})
+      headers: { 'Content-Type': 'application/json' }});
       headers: { 'Content-Type': 'application/json' },
-    })
+    });
   } catch (error) {
     console.error('Error in getUserWebhooks:', error)
     return new Response(JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
-      headers: { 'Content-Type': 'application/json' }})
+      headers: { 'Content-Type': 'application/json' }});
       headers: { 'Content-Type': 'application/json' },
-    })
+    });
   }
 }
 async function toggleWebhook(userId: string, webhookId: string, isActive: boolean) {
   try {
     const { data, error } = await supabase
       .from('webhook_configs')
-      .update({ is_active: isActive })
+      .update({ is_active: isActive });
       .eq('id', webhookId)
       .eq('user_id', userId)
       .select('id, name, is_active')
@@ -161,25 +161,25 @@ async function toggleWebhook(userId: string, webhookId: string, isActive: boolea
       console.error('Error toggling webhook:', error)
       return new Response(JSON.stringify({ error: 'Failed to update webhook or webhook not found' }), {
         status: error ? 500 : 404,
-        headers: { 'Content-Type': 'application/json' }})
+        headers: { 'Content-Type': 'application/json' }});
         headers: { 'Content-Type': 'application/json' },
-      })
+      });
     }
     return new Response(JSON.stringify({
       message: `Webhook ${isActive ? 'activated' : 'deactivated'} successfully`,
       webhook: data[0]
     }), {
       status: 200,
-      headers: { 'Content-Type': 'application/json' }})
+      headers: { 'Content-Type': 'application/json' }});
       headers: { 'Content-Type': 'application/json' },
-    })
+    });
   } catch (error) {
     console.error('Error in toggleWebhook:', error)
     return new Response(JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
-      headers: { 'Content-Type': 'application/json' }})
+      headers: { 'Content-Type': 'application/json' }});
       headers: { 'Content-Type': 'application/json' },
-    })
+    });
   }
 }
 async function deleteWebhook(userId: string, webhookId: string) {
@@ -194,32 +194,32 @@ async function deleteWebhook(userId: string, webhookId: string) {
       console.error('Error deleting webhook:', error)
       return new Response(JSON.stringify({ error: 'Failed to delete webhook' }), {
         status: 500,
-        headers: { 'Content-Type': 'application/json' }})
+        headers: { 'Content-Type': 'application/json' }});
         headers: { 'Content-Type': 'application/json' },
-      })
+      });
     }
     if (!data || data.length === 0) {
       return new Response(JSON.stringify({ error: 'Webhook not found' }), {
         status: 404,
-        headers: { 'Content-Type': 'application/json' }})
+        headers: { 'Content-Type': 'application/json' }});
         headers: { 'Content-Type': 'application/json' },
-      })
+      });
     }
     return new Response(JSON.stringify({
       message: 'Webhook deleted successfully',
       id: webhookId
     }), {
       status: 200,
-      headers: { 'Content-Type': 'application/json' }})
+      headers: { 'Content-Type': 'application/json' }});
       headers: { 'Content-Type': 'application/json' },
-    })
+    });
   } catch (error) {
     console.error('Error in deleteWebhook:', error)
     return new Response(JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
-      headers: { 'Content-Type': 'application/json' }})
+      headers: { 'Content-Type': 'application/json' }});
       headers: { 'Content-Type': 'application/json' },
-    })
+    });
   }
 }
 async function testWebhook(userId: string, webhookId: string, eventType: string) {
@@ -234,9 +234,9 @@ async function testWebhook(userId: string, webhookId: string, eventType: string)
     if (webhookError || !webhook) {
       return new Response(JSON.stringify({ error: 'Webhook not found or access denied' }), {
         status: 404,
-        headers: { 'Content-Type': 'application/json' }})
+        headers: { 'Content-Type': 'application/json' }});
         headers: { 'Content-Type': 'application/json' },
-      })
+      });
     }
     // Create test payload based on event type
     const testPayload = createTestPayload(eventType)
@@ -255,11 +255,11 @@ async function testWebhook(userId: string, webhookId: string, eventType: string)
         method: 'POST',
         headers,
         body: JSON.stringify(testPayload)
-      })
+      });
       // Update last triggered timestamp
       await supabase
         .from('webhook_configs')
-        .update({ last_triggered_at: new Date().toISOString() })
+        .update({ last_triggered_at: new Date().toISOString() });
         .eq('id', webhookId)
       // Return the response status and body
       const responseText = await webhookResponse.text()
@@ -270,9 +270,9 @@ async function testWebhook(userId: string, webhookId: string, eventType: string)
         responseBody: responseText.substring(0, 500) // Limit response body size
       }), {
         status: 200,
-        headers: { 'Content-Type': 'application/json' }})
+        headers: { 'Content-Type': 'application/json' }});
         headers: { 'Content-Type': 'application/json' },
-      })
+      });
     } catch (fetchError) {
       console.error('Error sending test webhook:', fetchError)
       return new Response(JSON.stringify({ 
@@ -280,17 +280,17 @@ async function testWebhook(userId: string, webhookId: string, eventType: string)
         details: fetchError.message 
       }), {
         status: 500,
-        headers: { 'Content-Type': 'application/json' }})
+        headers: { 'Content-Type': 'application/json' }});
         headers: { 'Content-Type': 'application/json' },
-      })
+      });
     }
   } catch (error) {
     console.error('Error in testWebhook:', error)
     return new Response(JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
-      headers: { 'Content-Type': 'application/json' }})
+      headers: { 'Content-Type': 'application/json' }});
       headers: { 'Content-Type': 'application/json' },
-    })
+    });
   }
 }
 async function createWebhookSignature(payload: string, secret: string) {

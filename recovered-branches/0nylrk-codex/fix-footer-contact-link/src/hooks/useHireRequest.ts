@@ -31,14 +31,14 @@ export function useHireRequest() {
       // Call the edge function to process the hire request
       const { data: response, error } = await supabase.functions.invoke('process-hire-request', {
         body: requestData
-      })
+      });
       if (error) throw error
       // Show success message
       toast({
         title: "Request Submitted",
-        description: `Your request to hire ${requestData.talent.full_name} has been sent successfully.`})
+        description: `Your request to hire ${requestData.talent.full_name} has been sent successfully.`});
         description: `Your request to hire ${requestData.talent.full_name} has been sent successfully.`,
-      })
+      });
       return { success: true, requestId: response?.request_id }
     } catch (error) {
       console.error("Error submitting hire request:", error)
@@ -49,9 +49,9 @@ export function useHireRequest() {
       toast({
         title: "Error",
         description: errorMessage,
-        variant: "destructive"})
+        variant: "destructive"});
         variant: "destructive",
-      })
+      });
       return { success: false, error: errorMessage }
     } finally {
       setIsSubmitting(false)

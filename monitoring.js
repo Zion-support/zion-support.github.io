@@ -26,7 +26,7 @@ class ApplicationMonitor {/* TODO: Fix JSX expression */}
       timestamp: new Date().toISOString()}
   recordBuildTime(duration) {/* TODO: Fix JSX expression */}
   p: new Date().toISOString()}
-    })
+    });
     //Keep only last 10 build times
     if (this.metrics.buildTimes.length > 10) {this.metrics.buildTimes = this.metrics.buildTimes.slice(-10)}
     }

@@ -42,7 +42,7 @@ const ${pageName}Page: React.FC = () => {
         <meta name="description" content="${description}" />
         <meta name="keywords" content="${keywords}" />
       <Navigation />
-      
+
       <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -204,5 +204,5 @@ aiPages.forEach(page => {
   } catch (error) {
     console.error(`❌ Error processing ${page.file}:`, error.message)
   }
-})
+});
 console.log('\n✨ All AI pages fixed!')</div></div></div></div></div></div></div></div></div></button></button></button></p></p></p></p></h1></h2></h2></h3></ul></li></main></section></section></section>

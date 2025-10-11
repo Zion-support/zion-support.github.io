@@ -9,7 +9,7 @@ interface NewArticlesPromoBannerProp, s {
   classNa, m, e ?  : string
 interface NewArticlesPromoBannerProp, s {/* TODO: Fix JSX expression */}
  }
-const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/* TODO: Fix JSX expression */})
+const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/* TODO: Fix JSX expression */});
 }) => {/* TODO: Fix JSX expression */}
         }, rotationInterv, a, l)
       return () => clearInterv, a, l(interv, a, l)

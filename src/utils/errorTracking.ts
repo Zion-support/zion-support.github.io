@@ -3,9 +3,9 @@ export const reportError = (error: Error, context?: Record<string, any>) => {
     window.gtag('event', 'exception', {
       description: error.message,
       fatal: false,
-      ...context})
+      ...context});
   }
-  
+
   // Also log to console in development
   if (process.env.NODE_ENV === 'development') {
     console.error('Error reported:', error, context)
@@ -19,13 +19,13 @@ export const initErrorReporting = () => {
       reportError(event.error, {
         filename: event.filename,
         lineno: event.lineno,
-        colno: event.colno})
-    })
+        colno: event.colno});
+    });
     // Unhandled promise rejection handler
     window.addEventListener('unhandledrejection', (event) => {
       reportError(new Error(event.reason), {
-        type: 'unhandledrejection'})
-    })
+        type: 'unhandledrejection'});
+    });
   }
 }
 
@@ -132,7 +132,7 @@ class ErrorTrackingService {
     // Handle unhandled errors
     window.addEventListener('error', event => {/* TODO: Fix JSX expression */}
   O: Add content,}
-})
+});
       this.trackError(event.error || new Error(event.message), {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -150,8 +150,8 @@ class ErrorTrackingService {
           colno: event.colno,
 
         }
-      })
-    })
+      });
+    });
     // Handle unhandled promise rejections
     window.addEventListener('unhandledrejection', event => {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -165,10 +165,8 @@ class ErrorTrackingService {
         severity: ErrorSeverity.Critical,
         context: { reason: event.reason }
 
-      }
-  )
-    }
-  )
+      });
+    });
   }
   /**
    * Track an error with metadata
@@ -233,7 +231,7 @@ const,
       categor,
   y: metadata.category,
 //       ...metadata.context
-    })
+    });
     // Send to external service if critical
     if (metadata.severity === ErrorSeverity.Critical) {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -298,15 +296,14 @@ const,
 }
       try {/* TODO: Fix JSX expression */}
   O: Add content,}
-})
+});
         listener(error)
       } catch (listenerError) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
         logger.error('Error in error listener', listenerError as Error)
       }
-    }
-  )
+    });
   }
   /**
    * Report critical errors to external service
@@ -333,8 +330,7 @@ const,
   method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(error)
-        }
-  )
+        });
       }
     } catch (reportError) {
     // TODO: Add content
@@ -411,7 +407,7 @@ const,
 
       bySeverity[error.metadata.severity] =
         (bySeverity[error.metadata.severity] || 0) + error.occurrences
-    })
+    });
     const topErrors = errors.sort((a, b) => b.occurrences - a.occurrences).slice(0, 10)
     return {/* TODO: Fix JSX expression */}
   O: Add content,}

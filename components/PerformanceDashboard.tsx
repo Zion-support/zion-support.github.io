@@ -3,7 +3,7 @@ interface PerformanceMetrics {loadTime: number
   renderTime: number
   memoryUsage: number,
   fps: number}
-const PerformanceDashboard: React.FC = () => {const [metrics, setMetrics] = useState<PerformanceMetrics>()})
+const PerformanceDashboard: React.FC = () => {const [metrics, setMetrics] = useState<PerformanceMetrics>()});
   const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {
     const updateMetrics = const updateMetrics = const updateMetrics = () => {

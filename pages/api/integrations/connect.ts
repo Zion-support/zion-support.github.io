@@ -22,7 +22,7 @@ function handler() {
   if () {) {
   $2
 }
-    return res.status (400).json ({ error: "Invalid provider_id" })
+    return res.status (400).json ({ error: "Invalid provider_id" });
   }
   const now = Date.now ()
   const updated = write_state ((state) => {
@@ -52,13 +52,13 @@ if (state.connections[existing_idx] = connection) {
       level: "info",
       action: "connect",
       details: { sync_rules },
-    })
-  })
+    });
+  });
 }
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { providerId, syncRules } = req.body as { providerId?: string, syncRules?: SyncRules }
   if (!providerId || !getProviderById(providerId)) {
-    return res.status(400).json({ error: 'Invalid providerId' })
+    return res.status(400).json({ error: 'Invalid providerId' });
   }
   const now = Date.now()
   const updated = writeState(state => {
@@ -71,12 +71,12 @@ if (state.connections[existing_idx] = connection) {
       lastSyncAt: undefined,
       lastError: null}
     if (existingIdx >= 0) state.connections[existingIdx] = connection; else state.connections.push(connection)
-    state.logs.push({ id: `${now}-${providerId}-connect`, timestamp: now, providerId: providerId as any, level: 'info', action: 'connect', details: { syncRules } })
-  })
-  res.status(200).json({ ok: true, connection: updated.connections.find(c => c.providerId === providerId) })
+    state.logs.push({ id: `${now}-${providerId}-connect`, timestamp: now, providerId: providerId as any, level: 'info', action: 'connect', details: { syncRules } });
+  });
+  res.status(200).json({ ok: true, connection: updated.connections.find(c => c.providerId === providerId) });
 }
   res.status (200).json ({
     ok: true,
     connection: updated.connections.find ((c) => c.provider_id === provider_id),
-  })
+  });
 }

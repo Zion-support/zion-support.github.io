@@ -20,7 +20,7 @@ export function usePortfolio() {
         .from('portfolio_projects')
         .select('*')
         .eq('user_id', user.id)
-        .order('created_at', { ascending: false })
+        .order('created_at', { ascending: false });
       if (error) throw error
       setProjects(data || [])
       return data || []
@@ -51,14 +51,14 @@ export function usePortfolio() {
           github_url: project.github_url,
           demo_url: project.demo_url,
           pdf_url: project.pdf_url
-        })
+        });
         .select('id')
         .single()
       if (error) throw error
       toast({
         title: "Project added",
         description: "Your project has been added to your portfolio"
-      })
+      });
       await fetchProjects()
       return data.id
     } catch (e: any) {
@@ -68,7 +68,7 @@ export function usePortfolio() {
         title: "Error",
         description: `Could not add project: ${e.message}`,
         variant: "destructive"
-      })
+      });
       return null
     } finally {
       setIsLoading(false)
@@ -92,14 +92,14 @@ export function usePortfolio() {
           github_url: project.github_url,
           demo_url: project.demo_url,
           pdf_url: project.pdf_url
-        })
+        });
         .eq('id', projectId)
         .eq('user_id', user.id)
       if (error) throw error
       toast({
         title: "Project updated",
         description: "Your portfolio project has been updated"
-      })
+      });
       await fetchProjects()
       return true
     } catch (e: any) {
@@ -109,7 +109,7 @@ export function usePortfolio() {
         title: "Error",
         description: `Could not update project: ${e.message}`,
         variant: "destructive"
-      })
+      });
       return false
     } finally {
       setIsLoading(false)
@@ -132,7 +132,7 @@ export function usePortfolio() {
       toast({
         title: "Project deleted",
         description: "Your portfolio project has been deleted"
-      })
+      });
       setProjects(projects.filter(p => p.id !== projectId))
       return true
     } catch (e: any) {
@@ -142,7 +142,7 @@ export function usePortfolio() {
         title: "Error",
         description: `Could not delete project: ${e.message}`,
         variant: "destructive"
-      })
+      });
       return false
     } finally {
       setIsLoading(false)

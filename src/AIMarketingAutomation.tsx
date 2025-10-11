@@ -895,7 +895,7 @@ export default function AIMarketingAutomation() {
               </Link>
             </div>
           </div>
-          
+
           {/* Key Metrics */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-16">
             <div className="text-center">
@@ -930,7 +930,7 @@ export default function AIMarketingAutomation() {
               to deliver exceptional results for your business.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-gray-800/50 rounded-xl p-8 border border-gray-700 hover:border-purple-500/50 transition-all duration-300">
@@ -968,7 +968,7 @@ export default function AIMarketingAutomation() {
             continuously learns and optimizes for maximum performance.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => {
             const Icon = feature.icon
@@ -997,7 +997,7 @@ export default function AIMarketingAutomation() {
           <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 via-pink-600/20 to-cyan-500/20"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(168,85,247,0.1),transparent_50%)]"></div>
         </div>
-        
+
         <div className="relative z-10 container mx-auto px-4 py-24 text-center">
           <div className="mb-8">
             <div className="inline-flex items-center px-4 py-2 bg-purple-500/20 border border-purple-500/50 rounded-full text-purple-400 text-sm font-medium mb-6">
@@ -1005,7 +1005,7 @@ export default function AIMarketingAutomation() {
               AI-Powered Marketing Automation
             </div>
           </div>
-          
+
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
               AI Marketing Automation
@@ -1014,13 +1014,13 @@ export default function AIMarketingAutomation() {
               Transform Marketing with Intelligent Automation
             </span>
           </h1>
-          
+
           <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             Leverage artificial intelligence to automate your marketing campaigns, personalize customer experiences, 
             and optimize performance in real-time. Our AI platform handles everything from content creation to 
             campaign optimization.
           </p>
-          
+
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             <button className="group relative px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25">
               <span className="relative z-10">Start Free Trial</span>
@@ -1065,7 +1065,7 @@ export default function AIMarketingAutomation() {
               to deliver results that drive business growth.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="group relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25">
@@ -1127,7 +1127,7 @@ export default function AIMarketingAutomation() {
               to deliver exceptional results for your business.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <$2 />
@@ -1179,7 +1179,7 @@ export default function AIMarketingAutomation() {
               From email campaigns to social media management, our AI platform handles every aspect of your marketing strategy.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {useCases.map((useCase, index) => (
               <div key={index} className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-purple-500/50 transition-all duration-300 text-center">
@@ -1206,7 +1206,7 @@ export default function AIMarketingAutomation() {
               Experience unprecedented growth and efficiency with our intelligent marketing solutions.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-6">
               {benefits.slice(0, 3).map((benefit, index) => (
@@ -1236,7 +1236,7 @@ export default function AIMarketingAutomation() {
               and unified analytics.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {marketingChannels.map((channel, index) => (
               <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300">
@@ -1272,7 +1272,7 @@ export default function AIMarketingAutomation() {
               See the measurable impact our AI marketing automation platform delivers for businesses.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {successMetrics.map((metric, index) => (
               <div key={index} className="text-center bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300">
@@ -1296,7 +1296,7 @@ export default function AIMarketingAutomation() {
               Flexible pricing options designed to scale with your business growth and marketing needs.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
               < key={index} className={`relative bg-gray-800/50 rounded-xl p-8 border transition-all duration-300 ${$2 />
@@ -1317,7 +1317,7 @@ export default function AIMarketingAutomation() {
               Choose the plan that fits your marketing needs. All plans include a 14-day free trial.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
               < key={index} className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${$2 />
@@ -1332,13 +1332,13 @@ export default function AIMarketingAutomation() {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="text-4xl font-bold text-purple-400 mb-2">{plan.price}</div>
                   <p className="text-gray-400">{plan.description}</p>
                 </div>
-                
+
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-gray-300">
@@ -1347,7 +1347,7 @@ export default function AIMarketingAutomation() {
                     </li>
                   ))}
                 </ul>
-                
+
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -1505,7 +1505,7 @@ export default function AIMarketingAutomation() {
             </div>
           </div>
         </div>
-        
+
         {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-10 w-2 h-2 bg-purple-400 rounded-full animate-ping"></div>
@@ -1525,7 +1525,7 @@ export default function AIMarketingAutomation() {
               Our AI-powered platform automates complex marketing tasks while delivering personalized experiences
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => {
               const Icon = feature.icon
@@ -1554,7 +1554,7 @@ export default function AIMarketingAutomation() {
               Discover how AI marketing automation is revolutionizing customer engagement across industries
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => {
               const Icon = useCase.icon
@@ -1590,7 +1590,7 @@ export default function AIMarketingAutomation() {
             See how AI Marketing Automation is transforming businesses across different industries.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {useCases.map((useCase, index) => (
             <div key={index} className="bg-gray-800/50 rounded-2xl p-6 border border-gray-700/50">
@@ -1624,7 +1624,7 @@ export default function AIMarketingAutomation() {
             Built on the latest AI and marketing technology for maximum performance and results.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {technologies.map((tech, index) => {
             const Icon = tech.icon
@@ -1651,7 +1651,7 @@ export default function AIMarketingAutomation() {
             Flexible pricing options designed to scale with your marketing needs.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {pricingTiers.map((tier, index) => (
             < key={index} className={`relative bg-gray-800/50 rounded-2xl p-8 border ${$2 />
@@ -1666,7 +1666,7 @@ export default function AIMarketingAutomation() {
                   </span>
                 </div>
               )}
-              
+
               <div className="text-center mb-8">
                 <h3 className="text-2xl font-bold mb-2 text-white">{tier.name}</h3>
                 <div className="mb-4">
@@ -1675,7 +1675,7 @@ export default function AIMarketingAutomation() {
                 </div>
                 <p className="text-gray-300">{tier.description}</p>
               </div>
-              
+
               <ul className="space-y-3 mb-8">
                 {tier.features.map((feature, idx) => (
                   <li key={idx} className="flex items-center text-gray-300">
@@ -1684,7 +1684,7 @@ export default function AIMarketingAutomation() {
                   </li>
                 ))}
               </ul>
-              
+
               <$2 />
                 to="/contact"
                 className={`w-full py-3 px-6 rounded-full font-semibold text-center transition-all duration-300 ${
@@ -1773,7 +1773,7 @@ export default function AIMarketingAutomation() {
               Schedule Demo
             </button>
           </div>
-          
+
           <div className="mt-8 text-center">
             <p className="text-gray-400 text-sm">
               Need enterprise pricing? <a href="/contact" className="text-purple-400 hover:text-purple-300 underline">Contact our sales team</a>
@@ -1832,7 +1832,7 @@ export default function AIMarketingAutomation() {
               Transform your marketing from manual processes to intelligent, automated systems that scale
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center space-x-4">
@@ -2016,7 +2016,7 @@ export default AIMarketingAutomation
             <h3 className="text-2xl font-bold text-white mb-4">Explore More Services</h3>
             <p className="text-gray-300">Discover our complete range of AI and technology solutions</p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <Link to="/services/ai-business-intelligence" className="group">
               <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-purple-400/50 transition-all duration-300">
@@ -2029,7 +2029,7 @@ export default AIMarketingAutomation
                 </div>
               </div>
             </Link>
-            
+
             <Link to="/services/ai-hr-recruitment" className="group">
               <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-purple-400/50 transition-all duration-300">
                 <div className="flex items-center justify-between">
@@ -2041,7 +2041,7 @@ export default AIMarketingAutomation
                 </div>
               </div>
             </Link>
-            
+
             <Link to="/services/ai-legal-tech" className="group">
               <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-purple-400/50 transition-all duration-300">
                 <div className="flex items-center justify-between">

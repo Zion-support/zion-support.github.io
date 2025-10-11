@@ -35,7 +35,7 @@ function fixFile(filePath) {
         content = newContent
         modified = true
   }
-    })
+    });
     if (modified) {
       fs.writeFileSync(filePath, content)
       console.log(`✅ Fixed: ${filePath}`)
@@ -67,7 +67,7 @@ function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
   } catch (error) {
     // Skip directories we can't read
   }
-  
+
   return files
 }
 
@@ -80,5 +80,5 @@ files.forEach(file => {
   if (fixFile(file)) {
     fixedCount++
   }
-})
+});
 console.log(`\n🎉 Ultimate syntax fix complete! Modified ${fixedCount} files.`)

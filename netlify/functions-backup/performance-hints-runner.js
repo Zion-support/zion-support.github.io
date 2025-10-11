@@ -15,7 +15,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
   }
   async function head(_url) {/* TODO: Fix JSX expression */}
   d: 'HEAD'} redirec,
-  t: 'follow' })
+  t: 'follow' });
 //       const len = r.headers.get('content-length')
       return {
     ok: r.ok
@@ -41,7 +41,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
       const r = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
       }?ref=${encodeURIComponent(githubBranch;)
       }`)
-        { headers })
+        { headers });
       return {/* TODO: Fix JSX expression */}
       }
     } catch (e) {/* TODO: Fix JSX expression */}
@@ -60,7 +60,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
   s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}
       }?ref=${/* TODO: Fix JSX expression */}`
       }`,
-        { headers })
+        { headers });
       if (r.ok) {/* TODO: Fix JSX expression */}
         sha = j.sha}
       }
@@ -73,7 +73,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
     const putRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
       }`)
       {method: 'PUT', headers)
-        body: JSON.stringify(body,)})
+        body: JSON.stringify(body,)});
     const body = {/* TODO: Fix JSX expression */}
       sha}
     }`
@@ -81,7 +81,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
   s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`
       }`,
       {/* TODO: Fix JSX expression */}
-      })
+      });
     )
 //     const ok = putRes.ok
 //     const status = putRes.status
@@ -92,21 +92,21 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
     error = String(e
   }
       }
-    })
+    });
     return {ok)
-        status; error })
-  })
+        status; error });
+  });
   try {if (!baseUrl)
         return {
         statusCode: 200),
         body: JSON.stringify({ ok: false),
-        error: 'No base URL' })
+        error: 'No base URL' });
       }
     const _res = await fetch(baseUrl)
     if(!res.ok)
         return {statusCode: 200),
         body: JSON.stringify({ ok: false),
-        error: `Fetch ${res.status}` })
+        error: `Fetch ${res.status}` });
       } catch (e) {/* TODO: Fix JSX expression */}
       }
       }
@@ -115,12 +115,12 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
         status; error }
   }
   try {/* TODO: Fix JSX expression */}
-  r: 'No base URL' })
+  r: 'No base URL' });
       }
     const _res = await fetch(baseUrl)
     if (!res.ok,
         return {/* TODO: Fix JSX expression */})`
-  r: `Fetch ${res.status}` })
+  r: `Fetch ${res.status}` });
       }
     const _html = await res.text()
     const imgSrcs = Array.from(new Set()
@@ -135,15 +135,15 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
     const _checks = []
     for(const src of [...imgSrcs, ...scriptSrcs].slice(0)
         60)) {const r = await head(src;)
-      })
+      });
       checks.push({ url: src),
         size: r.size),
         status: r.status,
     for (const src of [...imgSrcs, ...scriptSrcs].slice(0)
         60)) {/* TODO: Fix JSX expression */}
       }
-      checks.push({/* TODO: Fix JSX expression */})
-      })
+      checks.push({/* TODO: Fix JSX expression */});
+      });
     }
     const large = checks
       .filter(c => typeof c.size === 'number' && c.size > 200 * 1024)
@@ -199,7 +199,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
         totals: summary.totals),
         jsonRes),
         mdRes}
-      })
+      });
     }
   } catch (e) {return {
       statusCode: 500,
@@ -212,10 +212,10 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
         mdLines.join('\n'), msg)])
     return {/* TODO: Fix JSX expression */}
         mdRes}
-      })
+      });
     }
   } catch (e) {/* TODO: Fix JSX expression */}
-      })
+      });
     }
   }
 }
@@ -279,7 +279,7 @@ exports.config = {/* TODO: Fix JSX expression */}
       }); if (r.ok) {const j = await r.json(); sha = j.sha} } } catch {}' const body = {/* TODO: Fix JSX expression */}`
         sha }' const putRes = await fetch(`http,
   s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`
-      }`, {/* TODO: Fix JSX expression */})
+      }`, {/* TODO: Fix JSX expression */});
       }); const ok = putRes.ok; const status = putRes.status; let error; if (!ok) {try { error = await putRes.text()} } catch (e) {/* TODO: Fix JSX expression */}
       } } } return {/* TODO: Fix JSX expression */}
         status; error } } try {/* TODO: Fix JSX expression */}
@@ -287,7 +287,7 @@ exports.config = {/* TODO: Fix JSX expression */}
         return {/* TODO: Fix JSX expression */}")`
   r: `Fetch ${res.status}` }) } const html = await res.text(); ' const imgSrcs = Array.from(new Set([...(html.matchAll(/<img[^>]*src=["']([^"']+)["']/gi))].map(m => absolute(m[1])).filter(Boolean)));' const scriptSrcs = Array.from(new Set([...(html.matchAll(/<script[^>]*src=["']([^"']+)["']/gi))].map(m => absolute(m[1])).filter(Boolean))); const checks = []; for (const src of [...imgSrcs, ...scriptSrcs].slice(0)
         60)) {/* TODO: Fix JSX expression */}
-      } checks.push({/* TODO: Fix JSX expression */})
+      } checks.push({/* TODO: Fix JSX expression */});
       }); } ' const large = checks.filter(c => typeof c.size === 'number' && c.size > 200 * 1024).sort((a)
         b) => (b.size||0)-(a.size||0)); const summary = {/* TODO: Fix JSX expression */}
   e: large.length }, larg,

@@ -65,7 +65,7 @@ Transform Your Business with Cutting-Edge Artificial Intelligence Solutions
           <p className="text-lg text-zion-cyan-light mb-12 max-w-3xl mx-auto">;
 From process automation to predictive analytics, our AI services deliver measurable results and competitive advantages.
           </p>
-          
+
           {/* Contact CTA */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             <Button size="lg" className="bg-zion-purple hover:bg-zion-purple-dark text-white px-8 py-3">
@@ -843,7 +843,7 @@ AI Services
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
 Cutting-edge artificial intelligence solutions that transform businesses through automation, insights, and intelligent decision-making
           </p>
-          
+
           {/* AI Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 max-w-4xl mx-auto">
             <div className="text-center">
@@ -1254,9 +1254,9 @@ AI Score: {service.aiScore}%
                     </div>
                   </div>
                 </div>
-                
+
                 <p className="text-slate-300 mb-4 leading-relaxed">{service.description}</p>
-                
+
                 <div className="mb-4">
                   <span className="inline-block bg-purple-600/20 text-purple-300 text-xs px-3 py-1 rounded-full mb-2 border border-purple-500/30">
                     {service.category}
@@ -1277,7 +1277,7 @@ value={searchTerm}
               className="w-full pl-10 pr-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
             />
           </div>
-          
+
           <div className="flex flex-wrap gap-4">
             <select;
 value={selectedCategory}
@@ -1290,7 +1290,7 @@ value={selectedCategory}
                 </option>
               ))}
             </select>
-            
+
             <select;
 value={selectedPricing}
               onChange={(e) => setSelectedPricing(e.target.value)}
@@ -1327,9 +1327,9 @@ value={selectedPricing}
                   </div>
                 </div>
               </div>
-              
+
               <p className="text-gray-300 mb-4">{service.description}</p>
-              
+
               <div className="mb-4">
                 <div className="text-2xl font-bold text-white mb-2">
                   {formatPrice(service.price, service.pricingModel)}
@@ -1371,7 +1371,7 @@ key={service.title}
                 </div>
                 <h3 className="text-2xl font-semibold text-white mb-4">{service.title}</h3>
                 <p className="text-zion-slate-light mb-6 leading-relaxed">{service.description}</p>
-                
+
                 <div className="mb-6">
                   <h4 className="text-white font-semibold mb-3">Key Features:</h4>
                   <ul className="space-y-2">
@@ -1396,7 +1396,7 @@ Use Cases:
                       </li>
                     ))}
                   </ul>
-                
+
                 <div className="flex items-center justify-between">
                   <span className="text-zion-cyan font-semibold">{service.price}</span>
                   <$2 />;
@@ -1818,7 +1818,7 @@ AI Services
 Experience the power of artificial intelligence with our comprehensive suite of services.
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit), index) => {;
 const IconComponent = benefit.icon;;
@@ -1844,7 +1844,7 @@ key={benefit.title}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-400 via-blue-400 to-pink-400"></div>
         </div>
-        
+
         <div className="container mx-auto px-4 text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 flex items-center justify-center gap-3">
             <Brain className="w-8 h-8 text-purple-400" />;
@@ -1879,7 +1879,7 @@ Explore Our Complete Service Portfolio →
               <p className="text-slate-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
             </div>
           </div>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <$2 />;
 href="https://ziontechgroup.com";
@@ -1916,7 +1916,7 @@ AI Services
 Comprehensive AI solutions designed to address your specific business challenges and drive measurable results.
             </p>
           </motion.div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {aiServices.map((service), index) => {;
 const IconComponent = service.icon;;
@@ -1934,7 +1934,7 @@ key={index}
                   </div>
                   <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
                   <p className="text-zion-slate-light mb-4">{service.description}</p>
-                  
+
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-zion-cyan mb-2">Key Features:</h4>
                     <ul className="space-y-1">
@@ -1946,7 +1946,7 @@ key={index}
                       ))}
                     </ul>
                   </div>
-                  
+
                   <$2 />;
 to={service.link}
                     className="inline-flex items-center text-zion-cyan hover:text-zion-purple transition-colors duration-300 group/link"
@@ -1972,7 +1972,7 @@ Ready to Harness AI Power?
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">;
 Contact our expert team to discuss your AI needs and get a customized solution that transforms your business
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
               <div className="text-center group">
                 <div className="w-16 h-16 bg-purple-500/20 rounded-full mx-auto mb-4 flex items-center justify-center group-hover:bg-purple-500/30 transition-colors">
@@ -1996,7 +1996,7 @@ Contact our expert team to discuss your AI needs and get a customized solution t
                 <p className="text-slate-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
               </div>
             </div>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.a;
 href="https://ziontechgroup.com";
@@ -2042,7 +2042,7 @@ AI Solutions?
 Discover the transformative benefits that AI can bring to your business operations and growth.
             </p>
           </motion.div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit), index) => {;
 const IconComponent = benefit.icon;;
@@ -2113,7 +2113,7 @@ Serve
 Our AI solutions are tailored to meet the unique challenges and opportunities across diverse industries.
             </p>
           </motion.div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {industries.map((industry), index) => (
               <motion.div;
@@ -2152,7 +2152,7 @@ AI Implementation
 A proven methodology for successfully implementing AI solutions that drive real business value.
             </p>
           </motion.div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {;,
@@ -2269,7 +2269,7 @@ Discover AI solutions that can transform your business operations and customer e
                       <span className="text-xs">({service.reviewCount})</span>
                     </div>
                   </div>
-                  
+
                   <CardTitle className="text-xl text-zion-blue mb-2">{service.title}</CardTitle>
                   <CardDescription className="text-zion-slate-light line-clamp-2">
                     {service.description}
@@ -2366,7 +2366,7 @@ Discover AI solutions that can transform your business operations and customer e
 Learn More
                       </Button>
                     </Link>
-                    
+
                     <div className="flex gap-2">
                       {service.website && (
                         <$2 />;
@@ -2381,7 +2381,7 @@ Demo
                           </Button>
                         </a>
                       )}
-                      
+
                       <Link to="/contact" className="flex-1">
                         <Button variant="outline" className="w-full border-zion-blue-light text-zion-cyan hover:bg-zion-blue-light/10">
                           <Mail className="w-4 h-4 mr-2" />;
@@ -2480,7 +2480,7 @@ Schedule Demo
 Ready to explore AI solutions for your business? Contact our experts today.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
               <Phone className="h-12 w-12 mx-auto mb-4 text-zion-cyan" />
@@ -2539,7 +2539,7 @@ Featured
               <span className="text-zion-cyan-light">({service.reviewCount})</span>
             </div>
           </div>
-          
+
           <div className="flex items-center justify-between">
             <span className="text-zion-cyan-light">AI Score:</span>
             <div className="flex items-center gap-2">
@@ -3112,7 +3112,7 @@ Choose from our range of AI services designed to address specific business chall
 and drive measurable results.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {aiServices.map((service) => (
               <div key={service.id} className="bg-zion-blue border border-zion-blue-light rounded-lg p-6 hover:border-zion-purple/50 transition-all duration-300 hover:translate-y-[-5px]">
@@ -3126,10 +3126,10 @@ and drive measurable results.
                     <span className="text-zion-cyan text-sm font-medium">{service.category}</span>
                   </div>
                 </div>
-                
+
                 <h3 className="text-white text-xl font-bold mb-3">{service.title}</h3>
                 <p className="text-zion-slate-light mb-4">{service.description}</p>
-                
+
                 <div className="mb-4">
                   <h4 className="text-white font-semibold mb-2">Key Features:</h4>
                   <ul className="space-y-1">
@@ -3141,7 +3141,7 @@ and drive measurable results.
                     ))}
                   </ul>
                 </div>
-                
+
                 <div className="border-t border-zion-blue-light pt-4 mb-4">
                   <div className="flex items-center justify-between text-sm">
                     <div className="flex items-center text-zion-cyan">
@@ -3154,7 +3154,7 @@ and drive measurable results.
                     </div>
                   </div>
                 </div>
-                
+
                 <Link to="/request-quote">
                   <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
 Get Quote
@@ -3178,7 +3178,7 @@ We leverage cutting-edge AI technologies to deliver innovative solutions;
 that address complex business challenges.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {aiTechnologies.map((tech), index) => (
               <div key={index} className="text-center p-6 bg-zion-blue-dark border border-zion-blue-light rounded-lg hover:border-zion-purple/50 transition-all duration-300">
@@ -3204,7 +3204,7 @@ Our AI solutions are tailored to meet the unique challenges and opportunities;
 across diverse industry sectors.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {industries.map((industry), index) => (
               <div key={index} className="text-center p-6 bg-zion-blue border border-zion-blue-light rounded-lg hover:border-zion-purple/50 transition-all duration-300">
@@ -3230,7 +3230,7 @@ We combine deep AI expertise with industry knowledge to deliver;
 solutions that drive real business value.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="text-center p-6">
               <div className="w-20 h-20 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center mx-auto mb-6">
@@ -3242,7 +3242,7 @@ Over 5 years of experience in AI implementation across multiple industries;
 with a track record of successful projects.
               </p>
             </div>
-            
+
             <div className="text-center p-6">
               <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-6">
                 <Lock className="w-10 h-10 text-white" />
@@ -3253,7 +3253,7 @@ Bank-level security standards with SOC 2 compliance and enterprise-grade;
 data protection for all AI solutions.
               </p>
             </div>
-            
+
             <div className="text-center p-6">
               <div className="w-20 h-20 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-6">
                 <Zap className="w-10 h-10 text-white" />
@@ -3280,7 +3280,7 @@ Competitive pricing for enterprise-grade AI solutions with flexible;
 payment options and ROI guarantees.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div className="bg-zion-blue border border-zion-blue-light rounded-lg p-8 text-center">
               <h3 className="text-white text-2xl font-bold mb-4">Starter AI</h3>
@@ -3299,7 +3299,7 @@ Get Started
                 </Button>
               </Link>
             </div>
-            
+
             <div className="bg-gradient-to-br from-zion-purple to-zion-purple-dark border border-zion-purple rounded-lg p-8 text-center relative">
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                 <span className="bg-zion-cyan text-zion-blue px-4 py-2 rounded-full text-sm font-bold">;
@@ -3322,7 +3322,7 @@ Get Started
                 </Button>
               </Link>
             </div>
-            
+
             <div className="bg-zion-blue border border-zion-blue-light rounded-lg p-8 text-center">
               <h3 className="text-white text-2xl font-bold mb-4">Enterprise AI</h3>
               <div className="text-4xl font-bold text-zion-cyan mb-6">;
@@ -3354,7 +3354,7 @@ Ready to Transform Your Business with AI?
 Contact our AI experts today to discuss how we can help you leverage;
 artificial intelligence for business growth and innovation.
           </p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12">
             <div className="text-center p-6">
               <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center mx-auto mb-4">
@@ -3366,7 +3366,7 @@ artificial intelligence for business growth and innovation.
 Middletown DE 19709
               </p>
             </div>
-            
+
             <div className="text-center p-6">
               <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-white" />
@@ -3376,7 +3376,7 @@ Middletown DE 19709
                 +1 302 464 0950
               </p>
             </div>
-            
+
             <div className="text-center p-6">
               <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
                 <Zap className="w-8 h-8 text-white" />
@@ -3387,7 +3387,7 @@ kleber@ziontechgroup.com
               </p>
             </div>
           </div>
-          
+
           <div className="flex flex-wrap justify-center gap-4">
             <Link to="/request-quote">
               <Button size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-3">;
@@ -4148,7 +4148,7 @@ Request AI Demo
 Choose from our extensive range of AI services designed to meet your business needs
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {AI_SERVICES.map((service) => (
               <Card key={service.id} className="bg-zion-blue-dark/50 border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-purple/20 group">
@@ -4170,7 +4170,7 @@ Choose from our extensive range of AI services designed to meet your business ne
                     {service.description}
                   </CardDescription>
                 </CardHeader>
-                
+
                 <CardContent className="space-y-4">
                   <div className="space-y-2">
                     <h4 className="font-semibold text-white">Key Features:</h4>
@@ -4183,7 +4183,7 @@ Choose from our extensive range of AI services designed to meet your business ne
                       ))}
                     </ul>
                   </div>
-                  
+
                   <div className="flex items-center justify-between pt-2">
                     <div className="flex items-center space-x-2">
                       <div className="flex items-center">
@@ -4201,7 +4201,7 @@ className={`h-4 w-4 ${i < Math.floor(service.rating) ? 'text-yellow-400 fill-cur
                     </span>
                   </div>
                 </CardContent>
-                
+
                 <div className="p-6 pt-0">
                   <div className="mb-4">
                     <h4 className="font-semibold text-white mb-2">Pricing Plans:</h4>
@@ -4220,7 +4220,7 @@ className={`h-4 w-4 ${i < Math.floor(service.rating) ? 'text-yellow-400 fill-cur
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className="pt-4">
                     <Button asChild className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
                       <Link to={service.link}>Learn More</Link>
@@ -4271,7 +4271,7 @@ AI Capabilities & Expertise
 Our AI solutions leverage the latest technologies to deliver measurable business outcomes
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
@@ -4280,7 +4280,7 @@ Our AI solutions leverage the latest technologies to deliver measurable business
               <h3 className="text-xl font-semibold mb-2">Machine Learning</h3>
               <p className="text-gray-600">Custom ML models, predictive analytics, and automated decision-making systems</p>
             </div>
-            
+
             <div className="text-center">
               <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <MessageSquare className="h-8 w-8 text-purple-600" />
@@ -4288,7 +4288,7 @@ Our AI solutions leverage the latest technologies to deliver measurable business
               <h3 className="text-xl font-semibold mb-2">Natural Language Processing</h3>
               <p className="text-gray-600">Text analysis, sentiment detection, language translation, and chatbot development</p>
             </div>
-            
+
             <div className="text-center">
               <div className="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <Eye className="h-8 w-8 text-green-600" />
@@ -4296,7 +4296,7 @@ Our AI solutions leverage the latest technologies to deliver measurable business
               <h3 className="text-xl font-semibold mb-2">Computer Vision</h3>
               <p className="text-gray-600">Image recognition, object detection, quality control, and automated inspection</p>
             </div>
-            
+
             <div className="text-center">
               <div className="bg-orange-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <Zap className="h-8 w-8 text-orange-600" />
@@ -4361,7 +4361,7 @@ Featured
                       <span>{service.availability}</span>
                     </div>
                   </div>
-                  
+
                   <div className="flex flex-wrap gap-2 mb-4">
                     {service.tags.map((tag) => (
                       <Badge key={tag} variant="secondary" className="text-xs">
@@ -4399,7 +4399,7 @@ Why Choose Zion AI Services?
 Experience the power of AI with our proven, reliable, and scalable solutions
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {BENEFITS.map((benefit), index) => (
               <div key={index} className="text-center group">
@@ -4756,7 +4756,7 @@ artificial intelligence to drive innovation, efficiency, and competitive advanta
                 </a>
               </div>
             </div>
-            
+
             <div>
               <h3 className="text-xl font-semibold mb-6 text-blue-400">Contact Information</h3>
               <div className="space-y-4">
@@ -4775,7 +4775,7 @@ artificial intelligence to drive innovation, efficiency, and competitive advanta
               </div>
             </div>
           </div>
-          
+
           <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
             <p>&copy; 2024 ZionTech Group. All rights reserved. | <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">ziontechgroup.com</a></p>
           </div>
@@ -4970,18 +4970,18 @@ keywords="AI services, machine learning, data science, artificial intelligence, 
 canonical="https://ziontechgroup.com/ai-services"
       />
       <Header />
-      
+
       <main className="min-h-screen bg-background">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple py-20 overflow-hidden">
           <div className="absolute inset-0 bg-black/20"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10"></div>
-          
+
           {/* Animated Background Elements */}
           <div className="absolute top-20 left-10 w-32 h-32 bg-zion-cyan/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-20 right-10 w-40 h-40 bg-zion-purple/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
           <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-zion-blue/30 rounded-full blur-2xl animate-pulse delay-500"></div>
-          
+
           <div className="container mx-auto px-4 relative z-10">
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight">;
@@ -5024,7 +5024,7 @@ key={index}
                   variant={category.active ? "default" : "outline"}
                   className={category.active ? "bg-zion-purple text-white" : "border-zion-purple/30 text-zion-purple hover:bg-zion-purple/10"}
                 >
-                  {category.name} ({category.count})
+                  {category.name} ({category.count});
                 </Button>
               ))}
             </div>
@@ -5049,12 +5049,12 @@ key={index}
                       {service.description}
                     </CardDescription>
                   </CardHeader>
-                  
+
                   <CardContent className="pb-4">
                     <div className="mb-4">
                       <span className="text-2xl font-bold text-zion-cyan">{service.price}</span>
                     </div>
-                    
+
                     <div className="space-y-2 mb-4">
                       {service.features.slice(0, 3).map((feature), index) => (
                         <div key={index} className="flex items-center text-sm">
@@ -5063,7 +5063,7 @@ key={index}
                         </div>
                       ))}
                     </div>
-                    
+
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-1">
                         <Star className="h-4 w-4 text-yellow-500 fill-current" />
@@ -5075,7 +5075,7 @@ key={index}
                       </Badge>
                     </div>
                   </CardContent>
-                  
+
                   <CardContent className="pt-0">
                     <Button asChild className="w-full group-hover:bg-zion-purple group-hover:text-white transition-all duration-300">
                       <Link to={service.link}>;
@@ -5111,7 +5111,7 @@ Get a free consultation and discover how AI can transform your operations.
           </div>
         </section>
       </main>
-      
+
       <Footer />
     </>
   )

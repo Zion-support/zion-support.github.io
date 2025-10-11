@@ -38,16 +38,16 @@ const PagePage: React.FC = () => {const features = [
         <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
       </Helmet>
       <Navigation />
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Advanced page solutions powered by artificial intelligence and cutting-edge technology."
         <meta name="keywords" content="AI, page, artificial intelligence, business solutions, automation"
       </Helmet>
-      
+
       <Navigation />
-      
+
       <main className="pt-16"
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"
@@ -66,15 +66,15 @@ const PagePage: React.FC = () => {const features = [
                   Learn More
                 </button>
               </div>
-      
+
       <Footer />
     </>
             </div>
-      
+
       <Footer />
     </>
           </div>
-      
+
       <Footer />
     </>
         </section>
@@ -88,7 +88,7 @@ const PagePage: React.FC = () => {const features = [
               <p className="text-xl text-gray-600 max-w-3xl mx-auto"
                 Discover the powerful features that make our solutions stand out.
               </p>
-            
+
             <div className="
     ,
     d: grid-cols-2 l, g:grid-cols-3 gap-8"
@@ -119,7 +119,7 @@ const PagePage: React.FC = () => {const features = [
               <p className="text-xl text-gray-600 max-w-3xl mx-auto"
                 Experience the benefits of working with industry leaders.
               </p>
-            
+
             <div className="
     ,
     d: grid-cols-2 l, g:grid-cols-3 gap-8"
@@ -149,7 +149,7 @@ const PagePage: React.FC = () => {const features = [
     r: bg-blue-600 hove, r:text-white transition-colors"
                 Schedule Demo
               </button>
-      
+
       <Footer />
     </>
     </>
@@ -158,7 +158,7 @@ const PagePage: React.FC = () => {const features = [
 
 export default PagePage
       </div>
-      
+
       <Footer />
     </>
     </>

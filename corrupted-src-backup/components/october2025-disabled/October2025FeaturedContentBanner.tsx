@@ -80,7 +80,7 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
             Discover, breakthrough, AI platforms, delivering, millions in, value, to
             enterprise, organization, s
         </div>)
-        {/* Featured, Content, Car, d, s */})
+        {/* Featured, Content, Car, d, s */});
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12'>)
           { featuredConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > {
             const Ico, n = conte, n, t.ic, o, n; return(<, ke, y = { in, d, e, x  }, to={ conte, n, t.li, n, k } className='group, relative, overflow-hidden, rounde, d-2xl, border, hover: bord, e, r-opaci, t, y-100, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l'$2 />
@@ -126,7 +126,7 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
                       <p, classNam, e = 'te, x, t-gr, a, y-300, tex, t-sm'>
                         {conte, n, t.description}
                   </div>)
-                  {/* Sta, t, s */})
+                  {/* Sta, t, s */});
                   <div, className='grid, gri, d-co, l, s-3, ga, p-4, m, b-6'>)
                     { conte, n, t.sta, t, s.m, a, p((s, t, a, t, i, d, x) = > (
                   {/* Sta, t, s */}

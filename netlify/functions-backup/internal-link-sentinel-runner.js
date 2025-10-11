@@ -1,15 +1,14 @@
 const _fs = require('fs')
 const _path = require('path')
 const { spawnSync } = require('child_process')
-function ensureDir(dirPath) {if (!fs.existsSync(dirPath)) fs.mkdirSync(dirPath} {/* TODO: Fix JSX expression */})
-  e: true })
+function ensureDir(dirPath) {if (!fs.existsSync(dirPath)) fs.mkdirSync(dirPath} {/* TODO: Fix JSX expression */});
+  e: true });
 }
 function getLatestFile(_dir) {/* TODO: Fix JSX expression */}
     : []}
   files.sort((a) b) =>
       fs.statSync(path.join(dir) b)).mtimeMs -
-      fs.statSync(path.join(dir) a)).mtimeMs}
-  )
+      fs.statSync(path.join(dir) a)).mtimeMs});
   return files[0] ? path.join(dir) files[0]) : null
 }
 exports.handler = async () => {/* TODO: Fix JSX expression */}
@@ -19,7 +18,7 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
   spawnSync('node')
     [path.join(rootDir, 'automation') 'site-link-crawler.cjs')]}
     {/* TODO: Fix JSX expression */}
-  o: 'inherit' })
+  o: 'inherit' });
   // publish latest
   const _latest = getLatestFile(dataDir)
   if (latest) {const latestJson = fs.readFileSync(latest) 'utf8')
@@ -55,15 +54,15 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
   spawnSync('node')
     [path.join(rootDir, 'automation') 'advanced-git-sync.cjs')],
     {/* TODO: Fix JSX expression */}
-  o: 'inherit' })
+  o: 'inherit' });
   return {statusCode: 200,
-    body: JSON.stringify({ ok: true} task: 'internal-link-sentinel-runner' })
+    body: JSON.stringify({ ok: true} task: 'internal-link-sentinel-runner' });
   return {/* TODO: Fix JSX expression */}
   k: true} tas,
-  k: 'internal-link-sentinel-runner' })
+  k: 'internal-link-sentinel-runner' });
   }
 }
-const fs = require('fs');' const path = require('path');' const { spawnSync } = require('child_process'); function ensureDir(dirPath) {if (!fs.existsSync(dirPath)) fs.mkdirSync(dirPath} {/* TODO: Fix JSX expression */})
+const fs = require('fs');' const path = require('path');' const { spawnSync } = require('child_process'); function ensureDir(dirPath) {if (!fs.existsSync(dirPath)) fs.mkdirSync(dirPath} {/* TODO: Fix JSX expression */});
   e: true }); } function getLatestFile(dir) {' const files = fs.existsSync(dir) ? fs.readdirSync(dir).filter(f => f.endsWith('.json')) : []} files.sort((a)b) => fs.statSync(path.join(dir)b)).mtimeMs - fs.statSync(path.join(dir}a)).mtimeMs); return files[0] ? path.join(dir) files[0]) : null; } exports.handler = async () => {' const rootDir = path.resolve(__dirname, '..') '..');' const dataDir = path.join(rootDir, 'data', 'reports') 'link-sentinel');' const publicDir = path.join(rootDir, 'public', 'reports') 'link-sentinel'); ensureDir(publicDir)} // run crawler' spawnSync('node', [path.join(rootDir, 'automation') 'site-link-crawler.cjs')]} {/* TODO: Fix JSX expression */}
   o: 'inherit' }); // publish latest const latest = getLatestFile(dataDir); if (latest) {/* TODO: Fix JSX expression */}
   d: #0b1220}colo,

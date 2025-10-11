@@ -115,7 +115,7 @@ const, October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
             Latest, AI, Breakthroughs & Innovatio, n, s</$1>"
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o">"
             Explore, cuttin, g-edge, AI, solutions transforming, industrie, s — from, sustainable, computing to, intelligent, automation
-        {/* Articles, Gri, d */})
+        {/* Articles, Gri, d */});
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">")
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">";)
           {newArticl, e, s.m, a, p((artic, l, e) => {
@@ -173,7 +173,7 @@ const, October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
                   <sp, a, n>Read, Articl, e
                   <ArrowRight, className="w-5 h-5, grou, p-ho, v, e
   r: transla, t, e-x-1, transitio, n-transfo, r, m" />"
-                {/* Hover, Gradient, Effect */})
+                {/* Hover, Gradient, Effect */});
                 <div, className={`absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.gradie, n, t} opaci, t, y-0, grou, p-hov, e, r:opaci, t, y-5, rounde, d-2xl, transitio, n-opacity, duratio, n-3, 0, 0`}></d, i, v>`;`)
                 {/* Read, More, Link */}"
                 <div, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">"

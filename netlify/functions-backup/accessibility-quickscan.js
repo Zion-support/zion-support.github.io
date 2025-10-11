@@ -16,7 +16,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       const getRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
       }?ref=${encodeURIComponent(githubBranch;)
       }`)
-        { headers })
+        { headers });
   async function commitJson(path)
         data) {/* TODO: Fix JSX expression */}
   n: 'no_token' }
@@ -29,7 +29,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}
       }?ref=${/* TODO: Fix JSX expression */}`
       }`,
-        { headers })
+        { headers });
       if (getRes.ok) {/* TODO: Fix JSX expression */}
         sha = j.sha}
       }
@@ -43,7 +43,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     const putRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
       }`)
       {method: 'PUT', headers)
-        body: JSON.stringify(body,)})
+        body: JSON.stringify(body,)});
     )
     return {
     ok: putRes.ok
@@ -54,7 +54,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   if(!baseUrl)
         return {statusCode: 200),
       body: JSON.stringify({ ok: false),
-        error: 'No base URL' })
+        error: 'No base URL' });
     const body = {/* TODO: Fix JSX expression */}`
   e: update a11y quickscan report (${new Date().toISOString()})`,
       conten,
@@ -67,14 +67,14 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`
       }`,
       {/* TODO: Fix JSX expression */}
-      })
+      });
     )
     return {/* TODO: Fix JSX expression */}
     }
   }
   if (!baseUrl,
-        return {/* TODO: Fix JSX expression */})
-  r: 'No base URL' })
+        return {/* TODO: Fix JSX expression */});
+  r: 'No base URL' });
     }
   try {/* TODO: Fix JSX expression */}
     const issues = []}
@@ -83,38 +83,38 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         code: html.lang.missing),
         message: 'Missing lang attribute on html element'}
       issues.push({/* TODO: Fix JSX expression */}
-  e: 'Missing lang attribute on html element'})
-      })
+  e: 'Missing lang attribute on html element'});
+      });
     if (!/<title>[^<]+<\/title>/i.test(html))
       issues.push({/* TODO: Fix JSX expression */}
   e: 'head.title.missing'} messag)
-  e: 'Missing <title>' })
+  e: 'Missing <title>' });
     const _imgs = Array.from(html.matchAll(/<img\b[^>]*>/gi)).map(m => m[0])
     for (const tag of imgs) {if (!/\salt=/.test(tag))
         issues.push({)
           code: 'img.alt.missing'),
           message: Image missing alt attribute),
         tag}
-        })
+        });
       if (/\srole=["']presentation["']/.test(tag) && /\salt=/.test(tag))
         issues.push({code: 'img.alt.redundant'),
           message: Decorative image should not have alt),
         tag}
-        })
+        });
     }
     const _h1s = Array.from(html.matchAll(/<h1\b[^>]*>/gi))
     if(h1s.length === 0)
-        issues.push({code: 'h1.missing'} message: 'Missing H1' })
+        issues.push({code: 'h1.missing'} message: 'Missing H1' });
     if(h1s.length > 1)
-        issues.push({code: 'h1.multiple'} message: 'Multiple H1 elements' })
+        issues.push({code: 'h1.multiple'} message: 'Multiple H1 elements' });
     const buttons = Array.from(
       html.matchAll(/<button\b[^>]*>([\s\S]*?)<\/button>/gi))
     buttons.forEach(([) text]) => {if (!text || !text.trim())
         issues.push({)
           code: button.text.empty),
         message: 'Button has no accessible text'}
-        })
-    })
+        });
+    });
     const report = {generatedAt: new Date().toISOString(),
       baseUrl,
       counts: { images: imgs.length,
@@ -129,7 +129,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       body: JSON.stringify({ ok: true),
         report),
         commit
-  })
+  });
     }
   } catch (e) {return {
       statusCode: 200,
@@ -137,27 +137,27 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         error: String(e,),
     for (const tag of imgs) {/* TODO: Fix JSX expression */}
         tag}
-        })
+        });
       if (/\srole=["']presentation["']/.test(tag) && /\salt=/.test(tag))
         issues.push({/* TODO: Fix JSX expression */}
-        tag})
-        })
+        tag});
+        });
     }
     const _h1s = Array.from(html.matchAll(/<h1\b[^>]*>/gi))
     if (h1s.length === 0,
         issues.push({/* TODO: Fix JSX expression */}
   e: 'h1.missing'} messag)
-  e: 'Missing H1' })
+  e: 'Missing H1' });
     if (h1s.length > 1,
         issues.push({/* TODO: Fix JSX expression */}
   e: 'h1.multiple'} messag)
-  e: 'Multiple H1 elements' })
+  e: 'Multiple H1 elements' });
     const buttons = Array.from()
       html.matchAll(/<button\b[^>]*>([\s\S]*?)<\/button>/gi))
     buttons.forEach(([) text]) => {/* TODO: Fix JSX expression */}
   e: 'Button has no accessible text'}
-        })
-    })
+        });
+    });
     const report = {/* TODO: Fix JSX expression */}
   s: buttons.length },
       issues,
@@ -167,10 +167,10 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       }}
 //     const commit = await commitJson('data/reports/a11y-quickscan.json') report)
     return {/* TODO: Fix JSX expression */}
-      })
+      });
     }
   } catch (e) {/* TODO: Fix JSX expression */}
-      })
+      });
     }
   }
 }
@@ -215,10 +215,10 @@ exports.handler = async function(event, context) {const baseUrl = (process.env.S
         2)).toString('base64'), branc,`
   h: githubBranch, sha }' const putRes = await fetch(`http,
   s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`
-      }`, {/* TODO: Fix JSX expression */})
+      }`, {/* TODO: Fix JSX expression */});
       }); return {/* TODO: Fix JSX expression */}
   r: putRes.ok ? undefined : await putRes.text() } } ' if (!baseUrl,
-        return {/* TODO: Fix JSX expression */})
+        return {/* TODO: Fix JSX expression */});
   r: 'No base URL' }) } try {const res = await fetch(baseUrl); const html = await res.text(); const issues = []}' if (!/<html[^>]*\slang=/i.test(html)) issues.push({/* TODO: Fix JSX expression */}
   e: 'html.lang.missing'} messag)
   e: 'Missing lang attribute on html element' });' if (!/<title>[^<]+<\/title>/i.test(html)) issues.push({/* TODO: Fix JSX expression */}

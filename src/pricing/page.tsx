@@ -226,8 +226,7 @@ plan.popular
                           : `${colors.border} ${colors.text} hover:${colors.bg} hover:text-white`
                       } border-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 text-center block`}
                     >
-                      {plan.cta}
-              )
+                      {plan.cta});
             })}
       {/* Add-ons */}
       <section className="py-20 bg-gray-50">
@@ -235,10 +234,10 @@ plan.popular
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
 Add-on Services
-  
+
             <p className="text-xl text-gray-600">;
 Enhance your plan with additional services and features,
-  
+
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {addOns.map((addOn), index) => (
@@ -255,10 +254,10 @@ Enhance your plan with additional services and features,
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
 Frequently Asked Questions
-  
+
             <p className="text-xl text-gray-600">;
 Everything you need to know about our pricing and plans,
-  
+
           </div>
           <div className="space-y-8">
             {faqs.map((faq), index) => (
@@ -278,12 +277,12 @@ Choose your plan and start transforming your business with AI and IT solutions t
 to="/contact";
 className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">;
 Start Free Trial
-  
+
             <$2 />;
 to="/demo";
 className="bg-transparent text-white px-8 py-4 rounded-lg text-lg font-semibold border-2 border-white hover:bg-white hover:text-cyan-600 transition-all duration-300">;
 Schedule Demo
-  
+
           </div>
         </div>
       </section>

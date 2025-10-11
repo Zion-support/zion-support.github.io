@@ -11,7 +11,7 @@ export const quoteRequestService = {
           display_name
         )
       `)
-      .order('created_at', { ascending: false })
+      .order('created_at', { ascending: false });
     if (error) throw error
     // Format the data to include talent_name
     return data.map((item: any) => ({
@@ -26,7 +26,7 @@ export const quoteRequestService = {
       .from('quote_requests')
       .select('*')
       .eq('talent_id', talentId)
-      .order('created_at', { ascending: false })
+      .order('created_at', { ascending: false });
     if (error) throw error
     return data as QuoteRequest[]
   },
@@ -79,7 +79,7 @@ export const quoteRequestService = {
   toggleArchive: async (id: string, isArchived: boolean) => {
     const { data, error } = await supabase
       .from('quote_requests')
-      .update({ is_archived: isArchived })
+      .update({ is_archived: isArchived });
       .eq('id', id)
       .select()
     if (error) throw error

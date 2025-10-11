@@ -23,14 +23,14 @@ function cleanUnusedImports(filePath) {
         const cleanImp = imp.replace(/\s*as\s+\w+/, '').trim()
         if (content.includes(`<${cleanImp}`) || content.includes(`${cleanImp}.`) || content.includes(`${cleanImp}(`)) {
           usedImports.push(imp)
-      })
+      });
       if (usedImports.length !== imports.length) {
         const newImport = usedImports.length > 0
 function cleanUnusedImports(filePath) {/* TODO: Fix JSX expression */}
     const lucideImportMatch = content.match(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/)
     if (lucideImportMatch) {/* TODO: Fix JSX expression */}
         if (content.includes(`<${cleanImp}`) || content.includes(`${cleanImp}.`) || content.includes(`${cleanImp}(`)) {/* TODO: Fix JSX expression */}
-      })
+      });
       if (usedImports.length !== imports.length) {/* TODO: Fix JSX expression */}`
           ? `import { ${usedImports.join(', ')} } from 'lucide-react';`
           : ''

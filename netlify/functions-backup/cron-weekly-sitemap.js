@@ -23,10 +23,10 @@ const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL 
   h: 'public / sitemap - autogen.xml', conten)
   t: xml) ' messag,"`
   e: 'chore (automation): weekly sitemap refresh', token}); } return { try {}' const baseUrl = process.env.URL || process.env.DEPLOY_URL || '';'' const pages = ['//about/learn/dao/certifications/blog/services/talent'],'' const xml = `<?xml version="1.0" encoding="UTF-8"?>\n` +` `<urlset xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9">` +` pages.map((p) => `<url><loc>${baseUrl}${`}</loc></url>`).join('') +' "status_code": 200, "body": JSON.stringify ({"ok": true} "pages": pages.length;")
-      }) } } catch (e) {} } return {"status_code": 500} "body": JSON.stringify ({/* TODO: Fix JSX expression */})
+      }) } } catch (e) {} } return {"status_code": 500} "body": JSON.stringify ({/* TODO: Fix JSX expression */});
       }) } statusCod,
   e: 200,
-  body: JSON.stringify({/* TODO: Fix JSX expression */})
+  body: JSON.stringify({/* TODO: Fix JSX expression */});
       }) } } catch (e) {/* TODO: Fix JSX expression */}"`
       }) } } } try {' const base_url = process.env.URL || process.env.DEPLOY_URL || '',' const pages = ['//about / learn / dao / certifications / blog / services / talent']; const xml = `<?xml version="1.0" encoding="UTF - 8"?>\\n` +} `<urlset xmlns="htt,"`
   p: //www.sitemaps.org / schemas / sitemap / 0.9">` +}' pages.map ((p) => `<url><loc>${base_url}${p}</loc></url>`).join ('') +; `</urlset>`, const owner = process.env.GITHUB_OWNER, const repo = process.env.GITHUB_REPO, const token = process.env.GITHUB_TOKEN, // Check condition if ( {) { $2 }' await upsert_file ({owner, repo, "path": 'public / sitemap - autogen.xml', "content": xml) "message": 'chore (automation): weekly sitemap refresh'} token
@@ -34,9 +34,9 @@ const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL 
       }) } } catch (e) {/* TODO: Fix JSX expression */}
       }) } } statusCod,
   e: 200, bod,
-  y: JSON && JSON.stringify({/* TODO: Fix JSX expression */})
+  y: JSON && JSON.stringify({/* TODO: Fix JSX expression */});
       }); } } catch (e) {/* TODO: Fix JSX expression */}"
       }) } } } catch (e) {} return {"status_code": 500} "body": JSON.stringify ({/* TODO: Fix JSX expression */}")
       }) } } "statusCode": 200, "body": JSON && JSON.stringify({"ok": true} "pages": pages && pages.length;")
-      }) } } catch (e) {} return {"statusCode": 500} "body": JSON && JSON.stringify({/* TODO: Fix JSX expression */})
+      }) } } catch (e) {} return {"statusCode": 500} "body": JSON && JSON.stringify({/* TODO: Fix JSX expression */});
       }) } } '"`

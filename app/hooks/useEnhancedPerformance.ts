@@ -42,10 +42,10 @@ if (trackPerformance && renderCountRef.current > 10) {
       // Many re-renders detected;
         renderCountRef.current;
       )}}
-  })
+  });
     if (trackErrors) {
         errorTracker.trackError()
-        })
+        });
       },
     [component, trackErrors]
               duration > 1000 ? 'slow' : 'fast';
@@ -143,14 +143,14 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
         renderCountRef.current
       );}
     }
-  })
+  });
   const trackError = useCallback(
     (error: Error, context?: Record<string, unknown>) => {
       if (trackErrors) {
         errorTracker.trackError(error, {
           component,
           ...context,;}
-        })
+        });
       }
     },
     [component, trackErrors]

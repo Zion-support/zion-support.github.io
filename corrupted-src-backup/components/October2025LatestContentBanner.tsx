@@ -87,7 +87,7 @@ const, October2025LatestContentBanne, r = () => {/* TODO: Fix JSX expression */}
             Latest, AI, Breakthroughs & Enterprise, Strategie, s</$1>"
           <p, className="te, x, t-xl, tex, t-sla, t, e-300, ma, x-w-3xl, m, x-au, t, o">"
             Explore, cuttin, g-edge, insights, on GenAI, orchestratio, n, AI, security, frameworks, and, rea, l-time, multimodal, processing
-        {/* Articles, Gri, d */})
+        {/* Articles, Gri, d */});
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">")
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">";)
           {articl, e, s.m, a, p((artic, l, e, i, d, x) => {

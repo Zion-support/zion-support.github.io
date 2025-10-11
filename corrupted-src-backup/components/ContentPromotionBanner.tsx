@@ -28,7 +28,7 @@ export, default, function ContentPromotionBann, e, r(): vo, i, d {/* TODO: Fix J
               <Zap, classNam, e="w-5 h-5" />
               View, Case, Studies
         </d, i, v>)
-        {/* Featured, Content, Car, d, s */})
+        {/* Featured, Content, Car, d, s */});
         <div, classNam, e = "mt-10, grid, gap-6, m, d: gr, i, d-co, l, s-3">)
             { featuredConte, n, t.m, a, p((it, e, m, ind, e, x) = > (
             <div, ke, y = { in, d, e, x  }, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5">

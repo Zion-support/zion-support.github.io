@@ -68,7 +68,7 @@ export const usePerformance = (option)
       analytics.trackPerformance(`${componentName}_render_time`, renderTime)
       if (isSlowRender) {/* TODO: Fix JSX expression */}
       }
-    })
+    });
   }, [componentName, trackRenderTime, slowRenderThreshold, trackMemoryUsage])
   return {
     trackRender,
@@ -107,7 +107,7 @@ export const usePageLoadPerformance = () => {/* TODO: Fix JSX expression */}
           // Track each metric
           Object.entries(metrics).forEach(([key, value]) => {/* TODO: Fix JSX expression */}`
             analytics.trackPerformance(`page_load_${key}`, value)
-          })
+          });
           // Track overall page load performance
           analytics.track('page_load_complete')
             'performance')
@@ -153,10 +153,10 @@ export const useResourcePerformance = () => {/* TODO: Fix JSX expression */}`
             'ms'
           )
         }
-      })
-    })
-    observer.observe({/* TODO: Fix JSX expression */})
-  s: ['resource'] })
+      });
+    });
+    observer.observe({/* TODO: Fix JSX expression */});
+  s: ['resource'] });
     return () => observer.disconnect()
   }, [])
 }
@@ -170,8 +170,8 @@ export const useLongTaskMonitoring = () => {
       entries.forEach(entry => {)
         analytics.track('long_task', 'performance', 'detected', undefined, entry.duration)
 export const useLongTaskMonitoring = () => {/* TODO: Fix JSX expression */}
-      })
-    })
+      });
+    });
     return () => {/* TODO: Fix JSX expression */}
       }
     }

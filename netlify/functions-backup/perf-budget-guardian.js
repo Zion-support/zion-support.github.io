@@ -8,25 +8,25 @@ exports.config = {/* TODO: Fix JSX expression */}
   e: '*/15 * * * *' }
 exports.handler = async function () {/* TODO: Fix JSX expression */}
   l: true}
-    })
+    });
     execSync()
       'git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(automation): update performance budget report [skip ci]" || true) && (git push origin main || true)',
       {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
-  l: true })
+  l: true });
     return {statusCode: 200,
       body: JSON.stringify({ ok: true),
-        task: 'perf-budget-guardian' })
+        task: 'perf-budget-guardian' });
     }
   } catch (e) {return {
       statusCode: 200,
       body: JSON.stringify({ ok: false),
         error: String(e,),
     return {/* TODO: Fix JSX expression */}
-  k: 'perf-budget-guardian' })
+  k: 'perf-budget-guardian' });
     }
   } catch (e) {/* TODO: Fix JSX expression */}
-      })
+      });
     }
   }
 }

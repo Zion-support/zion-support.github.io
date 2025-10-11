@@ -13,9 +13,9 @@ serve(async (req) => {
       if (cronSecret !== Deno.env.get("CRON_SECRET")) {
         return new Response(JSON.stringify({ error: "Unauthorized" }), {
           status: 401,
-          headers: { "Content-Type": "application/json" }})
+          headers: { "Content-Type": "application/json" }});
           headers: { "Content-Type": "application/json" },
-        })
+        });
       }
     }
     // Call the process-retention-emails function
@@ -23,33 +23,33 @@ serve(async (req) => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `Bearer ${supabaseServiceKey}`}})
+        "Authorization": `Bearer ${supabaseServiceKey}`}});
         "Authorization": `Bearer ${supabaseServiceKey}`,
       },
-    })
+    });
     const result = await response.json()
     return new Response(JSON.stringify({
       success: true,
       message: "Daily retention process executed",
       result}), {
       status: 200,
-      headers: { "Content-Type": "application/json" }})
+      headers: { "Content-Type": "application/json" }});
       result,
     }), {
       status: 200,
       headers: { "Content-Type": "application/json" },
-    })
+    });
   } catch (error) {
     console.error("Error in cron-daily-retention:", error)
     return new Response(JSON.stringify({
       success: false,
       error: error.message}), {
       status: 500,
-      headers: { "Content-Type": "application/json" }})
+      headers: { "Content-Type": "application/json" }});
       error: error.message,
     }), {
       status: 500,
       headers: { "Content-Type": "application/json" },
-    })
+    });
   }
-})
+});

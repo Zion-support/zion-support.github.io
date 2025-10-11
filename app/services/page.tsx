@@ -20,7 +20,7 @@ const ServicesPage: React.FC = () => {const [searchTerm, setSearchTerm] = useSta
   const filteredServices = services.filter(service => {const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase())
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
-    return matchesSearch && matchesCategory;} )
+    return matchesSearch && matchesCategory;});
   return (
     <>
       <Helmet>
@@ -29,16 +29,16 @@ const ServicesPage: React.FC = () => {const [searchTerm, setSearchTerm] = useSta
         <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
       </Helmet>
       <Navigation />
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Services - Zion Tech Group | AI and IT Solutions</title>
         <meta name="description" content="Discover our comprehensive range of AI and IT services designed to transform your business. From AI solutions to cloud services and data analytics."
         <meta name="keywords" content="AI services, IT services, cloud services, data analytics, cybersecurity, Zion Tech Group"
       </Helmet>
-      
+
       <Navigation />
-      
+
       <main className="pt-16"
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"
@@ -50,22 +50,22 @@ const ServicesPage: React.FC = () => {const [searchTerm, setSearchTerm] = useSta
                 Transform your business with our cutting-edge AI and IT solutions designed for the modern enterprise.
               </p>
               </div>
-      
+
       <Footer />
     </>
             </div>
-      
+
       <Footer />
     </>
           </div>
-      
+
       <Footer />
     </>
         </section>
 
         {/* Services Grid */}
           </div>
-      
+
       <Footer />
     </>
         </section>
@@ -88,16 +88,16 @@ const ServicesPage: React.FC = () => {const [searchTerm, setSearchTerm] = useSta
                 Schedule Demo
               </button>
             </div>
-      
+
       <Footer />
     </>
           </div>
-      
+
       <Footer />
     </>
         </section>
       </div>
-      
+
       <Footer />
     </>
       <Footer />

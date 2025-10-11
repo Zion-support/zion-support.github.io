@@ -90,14 +90,14 @@ class HealthCheckService {
           ...check,
           name,
           duration
-        })
+        });
       } catch (error) {
         logger.error(`Health check "${name}" failed`, error as Error)
         checks.push({
           name,
           status: 'fail',
           message: error instanceof Error ? error.message : 'Unknown error'
-        })
+        });
       }
     }
     // Determine overall status
@@ -122,9 +122,9 @@ class HealthCheckService {
     this.lastCheckTime = now
     // Log unhealthy status
     if (status === 'unhealthy') {
-      logger.error('Application health check failed', { healthStatus })
+      logger.error('Application health check failed', { healthStatus });
     } else if (status === 'degraded') {
-      logger.warn('Application health degraded', { healthStatus })
+      logger.warn('Application health degraded', { healthStatus });
     }
     return healthStatus
 
@@ -261,7 +261,7 @@ constructor() {/* TODO: Fix JSX expression */}
 //           ...check,
 //           name,
 //           duration;)
-        })
+        });
       } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -274,7 +274,7 @@ constructor() {/* TODO: Fix JSX expression */}
   s: 'fail',
           messag,
   e: error instanceof Error ? error.message : 'Unknown error'
-        })
+        });
   )
       }
     }
@@ -316,11 +316,11 @@ const hasFailures = checks.some((c) => c.status === 'fail')
     if (status === 'unhealthy') {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      logger.error('Application health check failed', { healthStatus })
+      logger.error('Application health check failed', { healthStatus });
     } else if (status === 'degraded') {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      logger.warn('Application health degraded', { healthStatus })
+      logger.warn('Application health degraded', { healthStatus });
     }
     return healthStatus
   }
@@ -380,7 +380,7 @@ $4}
       const { poor, needsImprovement, good } = report.summary
       let status: 'pass' | 'warn' | 'fail' = 'pass'
       let message = 'Performance metrics available'
-      
+
       // Check if any critical metrics are missing or poor
       const criticalMetrics = ['lcp', 'fid', 'cls', 'fcp', 'ttfb']
       const missingMetrics: string[] = []
@@ -388,7 +388,7 @@ $4}
       const needsImprovement: string[] = []
       const good: string[] = []
       const vitals = Object.keys(coreWebVitals)
-      
+
       criticalMetrics.forEach(metric => {
         const metrics = performanceMonitor.getMetrics()
         const value = metrics[metric as keyof typeof metrics]
@@ -404,13 +404,12 @@ $4}
             poor.push(metric)
           }
         }
-      })
-      
+      });
       if (missingMetrics.length > 2) {
         status = 'warn'
         message = `Missing critical metrics: ${missingMetrics.join(', ')}`
       }
-      
+
       if (missingMetrics.length > 3) {
         status = 'fail'
         message = `Critical performance data unavailable: ${missingMetrics.join(', ')}`
@@ -606,7 +605,7 @@ let status: 'pass' | 'warn' | 'fail' = 'pass'
       if (typeof window !== 'undefined' && !(api in window)) {
         missingAPIs.push(api)
       }
-    })
+    });
     if (missingAPIs.length > 0) {
     return {
         name: 'browser-apis']
@@ -621,7 +620,7 @@ let status: 'pass' | 'warn' | 'fail' = 'pass'
 }
 //         missingAPIs.push(api)
       }
-    })
+    });
     if (missingAPIs.length > 0) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }

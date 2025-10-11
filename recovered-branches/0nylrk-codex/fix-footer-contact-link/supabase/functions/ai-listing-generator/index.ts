@@ -7,7 +7,7 @@ const corsHeaders = {
 }
 serve(async (req) => {
   if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders })
+    return new Response(null, { headers: corsHeaders });
   }
   try {
     const { title, category, keyFeatures, targetAudience } = await req.json()
@@ -19,13 +19,12 @@ serve(async (req) => {
         { 
           status: 400, 
           headers: { ...corsHeaders, "Content-Type": "application/json" } 
-        }
-      )
+        });
     }
     const configuration = new Configuration({
-      apiKey: Deno.env.get('OPENAI_API_KEY')})
+      apiKey: Deno.env.get('OPENAI_API_KEY')});
       apiKey: Deno.env.get('OPENAI_API_KEY'),
-    })
+    });
     const openai = new OpenAIApi(configuration)
     const prompt = `Generate an optimized marketplace listing for the following product:
 Title: ${title}
@@ -47,9 +46,9 @@ Format the response as a JSON object with the following structure:
     const completion = await openai.chat.completions.create({
       model: "gpt-4o-mini",
       messages: [{ role: "user", content: prompt }],
-      temperature: 0.7})
+      temperature: 0.7});
       temperature: 0.7,
-    })
+    });
     const responseText = completion.choices[0].message.content
     // Parse the JSON from the AI response
     let parsedResponse
@@ -77,8 +76,7 @@ Format the response as a JSON object with the following structure:
       }),
       { 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
-      }
-    )
+      });
   } catch (error) {
     console.error("Error in AI listing generator:", error)
     return new Response(
@@ -89,7 +87,6 @@ Format the response as a JSON object with the following structure:
       { 
         status: 500, 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
-      }
-    )
+      });
   }
-})
+});

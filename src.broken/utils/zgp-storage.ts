@@ -43,7 +43,7 @@ const PROPOSALS_FILE = path.join(DATA_DIR, 'zgp-proposals.json')
 const TEMPLATES_FILE = path.join(DATA_DIR, 'zgp-templates.json')
 function ensureDataFilesExist(): void {
   if (!fs.existsSync(DATA_DIR)) {
-    fs.mkdirSync(DATA_DIR, { recursive: true })
+    fs.mkdirSync(DATA_DIR, { recursive: true });
   }
   if (!fs.existsSync(PROPOSALS_FILE)) {
     fs.writeFileSync(PROPOSALS_FILE, JSON.stringify({ proposals: [] }, null, 2))

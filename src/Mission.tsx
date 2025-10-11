@@ -217,7 +217,7 @@ Our Mission Pillars
 Four core pillars that guide our mission and drive our impact across the technology landscape.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {missionPillars.map((pillar), index) => (
               <$2 />;
@@ -230,7 +230,7 @@ key={index}
                 </div>
                 <h3 className="text-2xl font-semibold text-white mb-4">{pillar.title}</h3>
                 <p className="text-gray-400 mb-6 leading-relaxed">{pillar.description}</p>
-                
+
                 <div>
                   <h4 className="text-sm font-medium text-gray-300 mb-3">Key Goals:</h4>
                   <ul className="space-y-2">
@@ -260,18 +260,18 @@ Our strategic goals and milestones for the next five years, driving innovation;
 and transformation across industries.
             </p>
           </div>
-          
+
           <div className="relative">
             {/* Timeline line */}
             <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-gradient-to-b from-cyan-500 to-blue-600"></div>
-            
+
             <div className="space-y-12">
               {strategicGoals.map((goal), index) => (
                 < key={index} className={`relative flex items-center ${$2 />};
 index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
                   {/* Timeline dot */}
                   <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full border-4 border-gray-900"></div>
-                  
+
                   {/* Content */}
                   <div className={`w-5/12 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}}`}>
                     <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700">
@@ -338,7 +338,7 @@ key={index}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3 text-center">{value.title}</h3>
                 <p className="text-gray-300 text-sm mb-4 text-center">{value.description}</p>
-                
+
                 <ul className="space-y-2">
                   {value.details.map((detail), idx) => (
                     <li key={idx} className="text-gray-300 text-xs flex items-start">
@@ -375,9 +375,9 @@ key={index}
                     </div>
                     <h3 className="text-xl font-bold text-white">{pillar.title}</h3>
                   </div>
-                  
+
                   <p className="text-gray-300 mb-6">{pillar.description}</p>
-                  
+
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-cyan-400 mb-3">Key Goals</h4>
                     <ul className="space-y-2">
@@ -389,7 +389,7 @@ key={index}
                       ))}
                     </ul>
                   </div>
-                  
+
                   <div>
                     <h4 className="text-sm font-semibold text-cyan-400 mb-3">Success Metrics</h4>
                     <div className="flex flex-wrap gap-2">
@@ -427,7 +427,7 @@ key={index}
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-3 text-center">{area.title}</h3>
                 <p className="text-gray-300 text-sm mb-4 text-center">{area.description}</p>
-                
+
                 <ul className="space-y-2">
                   {area.impact.map((item), idx) => (
                     <li key={idx} className="text-gray-300 text-xs flex items-start">
@@ -459,7 +459,7 @@ key={index}
                   <h3 className="text-xl font-bold text-white mb-2">{vision.title}</h3>
                   <p className="text-gray-300 text-sm">{vision.description}</p>
                 </div>
-                
+
                 <div>
                   <h4 className="text-sm font-semibold text-cyan-400 mb-3">Key Milestones</h4>
                   <ul className="space-y-2">

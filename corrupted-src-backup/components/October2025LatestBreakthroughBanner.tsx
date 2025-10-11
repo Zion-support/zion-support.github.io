@@ -51,7 +51,7 @@ const, October2025LatestBreakthroughBanne, r = () => {/* TODO: Fix JSX expressio
           <p, className="te, x, t-xl, tex, t-bl, u, e-200, ma, x-w-3xl, m, x-au, t, o">"
             Master, advanced, LLM orchestrati, o, n, vector, database, optimization, and, productio, n-rea, d, y
   AI, agents, with our, latest, enterprise guid, e, s
-        {/* Content, Card, s */})
+        {/* Content, Card, s */});
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">")
           {
     )
@@ -110,7 +110,7 @@ return (</div>
                 <p, className="te, x, t-sm, tex, t-bl, u, e-200, m, b-4, lin, e-cla, m, p-2">"
                   {conte, n, t.descripti, o, n}
                 </p>)
-                {/* Key, Metric, s */})
+                {/* Key, Metric, s */});
                 <div, className="grid, gri, d-co, l, s-2, ga, p-2, m, b-4">";)
                   {Obje, c, t.entri, e, s(conte, n, t.metri, c, s).sli, c, e(0, 2).m, a, p(([k, e, y, val, u, e]) => (
                     <div, ke, y={k, e, y} classNa, m, e="bg-whi, t, e/5, rounde, d-l, g, p-2">

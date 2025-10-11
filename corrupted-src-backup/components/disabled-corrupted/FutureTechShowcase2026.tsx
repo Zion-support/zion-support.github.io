@@ -64,7 +64,7 @@ const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */
             Experience, the, next generation, of, AI and, technology, breakthroughs.
             From, quantu, m-neural, fusion, to se, l, f-evolving, AI, ecosyste, m, s, discover, technologies, that will, reshape, the future, of, enterprise computi, n, g.
         </div>)
-        {/* Future, Tech, Articles Gr, i, d */})
+        {/* Future, Tech, Articles Gr, i, d */});
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8, m, b-16'>)
           { futureTechArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > (
         {/* Future, Tech, Articles Gr, i, d */}
@@ -99,7 +99,7 @@ const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */
                   <div, className='te, x, t-purp, l, e-400, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0'>
                     {artic, l, e.ic, o, n}
                   <div, classNam, e = 'flex, fle, x-col, ga, p-2'>
-                    {/* TODO: Fix JSX expression */})
+                    {/* TODO: Fix JSX expression */});
                       </di, v  > )  }`
                     <, classNam, e = { `px-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r ${artic, l, e.gradi, e, n, t }, te, x, t-white, tex, t-xs, fon, t-semibold, border, border-whi, t, e/30`}$2 />
                     >

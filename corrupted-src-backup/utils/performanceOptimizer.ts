@@ -23,12 +23,12 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   lazyLoadImages(): void {/* TODO: Fix JSX expression */}
             }
           }
-        })
-      })
+        });
+      });
       document.querySelectorAll('img[data-src]').forEach(img => {)
         imageObserver.observe(img)
-      document.querySelectorAll('img[data-src]').forEach(img => {/* TODO: Fix JSX expression */})
-      })
+      document.querySelectorAll('img[data-src]').forEach(img => {/* TODO: Fix JSX expression */});
+      });
     }
   }
 
@@ -45,7 +45,7 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   preloadCriticalResources(): void {/* TODO: Fix JSX expression */}
       }
       document.head.appendChild(link)
-    })
+    });
   }
 
   // Optimize scroll performance
@@ -61,8 +61,8 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       }
     }
 
-    window.addEventListener('scroll', requestTick, {/* TODO: Fix JSX expression */})
-  e: true })
+    window.addEventListener('scroll', requestTick, {/* TODO: Fix JSX expression */});
+  e: true });
   }
 
   // Measure performance metrics
@@ -119,9 +119,9 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       {/* TODO: Fix JSX expression */}
       }]
     hints.forEach(hint => {/* TODO: Fix JSX expression */}
-      })
+      });
       document.head.appendChild(link)
-    })
+    });
   }
 
   // Add Web Vitals reporting method

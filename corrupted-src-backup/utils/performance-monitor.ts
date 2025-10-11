@@ -50,7 +50,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
           this.processPerformanceEntry(entry)
     try {/* TODO: Fix JSX expression */}
         }
-      })
+      });
       // Observe different types of performance entries
       this.observer.observe({)
         entryTypes: [)
@@ -59,8 +59,8 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
           'first-input')
           'layout-shift')
         ])
-      this.observer.observe({/* TODO: Fix JSX expression */})
-      })
+      this.observer.observe({/* TODO: Fix JSX expression */});
+      });
     } catch (error) {/* TODO: Fix JSX expression */}
 //       }
   }
@@ -118,9 +118,8 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
           }
         },
         {/* TODO: Fix JSX expression */}
-  e: true }
-      )
-    })
+  e: true });
+    });
   }
 
   private measureCoreWebVitals(): void {
@@ -134,12 +133,12 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
     // Measure page load time
     window.addEventListener('load', () => {
     this.metrics.loadTime = performance.now() - this.metrics.navigationStart
-  })
+  });
     // Measure DOM content loaded
     document.addEventListener('DOMContentLoaded', () => {
     this.metrics.domContentLoaded =
         performance.now() - this.metrics.navigationStart
-  })
+  });
   }
 
   private trackPageLoadMetrics(): void {
@@ -153,10 +152,10 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
 
     // Measure page load time
     window.addEventListener('load', () => {/* TODO: Fix JSX expression */}
-    })
+    });
     // Measure DOM content loaded
     document.addEventListener('DOMContentLoaded', () => {/* TODO: Fix JSX expression */}
-    })
+    });
   }
 
   private trackPageLoadMetrics(): void {/* TODO: Fix JSX expression */}

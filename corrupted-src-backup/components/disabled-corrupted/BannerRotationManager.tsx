@@ -54,7 +54,7 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({,
  * - Provides fallback loading states,
  */
 export const,
-  BannerRotationManager: React.FC<BannerRotationManagerProps> = ({/* TODO: Fix JSX expression */})
+  BannerRotationManager: React.FC<BannerRotationManagerProps> = ({/* TODO: Fix JSX expression */});
 }) => {/* TODO: Fix JSX expression */}
   }, [banners, maxBanners])
   // Rotate banners at specified interval
@@ -77,7 +77,7 @@ export const,
         <BannerComponent />
       </Suspense>)
 )
-      {/* Banner indicators */})
+      {/* Banner indicators */});
       {visibleBanners.length > 1 && ()
         <div className='flex justify-center mt-4 space-x-2'></div>)
           {visibleBanners.map((_, index) => (
@@ -97,7 +97,7 @@ export const,
         <BannerComponent />
       {/* Banner indicators */}
       {/* TODO: Fix JSX expression */}
-              key={index})
+              key={index});
               onClick={() => setCurrentIndex(index)}
               className={/* TODO: Fix JSX expression */}`
               }`}`

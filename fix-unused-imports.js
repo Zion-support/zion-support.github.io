@@ -44,14 +44,14 @@ function cleanUnusedImports(filePath) {
         if (content.includes(imp) && !imp.includes('//')) {
           usedImports.push(imp)
         }
-      })
+      });
       if (usedImports.length !== imports.length) {
         const newImport = usedImports.length > 0
 function cleanUnusedImports(filePath) {/* TODO: Fix JSX expression */}
     const lucideImportMatch = content.match(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/)
     if (lucideImportMatch) {/* TODO: Fix JSX expression */}
         }
-      })
+      });
       if (usedImports.length !== imports.length) {/* TODO: Fix JSX expression */}
           ? `import { ${usedImports.join(', ')} } from 'lucide-react';`
           : ''

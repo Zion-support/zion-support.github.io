@@ -103,7 +103,7 @@ class ApiClient {
       ...config,
       url,
       method:     ,
-$4})
+$4});
   }
   /**
    * POST request
@@ -118,7 +118,7 @@ $4})
       url,
       method: 'POST',
       body: JSON.stringify(data)
-    })
+    });
   }
   /**
    * PUT request
@@ -133,7 +133,7 @@ $4})
       url,
       method: 'PUT',
       body: JSON.stringify(data)
-    })
+    });
   }
   /**
    * DELETE request
@@ -146,7 +146,7 @@ $4})
       ...config,
       url,
       method:     ,
-$4})
+$4});
   }
   /**
    * PATCH request
@@ -161,7 +161,7 @@ $4})
       url,
       method: 'PATCH',
       body: JSON.stringify(data)
-    })
+    });
   }
   /**
    * Main request method with retry logic
@@ -207,7 +207,7 @@ $4})
             ...headers
           },
           signal: controller.signal
-        })
+        });
         clearTimeout(timeoutId)
         this.abortControllers.delete(cacheKey)
         if (!response.ok) {
@@ -226,7 +226,7 @@ $4})
   }
         // Cache successful GET requests
         if (method === 'GET' && !skipCache) {
-          cacheManager.set(cacheKey, data, cacheConfig || this.config.cacheOptions || {})
+          cacheManager.set(cacheKey, data, cacheConfig || this.config.cacheOptions || {});
         }
         return {
           data,
@@ -244,13 +244,13 @@ $4})
               url: fullUrl,
               method,
               attempt
-            })
+            });
           } else {
             logError(`API request failed`, error as Error, {
               url: fullUrl,
               method,
               attempt
-            })
+            });
           }
         }
         // Don't retry on certain errors
@@ -321,7 +321,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
 //       url,
       metho,
   d: 'GET'
-    })
+    });
   )
   }
   /**
@@ -351,8 +351,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
   d: 'POST',
       bod)
   y: JSON.stringify(data)
-    }
-  )
+    });
   }
   /**
    * PUT request
@@ -381,8 +380,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
   d: 'PUT',
       bod)
   y: JSON.stringify(data)
-    }
-  )
+    });
   }
   /**
    * DELETE request
@@ -408,7 +406,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
 //       url,
       metho,
   d: 'DELETE'
-    })
+    });
   )
   }
   /**
@@ -438,8 +436,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
   d: 'PATCH',
       bod)
   y: JSON.stringify(data)
-    }
-  )
+    });
   }
   /**
    * Main request method with retry logic
@@ -516,7 +513,7 @@ const controller = new AbortController()
 
           signal: controller.signal,
 
-        })
+        });
         clearTimeout(timeoutId)
         this.abortControllers.delete(cacheKey)
         if (!response.ok) {/* TODO: Fix JSX expression */}
@@ -546,7 +543,7 @@ const controller = new AbortController()
         if (method === 'GET' && !skipCache) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-          cacheManager.set(cacheKey, data, cacheConfig || this.config.cacheOptions || {})
+          cacheManager.set(cacheKey, data, cacheConfig || this.config.cacheOptions || {});
         }
         return {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -578,7 +575,7 @@ const controller = new AbortController()
   l: fullUrl,
 //               method,
 //               attempt;)
-            })
+            });
           } else {/* TODO: Fix JSX expression */}
   O: Add content,}
 }`
@@ -589,7 +586,7 @@ const controller = new AbortController()
   l: fullUrl,
 //               method,
 //               attempt;)
-            })
+            });
           }
         }
         // Don't retry on certain errors
@@ -659,9 +656,9 @@ const controller = new AbortController()
 }
     this.abortControllers.forEach(controller => {/* TODO: Fix JSX expression */}
   O: Add content,}
-})
+});
       controller.abort()
-    })
+    });
     this.abortControllers.clear()
   }
   /**
@@ -673,7 +670,7 @@ const controller = new AbortController()
       ...config,
       headers: {
         ...this.config.headers,
-        ...(config.headers || {})
+        ...(config.headers || {});
       }
     }
   }
@@ -700,7 +697,7 @@ const controller = new AbortController()
    */
   async healthCheck(endpoint: string = '/health'): Promise<boolean> {
     try {
-      const response = await this.get(endpoint, { timeout: 5000, retries: 1 })
+      const response = await this.get(endpoint, { timeout: 5000, retries: 1 });
       return response.status === 200
     } catch {
     * Update default config
@@ -721,7 +718,7 @@ const controller = new AbortController()
   O: Add content,}
 }
 //         ...this.config.headers,
-        ...(config.headers || {})
+        ...(config.headers || {});
   )
       }
     }
@@ -770,8 +767,8 @@ const controller = new AbortController()
   }
 
 }
-      const response = await this.get(endpoint, {/* TODO: Fix JSX expression */})
-  s: 1 })
+      const response = await this.get(endpoint, {/* TODO: Fix JSX expression */});
+  s: 1 });
       return response.status === 200
     } catch {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -794,7 +791,7 @@ const apiClient = new ApiClient({/* TODO: Fix JSX expression */}
   cacheOptions: {
     ttl: 5 * 60 * 1000, // 5 minutes
   }
-})
+});
 // Export both the class and default instance
 export { apiClient }
 export default ApiClient
@@ -804,7 +801,7 @@ export default ApiClient
 }
   ttl: 5 * 60 * 1000, // 5 minutes
   }
-})
+});
   )
 // Export both the class and default instance
 export { apiClient }

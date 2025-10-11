@@ -96,7 +96,7 @@ export const loggingMiddleware: Middleware = async (context, next) => {
     component: 'RequestMiddleware',
     method: context.request.method,
     url: context.request.url
-  })
+  });
   try {
     // TODO: Add content
   }
@@ -133,7 +133,7 @@ export const authMiddleware: Middleware = async (context, next) => {
       method: context.request.method,
       url: context.request.url,
       duration
-    })
+    });
     throw error
   }
 }
@@ -214,7 +214,7 @@ if (context.request.method !== 'GET') {
     // TODO: Add content
   }
 }
-      logger.debug('Cache hit', 'CachingMiddleware', { component: 'CachingMiddleware', url: key })
+      logger.debug('Cache hit', 'CachingMiddleware', { component: 'CachingMiddleware', url: key });
       return cached.data
     cache.set(key, {
     // TODO: Add content
@@ -234,14 +234,14 @@ export const cachingMiddleware = (ttl: number): Middleware => {
     const key = context.request.url
     const cached = cache.get(key)
     if (cached && Date.now() - cached.timestamp < ttl) {
-      logger.debug('Cache hit', 'CachingMiddleware', { component: 'CachingMiddleware', url: key })
+      logger.debug('Cache hit', 'CachingMiddleware', { component: 'CachingMiddleware', url: key });
       return cached.data
     }
     const result = await next()
     cache.set(key, {
       data: result,
       timestamp: Date.now()
-    })
+    });
     return result
   }
 }

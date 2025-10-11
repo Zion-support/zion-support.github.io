@@ -40,7 +40,7 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
         outline-offset: 2px,
   private setupFocusManagement(): void {/* TODO: Fix JSX expression */}
       }
-      
+
       .focus-trap {/* TODO: Fix JSX expression */}
       }
     `
@@ -54,7 +54,7 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
         this.handleTabNavigation(event)
   private setupKeyboardNavigation(): void {/* TODO: Fix JSX expression */}
       }
-    })
+    });
   }
 
   private setupScreenReaderSupport(): void {
@@ -78,9 +78,9 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     skipLink.addEventListener('focus', () => {
       skipLink.style.top = '6px'
   private setupScreenReaderSupport(): void {/* TODO: Fix JSX expression */}
-    })
+    });
     skipLink.addEventListener('blur', () => {/* TODO: Fix JSX expression */}
-    })
+    });
     document.body.insertBefore(skipLink, document.body.firstChild)
   }
 
@@ -181,7 +181,7 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
   private getHeadingStructureScore(): number {/* TODO: Fix JSX expression */}
       }
       previousLevel = level
-    })
+    });
     return Math.max(0, score)
   }
 

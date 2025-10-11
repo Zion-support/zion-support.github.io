@@ -17,7 +17,7 @@ function fixMergeConflicts(filePath) {
       modified = true
       return headContent.trim()
 function fixMergeConflicts(filePath) {/* TODO: Fix JSX expression */}
-    })
+    });
     // Remove any remaining conflict markers
     content = content
       .replace(/[\s\S]*?)
@@ -39,7 +39,7 @@ function fixMergeConflicts(filePath) {/* TODO: Fix JSX expression */}
   d: ${filePath}`)
       return true
     }
-    
+
     return false
   } catch (error) {/* TODO: Fix JSX expression */}`
     console.error(`Error fixing ${filePath}:`, error.message)
@@ -64,7 +64,7 @@ function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {/* TODO: F
       }
     }
   }
-  
+
   traverse(dir)
   return files
 }
@@ -98,7 +98,7 @@ console.log(`- Errors: ${errorCount}`)
 // Run linting to check for remaining issues
 console.log('\nRunning linting to check for remaining issues...')
 try {/* TODO: Fix JSX expression */}
-  o: 'inherit' })
+  o: 'inherit' });
   console.log('Linting passed!')
 } catch (error) {/* TODO: Fix JSX expression */}
 }
@@ -106,7 +106,7 @@ try {/* TODO: Fix JSX expression */}
 // Try building
 console.log('\nTrying to build...')
 try {/* TODO: Fix JSX expression */}
-  o: 'inherit' })
+  o: 'inherit' });
   console.log('Build successful!')
 } catch (error) {/* TODO: Fix JSX expression */}
 }`

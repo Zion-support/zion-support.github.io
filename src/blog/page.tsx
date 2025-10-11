@@ -144,8 +144,7 @@ export default function BlogPage() {
                 <div className="h-6 bg-gray-200 rounded mb-2">
                 <div className="h-4 bg-gray-200 rounded mb-2">
                 <div className="h-4 bg-gray-200 rounded w-3/4">
-            ))}
-    )
+            ))});
   }
   return (
     <div className="min-h-screen bg-gray-50">
@@ -202,7 +201,7 @@ export default function BlogPage() {
               to="/"
               className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover: bg-indigo-700 transition-colors">
               Subscribe to Newsletter
-  
+
           </div>
         </div>
       </div>

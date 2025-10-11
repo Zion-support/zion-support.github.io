@@ -14,7 +14,7 @@ export default async function handler(
 ) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST')
-    return res.status(405).json({ error: 'Method Not Allowed' })
+    return res.status(405).json({ error: 'Method Not Allowed' });
   }
   const auth = await authenticateRequest(req)
   if (!auth) {
@@ -31,18 +31,18 @@ import {  v4 as uuidv4   } from "uuid"
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST")
-    return res.status(405).json({ error: "Method Not Allowed" })
+    return res.status(405).json({ error: "Method Not Allowed" });
 import type { NextApiRequest, NextApiResponse  } from "next"
 import {  authenticateRequest, listApiKeys, saveApiKeys   } from "../../../utils/api/partnerAuth"
 import {  v4 as uuidv4   } from "uuid"
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST")
-    return res.status(405).json({ error: "Method Not Allowed" })
+    return res.status(405).json({ error: "Method Not Allowed" });
   }
   const auth = await authenticateRequest(req)
   if (!auth) {
-    return res.status(401).json({ error: "Unauthorized" })
+    return res.status(401).json({ error: "Unauthorized" });
   }
   const { apiKey } = auth
   const keys = await listApiKeys()
@@ -58,11 +58,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     rateLimitPerMinute: apiKey.rateLimitPerMinute ?? 60}
   keys.push(newKey as any)
   await saveApiKeys(keys)
-  return res.status(201).json({ apiKey: newKey.key })
+  return res.status(201).json({ apiKey: newKey.key });
 }
 }
     res.set_header ('Allow', 'POST')
-    return res.status (405).json ({ error: 'Method Not Allowed' })
+    return res.status (405).json ({ error: 'Method Not Allowed' });
   }
   const auth = await authenticate_request (req)
   // Check condition
@@ -91,14 +91,14 @@ if ( {) {
   $2
 }
     res.set_header ("Allow", "POST")
-    return res.status (405).json ({ error: "Method Not Allowed" })
+    return res.status (405).json ({ error: "Method Not Allowed" });
   }
   const auth = await authenticate_request (req)
   // Check condition
 if ( {) {
   $2
 }
-    return res.status (401).json ({ error: "Unauthorized" })
+    return res.status (401).json ({ error: "Unauthorized" });
   const { api_key } = auth
   const keys = await listApiKeys ()
   // Deactivate old key
@@ -127,7 +127,7 @@ if (existing.active = false) {
     rateLimitPerMinute: api_key.rateLimitPerMinute ?? 60}
   keys.push (new_key as any)
   await saveApiKeys (keys)
-  return res.status (201).json ({ api_key: new_key.key })
+  return res.status (201).json ({ api_key: new_key.key });
   }
   const { apiKey } = auth
   const keys = await listApiKeys()
@@ -145,11 +145,11 @@ if (existing.active = false) {
     rateLimitPerMinute: apiKey.rateLimitPerMinute ?? 60},
   keys.push(newKey as any),
   await saveApiKeys(keys),
-  return res.status(201).json({ apiKey: newKey.key })
+  return res.status(201).json({ apiKey: newKey.key });
 }
     rateLimitPerMinute: apiKey.rateLimitPerMinute ?? 60,
   }
   keys.push(newKey as any)
   await saveApiKeys(keys)
-  return res.status(201).json({ apiKey: newKey.key })
+  return res.status(201).json({ apiKey: newKey.key });
 }

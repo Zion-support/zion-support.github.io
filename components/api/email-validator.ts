@@ -21,7 +21,7 @@ export default async function handler(
   try {
     const { email } = req && req.body
     if (!email || typeof email !== 'string') {
-      return res && res.status(400).json({ error: 'Email is required' })
+      return res && res.status(400).json({ error: 'Email is required' });
     }
     // Basic email format validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
@@ -58,12 +58,12 @@ export default async function handler(
   res: NextApiResponse<EmailValidationResult | { error: string }>
 ) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' })
+    return res.status(405).json({ error: 'Method not allowed' });
   }
   try {
     const { email } = req.body
     if (!email || typeof email !== 'string') {
-      return res.status(400).json({ error: 'Email is required' })
+      return res.status(400).json({ error: 'Email is required' });
     }
     // Basic email format validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
@@ -111,7 +111,7 @@ export default async function handler(
     res && res.status(200).json(result)
   } catch (error) {
     console && console.error('Email validation error:', error)
-    res && res.status(500).json({ error: 'Internal server error' })
+    res && res.status(500).json({ error: 'Internal server error' });
   }      email
       isValid: score >= 70
       score: Math && Math.max(0, score)
@@ -142,7 +142,7 @@ const result: EmailValidationResult = {
     res.status (200).json (result)
   } catch (error) {
     console.error ('Email validation error:', error)
-    res.status (500).json ({ error: 'Internal server error' })
+    res.status (500).json ({ error: 'Internal server error' });
   }      email
       is_valid: score >= 70
       score: Math.max (0, score)
@@ -158,7 +158,7 @@ const result: EmailValidationResult = {
     res && res.status(200).json(result)
   } catch (error) {
     console && console.error('Email validation error:', error)
-    res && res.status(500).json({ error: 'Internal server error' })
+    res && res.status(500).json({ error: 'Internal server error' });
   }
 }
     }
@@ -166,8 +166,8 @@ const result: EmailValidationResult = {
     res.status (200).json (result)
   } catch (error) {
     console.error ('Email validation error:', error)
-    res.status (500).json ({ error: 'Internal server error' })
-    res.status(500).json({ error: 'Internal server error' })
+    res.status (500).json ({ error: 'Internal server error' });
+    res.status(500).json({ error: 'Internal server error' });
   }
 }
     // Generate suggestions
@@ -201,6 +201,6 @@ const result: EmailValidationResult = {
     res.status(200).json(result)
   } catch (error) {
     console.error('Email validation error:', error)
-    res.status(500).json({ error: 'Internal server error' })
+    res.status(500).json({ error: 'Internal server error' });
   }
 }

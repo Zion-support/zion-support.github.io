@@ -138,8 +138,8 @@ class ApiClient {/* TODO: Fix JSX expression */}
   async get<T = unknown>(ur,
   l: string,
     confi,
-  g: Omit<RequestConfig, 'url' | 'method' | 'body'> = {})
-  ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */,}})
+  g: Omit<RequestConfig, 'url' | 'method' | 'body'> = {});
+  ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */,}});
   }
   /**
    * POST request
@@ -148,8 +148,8 @@ class ApiClient {/* TODO: Fix JSX expression */}
   l: string,
     data?: unknown,
     confi,
-  g: Omit<RequestConfig, 'url' | 'method'> = {})
-  ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */,}})
+  g: Omit<RequestConfig, 'url' | 'method'> = {});
+  ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */,}});
   }
   /**
    * PUT request
@@ -158,8 +158,8 @@ class ApiClient {/* TODO: Fix JSX expression */}
   l: string,
     data?: unknown,
     confi,
-  g: Omit<RequestConfig, 'url' | 'method'> = {})
-  ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */,}})
+  g: Omit<RequestConfig, 'url' | 'method'> = {});
+  ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */,}});
   }
   /**
    * DELETE request
@@ -167,8 +167,8 @@ class ApiClient {/* TODO: Fix JSX expression */}
   async delete<T = unknown>(ur,
   l: string,
     confi,
-  g: Omit<RequestConfig, 'url' | 'method' | 'body'> = {})
-  ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */,}})
+  g: Omit<RequestConfig, 'url' | 'method' | 'body'> = {});
+  ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */,}});
   }
   /**
    * PATCH request
@@ -177,8 +177,8 @@ class ApiClient {/* TODO: Fix JSX expression */}
   l: string,
     data?: unknown,
     confi,
-  g: Omit<RequestConfig, 'url' | 'method'> = {})
-  ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */,}})
+  g: Omit<RequestConfig, 'url' | 'method'> = {});
+  ): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */,}});
   }
   g: RequestConfig): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */}
       headers = {},
@@ -200,7 +200,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
     while (attempt < retries) {/* TODO: Fix JSX expression */},
           signa,
   l: controller.signal,
-        })
+        });
         clearTimeout(timeoutId);
         this.abortControllers.delete(cacheKey);
             await response.text();
@@ -218,22 +218,22 @@ class ApiClient {/* TODO: Fix JSX expression */}
         }
         return {/* TODO: Fix JSX expression */,}}}
       } catch (error) {/* TODO: Fix JSX expression */,}`;
-            logCritical(`API request failed after ${retries)}attempts`, error as Error, {/* TODO: Fix JSX expression */,})
+            logCritical(`API request failed after ${retries)}attempts`, error as Error, {/* TODO: Fix JSX expression */,});
         if (contentType?.includes('application/json')) {/* TODO: Fix JSX expression */}
         } else {/* TODO: Fix JSX expression */}
         }
         // Cache successful GET requests
         if (method === 'GET' && !skipCache) {/* TODO: Fix JSX expression */}
-          cacheManager.set(cacheKey, data, cacheConfig || this.config.cacheOptions || {})
+          cacheManager.set(cacheKey, data, cacheConfig || this.config.cacheOptions || {});
         }
         return {/* TODO: Fix JSX expression */}
         }
       } catch (error) {/* TODO: Fix JSX expression */}`
-            logCritical(`API request failed after ${retries} attempts`, error as Error, {/* TODO: Fix JSX expression */})
-            })
+            logCritical(`API request failed after ${retries} attempts`, error as Error, {/* TODO: Fix JSX expression */});
+            });
           } else {/* TODO: Fix JSX expression */}
-            })
-          } else {/* TODO: Fix JSX expression */,}}})
+            });
+          } else {/* TODO: Fix JSX expression */,}}});
           }
         }
       }
@@ -261,7 +261,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
    */
   setConfig(confi)
   g: Partial<ApiClientConfig>): void {/* TODO: Fix JSX expression */}
-        ...(config.headers || {})
+        ...(config.headers || {});
       }
   }
   /**
@@ -321,8 +321,8 @@ export const apiClient = new APIClient()
 export default APIClient
 // Create default instance
 const apiClient = new ApiClient()
-  })
-})
+  });
+});
 // Export both the class and default instance
 export { apiClient }
 export default ApiClient
@@ -333,8 +333,8 @@ export const apiClient = new APIClient()
 export default APIClient
 // Create default instance
 const apiClient = new ApiClient({/* TODO: Fix JSX expression */}
-  })
-})
+  });
+});
 // Export both the class and default instance
 export { apiClient }
 export default ApiClient

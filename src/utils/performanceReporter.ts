@@ -81,8 +81,7 @@ class PerformanceReporter {
   O: Add content,}
 }
 //       this.report()
-    }
-  )
+    });
   }
   /**
    * Monitor Core Web Vitals using PerformanceObserver
@@ -114,10 +113,9 @@ class PerformanceReporter {
                        (lastEntry as PerformanceEntry & { renderTime?: number; loadTime?: number }).loadTime || 0
           this.addMetric('LCP', value, this.getRating('lcp', value))
         }
-      }
-  )
+      });
       lcpObserver.observe({/* TODO: Fix JSX expression */}
-  d: true })
+  d: true });
   )
       // First Input Delay (FID)
 
@@ -136,12 +134,10 @@ class PerformanceReporter {
             const value = (entry as PerformanceEventTiming).processingStart - (entry as PerformanceEventTiming).startTime
             this.addMetric('FID', value, this.getRating('fid', value))
           }
-        }
-  )
-      }
-  )
+        });
+      });
       fidObserver.observe({/* TODO: Fix JSX expression */}
-  d: true })
+  d: true });
   )
       // Cumulative Layout Shift (CLS)
       let clsValue = 0
@@ -156,13 +152,11 @@ const clsObserver = new PerformanceObserver((entryList) => {/* TODO: Fix JSX exp
 }
             clsValue += (entry as any).value
           }
-        }
-  )
+        });
 //         this.addMetric('CLS', clsValue, this.getRating('cls', clsValue))
-      }
-  )
+      });
       clsObserver.observe({/* TODO: Fix JSX expression */}
-  d: true })
+  d: true });
   )
       // First Contentful Paint (FCP)
 
@@ -180,14 +174,14 @@ const clsObserver = new PerformanceObserver((entryList) => {/* TODO: Fix JSX exp
 }
 //             this.addMetric('FCP', entry.startTime, this.getRating('fcp', entry.startTime))
           }
-        })
-      })
-      fcpObserver.observe({/* TODO: Fix JSX expression */})
-  d: true })
+        });
+      });
+      fcpObserver.observe({/* TODO: Fix JSX expression */});
+  d: true });
     } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      logger.warn('Failed to setup Web Vitals monitoring', { error })
+      logger.warn('Failed to setup Web Vitals monitoring', { error });
     }
   }
   /**
@@ -225,8 +219,7 @@ const loadComplete = navigation.loadEventEnd - navigation.loadEventStart
 //           this.addMetric('Load', loadComplete, this.getRating('load', loadComplete))
         }
       }, 0)
-    }
-  )
+    });
   }
   /**
    * Monitor resource timing
@@ -266,11 +259,10 @@ const slowResources = resources
   n: resource.duration,
             typ,
   e: resource.initiatorType,)
-          })
-        })
+          });
+        });
       }, 0)
-    }
-  )
+    });
   }
   /**
    * Add a performance metric
@@ -296,7 +288,7 @@ const slowResources = resources
     if (rating === 'poor') {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      logger.warn(`Poor ${name} performance`, { value, rating })
+      logger.warn(`Poor ${name} performance`, { value, rating });
     }
     // Send to analytics
 //     this.sendToAnalytics(metric)
@@ -376,7 +368,7 @@ const slowResources = resources
   l: metric.rating,
         non_interactio,
   n: true,
-      })
+      });
     }
   }
   /**
@@ -452,7 +444,7 @@ const resources = performance.getEntriesByType('resource') as PerformanceResourc
 
       }
 
-    })
+    });
     // Send to remote endpoint if configured
     // this.sendToEndpoint(report)
   }
@@ -486,7 +478,7 @@ if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */}
   d: process.env['NODE_ENV'] === 'production',
     reportInterva,
   l: 60000, // Report every minute;)
-  })
+  });
 }
 export default performanceReporter;`
 

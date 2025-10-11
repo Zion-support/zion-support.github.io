@@ -161,16 +161,16 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
         headers: {,}private async sendToRemote(report: ErrorReport): Promise<void> {,}if (!this.config.remoteEndpoint) return;
     try {}}await fetch(this.config.remoteEndpoint, {)}method: 'POST',
         headers: {,}'Content-Type': 'application/json'}
-        })
-        body: JSON.stringify(report),})
+        });
+        body: JSON.stringify(report),});
     } catch (error) {// Silently fail to avoid infinite loop;}if (this.config.enableConsoleLogging) {}catch (error) {}// Silently fail to avoid infinite loop;
       if (this.config.enableConsoleLogging) {}logger.warn('Failed to send error to remote endpoint:', error);}
   private async sendToRemote(repor);
         method: 'POST',
         headers: {}
           'Content-Type': 'application/json'}
-        })
-        body: JSON.stringify(report)})
+        });
+        body: JSON.stringify(report)});
     } catch (error) {
       if (this.config.enableConsoleLogging) {} catch (error) {}
       // Silently fail to avoid infinite loop
@@ -184,7 +184,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */}
         },
         bod,
   y: JSON.stringify(report)
-      })
+      });
     } catch (error) {/* TODO: Fix JSX expression */,}}
     }
   }
@@ -289,7 +289,7 @@ export const captureComponentError = (;
   }
 ): void => {}
   const report = ErrorReporter.getInstance()
-  })
+  });
 }
 export default ErrorReporter
 export const reportError = (erro,
@@ -306,7 +306,7 @@ export const reportError = (erro,
 export const captureComponentError = ()
   e: string;),
 ): void => {/* TODO: Fix JSX expression */}
-  })
+  });
 }
 export default ErrorReporter
 `
@@ -323,10 +323,10 @@ export const reportError = (erro,
 export const captureComponentError = (erro,
   r: Error,
   e: string;),
-): void => {/* TODO: Fix JSX expression */,}})
+): void => {/* TODO: Fix JSX expression */,}});
   e: string;)
 ): void => {/* TODO: Fix JSX expression */}
-  })
+  });
 }
 export default ErrorReporter
 `

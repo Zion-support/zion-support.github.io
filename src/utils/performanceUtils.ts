@@ -341,8 +341,7 @@ export function setupLazyImages()
           observer.unobserve(img)
         }
       }
-    }
-  )
+    });
   }, options)
   images.forEach((img) => observer.observe(img))
   return () => observer.disconnect()
@@ -365,7 +364,7 @@ export function preloadResources(resources: Array
     link.href = url
     link.as = as
     document.head.appendChild(link)
-  })
+  });
 }
 /**
  * Check if code splitting is supported
@@ -425,7 +424,7 @@ export function getMemoryUsage(): {
   if ('memory' in performance) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    const memory = (performance as Performance & {/* TODO: Fix JSX expression */})
+    const memory = (performance as Performance & {/* TODO: Fix JSX expression */});
   t: number } }).memory
     return {/* TODO: Fix JSX expression */}
   O: Add content,}

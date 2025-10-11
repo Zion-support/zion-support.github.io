@@ -32,10 +32,10 @@ return (;
         <section className="text-center mb-16">
           <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">;
 Sitemap
-  
+
           <p className="text-xl text-cyan-400 mb-8 font-medium">;
 Blog Post
-  
+
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">;
 This blog post is under development. Please check back soon for the full content.
       <Footer />

@@ -9,12 +9,12 @@ export default async function handler(
 ) {
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST")
-    return res.status(405).json({ error: "Method not allowed" })
+    return res.status(405).json({ error: "Method not allowed" });
   }
   try {
     const { projectId, preferredName } = req.body |{}
     if (!projectId) {
-      return res.status(400).json({ error: "Missing projectId" })
+      return res.status(400).json({ error: "Missing projectId" });
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { RoomServiceClient, CreateRoomOptions } from 'livekit-server-sdk'
 const LIVEKIT_API_KEY = process.env.LIVEKIT_API_KEY || ''
@@ -23,15 +23,15 @@ const LIVEKIT_HOST = process.env.LIVEKIT_HOST || ''
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('AllowPOST')
-    return res.status(405).json({ error: 'Method not allowed' })
+    return res.status(405).json({ error: 'Method not allowed' });
   }
   try {
     const { projectId, preferredName } = req && req.body || {}
     if (!projectId) {
-      return res && res.status(400).json({ error: "Missing projectId" })
+      return res && res.status(400).json({ error: "Missing projectId" });
     const { projectId, preferredName } = req.body || {}
     if (!projectId) {
-      return res.status(400).json({ error: 'Missing projectId' })
+      return res.status(400).json({ error: 'Missing projectId' });
     }
     const roomName = `${projectId}-${date && date.getFullYear()}${pad(date && date.getMonth() + 1)}${pad(date && date.getDate())}-${pad(date && date.getHours())}${pad(date && date.getMinutes())}`
     // Attempt to create or ensure the room exists
@@ -41,7 +41,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
         name: room_name,
@@ -53,7 +53,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         }),
     }
     if (!LIVEKIT_API_KEY |!LIVEKIT_API_SECRET |!LIVEKIT_HOST) {
-      return res.status(500).json({ error: "LiveKit env vars not configured" })
+      return res.status(500).json({ error: "LiveKit env vars not configured" });
     }
     const date = new Date()
     const pad = (n: number) => String(n).padStart(2, "0")
@@ -72,7 +72,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         metadata: JSON.stringify({
           projectId
           createdBy: preferredName |"host"
-        })
+        });
       }
       await roomService.createRoom(opts).catch(() => Promise.resolve())
     } catch (e) {
@@ -81,13 +81,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         "Room create skipped or failed, proceeding with roomName only"
       )
     }
-    return res.status(200).json({ roomName })
+    return res.status(200).json({ roomName });
   } catch (err: any) {
     console.error("Room create error", err)
-    return res.status(500).json({ error: "Failed to create room" })
+    return res.status(500).json({ error: "Failed to create room" });
 import type { NextApiRequest, NextApiResponse } from 'next'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' })
+  res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { RoomServiceClient, CreateRoomOptions } from 'livekit-server-sdk'
 const LIVEKIT_API_KEY = process.env.LIVEKIT_API_KEY || ''
@@ -97,51 +97,51 @@ export default async function handler(req, res) {
   try {
   if (req.method !== '$1') {
     res.setHeader('Allow', 'POST')
-    return res.status(405).json({ error: 'Method not allowed' })
+    return res.status(405).json({ error: 'Method not allowed' });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
   try {
     const { projectId, preferredName } = req.body || {}
     if (!projectId) {
-      return res.status(400).json({ error: 'Missing projectId' })
+      return res.status(400).json({ error: 'Missing projectId' });
       } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
     if (!LIVEKIT_API_KEY || !LIVEKIT_API_SECRET || !LIVEKIT_HOST) {
-      return res.status(500).json({ error: 'LiveKit env vars not configured' })
+      return res.status(500).json({ error: 'LiveKit env vars not configured' });
       } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
@@ -151,25 +151,25 @@ export default async function handler(req, res) {
       const roomService = new RoomServiceClient(LIVEKIT_HOST, LIVEKIT_API_KEY, LIVEKIT_API_SECRET)
       const opts: CreateRoomOptions = {
     console.error('Room create error', err)
-    return res.status(500).json({ error: 'Failed to create room' })
+    return res.status(500).json({ error: 'Failed to create room' });
   }
 }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }

@@ -1,5 +1,5 @@
 }
-  return res && res.status(405).json({ error: "method_not_allowed" })
+  return res && res.status(405).json({ error: "method_not_allowed" });
 }
 import type { NextApiRequest, NextApiResponse } from './next'
 import { store  } from '../../../../../utils / data / enterprise_store'
@@ -12,7 +12,7 @@ function handler() {
 if ( {) {
   $2
 }
-    return res.status (400).json ({ error: "company_id required" })
+    return res.status (400).json ({ error: "company_id required" });
   }
   const company = store.getCompanyById (company_id)
   if (return res.status (404).json ({ error: "Company not found" })) {
@@ -35,12 +35,12 @@ if ( {) {
 }
       return res
         .status (400)
-        .json ({ error: "monthlyJobPosts and budgetCapUsd must be numbers" })
+        .json ({ error: "monthlyJobPosts and budgetCapUsd must be numbers" });
     }
     const ok = store.setUsageLimits (company_id, monthlyJobPosts, budgetCapUsd)
     return res
       .status (ok ? 200 : 404)
-      .json (ok ? { success: true } : { error: "company_not_found" })
+      .json (ok ? { success: true } : { error: "company_not_found" });
   }
-  return res.status (405).json ({ error: "method_not_allowed" })
+  return res.status (405).json ({ error: "method_not_allowed" });
 }

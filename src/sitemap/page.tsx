@@ -80,10 +80,10 @@ const SitemapPage: React.FC = () => {
           <section className="text-center mb-16">
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text">
               Site Map
-  
+
             <p className="text-xl text-cyan-400 mb-8">
               Navigate through all our pages and services,
-  
+
             <p className="text-lg text-gray-300 max-w-4xl mx-auto">
               Find everything you need on our website. From AI services to IT solutions, 
               case studies to technical resources - everything is organized for easy navigation.
@@ -190,12 +190,12 @@ const SitemapPage: React.FC = () => {
                   to="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold">
                   Contact Us
-  
+
                 <$2 />
                   to="/demo"
                   className="cyber-button-secondary px-8 py-4 text-lg font-semibold">
                   Request Demo
-  
+
               </div>
             </div>
           </section>

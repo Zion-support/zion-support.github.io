@@ -71,13 +71,13 @@ export default function NotFound() {
             className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300">
             <Home className="w-4 h-4 mr-2" />
             Go Home
-  
+
           <$2 />
             to="/contact"
             className="inline-flex items-center px-6 py-3 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors duration-300">
             <Phone className="w-4 h-4 mr-2" />
             Contact Support
-  
+
         </div>
       </div>
     </div>

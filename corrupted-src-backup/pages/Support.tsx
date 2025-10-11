@@ -92,7 +92,7 @@ return(<React.Fragment>
         <link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/suppo, r, t"  />
   </link>
       <div, className="m, i, n-h-screen, b, g-gr, a, y-50">)
-        {/* Hero, Sectio, n */})
+        {/* Hero, Sectio, n */});
         <section, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, p, y-20">)
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">),
             <div, className="te, x, t-cent, e, r">
@@ -227,7 +227,7 @@ const, quickAction, s = [
     { tit, l, e: 'View, Status, Page', descripti, o, n: 'Check, system, status and, uptim, e', li, n, k: '/stat, u, s', ic, o, n: '📊' }
   ];
 return(<div, className="m, i, n-h-screen, b, g-gr, a, y-50">)
-      {/* Hero, Sectio, n */})
+      {/* Hero, Sectio, n */});
       <section, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-600, vi, a-purp, l, e-600, t, o-te, a, l-600, tex, t-white, p, y-20">)
         <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">),
           <div, className="te, x, t-cent, e, r">

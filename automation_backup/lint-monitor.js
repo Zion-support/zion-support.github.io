@@ -2,7 +2,7 @@
   v: node; import fs from';fs''; import path from'path''; import {execSync}spawn } from'child_process''; import chokidar from'chokidar''; import { fileURLToPath } from'url''; import { dirname } from'path''; const __dirname = dirname(__filename); clas,
   s: LintMonitor {/* TODO: Fix JSX expression */}
   e: = path.join(__dirname 'logs')''}lint-monitor.log')' fs.appendFileSync(this.logFile}logMessage); this.ensureLogDirectory()} ensureLogDirectory() {const logDir = path.dirname(this.logFile)} i,
-  f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
+  f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */});
   e: 'true'})} } log(message) {const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}\n`; fs.appendFileSync(this.logFile)logMessage)} asyn,
   c: checkLintStatus() {/* TODO: Fix JSX expression */}
   o: ')pipe}'})' this.errorCoun,
@@ -44,7 +44,7 @@
   e: watcher started')}' asyn,
   c: handleFileChange(filePath) {/* TODO: Fix JSX expression */}`
   file: ${filePat}h}`); tr,`
-  y: { const result = execSync(`npx eslint ${filePath}'`,{/* TODO: Fix JSX expression */})
+  y: { const result = execSync(`npx eslint ${filePath}'`,{/* TODO: Fix JSX expression */});
   g: 'utf)8}' stdi,`
   o: pipe'})' this.log(`✅ Fil)`
   e: ${filePath} passed lint check`)} catch (error) { this.log(`❌ Lint issues found in ${filePath}`); tr,`
@@ -135,7 +135,7 @@
   e: watcher started')}' asyn,
   c: handleFileChange(filePath) {/* TODO: Fix JSX expression */}`
   file: ${filePat}h}`); tr,`
-  y: { const result = execSync(`npx eslint ${filePath}'`,{/* TODO: Fix JSX expression */})
+  y: { const result = execSync(`npx eslint ${filePath}'`,{/* TODO: Fix JSX expression */});
   g: 'utf)8}' stdi,`
   o: pipe'})' this.log(`✅ Fil)`
   e: ${filePath} passed lint check`)} catch (error) { this.log(`❌ Lint issues found in ${filePath}`); tr,`
@@ -226,7 +226,7 @@
   e: watcher started')}' asyn,
   c: handleFileChange(filePath) {/* TODO: Fix JSX expression */}`
   file: ${filePat}h}`); tr,`
-  y: { const result = execSync(`npx eslint ${filePath}'`,{/* TODO: Fix JSX expression */})
+  y: { const result = execSync(`npx eslint ${filePath}'`,{/* TODO: Fix JSX expression */});
   g: 'utf)8}' stdi,`
   o: pipe'})' this.log(`✅ Fil)`
   e: ${filePath} passed lint check`)} catch (error) { this.log(`❌ Lint issues found in ${filePath}`); tr,`
@@ -317,7 +317,7 @@
   e: watcher started')}' asyn,
   c: handleFileChange(filePath) {/* TODO: Fix JSX expression */}`
   file: ${filePat}h}`); tr,`
-  y: { const result = execSync(`npx eslint ${filePath}'`,{/* TODO: Fix JSX expression */})
+  y: { const result = execSync(`npx eslint ${filePath}'`,{/* TODO: Fix JSX expression */});
   g: 'utf)8}' stdi,`
   o: pipe'})' this.log(`✅ Fil)`
   e: ${filePath} passed lint check`)} catch (error) { this.log(`❌ Lint issues found in ${filePath}`); tr,`
@@ -408,7 +408,7 @@
   e: watcher started')}' asyn,
   c: handleFileChange(filePath) {/* TODO: Fix JSX expression */}`
   file: ${filePat}h}`); tr,`
-  y: { const result = execSync(`npx eslint ${filePath}'`,{/* TODO: Fix JSX expression */})
+  y: { const result = execSync(`npx eslint ${filePath}'`,{/* TODO: Fix JSX expression */});
   g: 'utf)8}' stdi,`
   o: pipe'})' this.log(`✅ Fil)`
   e: ${filePath} passed lint check`)} catch (error) { this.log(`❌ Lint issues found in ${filePath}`); tr,`

@@ -96,8 +96,8 @@ class EnhancedErrorHandler {
         lineno: event.lineno,
         colno: event.colno,
         error: event.error
-      })
-    })
+      });
+    });
   }
   /**
    * Setup unhandled promise rejection handler
@@ -109,8 +109,8 @@ class EnhancedErrorHandler {
         message: event.reason?.message || String(event.reason),
         stack: event.reason?.stack,
         reason: event.reason
-      })
-    })
+      });
+    });
   }
   /**
    * Setup resource error handler
@@ -128,7 +128,7 @@ class EnhancedErrorHandler {
             message: `Failed to load resource: ${target?.src || target?.href}`,
             element: event.target?.constructor.name,
             src: target?.src || target?.href
-          })
+          });
         }
       },
       true
@@ -150,7 +150,7 @@ class EnhancedErrorHandler {
             url: args[0] as string,
             status: response.status,
             statusText: response.statusText
-          })
+          });
         }
         return response
       } catch (error) {
@@ -159,7 +159,7 @@ class EnhancedErrorHandler {
           message: `Network request failed: ${error}`,
           url: args[0] as string,
           error: error instanceof Error ? error : new Error(String(error))
-        })
+        });
         throw error
       }
     }
@@ -181,11 +181,11 @@ class EnhancedErrorHandler {
                 message: `Long task detected: ${entry.duration.toFixed(2)}ms`,
                 duration: entry.duration,
                 category:               ,
-$4})
+$4});
             }
-          })
-        })
-        observer.observe({ type: 'longtask', buffered: true })
+          });
+        });
+        observer.observe({ type: 'longtask', buffered: true });
       } catch (error) {}
     }
   }
@@ -500,7 +500,7 @@ $4})
           Authorization: `Bearer ${this.config.apiKey}`
         },
         body: JSON.stringify(errorReport)
-      })
+      });
     } catch (error) {}
   }
   /**
@@ -573,7 +573,7 @@ $4})
         (errorsByCategory[error.category] || 0) + 1
       errorsBySeverity[error.severity] =
         (errorsBySeverity[error.severity] || 0) + 1
-  })
+  });
     const recentErrors = this.errors
       .filter(error => !error.resolved)
       .sort(
@@ -613,7 +613,7 @@ $4})
       type: 'custom',
       message,
       ...context
-    })
+    });
     this.processError(errorReport)
     return errorReport.id
   }
@@ -785,8 +785,8 @@ class EnhancedErrorHandler {
         colno: event.colno,
         error: event.error,
 
-      })
-    })
+      });
+    });
   }
   /**
    * Setup unhandled promise rejection handler
@@ -811,8 +811,8 @@ class EnhancedErrorHandler {
   k: event.reason?.stack,
         reaso,
   n: event.reason,
-      })
-    })
+      });
+    });
   }
   /**
    * Setup resource error handler
@@ -845,7 +845,7 @@ class EnhancedErrorHandler {
   t: event.target?.constructor.name,
             sr,
   c: target?.src || target?.href,)
-          })
+          });
         }
       },
 //       true)
@@ -883,7 +883,7 @@ const originalFetch = window.fetch
             status: response.status,
             statusText: response.statusText,
 
-          })
+          });
         }
         return response
       } catch (error) {/* TODO: Fix JSX expression */}
@@ -898,8 +898,7 @@ const originalFetch = window.fetch
           url: args[0] as string,
           error: error instanceof Error ? error : new Error(String(error))
 
-        }
-  )
+        });
         throw error
       }
     }
@@ -923,10 +922,10 @@ const originalFetch = window.fetch
 }
         const observer = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content,}
-})
+});
           list.getEntries().forEach(entry => {/* TODO: Fix JSX expression */}
   O: Add content,}
-})
+});
             if (entry.duration > 100) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -940,13 +939,12 @@ const originalFetch = window.fetch
                 duration: entry.duration,
                 category: 'performance'
 
-              }
-  )
+              });
             }
-          })
-        })
-        observer.observe({/* TODO: Fix JSX expression */})
-  d: true })
+          });
+        });
+        observer.observe({/* TODO: Fix JSX expression */});
+  d: true });
       } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -1135,7 +1133,7 @@ const originalFetch = window.fetch
 
         body: JSON.stringify(errorReport)
 
-      })
+      });
     } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -1263,13 +1261,13 @@ const originalFetch = window.fetch
   errorsBySeverity: Record<string, number> = {}
     this.errors.forEach(error => {/* TODO: Fix JSX expression */}
   O: Add content,}
-})
+});
       errorsByType[error.type] = (errorsByType[error.type] || 0) + 1
       errorsByCategory[error.category] =
         (errorsByCategory[error.category] || 0) + 1
       errorsBySeverity[error.severity] =
         (errorsBySeverity[error.severity] || 0) + 1
-    })
+    });
     const recentErrors = this.errors
       .filter(error => !error.resolved)
 //       .sort()
@@ -1331,7 +1329,7 @@ const originalFetch = window.fetch
   e: 'custom',
 //       message,
 //       ...context;)
-    })
+    });
     this.processError(errorReport)
     return errorReport.id
   }

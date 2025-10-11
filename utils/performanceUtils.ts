@@ -22,6 +22,6 @@ export const optimizeImages = () => {
         img.loading = 'lazy'
 export const optimizeImages = () => {/* TODO: Fix JSX expression */}
       }
-    })
+    });
   }
 }

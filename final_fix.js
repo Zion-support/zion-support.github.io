@@ -25,8 +25,8 @@ blogPages.forEach(pagePath => {)
     fs.writeFileSync(pagePath, content)
     //         }
 blogPages.forEach(pagePath => {/* TODO: Fix JSX expression */}
-    //         })
-})
+    //         });
+});
 // 3. Fix OpenGraph authors - use string array instead of object array
 // const openGraphPages = [
   'app/blog/ai-2026-consensus-intelligence-breakthrough/page.tsx',
@@ -45,7 +45,7 @@ openGraphPages.forEach(pagePath => {/* TODO: Fix JSX expression */}
 ,
     fs.writeFileSync(pagePath, content)
     //         }
-})
+});
 // 4. Fix Calculator import - use a different icon
 // // const calculatorPagePath = '/workspace/app/blog/ai-enterprise-transformation-ultimate-guide-2025/page.tsx'
 if (fs.existsSync(calculatorPagePath)) {

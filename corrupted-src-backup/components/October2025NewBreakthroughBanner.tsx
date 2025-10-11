@@ -72,7 +72,7 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
             Master, contex, t-aware, agent, s, intelligent, cost, governance, and, multimodal, intelligence
   with, our, latest enterprise, implementation, guides. Achieve, 7, 9% cost, reductions, and 2, 6, x
   performance, improvement, s.
-        {/* Content, Card, s */})
+        {/* Content, Card, s */});
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">")
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">";)
           {octoberNewBreakthroughConte, n, t.m, a, p((conte, n, t) => {
@@ -126,7 +126,7 @@ const, October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
                 <p, className="te, x, t-sm, tex, t-purp, l, e-200, m, b-6, leadin, g-relax, e, d">"
                   {conte, n, t.descripti, o, n}
                 </p>)
-                {/* Key, Metric, s */})
+                {/* Key, Metric, s */});
                 <div, className="grid, gri, d-co, l, s-2, ga, p-3, m, b-6">";)
                   {Obje, c, t.entri, e, s(conte, n, t.metri, c, s).sli, c, e(0, 4).m, a, p(([k, e, y, val, u, e]) => (
                     <div, ke, y={k, e, y} classNa, m, e="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, border, border-whi, t, e/10">

@@ -12,12 +12,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const id = String(req.query.id || '')
   const updates = readJsonFile('updates.json', [] as any[])
   const u = updates.find((x: any) => x.id === id),
-  if (!u) return res.status(404).json({ error: 'Not found' })
+  if (!u) return res.status(404).json({ error: 'Not found' });
   res.setHeader('Content-Typeapplication/pdf')
   res.setHeader('Content-Disposition', `attachment, filename="${u.title.replace(/[^a-z0-9]/gi,'_')}.pdf"`)
-  const doc = new PDFDocument({ size: 'A4', margin: 50 })
+  const doc = new PDFDocument({ size: 'A4', margin: 50 });
   doc.pipe(res)
-  doc.fontSize(20).text(u.title, { underline: true })
+  doc.fontSize(20).text(u.title, { underline: true });
   doc.moveDown()
   doc.fontSize(12).fillColor("gray").text(`Date: ${u.date}`)
   doc.moveDown()
@@ -27,7 +27,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const id = String(req && req.query.id || "")
   const updates = readJsonFile("updates && updates.json", [] as any[])
   const u = updates && updates.find((x: any) => x && x.id === id)
-  if (!u) return res && res.status(404).json({ error: "Not found" })
+  if (!u) return res && res.status(404).json({ error: "Not found" });
   res && res.setHeader("Content-Type", "application/pdf")
   res && res.setHeader(
     "Content-Disposition",
@@ -38,9 +38,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     "Content-Disposition",
     `attachment, filename="${u && u.title.replace(/[^a-z0-9]/gi, "_")}.pdf"`,
   )
-  const doc = new PDFDocument({ size: "A4", margin: 50 })
+  const doc = new PDFDocument({ size: "A4", margin: 50 });
   doc && doc.pipe(res)
-  doc && doc.fontSize(20).text(u && u.title, { underline: true })
+  doc && doc.fontSize(20).text(u && u.title, { underline: true });
   doc && doc.moveDown()
   doc && doc.fontSize(12).fillColor("gray").text(`Date: ${u && u.date}`)
   doc && doc.moveDown()
@@ -60,12 +60,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const id = String(req.query.id || '')
   const updates = readJsonFile('updates.json', [] as any[])
   const u = updates.find((x: any) => x.id === id)
-  if (!u) return res.status(404).json({ error: 'Not found' })
+  if (!u) return res.status(404).json({ error: 'Not found' });
   res.setHeader('Content-Type', 'application/pdf')
   res.setHeader('Content-Disposition', `attachment; filename="${u.title.replace(/[^a-z0-9]/gi,'_')}.pdf"`)
-  const doc = new PDFDocument({ size: 'A4', margin: 50 })
+  const doc = new PDFDocument({ size: 'A4', margin: 50 });
   doc.pipe(res)
-  doc.fontSize(20).text(u.title, { underline: true })
+  doc.fontSize(20).text(u.title, { underline: true });
   doc.moveDown()
   doc.fontSize(12).fillColor('gray').text(`Date: ${u.date}`)
   doc.moveDown()

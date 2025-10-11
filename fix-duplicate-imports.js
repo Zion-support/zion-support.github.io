@@ -17,8 +17,7 @@ function fixDuplicateImports(filePath) {/* TODO: Fix JSX expression */}
       /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"]/g,
       (match, imports) => {/* TODO: Fix JSX expression */}
         return `import { ${uniqueImports.join(', ')} } from 'lucide-react'`
-      }
-    )
+      });
     // Fix any remaining syntax issues with extra commas
     content = content.replace(/,\s*,/g, ',')
     content = content.replace(/,\s*}/g, '}')
@@ -60,8 +59,8 @@ function main() {/* TODO: Fix JSX expression */}
         fixedCount++
   files.forEach(file => {/* TODO: Fix JSX expression */}
       }
-    })
-  })
+    });
+  });
   `
   console.log(`Fixed ${fixedCount} files`)
 }

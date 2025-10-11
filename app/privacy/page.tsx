@@ -74,9 +74,9 @@ address: '364 E Main St STE 1008, Middletown, DE 19709'} return (
         <title>Privacy Page - Zion Tech Group</title>
         <meta name="description" content="Advanced AI and IT solutions for modern businesses."
       </Helmet>
-      
+
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="
     g: px-8">
@@ -91,11 +91,11 @@ Your privacy is important to us. This policy explains how we collect, use, and p
             <Shield className="w-6 h-6 mr-2" />
             <span className="font-semibold">Last updated: {new Date().toLocaleDateString()}</span>
           </div>
-      
+
       <Footer />
     </>
         </div>
-      
+
       <Footer />
     </>
       </section>
@@ -113,7 +113,7 @@ Information We Collect>
 We collect information to provide better services to our users
             </p>
           </div>
-      
+
       <Footer />
     </>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -122,25 +122,22 @@ We collect information to provide better services to our users
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
                   <type.icon className="w-8 h-8 text-white">
                 </div>
-<<<<<<< HEAD
-=======
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
+
       <Footer />
     </>
                 <h3 className="text-xl font-bold text-white mb-4">{type.category}</h3>
                 <p className="text-gray-300">{type.description}</p>
               </div>
-      
+
       <Footer />
     </>
             ))}
           </div>
-      
+
       <Footer />
     </>
         </div>
-      
+
       <Footer />
     </>
       </section>
@@ -157,7 +154,7 @@ How We Use Your Information>
 We use your information for specific, legitimate purposes
             </p>
           </div>
-      
+
       <Footer />
     </>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -168,31 +165,31 @@ We use your information for specific, legitimate purposes
                     <purpose.icon className="w-6 h-6 text-white">
   </purpose>
                   </div>
-      
+
       <Footer />
     </>
                   <div>
                     <h3 className="text-xl font-bold text-white mb-2"
                     <p className="text-gray-300"
                   </div>
-      
+
       <Footer />
     </>
                 </div>
-      
+
       <Footer />
     </>
               </div>
-      
+
       <Footer />
     </>
             ))}
           </div>
-      
+
       <Footer />
     </>
         </div>
-      
+
       <Footer />
     </>
       </section>
@@ -208,7 +205,7 @@ Your Privacy Rights>
 You have control over your personal data
             </p>
           </div>
-      
+
       <Footer />
     </>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -217,25 +214,20 @@ You have control over your personal data
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 mx-auto">
                   <right.icon className="w-8 h-8 text-white">
                 </div>
-<<<<<<< HEAD
-=======
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
-      <Footer />
     </>
                 <h3 className="text-xl font-bold text-white mb-4">{right.title}</h3>
                 <p className="text-gray-300">{right.description}</p>
               </div>
-      
+
       <Footer />
     </>
             ))}
           </div>
-      
+
       <Footer />
     </>
         </div>
-      
+
       <Footer />
     </>
       </section>
@@ -252,45 +244,42 @@ Questions About Privacy?>
             <p className="text-xl text-gray-300 mb-8"
 Contact our privacy team for any questions or concerns about your data
             </p>
-            
+
             <div className="grid grid-cols-1 m, d: grid-cols-3 gap-8 mb-8"
               <div className="flex items-center justify-center"
                 <Mail className="w-6 h-6 text-cyan-400 mr-3">
                 <span className="text-white">
               </div>
-<<<<<<< HEAD
-=======
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
+
       <Footer />
     </>
               <div className="flex items-center justify-center">
                 <Phone className="w-6 h-6 text-cyan-400 mr-3" />
                 <span className="text-white">{contactInfo.phone}</span>
               </div>
-      
+
       <Footer />
     </>
               <div className="flex items-center justify-center">
                 <MapPin className="w-6 h-6 text-cyan-400 mr-3" />
                 <span className="text-white text-sm">{contactInfo.address}</span>
               </div>
-      
+
       <Footer />
     </>
             </div>
-      
+
       <Footer />
     </>
             <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">;
 Contact Privacy Team
             </button>
           </div>
-      
+
       <Footer />
     </>
         </div>
-      
+
       <Footer />
     </>
       </section>
@@ -304,7 +293,7 @@ Contact Privacy Team
               <p className="text-xl text-gray-600 max-w-3xl mx-auto"
                 Discover the powerful features that make our solutions stand out.
               </p>
-            
+
             <div className="
     ,
     d: grid-cols-2 l, g:grid-cols-3 gap-8">
@@ -335,7 +324,7 @@ Contact Privacy Team
               <p className="text-xl text-gray-600 max-w-3xl mx-auto"
                 Experience the benefits of working with industry leaders.
               </p>
-            
+
             <div className="
     ,
     d: grid-cols-2 l, g:grid-cols-3 gap-8">
@@ -365,10 +354,10 @@ Contact Privacy Team
     r: bg-blue-600 hove, r:text-white transition-colors"
                 Schedule Demo
               </button>
-      
+
       <Footer />
     </div>
-      
+
       <Footer />
     </>
   )

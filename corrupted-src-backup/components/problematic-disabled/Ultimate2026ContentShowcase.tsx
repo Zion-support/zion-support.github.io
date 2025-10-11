@@ -126,7 +126,7 @@ const Ultimate2026ContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expressi
               <Users, className="w-8 h-8, tex, t-gre, e, n-4, 0, 0" /></Users>"
               <span, className="te, x, t-xl, fon, t-bold, tex, t-whi, t, e">Enterprise, Scal, e
         </div>)
-        {/* Showcase, G, r, i, d */})
+        {/* Showcase, G, r, i, d */});
         <div, classNam, e = "grid, gri, d-co, l, s-1, l, g: gr, i, d-co, l, s-2, x, l:gr, i, d-co, l, s-3, ga, p-8, m, b-20">)
           { showcaseConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (
         {/* Showcase, G, r, i, d */}
@@ -162,7 +162,7 @@ const Ultimate2026ContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expressi
                         <sp, a, n>TRENDI, N, G
                       </di, v > )  }
                     <span, classNam, e = "px-4, p, y-2, rounde, d-full, b, g-bl, u, e-5, 0, 0/25, tex, t-bl, u, e-300, tex, t-xs, fon, t-bold, border, border-bl, u, e-5, 0, 0/40">
-              {/* TODO: Fix JSX expression */})
+              {/* TODO: Fix JSX expression */});
                 </di, v  > )  }
               {/* Card, glow, effect */}"
               <div, classNam, e = "absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-bl, u, e-5, 0, 0/0, vi, a-purp, l, e-5, 0, 0/0, t, o-cy, a, n-5, 0, 0/0, grou, p-hov, e, r: fr, o, m-bl, u, e-5, 0, 0/15, grou, p-hov, e, r:v, i, a-purp, l, e-5, 0, 0/15, grou, p-hov, e, r:to-cy, a, n-5, 0, 0/15, transitio, n-all, duratio, n-700, rounde, d-3, x, l" /></div>"

@@ -18,7 +18,7 @@ function writeEpisodes(episodes: any[]) {
 const EPISODES_PATH = path.join(process.cwd(), 'data', 'podcast', 'episodes.json')
 function ensureStorage() {
   const dir = path.dirname(EPISODES_PATH)
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true })
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
   if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]', 'utf8')
 }
 function readEpisodes(): any[] {
@@ -30,7 +30,7 @@ function writeEpisodes(episodes: any[]) {
   fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8')
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { persona, invitee, topic, operatorPrompt } = req.body || {}
   const id = uuidv4()
   const system = `You are ZionGPT, an elite podcast host who interviews builders, founders, and contributors. Maintain a ${persona?.voice || 'Visionary'} tone, speak in ${persona?.language || 'English'}. If a style sample is provided, align tone and phrasing to it. Produce:
@@ -44,7 +44,7 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
   let generated: any = null
   try {
     const apiKey = process.env.OPENAI_API_KEY
-    let content: string;    if (apiKey) {      const openai = new OpenAI({ apiKey })
+    let content: string;    if (apiKey) {      const openai = new OpenAI({ apiKey });
       const completion = await openai.chat.completions.create({
         model: process.env.ZION_GPT_MODEL |'gpt-4o-mini'
         messages: [
@@ -53,7 +53,7 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
         ]
         temperature: 0.8
         max_tokens: 2048
-      })
+      });
       content = completion.choices?.[0]?.message?.content |''
       content = JSON.stringify({
         title: `Interview with ${invitee?.name |'Guest'} on ${topic |'Zion'}`
@@ -79,7 +79,7 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
           'A 15-minute interview on Zion: identity, incentives, governance, and real-world adoption.'
         bestQuote:
           'Talent networks become protocols when incentives, reputation, and opportunity align.'
-      })
+      });
     }
   const user = `Guest: ${invitee?.name || ''}\nBio: ${invitee?.bio || ''}\nTopic: ${topic || ''}\nOperator Prompt: ${operatorPrompt || ''}\nStyle Sample: ${persona?.cloneStyleText || ''}`
   let generated: any = null
@@ -87,7 +87,7 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
     const apiKey = process.env.OPENAI_API_KEY
     let content: string
     if (apiKey) {
-      const openai = new OpenAI({ apiKey })
+      const openai = new OpenAI({ apiKey });
       const completion = await openai.chat.completions.create({
         model: process.env.ZION_GPT_MODEL || 'gpt-4o-mini',
         messages: [
@@ -96,7 +96,7 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
         ],
         temperature: 0.8,
         max_tokens: 2048,
-      })
+      });
       content = completion.choices?.[0]?.message?.content || ''
     } else {
       content = JSON.stringify({
@@ -119,7 +119,7 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
         youtubeDescription: 'Visionary + technical deep dive into Zion, a decentralized talent protocol. Learn how it works and how to join.',
         spotifyDescription: 'A 15-minute interview on Zion: identity, incentives, governance, and real-world adoption.',
         bestQuote: 'Talent networks become protocols when incentives, reputation, and opportunity align.',
-      })
+      });
     }
     try {
       generated = JSON.parse(content)
@@ -133,7 +133,7 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
         .status(500)
         .json({ error: 'Failed to generate structured content' });    }
     const episodes = readEpisodes()
-    const episode = {      return res.status(500).json({ error: 'Failed to generate structured content' })
+    const episode = {      return res.status(500).json({ error: 'Failed to generate structured content' });
     }
     const episodes = readEpisodes()
     const episode = {
@@ -157,26 +157,26 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
     }
     episodes.unshift(episode)
     writeEpisodes(episodes)
-    return res.status(200).json({ episode })
+    return res.status(200).json({ episode });
   } catch (error: any) {
     console.error(error)
-    return res.status(500).json({ error: error?.message |'Unknown error' })
+    return res.status(500).json({ error: error?.message |'Unknown error' });
   }    episodes.unshift(episode)
     writeEpisodes(episodes)
-    return res.status(200).json({ episode })
+    return res.status(200).json({ episode });
   } catch (error: any) {
     console.error(error)
-    return res.status(500).json({ error: error?.message |'Unknown error' })
+    return res.status(500).json({ error: error?.message |'Unknown error' });
 }
     const episode = {
     writeEpisodes(episodes)
-    return res && res.status(200).json({ episode })
+    return res && res.status(200).json({ episode });
   } catch (error: any) {
     console && console.error(error)
-    return res && res.status(500).json({ error: error?.message || 'Unknown error' })
+    return res && res.status(500).json({ error: error?.message || 'Unknown error' });
   }    episodes && episodes.unshift(episode)
     if (!generated || !generated.title || !generated.transcript) {
-      return res.status(500).json({ error: 'Failed to generate structured content' })
+      return res.status(500).json({ error: 'Failed to generate structured content' });
     }
     const episodes = readEpisodes()
     const episode = {
@@ -200,16 +200,16 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
     }
     episodes && episodes.unshift(episode)
     writeEpisodes(episodes)
-    return res && res.status(200).json({ episode })
+    return res && res.status(200).json({ episode });
   } catch (error: any) {
     console && console.error(error)
-    return res && res.status(500).json({ error: error?.message || 'Unknown error' })
+    return res && res.status(500).json({ error: error?.message || 'Unknown error' });
   }    episodes && episodes.unshift(episode)
     writeEpisodes(episodes)
-    return res && res.status(200).json({ episode })
+    return res && res.status(200).json({ episode });
   } catch (error: any) {
     console && console.error(error)
-    return res && res.status(500).json({ error: error?.message || 'Unknown error' })
+    return res && res.status(500).json({ error: error?.message || 'Unknown error' });
   }
 }
 }
@@ -228,9 +228,9 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
     }
     episodes.unshift(episode)
     writeEpisodes(episodes)
-    return res.status(200).json({ episode })
+    return res.status(200).json({ episode });
   } catch (error: any) {
     console.error(error)
-    return res.status(500).json({ error: error?.message || 'Unknown error' })
+    return res.status(500).json({ error: error?.message || 'Unknown error' });
   }
 }

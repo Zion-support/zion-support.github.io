@@ -98,7 +98,7 @@ function fixCorruptedText(text) {/* TODO: Fix JSX expression */}
   e: $7 }"
   )
   //Fix array syntax
-  fixed = fixed.replace(/\[\s*\{/* TODO: Fix JSX expression */})
+  fixed = fixed.replace(/\[\s*\{/* TODO: Fix JSX expression */});
   fixed = fixed.replace(/\}\s*\]/g, '}]')
   //Fix function calls
   fixed = fixed.replace(/calculateEngagementSco,\s*r,\s*e/g, 'calculateEngagementScore')

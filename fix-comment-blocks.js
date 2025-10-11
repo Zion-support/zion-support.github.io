@@ -19,9 +19,8 @@ function fixCommentBlocks(content) {/* TODO: Fix JSX expression */}
         }
         return line
       }).join('\n')
-      return `// console.${method}(...): {\n${fixedBody}\n// }`
-    }
-  )
+      return `// console.${method}(...props): {\n${fixedBody}\n// }`
+    });
   // Fix malformed comment blocks that are missing proper commenting
   content = content.replace(
     /\/\/ [^:]*:\s*\{([^}]+)\}/gs,
@@ -36,8 +35,7 @@ function fixCommentBlocks(content) {/* TODO: Fix JSX expression */}
         return line
       }).join('\n')
       return match.replace(body, fixedBody)
-    }
-  )
+    });
   // Fix specific patterns we've seen
   content = content.replace(
     /\/\/ console\.(log|warn|error|info)\([^)]*\):\s*\{([^}]+)\}/gs,
@@ -52,9 +50,8 @@ function fixCommentBlocks(content) {/* TODO: Fix JSX expression */}
         }
         return line
       });`
-      return `// console.${method}(...): {\n${fixedLines.join('\n')}\n// }`
-    }
-  )
+      return `// console.${method}(...props): {\n${fixedLines.join('\n')}\n// }`
+    });
   return content
 }
 
@@ -103,7 +100,7 @@ function findSourceFiles(dir) {/* TODO: Fix JSX expression */}
       }
     }
   }
-  
+
   walkDir(dir)
   return files
 }

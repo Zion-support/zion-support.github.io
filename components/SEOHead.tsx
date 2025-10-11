@@ -74,11 +74,11 @@ return (
       <meta name="author" content="Zion Tech Group" />
       <meta name="robots" content="index, follow" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      
+
       {/* Canonical URL */}
       {canonicalUrl && <link rel="canonical" href={canonicalUrl}} />
   </link>}
-      
+
       {/* Open Graph Meta Tags */}
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
@@ -87,7 +87,7 @@ return (
       <meta property="og:image" content={ogImage} />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
-      
+
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={fullTitle} />
@@ -95,14 +95,14 @@ return (
       <meta name="twitter:image" content={ogImage} />
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
-      
+
       {/* Additional SEO Meta Tags */}
       <meta name="theme-color" content="#1e40af" />
       <meta name="msapplication-TileColor" content="#1e40af" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-      
+
       {/* Favicon */}
       <link rel="icon" href="/favicon.ico" />
   </link>
@@ -114,7 +114,7 @@ return (
   </link>
       <link rel="manifest" href="/site.webmanifest" />
   </link>
-      
+
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
   </link>
@@ -122,13 +122,13 @@ return (
   </link>
       <link rel="preconnect" href="https://www.google-analytics.com" />
   </link>
-      
+
       {/* DNS Prefetch */}
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
   </link>
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
   </link>
-      
+
       {/* Structured Data */}
       <script
 type="application/ld+json"
@@ -138,7 +138,7 @@ __html: JSON.stringify(finalStructuredData
   );,
         }}
       />
-      
+
       {/* Additional Performance Hints */}
       <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
   </link>

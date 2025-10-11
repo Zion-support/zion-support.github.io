@@ -13,9 +13,9 @@ serve(async (req: Request) => {
   if (req.method === "OPTIONS") {
     return new Response(null, {
       status: 204,
-      headers: corsHeaders})
+      headers: corsHeaders});
       headers: corsHeaders,
-    })
+    });
   }
   try {
     const supabase = createClient(
@@ -32,8 +32,7 @@ serve(async (req: Request) => {
           status: 500,
           headers: { "Content-Type": "application/json", ...corsHeaders }}
           headers: { "Content-Type": "application/json", ...corsHeaders },
-        }
-      )
+        });
     }
     // Process pending reminder jobs
     const { data: pendingJobs, error: jobsError } = await supabase
@@ -50,8 +49,7 @@ serve(async (req: Request) => {
           status: 500,
           headers: { "Content-Type": "application/json", ...corsHeaders }}
           headers: { "Content-Type": "application/json", ...corsHeaders },
-        }
-      )
+        });
     }
     const processedJobs = []
     if (pendingJobs && pendingJobs.length > 0) {
@@ -68,17 +66,16 @@ serve(async (req: Request) => {
               "Authorization": `Bearer ${supabaseServiceKey}`,
             },
             body: JSON.stringify(job.payload),
-          }
-        )
+          });
         if (reminderResponse.ok) {
           // Update job status to completed
           const { error: updateError } = await supabase
             .from("scheduled_jobs")
             .update({
               status: "completed",
-              completed_at: new Date().toISOString()})
+              completed_at: new Date().toISOString()});
               completed_at: new Date().toISOString(),
-            })
+            });
             .eq("id", job.id)
           if (updateError) {
             console.error("Failed to update job status:", updateError)
@@ -91,9 +88,9 @@ serve(async (req: Request) => {
           await supabase
             .from("scheduled_jobs")
             .update({
-              status: "failed"})
+              status: "failed"});
               status: "failed",
-            })
+            });
             .eq("id", job.id)
         }
       }
@@ -111,8 +108,7 @@ serve(async (req: Request) => {
       {
         status: 200,
         headers: { "Content-Type": "application/json", ...corsHeaders },
-      }
-    )
+      });
   } catch (error) {
     console.error(error)
     return new Response(
@@ -121,7 +117,6 @@ serve(async (req: Request) => {
         status: 500,
         headers: { "Content-Type": "application/json", ...corsHeaders }}
         headers: { "Content-Type": "application/json", ...corsHeaders },
-      }
-    )
+      });
   }
-})
+});

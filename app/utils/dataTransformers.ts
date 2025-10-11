@@ -90,7 +90,7 @@ export function pick</string><T extends Record<string, unknown>, K extends keyof
   j: T,
   key,
   s: K[]),
-  })
+  });
   return result
 }
 /**
@@ -100,7 +100,7 @@ export function omit</T><T extends Record<string, unknown>, K extends keyof T>(o
   j: T,
   key,
   s: K[]),
-  })
+  });
   return result as Omit</T><T>
 }
 /**
@@ -109,7 +109,7 @@ export function omit</T><T extends Record<string, unknown>, K extends keyof T>(o
 export function groupBy</T><T>(arra,
   y: T[],
   m: T) => string | number),
-  })
+  });
 }
 /**
  * Sort array by multiple keys

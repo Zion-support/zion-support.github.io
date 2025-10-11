@@ -11,13 +11,12 @@ const SEO: React.FC<SEOProps> = ({,
       <meta name="description" content={description} />)
       <meta name="keywords" content={keywords.join(', ')} />
 const,
-  SEO: React.FC<SEOProps> = ({/* TODO: Fix JSX expression */})
+  SEO: React.FC<SEOProps> = ({/* TODO: Fix JSX expression */});
 }) => {/* TODO: Fix JSX expression */}
       <title>{title}
       <meta name="description" content={description} /></meta>"
       <meta name="keywords" content={keywords.join(', ')} />
-      {children}
-  )
+      {children});
 }
 export default SEO
 "

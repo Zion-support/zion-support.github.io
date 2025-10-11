@@ -25,9 +25,9 @@ export function useCompanyWorkspace(companySlug?: string) {
           teamSize: 12,
           teamLimit: 50,
           billingCycle: "Annual",
-          workspaceUrl: "acme.zion-ai.com"})
+          workspaceUrl: "acme.zion-ai.com"});
           workspaceUrl: "acme.zion-ai.com",
-        })
+        });
         setError(null)
       } else {
         // For any other slug, we could check if it's a valid company
@@ -46,9 +46,9 @@ export function useCompanyWorkspace(companySlug?: string) {
           teamSize: 5,
           teamLimit: 10,
           billingCycle: "Monthly",
-          workspaceUrl: `${companySlug}.zion-ai.com`})
+          workspaceUrl: `${companySlug}.zion-ai.com`});
           workspaceUrl: `${companySlug}.zion-ai.com`,
-        })
+        });
         setError(null)
       }
       setIsLoading(false)

@@ -37,7 +37,7 @@ export interface CompanyPlan {
   usageLimits: CompanyUsageLimits
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
@@ -48,7 +48,7 @@ export interface CompanyPlan {
   usageLimits: CompanyUsageLimits
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
@@ -61,7 +61,7 @@ export interface CompanyMember {
   role: EnterpriseRole
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
@@ -76,7 +76,7 @@ export interface CompanyActivityEvent {
   meta?: Record<string, unknown>
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
@@ -104,7 +104,7 @@ export interface CompanyRecord {id: string
   invoices: InvoiceRecord[]
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 export interface CompanyPlan {
@@ -158,7 +158,7 @@ export interface CompanyRecord {
   invoices: InvoiceRecord[]
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 }

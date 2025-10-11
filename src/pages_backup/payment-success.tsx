@@ -5,14 +5,6 @@ import { CheckCircle2 } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 export default function PaymentSuccess() {
 
-
-
-
-
-
-
-
-
   return (
     <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">
       <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">
@@ -27,23 +19,21 @@ export default function PaymentSuccess() {
         </p>
         <div className='flex flex-col space-y-3'>
           <Button
-        
+
         <h1 className="text-2xl font-bold text-white mb-2">{t('errors.payment_success_title')}</h1>
-        
+
         <p className="text-zion-slate-light mb-6">
           {t('errors.payment_success_message')}
         </p>
-        
+
         <div className="flex flex-col space-y-3">
           <Button 
-
 
             onClick={() => router.push('/dashboard')} // Changed to router.push
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
           >
             {t('errors.go_to_dashboard')}
           </Button>
-
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -55,23 +45,19 @@ class ErrorBoundary extends React.Component {
   static getDerivedStateFromError(error) {
     return { hasError: true }
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo)
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>
     }
-    
+
     return this.props.children
   }
 }
-
-
-
-
 
 import React from 'react'
 import { Button } from '@/components/ui/button'
@@ -91,9 +77,6 @@ export default function PaymentSuccess() {
   const router = useRouter(); // Changed from navigate
   const { t } = useTranslation()
 
-
-
-
   return (
     <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">
       <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">
@@ -108,23 +91,21 @@ export default function PaymentSuccess() {
         </p>
         <div className='flex flex-col space-y-3'>
           <Button
-        
+
         <h1 className="text-2xl font-bold text-white mb-2">{t('errors.payment_success_title')}</h1>
-        
+
         <p className="text-zion-slate-light mb-6">
           {t('errors.payment_success_message')}
         </p>
-        
+
         <div className="flex flex-col space-y-3">
           <Button 
-
 
             onClick={() => router.push('/dashboard')} // Changed to router.push
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
           >
             {t('errors.go_to_dashboard')}
           </Button>
-
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -136,16 +117,16 @@ class ErrorBoundary extends React.Component {
   static getDerivedStateFromError(error) {
     return { hasError: true }
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo)
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>
     }
-    
+
     return this.props.children
   }
 }
@@ -158,11 +139,6 @@ import { useTranslation } from 'react-i18next',
 export default function PaymentSuccess() {
   const router = useRouter(), // Changed from navigate
   const { t } = useTranslation(),
-  
-
-
-
-
 
   return (
     <div className='min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4'>
@@ -178,8 +154,6 @@ export default function PaymentSuccess() {
         <div className='flex flex-col space-y-3'>
           <Button
 
-
-
             onClick={() => router && router.push('/dashboard')} // Changed to router && router.push
             className='bg-zion-purple hover:bg-zion-purple-dark text-white'
           >
@@ -192,8 +166,6 @@ export default function PaymentSuccess() {
 
           <Button 
 
-
-
             variant="outline"
             onClick={() => router.push('/')} // Changed to router.push
             className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
@@ -203,9 +175,6 @@ export default function PaymentSuccess() {
         </div>
       </div>
     </div>
-
-
-
 
     <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">
       <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">
@@ -234,9 +203,7 @@ export default function PaymentSuccess() {
             {t('errors.return_home')}
           </Button></$1></$1></$1>
   )
-}
-
-  )
+});
 }
 
 import React from 'react'

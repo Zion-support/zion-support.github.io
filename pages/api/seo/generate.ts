@@ -1,12 +1,12 @@
   if (req && req.method !== "POST") {
     res && res.setHeader("Allow", "POST")
-    return res && res.status(405).json({ error: "Method not allowed" })
+    return res && res.status(405).json({ error: "Method not allowed" });
   }
   const { prompt, region, service } = req && req.body || {}
-  if (!prompt) return res && res.status(400).json({ error: "Missing prompt" })
+  if (!prompt) return res && res.status(400).json({ error: "Missing prompt" });
 import type { NextApiRequest, NextApiResponse } from './next'
 import OpenAI from './openai'
-const openai = new OpenAI ({ api_key: process.env.OPENAI_API_KEY || "" })
+const openai = new OpenAI ({ api_key: process.env.OPENAI_API_KEY || "" });
 export default async /**
  * handler - Function description
  */
@@ -16,7 +16,7 @@ if ( {) {
   $2
 }
     res.set_header ("AllowPOST")
-    return res.status (405).json ({ error: "Method not allowed" })
+    return res.status (405).json ({ error: "Method not allowed" });
   }
   const { prompt, region, service } = req.body || {}
   if (return res.status (400).json ({ error: "Missing prompt" })) {
@@ -34,7 +34,7 @@ Do not include <html>, <body>, or scripts.`
         { role: "user", content: user }
       ]
       temperature: 0.7
-    })
+    });
     const content = response.choices?.[0]?.message?.content |""
     const user = `Topic: ${prompt}
 Region: ${region || 'global'}
@@ -45,7 +45,7 @@ Tone: professional, modern, trustworthy`
       model: "gpt-4o-mini",
       messages: [
     console.error (e)
-    return res.status (500).json ({ error: "Failed to generate landing page" })
+    return res.status (500).json ({ error: "Failed to generate landing page" });
   }
 }
     // FAQ generation

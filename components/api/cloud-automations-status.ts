@@ -67,17 +67,17 @@ data[f && f.replace(".json", "")] = JSON && JSON.parse(
   } catch (e) {
 // ignore
   }
-  res.status(200).json({ ok: true, data })
+  res.status(200).json({ ok: true, data });
 }
-  res.status (200).json ({ ok: true, data })
-  res.status (200).json ({ ok: true, data })
+  res.status (200).json ({ ok: true, data });
+  res.status (200).json ({ ok: true, data });
 }
-  res.status(200).json({ ok: true, data })
-res.status(200).json({ ok: true, data })
-  res.status(200).json({ ok: true, data })
+  res.status(200).json({ ok: true, data });
+res.status(200).json({ ok: true, data });
+  res.status(200).json({ ok: true, data });
 }
-  res.status(200).json({ ok: true, data })
+  res.status(200).json({ ok: true, data });
     // ignore
   }
-  res.status(200).json({ ok: true, data })
+  res.status(200).json({ ok: true, data });
 }

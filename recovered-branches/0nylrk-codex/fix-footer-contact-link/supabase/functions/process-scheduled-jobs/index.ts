@@ -7,13 +7,12 @@ const corsHeaders = {
 }
 serve(async (req) => {
   if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders })
+    return new Response(null, { headers: corsHeaders });
   }
   const supabaseAdmin = createClient(
     Deno.env.get("SUPABASE_URL") ?? "",
     Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",
-    { auth: { persistSession: false } }
-  )
+    { auth: { persistSession: false } });
   try {
     // Get pending jobs
     const { data: jobs, error: fetchError } = await supabaseAdmin
@@ -62,25 +61,25 @@ serve(async (req) => {
         .update({
           status: 'completed',
           completed_at: new Date().toISOString()
-        })
+        });
         .eq('id', job.id)
     }
     return new Response(JSON.stringify({ processed: jobs?.length || 0 }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
-      status: 200})
+      status: 200});
   } catch (error) {
     return new Response(JSON.stringify({ error: error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
-      status: 500})
+      status: 500});
       status: 200,
-    })
+    });
   } catch (error) {
     return new Response(JSON.stringify({ error: error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500,
-    })
+    });
   }
-})
+});
 async function processOnboardingReminder(supabase, userId, milestone, role) {
   try {
     // Create notification for user
@@ -101,7 +100,7 @@ async function processOnboardingReminder(supabase, userId, milestone, role) {
       message,
       type: 'onboarding_reminder',
       read: false
-    })
+    });
     // Here you could also add logic to send an email
     // For example, call another edge function to send email
   } catch (error) {
@@ -122,8 +121,7 @@ async function processResumeScoring(supabase, applicationId) {
           "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`,
         },
         body: JSON.stringify({ applicationId }),
-      }
-    )
+      });
     if (!response.ok) {
       const errorData = await response.json()
       throw new Error(`Resume scoring failed: ${JSON.stringify(errorData)}`)
@@ -150,7 +148,7 @@ async function processResumeScoring(supabase, applicationId) {
           type: "application_scored",
           related_id: applicationId,
           read: false
-        })
+        });
       }
     }
   } catch (error) {
@@ -176,8 +174,7 @@ async function processContentGeneration(supabase, contentType) {
           includeImage: contentType === 'blog' ? true : false
         })}
         }),
-      }
-    )
+      });
     if (!response.ok) {
       const errorData = await response.json()
       throw new Error(`Content generation failed: ${JSON.stringify(errorData)}`)
@@ -213,8 +210,7 @@ async function processContentGeneration(supabase, contentType) {
             })}
               testEmail: adminEmail
             }),
-          }
-        )
+          });
         // Create notification for admin
         await supabase.from('notifications').insert({
           user_id: null, // System notification visible to admins
@@ -222,7 +218,7 @@ async function processContentGeneration(supabase, contentType) {
           message: "AI-generated newsletter draft has been sent to your email for review.",
           type: "system",
           read: false
-        })
+        });
       }
     }
     return contentData

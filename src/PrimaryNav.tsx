@@ -98,7 +98,7 @@ router
 logErrorToProduction('Search navigation failed', err, {;,
 query: trimmed;,
 component: 'PrimaryNav'
-          })
+          });
         ) }
   const handle_submit = (e: React.FormEvent) =>: any {;;
 e.prevent_default ();
@@ -173,13 +173,11 @@ data-testid="header"
             <ResponsiveNavigation;
 openLoginModal={returnToPath => setLoginOpen(true)}
             />          </div>
-          
+
           {/* Navigation - hidden on mobile and tablets, shown on desktop */}
           <div className="hidden lg:block order-1 flex-shrink-0">
             <ResponsiveNavigation openLoginModal={(returnToPath) => setLoginOpen(true)} />
           </div>
-          
-
 
           {/* Actions container with responsive layout */}
           <div className="hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0">
@@ -247,7 +245,7 @@ window && window.gtag('event', 'search_suggestion_click', {;,
 search_term: sugg && sugg.text,;,
 suggestion_type: sugg && sugg.type,;,
 suggestion_id: sugg && sugg.id || sugg && sugg.slug,
-                    })
+                    });
                   }
                   // // // // // console && console.log('PrimaryNav search suggestion selected:',;
 sugg)
@@ -290,7 +288,7 @@ $2
 search_term: sugg.text,;,
 suggestion_type: sugg.type,;,
 suggestion_id: sugg.id || sugg.slug,
-                    })
+                    });
                   }
                   // // // // // console.log ('PrimaryNav search suggestion selected:',;
 sugg)
@@ -324,7 +322,7 @@ $2
 search_term: sugg.text,;,
 suggestion_type: sugg.type,;,
 suggestion_id: sugg.id || sugg.slug
-                    })
+                    });
                   }
                 }}
                 searchSuggestions={suggestions}
@@ -335,19 +333,13 @@ suggestion_id: sugg.id || sugg.slug
               <PointsBadge />
               <CartDrawer />
             </div>
-            
-
-
-
-
-
 
             {/* Compact controls group */}
             <div className="flex items-center gap-1 border-l border-primary/20 pl-1 ml-1">
               <ModeToggle />
               <LanguageSelector />
             </div>
-            
+
             {/* Auth links - flex wrap for very small screens */}
             <div className="flex items-center gap-1 flex-wrap">
               {!isLoggedIn && (
@@ -405,15 +397,10 @@ className="text-sm hover:text-primary whitespace-nowrap"
               )}
               {isLoggedIn && <UserMenu />}
 
-
-
             </div></$1>
           {/* Tablet view (md to lg) - simplified controls */}
 
           <div className="hidden md: flex lg:hidden items-center gap-2 order-2">
-
-
-
 
             <ModeToggle />
             <LanguageSelector />
@@ -523,11 +510,6 @@ onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label={t('general.toggle_mobile_menu')}
           >
 
-
-
-
-
-
             {mobileMenuOpen ? (
               <X className="h-6 w-6" />
             ) : (
@@ -587,9 +569,6 @@ isLoggedIn && <UserMenu />
 unreadCount}onClose={() => setMobileMenuOpen (false)}openLoginModal={(returnToPath) => setLoginOpen (true)}/> </div> </div>)
 }{;
 isMobile && <MobileBottomNav unreadCount= {
-
-
-
 
 }/>
 }<LoginModal isOpen={;
@@ -749,9 +728,6 @@ className="lg:hidden bg - slate - 900 / 95 backdrop - blur - md border - t borde
                     <h3 className="text - sm font - semibold text - cyan - 400 mb - 2">
   </h3>
                       {category.category}
-
-
-
 
 </$1>"
                     <div className="space - y-2 ml - 4">

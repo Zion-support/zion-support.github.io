@@ -41,8 +41,8 @@ default define_config ({
   ]
   reporter: [
     ['list'],    ['html', { outputFolder: playwright-logs/html-report', open: never' }]]
-})
-})
+});
+});
 import {  defineConfig, devices   } from @playwright/test';
 default defineConfig({
   testDir: tests/e2e',  use: {
@@ -72,4 +72,4 @@ default defineConfig({
   ],
   reporter: [
     ['list'],    ['html', { outputFolder: playwright-logs/html-report', open: never' }],  ]
-})
+});

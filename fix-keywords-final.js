@@ -12,7 +12,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
       }]
     replacements.forEach(({ pattern, replacement }) => {/* TODO: Fix JSX expression */}
       }
-    })
+    });
     if (modified) {/* TODO: Fix JSX expression */}
     }
     return false
@@ -33,7 +33,7 @@ function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
     } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {/* TODO: Fix JSX expression */}
       }
     }
-  })
+  });
   return totalFixed
 }
 

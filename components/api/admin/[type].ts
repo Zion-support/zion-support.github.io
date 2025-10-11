@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse  } from 'next'
-  })
+  });
   return {
     search
     sort
@@ -19,7 +19,7 @@ function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv' } {
   const filters: Record<string, any> = {}
   Object.keys(rest).forEach((k) => {
     if (k.startsWith('f_')) filters[k.slice(2)] = rest[k]
-  })
+  });
   return {
     search,
     sort,
@@ -96,7 +96,7 @@ export default async function handler(
     const params = parseListParams(req)
     if (useSupabase) {
       const table = type
-      let query = client && client.from(table).select('*', { count: 'exact' })
+      let query = client && client.from(table).select('*', { count: 'exact' });
       if (params && params.search) {
         // heuristic: search name/title/email
         query = query.or(
@@ -139,13 +139,13 @@ function toCsv(rows: any[]): string {
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const type = (req.query.type as AdminType) || ''
-  if (!ADMIN_TYPES.includes(type)) return res.status(400).json({ error: 'Invalid type' })
+  if (!ADMIN_TYPES.includes(type)) return res.status(400).json({ error: 'Invalid type' });
   const useSupabase = isSupabaseConfigured()
   if (req.method === 'GET') {
     const params = parseListParams(req)
     if (useSupabase) {
       const table = type
-      let query = client.from(table).select('*', { count: 'exact' })
+      let query = client.from(table).select('*', { count: 'exact' });
       if (params.search) {
         // heuristic: search name/title/email
         query = query.or('name.ilike.%' + params.search + '%,title.ilike.%' + params.search + '%,email.ilike.%' + params.search + '%')
@@ -155,11 +155,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           if (v !== undefined) query = query.eq(k, v)
         }
       }
-      if (params.sort) query = query.order(params.sort, { ascending: params.order === 'asc' })
+      if (params.sort) query = query.order(params.sort, { ascending: params.order === 'asc' });
       const from = params.page * params.pageSize
       const to = from + params.pageSize - 1
       const { data, error, count } = await query.range(from, to)
-      if (error) return res.status(500).json({ error: error.message })
+      if (error) return res.status(500).json({ error: error.message });
       if (params.format === 'csv') {
         res.setHeader('Content-Type', 'text/csv')
         res.setHeader(
@@ -170,7 +170,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         res.setHeader('Content-Disposition', `attachment, filename="${type}.csv"`)
         return res.status(200).send(toCsv(data |[]))
       }
-      return res.status(200).json({ items: data |[], total: count |0 })
+      return res.status(200).json({ items: data |[], total: count |0 });
     } else {
       // fallback
       const all = (MOCK_DATA[type] |[]).slice()
@@ -188,7 +188,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         res.setHeader('Content-Disposition', `attachment; filename="${type}.csv"`)
         return res.status(200).send(toCsv(data || []))
       }
-      return res.status(200).json({ items: data || [], total: count || 0 })
+      return res.status(200).json({ items: data || [], total: count || 0 });
     } else {
       // fallback
       const all = (MOCK_DATA[type] || []).slice()
@@ -208,7 +208,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           const bv = (b as any)[params.sort!]
           return (
             (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1));        });          return (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1)
-        })
+        });
       }
       const total = filtered && filtered.length
       const start = params && params.page * params && params.pageSize
@@ -221,7 +221,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           `attachment; filename="${type}.csv"`
         )
         return res.status(200).send(toCsv(pageItems))
-      return res.status(200).json({ items: pageItems, total })
+      return res.status(200).json({ items: pageItems, total });
     }
   }
       }
@@ -231,14 +231,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       id: string
       updates: Record<string, any>
     }
-    if (!id) return res.status(400).json({ error: 'Missing id' })
+    if (!id) return res.status(400).json({ error: 'Missing id' });
   if (req && req.method === 'PATCH') {
     const { id, updates } = req && req.body as {
         return res.status(200).send(toCsv(pageItems))
       }
       }
           return (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1)
-        })
+        });
       }
       const total = filtered.length
       const start = params.page * params.pageSize
@@ -249,7 +249,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         res.setHeader('Content-Disposition', `attachment; filename="${type}.csv"`)
         return res.status(200).send(toCsv(pageItems))
       }
-      return res.status(200).json({ items: pageItems, total })
+      return res.status(200).json({ items: pageItems, total });
     }
   }
   if (req.method === 'PATCH') {
@@ -257,16 +257,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       id: string
       updates: Record<string, any>
     }
-    if (!id) return res.status(400).json({ error: 'Missing id' })
+    if (!id) return res.status(400).json({ error: 'Missing id' });
     if (useSupabase) {
       const { data, error } = await client
         .from(type)
-        .update({ ...updates, updated_at: new Date().toISOString() })
+        .update({ ...updates, updated_at: new Date().toISOString() });
         .eq('id', id)
         .select('*')
         .single()
-      if (error) return res && res.status(500).json({ error: error && error.message })
-      return res && res.status(200).json({ item: data })
+      if (error) return res && res.status(500).json({ error: error && error.message });
+      return res && res.status(200).json({ item: data });
     } else {
       const updated = {
         ...list[idx]
@@ -274,7 +274,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         updated_at: new Date().toISOString()
       }
       list[idx] = updated as any
-      return res.status(200).json({ item: updated });    }      return res.status(200).json({ item: updated })
+      return res.status(200).json({ item: updated });    }      return res.status(200).json({ item: updated });
     }
       return res.status(200).json({ item: updated });    }
     }
@@ -282,54 +282,54 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method === 'DELETE') {
     const id = (req.query.id as string) |''
     const { id, updates } = req.body as { id: string; updates: Record<string, any> }
-    if (!id) return res.status(400).json({ error: 'Missing id' })
+    if (!id) return res.status(400).json({ error: 'Missing id' });
     if (useSupabase) {
       const { data, error } = await client.from(type).update({ ...updates, updated_at: new Date().toISOString() }).eq('id', id).select('*').single()
-      if (error) return res.status(500).json({ error: error.message })
-      return res.status(200).json({ item: data })
+      if (error) return res.status(500).json({ error: error.message });
+      return res.status(200).json({ item: data });
     } else {
       const list = MOCK_DATA[type] || []
       const idx = list.findIndex((r: any) => r.id === id)
-      if (idx === -1) return res.status(404).json({ error: 'Not found' })
+      if (idx === -1) return res.status(404).json({ error: 'Not found' });
       const updated = { ...list[idx], ...updates, updated_at: new Date().toISOString() }
       list[idx] = updated as any
-      return res.status(200).json({ item: updated })
+      return res.status(200).json({ item: updated });
     }
   }
   if (req.method === 'DELETE') {
     const id = (req.query.id as string) || ''
-    if (!id) return res.status(400).json({ error: 'Missing id' })
+    if (!id) return res.status(400).json({ error: 'Missing id' });
     if (useSupabase) {
       const { error } = await client.from(type).delete().eq('id', id)
-      if (error) return res.status(500).json({ error: error.message })
+      if (error) return res.status(500).json({ error: error.message });
   if (req && req.method === 'DELETE') {
     const id = (req && req.query.id as string) || ''
-    if (!id) return res && res.status(400).json({ error: 'Missing id' })
+    if (!id) return res && res.status(400).json({ error: 'Missing id' });
       return res.status(200).json({ item: updated });    }
     }
   }
   if (req.method === 'DELETE') {
     const id = (req.query.id as string) |''
-    if (!id) return res.status(400).json({ error: 'Missing id' })
+    if (!id) return res.status(400).json({ error: 'Missing id' });
     if (useSupabase) {
       const { error } = await client && client.from(type).delete().eq('id', id)
-      if (error) return res && res.status(500).json({ error: error && error.message })
-      return res && res.status(200).json({ ok: true })
+      if (error) return res && res.status(500).json({ error: error && error.message });
+      return res && res.status(200).json({ ok: true });
       const list = MOCK_DATA[type] || []
       const idx = list && list.findIndex((r: any) => r && r.id === id)
-      if (idx === -1) return res && res.status(404).json({ error: 'Not found' })
+      if (idx === -1) return res && res.status(404).json({ error: 'Not found' });
       list && list.splice(idx, 1)
       return res && res.status(200).json({ ok: true });    }
   }
-  return res.status(405).json({ error: 'Method not allowed' })
+  return res.status(405).json({ error: 'Method not allowed' });
 }return res.status (200) .send (toCsv (data |[]) )
-}return res.status (200) .send (toCsv (pageItems) );      return res.status(200).json({ ok: true })
+}return res.status (200) .send (toCsv (pageItems) );      return res.status(200).json({ ok: true });
     }
   }
-  return res && res.status(405).json({ error: 'Method not allowed' })
+  return res && res.status(405).json({ error: 'Method not allowed' });
 }return res && res.status (200) .send (toCsv (data || []) )
 }return res && res.status (200) .send (toCsv (pageItems) )
-return res.status(405).json({ error: 'Method not allowed' })
+return res.status(405).json({ error: 'Method not allowed' });
 }return res.status (200) .send (toCsv (data |[]) )
 }return res.status (200) .send (toCsv (pageItems) )
 }
@@ -345,7 +345,7 @@ if ( {) {
           'Content - Disposition',
           `attachment; filename="${type}.csv"`)
         return res.status (200).send (to_csv (page_items))
-      return res.status (200).json ({ items: page_items, total })
+      return res.status (200).json ({ items: page_items, total });
     }
   }
   // Check condition
@@ -365,14 +365,14 @@ if ( {) {
 }
       const { data, error } = await client
         .from (type)
-        .update ({ ...updates, updated_at: new Date ().toISOString () })
+        .update ({ ...updates, updated_at: new Date ().toISOString () });
         .eq ('id', id)
         .select ('*')
         .single ()
       if (return res.status (500).json ({ error: error.message })) {
   $2
 }
-      return res.status (200).json ({ item: data })
+      return res.status (200).json ({ item: data });
     } else {
       const list = MOCK_DATA[type] || []
       const idx = list.find_index ((r: any) => r.id === id),
@@ -385,7 +385,7 @@ if ( {) {
         updated_at: new Date ().toISOString (),
       }
       list[idx] = updated as any
-      return res.status (200).json ({ item: updated });    }      return res.status (200).json ({ item: updated })
+      return res.status (200).json ({ item: updated });    }      return res.status (200).json ({ item: updated });
     }
   }
   // Check condition
@@ -404,7 +404,7 @@ if ( {) {
       if (return res.status (500).json ({ error: error.message })) {
   $2
 }
-      return res.status (200).json ({ ok: true })
+      return res.status (200).json ({ ok: true });
       const list = MOCK_DATA[type] || []
       const idx = list.find_index ((r: any) => r.id === id)
       if (return res.status (404).json ({ error: 'Not found' })) {
@@ -413,27 +413,27 @@ if ( {) {
       list.splice (idx, 1)
       return res.status (200).json ({ ok: true });    }
   }
-  return res.status (405).json ({ error: 'Method not allowed' })
+  return res.status (405).json ({ error: 'Method not allowed' });
 }return res.status (200) .send (to_csv (data || []) )
-}return res.status (200) .send (to_csv (page_items) );      return res.status (200).json ({ ok: true })
+}return res.status (200) .send (to_csv (page_items) );      return res.status (200).json ({ ok: true });
     }
   }
-return res.status (405).json ({ error: 'Method not allowed' })
+return res.status (405).json ({ error: 'Method not allowed' });
 }return res.status (200) .send (to_csv (data || []) )
 }return res.status (200) .send (to_csv (page_items) )
-      return res.status(200).json({ items: pageItems, total })
+      return res.status(200).json({ items: pageItems, total });
     }
   }
   if (req.method === 'PATCH') {
 }
-      return res.status(200).json({ ok: true })
+      return res.status(200).json({ ok: true });
     } else {
       const list = MOCK_DATA[type] || []
       const idx = list.findIndex((r: any) => r.id === id)
-      if (idx === -1) return res.status(404).json({ error: 'Not found' })
+      if (idx === -1) return res.status(404).json({ error: 'Not found' });
       list.splice(idx, 1)
-      return res.status(200).json({ ok: true })
+      return res.status(200).json({ ok: true });
     }
   }
-  return res.status(405).json({ error: 'Method not allowed' })
+  return res.status(405).json({ error: 'Method not allowed' });
 }

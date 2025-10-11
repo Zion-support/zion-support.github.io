@@ -23,8 +23,7 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
   handleNetworkError(erro,
   r: Error, ur)
   l: string, config?: unknown): void {/* TODO: Fix JSX expression */}
-  r: error.message, url, config }
-  )
+  r: error.message, url, config });
   }
 }
 
@@ -278,7 +277,7 @@ const data = await this.parseResponse
   }
 }
     return this.request
-          <T>({ ...config, url, method: 'GET' })
+          <T>({ ...config, url, method: 'GET' });
   }
   /**
    * POST request
@@ -296,7 +295,7 @@ const data = await this.parseResponse
   }
 }
     return this.request
-          <T>({ ...config, url, method: 'POST', body })
+          <T>({ ...config, url, method: 'POST', body });
   }
   /**
    * PUT request
@@ -314,7 +313,7 @@ const data = await this.parseResponse
   }
 }
     return this.request
-          <T>({ ...config, url, method: 'PUT', body })
+          <T>({ ...config, url, method: 'PUT', body });
   }
   /**
    * DELETE request
@@ -331,7 +330,7 @@ const data = await this.parseResponse
   }
 }
     return this.request
-          <T>({ ...config, url, method: 'DELETE' })
+          <T>({ ...config, url, method: 'DELETE' });
   }
   /**
    * PATCH request
@@ -349,7 +348,7 @@ const data = await this.parseResponse
   }
 }
     return this.request
-          <T>({ ...config, url, method: 'PATCH', body })
+          <T>({ ...config, url, method: 'PATCH', body });
   }
   /**
    * Prepare request configuration
@@ -418,7 +417,7 @@ const data = await this.parseResponse
   O: Add content,}
 }
       headers.set(key, value)
-    })
+    });
     return headers
   }
   /**
@@ -504,7 +503,7 @@ const data = await this.parseResponse
   p: Date.now(),
       expiresA,
   t: Date.now() + this.config.cacheTimeout,
-    })
+    });
   }
   /**
    * Clear cache

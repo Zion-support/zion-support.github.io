@@ -66,7 +66,7 @@ export class RateLimiter {
     // No record or expired
     if (!record || now > record.resetTime) {
       const resetTime = now + this.config.windowMs
-      this.requests.set(identifier, { count: 1, resetTime })
+      this.requests.set(identifier, { count: 1, resetTime });
       return { allowed: true, remaining: this.config.max - 1, resetTime }
     // Increment count
     if (record.count < this.config.max) {
@@ -85,7 +85,7 @@ export class RateLimiter {
   }
 }
       const resetTime = now + this.config.windowMs
-      this.requests.set(identifier, { count: 1, resetTime })
+      this.requests.set(identifier, { count: 1, resetTime });
       return { allowed: true, remaining: this.config.max - 1, resetTime }
     // Increment count
     if (record.count
@@ -142,7 +142,7 @@ $4}),
     max: 5,
     message: 'Too many login attempts. Please try again later.',
     skipSuccessfulRequests: true
-  })
+  });
  * Get client identifier from request
  * @param request - Request object
  * @returns Client identifier (IP address or user ID)
@@ -211,7 +211,7 @@ export const rateLimiters = {
     auth: new RateLimiter({max: 5,
     message: 'Too many login attempts. Please try again later.',
     skipSuccessfulRequests: true
-  })
+  });
  * Get client identifier from request
  * @param request - Request object
  * @returns Client identifier (IP address or user ID)

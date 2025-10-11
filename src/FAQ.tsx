@@ -74,7 +74,7 @@ key={tagIndex}
                   <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0" />
                 )}
               </button>
-              
+
               {expandedItems.has(index) && (
                 <div className="px-6 pb-4 border-t border-gray-700">
                   <p className="text-gray-300 leading-relaxed mt-4">{item.answer}</p>
@@ -196,7 +196,7 @@ description="Frequently asked questions about Zion's AI marketplace, IT services
 keywords="FAQ, frequently asked questions, Zion, AI marketplace, IT services, support";
 canonical="https://ziontechgroup.com/faq"
       />
-      
+
       <main className="pt-16">
         {/* Hero Section */}
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
@@ -601,7 +601,7 @@ description="Find answers to common questions about Zion Tech Group}, the world'
 keywords="FAQ, help, support, Zion Tech Group, AI marketplace, tech services, questions, answers";
 canonical="https://ziontechgroup.com/faq"
       />
-      
+
       <div className="min-h-screen bg-zion-blue-dark">
         {/* Hero Section */}
         <section className="pt-20 pb-16 bg-gradient-to-b from-zion-blue to-zion-blue-dark">
@@ -612,7 +612,7 @@ Frequently Asked Questions
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">;
 Find answers to the most common questions about Zion Tech Group and our AI marketplace platform.
             </p>
-            
+
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto relative">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
@@ -698,7 +698,7 @@ description="Find answers to frequently asked questions about Zion Tech Group, t
 keywords="FAQ, Zion Tech Group, AI marketplace, tech services, help, support";
 canonical="https://ziontechgroup.com/faq"
       />
-      
+
       <main className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
@@ -718,7 +718,7 @@ Everything you need to know about Zion Tech Group
 Find answers to the most common questions about Zion's AI and technology marketplace
             </p>
           </div>
-          
+
           <div className="max-w-4xl mx-auto mb-16">
             <Accordion type="single" collapsible className="w-full">
               {faqs.map((faq), index) => (
@@ -741,7 +741,7 @@ description="Find answers to common questions about Zion Tech Group, the world's
 keywords="FAQ, help, support, Zion Tech Group, AI marketplace, tech services";
 canonical="https://ziontechgroup.com/faq"
       />
-      
+
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
@@ -839,7 +839,7 @@ className="inline-flex items-center px-6 py-3 bg-zion-purple text-white font-med
               >;
 Contact Support
               </a>
-          
+
           <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">
             <h2 className="text-3xl font-bold text-white mb-6">Still have questions?</h2>
             <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">;

@@ -248,8 +248,7 @@ class AdvancedAnalytics {
         }
       }
       this.trackEvent(clickEvent)
-    }
-  )
+    });
   }
   /**
    * Track scrolls
@@ -298,8 +297,7 @@ class AdvancedAnalytics {
         }
         this.trackEvent(scrollEvent)
       }, 100)
-    }
-  )
+    });
   }
   /**
    * Track form submissions
@@ -343,8 +341,7 @@ class AdvancedAnalytics {
         }
       }
       this.trackEvent(submitEvent)
-    }
-  )
+    });
   }
   /**
    * Track downloads
@@ -388,8 +385,7 @@ class AdvancedAnalytics {
         }
         this.trackEvent(downloadEvent)
       }
-    }
-  )
+    });
   }
   /**
    * Track performance metrics
@@ -406,7 +402,7 @@ class AdvancedAnalytics {
       // Track Core Web Vitals
       new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content,}
-})
+});
         for (const entry of list.getEntries()) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -440,7 +436,7 @@ class AdvancedAnalytics {
           }
         }
 
-      }).observe({ entryTypes: ['paint'] })
+      }).observe({ entryTypes: ['paint'] });
       // Track navigation timing
       window.addEventListener('load', () => {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -475,8 +471,7 @@ class AdvancedAnalytics {
           }
         }
         this.trackEvent(performanceEvent)
-      }
-  )
+      });
     }
   }
   /**
@@ -494,7 +489,7 @@ class AdvancedAnalytics {
         this.trackPageView()
         lastUrl = window.location.href
       }
-    })
+    });
     observer.observe(document.body, {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -502,7 +497,7 @@ class AdvancedAnalytics {
   t: true,
       subtre,
   e: true,)
-    })
+    });
   }
   /**
    * Setup network monitoring
@@ -518,12 +513,12 @@ class AdvancedAnalytics {
 }
       this.isOnline = true
       this.flushEventQueue()
-    })
+    });
     window.addEventListener('offline', () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       this.isOnline = false
-    })
+    });
   }
   /**
    * Track custom event
@@ -575,7 +570,7 @@ class AdvancedAnalytics {
         },
         bod)
   y: JSON.stringify(event)
-      })
+      });
     } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -819,7 +814,7 @@ let label = id || className || text?.substring(0, 50) || tagName
   O: Add content,}
 }
 
-            acc.push({ url: event.url, views: 1 })
+            acc.push({ url: event.url, views: 1 });
           }
           return acc
         },
@@ -869,7 +864,7 @@ let label = id || className || text?.substring(0, 50) || tagName
         },
         bod)
   y: JSON.stringify(session)
-      })
+      });
     } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }

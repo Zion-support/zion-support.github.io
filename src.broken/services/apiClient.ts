@@ -79,7 +79,7 @@ export const globalAxiosErrorHandler = (error: unknown) => {
     showApiError(error)
   } else {
     // Log background errors without showing toast
-    logDebug(`Background API request failed (${status} ${method}): ${url}`, { data: typeof error === 'object' && error && 'response' in error && error.response && 'data' in error.response ? (error.response as { data?: unknown }).data : undefined })
+    logDebug(`Background API request failed (${status} ${method}): ${url}`, { data: typeof error === 'object' && error && 'response' in error && error.response && 'data' in error.response ? (error.response as { data?: unknown }).data : undefined });
   }
   return Promise.reject(error)
 }
@@ -91,9 +91,9 @@ axios.interceptors.response.use(
 const API_BASE = axios.defaults.baseURL
 const apiClient = axios.create({
   baseURL: import.meta.env.VITE_API_URL || '/api',
-  withCredentials: true})
+  withCredentials: true});
   withCredentials: true,
-})
+});
 export function setAuthToken(token: string) {
   (apiClient.defaults.headers.common as any).Authorization = `Bearer ${token}`
 }
@@ -104,9 +104,9 @@ apiClient.interceptors.response.use(
     if (status === 401) {
       try {
         if (!supabase) throw new Error('Supabase client not initialized')
-        await supabase.auth.signOut({ scope: 'global' })
+        await supabase.auth.signOut({ scope: 'global' });
       } catch (e) {
-        logErrorToProduction('Failed to logout after 401', { data: e })
+        logErrorToProduction('Failed to logout after 401', { data: e });
       }
       if (typeof window !== 'undefined') {
         window.location.assign('/login')
@@ -116,6 +116,5 @@ apiClient.interceptors.response.use(
       toast.error(message)
     }
     return Promise.reject(error)
-  }
-)
+  });
 export default apiClient

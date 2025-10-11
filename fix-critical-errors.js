@@ -32,16 +32,16 @@ function fixCriticalErrors(filePath) {/* TODO: Fix JSX expression */}
           keepCurrent = false
           continue
         }
-        
+
         if (!inConflict || keepCurrent) {
           result.push(line)
         }
       }
-      
+
       content = result.join('\n')
       modified = true
     }
-    
+
     // Fix common syntax errors
     content = content.replace(/export\s+return/g, 'export const rateLimitingMiddleware =')
     content = content.replace(/}\s*;\s*$/gm, '}')
@@ -63,10 +63,10 @@ function fixCriticalErrors(filePath) {/* TODO: Fix JSX expression */}
       content = content.replace(/catch\s*{\s*}/g, 'catch (error) {/* TODO: Fix JSX expression */}
   r:", error); }')
     }
-    
+
     if (filePath.includes('middleware')) {/* TODO: Fix JSX expression */}
     }
-    
+
     // Write the cleaned content back
     fs.writeFileSync(filePath, content, 'utf8')
     return modified
@@ -93,7 +93,7 @@ function findFilesToFix(dir) {/* TODO: Fix JSX expression */}
       }
     }
   }
-  
+
   walkDir(dir)
   return files
 }

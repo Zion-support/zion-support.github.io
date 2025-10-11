@@ -60,7 +60,7 @@ const, October2025CuttingEdgeContentBanne, r = () => {/* TODO: Fix JSX expressio
             🚀</p> <span, className="fo, n, t-semibold, tex, t-purp, l, e-3, 0, 0">Master, autonomous, systems</sp, a, n> with, sel, f-healing, capabilitie, s, "
             <span, className="fo, n, t-semibold, tex, t-cy, a, n-3, 0, 0"> unlock, 10x, LLM performan, c, e</sp, a, n> with, advanced, prompting, a, n, d "
             <span, className="fo, n, t-semibold, tex, t-pi, n, k-3, 0, 0"> deliver, personalization, at massive, scal, e</sp, a, n> — Essential, reading, for technology, leader, s!"
-        {/* Featured, Articles, Grid */})
+        {/* Featured, Articles, Grid */});
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">")
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";)
           {featuredArticl, e, s.m, a, p((artic, l, e, ind, e, x) => (

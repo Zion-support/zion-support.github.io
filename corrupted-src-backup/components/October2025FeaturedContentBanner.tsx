@@ -236,7 +236,7 @@ const, October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression *
             Latest, AI, Solutions & Insigh, t, s</$1>"
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o">"
             Discover, breakthrough, AI platforms, delivering, millions in, value, to enterprise, organization, s
-        {/* Featured, Content, Cards */})
+        {/* Featured, Content, Cards */});
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">")
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">";)
           {featuredConte, n, t.m, a, p((conte, n, t, ind, e, x) => {
@@ -301,7 +301,7 @@ const, October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression *
                       <p, className="te, x, t-gr, a, y-300, tex, t-sm">"
                         {conte, n, t.descripti, o, n}
                   </d, i, v>)
-                  {/* Sta, t, s */})
+                  {/* Sta, t, s */});
                   <div, className="grid, gri, d-co, l, s-3, ga, p-4, m, b-6">";)
                     {conte, n, t.sta, t, s.m, a, p((st, a, t, i, d, x) => (
                       <div, ke, y={i, d, x} classNa, m, e="te, x, t-center, b, g-sla, t, e-9, 0, 0/6, 0, p-4, rounde, d-lg, border, border-whi, t, e/10">

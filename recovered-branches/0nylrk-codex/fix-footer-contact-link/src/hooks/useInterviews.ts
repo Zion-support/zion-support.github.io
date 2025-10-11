@@ -15,7 +15,7 @@ export function useInterviews() {
         title: "Authentication required",
         description: "You must be logged in to request interviews",
         variant: "destructive"
-      })
+      });
       return null
     }
     setIsLoading(true)
@@ -34,9 +34,9 @@ export function useInterviews() {
           meeting_platform: interviewRequest.meeting_platform,
           interview_type: interviewRequest.interview_type,
           title: interviewRequest.title,
-          status: 'requested'})
+          status: 'requested'});
           status: 'requested',
-        })
+        });
         .select('*')
         .single()
       if (insertError) {
@@ -79,7 +79,7 @@ export function useInterviews() {
           talents:talent_id(id, full_name, profile_picture_url)
         `)
         .or(`client_id.eq.${user.id},talent_id.eq.${user.id}`)
-        .order('scheduled_date', { ascending: true })
+        .order('scheduled_date', { ascending: true });
       if (fetchError) {
         console.error("Error fetching interviews:", fetchError)
         setError(fetchError.message)
@@ -127,7 +127,7 @@ export function useInterviews() {
         title: "Authentication required",
         description: "You must be logged in to respond to interviews",
         variant: "destructive"
-      })
+      });
       return false
     }
     setIsLoading(true)
@@ -139,7 +139,7 @@ export function useInterviews() {
         .update({
           status: response.status,
           updated_at: new Date().toISOString()
-        })
+        });
         .eq('id', interviewId)
       if (updateError) {
         console.error("Error responding to interview:", updateError)
@@ -202,9 +202,9 @@ export function useInterviews() {
         type,
         title,
         message,
-        related_id: relatedId})
+        related_id: relatedId});
         related_id: relatedId,
-      })
+      });
     } catch (error) {
       console.error("Error creating notification:", error)
     }
@@ -236,7 +236,7 @@ export function useInterviews() {
         .update({
           status: 'cancelled',
           updated_at: new Date().toISOString()
-        })
+        });
         .eq('id', interviewId)
       if (updateError) {
         setError(updateError.message)

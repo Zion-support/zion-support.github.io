@@ -3,7 +3,7 @@ export type SupportedProvider = 'openai' | 'deepl' | 'none'
 const provider: SupportedProvider = (process.env.TRANSLATION_PROVIDER as SupportedProvider) || (process.env.OPENAI_API_KEY ? 'openai' : process.env.DEEPL_API_KEY ? 'deepl' : 'none')
 let openai: OpenAI | null = null
 if (provider === 'openai') {
-  openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
+  openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 }
 async function translateWithOpenAI(text: string, to: string, from?: string): Promise<string> {
   if (!openai) throw new Error('OpenAI not configured')
@@ -14,11 +14,11 @@ async function translateWithOpenAI(text: string, to: string, from?: string): Pro
     messages: [
       { role: 'system', content: system },
       { role: 'user', content: user }],
-    temperature: 0.2})
+    temperature: 0.2});
       { role: 'user', content: user },
     ],
     temperature: 0.2,
-  })
+  });
   return (completion.choices?.[0]?.message?.content || '').trim()
 }
 async function translateWithDeepL(text: string, to: string, from?: string): Promise<string> {
@@ -33,11 +33,11 @@ async function translateWithDeepL(text: string, to: string, from?: string): Prom
     headers: {
       'Authorization': `DeepL-Auth-Key ${key}`,
       'Content-Type': 'application/x-www-form-urlencoded'},
-    body: params.toString()})
+    body: params.toString()});
       'Content-Type': 'application/x-www-form-urlencoded',
     },
     body: params.toString(),
-  })
+  });
   const data = await res.json()
   if (!res.ok) throw new Error(data?.message || 'DeepL error')
   return data?.translations?.[0]?.text || ''

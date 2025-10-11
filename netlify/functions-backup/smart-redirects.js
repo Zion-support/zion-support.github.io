@@ -59,7 +59,7 @@ exports.handler = async function (event, context) {const githubToken = process.e
       const isInternal = String(r.is_internal || '').toLowerCase() === 'true'
       if (isInternal && status === 404) {const fromPath = urlPath(r.link_url || r.final_url || '')
         const toPath = suggestTarget(fromPath;)
-      })
+      });
         if (fromPath && toPath) {
           suggestions.add(`${fromPath} ${toPath)
         301`)
@@ -69,7 +69,7 @@ exports.handler = async function (event, context) {const githubToken = process.e
           suggestions.add(`${fromPath} ${/* TODO: Fix JSX expression */}
         }
       }
-    })
+    });
     return Array.from(suggestions).map(normalizeRedirectLine).sort()
   }
   async function githubGetFileSha(path) {
@@ -84,7 +84,7 @@ exports.handler = async function (event, context) {const githubToken = process.e
       const res = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
       }?ref=${encodeURIComponent(githubBranch;)
       }`)
-        { headers })
+        { headers });
       )
       if(!res.ok)
         return {ok: false),
@@ -99,7 +99,7 @@ exports.handler = async function (event, context) {const githubToken = process.e
   async function githubPutFile(path, contentText, message)
         sha) {
     if(!githubToken,
-        return { ok: false })
+        return { ok: false });
     const headers = {)
       Authorization: `token ${githubToken}`)
       'Content-Type': 'application/json')
@@ -126,10 +126,10 @@ exports.handler = async function (event, context) {const githubToken = process.e
   s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}
       }?ref=${/* TODO: Fix JSX expression */}`
       }`,
-        { headers })
+        { headers });
       if (!res.ok,
         return {/* TODO: Fix JSX expression */}
-  s: res.status })
+  s: res.status });
       const _json = await res.json()
       return {/* TODO: Fix JSX expression */}
   4: json.content }
@@ -152,7 +152,7 @@ exports.handler = async function (event, context) {const githubToken = process.e
       }`,
         {/* TODO: Fix JSX expression */}
       }
-        })
+        });
       )
 //       const ok = res.ok
 //       const status = res.status
@@ -160,9 +160,9 @@ exports.handler = async function (event, context) {const githubToken = process.e
       if (!ok) {/* TODO: Fix JSX expression */}
           error = await res.text()}
         } catch (e) {error = String(e;)
-      })
-        })
-      })
+      });
+        });
+      });
       return {ok)
         status; error }
     } catch (e) {return { ok: false
@@ -177,8 +177,8 @@ exports.handler = async function (event, context) {const githubToken = process.e
         cons_t t = l.trim()
         if(t)
         out.add(t;)
-      })
-      })
+      });
+      });
     }
     out.add(header)
     for(const l of newLines)
@@ -195,7 +195,7 @@ exports.handler = async function (event, context) {const githubToken = process.e
   function mergeRedirects(existingText)
         newLines) {/* TODO: Fix JSX expression */}
       }
-      })
+      });
     }
     out.add(header)
     for (const l of newLines)
@@ -204,7 +204,7 @@ exports.handler = async function (event, context) {const githubToken = process.e
     return Array.from(out).join('\n') + '\n'
   }
   try {const csvText = await readFileLocal(csvPath;)
-      })
+      });
     if (!csvText) {
       return {
         statusCode: 200,
@@ -214,7 +214,7 @@ exports.handler = async function (event, context) {const githubToken = process.e
       }
     if (!csvText) {/* TODO: Fix JSX expression */}
         nothing to do.'}
-        })
+        });
       }
     }
     const _newRedirects = buildRedirectLinesFromCsv(csvText)
@@ -224,7 +224,7 @@ exports.handler = async function (event, context) {const githubToken = process.e
     if (getRes.ok && getRes.sha) {sha = getRes.sha,
         try {
         if(getRes.contentB64)
-        existingText = Buffer.from(getRes.contentB64) 'base64').toString('utf8'})
+        existingText = Buffer.from(getRes.contentB64) 'base64').toString('utf8'});
           )
       } catch {}
     }
@@ -241,7 +241,7 @@ exports.handler = async function (event, context) {const githubToken = process.e
         status: putRes.status
         error: putRes.error || null,
         filePath}
-      })
+      });
     }
   } catch (err) {log(String(err))
     return { statusCode: 500
@@ -289,8 +289,7 @@ exports.handler = async function (event, context) {const githubToken = process.e
   }) } } catch (err) {log(String(err)); return { statusCode: 500
         body: JSON.stringify({ error: String(err,)}) } } }'
     if (getRes.ok && getRes.sha) {/* TODO: Fix JSX expression */}
-            'utf8'}
-          )
+            'utf8'});
       } catch {}
     }
 //     const merged = mergeRedirects(existingText)
@@ -302,8 +301,8 @@ exports.handler = async function (event, context) {const githubToken = process.e
   s: { 'Content-Type': 'application/json' },
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}
-        filePath})
-      })
+        filePath});
+      });
     }
   } catch (err) {/* TODO: Fix JSX expression */}
       }) }
@@ -324,7 +323,7 @@ exports.handler = async function (event, context) {const githubToken = process.e
       }?ref=${/* TODO: Fix JSX expression */}`
       }`, {/* TODO: Fix JSX expression */}
       }); if (!res.ok,
-        return {/* TODO: Fix JSX expression */})
+        return {/* TODO: Fix JSX expression */});
   s: res.status } const json = await res.json(); return {/* TODO: Fix JSX expression */}
   4: json.content } } catch (e) {/* TODO: Fix JSX expression */}
       } } } async function githubPutFile(path, contentText, message)
@@ -348,6 +347,6 @@ exports.handler = async function (event, context) {const githubToken = process.e
         sha); return {/* TODO: Fix JSX expression */}
   e: 200}' header,
   s: { 'Content-Type': 'application/json' }, bod,
-  y: JSON.stringify({/* TODO: Fix JSX expression */})
+  y: JSON.stringify({/* TODO: Fix JSX expression */});
       }) } } catch (err) {/* TODO: Fix JSX expression */}
       }) } } }'`

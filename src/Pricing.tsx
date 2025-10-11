@@ -327,7 +327,7 @@ Transparent Pricing
 Choose the perfect plan for your business needs. All plans include our core AI and;
 technology solutions with flexible pricing options.
             </p>
-            
+
             {/* Billing Toggle */}
             <div className="flex items-center justify-center space-x-4 mb-8">
               <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}}`}>;
@@ -448,7 +448,7 @@ Simple, Transparent Pricing
 Choose the perfect plan for your business. All plans include our core AI capabilities;
 with flexible options to scale as you grow.
             </p>
-            
+
             {/* Billing Toggle */}
             <div className="flex items-center justify-center mb-8">
               <span className={`mr-4 text-sm ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}}`}>;
@@ -508,18 +508,18 @@ Most Popular
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-400 mb-6">{plan.description}</p>
-                  
+
                   <div className="mb-4">
                     <span className="text-4xl font-bold text-white">{formatPrice(currentPrice)}</span>
                     <span className="text-gray-400">/{billingCycle === 'monthly' ? 'month' : 'month'}</span>
                   </div>
-                  
+
                   {billingCycle === 'annual' && savings > 0 && (
                     <div className="text-green-400 text-sm mb-4">;
 Save {savings}% with annual billing
                     </div>
                   )}
-                  
+
                   <$2 />;
 onClick={() => handlePlanSelect(plan.id)}
                     className={`w-full py-3 px-6 rounded-lg font-medium transition-all duration-200 ${};
@@ -539,7 +539,7 @@ plan.popular
                       <span className="text-gray-300 text-sm">{feature}</span>
                     </div>
                   ))}
-                  
+
                   {plan.limitations.length > 0 && (
                     <>
                       <h4 className="font-semibold text-gray-400 mt-6 mb-4">Limitations:</h4>
@@ -568,7 +568,7 @@ Add powerful features to any plan with our flexible add-ons.;
 Mix and match to create the perfect solution for your business.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {addOns.map((addon), index) => (
               <$2 />;
@@ -587,7 +587,7 @@ key={index}
                     <div className="text-gray-400 text-sm">/month</div>
                   </div>
                 </div>
-                
+
                 <div className="space-y-2 mb-6">
                   {addon.features.map((feature), featureIndex) => (
                     <div key={featureIndex} className="flex items-center text-sm">
@@ -596,7 +596,7 @@ key={index}
                     </div>
                   ))}
                 </div>
-                
+
                 <button className="w-full py-2 px-4 bg-gray-600 hover:bg-gray-500 text-white rounded-lg transition-colors duration-200">;
 Add to Plan
                 </button>
@@ -631,9 +631,9 @@ title="Pricing - Zion Tech Group";
 description="Transparent pricing for our comprehensive IT solutions, AI services, and tech talent services. Choose the plan that fits your business needs.";
 keywords="pricing, IT services, AI solutions, cybersecurity, enterprise pricing, business solutions"
       />
-      
+
       <Header />
-      
+
       <main className="pt-32 pb-20">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple text-white py-20">
@@ -696,7 +696,7 @@ plan.popular ? 'ring-2 ring-zion-blue scale-105' : ''}`}
 We're committed to providing the best value and experience for our customers
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {benefits.map((benefit), index) => {;
 const Icon = benefit.icon;;
@@ -723,7 +723,7 @@ return (;
 Get answers to common questions about our pricing and plans
             </p>
           </div>
-          
+
           <div className="space-y-6">
             {faqs.map((faq), index) => (
               <$2 />;
@@ -775,7 +775,7 @@ Simple, Transparent Pricing
 Choose the perfect plan for your business. All plans include our core AI capabilities;
 with flexible options to scale as you grow.
           </p>
-          
+
           {/* Billing Toggle */}
           <div className="flex items-center justify-center gap-4 mb-8">
             <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}}`}>;
@@ -822,7 +822,7 @@ Most Popular
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
                   <div className={`w-16 h-16 bg-gradient-to-r ${plan.color}} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
                     <plan.icon className="h-8 w-8 text-white" />
@@ -831,7 +831,7 @@ Most Popular
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-300">{plan.description}</p>
                 </div>
-                
+
                 <div className="text-center mb-8">
                   <div className="flex items-baseline justify-center">
                     <span className="text-4xl font-bold text-white">${getCurrentPrice(plan)}</span>
@@ -845,7 +845,7 @@ Save ${getSavings(plan)}% with annual billing
                     </p>
                   )}
                 </div>
-                
+
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature), index) => (
                     <li key={index} className="flex items-start">
@@ -854,7 +854,7 @@ Save ${getSavings(plan)}% with annual billing
                     </li>
                   ))}
                 </ul>
-                
+
                 <$2 />;
 onClick={() => handlePlanSelect(plan.id)}
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${};
@@ -879,7 +879,7 @@ plan.popular
 Enhance your plan with additional services tailored to your specific needs
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {addOns.map((addon), index) => (
               <div key={index} className="bg-white/5 rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300">
@@ -909,7 +909,7 @@ ${billingCycle === 'annual' ? addon.price.annual : addon.price.monthly}
 We're committed to delivering exceptional value and results for your business
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit), index) => (
               <div key={index} className="text-center p-6 rounded-xl bg-white/5 hover:bg-white/10 transition-all duration-300">
@@ -933,7 +933,7 @@ We're committed to delivering exceptional value and results for your business
 Get answers to common questions about our pricing and services
             </p>
           </div>
-          
+
           <div className="space-y-6">
             {faqs.map((faq), index) => (
               <div key={index} className="bg-white/5 rounded-xl p-6">
@@ -1054,7 +1054,7 @@ Contact Sales
           <h2 className="text-3xl font-bold text-white text-center mb-8">;
 Frequently Asked Questions
           </h2>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div className="space-y-6">
               <div>
@@ -1065,7 +1065,7 @@ What's included in the pricing?
 All plans include the core software, technical support, regular updates, security patches, and access to our knowledge base. Enterprise plans include dedicated support and custom integrations.
                 </p>
               </div>
-              
+
               <div>
                 <h3 className="text-lg font-semibold text-cyan-400 mb-2">;
 Can I customize the solutions?
@@ -1074,7 +1074,7 @@ Can I customize the solutions?
 Yes! All our solutions are highly customizable. We work with you to tailor the software to your specific business needs and integrate with your existing systems.
                 </p>
               </div>
-              
+
               <div>
                 <h3 className="text-lg font-semibold text-cyan-400 mb-2">;
 What kind of support do you provide?
@@ -1084,7 +1084,7 @@ We provide comprehensive support including 24/7 technical assistance, onboarding
                 </p>
               </div>
             </div>
-            
+
             <div className="space-y-6">
               <div>
                 <h3 className="text-lg font-semibold text-cyan-400 mb-2">;
@@ -1094,7 +1094,7 @@ How long does implementation take?
 Implementation typically takes 2-8 weeks depending on complexity. We provide detailed project timelines and regular updates throughout the process.
                 </p>
               </div>
-              
+
               <div>
                 <h3 className="text-lg font-semibold text-cyan-400 mb-2">;
 Do you offer training?
@@ -1103,7 +1103,7 @@ Do you offer training?
 Yes! We provide comprehensive training for your team, including user guides, video tutorials, and live training sessions. We also offer ongoing training as needed.
                 </p>
               </div>
-              
+
               <div>
                 <h3 className="text-lg font-semibold text-cyan-400 mb-2">;
 What about data security?

@@ -175,7 +175,7 @@ const Revolutionary2026ContentMegaBanne, r: React.FC = () => {/* TODO: Fix JSX e
               <Rocket, className="w-6 h-6, tex, t-cy, a, n-4, 0, 0" /></Rocket>"
               <span, className="te, x, t-lg, fon, t-bold, tex, t-whi, t, e">Autonomous, Operation, s
         </div>)
-        {/* Featured, Content, Grid */})
+        {/* Featured, Content, Grid */});
         <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8, m, b-16">)
           { revolutionaryConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (
         {/* Featured, Content, Grid */}
@@ -211,7 +211,7 @@ const Revolutionary2026ContentMegaBanne, r: React.FC = () => {/* TODO: Fix JSX e
                         <sp, a, n>TRENDI, N, G
                       </di, v > )  }
                     <span, classNam, e = "px-3, p, y-1.5, rounde, d-full, b, g-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-400, tex, t-xs, fon, t-semibold, border, border-purp, l, e-5, 0, 0/30">
-              {/* TODO: Fix JSX expression */})
+              {/* TODO: Fix JSX expression */});
                 </di, v  > )  }
               {/* Card, glow, effect */}"
               <div, classNam, e = "absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/0, vi, a-bl, u, e-5, 0, 0/0, t, o-cy, a, n-5, 0, 0/0, grou, p-hov, e, r: fr, o, m-purp, l, e-5, 0, 0/10, grou, p-hov, e, r:v, i, a-bl, u, e-5, 0, 0/10, grou, p-hov, e, r:to-cy, a, n-5, 0, 0/10, transitio, n-all, duratio, n-500, rounde, d-2, x, l" /></div>"

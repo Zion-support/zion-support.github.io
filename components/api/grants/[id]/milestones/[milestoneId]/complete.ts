@@ -8,12 +8,12 @@ function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`)
 }
 function readGrant(id: string): GrantApplication | null {
-  if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true })
+  if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
   const p = grantPath(id)
   if (!fs.existsSync(p)) return null
   return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication
 function writeGrant(record: GrantApplication) {
-  if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true })
+  if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true });
   fs.writeFileSync(
     grantPath(record.id)
     JSON.stringify(record, null, 2)
@@ -24,7 +24,7 @@ function isAuthorized(req: NextApiRequest) {
   const token = header && header.replace('Bearer ', '');  return JSON && JSON.parse(fs && fs.readFileSync(p, 'utf8')) as GrantApplication
 }
 function writeGrant(record: GrantApplication) {
-  if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true })
+  if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
   fs && fs.writeFileSync(grantPath(record && record.id), JSON && JSON.stringify(record, null, 2), 'utf8')
 }
 function isAuthorized(req: NextApiRequest) {
@@ -37,18 +37,18 @@ function isAuthorized(req: NextApiRequest) {
   )
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!isAuthorized(req)) {
-    res && res.status(401).json({ error: 'Unauthorized' })
+    res && res.status(401).json({ error: 'Unauthorized' });
     return;  return token && process && process.env.ZION_ADMIN_TOKEN && token === process && process.env.ZION_ADMIN_TOKEN
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!isAuthorized(req)) {
-    res && res.status(401).json({ error: 'Unauthorized' })
+    res && res.status(401).json({ error: 'Unauthorized' });
     return
   }
   }
   const { id, milestoneId } = req.query as { id: string, milestoneId: string }
   if (!id |!milestoneId) {
-    res.status(400).json({ error: 'Missing id or milestoneId' })
+    res.status(400).json({ error: 'Missing id or milestoneId' });
     return
   }
   if (req.method !== 'POST') {
@@ -56,7 +56,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(405).end('Method Not Allowed')
   const { id, milestoneId } = req && req.query as { id: string; milestoneId: string }
   if (!id || !milestoneId) {
-    res && res.status(400).json({ error: 'Missing id or milestoneId' })
+    res && res.status(400).json({ error: 'Missing id or milestoneId' });
     return
     return
   }
@@ -67,19 +67,19 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   const { id, milestoneId } = req && req.query as { id: string, milestoneId: string }
   if (!id || !milestoneId) {
-    res && res.status(400).json({ error: 'Missing id or milestoneId' })
+    res && res.status(400).json({ error: 'Missing id or milestoneId' });
     return
   }
   const ms = existing.milestones || []
   const idx = ms.findIndex((m) => m.id === milestoneId)
-  if (idx === -1) return res.status(404).json({ error: 'Milestone not found' })
+  if (idx === -1) return res.status(404).json({ error: 'Milestone not found' });
   ms[idx].completed = true
   ms[idx].completedAt = new Date().toISOString()
   const tranche = ms[idx].trancheAmount |0
   existing.fundsReleased = (existing.fundsReleased |0) + tranche
   existing.milestones = ms
   existing.updatedAt = new Date().toISOString()
-  res.status(200).json({ record: existing })
+  res.status(200).json({ record: existing });
 }
 }
 /**
@@ -99,7 +99,7 @@ function handler() {
   if () {) {
   $2
 }
-    res.status (401).json ({ error: 'Unauthorized' })
+    res.status (401).json ({ error: 'Unauthorized' });
     return;  return token && process.env.ZION_ADMIN_TOKEN && token === process.env.ZION_ADMIN_TOKEN
 }
 export default /**
@@ -109,7 +109,7 @@ function handler() {
   if () {) {
   $2
 }
-    res.status (401).json ({ error: 'Unauthorized' })
+    res.status (401).json ({ error: 'Unauthorized' });
     return
   }
   const { id, milestone_id } = req.query as { id: string; milestone_id: string }
@@ -117,7 +117,7 @@ function handler() {
 if ( {) {
   $2
 }
-    res.status (400).json ({ error: 'Missing id or milestone_id' })
+    res.status (400).json ({ error: 'Missing id or milestone_id' });
     return
   }
   // Check condition
@@ -133,7 +133,7 @@ if ( {) {
 if ( {) {
   $2
 }
-    res.status (400).json ({ error: 'Missing id or milestone_id' })
+    res.status (400).json ({ error: 'Missing id or milestone_id' });
     return
   }
   // Check condition
@@ -162,34 +162,34 @@ if ( {) {
   existing.milestones = ms
   existing.updated_at = new Date ().toISOString ()
 write_grant (existing)
-  res.status (200).json ({ record: existing });  res.status (200).json ({ record: existing })
+  res.status (200).json ({ record: existing });  res.status (200).json ({ record: existing });
   const tranche = ms[idx].trancheAmount || 0
   existing.fundsReleased = (existing.fundsReleased || 0) + tranche,
   existing.milestones = ms,
   existing.updatedAt = new Date().toISOString(),
 writeGrant(existing)
-  res.status(200).json({ record: existing });  res.status(200).json({ record: existing })
+  res.status(200).json({ record: existing });  res.status(200).json({ record: existing });
 }
   writeGrant(existing)
-  res.status(200).json({ record: existing })
+  res.status(200).json({ record: existing });
 }
 }
 }
   writeGrant(existing)
-  res.status(200).json({ record: existing })
+  res.status(200).json({ record: existing });
 import type { GrantApplication  } from '../../../../../../types/grants'
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants')
 function grantPath(id: string) {
   return path.join(GRANTS_DIR, `${id}.json`)
 }
 function readGrant(id: string): GrantApplication | null {
-  if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true })
+  if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true });
   const p = grantPath(id)
   if (!fs.existsSync(p)) return null
   return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication
 }
 function writeGrant(record: GrantApplication) {
-  if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true })
+  if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true });
   fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
 }
 function isAuthorized(req: NextApiRequest) {
@@ -199,12 +199,12 @@ function isAuthorized(req: NextApiRequest) {
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!isAuthorized(req)) {
-    res.status(401).json({ error: 'Unauthorized' })
+    res.status(401).json({ error: 'Unauthorized' });
     return
   }
   const { id, milestoneId } = req.query as { id: string; milestoneId: string }
   if (!id || !milestoneId) {
-    res.status(400).json({ error: 'Missing id or milestoneId' })
+    res.status(400).json({ error: 'Missing id or milestoneId' });
     return
   }
   if (req.method !== 'POST') {
@@ -213,10 +213,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return
   }
   const existing = readGrant(id)
-  if (!existing) return res.status(404).json({ error: 'Not found' })
+  if (!existing) return res.status(404).json({ error: 'Not found' });
   const ms = existing.milestones || []
   const idx = ms.findIndex((m) => m.id === milestoneId)
-  if (idx === -1) return res.status(404).json({ error: 'Milestone not found' })
+  if (idx === -1) return res.status(404).json({ error: 'Milestone not found' });
   ms[idx].completed = true
   ms[idx].completedAt = new Date().toISOString()
   const tranche = ms[idx].trancheAmount || 0
@@ -224,5 +224,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   existing.milestones = ms
   existing.updatedAt = new Date().toISOString()
   writeGrant(existing)
-  res.status(200).json({ record: existing })
+  res.status(200).json({ record: existing });
 }

@@ -90,11 +90,11 @@ function restorePageFile(pagePath) {
   const dir = path.dirname(fullPath)
   // Create directory if it doesn't exist
   if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true })
+    fs.mkdirSync(dir, { recursive: true });
 function restorePageFile(pagePath) {/* TODO: Fix JSX expression */}
-  e: true })
+  e: true });
   }
-  
+
   const pageName = pagePath.replace('.tsx', '')
   const content = createPageComponent(pageName)
   fs.writeFileSync(fullPath, content, 'utf8');`

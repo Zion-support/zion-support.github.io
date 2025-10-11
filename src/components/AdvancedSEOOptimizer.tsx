@@ -56,23 +56,23 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
         <meta name="keywords" content={keywords.join(', ')} />
         <meta name="author" content="Zion Tech Group" />
         <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />
-        
+
         {/* Canonical URL */}
         {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-        
+
         {/* Open Graph Tags */}
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl || "https://ziontechgroup.com"} />
         {ogImage && <meta property="og:image" content={ogImage} />}
-        
+
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         {ogImage && <meta name="twitter:image" content={ogImage} />}
-        
+
         {/* Structured Data */}
         <script type="application/ld+json">
           {JSON.stringify(finalStructuredData)}
@@ -92,7 +92,7 @@ interface SEOData {/* TODO: Fix JSX expression */}
 interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */}
 }
 const,
-  AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({/* TODO: Fix JSX expression */})
+  AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({/* TODO: Fix JSX expression */});
 }) => {/* TODO: Fix JSX expression */}
     }
     const baseStructuredData = {/* TODO: Fix JSX expression */}
@@ -198,7 +198,7 @@ const,
     }
   }, [structuredData])
   useEffect(() => {/* TODO: Fix JSX expression */}
-          })
+          });
         }
       }
     }

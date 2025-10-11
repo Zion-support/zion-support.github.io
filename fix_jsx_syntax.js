@@ -8,7 +8,7 @@ try {)
 }
 }
       //Fix common JSX syntax issues};)
-      //1. Fix key prop placement: <div>\nkey={...} -> <\nkey={...})$2 />;
+      //1. Fix key prop placement: <div>\nkey={...props} -> <\nkey={...props})$2 />;
 if (keyPropFix !== content) {;
 content = keyPropFix;
 modified = true;
@@ -16,12 +16,12 @@ async function main() {/* TODO: Fix JSX expression */}
 }
   //Find all TSX files in src/components
   //   files.forEach(file => {/* TODO: Fix JSX expression */}
-  placement: <div>\nkey={...} -> <\nkey={...})$2 />;
+  placement: <div>\nkey={...props} -> <\nkey={...props})$2 />;
 if (keyPropFix !== content) {/* TODO: Fix JSX expression */}
       }
 
       //2. Fix onClick prop,;,
-placement: <button>\nonClick={...} -> <\nonClick={...}$2 />;
+placement: <button>\nonClick={...props} -> <\nonClick={...props}$2 />;
 const onClickFix = content.replace();
         /<(\w+)>\s*\n\s*onClick=\{([^}]+)\}/g,
         '<$1\nonClick={$2}'
@@ -30,7 +30,7 @@ if (onClickFix !== content) {/* TODO: Fix JSX expression */}
       }
 
       //3. Fix className prop,;,
-placement: <div>\nclassName={...} -> <\nclassName={...}$2 />;
+placement: <div>\nclassName={...props} -> <\nclassName={...props}$2 />;
 const classNameFix = content.replace();
         /<(\w+)>\s*\n\s*className=\{([^}]+)\}/g,
         '<$1\nclassName={$2}'
@@ -39,7 +39,7 @@ if (classNameFix !== content) {/* TODO: Fix JSX expression */}
       }
 
       //4. Fix style prop,;,
-placement: <div>\nstyle={...} -> <\nstyle={...}$2 />;
+placement: <div>\nstyle={...props} -> <\nstyle={...props}$2 />;
 if (styleFix !== content) {/* TODO: Fix JSX expression */}
       }
 
@@ -90,7 +90,7 @@ if (modified) {/* TODO: Fix JSX expression */}
         //         }
     } catch (error) {/* TODO: Fix JSX expression */}
       //       }
-  })
+  });
   //   }
 
 // main().catch(console.error)</div></div></div></div></button></button></button></button>

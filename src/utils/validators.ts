@@ -19,11 +19,11 @@ export const validateURL = (url: string): ValidationResult => {
   if (!url) {
     return { isValid: false, error: 'URL is required' }
   }
-  
+
   if (!isValidUrl(url)) {
     return { isValid: false, error: 'Invalid URL format' }
   }
-  
+
   return { isValid: true }
 }
 // String Length Validation
@@ -36,15 +36,15 @@ export const validateLength = (
   if (!value) {
     return { isValid: false, error: `${fieldName} is required` }
   }
-  
+
   if (value.length < min) {
     return { isValid: false, error: `${fieldName} must be at least ${min} characters long` }
   }
-  
+
   if (value.length > max) {
     return { isValid: false, error: `${fieldName} must be no more than ${max} characters long` }
   }
-  
+
   return { isValid: true }
 }
 // Password Validation
@@ -60,22 +60,22 @@ export const validatePassword = (password: string): ValidationResult => {
   if (!password) {
     return { isValid: false, error: 'Password is required' }
   }
-  
+
   if (password.length < 8) {
     return { isValid: false, error: 'Password must be at least 8 characters long' }
   }
-  
+
   if (password.length > 128) {
     return { isValid: false, error: 'Password must be no more than 128 characters long' }
   }
-  
+
   if (!isValidPassword(password)) {
     return { 
       isValid: false, 
       error: 'Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character' 
     }
   }
-  
+
   return { isValid: true }
 }
 // HTML Sanitization
@@ -94,24 +94,24 @@ export const validateDate = (dateString: string): ValidationResult => {
   if (!dateString) {
     return { isValid: false, error: 'Date is required' }
   }
-  
+
   // Check if the date string matches YYYY-MM-DD format
   const dateRegex = /^\d{4}-\d{2}-\d{2}$/
   if (!dateRegex.test(dateString)) {
     return { isValid: false, error: 'Invalid date format. Use YYYY-MM-DD' }
   }
-  
+
   const date = new Date(dateString)
   if (isNaN(date.getTime())) {
     return { isValid: false, error: 'Invalid date' }
   }
-  
+
   // Check if the date is valid (e.g., not 2025-13-01)
   const isoString = date.toISOString().split('T')[0]
   if (isoString !== dateString) {
     return { isValid: false, error: 'Invalid date' }
   }
-  
+
   return { isValid: true }
 }
 // Credit Card Validation (Luhn Algorithm)
@@ -119,13 +119,13 @@ export const validateCreditCard = (cardNumber: string): ValidationResult => {
   if (!cardNumber) {
     return { isValid: false, error: 'Credit card number is required' }
   }
-  
+
   // Remove spaces and non-digits
   const cleaned = cardNumber.replace(/\D/g, '')
   if (cleaned.length < 13 || cleaned.length > 19) {
     return { isValid: false, error: 'Invalid credit card number length' }
   }
-  
+
   // Luhn algorithm
   let sum = 0
   let isEven = false
@@ -137,15 +137,15 @@ export const validateCreditCard = (cardNumber: string): ValidationResult => {
         digit -= 9
       }
     }
-    
+
     sum += digit
     isEven = !isEven
   }
-  
+
   if (sum % 10 !== 0) {
     return { isValid: false, error: 'Invalid credit card number' }
   }
-  
+
   return { isValid: true }
 }
 // JSON Validation
@@ -153,7 +153,7 @@ export const validateJSON = (jsonString: string): ValidationResult => {
   if (!jsonString) {
     return { isValid: false, error: 'JSON string is required' }
   }
-  
+
   try {
     JSON.parse(jsonString)
     return { isValid: true }
@@ -166,7 +166,7 @@ export const validateRequired = (value: any, fieldName: string = 'Field'): Valid
   if (value === null || value === undefined || value === '') {
     return { isValid: false, error: `${fieldName} is required` }
   }
-  
+
   return { isValid: true }
 }
 // Composite Validation
@@ -180,7 +180,7 @@ export const validateComposite = (
       return result
     }
   }
-  
+
   return { isValid: true }
 }
 // Async Validation Helper

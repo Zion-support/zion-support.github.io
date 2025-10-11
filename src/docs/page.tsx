@@ -182,10 +182,10 @@ keywords={['documentation', 'API docs', 'guides', 'tutorials', 'integration', 'A
           <section className="text-center mb-16">
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text">;
 Documentation
-  
+
             <p className="text-xl text-cyan-400 mb-8">;
 Everything you need to build with AI,
-  
+
             <p className="text-lg text-gray-300 max-w-4xl mx-auto">;
 Comprehensive guides, API references, and tutorials to help you;
 integrate and optimize our AI services for your business.
@@ -276,13 +276,13 @@ to="/contact";
 className="cyber-button px-8 py-4 text-lg font-semibold inline-flex items-center justify-center">
                   <MessageSquare className="w-5 h-5 mr-2" />;
 Contact Our Team
-  
+
                 <$2 />;
 to="/demo";
 className="cyber-button-secondary px-8 py-4 text-lg font-semibold inline-flex items-center justify-center">
                   <Play className="w-5 h-5 mr-2" />;
 Request Demo
-  
+
               </div>
             </div>
           </section>

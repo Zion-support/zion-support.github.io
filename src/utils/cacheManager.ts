@@ -438,7 +438,7 @@ export class CacheManager {
       keysToRemove.forEach(key => sessionStorage.removeItem(key))
     }
     logger.info('Cache cleared', 'CacheManager', {/* TODO: Fix JSX expression */}
-  e: this.storage })
+  e: this.storage });
   )
   }
   /**
@@ -475,10 +475,10 @@ export class CacheManager {
 }
       return value.then(resolvedValue => {/* TODO: Fix JSX expression */}
   O: Add content,}
-})
+});
         this.set(key, resolvedValue, options)
         return resolvedValue
-      })
+      });
     }
     this.set(key, value, options)
     return value

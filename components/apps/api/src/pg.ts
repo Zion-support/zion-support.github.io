@@ -3,13 +3,13 @@ const { Pool, PoolClient } = pg
 let pool: any = null
 export function getPool(): any {
   if (!pool) {
-    // pool = new Pool({ connectionString: (globalThis as any).process?.env?.DATABASE_URL })
+    // pool = new Pool({ connectionString: (globalThis as any).process?.env?.DATABASE_URL });
     pool = null
 import {  Pool, PoolClient   } from 'pg'
 let pool: Pool | null = null
 export function getPool(): Pool {
   if (!pool) {
-    pool = new Pool({ connectionString: process.env.DATABASE_URL })
+    pool = new Pool({ connectionString: process.env.DATABASE_URL });
   }
   return pool
 }

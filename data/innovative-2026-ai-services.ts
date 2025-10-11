@@ -554,6 +554,6 @@ export const getAIServicesByPriceRange = (minPrice: number, maxPrice: number) =>
   return innovative2026AIServices.filter(service => {
     const price = parseInt(service.price.replace('$', '').replace(',', ''))
     return price >= minPrice && price <= maxPrice
-  })
+  });
 }
 ]

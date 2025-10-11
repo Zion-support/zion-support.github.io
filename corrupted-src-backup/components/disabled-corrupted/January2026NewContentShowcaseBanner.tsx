@@ -54,7 +54,7 @@ const January2026NewContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX 
             The, Future, of AI, is, Here
           <moti, o, n.p, initia, l={{ opac, i, t, y: , 0, y: 2, 0 }}
             anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-            transiti, o, n = {{ del, a, y: , 0., 4, duration: 0., 6 }})
+            transiti, o, n = {{ del, a, y: , 0., 4, duration: 0., 6 }});
             classNa, m, e = "te, x, t-xl, tex, t-bl, u, e-100, ma, x-w-3xl, m, x-au, t, o")
           >)
             Discover, groundbreaking, AI technologies, that, are revolutionizing, enterprise, operation, s)

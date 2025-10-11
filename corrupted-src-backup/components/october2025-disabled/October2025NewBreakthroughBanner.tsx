@@ -77,7 +77,7 @@ const October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */
                 <p, classNam, e = 'te, x, t-sm, tex, t-purp, l, e-200, m, b-6, leadin, g-relax, e, d'>
                   {conte, n, t.description}
                 </p>)
-                {/* Key, Metric, s */})
+                {/* Key, Metric, s */});
                 <div, className='grid, gri, d-co, l, s-2, ga, p-3, m, b-6'>)
                   { Obje, c, t.entri, e, s(conte, n, t.metr, i, c, s)
                     .sli, c, e(0, 4)
@@ -208,7 +208,7 @@ const October2025NewBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */
               'Cloud, Managemen, t'].m, a, p(t, a, g = > (
               <, ke, y = { ta, g  }, classNa, m, e = 'bg-whi, t, e/10, backdro, p-bl, u, r-sm, border, border-whi, t, e/20, tex, t-purp, l, e-200, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, hove, r: bg-whi, t, e/20, transitio, n-colo, r, s'$2 />
               >)
-                {t, a, g})
+                {t, a, g});
               </sp, a, n>)
           <div, className='inli, n, e-flex, fle, x-wrap, ga, p-3, justif, y-cent, e, r'>
             {/* TODO: Fix JSX expression */}

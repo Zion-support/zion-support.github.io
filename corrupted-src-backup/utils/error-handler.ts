@@ -55,17 +55,17 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
         colno: event.colno),
         error: event.error),
   private setupGlobalErrorHandlers(): void {/* TODO: Fix JSX expression */}
-      })
-    })
+      });
+    });
     // Unhandled promise rejection handler
     window.addEventListener('unhandledrejection', event => {)
       this.handleError({)
         type: 'promise')
         message: event.reason?.message || 'Unhandled promise rejection'),
         error: event.reason),
-    window.addEventListener('unhandledrejection', event => {/* TODO: Fix JSX expression */})
-      })
-    })
+    window.addEventListener('unhandledrejection', event => {/* TODO: Fix JSX expression */});
+      });
+    });
   }
 
   private setupUnhandledRejectionHandler(): void {
@@ -76,8 +76,8 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
         message: event.reason?.message || 'Unhandled promise rejection'),
         error: event.reason),
   private setupUnhandledRejectionHandler(): void {/* TODO: Fix JSX expression */}
-      })
-    })
+      });
+    });
   }
 
   private setupNetworkErrorHandler(): void {
@@ -92,7 +92,7 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
             type: 'network')
             message: `HTTP ${response.status}: ${response.statusText}`)
             url: args[0] as string),
-            status: response.status)})
+            status: response.status)});
         }
         return response
       } catch (error) {
@@ -106,11 +106,11 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
             ur,
   l: args[0] as string,
             statu,
-  s: response.status})
+  s: response.status});
         }
         return response
       } catch (error) {/* TODO: Fix JSX expression */}
-        })
+        });
         throw error
       }
     }
@@ -147,7 +147,7 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
     //     }
 
   handleError(errorDat,
-  a: {/* TODO: Fix JSX expression */})
+  a: {/* TODO: Fix JSX expression */});
   }): void {/* TODO: Fix JSX expression */}
     }
 
@@ -242,7 +242,7 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
     //     // Example: Send to external service,
     // fetch('/api/errors', {)
     //   method: 'POST'),
-    //   headers: { 'Content-Type': 'application/json' })
+    //   headers: { 'Content-Type': 'application/json' });
     //   body: JSON.stringify(errorReport),
     // }).catch(err => // console.error('Failed to send error report:', err))
   }
@@ -286,7 +286,7 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
   }
 
   private cleanupOldErrors(): void {/* TODO: Fix JSX expression */}
-    })
+    });
   }
 
   getErrors(): ErrorReport[] {/* TODO: Fix JSX expression */}

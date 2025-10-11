@@ -27,7 +27,7 @@ function runNode(relPath) args = []) {const abs = path && path.resolve(__dirname
   t: res.stdout || ,',' stder)
   r: res.stderr || )')' log_step ('asset)
   s:inventory') () => run_node ('automation / asset - inventory.cjs'') pr-12325 ' log_step ('gi)
-  t: sync') () => run_node ('automation / advanced - git - sync.cjs'' return {/* TODO: Fix JSX expression */})
+  t: sync') () => run_node ('automation / advanced - git - sync.cjs'' return {/* TODO: Fix JSX expression */});
   t: sync'} () => run_node ('automation / advanced - git - sync.cjs'' return {/* TODO: Fix JSX expression */}
   e: 200} bod,
   y: logs.join ('\n' ')`

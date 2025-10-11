@@ -32,7 +32,7 @@ async function handler(req, res) {
 
     // Log subscription for debugging in development
     if (process.env.NODE_ENV === 'development') {
-      console.log('Newsletter subscription:', { email, timestamp: new Date().toISOString() })
+      console.log('Newsletter subscription:', { email, timestamp: new Date().toISOString() });
     }
 
     res.statusCode = 200

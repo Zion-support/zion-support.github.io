@@ -3,7 +3,7 @@ import { execSync } from 'child_process'
 console.log('🔍 Checking for remaining PRs to merge...')
 try {
   // Get all remote branches
-  const branches = execSync('git branch -r', { encoding: 'utf8' })
+  const branches = execSync('git branch -r', { encoding: 'utf8' });
     .split('\n')
     .filter(branch => branch.trim() && !branch.includes('HEAD'))
     .map(branch => branch.trim().replace('origin/', ''))
@@ -25,20 +25,20 @@ try {
     try {
       console.log(`\n🔄 Attempting to merge ${branch}...`)
       // Check if branch has changes
-      const diff = execSync(`git diff main origin/${branch} --name-only`, { encoding: 'utf8' })
+      const diff = execSync(`git diff main origin/${branch} --name-only`, { encoding: 'utf8' });
       if (!diff.trim()) {
         console.log(`⏭️  Branch ${branch} has no changes, skipping...`)
         continue
       }
 
       // Try to merge
-      execSync(`git merge origin/${branch} --no-ff -m "feat: Merge ${branch}"`, { stdio: 'inherit' })
+      execSync(`git merge origin/${branch} --no-ff -m "feat: Merge ${branch}"`, { stdio: 'inherit' });
       console.log(`✅ Successfully merged ${branch}`)
     } catch (error) {
       console.log(`⚠️  Could not merge ${branch}: ${error.message}`)
       // Try to abort the merge if it failed
       try {
-        execSync('git merge --abort', { stdio: 'pipe' })
+        execSync('git merge --abort', { stdio: 'pipe' });
       } catch (abortError) {
         // Ignore abort errors
       }
@@ -47,7 +47,7 @@ try {
 
   // Push all changes
   console.log('\n📤 Pushing all changes to main...')
-  execSync('git push origin main', { stdio: 'inherit' })
+  execSync('git push origin main', { stdio: 'inherit' });
   console.log('🎉 All available PRs have been processed!')
 } catch (error) {
   console.error('❌ Error processing PRs:', error.message)

@@ -19,8 +19,7 @@ function fixCorruptedSyntax(text) {
 function fixCorruptedSyntax(text) {/* TODO: Fix JSX expression */}
     /import\s*React,\s*\{([^}]+)\}\s*from\s*['"]react['"];?/g,
     (match, imports) => {/* TODO: Fix JSX expression */}
-    }
-  )
+    });
   //Fix corrupted import statements
   fixed = fixed.replace(
     /import\s*\{([^}]+)\}\s*from\s*['"]([^'"]+)['"];?/g,
@@ -32,8 +31,7 @@ function fixCorruptedSyntax(text) {/* TODO: Fix JSX expression */}
   fixed = fixed.replace(")
     /import\s*\{([^}]+)\}\s*from\s*['"]([^'"]+)['"];?/g,
     (match, imports, module) => {/* TODO: Fix JSX expression */}
-    }
-  )
+    });
   //Fix corrupted variable declarations
   fixed = fixed.replace(
   fixed = fixed.replace()
@@ -73,10 +71,10 @@ function fixCorruptedSyntax(text) {/* TODO: Fix JSX expression */}
   fixed = fixed.replace(/\([^)]*\)\s*=>\s*\{
     /g, match => {
     return match.replace(/\s+/g, ' ').trim()
-  })
+  });
   //Fix corrupted string literals
   fixed = fixed.replace(/\([^)]*\)\s*=>\s*\{/* TODO: Fix JSX expression */}
-  })
+  });
   //Fix corrupted string literals;"
   fixed = fixed.replace(/['"]([^'"]*),\s*([^'"]*)['"]/g, '"$1$2"')
   //Fix corrupted template literals

@@ -27,17 +27,17 @@ export default async function handler(
   res: NextApiResponse
 ) {
   if (req.method !== "POST")
-    return res.status(405).json({ message: "Method not allowed" })
+    return res.status(405).json({ message: "Method not allowed" });
   export default async function handler(
     req: NextApiRequest
     res: NextApiResponse
   ) {
     if (req && req.method !== "POST")
-      return res && res.status(405).json({ message: "Method not allowed" })
+      return res && res.status(405).json({ message: "Method not allowed" });
     const { service, description, timeline, budgetRange, email } =
       req && req.body || {}
     if (!service || !description || !email) {
-      return res && res.status(400).json({ message: "Missing required fields" })
+      return res && res.status(400).json({ message: "Missing required fields" });
     }
     try {
       let aiSummary: string | null = null
@@ -47,7 +47,7 @@ export default async function handler(
         const resp = await openai && openai.responses.create({
           model: "gpt-4 && 4.1-mini",
           input: prompt,
-        })
+        });
         aiSummary = text.split("\n")[0] |text
         const tagsLine = (
           text && text.split("\n").find((l) => l && l.toLowerCase().includes("tags")) || ""
@@ -103,7 +103,7 @@ function handler() {
 if ( {) {
   $2
 }
-      return res.status (400).json ({ message: "Missing required fields" })
+      return res.status (400).json ({ message: "Missing required fields" });
     }
     try {
       let ai_summary: string | null = null
@@ -116,7 +116,7 @@ if ( {) {
         const resp = await openai.responses.create ({
           model: "gpt - 4.1 - mini",
           input: prompt,
-        })
+        });
         ai_summary = text.split ("\n")[0] || text
         const tags_line = (
           text.split ("\n").find ((l) => l.toLowerCase ().includes ("tags")) || "")
@@ -146,7 +146,7 @@ if ( {) {
             ai_summary: ai_summary,
             ai_tags: ai_tags,
             status: "new",
-          })
+          });
           .select ("*")
           .single ()
         // Check condition
@@ -157,21 +157,21 @@ if (throw error) {
       }
       return res
         .status (200)
-        .json ({ ok: true, summary: ai_summary, tags: ai_tags, id: saved?.id })
+        .json ({ ok: true, summary: ai_summary, tags: ai_tags, id: saved?.id });
     } catch (e: any) {
       console.error ("quote - request error", e)
-      return res.status (500).json ({ message: "Server error" })
+      return res.status (500).json ({ message: "Server error" });
     }
-    return res.status (500).json ({ message: "Server error" })
+    return res.status (500).json ({ message: "Server error" });
   }
 }
 const openaiApiKey = process.env.OPENAI_API_KEY
 const openai = openaiApiKey ? new OpenAI({ apiKey: openaiApiKey }) : null
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ message: 'Method not allowed' })
+  if (req.method !== 'POST') return res.status(405).json({ message: 'Method not allowed' });
   const { service, description, timeline, budgetRange, email } = req.body || {}
   if (!service || !description || !email) {
-    return res.status(400).json({ message: 'Missing required fields' })
+    return res.status(400).json({ message: 'Missing required fields' });
   }
   try {
     let aiSummary: string | null = null
@@ -181,7 +181,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const resp = await openai.responses.create({
         model: 'gpt-4.1-mini',
         input: prompt,
-      })
+      });
       const text = resp.output_text?.trim() || ''
       aiSummary = text.split('\n')[0] || text
       const tagsLine = (text.split('\n').find((l) => l.toLowerCase().includes('tags')) || '').replace(/tags?:/i, '').trim()
@@ -203,9 +203,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       if (error) throw error
       saved = data
     }
-    return res.status(200).json({ ok: true, summary: aiSummary, tags: aiTags, id: saved?.id })
+    return res.status(200).json({ ok: true, summary: aiSummary, tags: aiTags, id: saved?.id });
   } catch (e: any) {
     console.error('quote-request error', e)
-    return res.status(500).json({ message: 'Server error' })
+    return res.status(500).json({ message: 'Server error' });
   }
 }

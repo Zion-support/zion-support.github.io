@@ -8,7 +8,7 @@ const corsHeaders = {
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
-    return new Response(null, { headers: corsHeaders })
+    return new Response(null, { headers: corsHeaders });
   }
   try {
     // Get the OpenAI API key from environment variables
@@ -53,7 +53,7 @@ serve(async (req) => {
           {
             role: 'user',
             content: prompt}],
-        temperature: 0.7})})
+        temperature: 0.7})});
             content: 'You are a project management expert that breaks work into appropriate milestones.',
           },
           {
@@ -63,7 +63,7 @@ serve(async (req) => {
         ],
         temperature: 0.7,
       }),
-    })
+    });
     const data = await response.json()
     if (!response.ok) {
       throw new Error(data.error?.message || 'Failed to generate milestones')
@@ -74,9 +74,9 @@ serve(async (req) => {
       // Try to parse the response as JSON
       const milestones = JSON.parse(content)
       return new Response(JSON.stringify({ milestones }), {
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' }});
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-      })
+      });
     } catch (parseError) {
       // If parsing fails, try to extract JSON from the text
       console.error('Failed to parse AI response as JSON:', parseError)
@@ -90,7 +90,6 @@ serve(async (req) => {
         status: 500, 
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-      }
-    )
+      });
   }
-})
+});

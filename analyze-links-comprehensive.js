@@ -20,10 +20,10 @@ const missingPages = [];
 // Function to recursively find all page files
 function findPageFiles(dir) {
   const files = fs.readdirSync(dir, { withFileTypes: true });
-  
+
   for (const file of files) {
     const fullPath = path.join(dir, file.name);
-    
+
     if (file.isDirectory()) {
       findPageFiles(fullPath);
     } else if (file.name === 'page.tsx' || file.name === 'page.ts') {
@@ -52,12 +52,12 @@ function extractLinks(content, filePath) {
   ];
 
   const links = new Set();
-  
+
   linkPatterns.forEach(pattern => {
     let match;
     while ((match = pattern.exec(content)) !== null) {
       let link = match[1];
-      
+
       // Skip external links, mailto, tel, etc.
       if (link.startsWith('http') || 
           link.startsWith('mailto:') || 
@@ -66,22 +66,22 @@ function extractLinks(content, filePath) {
           link.startsWith('//')) {
         continue;
       }
-      
+
       // Normalize link
       if (!link.startsWith('/')) {
         link = '/' + link;
       }
-      
+
       // Remove query parameters and fragments
       link = link.split('?')[0].split('#')[0];
-      
+
       if (link && link !== '/') {
         links.add(link);
         allLinks.add(link);
       }
     }
   });
-  
+
   return Array.from(links);
 }
 
@@ -90,7 +90,7 @@ function analyzeFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
     const links = extractLinks(content, filePath);
-    
+
     return {
       file: filePath,
       links: links
@@ -116,10 +116,10 @@ const componentFiles = [];
 
 function findComponentFiles(dir) {
   const files = fs.readdirSync(dir, { withFileTypes: true });
-  
+
   for (const file of files) {
     const fullPath = path.join(dir, file.name);
-    
+
     if (file.isDirectory()) {
       findComponentFiles(fullPath);
     } else if (file.name.endsWith('.tsx') || file.name.endsWith('.ts')) {
@@ -151,7 +151,7 @@ const brokenLinksByFile = {};
 
 fileAnalysis.forEach(analysis => {
   const brokenInFile = [];
-  
+
   analysis.links.forEach(link => {
     if (!allPages.has(link)) {
       brokenInFile.push(link);
@@ -161,7 +161,7 @@ fileAnalysis.forEach(analysis => {
       }
     }
   });
-  
+
   if (brokenInFile.length > 0) {
     brokenLinksByFile[analysis.file] = brokenInFile;
   }

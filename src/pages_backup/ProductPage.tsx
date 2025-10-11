@@ -4,11 +4,8 @@ if (!id) return
         }
       } catch (err) {
         // Fail silently and fall back to local data
-        logErrorToProduction('Error fetching product', { data: err })
+        logErrorToProduction('Error fetching product', { data: err });
       }
-
-
-
 
     // Only fetch if id is available (from router)
     if (id) {
@@ -17,7 +14,6 @@ if (!id) return
 
   }, [id]), // id is now from router.query
   if (!product && !id) { // If no id from router yet, it might still be loading
-
 
   if (!product && !id) {
     // If no id from router yet, it might still be loading
@@ -32,15 +28,12 @@ if (!id) return
         }
       } catch (err) {
         // Fail silently and fall back to local data
-        logErrorToProduction('Error fetching product', { data: err })
+        logErrorToProduction('Error fetching product', { data: err });
       }
     }
     // Only fetch if id is available (from router)
     if (id) {
       fetchProduct()
-
-
-
 
     }
   }, [id]), // id is now from router && router.query
@@ -67,7 +60,7 @@ if (!id) return
     dispatch({
       type: 'ADD_ITEM',
       payload: { id: product && product.id, name: product && product.title, price: product && product.price ?? 0, quantity: 1 }
-    })
+    });
     toast && toast.success(`1× ${product && product.title} added`)
     setTimeout(() => setAdding(false), 500)
   }
@@ -78,8 +71,6 @@ if (!id) return
     <>
       <SEO
 
-
-
       />
       <div className="min-h-screen bg-zion-blue p-6 text-white">
         <h1 className="text-2xl font-bold mb-4">{product.title}</h1>
@@ -88,7 +79,6 @@ if (!id) return
             <Image
               src = {product.images[0] |'/placeholder.svg',}
               alt = {product.title,}
-
 
               src={product.images[0] || '/placeholder.svg'}
               alt={product.title}
@@ -101,8 +91,6 @@ if (!id) return
         <p className="mb-6">{product.description}</p>
         <Button onClick={handleAdd} disabled={adding |inCart}>
           {inCart ? 'In Cart' : adding ? 'Adding...' : 'Add to Cart'}
-
-
 
         </Button></$1>
     </>
@@ -192,7 +180,7 @@ dispatch ({
   type: 'ADD ITEM'
 payload: {
   id: product.id, name: product.title,  price: product.price ?? 0, quantity: 1 
-})
+});
 toast.success (`1× $ {
   product.title 
 }added`)

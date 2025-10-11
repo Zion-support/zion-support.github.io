@@ -8,7 +8,7 @@ const corsHeaders = {
 }
 serve(async (req) => {
   if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders })
+    return new Response(null, { headers: corsHeaders });
   }
   const supabaseClient = createClient(
     Deno.env.get("SUPABASE_URL") ?? "",
@@ -18,8 +18,7 @@ serve(async (req) => {
   const supabaseAdmin = createClient(
     Deno.env.get("SUPABASE_URL") ?? "",
     Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",
-    { auth: { persistSession: false } }
-  )
+    { auth: { persistSession: false } });
   try {
     // Authenticate the user
     const authHeader = req.headers.get("Authorization")!
@@ -51,9 +50,9 @@ serve(async (req) => {
       throw new Error("You are not authorized to manage this transaction")
     }
     const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {
-      apiVersion: "2023-10-16"})
+      apiVersion: "2023-10-16"});
       apiVersion: "2023-10-16",
-    })
+    });
     let result
     switch (action) {
       case 'release':
@@ -68,7 +67,7 @@ serve(async (req) => {
             status: "completed",
             in_escrow: false,
             completed_at: new Date().toISOString() 
-          })
+          });
           .eq("id", transactionId)
         result = { message: "Funds released from escrow" }
         break
@@ -85,7 +84,7 @@ serve(async (req) => {
             const refund = await stripe.refunds.create({
               payment_intent: session.payment_intent.toString(),
               reason: "requested_by_customer"
-            })
+            });
             // Update transaction status
             await supabaseAdmin
               .from("transactions")
@@ -93,7 +92,7 @@ serve(async (req) => {
                 status: "refunded",
                 refunded_at: new Date().toISOString(),
                 refund_id: refund.id
-              })
+              });
               .eq("id", transactionId)
           }
         }
@@ -110,7 +109,7 @@ serve(async (req) => {
           .update({ 
             status: "cancelled",
             cancelled_at: new Date().toISOString() 
-          })
+          });
           .eq("id", transactionId)
         result = { message: "Transaction cancelled successfully" }
         break
@@ -119,15 +118,15 @@ serve(async (req) => {
     }
     return new Response(JSON.stringify(result), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
-      status: 200})
+      status: 200});
       status: 200,
-    })
+    });
   } catch (error) {
     console.error("Transaction management error:", error.message)
     return new Response(JSON.stringify({ error: error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
-      status: 500})
+      status: 500});
       status: 500,
-    })
+    });
   }
-})
+});

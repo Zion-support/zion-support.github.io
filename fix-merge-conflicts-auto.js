@@ -13,15 +13,14 @@ function resolveMergeConflicts(content) {
   const resolvedLines = [];
   let inConflict = false;
   let conflictType = null; // 'head', 'separator', 'other'
-  
+
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
-    
-    if (line.startsWith('<<<<<<< HEAD')) {
-      inConflict = true;
+
+    if (line.startsWith('      inConflict = true;
       conflictType = 'head';
       continue; // Skip the conflict marker
-    } else if (line.startsWith('=======')) {
+    } else if (line.startsWith('')) {
       conflictType = 'separator';
       continue; // Skip the separator
     } else if (line.startsWith('>>>>>>>')) {
@@ -29,7 +28,7 @@ function resolveMergeConflicts(content) {
       conflictType = null;
       continue; // Skip the end marker
     }
-    
+
     if (inConflict) {
       // Only keep lines from HEAD section
       if (conflictType === 'head') {
@@ -40,7 +39,7 @@ function resolveMergeConflicts(content) {
       resolvedLines.push(line);
     }
   }
-  
+
   return resolvedLines.join('\n');
 }
 
@@ -48,9 +47,8 @@ function resolveMergeConflicts(content) {
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    
-    if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
-      console.log(`Processing: ${filePath}`);
+
+    if (content.includes('      console.log(`Processing: ${filePath}`);
       const resolvedContent = resolveMergeConflicts(content);
       fs.writeFileSync(filePath, resolvedContent, 'utf8');
       console.log(`✓ Resolved conflicts in: ${filePath}`);
@@ -66,21 +64,20 @@ function processFile(filePath) {
 // Function to find all files with merge conflicts
 function findFilesWithConflicts(dir) {
   const files = [];
-  
+
   function traverse(currentDir) {
     const items = fs.readdirSync(currentDir);
-    
+
     for (const item of items) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
-      
+
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
         traverse(fullPath);
       } else if (stat.isFile() && /\.(tsx?|jsx?)$/.test(item)) {
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
-          if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
-            files.push(fullPath);
+          if (content.includes('            files.push(fullPath);
           }
         } catch (error) {
           // Skip files that can't be read
@@ -88,7 +85,7 @@ function findFilesWithConflicts(dir) {
       }
     }
   }
-  
+
   traverse(dir);
   return files;
 }

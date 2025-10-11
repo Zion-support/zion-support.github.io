@@ -46,26 +46,26 @@ function makeRequest(url, options = {}) {
       let data = ''
       res.on('data', (chunk) => {
         data += chunk
-      })
+      });
       res.on('end', () => {
         resolve({)
           statusCode: res.statusCode;)
           headers: res.headers),
           body: data),
           url: url
-        })
-      })
-    })
+        });
+      });
+    });
     req.on('error', (error) => {
       reject(error)
-    })
+    });
     req.on('timeout', () => {
       req.destroy()
       reject(new Error('Request timeout'))
-    })
+    });
     req.setTimeout(TIMEOUT)
     req.end()
-  })
+  });
 }
 
 // Extract links from HTML content
@@ -85,12 +85,12 @@ function extractLinks(html, baseUrl) {
           url: absoluteUrl),
           text: linkText),
           element: anchor.outerHTML
-        })
+        });
       } catch (error) {
         console.log(`Invalid URL: ${href}`)
       }
     }
-  })
+  });
   // Extract form actions
   const forms = document.querySelectorAll('form[action]')
   forms.forEach(form => {)
@@ -102,12 +102,12 @@ function extractLinks(html, baseUrl) {
           url: absoluteUrl),
           text: 'Form Action'),
           element: form.outerHTML
-        })
+        });
       } catch (error) {
         console.log(`Invalid form action: ${action}`)
       }
     }
-  })
+  });
   return links
 }
 
@@ -138,7 +138,7 @@ async function analyzeUrl(url, depth = 0) {
         url: url),
         statusCode: response.statusCode),
         depth: depth
-      })
+      });
       analysisResults.workingLinks++
       // Extract and analyze links from this page
       if (response.headers['content-type'] && response.headers['content-type'].includes('text/html')) {
@@ -154,14 +154,14 @@ async function analyzeUrl(url, depth = 0) {
         url: url;)
         statusCode: response.statusCode),
         depth: depth),
-        reason: 'Page not found'})
+        reason: 'Page not found'});
       analysisResults.brokenLinks++
     } else {
       brokenLinks.push({)
         url: url;)
         statusCode: response.statusCode),
         depth: depth),
-        reason: 'HTTP error'})
+        reason: 'HTTP error'});
       analysisResults.brokenLinks++
     }
   } catch (error) {
@@ -171,12 +171,12 @@ async function analyzeUrl(url, depth = 0) {
       statusCode: 0),
       depth: depth),
       reason: error.message
-    })
+    });
     analysisResults.brokenLinks++
     analysisResults.errors.push({)
       url: url),
       error: error.message
-    })
+    });
   }
 }
 
@@ -211,14 +211,14 @@ async function analyzeWebsite() {
       console.log('\n=== BROKEN LINKS ===')
       brokenLinks.forEach(link => {)
         console.log(`❌ ${link.url} (${link.statusCode}) - ${link.reason}`)
-      })
+      });
     }
 
     if (analysisResults.errors.length > 0) {
       console.log('\n=== ERRORS ===')
       analysisResults.errors.forEach(error => {)
         console.log(`⚠️  ${error.url}: ${error.error}`)
-      })
+      });
     }
 
     // Generate recommendations
@@ -226,7 +226,7 @@ async function analyzeWebsite() {
     if (brokenLinks.length > 0) {
       recommendations.push('Fix broken links by updating URLs or creating missing pages')
     }
-    
+
     if (analysisResults.errors.length > 0) {
       recommendations.push('Investigate and fix connection errors')
     }
@@ -235,7 +235,7 @@ async function analyzeWebsite() {
       console.log('\n=== RECOMMENDATIONS ===')
       recommendations.forEach((rec, index) => {
         console.log(`${index + 1}. ${rec}`)
-      })
+      });
     }
 
     console.log('\nDetailed report saved to: website-analysis-report.json')
@@ -286,7 +286,7 @@ class WebsiteAnalyzer {
           title: document.title,
           content: content,
           links: []
-        })
+        });
         // Extract all links
         const links = this.extractLinks(document, url)
         this.pages.get(url).links = links
@@ -300,7 +300,7 @@ class WebsiteAnalyzer {
       }
     } catch (err) {
       console.error(`❌ Error analyzing ${url}:`, err.message)
-      this.brokenLinks.push({ url, error: err.message })
+      this.brokenLinks.push({ url, error: err.message });
     }
   }
 
@@ -319,19 +319,19 @@ class WebsiteAnalyzer {
         let data = ''
         res.on('data', (chunk) => {
           data += chunk
-        })
+        });
         res.on('end', () => {
-          resolve({ statusCode: res.statusCode, data })
-        })
-      })
+          resolve({ statusCode: res.statusCode, data });
+        });
+      });
       req.on('error', (error) => {
         reject(error)
-      })
+      });
       req.on('timeout', () => {
         reject(new Error('Request timeout'))
-      })
+      });
       req.end()
-    })
+    });
   }
 
   extractLinks(document, baseUrl) {
@@ -345,9 +345,9 @@ class WebsiteAnalyzer {
           href: absoluteUrl,
           text: link.textContent.trim(),
           title: link.getAttribute('title') || ''
-        })
+        });
       }
-    })
+    });
     return links
   }
 
@@ -379,15 +379,15 @@ class WebsiteAnalyzer {
       console.log('\n❌ Broken Links:')
       this.brokenLinks.forEach(link => {
         console.log(`  - ${link.url}: ${link.error}`)
-      })
+      });
     }
-    
+
     console.log(`\n📄 PAGES FOUND:`)
     this.pages.forEach((page, url) => {
       console.log(`   • ${url}`)
       console.log(`     Title: ${page.title}`)
       console.log(`     Links: ${page.links.length}`)
-    })
+    });
     // Save detailed report
     // Save report to file
     const report = {

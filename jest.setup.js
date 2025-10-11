@@ -71,12 +71,12 @@ jest.mock('react-router-dom', () => {
       ], {
         initialEntries: ['/'],
         initialIndex: 0,
-      })
-      return React.createElement(RouterProvider, { router })
+      });
+      return React.createElement(RouterProvider, { router });
     },
     RouterProvider: ({ router }) => null,
   }
-})
+});
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
@@ -90,7 +90,7 @@ Object.defineProperty(window, 'matchMedia', {
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn(),
   })),
-})
+});
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
@@ -114,8 +114,8 @@ beforeAll(() => {
       return
   }
     originalError.call(console, ...args)
-  })
-})
+  });
+});
 afterAll(() => {
     console.error = originalError
-  })
+  });

@@ -111,8 +111,8 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
         return;}
       }
     method: 'POST'),
-        headers: {),}'Content-Type': 'application/json'})
-        })
+        headers: {),}'Content-Type': 'application/json'});
+        });
     )
           ...entry;)
           error: entry.error;),
@@ -130,8 +130,8 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
       }
       await fetch()
             : undefined;)
-        })
-      })
+        });
+      });
     } catch (error) {/* TODO: Fix JSX expression */,}}
   }
    * Get logs by severity;

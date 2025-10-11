@@ -86,34 +86,34 @@ const App: React.FC = () => {
             <Routes>
               {/* Main Pages */}
               <Route path="/" element={<HomePage />} />
-              
+
               {/* Company Pages */}
               <Route path="/about" element={<AboutPage />} />
               <Route path="/team" element={<TeamPage />} />
               <Route path="/careers" element={<CareersPage />} />
               <Route path="/news" element={<NewsPage />} />
               <Route path="/contact" element={<ContactPage />} />
-              
+
               {/* Main Services */}
               <Route path="/services" element={<ItServicesPage />} />
               <Route path="/pricing" element={<PricingPage />} />
               <Route path="/demo" element={<DemoPage />} />
               <Route path="/consultation" element={<ConsultationPage />} />
-              
+
               {/* AI Services */}
               <Route path="/ai-services" element={<AiServicesPage />} />
               <Route path="/ai-marketing" element={<AiMarketingPage />} />
               <Route path="/ai-automation" element={<AiAutomationPage />} />
               <Route path="/ai-healthcare" element={<AiHealthcarePage />} />
               <Route path="/ai-fintech" element={<AiFintechPage />} />
-              
+
               {/* IT Services */}
               <Route path="/it-services" element={<ItServicesPage />} />
               <Route path="/cloud-services" element={<CloudServicesPage />} />
               <Route path="/cybersecurity" element={<CybersecurityPage />} />
               <Route path="/data-analytics" element={<DataAnalyticsPage />} />
               <Route path="/devops" element={<DevOpsPage />} />
-              
+
               {/* Specialized Solutions */}
               <Route path="/quantum-computing" element={<QuantumComputingPage />} />
               <Route path="/autonomous-systems" element={<AutonomousSystemsPage />} />
@@ -121,21 +121,21 @@ const App: React.FC = () => {
               <Route path="/iot-edge-computing" element={<IoTEdgeComputingPage />} />
               <Route path="/business-intelligence" element={<BusinessIntelligencePage />} />
               <Route path="/robotics" element={<RoboticsPage />} />
-              
+
               {/* Support Pages */}
               <Route path="/support" element={<SupportPage />} />
               <Route path="/documentation" element={<DocumentationPage />} />
               <Route path="/faq" element={<FAQPage />} />
-              
+
               {/* Content Pages */}
               <Route path="/case-studies" element={<CaseStudiesPage />} />
               <Route path="/blog" element={<BlogPage />} />
-              
+
               {/* Legal Pages */}
               <Route path="/privacy" element={<PrivacyPage />} />
               <Route path="/terms" element={<TermsPage />} />
               <Route path="/cookies" element={<CookiesPage />} />
-              
+
               {/* Catch all route */}
               <Route path="*" element={<NotFoundPage />} />
             </Routes>

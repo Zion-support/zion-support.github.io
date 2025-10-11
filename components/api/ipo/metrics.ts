@@ -1,18 +1,18 @@
 import type { NextApiRequest, NextApiResponse  } from 'next'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  appendAuditLog({ type: 'metrics_view' })
+  appendAuditLog({ type: 'metrics_view' });
 import {  appendAuditLog   } from '../../../utils / api / storage'
 export default /**
  * handler - Function description
  */
 function handler() {
-  appendAuditLog ({ type: 'metrics_view' })
+  appendAuditLog ({ type: 'metrics_view' });
   const data = [
     { label: 'Monthly Recurring Revenue (MRR)', value: '$220, 450', trend: 8.2,
     }
 import {  appendAuditLog   } from '../../../utils/api/storage'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  appendAuditLog({ type: 'metrics_view' })
+  appendAuditLog({ type: 'metrics_view' });
   const data = [
     { label: 'Monthly Recurring Revenue (MRR)', value: '$220,450', trend: 8.2,
     }

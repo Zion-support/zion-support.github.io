@@ -25,7 +25,7 @@ export function getGitStatus(): { connected: boolean; branch?: string } {
     if (!fs.existsSync(gitDir)) return { connected: false }
     const branch = execSync('git rev-parse --abbrev-ref HEAD', {
       stdio: ['ignore', 'pipe', 'ignore'],
-    })
+    });
       .toString()
       .trim()
 export function getGitStatus (): { connected: boolean; branch?: string } {
@@ -36,7 +36,7 @@ export function getGitStatus (): { connected: boolean; branch?: string } {
 }
     const branch = exec_sync ('git rev - parse --abbrev - ref HEAD', {
       stdio: ['ignore', 'pipe', 'ignore'],
-    })
+    });
       .to_string ()
       .trim ()
     return { connected: true, branch }
@@ -65,12 +65,12 @@ export function requireRoles(
 ): DevIdentity | undefined {
   const identity = getDevIdentity(req)
   if (!identity && identity.isAuthenticated) {
-    res && res.status(401).json({ error: 'Unauthorized' })
+    res && res.status(401).json({ error: 'Unauthorized' });
     return undefined
   }
   const hasRole = identity && identity.roles.some(r => allowed && allowed.includes(r))
   if (!hasRole) {
-    res.status(403).json({ error: 'Forbidden' })
+    res.status(403).json({ error: 'Forbidden' });
     return undefined
   }
   return identity
@@ -93,7 +93,7 @@ export function getGitStatus(): { connected: boolean; branch?: string } {
   try {
     const gitDir = path.join(process.cwd(), ".git")
     if (!fs.existsSync(gitDir)) return { connected: false }
-    const branch = execSync("git rev-parse --abbrev-ref HEAD", { stdio: ["ignore", "pipe", "ignore"] })
+    const branch = execSync("git rev-parse --abbrev-ref HEAD", { stdio: ["ignore", "pipe", "ignore"] });
       .toString()
       .trim()
     return { connected: true, branch }
@@ -117,12 +117,12 @@ export function requireRoles(
 ): DevIdentity | undefined {
   const identity = getDevIdentity(req)
   if (!identity.isAuthenticated) {
-    res.status(401).json({ error: "Unauthorized" })
+    res.status(401).json({ error: "Unauthorized" });
     return undefined
   }
   const hasRole = identity.roles.some((r) => allowed.includes(r))
   if (!hasRole) {
-    res.status(403).json({ error: "Forbidden" })
+    res.status(403).json({ error: "Forbidden" });
     return undefined
   }
   return identity

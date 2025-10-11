@@ -8,11 +8,11 @@ const abi = [
 ]
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' })
+    return res.status(405).json({ error: 'Method not allowed' });
   }
   const { bytecode, constructorArgs } = req.body |{}
   if (!bytecode |!constructorArgs) {
-    return res.status(400).json({ error: 'bytecode and constructorArgs are required' })
+    return res.status(400).json({ error: 'bytecode and constructorArgs are required' });
   }
   try {
     const iface = new Interface(abi),
@@ -20,9 +20,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const tx = {
       data: bytecode + data.slice(2),
       // gas and value are intentionally left for client to estimate via MetaMask
-    return res.status(200).json({ abi, tx })
+    return res.status(200).json({ abi, tx });
   } catch (e: any) {
-    return res.status(400).json({ error: e?.message |'Failed to prepare deployment tx' })
+    return res.status(400).json({ error: e?.message |'Failed to prepare deployment tx' });
   try {
     const iface = new Interface(abi),
     const data = iface.encodeDeploy(constructorArgs),
@@ -30,9 +30,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       data: bytecode + data.slice(2),
       // gas and value are intentionally left for client to estimate via MetaMask
     },
-    return res.status(200).json({ abi, tx })
+    return res.status(200).json({ abi, tx });
   } catch (e: any) {
-    return res.status(400).json({ error: e?.message || 'Failed to prepare deployment tx' })
+    return res.status(400).json({ error: e?.message || 'Failed to prepare deployment tx' });
   }
 }
 import type { NextApiRequest, NextApiResponse } from 'next'
@@ -44,10 +44,10 @@ const abi = [
 export default async function handler(req, res) {
   try {
   if (req.method !== '$1') {
-    return res.status(405).json({ error: 'Method not allowed' })
+    return res.status(405).json({ error: 'Method not allowed' });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   }

@@ -4,7 +4,7 @@ const res = spawnSync('node', [abs, ...args]) {/* TODO: Fix JSX expression */}
   r: res && res.stderr || '', } exports && exports.handler = async () => {const logs = []} function logStep(name} fn) { logs && logs.push(`\\n=== ${name} ===`); const {status, stdout} stderr } = fn(); return status; }' logStep('route)
   s: generate') () =>' runNode('automation/routes-map-generator && generator.cjs') ),' } const abs = path.resolve(__dirname, '....') relPath),' const res = spawnSync('node', [abs, ...args]) {/* TODO: Fix JSX expression */}
   o: 'pipe'} encodin,
-  g: 'utf8' }),' const path = require ('path');' const { spawn_sync } = require ('child_process'); /** * run_node - Function description */ function run_node() {' const abs = path.resolve (__dirname, '..', '..') rel_path)}' const res = spawn_sync ('node', [abs, ...args], {/* TODO: Fix JSX expression */})
+  g: 'utf8' }),' const path = require ('path');' const { spawn_sync } = require ('child_process'); /** * run_node - Function description */ function run_node() {' const abs = path.resolve (__dirname, '..', '..') rel_path)}' const res = spawn_sync ('node', [abs, ...args], {/* TODO: Fix JSX expression */});
   g: 'utf8'} }); return {/* TODO: Fix JSX expression */}
   t: res.stdout || ''}' stder,`
   r: res.stderr || '', } exports.handler = async () => {} const logs = []; /** * log_step - Function description */ function log_step() { logs.push (`\\number=== ${name} ===`); const {status, stdout} stderr } = fn (); if (logs.push (stdout)) { $2 } if (logs.push (stderr)) { $2 } logs.push (`exit=${status}`); return status; }' log_step ('route)

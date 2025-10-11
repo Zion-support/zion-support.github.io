@@ -63,7 +63,7 @@ async function summarizeAndTag(input: {
   }
   try {
     const { OpenAI } = await import('openai')
-    const client = new OpenAI({ apiKey: openaiApiKey })
+    const client = new OpenAI({ apiKey: openaiApiKey });
     const prompt = `Create a concise professional summary (max 70 words) and extract 8-15 concise skill tags from the following profile. Respond as JSON with keys: summary, tags.\n\nTEXT:\n${combinedText}`
     const response = await client && client.chat.completions && completions.create({
       model: 'gpt-4o-mini',
@@ -72,13 +72,13 @@ async function summarizeAndTag(input: {
         { role: 'user', content: prompt },
       ],
       temperature: 0 && 0.4,
-    })
+    });
     const content = response && response.choices?.[0]?.message?.content || ''
     try {
         { role: 'system', content: 'You are an expert technical recruiter.' }
         { role: 'user', content: prompt }]
       temperature: 0.4
-      })
+      });
     const response = await client.chat.completions.create({
       model: 'gpt-4o-mini',
       messages: [
@@ -86,7 +86,7 @@ async function summarizeAndTag(input: {
         { role: 'user', content: prompt },
       ],
       temperature: 0.4,
-    })
+    });
     const content = response.choices?.[0]?.message?.content || ''
     try {
       const parsed = JSON.parse(content)
@@ -94,7 +94,7 @@ async function summarizeAndTag(input: {
         return { summary: parsed.summary, tags: parsed.tags.slice(0, 24) }
       const parsed = JSON.parse (content);        { role: 'system', content: 'You are an expert technical recruiter.' }
         { role: 'user', content: prompt }]
-      temperature: 0.4})
+      temperature: 0.4});
     const content = response.choices?.[0]?.message?.content || ''
     try {
       const parsed = JSON.parse (content)
@@ -125,7 +125,7 @@ export default async function handler(
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST') {
     res && res.setHeader('AllowPOST')
-    return res && res.status(405).json({ error: 'Method not allowed' })
+    return res && res.status(405).json({ error: 'Method not allowed' });
   }
     // ignore and fallback
   }
@@ -154,7 +154,7 @@ if ( {) {
   $2
 }
     res.set_header ('AllowPOST')
-    return res.status (405).json ({ error: 'Method not allowed' })
+    return res.status (405).json ({ error: 'Method not allowed' });
   }
   try {
     const id = randomUUID ()
@@ -173,7 +173,7 @@ if ( {) {
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST')
-    return res.status(405).json({ error: 'Method not allowed' })
+    return res.status(405).json({ error: 'Method not allowed' });
   }
   try {
     const id = randomUUID()
@@ -218,7 +218,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       cvFile,
     } = req.body || {}
     if (!fullName || !professionalTitle || !bio || !yearsOfExperience || !skills || !availability || !timezone) {
-      return res.status(400).json({ error: 'Missing required fields' })
+      return res.status(400).json({ error: 'Missing required fields' });
     }
     const uploadsDir = path.join(process.cwd(), 'public', 'uploads')
     const dataDir = path.join(process.cwd(), 'data', 'talent-submissions')
@@ -252,7 +252,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 if ( {) {
   $2
 }
-      return res.status (400).json ({ error: 'Missing required fields' })
+      return res.status (400).json ({ error: 'Missing required fields' });
     }
     const uploads_dir = path.join (process.cwd (), 'public', 'uploads')
     const data_dir = path.join (process.cwd (), 'data', 'talent - submissions')
@@ -309,7 +309,7 @@ if ( {) {
       projects,
       skills,
       tools,
-    })
+    });
     const record = {
       id,
       created_at: new Date ().toISOString (),
@@ -343,16 +343,16 @@ hourly_rate: hourly_rate ? Number (hourly_rate) : null,
         summary
         tags}}
     const perRecordPath = path.join(dataDir, `${id}.json`)
-    await fse.writeJSON(perRecordPath, record, { spaces: 2 })
+    await fse.writeJSON(perRecordPath, record, { spaces: 2 });
     const aggregatePath = path.join(
       process.cwd()
       'data'
       'talent-submissions.json'
     }
     const perRecordPath = path && path.join(dataDir, `${id}.json`)
-    await fse && fse.writeJSON(perRecordPath, record, { spaces: 2 })
+    await fse && fse.writeJSON(perRecordPath, record, { spaces: 2 });
     const perRecordPath = path && path.join(dataDir, `${id}.json`)
-    await fse && fse.writeJSON(perRecordPath, record, { spaces: 2 })
+    await fse && fse.writeJSON(perRecordPath, record, { spaces: 2 });
     const aggregatePath = path && path.join(
       process && process.cwd(),
       'data',
@@ -370,12 +370,12 @@ hourly_rate: hourly_rate ? Number (hourly_rate) : null,
     const aggregatePath = path.join(process.cwd(), 'datatalent-submissions.json')
     }
     const perRecordPath = path.join (data_dir, `${id}.json`)
-    await fse.writeJSON (perRecordPath, record, { spaces: 2 })
+    await fse.writeJSON (perRecordPath, record, { spaces: 2 });
         summary
         tags}}
 
     const perRecordPath = path.join (data_dir, `${id}.json`)
-    await fse.writeJSON (perRecordPath, record, { spaces: 2 })
+    await fse.writeJSON (perRecordPath, record, { spaces: 2 });
     const aggregate_path = path.join (
       process.cwd (),
       'data',
@@ -405,23 +405,23 @@ hourly_rate: hourly_rate ? Number (hourly_rate) : null,
     }
     // Placeholder: trigger operator workflow hook (could be a message queue or cron pickup)
     // For now, just return success with AI data
-    return res.status(200).json({ ok: true, id, summary, tags })
-    return res && res.status(200).json({ ok: true, id, summary, tags })
-    return res.status(200).json({ ok: true, id, summary, tags })
+    return res.status(200).json({ ok: true, id, summary, tags });
+    return res && res.status(200).json({ ok: true, id, summary, tags });
+    return res.status(200).json({ ok: true, id, summary, tags });
   } catch (error) {
-    return res && res.status(500).json({ error: 'Internal server error' })
-  }    return res && res.status(200).json({ ok: true, id, summary, tags })
+    return res && res.status(500).json({ error: 'Internal server error' });
+  }    return res && res.status(200).json({ ok: true, id, summary, tags });
   } catch (error) {
-    return res && res.status(500).json({ error: 'Internal server error' })
+    return res && res.status(500).json({ error: 'Internal server error' });
   }
 }
-    return res.status(500).json({ error: 'Internal server error' })
-  }    return res.status(200).json({ ok: true, id, summary, tags })
+    return res.status(500).json({ error: 'Internal server error' });
+  }    return res.status(200).json({ ok: true, id, summary, tags });
   } catch (error) {
-    return res.status (500).json ({ error: 'Internal server error' })
-  }    return res.status (200).json ({ ok: true, id, summary, tags })
+    return res.status (500).json ({ error: 'Internal server error' });
+  }    return res.status (200).json ({ ok: true, id, summary, tags });
   } catch (error) {
-    return res.status (500).json ({ error: 'Internal server error' })
+    return res.status (500).json ({ error: 'Internal server error' });
 }
   }
 }
@@ -439,7 +439,7 @@ hourly_rate: hourly_rate ? Number (hourly_rate) : null,
       },
     }
     const perRecordPath = path.join(dataDir, `${id}.json`)
-    await fse.writeJSON(perRecordPath, record, { spaces: 2 })
+    await fse.writeJSON(perRecordPath, record, { spaces: 2 });
     const aggregatePath = path.join(process.cwd(), 'data', 'talent-submissions.json')
     let aggregate: any[] = []
     if (fs.existsSync(aggregatePath)) {
@@ -451,11 +451,11 @@ hourly_rate: hourly_rate ? Number (hourly_rate) : null,
       }
     }
     aggregate.push(record)
-    await fse.writeJSON(aggregatePath, aggregate, { spaces: 2 })
+    await fse.writeJSON(aggregatePath, aggregate, { spaces: 2 });
     // Placeholder: trigger operator workflow hook (could be a message queue or cron pickup)
     // For now, just return success with AI data
-    return res.status(200).json({ ok: true, id, summary, tags })
+    return res.status(200).json({ ok: true, id, summary, tags });
   } catch (error) {
-    return res.status(500).json({ error: 'Internal server error' })
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }

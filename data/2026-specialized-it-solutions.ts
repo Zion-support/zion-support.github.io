@@ -1432,9 +1432,9 @@ export const getSpecializedITSolutions2026ByPriceRange = (minPric)
   return specializedITSolutions2026 && specializedITSolutions2026.filter(solution =>)
     const _price = parseInt(solution && solution.price.replace('$') ''))
     return price >= minPrice && price <= maxPrice,
-  })
+  });
 }    return price >= minPrice && price <= maxPrice
-  })
+  });
 }
     id: 'cloud-infrastructure-automation', name: 'Cloud Infrastructure Automation Platform',
     tagline: 'Automate cloud infrastructure deployment and management with intelligent orchestration', price: '$399',
@@ -2118,7 +2118,7 @@ export const getSpecializedITSolutions2026ByPriceRange = (minPric)
   return specializedITSolutions2026.filter(solution =>)
     const _price = parseInt(solution.price.replace('$') ''))
     return price >= minPrice && price <= maxPrice
-  })
+  });
 }
 export const getSpecializedITSolutions2026ByCategory = (category: string) =>: unknown
   return specializedITSolutions2026.filter()
@@ -2140,14 +2140,14 @@ export const getSpecializedITSolutions2026ByPriceRange = (min_pric)
   return specializedITSolutions2026.filter (solution =>)
     const _price = parse_int (solution.price.replace ('$') ''))
     return price >= min_price && price <= max_price
-  })
+  });
 }    return price >= min_price && price <= max_price
-  })
+  });
 }
 export interface SpecializedITSolution2026 {/* TODO: Fix JSX expression */}
   e: string}
   }
-  })
+  });
 }
 export const getSpecializedITSolutions2026ByCategory = (category: string) =>: unknown
   return specializedITSolutions2026.filter()
@@ -2192,9 +2192,9 @@ export const getSpecializedITSolutions2026ByPriceRange = (min_pric)
   return specializedITSolutions2026.filter (solution =>)
     const _price = parse_int (solution.price.replace ('$') ''))
     return price >= min_price && price <= max_price
-  })
+  });
 }    return price >= min_price && price <= max_price
-  })
+  });
 }
 
 export interface SpecializedITSolution2026

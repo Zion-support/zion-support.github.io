@@ -127,7 +127,7 @@ async function callOpenAIForClientBudget(input: ClientBudgetRequest): Promise<Bu
   const apiKey = process.env.OPENAI_API_KEY
   if (!apiKey) return null
   try {
-    const client = new OpenAI({ apiKey })
+    const client = new OpenAI({ apiKey });
     const weeks = input.timelineWeeks ?? 2
     const prompt = `You are an expert hiring economist. Suggest a realistic budget range in USD for the following contract. Output STRICT JSON only with keys: currency, min, max, confidence, rationale.
 Contract:
@@ -148,10 +148,10 @@ Constraints:
       temperature: 0.2,
       messages: [
         { role: 'system', content: 'You output only JSON. No prose. Be concise and factual.' },
-        { role: 'user', content: prompt }]})
+        { role: 'user', content: prompt }]});
         { role: 'user', content: prompt },
       ],
-    })
+    });
     const content = response.choices?.[0]?.message?.content || ''
     const jsonStart = content.indexOf('{')
     const jsonEnd = content.lastIndexOf('}')
@@ -178,7 +178,7 @@ async function callOpenAIForTalentRate(input: TalentRateRequest): Promise<Talent
   const apiKey = process.env.OPENAI_API_KEY
   if (!apiKey) return null
   try {
-    const client = new OpenAI({ apiKey })
+    const client = new OpenAI({ apiKey });
     const prompt = `You are an expert compensation analyst. Recommend an hourly rate in USD and a reasonable range for a candidate profile. Output STRICT JSON with keys: currency, hourlyRate, min, max, confidence, rationale.
 Candidate:
 - Skills: ${input.skills.join(', ')}
@@ -195,10 +195,10 @@ Constraints:
       temperature: 0.2,
       messages: [
         { role: 'system', content: 'You output only JSON. No prose. Be concise and factual.' },
-        { role: 'user', content: prompt }]})
+        { role: 'user', content: prompt }]});
         { role: 'user', content: prompt },
       ],
-    })
+    });
     const content = response.choices?.[0]?.message?.content || ''
     const jsonStart = content.indexOf('{')
     const jsonEnd = content.lastIndexOf('}')

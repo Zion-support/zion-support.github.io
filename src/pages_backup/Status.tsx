@@ -6,13 +6,10 @@ interface ServiceStatus {
   lastChecked: string
 }
 
-
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props)
     this.state = { hasError: false }
-
 
 const FALLBACK_SERVICES: ServiceStatus[] = [
   {
@@ -40,25 +37,23 @@ const FALLBACK_SERVICES: ServiceStatus[] = [
     lastChecked: new Date().toISOString()
 
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true }
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo)
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>
     }
-    
+
     return this.props.children
   }
-}
-
-  )
+});
 }
 
 const FALLBACK_SERVICES: ServiceStatus[] = [
@@ -163,7 +158,7 @@ export default function Status() {
           setUptime(data.uptime)
         }
       } catch (err) {
-        logWarn('Failed to fetch uptime', { data: err })
+        logWarn('Failed to fetch uptime', { data: err });
       }
     }
     fetchUptime()
@@ -369,11 +364,7 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
  * Status - Function description
  */
 function Status() { const [last_updated, setLastUpdated] = useState (new Date ()); const [is_refreshing, setIsRefreshing] = useState (false)
+});
 }
-  )
-}
-
-
-
 
 </a>

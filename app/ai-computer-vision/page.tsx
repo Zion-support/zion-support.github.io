@@ -34,7 +34,7 @@ const PagePage: React.FC = () => {const features = [
         <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
       </Helmet>
       <Navigation />
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -48,17 +48,17 @@ const PagePage: React.FC = () => {const features = [
                 Transform your business with our cutting-edge AI and IT solutions designed for the modern enterprise.
               </p>
             </div>
-      
+
       <Footer />
     </>
           </div>
-      
+
       <Footer />
     </>
         </section>
 
             </div>
-      
+
       <Footer />
     </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -68,10 +68,7 @@ const PagePage: React.FC = () => {const features = [
                     <feature.icon className="h-8 w-8 text-blue-600 mr-3"
                     <h3 className="text-xl font-semibold text-gray-900"
                   </div>
-<<<<<<< HEAD
-=======
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
+
       <Footer />
     </>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -87,23 +84,23 @@ const PagePage: React.FC = () => {const features = [
   )
                   </ul>
                 </div>
-      
+
       <Footer />
     </>
               ))}
             </div>
-      
+
       <Footer />
     </>
           </div>
-      
+
       <Footer />
     </>
         </section>
 
         {/* Benefits Section */}
             </div>
-      
+
       <Footer />
     </>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -113,24 +110,19 @@ const PagePage: React.FC = () => {const features = [
                     <CheckCircle className="h-6 w-6 text-green-500 mr-3"
                     <span className="text-lg font-medium text-gray-900"
                   </div>
-<<<<<<< HEAD
-=======
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
-      <Footer />
     </>
                   <p className="text-gray-300">{benefit}</p>
                 </div>
-      
+
       <Footer />
     </>
               ))}
             </div>
-      
+
       <Footer />
     </>
           </div>
-      
+
       <Footer />
     </>
         </section>
@@ -153,11 +145,11 @@ const PagePage: React.FC = () => {const features = [
                 Schedule Demo
               </button>
             </div>
-      
+
       <Footer />
     </>
           </div>
-      
+
       <Footer />
     </>
         </section>

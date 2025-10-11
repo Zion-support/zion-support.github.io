@@ -14,7 +14,7 @@ for (const filePath of files) {/* TODO: Fix JSX expression */}
         return `${prop}: '${value.substring(1)}'`
       }
       return match
-    })
+    });
     //Fix JSX attributes that look like regex but are actually strings
     content = content.replace(/={\s*\/[^\/\n]*$/gm, match => {)
       const value = match;)
@@ -24,7 +24,7 @@ for (const filePath of files) {/* TODO: Fix JSX expression */}
       return `={'${value}'}`
     content = content.replace(/={/* TODO: Fix JSX expression */}`
       return `={'${value}'}`;)
-    })
+    });
     //Fix common patterns where /> appears in wrong places
     content = content.replace(/\s*\/>\s*</g, ' <span')$2 />
     content = content.replace(/\s*\/></span>\s*<\/span>/g, '</span>')
@@ -41,12 +41,12 @@ for (const filePath of files) {/* TODO: Fix JSX expression */}
         return `${prop}: '${value.substring(1)}'`
       }
       return match
-    })
+    });
     //Fix malformed JSX expressions
     content = content.replace(/\{\s*\/[^\/\n]*$/gm, match => {)
     content = content.replace(/\{/* TODO: Fix JSX expression */}`
       return `{'${value}'}`;)
-    })
+    });
     //Fix specific patterns with unterminated regex in object properties
     content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {
       if (value.startsWith('/') && !value.endsWith('/')) {
@@ -54,7 +54,7 @@ for (const filePath of files) {/* TODO: Fix JSX expression */}
         return `${prop}: '${value.substring(1)}'`
       }
       return match
-    })
+    });
     //Fix malformed template literals
     content = content.replace(/`[^`]*$/gm, match => {)
       if (!match.endsWith('`')) {
@@ -63,7 +63,7 @@ for (const filePath of files) {/* TODO: Fix JSX expression */}
     content = content.replace(/`[^`]*$/gm, match => {/* TODO: Fix JSX expression */}
       }
       return match;)
-    })
+    });
     //Fix specific patterns where /> appears before other elements
     content = content.replace(/\s*\/>\s*<(\w+)/g, ' <$1')
     content = content.replace(/\s*\/>\s*<\/(\w+)>/g, '</$1>')
@@ -75,7 +75,7 @@ for (const filePath of files) {/* TODO: Fix JSX expression */}
         return match + '}'
       }
       return match
-    })
+    });
     //Fix specific patterns with malformed object properties
     content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {
       if (value.startsWith('/') && !value.endsWith('/')) {
@@ -83,7 +83,7 @@ for (const filePath of files) {/* TODO: Fix JSX expression */}
         return `${prop}: '${value.substring(1)}'`
       }
       return match
-    })
+    });
     if (content !== originalContent) {/* TODO: Fix JSX expression */}
     }
   } catch (error) {/* TODO: Fix JSX expression */}

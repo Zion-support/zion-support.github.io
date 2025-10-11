@@ -141,7 +141,7 @@ class QRCodeService {
       size: 300
       errorCorrectionLevel: 'H'
       format: 'svg'
-    })
+    });
   }
   async generateWiFiQR(data: {
     ssid: string
@@ -155,7 +155,7 @@ class QRCodeService {
       size: 256
       errorCorrectionLevel: 'M'
       format: 'svg'
-    })
+    });
   }
   async generateEmailQR(data: {
     to: string
@@ -168,7 +168,7 @@ class QRCodeService {
       size: 256
       errorCorrectionLevel: 'M'
       format: 'svg'
-    })
+    });
   }
   async generateSMSQR(data: {
     phone: string
@@ -180,7 +180,7 @@ class QRCodeService {
       size: 256
       errorCorrectionLevel: 'M'
       format: 'svg'
-    })
+    });
   }
   async generateGeoLocationQR(data: {
     latitude: number
@@ -194,7 +194,7 @@ class QRCodeService {
       size: 256
       errorCorrectionLevel: 'M'
       format: 'svg'
-    })
+    });
   }
   getTemplates(): QRCodeTemplate[] {
     return [
@@ -318,7 +318,7 @@ class QRCodeService {
       size: 300
       errorCorrectionLevel: 'H',
       format: 'svg'
-    })
+    });
   }
   async generateWiFiQR (data: {
     ssid: string
@@ -332,7 +332,7 @@ class QRCodeService {
       size: 256
       errorCorrectionLevel: 'M',
       format: 'svg'
-    })
+    });
   }
   async generateEmailQR (data: {
     to: string
@@ -345,7 +345,7 @@ class QRCodeService {
       size: 256
       errorCorrectionLevel: 'M',
       format: 'svg'
-    })
+    });
   }
   async generateSMSQR (data: {
     phone: string,
@@ -357,7 +357,7 @@ class QRCodeService {
       size: 256
       errorCorrectionLevel: 'M',
       format: 'svg'
-    })
+    });
   }
   async generateGeoLocationQR (data: {
     latitude: number
@@ -371,7 +371,7 @@ class QRCodeService {
       size: 256
       errorCorrectionLevel: 'M',
       format: 'svg'
-    })
+    });
   }
   get_templates (): QRCodeTemplate[] {
     return [
@@ -430,7 +430,7 @@ class QRCodeService {
       size: 300,
       errorCorrectionLevel: 'H',
       format: 'svg'
-    })
+    });
   }
   async generateWiFiQR(data: {
     ssid: string
@@ -444,7 +444,7 @@ class QRCodeService {
       size: 256,
       errorCorrectionLevel: 'M',
       format: 'svg'
-    })
+    });
   }
   async generateEmailQR(data: {
     to: string
@@ -457,7 +457,7 @@ class QRCodeService {
       size: 256,
       errorCorrectionLevel: 'M',
       format: 'svg'
-    })
+    });
   }
   async generateSMSQR(data: {
     phone: string
@@ -469,7 +469,7 @@ class QRCodeService {
       size: 256,
       errorCorrectionLevel: 'M',
       format: 'svg'
-    })
+    });
   }
   async generateGeoLocationQR(data: {
     latitude: number
@@ -483,7 +483,7 @@ class QRCodeService {
       size: 256,
       errorCorrectionLevel: 'M',
       format: 'svg'
-    })
+    });
   }
   getTemplates(): QRCodeTemplate[] {
     return [

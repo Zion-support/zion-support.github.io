@@ -22,7 +22,7 @@ return (
         <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
       </Helmet>
       <Navigation />
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Page Title - Zion Tech Group</title>
@@ -50,16 +50,16 @@ return (
         <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
       </Helmet>
       <Navigation />
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Landing Page Builder - Zion Tech Group</title>
         <meta name="description" content="AI-powered landing page builder solution for intelligent automation and optimization" />
         <meta name="keywords" content="AI, landing, page, builder, automation, artificial intelligence, business solutions" />
       </Helmet>
-      
+
       <Navigation />
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-sky-900 to-slate-900"
         {/* Hero Section */}
         <section className="py-20 px-4 relative overflow-hidden"
@@ -82,11 +82,11 @@ Get Started
 Learn More
               </button>
             </div>
-      
+
       <Footer />
     </>
           </div>
-      
+
       <Footer />
     </>
         </section>
@@ -108,32 +108,32 @@ Learn More
                     </ul>
                   )}
                 </div>
-      
+
       <Footer />
     </>
               ))}
             </div>
-      
+
       <Footer />
     </>
           </div>
-      
+
       <Footer />
     </>
         </section>
 
         {/* Benefits Section */}
                 </div>
-      
+
       <Footer />
     </>
               ))}
             </div>
-      
+
       <Footer />
     </>
           </div>
-      
+
       <Footer />
     </>
         </section>
@@ -142,6 +142,6 @@ Learn More
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
   </div>
-      
+
       <Footer />
     </>

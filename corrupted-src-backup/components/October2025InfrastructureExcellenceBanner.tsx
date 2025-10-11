@@ -187,7 +187,7 @@ const, October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX exp
                   <p, className="te, x, t-gr, a, y-400, tex, t-sm, m, b-4">"
                     {artic, l, e.descripti, o, n}
                   </p>)
-                  {/* Metri, c, s */})
+                  {/* Metri, c, s */});
                   <div, className="flex, fle, x-wrap, ga, p-2, m, b-4">";)
                     {artic, l, e.metri, c, s.m, a, p((metr, i, c, i, d, x) => (
                       <sp, a, n

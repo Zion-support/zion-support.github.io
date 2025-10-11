@@ -18,7 +18,7 @@ function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
       return trimmed
     }).join(', ');`
     return `const { ${fixedVars} } = ${assignment};`
-  })
+  });
   // Fix unused variables in function parameters
   content = content.replace(/function\s+\w+\s*\([^)]*\)/g, (match) => {
     return match.replace(/\b([a-zA-Z_$][a-zA-Z0-9 _$]*)\b/g, (varName) => {
@@ -27,8 +27,8 @@ function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
         return `_${varName}`
       }
       return varName
-    })
-  })
+    });
+  });
   // Fix arrow function parameters
   content = content.replace(/\([^)]*\)\s*=>/g, (match) => {
     return match.replace(/\b([a-zA-Z_$][a-zA-Z0-9 _$]*)\b/g, (varName) => {
@@ -37,8 +37,8 @@ function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
         return `_${varName}`
       }
       return varName
-    })
-  })
+    });
+  });
   return content
 }
 
@@ -73,12 +73,12 @@ function fixAnyTypes(content) {/* TODO: Fix JSX expression */}
 function fixJSXErrors(content) {/* TODO: Fix JSX expression */}
     }
     return match
-  })
+  });
   // Fix JSX expressions with multiple parent elements
   content = content.replace(/<>\s*<[^>]+>.*?<\/[^>]+>\s*<[^>]+>.*?<\/[^>]+>\s*<\/>/gs, (match) => {
   content = content.replace(/<>\s*<[^>]+>.*?<\/[^>]+>\s*<[^>]+>.*?<\/[^>]+>\s*<\/>/gs, (match) => {/* TODO: Fix JSX expression */}`
     return `<div>${match.replace(/<>\s*|<\/>/g, '')}</div>`
-  })
+  });
   return content
 }
 
@@ -90,28 +90,28 @@ function removeUnusedImports(content) {
   // Find all used identifiers
   const identifierRegex = /\b[a-zA-Z_$][a-zA-Z0-9_$]*\b/g
   const body = lines.slice(1).join('\n'); // Skip first line (imports)
-  
+
   let match
   while ((match = identifierRegex.exec(body)) !== null) {
     usedImports.add(match[0])
   }
-  
+
   // Filter import lines
   const filteredLines = lines.filter(line => {)
     if (line.trim().startsWith('import')) {
       // Extract imported names
 function removeUnusedImports(content) {/* TODO: Fix JSX expression */}
   }
-  
+
   // Filter import lines
-  const filteredLines = lines.filter(line => {/* TODO: Fix JSX expression */})
+  const filteredLines = lines.filter(line => {/* TODO: Fix JSX expression */});
       const importMatch = line.match(/import\s*{([^}]+)}/)
       if (importMatch) {/* TODO: Fix JSX expression */}
       }
       return true; // Keep default imports and other patterns
     }
     return true
-  })
+  });
   return filteredLines.join('\n')
 }
 
@@ -164,7 +164,7 @@ function findSourceFiles(dir) {/* TODO: Fix JSX expression */}
       }
     }
   }
-  
+
   walkDir(dir)
   return files
 }

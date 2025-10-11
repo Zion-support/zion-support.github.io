@@ -6,7 +6,7 @@ interface SEOData {/* TODO: Fix JSX expression */}
 interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */}
 }
 const,
-  AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({/* TODO: Fix JSX expression */})
+  AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({/* TODO: Fix JSX expression */});
 }) => {/* TODO: Fix JSX expression */}
     }
     const baseStructuredData = {/* TODO: Fix JSX expression */}
@@ -90,7 +90,7 @@ const,
     }
   }, [structuredData])
   useEffect(() => {/* TODO: Fix JSX expression */}
-          })
+          });
         }
       }
     }

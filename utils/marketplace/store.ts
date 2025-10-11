@@ -667,7 +667,7 @@ const DATA_DIR = path.join(process.cwd(), "data", "runtime")
 const DB_PATH = path.join(DATA_DIR, "marketplace.json")
 function ensureDataFile(): void {
   if (!fs.existsSync(DATA_DIR)) {
-    fs.mkdirSync(DATA_DIR, { recursive: true })
+    fs.mkdirSync(DATA_DIR, { recursive: true });
   }
   if (!fs.existsSync(DB_PATH)) {
     const initial: MarketplaceDb = { offers: [], projects: [] }

@@ -260,26 +260,26 @@ function makeRequest(url) {
       let data = ''
       res.on('data', (chunk) => {
         data += chunk
-      })
+      });
       res.on('end', () => {
         resolve({)
           statusCode: res.statusCode;)
           headers: res.headers),
           body: data),
           url: url
-        })
-      })
-    })
+        });
+      });
+    });
     req.on('error', (error) => {
       reject(error)
-    })
+    });
     req.on('timeout', () => {
       req.destroy()
       reject(new Error('Request timeout'))
-    })
+    });
     req.setTimeout(TIMEOUT)
     req.end()
-  })
+  });
 }
 
 // Analyze a single route
@@ -294,7 +294,7 @@ async function analyzeRoute(route) {
         route: route),
         url: url),
         statusCode: response.statusCode
-      })
+      });
       console.log(`✅ ${route} - ${response.statusCode}`)
     } else {
       results.broken.push({)
@@ -302,7 +302,7 @@ async function analyzeRoute(route) {
         url: url),
         statusCode: response.statusCode),
         reason: `HTTP ${response.statusCode}`
-      })
+      });
       console.log(`❌ ${route} - ${response.statusCode}`)
     }
   } catch (error) {
@@ -310,7 +310,7 @@ async function analyzeRoute(route) {
       route: route),
       url: url),
       error: error.message
-    })
+    });
     console.log(`⚠️  ${route} - Error: ${error.message}`)
   }
 }
@@ -331,7 +331,7 @@ async function analyzeAllRoutes() {
     } catch (error) {
       console.log(`Batch error: ${error.message}`)
     }
-    
+
     // Small delay between batches
     if (i + batchSize < definedRoutes.length) {
       await new Promise(resolve => setTimeout(resolve, 1000))
@@ -364,14 +364,14 @@ async function analyzeAllRoutes() {
     console.log('\n=== BROKEN ROUTES ===')
     results.broken.forEach(route => {)
       console.log(`❌ ${route.route} - ${route.reason}`)
-    })
+    });
   }
 
   if (results.errors.length > 0) {
     console.log('\n=== ERROR ROUTES ===')
     results.errors.forEach(route => {)
       console.log(`⚠️  ${route.route} - ${route.error}`)
-    })
+    });
   }
 
   console.log('\nDetailed report saved to: route-analysis-report.json')

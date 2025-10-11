@@ -77,7 +77,7 @@ impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m'
                     {/* TODO: Fix JSX expression */}
                   {conte, n, t.t, i, t, l, e}
                   <sp, a, n>
-                    {/* TODO: Fix JSX expression */})
+                    {/* TODO: Fix JSX expression */});
                     })}
                   <Link, classNam, e='w-4 h-4, grou, p-hov, e, r/b, t, n:transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0' />
               <div, classNam, e='flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'>

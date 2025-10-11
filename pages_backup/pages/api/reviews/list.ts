@@ -7,14 +7,14 @@ export default async function handler(
   res: NextApiResponse
 ) {
   if (req.method !== "GET") {
-    return res.status(405).json({ error: "Method not allowed" })
+    return res.status(405).json({ error: "Method not allowed" });
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { readReviews, readProjects } from '../../../utils/dataStore'
 import type { PublicReview, ReviewsSummary } from '../../../types/reviews'
 import { TALENT_PROFILES } from '../../../data/talent'
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
-    return res.status(405).json({ error: 'Method not allowed' })
+    return res.status(405).json({ error: 'Method not allowed' });
   }
   }
   try {
@@ -24,13 +24,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       targetType?: string
       targetId?: string
     }
-      return res.status(400).json({ error: "Missing targetType or targetId" })
+      return res.status(400).json({ error: "Missing targetType or targetId" });
     const { targetType, targetId } = req.query as { targetType?: string, targetId?: string }
     if (!targetType || !targetId) {
-      return res.status(400).json({ error: 'Missing targetType or targetId' })
+      return res.status(400).json({ error: 'Missing targetType or targetId' });
     }
     if (targetType !== 'talent' && targetType !== 'client') {
-      return res.status(400).json({ error: 'Invalid targetType' })
+      return res.status(400).json({ error: 'Invalid targetType' });
     }
     const all = await readReviews()
     // Include reviews where both sides have submitted and both are approved and not removed
@@ -54,7 +54,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           !x.removed
       )
       return counterpartExists
-    })
+    });
     // Map to public reviews (mask anonymous author)
     const publicReviews: PublicReview[] = filtered
       .sort(
@@ -92,7 +92,7 @@ if (author_name = "Anonymous") {
           ...r
           authorName
         }
-      })
+      });
     const totalReviews = publicReviews && publicReviews.length
     const averageRating = totalReviews
         ) / 10
@@ -103,10 +103,10 @@ if (author_name = "Anonymous") {
   } catch (error: any) {
     return res
       .status(500)
-      .json({ error: "Internal server error", details: error?.message })
+      .json({ error: "Internal server error", details: error?.message });
           ...r,
           authorName}
-      })
+      });
     const total_reviews = public_reviews.length
     const average_rating = total_reviews
       ? Math.round (
@@ -128,11 +128,11 @@ if (author_name = "Anonymous") {
       most_recent: public_reviews.slice (0, 5),
     }
 
-    return res.status (200).json ({ summary, reviews: public_reviews })
+    return res.status (200).json ({ summary, reviews: public_reviews });
   } catch (error: any) {
-    return res.status(500).json({ error: 'Internal server error', details: error?.message })
+    return res.status(500).json({ error: 'Internal server error', details: error?.message });
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ reviews: [] })
+  res.status(200).json({ reviews: [] });
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { readReviews, readProjects } from '../../../utils/dataStore'
 import type { PublicReview, ReviewsSummary } from '../../../types/reviews'
@@ -140,58 +140,58 @@ import { TALENT_PROFILES } from '../../../data/talent'
 export default async function handler(req, res) {
   try {
   if (req.method !== '$1') {
-    return res.status(405).json({ error: 'Method not allowed' })
+    return res.status(405).json({ error: 'Method not allowed' });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
   try {
     const { targetType, targetId } = req.query as { targetType?: string, targetId?: string },
     if (!targetType || !targetId) {
-      return res.status(400).json({ error: 'Missing targetType or targetId' })
+      return res.status(400).json({ error: 'Missing targetType or targetId' });
       } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
     if (targetType !== 'talent' && targetType !== 'client') {
-      return res.status(400).json({ error: 'Invalid targetType' })
+      return res.status(400).json({ error: 'Invalid targetType' });
       } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
     const all = await readReviews()
     // Include reviews where both sides have submitted and both are approved and not removed
     const filtered = all.filter((r) => {
-      if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })
+      if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
       .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
       .map((r) => {
         let authorName = r.fromId
@@ -200,15 +200,15 @@ export default async function handler(req, res) {
           authorName = t ? t.name : r.fromId
           } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
         if (r.anonymous) authorName = 'Anonymous'
@@ -216,15 +216,15 @@ export default async function handler(req, res) {
           ...r,
           authorName  } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
       }),
@@ -242,32 +242,32 @@ export default async function handler(req, res) {
       totalReviews
       totalCompletedProjects
       mostRecent: publicReviews.slice(0, 5)}
-    return res.status(200).json({ summary, reviews: publicReviews })
+    return res.status(200).json({ summary, reviews: publicReviews });
   } catch (error) {
-    return res.status(500).json({ error: 'Internal server error', details: error?.message })
+    return res.status(500).json({ error: 'Internal server error', details: error?.message });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }

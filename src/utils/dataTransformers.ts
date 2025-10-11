@@ -194,14 +194,13 @@ export function pick<T extends Record<string, unknown>, K extends keyof T>()
           <T>
   keys.forEach(key => {/* TODO: Fix JSX expression */}
   O: Add content,}
-})
+});
     if (key in obj) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       result[key] = obj[key]
     }
-  }
-  )
+  });
   return result
 }
 /**
@@ -222,7 +221,7 @@ export function omit
   O: Add content,}
 }
     delete result[key];)
-  })
+  });
   return result as Omit
           <T>
 }
@@ -276,8 +275,7 @@ export function unique<T>(array: T[], key?: keyof T): T[] {
     }
     seen.add(value)
     return true
-  }
-  )
+  });
 }
 /**
  * Sort array by multiple keys
@@ -326,8 +324,7 @@ const aComp =
       if (aComp > bComp) return order === 'asc' ? 1 : -1
     }
     return 0
-  }
-  )
+  });
 }
 /**
  * Chunk array into smaller arrays

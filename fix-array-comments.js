@@ -15,7 +15,7 @@ for (let i = 0; i < lines.length; i++) {/* TODO: Fix JSX expression */}
   } else if (line.includes('// const _categories = [')) {/* TODO: Fix JSX expression */}
   } else if (inCategoriesArray && line.includes('// ];')) {/* TODO: Fix JSX expression */}
   }
-  
+
   // Comment out lines within the arrays
   if (inRealEstateArray && i > realEstateStartLine && !line.includes('// const _realEstateSaaS = [')) {
     if (!line.trim().startsWith('//')) {
@@ -23,7 +23,7 @@ for (let i = 0; i < lines.length; i++) {/* TODO: Fix JSX expression */}
   if (inRealEstateArray && i > realEstateStartLine && !line.includes('// const _realEstateSaaS = [')) {/* TODO: Fix JSX expression */}
     }
   }
-  
+
   if (inCategoriesArray && i > categoriesStartLine && !line.includes('// const _categories = [')) {/* TODO: Fix JSX expression */}
     }
   }

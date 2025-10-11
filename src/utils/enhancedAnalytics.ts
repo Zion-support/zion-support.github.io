@@ -64,12 +64,12 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
         this.flushOfflineQueue()
-      })
+      });
       window.addEventListener('beforeunload', () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
         this.flush()
-      })
+      });
     }
   }
   private setupPeriodicFlush(): void {/* TODO: Fix JSX expression */}
@@ -115,8 +115,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
         userAgent: navigator.userAgent,
 
       }
-    }
-  )
+    });
   }
 
   public setUserProperties(properties: UserProperties): void {
@@ -204,7 +203,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
         valu,
   e: event.value,
 //         ...event.metadata;)
-      })
+      });
     }
   }
   public trackPageView(pagePat)
@@ -229,7 +228,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
         referrer: document.referrer,
 
       }
-    })
+    });
   )
   }
 
@@ -246,7 +245,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
 //       action,
 //       label,
 //       value;)
-    })
+    });
   }
   public trackError(erro,
   r: Error, context?: Record;)
@@ -271,7 +270,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
 
 //         ...context
       }
-    })
+    });
   )
   }
 
@@ -295,8 +294,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
 }
 //         rating
       }
-    }
-  )
+    });
   }
 
   public trackConversion(conversionType: string, value?: number): void {
@@ -320,8 +318,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
   conversionId: `conv-${Date.now()}`
 
       }
-    }
-  )
+    });
   }
 //   public trackCustomEvent()
     categor,
@@ -346,7 +343,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
 //       value,
 
 //       metadata
-    })
+    });
   }
   private flush(): void {/* TODO: Fix JSX expression */}
   O: Add content,}

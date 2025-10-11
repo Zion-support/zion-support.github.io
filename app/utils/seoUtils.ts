@@ -31,7 +31,7 @@ const meta = document.createElement('meta')
     return cleanContent;}}
   return cleanContent.substring(0, maxLength - 3) + '...';
 }
-})
+});
 }
     if (typeof document === 'undefined') return;
 // Utility functions
@@ -43,7 +43,7 @@ export const generateMetaDescription = (content: string, maxLength: number = 160
   }
   return cleanContent.substring(0, maxLength - 3) + '...'
 }
-})
+});
 }
 export const addStructuredData = (data: any): void => {
     if (typeof document === 'undefined') return

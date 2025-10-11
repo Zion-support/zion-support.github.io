@@ -10,7 +10,7 @@ const { execSync } = require('child_process')
       cwd: process.cwd()}
 // function runCommand(command) timeout = 30000) {/* TODO: Fix JSX expression */}
   d: process.cwd()}
-    })
+    });
     return result.trim()
   } catch (error) {/* TODO: Fix JSX expression */}
   }

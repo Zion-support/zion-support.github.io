@@ -296,7 +296,7 @@ import {
               Explore our comprehensive range of technology services designed to meet your business needs
             </p>
           </div>
-          
+
           {serviceCategories.map((category) => (
             <div key={category.id} className="mb-16">
               <div className="text-center mb-8">
@@ -308,7 +308,7 @@ import {
                 <h3 className="text-2xl font-bold mb-2">{category.title}</h3>
                 <p className="text-muted-foreground">{category.description}</p>
               </div>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {category.services.map((service, index) => (
                   <Card key={index} className="hover:shadow-lg transition-all duration-300">
@@ -424,9 +424,9 @@ export default function ServicesOverviewPage() {
         keywords="AI services, cybersecurity, cloud solutions, digital transformation, IT services overview"
         canonical="https://ziontechgroup.com/services-overview"
       />
-      
+
       <Header />
-      
+
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-br from-zion-blue to-zion-blue-dark">
@@ -508,23 +508,23 @@ export default function ServicesOverviewPage() {
                 Explore our comprehensive range of technology services across multiple domains
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {SERVICE_CATEGORIES.map((category) => (
                 <Card key={category.id} className="bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300 hover:shadow-xl hover:shadow-zion-purple/20 group">
                   <div className={`${getCategoryColor(category.color)} p-8 rounded-t-lg flex items-center justify-center`}>
                     {getCategoryIcon(category.icon)}
                   </div>
-                  
+
                   <div className="p-6">
                     <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors">
                       {category.name}
                     </h3>
-                    
+
                     <p className="text-zion-slate-light mb-6">
                       {category.description}
                     </p>
-                    
+
                     <div className="mb-6">
                       <p className="text-zion-cyan font-medium mb-2">
                         {category.services.length} Services Available
@@ -542,7 +542,7 @@ export default function ServicesOverviewPage() {
                         )}
                       </div>
                     </div>
-                    
+
                     <Button 
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
                       asChild
@@ -568,7 +568,7 @@ export default function ServicesOverviewPage() {
                 We deliver exceptional value through innovation, expertise, and proven results
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center">
                 <div className="bg-zion-purple/20 p-4 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
@@ -577,7 +577,7 @@ export default function ServicesOverviewPage() {
                 <h3 className="text-xl font-bold text-white mb-2">AI-Powered</h3>
                 <p className="text-zion-slate-light">Leverage cutting-edge AI technologies for competitive advantage</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-zion-cyan/20 p-4 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
                   <Shield className="h-10 w-10 text-zion-cyan" />
@@ -585,7 +585,7 @@ export default function ServicesOverviewPage() {
                 <h3 className="text-xl font-bold text-white mb-2">Enterprise Security</h3>
                 <p className="text-zion-slate-light">Bank-grade security and compliance for critical systems</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-zion-purple/20 p-4 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
                   <Zap className="h-10 w-10 text-zion-purple" />
@@ -593,7 +593,7 @@ export default function ServicesOverviewPage() {
                 <h3 className="text-xl font-bold text-white mb-2">Rapid Deployment</h3>
                 <p className="text-zion-slate-light">Quick implementation with minimal business disruption</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="bg-zion-cyan/20 p-4 rounded-full w-20 h-20 mx-auto mb-4 flex items-center justify-center">
                   <Users className="h-10 w-10 text-zion-cyan" />
@@ -614,7 +614,7 @@ export default function ServicesOverviewPage() {
                 Choose the service level that best fits your business needs and budget
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {PRICING_TIERS.map((tier, index) => (
                 <Card key={tier.name} className={`bg-zion-blue-dark border p-8 text-center relative ${
@@ -625,11 +625,11 @@ export default function ServicesOverviewPage() {
                       Most Popular
                     </Badge>
                   )}
-                  
+
                   <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
                   <div className="text-4xl font-bold text-zion-cyan mb-2">{tier.price}</div>
                   <p className="text-zion-slate-light mb-6">{tier.description}</p>
-                  
+
                   <ul className="space-y-3 mb-8 text-left">
                     {tier.features.map((feature) => (
                       <li key={feature} className="flex items-center gap-3">
@@ -638,7 +638,7 @@ export default function ServicesOverviewPage() {
                       </li>
                     ))}
                   </ul>
-                  
+
                   <Button 
                     className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
                     asChild
@@ -662,7 +662,7 @@ export default function ServicesOverviewPage() {
                 Key features and capabilities that set our services apart
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-zion-blue border border-zion-blue-light rounded-lg p-6">
                 <div className="bg-zion-purple/20 p-3 rounded-full w-16 h-16 mb-4 flex items-center justify-center">
@@ -671,7 +671,7 @@ export default function ServicesOverviewPage() {
                 <h3 className="text-xl font-bold text-white mb-3">Scalable Solutions</h3>
                 <p className="text-zion-slate-light">Our services grow with your business, from startup to enterprise scale</p>
               </div>
-              
+
               <div className="bg-zion-blue border border-zion-blue-light rounded-lg p-6">
                 <div className="bg-zion-cyan/20 p-3 rounded-full w-16 h-16 mb-4 flex items-center justify-center">
                   <Globe className="h-8 w-8 text-zion-cyan" />
@@ -679,7 +679,7 @@ export default function ServicesOverviewPage() {
                 <h3 className="text-xl font-bold text-white mb-3">Global Reach</h3>
                 <p className="text-zion-slate-light">Services available worldwide with local compliance and support</p>
               </div>
-              
+
               <div className="bg-zion-blue border border-zion-blue-light rounded-lg p-6">
                 <div className="bg-zion-purple/20 p-3 rounded-full w-16 h-16 mb-4 flex items-center justify-center">
                   <Database className="h-8 w-8 text-zion-purple" />
@@ -687,7 +687,7 @@ export default function ServicesOverviewPage() {
                 <h3 className="text-xl font-bold text-white mb-3">Data-Driven</h3>
                 <p className="text-zion-slate-light">Analytics and insights to optimize performance and ROI</p>
               </div>
-              
+
               <div className="bg-zion-blue border border-zion-blue-light rounded-lg p-6">
                 <div className="bg-zion-cyan/20 p-3 rounded-full w-16 h-16 mb-4 flex items-center justify-center">
                   <Code className="h-8 w-8 text-zion-cyan" />
@@ -695,7 +695,7 @@ export default function ServicesOverviewPage() {
                 <h3 className="text-xl font-bold text-white mb-3">Custom Development</h3>
                 <p className="text-zion-slate-light">Tailored solutions designed specifically for your business needs</p>
               </div>
-              
+
               <div className="bg-zion-blue border border-zion-blue-light rounded-lg p-6">
                 <div className="bg-zion-purple/20 p-3 rounded-full w-16 h-16 mb-4 flex items-center justify-center">
                   <Lock className="h-8 w-8 text-zion-purple" />
@@ -703,7 +703,7 @@ export default function ServicesOverviewPage() {
                 <h3 className="text-xl font-bold text-white mb-3">Security First</h3>
                 <p className="text-zion-slate-light">Enterprise-grade security built into every solution</p>
               </div>
-              
+
               <div className="bg-zion-blue border border-zion-blue-light rounded-lg p-6">
                 <div className="bg-zion-cyan/20 p-3 rounded-full w-16 h-16 mb-4 flex items-center justify-center">
                   <Zap className="h-8 w-8 text-zion-cyan" />
@@ -725,7 +725,7 @@ export default function ServicesOverviewPage() {
               Contact our team today for a free consultation and discover how our comprehensive services 
               can transform your business and drive innovation.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Button 
                 size="lg"
@@ -749,7 +749,7 @@ export default function ServicesOverviewPage() {
                 </a>
               </Button>
             </div>
-            
+
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 max-w-2xl mx-auto">
               <h3 className="text-xl font-bold text-white mb-4">Visit Our Office</h3>
               <p className="text-zion-slate-light mb-2">
@@ -764,7 +764,7 @@ export default function ServicesOverviewPage() {
           </div>
         </section>
       </main>
-      
+
       <Footer />
     </>
     <div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-blue-dark to-zion-slate">

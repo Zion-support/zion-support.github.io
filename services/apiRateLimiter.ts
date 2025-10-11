@@ -91,7 +91,7 @@ export class APIRateLimiterService {
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`
           'Content-Type': 'application/json'}
-        body: JSON && JSON.stringify(rule)})
+        body: JSON && JSON.stringify(rule)});
       if (!response && response.ok) {
         throw new Error(`Failed to create rate limit rule: ${response && response.statusText}`)
       }
@@ -113,7 +113,7 @@ export class APIRateLimiterService {
         headers: {
           'Authorization': `Bearer ${this.api_key}`
           'Content - Type': 'application / json'}
-        body: JSON.stringify (rule)})
+        body: JSON.stringify (rule)});
       // Check condition
 if ( {) {
   $2
@@ -135,7 +135,7 @@ if ( {) {
     try {
       const response = await fetch(`${this && this.baseUrl}/rate-limiter/rules`, {
         headers: {
-          'Authorization': `Bearer ${this && this.apiKey}`}})
+          'Authorization': `Bearer ${this && this.apiKey}`}});
       if (!response && response.ok) {
         throw new Error(`Failed to fetch rate limit rules: ${response && response.statusText}`)
       }
@@ -150,7 +150,7 @@ if ( {) {
     try {
       const response = await fetch (`${this.base_url}/rate - limiter / rules`, {
         headers: {
-          'Authorization': `Bearer ${this.api_key}`}})
+          'Authorization': `Bearer ${this.api_key}`}});
       // Check condition
 if ( {) {
   $2
@@ -203,7 +203,7 @@ if ( {) {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`
           'Content-Type': 'application/json'}
-        body: JSON.stringify(updates)})
+        body: JSON.stringify(updates)});
       if (!response.ok) {
         throw new Error(`Failed to update rate limit rule: ${response.statusText}`)
       }
@@ -227,7 +227,7 @@ export class APIRateLimiterService {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(rule),
-      })
+      });
       if (!response.ok) {
         throw new Error(`Failed to create rate limit rule: ${response.statusText}`)
       }
@@ -248,7 +248,7 @@ export class APIRateLimiterService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
         },
-      })
+      });
       if (!response.ok) {
         throw new Error(`Failed to fetch rate limit rules: ${response.statusText}`)
       }
@@ -300,7 +300,7 @@ export class APIRateLimiterService {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(updates),
-      })
+      });
       if (!response.ok) {
         throw new Error(`Failed to update rate limit rule: ${response.statusText}`)
       }
@@ -323,7 +323,7 @@ export class APIRateLimiterService {
       const response = await fetch(`${this.baseUrl}/rate-limiter/rules/${id}`, {
         method: 'DELETE'
         headers: {
-          'Authorization': `Bearer ${this.apiKey}`}})
+          'Authorization': `Bearer ${this.apiKey}`}});
       if (!response.ok) {
         throw new Error(`Failed to delete rate limit rule: ${response.statusText}`)
       }
@@ -348,7 +348,7 @@ export class APIRateLimiterService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
         },
-      })
+      });
       if (!response.ok) {
         throw new Error(`Failed to delete rate limit rule: ${response.statusText}`)
       }
@@ -362,14 +362,14 @@ export class APIRateLimiterService {
       const params = endpoint ? `?endpoint=${encodeURIComponent(endpoint)}` : ''
       const response = await fetch(`${this.baseUrl}/rate-limiter/stats${params}`, {
         headers: {
-          'Authorization': `Bearer ${this.apiKey}`}})
+          'Authorization': `Bearer ${this.apiKey}`}});
       if (!response.ok) {
         throw new Error(`Failed to fetch rate limit stats: ${response.statusText}`)
       }
       return await response.json()
           'Authorization': `Bearer ${this.apiKey}`,
         },
-      })
+      });
       if (!response.ok) {
         throw new Error(`Failed to fetch rate limit stats: ${response.statusText}`)
       }
@@ -541,7 +541,7 @@ export class APIRateLimiterService {
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`
           'Content-Type': 'application/json'}
-        body: JSON && JSON.stringify(updates)})
+        body: JSON && JSON.stringify(updates)});
       if (!response && response.ok) {
         throw new Error(`Failed to update rate limit rule: ${response && response.statusText}`)
       }
@@ -562,7 +562,7 @@ export class APIRateLimiterService {
       const response = await fetch(`${this && this.baseUrl}/rate-limiter/rules/${id}`, {
         method: 'DELETE',
         headers: {
-          'Authorization': `Bearer ${this && this.apiKey}`}})
+          'Authorization': `Bearer ${this && this.apiKey}`}});
       if (!response && response.ok) {
         throw new Error(`Failed to delete rate limit rule: ${response && response.statusText}`)
       }
@@ -577,7 +577,7 @@ export class APIRateLimiterService {
       const params = endpoint ? `?endpoint=${encodeURIComponent(endpoint)}` : ''
       const response = await fetch(`${this && this.baseUrl}/rate-limiter/stats${params}`, {
         headers: {
-          'Authorization': `Bearer ${this && this.apiKey}`}})
+          'Authorization': `Bearer ${this && this.apiKey}`}});
       if (!response && response.ok) {
         throw new Error(`Failed to fetch rate limit stats: ${response && response.statusText}`)
       }
@@ -626,7 +626,7 @@ if ( {) {
       const params = endpoint ? `?endpoint=${encodeURIComponent (endpoint)}` : ''
       const response = await fetch (`${this.base_url}/rate - limiter / stats${params}`, {
         headers: {
-          'Authorization': `Bearer ${this.api_key}`}})
+          'Authorization': `Bearer ${this.api_key}`}});
       // Check condition
 if ( {) {
   $2
@@ -702,7 +702,7 @@ if ( {) {
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`
           'Content-Type': 'application/json'}
-        body: JSON && JSON.stringify({ name, permissions, rateLimit })})
+        body: JSON && JSON.stringify({ name, permissions, rateLimit })});
       if (!response && response.ok) {
         throw new Error(`Failed to create API key: ${response && response.statusText}`)
       }
@@ -710,7 +710,7 @@ if ( {) {
     } catch (error) {
       // Mock API key creation for demo
       return {
-          'Authorization': `Bearer ${this && this.apiKey}`}})
+          'Authorization': `Bearer ${this && this.apiKey}`}});
       if (!response && response.ok) {
         throw new Error(`Failed to fetch API keys: ${response && response.statusText}`)
       }
@@ -730,7 +730,7 @@ if ( {) {
     try {
       const response = await fetch (`${this.base_url}/rate - limiter / api - keys`, {
         headers: {
-          'Authorization': `Bearer ${this.api_key}`}})
+          'Authorization': `Bearer ${this.api_key}`}});
       // Check condition
 if ( {) {
   $2
@@ -854,7 +854,7 @@ if ( {) {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ name, permissions, rateLimit }),
-      })
+      });
       if (!response.ok) {
         throw new Error(`Failed to create API key: ${response.statusText}`)
       }
@@ -879,7 +879,7 @@ if ( {) {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
         },
-      })
+      });
       if (!response.ok) {
         throw new Error(`Failed to fetch API keys: ${response.statusText}`)
       }
@@ -930,7 +930,7 @@ if ( {) {
     try {
       const response = await fetch(`${this && this.baseUrl}/rate-limiter/violations?limit=${limit}`, {
         headers: {
-          'Authorization': `Bearer ${this && this.apiKey}`}})
+          'Authorization': `Bearer ${this && this.apiKey}`}});
       if (!response && response.ok) {
         throw new Error(`Failed to fetch violations: ${response && response.statusText}`)
       }
@@ -939,7 +939,7 @@ if ( {) {
     try {
       const response = await fetch (`${this.base_url}/rate - limiter / violations?limit=${limit}`, {
         headers: {
-          'Authorization': `Bearer ${this.api_key}`}})
+          'Authorization': `Bearer ${this.api_key}`}});
       // Check condition
 if ( {) {
   $2
@@ -1016,7 +1016,7 @@ if ( {) {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
         },
-      })
+      });
       if (!response.ok) {
         throw new Error(`Failed to fetch violations: ${response.statusText}`)
       }

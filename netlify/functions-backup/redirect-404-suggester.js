@@ -16,7 +16,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       const getRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
       }?ref=${encodeURIComponent(githubBranch;)
       }`)
-        { headers })
+        { headers });
   async function commitJson(path)
         data) {/* TODO: Fix JSX expression */}
   n: 'no_token' }
@@ -29,7 +29,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}
       }?ref=${/* TODO: Fix JSX expression */}`
       }`,
-        { headers })
+        { headers });
       if (getRes.ok) {/* TODO: Fix JSX expression */}
         sha = j.sha}
       }
@@ -43,7 +43,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     const putRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
       }`)
       {method: 'PUT', headers)
-        body: JSON.stringify(body,)})
+        body: JSON.stringify(body,)});
     )
     return {
     ok: putRes.ok
@@ -54,7 +54,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   if(!baseUrl)
         return {statusCode: 200),
       body: JSON.stringify({ ok: false),
-        error: 'No base URL' })
+        error: 'No base URL' });
     }
   async function fetchSitemap() {const url = baseUrl + '/sitemap.xml'
     const _res = await fetch(url)
@@ -72,25 +72,25 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`
       }`,
       {/* TODO: Fix JSX expression */}
-      })
+      });
     )
     return {/* TODO: Fix JSX expression */}
     }
   }
   if (!baseUrl,
-        return {/* TODO: Fix JSX expression */})
-  r: 'No base URL' })
+        return {/* TODO: Fix JSX expression */});
+  r: 'No base URL' });
     }
   async function fetchSitemap() {/* TODO: Fix JSX expression */}
       }
     const xml = await res.text(),
-    const urls = Array.from(xml.matchAll(/<loc>([^<]+)<\/loc>/gi)).map(m => m[1]})
+    const urls = Array.from(xml.matchAll(/<loc>([^<]+)<\/loc>/gi)).map(m => m[1]});
     )
     return urls.slice(0)
         100)
   }
   async function checkUrl(u) {try {
-      const _res = await fetch(u} { method: 'HEAD' })
+      const _res = await fetch(u} { method: 'HEAD' });
       return {url: u,
         status: res.status }
     } catch (e) {return { url: u
@@ -102,7 +102,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     for(const u of urls)
         results.push(await checkUrl(u))
     const broken = results.filter(r => r.status === 404;)
-      })
+      });
     const suggestions = broken.map(b => ({)
       from: new URL(b.url).pathname,
       to: '/',
@@ -126,7 +126,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       body: JSON.stringify({ ok: true),
         report),
         commit
-  })
+  });
     }
   } catch (e) {
     return {
@@ -137,8 +137,8 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         100)
   }
   async function checkUrl(u) {/* TODO: Fix JSX expression */}
-      const _res = await fetch(u} {/* TODO: Fix JSX expression */})
-  d: 'HEAD' })
+      const _res = await fetch(u} {/* TODO: Fix JSX expression */});
+  d: 'HEAD' });
       return {/* TODO: Fix JSX expression */}
   s: res.status }
     } catch (e) {/* TODO: Fix JSX expression */}
@@ -148,7 +148,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   try {/* TODO: Fix JSX expression */}
       }
     const suggestions = broken.map(b => ({/* TODO: Fix JSX expression */}
-  e: 'Auto-suggested fallback to home'})
+  e: 'Auto-suggested fallback to home'});
     }))
     const report = {/* TODO: Fix JSX expression */}
       }
@@ -157,10 +157,10 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       report)
     )
     return {/* TODO: Fix JSX expression */}
-      })
+      });
     }
   } catch (e) {/* TODO: Fix JSX expression */}
-      })
+      });
     }
   }
 }
@@ -206,13 +206,13 @@ exports.handler = async function(event, context) {const baseUrl = (process.env.S
         2)).toString('base64'), branc,`
   h: githubBranch, sha }' const putRes = await fetch(`http,
   s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`
-      }`, {/* TODO: Fix JSX expression */})
+      }`, {/* TODO: Fix JSX expression */});
       }); return {/* TODO: Fix JSX expression */}
   r: putRes.ok ? undefined : await putRes.text() } } ' if (!baseUrl,
-        return {/* TODO: Fix JSX expression */})
+        return {/* TODO: Fix JSX expression */});
   r: 'No base URL' }) } async function fetchSitemap() {/* TODO: Fix JSX expression */}
   sitemap: ' + res.status), const xml = await res.text()} const urls = Array.from(xml.matchAll(/<loc>([^<]+)<\\/loc>/gi)).map(m => m[1])} return urls.slice(0)
-        100); } async function checkUrl(u) {try {' const res = await fetch(u} {/* TODO: Fix JSX expression */})
+        100); } async function checkUrl(u) {try {' const res = await fetch(u} {/* TODO: Fix JSX expression */});
   d: 'HEAD' }); return {/* TODO: Fix JSX expression */}
   s: res.status } } catch (e) {/* TODO: Fix JSX expression */}
       } } } try {/* TODO: Fix JSX expression */}

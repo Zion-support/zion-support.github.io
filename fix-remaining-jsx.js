@@ -45,17 +45,17 @@ function fixMalformedJSX(content) {
 async function main() {
   const appDir = path.join(process.cwd(), 'app');
   const pattern = path.join(appDir, '**/*.tsx');
-  
+
   console.log('Fixing malformed JSX in TSX files...');
   const files = await glob(pattern);
-  
+
   let fixedCount = 0;
-  
+
   for (const file of files) {
     try {
       const content = fs.readFileSync(file, 'utf8');
       const fixed = fixMalformedJSX(content);
-      
+
       if (fixed !== content) {
         fs.writeFileSync(file, fixed, 'utf8');
         console.log(`Fixed: ${path.relative(process.cwd(), file)}`);
@@ -65,7 +65,7 @@ async function main() {
       console.error(`Error processing ${file}:`, error.message);
     }
   }
-  
+
   console.log(`\nFixed ${fixedCount} files`);
 }
 

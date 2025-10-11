@@ -30,10 +30,10 @@ if ( {) {
             return { id: f, file: f }
           }
         }),
-        return res.status (200).json ({ logs })
+        return res.status (200).json ({ logs });
       }
     }
   } catch {
-  return res.status(200).json({ logs: remote })
+  return res.status(200).json({ logs: remote });
 }
 }

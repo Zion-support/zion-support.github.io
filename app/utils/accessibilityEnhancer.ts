@@ -23,8 +23,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
     const modals = document.querySelectorAll('[role="dialog"][aria-hidden="false"]');
     modals.forEach(modal => {)
       const closeButton = modal.querySelector('[aria-label*="close"], [aria-label*="Close"]') as HTMLElement;
-      closeButton?.click();})
-    
+      closeButton?.click();});
     // Close any open menus;
     const menus = document.querySelectorAll('[role="menu"][aria-expanded="true"]');
     menus.forEach(menu => {)
@@ -37,14 +36,13 @@ const AccessibilityEnhancerPage: React.FC = () => {
     modals.forEach()
       const closeButton = modal.querySelector('[aria-label*="close"], [aria-label*="Close"]') as HTMLElement
       closeButton?.click()
-    })
-    
+    });
     // Close any open menus;
   const menus = document.querySelectorAll('[role="menu"], [aria-expanded="true"]')
     menus.forEach()
       const trigger = document.querySelector(`[aria-controls="${menu.id}"]`) as HTMLElement
       trigger?.click()
-    })
+    });
   }
 
   /**
@@ -82,7 +80,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
    */
         }
       }
-    })
+    });
   }
 
   /**
@@ -95,7 +93,7 @@ const AccessibilityEnhancerPage: React.FC = () => {
         document.body.classList.remove('high-contrast')
       }
     }
-    
+
     mediaQuery.addEventListener('change', handleContrastChange)
     handleContrastChange(mediaQuery)
   }

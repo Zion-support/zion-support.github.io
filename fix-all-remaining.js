@@ -9,11 +9,11 @@ const __dirname = path.dirname(__filename);
 function getAllTsxFiles(dir) {
   let results = [];
   const list = fs.readdirSync(dir);
-  
+
   list.forEach(file => {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
-    
+
     if (stat && stat.isDirectory()) {
       // Skip certain directories
       if (!['node_modules', '.next', 'dist', 'build'].includes(file)) {
@@ -23,7 +23,7 @@ function getAllTsxFiles(dir) {
       results.push(filePath);
     }
   });
-  
+
   return results;
 }
 
@@ -217,7 +217,7 @@ filesToFix.forEach(filePath => {
   try {
     // Read the current file to check if it's already properly formatted
     const currentContent = fs.readFileSync(filePath, 'utf8');
-    
+
     // Skip if file already looks good (has proper imports and structure)
     if (currentContent.includes("'use client'") && 
         currentContent.includes('import React') && 
@@ -227,15 +227,15 @@ filesToFix.forEach(filePath => {
       skippedCount++;
       return;
     }
-    
+
     const relativePath = path.relative(__dirname, filePath);
     const dir = path.dirname(filePath);
-    
+
     // Ensure directory exists
     if (!fs.existsSync(dir)) {
       fs.mkdirSync(dir, { recursive: true });
     }
-    
+
     // Generate component name from file path
     const componentName = relativePath
       .replace('app/', '')
@@ -248,10 +248,10 @@ filesToFix.forEach(filePath => {
       .split('-')
       .map(word => word.charAt(0).toUpperCase() + word.slice(1))
       .join('') + 'Page';
-    
+
     // Replace PageComponent with actual component name
     const content = baseTemplate.replace(/PageComponent/g, componentName);
-    
+
     // Write the file
     fs.writeFileSync(filePath, content);
     console.log(`Fixed: ${relativePath}`);

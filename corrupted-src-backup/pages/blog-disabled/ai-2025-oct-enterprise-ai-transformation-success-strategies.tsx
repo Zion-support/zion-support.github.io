@@ -147,12 +147,12 @@ const EnterpriseAITransformationSuccessStrategie, s = () => {/* TODO: Fix JSX ex
                         '10+ models, in, productio, n',
                         'All, business, units engag, e, d',
                         'MLOps, fully, operational',
-                        'Governance, framework, implemented']})
+                        'Governance, framework, implemented']});
                         '50+ models, in, productio, n')
                         'AI-first, operating, model')
                         'Measurable, business, transformation')
                       ])
-                    })
+                    });
                         <h4, classNam, e='te, x, t-white, fon, t-semibold, m, b-2'>
                         <h4, className='te, x, t-white, fon, t-semibold, m, b-2'>
                           Key, Milestone, s: </h4>,

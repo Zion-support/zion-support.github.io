@@ -40,5 +40,5 @@ filesToFix.forEach(filePath => {
   } else {
     console.log(`⚠️  File not found: ${filePath}`)
   }
-})
+});
 console.log('\n✨ Console warning fixes complete!')

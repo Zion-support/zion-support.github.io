@@ -6,7 +6,7 @@ import React from 'react'
         <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
       </Helmet>
       <Navigation />
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Page Title - Zion Tech Group</title>
@@ -26,15 +26,15 @@ import React from 'react'
                   Learn More
                 </button>
               </div>
-      
+
       <Footer />
     </>
             </div>
-      
+
       <Footer />
     </>
           </div>
-      
+
       <Footer />
     </>
         </section>
@@ -57,20 +57,20 @@ import React from 'react'
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
             </div>
-      
+
       <Footer />
     </>
                 </div>
-      
+
       <Footer />
     </>
               ))}
             </div>
-      
+
       <Footer />
     </>
           </div>
-      
+
       <Footer />
     </>
         </section>
@@ -81,16 +81,14 @@ import React from 'react'
             <div>
               ))}
             </div>
-      
+
       <Footer />
     </>
           </div>
-      
+
       <Footer />
     </>
         </section>
-
-
 
         {/* CTA Section */}</div>
         <section></section>
@@ -110,15 +108,15 @@ import React from 'react'
                   Learn More
                 </button>
               </div>
-      
+
       <Footer />
     </>
             </div>
-      
+
       <Footer />
     </>
           </div>
-      
+
       <Footer />
     </>
         </section>

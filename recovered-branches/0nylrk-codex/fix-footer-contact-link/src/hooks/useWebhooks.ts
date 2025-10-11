@@ -49,7 +49,7 @@ export function useWebhooks() {
           'Authorization': `Bearer ${session.access_token}`,
           'Content-Type': 'application/json'
         }
-      })
+      });
       const result = await response.json()
       if (!response.ok) {
         throw new Error(result.error || 'Failed to fetch webhooks')
@@ -61,9 +61,9 @@ export function useWebhooks() {
       toast({
         variant: "destructive",
         title: "Error fetching webhooks",
-        description: err instanceof Error ? err.message : 'An unknown error occurred'})
+        description: err instanceof Error ? err.message : 'An unknown error occurred'});
         description: err instanceof Error ? err.message : 'An unknown error occurred',
-      })
+      });
     } finally {
       setLoading(false)
     }
@@ -90,8 +90,8 @@ export function useWebhooks() {
           url,
           eventTypes,
           secret
-        })
-      })
+        });
+      });
       const result = await response.json()
       if (!response.ok) {
         throw new Error(result.error || 'Failed to create webhook')
@@ -100,9 +100,9 @@ export function useWebhooks() {
       setWebhooks(prev => [result.webhook, ...prev])
       toast({
         title: "Webhook Created",
-        description: "Your webhook has been created successfully."})
+        description: "Your webhook has been created successfully."});
         description: "Your webhook has been created successfully.",
-      })
+      });
       return result.webhook
     } catch (err) {
       console.error('Error creating webhook:', err)
@@ -110,9 +110,9 @@ export function useWebhooks() {
       toast({
         variant: "destructive",
         title: "Error creating webhook",
-        description: err instanceof Error ? err.message : 'An unknown error occurred'})
+        description: err instanceof Error ? err.message : 'An unknown error occurred'});
         description: err instanceof Error ? err.message : 'An unknown error occurred',
-      })
+      });
     } finally {
       setLoading(false)
     }
@@ -134,8 +134,8 @@ export function useWebhooks() {
           'Authorization': `Bearer ${session.access_token}`,
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ webhookId, isActive })
-      })
+        body: JSON.stringify({ webhookId, isActive });
+      });
       const result = await response.json()
       if (!response.ok) {
         throw new Error(result.error || 'Failed to update webhook')
@@ -146,9 +146,9 @@ export function useWebhooks() {
       ))
       toast({
         title: isActive ? "Webhook Activated" : "Webhook Deactivated",
-        description: `The webhook has been ${isActive ? 'activated' : 'deactivated'} successfully.`})
+        description: `The webhook has been ${isActive ? 'activated' : 'deactivated'} successfully.`});
         description: `The webhook has been ${isActive ? 'activated' : 'deactivated'} successfully.`,
-      })
+      });
       return result
     } catch (err) {
       console.error('Error toggling webhook:', err)
@@ -156,9 +156,9 @@ export function useWebhooks() {
       toast({
         variant: "destructive",
         title: "Error updating webhook",
-        description: err instanceof Error ? err.message : 'An unknown error occurred'})
+        description: err instanceof Error ? err.message : 'An unknown error occurred'});
         description: err instanceof Error ? err.message : 'An unknown error occurred',
-      })
+      });
     } finally {
       setLoading(false)
     }
@@ -180,8 +180,8 @@ export function useWebhooks() {
           'Authorization': `Bearer ${session.access_token}`,
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ webhookId })
-      })
+        body: JSON.stringify({ webhookId });
+      });
       const result = await response.json()
       if (!response.ok) {
         throw new Error(result.error || 'Failed to delete webhook')
@@ -190,9 +190,9 @@ export function useWebhooks() {
       setWebhooks(prev => prev.filter(webhook => webhook.id !== webhookId))
       toast({
         title: "Webhook Deleted",
-        description: "The webhook has been deleted successfully."})
+        description: "The webhook has been deleted successfully."});
         description: "The webhook has been deleted successfully.",
-      })
+      });
       return result
     } catch (err) {
       console.error('Error deleting webhook:', err)
@@ -200,9 +200,9 @@ export function useWebhooks() {
       toast({
         variant: "destructive",
         title: "Error deleting webhook",
-        description: err instanceof Error ? err.message : 'An unknown error occurred'})
+        description: err instanceof Error ? err.message : 'An unknown error occurred'});
         description: err instanceof Error ? err.message : 'An unknown error occurred',
-      })
+      });
     } finally {
       setLoading(false)
     }
@@ -225,8 +225,8 @@ export function useWebhooks() {
           'Authorization': `Bearer ${session.access_token}`,
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ webhookId, eventType })
-      })
+        body: JSON.stringify({ webhookId, eventType });
+      });
       const result = await response.json()
       if (!response.ok) {
         throw new Error(result.error || 'Failed to test webhook')
@@ -236,16 +236,16 @@ export function useWebhooks() {
         status: result.status,
         statusText: result.statusText,
         responseBody: result.responseBody
-      })
+      });
       // Update last triggered timestamp
       setWebhooks(prev => prev.map(webhook => 
         webhook.id === webhookId ? { ...webhook, last_triggered_at: new Date().toISOString() } : webhook
       ))
       toast({
         title: "Webhook Test Sent",
-        description: `Test completed with status: ${result.status} ${result.statusText}`})
+        description: `Test completed with status: ${result.status} ${result.statusText}`});
         description: `Test completed with status: ${result.status} ${result.statusText}`,
-      })
+      });
       return result
     } catch (err) {
       console.error('Error testing webhook:', err)
@@ -253,9 +253,9 @@ export function useWebhooks() {
       toast({
         variant: "destructive",
         title: "Error testing webhook",
-        description: err instanceof Error ? err.message : 'An unknown error occurred'})
+        description: err instanceof Error ? err.message : 'An unknown error occurred'});
         description: err instanceof Error ? err.message : 'An unknown error occurred',
-      })
+      });
     } finally {
       setLoading(false)
     }

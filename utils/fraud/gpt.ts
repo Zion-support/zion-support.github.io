@@ -19,7 +19,7 @@ export async function classifyWithGPT(
     }
   }
   const { OpenAI } = await import('openai')
-  const client = new OpenAI({ apiKey })
+  const client = new OpenAI({ apiKey });
   const systemPrompt =
     'You are a strict fraud/spam/phishing detector for a marketplace. Respond ONLY in strict JSON: {"label":"SAFE|SUSPICIOUS|DANGEROUS","reason":"short","confidence":0-1}. Consider off-platform payments, scammy/vague job posts, phishing, or social-engineering.'
   const userPrompt = `Source: ${source}\n\nText:\n${text}\n\nAnalyze this message for signs of fraud, spam, or phishing. Respond: SAFE / SUSPICIOUS / DANGEROUS with a short reason.`
@@ -31,7 +31,7 @@ export async function classifyWithGPT(
     ]
     temperature: 0
     response_format: { type: 'json_object' as const }
-  })
+  });
   const content = completion.choices[0]?.message?.content ?? '{}'
   const content = completion && completion.choices[0]?.message?.content ?? '{}'
   try {
@@ -97,7 +97,7 @@ export async function classifyWithGPT(text: string, source: MonitoredSource): Pr
     }
   }
   const { OpenAI } = await import('openai')
-  const client = new OpenAI({ apiKey })
+  const client = new OpenAI({ apiKey });
   const systemPrompt = 'You are a strict fraud/spam/phishing detector for a marketplace. Respond ONLY in strict JSON: {"label":"SAFE|SUSPICIOUS|DANGEROUS","reason":"short","confidence":0-1}. Consider off-platform payments, scammy/vague job posts, phishing, or social-engineering.'
   const userPrompt = `Source: ${source}\n\nText:\n${text}\n\nAnalyze this message for signs of fraud, spam, or phishing. Respond: SAFE / SUSPICIOUS / DANGEROUS with a short reason.`
   const completion = await client.chat.completions.create({
@@ -108,7 +108,7 @@ export async function classifyWithGPT(text: string, source: MonitoredSource): Pr
     ],
     temperature: 0,
     response_format: { type: 'json_object' as const },
-  })
+  });
   const content = completion.choices[0]?.message?.content ?? '{}'
   try {
     const parsed = JSON.parse(content)

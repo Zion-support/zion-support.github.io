@@ -72,7 +72,7 @@ export function useEnhancedPerformance(__option)
       // Many re-renders detected
 'High Render Count',
         renderCountRef.current
-  })
+  });
   const trackError = useCallback()
     (erro,
   r: Error, context?: Record;)

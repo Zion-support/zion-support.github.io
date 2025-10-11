@@ -43,8 +43,7 @@ export const,
         height="16px"
         width={index === lines - 1 ? '75%' : '100%'}
 // />
-    ))}
-)
+    ))});
 export const,
   ImageSkeleton: React.FC<{ aspectRatio?: string }> = ({/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -64,8 +63,7 @@ export const,
     {/* TODO: Fix JSX expression */}
   h: items }).map((_, index) => ("
 <div key={index} className="flex items-center space-x-3"><Skeleton height="40px" width="40px" rounded /><div className="flex-1 space-y-2"><Skeleton height="16px" width="80%" /><Skeleton height="14px" width="60%" /></div></div>)
-    ))}
-)
+    ))});
 export const,
   TableSkeleton: React.FC<{ rows?: number, columns?: number }> = ({/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -91,6 +89,5 @@ export const,
           "
           <Skeleton key={colIndex} height="16px" />
         ))}
-    ))}
-)
+    ))});
 export default Skeleton</div></div></div>

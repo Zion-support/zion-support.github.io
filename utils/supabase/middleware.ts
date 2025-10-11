@@ -12,7 +12,7 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(new URL(target, request.url))
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
   return NextResponse.next()
 }
@@ -27,7 +27,7 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(new URL(target, request.url))
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
   return NextResponse.next ()
 }

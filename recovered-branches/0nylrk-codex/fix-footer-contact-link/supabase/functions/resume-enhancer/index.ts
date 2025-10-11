@@ -9,7 +9,7 @@ const corsHeaders = {
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders })
+    return new Response(null, { headers: corsHeaders });
   }
   try {
     const { content, enhancementType, context } = await req.json()
@@ -57,7 +57,7 @@ serve(async (req) => {
           {
             role: "user",
             content: userPrompt}],
-        temperature: 0.7})})
+        temperature: 0.7})});
             content: systemPrompt,
           },
           {
@@ -67,7 +67,7 @@ serve(async (req) => {
         ],
         temperature: 0.7,
       }),
-    })
+    });
     if (!response.ok) {
       const errorData = await response.json()
       throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
@@ -83,8 +83,7 @@ serve(async (req) => {
       }),
       {
         headers: { ...corsHeaders, "Content-Type": "application/json" },
-      }
-    )
+      });
   } catch (error) {
     console.error("Error in resume-enhancer function:", error)
     return new Response(
@@ -98,7 +97,6 @@ serve(async (req) => {
       {
         status: 500,
         headers: { ...corsHeaders, "Content-Type": "application/json" },
-      }
-    )
+      });
   }
-})
+});

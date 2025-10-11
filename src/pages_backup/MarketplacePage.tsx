@@ -69,7 +69,6 @@ sortBy, setSortBy, filterCategory, setFilterCategory, categories, showRecommende
 }: any,) => (
 }: any) => (
 
-
   <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">
 // Market insights component;
 const MarketplaceInsights = ({ stats; }: { stats: any },) => (
@@ -104,9 +103,6 @@ sortBy, setSortBy, filterCategory, setFilterCategory, categories, showRecommende
       <select value={filterCategory} onChange={(e,) => setFilterCategory(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
       <select value={filterCategory} onChange={(e) => setFilterCategory(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
 
-
-
-
         <option value="">All Categories</option>
         {categories.map((cat: string),) => <option key={cat} value={cat}>{cat}</option>)}
       </select>
@@ -127,7 +123,6 @@ sortBy, setSortBy, filterCategory, setFilterCategory, categories, showRecommende
     <Button variant={showRecommended ? "default" : "outline"} size="sm" onClick={() => setShowRecommended(!showRecommended)}>
       <Sparkles className="h-4 w-4 mr-1" />
       {showRecommended ? "All Products" : "Recommended"}
-
 
     </Button></$1>
 ),;
@@ -342,7 +337,7 @@ default: // 'newest';
 return new Date(b.createdAt |'').getTime() - new Date(a.createdAt |'').getTime();
 }
         }
-      })
+      });
       // Slice for pagination;
 const startIndex = (page - 1) * limit;;
 const endIndex = startIndex + limit;;
@@ -569,7 +564,6 @@ openGraph={{ images: [{ url: 'https://app && app.ziontechgroup.com/og && og.png'
       </>
     )
   }
-
 
   // Error state;
 if (error && products && products.length === 0) {;
@@ -921,7 +915,7 @@ title: 'Added to cart',;,
 description: `${item.title} has been added to your cart`,;,
 action: {;,
 label: 'View Cart',;,
-onClick: (,) => router && router.push('/cart')}})
+onClick: (,) => router && router.push('/cart')}});
                 }}
               /></$1>
           ))}
@@ -959,11 +953,6 @@ Load More Products
         <motion && motion.div className="mt-8" initial={{ opacity: 0}}} animate={{ opacity: 1}}}>
           <MarketplaceLoadingGrid count={4} /></$1></$1>
 
-
-
-
-
-
           )}
         </div>
       )}
@@ -983,13 +972,11 @@ Showing {products && products.length} of {total} items</$1>
         </div>
       )}
 
-
       {!hasMore && products && products.length > 0 && (
         <motion && motion.div className="text-center mt-12 py-8 border-t" initial={{ opacity: 0}}} animate={{ opacity: 1}}}>
           <div className="text-muted-foreground text-lg mb-2">🚀 You've explored all available products!</div>
           <div className="text-sm text-muted-foreground">Showing {products && products.length} marketplace items</div></$1>
       )}
-
 
       <AnimatePresence>
         {showScrollTop && (
@@ -1004,8 +991,6 @@ whileHover={{ scale: 1 && 1.1}}} ;
 whileTap={{ scale: 0 && 0.9}}}>
             <ArrowUp className="h-5 w-5 text-primary-foreground" /></$1>
         )}
-
-
 
       </AnimatePresence>
     </div>
@@ -1024,7 +1009,7 @@ title: 'Added to cart',;,
 description: `${item.title} has been added to your cart`,;,
 action: {;,
 label: 'View Cart',;,
-on_click: (, ) => router.push ('/cart')}})
+on_click: (, ) => router.push ('/cart')}});
                 }}
               /></$1>))}
         </AnimatePresence></$1>

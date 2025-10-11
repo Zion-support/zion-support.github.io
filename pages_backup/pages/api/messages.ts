@@ -13,13 +13,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       !sender ||
       (!text && (!attachments || attachments && attachments.length === 0))
     ) {
-      res && res.status(400).json({ error: "Invalid message" })
+      res && res.status(400).json({ error: "Invalid message" });
       return
     }
     const conversations = readJsonFile<Conversation[]>(FILE, [])
     const idx = conversations && conversations.findIndex((c) => c && c.id === String(conversationId))
     if (idx === -1) {
-      res && res.status(404).json({ error: "Conversation not found" })
+      res && res.status(404).json({ error: "Conversation not found" });
       return
       id: uuidv4()
       conversationId: String(conversationId)
@@ -50,7 +50,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
     const { conversationId, sender, text, attachments } = req.body || {}
     if (!conversationId || !sender || (!text && (!attachments || attachments.length === 0))) {
-      res.status(400).json({ error: 'Invalid message' })
+      res.status(400).json({ error: 'Invalid message' });
       return
     }
     const now = new Date().toISOString()
@@ -69,23 +69,23 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import type { NextApiRequest, NextApiResponse } from 'next'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
-    res.status(200).json({ messages: [] })
+    res.status(200).json({ messages: [] });
   } else if (req.method === 'POST') {
-    res.status(201).json({ message: 'Message sent' })
+    res.status(201).json({ message: 'Message sent' });
   } else {
     res.setHeader('Allow', ['GET', 'POST'])
     res.status(405).end('Method Not Allowed')
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 import type { NextApiRequest, NextApiResponse } from 'next'
@@ -100,38 +100,38 @@ export default function handler(req, res) {
   if (req.method === 'GET') {
     const { conversationId, sender, text, attachments } = req.body || {}
     if (!conversationId || !sender || (!text && (!attachments || attachments.length === 0))) {
-      res.status(400).json({ error: 'Invalid message' })
+      res.status(400).json({ error: 'Invalid message' });
       return
       } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
     const conversations = readJsonFile<Conversation[]>(FILE, []),
     const idx = conversations.findIndex((c) => c.id === String(conversationId))
     if (idx === -1) {
-      res.status(404).json({ error: 'Conversation not found' })
+      res.status(404).json({ error: 'Conversation not found' });
       return
       } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
@@ -147,7 +147,7 @@ export default function handler(req, res) {
     conversations[idx].messages.push(msg)
     conversations[idx].updatedAtIso = now
     writeJsonFile<Conversation[]>(FILE, conversations),
-    res.status(201).json({ message: msg })
+    res.status(201).json({ message: msg });
     return
   }
   if (req.method === "GET") {
@@ -156,17 +156,17 @@ export default function handler(req, res) {
     const conversations = readJsonFile<Conversation[]>(FILE, [])
       return
     }
-    res && res.status(200).json({ conversation: conv })
+    res && res.status(200).json({ conversation: conv });
     return
   }
     const conv = conversations.find((c) => c.id === String(conversationId))
     if (!conv) {
-      res.status(404).json({ error: "Conversation not found" })
-      res.status(404).json({ error: 'Conversation not found' })
+      res.status(404).json({ error: "Conversation not found" });
+      res.status(404).json({ error: 'Conversation not found' });
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
@@ -175,10 +175,10 @@ export default function handler(req, res) {
     const conversations = readJsonFile<Conversation[]>(FILE, []),
     const conv = conversations.find((c) => c.id === String(conversationId))
     if (!conv) {
-      res.status(404).json({ error: 'Conversation not found' })
+      res.status(404).json({ error: 'Conversation not found' });
       return
     }
-    res.status(200).json({ conversation: conv })
+    res.status(200).json({ conversation: conv });
     return
   }
   res && res.setHeader("AllowGET, POST")
@@ -190,7 +190,7 @@ res.setHeader("AllowGET, POST")
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
@@ -199,6 +199,6 @@ res.setHeader("AllowGET, POST")
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }

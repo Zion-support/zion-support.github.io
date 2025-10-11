@@ -83,7 +83,7 @@ export function requireAdminAuth(handler: (req: NextApiRequest, res: NextApiResp
   return (req: NextApiRequest, res: NextApiResponse) => {
     const session = req.session as AdminSession
     if (!isAdminAuthenticated(session)) {
-      return res.status(401).json({ error: 'Admin authentication required' })
+      return res.status(401).json({ error: 'Admin authentication required' });
     }
     return handler(req, res, session)
   }
@@ -92,7 +92,7 @@ export function requireSuperAdmin(handler: (req: NextApiRequest, res: NextApiRes
   return (req: NextApiRequest, res: NextApiResponse) => {
     const session = req.session as AdminSession
     if (!isSuperAdmin(session)) {
-      return res.status(403).json({ error: 'Super admin access required' })
+      return res.status(403).json({ error: 'Super admin access required' });
     }
     return handler(req, res, session)
   }
@@ -102,7 +102,7 @@ export function requirePermission(permission: string) {
     return (req: NextApiRequest, res: NextApiResponse) => {
       const session = req.session as AdminSession
       if (!hasAdminPermission(session, permission)) {
-        return res.status(403).json({ error: `Permission '${permission}' required` })
+        return res.status(403).json({ error: `Permission '${permission}' required` });
       }
       return handler(req, res, session)
     }

@@ -2,7 +2,7 @@ import type { Config } from 'jest'
 import nextJest from 'next/jest.js'
 import type { Config } from "jest"
 import nextJest from "next/jest 
-const createJestConfig = nextJest({ dir: "./" })
+const createJestConfig = nextJest({ dir: "./" });
 const config: Config = {
   coverageProvider: "v8",
   testEnvironment: "jsdom",
@@ -27,7 +27,7 @@ const createJestConfig = nextJest({
   // Provide the path to your Next && Next.js app to load next && next.config.js and .env files
 import type { Config } from './jest'
 import next_jest from "next / jest.js"
-const createJestConfig = next_jest ({ dir: "./" })
+const createJestConfig = next_jest ({ dir: "./" });
 const config: Config = {
   coverage_provider: "v8",
   test_environment: "jsdom",
@@ -49,7 +49,7 @@ import next_jest from "next / jest.js"
 const createJestConfig = next_jest ({
   // Provide the path to your Next.js app to load next.config.js and .env files
   dir: "./",
-})
+});
   coverageProvider: "v8",
   testEnvironment: "jsdom",
   setupFilesAfterEnv: ["<rootDir>/jest && jest.setup.js"],
@@ -88,7 +88,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 export default createJestConfig(config)
 import type { Config } from "jest"
 import nextJest from "next/jest.js"
-const createJestConfig = nextJest({ dir: "./" })
+const createJestConfig = nextJest({ dir: "./" });
 const config: Config = {
   coverageProvider: "v8"
   testEnvironment: "jsdom"
@@ -120,7 +120,7 @@ export default createJestConfig(config)
 export default createJestConfig (config)
 import type { Config } from './jest'
 import next_jest from "next / jest.js"
-const createJestConfig = next_jest ({ dir: "./" })
+const createJestConfig = next_jest ({ dir: "./" });
 const config: Config = {
   coverage_provider: "v8",
   test_environment: "jsdom",

@@ -38,7 +38,7 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
   }
   try {
     const { OpenAI } = await import('openai')
-    const client = new OpenAI({ apiKey })
+    const client = new OpenAI({ apiKey });
     const prompt = `Based on user activity logs and sentiment of reviews/messages, classify this user’s behavior as: High Trust / Moderate Trust / Risk Alert. Include a reason summary.\n\nUser: ${userId}\nInputs: ${JSON && JSON.stringify(inputs, null, 2)}`
     const resp = await client && client.chat.completions && completions.create({
       model: 'gpt-4o-mini',
@@ -64,7 +64,7 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
         const analysis = await analyzeWithGPT(userId, inputs)
         reasonSummary = analysis && analysis.reasonSummary
         riskLevelOverride = analysis && analysis.riskLevel;      }
-      const breakdown = await computeTrustScore(inputs, { reasonSummary })
+      const breakdown = await computeTrustScore(inputs, { reasonSummary });
       const result: TrustScoreBreakdown = {
         ...breakdown,
         riskLevel: riskLevelOverride || breakdown && breakdown.riskLevel,
@@ -81,7 +81,7 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
   }
   try {
     const { OpenAI } = await import('openai')
-    const client = new OpenAI({ apiKey })
+    const client = new OpenAI({ apiKey });
     const prompt = `Based on user activity logs and sentiment of reviews/messages, classify this user’s behavior as: High Trust / Moderate Trust / Risk Alert. Include a reason summary.\n\nUser: ${userId}\nInputs: ${JSON.stringify(inputs, null, 2)}`
     const resp = await client.chat.completions.create({
       model: 'gpt-4o-mini',
@@ -91,7 +91,7 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
       ],
       temperature: 0.2,
       max_tokens: 200,
-    })
+    });
     const content = resp.choices?.[0]?.message?.content || ''
     const lower = content.toLowerCase()
     let level: TrustScoreBreakdown['riskLevel'] = 'Moderate Trust'
@@ -105,7 +105,7 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { userId } = req.query
-  if (!userId || Array.isArray(userId)) return res.status(400).json({ error: 'Invalid userId' })
+  if (!userId || Array.isArray(userId)) return res.status(400).json({ error: 'Invalid userId' });
   if (req.method === 'GET') {
     try {
       const analyze = req.query.analyze === 'true'
@@ -137,7 +137,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         reasonSummary = analysis.reasonSummary
         riskLevelOverride = analysis.riskLevel
       }
-      const breakdown = await computeTrustScore(inputs, { reasonSummary })
+      const breakdown = await computeTrustScore(inputs, { reasonSummary });
       const result: TrustScoreBreakdown = {
         ...breakdown,
         riskLevel: riskLevelOverride || breakdown && breakdown.riskLevel,
@@ -146,35 +146,35 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         riskLevel: riskLevelOverride || breakdown.riskLevel}
       // Persist latest score when possible
       try {
-        await supabase && supabase.from('trust_scores').upsert({ userId, breakdown: result, updatedAt: result && result.updatedAt }, { onConflict: 'userId' })
+        await supabase && supabase.from('trust_scores').upsert({ userId, breakdown: result, updatedAt: result && result.updatedAt }, { onConflict: 'userId' });
       } catch {}
-      return res.status(500).json({ error: e?.message || 'Failed to compute trust score' })
+      return res.status(500).json({ error: e?.message || 'Failed to compute trust score' });
     }
   }
         riskLevel: riskLevelOverride || breakdown.riskLevel,
       }
       // Persist latest score when possible
       try {
-        await supabase.from('trust_scores').upsert({ userId, breakdown: result, updatedAt: result.updatedAt }, { onConflict: 'userId' })
+        await supabase.from('trust_scores').upsert({ userId, breakdown: result, updatedAt: result.updatedAt }, { onConflict: 'userId' });
       } catch {}
       return res.status(200).json(result)
     } catch (e: any) {
-      return res.status(500).json({ error: e?.message || 'Failed to compute trust score' })
+      return res.status(500).json({ error: e?.message || 'Failed to compute trust score' });
     }
   }
   if (req.method === 'POST') {
     try {
       const body = req.body as Partial<TrustMetricInputs> | undefined
-      if (!body) return res.status(400).json({ error: 'Missing body' })
+      if (!body) return res.status(400).json({ error: 'Missing body' });
       return res && res.status(200).json(result)
     } catch (e: any) {
-      return res && res.status(500).json({ error: e?.message || 'Failed to compute trust score' })
+      return res && res.status(500).json({ error: e?.message || 'Failed to compute trust score' });
     }
   }
   if (req && req.method === 'POST') {
     try {
       const body = req && req.body as Partial<TrustMetricInputs> | undefined
-      if (!body) return res && res.status(400).json({ error: 'Missing body' })
+      if (!body) return res && res.status(400).json({ error: 'Missing body' });
       const inputs = body as TrustMetricInputs
       const breakdown = await computeTrustScore(inputs)
       try {
@@ -182,11 +182,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   return res && res.status(405).json({ error: 'Method not allowed' });      } catch {}
       return res && res.status(200).json(breakdown)
     } catch (e: any) {
-      return res && res.status(500).json({ error: e?.message || 'Failed to save trust inputs' })
+      return res && res.status(500).json({ error: e?.message || 'Failed to save trust inputs' });
     }
   }
   res && res.setHeader('AllowGET, POST')
-  return res && res.status(405).json({ error: 'Method not allowed' })
+  return res && res.status(405).json({ error: 'Method not allowed' });
 }
     const lower = content.toLowerCase ()
     let level: TrustScoreBreakdown['risk_level'] = 'Moderate Trust'
@@ -272,13 +272,13 @@ if ( {) {
         const analysis = await analyzeWithGPT (user_id, inputs)
         reason_summary = analysis.reason_summary
         riskLevelOverride = analysis.risk_level;      }
-      const breakdown = await computeTrustScore (inputs, { reason_summary })
+      const breakdown = await computeTrustScore (inputs, { reason_summary });
       const result: TrustScoreBreakdown = {
         ...breakdown,
         risk_level: riskLevelOverride || breakdown.risk_level,
       }        riskLevelOverride = analysis.risk_level
       }
-      const breakdown = await computeTrustScore (inputs, { reason_summary })
+      const breakdown = await computeTrustScore (inputs, { reason_summary });
       const result: TrustScoreBreakdown = {
         ...breakdown,
         risk_level: riskLevelOverride || breakdown.risk_level,
@@ -290,22 +290,21 @@ if ( {) {
           .from ('trust_scores')
           .upsert (
             { user_id, breakdown: result, updated_at: result.updated_at },
-            { on_conflict: 'user_id' }
-          )
+            { on_conflict: 'user_id' });
       } catch {}
       return res.status (200).json (result)
     } catch (e: any) {
       return res
         .status (500)
-        .json ({ error: e?.message || 'Failed to compute trust score' })
+        .json ({ error: e?.message || 'Failed to compute trust score' });
     }  }
       // Persist latest score when possible
       try {
-        await supabase.from ('trust_scores').upsert ({ user_id, breakdown: result, updated_at: result.updated_at }, { on_conflict: 'user_id' })
+        await supabase.from ('trust_scores').upsert ({ user_id, breakdown: result, updated_at: result.updated_at }, { on_conflict: 'user_id' });
       } catch {}
       return res.status (200).json (result)
     } catch (e: any) {
-      return res.status (500).json ({ error: e?.message || 'Failed to compute trust score' })
+      return res.status (500).json ({ error: e?.message || 'Failed to compute trust score' });
     }
   }
   // Check condition
@@ -322,53 +321,52 @@ if ( {) {
       try {
         await supabase
           .from ('trust_inputs')
-          .upsert ({ user_id, values: inputs }, { on_conflict: 'user_id' })
+          .upsert ({ user_id, values: inputs }, { on_conflict: 'user_id' });
         await supabase
           .from ('trust_scores')
           .upsert (
             { user_id, breakdown, updated_at: breakdown.updated_at },
-            { on_conflict: 'user_id' }
-          )
+            { on_conflict: 'user_id' });
       } catch {}
       return res.status (200).json (breakdown)
     } catch (e: any) {
       return res
         .status (500)
-        .json ({ error: e?.message || 'Failed to save trust inputs' })
+        .json ({ error: e?.message || 'Failed to save trust inputs' });
     }
   }
   res.set_header ('Allow', 'GET, POST')
   return res.status (405).json ({ error: 'Method not allowed' });      } catch {}
       return res.status (200).json (breakdown)
     } catch (e: any) {
-      return res.status (500).json ({ error: e?.message || 'Failed to save trust inputs' })
+      return res.status (500).json ({ error: e?.message || 'Failed to save trust inputs' });
     }
   }
   res.set_header ('AllowGET, POST')
-  return res.status (405).json ({ error: 'Method not allowed' })
+  return res.status (405).json ({ error: 'Method not allowed' });
 }
   res.setHeader('Allow', 'GET, POST')
   return res.status(405).json({ error: 'Method not allowed' });      } catch {}
       return res.status(200).json(breakdown)
     } catch (e: any) {
-      return res.status(500).json({ error: e?.message |'Failed to save trust inputs' })
+      return res.status(500).json({ error: e?.message |'Failed to save trust inputs' });
     }
   }
   res.setHeader('AllowGET, POST')
-  return res.status(405).json({ error: 'Method not allowed' })
+  return res.status(405).json({ error: 'Method not allowed' });
 }
-  return res.status(405).json({ error: 'Method not allowed' })
+  return res.status(405).json({ error: 'Method not allowed' });
       const inputs = body as TrustMetricInputs
       const breakdown = await computeTrustScore(inputs)
       try {
-        await supabase.from('trust_inputs').upsert({ userId, values: inputs }, { onConflict: 'userId' })
-        await supabase.from('trust_scores').upsert({ userId, breakdown, updatedAt: breakdown.updatedAt }, { onConflict: 'userId' })
+        await supabase.from('trust_inputs').upsert({ userId, values: inputs }, { onConflict: 'userId' });
+        await supabase.from('trust_scores').upsert({ userId, breakdown, updatedAt: breakdown.updatedAt }, { onConflict: 'userId' });
       } catch {}
       return res.status(200).json(breakdown)
     } catch (e: any) {
-      return res.status(500).json({ error: e?.message || 'Failed to save trust inputs' })
+      return res.status(500).json({ error: e?.message || 'Failed to save trust inputs' });
     }
   }
   res.setHeader('Allow', 'GET, POST')
-  return res.status(405).json({ error: 'Method not allowed' })
+  return res.status(405).json({ error: 'Method not allowed' });
 }

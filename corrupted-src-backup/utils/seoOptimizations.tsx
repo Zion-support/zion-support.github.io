@@ -30,7 +30,7 @@ generateBreadcrumbSchema: (items: Array<{name: string, url: string}>) => ({/* co
 generateFAQSchema: (faqs: Array<{question: string, answer: string}>) => ({/* content */}
     "@context": "https: //schema.org",
     "@type": "FAQPage",
-    "mainEntity": faqs.map(faq => ({/* content */)})
+    "mainEntity": faqs.map(faq => ({/* content */)});
       "@type": "Question")
       "name": faq.question)
       "acceptedAnswer": {/* content */}
@@ -102,7 +102,7 @@ s://schema.org","
       "acceptedAnswer": {/* content */}"
         "@type": "Answer","
         "text": faq.answer
-      })
+      });
     }))
   }),
   // Generate article structured data,;,
@@ -134,9 +134,9 @@ s://schema.org","
     "image": {/* content */}"
       "url": article.image || "http,";,
 s://zion.app/logo.png"
-    })
-  })
-})
+    });
+  });
+});
 }
 // Sitemap generation utilities;
 export const sitemapUtils={/* content */;}
@@ -273,7 +273,7 @@ link.href = resource.href;
 link.as = resource.as;
 if (resource.type) link.type = resource.type;
 document.head.appendChild(link)
-    })
+    });
   },
   // Optimize images for SEO;,
 optimizeImageSEO: (src: string, alt: string, width?: number, height?: number): {/* content */}
@@ -323,7 +323,7 @@ g: Function }).gtag('config', 'GA_MEASUREMENT_ID', {/* content */}
 e: title,;
 page_locatio,;,
 n: url,)
-      })
+      });
     }
   },
   // Track custom events;,
@@ -352,7 +352,7 @@ g: Function }).gtag('event', 'conversion', {/* content */}
 o: conversionId,;
 valu,;,
 e: value,)
-      })
+      });
     }
   }
 }
@@ -382,7 +382,7 @@ metric_i,;,
 d: metric.id,;
 metric_delt,;,
 a: metric.delta,
-      })
+      });
     }
     // Import and track web vitals;
 import('web-vitals').then(({ onCLS), onFCP, onLCP, onTTFB }) => {/* content */}
@@ -391,7 +391,7 @@ import('web-vitals').then(({ onCLS), onFCP, onLCP, onTTFB }) => {/* content */}
 onFCP(trackMetric);
 onLCP(trackMetric);
 onTTFB(trackMetric)
-    })
+    });
   }
 }
 // SEO component for React;
@@ -434,7 +434,7 @@ return(<div> </div><Helmet>
       <meta property="og:url" content={fullUrl} />)
       <meta property="og:image" content={fullImage} />)
       <meta property="og:site_name" content={siteName} />)
-      {/* Twitter Card */})
+      {/* Twitter Card */});
       <meta name="twitter: card" content="summary_large_image" />),
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
@@ -467,7 +467,7 @@ r:description" content={description} /></meta>"
       <meta name="twitte,";,
 r:image" content={fullImage} />
       {/* Structured Data */}
-      {/* TODO: Fix JSX expression */})
+      {/* TODO: Fix JSX expression */});
           {JSON.stringify(structuredData)}
       )}
     </Helmet>

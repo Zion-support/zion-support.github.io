@@ -59,10 +59,10 @@ const RevolutionaryBreakthrough2026Banne, r: React.FC = () => {/* TODO: Fix JSX 
           {/* Key, Stat, s */}
           <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-auto, m, b-12'>)
             {[)
-              { val, u, e: '1, 0, x', lab, e, l: 'Performance, Gai, n, s', ic, o, n: '⚡' })
-              { val, u, e: '$3, 0, 0, M+', lab, e, l: 'ROI, Achiev, e, d', ic, o, n: '💰' })
-              { val, u, e: '9, 5%', lab, e, l: 'Automation, Ra, t, e', ic, o, n: '🤖' })
-              { val, u, e: '99., 9%', lab, e, l: 'Efficiency, Gai, n, s', ic, o, n: '🎯' })
+              { val, u, e: '1, 0, x', lab, e, l: 'Performance, Gai, n, s', ic, o, n: '⚡' });
+              { val, u, e: '$3, 0, 0, M+', lab, e, l: 'ROI, Achiev, e, d', ic, o, n: '💰' });
+              { val, u, e: '9, 5%', lab, e, l: 'Automation, Ra, t, e', ic, o, n: '🤖' });
+              { val, u, e: '99., 9%', lab, e, l: 'Efficiency, Gai, n, s', ic, o, n: '🎯' });
             ].m, a, p((st, a, t, ind, e, x) => (
           <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-auto, m, b-12'>
             {[
@@ -76,7 +76,7 @@ const RevolutionaryBreakthrough2026Banne, r: React.FC = () => {/* TODO: Fix JSX 
               { val, u, e: '1, 0, x', lab, e, l: 'Performance, Gai, n, s', ic, o, n: '⚡' },
               { val, u, e: '$3, 0, 0, M+', lab, e, l: 'ROI, Achiev, e, d', ic, o, n: '💰' },
               { val, u, e: '9, 5%', lab, e, l: 'Automation, Ra, t, e', ic, o, n: '🤖' },
-              { val, u, e: '99., 9%', lab, e, l: 'Efficiency, Gai, n, s', ic, o, n: '🎯' })
+              { val, u, e: '99., 9%', lab, e, l: 'Efficiency, Gai, n, s', ic, o, n: '🎯' });
             ].m, a, p((st, a, t, ind, e, x) => (<, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0'$2 />
               >
                 <div, className='te, x, t-4xl, m, b-3'>{st, a, t.ic, o, n}

@@ -26,7 +26,7 @@ global.window.scrollTo = vi.fn(); // vi should be globally available
 afterEach(() => {
   cleanup()
   vi.restoreAllMocks(); // Changed from jest to vi
-})
+});
 // -----------------------------------------------------------------------------
 // Jest-compatibility shim ------------------------------------------------------
 // -----------------------------------------------------------------------------

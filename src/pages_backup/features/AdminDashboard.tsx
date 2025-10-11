@@ -56,9 +56,6 @@ const schema={"@context": "https://schema.org";},
   }
   return (;
 
-
-
-
       />
 
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
@@ -113,8 +110,7 @@ Yes, you can export data to CSV for further analysis.
             <div>
 
   )
-}
-  )
+});
 }
 import React from "react";,;
 import { Header; } from "@/components/Header",;
@@ -232,9 +228,5 @@ Yes, you can export data to CSV for further analysis.</$1></$1></$1>
   )
 }
     </>)
-}
-
-
-  )
-
+});
 </div></div></div></div></div></div></div></div></main></main></main>

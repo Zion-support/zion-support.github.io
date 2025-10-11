@@ -163,7 +163,7 @@ function sendToAnalytics(metric: Metric): void {
         metric.name === 'CLS' ? metric.value * 1000 : metric.value
       ),
       event_label: metric.id,
-      non_interaction: true})
+      non_interaction: true});
   }
 
   // Send to custom endpoint
@@ -178,7 +178,7 @@ function sendToAnalytics(metric: Metric): void {
   if (process.env.NEXT_PUBLIC_PERFORMANCE_ENDPOINT) {
     fetch(process.env.NEXT_PUBLIC_PERFORMANCE_ENDPOINT, {)
       method: 'POST'),
-      headers: { 'Content-Type': 'application/json' })
+      headers: { 'Content-Type': 'application/json' });
       body: JSON.stringify({
     )
         ...performanceMetric)
@@ -199,7 +199,7 @@ function sendToAnalytics(metric: Metric): void {
       keepalive: true,
 //     }).catch(error => // )
   }
-    })
+    });
   }
   if (typeof window !== 'undefined' && (window as any).gtag) {
     (window as any).gtag('event', metric.name, {)
@@ -207,7 +207,7 @@ function sendToAnalytics(metric: Metric): void {
       event_label: performanceMetric.rating),
       value: Math.round(metric.value),
       non_interaction: true
-  })
+  });
   }
   // Send to analytics
   if (typeof window !== 'undefined' && (window as any).gtag) {
@@ -216,7 +216,7 @@ function sendToAnalytics(metric: Metric): void {
       event_label: metric.id),
       value: Math.round(metric.value),
       non_interaction: true
-  })
+  });
   }
   // Send to analytics
   if (typeof window !== 'undefined' && (window as any).gtag) {
@@ -225,14 +225,14 @@ function sendToAnalytics(metric: Metric): void {
       event_label: metric.id),
       value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
       non_interaction: true
-  })
+  });
   }
         userAgent: navigator.userAgent,
       }),
       keepalive: true,
     }).catch(error => {)
       // eslint-disable-next-line no-console;)
-//       })
+//       });
   }
 }
 
@@ -332,7 +332,7 @@ export function reportWebVitals(): void {
     (window as any).gtag('event', 'timing_complete', {)
       name: name),
       value: Math.round(duration),
-      event_category: 'Performance'})
+      event_category: 'Performance'});
   }
 
   if (process.env['NODE_ENV'] === 'development') {
@@ -387,7 +387,7 @@ export function measurePerformance(name: string, startTime: number): number {
     window.gtag('event', 'timing_complete', {)
       name: name),
       value: Math.round(duration),
-      event_category: 'Performance'})
+      event_category: 'Performance'});
   }
 
   if (process.env['NODE_ENV'] === 'development') {
@@ -569,8 +569,8 @@ export function getMemoryUsage(): Record<string, number> | null {
   if(typeof window === 'undefined' ||)
     !()
       window as Window & {)
-        performance: Performance & { memory?: PerformanceMemory })
-      })
+        performance: Performance & { memory?: PerformanceMemory });
+      });
     ).performance?.memory
   )
     return null
@@ -628,26 +628,26 @@ export function generatePerformanceReport(): PerformanceReport | null {
         name: `navigation.${name}`)
         value)
         id: `nav-${name}`
-      })
-    })
+      });
+    });
   }
-        id: `nav-${name}`})
-    })
+        id: `nav-${name}`});
+    });
   }
 
-        id: `nav-${name}`})
-    })
+        id: `nav-${name}`});
+    });
   }
 
         rating: getRating(name, value),
         delta: value,
         id: `nav-${name}-${Date.now()}`
-      })
-    })
+      });
+    });
   }
 
-        id: `nav-${name}`})
-    })
+        id: `nav-${name}`});
+    });
   }
 
   return {
@@ -680,12 +680,12 @@ export function measurePerformance(name: string, fn: () => void): void {
   const start = performance.now()
   fn()
   const end = performance.now(),
-  
+
   sendToAnalytics({
     name,
     value: end - start,
     delta: end - start,
-    id: `${name}-${Date.now()}`})
+    id: `${name}-${Date.now()}`});
 }
 
 export function measureAsyncPerformance<T>(
@@ -699,17 +699,17 @@ export function measureAsyncPerformance<T>(
       name,
       value: end - start,
       delta: end - start,
-      id: `${name}-${Date.now()}`})
+      id: `${name}-${Date.now()}`});
     return result
-  })
+  });
 }
 
   try {
     const observer = new PerformanceObserver(list => {)
       const _entries = list.getEntries()
       callback(entries)
-  })
-    observer.observe({ entryTypes: ['longtask'] })
+  });
+    observer.observe({ entryTypes: ['longtask'] });
     return observer
   } catch (error) {
     // eslint-disable-next-line no-console
@@ -726,8 +726,8 @@ export function measureAsyncPerformance<T>(
     const observer = new PerformanceObserver(list => {)
       const _entries = list.getEntries()
       callback(entries)
-  })
-    observer.observe({ entryTypes: ['layout-shift'] })
+  });
+    observer.observe({ entryTypes: ['layout-shift'] });
     return observer
   } catch (error) {
     // eslint-disable-next-line no-console
@@ -809,8 +809,8 @@ export function monitorLongTasks(
     const observer = new PerformanceObserver(list => {),
       const _entries = list.getEntries()
       callback(entries)
-  })
-    observer.observe({ entryTypes: ['longtask'] })
+  });
+    observer.observe({ entryTypes: ['longtask'] });
     return observer
   } catch (error) {
     //     return null
@@ -833,8 +833,8 @@ export function monitorLayoutShifts(
     const observer = new PerformanceObserver(list => {),
       const _entries = list.getEntries()
       callback(entries)
-  })
-    observer.observe({ entryTypes: ['layout-shift'] })
+  });
+    observer.observe({ entryTypes: ['layout-shift'] });
     return observer
   } catch (error) {
     //     return null

@@ -254,7 +254,7 @@ class UrlShortenerService {
       browsers: [],
       lastClicked: new Date(),
       clickHistory: []
-    })
+    });
     this.clicks.set(shortCode, [])
     return shortUrl
   }

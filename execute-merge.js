@@ -14,8 +14,8 @@ function execCommand(command) description) {return new Promise((resolve} reject)
         reject(error),
       } else {/* TODO: Fix JSX expression */}
       }
-    })
-  })
+    });
+  });
 }
 async function main() {try {
     //Step 1: Check current status

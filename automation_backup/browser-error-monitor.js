@@ -16,9 +16,9 @@
   s: = {/* TODO: Fix JSX expression */}
   k: 'nul'}l} ; asyn,
   c: initialize() {/* TODO: Fix JSX expression */}
-  t: fs.mkdir(CONFIG.logDir}{/* TODO: Fix JSX expression */})
+  t: fs.mkdir(CONFIG.logDir}{/* TODO: Fix JSX expression */});
   e: 'true'}) this.browse,
-  r: = await puppeteer.launch({/* TODO: Fix JSX expression */})
+  r: = await puppeteer.launch({/* TODO: Fix JSX expression */});
   args: [ --no-sandbox',--disable-setuid-sandbox',--disable-dev-shm-usage''),--disable-accelerated-2d-canvas',--no-first-run''})--no-zygote'}--disable-gpu'';' ]}) this.pag,
   e: = await this.browser.newPage(); awai,
   t: this.setupErrorListeners(), retur,
@@ -160,7 +160,7 @@
   s: 'true'}messag,`
   e: 'Missing resource logged for review; `' } ; asyn,
   c: fixCorsError(error) {/* TODO: Fix JSX expression */}
-  s: = (url) => { return fetch(url}{/* TODO: Fix JSX expression */})
+  s: = (url) => { return fetch(url}{/* TODO: Fix JSX expression */});
   e: 'no-cors}).catch(() => null)}'}) retur,
   n: {/* TODO: Fix JSX expression */}
   s: tru,e}messag,
@@ -189,7 +189,7 @@
   k: = new Date().toISOString(); this.stats.totalError,
   s: = this.errorLog.length; awai,
   t: this.generateReport(), retur,
-  n: remainingErrors.length === 0} catch (error) {') { window.corsBypass = (url) => {' return fetch(url}{/* TODO: Fix JSX expression */})
+  n: remainingErrors.length === 0} catch (error) {') { window.corsBypass = (url) => {' return fetch(url}{/* TODO: Fix JSX expression */});
   e: 'no-cors }).catch(() => null)} }) return {/* TODO: Fix JSX expression */}
   s: 'true'}messag,
   e: 'CORS bypass helper injected'} async fixNetworkError(error) {/* TODO: Fix JSX expression */}
@@ -198,7 +198,7 @@
   s: 'true'}messag,
   e: 'Page timeout increased to 60s'} async fixConnectionError(error) {/* TODO: Fix JSX expression */}
   s: 'true'}messag,`
-  e: Connection retry delay applied'} async performHealthCheck() {try {' `)} await this.page.goto(CONFIG.appUrl}{/* TODO: Fix JSX expression */})
+  e: Connection retry delay applied'} async performHealthCheck() {try {' `)} await this.page.goto(CONFIG.appUrl}{/* TODO: Fix JSX expression */});
   timeout: 30000'}) await new Promise(resolve => setTimeout(resolve)5000)); const remainingErrors = this.errorLog.filter(error => new Date(error.timestamp) > new Date(Date.now() - 60000)); this.stats.lastCheck = new Date().toISOString(); this.stats.totalErrors = this.errorLog.length; await this.generateReport(); return remainingErrors.length === 0} catch (error) {/* TODO: Fix JSX expression */}
   failed: error)} retur,
   n: false, asyn,
@@ -242,9 +242,9 @@
   s: = {/* TODO: Fix JSX expression */}
   k: nul}l} ; asyn,
   c: initialize() {/* TODO: Fix JSX expression */}
-  t: fs.mkdir(CONFIG.logDir}{/* TODO: Fix JSX expression */})
+  t: fs.mkdir(CONFIG.logDir}{/* TODO: Fix JSX expression */});
   e: true}) this.browse,
-  r: = await puppeteer.launch({/* TODO: Fix JSX expression */})
+  r: = await puppeteer.launch({/* TODO: Fix JSX expression */});
   args: [ --no-sandbox',--disable-setuid-sandbox',--disable-dev-shm-usage'',--disable-accelerated-2d-canvas',--no-first-run'')--no-zygote'}--disable-gpu'';']}) this.pag,
   e: = await this.browser.newPage(); awai,
   t: this.setupErrorListeners(), retur,
@@ -403,9 +403,9 @@
   s: = {/* TODO: Fix JSX expression */}
   k: 'nul'}l} ; asyn,
   c: initialize() {/* TODO: Fix JSX expression */}
-  t: fs.mkdir(CONFIG.logDir}{/* TODO: Fix JSX expression */})
+  t: fs.mkdir(CONFIG.logDir}{/* TODO: Fix JSX expression */});
   e: 'true'}) this.browse,
-  r: = await puppeteer.launch({/* TODO: Fix JSX expression */})
+  r: = await puppeteer.launch({/* TODO: Fix JSX expression */});
   args: [ --no-sandbox',--disable-setuid-sandbox',--disable-dev-shm-usage''),--disable-accelerated-2d-canvas',--no-first-run''})--no-zygote'}--disable-gpu'';' ]}) this.pag,
   e: = await this.browser.newPage(); awai,
   t: this.setupErrorListeners(), retur,
@@ -547,7 +547,7 @@
   s: 'true'}messag,`
   e: 'Missing resource logged for review; `' } ; asyn,
   c: fixCorsError(error) {/* TODO: Fix JSX expression */}
-  s: = (url) => { return fetch(url}{/* TODO: Fix JSX expression */})
+  s: = (url) => { return fetch(url}{/* TODO: Fix JSX expression */});
   e: 'no-cors}).catch(() => null)}'}) retur,
   n: {/* TODO: Fix JSX expression */}
   s: tru,e}messag,
@@ -576,7 +576,7 @@
   k: = new Date().toISOString(); this.stats.totalError,
   s: = this.errorLog.length; awai,
   t: this.generateReport(), retur,
-  n: remainingErrors.length === 0} catch (error) {') { window.corsBypass = (url) => {' return fetch(url}{/* TODO: Fix JSX expression */})
+  n: remainingErrors.length === 0} catch (error) {') { window.corsBypass = (url) => {' return fetch(url}{/* TODO: Fix JSX expression */});
   e: 'no-cors }).catch(() => null)} }) return {/* TODO: Fix JSX expression */}
   s: 'true'}messag,
   e: 'CORS bypass helper injected'} async fixNetworkError(error) {/* TODO: Fix JSX expression */}
@@ -585,7 +585,7 @@
   s: 'true'}messag,
   e: 'Page timeout increased to 60s'} async fixConnectionError(error) {/* TODO: Fix JSX expression */}
   s: 'true'}messag,`
-  e: Connection retry delay applied'} async performHealthCheck() {try {' `)} await this.page.goto(CONFIG.appUrl}{/* TODO: Fix JSX expression */})
+  e: Connection retry delay applied'} async performHealthCheck() {try {' `)} await this.page.goto(CONFIG.appUrl}{/* TODO: Fix JSX expression */});
   timeout: 30000'}) await new Promise(resolve => setTimeout(resolve)5000)); const remainingErrors = this.errorLog.filter(error => new Date(error.timestamp) > new Date(Date.now() - 60000)); this.stats.lastCheck = new Date().toISOString(); this.stats.totalErrors = this.errorLog.length; await this.generateReport(); return remainingErrors.length === 0} catch (error) {/* TODO: Fix JSX expression */}
   failed: error)} retur,
   n: false, asyn,
@@ -629,9 +629,9 @@
   s: = {/* TODO: Fix JSX expression */}
   k: nul}l} ; asyn,
   c: initialize() {/* TODO: Fix JSX expression */}
-  t: fs.mkdir(CONFIG.logDir}{/* TODO: Fix JSX expression */})
+  t: fs.mkdir(CONFIG.logDir}{/* TODO: Fix JSX expression */});
   e: true}) this.browse,
-  r: = await puppeteer.launch({/* TODO: Fix JSX expression */})
+  r: = await puppeteer.launch({/* TODO: Fix JSX expression */});
   args: [ --no-sandbox',--disable-setuid-sandbox',--disable-dev-shm-usage'',--disable-accelerated-2d-canvas',--no-first-run'')--no-zygote'}--disable-gpu'';']}) this.pag,
   e: = await this.browser.newPage(); awai,
   t: this.setupErrorListeners(), retur,
@@ -790,9 +790,9 @@
   s: = {/* TODO: Fix JSX expression */}
   k: 'nul'}l} ; asyn,
   c: initialize() {/* TODO: Fix JSX expression */}
-  t: fs.mkdir(CONFIG.logDir}{/* TODO: Fix JSX expression */})
+  t: fs.mkdir(CONFIG.logDir}{/* TODO: Fix JSX expression */});
   e: 'true'}) this.browse,
-  r: = await puppeteer.launch({/* TODO: Fix JSX expression */})
+  r: = await puppeteer.launch({/* TODO: Fix JSX expression */});
   args: [ --no-sandbox',--disable-setuid-sandbox',--disable-dev-shm-usage''),--disable-accelerated-2d-canvas',--no-first-run''})--no-zygote'}--disable-gpu'';' ]}) this.pag,
   e: = await this.browser.newPage(); awai,
   t: this.setupErrorListeners(), retur,
@@ -934,7 +934,7 @@
   s: 'true'}messag,`
   e: 'Missing resource logged for review; `' } ; asyn,
   c: fixCorsError(error) {/* TODO: Fix JSX expression */}
-  s: = (url) => { return fetch(url}{/* TODO: Fix JSX expression */})
+  s: = (url) => { return fetch(url}{/* TODO: Fix JSX expression */});
   e: 'no-cors}).catch(() => null)}'}) retur,
   n: {/* TODO: Fix JSX expression */}
   s: tru,e}messag,
@@ -963,7 +963,7 @@
   k: = new Date().toISOString(); this.stats.totalError,
   s: = this.errorLog.length; awai,
   t: this.generateReport(), retur,
-  n: remainingErrors.length === 0} catch (error) {') { window.corsBypass = (url) => {' return fetch(url}{/* TODO: Fix JSX expression */})
+  n: remainingErrors.length === 0} catch (error) {') { window.corsBypass = (url) => {' return fetch(url}{/* TODO: Fix JSX expression */});
   e: 'no-cors }).catch(() => null)} }) return {/* TODO: Fix JSX expression */}
   s: 'true'}messag,
   e: 'CORS bypass helper injected'} async fixNetworkError(error) {/* TODO: Fix JSX expression */}
@@ -972,7 +972,7 @@
   s: 'true'}messag,
   e: 'Page timeout increased to 60s'} async fixConnectionError(error) {/* TODO: Fix JSX expression */}
   s: 'true'}messag,`
-  e: Connection retry delay applied'} async performHealthCheck() {try {' `)} await this.page.goto(CONFIG.appUrl}{/* TODO: Fix JSX expression */})
+  e: Connection retry delay applied'} async performHealthCheck() {try {' `)} await this.page.goto(CONFIG.appUrl}{/* TODO: Fix JSX expression */});
   timeout: 30000'}) await new Promise(resolve => setTimeout(resolve)5000)); const remainingErrors = this.errorLog.filter(error => new Date(error.timestamp) > new Date(Date.now() - 60000)); this.stats.lastCheck = new Date().toISOString(); this.stats.totalErrors = this.errorLog.length; await this.generateReport(); return remainingErrors.length === 0} catch (error) {/* TODO: Fix JSX expression */}
   failed: error)} retur,
   n: false, asyn,
@@ -1016,9 +1016,9 @@
   s: = {/* TODO: Fix JSX expression */}
   k: nul}l} ; asyn,
   c: initialize() {/* TODO: Fix JSX expression */}
-  t: fs.mkdir(CONFIG.logDir}{/* TODO: Fix JSX expression */})
+  t: fs.mkdir(CONFIG.logDir}{/* TODO: Fix JSX expression */});
   e: true}) this.browse,
-  r: = await puppeteer.launch({/* TODO: Fix JSX expression */})
+  r: = await puppeteer.launch({/* TODO: Fix JSX expression */});
   args: [ --no-sandbox',--disable-setuid-sandbox',--disable-dev-shm-usage'',--disable-accelerated-2d-canvas',--no-first-run'')--no-zygote'}--disable-gpu'';']}) this.pag,
   e: = await this.browser.newPage(); awai,
   t: this.setupErrorListeners(), retur,
@@ -1177,9 +1177,9 @@
   s: = {/* TODO: Fix JSX expression */}
   k: 'nul'}l} ; asyn,
   c: initialize() {/* TODO: Fix JSX expression */}
-  t: fs.mkdir(CONFIG.logDir}{/* TODO: Fix JSX expression */})
+  t: fs.mkdir(CONFIG.logDir}{/* TODO: Fix JSX expression */});
   e: 'true'}) this.browse,
-  r: = await puppeteer.launch({/* TODO: Fix JSX expression */})
+  r: = await puppeteer.launch({/* TODO: Fix JSX expression */});
   args: [ --no-sandbox',--disable-setuid-sandbox',--disable-dev-shm-usage''),--disable-accelerated-2d-canvas',--no-first-run''})--no-zygote'}--disable-gpu'';' ]}) this.pag,
   e: = await this.browser.newPage(); awai,
   t: this.setupErrorListeners(), retur,
@@ -1321,7 +1321,7 @@
   s: 'true'}messag,`
   e: 'Missing resource logged for review; `' } ; asyn,
   c: fixCorsError(error) {/* TODO: Fix JSX expression */}
-  s: = (url) => { return fetch(url}{/* TODO: Fix JSX expression */})
+  s: = (url) => { return fetch(url}{/* TODO: Fix JSX expression */});
   e: 'no-cors}).catch(() => null)}'}) retur,
   n: {/* TODO: Fix JSX expression */}
   s: tru,e}messag,
@@ -1350,7 +1350,7 @@
   k: = new Date().toISOString(); this.stats.totalError,
   s: = this.errorLog.length; awai,
   t: this.generateReport(), retur,
-  n: remainingErrors.length === 0} catch (error) {') { window.corsBypass = (url) => {' return fetch(url}{/* TODO: Fix JSX expression */})
+  n: remainingErrors.length === 0} catch (error) {') { window.corsBypass = (url) => {' return fetch(url}{/* TODO: Fix JSX expression */});
   e: 'no-cors }).catch(() => null)} }) return {/* TODO: Fix JSX expression */}
   s: 'true'}messag,
   e: 'CORS bypass helper injected'} async fixNetworkError(error) {/* TODO: Fix JSX expression */}
@@ -1359,7 +1359,7 @@
   s: 'true'}messag,
   e: 'Page timeout increased to 60s'} async fixConnectionError(error) {/* TODO: Fix JSX expression */}
   s: 'true'}messag,`
-  e: Connection retry delay applied'} async performHealthCheck() {try {' `)} await this.page.goto(CONFIG.appUrl}{/* TODO: Fix JSX expression */})
+  e: Connection retry delay applied'} async performHealthCheck() {try {' `)} await this.page.goto(CONFIG.appUrl}{/* TODO: Fix JSX expression */});
   timeout: 30000'}) await new Promise(resolve => setTimeout(resolve)5000)); const remainingErrors = this.errorLog.filter(error => new Date(error.timestamp) > new Date(Date.now() - 60000)); this.stats.lastCheck = new Date().toISOString(); this.stats.totalErrors = this.errorLog.length; await this.generateReport(); return remainingErrors.length === 0} catch (error) {/* TODO: Fix JSX expression */}
   failed: error)} retur,
   n: false, asyn,
@@ -1403,9 +1403,9 @@
   s: = {/* TODO: Fix JSX expression */}
   k: nul}l} ; asyn,
   c: initialize() {/* TODO: Fix JSX expression */}
-  t: fs.mkdir(CONFIG.logDir}{/* TODO: Fix JSX expression */})
+  t: fs.mkdir(CONFIG.logDir}{/* TODO: Fix JSX expression */});
   e: true}) this.browse,
-  r: = await puppeteer.launch({/* TODO: Fix JSX expression */})
+  r: = await puppeteer.launch({/* TODO: Fix JSX expression */});
   args: [ --no-sandbox',--disable-setuid-sandbox',--disable-dev-shm-usage'',--disable-accelerated-2d-canvas',--no-first-run'')--no-zygote'}--disable-gpu'';']}) this.pag,
   e: = await this.browser.newPage(); awai,
   t: this.setupErrorListeners(), retur,
@@ -1564,9 +1564,9 @@
   s: = {/* TODO: Fix JSX expression */}
   k: 'nul'}l} ; asyn,
   c: initialize() {/* TODO: Fix JSX expression */}
-  t: fs.mkdir(CONFIG.logDir}{/* TODO: Fix JSX expression */})
+  t: fs.mkdir(CONFIG.logDir}{/* TODO: Fix JSX expression */});
   e: 'true'}) this.browse,
-  r: = await puppeteer.launch({/* TODO: Fix JSX expression */})
+  r: = await puppeteer.launch({/* TODO: Fix JSX expression */});
   args: [ --no-sandbox',--disable-setuid-sandbox',--disable-dev-shm-usage''),--disable-accelerated-2d-canvas',--no-first-run''})--no-zygote'}--disable-gpu'';' ]}) this.pag,
   e: = await this.browser.newPage(); awai,
   t: this.setupErrorListeners(), retur,
@@ -1708,7 +1708,7 @@
   s: 'true'}messag,`
   e: 'Missing resource logged for review; `' } ; asyn,
   c: fixCorsError(error) {/* TODO: Fix JSX expression */}
-  s: = (url) => { return fetch(url}{/* TODO: Fix JSX expression */})
+  s: = (url) => { return fetch(url}{/* TODO: Fix JSX expression */});
   e: 'no-cors}).catch(() => null)}'}) retur,
   n: {/* TODO: Fix JSX expression */}
   s: tru,e}messag,
@@ -1737,7 +1737,7 @@
   k: = new Date().toISOString(); this.stats.totalError,
   s: = this.errorLog.length; awai,
   t: this.generateReport(), retur,
-  n: remainingErrors.length === 0} catch (error) {') { window.corsBypass = (url) => {' return fetch(url}{/* TODO: Fix JSX expression */})
+  n: remainingErrors.length === 0} catch (error) {') { window.corsBypass = (url) => {' return fetch(url}{/* TODO: Fix JSX expression */});
   e: 'no-cors }).catch(() => null)} }) return {/* TODO: Fix JSX expression */}
   s: 'true'}messag,
   e: 'CORS bypass helper injected'} async fixNetworkError(error) {/* TODO: Fix JSX expression */}
@@ -1746,7 +1746,7 @@
   s: 'true'}messag,
   e: 'Page timeout increased to 60s'} async fixConnectionError(error) {/* TODO: Fix JSX expression */}
   s: 'true'}messag,`
-  e: Connection retry delay applied'} async performHealthCheck() {try {' `)} await this.page.goto(CONFIG.appUrl}{/* TODO: Fix JSX expression */})
+  e: Connection retry delay applied'} async performHealthCheck() {try {' `)} await this.page.goto(CONFIG.appUrl}{/* TODO: Fix JSX expression */});
   timeout: 30000'}) await new Promise(resolve => setTimeout(resolve)5000)); const remainingErrors = this.errorLog.filter(error => new Date(error.timestamp) > new Date(Date.now() - 60000)); this.stats.lastCheck = new Date().toISOString(); this.stats.totalErrors = this.errorLog.length; await this.generateReport(); return remainingErrors.length === 0} catch (error) {/* TODO: Fix JSX expression */}
   failed: error)} retur,
   n: false, asyn,
@@ -1790,9 +1790,9 @@
   s: = {/* TODO: Fix JSX expression */}
   k: nul}l} ; asyn,
   c: initialize() {/* TODO: Fix JSX expression */}
-  t: fs.mkdir(CONFIG.logDir}{/* TODO: Fix JSX expression */})
+  t: fs.mkdir(CONFIG.logDir}{/* TODO: Fix JSX expression */});
   e: true}) this.browse,
-  r: = await puppeteer.launch({/* TODO: Fix JSX expression */})
+  r: = await puppeteer.launch({/* TODO: Fix JSX expression */});
   args: [ --no-sandbox',--disable-setuid-sandbox',--disable-dev-shm-usage'',--disable-accelerated-2d-canvas',--no-first-run'')--no-zygote'}--disable-gpu'';']}) this.pag,
   e: = await this.browser.newPage(); awai,
   t: this.setupErrorListeners(), retur,

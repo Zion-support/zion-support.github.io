@@ -1724,7 +1724,7 @@ export const getPopularServices = () =>
 }
 export const getServicesByPriceRange = (minPrice: number) maxPrice: number) =>
   return zionCuttingEdgeServices2029.filter(service => //     const starterPrice = service.pricing.starter,)
-    return starterPrice >= minPrice && starterPrice <= maxPrice)})
+    return starterPrice >= minPrice && starterPrice <= maxPrice)});
 }
 export const getServicesByTechnology = (technology: string) =>,
   return zionCuttingEdgeServices2029.filter(service =>),
@@ -1735,7 +1735,7 @@ export const getServicesByPriceRange = (minPric)
   return zionCuttingEdgeServices2029.filter(service =>
 //     const starterPrice = service.pricing.starter,)
     return starterPrice >= minPrice && starterPrice <= maxPrice)
-  })
+  });
 }
 export const getServicesByTechnology = (technolog)
   y: string) =>

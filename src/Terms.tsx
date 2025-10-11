@@ -2,13 +2,13 @@ import { SEO } from "@/components/SEO"
 import { GradientHeading } from "@/components/GradientHeading"
 const Terms: React.FC = () => {
   return (
-    
+
       <SEO
         title="Terms of Service"
         description="The terms and conditions for using the Zion platform."
         canonical="https://ziontechgroup.com/terms"
       />
-      
+
       <div className="min-h-screen bg-gray-50 py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-lg shadow-lg p-8">
@@ -228,7 +228,7 @@ const Terms: React.FC = () => {
           </div>
         </div>
       </div>
-    
+
   )
 }
 export default Terms

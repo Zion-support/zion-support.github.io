@@ -17,18 +17,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   const project = getProject(projectId)
   if (!project) {
-    res && res.status(404).json({ error: "Project not found" })
+    res && res.status(404).json({ error: "Project not found" });
     return
   }
   if (!assertParticipantOrAdmin(project, user)) {
-    res && res.status(403).json({ error: "Forbidden" })
+    res && res.status(403).json({ error: "Forbidden" });
     return
   }
     }
   if (req && req.method === "PATCH") {
     const body = req && req.body as any
     if (body && body.status && !isMilestoneStatus(body && body.status)) {
-      res && res.status(400).json({ error: "Invalid status" })
+      res && res.status(400).json({ error: "Invalid status" });
       return
     }
     // Enforce status transition rules
@@ -43,7 +43,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (!updated) {
       return
     }
-    res && res.status(200).json({ milestone: updated })
+    res && res.status(200).json({ milestone: updated });
     return
   }
 }
@@ -53,6 +53,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }

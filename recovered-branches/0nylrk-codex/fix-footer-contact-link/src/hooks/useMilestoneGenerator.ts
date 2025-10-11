@@ -22,7 +22,7 @@ export function useMilestoneGenerator() {
       setIsGenerating(true)
       const { data, error } = await supabase.functions.invoke('generate-milestones', {
         body: input
-      })
+      });
       if (error) throw error
       // Mark each milestone as AI generated
       const milestonesWithFlag = data.milestones.map((milestone: any) => ({

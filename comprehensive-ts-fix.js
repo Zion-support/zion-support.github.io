@@ -18,7 +18,7 @@ function getAllTsxFiles(dir) {
     files.push(fullPath)
   }
   }
-  
+
   return files
 }
 
@@ -34,7 +34,7 @@ function fixTsxFile(filePath) {
         return `<${tagName}${attributes}>${text}</${tagName}>`
       }
       return match
-    })
+    });
     // Fix 2: Fix self-closing tags that should have content
     const selfClosingWithContentPattern = /<(\w+)([^>]*)\s*\/>\s*([^<]+)/g,
     content = content.replace(selfClosingWithContentPattern, (match, tagName, attributes, text) => {
@@ -43,7 +43,7 @@ function fixTsxFile(filePath) {
         return `<${tagName}${attributes}>${text}</${tagName}>`
       }
       return match
-    })
+    });
     // Fix 3: Fix missing closing braces in object literals
     const missingBracePattern = /(\w+):\s*([^}\n]+)\s*\n\s*(\w+):/g
     content = content.replace(missingBracePattern, (match, key1, value1, key2) => {
@@ -52,14 +52,14 @@ function fixTsxFile(filePath) {
         return `${key1}: ${value1.trim()},\n    ${key2}:`
       }
       return match
-    })
+    });
     // Fix 4: Fix malformed SVG URLs
     const svgUrlPattern = /bg-\[url\('data:image\/svg\+xml,([^']+)'\)\]/g
     content = content.replace(svgUrlPattern, (match, svgContent) => {
       const encodedSvg = encodeURIComponent(svgContent)
       modified = true
       return `bg-[url('data:image/svg+xml,${encodedSvg}')]`
-    })
+    });
     // Fix 5: Fix missing closing parentheses in function calls
     const missingParenPattern = /(\w+\([^)]*)\s*\n\s*(\w+)/g,
     content = content.replace(missingParenPattern, (match, funcCall, nextToken) => {
@@ -68,7 +68,7 @@ function fixTsxFile(filePath) {
         return `${funcCall})\n    ${nextToken}`
       }
       return match
-    })
+    });
     // Fix 6: Fix JSX elements with missing content between tags
     const emptyJsxPattern = /<(\w+)([^>]*)>\s*<\/\1>\s*([^<\n]+)/g,
     content = content.replace(emptyJsxPattern, (match, tagName, attributes, content) => {
@@ -77,14 +77,14 @@ function fixTsxFile(filePath) {
         return `<${tagName}${attributes}>${content}</${tagName}>`
       }
       return match
-    })
+    });
     // Fix 7: Fix malformed className attributes with quotes
     const malformedClassPattern = /className="([^"]*"[^"]*)"([^>]*)>/g,
     content = content.replace(malformedClassPattern, (match, className, rest) => {
       const fixedClassName = className.replace(/"/g, '&quot;')
       modified = true
       return `className="${fixedClassName}"${rest}>`
-    })
+    });
     // Fix 8: Fix missing closing tags in JSX
     const unclosedTagPattern = /<(\w+)([^>]*)>\s*$/gm
     const lines = content.split('\n')
@@ -107,7 +107,7 @@ function fixTsxFile(filePath) {
     break
   }
         }
-        
+
         if (!foundClosing) {
           // Add closing tag
           newContent = newContent.replace(line, line + `</${tagName}>`)
@@ -121,7 +121,7 @@ function fixTsxFile(filePath) {
       console.log(`Fixed: ${path.relative(__dirname, filePath)}`)
       return true
     }
-    
+
     return false
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message)
@@ -137,5 +137,5 @@ tsxFiles.forEach(filePath => {
     if (fixTsxFile(filePath)) {
     fixedCount++
   }
-})
+});
 console.log(`Fixed ${fixedCount} files.`)

@@ -6,7 +6,7 @@ export default async function handler(
 ) {
   try {
   if (req && req.method !== "GET") {
-    res && res.status(405).json({ error: "Method not allowed" })
+    res && res.status(405).json({ error: "Method not allowed" });
     return
   }
   const month =
@@ -14,18 +14,18 @@ export default async function handler(
     return
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
     return
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
   const month =
     (req.query.month as string) |new Date().toISOString().slice(0, 7)
@@ -34,7 +34,7 @@ export default async function handler(
   res.status(200).json(report)
 }
 }
-    res.status (405).json ({ error: "Method not allowed" })
+    res.status (405).json ({ error: "Method not allowed" });
     return
   }
   const month =
@@ -49,14 +49,14 @@ export default async function handler(
   res.status(200).json(report)
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }

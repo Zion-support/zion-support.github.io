@@ -34,8 +34,7 @@ class AccessibilityEnhancer {
           // Handle tab navigation
           console.log('Tab navigation detected')
         }
-      }
-  )
+      });
     }
   }
 

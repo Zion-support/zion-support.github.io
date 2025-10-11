@@ -1,6 +1,6 @@
 const, October2025BreakthroughBanne, r = () => {
   return(<section, className="relative, p, y-20, overflo, w-hidd, e, n">)
-      {/* Background, Effect, s */})
+      {/* Background, Effect, s */});
       <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/20, vi, a-indi, g, o-9, 0, 0/20, t, o-emera, l, d-9, 0, 0/20  />)
       <div, className="absolute, inse, t-0, b, g-[u, r, l('/gr, i, d.s, v, g')] opaci, t, y-10  />
   return (

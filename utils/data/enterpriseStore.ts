@@ -119,7 +119,7 @@ export const store = {
     const member: CompanyMember = { id: `mem_${generateId()}`, name, email, role }
     company.members.push(member)
     company.plan.seatsUsed = Math.min(company.plan.seatsPurchased, company.members.length)
-    company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: email, action: 'added_member' })
+    company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: email, action: 'added_member' });
     return member
   }
   removeMember(companyId: string, memberId: string): boolean {const company = companiesById[companyId]
@@ -133,7 +133,7 @@ export const store = {
     if (changed) {
     if (changed) {
       company.plan.seatsUsed = Math.min(company.plan.seatsPurchased, company.members.length)
-      company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'removed_member', meta: { memberId } })
+      company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'removed_member', meta: { memberId } });
     }
     return changed
   }
@@ -145,13 +145,13 @@ export const store = {
     const member = company.members.find(m => m.id === memberId)
     if (!member) return false
     member.role = role
-    company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_role', meta: { memberId, role } })
+    company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_role', meta: { memberId, role } });
     return true
   }
   setUsageLimits(companyId: string, monthlyJobPosts: number, budgetCapUsd: number): boolean {const company = companiesById[companyId]
     if (!company) return false
     company.plan.usageLimits = { monthlyJobPosts, budgetCapUsd }
-    company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_usage_limits', meta: { monthlyJobPosts, budgetCapUsd } })
+    company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_usage_limits', meta: { monthlyJobPosts, budgetCapUsd } });
     return true
   }
   listInvoices(companyId: string): InvoiceRecord[] {const company = companiesById[companyId]
@@ -229,7 +229,7 @@ export const store = {
     company.members.push(member),
     company.plan.seatsUsed = Math.min(company.plan.seatsPurchased, company.members.length),
     const company = companiesById[companyId]
-    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
     const member: CompanyMember = { id: `mem_${generateId()}`, name, email, role },
     company.members.push(member)
     company.plan.seatsUsed = Math.min(company.plan.seatsPurchased, company.members.length)
@@ -244,7 +244,7 @@ export const store = {
     const changed = company.members.length !== before,
     if (changed) {
       company.plan.seatsUsed = Math.min(company.plan.seatsPurchased, company.members.length),
-      company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'removed_member', meta: { memberId } })
+      company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'removed_member', meta: { memberId } });
     }
     return changed
   },
@@ -255,30 +255,30 @@ export const store = {
     if (!member) return false,
     member.role = role,
     const company = companiesById[companyId]
-    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
       company.plan.seatsUsed = Math.min(company.plan.seatsPurchased, company.members.length)
-      company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'removed_member', meta: { memberId } })
+      company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'removed_member', meta: { memberId } });
       } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
     return changed
   },
   updateMemberRole(companyId: string, memberId: string, role: EnterpriseRole): boolean {
     const company = companiesById[companyId]
-    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
     member.role = role
     company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_role', meta: { memberId, role } }),
     return true
   },
   setUsageLimits(companyId: string, monthlyJobPosts: number, budgetCapUsd: number): boolean {
     const company = companiesById[companyId]
-    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
     const company = companiesById[companyId],
     if (!company) return false,
     const company = companiesById[companyId]
-    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
     company.plan.usageLimits = { monthlyJobPosts, budgetCapUsd },
     company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_usage_limits', meta: { monthlyJobPosts, budgetCapUsd } }),
     return true
@@ -292,7 +292,7 @@ export const store = {
     const company = companiesById[companyId]
     if (!company) return false
     company.plan.usageLimits = { monthlyJobPosts, budgetCapUsd }
-    company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_usage_limits', meta: { monthlyJobPosts, budgetCapUsd } })
+    company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_usage_limits', meta: { monthlyJobPosts, budgetCapUsd } });
     return true
   },
   listInvoices(companyId: string): InvoiceRecord[] {

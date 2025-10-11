@@ -45,7 +45,6 @@ const AIAgriculturalIntelligenceProPage: React.FC = () => {
     }
   ]
 
-<<<<<<< HEAD
 return (
     <>
       <Helmet>
@@ -54,88 +53,15 @@ return (
         <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
       </Helmet>
       <Navigation />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
-  const services = [
-    {
-      title: 'Crop Intelligence',
-      description: 'AI-powered crop monitoring and analysis for optimal growth and yield.',
-      icon: Leaf,
-      benefits: ['Crop health monitoring', 'Growth analysis', 'Yield optimization', 'Quality assessment']
-    },
-    {
-      title: 'Weather Analytics',
-      description: 'Advanced weather prediction and climate analysis for agricultural planning.',
-      icon: BarChart,
-      benefits: ['Weather forecasting', 'Climate analysis', 'Risk assessment', 'Planning optimization']
-    },
-    {
-      title: 'Soil Management',
-      description: 'Comprehensive soil analysis and management recommendations.',
-      icon: Shield,
-      benefits: ['Soil testing', 'Nutrient analysis', 'pH monitoring', 'Fertilization plans']
-    },
-    {
-      title: 'Market Intelligence',
-      description: 'AI-driven market analysis and pricing optimization for agricultural products.',
-      icon: Target,
-      benefits: ['Price forecasting', 'Market trends', 'Demand analysis', 'Profit optimization']
-    }
-  ]
 
-  const pricingTiers = [
-    {
-      name: 'Basic',
-      price: '$99',
-      period: '/month',
-      description: 'Perfect for small farms and individual farmers',
-      features: [
-        'Basic crop monitoring',
-        'Weather alerts',
-        'Email support',
-        'Mobile app access'
-      ]
-    },
-    {
-      name: 'Professional',
-      price: '$299',
-      period: '/month',
-      description: 'Ideal for medium to large farms',
-      features: [
-        'Advanced analytics',
-        'Precision agriculture tools',
-        'Priority support',
-        'API access',
-        'Custom integrations'
-      ]
-    },
-    {
-      name: 'Enterprise',
-      price: 'Custom',
-      period: '',
-      description: 'Tailored solutions for agricultural corporations',
-      features: [
-        'Full AI suite',
-        'Custom development',
-        'Dedicated support',
-        'White-label options',
-        'On-premise deployment'
-      ]
-    }
-  ]
-
-  return (
-    <div className="min-h-screen bg-gray-50">
->>>>>>> cursor/fix-errors-and-merge-to-main-259c
-      <Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">      <Helmet>
         <title>AI Agricultural Intelligence Pro - Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered agricultural intelligence platform for precision farming, crop monitoring, and yield optimization." />
         <meta name="keywords" content="AI agriculture, precision farming, crop monitoring, agricultural intelligence, smart farming" />
       </Helmet>
-      
+
       <Navigation />
-      
+
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4">
@@ -204,7 +130,7 @@ return (
                 Comprehensive agricultural intelligence solutions
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {services.map((service, index) => {
                 const Icon = service.icon
@@ -241,7 +167,7 @@ return (
                 Choose the plan that fits your agricultural needs
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingTiers.map((tier, index) => (
                 <div key={index} className={`bg-white/10 backdrop-blur-lg rounded-xl p-8 border transition-all duration-300 ${
@@ -257,7 +183,7 @@ return (
                       <span className="text-gray-300 ml-1">{tier.period}</span>
                     </div>
                   </div>
-                  
+
                   <ul className="space-y-3 mb-8">
                     {tier.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
@@ -266,7 +192,7 @@ return (
                       </li>
                     ))}
                   </ul>
-                  
+
                   <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     tier.name === 'Professional'
                       ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white hover:from-green-700 hover:to-blue-700'
@@ -301,7 +227,7 @@ return (
           </div>
         </section>
       </main>
-      
+
       <Footer />
     </div>
   )

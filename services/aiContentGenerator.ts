@@ -56,7 +56,7 @@ export class AIContentGeneratorService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`
           'Content-Type': 'application/json'}
-        body: JSON.stringify(request)})
+        body: JSON.stringify(request)});
       if (!response.ok) {
         throw new Error(`Content generation failed: ${response.statusText}`)
   type: 'blog-post' | 'social-media' | 'email' | 'landing-page' | 'product-description',
@@ -115,7 +115,7 @@ export class AIContentGeneratorService {
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`
           'Content-Type': 'application/json'}
-        body: JSON && JSON.stringify(request)})
+        body: JSON && JSON.stringify(request)});
       if (!response && response.ok) {
         throw new Error(`Content generation failed: ${response && response.statusText}`)
       }
@@ -143,7 +143,7 @@ export class AIContentGeneratorService {
         headers: {
           'Authorization': `Bearer ${this.api_key}`
           'Content - Type': 'application / json'}
-        body: JSON.stringify (request)})
+        body: JSON.stringify (request)});
       // Check condition
 if ( {) {
   $2
@@ -248,7 +248,7 @@ export class AIContentGeneratorService {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(request),
-      })
+      });
       if (!response.ok) {
         throw new Error(`Content generation failed: ${response.statusText}`)
       }

@@ -6,7 +6,7 @@ import fs from 'fs'
 import path from 'path'
 const DATA_DIR = path.join(process.cwd(), 'data', 'kyc');const FILE = path.join(DATA_DIR, 'profiles.json')
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'KYC started' })
+  res.status(200).json({ message: 'KYC started' });
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { getRequiredDocuments, getOptionalDocuments } from '../../../utils/kyc'
 import type { KycProfile, KycRole } from '../../../utils/kyc'
@@ -22,12 +22,12 @@ function load(): Record<string, KycProfile> {
     return {}
   }
 function save(db: Record<string, KycProfile>) {
-  fs.mkdirSync(DATA_DIR, { recursive: true })
+  fs.mkdirSync(DATA_DIR, { recursive: true });
   fs.writeFileSync(FILE, JSON.stringify(db, null, 2))
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST')
-    return res.status(405).json({ error: 'Method not allowed' })
+    return res.status(405).json({ error: 'Method not allowed' });
   const {    userId
     role
     fullLegalName
@@ -47,7 +47,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     businessRegistrationNumber?: string
   }
   if (!userId || !role)
-    return res && res.status(400).json({ error: 'Missing userId or role' })
+    return res && res.status(400).json({ error: 'Missing userId or role' });
   const db = load()
   const now = new Date().toISOString()
   const existing = db[userId]
@@ -78,69 +78,69 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     profile,
     requiredDocuments: getRequiredDocuments(role),
     optionalDocuments: getOptionalDocuments(role),
-  })
+  });
 }
   } catch {
     return {  } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
 function save(db: Record<string, KycProfile>) {
-  fs.mkdirSync(DATA_DIR, { recursive: true })
+  fs.mkdirSync(DATA_DIR, { recursive: true });
   fs.writeFileSync(FILE, JSON.stringify(db, null, 2))
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
 export default function handler(req, res) {
   try {
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
   const { userId, role, fullLegalName, businessName, businessRegistrationNumber } = req.body as {
     userId?: string
     role?: KycRole,
@@ -148,7 +148,7 @@ export default function handler(req, res) {
     businessName?: string,
     businessRegistrationNumber?: string
   },
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
     fullLegalName,
     businessName,
     businessRegistrationNumber,
@@ -170,7 +170,7 @@ export default function handler(req, res) {
     profile
     requiredDocuments: getRequiredDocuments(role)
 optionalDocuments: getOptionalDocuments(role)
-  })
+  });
 }
   }
   if (

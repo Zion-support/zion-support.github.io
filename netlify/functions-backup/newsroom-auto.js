@@ -6,23 +6,23 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
   const run = cmd => execSync(cmd) {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true,
-      })
+      });
   try {/* TODO: Fix JSX expression */}
     run('git push origin main || true')}
     return {
       statusCode: 200,
       body: JSON.stringify({ ok: true),
-        tool: 'newsroom-auto' })
+        tool: 'newsroom-auto' });
     }
   } catch (e) {return {
       statusCode: 200,
       body: JSON.stringify({ ok: false),
         error: String(e,),
     return {/* TODO: Fix JSX expression */}
-  l: 'newsroom-auto' })
+  l: 'newsroom-auto' });
     }
   } catch (e) {/* TODO: Fix JSX expression */}
-      })
+      });
     }
   }
 }

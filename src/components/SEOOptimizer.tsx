@@ -3,7 +3,7 @@ import React from 'react';
 interface SEOOptimizerProps {/* TODO: Fix JSX expression */}
 }
 const,;,
-SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({/* TODO: Fix JSX expression */)})
+SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({/* TODO: Fix JSX expression */)});
 }) => {/* TODO: Fix JSX expression */}
     }
     // Add breadcrumb structured data;
@@ -95,7 +95,7 @@ page,;,
 title: mergedSEOData.title,;,
 description: mergedSEOData.description 
 }
-    })
+    });
     // Track page view for analytics;
 if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('config', 'GA_MEASUREMENT_ID', {;,
@@ -104,7 +104,7 @@ page_location: mergedSEOData.canonical,;,
 custom_map: {;,
 page_type: page
         }
-      })
+      });
     }
   }, [mergedSEOData, page]);
 return (;

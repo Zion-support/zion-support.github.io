@@ -201,7 +201,7 @@ const,
           } else {/* TODO: Fix JSX expression */}
           }
         }
-      } )
+      });
     return result
   }
   /**
@@ -232,8 +232,7 @@ const,
     nestedKeyOrValu,
   e: NK | AppConfig[K],
     value?: AppConfig[K][NK])
-      }
-    )
+      });
     return result
   }
   /**
@@ -271,7 +270,7 @@ const,
     nestedKeyOrValu,
   e: NK | AppConfig[K],
         }) as AppConfig[K]
-      } else {/* TODO: Fix JSX expression */,}}this.config[key] = Object.assign({)}, defaultValue, {/* TODO: Fix JSX expression */,})
+      } else {/* TODO: Fix JSX expression */,}}this.config[key] = Object.assign({)}, defaultValue, {/* TODO: Fix JSX expression */,});
         }) as AppConfig[K]
       }
     } else {/* TODO: Fix JSX expression */,}}}

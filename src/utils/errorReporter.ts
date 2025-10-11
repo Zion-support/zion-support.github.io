@@ -241,7 +241,7 @@ $4}
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(report)
-      })
+      });
     } catch (error) {
     // Silently fail to avoid infinite loop
       if (this.config.enableConsoleLogging) {
@@ -333,7 +333,7 @@ $4}
         },
         bod)
   y: JSON.stringify(report)
-      })
+      });
     } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -457,7 +457,7 @@ export const captureComponentError = (
   report.reportError(error, 'high', {
     componentName,
     componentStack: errorInfo.componentStack
-  })
+  });
 }
 export default ErrorReporter
    * Export errors as JSON
@@ -515,6 +515,6 @@ export const captureComponentError = ()
 //     componentName,
     componentStac,
   k: errorInfo.componentStack,)
-  })
+  });
 }
 export default ErrorReporter

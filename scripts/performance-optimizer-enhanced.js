@@ -30,7 +30,7 @@ const minified = styles;
         .trim();
 }
 return `style="${minified;}"`
-    })
+    });
   },
 
   // Remove empty lines and extra whitespace;,

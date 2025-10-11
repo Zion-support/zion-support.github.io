@@ -19,7 +19,7 @@ function fixPageJSX() {
       { pattern: /<\/li>/g, replacement: '</li>' },
       { pattern: /<\/main>/g, replacement: '</main>' },
       { pattern: /<\/footer>/g, replacement: '</footer>' },
-      
+
       // Fix malformed opening tags
       { pattern: /<h1>/g, replacement: '<h1>' },
       { pattern: /<h2>/g, replacement: '<h2>' },
@@ -34,17 +34,17 @@ function fixPageJSX() {
       { pattern: /<li>/g, replacement: '<li>' },
       { pattern: /<main>/g, replacement: '<main>' },
       { pattern: /<footer>/g, replacement: '<footer>' },
-      
+
       // Fix specific broken patterns
       { pattern: /<\/<</g, replacement: '</' },
       { pattern: /<</g, replacement: '<' },
       { pattern: />>/g, replacement: '>' },
       { pattern: /<<</g, replacement: '<' },
       { pattern: />>>/g, replacement: '>' },
-      
+
       // Fix malformed JSX expressions
       { pattern: /<(\w+)><\/\1>/g, replacement: '<$1></$1>' },
-      
+
       // Fix broken closing tags
       { pattern: /<\/\w+><\/\w+>/g, replacement: (match) => {
         const firstTag = match.match(/<\/(\w+)>/)[1]
@@ -59,7 +59,7 @@ function fixPageJSX() {
         modified = true
       }
     }
-    
+
     // Additional specific fixes for common patterns
     content = content.replace(/<(\w+)([^>]*)>([^<]*?)(?![^<]*<\/\1>)(?=\s*<)/g, '<$1$2>$3</$1>')
     if (modified) {
@@ -67,7 +67,7 @@ function fixPageJSX() {
       console.log('Fixed app/page.tsx')
       return true
     }
-    
+
     return false
   } catch (error) {
     console.error('Error fixing app/page.tsx:', error.message)

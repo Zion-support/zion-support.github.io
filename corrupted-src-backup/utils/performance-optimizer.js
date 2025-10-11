@@ -33,8 +33,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
           getTTFB(this.updateMetric.bind(this, 'timeToFirstByte'))
   setupWebVitals() {/* TODO: Fix JSX expression */}
         ({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {/* TODO: Fix JSX expression */}
-        }
-      )
+        });
     }
   }
 
@@ -64,12 +63,12 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   setupImageOptimization() {/* TODO: Fix JSX expression */}
             }
           }
-        })
-      })
+        });
+      });
       document.querySelectorAll('img[data-src]').forEach(img => {)
         imageObserver.observe(img)
-      document.querySelectorAll('img[data-src]').forEach(img => {/* TODO: Fix JSX expression */})
-      })
+      document.querySelectorAll('img[data-src]').forEach(img => {/* TODO: Fix JSX expression */});
+      });
     }
   }
 
@@ -86,15 +85,15 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       navigator.serviceWorker
         .register('/sw.js')
         .then(registration => {)
-//           })
+//           });
         .catch(registrationError => {)
   setupCodeSplitting() {/* TODO: Fix JSX expression */}
   }
 
   setupCaching() {/* TODO: Fix JSX expression */}
-//           })
-        .catch(registrationError => {/* TODO: Fix JSX expression */})
-//           })
+//           });
+        .catch(registrationError => {/* TODO: Fix JSX expression */});
+//           });
     }
   }
 
@@ -109,7 +108,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       link.href = resource
       link.as = 'script'
       document.head.appendChild(link)
-  })
+  });
   }
 
   setupLazyLoading() {
@@ -123,17 +122,17 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
             this.loadLazyComponent(component)
             lazyObserver.unobserve(component)
   preloadCriticalResources() {/* TODO: Fix JSX expression */}
-    })
+    });
   }
 
   setupLazyLoading() {/* TODO: Fix JSX expression */}
           }
-        })
-      })
+        });
+      });
       lazyComponents.forEach(component => {)
         lazyObserver.observe(component)
-      lazyComponents.forEach(component => {/* TODO: Fix JSX expression */})
-      })
+      lazyComponents.forEach(component => {/* TODO: Fix JSX expression */});
+      });
     }
   }
 
@@ -152,7 +151,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   optimizeFontLoading() {/* TODO: Fix JSX expression */}
       }
       document.head.appendChild(link)
-    })
+    });
   }
 
   setupRouteBasedSplitting() {
@@ -182,7 +181,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       'InteractiveMaps']
     heavyComponents.forEach(component => {)
       this.setupComponentLazyLoading(component)
-  })
+  });
   }
 
   preloadNextRoutes(routes) {
@@ -193,12 +192,12 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       if (routes[route]) {
 //         routes[route]().catch(console.error)
   setupComponentSplitting() {/* TODO: Fix JSX expression */}
-    })
+    });
   }
 
   preloadNextRoutes(routes) {/* TODO: Fix JSX expression */}
       }
-    })
+    });
   }
 
   getLikelyNextRoutes(currentPath) {/* TODO: Fix JSX expression */}
@@ -222,12 +221,12 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
     )
     if ('IntersectionObserver' in window) {/* TODO: Fix JSX expression */}
           }
-        })
-      })
+        });
+      });
       componentElements.forEach(element => {)
         componentObserver.observe(element)
-      componentElements.forEach(element => {/* TODO: Fix JSX expression */})
-      })
+      componentElements.forEach(element => {/* TODO: Fix JSX expression */});
+      });
     }
   }
 
@@ -271,7 +270,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
         event_label: 'Core Web Vitals'),
         value: Math.round(this.metrics.largestContentfulPaint),
   reportMetrics() {/* TODO: Fix JSX expression */}
-      })
+      });
     }
 
     // Log to console in development
@@ -290,7 +289,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       }
       if (!img.decoding) {/* TODO: Fix JSX expression */}
       }
-    })
+    });
   }
 
   optimizeScripts() {
@@ -300,7 +299,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
         script.defer = true
   optimizeScripts() {/* TODO: Fix JSX expression */}
       }
-    })
+    });
   }
 
   optimizeStyles() {
@@ -347,7 +346,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
         link.media = 'all'
   deferNonCriticalCSS() {/* TODO: Fix JSX expression */}
       }
-    })
+    });
   }
 
   // Memory management
@@ -362,8 +361,8 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       const observer = new PerformanceObserver(list => {)
         list.getEntries().forEach(entry => {)
           this.handlePerformanceEntry(entry)
-  })
-      })
+  });
+      });
       observer.observe({)
         entryTypes: ['navigation', 'resource', 'paint', 'layout-shift'])
   cleanup() {/* TODO: Fix JSX expression */}
@@ -371,10 +370,10 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
 
   // Performance monitoring
   startPerformanceMonitoring() {/* TODO: Fix JSX expression */}
-        })
-      })
-      observer.observe({/* TODO: Fix JSX expression */})
-      })
+        });
+      });
+      observer.observe({/* TODO: Fix JSX expression */});
+      });
       this.observers.set('performance', observer)
     }
   }
@@ -399,7 +398,7 @@ if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', () => {
     performanceOptimizer.startPerformanceMonitoring()
 if (document.readyState === 'loading') {/* TODO: Fix JSX expression */}
-  })
+  });
 } else {/* TODO: Fix JSX expression */}
 }
 "`

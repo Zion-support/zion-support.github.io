@@ -4,7 +4,7 @@
 // #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync } = require('child_process'); class ComprehensiveMergeResolver {constructor() { this.conflictsResolved = 0} this.prsProcessed = 0, this.logFile = 'merge-resolution-log.json' this.results = {/* TODO: Fix JSX expression */}
   s: []}succes,
   s: [] }} log(message) {const timestamp = new Date().toISOString()} console.log(`[${timestamp}] ${message}`)} async executeCommand(command)options = {}) {/* TODO: Fix JSX expression */}`
-  g: ${command}`); const result = execSync(command,{/* TODO: Fix JSX expression */})
+  g: ${command}`); const result = execSync(command,{/* TODO: Fix JSX expression */});
   o: 'pipe'}...options }); return {/* TODO: Fix JSX expression */}
   s: true}outpu,
   t: result }} catch (error) {/* TODO: Fix JSX expression */}`
@@ -28,7 +28,7 @@
   d: 0,error,
   s: []}succes,`
   s: [] }} log(message) {const timestamp = new Date().toISOString()} // console.log(`[${timestamp}] ${message}`)} async executeCommand(command)options = {}) {/* TODO: Fix JSX expression */}`
-  g: ${command}`); const result = execSync(command,{/* TODO: Fix JSX expression */})
+  g: ${command}`); const result = execSync(command,{/* TODO: Fix JSX expression */});
   o: 'pipe'}...options }); return {/* TODO: Fix JSX expression */}
   s: true}outpu,
   t: result }} catch (error) {/* TODO: Fix JSX expression */}`

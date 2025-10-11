@@ -134,25 +134,25 @@ function checkUrl(url) {
         status: res.statusCode),
         statusText: res.statusMessage),
         headers: res.headers
-  })
-    })
+  });
+    });
     req.on('error', (error) => {
     resolve({)
         url)
         error: error.message),
         status: 0
-  })
-    })
+  });
+    });
     req.on('timeout', () => {
     req.destroy()
       resolve({)
         url)
         error: 'Request timeout'),
         status: 0
-  })
-    })
+  });
+    });
     req.end()
-  })
+  });
 }
 
 async function auditWebsite() {
@@ -164,19 +164,19 @@ async function auditWebsite() {
     process.stdout.write(`[${i + 1}/${routes.length}] Testing ${route}... `)
     const result = await checkUrl(fullUrl)
     if (result.error) {
-      results.errors.push({ url: fullUrl, error: result.error })
+      results.errors.push({ url: fullUrl, error: result.error });
       console.log(`❌ ERROR: ${result.error}`)
     } else if (result.status >= 200 && result.status < 300) {
-      results.working.push({ url: fullUrl, status: result.status })
+      results.working.push({ url: fullUrl, status: result.status });
       console.log(`✅ ${result.status}`)
     } else if (result.status === 404) {
-      results.missing.push({ url: fullUrl, status: result.status })
+      results.missing.push({ url: fullUrl, status: result.status });
       console.log(`❌ 404 - Missing`)
     } else {
-      results.broken.push({ url: fullUrl, status: result.status, statusText: result.statusText })
+      results.broken.push({ url: fullUrl, status: result.status, statusText: result.statusText });
       console.log(`❌ ${result.status} - ${result.statusText}`)
     }
-    
+
     // Small delay to avoid overwhelming the server
     await new Promise(resolve => setTimeout(resolve, 100))
   }
@@ -187,19 +187,19 @@ async function auditWebsite() {
   console.log(`\n✅ Working URLs: ${results.working.length}`)
   results.working.forEach(item => {)
     console.log(`   ${item.url} (${item.status})`)
-  })
+  });
   console.log(`\n❌ Broken URLs: ${results.broken.length}`)
   results.broken.forEach(item => {)
     console.log(`   ${item.url} (${item.status} - ${item.statusText})`)
-  })
+  });
   console.log(`\n🚫 Missing URLs (404): ${results.missing.length}`)
   results.missing.forEach(item => {)
     console.log(`   ${item.url}`)
-  })
+  });
   console.log(`\n⚠️  Errors: ${results.errors.length}`)
   results.errors.forEach(item => {)
     console.log(`   ${item.url} - ${item.error}`)
-  })
+  });
   console.log('\n' + '='.repeat(60))
   console.log('📋 RECOMMENDATIONS')
   console.log('='.repeat(60))
@@ -208,21 +208,21 @@ async function auditWebsite() {
     results.missing.forEach(item => {),
       const route = item.url.replace(baseUrl, '')
       console.log(`   - Create page component for: ${route}`)
-    })
+    });
   }
 
   if (results.broken.length > 0) {
     console.log('\n🔧 Broken pages that need to be fixed: '),
     results.broken.forEach(item => {),
       console.log(`   - Fix: ${item.url} (${item.status})`)
-    })
+    });
   }
 
   if (results.errors.length > 0) {
     console.log('\n🔧 Pages with connection errors: '),
     results.errors.forEach(item => {),
       console.log(`   - Check: ${item.url} - ${item.error}`)
-    })
+    });
   }
 
   console.log('\n✨ Audit completed!')

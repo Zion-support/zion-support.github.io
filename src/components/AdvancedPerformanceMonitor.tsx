@@ -42,7 +42,7 @@ const AdvancedPerformanceMonitor: React.FC,
     cls: null,
     ttfb: null,
     memory: null,
-  })
+  });
     if (typeof window === 'undefined' || !('performance' in window)) return
     if (typeof PerformanceObserver === 'undefined') return
     const,
@@ -59,14 +59,14 @@ const AdvancedPerformanceMonitor: React.FC,
 }
         const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content,}
-})
+});
           const entries = list.getEntries()
           const lastEntry = _entries[_entries.length - 1]
-          setMetrics(prev => ({/* TODO: Fix JSX expression */})
+          setMetrics(prev => ({/* TODO: Fix JSX expression */});
   p: _lastEntry.startTime }))
-        })
-        lcpObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['largest-contentful-paint'] })
+        });
+        lcpObserver.observe({/* TODO: Fix JSX expression */});
+  s: ['largest-contentful-paint'] });
         observers.push(lcpObserver)
       } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -82,11 +82,11 @@ const AdvancedPerformanceMonitor: React.FC,
 }
         const fidObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content,}
-})
+});
           const entries = list.getEntries()
           _entries.forEach(entry => {/* TODO: Fix JSX expression */}
   O: Add content,}
-})
+});
             if ()
               entry.entryType === 'first-input' &&
               'processingStart' in entry &&
@@ -102,10 +102,10 @@ const AdvancedPerformanceMonitor: React.FC,
   d: _fidEntry.processingStart - _fidEntry.startTime,)
               }))
             }
-          })
-        })
-        fidObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['first-input'] })
+          });
+        });
+        fidObserver.observe({/* TODO: Fix JSX expression */});
+  s: ['first-input'] });
         observers.push(fidObserver)
       } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -119,11 +119,11 @@ const AdvancedPerformanceMonitor: React.FC,
       try {const clsObserver = new PerformanceObserver(list => {}
   // TOD,
   O: Add content,
-})
+});
           const entries = list.getEntries()
           _entries.forEach(entry => {/* TODO: Fix JSX expression */}
   O: Add content,}
-})
+});
             if ()
               entry.entryType === 'layout-shift' &&
               'hadRecentInput' in entry &&
@@ -135,14 +135,14 @@ const AdvancedPerformanceMonitor: React.FC,
   O: Add content,}
 }
                 _clsValue += _clsEntry.value
-                setMetrics(prev => ({/* TODO: Fix JSX expression */})
+                setMetrics(prev => ({/* TODO: Fix JSX expression */});
   s: _clsValue }))
               }
             }
-          })
-        })
-        clsObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['layout-shift'] })
+          });
+        });
+        clsObserver.observe({/* TODO: Fix JSX expression */});
+  s: ['layout-shift'] });
         observers.push(clsObserver)
       } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -160,8 +160,8 @@ const AdvancedPerformanceMonitor: React.FC,
         : null
       // Measure Memory Usage
 const memory =
-        (performance as Performance & {/* TODO: Fix JSX expression */})
-  e: number } })
+        (performance as Performance & {/* TODO: Fix JSX expression */});
+  e: number } });
           .memory?.usedJSHeapSize || null
       setMetrics(prev => ({/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -185,13 +185,13 @@ const memory =
 }
         try {/* TODO: Fix JSX expression */}
   O: Add content,}
-})
+});
           observer.disconnect()
         } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
           }
-      })
+      });
     }
   }, [])
   const measureResourceTiming = useCallback(() => {/* TODO: Fix JSX expression */}
@@ -233,9 +233,9 @@ const memory =
   O: Add content,}
 }
             onCLS((metri,
-  c: {/* TODO: Fix JSX expression */})
+  c: {/* TODO: Fix JSX expression */});
   e: number }) =>
-              setMetrics(prev => ({/* TODO: Fix JSX expression */})
+              setMetrics(prev => ({/* TODO: Fix JSX expression */});
   s: metric.value }))
             )
           }
@@ -243,9 +243,9 @@ const memory =
   O: Add content,}
 }
             onFCP((metri,
-  c: {/* TODO: Fix JSX expression */})
+  c: {/* TODO: Fix JSX expression */});
   e: number }) =>
-              setMetrics(prev => ({/* TODO: Fix JSX expression */})
+              setMetrics(prev => ({/* TODO: Fix JSX expression */});
   p: metric.value }))
             )
           }
@@ -253,9 +253,9 @@ const memory =
   O: Add content,}
 }
             onLCP((metri,
-  c: {/* TODO: Fix JSX expression */})
+  c: {/* TODO: Fix JSX expression */});
   e: number }) =>
-              setMetrics(prev => ({/* TODO: Fix JSX expression */})
+              setMetrics(prev => ({/* TODO: Fix JSX expression */});
   p: metric.value }))
             )
           }
@@ -263,18 +263,18 @@ const memory =
   O: Add content,}
 }
             onTTFB((metri,
-  c: {/* TODO: Fix JSX expression */})
+  c: {/* TODO: Fix JSX expression */});
   e: number }) =>
-              setMetrics(prev => ({/* TODO: Fix JSX expression */})
+              setMetrics(prev => ({/* TODO: Fix JSX expression */});
   b: metric.value }))
             )
           }
-        })
+        });
         .catch(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
           // web-vitals not available, continue without it
-        })
+        });
     } catch {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -391,8 +391,7 @@ const getPerformanceRecommendations = useCallback(() => {/* TODO: Fix JSX expres
 {recommendations.map((rec, index) => (}
                 <li key={index}>• {rec}</li>)
               ))}
-        )}
-    )
+        )});
   }
   return null
 }

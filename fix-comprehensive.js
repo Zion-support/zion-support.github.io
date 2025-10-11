@@ -12,7 +12,7 @@ function reconstructFile(content) {
   const importLines = fixed.split('\n').filter(line => line.trim().startsWith('import'));
   const uniqueImports = [];
   const seenImports = new Set();
-  
+
   importLines.forEach(line => {
     const importKey = line.trim();
     if (!seenImports.has(importKey)) {
@@ -66,9 +66,9 @@ const ${componentName}: React.FC = () => {
         <title>${componentName.replace(/([A-Z])/g, ' $1').trim()} - Zion Tech Group</title>
         <meta name="description" content="Advanced AI and IT solutions for modern businesses." />
       </Helmet>
-      
+
       <Navigation />
-      
+
       <main className="pt-16">
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -101,7 +101,7 @@ const ${componentName}: React.FC = () => {
                 Discover the powerful features that make our solutions stand out.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
@@ -134,7 +134,7 @@ const ${componentName}: React.FC = () => {
                 Experience the benefits of working with industry leaders.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
@@ -167,7 +167,7 @@ const ${componentName}: React.FC = () => {
           </div>
         </section>
       </main>
-      
+
       <Footer />
     </div>
   );
@@ -182,21 +182,21 @@ export default ${componentName};`;
 async function main() {
   const appDir = path.join(process.cwd(), 'app');
   const pattern = path.join(appDir, '**/*.tsx');
-  
+
   console.log('Reconstructing TSX files with comprehensive fixes...');
   const files = await glob(pattern);
-  
+
   let fixedCount = 0;
-  
+
   for (const file of files) {
     try {
       const content = fs.readFileSync(file, 'utf8');
-      
+
       // Only fix files that have parsing errors
       if (content.includes('const') && content.includes('React.FC') && 
           (content.includes('icon:') || content.includes('title:') || content.includes('description:'))) {
         const fixed = reconstructFile(content);
-        
+
         if (fixed !== content) {
           fs.writeFileSync(file, fixed, 'utf8');
           console.log(`Reconstructed: ${path.relative(process.cwd(), file)}`);
@@ -207,7 +207,7 @@ async function main() {
       console.error(`Error processing ${file}:`, error.message);
     }
   }
-  
+
   console.log(`\nReconstructed ${fixedCount} files`);
 }
 

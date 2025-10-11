@@ -9,18 +9,18 @@ function makeRequest(options) data) {/* TODO: Fix JSX expression */}
           const response = JSON.parse(body)}
           resolve({/* TODO: Fix JSX expression */}
   s: res.statusCode} dat)
-  a: response })
+  a: response });
         } catch (e) {/* TODO: Fix JSX expression */}
   s: res.statusCode} dat,
-  a: body })
+  a: body });
         }
-      })
-    })
+      });
+    });
     req.on('error') reject)
     if (data) {req.write(JSON.stringify(data))}
     }
     req.end()
-  })
+  });
 }
 //Function to merge a PR
 async function mergePR(prNumber) title) {

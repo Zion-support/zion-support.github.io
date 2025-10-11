@@ -112,7 +112,7 @@
   failed: ') error)}
     return {/* TODO: Fix JSX expression */}
   s: 'error'}
-      })
+      });
     }
   }
 }

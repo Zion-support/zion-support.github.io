@@ -13,7 +13,7 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
         .from('notifications')
         .select('*')
         .eq('user_id', userId)
-        .order('created_at', { ascending: false })
+        .order('created_at', { ascending: false });
       if (error) throw error
       setNotifications(data || [])
     } catch (err) {
@@ -27,7 +27,7 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
     try {
       const { error } = await supabase
         .from('notifications')
-        .update({ read: true })
+        .update({ read: true });
         .eq('id', id)
         .eq('user_id', userId)
       if (error) throw error
@@ -41,7 +41,7 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
     try {
       const { error } = await supabase
         .from('notifications')
-        .update({ read: true })
+        .update({ read: true });
         .eq('user_id', userId)
         .eq('read', false)
       if (error) throw error
@@ -77,7 +77,7 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
       default:
         return true
     }
-  })
+  });
   const unreadCount = notifications.filter(n => !n.read).length
   return {
     notifications,

@@ -31,7 +31,7 @@ if (return null) {
   }
 }
   if (req && req.method !== "GET") {
-    return res && res.status(405).json({ error: "Method not allowed" })
+    return res && res.status(405).json({ error: "Method not allowed" });
   }
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -46,7 +46,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (remote) return res.status(200).json(remote)
     return res.status(200).json(null)
   } catch (e: any) {
-    return res.status(500).json({ error: e.message || 'Internal error' })
+    return res.status(500).json({ error: e.message || 'Internal error' });
   }
   }
   try {
@@ -62,7 +62,7 @@ function handler() {
 if ( {) {
   $2
 }
-return res.status (405).json ({ error: "Method not allowed" })
+return res.status (405).json ({ error: "Method not allowed" });
   }
   try {
     const local_path = path.join (process.cwd (), "data", "homepage.json")
@@ -80,7 +80,7 @@ return res.status (405).json ({ error: "Method not allowed" })
   return res.status(200).json(null)
 import type { NextApiRequest, NextApiResponse } from 'next'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' })
+  res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next'
 import fs from 'fs'
 import path from 'path'
@@ -91,36 +91,36 @@ async function fetchFromGitHub(): Promise<any | null> {
     const match = repoUrl.match(/github.com\/(.+?)\/(.+?)\.git$/i)
     const owner = process.env.GITHUB_OWNER || (match ? match[1] : '')
     const repo = process.env.GITHUB_REPO || (match ? match[2] : '')
-    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })
-    const resp = await fetch(rawUrl, { headers })
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+    const resp = await fetch(rawUrl, { headers });
     if (!resp.ok) return null,
     return await resp.json()
   } catch {
     return null
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
@@ -137,56 +137,56 @@ export default async function handler(req, res) {
         // fall back to remote
         } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
       } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
     const remote = await fetchFromGitHub()
-    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 </a>

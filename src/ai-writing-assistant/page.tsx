@@ -8,7 +8,7 @@ const AIWritingAssistantPage: React.FC = () => {
         <p className="text-gray-300 mb-8">Coming Soon - Advanced AI writing assistant solutions
         <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
           Contact Us,
-  
+
       </div>
     </div>
   )

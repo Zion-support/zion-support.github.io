@@ -112,7 +112,7 @@ export default function CybersecurityServicesPage() {
           <p className="text-lg text-zion-cyan-light mb-12 max-w-3xl mx-auto">
             From threat detection to compliance management, we provide comprehensive cybersecurity that keeps your business safe in an evolving digital landscape.
           </p>
-          
+
           {/* Contact CTA */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             <Button size="lg" className="bg-zion-purple hover:bg-zion-purple-dark text-white px-8 py-3">
@@ -602,7 +602,7 @@ export default function CybersecurityServicesPage() {
               Ready to strengthen your cybersecurity posture? Contact our security experts today.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
               <Phone className="h-12 w-12 mx-auto mb-4 text-zion-cyan" />
@@ -661,7 +661,7 @@ function SecurityServiceCard({ service }: { service: any }) {
               <span className="text-zion-cyan-light">({service.reviewCount})</span>
             </div>
           </div>
-          
+
           <div className="flex items-center justify-between">
             <span className="text-zion-cyan-light">Security Score:</span>
             <div className="flex items-center gap-2">
@@ -1087,7 +1087,7 @@ export default function CybersecurityServicesPage() {
     else if (priceRange === 'medium') matchesPrice = service.price >= 500 && service.price < 1000
     else if (priceRange === 'high') matchesPrice = service.price >= 1000
     return matchesSearch && matchesSubcategory && matchesPrice
-  })
+  });
   const getPricingModelIcon = (model: string) => {
     switch (model) {
       case 'monthly': return <Clock className="w-4 h-4" />
@@ -1122,7 +1122,7 @@ export default function CybersecurityServicesPage() {
           AI Score: {service.aiScore}
         </Badge>
       </div>
-      
+
       <CardHeader>
         <div className="flex items-start justify-between mb-2">
           <div className="text-2xl">🔒</div>
@@ -1135,13 +1135,13 @@ export default function CybersecurityServicesPage() {
             </div>
           </div>
         </div>
-        
+
         <CardTitle className="text-lg leading-tight">{service.title}</CardTitle>
         <CardDescription className="line-clamp-3">
           {service.description}
         </CardDescription>
       </CardHeader>
-      
+
       <CardContent className="space-y-4">
         {/* Rating and Reviews */}
         <div className="flex items-center gap-2">
@@ -1153,21 +1153,21 @@ export default function CybersecurityServicesPage() {
             ({service.reviewCount} reviews)
           </span>
         </div>
-        
+
         {/* Market Price */}
         <div className="flex items-center gap-2 text-sm">
           <TrendingUp className="h-4 w-4 text-green-600" />
           <span className="text-muted-foreground">Market Price:</span>
           <span className="font-medium">{service.marketPrice}</span>
         </div>
-        
+
         {/* Delivery Time */}
         <div className="flex items-center gap-2 text-sm">
           <Clock className="h-4 w-4 text-blue-600" />
           <span className="text-muted-foreground">Delivery:</span>
           <span className="font-medium">{service.deliveryTime}</span>
         </div>
-        
+
         {/* Key Features */}
         <div className="space-y-2">
           <h4 className="font-medium text-sm">Key Features:</h4>
@@ -1180,7 +1180,7 @@ export default function CybersecurityServicesPage() {
             ))}
           </ul>
         </div>
-        
+
         {/* Contact Information */}
         <div className="pt-4 border-t">
           <div className="space-y-2 text-sm">
@@ -1194,7 +1194,7 @@ export default function CybersecurityServicesPage() {
             </div>
           </div>
         </div>
-        
+
         {/* Action Buttons */}
         <div className="flex gap-2 pt-4">
           <Button className="flex-1 bg-red-600 hover:bg-red-700">
@@ -1219,7 +1219,7 @@ export default function CybersecurityServicesPage() {
                 className="pl-10 bg-zion-blue-dark border-zion-blue-light text-white placeholder:text-zion-slate-light"
               />
             </div>
-            
+
             <Select value={selectedSubcategory} onValueChange={setSelectedSubcategory}>
               <SelectTrigger className="w-full lg:w-48 bg-zion-blue-dark border-zion-blue-light text-white">
                 <SelectValue placeholder="Security Category" />
@@ -1273,7 +1273,7 @@ export default function CybersecurityServicesPage() {
                       <span className="text-xs">({service.reviewCount})</span>
                     </div>
                   </div>
-                  
+
                   <CardTitle className="text-xl text-zion-blue mb-2">{service.title}</CardTitle>
                   <CardDescription className="text-zion-slate-light line-clamp-2">
                     {service.description}
@@ -1370,7 +1370,7 @@ export default function CybersecurityServicesPage() {
                         Learn More
                       </Button>
                     </Link>
-                    
+
                     <div className="flex gap-2">
                       {service.website && (
                         <$2 />
@@ -1385,7 +1385,7 @@ export default function CybersecurityServicesPage() {
                           </Button>
                         </a>
                       )}
-                      
+
                       <Link to="/contact" className="flex-1">
                         <Button variant="outline" className="w-full border-zion-blue-light text-zion-cyan hover:bg-zion-blue-light/10">
                           <Mail className="w-4 h-4 mr-2" />
@@ -1524,7 +1524,7 @@ const CybersecurityServicesPage = () => {
               Stay protected against evolving cyber threats with our comprehensive security solutions
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="bg-red-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
@@ -1533,7 +1533,7 @@ const CybersecurityServicesPage = () => {
               <h3 className="text-xl font-semibold mb-2">Ransomware Attacks</h3>
               <p className="text-gray-600">Protect against data encryption and extortion attempts with advanced threat detection</p>
             </div>
-            
+
             <div className="text-center">
               <div className="bg-orange-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <Users className="h-8 w-8 text-orange-600" />
@@ -1541,7 +1541,7 @@ const CybersecurityServicesPage = () => {
               <h3 className="text-xl font-semibold mb-2">Social Engineering</h3>
               <p className="text-gray-600">Defend against phishing, pretexting, and other human-based attack vectors</p>
             </div>
-            
+
             <div className="text-center">
               <div className="bg-yellow-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <Server className="h-8 w-8 text-yellow-600" />
@@ -1549,7 +1549,7 @@ const CybersecurityServicesPage = () => {
               <h3 className="text-xl font-semibold mb-2">Supply Chain Attacks</h3>
               <p className="text-gray-600">Secure your software and hardware supply chain against compromise</p>
             </div>
-            
+
             <div className="text-center">
               <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <Database className="h-8 w-8 text-purple-600" />
@@ -1614,7 +1614,7 @@ const CybersecurityServicesPage = () => {
                       <span>{service.availability}</span>
                     </div>
                   </div>
-                  
+
                   <div className="flex flex-wrap gap-2 mb-4">
                     {service.tags.map((tag) => (
                       <Badge key={tag} variant="secondary" className="text-xs">
@@ -1671,19 +1671,19 @@ const CybersecurityServicesPage = () => {
               <div className="text-white font-semibold">Threat Detection Rate</div>
               <div className="text-zion-slate-light text-sm">Advanced AI-powered threat detection</div>
             </div>
-            
+
             <div className="text-center">
               <div className="text-4xl font-bold text-zion-cyan mb-2">24/7</div>
               <div className="text-white font-semibold">Security Monitoring</div>
               <div className="text-zion-slate-light text-sm">Round-the-clock threat monitoring</div>
             </div>
-            
+
             <div className="text-center">
               <div className="text-4xl font-bold text-zion-cyan mb-2">15min</div>
               <div className="text-white font-semibold">Response Time</div>
               <div className="text-zion-slate-light text-sm">Average incident response time</div>
             </div>
-            
+
             <div className="text-center">
               <div className="text-4xl font-bold text-zion-cyan mb-2">100%</div>
               <div className="text-white font-semibold">Compliance Success</div>
@@ -1700,7 +1700,7 @@ const CybersecurityServicesPage = () => {
               security challenges and protect your business assets.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {securityServices.map((service) => (
               <div key={service.id} className="bg-zion-blue border border-zion-blue-light rounded-lg p-6 hover:border-zion-purple/50 transition-all duration-300 hover:translate-y-[-5px]">
@@ -1714,10 +1714,10 @@ const CybersecurityServicesPage = () => {
                     <span className="text-zion-cyan text-sm font-medium">{service.category}</span>
                   </div>
                 </div>
-                
+
                 <h3 className="text-white text-xl font-bold mb-3">{service.title}</h3>
                 <p className="text-zion-slate-light mb-4">{service.description}</p>
-                
+
                 <div className="mb-4">
                   <h4 className="text-white font-semibold mb-2">Key Features:</h4>
                   <ul className="space-y-1">
@@ -1729,7 +1729,7 @@ const CybersecurityServicesPage = () => {
                     ))}
                   </ul>
                 </div>
-                
+
                 <div className="border-t border-zion-blue-light pt-4 mb-4">
                   <div className="flex items-center justify-between text-sm">
                     <div className="flex items-center text-zion-cyan">
@@ -1742,7 +1742,7 @@ const CybersecurityServicesPage = () => {
                     </div>
                   </div>
                 </div>
-                
+
                 <Link to="/request-quote">
                   <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
                     Get Quote
@@ -1766,7 +1766,7 @@ const CybersecurityServicesPage = () => {
               comprehensive protection for your business.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {securityTechnologies.map((tech, index) => (
               <div key={index} className="text-center p-6 bg-zion-blue-dark border border-zion-blue-light rounded-lg hover:border-zion-purple/50 transition-all duration-300">
@@ -1792,7 +1792,7 @@ const CybersecurityServicesPage = () => {
               requirements across multiple sectors.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {complianceStandards.map((standard, index) => (
               <div key={index} className="text-center p-6 bg-zion-blue border border-zion-blue-light rounded-lg hover:border-zion-purple/50 transition-all duration-300">
@@ -1818,7 +1818,7 @@ const CybersecurityServicesPage = () => {
               and 24/7 security monitoring services.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {threatIntelligence.map((intel, index) => (
               <div key={index} className="text-center p-6 bg-zion-blue-dark border border-zion-blue-light rounded-lg hover:border-zion-purple/50 transition-all duration-300">
@@ -1844,7 +1844,7 @@ const CybersecurityServicesPage = () => {
               solutions that protect your business and build customer trust.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center p-6">
               <div className="w-20 h-20 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center mx-auto mb-6">
@@ -1856,7 +1856,7 @@ const CybersecurityServicesPage = () => {
                 extensive experience in enterprise security.
               </p>
             </div>
-            
+
             <div className="text-center p-6">
               <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-6">
                 <Shield className="w-10 h-10 text-white" />
@@ -1867,7 +1867,7 @@ const CybersecurityServicesPage = () => {
                 with zero major security breaches.
               </p>
             </div>
-            
+
             <div className="text-center p-6">
               <div className="w-20 h-20 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-6">
                 <Zap className="w-10 h-10 text-white" />
@@ -1894,7 +1894,7 @@ const CybersecurityServicesPage = () => {
               flexible payment options and comprehensive protection.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-8 text-center">
               <h3 className="text-white text-2xl font-bold mb-4">Essential Security</h3>
@@ -1913,7 +1913,7 @@ const CybersecurityServicesPage = () => {
                 </Button>
               </Link>
             </div>
-            
+
             <div className="bg-gradient-to-br from-zion-purple to-zion-purple-dark border border-zion-purple rounded-lg p-8 text-center relative">
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                 <span className="bg-zion-cyan text-zion-blue px-4 py-2 rounded-full text-sm font-bold">
@@ -1936,7 +1936,7 @@ const CybersecurityServicesPage = () => {
                 </Button>
               </Link>
             </div>
-            
+
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-8 text-center">
               <h3 className="text-white text-2xl font-bold mb-4">Enterprise Security</h3>
               <div className="text-4xl font-bold text-zion-cyan mb-6">
@@ -1968,7 +1968,7 @@ const CybersecurityServicesPage = () => {
             Contact our cybersecurity experts today to discuss how we can help you 
             protect your business from evolving threats.
           </p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12">
             <div className="text-center p-6">
               <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center mx-auto mb-4">
@@ -1980,7 +1980,7 @@ const CybersecurityServicesPage = () => {
                 Middletown DE 19709
               </p>
             </div>
-            
+
             <div className="text-center p-6">
               <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-white" />
@@ -1990,7 +1990,7 @@ const CybersecurityServicesPage = () => {
                 +1 302 464 0950
               </p>
             </div>
-            
+
             <div className="text-center p-6">
               <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
                 <Zap className="w-8 h-8 text-white" />
@@ -2001,7 +2001,7 @@ const CybersecurityServicesPage = () => {
               </p>
             </div>
           </div>
-          
+
           <div className="flex flex-wrap justify-center gap-4">
             <Link to="/request-quote">
               <Button size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-3">
@@ -2329,7 +2329,7 @@ const CybersecurityServicesPage = () => {
                 </a>
               </div>
             </div>
-            
+
             <div>
               <h3 className="text-xl font-semibold mb-6 text-red-400">Contact Information</h3>
               <div className="space-y-4">
@@ -2348,7 +2348,7 @@ const CybersecurityServicesPage = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
             <p>&copy; 2024 ZionTech Group. All rights reserved. | <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-red-400 hover:underline">ziontechgroup.com</a></p>
           </div>

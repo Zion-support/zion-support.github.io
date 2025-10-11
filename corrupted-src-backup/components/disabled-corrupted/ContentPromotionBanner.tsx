@@ -36,7 +36,7 @@ export default function ContentPromotionBanner() {/* TODO: Fix JSX expression */
               <Zap, className="w-5 h-5" />
               View, Case, Studies
         </div>)
-        {/* Featured, Content, Car, d, s */})
+        {/* Featured, Content, Car, d, s */});
         <div, classNam, e = "mt-10, grid, gap-6, m, d: gr, i, d-co, l, s-3">)
             { featuredConte, n, t.m, a, p((it, e, m, ind, e, x) = > (
             <div, ke, y = { in, d, e, x  }, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5">
@@ -87,7 +87,7 @@ export default function ContentPromotionBanner() {/* TODO: Fix JSX expression */
               <div, className="flex, item, s-center, justif, y-between, m, b-3"></div>"
                 <span, className="te, x, t-xs, uppercase, tracking-wider, tex, t-bl, u, e-200, b, g-bl, u, e-5, 0, 0/20, p, x-3, p, y-1, rounde, d-fu, l, l">
                   {it, e, m.cate, g, o, r, y}
-                {/* TODO: Fix JSX expression */})
+                {/* TODO: Fix JSX expression */});
                   </s, p, a, n  > )  }
               </div>"
               <h3, classNam, e = "fo, n, t-bold, tex, t-white, m, b-2, lin, e-cla, m, p-2">

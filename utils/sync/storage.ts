@@ -42,7 +42,7 @@ import { MultiverseState, InstanceConfig, SyncEvent } from "./types"
 const DATA_DIR = path.join(process.cwd(), "data", "multiverse")
 const STATE_PATH = path.join(DATA_DIR, "state.json")
 function ensureDataDir(): void {
-  if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true })
+  if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
 }
 function defaultConfig(): InstanceConfig {
   const instanceId = process.env.ZION_INSTANCE_ID || "zion-local"

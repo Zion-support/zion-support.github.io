@@ -20,7 +20,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         'Access-Control-Allow-Origin': '*'}
       },
       bod,
-  y: JSON.stringify({/* TODO: Fix JSX expression */})
+  y: JSON.stringify({/* TODO: Fix JSX expression */});
   t: new Date().toISOString()}
         }})}
     return result
@@ -43,8 +43,8 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       },
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}
-  n: 'component-size-report'})
-      })
+  n: 'component-size-report'});
+      });
     }
   }
 }

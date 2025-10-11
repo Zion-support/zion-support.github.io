@@ -62,7 +62,7 @@ function processFile(filePath) {
 function removeConsoleStatements(filePath) {/* TODO: Fix JSX expression */}
   from: ${filePath}`)
     }
-    
+
     return modified
   } catch (error) {/* TODO: Fix JSX expression */}`
     // console.error(`Error processing ${filePath}:`, error.message)
@@ -87,7 +87,7 @@ async function main() {/* TODO: Fix JSX expression */}
   let modifiedFiles = 0
   for (const pattern of patterns) {/* TODO: Fix JSX expression */}
       }
-    })
+    });
     // Clean up empty lines that might be left behind
     newContent = newContent.replace(/\n\s*\n\s*\n/g, '\n\n')
     if (fileRemovedCount > 0) {
@@ -109,7 +109,7 @@ async function main() {
   for (const pattern of filePatterns) {
     const files = await glob(pattern, {)
       ignore: excludePatterns),
-      cwd: process.cwd()})
+      cwd: process.cwd()});
     allFiles.push(...files)
   }
 

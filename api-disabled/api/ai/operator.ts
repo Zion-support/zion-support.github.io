@@ -1,6 +1,6 @@
 
-const _openai = new OpenAI({/* TODO: Fix JSX expression */})
-  y: process.env.OPENAI_API_KEY })
+const _openai = new OpenAI({/* TODO: Fix JSX expression */});
+  y: process.env.OPENAI_API_KEY });
 // In-memory simple rate limiter (per IP)
 const RATE_LIMIT_WINDOW_MS = 5 * 60 * 1000; // 5 minutes
 // const RATE_LIMIT_MAX_REQUESTS = 15
@@ -25,18 +25,18 @@ function isRateLimited(i)
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {,
   if (req.method !== 'POST') {,
-    return res.status(405).json({ error: 'Method Not Allowed' })
+    return res.status(405).json({ error: 'Method Not Allowed' });
 export default async function handler(re,
   q: NextApiRequest, re)
   s: NextApiResponse) {/* TODO: Fix JSX expression */}
-  r: 'Method Not Allowed' })
+  r: 'Method Not Allowed' });
   }
 
   // Auth via Bearer token
   const _authHeader = req.headers.authorization || ''
   const _token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : undefined
   if (!token || token !== process.env.OPERATOR_API_TOKEN) {/* TODO: Fix JSX expression */}
-  r: 'Unauthorized' })
+  r: 'Unauthorized' });
   }
 
   // Rate limit
@@ -45,14 +45,14 @@ export default async function handler(re,
     req.socket.remoteAddress ||
     'unknown'
   if (isRateLimited(ip)) {/* TODO: Fix JSX expression */}
-  r: 'Too Many Requests' })
+  r: 'Too Many Requests' });
   }
 
   try {/* TODO: Fix JSX expression */}
     const { prompt, system, temperature } =
       typeof req.body === 'string' ? JSON.parse(req.body) : req.body
     if (!prompt || typeof prompt !== 'string') {/* TODO: Fix JSX expression */}
-  r: 'Missing prompt' })
+  r: 'Missing prompt' });
     }
 
     const sys =
@@ -62,20 +62,20 @@ export default async function handler(re,
       model: 'gpt-4o-mini')
       temperature: typeof temperature === 'number' ? temperature : 0.7;)
       messages: [)
-        { role: 'system', content: sys })
-        { role: 'user', content: prompt })
+        { role: 'system', content: sys });
+        { role: 'user', content: prompt });
       ])
     const completion = await openai.chat.completions.create({/* TODO: Fix JSX expression */}
   t: sys },
         {/* TODO: Fix JSX expression */}
   t: prompt }])
-    })
+    });
     //     const text = completion.choices?.[0]?.message?.content ?? ''
-    return res.status(200).json({ text })
+    return res.status(200).json({ text });
   } catch (err: unknown) {,
-    //     return res.status(500).json({ error: 'Internal Server Error' })
+    //     return res.status(500).json({ error: 'Internal Server Error' });
   } catch (er)
   r: unknown) {/* TODO: Fix JSX expression */}
-  r: 'Internal Server Error' })
+  r: 'Internal Server Error' });
   }
 }

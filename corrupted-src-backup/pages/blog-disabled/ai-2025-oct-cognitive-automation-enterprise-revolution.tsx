@@ -132,7 +132,7 @@ const,
               innovators. Discover the cognitive automation revolution delivering 92% efficiency gains
   Cognitive Automation: </h1> <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 mt-2">"
   The Enterprise Revolution of 2025,
-  
+
             </h1>
             <p className="text-xl text-zion-slate-light leading-relaxed mb-8"></p>
             <p className="text-xl text-zion-slate-light leading-relaxed mb-8">"

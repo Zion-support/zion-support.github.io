@@ -28,7 +28,7 @@
     {}
       name: 'twitter:image',
       content: data.twitterImage || data.ogImage || '/og-image.webp',
-  a: {/* TODO: Fix JSX expression */})
+  a: {/* TODO: Fix JSX expression */});
 }) => {/* TODO: Fix JSX expression */}
   t: data.title,
     }
@@ -156,14 +156,14 @@ export class SEOEnhancer {}
   }
     ,
     }
-    if (config.modifiedTime) {}ogTags.push({property: 'og:modified_time', content: config.modifiedTime ,)})
+    if (config.modifiedTime) {}ogTags.push({property: 'og:modified_time', content: config.modifiedTime ,)});
     }
-    if (config.section) {}ogTags.push({property: 'og:section', content: config.section ,)})
+    if (config.section) {}ogTags.push({property: 'og:section', content: config.section ,)});
     }
-    if (config.tags) {}ogTags.push({property: 'og:tags', content: config.tags.join(', ')})
+    if (config.tags) {}ogTags.push({property: 'og:tags', content: config.tags.join(', ')});
     }
     ogTags.forEach(({property, content)}) => {}this.updateMetaTag(property, content);}
-    })
+    });
   }
     ,
     const twitterTags = [}
@@ -180,7 +180,7 @@ export class SEOEnhancer {}
       { name: 'twitter:image', content: config.ogImage || this.config.ogImage }]
     twitterTags.forEach(({ name, content }) => {}
       this.updateMetaTag(name, content);}
-    })
+    });
   }
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);
@@ -223,7 +223,7 @@ interface SEOConfig {/* TODO: Fix JSX expression */}
   e: 'Zion Holdings',
   autho,
 // Generate structured data;
-  a: {/* TODO: Fix JSX expression */})
+  a: {/* TODO: Fix JSX expression */});
 }) => {/* TODO: Fix JSX expression */}
   }
   return { ...baseStructure, ...data }
@@ -272,13 +272,13 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */,}}g: Partial<SEOConfig>
   t: config.locale || this.config.locale }]
     if (config.publishedTime) {/* TODO: Fix JSX expression */}
     }
-    if (config.modifiedTime) {/* TODO: Fix JSX expression */,}t: config.modifiedTime ,})
+    if (config.modifiedTime) {/* TODO: Fix JSX expression */,}t: config.modifiedTime ,});
     }
-    if (config.section) {/* TODO: Fix JSX expression */,}t: config.section ,})
+    if (config.section) {/* TODO: Fix JSX expression */,}t: config.section ,});
     }
-    if (config.tags) {/* TODO: Fix JSX expression */,}t: config.tags.join(', ') })
+    if (config.tags) {/* TODO: Fix JSX expression */,}t: config.tags.join(', ') });
     }
-    ogTags.forEach(({property, content)}) => {/* TODO: Fix JSX expression */,}})
+    ogTags.forEach(({property, content)}) => {/* TODO: Fix JSX expression */,}});
   }
   // Update Twitter Card tags;
   updateTwitterCard(confi);
@@ -325,7 +325,7 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */,}}g: Partial<SEOConfig>
     ,
     if (typeof document === 'undefined') return
   }
-    let meta = let meta = document.querySelector(})
+    let meta = let meta = document.querySelector(});
       `meta[name="${nameOrProperty}"], meta[property="${nameOrProperty}"])
     ) as HTMLMetaElement
     if (!meta) {
@@ -524,7 +524,7 @@ export const generateAdvancedStructuredData = (;) => {
     this.updateRobots(finalConfig.robots);
     this.updateLanguage(finalConfig.language);
     this.updateAuthor(finalConfig.author);
-  a: {/* TODO: Fix JSX expression */})
+  a: {/* TODO: Fix JSX expression */});
 }) => {/* TODO: Fix JSX expression */}
   }
   // Add type-specific properties
@@ -681,7 +681,7 @@ export const initializeSEOEnhancements = useCallback((...args) => {}
     description: 'Leading provider of AI-powered business solutions',
     url: 'https://zion.app',
     logo: 'https://zion.app/logo.webp',
-  })
+  });
   const script = document.createElement('script')
   script.type = 'application/ld+json'
   script.textContent = JSON.stringify(organizationData)
@@ -691,7 +691,7 @@ export const initializeSEOEnhancements = useCallback((...args) => {}
   }
 }
 // Initialize SEO enhancements;
-export const initializeSEOEnhancements = () => {/* TODO: Fix JSX expression */,}})
+export const initializeSEOEnhancements = () => {/* TODO: Fix JSX expression */,}});
   const script = document.createElement('script');
   script.type = 'application/ld+json';
   script.textContent = JSON.stringify(organizationData);

@@ -7,7 +7,7 @@ exports.handler = async function (event, context) {try {
         message: 'stale_content_auditor_runner function executed successfully'),
         timestamp: timestamp),
         function: 'stale_content_auditor_runner'}
-      })
+      });
     }
 //   } catch (error) {
     // console.error('❌ stale_content_auditor_runner function failed: ') error
@@ -22,13 +22,13 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     const timestamp = new Date().toISOString()}
     return {/* TODO: Fix JSX expression */}
   n: 'stale_content_auditor_runner'}
-      })
+      });
     }
 //   } catch (error) {/* TODO: Fix JSX expression */}
       }
     return {/* TODO: Fix JSX expression */}
   p: new Date().toISOString()}
-      })
+      });
     }
   }
 }

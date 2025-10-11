@@ -35,11 +35,11 @@ const PagePage: React.FC = () => {const features = [
         <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
       </Helmet>
       <Navigation />
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
-        
+
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8"
           <div className="max-w-7xl mx-auto"
@@ -51,11 +51,11 @@ const PagePage: React.FC = () => {const features = [
                 Transform your business with our cutting-edge AI and IT solutions designed for the modern enterprise.
               </p>
             </div>
-      
+
       <Footer />
     </>
           </div>
-      
+
       <Footer />
     </>
         </section>
@@ -69,7 +69,7 @@ const PagePage: React.FC = () => {const features = [
               <p className="text-xl text-gray-600 max-w-3xl mx-auto"
                 Discover the powerful features that make our solutions stand out.
               </p>
-            
+
             <div className="
     ,
     d: grid-cols-2 l, g:grid-cols-3 gap-8"
@@ -90,16 +90,16 @@ const PagePage: React.FC = () => {const features = [
                   </ul>
               ))}
             </div>
-      
+
       <Footer />
     </>
           </div>
-      
+
       <Footer />
     </>
         </section>
       </div>
-      
+
       <Footer />
     </>
       <Footer />

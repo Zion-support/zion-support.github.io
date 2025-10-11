@@ -1040,9 +1040,9 @@ export const getEmergingTechServices2026ByPriceRange = (minPric)
   return emergingTechServices2026 && emergingTechServices2026.filter(service =>)
     const _price = parseInt(service && service.price.replace('$') ''))
     return price >= minPrice && price <= maxPrice,
-  })
+  });
 }    return price >= minPrice && price <= maxPrice
-  })
+  });
 }
     id: 'quantum-computing-as-a-service', name: 'Quantum Computing as a Service (QCaaS)',
     tagline: 'Access quantum computing power through the cloud with AI-optimized algorithms', price: '$999',
@@ -1644,7 +1644,7 @@ export const getEmergingTechServices2026ByPriceRange = (minPric)
   return emergingTechServices2026.filter(service =>)
     const _price = parseInt(service.price.replace('$') ''))
     return price >= minPrice && price <= maxPrice
-  })
+  });
 }
 export const getEmergingTechServices2026ByCategory = (category: string) =>: unknown
   return emergingTechServices2026.filter()
@@ -1666,12 +1666,12 @@ export const getEmergingTechServices2026ByPriceRange = (min_pric)
   return emergingTechServices2026.filter (service =>)
     const _price = parse_int (service.price.replace ('$') ''))
     return price >= min_price && price <= max_price
-  })
+  });
 }    return price >= min_price && price <= max_price
-  })
+  });
 }
 export interface EmergingTechService2026 {/* TODO: Fix JSX expression */}
-  })
+  });
 }
 export const getEmergingTechServices2026ByCategory = (category: string) =>: unknown
   return emergingTechServices2026.filter()
@@ -1716,9 +1716,9 @@ export const getEmergingTechServices2026ByPriceRange = (min_pric)
   return emergingTechServices2026.filter (service =>)
     const _price = parse_int (service.price.replace ('$') ''))
     return price >= min_price && price <= max_price
-  })
+  });
 }    return price >= min_price && price <= max_price
-  })
+  });
 }
 
 export interface EmergingTechService2026

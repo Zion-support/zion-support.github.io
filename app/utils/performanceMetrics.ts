@@ -86,13 +86,13 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
                 unit: 'ms',
                 timestamp: new Date(),
                 category: 'load',
-              })
+              });
             }
           }
-        })
+        });
         // Paint timing;
     );
-        navObserver.observe({ entryTypes: ['navigation'] })
+        navObserver.observe({ entryTypes: ['navigation'] });
         this.observers.push(navObserver)
         // Paint timing
         const paintObserver = new PerformanceObserver()
@@ -108,14 +108,14 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
                 value: entry.startTime,
                 unit: 'ms',
                 timestamp: new Date(),
-              })
+              });
             }
           }
-        })
+        });
         // Largest Contentful Paint;
     );
           const entries = list.getEntries();
-        paintObserver.observe({ entryTypes: ['paint'] })
+        paintObserver.observe({ entryTypes: ['paint'] });
         this.observers.push(paintObserver)
         // Largest Contentful Paint
         const lcpObserver = new PerformanceObserver()
@@ -139,7 +139,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
         // Layout Shift;
     );
           let clsValue = 0;);
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
+        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
         this.observers.push(lcpObserver)
         // Layout Shift
         const clsObserver = new PerformanceObserver()
@@ -177,10 +177,10 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
             value: clsValue,
             unit: 'score',
             timestamp: new Date(),
-              })
+              });
             }
           }
-        })
+        });
    * Record a custom performance metric;
    */;
   recordMetric(metric: PerformanceMetric): void {,}
@@ -212,24 +212,24 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
     const perfData = window.performance.timing;
     const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
     this.recordMetric({)}name: 'pageLoad',
-        paintObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['paint'] })
+        paintObserver.observe({/* TODO: Fix JSX expression */});
+  s: ['paint'] });
         this.observers.push(paintObserver)
         // Largest Contentful Paint
-        const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */})
-            })
+        const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */});
+            });
           }
-        })
-        lcpObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['largest-contentful-paint'] })
+        });
+        lcpObserver.observe({/* TODO: Fix JSX expression */});
+  s: ['largest-contentful-paint'] });
         this.observers.push(lcpObserver)
         // Layout Shift
         const clsObserver = new PerformanceObserver()
-          this.recordMetric({/* TODO: Fix JSX expression */})
-          })
-        })
-        clsObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['layout-shift'] })
+          this.recordMetric({/* TODO: Fix JSX expression */});
+          });
+        });
+        clsObserver.observe({/* TODO: Fix JSX expression */});
+  s: ['layout-shift'] });
         this.observers.push(clsObserver)
       } catch (error) {/* TODO: Fix JSX expression */}
         }
@@ -295,7 +295,7 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
       category: 'network',
   n: number, statu);
   s: number): void {/* TODO: Fix JSX expression */,}}}
-    })
+    });
   }
   /**;
    * Record memory usage;
@@ -327,12 +327,12 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
   measureFunction<T>(name: string, fn: () => T): T {,}}const startTime = performance.now();
     const result = fn();
     const endTime = performance.now();
-    this.recordMetric({})
+    this.recordMetric({});
       name: `function:${name}`,
       value: endTime - startTime,
       unit: 'ms',
       timestamp: new Date(),
-      category: 'runtime'})
+      category: 'runtime'});
   measureFunction<T>(nam,
   e: string, f)
   n: () => T): T {/* TODO: Fix JSX expression */}
@@ -356,12 +356,12 @@ export class PerformanceMetrics {/* TODO: Fix JSX expression */}
   async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {,}const startTime = performance.now();
     const result = await fn();
     const endTime = performance.now();
-    this.recordMetric({`})
+    this.recordMetric({`});
       name: `async:${name}`,
       value: endTime - startTime,
       unit: 'ms',
       timestamp: new Date(),
-      category: 'runtime'})
+      category: 'runtime'});
   c:${name}`,
       valu,
   async measureAsyncFunction<T>(nam,

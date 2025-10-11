@@ -114,7 +114,7 @@ export function FuturisticBackground({
           maxLife: 100
           opacity: Math.random() * 0.5 + 0.1,
           color: colors[Math.floor(Math.random() * colors.length)]
-        })
+        });
       }
     }
     initParticles()
@@ -158,8 +158,8 @@ export function FuturisticBackground({
             ctx.lineWidth = 1
             ctx.stroke()
           }
-        })
-      })
+        });
+      });
       // Draw grid lines
       ctx.strokeStyle = '#8c15e9'
       ctx.globalAlpha = 0.1
@@ -213,8 +213,8 @@ export function FuturisticBackground({
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2)
         ctx.fill()
         ctx.restore()
-      })
-      })
+      });
+      });
     }
     // Draw connections between nearby particles
     const drawConnections = () => {
@@ -254,7 +254,7 @@ export function FuturisticBackground({
         default:
           break
       }
-      
+
       // Update and draw particles
       updateParticles()
       drawParticles()
@@ -282,11 +282,11 @@ export function FuturisticBackground({
           background: 'radial-gradient(ellipse at center, rgba(23, 45, 103, 0.3) 0%, rgba(0, 0, 0, 0.8) 100%)'
         }}
       />
-      
+
       {/* Additional overlay effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-transparent via-zion-purple/5 to-transparent" />
       <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-zion-cyan/5 to-transparent" />
-      
+
       {/* Animated corner accents */}
       <div className="absolute top-0 left-0 w-32 h-32 border-l-2 border-t-2 border-zion-cyan/30 animate-pulse" />
       <div className="absolute top-0 right-0 w-32 h-32 border-r-2 border-t-2 border-zion-purple/30 animate-pulse" />
@@ -311,8 +311,8 @@ export function FuturisticBackground({
             ctx.lineTo(particle2.x, particle2.y)
             ctx.stroke()
           }
-        })
-      })
+        });
+      });
       // Draw grid lines for cyberpunk effect
       if (colorScheme === 'cyberpunk' || colorScheme === 'matrix') {
         ctx.strokeStyle = colors.primary
@@ -449,7 +449,7 @@ export function SimpleFuturisticBackground({
     <div className={`relative ${className}`}>
       {/* Animated gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-zion-blue-dark via-zion-slate to-zion-blue-dark animate-pulse"></div>
-      
+
       {/* Floating geometric shapes */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-20 w-32 h-32 border border-zion-purple/30 rounded-lg rotate-45 animate-spin-slow"></div>

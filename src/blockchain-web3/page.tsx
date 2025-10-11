@@ -10,7 +10,7 @@ export default function BlockchainWeb3Page() {
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl lg: text-6xl font-bold text-white mb-6">
             Blockchain & Web3
-  
+
           <p className="text-xl text-gray-300 mb-8">
             Decentralized solutions and blockchain technology for the future of the web.
           <div className="bg-slate-800/50 rounded-lg p-8">
@@ -22,7 +22,7 @@ export default function BlockchainWeb3Page() {
               className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center">
               <ArrowRight className="w-5 h-5 mr-2" />
               Contact Us,
-  
+
           </div>
         </div>
       </div>

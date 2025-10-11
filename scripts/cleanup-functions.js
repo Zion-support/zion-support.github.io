@@ -19,11 +19,11 @@ const functionsToRemove = [
   'ai-alt-text-',
   'ai_changelog_',
   'ai_trends_',
-  
+
   // Autonomous functions (test/development)
   'autonomous-',
   'autonomous_',
-  
+
   // Audit and analysis functions (test/development)
   'a11 y-',
   'a11 y_',
@@ -46,10 +46,10 @@ const functionsToRemove = [
   'seo_',
   'security-',
   'security_',
-  
+
   // Cron functions (test/development)
   'cron-',
-  
+
   // Frontend functions (test/development)
   'front-',
   'front_',
@@ -59,7 +59,7 @@ const functionsToRemove = [
   'home-',
   'home_',
   'homepage-',
-  
+
   // Optimization functions (test/development)
   'optimize-',
   'optimize_',
@@ -71,7 +71,7 @@ const functionsToRemove = [
   'hyper_',
   'fast-',
   'fast_',
-  
+
   // Report functions (test/development)
   'report-',
   'report_',
@@ -79,7 +79,7 @@ const functionsToRemove = [
   'runner_',
   'scheduler-',
   'scheduler_',
-  
+
   // Other test/development functions
   'auto-',
   'auto_',
@@ -135,7 +135,7 @@ function shouldRemoveFunction(filename) {
     return false
 function shouldRemoveFunction(filename) {/* TODO: Fix JSX expression */}
   }
-  
+
   // Remove functions that match any of the patterns
   return functionsToRemove.some(pattern => filename.includes(pattern))
 }
@@ -159,13 +159,13 @@ function cleanupFunctions() {/* TODO: Fix JSX expression */}
   } catch (error) {}
       } else {
         keptCount++
-  files.forEach(file => {/* TODO: Fix JSX expression */})
+  files.forEach(file => {/* TODO: Fix JSX expression */});
         } catch (error) {/* TODO: Fix JSX expression */}
         }
       } else {/* TODO: Fix JSX expression */}
       }
     }
-  })
+  });
 }
 
 // Run the cleanup

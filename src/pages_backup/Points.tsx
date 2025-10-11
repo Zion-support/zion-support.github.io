@@ -3,10 +3,6 @@ import { use_auth } from '@/hooks / use_auth'
 import { use_points } from '@/hooks / use_points'
 import {
 
-
-
-
-
   Card
   CardContent
   CardDescription
@@ -62,13 +58,10 @@ import { LoginModal } from '@/components/auth/LoginModal'
     title: string
   }) {    if (!user?.id) return;  async function handleRedeem(reward: { id: string, cost: number, title: string }) {
 
-
-
 export default function PointsPage() { const { isAuthenticated, user  } = useAuth(),
   const { ledger, balance, loading, fetchLedger  } = usePoints(),
   const [ loginOpen, setLoginOpen ] = useState(false),
   const [ redeeming, setRedeeming ] = useState(false),
-
 
   async function handleRedeem(reward: { id: string, cost: number, title: string }) {
     if (!user?.id) return
@@ -83,11 +76,11 @@ export default function PointsPage() { const { isAuthenticated, user  } = useAut
           userId: user.id
           cost: reward.cost
           reward: reward.title
-        })
-      })
+        });
+      });
       await fetchLedger()
     } finally {
-      setRedeeming(false);    }      })
+      setRedeeming(false);    }      });
       await fetchLedger()
     } finally {
       setRedeeming(false)
@@ -135,7 +128,7 @@ if (return) {
           reward: reward.title,
         }),
 
-      })
+      });
       await fetchLedger()
     } finally {
 
@@ -146,30 +139,26 @@ if (return) {
       await fetch('/api/points/redeem', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ userId: user.id, cost: reward.cost, reward: reward.title })
+        body: JSON.stringify({ userId: user.id, cost: reward.cost, reward: reward.title });
       }),
       await fetchLedger()
     } finally {
-      setRedeeming(false);    }      })
+      setRedeeming(false);    }      });
       await fetchLedger()
     } finally {
       setRedeeming(false)
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ userId: user.id, cost: reward.cost, reward: reward.title })
-      })
+        body: JSON.stringify({ userId: user.id, cost: reward.cost, reward: reward.title });
+      });
       await fetchLedger()
     } finally {
       setRedeeming(false)
 
-
-
-
     }
   }
 
-
-      set_redeeming (false);    }      })
+      set_redeeming (false);    }      });
       await fetch_ledger ()
     } finally {
       set_redeeming (false)
@@ -188,8 +177,6 @@ if (return) {
 
       icon: <ShoppingBag className='h - 5 w - 5' />,
 
-
-
       icon: <Users className='h-5 w-5' />,
       title: 'Sign Up & Profile Setup',
       description: 'Complete your profile and verify your email',
@@ -201,11 +188,6 @@ if (return) {
       description: 'Make your first purchase on the marketplace',
       points: '100 pts',
       action: 'Browse Marketplace',
-
-
-
-
-
 
       icon: <Users className='h-5 w-5' />
       title: 'Sign Up & Profile Setup'
@@ -236,18 +218,11 @@ if (return) {
       points: '200 pts per referral',
       action: 'Share Referral Link',
 
-
-
-
       icon: <Users className="h-5 w-5" />,
       title: "Sign Up & Profile Setup",
       description: "Complete your profile and verify your email",
       points: "50 pts",
       action: isAuthenticated ? "✓ Completed" : "Get Started"
-
-
-
-
 
     },
     {
@@ -294,8 +269,6 @@ if (return) {
       category: 'Discount'
     }
     { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' }
-
-
 
   const earningOpportunities = [
     {
@@ -410,8 +383,6 @@ if (return) {
     },
     {
 
-
-
       icon: <ShoppingBag className="h-5 w-5" />,
       title: "First Purchase",
       description: "Make your first purchase on the marketplace",
@@ -437,35 +408,20 @@ if (return) {
       icon: <Users className="h-5 w-5" />,
       title: "Refer Friends",
 
-
-
       description: "Invite friends to join Zion marketplace",
       points: "200 pts per referral",
       action: "Share Referral Link"
     }
-
-
-
-
-
-
-
-
 
   if (!isAuthenticated) {
     return (
 
     { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },
 
-
-
-
   if (!isAuthenticated) {
     return (
       <>
       <>
-
-
 
         <div className="container py-10 max-w-4xl">
           <div className="text-center mb-8">
@@ -474,8 +430,6 @@ if (return) {
             <p className="text-xl text-muted-foreground mb-6">
               Earn points for every action you take and redeem them for exclusive rewards!
             </p>
-
-
 
             <Button onClick={() => setLoginOpen(true)} size="lg">
               Join Now to Start Earning
@@ -490,14 +444,11 @@ if (return) {
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
 
-
-
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <TrendingUp className="h-5 w-5" />
                   How to Earn Points
-
 
                 </CardTitle>
                 <CardDescription>
@@ -525,22 +476,11 @@ if (return) {
                 {earningOpportunities.map((opportunity, index) => (
                   <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
 
-
                     <div className="text-primary mt-1">{opportunity.icon}</div>
                     <div className="flex-1">
                       <h4 className="font-medium">{opportunity.title}</h4>
                       <p className="text-sm text-muted-foreground">{opportunity.description}</p>
                     </div>
-
-
-
-
-
-
-
-
-
-
 
                     <Badge variant="secondary">{opportunity.points}</Badge>
                   </div>
@@ -556,7 +496,6 @@ if (return) {
 
                 <CardTitle className="flex items-center gap-2">
 
-
                   <Gift className="h-5 w-5" />
                   Upcoming Rewards
                 </CardTitle>
@@ -564,8 +503,6 @@ if (return) {
                   What you can redeem your points for
                 </CardDescription>
               </CardHeader>
-
-
 
               <CardContent className="space-y-4">
                 {upcomingRewards.map((reward, index) => (
@@ -575,18 +512,12 @@ if (return) {
                       <p className="text-sm text-muted-foreground">{reward.category}</p>
                     </div>
 
-
-
                     <Badge variant="outline">{reward.cost}</Badge>
                   </div>
                 ))}
               </CardContent>
             </Card>
           </div>
-
-
-
-
 
           <Card className="text-center">
             <CardContent className="pt-6">
@@ -599,8 +530,6 @@ if (return) {
                 Create Account
               </Button>
             </CardContent>
-
-
 
           </Card>
         </div>
@@ -742,9 +671,6 @@ if (return) {
   }
   return (
 
-
-
-
           <p className="text-sm text-muted-foreground mt-2">
             You haven't earned any points yet. Complete the tasks below to start
             earning and redeem rewards.
@@ -752,18 +678,12 @@ if (return) {
         )}
       </div>
 
-
-
-
-
       <div className="grid md:grid-cols-2 gap-8 mb-12">
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <TrendingUp className="h-5 w-5" />
               Keep Earning
-
-
 
             </CardTitle>
             <CardDescription>
@@ -791,22 +711,11 @@ if (return) {
             {earningOpportunities.map((opportunity, index) => (
               <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
 
-
                 <div className="text-primary mt-1">{opportunity.icon}</div>
                 <div className="flex-1">
                   <h4 className="font-medium">{opportunity.title}</h4>
                   <p className="text-sm text-muted-foreground">{opportunity.description}</p>
                 </div>
-
-
-
-
-
-
-
-
-
-
 
                 <div className="text-right">
                   <Badge variant="secondary" className="mb-1">{opportunity.points}</Badge>
@@ -824,7 +733,6 @@ if (return) {
             <CardTitle className="flex items-center gap-2">
 
             <CardTitle className="flex items-center gap-2">
-
 
               <Gift className="h-5 w-5" />
               Available Rewards
@@ -847,9 +755,6 @@ if (return) {
                   <Badge variant='outline' className='mb - 1'>
                     {reward.cost} pts</$1>
                   {balance >= reward.cost ? (
-
-
-
 
         </div>
         <p className='text-xl text-muted-foreground'>Points Available</p>
@@ -977,10 +882,8 @@ if (return) {
                   <Badge variant="outline" className="mb-1">{reward.cost} pts</Badge>
                   {balance >= reward.cost ? (
 
-
                     <Button size="sm" onClick={() => handleRedeem(reward)} disabled={redeeming}>
                       {redeeming ? 'Processing...' : 'Redeem'}
-
 
             ))}
           </CardContent>
@@ -993,7 +896,6 @@ if (return) {
           <CardTitle className="flex items-center gap-2">
 
           <CardTitle className="flex items-center gap-2">
-
 
             <History className="h-5 w-5" />
             Points History
@@ -1029,16 +931,12 @@ if (return) {
               </div></$1>
           )}
 
-
-
-
       <Card className="text-center">
         <CardContent className="pt-6">
           <Star className="h-12 w-12 text-primary mx-auto mb-4" />
           <h3 className="text-2xl font-bold mb-2">Full Rewards System Coming Soon</h3>
           <p className="text-muted-foreground mb-4">
             We're finalizing the redemption system. Keep earning points - they'll be ready to spend soon!
-
 
           </p>
           <div className="flex gap-4 justify-center">
@@ -1049,14 +947,12 @@ if (return) {
               <Link href='/community'>Join Community</Link>            <Button variant="outline" asChild>
             <Button variant="outline" asChild>
 
-
               <Link href="/community">Join Community</Link>
             </Button>
           </div>
         </CardContent>
       </Card>
     </div>
-
 
         </CardContent></$1>
       <Card className='text-center'>
@@ -1139,14 +1035,10 @@ if (return) {
             <Button variant='outline' as_child>
               <Link href='/community'>Join Community</Link>            </Button></$1></$1></$1>
   )
-}
-  )
+});
 }
     </div>)
-}
-
-  )
-
+});
 }
     </div>)
 }

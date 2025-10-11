@@ -26,7 +26,7 @@ errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`}
     // Log error details,
 //     this.setState({),;
 error),;
-errorInfo)})
+errorInfo)});
     // Call custom error handler if provided;
 if (this.props.onError) {;
 this.props.onError(error, errorInfo);
@@ -40,7 +40,7 @@ r: Error): Partial<State> {/* TODO: Fix JSX expression */}
   override componentDidCatch(erro,;,
 r: Error, errorInf);,
 o: ErrorInfo) {/* TODO: Fix JSX expression */}
-    })
+    });
     // Call custom error handler if provided;
 if (this.props.onError) {/* TODO: Fix JSX expression */}
     }
@@ -102,7 +102,7 @@ error: null,),;,
 errorInfo: null),;,
 errorId: null),;
 private handleRetry = () => {/* TODO: Fix JSX expression */}
-      })
+      });
     }
   }
   private handleReload = () => {/* TODO: Fix JSX expression */}
@@ -278,8 +278,7 @@ Technical Details
                     {this.state.error.stack}
                     {'\n\n'}
                     {this.state.errorInfo?.componentStack}
-            )}
-      )
+            )});
     }
     return this.props.children;
   }

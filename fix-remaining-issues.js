@@ -25,7 +25,7 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
         const regex = new RegExp(`import\\s+${importName}\\s+from[^;]+;\\s*`, 'g')
         if (content.match(regex)) {/* TODO: Fix JSX expression */}
         }
-      })
+      });
       // Fix unused error parameter
       content = content.replace(/\(error\) => \{/, '() => {')
       modified = true

@@ -45,14 +45,14 @@ class EnhancedErrorTracker {
         this.trackError(event.error, {
           component: 'Global',
           action:         ,
-$4})
-      })
+$4});
+      });
       window.addEventListener('unhandledrejection', event => {
         this.trackError(new Error(event.reason), {
           component: 'Global',
           action:         ,
-$4})
-      })
+$4});
+      });
     }
   }
   public trackError(error: Error, _context: ErrorContext = {}): void {
@@ -97,7 +97,7 @@ $4})
         description: error.message,
         fatal: false,
         component: error.context.component
-      })
+      });
     }
   }
   public getErrors(): TrackedError[] {
@@ -114,7 +114,7 @@ $4})
     const byComponent: Record<string, number> = {}
     this.errors.forEach(error => {
     byComponent[component] = (byComponent[component] || 0) + 1
-  })
+  });
     return {
       total: this.errors.length,
       byComponent,
@@ -181,11 +181,11 @@ class EnhancedErrorTracker {
   t: 'Global',
           actio,
   n: 'Uncaught Error')
-        })
-      })
+        });
+      });
       window.addEventListener('unhandledrejection', event => {/* TODO: Fix JSX expression */}
   O: Add content,}
-})
+});
         this.trackError(new Error(event.reason), {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -193,10 +193,8 @@ class EnhancedErrorTracker {
   component: 'Global',
           action: 'Unhandled Promise Rejection'
 
-        }
-  )
-      }
-  )
+        });
+      });
     }
   }
 
@@ -281,7 +279,7 @@ class EnhancedErrorTracker {
   l: false,
         componen,
   t: error.context.component,)
-      })
+      });
     }
   }
   public getErrors(): TrackedError[] {/* TODO: Fix JSX expression */}
@@ -313,7 +311,7 @@ class EnhancedErrorTracker {
     this.errors.forEach(error => {
     byComponent[component] = (byComponent[component] || 0) + 1
   }
-    })
+    });
     return {/* TODO: Fix JSX expression */}
   O: Add content,}
 }

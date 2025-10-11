@@ -4,13 +4,13 @@ import type { NextApiRequest, NextApiResponse } from 'next',
 import { ensureAdminFromApi } from '../../../../utils/auth',
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { allowed } = await ensureAdminFromApi(req)
-  if (!allowed) return res.status(403).json({ error: 'Forbidden' })
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' })
+  if (!allowed) return res.status(403).json({ error: 'Forbidden' });
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' });
   const { slides, format, version } = req.body |{}
-  if (!Array.isArray(slides)) return res.status(400).json({ error: 'Invalid slides' })
+  if (!Array.isArray(slides)) return res.status(400).json({ error: 'Invalid slides' });
   if (format === 'gslides') {
     // TODO: integrate Google Slides API and return created deck URL
-    return res.status(200).json({ url })
+    return res.status(200).json({ url });
   }
   // Fallback: return a minimal PDF-like blob by sending HTML and letting client download, here we return a simple HTML as octet-stream.
   const html = `<!doctype html><html><head><meta charset="utf-8"><title>Pitch ${version |''}</title></head><body>` +
@@ -34,16 +34,16 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const isAdmin = req.headers['x-admin'] === 'true'
-    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
     if (req.method === 'POST') {
       const { slides, format, version } = req.body || {}
-      if (!Array.isArray(slides)) return res.status(400).json({ error: 'Invalid slides' })
+      if (!Array.isArray(slides)) return res.status(400).json({ error: 'Invalid slides' });
       if (format === 'gslides') {
         // TODO: integrate Google Slides API and return created deck URL
         const url = `https://docs.google.com/presentation/d/${encodeURIComponent('stub-' + (version || 'draft'))}`
-        res.json({ url })
+        res.json({ url });
       } else {
-        res.status(400).json({ error: 'Unsupported format' })
+        res.status(400).json({ error: 'Unsupported format' });
       }
     } else {
       res.setHeader('Allow', 'POST')
@@ -51,7 +51,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 </p>

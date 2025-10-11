@@ -52,7 +52,7 @@ const January2026RevolutionaryContentBanne, r: React.FC = () => {/* TODO: Fix JS
             Experience, the, cutting-edge, of, AI innovation, with, our latest, breakthrough, conten,
   t: 98% automation, ra, t, e, s, quantum, computing, revolutions, and, Fortune, 500 transformations, wort, h $1, 0, B.
         </div>)
-        {/* Content, Gri, d */})
+        {/* Content, Gri, d */});
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12'>)
           { revolutionaryConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (
         {/* Content, Gri, d */}

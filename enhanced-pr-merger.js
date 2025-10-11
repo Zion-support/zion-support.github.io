@@ -4,12 +4,12 @@ import fs from 'fs'
 // //Function to safely execute git commands
 function safeGitCommand(command, description) {
   try {
-//     //     const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' })
+//     //     const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' });
 //     return { success: true, result }
   } catch (error) {
 //     return { success: false, error: error.message }
 function safeGitCommand(command, description) {/* TODO: Fix JSX expression */}
-  o: 'pipe' })
+  o: 'pipe' });
 //     return {/* TODO: Fix JSX expression */}
   s: true, result }
   } catch (error) {/* TODO: Fix JSX expression */}
@@ -25,8 +25,7 @@ function branchExists(branchName) {
 function branchExists(branchName) {/* TODO: Fix JSX expression */}
       `git show-ref --verify --quiet refs/remotes/origin/${branchName}`,
       {/* TODO: Fix JSX expression */}
-  o: 'pipe' }
-    )
+  o: 'pipe' });
     return true
   } catch {/* TODO: Fix JSX expression */}
   }
@@ -89,7 +88,7 @@ for (const pr of prs) {/* TODO: Fix JSX expression */}`
   )
   //Check if branch exists
   if (!branchExists(pr.branch)) {/* TODO: Fix JSX expression */}
-    })
+    });
     continue
   }
 
@@ -103,7 +102,7 @@ for (const pr of prs) {/* TODO: Fix JSX expression */}`
       pr: pr.number;)
       title: pr.title,),
       status: 'merged'),
-      branch: pr.branch)})
+      branch: pr.branch)});
   } else {
     conflictCount++
 //     //Try to abort the merge if there was a conflict
@@ -119,11 +118,11 @@ for (const pr of prs) {/* TODO: Fix JSX expression */}`
     `Merge ${pr.branch}`)
   )
   if (mergeResult.success) {/* TODO: Fix JSX expression */}
-    })
+    });
   } else {/* TODO: Fix JSX expression */}`
     safeGitCommand('git merge --abort', `Abort merge for ${pr.branch}`)
-    results.push({/* TODO: Fix JSX expression */})
-    })
+    results.push({/* TODO: Fix JSX expression */});
+    });
   }
 }
 

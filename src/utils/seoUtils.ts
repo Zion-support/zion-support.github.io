@@ -78,7 +78,7 @@ metaTags += `<meta property="article:section" content="${this.escapeHtml(section
 tags.forEach(tag => {;
 }
 metaTags += `<meta property="article:tag" content="${this.escapeHtml(tag)}">\n`
-      })
+      });
     }
 ;
 return metaTags;

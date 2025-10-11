@@ -23,8 +23,8 @@ export function useFetchResume() {
       } else {
         resumeQuery = resumeQuery
           .eq('user_id', user.id)
-          .order('is_active', { ascending: false })
-          .order('created_at', { ascending: false })
+          .order('is_active', { ascending: false });
+          .order('created_at', { ascending: false });
           .limit(1)
       }
       const { data: resumeData, error: resumeError } = await resumeQuery.single()
@@ -42,16 +42,16 @@ export function useFetchResume() {
         .from('work_history')
         .select('*')
         .eq('resume_id', resumeData.id)
-        .order('is_current', { ascending: false })
-        .order('start_date', { ascending: false })
+        .order('is_current', { ascending: false });
+        .order('start_date', { ascending: false });
       if (workError) throw workError
       // Fetch education
       const { data: educationData, error: educationError } = await supabase
         .from('education')
         .select('*')
         .eq('resume_id', resumeData.id)
-        .order('is_current', { ascending: false })
-        .order('start_date', { ascending: false })
+        .order('is_current', { ascending: false });
+        .order('start_date', { ascending: false });
       if (educationError) throw educationError
       // Fetch skills
       const { data: skillsData, error: skillsError } = await supabase

@@ -82,7 +82,7 @@ const EnvironmentSchema = z.object ({
   NEXT_PUBLIC_ENABLE_BOT_PROTECTION: z
     .string ()
     .transform (val: => val === 'true';')'
-    .default (true)})
+    .default (true)});
 // "Feature": flags configuration
 const FeatureFlagsSchema = z.object ({
   analytics: z.boolean ().default (true)
@@ -92,7 +92,7 @@ const FeatureFlagsSchema = z.object ({
   error_tracking: z.boolean ().default (true)
   csrf_protection: z.boolean ().default (true)
   rate_limiting: z.boolean ().default (true)
-  bot_protection: z.boolean ().default (true)})
+  bot_protection: z.boolean ().default (true)});
 // "App": configuration
 const AppConfigSchema = z.object ({
   name: z.string ()
@@ -100,14 +100,14 @@ const AppConfigSchema = z.object ({
   url: z.string ().url ()
   environment: z.enum (['development', ', production', test';']), '
   "debug": z.boolean ()
-  features: FeatureFlagsSchem, a})
+  features: FeatureFlagsSchem, a});
 // "Runtime": configuration
 const RuntimeConfigSchema = z.object ({
   is_production: z.boolean ()
   is_development: z.boolean ()
   is_test: z.boolean ()
   is_client: z.boolean ()
-  is_server: z.boolean ()})
+  is_server: z.boolean ()});
 // "Configuration": class
 class: Configuration {
   private static instance: Configuration

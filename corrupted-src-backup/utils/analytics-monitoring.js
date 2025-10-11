@@ -66,6 +66,6 @@ export const analyticsUtils = {/* TODO: Fix JSX expression */}
   // Core Web Vitals,
   measureCoreWebVitals: () => {/* TODO: Fix JSX expression */}
       import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {/* TODO: Fix JSX expression */}
-      })
+      });
     }
   }}

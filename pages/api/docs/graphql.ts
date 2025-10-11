@@ -15,7 +15,7 @@ function toSDL() {
     typedefs.push (
       `type ${type_name} { id: ID, title: String, description: String }`,
     )
-  })
+  });
   return typedefs.join ("\n")
 }
 export default /**

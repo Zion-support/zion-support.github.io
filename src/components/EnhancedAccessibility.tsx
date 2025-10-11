@@ -62,7 +62,7 @@ const,
   l: 100,
     colorBlin,
   d: 'none')
-  })
+  });
   const [isVisible, setIsVisible] = useState(false)
   // Load settings from localStorage
   useEffect(() => {if (savedSettings) {}

@@ -133,10 +133,10 @@
     p, k, g.popul, a, r  && (</div>
                       <div, className='bg-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-300, tex, t-xs, fon, t-bold, p, x-3, p, y-1, rounde, d-full, inlin, e-block, m, b-4'>
                         MOST, POPULA, R
-  })
+  });
                 ].m, a, p((p, k, g, ind, e, x) => (<, ke, y = { in, d, e, x }, classNa, m, e = { `bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, borde, r ${p, k, g.popul, a, r  ? 'bord, e, r-purp, l, e-5, 0, 0/50, rin, g-2, rin, g-purp, l, e-5, 0, 0/30'  : 'bord, e, r-zi, o, n-cy, a, n/30' }`}$2 />
                   ></div>
-                    {/* TODO: Fix JSX expression */})
+                    {/* TODO: Fix JSX expression */});
                       </di, v > )  }
                     <h3, classNam, e = 'te, x, t-2xl, fon, t-bold, tex, t-white, m, b-2'>
                       {p, k, g.na, m, e}

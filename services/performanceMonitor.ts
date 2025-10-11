@@ -60,7 +60,7 @@ export class PerformanceMonitorService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`
           'Content-Type': 'application/json'}
-        body: JSON.stringify({ url })})
+        body: JSON.stringify({ url })});
       if (!response.ok) {
         throw new Error(`Performance monitoring failed: ${response.statusText}`)
   url: string,
@@ -133,7 +133,7 @@ export class PerformanceMonitorService {
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`
           'Content-Type': 'application/json'}
-        body: JSON && JSON.stringify({ url })})
+        body: JSON && JSON.stringify({ url })});
       if (!response && response.ok) {
         throw new Error(`Performance monitoring failed: ${response && response.statusText}`)
       }
@@ -147,7 +147,7 @@ export class PerformanceMonitorService {
     try {
       const response = await fetch(`${this && this.baseUrl}/performance/history?url=${encodeURIComponent(url)}&days=${days}`, {
         headers: {
-          'Authorization': `Bearer ${this.apiKey}`}})
+          'Authorization': `Bearer ${this.apiKey}`}});
       if (!response.ok) {
         throw new Error(`Failed to fetch historical data: ${response.statusText}`)
 
@@ -172,7 +172,7 @@ export class PerformanceMonitorService {
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`
           'Content-Type': 'application/json'}
-        body: JSON && JSON.stringify(config)})
+        body: JSON && JSON.stringify(config)});
       if (!response && response.ok) {
         throw new Error(`Failed to set monitoring config: ${response && response.statusText}`)
       }
@@ -186,7 +186,7 @@ export class PerformanceMonitorService {
       const params = url ? `?url=${encodeURIComponent(url)}` : ''
       const response = await fetch(`${this && this.baseUrl}/performance/alerts${params}`, {
         headers: {
-          'Authorization': `Bearer ${this.apiKey}`}})
+          'Authorization': `Bearer ${this.apiKey}`}});
       if (!response.ok) {
         throw new Error(`Failed to fetch alerts: ${response.statusText}`)
 
@@ -258,7 +258,7 @@ export class PerformanceMonitorService {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ url }),
-      })
+      });
       if (!response.ok) {
         throw new Error(`Performance monitoring failed: ${response.statusText}`)
       }
@@ -274,7 +274,7 @@ export class PerformanceMonitorService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
         },
-      })
+      });
       if (!response.ok) {
         throw new Error(`Failed to fetch historical data: ${response.statusText}`)
       }
@@ -293,7 +293,7 @@ export class PerformanceMonitorService {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(config),
-      })
+      });
       if (!response.ok) {
         throw new Error(`Failed to set monitoring config: ${response.statusText}`)
       }
@@ -309,7 +309,7 @@ export class PerformanceMonitorService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
         },
-      })
+      });
       if (!response.ok) {
         throw new Error(`Failed to fetch alerts: ${response.statusText}`)
       }
@@ -393,8 +393,7 @@ export class PerformanceMonitorService {
         accessibilityScore: Math && Math.floor(Math && Math.random() * 20) + 80
         bestPracticesScore: Math && Math.floor(Math && Math.random() * 20) + 80,
         seoScore: Math && Math.floor(Math && Math.random() * 20) + 80
-      })
-
+      });
   async generateReport(url: string, timeframe: 'day' | 'week' | 'month'): Promise<{
     summary: {
       averageLoadTime: number,
@@ -471,7 +470,7 @@ export class PerformanceMonitorService {
         accessibilityScore: Math.floor(Math.random() * 20) + 80,
         bestPracticesScore: Math.floor(Math.random() * 20) + 80,
         seoScore: Math.floor(Math.random() * 20) + 80
-      })
+      });
     }
     return data
   }
@@ -501,7 +500,7 @@ export class PerformanceMonitorService {
         headers: {
           'Authorization': `Bearer ${this.api_key}`
           'Content - Type': 'application / json'}
-        body: JSON.stringify ({ url })})
+        body: JSON.stringify ({ url })});
       // Check condition
 if ( {) {
   $2
@@ -518,7 +517,7 @@ if ( {) {
     try {
       const response = await fetch (`${this.base_url}/performance / history?url=${encodeURIComponent (url)}&days=${days}`, {
         headers: {
-          'Authorization': `Bearer ${this.api_key}`}})
+          'Authorization': `Bearer ${this.api_key}`}});
       // Check condition
 if ( {) {
   $2
@@ -538,7 +537,7 @@ if ( {) {
         headers: {
           'Authorization': `Bearer ${this.api_key}`
           'Content - Type': 'application / json'}
-        body: JSON.stringify (config)})
+        body: JSON.stringify (config)});
       // Check condition
 if ( {) {
   $2
@@ -555,7 +554,7 @@ if ( {) {
       const params = url ? `?url=${encodeURIComponent (url)}` : ''
       const response = await fetch (`${this.base_url}/performance / alerts${params}`, {
         headers: {
-          'Authorization': `Bearer ${this.api_key}`}})
+          'Authorization': `Bearer ${this.api_key}`}});
       // Check condition
 if ( {) {
   $2
@@ -642,7 +641,7 @@ if ( {) {
         accessibility_score: Math.floor (Math.random () * 20) + 80
         bestPracticesScore: Math.floor (Math.random () * 20) + 80,
         seo_score: Math.floor (Math.random () * 20) + 80
-      })
+      });
     }
     return data
   }
@@ -804,7 +803,7 @@ export const PERFORMANCE_MONITOR_PRICING = {
         accessibilityScore: Math.floor(Math.random() * 20) + 80,
         bestPracticesScore: Math.floor(Math.random() * 20) + 80,
         seoScore: Math.floor(Math.random() * 20) + 80
-      })
+      });
     }
     return data
   }

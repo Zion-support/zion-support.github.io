@@ -1,6 +1,6 @@
 import { execSync } from 'child_process'
 function runCommand(command) {/* TODO: Fix JSX expression */}
-  o: 'pipe' })
+  o: 'pipe' });
   } catch (error) {/* TODO: Fix JSX expression */}
   r: error.stderr }
   }
@@ -24,7 +24,7 @@ function main() {/* TODO: Fix JSX expression */}
   try {/* TODO: Fix JSX expression */}
       }
     }
-    
+
     console.log('✅ Successfully pushed to main branch')
     // Check final status
     console.log('📊 Final status: ')

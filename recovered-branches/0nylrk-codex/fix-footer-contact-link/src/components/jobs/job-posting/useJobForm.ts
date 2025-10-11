@@ -38,11 +38,11 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
       category: '',
       status: '',
       external_apply_link: ''},
-    mode: "onChange"})
+    mode: "onChange"});
       external_apply_link: '',
     },
     mode: "onChange",
-  })
+  });
   // Function to create/update jobs that will be implemented by parent component
   const submitJob = async (values: JobSchemaType) => {
     if (!user) {

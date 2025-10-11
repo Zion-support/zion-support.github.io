@@ -7,19 +7,18 @@ function fixConsoleStatements(content) {
   // Replace console.log with proper logging in production
   content = content.replace(/console\.(log|error|warn|info)\(/g, (match, method) => {
     return `if (process.env.NODE_ENV === 'development') console.${method}(`
-  })
+  });
   // Add closing parenthesis for the if statement
   content = content.replace(
 function fixConsoleStatements(content) {/* TODO: Fix JSX expression */}
     return `if (process.env.NODE_ENV === 'development') console.${method}(`;)
-  })
+  });
   // Add closing parenthesis for the if statement
   content = content.replace()
     /if \(process\.env\.NODE_ENV === 'development'\) console\.(log|error|warn|info)\([^)]*\);/g,
     match => {/* TODO: Fix JSX expression */}
       return match.replace(/\);$/, '); }')
-    }
-  )
+    });
   return content
 }
 
@@ -46,7 +45,6 @@ function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
 // Function to fix specific files
 function fixFile(filePath) {/* TODO: Fix JSX expression */}
     }
-
 
     // Apply fixes
     content = fixConsoleStatements(content)

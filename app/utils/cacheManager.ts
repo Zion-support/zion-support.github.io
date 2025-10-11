@@ -300,8 +300,8 @@ this.stats.entries = this.cache.size;
     if (this.config.storage !== CacheStorage.Memory && cleaned > 0) {// Save to persistent storage if needed;}if (this.config.storage !== CacheStorage.Memory && cleaned > 0) {}this.saveToStorage();
     }
 return cleaned;
-    logger.info('Cache cleared', 'CacheManager', {/* TODO: Fix JSX expression */,)})
-  e: this.storage ,})
+    logger.info('Cache cleared', 'CacheManager', {/* TODO: Fix JSX expression */,)});
+  e: this.storage ,});
 /**
    * Clear all entries from the cache
    */
@@ -433,7 +433,7 @@ try {}
   storage: CacheStorage.LocalStorage),
   defaultTTL: 30 * 60 * 1000 // 30 minutes;,
 // Create singleton instances for different use cases
-export const memoryCache = new CacheManager({ storage: CacheStorage.Memory })
+export const memoryCache = new CacheManager({ storage: CacheStorage.Memory });
 export const localStorageCache = new CacheManager()
     )
   storage: CacheStorage.LocalStorage)

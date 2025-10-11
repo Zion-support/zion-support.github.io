@@ -326,8 +326,7 @@ disabled={isSubmitting}
                   {isSubmitting ? (
                     <React.Fragment>
                       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2">;
-Sending...
-                  ) : (
+Sending...props) : (
                     <React.Fragment>
                       <Send className="w-5 h-5 mr-2" />;
 Send Message
@@ -426,6 +425,5 @@ Common questions about our services and process
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6">
                   <h3 className="text-xl font-bold text-white mb-3">{faq.question}
                   <p className="text-gray-300">{faq.answer}
-              ))}
-  )
+              ))});
 }</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></a></p></p></p></p></p></p></p></h1></h1></h1></h2></h2></h2></h2></h3></h3></h3></h3></section></section></section></section>

@@ -48,7 +48,7 @@ return (;
         <meta name="language" content="English" />
         <meta name="revisit-after" content="7 days" />
         <meta name="distribution" content="global" />
-        
+
         {/* Open Graph Tags */}
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
@@ -56,12 +56,12 @@ return (;
         <meta property="og:url" content="https://ziontechgroup.com" />
         <meta property="og:site_name" content="Zion Tech Group" />
         <meta property="og:locale" content="en_US" />
-        
+
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
-        
+
         {/* Structured Data */}
         <script type="application/ld+json">
           {JSON.stringify(finalStructuredData)}
@@ -78,7 +78,7 @@ import { Helmet; } from 'react-helmet-async';
 interface SEOEnhancerProps {/* TODO: Fix JSX expression */}
 }
 const,;,
-SEOEnhancer: React.FC<SEOEnhancerProps> = ({/* TODO: Fix JSX expression */})
+SEOEnhancer: React.FC<SEOEnhancerProps> = ({/* TODO: Fix JSX expression */});
 }) => {/* TODO: Fix JSX expression */}
     },;
 addres,;,

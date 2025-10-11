@@ -18,7 +18,7 @@ this.state={hasError: false}
 return { hasError: true;}, error }
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {;
-this.setState({ error}, errorInfo })
+this.setState({ error}, errorInfo });
     // Log error to console in development;
 if (process.env.NODE_ENV === 'development') {;
 console.error('Error caught by boundary:', error, errorInfo)
@@ -30,7 +30,7 @@ this.props.onError(error, errorInfo)
     // In production, you might want to send this to an error reporting service;
 if (process.env.NODE_ENV === 'production') {
       // Example: Send to error reporting service
-      // errorReportingService.captureException(error, { extra: errorInfo })
+      // errorReportingService.captureException(error, { extra: errorInfo });
     }
   }
   render() {;

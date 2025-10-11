@@ -12,8 +12,7 @@ function resolveMergeConflicts(filePath) {
     // Remove merge conflict markers and keep HEAD version
     // Pattern:  ...  ...     content = content.replace(/[\s\S]*?[\s\S]*?    
     // Remove any remaining conflict markers
-    content = content.replace(/<<<<<<< [^\n]+/g, '')
-    content = content.replace(//g, '')
+    content = content.replace(/    content = content.replace(//g, '')
     content = content.replace(/    
     // Clean up any double newlines that might have been created
     content = content.replace(/\n\n\n+/g, '\n\n')
@@ -24,7 +23,7 @@ function resolveMergeConflicts(filePath) {
       console.log(`✓ Fixed merge conflicts in: ${filePath}`)
       return true
     }
-    
+
     return false
   } catch (error) {
     console.error(`✗ Error processing ${filePath}:`, error.message)
@@ -42,7 +41,7 @@ conflictFiles.forEach(filePath => {
   } else {
     console.log(`⚠ File not found: ${filePath}`)
   }
-})
+});
 console.log(`\nSummary:`)
 console.log(`- Files processed: ${conflictFiles.length}`)
 console.log(`- Files fixed: ${fixedCount}`)

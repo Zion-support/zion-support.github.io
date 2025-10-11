@@ -10,15 +10,15 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
 //         const full = path.join(dir)
         name)
         const stat = fs.statSync(full;)
-      })
+      });
         if (stat.isFile() && /\.(cjs|js|mjs|ts)$/.test(name)) {
           items.push({ type: script),
         name),
-        path: `automation/${name}` })
+        path: `automation/${name}` });
   function listAutomationScripts() {/* TODO: Fix JSX expression */}
       }
         if (stat.isFile() && /\.(cjs|js|mjs|ts)$/.test(name)) {/* TODO: Fix JSX expression */}
-  h: `automation/${name}` })
+  h: `automation/${name}` });
         }
       }
     } catch {}

@@ -35,7 +35,7 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({,
               height: 'auto')}
               borderRadius: '0.25rem')}
 const,
-  AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({/* TODO: Fix JSX expression */})
+  AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({/* TODO: Fix JSX expression */});
 }) => {/* TODO: Fix JSX expression */}
       }}
     >

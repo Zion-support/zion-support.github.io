@@ -297,7 +297,7 @@ export default function MicroSaasPage() {
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Micro SAAS Solutions,
-  
+
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               50+ AI-powered micro SAAS applications designed for modern businesses. Affordable, powerful, and easy to use.
             </p>
@@ -307,12 +307,12 @@ export default function MicroSaasPage() {
                 className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center">
                 <Phone className="h-5 w-5 mr-2" />
                 Call (302) 464-0950
-  
+
               <$2 />
                 to="/contact"
                 className="border border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors">
                 Get Free Trial,
-  
+
             </div>
           </div>
         </div>
@@ -336,7 +336,7 @@ export default function MicroSaasPage() {
               <$2 />
                 key={index}
                 className="bg-slate-800/50 hover:bg-cyan-500/20 text-gray-300 hover:text-white px-4 py-2 rounded-lg transition-colors duration-300">
-                {category.name} ({category.count})
+                {category.name} ({category.count});
             ))}
       {/* Services Grid */}
       <section className="py-24">
@@ -371,7 +371,7 @@ export default function MicroSaasPage() {
                     to={service.link}
                     className="bg-purple-500 hover: bg-purple-600 text-white px-4 py-2 rounded-lg font-semibold transition-colors inline-block text-sm">
                     Learn More,
-  
+
                 </div>
               </div>
             ))}
@@ -451,17 +451,17 @@ export default function MicroSaasPage() {
                   Custom Features
                   <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
                   Dedicated Manager
-  
+
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
                   White-label Options
-  
+
               </ul>
               <$2 />
                 to="/contact"
                 className="w-full bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors text-center block">
                 Contact Sales,
-  
+
             </div>
           </div>
         </div>
@@ -480,12 +480,12 @@ export default function MicroSaasPage() {
                 className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold transition-colors hover:bg-gray-100 flex items-center justify-center">
                 <Phone className="h-5 w-5 mr-2" />
                 Call (302) 464-0950
-  
+
               <$2 />
                 to="/contact"
                 className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 px-8 py-3 rounded-lg font-semibold transition-colors">
                 Start Free Trial
-  
+
             </div>
           </div>
         </div>

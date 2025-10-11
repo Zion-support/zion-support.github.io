@@ -507,7 +507,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(error)
-      })
+      });
     } catch (err) {
     // // console.error('Failed to log error to network:', err)
   }
@@ -524,8 +524,8 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
         body: JSON.stringify({
           ...error,
           timestamp: error.timestamp.toISOString()
-        })
-      })
+        });
+      });
     } catch (err) {
     // // console.error('Failed to report error:', err)
   }
@@ -668,7 +668,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
         },
         bod)
   y: JSON.stringify(error)
-      })
+      });
     } catch (err) {/* TODO: Fix JSX expression */}
   network:', err);}
     }
@@ -700,8 +700,8 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
 //           ...error,
           timestam)
   p: error.timestamp.toISOString()
-        })
-      })
+        });
+      });
     } catch (err) {/* TODO: Fix JSX expression */}
   error:', err);}
     }
@@ -814,7 +814,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   }
   // Retry error
 private async retryError(retryIte,
-  m: {/* TODO: Fix JSX expression */})
+  m: {/* TODO: Fix JSX expression */});
   t: number}) {try {}
   // TOD,
   O: Add content,
@@ -931,7 +931,7 @@ private async retryError(retryIte,
       // Set up global error handler
       window.addEventListener('error', event => {
         this.handleError(event.error || new Error(event.message))
-  })
+  });
       // Set up unhandled promise rejection handler
       window.addEventListener('unhandledrejection', event => {
   // Clear resolved errors
@@ -999,15 +999,15 @@ private async retryError(retryIte,
       // Set up global error handler
       window.addEventListener('error', event => {/* TODO: Fix JSX expression */}
   O: Add content,}
-})
+});
         this.handleError(event.error || new Error(event.message))
-      })
+      });
       // Set up unhandled promise rejection handler
       window.addEventListener('unhandledrejection', event => {/* TODO: Fix JSX expression */}
   O: Add content,}
-})
+});
         this.handleError(new Error(event.reason))
-      })
+      });
     }
   }
 }
@@ -1028,7 +1028,7 @@ export class ErrorBoundary extends React.Component<
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.errorHandler.handleError(error, errorInfo, {
       component:     ,
-$4})
+$4});
   }
   render() {
     if (this.state.hasError) {
@@ -1051,7 +1051,7 @@ export class ErrorBoundary extends React.Component
   private,
   errorHandler: ErrorHandler,
   constructor(prop,
-  s: {/* TODO: Fix JSX expression */})
+  s: {/* TODO: Fix JSX expression */});
   n: React.ReactNode, fallback?: React.ReactNode }) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -1076,8 +1076,7 @@ export class ErrorBoundary extends React.Component
   O: Add content,}
 }
   component: 'ErrorBoundary'
-    }
-  )
+    });
   }
   render() {
     // TODO: Add content

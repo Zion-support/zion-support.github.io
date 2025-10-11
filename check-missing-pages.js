@@ -45,7 +45,7 @@ function scanDirectory(dir) {
   items.forEach(item => {
     const itemPath = path.join(dir, item);
     const stat = fs.statSync(itemPath);
-    
+
     if (stat.isDirectory()) {
       const pageFile = path.join(itemPath, 'page.tsx');
       if (fs.existsSync(pageFile)) {

@@ -95,8 +95,8 @@
   improvements: this.improvements,
   summary: {/* TODO: Fix JSX expression */}
   totalImprovements: this.improvements.length } } fs.writeFileSync('app-analysis-report.json',JSON.stringify(report,null)2)); console.log('\\n📊 App Analysis)
-  Report: '), if ({/* TODO: Fix JSX expression */})
-  s: ')}this.issues.forEach(issue => )} if ({/* TODO: Fix JSX expression */})
+  Report: '), if ({/* TODO: Fix JSX expression */});
+  s: ')}this.issues.forEach(issue => )} if ({/* TODO: Fix JSX expression */});
   s: ')}this.improvements.forEach(improvement => )} } async run() {this.log('🚀 Starting app improvement analysis...'); this.analyzeApp(); this.createOptimizedNextConfig(); this.createPerformanceScript(); this.createSecurityScript(); this.generateReport()} this.log('✅ App improvement analysis completed') } } if() {const improver = new AppImprover;(;)} improver.run().catch(error => {/* TODO: Fix JSX expression */}")
   failed:  )'}error); process.exit(1) })} module.exports = AppImprover;" '
 // <#!/usr/bin/env node const fs = require('fs') const path = require('path') class AppImprover {constructor() { this.improvements = []} this.issues = [] } log() {} analyzeApp() {this.log('Analyzing application structure...'); this.checkNextConfig(); this.checkPackageJson(); this.checkAppStructure()} this.checkForOptimizations() } checkNextConfig() {try { const configPath = 'next.config.js}' if () { const content = fs.readFileSync(configPath)'utf8') { ) { const content = fs.readFileSync(configPath}'utf8'}); if () { this.improvements.push('Add SWC minification to next.config.js') } if (!content.includes('compress')) { this.improvements.push('Enable compression in next.config.js')} if (!content.includes('poweredByHeader')) { this.improvements.push('Remove X-Powered-By header for security')} this.log('✅ Next.js config analyzed')} else { this.issues.push('next.config.js not found')} } catch (error) {/* TODO: Fix JSX expression */}`
@@ -196,8 +196,8 @@
   improvements: this.improvements,
   summary: {/* TODO: Fix JSX expression */}
   totalImprovements: this.improvements.length } } fs.writeFileSync('app-analysis-report.json',JSON.stringify(report,null)2)); // console.log('\\n📊 App Analysis)
-  Report: '), if ({/* TODO: Fix JSX expression */})
-  s: ')}this.issues.forEach(issue => )} if ({/* TODO: Fix JSX expression */})
+  Report: '), if ({/* TODO: Fix JSX expression */});
+  s: ')}this.issues.forEach(issue => )} if ({/* TODO: Fix JSX expression */});
   s: ')}this.improvements.forEach(improvement => )} } async run() {this.log('🚀 Starting app improvement analysis...'); this.analyzeApp(); this.createOptimizedNextConfig(); this.createPerformanceScript(); this.createSecurityScript(); this.generateReport()} this.log('✅ App improvement analysis completed') } } if() {const improver = new AppImprover;(;)} improver.run().catch(error => {/* TODO: Fix JSX expression */}")
   failed:  )'}error); process.exit(1) })} module.exports = AppImprover;" '
 "`

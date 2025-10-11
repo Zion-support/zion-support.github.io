@@ -65,7 +65,7 @@ const writeFile = promisify(fs.writeFile)
 const ROOT = path.join(process.cwd(), 'data')
 const MODERATION_FILE = path.join(ROOT, 'moderation.json')
 async function ensureBaseFiles() {
-  await mkdir(ROOT, { recursive: true })
+  await mkdir(ROOT, { recursive: true });
   try {
     await readFile(MODERATION_FILE, 'utf8')
   } catch {

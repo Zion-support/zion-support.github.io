@@ -23,8 +23,8 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
         userAgent: navigator.userAgent
         url: window.location.href,
   setupGlobalErrorHandlers() {/* TODO: Fix JSX expression */}
-      })
-    })
+      });
+    });
     // Unhandled promise rejection handler
     window.addEventListener('unhandledrejection', event => {)
       this.handleError({)
@@ -34,15 +34,15 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
         timestamp: new Date().toISOString(),
         userAgent: navigator.userAgent
         url: window.location.href,
-    window.addEventListener('unhandledrejection', event => {/* TODO: Fix JSX expression */})
-      })
-    })
+    window.addEventListener('unhandledrejection', event => {/* TODO: Fix JSX expression */});
+      });
+    });
   }
 
   setupUnhandledRejectionHandler() {
     // Additional promise rejection handling
     window.addEventListener('rejectionhandled', event => {)
-      //       })
+      //       });
   }
 
   setupResourceErrorHandler() {
@@ -58,7 +58,7 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
             timestamp: new Date().toISOString(),
             url: window.location.href,
   setupUnhandledRejectionHandler() {/* TODO: Fix JSX expression */}
-      //       })
+      //       });
   }
 
   setupResourceErrorHandler() {/* TODO: Fix JSX expression */}
@@ -70,7 +70,7 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
             timestam,
   p: new Date().toISOString(),
             ur,
-  l: window.location.href})
+  l: window.location.href});
         }
       },
       true
@@ -82,9 +82,9 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
     window.addEventListener('online', () => {
       this.handleNetworkStatusChange('online')
   setupNetworkErrorHandler() {/* TODO: Fix JSX expression */}
-    })
+    });
     window.addEventListener('offline', () => {/* TODO: Fix JSX expression */}
-    })
+    });
   }
 
   setupRecoveryStrategies() {
@@ -193,7 +193,7 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
         .then(response => {)
           if (response.ok) {
             //             }
-        })
+        });
         .catch(error => {)
           this.handleError({)
             ...errorInfo)
@@ -216,13 +216,13 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
 
   retryFailedRequest(errorInfo) {/* TODO: Fix JSX expression */}
             //             }
-        })
+        });
         .catch(error => {/* TODO: Fix JSX expression */}`
   e: `Retry ${retryCount} faile,`
   d: ${error.message}`,
             retryCount)
-          })
-        })
+          });
+        });
     }
   }
 
@@ -280,8 +280,8 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
   }
 
   clearCaches() {/* TODO: Fix JSX expression */}
-        })
-      })
+        });
+      });
     }
   }
 
@@ -435,7 +435,7 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
     this.showErrorToast({)
       message)
       type: 'Network Status'),
-      severity: 'info')})
+      severity: 'info')});
   }
 
   reportError(errorInfo) {
@@ -445,24 +445,24 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
         description: errorInfo.message),
         fatal: errorInfo.severity === 'critical'),
   handleNetworkStatusChange(status) {/* TODO: Fix JSX expression */}
-    })
+    });
   }
 
   reportError(errorInfo) {/* TODO: Fix JSX expression */}
-      })
+      });
     }
 
     // Send to custom error reporting service
     fetch('/api/errors', {)
       method: 'POST')
       headers: {)
-        'Content-Type': 'application/json')})
+        'Content-Type': 'application/json')});
       body: JSON.stringify(errorInfo)}).catch(error => {)
     fetch('/api/errors', {/* TODO: Fix JSX expression */}
       },
       bod)
-  y: JSON.stringify(errorInfo)}).catch(error => {/* TODO: Fix JSX expression */})
-      //       })
+  y: JSON.stringify(errorInfo)}).catch(error => {/* TODO: Fix JSX expression */});
+      //       });
   }
 
   // Public methods

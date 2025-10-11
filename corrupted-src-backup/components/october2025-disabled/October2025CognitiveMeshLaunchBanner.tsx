@@ -145,5 +145,5 @@ const,
             Free 2-week assessment included. No commitment required.
         </div>,
     </section>)
-})
+});
 "</div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></p></p></h1></ul>

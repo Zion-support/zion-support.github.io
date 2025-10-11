@@ -77,7 +77,7 @@ export class AccessibilityUtils {
       }
     }
     document.addEventListener('keydown', handleKeyDown)
-    this.eventListeners.push({ element: document, event: 'keydown', handler: handleKeyDown })
+    this.eventListeners.push({ element: document, event: 'keydown', handler: handleKeyDown });
   }
 
   private setupScreenReaderSupport() {
@@ -118,14 +118,14 @@ export class AccessibilityUtils {
         outline: 2px solid #3b82f6
         outline-offset: 2px
       }
-      
+
       .keyboard-navigation button:focus,
       .keyboard-navigation a:focus {
         outline: 2px solid #00ffff
         outline-offset: 2px
         box-shadow: 0 0 0 4px rgba(0, 255, 255, 0.2)
       }
-      
+
       .sr-only {
         position: absolute
         width: 1px
@@ -137,7 +137,7 @@ export class AccessibilityUtils {
         white-space: nowrap
         border: 0
       }
-      
+
       .sr-only:focus {
         position: static
         width: auto
@@ -163,10 +163,10 @@ export class AccessibilityUtils {
     // Track focus changes
     document.addEventListener('focusin', (event) => {
       this.handleFocusIn(event)
-    })
+    });
     document.addEventListener('focusout', (event) => {
       this.handleFocusOut(event)
-    })
+    });
   }
 
   private setupSkipLinks() {
@@ -182,7 +182,7 @@ export class AccessibilityUtils {
       skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-blue-600 text-white p-2 z-50'
       skipLink.setAttribute('tabindex', '1')
       document.body.insertBefore(skipLink, document.body.firstChild)
-    })
+    });
   }
 
   private setupARIALabels() {
@@ -285,7 +285,7 @@ export class AccessibilityUtils {
         element.setAttribute('role', landmark.role)
         element.setAttribute('aria-label', landmark.label)
       }
-    })
+    });
   }
 
   private addARIALabelsToElements() {
@@ -296,12 +296,12 @@ export class AccessibilityUtils {
       if (icon && !button.textContent?.trim()) {
         button.setAttribute('aria-label', `Button ${index + 1}`)
       }
-    })
+    });
     // Add ARIA labels to images without alt text
     const images = document.querySelectorAll('img:not([alt])')
     images.forEach((img, index) => {
       img.setAttribute('alt', `Image ${index + 1}`)
-    })
+    });
     // Add ARIA labels to form inputs
     const inputs = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])')
     inputs.forEach((input) => {
@@ -309,7 +309,7 @@ export class AccessibilityUtils {
       if (label) {
         input.setAttribute('aria-labelledby', label.id || `label-${input.id}`)
       }
-    })
+    });
   }
 
   private observeNewElements() {
@@ -319,13 +319,13 @@ export class AccessibilityUtils {
           if (node.nodeType === Node.ELEMENT_NODE) {
             this.addARIALabelsToElement(node as Element)
           }
-        })
-      })
-    })
+        });
+      });
+    });
     observer.observe(document.body, {
       childList: true,
       subtree: true
-    })
+    });
     this.observers.push(observer)
   }
 
@@ -436,7 +436,7 @@ export class AccessibilityUtils {
     // Remove event listeners
     this.eventListeners.forEach(({ element, event, handler }) => {
       element.removeEventListener(event, handler)
-    })
+    });
     // Disconnect observers
     this.observers.forEach(observer => observer.disconnect())
     // Clear arrays

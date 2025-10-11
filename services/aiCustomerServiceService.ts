@@ -142,7 +142,7 @@ export class AICustomerServiceService {
         method: 'POST',
         headers: {
           'Content-Type': 'application/jsonAuthorization': `Bearer ${this && this.apiKey}`}
-        body: JSON && JSON.stringify(request)})
+        body: JSON && JSON.stringify(request)});
       if (!response && response.ok) {
         throw new Error(`Create ticket API error: ${response && response.statusText}`)
       }
@@ -157,7 +157,7 @@ export class AICustomerServiceService {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/${ticketId}`, {
         headers: {
-          'Authorization': `Bearer ${this && this.apiKey}`}})
+          'Authorization': `Bearer ${this && this.apiKey}`}});
       if (!response && response.ok) {
         throw new Error(`Get ticket API error: ${response && response.statusText}`)
       }
@@ -181,7 +181,7 @@ export class AICustomerServiceService {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/jsonAuthorization': `Bearer ${this && this.apiKey}`}
-        body: JSON && JSON.stringify(updates)})
+        body: JSON && JSON.stringify(updates)});
       if (!response && response.ok) {
         throw new Error(`Update ticket API error: ${response && response.statusText}`)
       }
@@ -205,7 +205,7 @@ export class AICustomerServiceService {
         method: 'POST',
         headers: {
           'Content-Type': 'application/jsonAuthorization': `Bearer ${this && this.apiKey}`}
-        body: JSON && JSON.stringify(message)})
+        body: JSON && JSON.stringify(message)});
       if (!response && response.ok) {
         throw new Error(`Add message API error: ${response && response.statusText}`)
       }
@@ -223,7 +223,7 @@ export class AICustomerServiceService {
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/${ticketId}/ai-response`, {
         method: 'POST',
         headers: {
-          'Authorization': `Bearer ${this && this.apiKey}`}})
+          'Authorization': `Bearer ${this && this.apiKey}`}});
       if (!response && response.ok) {
         throw new Error(`AI response API error: ${response && response.statusText}`)
       }
@@ -240,7 +240,7 @@ export class AICustomerServiceService {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/customers/${customerId}`, {
         headers: {
-          'Authorization': `Bearer ${this && this.apiKey}`}})
+          'Authorization': `Bearer ${this && this.apiKey}`}});
       if (!response && response.ok) {
         throw new Error(`Get customer profile API error: ${response && response.statusText}`)
       }
@@ -257,7 +257,7 @@ export class AICustomerServiceService {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/metrics?timeframe=${timeframe}`, {
         headers: {
-          'Authorization': `Bearer ${this && this.apiKey}`}})
+          'Authorization': `Bearer ${this && this.apiKey}`}});
       if (!response && response.ok) {
         throw new Error(`Get metrics API error: ${response && response.statusText}`)
       }
@@ -269,10 +269,10 @@ export class AICustomerServiceService {
   }
   async searchTickets(query: string, filters?: Record<string, any>): Promise<CustomerTicket[]> {
     try {
-      const params = new URLSearchParams({ query, ...filters })
+      const params = new URLSearchParams({ query, ...filters });
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/search?${params}`, {
         headers: {
-          'Authorization': `Bearer ${this && this.apiKey}`}})
+          'Authorization': `Bearer ${this && this.apiKey}`}});
       if (!response && response.ok) {
         throw new Error(`Search tickets API error: ${response && response.statusText}`)
       }
@@ -295,7 +295,7 @@ export class AICustomerServiceService {
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/auto-assign`, {
         method: 'POST',
         headers: {
-          'Authorization': `Bearer ${this && this.apiKey}`}})
+          'Authorization': `Bearer ${this && this.apiKey}`}});
       if (!response && response.ok) {
         throw new Error(`Auto assign tickets API error: ${response && response.statusText}`)
       }
@@ -311,7 +311,7 @@ export class AICustomerServiceService {
         method: 'POST',
         headers: {
           'Content-Type': 'application/jsonAuthorization': `Bearer ${this && this.apiKey}`}
-        body: JSON && JSON.stringify({ timeframe, format })})
+        body: JSON && JSON.stringify({ timeframe, format })});
       if (!response && response.ok) {
         throw new Error(`Generate report API error: ${response && response.statusText}`)
       }
@@ -658,7 +658,7 @@ export class AICustomerServiceService {
           'Authorization': `Bearer ${this.apiKey}`,
         },
         body: JSON.stringify(request),
-      })
+      });
       if (!response.ok) {
         throw new Error(`Create ticket API error: ${response.statusText}`)
       }
@@ -675,7 +675,7 @@ export class AICustomerServiceService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
         },
-      })
+      });
       if (!response.ok) {
         throw new Error(`Get ticket API error: ${response.statusText}`)
       }
@@ -704,7 +704,7 @@ export class AICustomerServiceService {
           'Authorization': `Bearer ${this.apiKey}`,
         },
         body: JSON.stringify(updates),
-      })
+      });
       if (!response.ok) {
         throw new Error(`Update ticket API error: ${response.statusText}`)
       }
@@ -733,7 +733,7 @@ export class AICustomerServiceService {
           'Authorization': `Bearer ${this.apiKey}`,
         },
         body: JSON.stringify(message),
-      })
+      });
       if (!response.ok) {
         throw new Error(`Add message API error: ${response.statusText}`)
       }
@@ -754,7 +754,7 @@ export class AICustomerServiceService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
         },
-      })
+      });
       if (!response.ok) {
         throw new Error(`AI response API error: ${response.statusText}`)
       }
@@ -774,7 +774,7 @@ export class AICustomerServiceService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
         },
-      })
+      });
       if (!response.ok) {
         throw new Error(`Get customer profile API error: ${response.statusText}`)
       }
@@ -794,7 +794,7 @@ export class AICustomerServiceService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
         },
-      })
+      });
       if (!response.ok) {
         throw new Error(`Get metrics API error: ${response.statusText}`)
       }
@@ -806,12 +806,12 @@ export class AICustomerServiceService {
   }
   async searchTickets(query: string, filters?: Record<string, any>): Promise<CustomerTicket[]> {
     try {
-      const params = new URLSearchParams({ query, ...filters })
+      const params = new URLSearchParams({ query, ...filters });
       const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/search?${params}`, {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
         },
-      })
+      });
       if (!response.ok) {
         throw new Error(`Search tickets API error: ${response.statusText}`)
       }
@@ -838,7 +838,7 @@ export class AICustomerServiceService {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`,
         },
-      })
+      });
       if (!response.ok) {
         throw new Error(`Auto assign tickets API error: ${response.statusText}`)
       }
@@ -857,7 +857,7 @@ export class AICustomerServiceService {
           'Authorization': `Bearer ${this.apiKey}`,
         },
         body: JSON.stringify({ timeframe, format }),
-      })
+      });
       if (!response.ok) {
         throw new Error(`Generate report API error: ${response.statusText}`)
       }

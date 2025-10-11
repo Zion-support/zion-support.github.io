@@ -7,10 +7,6 @@
   }
   },
 
-
-
-
-
   "announcements": {
     id: "announcements"
     name: "Announcements"
@@ -56,16 +52,12 @@ function CategoryContent({
   category,
   IconComponent,
 
-
-
   user}: {
   categoryId: string
   category: ForumCategoryInfo
   IconComponent: React.ComponentType<any>
   user: any
 }) {
-
-
 
   const [searchQuery, setSearchQuery] = useState(""),
   const { featuredPosts, recentPosts } = useCommunity(),
@@ -74,17 +66,10 @@ function CategoryContent({
   const categoryPosts = [
     ...featuredPosts.filter(post => post.categoryId === categoryId),
 
-
-
-
-
     ...recentPosts.filter(post => post.categoryId === categoryId)
   ].filter((post, index, self) => 
     // Remove duplicates by id
     index === self.findIndex(p => p.id === post.id)
-
-
-
 
   // Apply search filter
   const filteredPosts = searchQuery
@@ -108,19 +93,10 @@ function CategoryContent({
   const { isFollowed, follow, unfollow } = useFollowedCategories(),
   const { toast } = useToast(),
 
-
-
-
-
-
-
-
   const handleFollow = () => {
     if (!user) {
-      toast({ title: 'Login required', description: 'Please sign in to follow this category' })
+      toast({ title: 'Login required', description: 'Please sign in to follow this category' });
       return
-
-
 
 import React from 'react'
 import { logInfo } from '@/utils/productionLogger'
@@ -253,7 +229,6 @@ function CategoryContent({
         </div>
       </div>
 
-
 /**
  * CategoryContent - Function description
  */
@@ -298,8 +273,7 @@ if ( {) {
   log_info ('CategoryContent - filtered_posts:', { data: filtered_posts }),
   const category = category_id ? categories_info[category_id] : null
   const IconComponent = category ? icon_map[category.icon as keyof typeof icon_map] : null
-}
-  )
+});
 }
 
 </$1></a></a>

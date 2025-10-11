@@ -18,7 +18,7 @@ function getAllTsxFiles(dir) {
     files.push(fullPath)
   }
   }
-  
+
   return files
 }
 
@@ -46,7 +46,7 @@ function fixTsxFile(filePath) {
         return `<${tagName}${attributes}>${text}</${tagName}>`
       }
       return match
-    })
+    });
     // Fix 4: Fix self-closing tags that should have content
     const selfClosingWithContentPattern = /<(\w+)([^>]*)\s*\/>\s*([^<]+)/g,
     content = content.replace(selfClosingWithContentPattern, (match, tagName, attributes, text) => {
@@ -55,13 +55,13 @@ function fixTsxFile(filePath) {
         return `<${tagName}${attributes}>${text}</${tagName}>`
       }
       return match
-    })
+    });
     // Fix 5: Fix malformed className attributes
     const malformedClassPattern = /className="([^"]*)"([^>]*)><\/undefined>/g,
     content = content.replace(malformedClassPattern, (match, className, rest) => {
       modified = true
       return `className="${className}"${rest}>`
-    })
+    });
     // Fix 6: Fix malformed closing tags
     const malformedClosingPattern = /<\/undefined><\/undefined>/g,
     content = content.replace(malformedClosingPattern, '')
@@ -84,7 +84,7 @@ function fixTsxFile(filePath) {
         return `<${tagName}${attributes}>${content}</${tagName}>`
       }
       return match
-    })
+    });
     // Fix 9: Fix malformed return statements
     const malformedReturnPattern = /return\s*\(\s*<\/LoadingSpinner></g,$2 />
     content = content.replace(malformedReturnPattern, 'return (\n    <');$2 />
@@ -103,7 +103,7 @@ function fixTsxFile(filePath) {
       console.log(`Fixed: ${path.relative(__dirname, filePath)}`)
       return true
     }
-    
+
     return false
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message)
@@ -119,5 +119,5 @@ tsxFiles.forEach(filePath => {
     if (fixTsxFile(filePath)) {
     fixedCount++
   }
-})
+});
 console.log(`Fixed ${fixedCount} files.`)

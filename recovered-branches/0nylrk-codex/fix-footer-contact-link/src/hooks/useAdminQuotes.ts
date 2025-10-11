@@ -15,9 +15,9 @@ export const useAdminQuotes = () => {
   const { data: allQuotes = [], isLoading, error } = useQuery({
     queryKey: ['quotes', 'admin'],
     queryFn: () => quoteRequestService.getAll(),
-    enabled: true})
+    enabled: true});
     enabled: true,
-  })
+  });
   // Filter quotes based on selected filters
   const filteredQuotes = allQuotes.filter((quote) => {
     // Status filter
@@ -59,7 +59,7 @@ export const useAdminQuotes = () => {
       }
     }
     return true
-  })
+  });
   // Update quote status mutation
   const updateStatusMutation = useMutation({
     mutationFn: ({ id, status }: { id: string; status: QuoteStatus }) => 
@@ -68,17 +68,17 @@ export const useAdminQuotes = () => {
       toast({
         title: "Status updated",
         description: "The quote request status has been updated"
-      })
-      queryClient.invalidateQueries({ queryKey: ['quotes', 'admin'] })
+      });
+      queryClient.invalidateQueries({ queryKey: ['quotes', 'admin'] });
     },
     onError: (error: Error) => {
       toast({
         title: "Error",
         description: "Failed to update status: " + error.message,
         variant: "destructive"
-      })
+      });
     }
-  })
+  });
   // Archive/Unarchive mutation
   const toggleArchiveMutation = useMutation({
     mutationFn: ({ id, isArchived }: { id: string; isArchived: boolean }) => 
@@ -89,17 +89,17 @@ export const useAdminQuotes = () => {
         description: variables.isArchived 
           ? "The quote request has been archived" 
           : "The quote request has been moved back to active quotes"
-      })
-      queryClient.invalidateQueries({ queryKey: ['quotes', 'admin'] })
+      });
+      queryClient.invalidateQueries({ queryKey: ['quotes', 'admin'] });
     },
     onError: (error: Error) => {
       toast({
         title: "Error",
         description: "Failed to update quote: " + error.message,
         variant: "destructive"
-      })
+      });
     }
-  })
+  });
   // Delete mutation
   const deleteMutation = useMutation({
     mutationFn: (id: string) => quoteRequestService.delete(id),
@@ -107,17 +107,17 @@ export const useAdminQuotes = () => {
       toast({
         title: "Quote deleted",
         description: "The quote request has been permanently deleted"
-      })
-      queryClient.invalidateQueries({ queryKey: ['quotes', 'admin'] })
+      });
+      queryClient.invalidateQueries({ queryKey: ['quotes', 'admin'] });
     },
     onError: (error: Error) => {
       toast({
         title: "Error",
         description: "Failed to delete quote: " + error.message,
         variant: "destructive"
-      })
+      });
     }
-  })
+  });
   return {
     quotes: filteredQuotes,
     isLoading,

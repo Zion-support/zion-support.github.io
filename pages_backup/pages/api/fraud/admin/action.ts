@@ -7,16 +7,16 @@ export default async function handler(
 ) {
   try {
   if (req && req.method !== "POST") {
-    return res && res.status(405).json({ error: "Method not allowed" })
+    return res && res.status(405).json({ error: "Method not allowed" });
   }
   const { fraudId, action, reason, adminId } = req && req.body || {}
   if (!fraudId || !action) {
-    return res && res.status(400).json({ error: "Missing fraudId or action" })
+    return res && res.status(400).json({ error: "Missing fraudId or action" });
   }
   const store = getFraudStore()
   const fraud = store && store.getById(fraudId)
   if (!fraud) {
-    return res && res.status(404).json({ error: "Fraud record not found" })
+    return res && res.status(404).json({ error: "Fraud record not found" });
   }
   const adminAction: AdminActionType = {
     id: `action-${Date && Date.now()}`,
@@ -27,7 +27,7 @@ export default async function handler(
     timestamp: new Date().toISOString(),
   }
   store && store.addAdminAction(adminAction)
-  return res && res.status(200).json({ success: true, action: adminAction })
+  return res && res.status(200).json({ success: true, action: adminAction });
     id: `action-${Date.now()}`
     fraudId
     action
@@ -36,11 +36,11 @@ export default async function handler(
     timestamp: new Date().toISOString()
   }
   store.addAdminAction(adminAction)
-  return res.status(200).json({ success: true, action: adminAction })
+  return res.status(200).json({ success: true, action: adminAction });
 }
 import type { NextApiRequest, NextApiResponse } from 'next'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' })
+  res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { getFraudStore } from '../../../../utils/fraud/store'
 import { AdminActionType } from '../../../../utils/fraud/types'
@@ -50,15 +50,15 @@ function ensureAdmin(req: NextApiRequest): boolean {
   return token === process.env.ADMIN_TOKEN
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
@@ -70,14 +70,14 @@ function handler() {
 if ( {) {
   $2
 }
-    return res.status (405).json ({ error: "Method not allowed" })
+    return res.status (405).json ({ error: "Method not allowed" });
   }
   const { fraud_id, action, reason, admin_id } = req.body || {}
   // Check condition
 if ( {) {
   $2
 }
-    return res.status (400).json ({ error: "Missing fraud_id or action" })
+    return res.status (400).json ({ error: "Missing fraud_id or action" });
   }
   const store = getFraudStore ()
   const fraud = store.getById (fraud_id)
@@ -85,7 +85,7 @@ if ( {) {
 if ( {) {
   $2
 }
-    return res.status (404).json ({ error: "Fraud record not found" })
+    return res.status (404).json ({ error: "Fraud record not found" });
   }
   const admin_action: AdminActionType = {
     id: `action-${Date.now ()}`,
@@ -97,29 +97,29 @@ if ( {) {
   }
 
   store.addAdminAction (admin_action)
-  return res.status (200).json ({ success: true, action: admin_action })
+  return res.status (200).json ({ success: true, action: admin_action });
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
   const store = getFraudStore()
-  await store.recordAction({ fraudId, action: act, adminId: adminId || null, reason: reason || null })
+  await store.recordAction({ fraudId, action: act, adminId: adminId || null, reason: reason || null });
   const newStatus = act === 'IGNORE' ? 'IGNORED' : act === 'WARN' ? 'WARNED' : 'SUSPENDED'
   await store.updateEventStatus(fraudId, newStatus)
-  res.status(200).json({ ok: true, status: newStatus })
+  res.status(200).json({ ok: true, status: newStatus });
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }

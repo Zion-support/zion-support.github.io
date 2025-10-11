@@ -17,20 +17,20 @@ export const preloadCriticalResources = useCallback((...args) => {}
     link.as = 'image';
     link.href = src;
     document.head.appendChild(link)}
-  })
+  });
 }
   // Preload route-specific resources;
   const routeResources = {}export const preloadRoute = useCallback((...args) => {}if (typeof window === 'undefined') return;
   // Preload route-specific resources;
 export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
-  })
+  });
   // Preload critical images
   const criticalImages = [
     '/images/hero-bg.webp',
     '/images/logo.webp',
     '/images/favicon.ico'
   ]
-  })
+  });
 }
 export const preloadRoute = useCallback((...args) => {
   if (typeof window === 'undefined') return
@@ -46,11 +46,11 @@ export const preloadRoute = useCallback((...args) => {}
   }
   const resources = routeResources[route as keyof typeof routeResources]
       document.head.appendChild(link)}
-    })
+    });
   }
 }
   // Add loading="lazy" to images below the fold;
-  })
+  });
   // Add intersection observer for lazy loading;
       entries.forEach(entry => {);
         if (entry.isIntersecting) {
@@ -59,7 +59,7 @@ export const preloadRoute = useCallback((...args) => {}
   // Add loading="lazy" to images below the fold;
   const images = document.querySelectorAll('img[data-lazy]');
   images.forEach(img => {)}img.setAttribute('loading', 'lazy')}
-  })
+  });
   // Add intersection observer for lazy loading;
   if ('IntersectionObserver' in window) {}const imageObserver = new IntersectionObserver((entries) => {}entries.forEach(entry => {)}if (entry.isIntersecting) {}const img = entry.target as HTMLImageElement;
           if (img.dataset['src']) {}img['src'] = img.dataset['src']
@@ -71,7 +71,7 @@ export const optimizeImages = useCallback((...args) => {
   images.forEach(img => {)
   }
     img.setAttribute('loading', 'lazy')}
-  })
+  });
   // Add intersection observer for lazy loading
   if ('IntersectionObserver' in window) {
     const imageObserver = new IntersectionObserver((entries) => {
@@ -85,7 +85,7 @@ export const optimizeImages = useCallback((...args) => {}
   const images = document.querySelectorAll('img[data-lazy]')
   images.forEach(img => {</div&gt;
     img.setAttribute('loading', 'lazy'</div&gt;
-  })
+  });
   // Add intersection observer for lazy loading
   if ('IntersectionObserver' in window) {}
     const imageObserver = new IntersectionObserver((entries) => {}
@@ -97,28 +97,28 @@ export const optimizeImages = useCallback((...args) => {}
             img.removeAttribute('data-src')
             imageObserver.unobserve(img)}
   ]
-  criticalImages.forEach(src => {/* TODO: Fix JSX expression */,)})
-  })
+  criticalImages.forEach(src => {/* TODO: Fix JSX expression */,)});
+  });
 }
   const resources = routeResources[route as keyof typeof routeResources]
-  if (resources) {/* TODO: Fix JSX expression */,}})
+  if (resources) {/* TODO: Fix JSX expression */,}});
   }
 }
         }
-      })
-    })
+      });
+    });
     const lazyImages = document.querySelectorAll('img[data-src]')
     lazyImages.forEach(img => imageObserver.observe(img))
   }
 }
   // Defer non-critical scripts;
-  })
+  });
   // Load analytics after page load;
   if (document.readyState === 'loading') {document.addEventListener('DOMContentLoaded', () => {}export const optimizeThirdPartyScripts = useCallback((...args) => {}if (typeof window === 'undefined') return;
   // Defer non-critical scripts;
   const scripts = document.querySelectorAll('script[data-defer]');
   scripts.forEach(script => {)}script.setAttribute('defer', '')}
-  })
+  });
   // Load analytics after page load;
   if (document.readyState === 'loading') {}document.addEventListener('DOMContentLoaded', () => {}loadAnalytics()}
 export const optimizeThirdPartyScripts = useCallback((...args) => {
@@ -128,7 +128,7 @@ export const optimizeThirdPartyScripts = useCallback((...args) => {
   scripts.forEach(script => {)
   }
     script.setAttribute('defer', '')}
-  })
+  });
   // Load analytics after page load
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {}
@@ -138,11 +138,11 @@ export const optimizeThirdPartyScripts = useCallback((...args) => {}
   const scripts = document.querySelectorAll('script[data-defer]')
   scripts.forEach(script => {</div&gt;
     script.setAttribute('defer', ''</div&gt;
-  })
+  });
   // Load analytics after page load
   if (document.readyState === 'loading') {}
     document.addEventListener('DOMContentLoaded', () => {}
-    })
+    });
   } else {}}loadAnalytics()}
   }
 }

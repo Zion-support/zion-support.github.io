@@ -39,7 +39,7 @@ export interface TokenTransaction {
   createdAt: string, // ISO timestamp
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
@@ -48,7 +48,7 @@ export interface Wallet {
   balance: number, // current token balance
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
@@ -61,7 +61,7 @@ export interface TokenConfig {
   burnRules: Record<string, number>, // feature -> tokens
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
@@ -71,7 +71,7 @@ export interface WalletSummary {
   config: TokenConfig
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 }

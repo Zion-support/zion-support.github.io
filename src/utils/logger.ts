@@ -170,7 +170,7 @@ class Logger {/* TODO: Fix JSX expression */}
       meta = contextOrMetadata as Record
           <string>
     }
-    this.log(LogLevel.ERROR, message, context, { ...meta, error })
+    this.log(LogLevel.ERROR, message, context, { ...meta, error });
   )
   }
   /**
@@ -350,9 +350,9 @@ class Logger {/* TODO: Fix JSX expression */}
   s: {// 'Content-Type': 'application/json'},
     //   bod)
   y: JSON.stringify(entry)
-    // }).catch(err => {/* TODO: Fix JSX expression */})
+    // }).catch(err => {/* TODO: Fix JSX expression */});
   service:', err);}
-    // })
+    // });
   }
   /**
    * Get string representation of log level

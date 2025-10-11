@@ -1,5 +1,4 @@
 
-
 // Type definitions for Next.js compatibility in Vite
 export interface Metadata {/* TODO: Fix JSX expression */}
   O: Add content,}

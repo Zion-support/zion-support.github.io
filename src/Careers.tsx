@@ -908,7 +908,7 @@ const matchesDepartment = selectedDepartment === 'All' || job.department === sel
 const matchesLocation = selectedLocation === 'All' || job.location === selectedLocation;;
 return matchesDepartment && matchesLocation;
 }
-  })
+  });
     <div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-slate">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -958,7 +958,7 @@ Join Our Mission to
 Be part of a team that's pushing the boundaries of AI, quantum technology, and cybersecurity.;
 Help us build solutions that will shape the future of business and technology.
             </p>
-            
+
             {/* Search Bar */}
             <div className="relative max-w-2xl mx-auto mb-8">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" />
@@ -1002,7 +1002,7 @@ Build the Future with Us
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">;
 Join our team of innovators, researchers, and technology leaders who are shaping the future of AI, quantum computing, and enterprise technology.
             </p>
-            
+
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto">
               <div className="relative">
@@ -1517,7 +1517,7 @@ year: 'numeric',;,
 month: 'long',;,
 day: 'numeric' 
 }
-    })
+    });
   }
   const companyValues = [;
     {;,
@@ -1719,7 +1719,7 @@ return (;
       <SEO;
 title="Careers at Zion - Join Our Team";
 description="Join the team building the future of AI and technology. Explore career opportunities at Zion's innovative marketplace platform."
-    
+
       <SEO;
 title="Careers at Zion - Join Our Team";
 description="Join the team building the future of AI and technology. Explore career opportunities at Zion's innovative marketplace platform.";
@@ -1765,7 +1765,7 @@ Our Values
 These core principles guide everything we do and shape our company culture.
             </p>
           </div>
-          
+
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Header Section */}
       <div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
@@ -1873,7 +1873,7 @@ className="object-cover w-full h-full"
               />
             </div>
           </div>
-          
+
           <div className="space-y-6">
             {filteredJobs.map((job) => (
               <div key={job.id} className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-8 hover:border-purple-500/50 transition-all duration-300">
@@ -1918,9 +1918,9 @@ to={`/careers/${job.id}}`}
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
-                
+
                 <p className="text-gray-300 mb-4">{job.description}</p>
-                
+
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                   <div>
                     <h4 className="font-semibold mb-3 text-purple-400">Requirements</h4>
@@ -1942,7 +1942,7 @@ Our Values
 The principles that guide everything we do
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {companyValues.map((value), index) => (
               <$2 />;
@@ -2025,7 +2025,7 @@ of innovation, collaboration, and continuous growth.
               <h2 className="text-3xl font-bold text-white mb-4">Featured Positions</h2>
               <p className="text-gray-300">High-priority roles with immediate openings</p>
             </div>
-            
+
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {featuredPositions.map((position)}, index) => (
                 <motion.div;
@@ -2038,7 +2038,7 @@ key={position.id}
                   <div className="h-48 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center">
                     <Briefcase className="w-16 h-16 text-cyan-400" />
                   </div>
-                  
+
                   <div className="p-6">
                     <div className="flex items-center gap-4 mb-4">
                       <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm rounded-full border border-cyan-500/30">;
@@ -2046,15 +2046,15 @@ Featured
                       </span>
                       <span className="text-gray-400 text-sm capitalize">{position.department}</span>
                     </div>
-                    
+
                     <h3 className="text-2xl font-bold text-white mb-3 hover:text-cyan-400 transition-colors duration-200">
                       {position.title}
                     </h3>
-                    
+
                     <p className="text-gray-300 mb-4 leading-relaxed">
                       {position.description}
                     </p>
-                    
+
                     <div className="flex items-center justify-between mb-4">
                       <div className="flex items-center gap-4 text-sm text-gray-400">
                         <div className="flex items-center gap-2">
@@ -2071,7 +2071,7 @@ Featured
                         </div>
                       </div>
                     </div>
-                    
+
                     <div className="mb-4">
                       <h4 className="font-semibold text-gray-300 mb-2">Key Requirements:</h4>
                       <ul className="space-y-1">
@@ -2238,7 +2238,7 @@ Learn About Culture
             </div>
           </div>
         </div>
-        
+
         {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-10 w-2 h-2 bg-blue-400 rounded-full animate-ping"></div>
@@ -2258,7 +2258,7 @@ Our Values & Culture
 We're building more than technology - we're building a culture of innovation, collaboration, and growth
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {values.map((value), index) => (
               <div key={index} className="flex items-center space-x-4">
@@ -2281,7 +2281,7 @@ Why Work With Us?
 We offer competitive benefits and a supportive environment where you can thrive and grow
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit), index) => {;
 const Icon = benefit.icon;;
@@ -2311,7 +2311,7 @@ Open Positions
 Join our team and help shape the future of AI and technology
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {openPositions.map((position), index) => (
               <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-blue-400/50 transition-all duration-300">
@@ -2321,7 +2321,7 @@ Join our team and help shape the future of AI and technology
                     {position.type}
                   </span>
                 </div>
-                
+
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center space-x-4 text-sm text-gray-300">
                     <div className="flex items-center space-x-2">
@@ -2338,7 +2338,7 @@ Join our team and help shape the future of AI and technology
                     </div>
                   </div>
                 </div>
-                
+
                     <h4 className="font-semibold mb-3 text-purple-400">Benefits</h4>
                     <ul className="space-y-2">
                       {job.benefits.map((benefit), idx) => (
@@ -2404,7 +2404,7 @@ title="Careers at Zion Tech Group - Join Our Team";
 description="Join Zion Tech Group and be part of a team that's shaping the future of technology. Explore exciting career opportunities in AI, cloud computing, cybersecurity, and more.";
 keywords="careers, jobs, employment, Zion Tech Group, technology jobs, AI jobs, remote work"
       />
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
@@ -2412,7 +2412,7 @@ keywords="careers, jobs, employment, Zion Tech Group, technology jobs, AI jobs, 
             <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
             <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl"></div>
           </div>
-          
+
           <motion.div;
 className="max-w-7xl mx-auto text-center relative z-10";
 initial={{ opacity: 0}}, y: 30 }}
@@ -2430,7 +2430,7 @@ Join Our
                 {" "}Innovation Team
               </span>
             </motion.h1>
-            
+
             <motion.p;
 className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed";
 initial={{ opacity: 0}}, y: 30 }}
@@ -2440,7 +2440,7 @@ initial={{ opacity: 0}}, y: 30 }}
 Be part of a team that's revolutionizing technology and shaping the future.;
 We're looking for passionate individuals who want to make a real impact.
             </motion.p>
-            
+
             <motion.div;
 className="flex flex-col sm:flex-row gap-4 justify-center";
 initial={{ opacity: 0}}, y: 30 }}
@@ -2484,7 +2484,7 @@ Why Work With Zion Tech Group?
 We're not just another tech company. We're a team of innovators, problem-solvers, and future-shapers.
               </p>
             </motion.div>
-            
+
             <motion.div;
 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";
 variants={staggerContainer}
@@ -2525,7 +2525,7 @@ Benefits & Perks
 We take care of our team so you can focus on doing your best work
               </p>
             </motion.div>
-            
+
             <motion.div;
 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";
 variants={staggerContainer}
@@ -2566,7 +2566,7 @@ Open Positions
 Ready to join our team? Check out our current openings and find your perfect fit
               </p>
             </motion.div>
-            
+
             <motion.div;
 className="grid grid-cols-1 lg:grid-cols-2 gap-8";
 variants={staggerContainer}
@@ -2587,7 +2587,7 @@ variants={fadeInUp}
                       {position.type}
                     </span>
                   </div>
-                  
+
                   <div className="flex items-center text-gray-400 text-sm mb-4 space-x-4">
                     <span className="flex items-center">
                       <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -2613,9 +2613,9 @@ variants={fadeInUp}
                       {position.experience}
                     </span>
                   </div>
-                  
+
                   <p className="text-gray-300 mb-4 leading-relaxed">{position.description}</p>
-                  
+
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-white mb-2">Required Skills:</h4>
                     <div className="flex flex-wrap gap-2">
@@ -2629,7 +2629,7 @@ key={skillIndex}
                       ))}
                     </div>
                   </div>
-                  
+
                   <$2 />;
 href={`mailto:careers@ziontechgroup.com?subject=Application for ${position.title}}`}
                     className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
@@ -2713,9 +2713,9 @@ Send Your Resume
 Apply Now
                   </button>
                 </div>
-                
+
                 <p className="text-gray-300 mb-4">{position.description}</p>
-                
+
                 <div>
                   <h4 className="text-sm font-semibold text-cyan-400 mb-2">Required Skills:</h4>
                   <div className="flex flex-wrap gap-2">
@@ -2739,7 +2739,7 @@ Help us shape the future of technology. Join a team of innovators,;
 researchers, and industry experts committed to transforming businesses;
 through cutting-edge AI solutions.
             </p>
-            
+
             {/* Search and Filter */}
             <div className="max-w-4xl mx-auto mb-8">
               <div className="relative mb-6">
@@ -2753,7 +2753,7 @@ value={searchTerm}
                   className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 />
               </div>
-              
+
               <div className="flex flex-wrap gap-4 justify-center">
                 <div className="flex items-center gap-2">
                   <Filter className="w-4 h-4 text-gray-400" />
@@ -2767,7 +2767,7 @@ value={selectedDepartment}
                     ))}
                   </select>
                 </div>
-                
+
                 <div className="flex items-center gap-2">
                   <MapPin className="w-4 h-4 text-gray-400" />
                   <select;
@@ -2820,15 +2820,15 @@ Featured
                       {job.department}
                     </span>
                   </div>
-                  
+
                   <h3 className="text-2xl font-bold text-white mb-4 leading-tight">
                     {job.title}
                   </h3>
-                  
+
                   <p className="text-gray-300 mb-6 leading-relaxed">
                     {job.description}
                   </p>
-                  
+
                   <div className="flex items-center space-x-6 mb-6 text-sm text-gray-400">
                     <div className="flex items-center">
                       <MapPin className="w-4 h-4 mr-2" />
@@ -2843,7 +2843,7 @@ Featured
                       {job.experience}
                     </div>
                   </div>
-                  
+
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-cyan-400 mb-3">Key Requirements</h4>
                     <ul className="space-y-1">
@@ -2855,7 +2855,7 @@ Featured
                       ))}
                     </ul>
                   </div>
-                  
+
                   <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium py-3 px-4 rounded-lg transition-all duration-200 flex items-center justify-center group">;
 Apply Now
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
@@ -2884,15 +2884,15 @@ key={job.id}
                     {job.department}
                   </span>
                 </div>
-                
+
                 <h3 className="text-xl font-bold text-white mb-4 leading-tight">
                   {job.title}
                 </h3>
-                
+
                 <p className="text-gray-300 mb-6 text-sm leading-relaxed line-clamp-3">
                   {job.description}
                 </p>
-                
+
                 <div className="flex items-center space-x-4 mb-6 text-sm text-gray-400">
                   <div className="flex items-center">
                     <MapPin className="w-4 h-4 mr-2" />
@@ -2903,7 +2903,7 @@ key={job.id}
                     {job.type}
                   </div>
                 </div>
-                
+
                 <div className="mb-6">
                   <h4 className="text-xs font-semibold text-cyan-400 mb-2">Requirements</h4>
                   <div className="flex flex-wrap gap-1">
@@ -2917,7 +2917,7 @@ key={index}
                     ))}
                   </div>
                 </div>
-                
+
                 <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium py-3 px-4 rounded-lg transition-all duration-200 flex items-center justify-center group">;
 Apply Now
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
@@ -3156,7 +3156,7 @@ export default Careers
               <h3 className="text-xl font-semibold mb-3">Application</h3>
               <p className="text-zion-slate-light">Submit your resume and cover letter through our portal</p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-white">2</span>
@@ -3164,7 +3164,7 @@ export default Careers
               <h3 className="text-xl font-semibold mb-3">Screening</h3>
               <p className="text-zion-slate-light">Initial review and phone screening with our team</p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-purple-light rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-white">3</span>
@@ -3172,7 +3172,7 @@ export default Careers
               <h3 className="text-xl font-semibold mb-3">Interview</h3>
               <p className="text-zion-slate-light">Technical assessment and team interviews</p>
             </div>
-            
+
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-white">4</span>
@@ -3207,7 +3207,7 @@ Learn More About Us
       </section>
     </div>
       </main>
-    
+
   )
 }
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></p></p></p></p></p></p></p></ul></ul></li></li></section></section></section></section></section></section></section></section>

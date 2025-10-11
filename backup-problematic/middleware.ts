@@ -12,7 +12,7 @@ export function middleware(request: NextRequest) {
     'X-Content-Type-Options': 'nosniff',
     'X-Frame-Options': 'DENY',
     'X-XSS-Protection': '1; mode=block',
-    
+
     // Content Security Policy
     'Content-Security-Policy': [
       "default-src 'self'",
@@ -26,13 +26,13 @@ export function middleware(request: NextRequest) {
       "base-uri 'self'",
       "form-action 'self'",
       "upgrade-insecure-requests"].join('; '),
-    
+
     // Force HTTPS
     'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload',
-    
+
     // Referrer policy
     'Referrer-Policy': 'strict-origin-when-cross-origin',
-    
+
     // Permissions policy (Feature-Policy replacement)
     'Permissions-Policy': [
       'camera=()',
@@ -51,7 +51,7 @@ export function middleware(request: NextRequest) {
   // Apply all security headers
   Object.entries(securityHeaders).forEach(([key, value]) => {
     response.headers.set(key, value)
-  })
+  });
   // CORS headers for API routes
   if (request.nextUrl.pathname.startsWith('/api/')) {
     response.headers.set('Access-Control-Allow-Origin', process.env.ALLOWED_ORIGIN || '*')
@@ -62,20 +62,20 @@ export function middleware(request: NextRequest) {
 
   // Handle preflight requests
   if (request.method === 'OPTIONS') {
-    return new NextResponse(null, { status: 204, headers: response.headers })
+    return new NextResponse(null, { status: 204, headers: response.headers });
 export function middleware(reques)
   t: NextRequest) {/* TODO: Fix JSX expression */}
   }
   // Apply all security headers
   Object.entries(securityHeaders).forEach(([key, value]) => {/* TODO: Fix JSX expression */}
-  })
+  });
   // CORS headers for API routes
   if (request.nextUrl.pathname.startsWith('/api/')) {/* TODO: Fix JSX expression */}
   }
 
   // Handle preflight requests
   if (request.method === 'OPTIONS') {/* TODO: Fix JSX expression */}
-  s: response.headers })
+  s: response.headers });
   }
 
   return response

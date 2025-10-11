@@ -179,7 +179,7 @@ const QuantumAIHybrid202, 5 = () => {
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">,"
   Quantum-AI Hybrid Systems 2025: </h1> <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">" />
   Practical Near-Term Implementation,
-  
+
             </h1>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">,"</p>
 const QuantumAIHybrid202, 5 = () => {/* TODO: Fix JSX expression */}

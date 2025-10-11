@@ -64,7 +64,7 @@ const defaultConfig: LoggerConfig = {
  * @example;
  * ```typescript;
  * const logger = EnhancedLogger.getInstance();
- * logger.info('User logged in', undefined, {userId: '123' ,)})
+ * logger.info('User logged in', undefined, {userId: '123' ,)});
  * logger.error('API request failed', {error: err ,)}, err);
  * ``;
  */;
@@ -72,9 +72,9 @@ export class EnhancedLogger {private static instance: EnhancedLogger,}
   private config: LoggerConfig,
   private logs: LogEntry[] = [],
   private performanceMarks: Map<string, number> = new Map()}private constructor(config: Partial<LoggerConfig> = {,)}) {}this.config = {...defaultConfig, ...config}* const logger = EnhancedLogger.getInstance();
- * logger.info('User logged in', undefined, {/* TODO: Fix JSX expression */,)})
-  d: '123' ,})
- * logger.error('API request failed', {/* TODO: Fix JSX expression */,)})
+ * logger.info('User logged in', undefined, {/* TODO: Fix JSX expression */,)});
+  d: '123' ,});
+ * logger.error('API request failed', {/* TODO: Fix JSX expression */,)});
   r: err ,}, err);`;
  * ```;
  */;
@@ -109,7 +109,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */,}}g: Partial<LoggerC
    */;
   public debug(message: string, data?: Record<string, unknown>, source?: string): void {this.log(LogLevel.DEBUG, message, data, source);}
    * @example;`;
-   * ```typescript;}* logger.debug('Component rendered', {/* TODO: Fix JSX expression */,)})
+   * ```typescript;}* logger.debug('Component rendered', {/* TODO: Fix JSX expression */,)});
   s: componentProps ,}, 'MyComponent');`;
    * ```;
    */;
@@ -128,7 +128,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */,}}g: Partial<LoggerC
    */;
   public info(message: string, data?: Record<string, unknown>, source?: string): void {this.log(LogLevel.INFO, message, data, source);}
    * @example;`;
-   * ```typescript;}* logger.info('User action completed', {/* TODO: Fix JSX expression */,)})
+   * ```typescript;}* logger.info('User action completed', {/* TODO: Fix JSX expression */,)});
   n: 'submit_form' ,}, 'FormComponent');`;
    * ```;
    */;
@@ -147,7 +147,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */,}}g: Partial<LoggerC
    */;
   public warn(message: string, data?: Record<string, unknown>, source?: string): void {this.log(LogLevel.WARN, message, data, source);}
    * @example;`;
-   * ```typescript;}* logger.warn('Deprecated API used', {/* TODO: Fix JSX expression */,)})
+   * ```typescript;}* logger.warn('Deprecated API used', {/* TODO: Fix JSX expression */,)});
   i: 'oldFunction' ,}, 'LegacyModule');`;
    * ```;
    */;
@@ -173,7 +173,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */,}}g: Partial<LoggerC
  * @example
  * ```typescript
  * const logger = EnhancedLogger.getInstance()
- * logger.info('User logged in', undefined, { userId: '123' })
+ * logger.info('User logged in', undefined, { userId: '123' });
  * logger.error('API request failed', { error: err }, err)
  * ``
  */
@@ -186,9 +186,9 @@ export class EnhancedLogger {
   private constructor(config: Partial</string><LoggerConfig> = {}) {}
     this.config = { ...defaultConfig, ...config }
  * const logger = EnhancedLogger.getInstance()
- * logger.info('User logged in', undefined, {/* TODO: Fix JSX expression */})
-  d: '123' })
- * logger.error('API request failed', {/* TODO: Fix JSX expression */})
+ * logger.info('User logged in', undefined, {/* TODO: Fix JSX expression */});
+  d: '123' });
+ * logger.error('API request failed', {/* TODO: Fix JSX expression */});
   r: err }, err);`
  * ```
  */
@@ -238,7 +238,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * @example;`
    * ```typescript
   }
-   * logger.debug('Component rendered', {/* TODO: Fix JSX expression */})
+   * logger.debug('Component rendered', {/* TODO: Fix JSX expression */});
   s: componentProps }, 'MyComponent');`
    * ```
    */
@@ -261,7 +261,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * @example;`
    * ```typescript
   }
-   * logger.info('User action completed', {/* TODO: Fix JSX expression */})
+   * logger.info('User action completed', {/* TODO: Fix JSX expression */});
   n: 'submit_form' }, 'FormComponent');`
    * ```
    */
@@ -284,7 +284,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * @example;`
    * ```typescript
   }
-   * logger.warn('Deprecated API used', {/* TODO: Fix JSX expression */})
+   * logger.warn('Deprecated API used', {/* TODO: Fix JSX expression */});
   i: 'oldFunction' }, 'LegacyModule');`
    * ```
    */
@@ -546,7 +546,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     if (!this.config.remoteEndpoint) return;
       await fetch(this.config.remoteEndpoint, {);
         method: 'POST'),
-        headers: {),}'Content-Type': 'application/json')})
+        headers: {),}'Content-Type': 'application/json')});
         body: JSON.stringify({,)
   R: 
         case LogLevel.FATA,
@@ -570,16 +570,16 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
         method: 'POST'),
         headers: {)
   }
-          'Content-Type': 'application/json')})
+          'Content-Type': 'application/json')});
         body: JSON.stringify()
     ),
-          ...entry),}timestamp: entry.timestamp.toISOString(),})
-      })
+          ...entry),}timestamp: entry.timestamp.toISOString(),});
+      });
         bod,
-  y: JSON.stringify({/* TODO: Fix JSX expression */})
-        })
-      })
-    } catch (error) {/* TODO: Fix JSX expression */,}})
+  y: JSON.stringify({/* TODO: Fix JSX expression */});
+        });
+      });
+    } catch (error) {/* TODO: Fix JSX expression */,}});
     }
   }
     ,
@@ -613,8 +613,8 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
       byLevel[levelName] = (byLevel[levelName] || 0) + 1
       if (log.source) {
         bySource[log.source] = (bySource[log.source] || 0) + 1;}}
-    })
-    })
+    });
+    });
     return {/* TODO: Fix JSX expression */,}}}
   }
   public exportLogs(): string {

@@ -24,15 +24,15 @@ export function useContractTemplates() {
       const { data, error } = await supabase
         .from('contract_templates')
         .select('*')
-        .order('is_default', { ascending: false })
-        .order('created_at', { ascending: false })
+        .order('is_default', { ascending: false });
+        .order('created_at', { ascending: false });
       if (error) {
         throw error
       }
       return data as ContractTemplate[]
     },
     enabled: isAuthenticated && !!user
-  })
+  });
   // Create a new template
   const createTemplate = useMutation({
     mutationFn: async ({ 
@@ -51,7 +51,7 @@ export function useContractTemplates() {
         if (isDefault) {
           await supabase
             .from('contract_templates')
-            .update({ is_default: false })
+            .update({ is_default: false });
             .eq('user_id', user.id)
             .eq('is_default', true)
         }
@@ -63,7 +63,7 @@ export function useContractTemplates() {
             title: title,
             template_data: templateData,
             is_default: isDefault
-          })
+          });
           .select()
           .single()
         if (error) throw error
@@ -73,23 +73,23 @@ export function useContractTemplates() {
       }
     },
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] })
+      queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] });
       toast({
         title: "Template saved",
-        description: "Contract template has been successfully saved."})
+        description: "Contract template has been successfully saved."});
         description: "Contract template has been successfully saved.",
-      })
+      });
     },
     onError: (error: Error) => {
       console.error("Error saving template:", error)
       toast({
         title: "Failed to save template",
         description: "There was an error saving your contract template.",
-        variant: "destructive"})
+        variant: "destructive"});
         variant: "destructive",
-      })
+      });
     }
-  })
+  });
   // Update an existing template
   const updateTemplate = useMutation({
     mutationFn: async ({
@@ -110,7 +110,7 @@ export function useContractTemplates() {
         if (isDefault) {
           await supabase
             .from('contract_templates')
-            .update({ is_default: false })
+            .update({ is_default: false });
             .eq('user_id', user.id)
             .eq('is_default', true)
             .neq('id', templateId)
@@ -123,7 +123,7 @@ export function useContractTemplates() {
             template_data: templateData,
             is_default: isDefault,
             updated_at: new Date().toISOString()
-          })
+          });
           .eq('id', templateId)
           .eq('user_id', user.id)
           .select()
@@ -135,23 +135,23 @@ export function useContractTemplates() {
       }
     },
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] })
+      queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] });
       toast({
         title: "Template updated",
-        description: "Contract template has been successfully updated."})
+        description: "Contract template has been successfully updated."});
         description: "Contract template has been successfully updated.",
-      })
+      });
     },
     onError: (error: Error) => {
       console.error("Error updating template:", error)
       toast({
         title: "Failed to update template",
         description: "There was an error updating your contract template.",
-        variant: "destructive"})
+        variant: "destructive"});
         variant: "destructive",
-      })
+      });
     }
-  })
+  });
   // Delete a template
   const deleteTemplate = useMutation({
     mutationFn: async (templateId: string) => {
@@ -169,23 +169,23 @@ export function useContractTemplates() {
       }
     },
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] })
+      queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] });
       toast({
         title: "Template deleted",
-        description: "Contract template has been successfully deleted."})
+        description: "Contract template has been successfully deleted."});
         description: "Contract template has been successfully deleted.",
-      })
+      });
     },
     onError: (error: Error) => {
       console.error("Error deleting template:", error)
       toast({
         title: "Failed to delete template",
         description: "There was an error deleting your contract template.",
-        variant: "destructive"})
+        variant: "destructive"});
         variant: "destructive",
-      })
+      });
     }
-  })
+  });
   // Set a template as default
   const setDefaultTemplate = useMutation({
     mutationFn: async (templateId: string) => {
@@ -195,13 +195,13 @@ export function useContractTemplates() {
         // First unset any existing default
         await supabase
           .from('contract_templates')
-          .update({ is_default: false })
+          .update({ is_default: false });
           .eq('user_id', user.id)
           .eq('is_default', true)
         // Then set the new default
         const { error } = await supabase
           .from('contract_templates')
-          .update({ is_default: true })
+          .update({ is_default: true });
           .eq('id', templateId)
           .eq('user_id', user.id)
         if (error) throw error
@@ -210,23 +210,23 @@ export function useContractTemplates() {
       }
     },
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] })
+      queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] });
       toast({
         title: "Default template set",
-        description: "Default contract template has been updated."})
+        description: "Default contract template has been updated."});
         description: "Default contract template has been updated.",
-      })
+      });
     },
     onError: (error: Error) => {
       console.error("Error setting default template:", error)
       toast({
         title: "Failed to set default template",
         description: "There was an error setting your default contract template.",
-        variant: "destructive"})
+        variant: "destructive"});
         variant: "destructive",
-      })
+      });
     }
-  })
+  });
   return {
     templates,
     isLoading: isLoading || isLoadingTemplates,

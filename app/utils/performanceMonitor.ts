@@ -56,9 +56,9 @@ interface PerformanceMetrics {}
             }
 if (clsValue > 0) {}this.recordMetric('CLS', clsValue);
   private initializeObservers(): void {/* TODO: Fix JSX expression */,}}}
-          })
-        })
-          })
+          });
+        });
+          });
           if (clsValue > 0) {/* TODO: Fix JSX expression */,}}
 }
     }
@@ -66,14 +66,14 @@ if (clsValue > 0) {}this.recordMetric('CLS', clsValue);
             this.logMetric(metricKey as string, entry.startTime);
           }
         }
-observer.observe({entryTypes: ['paint'] ,)})
+observer.observe({entryTypes: ['paint'] ,)});
       this.observers.push(observer);
     } catch (error) {}}
             (this.metrics as any)[metricKey] = entry.startTime
             this.logMetric(metricKey as string, entry.startTime)
           }
         }
-observer.observe({ entryTypes: ['paint'] })
+observer.observe({ entryTypes: ['paint'] });
       this.observers.push(observer)
     } catch (error) {}
       }
@@ -83,16 +83,16 @@ observer.observe({ entryTypes: ['paint'] })
   e: string, metricKe);
   y: keyof PerformanceMetrics): void {/* TODO: Fix JSX expression */,}}}
         }
-      })
-      observer.observe({/* TODO: Fix JSX expression */,)})
-  s: ['paint'] ,})
+      });
+      observer.observe({/* TODO: Fix JSX expression */,)});
+  s: ['paint'] ,});
       this.observers.push(observer);
     } catch (error) {/* TODO: Fix JSX expression */,}}
         const entries = list.getEntries()
         const lastEntry = entries[entries.length - 1]
         this.metrics.lcp = lastEntry.startTime
         this.logMetric('lcp', lastEntry.startTime)
-observer.observe({ entryTypes: ['largest-contentful-paint'] })
+observer.observe({ entryTypes: ['largest-contentful-paint'] });
       this.observers.push(observer)
     } catch (error) {}
       }
@@ -119,14 +119,14 @@ observer.observe({ entryTypes: ['largest-contentful-paint'] })
           }
         }
   }
-  private observeLCP(): void {/* TODO: Fix JSX expression */,}}})
-      observer.observe({/* TODO: Fix JSX expression */,)})
-  s: ['largest-contentful-paint'] ,})
+  private observeLCP(): void {/* TODO: Fix JSX expression */,}}});
+      observer.observe({/* TODO: Fix JSX expression */,)});
+  s: ['largest-contentful-paint'] ,});
       this.observers.push(observer);
     } catch (error) {/* TODO: Fix JSX expression */,}}
   }
   private observeFID(): void {/* TODO: Fix JSX expression */,}}}
-      })
+      });
   }
   private setupCustomMetrics(): void {// Time to First Byte;}
     if (performance.timing) {
@@ -149,7 +149,7 @@ observer.observe({ entryTypes: ['largest-contentful-paint'] })
             this.analyzeResource(resourceEntry);
           }
         }
-observer.observe({entryTypes: ['resource'] ,)})
+observer.observe({entryTypes: ['resource'] ,)});
       this.observers.push(observer);
     } catch (error) {}}
   }
@@ -160,17 +160,17 @@ observer.observe({entryTypes: ['resource'] ,)})
     }
     // Track large resources;
     if (size > 100000) {// 100KB;}this.addCustomMetric(`largeResource_${entry.name)}`, size);
-      observer.observe({/* TODO: Fix JSX expression */})
-  s: ['largest-contentful-paint'] })
+      observer.observe({/* TODO: Fix JSX expression */});
+  s: ['largest-contentful-paint'] });
       this.observers.push(observer)
     } catch (error) {/* TODO: Fix JSX expression */}
       }
   }
   private observeFID(): void {/* TODO: Fix JSX expression */}
         }
-      })
-      observer.observe({/* TODO: Fix JSX expression */})
-  s: ['first-input'] })
+      });
+      observer.observe({/* TODO: Fix JSX expression */});
+  s: ['first-input'] });
       this.observers.push(observer)
     } catch (error) {/* TODO: Fix JSX expression */}
       }
@@ -180,7 +180,7 @@ observer.observe({entryTypes: ['resource'] ,)})
         }
         this.metrics.cls = clsValue
         this.logMetric('cls', clsValue)
-observer.observe({ entryTypes: ['layout-shift'] })
+observer.observe({ entryTypes: ['layout-shift'] });
       this.observers.push(observer)
     } catch (error) {}
       }
@@ -275,13 +275,13 @@ observer.observe({ entryTypes: ['layout-shift'] })
   }
   private setupResourceTiming(): void {/* TODO: Fix JSX expression */,}}}
         }
-      })
+      });
   e: string, valu);
   e: number): void {/* TODO: Fix JSX expression */,}}`;
       }ms`);
     }
     // Send to analytics if available;
-    if (typeof window !== 'undefined' && (window as any).gtag) {/* TODO: Fix JSX expression */,}})
+    if (typeof window !== 'undefined' && (window as any).gtag) {/* TODO: Fix JSX expression */,}});
     }
   }
   getMetrics(): PerformanceMetrics {/* TODO: Fix JSX expression */,}}return {...this.metrics}}}
@@ -298,8 +298,8 @@ generateReport(): string {const score = this.getScore();}
     const metrics = this.getMetrics();
     return `;
 Performance Report:  ,}Score: ${score,}Metrics: ${JSON.stringify(metrics, null, 2)}`;
-      observer.observe({/* TODO: Fix JSX expression */})
-  s: ['resource'] })
+      observer.observe({/* TODO: Fix JSX expression */});
+  s: ['resource'] });
       this.observers.push(observer)
     } catch (error) {/* TODO: Fix JSX expression */}
       }

@@ -174,8 +174,8 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
                 stack: entry.error.stack,
               }
             : undefined
-        })
-      })
+        });
+      });
     } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }

@@ -74,17 +74,17 @@ export const UserMenu: React.FC = () => {
             <div className="font-medium">{user?.name || 'User'}</div>
             <div className="text-gray-500">{user?.email}</div>
           </div>
-          
+
           <button className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center space-x-2">
             <User className="w-4 h-4" />
             <span>Profile</span>
           </button>
-          
+
           <button className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center space-x-2">
             <Settings className="w-4 h-4" />
             <span>Settings</span>
           </button>
-          
+
           <$2 />
             onClick={handleSignOut}
             className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center space-x-2"

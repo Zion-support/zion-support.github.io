@@ -32,7 +32,7 @@ interface EnhancedContent {
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders })
+    return new Response(null, { headers: corsHeaders });
   }
   try {
     const supabase = createClient(
@@ -49,9 +49,9 @@ serve(async (req) => {
     if (openAiKey) {
       try {
         const configuration = new Configuration({
-          apiKey: openAiKey})
+          apiKey: openAiKey});
           apiKey: openAiKey,
-        })
+        });
         const openai = new OpenAIApi(configuration)
         const prompt = `
           Project Overview: "${project.overview}"
@@ -68,9 +68,9 @@ serve(async (req) => {
           model: "gpt-3.5-turbo-instruct",
           prompt,
           max_tokens: 150,
-          temperature: 0.3})
+          temperature: 0.3});
           temperature: 0.3,
-        })
+        });
         const responseText = completion.data.choices[0]?.text || ""
         try {
           // Extract JSON from the response
@@ -139,7 +139,7 @@ serve(async (req) => {
           _message: adminNotificationContent.message,
           _type: adminNotificationContent.type,
           _related_id: adminNotificationContent.related_id
-        })
+        });
       if (notificationError) {
         console.error("Error creating admin notification:", notificationError)
       }
@@ -164,10 +164,10 @@ serve(async (req) => {
             ${enhancedContent?.projectType ? `<p><strong>Project Type:</strong> ${enhancedContent.projectType}</p>` : ''}
             <p>Please log in to your Zion AI Marketplace account to respond to this request.</p>
             <p>Best regards,<br>The Zion AI Marketplace Team</p>
-          `}})
+          `}});
           `,
         },
-      })
+      });
       console.log("Email sending result:", emailResponse)
     }
     return new Response(
@@ -180,8 +180,7 @@ serve(async (req) => {
         headers: { ...corsHeaders, "Content-Type": "application/json" },
         status: 200}
         status: 200,
-      }
-    )
+      });
   } catch (error) {
     console.error("Error processing hire request:", error.message)
     return new Response(
@@ -194,7 +193,6 @@ serve(async (req) => {
         headers: { ...corsHeaders, "Content-Type": "application/json" },
         status: 500}
         status: 500,
-      }
-    )
+      });
   }
-})
+});

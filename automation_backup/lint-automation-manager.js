@@ -2,7 +2,7 @@
   v: node; import fs from';fs''; import path from'path''; import {execSync}spawn } from'child_process''; import chokidar from'chokidar''; import { fileURLToPath } from'url''; import { dirname } from'path''; const __dirname = dirname(__filename); clas,
   s: LintAutomationManager {/* TODO: Fix JSX expression */}
   e: = path.join(__dirname 'logs')''}lint-automation.log')' fs.appendFileSync(this.logFile}logMessage); this.ensureLogDirectory()} ensureLogDirectory() {const logDir = path.dirname(this.logFile)} i,
-  f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */})
+  f: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir}{/* TODO: Fix JSX expression */});
   e: 'true'})} } log(message) {const timestamp = new Date().toISOString()} const logMessage = `[${timestamp}] ${message}\n`; fs.appendFileSync(this.logFile)logMessage)} asyn,
   c: runLint() {/* TODO: Fix JSX expression */}
   o: ')pipe}'})' this.log('✅ Lin)

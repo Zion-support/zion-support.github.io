@@ -24,7 +24,7 @@ export interface FeaturedItem {/* TODO: Fix JSX expression */}
  }
 export interface UnifiedPromotionalBannerProps {/* TODO: Fix JSX expression */}
  }
-const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = ({/* TODO: Fix JSX expression */})
+const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = ({/* TODO: Fix JSX expression */});
 }) => {/* TODO: Fix JSX expression */}
   } const buttonTheme, s={/* TODO: Fix JSX expression */}
   }
@@ -44,9 +44,9 @@ ${ animat, e, d  ? 'transiti, o, n-all, duratio, n-300, hove, r: shad, o, w-2 xl
         ${classNa, m, e}
       `}
     >
-      {/* Header, Sectio, n */})
+      {/* Header, Sectio, n */});
       <div, classNam, e = 'm, a, x-w-7xl, m, x-au, t, o'>)
-        {/* Badge, and, Date */})
+        {/* Badge, and, Date */});
         {  (bad, g, e || d, a, t, e) && (
       {/* Header, Sectio, n */}
       <div, classNam, e = 'm, a, x-w-7xl, m, x-au, t, o'>

@@ -81,7 +81,7 @@ const CloudServicesPage: React.FC = () => {
 // Cloud Services</h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium">
             Coming Soon
-  
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <$2 />
               href="tel:+13024640950" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"

@@ -8,7 +8,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   enableReporting = true,
   enableLongTaskMonitoring = true
   }) => {
-  const [metrics, setMetrics] = useState<WebVitalsMetrics>({})
+  const [metrics, setMetrics] = useState<WebVitalsMetrics>({});
   const [, setLongTasks] = useState<PerformanceEntry[]>([])
   useEffect(() => {
     // Initialize performance monitoring
@@ -29,9 +29,9 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           link.crossOrigin = hint.crossOrigin
   }
 const,
-  PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({/* TODO: Fix JSX expression */})
+  PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({/* TODO: Fix JSX expression */});
 }) => {/* TODO: Fix JSX expression */}
-  const [metrics, setMetrics] = useState<WebVitalsMetrics>({})
+  const [metrics, setMetrics] = useState<WebVitalsMetrics>({});
   const [, setLongTasks] = useState<PerformanceEntry[]>([])
   useEffect(() => {/* TODO: Fix JSX expression */}
   s://fonts.googleapis.com' },
@@ -43,9 +43,9 @@ const,
   n: 'anonymous' }
       ]
       hints.forEach(hint => {/* TODO: Fix JSX expression */}
-        })
+        });
         document.head.appendChild(link)
-      })
+      });
     }
     // Measure page load performance
 //     const pageLoadMetrics = performanceOptimizer.measurePageLoad()
@@ -57,7 +57,7 @@ const,
       const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntryList) => {,
         setLongTasks(prev => [...prev, ...entries])
     if (enableLongTaskMonitoring) {/* TODO: Fix JSX expression */}
-//         })
+//         });
       return () => {/* TODO: Fix JSX expression */}
         }
       }
@@ -73,29 +73,29 @@ const,
 //           const lcp = entry.startTime
           setMetrics(prev => ({ ...prev, LCP: lcp }))
           if (enableReporting) {
-            performanceOptimizer.reportWebVitals({ LCP: lcp })
+            performanceOptimizer.reportWebVitals({ LCP: lcp });
   useEffect(() => {/* TODO: Fix JSX expression */}
   P: lcp }))
           if (enableReporting) {/* TODO: Fix JSX expression */}
-  P: lcp })
+  P: lcp });
           }
         }
         if (entry.entryType === 'first-input') {/* TODO: Fix JSX expression */}
   D: fid }))
           if (enableReporting) {/* TODO: Fix JSX expression */}
-  D: fid })
+  D: fid });
           }
         }
         if (entry.entryType === 'layout-shift') {/* TODO: Fix JSX expression */}
   S: cls }))
           if (enableReporting) {/* TODO: Fix JSX expression */}
-  S: cls })
+  S: cls });
           }
         }
-      })
-    })
+      });
+    });
     try {/* TODO: Fix JSX expression */}
-  s: ['largest-contentful-paint', 'first-input', 'layout-shift'] })
+  s: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
     } catch (e) {/* TODO: Fix JSX expression */}
 //       }
     return () => {/* TODO: Fix JSX expression */}
@@ -131,11 +131,11 @@ const,
   onMetricsUpdate,
   onBudgetViolation;)
 }) => {/* TODO: Fix JSX expression */}
-  const [metrics, setMetrics] = useState<WebVitalsMetrics>({})
+  const [metrics, setMetrics] = useState<WebVitalsMetrics>({});
   const [isVisible, setIsVisible] = useState(false)
   const [budgetStatus, setBudgetStatus] = useState<{/* TODO: Fix JSX expression */}
-  s: string[] }>({/* TODO: Fix JSX expression */})
-  s: [] })
+  s: string[] }>({/* TODO: Fix JSX expression */});
+  s: [] });
   const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
       setMetrics(prev => ({ ...prev, ...newMetrics }))
       onMetricsUpdate?.(newMetrics)
@@ -152,11 +152,11 @@ const,
     updateMetrics()
     // Monitor long tasks
     const longTaskObserver = performanceOptimizer.monitorLongTasks((entries) => {
-//       })
+//       });
     // Monitor Web Vitals
     const reportVitals = (newMetrics: WebVitalsMetrics) => {,
   useEffect(() => {/* TODO: Fix JSX expression */}
-//       })
+//       });
     // Monitor Web Vitals
     const reportVitals = (newMetric)
   s: WebVitalsMetrics) => {/* TODO: Fix JSX expression */}
@@ -170,18 +170,18 @@ const,
           if (entry.entryType === 'paint') {
             const _paintEntry = entry as PerformancePaintTiming
             if (paintEntry.name === 'first-contentful-paint') {
-              reportVitals({ FCP: paintEntry.startTime })
+              reportVitals({ FCP: paintEntry.startTime });
     if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
-  P: paintEntry.startTime })
+  P: paintEntry.startTime });
             }
           }
           if (entry.entryType === 'largest-contentful-paint') {/* TODO: Fix JSX expression */}
-  P: lcpEntry.startTime })
+  P: lcpEntry.startTime });
           }
-        })
-      })
-      observer.observe({/* TODO: Fix JSX expression */})
-  s: ['paint', 'largest-contentful-paint'] })
+        });
+      });
+      observer.observe({/* TODO: Fix JSX expression */});
+  s: ['paint', 'largest-contentful-paint'] });
       return () => {/* TODO: Fix JSX expression */}
       }
     }
@@ -190,7 +190,7 @@ const,
   }, [enabled, updateMetrics])
   if (!enabled) return null
   return(<div className="performance-monitor">)
-      {/* Toggle button */})
+      {/* Toggle button */});
       <;)$2 />
   return (
     <div className="performance-monitor">

@@ -125,7 +125,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
 
   addCSRFTokenToForms() {/* TODO: Fix JSX expression */}
       }
-    })
+    });
   }
 
   addCSRFTokenToAJAX() {
@@ -148,7 +148,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
     const _originalXHROpen = XMLHttpRequest.prototype.open
     XMLHttpRequest.prototype.open = function (method, url, ...args) {/* TODO: Fix JSX expression */}
         }
-      })
+      });
       return originalXHROpen.call(this, method, url, ...args)
     }
   }
@@ -171,8 +171,8 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
 
   setupFormValidation() {/* TODO: Fix JSX expression */}
         }
-      })
-    })
+      });
+    });
   }
 
   validateForm(form) {
@@ -187,7 +187,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
   validateForm(form) {/* TODO: Fix JSX expression */}
       } else {/* TODO: Fix JSX expression */}
       }
-    })
+    });
     return isValid
   }
 
@@ -263,7 +263,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
   setupURLValidation() {/* TODO: Fix JSX expression */}
         }
       }
-    })
+    });
   }
 
   setupFileUploadValidation() {
@@ -279,8 +279,8 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
             return
           }
         }
-      })
-    })
+      });
+    });
   }
 
   validateFile(file) {
@@ -312,7 +312,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
         originalInnerHTML.set.call(this, encoded)
   },
       get: originalInnerHTML.get,
-    })
+    });
   }
 
   setupHTMLEncoding() {
@@ -342,7 +342,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
   setupTextEncoding() {/* TODO: Fix JSX expression */}
       },
       ge,
-  t: originalInnerHTML.get})
+  t: originalInnerHTML.get});
   }
 
   setupHTMLEncoding() {/* TODO: Fix JSX expression */}
@@ -353,7 +353,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
     }
 
     Object.entries(headers).forEach(([name, value]) => {/* TODO: Fix JSX expression */}
-    })
+    });
   }
 
   setupSecurityMonitoring() {
@@ -373,7 +373,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
   }
 
   monitorConsoleErrors() {/* TODO: Fix JSX expression */}
-        this.reportSecurityEvent('console_error', { message })
+        this.reportSecurityEvent('console_error', { message });
       }
       originalConsoleError.apply(console, args)
     }
@@ -386,7 +386,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
       if (this.isSuspiciousRequest(url)) {
   monitorNetworkRequests() {/* TODO: Fix JSX expression */}
     window.fetch = (url, options = {}) => {/* TODO: Fix JSX expression */}
-        this.reportSecurityEvent('suspicious_request', { url, options })
+        this.reportSecurityEvent('suspicious_request', { url, options });
       }
       return originalFetch(url, options)
     }
@@ -401,15 +401,15 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
               this.checkForMaliciousContent(node)
   monitorDOMChanges() {/* TODO: Fix JSX expression */}
             }
-          })
+          });
         }
-      })
-    })
+      });
+    });
     observer.observe(document.body, {)
       childList: true),
       subtree: true),
-    observer.observe(document.body, {/* TODO: Fix JSX expression */})
-    })
+    observer.observe(document.body, {/* TODO: Fix JSX expression */});
+    });
   }
 
   isSecurityError(message) {/* TODO: Fix JSX expression */}
@@ -437,7 +437,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
   }
 
   checkForMaliciousContent(node) {/* TODO: Fix JSX expression */}
-      })
+      });
       node.remove()
     }
   }
@@ -465,8 +465,8 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
     fetch('/api/security-events', {/* TODO: Fix JSX expression */}
       },
       bod)
-  y: JSON.stringify(event)}).catch(error => {/* TODO: Fix JSX expression */})
-//       })
+  y: JSON.stringify(event)}).catch(error => {/* TODO: Fix JSX expression */});
+//       });
   }
 
   showInputError(input, message) {/* TODO: Fix JSX expression */}

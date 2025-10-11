@@ -14,16 +14,16 @@ export const useEmailAuth = (
       cleanupAuthState()
       const { data, error } = await supabase.auth.signInWithPassword({
         email,
-        password})
+        password});
         password,
-      })
+      });
       if (error) {
         toast({
           title: "Login failed",
           description: error.message,
-          variant: "destructive"})
+          variant: "destructive"});
           variant: "destructive",
-        })
+        });
         return { error }
       }
       return { data }
@@ -32,9 +32,9 @@ export const useEmailAuth = (
       toast({
         title: "Login failed",
         description: error.message || "An unexpected error occurred",
-        variant: "destructive"})
+        variant: "destructive"});
         variant: "destructive",
-      })
+      });
       return { error }
     } finally {
       setIsLoading(false)
@@ -47,7 +47,7 @@ export const useEmailAuth = (
       cleanupAuthState()
       // Attempt to sign out any existing session first to prevent conflicts
       try {
-        await supabase.auth.signOut({ scope: 'global' })
+        await supabase.auth.signOut({ scope: 'global' });
       } catch (err) {
         // Continue even if signout fails
         console.log("Sign out before signup failed:", err)
@@ -60,33 +60,33 @@ export const useEmailAuth = (
           // Only store a simple display name in the profile data
           data: {
             display_name: userData?.displayName ?? userData?.name ?? ""
-          }}})
+          }}});
           },
         },
-      })
+      });
       if (error) {
         toast({
           title: "Signup failed",
           description: error.message,
-          variant: "destructive"})
+          variant: "destructive"});
           variant: "destructive",
-        })
+        });
         return { error }
       }
       toast({
         title: "Signup successful",
-        description: "Check your email for verification instructions."})
+        description: "Check your email for verification instructions."});
         description: "Check your email for verification instructions.",
-      })
+      });
       return { data }
     } catch (error: any) {
       console.error("Signup error:", error)
       toast({
         title: "Signup failed",
         description: error.message || "An unexpected error occurred",
-        variant: "destructive"})
+        variant: "destructive"});
         variant: "destructive",
-      })
+      });
       return { error }
     } finally {
       setIsLoading(false)
@@ -96,32 +96,32 @@ export const useEmailAuth = (
     try {
       setIsLoading(true)
       const { error } = await supabase.auth.resetPasswordForEmail(email, {
-        redirectTo: `${window.location.origin}/update-password`})
+        redirectTo: `${window.location.origin}/update-password`});
         redirectTo: `${window.location.origin}/update-password`,
-      })
+      });
       if (error) {
         toast({
           title: "Password reset failed",
           description: error.message,
-          variant: "destructive"})
+          variant: "destructive"});
           variant: "destructive",
-        })
+        });
         return { error }
       }
       toast({
         title: "Password reset email sent",
-        description: "Check your email for password reset instructions."})
+        description: "Check your email for password reset instructions."});
         description: "Check your email for password reset instructions.",
-      })
+      });
       return {}
     } catch (error: any) {
       console.error("Password reset error:", error)
       toast({
         title: "Password reset failed",
         description: error.message || "An unexpected error occurred",
-        variant: "destructive"})
+        variant: "destructive"});
         variant: "destructive",
-      })
+      });
       return { error }
     } finally {
       setIsLoading(false)

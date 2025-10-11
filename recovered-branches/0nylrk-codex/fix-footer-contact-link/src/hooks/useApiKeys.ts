@@ -56,7 +56,7 @@ export function useApiKeys() {
           'Authorization': `Bearer ${session.access_token}`,
           'Content-Type': 'application/json'
         }
-      })
+      });
       const result = await response.json()
       if (!response.ok) {
         throw new Error(result.error || 'Failed to fetch API keys')
@@ -68,9 +68,9 @@ export function useApiKeys() {
       toast({
         variant: "destructive",
         title: "Error fetching API keys",
-        description: err instanceof Error ? err.message : 'An unknown error occurred'})
+        description: err instanceof Error ? err.message : 'An unknown error occurred'});
         description: err instanceof Error ? err.message : 'An unknown error occurred',
-      })
+      });
     } finally {
       setLoading(false)
     }
@@ -97,8 +97,8 @@ export function useApiKeys() {
           name,
           scopes,
           expiresAt: expiresAt ? expiresAt.toISOString() : null
-        })
-      })
+        });
+      });
       const result = await response.json()
       if (!response.ok) {
         throw new Error(result.error || 'Failed to create API key')
@@ -109,9 +109,9 @@ export function useApiKeys() {
       setNewApiKey(result.key)
       toast({
         title: "API Key Created",
-        description: "Your new API key has been generated. Save it now, you won't be able to see it again."})
+        description: "Your new API key has been generated. Save it now, you won't be able to see it again."});
         description: "Your new API key has been generated. Save it now, you won't be able to see it again.",
-      })
+      });
       return result
     } catch (err) {
       console.error('Error creating API key:', err)
@@ -119,9 +119,9 @@ export function useApiKeys() {
       toast({
         variant: "destructive",
         title: "Error creating API key",
-        description: err instanceof Error ? err.message : 'An unknown error occurred'})
+        description: err instanceof Error ? err.message : 'An unknown error occurred'});
         description: err instanceof Error ? err.message : 'An unknown error occurred',
-      })
+      });
     } finally {
       setLoading(false)
     }
@@ -144,8 +144,8 @@ export function useApiKeys() {
           'Authorization': `Bearer ${session.access_token}`,
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ keyId })
-      })
+        body: JSON.stringify({ keyId });
+      });
       const result = await response.json()
       if (!response.ok) {
         throw new Error(result.error || 'Failed to regenerate API key')
@@ -158,9 +158,9 @@ export function useApiKeys() {
       setNewApiKey(result.key)
       toast({
         title: "API Key Regenerated",
-        description: "Your API key has been regenerated. Save it now, you won't be able to see it again."})
+        description: "Your API key has been regenerated. Save it now, you won't be able to see it again."});
         description: "Your API key has been regenerated. Save it now, you won't be able to see it again.",
-      })
+      });
       return result
     } catch (err) {
       console.error('Error regenerating API key:', err)
@@ -168,9 +168,9 @@ export function useApiKeys() {
       toast({
         variant: "destructive",
         title: "Error regenerating API key",
-        description: err instanceof Error ? err.message : 'An unknown error occurred'})
+        description: err instanceof Error ? err.message : 'An unknown error occurred'});
         description: err instanceof Error ? err.message : 'An unknown error occurred',
-      })
+      });
     } finally {
       setLoading(false)
     }
@@ -192,8 +192,8 @@ export function useApiKeys() {
           'Authorization': `Bearer ${session.access_token}`,
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ keyId })
-      })
+        body: JSON.stringify({ keyId });
+      });
       const result = await response.json()
       if (!response.ok) {
         throw new Error(result.error || 'Failed to revoke API key')
@@ -204,9 +204,9 @@ export function useApiKeys() {
       ))
       toast({
         title: "API Key Revoked",
-        description: "The API key has been revoked successfully."})
+        description: "The API key has been revoked successfully."});
         description: "The API key has been revoked successfully.",
-      })
+      });
       return result
     } catch (err) {
       console.error('Error revoking API key:', err)
@@ -214,9 +214,9 @@ export function useApiKeys() {
       toast({
         variant: "destructive",
         title: "Error revoking API key",
-        description: err instanceof Error ? err.message : 'An unknown error occurred'})
+        description: err instanceof Error ? err.message : 'An unknown error occurred'});
         description: err instanceof Error ? err.message : 'An unknown error occurred',
-      })
+      });
     } finally {
       setLoading(false)
     }
@@ -240,8 +240,7 @@ export function useApiKeys() {
             'Authorization': `Bearer ${session.access_token}`,
             'Content-Type': 'application/json'
           }
-        }
-      )
+        });
       const result = await response.json()
       if (!response.ok) {
         throw new Error(result.error || 'Failed to fetch API logs')
@@ -255,9 +254,9 @@ export function useApiKeys() {
       toast({
         variant: "destructive",
         title: "Error fetching API logs",
-        description: err instanceof Error ? err.message : 'An unknown error occurred'})
+        description: err instanceof Error ? err.message : 'An unknown error occurred'});
         description: err instanceof Error ? err.message : 'An unknown error occurred',
-      })
+      });
     } finally {
       setLoading(false)
     }

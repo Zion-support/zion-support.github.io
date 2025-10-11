@@ -41,9 +41,9 @@ const toastAdapter = (props: ToastProps | string) => {
   if (typeof props === 'string') {
     return globalToastManager.showToast({
       message: props,
-      type: ToastType.INFO})
+      type: ToastType.INFO});
       type: ToastType.INFO,
-    })
+    });
   }
   const { 
     title, 
@@ -79,9 +79,9 @@ const toastAdapter = (props: ToastProps | string) => {
     duration,
     persistent,
     action,
-    onRetry})
+    onRetry});
     onRetry,
-  })
+  });
 }
 // Convenience methods that use the global toast manager
 toastAdapter.success = (message: string, options?: { id?: string; duration?: number } & Record<string, any>) => {
@@ -126,7 +126,7 @@ export const useToast = () => ({
   networkError: showToast.networkError,
   authError: showToast.authError,
   validationError: showToast.validationError,
-  criticalError: showToast.criticalError})
+  criticalError: showToast.criticalError});
   criticalError: showToast.criticalError,
-})
+});
 export const toast = toastAdapter

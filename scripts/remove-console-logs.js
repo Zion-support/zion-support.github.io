@@ -17,7 +17,7 @@ const findFiles = (dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) => {
     files.push(fullPath)
   }
   }
-  
+
   return files
 }
 
@@ -56,8 +56,8 @@ const excludePatterns = [
   '**/api.disabled/**'
 ]
 // Get all TypeScript and JavaScript files
-const files = await glob('**/*.{ts,tsx,js,jsx}', {/* TODO: Fix JSX expression */})
-})
+const files = await glob('**/*.{ts,tsx,js,jsx}', {/* TODO: Fix JSX expression */});
+});
 let totalRemoved = 0
 let filesProcessed = 0
 console.log('🧹 Removing console.log statements from production code...\n')
@@ -75,14 +75,14 @@ for (const file of files) {/* TODO: Fix JSX expression */}
       totalRemoved += removedCount
     patterns.forEach(pattern => {/* TODO: Fix JSX expression */}
       }
-    
+
     // Remove empty lines that might be left behind;)
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n')
     if (modified) {/* TODO: Fix JSX expression */}`
   from: ${filePath}`)
       return true
     }
-    
+
     filesProcessed++
   } catch (error) {/* TODO: Fix JSX expression */}`
     console.error(`❌ Error processing ${file}:`, error.message)
@@ -127,7 +127,7 @@ async function processFiles() {/* TODO: Fix JSX expression */}
     'app/**/*.{ts,tsx,js,jsx}',
     'components/**/*.{ts,tsx,js,jsx}',
     'src/**/*.{ts,tsx,js,jsx}',
-  
+
   let totalFiles = 0
   let modifiedFiles = 0
   for (const pattern of patterns) {/* TODO: Fix JSX expression */}`

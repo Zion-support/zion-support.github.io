@@ -78,7 +78,7 @@ className="fixed inset-0 bg-black/50 z-40 lg:hidden";
 onClick={onClose}
         />
       )}
-      
+
       {/* Sidebar */}
       < className={cn($2 />
         "fixed left-0 top-0 z-50 h-full w-64 bg-zion-blue-dark border-r border-zion-blue-light transform transition-transform duration-300 ease-in-out lg:translate-x-0",;

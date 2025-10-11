@@ -158,7 +158,7 @@ return (;
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">;
 First Name,
-  
+
                     <div className="relative">
                       <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                       <input;
@@ -282,7 +282,7 @@ Terms of Service,
                       and{' '}
                       <a href="/privacy" className="text-cyan-400 hover: text-cyan-300">;
 Privacy Policy,
-  
+
                     </span>;
 name="subscribeNewsletter";
 checked={formData.subscribeNewsletter}
@@ -293,8 +293,7 @@ disabled={isLoading}
                   {isLoading ? (
                     <div className="flex items-center justify-center">
                       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2">;
-Creating Account...
-                  ) : (
+Creating Account...props) : (
                     'Create Account'
                   )}
               <div className="mt-8 text-center">;
@@ -347,8 +346,7 @@ type="submit" disabled={isLoading}
                   {isLoading ? ()}
           <div className="flex items-center justify-center">
                       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2">;
-Creating Account...
-                  ) : ()
+Creating Account...props) : ()
 // 'Create Account'
                   )}
           </form>"

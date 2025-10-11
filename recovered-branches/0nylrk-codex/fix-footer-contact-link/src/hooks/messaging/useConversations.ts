@@ -51,7 +51,7 @@ export function useConversations(
           context_id: conv.context_id,
           context_data: conv.context_data
         }
-      })
+      });
       setConversations(formattedConversations)
       // Calculate total unread count
       const totalUnread = formattedConversations.reduce(
@@ -96,7 +96,7 @@ export function useConversations(
               context_id: contextId,
               context_data: contextData,
               updated_at: new Date().toISOString()
-            })
+            });
             .eq('id', conversationId)
         }
       } else {
@@ -126,7 +126,7 @@ export function useConversations(
             context_type: contextType,
             context_id: contextId,
             context_data: contextData
-          })
+          });
           .select('id')
           .single()
         if (createError) throw createError
@@ -142,7 +142,7 @@ export function useConversations(
           content: initialMessage,
           created_at: new Date().toISOString(),
           read: false
-        })
+        });
       // Update conversations list
       await fetchConversations()
       // Return the conversation ID
@@ -153,7 +153,7 @@ export function useConversations(
         title: "Failed to create conversation",
         description: "Please try again later",
         variant: "destructive"
-      })
+      });
     }
   }
   return {

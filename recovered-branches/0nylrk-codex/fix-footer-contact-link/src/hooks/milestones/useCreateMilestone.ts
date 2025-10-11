@@ -17,9 +17,9 @@ export const useCreateMilestone = (projectId?: string) => {
         .insert({
           ...milestoneData,
           project_id: projectId,
-          created_by: user.id})
+          created_by: user.id});
           created_by: user.id,
-        })
+        });
         .select()
         .single()
       if (error) throw error

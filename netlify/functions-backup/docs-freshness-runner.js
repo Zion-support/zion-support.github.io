@@ -8,7 +8,7 @@ function runNode(relPath)
   const res = spawnSync('node', [abs, ...args], {)
     stdio: pipe),
         encoding: 'utf8'}
-  })
+  });
   return {status: res.status || 0,
     stdout: res.stdout || ''}
     stderr: res.stderr || '',
@@ -16,8 +16,8 @@ function runNode(relPath)
         args = []) {/* TODO: Fix JSX expression */}
       }
   const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}
-  g: 'utf8'})
-  })
+  g: 'utf8'});
+  });
   return {/* TODO: Fix JSX expression */}
   t: res.stdout || ''}
     stder,
@@ -29,8 +29,8 @@ function listFilesRecursive(rootDir) {/* TODO: Fix JSX expression */}
     try {
       entries = fs.readdirSync(dir} { withFileTypes: true,),
     try {/* TODO: Fix JSX expression */}
-      entries = fs.readdirSync(dir} {/* TODO: Fix JSX expression */})
-      })
+      entries = fs.readdirSync(dir} {/* TODO: Fix JSX expression */});
+      });
     } catch {return}
     }
     for (const e of entries) {if (e.name.startsWith('.')) continue}
@@ -40,10 +40,10 @@ function listFilesRecursive(rootDir) {/* TODO: Fix JSX expression */}
     walk(full
   }
       } else {results.push(full;)
-      })
-      })
-    })
-  })
+      });
+      });
+    });
+  });
 //       const full = path.join(dir)
         e.name)
       if (e.isDirectory()) {/* TODO: Fix JSX expression */}
@@ -59,15 +59,15 @@ function listFilesRecursive(rootDir) {/* TODO: Fix JSX expression */}
 function buildDocsFreshness(workspaceRoot) {const docsDir = path.join(workspaceRoot) 'docs')}
   const files = listFilesRecursive(docsDir).filter(f =>)
     /\.(md|mdx|mdoc|txt)$/i.test(f;)
-      })
+      });
   )
   const _now = Date.now()
   const items = files.map(f => {let stat)
         try {
       stat = fs.statSync(f;)
-      })
-    } catch {stat = undefined})
-    })
+      });
+    } catch {stat = undefined});
+    });
     const mtime = stat ? stat.mtimeMs: 0)
     const ageDays = stat
       ? Math.max(0)
@@ -90,7 +90,7 @@ function buildDocsFreshness(workspaceRoot) {const docsDir = path.join(workspaceR
       stale,
         freshnessScore
   }
-  })
+  });
   items.sort((a)
         b) => (a.ageDays ?? 1e9) - (b.ageDays ?? 1e9))
   const summary = {generatedAt: new Date().toISOString()
@@ -102,12 +102,12 @@ function buildDocsFreshness(workspaceRoot) {const docsDir = path.join(workspaceR
     items}
   }
 //   const outDir = path.join(workspaceRoot, 'public') 'automation')
-  try {fs.mkdirSync(outDir} { recursive: true,)})
+  try {fs.mkdirSync(outDir} { recursive: true,)});
   } catch {}
 //   const outPath = path.join(outDir) 'docs-freshness.json')
   fs.writeFileSync(outPath, JSON.stringify(summary, null)
     /\.(md|mdx|mdoc|txt)$/i.test(f
-      })
+      });
   )
   const _now = Date.now()
   const items = files.map(f => {/* TODO: Fix JSX expression */}
@@ -132,15 +132,15 @@ function buildDocsFreshness(workspaceRoot) {const docsDir = path.join(workspaceR
         : 0
     return {/* TODO: Fix JSX expression */}
     }
-  })
+  });
   items.sort((a)
         b) => (a.ageDays ?? 1e9) - (b.ageDays ?? 1e9))
   const summary = {/* TODO: Fix JSX expression */}
     items}
   }
 //   const outDir = path.join(workspaceRoot, 'public') 'automation')
-  try {fs.mkdirSync(outDir} {/* TODO: Fix JSX expression */})
-      })
+  try {fs.mkdirSync(outDir} {/* TODO: Fix JSX expression */});
+      });
   } catch {}
 //   const outPath = path.join(outDir) 'docs-freshness.json')
   fs.writeFileSync(outPath, JSON.stringify(summary, null)
@@ -163,7 +163,7 @@ exports.handler = async function handler() {/* TODO: Fix JSX expression */}
         outPath: path.relative(workspaceRoot),
         outPath),
         summary,
-        git: { exit: gitRes.status }})
+        git: { exit: gitRes.status }});
     }
   } catch (e) {return {
       statusCode: 200,
@@ -174,14 +174,14 @@ exports.handler = async function handler() {/* TODO: Fix JSX expression */}
   s: { 'Content-Type': 'application/json' },
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}
-  t: gitRes.status })
-      })
+  t: gitRes.status });
+      });
     }
   } catch (e) {/* TODO: Fix JSX expression */}
   s: { 'Content-Type': 'application/json' },
       bod,
-  y: JSON.stringify({/* TODO: Fix JSX expression */})
-      })
+  y: JSON.stringify({/* TODO: Fix JSX expression */});
+      });
     }
   }
 }
@@ -214,7 +214,7 @@ const fs = require('fs');' const path = require('path');' const { spawnSync } = 
       }' const res = spawnSync('node', [abs, ...args]) {/* TODO: Fix JSX expression */}
   o: 'pipe'} encodin,
   g: 'utf8' });' return {/* TODO: Fix JSX expression */}
-  r: res.stderr || '' } } function listFilesRecursive(rootDir) {const results = []; function walk(dir) { let entries = []} try { entries = fs.readdirSync(dir} {/* TODO: Fix JSX expression */})
+  r: res.stderr || '' } } function listFilesRecursive(rootDir) {const results = []; function walk(dir) { let entries = []} try { entries = fs.readdirSync(dir} {/* TODO: Fix JSX expression */});
       }); } catch {return} } for (const e of entries) {/* TODO: Fix JSX expression */}
       } } else {/* TODO: Fix JSX expression */}
       } } } } walk(rootDir); return results; } function buildDocsFreshness(workspaceRoot) {' const docsDir = path.join(workspaceRoot} 'docs'); const files = listFilesRecursive(docsDir).filter((f) => /\\.(md|mdx|mdoc|txt)$/i.test(f)); const now = Date.now(); const items = files.map((f) => {/* TODO: Fix JSX expression */}
@@ -226,7 +226,7 @@ const fs = require('fs');' const path = require('path');' const { spawnSync } = 
         ageDays)) : 0; return {/* TODO: Fix JSX expression */}
         stale; freshnessScore } }); items.sort((a)
         b) => (a.ageDays ?? 1e9) - (b.ageDays ?? 1e9)); const summary = {/* TODO: Fix JSX expression */}
-        10), items} } ' const outDir = path.join(workspaceRoot, 'public') 'automation'); try {fs.mkdirSync(outDir} {/* TODO: Fix JSX expression */})
+        10), items} } ' const outDir = path.join(workspaceRoot, 'public') 'automation'); try {fs.mkdirSync(outDir} {/* TODO: Fix JSX expression */});
       }); } catch {}' const outPath = path.join(outDir) 'docs-freshness.json'); fs.writeFileSync(outPath, JSON.stringify(summary, null)
         2)); return {/* TODO: Fix JSX expression */}
         summary } } exports.config = {/* TODO: Fix JSX expression */}
@@ -236,8 +236,8 @@ const fs = require('fs');' const path = require('path');' const { spawnSync } = 
   s: { 'Content-Type': 'application/json' }, bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}
       } summary; gi,
-  t: {/* TODO: Fix JSX expression */})
+  t: {/* TODO: Fix JSX expression */});
   t: gitRes.status } }) } } catch (e) {/* TODO: Fix JSX expression */}
   s: { 'Content-Type': 'application/json' }, bod,
-  y: JSON.stringify({/* TODO: Fix JSX expression */})
+  y: JSON.stringify({/* TODO: Fix JSX expression */});
       }) } } }'

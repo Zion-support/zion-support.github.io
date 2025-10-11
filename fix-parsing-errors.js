@@ -69,13 +69,13 @@ function fixJSXIssues(content) {
   let fixed = content
   // Fix unclosed JSX elements by checking for common patterns
   // This is a basic fix - more sophisticated parsing would be needed for complex cases
-  
+
   // Fix common emoji issues in JSX
   fixed = fixEmojis(fixed)
   // Fix common syntax issues
   fixed = fixed.replace(/\{\s*'([^']*)'\s*\}/g, '"$1"'); // Fix single quotes in JSX expressions
   fixed = fixed.replace(/\{\s*"([^"]*)"\s*\}/g, '"$1"'); // Normalize quotes
-  
+
   return fixed
 }
 
@@ -90,7 +90,7 @@ function fixJSXStructure(content) {
     console.log(`Warning: Found ${openDivs - closeDivs} unclosed div tags`)
     // This is a basic check - more sophisticated parsing would be needed
   }
-  
+
   return fixed
 }
 
@@ -112,7 +112,7 @@ async function processFiles() {
         '**/*.d.ts',
         '**/node_modules/**'
       ]
-    })
+    });
     for (const file of files) {
       try {
         const content = fs.readFileSync(file, 'utf8')
@@ -132,7 +132,7 @@ async function processFiles() {
       }
     }
   }
-  
+
   console.log(`\nProcessed ${processedCount} files with ${errorCount} errors`)
 }
 

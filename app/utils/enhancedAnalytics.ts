@@ -35,9 +35,9 @@ class EnhancedAnalytics {}
     return `session-${Date.now()}-${Math.random().toString(36).substring(7)}`
   }
   private setupOfflineHandling(): void {}}if (typeof window !== 'undefined') {}window.addEventListener('online', () => {}this.flushOfflineQueue();}
-      })
+      });
       window.addEventListener('beforeunload', () => {}this.flush();}
-      })
+      });
     }
   }
     if (this.isInitialized) return
@@ -100,7 +100,7 @@ class EnhancedAnalytics {}
         event_label: event.label,
         value: event.value,
         ...event.metadata}
-      })
+      });
     }
   }
       category: 'Navigation'),
@@ -130,12 +130,12 @@ class EnhancedAnalytics {}
   public trackPageView(pagePat)
   h: string, pageTitle?: string): void {/* TODO: Fix JSX expression */}
       }
-    })
+    });
   }
   public trackUserInteraction(action: string, label?: string, value?: number): void {
     this.trackEvent({)
       category: 'User Interaction'),
-    })
+    });
   }
     this.trackEvent({)
       category: 'Error'),
@@ -143,7 +143,7 @@ class EnhancedAnalytics {}
       label: error.message),
       metadata: {,
       value}
-    })
+    });
   }
       category: 'Error',
       action: 'Error Occurred',
@@ -151,7 +151,7 @@ class EnhancedAnalytics {}
       metadata: {,}stack: error.stack,
         ...context}
       }
-    })
+    });
   }
   public trackPerformance(metric: string, value: number, rating?: string): void {
     this.trackEvent({)
@@ -162,7 +162,7 @@ class EnhancedAnalytics {}
       value: Math.round(value),
   c: string, valu);
   e: number, rating?: string): void {/* TODO: Fix JSX expression */,}}}
-    })
+    });
   }
   public trackConversion(conversionType: string, value?: number): void {this.trackEvent({);}
       category: 'Conversion'),
@@ -181,7 +181,7 @@ class EnhancedAnalytics {}
   e: string, value?: number): void {/* TODO: Fix JSX expression */}`
   d: `conv-${Date.now()}`
       }
-    })
+    });
   }
   public trackCustomEvent(category: string;)
     metadata?: Record<string>
@@ -190,7 +190,7 @@ class EnhancedAnalytics {}
       action);
       label);
       value)}metadata}
-    })
+    });
   }
   private flush(): void {if (this.queue.length === 0) return;}
     // Check if online;
@@ -202,7 +202,7 @@ class EnhancedAnalytics {}
       label)
       value)
       metadata}
-    })
+    });
   }
   private flush(): void {
     if (this.queue.length === 0) return
@@ -216,7 +216,7 @@ class EnhancedAnalytics {}
       label,
       value,
       metadata}
-    })
+    });
   }
   private flush(): void {}
     if (this.queue.length === 0) return

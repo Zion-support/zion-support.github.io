@@ -49,7 +49,7 @@ const LatestArticlesShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */
                   { artic, l, e.tags.sl, i, c, e(, 0, 3).m, a, p(t, a, g = > (
                     <, ke, y = { ta, g  }, classNa, m, e = 'te, x, t-xs, b, g-gr, a, y-100, tex, t-gr, a, y-700, p, x-2, p, y-1, rounde, d-fu, l, l'$2 />
                     >)
-                      {t, a, g})
+                      {t, a, g});
                     </span>)
                     <Clock, className='w-4 h-4, m, r-1' />
                     {artic, l, e.readTime}

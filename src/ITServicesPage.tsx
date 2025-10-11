@@ -584,7 +584,7 @@ const ITServicesPage: React.FC = () => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
     const matchesPricing = selectedPricing === 'all' || service.pricing === selectedPricing
     return matchesSearch && matchesCategory && matchesPricing
-  })
+  });
   const formatPrice = (price: number, model: string) => {
     switch (model) {
       case 'monthly':
@@ -1319,7 +1319,7 @@ export default function ITServicesPage() {
               Choose from our extensive range of IT services designed to meet your business needs
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {IT_SERVICES.map((service) => (
               <Card key={service.id} className="bg-zion-blue-dark/50 border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-purple/20">
@@ -1335,7 +1335,7 @@ export default function ITServicesPage() {
                   <CardTitle className="text-xl text-white">{service.title}</CardTitle>
                   <CardDescription className="text-zion-cyan/80">{service.description}</CardDescription>
                 </CardHeader>
-                
+
                 <CardContent className="space-y-4">
                   <div>
                     <h4 className="text-white font-semibold mb-2">Key Features:</h4>
@@ -1348,7 +1348,7 @@ export default function ITServicesPage() {
                       ))}
                     </ul>
                   </div>
-                  
+
                   <div>
                     <h4 className="text-white font-semibold mb-2">Business Benefits:</h4>
                     <ul className="space-y-1">
@@ -1360,7 +1360,7 @@ export default function ITServicesPage() {
                       ))}
                     </ul>
                   </div>
-                  
+
                   <div>
                     <h4 className="text-white font-semibold mb-2">Pricing:</h4>
                     <div className="text-sm text-zion-cyan/70 space-y-1">
@@ -1369,7 +1369,7 @@ export default function ITServicesPage() {
                       <p>Enterprise: {service.pricing.enterprise}</p>
                     </div>
                   </div>
-                  
+
                   <div className="pt-4">
                     <Button asChild className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
                       <Link to={service.link}>Learn More</Link>
@@ -1380,9 +1380,9 @@ export default function ITServicesPage() {
             ))}
                 </div>
               </div>
-              
+
               <p className="text-gray-300 mb-4">{service.description}</p>
-              
+
               <div className="mb-4">
                 <div className="text-2xl font-bold text-white mb-2">
                   {formatPrice(service.price, service.pricingModel)}
@@ -1689,18 +1689,18 @@ export default function ITServicesPage() {
         canonical="https://ziontechgroup.com/it-services"
       />
       <Header />
-      
+
       <main className="min-h-screen bg-background">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-cyan py-20 overflow-hidden">
           <div className="absolute inset-0 bg-black/20"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-zion-blue/10 to-zion-cyan/10"></div>
-          
+
           {/* Animated Background Elements */}
           <div className="absolute top-20 left-10 w-32 h-32 bg-zion-blue/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-20 right-10 w-40 h-40 bg-zion-cyan/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
           <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-zion-purple/30 rounded-full blur-2xl animate-pulse delay-500"></div>
-          
+
           <div className="container mx-auto px-4 relative z-10">
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight">
@@ -1743,7 +1743,7 @@ export default function ITServicesPage() {
                   variant={category.active ? "default" : "outline"}
                   className={category.active ? "bg-zion-cyan text-zion-slate-dark" : "border-zion-cyan/30 text-zion-cyan hover:bg-zion-cyan/10"}
                 >
-                  {category.name} ({category.count})
+                  {category.name} ({category.count});
                 </Button>
               ))}
             </div>
@@ -1768,12 +1768,12 @@ export default function ITServicesPage() {
                       {service.description}
                     </CardDescription>
                   </CardHeader>
-                  
+
                   <CardContent className="pb-4">
                     <div className="mb-4">
                       <span className="text-2xl font-bold text-zion-cyan">{service.price}</span>
                     </div>
-                    
+
                     <div className="space-y-2 mb-4">
                       {service.features.slice(0, 3).map((feature, index) => (
                         <div key={index} className="flex items-center text-sm">
@@ -1782,7 +1782,7 @@ export default function ITServicesPage() {
                         </div>
                       ))}
                     </div>
-                    
+
                     <div className="flex items-center justify-between mb-4">
                       <div className="flex items-center gap-1">
                         <Star className="h-4 w-4 text-yellow-500 fill-current" />
@@ -1805,7 +1805,7 @@ export default function ITServicesPage() {
                       </div>
                     </div>
                   </CardContent>
-                  
+
                   <CardContent className="pt-0">
                     <Button asChild className="w-full group-hover:bg-zion-cyan group-hover:text-zion-slate-dark transition-all duration-300">
                       <Link to={service.link}>
@@ -1841,7 +1841,7 @@ export default function ITServicesPage() {
           </div>
         </section>
       </main>
-      
+
       <Footer />
     </>
   )

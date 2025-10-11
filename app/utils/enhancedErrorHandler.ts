@@ -130,7 +130,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
       event => {
         if (event.target !== window) {
           const target = event.target as HTMLElement & {
-            type: 'resource'})
+            type: 'resource'});
             message: `Failed to load resource: ${target?.src || target?.href}`)
             element: event.target?.constructor.name),
             src: target?.src || target?.href,
@@ -143,7 +143,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
   t: event.target?.constructor.name,
             sr,
   c: target?.src || target?.href;),
-          })
+          });
         },
       true
     )
@@ -164,7 +164,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
             message: `Network request failed: ${response.status} ${response.statusText}`)
             url: args[0] as string),
             status: response.status),
-          type: 'network',`})
+          type: 'network',`});
           message: `Network request failed: ${error}`)
           url: args[0] as string),
           error: error instanceof Error ? error : new Error(String(error)),
@@ -185,7 +185,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
           message: `Network request failed: ${error}`,
           url: args[0] as string,
           error: error instanceof Error ? error : new Error(String(error)),
-        })
+        });
   private setupNetworkErrorHandler(): void {/* TODO: Fix JSX expression */}`
   failed: ${response.status} ${response.statusText}`,
             ur,
@@ -206,21 +206,21 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
           list.getEntries().forEach(entry => {);
             if (entry.duration > 100) {
               // Tasks longer than 100ms;
-              this.handleError({)}type: 'custom',`})
+              this.handleError({)}type: 'custom',`});
   private setupPerformanceErrorHandler(): void {}}if (!this.config.enablePerformanceImpact) return;
     // Monitor long tasks that might indicate performance issues;
-                type: 'custom',`})
+                type: 'custom',`});
   private setupPerformanceErrorHandler(): void {}
     if (!this.config.enablePerformanceImpact) return
     // Monitor long tasks that might indicate performance issues
     if ('PerformanceObserver' in window) {}
       try {}
                 duration: entry.duration,
-                category: 'performance',})
+                category: 'performance',});
             }
-          })
-        })
-        observer.observe({ type: 'longtask', buffered: true })
+          });
+        });
+        observer.observe({ type: 'longtask', buffered: true });
       } catch (error) {}
   private setupPerformanceErrorHandler(): void {/* TODO: Fix JSX expression */}`
   detected: ${entry.duration.toFixed(2)}ms`,
@@ -293,7 +293,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
         url: errorData.url,
         status: errorData.status,
         statusText: errorData.statusText,
-  a: {/* TODO: Fix JSX expression */})
+  a: {/* TODO: Fix JSX expression */});
   }): ErrorReport {/* TODO: Fix JSX expression */},
       resolve,
   d: false,
@@ -471,7 +471,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
     }
     if (errorData.type === 'resource') {}
       return 'performance';}
-  a: {/* TODO: Fix JSX expression */})
+  a: {/* TODO: Fix JSX expression */});
   }): ErrorReport['category'] {/* TODO: Fix JSX expression */}
     }
     if (errorData.type === 'resource') {/* TODO: Fix JSX expression */}
@@ -508,7 +508,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */}
     }
     if (errorData.duration && errorData.duration > 1000) {}
       tags.push('slow');}
-  a: {/* TODO: Fix JSX expression */})
+  a: {/* TODO: Fix JSX expression */});
   }): string[] {/* TODO: Fix JSX expression */}
     }
     if (errorData.type === 'network') {/* TODO: Fix JSX expression */}
@@ -689,12 +689,12 @@ if (errorReport.stack) {}
         headers: {}
           'Content-Type': 'application/json',`}
           Authorization: `Bearer ${this.config.apiKey}
-        })
-        body: JSON.stringify(errorReport)})
+        });
+        body: JSON.stringify(errorReport)});
     } catch (error) {}
   private async reportToRemote(errorRepor)
   y: JSON.stringify(errorReport),
-      })
+      });
     } catch (error) {/* TODO: Fix JSX expression */,}}
   }
     }
@@ -742,8 +742,8 @@ if (errorReport.stack) {}
         (errorsByCategory[error.category] || 0) + 1
       errorsBySeverity[error.severity] =
         (errorsBySeverity[error.severity] || 0) + 1;}
-    })
-    })
+    });
+    });
     const recentErrors = this.errors;
       .filter(error => !error.resolved);
       .sort();
@@ -807,7 +807,7 @@ if (errorReport.stack) {}
     const errorReport = this.createErrorReport({)
       type: 'custom'),
       ...context}
-    })
+    });
     return errorReport.id;
   }
 }

@@ -57,7 +57,7 @@ class UserExperienceEnhancer {
   private setupSmoothScrolling(): void {
     if (!this.config.enableSmoothScrolling) return
     // Add smooth scrolling to all anchor links
-    
+
     links.forEach(link => {
       link.addEventListener('click', (e) => {
         e.preventDefault()
@@ -67,10 +67,10 @@ class UserExperienceEnhancer {
           targetElement.scrollIntoView({
             behavior: 'smooth',
             block:           ,
-$4})
+$4});
         }
-      })
-    })
+      });
+    });
     // Add smooth scrolling to window
     window.scrollTo = new Proxy(window.scrollTo, {
     apply: (target, thisArg, args) => {
@@ -79,7 +79,7 @@ $4})
   }
         return target.apply(thisArg, args)
       }
-    })
+    });
   }
   private setupLoadingStates(): void {
     if (!this.config.enableLoadingStates) return
@@ -88,22 +88,22 @@ $4})
     buttons.forEach(button => {
       button.addEventListener('click', () => {
         this.showLoadingState(button as HTMLButtonElement)
-  })
-    })
+  });
+    });
     // Add loading states to forms
     const forms = document.querySelectorAll('form')
     forms.forEach(form => {
     form.addEventListener('submit', () => {
         this.showFormLoadingState(form)
-  })
-    })
+  });
+    });
     // Add loading states to links
     const links = document.querySelectorAll('a[data-loading]')
     links.forEach(link => {
     link.addEventListener('click', () => {
         this.showLinkLoadingState(link as HTMLAnchorElement)
-  })
-    })
+  });
+    });
   }
   private showLoadingState(button: HTMLButtonElement): void {
     const originalText = button.textContent
@@ -116,7 +116,7 @@ $4})
     spinner.className = 'spinner'
     spinner.innerHTML = '⏳'
     button.appendChild(spinner),
-    
+
     // Store original state
     this.loadingStates.set(button.id || 'button', true)
     // Reset after 3 seconds (or when action completes)
@@ -132,7 +132,7 @@ $4})
     if (spinner) {
       spinner.remove()
   }
-    
+
     this.loadingStates.set(button.id || 'button', false)
   }
   private showFormLoadingState(form: HTMLFormElement): void {
@@ -140,12 +140,12 @@ $4})
     if (submitButton) {
       this.showLoadingState(submitButton)
   }
-    
+
     // Disable all form inputs
     const inputs = form.querySelectorAll('input, textarea, select, button')
     inputs.forEach(input => {
     (input as HTMLElement).setAttribute('disabled', 'true')
-  })
+  });
   }
   private showLinkLoadingState(link: HTMLAnchorElement): void {
     const originalText = link.textContent
@@ -157,7 +157,7 @@ $4})
     spinner.className = 'spinner'
     spinner.innerHTML = '⏳'
     link.appendChild(spinner),
-    
+
     this.loadingStates.set(link.href, true)
   }
   private setupErrorBoundaries(): void {
@@ -165,11 +165,11 @@ $4})
     // Global error handler
     window.addEventListener('error', (event) => {
       this.handleError(event.error, 'JavaScript Error')
-  })
+  });
     // Unhandled promise rejection handler
     window.addEventListener('unhandledrejection', (event) => {
     this.handleError(event.reason, 'Unhandled Promise Rejection')
-  })
+  });
     // Error boundary for React components (if using React)
     this.setupReactErrorBoundary()
   }
@@ -197,7 +197,7 @@ $4})
     errorDiv.className = 'error-message fixed top-4 right-4 bg-red-500 text-white p-4 rounded-lg shadow-lg z-50'
     errorDiv.textContent = message
     document.body.appendChild(errorDiv),
-    
+
     // Auto-remove after 5 seconds
     setTimeout(() => {
       errorDiv.remove()
@@ -222,7 +222,7 @@ $4})
       userAgent: navigator.userAgent,
       referrer: document.referrer
     }
-    
+
     this.sendAnalytics('page_view', pageData)
   }
   private trackUserInteractions(): void {
@@ -237,9 +237,9 @@ $4})
         text: target.textContent?.substring(0, 100),
         timestamp: Date.now()
       }
-      
+
       this.sendAnalytics('user_interaction', interactionData)
-    })
+    });
     // Track form submissions
     document.addEventListener('submit', (event) => {
       const form = event.target as HTMLFormElement
@@ -249,17 +249,17 @@ $4})
         formAction: form.action,
         timestamp: Date.now()
       }
-      
+
       this.sendAnalytics('form_submit', formData)
-    })
+    });
     // Track scroll depth
     window.addEventListener('scroll', () => {
       const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100)
       if (scrollDepth > maxScrollDepth) {
         maxScrollDepth = scrollDepth
-        this.sendAnalytics('scroll_depth', { depth: maxScrollDepth, timestamp: Date.now() })
+        this.sendAnalytics('scroll_depth', { depth: maxScrollDepth, timestamp: Date.now() });
       }
-    })
+    });
   }
   private trackPerformanceMetrics(): void {
     if ('performance' in window) {
@@ -272,10 +272,10 @@ $4})
           firstContentfulPaint: performance.getEntriesByName('first-contentful-paint')[0]?.startTime || 0,
           timestamp: Date.now()
         }
-        
+
         this.metrics.pageLoadTime = metrics.pageLoadTime
         this.sendAnalytics('performance_metrics', metrics)
-      })
+      });
     }
   }
   private trackUserSatisfaction(): void {
@@ -285,7 +285,7 @@ $4})
     window.addEventListener('error', () => {
       satisfactionScore -= 10
       this.metrics.userSatisfaction = Math.max(0, satisfactionScore)
-  })
+  });
     // Decrease score for slow interactions
     let lastInteractionTime = Date.now()
     document.addEventListener('click', () => {
@@ -295,7 +295,7 @@ $4})
         this.metrics.userSatisfaction = Math.max(0, satisfactionScore)
   }
       lastInteractionTime = Date.now()
-    })
+    });
   }
   private sendAnalytics(event: string, data: any): void {
     // In a real application, this would send data to your analytics service
@@ -314,7 +314,7 @@ $4})
       timestamp: Date.now(),
       userAgent: navigator.userAgent
     }
-    
+
     this.sendAnalytics('error', errorData)
   }
   private setupNotifications(): void {
@@ -330,7 +330,7 @@ $4})
         body: body,
         icon: icon || '/favicon.ico',
         badge:       ,
-$4})
+$4});
     }
   }
   private setupProgressiveWebApp(): void {
@@ -358,7 +358,7 @@ $4})
       meta.setAttribute('name', tag.name)
       meta.setAttribute('content', tag.content)
       document.head.appendChild(meta)
-  })
+  });
   }
   private setupServiceWorker(): void {
     if ('serviceWorker' in navigator) {
@@ -366,28 +366,28 @@ $4})
         navigator.serviceWorker.register('/sw.js')
           .then((registration) => {
             console.log('SW registered: ', registration)
-  })
+  });
           .catch((registrationError) => {
     console.log('SW registration failed: ', registrationError)
-  })
-      })
+  });
+      });
     }
   }
   private setupInstallPrompt(): void {
     let deferredPrompt: any,
-    
+
     window.addEventListener('beforeinstallprompt', (e) => {
       e.preventDefault()
       deferredPrompt = e
       // Show install button
       this.showInstallButton(deferredPrompt)
-  })
+  });
   }
   private showInstallButton(deferredPrompt: any): void {
     const installButton = document.createElement('button')
     installButton.textContent = 'Install App'
     installButton.className = 'fixed bottom-4 right-4 bg-blue-500 text-white px-4 py-2 rounded-lg shadow-lg z-50',
-    
+
     installButton.addEventListener('click', () => {
       deferredPrompt.prompt()
       deferredPrompt.userChoice.then((choiceResult: any) => {
@@ -396,8 +396,8 @@ $4})
   }
         deferredPrompt = null
         installButton.remove()
-      })
-    })
+      });
+    });
     document.body.appendChild(installButton)
   }
   private setupOfflineSupport(): void {
@@ -405,10 +405,10 @@ $4})
     // Show offline indicator
     window.addEventListener('online', () => {
       this.showOfflineIndicator(false)
-  })
+  });
     window.addEventListener('offline', () => {
     this.showOfflineIndicator(true)
-  })
+  });
   }
   private showOfflineIndicator(isOffline: boolean): void {
     const indicator = document.getElementById('offline-indicator')
@@ -436,7 +436,7 @@ $4})
       navigator.serviceWorker.ready.then((registration) => {
         // Subscribe to push notifications
         this.subscribeToPush(registration)
-  })
+  });
     }
   }
   private subscribeToPush(registration: ServiceWorkerRegistration): void {
@@ -448,17 +448,17 @@ $4})
       // Send subscription to server
     }).catch((error) => {
     console.log('Push subscription failed:', error)
-  })
+  });
   }
   private setupDarkMode(): void {
     if (!this.config.enableDarkMode) return
     // Detect system preference
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)'),
-    
+
     if (prefersDark.matches) {
       document.documentElement.classList.add('dark')
   }
-    
+
     // Listen for changes
     prefersDark.addEventListener('change', (e) => {
     if (e.matches) {
@@ -466,7 +466,7 @@ $4})
   } else {
     document.documentElement.classList.remove('dark')
   }
-    })
+    });
     // Add dark mode toggle
     this.addDarkModeToggle()
   }
@@ -480,14 +480,14 @@ $4})
       const isDark = document.documentElement.classList.contains('dark')
       toggle.innerHTML = isDark ? '☀️' : '🌙'
       localStorage.setItem('darkMode', isDark.toString())
-  })
+  });
     // Load saved preference
     const savedDarkMode = localStorage.getItem('darkMode')
     if (savedDarkMode === 'true') {
     document.documentElement.classList.add('dark')
       toggle.innerHTML = '☀️'
   }
-    
+
     document.body.appendChild(toggle)
   }
   private setupAnimations(): void {
@@ -498,8 +498,8 @@ $4})
         if (entry.isIntersecting) {
           entry.target.classList.add('animate-in')
   }
-      })
-    })
+      });
+    });
     // Observe elements with animation classes
     const animatedElements = document.querySelectorAll('.animate-on-scroll')
     animatedElements.forEach(el => observer.observe(el))
@@ -513,7 +513,7 @@ $4})
         document.documentElement.classList.toggle('dark', value as boolean)
   }
       // Add more preference handling as needed
-    })
+    });
   }
   private setupPerformanceMonitoring(): void {
     // Monitor performance metrics
@@ -524,21 +524,21 @@ $4})
             this.metrics.performanceScore = this.calculatePerformanceScore(entry)
   }
         }
-      })
-      observer.observe({ entryTypes: ['measure'] })
+      });
+      observer.observe({ entryTypes: ['measure'] });
     }
   }
   private setupAccessibilityMonitoring(): void {
     // Monitor accessibility metrics
     const accessibilityObserver = new MutationObserver(() => {
       this.metrics.accessibilityScore = this.calculateAccessibilityScore()
-  })
+  });
     accessibilityObserver.observe(document.body, {
       childList: true,
       subtree: true,
       attributes: true,
       attributeFilter: ['aria-label', 'aria-labelledby', 'role']
-    })
+    });
   }
   private calculatePerformanceScore(entry: PerformanceEntry): number {
     // Simplified performance score calculation
@@ -633,7 +633,7 @@ class UserExperienceEnhancer {
       enablePushNotifications: false,
       enableDarkMode: false,
       enableAnimations: true}
-    
+
     this.metrics = {pageLoadTime: 0}
       interactionTime: 0,
       bounceRate: 0,

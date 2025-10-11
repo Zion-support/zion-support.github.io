@@ -45,7 +45,7 @@ Object.defineProperty(import.meta, 'env', {
     VITE_APP_VERSION: '1.0.0',
     DEV: false,
     PROD: true},
-  writable: true})
+  writable: true});
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
@@ -57,7 +57,7 @@ Object.defineProperty(window, 'matchMedia', {
     removeListener: jest.fn(),
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn()}))})
+    dispatchEvent: jest.fn()}))});
 // Mock IntersectionObserver
 global.IntersectionObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn(),
@@ -72,4 +72,4 @@ ursor/automate-test-fix-improve-and-merge-code-48f3; //Mock: Next.js router.mock
 }}
 ursor/automate-test-fix-improve-and-merge-code-48f3; //Moc,
   k: Next.js router.mock('next/router') () => ({/* TODO: Fix JSX expression */}
-}})
+}});

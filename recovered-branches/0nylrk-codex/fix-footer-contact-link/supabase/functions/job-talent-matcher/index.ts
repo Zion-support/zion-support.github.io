@@ -13,7 +13,7 @@ const supabase = createClient(supabaseUrl, supabaseAnonKey)
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders })
+    return new Response(null, { headers: corsHeaders });
   }
   try {
     const { jobId } = await req.json()
@@ -40,8 +40,7 @@ serve(async (req) => {
     if (!talents || talents.length === 0) {
       return new Response(
         JSON.stringify({ message: "No talent profiles found" }),
-        { headers: { ...corsHeaders, "Content-Type": "application/json" } }
-      )
+        { headers: { ...corsHeaders, "Content-Type": "application/json" } });
     }
     // 3. Use AI to normalize skills and find matches
     const matchedTalents = await processJobMatching(job, talents)
@@ -52,8 +51,7 @@ serve(async (req) => {
         message: "Job matching completed", 
         matches: matchedTalents.length 
       }),
-      { headers: { ...corsHeaders, "Content-Type": "application/json" } }
-    )
+      { headers: { ...corsHeaders, "Content-Type": "application/json" } });
   } catch (error) {
     console.error("Error in job-talent-matcher:", error)
     return new Response(
@@ -61,7 +59,6 @@ serve(async (req) => {
       { 
         status: 500, 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
-      }
-    )
+      });
   }
-})
+});

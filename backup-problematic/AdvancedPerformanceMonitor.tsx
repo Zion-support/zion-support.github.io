@@ -14,7 +14,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({,
  cls: null
  ttfb: null
  memory: null
- })
+ });
  const measureWebVitals = useCallback(() => {
  if (typeof window === 'undefined' || !('performance' in window)) return
  if (typeof PerformanceObserver === 'undefined') return
@@ -30,14 +30,14 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({,
  const _lastEntry = entries[entries.length - 1];,
  setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }))
 const,
-  AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({/* TODO: Fix JSX expression */})
+  AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({/* TODO: Fix JSX expression */});
 }) => {/* TODO: Fix JSX expression */}
- })
+ });
  const measureWebVitals = useCallback(() => {/* TODO: Fix JSX expression */}
   p: lastEntry.startTime }))
- })
- lcpObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['largest-contentful-paint'] })
+ });
+ lcpObserver.observe({/* TODO: Fix JSX expression */});
+  s: ['largest-contentful-paint'] });
  observers.push(lcpObserver)
  } catch (error) {
  // eslint-disable-next-line no-console
@@ -63,10 +63,10 @@ const,
  if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
  }))
  }
- })
- })
- fidObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['first-input'] })
+ });
+ });
+ fidObserver.observe({/* TODO: Fix JSX expression */});
+  s: ['first-input'] });
  observers.push(fidObserver)
  } catch (error) {
  // eslint-disable-next-line no-console
@@ -94,10 +94,10 @@ const,
   s: clsValue }))
  }
  }
- })
- })
- clsObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['layout-shift'] })
+ });
+ });
+ clsObserver.observe({/* TODO: Fix JSX expression */});
+  s: ['layout-shift'] });
  observers.push(clsObserver)
  } catch (error) {
  // eslint-disable-next-line no-console
@@ -114,7 +114,7 @@ const,
  : null
  // Measure Memory Usage
  const memory =
- (performance as Performance & { memory?: { usedJSHeapSize: number } })
+ (performance as Performance & { memory?: { usedJSHeapSize: number } });
  .memory?.usedJSHeapSize || null
  setMetrics(prev => ({)
  ...prev)
@@ -135,9 +135,9 @@ const,
  // eslint-disable-next-line no-console
  // console.warn('Error disconnecting observer:', error);origin/
  try {/* TODO: Fix JSX expression */}
-  e: number } })
+  e: number } });
  .memory?.usedJSHeapSize || null
- setMetrics(prev => ({/* TODO: Fix JSX expression */})
+ setMetrics(prev => ({/* TODO: Fix JSX expression */});
  }))
  } catch (error) {/* TODO: Fix JSX expression */}
  }
@@ -145,7 +145,7 @@ const,
  return () => {/* TODO: Fix JSX expression */}
  } catch (error) {/* TODO: Fix JSX expression */}
  }
- })
+ });
  }
  }, [])
  const measureResourceTiming = useCallback(() => {
@@ -181,32 +181,32 @@ const,
  const { onCLS, onFCP, onLCP, onTTFB } = webVitals
  if (onCLS) {/* TODO: Fix JSX expression */}
   e: number }) =>
- setMetrics(prev => ({/* TODO: Fix JSX expression */})
+ setMetrics(prev => ({/* TODO: Fix JSX expression */});
   s: metric.value }))
  )
  }
  if (onFCP) {/* TODO: Fix JSX expression */}
   e: number }) =>
- setMetrics(prev => ({/* TODO: Fix JSX expression */})
+ setMetrics(prev => ({/* TODO: Fix JSX expression */});
   p: metric.value }))
  )
  }
  if (onLCP) {/* TODO: Fix JSX expression */}
   e: number }) =>
- setMetrics(prev => ({/* TODO: Fix JSX expression */})
+ setMetrics(prev => ({/* TODO: Fix JSX expression */});
   p: metric.value }))
  )
  }
  if (onTTFB) {/* TODO: Fix JSX expression */}
   e: number }) =>
- setMetrics(prev => ({/* TODO: Fix JSX expression */})
+ setMetrics(prev => ({/* TODO: Fix JSX expression */});
   b: metric.value }))
  )
  }
- })
+ });
  .catch(() => {
  // web-vitals not available, continue without it
- })
+ });
  } catch {
  // web-vitals not available, continue without it
  }
@@ -220,7 +220,7 @@ const,
  const interval = setInterval(() => {
  measureResourceTiming()
  .catch(() => {/* TODO: Fix JSX expression */}
- })
+ });
  } catch {/* TODO: Fix JSX expression */}
  }
  }, [])
@@ -315,8 +315,7 @@ const,
  {/* TODO: Fix JSX expression */}
  <li key={index}>• {rec}
  ))}
- )}
- )
+ )});
  }
  return null
 }

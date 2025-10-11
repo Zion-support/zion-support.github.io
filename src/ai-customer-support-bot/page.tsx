@@ -114,7 +114,7 @@ const AICustomerSupportBotPage: React.FC = () => {
                       {feature}
                 <button className="w-full bg-cyan-500 text-white py-3 rounded-lg hover: bg-cyan-600 transition-colors">
                   Get Started
-  
+
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Customer Support?
           <p className="text-xl text-gray-300 mb-8">

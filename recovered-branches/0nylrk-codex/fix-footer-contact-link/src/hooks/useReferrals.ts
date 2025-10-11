@@ -13,9 +13,9 @@ export function useReferrals() {
     totalReferrals: 0,
     pendingReferrals: 0,
     completedReferrals: 0,
-    totalRewards: 0})
+    totalRewards: 0});
     totalRewards: 0,
-  })
+  });
   useEffect(() => {
     if (user) {
       fetchReferralCode()
@@ -50,7 +50,7 @@ export function useReferrals() {
         .from('referrals')
         .select('*')
         .eq('referrer_id', user.id)
-        .order('created_at', { ascending: false })
+        .order('created_at', { ascending: false });
       if (error) throw error
       setReferrals(data || [])
     } catch (error) {
@@ -64,7 +64,7 @@ export function useReferrals() {
         .from('referral_rewards')
         .select('*')
         .eq('user_id', user.id)
-        .order('created_at', { ascending: false })
+        .order('created_at', { ascending: false });
       if (error) throw error
       setRewards(data || [])
     } catch (error) {
@@ -98,7 +98,7 @@ export function useReferrals() {
         pendingReferrals,
         completedReferrals,
         totalRewards
-      })
+      });
     } catch (error) {
       console.error("Error fetching referral stats:", error)
     }
@@ -109,21 +109,21 @@ export function useReferrals() {
         toast({
           title: "Authentication required",
           description: "You need to be logged in to generate a referral code",
-          variant: "destructive"})
+          variant: "destructive"});
           variant: "destructive",
-        })
+        });
         return
       }
       const { data, error } = await supabase.rpc('generate_referral_code', {
         user_id: user.id
-      })
+      });
       if (error) throw error
       toast({
         title: "Success!",
         description: "Your referral code has been generated",
-        variant: "success"})
+        variant: "success"});
         variant: "success",
-      })
+      });
       // Refresh the code
       fetchReferralCode()
       return data
@@ -132,9 +132,9 @@ export function useReferrals() {
       toast({
         title: "Error generating code",
         description: error.message || "There was a problem generating your referral code",
-        variant: "destructive"})
+        variant: "destructive"});
         variant: "destructive",
-      })
+      });
     }
   }
   // Get the referral link for the current user
@@ -151,16 +151,16 @@ export function useReferrals() {
       toast({
         title: "Copied!",
         description: "Referral link copied to clipboard",
-        variant: "success"})
+        variant: "success"});
         variant: "success",
-      })
+      });
     } else {
       toast({
         title: "Cannot copy link",
         description: "Please generate a referral code first",
-        variant: "destructive"})
+        variant: "destructive"});
         variant: "destructive",
-      })
+      });
     }
   }
   // Share on social media platforms
@@ -171,9 +171,9 @@ export function useReferrals() {
       toast({
         title: "Cannot share",
         description: "Please generate a referral code first",
-        variant: "destructive"})
+        variant: "destructive"});
         variant: "destructive",
-      })
+      });
       return
     }
     let shareUrl = ''

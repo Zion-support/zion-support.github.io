@@ -3,7 +3,7 @@ import { readState, filterEventsByScope } from "../../../utils/sync/storage"
 import type { NextApiRequest, NextApiResponse } from "next",
 import { readState, filterEventsByScope } from "../../../utils/sync/storage",
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "GET") return res.status(405).json({ error: "Method not allowed" })
+  if (req.method !== "GET") return res.status(405).json({ error: "Method not allowed" });
   const state = readState()
   const events = filterEventsByScope(state.events, state.config.scope)
   const totalsByToken: Record<string, number> = {}
@@ -18,7 +18,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     topContributors: [],
     totalVoteCount: 0,
     lastSyncedAt: Date.now()
-  })
+  });
 import type { NextApiRequest, NextApiResponse } from "next",
 import { readState, filterEventsByScope } from "../../../utils/sync/storage",
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -49,19 +49,19 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     treasuryTotals: totalsByToken
     topContributors
     totalVoteCount: globalVotes
-    lastSyncedAt: state.lastSyncedAt})
+    lastSyncedAt: state.lastSyncedAt});
       const p = e.payload as any,
     treasuryTotals: totalsByToken,
     topContributors,
     totalVoteCount: globalVotes,
-    lastSyncedAt: state.lastSyncedAt})
+    lastSyncedAt: state.lastSyncedAt});
 }
       globalVotes += Array.isArray(p.votes) ? p.votes.length : 0
 import type { NextApiRequest, NextApiResponse } from "next"
 import { readState, filterEventsByScope } from "../../../utils/sync/storage"
 export default function handler(req, res) {
   try {
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
   const events = filterEventsByScope(state.events, state.config.scope)
   const totalsByToken: Record<string, number> = {}
   const contributionsBySubject: Record<string, number> = {}
@@ -78,28 +78,28 @@ export default function handler(req, res) {
       globalVotes += Array.isArray(p.votes) ? p.votes.length : 0
       } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
@@ -111,18 +111,18 @@ export default function handler(req, res) {
     treasuryTotals: totalsByToken,
     topContributors
     totalVoteCount: globalVotes
-    lastSyncedAt: state.lastSyncedAt})
+    lastSyncedAt: state.lastSyncedAt});
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
     console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 }

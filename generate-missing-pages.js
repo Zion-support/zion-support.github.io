@@ -26,7 +26,7 @@ const ${serviceName}Page: React.FC = () => {
         <meta name="description" content="${description}" />
         <meta name="keywords" content="${keywords}" />
       </Helmet>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -36,15 +36,15 @@ const ${serviceName}Page: React.FC = () => {
                 <Brain className="w-5 h-5 text-cyan-400 mr-2" />
                 <span className="text-cyan-400 font-medium">AI-Powered Solution</span>
               </div>
-              
+
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                 ${title}
               </h1>
-              
+
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 ${description}
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
                   Get Started Free
@@ -513,11 +513,11 @@ function ensureDir(dirPath) {
 function generatePage(route, config) {
   const dirPath = path.join(__dirname, 'app', route);
   const filePath = path.join(dirPath, 'page.tsx');
-  
+
   ensureDir(dirPath);
-  
+
   const content = aiServiceTemplate(config.name, config.title, config.description, config.keywords);
-  
+
   fs.writeFileSync(filePath, content);
   console.log(`✅ Created: ${route}`);
 }

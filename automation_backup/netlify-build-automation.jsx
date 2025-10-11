@@ -8,7 +8,7 @@
   f: (!fs.existsSync(logDir)) {/* TODO: Fix JSX expression */}
   e: true })} } return} this.isRunnin,
   g: = true; this.log('Startin)
-  g: Netlify Build Automation...)'' ');' // Initia,
+  g: Netlify Build Automation...props)'' ');' // Initia,
   l: status check; awai,
   t: this.checkNetlifyStatus(); // Schedul,
   e: regular monitoring;' cron.schedule('*/2: * * * *,'' ') asyn,

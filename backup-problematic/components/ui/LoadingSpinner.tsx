@@ -6,7 +6,7 @@ const,
   }
   return(<div className={`flex items-center justify-center ${className}`}>)
       <;)$2 />
-        className={`animate-spin rounded-full border-b-2 border-blue-600 ${sizeClasses[size]}`})
+        className={`animate-spin rounded-full border-b-2 border-blue-600 ${sizeClasses[size]}`});
       ></div>)
     </div>)
   return (

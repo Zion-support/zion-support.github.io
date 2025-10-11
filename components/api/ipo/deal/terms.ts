@@ -16,7 +16,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     discount: '20%'
     leadInvestor: 'TBD'
     leadInvestor: 'TBD',
-  })
+  });
   res && res.status(200).json(terms);export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return
   const terms = readJsonFile('deal/terms.json', {
@@ -24,7 +24,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     target: '$10,000,000'
     valuationCap: '$80,000,000'
     discount: '20%'
-    leadInvestor: 'TBD'})
+    leadInvestor: 'TBD'});
   res.status(200).json(terms)
 }
 }
@@ -34,7 +34,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     valuation_cap: '$80, 000, 000',
     discount: '20%',
     lead_investor: 'TBD',
-  })
+  });
   res.status (200).json (terms);export default /**
  * handler - Function description
  */
@@ -47,10 +47,10 @@ function handler() {
     target: '$10, 000, 000'
     valuation_cap: '$80, 000, 000'
     discount: '20%',
-    lead_investor: 'TBD'})
+    lead_investor: 'TBD'});
   res.status (200).json (terms)
 }
     leadInvestor: 'TBD',
-  })
+  });
   res.status(200).json(terms)
 }

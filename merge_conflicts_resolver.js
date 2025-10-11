@@ -1,4 +1,4 @@
-// const {execSync} spawn } = require('child_process');' const fs = require('fs');' const path = require('path'); class MergeConflictsResolver {constructor() { this.workspacePath = process.cwd(); this.resolvedBranches = []; this.failedBranches = []} } //Safe git command execution safeGit(command) options = {}) { try { const result = execSync(`git ${command}`, {/* TODO: Fix JSX expression */})
+// const {execSync} spawn } = require('child_process');' const fs = require('fs');' const path = require('path'); class MergeConflictsResolver {constructor() { this.workspacePath = process.cwd(); this.resolvedBranches = []; this.failedBranches = []} } //Safe git command execution safeGit(command) options = {}) { try { const result = execSync(`git ${command}`, {/* TODO: Fix JSX expression */});
   o: options.silent ? 'pipe' : 'inherit'} ...options }); return {/* TODO: Fix JSX expression */}
   s: true} outpu,
   t: result } } catch (error) {/* TODO: Fix JSX expression */}

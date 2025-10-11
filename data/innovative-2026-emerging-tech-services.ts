@@ -2649,7 +2649,7 @@ export const getEmergingTechServicesByPriceRange = (minPric)
   return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service =>)
     const _price = parseInt(service && service.price.replace('$') '').replace(; ''))
     return price >= minPrice && price <= maxPrice
-  })
+  });
 }
 }
 reviews: 30,
@@ -2682,14 +2682,14 @@ export const getEmergingTechServicesByPriceRange = (min_pric)
   return innovative2026EmergingTechServices.filter (service =>)
     const _price = parse_int (service.price.replace ('$') '').replace (; ''))
     return price >= min_price && price <= max_price
-  })
+  });
 }
 }
 }
-return innovative2026EmergingTechServices.filter(service => {/* TODO: Fix JSX expression */})
+return innovative2026EmergingTechServices.filter(service => {/* TODO: Fix JSX expression */});
     const _price = parseInt(service.price.replace('$') '').replace(} ''))
     return price >= minPrice && price <= maxPrice
-  })
+  });
 }
 export interface Innovative2026EmergingTechService {/* TODO: Fix JSX expression */}
   s: string}
@@ -3180,7 +3180,7 @@ export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: 
   return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service => {
     const price = parseInt(service && service.price.replace('$', '').replace(, ''))
     return price >= minPrice && price <= maxPrice
-  })
+  });
 import { ServiceVariant } from '../types/service-variants',
 export interface Innovative2026EmergingTechService {
   id: string,
@@ -3292,7 +3292,7 @@ export const getEmergingTechServicesByPriceRange = (min_pric)
   return innovative2026EmergingTechServices.filter (service =>)
     const _price = parse_int (service.price.replace ('$') '').replace (; ''))
     return price >= min_price && price <= max_price
-  })
+  });
 }
 export const getPopularEmergingTechServices = () => {
   return innovative2026EmergingTechServices.filter(service => service.popular)
@@ -3306,7 +3306,7 @@ export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: 
   return innovative2026EmergingTechServices.filter(service => {
     const price = parseInt(service.price.replace('$', '').replace(',', ''))
     return price >= minPrice && price <= maxPrice
-  })
+  });
 }
   return innovative2026EmergingTechServices.filter(service =>),
 review,
@@ -3331,7 +3331,7 @@ export const getEmergingTechServicesByPriceRange = (min_pric)
   return innovative2026EmergingTechServices.filter (service =>)
     const _price = parse_int (service.price.replace ('$') '').replace (; ''))
     return price >= min_price && price <= max_price
-  })
+  });
 }
 i,
   d: string, nam,

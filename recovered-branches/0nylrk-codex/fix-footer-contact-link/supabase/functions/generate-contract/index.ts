@@ -14,7 +14,7 @@ interface Milestone {
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
-    return new Response(null, { headers: corsHeaders })
+    return new Response(null, { headers: corsHeaders });
   }
   try {
     // Get the OpenAI API key from environment variables
@@ -72,7 +72,7 @@ serve(async (req) => {
         - Due Date: ${new Date(milestone.dueDate).toLocaleDateString()}
         - Estimated Work: ${milestone.estimatedHours} hours
         `
-      })
+      });
       prompt += `
       Please structure the contract to include these milestones in the payment schedule, with payments tied to the completion and approval of each milestone.
       `
@@ -97,7 +97,7 @@ serve(async (req) => {
           {
             role: 'user',
             content: prompt}],
-        temperature: 0.7})})
+        temperature: 0.7})});
             content: 'You are a legal expert specializing in drafting professional freelance contracts. Generate a clear, comprehensive contract based on the provided details.',
           },
           {
@@ -107,7 +107,7 @@ serve(async (req) => {
         ],
         temperature: 0.7,
       }),
-    })
+    });
     const data = await response.json()
     if (!response.ok) {
       throw new Error(data.error?.message || 'Failed to generate contract')
@@ -117,9 +117,9 @@ serve(async (req) => {
       success: true, 
       contract 
     }), {
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' }});
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-    })
+    });
   } catch (error) {
     console.error('Error generating contract:', error)
     return new Response(
@@ -131,7 +131,6 @@ serve(async (req) => {
         status: 500, 
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
         headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-      }
-    )
+      });
   }
-})
+});

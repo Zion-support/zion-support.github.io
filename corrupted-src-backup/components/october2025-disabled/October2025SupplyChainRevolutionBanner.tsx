@@ -110,7 +110,7 @@ Fortune, 100, Retail Giant, Achieve, s <span, className="te, x, t-yell, o, w-3, 
             <SparklesIcon, className="w-8 h-8, tex, t-yell, o, w-300, animat, e-pul, s, e" />;
 Revolutionary, A, I-Powered, Capabilitie, s
             <SparklesIcon, className="w-8 h-8, tex, t-yell, o, w-300, animat, e-pul, s, e" /> />
-              
+
           <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">
             <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-emera, l, d-4, 0, 0/20, hove, r:bord, e, r-emera, l, d-4, 0, 0/50, transitio, n-a, l, l">
               <div, className="flex, item, s-center, ga, p-3, m, b-3">
@@ -121,7 +121,7 @@ Revolutionary, A, I-Powered, Capabilitie, s
             <SparklesIcon, className="w-8 h-8, tex, t-yell, o, w-300, animat, e-pul, s, e" />;
 Revolutionary, A, I-Powered, Capabilitie, s;"
             <SparklesIcon, className="w-8 h-8, tex, t-yell, o, w-300, animat, e-pul, s, e" /> />
-              
+
           "
           <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6"></div>"
             <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-emera, l, d-4, 0, 0/20, hove, r:bord, e, r-emera, l, d-4, 0, 0/50, transitio, n-a, l, l"></div>"
@@ -305,7 +305,7 @@ className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro
             <ChartBarIcon, className="w-6 h-6" />;
 Explore, Platfor, m & Servic, e, s
             <LinkIcon, className="w-6 h-6"</Li, n, k> />
-              
+
         {/* Free, Assessment, C, T, A */}
         <div, classNam, e = "bg-gradie, n, t-to-r, fro, m-gre, e, n-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, borde, r-2, borde, r-gre, e, n-4, 0, 0/30">
           <div, className="te, x, t-cent, e, r">
@@ -337,7 +337,7 @@ className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro
             <ChartBarIcon, className="w-6 h-6" />;
 Explore, Platfor, m & Servic, e, s;"
             <LinkIcon, className="w-6 h-6"</Li, n, k> />
-              
+
         {/* Free, Assessment, C, T, A */}"
         <div, classNam, e = "bg-gradie, n, t-to-r, fro, m-gre, e, n-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, borde, r-2, borde, r-gre, e, n-4, 0, 0/30"></div>"
           <div, className="te, x, t-cent, e, r"></div>"

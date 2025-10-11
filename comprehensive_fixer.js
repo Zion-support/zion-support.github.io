@@ -284,7 +284,7 @@ function fixFile(filePath) {
         modified = true
 function fixFile(filePath) {/* TODO: Fix JSX expression */}
       }
-    })
+    });
     if (modified) {/* TODO: Fix JSX expression */}
     }
     return false
@@ -305,8 +305,8 @@ async function main() {/* TODO: Fix JSX expression */}
   //Find all TypeScript/TSX files
   //   let fixedCount = 0
   files.forEach(file => {/* TODO: Fix JSX expression */}
-    })
-  })
+    });
+  });
   //   }
 
 // main().catch(console.error)
