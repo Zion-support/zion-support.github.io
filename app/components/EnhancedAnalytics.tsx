@@ -1,19 +1,5 @@
-};
-
-export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const track = useCallback((event: string, parameters?: Record<string, any>) => {
-    console.log('Analytics Event:', event, parameters);
-  }, []);
-
-  const page = useCallback((pageName: string, parameters?: Record<string, any>) => {
-    console.log('Analytics Page:', pageName, parameters);
-  }, []);
-
-  const identify = useCallback((userId: string, traits?: Record<string, any>) => {
-    console.log('Analytics Identify:', userId, traits);
-  }, []);
 'use client'
-import React, { createContext, useContext, useEffect, useState } from 'react'
+import React, { createContext, useContext, useEffect, useState, useCallback } from 'react'
 
 interface AnalyticsContextType {
   trackEvent: (eventName: string, properties?: Record<string, any>) => void
@@ -31,64 +17,62 @@ export const useAnalytics = () => {
   return context
 }
 
-interface AnalyticsProviderProps {
-  children: React.ReactNode
-}
+export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [isLoaded, setIsLoaded] = useState(false)
 
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
-  const [isInitialized, setIsInitialized] = useState(false)
+  const trackEvent = useCallback((eventName: string, properties?: Record<string, any>) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', eventName, {
+        event_category: properties?.category || 'general',
+        event_label: properties?.label || '',
+        value: properties?.value || 0,
+        ...properties
+      })
+    }
+    console.log('Analytics Event:', eventName, properties)
+  }, [])
+
+  const trackPageView = useCallback((pageName: string) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('config', 'GA_MEASUREMENT_ID', {
+        page_title: pageName,
+        page_location: window.location.href
+      })
+    }
+    console.log('Analytics Page View:', pageName)
+  }, [])
+
+  const trackUserAction = useCallback((action: string, category: string, label?: string) => {
+    trackEvent(action, {
+      category,
+      label,
+      action
+    })
+  }, [trackEvent])
 
   useEffect(() => {
     // Initialize analytics
     const initAnalytics = () => {
-      // Add Google Analytics or other analytics services here
-      if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
-        // Example: Initialize Google Analytics
-        // gtag('config', 'GA_MEASUREMENT_ID')
+      // Google Analytics initialization
+      if (typeof window !== 'undefined') {
+        const script = document.createElement('script')
+        script.async = true
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID || 'GA_MEASUREMENT_ID'}`
+        document.head.appendChild(script)
+
+        window.dataLayer = window.dataLayer || []
+        function gtag(...args: any[]) {
+          window.dataLayer.push(args)
+        }
+        window.gtag = gtag
+        gtag('js', new Date())
+        gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'GA_MEASUREMENT_ID')
       }
-      setIsInitialized(true)
     }
 
     initAnalytics()
+    setIsLoaded(true)
   }, [])
-
-  const trackEvent = (eventName: string, properties?: Record<string, any>) => {
-    if (!isInitialized) return
-
-    // Track event with analytics service
-    if (typeof window !== 'undefined') {
-      console.log('Analytics Event:', eventName, properties)
-      
-      // Example: Send to Google Analytics
-      // gtag('event', eventName, properties)
-    }
-  }
-
-  const trackPageView = (pageName: string) => {
-    if (!isInitialized) return
-
-    // Track page view
-    if (typeof window !== 'undefined') {
-      console.log('Page View:', pageName)
-      
-      // Example: Send to Google Analytics
-      // gtag('config', 'GA_MEASUREMENT_ID', {
-      //   page_title: pageName,
-      //   page_location: window.location.href
-      // })
-    }
-  }
-
-  const trackUserAction = (action: string, category: string, label?: string) => {
-    if (!isInitialized) return
-
-    trackEvent('user_action', {
-      action,
-      category,
-      label,
-      timestamp: new Date().toISOString()
-    })
-  }
 
   const value: AnalyticsContextType = {
     trackEvent,
@@ -97,6 +81,18 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   }
 
   return (
-    <AnalyticsContext.Provider value={{ track, page, identify }}>
+    <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
+  )
+}
+
+// Declare global gtag function
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void
+    dataLayer: any[]
+  }
+}
+
+export default AnalyticsProvider

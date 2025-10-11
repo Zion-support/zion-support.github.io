@@ -1,3 +1,5 @@
+'use client'
+import React, { useEffect } from 'react'
 
 interface AccessibilityEnhancerProps {
   enableKeyboardNavigation?: boolean;
@@ -16,6 +18,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 }) => {
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    // Keyboard navigation support
     if (enableKeyboardNavigation) {
       const handleKeyDown = (event: KeyboardEvent) => {
         if (event.key === 'Tab') {
@@ -34,15 +39,13 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         document.removeEventListener('keydown', handleKeyDown);
         document.removeEventListener('mousedown', handleMouseDown);
       };
+    }
+  }, [enableKeyboardNavigation]);
+
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
-
-      document.addEventListener('keydown', handleKeyDown);
-      return () => document.removeEventListener('keydown', handleKeyDown);
-    }
-
-    // Add screen reader support
+    // Screen reader support
     if (enableScreenReaderSupport) {
       // Add skip links
       const skipLinks = document.createElement('div');
@@ -66,195 +69,116 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         nav.id = 'navigation';
       }
 
-      // Add live region for announcements
-      const liveRegion = document.createElement('div');
-      liveRegion.setAttribute('aria-live', 'polite');
-      liveRegion.setAttribute('aria-atomic', 'true');
-      liveRegion.className = 'sr-only';
-      liveRegion.id = 'live-region';
-      document.body.appendChild(liveRegion);
+      // Add focus indicators
+      const style = document.createElement('style');
+      style.textContent = `
+        .keyboard-navigation *:focus {
+          outline: 2px solid #3b82f6 !important;
+          outline-offset: 2px !important;
+        }
+        .skip-link {
+          position: absolute;
+          top: -40px;
+          left: 6px;
+          background: #000;
+          color: #fff;
+          padding: 8px;
+          text-decoration: none;
+          z-index: 1000;
+        }
+        .skip-link:focus {
+          top: 6px;
+        }
+        .sr-only {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          white-space: nowrap;
+          border: 0;
+        }
+      `;
+      document.head.appendChild(style);
+
+      return () => {
+        const existingSkipLinks = document.querySelector('.sr-only');
+        if (existingSkipLinks) {
+          existingSkipLinks.remove();
+        }
+      };
     }
-  }, [enableKeyboardNavigation]);
+  }, [enableScreenReaderSupport]);
 
-};
-
-export default AccessibilityEnhancer;
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
-'use client'
-import React, { useEffect } from 'react'
-
-const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
-    // Add skip links
-    const addSkipLinks = () => {
-      const skipLink = document.createElement('a')
-      skipLink.href = '#main-content'
-      skipLink.textContent = 'Skip to main content'
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-500 text-white px-4 py-2 rounded z-50'
-      skipLink.setAttribute('tabindex', '1')
-      document.body.insertBefore(skipLink, document.body.firstChild)
+    if (typeof window === 'undefined') return;
+
+    // High contrast mode
+    if (enableHighContrast) {
+      document.body.classList.add('high-contrast');
+      
+      const style = document.createElement('style');
+      style.textContent = `
+        .high-contrast {
+          filter: contrast(150%) brightness(120%);
+        }
+        .high-contrast * {
+          border-color: currentColor !important;
+        }
+      `;
+      document.head.appendChild(style);
+
+      return () => {
+        document.body.classList.remove('high-contrast');
+      };
     }
+  }, [enableHighContrast]);
 
-    // Add ARIA landmarks
-    const addAriaLandmarks = () => {
-      const main = document.querySelector('main')
-      if (main && !main.getAttribute('role')) {
-        main.setAttribute('role', 'main')
-        main.setAttribute('aria-label', 'Main content')
-      }
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
 
-      const nav = document.querySelector('nav')
-      if (nav && !nav.getAttribute('role')) {
-        nav.setAttribute('role', 'navigation')
-        nav.setAttribute('aria-label', 'Main navigation')
-      }
-
-      const footer = document.querySelector('footer')
-      if (footer && !footer.getAttribute('role')) {
-        footer.setAttribute('role', 'contentinfo')
-      }
-    }
-
-    // Enhance form accessibility
-    const enhanceFormAccessibility = () => {
-      const forms = document.querySelectorAll('form')
-      forms.forEach(form => {
-        const inputs = form.querySelectorAll('input, textarea, select')
-        inputs.forEach((input, index) => {
-          const inputElement = input as HTMLInputElement
-          
-          // Add ARIA labels if missing
-          if (!inputElement.getAttribute('aria-label') && !inputElement.getAttribute('aria-labelledby')) {
-            const label = form.querySelector(`label[for="${inputElement.id}"]`)
-            if (label) {
-              inputElement.setAttribute('aria-labelledby', label.id || `label-${index}`)
-              if (!label.id) {
-                label.id = `label-${index}`
-              }
-            }
-          }
-
-          // Add required indicator
-          if (inputElement.required && !inputElement.getAttribute('aria-required')) {
-            inputElement.setAttribute('aria-required', 'true')
-          }
-
-          // Add error handling
-          if (inputElement.hasAttribute('aria-invalid')) {
-            const errorId = `error-${inputElement.id || index}`
-            inputElement.setAttribute('aria-describedby', errorId)
-          }
-        })
-      })
-    }
-
-    // Add focus management
-    const addFocusManagement = () => {
-      // Trap focus in modals
-      const modals = document.querySelectorAll('[role="dialog"]')
-      modals.forEach(modal => {
-        const focusableElements = modal.querySelectorAll(
+    // Focus management
+    if (enableFocusManagement) {
+      const trapFocus = (element: HTMLElement) => {
+        const focusableElements = element.querySelectorAll(
           'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-        )
-        const firstElement = focusableElements[0] as HTMLElement
-        const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement
+        );
+        const firstElement = focusableElements[0] as HTMLElement;
+        const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 
         const handleTabKey = (e: KeyboardEvent) => {
           if (e.key === 'Tab') {
             if (e.shiftKey) {
               if (document.activeElement === firstElement) {
-                lastElement.focus()
-                e.preventDefault()
+                lastElement.focus();
+                e.preventDefault();
               }
             } else {
               if (document.activeElement === lastElement) {
-                firstElement.focus()
-                e.preventDefault()
+                firstElement.focus();
+                e.preventDefault();
               }
             }
           }
-        }
+        };
 
-        modal.addEventListener('keydown', handleTabKey)
-      })
+        element.addEventListener('keydown', handleTabKey);
+        firstElement?.focus();
+
+        return () => {
+          element.removeEventListener('keydown', handleTabKey);
+        };
+      };
+
+      // Apply focus trapping to modals and dropdowns
+      const modals = document.querySelectorAll('[role="dialog"], [role="alertdialog"]');
+      modals.forEach(modal => trapFocus(modal as HTMLElement));
     }
+  }, [enableFocusManagement]);
 
-    // Add keyboard navigation
-    const addKeyboardNavigation = () => {
-      // Add keyboard support for custom buttons
-      const customButtons = document.querySelectorAll('[role="button"]')
-      customButtons.forEach(button => {
-        button.addEventListener('keydown', (e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault()
-            ;(button as HTMLElement).click()
-          }
-        })
-      })
-    }
+  return <>{children}</>;
+};
 
-    // Add high contrast mode support
-    const addHighContrastSupport = () => {
-      const style = document.createElement('style')
-      style.textContent = `
-        @media (prefers-contrast: high) {
-          .bg-white\\/10 {
-            background-color: rgba(255, 255, 255, 0.2) !important;
-          }
-          .text-gray-300 {
-            color: #ffffff !important;
-          }
-          .border-gray-600 {
-            border-color: #ffffff !important;
-          }
-        }
-      `
-      document.head.appendChild(style)
-    }
-
-    // Add reduced motion support
-    const addReducedMotionSupport = () => {
-      const style = document.createElement('style')
-      style.textContent = `
-        @media (prefers-reduced-motion: reduce) {
-          * {
-            animation-duration: 0.01ms !important;
-            animation-iteration-count: 1 !important;
-            transition-duration: 0.01ms !important;
-          }
-        }
-      `
-      document.head.appendChild(style)
-    }
-
-    // Initialize all enhancements
-    addSkipLinks()
-    addAriaLandmarks()
-    enhanceFormAccessibility()
-    addFocusManagement()
-    addKeyboardNavigation()
-    addHighContrastSupport()
-    addReducedMotionSupport()
-
-    // Re-run enhancements when DOM changes
-    const observer = new MutationObserver(() => {
-      addAriaLandmarks()
-      enhanceFormAccessibility()
-      addFocusManagement()
-      addKeyboardNavigation()
-    })
-
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true
-    })
-
-    return () => {
-      observer.disconnect()
-    }
-  }, [])
-
-  return <>{children}</>
-}
-
-export default AccessibilityEnhancer
+export default AccessibilityEnhancer;
