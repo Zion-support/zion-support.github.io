@@ -26,6 +26,20 @@ export default function Footer() {
               <li><Link to="/it-services" className="text-gray-400 hover:text-white transition-colors">IT Services</Link></li>
               <li><Link to="/cloud-services" className="text-gray-400 hover:text-white transition-colors">Cloud Services</Link></li>
               <li><Link to="/micro-saas-services" className="text-gray-400 hover:text-white transition-colors">Micro SAAS</Link></li>
+              <li><Link to="/digital-transformation" className="text-gray-400 hover:text-white transition-colors">Digital Transformation</Link></li>
+              <li><Link to="/5g-implementation" className="text-gray-400 hover:text-white transition-colors">5G Implementation</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold mb-4">AI Solutions</h3>
+            <ul className="space-y-2">
+              <li><Link to="/ai-content-generator" className="text-gray-400 hover:text-white transition-colors">AI Content Generator</Link></li>
+              <li><Link to="/ai-chatbot-builder" className="text-gray-400 hover:text-white transition-colors">AI Chatbot Builder</Link></li>
+              <li><Link to="/ai-analytics-dashboard" className="text-gray-400 hover:text-white transition-colors">AI Analytics Dashboard</Link></li>
+              <li><Link to="/ai-email-assistant" className="text-gray-400 hover:text-white transition-colors">AI Email Assistant</Link></li>
+              <li><Link to="/ai-voice-assistant" className="text-gray-400 hover:text-white transition-colors">AI Voice Assistant</Link></li>
+              <li><Link to="/ai-automation" className="text-gray-400 hover:text-white transition-colors">AI Automation</Link></li>
             </ul>
           </div>
 
@@ -57,10 +71,23 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p className="text-gray-400">
-            © 2024 Zion Tech Group. All rights reserved.
-          </p>
+        <div className="border-t border-gray-800 mt-8 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <p className="text-gray-400 mb-4 md:mb-0">
+              © 2024 Zion Tech Group. All rights reserved.
+            </p>
+            <div className="flex space-x-6">
+              <Link to="/privacy" className="text-gray-400 hover:text-white transition-colors text-sm">
+                Privacy Policy
+              </Link>
+              <Link to="/terms" className="text-gray-400 hover:text-white transition-colors text-sm">
+                Terms of Service
+              </Link>
+              <Link to="/contact" className="text-gray-400 hover:text-white transition-colors text-sm">
+                Contact
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

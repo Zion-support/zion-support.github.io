@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5491
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
 
 const PagePage: React.FC = () => {
   const features = [
@@ -28,83 +20,13 @@ const PagePage: React.FC = () => {
       title: 'Proven Results',
       description: 'Track record of successful projects and satisfied clients.',
       benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
-=======
-'use client'
-import React from 'react'
-import {Helmet} from 'react-helmet-async'
-import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, FileText} from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-
-const AiAutomatedReportingPage: React.FC = () => {
-  const features = [
-    {
-      icon: FileText,
-      title: 'Automated Report Generation',
-      description: 'Generate comprehensive reports automatically with AI-powered data analysis.',
-      benefits: ['Auto-generation', 'Data analysis', 'Report templates', 'Custom formatting']
-    },
-    {
-      icon: BarChart,
-      title: 'Data Visualization',
-      description: 'Create stunning visualizations and charts from your data automatically.',
-      benefits: ['Interactive charts', 'Custom dashboards', 'Export options', 'Mobile responsive']
-    },
-    {
-      icon: Brain,
-      title: 'AI-Powered Insights',
-      description: 'Get intelligent insights and recommendations from your data.',
-      benefits: ['Smart analysis', 'Predictive insights', 'Trend identification', 'Anomaly detection']
-    },
-    {
-      icon: Zap,
-      title: 'Real-Time Updates',
-      description: 'Reports update in real-time as new data becomes available.',
-      benefits: ['Live updates', 'Real-time data', 'Instant notifications', 'Dynamic content']
-    },
-    {
-      icon: Shield,
-      title: 'Data Security',
-      description: 'Enterprise-grade security for your sensitive data and reports.',
-      benefits: ['Data encryption', 'Access controls', 'Audit trails', 'Compliance ready']
-    },
-    {
-      icon: Target,
-      title: 'Custom Dashboards',
-      description: 'Create custom dashboards tailored to your specific needs.',
-      benefits: ['Custom design', 'Flexible layout', 'Widget library', 'Personalization']
     }
   ];
-
-  const services = [
-    {
-      title: 'Report Automation',
-      description: 'Complete automation of your reporting processes with AI.',
-      icon: FileText,
-      benefits: ['Process automation', 'Template creation', 'Scheduling', 'Distribution']
-    },
-    {
-      title: 'Data Integration',
-      description: 'Seamless integration with your existing data sources.',
-      icon: Zap,
-      benefits: ['API integration', 'Database connections', 'Data synchronization', 'Real-time updates']
-    },
-    {
-      title: 'Analytics Consulting',
-      description: 'Expert guidance on implementing automated reporting solutions.',
-      icon: Brain,
-      benefits: ['Strategy development', 'Implementation support', 'Training', 'Ongoing support']
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d8e4
-    }
-  ];
-=======
 'use client'
 import React from 'react'
 import { CheckCircle } from 'lucide-react'
 export default function PagePage() {
-=======
 export default function AiAccountingAssistantPage() {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-35c1
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="pt-20 px-4 py-20">
@@ -121,16 +43,13 @@ export default function AiAccountingAssistantPage() {
     </div>
   )
 }
-<<<<<<< HEAD
 'use client'
 import React from 'react'
 import {Helmet} from 'react-helmet-async'
 import {ArrowRight} from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5ef7
 
-=======
 
 const AiAutomatedReportingPage: React.FC = () => {
   const features = [
@@ -151,9 +70,7 @@ const AiAutomatedReportingPage: React.FC = () => {
     }
   ];
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5491
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Page - Zion Tech Group</title>
@@ -167,17 +84,10 @@ const AiAutomatedReportingPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-<<<<<<< HEAD
               Page
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Professional page services to help your business succeed and grow.
-=======
-              Ai Automated Reporting
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional ai automated reporting services to help your business succeed and grow.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5491
             </p>
           </div>
           
@@ -202,11 +112,7 @@ const AiAutomatedReportingPage: React.FC = () => {
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
               <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-<<<<<<< HEAD
                 Contact us today to learn more about our page services.
-=======
-                Contact us today to learn more about our ai automated reporting services.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5491
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
@@ -221,7 +127,6 @@ const AiAutomatedReportingPage: React.FC = () => {
         </div>
       </main>
       
-=======
     <div className="min-h-screen bg-gray-50">
       <Helmet>
         <title>AI Automated Reporting - Zion Tech Group</title>
@@ -338,20 +243,10 @@ const AiAutomatedReportingPage: React.FC = () => {
           </div>
         </section>
       </main>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d8e4
       <Footer />
     </div>
   );
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default PagePage;
-=======
-export default AiAutomatedReportingPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d8e4
-=======
 export default AiAutomatedReportingPage
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5ef7
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-35c1
