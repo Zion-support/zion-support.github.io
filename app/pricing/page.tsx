@@ -16,20 +16,32 @@ const PricingPage: React.FC = () => {
         'Monthly reports'
       ],
       popular: false,
-      icon: Zap
-    },
+      {
+
+        icon: Zap
+    
+
+      },
     {
       name: 'Professional',
       ],
       popular: true,
-      icon: Star
-    },
+      {
+
+        icon: Star
+    
+
+      },
     {
       name: 'Enterprise',
       ],
       popular: false,
-      icon: Shield
-    }
+      {
+
+        icon: Shield
+    
+
+      }
   ]
 
   const addOns = [

@@ -2,7 +2,9 @@ export interface Service {
   id: string;
   name: string;
   description: string;
-  icon: string;
+  {
+
+    icon: string;
   price: string;
   originalPrice?: string;
   features: string[];
@@ -11,7 +13,9 @@ export interface Service {
   popular?: boolean;
   category: string;
   rating: number;
-}
+
+
+  }
 
 export const services: Service[] = [
   {

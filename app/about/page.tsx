@@ -6,37 +6,100 @@ import Footer from '../components/Footer'
 
 const AboutPage: React.FC = () => {
   const features = [
-    icon: Target,
-      title: 'Mission-Driven',
+    {
+      {
+
+        icon: Target,
+      {
+
+        title: 'Mission-Driven',
       description: 'We are committed to delivering AI and IT solutions that transform businesses and drive meaningful impact.'
-    },
-    icon: Users,
-      title: 'Client-Focused',
+    
+
+      
+
+      },
+    {
+      {
+
+        icon: Users,
+      {
+
+        title: 'Client-Focused',
       description: 'Every solution we create is tailored to meet the unique needs and challenges of our clients.'
-    },
-    icon: Award,
-      title: 'Excellence',
+    
+
+      
+
+      },
+    {
+      {
+
+        icon: Award,
+      {
+
+        title: 'Excellence',
       description: 'We maintain the highest standards of quality and innovation in everything we do.'
-    }
+    
+
+      
+
+      }
   ]
 
   const values = [
-    icon: CheckCircle,
-      title: 'Innovation',
+    {
+      {
+
+        icon: CheckCircle,
+      {
+
+        title: 'Innovation',
       description: 'We constantly push the boundaries of what\'s possible with AI and technology.'
-    },
-    icon: Users,
-      title: 'Collaboration',
+    
+
+      
+
+      },
+    {
+      {
+
+        icon: Users,
+      {
+
+        title: 'Collaboration',
       description: 'We work closely with our clients to understand their unique challenges and goals.'
-    },
-    icon: Shield,
-      title: 'Integrity',
+    
+
+      
+
+      },
+    {
+      {
+
+        icon: Shield,
+      {
+
+        title: 'Integrity',
       description: 'We operate with complete transparency and honesty in all our business dealings and client relationships.'
-    },
-    icon: Globe,
-      title: 'Impact',
+    
+
+      
+
+      },
+    {
+      {
+
+        icon: Globe,
+      {
+
+        title: 'Impact',
       description: 'We focus on creating solutions that make a meaningful difference in the world and drive positive change.'
-    }
+    
+
+      
+
+      }
   ]
 
   const team = [

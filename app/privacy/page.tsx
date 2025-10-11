@@ -31,45 +31,77 @@ const purposes = [;
     {;,
 title: 'Service Provision',;,
 description: 'To provide and maintain our AI and IT services',;,
-icon: CheckCircle
-    },
+{
+
+  icon: CheckCircle
+    
+
+},
     {;,
 title: 'Communication',;,
 description: 'To respond to inquiries and provide customer support',;,
-icon: CheckCircle
-    },
+{
+
+  icon: CheckCircle
+    
+
+},
     {;,
 title: 'Improvement',;,
 description: 'To analyze usage patterns and improve our services',;,
-icon: CheckCircle
-    },
+{
+
+  icon: CheckCircle
+    
+
+},
     {;,
 title: 'Legal Compliance',;,
 description: 'To comply with applicable laws and regulations',;,
-icon: CheckCircle
-    }
+{
+
+  icon: CheckCircle
+    
+
+}
   ];
 const rights = [;
     {;,
 title: 'Access',;,
 description: 'Request access to your personal data',;,
-icon: Eye
-    },
+{
+
+  icon: Eye
+    
+
+},
     {;,
 title: 'Rectification',;,
 description: 'Correct inaccurate or incomplete data',;,
-icon: Edit
-    },
+{
+
+  icon: Edit
+    
+
+},
     {;,
 title: 'Erasure',;,
 description: 'Request deletion of your personal data',;,
-icon: Trash2
-    },
+{
+
+  icon: Trash2
+    
+
+},
     {;,
 title: 'Portability',;,
 description: 'Receive your data in a structured format',;,
-icon: Database
-    }
+{
+
+  icon: Database
+    
+
+}
   ];
 const contactInfo={;;,
 email: 'privacy@ziontechgroup.com',;,

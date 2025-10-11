@@ -7,29 +7,49 @@ import { ArrowRight, CheckCircle, Brain, Cloud, Shield, Code } from 'lucide-reac
 const HomePage: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
+      {
+
+        icon: Brain,
+      {
+
+        title: 'AI-Powered Solutions',
       description: 'Leverage cutting-edge artificial intelligence to transform your business operations.',
       benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
-    },
+
+      },
     {
-      icon: Cloud,
-      title: 'Cloud Infrastructure',
+      {
+
+        icon: Cloud,
+      {
+
+        title: 'Cloud Infrastructure',
       description: 'Scalable and secure cloud solutions tailored to your business needs.',
       benefits: ['AWS Integration', 'Azure Services', 'Google Cloud', 'Hybrid Solutions']
-    },
+
+      },
     {
-      icon: Shield,
-      title: 'Cybersecurity',
+      {
+
+        icon: Shield,
+      {
+
+        title: 'Cybersecurity',
       description: 'Protect your digital assets with our comprehensive security solutions.',
       benefits: ['Threat Detection', 'Data Protection', 'Compliance', 'Risk Assessment']
-    },
+
+      },
     {
-      icon: Code,
-      title: 'Custom Development',
+      {
+
+        icon: Code,
+      {
+
+        title: 'Custom Development',
       description: 'Bespoke software solutions designed to meet your unique requirements.',
       benefits: ['Web Applications', 'Mobile Apps', 'API Development', 'System Integration']
-    }
+
+      }
   ];
 
   const stats = [

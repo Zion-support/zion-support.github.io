@@ -8,36 +8,62 @@ import Footer from '../components/Footer';
 
 const AI3DGenerationPage: React.FC = () => {
   const features = [
-    icon: Cube,
-      title: 'AI-Powered 3D Modeling',
+    {
+      {
+
+        icon: Cube,
+      {
+
+        title: 'AI-Powered 3D Modeling',
       description: 'Generate high-quality 3D models from text descriptions or 2D images using advanced AI algorithms.',
       benefits: ['Text-to-3D conversion', 'Image-to-3D generation', 'Automated modeling', 'High-quality output']
-    },
-    icon: Zap,
-      title: 'Real-Time Generation',
+
+      },
+    {
+      {
+
+        icon: Zap,
+      {
+
+        title: 'Real-Time Generation',
       description: 'Create 3D content in real-time with lightning-fast processing and instant preview capabilities.',
       benefits: ['Instant generation', 'Real-time preview', 'Fast iteration', 'Live editing']
-    },
-    icon: Eye,
+
+      },
+    {
+      icon: Eye,
       title: 'Advanced Rendering',
       description: 'Professional-grade rendering with realistic lighting, materials, and textures.',
       benefits: ['Photorealistic output', 'Advanced lighting', 'Material simulation', 'High-resolution rendering']
     },
-    icon: Palette,
-      title: 'Creative Tools',
+    {
+      {
+
+        icon: Palette,
+      {
+
+        title: 'Creative Tools',
       description: 'Comprehensive suite of tools for customizing and enhancing your 3D creations.',
       benefits: ['Material editor', 'Texture mapping', 'Color customization', 'Style transfer']
-    },
-    icon: Brain,
+
+      },
+    {
+      icon: Brain,
       title: 'Intelligent Optimization',
       description: 'AI-driven optimization for performance, quality, and resource efficiency.',
       benefits: ['Auto-optimization', 'Performance tuning', 'Quality enhancement', 'Resource management']
     },
-    icon: Shield,
-      title: 'Enterprise Security',
+    {
+      {
+
+        icon: Shield,
+      {
+
+        title: 'Enterprise Security',
       description: 'Secure cloud-based processing with enterprise-grade security and compliance.',
       benefits: ['Data encryption', 'Secure processing', 'Compliance ready', 'Access controls']
-    }
+
+      }
   ];
 
   const useCases = [

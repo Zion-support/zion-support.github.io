@@ -7,11 +7,16 @@ import Footer from '../components/Footer';
 
 const PagePage: React.FC = () => {
   const features = [
-    icon: Target,
-      title: 'Precision Targeting',
+    {
+
+      icon: Target,
+      {
+
+        title: 'Precision Targeting',
       description: 'Target specific goals and objectives with precision.',
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    }
+
+      }
   ];
 
   const benefits = [

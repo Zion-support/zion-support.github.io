@@ -1,36 +1,85 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
+const { glob } = require('glob');
 
-// Find all tsx files in src directory
-const files = execSync('find src -name "*.tsx" -type f', { encoding: 'utf8' }).trim().split('\n');
+// Function to fix object literal syntax errors
+function fixObjectLiterals(content) {
+  // Fix missing opening braces in array objects - more comprehensive pattern
+  // This regex looks for patterns like:
+  // icon: SomeIcon,
+  //   title: 'Some Title',
+  //   description: 'Some description'
+  // and wraps them in braces
+  
+  // First, let's fix the most common pattern
+  content = content.replace(/(\s+)(icon:\s*[^,}]+,\s*title:\s*[^,}]+,\s*description:\s*[^,}]+(?:,\s*benefits:\s*\[[^\]]+\])?)\s*}/g, (match, indent, objContent) => {
+    return `${indent}{\n${indent}  ${objContent}\n${indent}}`;
+  });
 
-files.forEach(filePath => {
+  // Fix patterns that start with title
+  content = content.replace(/(\s+)(title:\s*[^,}]+,\s*description:\s*[^,}]+(?:,\s*benefits:\s*\[[^\]]+\])?)\s*}/g, (match, indent, objContent) => {
+    return `${indent}{\n${indent}  ${objContent}\n${indent}}`;
+  });
+
+  // Fix single property objects
+  content = content.replace(/(\s+)(icon:\s*[^,}]+)\s*}/g, (match, indent, objContent) => {
+    return `${indent}{\n${indent}  ${objContent}\n${indent}}`;
+  });
+
+  return content;
+}
+
+// Function to process a single file
+function processFile(filePath) {
   try {
-    if (fs.existsSync(filePath)) {
-      let content = fs.readFileSync(filePath, 'utf8');
-      
-      // Fix missing closing braces for functions
-      if (content.includes('  );') && !content.includes('};')) {
-        content = content.replace(/(\s*\);\s*$)/, '\n};');
-      }
-      
-      // Fix missing closing braces for components
-      if (content.includes('  );') && !content.includes('};') && content.includes('export default')) {
-        content = content.replace(/(\s*\);\s*$)/, '\n};');
-      }
-      
-      // Fix any remaining syntax issues
-      if (content.includes('  );') && !content.includes('};')) {
-        content = content.replace(/(\s*\);\s*$)/, '\n};');
-      }
-      
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed syntax in: ${filePath}`);
+    const content = fs.readFileSync(filePath, 'utf8');
+    let fixedContent = content;
+    
+    // Apply fixes
+    fixedContent = fixObjectLiterals(fixedContent);
+    
+    // Only write if content changed
+    if (fixedContent !== content) {
+      fs.writeFileSync(filePath, fixedContent, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
     }
+    
+    return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
   }
-});
+}
 
-console.log('All syntax issues fixed!');
+// Main function
+async function main() {
+  const patterns = [
+    'app/**/*.tsx',
+    'app/**/*.ts'
+  ];
+  
+  let totalFiles = 0;
+  let fixedFiles = 0;
+  
+  for (const pattern of patterns) {
+    const files = await glob(pattern, { cwd: process.cwd() });
+    
+    for (const file of files) {
+      totalFiles++;
+      if (processFile(file)) {
+        fixedFiles++;
+      }
+    }
+  }
+  
+  console.log(`\nProcessed ${totalFiles} files, fixed ${fixedFiles} files.`);
+}
+
+if (require.main === module) {
+  main().catch(console.error);
+}
+
+module.exports = { fixObjectLiterals, processFile };

@@ -7,36 +7,66 @@ import Footer from '../components/Footer';
 
 const AIAccountingAssistantPage: React.FC = () => {
   const features = [
-    icon: Calculator,
-      title: 'Automated Bookkeeping',
+    {
+
+      icon: Calculator,
+      {
+
+        title: 'Automated Bookkeeping',
       description: 'AI-powered bookkeeping that automatically categorizes transactions and maintains accurate records.',
       benefits: ['Transaction categorization', 'Receipt scanning', 'Expense tracking', 'Invoice processing']
-    },
-    icon: BarChart,
-      title: 'Financial Analytics',
+
+      },
+    {
+
+      icon: BarChart,
+      {
+
+        title: 'Financial Analytics',
       description: 'Advanced analytics and reporting to help you understand your financial performance.',
       benefits: ['Profit & loss reports', 'Cash flow analysis', 'Budget tracking', 'Financial forecasting']
-    },
-    icon: Shield,
-      title: 'Compliance & Security',
+
+      },
+    {
+
+      icon: Shield,
+      {
+
+        title: 'Compliance & Security',
       description: 'Ensure compliance with accounting standards and maintain the highest security standards.',
       benefits: ['Tax compliance', 'Audit trails', 'Data encryption', 'Regulatory reporting']
-    },
-    icon: Zap,
-      title: 'Real-Time Processing',
+
+      },
+    {
+
+      icon: Zap,
+      {
+
+        title: 'Real-Time Processing',
       description: 'Process financial data in real-time for up-to-date insights and decision making.',
       benefits: ['Live updates', 'Instant reporting', 'Real-time alerts', 'Automated workflows']
-    },
-    icon: Brain,
-      title: 'Intelligent Insights',
+
+      },
+    {
+
+      icon: Brain,
+      {
+
+        title: 'Intelligent Insights',
       description: 'AI-driven insights and recommendations to optimize your financial management.',
       benefits: ['Spending analysis', 'Cost optimization', 'Revenue insights', 'Predictive analytics']
-    },
-    icon: Target,
-      title: 'Goal Tracking',
+
+      },
+    {
+
+      icon: Target,
+      {
+
+        title: 'Goal Tracking',
       description: 'Set and track financial goals with AI-powered monitoring and recommendations.',
       benefits: ['Goal setting', 'Progress tracking', 'Milestone alerts', 'Achievement insights']
-    }
+
+      }
   ];
 
   const capabilities = [

@@ -9,7 +9,11 @@ const PagePage: React.FC = () => {;
 const features = [;
     {;,
 }
-icon: Brain},;,
+{
+
+  icon: Brain
+
+},;,
 title: 'AI-Powered Solutions',;,
 description: 'Advanced artificial intelligence technology to transform your business operations.',;,
 benefits: ['Machine learning', 'Natural language processing', 'Predictive analytics', 'Automated insights']

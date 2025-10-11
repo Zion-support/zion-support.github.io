@@ -17,26 +17,46 @@ const AccessibilityPage: React.FC = () => {
       description: 'High contrast modes, scalable text, and screen reader compatibility.',
       benefits: ['High contrast themes', 'Scalable fonts', 'Screen reader support', 'Color blind friendly']
     },
-    icon: Ear,
-      title: 'Audio Accessibility',
+    {
+
+      icon: Ear,
+      {
+
+        title: 'Audio Accessibility',
       description: 'Enhanced audio experiences for users with hearing impairments.',
       benefits: ['Closed captions', 'Sign language support', 'Audio descriptions', 'Visual alerts']
-    },
-    icon: Hand,
-      title: 'Motor Accessibility',
+
+      },
+    {
+
+      icon: Hand,
+      {
+
+        title: 'Motor Accessibility',
       description: 'Support for users with motor disabilities and mobility challenges.',
       benefits: ['Keyboard navigation', 'Voice control', 'Switch access', 'Gesture recognition']
-    },
-    icon: Brain,
-      title: 'Cognitive Accessibility',
+
+      },
+    {
+
+      icon: Brain,
+      {
+
+        title: 'Cognitive Accessibility',
       description: 'Features designed to support users with cognitive and learning disabilities.',
       benefits: ['Simplified interfaces', 'Clear instructions', 'Consistent navigation', 'Error prevention']
-    },
-    icon: Shield,
-      title: 'Compliance & Standards',
+
+      },
+    {
+
+      icon: Shield,
+      {
+
+        title: 'Compliance & Standards',
       description: 'Full compliance with WCAG 2.1 AA standards and accessibility regulations.',
       benefits: ['WCAG 2.1 AA compliance', 'Section 508 compliance', 'ADA compliance', 'International standards']
-    },
+
+      },
     icon: Zap,
       title: 'Performance Optimization',
       description: 'Fast, efficient accessibility features that don\'t compromise performance.',
@@ -118,18 +138,42 @@ const AccessibilityPage: React.FC = () => {
   ];
 
   const standards = [
-    icon: Shield,
-      title: 'WCAG 2.1 AA',
+    {
+
+      icon: Shield,
+      {
+
+        title: 'WCAG 2.1 AA',
       description: 'We follow Web Content Accessibility Guidelines 2.1 Level AA standards.'
-    },
-    icon: CheckCircle,
-      title: 'Section 508',
+    
+
+    
+
+      },
+    {
+
+      icon: CheckCircle,
+      {
+
+        title: 'Section 508',
       description: 'Compliance with Section 508 of the Rehabilitation Act.'
-    },
-    icon: Brain,
-      title: 'ADA Compliance',
+    
+
+    
+
+      },
+    {
+
+      icon: Brain,
+      {
+
+        title: 'ADA Compliance',
       description: 'Americans with Disabilities Act compliance for digital accessibility.'
-    }
+    
+
+    
+
+      }
   ];
 
   return (

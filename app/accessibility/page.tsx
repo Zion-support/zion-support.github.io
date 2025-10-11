@@ -7,32 +7,58 @@ import Footer from '../components/Footer';
 
 const AccessibilityPage: React.FC = () => {
   const features = [
-    icon: Eye,
+    {
+      icon: Eye,
       title: 'Visual Accessibility',
       description: 'High contrast modes, scalable fonts, and screen reader compatibility for users with visual impairments.',
       benefits: ['High contrast themes', 'Font scaling', 'Screen reader support', 'Color blind friendly']
     },
-    icon: Ear,
-      title: 'Audio Accessibility',
+    {
+      {
+
+        icon: Ear,
+      {
+
+        title: 'Audio Accessibility',
       description: 'Enhanced audio experiences for users with hearing impairments.',
       benefits: ['Closed captions', 'Sign language support', 'Audio descriptions', 'Visual alerts']
-    },
-    icon: Hand,
-      title: 'Motor Accessibility',
+
+      },
+    {
+      {
+
+        icon: Hand,
+      {
+
+        title: 'Motor Accessibility',
       description: 'Support for users with motor disabilities and mobility challenges.',
       benefits: ['Keyboard navigation', 'Voice control', 'Switch access', 'Gesture recognition']
-    },
-    icon: Brain,
-      title: 'Cognitive Accessibility',
+
+      },
+    {
+      {
+
+        icon: Brain,
+      {
+
+        title: 'Cognitive Accessibility',
       description: 'Features designed to support users with cognitive and learning disabilities.',
       benefits: ['Simplified interfaces', 'Clear instructions', 'Consistent navigation', 'Error prevention']
-    },
-    icon: Shield,
-      title: 'Compliance & Standards',
+
+      },
+    {
+      {
+
+        icon: Shield,
+      {
+
+        title: 'Compliance & Standards',
       description: 'Full compliance with WCAG 2.1 AA standards and accessibility regulations.',
       benefits: ['WCAG 2.1 AA compliance', 'Section 508 compliance', 'ADA compliance', 'International standards']
-    },
-    icon: Zap,
+
+      },
+    {
+      icon: Zap,
       title: 'Performance Optimization',
       description: 'Fast, efficient accessibility features that don\'t compromise performance.',
       benefits: ['Optimized loading', 'Efficient rendering', 'Minimal overhead', 'Fast interactions']
@@ -40,31 +66,38 @@ const AccessibilityPage: React.FC = () => {
   ];
 
   const services = [
-    title: 'Accessibility Audits',
+    {
+      title: 'Accessibility Audits',
       description: 'Comprehensive evaluation of your digital products for accessibility compliance.',
       icon: Target,
       benefits: ['Automated testing', 'Manual evaluation', 'User testing', 'Compliance reporting']
     },
-    icon: Keyboard,
+    {
+      icon: Keyboard,
       title: 'Cognitive Accessibility',
       description: 'Clear navigation, consistent layouts, and simplified interfaces for users with cognitive disabilities.',
       benefits: ['Clear navigation', 'Consistent layouts', 'Simplified interfaces', 'Progress indicators']
+    },
+    {
       icon: Eye,
       title: 'Visual Accessibility',
       description: 'Screen reader compatibility, high contrast modes, and scalable text options.',
       benefits: ['Screen reader support', 'High contrast themes', 'Text scaling', 'Color blind friendly']
     },
-    icon: Ear,
+    {
+      icon: Ear,
       title: 'Audio Accessibility',
       description: 'Audio descriptions, captions, and alternative audio formats.',
       benefits: ['Audio descriptions', 'Closed captions', 'Sign language support', 'Audio transcripts']
     },
-    icon: Hand,
+    {
+      icon: Hand,
       title: 'Motor Accessibility',
       description: 'Keyboard navigation, voice control, and assistive technologies.',
       benefits: ['Keyboard navigation', 'Voice control', 'Switch control', 'Gesture alternatives']
     },
-    icon: Brain,
+    {
+      icon: Brain,
       title: 'Cognitive Accessibility',
       description: 'Clear language, consistent navigation, and cognitive load reduction.',
       benefits: ['Clear language', 'Consistent UI', 'Reduced complexity', 'Memory aids']
@@ -113,18 +146,42 @@ const AccessibilityPage: React.FC = () => {
   ];
 
   const standards = [
-    icon: Shield,
-      title: 'WCAG 2.1 AA',
+    {
+
+      icon: Shield,
+      {
+
+        title: 'WCAG 2.1 AA',
       description: 'We follow Web Content Accessibility Guidelines 2.1 Level AA standards.'
-    },
-    icon: CheckCircle,
-      title: 'Section 508',
+    
+
+    
+
+      },
+    {
+
+      icon: CheckCircle,
+      {
+
+        title: 'Section 508',
       description: 'Compliance with Section 508 of the Rehabilitation Act.'
-    },
-    icon: Brain,
-      title: 'ADA Compliance',
+    
+
+    
+
+      },
+    {
+
+      icon: Brain,
+      {
+
+        title: 'ADA Compliance',
       description: 'Americans with Disabilities Act compliance for digital accessibility.'
-    }
+    
+
+    
+
+      }
   ];
 
   return (
