@@ -145,8 +145,12 @@ const AIApiManagementPage: React.FC = () => {
       
       <Navigation />
 
+<<<<<<< HEAD
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-orange-900 to-slate-900">
+=======
 <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-cyan-900 to-slate-900">
+>>>>>>> origin/main
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
         </section>
@@ -169,6 +173,10 @@ const AIApiManagementPage: React.FC = () => {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+      </main>
+
+=======
 =======
 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
@@ -507,6 +515,7 @@ export default AIApiManagementPage
           </div>
         </section>
       ))
+>>>>>>> origin/main
       <Footer />
     </div>
   );

@@ -145,6 +145,10 @@ const AIApiManagerPage: React.FC = () => {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+      </main>
+
+=======
 =======
 <<<<<<< HEAD
       <Helmet>
@@ -487,6 +491,7 @@ export default AIApiManagerPage
           </div>
         </section>
       ))
+>>>>>>> origin/main
       <Footer />
     </div>
   );

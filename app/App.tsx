@@ -120,6 +120,14 @@ const App: React.FC = () => {,
       <HelmetProvider />
         <BrowserRouter>
           <div className="App">
+<<<<<<< HEAD
+            <PerformanceMonitor />
+            <AccessibilityEnhancer />
+            <Suspense fallback={<AppLoadingSpinner />}>
+              <Routes>
+                {/* Main Pages */}
+                <Route path="/" element={<HomePage />} />
+=======
             <PerformanceMonitor>
               <AccessibilityEnhancer />
             </PerformanceMonitor>
@@ -328,6 +336,7 @@ const App: React.FC = () => {
               <Routes>
                 {/* Main Pages */}
                 </Routes><Route path="/" element={<HomePage />} />
+>>>>>>> origin/main
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/contact" element={<ContactPage />} />
                 <Route path="/services" element={<ServicesPage />} />
@@ -339,6 +348,10 @@ const App: React.FC = () => {
                 <Route path="/privacy" element={<PrivacyPage />} />
                 <Route path="/terms" element={<TermsPage />} />
                 <Route path="/cookies" element={<CookiesPage />} />
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/main
                 {/* AI Services */}
                 <Route path="/ai-services" element={<AiServicesPage />} />
                 <Route path="/ai-marketing" element={<AiMarketingPage />} />
@@ -352,6 +365,9 @@ const App: React.FC = () => {
                 <Route path="/ai-customer-support" element={<AiCustomerSupportPage />} />
                 <Route path="/ai-sales-automation" element={<AiSalesAutomationPage />} />
                 <Route path="/ai-data-visualization" element={<AiDataVisualizationPage />} />
+<<<<<<< HEAD
+
+=======
                 {/* Additional AI Services */}
                 <Route path="/ai-analytics" element={<AiAnalyticsPage />} />
                 <Route path="/ai-chatbot-builder" element={<AiChatbotBuilderPage />} />
@@ -367,12 +383,16 @@ const App: React.FC = () => {
                 <Route path="/ai-financial-services" element={<AiFinancialServicesPage />} />
                 <Route path="/ai-voice-solutions" element={<AiVoiceSolutionsPage />} />
                 <Route path="/ai-hr-solutions" element={<AiHrSolutionsPage />} />
+>>>>>>> origin/main
                 {/* IT Services */}
                 <Route path="/it-services" element={<ItServicesPage />} />
                 <Route path="/it-infrastructure" element={<ItInfrastructurePage />} />
                 <Route path="/it-support" element={<ItSupportPage />} />
                 <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
                 <Route path="/cybersecurity" element={<CybersecurityPage />} />
+<<<<<<< HEAD
+
+=======
                 {/* Additional IT Services */}
                 <Route path="/api" element={<ApiDevelopmentPage />} />
                 <Route path="/database-management" element={<DatabaseManagementPage />} />
@@ -388,12 +408,19 @@ const App: React.FC = () => {
                 <Route path="/cybersecurity-solutions" element={<CybersecuritySolutionsPage />} />
                 <Route path="/data-analytics-bi" element={<DataAnalyticsBiPage />} />
                 <Route path="/custom-software" element={<CustomSoftwarePage2 />} />
+>>>>>>> origin/main
                 {/* Emerging Technologies */}
                 <Route path="/blockchain" element={<BlockchainPage />} />
                 <Route path="/quantum-computing" element={<QuantumComputingPage />} />
                 <Route path="/iot-edge-computing" element={<IoTEdgeComputingPage />} />
                 <Route path="/ar-vr-solutions" element={<ARVRSolutionsPage />} />
                 <Route path="/autonomous-systems" element={<AutonomousSystemsPage />} />
+<<<<<<< HEAD
+
+                {/* Micro SaaS */}
+                <Route path="/micro-saas" element={<MicroSaasPage />} />
+
+=======
                 {/* Additional Emerging Technologies */}
                 <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
                 <Route path="/ai-3d-generation" element={<Ai3DGenerationPage />} />
@@ -403,12 +430,15 @@ const App: React.FC = () => {
                 <Route path="/iot" element={<IotPage />} />
                 {/* Micro SaaS */}
                 <Route path="/micro-saas" element={<MicroSaasPage />} />
+>>>>>>> origin/main
                 {/* Support Pages */}
                 <Route path="/docs" element={<DocsPage />} />
                 <Route path="/api-docs" element={<ApiDocsPage />} />
                 <Route path="/support" element={<SupportPage />} />
                 <Route path="/status" element={<StatusPage />} />
                 <Route path="/consultation" element={<ConsultationPage />} />
+<<<<<<< HEAD
+=======
                 {/* Additional Important Pages */}
                 <Route path="/faq" element={<FaqPage />} />
                 <Route path="/demo" element={<DemoPage />} />
@@ -420,6 +450,7 @@ const App: React.FC = () => {
                 <Route path="/enterprise" element={<EnterprisePage />} />
                 <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
                 <Route path="/edge-computing" element={<EdgeComputingPage />} />
+>>>>>>> origin/main
 >>>>>>> origin/main
               </Routes>
             </Suspense>
