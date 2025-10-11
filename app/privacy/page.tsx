@@ -81,7 +81,6 @@ Privacy <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
 Your privacy is important to us. This policy explains how we collect, use, and protect your personal information.
           </p>
-<<<<<<< HEAD
           <div className="flex items-center justify-center text-cyan-400">
             <Shield className="w-6 h-6 mr-2" />
             <span className="font-semibold">Last updated: {new Date().toLocaleDateString()}</span>
@@ -94,13 +93,6 @@ Your privacy is important to us. This policy explains how we collect, use, and p
       <Footer />
     </>
       </section>
-=======
-          <div className="flex items-center justify-center text-cyan-400"
-            <Shield className="w-6 h-6 mr-2"
-            <span className="font-semibold"
-    </>
-  )</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
 
       {/* Data Collection Section */}
       <section className="py-16 px-4 sm: px-6 lg:px-8"
@@ -114,38 +106,27 @@ Information We Collect
             <p className="text-xl text-gray-300 max-w-3xl mx-auto"
 We collect information to provide better services to our users
             </p>
-<<<<<<< HEAD
           </div>
       
       <Footer />
     </>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-=======
-          
-          <div className="grid grid-cols-1 m, d:grid-cols-3 gap-8"
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
             {dataTypes.map((type), index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300"
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6"
                   <type.icon className="w-8 h-8 text-white"
                 </div>
-<<<<<<< HEAD
       
       <Footer />
     </>
                 <h3 className="text-xl font-bold text-white mb-4">{type.category}</h3>
                 <p className="text-gray-300">{type.description}</p>
-=======
-                <h3 className="text-xl font-bold text-white mb-4"
-                <p className="text-gray-300"
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
               </div>
       
       <Footer />
     </>
             ))}
           </div>
-<<<<<<< HEAD
       
       <Footer />
     </>
@@ -154,8 +135,6 @@ We collect information to provide better services to our users
       <Footer />
     </>
       </section>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
 
       {/* Purposes Section */}
       <section className="
@@ -168,34 +147,25 @@ How We Use Your Information
             <p className="text-xl text-gray-300 max-w-3xl mx-auto"
 We use your information for specific, legitimate purposes
             </p>
-<<<<<<< HEAD
           </div>
       
       <Footer />
     </>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-=======
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8"
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
             {purposes.map((purpose), index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300"
                 <div className="flex items-start"
                   <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-500 rounded-lg flex items-center justify-center mr-4 flex-shrink-0"
                     <purpose.icon className="w-6 h-6 text-white"
   </purpose>
-<<<<<<< HEAD
                   </div>
       
       <Footer />
     </>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
                   <div>
                     <h3 className="text-xl font-bold text-white mb-2"
                     <p className="text-gray-300"
                   </div>
-<<<<<<< HEAD
       
       <Footer />
     </>
@@ -217,10 +187,6 @@ We use your information for specific, legitimate purposes
       <Footer />
     </>
       </section>
-=======
-            ))}
-          </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
 
       {/* Rights Section */}
       <section className="py-16 px-4 sm: px-6 lg:px-8"
@@ -232,40 +198,27 @@ Your Privacy Rights
             <p className="text-xl text-gray-300 max-w-3xl mx-auto"
 You have control over your personal data
             </p>
-<<<<<<< HEAD
           </div>
       
       <Footer />
     </>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-=======
-          
-          <div className="
-    ,
-    d: grid-cols-2 l, g:grid-cols-4 gap-8"
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
             {rights.map((right), index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 text-center"
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 mx-auto"
                   <right.icon className="w-8 h-8 text-white"
                 </div>
-<<<<<<< HEAD
       
       <Footer />
     </>
                 <h3 className="text-xl font-bold text-white mb-4">{right.title}</h3>
                 <p className="text-gray-300">{right.description}</p>
-=======
-                <h3 className="text-xl font-bold text-white mb-4"
-                <p className="text-gray-300"
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
               </div>
       
       <Footer />
     </>
             ))}
           </div>
-<<<<<<< HEAD
       
       <Footer />
     </>
@@ -274,8 +227,6 @@ You have control over your personal data
       <Footer />
     </>
       </section>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
 
       {/* Contact Section */}
       <section className="py-16 px-4 sm: px-6 lg:px-8"
@@ -295,7 +246,6 @@ Contact our privacy team for any questions or concerns about your data
                 <Mail className="w-6 h-6 text-cyan-400 mr-3"
                 <span className="text-white"
               </div>
-<<<<<<< HEAD
       
       <Footer />
     </>
@@ -329,20 +279,6 @@ Contact Privacy Team
       <Footer />
     </>
       </section>
-=======
-              <div className="flex items-center justify-center"
-                <Phone className="w-6 h-6 text-cyan-400 mr-3"
-                <span className="text-white"
-              </div>
-              <div className="flex items-center justify-center"
-                <MapPin className="w-6 h-6 text-cyan-400 mr-3"
-                <span className="text-white text-sm"
-              </div>
-            
-            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
-Contact Privacy Team
-            </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
 
         <section className="py-20"
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"

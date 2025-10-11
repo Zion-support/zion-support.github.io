@@ -24,6 +24,3 @@ const App: React.FC = () => {
     </>
   )
 export default App
-      </Footer>
-    </Route>
-  </Navigation>

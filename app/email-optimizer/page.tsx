@@ -45,7 +45,6 @@ const benefits = [
   ]
 return (
       <Helmet>
-<<<<<<< HEAD
         <title>AI Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
         <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
@@ -57,10 +56,6 @@ return (
         <title>Email Optimizer - Zion Tech Group</title>
         <meta name="description" content="AI-powered email optimizer solution for intelligent automation and optimization" />
         <meta name="keywords" content="AI, email, optimizer, automation, artificial intelligence, business solutions" />
-=======
-        <title>Email Optimizer Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI and IT solutions for modern businesses."
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
       </Helmet>
       
       <Navigation />
@@ -86,7 +81,6 @@ Get Started
     r: bg-cyan-400 hove, r:text-white transition-all duration-300"
 Learn More
               </button>
-<<<<<<< HEAD
             </div>
       
       <Footer />
@@ -96,13 +90,6 @@ Learn More
       <Footer />
     </>
         </section>
-=======
-      
-      <Footer />
-    </div>
-  );
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
 
         {/* Features Section */}
         <section className="py-20 px-4"
@@ -126,7 +113,6 @@ Learn More
     </>
               ))}
             </div>
-<<<<<<< HEAD
       
       <Footer />
     </>
@@ -135,8 +121,6 @@ Learn More
       <Footer />
     </>
         </section>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
 
         {/* Benefits Section */}
                 </div>
@@ -145,7 +129,6 @@ Learn More
     </>
               ))}
             </div>
-<<<<<<< HEAD
       
       <Footer />
     </>
@@ -162,10 +145,3 @@ Learn More
       
       <Footer />
     </>
-=======
-
-        {/* CTA Section */}
-        <section className="py-20 px-4"
-          <div className="max-w-4xl mx-auto text-center"
-  </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe

@@ -10,7 +10,6 @@ import React from 'react'
       <main className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900"
 
         {/* Hero Section */}
-<<<<<<< HEAD
             </div>
       
       <Footer />
@@ -20,10 +19,6 @@ import React from 'react'
       <Footer />
     </>
         </section>
-=======
-
-
->>>>>>> cursor/fix-errors-and-merge-to-main-c4fe
 
       <Footer />
     </>
