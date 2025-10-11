@@ -30,7 +30,7 @@ import Footer from '../components/Footer';
 const ItServicesPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const services = const services = const services = [
+  const services = [
     {
       id: 'cloud-infrastructure',
       name: 'Cloud Infrastructure & Migration',
@@ -1007,10 +1007,11 @@ const ItServicesPage: React.FC = () => {
       ],
       category: 'Cloud Security',
       popular: true,
-      icon: Shield;
-    };
+      icon: Shield
+    }
   ];
-  const categories = const categories = const categories = [
+  
+  const categories = [
     { id: 'all', name: 'All Services', count: services.length },
     { id: 'Cloud', name: 'Cloud', count: services.filter(s => s.category === 'Cloud').length },
     { id: 'Security', name: 'Security', count: services.filter(s => s.category === 'Security').length },
@@ -1042,92 +1043,133 @@ const ItServicesPage: React.FC = () => {
     { id: 'Performance', name: 'Performance', count: services.filter(s => s.category === 'Performance').length },
     { id: 'Cloud Optimization', name: 'Cloud Optimization', count: services.filter(s => s.category === 'Cloud Optimization').length },
     { id: 'Security Automation', name: 'Security Automation', count: services.filter(s => s.category === 'Security Automation').length },
-    { id: 'Data Visualization', name: 'Data Visualization', count: services.filter(s => s.category === 'Data Visualization').length },;
-    { id: 'Automation', name: 'Automation', count: services.filter(s => s.category === 'Automation').length };
+    { id: 'Data Visualization', name: 'Data Visualization', count: services.filter(s => s.category === 'Data Visualization').length },
+    { id: 'Automation', name: 'Automation', count: services.filter(s => s.category === 'Automation').length }
   ];
-  const filteredServices = const filteredServices = const filteredServices = services.filter();
+  
+  const filteredServices = services.filter(service =>
+    (selectedCategory === 'all' || service.category === selectedCategory)
   );
 
-  return() {categories.map((category) => ()
-                    onClick={() => setSelectedCategory(category.id)}
-                    className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                      selectedCategory === category.id
-                        ? 'bg-cyan-500 text-white'
-                        : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
-                    }`}
-                  >
-                    {category.name} ({category.count})
-                  </button>
-                ))}
-              </div>
-            </div>
+  return (
+    <>
+      <Helmet>
+        <title>IT Services - Zion Tech Group | Enterprise IT Solutions</title>
+        <meta name="description" content="Comprehensive IT services including cloud infrastructure, cybersecurity, DevOps, and custom development solutions for enterprise businesses." />
+        <meta name="keywords" content="IT services, cloud infrastructure, cybersecurity, DevOps, enterprise solutions, IT consulting" />
+      </Helmet>
+      
+      <main className="min-h-screen">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              IT <span className="text-cyan-400">Services</span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive IT solutions designed to modernize your infrastructure, enhance security, and drive business growth.
+            </p>
+          </div>
 
-            {/* Services Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16" /></div>
-              {filteredServices.map((service) => ()
+          {/* Category Filter */}
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {categories.map((category) => (
+              <button
+                key={category.id}
+                onClick={() => setSelectedCategory(category.id)}
+                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                  selectedCategory === category.id
+                    ? 'bg-cyan-500 text-white'
+                    : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
+                }`}
+              >
+                {category.name} ({category.count})
+              </button>
+            ))}
+          </div>
+
+          {/* Services Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service) => {
+              const Icon = service.icon;
+              return (
+                <div key={service.id} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 group">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <Icon className="w-6 h-6 text-white" />
+                    </div>
+                    {service.popular && (
+                      <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                        Popular
+                      </span>
                     )}
                   </div>
                   
-                  <p className="text-gray-300 mb-4">{service.description}</p>
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                    {service.name}
+                  </h3>
                   
-                  <div className="flex items-center justify-between mb-4" /></div>
-                    <div></div>
-                      <span className="text-2xl font-bold text-purple-400">{service.price}</span>
-                      <span className="text-gray-400 text-sm ml-2 line-through">{service.marketPrice}</span>
-                    </div>
-                    <span className="text-gray-400 text-sm">{service.category}</span>
+                  <p className="text-gray-300 mb-4 leading-relaxed">
+                    {service.description}
+                  </p>
+                  
+                  <div className="mb-6">
+                    <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
+                    <div className="text-sm text-gray-400">Market Price: {service.marketPrice}</div>
                   </div>
-
-                  <div className="mb-6" /></div>
-                    <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
-                    <ul className="space-y-2" /></ul>
-                      {service.features.slice(0, 3).map((feature, index) => ()
+                  
+                  <div className="mb-6">
+                    <h4 className="text-lg font-semibold text-white mb-3">Key Features:</h4>
+                    <ul className="space-y-2">
+                      {service.features.map((feature, index) => (
+                        <li key={index} className="flex items-center text-gray-300">
+                          <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3 flex-shrink-0"></div>
+                          {feature}
+                        </li>
                       ))}
                     </ul>
                   </div>
-
-                  <div className="flex items-center justify-between" /></div>
-                    <Link to="/contact"
-                      className="flex items-center text-purple-400 hover:text-purple-300 transition-colors" /></Link>
-                      Learn More
-                      <ArrowRight className="w-4 h-4 ml-1" / /></ArrowRight>
-                    </Link>
-                    <Link to="/contact"
-                      className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300" /></Link>
-                      Get Quote
-                    </Link>
-                  </div>
+                  
+                  <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300">
+                    Get Quote
+                  </button>
                 </div>
-              ))}
+              );
+            })}
+          </div>
+
+          {filteredServices.length === 0 && (
+            <div className="text-center py-12">
+              <p className="text-gray-400 text-lg">No services found in this category.</p>
             </div>
+          )}
 
-            {/* CTA Section */}
-            <div className="text-center" /></div>
-              <div className="bg-slate-800/50 rounded-lg p-8" /></div>
-                <h2 className="text-2xl font-bold text-white mb-4" /></h2>
-                  Ready to Modernize Your IT Infrastructure?
-                </h2>
-                <p className="text-gray-300 mb-6 max-w-2xl mx-auto" /></p>
-                  Let our IT experts help you choose the right solutions for your business needs. 
-                  Get a free consultation and see how we can transform your technology infrastructure.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center" /></div>
-                  <Link to="/contact"
-                    className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300" /></Link>
-                    Get Free Consultation
-                  </Link>
-                  <a href="tel:+13024640950"
-                    className="border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300" /></a>
-                    Call: (302) 464-0950
-                  </a>
-                </div>
-              </div>
+          {/* CTA Section */}
+          <div className="text-center mt-16 bg-slate-800/50 backdrop-blur-sm rounded-xl p-12 border border-cyan-500/20">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Ready to Transform Your IT Infrastructure?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Contact our IT experts for a free consultation and discover how we can modernize your technology stack.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300"
+              >
+                Get Free Consultation
+              </a>
+              <a
+                href="tel:+13024640950"
+                className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300"
+              >
+                Call Now
+              </a>
             </div>
           </div>
         </div>
       </main>
       
-      <Footer / /></Footer>
+      <Footer />
     </>
   );
 };

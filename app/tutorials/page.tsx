@@ -6,15 +6,15 @@ import { Play, BookOpen, Code, Zap, Shield, Cloud, Brain, Users, Clock, Star, Ar
 const TutorialsPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const categories = const categories = const categories = [
+  const categories = [
     { id: 'all', name: 'All Tutorials', icon: BookOpen },
     { id: 'ai', name: 'AI Services', icon: Brain },
     { id: 'it', name: 'IT Services', icon: Cloud },
     { id: 'saas', name: 'Micro SaaS', icon: Zap },
-    { id: 'security', name: 'Security', icon: Shield },;
-    { id: 'integration', name: 'Integration', icon: Code };
+    { id: 'security', name: 'Security', icon: Shield }
   ];
-  const tutorials = const tutorials = const tutorials = [
+  
+  const tutorials = [
     {
       id: 1,
       title: 'Getting Started with AI Chat API',
@@ -32,10 +32,10 @@ const TutorialsPage: React.FC = () => {
         steps: [
           'Set up your development environment',
           'Get your API key from the dashboard',
-          'Make your first API call',;
-          'Handle responses and errors',;
-          'Implement advanced features';
-        ];
+          'Make your first API call',
+          'Handle responses and errors',
+          'Implement advanced features'
+        ]
       }
     },
     {
@@ -154,149 +154,212 @@ const TutorialsPage: React.FC = () => {
       }
     }
   ];
-  const filteredTutorials = const filteredTutorials = selectedCategory === 'all' ;
-    ? tutorials ;
+  
+  const filteredTutorials = selectedCategory === 'all' 
+    ? tutorials 
     : tutorials.filter(tutorial => tutorial.category === selectedCategory);
 
   const featuredTutorials = tutorials.filter(tutorial => tutorial.rating >= 4.8).slice(0, 3);
 
-  return() {featuredTutorials.map((tutorial) => ()
-                      {tutorial.tags.slice(0, 3).map((tag, index) => ()
+  return (
+    <>
+      <Helmet>
+        <title>Tutorials - Zion Tech Group | Learn AI & IT Solutions</title>
+        <meta name="description" content="Comprehensive tutorials and guides for AI services, IT solutions, and Micro SaaS tools. Learn how to implement and use our technologies effectively." />
+        <meta name="keywords" content="tutorials, guides, AI tutorials, IT tutorials, learning resources, documentation" />
+      </Helmet>
+      
+      <main className="min-h-screen">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Learn & <span className="text-cyan-400">Master</span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive tutorials and guides to help you master our AI and IT solutions. From beginner to advanced, we've got you covered.
+            </p>
+          </div>
+
+          {/* Featured Tutorials */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-white text-center mb-12">
+              Featured <span className="text-cyan-400">Tutorials</span>
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {featuredTutorials.map((tutorial) => (
+                <div key={tutorial.id} className="bg-slate-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 group">
+                  <div className="aspect-video bg-gradient-to-br from-cyan-500/20 to-purple-500/20 flex items-center justify-center">
+                    <Play className="w-16 h-16 text-cyan-400/50 group-hover:scale-110 transition-transform duration-300" />
+                  </div>
+                  
+                  <div className="p-6">
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="text-sm text-cyan-400 font-semibold">{tutorial.category.toUpperCase()}</span>
+                      <div className="flex items-center">
+                        <Star className="w-4 h-4 text-yellow-400 mr-1" />
+                        <span className="text-sm text-gray-300">{tutorial.rating}</span>
+                      </div>
+                    </div>
+                    
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                      {tutorial.title}
+                    </h3>
+                    
+                    <p className="text-gray-300 mb-4 line-clamp-2">
+                      {tutorial.description}
+                    </p>
+                    
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center text-sm text-gray-400">
+                        <Clock className="w-4 h-4 mr-1" />
+                        {tutorial.duration}
+                      </div>
+                      <div className="flex items-center text-sm text-gray-400">
+                        <Users className="w-4 h-4 mr-1" />
+                        {tutorial.views} views
+                      </div>
+                    </div>
+                    
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {tutorial.tags.slice(0, 3).map((tag, index) => (
+                        <span key={index} className="bg-slate-700 text-gray-300 px-2 py-1 rounded text-xs">
+                          {tag}
+                        </span>
                       ))}
                     </div>
-                    <a href={`/tutorials/${tutorial.id}`}
-                      className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center" /></a>
+                    
+                    <a 
+                      href={`/tutorials/${tutorial.id}`}
+                      className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center"
+                    >
                       Start Tutorial
-                      <ArrowRight className="w-4 h-4 ml-2" / /></ArrowRight>
+                      <ArrowRight className="w-4 h-4 ml-2" />
                     </a>
                   </div>
                 </div>
               ))}
             </div>
-          </section>
+          </div>
 
           {/* Category Filter */}
-          <section className="mb-12" /></section>
-            <h2 className="text-2xl font-bold text-white mb-6 text-center">Browse by Category</h2>
-            <div className="flex flex-wrap justify-center gap-4" /></div>
-              {categories.map((category) => ()
-                  onClick={() => setSelectedCategory(category.id)}
-                  className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                    selectedCategory === category.id
-                      ? 'bg-cyan-500 text-white'
-                      : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
-                  }`}
-                >
-                  <category.icon className="w-5 h-5" /></category>
-                  <span>{category.name}</span>
-                </button>
-              ))}
+          <div className="mb-12">
+            <h2 className="text-3xl font-bold text-white text-center mb-8">
+              Browse by <span className="text-cyan-400">Category</span>
+            </h2>
+            
+            <div className="flex flex-wrap justify-center gap-4">
+              {categories.map((category) => {
+                const Icon = category.icon;
+                return (
+                  <button
+                    key={category.id}
+                    onClick={() => setSelectedCategory(category.id)}
+                    className={`flex items-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                      selectedCategory === category.id
+                        ? 'bg-cyan-500 text-white'
+                        : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
+                    }`}
+                  >
+                    <Icon className="w-5 h-5 mr-2" />
+                    {category.name}
+                  </button>
+                );
+              })}
             </div>
-          </section>
+          </div>
 
           {/* All Tutorials */}
-          <section id="all-tutorials" className="mb-16" /></section>
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">All Tutorials</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" /></div>
-              {filteredTutorials.map((tutorial) => ()
-                      {tutorial.tags.map((tag, index) => ()
-                      ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredTutorials.map((tutorial) => (
+              <div key={tutorial.id} className="bg-slate-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 group">
+                <div className="aspect-video bg-gradient-to-br from-cyan-500/20 to-purple-500/20 flex items-center justify-center">
+                  <Play className="w-12 h-12 text-cyan-400/50 group-hover:scale-110 transition-transform duration-300" />
+                </div>
+                
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-sm text-cyan-400 font-semibold">{tutorial.category.toUpperCase()}</span>
+                    <div className="flex items-center">
+                      <Star className="w-4 h-4 text-yellow-400 mr-1" />
+                      <span className="text-sm text-gray-300">{tutorial.rating}</span>
                     </div>
-                    <a href={`/tutorials/${tutorial.id}`}
-                      className="w-full bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center" /></a>
-                      Start Tutorial
-                      <ArrowRight className="w-4 h-4 ml-2" / /></ArrowRight>
-                    </a>
                   </div>
+                  
+                  <h3 className="text-lg font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                    {tutorial.title}
+                  </h3>
+                  
+                  <p className="text-gray-300 mb-4 text-sm line-clamp-2">
+                    {tutorial.description}
+                  </p>
+                  
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center text-sm text-gray-400">
+                      <Clock className="w-4 h-4 mr-1" />
+                      {tutorial.duration}
+                    </div>
+                    <div className="flex items-center text-sm text-gray-400">
+                      <Users className="w-4 h-4 mr-1" />
+                      {tutorial.views}
+                    </div>
+                  </div>
+                  
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {tutorial.tags.slice(0, 2).map((tag, index) => (
+                      <span key={index} className="bg-slate-700 text-gray-300 px-2 py-1 rounded text-xs">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  
+                  <a 
+                    href={`/tutorials/${tutorial.id}`}
+                    className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center"
+                  >
+                    Watch Now
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </a>
                 </div>
-              ))}
+              </div>
+            ))}
+          </div>
+
+          {filteredTutorials.length === 0 && (
+            <div className="text-center py-12">
+              <p className="text-gray-400 text-lg">No tutorials found in this category.</p>
             </div>
-          </section>
+          )}
 
-          {/* Learning Paths */}
-          <section className="mb-16" /></section>
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">Learning Paths</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" /></div>
-              <div className="cyber-card-enhanced p-8" /></div>
-                <div className="flex items-center mb-4" /></div>
-                  <Brain className="w-8 h-8 text-cyan-400 mr-3" / /></Brain>
-                  <h3 className="text-xl font-bold text-white">AI Developer Path</h3>
-                </div>
-                <p className="text-gray-300 mb-6" /></p>
-                  Master AI development from basics to advanced implementations.
-                </p>
-                <ul className="space-y-2 mb-6" /></ul>
-                  <li className="flex items-center text-sm text-gray-300" /></li>
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" / /></CheckCircle>
-                    AI Fundamentals
-                  </li>
-                  <li className="flex items-center text-sm text-gray-300" /></li>
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" / /></CheckCircle>
-                    API Integration
-                  </li>
-                  <li className="flex items-center text-sm text-gray-300" /></li>
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" / /></CheckCircle>
-                    Advanced AI Features
-                  </li>
-                </ul>
-                <a href="#" className="text-cyan-400 hover:text-cyan-300 font-semibold" /></a>
-                  Start Learning Path <ArrowRight className="w-4 h-4 inline ml-1" / /></ArrowRight>
-                </a>
-              </div>
-
-              <div className="cyber-card-enhanced p-8" /></div>
-                <div className="flex items-center mb-4" /></div>
-                  <Cloud className="w-8 h-8 text-green-400 mr-3" / /></Cloud>
-                  <h3 className="text-xl font-bold text-white">Cloud Architect Path</h3>
-                </div>
-                <p className="text-gray-300 mb-6" /></p>
-                  Learn cloud architecture and infrastructure management.
-                </p>
-                <ul className="space-y-2 mb-6" /></ul>
-                  <li className="flex items-center text-sm text-gray-300" /></li>
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" / /></CheckCircle>
-                    Cloud Fundamentals
-                  </li>
-                  <li className="flex items-center text-sm text-gray-300" /></li>
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" / /></CheckCircle>
-                    Security & Compliance
-                  </li>
-                  <li className="flex items-center text-sm text-gray-300" /></li>
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" / /></CheckCircle>
-                    Advanced Architecture
-                  </li>
-                </ul>
-                <a href="#" className="text-green-400 hover:text-green-300 font-semibold" /></a>
-                  Start Learning Path <ArrowRight className="w-4 h-4 inline ml-1" / /></ArrowRight>
-                </a>
-              </div>
-
-              <div className="cyber-card-enhanced p-8" /></div>
-                <div className="flex items-center mb-4" /></div>
-                  <Zap className="w-8 h-8 text-purple-400 mr-3" / /></Zap>
-                  <h3 className="text-xl font-bold text-white">SaaS Entrepreneur Path</h3>
-                </div>
-                <p className="text-gray-300 mb-6" /></p>
-                  Build and scale your own SaaS business from scratch.
-                </p>
-                <ul className="space-y-2 mb-6" /></ul>
-                  <li className="flex items-center text-sm text-gray-300" /></li>
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" / /></CheckCircle>
-                    SaaS Fundamentals
-                  </li>
-                  <li className="flex items-center text-sm text-gray-300" /></li>
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" / /></CheckCircle>
-                    Business Models
-                  </li>
-                  <li className="flex items-center text-sm text-gray-300" /></li>
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" / /></CheckCircle>
-                    Scaling & Growth
-                  </li>
-                </ul>
-                <a href="#" className="text-purple-400 hover:text-purple-300 font-semibold" /></a>
-                  Start Learning Path <ArrowRight className="w-4 h-4 inline ml-1" / /></ArrowRight>
-                </a>
-              </div>
+          {/* CTA Section */}
+          <div className="text-center mt-16 bg-slate-800/50 backdrop-blur-sm rounded-xl p-12 border border-cyan-500/20">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Need Help Getting Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Our expert team is ready to help you implement our solutions. Get personalized guidance and support.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300"
+              >
+                Get Expert Help
+              </a>
+              <a
+                href="/support"
+                className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300"
+              >
+                Contact Support
+              </a>
+            </div>
+          </div>
+        </div>
+      </main>
+      
+      <Footer />
+    </>
+  );
             </div>
           </section>
 
