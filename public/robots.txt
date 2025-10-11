@@ -1,33 +1,4 @@
 User-agent: *
 Allow: /
 
-# Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
-
-# Crawl-delay
-Crawl-delay: 1
-
-# Disallow admin areas
-Disallow: /admin/
-Disallow: /api/
-Disallow: /_next/
-Disallow: /private/
-
-# Allow important pages
-Allow: /
-Allow: /about
-Allow: /services
-Allow: /contact
-Allow: /pricing
-Allow: /blog
-Allow: /case-studies
-Allow: /careers
-
-# Allow AI services
-Allow: /ai-*
-Allow: /it-*
-Allow: /micro-saas
-Allow: /zion-*
-
-# Host
-Host: https://ziontechgroup.com

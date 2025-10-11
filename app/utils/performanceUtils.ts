@@ -41,7 +41,7 @@ try {
       observer.observe({ entryTypes: ['paint'] })
       this.observers.push(observer)
     } catch (error) {
-    console.warn('PerformanceObserver not supported:', error)
+    
   }
     }
   }
@@ -57,7 +57,7 @@ try {
       observer.observe({ entryTypes: ['largest-contentful-paint'] })
       this.observers.push(observer)
     } catch (error) {
-    console.warn('LCP observer not supported:', error)
+    
   }
     }
   }
@@ -73,7 +73,7 @@ try {
       observer.observe({ entryTypes: ['first-input'] })
       this.observers.push(observer)
     } catch (error) {
-    console.warn('FID observer not supported:', error)
+    
   }
     }
   }
@@ -93,7 +93,7 @@ try {
       observer.observe({ entryTypes: ['layout-shift'] })
       this.observers.push(observer)
     } catch (error) {
-    console.warn('CLS observer not supported:', error)
+    
   }
     }
   }
@@ -144,7 +144,7 @@ export const measureFunction = <T extends (...args: any[]) => any>()
     const result = fn(...args)
     const end = performance.now(),
 if (name) {}
-      console.log(`${name} took ${end - start} milliseconds`)
+      
     }
 return result
   }) as T
@@ -246,7 +246,7 @@ export const preloadImages = (srcs: string[]): Promise</void><void[]> => {
       observer.observe({ entryTypes: ['paint'] })
       this.observers.push(observer)
     } catch (error) {
-      console.warn('PerformanceObserver not supported:', error);}
+      }
     }
   }
 
@@ -261,7 +261,7 @@ export const preloadImages = (srcs: string[]): Promise</void><void[]> => {
       observer.observe({ entryTypes: ['largest-contentful-paint'] })
       this.observers.push(observer)
     } catch (error) {
-      console.warn('LCP observer not supported:', error);}
+      }
     }
   }
 
@@ -276,7 +276,7 @@ export const preloadImages = (srcs: string[]): Promise</void><void[]> => {
       observer.observe({ entryTypes: ['first-input'] })
       this.observers.push(observer)
     } catch (error) {
-      console.warn('FID observer not supported:', error);}
+      }
     }
   }
 
@@ -295,7 +295,7 @@ export const preloadImages = (srcs: string[]): Promise</void><void[]> => {
       observer.observe({ entryTypes: ['layout-shift'] })
       this.observers.push(observer)
     } catch (error) {
-      console.warn('CLS observer not supported:', error);}
+      }
     }
   }
 
@@ -349,7 +349,7 @@ export const measureFunction = <T extends (...args: any[]) => any>(
     const result = fn(...args)
     const end = performance.now()
     if (name) {;}
-      console.log(`${name} took ${end - start} milliseconds`)
+      
     }
 
     return result

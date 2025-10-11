@@ -51,7 +51,7 @@ const PerformanceMonitor: React.FC = () => {
 
       // Log metrics in development
       if (process.env.NODE_ENV === 'development') {
-        console.log('Performance Metrics:', newMetrics)
+        
       }
     }
 

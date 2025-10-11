@@ -38,7 +38,7 @@ export const AnalyticsProvider: React.FC</AnalyticsContextType><AnalyticsProvide
 
     // Track event with analytics service
     if (typeof window !== 'undefined') {
-      console.log('Analytics Event:', eventName, properties)
+      
       
       // Configure Google Analytics
       gtag()
@@ -66,7 +66,7 @@ export const AnalyticsProvider: React.FC</AnalyticsContextType><AnalyticsProvide
 
     // Track page view
     if (typeof window !== 'undefined') {
-      console.log('Page View:', pageName)
+      
       
       // Example: Send to Google Analytics
       // gtag('config', 'GA_MEASUREMENT_ID', {
@@ -78,7 +78,7 @@ export const AnalyticsProvider: React.FC</AnalyticsContextType><AnalyticsProvide
 
     // Console logging for development
     if (process.env.NODE_ENV === 'development') {
-    console.log('Analytics Event:', eventName, parameters)
+    
   }
   }
 
@@ -93,7 +93,7 @@ export const AnalyticsProvider: React.FC</AnalyticsContextType><AnalyticsProvide
 
     // Console logging for development
     if (process.env.NODE_ENV === 'development') {
-    console.log('Page View:', pageName, pagePath)
+    
   }
   }
 

@@ -1,8 +1,23 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
+import { visualizer } from 'rollup-plugin-visualizer'
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react({
+      babel: {
+        plugins: [
+          ['@babel/plugin-transform-react-jsx', { runtime: 'automatic' }]
+        ]
+      }
+    }),
+    process.env.ANALYZE && visualizer({
+      filename: 'dist/stats.html',
+      open: true,
+      gzipSize: true,
+      brotliSize: true,
+    })
+  ].filter(Boolean),
   resolve: {
     alias: {
       '@': resolve(__dirname, './app'),
@@ -26,6 +41,9 @@ export default defineConfig({
     reportCompressedSize: true,
     chunkSizeWarningLimit: 500,
     rollupOptions: {
+      treeshake: {
+        moduleSideEffects: false
+      },
       output: {
         manualChunks: (id) => {
           // Vendor chunks - more granular splitting
@@ -123,9 +141,21 @@ export default defineConfig({
     host: true
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'framer-motion', 'lucide-react', 'react-router-dom']
+    include: ['react', 'react-dom', 'framer-motion', 'lucide-react', 'react-router-dom'],
+    exclude: ['@vite/client', '@vite/env']
   },
   css: {
-    devSourcemap: true
+    devSourcemap: true,
+    postcss: {
+      plugins: [
+        require('autoprefixer'),
+        require('cssnano')({
+          preset: 'default'
+        })
+      ]
+    }
+  },
+  esbuild: {
+    drop: ['console', 'debugger']
   }
 })

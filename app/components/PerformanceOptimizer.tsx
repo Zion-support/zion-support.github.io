@@ -107,7 +107,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         }
         
         // Send metrics to analytics (replace with your analytics service)
-        console.log('Performance Metrics:', metrics)
+        
         
         // Store metrics in localStorage for debugging
         localStorage.setItem('performance-metrics', JSON.stringify(metrics))

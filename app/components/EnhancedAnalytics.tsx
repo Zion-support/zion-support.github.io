@@ -43,7 +43,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
 
     // Track event with analytics service
     if (typeof window !== 'undefined') {
-      console.log('Analytics Event:', eventName, properties)
+      
       
       // Example: Send to Google Analytics
       // gtag('event', eventName, properties)
@@ -55,7 +55,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
 
     // Track page view
     if (typeof window !== 'undefined') {
-      console.log('Page View:', pageName)
+      
       
       // Example: Send to Google Analytics
       // gtag('config', 'GA_MEASUREMENT_ID', {
