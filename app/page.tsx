@@ -4,11 +4,11 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, Users, Globe, Code, BarChart, Target, Sparkles, Cpu, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart, Rocket, Clock, Award, Lightbulb, Gauge, Phone } from 'lucide-react';
+import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, Users, Globe, Code, BarChart, Target, Sparkles, Cpu, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart, Rocket, Clock, Award, Lightbulb, Gauge, Phone, Mail, Search } from 'lucide-react';
 // Loading skeleton component
 const ServiceCardSkeleton = () => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
-    </div><div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
+    <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
     <div className="h-4 bg-gray-200 rounded mb-2"></div>
     <div className="h-4 bg-gray-200 rounded w-5/6"></div>
   </div>
@@ -17,7 +17,7 @@ const ServiceCardSkeleton = () => (
 // Content promotion banner component
 const ContentPromotionBanner = () => (
   <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-4 text-center">
-    </div><p className="text-sm font-medium">
+    <p className="text-sm font-medium">
       🚀 New: AI-Powered Business Solutions - Transform Your Operations Today!
     </p>
   </div>
@@ -144,39 +144,62 @@ const HomePage: React.FC = () => {
   ];
 
   const aiServices = [
-    { name: 'Machine Learning', description: 'Custom ML models for your business needs', icon: Brain },
-    { name: 'Natural Language Processing', description: 'AI-powered text analysis and generation', icon: Code },
-    { name: 'Computer Vision', description: 'Image recognition and analysis solutions', icon: Eye },
-    { name: 'Predictive Analytics', description: 'Data-driven insights and forecasting', icon: BarChart },
-    { name: 'AI Automation', description: 'Intelligent process automation', icon: Zap },
-    { name: 'AI Consulting', description: 'Strategic AI implementation guidance', icon: Target }
+    { name: 'AI-Powered Chatbots', description: 'Advanced conversational AI with 24/7 customer support', icon: MessageCircle, price: '$299/month', marketPrice: '$500-2000/month' },
+    { name: 'Machine Learning Models', description: 'Custom ML models for predictive analytics and automation', icon: Brain, price: '$1,500/month', marketPrice: '$3000-8000/month' },
+    { name: 'Natural Language Processing', description: 'AI-powered text analysis, sentiment analysis, and content generation', icon: Code, price: '$799/month', marketPrice: '$1500-5000/month' },
+    { name: 'Computer Vision', description: 'Image recognition, quality control, and visual analytics solutions', icon: Eye, price: '$1,200/month', marketPrice: '$2000-6000/month' },
+    { name: 'Predictive Analytics', description: 'Data-driven insights, forecasting, and business intelligence', icon: BarChart, price: '$999/month', marketPrice: '$2000-7000/month' },
+    { name: 'AI Workflow Automation', description: 'Intelligent process automation with 90% time savings', icon: Zap, price: '$599/month', marketPrice: '$1000-4000/month' },
+    { name: 'AI Fraud Detection', description: 'Real-time fraud prevention with 99.9% accuracy', icon: Shield, price: '$1,800/month', marketPrice: '$3000-10000/month' },
+    { name: 'AI Content Generation', description: 'Automated content creation for blogs, social media, and marketing', icon: FileText, price: '$399/month', marketPrice: '$800-3000/month' },
+    { name: 'AI Voice Solutions', description: 'Speech recognition, text-to-speech, and voice assistants', icon: Mic, price: '$699/month', marketPrice: '$1200-4000/month' },
+    { name: 'AI Healthcare Solutions', description: 'Medical imaging analysis, drug discovery, and patient care AI', icon: Heart, price: '$2,500/month', marketPrice: '$5000-15000/month' },
+    { name: 'AI Financial Services', description: 'Algorithmic trading, risk assessment, and financial forecasting', icon: DollarSign, price: '$1,999/month', marketPrice: '$4000-12000/month' },
+    { name: 'AI E-commerce Optimization', description: 'Personalized recommendations, pricing optimization, and inventory management', icon: ShoppingCart, price: '$899/month', marketPrice: '$1500-5000/month' }
   ];
 
   const itServices = [
-    { name: 'Cloud Migration', description: 'Seamless cloud infrastructure migration', icon: Cloud },
-    { name: 'DevOps', description: 'Continuous integration and deployment', icon: Settings },
-    { name: 'Cybersecurity', description: 'Comprehensive security solutions', icon: Shield },
-    { name: 'Database Management', description: 'Optimized database solutions', icon: Database },
-    { name: 'API Development', description: 'RESTful and GraphQL APIs', icon: Code },
-    { name: 'System Integration', description: 'Connect and optimize your systems', icon: Globe }
+    { name: 'Cloud Infrastructure & Migration', description: 'AWS, Azure, GCP migration with 99.9% uptime guarantee', icon: Cloud, price: '$2,500/month', marketPrice: '$4000-15000/month' },
+    { name: 'DevOps & CI/CD', description: 'Automated deployment, monitoring, and infrastructure as code', icon: Settings, price: '$2,200/month', marketPrice: '$3500-10000/month' },
+    { name: 'Cybersecurity Solutions', description: 'Advanced threat detection, compliance, and 24/7 monitoring', icon: Shield, price: '$1,800/month', marketPrice: '$3000-12000/month' },
+    { name: 'Database Management', description: 'Database design, optimization, and AI-powered performance tuning', icon: Database, price: '$1,200/month', marketPrice: '$2000-8000/month' },
+    { name: 'API Development', description: 'RESTful, GraphQL, and microservices API development', icon: Code, price: '$1,500/month', marketPrice: '$2500-8000/month' },
+    { name: 'System Integration', description: 'Connect and optimize your systems with seamless integration', icon: Globe, price: '$1,999/month', marketPrice: '$3000-10000/month' },
+    { name: 'Web Development', description: 'Modern, responsive web applications with React, Next.js, and Vue.js', icon: Monitor, price: '$5,000/project', marketPrice: '$10000-30000/project' },
+    { name: 'Mobile Development', description: 'Native iOS and Android apps with cross-platform solutions', icon: Smartphone, price: '$8,000/project', marketPrice: '$15000-50000/project' },
+    { name: 'IT Consulting', description: 'Strategic IT planning and digital transformation consulting', icon: Users, price: '$200/hour', marketPrice: '$300-800/hour' },
+    { name: 'Network Solutions', description: 'Enterprise networking, VPN setup, and network security', icon: Wifi, price: '$699/month', marketPrice: '$1000-4000/month' },
+    { name: 'IT Support & Maintenance', description: '24/7 technical support with guaranteed response times', icon: Package, price: '$499/month', marketPrice: '$800-3000/month' },
+    { name: 'Data Analytics & BI', description: 'Business intelligence dashboards and advanced analytics', icon: BarChart, price: '$1,299/month', marketPrice: '$2000-6000/month' }
+  ];
+
+  const microSaasServices = [
+    { name: 'Zion Analytics Pro', description: 'AI-powered business intelligence with real-time dashboards', icon: BarChart, price: '$89/month', marketPrice: '$150-500/month', features: ['Real-time Analytics', 'Custom Dashboards', 'Predictive Insights', 'Automated Reports'] },
+    { name: 'Zion Chat AI', description: 'Advanced AI customer support with 24/7 availability', icon: MessageCircle, price: '$149/month', marketPrice: '$300-800/month', features: ['GPT-4 Powered', 'Multi-channel Support', 'Sentiment Analysis', 'Live Agent Handoff'] },
+    { name: 'Zion Content Studio', description: 'AI content creation for blogs, social media, and marketing', icon: FileText, price: '$299/month', marketPrice: '$500-1500/month', features: ['AI Writing', 'Image Generation', 'Video Editing', 'Social Media Automation'] },
+    { name: 'Zion CRM Intelligence', description: 'AI-enhanced CRM with lead scoring and automation', icon: Users, price: '$199/month', marketPrice: '$400-1200/month', features: ['AI Lead Scoring', 'Automated Follow-ups', 'Predictive Analytics', 'CRM Integration'] },
+    { name: 'Zion Invoice Genius', description: 'AI-powered invoice generation and payment tracking', icon: DollarSign, price: '$49/month', marketPrice: '$100-300/month', features: ['Auto Invoice Creation', 'Payment Tracking', 'Tax Calculation', 'Client Portal'] },
+    { name: 'Zion Lead Magnet', description: 'Advanced lead generation with AI-powered prospecting', icon: Target, price: '$99/month', marketPrice: '$200-600/month', features: ['AI Lead Scoring', 'Multi-channel Capture', 'Automated Nurturing', 'A/B Testing'] },
+    { name: 'Zion Email Automation', description: 'AI-powered email marketing with personalization', icon: Mail, price: '$79/month', marketPrice: '$150-500/month', features: ['AI Personalization', 'Send Time Optimization', 'A/B Testing', 'Advanced Analytics'] },
+    { name: 'Zion SEO Optimizer', description: 'AI-powered SEO analysis and optimization', icon: Search, price: '$129/month', marketPrice: '$200-800/month', features: ['Keyword Research', 'Content Optimization', 'Ranking Tracking', 'Competitor Analysis'] },
+    { name: 'Zion Social Scheduler', description: 'AI-driven social media management and scheduling', icon: Globe, price: '$69/month', marketPrice: '$100-400/month', features: ['Content Creation', 'Optimal Timing', 'Performance Analytics', 'Multi-platform Posting'] },
+    { name: 'Zion Project Master', description: 'AI-powered project management with intelligent automation', icon: Calendar, price: '$89/month', marketPrice: '$150-500/month', features: ['AI Task Prioritization', 'Resource Optimization', 'Progress Tracking', 'Team Collaboration'] },
+    { name: 'Zion Data Sync', description: 'AI-powered data integration and synchronization', icon: Database, price: '$119/month', marketPrice: '$200-600/month', features: ['Real-time Sync', 'Data Cleaning', 'Error Detection', 'Multiple Sources'] },
+    { name: 'Zion Security Shield', description: 'AI-powered cybersecurity monitoring and threat detection', icon: Shield, price: '$199/month', marketPrice: '$400-1200/month', features: ['Threat Detection', 'Vulnerability Scanning', 'Incident Response', 'Compliance Monitoring'] }
   ];
 
   return (
     <>
       <Helmet>
-        </Helmet><title>Zion Tech Group - Advanced AI and IT Solutions</title>
+        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
         <meta name="description" content="Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology." />
         <meta name="keywords" content="AI solutions, IT services, digital transformation, enterprise software, cloud computing, cybersecurity" />
       </Helmet>
 
-))
-ServiceCardSkeleton.displayName = 'ServiceCardSkeleton'
-const HomePage: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false)
-  const [isVisible, setIsVisible] = useState(false)
-  useEffect(() => {
-    setIsLoaded(true)
-    // Trigger visibility animation
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
+        <Navigation />
+        
+        <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
     const timer = setTimeout(() => setIsVisible(true), 100)
     // Preload components
     preloadComponents()
@@ -414,16 +437,40 @@ const HomePage: React.FC = () => {
             <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto">
               Comprehensive AI solutions designed to transform your business operations
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {aiServices.map((service, index) => (
-                </div><div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300">
-                  </div><service.icon className="w-12 h-12 text-blue-400 mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    {service.name}
-                  </h3>
-                  <p className="text-gray-300">
+                <div key={index} className="cyber-card hologram-card p-6 hover:scale-105 transition-all duration-300 group">
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
+                      <service.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-lg font-semibold text-white group-hover:text-cyan-300 transition-colors">
+                        {service.name}
+                      </h3>
+                    </div>
+                  </div>
+                  <p className="text-gray-300 mb-4 text-sm leading-relaxed">
                     {service.description}
                   </p>
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="text-2xl font-bold text-cyan-400 neon-text">
+                      {service.price}
+                    </div>
+                    {service.marketPrice && (
+                      <div className="text-sm text-gray-400 line-through">
+                        {service.marketPrice}
+                      </div>
+                    )}
+                  </div>
+                  <div className="text-center">
+                    <a 
+                      href="/contact" 
+                      className="text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-all duration-300 hover:neon-glow"
+                    >
+                      Learn More →
+                    </a>
+                  </div>
                 </div>
               ))}
             </div>
@@ -437,16 +484,98 @@ const HomePage: React.FC = () => {
             <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto">
               Complete IT solutions to modernize your infrastructure and drive business growth
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {itServices.map((service, index) => (
-                </div><div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300">
-                  </div><service.icon className="w-12 h-12 text-green-400 mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    {service.name}
-                  </h3>
-                  <p className="text-gray-300">
+                <div key={index} className="cyber-card hologram-card p-6 hover:scale-105 transition-all duration-300 group">
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
+                      <service.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-lg font-semibold text-white group-hover:text-green-300 transition-colors">
+                        {service.name}
+                      </h3>
+                    </div>
+                  </div>
+                  <p className="text-gray-300 mb-4 text-sm leading-relaxed">
                     {service.description}
                   </p>
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="text-2xl font-bold text-green-400 neon-text">
+                      {service.price}
+                    </div>
+                    {service.marketPrice && (
+                      <div className="text-sm text-gray-400 line-through">
+                        {service.marketPrice}
+                      </div>
+                    )}
+                  </div>
+                  <div className="text-center">
+                    <a 
+                      href="/contact" 
+                      className="text-green-400 hover:text-green-300 font-medium text-sm transition-all duration-300 hover:neon-glow"
+                    >
+                      Learn More →
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Micro SAAS Services Section */}
+          <section className="mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
+              Micro SAAS Solutions
+            </h2>
+            <p className="text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto">
+              Ready-to-use AI-powered business tools that deliver immediate value and ROI
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {microSaasServices.map((service, index) => (
+                <div key={index} className="cyber-card hologram-card p-6 hover:scale-105 transition-all duration-300 group">
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
+                      <service.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-lg font-semibold text-white group-hover:text-purple-300 transition-colors">
+                        {service.name}
+                      </h3>
+                    </div>
+                  </div>
+                  <p className="text-gray-300 mb-4 text-sm leading-relaxed">
+                    {service.description}
+                  </p>
+                  <div className="mb-4">
+                    <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
+                    <ul className="space-y-1">
+                      {service.features.slice(0, 3).map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-xs text-gray-300">
+                          <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="text-xl font-bold text-purple-400 neon-text">
+                      {service.price}
+                    </div>
+                    {service.marketPrice && (
+                      <div className="text-sm text-gray-400 line-through">
+                        {service.marketPrice}
+                      </div>
+                    )}
+                  </div>
+                  <div className="text-center">
+                    <a 
+                      href="/contact" 
+                      className="text-purple-400 hover:text-purple-300 font-medium text-sm transition-all duration-300 hover:neon-glow"
+                    >
+                      Try Free →
+                    </a>
+                  </div>
                 </div>
               ))}
             </div>
@@ -528,6 +657,13 @@ const HomePage: React.FC = () => {
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Call (302) 464-0950
+                </a>
+                <a 
+                  href="mailto:kleber@ziontechgroup.com" 
+                  className="px-8 py-4 border-2 border-purple-400 text-purple-400 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center group"
+                >
+                  <Mail className="w-5 h-5 mr-2" />
+                  Email Us
                 </a>
               </div>
               <div className="text-sm text-gray-400">
