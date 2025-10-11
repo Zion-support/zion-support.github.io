@@ -1,6 +1,6 @@
 'use client'
 import React, { Suspense } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import './app/styles/futuristic.css'
 import './app/styles/futuristic-enhanced.css'
@@ -52,6 +52,9 @@ const WebDevelopmentPage = React.lazy(() => import('./app/web-development/page')
 const MobileDevelopmentPage = React.lazy(() => import('./app/mobile-development/page'))
 // Company Pages
 const TeamPage = React.lazy(() => import('./app/team/page'))
+// Additional Service Pages
+const CybersecurityPage = React.lazy(() => import('./app/cybersecurity/page'))
+const DataAnalyticsPage = React.lazy(() => import('./app/data-analytics/page'))
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   usePerformanceMonitor()
@@ -113,6 +116,10 @@ const App: React.FC = () => {
                             
                             {/* Company Pages */}
                             <Route path="/team" element={<TeamPage />} />
+                            
+                            {/* Additional Service Pages */}
+                            <Route path="/cybersecurity" element={<CybersecurityPage />} />
+                            <Route path="/data-analytics" element={<DataAnalyticsPage />} />
                           </Routes>
                         </Suspense>
                       </main>
