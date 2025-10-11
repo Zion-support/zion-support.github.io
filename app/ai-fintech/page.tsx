@@ -68,7 +68,6 @@ const PagePage: React.FC = () => {
               </button>
               <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
                 Learn More
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
               </button>
             </div>
           </div>
@@ -94,4 +93,3 @@ const PagePage: React.FC = () => {
 };
 
 export default AiFintechPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7

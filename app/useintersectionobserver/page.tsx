@@ -42,7 +42,6 @@ const UseintersectionobserverPage: React.FC = () => {
               </button>
                 Learn More
               </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
             </div>
           </div>
         </section>

@@ -1,19 +1,14 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
-=======
 import { BarChart, TrendingUp, PieChart, ArrowRight, CheckCircle, Zap, Shield, Target } from 'lucide-react';
-=======
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { Brain, Zap, Target, BarChart, CheckCircle, ArrowRight, Clock, Users, Shield } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
 
 const AiWorkflowAutomationPage: React.FC = () => {
   const features = [
@@ -48,12 +43,9 @@ const AiWorkflowAutomationPage: React.FC = () => {
     'Increase process efficiency by 60%',
     'Eliminate human errors and delays',
     'Scale operations without proportional staff increases',
-<<<<<<< HEAD
     'Real-time processing and analysis',
     'Seamless integration with existing systems'
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-=======
     'Improve compliance and audit trails',
     'Enable 24/7 automated operations'
   ]
@@ -80,12 +72,9 @@ const AiWorkflowAutomationPage: React.FC = () => {
       icon: <Shield className="w-8 h-8 text-cyan-400" />
     }
   ]
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
 
 const PagePage: React.FC = () => {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
@@ -129,7 +118,6 @@ const PagePage: React.FC = () => {
 };
 
 export default PagePage;
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       
@@ -140,7 +128,6 @@ export default PagePage;
             <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
               Ai Workflow Automation
             </h1>
-<<<<<<< HEAD
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our advanced AI-powered solutions.
             </p>
@@ -151,7 +138,6 @@ export default PagePage;
               </button>
               <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
                 Learn More
-=======
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"></p></p>
               Advanced AI-powered ai workflow automation solution for modern businesses.
             </p>
@@ -161,10 +147,8 @@ export default PagePage;
               </button>
               <button className="border border-violet-400 text-violet-400 hover:bg-violet-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"></button>
                 View Demo
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
               </button>
             </div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-violet-900 to-slate-900">
       <Helmet>
         <title>AI Workflow Automation - Zion Tech Group | Intelligent Process Automation</title>
@@ -191,13 +175,10 @@ export default PagePage;
             <button className="border border-violet-400 text-violet-400 hover:bg-violet-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               View Demo
             </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -213,7 +194,6 @@ export default PagePage;
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
-=======
       {/* Features Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -235,7 +215,6 @@ export default PagePage;
                 <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
                 {feature.benefits && (
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center text-sm text-gray-400">
@@ -244,8 +223,6 @@ export default PagePage;
                       </li>
                     ))}
                   </ul>
-<<<<<<< HEAD
-=======
           <div className="max-w-7xl mx-auto"></div></div>
             <div className="text-center"></div></div>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1></h1>
@@ -266,15 +243,12 @@ export default PagePage;
                       ))}
                     </ul>
                   )}
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
                 </div>
               ))}
             </div>
-=======
                 )}
               </div>
             ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
           </div>
         </div>
       </section>
@@ -353,18 +327,11 @@ export default PagePage;
         </div>
       </section>
 
-<<<<<<< HEAD
       <Footer />
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default AiWorkflowAutomationPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-=======
 export default AiWorkflowAutomationPage
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
-=======
 export default AiWorkflowAutomationPage
->>>>>>> cursor/fix-errors-and-merge-to-main-7175

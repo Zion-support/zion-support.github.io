@@ -41,7 +41,6 @@ import React from 'react';
                   )}
                 </div>
               ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
             </div>
           </div>
         </section>

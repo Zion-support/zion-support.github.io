@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
@@ -38,7 +35,6 @@ const LayoutPage: React.FC = () => {
                 This page is under development. Please check back soon for updates.
               </p>
               <button className="cyber-button">
-=======
 'use client'
 import React from 'react';
 import { Helmet}  } from 'react-helmet-async';
@@ -106,19 +102,16 @@ const LayoutPage: React.FC = () => {,
                 <ArrowRight className="ml-2" size={20} />
               </button>
               <button className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
                 Learn More
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
             </div>
           </div>
-<<<<<<< HEAD
         </section>
       </div>
       
       <Footer />
     </>
-=======
         </div>
       </section>
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section></section>
@@ -170,12 +163,10 @@ const LayoutPage: React.FC = () => {,
         </div>
       </section>
     </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
   );
 };
 
 export default LayoutPage;
-=======
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
@@ -202,7 +193,6 @@ export const metadata: Metadata = {
   },
 };
 
-=======
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
@@ -229,7 +219,6 @@ export const metadata: Metadata = {
   },
 };
 
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
 export default function RootLayout({
   children,
 }: {
@@ -237,23 +226,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-<<<<<<< HEAD
-=======
       <head>
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#1e293b" />
       </head>
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
       <body className={inter.className}>
         {children}
       </body>
     </html>
   );
-<<<<<<< HEAD
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-7175

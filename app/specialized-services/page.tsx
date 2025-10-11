@@ -33,7 +33,6 @@
     '24/7 availability',
     'Expert support'
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
 
 const PagePage: React.FC = () => {
   return (
@@ -95,7 +94,6 @@ const PagePage: React.FC = () => {
           </div>
         </section>
 
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
       <Footer />
     </>
   );

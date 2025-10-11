@@ -39,13 +39,10 @@ const AiAnalyticsPage: React.FC = () => {
     'Seamless integration with existing systems'
   ];
 
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-  return (
-                    ))}
+  return ())}
                   </ul>
                 </div>
               ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
             </div>
           </div>
         </section>
@@ -66,7 +63,6 @@ const AiAnalyticsPage: React.FC = () => {
               </button>
               <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
                 Contact Sales
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
               </button>
             </div>
           </div>

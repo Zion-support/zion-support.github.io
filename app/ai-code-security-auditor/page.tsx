@@ -1,16 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
-=======
-=======
 'use client';
 import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -26,7 +20,6 @@ const AiCodeSecurityAuditorPage: React.FC = () => {
     },
     {
       icon: Brain,
-<<<<<<< HEAD
       title: 'Intelligent Analysis',
       description: 'Advanced AI algorithms that understand code patterns and detect complex security issues.',
       benefits: ['Pattern recognition', 'Threat intelligence', 'Risk assessment', 'Predictive analysis']
@@ -45,13 +38,10 @@ const AiCodeSecurityAuditorPage: React.FC = () => {
     }
   ];
 
-=======
-
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings }  } from 'lucide-react';
 const AiCodeSecurityAuditorPage: React.FC = () => {,
 'use client'
 import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
   const benefits = [
     'Enhanced code security',
     'Reduced security vulnerabilities',
@@ -60,13 +50,10 @@ import React from 'react';
     'Real-time threat detection',
     'Comprehensive security coverage'
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
 
 const PagePage: React.FC = () => {
   return (
     <>
-<<<<<<< HEAD
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
@@ -97,7 +84,6 @@ const PagePage: React.FC = () => {
               <button className="cyber-button">
                 Learn More
                 <ArrowRight className="w-5 h-5 ml-2" />
-=======
       <Helmet>
         <title>Ai Code Security Auditor - Zion Tech Group</title>
         <meta name="description" content="AI-powered ai code security auditor solution for intelligent automation and optimization" />
@@ -119,7 +105,6 @@ const PagePage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div></div>
               <button className="bg-gradient-to-r from-yellow-500 to-blue-600 hover:from-yellow-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
-=======
       title: 'AI-Powered Analysis',
       description: 'Advanced AI algorithms that automatically detect security vulnerabilities and code issues.',
       benefits: ['Automated vulnerability scanning', 'Code quality assessment', 'Security pattern recognition', 'Risk prioritization']
@@ -175,25 +160,19 @@ const PagePage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
-<<<<<<< HEAD
               <button className="border border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"></button>
                 View Demo
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
-=======
               <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
                 Learn More
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
               </button>
             </div>
           </div>
         </section>
       </div>
       
-=======
       <Helmet>
         <title>AI Code Security Auditor - Zion Tech Group</title>
         <meta name="description" content="AI-powered code security auditing solution that automatically detects vulnerabilities and security issues in your codebase." />
@@ -226,8 +205,6 @@ const PagePage: React.FC = () => {
         </section>
 
         {/* Features Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -237,30 +214,23 @@ const PagePage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Advanced AI security technology that protects your code
               </p>
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300">Advanced AI technology for comprehensive code security</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-<<<<<<< HEAD
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
                   <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <feature.icon className="w-8 h-8 text-white" />
-=======
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
                   <div className="text-cyan-400 mb-4">
                     <feature.icon className="h-8 w-8" />
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
-<<<<<<< HEAD
-=======
         <section className="py-20 px-4"></section></section>
         </section>
           <div className="max-w-7xl mx-auto"></div></div>
@@ -278,23 +248,18 @@ const PagePage: React.FC = () => {
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4"></h3></h3>{feature.title}</h3>
                   <p className="text-gray-300 mb-4"></p></p>{feature.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
                   {feature.benefits && (
                     <ul className="space-y-2">
                       {feature.benefits.map((benefit, idx) => (
-<<<<<<< HEAD
                         <li key={idx} className="flex items-center text-sm text-gray-400">
                           <CheckCircle className="w-4 h-4 text-red-400 mr-2" />
-=======
                         <li key={idx} className="flex items-center text-sm text-gray-400"></li>
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
                           {benefit}
                         </li>
                       ))}
                     </ul>
                   )}
-=======
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
@@ -303,7 +268,6 @@ const PagePage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
                 </div>
               ))}
             </div>
@@ -311,19 +275,15 @@ const PagePage: React.FC = () => {
         </section>
 
         {/* Benefits Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-=======
         <section className="py-20 px-4"></section></section>
         </section>
           <div className="max-w-7xl mx-auto"></div></div>
             <div className="text-center mb-16"></div></div>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2></h2>
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
                 Why Choose Our Solution?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -331,7 +291,6 @@ const PagePage: React.FC = () => {
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
@@ -339,7 +298,6 @@ const PagePage: React.FC = () => {
                     <CheckCircle className="w-8 h-8 text-white" />
                   </div>
                   <p className="text-lg text-white font-medium">{benefit}</p>
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -353,34 +311,27 @@ const PagePage: React.FC = () => {
                     <Zap className="h-6 w-6 text-cyan-400" />
                   </div>
                   <p className="text-gray-300">{benefit}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
                 </div>
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div></div>
               {benefits.map((benefit, index) =&gt; (
                 </div&gt;
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
               ))}
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Secure Your Code?
-=======
         <section className="py-20 px-4"></section></section>
         </section>
           <div className="max-w-4xl mx-auto text-center"></div></div>
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12"></div></div>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2></h2>
                 Ready to Get Started?
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Contact our experts to discuss your security requirements and get started today.
@@ -393,7 +344,6 @@ const PagePage: React.FC = () => {
                   Learn More
                 </button>
               </div>
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Secure Your Code?</h2>
@@ -408,26 +358,18 @@ const PagePage: React.FC = () => {
               <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
                 Contact Sales
               </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
             </div>
           </div>
         </section>
       </main>
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
       <Footer />
     </>
   );
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default PagePage;
-=======
 export default AiCodeSecurityAuditorPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-=======
 export default AiCodeSecurityAuditorPage;
       {/* CTA Section */}
       <section className="py-20 px-4"></section></section>
@@ -458,12 +400,9 @@ export default AiCodeSecurityAuditorPage;
 }
 
 export default AiCodeSecurityAuditorPage
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
-=======
       <Footer />
     </div>
   );
 };
 
 export default AiCodeSecurityAuditorPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-7175

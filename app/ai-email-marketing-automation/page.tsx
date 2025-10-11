@@ -1,8 +1,7 @@
 
 const AiEmailMarketingAutomationPage: React.FC = () => {
   const features = [
-    {
-    },
+    {},
     {
       icon: Target,
       title: 'Precision Targeting',
@@ -64,4 +63,3 @@ const AiEmailMarketingAutomationPage: React.FC = () => {
 };
 
 export default AiEmailMarketingAutomationPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7

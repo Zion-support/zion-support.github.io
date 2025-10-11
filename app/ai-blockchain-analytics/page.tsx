@@ -1,19 +1,14 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
-=======
 import { BarChart, TrendingUp, PieChart, ArrowRight, CheckCircle, Zap, Shield, Target } from 'lucide-react';
-=======
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { Brain, BarChart, CheckCircle, TrendingUp, Shield, Zap } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
 
 const AiBlockchainAnalyticsPage: React.FC = () => {
   const features = [
@@ -44,7 +39,6 @@ const AiBlockchainAnalyticsPage: React.FC = () => {
   ]
 
   const benefits = [
-<<<<<<< HEAD
     'Increase efficiency by up to 80%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
@@ -52,8 +46,6 @@ const AiBlockchainAnalyticsPage: React.FC = () => {
     'Real-time processing and analysis',
     'Seamless integration with existing systems'
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-=======
     'Real-time blockchain data analysis',
     'AI-powered insights and predictions',
     'Comprehensive security monitoring',
@@ -61,12 +53,9 @@ const AiBlockchainAnalyticsPage: React.FC = () => {
     'Advanced pattern recognition',
     'Scalable data processing'
   ]
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
 
 const PagePage: React.FC = () => {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
@@ -81,12 +70,10 @@ const PagePage: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Discover our comprehensive solutions designed to transform your business.
               </p>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       
       <main className="pt-20">
-=======
     <>
       <Helmet>
         <title>AI Blockchain Analytics - Zion Tech Group</title>
@@ -97,7 +84,6 @@ const PagePage: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-violet-900 to-slate-900">
         <Navigation />
         
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(139,92,246,0.3)_0%,transparent_50%)] animate-pulse" />
@@ -106,7 +92,6 @@ const PagePage: React.FC = () => {
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               AI Blockchain <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-blue-400">Analytics</span>
             </h1>
-<<<<<<< HEAD
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Advanced AI-powered blockchain analytics solution for comprehensive insights and intelligent decision making.
             </p>
@@ -118,12 +103,10 @@ const PagePage: React.FC = () => {
               <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
                 Learn More
               </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Content Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -137,7 +120,6 @@ const PagePage: React.FC = () => {
               <button className="cyber-button">
                 Learn More
                 <ArrowRight className="w-5 h-5 ml-2" />
-=======
         {/* Features Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -157,7 +139,6 @@ const PagePage: React.FC = () => {
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
-<<<<<<< HEAD
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
@@ -166,7 +147,6 @@ const PagePage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-=======
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"></p></p>
               Advanced AI-powered ai blockchain analytics solution for modern businesses.
             </p>
@@ -208,22 +188,16 @@ const PagePage: React.FC = () => {
                       {feature.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-400"></li>
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-=======
                   {feature.benefits && (
                     <ul className="space-y-2">
                       {feature.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-400">
                           <CheckCircle className="w-4 h-4 text-violet-400 mr-2" />
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
                           {benefit}
                         </li>
                       ))}
                     </ul>
                   )}
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
                 </div>
               ))}
             </div>
@@ -231,12 +205,8 @@ const PagePage: React.FC = () => {
         </section>
 
         {/* Benefits Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-=======
         <section className="py-20 px-4">
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -253,7 +223,6 @@ const PagePage: React.FC = () => {
                     <CheckCircle className="w-8 h-8 text-white" />
                   </div>
                   <p className="text-gray-300">{benefit}</p>
-=======
         <section className="py-20 px-4"></section></section>
         </section>
           <div className="max-w-7xl mx-auto"></div></div>
@@ -273,7 +242,6 @@ const PagePage: React.FC = () => {
                     <CheckCircle className="w-8 h-8 text-white" />
                   </div>
                   <p className="text-lg text-white font-medium"></p></p>{benefit}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
                 </div>
               ))}
             </div>
@@ -281,8 +249,6 @@ const PagePage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
@@ -296,9 +262,7 @@ const PagePage: React.FC = () => {
               </button>
               <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
                 Contact Sales
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
               </button>
-=======
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
@@ -316,15 +280,10 @@ const PagePage: React.FC = () => {
                   Learn More
                 </button>
               </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
             </div>
           </div>
-=======
         <section className="py-20 px-4"></section></section>
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
       </div>
       
       <Footer />
@@ -333,22 +292,15 @@ const PagePage: React.FC = () => {
 };
 
 export default PagePage;
-=======
       </main>
 
-=======
       </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
       <Footer />
     </>
   )
 }
 
-<<<<<<< HEAD
 export default AiBlockchainAnalyticsPage;
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-=======
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'],
     },
   ]
@@ -402,8 +354,7 @@ export default AiBlockchainAnalyticsPage;
                   </div>
                   <p className="text-gray-600 mb-4"></p></p>{feature.description</p&gt;}</p>
                   <ul className="space-y-2"></ul>
-                    {feature.benefits.map((benefit, benefitIndex) =&gt; (
-                    ))}
+                    {feature.benefits.map((benefit, benefitIndex) =&gt; ())}
               ))}
               Start Your Free Trial,
   
@@ -413,8 +364,7 @@ export default AiBlockchainAnalyticsPage;
                 <h3 className="text-xl font-semibold text-white mb-3"></h3></h3>{feature.title}</h3>
                 <p className="text-gray-300 mb-4"></p></p>{feature.description</p&gt;}</p>
                 <ul className="space-y-2"></ul>
-                  {feature.benefits.map((benefit, benefitIndex) =&gt; (
-                  ))}
+                  {feature.benefits.map((benefit, benefitIndex) =&gt; ())}
             ))}
           </div>
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6"></div></div>,</div>
@@ -443,7 +393,4 @@ export default PagePage;
 }
 
 export default AiBlockchainAnalyticsPage
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
-=======
 export default AiBlockchainAnalyticsPage
->>>>>>> cursor/fix-errors-and-merge-to-main-7175

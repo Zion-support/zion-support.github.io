@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 'use client';
-<<<<<<< HEAD
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -23,15 +20,11 @@ const DynamicContentShowcasePage: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Discover our comprehensive solutions designed to transform your business.
               </p>
-=======
 import React, { useState, useEffect } from 'react';
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, Clock, Award } from 'lucide-react';
-=======
 import {  Cloud, Zap, Shield, Globe, Users, Award, CheckCircle   } from 'lucide-react';
 const DynamicContentShowcase: React.FC = () => {
   const [currentFeature, setCurrentFeature] = useState(0);
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
-=======
 import React, { useState, useEffect } from 'react'
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, Clock, Award, Cloud } from 'lucide-react'
 
@@ -42,7 +35,6 @@ interface Feature {
   icon: React.ComponentType<any>
   color: string
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
 
 interface Feature {
   id: number;
@@ -71,9 +63,7 @@ const DynamicContentShowcase: React.FC = () => {
       id: 2,
       title: 'Cloud Infrastructure',
       description: 'Scalable and secure cloud solutions that grow with your business needs.',
-<<<<<<< HEAD
       icon: Globe,
-<<<<<<< HEAD
       benefits: [
         'Auto-scaling Resources',
         'Global CDN',
@@ -84,7 +74,6 @@ const DynamicContentShowcase: React.FC = () => {
         { value: '99.9%', label: 'Uptime SLA' },
         { value: '50+', label: 'Data Centers' }
       ]
-=======
       color: 'from-teal-500 to-cyan-600'
     }
   ]
@@ -140,11 +129,8 @@ const DynamicContentShowcase: React.FC = () => {
       role: 'CTO',
       content: 'This solution transformed our operations completely. The AI insights are incredible.',
       rating: 5
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
-=======
       icon: Cloud,
       color: 'from-green-500 to-blue-600'
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
     },
     {
       id: 3,
@@ -211,17 +197,13 @@ const DynamicContentShowcase: React.FC = () => {
   ];
 
   useEffect(() => {
-<<<<<<< HEAD
-<<<<<<< HEAD
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % features.length);
     }, 5000);
 
     return () => clearInterval(interval);
-=======
 
     return () =&gt; clearInterval(timer);
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
   }, [features.length]);
 
   const currentFeature = features[currentIndex];
@@ -237,8 +219,6 @@ const DynamicContentShowcase: React.FC = () => {
             Discover our comprehensive suite of AI and technology solutions
           </p>
         </div>
-<<<<<<< HEAD
-=======
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % features.length)
     }, 3000)
@@ -257,7 +237,6 @@ const DynamicContentShowcase: React.FC = () => {
           Experience our cutting-edge solutions through interactive demonstrations
         </p>
       </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
 
       {/* Feature Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
@@ -288,7 +267,6 @@ const DynamicContentShowcase: React.FC = () => {
               <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
               <span className="text-gray-300">{benefit}</span>
             </div>
-<<<<<<< HEAD
 
             <div className="flex justify-center mt-6 space-x-2">
               {features.map((_, index) => (
@@ -300,8 +278,6 @@ const DynamicContentShowcase: React.FC = () => {
                   }`}
                 />
               ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-=======
       </section>
 
       {/* Features Section */}
@@ -326,7 +302,6 @@ const DynamicContentShowcase: React.FC = () => {
               </div>
               <h3 className="text-xl font-bold text-white mb-3"></h3></h3>{feature.title}</h3>
               <p className="text-gray-300"></p></p>{feature.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
             </div>
           </div>
         </section>
@@ -355,13 +330,8 @@ const DynamicContentShowcase: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default DynamicContentShowcasePage;
-=======
 export default DynamicContentShowcase;
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-=======
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16"></div></div>
       {/* Features Showcase */}
@@ -427,8 +397,6 @@ export default DynamicContentShowcase;
         </button>
       </div>
     </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
-=======
           ))}
         </div>
       </div>
@@ -483,4 +451,3 @@ export default DynamicContentShowcase;
 }
 
 export default DynamicContentShowcase
->>>>>>> cursor/fix-errors-and-merge-to-main-7175

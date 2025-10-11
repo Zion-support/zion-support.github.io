@@ -1,8 +1,7 @@
 
 const AiEducationPage: React.FC = () => {
   const features = [
-    {
-    },
+    {},
     {
       icon: Target,
       title: 'Precision Targeting',
@@ -66,4 +65,3 @@ const AiEducationPage: React.FC = () => {
 };
 
 export default AiEducationPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7

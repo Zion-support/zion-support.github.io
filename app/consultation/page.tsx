@@ -1,29 +1,21 @@
-<<<<<<< HEAD
 'use client';
-<<<<<<< HEAD
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
 
 const PagePage: React.FC = () => {
-=======
 import { ArrowRight, CheckCircle, Clock, Users, Target } from 'lucide-react';
-=======
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Calendar, Clock, User, Mail, Phone, MessageSquare, CheckCircle, ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
-=======
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { ArrowRight, CheckCircle, Clock, Users, Target, Phone, Mail, MapPin } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
 
 const ConsultationPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -31,15 +23,10 @@ const ConsultationPage: React.FC = () => {
     email: '',
     company: '',
     phone: '',
-<<<<<<< HEAD
-<<<<<<< HEAD
     service: '',
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
     message: ''
   });
 
-=======
     company: '',
     service: '',
     message: '',
@@ -50,7 +37,6 @@ const ConsultationPage: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -59,14 +45,12 @@ const ConsultationPage: React.FC = () => {
     }));
   };
 
-<<<<<<< HEAD
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission
     console.log('Form submitted:', formData);
   };
 
-<<<<<<< HEAD
   const services = [
     'AI Strategy & Implementation',
     'Cloud Migration & Infrastructure',
@@ -85,10 +69,8 @@ const ConsultationPage: React.FC = () => {
     'Implementation roadmap'
   ];
 
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
   return (
     <>
-=======
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -168,42 +150,30 @@ const ConsultationPage: React.FC = () => {
 
   return (
     <>
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
       <Helmet>
         <title>Consultation - Zion Tech Group | Expert AI & IT Consulting</title>
         <meta name="description" content="Schedule a consultation with our AI and IT experts. Get personalized advice and solutions for your business needs." />
         <meta name="keywords" content="AI consultation, IT consulting, technology consulting, business transformation, expert advice" />
       </Helmet>
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
-=======
       <Navigation />
       
       <main className="pt-20">
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
         {/* Hero Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-<<<<<<< HEAD
                 Page
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Discover our comprehensive solutions designed to transform your business.
               </p>
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -212,23 +182,19 @@ const ConsultationPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Get expert advice on your AI and IT needs. Schedule a free consultation with our specialists.
             </p>
-=======
                 Expert <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Consultation</span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Get personalized advice from our AI and IT experts. Schedule a consultation to discuss your business needs and discover the best solutions.
               </p>
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Benefits Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-<<<<<<< HEAD
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Consultation?</h2>
               <p className="text-xl text-gray-300">Get personalized advice from industry experts</p>
             </div>
@@ -241,12 +207,10 @@ const ConsultationPage: React.FC = () => {
                   <p className="text-gray-300">{benefit}</p>
                 </div>
               ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Content Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -266,7 +230,6 @@ const ConsultationPage: React.FC = () => {
         </section>
       </div>
       
-=======
         {/* Services Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -286,10 +249,8 @@ const ConsultationPage: React.FC = () => {
 
         {/* Contact Form Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-=======
         {/* Consultation Form */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
           <div className="max-w-4xl mx-auto">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
               <h2 className="text-3xl font-bold text-white mb-8 text-center">Schedule Your Consultation</h2>
@@ -420,8 +381,6 @@ const ConsultationPage: React.FC = () => {
         </section>
       </main>
 
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-=======
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Why Choose Our Consultation?
               </h2>
@@ -611,18 +570,11 @@ const ConsultationPage: React.FC = () => {
         </section>
       </div>
       
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
       <Footer />
     </>
   );
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default PagePage;
-=======
 export default ConsultationPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-=======
 export default ConsultationPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd

@@ -1,19 +1,14 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
-=======
 import { BarChart, TrendingUp, PieChart, ArrowRight, CheckCircle, Zap, Shield, Target } from 'lucide-react';
-=======
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { Brain, BarChart, Target, Database, Shield, Zap, Clock, DollarSign, TrendingUp, Users, Star, ArrowRight, CheckCircle } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
 
 const AiDataAnalyticsPage: React.FC = () => {
   const features = [
@@ -61,26 +56,20 @@ const AiDataAnalyticsPage: React.FC = () => {
     }
   ]
 
-<<<<<<< HEAD
   const benefits = [
     'Increase efficiency by up to 80%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
-<<<<<<< HEAD
     'Real-time processing and analysis',
     'Seamless integration with existing systems'
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
 
 const PagePage: React.FC = () => {
   return (
-<<<<<<< HEAD
-=======
     'Gain competitive advantage with advanced technology'
   ]
 return (
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
     <>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
@@ -95,10 +84,7 @@ return (
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Discover our comprehensive solutions designed to transform your business.
               </p>
-<<<<<<< HEAD
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
             </div>
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div></div></div>,
               {features.map((feature, index) => (
@@ -130,8 +116,6 @@ return (
     }
   ]
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
   const pricingPlans = [
     {
       name: 'Starter',
@@ -184,55 +168,40 @@ return (
   ]
 
   const stats = [
-<<<<<<< HEAD
     { value: '40%', label: 'Faster Decision Making', icon: <Clock className="w-8 h-8 text-green-400" /&gt; },
     { value: '85%', label: 'Accuracy Improvement', icon: <Target className="w-8 h-8 text-blue-400" /&gt; },
     { value: '60%', label: 'Cost Reduction', icon: <DollarSign className="w-8 h-8 text-purple-400" /&gt; },
     { value: '99.9%', label: 'Uptime Guarantee', icon: <Shield className="w-8 h-8 text-cyan-400" /&gt; }
-=======
     { value: '40%', label: 'Faster Decision Making', icon: <Clock className="w-8 h-8 text-green-400" /> },
     { value: '85%', label: 'Accuracy Improvement', icon: <Target className="w-8 h-8 text-blue-400" /> },
     { value: '60%', label: 'Cost Reduction', icon: <DollarSign className="w-8 h-8 text-purple-400" /> },
     { value: '99.9%', label: 'Uptime Guarantee', icon: <Shield className="w-8 h-8 text-cyan-400" /> }
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
   ]
 
   const useCases = [
     {
       title: 'Sales Analytics',
       description: 'Track sales performance, identify top performers, and predict future revenue',
-<<<<<<< HEAD
       icon: <TrendingUp className="w-8 h-8 text-green-400" /&gt;
-=======
       icon: <TrendingUp className="w-8 h-8 text-green-400" />
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
     },
     {
       title: 'Customer Insights',
       description: 'Understand customer behavior, preferences, and lifetime value',
-<<<<<<< HEAD
       icon: <Users className="w-8 h-8 text-blue-400" /&gt;
-=======
       icon: <Users className="w-8 h-8 text-blue-400" />
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
     },
     {
       title: 'Operational Efficiency',
       description: 'Optimize processes, reduce waste, and improve productivity',
-<<<<<<< HEAD
       icon: <Zap className="w-8 h-8 text-yellow-400" /&gt;
-=======
       icon: <Zap className="w-8 h-8 text-yellow-400" />
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
     },
     {
       title: 'Financial Forecasting',
       description: 'Predict cash flow, budget planning, and financial performance',
-<<<<<<< HEAD
       icon: <DollarSign className="w-8 h-8 text-purple-400" /&gt;
-=======
       icon: <DollarSign className="w-8 h-8 text-purple-400" />
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
     }
   ]
 
@@ -261,9 +230,7 @@ return (
   ]
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
       <Navigation />
       
       <main className="pt-20">
@@ -284,9 +251,7 @@ return (
               <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
                 Learn More
               </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
             </div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Data Analytics - Zion Tech Group | Advanced Analytics Solutions</title>
@@ -313,14 +278,10 @@ return (
             <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               Schedule Demo
             </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* Content Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -334,7 +295,6 @@ return (
               <button className="cyber-button">
                 Learn More
                 <ArrowRight className="w-5 h-5 ml-2" />
-=======
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -358,7 +318,6 @@ return (
                       </li>
                     ))}
                   </ul>
-=======
                 </div>
               </div>
             ))}
@@ -386,13 +345,11 @@ return (
                       ))}
                     </ul>
                   )}
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
                 </div>
               ))}
             </div>
           </div>
         </section>
-<<<<<<< HEAD
 
         {/* Benefits Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
@@ -409,7 +366,6 @@ return (
                   </div>
                   <p className="text-gray-300">{benefit}</p>
                 </div>
-=======
           <div className="max-w-7xl mx-auto"></div></div>
             <div className="text-center mb-16"></div></div>
               <h2 className="text-4xl font-bold text-white mb-4"></h2></h2>Section Title</h2>
@@ -424,10 +380,8 @@ return (
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" / /></div>
               {benefits.map((benefit, index) =&gt; ()
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
               ))}
             </div>
-=======
       {/* Stats Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -445,14 +399,11 @@ return (
                 </div>
               </div>
             ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
@@ -466,19 +417,16 @@ return (
               </button>
               <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
                 Contact Sales
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
               </button>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
       </div>
       
       <Footer />
     </>
   );
 };
-=======
         <section className="py-20 px-4"></section></section>
           </section>< className="$2 />
             </div><div className="text-center mb-16"></div></div>
@@ -502,7 +450,6 @@ return (
                 <ul className="space-y-2"></ul>
                   {feature.details.map((detail, detailIndex) => (
                     <li key={detailIndex} className="flex items-center text-gray-300"></li>
-=======
       {/* Features Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -528,7 +475,6 @@ return (
                 <ul className="space-y-2">
                   {feature.details.map((detail, detailIndex) => (
                     <li key={detailIndex} className="flex items-center text-gray-300">
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                       {detail}
                     </li>
@@ -539,13 +485,9 @@ return (
           </div>
         </div>
       </section>
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
 
 export default PagePage;
-=======
       </main>
-=======
 
       {/* Use Cases Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -678,20 +620,12 @@ export default PagePage;
           </div>
         </div>
       </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
 
       <Footer />
     </div>
   );
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default AiDataAnalyticsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-=======
 export default AiDataAnalyticsPage
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
-=======
 export default AiDataAnalyticsPage
->>>>>>> cursor/fix-errors-and-merge-to-main-7175

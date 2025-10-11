@@ -1,17 +1,12 @@
-<<<<<<< HEAD
 'use client';
-<<<<<<< HEAD
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
-=======
 import React, { useState, useEffect } from 'react';
 import { Users, Award, Globe, Zap } from 'lucide-react';
-=======
 import React, { useState, useEffect } from 'react'
 import { Users, Award, TrendingUp, Clock, Brain, Globe, Zap, Shield } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
 
 const ContentStatistics: React.FC = () => {
   const [counters, setCounters] = useState({
@@ -28,11 +23,9 @@ const ContentStatistics: React.FC = () => {
     years: 10
   }
 
-<<<<<<< HEAD
   const statistics = [
     {
       icon: Users,
-=======
   };
     years: 10
   };
@@ -41,7 +34,6 @@ const ContentStatistics: React.FC = () => {
   }
   const statistics = [
     {icon: Users,
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
       value: counters.clients,
       label: 'Happy Clients',
       suffix: '+',
@@ -88,8 +80,6 @@ const ContentStatistics: React.FC = () => {
     }
   ]
 
-<<<<<<< HEAD
-=======
           }
           return prev;
         });
@@ -140,7 +130,6 @@ const ContentStatistics: React.FC = () => {
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p></p>
               Our contentstatistics solutions deliver unmatched performance, security, and scalability.
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
   useEffect(() => {
     const duration = 2000 // 2 seconds
     const steps = 60
@@ -151,20 +140,17 @@ const ContentStatistics: React.FC = () => {
       const increment = target / steps
       let current = 0
 
-<<<<<<< HEAD
     let currentStep = 0;
     const timer = setInterval(() => {
       currentStep++;
       const progress = currentStep / steps;
       
-<<<<<<< HEAD
       setCounters({
         clients: Math.floor(targetValues.clients * progress),
         projects: Math.floor(targetValues.projects * progress),
         countries: Math.floor(targetValues.countries * progress),
         years: Math.floor(targetValues.years * progress)
       });
-=======
       const timer = setInterval(() => {
         setCounters()
           if (current < target) {
@@ -218,7 +204,6 @@ const ContentStatistics: React.FC = () => {
     return () => {
       timers.forEach(timer =&gt; clearInterval(timer));
     };
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
 
       if (currentStep >= steps) {
         clearInterval(timer);
@@ -228,8 +213,6 @@ const ContentStatistics: React.FC = () => {
 
     return () => clearInterval(timer);
   }, []);
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-=======
       return setInterval(() => {
         current += increment
         if (current >= target) {
@@ -247,12 +230,9 @@ const ContentStatistics: React.FC = () => {
       timers.forEach(timer => clearInterval(timer))
     }
   }, [])
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
 
 const ContentStatisticsPage: React.FC = () => {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
@@ -267,7 +247,6 @@ const ContentStatisticsPage: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Discover our comprehensive solutions designed to transform your business.
               </p>
-=======
     <div className="bg-slate-800/50 backdrop-blur-sm py-16 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
@@ -285,7 +264,6 @@ const ContentStatisticsPage: React.FC = () => {
             <div key={index} className="text-center">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-cyan-500/20 rounded-full mb-4">
                 <stat.icon className="h-8 w-8 text-cyan-400" />
-=======
     <div className="py-16 px-4 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div></div>
       <div className="max-w-7xl mx-auto"></div></div>
         {/* Header */}
@@ -310,13 +288,11 @@ const ContentStatisticsPage: React.FC = () => {
                   {Math.floor(stat.value)}{stat.suffix}
                 </div>
                 <div className="text-gray-300 font-medium"></div></div>{stat.label}</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
               </div>
               <div className="text-4xl md:text-5xl font-bold text-white mb-2">
                 {stat.value.toLocaleString()}{stat.suffix}
               </div>
               <div className="text-gray-300 text-lg">{stat.label}</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
             </div>
           </div>
         </section>
@@ -339,11 +315,9 @@ const ContentStatisticsPage: React.FC = () => {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
       
       <Footer />
     </>
-=======
 
       </div>
     </div>
@@ -399,19 +373,12 @@ const ContentStatisticsPage: React.FC = () => {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
   );
 };
 
-<<<<<<< HEAD
 export default ContentStatisticsPage;
-=======
 export default ContentStatistics;
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-=======
   )
 }
 
 export default ContentStatistics
->>>>>>> cursor/fix-errors-and-merge-to-main-7175

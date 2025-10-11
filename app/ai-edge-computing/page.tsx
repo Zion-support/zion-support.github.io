@@ -1,8 +1,7 @@
 
 const AiEdgeComputingPage: React.FC = () => {
   const features = [
-    {
-    },
+    {},
     {
       icon: TrendingUp,
       title: 'Performance Optimization',
@@ -80,4 +79,3 @@ const AiEdgeComputingPage: React.FC = () => {
 };
 
 export default AiEdgeComputingPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7

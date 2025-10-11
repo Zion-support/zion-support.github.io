@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 'use client';
-<<<<<<< HEAD
-=======
 import {  Cloud, Zap, Shield, ChevronLeft, ChevronRight  } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -47,13 +42,10 @@ const ContentCarouselPage: React.FC = () => {
             </div>
           </div>
         </section>
-=======
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react';
-=======
 import React, { useState, useEffect } from 'react'
 import { ChevronLeft, ChevronRight, CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp, Cloud } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
 
 interface Slide {
   id: number
@@ -64,41 +56,29 @@ interface Slide {
   color: string
 }
 
-<<<<<<< HEAD
 const ContentCarousel: React.FC = () => {
-<<<<<<< HEAD
-=======
 const ContentCarousel: React.FC = () => {,
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
   const [currentSlide, setCurrentSlide] = useState(0);
-=======
   const [currentSlide, setCurrentSlide] = useState(0)
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
 
   const slides: Slide[] = [
     {
       id: 1,
       icon: Brain,
-<<<<<<< HEAD
       title: 'AI-Powered Solutions',
-<<<<<<< HEAD
       description: 'Revolutionary artificial intelligence that transforms your business operations and drives growth.',
-=======
       title: 'AI Solutions',
       description: 'Cutting-edge artificial intelligence solutions that transform your business operations.',
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
       features: [
         'Machine Learning Integration',
         'Natural Language Processing',
         'Predictive Analytics',
         'Automated Decision Making'
       ],
-<<<<<<< HEAD
       stats: [
         { value: '95%', label: 'Accuracy Rate' },
         { value: '3x', label: 'Faster Processing' }
       ]
-=======
       description: 'Transform your business with cutting-edge artificial intelligence',
       icon: Zap,
       stats: '300% efficiency boost'
@@ -229,10 +209,7 @@ const ContentCarousel: React.FC = () => {,
         </div>
       </div>
     </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
-=======
       color: 'from-purple-500 to-blue-600'
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
     },
     {
       id: 2,
@@ -370,27 +347,17 @@ const ContentCarousel: React.FC = () => {,
             <div className="text-gray-300">Countries</div>
           </div>
         </div>
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
       </div>
-<<<<<<< HEAD
       
       <Footer />
     </>
   );
 };
 
-<<<<<<< HEAD
 export default ContentCarouselPage;
-=======
 export default ContentCarousel;
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-=======
     </div>
   )
 }
 
 export default ContentCarousel
->>>>>>> cursor/fix-errors-and-merge-to-main-7175

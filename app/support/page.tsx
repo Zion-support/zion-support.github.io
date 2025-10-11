@@ -1,20 +1,14 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Settings, Smartphone, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart } from 'lucide-react';
-=======
 import { Phone, Mail, MessageCircle, FileText, Clock, CheckCircle } from 'lucide-react';
-=======
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { Phone, Mail, MessageCircle, FileText, HelpCircle, Clock, CheckCircle } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
 
 const SupportPage: React.FC = () => {
   const faqs = [
@@ -33,7 +27,6 @@ const SupportPage: React.FC = () => {
     {
       question: 'What technologies do you work with?',
       answer: 'We work with all major cloud platforms (AWS, Azure, GCP), AI frameworks (TensorFlow, PyTorch), and modern development stacks.'
-=======
 import { ChevronDown, ChevronUp, Mail, Phone, MessageCircle, ArrowRight, Clock, CheckCircle, Users, Shield } from 'lucide-react';
 
 const SupportPage: React.FC = () => {
@@ -63,7 +56,6 @@ const SupportPage: React.FC = () => {
     {
       question: 'Do you provide documentation and resources?',
       answer: 'Yes, we provide comprehensive documentation, API references, and video tutorials for all our solutions. Our knowledge base is regularly updated with the latest information and best practices.'
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
     }
   ]
 
@@ -85,7 +77,6 @@ const SupportPage: React.FC = () => {
     {
       icon: MessageCircle,
       title: 'Live Chat',
-<<<<<<< HEAD
       description: 'Chat with our support team in real-time',
       contact: 'Available on website',
       availability: 'Business hours',
@@ -100,8 +91,6 @@ const SupportPage: React.FC = () => {
       responseTime: 'Immediate'
     }
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-=======
       description: 'Chat with our support team',
       contact: 'Available on website',
       availability: 'Mon-Fri 9AM-6PM EST'
@@ -134,18 +123,14 @@ const SupportPage: React.FC = () => {
   const toggleFaq = (index: number) => {
     setOpenFaq(openFaq === index ? null : index);
   };
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
 
 const PagePage: React.FC = () => {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
         {/* Hero Section */}
-<<<<<<< HEAD
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
@@ -155,7 +140,6 @@ const PagePage: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Discover our comprehensive solutions designed to transform your business.
               </p>
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
@@ -163,7 +147,6 @@ const PagePage: React.FC = () => {
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Get help when you need it. Our expert support team is here to assist you 24/7.
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
         <title>Support - Zion Tech Group | Expert Technical Support</title>
@@ -194,7 +177,6 @@ const PagePage: React.FC = () => {
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose the support channel that works best for you
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
             </p>
           </div>
           
@@ -204,14 +186,11 @@ const PagePage: React.FC = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <channel.icon className="w-8 h-8 text-white" />
                 </div>
-<<<<<<< HEAD
               ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Content Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -231,7 +210,6 @@ const PagePage: React.FC = () => {
         </section>
       </div>
       
-=======
         {/* FAQ Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-4xl mx-auto">
@@ -244,14 +222,12 @@ const PagePage: React.FC = () => {
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
                   <h3 className="text-xl font-semibold text-white mb-3">{faq.question}</h3>
                   <p className="text-gray-300">{faq.answer}</p>
-=======
                 <h3 className="text-xl font-bold text-white mb-2">{channel.title}</h3>
                 <p className="text-gray-300 mb-4">{channel.description}</p>
                 <div className="text-cyan-400 font-semibold mb-2">{channel.contact}</div>
                 <div className="text-sm text-gray-400">
                   <div>Available: {channel.availability}</div>
                   <div>Response: {channel.responseTime}</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-7175
                 </div>
               </div>
             ))}
@@ -307,8 +283,6 @@ const PagePage: React.FC = () => {
         </div>
       </section>
 
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       
@@ -445,26 +419,16 @@ const PagePage: React.FC = () => {
         </div>
       </section>
       
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
       <Footer />
-<<<<<<< HEAD
     </>
   );
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default PagePage;
-=======
 export default SupportPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
-=======
 export default SupportPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6fdd
-=======
     </div>
   )
 }
 
 export default SupportPage
->>>>>>> cursor/fix-errors-and-merge-to-main-7175

@@ -17,6 +17,7 @@ export default async function handler(req, res) {
     }
 
     // Process quote submission logic here
+    const quote = {
       name,
       email,
       phone,

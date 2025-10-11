@@ -36,7 +36,6 @@ const CybersecurityPage: React.FC = () => {
     'Seamless integration with existing systems'
   ];
 
->>>>>>> cursor/fix-errors-and-merge-to-main-54d7
   return (
             </div>
           </div>
