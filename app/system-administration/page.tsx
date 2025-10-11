@@ -2,35 +2,24 @@
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
 
-export default function PagePage() {
-  const features = [
+const SystemAdministrationPage: React.FC = () => {
+  const systemFeatures = [
     {
-      title: 'Expert Solutions',
-      description: 'Professional page services delivered by experienced professionals.',
-      benefits: ['Quality Assurance', 'Fast Delivery', '24/7 Support', 'Custom Solutions']
+      title: 'AI-Powered Analytics',
+      description: 'Advanced analytics and insights for system administration.',
+      benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']
     },
     {
-      title: 'Advanced Technology',
-      description: 'Cutting-edge tools and technologies to deliver superior results.',
-      benefits: ['Latest Tools', 'Modern Methods', 'Scalable Solutions', 'Future-Ready']
+      title: 'Data Visualization',
+      description: 'Interactive dashboards and reports for system monitoring.',
+      benefits: ['Interactive charts', 'Custom reports', 'Data export', 'Visual storytelling']
     },
     {
-      title: 'Proven Results',
-      description: 'Track record of successful projects and satisfied clients.',
-      benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
+      title: 'Performance Tracking',
+      description: 'Comprehensive tracking and optimization tools for systems.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     }
   ];
-
-const SystemAdministrationPage: React.FC = () => {
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
-    
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
-    
-      benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']} ,
-    
-      benefits: ['Interactive charts', 'Custom reports', 'Data export', 'Visual storytelling']} ,
-    
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']} ]
   const benefits = [
     'Increase efficiency by up to 80%',
     'Reduce costs by 30% with automation',
@@ -89,4 +78,6 @@ const SystemAdministrationPage: React.FC = () => {
       </main>
     </div>
   );
-}
+};
+
+export default SystemAdministrationPage;
