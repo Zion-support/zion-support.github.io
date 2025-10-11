@@ -3,118 +3,131 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
-import { Cpu, Zap, Brain, Shield, BarChart, Users, CheckCircle, ArrowRight, Star, Clock, Target, Globe, Database, Settings, Lock, TrendingUp, Award, Phone, Mail, MapPin } from 'lucide-react';
+import { Mic, Brain, Users, Zap, CheckCircle, ArrowRight, Star, Clock, Target, Phone, Mail, MapPin, Settings, Shield, BarChart, Globe, MessageCircle, Headphones, Volume2, Play, Pause, SkipForward, Home, Briefcase, DollarSign } from 'lucide-react';
 
-const AiQuantumComputingPage: React.FC = () => {
+const ZionAiVoiceAssistantPage: React.FC = () => {
   const features = [
     {
-      icon: Cpu,
-      title: 'Quantum Processing Power',
-      description: 'Leverage quantum bits (qubits) for exponential computational speedup',
-      benefits: ['1000x faster than classical computers', 'Parallel processing capabilities', 'Quantum supremacy in specific tasks']
+      icon: Mic,
+      title: 'Natural Voice Recognition',
+      description: 'Advanced speech-to-text with 99% accuracy in multiple languages',
+      benefits: ['Multi-language support', 'Accent adaptation', 'Noise cancellation', 'Real-time processing']
     },
     {
       icon: Brain,
-      title: 'Quantum Machine Learning',
-      description: 'Advanced quantum algorithms for machine learning and AI optimization',
-      benefits: ['Quantum neural networks', 'Optimized training algorithms', 'Enhanced pattern recognition']
+      title: 'AI Conversation Engine',
+      description: 'Intelligent conversation management with context awareness',
+      benefits: ['Contextual understanding', 'Emotional intelligence', 'Learning capabilities', 'Personalization']
     },
     {
-      icon: Shield,
-      title: 'Quantum Cryptography',
-      description: 'Unbreakable encryption using quantum key distribution',
-      benefits: ['Quantum-safe security', 'Future-proof encryption', 'Ultra-secure communications']
+      icon: Users,
+      title: 'Multi-User Support',
+      description: 'Support for multiple users with individual voice profiles',
+      benefits: ['Voice identification', 'Personal preferences', 'User management', 'Privacy controls']
     },
     {
-      icon: BarChart,
-      title: 'Quantum Analytics',
-      description: 'Process massive datasets with quantum computing power',
-      benefits: ['Real-time big data analysis', 'Complex optimization problems', 'Quantum advantage in analytics']
+      icon: Zap,
+      title: 'Real-time Processing',
+      description: 'Ultra-fast response times with cloud and edge computing',
+      benefits: ['Sub-second responses', 'Offline capabilities', 'Scalable infrastructure', 'High availability']
     }
   ];
 
-  const useCases = [
+  const capabilities = [
     {
-      title: 'Financial Modeling',
-      description: 'Quantum algorithms for portfolio optimization and risk analysis',
-      icon: TrendingUp,
-      marketPrice: '$50,000-200,000/month'
+      title: 'Voice Commands',
+      description: 'Control devices and applications with voice commands',
+      icon: Mic,
+      examples: ['"Turn on the lights"', '"Schedule a meeting"', '"Send an email"', '"Play music"']
     },
     {
-      title: 'Drug Discovery',
-      description: 'Molecular simulation and drug interaction modeling',
-      icon: Brain,
-      marketPrice: '$100,000-500,000/month'
+      title: 'Smart Home Control',
+      description: 'Integrate with smart home devices and IoT systems',
+      icon: Home,
+      examples: ['Thermostat control', 'Security systems', 'Lighting control', 'Appliance management']
     },
     {
-      title: 'Climate Modeling',
-      description: 'Complex climate simulations and weather prediction',
-      icon: Globe,
-      marketPrice: '$75,000-300,000/month'
+      title: 'Business Automation',
+      description: 'Automate business processes with voice commands',
+      icon: Briefcase,
+      examples: ['CRM updates', 'Calendar management', 'Report generation', 'Task automation']
     },
     {
-      title: 'Supply Chain Optimization',
-      description: 'Quantum optimization for logistics and distribution',
-      icon: Target,
-      marketPrice: '$40,000-150,000/month'
+      title: 'Customer Service',
+      description: 'AI-powered customer support and assistance',
+      icon: Headphones,
+      examples: ['FAQ responses', 'Order tracking', 'Technical support', 'Appointment booking']
     }
   ];
 
   const pricing = [
     {
-      name: 'Quantum Starter',
-      price: '$25,000',
+      name: 'Voice Assistant Basic',
+      price: '$29',
       period: '/month',
-      description: 'Basic quantum computing access',
+      description: 'Perfect for small businesses and individuals',
       features: [
-        'Up to 100 quantum operations/day',
-        'Basic quantum algorithms',
-        'Standard support',
-        'Cloud-based access'
+        'Up to 1,000 voice interactions/month',
+        'Basic voice commands',
+        'Email support',
+        'Standard integrations',
+        'Mobile app included'
       ],
-      marketPrice: '$50,000/month',
-      savings: '50%'
+      marketPrice: '$59/month',
+      savings: '51%'
     },
     {
-      name: 'Quantum Professional',
-      price: '$75,000',
+      name: 'Voice Assistant Pro',
+      price: '$79',
       period: '/month',
-      description: 'Advanced quantum computing platform',
+      description: 'Advanced features for growing businesses',
       features: [
-        'Up to 1,000 quantum operations/day',
-        'Advanced quantum algorithms',
+        'Up to 10,000 voice interactions/month',
+        'Advanced AI capabilities',
         'Priority support',
-        'Dedicated quantum resources',
-        'Custom algorithm development'
+        'Custom integrations',
+        'Analytics dashboard',
+        'API access'
       ],
-      marketPrice: '$150,000/month',
+      marketPrice: '$159/month',
       savings: '50%',
       popular: true
     },
     {
-      name: 'Quantum Enterprise',
-      price: '$200,000',
+      name: 'Voice Assistant Enterprise',
+      price: '$199',
       period: '/month',
-      description: 'Full quantum computing infrastructure',
+      description: 'Full-scale voice assistant for large organizations',
       features: [
-        'Unlimited quantum operations',
-        'Custom quantum hardware',
+        'Unlimited voice interactions',
+        'Custom AI training',
         '24/7 dedicated support',
-        'On-premise deployment',
         'White-label solutions',
-        'Quantum consulting included'
+        'On-premise deployment',
+        'Custom development'
       ],
-      marketPrice: '$400,000/month',
+      marketPrice: '$399/month',
       savings: '50%'
     }
+  ];
+
+  const integrations = [
+    { name: 'Slack', icon: '💬', description: 'Voice commands for team communication' },
+    { name: 'Salesforce', icon: '☁️', description: 'CRM voice automation' },
+    { name: 'Google Workspace', icon: '📧', description: 'Email and calendar voice control' },
+    { name: 'Microsoft 365', icon: '📊', description: 'Office productivity voice commands' },
+    { name: 'Zoom', icon: '📹', description: 'Meeting management via voice' },
+    { name: 'Trello', icon: '📋', description: 'Project management voice control' },
+    { name: 'HubSpot', icon: '🎯', description: 'Marketing automation voice commands' },
+    { name: 'Zapier', icon: '⚡', description: 'Workflow automation via voice' }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Quantum Computing Solutions - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered quantum computing solutions for enterprise. 50% cost savings vs market rates. Advanced quantum algorithms, machine learning, and cryptography." />
-        <meta name="keywords" content="quantum computing, AI quantum, quantum machine learning, quantum cryptography, quantum algorithms" />
+        <title>Zion AI Voice Assistant - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI voice assistant with natural language processing, multi-language support, and business automation. 50% cost savings vs market rates." />
+        <meta name="keywords" content="AI voice assistant, voice recognition, speech to text, voice automation, smart assistant" />
       </Helmet>
       
       <Navigation />
@@ -125,23 +138,22 @@ const AiQuantumComputingPage: React.FC = () => {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <div className="inline-flex items-center px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full text-purple-400 text-sm font-medium mb-6">
-                <Cpu className="w-4 h-4 mr-2" />
-                Revolutionary Quantum AI Technology
+                <Mic className="w-4 h-4 mr-2" />
+                AI-Powered Voice Technology
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                AI-Powered <span className="text-purple-400">Quantum Computing</span>
+                Zion AI <span className="text-purple-400">Voice Assistant</span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Harness the power of quantum computing combined with artificial intelligence to solve 
-                complex problems that are impossible for classical computers. Get 50% cost savings 
-                compared to market rates.
+                The most advanced AI voice assistant for business. Control your applications, 
+                automate workflows, and boost productivity with natural voice commands.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                 <a 
                   href="/contact" 
                   className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center group"
                 >
-                  Get Quantum Consultation
+                  Try Voice Assistant Free
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </a>
                 <a 
@@ -155,27 +167,34 @@ const AiQuantumComputingPage: React.FC = () => {
             </div>
 
             {/* Key Benefits */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <Zap className="w-8 h-8 text-white" />
+                  <Mic className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">1000x Faster</h3>
-                <p className="text-gray-300">Quantum speedup over classical computing</p>
+                <h3 className="text-xl font-bold text-white mb-2">99% Accuracy</h3>
+                <p className="text-gray-300">Voice recognition precision</p>
               </div>
               <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <Shield className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <Brain className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">Quantum-Safe</h3>
-                <p className="text-gray-300">Unbreakable quantum cryptography</p>
+                <h3 className="text-xl font-bold text-white mb-2">AI Intelligence</h3>
+                <p className="text-gray-300">Context-aware conversations</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <Zap className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">Real-time</h3>
+                <p className="text-gray-300">Instant voice processing</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <DollarSign className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">50% Cost Savings</h3>
-                <p className="text-gray-300">Compared to market rates</p>
+                <h3 className="text-xl font-bold text-white mb-2">50% Savings</h3>
+                <p className="text-gray-300">vs market rates</p>
               </div>
             </div>
           </div>
@@ -186,11 +205,10 @@ const AiQuantumComputingPage: React.FC = () => {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6">
-                Quantum AI <span className="text-purple-400">Capabilities</span>
+                Voice Assistant <span className="text-purple-400">Features</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our quantum computing solutions combine the power of quantum mechanics with 
-                artificial intelligence to deliver unprecedented computational capabilities.
+                Advanced AI-powered voice technology designed for business productivity and automation.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -215,27 +233,31 @@ const AiQuantumComputingPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Use Cases Section */}
+        {/* Capabilities Section */}
         <section className="py-20 px-4 bg-slate-800/30">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6">
-                Quantum AI <span className="text-purple-400">Use Cases</span>
+                Voice Assistant <span className="text-purple-400">Capabilities</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover how quantum computing can transform your industry with real-world applications.
+                Powerful voice commands and automation for every aspect of your business.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {useCases.map((useCase, index) => (
-                <div key={index} className="bg-slate-800/50 rounded-2xl p-6 hover:bg-slate-800/70 transition-all duration-300">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-4">
-                    <useCase.icon className="w-6 h-6 text-white" />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {capabilities.map((capability, index) => (
+                <div key={index} className="bg-slate-800/50 rounded-2xl p-8 hover:bg-slate-800/70 transition-all duration-300">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-6">
+                    <capability.icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{useCase.title}</h3>
-                  <p className="text-gray-300 mb-4">{useCase.description}</p>
-                  <div className="text-sm text-purple-400 font-semibold">
-                    Market Rate: {useCase.marketPrice}
+                  <h3 className="text-2xl font-bold text-white mb-4">{capability.title}</h3>
+                  <p className="text-gray-300 mb-6">{capability.description}</p>
+                  <div className="space-y-2">
+                    {capability.examples.map((example, exampleIndex) => (
+                      <div key={exampleIndex} className="text-sm text-purple-300 bg-purple-500/10 px-3 py-2 rounded-lg">
+                        {example}
+                      </div>
+                    ))}
                   </div>
                 </div>
               ))}
@@ -243,16 +265,39 @@ const AiQuantumComputingPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Pricing Section */}
+        {/* Integrations Section */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6">
-                Quantum AI <span className="text-purple-400">Pricing</span>
+                Popular <span className="text-purple-400">Integrations</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Competitive pricing with 50% savings compared to market rates. 
-                All plans include quantum computing access and AI optimization.
+                Connect with your favorite business tools and applications.
+              </p>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {integrations.map((integration, index) => (
+                <div key={index} className="bg-slate-800/50 rounded-xl p-6 text-center hover:bg-slate-800/70 transition-all duration-300">
+                  <div className="text-3xl mb-3">{integration.icon}</div>
+                  <h3 className="text-lg font-semibold text-white mb-2">{integration.name}</h3>
+                  <p className="text-sm text-gray-300">{integration.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section className="py-20 px-4 bg-slate-800/30">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Voice Assistant <span className="text-purple-400">Pricing</span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Affordable pricing with 50% savings compared to market rates. 
+                All plans include AI voice processing and basic integrations.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -300,21 +345,21 @@ const AiQuantumComputingPage: React.FC = () => {
         </section>
 
         {/* Contact Section */}
-        <section className="py-20 px-4 bg-slate-800/30">
+        <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Harness <span className="text-purple-400">Quantum AI</span>?
+              Ready to Start <span className="text-purple-400">Voice Automation</span>?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Contact our quantum computing experts for a free consultation and discover 
-              how quantum AI can transform your business.
+              Contact our voice AI experts for a free consultation and discover 
+              how voice automation can transform your business productivity.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="/contact" 
                 className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center group"
               >
-                Get Free Quantum Consultation
+                Get Free Voice AI Consultation
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </a>
               <a 
@@ -338,4 +383,4 @@ const AiQuantumComputingPage: React.FC = () => {
   );
 };
 
-export default AiQuantumComputingPage;
+export default ZionAiVoiceAssistantPage;
