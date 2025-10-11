@@ -22,6 +22,10 @@ import React from 'react'
   </section>
           <div className="max-w-7xl mx-auto"
   </div>
+<<<<<<< HEAD
+=======
+      
+>>>>>>> cursor/fix-errors-and-merge-to-main-259c
       <Footer />
     </>
             <div className="text-center">
