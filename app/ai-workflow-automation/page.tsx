@@ -83,7 +83,11 @@ return(<>)
                       {feature.benefits.map((benefit, idx) => (} <li>
                           <CheckCircle />
 
+<<<<<<< HEAD
 import React, {useState, useEffect}from 'react';
+=======
+import React, { useState, useEffect } from 'react';
+>>>>>>> main
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';

@@ -18,8 +18,11 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
     memoryUsage: 0,
     fps: 0
   });
+<<<<<<< HEAD
 fps
       }
+=======
+>>>>>>> main
       setMetrics(newMetrics);
       onMetricsUpdate?.(newMetrics);
       // Check for performance alerts
@@ -138,8 +141,11 @@ fps
   );
 }
 export default PerformanceDashboard;
+<<<<<<< HEAD
   </div>
   </h3>
   </div>
   </PerformanceMetrics>
   </PerformanceProps>
+=======
+>>>>>>> main

@@ -175,7 +175,6 @@ const AiContentDeliveryNetworkPage: React.FC = () => {,
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       <Footer />
     </React.Fragment>
   ),
@@ -192,5 +191,8 @@ export default AiContentDeliveryNetworkPage;
   </button>
   </h1>
   </main>
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> main

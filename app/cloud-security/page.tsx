@@ -36,7 +36,17 @@ const CloudSecurityPage: React.FC = () => {,
       <Helmet>
         <title>Cloud Security | Zion Tech Group</title>
         <meta name="description" content="Professional Cloud Security services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+<<<<<<< HEAD
 
+=======
+<meta name="keywords" content="cloud security, security services, IT services, Zion Tech Group, cybersecurity" />
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            Cloud Security
+  </
+>>>>>>> main
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced cloud security solutions. 
 >>>>>>> origin/main
@@ -96,11 +106,16 @@ const CloudSecurityPage: React.FC = () => {,
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">,</button>
               <Mail className="mr-2 h-5 w-5" />
 <<<<<<< HEAD
+<<<<<<< HEAD
               Email Us;
   </
 =======
 
 >>>>>>> origin/main
+=======
+              Email Us
+  </
+>>>>>>> main
           </div>
         </div>
         <div className="text-center">

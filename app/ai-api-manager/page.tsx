@@ -13,11 +13,24 @@ const AIApiManagerPage: React.FC = () => {,
       title: 'Centralized API Control',
       description: 'Manage all your APIs from a single, intuitive dashboard with comprehensive monitoring and control capabilities.',
 <<<<<<< HEAD
+<<<<<<< HEAD
       benefits: ['Unified dashboard', 'Centralized control', 'Real-time monitoring', 'Easy management']},
     {title: 'Advanced Analytics',
       description: 'Get deep insights into API usage, performance metrics, and user behavior with AI-powered analytics.',
       benefits: ['Usage analytics', 'Performance metrics', 'User insights', 'Predictive analytics']},
     {title: 'Security & Compliance',
+=======
+      benefits: ['Unified dashboard', 'Centralized control', 'Real-time monitoring', 'Easy management']
+    },
+    {
+      title: 'Advanced Analytics',
+      description: 'Get deep insights into API usage, performance metrics, and user behavior with AI-powered analytics.',
+      benefits: ['Usage analytics', 'Performance metrics', 'User insights', 'Predictive analytics']
+    },
+    {
+
+      title: 'Security & Compliance',
+>>>>>>> main
       description: 'Enterprise-grade security with automated compliance monitoring and threat detection.',
       benefits: ['Threat detection', 'Compliance monitoring', 'Security scanning', 'Access control']},
   ];
@@ -30,10 +43,18 @@ const AIApiManagerPage: React.FC = () => {,
     '24/7 support'
   ];
   const stats = [
+<<<<<<< HEAD
     {icon: <Settings className="w-8 h-8 text-blue-500" />, value: '500+', label: 'APIs Managed' ,},
     {icon: <Zap className="w-8 h-8 text-green-500" />, value: '99.9%', label: 'Uptime' ,},
     {icon: <Shield className="w-8 h-8 text-purple-500" />, value: '100%', label: 'Security' ,},
     {icon: <BarChart3 className="w-8 h-8 text-orange-500" />, value: '60%', label: 'Efficiency Gain' ,}]
+=======
+    { icon: <Settings className="w-8 h-8 text-blue-500" />, value: '500+', label: 'APIs Managed' },
+    { icon: <Zap className="w-8 h-8 text-green-500" />, value: '99.9%', label: 'Uptime' },
+    { icon: <Shield className="w-8 h-8 text-purple-500" />, value: '100%', label: 'Security' },
+    { icon: <BarChart3 className="w-8 h-8 text-orange-500" />, value: '60%', label: 'Efficiency Gain' }
+  ]
+>>>>>>> main
 
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">)</div>
       <Helmet />

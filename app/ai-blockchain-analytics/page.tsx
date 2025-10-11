@@ -178,7 +178,6 @@ const AiBlockchainAnalyticsPage: React.FC = () => {,
       <Footer />
     </div>
   ),
-<<<<<<< HEAD
 };
 
 export default PagePage;
@@ -192,5 +191,10 @@ export default PagePage;
   </button>
   </h1>
   </main>
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
+=======
+}
+export default PagePage;
+>>>>>>> main

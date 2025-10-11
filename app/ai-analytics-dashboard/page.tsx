@@ -128,7 +128,11 @@ return(<>)
 }
 export default AiAnalyticsDashboardPage;
 
+<<<<<<< HEAD
 import React, {useState, useEffect}from 'react';
+=======
+import React, { useState, useEffect } from 'react';
+>>>>>>> main
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import {BarChart, TrendingUp, Users, Zap, Shield, CheckCircle, Star, ArrowRight, Brain, Database, Target, Globe}}from 'lucide-react';

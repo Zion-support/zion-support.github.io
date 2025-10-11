@@ -2,6 +2,7 @@
 
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {Zap, Shield, Star, Users, ArrowRight}}from 'lucide-react';
 
 const ContentPromotionBanner: React.FC = () => {,
@@ -10,6 +11,11 @@ import { CheckCircle, ArrowRight, Zap, Shield, Star, Users } from 'lucide-react'
 
 const ContentPromotionBanner: React.FC = () => {
 >>>>>>> origin/main
+=======
+import { Zap, Shield, Star, Users, ArrowRight } from 'lucide-react';
+
+const ContentPromotionBanner: React.FC = () => {
+>>>>>>> main
   const features = [
     {
       title: 'AI-Powered Solutions',
@@ -24,7 +30,19 @@ const ContentPromotionBanner: React.FC = () => {
     {title: 'Expert Support',
       description: '24/7 support from our team of AI and IT specialists.',
 <<<<<<< HEAD
+<<<<<<< HEAD
       icon: Users;,}];
+=======
+      icon: Users
+    }
+  ];
+
+  const benefits = [
+    'Easy integration with existing systems',
+    'Cost-effective pricing plans',
+    'Proven track record of success'
+  ];
+>>>>>>> main
 
   return(<div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-16 px-4">)</div>
       <div className="max-w-7xl mx-auto">
@@ -36,19 +54,33 @@ const ContentPromotionBanner: React.FC = () => {
           </p>
         </div>
 
+<<<<<<< HEAD
         {/* Features Section */} <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8 mb-12">,</div>
+=======
+        {/* Features Section */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+>>>>>>> main
           {features.map((feature, index) => (
             <div key={index}className="text-center">
               <div className="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <feature.icon className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
+<<<<<<< HEAD
               <p className="text-purple-100 text-sm">{feature.description</p>}</p>
+=======
+              <p className="text-purple-100 text-sm">{feature.description}</p>
+>>>>>>> main
             </div>
           ))}
         </div>
 
+<<<<<<< HEAD
         {/* CTA Section */} <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center">
+=======
+        {/* CTA Section */}
+        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center">
+>>>>>>> main
           <h3 className="text-2xl font-bold text-white mb-4">
             Ready to Get Started?
           </h3>
@@ -64,6 +96,7 @@ const ContentPromotionBanner: React.FC = () => {
             </button>
           </div>
         </div>
+<<<<<<< HEAD
 =======
       icon: Users
     }
@@ -101,6 +134,8 @@ const ContentPromotionBanner: React.FC = () => {
           <ArrowRight className="w-5 h-5 ml-2" />
         </button>
 >>>>>>> origin/main
+=======
+>>>>>>> main
       </div>
     </div>
   );

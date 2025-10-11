@@ -39,7 +39,17 @@ const BackupRecoveryPage: React.FC = () => {,
       <Helmet>
         <title>Backup & Recovery | Zion Tech Group</title>
         <meta name="description" content="Professional Backup & Recovery services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+<<<<<<< HEAD
 
+=======
+<meta name="keywords" content="backup recovery, data protection, IT services, Zion Tech Group, disaster recovery" />
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            Backup & Recovery
+  </
+>>>>>>> main
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced backup and recovery solutions. 
 >>>>>>> origin/main
@@ -100,11 +110,16 @@ const BackupRecoveryPage: React.FC = () => {,
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">,</button>
               <Mail className="mr-2 h-5 w-5" />
 <<<<<<< HEAD
+<<<<<<< HEAD
               Email Us;
   </
 =======
 
 >>>>>>> origin/main
+=======
+              Email Us
+  </
+>>>>>>> main
           </div>
         </div>
         <div className="text-center">

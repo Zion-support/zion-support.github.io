@@ -4,8 +4,13 @@ import {Helmet}}from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';
 const AiCloudInfrastructurePage: React.FC = () => {,
+=======
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+const AiCloudInfrastructurePage: React.FC = () => {
+>>>>>>> main
   const features = [
     {
       icon: Brain,
@@ -75,9 +80,12 @@ const AiCloudInfrastructurePage: React.FC = () => {,
                         {benefit} </li>
                     ))}
                   </ul>
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/main
+=======
+>>>>>>> main
                 </div>
               ))}
             </div>
@@ -94,7 +102,6 @@ const AiCloudInfrastructurePage: React.FC = () => {,
               Start Your Free Trial;
   </
           </div>
-<<<<<<< HEAD
 </section>
       </main>
       <Footer />
@@ -108,5 +115,8 @@ export default AiCloudInfrastructurePage;
   </button>
   </button>
   </h1>
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> main

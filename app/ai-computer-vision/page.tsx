@@ -175,7 +175,6 @@ const AiComputerVisionPage: React.FC = () => {,
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       <Footer />
     </React.Fragment>
   ),
@@ -192,5 +191,8 @@ export default AiComputerVisionPage;
   </button>
   </h1>
   </main>
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> main

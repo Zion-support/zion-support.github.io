@@ -13,11 +13,24 @@ const AIApiManagementPage: React.FC = () => {,
       title: 'Intelligent API Monitoring',
       description: 'Real-time monitoring and analytics for all your APIs with AI-powered insights and anomaly detection.',
 <<<<<<< HEAD
+<<<<<<< HEAD
       benefits: ['Real-time monitoring', 'Anomaly detection', 'Performance analytics', 'Automated alerts']},
     {title: 'Smart Rate Limiting',
       description: 'AI-driven rate limiting that adapts to usage patterns and prevents abuse while maintaining optimal performance.',
       benefits: ['Adaptive rate limiting', 'Abuse prevention', 'Performance optimization', 'Dynamic scaling']},
     {title: 'Automated Documentation',
+=======
+      benefits: ['Real-time monitoring', 'Anomaly detection', 'Performance analytics', 'Automated alerts']
+    },
+    {
+      title: 'Smart Rate Limiting',
+      description: 'AI-driven rate limiting that adapts to usage patterns and prevents abuse while maintaining optimal performance.',
+      benefits: ['Adaptive rate limiting', 'Abuse prevention', 'Performance optimization', 'Dynamic scaling']
+    },
+    {
+
+      title: 'Automated Documentation',
+>>>>>>> main
       description: 'Generate and maintain comprehensive API documentation automatically with AI-powered analysis.',
       benefits: ['Auto-generated docs', 'Interactive examples', 'Version management', 'Developer portal']},
   ];
@@ -31,6 +44,7 @@ const AIApiManagementPage: React.FC = () => {,
     'Cost optimization insights'
   ];
   const stats = [
+<<<<<<< HEAD
     {icon: <Zap className="w-8 h-8 text-blue-500" />, value: '99.9%', label: 'Uptime' ,},
     {icon: <Shield className="w-8 h-8 text-green-500" />, value: '100%', label: 'Security' ,},
     {icon: <Users className="w-8 h-8 text-purple-500" />, value: '10K+', label: 'APIs Managed' ,},
@@ -46,6 +60,19 @@ const AIApiManagementPage: React.FC = () => {,
       benefits: ['Adaptive rate limiting', 'Abuse prevention', 'Performance optimization', 'Dynamic scaling']
     },
     {];];
+=======
+    { icon: <Zap className="w-8 h-8 text-blue-500" />, value: '99.9%', label: 'Uptime' },
+    { icon: <Shield className="w-8 h-8 text-green-500" />, value: '100%', label: 'Security' },
+    { icon: <Users className="w-8 h-8 text-purple-500" />, value: '10K+', label: 'APIs Managed' },
+    { icon: <BarChart3 className="w-8 h-8 text-orange-500" />, value: '50%', label: 'Cost Reduction' }
+
+  ]
+    }
+  ];
+  const benefits = [
+
+  ];
+>>>>>>> main
   return (
 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">

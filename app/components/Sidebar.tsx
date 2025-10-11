@@ -1,8 +1,15 @@
 'use client';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, {Suspense, lazy}from 'react';
 import {Link, useLocation}}from 'react-router-dom';
 import {X,}
+=======
+import React, { Suspense, lazy } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import {
+    X,
+>>>>>>> main
   Menu,
   Home,
   Users,
@@ -154,9 +161,12 @@ return(<>)
               aria-label="Close sidebar"
             >,
               <X>
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/main
+=======
+>>>>>>> main
             </button>
           </div>
 

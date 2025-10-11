@@ -76,7 +76,11 @@ return(<>)
                       {feature.benefits.map((benefit, idx) => (} <li>
                           <CheckCircle />
 
+<<<<<<< HEAD
 import React, {useState, useEffect}from 'react';
+=======
+import React, { useState, useEffect } from 'react';
+>>>>>>> main
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import {MessageCircle, Bot, Zap, Shield, CheckCircle, Star, ArrowRight, Brain, Globe, Users, Settings, BarChart}}from 'lucide-react';

@@ -37,8 +37,11 @@ const PartnersPage: React.FC = () => {
   const [selectedTier, setSelectedTier] = useState('all');
 
   const partners: Partner[] = [
+<<<<<<< HEAD
 
 >>>>>>> origin/main
+=======
+>>>>>>> main
     {
       id: '1',
       name: 'Microsoft',
@@ -52,6 +55,31 @@ const PartnersPage: React.FC = () => {
     'Global reach and scalability',
     'Certified expertise and solutions'
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  ];
+  const benefits = [
+    {
+      title: 'Certified Expertise',
+      description: 'Our team holds certifications from leading technology partners',
+      icon: CheckCircle
+    },
+    {
+      title: 'Priority Support',
+      description: 'Get priority access to partner resources and support channels',
+      icon: CheckCircle
+    },
+    {
+      title: 'Latest Technology',
+      description: 'Access to cutting-edge tools and early release features',
+      icon: CheckCircle
+    },
+    {
+      title: 'Cost Optimization',
+      description: 'Leverage partner pricing and volume discounts for your projects',
+      icon: CheckCircle
+    }
+>>>>>>> main
   ];
   const benefits = [
     {title: 'Certified Expertise',
@@ -76,12 +104,13 @@ const PartnersPage: React.FC = () => {
       </Helmet>
 
       <Navigation />
-      
-=======
 
+<<<<<<< HEAD
   ];
 
 >>>>>>> origin/main
+=======
+>>>>>>> main
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -388,9 +417,12 @@ const PartnersPage: React.FC = () => {
       </section>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/main
+=======
+>>>>>>> main
   );
 };
 

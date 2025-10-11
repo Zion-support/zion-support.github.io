@@ -162,7 +162,6 @@ import Footer from '../components/Footer';
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       <Footer />
     </React.Fragment>
   ),
@@ -179,5 +178,8 @@ export default AiContentStudioPage;
   </button>
   </h1>
   </main>
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> main
