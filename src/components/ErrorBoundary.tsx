@@ -1,121 +1,112 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
-
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+'use client'
+import React, { Component, ErrorInfo, ReactNode } from 'react'
+import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react'
+interface Props {/* TODO: Fix JSX expression */}
 }
-
-interface State {
-  hasError: boolean;
-  error?: Error;
-  errorId?: string;
+interface State {/* TODO: Fix JSX expression */}
 }
-
-class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
+class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression */}
+  r: false }
   }
-
-  static getDerivedStateFromError(error: Error): State {
-    return {
-      hasError: true,
-      error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-    };
+  static getDerivedStateFromError(erro)
+  r: Error): State {/* TODO: Fix JSX expression */}
+  r: true, error }
   }
-
-  override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // Report error to this/monitoring service
-    this.reportError(error, errorInfo);
-
-    // Call custom error handler if provided
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
+  componentDidCatch(erro,
+  r: Error, errorInf)
+  o: ErrorInfo) {/* TODO: Fix JSX expression */}
+    })
+    // Log error to monitoring service
+    // console.error('ErrorBoundary caught an)
+  error:', error, errorInfo)
+    // You can also log to external services here
+    if (typeof window !== 'undefined' && 'gtag' in window) {/* TODO: Fix JSX expression */}
+      })
     }
   }
-
-  private reportError = (error: Error, errorInfo: ErrorInfo) => {
-    // Report to external service (e.g., Sentry, LogRocket, etc.)
-    if (
-      typeof window !== 'undefined' &&
-      (
-        window as unknown as {
-          gtag?: (command: string, eventName: string, parameters: Record<string, unknown>) => void;
-        }
-      ).gtag
-    ) {
-      (
-        window as unknown as {
-          gtag: (command: string, eventName: string, parameters: Record<string, unknown>) => void;
-        }
-      ).gtag('event', 'exception', {
-        description: error.message,
-        fatal: false,
-        custom_map: {
-          error_id: this.state.errorId,
-          component_stack: errorInfo.componentStack,
-        },
-      });
-    }
-  };
-
-  private handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorId: undefined });
-  };
-
-  private handleGoHome = () => {
-    if (window?.location) {
-      window.location.href = '/';
-    }
-  };
-
-  override render() {
-    if (this.state.hasError) {
-      return (
-        this.props.fallback || (
-          <div className="min-h-screen flex items-center justify-center bg-gray-900">
-            <div className="text-center p-8 max-w-md">
-              <AlertTriangle className="w-16 h-16 text-red-500 mx-auto mb-4" />
-              <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
+  handleRetry = () => {/* TODO: Fix JSX expression */}
+  o: undefined })
+  }
+  handleReload = () => {/* TODO: Fix JSX expression */}
+  }
+  render() {/* TODO: Fix JSX expression */}
+      }
+      return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"></div>"
+          <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-lg p-8 text-center border border-white/20"></div>"
+            <div className="mb-6"></div>"
+              <AlertTriangle className="w-16 h-16 text-red-400 mx-auto mb-4" /></AlertTriangle>"
+              <h1 className="text-2xl font-bold text-white mb-2">Oops! Something went wrong</h1>"
               <p className="text-gray-300 mb-6">
-                We&apos;re sorry, but something unexpected happened. Our team has been notified.
-              </p>
-              {this.state.errorId && (
-                <p className="text-gray-400 mb-4 text-sm">Error ID: {this.state.errorId}</p>
-              )}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button
-                  onClick={this.handleRetry}
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
-                >
-                  <RefreshCw className="w-4 h-4" />
-                  Try Again
-                </button>
-                <button
-                  onClick={this.handleGoHome}
-                  className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
-                >
-                  <Home className="w-4 h-4" />
-                  Go Home
-                </button>
-              </div>
-              <button
-                onClick={() => window.location.reload()}
-                className="mt-4 text-gray-400 hover:text-white text-sm underline"
-              >
-                Or refresh the page
+                We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.
+            {/* TODO: Fix JSX expression */}
+                  {this.state.error.message}
+                {/* TODO: Fix JSX expression */}
+                      {this.state.errorInfo.componentStack}
+                  </details>)
+                )}
+            )}
+"
+            <div className="space-y-3">
+              <button>
+                onClick={this.handleRetry}"
+                className="w-full bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold,"
+  hover: bg-cyan-700 transition-colors flex items-center justify-center gap-2"
+              >"
+                <RefreshCw className="w-4 h-4" /></RefreshCw>
+                Try Again,
               </button>
+              <button></button>
+                onClick={this.handleReload}"
+                className="w-full bg-gray-600 text-white px-6 py-3 rounded-lg font-semibold,"
+  hover: bg-gray-700 transition-colors flex items-center justify-center gap-2"
+              >"
+                <RefreshCw className="w-4 h-4" /></RefreshCw>
+                Reload Page,
+              </button>
+              <a></a>"
+                href="/""
+                className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold,"
+  hover: bg-indigo-700 transition-colors flex items-center justify-center gap-2"
+              >"
+                <Home className="w-4 h-4" /></Home>
+                Go Home,
+              </a>
+              <a></a>"
+                href="mailt,"
+  o:support@ziontechgroup.com?subject=Error Report""
+                className="w-full border border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold,
+  hover:bg-cyan-400,"
+  hover: text-slate-900 transition-colors flex items-center justify-center gap-2"
+              >"
+                <Mail className="w-4 h-4" /></Mail>
+                Report Issue,
+              </a>
+            </div>
+"
+            <div className="mt-6 text-sm text-gray-400">
+              <p>If this problem persists, please contact our support,
+  team:</p>"
+              <p className="mt-1"></p>"
+                < href="mailt,"$2 />
+  o:support@ziontechgroup.com" className="text-cyan-400,"
+  hover: text-cyan-300"></a>
+                  support@ziontechgroup.com,
+                </a>
+              </p>"
+              <p className="mt-1"></p>"
+                < href="te,"$2 />
+  l:+13024640950" className="text-cyan-400,"
+  hover: text-cyan-300"></a>
+                  (302) 464-0950
+                </a>
+              </p>
             </div>
           </div>
-        )
-      );
+        </div>
+      ),
     }
-
-    return this.props.children;
+    return this.props.children
   }
 }
-
-export default ErrorBoundary;
+export default ErrorBoundary;"
+</div></div></button></button>

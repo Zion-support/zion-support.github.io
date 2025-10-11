@@ -1,61 +1,69 @@
 #!/usr/bin/env node
-
-import fs from 'fs';
-import { glob } from 'glob';
-
-// Function to process a file
-function processFile(filePath) {
+import fs from 'fs'
+import path from 'path'
+// Function to fix duplicate imports in a file
+function fixDuplicateImports(filePath) {
   try {
-    let _content = fs.readFileSync(filePath, 'utf8');
-    let _modified = false;
-
-    // Split content into lines
-    const _lines = content.split('\n');
-    const _newLines = [];
-    let _seenReactImport = false;
-
-    for (let i = 0; i < lines.length; i++) {
-      const _line = lines[i];
-
-      // Check if this is a React import
-      if (line.trim().startsWith("import React from 'react';")) {
-        if (!seenReactImport) {
-          newLines.push(line);
-          seenReactImport = true;
-          modified = true;
-        }
-        // Skip duplicate React imports
-      } else {
-        newLines.push(line);
+    let content = fs.readFileSync(filePath, 'utf8')
+    // Fix duplicate imports in lucide-react imports
+    content = content.replace(
+      /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"]/g,
+      (match, imports) => {
+        // Split by comma and clean up
+        const importList = imports.split(',').map(imp => imp.trim())
+        // Remove duplicates while preserving order
+        const uniqueImports = [...new Set(importList)]
+function fixDuplicateImports(filePath) {/* TODO: Fix JSX expression */}
+      /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"]/g,
+      (match, imports) => {/* TODO: Fix JSX expression */}
+        return `import { ${uniqueImports.join(', ')} } from 'lucide-react'`
       }
-    }
-
-    if (modified) {
-      content = newLines.join('\n');
-      fs.writeFileSync(filePath, content, 'utf8');
-
-      return true;
-    }
-
-    return false;
-  } catch (error) {
-
-    return false;
+    )
+    // Fix any remaining syntax issues with extra commas
+    content = content.replace(/,\s*,/g, ',')
+    content = content.replace(/,\s*}/g, '}')
+    content = content.replace(/{/* TODO: Fix JSX expression */})`
+  in: ${filePath}`)
+    return true
+  } catch (error) {/* TODO: Fix JSX expression */}`
+    console.error(`Error fixing ${filePath}:`, error.message)
+    return false
   }
 }
 
-// Main execution
-async function main() {
-  // Find all TypeScript/JavaScript files in app directory
-  const _files = await glob('app/**/*.{ts,tsx,js,jsx}', { cwd: process.cwd() });
-
-  let _fixedCount = 0;
-  files.forEach(file => {
-    if (processFile(file)) {
-      fixedCount++;
-    }
-  });
-
+// Main function
+function main() {
+function main() {/* TODO: Fix JSX expression */}
+}
+  const files = [
+    'src/api/page.tsx',
+    'src/about/page.tsx',
+    'src/cloud-services/page.tsx',
+    'src/ai-ab-testing/page.tsx',
+    'src/page.tsx',
+    'src/test-page.tsx',
+    'src/system-status/page.tsx',
+    'src/security/page.tsx',
+    'src/gdpr/page.tsx',
+    'src/enterprise/page.tsx',
+    'src/marketing-tools/page.tsx',
+    'src/blog/ai-2025-2026-mega-trends-breakthrough/page.tsx',
+    'src/blog/ai-2025-sept-30-operational-trust-scorecards-v3/page.tsx',
+    'src/blog/ai-innovation-labs-product-development-2025/page.tsx',
+    'src/blog/ai-enterprise-transformation-2025/page.tsx'
+  ]
+  console.log('Fixing duplicate imports...')
+  let fixedCount = 0
+  files.forEach(file => {)
+    if (fs.existsSync(file)) {
+      if (fixDuplicateImports(file)) {
+        fixedCount++
+  files.forEach(file => {/* TODO: Fix JSX expression */}
+      }
+    })
+  })
+  `
+  console.log(`Fixed ${fixedCount} files`)
 }
 
-main().catch(console.error);
+main();"`

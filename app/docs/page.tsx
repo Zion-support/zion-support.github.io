@@ -1,334 +1,374 @@
-<<<<<<< HEAD
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+  const categories = [
+  ]
+  const documentation = [
+    {id: 1,
+      title: 'Getting Started Guide',
+      description: 'Complete guide to setting up and using our services',
+      category: 'getting-started',
+      difficulty: 'Beginner',
+      readTime: '10 min',
+      lastUpdated: '2024-01-15',
+      sections: [,
+        'Account Setup',
+        'First API Call',
+        'Authentication',
+    },
+    {
+      id: 2,
+      title: 'AI Services Documentation',
+      description: 'Comprehensive guide to our AI-powered services',
+      category: 'ai-services',
+      difficulty: 'Intermediate',
+      readTime: '25 min',
+      lastUpdated: '2024-01-14',
+      sections: [,
+        'AI Chat API',
+        'Content Generation',
+        'Data Analytics',
+        'Computer Vision'
+      title: 'IT Services Guide',
+      description: 'Complete documentation for our IT infrastructure services',
+      category: 'it-services',
+      difficulty: 'Advanced',
+      readTime: '30 min',
+      lastUpdated: '2024-01-13',
+      sections: [,
+        'Cloud Infrastructure',
+        'DevOps & CI/CD',
+        'Cybersecurity',
+        'Database Management'
+      title: 'API Reference',
+      description: 'Complete API reference with examples and endpoints',
+      category: 'api',
+      difficulty: 'Intermediate',
+      readTime: '45 min',
+      lastUpdated: '2024-01-12',
+      sections: [,
+        'Authentication',
+        'Endpoints',
+        'Error Handling',
+        'Rate Limits'
+      title: 'Security Best Practices',
+      description: 'Security guidelines and best practices for our services',
+      category: 'security',
+      difficulty: 'Intermediate',
+      readTime: '20 min',
+      lastUpdated: '2024-01-11',
+      sections: [,
+        'Data Protection',
+        'Access Control',
+        'Encryption',
+        'Compliance'
+      title: 'Troubleshooting Guide',
+      description: 'Common issues and their solutions',
+      category: 'getting-started',
+      difficulty: 'Beginner',
+      readTime: '15 min',
+      lastUpdated: '2024-01-10',
+      sections: [,
+        'Common Errors',
+        'Debugging Tips',
+        'Performance Issues',
+        'Support Resources'
+  const quickLinks = [
+    : documentation.filter(doc => doc.category === selectedCategory);
 
-const DocsPage: React.FC = () => {
+  const searchResults = searchQuery;
+    ? documentation.filter(doc =>)
+        doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        doc.description.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+    : filteredDocs;
+
+  return(<>)
+      <Helmet />
+        <title>Documentation - Zion Tech Group</title>
+    ? documentation 
+    : documentation.filter(doc => doc.category === selectedCategory)
+  const searchResults = searchQuery 
+    ? documentation.filter()
+        doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        doc.description.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+    : filteredDocs
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Docs</h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            This page is under construction. Please check back soon for updates.
-          </p>
-          <a
-            href="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
-          >
-            Contact Us
-          </a>
-        </section>
-      </main>
-      
-      <Footer />
-=======
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Search, BookOpen, Code, FileText, Download, ArrowRight, ChevronRight } from 'lucide-react';
+    <>
+      <Helmet>
+        </Helmet><title>Documentation - Zion Tech Group</title>
+        <meta name="description" content="Complete documentation for Zion Tech Group's AI, IT, and Micro SaaS services. Get started with our comprehensive guides and API references." />
+        <meta name="keywords" content="documentation, API docs, guides, tutorials, developer resources, AI services, IT services" />
+        <link rel="canonical" href="https: //ziontechgroup.com/docs" />,
+      </Helmet>
 
-const DocsPage: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+              </div>
+              <h1 className="text-4xl md: text-5xl font-bold text-white neon-text-enhanced">,</h1>
+                Documentation;
+              </h1>
+            </div>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Complete documentation for all our AI, IT, and Micro SaaS services.</p>
+              Find guides, API references, and best practices to help you build amazing applications.
+            </p>
+          </div>
 
+                type="text"
+                placeholder="Search documentation..."
+                value={searchQuery}onChange={(e) => setSearchQuery(e.target.value)}className="w-full pl-12 pr-4 py-4 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent",
+              />
+            </div>
+          </div>
+
+          {/* Quick Links */} <div className="grid grid-cols-1 md: grid-cols-4 gap-6 mb-12">,</div>
+            {quickLinks.map((link, index) => (
+              </a>
+            ))}
+          </div>
+
+                      ? 'bg-cyan-500 text-white'
+                      : 'bg-slate-800 text-gray-300 hover: bg-slate-700',}`}
+                >
+                </button>
+              ))}
+            </div>
+          </div>
+
+                    </div>
+                  </div>
+                  <div className="ml-6">
+                    </div>< className={`px-3 py-1 rounded text-xs font-semibold ${$2 />
+                      doc.difficulty === 'Beginner' 
+                        ? 'bg-green-600 text-white' 
+                        : doc.difficulty === 'Intermediate'
+                        ? 'bg-yellow-600 text-white'
+                        : 'bg-red-600 text-white'}`}>{doc.difficulty</span>} </span>
+                  </div>
+                </div>
+                
+                <div className="mb-6">
+                    ))}
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-between">
+                      href={`/docs/${doc.id}`}
+                      className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 flex items-center",
+                    >
+                      href={`/docs/${doc.id}/download`}
+                      className="border-2 border-cyan-400 text-cyan-400 px-6 py-2 rounded-lg font-semibold hover: bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center",
+                    >
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* No Results */}
+          {searchResults.length === 0 && searchQuery && (
+            <div className="cyber-card-enhanced p-8 text-center">
+              </div><Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-2">No results found</h3>
+              <p className="text-gray-300 mb-6">Try adjusting your search terms or browse our documentation categories.</p>
+              </p>
+              >
+                Clear Search;
+              </button>
+            </div>
+            <h2 className="text-2xl font-bold text-white mb-6">Additional Resources</h2>
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">,</div>
+              <a;
+          )}
+
+          {/* Additional Resources */}
+          <div className="cyber-card-enhanced p-8 mt-16">
+            </div><h2 className="text-2xl font-bold text-white mb-6">Additional Resources</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              </div><$2 />
+                href="/tutorials"
+                className="flex items-center space-x-3 p-4 rounded-lg hover: bg-cyan-500/10 transition-colors duration-300",
+              >
+                </a><BookOpen className="w-8 h-8 text-cyan-400" />
+                <div>
+                  </div><div className="text-white font-semibold">Tutorials</div>
+                  <div className="text-gray-300 text-sm">Step-by-step guides</div>
+                </div>
+                <ArrowRight className="w-5 h-5 text-gray-400 ml-auto" / /></ArrowRight>
+              </a>
+                href="/api"
+                className="flex items-center space-x-3 p-4 rounded-lg hover: bg-cyan-500/10 transition-colors duration-300",
+              >
+                </a><Code className="w-8 h-8 text-green-400" />
+                <div>
+                  </div><div className="text-white font-semibold">API Reference</div>
+                  <div className="text-gray-300 text-sm">Complete API documentation</div>
+                </div>
+                <ArrowRight className="w-5 h-5 text-gray-400 ml-auto" / /></ArrowRight>
+              </a>
+                href="/community"
+                className="flex items-center space-x-3 p-4 rounded-lg hover: bg-cyan-500/10 transition-colors duration-300",
+              >
+                </a><Users className="w-8 h-8 text-purple-400" />
+                <div>
+                  </div><div className="text-white font-semibold">Community</div>
+                  <div className="text-gray-300 text-sm">Developer community</div>
+                </div>
+                <ArrowRight className="w-5 h-5 text-gray-400 ml-auto" / /></ArrowRight>
+              </a>
+                href="/support"
+                className="flex items-center space-x-3 p-4 rounded-lg hover: bg-cyan-500/10 transition-colors duration-300",
+              >
+                </a><Shield className="w-8 h-8 text-orange-400" />
+                <div>
+                  </div><div className="text-white font-semibold">Support</div>
+                  <div className="text-gray-300 text-sm">Get help and support</div>
+                </div>
+                <ArrowRight className="w-5 h-5 text-gray-400 ml-auto" / /></ArrowRight>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  )
+}
+export default DocsPage
+'use client'
+import React, { useState } from 'react'
+import { Search, BookOpen, Code, FileText, Download, ArrowRight, ChevronRight, Globe, Brain, Cloud, Shield, Settings, Users, Database, Zap, Eye, Sparkles } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+export default function DocsPage() {
+  const [searchQuery, setSearchQuery] = useState('')
   const docCategories = [
     {
       title: 'Getting Started',
-      icon: '🚀',
+      icon: 'rocket',
       description: 'Quick start guides and basic setup instructions',
       docs: [
         { title: 'Quick Start Guide', description: 'Get up and running in 5 minutes', link: '/docs/quick-start' },
         { title: 'Installation Guide', description: 'Step-by-step installation instructions', link: '/docs/installation' },
-        { title: 'First Project', description: 'Create your first AI project', link: '/docs/first-project' },
         { title: 'Configuration', description: 'Configure your environment', link: '/docs/configuration' }
       ]
     },
     {
       title: 'API Reference',
-      icon: '🔌',
+      icon: 'code',
       description: 'Complete API documentation and endpoints',
-      docs: [
-        { title: 'Authentication', description: 'API authentication and security', link: '/docs/api/auth' },
-        { title: 'AI Services API', description: 'AI service endpoints and parameters', link: '/docs/api/ai-services' },
-        { title: 'Data Processing API', description: 'Data processing and analytics endpoints', link: '/docs/api/data-processing' },
-        { title: 'Webhooks', description: 'Event notifications and webhooks', link: '/docs/api/webhooks' }
+      docs: [;}
+        { title: 'Authentication', description: 'API authentication methods', link: '/docs/api/auth' },
+        { title: 'Endpoints', description: 'All available API endpoints', link: '/docs/api/endpoints' },
+        { title: 'SDKs', description: 'Client SDKs and libraries', link: '/docs/api/sdks' }
       ]
     },
     {
-      title: 'SDKs & Libraries',
-      icon: '📚',
-      description: 'Client libraries and SDKs for different languages',
-      docs: [
-        { title: 'Python SDK', description: 'Python client library and examples', link: '/docs/sdk/python' },
-        { title: 'JavaScript SDK', description: 'JavaScript/Node.js client library', link: '/docs/sdk/javascript' },
-        { title: 'Java SDK', description: 'Java client library and integration', link: '/docs/sdk/java' },
-        { title: 'REST API', description: 'RESTful API documentation', link: '/docs/api/rest' }
+      title: 'AI Solutions',
+      icon: 'brain',
+      description: 'AI and machine learning documentation',
+      docs: [;}
+        { title: 'AI Models', description: 'Available AI models and capabilities', link: '/docs/ai/models' },
+        { title: 'Training Data', description: 'Data preparation and training', link: '/docs/ai/training' },
+        { title: 'Deployment', description: 'Deploying AI models to production', link: '/docs/ai/deployment' }
       ]
     },
     {
-      title: 'Tutorials',
-      icon: '🎓',
-      description: 'Step-by-step tutorials and examples',
-      docs: [
-        { title: 'AI Model Training', description: 'Train custom AI models', link: '/docs/tutorials/model-training' },
-        { title: 'Data Pipeline Setup', description: 'Set up data processing pipelines', link: '/docs/tutorials/data-pipeline' },
-        { title: 'Deployment Guide', description: 'Deploy models to production', link: '/docs/tutorials/deployment' },
-        { title: 'Best Practices', description: 'AI development best practices', link: '/docs/tutorials/best-practices' }
-      ]
-    },
-    {
-      title: 'Integration Guides',
-      icon: '🔗',
-      description: 'Integration with popular platforms and services',
-      docs: [
-        { title: 'AWS Integration', description: 'Integrate with AWS services', link: '/docs/integrations/aws' },
-        { title: 'Google Cloud', description: 'Google Cloud Platform integration', link: '/docs/integrations/gcp' },
-        { title: 'Azure Integration', description: 'Microsoft Azure integration', link: '/docs/integrations/azure' },
-        { title: 'Docker Setup', description: 'Containerized deployment with Docker', link: '/docs/integrations/docker' }
-      ]
-    },
-    {
-      title: 'Troubleshooting',
-      icon: '🔧',
-      description: 'Common issues and solutions',
-      docs: [
-        { title: 'Common Issues', description: 'Frequently encountered problems', link: '/docs/troubleshooting/common-issues' },
-        { title: 'Error Codes', description: 'API error codes and meanings', link: '/docs/troubleshooting/error-codes' },
-        { title: 'Performance Tips', description: 'Optimize performance and speed', link: '/docs/troubleshooting/performance' },
-        { title: 'Debugging Guide', description: 'Debug and troubleshoot issues', link: '/docs/troubleshooting/debugging' }
+      title: 'Cloud Services',
+      icon: 'cloud',
+      description: 'Cloud infrastructure and services',
+      docs: [;}
+        { title: 'Infrastructure', description: 'Cloud infrastructure setup', link: '/docs/cloud/infrastructure' },
+        { title: 'Security', description: 'Cloud security best practices', link: '/docs/cloud/security' },
+        { title: 'Monitoring', description: 'Monitoring and logging', link: '/docs/cloud/monitoring' }
       ]
     }
-  ];
-
+  ]
   const popularDocs = [
-    { title: 'Quick Start Guide', views: '12.5k', link: '/docs/quick-start' },
-    { title: 'API Authentication', views: '8.9k', link: '/docs/api/auth' },
-    { title: 'Python SDK Setup', views: '7.2k', link: '/docs/sdk/python' },
-    { title: 'Model Training Tutorial', views: '6.8k', link: '/docs/tutorials/model-training' },
-    { title: 'Deployment Guide', views: '5.4k', link: '/docs/tutorials/deployment' }
-  ];
-
-  const recentUpdates = [
-    { title: 'New AI Model API endpoints', date: '2024-10-08', type: 'API Update' },
-    { title: 'Python SDK v2.1.0 released', date: '2024-10-05', type: 'SDK Update' },
-    { title: 'Enhanced documentation for webhooks', date: '2024-10-03', type: 'Documentation' },
-    { title: 'New integration guide for Azure', date: '2024-10-01', type: 'Integration' }
-  ];
-
+    { title: 'Quick Start Guide', description: 'Get started in minutes', category: 'Getting Started', link: '/docs/quick-start' },
+    { title: 'API Authentication', description: 'Learn how to authenticate', category: 'API Reference', link: '/docs/api/auth' },
+    { title: 'AI Model Training', description: 'Train your own models', category: 'AI Solutions', link: '/docs/ai/training' },
+    { title: 'Cloud Security', description: 'Secure your cloud infrastructure', category: 'Cloud Services', link: '/docs/cloud/security' }
+  ]
+  const filteredDocs = docCategories.map(category => ({
+    ...category,
+    docs: category.docs.filter(doc => 
+      doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      doc.description.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+  })).filter(category => category.docs.length > 0)
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Documentation
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
-              Everything you need to build with our AI platform
-            </p>
-            
-            {/* Search Bar */}
-            <div className="max-w-2xl mx-auto">
-              <div className="relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search documentation..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
-                />
-              </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <SEOOptimizer 
+        title="Documentation - Zion Tech Group"
+        description="Complete documentation for Zion Tech Group's AI and IT solutions. Find guides, tutorials, API references, and best practices."
+        keywords="documentation, API docs, guides, tutorials, AI solutions, cloud services, technical documentation"
+      />
+      <Navigation />
             </div>
-          </div>
+          ))
         </div>
       </section>
 
-      {/* Quick Links */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Quick Start
-            </h2>
-            <p className="text-xl text-gray-600">
-              Get started with our most popular resources
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6 border border-blue-200">
-              <div className="flex items-center mb-4">
-                <BookOpen className="w-8 h-8 text-blue-600 mr-3" />
-                <h3 className="text-xl font-semibold text-gray-900">Quick Start Guide</h3>
-              </div>
-              <p className="text-gray-600 mb-4">
-                Get up and running with our AI platform in just 5 minutes.
-              </p>
-              <Link 
-                to="/docs/quick-start"
-                className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold"
-              >
-                Start Here
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Link>
-            </div>
-            <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-6 border border-green-200">
-              <div className="flex items-center mb-4">
-                <Code className="w-8 h-8 text-green-600 mr-3" />
-                <h3 className="text-xl font-semibold text-gray-900">API Reference</h3>
-              </div>
-              <p className="text-gray-600 mb-4">
-                Complete API documentation with examples and code snippets.
-              </p>
-              <Link 
-                to="/docs/api"
-                className="inline-flex items-center text-green-600 hover:text-green-800 font-semibold"
-              >
-                View API Docs
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Link>
-            </div>
-            <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-6 border border-purple-200">
-              <div className="flex items-center mb-4">
-                <FileText className="w-8 h-8 text-purple-600 mr-3" />
-                <h3 className="text-xl font-semibold text-gray-900">SDKs & Libraries</h3>
-              </div>
-              <p className="text-gray-600 mb-4">
-                Client libraries for Python, JavaScript, Java, and more.
-              </p>
-              <Link 
-                to="/docs/sdk"
-                className="inline-flex items-center text-purple-600 hover:text-purple-800 font-semibold"
-              >
-                Browse SDKs
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      {/* Popular Docs */}
+      <section className="py-16 px-4">
+        </section>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-8 text-center">Popular Documentation
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {popularDocs.map((doc, index) => (;}
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 group">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
+                    <BookOpen className="w-5 h-5 text-white" />
+                  <span className="text-purple-400 text-sm font-medium">{doc.category}
+                <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors">
+                  {doc.title}
+                <p className="text-gray-300 text-sm mb-4">{doc.description}
+                <$2 />
+                  href={doc.link}
+                  className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-medium transition-colors text-sm">
+                  Read More
+                  <ArrowRight className="w-4 h-4" />
+            ))}
       {/* Documentation Categories */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Documentation Categories
-            </h2>
-            <p className="text-xl text-gray-600">
-              Browse our comprehensive documentation by category
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {docCategories.map((category, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
-                <div className="flex items-center mb-4">
-                  <span className="text-3xl mr-3">{category.icon}</span>
-                  <h3 className="text-xl font-semibold text-gray-900">{category.title}</h3>
-                </div>
-                <p className="text-gray-600 mb-6">{category.description}</p>
-                <div className="space-y-3">
+      <section className="py-16 px-4">
+        </section>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-12 text-center">Browse by Category
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {filteredDocs.map((category, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
+                    <BookOpen className="w-6 h-6 text-white" />
+                  <div>
+                    <h3 className="text-2xl font-bold text-white mb-2">{category.title}
+                    <p className="text-gray-300">{category.description}
+                <div className="space-y-4">
                   {category.docs.map((doc, docIndex) => (
-                    <Link 
+                    <$2 />
                       key={docIndex}
-                      to={doc.link}
-                      className="block p-3 rounded-lg hover:bg-gray-50 transition-colors group"
-                    >
+                      href={doc.link}
+                      className="block p-4 bg-white/5 rounded-lg border border-white/10 hover:border-purple-500/50 transition-all duration-300 group">
                       <div className="flex items-center justify-between">
                         <div>
-                          <h4 className="font-medium text-gray-900 group-hover:text-blue-600">{doc.title}</h4>
-                          <p className="text-sm text-gray-500">{doc.description}</p>
-                        </div>
-                        <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-blue-600" />
-                      </div>
-                    </Link>
+                          <h4 className="text-lg font-semibold text-white mb-1 group-hover:text-purple-400 transition-colors">
+                            {doc.title}
+                          <p className="text-gray-300 text-sm">{doc.description}
+                        <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-purple-400 transition-colors" />
                   ))}
-                </div>
-              </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Popular & Recent Updates */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Popular Documentation */}
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Most Popular</h3>
-              <div className="space-y-4">
-                {popularDocs.map((doc, index) => (
-                  <div key={index} className="flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-                    <div>
-                      <Link 
-                        to={doc.link}
-                        className="font-medium text-gray-900 hover:text-blue-600"
-                      >
-                        {doc.title}
-                      </Link>
-                      <p className="text-sm text-gray-500">{doc.views} views</p>
-                    </div>
-                    <ArrowRight className="w-4 h-4 text-gray-400" />
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Recent Updates */}
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Recent Updates</h3>
-              <div className="space-y-4">
-                {recentUpdates.map((update, index) => (
-                  <div key={index} className="p-4 bg-gray-50 rounded-lg">
-                    <div className="flex items-center justify-between mb-2">
-                      <h4 className="font-medium text-gray-900">{update.title}</h4>
-                      <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">
-                        {update.type}
-                      </span>
-                    </div>
-                    <p className="text-sm text-gray-500">{update.date}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Download Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Download Documentation
-          </h2>
-          <p className="text-xl mb-8 text-blue-100">
-            Get offline access to our complete documentation
-          </p>
+      {/* CTA Section */}
+      <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
+        </section>
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Need Help?
+          <p className="text-xl text-purple-100 mb-8">
+            Can't find what you're looking for? Our support team is here to help.
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center">
-              <Download className="w-5 h-5 mr-2" />
-              Download PDF
-            </button>
-            <button className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center">
-              <Download className="w-5 h-5 mr-2" />
-              Download ePub
-            </button>
-          </div>
-          <p className="text-sm text-blue-200 mt-4">
-            Updated daily • Available in multiple formats
-          </p>
-        </div>
-      </section>
->>>>>>> cursor/website-audit-and-update-with-deployment-99bb
-    </div>
-  );
-};
-
-<<<<<<< HEAD
-export default DocsPage;
-=======
-export default DocsPage;
->>>>>>> cursor/website-audit-and-update-with-deployment-99bb
+            <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">Contact Support
+            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">Join Community
+      <Footer />
+  )
+}</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></button></button></p></p></p></p></h2></h2></h2></h3></h3></h4></section></section></section>
+</li></li>

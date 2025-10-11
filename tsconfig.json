@@ -14,10 +14,10 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "jsxImportSource": "react",
     "strict": false,
-    "strictNullChecks": true,
+    "strictNullChecks": false,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": false,
@@ -26,31 +26,31 @@
     "baseUrl": ".",
     "paths": {
       "@/*": [
-        "src/*"
+        "./app/*"
       ],
       "@/components/*": [
-        "src/components/*"
+        "./app/components/*"
       ],
       "@/pages/*": [
-        "src/pages/*"
+        "./app/*"
       ],
       "@/utils/*": [
-        "src/utils/*"
+        "./utils/*"
       ],
       "@/types/*": [
-        "src/types/*"
+        "./types/*"
       ],
       "@/hooks/*": [
-        "src/hooks/*"
+        "./hooks/*"
       ],
       "@/config/*": [
-        "src/config/*"
+        "./config/*"
       ],
       "@/data/*": [
-        "src/data/*"
+        "./data/*"
       ],
       "@/content/*": [
-        "src/content/*"
+        "./content/*"
       ]
     },
     "incremental": true,
@@ -61,9 +61,9 @@
     ],
     "allowJs": true,
     "forceConsistentCasingInFileNames": true,
-    "noImplicitAny": false,
-    "noImplicitReturns": false,
-    "noImplicitThis": false,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
     "exactOptionalPropertyTypes": false,
     "noImplicitOverride": false,
     "noPropertyAccessFromIndexSignature": false,
@@ -74,19 +74,29 @@
     "tsBuildInfoFile": ".next/cache/tsconfig.tsbuildinfo"
   },
   "include": [
-    "src/**/*",
+    "app/**/*.ts",
+    "app/**/*.tsx",
     "App.tsx",
-    "components/**/*",
-    "api/**/*.ts",
     "api/**/*.js",
-    "*.ts",
-    "*.tsx"
+    "api/**/*.ts",
+    "utils/**/*.ts",
+    "utils/**/*.tsx",
+    "types/**/*.ts",
+    "hooks/**/*.ts",
+    "hooks/**/*.tsx",
+    "config/**/*.ts",
+    "data/**/*.ts",
+    "content/**/*.ts",
+    "content/**/*.tsx",
+    "vite.config.ts"
   ],
   "exclude": [
     "node_modules",
     ".next",
     "out",
     "dist",
+    "vite.config.ts",
+    "vite.config.d.ts",
     "_app_disabled/**/*",
     "app_disabled/**",
     "_conflicted_disabled/**/*",
@@ -155,6 +165,8 @@
     "src.disabled/**",
     "utils.disabled/**",
     "vite.config.performance.ts",
+    "vite.config.ts",
+    "vite.config.d.ts",
     "dao/**",
     "deployments/**",
     "e2e/**",
@@ -162,7 +174,6 @@
     "src/pages/blog-disabled/**",
     "hooks/**",
     "middleware/**",
-    "app/**/*",
     "src/components/disabled-corrupted/**",
     "EnhancedFooter.tsx",
     "EnhancedHeader.tsx",

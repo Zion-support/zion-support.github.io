@@ -1,58 +1,55 @@
-import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-
-// Dynamically import heavy components for better performance
-const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
-const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
-const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
-const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
-const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
-
-// Preload critical components
-const preloadComponents = () => {
-  if (typeof window !== 'undefined') {
-    // Preload critical components after initial render
-    setTimeout(() => {
-      import('./components/ContentPromotionBanner');
-      import('./components/ContentCarousel');
-    }, 100);
-  }
-};
-
-// Loading skeleton component
-const ServiceCardSkeleton: React.FC = memo(() => (
-  <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
-    <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
-    <div className="h-4 bg-gray-200 rounded mb-2"></div>
-    <div className="h-4 bg-gray-200 rounded w-5/6"></div>
-  </div>
-));
-
-ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Brain, Zap, Shield, Cloud, Code, BarChart, CheckCircle } from 'lucide-react'
+import Navigation from './components/Navigation'
+import Footer from './components/Footer'
 
 const HomePage: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsLoaded(true);
-    // Trigger visibility animation
-    const timer = setTimeout(() => setIsVisible(true), 100);
-    // Preload components
-    preloadComponents();
-    return () => clearTimeout(timer);
-  }, []);
-
-  // Analytics tracking for phone clicks - optimized
-  const handlePhoneClick = useCallback(() => {
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'phone_click', {
-        event_category: 'engagement',
-        event_label: 'main_phone_number',
-      });
+  const aiServices = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Analytics',
+      description: 'Advanced analytics and insights powered by machine learning algorithms.',
+      price: 'Starting at $2,500/month',
+      features: ['Real-time data processing', 'Predictive analytics', 'Custom dashboards', 'API integration']
+    },
+    {
+      icon: Zap,
+      title: 'AI Automation',
+      description: 'Intelligent automation of business processes with decision-making capabilities.',
+      price: 'Starting at $1,800/month',
+      features: ['Workflow automation', 'Smart routing', 'Exception handling', 'Performance monitoring']
+    },
+    {
+      icon: Shield,
+      title: 'AI Security',
+      description: 'Advanced threat detection and security solutions powered by AI.',
+      price: 'Starting at $3,200/month',
+      features: ['Threat detection', 'Anomaly detection', 'Automated response', 'Compliance monitoring']
+    },
+    {
+      icon: Cloud,
+      title: 'AI Cloud Solutions',
+      description: 'Scalable AI solutions deployed on cloud infrastructure.',
+      price: 'Starting at $2,000/month',
+      features: ['Cloud deployment', 'Auto-scaling', 'High availability', 'Global CDN']
+    },
+    {
+      icon: Code,
+      title: 'AI Development',
+      description: 'Custom AI solutions tailored to your business requirements.',
+      price: 'Starting at $4,500/month',
+      features: ['Custom development', 'Model training', 'Integration support', 'Ongoing maintenance']
+    },
+    {
+      icon: BarChart,
+      title: 'AI Data Analytics',
+      description: 'Transform your data into actionable insights with AI-powered analytics.',
+      price: 'Starting at $2,800/month',
+      features: ['Data visualization', 'Machine learning models', 'Real-time insights', 'Custom reports']
     }
-  }, []);
+  ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">

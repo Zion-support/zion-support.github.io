@@ -1,110 +1,112 @@
-'use client';
+}
 
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { Link } from 'react-router-dom';
-import { FileWarning } from 'lucide-react';
+interface ErrorBoundaryProps {
+  children: ReactNode;
+}
+
+class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  constructor(props: ErrorBoundaryProps) {
+    super(props);
+    this.state = {
+      hasError: false,
+      error: null,
+      errorInfo: null
+    };
+import React, {Component, ErrorInfo, ReactNode}from 'react';
+import {AlertTriangle, RefreshCw, Home, Phone}}from 'lucide-react';
+
+interface Props {children: ReactNode;,}
+  fallback?: ReactNode;}interface State {hasError: boolean;,}
+  error?: Error;
+  errorInfo?: ErrorInfo;}class ErrorBoundary extends Component<Props, State> {constructor(props: Props) {,
+    super(props);
+    this.state = { hasError: false ,}}
+'use client'
+import React, { Component, ErrorInfo, ReactNode } from 'react'
+import { AlertTriangle, RefreshCw } from 'lucide-react'
 
 interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-  enableErrorReporting?: boolean;
-  enableRetry?: boolean;
+  children: ReactNode
+  fallback?: ReactNode
 }
 
 interface State {
-  hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
+  hasError: boolean
+  error?: Error
+  errorInfo?: ErrorInfo
 }
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
+    super(props)
+    this.state = { hasError: false }
   }
 
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
-  }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // Log error to console in development
-    if (process.env['NODE_ENV'] === 'development') {
-
-    }
-
-    // Report error to monitoring service in production
-    if (process.env['NODE_ENV'] === 'production') {
-      // Send to error tracking service
-      if (typeof window !== 'undefined' && 'gtag' in window) {
-        (window as unknown as { gtag: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag('event', 'exception', {
-          description: error.message,
-          fatal: false
-        });
-      }
-    }
-    
-    this.setState({ errorInfo });
-    
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-    }
-
-    if (this.props.enableErrorReporting && process.env.NODE_ENV === 'development') {
-
-    }
+  handleGoHome = () => {
+    window.location.href = '/'
   }
 
   render() {
     if (this.state.hasError) {
-      if (this.props.fallback) {
-        return this.props.fallback;
-      }
-
-      return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
-            <div className="mb-6">
-              <FileWarning className="mx-auto h-16 w-16 text-red-500" />
             </div>
-            <h1 className="text-2xl font-bold text-gray-900 mb-2">Oops! Something went wrong</h1>
-            <p className="text-gray-600 mb-6">
-              We&apos;re sorry for the inconvenience. Please try refreshing the page.
+            
+            <h1 className="text-2xl font-bold text-white mb-4">Oops! Something went wrong;</h1>
+            </h1>
+            
             </p>
-            <div className="space-y-3">
-              <button
+            
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+                  {this.state.error.toString()},
+    {this.state.errorInfo?.componentStack}
+                </pre>
+              </details>
+            )}
+
+              >
+                </button><RefreshCw className="w-4 h-4" />
+                <span>Reload Page</span>
+              </button>
+              
+              >
+                </button><Home className="w-4 h-4" />
+                <span>Go Home</span>
+              </button>
+            </div>
+
+            <div className="mt-6 pt-6 border-t border-white/20">
+              </a>
+            </div>
+            <div className="space-y-4">
+              <$2 />
                 onClick={() => window.location.reload()}
-                className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+                className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-6 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105"
               >
                 Refresh Page
               </button>
-              <Link
-                to="/"
-                className="block w-full border-2 border-red-600 text-red-600 hover:bg-red-50 font-semibold py-3 px-6 rounded-lg transition-colors"
+              <$2 />
+                onClick={() => this.setState({ hasError: false, error: undefined, errorInfo: undefined })}
+                className="block w-full text-gray-400 hover:text-cyan-400 transition-colors duration-200"
               >
-                Go to Homepage
-              </Link>
+                Try Again
+              </button>
             </div>
-            {this.props.enableErrorReporting && this.state.error && (
+            {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mt-6 text-left">
-                <summary className="cursor-pointer text-sm text-gray-500 hover:text-gray-700">
-                  Error Details
+                <summary className="text-gray-400 cursor-pointer hover:text-cyan-400">
+                  Error Details (Development)
                 </summary>
-                <div className="mt-2 p-4 bg-gray-100 rounded text-xs">
-                  <div className="mb-2">
-                    <strong>Error:</strong> {this.state.error.message}
-                  </div>
-                </div>
-                </details>
-              )}
+                <pre className="mt-2 text-xs text-gray-500 bg-gray-800 p-4 rounded overflow-auto">
+                  {this.state.error.toString()}
+                  {this.state.errorInfo?.componentStack}
+                </pre>
+              </details>
+            )}
           </div>
         </div>
-      );
+      )
     }
 
-    return this.props.children;
+    return this.props.children
   }
 }
-
-export default ErrorBoundary;

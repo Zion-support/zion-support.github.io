@@ -1,382 +1,162 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, BarChart3, PieChart, TrendingUp, Eye } from 'lucide-react';
-
-const AIDataVisualizationPage: React.FC = () => {
-  const features = [
+    const features = [
     {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: 'Interactive Dashboards',
-      description: 'Create stunning, interactive dashboards that automatically update with real-time data and provide deep insights.',
-      benefits: ['Real-time updates', 'Interactive charts', 'Custom layouts', 'Mobile responsive']
-    },
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+  },
     {
-      icon: <PieChart className="w-6 h-6" />,
-      title: 'AI-Powered Insights',
-      description: 'Let AI analyze your data and automatically generate insights, trends, and recommendations.',
-      benefits: ['Automatic insights', 'Trend detection', 'Anomaly detection', 'Predictive analytics']
-    },
-    {
-      icon: <TrendingUp className="w-6 h-6" />,
+    icon: BarChart,
       title: 'Advanced Analytics',
-      description: 'Perform complex statistical analysis, forecasting, and predictive modeling with built-in AI algorithms.',
-      benefits: ['Statistical analysis', 'Forecasting', 'Predictive modeling', 'Machine learning']
-    },
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics'],
+  },
     {
-      icon: <Eye className="w-6 h-6" />,
-      title: 'Visual Storytelling',
-      description: 'Transform complex data into compelling visual stories that engage and inform your audience.',
-      benefits: ['Story templates', 'Auto-narration', 'Export options', 'Presentation mode']
-    }
-  ];
-
-  const pricingPlans = [
+    icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics'],
+  },
     {
-      name: 'Starter',
-      price: '$149',
-      period: '/month',
-      description: 'Perfect for small teams and individual users',
-      features: [
-        '5 dashboards',
-        'Basic charts',
-        'Standard data sources',
-        'Email support',
-        '1 user',
-        '1GB data storage'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$399',
-      period: '/month',
-      description: 'Ideal for growing businesses with moderate data needs',
-      features: [
-        '25 dashboards',
-        'Advanced charts',
-        'All data sources',
-        'Priority support',
-        '10 users',
-        '10GB data storage',
-        'AI insights',
-        'Custom branding',
-        'API access'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$999',
-      period: '/month',
-      description: 'For large organizations with complex data requirements',
-      features: [
-        'Unlimited dashboards',
-        'All chart types',
-        'All data sources',
-        '24/7 phone support',
-        'Unlimited users',
-        'Unlimited storage',
-        'Advanced AI features',
-        'White-label options',
-        'Full API access',
-        'Custom integrations',
-        'Dedicated support'
-      ],
-      popular: false
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: 'Alex Thompson',
-      role: 'Data Analyst',
-      company: 'Analytics Corp',
-      content: 'Zion Tech Group\'s AI data visualization platform has revolutionized how we present data. The AI insights are incredibly accurate and save us hours of analysis.',
-      rating: 5
-    },
-    {
-      name: 'Sarah Davis',
-      role: 'Marketing Director',
-      company: 'Growth Marketing',
-      content: 'The interactive dashboards have transformed our reporting. Our clients love the real-time updates and the visual storytelling capabilities.',
-      rating: 5
-    },
-    {
-      name: 'Michael Rodriguez',
-      role: 'CEO',
-      company: 'Data Insights Inc.',
-      content: 'The predictive analytics feature helped us identify market trends 3 months ahead of our competitors. It\'s been a game-changer for our business.',
-      rating: 5
-    }
-  ];
-
-  const stats = [
-    { number: '85%', label: 'Faster Insights' },
-    { number: '60%', label: 'Time Saved' },
-    { number: '95%', label: 'Accuracy Rate' },
-    { number: '24/7', label: 'Real-time Updates' }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 neon-text">
-              AI Data Visualization
-            </h1>
-            <p className="text-xl md:text-2xl text-cyan-400 mb-8">
-              Transform your data into stunning visual insights with AI
-            </p>
-            <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
-              Create interactive dashboards, generate AI-powered insights, and tell compelling data stories. 
-              Turn complex data into actionable insights that drive business growth.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <a
-                href="tel:+13024640950"
-                className="cyber-button inline-flex items-center justify-center"
-              >
-                📞 Call Now: (302) 464-0950
-              </a>
-              <a
-                href="/contact"
-                className="cyber-button inline-flex items-center justify-center"
-                style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
-              >
-                Get Free Demo
-              </a>
+    icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'],
+  }
+    ]
+const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+      <Helmet>
+        <title>Ai Data Visualization - Zion Tech Group</title>
+    'Gain competitive advantage with advanced technology'
+  ]
+return (
+    <>
+      <Helmet>
+        </Helmet><title>Ai Data Visualization - Zion Tech Group</title>
+        <meta name="description" content="AI-powered solution" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+      </Helmet>
+              <p className="text-xl text-gray-300">Section description</p>
             </div>
+          </div>
+        </section>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} /></div>
+          <div className="relative max-w-7xl mx-auto text-center"></div>
+            <h1>Ai Data Visualization;</h1>
+            </h1>
+                Get Started
+              </button>
+              <button></button>
+                View Demo,
+              </button>
+            </div>
+          </div>
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">Ai Data Visualization
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Advanced AI-powered ai data visualization solution for modern businesses.
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-violet-500 to-blue-600 hover:from-violet-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Get Started
+              <button className="border border-violet-400 text-violet-400 hover:bg-violet-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">View Demo
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          </section>< className="$2 />
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,
+              {features.map((feature, index) => (
+                <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>,
+                  <div className="w-16 h-16 bg-gradient-to-br from-violet-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>,
+                    <feature />
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
 
-            {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.number}</div>
-                  <div className="text-gray-300">{stat.label}</div>
+                          {benefit} </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+
+            </div>
+          </div>
+        </section>
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Key Features
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Advanced AI technology that drives results
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-violet-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}
+                  <p className="text-gray-300 mb-4">{feature.description}
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                          {benefit}
+                      ))}
                 </div>
               ))}
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Powerful AI Features
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to visualize and analyze your data with AI
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
-            {features.map((feature, index) => (
-              <div key={index} className="cyber-card hologram-card">
-                <div className="flex items-start space-x-4">
-                  <div className="text-cyan-400 flex-shrink-0">
-                    {feature.icon}
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
-                    <p className="text-gray-300 mb-4 leading-relaxed">{feature.description}</p>
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="flex items-center text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
+        </section>
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+          <div className="max-w-7xl mx-auto" / /></div>
+            <div className="text-center mb-16" / /></div>
+              <h2></h2>
+                Why Choose Our Solution?
+              </h2>
+              <p></p>
+                Proven results that drive business growth and efficiency
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" / /></div>
+              {benefits.map((benefit, index) => ()
+              ))}
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          </section>< className="$2 />
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          ))
+        </section>
+                Ready to Get Started?
+              </h2>
+              <p></p>
+                Contact our experts to discuss your requirements and get started today.
+              </p>
+              <div className="flex flex-col sm: flex-row gap-4 justify-center" / /></div>
+                <button></button>
+                  Contact Us
+                </button>
+                <button></button>
+                  Learn More
+                </button>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Chart Types Section */}
-      <section className="py-20 bg-gradient-to-r from-slate-800 to-purple-900">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Chart Types & Visualizations
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose from 50+ chart types and visualizations to tell your data story
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-            <div className="text-center cyber-card">
-              <div className="text-4xl mb-4">📊</div>
-              <h3 className="text-xl font-bold text-white mb-2">Bar Charts</h3>
-              <p className="text-gray-300 text-sm">Perfect for comparing categories and values</p>
             </div>
-            <div className="text-center cyber-card">
-              <div className="text-4xl mb-4">📈</div>
-              <h3 className="text-xl font-bold text-white mb-2">Line Charts</h3>
-              <p className="text-gray-300 text-sm">Ideal for showing trends over time</p>
-            </div>
-            <div className="text-center cyber-card">
-              <div className="text-4xl mb-4">🥧</div>
-              <h3 className="text-xl font-bold text-white mb-2">Pie Charts</h3>
-              <p className="text-gray-300 text-sm">Great for showing proportions and percentages</p>
-            </div>
-            <div className="text-center cyber-card">
-              <div className="text-4xl mb-4">🗺️</div>
-              <h3 className="text-xl font-bold text-white mb-2">Maps</h3>
-              <p className="text-gray-300 text-sm">Visualize geographic data and distributions</p>
-            </div>
-            <div className="text-center cyber-card">
-              <div className="text-4xl mb-4">📉</div>
-              <h3 className="text-xl font-bold text-white mb-2">Scatter Plots</h3>
-              <p className="text-gray-300 text-sm">Show relationships between two variables</p>
-            </div>
-            <div className="text-center cyber-card">
-              <div className="text-4xl mb-4">📊</div>
-              <h3 className="text-xl font-bold text-white mb-2">Heatmaps</h3>
-              <p className="text-gray-300 text-sm">Display data density and patterns</p>
-            </div>
-            <div className="text-center cyber-card">
-              <div className="text-4xl mb-4">📊</div>
-              <h3 className="text-xl font-bold text-white mb-2">Gauges</h3>
-              <p className="text-gray-300 text-sm">Show KPIs and performance metrics</p>
-            </div>
-            <div className="text-center cyber-card">
-              <div className="text-4xl mb-4">📊</div>
-              <h3 className="text-xl font-bold text-white mb-2">Custom Charts</h3>
-              <p className="text-gray-300 text-sm">Create unique visualizations for your needs</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Simple Pricing
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your data visualization needs. All plans include our core AI features.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index) => (
-              <div key={index} className={`cyber-card hologram-card relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold flex items-center">
-                      <Star className="w-4 h-4 mr-1" />
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <p className="text-gray-300 mb-4">{plan.description}</p>
-                  <div className="mb-4">
-                    <span className="text-5xl font-bold text-cyan-400">{plan.price}</span>
-                    <span className="text-gray-300">{plan.period}</span>
-                  </div>
-                </div>
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <a
-                  href="/contact"
-                  className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
-                    plan.popular
-                      ? 'bg-cyan-400 text-slate-900 hover:bg-cyan-300'
-                      : 'bg-gray-700 text-white hover:bg-gray-600'
-                  }`}
-                >
-                  Get Started
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="py-20 bg-gradient-to-r from-slate-800 to-purple-900">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              What Our Customers Say
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Join thousands of data professionals who have transformed their analytics with AI
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="cyber-card hologram-card">
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
-                <div>
-                  <div className="font-semibold text-white">{testimonial.name}</div>
-                  <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-            Ready to Transform Your Data Visualization?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Start creating stunning data visualizations with AI today. 
-            Join thousands of professionals already using our platform.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:+13024640950"
-              className="cyber-button inline-flex items-center justify-center"
-            >
-              📞 Call Now: (302) 464-0950
-            </a>
-            <a
-              href="/contact"
-              className="cyber-button inline-flex items-center justify-center"
-              style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
-            >
-              Get Free Demo
-            </a>
-          </div>
-          <div className="mt-8 text-sm text-gray-400">
-            <p>✓ Free 14-day trial • ✓ No setup fees • ✓ Cancel anytime</p>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-};
-
-export default AIDataVisualizationPage;
+          ))
+        </section>
+      </div>

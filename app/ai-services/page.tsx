@@ -1336,4 +1336,4 @@ const AIServicesPage: React.FC = () => {
   );
 };
 
-export default AIServicesPage;
+export default AiServicesPage;

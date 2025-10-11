@@ -1,183 +1,159 @@
-import React, { memo, useMemo, Suspense } from 'react';
-import { HelmetProvider, Helmet } from 'react-helmet-async';
-
-// Memoized components for better performance
-const UnifiedContentPromotion = memo(() => (
-  <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16">
-    <div className="container mx-auto px-4 text-center">
-      <h2 className="text-3xl font-bold mb-4">Latest AI Innovations</h2>
-      <p className="text-xl">Discover cutting-edge AI solutions for your business</p>
-    </div>
-  </div>
-));
-
-const InteractiveAIROICalculator = memo(() => (
-  <div className="bg-gray-50 py-16">
-    <div className="container mx-auto px-4 text-center">
-      <h2 className="text-3xl font-bold mb-4">AI ROI Calculator</h2>
-      <p className="text-xl text-gray-600">Calculate your potential AI investment returns</p>
-    </div>
-  </div>
-));
-
-const ContentShowcase = memo(() => (
-  <div className="py-16">
-    <div className="container mx-auto px-4 text-center">
-      <h2 className="text-3xl font-bold mb-4">Featured Content</h2>
-      <p className="text-xl text-gray-600">Explore our latest insights and case studies</p>
-    </div>
-  </div>
-));
-
-const InteractiveContentShowcase2026 = memo(() => (
-  <div className="bg-blue-50 py-16">
-    <div className="container mx-auto px-4 text-center">
-      <h2 className="text-3xl font-bold mb-4">2026 Content Showcase</h2>
-      <p className="text-xl text-gray-600">Latest trends and innovations for 2026</p>
-    </div>
-  </div>
-));
-
-// Loading component
-const LoadingSpinner = memo(() => (
-  <div className="animate-pulse bg-gray-200 h-32 rounded flex items-center justify-center">
-    <div className="text-gray-500">Loading...</div>
-  </div>
-));
-
-// Error Boundary Component
-interface ErrorBoundaryState {
-  hasError: boolean;
-  error: Error | null;
+'use client'
+import React, { Suspense } from 'react'
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'
+import { HelmetProvider } from 'react-helmet-async'
+import './app/styles/futuristic.css'
+import './app/styles/futuristic-enhanced.css'
+import Navigation from './app/components/Navigation'
+import Footer from './app/components/Footer'
+import HomePage from './app/page'
+import { PageLoader } from './app/components/LoadingStates'
+import ErrorBoundary from './app/components/ErrorBoundary'
+import SEOHead from './app/components/EnhancedSEOHead'
+import SkipLink from './app/components/SkipLink'
+import Breadcrumb from './app/components/Breadcrumb'
+import PerformanceOptimizer from './app/components/EnhancedPerformanceOptimizer'
+import AccessibilityEnhancer from './app/components/AccessibilityEnhancer'
+import EnhancedAccessibility from './app/components/EnhancedAccessibility'
+import { usePerformanceMonitor } from './hooks/usePerformanceMonitor'
+import { AnalyticsProvider } from './app/components/EnhancedAnalytics'
+import PerformanceMonitor from './app/components/PerformanceMonitor'
+import ServiceWorker from './app/components/ServiceWorker'
+import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary'
+import FuturisticBackground from './app/components/FuturisticBackground'
+// Lazy load pages for better performance with error boundaries
+const AboutPage = React.lazy(() => import('./app/about/page'))
+const ContactPage = React.lazy(() => import('./app/contact/page'))
+const ServicesPage = React.lazy(() => import('./app/services/page'))
+const PricingPage = React.lazy(() => import('./app/pricing/page'))
+const BlogPage = React.lazy(() => import('./app/blog/page'))
+const CaseStudiesPage = React.lazy(() => import('./app/case-studies/page'))
+const CareersPage = React.lazy(() => import('./app/careers/page'))
+const AiServicesPage = React.lazy(() => import('./app/ai-services/page'))
+const ItServicesPage = React.lazy(() => import('./app/it-services/page'))
+const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'))
+const TutorialsPage = React.lazy(() => import('./app/tutorials/page'))
+const ConsultationPage = React.lazy(() => import('./app/consultation/page'))
+const DemoPage = React.lazy(() => import('./app/demo/page'))
+const SupportPage = React.lazy(() => import('./app/support/page'))
+const PrivacyPage = React.lazy(() => import('./app/privacy/page'))
+const TermsPage = React.lazy(() => import('./app/terms/page'))
+const CookiesPage = React.lazy(() => import('./app/cookies/page'))
+const SitemapPage = React.lazy(() => import('./app/sitemap/page'))
+// AI Service Pages
+const AiAnalyticsPage = React.lazy(() => import('./app/ai-analytics/page'))
+const AiAutomationPage = React.lazy(() => import('./app/ai-automation/page'))
+const AiChatbotBuilderPage = React.lazy(() => import('./app/ai-chatbot-builder/page'))
+const AiCybersecurityPage = React.lazy(() => import('./app/ai-cybersecurity/page'))
+const AiCustomerSupportPage = React.lazy(() => import('./app/ai-customer-support/page'))
+const AiDataAnalyticsPage = React.lazy(() => import('./app/ai-data-analytics/page'))
+const AiWorkflowAutomationPage = React.lazy(() => import('./app/ai-workflow-automation/page'))
+const AiContentGeneratorPage = React.lazy(() => import('./app/ai-content-generator/page'))
+// IT Service Pages
+const CloudInfrastructurePage = React.lazy(() => import('./app/cloud-infrastructure/page'))
+const CybersecuritySolutionsPage = React.lazy(() => import('./app/cybersecurity-solutions/page'))
+const WebDevelopmentPage = React.lazy(() => import('./app/web-development/page'))
+const MobileDevelopmentPage = React.lazy(() => import('./app/mobile-development/page'))
+const CloudMigrationPage = React.lazy(() => import('./app/cloud-migration/page'))
+// Company Pages
+const TeamPage = React.lazy(() => import('./app/team/page'))
+// Additional Service Pages
+const CybersecurityPage = React.lazy(() => import('./app/cybersecurity/page'))
+const DataAnalyticsPage = React.lazy(() => import('./app/data-analytics/page'))
+// Performance monitoring hook
+const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  usePerformanceMonitor()
+  return <React.Fragment>{children}</React.Fragment>
 }
-
-interface ErrorBoundaryProps {
-  children: React.ReactNode;
-}
-
-class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
-  constructor(props: ErrorBoundaryProps) {
-    super(props);
-    this.state = { hasError: false, error: null };
-  }
-
-  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
-    return { hasError: true, error };
-  }
-
-  override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    // Log error for debugging in development
-    if (process.env.NODE_ENV === 'development') {
-      // eslint-disable-next-line no-console
-      console.error('App Error Boundary caught an error:', error, errorInfo);
-    }
-  }
-
-  override render() {
-    if (this.state.hasError) {
-      return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="text-center p-8">
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>
-            <p className="text-gray-600 mb-4">
-              We're working to fix this issue. Please try refreshing the page.
-            </p>
-            <button
-              onClick={() => window.location.reload()}
-              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
-            >
-              Refresh Page
-            </button>
-          </div>
-        </div>
-      );
-    }
-
-    return this.props.children;
-  }
-}
-
-export default function App() {
-  const structuredData = useMemo(
-    () => ({
-      '@context': 'https://schema.org',
-      '@type': 'Organization',
-      name: 'Zion Tech Group',
-      description:
-        'Leading provider of AI-powered enterprise solutions and digital transformation services',
-      url: 'https://ziontechgroup.com',
-      logo: 'https://ziontechgroup.com/logo.png',
-      contactPoint: {
-        '@type': 'ContactPoint',
-        telephone: '+1-302-464-0950',
-        contactType: 'customer service',
-        email: 'kleber@ziontechgroup.com',
-      },
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: '364 E Main St STE 1008',
-        addressLocality: 'Middletown',
-        addressRegion: 'DE',
-        postalCode: '19709',
-        addressCountry: 'US',
-      },
-      sameAs: ['https://linkedin.com/company/zion-tech-group', 'https://twitter.com/ziontechgroup'],
-      offers: {
-        '@type': 'Offer',
-        name: 'AI Enterprise Transformation Services',
-        description:
-          'Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains',
-        price: '50000',
-        priceCurrency: 'USD',
-        availability: 'https://schema.org/InStock',
-      },
-    }),
-    []
-  );
-
+// Main App Component
+const App: React.FC = () => {
   return (
-    <ErrorBoundary>
+    <EnhancedErrorBoundary>
       <HelmetProvider>
-        <Helmet>
-          <title>Zion Tech Group - AI & IT Solutions</title>
-          <meta
-            name="description"
-            content="Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with our cutting-edge AI technology."
-          />
-          <meta
-            name="keywords"
-            content="AI, artificial intelligence, enterprise solutions, digital transformation, IT services"
-          />
-          <meta property="og:title" content="Zion Tech Group - AI & IT Solutions" />
-          <meta
-            property="og:description"
-            content="Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains"
-          />
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://ziontechgroup.com" />
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="Zion Tech Group - AI & IT Solutions" />
-          <meta
-            name="twitter:description"
-            content="Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains"
-          />
-          <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
-        </Helmet>
-        <div className="min-h-screen bg-white">
-          <Suspense fallback={<LoadingSpinner />}>
-            <UnifiedContentPromotion />
-          </Suspense>
-          <Suspense fallback={<LoadingSpinner />}>
-            <InteractiveAIROICalculator />
-          </Suspense>
-          <Suspense fallback={<LoadingSpinner />}>
-            <ContentShowcase />
-          </Suspense>
-          <Suspense fallback={<LoadingSpinner />}>
-            <InteractiveContentShowcase2026 />
-          </Suspense>
-        </div>
+        <SEOHead 
+          title="Zion Tech Group - AI & IT Solutions"
+          description="Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
+          keywords={['AI solutions', 'IT services', 'quantum computing', 'digital transformation', 'enterprise software', 'automation', 'machine learning']}
+          canonicalUrl="https://ziontechgroup.com"
+        />
+        <SkipLink />
+        <ServiceWorker />
+        <Router>
+          <AppWithPerformanceMonitoring>
+            <AnalyticsProvider>
+              <PerformanceOptimizer>
+                <EnhancedAccessibility>
+                  <AccessibilityEnhancer
+                    enableKeyboardNavigation={true}
+                    enableScreenReaderSupport={true}
+                    enableHighContrast={false}
+                    enableFocusManagement={true}
+                  >
+                    <PerformanceMonitor />
+                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
+                      <FuturisticBackground />
+                      <Navigation />
+                      <Breadcrumb />
+                      <main id="main-content" className="flex-1" tabIndex={-1}>
+                        <Suspense fallback={<PageLoader />}>
+                          <Routes>
+                            <Route path="/" element={<HomePage />} />
+                            <Route path="/about" element={<AboutPage />} />
+                            <Route path="/contact" element={<ContactPage />} />
+                            <Route path="/services" element={<ServicesPage />} />
+                            <Route path="/pricing" element={<PricingPage />} />
+                            <Route path="/blog" element={<BlogPage />} />
+                            <Route path="/case-studies" element={<CaseStudiesPage />} />
+                            <Route path="/careers" element={<CareersPage />} />
+                            <Route path="/ai-services" element={<AiServicesPage />} />
+                            <Route path="/it-services" element={<ItServicesPage />} />
+                            <Route path="/micro-saas" element={<MicroSaasPage />} />
+                            <Route path="/tutorials" element={<TutorialsPage />} />
+                            <Route path="/consultation" element={<ConsultationPage />} />
+                            <Route path="/demo" element={<DemoPage />} />
+                            <Route path="/support" element={<SupportPage />} />
+                            <Route path="/privacy" element={<PrivacyPage />} />
+                            <Route path="/terms" element={<TermsPage />} />
+                            <Route path="/cookies" element={<CookiesPage />} />
+                            <Route path="/sitemap" element={<SitemapPage />} />
+                            
+                            {/* AI Service Pages */}
+                            <Route path="/ai-analytics" element={<AiAnalyticsPage />} />
+                            <Route path="/ai-automation" element={<AiAutomationPage />} />
+                            <Route path="/ai-chatbot-builder" element={<AiChatbotBuilderPage />} />
+                            <Route path="/ai-cybersecurity" element={<AiCybersecurityPage />} />
+                            <Route path="/ai-customer-support" element={<AiCustomerSupportPage />} />
+                            <Route path="/ai-data-analytics" element={<AiDataAnalyticsPage />} />
+                            <Route path="/ai-workflow-automation" element={<AiWorkflowAutomationPage />} />
+                            <Route path="/ai-content-generator" element={<AiContentGeneratorPage />} />
+                            
+                            {/* IT Service Pages */}
+                            <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
+                            <Route path="/cybersecurity-solutions" element={<CybersecuritySolutionsPage />} />
+                            <Route path="/web-development" element={<WebDevelopmentPage />} />
+                            <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
+                            <Route path="/cloud-migration" element={<CloudMigrationPage />} />
+                            
+                            {/* Company Pages */}
+                            <Route path="/team" element={<TeamPage />} />
+                            
+                            {/* Additional Service Pages */}
+                            <Route path="/cybersecurity" element={<CybersecurityPage />} />
+                            <Route path="/data-analytics" element={<DataAnalyticsPage />} />
+                          </Routes>
+                        </Suspense>
+                      </main>
+                      <Footer />
+                    </div>
+                  </AccessibilityEnhancer>
+                </EnhancedAccessibility>
+              </PerformanceOptimizer>
+            </AnalyticsProvider>
+          </AppWithPerformanceMonitoring>
+        </Router>
       </HelmetProvider>
-    </ErrorBoundary>
-  );
+    </EnhancedErrorBoundary>
+  )
 }
+App.displayName = 'App'
+export default App

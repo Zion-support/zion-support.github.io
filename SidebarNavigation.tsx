@@ -1,55 +1,49 @@
-import { Menu, X, Home, User, Settings } from 'lucide-react';
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-
-const SidebarNavigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
+import { X, Home, User, Settings, HelpCircle } from 'lucide-react'
+import React from 'react'
+import { Link } from 'react-router-dom'
+interface SidebarNavigationProps {
+  isOpen: boolean
+  onClose: () => void
+}
+const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }) => {
   const navigationItems = [
-    { name: 'Dashboard', href: '/dashboard', icon: Home },
-    { name: 'Profile', href: '/profile', icon: User },
-    { name: 'Settings', href: '/settings', icon: Settings },
-  ];
-
+    { name: 'Home', href: '/', icon: Home },
+    { name: 'About', href: '/about', icon: User },
+    { name: 'Services', href: '/services', icon: Settings },
+    { name: 'Contact', href: '/contact', icon: HelpCircle },
+  ]
   return (
-    <div className="flex h-screen bg-gray-100">
+    <React.Fragment>
+      {/* Overlay */}
+      {isOpen && (
+        <$2 />
+          className="fixed inset-0 bg-black bg-opacity-50 z-40"
+          onClick={onClose}
+        />
+      )}
       {/* Sidebar */}
-      <div className={`${isOpen ? 'w-64' : 'w-16'} transition-all duration-300 bg-white shadow-lg`}>
-        <div className="p-4">
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="w-full flex items-center justify-center p-2 rounded-lg hover:bg-gray-100 transition-colors"
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
-        </div>
-
-        <nav className="px-4 space-y-2">
-          {navigationItems.map(item => {
-            //             const IconComponent = item.icon;
-            return (
-              <Link
-                key={item.name}
-                to={item.href}
-                className={`flex items-center p-3 rounded-lg hover:bg-gray-100 transition-colors mb-2 ${
-                  isOpen ? 'justify-start' : 'justify-center'
-                }`}
-              >
-                <item.icon className="w-5 h-5" />
-                {isOpen && <span className="ml-3 font-medium">{item.name}</span>}
-              </Link>
-            );
-          })}
-        </nav>
-      </div>
-
-      {/* Main Content */}
-      <div className="flex-1 p-8">
-        <h1 className="text-2xl font-bold text-gray-800">Dashboard</h1>
-        <p className="text-gray-600 mt-2">Welcome to your dashboard</p>
-      </div>
-    </div>
-  );
-};
-
-export default SidebarNavigation;
+      <$2 />
+        className={`fixed top-0 left-0 h-full w-64 bg-slate-900 transform transition-transform duration-300 ease-in-out z-50 ${
+          isOpen ? 'translate-x-0' : '-translate-x-full'
+        }`}
+      >
+        <div className="flex items-center justify-between p-4 border-b border-cyan-500/20">
+          <h2 className="text-white font-bold text-xl">Navigation
+          <$2 />
+            onClick={onClose}
+            className="text-gray-300 hover:text-cyan-400 transition-colors">
+            <X className="w-6 h-6" />
+        <nav className="mt-8">
+          {navigationItems.map((item) => (
+            <$2 />
+              key={item.name}
+              to={item.href}
+              className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-slate-800 transition-colors"
+              onClick={onClose}
+            >
+              <item.icon className="w-5 h-5" />
+              <span>{item.name}
+          ))}
+  )
+}
+export default SidebarNavigation</div></span></h2></nav>

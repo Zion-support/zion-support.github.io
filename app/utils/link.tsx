@@ -1,39 +1,48 @@
-import React from 'react';
 
-interface LinkProps {
-  href: string;
-  children: React.ReactNode;
+  children: React.ReactNode;,
   className?: string;
   target?: string;
   rel?: string;
   onClick?: () => void;
-  'aria-label'?: string;
+  'aria-label'?: string,}
 }
-
-export const Link: React.FC<LinkProps> = ({
+export const Link: React.FC<LinkProps>= ({,}export const Link: React.FC<LinkProps> = ({,}href,
+  href: string,
+  children: React.ReactNode;,
+  className?: string;
+  target?: string;
+  rel?: string;
+  onClick?: () => void;
+  'aria-label'?: string,}
+}
+export const Link: React.FC<LinkProps> = ({,
+  href: string
+  children: React.ReactNode
+  className?: string
+  target?: string
+  rel?: string
+  onClick?: () => void
+  'aria-label'?: string,}
+}
+export const Link: React.FC<LinkProps>= ({}
+export const Link: React.FC</LinkProps><LinkProps> = ({}
   href,
+  href: string,
+  children: React.ReactNode
+  className?: string
+  target?: string
+  rel?: string
+  onClick?: () => void
+  'aria-label'?: string,}
+}
+export const Link: React.FC</LinkProps><LinkProps> = ({
+    ,
+  href
   children,
   className,
   target,
   rel,
   onClick,
-  'aria-label': ariaLabel,
-  ...props
-}) => {
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (onClick) {
-      onClick();
-    }
-
-    // Handle internal navigation
-    if (href.startsWith('/') && !href.startsWith('//')) {
-      e.preventDefault();
-      window.location.href = href;
-    }
-  };
-
-  return (
-    <a
       href={href}
       className={className}
       target={target}
@@ -41,10 +50,9 @@ export const Link: React.FC<LinkProps> = ({
       onClick={handleClick}
       aria-label={ariaLabel}
       {...props}
-    >
-      {children}
+    >{children}</a>
     </a>
-  );
-};
-
-export default Link;
+      aria-label={ariaLabel})
+      {...props})
+    >)
+      {children})

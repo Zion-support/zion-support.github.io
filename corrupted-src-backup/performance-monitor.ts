@@ -1,26 +1,22 @@
 class PerformanceMonitor {
-  private static instance: PerformanceMonitor;
-  private isInitialized: boolean = false;
-
+  private static instance: PerformanceMonitor
+  private isInitialized: boolean = false,
+,
+class PerformanceMonitor {/* TODO: Fix JSX expression */}
   private constructor() {}
 
-  static getInstance(): PerformanceMonitor {
-    if (!PerformanceMonitor.instance) {
-      PerformanceMonitor.instance = new PerformanceMonitor();
+  static getInstance(): PerformanceMonitor {/* TODO: Fix JSX expression */}
     }
-    return PerformanceMonitor.instance;
+    return PerformanceMonitor.instance
   }
 
-  init(): void {
-    if (this.isInitialized) {
-      return;
+  init(): void {/* TODO: Fix JSX expression */}
     }
-    this.isInitialized = true;
+    this.isInitialized = true
     //     }
 
-  cleanup(): void {
-    this.isInitialized = false;
+  cleanup(): void {/* TODO: Fix JSX expression */}
     //     }
 }
 
-export default PerformanceMonitor;
+export default PerformanceMonitor

@@ -1,232 +1,389 @@
+export const logger = {
+  debug: (message: string, ...args: any[]) => {
+    if (process.env.NODE_ENV === 'development') {
+      console.debug(`[DEBUG] ${message}`, ...args)
+    }
+  },
+  info: (message: string, ...args: any[]) => {
+    console.info(`[INFO] ${message}`, ...args)
+  },
+  warn: (message: string, ...args: any[]) => {
+    console.warn(`[WARN] ${message}`, ...args)
+  },
+  error: (message: string, error?: Error, ...args: any[]) => {
+    console.error(`[ERROR] ${message}`, error, ...args)
+  }}
+
 /**
- * Comprehensive logging utility with multiple levels and outputs
+ * Enhanced Logger Utility
+ * Provides structured logging with different levels and contexts
  */
 
 export enum LogLevel {
+    // TODO: Add content
+  }
+
+}
   DEBUG = 0,
   INFO = 1,
   WARN = 2,
   ERROR = 3,
-  FATAL = 4,
+  FATAL = 4
 }
 
-export interface LogEntry {
-  level: LogLevel;
-  message: string;
-  timestamp: Date;
-  data?: unknown;
-  context?: string;
-  stack?: string;
-}
-
-export interface LoggerOptions {
-  minLevel?: LogLevel;
-  enableConsole?: boolean;
-  enableRemote?: boolean;
-  remoteEndpoint?: string;
-  context?: string;
-}
-
-/**
- * Logger class with multiple outputs and levels
- */
-export class Logger {
-  private static instance: Logger;
-  private minLevel: LogLevel;
-  private enableConsole: boolean;
-  private enableRemote: boolean;
-  private remoteEndpoint?: string;
-  private context?: string;
-  private logs: LogEntry[] = [];
-  private maxLogs = 1000;
-
-  private constructor(options: LoggerOptions = {}) {
-    this.minLevel = options.minLevel ?? (process.env['NODE_ENV'] === 'production' ? LogLevel.INFO : LogLevel.DEBUG);
-    this.enableConsole = options.enableConsole ?? true;
-    this.enableRemote = options.enableRemote ?? false;
-    this.remoteEndpoint = options.remoteEndpoint;
-    this.context = options.context;
+export interface LogContext {
+    // TODO: Add content
   }
 
-  public static getInstance(options?: LoggerOptions): Logger {
-    if (!Logger.instance) {
-      Logger.instance = new Logger(options);
+}
+  component?: string
+  action?: string
+  userId?: string
+  sessionId?: string
+  requestId?: string
+  [ke,
+  y: string]: unknown,
+}
+export interface LogMetadata {/* TODO: Fix JSX expression */}
+  O: Add content,}
+}
+  timestamp?: string
+  level?: LogLevel
+  message?: string
+  context?: LogContext
+  error?: Error
+  [ke,
+  y: string]: unknown,
+}
+class Logger {/* TODO: Fix JSX expression */}
+  O: Add content,}
+}
+  private,
+  logLevel: LogLevel,
+  private,
+  isDevelopment: boolean,
+  constructor() {/* TODO: Fix JSX expression */}
+  O: Add content,}
+}
+    this.logLevel = process.env.NODE_ENV === 'development' ? LogLevel.DEBUG : LogLevel.INFO
+    this.isDevelopment = process.env.NODE_ENV === 'development'
+  }
+  /**
+   * Set the minimum log level
+   */
+
+  setLogLevel(level: LogLevel): void {
+    // TODO: Add content
+  }
+
+}
+    this.logLevel = level
+  }
+  /**
+   * Get the current log level
+   */
+
+  getLogLevel(): LogLevel {
+    // TODO: Add content
+  }
+
+}
+    return this.logLevel
+  }
+  /**
+   * Log a debug message
+   */
+
+  debug(message: string, context?: LogContext, metadata?: Record
+          <string, unknown>): void {
+    // TODO: Add content
+  }
+
+}
+    this.log(LogLevel.DEBUG, message, context, metadata)
+  }
+  /**
+   * Log an info message
+   */
+
+  info(message: string, context?: LogContext, metadata?: Record
+          <string, unknown>): void {
+    // TODO: Add content
+  }
+
+}
+    this.log(LogLevel.INFO, message, context, metadata)
+  }
+  /**
+   * Log a warning message
+   */
+
+  warn(message: string, context?: LogContext, metadata?: Record
+          <string, unknown>): void {
+    // TODO: Add content
+  }
+
+}
+    this.log(LogLevel.WARN, message, context, metadata)
+  }
+  /**
+   * Log an error message
+   */
+//   error()
+    messag,
+  e: string,
+    errorOrContextOrMetadata?: Error | string | Record
+          <string, unknown>,
+    contextOrMetadata?: string | Record<string, unknown>,
+
+    metadata?: Record<string, unknown>
+  ): void {
+    // TODO: Add content
+  }
+
+}
+    let,
+  error: Error | undefined,
+    let,
+  context: LogContext | undefined,
+    let,
+  meta: Record,
+          <string, unknown> | undefined
+    // Handle different parameter combinations
+    if (errorOrContextOrMetadata instanceof Error) {/* TODO: Fix JSX expression */}
+  O: Add content,}
+}
+      error = errorOrContextOrMetadata
+      context = contextOrMetadata as LogContext
+      meta = metadata
+    } else if (typeof errorOrContextOrMetadata === 'string') {/* TODO: Fix JSX expression */}
+  O: Add content,}
+}
+      context = {/* TODO: Fix JSX expression */}
+  t: errorOrContextOrMetadata }
+      meta = contextOrMetadata as Record
+          <string>
+    } else if (typeof errorOrContextOrMetadata === 'object') {/* TODO: Fix JSX expression */}
+  O: Add content,}
+}
+      context = errorOrContextOrMetadata as LogContext
+      meta = contextOrMetadata as Record
+          <string>
     }
-    return Logger.instance;
+    this.log(LogLevel.ERROR, message, context, { ...meta, error })
+  )
   }
-
   /**
-   * Log debug message
+   * Log a fatal error message
    */
-  public debug(message: string, data?: unknown): void {
-    this.log(LogLevel.DEBUG, message, data);
+
+  fatal(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {
+    // TODO: Add content
   }
 
-  /**
-   * Log info message
-   */
-  public info(message: string, data?: unknown): void {
-    this.log(LogLevel.INFO, message, data);
+}
+    this.log(LogLevel.FATAL, message, context, metadata)
   }
-
-  /**
-   * Log warning message
-   */
-  public warn(message: string, data?: unknown): void {
-    this.log(LogLevel.WARN, message, data);
-  }
-
-  /**
-   * Log error message
-   */
-  public error(message: string, error?: Error | unknown): void {
-    const stack = error instanceof Error ? error.stack : undefined;
-    this.log(LogLevel.ERROR, message, error, stack);
-  }
-
-  /**
-   * Log fatal message
-   */
-  public fatal(message: string, error?: Error | unknown): void {
-    const stack = error instanceof Error ? error.stack : undefined;
-    this.log(LogLevel.FATAL, message, error, stack);
-  }
-
   /**
    * Core logging method
    */
-  private log(level: LogLevel, message: string, data?: unknown, stack?: string): void {
-    if (level < this.minLevel) {
-      return;
-    }
-
-    const entry: LogEntry = {
-      level,
-      message,
-      timestamp: new Date(),
-      data,
-      context: this.context,
-      stack,
-    };
-
-    // Store log entry
-    this.logs.push(entry);
-    if (this.logs.length > this.maxLogs) {
-      this.logs.shift();
-    }
-
-    // Console output
-    if (this.enableConsole) {
-      this.logToConsole(entry);
-    }
-
-    // Remote logging
-    if (this.enableRemote && this.remoteEndpoint) {
-      this.logToRemote(entry);
-    }
+//   private log()
+    leve,
+  l: LogLevel,
+    messag,
+  e: string,
+    context?: LogContext,
+    metadata?: Record
+          <string, unknown>
+  ): void {
+    // TODO: Add content
   }
 
+}
+    // Check if we should log this level
+    if (level;)
+          < this.logLevel) {/* TODO: Fix JSX expression */}
+  O: Add content,}
+}
+      return
+    }
+      timestam,
+  p: new Date().toISOString(),
+//       level,
+//       message,
+//       context,
+//       ...metadata
+    }
+    // Format the log entry
+    // Output to console in development
+    if (this.isDevelopment && typeof console !== 'undefined') {/* TODO: Fix JSX expression */}
+  O: Add content,}
+}
+      this.outputToConsole(level, formattedMessage, logEntry)
+    }
+    // In production, you might want to send to a logging service
+    if (!this.isDevelopment) {/* TODO: Fix JSX expression */}
+  O: Add content,}
+}
+      this.sendToLoggingService(logEntry)
+    }
+  }
   /**
-   * Output to console
+   * Format a log entry for output
    */
-  private logToConsole(entry: LogEntry): void {
-//     const prefix = `[${LogLevel[entry.level]}] ${entry.timestamp.toISOString()}`;
-//     const message = entry.context ? `${prefix} [${entry.context}] ${entry.message}` : `${prefix} ${entry.message}`;
 
-    switch (entry.level) {
-      case LogLevel.DEBUG:
-        if (process.env['NODE_ENV'] === 'development') {
-//           if (process.env.DEV) { }
-        }
-        break;
-      case LogLevel.INFO:
-//         if (process.env['NODE_ENV'] === 'development') { if (process.env.DEV) { } }
-        break;
-      case LogLevel.WARN:
-//         break;
-      case LogLevel.ERROR:
-      case LogLevel.FATAL:
-//         console.error(message, entry.data ?? '', entry.stack ?? '');
-        break;
-    }
+  private formatLogEntry(entry: LogMetadata): string {
+    // TODO: Add content
   }
 
+}
+    const levelStr = this.getLevelString(entry.level || LogLevel.INFO)
+    const timestamp = entry.timestamp || new Date().toISOString()
+    const contextStr = entry.context ? ` [${this.formatContext(entry.context)}]` : '';`
+    const metadataStr = entry.metadata ? ` ${JSON.stringify(entry.metadata)}` : '';`
+    return `[${timestamp}] ${levelStr}${contextStr}: ${entry.message}${metadataStr}`
+  }
   /**
-   * Send to remote logging service
+   * Format context object for display
    */
-  private async logToRemote(entry: LogEntry): Promise<void> {
-    if (!this.remoteEndpoint || typeof fetch === 'undefined') {
-      return;
-    }
 
-    try {
-      await fetch(this.remoteEndpoint, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(entry),
-      });
-    } catch (error) {
-      // Silent fail to prevent logging loops
-      if (process.env['NODE_ENV'] === 'development') {
-//         console.error('Failed to send log to remote:', error);
-      }
-    }
+  private formatContext(context: LogContext): string {
+    // TODO: Add content
   }
 
+}
+    const,
+  parts: string[] = [],`
+    if (context.component) parts.push(`componen)`
+  t:${context.component}`);`
+    if (context.action) parts.push(`actio)`
+  n:${context.action}`);`
+    if (context.userId) parts.push(`use)`
+  r:${context.userId}`);`
+    if (context.sessionId) parts.push(`sessio)`
+  n:${context.sessionId}`);`
+    if (context.requestId) parts.push(`reques)`
+  t:${context.requestId}`)
+    return parts.join(', ')
+  }
   /**
-   * Get recent logs
+   * Output to console with appropriate styling
    */
-  public getLogs(count?: number): LogEntry[] {
-    if (count) {
-      return this.logs.slice(-count);
-    }
-    return [...this.logs];
+
+  private outputToConsole(level: LogLevel, message: string, entry: LogMetadata): void {
+    // TODO: Add content
   }
 
-  /**
-   * Clear all logs
-   */
-  public clearLogs(): void {
-    this.logs = [];
-  }
-
-  /**
-   * Export logs as JSON
-   */
-  public exportLogs(): string {
-    return JSON.stringify(this.logs, null, 2);
-  }
-
-  /**
-   * Set minimum log level
-   */
-  public setMinLevel(level: LogLevel): void {
-    this.minLevel = level;
-  }
-
-  /**
-   * Create a child logger with context
-   */
-  public createChild(context: string): Logger {
-    const child = new Logger({
-      minLevel: this.minLevel,
-      enableConsole: this.enableConsole,
-      enableRemote: this.enableRemote,
-      remoteEndpoint: this.remoteEndpoint,
-      context: this.context ? `${this.context}:${context}` : context,
-    });
-    return child;
-  }
+}
+    if (typeof console === 'undefined') return
+    const styles = this.getConsoleStyles(level)
+    switch (level) {/* TODO: Fix JSX expression */}
+  O: Add content,}
 }
 
-// Export singleton instance
-export const logger = Logger.getInstance();
+      case LogLevel.DEBUG:
 
-// Utility function to create child loggers
-export const createLogger = (context: string, options?: LoggerOptions): Logger => {
-  return Logger.getInstance(options).createChild(context);
-};
+        console.debug(`%c${message}`, styles, entry)
+        break
+      case LogLevel.INF,
+  O:`
+        // console.info(`%c${message}`, styles, entry)
+        break
+      case LogLevel.WAR,
+  N:`
+        // // console.warn(`%c${message}`, styles, entry)
+        break
+      case LogLevel.ERRO,
+  R:
+      case LogLevel.FATA,
+  L:`
+        // // console.error(`%c${message}`, styles, entry)
+        break
+    }
+  }
+  /**
+   * Get console styles for different log levels
+   */
 
-export default logger;
+  private getConsoleStyles(level: LogLevel): string {
+    // TODO: Add content
+  }
+
+}
+    switch (level) {/* TODO: Fix JSX expression */}
+  O: Add content,}
+}
+
+      case LogLevel.DEBUG: return 'color: #6B7280; font-weight: normal;'
+      case LogLevel.INFO:
+        return 'color: #3B82F6; font-weight: normal;'
+      case LogLevel.WARN:
+        return 'color: #F59E0B; font-weight: bold;'
+      case LogLevel.ERROR:
+        return 'color: #EF4444; font-weight: bold;'
+      case LogLevel.FATAL:
+        return 'color: #DC2626; font-weight: bold; background: #FEF2F2;',,
+    default: return 'color: #6B7280; font-weight: normal,'
+
+    }
+  }
+  /**
+   * Send log entry to external logging service
+   */
+
+  private sendToLoggingService(entry: LogMetadata): void {
+    // TODO: Add content
+  }
+
+}
+    // In a real application, you would send this to your logging service
+    // For,
+  example: Sentry, LogRocket, DataDog, etc.
+    // Example,
+  implementation:
+    // fetch('/api/logs', {/* TODO: Fix JSX expression */}
+  O: Add content,}
+}
+    //   metho,
+  d: 'POST',
+    //   header,
+  s: {// 'Content-Type': 'application/json'},
+    //   bod)
+  y: JSON.stringify(entry)
+    // }).catch(err => {/* TODO: Fix JSX expression */})
+  service:', err);}
+    // })
+  }
+  /**
+   * Get string representation of log level
+   */
+
+  private getLevelString(level: LogLevel): string {
+    // TODO: Add content
+  }
+
+}
+    switch (level) {/* TODO: Fix JSX expression */}
+  O: Add content,}
+}
+
+      case LogLevel.DEBUG: return 'DEBUG',
+      case LogLevel.INFO:
+
+        return 'INFO'
+      case LogLevel.WAR,
+  N:
+        return 'WARN'
+      case LogLevel.ERRO,
+  R:
+        return 'ERROR'
+      case LogLevel.FATA,
+  L: return 'FATAL',,
+    defaul,
+  t:
+        return 'UNKNOWN'
+    }
+  }
+}
+export const logger = new Logger()`
+

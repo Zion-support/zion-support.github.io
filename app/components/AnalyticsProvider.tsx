@@ -1,106 +1,109 @@
-import React, { useEffect } from 'react';
+<<<<<<< HEAD
+  if (!context) {
+    throw new Error('useAnalytics must be used within an AnalyticsProvider')}return context;
 
-const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  useEffect(() => {
-    // Initialize Google Analytics
-    const initAnalytics = () => {
-      const GA_TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID || 'G-XXXXXXXXXX';
+import React, { createContext, useContext, useEffect, ReactNode } from 'react';
+
+interface AnalyticsContextType {
+  trackEvent: (eventName: string, parameters?: Record<string, any>) => void;
+  trackPageView: (pageName: string, pagePath: string) => void;
+}
+'use client'
+import React, { createContext, useContext, useEffect, ReactNode } from 'react'
+interface AnalyticsContextType {
+    trackEvent: (eventName: string, parameters?: Record<string, any>) => void
+  trackPageView: (pageName: string, pagePath: string) => void
+  }
+>>>>>>> cursor/website-audit-and-update-with-deployment-acbe
+
+const AnalyticsContext = createContext</string><AnalyticsContextType | undefined>(undefined)
+export const useAnalytics = () => {
+}
+>>>>>>> cursor/website-audit-and-update-with-deployment-acbe
+
+    if (typeof window === 'undefined') return;
+
+    }
+  }
+
+        page_title: pageName,
+        page_location: window.location.origin + pagePath,})
+    }
+
+    // Console logging for development;
+    if (process.env.NODE_ENV === 'development') {console.log('Page View:', pageName, pagePath)}}
+  const trackPageView = (pageName: string) => {
+    if (!isInitialized) return
+
+    // Track page view
+    if (typeof window !== 'undefined') {
+      console.log('Page View:', pageName)
       
-      // Load Google Analytics script
-      const script = document.createElement('script');
-      script.async = true;
-      script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`;
-      document.head.appendChild(script);
+      // Example: Send to Google Analytics
+      // gtag('config', 'GA_MEASUREMENT_ID', {
+      //   page_title: pageName,
+      //   page_location: window.location.href
+      // })
+    }
+  }
+>>>>>>> cursor/website-audit-and-update-with-deployment-acbe
 
-      // Initialize gtag
-      window.dataLayer = window.dataLayer || [];
-      function gtag(...args: any[]) {
-        window.dataLayer.push(args);
+      // Custom analytics tracking
+      if (enableDebug) {
+        console.log('Analytics Event:', eventName, parameters);
       }
-      (window as any).gtag = gtag;
-      
-      gtag('js', new Date());
-      gtag('config', GA_TRACKING_ID, {
-        page_title: document.title,
-        page_location: window.location.href,
-        send_page_view: true
-      });
-    };
 
-    // Track page views
-    const trackPageView = () => {
-      if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('config', GA_TRACKING_ID, {
-          page_title: document.title,
-          page_location: window.location.href,
-          send_page_view: true
-        });
+      // Send to custom analytics endpoint
+      fetch('/api/analytics/event', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          event: eventName,
+          parameters,
+          timestamp: new Date().toISOString(),
+          url: window.location.href,
+          userAgent: navigator.userAgent
+        })
+      }).catch(error => {
+        if (enableDebug) {
+          console.error('Analytics tracking error:', error);
+        }
+      });
+
+    } catch (error) {
+      if (enableDebug) {
+        console.error('Analytics error:', error);
       }
-    };
+    }
+  };
 
-    // Track user interactions
-    const trackInteractions = () => {
-      // Track button clicks
-      document.addEventListener('click', (e) => {
-        const target = e.target as HTMLElement;
-        if (target.tagName === 'A' || target.tagName === 'BUTTON') {
-          const text = target.textContent?.trim() || '';
-          const href = target.getAttribute('href') || '';
-          
-          if ((window as any).gtag) {
-            (window as any).gtag('event', 'click', {
-              event_category: 'engagement',
-              event_label: text,
-              value: href
-            });
-          }
-        }
-      });
+  const trackPageView = (pageName: string, pagePath: string) => {
 
-      // Track form submissions
-      document.addEventListener('submit', (e) => {
-        const form = e.target as HTMLFormElement;
-        if ((window as any).gtag) {
-          (window as any).gtag('event', 'form_submit', {
-            event_category: 'engagement',
-            event_label: form.id || 'contact_form'
-          });
-        }
-      });
-
-      // Track phone number clicks
-      document.addEventListener('click', (e) => {
-        const target = e.target as HTMLElement;
-        if (target.href && target.href.startsWith('tel:')) {
-          if ((window as any).gtag) {
-            (window as any).gtag('event', 'phone_click', {
-              event_category: 'engagement',
-              event_label: 'phone_number',
-              value: target.href
-            });
-          }
-        }
-      });
-    };
-
-    // Initialize analytics
-    initAnalytics();
-    trackPageView();
-    trackInteractions();
-
-    // Track route changes (for SPA)
-    const handleRouteChange = () => {
-      trackPageView();
-    };
-
-    window.addEventListener('popstate', handleRouteChange);
-
-    return () => {
-      window.removeEventListener('popstate', handleRouteChange);
-    };
-  }, []);
-
-  return <>{children}</>;
+  const value: AnalyticsContextType = {,
+    trackEvent,
+  );
 };
 
+export { AnalyticsProvider };
 export default AnalyticsProvider;
+
+// Extend Window interface for gtag
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void;
+    dataLayer: any[];
+  }
+}
+  )
+}
+
+export default undefined
+  )
+}
+
+export default AnalyticsProvider
+>>>>>>> cursor/website-audit-and-update-with-deployment-acbe
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-635f

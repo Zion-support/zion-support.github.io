@@ -1,198 +1,267 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, MessageCircle, Clock, Users, Shield, Zap } from 'lucide-react';
+    const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+  },
+    {
+    icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics'],
+  },
+    {
+    icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics'],
+  },
+    {
+    icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'],
+  }
+    ]
+const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+  ];
+return (
+    <>
+  </>
+      <Helmet>
+        <title>Ai Customer Support - Zion Tech Group</title>
+    'Gain competitive advantage with advanced technology'
+  ]
+return (
+    <>
+      <Helmet>
+        </Helmet><title>Ai Customer Support - Zion Tech Group</title>
+        <meta name="description" content="AI-powered solution" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+      </Helmet>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} /></div>
+          <div className="relative max-w-7xl mx-auto text-center"></div>
+            <h1>Ai Customer Support;</h1>
+            </h1>
+              </button>
+              <button>View Demo,</button>
+            <p></p>
+              Advanced AI-powered ai customer support solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center" / /></div>
+              <button></button>
+                Get Started
+              </button>
+              <button></button>
+                View Demo,
+              </button>
+            </div>
+          </div>
+        </section>
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">Ai Customer Support
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Advanced AI-powered ai customer support solution for modern businesses.
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Get Started
+              <button className="border border-sky-400 text-sky-400 hover:bg-sky-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">View Demo
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          </section>< className="$2 />
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,
+              {features.map((feature, index) => (
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {
+    feature.benefits && (
+                    <ul>
+                      {feature.benefits.map((benefit, idx) => (
+  }
+                        </ul><li>
+                          </li><CheckCircle>
 
-const AICustomerSupportPage: React.FC = () => {
   const features = [
     {
-      icon: <MessageCircle className="w-6 h-6" />,
-      title: '24/7 AI Chat Support',
-      description: 'Provide instant, intelligent customer support with our advanced AI chatbot that understands context and resolves issues automatically.',
-      benefits: ['Instant responses', 'Context awareness', 'Multi-language support', 'Escalation to humans']
+      icon: Brain,
+      title: 'AI-Powered Chatbots',
+      description: 'Intelligent conversational AI that understands context and provides accurate responses',
+      details: ['Natural Language Processing', 'Context Awareness', 'Multi-language Support', 'Learning Capabilities']
     },
     {
-      icon: <Clock className="w-6 h-6" />,
-      title: 'Response Time Optimization',
-      description: 'Reduce average response time from hours to seconds with intelligent routing and automated responses.',
-      benefits: ['90% faster responses', 'Smart routing', 'Priority queuing', 'Auto-escalation']
+      icon: MessageCircle,
+      title: 'Multi-Channel Support',
+      description: 'Seamless integration across all customer touchpoints',
+      details: ['Live Chat', 'Email Support', 'Social Media', 'Phone Integration']
     },
     {
-      icon: <Users className="w-6 h-6" />,
-      title: 'Human-AI Collaboration',
-      description: 'Seamlessly blend AI automation with human expertise for complex issues that require personal touch.',
-      benefits: ['Smart handoffs', 'Context preservation', 'Agent assistance', 'Quality assurance']
+      icon: Zap,
+      title: 'Instant Response',
+      description: '24/7 automated support with sub-second response times',
+      details: ['Real-time Processing', 'Auto-escalation', 'Priority Queuing', 'Smart Routing']
     },
     {
-      icon: <Shield className="w-6 h-6" />,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with end-to-end encryption, GDPR compliance, and SOC 2 certification.',
-      benefits: ['Data encryption', 'Compliance ready', 'Access controls', 'Audit trails']
+      icon: Shield,
+      title: 'Secure & Compliant',
+      description: 'Enterprise-grade security with full compliance support',
+      details: ['GDPR Compliant', 'SOC 2 Type II', 'End-to-end Encryption', 'Data Privacy']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive insights into customer interactions and satisfaction',
+      details: ['Sentiment Analysis', 'Performance Metrics', 'Customer Journey Mapping', 'Predictive Analytics']
+    },
+    {
+      icon: Clock,
+      title: 'Always Available',
+      description: 'Round-the-clock support without human limitations',
+      details: ['24/7 Operation', 'Holiday Coverage', 'Scalable Infrastructure', 'Zero Downtime']
     }
-  ];
+  ]
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$199',
+      price: '$99',
       period: '/month',
-      description: 'Perfect for small businesses with basic support needs',
+      description: 'Perfect for small businesses',
       features: [
-        '1,000 conversations/month',
+        'Up to 1,000 conversations/month',
         'Basic AI chatbot',
-        'Email integration',
-        'Standard analytics',
         'Email support',
-        '5 team members'
+        'Standard analytics',
+        '1 integration'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$499',
+      price: '$299',
       period: '/month',
-      description: 'Ideal for growing businesses with moderate support volume',
+      description: 'Ideal for growing companies',
       features: [
-        '5,000 conversations/month',
-        'Advanced AI chatbot',
+        'Up to 10,000 conversations/month',
+        'Advanced AI with learning',
         'Multi-channel support',
         'Advanced analytics',
-        'Priority support',
-        '25 team members',
-        'Custom integrations',
-        'Knowledge base'
+        '5 integrations',
+        'Priority support'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$1,299',
+      price: '$799',
       period: '/month',
-      description: 'For large organizations with high support volume',
+      description: 'For large organizations',
       features: [
         'Unlimited conversations',
-        'Premium AI chatbot',
-        'All channels supported',
-        'Custom analytics',
-        '24/7 phone support',
-        'Unlimited team members',
-        'Custom integrations',
-        'Advanced knowledge base',
-        'API access',
-        'White-label options'
+        'Custom AI training',
+        'All channels included',
+        'Custom analytics dashboard',
+        'Unlimited integrations',
+        'Dedicated support',
+        'Custom deployment'
       ],
       popular: false
     }
-  ];
+  ]
+
+  const stats = [
+    { value: '95%', label: 'Customer Satisfaction', icon: <Star className="w-8 h-8 text-yellow-400" /> },
+    { value: '2.3s', label: 'Average Response Time', icon: <Clock className="w-8 h-8 text-green-400" /> },
+    { value: '24/7', label: 'Availability', icon: <Zap className="w-8 h-8 text-blue-400" /> },
+    { value: '50%', label: 'Cost Reduction', icon: <BarChart className="w-8 h-8 text-purple-400" /> }
+  ]
 
   const testimonials = [
     {
-      name: 'Jennifer Martinez',
-      role: 'Customer Success Manager',
-      company: 'E-commerce Plus',
-      content: 'Our customer satisfaction increased by 40% after implementing Zion Tech Group\'s AI support. Response times went from 2 hours to 30 seconds.',
-      rating: 5
+      name: 'Sarah Johnson',
+      role: 'Customer Success Manager, TechCorp',
+      content: 'Our AI customer support reduced response time by 80% and increased customer satisfaction to 95%.',
+      rating: 5,
+      company: 'TechCorp'
     },
     {
-      name: 'David Kim',
-      role: 'VP of Operations',
-      company: 'TechStart Inc.',
-      content: 'The AI handles 80% of our support tickets automatically, allowing our team to focus on complex issues. It\'s been a game-changer.',
-      rating: 5
+      name: 'Michael Chen',
+      role: 'VP Operations, DataFlow Inc',
+      content: 'The AI system handles 90% of our customer inquiries automatically, allowing our team to focus on complex issues.',
+      rating: 5,
+      company: 'DataFlow Inc'
     },
     {
-      name: 'Lisa Thompson',
-      role: 'Head of Customer Experience',
-      company: 'Global Services',
-      content: 'The multilingual support capability helped us expand to 15 new markets without hiring additional support staff.',
-      rating: 5
+      name: 'Emily Rodriguez',
+      role: 'Head of Support, InnovateLab',
+      content: 'Implementation was seamless and the results exceeded our expectations. Highly recommended!',
+      rating: 5,
+      company: 'InnovateLab'
     }
-  ];
-
-  const stats = [
-    { number: '95%', label: 'Customer Satisfaction' },
-    { number: '90%', label: 'Faster Response Time' },
-    { number: '80%', label: 'Issues Resolved Automatically' },
-    { number: '24/7', label: 'Always Available' }
-  ];
+  ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
+      
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 neon-text">
-              AI Customer Support
+      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AI-Powered <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Customer Support</span>
             </h1>
-            <p className="text-xl md:text-2xl text-cyan-400 mb-8">
-              Transform customer service with intelligent AI that never sleeps
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your customer experience with intelligent AI chatbots and automated support systems. 
+              Reduce response times by 80% while increasing customer satisfaction.
             </p>
-            <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
-              Provide instant, intelligent customer support 24/7 with our advanced AI platform. 
-              Reduce response times by 90% while increasing customer satisfaction by 40%.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <a
-                href="tel:+13024640950"
-                className="cyber-button inline-flex items-center justify-center"
-              >
-                📞 Call Now: (302) 464-0950
-              </a>
-              <a
-                href="/contact"
-                className="cyber-button inline-flex items-center justify-center"
-                style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
-              >
-                Get Free Demo
-              </a>
-            </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.number}</div>
-                  <div className="text-gray-300">{stat.label}</div>
-                </div>
-              ))}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                Schedule Demo
+              </button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Powerful AI Features
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to provide exceptional customer support at scale
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
-            {features.map((feature, index) => (
-              <div key={index} className="cyber-card hologram-card">
-                <div className="flex items-start space-x-4">
-                  <div className="text-cyan-400 flex-shrink-0">
-                    {feature.icon}
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
-                    <p className="text-gray-300 mb-4 leading-relaxed">{feature.description}</p>
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="flex items-center text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+      {/* Stats Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="flex justify-center mb-4">
+                  {stat.icon}
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
+                </div>
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2">
+                  {stat.value}
+                </div>
+                <div className="text-gray-300">
+                  {stat.label}
                 </div>
               </div>
             ))}
@@ -200,69 +269,126 @@ const AICustomerSupportPage: React.FC = () => {
         </div>
       </section>
 
-      {/* How It Works Section */}
-      <section className="py-20 bg-gradient-to-r from-slate-800 to-purple-900">
-        <div className="container mx-auto px-4">
+      {/* Features Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              How It Works
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Powerful AI Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Simple setup, powerful results in just 3 steps
+              Our AI customer support platform combines cutting-edge technology with user-friendly design.
             </p>
           </div>
-
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-cyan-400 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl font-bold text-slate-900">1</span>
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Connect & Configure</h3>
-              <p className="text-gray-300">
-                Connect your existing support channels and configure the AI with your knowledge base and brand voice.
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Key Features
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Advanced AI technology that drives results
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-sky-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}
+                  <p className="text-gray-300 mb-4">{feature.description}
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                          {benefit}
+                      ))}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+          <div className="max-w-7xl mx-auto" / /></div>
+            <div className="text-center mb-16" / /></div>
+              <h2></h2>
+                Why Choose Our Solution?
+              </h2>
+              <p></p>
+                Proven results that drive business growth and efficiency
               </p>
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-purple-400 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl font-bold text-slate-900">2</span>
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">AI Learns & Responds</h3>
-              <p className="text-gray-300">
-                The AI analyzes customer queries and provides intelligent responses, escalating complex issues to human agents.
-              </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" / /></div>
+              {benefits.map((benefit, index) => ()
+              ))}
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          </section>< className="$2 />
+            </div><div className="text-center mb-16">
+              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-pink-400 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl font-bold text-slate-900">3</span>
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Optimize & Scale</h3>
-              <p className="text-gray-300">
-                Monitor performance, gather insights, and continuously improve your customer support experience.
+          ))
+        </section>
+                Ready to Get Started?
+              </h2>
+              <p></p>
+                Contact our experts to discuss your requirements and get started today.
               </p>
+              <div className="flex flex-col sm: flex-row gap-4 justify-center" / /></div>
+                <button></button>
+                  Contact Us
+                </button>
+                <button></button>
+                  Learn More
+                </button>
+              </div>
             </div>
+          ))
+        </section>
+      </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mr-4">
+                    <feature.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white">{feature.title}</h3>
+                </div>
+                <p className="text-gray-300 mb-6">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.details.map((detail, detailIndex) => (
+                    <li key={detailIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                      {detail}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
-              Simple Pricing
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Simple, Transparent Pricing
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your support needs. All plans include our core AI features.
+            <p className="text-xl text-gray-300">
+              Choose the plan that fits your business needs. All plans include 30-day free trial.
             </p>
           </div>
-
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
-              <div key={index} className={`cyber-card hologram-card relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
+              <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-2xl p-8 relative ${
+                plan.popular ? 'ring-2 ring-cyan-400 bg-white/15' : ''
+              }`}>
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold flex items-center">
-                      <Star className="w-4 h-4 mr-1" />
+                    <span className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium">
                       Most Popular
                     </span>
                   </div>
@@ -270,12 +396,12 @@ const AICustomerSupportPage: React.FC = () => {
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-300 mb-4">{plan.description}</p>
-                  <div className="mb-4">
-                    <span className="text-5xl font-bold text-cyan-400">{plan.price}</span>
-                    <span className="text-gray-300">{plan.period}</span>
+                  <div className="flex items-baseline justify-center">
+                    <span className="text-4xl font-bold text-white">{plan.price}</span>
+                    <span className="text-gray-300 ml-1">{plan.period}</span>
                   </div>
                 </div>
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
@@ -283,16 +409,13 @@ const AICustomerSupportPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-                <a
-                  href="/contact"
-                  className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
-                    plan.popular
-                      ? 'bg-cyan-400 text-slate-900 hover:bg-cyan-300'
-                      : 'bg-gray-700 text-white hover:bg-gray-600'
-                  }`}
-                >
-                  Get Started
-                </a>
+                <button className={`w-full py-3 px-6 rounded-lg font-medium transition-all duration-300 ${
+                  plan.popular 
+                    ? 'bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white transform hover:scale-105' 
+                    : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
+                }`}>
+                  Start Free Trial
+                </button>
               </div>
             ))}
           </div>
@@ -300,20 +423,20 @@ const AICustomerSupportPage: React.FC = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-gradient-to-r from-slate-800 to-purple-900">
-        <div className="container mx-auto px-4">
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               What Our Customers Say
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Join thousands of satisfied customers who have transformed their support operations
+            <p className="text-xl text-gray-300">
+              Join hundreds of companies already using our AI customer support solutions.
             </p>
           </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="cyber-card hologram-card">
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
@@ -322,7 +445,8 @@ const AICustomerSupportPage: React.FC = () => {
                 <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
                 <div>
                   <div className="font-semibold text-white">{testimonial.name}</div>
-                  <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+                  <div className="text-cyan-400 text-sm">{testimonial.role}</div>
+                  <div className="text-gray-400 text-sm">{testimonial.company}</div>
                 </div>
               </div>
             ))}
@@ -331,37 +455,30 @@ const AICustomerSupportPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Customer Support?
           </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Start providing 24/7 intelligent customer support today. 
-            Join thousands of businesses already using our AI platform.
+          <p className="text-xl text-gray-300 mb-8">
+            Start your free trial today and see the difference AI can make in your customer experience.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:+13024640950"
-              className="cyber-button inline-flex items-center justify-center"
-            >
-              📞 Call Now: (302) 464-0950
-            </a>
-            <a
-              href="/contact"
-              className="cyber-button inline-flex items-center justify-center"
-              style={{background: 'linear-gradient(45deg, #8b5cf6, #ec4899)'}}
-            >
-              Get Free Demo
-            </a>
-          </div>
-          <div className="mt-8 text-sm text-gray-400">
-            <p>✓ Free 14-day trial • ✓ No setup fees • ✓ Cancel anytime</p>
+            <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+              <ArrowRight className="w-5 h-5 mr-2" />
+              Start Free Trial
+            </button>
+            <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-4 px-8 rounded-lg transition-all duration-300">
+              Contact Sales
+            </button>
           </div>
         </div>
       </section>
-    </div>
-  );
-};
 
-export default AICustomerSupportPage;
+      <Footer />
+    </div>
+  )
+}
+
+export default AiCustomerSupportPage
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9

@@ -1,179 +1,144 @@
-/**
- * Performance Monitoring Utility
- * Tracks and reports application performance metrics
- */
-
-export interface PerformanceMetric {
-  name: string;
-  value: number;
-  rating: 'good' | 'needs-improvement' | 'poor';
-  timestamp: number;
+// Performance monitoring utilities
+export interface PerformanceMetrics {
+  fcp: number
+  lcp: number
+  fid: number
+  cls: number
+  ttfb: number
 }
 
 export class PerformanceMonitor {
-  private static instance: PerformanceMonitor;
-  private metrics: Map<string, PerformanceMetric[]> = new Map();
-  private readonly maxMetricsPerType = 100;
-
-  private constructor() {
-    this.initializeObservers();
+  private metrics: PerformanceMetrics = {
+    fcp: 0,
+    lcp: 0,
+    fid: 0,
+    cls: 0,
+    ttfb: 0
   }
 
-  static getInstance(): PerformanceMonitor {
-    if (!PerformanceMonitor.instance) {
-      PerformanceMonitor.instance = new PerformanceMonitor();
+  private isInitialized = false
+  private observers: PerformanceObserver[] = []
+
+  constructor() {
+    if (typeof window !== 'undefined') {
+      this.init()
     }
-    return PerformanceMonitor.instance;
   }
 
-  private initializeObservers(): void {
-    if (typeof window === 'undefined') return;
+  init(): void {
+    if (this.isInitialized || typeof window === 'undefined') return;
+    this.isInitialized = true;
+    this.setupWebVitals();
+    this.setupCustomMetrics();
+  }
 
-    // Observe long tasks
-    if ('PerformanceObserver' in window) {
-      try {
-        const longTaskObserver = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            this.recordMetric('long-task', entry.duration);
+  private setupWebVitals(): void {
+    // First Contentful Paint
+    try {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries()
+        const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint')
+        if (fcpEntry) {
+          this.metrics.fcp = fcpEntry.startTime
+          this.reportMetric('FCP', this.metrics.fcp)
+        }
+      });
+      observer.observe({ entryTypes: ['paint'] });
+      this.observers.push(observer);
+    } catch (error) {
+      console.warn('Failed to observe FCP:', error)
+    }
+
+    // Largest Contentful Paint
+    try {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries()
+        const lastEntry = entries[entries.length - 1]
+        if (lastEntry) {
+          this.metrics.lcp = lastEntry.startTime
+          this.reportMetric('LCP', this.metrics.lcp)
+        }
+      })
+      observer.observe({ entryTypes: ['largest-contentful-paint'] })
+      this.observers.push(observer)
+    } catch (error) {
+      console.warn('Failed to observe LCP:', error);
+    }
+  }
+
+  private setupCustomMetrics(): void {
+    // First Input Delay
+    try {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          const fidEntry = entry as PerformanceEventTiming
+          this.metrics.fid = fidEntry.processingStart - fidEntry.startTime
+          this.reportMetric('FID', this.metrics.fid)
+        })
+      })
+      observer.observe({ entryTypes: ['first-input'] })
+      this.observers.push(observer)
+    } catch (error) {
+      console.warn('Failed to observe FID:', error);
+    }
+
+    // Cumulative Layout Shift
+    this.setupCLSObserver()
+  }
+
+  private setupCLSObserver(): void {
+    try {
+      let clsValue = 0
+      const clsObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries()
+        entries.forEach((entry) => {
+          if (!(entry as any).hadRecentInput) {
+            clsValue += (entry as any).value
+            this.metrics.cls = clsValue
+            this.reportMetric('CLS', this.metrics.cls)
           }
-        });
-        longTaskObserver.observe({ entryTypes: ['longtask'] });
-      } catch (e) {
-        console.warn('Failed to initialize long task observer:', e);
-      }
-    }
-  }
-
-  /**
-   * Record a performance metric
-   */
-  recordMetric(name: string, value: number): void {
-    const rating = this.getRating(name, value);
-    const metric: PerformanceMetric = {
-      name,
-      value,
-      rating,
-      timestamp: Date.now(),
-    };
-
-    if (!this.metrics.has(name)) {
-      this.metrics.set(name, []);
-    }
-
-    const metricsArray = this.metrics.get(name)!;
-    metricsArray.push(metric);
-
-    // Keep only the last N metrics
-    if (metricsArray.length > this.maxMetricsPerType) {
-      metricsArray.shift();
-    }
-  }
-
-  /**
-   * Get rating for a metric based on web vitals thresholds
-   */
-  private getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {
-    const thresholds: Record<string, { good: number; poor: number }> = {
-      'FCP': { good: 1800, poor: 3000 },
-      'LCP': { good: 2500, poor: 4000 },
-      'FID': { good: 100, poor: 300 },
-      'CLS': { good: 0.1, poor: 0.25 },
-      'TTFB': { good: 800, poor: 1800 },
-      'long-task': { good: 50, poor: 100 },
-    };
-
-    const threshold = thresholds[name] || { good: 100, poor: 500 };
-
-    if (value <= threshold.good) return 'good';
-    if (value <= threshold.poor) return 'needs-improvement';
-    return 'poor';
-  }
-
-  /**
-   * Get all metrics for a specific type
-   */
-  getMetrics(name?: string): PerformanceMetric[] {
-    if (name) {
-      return this.metrics.get(name) || [];
-    }
-
-    const allMetrics: PerformanceMetric[] = [];
-    this.metrics.forEach((metrics) => {
-      allMetrics.push(...metrics);
-    });
-    return allMetrics;
-  }
-
-  /**
-   * Get average value for a metric
-   */
-  getAverage(name: string): number {
-    const metrics = this.metrics.get(name) || [];
-    if (metrics.length === 0) return 0;
-
-    const sum = metrics.reduce((acc, metric) => acc + metric.value, 0);
-    return sum / metrics.length;
-  }
-
-  /**
-   * Get performance summary
-   */
-  getSummary(): Record<string, { average: number; count: number; rating: string }> {
-    const summary: Record<string, { average: number; count: number; rating: string }> = {};
-
-    this.metrics.forEach((metrics, name) => {
-      const average = this.getAverage(name);
-      const rating = this.getRating(name, average);
-      summary[name] = {
-        average,
-        count: metrics.length,
-        rating,
-      };
-    });
-
-    return summary;
-  }
-
-  /**
-   * Clear all metrics
-   */
-  clear(): void {
-    this.metrics.clear();
-  }
-
-  /**
-   * Measure execution time of a function
-   */
-  async measureAsync<T>(name: string, fn: () => Promise<T>): Promise<T> {
-    const start = performance.now();
-    try {
-      const result = await fn();
-      const duration = performance.now() - start;
-      this.recordMetric(name, duration);
-      return result;
+        })
+      })
+      clsObserver.observe({ entryTypes: ['layout-shift'] })
+      this.observers.push(clsObserver)
     } catch (error) {
-      const duration = performance.now() - start;
-      this.recordMetric(`${name}-error`, duration);
-      throw error;
+      console.warn('Failed to observe CLS:', error);
     }
   }
 
-  /**
-   * Measure execution time of a synchronous function
-   */
-  measure<T>(name: string, fn: () => T): T {
-    const start = performance.now();
-    try {
-      const result = fn();
-      const duration = performance.now() - start;
-      this.recordMetric(name, duration);
-      return result;
-    } catch (error) {
-      const duration = performance.now() - start;
-      this.recordMetric(`${name}-error`, duration);
-      throw error;
+  private reportMetric(name: string, value: number): void {
+    if (process.env.NODE_ENV === 'development') {
+      console.log(`Performance Metric - ${name}:`, value)
     }
+  }
+
+  getMetrics(): PerformanceMetrics {
+    return { ...this.metrics }
+  }
+
+  destroy(): void {
+    this.observers.forEach(observer => observer.disconnect())
+    this.observers = []
   }
 }
 
-export default PerformanceMonitor.getInstance();
+// Global performance monitoring
+let performanceMonitor: PerformanceMonitor | null = null
+
+export const measureWebVitals = (): void => {
+  if (typeof window === 'undefined') return
+  
+  if (!performanceMonitor) {
+    performanceMonitor = new PerformanceMonitor()
+  }
+}
+
+export const getPerformanceMetrics = (): PerformanceMetrics | null => {
+  return performanceMonitor?.getMetrics() || null
+}
+
+export const cleanupPerformanceMonitoring = (): void => {
+  performanceMonitor?.destroy()
+  performanceMonitor = null
+}
