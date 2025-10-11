@@ -47,12 +47,20 @@ const AiAnalyticsPage = React.lazy(() => import('./app/ai-analytics/page'));
 const AiAutomationPage = React.lazy(() => import('./app/ai-automation/page'));
 const AiChatbotBuilderPage = React.lazy(() => import('./app/ai-chatbot-builder/page'));
 const AiCybersecurityPage = React.lazy(() => import('./app/ai-cybersecurity/page'));
+const AiQuantumAiPlatformPage = React.lazy(() => import('./app/ai-quantum-ai-platform/page'));
+const AiHolographicAiAssistantPage = React.lazy(() => import('./app/ai-holographic-ai-assistant/page'));
 
 // IT Service Pages
 const CloudInfrastructurePage = React.lazy(() => import('./app/cloud-infrastructure/page'));
 const CybersecuritySolutionsPage = React.lazy(() => import('./app/cybersecurity-solutions/page'));
 const WebDevelopmentPage = React.lazy(() => import('./app/web-development/page'));
 const MobileDevelopmentPage = React.lazy(() => import('./app/mobile-development/page'));
+const QuantumCybersecurityPage = React.lazy(() => import('./app/it-services/quantum-cybersecurity/page'));
+
+// Micro SAAS Pages
+const AiCustomerInsightsPage = React.lazy(() => import('./app/micro-saas/ai-customer-insights/page'));
+const AiWorkflowAutomationProPage = React.lazy(() => import('./app/micro-saas/ai-workflow-automation-pro/page'));
+const AiSustainabilityTrackerPage = React.lazy(() => import('./app/micro-saas/ai-sustainability-tracker/page'));
 
 // Company Pages
 const TeamPage = React.lazy(() => import('./app/team/page'));
@@ -110,12 +118,20 @@ const App: React.FC = () => {
                             <Route path="/ai-automation" element={<AiAutomationPage />} />
                             <Route path="/ai-chatbot-builder" element={<AiChatbotBuilderPage />} />
                             <Route path="/ai-cybersecurity" element={<AiCybersecurityPage />} />
+                            <Route path="/ai-quantum-ai-platform" element={<AiQuantumAiPlatformPage />} />
+                            <Route path="/ai-holographic-ai-assistant" element={<AiHolographicAiAssistantPage />} />
                             
                             {/* IT Service Pages */}
                             <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
                             <Route path="/cybersecurity-solutions" element={<CybersecuritySolutionsPage />} />
                             <Route path="/web-development" element={<WebDevelopmentPage />} />
                             <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
+                            <Route path="/it-services/quantum-cybersecurity" element={<QuantumCybersecurityPage />} />
+                            
+                            {/* Micro SAAS Pages */}
+                            <Route path="/micro-saas/ai-customer-insights" element={<AiCustomerInsightsPage />} />
+                            <Route path="/micro-saas/ai-workflow-automation-pro" element={<AiWorkflowAutomationProPage />} />
+                            <Route path="/micro-saas/ai-sustainability-tracker" element={<AiSustainabilityTrackerPage />} />
                             
                             {/* Company Pages */}
                             <Route path="/team" element={<TeamPage />} />
