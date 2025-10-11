@@ -1,13 +1,12 @@
 'use client'
 import React, { useEffect } from 'react'
 
-<<<<<<< HEAD
 interface PerformanceOptimizerProps {
-  children: React.ReactNode;
-  enableImageOptimization?: boolean;
-  enableLazyLoading?: boolean;
-  enablePreloading?: boolean;
-  enableCodeSplitting?: boolean;
+  children: React.ReactNode
+  enableImageOptimization?: boolean
+  enableLazyLoading?: boolean
+  enablePreloading?: boolean
+  enableCodeSplitting?: boolean
 }
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
@@ -20,48 +19,53 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   useEffect(() => {
     // Preload critical resources
     if (enablePreloading) {
-      const preloadLink = document.createElement('link');
-      preloadLink.rel = 'preload';
-      preloadLink.href = '/fonts/inter.woff2';
-      preloadLink.as = 'font';
-      preloadLink.type = 'font/woff2';
-      preloadLink.crossOrigin = 'anonymous';
-      document.head.appendChild(preloadLink);
-    }
-  }, [enablePreloading]);
+      const preloadCriticalResources = () => {
+        const criticalImages = [
+          '/hero-bg.jpg',
+          '/logo.png'
+        ]
 
-  return <>{children}</>;
-};
-=======
-const PerformanceOptimizer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  useEffect(() => {
-    // Preload critical resources
-    const preloadCriticalResources = () => {
-      const criticalImages = [
-        '/hero-bg.jpg',
-        '/logo.png'
-      ]
+        criticalImages.forEach(src => {
+          const link = document.createElement('link')
+          link.rel = 'preload'
+          link.as = 'image'
+          link.href = src
+          document.head.appendChild(link)
+        })
+      }
 
-      criticalImages.forEach(src => {
-        const link = document.createElement('link')
-        link.rel = 'preload'
-        link.as = 'image'
-        link.href = src
-        document.head.appendChild(link)
-      })
+      preloadCriticalResources()
     }
 
     // Optimize images
-    const optimizeImages = () => {
-      const images = document.querySelectorAll('img')
-      images.forEach(img => {
-        if (!img.loading) {
-          img.loading = 'lazy'
-        }
-        if (!img.decoding) {
-          img.decoding = 'async'
-        }
+    if (enableImageOptimization) {
+      const optimizeImages = () => {
+        const images = document.querySelectorAll('img')
+        images.forEach(img => {
+          if (enableLazyLoading && !img.loading) {
+            img.loading = 'lazy'
+          }
+          if (!img.decoding) {
+            img.decoding = 'async'
+          }
+        })
+      }
+
+      optimizeImages()
+
+      // Re-optimize when DOM changes
+      const observer = new MutationObserver(() => {
+        optimizeImages()
       })
+
+      observer.observe(document.body, {
+        childList: true,
+        subtree: true
+      })
+
+      return () => {
+        observer.disconnect()
+      }
     }
 
     // Add performance monitoring
@@ -80,26 +84,8 @@ const PerformanceOptimizer: React.FC<{ children: React.ReactNode }> = ({ childre
       }
     }
 
-    // Initialize optimizations
-    preloadCriticalResources()
-    optimizeImages()
     addPerformanceMonitoring()
-
-    // Re-optimize when DOM changes
-    const observer = new MutationObserver(() => {
-      optimizeImages()
-    })
->>>>>>> origin/main
-
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true
-    })
-
-    return () => {
-      observer.disconnect()
-    }
-  }, [])
+  }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting])
 
   return <>{children}</>
 }

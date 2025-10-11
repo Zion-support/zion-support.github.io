@@ -71,8 +71,6 @@ const Navigation: React.FC = () => {
     setMicroSaasOpen(false);
   }, []);
 
-<<<<<<< HEAD
-=======
   // Service data
   const aiServices = [
     { name: 'AI Analytics', href: '/ai-analytics', icon: BarChart, description: 'Advanced data insights' },
@@ -115,8 +113,8 @@ const Navigation: React.FC = () => {
   ]
 
   const itServices = [
+    { name: 'API Development', href: '/api-development', icon: Code, description: 'Professional API development' },
     { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: Cloud, description: 'Scalable cloud solutions' },
-    { name: 'API Development', href: '/api-development', icon: Code, description: 'API development & management' },
     { name: 'Cybersecurity', href: '/cybersecurity-solutions', icon: Shield, description: 'Comprehensive security' },
     { name: 'Database Management', href: '/database-management', icon: Database, description: 'Data processing & storage' },
     { name: 'Mobile Development', href: '/mobile-development', icon: Smartphone, description: 'iOS & Android apps' },
@@ -152,6 +150,10 @@ const Navigation: React.FC = () => {
   ]
 
   const microSaasServices = [
+    { name: 'Zion AI Email Marketing', href: '/ai-email-marketing-automation', icon: Mail, description: 'AI-powered email automation' },
+    { name: 'Zion AI CRM Assistant', href: '/ai-crm-assistant', icon: Users, description: 'Intelligent CRM management' },
+    { name: 'Zion AI Expense Tracker', href: '/ai-expense-tracker', icon: DollarSign, description: 'Smart expense management' },
+    { name: 'Zion AI SEO Optimizer', href: '/zion-ai-seo-optimizer', icon: Target, description: 'AI SEO optimization' },
     { name: 'Zion Analytics Pro', href: '/zion-analytics-pro', icon: BarChart, description: 'Business intelligence platform' },
     { name: 'Zion Chat AI', href: '/zion-chat-ai', icon: MessageCircle, description: 'AI customer support' },
     { name: 'Zion Security Shield', href: '/zion-security-shield', icon: Shield, description: 'Cybersecurity monitoring' },
@@ -174,7 +176,6 @@ const Navigation: React.FC = () => {
     { name: 'Zion Customer Insights Pro', href: '/zion-customer-insights', icon: Users, description: 'Customer analytics' },
     { name: 'Zion AI Email Assistant', href: '/zion-ai-email-assistant', icon: Mail, description: 'Smart email management' },
     { name: 'Zion AI Meeting Assistant', href: '/zion-ai-meeting-assistant', icon: Calendar, description: 'Meeting automation' },
-    { name: 'Zion AI SEO Optimizer', href: '/zion-ai-seo-optimizer', icon: Target, description: 'SEO optimization' },
     { name: 'Zion AI Data Cleaner', href: '/zion-ai-data-cleaner', icon: Database, description: 'Data cleaning & validation' },
     { name: 'Zion AI Contract Analyzer', href: '/zion-ai-contract-analyzer', icon: FileText, description: 'Contract analysis' },
     { name: 'Zion AI Survey Builder', href: '/zion-ai-survey-builder', icon: CheckSquare, description: 'Intelligent surveys' },
@@ -203,7 +204,6 @@ const Navigation: React.FC = () => {
     { name: 'Machine Learning', href: '/machine-learning', icon: Brain, description: 'Advanced ML algorithms' }
   ]
 
->>>>>>> origin/main
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-2xl border-b border-cyan-500/20' : 'bg-transparent'
@@ -276,10 +276,7 @@ const Navigation: React.FC = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
-=======
         {/* Mobile Navigation */}
->>>>>>> origin/main
         {isOpen && (
           <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20">
             <div className="pt-4 space-y-4">

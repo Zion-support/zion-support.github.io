@@ -45,11 +45,17 @@ const AiAnalyticsPage = React.lazy(() => import('./app/ai-analytics/page'))
 const AiAutomationPage = React.lazy(() => import('./app/ai-automation/page'))
 const AiChatbotBuilderPage = React.lazy(() => import('./app/ai-chatbot-builder/page'))
 const AiCybersecurityPage = React.lazy(() => import('./app/ai-cybersecurity/page'))
+const AiEmailMarketingAutomationPage = React.lazy(() => import('./app/ai-email-marketing-automation/page'))
+const AiCrmAssistantPage = React.lazy(() => import('./app/ai-crm-assistant/page'))
+const AiExpenseTrackerPage = React.lazy(() => import('./app/ai-expense-tracker/page'))
 // IT Service Pages
+const ApiDevelopmentPage = React.lazy(() => import('./app/api-development/page'))
 const CloudInfrastructurePage = React.lazy(() => import('./app/cloud-infrastructure/page'))
 const CybersecuritySolutionsPage = React.lazy(() => import('./app/cybersecurity-solutions/page'))
 const WebDevelopmentPage = React.lazy(() => import('./app/web-development/page'))
 const MobileDevelopmentPage = React.lazy(() => import('./app/mobile-development/page'))
+// Micro SAAS Pages
+const ZionAiSeoOptimizerPage = React.lazy(() => import('./app/zion-ai-seo-optimizer/page'))
 // Company Pages
 const TeamPage = React.lazy(() => import('./app/team/page'))
 // Additional Service Pages
@@ -117,12 +123,19 @@ const App: React.FC = () => {
                             <Route path="/ai-automation" element={<AiAutomationPage />} />
                             <Route path="/ai-chatbot-builder" element={<AiChatbotBuilderPage />} />
                             <Route path="/ai-cybersecurity" element={<AiCybersecurityPage />} />
+                            <Route path="/ai-email-marketing-automation" element={<AiEmailMarketingAutomationPage />} />
+                            <Route path="/ai-crm-assistant" element={<AiCrmAssistantPage />} />
+                            <Route path="/ai-expense-tracker" element={<AiExpenseTrackerPage />} />
                             
                             {/* IT Service Pages */}
+                            <Route path="/api-development" element={<ApiDevelopmentPage />} />
                             <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
                             <Route path="/cybersecurity-solutions" element={<CybersecuritySolutionsPage />} />
                             <Route path="/web-development" element={<WebDevelopmentPage />} />
                             <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
+                            
+                            {/* Micro SAAS Pages */}
+                            <Route path="/zion-ai-seo-optimizer" element={<ZionAiSeoOptimizerPage />} />
                             
                             {/* Company Pages */}
                             <Route path="/team" element={<TeamPage />} />

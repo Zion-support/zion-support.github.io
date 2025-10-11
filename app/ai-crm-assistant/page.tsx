@@ -1,354 +1,252 @@
-<<<<<<< HEAD
-'use client';
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';
-const AiCrmAssistantPage: React.FC = () => {,
-=======
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
+import Navigation from '../../components/Navigation'
+import Footer from '../../components/Footer'
+import { Users, Brain, BarChart, Target, Clock, CheckCircle, ArrowRight, Star, TrendingUp, DollarSign, Globe, Smartphone, MessageSquare, Calendar, FileText, Shield, Settings, Award, Phone, Mail, MapPin } from 'lucide-react'
+
 const AiCrmAssistantPage: React.FC = () => {
->>>>>>> origin/main
   const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-<<<<<<< HEAD
-<<<<<<< HEAD
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},
-    {icon: BarChart,
-=======
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'];
-=======
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'],
->>>>>>> origin/main
-    },
-    {
-      icon: BarChart,
->>>>>>> origin/main
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-<<<<<<< HEAD
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']},
-    {icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']},
-    {icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-<<<<<<< HEAD
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']},
+    { icon: Brain, title: 'AI Lead Scoring', description: 'Automatically score and prioritize leads based on behavior, demographics, and engagement patterns' },
+    { icon: Target, title: 'Predictive Analytics', description: 'Predict customer lifetime value, churn risk, and optimal engagement strategies' },
+    { icon: BarChart, title: 'Smart Insights', description: 'Get actionable insights and recommendations to improve sales performance and customer relationships' },
+    { icon: Clock, title: 'Automated Follow-ups', description: 'AI-powered follow-up sequences that adapt based on customer responses and behavior' },
+    { icon: Users, title: 'Customer Segmentation', description: 'Automatically segment customers based on behavior, preferences, and value' },
+    { icon: MessageSquare, title: 'Conversation Intelligence', description: 'Analyze customer interactions to provide context and recommendations for better engagement' }
   ]
-  return(<React.Fragment>)</React.Fragment>
-      <Helmet />
-=======
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-=======
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics'],
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics'],
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'],
->>>>>>> origin/main
-    },
+
+  const benefits = [
+    'Increase sales conversion by up to 40%',
+    'Reduce sales cycle time by 30%',
+    'Improve customer retention by 25%',
+    'Save 15+ hours per week on CRM management',
+    'Boost revenue per customer by 35%',
+    'Automate 80% of routine CRM tasks'
   ]
+
+  const pricing = [
+    {
+      name: 'Starter',
+      price: '$147/month',
+      description: 'Perfect for small teams',
+      features: ['Up to 1,000 contacts', 'Basic AI lead scoring', 'Email automation', 'Basic analytics', 'Email support'],
+      popular: false
+    },
+    {
+      name: 'Professional',
+      price: '$297/month',
+      description: 'Most popular for growing businesses',
+      features: ['Up to 10,000 contacts', 'Advanced AI insights', 'Predictive analytics', 'Custom workflows', 'Priority support', 'API access'],
+      popular: true
+    },
+    {
+      name: 'Enterprise',
+      price: '$597/month',
+      description: 'For large organizations',
+      features: ['Unlimited contacts', 'Full AI suite', 'Custom integrations', 'Dedicated support', 'White-label options', 'Advanced reporting'],
+      popular: false
+    }
+  ]
+
   return (
-<<<<<<< HEAD
-    <>
-      <Helmet>
->>>>>>> origin/main
-        <meta name="description" content="Intelligent CRM assistant powered by AI technology." />
-=======
-    <React.Fragment>
-      </React><Helmet>
-        </Helmet><meta name="description" content="Intelligent CRM assistant powered by AI technology." />
->>>>>>> origin/main
-        <meta name="keywords" content="AI CRM assistant, artificial intelligence, customer relationship management, AI solutions, intelligent CRM" />
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-<<<<<<< HEAD
-      <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">{/* Hero Section */</main>} <section className="relative py-20 px-4 sm: px-6 lg:px-8">,</section>
-          <div className="max-w-7xl mx-auto">
+      
+      {/* Hero Section */}
+      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-6">
+              <Users className="w-4 h-4 mr-2" />
+              AI CRM Assistant
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AI-Powered <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">CRM Assistant</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your customer relationships with AI that learns, predicts, and optimizes every interaction. 
+              Our intelligent CRM assistant increases sales by 40% while reducing manual work by 80%.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+                <ArrowRight className="w-5 h-5 mr-2" />
+                Start Free Trial
+              </button>
+              <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                Watch Demo
+              </button>
+            </div>
+          </div>
+
+          {/* Stats */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
             <div className="text-center">
-              <h1 className="text-4xl md: text-6xl font-bold text-gray-900 mb-6">,</h1>
-                AI CRM Assistant;
-  </
-              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">Transform your business with intelligent solutions powered by cutting-edge AI technology.</p>
-              </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">,</div>
-                <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover: bg-blue-700 transition-colors">,</button>
-                  Get Started;
-  </
-                <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover: bg-blue-50 transition-colors">,</button>
-=======
-      <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        {/* Hero Section */}
-        </main></main><section className="relative py-20 px-4 sm: px-6 lg:px-8">
-          </section>< className="$2 />
-            </div><div className="text-center">
-              </div><h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-                AI CRM Assistant
-  
-              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-                Transform your business with intelligent solutions powered by cutting-edge AI technology.
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                </div><button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                  Get Started
-  
-                <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
->>>>>>> origin/main
-                  Learn More,
-  
-              </div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">40%</div>
+              <div className="text-gray-300">Higher Conversion</div>
             </div>
-          </div>
-        </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        {/* Features Section */} <section className="py-20 px-4 sm: px-6 lg:px-8">,</section>
-=======
-      </main>
-    </>
-  );
-}
-      </main>
-    </>
-  );
-}
-      </main>
-    </>
-  );
-}
-        {/* Features Section */}
-        <section className="py-20 px-4 sm: px-6 lg:px-8">
->>>>>>> origin/main
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">,</h2>
-                Powerful AI Features,
-  </
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">Discover how our AI platform can revolutionize your business operations.</p>
-=======
-        {/* Features Section */}
-        <section className="py-20 px-4 sm: px-6 lg:px-8">
-          </section>< className="$2 />
-            </div><div className="text-center mb-16">
-              </div><h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Powerful AI Features,
-  
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto" /></p>
-                Discover how our AI platform can revolutionize your business operations.
->>>>>>> origin/main
-              </p>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-purple-400 mb-2">30%</div>
+              <div className="text-gray-300">Faster Sales Cycle</div>
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,</div>
-              {features.map((feature, index) => (
-<<<<<<< HEAD
-                <div key={index}className="bg-white p-6 rounded-xl shadow-lg hover: shadow-xl transition-shadow">,</div>
-                  <div className="flex items-center mb-4">
-                    <feature.icon className="h-8 w-8 text-blue-600 mr-3" />
-=======
-                </div><div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                  </div><div className="flex items-center mb-4">
-                    </div><feature.icon className="h-8 w-8 text-blue-600 mr-3" />
->>>>>>> origin/main
-                    <h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3>
-                  </div>
-                  <p className="text-gray-600 mb-4">{feature.description</p>}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
-<<<<<<< HEAD
-                      <li key={benefitIndex}className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
-                        {benefit} </li>
-=======
-                      </ul><li key={benefitIndex} className="flex items-center text-sm text-gray-600">
-                        </li><CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
-                        {benefit}
-                      </li>
->>>>>>> origin/main
-                    ))}
-              ))}
-<<<<<<< HEAD
+            <div className="text-center">
+              <div className="text-3xl font-bold text-pink-400 mb-2">25%</div>
+              <div className="text-gray-300">Better Retention</div>
             </div>
-          </div>
-        </section>
-        {/* CTA Section */} <section className="py-20 px-4 sm: px-6 lg:px-8 bg-blue-600">,</section>
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">,</h2>
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8">Join thousands of businesses already using our AI platform.</p>
-            </p>
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover: bg-gray-100 transition-colors font-semibold">,</button>
-=======
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-blue-600">
-          </section>< className="$2 />
-            </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8" /></p>
-              Join thousands of businesses already using our AI platform.
-            </p>
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold" /></button>
->>>>>>> origin/main
-              Start Your Free Trial,
-  
-          </div>
-            {features.map((feature, index) => (
-<<<<<<< HEAD
-              <div key={index}className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover: border-blue-400/50 transition-all duration-300 group">,</div>
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover: scale-110 transition-transform duration-300">,</div>
-                  <CheckCircle className="w-6 h-6 text-white" />
-=======
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group">
-                </div><div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  </div><CheckCircle className="w-6 h-6 text-white" />
->>>>>>> origin/main
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description</p>}</p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
-<<<<<<< HEAD
-                    <li key={benefitIndex}className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                      {benefit} </li>
-=======
-                    </ul><li key={benefitIndex} className="flex items-center text-sm text-gray-400">
-                      </li><CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                      {benefit}
-                    </li>
->>>>>>> origin/main
-                  ))}
-            ))}
-<<<<<<< HEAD
+            <div className="text-center">
+              <div className="text-3xl font-bold text-green-400 mb-2">80%</div>
+              <div className="text-gray-300">Task Automation</div>
+            </div>
           </div>
         </div>
       </section>
-      {/* Benefits Section */} <section className="py-20 px-4">
+
+      {/* Features Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our AI CRM Assistant?</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the benefits of our proven solutions;</p>
-  </
-=======
-      {/* Benefits Section */}
-      <section className="py-20 px-4">
-        </section>< className="$2 />
-          </div><div className="text-center mb-16">
-            </div><h2 className="text-4xl font-bold text-white mb-4">Why Choose Our AI CRM Assistant?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Intelligent CRM Features
+            </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the benefits of our proven solutions
-  
->>>>>>> origin/main
+              Our AI learns from your data to provide insights, predictions, and automation that drive real business results.
+            </p>
           </div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,</div>
-            {benefits.map((benefit, index) => (
-<<<<<<< HEAD
-              <div key={index}className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
-=======
-              </div><div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
-                </div><div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  </div><CheckCircle className="w-8 h-8 text-white" />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 border border-white/10">
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-6">
+                  <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+                <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our AI CRM Assistant?
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the benefits of our proven solutions
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
->>>>>>> origin/main
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <CheckCircle className="w-8 h-8 text-white" />
-                <h3 className="text-lg font-semibold text-white">{benefit}
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Why Choose Our AI CRM?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Join thousands of sales teams that have transformed their performance with our AI-powered CRM assistant.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="space-y-6">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start space-x-4">
+                  <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
+                  <span className="text-gray-300 text-lg">{benefit}</span>
+                </div>
+              ))}
+            </div>
+            <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-2xl p-8 border border-cyan-500/20">
+              <h3 className="text-2xl font-bold text-white mb-4">Proven Results</h3>
+              <div className="space-y-4">
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-300">Lead Conversion Rate</span>
+                  <span className="text-cyan-400 font-bold">23.7%</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-300">Average Deal Size</span>
+                  <span className="text-purple-400 font-bold">$12,450</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-300">Customer Lifetime Value</span>
+                  <span className="text-pink-400 font-bold">$45,230</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-300">Sales Cycle Length</span>
+                  <span className="text-green-400 font-bold">18 days</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Simple, Transparent Pricing
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Choose the plan that fits your team size and business needs. All plans include our core AI features.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricing.map((plan, index) => (
+              <div key={index} className={`bg-white/5 backdrop-blur-sm rounded-2xl p-8 relative ${plan.popular ? 'border-2 border-cyan-500' : 'border border-white/10'}`}>
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-bold">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <div className="text-4xl font-bold text-cyan-400 mb-2">{plan.price}</div>
+                  <p className="text-gray-300">{plan.description}</p>
+                </div>
+                <ul className="space-y-4 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <span className="text-gray-300">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <button className={`w-full py-3 px-6 rounded-lg font-bold transition-all duration-300 ${
+                  plan.popular 
+                    ? 'bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white' 
+                    : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
+                }`}>
+                  Get Started
+                </button>
+              </div>
             ))}
-<<<<<<< HEAD
           </div>
         </div>
       </section>
-      {/* CTA Section */} <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
-          <p className="text-xl text-gray-300 mb-8">Transform your customer relationships with our AI CRM Assistant solutions today;</p>
-  </
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">,</div>
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover: from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">,</button>
-              Start Free Trial;
-  </
-            <button className="border border-blue-400 text-blue-400 hover: bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">,</button>
-              Contact Sales;
-  </
-          </div>
-        </div>
-      </section>
-      <Footer />
-    </React.Fragment>
-  ),
-};
 
-export default AiCrmAssistantPage;
-  </button>
-  </button>
-  </p>
-  </p>
-  </button>
-  </h2>
-  </button>
-  </button>
-  </h1>
-  </main>
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-=======
->>>>>>> main
-=======
       {/* CTA Section */}
-      <section className="py-20 px-4">
-        </section>< className="$2 />
-          </div><h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Sales Process?
+          </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Transform your customer relationships with our AI CRM Assistant solutions today
-  
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">
-            </div><button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-              Start Free Trial
-  
-            <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300" /></button>
-              Contact Sales
-  
+            Join thousands of sales teams using AI to close more deals and build stronger customer relationships.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+              <ArrowRight className="w-5 h-5 mr-2" />
+              Start Your Free Trial
+            </button>
+            <a
+              href="tel:+13024640950"
+              className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center"
+            >
+              <Phone className="w-5 h-5 mr-2" />
+              Call (302) 464-0950
+            </a>
           </div>
         </div>
       </section>
 
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?
-          <p className="text-xl text-gray-300 mb-8">Transform your customer relationships with our AI CRM Assistant solutions today
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Start Free Trial
-            <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Contact Sales
       <Footer />
+    </div>
   )
 }
-export default AiCrmAssistantPage</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></button></button></button></button></button></p></p></p></p></p></p></p></h1></h2></h2></h2></h2></h3></h3></h3></ul></ul></li></li></main></section></section></section></section></section>
->>>>>>> origin/main
+
+export default AiCrmAssistantPage

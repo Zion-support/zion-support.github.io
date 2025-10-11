@@ -101,6 +101,287 @@
   }
 }
 
+/* Advanced Glow Effects */
+.glow-cyan {
+  box-shadow: 
+    0 0 20px rgba(6, 182, 212, 0.3),
+    0 0 40px rgba(6, 182, 212, 0.2),
+    0 0 60px rgba(6, 182, 212, 0.1);
+  animation: glowPulse 2s ease-in-out infinite alternate;
+}
+
+.glow-purple {
+  box-shadow: 
+    0 0 20px rgba(147, 51, 234, 0.3),
+    0 0 40px rgba(147, 51, 234, 0.2),
+    0 0 60px rgba(147, 51, 234, 0.1);
+  animation: glowPulse 2s ease-in-out infinite alternate;
+}
+
+.glow-pink {
+  box-shadow: 
+    0 0 20px rgba(236, 72, 153, 0.3),
+    0 0 40px rgba(236, 72, 153, 0.2),
+    0 0 60px rgba(236, 72, 153, 0.1);
+  animation: glowPulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes glowPulse {
+  0% {
+    box-shadow: 
+      0 0 20px rgba(6, 182, 212, 0.3),
+      0 0 40px rgba(6, 182, 212, 0.2),
+      0 0 60px rgba(6, 182, 212, 0.1);
+  }
+  100% {
+    box-shadow: 
+      0 0 30px rgba(6, 182, 212, 0.4),
+      0 0 60px rgba(6, 182, 212, 0.3),
+      0 0 90px rgba(6, 182, 212, 0.2);
+  }
+}
+
+/* Holographic Effects */
+.holographic {
+  background: linear-gradient(
+    45deg,
+    rgba(6, 182, 212, 0.1) 0%,
+    rgba(147, 51, 234, 0.1) 25%,
+    rgba(236, 72, 153, 0.1) 50%,
+    rgba(34, 197, 94, 0.1) 75%,
+    rgba(6, 182, 212, 0.1) 100%
+  );
+  background-size: 400% 400%;
+  animation: holographicShift 3s ease-in-out infinite;
+}
+
+@keyframes holographicShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Cyber Grid Enhanced */
+.cyber-grid-enhanced {
+  background-image: 
+    linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px),
+    linear-gradient(rgba(147, 51, 234, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(147, 51, 234, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px, 50px 50px, 100px 100px, 100px 100px;
+  animation: gridMoveEnhanced 20s linear infinite;
+}
+
+@keyframes gridMoveEnhanced {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(50px, 50px); }
+}
+
+/* Floating Elements */
+.floating {
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Particle Effects */
+.particle-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.particle-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, rgba(6, 182, 212, 0.3), transparent),
+    radial-gradient(2px 2px at 40px 70px, rgba(147, 51, 234, 0.3), transparent),
+    radial-gradient(1px 1px at 90px 40px, rgba(236, 72, 153, 0.3), transparent),
+    radial-gradient(1px 1px at 130px 80px, rgba(34, 197, 94, 0.3), transparent);
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  animation: particleFloat 20s linear infinite;
+}
+
+@keyframes particleFloat {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-200px); }
+}
+
+/* Advanced Button Effects */
+.btn-cyber {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(45deg, #06b6d4, #8b5cf6);
+  border: none;
+  color: white;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-cyber::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.btn-cyber:hover::before {
+  left: 100%;
+}
+
+.btn-cyber:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(6, 182, 212, 0.3);
+}
+
+/* Glass Morphism */
+.glass-morphism {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Cyber Border */
+.cyber-border {
+  position: relative;
+  border: 2px solid transparent;
+  background: linear-gradient(45deg, #06b6d4, #8b5cf6, #ec4899) border-box;
+  border-radius: 8px;
+}
+
+.cyber-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 8px;
+  padding: 2px;
+  background: linear-gradient(45deg, #06b6d4, #8b5cf6, #ec4899);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+}
+
+/* Responsive Design Enhancements */
+@media (max-width: 768px) {
+  .neon-text-enhanced {
+    font-size: 2rem;
+    text-shadow: 
+      0 0 3px currentColor,
+      0 0 6px currentColor,
+      0 0 9px currentColor,
+      0 0 12px currentColor;
+  }
+  
+  .glow-cyan, .glow-purple, .glow-pink {
+    box-shadow: 
+      0 0 10px rgba(6, 182, 212, 0.2),
+      0 0 20px rgba(6, 182, 212, 0.1);
+  }
+  
+  .floating {
+    animation-duration: 2s;
+  }
+  
+  .cyber-grid-enhanced {
+    background-size: 25px 25px, 25px 25px, 50px 50px, 50px 50px;
+  }
+  
+  .particle-bg::before {
+    background-size: 100px 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .neon-text-enhanced {
+    font-size: 1.5rem;
+    text-shadow: 
+      0 0 2px currentColor,
+      0 0 4px currentColor,
+      0 0 6px currentColor,
+      0 0 8px currentColor;
+  }
+  
+  .btn-cyber {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+  }
+  
+  .glass-morphism {
+    backdrop-filter: blur(5px);
+  }
+}
+
+/* High DPI Display Support */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .cyber-grid-enhanced {
+    background-image: 
+      linear-gradient(rgba(6, 182, 212, 0.05) 0.5px, transparent 0.5px),
+      linear-gradient(90deg, rgba(6, 182, 212, 0.05) 0.5px, transparent 0.5px),
+      linear-gradient(rgba(147, 51, 234, 0.025) 0.5px, transparent 0.5px),
+      linear-gradient(90deg, rgba(147, 51, 234, 0.025) 0.5px, transparent 0.5px);
+  }
+}
+
+/* Accessibility Improvements */
+@media (prefers-reduced-motion: reduce) {
+  .neon-text-enhanced,
+  .floating,
+  .glow-cyan,
+  .glow-purple,
+  .glow-pink,
+  .holographic,
+  .cyber-grid-enhanced,
+  .particle-bg::before {
+    animation: none;
+  }
+  
+  .btn-cyber:hover {
+    transform: none;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .neon-text-enhanced,
+  .glow-cyan,
+  .glow-purple,
+  .glow-pink,
+  .holographic,
+  .cyber-grid-enhanced,
+  .particle-bg::before {
+    animation: none;
+    text-shadow: none;
+    box-shadow: none;
+    background: none;
+  }
+  
+  .floating {
+    animation: none;
+  }
+}
+
 /* Glow Effect */
 .glow {
   animation: glow 2s ease-in-out infinite alternate;

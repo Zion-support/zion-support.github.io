@@ -1,26 +1,15 @@
 'use client'
 import React from 'react'
+import { Loader2 } from 'lucide-react'
 
-<<<<<<< HEAD
-export const PageLoader: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="text-center">
-        <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full flex items-center justify-center mx-auto mb-4">
-          <Loader2 className="w-8 h-8 text-slate-900 animate-spin" />
-        </div>
-        <h2 className="text-xl font-semibold text-white mb-2">Loading...</h2>
-        <p className="text-gray-400">Please wait while we load the page</p>
-      </div>
-    </div>
-  );
-};
-=======
 export const PageLoader: React.FC = () => (
   <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
     <div className="text-center">
-      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-cyan-400 mx-auto mb-4"></div>
-      <p className="text-cyan-400 text-lg font-medium">Loading...</p>
+      <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full flex items-center justify-center mx-auto mb-4 glow-cyan">
+        <Loader2 className="w-8 h-8 text-white animate-spin" />
+      </div>
+      <h2 className="text-xl font-semibold text-white mb-2 neon-text-enhanced">Loading...</h2>
+      <p className="text-gray-400">Please wait while we load the page</p>
     </div>
   </div>
 )
@@ -39,7 +28,7 @@ export const LoadingSpinner: React.FC<{ size?: 'sm' | 'md' | 'lg' | 'xl'; text?:
 
   const spinner = (
     <div className="flex flex-col items-center justify-center space-y-4">
-      <div className={`animate-spin rounded-full border-b-2 border-cyan-400 ${sizeClasses[size]}`}></div>
+      <div className={`animate-spin rounded-full border-b-2 border-cyan-400 ${sizeClasses[size]} glow-cyan`}></div>
       {text && <p className="text-cyan-400 font-medium">{text}</p>}
     </div>
   );
@@ -58,8 +47,16 @@ export const LoadingSpinner: React.FC<{ size?: 'sm' | 'md' | 'lg' | 'xl'; text?:
 export const LoadingSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => (
   <div className="animate-pulse space-y-4">
     {Array.from({ length: lines }).map((_, index) => (
-      <div key={index} className="h-4 bg-gray-200 rounded w-full"></div>
+      <div key={index} className="h-4 bg-gray-200/20 rounded w-full"></div>
     ))}
+  </div>
+);
+
+export const ServiceCardSkeleton: React.FC = () => (
+  <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 animate-pulse border border-white/10" role="status" aria-label="Loading service card">
+    <div className="h-8 bg-gray-200/20 rounded mb-4 w-3/4"></div>
+    <div className="h-4 bg-gray-200/20 rounded mb-2"></div>
+    <div className="h-4 bg-gray-200/20 rounded w-5/6"></div>
   </div>
 );
 
@@ -69,4 +66,3 @@ export default {
   LoadingSkeleton,
   ServiceCardSkeleton
 }
->>>>>>> origin/main
