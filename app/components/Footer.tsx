@@ -19,13 +19,13 @@ export default function Footer() {
               Advanced AI and IT solutions for modern businesses. We help companies leverage cutting-edge technology to achieve their goals.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://github.com/ziontechgroup" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                 <Github className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://linkedin.com/company/ziontechgroup" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://twitter.com/ziontechgroup" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                 <Twitter className="w-5 h-5" />
               </a>
             </div>
@@ -73,14 +73,14 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
+                <Link to="/services" className="text-gray-400 hover:text-white transition-colors text-sm">
                   Cloud Services
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
+                <Link to="/services" className="text-gray-400 hover:text-white transition-colors text-sm">
                   Digital Transformation
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -111,12 +111,12 @@ export default function Footer() {
               © 2024 Zion Tech Group. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
+              <Link to="/privacy" className="text-gray-400 hover:text-white transition-colors text-sm">
                 Privacy Policy
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
+              </Link>
+              <Link to="/terms" className="text-gray-400 hover:text-white transition-colors text-sm">
                 Terms of Service
-              </a>
+              </Link>
             </div>
           </div>
         </div>
