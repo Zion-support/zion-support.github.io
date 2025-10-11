@@ -1,6 +1,6 @@
 import React from 'react';
-import {  Helmet  } from 'react-helmet-async';
-import {  Eye, MousePointer, Volume2, Shield, Users, Globe, CheckCircle   } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Eye, MousePointer, Volume2, Shield, Users, Globe, CheckCircle } from 'lucide-react';
 
 const AccessibilityPage: React.FC = () => {
   const features = [
@@ -73,22 +73,22 @@ const AccessibilityPage: React.FC = () => {
         <meta name="keywords" content="accessibility, inclusive design, WCAG compliance, screen reader, keyboard navigation, digital accessibility" />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden"></section></section>
+        <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center"></div></div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1></h1>
-              Accessibility <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"></span></span>Solutions</span>
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Accessibility <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p></p>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Creating inclusive digital experiences that work for everyone. Our accessibility solutions ensure your applications are usable by people of all abilities and comply with international standards.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div></div>
-              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300"></button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
                 Get Accessibility Audit
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300"></button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
                 Learn More
               </button>
             </div>
@@ -96,35 +96,32 @@ const AccessibilityPage: React.FC = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4"></section></section>
-          <div className="container mx-auto"></div></div>
-            <div className="text-center mb-16"></div></div>
-              <h2 className="text-4xl font-bold text-white mb-4"></h2></h2>
+        <section className="py-20 px-4">
+          <div className="container mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Comprehensive Accessibility Features
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p></p>
-                Our accessibility solutions cover all aspects of digital inclusion, ensuring your applications 
-                work seamlessly for users with diverse needs and abilities.
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our accessibility solutions cover all aspects of inclusive design, ensuring your applications work for everyone.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div></div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group"></div></div>
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"></div></div>
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-4"></h3></h3>{feature.title}</h3>
-                  <p className="text-gray-300 leading-relaxed mb-4"></p></p>{feature.description}</p>
-                  {feature.benefits && (
-                    <ul className="space-y-2"></ul>
-                      {feature.benefits.map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="text-sm text-gray-400 flex items-center"></li>
-                          <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 leading-relaxed mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="flex items-center text-gray-300 text-sm">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </div>
@@ -132,22 +129,22 @@ const AccessibilityPage: React.FC = () => {
         </section>
 
         {/* Standards Compliance Section */}
-        <section className="py-20 px-4"></section></section>
-          <div className="container mx-auto"></div></div>
-            <div className="text-center mb-16"></div></div>
-              <h2 className="text-4xl font-bold text-white mb-4"></h2></h2>
+        <section className="py-20 px-4 bg-white/5">
+          <div className="container mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Standards Compliance
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p></p>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 We ensure full compliance with international accessibility standards and regulations.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div></div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {standards.map((standard, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 text-center hover:bg-white/10 transition-all duration-300"></div></div>
-                  <h3 className="text-xl font-bold text-white mb-2"></h3></h3>{standard.name}</h3>
-                  <p className="text-gray-300 text-sm mb-4"></p></p>{standard.description}</p>
-                  <span className="inline-block bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm font-medium"></span></span>
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
+                  <h3 className="text-xl font-bold text-white mb-2">{standard.name}</h3>
+                  <p className="text-gray-300 mb-4">{standard.description}</p>
+                  <span className="inline-block bg-green-500 text-white px-4 py-2 rounded-full text-sm font-medium">
                     {standard.status}
                   </span>
                 </div>
@@ -157,20 +154,20 @@ const AccessibilityPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4"></section></section>
-          <div className="container mx-auto text-center"></div></div>
-            <h2 className="text-4xl font-bold text-white mb-6"></h2></h2>
+        <section className="py-20 px-4">
+          <div className="container mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Make Your App Accessible?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p></p>
-              Contact us today to get a comprehensive accessibility audit and implementation plan for your application.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Contact our accessibility experts to audit your application and implement inclusive design solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div></div>
-              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300"></button>
-                Get Started
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Accessibility Audit
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300"></button>
-                Schedule Consultation
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Contact Us
               </button>
             </div>
           </div>

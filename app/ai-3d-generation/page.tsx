@@ -1,18 +1,51 @@
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings }  } from 'lucide-react';
-const Ai3dGenerationPage: React.FC = () => {,
 'use client'
 import React from 'react'
-import {  Helmet  } from 'react-helmet-async'import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'import {  CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings   } from 'lucide-react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
+
 const Ai3dGenerationPage: React.FC = () => {
-    const features = [
+  const features = [
     {
-      title: 'VR/AR',
-      description: 'Create immersive experiences and virtual environments',
-      icon: '🥽'
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that generate high-quality 3D models from text descriptions.',
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time 3D generation metrics.',
+    },
+    {
+      icon: Zap,
+      title: 'Lightning Fast',
+      description: 'Generate complex 3D models in seconds with our optimized AI engine.',
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with encryption and compliance standards.',
+    },
+    {
+      icon: Globe,
+      title: 'Global Reach',
+      description: 'Worldwide deployment and support for international businesses.',
+    },
+    {
+      icon: Database,
+      title: 'Scalable Infrastructure',
+      description: 'Cloud-based infrastructure that scales with your needs.',
     }
+  ];
+
+  const benefits = [
+    'Generate 3D models 10x faster than traditional methods',
+    'Reduce 3D modeling costs by up to 80%',
+    'Create photorealistic 3D assets in minutes',
+    'Support for all major 3D file formats',
+    'Real-time collaboration on 3D projects',
+    'Integration with popular design tools',
+    'Custom AI model training for specific use cases',
+    '24/7 technical support and maintenance'
   ];
 
   return (
@@ -20,206 +53,117 @@ const Ai3dGenerationPage: React.FC = () => {
       <Helmet>
         <title>AI 3D Generation - Zion Tech Group</title>
         <meta name="description" content="Transform text into stunning 3D models with our AI-powered 3D generation technology. Create game assets, architectural models, and more in seconds." />
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-    },
-    {
-    icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-  ]
-]
-const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-        <meta name="description" content="Advanced AI-powered 3D generation solution for modern businesses" />
-        <meta name="keywords" content="AI, 3D generation, artificial intelligence, business solutions" />
+        <meta name="keywords" content="AI, 3D generation, artificial intelligence, 3D modeling, game assets, architectural visualization" />
       </Helmet>
-      <Navigation />
-      <section className="relative py-20 px-4 overflow-hidden"></section></section>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="relative max-w-7xl mx-auto text-center"></div></div>
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1></h1>
-            AI 3D
-            <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent"></span></span>
-              Generation
-            </span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"></p></p>
-            Transform your ideas into stunning 3D models with our advanced AI technology. 
-            Generate high-quality 3D assets from simple text descriptions in seconds.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div></div>
-            <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25"></button>
-              Try AI 3D Generator
-            </button>
-            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"></button>
-              View Examples
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4"></section></section>
-        <div className="max-w-7xl mx-auto"></div></div>
-          <div className="text-center mb-16"></div></div>
-            <h2 className="text-4xl font-bold text-white mb-4"></h2></h2>
-              Powerful 3D Generation Features
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p></p>
-          </div>
-        </div>
-      </section>
-
-      {/* Applications Section */}
-            <h2 className="text-4xl font-bold text-white mb-4"></h2></h2>
-              Applications
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p></p>
-              From game development to architecture, our AI 3D generation technology 
-              has applications across multiple industries.
-            </p>
-          </div>
-          
-            {applications.map((app, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300"></div></div>
-                <div className="text-4xl mb-4"></div></div>{app.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-2"></h3></h3>{app.title}</h3>
-                <p className="text-gray-300"></p></p>{app.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4"></section></section>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center"></div></div>
-            </div><h1 className="text-5xl md:text-7xl font-bold text-white mb-6"></h1></h1>
-              AI 3D Generation
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              AI 3D
+              <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                Generation
+              </span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" /></p>
-              Advanced AI-powered 3D generation solution for modern businesses
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform text descriptions into stunning 3D models with our advanced AI technology. 
+              Create game assets, architectural visualizations, and product prototypes in seconds.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div></div>
-              </div><button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300"></button>
-                Get Started
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center">
+                Start Generating
+                <ArrowRight className="ml-2 h-5 w-5" />
               </button>
-              <button className="border border-white/30 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300" /></button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 View Demo
               </button>
             </div>
           </div>
         </section>
-          <div className="max-w-7xl mx-auto"></div></div>
-            <div className="text-center mb-16"></div></div>
-              <h2 className="text-4xl font-bold text-white mb-4"></h2></h2>Key Features;</h2>
-              </h2>
-              <p className="text-xl text-gray-300"></p></p>Advanced AI technology that drives results;</p>
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1></h1>Ai 3d Generation
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"></p></p>
-              Advanced AI-powered ai 3d generation solution for modern businesses.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div></div>
-              <button className="bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>Get Started
-              <button className="border border-teal-400 text-teal-400 hover:bg-teal-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"></button>View Demo
+
         {/* Features Section */}
-        <section className="py-20 px-4"></section></section>
-          </section>< className="$2 />
-            </div><div className="text-center mb-16"></div></div>
-              </div><h2 className="text-4xl font-bold text-white mb-4"></h2></h2>
-                Key Features
+        <section className="py-20 px-4">
+          <div className="container mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Powerful 3D Generation Features
               </h2>
-              <p className="text-xl text-gray-300" /></p>
-                Advanced AI technology that drives results
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our AI-powered 3D generation platform offers cutting-edge capabilities for creating stunning 3D content.
               </p>
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div></div>,</div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-4"></h3></h3>{feature.title}</h3>
-                  <p className="text-gray-300 mb-4"></p></p>{feature.description</p&gt;}</p>
-                  {feature.benefits && (
-                    <ul className="space-y-2"></ul>
-                      {feature.benefits.map((benefit, idx) => (
-                      ))}
-                    </ul>
-                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 leading-relaxed">{feature.description}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
-          <div className="max-w-7xl mx-auto"></div></div>
-            <div className="text-center mb-16"></div></div>
-              <h2 className="text-4xl font-bold text-white mb-4"></h2></h2>Why Choose Our Solution?</h2>
-              </h2>
-              <p className="text-xl text-gray-300"></p></p>Proven results that drive business growth and efficiency;</p>
+
         {/* Benefits Section */}
-        <section className="py-20 px-4"></section></section>
-          </section>< className="$2 />
-            </div><div className="text-center mb-16"></div></div>
-              </div><h2 className="text-4xl font-bold text-white mb-4"></h2></h2>
-        <section className="py-20 px-4" /></section>
-          <div className="max-w-7xl mx-auto" /></div>
-            <div className="text-center mb-16" /></div>
-              <h2 className="text-4xl font-bold text-white mb-4" /></h2>
-                Why Choose Our Solution?
+        <section className="py-20 px-4 bg-white/5">
+          <div className="container mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Why Choose Our AI 3D Generation?
               </h2>
-              <p className="text-xl text-gray-300" /></p>
-                Proven results that drive business growth and efficiency
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience the future of 3D content creation with our advanced AI technology.
               </p>
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div></div>,</div>
-              {benefits.map((benefit, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="space-y-6">
+                {benefits.slice(0, 4).map((benefit, index) => (
+                  <div key={index} className="flex items-start">
+                    <CheckCircle className="w-6 h-6 text-green-400 mr-4 flex-shrink-0 mt-1" />
+                    <p className="text-gray-300 text-lg">{benefit}</p>
                   </div>
-                  <p className="text-lg text-white font-medium"></p></p>{benefit</p>}</p>
-                </div>
-              ))}
-            </div>
-          ))
-        </section>
-          <div className="max-w-4xl mx-auto text-center"></div></div>
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12"></div></div>
-              <h2 className="text-4xl font-bold text-white mb-6"></h2></h2>Ready to Get Started?</h2>
-              </h2>
-              <p className="text-xl text-gray-300 mb-8"></p></p>Contact our experts to discuss your requirements and get started today;</p>
-              </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div></div>,</div>
-                <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover: from-teal-600 hover:to-blue-700 transition-all duration-300"></button>,</button>
-                  Contact Us;
-                </button>
-                <button className="border border-white/30 text-white px-8 py-4 rounded-full font-semibold hover: bg-white/10 transition-all duration-300"></button>,</button>
-                  Learn More;
-        {/* CTA Section */}
-        <section className="py-20 px-4"></section></section>
-          </section>< className="$2 />
-            </div><div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12"></div></div>
-              </div><h2 className="text-4xl font-bold text-white mb-6"></h2></h2>
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8" /></p>
-                Contact our experts to discuss your requirements and get started today
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div></div>
-                </div><button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300"></button>
-                  Contact Us
-                </button>
-                <button className="border border-white/30 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300" /></button>
-                  Learn More
-                </button>
+                ))}
+              </div>
+              <div className="space-y-6">
+                {benefits.slice(4).map((benefit, index) => (
+                  <div key={index + 4} className="flex items-start">
+                    <CheckCircle className="w-6 h-6 text-green-400 mr-4 flex-shrink-0 mt-1" />
+                    <p className="text-gray-300 text-lg">{benefit}</p>
+                  </div>
+                ))}
               </div>
             </div>
-          ))
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="container mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Ready to Transform Your 3D Workflow?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Join thousands of creators who are already using AI to generate stunning 3D content. 
+              Start your free trial today.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Start Free Trial
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+                Contact Sales
+              </button>
+            </div>
+          </div>
         </section>
       </div>
-      <Footer />
-
+    </>
   );
 };
 
+export default Ai3dGenerationPage;

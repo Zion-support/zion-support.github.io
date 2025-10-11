@@ -1,5 +1,5 @@
 'use client'
-import React, { useState  } from 'react'
+import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -19,7 +19,7 @@ import {
   Phone,
   Mail,
   MapPin
-  } from 'lucide-react'
+} from 'lucide-react'
 
 const ServicesPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('')
@@ -48,26 +48,26 @@ const ServicesPage: React.FC = () => {
       marketPrice: '$4,000-8,000/month',
       category: 'IT Services',
       popular: true,
-      link: '/it-services'
+      link: '/cloud-infrastructure'
     },
     {
       icon: Shield,
       title: 'Cybersecurity',
       description: 'Comprehensive security solutions to protect your digital assets',
-      features: ['Threat Detection', 'Data Protection', 'Compliance', 'Incident Response', 'Security Audits', 'Penetration Testing'],
+      features: ['Threat Detection', 'Vulnerability Assessment', 'Security Monitoring', 'Incident Response', 'Compliance', 'Penetration Testing'],
       pricing: 'Starting at $3,000/month',
       marketPrice: '$5,000-12,000/month',
       category: 'IT Services',
-      popular: true,
-      link: '/cybersecurity-solutions'
+      popular: false,
+      link: '/cybersecurity'
     },
     {
-      icon: Database,
+      icon: BarChart3,
       title: 'Data Analytics',
-      description: 'Turn your data into actionable insights with advanced analytics platforms',
-      features: ['Real-time Dashboards', 'Data Visualization', 'Business Intelligence', 'Custom Reports', 'Predictive Analytics', 'Data Mining'],
-      pricing: 'From $3,000/month',
-      marketPrice: '$5,000-15,000/month',
+      description: 'Transform your data into actionable insights and business intelligence',
+      features: ['Data Visualization', 'Predictive Analytics', 'Real-time Dashboards', 'Data Mining', 'Statistical Analysis', 'Custom Reports'],
+      pricing: 'Starting at $2,000/month',
+      marketPrice: '$3,500-7,000/month',
       category: 'AI Services',
       popular: false,
       link: '/data-analytics'
@@ -76,79 +76,42 @@ const ServicesPage: React.FC = () => {
       icon: Smartphone,
       title: 'Mobile Development',
       description: 'Native and cross-platform mobile applications for iOS and Android',
-      features: ['Native Apps', 'Cross-platform', 'UI/UX Design', 'App Store Deployment', 'Maintenance', 'API Integration'],
-      pricing: 'Starting at $8,000/project',
-      marketPrice: '$15,000-50,000/project',
+      features: ['iOS Development', 'Android Development', 'React Native', 'Flutter', 'UI/UX Design', 'App Store Optimization'],
+      pricing: 'Starting at $4,000/month',
+      marketPrice: '$6,000-15,000/month',
       category: 'IT Services',
       popular: false,
       link: '/mobile-development'
     },
     {
-      icon: Globe,
-      title: 'Web Development',
-      description: 'Custom web applications and e-commerce solutions',
-      features: ['Custom Web Apps', 'E-commerce Solutions', 'CMS Development', 'Responsive Design', 'SEO Optimization', 'Performance Tuning'],
-      pricing: 'Starting at $5,000/project',
-      marketPrice: '$10,000-30,000/project',
-      category: 'IT Services',
-      popular: true,
-      link: '/web-development'
-    },
-    {
-      icon: Zap,
-      title: 'Automation',
-      description: 'Streamline your operations with intelligent automation solutions',
-      features: ['Process Automation', 'Workflow Optimization', 'RPA Solutions', 'Integration', 'Monitoring', 'Scalability'],
-      pricing: 'Starting at $2,000/month',
-      marketPrice: '$4,000-10,000/month',
-      category: 'AI Services',
-      popular: false,
-      link: '/ai-automation'
-    },
-    {
-      icon: BarChart3,
-      title: 'Business Intelligence',
-      description: 'Advanced analytics and reporting solutions for data-driven decisions',
-      features: ['Custom Dashboards', 'KPI Tracking', 'Report Automation', 'Data Integration', 'Real-time Analytics', 'Forecasting'],
-      pricing: 'Starting at $4,000/month',
-      marketPrice: '$7,000-20,000/month',
-      category: 'AI Services',
-      popular: false,
-      link: '/ai-analytics'
-    },
-    {
       icon: Database,
       title: 'Database Management',
-      description: 'Comprehensive database design, optimization, and maintenance services',
-      features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Security Hardening', 'Migration Services', 'Monitoring'],
+      description: 'Optimize and manage your database infrastructure for peak performance',
+      features: ['Database Design', 'Performance Tuning', 'Backup & Recovery', 'Data Migration', 'Security Hardening', 'Monitoring'],
       pricing: 'Starting at $1,500/month',
-      marketPrice: '$2,500-5,000/month',
+      marketPrice: '$2,500-6,000/month',
       category: 'IT Services',
       popular: false,
-      link: '/it-services'
+      link: '/database-management'
     }
   ]
 
   const categories = [
-    { id: 'all', name: 'All Services', count: services.length },
-    { id: 'AI Services', name: 'AI Services', count: services.filter(s => s.category === 'AI Services').length },
-    { id: 'IT Services', name: 'IT Services', count: services.filter(s => s.category === 'IT Services').length }
+    { id: 'all', name: 'All Services' },
+    { id: 'AI Services', name: 'AI Services' },
+    { id: 'IT Services', name: 'IT Services' }
   ]
 
-  const filteredServices = services.filter(service => 
-    (selectedCategory === 'all' || service.category === selectedCategory) &&
-    (searchTerm === '' || 
-     service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-     service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-     service.features.some(feature => feature.toLowerCase().includes(searchTerm.toLowerCase()))
-    )
-  )
+  const filteredServices = services.filter(service => {
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase())
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
+    return matchesSearch && matchesCategory
+  })
 
   const totalPages = Math.ceil(filteredServices.length / servicesPerPage)
-  const currentServices = filteredServices.slice(
-    (currentPage - 1) * servicesPerPage,
-    currentPage * servicesPerPage
-  )
+  const startIndex = (currentPage - 1) * servicesPerPage
+  const paginatedServices = filteredServices.slice(startIndex, startIndex + servicesPerPage)
 
   return (
     <>
@@ -158,17 +121,17 @@ const ServicesPage: React.FC = () => {
         <meta name="keywords" content="AI services, IT services, cloud services, data analytics, cybersecurity, Zion Tech Group" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
         
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8"></section></section>
-          <div className="max-w-7xl mx-auto"></div></div>
-            <div className="text-center"></div></div>
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1></h1>
-                Our <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"></span></span>Services</span>
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Our <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Services</span>
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p></p>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Comprehensive solutions designed to accelerate your digital transformation and drive business growth.
               </p>
             </div>
@@ -176,12 +139,12 @@ const ServicesPage: React.FC = () => {
         </section>
 
         {/* Search and Filter Section */}
-        <section className="py-8 px-4 sm:px-6 lg:px-8"></section></section>
-          <div className="max-w-6xl mx-auto"></div></div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"></div></div>
-              <div className="flex flex-col md:flex-row gap-4 mb-6"></div></div>
-                <div className="flex-1"></div></div>
-                  <div className="relative"></div></div>
+        <section className="py-8 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+              <div className="flex flex-col md:flex-row gap-4 mb-6">
+                <div className="flex-1">
+                  <div className="relative">
                     <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                     <input
                       type="text"
@@ -192,8 +155,8 @@ const ServicesPage: React.FC = () => {
                     />
                   </div>
                 </div>
-                <div className="md:w-64"></div></div>
-                  <div className="relative"></div></div>
+                <div className="md:w-64">
+                  <div className="relative">
                     <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                     <select
                       value={selectedCategory}
@@ -201,193 +164,96 @@ const ServicesPage: React.FC = () => {
                       className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors appearance-none"
                     >
                       {categories.map((category) => (
-                        <option key={category.id} value={category.id} className="bg-gray-800"></option>
-                          {category.name} ({category.count})
+                        <option key={category.id} value={category.id} className="bg-gray-800">
+                          {category.name}
                         </option>
                       ))}
                     </select>
                   </div>
                 </div>
               </div>
-              
-              <div className="flex flex-wrap gap-2 justify-center"></div></div>
-                {categories.slice(1).map((category) => (
-                  <button
-                    key={category.id}
-                    onClick={() => setSelectedCategory(category.id)}
-                    className="{`px-4" py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                      selectedCategory === category.id
-                        ? 'bg-cyan-500 text-white'
-                        : 'bg-white/10 text-gray-300 hover:bg-white/20'
-                    }`}
-                  >
-                    {category.name} ({category.count})
-                  </button>
-                ))}
-              </div>
             </div>
           </div>
         </section>
 
         {/* Services Grid */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8"></section></section>
-          <div className="max-w-7xl mx-auto"></div></div>
-            <div className="flex justify-between items-center mb-8"></div></div>
-              <h2 className="text-3xl font-bold text-white"></h2></h2>
-                {selectedCategory === 'all' ? 'All Services' : `${selectedCategory}`}
-              </h2>
-              <span className="text-gray-300"></span></span>
-                {filteredServices.length} service{filteredServices.length !== 1 ? 's' : ''} found
-              </span>
-            </div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div></div>
-              {currentServices.map((service, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 group relative"></div></div>
-                  {service.popular && (
-                    <div className="absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                      Popular
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {paginatedServices.map((service, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300 group">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">
+                      <service.icon className="w-6 h-6 text-white" />
                     </div>
-                  )}
-                  <div className="flex items-start mb-6"></div>
-                    <div className="bg-cyan-500/20 p-3 rounded-lg mr-4 group-hover:bg-cyan-500/30 transition-colors flex-shrink-0"></div></div>
-                      <service.icon className="w-8 h-8 text-cyan-400" />
-                    </div>
-                    <div className="flex-1"></div></div>
-                      <h3 className="text-xl font-bold text-white mb-2"></h3></h3>{service.title}</h3>
-                      <span className="inline-block bg-white/10 text-cyan-400 text-xs px-2 py-1 rounded-full mb-2"></span></span>
-                        {service.category}
+                    {service.popular && (
+                      <span className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                        Popular
                       </span>
-                    </div>
+                    )}
                   </div>
-                  
-                  <p className="text-gray-300 mb-6 leading-relaxed"></p></p>
-                    {service.description}
-                  </p>
-                  
-                  <div className="mb-6"></div></div>
-                    <h4 className="text-sm font-semibold text-white mb-3"></h4></h4>Key Features:</h4>
-                    <ul className="space-y-2"></ul>
-                      {service.features.slice(0, 4).map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-sm text-gray-300"></li>
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                      {service.features.length > 4 && (
-                        <li className="text-gray-400 text-sm"></li>
-                          +{service.features.length - 4} more features
-                        </li>
-                      )}
-                    </ul>
+                  <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
+                  <p className="text-gray-300 mb-4">{service.description}</p>
+                  <div className="space-y-2 mb-6">
+                    {service.features.slice(0, 3).map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center text-gray-300 text-sm">
+                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                        {feature}
+                      </div>
+                    ))}
                   </div>
-                  
-                  <div className="mb-6"></div></div>
-                    <div className="flex items-center justify-between mb-2"></div></div>
-                      <div className="text-2xl font-bold text-cyan-400"></div></div>{service.pricing}</div>
-                      <div className="text-sm text-gray-400 line-through"></div></div>{service.marketPrice}</div>
-                    </div>
-                    <div className="text-sm text-green-400 font-semibold"></div></div>
-                      Save up to 40% vs market rates
-                    </div>
+                  <div className="mb-6">
+                    <div className="text-lg font-bold text-cyan-400">{service.pricing}</div>
+                    <div className="text-sm text-gray-400">Market: {service.marketPrice}</div>
                   </div>
-                  
-                  <div className="flex flex-col sm:flex-row gap-3"></div></div>
-                    <button className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center group-hover:scale-105"></button>
-                      Get Quote
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                    </button>
-                    <button className="flex-1 border border-white/20 text-white font-semibold py-3 px-6 rounded-lg hover:bg-white/10 transition-all duration-300"></button>
-                      Learn More
-                    </button>
-                  </div>
+                  <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center">
+                    Learn More
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </button>
                 </div>
               ))}
             </div>
-            
+
             {/* Pagination */}
             {totalPages > 1 && (
-              <div className="flex justify-center items-center mt-12 space-x-2"></div></div>
-                <button
-                  onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
-                  disabled={currentPage === 1}
-                  className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white hover:bg-white/20 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
-                >
-                  Previous
-                </button>
-                
-                <div className="flex space-x-2"></div></div>
-                  {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
+              <div className="flex justify-center mt-12">
+                <div className="flex space-x-2">
+                  {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
                     <button
                       key={page}
                       onClick={() => setCurrentPage(page)}
-                      className="{`px-4" py-2 rounded-lg transition-all duration-300 ${
+                      className={`px-4 py-2 rounded-lg font-semibold transition-all duration-300 ${
                         currentPage === page
-                          ? 'bg-cyan-500 text-white'
-                          : 'bg-white/10 text-white hover:bg-white/20'
+                          ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white'
+                          : 'bg-white/10 text-gray-300 hover:bg-white/20'
                       }`}
                     >
                       {page}
                     </button>
                   ))}
                 </div>
-                
-                <button
-                  onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
-                  disabled={currentPage === totalPages}
-                  className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white hover:bg-white/20 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
-                >
-                  Next
-                </button>
               </div>
             )}
           </div>
         </section>
 
-        {/* Contact Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8"></section></section>
-          <div className="max-w-4xl mx-auto text-center"></div></div>
-            <div className="bg-gradient-to-r from-cyan-600/20 to-purple-600/20 rounded-2xl p-12 backdrop-blur-sm border border-white/10"></div></div>
-              <h2 className="text-4xl font-bold text-white mb-6"></h2></h2>
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8"></p></p>
-                Let's discuss your project and find the perfect solution for your business needs.
-              </p>
-              
-              <div className="grid md:grid-cols-3 gap-6 mb-8"></div></div>
-                <div className="flex items-center justify-center space-x-3 text-white"></div></div>
-                  <Phone className="w-6 h-6 text-cyan-400" />
-                  <div>
-                    <div className="font-semibold"></div></div>+1 302 464 0950</div>
-                    <div className="text-sm text-gray-300"></div></div>Call us anytime</div>
-                  </div>
-                </div>
-                <div className="flex items-center justify-center space-x-3 text-white"></div></div>
-                  <Mail className="w-6 h-6 text-cyan-400" />
-                  <div>
-                    <div className="font-semibold"></div></div>kleber@ziontechgroup.com</div>
-                    <div className="text-sm text-gray-300"></div></div>Email us</div>
-                  </div>
-                </div>
-                <div className="flex items-center justify-center space-x-3 text-white"></div></div>
-                  <MapPin className="w-6 h-6 text-cyan-400" />
-                  <div>
-                    <div className="font-semibold"></div></div>Middletown, DE</div>
-                    <div className="text-sm text-gray-300"></div></div>364 E Main St STE 1008</div>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div></div>
-                <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center"></button>
-                  <ArrowRight className="w-5 h-5 mr-2" />
-                  Start Your Project
-                </button>
-                <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-4 px-8 rounded-lg transition-all duration-300"></button>
-                  Contact Us
-                </button>
-              </div>
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-600 to-blue-700">
+          <div className="max-w-7xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto">
+              Let's discuss how our services can help you achieve your business goals. 
+              Contact us today for a free consultation.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                Get Free Consultation
+              </button>
+              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors">
+                View Portfolio
+              </button>
             </div>
           </div>
         </section>
