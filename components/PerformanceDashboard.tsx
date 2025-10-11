@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from 'react'
-interface PerformanceMetrics {loadTime: number
+interface PerformanceMetrics { loadTime: number
   renderTime: number
   memoryUsage: number,
   fps: number}
+
 const PerformanceDashboard: React.FC = () => {const [metrics, setMetrics] = useState<PerformanceMetrics>()})
   const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {
@@ -15,6 +16,7 @@ const PerformanceDashboard: React.FC = () => {const [metrics, setMetrics] = useS
       setMetrics()
       }))
     }
+
     //Update metrics on load
     updateMetrics()
     //Update metrics periodically
@@ -23,8 +25,10 @@ const PerformanceDashboard: React.FC = () => {const [metrics, setMetrics] = useS
   }, [])
   //Only show in development
   if (process.env['NODE_ENV'] !== 'development') {return null}
+
   return ()
         onClick={() => setIsVisible(!isVisible)}
+
         className="bg-blue-600 text-white px-3 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
         aria-label="Toggle performance dashboard"
       >
@@ -43,8 +47,10 @@ const PerformanceDashboard: React.FC = () => {const [metrics, setMetrics] = useS
           </div>
         </div>
       )}
+
     </div>
   )
 }
+
 export default PerformanceDashboard</button>
   </PerformanceMetrics>

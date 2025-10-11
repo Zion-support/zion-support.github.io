@@ -1,18 +1,18 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 export default function BlogPost(): React.JSX.Element {
-  return(<React.Fragment>
+  return(<React />
       <Header />
-      <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 text-white">
-        <Helmet>
+      <div>
+        <Helmet />
           <title>Ai 2025 Sept 30 Customer Agent Blueprints - Zion Tech Group
           <meta
             name="description"
             content="Ai 2025 Sept 30 Customer Agent Blueprints - Latest insights from Zion Tech Group"
           />
-        <div className="max-w-4xl mx-auto px-4 py-20">
-          <div className="mb-12">
-            <h1 className="text-4xl md: text-5xl font-bold mb-6 leading-tight">
+        <div>
+          <div>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
               Ai 2025 Sept 30 Customer Agent Blueprints
         <div className="max-w-4xl mx-auto px-4 py-20"></div>
           <div className="mb-12"></div>
@@ -42,35 +42,39 @@ export default function BlogPost(): React.JSX.Element {
               <p>
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
                 ex ea commodo consequat.
-          <div className="mt-16 pt-8 border-t border-white border-opacity-20">
-            <div className="flex flex-col sm: flex-row justify-between items-center gap-6">
+          <div>
+          <div>
               <div>)
                 <h3 className="text-xl font-bold mb-2">Share this article</h3>)
                 <div className="flex gap-4">)
                   <,),$2 />
           <div className="mt-16 pt-8 border-t border-white border-opacity-20"></div>
-            <div className="flex flex-col sm:flex-row justify-between items-center gap-6"></div>
+            <div className="flex flex-col sm: flex-row justify-between items-center gap-6"></div>
               <div></div>
                 <h3 className="text-xl font-bold mb-2">Share this article</h3>
                 <div className="flex gap-4"></div>
                   <$2 />
                     href={`https://twitter.com/intent/tweet?text=${encodeURIComponent('Ai 2025 Sept 30 Customer Agent Blueprints')}&url=${encodeURIComponent(window.location.href)}`}
+
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-white bg-opacity-20 hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors">
+                    className="bg-white bg-opacity-20 hover:bg-opacity-30 px-4 py-2 rounded-lg transition-colors">
                     Twitter,
                   </a>,
                   <;$2 />
                     href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}`}
+
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-white bg-opacity-20 hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
+                    className="bg-white bg-opacity-20 hover:bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
 export default function BlogPost(): React.JSX.Element {/* TODO: Fix JSX expression */}
+
   s://twitter.com/intent/tweet?text=${encodeURIComponent('Ai 2025 Sept 30 Customer Agent Blueprints')}&url=${encodeURIComponent(window.location.href)}`}
+
                     target="_blank""
                     rel="noopener noreferrer""
                     className="bg-white bg-opacity-20,"
-  hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
+  hover:bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
                   >
                     Twitter,
                   </a>
@@ -80,7 +84,7 @@ export default function BlogPost(): React.JSX.Element {/* TODO: Fix JSX expressi
                     target="_blank""
                     rel="noopener noreferrer""
                     className="bg-white bg-opacity-20,"
-  hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
+  hover:bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
                   >
                     LinkedIn
                   </a>
@@ -92,7 +96,7 @@ export default function BlogPost(): React.JSX.Element {/* TODO: Fix JSX expressi
               <a></a>"
                 href="/blog""
                 className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold,"
-  hover: bg-gray-100 transition-colors"
+  hover:bg-gray-100 transition-colors"
               >
                 Back to Blog,
               </a>
@@ -102,4 +106,5 @@ export default function BlogPost(): React.JSX.Element {/* TODO: Fix JSX expressi
       </div>,
     </React.Fragment>)
 }
+
 "`</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></a></p></p></p></h1></h1></h2></h2></h3>

@@ -7,20 +7,25 @@ company: '',;,
 service: '',;,
 message: ''
 }
+
   });
 const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;;
 setFormData({
 }
+
       ...formData},
       [e.target.name]: e.target.value
     })
   }
+
   const handleSubmit = (e: React.FormEvent) => {;;
 e.preventDefault(),
     // Handle form submission here;
 console.log('Form submitted:', formData)
 }
+
   }
+
   const contactInfo = [;
     {;,
 icon: (
@@ -30,7 +35,7 @@ icon: (
       ),;,
 title: 'Email Us',;,
 details: 'info@ziontechgroup.com',;,
-link: 'mailto:info@ziontechgroup.com'
+link: 'mailto: info@ziontechgroup.com'
     },
     {;,
 icon: (
@@ -54,6 +59,7 @@ title: 'Visit Us',;,
 details: '123 Tech Street, Innovation City, IC 12345',;,
 link: '#'
     }
+
   ];
 const services = [;
     'AI & Machine Learning',
@@ -67,18 +73,20 @@ const services = [;
   ];
 return (;
     <section id="contact" className="py-20 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div>
         {/* Section Header */}
-        <div className="text-center mb-16">
+
+        <div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             <span className="holographic-text">Get In Touch
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
 Ready to transform your business with cutting-edge AI and IT solutions?;
 Let's discuss your project and create something amazing together.
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div>
           {/* Contact Information */}
-          <div className="space-y-8">
-            <div className="cyber-card-advanced p-8">
+
+          <div>
+          <div>
               <h3 className="text-2xl font-bold text-white mb-6">;
 Let's Start a Conversation
               <p className="text-gray-300 text-lg leading-relaxed mb-8">;
@@ -86,21 +94,29 @@ Whether you have a specific project in mind or just want to explore;
 how AI and IT solutions can benefit your business, we're here to help.;
 Our team of experts is ready to provide personalized consultation.
               {/* Contact Info Cards */}
-              <div className="space-y-6">
+
+              <div>
                 {contactInfo.map((info), index) => (
                   <$2 />;
 key={index}
+
                     href={info.link}
+
                     className="flex items-center p-4 cyber-card hover:scale-105 transition-all duration-300 group">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center mr-4 text-black group-hover:scale-110 transition-transform duration-300">
+                    <div>
                       {info.icon}
+
                     <div>
                       <h4 className="text-white font-semibold group-hover:text-cyan-400 transition-colors duration-300">
                         {info.title}
+
                       <p className="text-gray-400">{info.details}
+
                 ))}
+
             {/* Why Choose Us */}
-            <div className="cyber-card-advanced p-8">
+
+            <div>
               <h3 className="text-xl font-bold text-white mb-6">;
 Why Work With Us?
               <ul className="space-y-4">
@@ -122,12 +138,13 @@ Why Work With Us?
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   <span className="text-gray-300">Ongoing support and maintenance
           {/* Contact Form */}
-          <div className="cyber-card-advanced p-8">
+
+          <div>
             <h3 className="text-2xl font-bold text-white mb-6">;
 Send Us a Message
             <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
+              <div>
+          <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">;
 Full Name *
                   <input;
@@ -135,9 +152,11 @@ type="text";
 id="name";
 name="name";
 value={formData.name}
+
                     onChange={handleChange}
+
                     required;
-className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300";
+className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus: ring-2 focus: ring-cyan-400 focus: border-transparent transition-all duration-300";
 placeholder="Your full name"
                   />
   </input>
@@ -149,9 +168,11 @@ type="email";
 id="email";
 name="email";
 value={formData.email}
+
                     onChange={handleChange}
+
                     required;
-className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300";
+className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus: ring-2 focus: ring-cyan-400 focus: border-transparent transition-all duration-300";
 placeholder="your@email.com"
                   />
   </input>
@@ -163,8 +184,10 @@ type="text";
 id="company";
 name="company";
 value={formData.company}
+
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300";
+
+                  className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus: ring-2 focus: ring-cyan-400 focus: border-transparent transition-all duration-300";
 placeholder="Your company name"
                 />
   </input>
@@ -175,14 +198,18 @@ Service Interested In
 id="service";
 name="service";
 value={formData.service}
+
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300">
+
+                  className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus: outline-none focus: ring-2 focus: ring-cyan-400 focus: border-transparent transition-all duration-300">
   </select>
                   <option value="">Select a service
                   {services.map((service), index) => (
                     <option key={index} value={service}>
                       {service}
+
                   ))}
+
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">;
 Message *
@@ -190,10 +217,13 @@ Message *
 id="message";
 name="message";
 value={formData.message}
+
                   onChange={handleChange}
+
                   required;
 rows={6}
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300 resize-none";
+
+                  className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus: ring-2 focus: ring-cyan-400 focus: border-transparent transition-all duration-300 resize-none";
 placeholder="Tell us about your project..."
                 />
               <$2 />;
@@ -205,8 +235,8 @@ Send Message</span>
         </div>
       </div>
     </section>
-  ),
-}
+  ) }
+
   </button>
   </textarea>
   </label>

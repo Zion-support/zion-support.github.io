@@ -31,7 +31,7 @@ import React from 'react'
               </p>
               <button className="cyber-button">
                 Learn More
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight />
               </button>
             </div>
       

@@ -2,13 +2,11 @@ if (!id) return
       try {
         const res = await fetch(`/api/products/${id}`)
         }
+
       } catch (err) {
         // Fail silently and fall back to local data
         logErrorToProduction('Error fetching product', { data: err })
       }
-
-
-
 
     // Only fetch if id is available (from router)
     if (id) {
@@ -24,17 +22,21 @@ if (!id) return
 
     return <div className="p-6 text-white">Loading product details...</div>
   }
+
   if (!product) {
 
         if (res && res.ok) {
           const data = await res && res.json()
           setProduct(data)
         }
+
       } catch (err) {
         // Fail silently and fall back to local data
         logErrorToProduction('Error fetching product', { data: err })
       }
+
     }
+
     // Only fetch if id is available (from router)
     if (id) {
       fetchProduct()
@@ -43,13 +45,17 @@ if (!id) return
 
 
     }
+
   }, [id]), // id is now from router && router.query
   return (
     <>
-      <SEO
-        title = {product.title,}
-        description = {product.description,}
-        ogImage = {product.images?.[0],}
+      <SEO />
+        title = {product.title }
+
+        description = {product.description }
+
+        ogImage = {product.images?.[0] }
+
     return <div className="p-6 text-white">Product not found</div>
   }, [id]), // id is now from router.query
   if (!product && !id) { // If no id from router yet, it might still be loading
@@ -67,30 +73,30 @@ if (!id) return
     dispatch({
       type: 'ADD_ITEM',
       payload: { id: product && product.id, name: product && product.title, price: product && product.price ?? 0, quantity: 1 }
+
     })
     toast && toast.success(`1× ${product && product.title} added`)
     setTimeout(() => setAdding(false), 500)
   }
+
     setTimeout(() => setAdding(false), 500)
   }
 
   return (
     <>
-      <SEO
-
-
-
+      <SEO />
       />
-      <div className="min-h-screen bg-zion-blue p-6 text-white">
+      <div>
         <h1 className="text-2xl font-bold mb-4">{product.title}</h1>
         {product.images?.length ? (
-          <div className="mb-4 relative w-full h-64">
-            <Image
-              src = {product.images[0] |'/placeholder.svg',}
-              alt = {product.title,}
+          <div>
+            <Image />
+              src = {product.images[0] |'/placeholder.svg' }
 
+              alt = {product.title }
 
               src={product.images[0] || '/placeholder.svg'}
+
               alt={product.title}
 
               className="object-cover rounded-md"
@@ -98,16 +104,16 @@ if (!id) return
             />
           </div>
         ) : null}
+
         <p className="mb-6">{product.description}</p>
-        <Button onClick={handleAdd} disabled={adding |inCart}>
+        <Button />
           {inCart ? 'In Cart' : adding ? 'Adding...' : 'Add to Cart'}
-
-
 
         </Button></$1>
     </>
   )
 }
+
 //Only fetch if id is available (from router) 
 }
 
@@ -136,12 +142,14 @@ if ( {) {
   $2
 }
 
-        <Button onClick={handleAdd} disabled={adding || inCart}>
+        <Button />
           {inCart ? 'In Cart' : adding ? 'Adding...' : 'Add to Cart'}
+
 </$1></$1>
     </>
   )
 }
+
 //Only fetch if id is available (from router) 
 }
 
@@ -173,6 +181,7 @@ if ( {) {
       const found_product = NEW_PRODUCTS.find ((p) => p.id === id)
       set_product (found_product || null)
     }
+
   }, [id])
 </$1></$1>
     </>
@@ -180,6 +189,7 @@ if ( {) {
 }
 
 }
+
 //Only fetch if id is available (from router) 
 }const in_cart = items.some (index => i.id === product.id)
 const handle_add = () =>: any {
@@ -187,6 +197,7 @@ const handle_add = () =>: any {
 if (return) {
   $2
 }
+
 set_adding (true)
 dispatch ({
   type: 'ADD ITEM'
@@ -198,12 +209,13 @@ toast.success (`1× $ {
 }added`)
 set_timeout ( () => set_adding (false), 500) 
 }
+
 product.title 
 }description= {
   product.description 
 }og_image= {
-  product.images?.[0] 
+  product.images?.[0]
+
 }/> </Button> </div> </>) 
 }'
 }
-

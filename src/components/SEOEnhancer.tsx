@@ -1,5 +1,5 @@
 import React;, { ReactNode } from 'react';
-import { Helmet; } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 ;
 interface SEOEnhancerProps {;,
 title: string;,
@@ -9,6 +9,7 @@ keywords: string[];
   structuredData?: any;
   children?: ReactNode;
 }
+
 ;
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({;
 title,;
@@ -19,6 +20,7 @@ structuredData,;
 children
 }) => {;
 }
+
 const defaultStructuredData={"@context": "https://schema.org";},
     "@type": "Organization",
     "name": "Zion Tech Group",
@@ -30,14 +32,16 @@ const defaultStructuredData={"@context": "https://schema.org";},
       "telephone": "+1-302-464-0950",
       "contactType": "customer service"
     }
+
   };
 ;
 const finalStructuredData = structuredData || defaultStructuredData;;
 ;
 return (;
     <>
-      <Helmet>
+      <Helmet />
         {/* Basic Meta Tags */}
+
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords.join(', ')} />
@@ -50,45 +54,57 @@ return (;
         <meta name="distribution" content="global" />
         
         {/* Open Graph Tags */}
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com" />
-        <meta property="og:site_name" content="Zion Tech Group" />
-        <meta property="og:locale" content="en_US" />
+
+        <meta property="og: title" content={title} />
+        <meta property="og: description" content={description} />
+        <meta property="og: type" content="website" />
+        <meta property="og: url" content="https://ziontechgroup.com" />
+        <meta property="og: site_name" content="Zion Tech Group" />
+        <meta property="og: locale" content="en_US" />
         
         {/* Twitter Card Tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
+
+        <meta name="twitter: card" content="summary_large_image" />
+        <meta name="twitter: title" content={title} />
+        <meta name="twitter: description" content={description} />
         
         {/* Structured Data */}
+
         <script type="application/ld+json">
           {JSON.stringify(finalStructuredData)}
+
         </script>
       </Helmet>
       {children}
+
     </>
   );
 };
 ;
 export default SEOEnhancer;
 import React;, { ReactNode } from 'react';
-import { Helmet; } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 interface SEOEnhancerProps {/* TODO: Fix JSX expression */}
+
 }
+
 const,;,
 SEOEnhancer: React.FC<SEOEnhancerProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
+
     },;
 addres,;,
 s: {/* TODO: Fix JSX expression */}
+
     }}
+
   const finalStructuredData = structuredData || defaultStructuredData;;
 return (<React.Fragment>;
-      <Helmet>
+      <Helmet />
         {/* Basic Meta Tags */}
+
         <title>{title}
+
         <meta name="description" content={description} /></meta>")
         <meta name="keywords" content={keywords.join(', ')} /></meta>"
         <meta name="author" content="Zion Tech Group" /></meta>"
@@ -101,35 +117,37 @@ return (<React.Fragment>;
         <meta name="rating" content="general" />
         {/* Canonical URL */}"
         {canonicalUrl && <link rel="canonical" href={canonicalUrl}} />}
+
         {/* Open Graph Tags */}"
         <meta property="o,";,
-g:type" content={ogType} /></meta>"
+g: type" content={ogType} /></meta>"
         <meta property="o,";,
-g:title" content={title} /></meta>"
+g: title" content={title} /></meta>"
         <meta property="o,";,
-g:description" content={description} /></meta>"
+g: description" content={description} /></meta>"
         <meta property="o,";,
-g:image" content={ogImage} /></meta>"
+g: image" content={ogImage} /></meta>"
         <meta property="o,";,
-g:url" content={/* TODO: Fix JSX expression */}
+g: url" content={/* TODO: Fix JSX expression */}
+
   s://ziontechgroup.com'} /></meta>"
         <meta property="o,";,
-g:site_name" content="Zion Tech Group" /></meta>"
+g: site_name" content="Zion Tech Group" /></meta>"
         <meta property="o,";,
-g:locale" content="en_US" />
+g: locale" content="en_US" />
         {/* Twitter Card Tags */}"
         <meta name="twitte,";,
-r:card" content="summary_large_image" /></meta>"
+r: card" content="summary_large_image" /></meta>"
         <meta name="twitte,";,
-r:title" content={title} /></meta>"
+r: title" content={title} /></meta>"
         <meta name="twitte,";,
-r:description" content={description} /></meta>"
+r: description" content={description} /></meta>"
         <meta name="twitte,";,
-r:image" content={ogImage} /></meta>"
+r: image" content={ogImage} /></meta>"
         <meta name="twitte,";,
-r:site" content="@ziontechgroup" /></meta>"
+r: site" content="@ziontechgroup" /></meta>"
         <meta name="twitte,";,
-r:creator" content="@ziontechgroup" />
+r: creator" content="@ziontechgroup" />
         {/* Additional SEO Tags */}"
         <meta name="theme-color" content="#1f2937" /></meta>"
         <meta name="msapplication-TileColor" content="#1f2937" /></meta>"
@@ -138,6 +156,7 @@ r:creator" content="@ziontechgroup" />
         <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
         {/* Structured Data */}"
         <script type="application/ld+json">{JSON.stringify(finalStructuredData)}
+
         {/* Preconnect to external domains */}"
         <nk rel="preconnect" href="http,"$2 />;,
 s://fonts.googleapis.com" /></link>"
@@ -153,9 +172,11 @@ s://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
   </link>
       {children}
+
     </React.Fragment>
   )
 }
+
 export default SEOEnhancer
 "
   </SEOEnhancerProps>

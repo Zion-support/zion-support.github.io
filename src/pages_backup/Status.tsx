@@ -6,13 +6,10 @@ interface ServiceStatus {
   lastChecked: string
 }
 
-
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props)
     this.state = { hasError: false }
-
 
 const FALLBACK_SERVICES: ServiceStatus[] = [
   {
@@ -40,22 +37,24 @@ const FALLBACK_SERVICES: ServiceStatus[] = [
     lastChecked: new Date().toISOString()
 
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true }
+
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo)
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>
     }
-    
+
     return this.props.children
   }
+
 }
 
   )
@@ -86,6 +85,7 @@ const FALLBACK_SERVICES: ServiceStatus[] = [
     description: "AI talent profiles and matching",
     lastChecked: new Date().toISOString()
   }
+
 ],
 
 export default function Status() {
@@ -138,6 +138,7 @@ const FALLBACK_SERVICES: ServiceStatus[] = [
     description: "AI talent profiles and matching",
     lastChecked: new Date().toISOString()
   }
+
 ],
 export default function Status() {
   const [externalStatusLoaded, setExternalStatusLoaded] = useState(false),
@@ -150,6 +151,7 @@ export default function Status() {
       if (!externalStatusLoaded) {
         setShowFallback(true)
       }
+
     }, 5000), // 5 second timeout
     return () => clearTimeout(timeout)
   }, [externalStatusLoaded]),
@@ -162,10 +164,13 @@ export default function Status() {
         if (typeof data.uptime === 'number') {
           setUptime(data.uptime)
         }
+
       } catch (err) {
         logWarn('Failed to fetch uptime', { data: err })
       }
+
     }
+
     fetchUptime()
   }, []),
 
@@ -180,7 +185,7 @@ export default function Status() {
       case 'maintenance':
         return <Clock className="h-5 w-5 text-blue-500" />,
       default:
-        return <AlertCircle className="h-5 w-5 text-gray-500" />
+        return <AlertCircle />
     fetchUptime()
   }, []),
   const getStatusIcon = (status: ServiceStatus['status']) => {
@@ -195,6 +200,7 @@ export default function Status() {
         return <Clock className="h-5 w-5 text-blue-500" />,
       default:
         return <AlertCircle className="h-5 w-5 text-gray-500" />}
+
 import React, { useState, useEffect } from 'react'; import { motion  } from 'framer-motion'; import { SEO } from '../components/SEO'; import {CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Globe, Zap, RefreshCw, TrendingUp, BarChart3, Calendar, AlertCircle, Info, ExternalLink } from 'lucide-react'; export default function Status() { const [lastUpdated, setLastUpdated] = useState(new Date()); const [isRefreshing, setIsRefreshing] = useState(false)
 }
 
@@ -211,14 +217,14 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
 
   return (
     <>
-      <SEO
+      <SEO />
         title="API Status"
         description="View real-time service availability and uptime statistics."
         canonical="https://app.ziontechgroup.com/status"
       />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-8">
+        <div>
+          <div>
             <h1 className="text-4xl font-bold text-white mb-4">System Status</h1>
             <p className="text-zion-slate-light text-lg">
               Real-time monitoring of Zion platform services
@@ -226,33 +232,38 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
             {uptime !== null && (
               <p className="text-zion-slate-light text-sm mt-2">Uptime: {formatUptime(uptime)}</p>
             )}
+
           </div>
 
           {!showFallback && (
-            <div className="mb-8">
-              <Card className="bg-zion-blue-dark border-zion-blue-light">
-                <CardHeader>
-                  <CardTitle className="text-white flex items-center gap-2">
-                    <ExternalLink className="h-5 w-5" />
+            <div>
+              <Card />
+                <CardHeader />
+                  <CardTitle />
+                    <ExternalLink />
                     Live Status Dashboard
                   </CardTitle>
-                  <CardDescription>
+                  <CardDescription />
                     Loading detailed status information...
                   </CardDescription>
                 </CardHeader>
-                <CardContent>
+                <CardContent />
                   <iframe
                     src={statusUrl}
+
                     title="Zion Status Page"
                     className="w-full border-0 rounded"
                     height="600"
                     onLoad={() => setExternalStatusLoaded(true)}
+
                     onError={() => setShowFallback(true)}
+
                   />
-                  <div className="mt-4 text-center">
-                    <Button
+                  <div>
+                    <Button />
                       variant="outline"
                       onClick={() => setShowFallback(true)}
+
                       className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10"
                     >
                       View Simplified Status
@@ -265,52 +276,57 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
 
           {showFallback && (
             <>
-              <div className="mb-8">
-                <Card className="bg-zion-blue-dark border-zion-blue-light">
-                  <CardHeader>
+              <div>
+                <Card />
+                  <CardHeader />
                     <CardTitle className="text-white">Service Status Overview</CardTitle>
-                    <CardDescription>
+                    <CardDescription />
                       Current status of core platform services
                     </CardDescription>
                   </CardHeader>
-                  <CardContent className="space-y-4">
+                  <CardContent />
                     {FALLBACK_SERVICES.map((service) => (
-                      <div key={service.name} className="flex items-center justify-between p-4 bg-zion-blue rounded-lg">
-                        <div className="flex items-center gap-3">
+                      <div>
+          <div>
                           {getStatusIcon(service.status)}
+
                           <div>
                             <h3 className="font-medium text-white">{service.name}</h3>
                             <p className="text-sm text-zion-slate-light">{service.description}</p>
                           </div>
                         </div>
-                        <div className="text-right">
-                          <div className={`font-medium ${getStatusColor(service.status)}`}>
+                        <div>
+          <div>
                             {getStatusText(service.status)}
+
                           </div>
-                          <div className="text-xs text-zion-slate-light">
+                          <div>
                             Updated: {new Date(service.lastChecked).toLocaleTimeString()}
+
                           </div></$1></$1>
                     ))}
+
                   </CardContent>
                 </Card>
               </div>
 
-              <div className="text-center">
+              <div>
                 <p className="text-zion-slate-light mb-4">
                   For detailed incident history and real-time updates:
                 </p>
-                <Button
+                <Button />
                   variant="outline"
                   asChild
                   className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10"
                 >
                   <$2 />
-                    href={statusUrl} 
+                    href={statusUrl}
+
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="flex items-center gap-2"
                   >
-                    <ExternalLink className="h-4 w-4" />
+                    <ExternalLink />
                     Visit Full Status Page
                   </Link>
                 </Button>
@@ -318,24 +334,24 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
             </>
           )}
 
-          <div className="mt-12 text-center">
-            <Card className="bg-zion-blue-dark border-zion-blue-light">
-              <CardHeader>
+          <div>
+            <Card />
+              <CardHeader />
                 <CardTitle className="text-white">Need Help?</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4">
+              <CardContent />
                 <p className="text-zion-slate-light">
                   If you're experiencing issues not reflected here, please contact our support team.
                 </p>
-                <div className="flex flex-col sm: flex-row gap-4 justify-center">
-                  <Button
+                <div>
+                  <Button />
                     variant="outline"
                     asChild
                     className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10"
                   >
                     <Link href="/contact">Contact Support</Link>
                   </Button>
-                  <Button
+                  <Button />
                     variant="outline"
                     asChild
                     className="text-zion-purple border-zion-purple hover:bg-zion-purple/10"
@@ -361,19 +377,19 @@ interface ServiceStatus {
   description: string,
   last_checked: string
 }
-        return <CheckCircle className="h - 5 w - 5 text - green - 500" />
-        return <Clock className="h - 5 w - 5 text - blue - 500" />
+
+        return <CheckCircle />
+        return <Clock />
       default:
         return <AlertCircle className="h - 5 w - 5 text - gray - 500" />}
+
 import React, { useState, useEffect } from 'react'; import { motion  } from 'framer-motion'; import { SEO } from '../components / SEO'; import {CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Globe, Zap, RefreshCw, TrendingUp, BarChart3, Calendar, AlertCircle, Info, ExternalLink } from 'lucide-react'; export default /**
  * Status - Function description
  */
 function Status() { const [last_updated, setLastUpdated] = useState (new Date ()); const [is_refreshing, setIsRefreshing] = useState (false)
 }
+
   )
 }
-
-
-
 
 </a>

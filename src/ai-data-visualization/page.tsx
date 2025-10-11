@@ -4,21 +4,23 @@ import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression */}
+
 }
-  return (<div><Helmet>
+
+  return (<div><Helmet />
         <title>AI Data Visualization Solutions - Zion Tech Group
         <meta name="description" content="Intelligent AI-powered data visualization with automated insights, interactive dashboards, and predictive analytics. Starting at $149/month." /></meta>"
         <meta name="keywords" content="AI data visualization, business intelligence, interactive dashboards, data analytics, predictive insights" /></meta>"
         <nk rel="canonical" href="http,"$2 />
   s://ziontechgroup.com/ai-data-visualization" />
       "
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+      <div>
         <Navigation /></Navigation>"
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}"
           <section className="text-center mb-16"></section>"
             < className="text-4xl,"$2 />
-  md: text-6xl font-bold text-white mb-6 neon-text cyber-text"></h1>
+  md:text-6xl font-bold text-white mb-6 neon-text cyber-text"></h1>
               AI Data Visualization
             </h1>"
             <p className="text-xl text-cyan-400 mb-8 font-medium"></p>
@@ -31,7 +33,7 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">AI-Powered Features</h2>"
             < className="grid grid-cols-1,$2 />
   md:grid-cols-2,"
-  lg:grid-cols-3 gap-8"></div>"
+  lg: grid-cols-3 gap-8"></div>"
               <div className="cyber-card p-6 energy-pulse"></div>"
                 <div className="text-4xl mb-4 text-center">🎨</div>"
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Auto-Generated Charts</h3>"
@@ -114,7 +116,7 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Perfect For</h2>"
             < className="grid grid-cols-1,$2 />
   md:grid-cols-2,"
-  lg:grid-cols-4 gap-8"></div>"
+  lg: grid-cols-4 gap-8"></div>"
               <div className="cyber-card p-6 text-center"></div>"
                 <div className="text-4xl mb-4">📊</div>"
                 <h3 className="text-xl font-bold text-white mb-4">Business Intelligence</h3>"
@@ -141,7 +143,7 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
               Join 2,000+ companies using our AI data visualization platform to make better decisions with their data.
             </p>"
             < className="flex flex-col,"$2 />
-  sm:flex-row gap-4 justify-center"></div>"
+  sm: flex-row gap-4 justify-center"></div>"
               < href="te,"$2 />
   l: +13024640950" className="cyber-button"></a>
                 📞 Cal)
@@ -149,7 +151,7 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
               </a>"
               < href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,$2 />
   hover:bg-white,"
-  hover: text-indigo-600 transition-all duration-300"></a>
+  hover:text-indigo-600 transition-all duration-300"></a>
                 Get Free Demo
               </a>
             </div>
@@ -158,6 +160,5 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
         <Footer /></Footer>
       </div>
     </div>
-  ),
-}"
+  ) }"
 </p></p></p></p></p></p></p></p></p></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li>

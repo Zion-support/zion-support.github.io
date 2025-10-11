@@ -1,4 +1,4 @@
-import { Helmet; } from "react-helmet-async";";
+import { Helmet } from "react-helmet-async";";
 impo, r, t { Glo, b, e } fr, o, m "luci, d, e-rea, c, t";";
 import, Header, from "../../componen, t, s/Head, e, r";";
 import, Footer, from "../../componen, t, s/Foot, e, r";
@@ -19,7 +19,9 @@ tit, l, e: "Comprehensive, Security, Analysis",";
 descripti, o, n: "Deep, code, analysis using, static, analysis, dynamic, testin, g, and, formal, verification to, identify, vulnerabilities.",";
 benef, i, t: "99.8% vulnerability, detection, rate"
 }
+
     }
+
     {;
 ic, o, n: Sear, c, h;
 tit, l, e: "Automated, Vulnerability, Scanning",";
@@ -28,6 +30,7 @@ tit, l, e: "Automated, Vulnerability, Scanning",";
 descripti, o, n: "AI-powered, scanning, tools that, detect, common smart, contract, vulnerabilities and, security, patterns.",";
 benef, i, t: "1, 0, 0+ vulnerability, patterns, detected"
     }
+
     {;
 ic, o, n: AlertTriang, l, e;
 tit, l, e: "Risk, Assessmen, t & Mitigati, o, n",";
@@ -36,6 +39,7 @@ tit, l, e: "Risk, Assessmen, t & Mitigati, o, n",";
 descripti, o, n: "Detailed, risk, analysis with, prioritized, recommendations and, mitigation, strategies.",";
 benef, i, t: "Zero, critical, vulnerabilities in, productio, n"
     }
+
     {;
 ic, o, n: CheckCirc, l, e;
 tit, l, e: "Compliance, Verificatio, n",";
@@ -44,6 +48,7 @@ tit, l, e: "Compliance, Verificatio, n",";
 descripti, o, n: "Ensure, compliance, with industry, standard, s, regulatory, requirement, s, and, best, practices.",";
 benef, i, t: "1, 0, 0% compliance, with, standards"
     }
+
     {;
 ic, o, n: Clo, c, k;
 tit, l, e: "Fast, Turnaroun, d",";
@@ -52,6 +57,7 @@ tit, l, e: "Fast, Turnaroun, d",";
 descripti, o, n: "Rapid, audit, completion with, detailed, reports delivered, within, 5-10, business, days.",";
 benef, i, t: "5-10, day, delivery guarant, e, e"
     }
+
     {;
 ic, o, n: Use, r, s;
 tit, l, e: "Expert, Tea, m",";
@@ -60,6 +66,7 @@ tit, l, e: "Expert, Tea, m",";
 descripti, o, n: "Certified, blockchain, security experts, with, extensive experience, in, smart contract, auditin, g.",";
 benef, i, t: "50+ successful, audits, completed"
     }
+
   ];
 const, pricin, g = [
     {;
@@ -79,6 +86,7 @@ featur, e, s: [,
       ];
 popul, a, r: fal, s, e
   }
+
     {;
 na, m, e: "Professional, Audi, t";
 pri, c, e: "$8,5, 0, 0";
@@ -98,6 +106,7 @@ featur, e, s: [,
       ];
 popul, a, r: tr, u, e
   }
+
     {;
 na, m, e: "Enterprise, Audi, t";
 pri, c, e: "$25,0, 0, 0";
@@ -135,6 +144,7 @@ featur, e, s: [,
       ];
 popul, a, r: fal, s, e
   }
+
     {;
 na, m, e: "Professional, Audi, t",";
 pri, c, e: "$8,5, 0, 0",";
@@ -154,6 +164,7 @@ featur, e, s: [,
       ];
 popul, a, r: tr, u, e
   }
+
     {;
 na, m, e: "Enterprise, Audi, t",";
 pri, c, e: "$25,0, 0, 0",";
@@ -175,6 +186,7 @@ featur, e, s: [,
       ];
 popul, a, r: fal, s, e
   }
+
   ];
 const, testimonial, s = [
     {;
@@ -187,6 +199,7 @@ conte, n, t: "The, smart, contract audit, identified, 3 critical, vulnerabilitie
 rati, n, g: 5,;
 compa, n, y: "DeFi, Protoco, l"
     }
+
     {;
 na, m, e: "Sarah, Rodrigue, z",";
 ro, l, e: "Found, e, r, NFT, Marketplac, e",";
@@ -197,6 +210,7 @@ conte, n, t: "Professional, audit, process with, clear, communication and, actio
 rati, n, g: 5,;
 compa, n, y: "NFT, Marketplac, e"
     }
+
     {;
 na, m, e: "Dr. James, Wilso, n",";
 ro, l, e: "Head, of, Blockchain, FinTe, c, h",";
@@ -207,6 +221,7 @@ conte, n, t: "The, enterprise, audit package, provided, comprehensive security, 
 rati, n, g: 5,;
 compa, n, y: "FinTe, c, h"
     }
+
   ];
 const, auditType, s = [
     {;
@@ -215,18 +230,21 @@ ic, o, n: Glo, b, e;
 descripti, o, n: "Comprehensive, auditing, for decentralized, finance, protocols including, lendin, g, borrowi, n, g, and, trading, platforms.",";
 vulnerabiliti, e, s: ["Reentrancy, attack, s", "Flash, loan, exploits", "Oracle, manipulatio, n", "Liquidity, pool, risks"]"
     }
+
     {;
 tit, l, e: "NFT, Smart, Contracts",";
 ic, o, n: Co, d, e;
 descripti, o, n: "Specialized, auditing, for NFT, marketplace, s, minting, contract, s, and, token, standards complian, c, e.",";
 vulnerabiliti, e, s: ["Metadata, manipulatio, n", "Royalty, bypas, s", "Minting, vulnerabilitie, s", "Transfer, restriction, s"]"
     }
+
     {;
 tit, l, e: "Token, Contract, s",";
 ic, o, n: Databa, s, e;
 descripti, o, n: "Security, analysis, for E, R, C-20, E, R, C-7, 2, 1, E, R, C-11, 5, 5, and, custom, token implementatio, n, s.",";
 vulnerabiliti, e, s: ["Supply, manipulatio, n", "Access, control, issues", "Transfer, bug, s", "Approval, vulnerabilitie, s"]"
     }
+
     {;
 tit, l, e: "DAO, Governanc, e",";
 ic, o, n: Use, r, s;
@@ -237,105 +255,172 @@ ic, o, n: Glo, b, e;
 descripti, o, n: "Comprehensive, auditing, for decentralized, finance, protocols including, lendin, g, borrowi, n, g, and, trading, platforms.",";
 vulnerabiliti, e, s: ["Reentrancy, attack, s", "Flash, loan, exploits", "Oracle, manipulatio, n", "Liquidity, pool, risks"]"
   }
+
     {;
 tit, l, e: "NFT, Smart, Contracts",";
 ic, o, n: Co, d, e;
 descripti, o, n: "Specialized, auditing, for NFT, marketplace, s, minting, contract, s, and, token, standards complian, c, e.",";
 vulnerabiliti, e, s: ["Metadata, manipulatio, n", "Royalty, bypas, s", "Minting, vulnerabilitie, s", "Transfer, restriction, s"]"
   }
+
     {;
 tit, l, e: "Token, Contract, s",";
 ic, o, n: Databa, s, e;
 descripti, o, n: "Security, analysis, for E, R, C-20, E, R, C-7, 2, 1, E, R, C-11, 5, 5, and, custom, token implementatio, n, s.",";
 vulnerabiliti, e, s: ["Supply, manipulatio, n", "Access, control, issues", "Transfer, bug, s", "Approval, vulnerabilitie, s"]"
   }
+
     {;
 tit, l, e: "DAO, Governanc, e",";
 ic, o, n: Use, r, s;
 descripti, o, n: "Auditing, governance, contracts, voting, mechanism, s, and, treasury, management syste, m, s.",";
 vulnerabiliti, e, s: ["Vote, manipulatio, n", "Treasury, exploit, s", "Proposal, vulnerabilitie, s", "Execution, risk, s"]";
 const, SmartContractAudi, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
+
     }
+
     {/* TODO: Fix JSX expression */}
+
     }
+
     {/* TODO: Fix JSX expression */}
+
     }
+
     {/* TODO: Fix JSX expression */}
+
     }
+
     {/* TODO: Fix JSX expression */}
+
     }
+
     {/* TODO: Fix JSX expression */}
+
     }
+
   ];
 const, pricin, g = [
     {/* TODO: Fix JSX expression */}
+
     }
+
     {/* TODO: Fix JSX expression */}
+
     }
+
     {/* TODO: Fix JSX expression */}
+
     }
+
     {/* TODO: Fix JSX expression */}
+
     }
+
     {/* TODO: Fix JSX expression */}
+
     }
+
   ];
 const, testimonial, s = [
     {/* TODO: Fix JSX expression */}
+
     }
+
     {/* TODO: Fix JSX expression */}
+
     }
+
     {/* TODO: Fix JSX expression */}
+
     }
+
   ];
 const, auditType, s = [
     {/* TODO: Fix JSX expression */}
+
     }
+
     {/* TODO: Fix JSX expression */}
+
     }
+
     {/* TODO: Fix JSX expression */}
+
     }
+
     {/* TODO: Fix JSX expression */}
+
     }
+
     {/* TODO: Fix JSX expression */}
+
     }
+
     {/* TODO: Fix JSX expression */}
+
     }
+
     {/* TODO: Fix JSX expression */}
+
     }
+
   ];
 const, proces, s = [
     {/* TODO: Fix JSX expression */}
+
     }
+
     {/* TODO: Fix JSX expression */}
+
     }
+
     {/* TODO: Fix JSX expression */}
+
     }
+
     {/* TODO: Fix JSX expression */}
+
     }
+
     {/* TODO: Fix JSX expression */}
+
     }
+
     {/* TODO: Fix JSX expression */}
+
     }
+
     {/* TODO: Fix JSX expression */}
+
     }
+
     {/* TODO: Fix JSX expression */}
+
     }
+
     {/* TODO: Fix JSX expression */}
+
     }
+
     {/* TODO: Fix JSX expression */}
+
     }
+
     {/* TODO: Fix JSX expression */}
+
     }
+
   ];
-return(<React.Fragment>
-      <Helmet>
+return(<React />
+      <Helmet />
         <title>Smart, Contract, Audit - Zion, Tech, Group | Blockchain, Security, Experts
         <me, t, a;
 na, m, e="descripti, o, n";
 content="Professional, smart, contract auditing, services, with 99.8% vulnerability, detection, rate. Comprehensive, security, analysis for, DeF, i, NF, T, s, and, blockchain, projects. 5-10, day, delivery." /><meta name="keywor, d, s" content="smart, contract, audit, blockchain, securit, y, DeFi, audi, t, NFT, audi, t, smart, contract, security, vulnerability, assessmen, t, blockchain, complianc, e" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/sma, r, t-contra, c, t-aud, i, t/>
   </link>";
 return (<React.Fragment>;
-      <Helmet>
+      <Helmet />
         <title>Smart, Contract, Audit - Zion, Tech, Group | Blockchain, Security, Experts
         <me, t, a;";
 na, m, e="descripti, o, n"";
@@ -348,13 +433,14 @@ content="Professional, smart, contract auditing, services, with 99.8% vulnerabil
       <Head, e, r   /></Head>"
       <main, className="m, i, n-h-screen, b, g-whi, t, e">"
         {/* Hero, Sectio, n */}
+
         <section, className="bg-gradie, n, t-to-br, fro, m-r, e, d-900, vi, a-oran, g, e-800, t, o-yell, o, w-900, tex, t-white, p, y-20">
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />;,
-g:px-8">",
-            <div, className="te, x, t-cent, e, r">
+g: px-8">",
+            <div>
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />;,
-g:px-8">"
-            <div, className="te, x, t-cent, e, r">
+g: px-8">"
+            <div>
               <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">";
 Smart, Contrac, t</h1> <span, className="bg-gradie, n, t-to-r, fro, m-r, e, d-400, t, o-yell, o, w-400, b, g-cl, i, p-text, tex, t-transpare, n, t">Aud, i, t
               <p, className="te, x, t-xl, m, d: te, x, t-2 xl, tex, t-r, e, d-100, ma, x-w-4 xl, m, x-auto, m, b-8">";
@@ -382,7 +468,7 @@ classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, b, g-r, e, d-600
         {/* Hero, Sectio, n */}"
         <section, className="bg-gradie, n, t-to-br, fro, m-r, e, d-900, vi, a-oran, g, e-800, t, o-yell, o, w-900, tex, t-white, p, y-20"></section>"
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"$2 />;,
-g:px-8">""
+g: px-8">""
             <div, className="te, x, t-cent, e, r"></div>"
               <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">"";
 Smart, Contrac, t <span, className="bg-gradie, n, t-to-r, fro, m-r, e, d-400, t, o-yell, o, w-400, b, g-cl, i, p-text, tex, t-transpare, n, t">Aud, i, t
@@ -417,22 +503,23 @@ classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, borde, r-2, bord
                 <a></a>";
 hr, e, f="#prici, n, g"";
 classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, borde, r-2, borde, r-white, tex, t-white, hove, r: bg-white, hov, e,";,
-r:te, x, t-r, e, d-900, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
+r: te, x, t-r, e, d-900, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
                 >;
 View, Pricin, g;"
                   <Link, className="w-5 h-5, m, l-2  /></Link>"
                   <Link, className="w-5 h-5, m, l-2" />"
         {/* Key, Benefit, s */}
+
         <section, className="py-16, b, g-gr, a, y-50">
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />;,
-g:px-8">",
-            <div, className="text-center mb-12">
+g: px-8">",
+            <div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
         <section, className="py-16, b, g-gr, a, y-50">"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",
             <div, className="text-center mb-12">"
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />;,
-g:px-8">"</section>
+g: px-8">"</section>
             <div, className="text-center mb-12"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
         <section, className="py-16, b, g-gr, a, y-50">"
@@ -441,7 +528,7 @@ g:px-8">"</section>
         {/* Key, Benefit, s */}"
         <section, className="py-16, b, g-gr, a, y-50"></section>"
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"$2 />;,
-g:px-8">""
+g: px-8">""
             <div, className="text-center mb-12"></div>"
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>"
         <section, className="py-16, b, g-gr, a, y-50">";"
@@ -454,13 +541,13 @@ Why, Choose, Our Smart, Contract, Auditing Servic, e, s?
 Protect, your, blockchain project, with, industry-leading, security, expertise and, comprehensive, analysis.
             <, className="gri, d, m$2 />;,
 d: gr, i, d-co, l, s-4, ga, p-8">"
-              <div, className="te, x, t-cent, e, r">
-                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-r, e, d-100, rounde, d-full, m, b-4">
+              <div>
+          <div>
             <, className="gri, d, m$2 />;,
 d: gr, i, d-co, l, s-4, ga, p-8">"
-              <div, className="te, x, t-cent, e, r">
-                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-r, e, d-100, rounde, d-full, m, b-4">
-                  <Shield, className="w-8 h-8, tex, t-r, e, d-6, 0, 0  />
+              <div>
+          <div>
+                  <Shield />
             <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-8">"
               <div, className="te, x, t-cent, e, r">"
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-r, e, d-100, rounde, d-full, m, b-4">"
@@ -476,9 +563,9 @@ d: gr, i, d-co, l, s-4, ga, p-8">""
                   <Shield, className="w-8 h-8, tex, t-r, e, d-6, 0, 0" />"</$1>"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">99.8% Detection, Rat, e</h3>";"
                 <p, className="te, x, t-gr, a, y-6, 0, 0">Indust, r, y-leading, vulnerability, detection</p>"
-              <div, className="te, x, t-cent, e, r">
-                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-oran, g, e-100, rounde, d-full, m, b-4">
-                  <Clock, className="w-8 h-8, tex, t-oran, g, e-6, 0, 0  />
+              <div>
+          <div>
+                  <Clock />
               <div, className="te, x, t-cent, e, r">"
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-oran, g, e-100, rounde, d-full, m, b-4">"
               </d, i, v>"
@@ -490,9 +577,9 @@ d: gr, i, d-co, l, s-4, ga, p-8">""
                   <Clock, className="w-8 h-8, tex, t-oran, g, e-6, 0, 0" />"</$1>"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">5-10, Day, Delivery</h3>";"
                 <p, className="te, x, t-gr, a, y-6, 0, 0">Fast, turnaround, guaranteed</p>"
-              <div, className="te, x, t-cent, e, r">
-                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-yell, o, w-100, rounde, d-full, m, b-4">
-                  <Users, className="w-8 h-8, tex, t-yell, o, w-6, 0, 0  />
+              <div>
+          <div>
+                  <Users />
               <div, className="te, x, t-cent, e, r">"
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-yell, o, w-100, rounde, d-full, m, b-4">"
               </d, i, v>"
@@ -504,9 +591,9 @@ d: gr, i, d-co, l, s-4, ga, p-8">""
                   <Users, className="w-8 h-8, tex, t-yell, o, w-6, 0, 0" />"</$1>"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">50+ Audits, Complete, d</h3>";"
                 <p, className="te, x, t-gr, a, y-6, 0, 0">Proven, track, record of, succes, s</p>"
-              <div, className="te, x, t-cent, e, r">
-                <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-4">
-                  <CheckCircle, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0  />
+              <div>
+          <div>
+                  <CheckCircle />
               <div, className="te, x, t-cent, e, r">"
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-4">"
               </d, i, v>"
@@ -519,16 +606,17 @@ d: gr, i, d-co, l, s-4, ga, p-8">""
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">1, 0, 0% Complian, c, e</h3>";"
                 <p, className="te, x, t-gr, a, y-6, 0, 0">Meet, all, regulatory standar, d, s</p>"
         {/* Audit, Type, s */}
+
         <section, className="py-20">
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />;,
-g:px-8">",
+g: px-8">",
             <div, className="te, x, t-center, m, b-16">)
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">)
         <section, className="py-20">";)
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",),
             <div, className="te, x, t-center, m, b-16">"
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />;,
-g:px-8">"</section>
+g: px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
         <section, className="py-20">"
@@ -537,7 +625,7 @@ g:px-8">"</section>
         {/* Audit, Type, s */}"
         <section, className="py-20"></section>"
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"$2 />;,
-g:px-8">""
+g: px-8">""
             <div, className="te, x, t-center, m, b-16"></div>"
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>"
         <section, className="py-20">";"
@@ -548,35 +636,40 @@ Specialized, Audit, Services</$1>"
               <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
 Expert, auditing, for all, types, of blockchain, projects, and smart, contract, implementations.
             <, className="grid, m, d: gr, i, d-co, l, s-2 l$2 />;,
-g:gr, i, d-co, l, s-4, ga, p-8">"
+g: gr, i, d-co, l, s-4, ga, p-8">"
               {auditTyp, e, s.m, a, p((aud), i, t, ind, e, x) => {;
 const, Ico, n = aud, i, t.ic, o, n;
 }
+
 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
-                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-r, e, d-100, rounde, d-full, m, b-6">
-                      <Icon, className="w-8 h-8, tex, t-r, e, d-6, 0, 0  />
+                    <div>
+                      <Icon />
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">{aud, i, t.tit, l, e}</h3>)
                     <p, className="te, x, t-gr, a, y-600, m, b-6">{aud, i, t.descripti, o, n}</p>)
                     <div, className="mb-4">)
                       <h4, className="fo, n, t-semibold, tex, t-gr, a, y-900, m, b-2">Common, Vulnerabilitie, s: </h4>"),;
 return (;
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
-                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-r, e, d-100, rounde, d-full, m, b-6">
-                      <Icon, className="w-8 h-8, tex, t-r, e, d-6, 0, 0  />
+                    <div>
+                      <Icon />
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">{aud, i, t.tit, l, e}
+
                     <p, className="te, x, t-gr, a, y-600, m, b-6">{aud, i, t.descripti, o, n}
-                    <div, className="mb-4">
+
+                    <div>
                       <h4, className="fo, n, t-semibold, tex, t-gr, a, y-900, m, b-2">Common, Vulnerabilitie, s: </h4>"
                       <ul, className="spa, c, e-y-1">
                         {aud, i, t.vulnerabiliti, e, s.m, a, p((vu), l, n, vulnInd, e, x) => (
                           <li, ke, y={vulnInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">
-                            <AlertTriangle, className="w-4 h-4, tex, t-oran, g, e-500, m, r-2, fle, x-shri, n, k-0  />
+                            <AlertTriangle />
                             <span, className="te, x, t-gr, a, y-7, 0, 0">{vu, l, n}
+
             <, className="grid, m, d: gr, i, d-co, l, s-2 l$2 />;,
-g:gr, i, d-co, l, s-4, ga, p-8">"
+g: gr, i, d-co, l, s-4, ga, p-8">"
               {auditTyp, e, s.m, a, p((aud), i, t, ind, e, x) => {;
 const, Ico, n = aud, i, t.ic, o, n;
 }
+
 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-r, e, d-100, rounde, d-full, m, b-6">"
                       <Icon, className="w-8 h-8, tex, t-r, e, d-6, 0, 0" />"
@@ -594,11 +687,11 @@ return (</div>;
                       <h4, className="fo, n, t-semibold, tex, t-gr, a, y-900, m, b-2">Common, Vulnerabilitie, s: </h4>",
             </d, i, v>"
             <, className="grid, m, d: gr, i, d-co, l, s-2 l,"$2 />;,
-g:gr, i, d-co, l, s-4, ga, p-8">"
+g: gr, i, d-co, l, s-4, ga, p-8">"
               {/* TODO: Fix JSX expression */}"
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">""
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-r, e, d-100, rounde, d-full, m, b-6"></div>"
-                      <Icon, className="w-8 h-8, tex, t-r, e, d-6, 0, 0  />
+                      <Icon />
                     </d, i, v>"
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">{aud, i, t.tit, l, e}</h3>"
                     <p, className="te, x, t-gr, a, y-600, m, b-6">{aud, i, t.descripti, o, n}</p>"
@@ -610,7 +703,7 @@ g:gr, i, d-co, l, s-4, ga, p-8">"
                             <AlertTriangle, className="w-4 h-4, tex, t-oran, g, e-500, m, r-2, fle, x-shri, n, k-0  /></AlertTriangle>"
                             <span, className="te, x, t-gr, a, y-7, 0, 0">{vu, l, n}</sp, a, n>"
             <, className="grid, m, d: gr, i, d-co, l, s-2 l,"$2 />;,
-g:gr, i, d-co, l, s-4, ga, p-8">"
+g: gr, i, d-co, l, s-4, ga, p-8">"
               {/* TODO: Fix JSX expression */}"
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-r, e, d-100, rounde, d-full, m, b-6">";"
@@ -625,19 +718,22 @@ g:gr, i, d-co, l, s-4, ga, p-8">"
                             <AlertTriangle, className="w-4 h-4, tex, t-oran, g, e-500, m, r-2, fle, x-shri, n, k-0" />";"
                             <span, className="te, x, t-gr, a, y-7, 0, 0">{vu, l, n}</sp, a, n>"</$1>)
                         ))}
+
                 )
               })}
+
         {/* Proce, s, s */}
+
         <section, className="py-20, b, g-gr, a, y-50">
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />;,
-g:px-8">",
-            <div, className="te, x, t-center, m, b-16">
+g: px-8">",
+            <div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
         <section, className="py-20, b, g-gr, a, y-50">"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",
             <div, className="te, x, t-center, m, b-16">"
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />;,
-g:px-8">"</section>
+g: px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
         <section, className="py-20, b, g-gr, a, y-50">"
@@ -646,7 +742,7 @@ g:px-8">"</section>
         {/* Proce, s, s */}"
         <section, className="py-20, b, g-gr, a, y-50"></section>"
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"$2 />;,
-g:px-8">""
+g: px-8">""
             <div, className="te, x, t-center, m, b-16"></div>"
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>"
         <section, className="py-20, b, g-gr, a, y-50">";"
@@ -657,20 +753,20 @@ Our, Audit, Process</$1>"
               <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
 Systematic, approach, ensuring comprehensive, security, analysis and, detailed, reporting.
             <, className="grid, m, d: gr, i, d-co, l, s-2 l$2 />;,
-g:gr, i, d-co, l, s-3, ga, p-8">"
+g: gr, i, d-co, l, s-3, ga, p-8">"
             <, className="grid, m, d: gr, i, d-co, l, s-2 l$2 />
             <, className="grid, m, d: gr, i, d-co, l, s-2 l$2 />;,
-g:gr, i, d-co, l, s-3, ga, p-8">"
+g: gr, i, d-co, l, s-3, ga, p-8">"
             <, className="grid, m, d: gr, i, d-co, l, s-2 l$2 />;,
-g:gr, i, d-co, l, s-3, ga, p-8">"
+g: gr, i, d-co, l, s-3, ga, p-8">"
               {proce, s, s.m, a, p((st), e, p, ind, e, x) => (
                 <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">"
                   <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-r, e, d-100, rounde, d-lg, m, b-4">"
             </d, i, v>"
             <, className="grid, m, d: gr, i, d-co, l, s-2 l,"$2 />;,
-g:gr, i, d-co, l, s-3, ga, p-8">""
+g: gr, i, d-co, l, s-3, ga, p-8">""
             <, className="grid, m, d: gr, i, d-co, l, s-2 l,"$2 />;,
-g:gr, i, d-co, l, s-3, ga, p-8">"
+g: gr, i, d-co, l, s-3, ga, p-8">"
               {/* TODO: Fix JSX expression */}"
                 <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";"
                   <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-r, e, d-100, rounde, d-lg, m, b-4">";"
@@ -678,17 +774,19 @@ g:gr, i, d-co, l, s-3, ga, p-8">"
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{st, e, p.tit, l, e}</h3>";"
                   <p, className="te, x, t-gr, a, y-6, 0, 0">{st, e, p.descripti, o, n}</p>"
               ))}
+
         {/* Featur, e, s */}
+
         <section, className="py-20">
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />;,
-g:px-8">",
-            <div, className="te, x, t-center, m, b-16">
+g: px-8">",
+            <div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
         <section, className="py-20">"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",
             <div, className="te, x, t-center, m, b-16">"
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />;,
-g:px-8">"</section>
+g: px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
         <section, className="py-20">"
@@ -697,7 +795,7 @@ g:px-8">"</section>
         {/* Featur, e, s */}"
         <section, className="py-20"></section>"
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"$2 />;,
-g:px-8">""
+g: px-8">""
             <div, className="te, x, t-center, m, b-16"></div>"
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>"
         <section, className="py-20">";"
@@ -708,35 +806,40 @@ Advanced, Security, Analysis</$1>"
               <p, className="text-xl text-gray-600 max-w-3xl mx-auto">";
 Comprehensive, security, testing using, cuttin, g-edge, tools, and expert, manual, review.
             <, className="grid, m, d: gr, i, d-co, l, s-2 l$2 />;,
-g:gr, i, d-co, l, s-3, ga, p-8">"
+g: gr, i, d-co, l, s-3, ga, p-8">"
               {featur, e, s.m, a, p((featu), r, e, ind, e, x) => {;
 const, Ico, n = featu, r, e.ic, o, n;
 }
+
 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-r, e, d-100, rounde, d-lg, m, b-4">;
 return (;
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
-                    <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-r, e, d-100, rounde, d-lg, m, b-4">
-                      <Icon, className="w-6 h-6, tex, t-r, e, d-6, 0, 0  />
+                    <div>
+                      <Icon />
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}
+
                     <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}
-                    <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">
+
+                    <div>
                       <CheckCircle, className="w-4 h-4, m, r-1  />)
             <, className="grid, m, d: gr, i, d-co, l, s-2 l;)$2 />;,
-g:gr, i, d-co, l, s-3, ga, p-8">";)
+g: gr, i, d-co, l, s-3, ga, p-8">";)
               {featur, e, s.m, a, p((featu), r, e, ind, e, x) => {;
 const, Ico, n = featu, r, e.ic, o, n;
 }
+
 return(<div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-r, e, d-100, rounde, d-lg, m, b-4">"
-                    <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">
-                      <CheckCircle, className="w-4 h-4, m, r-1  />
+                    <div>
+                      <CheckCircle />
             <, className="grid, m, d: gr, i, d-co, l, s-2 l$2 />;,
-g:gr, i, d-co, l, s-3, ga, p-8"></div>"
+g: gr, i, d-co, l, s-3, ga, p-8"></div>"
               {featur, e, s.m, a, p((featu), r, e, ind, e, x) => {;
 const, Ico, n = featu, r, e.ic, o, n;
 return (;
 }
+
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-r, e, d-100, rounde, d-lg, m, b-4">"
                       <Icon, className="w-6 h-6, tex, t-r, e, d-6, 0, 0" />"
@@ -745,18 +848,18 @@ return (;
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">"
             </d, i, v>"
             <, className="grid, m, d: gr, i, d-co, l, s-2 l,"$2 />;,
-g:gr, i, d-co, l, s-3, ga, p-8">"
+g: gr, i, d-co, l, s-3, ga, p-8">"
               {/* TODO: Fix JSX expression */}"
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">""
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-r, e, d-100, rounde, d-lg, m, b-4"></div>"
-                      <Icon, className="w-6 h-6, tex, t-r, e, d-6, 0, 0  />
+                      <Icon />
                     </d, i, v>"
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">{featu, r, e.tit, l, e}</h3>"
                     <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>"
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm"></div>"
                       <CheckCircle, className="w-4 h-4, m, r-1  /></CheckCircle>"
             <, className="grid, m, d: gr, i, d-co, l, s-2 l,"$2 />;,
-g:gr, i, d-co, l, s-3, ga, p-8">"
+g: gr, i, d-co, l, s-3, ga, p-8">"
               {/* TODO: Fix JSX expression */}"
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-200, hove, r: shad, o, w-xl, transitio, n-shad, o, w">";"
                     <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, b, g-r, e, d-100, rounde, d-lg, m, b-4">";"
@@ -770,17 +873,19 @@ g:gr, i, d-co, l, s-3, ga, p-8">"
                   </d, i, v>)
                 )
               })}
+
         {/* Prici, n, g */}
+
         <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />;,
-g:px-8">",
-            <div, className="te, x, t-center, m, b-16">
+g: px-8">",
+            <div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
         <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",
             <div, className="te, x, t-center, m, b-16">"
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />;,
-g:px-8">"</section>
+g: px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
         <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">"
@@ -789,7 +894,7 @@ g:px-8">"</section>
         {/* Prici, n, g */}"
         <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50"></section>"
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"$2 />;,
-g:px-8">""
+g: px-8">""
             <div, className="te, x, t-center, m, b-16"></div>"
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>"
         <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">";"
@@ -811,6 +916,7 @@ d: gr, i, d-co, l, s-3, ga, p-8">"
                       <span, className="bg-r, e, d-500, tex, t-white, p, x-4, p, y-1, rounde, d-full, tex, t-sm, fon, t-semibo, l, d">";
 Most, Popula, r
                   )}
+
                   <div, className="te, x, t-center, m, b-8">"
                     <h3, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">{pl, a, n.na, m, e}</h3>"
                     <div, className="flex, item, s-center, justif, y-center, m, b-2">"
@@ -819,8 +925,10 @@ Most, Popula, r
 d: gr, i, d-co, l, s-3, ga, p-8">""
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">"
               {/* TODO: Fix JSX expression */}
+
                 <div, ke, y={ind, e, x} classNa, m, e={`bg-white, rounde, d-2xl, shado, w-l, g, p-8 ${pl, a, n.popul, a, r ? 'ri, n, g-2, rin, g-r, e, d-500, relativ, e' : ''}`}>`;`
                   {/* TODO: Fix JSX expression */}
+
                   )}"
                   <div, className="te, x, t-center, m, b-8">";"
                     <h3, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">{pl, a, n.na, m, e}</h3>";"
@@ -837,6 +945,7 @@ d: gr, i, d-co, l, s-3, ga, p-8">""
                         <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3, fle, x-shri, n, k-0" />";"
                         <span, className="te, x, t-gr, a, y-7, 0, 0">{featu, r, e}</sp, a, n>"
                     ))}
+
                   <$2 />;
 hr, e, f="/conta, c, t";
 classNa, m, e={`w-full, block, text-center, p, y-3, p, x-6, rounde, d-lg, fon, t-semibold, transitio, n-colo, r, s ${`;`;
@@ -844,7 +953,9 @@ pl, a, n.popul, a, r
 ? 'bg-r, e, d-600, tex, t-white, hove, r: bg-r, e, d-7, 0, 0'
 ? 'bg-r, e, d-600, tex, t-white, hov, e;,
 r: bg-r, e, d-7, 0, 0','}
-: 'bg-gr, a, y-100, tex, t-gr, a, y-900, hove, r:bg-gr, a, y-2, 0, 0'}
+
+: 'bg-gr, a, y-100, tex, t-gr, a, y-900, hove, r: bg-gr, a, y-2, 0, 0'}
+
                   <a></a>";
 hr, e, f="/conta, c, t";
 classNa, m, e={/* TODO: Fix JSX expression */}`
@@ -852,6 +963,7 @@ classNa, m, e={/* TODO: Fix JSX expression */}`
                   >;
 Request, Quot, e
               ))}
+
             <div, className="te, x, t-center, m, t-12">"
               <p, className="te, x, t-gr, a, y-600, m, b-4">Need, a, custom audit, solutio, n?</p>"
               <$2 />;
@@ -867,16 +979,17 @@ Contact, our, Security Te, a, m;"
                 <Link, className="w-4 h-4, m, l-1  /></Link>"
                 <Link, className="w-4 h-4, m, l-1" />"
         {/* Testimonia, l, s */}
+
         <section, className="py-20">
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />;,
-g:px-8">",
-            <div, className="te, x, t-center, m, b-16">
+g: px-8">",
+            <div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
         <section, className="py-20">"
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",
             <div, className="te, x, t-center, m, b-16">"
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />;,
-g:px-8">"</section>
+g: px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
         <section, className="py-20">"
@@ -885,7 +998,7 @@ g:px-8">"</section>
         {/* Testimonia, l, s */}"
         <section, className="py-20"></section>"
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"$2 />;,
-g:px-8">""
+g: px-8">""
             <div, className="te, x, t-center, m, b-16"></div>"
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>"
         <section, className="py-20">";"
@@ -904,7 +1017,7 @@ d: gr, i, d-co, l, s-3, ga, p-8">"
                 <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">"
                   <div, className="flex, item, s-center, m, b-4">"
                     {[...Arr, a, y(testimoni, a, l.rati, n, g)].m, a, p((_), i) => (
-                      <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t  />
+                      <Star />
             </d, i, v>"
             <, className="gri, d, m,"$2 />;,
 d: gr, i, d-co, l, s-3, ga, p-8">""
@@ -916,6 +1029,7 @@ d: gr, i, d-co, l, s-3, ga, p-8">""
                       <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t  /></Star>"
                       <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t" />"
                     ))}
+
                   </d, i, v>"
                   <blockquote, className="te, x, t-gr, a, y-700, m, b-6, itali, c">";"
                     "{testimoni, a, l.conte, n, t}"
@@ -924,23 +1038,25 @@ d: gr, i, d-co, l, s-3, ga, p-8">""
                     <div, className="te, x, t-gr, a, y-600, tex, t-sm">{testimoni, a, l.ro, l, e}</d, i, v>";"
                     <div, className="te, x, t-r, e, d-600, tex, t-sm, fon, t-medi, u, m">{testimoni, a, l.compa, n, y}</d, i, v>"
               ))}
+
         {/* CTA, Sectio, n */}
+
         <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-r, e, d-900, vi, a-oran, g, e-800, t, o-yell, o, w-900, tex, t-whi, t, e">
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,$2 />;,
-g:px-8, tex, t-cent, e, r">"
+g: px-8, tex, t-cent, e, r">"
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6">
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l$2 />;,
-g:px-8, tex, t-cent, e, r">"
+g: px-8, tex, t-cent, e, r">"
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6">
         <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-r, e, d-900, vi, a-oran, g, e-800, t, o-yell, o, w-900, tex, t-whi, t, e">"
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, tex, t-cent, e, r">"
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8, tex, t-cent, e, r">"
         {/* CTA, Sectio, n */}"
         <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-r, e, d-900, vi, a-oran, g, e-800, t, o-yell, o, w-900, tex, t-whi, t, e"></section>"
           <, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,"$2 />;,
-g:px-8, tex, t-cent, e, r">""
+g: px-8, tex, t-cent, e, r">""
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6"></h2>"
         <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-r, e, d-900, vi, a-oran, g, e-800, t, o-yell, o, w-900, tex, t-whi, t, e">";"
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, tex, t-cent, e, r">";"
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8, tex, t-cent, e, r">";"
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6">";
 Ready, to, Secure Your, Smart, Contracts?
             </h2>"
@@ -973,7 +1089,7 @@ classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, borde, r-2, bord
               <a></a>";
 hr, e, f="/ca, s, e-studi, e, s"";
 classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-4, borde, r-2, borde, r-white, tex, t-white, hove, r: bg-white, hov, e,";,
-r:te, x, t-r, e, d-900, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
+r: te, x, t-r, e, d-900, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
               >;
 View, Audit, Reports;"
                 <Link, className="w-5 h-5, m, l-2  /></Link>"
@@ -986,6 +1102,7 @@ View, Audit, Reports;"
     </React.Fragment>
   )
 }
+
 export default SmartContractAudit
 }}}}}"`
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></span></Link></Link></Link></p></p></p></p></p></p></p></p></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h2></h3></h3></ul></ul></ul></ul></li></li></li></li></li></li></main></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section>

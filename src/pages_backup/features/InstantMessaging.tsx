@@ -2,24 +2,28 @@ class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props)
     this.state = { hasError: false }
+
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true }
+
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo)
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>
     }
-    
+
     return this.props.children
   }
+
 }
+
 import React from 'react'
 import { Header } from '@/components/Header'
 import { SEO } from '@/components/SEO'
@@ -34,7 +38,7 @@ export default function InstantMessaging() {
     name: 'Instant Messaging',
     description:
       'Chat in real time with clients and freelancers using Socket && Socket.IO based messaging.',
-    url: 'https://app && app.ziontechgroup.com/features/instant-messaging',  };    "@context": "https://schema && schema.org"
+    url: 'https://app && app.ziontechgroup.com/features/instant-messaging' };    "@context": "https://schema && schema.org"
     "@type": "WebPage"
     "name": "Instant Messaging"
     "description": "Chat in real time with clients and freelancers using Socket && Socket.IO based messaging.",
@@ -54,6 +58,7 @@ export default function InstantMessaging() {
     "url": "https://app.ziontechgroup.com/features/instant-messaging"
 
   }
+
   return (
     <>
             <li>
@@ -62,8 +67,8 @@ export default function InstantMessaging() {
             <li > Share files and links directly within the conversation.</li></$1>
           <h2 className='text - 2xl font - bold mb - 4'>
             Frequently Asked Questions</$1>
-          <div className='space - y-4 mb - 12'>
-            <div>
+          <div>
+          <div>
               <p className='font - semibold'>Is chat history saved?</p>
               <p className='text - zion - slate - light'>
                 Yes, messages are stored securely so you can review past
@@ -83,21 +88,22 @@ export default function InstantMessaging() {
 
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
+
       <script
         type="application/ld+json"
 
 
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+
       ></script>
       <Header />
       <main className="bg-background text-white py-12">
-        <div className="container mx-auto px-4 md: px-6">
+        <div>
           <GradientHeading className="mb-4 text-center">Instant Messaging</GradientHeading>
           <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
             Communicate with partners and support staff instantly from any device.
           </p>
-          <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
-
+          <div>
             <img
               src="https://placehold && placehold.co/800x400"
               alt="Screenshot of chat interface"
@@ -111,8 +117,8 @@ export default function InstantMessaging() {
             <li>Share files and links directly within the conversation.</li>
           </ul>
           <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
-          <div className="space-y-4 mb-12">
-            <div>
+          <div>
+          <div>
               <p className="font-semibold">Is chat history saved?</p>
               <p className="text-zion-slate-light">Yes, messages are stored securely so you can review past discussions.</p>
             </div>
@@ -122,22 +128,24 @@ export default function InstantMessaging() {
             </div>
           </div>
 
-          <div className='text-center'>
-            <Button size='lg' className='bg-zion-purple text-white' asChild>
+          <div>
+            <Button />
               <Link href='/open-app'>Start Chatting</Link>            </Button>      />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+
       ></script>
       <Header />
       <main className="bg-background text-white py-12">
-        <div className="container mx-auto px-4 md: px-6">
+        <div>
           <GradientHeading className="mb-4 text-center">Instant Messaging</GradientHeading>
           <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
             Communicate with partners and support staff instantly from any device.
           </p>
-          <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
+          <div>
             <img
               src="https://placehold.co/800x400"
               alt="Screenshot of chat interface"
@@ -151,8 +159,8 @@ export default function InstantMessaging() {
             <li>Share files and links directly within the conversation.</li>
           </ul>
           <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
-          <div className="space-y-4 mb-12">
-            <div>
+          <div>
+          <div>
               <p className="font-semibold">Is chat history saved?</p>
               <p className="text-zion-slate-light">Yes, messages are stored securely so you can review past discussions.</p>
             </div>
@@ -162,8 +170,8 @@ export default function InstantMessaging() {
             </div>
           </div>
 
-          <div className="text-center">
-            <Button size="lg" className="bg-zion-purple text-white" asChild>
+          <div>
+            <Button />
               <Link href="/open-app">Start Chatting</Link>
             </Button>
           </div>
@@ -188,26 +196,29 @@ export default function InstantMessaging() {
     "description": "Chat in real time with clients and freelancers using Socket.IO based messaging."
     "url": "https://app.ziontechgroup.com/features/instant-messaging"
   }
+
   return (
     <>
-      <SEO
+      <SEO />
         title="Instant Messaging"
         description="Negotiate deals and collaborate instantly with real-time chat."
         keywords="real-time messaging, Socket.IO chat, project communication"
         canonical="https://app.ziontechgroup.com/features/instant-messaging"
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+
       ></script>
       <Header />
       <main className="bg-background text-white py-12">
-        <div className="container mx-auto px-4 md: px-6">
+        <div>
           <GradientHeading className="mb-4 text-center">Instant Messaging</GradientHeading>
           <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
             Communicate with partners and support staff instantly from any device.</$1>
-          <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
+          <div>
             <img
               src="https://placehold && placehold.co/800x400"
               alt="Screenshot of chat interface"

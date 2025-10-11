@@ -6,21 +6,24 @@ import Footer from './app/components/Footer'
 import HomePage from './app/page'
 
 const App: React.FC = () => {
+  
   return (
     <>
-<HelmetProvider>
-      <Router>
-        <div className="min-h-screen bg-white">
-          <Navigation />
-          <main>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-            </Routes>
-          </main>
-          <Footer />
-        </div>
-      </Router>
-    </HelmetProvider>
+      <HelmetProvider>
+        <Router>
+          <div className="min-h-screen bg-white">
+            <Navigation />
+            <main>
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+              </Routes>
+            </main>
+            <Footer />
+          </div>
+        </Router>
+      </HelmetProvider>
     </>
   )
+}
+
 export default App

@@ -6,14 +6,18 @@ const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
   if (shouldThrow) {
     throw new Error('Test error')
   }
+
   return <div>Test content</div>
 }
+
 describe('Advanced Components', () => {
   it('renders test content without error', () => {
 
     render(
       <MemoryRouter>
-        <ThrowError shouldThrow={false} />
+        <ThrowError shouldThrow={false}>
+          <div>Test content</div>
+        </ThrowError>
       </MemoryRouter>
     )
     expect(screen.getByText('Test content')).toBeInTheDocument()
@@ -27,7 +31,9 @@ describe('Advanced Components', () => {
     expect(() => {
       render(
         <MemoryRouter>
-          <ThrowError shouldThrow={true} />
+          <ThrowError shouldThrow={true}>
+            <div>Test content</div>
+          </ThrowError>
         </MemoryRouter>
       )
     }).not.toThrow()

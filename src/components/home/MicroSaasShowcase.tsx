@@ -23,25 +23,27 @@ export function MicroSaasShowcase() {
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case "AI Services":
-        return <Bot className="w-8 h-8" />
+        return <Bot />
       case "IT Services":
-        return <Shield className="w-8 h-8" />
+        return <Shield />
       case "Micro SAAS":
-        return <TrendingUp className="w-8 h-8" />
+        return <TrendingUp />
       case "Development":
-        return <Code className="w-8 h-8" />
+        return <Code />
       case "Analytics":
-        return <Database className="w-8 h-8" />
+        return <Database />
       case "Security":
-        return <Shield className="w-8 h-8" />
+        return <Shield />
       case "Cloud":
-        return <Cloud className="w-8 h-8" />
+        return <Cloud />
       case "Automation":
-        return <Zap className="w-8 h-8" />
+        return <Zap />
       default:
-        return <TrendingUp className="w-8 h-8" />
+        return <TrendingUp />
     }
+
   }
+
   const getCategoryColor = (category: string) => {
     switch (category) {
       case "AI Services":
@@ -63,22 +65,29 @@ export function MicroSaasShowcase() {
       default:
         return "from-gray-500 to-slate-600"
     }
+
   }
+
   return (
     <section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light relative overflow-hidden">
       {/* Background effects */}
-      <div className="absolute inset-0">
+
+      <div>
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-zion-purple/10 via-transparent to-zion-cyan/10"></div>
         <div className="absolute top-20 right-20 w-96 h-96 bg-zion-purple/5 rounded-full filter blur-3xl"></div>
         <div className="absolute bottom-20 left-20 w-80 h-80 bg-zion-cyan/5 rounded-full filter blur-3xl"></div>
       </div>
 
-      <div className="container relative z-10 mx-auto px-4">
+      <div>
         {/* Header */}
+
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
+
           whileInView={{ opacity: 1, y: 0 }}
+
           transition={{ duration: 0.8 }}
+
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -90,25 +99,26 @@ export function MicroSaasShowcase() {
           </p>
           
           {/* Contact Info */}
-          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 max-w-2xl mx-auto border border-white/20">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
-              <div className="flex flex-col items-center">
-                <div className="w-10 h-10 bg-zion-cyan/20 rounded-full flex items-center justify-center mb-2">
-                  <Globe className="w-5 h-5 text-zion-cyan" />
+
+          <div>
+          <div>
+              <div>
+          <div>
+                  <Globe />
                 </div>
                 <span className="text-zion-slate-light text-sm">Website</span>
                 <span className="text-white font-semibold">ziontechgroup.com</span>
               </div>
-              <div className="flex flex-col items-center">
-                <div className="w-10 h-10 bg-zion-purple/20 rounded-full flex items-center justify-center mb-2">
-                  <Users className="w-5 h-5 text-zion-purple" />
+              <div>
+          <div>
+                  <Users />
                 </div>
                 <span className="text-zion-slate-light text-sm">Phone</span>
                 <span className="text-white font-semibold">+1 302 464 0950</span>
               </div>
-              <div className="flex flex-col items-center">
-                <div className="w-10 h-10 bg-zion-cyan/20 rounded-full flex items-center justify-center mb-2">
-                  <Star className="w-5 h-5 text-zion-cyan" />
+              <div>
+          <div>
+                  <Star />
                 </div>
                 <span className="text-zion-slate-light text-sm">Email</span>
                 <span className="text-white font-semibold">kleber@ziontechgroup.com</span>
@@ -118,100 +128,120 @@ export function MicroSaasShowcase() {
         </motion.div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+
+        <div>
           {featuredServices.map((service, index) => (
             <motion.div
               key={service.id}
+
               initial={{ opacity: 0, y: 30 }}
+
               whileInView={{ opacity: 1, y: 0 }}
+
               transition={{ duration: 0.6, delay: index * 0.1 }}
+
             >
-              <Card className="h-full bg-white/10 backdrop-blur-md border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105 group cursor-pointer">
-                <CardHeader className="pb-4">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className={`p-3 rounded-xl bg-gradient-to-br ${getCategoryColor(service.category)}`}>
+              <Card />
+                <CardHeader />
+                  <div>
+          <div>
                       {getCategoryIcon(service.category)}
+
                     </div>
                         className={`w-4 h-4 ${
                           i < Math.floor(service.rating)
                             ? 'text-yellow-400 fill-current'
                             : 'text-zion-slate-light'
                         }`}
+
                       />
                     ))}
+
                   </div>
                   <span className="text-zion-slate-light text-sm">
                     {service.rating} ({service.reviewCount} reviews)
                   </span>
                 </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div>
           {featuredServices.map((service, index) => (
-            <Card 
-              key={service.id} 
+            <Card />
+              key={service.id}
+
               className="group hover:shadow-2xl transition-all duration-500 border-zion-purple/20 hover:border-zion-purple/40 overflow-hidden bg-gradient-to-br from-card to-card/50 backdrop-blur-sm"
               style={{
                 animationDelay: `${index * 100}ms`,
                 animation: 'fadeInUp 0.6s ease-out forwards'
               }}
+
             >
-              <div className="relative">
+              <div>
                 <img 
-                  src={service.image} 
+                  src={service.image}
+
                   alt={service.title}
+
                   className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute top-3 left-3">
+                <div>
                   {categoryIcons[service.category as keyof typeof categoryIcons]}
+
                 </div>
-                <div className="absolute top-3 right-3 flex items-center gap-1 bg-black/70 text-white px-2 py-1 rounded-md">
-                  <Star className="h-3 w-3 fill-yellow-400 text-yellow-400" />
+                <div>
+                  <Star />
                   <span className="text-xs font-medium">{service.rating}</span>
                 </div>
               </div>
 
-              <CardHeader className="pb-3">
-                <CardTitle className="text-lg group-hover:text-zion-cyan transition-colors line-clamp-2">
+              <CardHeader />
+                <CardTitle />
                   {service.title}
+
                 </CardTitle>
                 <p className="text-sm text-muted-foreground line-clamp-2">
                   {service.description}
+
                 </p>
                 
-                <div className="flex flex-wrap gap-1 mt-3">
+                <div>
                   {service.tags.slice(0, 2).map((tag, tagIndex) => (
-                    <Badge key={tagIndex} variant="secondary" className="text-xs bg-zion-purple/10 text-zion-purple hover:bg-zion-purple/20">
+                    <Badge />
                       {tag}
+
                     </Badge>
                   ))}
+
                 </div>
               </CardHeader>
 
-              <CardContent className="space-y-4">
+              <CardContent />
                 {/* Key Benefits */}
+
                 <div>
                   <h4 className="font-semibold text-sm mb-2 flex items-center gap-2 text-zion-cyan">
-                    <TrendingUp className="h-4 w-4" />
+                    <TrendingUp />
                     Key Benefits
                   </h4>
                   <ul className="space-y-1">
                     {service.benefits.slice(0, 2).map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="text-xs text-muted-foreground flex items-start gap-2">
-                        <CheckCircle className="h-3 w-3 text-zion-cyan mt-0.5 flex-shrink-0" />
+                        <CheckCircle />
                         <span>{benefit}</span>
                       </li>
                     ))}
+
                   </ul>
                 </div>
 
                 {/* Pricing */}
-                <div className="bg-gradient-to-r from-zion-blue-dark/10 to-zion-purple/10 p-3 rounded-lg border border-zion-blue/20">
+
+                <div>
                   {service.pricing.custom ? (
-                    <div className="text-center">
+                    <div>
                       <p className="text-sm font-medium text-zion-cyan">{service.pricing.custom}</p>
                     </div>
                   ) : (
-                    <div className="text-center">
-                      <div className="flex items-center justify-center gap-1 mb-1">
+                    <div>
+          <div>
                         <span className="text-xl font-bold text-primary">{service.pricing.currency}</span>
                         <span className="text-xl font-bold">{service.pricing.monthly}</span>
                         <span className="text-sm text-muted-foreground">/mo</span>
@@ -221,38 +251,44 @@ export function MicroSaasShowcase() {
                       </p>
                     </div>
                   )}
+
                 </div>
               </CardContent>
 
-              <div className="px-6 pb-6">
-                <Button asChild className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple group">
-                  <Link to={`/micro-saas-services#${service.id}`}>
+              <div>
+                <Button />
+                  <Link />
                     <span>Learn More</span>
-                    <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight />
                   </Link>
                 </Button>
 
                 {/* Key Benefits */}
+
                 <div>
                   <h4 className="text-white font-semibold mb-2">Key Benefits</h4>
-                  <div className="space-y-1">
+                  <div>
                     {service.benefits.slice(0, 2).map((benefit, index) => (
-                      <div key={index} className="flex items-center gap-2 text-sm text-zion-slate-light">
-                        <CheckCircle className="w-4 h-4 text-zion-cyan" />
+                      <div>
+                        <CheckCircle />
                         {benefit}
+
                       </div>
                     ))}
+
                   </div>
                 </div>
               </CardContent>
               </div>
             </Card>
           ))}
+
         </div>
 
         {/* CTA Section */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-zion-purple-dark/50 via-zion-purple/50 to-zion-cyan/50 rounded-2xl p-8 md:p-12 border border-zion-purple/30">
+
+        <div>
+          <div>
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h3>
@@ -260,23 +296,24 @@ export function MicroSaasShowcase() {
               Join thousands of businesses already using our micro SAAS services to drive growth, 
               improve efficiency, and stay ahead of the competition.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button asChild size="lg" className="bg-zion-cyan hover:bg-zion-cyan-light text-black font-semibold px-8 py-3">
-                <Link to="/micro-saas-services">
-                  <TrendingUp className="h-5 w-5 mr-2" />
+            <div>
+              <Button />
+                <Link />
+                  <TrendingUp />
                   Explore All Services
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple font-semibold px-8 py-3">
-                <Link to="/contact">
-                  <Users className="h-5 w-5 mr-2" />
+              <Button />
+                <Link />
+                  <Users />
                   Get Consultation
                 </Link>
               </Button>
             </div>
         {/* CTA Section */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 rounded-3xl p-8 border border-zion-purple/30">
+
+        <div>
+          <div>
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
               Ready to Get Started?
             </h3>
@@ -284,14 +321,14 @@ export function MicroSaasShowcase() {
               Join thousands of businesses already using our micro SAAS solutions to drive growth, 
               improve efficiency, and stay ahead of the competition.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link to="/micro-saas-services">
-                <Button size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
+            <div>
+              <Link />
+                <Button />
                   View All Services
-                  <ArrowRight className="w-5 h-5 ml-2" />
+                  <ArrowRight />
                 </Button>
               </Link>
-              <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
+              <Button />
                 Contact Sales
               </Button>
             </div>
@@ -299,8 +336,9 @@ export function MicroSaasShowcase() {
         </div>
       </div>
         {/* CTA Section */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-zion-blue-dark/20 to-zion-purple/20 p-8 rounded-2xl border border-zion-blue/30 max-w-4xl mx-auto">
+
+        <div>
+          <div>
             <h3 className="text-2xl md:text-3xl font-bold mb-4">
               Ready to Accelerate Your Business?
             </h3>
@@ -309,32 +347,32 @@ export function MicroSaasShowcase() {
               innovative solutions. Get started today with a free consultation.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light">
-                <Link to="/micro-saas-services">
+            <div>
+              <Button />
+                <Link />
                   <span>Explore All Services</span>
-                  <ArrowRight className="h-4 w-4 ml-2" />
+                  <ArrowRight />
                 </Link>
               </Button>
               
-              <Button variant="outline" size="lg" className="border-zion-purple text-zion-purple hover:bg-zion-purple hover:text-white">
-                <Link to="/request-quote">
+              <Button />
+                <Link />
                   <span>Get Free Quote</span>
                 </Link>
               </Button>
             </div>
 
-            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-muted-foreground">
-              <div className="flex items-center gap-2">
-                <CheckCircle className="h-4 w-4 text-zion-cyan" />
+            <div>
+          <div>
+                <CheckCircle />
                 <span>Free Consultation</span>
               </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="h-4 w-4 text-zion-cyan" />
+              <div>
+                <CheckCircle />
                 <span>24/7 Support</span>
               </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="h-4 w-4 text-zion-cyan" />
+              <div>
+                <CheckCircle />
                 <span>Enterprise Security</span>
               </div>
             </div>
@@ -348,55 +386,66 @@ export function MicroSaasShowcase() {
             opacity: 0
             transform: translateY(30px)
           }
+
           to {
             opacity: 1
             transform: translateY(0)
           }
+
         }
+
       `}</style>
-                    <Badge className="bg-zion-cyan text-zion-blue-dark">
+                    <Badge />
                       {service.pricingModel === 'monthly' ? 'Monthly' : 
                        service.pricingModel === 'yearly' ? 'Yearly' :
                        service.pricingModel === 'one-time' ? 'One-time' :
                        service.pricingModel === 'hourly' ? 'Hourly' : 'Custom'}
+
                     </Badge>
                   </div>
                   
-                  <CardTitle className="text-xl text-white group-hover:text-zion-cyan transition-colors">
+                  <CardTitle />
                     {service.title}
+
                   </CardTitle>
                   
-                  <CardDescription className="text-zion-slate-light">
+                  <CardDescription />
                     {service.description}
+
                   </CardDescription>
                 </CardHeader>
                 
-                <CardContent className="space-y-4">
+                <CardContent />
                   {/* Price and Rating */}
-                  <div className="flex items-center justify-between">
-                    <div className="text-2xl font-bold text-white">
+
+                  <div>
+          <div>
                       {service.currency}{service.price}
+
                       <span className="text-sm text-zion-slate-light ml-1">
                         {service.pricingModel === 'monthly' ? '/mo' : 
                          service.pricingModel === 'yearly' ? '/yr' :
                          service.pricingModel === 'hourly' ? '/hr' : ''}
+
                       </span>
                     </div>
-                    <div className="flex items-center gap-1">
-                      <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                    <div>
+                      <Star />
                       <span className="text-white">{service.rating}</span>
                     </div>
                   </div>
                   
                   {/* AI Score */}
-                  <div className="flex items-center justify-between">
+
+                  <div>
                     <span className="text-zion-slate-light">AI Score:</span>
-                    <Badge className="bg-zion-purple text-white">
+                    <Badge />
                       {service.aiScore}/100
                     </Badge>
                   </div>
                   
                   {/* Key Benefits */}
+
                   <div>
                     <h4 className="text-white font-semibold mb-2">Key Benefits:</h4>
                     <ul className="space-y-1">
@@ -404,13 +453,16 @@ export function MicroSaasShowcase() {
                         <li key={idx} className="text-sm text-zion-slate-light flex items-center gap-2">
                           <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full"></div>
                           {benefit}
+
                         </li>
                       ))}
+
                     </ul>
                   </div>
                   
                   {/* Market Price */}
-                  <div className="bg-zion-blue-dark/50 rounded-lg p-3">
+
+                  <div>
                     <p className="text-sm text-zion-slate-light mb-1">Market Price:</p>
                     <p className="text-white text-sm">{service.marketPrice}</p>
                   </div>
@@ -418,16 +470,21 @@ export function MicroSaasShowcase() {
               </Card>
             </motion.div>
           ))}
+
         </div>
 
         {/* CTA Section */}
+
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
+
           whileInView={{ opacity: 1, y: 0 }}
+
           transition={{ duration: 0.8 }}
+
           className="text-center"
         >
-          <div className="bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 backdrop-blur-md rounded-2xl p-8 border border-white/20">
+          <div>
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h3>
@@ -436,22 +493,23 @@ export function MicroSaasShowcase() {
               Get in touch today for a free consultation and competitive quote.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
+            <div>
+              <Button />
                 size="lg" 
                 className="bg-zion-purple hover:bg-zion-purple-light text-white"
                 asChild
               >
-                <Link to="/micro-saas-services">
+                <Link />
                   View All Services
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  <ArrowRight />
                 </Link>
               </Button>
-              <Button 
+              <Button />
                 size="lg" 
                 variant="outline" 
                 className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark"
-                onClick={() => window.open(`mailto:kleber@ziontechgroup.com?subject=Business Consultation Request`)}
+                onClick={() => window.open(`mailto: kleber@ziontechgroup.com?subject=Business Consultation Request`)}
+
               >
                 Get Free Consultation
               </Button>

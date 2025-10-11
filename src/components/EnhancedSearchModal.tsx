@@ -10,10 +10,12 @@ type: 'page' | 'service' | 'blog' | 'documentation';
 popularity?: number,;
 lastModified?: string
   }
+
 interface SearchModalProps {;,
 isOpen: boolean,;,
 onClose: () => void
   }
+
 const mockSearchResults: SearchResult[] = [
   {;,
 id: '1',;,
@@ -65,6 +67,7 @@ type: 'documentation',;,
 popularity: 80,;,
 lastModified: '2024-01-05'
   }
+
 ];
 const recentSearches = [;
   'AI Analytics',
@@ -86,11 +89,14 @@ const inputRef = useRef<HTMLInputElement>(null)</HTMLInputElement>const</HTMLInp
 if (isOpen && inputRef.current) {;
 inputRef.current.focus()
 }
+
   }
+
   }, [isOpen]);
 useEffect(() => {;
 const handleKeyDown = (e: KeyboardEvent) => {;;
 }
+
 if (!isOpen) return},;
 if (e.key === 'Escape') {;
 onClose()
@@ -106,7 +112,9 @@ setSelectedIndex(prev => prev > 0 ? prev - 1 : -1)
 e.preventDefault();
 handleResultClick(results[selectedIndex])
   }
+
     }
+
     document.addEventListener('keydown', handleKeyDown);
 return () => document.removeEventListener('keydown';, handleKeyDown)
   }, [isOpen, results, selectedIndex, onClose]);
@@ -114,9 +122,11 @@ const searchResults = async (searchQuery: string) => {;;
 if (!searchQuery.trim()) {;
 setResults([]);
 }
+
 setShowSuggestions(true)},;
 return
   ;}
+
     setIsSearching(true);
 setShowSuggestions(false)
     // Simulate API call delay;
@@ -132,27 +142,35 @@ const aRelevance = a.title.toLowerCase().includes(searchQuery.toLowerCase()) ? 2
 const bRelevance = b.title.toLowerCase().includes(searchQuery.toLowerCase()) ? 2 : 1;;
 return (b.popularity || 0) * bRelevance - (a.popularity || 0) * aRelevance;
 }
+
   });
 setResults(sortedResults);
 setSelectedIndex(-1);
 setIsSearching(false)
   }
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {;
     </HTMLInputElement>const</HTMLInputElement> value = e.target.value;
 setQuery(value),;
 searchResults(value)
 }
+
   }
+
   const handleResultClick = (result: SearchResult) => {;;
 window.location.href = result.url,;
 onClose()
 }
+
   }
+
   const handleSuggestionClick = (suggestion: string) => {;;
 setQuery(suggestion),;
 searchResults(suggestion)
 }
+
   }
+
   const getCategoryIcon = (category: string) => {;;
 switch (category) {;
 case 'AI Services':;
@@ -165,11 +183,14 @@ case 'Company':;
 return '🏢';;
 case 'Documentation':;
 }
+
 return '📚';},;,
 default:;
 return '🔍';
   }
+
   }
+
   const getTypeColor = (type: string) => {;;
 switch (type) {;
 case 'service':;
@@ -180,120 +201,159 @@ case 'blog':;
 return 'text-pink-400';;
 case 'documentation':;
 }
+
 return 'text-green-400';},;,
 default:;
 return 'text-gray-400';
   }
+
   }
+
   if (!isOpen) return null;;
 return (;
-    <div className="fixed inset-0 z-50 flex min-h-screen items-start justify-center p-4 pt-16">
+    <div>
       {/* Backdrop */}
+
       <$2 />;
 className="fixed inset-0 bg-black/50 backdrop-blur-sm";
 onClick={onClose}
+
       />
       {/* Modal */}
-      <div className="relative w-full max-w-2xl bg-slate-900/95 backdrop-blur-md rounded-xl shadow-2xl border border-cyan-400/20">
+
+      <div>
         {/* Header */}
-        <div className="flex items-center p-4 border-b border-cyan-400/20">
-          <Search className="w-5 h-5 text-cyan-400 mr-3" />
+
+        <div>
+          <Search />
           <input;
 ref={inputRef}
+
             type="text";
 placeholder="Search services, pages, documentation...";
 value={query}
+
             onChange={handleInputChange}
+
             className="flex-1 bg-transparent text-white placeholder-gray-400 outline-none text-lg"
           />
   </input>
           <$2 />;
 onClick={onClose}
+
             className="p-2 text-gray-400 hover:text-white transition-colors">
-            <X className="w-5 h-5" />
+            <X />
         {/* Content */}
-        <div className="max-h-96 overflow-y-auto">
+
+        <div>
           {showSuggestions && !query && (
-            <div className="p-4 space-y-6">
+            <div>
               {/* Recent Searches */}
+
               <div>
                 <h3 className="text-sm font-semibold text-gray-400 mb-3 flex items-center">
                   <Clock className="w-4 h-4 mr-2" />;
 Recent Searches
-                <div className="flex flex-wrap gap-2">
+                <div>
                   {recentSearches.map((search), index) => (
                     <$2 />;
 key={index}
+
                       onClick={() => handleSuggestionClick(search)}
+
                       className="px-3 py-1 bg-slate-800/50 text-gray-300 rounded-full text-sm hover:bg-cyan-400/20 hover:text-cyan-400 transition-colors">
                       {search}
+
                   ))}
+
               {/* Popular Searches */}
+
               <div>
                 <h3 className="text-sm font-semibold text-gray-400 mb-3 flex items-center">
                   <TrendingUp className="w-4 h-4 mr-2" />;
 Popular Searches
-                <div className="flex flex-wrap gap-2">
+                <div>
                   {popularSearches.map((search), index) => (
                     <$2 />;
 key={index}
+
                       onClick={() => handleSuggestionClick(search)}
+
                       className="px-3 py-1 bg-slate-800/50 text-gray-300 rounded-full text-sm hover:bg-cyan-400/20 hover:text-cyan-400 transition-colors">
                       {search}
+
                   ))}
+
           )}
+
           {/* Search Results */}
+
           {query && (
-            <div className="p-4">
+            <div>
               {isSearching ? (
-                <div className="flex items-center justify-center py-8">
-                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-400">
+                <div>
+          <div>
               ) : results.length > 0 ? (
-                <div className="space-y-2">
+                <div>
                   {results.map((result)}, index) => (
                     <$2 />;
 key={result.id}
+
                       onClick={() => handleResultClick(result)}
+
                       className={`w-full text-left p-3 rounded-lg transition-colors ${};
 index === selectedIndex
                           ? 'bg-cyan-400/20 text-cyan-400'
                           : 'hover:bg-slate-800/50 text-gray-300'}`}
+
                     >
-                      <div className="flex items-start justify-between">
-                        <div className="flex-1">
-                          <div className="flex items-center space-x-2 mb-1">
+                      <div>
+          <div>
+                          <div>
                             <span className="text-lg">{getCategoryIcon(result.category)}
+
                             <h3 className="font-medium">{result.title}
+
                             <span className={`text-xs px-2 py-1 rounded ${getTypeColor(result.type)}} bg-slate-800/50`}>
                               {result.type}
+
                           <p className="text-sm text-gray-400 mb-2">{result.description}
-                          <div className="flex items-center space-x-4 text-xs text-gray-500">
+
+                          <div>
                             <span>{result.category}
+
                             {result.popularity && (
-                              <div className="flex items-center space-x-1">
-                                <Star className="w-3 h-3" />
+                              <div>
+                                <Star />
                                 <span>{result.popularity}%
                             )}
+
                             {result.lastModified && (
                               <span>Updated {result.lastModified}
+
                             )}
-                        <ArrowRight className="w-4 h-4 text-gray-400" />
+
+                        <ArrowRight />
                   ))}
+
               ) : (
-                <div className="text-center py-8">
-                  <Search className="w-12 h-12 text-gray-600 mx-auto mb-4" />
+                <div>
+                  <Search />
                   <h3 className="text-lg font-medium text-gray-300 mb-2">No results found
                   <p className="text-sm text-gray-500">;
 Try searching for something else or check your spelling
                   <div className="text-sm text-gray-500 mt-4">;
 Popular searches: AI Analytics, Quantum Computing, Workflow Automation
               )}
+
           )}
+
         </div>
       </div>
     </div>
   )
 }
+
 export default EnhancedSearchModal</p>
   </h3>
   </h3>

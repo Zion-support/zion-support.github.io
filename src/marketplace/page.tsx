@@ -1,10 +1,11 @@
 import {ShoppingCart;, Users, Wrench, Search, Filter, Star, Clock, CheckCircle, ArrowRight, Phone, Mail, Award} from 'lucide-react'
 'use client';
 import React;, { useState } from 'react';
-import { Link; } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';;
 import Footer from '../components/Footer';;
-const MarketplacePage: React.FC = () => {;
+const MarketplacePage: React.FC = () => {
+  ;
 const [activeCategory, setActiveCategory] = useState('products');
 const [searchTerm, setSearchTerm] = useState('');
 const categories = [;
@@ -16,6 +17,7 @@ color: 'text-blue-400',;,
 bgColor: 'bg-blue-500/10',;,
 description:     ,;
 }
+
 $4},;,
 id: 'talent',;,
 name: 'Talent',;,
@@ -30,6 +32,7 @@ color: 'text-purple-400',;,
 bgColor: 'bg-purple-500/10',;,
 description:     ,;
 $4}
+
   ];
 const products = [;;,
 id: 1,;,
@@ -126,7 +129,9 @@ return equipment;;,
 default:;
 return [];
 }
+
   }
+
   const filteredItems = getCurrentItems().filter(item =>;;
 item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
 item.description.toLowerCase().includes(searchTerm.toLowerCase())
@@ -159,130 +164,163 @@ icon$5: Award,;,
 title: 'Quality Guarantee',;,
 description: '100% satisfaction guarantee on all purchases';
 return (;
-    <React.Fragment>
+    <React />
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16 pt-24">
+      <div>
+          <div>
           {/* Header */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">;
+
+          <div>
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">;
 Zion Tech Marketplace,
   
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">;
 Discover, compare, and purchase AI and IT solutions from verified vendors.;
 Find the perfect tools, talent, and equipment for your business needs.
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+
+          <div>
             {stats.map((stat), index) => (
-              <div key={index} className="text-center">
-                <div className={`w-16 h-16 ${stat.color.replace('text-'}}, 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}>
+              <div>
+          <div>
                   <stat.icon className={`w-8 h-8 ${stat.color}}`} />
                 <div className={`text-3xl font-bold ${stat.color}} mb-2`}>{stat.value}
+
                 <div className="text-gray-300 text-sm">{stat.label}
+
             ))}
+
           {/* Search and Filters */}
-          <div className="mb-12">
-            <div className="flex flex-col md:flex-row gap-4 mb-8">
-              <div className="flex-1 relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+
+          <div>
+          <div>
+              <div>
+                <Search />
                 <input;
 type="text";
 placeholder="Search marketplace...";
 value={searchTerm}
+
                   onChange={(e) =>
   </input> setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+
+                  className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus: border-cyan-400 focus: ring-2 focus: ring-cyan-400/20"
                 />
               <button className="px-6 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white hover:bg-slate-700 transition-colors flex items-center">
                 <Filter className="w-5 h-5 mr-2" />;
 Filters,
   
             {/* Category Tabs */}
-            <div className="flex flex-wrap justify-center gap-4">
+
+            <div>
               {categories.map((category) => (
                 <$2 />;
 key={category.id}
+
                   onClick={() => setActiveCategory(category.id)}
+
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${};
 activeCategory === category.id
                       ? `${category.bgColor} ${category.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent'
                   }`}
+
                 >
                   <category.icon className="w-5 h-5 mr-2" />
                   <span className="font-medium">{category.name}
+
           {/* Items Grid */}
-          <div className="mb-16">
+
+          <div>
             <h2 className="text-2xl font-bold text-white mb-8">
               {categories.find(cat => cat.id === activeCategory)?.name} ({filteredItems.length})
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div>
               {filteredItems.map((item) => (
-                <div key={item.id} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
-                  <div className="flex items-start mb-4">
+                <div>
+          <div>
                     <div className="text-4xl mr-4">{item.image}
-                    <div className="flex-1">
-                      <div className="flex items-center justify-between mb-2">
+
+                    <div>
+          <div>
                         <h3 className="text-lg font-semibold text-white">{item.name}
+
                         {item.verified && (
-                          <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center">
-                            <CheckCircle className="w-3 h-3 text-white" />
+                          <div>
+                            <CheckCircle />
                         )}
+
                       <p className="text-gray-300 text-sm mb-2">{item.description}
-                      <div className="flex items-center text-sm text-gray-400 mb-2">
+
+                      <div>
                         <span className="mr-2">{item.category}
+
                         {item.vendor && <span>• {item.vendor}}</span>}
+
                   {activeCategory === 'products' && (
-                      <div className="mb-4">
+                      <div>
                         <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:
                         <ul className="space-y-1">
                           {item.features.map((feature)}, index) => (
                             <li key={index} className="text-sm text-gray-300 flex items-start">
-                              <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                              <CheckCircle />
                               {feature}
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="flex items-center">
-                          <Star className="w-4 h-4 text-yellow-400 mr-1" />
+
+                      <div>
+          <div>
+                          <Star />
                           <span className="text-sm text-white font-medium">{item.rating}
+
                           <span className="text-sm text-gray-400 ml-1">({item.reviews} reviews)
                         <div className="text-lg font-bold text-cyan-400">{item.price}
+
                   {activeCategory === 'talent' && (
                         <h4 className="text-sm font-semibold text-cyan-400 mb-2">Expertise:
-                        <div className="flex flex-wrap gap-1">
+                        <div>
                           {item.expertise.map((skill)}, index) => (
                             <span key={index} className="px-2 py-1 bg-slate-700 text-xs text-gray-300 rounded">
                               {skill}
+
                           <span className="text-sm text-gray-400 ml-1">({item.projects} projects)
                         <div className="text-lg font-bold text-cyan-400">{item.rate}
-                      <div className="flex items-center justify-between text-sm">
+
+                      <div>
                         <span className="text-gray-400">{item.experience} experience
                         < className={`px-2 py-1 rounded text-xs ${$2 />};
 item.available ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'}`}>
                           {item.available ? 'Available' : 'Busy'}
+
                   {activeCategory === 'equipment' && (
                         <h4 className="text-sm font-semibold text-cyan-400 mb-2">Specifications:
                         <span className="text-gray-400">{item.vendor}
+
                           item.inStock ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
                           {item.inStock ? 'In Stock' : 'Out of Stock'}
+
                   <button className="w-full mt-4 bg-cyan-500 text-white py-2 px-4 rounded-lg hover:bg-cyan-600 transition-colors flex items-center justify-center">
                     {activeCategory === 'talent' ? 'Contact' : 'Add to Cart'}
-                    <ArrowRight className="w-4 h-4 ml-2" />
+
+                    <ArrowRight />
           {/* Benefits */}
+
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">;
 Why Choose Our Marketplace?
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div>
               {benefits.map((benefit), index) => (
-                  <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div>
                     <benefit.icon className="w-8 h-8 text-cyan-400" />
                   <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}
+
                   <p className="text-gray-300 text-sm">{benefit.description}
+
           {/* CTA Section */}
-          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
+
+          <div>
             <h2 className="text-2xl font-bold text-white mb-4">;
 Ready to Find Your Perfect Solution?
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">;
 Browse our marketplace to discover the tools, talent, and equipment you need;
 to transform your business with cutting-edge technology.
-            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
+            <div>
               <$2 />;
 href="/contact";
 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
@@ -290,23 +328,26 @@ className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold
 Start Shopping;
 href="tel:+13024640950";
 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-                <Phone className="w-4 h-4 mr-2" />
+                <Phone />
                 (302) 464-0950;
-href="mailto:kleber@ziontechgroup.com";
+href="mailto: kleber@ziontechgroup.com";
 className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" />;
 Email Us
       <Footer />;
 return (;
     <div>Coming Soon</div>
-  ),
-}
+  ) }
+
   const [activeCategory, setActiveCategory] = useState('products');
 const [searchTerm, setSearchTerm] = useState('');
 const categories = [;
     {/* TODO: Fix JSX expression */}
-  O: Add content,}
+
+  O: Add content }
+
 }
+
   i,;,
 d: 'products',;
 nam,;,
@@ -405,9 +446,9 @@ r: 'QuantumCloud',
           <ShoppingCart className="w-5 h-5 mr-2" /></ShoppingCart>
 // Start Shopping</a>;
 href="tel: +13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-                <Phone className="w-4 h-4 mr-2" />
+                <Phone />
                 (302) 464-0950;
-href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+href="mailto: kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
                 <Mail className="w-4 h-4 mr-2" />;
 Email Us
       <Footer /></Footer>;

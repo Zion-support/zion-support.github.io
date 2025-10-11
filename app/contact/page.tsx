@@ -1,9 +1,10 @@
 import React;, {useState} from 'react'
-import {Helmet;} from 'react-helmet-async'
+import { Helmet } from 'react-helmet-async'
 import {Phone;, Mail, MapPin, Clock, Send} from 'lucide-react'
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const ContactPage: React.FC = () => {const [formData, setFormData] = useState({;,
+const ContactPage: React.FC = () => {
+  const [formData, setFormData] = useState({;,
 name: '',;,
 email: '',;,
 company: '',;,
@@ -43,6 +44,7 @@ title: 'Business Hours',;,
 value: 'Monday - Friday',;,
 description: ',
     9: 00 AM - , 6:00 PM EST'} ]
+
 const services = [
     'AI Solutions',
     'Cloud Infrastructure',
@@ -53,33 +55,27 @@ const services = [
     'IT Consulting',
     'Other'
   ]
+
 return (
     <>
 
-      <Helmet>
+      <Helmet />
         <title>AI Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
         <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
       </Helmet>
       <Navigation />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
+      <div>
+      <Helmet />
         <title>Contact Us - Zion Tech Group | AI & IT Solutions</title>
         <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact our team for consultations, support, and project inquiries." />
         <meta name="keywords" content="contact, support, consultation, AI solutions, IT services, get in touch" />
       </Helmet>
       
       <Navigation />
-      
       <main className="pt-16"
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700"
-          <div className="
-    g: px-8"
-            <div className="text-center"
-              <h1 className="text-4xl m, d:text-6xl font-bold text-white mb-6"
-Get in <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"
-              </h1>
+          <div>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
 Ready to transform your business? Let's discuss how our AI and IT solutions can help you achieve your goals.
               </p>
@@ -94,20 +90,18 @@ Ready to transform your business? Let's discuss how our AI and IT solutions can 
         </section>
 
         {/* Contact Info Section */}
-        <section className="py-16 px-4 sm: px-6 lg:px-8"
+
+        <section className="py-16 px-4 sm: px-6 lg: px-8"
           <div className="max-w-7xl mx-auto"
             <div className="
     ,
-    d: grid-cols-2 l, g:grid-cols-4 gap-8"
+    d: grid-cols-2 l, g: grid-cols-4 gap-8"
               {contactInfo.map((info), index) => {
 const Icon = info.icon;
 return (
 }
-                  <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center"
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4"
-                      <Icon className="w-6 h-6 text-white"
-                    </div>
-      
+
+                  <div>
       <Footer />
     </>
                     <h3 className="text-lg font-semibold text-white mb-2">{info.title}</h3>
@@ -119,6 +113,7 @@ return (
     </>
                 )
               })}
+
             </div>
       
       <Footer />
@@ -130,11 +125,10 @@ return (
         </section>
 
         {/* Contact Form Section */}
+
         <section className="
     g: px-8"
-          <div className="max-w-7xl mx-auto"
-            <div className="grid grid-cols-1 l, g:grid-cols-2 gap-12"
-              <div>
+          <div>
                 <h2 className="text-3xl font-bold text-white mb-6"
 Send us a Message
                 </h2>
@@ -143,8 +137,7 @@ Fill out the form below and we'll get back to you as soon as possible. We're her
                 </p>
                 
                 <form onSubmit={handleSubmit} className="space-y-6"
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6"
-                    <div>
+                  <div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2"
 Full Name *
                       </label>
@@ -154,7 +147,7 @@ id="name"
 name="name"
 value={formData.name} onChange={handleChange} required
 className="
-    s: ring-cyan-500 focu, s:border-transparent"
+    s: ring-cyan-500 focu, s: border-transparent"
 placeholder="Your full name"
                       />
   </input>
@@ -184,8 +177,8 @@ placeholder="your@email.com"
       
       <Footer />
     </>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
+                  <div>
+          <div>
                       <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2"
 Company
                       </label>
@@ -194,7 +187,7 @@ type="text"
 id="company"
 name="company"
 value={formData.company} onChange={handleChange} className="
-    s: ring-cyan-500 focu, s:border-transparent"
+    s: ring-cyan-500 focu, s: border-transparent"
 placeholder="Your company name"
                       />
   </input>
@@ -211,7 +204,7 @@ type="tel"
 id="phone"
 name="phone"
 value={formData.phone} onChange={handleChange} className="
-    s: ring-cyan-500 focu, s:border-transparent"
+    s: ring-cyan-500 focu, s: border-transparent"
 placeholder="+1 (555) 123-4567"
                       />
   </input>
@@ -231,12 +224,13 @@ Service Interest
 id="service"
 name="service"
 value={formData.service} onChange={handleChange} className="
-    s: ring-cyan-500 focu, s:border-transparent"
+    s: ring-cyan-500 focu, s: border-transparent"
                     >
                       <option value=""
                       {services.map((service), index) => (
                         <option key={index} value={service}>{service}</option>
                       ))}
+
                     </select>
                   </div>
       
@@ -250,7 +244,7 @@ Message *
 id="message"
 name="message"
 value={formData.message} onChange={handleChange} required
-rows={6} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+rows={6} className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus: ring-2 focus: ring-cyan-500 focus: border-transparent"
 placeholder="Tell us about your project or requirements..."
                     />
   </textarea>
@@ -263,23 +257,18 @@ type="submit";
 className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
                   >;
 Send Message
-                    <Send className="ml-2 w-5 h-5" />
+                    <Send />
                   </button>
                 </form>
               </div>
       
       <Footer />
     </>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+              <div>
                 <h3 className="text-2xl font-bold text-white mb-6">;
 Why Choose Us?
                 </h3>
-                <div className="space-y-6"
-                  <div className="flex items-start"
-                    <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0"
-                      <span className="text-white font-bold"
-                    </div>
-      
+                <div>
       <Footer />
     </>
                     <div>
@@ -293,8 +282,8 @@ Why Choose Us?
       
       <Footer />
     </>
-                  <div className="flex items-start">
-                    <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                  <div>
+          <div>
                       <span className="text-white font-bold">2</span>
                     </div>
       
@@ -311,8 +300,8 @@ Why Choose Us?
       
       <Footer />
     </>
-                  <div className="flex items-start">
-                    <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                  <div>
+          <div>
                       <span className="text-white font-bold">3</span>
                     </div>
       
@@ -329,8 +318,8 @@ Why Choose Us?
       
       <Footer />
     </>
-                  <div className="flex items-start">
-                    <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                  <div>
+          <div>
                       <span className="text-white font-bold">4</span>
                     </div>
       

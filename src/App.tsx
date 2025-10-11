@@ -56,6 +56,7 @@ const TermsPage = lazy(() => import('./terms/page'));
 const CookiesPage = lazy(() => import('./cookies/page'));
 
 const App: React.FC = () => {
+  
   const [isInitialized, setIsInitialized] = useState(false);
 
   useEffect(() => {
@@ -68,6 +69,7 @@ const App: React.FC = () => {
         console.error('Failed to initialize app:', error);
         setIsInitialized(true); // Still show the app even if initialization fails
       }
+
     };
 
     initApp();
@@ -78,16 +80,18 @@ const App: React.FC = () => {
   }
 
   return (
-    <ErrorBoundary>
-      <Router>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <ErrorBoundary />
+      <Router />
+        <div>
           <Navigation />
           <Suspense fallback={<LoadingSpinner />}>
-            <Routes>
+            <Routes />
               {/* Main Pages */}
+
               <Route path="/" element={<HomePage />} />
               
               {/* Company Pages */}
+
               <Route path="/about" element={<AboutPage />} />
               <Route path="/team" element={<TeamPage />} />
               <Route path="/careers" element={<CareersPage />} />
@@ -95,12 +99,14 @@ const App: React.FC = () => {
               <Route path="/contact" element={<ContactPage />} />
               
               {/* Main Services */}
+
               <Route path="/services" element={<ItServicesPage />} />
               <Route path="/pricing" element={<PricingPage />} />
               <Route path="/demo" element={<DemoPage />} />
               <Route path="/consultation" element={<ConsultationPage />} />
               
               {/* AI Services */}
+
               <Route path="/ai-services" element={<AiServicesPage />} />
               <Route path="/ai-marketing" element={<AiMarketingPage />} />
               <Route path="/ai-automation" element={<AiAutomationPage />} />
@@ -108,6 +114,7 @@ const App: React.FC = () => {
               <Route path="/ai-fintech" element={<AiFintechPage />} />
               
               {/* IT Services */}
+
               <Route path="/it-services" element={<ItServicesPage />} />
               <Route path="/cloud-services" element={<CloudServicesPage />} />
               <Route path="/cybersecurity" element={<CybersecurityPage />} />
@@ -115,6 +122,7 @@ const App: React.FC = () => {
               <Route path="/devops" element={<DevOpsPage />} />
               
               {/* Specialized Solutions */}
+
               <Route path="/quantum-computing" element={<QuantumComputingPage />} />
               <Route path="/autonomous-systems" element={<AutonomousSystemsPage />} />
               <Route path="/blockchain-web3" element={<BlockchainWeb3Page />} />
@@ -123,20 +131,24 @@ const App: React.FC = () => {
               <Route path="/robotics" element={<RoboticsPage />} />
               
               {/* Support Pages */}
+
               <Route path="/support" element={<SupportPage />} />
               <Route path="/documentation" element={<DocumentationPage />} />
               <Route path="/faq" element={<FAQPage />} />
               
               {/* Content Pages */}
+
               <Route path="/case-studies" element={<CaseStudiesPage />} />
               <Route path="/blog" element={<BlogPage />} />
               
               {/* Legal Pages */}
+
               <Route path="/privacy" element={<PrivacyPage />} />
               <Route path="/terms" element={<TermsPage />} />
               <Route path="/cookies" element={<CookiesPage />} />
               
               {/* Catch all route */}
+
               <Route path="*" element={<NotFoundPage />} />
             </Routes>
           </Suspense>
@@ -149,8 +161,8 @@ const App: React.FC = () => {
 
 // 404 Page Component
 const NotFoundPage: React.FC = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-    <div className="text-center">
+  <div>
+          <div>
       <h1 className="text-6xl font-bold text-cyan-400 mb-4">404</h1>
       <h2 className="text-2xl font-semibold text-white mb-4">Page Not Found</h2>
       <p className="text-gray-300 mb-8">The page you're looking for doesn't exist.</p>

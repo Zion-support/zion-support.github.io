@@ -3,12 +3,12 @@ import {Helmet} from 'react-helmet-async'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 import './globals.css'
-interface RootLayoutProps {children: React.ReactNode;} const RootLayout: React.FC<RootLayoutProps> = ({children} ) => {
+interface RootLayoutProps { children: React.ReactNode;} const RootLayout: React.FC<RootLayoutProps> = ({children} ) => {
   return (
     <>
 <html lang="en"
       <head>
-        <Helmet>
+        <Helmet />
           <title>Zion Tech Group - AI & IT Solutions</title>
           <meta name="description" content="Leading provider of AI and IT solutions for modern businesses. Transform your operations with cutting-edge technology."
           <meta name="keywords" content="AI solutions, IT services, artificial intelligence, business automation, technology consulting"
@@ -19,6 +19,7 @@ interface RootLayoutProps {children: React.ReactNode;} const RootLayout: React.F
         <Navigation />
         <main className="pt-20"
           {children}
+
         </main>
         <Footer />
       </body>

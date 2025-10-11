@@ -4,6 +4,7 @@ import { MapPin, Clock, Users, Briefcase, ArrowRight, CheckCircle, Star, Heart, 
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const CareersPage: React.FC = () => {
+  
   const openPositions = [
     {
       id: 'senior-ai-engineer',
@@ -21,6 +22,7 @@ const CareersPage: React.FC = () => {
         'Strong problem-solving and communication skills'
       ],
       benefits: ['Competitive salary', 'Stock options', 'Health insurance', 'Flexible work hours', 'Professional development budget']
+
     },
     {
       id: 'full-stack-developer',
@@ -38,6 +40,7 @@ const CareersPage: React.FC = () => {
         'Strong attention to detail and code quality'
       ],
       benefits: ['Competitive salary', 'Health insurance', '401k matching', 'Remote work options', 'Learning budget']
+
     },
     {
       id: 'data-scientist',
@@ -55,6 +58,7 @@ const CareersPage: React.FC = () => {
         'Strong analytical and communication skills'
       ],
       benefits: ['Competitive salary', 'Stock options', 'Health insurance', 'Flexible schedule', 'Research opportunities']
+
     },
     {
       id: 'cybersecurity-specialist',
@@ -72,6 +76,7 @@ const CareersPage: React.FC = () => {
         'Knowledge of compliance standards (SOC 2, ISO 27001)'
       ],
       benefits: ['Competitive salary', 'Health insurance', 'Security training budget', 'Certification support', 'Flexible work']
+
     },
     {
       id: 'product-manager',
@@ -89,6 +94,7 @@ const CareersPage: React.FC = () => {
         'Excellent communication and leadership abilities'
       ],
       benefits: ['Competitive salary', 'Stock options', 'Health insurance', 'Product conference budget', 'Leadership development']
+
     },
     {
       id: 'sales-engineer',
@@ -106,8 +112,11 @@ const CareersPage: React.FC = () => {
         'Ability to travel to client sites (25% travel)'
       ],
       benefits: ['Competitive salary + commission', 'Health insurance', 'Travel budget', 'Sales training', 'Performance bonuses']
+
     }
+
   ]
+
   const benefits = [
     {
       icon: Heart,
@@ -129,7 +138,9 @@ const CareersPage: React.FC = () => {
       title: 'Recognition',
       description: 'Performance bonuses, stock options, and recognition programs'
     }
+
   ]
+
   const culture = [
     'Innovation-driven environment where creativity is encouraged',
     'Collaborative team culture with diverse perspectives',
@@ -138,18 +149,20 @@ const CareersPage: React.FC = () => {
     'Regular team events and company retreats',
     'Open communication and transparent leadership'
   ]
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div>
       <Navigation />
       {/* Hero Section */}
+
       <section className="relative py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
+        <div>
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             Join Our <span className="text-cyan-400">Team</span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Be part of the future of AI and IT solutions. We're looking for passionate individuals who want to make a real impact.
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div>
             <$2 />
               to="#open-positions"
               className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
@@ -164,9 +177,10 @@ const CareersPage: React.FC = () => {
         </div>
       </section>
       {/* Why Work With Us */}
+
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-          <div className="text-center mb-16">
+        <div>
+          <div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Why Work With Us?
             </h2>
@@ -174,18 +188,22 @@ const CareersPage: React.FC = () => {
               We offer more than just a job - we offer a career and a community,
   
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div>
             {benefits.map((benefit, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div>
+          <div>
                   <benefit.icon className="w-8 h-8 text-white" />
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}
+
                 <p className="text-gray-600">{benefit.description}
+
             ))}
+
       {/* Company Culture */}
+
       <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <div>
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                 Our Culture,
@@ -197,28 +215,31 @@ const CareersPage: React.FC = () => {
               <ul className="space-y-4">
                 {culture.map((item, index) => (
                   <li key={index} className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                    <CheckCircle />
                     <span className="text-gray-600">{item}
+
                 ))}
-            <div className="bg-white rounded-xl shadow-lg p-8">
+
+            <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Quick Stats
-              <div className="grid grid-cols-2 gap-6">
-                <div className="text-center">
+              <div>
+          <div>
                   <div className="text-3xl font-bold text-cyan-600 mb-2">50+
                   <div className="text-gray-600">Team Members
-                <div className="text-center">
+                <div>
                   <div className="text-3xl font-bold text-blue-600 mb-2">15+
                   <div className="text-gray-600">Years Experience
-                <div className="text-center">
+                <div>
                   <div className="text-3xl font-bold text-purple-600 mb-2">25+
                   <div className="text-gray-600">Countries
-                <div className="text-center">
+                <div>
                   <div className="text-3xl font-bold text-green-600 mb-2">99%
                   <div className="text-gray-600">Satisfaction
       {/* Open Positions */}
+
       <section id="open-positions" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-          <div className="text-center mb-16">
+        <div>
+          <div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Open Positions
   
@@ -226,57 +247,69 @@ const CareersPage: React.FC = () => {
               Find your next career opportunity with us,
   
           </div>
-          <div className="space-y-8">
+          <div>
             {openPositions.map((position) => (
-              <div key={position.id} className="bg-white border border-gray-200 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                <div className="p-8">
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                    <div>
+              <div>
+          <div>
+                  <div>
+          <div>
                       <h3 className="text-2xl font-bold text-gray-900 mb-2">{position.title}
-                      <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600">
+
+                      <div>
                         <span className="flex items-center">
-                          <Briefcase className="w-4 h-4 mr-1" />
+                          <Briefcase />
                           {position.department}
+
                         <span className="flex items-center">
-                          <MapPin className="w-4 h-4 mr-1" />
+                          <MapPin />
                           {position.location}
+
                         <span className="flex items-center">
-                          <Clock className="w-4 h-4 mr-1" />
+                          <Clock />
                           {position.type}
+
                         <span className="flex items-center">
-                          <Users className="w-4 h-4 mr-1" />
+                          <Users />
                           {position.experience}
+
                     <$2 />
                       to="/contact"
                       className="mt-4 md:mt-0 bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-lg font-medium transition-colors inline-flex items-center">
-                      Apply Now <ArrowRight className="w-4 h-4 ml-2" />
+                      Apply Now <ArrowRight />
                   <p className="text-gray-600 mb-6">{position.description}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
+
+                  <div>
+          <div>
                       <h4 className="font-semibold text-gray-900 mb-3">Requirements
                       <ul className="space-y-2">
                         {position.requirements.map((req, index) => (
                           <li key={index} className="flex items-start text-sm text-gray-600">
-                            <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                            <CheckCircle />
                             {req}
+
                         ))}
+
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-3">Benefits
                       <ul className="space-y-2">
                         {position.benefits.map((benefit, index) => (
                           <li key={index} className="flex items-start text-sm text-gray-600">
-                            <CheckCircle className="w-4 h-4 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
+                            <CheckCircle />
                             {benefit}
+
                         ))}
+
             ))}
+
       {/* CTA Section */}
+
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
+        <div>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Don't See Your Perfect Role?
           <p className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto">
             We're always looking for talented individuals. Send us your resume and let us know how you'd like to contribute to our mission.
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div>
             <$2 />
               to="/contact"
               className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
@@ -292,8 +325,8 @@ const CareersPage: React.FC = () => {
       </section>
       <Footer />
     </div>
-  ),
-}
+  ) }
+
 export default CareersPage</Link>
   </Link>
   </p>

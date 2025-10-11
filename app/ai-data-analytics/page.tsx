@@ -4,24 +4,26 @@ import {Helmet} from 'react-helmet-async'
 import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, BarChart, Target, TrendingUp} from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-const PagePage: React.FC = () => {const features = [
+const PagePage: React.FC = () => {
+  const features = [
     {
-      ico, n: Wifi,
+      icon: Wifi,
       title: 'Feature 1',
       description: 'Description for feature 1.',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
-    {icon: BarChart,
+    { icon: BarChart,
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']} ,
-    {icon: TrendingUp,
+    { icon: TrendingUp,
       title: 'Performance Optimization',
       description: 'AI-powered insights to optimize your business performance.',
       benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']} ,
-    {icon: Target,
+    { icon: Target,
       title: 'Precision Targeting',
       description: 'Target specific goals and objectives with precision.',
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']} ]
+
   const benefits = [
     'Increase efficiency by up to 80%',
     'Reduce costs by 30% with automation',
@@ -30,31 +32,26 @@ const PagePage: React.FC = () => {const features = [
     'Real-time processing and analysis',
     'Seamless integration with existing systems'
   ]
+
   return (
     <>
-      <Helmet>
+      <Helmet />
         <title>AI Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
         <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
       </Helmet>
       <Navigation />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
+      <div>
+      <Helmet />
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Advanced page solutions powered by artificial intelligence and cutting-edge technology."
         <meta name="keywords" content="AI, page, artificial intelligence, business solutions, automation"
       </Helmet>
       
       <Navigation />
-      
       <main className="pt-16"
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"
-            <div className="text-center"
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"
-                Page Page
-              </h1>
+          <div>
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto"
                 Transform your business with our cutting-edge AI and IT solutions designed for the modern enterprise.
               </p>
@@ -65,23 +62,19 @@ const PagePage: React.FC = () => {const features = [
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+
+        <section className="py-20 px-4 sm: px-6 lg: px-8 bg-slate-800/50">
+          <div>
+          <div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Powerful Features</h2>
               <p className="text-xl text-gray-300">Everything you need to succeed with AI</p>
             </div>
       
       <Footer />
     </>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div>
               {features.map((feature, index) => (
-                <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
-                  <div className="flex items-center mb-4"
-                    <feature.icon className="h-8 w-8 text-blue-600 mr-3"
-                    <h3 className="text-xl font-semibold text-gray-900"
-                  </div>
-      
+                <div>
       <Footer />
     </>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -89,8 +82,9 @@ const PagePage: React.FC = () => {const features = [
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="h-4 w-4 text-cyan-400 mr-2 flex-shrink-0" />
+                        <CheckCircle />
                         {benefit}
+
                       </li>
                     )
     </>
@@ -101,6 +95,7 @@ const PagePage: React.FC = () => {const features = [
       <Footer />
     </>
               ))}
+
             </div>
       
       <Footer />
@@ -112,23 +107,19 @@ const PagePage: React.FC = () => {const features = [
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+
+        <section className="py-20 px-4 sm: px-6 lg: px-8">
+          <div>
+          <div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our AI Solutions?</h2>
               <p className="text-xl text-gray-300">Transform your business with intelligent automation</p>
             </div>
       
       <Footer />
     </>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div>
               {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white p-6 rounded-xl shadow-lg"
-                  <div className="flex items-center"
-                    <CheckCircle className="h-6 w-6 text-green-500 mr-3"
-                    <span className="text-lg font-medium text-gray-900"
-                  </div>
-      
+                <div>
       <Footer />
     </>
                   <p className="text-gray-300">{benefit}</p>
@@ -143,16 +134,17 @@ const PagePage: React.FC = () => {const features = [
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
+
+        <section className="py-20 px-4 sm: px-6 lg: px-8">
+          <div>
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8">
               Join thousands of businesses already using our AI-powered solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div>
               <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
                 Start Free Trial
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight />
               </button>
               <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
               </button>
@@ -173,6 +165,7 @@ const PagePage: React.FC = () => {const features = [
     </>
   );
 }
+
       </div>
       
       <Footer />

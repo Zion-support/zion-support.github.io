@@ -1,12 +1,13 @@
 import React from 'react';;
-import { Link; } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { CheckCircle;, X, Zap, Brain, Cloud, ArrowRight, Star, Users, Shield, Clock } from 'lucide-react';
 import Navigation from '../components/Navigation';;
 import Footer from '../components/Footer';;
-const PricingPage: React.FC = () => {;
+const PricingPage: React.FC = () => {
+  ;
 const plans = [;
-    {;,
-}
+    {; }
+
 name: 'Starter'},;,
 description: 'Perfect for small businesses getting started with AI',;,
 price: '$2,500',;,
@@ -74,6 +75,7 @@ limitations: [],;,
 cta: 'Contact Sales',;,
 popular: false
     }
+
   ];
 const addOns = [;
     {;,
@@ -100,6 +102,7 @@ description: 'On-site or virtual training for your team',;,
 price: '$5,000',;,
 period: '/day'
     }
+
   ];
 const faqs = [;
     {;,
@@ -126,18 +129,20 @@ answer: 'All plans include email support. Professional and Enterprise plans incl
 question: 'Can I cancel anytime?',;,
 answer: 'Yes, you can cancel your subscription at any time. There are no long-term contracts or cancellation fees.'
     }
+
   ];
 const getColorClasses = (color: string) => {;;
 switch (color) {;
 case 'blue':;
-return {;;,
-}
+return {;; }
+
 bg: 'bg-blue-500'},;,
 text: 'text-blue-500',;,
 border: 'border-blue-500',;,
 light: 'bg-blue-50',;,
 textLight: 'text-blue-600'
         }
+
       case 'cyan':;
 return {;;,
 bg: 'bg-cyan-500',;,
@@ -146,6 +151,7 @@ border: 'border-cyan-500',;,
 light: 'bg-cyan-50',;,
 textLight: 'text-cyan-600'
         }
+
       case 'purple':;
 return {;;,
 bg: 'bg-purple-500',;,
@@ -154,6 +160,7 @@ border: 'border-purple-500',;,
 light: 'bg-purple-50',;,
 textLight: 'text-purple-600'
         }
+
       default:;
 return {;;,
 bg: 'bg-gray-500',;,
@@ -162,62 +169,80 @@ border: 'border-gray-500',;,
 light: 'bg-gray-50',;,
 textLight: 'text-gray-600'
         }
+
     }
+
   }
+
   return (;
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div>
       <Navigation />
       {/* Hero Section */}
+
       <section className="relative py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
+        <div>
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">;
 Simple <span className="text-cyan-400">Pricing
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
 Choose the perfect plan for your business. All plans include our core AI and IT solutions with transparent pricing.
       {/* Pricing Plans */}
+
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <div>
             {plans.map((plan), index) => {;
 const colors = getColorClasses(plan.color);;
 return (;
                 <$2 />;
 }
+
 key={index}
+
                   className={`relative bg-white rounded-2xl shadow-lg border-2 ${};
 plan.popular ? colors.border : 'border-gray-200'} overflow-hidden`}
+
                 >
                   {plan.popular && (
                     <div className={`absolute top-0 left-0 right-0 ${colors.bg}} text-white text-center py-2 text-sm font-semibold`}>Most Popular
                   )}
-                  <div className={`p-8 ${plan.popular ? 'pt-12' : ''}}`}>
-                    <div className="text-center mb-8">
-                      <div className={`w-16 h-16 ${colors.light}} rounded-full flex items-center justify-center mx-auto mb-4`}>
+
+                  <div>
+          <div>
+                      <div>
                         <plan.icon className={`w-8 h-8 ${colors.textLight}}`} />
   </plan>
                       <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}
+
                       <p className="text-gray-600 mb-4">{plan.description}
-                      <div className="flex items-baseline justify-center">
+
+                      <div>
                         <span className="text-4xl font-bold text-gray-900">{plan.price}
+
                         <span className="text-gray-600 ml-1">{plan.period}
-                    <div className="mb-8">
+
+                    <div>
                       <h4 className="font-semibold text-gray-900 mb-4">What's included:
                       <ul className="space-y-3">
                         {plan.features.map((feature), featureIndex) => (
                           <li key={featureIndex} className="flex items-start">
-                            <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                            <CheckCircle />
                             <span className="text-gray-600">{feature}
+
                         ))}
+
                     {plan.limitations.length > 0 && (
-                      <div className="mb-8">
+                      <div>
                         <h4 className="font-semibold text-gray-900 mb-4">Limitations:
                         <ul className="space-y-3">
                           {plan.limitations.map((limitation)}, limitationIndex) => (
                             <li key={limitationIndex} className="flex items-start">
-                              <X className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
+                              <X />
                               <span className="text-gray-600">{limitation}
+
                           ))}
+
                     )}
+
                     <$2 />;
 to="/contact";
 className={`w-full ${};
@@ -225,14 +250,18 @@ plan.popular
                           ? `${colors.bg} hover:opacity-90 text-white`
                           : `${colors.border} ${colors.text} hover:${colors.bg} hover:text-white`
                       } border-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 text-center block`}
+
                     >
                       {plan.cta}
+
               )
             })}
+
       {/* Add-ons */}
+
       <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-          <div className="text-center mb-16">
+        <div>
+          <div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
 Add-on Services
   
@@ -240,19 +269,25 @@ Add-on Services
 Enhance your plan with additional services and features,
   
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div>
             {addOns.map((addOn), index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+              <div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">{addOn.name}
+
                 <p className="text-gray-600 mb-4 text-sm">{addOn.description}
-                <div className="flex items-baseline justify-between">
+
+                <div>
                   <span className="text-2xl font-bold text-cyan-600">{addOn.price}
+
                   <span className="text-gray-600 text-sm">{addOn.period}
+
             ))}
+
       {/* FAQ Section */}
+
       <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8">
-          <div className="text-center mb-16">
+        <div>
+          <div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
 Frequently Asked Questions
   
@@ -260,20 +295,24 @@ Frequently Asked Questions
 Everything you need to know about our pricing and plans,
   
           </div>
-          <div className="space-y-8">
+          <div>
             {faqs.map((faq), index) => (
-              <div key={index} className="bg-gray-50 rounded-xl p-6">
+              <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">{faq.question}
+
                 <p className="text-gray-600">{faq.answer}
+
             ))}
+
       {/* CTA Section */}
+
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
+        <div>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
 Ready to Get Started?
           <p className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto">;
 Choose your plan and start transforming your business with AI and IT solutions today.
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div>
             <$2 />;
 to="/contact";
 className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">;
@@ -289,8 +328,8 @@ Schedule Demo
       </section>
       <Footer />
     </div>
-  ),
-}
+  ) }
+
 export default PricingPage</Link>
   </Link>
   </p>

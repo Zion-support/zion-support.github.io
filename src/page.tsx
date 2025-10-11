@@ -109,7 +109,7 @@ import SEOOptimizer from './components/SEOOptimizer';;
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';;
 import Analytics from './components/Analytics';;
 import SecurityEnhancer from './components/SecurityEnhancer';;
-import { initializePerformanceOptimizations; } from './utils/performanceOptimizations';
+import { initializePerformanceOptimizations } from './utils/performanceOptimizations';
 import { microSaasServices;, aiServices, itServices, specializedServices } from '../data/2025-comprehensive-real-services-enhanced';
 
 // Dynamically import heavy components for better performance;;
@@ -135,6 +135,7 @@ initializePerformanceOptimizations();
 ;
 return () => clearTimeout(timer);;
 }
+
   }, []);
 
   }, []);
@@ -197,17 +198,18 @@ contact: service.contact.phone
   }));
 ;
 return (;
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div>
       {/* Performance Optimizer */}
+
       <PerformanceOptimizer />
-      
       {/* SEO Optimizer */}
+
       <SEOOptimizer />
-      
       {/* Accessibility Enhancer */}
+
       <AccessibilityEnhancer />
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-purple-500/20 to-pink-500/20 animate-pulse"></div>
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+        <div className="absolute inset-0 bg-[url('data: image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
         }}></div>
 
             </h1>
@@ -216,9 +218,9 @@ AI-Powered Enterprise Solutions & Digital Transformation
             </p>
                 </a>
               </div>
-              <div className="flex items-center text-purple-400 text-lg">
-                <Mail className="w-6 h-6 mr-2" />
-                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-purple-300 transition-colors">
+              <div>
+                <Mail />
+                <a href="mailto: kleber@ziontechgroup.com" className="hover:text-purple-300 transition-colors">
 
             <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                       🔥 POPULAR
@@ -241,9 +243,9 @@ AI-Powered Enterprise Solutions & Digital Transformation
       </section>
 
             <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div>
             {aiServicesData.map((service), index) => (
-              <div key={index} className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20">
+              <div>
                   </p>
                 </div>
                 
@@ -262,9 +264,9 @@ AI-Powered Enterprise Solutions & Digital Transformation
       </section>
 
             <h2 className="text-5xl font-bold text-white mb-6 bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div>
             {itServicesData.map((service), index) => (
-              <div key={index} className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-green-400/20 hover:border-green-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20">
+              <div>
                   </p>
                 </div>
                 
@@ -308,9 +310,9 @@ Cutting-edge technology meets practical business needs.
         </div>
       </section>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="text-center bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300">
-              <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+          <div>
+          <div>
+              <Phone />
               <h3 className="text-xl font-bold text-white mb-2">Call Us</h3>
               <p className="text-gray-300 mb-4">Speak directly with our experts</p>
               <a href="tel:+13024640950" onClick={handlePhoneClick} className="text-cyan-400 hover:text-cyan-300 text-lg font-semibold">
@@ -318,14 +320,14 @@ Cutting-edge technology meets practical business needs.
               </a>
             </div>
             
-            <div className="text-center bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300">
-              <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4" />
+            <div>
+              <Mail />
               </a>
             </div>
             
-            <div className="text-center bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-pink-400/20 hover:border-pink-400/60 transition-all duration-300">
+            <div>
   </div>
-              <MapPin className="w-12 h-12 text-pink-400 mx-auto mb-4" />
+              <MapPin />
               </p>
   );
 };

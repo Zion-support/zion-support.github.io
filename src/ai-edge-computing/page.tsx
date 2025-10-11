@@ -4,40 +4,45 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { Cpu, Zap, Globe, Shield, CheckCircle, Star,  Cpu,  Zap,  Shield } from 'lucide-react'
 const AIEdgeComputingPage: React.FC = () => {
+  
     const features = [],
   return (
     {// TODO: Add content
   }
+
 }
-  ico,
-  n: Cpu,
+
+  icon: Cpu,
       titl,
   e: 'Edge AI Processing',
       descriptio,
   n: 'AI processing at the edge for real-time decision making',
       benefit,
   s: ['Low latency', 'Real-time processing', 'Offline capability']
+
     },
-      ico,
-  n: Zap,
+      icon: Zap,
       titl,
   e: 'Optimized Models',
       descriptio,
   n: 'Lightweight AI models optimized for edge deployment',
       benefit,
   s: ['Small footprint', 'Fast inference', 'Resource efficient']
-      ico,
-  n: Shield,
+
+      icon: Shield,
       titl,
   e: 'Secure Edge Computing',
       descriptio,
   n: 'Enterprise-grade security for edge AI deployments',
       benefit,
   s: ['Data privacy', 'Secure communication', 'Access control']
+
     }
+
   ]
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div>
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
@@ -48,13 +53,13 @@ const AIEdgeComputingPage: React.FC = () => {
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             Bring AI to the edge with our powerful edge computing platform. Process data locally, make decisions in real-time,
             and reduce latency with intelligent edge AI solutions.
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div>
             <$2 />
               href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
 // >
 //               Get Started
               href="tel:+13024640950" className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-<Cpu className="w-5 h-5" />
+<Cpu />
               +1 302 464 0950
         </section>"
         <section className="mb-16"></section>"
@@ -63,7 +68,7 @@ const AIEdgeComputingPage: React.FC = () => {
 // Edge AI Features</h2>"
           < className="grid grid-cols-1,$2 />
   md:grid-cols-2,"
-  lg:grid-cols-4 gap-8"></div>)
+  lg: grid-cols-4 gap-8"></div>)
             {features.map((feature, index) => ()}"
           < key={index} className="cyber-card p-6,"$2 />
   hover:scale-105 transition-all duration-300"></div>"
@@ -71,19 +76,23 @@ const AIEdgeComputingPage: React.FC = () => {
                   <feature.icon className="w-8 h-8 text-white" /></feature>"
                 <h3 className="text-xl font-bold text-white mb-4 text-center neon-text">
                   {feature.title}
+
                 </h3>"
                 <p className="text-gray-300 mb-6 text-center text-sm leading-relaxed">
                   {feature.description}"
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => ()}"
           <li key={benefitIndex} className="flex items-center text-xs text-gray-300"></li>"
-                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                      <CheckCircle />
                       {benefit}
+
                   ))}
+
                 </ul>
       </main>
       <Footer /></Footer>
     </div>
   )
 }
+
 export default PagePage</$1></p>

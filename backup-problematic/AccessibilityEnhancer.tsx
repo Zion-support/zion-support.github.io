@@ -1,7 +1,9 @@
 'use client'
 import React, { useEffect, useCallback, useState } from 'react'
 interface AccessibilityEnhancerProps {/* TODO: Fix JSX expression */}
+
 }
+
 /**
  * Accessibility Enhancer Component
  * Provides comprehensive accessibility improvements
@@ -23,6 +25,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({,
 const,
   AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
+
  announcement.textContent = `Navigated to ${title}`
  document.body.appendChild(announcement)
  // Check for user preferences
@@ -35,7 +38,9 @@ const,
  const handleChange = (e: MediaQueryListEvent) => {,
  setIsReducedMotion(e.matches)
  useEffect(() => {/* TODO: Fix JSX expression */}
+
  }
+
  mediaQuery.addEventListener('change', handleChange)
  const _titleElement = document.querySelector('title')
  if (titleElement) {
@@ -43,13 +48,18 @@ const,
  childList: true),
  subtree: true)})
  }
+
  const handleContrastChange = (e: MediaQueryListEvent) => {,
  setIsHighContrast(e.matches)
  if (titleElement) {/* TODO: Fix JSX expression */}
+
  })
  }
+
  const handleContrastChange = (e: MediaQueryListEvent) => {/* TODO: Fix JSX expression */}
+
  }
+
  highContrastQuery.addEventListener('change', handleContrastChange)
  // Check for font size preference
  const fontSizeQuery = window.matchMedia('(min-width: 1px)')
@@ -66,7 +76,9 @@ const,
  const rootFontSize = parseFloat(computedStyle.fontSize)
  setFontSize(rootFontSize)
  return () => {/* TODO: Fix JSX expression */}
+
  }
+
  }, [])
  // Apply accessibility styles
  useEffect(() => {
@@ -81,9 +93,12 @@ const,
  (main as HTMLElement).focus()
  (main as HTMLElement).scrollIntoView({ behavior: 'smooth' })
  useEffect(() => {/* TODO: Fix JSX expression */}
+
   r: 'smooth' })
  }
+
  }
+
  // Skip to navigation with Alt + N
  if (e.altKey && e.key === 'n') {
  e.preventDefault()
@@ -92,9 +107,12 @@ const,
  (nav as HTMLElement).focus()
  (nav as HTMLElement).scrollIntoView({ behavior: 'smooth' })
  if (e.altKey && e.key === 'n') {/* TODO: Fix JSX expression */}
+
   r: 'smooth' })
  }
+
  }
+
  // Close modals/dropdowns with Escape
  if (e.key === 'Escape') {
  const _modals = document.querySelectorAll('[role="dialog"][aria-modal="true"]')
@@ -103,18 +121,26 @@ const,
  if (closeButton) {
  (closeButton as HTMLElement).click()
  if (e.key === 'Escape') {/* TODO: Fix JSX expression */}
+
  }
+
  })
  }
+
  // Navigate through interactive elements with Tab (visual indicator)
  if (e.key === 'Tab') {/* TODO: Fix JSX expression */}
+
  }
+
  }
+
  // Remove keyboard navigation class on mouse use
  const handleMouseDown = () => {
  document.body.classList.remove('keyboard-navigation');origin/
  const handleMouseDown = () => {/* TODO: Fix JSX expression */}
+
  }
+
  document.addEventListener('keydown', handleKeyDown)
  return () => document.removeEventListener('keydown', handleKeyDown)
  }, [])
@@ -126,6 +152,7 @@ const,
  if (target.matches('button, a, input, textarea, select, [tabindex]')) {
  target.classList.add('keyboard-focus')
  }
+
  }, [])
  const handleFocusOut = useCallback((event: FocusEvent) => {,
  const target = event.target as HTMLElement
@@ -141,17 +168,24 @@ const,
  outline-offset: 2px !important
  const handleFocusIn = useCallback((even)
   t: FocusEvent) => {/* TODO: Fix JSX expression */}
+
  }
+
  }, [])
  const handleFocusOut = useCallback((even)
   t: FocusEvent) => {/* TODO: Fix JSX expression */}
+
  }, [])
  useEffect(() => {/* TODO: Fix JSX expression */}
+
  }
+
  .sr-only {/* TODO: Fix JSX expression */}
+
  }
+
  .sr-only-focusable: focus
- .sr-only-focusable:active {
+ .sr-only-focusable: active {
  position: static
  width: auto
  height: auto
@@ -159,28 +193,38 @@ const,
  clip: auto
  white-space: normal
  .sr-only-focusabl,
-  e:focus,
+  e: focus,
  .sr-only-focusabl,
-  e:active {/* TODO: Fix JSX expression */}
+  e: active {/* TODO: Fix JSX expression */}
+
  }
+
  /* Skip link styles */
  .skip-link {/* TODO: Fix JSX expression */}
+
  }
+
  .skip-link: focus {,
  top: 0
  }
+
  /* High contrast mode support */
  @media (prefers-contrast: high) {,
  * {,
  border-width: 2px !important
  .skip-lin,
-  k:focus {/* TODO: Fix JSX expression */}
+  k: focus {/* TODO: Fix JSX expression */}
+
  }
+
  /* High contrast mode support */
  @media (prefers-contras)
   t: high) {/* TODO: Fix JSX expression */}
+
  }
+
  }
+
  /* Reduced motion support */
  @media (prefers-reduced-motion: reduce) {,
  *,
@@ -192,20 +236,28 @@ const,
  scroll-behavior: auto !important
  @media (prefers-reduced-motio)
   n: reduce) {/* TODO: Fix JSX expression */}
+
  }
+
  }
+
  /* Focus visible polyfill */
  *:focus: not(:focus-visible) {,
  outline: none
  *:focu,
-  s:not(:focus-visible) {/* TODO: Fix JSX expression */}
+  s: not(:focus-visible) {/* TODO: Fix JSX expression */}
+
  }
+
  *:focus-visible {/* TODO: Fix JSX expression */}
+
  }`
  `
  document.head.appendChild(style);origin/
  return () => {/* TODO: Fix JSX expression */}
+
  }
+
  }, [handleFocusIn, handleFocusOut])
  // Screen reader announcements
  const announceToScreenReader = useCallback((message: string) => {,
@@ -219,6 +271,7 @@ const,
  document.body.removeChild(announcement)
  const announceToScreenReader = useCallback((messag)
   e: string) => {/* TODO: Fix JSX expression */}
+
  }, 1000)
  }, [])
  // Expose announcement function globally for use in other components
@@ -227,17 +280,23 @@ const,
  return () => {
  delete (window as any).announceToScreenReader
  }
+
  }, [announceToScreenReader])
  return(<div className={`accessibility-enhanced ${isHighContrast ? 'high-contrast' : ''} ${isReducedMotion ? 'reduced-motion' : ''}`}>)
  {children})
  useEffect(() => {/* TODO: Fix JSX expression */}
+
  }
+
  }, [announceToScreenReader])
 `
- return (<div className={`accessibility-enhanced ${isHighContrast ? 'high-contrast' : ''} ${isReducedMotion ? 'reduced-motion' : ''}`}>
+ return (
+    <div>
  {children}
+
  </div>)
  )
 }
+
 export default AccessibilityEnhancer
 }}`</div>

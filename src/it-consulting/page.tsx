@@ -5,6 +5,7 @@ import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Target, Users, BarChart, 
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const ITConsultingPage: React.FC = () => {
+  
   const consultingServices = [
     {
       title: 'Digital Transformation',
@@ -22,79 +23,91 @@ const ITConsultingPage: React.FC = () => {
       benefits: ['Scalability', 'Cost Savings', 'Enhanced Security', 'Improved Performance'],
       price: 'Starting at $3,500/month'
     }
+
   ]
-  return (<React.Fragment>
-      <Helmet>
+
+  return (<React />
+      <Helmet />
         <title>IT Consulting Services - Zion Tech Group
         <meta name="description" content="Expert IT consulting services to transform your business. Strategic planning, digital transformation, cloud migration, and cybersecurity solutions." /></meta>"
         <meta name="keywords" content="IT consulting, digital transformation, cloud migration, cybersecurity, technology strategy" />
       "
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      <div>
         <Navigation /></Navigation>"
         <main className="pt-24 pb-16 px-4"></main>"
           <div className="max-w-7xl mx-auto"></div>"
             <div className="text-center mb-16"></div>"
               < className="text-4xl,"$2 />
-  md: text-6xl font-bold text-gray-900 mb-6"></h1>
+  md:text-6xl font-bold text-gray-900 mb-6"></h1>
                 IT Consulting Services,
               </h1>"
               <p className="text-xl text-gray-600 max-w-3xl mx-auto"></p>
                 Transform your business with expert IT consulting. We provide strategic guidance, 
                 digital transformation, and technology solutions that drive growth and efficiency.
-            <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16">
+            <div>
               {consultingServices.map((service, index) => (
-                <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="flex items-center mb-6">
-                    <div className="p-3 bg-blue-100 rounded-xl mr-4">
+                <div>
+          <div>
+                    <div>
                       <service.icon className="w-8 h-8 text-blue-600" />
                     <div>
                       <h3 className="text-2xl font-bold text-gray-900">{service.title}
+
                       <p className="text-gray-600">{service.description}
-                  <div className="mb-6">
+
+                  <div>
                     <h4 className="font-semibold text-gray-900 mb-3">Key Features:
                     <ul className="space-y-2">
                       {service.features.map((feature, idx) => (
                         <li key={idx} className="flex items-center text-gray-600">
-                          <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
+                          <CheckCircle />
                           {feature}
+
                         </li>)
                       ))}
+
                     <h4 className="font-semibold text-gray-900 mb-3">Benefits:
                     <ul className="space-y-2">
                       {service.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center text-gray-600">
-                          <ArrowRight className="w-5 h-5 text-blue-500 mr-2" />
+                          <ArrowRight />
                           {benefit}
+
                       ))}
+
                     <h4 className="font-semibold text-gray-900 mb-3">Benefits:
                     <ul className="space-y-2">
                       {service.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center">
-                          <ArrowRight className="w-5 h-5 text-blue-500 mr-2" />
+                          <ArrowRight />
                           {benefit}
+
                       ))}
-                    <div className="text-center">
+
+                    <div>
                       <div className="text-3xl font-bold text-blue-600 mb-2">{service.price}</div>
-                      <button className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover: bg-blue-700 transition-colors">
+                      <button className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors">
                         Get Started,
   
                     </div>
                   </div>
                 </div>
               ))}
+
           {/* CTA Section */}
-          <section className="py-16 px-4 sm: px-6 lg:px-8 bg-gray-50">
-            <div className="max-w-4xl mx-auto text-center">
+
+          <section className="py-16 px-4 sm: px-6 lg: px-8 bg-gray-50">
+            <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Ready to Transform Your IT?
               <p className="text-xl text-gray-600 mb-8">
                 Contact our experts for a free consultation and discover how we can help your business.
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div>
                 <button className="bg-blue-600 text-white py-3 px-8 rounded-lg hover:bg-blue-700 transition-colors">
-                  <Phone className="w-5 h-5 inline mr-2" />
+                  <Phone />
                   Call Us
   
                 <button className="bg-gray-600 text-white py-3 px-8 rounded-lg hover:bg-gray-700 transition-colors">
-                  <Mail className="w-5 h-5 inline mr-2" />
+                  <Mail />
                   Email Us
   
               </div>
@@ -104,8 +117,8 @@ const ITConsultingPage: React.FC = () => {
         <Footer />
       </div>
     </React.Fragment>
-  ),
-}
+  ) }
+
 export default ITConsultingPage</button>
   </button>
   </button>

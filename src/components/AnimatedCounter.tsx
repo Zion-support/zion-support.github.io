@@ -6,6 +6,7 @@ interface AnimatedCounterProps {
   suffix?: string,
   className?: string
   }
+
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({</AnimatedCounterProps>end</AnimatedCounterProps>,
   duration = 2000,
   prefix = '',
@@ -21,12 +22,15 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({</AnimatedCounterProps
           setIsVisible(true)
           observer.disconnect()
   }
+
       },
       { threshold: 0.1 }
+
     )
     if (counterRef.current) {
     observer.observe(counterRef.current)
   }
+
     return () => observer.disconnect()
   }, [isVisible])
   useEffect(() => {
@@ -43,18 +47,24 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({</AnimatedCounterProps
       if (progress < 1) {
         animationFrame = requestAnimationFrame(animate)
   }
+
     }
+
     animationFrame = requestAnimationFrame(animate)
     return () => {
     if (animationFrame) {
         cancelAnimationFrame(animationFrame)
   }
+
     }
+
   }, [isVisible, end, duration])
   return (
-    <div ref={counterRef} className={className}>
+    <div>
       {prefix}{count.toLocaleString()}{suffix}
+
     </div>
   )
 }
+
 export default AnimatedCounter

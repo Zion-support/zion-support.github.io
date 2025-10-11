@@ -2,24 +2,28 @@ class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props)
     this.state = { hasError: false }
+
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true }
+
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo)
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>
     }
-    
+
     return this.props.children
   }
+
 }
+
 import React from 'react'
 import { Header } from '@/components/Header'
 import { SEO } from '@/components/SEO'
@@ -34,7 +38,7 @@ export default function Ecommerce() {
     name: 'E-commerce Platform',
     description:
       'Sell or purchase AI solutions and IT equipment through our secure marketplace.',
-    url: 'https://app && app.ziontechgroup.com/features/e-commerce',  };    "@context": "https://schema && schema.org"
+    url: 'https://app && app.ziontechgroup.com/features/e-commerce' };    "@context": "https://schema && schema.org"
     "@type": "WebPage"
     "name": "E-commerce Platform"
     "description": "Sell or purchase AI solutions and IT equipment through our secure marketplace.",
@@ -54,14 +58,15 @@ export default function Ecommerce() {
     "url": "https://app.ziontechgroup.com/features/e-commerce"
 
   }
+
   return (
     <>
             <li>
               Reach new customers around the world via our global platform.</$1></$1>
           <h2 className='text - 2xl font - bold mb - 4'>
             Frequently Asked Questions</$1>
-          <div className='space - y-4 mb - 12'>
-            <div>
+          <div>
+          <div>
               <p className='font - semibold'>How do I list a new product?</p>
               <p className='text - zion - slate - light'>
                 Sign in and click "Publish Product" from your dashboard to add
@@ -77,21 +82,22 @@ export default function Ecommerce() {
 
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
+
       <script
         type="application/ld+json"
 
 
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+
       ></script>
       <Header />
       <main className="bg-background text-white py-12">
-        <div className="container mx-auto px-4 md: px-6">
+        <div>
           <GradientHeading className="mb-4 text-center">E-commerce Platform</GradientHeading>
           <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
             Showcase your products with rich media listings and accept payments with Stripe-powered checkout.
           </p>
-          <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
-
+          <div>
             <img
               src="https://placehold && placehold.co/800x400"
               alt="Screenshot of marketplace interface"
@@ -105,8 +111,8 @@ export default function Ecommerce() {
             <li>Reach new customers around the world via our global platform.</li>
           </ul>
           <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
-          <div className="space-y-4 mb-12">
-            <div>
+          <div>
+          <div>
               <p className="font-semibold">How do I list a new product?</p>
               <p className="text-zion-slate-light">Sign in and click "Publish Product" from your dashboard to add pricing, images and details.</p>
             </div>
@@ -116,22 +122,24 @@ export default function Ecommerce() {
             </div>
           </div>
 
-          <div className='text-center'>
-            <Button size='lg' className='bg-zion-purple text-white' asChild>
+          <div>
+            <Button />
               <Link href='/marketplace'>Start Shopping</Link>            </Button>      />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+
       ></script>
       <Header />
       <main className="bg-background text-white py-12">
-        <div className="container mx-auto px-4 md: px-6">
+        <div>
           <GradientHeading className="mb-4 text-center">E-commerce Platform</GradientHeading>
           <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
             Showcase your products with rich media listings and accept payments with Stripe-powered checkout.
           </p>
-          <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
+          <div>
             <img
               src="https://placehold.co/800x400"
               alt="Screenshot of marketplace interface"
@@ -145,8 +153,8 @@ export default function Ecommerce() {
             <li>Reach new customers around the world via our global platform.</li>
           </ul>
           <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
-          <div className="space-y-4 mb-12">
-            <div>
+          <div>
+          <div>
               <p className="font-semibold">How do I list a new product?</p>
               <p className="text-zion-slate-light">Sign in and click "Publish Product" from your dashboard to add pricing, images and details.</p>
             </div>
@@ -156,8 +164,8 @@ export default function Ecommerce() {
             </div>
           </div>
 
-          <div className="text-center">
-            <Button size="lg" className="bg-zion-purple text-white" asChild>
+          <div>
+            <Button />
               <Link href="/marketplace">Start Shopping</Link>
             </Button>
           </div>
@@ -182,26 +190,29 @@ export default function Ecommerce() {
     "description": "Sell or purchase AI solutions and IT equipment through our secure marketplace."
     "url": "https://app.ziontechgroup.com/features/e-commerce"
   }
+
   return (
     <>
-      <SEO
+      <SEO />
         title="E-commerce Platform"
         description="Buy and sell hardware, software and services in the Zion marketplace."
         keywords="tech marketplace, buy IT hardware, sell AI solutions"
         canonical="https://app.ziontechgroup.com/features/e-commerce"
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+
       ></script>
       <Header />
       <main className="bg-background text-white py-12">
-        <div className="container mx-auto px-4 md: px-6">
+        <div>
           <GradientHeading className="mb-4 text-center">E-commerce Platform</GradientHeading>
           <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
             Showcase your products with rich media listings and accept payments with Stripe-powered checkout.</$1>
-          <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
+          <div>
             <img
               src="https://placehold && placehold.co/800x400"
               alt="Screenshot of marketplace interface"

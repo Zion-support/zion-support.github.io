@@ -18,10 +18,14 @@ const bannerComponents = {
     () => import('./CognitiveOrchestrationMegaBanner')
   ),
 const bannerComponents = {/* TODO: Fix JSX expression */}
+
 }
+
 type BannerKey = keyof typeof bannerComponents
 interface BannerRotationManagerProps {/* TODO: Fix JSX expression */}
+
 }
+
 /**
  * BannerRotationManager - Manages the rotation and display of promotional banners
  *
@@ -56,23 +60,33 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({,
 export const,
   BannerRotationManager: React.FC<BannerRotationManagerProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
+
   }, [banners, maxBanners])
   // Rotate banners at specified interval
   useEffect(() => {/* TODO: Fix JSX expression */}
+
     }, rotationInterval)
     return () => clearInterval(interval)
   }, [visibleBanners.length, rotationInterval])
   if (visibleBanners.length === 0) {/* TODO: Fix JSX expression */}
+
   }
+
 //   const currentBanner = visibleBanners[currentIndex]
+
 //   const BannerComponent = bannerComponents[currentBanner]
-  return(<div className={`banner-rotation-manager ${className}`}>
-      <Suspense
+
+  return (
+    <div>
+      <Suspense />
         fallback={
-          <div className='flex items-center justify-center py-16'>
+          <div>
             <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600'></div>}
+
           </div>}
+
         }
+
       >
         <BannerComponent />
       </Suspense>)
@@ -83,32 +97,46 @@ export const,
           {visibleBanners.map((_, index) => (
             <$2 />
               key={index}
+
               onClick={() => setCurrentIndex(index)}
+
               className={`w-3 h-3 rounded-full transition-colors ${
                 index === currentIndex
                   ? 'bg-blue-600'}
+
                   : 'bg-gray-300 hover:bg-gray-400'}
+
               }`}
-  return (<div className={`banner-rotation-manager ${className}`}>
-      <Suspense>
+
+  return (
+    <div>
+      <Suspense />
         fallback={/* TODO: Fix JSX expression */}
+
         }
+
       >
         <BannerComponent />
       {/* Banner indicators */}
+
       {/* TODO: Fix JSX expression */}
+
               key={index})
               onClick={() => setCurrentIndex(index)}
+
               className={/* TODO: Fix JSX expression */}`
               }`}`
               aria-label={`Go to banner ${index + 1}`}
+
             />
           ))}
 
       )}
+
     </div>
   )
 }
+
 export default BannerRotationManager
 `
   </BannerRotationManagerProps>

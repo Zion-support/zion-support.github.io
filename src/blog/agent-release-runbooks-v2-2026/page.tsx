@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const AgentReleaseRunbooksV22026Page: React.FC = () => {
+  
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div>
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
@@ -14,7 +15,7 @@ const AgentReleaseRunbooksV22026Page: React.FC = () => {
 <p className='text-lg md:text-xl text-white/80 max-w-3xl'>Ship autonomous agents with budgeted actions, KPI
             canaries, approvals and one‑click rollback.
           <div>
-            <div>
+          <div>
               <Calendar />
               <span>Jan 30, 2026
             <div>
@@ -52,7 +53,7 @@ const AgentReleaseRunbooksV22026Page: React.FC = () => {
                 <FileWarning />Prevent Regressions
               <p className='text-white/90'>
 // We implement v2 runbooks in 46 weeks with audits and training.
-            <Link>
+            <Link />
               href='/contact'
               className='bg-white text-fuchsia-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2'
 // >
@@ -61,4 +62,5 @@ const AgentReleaseRunbooksV22026Page: React.FC = () => {
       </section>)
     </main>)
 }
+
 export default AgentReleaseRunbooksV22026Page</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></Link></p></p></p></h1></h2></h3></h3></ol></li></li></li></li></section></section></section>

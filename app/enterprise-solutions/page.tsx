@@ -1,28 +1,30 @@
 'use client';
 
 
-const EnterpriseSolutionsPage: React.FC = () => {const features = [
+const EnterpriseSolutionsPage: React.FC = () => {
+  const features = [
     {
-      ico, n: Wifi,
+      icon: Wifi,
       title: 'Feature 1',
       description: 'Description for feature 1.',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
-    {icon: BarChart,
+    { icon: BarChart,
       title: 'Feature 2', 
       description: 'Description for feature 2.',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
-    {icon: TrendingUp,
+    { icon: TrendingUp,
       title: 'Performance Optimization',
       description: 'AI-powered insights to optimize your business performance.',
       benefits: ['Predictive analytics', 'Trend analysis', 'Performance metrics', 'Growth forecasting']} ,
-    {icon: PieChart,
+    { icon: PieChart,
       title: 'Data Visualization',
       description: 'Transform complex data into clear, actionable insights.',
       benefits: ['Interactive charts', 'Custom reports', 'Data export', 'Visual storytelling']} ,
-    {icon: Target,
+    { icon: Target,
       title: 'Precision Targeting',
       description: 'Target specific goals and objectives with precision.',
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']} ]
+
   const benefits = [
     'Increase efficiency by up to 80%',
     'Reduce costs by 30% with automation',
@@ -31,11 +33,10 @@ const EnterpriseSolutionsPage: React.FC = () => {const features = [
     'Real-time processing and analysis',
     'Seamless integration with existing systems'
   ]
+
   return (
     <>
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
-      <Navigation />
-      
+<div>
             </div>
       
       <Footer />
@@ -55,6 +56,7 @@ const EnterpriseSolutionsPage: React.FC = () => {const features = [
       <Footer />
     </>
               ))}
+
             </div>
       
       <Footer />
@@ -66,11 +68,13 @@ const EnterpriseSolutionsPage: React.FC = () => {const features = [
         </section>
 
         {/* Benefits Section */}
+
                 </div>
       
       <Footer />
     </>
               ))}
+
             </div>
       
       <Footer />
@@ -82,6 +86,7 @@ const EnterpriseSolutionsPage: React.FC = () => {const features = [
         </section>
 
         {/* CTA Section */}
+
               </button>
             </div>
       

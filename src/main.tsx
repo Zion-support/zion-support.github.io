@@ -14,6 +14,7 @@ import { measureWebVitals } from './utils/performanceMonitor'
 if (typeof window !== 'undefined') {
   measureWebVitals()
 }
+
 // Register service worker
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
@@ -23,6 +24,7 @@ if ('serviceWorker' in navigator) {
         if (process.env.NODE_ENV === 'development') {
           console.log('SW registered: ', registration)
         }
+
         // Handle updates
         registration.addEventListener('updatefound', () => {
           const newWorker = registration.installing
@@ -33,9 +35,12 @@ if ('serviceWorker' in navigator) {
                 if (confirm('New version available! Refresh to update?')) {
                   window.location.reload()
                 }
+
               }
+
             })
           }
+
         })
       })
       .catch((registrationError) => {
@@ -43,13 +48,15 @@ if ('serviceWorker' in navigator) {
         if (process.env.NODE_ENV === 'development') {
           console.log('SW registration failed: ', registrationError)
         }
+
       })
   })
 }
+
 const root = document.getElementById('root')
 if (root) {
   ReactDOM.createRoot(root).render(
-    <React.StrictMode>
+    <React />
       <HomePage />
     </React.StrictMode>
   )

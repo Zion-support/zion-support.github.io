@@ -6,25 +6,35 @@ interface OptimizedLoadingSpinnerProps {
   className?: string
 'use client'
 interface OptimizedLoadingSpinnerProps {/* TODO: Fix JSX expression */}
-  O: Add content,}
+
+  O: Add content }
+
 }
+
   size?: 'sm' | 'md' | 'lg'
   color?: 'primary' | 'secondary' | 'white'
   className?: string
 }
+
 const,
   OptimizedLoadingSpinner: React.FC,
           <OptimizedLoadingSpinnerProps> = memo()
   ({ size = 'md', color = 'primary', className = '' }) => {/* TODO: Fix JSX expression */}
+
   m: 'w-4 h-4'}
+
       m,
   d: 'w-8 h-8',
       l,
   g: 'w-12 h-12'
     }
+
     const colorClasses = {/* TODO: Fix JSX expression */}
-  O: Add content,}
+
+  O: Add content }
+
 }
+
   primar,
   y: 'text-cyan-400',
       secondar,
@@ -32,10 +42,12 @@ const,
       whit,
   e: 'text-white'
     }
+
     return (<div>Coming Soon</div>)
   )
           <div>
 className={`${sizeClasses[size]} ${colorClasses[color]} ${className}`}
+
         role="status""
         aria-label="Loading"
 // >
@@ -61,8 +73,8 @@ className="opacity-75""
 // />
           </svg>
       </div>
-    ),
-  }
+    ) }
+
 )
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner'
 export default OptimizedLoadingSpinner
@@ -72,14 +84,17 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
       md: 'w-8 h-8',
       lg:     ,
 $4}
+
     const colorClasses = {
       primary: 'text-cyan-400',
       secondary: 'text-purple-400',
       white:     ,
 $4}
+
     return (
       <$2 />
         className={`${sizeClasses[size]} ${colorClasses[color]} ${className}`}
+
         role="status"
         aria-label="Loading"
       >
@@ -104,8 +119,8 @@ $4}
           />
         </svg>
       </div>
-    ),
-  }
+    ) }
+
 )
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner'
 export default OptimizedLoadingSpinner</div></p></a>

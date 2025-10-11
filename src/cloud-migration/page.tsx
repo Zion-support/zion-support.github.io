@@ -6,64 +6,68 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const,
   CloudMigrationPage: React.FC = () => {/* TODO: Fix JSX expression */}
+
     },
-      ico,
-  n: Database,
+      icon: Database,
       titl,
   e: 'Data Migration',
       descriptio,
   n: 'Secure and efficient migration of databases and data warehouses',
       benefit,
   s: ['Data validation', 'Incremental sync', 'Backup & recovery']
-      ico,
-  n: Server,
+
+      icon: Server,
       titl,
   e: 'Infrastructure Setup',
       descriptio,
   n: 'Complete cloud infrastructure setup and configuration',
       benefit,
   s: ['Auto-scaling', 'Load balancing', 'Security configuration']
+
       titl,
   e: 'Seamless Cloud Migration',
       descriptio,
   n: 'Migrate your applications and data to the cloud with zero downtime and minimal disruption.',
       benefit,
   s: ['Zero-downtime migration', 'Data integrity assurance', 'Automated migration tools', 'Rollback capabilities']
-      ico,
-  n: Shield,
+
+      icon: Shield,
       titl,
   e: 'Security First',
       descriptio,
   n: 'Enterprise-grade security throughout the migration process',
       benefit,
   s: ['Data encryption', 'Access controls', 'Compliance']
-      ico,
-  n: Zap,
+
+      icon: Zap,
       titl,
   e: 'Performance Optimization',
       descriptio,
   n: 'Optimize your cloud infrastructure for maximum performance and cost efficiency.',
       benefit,
   s: ['Auto-scaling', 'Load balancing', 'Performance monitoring', 'Cost optimization']
-      ico,
-  n: Target,
+
+      icon: Target,
       titl,
   e: 'Multi-Cloud Strategy',
       descriptio,
   n: 'Design and implement multi-cloud architectures for maximum flexibility and redundancy.',
       benefit,
   s: ['Vendor independence', 'Disaster recovery', 'Cost optimization', 'Flexibility']
+
     }
+
   ]
+
   const migrationSteps = [
       titl,
   e: 'Assessment & Planning',
       descriptio,
   n: 'Comprehensive analysis of current infrastructure and migration strategy',
-      ico,
-  n: CheckCircle,
+      icon: CheckCircle,
       feature,
   s: ['Infrastructure audit', 'Cost analysis', 'Migration timeline']
+
       ste,
   p: '2',
       titl,
@@ -76,6 +80,7 @@ const,
   n: 'Post-migration optimization and ongoing support',
       feature,
   s: ['Performance tuning', 'Cost optimization', '24/7 support']
+
       ste,
   p: '01',
       descriptio,
@@ -100,8 +105,7 @@ const,
   p: '04',
       descriptio,
   n: 'Optimize performance and provide ongoing support and monitoring.',
-      ico,
-  n: TrendingUp,
+      icon: TrendingUp,
       duratio,
   n: 'Ongoing'
   const pricingPlans = [
@@ -180,7 +184,8 @@ const,
   n: 'Scale resources up or down based on demand automatically.',
       percentag,
   e: 'Unlimited'
-  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return (
+    <div>
       {/* Header */}"
       <div className="relative overflow-hidden"></div>"
         <div className="cyber-grid"></div>"
@@ -188,7 +193,7 @@ const,
           <div className="text-center max-w-4xl mx-auto"></div>"
             <div className="flex items-center justify-center mb-6"></div>"
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mr-4"></div>"
-                <Cloud className="w-8 h-8 text-white" />
+                <Cloud />
               </div>"
               <h1 className="text-5xl font-bold text-white neon-text">
                 Cloud Migration</$1>"
@@ -202,7 +207,7 @@ const,
                 href="/contact""
                 className="cyber-button inline-flex items-center justify-center px-8 py-4 text-lg font-semibold">
                 Start Migration;"
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight />
               </Link>"
                 href="/demo""
                 className="cyber-button-outline inline-flex items-center justify-center px-8 py-4 text-lg font-semibold"
@@ -228,26 +233,26 @@ const,
                 <ul className="space-y-2">
                   {/* TODO: Fix JSX expression */}"
                     <li key={benefitIndex} className="flex items-center text-sm text-gray-400"></li>"
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                      <CheckCircle />
       <Navigation /></Navigation>"
       <main className="pt-24 pb-16 px-4"></main>"
-        <div className="max-w-7xl mx-auto">
+        <div>
           {/* Hero Section */}"
           <section className="text-center mb-16"></section>"
             < className="text-4xl,$2 />
-  sm:text-5xl,"
-  md: text-6xl font-bold text-white mb-6"></h1>
+  sm: text-5xl,"
+  md:text-6xl font-bold text-white mb-6"></h1>
               Cloud Migration Services;"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
               Seamlessly migrate your applications and data to the cloud with our expert migration services,
               <a></a>"
                 className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold,"
-  hover: bg-blue-700 transition-colors inline-flex items-center"
+  hover:bg-blue-700 transition-colors inline-flex items-center"
                 Get Started,
               </a>"
                 className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold,
   hover:bg-blue-600,"
-  hover: text-white transition-all duration-300 inline-flex items-center"
+  hover:text-white transition-all duration-300 inline-flex items-center"
                 View Demo
           </section>
 "
@@ -257,33 +262,38 @@ const,
             </h2>"
             < className="grid grid-cols-1,$2 />
   md:grid-cols-2,"
-  lg:grid-cols-3 gap-8"></div>"
+  lg: grid-cols-3 gap-8"></div>"
                 < key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6,"$2 />
   hover:bg-white/20 transition-all duration-300"></div>"
                   <div className="flex items-center mb-4"></div>"
                     <feature.icon className="w-8 h-8 text-blue-400 mr-3" /></feature>"
                     <h3 className="text-xl font-semibold text-white">{feature.title}</h3>"
                   <p className="text-gray-300 mb-4">{feature.description}
+
                     {/* TODO: Fix JSX expression */}"
                       <li key={idx} className="flex items-center text-gray-300">
                         {benefit}
+
                       </li>)
                     ))}
+
                   </ul>"
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>"
                     <li key={idx} className="flex items-center text-sm text-gray-400"></li>"
-                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
+                      <CheckCircle />
           {/* Migration Process */}
+
               Our Migration Process;"
             < className="grid grid-cols-1,$2 />
   md:grid-cols-2,"
-  lg:grid-cols-4 gap-8">
+  lg: grid-cols-4 gap-8">
               {/* TODO: Fix JSX expression */}"
                 <div key={index} className="text-center"></div>"
-                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">
+                  <div>
                     {step.step}"
                   <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>"
                   <p className="text-gray-300">{step.description}
+
           {/* CTA Section */}"
           <section className="text-center"></section>"
             <h2 className="text-3xl font-bold text-white mb-6">
@@ -295,9 +305,11 @@ const,
                   <step.icon className="w-8 h-8 text-blue-400 mr-3" /></step>"
                   <h3 className="text-xl font-bold text-white">{step.title}</h3>"
                 <p className="text-gray-300 mb-6">{step.description}
+
                   {/* TODO: Fix JSX expression */}"
                     <li key={featureIndex} className="flex items-center text-sm text-gray-400">
                       {feature}
+
       {/* Migration Process Section */}"
       <section className="py-16 px-4 bg-slate-800/50"></section>"
             <h2 className="text-4xl font-bold text-white mb-4">Our Migration Process</h2>"
@@ -312,6 +324,7 @@ const,
                 <p className="text-gray-300 mb-4">{step.description}</p>"
                 <div className="text-cyan-400 font-semibold">Duratio,
   n: {step.duration}
+
       {/* Benefits Section */}"
           < className="grid grid-cols-1,"$2 />
   lg: grid-cols-2 gap-12 items-center"></div>
@@ -359,16 +372,19 @@ const,
                 <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>"
                 <p className="text-gray-300 mb-4">{benefit.description}</p>"
                 <div className="text-3xl font-bold text-cyan-400">{benefit.percentage}
+
       {/* Pricing Section */}"
             <h2 className="text-4xl font-bold text-white mb-4">Transparent Migration Pricing</h2>"
             <p className="text-xl text-gray-300">Choose the migration package that fits your needs
             {/* TODO: Fix JSX expression */}
-              <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-500' : ''}`}>
+
+              <div>
                 {/* TODO: Fix JSX expression */}
+
                 )}"
                 <div className="text-center mb-6"></div>"
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>"
-                  <div className="text-4xl font-bold text-cyan-400 mb-2">
+                  <div>
                     {plan.price}"
                     <span className="text-lg text-gray-400"> {plan.period}</span>"
                   <p className="text-gray-300">{plan.description}</p>"
@@ -389,10 +405,10 @@ const,
         <h1 className="text-4xl font-bold text-white mb-4">Cloud Migration</h1>"
         <p className="text-gray-300 mb-8">Coming Soon - Seamless cloud migration services</p>"
         < href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg,"$2 />
-  hover: bg-cyan-600 transition-colors"></a>
+  hover:bg-cyan-600 transition-colors"></a>
           Contact Us
-  ),
-}
+  ) }
+
 export default CloudMigrationPage
 "`
 </div></div></button></p></p></p></p></p></p></p></p></p></p></p></h1></h2></h2></h2></h2></ul></li>

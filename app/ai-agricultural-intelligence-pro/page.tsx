@@ -1,156 +1,301 @@
 'use client'
-import React from 'react';
-import {Helmet;} from 'react-helmet-async'
-    },
-    {;,
-icon: BarChart,;,
-title: 'Advanced Analytics',} ]
+import React from 'react'
+import {Helmet} from 'react-helmet-async'
+import {BarChart, CheckCircle, Brain, Target, TrendingUp, FileText, Zap, Shield, ArrowRight, PieChart} from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
-const benefits = [
+const AIAgriculturalIntelligenceProPage: React.FC = () => {
+  
+  const features = [
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive data analysis and insights for agricultural decision-making.',
+      benefits: ['Real-time monitoring', 'Predictive analytics', 'Yield optimization', 'Resource management']
+
+    },
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Machine learning algorithms that learn and adapt to your specific agricultural needs.',
+      benefits: ['Smart recommendations', 'Automated decision making', 'Pattern recognition', 'Continuous learning']
+
+    },
+    {
+      icon: Target,
+      title: 'Precision Agriculture',
+      description: 'Optimize every aspect of your farming operations with precision technology.',
+      benefits: ['GPS-guided farming', 'Variable rate application', 'Soil analysis', 'Crop monitoring']
+
+    },
+    {
+      icon: Shield,
+      title: 'Risk Management',
+      description: 'Advanced risk assessment and mitigation strategies for agricultural operations.',
+      benefits: ['Weather prediction', 'Disease detection', 'Market analysis', 'Insurance optimization']
+
+    },
+    {
+      icon: Zap,
+      title: 'Automation',
+      description: 'Streamline operations with intelligent automation and robotics.',
+      benefits: ['Automated irrigation', 'Robotic harvesting', 'Smart sensors', 'Remote monitoring']
+
+    },
+    {
+      icon: PieChart,
+      title: 'Performance Tracking',
+      description: 'Monitor and track performance metrics across all agricultural activities.',
+      benefits: ['KPI monitoring', 'Cost analysis', 'Efficiency metrics', 'ROI tracking']
+
+    }
+
   ]
 
-return (
+  const useCases = [
+    {
+      title: 'Crop Monitoring',
+      description: 'Real-time monitoring of crop health and growth patterns.',
+      icon: Target,
+      benefits: ['Disease detection', 'Growth tracking', 'Yield prediction', 'Quality assessment']
+
+    },
+    {
+      title: 'Soil Analysis',
+      description: 'Comprehensive soil health analysis and recommendations.',
+      icon: CheckCircle,
+      benefits: ['Nutrient analysis', 'pH monitoring', 'Moisture levels', 'Fertilizer recommendations']
+
+    },
+    {
+      title: 'Weather Prediction',
+      description: 'Advanced weather forecasting for agricultural planning.',
+      icon: Brain,
+      benefits: ['Rainfall prediction', 'Temperature forecasting', 'Storm warnings', 'Seasonal planning']
+
+    },
+    {
+      title: 'Market Intelligence',
+      description: 'Market analysis and pricing insights for better decision making.',
+      icon: PieChart,
+      benefits: ['Price forecasting', 'Market trends', 'Demand analysis', 'Competitive intelligence']
+
+    }
+
+  ]
+
+  const values = [
+    {
+      step: '01',
+      title: 'Assessment',
+      description: 'Comprehensive analysis of your current agricultural operations and requirements.',
+      details: ['Farm evaluation', 'Technology audit', 'Data collection', 'Goal setting']
+
+    },
+    {
+      step: '02',
+      title: 'Customization',
+      description: 'Tailored AI solutions designed specifically for your agricultural needs.',
+      details: ['Algorithm development', 'System integration', 'Custom training', 'Testing and validation']
+
+    },
+    {
+      step: '03',
+      title: 'Implementation',
+      description: 'Professional deployment and configuration of AI systems.',
+      details: ['System installation', 'Data migration', 'User training', 'Performance optimization']
+
+    },
+    {
+      step: '04',
+      title: 'Support',
+      description: 'Ongoing support and optimization for maximum performance.',
+      details: ['24/7 monitoring', 'Regular updates', 'Performance tuning', 'Continuous improvement']
+
+    }
+
+  ]
+
+  return (
     <>
-      <Helmet>
-        <title>AI Analytics - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
-        <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
-      </Helmet>
-      <Navigation />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
+      <Helmet />
         <title>AI Agricultural Intelligence Pro - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered agricultural intelligence solutions for modern farming operations." />
+        <meta name="description" content="Advanced AI-powered agricultural intelligence solutions for precision farming, crop monitoring, and yield optimization." />
+        <meta name="keywords" content="AI agriculture, precision farming, crop monitoring, agricultural intelligence, smart farming, yield optimization" />
       </Helmet>
       
       <Navigation />
-      
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4">
-          <div className="container mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              AI Agricultural <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">Intelligence Pro</span>
+
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div>
+          <div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AI Agricultural <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Intelligence Pro</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your farming operations with advanced AI-powered agricultural intelligence solutions.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your agricultural operations with advanced AI-powered intelligence solutions for precision farming, crop monitoring, and yield optimization.
             </p>
+            <div>
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started
+                <ArrowRight />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Schedule Demo
+              </button>
+            </div>
           </div>
-      
-      <Footer />
-    </>
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Advanced Features</h2>
+
+        <section className="py-16 px-4 sm: px-6 lg: px-8">
+          <div>
+          <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Key Features
+              </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive AI solutions for modern agriculture
+                Unlock the full potential of AI in agriculture with our comprehensive intelligence platform.
               </p>
             </div>
-      
-      <Footer />
-    </>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+            <div>
               {features.map((feature, index) => {
-                const Icon = feature.icon
+                const Icon = feature.icon;
                 return (
-                  <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-green-400/50 transition-all duration-300">
-                    <div className="text-green-400 mb-4">
-                      <Icon className="w-8 h-8" />
+    <div>
+          <div>
+                      <Icon />
                     </div>
-      
-      <Footer />
-    </>
                     <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                     <p className="text-gray-300 mb-4">{feature.description}</p>
                     <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      {feature.benefits.map((benefit, benefitIndex) => (
+                        <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                          <CheckCircle />
                           {benefit}
+
                         </li>
                       ))}
+
                     </ul>
                   </div>
-      
-      <Footer />
-    </>
                 );
               })}
+
             </div>
-      
-      <Footer />
-    </>
           </div>
-      
-      <Footer />
-    </>
         </section>
 
-        {/* Benefits Section */}
-        <section className="py-20 px-4 bg-slate-800/50">
-          <div className="container mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Why Choose Our Solution</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Proven benefits for agricultural operations
+        {/* Use Cases Section */}
+
+        <section className="py-20 px-4">
+          <div>
+          <div>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Use Cases
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                Discover how AI can revolutionize your agricultural operations
               </p>
             </div>
-      
-      <Footer />
-    </>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-center space-x-3">
-                  <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
-                  <span className="text-gray-300 text-lg">{benefit}</span>
-                </div>
-      
-      <Footer />
-    </>
-              ))}
+
+            <div>
+              {useCases.map((useCase, index) => {
+                const Icon = useCase.icon;
+                return (
+    <div>
+          <div>
+                      <Icon />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-4">{useCase.title}</h3>
+                    <p className="text-gray-300 mb-4">{useCase.description}</p>
+                    <ul className="space-y-2">
+                      {useCase.benefits.map((benefit, benefitIndex) => (
+                        <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                          <CheckCircle />
+                          {benefit}
+
+                        </li>
+                      ))}
+
+                    </ul>
+                  </div>
+                );
+              })}
+
             </div>
-      
-      <Footer />
-    </>
           </div>
-      
-      <Footer />
-    </>
+        </section>
+
+        {/* Implementation Process Section */}
+
+        <section className="py-20 px-4 sm: px-6 lg: px-8 bg-slate-800/50">
+          <div>
+          <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Implementation Process
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                Our proven methodology for successful AI implementation in agriculture
+              </p>
+            </div>
+
+            <div>
+              {values.map((value, index) => (
+                <div>
+          <div>
+                    <span className="text-2xl font-bold text-white">{value.step}</span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-4">{value.title}</h3>
+                  <p className="text-gray-300 mb-4">{value.description}</p>
+                  <ul className="space-y-2">
+                    {value.details.map((detail, detailIndex) => (
+                      <li key={detailIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle />
+                        {detail}
+
+                      </li>
+                    ))}
+
+                  </ul>
+                </div>
+              ))}
+
+            </div>
+          </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Ready to Transform Your Agriculture?</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Get started with our AI agricultural intelligence platform today.
+
+        <section className="py-16 px-4 sm: px-6 lg: px-8">
+          <div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Agriculture?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let's discuss how AI can revolutionize your agricultural operations and maximize your yields.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-green-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
-                Start Free Trial
-                <ArrowRight className="ml-2 w-5 h-5" />
+            <div>
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
+                Get Started Today
+                <ArrowRight />
               </button>
-              <button className="border border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-400 hover:text-white transition-all duration-300">
-                Learn More
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+                Schedule Demo
               </button>
             </div>
-      
-      <Footer />
-    </>
           </div>
-      
-      <Footer />
-    </>
         </section>
       </main>
       
       <Footer />
     </>
-  )
-}
-    </Helmet>
+  );
+};
+
+export default AIAgriculturalIntelligenceProPage;

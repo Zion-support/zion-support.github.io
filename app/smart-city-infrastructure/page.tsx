@@ -1,14 +1,13 @@
 'use client'
 import React from 'react'
-      <Helmet>
+      <Helmet />
         <title>AI Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered analytics solutions for data-driven insights" />
         <meta name="keywords" content="AI analytics, data analysis, machine learning, business intelligence" />
       </Helmet>
       <Navigation />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
+      <div>
+      <Helmet />
         <title>Page Title - Zion Tech Group</title>
         <meta name="description" content="Description of the page and its benefits."
         <meta name="keywords" content="relevant, keywords, for, seo"
@@ -18,7 +17,7 @@ import React from 'react'
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Description of the page and its benefits for your business.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div>
                 <button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                   Get Started
                 </button>
@@ -54,7 +53,7 @@ import React from 'react'
               </p>
               <button className="cyber-button">
                 Learn More
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight />
               </button>
             </div>
       
@@ -65,6 +64,7 @@ import React from 'react'
       <Footer />
     </>
               ))}
+
             </div>
       
       <Footer />
@@ -76,10 +76,12 @@ import React from 'react'
         </section>
 
         {/* Benefits Section */}
+
         <section></section>
           <div></div>
             <div>
               ))}
+
             </div>
       
       <Footer />
@@ -126,4 +128,5 @@ import React from 'react'
     </>
   )
 }
+
       </Helmet>

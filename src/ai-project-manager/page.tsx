@@ -7,6 +7,7 @@ import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const AIProjectManagerPage: React.FC = () => {
+  
   const _features = [
 const AiProjectManagerPage: React.FC = () => {
   const features = [
@@ -15,21 +16,27 @@ const AiProjectManagerPage: React.FC = () => {
       title: 'AI-Powered Planning',
       description: 'Intelligent project planning with predictive analytics and resource optimization',
       benefits: ['40% faster planning', '85% accuracy in timelines', 'Smart resource allocation']
+
     },
       icon: Target,
       title: 'Smart Task Management',
       description: 'Automated task assignment and priority management based on AI insights',
       benefits: ['60% productivity increase', 'Real-time prioritization', 'Automated workflows']
+
       icon: TrendingUp,
       title: 'Predictive Analytics',
       description: 'Advanced analytics to predict project outcomes and identify potential risks',
       benefits: ['90% risk reduction', 'Data-driven decisions', 'Proactive problem solving']
+
       icon: Users,
       title: 'Team Collaboration',
       description: 'Enhanced team collaboration with AI-powered communication and coordination',
       benefits: ['Seamless communication', 'Real-time updates', 'Collaborative planning']
+
     }
+
   ]
+
   const pricingPlans = [
       name: 'Starter',
       price: '$99',
@@ -68,19 +75,20 @@ const AiProjectManagerPage: React.FC = () => {
     { icon: TrendingUp, value: '40%', label: 'Productivity Increase' },
     { icon: Clock, value: '70%', label: 'Time Saved' },
     { icon: Star, value: '4.9/5', label: 'User Rating' }
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
+    <div>
+      <Helmet />
         <title>AI Project Manager | Zion Tech Group
         <meta name="description" content="Advanced AI project management solutions by Zion Tech Group." />
       <Navigation />
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
+      <div>
+          <div>
           <h1 className="text-5xl font-bold text-white mb-6">AI Project Manager
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Coming Soon - Advanced AI project management solutions that will transform your business.
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">
+          <div>
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
               Contact Us
   
@@ -88,8 +96,8 @@ const AiProjectManagerPage: React.FC = () => {
               Learn More
   
       <Footer />
-  ),
-}
+  ) }
+
 export default $1
 'use client'
 import React, { useState, useEffect } from 'react'

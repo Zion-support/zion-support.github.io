@@ -13,7 +13,9 @@ availabili, t, y: '24/7',;
 responseTi, m, e: '< 2, minute, s';
 conta, c, t: '+1 (5, 5, 5) 1, 2, 3-45, 6, 7'
 }
+
     }
+
     {;
 ic, o, n: MessageCirc, l, e;
 tit, l, e: 'Live, Cha, t';
@@ -22,6 +24,7 @@ availabili, t, y: '24/7',;
 responseTi, m, e: '< 30, second, s';
 conta, c, t: 'Start, Cha, t'
     }
+
     {;
 ic, o, n: Ma, i, l;
 tit, l, e: 'Email, Suppor, t';
@@ -30,6 +33,7 @@ availabili, t, y: '24/7',;
 responseTi, m, e: '< 2, hour, s';
 conta, c, t: 'suppo, r, t@ziontechgro, u, p.c, o, m'
     }
+
     {;
 ic, o, n: Vid, e, o;
 tit, l, e: 'Video, Cal, l';
@@ -38,45 +42,74 @@ availabili, t, y: 'Business, Hour, s';
 responseTi, m, e: '< 4, hour, s';
 conta, c, t: 'Schedule, Cal, l';
 const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
+
     }
+
     {/* TODO: Fix JSX expression */}
+
     }
+
     {/* TODO: Fix JSX expression */}
+
     }
+
     {/* TODO: Fix JSX expression */}
+
     }
+
   ];
 const, faqCategorie, s = [
     {/* TODO: Fix JSX expression */}
+
     }
+
     {/* TODO: Fix JSX expression */}
+
     }
+
     {/* TODO: Fix JSX expression */}
+
     }
+
     {/* TODO: Fix JSX expression */}
+
     }
+
   ];
 const, faq, s = [
     {/* TODO: Fix JSX expression */}
+
     }
+
     {/* TODO: Fix JSX expression */}
+
     }
+
     {/* TODO: Fix JSX expression */}
+
     }
+
     {/* TODO: Fix JSX expression */}
+
     }
+
     {/* TODO: Fix JSX expression */}
+
     }
+
     {;
 catego, r, y: 'gener, a, l';
 questi, o, n: 'What, is, your response, time, for support, request, s?';
 answ, e, r: 'We, guarantee, response times, based, on your, support, pla;,
 n: Premi, u, m (30, minute, s), Standa, r, d (2, hour, s), Bas, i, c (24, hour, s).'
     }
+
   ];
 const, filteredFaq, s = fa, q, s.filt, e, r(f, a, q => )
     {/* TODO: Fix JSX expression */}
+
     }
+
   ];
 const, filteredFaq, s = fa, q, s.filt, e, r(f, a, q =>;
 selectedCatego, r, y === 'a, l, l' || f, a, q.catego, r, y === selectedCatego, r, y;)
@@ -84,8 +117,8 @@ selectedCatego, r, y === 'a, l, l' || f, a, q.catego, r, y === selectedCatego, r
 f, a, q.questi, o, n.toLowerCa, s, e().includ, e, s(searchQue, r, y.toLowerCa, s, e()) ||;
 f, a, q.answ, e, r.toLowerCa, s, e().includ, e, s(searchQue, r, y.toLowerCa, s, e())
   );
-return(<React.Fragment>
-      <Helmet>
+return(<React />
+      <Helmet />
         <title>Suppo, r, t - Zion, Tech, Group
         <meta name="descripti, o, n" content="Get, help, and support, for, all Zion, Tech, Group servic, e, s. 24/7, technical, support, documentati, o, n, and, expert, assistance."  />
         <meta name="keywor, d, s" content="suppo, r, t, he, l, p, technical, assistanc, e, customer, servic, e, documentati, o, n"  />
@@ -95,121 +128,134 @@ return(<React.Fragment>
         {/* Hero, Sectio, n */})
         <section, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, p, y-20">)
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">),
-            <div, className="te, x, t-cent, e, r">
+            <div>
               <, className="te, x, t-4x, l, m$2 />
-      <div, className="m, i, n-h-screen, b, g-gr, a, y-50">
+      <div>
         {/* Hero, Sectio, n */}
+
         <section, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, p, y-20">
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">
-            <div, className="te, x, t-cent, e, r">
+          <div>
+          <div>
               <, className="te, x, t-4x, l, m$2 />;,
-d:te, x, t-5xl, fon, t-bold, m, b-6">;
+d: te, x, t-5xl, fon, t-bold, m, b-6">;
 return (<React.Fragment>;
-      <Helmet>
+      <Helmet />
         <title>Suppo, r, t - Zion, Tech, Group</title>"
         <meta name="descripti, o, n" content="Get, help, and support, for, all Zion, Tech, Group servic, e, s. 24/7, technical, support, documentati, o, n, and, expert, assistance."  /></meta>"
         <meta name="keywor, d, s" content="suppo, r, t, he, l, p, technical, assistanc, e, customer, servic, e, documentati, o, n"  /></meta>"
         <link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/suppo, r, t"  />
       </Helmet>"
-      <div, className="m, i, n-h-screen, b, g-gr, a, y-50">
+      <div>
         {/* Hero, Sectio, n */}"
         <section, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, p, y-20"></section>"
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8"></div>"
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8"></div>"
             <div, className="te, x, t-cent, e, r"></div>"
               <, className="te, x, t-4x, l, m,"$2 />;,
-d:te, x, t-5xl, fon, t-bold, m, b-6">;
+d: te, x, t-5xl, fon, t-bold, m, b-6">;
 Support, Cente, r</$1>"
               <p, className="te, x, t-xl, m, b-8, ma, x-w-3xl, m, x-au, t, o">;
 Get, help, when you, need, it. Our, expert, support team, is, here 24/7, to, assist you, with, any questions, or, issues.
               {/* Search, Ba, r */}
-              <div, className="m, a, x-w-2xl, m, x-au, t, o">
-                <div, className="relati, v, e">
-                  <Search, className="absolute, lef, t-3, to, p-1/2, transfor, m -transla, t, e-y-1/2, tex, t-gr, a, y-40, 0, h-5 w-5"  />
+
+              <div>
+          <div>
+                  <Search />
                   <inp, u, t;
 ty, p, e="te, x, t";
 placehold, e, r="Search, for, help articl, e, s, FA, Q, s, or, topic, s...";
 val, u, e={searchQue, r, y}
+
                     onChan, g, e={(e) => setSearchQue, r, y(e.targ, e, t.val, u, e)}
-                    classNa, m, e="w-full, p, l-10, p, r-4, p, y-3, rounde, d-lg, tex, t-gr, a, y-900, focu, s: outli, n, e-none, focu, s:ri, n, g-2, foc, u
+
+                    classNa, m, e="w-full, p, l-10, p, r-4, p, y-3, rounde, d-lg, tex, t-gr, a, y-900, focu, s: outli, n, e-none, focu, s: ri, n, g-2, foc, u
               {/* Search, Ba, r */}"
               <div, className="m, a, x-w-2xl, m, x-au, t, o"></div>"
                 <div, className="relati, v, e"></div>"
-                  <Search, className="absolute, lef, t-3, to, p-1/2, transfor, m -transla, t, e-y-1/2, tex, t-gr, a, y-40, 0, h-5 w-5"  />
+                  <Search />
                   <inp, u, t;";
 ty, p, e="te, x, t"";
 placehold, e, r="Search, for, help articl, e, s, FA, Q, s, or, topic, s...";
 val, u, e={searchQue, r, y});
 onChan, g, e={(e) => setSearchQue, r, y(e.targ, e, t.val, u, e)}";
-classNa, m, e="w-full, p, l-10, p, r-4, p, y-3, rounde, d-lg, tex, t-gr, a, y-900, focu, s: outli, n, e-none, focu, s:ri, n, g-2, foc, u,";,
-s:ri, n, g-whi, t, e"
+classNa, m, e="w-full, p, l-10, p, r-4, p, y-3, rounde, d-lg, tex, t-gr, a, y-900, focu, s: outli, n, e-none, focu, s: ri, n, g-2, foc, u,";,
+s: ri, n, g-whi, t, e"
                    />
         {/* Support, Channel, s */}
+
         <section, className="py-20, p, x-4, s, m: px-6, l, g: px-8">,
-          <div, className="m, a, x-w-7xl, m, x-au, t, o">
-            <div, className="te, x, t-center, m, b-16">
-        <section, className="py-20, p, x-4, s, m: px-6, l, g:px-8">
-          <div, className="m, a, x-w-7xl, m, x-au, t, o">
-            <div, className="te, x, t-center, m, b-16">
-              <h2, className="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
+          <div>
+          <div>
+        <section, className="py-20, p, x-4, s, m: px-6, l, g: px-8">
+          <div>
+          <div>
+              <h2, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
         {/* Support, Channel, s */}"
-        <section, className="py-20, p, x-4, s, m: px-6, l, g:px-8"></section>"
+        <section, className="py-20, p, x-4, s, m: px-6, l, g: px-8"></section>"
           <div, className="m, a, x-w-7xl, m, x-au, t, o"></div>"
             <div, className="te, x, t-center, m, b-16"></div>"
-              <h2, className="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">;
+              <h2, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">;
 Get, Suppor, t</$1>"
               <p, className="te, x, t-xl, tex, t-gr, a, y-6, 0, 0">;
 Choose, the, support channel, that, works best, for, you
-            <, className="grid, gri, d-co, l, s-1, m, d:gr, i, d-co, l, s-2 l$2 />;,
-g:gr, i, d-co, l, s-4, ga, p-8">
+            <, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l$2 />;,
+g: gr, i, d-co, l, s-4, ga, p-8">
               {supportChanne, l, s.m, a, p((chann), e, l, ind, e, x) => (
-                <div, ke, y={ind, e, x} classNa, m, e="bg-white, rounde, d-lg, shado, w-l, g, p-6, hove, r:shad, o, w-xl, transitio, n-shad, o, w">
-                  <div, className="te, x, t-cent, e, r">
-                    <div, className="w-1, 6, h-16, b, g-bl, u, e-100, rounde, d-full, flex, items-center, justif, y-center, m, x-auto, m, b-4">
+                <div>
+          <div>
+                    <div>
                       <chann, e, l .icon, className="h-8 w-8, tex, t-bl, u, e-6, 0, 0"  />
                     <h3, className="te, x, t-xl, fon, t-semibold, tex, t-gr, a, y-900, m, b-2">
             </d, i, v>"
-            <, className="grid, gri, d-co, l, s-1, m, d:gr, i, d-co, l, s-2 l,"$2 />;,
-g:gr, i, d-co, l, s-4, ga, p-8">
+            <, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l,"$2 />;,
+g: gr, i, d-co, l, s-4, ga, p-8">
               {/* TODO: Fix JSX expression */}"
-                <div, ke, y={ind, e, x} classNa, m, e="bg-white, rounde, d-lg, shado, w-l, g, p-6, hove, r:shad, o, w-xl, transitio, n-shad, o, w"></div>"
+                <div, ke, y={ind, e, x} classNa, m, e="bg-white, rounde, d-lg, shado, w-l, g, p-6, hove, r: shad, o, w-xl, transitio, n-shad, o, w"></div>"
                   <div, className="te, x, t-cent, e, r"></div>"
                     <div, className="w-1, 6, h-16, b, g-bl, u, e-100, rounde, d-full, flex, items-center, justif, y-center, m, x-auto, m, b-4"></div>"
                       <chann, e, l .icon, className="h-8 w-8, tex, t-bl, u, e-6, 0, 0"  />
                     </d, i, v>"
                     <h3, className="te, x, t-xl, fon, t-semibold, tex, t-gr, a, y-900, m, b-2">
                       {chann, e, l.tit, l, e}
+
                     </h3>"
                     <p, className="te, x, t-gr, a, y-600, m, b-4">
                       {chann, e, l.descripti, o, n}
-                    <div, className="spa, c, e-y-2, tex, t-sm, tex, t-gr, a, y-500, m, b-4">
-                      <div, className="flex, justif, y-betwe, e, n">
+
+                    <div>
+          <div>
                         <sp, a, n>Availabili, t, y:
                         <span, className="fo, n, t-semibo, l, d">{chann, e, l.availabili, t, y}
-                      <div, className="flex, justif, y-betwe, e, n">
+
+                      <div>
                         <sp, a, n>Response, Tim, e:
                     </p>"
                     <div, className="spa, c, e-y-2, tex, t-sm, tex, t-gr, a, y-500, m, b-4"></div>"
-                      <div, className="flex, justif, y-betwe, e, n">
+                      <div>
                         <sp, a, n>Availabili, t, y:</sp, a, n>"
                         <span, className="fo, n, t-semibo, l, d">{chann, e, l.availabili, t, y}
+
                       </d, i, v>"
-                      <div, className="flex, justif, y-betwe, e, n">
+                      <div>
                         <sp, a, n>Response, Tim, e:</sp, a, n>"
                         <span, className="fo, n, t-semibo, l, d">{chann, e, l.responseTi, m, e}
+
                     </d, i, v>"
-                    <button, className="w-full, b, g-bl, u, e-600, tex, t-white, p, y-2, p, x-4, rounde, d-lg, hove, r:bg-bl, u, e-700, transitio, n-colo, r, s">
+                    <button, className="w-full, b, g-bl, u, e-600, tex, t-white, p, y-2, p, x-4, rounde, d-lg, hove, r: bg-bl, u, e-700, transitio, n-colo, r, s">
                       {chann, e, l.conta, c, t}
+
               ))}
+
         {/* FAQ, Sectio, n */}
-        <section, className="py-20, p, x-4, s, m: px-6, l, g:px-8, b, g-whi, t, e">
-          <div, className="m, a, x-w-7xl, m, x-au, t, o">
-            <div, className="te, x, t-center, m, b-16">
-              <h2, className="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
+
+        <section, className="py-20, p, x-4, s, m: px-6, l, g: px-8, b, g-whi, t, e">
+          <div>
+          <div>
+              <h2, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
         {/* FAQ, Sectio, n */}"
-        <section, className="py-20, p, x-4, s, m: px-6, l, g:px-8, b, g-whi, t, e"></section>"
+        <section, className="py-20, p, x-4, s, m: px-6, l, g: px-8, b, g-whi, t, e"></section>"
           <div, className="m, a, x-w-7xl, m, x-au, t, o"></div>"
             <div, className="te, x, t-center, m, b-16"></div>"
-              <h2, className="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">;
+              <h2, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">;
 Frequently, Asked, Questions</$1>"
               <p, className="te, x, t-xl, tex, t-gr, a, y-6, 0, 0">;
 Find, quick, answers to, common, questions;
@@ -219,149 +265,178 @@ quest, i, o,;,
 n: 'Is, there, a community, where, I can, get, help from, other, users?'";
 answ, e, r: "Y, e, s! We, have, an active, community, forum where, users, can ask, question, s, share, best, practices, and, get, help from, both, our team, and, other experienced, user, s. It's, a, great place, to, learn and, networ, k."
     }
+
   ];
 const, quickAction, s = [
     { tit, l, e: 'Report, a, Bug', descripti, o, n: 'Found, an, issue? Let, us, know', li, n, k: '/conta, c, t', ic, o, n: '🐛' }"
     { tit, l, e: 'Request, a, Feature', descripti, o, n: "Have, an, idea? We'd, love, to hear, i, t", li, n, k: '/conta, c, t', ic, o, n: '💡' }
+
     { tit, l, e: 'Schedule, Trainin, g', descripti, o, n: 'Book, a, training session, for, your te, a, m', li, n, k: '/traini, n, g', ic, o, n: '🎓' }
+
     { tit, l, e: 'View, Status, Page', descripti, o, n: 'Check, system, status and, uptim, e', li, n, k: '/stat, u, s', ic, o, n: '📊' }
+
   ];
 return(<div, className="m, i, n-h-screen, b, g-gr, a, y-50">)
       {/* Hero, Sectio, n */})
       <section, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-600, vi, a-purp, l, e-600, t, o-te, a, l-600, tex, t-white, p, y-20">)
         <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">),
-          <div, className="te, x, t-cent, e, r">
+          <div>
             <, className="te, x, t-4x, l, m$2 />;
 return (;
-    <div, className="m, i, n-h-screen, b, g-gr, a, y-50">
+    <div>
       {/* Hero, Sectio, n */}
+
       <section, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-600, vi, a-purp, l, e-600, t, o-te, a, l-600, tex, t-white, p, y-20">
-        <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">
-          <div, className="te, x, t-cent, e, r">
+        <div>
+          <div>
             <, className="te, x, t-4x, l, m$2 />;,
-d:te, x, t-6xl, fon, t-bold, m, b-6">;
+d: te, x, t-6xl, fon, t-bold, m, b-6">;
 return (";
-    <div, className="m, i, n-h-screen, b, g-gr, a, y-50">
+    <div>
       {/* Hero, Sectio, n */}"
       <section, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-600, vi, a-purp, l, e-600, t, o-te, a, l-600, tex, t-white, p, y-20"></section>"
-        <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8"></div>"
+        <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8"></div>"
           <div, className="te, x, t-cent, e, r"></div>"
             <, className="te, x, t-4x, l, m,"$2 />;,
-d:te, x, t-6xl, fon, t-bold, m, b-6">;
+d: te, x, t-6xl, fon, t-bold, m, b-6">;
 We're, Here, to He, l, p</$1>"
             <p, className="te, x, t-xl, tex, t-bl, u, e-100, m, b-8, ma, x-w-3xl, m, x-au, t, o">;
 Get, the, support you, need, to succeed, with, our AI, solution, s.;
 Our, expert, team is, ready, to help, you, every step, of, the w, a, y.
             {/* Search, Ba, r */}
-            <div, className="m, a, x-w-2xl, m, x-au, t, o">
-              <div, className="relati, v, e">
-                <Search, className="absolute, lef, t-4, to, p-1/2, transfor, m -transla, t, e-y-1/2, tex, t-gr, a, y-40, 0, w-5 h-5"  />
+
+            <div>
+          <div>
+                <Search />
                 <inp, u, t;
 ty, p, e="te, x, t";
 placehold, e, r="Search, our, knowledge ba, s, e...";
 val, u, e={searchQue, r, y}
+
                   onChan, g, e={(e) => setSearchQue, r, y(e.targ, e, t.val, u, e)}
-                  classNa, m, e="w-full, p, l-12, p, r-4, p, y-4, rounde, d-lg, tex, t-gr, a, y-900, tex, t-lg, focu, s: ri, n, g-2, focu, s:ri, n, g-bl, u, e-500, foc, u
+
+                  classNa, m, e="w-full, p, l-12, p, r-4, p, y-4, rounde, d-lg, tex, t-gr, a, y-900, tex, t-lg, focu, s: ri, n, g-2, focu, s: ri, n, g-bl, u, e-500, foc, u
             {/* Search, Ba, r */}"
             <div, className="m, a, x-w-2xl, m, x-au, t, o"></div>"
               <div, className="relati, v, e"></div>"
-                <Search, className="absolute, lef, t-4, to, p-1/2, transfor, m -transla, t, e-y-1/2, tex, t-gr, a, y-40, 0, w-5 h-5"  />
+                <Search />
                 <inp, u, t;";
 ty, p, e="te, x, t"";
 placehold, e, r="Search, our, knowledge ba, s, e...";
 val, u, e={searchQue, r, y});
 onChan, g, e={(e) => setSearchQue, r, y(e.targ, e, t.val, u, e)}";
-classNa, m, e="w-full, p, l-12, p, r-4, p, y-4, rounde, d-lg, tex, t-gr, a, y-900, tex, t-lg, focu, s: ri, n, g-2, focu, s:ri, n, g-bl, u, e-500, foc, u,";,
-s:outli, n, e-no, n, e"
+classNa, m, e="w-full, p, l-12, p, r-4, p, y-4, rounde, d-lg, tex, t-gr, a, y-900, tex, t-lg, focu, s: ri, n, g-2, focu, s: ri, n, g-bl, u, e-500, foc, u,";,
+s: outli, n, e-no, n, e"
                  />
             {/* Category, Filte, r */}
-            <div, className="flex, fle, x-wrap, justif, y-center, ga, p-4, m, b-12">
+
+            <div>
               <butt, o, n
-            <div, className="flex, fle, x-wrap, justif, y-center, ga, p-4, m, b-12">
+            <div>
               <butt, o, n;
 onCli, c, k={() => setSelectedCatego, r, y('a, l, l')}
+
                 classNa, m, e={`px-6, p, y-3, rounde, d-lg, fon, t-semibold, transitio, n-colo, r, s ${`;
 selectedCatego, r, y === 'a, l, l'
                     ? 'bg-bl, u, e-600, tex, t-whi, t, e'}
-                    : 'bg-gr, a, y-200, tex, t-gr, a, y-700, hove, r:bg-gr, a, y-3, 0, 0'}
+
+                    : 'bg-gr, a, y-200, tex, t-gr, a, y-700, hove, r: bg-gr, a, y-3, 0, 0'}
+
             {/* Category, Filte, r */}"
-            <div, className="flex, fle, x-wrap, justif, y-center, ga, p-4, m, b-12">
+            <div>
               <butt, o, n;
 onCli, c, k={() => setSelectedCatego, r, y('a, l, l')}
+
                 classNa, m, e={/* TODO: Fix JSX expression */}
+
                 }`}`
               >;
 All, Categorie, s
               {faqCategori, e, s.m, a, p((catego), r, y) => (
                 <butt, o, n;
 k, e, y={catego, r, y.id}
+
                   onCli, c, k={() => setSelectedCatego, r, y(catego, r, y.id)}</butt>classNa</butt>, m, e={`px-6, p, y-3, rounde, d-lg, fon, t-semibold, transitio, n-colors, flex, items-cent, e, r ${`;
 selectedCatego, r, y === catego, r, y.id
                       ? 'bg-bl, u, e-600, tex, t-whi, t, e'}
-                      : 'bg-gr, a, y-200, tex, t-gr, a, y-700, hove, r:bg-gr, a, y-3, 0, 0'}
+
+                      : 'bg-gr, a, y-200, tex, t-gr, a, y-700, hove, r: bg-gr, a, y-3, 0, 0'}
+
               {/* TODO: Fix JSX expression */}
+
   k, e, y={catego, r, y.id}
+
                   onCli, c, k={() => setSelectedCatego, r, y(catego, r, y.id)}
+
                   classNa, m, e={/* TODO: Fix JSX expression */}`
                   }`}`
                 >"
                   <catego, r, y .icon, className="h-4 w-4, m, r-2"  />
                   {catego, r, y.tit, l, e}
+
               ))}
+
             {/* FAQ, Item, s */}
-            <div, className="spa, c, e-y-6">
+
+            <div>
               {filteredFa, q, s.m, a, p((f), a, q, ind, e, x) => (
-                <div, ke, y={ind, e, x} classNa, m, e="bg-gr, a, y-50, rounde, d-l, g, p-6">
+                <div>
                   <h3, className="te, x, t-lg, fon, t-semibold, tex, t-gr, a, y-900, m, b-3">
             {/* FAQ, Item, s */}"
-            <div, className="spa, c, e-y-6">
+            <div>
               {/* TODO: Fix JSX expression */}"
                 <div, ke, y={ind, e, x} classNa, m, e="bg-gr, a, y-50, rounde, d-l, g, p-6"></div>"
                   <h3, className="te, x, t-lg, fon, t-semibold, tex, t-gr, a, y-900, m, b-3">
                     {f, a, q.questi, o, n}
+
                   </h3>"
                   <p, className="te, x, t-gr, a, y-6, 0, 0">
                     {f, a, q.answ, e, r}
+
               ))}
+
             {filteredFa, q, s.leng, t, h === 0 && (
-              <div, className="te, x, t-center, p, y-12">
+              <div>
                 <p, className="te, x, t-gr, a, y-500, tex, t-lg">;
 No, FAQs, found matching, your, search criter, i, a.
             )}
+
         {/* Contact, CT, A */}
-        <section, className="py-20, p, x-4, s, m: px-6, l, g:px-8, b, g-bl, u, e-6, 0, 0">
-          <div, className="m, a, x-w-7xl, m, x-auto, tex, t-cent, e, r">
-            <h2, className="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, tex, t-white, m, b-4">
+
+        <section, className="py-20, p, x-4, s, m: px-6, l, g: px-8, b, g-bl, u, e-6, 0, 0">
+          <div>
+            <h2, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-bold, tex, t-white, m, b-4">
             {/* TODO: Fix JSX expression */}
+
             )}
+
         {/* Contact, CT, A */}"
-        <section, className="py-20, p, x-4, s, m: px-6, l, g:px-8, b, g-bl, u, e-6, 0, 0"></section>"
+        <section, className="py-20, p, x-4, s, m: px-6, l, g: px-8, b, g-bl, u, e-6, 0, 0"></section>"
           <div, className="m, a, x-w-7xl, m, x-auto, tex, t-cent, e, r"></div>"
-            <h2, className="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, tex, t-white, m, b-4">;
+            <h2, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-bold, tex, t-white, m, b-4">;
 Still, Need, Help?
             </h2>"
             <p, className="te, x, t-xl, tex, t-bl, u, e-100, m, b-8, ma, x-w-3xl, m, x-au, t, o">;
 C, a, n't, find, what y, o, u're, looking, for? Our, support, team is, ready, to help, you, with any, questions, or issu, e, s.
-            <div, className="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4, justif, y-cent, e, r">
-              <Li, n, k
-            <div, className="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4, justif, y-cent, e, r">
+            <div>
+              <Li />
               <Li, n, k;
 to="/conta, c, t"
             </p>"
-            <div, className="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4, justif, y-cent, e, r">
+            <div>
               <Li, n, k;";
 to="/conta, c, t"";
-classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-3, border, border-transparent, tex, t-base, fon, t-medium, rounde, d-md, tex, t-bl, u, e-600, b, g-white, hove, r:bg-gr, a, y-50, transitio, n-colo, r, s"
+classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-3, border, border-transparent, tex, t-base, fon, t-medium, rounde, d-md, tex, t-bl, u, e-600, b, g-white, hove, r: bg-gr, a, y-50, transitio, n-colo, r, s"
               >;
 Contact, Suppor, t;"
-                <MessageCircle, className="ml-2 h-5 w-5"  />
+                <MessageCircle />
               <Li, n, k;
 to="/documentati, o, n";
 classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-3, border, border-white, tex, t-base, fon, t-medium, rounde, d-md, tex, t-white, hov, e
               <Li, n, k;";
 to="/documentati, o, n"";
 classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-3, border, border-white, tex, t-base, fon, t-medium, rounde, d-md, tex, t-white, hov, e,";,
-r:bg-whi, t, e/10, transitio, n-colo, r, s"
+r: bg-whi, t, e/10, transitio, n-colo, r, s"
               >;
 View, Documentatio, n;"
                 <BookOpen, className="ml-2 h-5 w-5"  /></BookOpen>
@@ -376,5 +451,6 @@ View, Documentatio, n;"
     </d, i, v>
   )
 }
+
 export default Support;"`
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></button></p></p></p></p></p></p></h2></h2></h2></h2></h2></h3></h3></li></li></section></section></section></section></section></section></section></section>

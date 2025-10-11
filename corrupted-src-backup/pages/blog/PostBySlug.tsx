@@ -1,5 +1,6 @@
 import React from 'react'
 export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expression */}
+
   const { slug } = useParams()
   // Mock data - in a real app, this would come from an API or CMS
   const latestArticles = [
@@ -15,7 +16,9 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
       readTime: '8 min read',
       author: 'Zion Tech Group Team',
     {/* TODO: Fix JSX expression */}
+
     }]
+
   const blogPosts = [
     {
       slug: 'enterprise-ai-transformation-roadmap-2026',
@@ -44,11 +47,15 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
       readTime: '9 min read',
       author: 'Zion Tech Group Team',
     {/* TODO: Fix JSX expression */}
+
     },
     {/* TODO: Fix JSX expression */}
+
     },
     {/* TODO: Fix JSX expression */}
+
     }]
+
   const featuredPosts = [
     {
       slug: 'autonomous-enterprise-operations-2026',
@@ -77,49 +84,64 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
       readTime: '13 min read',
       author: 'Zion Tech Group Team',
     {/* TODO: Fix JSX expression */}
+
     },
     {/* TODO: Fix JSX expression */}
+
     },
     {/* TODO: Fix JSX expression */}
+
     }]
+
   // Find the current post
   const currentPost = [...latestArticles, ...blogPosts, ...featuredPosts].find(post => post.slug === slug;)
   )
   if (!currentPost) {
-    return(<div className="min-h-screen bg-gray-50">
     return (
-      <div className="min-h-screen bg-gray-50">
+    <div>
+    return (
+    <div>
         <Header />
-        <div className="container mx-auto px-4 py-16 text-center">
+        <div>
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Post Not Found
           <p className="text-lg text-gray-600 mb-8">
             The blog post you're looking for doesn't exist.
           <$2 />
             href="/blog"
-            className="bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors">
+            className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Back to Blog,)
           </a>)
         </div>)
       </div>)
     )
   }
-  return(<div className="min-h-screen bg-gray-50">
+
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div>
+  return (
+    <div>
       <Header />
       {/* Article Header */}
-      <div className="bg-white border-b">
-        <div className="container mx-auto px-4 py-12">
-          <div className="max-w-4xl mx-auto">
+
+      <div>
+          <div>
+          <div>
             <div className="text-sm text-blue-600 font-semibold mb-2">{currentPost.category}
-            <h1 className="text-4xl md: text-5xl font-bold text-gray-900 mb-4">,
+
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">,
               {currentPost.title}
+
             <p className="text-xl text-gray-600 mb-6">{currentPost.description}
-            <div className="flex items-center text-sm text-gray-500">
+
+            <div>
               <span>{currentPost.author}
+
   if (!currentPost) {/* TODO: Fix JSX expression */}
+
   }
-  return (<div className="min-h-screen bg-gray-50">
+
+  return (
+    <div>
       <Header />
       {/* Article Header */}"
       <div className="bg-white border-b"></div>"
@@ -129,26 +151,29 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
             < className="text-4xl,"$2 />
   md:text-5xl font-bold text-gray-900 mb-4">
               {currentPost.title}
+
             </h1>"
             <p className="text-xl text-gray-600 mb-6">{currentPost.description}</p>"
-            <div className="flex items-center text-sm text-gray-500">
+            <div>
               <span>{currentPost.author}</span>"
               <span className="mx-2">•
               <span>{currentPost.date}</span>"
               <span className="mx-2">•
               <span>{currentPost.readTime}
+
       {/* Article Content */}
-      <div className="container mx-auto px-4 py-12">
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <div className="prose prose-lg max-w-none">
+
+      <div>
+          <div>
+          <div>
+          <div>
               <h2>Introduction
               <p>
       {/* Article Content */}"
       <div className="container mx-auto px-4 py-12"></div>"
         <div className="max-w-4xl mx-auto"></div>"
           <div className="bg-white rounded-lg shadow-lg p-8"></div>"
-            <div className="prose prose-lg max-w-none">
+            <div>
               <h2>Introduction
               <p>
                 Welcome to our comprehensive guide on {currentPost.title}. This article will provide
@@ -179,35 +204,44 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
                 to stay ahead in today's competitive landscape. With proper implementation and
                 expert guidance, the benefits can be transformative.
       {/* Related Posts */}
-      <div className="bg-white py-16">
+
+      <div>
         <div className="container mx-auto px-4">)
           <div className="max-w-6xl mx-auto">)
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Related Articles</h2>)
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">),
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">),
               {featuredPosts.slice(0, 3).map((post, index) => (
                 <$2 />
                   key={index}
-                  className="bg-gray-50 rounded-lg p-6 hover: shadow-lg transition-shadow",
+
+                  className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow",
                 >,
-      <div className="bg-white py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
+      <div>
+          <div>
+          <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Related Articles
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
               {featuredPosts.slice(0, 3).map((post, index) => (
                 <$2 />
                   key={index}
+
                   className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow">
                   <div className="text-sm text-blue-600 font-semibold mb-2">{post.category}
+
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{post.title}
+
                   <p className="text-gray-600 mb-4">{post.description}
-                  <div className="flex items-center text-sm text-gray-500 mb-4">
+
+                  <div>
                     <span>{post.author}
+
                     <span className="mx-2">•
                     <span>{post.readTime}
+
                   <$2 />
                     href={`/blog/${post.slug}`}
-                    className="text-blue-600 font-semibold hover: text-blue-800 transition-colors",
+
+                    className="text-blue-600 font-semibold hover:text-blue-800 transition-colors",
                   >,
                     Read More →,
                   </a>,
@@ -220,6 +254,7 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
             < className="grid grid-cols-1,"$2 />
   md:grid-cols-3 gap-8">
               {/* TODO: Fix JSX expression */}
+
                   key={index}"
                   className="bg-gray-50 rounded-lg p-6,"
   hover:shadow-lg transition-shadow"
@@ -227,10 +262,11 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
                   <div className="text-sm text-blue-600 font-semibold mb-2">{post.category}</div>"
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{post.title}</h3>"
                   <p className="text-gray-600 mb-4">{post.description}</p>"
-                  <div className="flex items-center text-sm text-gray-500 mb-4">
+                  <div>
                     <span>{post.author}</span>"
                     <span className="mx-2">•
                     <span>{post.readTime}
+
                   <a>
                     href={`/blog/${post.slug}`}"
                     className="text-blue-600 font-semibold,"
@@ -239,6 +275,8 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
                     Read More →
                 </div>)
               ))}
+
   )
 }
+
 "`</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></p></p></p></p></p></p></p></p></p></p></p></h1></h2></h2></h2></h2></h2></h2></h2></h3></ul></li></li></li></li>

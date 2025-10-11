@@ -16,6 +16,7 @@ export default function MicroSaasPage() {
       category: 'Analytics',
       link: '/ai-analytics-dashboard',
       benefits: ['Increase revenue by 25%', 'Save 10 hours/week', 'Real-time insights']
+
     },
     {
       icon: ShoppingCart,
@@ -27,6 +28,7 @@ export default function MicroSaasPage() {
       category: 'E-commerce',
       link: '/ai-ecommerce-solutions',
       benefits: ['Boost sales by 40%', 'Reduce manual work by 80%', '24/7 customer support']
+
     },
     {
       icon: Smartphone,
@@ -38,6 +40,7 @@ export default function MicroSaasPage() {
       category: 'Development',
       link: '/ai-mobile-app-development',
       benefits: ['Build apps 10x faster', 'No coding required', 'Professional results']
+
     },
     {
       icon: FileText,
@@ -49,6 +52,7 @@ export default function MicroSaasPage() {
       category: 'Productivity',
       link: '/ai-document-processing',
       benefits: ['Process 1000+ docs/hour', '99.9% accuracy', 'Save 15 hours/week']
+
     },
     {
       icon: Bot,
@@ -60,6 +64,7 @@ export default function MicroSaasPage() {
       category: 'Customer Service',
       link: '/ai-chatbot-builder',
       benefits: ['Reduce support costs by 60%', '24/7 availability', 'Instant responses']
+
     },
     {
       icon: Music,
@@ -71,6 +76,7 @@ export default function MicroSaasPage() {
       category: 'Marketing',
       link: '/ai-content-generation',
       benefits: ['Create content 5x faster', 'SEO optimized', 'Multiple formats']
+
     },
     {
       icon: Mail,
@@ -82,6 +88,7 @@ export default function MicroSaasPage() {
       category: 'Marketing',
       link: '/ai-email-marketing',
       benefits: ['Increase open rates by 35%', 'Automate campaigns', 'Better targeting']
+
     },
     {
       icon: Calendar,
@@ -93,6 +100,7 @@ export default function MicroSaasPage() {
       category: 'Productivity',
       link: '/ai-scheduling-assistant',
       benefits: ['Reduce no-shows by 50%', 'Save 5 hours/week', 'Better time management']
+
     },
     {
       icon: PieChart,
@@ -104,6 +112,7 @@ export default function MicroSaasPage() {
       category: 'Finance',
       link: '/ai-financial-tracker',
       benefits: ['Save 20% on expenses', 'Better financial planning', 'Automated tracking']
+
     },
     {
       icon: Search,
@@ -115,6 +124,7 @@ export default function MicroSaasPage() {
       category: 'Marketing',
       link: '/ai-seo-optimizer',
       benefits: ['Increase organic traffic by 200%', 'Better rankings', 'Competitive advantage']
+
     },
     {
       icon: Filter,
@@ -126,6 +136,7 @@ export default function MicroSaasPage() {
       category: 'Sales',
       link: '/ai-lead-generator',
       benefits: ['Generate 3x more leads', 'Higher quality prospects', 'Automated follow-up']
+
     },
     {
       icon: Download,
@@ -137,6 +148,7 @@ export default function MicroSaasPage() {
       category: 'Security',
       link: '/ai-data-backup',
       benefits: ['99.9% uptime', 'Secure storage', 'Easy recovery']
+
     },
     {
       icon: Upload,
@@ -148,6 +160,7 @@ export default function MicroSaasPage() {
       category: 'Productivity',
       link: '/ai-file-manager',
       benefits: ['Organize files automatically', 'Find files instantly', 'Reduce clutter']
+
     },
     {
       icon: Share,
@@ -159,6 +172,7 @@ export default function MicroSaasPage() {
       category: 'Marketing',
       link: '/ai-social-media-manager',
       benefits: ['Increase engagement by 150%', 'Save 8 hours/week', 'Better content strategy']
+
     },
     {
       icon: Edit,
@@ -170,6 +184,7 @@ export default function MicroSaasPage() {
       category: 'Productivity',
       link: '/ai-writing-assistant',
       benefits: ['Improve writing quality', 'Save 6 hours/week', 'Professional results']
+
     },
     {
       icon: Trash2,
@@ -181,6 +196,7 @@ export default function MicroSaasPage() {
       category: 'Data Management',
       link: '/ai-data-cleaner',
       benefits: ['Clean data 10x faster', '99.9% accuracy', 'Better data quality']
+
     },
     {
       icon: Plus,
@@ -192,6 +208,7 @@ export default function MicroSaasPage() {
       category: 'Project Management',
       link: '/ai-project-manager',
       benefits: ['Complete projects 30% faster', 'Better team coordination', 'Real-time insights']
+
     },
     {
       icon: Minus,
@@ -203,6 +220,7 @@ export default function MicroSaasPage() {
       category: 'Inventory',
       link: '/ai-inventory-manager',
       benefits: ['Reduce stockouts by 80%', 'Optimize inventory levels', 'Save 20% on costs']
+
     },
     {
       icon: Refresh,
@@ -214,6 +232,7 @@ export default function MicroSaasPage() {
       category: 'Automation',
       link: '/ai-workflow-automator',
       benefits: ['Automate 80% of tasks', 'Reduce errors by 90%', 'Save 20 hours/week']
+
     },
     {
       icon: Play,
@@ -225,6 +244,7 @@ export default function MicroSaasPage() {
       category: 'Content Creation',
       link: '/ai-video-creator',
       benefits: ['Create videos 5x faster', 'Professional quality', 'No editing skills needed']
+
     },
     {
       icon: Pause,
@@ -236,8 +256,11 @@ export default function MicroSaasPage() {
       category: 'Productivity',
       link: '/ai-time-tracker',
       benefits: ['Increase productivity by 25%', 'Better time management', 'Detailed insights']
+
     }
+
   ]
+
   const categories = [
     { name: 'All', count: microSaasServices.length },
     { name: 'Analytics', count: microSaasServices.filter(s => s.category === 'Analytics').length },
@@ -254,7 +277,9 @@ export default function MicroSaasPage() {
     { name: 'Inventory', count: microSaasServices.filter(s => s.category === 'Inventory').length },
     { name: 'Automation', count: microSaasServices.filter(s => s.category === 'Automation').length },
     { name: 'Content Creation', count: microSaasServices.filter(s => s.category === 'Content Creation').length }
+
   ]
+
   const benefits = [
     {
       icon: TrendingUp,
@@ -276,36 +301,41 @@ export default function MicroSaasPage() {
       title: 'Secure & Reliable',
       description: 'Enterprise-grade security with 99.9% uptime guarantee'
     }
+
   ]
+
   const stats = [
     { label: 'Active Users', value: '10,000+' },
     { label: 'Apps Available', value: '50+' },
     { label: 'Uptime Guarantee', value: '99.9%' },
     { label: 'Support Available', value: '24/7' }
+
   ]
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <SEOOptimizer 
+    <div>
+      <SEOOptimizer />
         title="Micro SAAS Solutions - Zion Tech Group"
         description="50+ AI-powered micro SAAS applications for modern businesses. Affordable tools starting from $14/month. Analytics, e-commerce, productivity, marketing, and more."
         keywords="micro SAAS, AI tools, business applications, productivity software, marketing automation, analytics dashboard"
       />
       <Navigation />
       {/* Hero Section */}
+
       <section className="pt-24 pb-16">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-          <div className="text-center">
+        <div>
+          <div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Micro SAAS Solutions,
   
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               50+ AI-powered micro SAAS applications designed for modern businesses. Affordable, powerful, and easy to use.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+            <div>
               <$2 />
                 href="tel:+13024640950"
                 className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center">
-                <Phone className="h-5 w-5 mr-2" />
+                <Phone />
                 Call (302) 464-0950
   
               <$2 />
@@ -318,142 +348,166 @@ export default function MicroSaasPage() {
         </div>
       </section>
       {/* Stats Section */}
+
       <section className="py-16 bg-white/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div>
+          <div>
             {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
+              <div>
+          <div>
                   {stat.value}
-                <div className="text-gray-300 text-sm md:text-base">
+
+                <div>
                   {stat.label}
+
             ))}
+
       {/* Category Filter */}
+
       <section className="py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center gap-2">
+        <div>
+          <div>
             {categories.map((category, index) => (
               <$2 />
                 key={index}
+
                 className="bg-slate-800/50 hover:bg-cyan-500/20 text-gray-300 hover:text-white px-4 py-2 rounded-lg transition-colors duration-300">
                 {category.name} ({category.count})
             ))}
+
       {/* Services Grid */}
+
       <section className="py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+        <div>
+          <div>
             {microSaasServices.map((service, index) => (
-              <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
+              <div>
                 {service.popular && (
-                  <div className="flex items-center justify-center mb-4">
+                  <div>
                     <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">Most Popular
                 )}
-                <div className="flex items-center mb-4">
+
+                <div>
                   <service.icon className="h-8 w-8 text-purple-400 mr-3" />
                   <div>
                     <h3 className="text-lg font-semibold text-white">{service.title}
+
                     <span className="text-xs text-gray-400 bg-gray-700 px-2 py-1 rounded">{service.category}
+
                 <p className="text-gray-300 mb-4 text-sm">{service.description}
+
                 <ul className="space-y-1 mb-4">
                   {service.features.slice(0, 3).map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-xs text-gray-300">
-                      <CheckCircle className="h-3 w-3 text-green-500 mr-2" />
+                      <CheckCircle />
                       {feature}
+
                   ))}
+
                   {service.features.length > 3 && (
                     <li className="text-xs text-gray-400">+{service.features.length - 3} more features
                   )}
-                <div className="text-center">
+
+                <div>
                   <div className="text-xl font-bold text-purple-400 mb-2">{service.price}
-                  <div className="text-xs text-gray-400 mb-3">
+
+                  <div>
                     {service.benefits[0]}
+
                   <$2 />
                     to={service.link}
-                    className="bg-purple-500 hover: bg-purple-600 text-white px-4 py-2 rounded-lg font-semibold transition-colors inline-block text-sm">
+
+                    className="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-lg font-semibold transition-colors inline-block text-sm">
                     Learn More,
   
                 </div>
               </div>
             ))}
+
       {/* Benefits Section */}
+
       <section className="py-24 bg-white/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+        <div>
+          <div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our Micro SAAS Solutions?
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">We deliver powerful, affordable tools that help businesses grow and succeed
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div>
             {benefits.map((benefit, index) => (
-              <div key={index} className="text-center">
-                <div className="bg-purple-500/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+              <div>
+          <div>
                   <benefit.icon className="h-8 w-8 text-purple-400" />
                 <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}
+
                 <p className="text-gray-300">{benefit.description}
+
             ))}
+
       {/* Pricing Tiers */}
+
       <section className="py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+        <div>
+          <div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Simple, Transparent Pricing
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose the plan that fits your business needs. All plans include 24/7 support and regular updates.
             </p>
           </div>
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl shadow-lg">
+          <div>
+          <div>
               <h3 className="text-2xl font-bold text-white mb-4">Starter
               <div className="text-4xl font-bold text-cyan-400 mb-4">$19<span className="text-lg text-gray-400">/month</span>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
+                  <CheckCircle />
                   5 Micro SAAS Apps
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
+                  <CheckCircle />
                   Basic Support
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
+                  <CheckCircle />
                   Standard Features
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
+                  <CheckCircle />
                   Email Support
               <$2 />
                 to="/contact"
                 className="w-full bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors text-center block">
                 Get Started
-            <div className="bg-gradient-to-br from-cyan-500/20 to-purple-600/20 p-8 rounded-xl shadow-lg ring-2 ring-cyan-400">
-              <div className="flex items-center justify-center mb-4">
+            <div>
+          <div>
                 <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">Most Popular
               <h3 className="text-2xl font-bold text-white mb-4">Professional
               <div className="text-4xl font-bold text-cyan-400 mb-4">$49<span className="text-lg text-gray-400">/month</span>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
+                  <CheckCircle />
                   15 Micro SAAS Apps
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
+                  <CheckCircle />
                   Priority Support
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
+                  <CheckCircle />
                   Advanced Features
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
+                  <CheckCircle />
                   Phone & Email Support
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
+                  <CheckCircle />
                   API Access
               <$2 />
                 to="/contact"
                 className="w-full bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors text-center block">
                 Get Started
-            <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl shadow-lg">
+            <div>
               <h3 className="text-2xl font-bold text-white mb-4">Enterprise
               <div className="text-4xl font-bold text-cyan-400 mb-4">$99<span className="text-lg text-gray-400">/month</span>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
+                  <CheckCircle />
                   All 50+ Apps
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
+                  <CheckCircle />
                   24/7 Premium Support
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
+                  <CheckCircle />
                   Custom Features
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
+                  <CheckCircle />
                   Dedicated Manager
   
                 <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
+                  <CheckCircle />
                   White-label Options
   
               </ul>
@@ -467,18 +521,19 @@ export default function MicroSaasPage() {
         </div>
       </section>
       {/* CTA Section */}
+
       <section className="py-24">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-          <div className="bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl p-12 text-center">
+        <div>
+          <div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
               Start your free trial today and experience the power of AI-driven micro SAAS solutions.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div>
               <$2 />
                 href="tel:+13024640950"
                 className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold transition-colors hover:bg-gray-100 flex items-center justify-center">
-                <Phone className="h-5 w-5 mr-2" />
+                <Phone />
                 Call (302) 464-0950
   
               <$2 />
@@ -492,8 +547,8 @@ export default function MicroSaasPage() {
       </section>
       <Footer />
     </div>
-  ),
-}
+  ) }
+
   </Link>
   </a>
   </Link>

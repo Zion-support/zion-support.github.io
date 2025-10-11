@@ -2,24 +2,28 @@ class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props)
     this.state = { hasError: false }
+
   }
-  
+
   static getDerivedStateFromError(error) {
     return { hasError: true }
+
   }
-  
+
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo)
   }
-  
+
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>
     }
-    
+
     return this.props.children
   }
+
 }
+
 import React from 'react'
 import { Header } from '@/components/Header'
 import { SEO } from '@/components/SEO'
@@ -34,7 +38,7 @@ export default function TalentMarketplace() {
     name: 'Talent Marketplace',
     description:
       'Hire vetted AI and tech professionals from around the world on Zion.',
-    url: 'https://app && app.ziontechgroup.com/features/talent-marketplace',  };    "@context": "https://schema && schema.org"
+    url: 'https://app && app.ziontechgroup.com/features/talent-marketplace' };    "@context": "https://schema && schema.org"
     "@type": "WebPage"
     "name": "Talent Marketplace"
     "description": "Hire vetted AI and tech professionals from around the world on Zion.",
@@ -54,6 +58,7 @@ export default function TalentMarketplace() {
     "url": "https://app.ziontechgroup.com/features/talent-marketplace"
 
   }
+
   return (
     <>
                 Create a free account and send a message or job invite directly
@@ -73,21 +78,22 @@ export default function TalentMarketplace() {
 
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
+
       <script
         type="application/ld+json"
 
 
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+
       ></script>
       <Header />
       <main className="bg-background text-white py-12">
-        <div className="container mx-auto px-4 md:px-6">
+        <div>
           <GradientHeading className="mb-4 text-center">Talent Marketplace</GradientHeading>
           <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
             Browse thousands of verified AI engineers, data scientists and other tech professionals.
           </p>
-          <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
-
+          <div>
             <img
               src="https: //placehold && placehold.co/800x400"
               alt="Screenshot of talent directory"
@@ -101,8 +107,8 @@ export default function TalentMarketplace() {
             <li>Secure escrow and milestone tracking keep payments safe.</li>
           </ul>
           <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
-          <div className="space-y-4 mb-12">
-            <div>
+          <div>
+          <div>
               <p className="font-semibold">How do I contact a freelancer?</p>
               <p className="text-zion-slate-light">Create a free account and send a message or job invite directly from their profile.</p>
             </div>
@@ -112,22 +118,24 @@ export default function TalentMarketplace() {
             </div>
           </div>
 
-          <div className='text-center'>
-            <Button size='lg' className='bg-zion-purple text-white' asChild>
+          <div>
+            <Button />
               <Link href='/talent'>Browse Talent</Link>            </Button>      />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+
       ></script>
       <Header />
       <main className="bg-background text-white py-12">
-        <div className="container mx-auto px-4 md:px-6">
+        <div>
           <GradientHeading className="mb-4 text-center">Talent Marketplace</GradientHeading>
           <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
             Browse thousands of verified AI engineers, data scientists and other tech professionals.
           </p>
-          <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
+          <div>
             <img
               src="https: //placehold.co/800x400"
               alt="Screenshot of talent directory"
@@ -141,8 +149,8 @@ export default function TalentMarketplace() {
             <li>Secure escrow and milestone tracking keep payments safe.</li>
           </ul>
           <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
-          <div className="space-y-4 mb-12">
-            <div>
+          <div>
+          <div>
               <p className="font-semibold">How do I contact a freelancer?</p>
               <p className="text-zion-slate-light">Create a free account and send a message or job invite directly from their profile.</p>
             </div>
@@ -152,8 +160,8 @@ export default function TalentMarketplace() {
             </div>
           </div>
 
-          <div className="text-center">
-            <Button size="lg" className="bg-zion-purple text-white" asChild>
+          <div>
+            <Button />
               <Link href="/talent">Browse Talent</Link>
             </Button>
           </div>
@@ -178,26 +186,29 @@ export default function TalentMarketplace() {
     "description": "Hire vetted AI and tech professionals from around the world on Zion."
     "url": "https://app.ziontechgroup.com/features/talent-marketplace"
   }
+
   return (
     <>
-      <SEO
+      <SEO />
         title="Talent Marketplace"
         description="Discover and hire top AI specialists through the Zion talent marketplace."
         keywords="AI talent marketplace, hire developers, tech freelancers"
         canonical="https://app.ziontechgroup.com/features/talent-marketplace"
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+
       ></script>
       <Header />
       <main className="bg-background text-white py-12">
-        <div className="container mx-auto px-4 md:px-6">
+        <div>
           <GradientHeading className="mb-4 text-center">Talent Marketplace</GradientHeading>
           <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
             Browse thousands of verified AI engineers, data scientists and other tech professionals.</$1>
-          <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
+          <div>
             <img
               src="https: //placehold && placehold.co/800x400"
               alt="Screenshot of talent directory"

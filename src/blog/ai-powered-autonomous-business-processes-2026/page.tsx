@@ -3,10 +3,13 @@ import { ArrowLeft } from 'lucide-react'
 // import { Metadata } from 'next'; // Removed for Vite
 // Metadata removed for Vite compatibility
 export default function AutonomousBusinessProcessesBlog() {/* TODO: Fix JSX expression */}
-  O: Add content,}
+
+  O: Add content }
+
 }
+
   return (<div className="min-h-screen bg-gray-50"><div className="max-w-4xl mx-auto px-4 py-8"><div className="bg-white rounded-lg shadow-lg p-8"><div className="mb-6">< href="/blog" className="text-indigo-600,"$2 />
-  hover: text-indigo-700 flex items-center mb-4"><ArrowLeft className="w-4 h-4 mr-2" /></ArrowLeft>
+  hover:text-indigo-700 flex items-center mb-4"><ArrowLeft className="w-4 h-4 mr-2" /></ArrowLeft>
               Back to Blog,"
             </Link></div><div className="text-center mb-8"><span className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-4"></span>
               🤖 AUTONOMOUS PROCESSES • January 15, 2026;"
@@ -20,7 +23,7 @@ export default function AutonomousBusinessProcessesBlog() {/* TODO: Fix JSX expr
               in 2026, delivering <strong>unprecedented efficiency</strong> and <strong>strategic insights</strong>
               that transform how businesses operate."
             </p>< className="grid grid-cols-1,"$2 />
-  md: grid-cols-3 gap-6 mb-8"><div className="bg-blue-50 p-6 rounded-lg text-center"><div className="text-3xl font-bold text-blue-600 mb-2">95%</div><div className="text-gray-700">Process Automation</div></div><div className="bg-green-50 p-6 rounded-lg text-center"><div className="text-3xl font-bold text-green-600 mb-2">24/7</div><div className="text-gray-700">Autonomous Operations</div></div><div className="bg-purple-50 p-6 rounded-lg text-center"><div className="text-3xl font-bold text-purple-600 mb-2">300%</div><div className="text-gray-700">Efficiency Gains</div></div></div><h2 className="text-2xl font-bold text-gray-900 mb-6">🤖 Autonomous Process Architecture</h2><p className="text-gray-700 mb-6"></p>
+  md:grid-cols-3 gap-6 mb-8"><div className="bg-blue-50 p-6 rounded-lg text-center"><div className="text-3xl font-bold text-blue-600 mb-2">95%</div><div className="text-gray-700">Process Automation</div></div><div className="bg-green-50 p-6 rounded-lg text-center"><div className="text-3xl font-bold text-green-600 mb-2">24/7</div><div className="text-gray-700">Autonomous Operations</div></div><div className="bg-purple-50 p-6 rounded-lg text-center"><div className="text-3xl font-bold text-purple-600 mb-2">300%</div><div className="text-gray-700">Efficiency Gains</div></div></div><h2 className="text-2xl font-bold text-gray-900 mb-6">🤖 Autonomous Process Architecture</h2><p className="text-gray-700 mb-6"></p>
               Our autonomous business processes leverage cutting-edge AI technologies to create,
               self-managing systems that operate with minimal human intervention."
             </p><h3 className="text-xl font-semibold text-gray-800 mb-4">Core Components</h3><ul className="list-disc list-inside text-gray-700 mb-6 space-y-2"><li>• <strong>AI Decision,
@@ -41,15 +44,15 @@ export default function AutonomousBusinessProcessesBlog() {/* TODO: Fix JSX expr
                 Join leading enterprises achieving autonomous operations with AI-powered business processes,"
               </p><div className="space-x-4"><a></a>"
                   href="/contact" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg,"
-  hover: bg-blue-700 transition-colors">
+  hover:bg-blue-700 transition-colors">
                   Get Autonomous Assessment,
                 </a><a></a>"
                   href="/services" className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg border-2 border-blue-600,"
-  hover: bg-blue-50 transition-colors">
+  hover:bg-blue-50 transition-colors">
                   Explore AI Services
                 </a></div></div></div></div></div></div>
-  ),
-}
+  ) }
+
 export default AiPoweredAutonomousBusinessProcesses2026Page</div>
   </div>
   </h3>

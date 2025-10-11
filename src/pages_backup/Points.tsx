@@ -21,8 +21,7 @@ import {
   ShoppingBag,
   MessageSquare,
   TrendingUp,
-  History,
-} from 'lucide-react'
+  History } from 'lucide-react'
 import { useAuth } from '@/hooks/useAuth'
 import { usePoints } from '@/hooks/usePoints'
 import {
@@ -124,6 +123,7 @@ function handle_redeem() {
 if (return) {
   $2
 }
+
     set_redeeming (true)
     try {
       await fetch ('/api / points / redeem', {
@@ -132,10 +132,7 @@ if (return) {
         body: JSON.stringify ({
           user_id: user.id,
           cost: reward.cost,
-          reward: reward.title,
-        }),
-
-      })
+          reward: reward.title }) })
       await fetchLedger()
     } finally {
 
@@ -166,15 +163,17 @@ if (return) {
 
 
     }
-  }
 
+  }
 
       set_redeeming (false);    }      })
       await fetch_ledger ()
     } finally {
       set_redeeming (false)
     }
+
   }
+
   const earning_opportunities = [
     {
 
@@ -183,8 +182,7 @@ if (return) {
       title: 'Sign Up & Profile Setup',
       description: 'Complete your profile and verify your email',
       points: '50 pts',
-      action: is_authenticated ? '✓ Completed' : 'Get Started',
-    },
+      action: is_authenticated ? '✓ Completed' : 'Get Started' },
 
       icon: <ShoppingBag className='h - 5 w - 5' />,
 
@@ -194,8 +192,7 @@ if (return) {
       title: 'Sign Up & Profile Setup',
       description: 'Complete your profile and verify your email',
       points: '50 pts',
-      action: isAuthenticated ? '✓ Completed' : 'Get Started',
-    },
+      action: isAuthenticated ? '✓ Completed' : 'Get Started' },
       icon: <ShoppingBag className='h-5 w-5' />,
       title: 'First Purchase',
       description: 'Make your first purchase on the marketplace',
@@ -207,13 +204,14 @@ if (return) {
 
 
 
-      icon: <Users className='h-5 w-5' />
+      icon: <Users />
       title: 'Sign Up & Profile Setup'
       description: 'Complete your profile and verify your email'
       points: '50 pts'
       action: isAuthenticated ? '✓ Completed' : 'Get Started'
     }
-      icon: <ShoppingBag className='h-5 w-5' />
+
+      icon: <ShoppingBag />
       title: 'First Purchase'
       description: 'Make your first purchase on the marketplace'
       points: '100 pts'
@@ -226,8 +224,7 @@ if (return) {
       title: 'Community Engagement',
       description: 'Post in the community or comment on discussions',
       points: '25 pts per post',
-      action: 'Join Community',
-    },
+      action: 'Join Community' },
     {
       icon: <Users className='h - 5 w - 5' />,
 
@@ -257,7 +254,8 @@ if (return) {
       points: "100 pts",
       action: "Browse Marketplace"
 
-    },  ]
+    } ]
+
   const upcoming_rewards = [
     { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },      title: "Refer Friends",
 
@@ -266,12 +264,13 @@ if (return) {
       action: "Share Referral Link"
     }
 
-      icon: <Users className='h-5 w-5' />
+      icon: <Users />
       title: 'Refer Friends'
       description: 'Invite friends to join Zion marketplace'
       points: '200 pts per referral'
       action: 'Share Referral Link'
-    },  ]
+    } ]
+
   const upcomingRewards = [
 
     {
@@ -280,12 +279,14 @@ if (return) {
       cost: 1000
       category: 'Subscription'
     }
+
     {
       id: 'swag'
       title: 'Zion Swag Pack'
       cost: 1500
       category: 'Merchandise'
     }
+
     {
 
       id: 'coupon25'
@@ -293,9 +294,8 @@ if (return) {
       cost: 2000
       category: 'Discount'
     }
+
     { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' }
-
-
 
   const earningOpportunities = [
     {
@@ -303,28 +303,24 @@ if (return) {
       title: 'Sign Up & Profile Setup',
       description: 'Complete your profile and verify your email',
       points: '50 pts',
-      action: isAuthenticated ? '✓ Completed' : 'Get Started',
-    },
+      action: isAuthenticated ? '✓ Completed' : 'Get Started' },
       icon: <ShoppingBag className='h-5 w-5' />,
       title: 'First Purchase',
       description: 'Make your first purchase on the marketplace',
       points: '100 pts',
-      action: 'Browse Marketplace',
-    },
+      action: 'Browse Marketplace' },
     {
       icon: <MessageSquare className='h-5 w-5' />,
       title: 'Community Engagement',
       description: 'Post in the community or comment on discussions',
       points: '25 pts per post',
-      action: 'Join Community',
-    },
+      action: 'Join Community' },
     {
       icon: <Users className='h-5 w-5' />,
       title: 'Refer Friends',
       description: 'Invite friends to join Zion marketplace',
       points: '200 pts per referral',
-      action: 'Share Referral Link',
-    },
+      action: 'Share Referral Link' },
     {
       icon: <ShoppingBag className="h-5 w-5" />,
       title: "First Purchase",
@@ -338,22 +334,18 @@ if (return) {
       id: 'premium1',
       title: 'Premium Features (1 month)',
       cost: 1000,
-      category: 'Subscription',
-    },
+      category: 'Subscription' },
     {
       id: 'swag',
       title: 'Zion Swag Pack',
       cost: 1500,
-      category: 'Merchandise',
-    },
+      category: 'Merchandise' },
     {
       id: 'coupon25',
       title: '$25 Off Coupon',
       cost: 2000,
-      category: 'Discount',
-    },
-    { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' },
-    },
+      category: 'Discount' },
+    { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' } },
     {
       icon: <ShoppingBag className="h-5 w-5" />,
       title: "First Purchase",
@@ -366,9 +358,8 @@ if (return) {
       title: 'Refer Friends',
       description: 'Invite friends to join Zion marketplace',
       points: '200 pts per referral',
-      action: 'Share Referral Link',
+      action: 'Share Referral Link' } ]
 
-    },  ]
   const upcomingRewards = [
     { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },      title: "Refer Friends",
       icon: <MessageSquare className="h-5 w-5" />,
@@ -392,22 +383,18 @@ if (return) {
       id: 'premium1',
       title: 'Premium Features (1 month)',
       cost: 1000,
-      category: 'Subscription',
-    },
+      category: 'Subscription' },
     {
       id: 'swag',
       title: 'Zion Swag Pack',
       cost: 1500,
-      category: 'Merchandise',
-    },
+      category: 'Merchandise' },
     {
       id: 'coupon25',
       title: '$25 Off Coupon',
       cost: 2000,
-      category: 'Discount',
-    },
-    { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' },
-    },
+      category: 'Discount' },
+    { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' } },
     {
 
 
@@ -423,8 +410,8 @@ if (return) {
       title: 'Refer Friends',
       description: 'Invite friends to join Zion marketplace',
       points: '200 pts per referral',
-      action: 'Share Referral Link',
-    },  ]
+      action: 'Share Referral Link' } ]
+
   const upcomingRewards = [
     { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },      title: "Refer Friends",
       icon: <MessageSquare className="h-5 w-5" />,
@@ -444,14 +431,6 @@ if (return) {
       action: "Share Referral Link"
     }
 
-
-
-
-
-
-
-
-
   if (!isAuthenticated) {
     return (
 
@@ -467,9 +446,9 @@ if (return) {
 
 
 
-        <div className="container py-10 max-w-4xl">
-          <div className="text-center mb-8">
-            <Gift className="h-16 w-16 text-primary mx-auto mb-4" />
+        <div>
+          <div>
+            <Gift />
             <h1 className="text-4xl font-bold mb-4">Zion Rewards Program</h1>
             <p className="text-xl text-muted-foreground mb-6">
               Earn points for every action you take and redeem them for exclusive rewards!
@@ -482,52 +461,46 @@ if (return) {
             </Button>
           </div>
 
-          <div className='grid md:grid-cols-2 gap-8 mb-12'>
-            <Card>
-              <CardHeader>
-                <CardTitle className='flex items-center gap-2'>
-                  <TrendingUp className='h-5 w-5' />                  How to Earn Points          <div className="grid md:grid-cols-2 gap-8 mb-12">
-
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-
-
-
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <TrendingUp className="h-5 w-5" />
+          <div>
+            <Card />
+              <CardHeader />
+                <CardTitle />
+                  <TrendingUp className='h-5 w-5' />                  How to Earn Points          <div>
+          <div>
+            <Card />
+              <CardHeader />
+                <CardTitle />
+                  <TrendingUp />
                   How to Earn Points
 
 
                 </CardTitle>
-                <CardDescription>
+                <CardDescription />
                   Multiple ways to accumulate rewards
                 </CardDescription>
               </CardHeader>
-              <CardContent className='space-y-4'>
+              <CardContent />
                 {earningOpportunities.map((opportunity, index) => (
                   <$2 />
                     key={index}
+
                     className='flex items-start gap-3 p-3 rounded-lg border'
                   >
                     <div className='text-primary mt-1'>{opportunity.icon}</div>
-                    <div className='flex-1'>
+                    <div>
                       <h4 className='font-medium'>{opportunity.title}</h4>
                       <p className='text-sm text-muted-foreground'>
                         {opportunity.description}
 
-                      </p>                  <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
-              <CardContent className="space-y-4">
+                      </p>                  <div>
+              <CardContent />
                 {earningOpportunities.map((opportunity, index) => (
-                  <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
-
-              <CardContent className="space-y-4">
+                  <div>
+              <CardContent />
                 {earningOpportunities.map((opportunity, index) => (
-                  <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
-
-
+                  <div>
                     <div className="text-primary mt-1">{opportunity.icon}</div>
-                    <div className="flex-1">
+                    <div>
                       <h4 className="font-medium">{opportunity.title}</h4>
                       <p className="text-sm text-muted-foreground">{opportunity.description}</p>
                     </div>
@@ -545,32 +518,29 @@ if (return) {
                     <Badge variant="secondary">{opportunity.points}</Badge>
                   </div>
                 ))}
+
               </CardContent>
             </Card>
-            <Card>
-              <CardHeader>
-
-                <CardTitle className='flex items-center gap-2'>
-                  <Gift className='h-5 w-5' />                  Upcoming Rewards                <CardTitle className="flex items-center gap-2">
-                <CardTitle className="flex items-center gap-2">
-
-                <CardTitle className="flex items-center gap-2">
-
-
-                  <Gift className="h-5 w-5" />
+            <Card />
+              <CardHeader />
+                <CardTitle />
+                  <Gift className='h-5 w-5' />                  Upcoming Rewards                <CardTitle />
+                <CardTitle />
+                <CardTitle />
+                  <Gift />
                   Upcoming Rewards
                 </CardTitle>
-                <CardDescription>
+                <CardDescription />
                   What you can redeem your points for
                 </CardDescription>
               </CardHeader>
 
 
 
-              <CardContent className="space-y-4">
+              <CardContent />
                 {upcomingRewards.map((reward, index) => (
-                  <div key={index} className="flex items-center justify-between p-3 rounded-lg border">
-                    <div>
+                  <div>
+          <div>
                       <h4 className="font-medium">{reward.title}</h4>
                       <p className="text-sm text-muted-foreground">{reward.category}</p>
                     </div>
@@ -580,6 +550,7 @@ if (return) {
                     <Badge variant="outline">{reward.cost}</Badge>
                   </div>
                 ))}
+
               </CardContent>
             </Card>
           </div>
@@ -588,9 +559,9 @@ if (return) {
 
 
 
-          <Card className="text-center">
-            <CardContent className="pt-6">
-              <Star className="h-12 w-12 text-primary mx-auto mb-4" />
+          <Card />
+            <CardContent />
+              <Star />
               <h3 className="text-2xl font-bold mb-2">Coming Soon</h3>
               <p className="text-muted-foreground mb-4">
                 Our full rewards system is launching soon! Sign up now to start earning points immediately.
@@ -604,12 +575,12 @@ if (return) {
 
           </Card>
         </div>
-        <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
+        <LoginModal />
       </>
       <>
-        <div className='container py-10 max-w-4xl'>
-          <div className='text-center mb-8'>
-            <Gift className='h-16 w-16 text-primary mx-auto mb-4' />
+        <div>
+          <div>
+            <Gift />
             <h1 className='text-4xl font-bold mb-4'>Zion Rewards Program</h1>
             <p className='text-xl text-muted-foreground mb-6'>
               Earn points for every action you take and redeem them for
@@ -618,121 +589,131 @@ if (return) {
             <Button onClick={(,) => setLoginOpen(true)} size="lg">
             <Button onClick={() => setLoginOpen(true)} size="lg">
               Join Now to Start Earning</$1></$1>
-          <div className='grid md:grid-cols-2 gap-8 mb-12'>
-            <Card>
-              <CardHeader>
-                <CardTitle className='flex items-center gap-2'>
-                  <TrendingUp className='h-5 w-5' />                  How to Earn Points          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
+          <div>
+            <Card />
+              <CardHeader />
+                <CardTitle />
+                  <TrendingUp className='h-5 w-5' />                  How to Earn Points          <div>
+            <Card />
+              <CardHeader />
+                <CardTitle />
                   <TrendingUp className="h-5 w-5" /></$1>
-                <CardDescription>
+                <CardDescription />
                   Multiple ways to accumulate rewards</$1></$1>
-              <CardContent className='space-y-4'>
+              <CardContent />
                 {earningOpportunities && earningOpportunities.map((opportunity, index) => (
                   <$2 />
                     key={index}
+
                     className='flex items-start gap-3 p-3 rounded-lg border'>
                     <div className='text-primary mt-1'>{opportunity && opportunity.icon}</div>
-                    <div className='flex-1'>
+                    <div>
                       <h4 className='font-medium'>{opportunity && opportunity.title}</h4>
                       <p className='text-sm text-muted-foreground'>
                         {opportunity && opportunity.description}
-                      </p>                  <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
+
+                      </p>                  <div>
                     <div className="text-primary mt-1">{opportunity && opportunity.icon}</div>
-                    <div className="flex-1">
+                    <div>
                       <h4 className="font-medium">{opportunity && opportunity.title}</h4>
                       <p className="text-sm text-muted-foreground">{opportunity && opportunity.description}</p></$1>
                     <Badge variant='secondary'>{opportunity && opportunity.points}</Badge>                  </div>                    </div>
                     <Badge variant="secondary">{opportunity && opportunity.points}</Badge></$1>
                 ))}
+
               </CardContent></$1>
-            <Card>
-              <CardHeader>
-                <CardTitle className='flex items-center gap-2'>
-                  <Gift className='h-5 w-5' />                  Upcoming Rewards                <CardTitle className="flex items-center gap-2">
-                  <Gift className="h-5 w-5" />
+            <Card />
+              <CardHeader />
+                <CardTitle />
+                  <Gift className='h-5 w-5' />                  Upcoming Rewards                <CardTitle />
+                  <Gift />
                   Upcoming Rewards</$1>
-                <CardDescription>
+                <CardDescription />
                   What you can redeem your points for</$1></$1>
-              <CardContent className='space-y-4'>
+              <CardContent />
                 {upcomingRewards && upcomingRewards.map((reward, index) => (
                   <$2 />
                     key={index}
+
                     className='flex items-center justify-between p-3 rounded-lg border'>                    <div>
                       <h4 className='font-medium'>{reward && reward.title}</h4>
                       <p className='text-sm text-muted-foreground'>
                         {reward && reward.category}
+
                       </p></$1>
                     <Badge variant='outline'>{reward && reward.cost}</Badge>                  </div>
                     <Badge variant="outline">{reward && reward.cost}</Badge>
                 {upcomingRewards && upcomingRewards.map((reward, index) => (
-                  <div key={index} className="flex items-center justify-between p-3 rounded-lg border">
-                    <div>
+                  <div>
+          <div>
                       <h4 className="font-medium">{reward && reward.title}</h4>
                       <p className="text-sm text-muted-foreground">{reward && reward.category}</p></$1>
                     <Badge variant="outline">{reward && reward.cost}</Badge></$1>
                 ))}
+
               </CardContent></$1></$1>
-          <Card className='text-center'>
-            <CardContent className='pt-6'>
-              <Star className='h-12 w-12 text-primary mx-auto mb-4' />
+          <Card />
+            <CardContent />
+              <Star />
               <h3 className='text-2xl font-bold mb-2'>Coming Soon</h3>
               <p className='text-muted-foreground mb-4'>
                 Our full rewards system is launching soon! Sign up now to start
                 earning points immediately.</$1>
-              <Button onClick={() => setLoginOpen(true)}>Create Account</Button>            </CardContent>          <Card className="text-center">
-            <CardContent className="pt-6">
-              <Star className="h-12 w-12 text-primary mx-auto mb-4" />
+              <Button onClick={() => setLoginOpen(true)}>Create Account</Button>            </CardContent>          <Card />
+            <CardContent />
+              <Star />
               <h3 className="text-2xl font-bold mb-2">Coming Soon</h3>
               <p className="text-muted-foreground mb-4">
                 Our full rewards system is launching soon! Sign up now to start earning points immediately.</$1>
-              <Button onClick={() => setLoginOpen(true)}></$1>                  <div key={index} className="flex items - start gap - 3 p - 3 rounded - lg border">
+              <Button onClick={() => setLoginOpen(true)}></$1>                  <div>
                     <div className="text - primary mt - 1">{opportunity.icon}</div>
-                    <div className="flex - 1">
+                    <div>
                       <h4 className="font - medium">{opportunity.title}</h4>
                       <p className="text - sm text - muted - foreground">{opportunity.description}</p></$1>
                     <Badge variant='secondary'>{opportunity.points}</Badge>                  </div>                    </div>
                     <Badge variant="secondary">{opportunity.points}</Badge></$1>))}
+
               </CardContent></$1>
-            <Card>
-              <CardHeader>
-                <CardTitle className='flex items - center gap - 2'>
-                  <Gift className='h - 5 w - 5' />                  Upcoming Rewards                <CardTitle className="flex items - center gap - 2">
-                  <Gift className="h - 5 w - 5" />
+            <Card />
+              <CardHeader />
+                <CardTitle />
+                  <Gift className='h - 5 w - 5' />                  Upcoming Rewards                <CardTitle />
+                  <Gift />
                   Upcoming Rewards</$1>
-                <CardDescription>
+                <CardDescription />
                   What you can redeem your points for</$1></$1>
-              <CardContent className='space - y-4'>
+              <CardContent />
                 {upcoming_rewards.map ((reward, index) => (
                   <;$2 />
                     key={index}
+
                     className='flex items - center justify - between p - 3 rounded - lg border'
                   >                    <div>
                       <h4 className='font - medium'>{reward.title}</h4>
                       <p className='text - sm text - muted - foreground'>
                         {reward.category}
+
                       </p></$1>
                     <Badge variant='outline'>{reward.cost}</Badge>                  </div>
                     <Badge variant="outline">{reward.cost}</Badge>
                 {upcoming_rewards.map ((reward, index) => (
-                  <div key={index} className="flex items - center justify - between p - 3 rounded - lg border">
-                    <div>
+                  <div>
+          <div>
                       <h4 className="font - medium">{reward.title}</h4>
                       <p className="text - sm text - muted - foreground">{reward.category}</p></$1>
                     <Badge variant="outline">{reward.cost}</Badge></$1>))}
+
               </CardContent></$1></$1>
-          <Card className='text - center'>
-            <CardContent className='pt - 6'>
-              <Star className='h - 12 w - 12 text - primary mx - auto mb - 4' />
+          <Card />
+            <CardContent />
+              <Star />
               <h3 className='text - 2xl font - bold mb - 2'>Coming Soon</h3>
               <p className='text - muted - foreground mb - 4'>
                 Our full rewards system is launching soon! Sign up now to start
                 earning points immediately.</$1>
-              <Button on_click={() => setLoginOpen (true)}>Create Account</Button>            </CardContent>          <Card className="text - center">
-            <CardContent className="pt - 6">
-              <Star className="h - 12 w - 12 text - primary mx - auto mb - 4" />
+              <Button on_click={() => setLoginOpen (true)}>Create Account</Button>            </CardContent>          <Card />
+            <CardContent />
+              <Star />
               <h3 className="text - 2xl font - bold mb - 2">Coming Soon</h3>
               <p className="text - muted - foreground mb - 4">
                 Our full rewards system is launching soon! Sign up now to start earning points immediately.</$1>
@@ -740,6 +721,7 @@ if (return) {
                 Create Account</$1></$1></$1>
     )
   }
+
   return (
 
 
@@ -750,50 +732,49 @@ if (return) {
             earning and redeem rewards.
           </p>
         )}
+
       </div>
 
 
 
 
 
-      <div className="grid md:grid-cols-2 gap-8 mb-12">
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <TrendingUp className="h-5 w-5" />
+      <div>
+        <Card />
+          <CardHeader />
+            <CardTitle />
+              <TrendingUp />
               Keep Earning
 
 
 
             </CardTitle>
-            <CardDescription>
+            <CardDescription />
               More ways to boost your point balance
             </CardDescription>
           </CardHeader>
-          <CardContent className='space-y-4'>
+          <CardContent />
             {earningOpportunities.map((opportunity, index) => (
               <$2 />
                 key={index}
+
                 className='flex items-start gap-3 p-3 rounded-lg border'
               >
                 <div className='text-primary mt-1'>{opportunity.icon}</div>
-                <div className='flex-1'>
+                <div>
                   <h4 className='font-medium'>{opportunity.title}</h4>
                   <p className='text-sm text-muted-foreground'>
                     {opportunity.description}
 
-                  </p>              <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
-          <CardContent className="space-y-4">
+                  </p>              <div>
+          <CardContent />
             {earningOpportunities.map((opportunity, index) => (
-              <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
-
-          <CardContent className="space-y-4">
+              <div>
+          <CardContent />
             {earningOpportunities.map((opportunity, index) => (
-              <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
-
-
+              <div>
                 <div className="text-primary mt-1">{opportunity.icon}</div>
-                <div className="flex-1">
+                <div>
                   <h4 className="font-medium">{opportunity.title}</h4>
                   <p className="text-sm text-muted-foreground">{opportunity.description}</p>
                 </div>
@@ -808,43 +789,42 @@ if (return) {
 
 
 
-                <div className="text-right">
+                <div>
                   <Badge variant="secondary" className="mb-1">{opportunity.points}</Badge>
                   <p className="text-xs text-muted-foreground">{opportunity.action}</p>
                 </div>
               </div>
             ))}
+
           </CardContent>
         </Card>
-        <Card>
-          <CardHeader>
-
-            <CardTitle className='flex items-center gap-2'>
-              <Gift className='h-5 w-5' />              Available Rewards            <CardTitle className="flex items-center gap-2">
-            <CardTitle className="flex items-center gap-2">
-
-            <CardTitle className="flex items-center gap-2">
-
-
-              <Gift className="h-5 w-5" />
+        <Card />
+          <CardHeader />
+            <CardTitle />
+              <Gift className='h-5 w-5' />              Available Rewards            <CardTitle />
+            <CardTitle />
+            <CardTitle />
+              <Gift />
               Available Rewards
             </CardTitle>
-            <CardDescription>
+            <CardDescription />
               Redeem your points for these rewards
             </CardDescription>
           </CardHeader>
-          <CardContent className='space-y-4'>
+          <CardContent />
             {upcomingRewards.map(reward => (
               <$2 />
                 key={reward.id}
+
                 className='flex items - center justify - between p - 3 rounded - lg border'
               >
                   <h4 className='font - medium'>{reward.title}</h4>
                   <p className='text - sm text - muted - foreground'>
                     {reward.category}
+
                   </p></$1>
-                <div className='text - right space - y-1'>
-                  <Badge variant='outline' className='mb - 1'>
+                <div>
+                  <Badge />
                     {reward.cost} pts</$1>
                   {balance >= reward.cost ? (
 
@@ -861,119 +841,134 @@ if (return) {
             You haven't earned any points yet. Complete the tasks below to start
             earning and redeem rewards.</$1>
         )}
+
       </div>
-      <div className='grid md:grid-cols-2 gap-8 mb-12'>
-        <Card>
-          <CardHeader>
-            <CardTitle className='flex items-center gap-2'>
-              <TrendingUp className='h-5 w-5' />              Keep Earning      <div className="grid md:grid-cols-2 gap-8 mb-12">
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
+      <div>
+        <Card />
+          <CardHeader />
+            <CardTitle />
+              <TrendingUp className='h-5 w-5' />              Keep Earning      <div>
+        <Card />
+          <CardHeader />
+            <CardTitle />
               <TrendingUp className="h-5 w-5" /></$1>
-            <CardDescription>
+            <CardDescription />
               More ways to boost your point balance</$1></$1>
-          <CardContent className='space-y-4'>
+          <CardContent />
             {earningOpportunities && earningOpportunities.map((opportunity, index) => (
               <$2 />
                 key={index}
+
                 className='flex items-start gap-3 p-3 rounded-lg border'>
                 <div className='text-primary mt-1'>{opportunity && opportunity.icon}</div>
-                <div className='flex-1'>
+                <div>
                   <h4 className='font-medium'>{opportunity && opportunity.title}</h4>
                   <p className='text-sm text-muted-foreground'>
                     {opportunity && opportunity.description}
-                  </p>              <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
+
+                  </p>              <div>
                 <div className="text-primary mt-1">{opportunity && opportunity.icon}</div>
-                <div className="flex-1">
+                <div>
                   <h4 className="font-medium">{opportunity && opportunity.title}</h4>
                   <p className="text-sm text-muted-foreground">{opportunity && opportunity.description}</p></$1>
-                <div className='text-right'>
-                  <Badge variant='secondary' className='mb-1'>
+                <div>
+                  <Badge />
                     {opportunity && opportunity.points}
+
                   </Badge>
                   <p className='text-xs text-muted-foreground'>
                     {opportunity && opportunity.action}
+
                   </p>                </div>                </div>
-                <div className="text-right">
+                <div>
                   <Badge variant="secondary" className="mb-1">{opportunity && opportunity.points}</Badge>
                   <p className="text-xs text-muted-foreground">{opportunity && opportunity.action}</p></$1></$1>
             ))}
+
           </CardContent></$1>
-        <Card>
-          <CardHeader>
-            <CardTitle className='flex items-center gap-2'>
-              <Gift className='h-5 w-5' />              Available Rewards            <CardTitle className="flex items-center gap-2">
-              <Gift className="h-5 w-5" />
+        <Card />
+          <CardHeader />
+            <CardTitle />
+              <Gift className='h-5 w-5' />              Available Rewards            <CardTitle />
+              <Gift />
               Available Rewards</$1>
-            <CardDescription>
+            <CardDescription />
               Redeem your points for these rewards</$1></$1>
-          <CardContent className='space-y-4'>
+          <CardContent />
             {upcomingRewards && upcomingRewards.map(reward => (
               <$2 />
                 key={reward && reward.id}
+
                 className='flex items-center justify-between p-3 rounded-lg border'>
                   <h4 className='font-medium'>{reward && reward.title}</h4>
                   <p className='text-sm text-muted-foreground'>
                     {reward && reward.category}
+
                   </p></$1>
-                <div className='text-right space-y-1'>
-                  <Badge variant='outline' className='mb-1'>
+                <div>
+                  <Badge />
                     {reward && reward.cost} pts</$1>
                   {balance >= reward && reward.cost ? (
-                    <Button
+                    <Button />
                       size='sm'
                       onClick={() => handleRedeem(reward)}
+
                       disabled={redeeming}
 
                     >                      {redeeming ? 'Processing...' : 'Redeem'}
+
                     </Button>
                   ) : (
                     <p className='text-xs text-muted-foreground'>
                       Need more points</$1>                  )}
+
                     <p className="text-xs text-muted-foreground">Need more points</p>
                 <div>
                   <h4 className="font-medium">{reward && reward.title}</h4>
                   <p className="text-sm text-muted-foreground">{reward && reward.category}</p></$1>
-                <div className="text-right space-y-1">
+                <div>
                   <Badge variant="outline" className="mb-1">{reward && reward.cost} pts</Badge>
                   {balance >= reward && reward.cost ? (
                     <Button size="sm" onClick={() => handleRedeem(reward)} disabled={redeeming}>
                       {redeeming ? 'Processing...' : 'Redeem'}
+
                     </Button>
                   ) : (
                     <p className="text-xs text-muted-foreground">Need more points</p>
-          <CardContent className="space-y-4">
+          <CardContent />
             {upcomingRewards.map((reward) => (
-              <div key={reward.id} className="flex items-center justify-between p-3 rounded-lg border">
-                <div>
+              <div>
+          <div>
                   <h4 className="font-medium">{reward.title}</h4>
                   <p className="text-sm text-muted-foreground">{reward.category}</p>
 
                 </div>
-                <div className="text-right space-y-1">
+                <div>
                   <Badge variant="outline" className="mb-1">{reward.cost} pts</Badge>
                   {balance >= reward.cost ? (
-                    <Button
+                    <Button />
                       size='sm'
                       onClick={() => handleRedeem(reward)}
 
                       disabled={redeeming}
+
                     >                      {redeeming ? 'Processing...' : 'Redeem'}
+
                     </Button>
                   ) : (
                     <p className='text-xs text-muted-foreground'>
                       Need more points
                     </p>                  )}
+
                     <p className="text - xs text - muted - foreground">Need more points</p>
                 <div>
                   <h4 className="font - medium">{reward.title}</h4>
                   <p className="text - sm text - muted - foreground">{reward.category}</p></$1>
-                <div className="text - right space - y-1">
+                <div>
                   <Badge variant="outline" className="mb - 1">{reward.cost} pts</Badge>
                   {balance >= reward.cost ? (
                     <Button size="sm" on_click={() => handle_redeem (reward)} disabled={redeeming}></$1>
-                <div className="text-right space-y-1">
+                <div>
                   <Badge variant="outline" className="mb-1">{reward.cost} pts</Badge>
                   {balance >= reward.cost ? (
 
@@ -981,75 +976,69 @@ if (return) {
                     <Button size="sm" onClick={() => handleRedeem(reward)} disabled={redeeming}>
                       {redeeming ? 'Processing...' : 'Redeem'}
 
-
             ))}
+
           </CardContent>
         </Card>
       </div>
-      <Card>
-        <CardHeader>
-          <CardTitle className='flex items-center gap-2'>
-            <History className='h-5 w-5' />            Points History          <CardTitle className="flex items-center gap-2">
-          <CardTitle className="flex items-center gap-2">
-
-          <CardTitle className="flex items-center gap-2">
-
-
-            <History className="h-5 w-5" />
+      <Card />
+        <CardHeader />
+          <CardTitle />
+            <History className='h-5 w-5' />            Points History          <CardTitle />
+          <CardTitle />
+          <CardTitle />
+            <History />
             Points History
           </CardTitle>
           <CardDescription>Your recent points activity</CardDescription>
         </CardHeader>
-        <CardContent>
+        <CardContent />
           {ledger.length === 0 ? (
             <p className='text-center py-8 text-muted-foreground'>
               No points activity yet.
             </p>
 
-            <ScrollArea className='h-64'>
-              <div className='space-y-2 mt-2'>
+            <ScrollArea />
+              <div>
             <p className="text-center py-8 text-muted-foreground">No points activity yet.</p>
           ) : (
-            <ScrollArea className="h-64">
-              <div className="space-y-2 mt-2">
-
+            <ScrollArea />
+              <div>
                       <p className="font-medium capitalize">{entry.reason || 'adjustment'}</p>
                       <p className="text-xs text-muted-foreground">
                         {formatDistanceToNow(new Date(entry.created_at), { addSuffix: true })}
+
                       </p>
                     </div>
-                    <Badge
+                    <Badge />
                       variant="outline"
                       className={entry.delta >= 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}
 
                     >
                       {entry.delta >= 0 ? '+' : ''}
+
                       {entry.delta} pts</$1></$1>
                 ))}
+
               </div></$1>
           )}
 
-
-
-
-      <Card className="text-center">
-        <CardContent className="pt-6">
-          <Star className="h-12 w-12 text-primary mx-auto mb-4" />
+      <Card />
+        <CardContent />
+          <Star />
           <h3 className="text-2xl font-bold mb-2">Full Rewards System Coming Soon</h3>
           <p className="text-muted-foreground mb-4">
             We're finalizing the redemption system. Keep earning points - they'll be ready to spend soon!
 
 
           </p>
-          <div className="flex gap-4 justify-center">
-            <Button variant="outline" asChild>
+          <div>
+            <Button />
               <Link href="/marketplace">Browse Marketplace</Link>
             </Button>
-            <Button variant='outline' asChild>
-              <Link href='/community'>Join Community</Link>            <Button variant="outline" asChild>
-            <Button variant="outline" asChild>
-
-
+            <Button />
+              <Link href='/community'>Join Community</Link>            <Button />
+            <Button />
               <Link href="/community">Join Community</Link>
             </Button>
           </div>
@@ -1059,94 +1048,104 @@ if (return) {
 
 
         </CardContent></$1>
-      <Card className='text-center'>
-        <CardContent className='pt-6'>
-          <Star className='h-12 w-12 text-primary mx-auto mb-4' />
+      <Card />
+        <CardContent />
+          <Star />
           <h3 className='text-2xl font-bold mb-2'>
             Full Rewards System Coming Soon</$1>
           <p className='text-muted-foreground mb-4'>
             We're finalizing the redemption system. Keep earning points -
             they'll be ready to spend soon!</$1>
-          <div className='flex gap-4 justify-center'>
-            <Button variant='outline' asChild>
+          <div>
+            <Button />
               <Link href='/marketplace'>Browse Marketplace</Link>          </p>
-          <div className="flex gap-4 justify-center">
-            <Button variant="outline" asChild>
+          <div>
+            <Button />
               <Link href="/marketplace">Browse Marketplace</Link></$1>
-            <Button variant='outline' asChild>
-              <Link href='/community'>Join Community</Link>            <Button variant="outline" asChild>
+            <Button />
+              <Link href='/community'>Join Community</Link>            <Button />
               <Link href="/community">Join Community</Link></$1>
             <Button variant='outline' asChild></$1>) : (
                     <p className="text - xs text - muted - foreground">Need more points</p>)}
+
                 </div></$1>))}
+
           </CardContent></$1></$1>
-      <Card>
-        <CardHeader>
-          <CardTitle className='flex items - center gap - 2'>
-            <History className='h - 5 w - 5' />            Points History          <CardTitle className="flex items - center gap - 2">
-            <History className="h - 5 w - 5" />
+      <Card />
+        <CardHeader />
+          <CardTitle />
+            <History className='h - 5 w - 5' />            Points History          <CardTitle />
+            <History />
             Points History</$1>
           <CardDescription > Your recent points activity</CardDescription></$1>
-        <CardContent>
+        <CardContent />
           {ledger.length === 0 ? (
             <p className='text - center py - 8 text - muted - foreground'>
               No points activity yet.</$1>
-            <ScrollArea className='h - 64'>
-              <div className='space - y-2 mt - 2'>
+            <ScrollArea />
+              <div>
                 {ledger.map (entry => (
                   <;$2 />
                     key={entry.id}
+
                     className='flex items - center justify - between py - 2 border - b'
                   >
                     <div>
                       <p className='font - medium capitalize'>
                         {entry.reason || 'adjustment'}
+
                       </p>
                       <p className='text - xs text - muted - foreground'>
                         {formatDistanceToNow (new Date (entry.created_at), {
-                          add_suffix: true,
-                        })}
+                          add_suffix: true })}
+
                       </p></$1>
-                    <Badge
+                    <Badge />
                       variant='outline'
                       className={
                         entry.delta >= 0
                           ? 'bg - green - 100 text - green - 800'
                           : 'bg - red - 100 text - red - 800'
                       }                      variant="outline"
-                      class_name = {entry.delta >= 0 ? 'bg - green - 100 text - green - 800' : 'bg - red - 100 text - red - 800', }
+                      class_name = {entry.delta >= 0 ? 'bg - green - 100 text - green - 800' : 'bg - red - 100 text - red - 800' }
+
                     >
                       {entry.delta >= 0 ? '+' : ''}                      {entry.delta} pts                    </Badge></$1>))}
+
               </div></$1>)}
+
         </CardContent></$1>
-      <Card className='text - center'>
-        <CardContent className='pt - 6'>
-          <Star className='h - 12 w - 12 text - primary mx - auto mb - 4' />
+      <Card />
+        <CardContent />
+          <Star />
           <h3 className='text - 2xl font - bold mb - 2'>
             Full Rewards System Coming Soon</$1>
           <p className='text - muted - foreground mb - 4'>
             We're finalizing the redemption system. Keep earning points -
             they'll be ready to spend soon!</$1>
-          <div className='flex gap - 4 justify - center'>
-            <Button variant='outline' as_child>
+          <div>
+            <Button />
               <Link href='/marketplace'>Browse Marketplace</Link>          </p>
-          <div className="flex gap - 4 justify - center">
-            <Button variant="outline" as_child>
+          <div>
+            <Button />
               <Link href="/marketplace">Browse Marketplace</Link></$1>
-            <Button variant='outline' as_child>
-              <Link href='/community'>Join Community</Link>            <Button variant="outline" as_child>
+            <Button />
+              <Link href='/community'>Join Community</Link>            <Button />
               <Link href="/community">Join Community</Link></$1>
-            <Button variant='outline' as_child>
+            <Button />
               <Link href='/community'>Join Community</Link>            </Button></$1></$1></$1>
   )
 }
+
   )
 }
+
     </div>)
 }
 
   )
 
 }
+
     </div>)
 }

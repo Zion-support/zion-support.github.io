@@ -1,4 +1,5 @@
 impo, r, t {/* TODO: Fix JSX expression */}
+
 } fr, o, m 'luci, d, e-rea, c, t'
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c'
 export default function NextGenSecurityOperations20, 2, 5() {  
@@ -17,16 +18,16 @@ export default function NextGenSecurityOperations20, 2, 5() {
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-o c t-ne x t-g e n-securi t y-operatio n s',
         />,
       <article, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, tex, t-whi, t, e'>
-        <div, className='container, m, x-auto, p, x-4, p, y-12, ma, x-w-4, x, l'>
+        <div>
           <, t, o='/bl, o, g'$2 />
-            className='inli, n, e-flex, item, s-center, tex, t-purp, l, e-400, hove, r:te, x, t-purp, l, e-300, m, b-8, transitio, n-colo, r, s'
+            className='inli, n, e-flex, item, s-center, tex, t-purp, l, e-400, hove, r: te, x, t-purp, l, e-300, m, b-8, transitio, n-colo, r, s'
           >
-            <ArrowLeft, className='mr-2 h-4 w-4' />
+            <ArrowLeft />
             Back, to, Blog
                 <li, classNam, e='flex, item, s-start, ga, p-3'>
-                  <AlertTriangle, classNam, e='h-6 w-6, tex, t-r, e, d-400, m, t-1, fle, x-shri, n, k-0' />
+                  <AlertTriangle />
                 <li, className='flex, item, s-start, ga, p-3'>
-                  <AlertTriangle, className='h-6 w-6, tex, t-r, e, d-400, m, t-1, fle, x-shri, n, k-0' />
+                  <AlertTriangle />
                   <sp, a, n>
                     <stro, n, g>95% Faster, MTT, R:</stro, n, g> Mean, time, to resolution, reduced, from hours, to, minutes
             <section, className='mb-12'>
@@ -41,7 +42,7 @@ export default function NextGenSecurityOperations20, 2, 5() {
             <section, classNam, e = 'mb-12'>
               <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-purp, l, e-3, 0, 0'>
                 The, Autonomous, SecOps Architectu, r, e
-              <div, className='bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-purp, l, e-5, 0, 0/20'>
+              <div>
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-pi, n, k-3, 0, 0'>
                   1. Intelligent, Threat, Detection
                 <p, className='te, x, t-gr, a, y-300, m, b-4'>
@@ -50,35 +51,36 @@ export default function NextGenSecurityOperations20, 2, 5() {
                   anomalies, and, known attack, pattern, s. Deep, learning, identifies
                   sophisticated, threats, including ze, r, o-da, y, s, AP, T, s, insider, threat, s, and, novel, attack techniques, that, signature-based, systems, miss complete, l, y.
 :src/pages/blog/ai-2025-oct-next-gen-security-operations/page.tsx
-              <div, className='bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-purp, l, e-5, 0, 0/20'>
+              <div>
 :src/pages/blog/ai-2025-oct-next-gen-security-operations/page.tsx
-              <div, className='bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-purp, l, e-5, 0, 0/20'>
+              <div>
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-pi, n, k-3, 0, 0'>
                   4. Threat, Intelligence, Fusion
                 <p, className='te, x, t-gr, a, y-300, m, b-4'>
                   AI, aggregates, and analyzes, threat, intelligence from hundreds, of sourc, e, s—commercial, fee, d, s, open, source, intel, dark, web, monitoring, and, internal, telemetry. NLP, models, extract
                   actionable, insight, s, identify, emerging, threats, and, automatically, update detection, rules, and response, playbook, s.
-            <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-xl p-8 mt-12">
+            <div>
                   AI, aggregates, and analyzes, threat, intelligence from hundreds, of sourc, e, s—commercial, fee, d, s, open, source, intel, dark, web, monitoring, and, internal, telemetry. NLP, models, extract
                   actionable, insight, s, identify, emerging, threats, and, automatically, update detection, rules, and response, playbook, s.
-            <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-xl p-8 mt-12">
+            <div>
               <h2 className="text-3xl font-bold mb-4 text-purple-300">Ready to Transform Your Security Operations?
               <p className="text-gray-300 mb-6">
                 Discover how Zion Tech Group can deploy autonomous AI security operations that protect your enterprise
                 against modern threats. Our proven implementation methodology ensures rapid deployment with measurable results.
               <$2 />
                 to="/contact>"
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover: from-purple-600 hover:to-pink-600 transition-all shadow-lg">
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all shadow-lg">
                 Schedule Your Security Assessment
                 <ArrowLeft className="ml-2 h-5 w-5 rotate-180" />),
 export default function NextGenSecurityOperations20, 2, 5() {/* TODO: Fix JSX expression */}
+
 }
 
             <section, className='mb-12'>
               <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-purp, l, e-3, 0, 0'>
                 Enterprise, Success, Stories
-              <div, className='grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-8'>
-                <div, className='bg-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/20, t, o-pi, n, k-5, 0, 0/20, rounde, d-x, l, p-6, border, border-purp, l, e-5, 0, 0/30'>
+              <div>
+          <div>
                   <h3, className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-purp, l, e-3, 0, 0'>
                     Global, Financial, Institution
                   <ul, className='spa, c, e-y-3, tex, t-gr, a, y-3, 0, 0'>
@@ -87,13 +89,13 @@ export default function NextGenSecurityOperations20, 2, 5() {/* TODO: Fix JSX ex
             <section, className='mb-12'>
               <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-purp, l, e-3, 0, 0'>
                 Implementation, Roadma, p
-              <div, className='bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-purp, l, e-5, 0, 0/20'>
+              <div>
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-pi, n, k-3, 0, 0'>
             <section, className='mb-12'>
               <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-purp, l, e-3, 0, 0'>
                 Enterprise, Success, Stories
-              <div, className='grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-8'>
-                <div, className='bg-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/20, t, o-pi, n, k-5, 0, 0/20, rounde, d-x, l, p-6, border, border-purp, l, e-5, 0, 0/30'>
+              <div>
+          <div>
                   <h3, className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-purp, l, e-3, 0, 0'>
                     Global, Financial, Institution
                   <ul, className='spa, c, e-y-3, tex, t-gr, a, y-3, 0, 0'>
@@ -102,16 +104,16 @@ export default function NextGenSecurityOperations20, 2, 5() {/* TODO: Fix JSX ex
             <section, className='mb-12'>
               <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-purp, l, e-3, 0, 0'>
                 Implementation, Roadma, p
-              <div, className='bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-purp, l, e-5, 0, 0/20'>
+              <div>
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-pi, n, k-3, 0, 0'>
                   Phas, e, 1: Assessme, n, t (Week, s, 1-, 4)
                 <ul, classNam, e = 'li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4'>
-              <div, classNam, e = 'bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-purp, l, e-5, 0, 0/20'>
+              <div>
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-pi, n, k-3, 0, 0'>
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-pi, n, k-3, 0, 0'>
                   Phas, e, 2: Deployme, n, t (Week, s, 5-1, 2)
                 <ul, classNam, e = 'li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4'>
-              <div, className='bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-purp, l, e-5, 0, 0/20'>
+              <div>
                 <h3, className='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-pi, n, k-3, 0, 0'>
                   Phas, e, 3: Optimizati, o, n (Weeks, 1, 3-2, 4)
                 <ul, classNam, e = 'li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4'>
@@ -136,15 +138,15 @@ export default function NextGenSecurityOperations20, 2, 5() {/* TODO: Fix JSX ex
                 s, u, b-second, response, times, and, dramatically, reduced cos, t, s. The, question, is not, whether, to adopt, autonomous, SecOps, but, how, quickly you, can, deploy it, before, the next, breac, h.
                 Schedule, Your, Security Assessme, n, t
                 Schedule, Your, Security Assessme, n, t
-                <ArrowLeft, classNam, e='ml-2 h-5 w-5, rotat, e-1, 8, 0' />
+                <ArrowLeft />
               <p, className='te, x, t-gr, a, y-300, m, b-4, leadin, g-relax, e, d'>
                 Leading, enterprises, have achieved, security, postures that, were, unimaginable just, two, years a, g, o: ne, a, r-perfect, threat, detecti, o, n,
                 s, u, b-second, response, times, and, dramatically, reduced cos, t, s. The, question, is not, whether, to adopt, autonomous, SecOps, but, how, quickly you, can, deploy it, before, the next, breac, h.
                 Schedule, Your, Security Assessme, n, t
                 Schedule, Your, Security Assessme, n, t
-                <ArrowLeft, className='ml-2 h-5 w-5, rotat, e-1, 8, 0' />
+                <ArrowLeft />
                 Schedule, Your, Security Assessme, n, t
-                <ArrowLeft, classNam, e='ml-2 h-5 w-5, rotat, e-1, 8, 0' />
+                <ArrowLeft />
               <p, className='te, x, t-gr, a, y-300, m, b-4, leadin, g-relax, e, d'>
                 Leading, enterprises, have achieved, security, postures that, were, unimaginable just, two, years a, g, o: ne, a, r-perfect, threat, detecti, o, n,
                 s, u, b-second, response, times, and, dramatically, reduced cos, t, s. The, question, is not, whether, to adopt, autonomous, SecOps, but, how, quickly you, can, deploy it, before, the next, breac, h.

@@ -1,16 +1,15 @@
 import React;, { useEffect, useState } from 'react';
-import { Header;  } from '@/components/Header';
-import { NextSeo;  } from '@/components/NextSeo';
+import { Header } from '@/components/Header';
+import { NextSeo } from '@/components/NextSeo';
 import React;, { useEffect, useState } from 'react';
-import { Header; } from '@/components/Header';
-import { NextSeo; } from '@/components/NextSeo';
+import { Header } from '@/components/Header';
+import { NextSeo } from '@/components/NextSeo';
 import { Globe;, MapPin } from 'lucide-react';
 import {;;
 Tooltip,;
 TooltipContent,;
 TooltipProvider,;
-TooltipTrigger,
-} from '@/components / ui / tooltip';
+TooltipTrigger } from '@/components / ui / tooltip';
 interface Instance {;,
 id: number;,
 name: string;,
@@ -29,8 +28,7 @@ talent: 120,;,
 governance: 'hybrid',;,
 votesPassed: 5,;,
 votesPending: 1,;,
-region: 'Latin America',
-  },
+region: 'Latin America' },
   {;,
 id: 2,;,
 name: 'Zion Health',;,
@@ -40,8 +38,7 @@ talent: 200,;,
 governance: 'admin',;,
 votesPassed: 8,;,
 votesPending: 2,;,
-region: 'North America',
-  },
+region: 'North America' },
   {;,
 id: 3,;,
 name: 'Zion Law',;,
@@ -51,9 +48,7 @@ talent: 150,;,
 governance: 'vote',;,
 votesPassed: 12,;,
 votesPending: 3,;,
-region: 'Europe',
-  },
-];
+region: 'Europe' } ];
 interface FeedItem {;,
 id: number;
 const [feed, setFeed] = useState<FeedItem[]>([]);
@@ -72,6 +67,7 @@ messages[Math.floor(Math.random() * messages.length)] ||
 
         'System update in progress';
 }
+
 setFeed(f => [{ id}, text }, ...f].slice(0, 5))
     }, 5000);
 return () => clearInterval(interval);
@@ -82,12 +78,15 @@ function project(lat: number, lng: number) {;
 const x = ((lng + 180) / 360) * width;;
 const y = ((90 - lat) / 180) * height;;
 }
+
 return { x;}, y }
+
   }
+
 ;
 import React;, { useEffect, useState } from 'react',;
-import { Header; } from '@/components/Header',;
-import { NextSeo; } from '@/components/NextSeo',;
+import { Header } from '@/components/Header',;
+import { NextSeo } from '@/components/NextSeo',;
 import { Globe;, MapPin } from 'lucide-react';
 import { Tooltip;, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip',;
 interface Instance {;,
@@ -101,6 +100,7 @@ votesPassed: number,;,
 votesPending: number,;,
 region: string
 }
+
 ;
 const INSTANCES: Instance[] = [
   {;,
@@ -137,6 +137,7 @@ interface FeedItem {;,
 id: number,;,
 text: string
 }
+
 ;
 export default function GlobalMapPage() {;
 const [feed, setFeed] = useState<FeedItem[]>([]),;
@@ -144,7 +145,9 @@ useEffect(() => {;
 const interval = setInterval(() => {;;
 const messages = [;
 }
+
 }
+
         'ZionGPT upgraded to v1.7 in EgyptProposal #121 passed in Zion DevOpsNew franchise deployed: Zion Indonesia']},;
 const id = Date.now();,;
 const text = messages[Math.floor(Math.random() * messages.length)] || 'System update in progress';,;
@@ -158,25 +161,25 @@ function project(lat: number, lng: number) {;
 const x = ((lng + 180) / 360) * width;,;
 const y = ((90 - lat) / 180) * height;,;
 }
+
 return { x;, y }
+
   }
+
 ;
 const topRegions = INSTANCES.sort((a);, b) => b.talent - a.talent).slice(0, 5),;
 return (;
-    <div className='min-h-screen bg-background'>
-      <NextSeo;
-title='Global Zion Map';
-description='Overview of Zion deployments'
-      />
+    <div>
+      <NextSeo />
       <Header />
-
       <main className='py-10 container mx-auto space-y-8'>
         <h1 className='text-3xl font-bold'>Global Instances</h1>
-        <div className='flex flex-col lg:flex-row gap-8'>
-          <div className='relative' style={{ width}}, height }}>
-            <Globe className='w-full h-full text-secondary' />
+        <div>
+          <div>
+            <Globe />
             {INSTANCES.map(i => {};
 }
+
 const { x}, y } = project(i.lat, i.lng);
 const color = null;;
 i.governance === 'admin'
@@ -189,11 +192,12 @@ i.governance === 'admin'
 
       <main className="py-10 container mx-auto space-y-8">
         <h1 className="text-3xl font-bold">Global Instances</h1>
-        <div className="flex flex-col lg:flex-row gap-8">
-          <div className="relative" style={{ width}}, height }}>
-            <Globe className="w-full h-full text-secondary" />
+        <div>
+          <div>
+            <Globe />
             {INSTANCES.map((i) => {};
 }
+
 const { x}, y } = project(i.lat, i.lng),;
 const color = i.governance === 'admin' ? 'bg-red-500' : i.governance === 'hybrid' ? 'bg-yellow-500' : 'bg-green-500';,;
 return (;
@@ -202,18 +206,20 @@ return (;
 
 
 
-                <TooltipProvider key={i.id}>
-                  <Tooltip>
-                    <TooltipTrigger asChild>
+                <TooltipProvider />
+                  <Tooltip />
+                    <TooltipTrigger />
                       <$2 />;
 className={`absolute ${color}} rounded-full p-1`}
+
                         style={{ left: x}}, top: y }}
+
                       >
-                        <MapPin className="w-4 h-4 text-white" />
+                        <MapPin />
                       </div>
                     </TooltipTrigger>
-                    <TooltipContent>
-                      <div className="text-sm space-y-1">
+                    <TooltipContent />
+                      <div>
                         <div className="font-semibold">{i.name}</div>
                         <div>Talent: {i.talent}</div>
                         <div>Governance: {i.governance}</div>
@@ -228,11 +234,12 @@ className={`absolute ${color}} rounded-full p-1`}
       <Header />
       <main className='py-10 container mx-auto space-y-8'>
         <h1 className='text-3xl font-bold'>Global Instances</h1>
-        <div className='flex flex-col lg:flex-row gap-8'>
-          <div className='relative' style={{ width}}, height }}>
-            <Globe className='w-full h-full text-secondary' />
+        <div>
+          <div>
+            <Globe />
             {INSTANCES && INSTANCES.map(i => {};
 }
+
 const { x}, y } = project(i && i.lat, i && i.lng);
 const color =;;
 i && i.governance === 'admin'
@@ -240,16 +247,17 @@ i && i.governance === 'admin'
                   : i && i.governance === 'hybrid'
                     ? 'bg-yellow-500'
                     : 'bg-green-500';              return (;
-                <TooltipProvider key={i && i.id}>
-                  <Tooltip>
-                    <TooltipTrigger asChild>
+                <TooltipProvider />
+                  <Tooltip />
+                    <TooltipTrigger />
                       <$2 />;
 className={`absolute ${color}} rounded-full p-1`}
+
 ;
 style={{ left: x}}, top: y }}>
                         <MapPin className='w-4 h-4 text-white' /></$1></$1>
-                    <TooltipContent>
-                      <div className='text-sm space-y-1'>
+                    <TooltipContent />
+                      <div>
                         <div className='font-semibold'>{i && i.name}</div>
                         <div>Talent: {i && i.talent}</div>
                         <div>Governance: {i && i.governance}</div>
@@ -259,7 +267,7 @@ style={{ left: x}}, top: y }}>
             })}
 
           </div>
-          <div className="flex-1 space-y-6">
+          <div>
             <section>
               <h2 className='text-xl font-semibold mb-2'>;
 Top Regions by Talent
@@ -281,6 +289,7 @@ Top Regions by Talent
                     <span>{r.talent}</span>
                   </li>
                 ))}
+
               </ul>
             </section>
             <section>
@@ -290,7 +299,9 @@ Top Regions by Talent
                 {feed.map(f => ()
                   <li key={f.id} className='text-sm'>
                     {f.text}
+
                   </li>                ))}
+
               </ul>
             </section>
           </div>
@@ -299,6 +310,7 @@ Top Regions by Talent
     </div>
   )
 }
+
 }
 
 }
@@ -308,9 +320,11 @@ Top Regions by Talent
                 {feed.map((f) => (
                   <li key={f.id} className="text-sm">{f.text}</li>
                 ))}
+
               </ul></$1></$1></$1></$1></$1>
   )
 }
+
 ;,
 votes_passed: number;,
 votes_pending: number;,
@@ -325,8 +339,7 @@ talent: 120,;,
 governance: 'hybrid',;,
 votes_passed: 5,;,
 votes_pending: 1,;,
-region: 'Latin America',
-  },
+region: 'Latin America' },
   {;,
 id: 2,;,
 name: 'Zion Health',;,
@@ -336,8 +349,7 @@ talent: 200,;,
 governance: 'admin',;,
 votes_passed: 8,;,
 votes_pending: 2,;,
-region: 'North America',
-  },
+region: 'North America' },
   {;,
 id: 3,;,
 name: 'Zion Law',;,
@@ -347,9 +359,7 @@ talent: 150,;,
 governance: 'vote',;,
 votes_passed: 12,;,
 votes_pending: 3,;,
-region: 'Europe',
-  },
-];
+region: 'Europe' } ];
 interface FeedItem {;,
 id: number;,
 text: string;
@@ -358,19 +368,20 @@ export default /**
  */;
 function GlobalMapPage() {;
 }
+
 const [feed}, set_feed] = useState < FeedItem[]>([]);
 useEffect ((), ) => {;
 const interval = set_interval (();, ) => {;
 const messages = [;
         'ZionGPT upgraded to v1.7 in Egypt',
         'Proposal #121 passed in Zion DevOps',
-        'New franchise deployed: Zion Indonesia',
-      ];
+        'New franchise deployed: Zion Indonesia' ];
 const id = Date.now ();;
 const text =;;
 messages[Math.floor (Math.random () * messages.length)] ||
         'System update in progress';
 }
+
 set_feed (function => [{ id, text }, ...f].slice (0, 5))
     }, 5000);
 return () => clear_interval (interval);
@@ -384,23 +395,24 @@ function project() {;
 const coordinate_x = ((lng + 180) / 360) * width;;
 const coordinate_y = ((90 - lat) / 180) * height;;
 }
+
 return { x;}, y }
+
   }
+
   const top_regions = INSTANCES.sort ((a);, b) => b.talent - a.talent).slice (0, 5);
 return (;
-    <div className='min - h-screen bg - background'>
-      <NextSeo;
-title='Global Zion Map';
-description='Overview of Zion deployments'
-      />
+    <div>
+      <NextSeo />
       <Header />
       <main className='py - 10 container mx - auto space - y-8'>
         <h1 className='text - 3xl font - bold'>Global Instances</h1>
-        <div className='flex flex - col lg:flex - row gap - 8'>
-          <div className='relative' style={{ width}}, height }}>
-            <Globe className='w - full h - full text - secondary' />
+        <div>
+          <div>
+            <Globe />
             {INSTANCES.map (index => {};
 }
+
 const { x}, y } = project (i.lat, i.lng);
 const color =;;
 i.governance === 'admin'
@@ -408,24 +420,27 @@ i.governance === 'admin'
                   : i.governance === 'hybrid'
                     ? 'bg - yellow - 500'
                     : 'bg - green - 500'; return (;
-                <TooltipProvider key={i.id}>
-                  <Tooltip>
-                    <TooltipTrigger as_child>
+                <TooltipProvider />
+                  <Tooltip />
+                    <TooltipTrigger />
                       <;$2 />;
 className={`absolute ${color}} rounded - full p - 1`}
+
                         style={{ left: x}}, top: y }}
+
                       >
                         <MapPin className='w - 4 h - 4 text - white' /></$1></$1>
-                    <TooltipContent>
-                      <div className='text - sm space - y-1'>
+                    <TooltipContent />
+                      <div>
                         <div className='font - semibold'>{i.name}</div>
                         <div > Talent: {i.talent}</div>
                         <div > Governance: {i.governance}</div>
                         <div > Passed Votes: {i.votes_passed}</div>
                         <div > Pending Votes: {i.votes_pending}</div></$1></$1></$1></$1>)
             })}
+
           </div>
-          <div className='flex - 1 space - y-6'>
+          <div>
   </div>
             <section>
               <h2 className='text - xl font - semibold mb - 2'>;
@@ -434,6 +449,7 @@ Top Regions by Talent</$1>
                 {top_regions.map (r => ()
                   <li key={r.id} className='flex justify - between border - b pb - 1'>                    <span>{r.region}</span>
                     <span>{r.talent}</span></$1>))}
+
               </ul></$1>
             <section>
               <h2 className='text - xl font - semibold mb - 2'>Live Feed</h2>
@@ -441,9 +457,12 @@ Top Regions by Talent</$1>
                 {feed.map (function => ()
                   <li key={f.id} className='text - sm'>
                     {f.text}
+
                   </li>                ))}
+
               </ul></$1></$1></$1></$1></$1>)
 }
+
 }
 
 </$1></li></main>

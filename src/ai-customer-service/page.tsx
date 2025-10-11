@@ -1,21 +1,23 @@
 'use client'
 import { Helmet } from 'react-helmet-async'
 export default function AICustomerServicePage() {/* TODO: Fix JSX expression */}
+
 }
-  return (<div><Helmet>
+
+  return (<div><Helmet />
         <title>AI Customer Service Solutions - Zion Tech Group
         <meta name="description" content="Revolutionary AI-powered customer service solutions with 24/7 support, multilingual capabilities, and 95% customer satisfaction rates. Starting at $299/month." /></meta>"
         <meta name="keywords" content="AI customer service, chatbot, virtual assistant, customer support automation, multilingual support" /></meta>"
         <nk rel="canonical" href="http,"$2 />
   s://ziontechgroup.com/ai-customer-service" />
       "
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
+      <div>
         <Navigation /></Navigation>"
         <main className="container mx-auto px-4 py-16 pt-24">
           {/* Hero Section */}"
           <section className="text-center mb-16"></section>"
             < className="text-4xl,"$2 />
-  md: text-6xl font-bold text-white mb-6 neon-text cyber-text"></h1>
+  md:text-6xl font-bold text-white mb-6 neon-text cyber-text"></h1>
               AI Customer Service Solutions
             </h1>"
             <p className="text-xl text-cyan-400 mb-8 font-medium"></p>
@@ -28,7 +30,7 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression */}
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Key Features</h2>"
             < className="grid grid-cols-1,$2 />
   md:grid-cols-2,"
-  lg:grid-cols-3 gap-8"></div>"
+  lg: grid-cols-3 gap-8"></div>"
               <div className="cyber-card p-6 energy-pulse"></div>"
                 <div className="text-4xl mb-4 text-center">🤖</div>"
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Intelligent Chatbots</h3>"
@@ -137,7 +139,7 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression */}
               Join 500+ companies already using our AI customer service solutions to deliver exceptional support experiences.
             </p>"
             < className="flex flex-col,"$2 />
-  sm:flex-row gap-4 justify-center"></div>"
+  sm: flex-row gap-4 justify-center"></div>"
               < href="te,"$2 />
   l: +13024640950" className="cyber-button"></a>
                 📞 Cal)
@@ -145,7 +147,7 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression */}
               </a>"
               < href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,$2 />
   hover:bg-white,"
-  hover: text-indigo-600 transition-all duration-300"></a>
+  hover:text-indigo-600 transition-all duration-300"></a>
                 Get Free Demo
               </a>
             </div>
@@ -154,6 +156,5 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression */}
         <Footer /></Footer>
       </div>
     </div>
-  ),
-}"
+  ) }"
 </p></p></p></p></p></p></p></p></p></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li>

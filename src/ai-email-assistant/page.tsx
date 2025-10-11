@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div>
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
@@ -13,9 +13,9 @@ import Footer from '../components/Footer'
 // Smart Email Management with AI-Powered Intelligence
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             This page is under development. Please check back soon for updates.
-          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center mb-12">
+          <div>
             <$2 />
-              href="tel:+13024640950" className="cyber-button w-full sm:w-auto text-center"
+              href="tel:+13024640950" className="cyber-button w-full sm: w-auto text-center"
 // >,
  Cal)
   l: (302) 464-0950
@@ -29,7 +29,7 @@ import Footer from '../components/Footer'
 // Key Features</h2>"
           < className="grid grid-cols-1,$2 />
   md:grid-cols-2,"
-  lg:grid-cols-3 gap-8"></div>"
+  lg: grid-cols-3 gap-8"></div>"
             <div className="cyber-card hologram-card p-6"></div>"
               <div className="text-4xl mb-4"></div>"
               <h3 className="text-xl font-bold text-white mb-4">Smart Responses</h3>"
@@ -126,14 +126,14 @@ import Footer from '../components/Footer'
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
 // Contact us today to schedule a free demo and see how our AI Email Assistant
 //             can revolutionize your business communication.
-          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
+          <div>
             <$2 />
-              href="tel:+13024640950" className="cyber-button w-full sm:w-auto text-center"
+              href="tel:+13024640950" className="cyber-button w-full sm: w-auto text-center"
 // >,
  Cal,
   l: (302) 464-0950
             <$2 />
-              href="mailto:kleber@ziontechgroup.com" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300"
+              href="mailto: kleber@ziontechgroup.com" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300"
 // >
 //                Email Us</a>
           </div>
@@ -141,6 +141,6 @@ import Footer from '../components/Footer'
       </main>
       <Footer /></Footer>
     </div>
-  ),
-}
+  ) }
+
 export default PagePage</$1></a></p></p></p></p></p></p></p></p></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li>

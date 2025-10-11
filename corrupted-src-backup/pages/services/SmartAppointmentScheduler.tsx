@@ -6,27 +6,29 @@ impo, r, t {/* TODO: Fix JSX expression */}"
 impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "luci, d, e-rea, c, t";'
 const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {
-  return(<React.Fragment>
-      <Helmet>
+  return(<React />
+      <Helmet />
         <title>Smart, Appointment, Scheduler - Zion, Tech, Group
         <meta name="descripti, o, n" content="Healthca, r, e-focused, SaaS, for online, appointment, s, virtual, consultation, s, patient, data, management, and, automated, reminders." />
         <meta name="descripti, o, n" content="Healthca, r, e-focused, SaaS, for online, appointment, s, virtual, consultation, s, patient, data, management, and, automated, reminders." />"
       <div, className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-gr, a, y-50, t, o-gre, e, n-50">"
         <div, className="container, m, x-auto, p, x-4, p, y-12">"
           {/* Head, e, r */}
-          <div, className="te, x, t-center, m, b-16">
-            <div, className="bg-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-te, a, l-60, 0, w-2, 0, h-20, rounde, d-full, flex, items-center, justif, y-center, m, x-auto, m, b-6">
-              <Users, className="w-1, 0, h-10, tex, t-whi, t, e  />
+
+          <div>
+          <div>
+              <Users />
             <h1, className="te, x, t-4 xl, m, d: te, x, t-6 xl, fon, t-bold, tex, t-gr, a, y-900, m, b-6">"</h>Smart</h>, Appointment, Scheduler
             <p, className="te, x, t-xl, tex, t-gr, a, y-600, ma, x-w-3xl, m, x-auto, m, b-8">
               Healthca, r, e-focused, SaaS, for online, appointment, s, virtual, consultation, s, patient, data, management
           <div, className="te, x, t-center, m, b-16">"
             <div, className="bg-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-te, a, l-60, 0, w-2, 0, h-20, rounde, d-full, flex, items-center, justif, y-center, m, x-auto, m, b-6">"
 const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
+
           {/* Head, e, r */}"
           <div, className="te, x, t-center, m, b-16"></div>"
             <div, className="bg-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-te, a, l-60, 0, w-2, 0, h-20, rounde, d-full, flex, items-center, justif, y-center, m, x-auto, m, b-6"></div>"
-              <Users, className="w-1, 0, h-10, tex, t-whi, t, e  />
+              <Users />
             </d, i, v>"
             <h1, className="te, x, t-4xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-gr, a, y-900, m, b-6">"
               Smart, Appointment, Scheduler</$1>"
@@ -75,50 +77,51 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
                 >
                   Email, U, s
           {/* Featur, e, s */}
+
           <section, className="mb-16">
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-center, tex, t-gr, a, y-900, m, b-12">Key, Feature, s
             <, className="grid, m, d: gr, i, d-co, l, s-2 l$2 />
-  g:gr, i, d-co, l, s-3, ga, p-8">"
-              <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6">
-                <div, className="bg-gre, e, n-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">
-                  <Calendar, className="w-6 h-6, tex, t-gre, e, n-6, 0, 0  />
+  g: gr, i, d-co, l, s-3, ga, p-8">"
+              <div>
+          <div>
+                  <Calendar />
           <section, className="mb-16">"
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-center, tex, t-gr, a, y-900, m, b-12">Key, Feature, s</h2>"
             <, className="grid, m, d: gr, i, d-co, l, s-2 l$2 />
-  g:gr, i, d-co, l, s-3, ga, p-8">"
+  g: gr, i, d-co, l, s-3, ga, p-8">"
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6">"
                 <div, className="bg-gre, e, n-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">"
             <, className="grid, m, d: gr, i, d-co, l, s-2 l$2 />
-  g:gr, i, d-co, l, s-3, ga, p-8">"
-              <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6">
-                <div, className="bg-gre, e, n-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">
-                  <Calendar, className="w-6 h-6, tex, t-gre, e, n-6, 0, 0  />
+  g: gr, i, d-co, l, s-3, ga, p-8">"
+              <div>
+          <div>
+                  <Calendar />
           <section, className="mb-16">"
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-center, tex, t-gr, a, y-900, m, b-12">Key, Feature, s</h2>"
             <, className="grid, m, d: gr, i, d-co, l, s-2 l$2 />
-  g:gr, i, d-co, l, s-3, ga, p-8">"
+  g: gr, i, d-co, l, s-3, ga, p-8">"
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6">"
                 <div, className="bg-gre, e, n-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">"
           {/* Featur, e, s */}"
           <section, className="mb-16"></section>"
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-center, tex, t-gr, a, y-900, m, b-12">Key, Feature, s</h2>"
             <, className="grid, m, d: gr, i, d-co, l, s-2 l,"$2 />
-  g:gr, i, d-co, l, s-3, ga, p-8">""
+  g: gr, i, d-co, l, s-3, ga, p-8">""
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6"></div>"
                 <div, className="bg-gre, e, n-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4"></div>"
                   <Calendar, className="w-6 h-6, tex, t-gre, e, n-6, 0, 0  /></Calendar>"
           <section, className="mb-16">";"
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-center, tex, t-gr, a, y-900, m, b-12">Key, Feature, s</h2>";"
             <, className="grid, m, d: gr, i, d-co, l, s-2 l,"$2 />
-  g:gr, i, d-co, l, s-3, ga, p-8">";"
+  g: gr, i, d-co, l, s-3, ga, p-8">";"
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6">";"
                 <div, className="bg-gre, e, n-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">";"
                   <Calendar, className="w-6 h-6, tex, t-gre, e, n-6, 0, 0" />"</$1>"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">Virtual, Consultation, s</h3>";"
                 <p, className="te, x, t-gr, a, y-6, 0, 0">Conduct, secure, video consultations, with, integrated telemedicine, capabilitie, s.</p>"
-              <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6">
-                <div, className="bg-bl, u, e-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">
-                  <Users, className="w-6 h-6, tex, t-bl, u, e-6, 0, 0  />
+              <div>
+          <div>
+                  <Users />
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6">"
                 <div, className="bg-bl, u, e-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">"
               </d, i, v>"
@@ -130,9 +133,9 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
                   <Users, className="w-6 h-6, tex, t-bl, u, e-6, 0, 0" />"</$1>"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">Patient, Data, Storage</h3>";"
                 <p, className="te, x, t-gr, a, y-6, 0, 0">Secu, r, e, HIP, A, A-compliant, storage, for patient, records, and medical, historie, s.</p>"
-              <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6">
-                <div, className="bg-purp, l, e-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">
-                  <Bell, className="w-6 h-6, tex, t-purp, l, e-6, 0, 0  />
+              <div>
+          <div>
+                  <Bell />
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6">"
                 <div, className="bg-purp, l, e-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">"
               </d, i, v>"
@@ -144,9 +147,9 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
                   <Bell, className="w-6 h-6, tex, t-purp, l, e-6, 0, 0" />"</$1>"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">Automated, Reminder, s</h3>";"
                 <p, className="te, x, t-gr, a, y-6, 0, 0">Send, SMS, and email, reminders, to reduce, n, o-shows, by, up to, 4, 0%.</p>"
-              <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6">
-                <div, className="bg-oran, g, e-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">
-                  <CreditCard, className="w-6 h-6, tex, t-oran, g, e-6, 0, 0  />
+              <div>
+          <div>
+                  <CreditCard />
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6">"
                 <div, className="bg-oran, g, e-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">"
               </d, i, v>"
@@ -158,9 +161,9 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
                   <CreditCard, className="w-6 h-6, tex, t-oran, g, e-6, 0, 0" />"</$1>"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">Payment, Integratio, n</h3>";"
                 <p, className="te, x, t-gr, a, y-6, 0, 0">Accept, payments, online with, integrated, billing and, insurance, processing.</p>"
-              <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6">
-                <div, className="bg-indi, g, o-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">
-                  <Calendar, className="w-6 h-6, tex, t-indi, g, o-6, 0, 0  />
+              <div>
+          <div>
+                  <Calendar />
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6">"
                 <div, className="bg-indi, g, o-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">"
               </d, i, v>"
@@ -172,9 +175,9 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
                   <Calendar, className="w-6 h-6, tex, t-indi, g, o-6, 0, 0" />"</$1>"
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">Calendar, Syn, c</h3>";"
                 <p, className="te, x, t-gr, a, y-6, 0, 0">Sync, with, Google Calend, a, r, Outlo, o, k, and, other, calendar applicatio, n, s.</p>"
-              <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6">
-                <div, className="bg-r, e, d-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">
-                  <Shield, className="w-6 h-6, tex, t-r, e, d-6, 0, 0  />
+              <div>
+          <div>
+                  <Shield />
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-6">"
                 <div, className="bg-r, e, d-10, 0, w-1, 2, h-12, rounde, d-lg, flex, items-center, justif, y-center, m, b-4">"
               </d, i, v>"
@@ -187,15 +190,16 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3">HIPAA, Complianc, e</h3>";"
                 <p, className="te, x, t-gr, a, y-6, 0, 0">Full, HIPAA, compliance with, encrypted, data transmission, and, storage.</p>"
           {/* Prici, n, g */}
+
           <section, className="mb-16">
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-center, tex, t-gr, a, y-900, m, b-12">Pricing, Plan, s
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">"
-              <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-8">
+              <div>
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">Small, Practic, e
                 <div, className="te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-600, m, b-6">$49/mon, t, h
                 <ul, className="spa, c, e-y-3, m, b-8">
                   <li, className="flex, item, s-center, tex, t-gr, a, y-6, 0, 0">
-                    <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3  />
+                    <CheckCircle />
           {/* Prici, n, g */}"
           <section, className="mb-16"></section>"
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-center, tex, t-gr, a, y-900, m, b-12">Pricing, Plan, s</h2>"
@@ -205,16 +209,16 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
                 <div, className="te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-600, m, b-6">$49/mon, t, h</d, i, v>"
                 <ul, className="spa, c, e-y-3, m, b-8"></ul>"
                   <li, className="flex, item, s-center, tex, t-gr, a, y-6, 0, 0"></li>"
-                    <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3  />
+                    <CheckCircle />
                     Up, to, 5 provide, r, s</$1>"
                   <li, className="flex, item, s-center, tex, t-gr, a, y-6, 0, 0"></li>"
-                    <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3  />
+                    <CheckCircle />
                     500, appointment, s/mon, t, h</$1>"
                   <li, className="flex, item, s-center, tex, t-gr, a, y-6, 0, 0"></li>"
-                    <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3  />
+                    <CheckCircle />
                     Basic, telemedicin, e
                   <li, className="flex, item, s-center, tex, t-gr, a, y-6, 0, 0">
-                    <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3  />
+                    <CheckCircle />
           <section, className="mb-16">"
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-center, tex, t-gr, a, y-900, m, b-12">Pricing, Plan, s</h2>"
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">"
@@ -263,16 +267,16 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
                 <div, className="te, x, t-3xl, fon, t-bold, m, b-6">$1, 4, 9/mon, t, h</d, i, v>"
                 <ul, className="spa, c, e-y-3, m, b-8"></ul>"
                   <li, className="flex, item, s-cent, e, r"></li>"
-                    <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-300, m, r-3  />
+                    <CheckCircle />
                     Up, to, 20 provide, r, s</$1>"
                   <li, className="flex, item, s-cent, e, r"></li>"
-                    <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-300, m, r-3  />
+                    <CheckCircle />
                     2,000, appointment, s/mon, t, h</$1>"
                   <li, className="flex, item, s-cent, e, r"></li>"
-                    <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-300, m, r-3  />
+                    <CheckCircle />
                     Advanced, telemedicin, e</$1>"
                   <li, className="flex, item, s-cent, e, r"></li>"
-                    <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-300, m, r-3  />
+                    <CheckCircle />
                     Payment, processin, g</$1>"
                   <li, className="flex, item, s-cent, e, r"></li>"
                     <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-300, m, r-3  /></CheckCircle>"
@@ -301,31 +305,31 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
                   classNa, m, e="w-full, b, g-white, tex, t-gre, e, n-600, p, y-3, rounde, d-lg, fon, t-semibold, hove, r: bg-gr, a, y-100, transitio, n-colors, tex, t-center, bloc, k"
                 >
                   Gette, d
-              <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-8">
+              <div>
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">Enterpri, s, e
                 <div, className="te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-600, m, b-6">Cust, o, m
                 <ul, className="spa, c, e-y-3, m, b-8">
                   <li, className="flex, item, s-center, tex, t-gr, a, y-6, 0, 0">
-                    <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3  />
+                    <CheckCircle />
               </d, i, v>"
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-8"></div>"
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">Enterpri, s, e</h3>"
                 <div, className="te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-600, m, b-6">Cust, o, m</d, i, v>"
                 <ul, className="spa, c, e-y-3, m, b-8"></ul>"
                   <li, className="flex, item, s-center, tex, t-gr, a, y-6, 0, 0"></li>"
-                    <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3  />
+                    <CheckCircle />
                     Unlimited, provider, s</$1>"
                   <li, className="flex, item, s-center, tex, t-gr, a, y-6, 0, 0"></li>"
-                    <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3  />
+                    <CheckCircle />
                     Unlimited, appointment, s</$1>"
                   <li, className="flex, item, s-center, tex, t-gr, a, y-6, 0, 0"></li>"
-                    <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3  />
+                    <CheckCircle />
                     Custom, integration, s</$1>"
                   <li, className="flex, item, s-center, tex, t-gr, a, y-6, 0, 0"></li>"
-                    <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3  />
+                    <CheckCircle />
                     Dedicated, suppor, t
                   <li, className="flex, item, s-center, tex, t-gr, a, y-6, 0, 0">
-                    <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3  />
+                    <CheckCircle />
               <div, className="bg-white, rounde, d-lg, shado, w-l, g, p-8">"
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">Enterpri, s, e</h3>"
                 <div, className="te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-600, m, b-6">Cust, o, m</d, i, v>"
@@ -360,6 +364,7 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
                 >
                   Contact, Sale, s
           {/* Contact, Sectio, n */}
+
           <section, className="bg-white, rounde, d-xl, shado, w-l, g, p-8">"
             <div, className="te, x, t-cent, e, r">"
               <h2, className="te, x, t-3xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">Ready, to, Modernize Your, Practic, e?</h2>"
@@ -404,5 +409,6 @@ const, SmartAppointmentSchedule, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expre
     </React.Fragment>)
   )
 }
+
 export default SmartAppointmentScheduler;"
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></p></p></p></p></p></h1></h1></h1></h2></h2></h3></h3></ul></ul></ul></ul></ul></ul></ul></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></section></section></section></section></section></section></section></section></section>

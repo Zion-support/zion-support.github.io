@@ -37,30 +37,33 @@ import {
   ShoppingCart} from 'lucide-react'
 
 const Footer: React.FC = () => {
+  
   return (
     <footer className="bg-slate-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+      <div>
+          <div>
           {/* Company Info */}
-          <div className="lg:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
-                <Brain className="w-5 h-5 text-white" />
+
+          <div>
+          <div>
+              <div>
+                <Brain />
               </div><span className="text-xl font-bold">Zion Tech Group</span>
             </div><p className="text-gray-300 mb-6 max-w-md">
               Leading provider of AI and IT solutions, transforming businesses through innovative technology and expert consulting.
             </p>
-            <div className="flex space-x-4">
+            <div>
               <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                <Brain className="w-5 h-5" />
+                <Brain />
               </a>
               <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                <Cloud className="w-5 h-5" />
+                <Cloud />
               </a>
               <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                <Code className="w-5 h-5" />
+                <Code />
               </a>
             </div></div>{/* Services */}
+
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
@@ -71,6 +74,7 @@ const Footer: React.FC = () => {
               <li><Link to="/consultation" className="text-gray-300 hover:text-cyan-400 transition-colors">Consultation</Link></li>
             </ul>
           </div>{/* Solutions */}
+
           <div>
             <h3 className="text-lg font-semibold mb-4">Solutions</h3>
             <ul className="space-y-2">
@@ -81,32 +85,34 @@ const Footer: React.FC = () => {
               <li><Link to="/robotics" className="text-gray-300 hover:text-cyan-400 transition-colors">Robotics</Link></li>
             </ul>
           </div>{/* Contact */}
+
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
-            <div className="space-y-3">
-              <div className="flex items-center space-x-2">
-                <Phone className="w-4 h-4 text-cyan-400" />
+            <div>
+          <div>
+                <Phone />
                 <span className="text-gray-300">+1 (555) 123-4567</span>
-              </div><div className="flex items-center space-x-2">
-                <Mail className="w-4 h-4 text-cyan-400" />
+              </div><div>
+                <Mail />
                 <span className="text-gray-300">info@ziontech.com</span>
-              </div><div className="flex items-center space-x-2">
-                <MapPin className="w-4 h-4 text-cyan-400" />
+              </div><div>
+                <MapPin />
                 <span className="text-gray-300">123 Tech Street, Innovation City</span>
               </div></div></div></div>{/* Bottom Section */}
-        <div className="border-t border-gray-700 mt-12 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
+
+        <div>
+          <div>
             <p className="text-gray-400 text-sm">
               © 2024 Zion Tech Group. All rights reserved.
             </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link to="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
+            <div>
+              <Link to="/legal/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Privacy Policy
               </Link>
-              <Link to="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <Link to="/legal/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Terms of Service
               </Link>
-              <Link to="/cookies" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <Link to="/legal/cookies" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Cookie Policy
               </Link>
             </div></div></div></div></footer>

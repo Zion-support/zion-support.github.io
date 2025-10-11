@@ -1,7 +1,9 @@
 // import React { useEffect } from \"react\" interface PerformanceMetrics {; fcp?: number; lcp?: number; fid?: number; cls?: number} ttfb?: number} fmp?: number} ; \"; interface ApiResponse<T = unknown> {/* TODO: Fix JSX expression */}
+
   a: \'T\'; statu} s: \'number\'}message?: string} ; interface User {/* TODO: Fix JSX expression */}"
   l: \'string\'; nam; e: \'string\'} rol}\"} e: \"admin\" | \"user\" | \"guest\"} ; interface Service {/* TODO: Fix JSX expression */}"
   l: \'string\'; nam; e: \'string\'} rol}\"} e: \"admin\" | \"user\" | \"guest\"} ; interface Service {/* TODO: Fix JSX expression */}
+
   n: \'string\'; pric} e: \'number\'}} categor,y: \'string\'} ; interface FormData {; } [ke,
   y: \'string]: string | number | boolean | File\'} ; interface ComponentProps {; className?: string} children?: React.ReactNode [ke,
   y: \'string]: unknown\'} ; const,
@@ -149,9 +151,11 @@
   s: {"}; "Content-Type": "application/json"},bod,"
   y: JSON.stringify({) ur} l: "window.location.href")timestam,"
   p: Date.now()}metrics})}).catch(console.error)} ; return null export default PerformanceMonitor" fcpObserver.disconnect();} lcpObserver.disconnect();} fidObserver.disconnect();} clsObserver.disconnect();} fmpObserver.disconnect()"; window.removeEventListener("beforeunload")sendMetrics);} },[]);} " return null; "'"'"' import _React { useEffect } from "react" interface PerformanceMetrics {; fcp?: number; lcp?: number; fid?: number; cls?: number} ttfb?: number} fmp?: number} ; "; interface ApiResponse<T = unknown> {/* TODO: Fix JSX expression */}
+
   a: 'T; statu} s: 'number}message?: string} ; interface User {/* TODO: Fix JSX expression */}"
   l: 'string; nam; e: 'string} rol}"} e: "admin" | "user" | "guest"} ; interface Service {/* TODO: Fix JSX expression */}"
   l: 'string; nam; e: 'string} rol}"} e: "admin" | "user" | "guest"} ; interface Service {/* TODO: Fix JSX expression */}
+
   n: 'string; pric} e: 'number}} categor,y: 'string'} ; interface FormData {; } [ke,
   y: 'string]: string | number | boolean | File'} ; interface ComponentProps {; className?: string} children?: _React.ReactNode [ke,
   y: 'string]: unknown'} ; const,
