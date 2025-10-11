@@ -67,7 +67,7 @@ address: '364 E Main St STE 1008, Middletown, DE 19709'} return (
       <Helmet>
         <title>Privacy Page - Zion Tech Group</title>
         <meta name="description" content="Advanced AI and IT solutions for modern businesses."
-      </Helmet>
+      </Helmet />
       
       <Navigation />
       
@@ -75,7 +75,7 @@ address: '364 E Main St STE 1008, Middletown, DE 19709'} return (
       <section className="
     g: px-8"
         <div className="max-w-7xl mx-auto text-center"
-          <h1 className="text-4xl m, d:text-6xl font-bold text-white mb-6"
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"
 Privacy <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
@@ -141,7 +141,7 @@ We collect information to provide better services to our users
     g: px-8"
         <div className="max-w-7xl mx-auto"
           <div className="text-center mb-16"
-            <h2 className="text-3xl m, d:text-4xl font-bold text-white mb-4"
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"
 How We Use Your Information
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto"
@@ -241,7 +241,7 @@ Questions About Privacy?
 Contact our privacy team for any questions or concerns about your data
             </p>
             
-            <div className="grid grid-cols-1 m, d: grid-cols-3 gap-8 mb-8"
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8 mb-8"
               <div className="flex items-center justify-center"
                 <Mail className="w-6 h-6 text-cyan-400 mr-3"
                 <span className="text-white"

@@ -78,9 +78,6 @@ const AboutPage: React.FC = () => {const features = [
                 Our core principles guide everything we do
               </p>
             </div>
-      
-      <Footer />
-    </>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {features.map((feature, index) => {
                 const Icon = feature.icon
@@ -89,15 +86,9 @@ const AboutPage: React.FC = () => {const features = [
                     <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
                       <Icon className="w-8 h-8 text-white" />
                     </div>
-      
-      <Footer />
-    </>
                     <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                     <p className="text-gray-300">{feature.description}</p>
                   </div>
-      
-      <Footer />
-    </>
                 );
               })}
             </div>

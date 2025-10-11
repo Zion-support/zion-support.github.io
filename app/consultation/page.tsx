@@ -49,7 +49,7 @@ return (
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Advanced page solutions powered by artificial intelligence and cutting-edge technology."
         <meta name="keywords" content="AI, page, artificial intelligence, business solutions, automation"
-      </Helmet>
+      </Helmet />
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8"
           <div className="max-w-7xl mx-auto"

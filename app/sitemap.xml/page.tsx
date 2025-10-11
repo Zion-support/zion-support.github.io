@@ -36,7 +36,7 @@ const SitemapXMLPage: React.FC = () => {return (
 };
 
 export default SitemapXMLPage
-      </div>
+      </div />
       
       <Footer />
     </>

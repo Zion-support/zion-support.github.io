@@ -98,20 +98,23 @@ const AccessibilityPage: React.FC = () => {const features = [
 
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto"
-            <div className="text-center mb-16"
-              <h2 className="text-3xl m, d:text-4xl font-bold text-white mb-6"
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto"
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Accessibility Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our accessibility solutions cover all aspects of digital inclusion, ensuring your products work for everyone.
               </p>
+            </div>
 
-            <div className="grid md: grid-cols-2 l, g:grid-cols-3 gap-8"
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6"
-                  <feature.icon className="w-12 h-12 text-purple-400 mb-4"
-                  <h3 className="text-xl font-semibold text-white mb-3"
-                  <p className="text-gray-300 mb-4"
-                  <ul className="space-y-2"
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                  <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
                     {feature.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center text-sm text-gray-300"
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2"
