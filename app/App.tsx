@@ -109,14 +109,12 @@ const BusinessIntelligencePage = lazy(() => import('./business-intelligence/page
 const EnterprisePage = lazy(() => import('./enterprise/page'));
 const DigitalTransformationPage = lazy(() => import('./digital-transformation/page'));
 const EdgeComputingPage = lazy(() => import('./edge-computing/page'));
-<<<<<<< HEAD
 // Loading component
 const AppLoadingSpinner = const AppLoadingSpinner = const AppLoadingSpinner = () => ();
 );
 
 const App: React.FC = () => {
     return ()
-=======
 // Loading component;
 const AppLoadingSpinner = () => ()
   <LoadingSpinner />)

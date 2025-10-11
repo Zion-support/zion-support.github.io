@@ -5,25 +5,13 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 const ErrorPage: React.FC = () => {
-<<<<<<< HEAD
   const features = const features = const features = [
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',;
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',;
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'];
-=======
-  const features = [
-    
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: [''Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis''];
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-    },
-    {
-      icon: BarChart,
->>>>>>> origin/main
+
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: [''Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics'']
@@ -40,15 +28,9 @@ const ErrorPage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: [''Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'']
     },
-<<<<<<< HEAD
   ];
   return ()
-=======
-  ];];
-  return (
-    <>
-      <Helmet>
->>>>>>> origin/main
+
         <title>Error - Zion Tech Group</title>
         <meta name="description" content="Error page." />
         <meta name="keywords" content="error, AI solutions, IT services, business transformation" />
@@ -88,7 +70,6 @@ const ErrorPage: React.FC = () => {
       </main>
     </>
   );
-<<<<<<< HEAD
 }, {/* Features Section */}
         <section className="py-20 px-4 sm: px-6 lg:px-8" /></section>
           <div className="max-w-7xl mx-auto" /></div>
@@ -97,7 +78,6 @@ const ErrorPage: React.FC = () => {
                 Our Services,
   </
               <p className="text-xl text-gray-600 max-w-3xl mx-auto" /></p>
-=======
 } {/* Features Section */}
         <section className="py-20 px-4 sm: px-6 lg:px-8">
           </section></section><div className="max-w-7xl mx-auto">
@@ -110,11 +90,9 @@ const ErrorPage: React.FC = () => {
                 Discover how our solutions can help transform your business.
               </p></p></p>
             </div>
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" /></div>
               {features.map((feature, index) => ()
                     {feature.benefits.map((benefit, benefitIndex) => ()
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 </div></div><div key=index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
@@ -138,7 +116,6 @@ const ErrorPage: React.FC = () => {
           </div>
         </section>
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4 sm: px-6 lg:px-8 bg-blue-600" /></section>
           <div className="max-w-4xl mx-auto text-center" /></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6" /></h2>
@@ -150,7 +127,6 @@ const ErrorPage: React.FC = () => {
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold" /></button>
               Contact Us
   </
-=======
         <section className="py-20 px-4 sm: px-6 lg:px-8 bg-blue-600">
           </section></section><div className="max-w-4xl mx-auto text-center">
             </div></div><h2 className="text-3xl md:text-4xl font-bold text-white mb-6">

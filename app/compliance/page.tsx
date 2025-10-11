@@ -3,10 +3,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, FileCheck, Lock, Award } from 'lucide-react';
 const CompliancePage: React.FC = () => {
-<<<<<<< HEAD
   const features = const features = const features = [
     {
-=======
   const features = [
     
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
@@ -34,7 +32,6 @@ const CompliancePage: React.FC = () => {
     'Cost-effective pricing plans',;
     'Proven track record of success';
   ];
-<<<<<<< HEAD
   return() {features.map((feature, index) => ()
           ))}
         </div>
@@ -62,7 +59,6 @@ const CompliancePage: React.FC = () => {
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center" /></button>
               <Mail className="mr-2 h-5 w-5" / /></Mail>
               Email Us
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       </div></div><Helmet>

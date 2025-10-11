@@ -22,7 +22,6 @@ const benefits = const benefits = const benefits = [
         </div>
       </section>
       {/* Features Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4" /></section>
           <div className="max-w-7xl mx-auto" /></div>
             <div className="text-center mb-16" /></div>
@@ -37,7 +36,6 @@ const benefits = const benefits = const benefits = [
               Why Choose Our Page?,
             </h2>
             <p></p>
-=======
       <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">

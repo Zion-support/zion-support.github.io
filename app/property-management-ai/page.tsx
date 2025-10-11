@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Home, Users, DollarSign, BarChart, Shield, Zap } from 'lucide-react';
 const PropertyManagementAIPage: React.FC = () => {
-<<<<<<< HEAD
   const features = const features = const features = [
     { icon: Home, title: 'Property Portfolio Management', description: 'Comprehensive management of multiple properties with AI insights.' },
     { icon: Users, title: 'Tenant Management', description: 'Automated tenant screening, communication, and relationship management.' },
@@ -13,25 +12,7 @@ const PropertyManagementAIPage: React.FC = () => {
     { icon: Zap, title: 'Automation', description: 'Automated rent collection, lease renewals, and property operations.' };
   ];
   return() {features.map((feature, index) => ()
-=======
-  const features = [
-    
-      icon: Home, title: 'Property Portfolio Management', description: 'Comprehensive management of multiple properties with AI insights.' },
-    {
-      icon: Users, title: 'Tenant Management', description: 'Automated tenant screening, communication, and relationship management.' },
-    {
-      icon: DollarSign, title: 'Rent Optimization', description: 'AI-powered rent pricing and revenue optimization strategies.' },
-    {
-      icon: BarChart, title: 'Financial Analytics', description: 'Advanced financial reporting and property performance analytics.' },
-    {
-      icon: Shield, title: 'Maintenance Tracking', description: 'Predictive maintenance and automated work order management.' },
-    {
-      icon: Zap, title: 'Automation', description: 'Automated rent collection, lease renewals, and property operations.' }
-  ];];];
-  return (
-    <>
-      <Helmet>
->>>>>>> origin/main
+
         <title>Property Management AI | Zion Tech Group - Intelligent Real Estate Management</title>
         <meta name="description" content="Transform your property management with AI-powered tools. Optimize rent, manage tenants, and maximize property value." />
         <meta name="keywords" content="property management AI, real estate software, tenant management, rent optimization, property analytics" />

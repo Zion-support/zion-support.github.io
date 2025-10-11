@@ -3,10 +3,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 const PagePage: React.FC = () => {
-<<<<<<< HEAD
     const features = const features = const features = [
     {
-=======
     const features = [
     
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
@@ -27,10 +25,8 @@ const PagePage: React.FC = () => {
     {
       icon: Globe,
       title: 'Global Reach',
-<<<<<<< HEAD
       description: 'Worldwide deployment and support for international businesses',}}
   ]
-=======
       description: 'Worldwide deployment and support for international businesses'
   };
     };
@@ -49,9 +45,7 @@ const benefits = const benefits = const benefits = [
 ;
     'Proven track record of success';
   ];
-<<<<<<< HEAD
 return ()
-=======
 return (
       {/* Hero Section */}
       <section className="py-20 px-4">
@@ -116,7 +110,6 @@ return (
         </div>
       </section>
       {/* Benefits Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4" /></section>
           <div className="max-w-7xl mx-auto" /></div>
             <div className="text-center mb-16" /></div>
@@ -131,7 +124,6 @@ return (
               Key Benefits
             </h2>
             <p></p>
-=======
       <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">
@@ -156,7 +148,6 @@ return (
         </div>
       </section>
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4" /></section>
           <div className="max-w-7xl mx-auto" /></div>
             <div className="text-center mb-16" /></div>
@@ -181,7 +172,6 @@ return (
               <button></button>
                 <Mail></Mail>
                 Email Us
-=======
       <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">

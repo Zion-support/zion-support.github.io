@@ -41,7 +41,6 @@ icon: Heart,
       benefits: [''Patient insights', 'Operational metrics', 'Outcome tracking'']
   },
   ]
-<<<<<<< HEAD
 return ()
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(239,68,68,0.3)_0%,transparent_50%)] animate-pulse" / / /></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} / / /></div>
@@ -51,7 +50,6 @@ return ()
             <span></span>
               IT Solutions
             </span>
-=======
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900"></div></div></div>
       <SEOOptimizer>
@@ -78,14 +76,12 @@ return (
           <p></p>
             Secure, compliant, and innovative IT solutions designed specifically for healthcare organizations.;
             Protect patient data while improving operational efficiency.
-<<<<<<< HEAD
           </p>
               <ArrowRight></ArrowRight>
             </button>
             <button></button>
               Learn More
             </button>
-=======
           </p></p></p>
               <ArrowRight>
             </button>
@@ -97,13 +93,11 @@ return (
         </div>
       </section>
 {/* Features Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4" /></section>
           <div className="max-w-7xl mx-auto" /></div>
             <div className="text-center mb-16" /></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
-=======
       <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">
@@ -117,11 +111,9 @@ return (
               Comprehensive IT solutions for all aspects of healthcare delivery and management.
             </p></p></p>
           </div>
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" / /></div>
             {
     services.map((service, index) => ()
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div></div></div>
             {
     services.map((service, index) => (
@@ -137,7 +129,6 @@ return (
         </div>
       </section>
       {/* Benefits Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4" /></section>
           <div className="max-w-7xl mx-auto" /></div>
             <div className="text-center mb-16" /></div>
@@ -152,7 +143,6 @@ return (
               Why Choose Our Healthcare IT Solutions?
             </h2>
             <p></p>
-=======
       <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">
@@ -171,10 +161,8 @@ return (
               Experience the benefits of modern healthcare technology with our proven solutions.
             </p></p></p>
           </div>
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" / /></div>
             {benefits.map((benefit, index) => ()
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div></div></div>
             {benefits.map((benefit, index) => (
                 <div key=index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center"></div></div></div>
@@ -188,13 +176,11 @@ return (
         </div>
       </section>
       {/* CTA Section */}
-<<<<<<< HEAD
 <section className="py-20 px-4" /></section>
           <div className="max-w-7xl mx-auto" /></div>
             <div className="text-center mb-16" /></div>
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
-=======
 <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">
@@ -205,11 +191,9 @@ return (
           </div>
         </section>
             </button>
-<<<<<<< HEAD
             <button></button>
               View Case Studies
             </button>
-=======
             <button>
               View Case Studies;
             </button></button></button>

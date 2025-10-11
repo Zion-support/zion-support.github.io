@@ -3,10 +3,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 const FuturisticHeroPage: React.FC = () => {
-<<<<<<< HEAD
     const features = const features = const features = [
     {
-=======
     const features = [
     
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
@@ -27,10 +25,8 @@ const FuturisticHeroPage: React.FC = () => {
     {
       icon: Globe,
       title: 'Global Reach',
-<<<<<<< HEAD
       description: 'Worldwide deployment and support for international businesses',}}
   ]
-=======
       description: 'Worldwide deployment and support for international businesses'
   };
     };
@@ -49,9 +45,7 @@ const benefits = const benefits = const benefits = [
 ;
     'Proven track record of success';
   ];
-<<<<<<< HEAD
 return() {benefits.map((benefit, index) => ()
-=======
 return ()
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div></div></div>)
             {benefits.map((benefit, index) => (
@@ -65,7 +59,6 @@ return ()
         </div>
       </section>
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4" /></section>
           <div className="max-w-7xl mx-auto" /></div>
             <div className="text-center mb-16" /></div>
@@ -90,7 +83,6 @@ return ()
               <button></button>
                 <Mail></Mail>
                 Email Us
-=======
       <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">

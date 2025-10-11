@@ -3,10 +3,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, Shield, Brain, Globe, Zap } from 'lucide-react';
 const BlockchainPage: React.FC = () => {
-<<<<<<< HEAD
   const features = const features = const features = [
     {
-=======
   const features = [
     
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
@@ -34,7 +32,6 @@ const BlockchainPage: React.FC = () => {
     'Cost-effective pricing plans',;
     'Proven track record of success';
   ];
-<<<<<<< HEAD
   return ()
           ))}
         </div>
@@ -61,7 +58,6 @@ const BlockchainPage: React.FC = () => {
               <div className="text-center" /></div>
                 <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" /></div>
                   <Link className="w-8 h-8 text-blue-600" / /></Link>
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       </div></div><Helmet>
@@ -105,11 +101,9 @@ const BlockchainPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Blockchain Experts</h3></h3></h3>
                 <p className="text-gray-600">Certified blockchain developers and architects</p></p></p>
               </div>
-<<<<<<< HEAD
               <div className="text-center" /></div>
                 <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" /></div>
                   <Shield className="w-8 h-8 text-green-600" / /></Shield>
-=======
               <div className="text-center">
                 </div></div><div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   </div></div><Shield className="w-8 h-8 text-green-600" />
@@ -118,11 +112,9 @@ const BlockchainPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Security First</h3></h3></h3>
                 <p className="text-gray-600">Comprehensive security audits and best practices</p></p></p>
               </div>
-<<<<<<< HEAD
               <div className="text-center" /></div>
                 <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" /></div>
                   <Zap className="w-8 h-8 text-purple-600" / /></Zap>
-=======
               <div className="text-center">
                 </div></div><div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   </div></div><Zap className="w-8 h-8 text-purple-600" />
@@ -131,11 +123,9 @@ const BlockchainPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Rapid Development</h3></h3></h3>
                 <p className="text-gray-600">Fast delivery with proven development frameworks</p></p></p>
               </div>
-<<<<<<< HEAD
               <div className="text-center" /></div>
                 <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" /></div>
                   <Target className="w-8 h-8 text-orange-600" / /></Target>
-=======
               <div className="text-center">
                 </div></div><div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   </div></div><Target className="w-8 h-8 text-orange-600" />
@@ -147,13 +137,10 @@ const BlockchainPage: React.FC = () => {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Services by Category */}{categories.map(category => ()
           <section key={category}className="py-16 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,</div>
-=======
         {/* Services by Category */},
-<<<<<<< HEAD
     {categories.map()
                   Professional {category.toLowerCase()} solutions powered by blockchain technology
   </
@@ -177,7 +164,6 @@ const BlockchainPage: React.FC = () => {
                         <h4 className="font-semibold text-gray-900 mb-2">Business Benefits:</h4>
                         <ul className="space-y-1" /></ul>
                           {service.benefits.map((benefit, benefitIndex) => ()
-=======
     {categories.map(category => (
           <section key=category} className="py-16 bg-gray-50">
             </section></section><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -247,14 +233,11 @@ const BlockchainPage: React.FC = () => {
               </div>
             </div>
           </section>
-<<<<<<< HEAD
         ))}
         {/* Blockchain Capabilities Showcase */} <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,</div>
-=======
         ))},
     {/* Blockchain Capabilities Showcase */}
-<<<<<<< HEAD
         <section className="py-16 bg-white" /></section>
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8" /></div>
             <div className="text-center mb-12" /></div>
@@ -262,7 +245,6 @@ const BlockchainPage: React.FC = () => {
                 Our Blockchain Capabilities
   </
               <p className="text-xl text-gray-600" /></p>
-=======
         <section className="py-16 bg-white">
           </section></section><div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             </div></div><div className="text-center mb-12">
@@ -274,7 +256,6 @@ const BlockchainPage: React.FC = () => {
                 Comprehensive blockchain technologies and methodologies for modern business applications,
   </p></p></
             </div>
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" /></div>
               <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg" /></div>
                 <Link className="w-12 h-12 text-blue-600 mx-auto mb-4" / /></Link>
@@ -305,7 +286,6 @@ const BlockchainPage: React.FC = () => {
                 <BarChart className="w-12 h-12 text-indigo-600 mx-auto mb-4" / /></BarChart>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Blockchain Analytics</h3>
                 <p className="text-gray-600">Comprehensive data analysis and visualization tools</p>
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               </div></div><div className="text-center p-6 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg">
                 </div></div><Link className="w-12 h-12 text-blue-600 mx-auto mb-4" />
@@ -342,7 +322,6 @@ const BlockchainPage: React.FC = () => {
           </div>
         </section>
         {/* Contact Section */}
-<<<<<<< HEAD
         <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white" /></section>
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center" /></div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4" /></h2>
@@ -363,7 +342,6 @@ const BlockchainPage: React.FC = () => {
             </div>
             <div className="mt-8 text-sm text-blue-200" /></div>
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-=======
         <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
           </section></section><div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             </div></div><h2 className="text-3xl md:text-4xl font-bold mb-4">

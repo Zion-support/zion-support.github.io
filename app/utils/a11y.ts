@@ -10,9 +10,7 @@ export function generateId(prefix = 'a11y'): string {}}return `${prefix}-${Math.
 /**;
  * Announce message to screen readers;
  */;
-<<<<<<< HEAD
 export function announceToScreenReader()
-=======
 export function announceToScreenReader(;
   message: string,)
   priority: 'polite' | 'assertive' = 'polite')
@@ -34,16 +32,13 @@ document.body.appendChild(announcement);
  * Trap focus within a container (useful for modals);
  */;
 export function trapFocus(element: HTMLElement): () => void {
-<<<<<<< HEAD
     const focusableElements = const focusableElements = const focusableElements = element.querySelectorAll();
-=======
     const focusableElements = element.querySelectorAll(,)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
   );
   const firstFocusable = focusableElements[0] as HTMLElement;
   const lastFocusable = focusableElements[focusableElements.length - 1] as HTMLElement;
-<<<<<<< HEAD
 const handleKeyDown = const handleKeyDown = ()
     if (e.key === 'Tab') {
       if (e.shiftKey) {
@@ -51,7 +46,6 @@ const handleKeyDown = const handleKeyDown = ()
           lastFocusable?.focus();) => {
   return ()
   )
-=======
 const handleKeyDown = (;)
     if (e.key === 'Tab') {
       if (e.shiftKey) {
@@ -85,9 +79,7 @@ export function isKeyboardAccessible(element: HTMLElement): boolean {
 /**;
  * Add keyboard navigation support to custom interactive elements;
  */;
-<<<<<<< HEAD
 export function makeKeyboardAccessible()
-=======
 export function makeKeyboardAccessible(;)
   element: HTMLElement,)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
@@ -101,13 +93,11 @@ export function makeKeyboardAccessible(;)
   const { role = 'button', tabindex = 0 } = options;
 element.setAttribute('role', role);
   element.setAttribute('tabindex', tabindex.toString());
-<<<<<<< HEAD
 const handleKeyDown = const handleKeyDown = ()
     if (e.key === 'Enter' || e.key === ' ') {;
     e.preventDefault();) => {
   return ()
   )
-=======
 const handleKeyDown = (;)
     if (e.key === 'Enter' || e.key === ', ') {
     e.preventDefault();) => 
@@ -126,18 +116,14 @@ return () => {element.removeEventListener('click', onClick);
 /**;
  * Check color contrast ratio (WCAG 2.1);
  */;
-<<<<<<< HEAD
 export function getContrastRatio(color1: string, color2: string): number {,}
     const getLuminance = (color: string): number => {,
     const rgb = color.match(/\d+/g)?.map(Number) || [0, 0, 0]
     const [r, g, b] = rgb.map(c => {)
-=======
 export function getContrastRatio(color1: string, color2: string): number {
     const getLuminance = (color: string): number => ;
     const rgb = color.match(/\d+/g)?.map(Number) || [0, 0, 0];
-<<<<<<< HEAD
     const [r, g, b] = rgb.map()
-=======
     const [r, g, b] = rgb.map(c => ;)
       c = c / 255;)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
@@ -155,9 +141,7 @@ return (brightest + 0.05) / (darkest + 0.05);
 /**;
  * Check if contrast ratio meets WCAG standards;
  */;
-<<<<<<< HEAD
 export function meetsContrastRequirements()
-=======
 export function meetsContrastRequirements(;
   color1: string,
   color2: string,
@@ -215,13 +199,11 @@ export function getAriaInvalid(hasError: boolean): Record<string, string> {
 /**;
  * Create accessible tooltip;
  */;
-<<<<<<< HEAD
 export function createAccessibleTooltip()
 ): () => void {
     const tooltip = const tooltip = const tooltip = document.createElement('div')
   tooltip.textContent = content;
   tooltip.className = 'tooltip',;
-=======
 export function createAccessibleTooltip(;
   trigger: HTMLElement,
   content: string,)
@@ -241,13 +223,11 @@ export function createAccessibleTooltip(;
   tooltip.style.zIndex = '1000';
   tooltip.style.display = 'none';
 document.body.appendChild(tooltip);
-<<<<<<< HEAD
 const showTooltip = const showTooltip = ();
     const triggerRect = trigger.getBoundingClientRect();
 switch (placement) {) => {
   return ()
   )
-=======
 const showTooltip = (;)
     tooltip.style.display = 'block';)
     const triggerRect = trigger.getBoundingClientRect();
@@ -276,9 +256,7 @@ switch (placement) ) =>
   }
 const hideTooltip = (;) => {
     return ()
-<<<<<<< HEAD
   )
-=======
     $3)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
@@ -310,9 +288,7 @@ restoreFocus(): void {
     }
   }
 moveFocusInside(container: HTMLElement): void {
-<<<<<<< HEAD
     const focusableElements = const focusableElements = const focusableElements = container.querySelectorAll();
-=======
     const focusableElements = container.querySelectorAll(,)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';

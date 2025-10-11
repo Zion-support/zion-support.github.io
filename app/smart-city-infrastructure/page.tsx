@@ -8,46 +8,9 @@ import Footer from '../components/Footer';
 
 const SmartCityInfrastructurePage: React.FC = () => {,
 
-<<<<<<< HEAD
   const features = const features = const features = [
     {
-=======
-  const features = [
-    
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-      icon: Brain,
-      title: 'AI-Powered Solutions',
 
-      description: 'Advanced AI technology to transform your city infrastructure and improve efficiency',},
-    {icon: Zap,
-      title: 'High Performance',
-
-      description: 'Lightning-fast processing and real-time analytics for optimal city management',},
-    {icon: Shield,
-      title: 'Enterprise Security',
-
-<<<<<<< HEAD
-      description: 'Bank-level security with advanced encryption and compliance standards',},
-    {icon: Globe,
-      title: 'Global Reach',
-const PagePage: React.FC = () => {,
-=======
-      description: 'Bank-level security with advanced encryption and compliance standards'
-
-    },
-<<<<<<< HEAD
-    {;
-    icon: Globe,;
-      title: 'Global Reach',];
-const PagePage: React.FC = () => {
-  const features = const features = const features = [
-    {
-=======
-    {
-      icon: Globe,
-      title: 'Global Reach',];];
-const PagePage: React.FC = () => {
->>>>>>> origin/main
   const features = [
     
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
@@ -84,7 +47,6 @@ const PagePage: React.FC = () => {
     },
     {
       icon: Wifi,
->>>>>>> origin/main
       title: 'IoT Networks',
       description: 'Comprehensive IoT infrastructure for city-wide connectivity',
       features: ['Sensor networks', 'Data collection', 'Real-time monitoring', 'Edge computing']},
@@ -95,19 +57,13 @@ const PagePage: React.FC = () => {
     {icon: Database,
       title: 'Digital Infrastructure',
       description: 'Robust digital infrastructure for smart city operations',
-<<<<<<< HEAD
       features: ['Cloud platforms', 'Data storage', 'API management', 'Security protocols']}]
 
-=======
-      features: ['Cloud platforms', 'Data storage', 'API management', 'Security protocols']
-    }
-  ]
->>>>>>> origin/main
+
           </div>
         </div>
       </section>
       {/* Benefits Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4" /></section>
           <div className="max-w-7xl mx-auto" /></div>
             <div className="text-center mb-16" /></div>
@@ -122,111 +78,7 @@ const PagePage: React.FC = () => {
               Key Benefits
             </h2>
             <p></p>
-=======
-      <section className="py-20 px-4">
-          </section></section><div className="max-w-7xl mx-auto">
-            </div></div><div className="text-center mb-16">
-              </div></div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2></h2></h2>
-              <p className="text-xl text-gray-300">Section description</p></p></p>
-            </div>
-          </div>
-        </section>
-        <div className="max-w-7xl mx-auto"></div></div></div>
-          <div className="text-center mb-16"></div></div></div>
-            <h2>
-              Key Benefits;
-            </h2></h2></h2>
-            <p>
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-              Experience the power of our page solutions for your business.,
-            </p></p></p>
-          </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* CTA Section */}
-<<<<<<< HEAD
-      <section className="py-20 px-4" /></section>
-          <div className="max-w-7xl mx-auto" /></div>
-            <div className="text-center mb-16" /></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-        </section>
-        <div className="max-w-4xl mx-auto text-center" / /></div>
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12" / /></div>
-            <h2></h2>
-              Ready to Get Started?
-            </h2>
-            <p></p>
-              Contact our experts to discuss your page needs and get a customized solution.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center" / /></div>
-              <button></button>
-                <Phone></Phone>
-                Call Now
-              </button>
-              <button></button>
-                <Mail></Mail>
-                Email Us
-=======
-      <section className="py-20 px-4">
-          </section></section><div className="max-w-7xl mx-auto">
-            </div></div><div className="text-center mb-16">
-              </div></div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2></h2></h2>
-              <p className="text-xl text-gray-300">Section description</p></p></p>
-            </div>
-          </div>
-        </section>
-        <div className="max-w-4xl mx-auto text-center"></div></div></div>
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div></div></div>
-            <h2>
-              Ready to Get Started?
-            </h2></h2></h2>
-            <p>
-              Contact our experts to discuss your page needs and get a customized solution.
-            </p></p></p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div></div></div>
-              <button>
-                </button></button><Phone>
-                Call Now;
-              </button>
-              <button>
-                </button></button><Mail>
-                Email Us;
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  ),
-};
 
-export default PagePage;
-
-  const benefits = const benefits = const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',;
-    'Cost-effective pricing plans',;
-    'Proven track record of success';
-<<<<<<< HEAD
-  ];
-  return() {features.map((feature, index) => ()
-=======
-  ];];];
-  return (
-    <>
-      <Helmet>
->>>>>>> origin/main
         <title>Smart City Infrastructure - Zion Tech Group</title>
         <meta name="description" content="Advanced smart city infrastructure solutions including IoT networks, data analytics, and digital transformation for modern cities." />
         <meta name="keywords" content="smart city, infrastructure, IoT, data analytics, digital transformation, urban planning" />
@@ -288,7 +140,6 @@ export default PagePage;
         </section>
 
         {/* Services Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5" /></section>
           <div className="max-w-7xl mx-auto" /></div>
             <div className="text-center mb-16" /></div>
@@ -296,7 +147,6 @@ export default PagePage;
                 Our Smart City Services
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto" /></p>
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">
@@ -308,11 +158,9 @@ export default PagePage;
                 Comprehensive solutions for modern smart city infrastructure.
               </p></p></p>
             </div>
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8" /></div>
               {smartCityServices.map((service, index) => ()
                     {service.features.map((feature, featureIndex) => ()
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {smartCityServices.map((service, index) => (
                 </div></div><div key=index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -341,7 +189,6 @@ export default PagePage;
         </section>
 
         {/* Benefits Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4 sm:px-6 lg:px-8" /></section>
           <div className="max-w-7xl mx-auto" /></div>
             <div className="text-center mb-16" /></div>
@@ -349,7 +196,6 @@ export default PagePage;
                 Key Benefits
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto" /></p>
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">
@@ -361,10 +207,8 @@ export default PagePage;
                 Experience the power of our smart city solutions for your community.
               </p></p></p>
             </div>
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6" /></div>
               {benefits.map((benefit, index) => ()
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {benefits.map((benefit, index) => (
                 </div></div><div key=index} className="flex items-start space-x-3">
@@ -378,7 +222,6 @@ export default PagePage;
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4 sm: px-6 lg:px-8" /></section>
           <div className="max-w-4xl mx-auto text-center" /></div>
             <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12" /></div>
@@ -396,7 +239,6 @@ export default PagePage;
                 <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center" /></button>
                   <Mail className="mr-2 h-5 w-5" / /></Mail>
                   Email Us
-=======
         <section className="py-20 px-4 sm: px-6 lg:px-8">
           </section></section><div className="max-w-4xl mx-auto text-center">
             </div></div><div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">

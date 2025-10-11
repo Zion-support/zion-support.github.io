@@ -3,7 +3,6 @@ import React from 'react';
 import {Helmet}}from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
 import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';
 const AiAnalyticsDashboardPage: React.FC = () => {,
     const features = [
@@ -338,18 +337,15 @@ const AIAnalyticsDashboard: React.FC = () => {,
                 >
                   Get Started;
                 </a>
-=======
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, PieChart, Activity } from 'lucide-react';
 
 const AiAnalyticsDashboardPage: React.FC = () => {
-<<<<<<< HEAD
   const features = const features = const features = [
     {
       icon: BarChart,
       title: 'Real-Time Analytics',;
       description: 'Get instant insights with real-time data visualization and monitoring.',;
       benefits: ['Live dashboards', 'Real-time updates', 'Instant alerts', 'Performance monitoring'];
-=======
   const features = [
     
       icon: BarChart,
@@ -385,9 +381,7 @@ const AiAnalyticsDashboardPage: React.FC = () => {
     'Gain competitive advantage with insights';
   ];
 
-<<<<<<< HEAD
   return ()
-=======
   return (
     <>
       <Helmet>
@@ -433,7 +427,6 @@ const AiAnalyticsDashboardPage: React.FC = () => {
       </main>
     </>
   );
-<<<<<<< HEAD
 }, {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8" /></section>
           <div className="max-w-7xl mx-auto" /></div>
@@ -449,7 +442,6 @@ const AiAnalyticsDashboardPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" /></div>
               {features.map((feature, index) => ()
                     {feature.benefits.map((benefit, benefitIndex) => ()
-=======
 } {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           </section></section><div className="max-w-7xl mx-auto">
@@ -488,7 +480,6 @@ const AiAnalyticsDashboardPage: React.FC = () => {
         </section>
 
         {/* Benefits Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5" /></section>
           <div className="max-w-7xl mx-auto" /></div>
             <div className="text-center mb-16" /></div>
@@ -502,7 +493,6 @@ const AiAnalyticsDashboardPage: React.FC = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" /></div>
               {benefits.map((benefit, index) => ()
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">
@@ -526,7 +516,6 @@ const AiAnalyticsDashboardPage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* CTA Section */} <section className="text-center">
           <div className="hologram-card-enhanced p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">,</h2>
@@ -548,9 +537,7 @@ const AiAnalyticsDashboardPage: React.FC = () => {
               >
                 Email Us;
               </a>
-=======
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4 sm:px-6 lg:px-8" /></section>
           <div className="max-w-4xl mx-auto text-center" /></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6" /></h2>
@@ -566,7 +553,6 @@ const AiAnalyticsDashboardPage: React.FC = () => {
               <button className="border border-gray-300 text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors" /></button>
                 Contact Sales
               </button>
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           </section></section><div className="max-w-4xl mx-auto text-center">
             </div></div><h2 className="text-3xl md:text-4xl font-bold text-white mb-6">

@@ -99,19 +99,19 @@ const Navigation: React.FC = () => {
               About
             </Link>
             
-            {/* Services Dropdown */}
+            {/* Solutions Dropdown */}
             <div className="relative group">
               <button className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium flex items-center">
-                Services
+                Solutions
                 <ChevronDown className="w-4 h-4 ml-1" />
               </button>
-              <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-lg rounded-lg shadow-xl border border-cyan-500/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+              <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-lg rounded-lg shadow-xl border border-cyan-500/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                 <div className="p-6">
-                  <div className="grid grid-cols-1 gap-4">
+                  <div className="grid grid-cols-2 gap-6">
                     <div>
                       <h3 className="text-cyan-400 font-semibold mb-3 flex items-center">
                         <Brain className="w-4 h-4 mr-2" />
-                        AI Services
+                        AI Solutions
                       </h3>
                       <div className="space-y-2">
                         <Link to="/ai-services" className="block text-gray-300 hover:text-cyan-400 text-sm transition-colors">
@@ -134,7 +134,7 @@ const Navigation: React.FC = () => {
                     <div>
                       <h3 className="text-cyan-400 font-semibold mb-3 flex items-center">
                         <Cloud className="w-4 h-4 mr-2" />
-                        IT Services
+                        IT Solutions
                       </h3>
                       <div className="space-y-2">
                         <Link to="/it-services" className="block text-gray-300 hover:text-cyan-400 text-sm transition-colors">
@@ -154,6 +154,20 @@ const Navigation: React.FC = () => {
                         </Link>
                       </div>
                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Services Dropdown */}
+            <div className="relative group">
+              <button className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium flex items-center">
+                Services
+                <ChevronDown className="w-4 h-4 ml-1" />
+              </button>
+              <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-lg rounded-lg shadow-xl border border-cyan-500/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                <div className="p-6">
+                  <div className="grid grid-cols-1 gap-4">
                     <div>
                       <h3 className="text-cyan-400 font-semibold mb-3 flex items-center">
                         <BarChart className="w-4 h-4 mr-2" />
@@ -177,6 +191,52 @@ const Navigation: React.FC = () => {
                         </Link>
                       </div>
                     </div>
+                    <div>
+                      <h3 className="text-cyan-400 font-semibold mb-3 flex items-center">
+                        <Users className="w-4 h-4 mr-2" />
+                        Enterprise
+                      </h3>
+                      <div className="space-y-2">
+                        <Link to="/enterprise" className="block text-gray-300 hover:text-cyan-400 text-sm transition-colors">
+                          Enterprise Solutions
+                        </Link>
+                        <Link to="/digital-transformation" className="block text-gray-300 hover:text-cyan-400 text-sm transition-colors">
+                          Digital Transformation
+                        </Link>
+                        <Link to="/business-intelligence" className="block text-gray-300 hover:text-cyan-400 text-sm transition-colors">
+                          Business Intelligence
+                        </Link>
+                        <Link to="/custom-software" className="block text-gray-300 hover:text-cyan-400 text-sm transition-colors">
+                          Custom Development
+                        </Link>
+                        <Link to="/consultation" className="block text-gray-300 hover:text-cyan-400 text-sm transition-colors">
+                          Consultation
+                        </Link>
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-cyan-400 font-semibold mb-3 flex items-center">
+                        <Code className="w-4 h-4 mr-2" />
+                        Resources
+                      </h3>
+                      <div className="space-y-2">
+                        <Link to="/tutorials" className="block text-gray-300 hover:text-cyan-400 text-sm transition-colors">
+                          Tutorials
+                        </Link>
+                        <Link to="/blog" className="block text-gray-300 hover:text-cyan-400 text-sm transition-colors">
+                          Blog
+                        </Link>
+                        <Link to="/docs" className="block text-gray-300 hover:text-cyan-400 text-sm transition-colors">
+                          Documentation
+                        </Link>
+                        <Link to="/api-docs" className="block text-gray-300 hover:text-cyan-400 text-sm transition-colors">
+                          API Reference
+                        </Link>
+                        <Link to="/demo" className="block text-gray-300 hover:text-cyan-400 text-sm transition-colors">
+                          Demo
+                        </Link>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -187,12 +247,6 @@ const Navigation: React.FC = () => {
             </Link>
             <Link to="/case-studies" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Case Studies
-            </Link>
-            <Link to="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Blog
-            </Link>
-            <Link to="/tutorials" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-              Tutorials
             </Link>
             <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Contact
@@ -238,20 +292,20 @@ const Navigation: React.FC = () => {
               <Link to="/about" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 About
               </Link>
-              <Link to="/services" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                Services
+              <Link to="/ai-services" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+                AI Services
+              </Link>
+              <Link to="/it-services" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+                IT Services
+              </Link>
+              <Link to="/micro-saas" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+                Micro SaaS
               </Link>
               <Link to="/pricing" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Pricing
               </Link>
               <Link to="/case-studies" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Case Studies
-              </Link>
-              <Link to="/blog" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                Blog
-              </Link>
-              <Link to="/tutorials" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
-                Tutorials
               </Link>
               <Link to="/contact" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Contact

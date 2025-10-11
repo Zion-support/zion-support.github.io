@@ -5,10 +5,8 @@ import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}
 }
   ]
 </span>
-<<<<<<< HEAD
               <br></br>
               <span className="text-white">Solutions</span>
-=======
               <br>
               <span className="text-white">Solutions</span></span></span>
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
@@ -16,7 +14,6 @@ import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}
             <p></p>
               Transform your business with our advanced systemmonitor solutions.;
               Powered by cutting-edge AI technology and industry expertise.
-<<<<<<< HEAD
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center" / /></div>
               <button></button>
@@ -26,7 +23,6 @@ import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}
               <button></button>
                 Learn More
               </button>
-=======
             </p></p></p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div></div></div>
               <button>

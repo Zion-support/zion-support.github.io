@@ -19,7 +19,6 @@ const benefits = const benefits = const benefits = [
     'Proven track record of success';
   ];
 {/* Hero Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4" /></section>
           <div className="max-w-7xl mx-auto" /></div>
             <div className="text-center mb-16" /></div>
@@ -36,7 +35,6 @@ const benefits = const benefits = const benefits = [
               </span>
               <br></br>
               <span className="text-white">Solutions</span>
-=======
       <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">
@@ -58,13 +56,11 @@ const benefits = const benefits = const benefits = [
             <p></p>
               Transform your business with our advanced lazyimage solutions.;
               Powered by cutting-edge AI technology and industry expertise.
-<<<<<<< HEAD
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center" / /></div>
               <button></button>
                 Get Started
                 <ArrowRight></ArrowRight>
-=======
             </p></p></p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div></div></div>
               <button>
@@ -82,7 +78,6 @@ const benefits = const benefits = const benefits = [
         </div>
       </section>
       {/* Benefits Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4" /></section>
           <div className="max-w-7xl mx-auto" /></div>
             <div className="text-center mb-16" /></div>
@@ -97,7 +92,6 @@ const benefits = const benefits = const benefits = [
               Key Benefits
             </h2>
             <p></p>
-=======
       <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">
@@ -116,10 +110,8 @@ const benefits = const benefits = const benefits = [
               Experience the power of our lazyimage solutions for your business.,
             </p></p></p>
           </div>
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6" / /></div>
             {benefits.map((benefit, index) => ()
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div></div></div>
             {benefits.map((benefit, index) => (
                 <div key=index} className="flex items-start space-x-3"></div></div></div>
@@ -132,7 +124,6 @@ const benefits = const benefits = const benefits = [
         </div>
       </section>
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4" /></section>
           <div className="max-w-7xl mx-auto" /></div>
             <div className="text-center mb-16" /></div>
@@ -157,7 +148,6 @@ const benefits = const benefits = const benefits = [
               <button></button>
                 <Mail></Mail>
                 Email Us
-=======
       <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">

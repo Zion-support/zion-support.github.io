@@ -8,13 +8,11 @@ import {CheckCircle, ArrowRight, Settings, Zap, Shield, Users, BarChart3}}from '
 
 const AIApiManagerPage: React.FC = () => {,
 
-<<<<<<< HEAD
   const features = const features = const features = [
     {
       title: 'Centralized API Control',;
       description: 'Manage all your APIs from a single, intuitive dashboard with comprehensive monitoring and control capabilities.',;
       benefits: ['Unified dashboard', 'Centralized control', 'Real-time monitoring', 'Easy management'];
-=======
   const features = [
     
       title: 'Centralized API Control',
@@ -27,7 +25,6 @@ const AIApiManagerPage: React.FC = () => {,
       description: 'Get deep insights into API usage, performance metrics, and user behavior with AI-powered analytics.',
       benefits: [''Usage analytics', 'Performance metrics', 'User insights', 'Predictive analytics'']
     },
-<<<<<<< HEAD
     {];
   return ()
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" / /></div>
@@ -45,7 +42,6 @@ const AIApiManagerPage: React.FC = () => {,
               Get Started
             </button>
             <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300" /></button>
-=======
     {];];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
@@ -81,12 +77,10 @@ const AIApiManagerPage: React.FC = () => {,
       </section>
 
       {/* Stats Section */}
-<<<<<<< HEAD
       <section className="py-16 px-4" /></section>
         <div className="max-w-6xl mx-auto" /></div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8" /></div>
             {stats.map((stat, index) => ()
-=======
       <section className="py-16 px-4">
         </section></section><div className="max-w-6xl mx-auto">
           </div></div><div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -105,7 +99,6 @@ const AIApiManagerPage: React.FC = () => {,
       </section>
 
       {/* Features Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4" /></section>
         <div className="max-w-7xl mx-auto" /></div>
           <div className="text-center mb-16" /></div>
@@ -120,7 +113,6 @@ const AIApiManagerPage: React.FC = () => {,
           <div className="grid md:grid-cols-3 gap-8" /></div>
             {features.map((feature, index) => ()
                   {feature.benefits.map((benefit, benefitIndex) => ()
-=======
       <section className="py-20 px-4">
         </section></section><div className="max-w-7xl mx-auto">
           </div></div><div className="text-center mb-16">
@@ -154,7 +146,6 @@ const AIApiManagerPage: React.FC = () => {,
         </div>
       </section>
       {/* Benefits Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4" /></section>
         <div className="max-w-7xl mx-auto" /></div>
           <div className="text-center mb-16" /></div>
@@ -166,7 +157,6 @@ const AIApiManagerPage: React.FC = () => {,
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" /></div>
             {benefits.map((benefit, index) => ()
-=======
       <section className="py-20 px-4">
         </section></section><div className="max-w-7xl mx-auto">
           </div></div><div className="text-center mb-16">
@@ -191,7 +181,6 @@ const AIApiManagerPage: React.FC = () => {,
         </div>
       </section>
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4" /></section>
         <div className="max-w-4xl mx-auto text-center" /></div>
           <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12" /></div>
@@ -208,7 +197,6 @@ const AIApiManagerPage: React.FC = () => {,
               <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300" /></button>
                 Contact Sales
               </button>
-=======
       <section className="py-20 px-4">
         </section></section><div className="max-w-4xl mx-auto text-center">
 

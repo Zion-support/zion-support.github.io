@@ -29,59 +29,9 @@ import {Shield,}
   }
 } from 'lucide-react'
 const SecurityMonitoringSuitePage: React.FC = () => {
-<<<<<<< HEAD
     const features = const features = const features = [
     {
-=======
-    const features = [
-    
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-      icon: Monitor,
-      title: 'Real-time Dashboard',
-      description: 'Comprehensive security monitoring dashboard with live threat detection and incident tracking.'
-  },
-    {
-      icon: AlertTriangle,
-      title: 'Advanced Alerts',
-      description: 'Intelligent alerting system that notifies you of security threats and anomalies instantly.'
-  },
-    {
-      icon: BarChart,
-      title: 'Security Analytics',
-      description: 'Detailed security reports and analytics to help you understand and improve your security posture.'
-  },
-    {
-      icon: Zap,
-      title: 'Automated Response',
-<<<<<<< HEAD
-      description: 'Automated incident response and threat mitigation to protect your systems 24/7.',}}
-  ]
-=======
-      description: 'Automated incident response and threat mitigation to protect your systems 24/7.'
-  };
-    };
-  ];
-const benefits = const benefits = const benefits = [
-    '24/7 security monitoring and protection',
-    'Real-time threat detection and alerts',
-    'Comprehensive security analytics',
-    'Automated incident response',
 
-    'Compliance monitoring and reporting',
-
-    'Easy-to-use dashboard interface',
-
-    'Scalable for any business size',;
-;
-    'Expert security team support';
-  ];
-<<<<<<< HEAD
-return ()
-=======
-return (
-    <>
-      <Helmet>
->>>>>>> origin/main
         <title>Security Monitoring Suite - Zion Tech Group | Cybersecurity Platform</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
@@ -120,7 +70,6 @@ return (
           </div>
         </section>
         {/* Features Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4" /></section>
           <div className="max-w-7xl mx-auto" /></div>
             <div className="text-center mb-16" /></div>
@@ -135,7 +84,6 @@ return (
                 Platform Features
               </h2>
               <p></p>
-=======
         <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">
@@ -154,10 +102,8 @@ return (
                 Our security monitoring suite provides everything you need to protect your business from cyber threats.,
               </p></p></p>
             </div>
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" / /></div>
               {features.map((feature, index) => ()
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div></div></div>
               {features.map((feature, index) => (
                 <div key=index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div></div></div>
@@ -172,7 +118,6 @@ return (
           </div>
         </section>
         {/* Benefits Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4" /></section>
           <div className="max-w-7xl mx-auto" /></div>
             <div className="text-center mb-16" /></div>
@@ -187,7 +132,6 @@ return (
                 Why Choose Our Suite?
               </h2>
               <p></p>
-=======
         <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">
@@ -206,10 +150,8 @@ return (
                 Experience comprehensive security protection with our all-in-one monitoring platform.,
               </p></p></p>
             </div>
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6" / /></div>
               {benefits.map((benefit, index) => ()
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div></div></div>
               {benefits.map((benefit, index) => (
                 <div key=index} className="flex items-start space-x-3"></div></div></div>
@@ -222,7 +164,6 @@ return (
           </div>
         </section>
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4" /></section>
           <div className="max-w-7xl mx-auto" /></div>
             <div className="text-center mb-16" /></div>
@@ -247,7 +188,6 @@ return (
                 <button></button>
                   <Mail></Mail>
                   Email Us
-=======
         <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">

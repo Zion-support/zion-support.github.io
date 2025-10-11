@@ -35,15 +35,9 @@ const benefits = const benefits = const benefits = [
     'Cost-effective pricing plans',;
 ;
     'Proven track record of success';
-<<<<<<< HEAD
   ];
 return ()
-=======
-  ];];];
-return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div></div>
-      <Helmet>
->>>>>>> origin/main
+
         <title>Page | Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
@@ -64,7 +58,6 @@ return (
         </div>
       </section>
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4" /></section>
           <div className="max-w-7xl mx-auto" /></div>
             <div className="text-center mb-16" /></div>
@@ -89,7 +82,6 @@ return (
               <button></button>
                 <Mail></Mail>
                 Email Us
-=======
       <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">

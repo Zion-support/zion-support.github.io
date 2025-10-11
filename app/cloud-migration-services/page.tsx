@@ -8,7 +8,6 @@ import {Helmet}}from 'react-helmet-async';
     'Easy integration with existing systems',;
     'Cost-effective pricing plans',;
     'Proven track record of success';
-<<<<<<< HEAD
   ];
   return() {features.map((feature, index) => ()
           ))}
@@ -36,7 +35,6 @@ import {Helmet}}from 'react-helmet-async';
   </
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center" /></button>
               <Mail className="mr-2 h-5 w-5" / /></Mail>
-=======
   ];];];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -98,7 +96,6 @@ import {Helmet}}from 'react-helmet-async';
         </div>
       </section>
       {/* Benefits Section */}
-<<<<<<< HEAD
       <section className="py-16 px-4 bg-white/5" /></section>
         <div className="max-w-7xl mx-auto" /></div>
           <div className="text-center mb-12" /></div>
@@ -106,7 +103,6 @@ import {Helmet}}from 'react-helmet-async';
               Key Benefits,
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto" /></p>
-=======
       <section className="py-16 px-4 bg-white/5">
         </section></section><div className="max-w-7xl mx-auto">
           </div></div><div className="text-center mb-12">
@@ -118,10 +114,8 @@ import {Helmet}}from 'react-helmet-async';
               Experience the power of our cloud migration solutions for your business.
             </p></p></p>
           </div>
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6" /></div>
             {benefits.map((benefit, index) => ()
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
               </div></div><div key=index} className="flex items-center space-x-3">
@@ -134,7 +128,6 @@ import {Helmet}}from 'react-helmet-async';
         </div>
       </section>
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py-16 px-4" /></section>
         <div className="max-w-4xl mx-auto text-center" /></div>
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-4" /></h2>
@@ -151,7 +144,6 @@ import {Helmet}}from 'react-helmet-async';
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center" /></button>
               <Mail className="mr-2 h-5 w-5" / /></Mail>
               Email Us
-=======
       <section className="py-16 px-4">
         </section></section><div className="max-w-4xl mx-auto text-center">
           </div></div><h2 className="text-3xl md: text-4xl font-bold text-white mb-4">

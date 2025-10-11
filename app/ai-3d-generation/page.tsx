@@ -5,14 +5,12 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 const Ai3dGenerationPage: React.FC = () => {
-<<<<<<< HEAD
     const features = const features = const features = [
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',;
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',;
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'];
-=======
     const features = [
     
       icon: Brain,
@@ -48,7 +46,6 @@ const benefits = const benefits = const benefits = [
     'Scale operations without proportional staff increases',;
     'Gain competitive advantage with advanced technology';
   ];
-<<<<<<< HEAD
 return ()
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" / /></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} / /></div>
@@ -66,7 +63,6 @@ return ()
               <button className="border border-white/30 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300" /></button>
                 View Demo
               </button>
-=======
 return (
     <>
       <Helmet>
@@ -99,7 +95,6 @@ return (
           </div>
         </section>
         {/* Features Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4" /></section>
           <div className="max-w-7xl mx-auto" /></div>
             <div className="text-center mb-16" /></div>
@@ -113,7 +108,6 @@ return (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" /></div>
               {features.map((feature, index) => ()
                       {feature.benefits.map((benefit, idx) => ()
-=======
         <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">
@@ -149,7 +143,6 @@ return (
           </div>
         </section>
         {/* Benefits Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4" /></section>
           <div className="max-w-7xl mx-auto" /></div>
             <div className="text-center mb-16" /></div>
@@ -162,7 +155,6 @@ return (
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" /></div>
               {benefits.map((benefit, index) => ()
-=======
         <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">
@@ -187,7 +179,6 @@ return (
           </div>
         </section>
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4" /></section>
           <div className="max-w-4xl mx-auto text-center" /></div>
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12" /></div>
@@ -204,7 +195,6 @@ return (
                 <button className="border border-white/30 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300" /></button>
                   Learn More
                 </button>
-=======
         <section className="py-20 px-4">
           </section></section><div className="max-w-4xl mx-auto text-center">
             </div></div><div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">

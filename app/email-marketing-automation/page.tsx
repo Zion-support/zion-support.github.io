@@ -27,59 +27,9 @@ import {Mail,}
   }
 } from 'lucide-react'
 const EmailMarketingAutomationPage: React.FC = () => {
-<<<<<<< HEAD
     const features = const features = const features = [
     {
-=======
-    const features = [
-    
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-      icon: Mail,
-      title: 'Automated Campaigns',
-      description: 'Create and manage sophisticated email marketing campaigns with AI-powered automation.'
-  },
-    {
-      icon: Target,
-      title: 'Advanced Segmentation',
-      description: 'Intelligent audience segmentation and personalization for maximum engagement and conversion.'
-  },
-    {
-      icon: BarChart,
-      title: 'Analytics & Insights',
-      description: 'Comprehensive analytics and reporting to track performance and optimize your campaigns.'
-  },
-    {
-      icon: Zap,
-      title: 'Smart Triggers',
-<<<<<<< HEAD
-      description: 'Behavior-based triggers and workflows to send the right message at the right time.',}}
-  ]
-=======
-      description: 'Behavior-based triggers and workflows to send the right message at the right time.'
-  };
-    };
-  ];
-const benefits = const benefits = const benefits = [
-    'Increase email engagement rates',
-    'Automate repetitive marketing tasks',
-    'Personalize customer experiences',
-    'Track and optimize campaign performance',
 
-    'Scale your email marketing efforts',
-
-    'Improve customer retention',
-
-    'Generate more qualified leads',;
-;
-    'Save time and resources';
-  ];
-<<<<<<< HEAD
-return ()
-=======
-return (
-    <>
-      <Helmet>
->>>>>>> origin/main
         <title>Email Marketing Automation - Zion Tech Group | Marketing Platform</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
@@ -118,7 +68,6 @@ return (
           </div>
         </section>
         {/* Features Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4" /></section>
           <div className="max-w-7xl mx-auto" /></div>
             <div className="text-center mb-16" /></div>
@@ -133,7 +82,6 @@ return (
                 Platform Features
               </h2>
               <p></p>
-=======
         <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">
@@ -152,10 +100,8 @@ return (
                 Our email marketing automation platform provides everything you need to succeed.,
               </p></p></p>
             </div>
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" / /></div>
               {features.map((feature, index) => ()
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div></div></div>
               {features.map((feature, index) => (
                 <div key=index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div></div></div>
@@ -170,7 +116,6 @@ return (
           </div>
         </section>
         {/* Benefits Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4" /></section>
           <div className="max-w-7xl mx-auto" /></div>
             <div className="text-center mb-16" /></div>
@@ -185,7 +130,6 @@ return (
                 Key Benefits
               </h2>
               <p></p>
-=======
         <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">
@@ -204,10 +148,8 @@ return (
                 Drive better results with our comprehensive email marketing automation platform.,
               </p></p></p>
             </div>
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6" / /></div>
               {benefits.map((benefit, index) => ()
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div></div></div>
               {benefits.map((benefit, index) => (
                 <div key=index} className="flex items-start space-x-3"></div></div></div>
@@ -220,7 +162,6 @@ return (
           </div>
         </section>
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4" /></section>
           <div className="max-w-7xl mx-auto" /></div>
             <div className="text-center mb-16" /></div>
@@ -245,7 +186,6 @@ return (
                 <button></button>
                   <Mail></Mail>
                   Email Us
-=======
         <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">

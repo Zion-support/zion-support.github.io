@@ -8,13 +8,11 @@ import {CheckCircle, ArrowRight, Zap, Shield, Users, BarChart3}}from 'lucide-rea
 
 const AIApiManagementPage: React.FC = () => {,
 
-<<<<<<< HEAD
   const features = const features = const features = [
     {
       title: 'Intelligent API Monitoring',;
       description: 'Real-time monitoring and analytics for all your APIs with AI-powered insights and anomaly detection.',;
       benefits: ['Real-time monitoring', 'Anomaly detection', 'Performance analytics', 'Automated alerts'];
-=======
   const features = [
     
       title: 'Intelligent API Monitoring',
@@ -27,7 +25,6 @@ const AIApiManagementPage: React.FC = () => {,
       description: 'AI-driven rate limiting that adapts to usage patterns and prevents abuse while maintaining optimal performance.',
       benefits: [''Adaptive rate limiting', 'Abuse prevention', 'Performance optimization', 'Dynamic scaling'']
     },
-<<<<<<< HEAD
     {];
   return ()
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" / /></div>
@@ -45,7 +42,6 @@ const AIApiManagementPage: React.FC = () => {,
               Start Free Trial
             </button>
             <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300" /></button>
-=======
     {];];
   return (
 
@@ -82,12 +78,10 @@ const AIApiManagementPage: React.FC = () => {,
       </section>
 
       {/* Stats Section */}
-<<<<<<< HEAD
       <section className="py-16 px-4" /></section>
         <div className="max-w-6xl mx-auto" /></div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8" /></div>
             {stats.map((stat, index) => ()
-=======
       <section className="py-16 px-4">
         </section></section><div className="max-w-6xl mx-auto">
           </div></div><div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -106,7 +100,6 @@ const AIApiManagementPage: React.FC = () => {,
       </section>
 
       {/* Features Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4" /></section>
         <div className="max-w-7xl mx-auto" /></div>
           <div className="text-center mb-16" /></div>
@@ -121,7 +114,6 @@ const AIApiManagementPage: React.FC = () => {,
           <div className="grid md:grid-cols-3 gap-8" /></div>
             {features.map((feature, index) => ()
                   {feature.benefits.map((benefit, benefitIndex) => ()
-=======
       <section className="py-20 px-4">
         </section></section><div className="max-w-7xl mx-auto">
           </div></div><div className="text-center mb-16">
@@ -155,7 +147,6 @@ const AIApiManagementPage: React.FC = () => {,
         </div>
       </section>
       {/* Benefits Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4" /></section>
         <div className="max-w-7xl mx-auto" /></div>
           <div className="text-center mb-16" /></div>
@@ -166,7 +157,6 @@ const AIApiManagementPage: React.FC = () => {,
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" /></div>
             {benefits.map((benefit, index) => ()
-=======
       <section className="py-20 px-4">
         </section></section><div className="max-w-7xl mx-auto">
           </div></div><div className="text-center mb-16">
@@ -189,7 +179,6 @@ const AIApiManagementPage: React.FC = () => {,
         </div>
       </section>
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4" /></section>
         <div className="max-w-4xl mx-auto text-center" /></div>
           <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12" /></div>
@@ -206,7 +195,6 @@ const AIApiManagementPage: React.FC = () => {,
               <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300" /></button>
                 Learn More
               </button>
-=======
       <section className="py-20 px-4">
         </section></section><div className="max-w-4xl mx-auto text-center">
 

@@ -17,7 +17,6 @@ const DynamicContentShowcase = lazy(() => import('./components/DynamicContentSho
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
 // Preload critical components;
-<<<<<<< HEAD
 const preloadComponents = const preloadComponents = ()
   if (typeof window !== 'undefined') {;
     // Preload critical components after initial render;
@@ -25,7 +24,6 @@ const preloadComponents = const preloadComponents = ()
       import('./components/ContentPromotionBanner');) => {
   return ()
   )
-=======
 const preloadComponents = (;)
   if (typeof window !== 'undefined') {
     // Preload critical components after initial render;
@@ -40,10 +38,8 @@ const preloadComponents = (;)
   }
 }
 // Loading skeleton component;
-<<<<<<< HEAD
 const ServiceCardSkeleton: React.FC = memo(() => ()
 ))
-=======
 const ServiceCardSkeleton: React.FC = memo(() => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card"></div></div></div>
     <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div></div></div>
@@ -65,7 +61,6 @@ useEffect(() =>
     preloadComponents();
     return () => clearTimeout(timer)}}, []);
   // Analytics tracking for phone clicks - optimized;
-<<<<<<< HEAD
   const handlePhoneClick = const handlePhoneClick = const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag()
@@ -75,7 +70,6 @@ useEffect(() =>
 
   return ()
               📞 Call: (302) 464-0950
-=======
   const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) 
       (window as any).gtag('event', 'phone_click', 
@@ -163,7 +157,6 @@ useEffect(() =>
         </div>
         </section>
         {/* Services Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4" /></section>
           <div className="max-w-7xl mx-auto" /></div>
             <div className="text-center mb-16" /></div>
@@ -191,7 +184,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg sm:text-2xl font-bold text-cyan-400 mb-2 neon-text">Starting at $1,500/month</div>
                   <a></a>
-=======
         <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">
@@ -226,7 +218,6 @@ useEffect(() =>
               </article>
             </Suspense>
             <Suspense fallback={<ServiceCardSkeleton />}>;
-<<<<<<< HEAD
               <article className="quantum-card p-4 sm:p-6 energy-pulse" / /></article>
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">📢</div>
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Marketing</h3>
@@ -236,7 +227,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg sm: text-2xl font-bold text-pink-400 mb-2 neon-text">Starting at $199/month</div>
                   <a></a>
-=======
               <article className="quantum-card p-4 sm:p-6 energy-pulse"></article></article></article>
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">📢</div></div></div>
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Marketing</h3></h3></h3>
@@ -253,7 +243,6 @@ useEffect(() =>
               </article>
             </Suspense>
             <Suspense fallback={<ServiceCardSkeleton />}>;
-<<<<<<< HEAD
               <article className="quantum-card p-4 sm: p-6 energy-pulse" / /></article>
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">⚙️</div>
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Automation</h3>
@@ -263,7 +252,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg sm:text-2xl font-bold text-blue-400 mb-2 neon-text">Starting at $399/month</div>
                   <a></a>
-=======
               <article className="quantum-card p-4 sm: p-6 energy-pulse"></article></article></article>
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">⚙️</div></div></div>
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Automation</h3></h3></h3>
@@ -281,7 +269,6 @@ useEffect(() =>
             </Suspense>
           </div>
           {/* Secondary Services Grid */}
-<<<<<<< HEAD
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12" / /></div>
             <Suspense fallback={<ServiceCardSkeleton />}>;
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
@@ -293,7 +280,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg sm:text-2xl font-bold text-green-400 mb-2">Starting at $1,999/month</div>
                   <a></a>
-=======
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12"></div></div></div>
             <Suspense fallback={<ServiceCardSkeleton />}>;
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
@@ -312,7 +298,6 @@ useEffect(() =>
               </article>
             </Suspense>
             <Suspense fallback={<ServiceCardSkeleton />}>;
-<<<<<<< HEAD
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">💰</div>
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Fintech</h3>
@@ -322,7 +307,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg sm:text-2xl font-bold text-indigo-400 mb-2">Starting at $1,499/month</div>
                   <a></a>
-=======
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">💰</div></div></div>
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Fintech</h3></h3></h3>
@@ -339,7 +323,6 @@ useEffect(() =>
               </article>
             </Suspense>
             <Suspense fallback={<ServiceCardSkeleton />}>;
-<<<<<<< HEAD
               <article className="cyber-card hologram-card p-4 sm: p-6 hover:scale-105 transition-all duration-300" / /></article>
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">⚛️</div>
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">Quantum Computing</h3>
@@ -349,7 +332,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg sm:text-2xl font-bold text-purple-400 mb-2">Custom Pricing</div>
                   <a></a>
-=======
               <article className="cyber-card hologram-card p-4 sm: p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                 <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">⚛️</div></div></div>
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">Quantum Computing</h3></h3></h3>
@@ -368,7 +350,6 @@ useEffect(() =>
           </div>
           {/* Micro SAAS Services Grid */}
 
-<<<<<<< HEAD
           <div className="mb-12" / /></div>
             <h3></h3>
               Micro SAAS Solutions
@@ -384,7 +365,6 @@ useEffect(() =>
                   <div className="text-center" / /></div>
                     <div className="text-lg sm: text-2xl font-bold text-orange-400 mb-2">$149/month</div>
                     <a></a>
-=======
           <div className="mb-12"></div></div></div>
             <h3>
               Micro SAAS Solutions;
@@ -407,7 +387,6 @@ useEffect(() =>
                 </article>
               </Suspense>
               <Suspense fallback={<ServiceCardSkeleton />}>;
-<<<<<<< HEAD
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">📊</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Analytics Dashboard</h3>
@@ -417,7 +396,6 @@ useEffect(() =>
                   <div className="text-center" / /></div>
                     <div className="text-lg sm: text-2xl font-bold text-cyan-400 mb-2">$199/month</div>
                     <a></a>
-=======
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">📊</div></div></div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Analytics Dashboard</h3></h3></h3>
@@ -434,7 +412,6 @@ useEffect(() =>
                 </article>
               </Suspense>
               <Suspense fallback={<ServiceCardSkeleton />}>;
-<<<<<<< HEAD
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">✍️</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Content Studio</h3>
@@ -444,7 +421,6 @@ useEffect(() =>
                   <div className="text-center" / /></div>
                     <div className="text-lg sm: text-2xl font-bold text-pink-400 mb-2">$299/month</div>
                     <a></a>
-=======
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">✍️</div></div></div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Content Studio</h3></h3></h3>
@@ -461,7 +437,6 @@ useEffect(() =>
                 </article>
               </Suspense>
               <Suspense fallback={<ServiceCardSkeleton />}>;
-<<<<<<< HEAD
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🤖</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Chatbot Builder</h3>
@@ -471,7 +446,6 @@ useEffect(() =>
                   <div className="text-center" / /></div>
                     <div className="text-lg sm: text-2xl font-bold text-green-400 mb-2">$99/month</div>
                     <a></a>
-=======
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🤖</div></div></div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Chatbot Builder</h3></h3></h3>
@@ -488,7 +462,6 @@ useEffect(() =>
                 </article>
               </Suspense>
               <Suspense fallback={<ServiceCardSkeleton />}>;
-<<<<<<< HEAD
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">📧</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Email Marketing</h3>
@@ -498,7 +471,6 @@ useEffect(() =>
                   <div className="text-center" / /></div>
                     <div className="text-lg sm: text-2xl font-bold text-purple-400 mb-2">$179/month</div>
                     <a></a>
-=======
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">📧</div></div></div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Email Marketing</h3></h3></h3>
@@ -515,7 +487,6 @@ useEffect(() =>
                 </article>
               </Suspense>
               <Suspense fallback={<ServiceCardSkeleton />}>;
-<<<<<<< HEAD
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">📱</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Mobile App Builder</h3>
@@ -525,7 +496,6 @@ useEffect(() =>
                   <div className="text-center" / /></div>
                     <div className="text-lg sm: text-2xl font-bold text-blue-400 mb-2">$399/month</div>
                     <a></a>
-=======
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">📱</div></div></div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Mobile App Builder</h3></h3></h3>
@@ -542,7 +512,6 @@ useEffect(() =>
                 </article>
               </Suspense>
               <Suspense fallback={<ServiceCardSkeleton />}>;
-<<<<<<< HEAD
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🔍</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI SEO Optimizer</h3>
@@ -552,7 +521,6 @@ useEffect(() =>
                   <div className="text-center" / /></div>
                     <div className="text-lg sm: text-2xl font-bold text-yellow-400 mb-2">$129/month</div>
                     <a></a>
-=======
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🔍</div></div></div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI SEO Optimizer</h3></h3></h3>
@@ -569,7 +537,6 @@ useEffect(() =>
                 </article>
               </Suspense>
               <Suspense fallback={<ServiceCardSkeleton />}>;
-<<<<<<< HEAD
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">💰</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Invoice Generator</h3>
@@ -579,7 +546,6 @@ useEffect(() =>
                   <div className="text-center" / /></div>
                     <div className="text-lg sm: text-2xl font-bold text-indigo-400 mb-2">$79/month</div>
                     <a></a>
-=======
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">💰</div></div></div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Invoice Generator</h3></h3></h3>
@@ -596,7 +562,6 @@ useEffect(() =>
                 </article>
               </Suspense>
               <Suspense fallback={<ServiceCardSkeleton />}>;
-<<<<<<< HEAD
                 <article className="cyber-card hologram-card p-4 sm: p-6 hover:scale-105 transition-all duration-300" / /></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🎯</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Lead Scoring</h3>
@@ -606,7 +571,6 @@ useEffect(() =>
                   <div className="text-center" / /></div>
                     <div className="text-lg sm:text-2xl font-bold text-red-400 mb-2">$89/month</div>
                     <a></a>
-=======
                 <article className="cyber-card hologram-card p-4 sm: p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🎯</div></div></div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Lead Scoring</h3></h3></h3>
@@ -623,7 +587,6 @@ useEffect(() =>
                 </article>
               </Suspense>
               <Suspense fallback={<ServiceCardSkeleton />}>;
-<<<<<<< HEAD
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">📈</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Social Media Manager</h3>
@@ -633,7 +596,6 @@ useEffect(() =>
                   <div className="text-center" / /></div>
                     <div className="text-lg sm: text-2xl font-bold text-teal-400 mb-2">$159/month</div>
                     <a></a>
-=======
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">📈</div></div></div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Social Media Manager</h3></h3></h3>
@@ -650,7 +612,6 @@ useEffect(() =>
                 </article>
               </Suspense>
               <Suspense fallback={<ServiceCardSkeleton />}>;
-<<<<<<< HEAD
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🛒</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI E-commerce Assistant</h3>
@@ -660,7 +621,6 @@ useEffect(() =>
                   <div className="text-center" / /></div>
                     <div className="text-lg sm: text-2xl font-bold text-violet-400 mb-2">$249/month</div>
                     <a></a>
-=======
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🛒</div></div></div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI E-commerce Assistant</h3></h3></h3>
@@ -677,7 +637,6 @@ useEffect(() =>
                 </article>
               </Suspense>
               <Suspense fallback={<ServiceCardSkeleton />}>;
-<<<<<<< HEAD
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">📝</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Document Processor</h3>
@@ -687,7 +646,6 @@ useEffect(() =>
                   <div className="text-center" / /></div>
                     <div className="text-lg sm: text-2xl font-bold text-amber-400 mb-2">$119/month</div>
                     <a></a>
-=======
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">📝</div></div></div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Document Processor</h3></h3></h3>
@@ -704,7 +662,6 @@ useEffect(() =>
                 </article>
               </Suspense>
               <Suspense fallback={<ServiceCardSkeleton />}>;
-<<<<<<< HEAD
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🎨</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Design Studio</h3>
@@ -714,7 +671,6 @@ useEffect(() =>
                   <div className="text-center" / /></div>
                     <div className="text-lg sm: text-2xl font-bold text-rose-400 mb-2">$189/month</div>
                     <a></a>
-=======
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🎨</div></div></div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Design Studio</h3></h3></h3>
@@ -731,7 +687,6 @@ useEffect(() =>
                 </article>
               </Suspense>
               <Suspense fallback={<ServiceCardSkeleton />}>;
-<<<<<<< HEAD
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🔐</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Security Monitor</h3>
@@ -741,7 +696,6 @@ useEffect(() =>
                   <div className="text-center" / /></div>
                     <div className="text-lg sm: text-2xl font-bold text-emerald-400 mb-2">$199/month</div>
                     <a></a>
-=======
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🔐</div></div></div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Security Monitor</h3></h3></h3>
@@ -758,7 +712,6 @@ useEffect(() =>
                 </article>
               </Suspense>
               <Suspense fallback={<ServiceCardSkeleton />}>;
-<<<<<<< HEAD
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">📊</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Financial Planner</h3>
@@ -768,7 +721,6 @@ useEffect(() =>
                   <div className="text-center" / /></div>
                     <div className="text-lg sm: text-2xl font-bold text-sky-400 mb-2">$169/month</div>
                     <a></a>
-=======
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">📊</div></div></div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Financial Planner</h3></h3></h3>
@@ -785,7 +737,6 @@ useEffect(() =>
                 </article>
               </Suspense>
               <Suspense fallback={<ServiceCardSkeleton />}>;
-<<<<<<< HEAD
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🏥</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Health Tracker</h3>
@@ -795,7 +746,6 @@ useEffect(() =>
                   <div className="text-center" / /></div>
                     <div className="text-lg sm: text-2xl font-bold text-lime-400 mb-2">$79/month</div>
                     <a></a>
-=======
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🏥</div></div></div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Health Tracker</h3></h3></h3>
@@ -812,7 +762,6 @@ useEffect(() =>
                 </article>
               </Suspense>
               <Suspense fallback={<ServiceCardSkeleton />}>;
-<<<<<<< HEAD
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🎓</div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Learning Platform</h3>
@@ -822,7 +771,6 @@ useEffect(() =>
                   <div className="text-center" / /></div>
                     <div className="text-lg sm: text-2xl font-bold text-fuchsia-400 mb-2">$139/month</div>
                     <a></a>
-=======
                 <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                   <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">🎓</div></div></div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Learning Platform</h3></h3></h3>
@@ -841,7 +789,6 @@ useEffect(() =>
             </div>
           </div>
           {/* IT Services & Infrastructure */}
-<<<<<<< HEAD
           <div className="mb-12" / /></div>
             <h3></h3>
               IT Services & Infrastructure
@@ -856,7 +803,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg sm:text-2xl font-bold text-blue-400 mb-2">$1,299/month</div>
                   <a></a>
-=======
           <div className="mb-12"></div></div></div>
             <h3>
               IT Services & Infrastructure;
@@ -876,7 +822,6 @@ useEffect(() =>
                   </a>
                 </div>
               </article>
-<<<<<<< HEAD
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔒</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Cybersecurity Suite</h3>
@@ -886,7 +831,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg sm: text-2xl font-bold text-red-400 mb-2">$799/month</div>
                   <a></a>
-=======
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔒</div></div></div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Cybersecurity Suite</h3></h3></h3>
@@ -901,7 +845,6 @@ useEffect(() =>
                   </a>
                 </div>
               </article>
-<<<<<<< HEAD
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">⚙️</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">DevOps & CI/CD</h3>
@@ -911,7 +854,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg sm: text-2xl font-bold text-green-400 mb-2">$599/month</div>
                   <a></a>
-=======
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">⚙️</div></div></div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">DevOps & CI/CD</h3></h3></h3>
@@ -926,7 +868,6 @@ useEffect(() =>
                   </a>
                 </div>
               </article>
-<<<<<<< HEAD
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🗄️</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Database Management</h3>
@@ -936,7 +877,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg sm: text-2xl font-bold text-teal-400 mb-2">$399/month</div>
                   <a></a>
-=======
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🗄️</div></div></div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Database Management</h3></h3></h3>
@@ -951,7 +891,6 @@ useEffect(() =>
                   </a>
                 </div>
               </article>
-<<<<<<< HEAD
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🌐</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Network Solutions</h3>
@@ -961,7 +900,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg sm: text-2xl font-bold text-indigo-400 mb-2">$699/month</div>
                   <a></a>
-=======
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🌐</div></div></div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Network Solutions</h3></h3></h3>
@@ -976,7 +914,6 @@ useEffect(() =>
                   </a>
                 </div>
               </article>
-<<<<<<< HEAD
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📱</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Mobile App Development</h3>
@@ -986,7 +923,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg sm:text-2xl font-bold text-purple-400 mb-2">$1,999/month</div>
                   <a></a>
-=======
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📱</div></div></div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Mobile App Development</h3></h3></h3>
@@ -1001,7 +937,6 @@ useEffect(() =>
                   </a>
                 </div>
               </article>
-<<<<<<< HEAD
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🛠️</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">IT Consulting</h3>
@@ -1011,7 +946,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg sm: text-2xl font-bold text-yellow-400 mb-2">$299/hour</div>
                   <a></a>
-=======
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🛠️</div></div></div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">IT Consulting</h3></h3></h3>
@@ -1026,7 +960,6 @@ useEffect(() =>
                   </a>
                 </div>
               </article>
-<<<<<<< HEAD
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📊</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">IT Support & Maintenance</h3>
@@ -1036,7 +969,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg sm: text-2xl font-bold text-cyan-400 mb-2">$499/month</div>
                   <a></a>
-=======
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📊</div></div></div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">IT Support & Maintenance</h3></h3></h3>
@@ -1051,7 +983,6 @@ useEffect(() =>
                   </a>
                 </div>
               </article>
-<<<<<<< HEAD
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🖥️</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">System Administration</h3>
@@ -1061,7 +992,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg sm: text-2xl font-bold text-orange-400 mb-2">$799/month</div>
                   <a></a>
-=======
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🖥️</div></div></div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">System Administration</h3></h3></h3>
@@ -1076,7 +1006,6 @@ useEffect(() =>
                   </a>
                 </div>
               </article>
-<<<<<<< HEAD
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔧</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">IT Infrastructure Design</h3>
@@ -1086,7 +1015,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg sm:text-2xl font-bold text-emerald-400 mb-2">$1,499/month</div>
                   <a></a>
-=======
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔧</div></div></div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">IT Infrastructure Design</h3></h3></h3>
@@ -1101,7 +1029,6 @@ useEffect(() =>
                   </a>
                 </div>
               </article>
-<<<<<<< HEAD
               <article className="cyber-card hologram-card p-4 sm: p-6 hover:scale-105 transition-all duration-300" / /></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📈</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Performance Optimization</h3>
@@ -1111,7 +1038,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg sm:text-2xl font-bold text-pink-400 mb-2">$699/month</div>
                   <a></a>
-=======
               <article className="cyber-card hologram-card p-4 sm: p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📈</div></div></div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Performance Optimization</h3></h3></h3>
@@ -1126,7 +1052,6 @@ useEffect(() =>
                   </a>
                 </div>
               </article>
-<<<<<<< HEAD
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔄</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Backup & Recovery</h3>
@@ -1136,7 +1061,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg sm: text-2xl font-bold text-violet-400 mb-2">$399/month</div>
                   <a></a>
-=======
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔄</div></div></div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Backup & Recovery</h3></h3></h3>
@@ -1151,7 +1075,6 @@ useEffect(() =>
                   </a>
                 </div>
               </article>
-<<<<<<< HEAD
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎯</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">IT Project Management</h3>
@@ -1161,7 +1084,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg sm:text-2xl font-bold text-amber-400 mb-2">$899/month</div>
                   <a></a>
-=======
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎯</div></div></div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">IT Project Management</h3></h3></h3>
@@ -1176,7 +1098,6 @@ useEffect(() =>
                   </a>
                 </div>
               </article>
-<<<<<<< HEAD
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🏢</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Enterprise Solutions</h3>
@@ -1186,7 +1107,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg sm:text-2xl font-bold text-sky-400 mb-2">$2,999/month</div>
                   <a></a>
-=======
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🏢</div></div></div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Enterprise Solutions</h3></h3></h3>
@@ -1201,7 +1121,6 @@ useEffect(() =>
                   </a>
                 </div>
               </article>
-<<<<<<< HEAD
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎓</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">IT Training & Certification</h3>
@@ -1211,7 +1130,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg sm: text-2xl font-bold text-lime-400 mb-2">$299/month</div>
                   <a></a>
-=======
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎓</div></div></div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">IT Training & Certification</h3></h3></h3>
@@ -1229,7 +1147,6 @@ useEffect(() =>
             </div>
           </div>
           {/* Advanced AI Services Grid */}
-<<<<<<< HEAD
           <div className="mb-12" / /></div>
             <h3></h3>
               Advanced AI Services
@@ -1244,7 +1161,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg sm: text-2xl font-bold text-green-400 mb-2">Starting at $199/month</div>
                   <a></a>
-=======
           <div className="mb-12"></div></div></div>
             <h3>
               Advanced AI Services;
@@ -1264,7 +1180,6 @@ useEffect(() =>
                   </a>
                 </div>
               </article>
-<<<<<<< HEAD
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📈</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Sales Automation</h3>
@@ -1274,7 +1189,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg sm: text-2xl font-bold text-blue-400 mb-2">Starting at $299/month</div>
                   <a></a>
-=======
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📈</div></div></div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Sales Automation</h3></h3></h3>
@@ -1289,7 +1203,6 @@ useEffect(() =>
                   </a>
                 </div>
               </article>
-<<<<<<< HEAD
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">⚡</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Workflow Automation</h3>
@@ -1299,7 +1212,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg sm: text-2xl font-bold text-yellow-400 mb-2">Starting at $99/month</div>
                   <a></a>
-=======
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">⚡</div></div></div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Workflow Automation</h3></h3></h3>
@@ -1314,7 +1226,6 @@ useEffect(() =>
                   </a>
                 </div>
               </article>
-<<<<<<< HEAD
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📊</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Data Visualization</h3>
@@ -1324,7 +1235,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg sm: text-2xl font-bold text-cyan-400 mb-2">Starting at $149/month</div>
                   <a></a>
-=======
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📊</div></div></div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Data Visualization</h3></h3></h3>
@@ -1339,7 +1249,6 @@ useEffect(() =>
                   </a>
                 </div>
               </article>
-<<<<<<< HEAD
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎯</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Lead Generation</h3>
@@ -1349,7 +1258,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg sm: text-2xl font-bold text-pink-400 mb-2">Starting at $199/month</div>
                   <a></a>
-=======
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎯</div></div></div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Lead Generation</h3></h3></h3>
@@ -1364,7 +1272,6 @@ useEffect(() =>
                   </a>
                 </div>
               </article>
-<<<<<<< HEAD
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔍</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Document Processing</h3>
@@ -1374,7 +1281,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg sm: text-2xl font-bold text-indigo-400 mb-2">Starting at $149/month</div>
                   <a></a>
-=======
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔍</div></div></div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Document Processing</h3></h3></h3>
@@ -1389,7 +1295,6 @@ useEffect(() =>
                   </a>
                 </div>
               </article>
-<<<<<<< HEAD
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🧠</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Predictive Analytics</h3>
@@ -1399,7 +1304,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg sm: text-2xl font-bold text-purple-400 mb-2">Starting at $399/month</div>
                   <a></a>
-=======
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🧠</div></div></div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Predictive Analytics</h3></h3></h3>
@@ -1414,7 +1318,6 @@ useEffect(() =>
                   </a>
                 </div>
               </article>
-<<<<<<< HEAD
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎨</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Image Recognition</h3>
@@ -1424,7 +1327,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg sm: text-2xl font-bold text-rose-400 mb-2">Starting at $249/month</div>
                   <a></a>
-=======
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎨</div></div></div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Image Recognition</h3></h3></h3>
@@ -1439,7 +1341,6 @@ useEffect(() =>
                   </a>
                 </div>
               </article>
-<<<<<<< HEAD
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🗣️</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Voice Processing</h3>
@@ -1449,7 +1350,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg sm: text-2xl font-bold text-teal-400 mb-2">Starting at $179/month</div>
                   <a></a>
-=======
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🗣️</div></div></div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Voice Processing</h3></h3></h3>
@@ -1464,7 +1364,6 @@ useEffect(() =>
                   </a>
                 </div>
               </article>
-<<<<<<< HEAD
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔮</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Recommendation Engine</h3>
@@ -1474,7 +1373,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg sm: text-2xl font-bold text-violet-400 mb-2">Starting at $299/month</div>
                   <a></a>
-=======
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔮</div></div></div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Recommendation Engine</h3></h3></h3>
@@ -1489,7 +1387,6 @@ useEffect(() =>
                   </a>
                 </div>
               </article>
-<<<<<<< HEAD
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎭</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Sentiment Analysis</h3>
@@ -1499,7 +1396,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg sm: text-2xl font-bold text-amber-400 mb-2">Starting at $129/month</div>
                   <a></a>
-=======
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎭</div></div></div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Sentiment Analysis</h3></h3></h3>
@@ -1514,7 +1410,6 @@ useEffect(() =>
                   </a>
                 </div>
               </article>
-<<<<<<< HEAD
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔬</div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Research Assistant</h3>
@@ -1524,7 +1419,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg sm: text-2xl font-bold text-emerald-400 mb-2">Starting at $199/month</div>
                   <a></a>
-=======
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔬</div></div></div>
                 <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Research Assistant</h3></h3></h3>
@@ -1542,7 +1436,6 @@ useEffect(() =>
             </div>
           </div>
           {/* Emerging Technologies Grid */}
-<<<<<<< HEAD
           <div className="mb-12" / /></div>
             <h3></h3>
               Emerging Technologies
@@ -1557,7 +1450,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg font-bold text-cyan-400 mb-2">Custom Pricing</div>
                   <a></a>
-=======
           <div className="mb-12"></div></div></div>
             <h3>
               Emerging Technologies;
@@ -1577,7 +1469,6 @@ useEffect(() =>
                   </a>
                 </div>
               </article>
-<<<<<<< HEAD
               <article className="cyber-card hologram-card p-4 sm: p-6 hover:scale-105 transition-all duration-300" / /></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🌐</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">IoT & Edge</h3>
@@ -1587,7 +1478,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg font-bold text-green-400 mb-2">Starting at $499/month</div>
                   <a></a>
-=======
               <article className="cyber-card hologram-card p-4 sm: p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🌐</div></div></div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">IoT & Edge</h3></h3></h3>
@@ -1602,7 +1492,6 @@ useEffect(() =>
                   </a>
                 </div>
               </article>
-<<<<<<< HEAD
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔗</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Blockchain & Web3</h3>
@@ -1612,7 +1501,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg font-bold text-yellow-400 mb-2">Starting at $699/month</div>
                   <a></a>
-=======
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔗</div></div></div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Blockchain & Web3</h3></h3></h3>
@@ -1627,7 +1515,6 @@ useEffect(() =>
                   </a>
                 </div>
               </article>
-<<<<<<< HEAD
               <article className="cyber-card hologram-card p-4 sm: p-6 hover:scale-105 transition-all duration-300" / /></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🧠</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Business Intelligence</h3>
@@ -1637,7 +1524,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg font-bold text-pink-400 mb-2">Starting at $399/month</div>
                   <a></a>
-=======
               <article className="cyber-card hologram-card p-4 sm: p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🧠</div></div></div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Business Intelligence</h3></h3></h3>
@@ -1655,7 +1541,6 @@ useEffect(() =>
             </div>
           </div>
           {/* IT Services Grid */}
-<<<<<<< HEAD
           <div className="mb-12" / /></div>
             <h3></h3>
               IT Services & Infrastructure
@@ -1670,7 +1555,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg font-bold text-blue-400 mb-2">Starting at $299/month</div>
                   <a></a>
-=======
           <div className="mb-12"></div></div></div>
             <h3>
               IT Services & Infrastructure;
@@ -1690,7 +1574,6 @@ useEffect(() =>
                   </a>
                 </div>
               </article>
-<<<<<<< HEAD
               <article className="cyber-card hologram-card p-4 sm: p-6 hover:scale-105 transition-all duration-300" / /></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📱</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Mobile Development</h3>
@@ -1700,7 +1583,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg font-bold text-indigo-400 mb-2">Starting at $1,299/month</div>
                   <a></a>
-=======
               <article className="cyber-card hologram-card p-4 sm: p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📱</div></div></div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Mobile Development</h3></h3></h3>
@@ -1715,7 +1597,6 @@ useEffect(() =>
                   </a>
                 </div>
               </article>
-<<<<<<< HEAD
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🗄️</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Database Services</h3>
@@ -1725,7 +1606,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg font-bold text-teal-400 mb-2">Starting at $199/month</div>
                   <a></a>
-=======
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🗄️</div></div></div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Database Services</h3></h3></h3>
@@ -1744,7 +1624,6 @@ useEffect(() =>
           </div>
         </section>
         {/* Micro SAAS Solutions Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4" /></section>
           <div className="max-w-7xl mx-auto" /></div>
             <div className="text-center mb-16" /></div>
@@ -1757,7 +1636,6 @@ useEffect(() =>
             Micro SAAS Solutions
           </h2>
           <p></p>
-=======
         <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">
@@ -1774,7 +1652,6 @@ useEffect(() =>
             Affordable, powerful AI-driven tools for modern businesses. 50+ ready-to-use applications.
           </p></p></p>
           {/* Productivity Tools */}
-<<<<<<< HEAD
           <div className="mb-12" / /></div>
             <h3></h3>
               Productivity & Business Tools
@@ -1789,7 +1666,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg font-bold text-blue-400 mb-2">$29/month</div>
                   <a></a>
-=======
           <div className="mb-12"></div></div></div>
             <h3>
               Productivity & Business Tools;
@@ -1809,7 +1685,6 @@ useEffect(() =>
                   </a>
                 </div>
               </article>
-<<<<<<< HEAD
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📊</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Smart Analytics</h3>
@@ -1819,7 +1694,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg font-bold text-green-400 mb-2">$49/month</div>
                   <a></a>
-=======
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📊</div></div></div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Smart Analytics</h3></h3></h3>
@@ -1834,7 +1708,6 @@ useEffect(() =>
                   </a>
                 </div>
               </article>
-<<<<<<< HEAD
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📅</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">AI Scheduler</h3>
@@ -1844,7 +1717,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg font-bold text-purple-400 mb-2">$19/month</div>
                   <a></a>
-=======
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📅</div></div></div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">AI Scheduler</h3></h3></h3>
@@ -1859,7 +1731,6 @@ useEffect(() =>
                   </a>
                 </div>
               </article>
-<<<<<<< HEAD
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">💰</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Expense Tracker</h3>
@@ -1869,7 +1740,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg font-bold text-yellow-400 mb-2">$15/month</div>
                   <a></a>
-=======
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">💰</div></div></div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Expense Tracker</h3></h3></h3>
@@ -1884,7 +1754,6 @@ useEffect(() =>
                   </a>
                 </div>
               </article>
-<<<<<<< HEAD
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎯</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Task Manager Pro</h3>
@@ -1894,7 +1763,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg font-bold text-indigo-400 mb-2">$39/month</div>
                   <a></a>
-=======
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎯</div></div></div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Task Manager Pro</h3></h3></h3>
@@ -1909,7 +1777,6 @@ useEffect(() =>
                   </a>
                 </div>
               </article>
-<<<<<<< HEAD
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📈</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">CRM Lite</h3>
@@ -1919,7 +1786,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg font-bold text-pink-400 mb-2">$59/month</div>
                   <a></a>
-=======
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📈</div></div></div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">CRM Lite</h3></h3></h3>
@@ -1934,7 +1800,6 @@ useEffect(() =>
                   </a>
                 </div>
               </article>
-<<<<<<< HEAD
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📧</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Email Optimizer</h3>
@@ -1944,7 +1809,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg font-bold text-cyan-400 mb-2">$25/month</div>
                   <a></a>
-=======
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📧</div></div></div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Email Optimizer</h3></h3></h3>
@@ -1959,7 +1823,6 @@ useEffect(() =>
                   </a>
                 </div>
               </article>
-<<<<<<< HEAD
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔍</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Social Media Manager</h3>
@@ -1969,7 +1832,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg font-bold text-orange-400 mb-2">$45/month</div>
                   <a></a>
-=======
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔍</div></div></div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Social Media Manager</h3></h3></h3>
@@ -1987,7 +1849,6 @@ useEffect(() =>
             </div>
           </div>
           {/* Marketing & Sales Tools */}
-<<<<<<< HEAD
           <div className="mb-12" / /></div>
             <h3></h3>
               Marketing & Sales Tools
@@ -2002,7 +1863,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg font-bold text-pink-400 mb-2">$35/month</div>
                   <a></a>
-=======
           <div className="mb-12"></div></div></div>
             <h3>
               Marketing & Sales Tools;
@@ -2022,7 +1882,6 @@ useEffect(() =>
                   </a>
                 </div>
               </article>
-<<<<<<< HEAD
               <article className="cyber-card hologram-card p-4 sm: p-6 hover:scale-105 transition-all duration-300" / /></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📱</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Landing Page Builder</h3>
@@ -2032,7 +1891,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg font-bold text-blue-400 mb-2">$29/month</div>
                   <a></a>
-=======
               <article className="cyber-card hologram-card p-4 sm: p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📱</div></div></div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Landing Page Builder</h3></h3></h3>
@@ -2047,7 +1905,6 @@ useEffect(() =>
                   </a>
                 </div>
               </article>
-<<<<<<< HEAD
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📊</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">SEO Optimizer</h3>
@@ -2057,7 +1914,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg font-bold text-green-400 mb-2">$49/month</div>
                   <a></a>
-=======
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📊</div></div></div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">SEO Optimizer</h3></h3></h3>
@@ -2072,7 +1928,6 @@ useEffect(() =>
                   </a>
                 </div>
               </article>
-<<<<<<< HEAD
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📈</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Ad Campaign Manager</h3>
@@ -2082,7 +1937,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg font-bold text-yellow-400 mb-2">$79/month</div>
                   <a></a>
-=======
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📈</div></div></div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Ad Campaign Manager</h3></h3></h3>
@@ -2100,7 +1954,6 @@ useEffect(() =>
             </div>
           </div>
           {/* Developer Tools */}
-<<<<<<< HEAD
           <div className="mb-12" / /></div>
             <h3></h3>
               Developer Tools
@@ -2115,7 +1968,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg font-bold text-cyan-400 mb-2">$39/month</div>
                   <a></a>
-=======
           <div className="mb-12"></div></div></div>
             <h3>
               Developer Tools;
@@ -2135,7 +1987,6 @@ useEffect(() =>
                   </a>
                 </div>
               </article>
-<<<<<<< HEAD
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔧</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">API Builder</h3>
@@ -2145,7 +1996,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg font-bold text-indigo-400 mb-2">$59/month</div>
                   <a></a>
-=======
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔧</div></div></div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">API Builder</h3></h3></h3>
@@ -2160,7 +2010,6 @@ useEffect(() =>
                   </a>
                 </div>
               </article>
-<<<<<<< HEAD
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🐛</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Bug Tracker Pro</h3>
@@ -2170,7 +2019,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg font-bold text-red-400 mb-2">$25/month</div>
                   <a></a>
-=======
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🐛</div></div></div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Bug Tracker Pro</h3></h3></h3>
@@ -2185,7 +2033,6 @@ useEffect(() =>
                   </a>
                 </div>
               </article>
-<<<<<<< HEAD
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300" / /></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📚</div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Doc Generator</h3>
@@ -2195,7 +2042,6 @@ useEffect(() =>
                 <div className="text-center" / /></div>
                   <div className="text-lg font-bold text-purple-400 mb-2">$19/month</div>
                   <a></a>
-=======
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></article></article></article>
                 <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📚</div></div></div>
                 <h3 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">Doc Generator</h3></h3></h3>
@@ -2215,7 +2061,6 @@ useEffect(() =>
         </section>
 
         {/* Statistics Section */}
-<<<<<<< HEAD
         <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg" />}>;
           <ContentStatistics></ContentStatistics>
         </Suspense>
@@ -2291,7 +2136,6 @@ useEffect(() =>
                       <p className="text-gray-300 text-sm">Business Hours</p>
                       <p></p>
                         Monday - Friday: 9:00 AM - 6:00 PM EST<br></br>
-=======
         <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div></div></div>}>;
           <ContentStatistics>
         </Suspense>
@@ -2375,7 +2219,6 @@ useEffect(() =>
                 </div>
               </div>
               {/* Quick Contact Form */}
-<<<<<<< HEAD
               <div className="cyber-card hologram-card p-8" / /></div>
                 <h3 className="text-2xl font-bold text-white mb-6 neon-text">Get Free Consultation</h3>
                 <form></form>
@@ -2397,7 +2240,6 @@ useEffect(() =>
                   <div / /></div>
                     <label></label>
                       Service Interest
-=======
               <div className="cyber-card hologram-card p-8"></div></div></div>
                 <h3 className="text-2xl font-bold text-white mb-6 neon-text">Get Free Consultation</h3></h3></h3>
                 <form>
@@ -2430,11 +2272,9 @@ useEffect(() =>
                       <option value="other">Other</option>
                     </select>
                   </div>
-<<<<<<< HEAD
                   <div / /></div>
                     <label></label>
                       Message
-=======
                   <div />
                     </div></div><label>
                       Message;

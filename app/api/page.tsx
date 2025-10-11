@@ -150,19 +150,11 @@ const ApiPage: React.FC = () => {
   ];
   const rateLimits = const rateLimits = const rateLimits = [
     { tier: 'Free', requests: '1,000/month', burst: '10/minute' },
-<<<<<<< HEAD
     { tier: 'Pro', requests: '50,000/month', burst: '100/minute' },;
     { tier: 'Enterprise', requests: 'Unlimited', burst: '1,000/minute' };
   ];
   return() {authenticationMethods.map((method, index) => ()
-=======
-    { tier: 'Pro', requests: '50,000/month', burst: '100/minute' },
-    { tier: 'Enterprise', requests: 'Unlimited', burst: '1,000/minute' }
-  ];];];
-  return (
-    <>
-      <Helmet>
->>>>>>> origin/main
+
         <title>API Reference - Zion Tech Group</title>
         <meta name="description" content="Complete API reference for Zion Tech Group's AI, IT, and Micro SaaS services. Get started with our comprehensive API documentation." />
         <meta name="keywords" content="API, documentation, AI API, IT services API, micro SaaS API, developer tools" />
@@ -278,7 +270,6 @@ const ApiPage: React.FC = () => {
           </section>
 
           {/* Rate Limits */}
-<<<<<<< HEAD
           <section className="mb-16" /></section>
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Rate Limits</h2>
             <div className="cyber-card-enhanced p-8" /></div>
@@ -286,7 +277,6 @@ const ApiPage: React.FC = () => {
                 <table className="w-full" /></table>
                   <thead></thead>
                     <tr className="border-b border-gray-700" /></tr>
-=======
           <section className="mb-16">
             </section></section><h2 className="text-3xl font-bold text-white mb-8 text-center">Rate Limits</h2></h2></h2>
             <div className="cyber-card-enhanced p-8">
@@ -300,10 +290,8 @@ const ApiPage: React.FC = () => {
                       <th className="text-left text-white py-3 px-4">Burst Limit</th>
                     </tr>
                   </thead>
-<<<<<<< HEAD
                   <tbody></tbody>
                     {rateLimits.map((limit, index) => ()
-=======
                   <tbody>
                     {rateLimits.map((limit, index) => (
                       <tr key=index} className="border-b border-gray-800">
@@ -320,7 +308,6 @@ const ApiPage: React.FC = () => {
           </section>
 
           {/* API Endpoints */}
-<<<<<<< HEAD
           <section id="endpoints" className="mb-16" /></section>
             <h2 className="text-3xl font-bold text-white mb-8 text-center">API Endpoints</h2>
             <div className="space-y-8" /></div>
@@ -339,7 +326,6 @@ const ApiPage: React.FC = () => {
                               </pre>
                               <div className="text-xs text-gray-400 mb-2 mt-3">Response:</div>
                               <pre className="text-blue-400 text-xs overflow-x-auto" /></pre>
-=======
           <section id="endpoints" className="mb-16">
             </section></section><h2 className="text-3xl font-bold text-white mb-8 text-center">API Endpoints</h2></h2></h2>
             <div className="space-y-8">
@@ -401,7 +387,6 @@ const ApiPage: React.FC = () => {
           </section>
 
           {/* SDKs and Libraries */}
-<<<<<<< HEAD
           <section className="mb-16" /></section>
             <h2 className="text-3xl font-bold text-white mb-8 text-center">SDKs & Libraries</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" /></div>
@@ -427,7 +412,6 @@ const ApiPage: React.FC = () => {
                 <p className="text-gray-300 mb-4">PHP SDK with Composer support</p>
                 <a href="#" className="text-cyan-400 hover:text-cyan-300 text-sm" /></a>
                   View on Packagist <ExternalLink className="w-4 h-4 inline ml-1" / /></ExternalLink>
-=======
           <section className="mb-16">
             </section></section><h2 className="text-3xl font-bold text-white mb-8 text-center">SDKs & Libraries</h2></h2></h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -460,7 +444,6 @@ const ApiPage: React.FC = () => {
           </section>
 
           {/* Support */}
-<<<<<<< HEAD
           <section className="mb-16" /></section>
             <div className="cyber-card-enhanced p-8 text-center" /></div>
               <h2 className="text-2xl font-bold text-white mb-4">Need Help?</h2>
@@ -479,7 +462,6 @@ const ApiPage: React.FC = () => {
                 <a href="/community"
                   className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300" /></a>
                   Join Community
-=======
           <section className="mb-16">
             </section></section><div className="cyber-card-enhanced p-8 text-center">
               </div></div><h2 className="text-2xl font-bold text-white mb-4">Need Help?</h2></h2></h2>

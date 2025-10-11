@@ -28,7 +28,6 @@ const FiveGImplementationPage: React.FC = () => {
     {icon: BarChart,
       title: 'Performance Analytics',
       description: 'Advanced analytics and reporting for 5G network performance and optimization.',
-<<<<<<< HEAD
       benefits: ['Performance insights', 'Usage analytics', 'Optimization recommendations'];
     },;
   ];
@@ -38,14 +37,7 @@ const FiveGImplementationPage: React.FC = () => {
           <div className="relative max-w-7xl mx-auto text-center" /></div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6" /></h1>
               5G Network <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Implementation</span>
-=======
-      benefits: ['Performance insights', 'Usage analytics', 'Optimization recommendations']
-    }
-  ];
-  return (
-    <>
-      <Helmet>
->>>>>>> origin/main
+
         <title>5G Network Implementation - Zion Tech Group | AI & IT Solutions</title>
         <meta name="description" content="Complete 5G network implementation services with ultra-low latency, high-speed connectivity, and advanced features for modern applications and IoT ecosystems." />
         <meta name="keywords" content="5G implementation, network design, ultra-low latency, IoT connectivity, wireless infrastructure" />
@@ -63,7 +55,6 @@ const FiveGImplementationPage: React.FC = () => {
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" /></p>
               Complete 5G network implementation services with ultra-low latency, high-speed connectivity, and advanced features for modern applications and IoT ecosystems.
-<<<<<<< HEAD
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center" /></div>
               <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300" /></button>
@@ -72,7 +63,6 @@ const FiveGImplementationPage: React.FC = () => {
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300" /></button>
                 Schedule Demo
               </button>
-=======
             </p></p></p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               </div></div><button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
@@ -87,7 +77,6 @@ const FiveGImplementationPage: React.FC = () => {
         </section>
         
         {/* Features Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4" /></section>
           <div className="max-w-7xl mx-auto" /></div>
             <div className="text-center mb-16" /></div>
@@ -101,7 +90,6 @@ const FiveGImplementationPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" /></div>
               {features.map((feature, index) => ()
                       {feature.benefits.map((benefit, idx) => ()
-=======
         <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">
@@ -138,7 +126,6 @@ const FiveGImplementationPage: React.FC = () => {
         </section>
         
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4" /></section>
           <div className="max-w-7xl mx-auto text-center" /></div>
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12 max-w-4xl mx-auto" /></div>
@@ -155,7 +142,6 @@ const FiveGImplementationPage: React.FC = () => {
                 <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300" /></button>
                   Learn More
                 </button>
-=======
         <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto text-center">
             </div></div><div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12 max-w-4xl mx-auto">

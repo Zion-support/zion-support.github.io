@@ -28,59 +28,9 @@ import {CheckSquare,}
   }
 } from 'lucide-react'
 const ProjectManagementProPage: React.FC = () => {
-<<<<<<< HEAD
     const features = const features = const features = [
     {
-=======
-    const features = [
-    
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-      icon: CheckSquare,
-      title: 'Task Management',
-      description: 'Organize and track tasks with advanced project management tools and AI-powered insights.'
-  },
-    {
-      icon: Users,
-      title: 'Team Collaboration',
-      description: 'Seamless team collaboration with real-time updates, comments, and file sharing.'
-  },
-    {
-      icon: BarChart,
-      title: 'Progress Tracking',
-      description: 'Comprehensive project analytics and reporting to track progress and performance.'
-  },
-    {
-      icon: Zap,
-      title: 'Automation',
-<<<<<<< HEAD
-      description: 'Automate repetitive tasks and workflows to improve efficiency and productivity.',}}
-  ]
-=======
-      description: 'Automate repetitive tasks and workflows to improve efficiency and productivity.'
-  };
-    };
-  ];
-const benefits = const benefits = const benefits = [
-    'Improve project delivery times',
-    'Enhance team collaboration',
-    'Track progress and performance',
-    'Automate routine tasks',
 
-    'Better resource allocation',
-
-    'Reduce project risks',
-
-    'Increase team productivity',;
-;
-    'Streamline project workflows';
-  ];
-<<<<<<< HEAD
-return ()
-=======
-return (
-    <>
-      <Helmet>
->>>>>>> origin/main
         <title>Project Management Pro - Zion Tech Group | Project Management Platform</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
@@ -119,7 +69,6 @@ return (
           </div>
         </section>
         {/* Features Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4" /></section>
           <div className="max-w-7xl mx-auto" /></div>
             <div className="text-center mb-16" /></div>
@@ -134,7 +83,6 @@ return (
                 Platform Features
               </h2>
               <p></p>
-=======
         <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">
@@ -153,10 +101,8 @@ return (
                 Our project management platform provides everything you need to succeed.,
               </p></p></p>
             </div>
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" / /></div>
               {features.map((feature, index) => ()
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div></div></div>
               {features.map((feature, index) => (
                 <div key=index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div></div></div>
@@ -171,7 +117,6 @@ return (
           </div>
         </section>
         {/* Benefits Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4" /></section>
           <div className="max-w-7xl mx-auto" /></div>
             <div className="text-center mb-16" /></div>
@@ -186,7 +131,6 @@ return (
                 Key Benefits
               </h2>
               <p></p>
-=======
         <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">
@@ -205,10 +149,8 @@ return (
                 Transform your project management with our comprehensive platform.,
               </p></p></p>
             </div>
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6" / /></div>
               {benefits.map((benefit, index) => ()
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div></div></div>
               {benefits.map((benefit, index) => (
                 <div key=index} className="flex items-start space-x-3"></div></div></div>
@@ -221,7 +163,6 @@ return (
           </div>
         </section>
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4" /></section>
           <div className="max-w-7xl mx-auto" /></div>
             <div className="text-center mb-16" /></div>
@@ -246,7 +187,6 @@ return (
                 <button></button>
                   <Mail></Mail>
                   Email Us
-=======
         <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">

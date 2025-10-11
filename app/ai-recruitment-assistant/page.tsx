@@ -3,43 +3,9 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Users, Search, Brain, Target, CheckCircle, ArrowRight, Zap, Shield, BarChart } from 'lucide-react';
 const AIRecruitmentAssistantPage: React.FC = () => {
-<<<<<<< HEAD
   const features = const features = const features = [
     {
-=======
-  const features = [
-    
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-      icon: Search,
-      title: 'Smart Candidate Matching',
-      description: 'AI-powered matching algorithm that finds the best candidates based on skills, experience, and cultural fit.'},
-    {icon: Brain,
-      title: 'Resume Analysis',
-      description: 'Automated resume screening and analysis to identify top talent quickly and efficiently.',},
-    {icon: Target,
-      title: 'Job Description Optimization',
-      description: 'AI-generated job descriptions that attract the right candidates and improve application quality.',},
-    {icon: Users,
-      title: 'Interview Scheduling',
-      description: 'Automated interview scheduling and coordination to streamline the hiring process.',},
-    {icon: BarChart,
-      title: 'Analytics & Insights',
-      description: 'Comprehensive analytics on hiring metrics, candidate pipeline, and recruitment performance.'},
-    {icon: Zap,
-      title: 'Automated Screening',
-<<<<<<< HEAD
-      description: 'AI-powered initial screening questions and assessments to filter candidates effectively.';
-    };
-  ];
-  return() {features.map((feature, index) => ()
-=======
-      description: 'AI-powered initial screening questions and assessments to filter candidates effectively.'
-    }
-  ];];];
-  return (
-    <>
-      <Helmet>
->>>>>>> origin/main
+
         <title>AI Recruitment Assistant | Zion Tech Group - Intelligent Hiring Solutions</title>
         <meta name="description" content="Streamline your hiring process with AI-powered recruitment tools. Find, screen, and hire the best candidates faster with our intelligent recruitment assistant." />
         <meta name="keywords" content="AI recruitment, hiring automation, candidate matching, resume screening, recruitment analytics, HR technology" />
@@ -79,4 +45,3 @@ const AIRecruitmentAssistantPage: React.FC = () => {
 
 export default AIRecruitmentAssistantPage;
   </h1>
->>>>>>> origin/main

@@ -75,14 +75,12 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {
  * Default error fallback component;
  */;
 function DefaultErrorFallback({ error, resetError }: { error: Error, resetError: () => void }) {
-<<<<<<< HEAD
     return ()
         )}
         <div className="mt-6 flex gap-4" / /></div>
           <button></button>
             Try Again
           </button>
-=======
     return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div></div></div>
       <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6"></div></div></div>
@@ -121,9 +119,7 @@ function DefaultErrorFallback({ error, resetError }: { error: Error, resetError:
 /**;
  * Network error fallback component;
  */;
-<<<<<<< HEAD
 function NetworkErrorFallback({ resetError }: { error: Error, resetError: () => void }) {return ()
-=======
 function NetworkErrorFallback({ resetError }: { error: Error, resetError: () => void }) {return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div></div></div>
       <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6"></div></div></div>
@@ -149,9 +145,7 @@ function NetworkErrorFallback({ resetError }: { error: Error, resetError: () => 
  * Not found error fallback component;
  */;
 function NotFoundFallback(): JSX.Element {
-<<<<<<< HEAD
     return ()
-=======
     return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div></div></div>
       <div className="max-w-md w-full text-center"></div></div></div>

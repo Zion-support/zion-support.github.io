@@ -2,77 +2,9 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { BarChart, TrendingUp, Users, DollarSign, Zap, Target, ArrowRight, CheckCircle, Star, Award, Clock, Shield } from 'lucide-react';
 const AIAnalyticsDashboardPage: React.FC = () => {
-<<<<<<< HEAD
     const features = const features = const features = [
     {
-=======
-    const features = [
-    
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-      icon: BarChart,
-      title: 'Real-time Analytics',
-      description: 'Live data visualization with instant updates and interactive charts.'
-  },
-    {
-      icon: TrendingUp,
-      title: 'Predictive Insights',
-      description: 'AI-powered forecasting and trend analysis for better decision making.'
-  },
-    {
-      icon: Users,
-      title: 'User Behavior Tracking',
-      description: 'Comprehensive user analytics and engagement metrics tracking.'
-  },
-    {
-      icon: DollarSign,
-      title: 'Revenue Analytics',
-      description: 'Detailed financial metrics and revenue optimization insights.'
-  },
-    {
-      icon: Zap,
-      title: 'Custom Dashboards',
-      description: 'Build personalized dashboards tailored to your business needs.'
-  },
-    {
-      icon: Target,
-      title: 'Goal Tracking',
-<<<<<<< HEAD
-      description: 'Monitor KPIs and business objectives with automated alerts.',}}
-  ]
-=======
-      description: 'Monitor KPIs and business objectives with automated alerts.'
-  };
-    };
-  ];
-const benefits = const benefits = const benefits = [
-    'Real-time data visualization and reporting',
-    'AI-powered predictive analytics',
 
-    'Customizable dashboard widgets',
-
-    'Automated report generation',
-
-    'Multi-platform data integration',;
-;
-    'Mobile-responsive design';
-  ];
-const metrics = const metrics = const metrics = [
-    { label: 'Data Sources', value: '50+', icon: BarChart },
-    { label: 'Update Frequency', value: 'Real-time', icon: Clock },
-<<<<<<< HEAD
-    { label: 'Accuracy Rate', value: '99.9%', icon: Shield },;
-    { label: 'User Satisfaction', value: '4.9/5', icon: Star };
-  ];
-return ()
-    features.map((feature, index) => ()
-=======
-    { label: 'Accuracy Rate', value: '99.9%', icon: Shield },
-    { label: 'User Satisfaction', value: '4.9/5', icon: Star }
-  ];];];
-return (
-    <>
-      <Helmet>
->>>>>>> origin/main
         <title>AI Analytics Dashboard | Zion Tech Group - Real-time Business Intelligence</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
@@ -145,7 +77,6 @@ return (
           </div>
         </section>
         {/* Metrics Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4" /></section>
           <div className="max-w-7xl mx-auto" /></div>
             <div className="text-center mb-16" /></div>
@@ -164,7 +95,6 @@ return (
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8" / /></div>
               {
     metrics.map((metric, index) => ()
-=======
         <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">
@@ -196,7 +126,6 @@ return (
           </div>
         </section>
         {/* Benefits Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4" /></section>
           <div className="max-w-7xl mx-auto" /></div>
             <div className="text-center mb-16" /></div>
@@ -232,7 +161,6 @@ return (
                   <div className="flex items-center space-x-3" / /></div>
                     <Star></Star>
                     <span className="text-gray-300">"Improved decision making speed by 3x"</span>
-=======
         <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">
@@ -281,7 +209,6 @@ return (
           </div>
         </section>
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4" /></section>
           <div className="max-w-7xl mx-auto" /></div>
             <div className="text-center mb-16" /></div>
@@ -307,7 +234,6 @@ return (
                 <button></button>
                   Schedule Demo
                 </button>
-=======
         <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">

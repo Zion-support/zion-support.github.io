@@ -10,67 +10,10 @@ import StructuredData from './components/StructuredData';
 
 import {Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText}}from 'lucide-react';
 
-<<<<<<< HEAD
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => ()
 ))
-=======
-// Loading skeleton component;
-const ServiceCardSkeleton: React.FC = memo(() => (
-  <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
-    </div></div><div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div></div></div>
-    <div className="h-4 bg-gray-200 rounded mb-2"></div></div></div>
-    <div className="h-4 bg-gray-200 rounded w-5/6"></div></div></div>)
-  </div>)
-)
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-ServiceCardSkeleton.displayName = 'ServiceCardSkeleton',
 
-const HomePage: React.FC = () => {,
-    const [isLoaded, setIsLoaded] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => 
-    setIsLoaded(true);
-    // Trigger visibility animation;
-    const timer = setTimeout(() => setIsVisible(true), 100);
-    return () => clearTimeout(timer)}, []);
-
-<<<<<<< HEAD
-  // Analytics tracking for phone clicks - optimized
-  const handlePhoneClick = const handlePhoneClick = useCallback(() => {;
-    if (typeof window !== 'undefined' && 'gtag' in window) {;
-      const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
-      gtag()
-=======
-  // Analytics tracking for phone clicks - optimized;
-  const handlePhoneClick = useCallback(() => {
-    if (typeof window !== 'undefined' && 'gtag' in window) ;
-      const gtag = (window as  gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
-      gtag('event', 'phone_click', {
-        event_category: 'engagement',)
-        event_label: 'main_phone_number')
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-      })
-    }
-  }, []);
-
-  const features = const features = const features = [
-    {
-      icon: Brain,
-<<<<<<< HEAD
-      title: 'AI-Powered Solutions',;
-      description: 'Cutting-edge artificial intelligence solutions that transform your business operations.',;
-      benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'];
-=======
-      title: 'AI-Powered Solutions',
-      description: 'Cutting-edge artificial intelligence solutions that transform your business operations.',
-      benefits: [''Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics''];
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-    },
-    {
-      icon: Cloud,
->>>>>>> origin/main
       title: 'Cloud Infrastructure',
       description: 'Scalable and secure cloud solutions that grow with your business needs.',
       benefits: [''AWS/Azure/GCP', 'Container Orchestration', 'Auto-scaling', 'Disaster Recovery'']
@@ -110,7 +53,6 @@ const HomePage: React.FC = () => {,
     },
     {
       icon: Cloud,
->>>>>>> origin/main
       title: 'IT Services',
       description: 'Complete IT infrastructure and cloud solutions to modernize your business operations.',
       href: '/it-services',
@@ -119,190 +61,11 @@ const HomePage: React.FC = () => {,
       title: 'Micro SaaS',
       description: 'Specialized software-as-a-service solutions designed for specific business needs.',
       href: '/micro-saas',
-<<<<<<< HEAD
       features: ['Custom SaaS', 'API Integration', 'Scalable Solutions', 'Maintenance']}]
 
   return(<React.Fragment>)</React.Fragment>
       <SEOOptimizer;
-=======
-      features: ['Custom SaaS', 'API Integration', 'Scalable Solutions', 'Maintenance']
-    }
-  ];
-<<<<<<< HEAD
-  return ()
-                      aria-label="Call us at (302) 464-0950"></a>
-                      <Phone className="w-5 h-5" / /></Phone>
-                      <span>(302) 464-0950</span>
-=======
-  return (
-    <>
-      <SEOOptimizer;
-        title="Zion Tech Group - Advanced AI and IT Solutions" description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
-        keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services']}
-        canonicalUrl="https://ziontechgroup.com"
-        structuredData={
-          '@context': 'https://schema.org',
-          '@type': 'TechCompany',
-          name: 'Zion Tech Group',
-          url: 'https://ziontechgroup.com',
-          description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
-          foundingDate: '2020',
-          numberOfEmployees: '50-100',
-          industry: 'Technology',
-          services: [,
-            'AI Solutions',
-            'Quantum Computing',
-            'Autonomous Systems',
-            'Digital Transformation',
-            'Cloud Services',
-            'Automation',
-            'Business Intelligence'
-          ],
-          contactPoint: 
-            '@type': 'ContactPoint',
-            telephone: '+1-302-464-0950',
-            contactType: 'Customer Service',
-            areaServed: 'US',
-            availableLanguage: 'en',},
-          address: {,
-            '@type': 'PostalAddress',
-            streetAddress: '364 E Main St STE 1008',
-            addressLocality: 'Middletown',
-            addressRegion: 'DE',
-            postalCode: '19709',
-            addressCountry: 'US'
-          }
-        }
-      />
-      <PerformanceOptimizer;
-        enableImageOptimization={true}
-        enableLazyLoading={true}
-        enablePreloading={true}
-        enableCodeSplitting={true}
 
-      >
-        <AccessibilityEnhancer;
-          enableKeyboardNavigation={true}
-          enableScreenReaderSupport={true}
-          enableHighContrast={true}
-          enableFocusManagement={true}
-        >
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
-            {/* Navigation */}
-            </div></div><Navigation />
-            
-            {/* Skip to main content for accessibility */}
-            <a;
-              href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50">
-              Skip to main content;
-            </a>
-
-            {/* Hero Section */}
-            <section id="main-content" className="relative pt-20 pb-16 overflow-hidden">
-              </section></section><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-                </div></div><div className="text-center">
-                  </div></div><div className="mb-8">
-                    </div></div><div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-6">
-                      </div></div><Sparkles className="w-4 h-4 mr-2" />
-                      Trusted by 500+ Companies Worldwide;
-                    </div>
-                  </div>
-                  <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-                    </h1></h1><span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent neon-text">
-                      Advanced AI & IT Solutions;
-                    </span></span></span>
-                    <br />
-                    <span className="text-3xl md:text-5xl lg:text-6xl">
-                      for the Future;
-                    </span></span></span>
-                  </h1>
-                  <p className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">,</p>
-                    Transform your business with cutting-edge artificial intelligence, quantum computing, 
-                    and autonomous systems. We deliver enterprise-grade solutions that drive innovation and growth.
-                  </p></p></p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-                    </div></div><a;
-                      href="/contact" className="cyber-button text-lg px-8 py-4 inline-flex items-center space-x-2 group"
-                      aria-label="Get started with our services">
-                      <span>Get Started</span></span></span>
-                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                    </a>
-                    <a;
-                      href="tel:+13024640950"
-                      onClick={handlePhoneClick})
-                      className="cyber-button-secondary text-lg px-8 py-4 inline-flex items-center space-x-2 group")
-                      aria-label="Call us at (302) 464-0950">
-                      <Phone className="w-5 h-5" />
-                      <span>(302) 464-0950</span></span></span>
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-                    </a>
-                  </div>
-                  
-                  {/* Stats Section */}
-<<<<<<< HEAD
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto" /></div>
-                    <div className="text-center" /></div>
-                      <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">500+</div>
-                      <div className="text-sm text-gray-300">Projects Delivered</div>
-                    </div>
-                    <div className="text-center" /></div>
-                      <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
-                      <div className="text-sm text-gray-300">Uptime Guarantee</div>
-                    </div>
-                    <div className="text-center" /></div>
-                      <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">24/7</div>
-                      <div className="text-sm text-gray-300">Support Available</div>
-                    </div>
-                    <div className="text-center" /></div>
-                      <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">5★</div>
-                      <div className="text-sm text-gray-300">Client Rating</div>
-=======
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-                    </div></div><div className="text-center">
-                      </div></div><div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">500+</div></div></div>
-                      <div className="text-sm text-gray-300">Projects Delivered</div></div></div>
-                    </div>
-                    <div className="text-center">
-                      </div></div><div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">99.9%</div></div></div>
-                      <div className="text-sm text-gray-300">Uptime Guarantee</div></div></div>
-                    </div>
-                    <div className="text-center">
-                      </div></div><div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">24/7</div></div></div>
-                      <div className="text-sm text-gray-300">Support Available</div></div></div>
-                    </div>
-                    <div className="text-center">
-                      </div></div><div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">5★</div></div></div>
-                      <div className="text-sm text-gray-300">Client Rating</div></div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-const HomePage: React.FC = memo(() => {,
-    const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => 
-    preloadComponents();
-    setIsLoaded(true)}, []);
-
-  const features = const features = const features = [
-    {
-      icon: Brain,
-<<<<<<< HEAD
-      title: 'AI-Powered Solutions',;
-      description: 'Cutting-edge artificial intelligence solutions that transform your business operations.',;
-      benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'];
-=======
-      title: 'AI-Powered Solutions',
-      description: 'Cutting-edge artificial intelligence solutions that transform your business operations.',
-      benefits: [''Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics''];
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-    },
-    {
-      icon: Cloud,
->>>>>>> origin/main
       title: 'Cloud Infrastructure',
       description: 'Scalable and secure cloud solutions that grow with your business needs.',
       benefits: [''AWS/Azure/GCP', 'Container Orchestration', 'Auto-scaling', 'Disaster Recovery'']
@@ -338,7 +101,6 @@ const HomePage: React.FC = memo(() => {,
     { number: '24/7', label: 'Support Available' },;
     { number: '50+', label: 'Expert Team Members' };
   ];
-<<<<<<< HEAD
   return ()
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" aria-hidden="true" / /></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} aria-hidden="true" / /></div>
@@ -346,7 +108,6 @@ const HomePage: React.FC = memo(() => {,
             <h1 id="hero-heading" className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight" /></h1>
               Transform Your Business with
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> AI & IT Solutions</span>
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       </div></div><StructuredData type="Organization" />
@@ -373,21 +134,17 @@ const HomePage: React.FC = memo(() => {,
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed" /></p>
               We help businesses leverage cutting-edge technology to drive growth, 
               improve efficiency, and stay ahead of the competition.
-<<<<<<< HEAD
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center" /></div>
             </section>
-=======
             </p></p></p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
 
             </div></div></section>
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
 
-<<<<<<< HEAD
             {/* Services Section */} <section className="py-20 bg-slate-800/50 backdrop-blur-sm">
               <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,</div>
-=======
       </main>
     </>
   );
@@ -399,7 +156,6 @@ const HomePage: React.FC = memo(() => {,
       </main>
     </>
   );
-<<<<<<< HEAD
 }, {/* Services Section */}
             <section className="py-20 bg-slate-800/50 backdrop-blur-sm" /></section>
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" /></div>
@@ -420,7 +176,6 @@ const HomePage: React.FC = memo(() => {,
                           className="inline-flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 font-medium group-hover:translate-x-1 transition-transform" /></a>
                           <span>Learn More</span>
                           <ArrowRight className="w-4 h-4" / /></ArrowRight>
-=======
 } {/* Services Section */}
             <section className="py-20 bg-slate-800/50 backdrop-blur-sm">
               </section></section><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -470,7 +225,6 @@ const HomePage: React.FC = memo(() => {,
             </section>
 
             {/* Features Section */}
-<<<<<<< HEAD
             <section className="py-20" /></section>
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" /></div>
                 <div className="text-center mb-16" /></div>
@@ -484,7 +238,6 @@ const HomePage: React.FC = memo(() => {,
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" /></div>
                   {features.map((feature, index) => ()
                           {feature.benefits.map((benefit, benefitIndex) => ()
-=======
             <section className="py-20">
               </section></section><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 </div></div><div className="text-center mb-16">
@@ -525,7 +278,6 @@ const HomePage: React.FC = memo(() => {,
             </section>
 
             {/* Testimonials Section */}
-<<<<<<< HEAD
             <section className="py-20 bg-slate-900/50" /></section>
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" /></div>
                 <div className="text-center mb-16" /></div>
@@ -533,7 +285,6 @@ const HomePage: React.FC = memo(() => {,
                     What Our Clients Say
                   </h2>
                   <p className="text-xl text-gray-300 max-w-3xl mx-auto" /></p>
-=======
             <section className="py-20 bg-slate-900/50">
               </section></section><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 </div></div><div className="text-center mb-16">
@@ -545,13 +296,11 @@ const HomePage: React.FC = memo(() => {,
                     Don't just take our word for it. Here's what industry leaders say about our solutions.
                   </p></p></p>
                 </div>
-<<<<<<< HEAD
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" /></div>
                   <div className="cyber-card" /></div>
                     <div className="flex items-center mb-4" /></div>
                       <div className="flex text-yellow-400" /></div>
                         {[...Array(5)].map((_, i) => ()
-=======
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   </div></div><div className="cyber-card">
                     </div></div><div className="flex items-center mb-4">
@@ -563,7 +312,6 @@ const HomePage: React.FC = memo(() => {,
                     </div>
                     <p className="text-gray-300 mb-4" /></p>
                       "Zion Tech Group transformed our entire IT infrastructure. Their AI solutions increased our efficiency by 300%."
-<<<<<<< HEAD
                     </p>
                     <div className="flex items-center" /></div>
                       <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-3" /></div>
@@ -579,7 +327,6 @@ const HomePage: React.FC = memo(() => {,
                     <div className="flex items-center mb-4" /></div>
                       <div className="flex text-yellow-400" /></div>
                         {[...Array(5)].map((_, i) => ()
-=======
                     </p></p></p>
                     <div className="flex items-center">
                       </div></div><div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
@@ -601,7 +348,6 @@ const HomePage: React.FC = memo(() => {,
                     </div>
                     <p className="text-gray-300 mb-4" /></p>
                       "Outstanding service and cutting-edge technology. They delivered our project ahead of schedule."
-<<<<<<< HEAD
                     </p>
                     <div className="flex items-center" /></div>
                       <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center text-white font-bold mr-3" /></div>
@@ -617,7 +363,6 @@ const HomePage: React.FC = memo(() => {,
                     <div className="flex items-center mb-4" /></div>
                       <div className="flex text-yellow-400" /></div>
                         {[...Array(5)].map((_, i) => ()
-=======
                     </p></p></p>
                     <div className="flex items-center">
                       </div></div><div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
@@ -639,7 +384,6 @@ const HomePage: React.FC = memo(() => {,
                     </div>
                     <p className="text-gray-300 mb-4" /></p>
                       "The best IT partner we've ever worked with. Their expertise in AI and cloud solutions is unmatched."
-<<<<<<< HEAD
                     </p>
                     <div className="flex items-center" /></div>
                       <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center text-white font-bold mr-3" /></div>
@@ -648,7 +392,6 @@ const HomePage: React.FC = memo(() => {,
                       <div></div>
                         <div className="text-white font-semibold">David Wilson</div>
                         <div className="text-sm text-gray-400">VP Engineering, DataFlow</div>
-=======
                     </p></p></p>
                     <div className="flex items-center">
                       </div></div><div className="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
@@ -666,7 +409,6 @@ const HomePage: React.FC = memo(() => {,
             </section>
 
             {/* CTA Section */}
-<<<<<<< HEAD
             <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600" /></section>
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" /></div>
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-6" /></h2>
@@ -686,7 +428,6 @@ const HomePage: React.FC = memo(() => {,
                     className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 px-8 py-4 rounded-lg font-semibold text-lg transition-colors inline-flex items-center space-x-2" /></a>
                     <Phone className="w-5 h-5" / /></Phone>
                     <span>(302) 464-0950</span>
-=======
             <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
               </section></section><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 </div></div><h2 className="text-3xl md:text-4xl font-bold text-white mb-6">

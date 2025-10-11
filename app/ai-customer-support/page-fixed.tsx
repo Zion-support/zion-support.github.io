@@ -5,63 +5,13 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 const PageFixedPage: React.FC = () => {
-<<<<<<< HEAD
     const features = const features = const features = [
     {
       icon: Brain,
       title: 'AI-Powered Analysis',;
       description: 'Advanced AI algorithms provide intelligent insights and recommendations.',;
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'];
-=======
-    const features = [
-    
-      icon: Brain,
-      title: 'AI-Powered Analysis',
-      description: 'Advanced AI algorithms provide intelligent insights and recommendations.',
-      benefits: [''Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis''];
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-  },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: [''Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics'']
-  },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: [''Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics'']
-  },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: [''Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'']
-  },
-<<<<<<< HEAD
-  ];
-return ()
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" / / /></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} / / /></div>
-          <div className="relative max-w-7xl mx-auto text-center" / /></div>
-            <h1></h1>
-              Page Fixed
-            </h1>
-            <p></p>
-              Advanced page fixed solutions powered by AI technology.
-            </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center" / /></div>
-              <button></button>
-                Get Started
-              </button>
-              <button></button>
-=======
-  ];];
-return (
-    <>
-      <Helmet>
->>>>>>> origin/main
+
         <title>Page Fixed - Zion Tech Group</title>
         <meta />
       </Helmet>
@@ -97,7 +47,6 @@ return (
           </div>
         </section>
         {/* Features Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4" /></section>
           <div className="max-w-7xl mx-auto" /></div>
             <div className="text-center mb-16" /></div>
@@ -118,7 +67,6 @@ return (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" / /></div>
               {features.map((feature, index) => ()
                       {feature.benefits.map((benefit, idx) => ()
-=======
         <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">
@@ -164,7 +112,6 @@ return (
           </div>
         </section>
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4" /></section>
           <div className="max-w-7xl mx-auto" /></div>
             <div className="text-center mb-16" /></div>
@@ -188,7 +135,6 @@ return (
                 <button></button>
                   Learn More
                 </button>
-=======
         <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">

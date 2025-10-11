@@ -29,59 +29,9 @@ import {Shield,}
   }
 } from 'lucide-react'
 const PenetrationTestingPage: React.FC = () => {
-<<<<<<< HEAD
     const features = const features = const features = [
     {
-=======
-    const features = [
-    
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-      icon: Search,
-      title: 'Comprehensive Vulnerability Assessment',
-      description: 'Thorough testing of your systems to identify security weaknesses and potential attack vectors.'
-  },
-    {
-      icon: Target,
-      title: 'Simulated Attack Scenarios',
-      description: 'Real-world attack simulations to test your defenses and response capabilities.'
-  },
-    {
-      icon: BarChart,
-      title: 'Detailed Security Reports',
-      description: 'Comprehensive reports with prioritized recommendations and remediation guidance.'
-  },
-    {
-      icon: Zap,
-      title: 'Expert Security Analysis',
-<<<<<<< HEAD
-      description: 'Professional security experts conduct thorough testing using industry-standard methodologies.',}}
-  ]
-=======
-      description: 'Professional security experts conduct thorough testing using industry-standard methodologies.'
-  };
-    };
-  ];
-const benefits = const benefits = const benefits = [
-    'Identify security vulnerabilities before attackers do',
-    'Comply with industry regulations and standards',
-    'Improve your security posture and defenses',
-    'Receive detailed remediation recommendations',
 
-    'Test incident response procedures',
-
-    'Validate security controls effectiveness',
-
-    'Expert analysis and reporting',;
-;
-    'Ongoing security improvement guidance';
-  ];
-<<<<<<< HEAD
-return ()
-=======
-return (
-    <>
-      <Helmet>
->>>>>>> origin/main
         <title>Penetration Testing Services - Zion Tech Group | Security Assessment</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
@@ -120,7 +70,6 @@ return (
           </div>
         </section>
         {/* Features Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4" /></section>
           <div className="max-w-7xl mx-auto" /></div>
             <div className="text-center mb-16" /></div>
@@ -135,7 +84,6 @@ return (
                 Our Penetration Testing Approach
               </h2>
               <p></p>
-=======
         <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">
@@ -154,10 +102,8 @@ return (
                 We use industry-standard methodologies and cutting-edge tools to thoroughly assess your security posture.,
               </p></p></p>
             </div>
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" / /></div>
               {features.map((feature, index) => ()
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div></div></div>
               {features.map((feature, index) => (
                 <div key=index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div></div></div>
@@ -172,7 +118,6 @@ return (
           </div>
         </section>
         {/* Benefits Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4" /></section>
           <div className="max-w-7xl mx-auto" /></div>
             <div className="text-center mb-16" /></div>
@@ -187,7 +132,6 @@ return (
                 Key Benefits
               </h2>
               <p></p>
-=======
         <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">
@@ -206,10 +150,8 @@ return (
                 Strengthen your security defenses with our comprehensive penetration testing services.,
               </p></p></p>
             </div>
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6" / /></div>
               {benefits.map((benefit, index) => ()
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div></div></div>
               {benefits.map((benefit, index) => (
                 <div key=index} className="flex items-start space-x-3"></div></div></div>
@@ -222,7 +164,6 @@ return (
           </div>
         </section>
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4" /></section>
           <div className="max-w-7xl mx-auto" /></div>
             <div className="text-center mb-16" /></div>
@@ -247,7 +188,6 @@ return (
                 <button></button>
                   <Mail></Mail>
                   Email Us
-=======
         <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">

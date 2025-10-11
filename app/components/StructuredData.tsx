@@ -6,96 +6,8 @@ interface StructuredDataProps {
   data?: Record<string, unknown>;
 }
 
-<<<<<<< HEAD
 const StructuredData: React.FC<StructuredDataProps> = ()
-=======
-const StructuredData: React.FC<StructuredDataProps> = ({ 
-  type = 'Organization', )
-  data )
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-}) => {
-  const getDefaultData = const getDefaultData = const getDefaultData = () => {
-    switch (type) {
-      case 'Organization':
-        return 
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "name": "Zion Tech Group",
-          "description": "Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.",
-          "url": "https://ziontechgroup.com",
-          "logo": "https://ziontechgroup.com/logo.png",
-          "contactPoint": 
-            "@type": "ContactPoint",
-            "telephone": "+1-302-464-0950",
-            "contactType": "customer service",
-            "email": "kleber@ziontechgroup.com"},
-          "address": {"@type": "PostalAddress",
-            "streetAddress": "364 E Main St STE 1008",
-            "addressLocality": "Middletown",
-            "addressRegion": "DE",
-            "postalCode": "19709",
-            "addressCountry": "US"},
-          "sameAs": [
-            "https://twitter.com/ziontechgroup",
-            "https: //linkedin.com/company/ziontechgroup"
-    }],
-          "foundingDate": "2020",
-          "numberOfEmployees": "50+",
-          "areaServed": "Worldwide",
-          "serviceType": [
-            "AI Solutions",
-            "Quantum Computing",
-            "Autonomous Systems",
-            "Digital Transformation",
-            "Cloud Infrastructure",
-            "Cybersecurity",
-            "Data Analytics",
-            "IT Consulting"
-          ]
-        }
-      
-      case 'WebSite':
-        return {"@context": "https://schema.org",}
-          "@type": "WebSite",
-          "name": "Zion Tech Group",
-          "url": "https://ziontechgroup.com",
-          "description": "Advanced AI and IT solutions for modern businesses",
-          "publisher": 
-            "@type": "Organization",
-            "name": "Zion Tech Group"
-          },
-          "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://ziontechgroup.com/search?q=search_term_string}",
-            "query-input": "required name=search_term_string"
-          }
-        }
-      
-      case 'WebPage':
-        return {"@context": "https://schema.org",}
-          "@type": "WebPage",
-          "name": "Zion Tech Group - Advanced AI and IT Solutions",
-          "description": "Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.",
-          "url": "https://ziontechgroup.com",
-          "isPartOf": 
-            "@type": "WebSite",
-            "name": "Zion Tech Group",
-            "url": "https: //ziontechgroup.com",},
-          "about": {"@type": "Organization",
-            "name": "Zion Tech Group"},
-          "breadcrumb": {"@type": "BreadcrumbList",
-            "itemListElement": [
-              
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-<<<<<<< HEAD
-                "item": "https: //ziontechgroup.com",}]
-=======
-                "item": "https://ziontechgroup.com"
-              }
-  ]
->>>>>>> origin/main
+
           }
         }
       
@@ -158,12 +70,10 @@ const StructuredData: React.FC<StructuredDataProps> = ({
 ;
   const structuredData = data || getDefaultData();
 
-<<<<<<< HEAD
   return ()
         __html: JSON.stringify(structuredData, null, 2)
       }}
     /></script>
-=======
   return (
     <script;
       type="application/ld+json")

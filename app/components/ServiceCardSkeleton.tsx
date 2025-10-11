@@ -3,10 +3,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 const ServiceCardSkeletonPage: React.FC = () => {
-<<<<<<< HEAD
     const features = const features = const features = [
     {
-=======
     const features = [
     
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
@@ -27,10 +25,8 @@ const ServiceCardSkeletonPage: React.FC = () => {
     {
       icon: Globe,
       title: 'Global Reach',
-<<<<<<< HEAD
       description: 'Worldwide deployment and support for international businesses',}}
   ]
-=======
       description: 'Worldwide deployment and support for international businesses'
   };
     };

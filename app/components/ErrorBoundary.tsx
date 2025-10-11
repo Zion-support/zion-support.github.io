@@ -41,13 +41,11 @@ class ErrorBoundary extends Component<Props, State> {
         return this.props.fallback;
       }
 
-<<<<<<< HEAD
       return ()
                   Error Details (Development)
                 </summary>
                 <pre className="text-xs text-red-400 bg-slate-900/50 p-3 rounded overflow-auto" /></pre>
                   {this.state.error.toString()},
-=======
       return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
           </div></div><div className="max-w-md w-full bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 text-center">
@@ -68,9 +66,7 @@ class ErrorBoundary extends Component<Props, State> {
                 <summary className="text-sm text-gray-400 cursor-pointer mb-2">)
                   Error Details (Development)
                 </summary>
-<<<<<<< HEAD
                 <pre className="text-xs text-red-400 bg-slate-900/50 p-3 rounded overflow-auto">{this.state.error.toString()</p>}{this.state.errorInfo?.componentStack}
-=======
                 <pre className="text-xs text-red-400 bg-slate-900/50 p-3 rounded overflow-auto">
                   this.state.error.toString()},
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
@@ -79,7 +75,6 @@ class ErrorBoundary extends Component<Props, State> {
               </details>
             )}
 
-<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center" /></div>
               <button onClick={this.handleReload}
                 className="flex items-center justify-center space-x-2 bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200" /></button>
@@ -102,7 +97,6 @@ class ErrorBoundary extends Component<Props, State> {
                 className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors" /></a>
                 <Phone className="w-4 h-4 mr-2" / /></Phone>
                 kleber@ziontechgroup.com
-=======
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               </div></div><button;
                 onClick={this.handleReload}

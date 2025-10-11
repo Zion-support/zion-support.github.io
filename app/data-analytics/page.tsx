@@ -28,59 +28,9 @@ import {BarChart,}
   }
 } from 'lucide-react'
 const DataAnalyticsPage: React.FC = () => {
-<<<<<<< HEAD
     const features = const features = const features = [
     {
-=======
-    const features = [
-    
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-      icon: BarChart,
-      title: 'Advanced Data Visualization',
-      description: 'Transform complex data into clear, actionable insights with interactive dashboards and reports.'
-  },
-    {
-      icon: Brain,
-      title: 'AI-Powered Analytics',
-      description: 'Leverage machine learning and artificial intelligence to uncover hidden patterns and trends.'
-  },
-    {
-      icon: Database,
-      title: 'Data Integration',
-      description: 'Connect and analyze data from multiple sources to get a complete picture of your business.'
-  },
-    {
-      icon: TrendingUp,
-      title: 'Predictive Analytics',
-<<<<<<< HEAD
-      description: 'Forecast future trends and make data-driven decisions with predictive modeling.',}}
-  ]
-=======
-      description: 'Forecast future trends and make data-driven decisions with predictive modeling.'
-  };
-    };
-  ];
-const benefits = const benefits = const benefits = [
-    'Make data-driven business decisions',
-    'Identify new opportunities and trends',
-    'Improve operational efficiency',
-    'Reduce costs through optimization',
 
-    'Enhance customer experience',
-
-    'Comply with data regulations',
-
-    'Real-time insights and reporting',;
-;
-    'Custom analytics solutions';
-  ];
-<<<<<<< HEAD
-return ()
-=======
-return (
-    <>
-      <Helmet>
->>>>>>> origin/main
         <title>Data Analytics Services - Zion Tech Group | Business Intelligence</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
@@ -119,7 +69,6 @@ return (
           </div>
         </section>
         {/* Features Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4" /></section>
           <div className="max-w-7xl mx-auto" /></div>
             <div className="text-center mb-16" /></div>
@@ -134,7 +83,6 @@ return (
                 Our Analytics Solutions
               </h2>
               <p></p>
-=======
         <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">
@@ -153,10 +101,8 @@ return (
                 We provide comprehensive data analytics services to help you unlock the power of your data.,
               </p></p></p>
             </div>
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" / /></div>
               {features.map((feature, index) => ()
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div></div></div>
               {features.map((feature, index) => (
                 <div key=index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div></div></div>
@@ -171,7 +117,6 @@ return (
           </div>
         </section>
         {/* Benefits Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4" /></section>
           <div className="max-w-7xl mx-auto" /></div>
             <div className="text-center mb-16" /></div>
@@ -186,7 +131,6 @@ return (
                 Key Benefits
               </h2>
               <p></p>
-=======
         <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">
@@ -205,10 +149,8 @@ return (
                 Drive business success with our comprehensive data analytics services.,
               </p></p></p>
             </div>
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6" / /></div>
               {benefits.map((benefit, index) => ()
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div></div></div>
               {benefits.map((benefit, index) => (
                 <div key=index} className="flex items-start space-x-3"></div></div></div>
@@ -221,7 +163,6 @@ return (
           </div>
         </section>
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4" /></section>
           <div className="max-w-7xl mx-auto" /></div>
             <div className="text-center mb-16" /></div>
@@ -246,7 +187,6 @@ return (
                 <button></button>
                   <Mail></Mail>
                   Email Us
-=======
         <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">

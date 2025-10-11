@@ -1,163 +1,179 @@
 'use client';
-<<<<<<< HEAD
-import React, {Suspense, lazy}from 'react';
-import {Link, useLocation}}from 'react-router-dom';
-import {X,}
-  Menu,
-  Home,
-  Users,
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { 
+  Brain, 
+  Cloud, 
+  BarChart, 
+  Users, 
+  Code, 
+  BookOpen, 
+  FileText, 
+  HelpCircle, 
   Settings,
-  Brain,
-  Cloud,
-  Shield,
-  Code,
-  BarChart,
-  ChevronDown,
   ChevronRight,
-
+  ChevronDown,
+  Home,
+  User,
+  DollarSign,
+  Briefcase,
+  MessageSquare,
   Phone,
-
   Mail,
-
   MapPin,
+  Play
+} from 'lucide-react';
 
-  Clock;}} from 'lucide-react'
-const Sidebar: React.FC = () => {,
-    const [isOpen, setIsOpen] = useState(false);
-  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['ai-services', 'micro-saas', 'it-services']));
+const Sidebar: React.FC = () => {
+  const [expandedSections, setExpandedSections] = useState<string[]>(['solutions']);
   const location = useLocation();
-useEffect(() => {
-    const handleResize = (;
-      if (window.innerWidth >= 1024) {) => {
-  return($3;)
-  )}setIsOpen(false);}
-      }
-    }
-window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-const toggleSection = (;
 
-    const newExpanded = new Set(expandedSections);
-    if (newExpanded.has(section)) {) => {
-  return($3;)
-  )}newExpanded.delete(section);}
-    } else {newExpanded.add(section)}}}
-    setExpandedSections(newExpanded);
-  }
-const navigationSections = [
-    {title: 'Main',
-      items: [,}{ name: 'Home', path: '/', icon: Home ,},
-        {name: 'About', path: '/about', icon: Users ,},
-        {name: 'Services', path: '/services', icon: Settings ,},
-        {name: 'Contact', path: '/contact', icon: Phone ,},
-        {name: 'Blog', path: '/blog', icon: BarChart ,},
-        {name: 'Case Studies', path: '/case-studies', icon: BarChart ,},
+  const toggleSection = (section: string) => {
+    setExpandedSections(prev => 
+      prev.includes(section) 
+        ? prev.filter(s => s !== section)
+        : [...prev, section]
+    );
+  };
+
+  const isActive = (path: string) => location.pathname === path;
+
+  const navigationItems = [
+    {
+      section: 'main',
+      items: [
+        { name: 'Home', path: '/', icon: Home },
+        { name: 'About', path: '/about', icon: User },
+        { name: 'Pricing', path: '/pricing', icon: DollarSign },
+        { name: 'Case Studies', path: '/case-studies', icon: Briefcase },
+        { name: 'Contact', path: '/contact', icon: MessageSquare }
       ]
     },
-    {title: 'AI Services',
-      key: 'ai-services',
-      items: [,}{ name: 'AI Services Overview', path: '/ai-services', icon: Brain ,},
-        {name: 'Business Intelligence', path: '/ai-services/business-intelligence', icon: BarChart ,},
-        {name: 'Document Processing', path: '/ai-services/document-processing', icon: Settings ,},
-        {name: 'Customer Experience', path: '/ai-services/customer-experience', icon: Users ,},
-        {name: 'Marketing Automation', path: '/ai-services/marketing-automation', icon: Settings ,},
-        {name: 'Predictive Maintenance', path: '/ai-services/predictive-maintenance', icon: Settings ,},
-        {name: 'Supply Chain', path: '/ai-services/supply-chain', icon: Settings ,},
-        {name: 'Fraud Detection', path: '/ai-services/fraud-detection', icon: Shield ,},
-        {name: 'Content Generation', path: '/ai-services/content-generation', icon: Settings ,},
-        {name: 'HR Analytics', path: '/ai-services/hr-analytics', icon: BarChart ,},
-        {name: 'Process Automation', path: '/ai-services/process-automation', icon: Settings ,},
-        {name: 'Quality Assurance', path: '/ai-services/quality-assurance', icon: Shield ,},
-        {name: 'Energy Management', path: '/ai-services/energy-management', icon: Settings ,},
+    {
+      section: 'solutions',
+      title: 'Solutions',
+      items: [
+        { name: 'AI Services', path: '/ai-services', icon: Brain },
+        { name: 'IT Services', path: '/it-services', icon: Cloud },
+        { name: 'Micro SaaS', path: '/micro-saas', icon: BarChart }
       ]
     },
-    {title: 'Micro SaaS',
-      key: 'micro-saas',
-      items: [,}{ name: 'Micro SaaS Overview', path: '/micro-saas', icon: Settings ,},
-        {name: 'Analytics Dashboard', path: '/micro-saas/analytics-dashboard', icon: BarChart ,},
-        {name: 'Support Bot', path: '/micro-saas/support-bot', icon: Users ,},
-        {name: 'Social Manager', path: '/micro-saas/social-manager', icon: Settings ,},
-        {name: 'Email Marketing', path: '/micro-saas/email-marketing', icon: Mail ,},
-        {name: 'Inventory Management', path: '/micro-saas/inventory-management', icon: Settings ,},
-        {name: 'Lead Scoring', path: '/micro-saas/lead-scoring', icon: BarChart ,},
-        {name: 'Document Processor', path: '/micro-saas/document-processor', icon: Settings ,},
-        {name: 'SEO Optimizer', path: '/micro-saas/seo-optimizer', icon: Settings ,},
-        {name: 'Appointment Scheduler', path: '/micro-saas/appointment-scheduler', icon: Clock ,},
-        {name: 'Chat Analytics', path: '/micro-saas/chat-analytics', icon: BarChart ,},
-        {name: 'Expense Tracker', path: '/micro-saas/expense-tracker', icon: BarChart ,},
-        {name: 'Content Generator', path: '/micro-saas/content-generator', icon: Settings ,},
+    {
+      section: 'enterprise',
+      title: 'Enterprise',
+      items: [
+        { name: 'Enterprise Solutions', path: '/enterprise', icon: Settings },
+        { name: 'Digital Transformation', path: '/digital-transformation', icon: Code },
+        { name: 'Business Intelligence', path: '/business-intelligence', icon: BarChart },
+        { name: 'Custom Development', path: '/custom-software', icon: Code },
+        { name: 'Consultation', path: '/consultation', icon: Users }
       ]
     },
-    {title: 'IT Services',
-      key: 'it-services',
-      items: [,}{ name: 'IT Services Overview', path: '/it-services', icon: Code ,},
-        {name: 'IT Consulting', path: '/it-consulting', icon: Users ,},
-        {name: 'IT Infrastructure', path: '/it-infrastructure', icon: Settings ,},
-        {name: 'IT Support', path: '/it-support', icon: Users ,},
-        {name: 'Cloud Infrastructure', path: '/cloud-infrastructure', icon: Cloud ,},
-        {name: 'Cloud Migration', path: '/cloud-migration', icon: Cloud ,},
-        {name: 'Cybersecurity', path: '/cybersecurity', icon: Shield ,},
-        {name: 'Database Management', path: '/database-management', icon: Settings ,},
-        {name: 'Managed IT', path: '/managed-it', icon: Settings ,},
+    {
+      section: 'resources',
+      title: 'Resources',
+      items: [
+        { name: 'Blog', path: '/blog', icon: FileText },
+        { name: 'Tutorials', path: '/tutorials', icon: BookOpen },
+        { name: 'Documentation', path: '/docs', icon: FileText },
+        { name: 'API Reference', path: '/api-docs', icon: Code },
+        { name: 'Demo', path: '/demo', icon: Play },
+        { name: 'FAQ', path: '/faq', icon: HelpCircle }
       ]
     },
-    {title: 'Company',
-      items: [,}{ name: 'Team', path: '/team', icon: Users ,},
-        {name: 'Careers', path: '/careers', icon: Users ,},
-        {name: 'Consultation', path: '/consultation', icon: Phone ,},
-        {name: 'Pricing', path: '/pricing', icon: BarChart ,},
-      ]
-    },
-    {title: 'Resources',
-      items: [,}{ name: 'Documentation', path: '/docs', icon: Settings ,},
-        {name: 'API Docs', path: '/api-docs', icon: Code ,},
-        {name: 'Support', path: '/support', icon: Users ,},
-        {name: 'Status', path: '/status', icon: Settings ,},
+    {
+      section: 'company',
+      title: 'Company',
+      items: [
+        { name: 'Our Team', path: '/team', icon: Users },
+        { name: 'Careers', path: '/careers', icon: Briefcase },
+        { name: 'Partners', path: '/partners', icon: Users },
+        { name: 'News', path: '/news', icon: FileText },
+        { name: 'Support', path: '/support', icon: HelpCircle },
+        { name: 'Status', path: '/status', icon: Settings }
       ]
     }
-  ]
-const contactInfo = {phone: '(302) 464-0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown, DE 19709',
-    hours: 'Mon-Fri 9AM-6PM EST',}}
-return(<>)
-      {/* Mobile Menu Button */} <button;
-        onClick={() =>setIsOpen(true)</button>}className="lg: hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all",
-        aria-label="Open sidebar"
-      >,
-        <Menu>
-      </button>
+  ];
 
-      {/* Sidebar Overlay */}{
-    isOpen && (;
-        <div;
-          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg: hidden",
-  }
-          onClick={() =>setIsOpen(false)</div>}/>
-      )}
-{/* Sidebar */}</div>
-      <aside>
-        <div className="flex flex-col h-full"></div>
-          {/* Header */}</div>
-          <div className="flex items-center justify-between p-6 border-b border-slate-700/50"></div>
-            <Link to="/" className="flex items-center space-x-3" onClick={() => setIsOpen(false)}>;
-              <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center"></div>
-                <Brain />
-              <div />
-                <h2 className="text-xl font-bold text-white cyber-text">Zion Tech Group</h2>
-                <p className="text-xs text-cyan-400">AI & IT Solutions</p>
-              </div>
-            </Link>
-            <button;
-              onClick={() =>setIsOpen(false)</button>}className="lg: hidden text-gray-400 hover:text-white transition-colors",
-              aria-label="Close sidebar"
-            >,
-              <X>
-=======
-
->>>>>>> origin/main
-            </button>
+  return (
+    <div className="w-64 bg-slate-900/95 backdrop-blur-lg border-r border-cyan-500/20 h-full overflow-y-auto">
+      <div className="p-6">
+        {/* Logo */}
+        <div className="flex items-center space-x-3 mb-8">
+          <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-600 rounded-xl flex items-center justify-center">
+            <Brain className="w-6 h-6 text-white" />
           </div>
+          <div className="flex flex-col">
+            <span className="text-lg font-bold text-white">Zion Tech</span>
+            <span className="text-xs text-cyan-400 font-medium">AI & IT Solutions</span>
+          </div>
+        </div>
 
-          {/* Navigation */}
+        {/* Navigation */}
+        <nav className="space-y-2">
+          {navigationItems.map((section) => (
+            <div key={section.section}>
+              {section.title && (
+                <button
+                  onClick={() => toggleSection(section.section)}
+                  className="w-full flex items-center justify-between text-cyan-400 font-semibold text-sm mb-2 hover:text-cyan-300 transition-colors"
+                >
+                  <span>{section.title}</span>
+                  {expandedSections.includes(section.section) ? (
+                    <ChevronDown className="w-4 h-4" />
+                  ) : (
+                    <ChevronRight className="w-4 h-4" />
+                  )}
+                </button>
+              )}
+              
+              {(!section.title || expandedSections.includes(section.section)) && (
+                <div className="space-y-1 mb-4">
+                  {section.items.map((item) => (
+                    <Link
+                      key={item.path}
+                      to={item.path}
+                      className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-all duration-200 ${
+                        isActive(item.path)
+                          ? 'bg-cyan-500/20 text-cyan-400 border-l-2 border-cyan-400'
+                          : 'text-gray-300 hover:text-cyan-400 hover:bg-slate-800/50'
+                      }`}
+                    >
+                      <item.icon className="w-4 h-4 flex-shrink-0" />
+                      <span>{item.name}</span>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </nav>
+
+        {/* Contact Info */}
+        <div className="mt-8 pt-6 border-t border-gray-700">
+          <h3 className="text-cyan-400 font-semibold text-sm mb-4">Contact Info</h3>
+          <div className="space-y-3">
+            <div className="flex items-center text-sm text-gray-300">
+              <Phone className="w-4 h-4 mr-3 text-cyan-400" />
+              <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">
+                (302) 464-0950
+              </a>
+            </div>
+            <div className="flex items-center text-sm text-gray-300">
+              <Mail className="w-4 h-4 mr-3 text-cyan-400" />
+              <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">
+                kleber@ziontechgroup.com
+              </a>
+            </div>
+            <div className="flex items-start text-sm text-gray-300">
+              <MapPin className="w-4 h-4 mr-3 mt-0.5 text-cyan-400" />
+              <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Sidebar;

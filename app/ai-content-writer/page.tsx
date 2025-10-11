@@ -5,23 +5,12 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const AIContentWriterPage: React.FC = () => {
-<<<<<<< HEAD
   const features = const features = const features = [
     {
       title: 'AI-Powered Writing',;
       description: 'Generate high-quality content using advanced AI algorithms that understand context, tone, and audience.',;
       benefits: ['Context-aware writing', 'Multiple tones', 'Audience targeting', 'Quality optimization'];
-=======
-  const features = [
-    
-      title: 'AI-Powered Writing',
-      description: 'Generate high-quality content using advanced AI algorithms that understand context, tone, and audience.',
-      benefits: [''Context-aware writing', 'Multiple tones', 'Audience targeting', 'Quality optimization''];
->>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
-    },
-    {
-      title: 'Content Optimization',
->>>>>>> origin/main
+
       description: 'Automatically optimize content for SEO, readability, and engagement with intelligent suggestions.',
       benefits: [''SEO optimization', 'Readability scoring', 'Engagement metrics', 'A/B testing'']
     },
@@ -39,7 +28,6 @@ const AIContentWriterPage: React.FC = () => {
     'Content analytics',;
     'Team collaboration';
   ];
-<<<<<<< HEAD
   const stats = const stats = const stats = [
     { icon: <PenTool className="w-8 h-8 text-blue-500" />, value: '10K+', label: 'Articles Created' },
     { icon: <Zap className="w-8 h-8 text-green-500" />, value: '90%', label: 'Time Saved' },
@@ -64,7 +52,6 @@ const AIContentWriterPage: React.FC = () => {
             <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300" /></button>
               Try Demo
             </button>
-=======
   const stats = [
     {
       icon: <PenTool className="w-8 h-8 text-blue-500" />, value: '10K+', label: 'Articles Created' },
@@ -108,12 +95,10 @@ const AIContentWriterPage: React.FC = () => {
       </section>
 
       {/* Stats Section */}
-<<<<<<< HEAD
       <section className="py-16 px-4" /></section>
         <div className="max-w-6xl mx-auto" /></div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8" /></div>
             {stats.map((stat, index) => ()
-=======
       <section className="py-16 px-4">
         </section></section><div className="max-w-6xl mx-auto">
           </div></div><div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -132,7 +117,6 @@ const AIContentWriterPage: React.FC = () => {
       </section>
 
       {/* Features Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4" /></section>
         <div className="max-w-7xl mx-auto" /></div>
           <div className="text-center mb-16" /></div>
@@ -147,7 +131,6 @@ const AIContentWriterPage: React.FC = () => {
           <div className="grid md:grid-cols-3 gap-8" /></div>
             {features.map((feature, index) => ()
                   {feature.benefits.map((benefit, benefitIndex) => ()
-=======
       <section className="py-20 px-4">
         </section></section><div className="max-w-7xl mx-auto">
           </div></div><div className="text-center mb-16">
@@ -181,7 +164,6 @@ const AIContentWriterPage: React.FC = () => {
         </div>
       </section>
       {/* Benefits Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4" /></section>
         <div className="max-w-7xl mx-auto" /></div>
           <div className="text-center mb-16" /></div>
@@ -193,7 +175,6 @@ const AIContentWriterPage: React.FC = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" /></div>
             {benefits.map((benefit, index) => ()
-=======
       <section className="py-20 px-4">
         </section></section><div className="max-w-7xl mx-auto">
           </div></div><div className="text-center mb-16">
@@ -218,7 +199,6 @@ const AIContentWriterPage: React.FC = () => {
         </div>
       </section>
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4" /></section>
         <div className="max-w-4xl mx-auto text-center" /></div>
           <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12" /></div>
@@ -235,7 +215,6 @@ const AIContentWriterPage: React.FC = () => {
               <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300" /></button>
                 Learn More
               </button>
-=======
       <section className="py-20 px-4">
         </section></section><div className="max-w-4xl mx-auto text-center">
 

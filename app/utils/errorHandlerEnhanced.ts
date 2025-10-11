@@ -19,19 +19,10 @@ export const errorHandler = const errorHandler = (error: AppError | Error) => {}
   const appError = error instanceof AppError ? error : new AppError(error.message);
 .toISOString();
     statusCode: appError.statusCode || 500,
-<<<<<<< HEAD
   return {,;}
   .toISOString(),;
     statusCode: appError.statusCode || 500;,}return {}}message: appError.isOperational ? appError.message : 'An unexpected error occurred',
-=======
-  return {
-    ,
-  .toISOString(),
-    statusCode: appError.statusCode || 500;
-  }
-  return {}
-    message: appError.isOperational ? appError.message : 'An unexpected error occurred',
->>>>>>> origin/main
+
     statusCode: appError.statusCode || 500,
   }
 }
@@ -47,9 +38,7 @@ export const asyncHandler = (fn: (req: unknown, res: unknown, next: unknown) => 
 // Enhanced Error Handler;
 export class AppError extends Error {/* TODO: Fix JSX expression */,}}}
 }
-<<<<<<< HEAD
 export const errorHandler = const errorHandler = ();
-=======
 export const errorHandler = (;)
   const isDevelopment = process.env.NODE_ENV === 'development';)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
@@ -58,9 +47,7 @@ message: appError.message,
     stack: appError.stack,
     timestamp: new Date().toISOString(),) => {
     return ()
-<<<<<<< HEAD
   )
-=======
     $3)
 >>>>>>> cursor/fix-errors-and-merge-to-main-fbe6
   }
@@ -68,11 +55,9 @@ message: appError.message,
   })
   return {/* TODO: Fix JSX expression */,}}}
 }
-<<<<<<< HEAD
 export const asyncHandler = const asyncHandler = const asyncHandler = ();
   s: unknown, nex);
   t: unknown) => unknown) => ()
-=======
 export const asyncHandler = (f,
   n: (re,)
   q: unknown, re,)

@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 
 
 interface LinkProps {href: string,}
     children: React.ReactNode;,}interface LinkProps {}}href: string;,
-=======
 interface LinkProps {
     href: string,
     children: React.ReactNode;
@@ -17,13 +15,11 @@ interface LinkProps {}
   onClick?: () => void;
   'aria-label'?: string,}
 }
-<<<<<<< HEAD
 export const Link: React.FC<LinkProps>= ()
   onClick?: () => void
   'aria-label'?: string,}
 }
 export const Link: React.FC<LinkProps> = ()
-=======
 export const Link: React.FC<LinkProps>= ({}
 export const Link: React.FC<LinkProps> = ({}
   href,
@@ -61,9 +57,7 @@ export const Link: React.FC<LinkProps> = ({,
       window.location.href = href;}
     }
   }</LinkProps>
-<<<<<<< HEAD
   return ()
-=======
   return (<a;
   }
   return(<a;
@@ -78,9 +72,7 @@ export const,)
     // Handle internal navigation;
     if (href.startsWith('/') && !href.startsWith('//')) {/* TODO: Fix JSX expression */,}}
   }
-<<<<<<< HEAD
   return ()
-=======
   return (<a />
       href={href}
       className={className}

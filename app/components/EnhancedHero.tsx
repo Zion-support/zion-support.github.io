@@ -16,15 +16,9 @@ const benefits = const benefits = const benefits = [
     'Cost-effective pricing plans',;
 ;
     'Proven track record of success';
-<<<<<<< HEAD
   ];
 return() {features.map((feature, index) => ()
-=======
-  ];];];
-return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div></div></div>
-      <Helmet>
->>>>>>> origin/main
+
         <title>EnhancedHero | Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
@@ -63,7 +57,6 @@ return (
         </div>
       </section>
       {/* Benefits Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4" /></section>
           <div className="max-w-7xl mx-auto" /></div>
             <div className="text-center mb-16" /></div>
@@ -78,7 +71,6 @@ return (
               Key Benefits
             </h2>
             <p></p>
-=======
       <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">
@@ -97,10 +89,8 @@ return (
               Experience the power of our enhancedhero solutions for your business.,
             </p></p></p>
           </div>
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6" / /></div>
             {benefits.map((benefit, index) => ()
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div></div></div>
             {benefits.map((benefit, index) => (
                 <div key=index} className="flex items-start space-x-3"></div></div></div>
@@ -113,7 +103,6 @@ return (
         </div>
       </section>
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4" /></section>
           <div className="max-w-7xl mx-auto" /></div>
             <div className="text-center mb-16" /></div>
@@ -138,7 +127,6 @@ return (
               <button></button>
                 <Mail></Mail>
                 Email Us
-=======
       <section className="py-20 px-4">
           </section></section><div className="max-w-7xl mx-auto">
             </div></div><div className="text-center mb-16">
