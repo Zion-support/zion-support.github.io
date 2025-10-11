@@ -4,17 +4,15 @@ export default async function handler(req, res) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
-    return
   }
 
   try {
-    const { name, email, phone, details, country, service } = req.body || {}
+    const { name, email, phone, details } = req.body || {}
     if (!name || !email || !phone || !details) {
       res.statusCode = 400;
       res.setHeader('Content-Type', 'application/json');
       res.end(JSON.stringify({ error: 'Name, email, phone, and details are required' }));
       return;
-      return
     }
 
     // Process quote submission logic here
@@ -24,43 +22,21 @@ export default async function handler(req, res) {
     // 3. Send confirmation email to the customer
     // 4. Integrate with your CRM
 
-    const quoteData = {
-      name,
-      email,
-      phone,
-      details,
-      country: req.body.country || 'Not specified',
-      service: req.body.service || 'General inquiry',
-      timestamp: new Date().toISOString(),
-      status: 'pending'
-    }
-    // Log quote request for debugging in development
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Quote request received:', quoteData)
-    }
-
-    res.statusCode = 200
-    res.setHeader('Content-Type', 'application/json')
+    // For now, just return a success response
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       success: true, 
-      message: 'Quote request submitted successfully',
-      quoteId: `quote_${Date.now()}`,
-      data: quoteData
-    }))
+      message: 'Quote request received successfully',
+      quoteId: `QUOTE-${Date.now()}`
+    }));
+
   } catch (error) {
-    console.error('Quote submission error:', error);
+    console.error('Error processing quote request:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
-      error: 'Failed to submit quote request',
-      details: process.env.NODE_ENV === 'development' ? error.message : undefined
+      error: 'Internal server error' 
     }));
-    // Log error for debugging in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Quote submission error:', error)
-    }
-    res.statusCode = 500
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ error: 'Internal server error' }))
   }
 }

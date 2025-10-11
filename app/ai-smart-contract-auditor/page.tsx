@@ -1,189 +1,140 @@
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import { Brain, BarChart, Target, TrendingUp, FileText, Zap, Shield, CheckCircle } from 'lucide-react'
+
+const AiSmartContractAuditorPage: React.FC = () => {
   const features = [
-    {icon: Shield,
-      title: 'Automated Security Analysis',
-      description: 'AI-powered vulnerability detection in smart contracts using advanced static analysis',
-    },
     {
-      icon: Code,
-      title: 'Code Quality Assessment',
-      description: 'Comprehensive code review with best practices compliance and optimization suggestions',
-      benefits: ['Gas optimization recommendations', 'Code complexity analysis', 'Best practices compliance'],
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
     },
     {
       icon: BarChart,
-      title: 'Risk Scoring System',
-      description: 'Intelligent risk assessment with detailed scoring and mitigation strategies',
-      benefits: ['Real-time risk scoring', 'Priority-based recommendations', 'Historical trend analysis'],
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics'],
     },
     {
-      icon: Brain,
-      title: 'Machine Learning Models',
-      description: 'Advanced ML models trained on thousands of audited contracts for pattern recognition',
-      benefits: ['Continuous learning', 'Pattern recognition', 'Predictive analysis'],
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics'],
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'],
     }
   ]
-  const pricingPlans = [
-    {name: 'Starter',
-      price: '$299',
-      period: '/month',
-      description: 'Perfect for small projects and individual developers',
-      features: [,
-        'Up to 5 smart contracts per month',
-        'Basic security analysis',
-        'Code quality assessment',
-        'Email support',
-        'PDF audit reports',
-        'Basic risk scoring'
-      ],
-      popular: false;,},
-    {name: 'Professional',
-      price: '$799',
-      period: '/month',
-      description: 'Ideal for growing DeFi projects and development teams',
-      features: [,
-        'Up to 25 smart contracts per month',
-        'Advanced security analysis',
-        'Gas optimization recommendations',
-        'Priority support',
-        'Detailed audit reports',
-        'Advanced risk scoring',
-        'API access',
-        'Custom compliance checks'
-      ],
-      popular: true;,},
-    {name: 'Enterprise',
-      price: '$1,999',
-      period: '/month',
-      description: 'For large-scale projects and enterprise clients',
-      features: [,
-        'Unlimited smart contracts',
-        'Comprehensive security analysis',
-        'Custom ML model training',
-        '24/7 dedicated support',
-        'Executive summary reports',
-        'Real-time monitoring',
-        'Custom integrations',
-        'White-label solutions',
-        'On-site consultation'
-      ],
-  const useCases = [
-    {title: 'DeFi Protocol Audits',
-      description: 'Comprehensive security analysis for decentralized finance protocols',
-      icon: DollarSign,
-      results: 'Reduced security incidents by 95%',},
-    {title: 'NFT Marketplace Security',
-      description: 'Smart contract auditing for NFT platforms and marketplaces',
-      icon: Image,
-      results: 'Zero critical vulnerabilities found',},
-    {title: 'Token Launch Security',
-      description: 'Pre-launch security audits for new token contracts',
-      icon: Rocket,
-      results: '100% successful token launches',},
-    {title: 'Cross-Chain Bridge Audits',
-      description: 'Security analysis for cross-chain bridge implementations',
-      icon: Globe,
-        <title>AI Smart Contract Auditor - Automated Security Analysis | Zion Tech Group</title>
-        </Helmet><title>AI Smart Contract Auditor - Automated Security Analysis | Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered smart contract auditing with automated security analysis, vulnerability detection, and risk assessment. Secure your blockchain projects with our cutting-edge technology." />
-        <meta name="keywords" content="smart contract audit, blockchain security, AI auditing, DeFi security, smart contract analysis, vulnerability detection" />
-        <meta property="og: title" content="AI Smart Contract Auditor - Automated Security Analysis" />,
-        <meta property="og:description" content="Advanced AI-powered smart contract auditing with automated security analysis, vulnerability detection, and risk assessment." />
-        <meta property="og: type" content="website" />,
-        <meta property="og: url" content="https://ziontechgroup.com/ai-smart-contract-auditor" />,
-        <link rel="canonical" href="https: //ziontechgroup.com/ai-smart-contract-auditor" />,
+
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ]
+
+  return (
+    <>
+      <Helmet>
+        <title>Ai Smart Contract Auditor - Zion Tech Group</title>
+        <meta name="description" content="AI-powered ai smart contract auditor solution for intelligent automation and optimization" />
+        <meta name="keywords" content="AI, ai, smart, contract, auditor, automation, artificial intelligence, business solutions" />
       </Helmet>
-
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-500/20 via-transparent to-transparent"></div>
-          
-          <div className="max-w-7xl mx-auto relative z-10">
-            </div><div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              </div><div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full px-6 py-3 mb-8 border border-cyan-500/30">
-                </div><Shield className="w-5 h-5 text-cyan-400" />
-                <span className="text-cyan-400 font-semibold">AI-Powered Security</span>
-              </div>
-              
-                Advanced AI-powered smart contract auditing with automated security analysis, 
-                vulnerability detection, and comprehensive risk assessment for blockchain projects.
-              </p>
-              
-                  <span className="font-semibold">99.9% Vulnerability Detection</span>
-                </div>
-                <div className="flex items-center space-x-2 text-purple-400">
-                  </div><Clock className="w-5 h-5" />
-                  <span className="font-semibold">80% Faster Audits</span>
-                </div>
-                <div className="flex items-center space-x-2 text-pink-400">
-                  </div><Shield className="w-5 h-5" />
-                  <span className="font-semibold">Zero False Positives</span>
-                </div>
-              </div>
-              
-                </a>
-              </div>
+      <Navigation />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-sky-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="py-20 px-4 relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Ai Smart Contract Auditor
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              AI-powered ai smart contract auditor solution for intelligent automation and optimization
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
+                Learn More
+              </button>
             </div>
           </div>
         </section>
 
-                and static analysis to provide comprehensive security assessments.
-              </p>
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
+              <p className="text-xl text-gray-300">Powerful AI capabilities for your business</p>
             </div>
-            
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,</div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                >
-                  </div><div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-6">
-                    </div><feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-4 text-white">{feature.title}</h3>
-                  <p className="text-gray-300 mb-6">{feature.description</p>}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, idx) => (
-                    ))}
-                  </ul>
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
+                  <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-300">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-                various blockchain ecosystems and use cases.
-              </p>
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Ai Smart Contract Auditor?</h2>
+              <p className="text-xl text-gray-300">Transform your business with intelligent automation</p>
             </div>
-            
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,</div>
-              {useCases.map((useCase, index) => (
-                >
-                  </div><div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6">
-                    </div><useCase.icon className="w-8 h-8 text-white" />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start space-x-4">
+                  <div className="flex-shrink-0">
+                    <Zap className="w-6 h-6 text-cyan-400" />
                   </div>
-                  <h3 className="text-xl font-bold mb-4 text-white">{useCase.title}</h3>
-                  <p className="text-gray-300 mb-4">{useCase.description</p>}</p>
-                  <div className="text-cyan-400 font-semibold text-sm">{useCase.results</div>} </div>
+                  <p className="text-gray-300">{benefit}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-                All plans include our advanced AI security analysis.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,</div>
-              {pricingPlans.map((plan, index) => (
-                    </div>
-                  </div>
-                  
-                  <ul className="space-y-4 mb-8">
-                    {plan.features.map((feature, idx) => (
-                  </a>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-              </a>
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Get started with our Ai Smart Contract Auditor and experience the future of intelligent automation.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
+                Contact Sales
+              </button>
             </div>
           </div>
         </section>
@@ -191,4 +142,5 @@
     </>
   )
 }
-export default AISmartContractAuditor
+
+export default AiSmartContractAuditorPage

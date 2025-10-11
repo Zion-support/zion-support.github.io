@@ -1,9 +1,13 @@
-import React from 'react'
+const fs = require('fs');
+const path = require('path');
+
+// Template for AI pages
+const aiPageTemplate = (pageName, title, description, keywords) => `import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import { Brain, BarChart, Target, TrendingUp, FileText, Zap, Shield, CheckCircle } from 'lucide-react'
 
-const SecurityPage: React.FC = () => {
+const ${pageName}Page: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -41,9 +45,9 @@ const SecurityPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Security - Zion Tech Group</title>
-        <meta name="description" content="AI-powered security solution for intelligent automation and optimization" />
-        <meta name="keywords" content="AI, security, automation, artificial intelligence, business solutions" />
+        <title>${title} - Zion Tech Group</title>
+        <meta name="description" content="${description}" />
+        <meta name="keywords" content="${keywords}" />
       </Helmet>
       <Navigation />
       
@@ -54,10 +58,10 @@ const SecurityPage: React.FC = () => {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Security
+              ${title}
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              AI-powered security solution for intelligent automation and optimization
+              ${description}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
@@ -103,7 +107,7 @@ const SecurityPage: React.FC = () => {
         <section className="py-20 px-4 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Security?</h2>
+              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our ${title}?</h2>
               <p className="text-xl text-gray-300">Transform your business with intelligent automation</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -126,7 +130,7 @@ const SecurityPage: React.FC = () => {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Get started with our Security and experience the future of intelligent automation.
+              Get started with our ${title} and experience the future of intelligent automation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
@@ -143,4 +147,85 @@ const SecurityPage: React.FC = () => {
   )
 }
 
-export default SecurityPage
+export default ${pageName}Page`;
+
+// Function to get page info from file path
+function getPageInfo(filePath) {
+  const pathParts = filePath.split('/');
+  const fileName = pathParts[pathParts.length - 2]; // Get the directory name
+  
+  // Convert kebab-case to Title Case
+  const title = fileName
+    .split('-')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+  
+  // Generate description and keywords
+  const description = `AI-powered ${fileName.replace(/-/g, ' ')} solution for intelligent automation and optimization`;
+  const keywords = `AI, ${fileName.replace(/-/g, ', ')}, automation, artificial intelligence, business solutions`;
+  
+  // Convert to PascalCase for component name
+  const componentName = fileName
+    .split('-')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join('');
+  
+  return { title, description, keywords, componentName };
+}
+
+// Find all corrupted page files
+function findCorruptedPages() {
+  const appDir = '/workspace/app';
+  const corruptedFiles = [];
+  
+  function scanDirectory(dir) {
+    const items = fs.readdirSync(dir);
+    
+    for (const item of items) {
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        scanDirectory(fullPath);
+      } else if (item === 'page.tsx') {
+        try {
+          const content = fs.readFileSync(fullPath, 'utf8');
+          if (content.includes('const features = [')) {
+            corruptedFiles.push(fullPath);
+          }
+        } catch (err) {
+          console.error(`Error reading ${fullPath}:`, err.message);
+        }
+      }
+    }
+  }
+  
+  scanDirectory(appDir);
+  return corruptedFiles;
+}
+
+// Fix corrupted pages
+function fixCorruptedPages() {
+  const corruptedFiles = findCorruptedPages();
+  console.log(`Found ${corruptedFiles.length} corrupted page files`);
+  
+  let fixedCount = 0;
+  
+  for (const filePath of corruptedFiles) {
+    try {
+      const { title, description, keywords, componentName } = getPageInfo(filePath);
+      const newContent = aiPageTemplate(componentName, title, description, keywords);
+      
+      fs.writeFileSync(filePath, newContent, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      fixedCount++;
+    } catch (err) {
+      console.error(`Error fixing ${filePath}:`, err.message);
+    }
+  }
+  
+  console.log(`Fixed ${fixedCount} out of ${corruptedFiles.length} files`);
+}
+
+// Run the fix
+fixCorruptedPages();
