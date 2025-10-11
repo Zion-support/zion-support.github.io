@@ -22,7 +22,7 @@ const PerformanceMonitor: React.FC = () => {
 
     if (!shouldMonitor) return;
 
-    const updateMetrics = (newMetrics: Partial</PerformanceMetrics><PerformanceMetrics>) => {
+    const updateMetrics = (newMetrics: Partial<PerformanceMetrics>) => {
       setMetrics(prev => ({ ...prev, ...newMetrics }));
     };
 
@@ -45,8 +45,8 @@ const PerformanceMonitor: React.FC = () => {
 
   return (
     <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-sm border border-slate-700 rounded-lg p-4 text-xs text-white z-50 max-w-xs">
-      </div><div className="flex items-center justify-between mb-2">
-        </div><h3 className="font-semibold text-cyan-400">Performance</h3>
+      <div className="flex items-center justify-between mb-2">
+        <h3 className="font-semibold text-cyan-400">Performance</h3>
         <button
           onClick={() => setIsVisible(false)}
           className="text-gray-400 hover:text-white"
