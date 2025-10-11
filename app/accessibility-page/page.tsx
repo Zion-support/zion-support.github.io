@@ -2,6 +2,7 @@
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
 
+<<<<<<< HEAD
 export default function PagePage() {
   const features = [
     {
@@ -18,6 +19,87 @@ export default function PagePage() {
       title: 'Proven Results',
       description: 'Track record of successful projects and satisfied clients.',
       benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
+=======
+const AccessibilityPage: React.FC = () => {
+  const features = [
+    {
+      icon: Eye,
+      title: 'Visual Accessibility',
+      description: 'Screen reader compatibility, high contrast modes, and scalable text'
+    },
+    {
+      icon: Ear,
+      title: 'Audio Accessibility',
+      description: 'Audio descriptions, captions, and alternative audio formats'
+    },
+    {
+      icon: Hand,
+      title: 'Motor Accessibility',
+      description: 'Keyboard navigation, voice control, and assistive technologies'
+    },
+    {
+      icon: Brain,
+      title: 'Cognitive Accessibility',
+      description: 'Clear navigation, consistent layouts, and simplified interfaces'
+    },
+    {
+      icon: Shield,
+      title: 'Security & Privacy',
+      description: 'Secure data handling and privacy protection for all users'
+    }
+  ];
+
+  const services = [
+    {
+      icon: CheckCircle,
+      title: 'Accessibility Audits',
+      description: 'Comprehensive evaluation of your digital assets for compliance'
+    },
+    {
+      icon: Target,
+      title: 'WCAG Compliance',
+      description: 'Implementation of WCAG 2.1 AA standards across all platforms'
+    },
+    {
+      icon: BarChart,
+      title: 'Performance Testing',
+      description: 'Testing with assistive technologies and real user scenarios'
+    },
+    {
+      icon: Zap,
+      title: 'Quick Fixes',
+      description: 'Rapid implementation of critical accessibility improvements'
+    }
+  ];
+
+  const standards = [
+    'WCAG 2.1 AA Compliance',
+    'Section 508 Compliance',
+    'ADA Compliance',
+    'EN 301 549 Compliance'
+  ];
+
+  const benefits = [
+    {
+      icon: CheckCircle,
+      title: 'Legal Compliance',
+      description: 'Meet accessibility requirements and avoid legal issues'
+    },
+    {
+      icon: Target,
+      title: 'Broader Reach',
+      description: 'Access your services to a wider audience including users with disabilities'
+    },
+    {
+      icon: BarChart,
+      title: 'Better UX',
+      description: 'Improved user experience for all users, not just those with disabilities'
+    },
+    {
+      icon: Zap,
+      title: 'SEO Benefits',
+      description: 'Better search engine rankings through improved accessibility'
+>>>>>>> cursor/fix-errors-and-merge-to-main-dc0a
     }
   ];
 

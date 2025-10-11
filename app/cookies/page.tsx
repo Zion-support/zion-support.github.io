@@ -1,6 +1,26 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
+=======
+'use client'
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import {Cookie, Settings, Shield, Eye} from 'lucide-react'
+const CookiesPage: React.FC = () => {
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
+    
+      examples: ['Language preferences', 'User settings', 'Remember me']} ,
+    
+      examples: ['Page views', 'User behavior', 'Performance metrics']} ,
+    
+      examples: ['Ad targeting', 'Campaign tracking', 'Conversion tracking']} ]
+  return (
+    <>
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
+>>>>>>> cursor/fix-errors-and-merge-to-main-dc0a
 
 export default function PagePage() {
   const features = [

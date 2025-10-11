@@ -2,6 +2,7 @@
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
 
+<<<<<<< HEAD
 export default function PagePage() {
   const features = [
     {
@@ -18,6 +19,11 @@ export default function PagePage() {
       title: 'Proven Results',
       description: 'Track record of successful projects and satisfied clients.',
       benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
+=======
+const PricingPage: React.FC = () => {
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']} ,
+    
+>>>>>>> cursor/fix-errors-and-merge-to-main-dc0a
     }
   ];
 
@@ -33,6 +39,7 @@ export default function PagePage() {
               Professional page services to help your business succeed and grow.
             </p>
           </div>
+<<<<<<< HEAD
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
             {features.map((feature, index) => (
@@ -72,3 +79,17 @@ export default function PagePage() {
     </div>
   );
 }
+=======
+
+      <Footer />
+    </>
+        </section>
+      </div>
+
+      <Footer />
+    </>
+  )
+}
+
+  </Footer>
+>>>>>>> cursor/fix-errors-and-merge-to-main-dc0a
