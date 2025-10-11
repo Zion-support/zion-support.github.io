@@ -6,8 +6,8 @@ import Footer from './components/Footer'
 import React from 'react'
 import {Helmet} from 'react-helmet-async'
 import {ArrowRight} from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
+import Navigation from './components/Navigation'
+import Footer from './components/Footer'
 
 const LayoutPage: React.FC = () => {
   return (

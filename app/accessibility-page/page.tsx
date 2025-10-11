@@ -1,30 +1,33 @@
 'use client';
 import React from 'react';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, Eye, Ear, Hand, Brain, Shield, Target, BarChart, Zap, ArrowRight } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 export default PagePage;
 const AccessibilityPage: React.FC = () => {
   const features = [
     {
-      icon: Eye,
+      icon: <Eye className="w-8 h-8" />,
       title: 'Visual Accessibility',
       description: 'Screen reader compatibility, high contrast modes, and visual indicators for better user experience.',
       benefits: ['Screen reader support', 'High contrast themes', 'Focus indicators', 'Text scaling']
     },
     {
-      icon: Ear,
+      icon: <Ear className="w-8 h-8" />,
       title: 'Audio Accessibility',
       description: 'Audio descriptions, captions, and alternative audio formats for hearing-impaired users.',
       benefits: ['Closed captions', 'Audio descriptions', 'Sign language support', 'Visual alerts']
     },
     {
-      icon: Hand,
+      icon: <Hand className="w-8 h-8" />,
       title: 'Motor Accessibility',
       description: 'Keyboard navigation, voice control, and alternative input methods for users with motor disabilities.',
       benefits: ['Keyboard navigation', 'Voice control', 'Switch navigation', 'Gesture alternatives']
     },
     {
-      icon: Brain,
+      icon: <Brain className="w-8 h-8" />,
       title: 'Cognitive Accessibility',
       description: 'Clear language, consistent navigation, and simplified interfaces for cognitive accessibility.',
       benefits: ['Clear language', 'Consistent design', 'Error prevention', 'Progress indicators']
@@ -33,13 +36,13 @@ const AccessibilityPage: React.FC = () => {
 
   const services = [
     {
-      icon: Shield,
+      icon: <Shield className="w-8 h-8" />,
       title: 'Accessibility Audits',
       description: 'Comprehensive evaluation of your digital products against WCAG 2.1 AA standards.',
       benefits: ['WCAG compliance check', 'Detailed reports', 'Remediation guidance', 'Follow-up testing']
     },
     {
-      icon: Target,
+      icon: <Target className="w-8 h-8" />,
       title: 'Implementation Support',
       description: 'Hands-on assistance implementing accessibility features and best practices.',
       benefits: ['Code implementation', 'Design consultation', 'Testing support', 'Training sessions']
@@ -55,22 +58,22 @@ const AccessibilityPage: React.FC = () => {
 
   const benefits = [
     {
-      icon: BarChart,
+      icon: <BarChart className="w-8 h-8" />,
       title: 'Increased Reach',
       description: 'Access your products to 15% of the global population with disabilities.'
     },
     {
-      icon: Zap,
+      icon: <Zap className="w-8 h-8" />,
       title: 'Better Performance',
       description: 'Accessible design often leads to better overall user experience and performance.'
     },
     {
-      icon: Shield,
+      icon: <Shield className="w-8 h-8" />,
       title: 'Legal Compliance',
       description: 'Meet legal requirements and avoid potential lawsuits and penalties.'
     },
     {
-      icon: Target,
+      icon: <Target className="w-8 h-8" />,
       title: 'Brand Reputation',
       description: 'Demonstrate your commitment to inclusion and social responsibility.'
     }
@@ -186,7 +189,9 @@ const AccessibilityPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                  <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
+                  <div className="w-12 h-12 text-purple-400 mb-4">
+                    {feature.icon}
+                  </div>
                   <h3 className="text-xl font-semibold text-white mb-3">
                     {feature.title}
                   </h3>
@@ -221,7 +226,9 @@ const AccessibilityPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {services.map((service, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-                  <service.icon className="w-12 h-12 text-blue-400 mb-4" />
+                  <div className="w-12 h-12 text-blue-400 mb-4">
+                    {service.icon}
+                  </div>
                   <h3 className="text-xl font-semibold text-white mb-3">
                     {service.title}
                   </h3>
@@ -280,7 +287,9 @@ const AccessibilityPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center">
-                  <benefit.icon className="w-12 h-12 text-purple-400 mx-auto mb-4" />
+                  <div className="w-12 h-12 text-purple-400 mx-auto mb-4">
+                    {benefit.icon}
+                  </div>
                   <h3 className="text-xl font-semibold text-white mb-3">
                     {benefit.title}
                   </h3>

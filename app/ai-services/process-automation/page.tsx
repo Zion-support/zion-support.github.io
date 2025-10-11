@@ -7,8 +7,8 @@ export default PagePage;
 import React from 'react'
 import {Helmet} from 'react-helmet-async'
 import {ArrowRight} from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
+import Navigation from '../../components/Navigation'
+import Footer from '../../components/Footer'
 
 const ProcessAutomationPage: React.FC = () => {
   return (
