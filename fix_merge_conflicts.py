@@ -1,72 +1,64 @@
 #!/usr/bin/env python3
 """
-Script to automatically fix merge conflicts in the codebase
+Script to automatically resolve merge conflicts by choosing the HEAD version
 """
 import os
 import re
 import glob
-from pathlib import Path
 
 def fix_merge_conflicts(file_path):
-    """Fix merge conflicts in a single file"""
+    """Fix merge conflicts in a single file by choosing HEAD version"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # Skip if no merge conflicts
-        if '<<<<<<< HEAD' not in content:
-            return False
+        # Pattern to match merge conflict blocks
+        conflict_pattern = r'<<<<<<< HEAD\n(.*?)\n=======.*?\n>>>>>>> [^\n]+\n?'
         
-        print(f"Fixing merge conflicts in: {file_path}")
+        # Replace conflicts with HEAD version
+        fixed_content = re.sub(conflict_pattern, r'\1\n', content, flags=re.DOTALL)
         
-        # Remove merge conflict markers and keep the HEAD version
-        # Pattern to match merge conflicts and keep the HEAD part
-        pattern = r'<<<<<<< HEAD\n(.*?)\n=======.*?\n>>>>>>> [^\n]*\n?'
+        # Remove any remaining conflict markers
+        fixed_content = re.sub(r'^<<<<<<< .*?\n', '', fixed_content, flags=re.MULTILINE)
+        fixed_content = re.sub(r'^=======.*?\n', '', fixed_content, flags=re.MULTILINE)
+        fixed_content = re.sub(r'^>>>>>>> .*?\n', '', fixed_content, flags=re.MULTILINE)
         
-        # Replace merge conflicts with HEAD content
-        new_content = re.sub(pattern, r'\1\n', content, flags=re.DOTALL)
+        # Clean up multiple newlines
+        fixed_content = re.sub(r'\n\s*\n\s*\n', '\n\n', fixed_content)
         
-        # Clean up any remaining merge conflict markers
-        new_content = re.sub(r'<<<<<<< HEAD\n?', '', new_content)
-        new_content = re.sub(r'=======\n?', '', new_content)
-        new_content = re.sub(r'>>>>>>> [^\n]*\n?', '', new_content)
-        
-        # Clean up extra whitespace
-        new_content = re.sub(r'\n\s*\n\s*\n', '\n\n', new_content)
-        
-        # Write the cleaned content back
         with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(new_content)
+            f.write(fixed_content)
         
+        print(f"Fixed merge conflicts in: {file_path}")
         return True
     except Exception as e:
         print(f"Error fixing {file_path}: {e}")
         return False
 
 def main():
-    """Main function to fix all merge conflicts"""
-    # Get all TypeScript/JavaScript files
-    patterns = [
-        'app/**/*.tsx',
-        'app/**/*.ts',
-        'app/**/*.js',
-        'app/**/*.jsx',
-        'src/**/*.tsx',
-        'src/**/*.ts',
-        'src/**/*.js',
-        'src/**/*.jsx'
-    ]
+    """Main function to fix all merge conflicts in the app directory"""
+    app_dir = "/workspace/app"
     
-    files_fixed = 0
-    total_files = 0
+    # Find all TypeScript/TSX files with merge conflicts
+    tsx_files = glob.glob(f"{app_dir}/**/*.tsx", recursive=True)
     
-    for pattern in patterns:
-        for file_path in glob.glob(pattern, recursive=True):
-            total_files += 1
-            if fix_merge_conflicts(file_path):
-                files_fixed += 1
+    fixed_count = 0
+    total_count = 0
     
-    print(f"\nFixed merge conflicts in {files_fixed} out of {total_files} files")
+    for file_path in tsx_files:
+        try:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                content = f.read()
+            
+            # Check if file has merge conflicts
+            if '<<<<<<<' in content or '=======' in content or '>>>>>>>' in content:
+                total_count += 1
+                if fix_merge_conflicts(file_path):
+                    fixed_count += 1
+        except Exception as e:
+            print(f"Error processing {file_path}: {e}")
+    
+    print(f"\nFixed {fixed_count} out of {total_count} files with merge conflicts")
 
 if __name__ == "__main__":
     main()
